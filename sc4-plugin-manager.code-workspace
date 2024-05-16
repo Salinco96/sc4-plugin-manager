@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+    {
+      "path": "../Manager/Database",
+    },
+  ],
+  "settings": {
+    "typescript.tsdk": "sc4-plugin-manager\\.yarn\\sdks\\typescript\\lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+  },
+}

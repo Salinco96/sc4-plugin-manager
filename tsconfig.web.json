@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/common/*", "src/preload/*.d.ts", "src/renderer/src/**/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "paths": {
+      "@common/*": ["src/common/*"],
+      "@renderer/*": ["src/renderer/src/*"]
+    }
+  }
+}
