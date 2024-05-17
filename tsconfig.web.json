@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/common/*", "src/preload/*.d.ts", "src/renderer/src/**/*"],
+  "include": ["src/common/**/*", "src/preload/*.d.ts", "src/renderer/src/**/*"],
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "react-jsx",

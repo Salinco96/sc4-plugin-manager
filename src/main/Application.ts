@@ -2,50 +2,23 @@ import { app, ipcMain } from "electron/main"
 import fs from "fs/promises"
 import path from "path"
 
-import { ApplicationState, initialState } from "@common/state"
-import { AssetInfo, CollectionInfo, PackageInfo, ProfileInfo, Settings } from "@common/types"
+import { ApplicationData, ApplicationState, initialState } from "@common/state"
+import { ProfileInfo, Settings } from "@common/types"
 
-import childProcessPath from "./child?modulePath"
-import { loadCollections } from "./data/collections"
+import { DataManager } from "./data/DataManager"
 import { DownloadManager } from "./data/DownloadManager"
-import { loadLocalPackages, loadRemotePackages } from "./data/packages"
-import { loadProfiles, writeProfile } from "./data/profiles"
-import { loadSettings, writeSettings } from "./data/settings"
 import { MainWindow } from "./MainWindow"
-import { createChildProcess } from "./process"
-import {
-  getCollectionsPath,
-  getDownloadsPath,
-  getPackagesPath,
-  getProfilesPath,
-} from "./utils/paths"
+import { getDownloadsPath, getPackagesPath } from "./utils/paths"
 
 export class Application {
+  public dataManager: DataManager
   public downloadManager: DownloadManager
+  public mainWindow?: MainWindow
   public state: ApplicationState = initialState
 
-  protected collections?: Promise<CollectionInfo[]>
-
-  protected profiles?: Promise<{
-    [id: string]: ProfileInfo
-  }>
-
-  protected localPackages?: Promise<{
-    [id: string]: PackageInfo
-  }>
-
-  protected remotePackages?: Promise<{
-    assets: { [id: string]: AssetInfo }
-    packages: { [id: string]: PackageInfo }
-  }>
-
-  protected settings?: Promise<Settings>
-
-  protected databaseUpdatePromise?: Promise<boolean>
-
-  public mainWindow?: MainWindow
-
   public constructor() {
+    this.dataManager = new DataManager()
+
     this.downloadManager = new DownloadManager({
       downloadsPath: getDownloadsPath(),
       maxParallelDownloads: 6,
@@ -65,14 +38,15 @@ export class Application {
     })
   }
 
-  protected onReady(): void {
-    this.initialize().then(() => this.preload())
+  public async getState(): Promise<ApplicationState> {
+    return this.state
+  }
 
-    this.handle("getCollections")
-    this.handle("getProfiles")
-    this.handle("getLocalPackages")
-    this.handle("getRemotePackages")
-    this.handle("getSettings")
+  protected onReady(): void {
+    this.dataManager.load(this.onLoadProgress.bind(this))
+    this.downloadManager.initialize()
+
+    this.handle("getState")
     this.handle("installFiles")
     this.handle("writeProfile")
     this.handle("writeSettings")
@@ -82,70 +56,10 @@ export class Application {
     app.on("activate", () => this.createMainWindow())
   }
 
-  protected async initialize(): Promise<void> {
-    await fs.mkdir(getCollectionsPath(), { recursive: true })
-    await fs.mkdir(getDownloadsPath(), { recursive: true })
-    await fs.mkdir(getPackagesPath(), { recursive: true })
-    await fs.mkdir(getProfilesPath(), { recursive: true })
-    await this.downloadManager.initialize()
-  }
-
-  protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
-    if (!this.databaseUpdatePromise || force) {
-      this.databaseUpdatePromise = new Promise(resolve => {
-        console.log("Updating database...")
-        createChildProcess<unknown, { success?: boolean; error?: Error }>(childProcessPath, {
-          onClose() {
-            console.log("Failed updating database:", "closed")
-            resolve(false)
-          },
-          onMessage({ success, error }) {
-            if (success) {
-              console.log("Updated database")
-              resolve(true)
-            } else {
-              console.log("Failed updating database:", error)
-              resolve(false)
-            }
-          },
-        })
-      })
-    }
-
-    return this.databaseUpdatePromise
-  }
-
-  public async getCollections(): Promise<CollectionInfo[]> {
-    this.collections ||= loadCollections()
-    return this.collections
-  }
-
-  public async getProfiles(): Promise<{ [id: string]: ProfileInfo }> {
-    this.profiles ||= loadProfiles()
-    return this.profiles
-  }
-
-  public async getLocalPackages(): Promise<{
-    [id: string]: PackageInfo
-  }> {
-    this.localPackages ||= loadLocalPackages()
-    return this.localPackages
-  }
-
-  public async getRemotePackages(): Promise<{
-    assets: { [id: string]: AssetInfo }
-    packages: { [id: string]: PackageInfo }
-  }> {
-    await this.tryUpdateDatabase()
-    this.remotePackages ||= loadRemotePackages()
-    return this.remotePackages
-  }
-
-  public async getSettings(): Promise<Settings> {
-    this.settings ||= loadSettings()
-    return this.settings.then(settings => {
-      console.log(settings)
-      return settings
+  protected onLoadProgress(newData: Partial<ApplicationData>, status: string | null): void {
+    this.updateState({
+      data: Object.assign(this.state.data, newData),
+      loadStatus: status,
     })
   }
 
@@ -193,13 +107,11 @@ export class Application {
   }
 
   public async writeProfile(profile: ProfileInfo): Promise<void> {
-    console.log("Saving profile...")
-    await writeProfile(profile)
+    await this.dataManager.writeProfile(profile)
   }
 
   public async writeSettings(settings: Settings): Promise<void> {
-    console.log("Saving settings...")
-    await writeSettings(settings)
+    await this.dataManager.writeSettings(settings)
   }
 
   protected createMainWindow(): MainWindow {
@@ -222,18 +134,7 @@ export class Application {
   }
 
   protected updateState(update: Partial<ApplicationState>): void {
-    console.log("updateState", update)
     Object.assign(this.state, update)
     this.mainWindow?.webContents.postMessage("updateState", update)
-  }
-
-  protected async preload(): Promise<void> {
-    await Promise.all([
-      this.getCollections(),
-      this.getProfiles(),
-      this.getLocalPackages(),
-      this.getRemotePackages(),
-      this.getSettings(),
-    ])
   }
 }

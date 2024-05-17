@@ -44,7 +44,7 @@ export function PackageListFilters(): JSX.Element {
         sx={{ flex: 1 }}
         renderInput={props => <TextField {...props} label="Category" />}
         renderOption={(props, option, { selected }) => (
-          <li {...props}>
+          <li key={option} {...props}>
             <Checkbox
               icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
               checkedIcon={<CheckBoxIcon fontSize="small" />}
@@ -69,7 +69,7 @@ export function PackageListFilters(): JSX.Element {
         sx={{ flex: 1 }}
         renderInput={props => <TextField {...props} label="State" />}
         renderOption={(props, option, { selected }) => (
-          <li {...props}>
+          <li key={option} {...props}>
             <Checkbox
               icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
               checkedIcon={<CheckBoxIcon fontSize="small" />}

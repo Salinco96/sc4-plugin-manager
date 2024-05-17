@@ -1,10 +1,10 @@
 # sc4-plugin-manager
 
-An Electron application with React and TypeScript
+SC4 Plugin Manager interface using Electron.
 
-## Recommended IDE Setup
+Produces a portable `.exe` file (no installation / dependencies).
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+_Currently supports Windows only._
 
 ## Project Setup
 
@@ -14,21 +14,43 @@ An Electron application with React and TypeScript
 $ yarn
 ```
 
-### Development
+### Develop (with hot reloading)
+
+Powered by [electron-vite](https://electron-vite.org/).
 
 ```bash
 $ yarn dev
 ```
 
-### Build
+### Preview
+
+Powered by [electron-vite](https://electron-vite.org/).
 
 ```bash
-# For windows
-$ yarn build:win
+$ yarn preview
+```
 
-# For macOS
-$ yarn build:mac
+### Production build
 
-# For Linux
-$ yarn build:linux
+Transpiled by [electron-vite](https://electron-vite.org/) and packaged with [electron-build](https://www.electron.build/).
+
+```bash
+$ yarn make
+```
+
+This is equivalent to running both steps in succession:
+
+```bash
+$ yarn build
+$ yarn package
+```
+
+### Tooling (TypeScript, ESLint, Prettier)
+
+Using [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/).
+
+```bash
+$ yarn format
+$ yarn lint
+$ yarn typecheck
 ```

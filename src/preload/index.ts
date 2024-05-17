@@ -1,7 +1,7 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import { ApplicationState } from "@common/state"
-import { AssetInfo, CollectionInfo, PackageInfo, ProfileInfo, Settings } from "@common/types"
+import { ProfileInfo, Settings } from "@common/types"
 
 // Custom APIs for renderer
 export const api = {
@@ -11,25 +11,8 @@ export const api = {
   subscribeToStateUpdates(handler: (update: Partial<ApplicationState>) => void): () => void {
     const listener = (_: IpcRendererEvent, update: Partial<ApplicationState>) => handler(update)
     ipcRenderer.on("updateState", listener)
+    ipcRenderer.invoke("getState").then(handler)
     return () => ipcRenderer.off("updateState", listener)
-  },
-  async getCollections(): Promise<CollectionInfo[]> {
-    return ipcRenderer.invoke("getCollections")
-  },
-  async getProfiles(): Promise<{ [id: string]: ProfileInfo }> {
-    return ipcRenderer.invoke("getProfiles")
-  },
-  async getLocalPackages(): Promise<{ [id: string]: PackageInfo }> {
-    return ipcRenderer.invoke("getLocalPackages")
-  },
-  async getRemotePackages(): Promise<{
-    assets: { [id: string]: AssetInfo }
-    packages: { [id: string]: PackageInfo }
-  }> {
-    return ipcRenderer.invoke("getRemotePackages")
-  },
-  async getSettings(): Promise<Settings> {
-    return ipcRenderer.invoke("getSettings")
   },
   async installFiles(
     assets: {

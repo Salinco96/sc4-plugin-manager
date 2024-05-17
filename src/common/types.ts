@@ -18,15 +18,19 @@ export enum PackageState {
   OUTDATED = "outdated",
 }
 
-export interface CollectionInfo {
-  id: string
-  name: string
+export interface ProfilePackageInfo {
+  enabled: boolean
+  dependency?: boolean
+  requiredBy?: string[]
+  variant?: string
 }
 
 export interface ProfileInfo {
   id: string
   name: string
-  packages: { [id: string]: { dependency?: boolean; variant?: string } }
+  packages: {
+    [id: string]: ProfilePackageInfo
+  }
 }
 
 export interface PackageInfo {

@@ -4,7 +4,6 @@ import { create } from "zustand"
 import { ApplicationState, initialState } from "@common/state"
 import {
   AssetInfo,
-  CollectionInfo,
   PackageCategory,
   PackageInfo,
   PackageState,
@@ -20,14 +19,6 @@ export interface StoreActions {
   editSettings(settings: Partial<Settings>): Promise<void>
   enablePackage(packageId: string): Promise<void>
   installPackage(packageId: string, variantId?: string): Promise<void>
-  loadCollections(collections: CollectionInfo[]): void
-  loadProfiles(profiles: { [id: string]: ProfileInfo }): void
-  loadLocalPackages(packages: { [id: string]: PackageInfo }): void
-  loadRemotePackages(data: {
-    assets: { [id: string]: AssetInfo }
-    packages: { [id: string]: PackageInfo }
-  }): void
-  loadSettings(settings: Settings): void
   setPackageFilters(filters: {
     categories?: PackageCategory[]
     search?: string
@@ -39,7 +30,6 @@ export interface StoreActions {
 
 export interface Store {
   actions: StoreActions
-  collections?: CollectionInfo[]
   localPackages?: { [id: string]: PackageInfo }
   packageFilters: {
     categories: PackageCategory[]
@@ -58,19 +48,30 @@ export const useStore = create<Store>()((set, get) => ({
     async disablePackage(packageId) {
       const store = get()
       const profile = getCurrentProfile(store)
-      if (profile?.packages[packageId]) {
-        const { [packageId]: disabled, ...others } = profile.packages
+      if (profile && profile.packages[packageId]?.enabled) {
         await this.editProfile(profile.id, {
-          packages: others,
+          packages: {
+            ...profile.packages,
+            [packageId]: {
+              ...profile.packages[packageId],
+              enabled: false,
+            },
+          },
         })
       }
     },
     async enablePackage(packageId) {
       const store = get()
       const profile = getCurrentProfile(store)
-      if (profile && !profile.packages[packageId]) {
+      if (profile && !profile.packages[packageId]?.enabled) {
         await this.editProfile(profile.id, {
-          packages: { ...profile.packages, [packageId]: {} },
+          packages: {
+            ...profile.packages,
+            [packageId]: {
+              ...profile.packages[packageId],
+              enabled: true,
+            },
+          },
         })
       }
     },
@@ -129,42 +130,6 @@ export const useStore = create<Store>()((set, get) => ({
         }
       }
     },
-    loadCollections(collections) {
-      set({ collections })
-    },
-    loadProfiles(profiles) {
-      set({ profiles })
-    },
-    loadLocalPackages(data) {
-      const { remotePackages } = get()
-      set({
-        localPackages: data,
-        remotePackages: Object.values(data).reduce(
-          (result, info) => {
-            result[info.id] = { ...result[info.id], ...info }
-            return result
-          },
-          { ...remotePackages },
-        ),
-      })
-    },
-    loadRemotePackages(data) {
-      const { remotePackages } = get()
-      set({
-        remoteAssets: data.assets,
-        remotePackages: Object.values(data.packages).reduce(
-          (result, info) => {
-            result[info.id] = { ...result[info.id], ...info }
-            return result
-          },
-          { ...remotePackages },
-        ),
-      })
-    },
-    loadSettings(data) {
-      const { settings } = get()
-      set({ settings: { ...data, ...settings } })
-    },
     async createProfile(data) {
       const { profiles } = get()
       if (profiles) {
@@ -200,9 +165,39 @@ export const useStore = create<Store>()((set, get) => ({
     async switchProfile(profileId) {
       await this.editSettings({ currentProfile: profileId })
     },
-    updateState(update) {
-      console.log("updateState", update)
-      set(store => ({ state: { ...store.state, ...update } }))
+    updateState({ data, ...state }) {
+      console.log("updateState2", { data, ...state })
+      set(store => ({
+        localPackages: data?.localPackages
+          ? {
+              ...store.localPackages,
+              ...data.localPackages,
+            }
+          : store.localPackages,
+        profiles: data?.profiles
+          ? {
+              ...store.profiles,
+              ...data.profiles,
+            }
+          : store.profiles,
+        remoteAssets: data?.remoteAssets
+          ? {
+              ...store.remoteAssets,
+              ...data.remoteAssets,
+            }
+          : store.remoteAssets,
+        remotePackages: data?.remotePackages
+          ? {
+              ...store.remotePackages,
+              ...data.remotePackages,
+            }
+          : store.remotePackages,
+        settings: data?.settings ?? store.settings,
+        state: {
+          ...store.state,
+          ...state,
+        },
+      }))
     },
   },
   packageFilters: {

@@ -17,10 +17,6 @@ export function getRootPath(): string {
   return path.join(getGamePath(), "Manager")
 }
 
-export function getCollectionsPath(): string {
-  return path.join(getRootPath(), "Collections")
-}
-
 export function getDownloadsPath(): string {
   return path.join(getRootPath(), "Downloads")
 }
@@ -39,8 +35,4 @@ export function getPackagesPath(): string {
 
 export function getPluginsPath(): string {
   return path.join(getGamePath(), "Plugins")
-}
-
-export function getProfilesPath(): string {
-  return path.join(getRootPath(), "Profiles")
 }

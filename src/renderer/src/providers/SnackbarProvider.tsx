@@ -3,11 +3,12 @@ import { ComponentType, ReactNode } from "react"
 import { CustomContentProps, SnackbarProvider as BaseSnackbarProvider } from "notistack"
 
 import { DownloadProgressSnackbar } from "@renderer/components/snackbars/DownloadProgressSnackbar"
-import { ProgressSnackbar } from "@renderer/components/snackbars/ProgressSnackbar"
+
+import { ProgressSnackbar } from "../components/snackbars/LoadProgressSnackbar"
 
 interface CustomProps {
   "download-progress": {}
-  progress: {}
+  "load-progress": {}
 }
 
 declare module "notistack" {
@@ -18,7 +19,7 @@ const snackbarComponents: {
   [variant in keyof CustomProps]: ComponentType<CustomContentProps & CustomProps[variant]>
 } = {
   "download-progress": DownloadProgressSnackbar,
-  progress: ProgressSnackbar,
+  "load-progress": ProgressSnackbar,
 }
 
 export function SnackbarProvider({ children }: { children: ReactNode }): JSX.Element {
