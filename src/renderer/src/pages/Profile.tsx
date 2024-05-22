@@ -1,11 +1,13 @@
+import { useEffect, useState } from "react"
+
 import Box from "@mui/material/Box"
 import FormControl from "@mui/material/FormControl"
 import FormControlLabel from "@mui/material/FormControlLabel"
 import FormGroup from "@mui/material/FormGroup"
 import Switch from "@mui/material/Switch"
 import TextField from "@mui/material/TextField"
+
 import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
-import { useEffect, useState } from "react"
 
 function Profile(): JSX.Element {
   const actions = useStoreActions()

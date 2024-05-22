@@ -1,4 +1,3 @@
-import { PackageInfo } from "@common/types"
 import BackIcon from "@mui/icons-material/ArrowBack"
 import TabContext from "@mui/lab/TabContext"
 import TabList from "@mui/lab/TabList"
@@ -10,13 +9,14 @@ import ListItem from "@mui/material/ListItem"
 import Tab from "@mui/material/Tab"
 import Tooltip from "@mui/material/Tooltip"
 import Typography from "@mui/material/Typography"
+import { create as createStore } from "zustand"
 
+import { PackageInfo } from "@common/types"
 import { PackageActions } from "@renderer/components/PackageActions"
 import { PackageListItem } from "@renderer/components/PackageListItem"
 import { PackageTags } from "@renderer/components/PackageTags"
 import { history } from "@renderer/stores/navigation"
 import { usePackageInfo, useStore } from "@renderer/utils/store"
-import { create as createStore } from "zustand"
 
 const packageViewTabs: {
   id: string

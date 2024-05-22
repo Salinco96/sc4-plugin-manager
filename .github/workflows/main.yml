@@ -36,10 +36,8 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn-
       - name: Check dependencies
         run: yarn install --immutable
-      - name: Run Prettier
-        run: yarn format:check
       - name: Run ESLint
-        run: yarn lint:check
+        run: yarn lint:ci
       - name: Run TypeScript
         run: yarn typecheck
       - name: Build application

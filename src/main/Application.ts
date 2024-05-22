@@ -1,3 +1,4 @@
+import { exec as cmd } from "child_process"
 import { ipcMain } from "electron/main"
 import fs from "fs/promises"
 import path from "path"
@@ -11,15 +12,13 @@ import {
   VariantInfo,
   getDefaultVariant,
 } from "@common/types"
+import { createUniqueProfileId } from "@common/utils/profiles"
 
-import { exec as cmd } from "child_process"
 import childProcessPath from "./child?modulePath"
 import { loadLocalPackages, loadRemotePackages } from "./data/packages"
 import { MainWindow } from "./MainWindow"
 import { createChildProcess } from "./process"
 import { download } from "./utils/download"
-import { getRootPath } from "./utils/paths"
-import { createUniqueProfileId } from "@common/utils/profiles"
 import {
   createIfMissing,
   deserializeConfig,
@@ -29,6 +28,7 @@ import {
   serializeConfig,
   writeFile,
 } from "./utils/files"
+import { getRootPath } from "./utils/paths"
 
 const defaultSettings: Settings = {
   useYaml: true,
