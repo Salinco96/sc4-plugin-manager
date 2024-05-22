@@ -1,6 +1,7 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import { ApplicationState } from "@common/state"
+import { ProfileUpdate } from "@common/profiles"
 
 // Custom APIs for renderer
 export const api = {
@@ -10,10 +11,7 @@ export const api = {
   async disablePackages(packageIds: string[]): Promise<boolean> {
     return ipcRenderer.invoke("disablePackages", packageIds)
   },
-  async editProfile(
-    profileId: string,
-    data: { name?: string; settings?: { darknite?: boolean } },
-  ): Promise<boolean> {
+  async editProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
     return ipcRenderer.invoke("editProfile", profileId, data)
   },
   async enablePackages(packageIds: string[]): Promise<boolean> {

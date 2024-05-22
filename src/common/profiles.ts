@@ -1,4 +1,19 @@
-import { normalizeString } from "./types"
+import { normalizeString } from "./utils/types"
+
+export interface ProfileSettings {
+  cam: boolean
+  darknite: boolean
+}
+
+export interface ProfileUpdate {
+  name?: string
+  settings?: Partial<ProfileSettings>
+}
+
+export const defaultProfileSettings: ProfileSettings = {
+  cam: false,
+  darknite: false,
+}
 
 export function createUniqueProfileId(name: string, existingIds: string[]): string {
   const baseId = normalizeString(name.trim())

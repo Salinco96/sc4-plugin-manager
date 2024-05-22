@@ -1,3 +1,5 @@
+import { ProfileSettings } from "./profiles"
+
 export interface AssetData {
   assetId: string
   lastModified: string
@@ -86,12 +88,9 @@ export interface ProfileInfo {
   format?: string
   name: string
   packages: {
-    [id in string]?: PackageConfig
+    [packageId in string]?: PackageConfig
   }
-  settings: {
-    cam: boolean
-    darknite: boolean
-  }
+  settings: ProfileSettings
 }
 
 export interface PackageInfo {

@@ -4,13 +4,14 @@ import path from "path"
 export class MainWindow extends BrowserWindow {
   public constructor() {
     super({
-      width: 900,
-      height: 670,
       autoHideMenuBar: true,
+      height: 720,
+      icon: path.join(__dirname, "../renderer/splash.png"),
       show: false,
       webPreferences: {
         preload: path.join(__dirname, "../preload/index.js"),
       },
+      width: 960,
     })
 
     this.on("ready-to-show", () => {

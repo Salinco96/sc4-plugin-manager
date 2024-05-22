@@ -12,6 +12,7 @@ import {
   PackageStatus,
   Settings,
 } from "@common/types"
+import { ProfileUpdate } from "@common/profiles"
 
 export interface PackageFilters {
   categories: PackageCategory[]
@@ -22,10 +23,7 @@ export interface PackageFilters {
 export interface StoreActions {
   createProfile(name: string, templateProfileId?: string): Promise<boolean>
   disablePackages(packageIds: string[]): Promise<boolean>
-  editProfile(
-    profileId: string,
-    data: { name?: string; settings?: { cam?: boolean; darknite?: boolean } },
-  ): Promise<boolean>
+  editProfile(profileId: string, data: ProfileUpdate): Promise<boolean>
   enablePackages(packageIds: string[]): Promise<boolean>
   installPackages(packageIds: string[]): Promise<boolean>
   openPackageFileInExplorer(packageId: string, variantId: string, filePath: string): Promise<void>

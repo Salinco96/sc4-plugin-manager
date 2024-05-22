@@ -12,7 +12,7 @@ import {
   VariantInfo,
   getDefaultVariant,
 } from "@common/types"
-import { createUniqueProfileId } from "@common/utils/profiles"
+import { ProfileUpdate, createUniqueProfileId, defaultProfileSettings } from "@common/profiles"
 
 import childProcessPath from "./child?modulePath"
 import { loadLocalPackages, loadRemotePackages } from "./data/packages"
@@ -29,6 +29,7 @@ import {
   writeFile,
 } from "./utils/files"
 import { getRootPath } from "./utils/paths"
+import { SplashScreen } from "./SplashScreen"
 
 const defaultSettings: Settings = {
   useYaml: true,
@@ -302,7 +303,7 @@ export class Application {
       id: createUniqueProfileId(name, Object.keys(this.profiles)),
       name,
       packages: {},
-      settings: { cam: false, darknite: false },
+      settings: defaultProfileSettings,
     }
 
     const templateProfile = templateProfileId ? this.getProfileInfo(templateProfileId) : undefined
@@ -372,10 +373,7 @@ export class Application {
     return true
   }
 
-  public async editProfile(
-    profileId: string,
-    data: { name?: string; settings?: { darknite?: boolean } },
-  ): Promise<boolean> {
+  public async editProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
     const profile = this.getProfileInfo(profileId)
     if (!profile) {
       return false
@@ -875,8 +873,7 @@ export class Application {
           profile.format = format
           profile.id = profileId
           profile.name ??= profileId
-          profile.settings ??= { cam: false, darknite: false }
-          profile.settings.darknite ??= false
+          profile.settings = { ...defaultProfileSettings, ...profile.settings }
           this.profiles[profileId] = profile
           this.markProfileForUpdate(profile)
           nProfiles++
@@ -1051,9 +1048,15 @@ export class Application {
 
   protected createMainWindow(): MainWindow {
     if (!this.mainWindow) {
+      const splashScreen = new SplashScreen()
+
       this.mainWindow = new MainWindow()
       this.mainWindow.on("close", () => {
         this.mainWindow = undefined
+      })
+
+      this.mainWindow.on("ready-to-show", () => {
+        splashScreen.close()
       })
     }
 
