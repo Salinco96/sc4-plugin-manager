@@ -5,16 +5,19 @@ import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import Typography from "@mui/material/Typography"
 
-import { PackageInfo } from "@common/types"
+import { Page } from "@renderer/pages"
 import { history } from "@renderer/stores/navigation"
+import { usePackageInfo } from "@renderer/utils/store"
 
 import { PackageActions } from "./PackageActions"
 import { PackageTags } from "./PackageTags"
 import { VirtualListItemProps } from "./VirtualList"
 
 export const PackageListItem = memo(function PackageListItem({
-  item: packageInfo,
-}: VirtualListItemProps<PackageInfo>): JSX.Element | null {
+  item: packageId,
+}: VirtualListItemProps<string>): JSX.Element | null {
+  const packageInfo = usePackageInfo(packageId)
+
   const [focus, setFocus] = useState(false)
   const [hover, setHover] = useState(false)
   const [hoverWithin, setHoverWithin] = useState(false)
@@ -22,10 +25,16 @@ export const PackageListItem = memo(function PackageListItem({
   const active = focus || (hover && !hoverWithin)
 
   const openPackageView = useCallback(() => {
-    history.push({ page: "PackageView", data: { packageId: packageInfo.id } })
-  }, [packageInfo.id])
+    history.push({ page: Page.PackageView, data: { packageId } })
+  }, [packageId])
 
   if (!packageInfo) {
+    return null
+  }
+
+  const variantInfo = packageInfo.variants[packageInfo.status.variant]
+
+  if (!variantInfo) {
     return null
   }
 
@@ -34,6 +43,7 @@ export const PackageListItem = memo(function PackageListItem({
       elevation={active ? 8 : 1}
       onBlur={() => setFocus(false)}
       onClick={() => {
+        console.log(active, hover, hoverWithin, focus)
         if (active) {
           openPackageView()
         }
@@ -56,7 +66,7 @@ export const PackageListItem = memo(function PackageListItem({
     >
       <CardContent sx={{ flexGrow: 1 }}>
         <Typography variant="h6">
-          {packageInfo.name} (v{packageInfo.installed ?? packageInfo.version})
+          {packageInfo.name} (v{variantInfo.installed ?? variantInfo.version})
         </Typography>
         <Typography variant="body2">{packageInfo.id}</Typography>
         <PackageTags onHover={setHoverWithin} packageInfo={packageInfo} />

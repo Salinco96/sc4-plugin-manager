@@ -1,12 +1,39 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import { ApplicationState } from "@common/state"
-import { ProfileInfo, Settings } from "@common/types"
 
 // Custom APIs for renderer
 export const api = {
-  ping(): void {
-    ipcRenderer.send("ping")
+  async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
+    return ipcRenderer.invoke("createProfile", name, templateProfileId)
+  },
+  async disablePackages(packageIds: string[]): Promise<boolean> {
+    return ipcRenderer.invoke("disablePackages", packageIds)
+  },
+  async editProfile(
+    profileId: string,
+    data: { name?: string; settings?: { darknite?: boolean } },
+  ): Promise<boolean> {
+    return ipcRenderer.invoke("editProfile", profileId, data)
+  },
+  async enablePackages(packageIds: string[]): Promise<boolean> {
+    return ipcRenderer.invoke("enablePackages", packageIds)
+  },
+  async installPackages(packageIds: string[]): Promise<boolean> {
+    return ipcRenderer.invoke("installPackages", packageIds)
+  },
+  async removePackages(packageIds: string[]): Promise<boolean> {
+    return ipcRenderer.invoke("removePackages", packageIds)
+  },
+  async openPackageFileInExplorer(
+    packageId: string,
+    variantId: string,
+    filePath: string,
+  ): Promise<void> {
+    return ipcRenderer.invoke("openPackageFileInExplorer", packageId, variantId, filePath)
+  },
+  async setPackageVariant(packageId: string, variantId: string): Promise<boolean> {
+    return ipcRenderer.invoke("setPackageVariant", packageId, variantId)
   },
   subscribeToStateUpdates(handler: (update: Partial<ApplicationState>) => void): () => void {
     const listener = (_: IpcRendererEvent, update: Partial<ApplicationState>) => handler(update)
@@ -14,24 +41,8 @@ export const api = {
     ipcRenderer.invoke("getState").then(handler)
     return () => ipcRenderer.off("updateState", listener)
   },
-  async installFiles(
-    assets: {
-      id: string
-      packages: {
-        packageId: string
-        variantId: string
-      }[]
-      url: string
-      version: string
-    }[],
-  ): Promise<void> {
-    return ipcRenderer.invoke("installFiles", assets)
-  },
-  async writeProfile(profile: ProfileInfo): Promise<void> {
-    return ipcRenderer.invoke("writeProfile", profile)
-  },
-  async writeSettings(settings: Settings): Promise<void> {
-    return ipcRenderer.invoke("writeSettings", settings)
+  async switchProfile(profileId: string): Promise<boolean> {
+    return ipcRenderer.invoke("switchProfile", profileId)
   },
 }
 

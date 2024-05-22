@@ -5,6 +5,8 @@ import Chip from "@mui/material/Chip"
 import List from "@mui/material/List"
 
 import { PackageCategory, PackageInfo, PackageState, getCategory, getState } from "@common/types"
+import { Page } from "@renderer/pages"
+import { useLocation } from "@renderer/stores/navigation"
 import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
 
 interface TagInfo {
@@ -79,9 +81,21 @@ const tags: TagInfo[] = [
     color: "error",
   },
   {
+    id: "error",
+    label: "Error",
+    state: PackageState.ERROR,
+    color: "error",
+  },
+  {
     id: "outdated",
     label: "Outdated",
     state: PackageState.OUTDATED,
+    color: "warning",
+  },
+  {
+    id: "local",
+    label: "Local",
+    state: PackageState.LOCAL,
     color: "warning",
   },
 ]
@@ -95,6 +109,9 @@ export function PackageTag({
 }): JSX.Element {
   const actions = useStoreActions()
   const filters = useStore(store => store.packageFilters)
+  const location = useLocation()
+
+  const filtering = location.page === Page.Packages
 
   const selected =
     (tag.category !== undefined && filters.categories.includes(tag.category)) ||
@@ -125,20 +142,33 @@ export function PackageTag({
     [actions, filters, selected],
   )
 
+  if (filtering) {
+    return (
+      <Tooltip title={selected ? "Remove filter" : "Add filter"}>
+        <Chip
+          color={tag.color}
+          component="li"
+          label={tag.label}
+          onClick={onClick}
+          onMouseEnter={() => onHover?.(true)}
+          onMouseLeave={() => onHover?.(false)}
+          size="medium"
+          sx={{ borderRadius: 2 }}
+          variant={selected ? "filled" : "outlined"}
+        />
+      </Tooltip>
+    )
+  }
+
   return (
-    <Tooltip title={selected ? "Remove filter" : "Add filter"}>
-      <Chip
-        color={tag.color}
-        component="li"
-        label={tag.label}
-        onClick={onClick}
-        onMouseEnter={() => onHover?.(true)}
-        onMouseLeave={() => onHover?.(false)}
-        size="medium"
-        sx={{ borderRadius: 2 }}
-        variant={selected ? "filled" : "outlined"}
-      />
-    </Tooltip>
+    <Chip
+      color={tag.color}
+      component="li"
+      label={tag.label}
+      size="medium"
+      sx={{ borderRadius: 2 }}
+      variant="filled"
+    />
   )
 }
 

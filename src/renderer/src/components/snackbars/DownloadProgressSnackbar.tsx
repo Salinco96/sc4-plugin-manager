@@ -12,7 +12,7 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
   (props, ref) => {
     const { id } = props
 
-    const key = useStore(store => store.state.ongoingDownloads[0])
+    const key = useStore(store => store.ongoingDownloads[0])
 
     useEffect(() => {
       if (!key) {

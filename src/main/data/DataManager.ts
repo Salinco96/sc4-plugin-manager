@@ -1,293 +1,366 @@
-import fs from "fs/promises"
-import path from "path"
+// import fs from "fs/promises"
+// import path from "path"
 
-import { parse as yamlParse, stringify as yamlStringify } from "yaml"
+// import { parse as yamlParse, stringify as yamlStringify } from "yaml"
 
-import { ApplicationData } from "@common/state"
-import { ProfileInfo, ProfilePackageInfo, Settings } from "@common/types"
-import { parsePackageId } from "@common/utils/packages"
-import { assert, isBoolean, isObject, isString } from "@common/utils/types"
+// import { ApplicationData } from "@common/state"
+// import { PackageConfig, PackageStatus, ProfileData, ProfileInfo, Settings } from "@common/types"
+// import { parsePackageId } from "@common/utils/packages"
+// import { assert, isBoolean, isObject, isString } from "@common/utils/types"
 
-import childProcessPath from "../child?modulePath"
-import { createChildProcess } from "../process"
-import { getRootPath } from "../utils/paths"
+// import childProcessPath from "../child?modulePath"
+// import { createChildProcess } from "../process"
+// import { getRootPath } from "../utils/paths"
 
-import { loadLocalPackages, loadRemotePackages } from "./packages"
+// import { loadLocalPackages, loadRemotePackages } from "./packages"
 
-const formats = [".json", ".yaml", ".yml"]
+// const formats = [".json", ".yaml", ".yml"]
 
-export enum ConfigFormat {
-  JSON = ".json",
-  YAML = ".yaml",
-}
+// export enum ConfigFormat {
+//   JSON = ".json",
+//   YAML = ".yaml",
+// }
 
-const dirnames = {
-  downloads: "Downloads",
-  packages: "Packages",
-  profiles: "Profiles",
-}
+// const dirnames = {
+//   downloads: "Downloads",
+//   packages: "Packages",
+//   profiles: "Profiles",
+// }
 
-const filenames = {
-  packageConfig: "package",
-  settings: "settings",
-}
+// const filenames = {
+//   packageConfig: "package",
+//   settings: "settings",
+// }
 
-export class DataManager {
-  databaseUpdatePromise?: Promise<boolean>
-  data: Partial<ApplicationData> = {}
-  defaultFormat: string = ".json"
-  rootPath: string = getRootPath()
-  status: string | null = null
+// export class DataManager {
+//   databaseUpdatePromise?: Promise<boolean>
+//   data: Partial<ApplicationData> = {}
+//   defaultFormat: string = ".json"
+//   rootPath: string = getRootPath()
+//   status: string | null = null
 
-  getDownloadsPath() {
-    return path.join(this.rootPath, dirnames.downloads)
-  }
+//   getDownloadsPath() {
+//     return path.join(this.rootPath, dirnames.downloads)
+//   }
 
-  getPackagesPath() {
-    return path.join(this.rootPath, dirnames.packages)
-  }
+//   getPackagesPath() {
+//     return path.join(this.rootPath, dirnames.packages)
+//   }
 
-  getProfilesPath() {
-    return path.join(this.rootPath, dirnames.profiles)
-  }
+//   getProfilesPath() {
+//     return path.join(this.rootPath, dirnames.profiles)
+//   }
 
-  async load(
-    onProgress: (newData: Partial<ApplicationData>, status: string | null) => void,
-  ): Promise<void> {
-    await fs.mkdir(this.rootPath, { recursive: true })
+//   async load(
+//     onProgressData: (data: Partial<ApplicationData>) => void,
+//     onProgressStatus: (status: string | null) => void,
+//   ): Promise<void> {
+//     await fs.mkdir(this.rootPath, { recursive: true })
 
-    const databaseUpdatePromise = this.tryUpdateDatabase()
+//     const databaseUpdatePromise = this.tryUpdateDatabase()
 
-    // Load settings
-    onProgress({}, "Loading settings...")
-    const settings = await this.loadSettings()
-    this.data.settings = settings
+//     // Load settings
+//     onProgressStatus("Loading settings...")
+//     const settings = await this.loadSettings()
+//     this.data.settings = settings
 
-    // Load profiles
-    onProgress({}, "Loading profiles...")
-    const profiles = await this.loadProfiles()
-    this.data.profiles = profiles
+//     // Load profiles
+//     onProgressStatus("Loading profiles...")
+//     const profiles = await this.loadProfiles()
+//     this.data.profiles = profiles
 
-    // Check that current profile exists and fixes if not
-    let currentProfile: ProfileInfo | undefined
-    if (settings.currentProfile) {
-      currentProfile = profiles[settings.currentProfile]
-      if (!currentProfile) {
-        currentProfile = Object.values(profiles)[0]
-        settings.currentProfile = currentProfile.id
-        await this.writeSettings(settings)
-      }
-    } else {
-      currentProfile = Object.values(profiles)[0]
-      if (currentProfile) {
-        settings.currentProfile = currentProfile.id
-        await this.writeSettings(settings)
-      }
-    }
+//     // Check that current profile exists and fixes if not
+//     let currentProfile: ProfileInfo | undefined
+//     if (settings.currentProfile) {
+//       currentProfile = profiles[settings.currentProfile]
+//       if (!currentProfile) {
+//         currentProfile = Object.values(profiles)[0]
+//         settings.currentProfile = currentProfile.id
+//         await this.writeSettings(settings)
+//       }
+//     } else {
+//       currentProfile = Object.values(profiles)[0]
+//       if (currentProfile) {
+//         settings.currentProfile = currentProfile.id
+//         await this.writeSettings(settings)
+//       }
+//     }
 
-    // Load local packages
-    onProgress({ profiles, settings }, "Loading packages...")
-    const localPackages = await loadLocalPackages()
-    this.data.localPackages = localPackages
+//     onProgressData({ profiles, settings })
 
-    // Wait for database update to finish
-    onProgress({ localPackages }, "Updating database...")
-    await databaseUpdatePromise
+//     // Load local packages
+//     onProgressStatus("Loading packages...")
+//     const localPackages = await loadLocalPackages()
+//     this.data.packages = localPackages
+//     onProgressData({ packages: localPackages })
 
-    // Load remote packages
-    onProgress({}, "Loading packages...")
-    const { assets: remoteAssets, packages: remotePackages } = await loadRemotePackages()
-    this.data.remoteAssets = remoteAssets
-    this.data.remotePackages = remotePackages
+//     // Wait for database update to finish
+//     onProgressStatus("Updating database...")
+//     await databaseUpdatePromise
 
-    onProgress({ remoteAssets, remotePackages }, null)
-  }
+//     // Load remote packages
+//     onProgressStatus("Loading packages...")
+//     const { assets: remoteAssets, packages: remotePackages } = await loadRemotePackages()
+//     this.data.assets = remoteAssets
+//     this.data.packages = remotePackages
+//     for (const packageId in localPackages) {
+//       const localPackage = localPackages[packageId]
+//       if (localPackage) {
+//         const remotePackage = (remotePackages[packageId] ??= localPackage)
 
-  protected async loadProfiles(): Promise<{ [profileId: string]: ProfileInfo }> {
-    console.debug("Loading profiles...")
+//         for (const variantId in localPackage.variants) {
+//           const localVariant = localPackage.variants[variantId]
+//           if (localVariant) {
+//             const remoteVariant = remotePackage.variants[variantId]
+//             if (remoteVariant) {
+//               remoteVariant.installed = localVariant.version
+//             } else {
+//               remotePackage.variants[variantId] = {
+//                 ...localVariant,
+//                 installed: localVariant.version,
+//                 local: true,
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
 
-    let nProfiles = 0
-    const profiles: { [profileId: string]: ProfileInfo } = {}
+//     onProgressData({ assets: remoteAssets, packages: remotePackages })
 
-    const profilesPath = this.getProfilesPath()
-    await fs.mkdir(profilesPath, { recursive: true })
+//     if (currentProfile) {
+//       onProgressStatus("Resolving dependencies...")
 
-    const entries = await fs.readdir(profilesPath, { withFileTypes: true })
-    for (const entry of entries) {
-      const format = path.extname(entry.name)
-      if (entry.isFile() && formats.includes(format)) {
-        const profileId = path.basename(entry.name, format)
-        const profilePath = path.join(profilesPath, entry.name)
+//       const enabledPackages = new Map<string, PackageStatus>()
+//       for (const packageId in currentProfile.packageConfig) {
+//         if (remotePackages[packageId]) {
+//           const config = currentProfile.packageConfig[packageId]
+//           if (config?.enabled) {
+//             enabledPackages.set(packageId, {
+//               dependency: false,
+//               enabled: true,
+//               requiredBy: [],
+//               variant: config.variant ?? Object.keys(remotePackages[packageId]!.variants)[0],
+//             })
+//           }
+//         } else {
+//           console.warn(`Unknown package '${packageId}'`)
+//         }
+//       }
 
-        try {
-          const profileConfig = await this.readConfig(profilePath)
-          assert(isObject(profileConfig), "Not an object")
+//       enabledPackages.forEach(({ variant }, packageId) => {
+//         const packageInfo = remotePackages[packageId]
+//         const variantInfo = packageInfo.variants[variant]
+//         variantInfo?.dependencies?.forEach(dependencyId => {
+//           let dependencyPackageInfo = enabledPackages.get(dependencyId)
+//           if (dependencyPackageInfo) {
+//             dependencyPackageInfo.enabled = true
+//             dependencyPackageInfo.requiredBy.push(packageId)
+//           } else {
+//             dependencyPackageInfo = {
+//               dependency: true,
+//               enabled: true,
+//               requiredBy: [packageId],
+//               variant: Object.keys(remotePackages[dependencyId]!.variants)[0],
+//             }
 
-          const profileInfo: ProfileInfo = {
-            id: profileId,
-            name: profileId,
-            packages: {},
-          }
+//             enabledPackages.set(dependencyId, dependencyPackageInfo)
+//             currentProfile.packageStatus[dependencyId] = dependencyPackageInfo
+//           }
+//         })
+//       })
 
-          if (isString(profileConfig.name)) {
-            profileInfo.name = profileConfig.name
-          }
+//       onProgressData({ profiles: { [currentProfile.id]: currentProfile } })
+//     }
 
-          if (isObject(profileConfig.packages)) {
-            for (const packageId in profileConfig.packages) {
-              if (!parsePackageId(packageId)) {
-                console.warn(`Invalid package ID '${packageId}'`)
-                continue
-              }
+//     onProgressStatus(null)
+//   }
 
-              const packageConfig = profileConfig.packages[packageId]
-              if (isBoolean(packageConfig)) {
-                profileInfo.packages[packageId] = {
-                  enabled: packageConfig,
-                }
-              } else if (isObject(packageConfig)) {
-                const packageInfo: ProfilePackageInfo = {
-                  enabled: true,
-                }
+//   protected async loadProfiles(): Promise<{ [profileId: string]: ProfileInfo }> {
+//     console.debug("Loading profiles...")
 
-                if (isBoolean(packageConfig.enabled)) {
-                  packageInfo.enabled = packageConfig.enabled
-                }
+//     let nProfiles = 0
+//     const profiles: { [profileId: string]: ProfileInfo } = {}
 
-                if (isString(packageConfig.variant)) {
-                  packageInfo.variant = packageConfig.variant
-                }
+//     const profilesPath = this.getProfilesPath()
+//     await fs.mkdir(profilesPath, { recursive: true })
 
-                profileInfo.packages[packageId] = packageInfo
-              } else if (packageConfig !== null) {
-                console.warn(`Invalid package configuration for '${packageId}'`)
-              }
-            }
-          }
+//     const entries = await fs.readdir(profilesPath, { withFileTypes: true })
+//     for (const entry of entries) {
+//       const format = path.extname(entry.name)
+//       if (entry.isFile() && formats.includes(format)) {
+//         const profileId = path.basename(entry.name, format)
+//         const profilePath = path.join(profilesPath, entry.name)
 
-          profiles[profileId] = profileInfo
-          nProfiles++
-        } catch (error) {
-          console.warn(`Invalid profile configuration '${entry.name}'`, error)
-        }
-      } else {
-        console.warn(`Unsupported file '${entry.name}' inside ${dirnames.profiles} folder`)
-      }
-    }
+//         try {
+//           const profileConfig = await this.readConfig(profilePath)
+//           assert(isObject(profileConfig), "Not an object")
 
-    console.debug(`Loaded ${nProfiles} profiles`)
+//           const profileInfo: ProfileInfo = {
+//             id: profileId,
+//             name: profileId,
+//             packageConfig: {},
+//             packageStatus: {},
+//           }
 
-    return profiles
-  }
+//           if (isString(profileConfig.name)) {
+//             profileInfo.name = profileConfig.name
+//           }
 
-  protected async loadSettings(): Promise<Settings> {
-    console.debug("Loading settings...")
+//           if (isObject(profileConfig.packages)) {
+//             for (const packageId in profileConfig.packages) {
+//               if (!parsePackageId(packageId)) {
+//                 console.warn(`Invalid package ID '${packageId}'`)
+//                 continue
+//               }
 
-    const config = await this.loadConfig(this.rootPath, filenames.settings)
+//               const packageConfig = profileConfig.packages[packageId]
+//               if (isBoolean(packageConfig)) {
+//                 profileInfo.packageConfig[packageId] = {
+//                   enabled: packageConfig,
+//                 }
+//               } else if (isObject(packageConfig)) {
+//                 const config: PackageConfig = {
+//                   enabled: true,
+//                 }
 
-    const settings: Settings = {
-      useYaml: this.defaultFormat !== ConfigFormat.JSON,
-    }
+//                 if (isBoolean(packageConfig.enabled)) {
+//                   config.enabled = packageConfig.enabled
+//                 }
 
-    if (!isObject(config?.data)) {
-      await this.writeConfig(this.rootPath, filenames.settings, settings)
-      return settings
-    }
+//                 if (isString(packageConfig.variant)) {
+//                   config.variant = packageConfig.variant
+//                 }
 
-    if (isString(config.data.currentProfile)) {
-      settings.currentProfile = config.data.currentProfile
-    }
+//                 profileInfo.packageConfig[packageId] = config
+//               } else if (packageConfig !== null) {
+//                 console.warn(`Invalid package configuration for '${packageId}'`)
+//               }
+//             }
+//           }
 
-    if (isBoolean(config.data.useYaml)) {
-      settings.useYaml = config.data.useYaml
-    }
+//           profiles[profileId] = profileInfo
+//           nProfiles++
+//         } catch (error) {
+//           console.warn(`Invalid profile configuration '${entry.name}'`, error)
+//         }
+//       } else {
+//         console.warn(`Unsupported file '${entry.name}' inside ${dirnames.profiles} folder`)
+//       }
+//     }
 
-    console.debug("Loaded settings")
+//     console.debug(`Loaded ${nProfiles} profiles`)
 
-    return settings
-  }
+//     return profiles
+//   }
 
-  async writeProfile(profile: ProfileInfo): Promise<void> {
-    console.debug(`Saving profile ${profile.id}...`)
+//   protected async loadSettings(): Promise<Settings> {
+//     console.debug("Loading settings...")
 
-    await this.writeConfig<RawProfileInfo>(this.getProfilesPath(), profile.id, {
-      name: profile.name,
-      packages: profile.packages,
-    })
+//     const config = await this.loadConfig(this.rootPath, filenames.settings)
 
-    console.debug(`Saved profile ${profile.id}`)
-  }
+//     const settings: Settings = {
+//       useYaml: this.defaultFormat !== ConfigFormat.JSON,
+//     }
 
-  async writeSettings(settings: Settings): Promise<void> {
-    console.debug("Saving settings...")
+//     if (!isObject(config?.data)) {
+//       await this.writeConfig(this.rootPath, filenames.settings, settings)
+//       return settings
+//     }
 
-    await this.writeConfig<RawSettings>(this.rootPath, filenames.settings, {
-      currentProfile: settings.currentProfile,
-      useYaml: settings.useYaml ? true : undefined,
-    })
+//     if (isString(config.data.currentProfile)) {
+//       settings.currentProfile = config.data.currentProfile
+//     }
 
-    console.debug("Saved settings")
-  }
+//     if (isBoolean(config.data.useYaml)) {
+//       settings.useYaml = config.data.useYaml
+//     }
 
-  protected async loadConfig(
-    directory: string,
-    basename: string,
-  ): Promise<{ data: unknown; format: string } | null> {
-    for (const format of formats) {
-      const fullPath = path.join(directory, basename + format)
-      try {
-        const data = await this.readConfig(fullPath)
-        return { data, format }
-      } catch (error) {
-        console.debug(error)
-      }
-    }
+//     console.debug("Loaded settings")
 
-    return null
-  }
+//     return settings
+//   }
 
-  protected async readConfig(fullPath: string): Promise<unknown> {
-    const raw = await fs.readFile(fullPath, "utf8")
-    return fullPath.endsWith(ConfigFormat.JSON) ? JSON.parse(raw) : yamlParse(raw)
-  }
+//   async writeProfile(profile: ProfileInfo): Promise<void> {
+//     console.debug(`Saving profile ${profile.id}...`)
 
-  protected async writeConfig<T>(
-    directory: string,
-    basename: string,
-    data: T,
-    format: string = this.defaultFormat,
-  ): Promise<void> {
-    const fullPath = path.join(directory, basename + format)
-    const raw =
-      format === ConfigFormat.JSON ? JSON.stringify(data, undefined, 2) : yamlStringify(data)
-    await fs.writeFile(fullPath, raw, "utf8")
-  }
+//     await this.writeConfig<ProfileData>(this.getProfilesPath(), profile.id, {
+//       name: profile.name,
+//       packages: profile.packageConfig,
+//     })
 
-  protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
-    if (!this.databaseUpdatePromise || force) {
-      this.databaseUpdatePromise = new Promise(resolve => {
-        console.log("Updating database...")
-        createChildProcess<unknown, { success?: boolean; error?: Error }>(childProcessPath, {
-          onClose() {
-            console.log("Failed updating database:", "closed")
-            resolve(false)
-          },
-          onMessage({ success, error }) {
-            if (success) {
-              console.log("Updated database")
-              resolve(true)
-            } else {
-              console.log("Failed updating database:", error)
-              resolve(false)
-            }
-          },
-        })
-      })
-    }
+//     console.debug(`Saved profile ${profile.id}`)
+//   }
 
-    return this.databaseUpdatePromise
-  }
-}
+//   async writeSettings(settings: Settings): Promise<void> {
+//     console.debug("Saving settings...")
 
-export type RawProfileInfo = Omit<ProfileInfo, "id">
-export type RawSettings = Settings
+//     await this.writeConfig<RawSettings>(this.rootPath, filenames.settings, {
+//       currentProfile: settings.currentProfile,
+//       useYaml: settings.useYaml ? true : undefined,
+//     })
+
+//     console.debug("Saved settings")
+//   }
+
+//   protected async loadConfig(
+//     directory: string,
+//     basename: string,
+//   ): Promise<{ data: unknown; format: string } | null> {
+//     for (const format of formats) {
+//       const fullPath = path.join(directory, basename + format)
+//       try {
+//         const data = await this.readConfig(fullPath)
+//         return { data, format }
+//       } catch (error) {
+//         console.debug(error)
+//       }
+//     }
+
+//     return null
+//   }
+
+//   protected async readConfig(fullPath: string): Promise<unknown> {
+//     const raw = await fs.readFile(fullPath, "utf8")
+//     return fullPath.endsWith(ConfigFormat.JSON) ? JSON.parse(raw) : yamlParse(raw)
+//   }
+
+//   protected async writeConfig<T>(
+//     directory: string,
+//     basename: string,
+//     data: T,
+//     format: string = this.defaultFormat,
+//   ): Promise<void> {
+//     const fullPath = path.join(directory, basename + format)
+//     const raw =
+//       format === ConfigFormat.JSON ? JSON.stringify(data, undefined, 2) : yamlStringify(data)
+//     await fs.writeFile(fullPath, raw, "utf8")
+//   }
+
+//   protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
+//     if (!this.databaseUpdatePromise || force) {
+//       this.databaseUpdatePromise = new Promise(resolve => {
+//         console.log("Updating database...")
+//         createChildProcess<unknown, { success?: boolean; error?: Error }>(childProcessPath, {
+//           onClose() {
+//             console.log("Failed updating database:", "closed")
+//             resolve(false)
+//           },
+//           onMessage({ success, error }) {
+//             if (success) {
+//               console.log("Updated database")
+//               resolve(true)
+//             } else {
+//               console.log("Failed updating database:", error)
+//               resolve(false)
+//             }
+//           },
+//         })
+//       })
+//     }
+
+//     return this.databaseUpdatePromise
+//   }
+// }
+
+// export type RawSettings = Settings

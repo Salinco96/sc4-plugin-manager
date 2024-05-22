@@ -1,6 +1,8 @@
 import { Suspense } from "react"
 
+import { Modal } from "./components/Modal"
 import { Page, getPageComponent } from "./pages"
+import { Loading } from "./pages/Loading"
 import { useLocation } from "./stores/navigation"
 
 /**
@@ -11,8 +13,9 @@ export function Content<T extends Page>(): JSX.Element {
   const PageComponent = getPageComponent(page)
 
   return (
-    <Suspense>
+    <Suspense fallback={<Loading />}>
       <PageComponent {...data} />
+      <Modal />
     </Suspense>
   )
 }

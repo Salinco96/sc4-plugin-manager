@@ -1,3 +1,57 @@
+export interface AssetData {
+  assetId: string
+  lastModified: string
+  url: string
+  version: string
+}
+
+export interface PackageData {
+  assets?: {
+    assetId: string
+    exclude?: string[]
+    include?: string[]
+  }[]
+  dependencies?: string[]
+  group: string
+  info?: {
+    author?: string
+    conflicts?: string
+    description?: string
+    summary?: string
+    website?: string
+  }
+  name: string
+  subfolder: string
+  variantDescriptions?: {
+    [key: string]: {
+      [value: string]: string
+    }
+  }
+  variants?: {
+    assets: {
+      assetId: string
+      exclude?: string[]
+      include?: string[]
+    }[]
+    dependencies?: string[]
+    variant: {
+      [key: string]: string
+    }
+  }[]
+  version: string
+}
+
+export interface PackageConfig {
+  enabled?: boolean
+  variant?: string
+}
+
+export interface PackageStatus {
+  enabled?: boolean
+  requiredBy?: string[]
+  variant: string
+}
+
 export enum PackageCategory {
   MODS = "mods",
   RESIDENTIAL = "residential",
@@ -12,36 +66,54 @@ export enum PackageCategory {
 }
 
 export enum PackageState {
+  DEPENDENCY = "dependency",
   DISABLED = "disabled",
   ENABLED = "enabled",
   ERROR = "error",
+  LOCAL = "local",
   OUTDATED = "outdated",
 }
 
-export interface ProfilePackageInfo {
-  enabled: boolean
-  dependency?: boolean
-  requiredBy?: string[]
-  variant?: string
+export interface ProfileData {
+  name?: string
+  packages?: {
+    [id in string]?: boolean | string | PackageConfig
+  }
 }
 
 export interface ProfileInfo {
   id: string
+  format?: string
   name: string
   packages: {
-    [id: string]: ProfilePackageInfo
+    [id in string]?: PackageConfig
+  }
+  settings: {
+    cam: boolean
+    darknite: boolean
   }
 }
 
 export interface PackageInfo {
-  assets?: { assetId: string }[]
   author: string
-  authors: string[]
   category: number
+  format?: string
+  id: string
+  name: string
+  status: PackageStatus
+  variants: {
+    [id in string]?: VariantInfo
+  }
+}
+
+export interface VariantInfo {
+  assets: { assetId: string }[]
   dependencies: string[]
+  files?: { category?: number; path: string }[]
   id: string
   installed?: string
   installing?: boolean
+  local?: boolean
   name: string
   version: string
 }
@@ -55,6 +127,7 @@ export interface AssetInfo {
 
 export interface Settings {
   currentProfile?: string
+  format?: string
   useYaml?: boolean
 }
 
@@ -102,18 +175,35 @@ export function getCategory(info: PackageInfo): PackageCategory {
   return PackageCategory.MODS
 }
 
+export function getDefaultVariant(info: PackageInfo): string {
+  if (info.variants.default) {
+    return "default"
+  } else {
+    return Object.keys(info.variants)[0]
+  }
+}
+
 export function getState(info: PackageInfo, state: PackageState, profile?: ProfileInfo): boolean {
+  const config = profile?.packages?.[info.id]
+  const variant = info.variants[info.status.variant]
+
   switch (state) {
+    case PackageState.DEPENDENCY:
+      return !!profile && !!info.status.enabled && !config?.enabled
+
     case PackageState.DISABLED:
-      return !!profile && !!info.installed && !profile.packages[info.id]
+      return !!profile && !!variant?.installed && !info.status.enabled
 
     case PackageState.ENABLED:
-      return !!profile && !!info.installed && !!profile.packages[info.id]
+      return !!profile && !!info.status.enabled
+
+    case PackageState.ERROR:
+      return !!profile && !!info.status.enabled && !variant?.installed // TODO: More errors
+
+    case PackageState.LOCAL:
+      return !!variant?.local
 
     case PackageState.OUTDATED:
-      return !!info.installed && !!info.version && info.installed !== info.version
-
-    default:
-      return false
+      return !!variant?.installed && variant.installed !== variant.version
   }
 }

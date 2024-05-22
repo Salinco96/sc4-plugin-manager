@@ -1,15 +1,27 @@
-import { ComponentProps, ComponentType, lazy } from "react"
+import { ComponentType, lazy } from "react"
 
-export type Page = keyof typeof PAGES
+export enum Page {
+  Packages = "Packages",
+  PackageView = "PackageView",
+  Profile = "Profile",
+  Settings = "Settings",
+}
 
-export type PageData<T extends Page> = ComponentProps<(typeof PAGES)[T]> & {}
+export type PageData<T extends Page> = {
+  Packages: {}
+  PackageView: { packageId: string }
+  Profile: {}
+  Settings: {}
+}[T]
 
 export const Packages = lazy(() => import("./Packages"))
 export const PackageView = lazy(() => import("./PackageView"))
 export const Profile = lazy(() => import("./Profile"))
 export const Settings = lazy(() => import("./Settings"))
 
-const PAGES = {
+const PAGES: {
+  [T in Page]: ComponentType<PageData<T>>
+} = {
   Packages,
   PackageView,
   Profile,

@@ -9,7 +9,7 @@ import { useStore } from "@renderer/utils/store"
 import { CustomSnackbar } from "./CustomSnackbar"
 
 export const ProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>((props, ref) => {
-  const message = useStore(store => store.state.loadStatus)
+  const message = useStore(store => store.loadStatus)
 
   return (
     <CustomSnackbar {...props} ref={ref} sx={{ backgroundColor: "#313131", color: "#fff" }}>

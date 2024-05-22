@@ -2,7 +2,6 @@ import CivicsIcon from "@mui/icons-material/AccountBalance"
 import ProfileIcon from "@mui/icons-material/AccountBox"
 import ResidentialIcon from "@mui/icons-material/Apartment"
 import EnergyIcon from "@mui/icons-material/Bolt"
-// import CollectionsIcon from "@mui/icons-material/Collections"
 import LandmarksIcon from "@mui/icons-material/Church"
 import CommercialIcon from "@mui/icons-material/CorporateFare"
 import ModsIcon from "@mui/icons-material/Extension"
@@ -15,6 +14,7 @@ import DependenciesIcon from "@mui/icons-material/ViewInAr"
 import AllPackagesIcon from "@mui/icons-material/WidgetsOutlined"
 
 import { PackageCategory, PackageState } from "@common/types"
+import { Page } from "@renderer/pages"
 import { Location } from "@renderer/stores/navigation"
 
 export interface TabInfo {
@@ -32,26 +32,20 @@ export const tabs: TabInfo[] = [
     icon: <ProfileIcon />,
     id: "profile",
     label: "Profile",
-    location: { page: "Profile", data: {} },
+    location: { page: Page.Profile, data: {} },
   },
-  // TODO: Not implemented for now
-  // {
-  //   icon: <CollectionsIcon />,
-  //   id: "collections",
-  //   label: "Collections",
-  // },
   {
     icon: <SettingsIcon />,
     id: "settings",
     label: "Settings",
-    location: { page: "Settings", data: {} },
+    location: { page: Page.Settings, data: {} },
   },
   {
     group: "Packages",
     icon: <AllPackagesIcon />,
     id: "packages:all",
     label: "All",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [],
       states: [],
@@ -62,7 +56,7 @@ export const tabs: TabInfo[] = [
     icon: <DependenciesIcon />,
     id: `packages:${PackageCategory.DEPENDENCIES}`,
     label: "Dependencies",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.DEPENDENCIES],
       states: [],
@@ -74,7 +68,7 @@ export const tabs: TabInfo[] = [
     icon: <ModsIcon />,
     id: `packages:${PackageCategory.MODS}`,
     label: "Mods",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.MODS],
       states: [],
@@ -86,7 +80,7 @@ export const tabs: TabInfo[] = [
     icon: <ResidentialIcon />,
     id: `packages:${PackageCategory.RESIDENTIAL}`,
     label: "Residential",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.RESIDENTIAL],
       states: [],
@@ -98,7 +92,7 @@ export const tabs: TabInfo[] = [
     icon: <CommercialIcon />,
     id: `packages:${PackageCategory.COMMERCIAL}`,
     label: "Commercial",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.COMMERCIAL],
       states: [],
@@ -110,7 +104,7 @@ export const tabs: TabInfo[] = [
     icon: <IndustrialIcon />,
     id: `packages:${PackageCategory.INDUSTRIAL}`,
     label: "Industrial",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.INDUSTRIAL],
       states: [],
@@ -122,7 +116,7 @@ export const tabs: TabInfo[] = [
     icon: <CivicsIcon />,
     id: `packages:${PackageCategory.CIVICS}`,
     label: "Civics",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.CIVICS],
       states: [],
@@ -134,7 +128,7 @@ export const tabs: TabInfo[] = [
     icon: <LandmarksIcon />,
     id: `packages:${PackageCategory.LANDMARKS}`,
     label: "Landmarks",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.LANDMARKS],
       states: [],
@@ -146,7 +140,7 @@ export const tabs: TabInfo[] = [
     icon: <ParksIcon />,
     id: `packages:${PackageCategory.PARKS}`,
     label: "Parks",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.PARKS],
       states: [],
@@ -158,7 +152,7 @@ export const tabs: TabInfo[] = [
     icon: <EnergyIcon />,
     id: `packages:${PackageCategory.ENERGY}`,
     label: "Energy",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.ENERGY],
       states: [],
@@ -170,7 +164,7 @@ export const tabs: TabInfo[] = [
     icon: <TransportIcon />,
     id: `packages:${PackageCategory.TRANSPORT}`,
     label: "Transport",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.TRANSPORT],
       states: [],
@@ -182,7 +176,7 @@ export const tabs: TabInfo[] = [
     icon: <ProblemsIcon />,
     id: "packages:errors",
     label: "Problems",
-    location: { page: "Packages", data: {} },
+    location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [],
       states: [PackageState.ERROR],

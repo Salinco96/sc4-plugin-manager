@@ -10,6 +10,7 @@ import ListSubheader from "@mui/material/ListSubheader"
 import Tooltip from "@mui/material/Tooltip"
 
 import { PackageState } from "@common/types"
+import { Page } from "@renderer/pages"
 import { history, useLocation } from "@renderer/stores/navigation"
 import { TabInfo, tabs } from "@renderer/tabs"
 import { useStore, useStoreActions } from "@renderer/utils/store"
@@ -21,7 +22,7 @@ export function DrawerTabs(): JSX.Element {
 
   const activeTabId = useMemo(() => {
     switch (page) {
-      case "Packages":
+      case Page.Packages:
         if (packageFilters.categories.length === 1) {
           return `packages:${packageFilters.categories[0]}`
         }
@@ -31,9 +32,9 @@ export function DrawerTabs(): JSX.Element {
         }
 
         return "packages:all"
-      case "Profile":
+      case Page.Profile:
         return "profile"
-      case "Settings":
+      case Page.Settings:
         return "settings"
     }
   }, [packageFilters, page])
@@ -51,7 +52,7 @@ export function DrawerTabs(): JSX.Element {
   )
 
   return (
-    <List component="nav">
+    <List component="nav" sx={{ overflowY: "auto" }}>
       {tabs.map((tab, index) => {
         const previousTab = tabs[index - 1]
         const isActive = tab.id === activeTabId

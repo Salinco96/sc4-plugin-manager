@@ -5,8 +5,8 @@ import { closeSnackbar, enqueueSnackbar } from "notistack"
 import { useStore, useStoreActions } from "@renderer/utils/store"
 
 export function DataProvider({ children }: { children: ReactNode }): JSX.Element {
-  const isDownloading = useStore(store => store.state.ongoingDownloads.length !== 0)
-  const isLoading = useStore(store => store.state.loadStatus !== null)
+  const isDownloading = useStore(store => store.ongoingDownloads.length !== 0)
+  const isLoading = useStore(store => store.loadStatus !== null)
 
   const actions = useStoreActions()
 

@@ -20,7 +20,7 @@ import TextField from "@mui/material/TextField"
 import Tooltip from "@mui/material/Tooltip"
 
 import { ProfileInfo } from "@common/types"
-import { createUniqueProfileId } from "@renderer/utils/profiles"
+import { createUniqueProfileId } from "@common/utils/profiles"
 import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
 
 export interface CreateProfileModalProps {
@@ -50,8 +50,8 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
   const profiles = useStore(store => store.profiles) || {}
-  const allProfiles = Object.values(profiles)
-  const hasProfiles = allProfiles.length !== 0
+  const profileIds = Object.keys(profiles)
+  const hasProfiles = profileIds.length !== 0
 
   const [templateId, setTemplateId] = useState(currentProfile?.id ?? templateProfiles[0].id)
   const [name, setName] = useState<string>()
@@ -63,7 +63,7 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
   const nameValue = name ?? defaultName
   const nameError = nameValue.trim() ? undefined : "Required"
 
-  const id = createUniqueProfileId(nameValue, allProfiles)
+  const id = createUniqueProfileId(nameValue, profileIds)
 
   return (
     <>
@@ -142,9 +142,9 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             ))}
             {hasProfiles && <Divider />}
             {hasProfiles && <ListSubheader>Profile</ListSubheader>}
-            {allProfiles.map(profile => (
-              <MenuItem key={profile.id} value={profile.id}>
-                {profile.name}
+            {profileIds.map(profileId => (
+              <MenuItem key={profileId} value={profileId}>
+                {profiles[profileId].name}
               </MenuItem>
             ))}
           </Select>
@@ -160,13 +160,11 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
         <Button
           disabled={!!nameError}
           onClick={() => {
-            actions.createProfile({
-              packages: {},
-              ...sourceTemplate,
-              ...sourceProfile,
-              id,
-              name: nameValue.trim(),
-            })
+            if (templateId !== emptyValue) {
+              actions.createProfile(nameValue.trim(), templateId)
+            } else {
+              actions.createProfile(nameValue.trim())
+            }
 
             onClose()
           }}

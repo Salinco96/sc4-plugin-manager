@@ -76,3 +76,13 @@ export function isObject(value: unknown): value is Record<string, unknown> {
 export function isString(value: unknown): value is string {
   return typeof value === "string"
 }
+
+/**
+ * Removes common diacritics from a string and converts it to lower case.
+ */
+export function normalizeString(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+}

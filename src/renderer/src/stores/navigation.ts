@@ -17,9 +17,9 @@ export interface History {
   replace<T extends Page>(location: Location<T>): void
 }
 
-export const initialLocation: Location<"Profile"> = {
+export const initialLocation: Location<Page.Profile> = {
   data: {},
-  page: "Profile",
+  page: Page.Profile,
 }
 
 export const useLocation = create<Location<Page>>()(() => initialLocation) as {

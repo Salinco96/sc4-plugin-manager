@@ -3,60 +3,28 @@ import path from "path"
 
 import { parse } from "yaml"
 
-import { AssetInfo, PackageInfo } from "@common/types"
+import { AssetInfo, PackageInfo, getDefaultVariant } from "@common/types"
 
 import { getDatabasePath, getPackagesPath } from "../utils/paths"
 
 import { loadYAMLRecursively } from "./utils"
 
-// function isArray(value: unknown): value is unknown[] {
-//   return Array.isArray(value)
-// }
-
-// interface RemoteAssetData {
-//   archiveType?: { format: string; version: string }
-//   assetId: string
-//   lastModified: string
-//   url: string
-//   version: string
-// }
-
-// interface RemotePackageData {
-//   assets?: { assetId: string; include?: string[] }[]
-//   dependencies?: string[]
-//   group: string
-//   info?: {
-//     author?: string
-//     conflicts?: string
-//     description?: string
-//     summary?: string
-//     warning?: string
-//     website?: string
-//   }
-//   name: string
-//   subfolder: string
-//   variantDescriptions?: { [key: string]: { [value: string]: string } }
-//   variants?: {
-//     assets: { assetId: string; include?: string[] }[]
-//     dependencies?: string[]
-//     variant: { [key: string]: string }
-//   }[]
-//   version: string
-// }
-
-interface PackageVariantData {
+interface VariantData {
   authors?: string[]
-  category?: number
   dependencies?: string[]
-  include?: { source: string }[]
+  files?: {
+    category?: number
+    path: string
+  }[]
   name?: string
   url?: string
   version?: string
 }
 
-interface PackageData extends PackageVariantData {
+interface PackageData extends VariantData {
+  category?: number
   variants?: {
-    [variant: string]: PackageVariantData
+    [variant: string]: VariantData
   }
 }
 
@@ -119,31 +87,51 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
             console.log(`Found local package config '${configPath}'`)
           }
 
+          const info: PackageInfo = {
+            author,
+            category: config?.category ?? 800,
+            format: configEntry ? path.extname(configEntry.name) : undefined,
+            id: packageId,
+            name: config?.name ?? packageEntry.name,
+            status: { enabled: false, variant: "default" },
+            variants: {},
+          }
+
           for (const variantEntry of variantEntries) {
             if (variantEntry.isDirectory() || variantEntry.isSymbolicLink()) {
               const variantId = variantEntry.name
+              const variantConfig = config?.variants?.[variantId]
 
               // ~ is reserved for special folders, e.g. ~docs
               if (!variantId.startsWith("~")) {
                 console.log(`Found local package variant '${packageId}#${variantId}'`)
+
+                info.variants[variantId] = {
+                  assets: [],
+                  dependencies: Array.from(
+                    new Set([
+                      ...(config?.dependencies ?? []),
+                      ...(variantConfig?.dependencies ?? []),
+                    ]),
+                  ),
+                  files: [...(config?.files ?? []), ...(variantConfig?.files ?? [])],
+                  id: variantId,
+                  installed: variantConfig?.version ?? config?.version ?? "0",
+                  name: variantConfig?.name ?? config?.name ?? packageEntry.name,
+                  version: variantConfig?.version ?? config?.version ?? "0",
+                }
               }
             } else if (variantEntry !== configEntry) {
               console.warn(`Unexpected file '${packagePath}' inside Packages folder`)
             }
           }
 
-          packages[packageId] = {
-            author,
-            authors: config?.authors ?? [author],
-            category: config?.category ?? 800,
-            dependencies: config?.dependencies ?? [],
-            id: packageId,
-            installed: config?.version ?? "0",
-            name: config?.name ?? packageEntry.name,
-            version: config?.version ?? "0",
+          const defaultVariant = getDefaultVariant(info)
+          if (defaultVariant) {
+            info.status.variant = defaultVariant
+            packages[packageId] = info
+            nPackages++
           }
-
-          nPackages++
         } else {
           console.warn(`Unexpected file '${packagePath}' inside Packages folder`)
         }
@@ -192,10 +180,10 @@ export async function loadRemotePackages(): Promise<{
           }
 
           nAssets++
-        }
-
-        if (isObject(doc.info)) {
+        } else if (isObject(doc.info)) {
+          doc.assets ||= []
           doc.dependencies ||= []
+          doc.variants ||= []
 
           assert(isString(doc.group), "'group' is not a string")
           assert(isString(doc.name), "'name' is not a string")
@@ -205,8 +193,18 @@ export async function loadRemotePackages(): Promise<{
           assert(!packages[id], `duplicate package '${id}'`)
 
           assert(
+            isArrayOf(doc.assets, isObject),
+            `package '${id}' - 'assets' is not an array of objects`,
+          )
+
+          assert(
             isArrayOf(doc.dependencies, isString),
             `package '${id}' - 'dependencies' is not an array of strings`,
+          )
+
+          assert(
+            isArrayOf(doc.variants, isObject),
+            `package '${id}' - 'variants' is not an array of objects`,
           )
 
           assert(isObject(doc.info), `package '${id}' - 'info' is not an object`)
@@ -219,17 +217,87 @@ export async function loadRemotePackages(): Promise<{
           const category = Number.parseInt(subfolderMatch[1], 10)
           assert(Number.isFinite(category), `package '${id}' - 'subfolder' is invalid`)
 
-          packages[id] = {
-            assets: doc.assets as { assetId: string }[], // TODO
+          const info: PackageInfo = {
             author,
-            authors: [author],
             category,
-            dependencies: doc.dependencies.map(id => id.replace(":", "/")),
             id,
             name: doc.info.summary,
-            version: doc.version,
+            status: { enabled: false, variant: "default" },
+            variants: {},
           }
 
+          const commonAssets: { assetId: string }[] = []
+          for (const asset of doc.assets) {
+            assert(isString(asset.assetId), `package '${id}' - 'assetId' is not a string`)
+            commonAssets.push({ assetId: asset.assetId })
+          }
+
+          const commonDependencies = doc.dependencies.map(id => id.replace(":", "/"))
+
+          for (const variant of doc.variants) {
+            variant.assets ||= []
+            variant.dependencies ||= []
+
+            assert(isObject(variant.variant), `package '${id}' - 'variant' is not an object`)
+            const variantKey = Object.keys(variant.variant)[0]
+            assert(isString(variantKey), `package '${id}' - variant key is not a string`)
+            const variantValue = variant.variant[variantKey]
+            assert(isString(variantValue), `package '${id}' - variant value is not a string`)
+
+            const variantId = `${variantKey}=${variantValue}`
+
+            const variantDescriptions = isObject(doc.variantDescriptions)
+              ? doc.variantDescriptions[variantKey]
+              : undefined
+
+            const variantName = isObject(variantDescriptions)
+              ? variantDescriptions[variantValue]
+              : undefined
+
+            assert(
+              isArrayOf(variant.assets, isObject),
+              `package '${id}' - 'assets' is not an array of objects`,
+            )
+
+            assert(
+              isArrayOf(variant.dependencies, isString),
+              `package '${id}' - 'dependencies' is not an array of strings`,
+            )
+
+            const variantAssets = [...commonAssets]
+            for (const asset of variant.assets) {
+              assert(isString(asset.assetId), `package '${id}' - 'assetId' is not a string`)
+              variantAssets.push({ assetId: asset.assetId })
+            }
+
+            const variantDependencies = [
+              ...commonDependencies,
+              ...variant.dependencies.map(id => id.replace(":", "/")),
+            ]
+
+            info.variants[variantId] = {
+              assets: variantAssets,
+              dependencies: variantDependencies,
+              id: variantId,
+              name: isString(variantName) ? variantName : variantId,
+              version: doc.version,
+            }
+          }
+
+          const defaultVariant = getDefaultVariant(info)
+          if (defaultVariant) {
+            info.status.variant = defaultVariant
+          } else {
+            info.variants.default = {
+              assets: commonAssets,
+              dependencies: commonDependencies,
+              id: "default",
+              name: "Default",
+              version: doc.version,
+            }
+          }
+
+          packages[id] = info
           nPackages++
         }
       }
@@ -240,14 +308,18 @@ export async function loadRemotePackages(): Promise<{
 
   for (const id in packages) {
     const info = packages[id]
-    for (const dependency of info.dependencies) {
-      try {
-        assert(
-          dependency in packages,
-          `package '${id}' - dependency '${dependency}' does not exist`,
-        )
-      } catch (error) {
-        console.error(error)
+    for (const variant of Object.values(info.variants)) {
+      if (variant?.dependencies) {
+        for (const dependency of variant.dependencies) {
+          try {
+            assert(
+              dependency in packages,
+              `package '${id}' - dependency '${dependency}' does not exist`,
+            )
+          } catch (error) {
+            console.error(error)
+          }
+        }
       }
     }
   }

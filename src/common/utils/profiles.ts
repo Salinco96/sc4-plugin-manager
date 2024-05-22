@@ -1,13 +1,7 @@
-import { ProfileInfo } from "@common/types"
+import { normalizeString } from "./types"
 
-export function createUniqueProfileId(name: string, profiles: ProfileInfo[]): string {
-  const existingIds = profiles.map(profile => profile.id)
-
-  const baseId = name
-    .trim()
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
+export function createUniqueProfileId(name: string, existingIds: string[]): string {
+  const baseId = normalizeString(name.trim())
     .split(/[^a-z0-9]+/g)
     .filter(Boolean)
     .join("-")

@@ -9,7 +9,7 @@ import { VirtualList } from "./VirtualList"
 
 export function PackageList(): JSX.Element {
   const currentProfile = useCurrentProfile()
-  const allPackages = useStore(store => store.remotePackages)
+  const allPackages = useStore(store => store.packages)
   const packageFilters = useStore(store => store.packageFilters)
 
   const filteredPackages = useMemo(() => {
@@ -33,13 +33,13 @@ export function PackageList(): JSX.Element {
 
     packages.sort((a, b) => a.id.localeCompare(b.id))
 
-    return packages
+    return packages.map(info => info.id)
   }, [allPackages, currentProfile, packageFilters])
 
   const scrolled = useRef(false)
 
   return (
-    <VirtualList
+    <VirtualList<string>
       items={filteredPackages}
       itemComponent={PackageListItem}
       itemSize={160}
@@ -51,7 +51,7 @@ export function PackageList(): JSX.Element {
         // Scroll to package upon coming back from package view
         if (list && history.previous?.page === "PackageView" && !scrolled.current) {
           const fromPackageId = history.previous.data.packageId
-          const index = filteredPackages.findIndex(info => info.id === fromPackageId)
+          const index = filteredPackages.indexOf(fromPackageId)
           if (index >= 0) {
             list.scrollToItem(index, "start")
           }
@@ -60,7 +60,7 @@ export function PackageList(): JSX.Element {
         }
       }}
       spacing={16}
-      sx={{ height: "100%" }}
+      sx={{ flex: 1 }}
     />
   )
 }
