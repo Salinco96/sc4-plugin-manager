@@ -11,12 +11,15 @@ interface CustomProps {
   "load-progress": {}
 }
 
+export type SnackbarType = keyof CustomProps
+export type SnackbarProps<Type extends SnackbarType> = CustomProps[Type]
+
 declare module "notistack" {
   interface VariantOverrides extends CustomProps {}
 }
 
 const snackbarComponents: {
-  [variant in keyof CustomProps]: ComponentType<CustomContentProps & CustomProps[variant]>
+  [Type in SnackbarType]: ComponentType<CustomContentProps & SnackbarProps<Type>>
 } = {
   "download-progress": DownloadProgressSnackbar,
   "load-progress": ProgressSnackbar,

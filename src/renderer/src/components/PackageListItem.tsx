@@ -68,7 +68,9 @@ export const PackageListItem = memo(function PackageListItem({
         <Typography variant="h6">
           {packageInfo.name} (v{variantInfo.installed ?? variantInfo.version})
         </Typography>
-        <Typography variant="body2">{packageInfo.id}</Typography>
+        <Typography variant="body2">
+          {packageInfo.id}#{packageInfo.status.variant}
+        </Typography>
         <PackageTags onHover={setHoverWithin} packageInfo={packageInfo} />
       </CardContent>
       <CardActions sx={{ padding: 2 }}>

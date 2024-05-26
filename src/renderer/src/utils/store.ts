@@ -1,8 +1,8 @@
 import update, { Spec } from "immutability-helper"
-// import { enqueueSnackbar } from "notistack"
 import { create } from "zustand"
 
-import { ApplicationState, initialState } from "@common/state"
+import { ProfileUpdate } from "@common/profiles"
+import { ApplicationState } from "@common/state"
 import {
   AssetInfo,
   PackageCategory,
@@ -12,21 +12,31 @@ import {
   PackageStatus,
   Settings,
 } from "@common/types"
-import { ProfileUpdate } from "@common/profiles"
+import { SnackbarKey, enqueueSnackbar } from "notistack"
+import { SnackbarProps, SnackbarType } from "@renderer/providers/SnackbarProvider"
+import { closeSnackbar } from "notistack"
 
 export interface PackageFilters {
   categories: PackageCategory[]
+  dependencies: boolean
+  incompatible: boolean
+  onlyErrors: boolean
+  onlyUpdates: boolean
   search: string
-  states: PackageState[]
+  state: PackageState | null
+  // states: PackageState[]
 }
 
 export interface StoreActions {
+  closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: string): Promise<boolean>
   disablePackages(packageIds: string[]): Promise<boolean>
   editProfile(profileId: string, data: ProfileUpdate): Promise<boolean>
   enablePackages(packageIds: string[]): Promise<boolean>
   installPackages(packageIds: string[]): Promise<boolean>
+  getPackageDocsAsHtml(packageId: string): Promise<string>
   openPackageFileInExplorer(packageId: string, variantId: string, filePath: string): Promise<void>
+  openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
   removePackages(packageIds: string[]): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
@@ -52,7 +62,11 @@ export interface Store {
     id: "missing-packages"
   }
   ongoingDownloads: string[]
+  ongoingExtracts: string[]
   packageFilters: PackageFilters
+  packageGroups?: {
+    [groupId: string]: string[]
+  }
   packages?: {
     [packageId: string]: PackageInfo
   }
@@ -60,15 +74,25 @@ export interface Store {
     [profileId: string]: ProfileInfo
   }
   settings?: Settings
+  snackbars: {
+    [type in SnackbarType]?: SnackbarKey
+  }
 }
 
-export const useStore = create<Store>()(set => {
+export const useStore = create<Store>()((set, get): Store => {
   function updateState(data: Spec<Store>): void {
     set(store => update(store, data))
   }
 
   return {
     actions: {
+      closeSnackbar(type) {
+        const id = get().snackbars[type]
+        if (id !== undefined) {
+          closeSnackbar(id)
+          updateState({ snackbars: { $unset: [type] } })
+        }
+      },
       async createProfile(name, templateProfileId) {
         return window.api.createProfile(name, templateProfileId)
       },
@@ -81,17 +105,26 @@ export const useStore = create<Store>()(set => {
       async enablePackages(packageIds) {
         return window.api.enablePackages(packageIds)
       },
+      async getPackageDocsAsHtml(packageId) {
+        return window.api.getPackageDocsAsHtml(packageId)
+      },
       async installPackages(packageIds) {
         return window.api.installPackages(packageIds)
       },
-      async openPackageFileInExplorer(packageId, variantId, filePath): Promise<void> {
+      async openPackageFileInExplorer(packageId, variantId, filePath) {
         return window.api.openPackageFileInExplorer(packageId, variantId, filePath)
+      },
+      openSnackbar(type, props) {
+        if (get().snackbars[type] === undefined) {
+          const id = enqueueSnackbar({ persist: true, variant: type, ...props })
+          updateState({ snackbars: { [type]: { $set: id } } })
+        }
       },
       async removePackages(packageIds) {
         return window.api.removePackages(packageIds)
       },
       setPackageFilters(filters) {
-        set(store => ({ packageFilters: { ...store.packageFilters, ...filters } }))
+        updateState({ packageFilters: { $merge: filters } })
       },
       async setPackageVariant(packageId, variantId) {
         return window.api.setPackageVariant(packageId, variantId)
@@ -103,12 +136,22 @@ export const useStore = create<Store>()(set => {
         return window.api.switchProfile(profileId)
       },
       updateState(data) {
+        console.log(data)
+
         if (data.loadStatus !== undefined) {
           updateState({ loadStatus: { $set: data.loadStatus } })
         }
 
         if (data.ongoingDownloads) {
           updateState({ ongoingDownloads: { $set: data.ongoingDownloads } })
+        }
+
+        if (data.ongoingExtracts) {
+          updateState({ ongoingExtracts: { $set: data.ongoingExtracts } })
+        }
+
+        if (data.packageGroups) {
+          updateState({ packageGroups: { $set: data.packageGroups } })
         }
 
         if (data.packages) {
@@ -123,181 +166,6 @@ export const useStore = create<Store>()(set => {
           updateState({ settings: { $set: data.settings } })
         }
       },
-      // async enablePackages(packageIds) {
-      //   const store = get()
-      //   const currentProfile = getCurrentProfile(store)
-      //   if (!currentProfile) {
-      //     return
-      //   }
-
-      //   const explicitPackages = new Map<string, PackageConfig>()
-
-      //   const enabledPackages = new Map<
-      //     string,
-      //     {
-      //       explicit: boolean
-      //       requiredBy: string[]
-      //     }
-      //   >()
-
-      //   const missingPackages = new Set<string>()
-      //   for (const packageId of packageIds) {
-      //     const config = currentProfile.packages?.[packageId]
-      //     const status = store.packageStatus?.[packageId]
-      //     if (status && !config?.enabled) {
-      //       explicitPackages.set(packageId, {
-      //         enabled: true,
-      //         variant: status.variant,
-      //       })
-
-      //       enabledPackages.set(packageId, {
-      //         explicit: true,
-      //         requiredBy: [],
-      //       })
-      //     }
-      //   }
-
-      //   enabledPackages.forEach((data, packageId) => {
-      //     const config = currentProfile.packages?.[packageId]
-      //     const info = store.packages?.[packageId]
-      //     const status = store.packageStatus?.[packageId]
-      //     if (info && status && !config?.enabled) {
-      //       const variant = info.variants[status.variant]
-      //       if (variant) {
-      //         if (!variant.installed) {
-      //           missingPackages.add(packageId)
-      //         }
-
-      //         for (const dependencyId of variant.dependencies) {
-      //           const dependencyStatus = enabledPackages.get(dependencyId)
-      //           if (dependencyStatus) {
-      //             dependencyStatus.requiredBy.push(dependencyId)
-      //           } else {
-      //             enabledPackages.set(dependencyId, {
-      //               explicit: false,
-      //               requiredBy: [dependencyId],
-      //             })
-      //           }
-      //         }
-      //       }
-      //     }
-      //   })
-
-      //   if (missingPackages.size) {
-      //     console.error("Missing packages:", missingPackages)
-      //   }
-
-      //   if (explicitPackages.size) {
-      //     this.editCurrentProfile({
-      //       packages: {
-      //         $merge: Array.from(explicitPackages).reduce(
-      //           (result, [id, config]) => {
-      //             result[id] = config
-      //             return result
-      //           },
-      //           {} as { [id: string]: PackageConfig },
-      //         ),
-      //       },
-      //     })
-      //   }
-
-      //   if (enabledPackages.size) {
-      //     updateState({
-      //       packageStatus: Array.from(enabledPackages).reduce(
-      //         (result, [id, spec]) => {
-      //           result[id] = {
-      //             enabled: { $set: true },
-      //             explicit: explicit => explicit || spec.explicit,
-      //             requiredBy: { $push: spec.requiredBy },
-      //           }
-      //           return result
-      //         },
-      //         {} as { [id: string]: Spec<PackageStatus> },
-      //       ),
-      //     })
-      //   }
-      // },
-      // async enablePackage(packageId) {
-      //   const store = get()
-      //   const profile = getCurrentProfile(store)
-      //   const info = store.packages?.[packageId]
-      //   if (profile && info) {
-      //     const missingPackageIds = new Set<string>()
-      //     const dependencies = new Map<string, PackageStatus>()
-      //     dependencies.set(packageId, {
-      //       requiredBy: [],
-      //       variant: Object.keys(info.variants)[0],
-      //       ...profile.packageStatus[packageId],
-      //       dependency: false,
-      //       enabled: true,
-      //     })
-      //     dependencies.forEach(({ variant }, id) => {
-      //       const info = store.packages?.[id]?.variants[variant]
-      //       if (!info?.installed) {
-      //         missingPackageIds.add(id)
-      //       }
-      //       if (!profile.packageStatus[id]?.enabled) {
-      //         info?.dependencies?.forEach(dependencyId => {
-      //           const dependencyInfo = store.packages?.[dependencyId]
-      //           if (dependencyInfo) {
-      //             const current = profile.packageStatus[dependencyId]
-      //             if (current) {
-      //               dependencies.set(dependencyId, {
-      //                 ...current,
-      //                 enabled: true,
-      //                 requiredBy: current.requiredBy.concat(id),
-      //               })
-      //             } else {
-      //               dependencies.set(dependencyId, {
-      //                 dependency: true,
-      //                 enabled: true,
-      //                 requiredBy: [id],
-      //                 variant: Object.keys(dependencyInfo.variants)[0],
-      //               })
-      //             }
-      //           } else {
-      //             missingPackageIds.add(dependencyId)
-      //           }
-      //         })
-      //       }
-      //     })
-      //     console.log("Missing:", missingPackageIds)
-      //     console.log("Dependencies:", dependencies)
-      //     if (missingPackageIds.size) {
-      //       const confirmed = await this.showModal("missing-packages", {
-      //         packageIds: Array.from(missingPackageIds),
-      //       })
-      //       console.log(confirmed)
-      //       if (!confirmed) {
-      //         return
-      //       }
-      //       for (const missingPackageId of missingPackageIds) {
-      //         await this.installPackage(missingPackageId)
-      //       }
-      //     }
-      //     if (dependencies.size) {
-      //       await this.editProfile(profile.id, {
-      //         packageStatus: Array.from(dependencies).reduce(
-      //           (packages, [id, info]) => {
-      //             packages[id] = info
-      //             return packages
-      //           },
-      //           {
-      //             ...profile.packageStatus,
-      //           },
-      //         ),
-      //       })
-      //     }
-      //   }
-      // },
-      // async createProfile(data) {
-      //   const { profiles } = get()
-      //   if (profiles) {
-      //     set({ profiles: { [data.id]: data } })
-      //     await window.api.writeProfile(data)
-      //     await this.switchProfile(data.id)
-      //   }
-      // },
       // async showModal(id, data) {
       //   try {
       //     const result = await new Promise<boolean>(resolve => {
@@ -314,13 +182,17 @@ export const useStore = create<Store>()(set => {
     },
     loadStatus: null,
     ongoingDownloads: [],
+    ongoingExtracts: [],
     packageFilters: {
       categories: [],
+      dependencies: false,
+      incompatible: false,
+      onlyErrors: false,
+      onlyUpdates: false,
       search: "",
-      states: [],
+      state: null,
     },
-    packageStatus: {},
-    state: initialState,
+    snackbars: {},
   }
 })
 

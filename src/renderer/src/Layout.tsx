@@ -8,7 +8,7 @@ import Toolbar from "@mui/material/Toolbar"
 import { AppBar } from "./components/AppBar"
 import { DrawerTabs } from "./components/DrawerTabs"
 
-const drawerWidth = 200
+const drawerWidth = 240
 
 const Container = styled(Box)`
   display: flex;

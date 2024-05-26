@@ -37,6 +37,10 @@ export function PackageActions({
   const currentProfile = useCurrentProfile()
   const variant = packageInfo.status.variant
 
+  const compatibleVariants = Object.values(packageInfo.variants)
+    .filter(variant => variant?.compatible)
+    .map(variant => variant!.id)
+
   const packageActions = useMemo(() => {
     const variantInfo = packageInfo.variants[variant]
 
@@ -50,7 +54,10 @@ export function PackageActions({
       if (variantInfo.installed !== variantInfo.version) {
         packageActions.push({
           color: "warning",
-          description: `Update to version ${variantInfo.version}`,
+          description: !variantInfo.compatible
+            ? "This variant is not compatible with your profile"
+            : `Update to version ${variantInfo.version}`,
+          disabled: !variantInfo.compatible,
           id: "update",
           label: "Update",
           onClick: async () => {
@@ -139,7 +146,7 @@ export function PackageActions({
     } else {
       packageActions.push({
         description: "Download and enable this package",
-        disabled: !variantInfo || !!variantInfo.installing,
+        disabled: !variantInfo?.compatible || !!variantInfo.installing,
         id: "add",
         label: "Add",
         onClick: async () => {
@@ -151,7 +158,7 @@ export function PackageActions({
 
       packageActions.push({
         description: "Download this package without enabling it",
-        disabled: !variantInfo || !!variantInfo.installing,
+        disabled: !variantInfo?.compatible || !!variantInfo.installing,
         id: "download",
         label: "Download",
         onClick: async () => {
@@ -284,6 +291,10 @@ export function PackageActions({
       </Box>
       {Object.keys(packageInfo.variants).length > 1 && (
         <Select
+          disabled={
+            compatibleVariants.length === 0 ||
+            (compatibleVariants.length === 1 && variant === compatibleVariants[0])
+          }
           fullWidth
           MenuProps={{
             onClose: () => {
@@ -315,8 +326,8 @@ export function PackageActions({
           variant="outlined"
         >
           {Object.entries(packageInfo.variants).map(([id, variant]) => (
-            <MenuItem key={id} value={id}>
-              {variant!.name}
+            <MenuItem key={id} value={id} disabled={!variant?.compatible}>
+              {variant?.name}
             </MenuItem>
           ))}
         </Select>

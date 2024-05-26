@@ -1,8 +1,10 @@
 import { PackageInfo, ProfileInfo, Settings } from "./types"
 
 export interface ApplicationState {
+  linking: boolean
   loadStatus: string | null
   ongoingDownloads: string[]
+  ongoingExtracts: string[]
   packageGroups?: { [groupId: string]: string[] }
   packages?: { [packageId: string]: PackageInfo }
   profiles?: { [profileId: string]: ProfileInfo }
@@ -10,6 +12,8 @@ export interface ApplicationState {
 }
 
 export const initialState: ApplicationState = {
+  linking: false,
   loadStatus: null,
   ongoingDownloads: [],
+  ongoingExtracts: [],
 }

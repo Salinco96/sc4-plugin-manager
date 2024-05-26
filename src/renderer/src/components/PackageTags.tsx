@@ -113,9 +113,7 @@ export function PackageTag({
 
   const filtering = location.page === Page.Packages
 
-  const selected =
-    (tag.category !== undefined && filters.categories.includes(tag.category)) ||
-    (tag.state !== undefined && filters.states.includes(tag.state))
+  const selected = tag.category !== undefined && filters.categories.includes(tag.category)
 
   const onClick = useCallback(
     (event: MouseEvent) => {
@@ -130,14 +128,14 @@ export function PackageTag({
         })
       }
 
-      if (tag.state) {
-        actions.setPackageFilters({
-          ...filters,
-          states: filters.states.includes(tag.state)
-            ? filters.states.filter(state => state !== tag.state)
-            : filters.states.concat(tag.state),
-        })
-      }
+      // if (tag.state) {
+      //   actions.setPackageFilters({
+      //     ...filters,
+      //     states: filters.states.includes(tag.state)
+      //       ? filters.states.filter(state => state !== tag.state)
+      //       : filters.states.concat(tag.state),
+      //   })
+      // }
     },
     [actions, filters, selected],
   )

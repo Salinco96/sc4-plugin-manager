@@ -68,10 +68,12 @@ export enum PackageCategory {
 }
 
 export enum PackageState {
+  COMPATIBLE = "compatible",
   DEPENDENCY = "dependency",
   DISABLED = "disabled",
   ENABLED = "enabled",
   ERROR = "error",
+  INSTALLED = "installed",
   LOCAL = "local",
   OUTDATED = "outdated",
 }
@@ -96,6 +98,7 @@ export interface ProfileInfo {
 export interface PackageInfo {
   author: string
   category: number
+  docs?: string
   format?: string
   id: string
   name: string
@@ -106,7 +109,8 @@ export interface PackageInfo {
 }
 
 export interface VariantInfo {
-  assets: { assetId: string }[]
+  assets: { assetId: string; exclude?: string[]; include?: string[] }[]
+  compatible: boolean
   dependencies: string[]
   files?: { category?: number; path: string }[]
   id: string
@@ -178,7 +182,8 @@ export function getDefaultVariant(info: PackageInfo): string {
   if (info.variants.default) {
     return "default"
   } else {
-    return Object.keys(info.variants)[0]
+    const variants = Object.values(info.variants)
+    return (variants.find(variant => variant?.compatible) ?? variants[0])!.id
   }
 }
 
@@ -187,6 +192,9 @@ export function getState(info: PackageInfo, state: PackageState, profile?: Profi
   const variant = info.variants[info.status.variant]
 
   switch (state) {
+    case PackageState.COMPATIBLE:
+      return !!variant?.compatible
+
     case PackageState.DEPENDENCY:
       return !!profile && !!info.status.enabled && !config?.enabled
 
@@ -197,7 +205,10 @@ export function getState(info: PackageInfo, state: PackageState, profile?: Profi
       return !!profile && !!info.status.enabled
 
     case PackageState.ERROR:
-      return !!profile && !!info.status.enabled && !variant?.installed // TODO: More errors
+      return !!profile && !!info.status.enabled && (!variant?.installed || !variant?.compatible) // TODO: More errors
+
+    case PackageState.INSTALLED:
+      return !!variant?.installed
 
     case PackageState.LOCAL:
       return !!variant?.local

@@ -1,7 +1,7 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
-import { ApplicationState } from "@common/state"
 import { ProfileUpdate } from "@common/profiles"
+import { ApplicationState } from "@common/state"
 
 // Custom APIs for renderer
 export const api = {
@@ -16,6 +16,9 @@ export const api = {
   },
   async enablePackages(packageIds: string[]): Promise<boolean> {
     return ipcRenderer.invoke("enablePackages", packageIds)
+  },
+  async getPackageDocsAsHtml(packageId: string): Promise<string> {
+    return ipcRenderer.invoke("getPackageDocsAsHtml", packageId)
   },
   async installPackages(packageIds: string[]): Promise<boolean> {
     return ipcRenderer.invoke("installPackages", packageIds)

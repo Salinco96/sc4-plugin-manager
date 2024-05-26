@@ -1,7 +1,7 @@
 // TODO: This should be a property of package configs
 export const packageGroups: {
-  [groupId: string]: string[]
+  [packageId: string]: string[]
 } = {
-  cam: ["cam/cam-colossus-addon-mod"],
-  darknite: ["simfox/day-and-nite-mod"],
+  "cam/colossus-addon-mod": ["cam"],
+  "simfox/day-and-nite-mod": ["darknite"],
 }

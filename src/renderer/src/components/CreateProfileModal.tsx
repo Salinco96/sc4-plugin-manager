@@ -19,8 +19,8 @@ import Select from "@mui/material/Select"
 import TextField from "@mui/material/TextField"
 import Tooltip from "@mui/material/Tooltip"
 
-import { ProfileInfo } from "@common/types"
 import { createUniqueProfileId } from "@common/profiles"
+import { ProfileInfo } from "@common/types"
 import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
 
 export interface CreateProfileModalProps {

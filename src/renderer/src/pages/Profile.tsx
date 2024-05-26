@@ -7,11 +7,12 @@ import FormGroup from "@mui/material/FormGroup"
 import Switch from "@mui/material/Switch"
 import TextField from "@mui/material/TextField"
 
-import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
+import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
 
 function Profile(): JSX.Element {
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
+  const packageGroups = useStore(store => store.packageGroups)
 
   const [name, setName] = useState(currentProfile?.name ?? "")
 
@@ -57,6 +58,7 @@ function Profile(): JSX.Element {
           <FormControlLabel
             checked={currentProfile.settings.darknite}
             control={<Switch color="primary" />}
+            disabled={!!packageGroups?.darknite}
             label="Are you using a DarkNite mod?"
             labelPlacement="start"
             onChange={async event => {
@@ -73,6 +75,7 @@ function Profile(): JSX.Element {
           <FormControlLabel
             checked={currentProfile.settings.cam}
             control={<Switch color="primary" />}
+            disabled={!!packageGroups?.cam}
             label="Are you using the Colossus Addon Mod?"
             labelPlacement="start"
             onChange={async event => {

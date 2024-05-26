@@ -1,35 +1,43 @@
 import { exec as cmd } from "child_process"
-import { ipcMain } from "electron/main"
+import { ipcMain, net, protocol } from "electron/main"
 import fs from "fs/promises"
 import path from "path"
+import escapeHtml from "escape-html"
+import { glob } from "glob"
 
-import { ApplicationState } from "@common/state"
 import {
-  AssetInfo,
-  PackageInfo,
-  ProfileInfo,
-  Settings,
-  VariantInfo,
-  getDefaultVariant,
-} from "@common/types"
-import { ProfileUpdate, createUniqueProfileId, defaultProfileSettings } from "@common/profiles"
+  ProfileSettings,
+  ProfileUpdate,
+  createUniqueProfileId,
+  defaultProfileSettings,
+} from "@common/profiles"
+import { ApplicationState } from "@common/state"
+import { AssetInfo, PackageInfo, ProfileInfo, Settings, getDefaultVariant } from "@common/types"
 
 import childProcessPath from "./child?modulePath"
-import { loadLocalPackages, loadRemotePackages } from "./data/packages"
+import { loadLocalPackages, loadRemotePackages, toGlobPattern } from "./data/packages"
 import { MainWindow } from "./MainWindow"
 import { createChildProcess } from "./process"
-import { download } from "./utils/download"
+import { SplashScreen } from "./SplashScreen"
+import { download, extract } from "./utils/download"
 import {
   createIfMissing,
   deserializeConfig,
+  exists,
   readFile,
   readFileIfPresent,
+  removeIfEmpty,
   removeIfPresent,
   serializeConfig,
   writeFile,
 } from "./utils/files"
-import { getRootPath } from "./utils/paths"
-import { SplashScreen } from "./SplashScreen"
+import { getPluginsPath, getRootPath } from "./utils/paths"
+import { packageGroups } from "@common/packageGroups"
+import { TaskManager } from "./utils/tasks"
+import { pathToFileURL } from "url"
+
+const DOCEXTENSIONS = [".css", ".htm", ".html", ".jpeg", ".jpg", ".md", ".png", ".svg", ".txt"]
+const SC4EXTENSIONS = [".dll", ".SC4Desc", ".SC4Lot", ".SC4Model", "._LooseDesc", ".dat"]
 
 const defaultSettings: Settings = {
   useYaml: true,
@@ -73,12 +81,13 @@ export class Application {
 
   public assets?: { [assetId: string]: AssetInfo }
   public loadStatus: string | null = null
+  public packageGroups?: { [groupId: string]: string[] }
   public packages?: { [packageId: string]: PackageInfo }
   public profiles?: { [profileId: string]: ProfileInfo }
   public settings?: Settings
 
   public update: {
-    packages: boolean
+    packages: boolean | string[]
     profiles: string[]
     settings: boolean
   } = {
@@ -88,19 +97,36 @@ export class Application {
   }
 
   public mainWindow?: MainWindow
+  public splashScreen?: SplashScreen
 
-  public readonly initializingDownloads: Promise<void>
-  public readonly downloads: { [key: string]: Promise<DownloadResult> | true } = {}
   public readonly configFormats: string[] = [".json", ".yaml", ".yml"]
   public readonly maxParallelDownloads: number = 3
   public readonly ongoingDownloads: OngoingDownload[] = []
   public readonly pendingDownloads: PendingDownload[] = []
   public readonly rootPath: string = getRootPath()
 
+  public readonly links: { [from: string]: string } = {}
+
   public readonly tasks: {
+    readonly download: TaskManager
+    readonly extract: TaskManager
+    readonly getAsset: TaskManager
+    readonly install: TaskManager
+    readonly linker: TaskManager
+
+    readonly downloading: Map<string, Promise<void>>
+    readonly installing: Map<string, Promise<void>>
     readonly writeProfiles: Task
     readonly writeSettings: Task
   } = {
+    download: new TaskManager(6, this.onDownloadTaskUpdate.bind(this)),
+    extract: new TaskManager(3, this.onExtractTaskUpdate.bind(this)),
+    getAsset: new TaskManager(6),
+    install: new TaskManager(6),
+    linker: new TaskManager(1, this.onLinkTaskUpdate.bind(this)),
+
+    downloading: new Map(),
+    installing: new Map(),
     writeProfiles: {},
     writeSettings: {},
   }
@@ -108,14 +134,32 @@ export class Application {
   protected databaseUpdatePromise?: Promise<boolean>
 
   public constructor() {
-    this.initializingDownloads = this.initializeDownloads()
-
     this.initialize()
+
+    // Custom protocol to load package docs in sandboxed iframe
+    protocol.handle("docs", req => {
+      const { pathname } = new URL(req.url)
+      const fullPath = path.resolve(path.join(this.rootPath, decodeURI(pathname)))
+      const relativePath = path.relative(this.rootPath, fullPath)
+
+      // Only allow files under rootPath
+      if (path.isAbsolute(relativePath) || relativePath.includes("..")) {
+        return new Response("bad", { status: 400 })
+      }
+
+      // Only allow specific extensions (html, css, images)
+      if (!DOCEXTENSIONS.includes(path.extname(fullPath))) {
+        return new Response("bad", { status: 400 })
+      }
+
+      return net.fetch(pathToFileURL(fullPath).toString())
+    })
 
     this.handle("createProfile")
     this.handle("disablePackages")
     this.handle("editProfile")
     this.handle("enablePackages")
+    this.handle("getPackageDocsAsHtml")
     this.handle("getState")
     this.handle("installPackages")
     this.handle("openPackageFileInExplorer")
@@ -124,6 +168,39 @@ export class Application {
     this.handle("switchProfile")
 
     this.createMainWindow()
+  }
+
+  public async getPackageDocsAsHtml(packageId: string): Promise<string> {
+    const packageInfo = this.getPackageInfo(packageId)
+    if (!packageInfo) {
+      throw Error(`Unknown package '${packageId}'`)
+    }
+
+    if (!packageInfo.docs) {
+      throw Error(`Package '${packageId}' does not have documentation`)
+    }
+
+    const docPath = path.join(this.getPackageDocsPath(packageId), packageInfo.docs)
+    const docExt = path.extname(docPath)
+
+    switch (docExt) {
+      case ".htm":
+      case ".html": {
+        const src = await fs.realpath(docPath)
+        const pathname = path.relative(this.rootPath, src).replaceAll("\\", "/")
+        return `<iframe height="100%" width="100%" sandbox="allow-popups" src="docs://sc4-plugin-manager/${pathname}" title="Documentation"></iframe>`
+      }
+
+      // TODO: Markdown viewer? It is at least readable enough for now
+      case ".md":
+      case ".txt": {
+        const contents = escapeHtml(await fs.readFile(docPath, "utf8"))
+        return `<pre style="height: 100%; margin: 0; overflow: auto; padding: 16px; white-space: pre-wrap">${contents}</pre>`
+      }
+
+      default:
+        throw Error(`Unsupported documentation format ${docExt}`)
+    }
   }
 
   public getCurrentProfile(): ProfileInfo | undefined {
@@ -163,6 +240,10 @@ export class Application {
     return path.join(this.rootPath, this.dirnames.profiles)
   }
 
+  public getAssetInfo(assetId: string): AssetInfo | undefined {
+    return this.assets?.[assetId]
+  }
+
   public getPackageInfo(packageId: string): PackageInfo | undefined {
     return this.packages?.[packageId]
   }
@@ -171,10 +252,61 @@ export class Application {
     return this.profiles?.[profileId]
   }
 
+  public getDefaultCategoryName(category: number): string {
+    if (category < 100) {
+      return "Mods"
+    }
+
+    if (category < 200) {
+      return "Dependencies"
+    }
+
+    if (category < 300) {
+      return "Residential"
+    }
+
+    if (category === 360) {
+      return "Landmarks"
+    }
+
+    if (category < 400) {
+      return "Commercial"
+    }
+
+    if (category < 500) {
+      return "Industrial"
+    }
+
+    if (category < 600) {
+      return "Energy"
+    }
+
+    if (category === 660) {
+      return "Parks"
+    }
+
+    if (category < 700) {
+      return "Civics"
+    }
+
+    if (category < 800) {
+      return "Transport"
+    }
+
+    if (category >= 900) {
+      return "Overrides"
+    }
+
+    return "Custom"
+  }
+
   public async getState(): Promise<ApplicationState> {
     return {
+      linking: false,
       loadStatus: this.loadStatus,
-      ongoingDownloads: this.ongoingDownloads.map(download => download.key),
+      ongoingDownloads: this.tasks.download.ongoingTasks,
+      ongoingExtracts: this.tasks.extract.ongoingTasks,
+      packageGroups: this.packageGroups,
       packages: this.packages,
       profiles: this.profiles,
       settings: this.settings,
@@ -192,20 +324,6 @@ export class Application {
 
   protected openInExplorer(fullPath: string): void {
     cmd(`explorer "${fullPath.replaceAll('"', '\\"')}"`)
-  }
-
-  protected async initializeDownloads(): Promise<void> {
-    let nDownloads = 0
-    // Read downloaded assets
-    const entries = await fs.readdir(this.getDownloadsPath(), { withFileTypes: true })
-    for (const entry of entries) {
-      if (entry.isDirectory()) {
-        this.downloads[entry.name] = true
-        nDownloads++
-      }
-    }
-
-    console.debug(`Found ${nDownloads} downloaded assets`)
   }
 
   protected async initialize(): Promise<void> {
@@ -250,6 +368,7 @@ export class Application {
       const localPackage = localPackages[packageId]
       this.packages[packageId] ??= localPackage
       const info = this.packages[packageId]
+      info.docs = localPackage.docs
       info.format = localPackage.format
 
       for (const variantId in localPackage.variants) {
@@ -284,10 +403,6 @@ export class Application {
     this.loadStatus = "Synchronizing..."
     this.processUpdates()
     // TODO: Initialize linker
-
-    if (currentProfile) {
-      // TODO: Link packages for current profile
-    }
 
     // Done
     this.loadStatus = null
@@ -333,11 +448,13 @@ export class Application {
 
     // TODO: Check if valid
 
+    const disabledPackageIds = new Set<string>()
     const disableRecursively = (packageId: string) => {
       const config = currentProfile.packages[packageId]
       const info = this.getPackageInfo(packageId)
       if (info?.status.enabled && !config?.enabled && !info.status.requiredBy?.length) {
         info.status.enabled = false
+        disabledPackageIds.add(packageId)
 
         const variant = info.variants[info.status.variant]
         if (variant) {
@@ -367,6 +484,32 @@ export class Application {
       disableRecursively(packageId)
     }
 
+    // Check package groups
+    this.packageGroups ??= {}
+    for (const packageId of disabledPackageIds) {
+      if (packageGroups[packageId]) {
+        for (const groupId of packageGroups[packageId]) {
+          const index = this.packageGroups[groupId].indexOf(packageId)
+          if (index >= 0) {
+            this.packageGroups[groupId].splice(index, 1)
+
+            if (this.packageGroups[groupId].length === 0) {
+              delete this.packageGroups[groupId]
+
+              if (groupId === "cam") {
+                this.setProfileSetting("cam", false)
+              }
+
+              if (groupId === "darknite") {
+                this.setProfileSetting("darknite", false)
+              }
+            }
+          }
+        }
+      }
+    }
+
+    this.calculatePackageCompatibility()
     this.markPackagesForUpdate()
     this.processUpdates()
 
@@ -385,6 +528,7 @@ export class Application {
 
     if (data.settings) {
       Object.assign(profile.settings, data.settings)
+      this.calculatePackageCompatibility()
     }
 
     this.markProfileForUpdate(profile)
@@ -401,11 +545,13 @@ export class Application {
 
     // TODO: Check if valid
 
+    const enabledPackageIds = new Set<string>()
     const enableRecursively = (packageId: string) => {
       const config = currentProfile.packages[packageId]
       const info = this.getPackageInfo(packageId)
       if (info && !info?.status.enabled) {
         info.status.enabled = true
+        enabledPackageIds.add(packageId)
 
         const variant = info.variants[info.status.variant]
         if (variant) {
@@ -440,6 +586,26 @@ export class Application {
       enableRecursively(packageId)
     }
 
+    // Check package groups
+    this.packageGroups ??= {}
+    for (const packageId of enabledPackageIds) {
+      if (packageGroups[packageId]) {
+        for (const groupId of packageGroups[packageId]) {
+          this.packageGroups[groupId] ??= []
+          this.packageGroups[groupId].push(packageId)
+
+          if (groupId === "cam") {
+            this.setProfileSetting("cam", true)
+          }
+
+          if (groupId === "darknite") {
+            this.setProfileSetting("darknite", true)
+          }
+        }
+      }
+    }
+
+    this.calculatePackageCompatibility()
     this.markPackagesForUpdate()
     this.processUpdates()
 
@@ -451,144 +617,191 @@ export class Application {
       return false
     }
 
-    // Calculate missing packages
-    const checkedPackages = new Set(packageIds)
-    const missingPackages = new Map<string, VariantInfo>()
-    checkedPackages.forEach((packageId: string) => {
-      const info = this.getPackageInfo(packageId)
-      if (!info) {
-        return
-      }
-
-      const variant = info.variants[info.status.variant]
-      if (!variant) {
-        return
-      }
-
-      console.log(info, variant)
-
-      if ((!variant.installed || variant.installed !== variant.version) && !variant.installing) {
-        variant.installing = true
-        missingPackages.set(packageId, variant)
-      }
-
-      for (const dependencyId of variant.dependencies) {
-        checkedPackages.add(dependencyId)
-      }
-    })
-
-    this.markPackagesForUpdate()
-    this.processUpdates()
-
-    await this.initializingDownloads
-
-    // Calculate missing assets
-    const missingAssets = new Set<AssetInfo>()
-    missingPackages.forEach(variant => {
-      for (const asset of variant.assets) {
-        const assetInfo = this.assets?.[asset.assetId]
-        if (assetInfo) {
-          const key = `${assetInfo.id}@${assetInfo.version}`
-          if (!this.downloads[key]) {
-            missingAssets.add(assetInfo)
-          }
-        } else {
-          console.warn(`Unknown asset '${asset.assetId}'`)
+    try {
+      // Find missing dependencies recursively
+      const checkedPackages = new Set(packageIds)
+      const missingPackages = new Map<string, string>()
+      checkedPackages.forEach((packageId: string) => {
+        const packageInfo = this.getPackageInfo(packageId)
+        if (!packageInfo) {
+          throw Error(`Unknown package '${packageId}'`)
         }
-      }
-    })
 
-    console.log(missingPackages)
-    console.log(missingAssets)
+        const variantId = packageInfo.status.variant
+        const variantInfo = packageInfo.variants[variantId]
+        if (!variantInfo) {
+          throw Error(`Unknown variant '${packageId}#${variantId}'`)
+        }
 
-    const promises = Array.from(missingPackages).map(async ([id, variant]) => {
-      const variantPath = this.getVariantPath(id, variant.id)
-      const docsPath = this.getPackageDocsPath(id)
+        const isInstalled = !!variantInfo.installed
+        const isOutdated = variantInfo.installed !== variantInfo.version
+        if (!isInstalled || (isOutdated && packageIds.includes(packageId))) {
+          missingPackages.set(packageId, variantInfo.id)
+        }
 
-      try {
+        for (const dependencyId of variantInfo.dependencies) {
+          checkedPackages.add(dependencyId)
+        }
+      })
+
+      // TODO: Calculate missing assets
+      // TODO: Confirmation dialog
+
+      // Install individual packages in reverse order (dependencies first)
+      await Promise.all(
+        Array.from(missingPackages)
+          .reverse()
+          .map(([packageId, variantId]) => this.installSinglePackage(packageId, variantId)),
+      )
+
+      this.linkPackages()
+      return true
+    } catch (error) {
+      console.error(error)
+      return false
+    }
+  }
+
+  protected async installSinglePackage(packageId: string, variantId: string): Promise<void> {
+    const packageInfo = this.getPackageInfo(packageId)
+    if (!packageInfo) {
+      throw Error(`Unknown package '${packageId}'`)
+    }
+
+    const variantInfo = packageInfo.variants[variantId]
+    if (!variantInfo) {
+      throw Error(`Unknown variant '${packageId}#${variantId}'`)
+    }
+
+    try {
+      const variantKey = `${packageId}#${variantId}`
+
+      variantInfo.installing = true
+      this.sendPackageUpdate(packageInfo)
+
+      console.log(variantKey)
+
+      await this.tasks.install.queue(variantKey, async () => {
+        const variantPath = this.getVariantPath(packageId, variantId)
+        const docsPath = this.getPackageDocsPath(packageId)
+
+        console.log(variantInfo)
+
+        const assetInfos = variantInfo.assets.map(asset => {
+          const assetInfo = this.getAssetInfo(asset.assetId)
+          if (assetInfo) {
+            return assetInfo
+          } else {
+            throw Error(`Unknown asset '${asset.assetId}'`)
+          }
+        })
+
+        // Download and extract all assets
+        await Promise.all(assetInfos.map(this.getAsset.bind(this)))
+
+        // Remove any previous installation files
         await removeIfPresent(variantPath)
 
-        const assetIds = Array.from(new Set(variant.assets.map(asset => asset.assetId)))
+        try {
+          const files: typeof variantInfo.files = []
 
-        const files: typeof variant.files = []
+          for (const asset of variantInfo.assets) {
+            const assetInfo = this.getAssetInfo(asset.assetId)!
+            const downloadKey = `${assetInfo.id}@${assetInfo.version}`
+            const downloadPath = this.getDownloadPath(downloadKey)
 
-        const results = await Promise.all(
-          assetIds.map(async assetId => {
-            const assetInfo = this.assets?.[assetId]
-            if (!assetInfo) {
-              return false
+            console.log(assetInfo)
+            console.log(downloadPath, `*{${DOCEXTENSIONS.join(",")}}`)
+
+            // Find all included documentation
+            const docsPaths = await glob(`*{${DOCEXTENSIONS.join(",")}}`, {
+              cwd: downloadPath,
+              matchBase: true,
+              nodir: true,
+            })
+
+            console.log(docsPaths)
+
+            // Create links
+            for (const filePath of docsPaths) {
+              const fullPath = path.join(downloadPath, filePath)
+              const targetPath = path.join(docsPath, filePath)
+              await createIfMissing(path.dirname(targetPath))
+              await removeIfPresent(targetPath)
+              await fs.symlink(fullPath, targetPath)
             }
 
-            const key = `${assetInfo.id}@${assetInfo.version}`
-            const result = await this.download(key, assetInfo.url)
-            if (!result.success) {
-              return false
-            }
+            // Find all included files
+            const filePaths = await glob(asset.include?.map(toGlobPattern) ?? "**", {
+              cwd: downloadPath,
+              dot: true,
+              ignore: asset.exclude?.map(toGlobPattern),
+              matchBase: true,
+              nodir: true,
+            })
 
-            const recursive = async (dir: string) => {
-              const fullPath = path.join(result.path, dir)
-              const entries = await fs.readdir(fullPath, { withFileTypes: true })
-              for (const entry of entries) {
-                const entryPath = path.join(dir, entry.name)
-
-                if (entry.isDirectory()) {
-                  await recursive(entryPath)
-                } else {
-                  const ext = path.extname(entry.name)
-                  if (
-                    [".SC4Desc", ".SC4Lot", ".SC4Model", "._LooseDesc", ".dat", ".jar"].includes(
-                      ext,
-                    )
-                  ) {
-                    const targetPath = path.join(variantPath, entryPath)
-                    await createIfMissing(path.dirname(targetPath))
-                    await fs.symlink(path.join(fullPath, entry.name), targetPath)
-                    files.push({ path: entryPath })
-                  } else {
-                    const targetPath = path.join(docsPath, entryPath)
-                    await createIfMissing(path.dirname(targetPath))
-                    await removeIfPresent(targetPath)
-                    await fs.symlink(path.join(fullPath, entry.name), targetPath)
-                  }
-                }
+            // Create links
+            for (const filePath of filePaths) {
+              const fullPath = path.join(downloadPath, filePath)
+              const ext = path.extname(filePath)
+              if (SC4EXTENSIONS.includes(ext)) {
+                const targetPath = path.join(variantPath, filePath)
+                await createIfMissing(path.dirname(targetPath))
+                await fs.symlink(fullPath, targetPath)
+                files.push({ path: filePath })
+              } else if (!DOCEXTENSIONS.includes(ext)) {
+                console.warn(`File ${fullPath} has unsupported extension ${ext}`)
               }
             }
+          }
 
-            try {
-              await recursive(".")
-              return true
-            } catch (error) {
-              console.error(error)
-              return false
-            }
-          }),
-        )
+          const docsPaths = await glob("*.{htm,html,md,txt}", {
+            cwd: this.getPackageDocsPath(packageId),
+            matchBase: true,
+            nodir: true,
+          })
 
-        if (results.includes(false)) {
-          return false
+          if (docsPaths.length) {
+            packageInfo.docs =
+              docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
+              docsPaths.find(file => path.basename(file).match(/.*readme.*\.html?$/i)) ??
+              docsPaths.find(file => path.basename(file).match(/.*readme.*\.md?$/i)) ??
+              docsPaths.find(file => path.basename(file).match(/.*readme.*\.txt?$/i)) ??
+              docsPaths[0]
+
+            console.log(packageInfo.id, packageInfo.docs)
+          }
+
+          variantInfo.files = files
+          variantInfo.installed = variantInfo.version
+
+          // Rewrite config
+          await this.writePackageConfig(packageInfo)
+        } catch (error) {
+          delete variantInfo.files
+          delete variantInfo.installed
+          throw error
         }
+      })
+    } finally {
+      delete variantInfo.installing
+      this.sendPackageUpdate(packageInfo)
+    }
+  }
 
-        variant.files = files
-        variant.installed = variant.version
+  protected async getAsset(assetInfo: AssetInfo): Promise<void> {
+    const key = `${assetInfo.id}@${assetInfo.version}`
 
-        const info = this.getPackageInfo(id)
-        if (info) {
-          await this.writePackageConfig(info)
-        }
+    return this.tasks.getAsset.queue(key, async () => {
+      const downloadPath = this.getDownloadPath(key)
 
-        return true
-      } catch (error) {
-        console.error(error)
-        return false
-      } finally {
-        variant.installing = false
-        this.markPackagesForUpdate()
-        this.processUpdates()
+      const downloaded = await exists(downloadPath)
+      if (!downloaded) {
+        await this.tasks.download.queue(key, () => download(key, assetInfo.url, downloadPath))
       }
-    })
 
-    const results = await Promise.all(promises)
-    return !results.includes(false)
+      await this.tasks.extract.queue(key, () => extract(downloadPath))
+    })
   }
 
   public async removePackages(packageIds: string[]): Promise<boolean> {
@@ -681,6 +894,129 @@ export class Application {
     return true
   }
 
+  protected async linkPackages(): Promise<void> {
+    if (!this.packages || !this.assets) {
+      return
+    }
+
+    const pluginsPath = getPluginsPath()
+
+    await this.tasks.linker.queue(
+      "init",
+      async () => {
+        console.debug("Initializing links...")
+
+        const recursive = async (dirname: string) => {
+          const entries = await fs.readdir(dirname, { withFileTypes: true })
+          for (const entry of entries) {
+            const entryPath = path.join(dirname, entry.name)
+            if (entry.isDirectory()) {
+              await recursive(entryPath)
+            } else if (entry.isSymbolicLink()) {
+              this.links[entryPath] = await fs.readlink(entryPath)
+            }
+          }
+        }
+
+        await createIfMissing(pluginsPath)
+        await recursive(pluginsPath)
+
+        console.debug("Initializing links... ok")
+      },
+      {
+        cache: true,
+      },
+    )
+
+    if (this.getCurrentProfile()) {
+      await this.tasks.linker.queue(
+        "link",
+        async () => {
+          console.debug("Linking packages...")
+
+          const categoryPaths = new Map<number, string>()
+
+          await createIfMissing(pluginsPath)
+          const entries = await fs.readdir(pluginsPath, { withFileTypes: true })
+          for (const entry of entries) {
+            if (entry.isDirectory() && entry.name.match(/^\d{3}(?!\d)/)) {
+              const category = Number.parseInt(entry.name.slice(0, 3), 10)
+              categoryPaths.set(category, entry.name)
+            }
+          }
+
+          const oldLinks = new Set(Object.keys(this.links))
+
+          const getCategoryPath = (category: number) => {
+            const existingPath = categoryPaths.get(category)
+            if (existingPath) {
+              return existingPath
+            }
+
+            const categoryName = this.getDefaultCategoryName(category)
+            const newPath = `${category.toString(10).padStart(3, "0")} - ${categoryName}`
+            categoryPaths.set(category, newPath)
+            return newPath
+          }
+
+          const makeLink = async (from: string, to: string) => {
+            await removeIfPresent(to)
+            await createIfMissing(path.dirname(to))
+            await fs.symlink(from, to)
+            this.links[to] = from
+          }
+
+          for (const packageId in this.packages) {
+            const packageInfo = this.packages[packageId]
+            if (packageInfo.status.enabled) {
+              const variantId = packageInfo.status.variant
+              const variantInfo = packageInfo.variants[variantId]
+              if (variantInfo) {
+                const variantPath = this.getVariantPath(packageId, variantId)
+                if (variantInfo.files?.length) {
+                  for (const file of variantInfo.files) {
+                    const fullPath = path.join(variantPath, file.path)
+                    const categoryPath = getCategoryPath(file.category ?? packageInfo.category)
+
+                    // DLL files must be in Plugins root
+                    const targetPath = file.path.match(/\.dll$/i)
+                      ? path.join(pluginsPath, path.basename(file.path))
+                      : path.join(pluginsPath, categoryPath, packageId, file.path)
+
+                    oldLinks.delete(targetPath)
+                    if (this.links[targetPath] !== fullPath) {
+                      await makeLink(fullPath, targetPath)
+                      console.debug(`Added link: ${targetPath}`)
+                    }
+                  }
+                } else {
+                  console.warn(`Package ${packageId} does not have files`)
+                }
+              }
+            }
+          }
+
+          for (const linkPath of oldLinks) {
+            console.debug(`Removed link: ${linkPath}`)
+            await removeIfPresent(linkPath)
+            await removeIfEmpty(path.dirname(linkPath))
+            delete this.links[linkPath]
+
+            let parentPath = path.dirname(linkPath)
+            while (parentPath !== pluginsPath && (await removeIfEmpty(parentPath))) {
+              parentPath = path.dirname(parentPath)
+            }
+          }
+
+          console.debug("Linking packages... ok")
+        },
+        {
+          invalidate: true,
+        },
+      )
+    }
+  }
+
   protected calculatePackages(initial: boolean = false): void {
     const currentProfile = this.getCurrentProfile()
     if (!this.packages) {
@@ -713,6 +1049,7 @@ export class Application {
         if (info && !info.status.enabled) {
           info.status.enabled = true
           const variant = info.variants[info.status.variant]
+
           if (variant) {
             for (const dependencyId of variant.dependencies) {
               const dependencyInfo = this.getPackageInfo(dependencyId)
@@ -742,7 +1079,76 @@ export class Application {
       }
     }
 
+    this.calculatePackageGroups()
+  }
+
+  protected calculatePackageGroups(): void {
+    const profile = this.getCurrentProfile()
+    // Check package groups
+    this.packageGroups = {}
+    for (const packageId in packageGroups) {
+      if (this.getPackageInfo(packageId)?.status.enabled) {
+        for (const groupId of packageGroups[packageId]) {
+          this.packageGroups[groupId] ??= []
+          this.packageGroups[groupId].push(packageId)
+
+          if (profile) {
+            if (groupId === "cam" && !profile.settings.cam) {
+              profile.settings.cam = true
+              this.markProfileForUpdate(profile)
+            }
+
+            if (groupId === "darknite" && !profile.settings.darknite) {
+              profile.settings.darknite = true
+              this.markProfileForUpdate(profile)
+            }
+          }
+        }
+      }
+    }
+
+    this.calculatePackageCompatibility()
+  }
+
+  protected calculatePackageCompatibility(): void {
+    const profile = this.getCurrentProfile()
+    if (!profile) {
+      return
+    }
+
+    this.packageGroups ??= {}
+
+    // Check package compatibility
+    for (const packageId in this.packages) {
+      const info = this.packages[packageId]
+      for (const variantId in info.variants) {
+        const variant = info.variants[variantId]
+        if (variant) {
+          if (variantId === "nightmode=standard") {
+            variant.compatible =
+              !profile.settings.darknite && !packageGroups[packageId]?.includes("darknite")
+          } else if (variantId === "nightmode=dark") {
+            variant.compatible =
+              !!profile.settings.darknite || !!packageGroups[packageId]?.includes("darknite")
+          } else if (variantId === "CAM=yes") {
+            variant.compatible =
+              !!profile.settings.cam || !!packageGroups[packageId]?.includes("cam")
+          } else if (variantId === "CAM=no") {
+            variant.compatible = !profile.settings.cam && !packageGroups[packageId]?.includes("cam")
+          } else {
+            variant.compatible = true
+          }
+        }
+      }
+
+      if (!info.variants[info.status.variant]?.compatible) {
+        info.status.variant = getDefaultVariant(info)
+        this.setPackageVariantInConfig(info.id, info.status.variant)
+      }
+    }
+
     this.markPackagesForUpdate()
+    this.processUpdates()
   }
 
   protected setPackageVariantInConfig(packageId: string, variantId: string): void {
@@ -804,8 +1210,29 @@ export class Application {
     }
   }
 
-  protected markPackagesForUpdate(): void {
-    this.update.packages = true
+  protected setProfileSetting(setting: keyof ProfileSettings, value: boolean): boolean {
+    const profile = this.getCurrentProfile()
+    if (profile && profile.settings[setting] !== value) {
+      profile.settings[setting] = value
+      this.markProfileForUpdate(profile)
+      return true
+    } else {
+      return false
+    }
+  }
+
+  protected markPackagesForUpdate(packageIds?: string[]): void {
+    if (packageIds) {
+      if (this.update.packages) {
+        if (this.update.packages !== true) {
+          this.update.packages.push(...packageIds)
+        }
+      } else {
+        this.update.packages = packageIds
+      }
+    } else {
+      this.update.packages = true
+    }
   }
 
   protected markProfileForUpdate(profile: ProfileInfo): void {
@@ -816,15 +1243,45 @@ export class Application {
     this.update.settings = true
   }
 
+  protected sendPackageUpdate(packageInfo: PackageInfo): void {
+    this.mainWindow?.webContents.postMessage("updateState", {
+      packages: {
+        [packageInfo.id]: packageInfo,
+      },
+    })
+  }
+
+  protected sendStatusUpdate(status: string | null): void {
+    this.mainWindow?.webContents.postMessage("updateState", { loadStatus: status })
+  }
+
+  protected onDownloadTaskUpdate(ongoingDownloads: string[]): void {
+    this.mainWindow?.webContents.postMessage("updateState", { ongoingDownloads })
+  }
+
+  protected onExtractTaskUpdate(ongoingExtracts: string[]): void {
+    this.mainWindow?.webContents.postMessage("updateState", { ongoingExtracts })
+  }
+
+  protected onLinkTaskUpdate(ongoingTasks: string[]): void {
+    this.mainWindow?.webContents.postMessage("updateState", {
+      linking: !!ongoingTasks.length,
+      loadStatus:
+        {
+          link: "Linking packages...",
+          init: "Initializing...",
+        }[ongoingTasks[0]] ?? null,
+    })
+  }
+
   protected processUpdates(): void {
-    const update: Partial<ApplicationState> = {
-      loadStatus: this.loadStatus,
-      ongoingDownloads: this.ongoingDownloads.map(download => download.key),
-    }
+    const update: Partial<ApplicationState> = { loadStatus: this.loadStatus }
 
     if (this.update.packages) {
+      update.packageGroups = this.packageGroups
       update.packages = this.packages
       this.update.packages = false
+      this.linkPackages()
     }
 
     if (this.update.profiles.length) {
@@ -1048,15 +1505,21 @@ export class Application {
 
   protected createMainWindow(): MainWindow {
     if (!this.mainWindow) {
-      const splashScreen = new SplashScreen()
+      // Show splash screen only in production build
+      if (import.meta.env.PROD) {
+        this.splashScreen = new SplashScreen()
+        this.splashScreen.on("close", () => {
+          this.splashScreen = undefined
+        })
+      }
 
       this.mainWindow = new MainWindow()
       this.mainWindow.on("close", () => {
         this.mainWindow = undefined
       })
 
-      this.mainWindow.on("ready-to-show", () => {
-        splashScreen.close()
+      this.mainWindow.on("show", () => {
+        this.splashScreen?.close()
       })
     }
 
@@ -1094,79 +1557,5 @@ export class Application {
     }
 
     return this.databaseUpdatePromise
-  }
-
-  protected async download(
-    key: string,
-    url: string,
-    ignoreQueue?: boolean,
-  ): Promise<DownloadResult> {
-    const status = this.downloads[key]
-
-    if (status === true) {
-      console.log("Already downloaded " + key)
-      return {
-        path: this.getDownloadPath(key),
-        success: true,
-      }
-    }
-
-    if (status) {
-      return status
-    }
-
-    let promise: Promise<DownloadResult>
-
-    if (ignoreQueue || this.ongoingDownloads.length < this.maxParallelDownloads) {
-      // Start immediately
-      promise = this.startDownload(key, url)
-      this.processUpdates()
-    } else {
-      // Push to end of queue
-      promise = new Promise(resolve => this.pendingDownloads.push({ key, resolve, url }))
-    }
-
-    this.downloads[key] = promise
-    return promise
-  }
-
-  protected async startDownload(key: string, url: string): Promise<DownloadResult> {
-    const promise = download(key, url, this.getDownloadPath(key))
-    const ongoing = { key, promise, url }
-
-    this.ongoingDownloads.push(ongoing)
-
-    try {
-      await promise
-      this.downloads[key] = true
-      return {
-        path: this.getDownloadPath(key),
-        success: true,
-      }
-    } catch (error) {
-      console.error(error)
-      delete this.downloads[key]
-      return {
-        error: error instanceof Error ? error : Error(),
-        path: this.getDownloadPath(key),
-        success: false,
-      }
-    } finally {
-      // No longer downloading
-      const index = this.ongoingDownloads.indexOf(ongoing)
-      if (index >= 0) {
-        this.ongoingDownloads.splice(index, 1)
-      }
-
-      // Start next queued download
-      if (this.ongoingDownloads.length < this.maxParallelDownloads) {
-        const pending = this.pendingDownloads.shift()
-        if (pending) {
-          this.startDownload(pending.key, pending.url).then(pending.resolve)
-        }
-      }
-
-      this.processUpdates()
-    }
   }
 }

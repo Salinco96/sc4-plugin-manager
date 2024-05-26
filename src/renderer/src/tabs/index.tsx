@@ -10,21 +10,62 @@ import ParksIcon from "@mui/icons-material/LocalFlorist"
 import ProblemsIcon from "@mui/icons-material/Report"
 import SettingsIcon from "@mui/icons-material/Settings"
 import TransportIcon from "@mui/icons-material/Traffic"
+import UpdatesIcon from "@mui/icons-material/Update"
 import DependenciesIcon from "@mui/icons-material/ViewInAr"
 import AllPackagesIcon from "@mui/icons-material/WidgetsOutlined"
 
-import { PackageCategory, PackageState } from "@common/types"
+import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
 import { Page } from "@renderer/pages"
 import { Location } from "@renderer/stores/navigation"
+import { PackageFilters, Store, getCurrentProfile } from "@renderer/utils/store"
 
 export interface TabInfo {
+  badgeColor?: "error"
+  badgeCount?: (store: Store) => number | undefined
   group?: string
   icon?: JSX.Element
   id: string
   label: string
   location: Location
-  packageFilters?: { categories?: PackageCategory[]; states?: PackageState[] }
+  packageFilters?: Partial<PackageFilters>
   tooltip?: string
+}
+
+function countPackages(store: Store, category?: PackageCategory, state?: PackageState): number {
+  const profile = getCurrentProfile(store)
+  return store.packages
+    ? Object.values(store.packages).filter(info => {
+        if (category && getCategory(info) !== category) {
+          return false
+        }
+
+        if (state && !getState(info, state, profile)) {
+          return false
+        }
+
+        if (store.packageFilters.state && !getState(info, store.packageFilters.state, profile)) {
+          return false
+        }
+
+        if (!state) {
+          if (
+            !store.packageFilters.dependencies &&
+            getCategory(info) === PackageCategory.DEPENDENCIES
+          ) {
+            return false
+          }
+
+          if (
+            !store.packageFilters.incompatible &&
+            !getState(info, PackageState.COMPATIBLE, profile)
+          ) {
+            return false
+          }
+        }
+
+        return true
+      }).length
+    : 0
 }
 
 export const tabs: TabInfo[] = [
@@ -41,6 +82,9 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Settings, data: {} },
   },
   {
+    badgeCount(store) {
+      return countPackages(store)
+    },
     group: "Packages",
     icon: <AllPackagesIcon />,
     id: "packages:all",
@@ -48,10 +92,14 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.DEPENDENCIES)
+    },
     group: "Packages",
     icon: <DependenciesIcon />,
     id: `packages:${PackageCategory.DEPENDENCIES}`,
@@ -59,11 +107,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.DEPENDENCIES],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Textures, props",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.MODS)
+    },
     group: "Packages",
     icon: <ModsIcon />,
     id: `packages:${PackageCategory.MODS}`,
@@ -71,11 +123,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.MODS],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Gameplay mods, bugfixes, DLLs",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.RESIDENTIAL)
+    },
     group: "Packages",
     icon: <ResidentialIcon />,
     id: `packages:${PackageCategory.RESIDENTIAL}`,
@@ -83,11 +139,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.RESIDENTIAL],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Residential lots",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.COMMERCIAL)
+    },
     group: "Packages",
     icon: <CommercialIcon />,
     id: `packages:${PackageCategory.COMMERCIAL}`,
@@ -95,11 +155,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.COMMERCIAL],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Commercial lots",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.INDUSTRIAL)
+    },
     group: "Packages",
     icon: <IndustrialIcon />,
     id: `packages:${PackageCategory.INDUSTRIAL}`,
@@ -107,11 +171,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.INDUSTRIAL],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Industrial lots",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.CIVICS)
+    },
     group: "Packages",
     icon: <CivicsIcon />,
     id: `packages:${PackageCategory.CIVICS}`,
@@ -119,11 +187,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.CIVICS],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Civic buildings, rewards",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.LANDMARKS)
+    },
     group: "Packages",
     icon: <LandmarksIcon />,
     id: `packages:${PackageCategory.LANDMARKS}`,
@@ -131,11 +203,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.LANDMARKS],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Landmarks",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.PARKS)
+    },
     group: "Packages",
     icon: <ParksIcon />,
     id: `packages:${PackageCategory.PARKS}`,
@@ -143,11 +219,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.PARKS],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Parks",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.ENERGY)
+    },
     group: "Packages",
     icon: <EnergyIcon />,
     id: `packages:${PackageCategory.ENERGY}`,
@@ -155,11 +235,15 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.ENERGY],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Energy infrastructure",
   },
   {
+    badgeCount(store) {
+      return countPackages(store, PackageCategory.TRANSPORT)
+    },
     group: "Packages",
     icon: <TransportIcon />,
     id: `packages:${PackageCategory.TRANSPORT}`,
@@ -167,11 +251,16 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [PackageCategory.TRANSPORT],
-      states: [],
+      onlyErrors: false,
+      onlyUpdates: false,
     },
     tooltip: "Transportation infrastructure",
   },
   {
+    badgeColor: "error",
+    badgeCount(store) {
+      return countPackages(store, undefined, PackageState.ERROR)
+    },
     group: "Packages",
     icon: <ProblemsIcon />,
     id: "packages:errors",
@@ -179,8 +268,26 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Packages, data: {} },
     packageFilters: {
       categories: [],
-      states: [PackageState.ERROR],
+      onlyErrors: true,
+      onlyUpdates: false,
     },
+  },
+  {
+    badgeColor: "error",
+    badgeCount(store) {
+      return countPackages(store, undefined, PackageState.OUTDATED)
+    },
+    group: "Packages",
+    icon: <UpdatesIcon />,
+    id: "packages:updates",
+    label: "Updates",
+    location: { page: Page.Packages, data: {} },
+    packageFilters: {
+      categories: [],
+      onlyErrors: false,
+      onlyUpdates: true,
+    },
+    tooltip: "Packages with updates available",
   },
 ]
 

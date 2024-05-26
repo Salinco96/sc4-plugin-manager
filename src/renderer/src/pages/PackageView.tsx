@@ -16,16 +16,78 @@ import { PackageActions } from "@renderer/components/PackageActions"
 import { PackageListItem } from "@renderer/components/PackageListItem"
 import { PackageTags } from "@renderer/components/PackageTags"
 import { history } from "@renderer/stores/navigation"
-import { usePackageInfo, useStore } from "@renderer/utils/store"
+import { usePackageInfo, useStore, useStoreActions } from "@renderer/utils/store"
+import { ComponentType, useEffect, useState } from "react"
+import { Loading } from "./Loading"
+
+function PackageViewDependencies({ info }: { info: PackageInfo }): JSX.Element {
+  const variantInfo = info.variants[info.status.variant]
+
+  return (
+    <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
+      {variantInfo?.dependencies.map((dependencyId, index) => (
+        <PackageListItem key={dependencyId} index={index} item={dependencyId} />
+      ))}
+    </List>
+  )
+}
+
+function PackageViewDocumentation({ info }: { info: PackageInfo }): JSX.Element {
+  const actions = useStoreActions()
+  const [html, setHtml] = useState<string>()
+
+  useEffect(() => {
+    actions.getPackageDocsAsHtml(info.id).then(setHtml).catch(console.error)
+  }, [actions, info.id])
+
+  if (!html) {
+    return <Loading />
+  }
+
+  return <div dangerouslySetInnerHTML={{ __html: html }} style={{ height: "100%" }} />
+}
+
+function PackageViewFiles({ info }: { info: PackageInfo }): JSX.Element {
+  const variantInfo = info.variants[info.status.variant]
+
+  return (
+    <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
+      {variantInfo?.files?.map(file => (
+        <ListItem
+          key={file.path}
+          onClick={() => {
+            useStore
+              .getState()
+              .actions.openPackageFileInExplorer(info.id, variantInfo.id, file.path)
+          }}
+        >
+          {file.path}
+        </ListItem>
+      ))}
+    </List>
+  )
+}
+
+function PackageViewRequiredBy({ info }: { info: PackageInfo }): JSX.Element {
+  return (
+    <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
+      {info.status.requiredBy?.map((dependencyId, index) => (
+        <PackageListItem key={dependencyId} index={index} item={dependencyId} />
+      ))}
+    </List>
+  )
+}
 
 const packageViewTabs: {
+  component: ComponentType<{ info: PackageInfo }>
   id: string
   name: (info: PackageInfo) => string
   condition?: (info: PackageInfo) => boolean
-  render: (info: PackageInfo) => JSX.Element
+  fullsize?: boolean
 }[] = [
   {
     id: "dependencies",
+    component: PackageViewDependencies,
     condition(info) {
       const variant = info.variants[info.status.variant]
       return !!variant?.dependencies.length
@@ -34,38 +96,20 @@ const packageViewTabs: {
       const variant = info.variants[info.status.variant]
       return `${variant?.dependencies?.length ?? 0} dependencies`
     },
-    render(info) {
-      const variantInfo = info.variants[info.status.variant]
-
-      return (
-        <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-          {variantInfo?.dependencies.map((dependencyId, index) => (
-            <PackageListItem key={dependencyId} index={index} item={dependencyId} />
-          ))}
-        </List>
-      )
-    },
   },
   {
     id: "requires",
+    component: PackageViewRequiredBy,
     condition(info) {
       return !!info.status.requiredBy?.length
     },
     name() {
       return "Required by"
     },
-    render(info) {
-      return (
-        <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-          {info.status.requiredBy?.map((dependencyId, index) => (
-            <PackageListItem key={dependencyId} index={index} item={dependencyId} />
-          ))}
-        </List>
-      )
-    },
   },
   {
     id: "files",
+    component: PackageViewFiles,
     condition(info) {
       const variant = info.variants[info.status.variant]
       return !!variant?.files?.length
@@ -74,26 +118,18 @@ const packageViewTabs: {
       const variant = info.variants[info.status.variant]
       return `${variant?.files?.length ?? 0} files`
     },
-    render(info) {
-      const variantInfo = info.variants[info.status.variant]
-
-      return (
-        <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-          {variantInfo?.files?.map(file => (
-            <ListItem
-              key={file.path}
-              onClick={() => {
-                useStore
-                  .getState()
-                  .actions.openPackageFileInExplorer(info.id, variantInfo.id, file.path)
-              }}
-            >
-              {file.path}
-            </ListItem>
-          ))}
-        </List>
-      )
+  },
+  {
+    id: "docs",
+    component: PackageViewDocumentation,
+    condition(info) {
+      console.log(info)
+      return !!info.docs
     },
+    name() {
+      return "Readme"
+    },
+    fullsize: true,
   },
 ]
 
@@ -149,7 +185,9 @@ function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
           <Typography variant="h6">
             {packageInfo.name} (v{variantInfo.installed ?? variantInfo.version})
           </Typography>
-          <Typography variant="body2">{packageInfo.id}</Typography>
+          <Typography variant="body2">
+            {packageInfo.id}#{packageInfo.status.variant}
+          </Typography>
           <PackageTags packageInfo={packageInfo} />
         </Box>
         <PackageActions packageInfo={packageInfo} />
@@ -163,9 +201,17 @@ function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
               ))}
             </TabList>
           </Box>
-          {tabs.map(tab => (
-            <TabPanel key={tab.id} sx={{ overflowY: "auto", padding: 2 }} value={tab.id}>
-              {tab.render(packageInfo)}
+          {tabs.map(({ component: Component, fullsize, id }) => (
+            <TabPanel
+              key={id}
+              sx={{
+                height: "100%",
+                overflowY: fullsize ? "hidden" : "auto",
+                padding: fullsize ? 0 : 2,
+              }}
+              value={id}
+            >
+              <Component info={packageInfo} />
             </TabPanel>
           ))}
         </TabContext>

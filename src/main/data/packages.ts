@@ -8,6 +8,7 @@ import { AssetInfo, PackageInfo, getDefaultVariant } from "@common/types"
 import { getDatabasePath, getPackagesPath } from "../utils/paths"
 
 import { loadYAMLRecursively } from "./utils"
+import { glob } from "glob"
 
 interface VariantData {
   authors?: string[]
@@ -71,7 +72,7 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
 
           const variantEntries = await fs.readdir(packagePath, { withFileTypes: true })
 
-          console.log(`Found local package '${packageId}'`)
+          // console.log(`Found local package '${packageId}'`)
 
           const configEntry = variantEntries.find(
             entry => entry.isFile() && entry.name.match(/^package\.(json|ya?ml)$/),
@@ -84,7 +85,7 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
             const configData = await fs.readFile(configPath, "utf8")
             config = configPath.endsWith("json") ? JSON.parse(configData) : parse(configData)
 
-            console.log(`Found local package config '${configPath}'`)
+            // console.log(`Found local package config '${configPath}'`)
           }
 
           const info: PackageInfo = {
@@ -103,11 +104,28 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
               const variantConfig = config?.variants?.[variantId]
 
               // ~ is reserved for special folders, e.g. ~docs
-              if (!variantId.startsWith("~")) {
-                console.log(`Found local package variant '${packageId}#${variantId}'`)
+              if (variantId === "~docs") {
+                const files = await glob("*.{htm,html,md,txt}", {
+                  cwd: path.join(packagePath, variantId),
+                  matchBase: true,
+                  nodir: true,
+                })
 
+                if (files.length) {
+                  info.docs =
+                    files.find(file => path.basename(file).match(/^index\.html?$/i)) ??
+                    files.find(file => path.basename(file).match(/.*readme.*\.html?$/i)) ??
+                    files.find(file => path.basename(file).match(/.*readme.*\.md?$/i)) ??
+                    files.find(file => path.basename(file).match(/.*readme.*\.txt?$/i)) ??
+                    files[0]
+
+                  console.log(info.id, info.docs)
+                }
+              } else if (!variantId.startsWith("~")) {
+                // console.log(`Found local package variant '${packageId}#${variantId}'`)
                 info.variants[variantId] = {
                   assets: [],
+                  compatible: true,
                   dependencies: Array.from(
                     new Set([
                       ...(config?.dependencies ?? []),
@@ -117,6 +135,7 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
                   files: [...(config?.files ?? []), ...(variantConfig?.files ?? [])],
                   id: variantId,
                   installed: variantConfig?.version ?? config?.version ?? "0",
+                  local: true,
                   name: variantConfig?.name ?? config?.name ?? packageEntry.name,
                   version: variantConfig?.version ?? config?.version ?? "0",
                 }
@@ -126,12 +145,14 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
             }
           }
 
-          const defaultVariant = getDefaultVariant(info)
-          if (defaultVariant) {
+          if (Object.keys(info.variants).length) {
+            const defaultVariant = getDefaultVariant(info)
             info.status.variant = defaultVariant
             packages[packageId] = info
             nPackages++
           }
+
+          if (info.author.length === 1) console.log(info)
         } else {
           console.warn(`Unexpected file '${packagePath}' inside Packages folder`)
         }
@@ -226,10 +247,30 @@ export async function loadRemotePackages(): Promise<{
             variants: {},
           }
 
-          const commonAssets: { assetId: string }[] = []
+          const commonAssets: { assetId: string; exclude?: string[]; include?: string[] }[] = []
           for (const asset of doc.assets) {
             assert(isString(asset.assetId), `package '${id}' - 'assetId' is not a string`)
-            commonAssets.push({ assetId: asset.assetId })
+            const info: { assetId: string; exclude?: string[]; include?: string[] } = {
+              assetId: asset.assetId,
+            }
+
+            if (asset.exclude !== undefined) {
+              assert(
+                isArrayOf(asset.exclude, isString),
+                `package '${id}' - 'exclude' is not an array of strings`,
+              )
+              info.exclude = asset.exclude
+            }
+
+            if (asset.include !== undefined) {
+              assert(
+                isArrayOf(asset.include, isString),
+                `package '${id}' - 'include' is not an array of strings`,
+              )
+              info.include = asset.include
+            }
+
+            commonAssets.push(info)
           }
 
           const commonDependencies = doc.dependencies.map(id => id.replace(":", "/"))
@@ -267,7 +308,27 @@ export async function loadRemotePackages(): Promise<{
             const variantAssets = [...commonAssets]
             for (const asset of variant.assets) {
               assert(isString(asset.assetId), `package '${id}' - 'assetId' is not a string`)
-              variantAssets.push({ assetId: asset.assetId })
+              const info: { assetId: string; exclude?: string[]; include?: string[] } = {
+                assetId: asset.assetId,
+              }
+
+              if (asset.exclude !== undefined) {
+                assert(
+                  isArrayOf(asset.exclude, isString),
+                  `package '${id}' - 'exclude' is not an array of strings`,
+                )
+                info.exclude = asset.exclude
+              }
+
+              if (asset.include !== undefined) {
+                assert(
+                  isArrayOf(asset.include, isString),
+                  `package '${id}' - 'include' is not an array of strings`,
+                )
+                info.include = asset.include
+              }
+
+              variantAssets.push(info)
             }
 
             const variantDependencies = [
@@ -277,6 +338,7 @@ export async function loadRemotePackages(): Promise<{
 
             info.variants[variantId] = {
               assets: variantAssets,
+              compatible: true,
               dependencies: variantDependencies,
               id: variantId,
               name: isString(variantName) ? variantName : variantId,
@@ -284,12 +346,12 @@ export async function loadRemotePackages(): Promise<{
             }
           }
 
-          const defaultVariant = getDefaultVariant(info)
-          if (defaultVariant) {
-            info.status.variant = defaultVariant
+          if (Object.keys(info.variants).length) {
+            info.status.variant = getDefaultVariant(info)
           } else {
             info.variants.default = {
               assets: commonAssets,
+              compatible: true,
               dependencies: commonDependencies,
               id: "default",
               name: "Default",
@@ -328,4 +390,16 @@ export async function loadRemotePackages(): Promise<{
   console.info(`Loaded ${nPackages} remote packages`)
 
   return { assets, packages }
+}
+
+export function toGlobPattern(pattern: string): string {
+  if (pattern.startsWith("/")) {
+    pattern = "**" + pattern
+  }
+
+  if (pattern.endsWith("/")) {
+    pattern = pattern + "**"
+  }
+
+  return pattern
 }

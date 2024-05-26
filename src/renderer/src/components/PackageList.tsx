@@ -1,6 +1,6 @@
 import { useMemo, useRef } from "react"
 
-import { getCategory, getState } from "@common/types"
+import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
 import { history } from "@renderer/stores/navigation"
 import { useCurrentProfile, useStore } from "@renderer/utils/store"
 
@@ -19,15 +19,33 @@ export function PackageList(): JSX.Element {
       packages = packages.filter(info => packageFilters.categories.includes(getCategory(info)))
     }
 
-    if (packageFilters.states.length) {
-      packages = packages.filter(info =>
-        packageFilters.states.some(state => getState(info, state, currentProfile)),
-      )
+    if (packageFilters.state) {
+      packages = packages.filter(info => getState(info, packageFilters.state!, currentProfile))
+    }
+
+    if (!packageFilters.onlyErrors && !packageFilters.onlyUpdates) {
+      if (!packageFilters.dependencies) {
+        packages = packages.filter(info => getCategory(info) !== PackageCategory.DEPENDENCIES)
+      }
+
+      if (!packageFilters.incompatible) {
+        packages = packages.filter(info => getState(info, PackageState.COMPATIBLE, currentProfile))
+      }
+    }
+
+    if (packageFilters.onlyErrors) {
+      packages = packages.filter(info => getState(info, PackageState.ERROR, currentProfile))
+    }
+
+    if (packageFilters.onlyUpdates) {
+      packages = packages.filter(info => getState(info, PackageState.OUTDATED, currentProfile))
     }
 
     if (packageFilters.search.trim().length > 2) {
       packages = packages.filter(info =>
-        (info.id + info.name).toLowerCase().includes(packageFilters.search.trim().toLowerCase()),
+        (info.id + "|" + info.name)
+          .toLowerCase()
+          .includes(packageFilters.search.trim().toLowerCase()),
       )
     }
 

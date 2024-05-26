@@ -31,6 +31,8 @@
     "content-disposition": "^0.5.4",
     "electron-log": "^5.1.4",
     "electron-updater": "^6.1.7",
+    "escape-html": "^1.0.3",
+    "glob": "^10.3.16",
     "immutability-helper": "^3.1.1",
     "isomorphic-git": "^1.25.10",
     "notistack": "^3.0.1",
@@ -42,6 +44,7 @@
   },
   "devDependencies": {
     "@types/content-disposition": "^0.5.8",
+    "@types/escape-html": "^1",
     "@types/node": "^18.19.9",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
@@ -65,5 +68,6 @@
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }

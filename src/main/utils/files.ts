@@ -2,6 +2,19 @@ import fs from "fs/promises"
 
 import { parse as yamlParse, stringify as yamlStringify } from "yaml"
 
+export async function exists(fullPath: string): Promise<boolean> {
+  try {
+    await fs.stat(fullPath)
+    return true
+  } catch (error) {
+    if (error instanceof Error && error.message.match(/no such file or directory/i)) {
+      return false
+    } else {
+      throw error
+    }
+  }
+}
+
 export async function readFile(fullPath: string): Promise<string> {
   return fs.readFile(fullPath, "utf8")
 }
@@ -23,7 +36,30 @@ export async function writeFile(fullPath: string, data: string): Promise<void> {
 }
 
 export async function createIfMissing(fullPath: string): Promise<void> {
-  await fs.mkdir(fullPath, { recursive: true })
+  try {
+    await fs.mkdir(fullPath, { recursive: true })
+  } catch (error) {
+    if (error instanceof Error && error.message.match(/already exists/i)) {
+      return undefined
+    } else {
+      throw error
+    }
+  }
+}
+
+export async function removeIfEmpty(fullPath: string): Promise<boolean> {
+  try {
+    await fs.rmdir(fullPath)
+    return true
+  } catch (error) {
+    if (error instanceof Error && error.message.match(/no such file or directory/i)) {
+      return true
+    } else if (error instanceof Error && error.message.match(/not empty/i)) {
+      return false
+    } else {
+      throw error
+    }
+  }
 }
 
 export async function removeIfPresent(fullPath: string): Promise<boolean> {

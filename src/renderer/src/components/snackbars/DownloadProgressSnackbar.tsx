@@ -1,31 +1,62 @@
-import { forwardRef, useEffect } from "react"
+import { forwardRef, useEffect, useState } from "react"
 
-import { CardActions, Typography } from "@mui/material"
-import CircularProgress from "@mui/material/CircularProgress"
-import { CustomContentProps, closeSnackbar } from "notistack"
+import { Box, CardActions, LinearProgress, Typography } from "@mui/material"
+import { CustomContentProps } from "notistack"
 
-import { useStore } from "@renderer/utils/store"
+import { useStore, useStoreActions } from "@renderer/utils/store"
 
 import { CustomSnackbar } from "./CustomSnackbar"
 
 export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   (props, ref) => {
-    const { id } = props
+    const actions = useStoreActions()
 
-    const key = useStore(store => store.ongoingDownloads[0])
+    const [hover, setHover] = useState(false)
+
+    const message = useStore(store => {
+      if (store.ongoingDownloads.length) {
+        return `Downloading ${store.ongoingDownloads[0]}...`
+      }
+
+      if (store.ongoingExtracts.length) {
+        return `Extracting ${store.ongoingExtracts[0]}...`
+      }
+    })
 
     useEffect(() => {
-      if (!key) {
-        closeSnackbar(id)
+      if (!message) {
+        // Clear after short duration to prevent closing and reopening for successive downloads
+        const timeout = setTimeout(() => actions.closeSnackbar("download-progress"), 100)
+        return () => clearTimeout(timeout)
       }
-    }, [id, key])
+    }, [message])
 
     return (
-      <CustomSnackbar {...props} ref={ref} sx={{ backgroundColor: "#313131", color: "#fff" }}>
-        <CardActions>
-          <CircularProgress color="inherit" size={16} />
-          <Typography variant="body2">Downloading {key}...</Typography>
-        </CardActions>
+      <CustomSnackbar
+        {...props}
+        ref={ref}
+        sx={{
+          backgroundColor: "#313131",
+          color: "#fff",
+          maxWidth: hover ? 600 : 300,
+          transition: "max-width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+        }}
+      >
+        <Box
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          sx={{ paddingBottom: 0.75, paddingLeft: 1, paddingRight: 1, paddingTop: 0.5 }}
+        >
+          <CardActions sx={{ padding: 0, marginBottom: 0.5 }}>
+            <Typography
+              sx={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
+              variant="body2"
+            >
+              {message ?? "Downloading..."}
+            </Typography>
+          </CardActions>
+          <LinearProgress sx={{ height: 2, justifySelf: "stretch" }} />
+        </Box>
       </CustomSnackbar>
     )
   },
