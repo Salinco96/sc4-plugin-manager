@@ -1,6 +1,6 @@
 {
   "name": "sc4-plugin-manager",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "An Electron application with React and TypeScript",
   "main": "./out/main/index.js",
   "author": "example.com",
@@ -16,7 +16,6 @@
     "postinstall": "husky install && electron-builder install-app-deps",
     "precommit": "yarn lint",
     "preview": "electron-vite preview",
-    "start": "./dist/sc4-plugin-manager-1.0.0.exe",
     "typecheck": "yarn typecheck:node && yarn typecheck:web",
     "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
     "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false"
