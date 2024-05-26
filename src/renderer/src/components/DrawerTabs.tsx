@@ -1,5 +1,6 @@
 import { Fragment, useCallback, useMemo } from "react"
 
+import { Badge } from "@mui/material"
 import Divider from "@mui/material/Divider"
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
@@ -13,7 +14,6 @@ import { Page } from "@renderer/pages"
 import { history, useLocation } from "@renderer/stores/navigation"
 import { TabInfo, tabs } from "@renderer/tabs"
 import { useStore, useStoreActions } from "@renderer/utils/store"
-import { Badge } from "@mui/material"
 
 export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX.Element {
   const actions = useStoreActions()

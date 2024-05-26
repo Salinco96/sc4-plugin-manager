@@ -1,6 +1,7 @@
-import { shell } from "electron"
 import { BrowserWindow } from "electron/main"
 import path from "path"
+
+import { shell } from "electron"
 
 export class MainWindow extends BrowserWindow {
   public constructor() {

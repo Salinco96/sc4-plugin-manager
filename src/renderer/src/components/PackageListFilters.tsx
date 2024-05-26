@@ -1,6 +1,11 @@
 import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
 import ClearIcon from "@mui/icons-material/Clear"
+import IncompatibleIcon from "@mui/icons-material/DoDisturb"
+import DownloadedIcon from "@mui/icons-material/Download"
+import EnabledIcon from "@mui/icons-material/FileDownloadDone"
+import LocalIcon from "@mui/icons-material/FileDownloadOff"
+import DependenciesIcon from "@mui/icons-material/ViewInAr"
 import {
   Autocomplete,
   Checkbox,
@@ -12,12 +17,6 @@ import {
   Tooltip,
 } from "@mui/material"
 import Box from "@mui/material/Box"
-
-import LocalIcon from "@mui/icons-material/FileDownloadOff"
-import EnabledIcon from "@mui/icons-material/FileDownloadDone"
-import DependenciesIcon from "@mui/icons-material/ViewInAr"
-import DownloadedIcon from "@mui/icons-material/Download"
-import IncompatibleIcon from "@mui/icons-material/DoDisturb"
 
 import { PackageCategory, PackageState } from "@common/types"
 import { useStore, useStoreActions } from "@renderer/utils/store"

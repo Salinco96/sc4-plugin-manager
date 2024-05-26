@@ -1,6 +1,7 @@
 import fs from "fs/promises"
 import path from "path"
 
+import { glob } from "glob"
 import { parse } from "yaml"
 
 import { AssetInfo, PackageInfo, getDefaultVariant } from "@common/types"
@@ -8,7 +9,6 @@ import { AssetInfo, PackageInfo, getDefaultVariant } from "@common/types"
 import { getDatabasePath, getPackagesPath } from "../utils/paths"
 
 import { loadYAMLRecursively } from "./utils"
-import { glob } from "glob"
 
 interface VariantData {
   authors?: string[]

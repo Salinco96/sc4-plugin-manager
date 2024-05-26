@@ -1,4 +1,5 @@
 import update, { Spec } from "immutability-helper"
+import { SnackbarKey, enqueueSnackbar, closeSnackbar } from "notistack"
 import { create } from "zustand"
 
 import { ProfileUpdate } from "@common/profiles"
@@ -12,9 +13,7 @@ import {
   PackageStatus,
   Settings,
 } from "@common/types"
-import { SnackbarKey, enqueueSnackbar } from "notistack"
 import { SnackbarProps, SnackbarType } from "@renderer/providers/SnackbarProvider"
-import { closeSnackbar } from "notistack"
 
 export interface PackageFilters {
   categories: PackageCategory[]

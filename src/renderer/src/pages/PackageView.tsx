@@ -1,3 +1,5 @@
+import { ComponentType, useEffect, useState } from "react"
+
 import BackIcon from "@mui/icons-material/ArrowBack"
 import TabContext from "@mui/lab/TabContext"
 import TabList from "@mui/lab/TabList"
@@ -17,7 +19,7 @@ import { PackageListItem } from "@renderer/components/PackageListItem"
 import { PackageTags } from "@renderer/components/PackageTags"
 import { history } from "@renderer/stores/navigation"
 import { usePackageInfo, useStore, useStoreActions } from "@renderer/utils/store"
-import { ComponentType, useEffect, useState } from "react"
+
 import { Loading } from "./Loading"
 
 function PackageViewDependencies({ info }: { info: PackageInfo }): JSX.Element {

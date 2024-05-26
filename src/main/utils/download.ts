@@ -1,13 +1,13 @@
 import { createWriteStream } from "fs"
-
 import path from "path"
 import { Readable, pipeline } from "stream"
 import { finished } from "stream/promises"
 import { ReadableStream } from "stream/web"
 
 import { parse as parseContentDisposition } from "content-disposition"
-import { Open } from "unzipper"
 import { glob } from "glob"
+import { Open } from "unzipper"
+
 import { createIfMissing, removeIfPresent } from "./files"
 
 export async function download(key: string, url: string, downloadPath: string): Promise<void> {

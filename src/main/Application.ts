@@ -2,9 +2,12 @@ import { exec as cmd } from "child_process"
 import { ipcMain, net, protocol } from "electron/main"
 import fs from "fs/promises"
 import path from "path"
+import { pathToFileURL } from "url"
+
 import escapeHtml from "escape-html"
 import { glob } from "glob"
 
+import { packageGroups } from "@common/packageGroups"
 import {
   ProfileSettings,
   ProfileUpdate,
@@ -32,9 +35,7 @@ import {
   writeFile,
 } from "./utils/files"
 import { getPluginsPath, getRootPath } from "./utils/paths"
-import { packageGroups } from "@common/packageGroups"
 import { TaskManager } from "./utils/tasks"
-import { pathToFileURL } from "url"
 
 const DOCEXTENSIONS = [".css", ".htm", ".html", ".jpeg", ".jpg", ".md", ".png", ".svg", ".txt"]
 const SC4EXTENSIONS = [".dll", ".SC4Desc", ".SC4Lot", ".SC4Model", "._LooseDesc", ".dat"]
