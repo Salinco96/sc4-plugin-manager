@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: electronuserland/builder:wine
+      env:
+        ELECTRON_CACHE: /root/.cache/electron
+        ELECTRON_BUILDER_CACHE: /root/.cache/electron-builder
+      volumes:
+        - ~/.cache/electron:/root/.cache/electron
+        - ~/.cache/electron-builder:/root/.cache/electron-builder
     permissions:
       contents: write
     steps:
