@@ -1,0 +1,46 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+
+env:
+  HUSKY: 0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: electronuserland/builder:wine
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Enable Corepack
+        run: corepack enable
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Run ESLint
+        run: yarn lint:ci
+      - name: Run TypeScript
+        run: yarn typecheck
+      - name: Build application
+        run: yarn make
+      # - name: Get version
+      #   id: get_version
+      #   run: echo "version=v$(npm pkg get version | tr -d '\"')" >> $GITHUB_OUTPUT
+      # - name: Create release
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     allowUpdates: true
+      #     artifacts: dist/*.exe
+      #     draft: true
+      #     name: Release ${{ steps.get_version.outputs.version }}
+      #     tag: ${{ steps.get_version.outputs.version }}
+      #     updateOnlyUnreleased: true

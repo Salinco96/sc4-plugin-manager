@@ -1,9 +1,7 @@
-name: Check
+name: Branch
 
 on:
   pull_request:
-    branches: [main]
-  push:
     branches: [main]
 
 env:
@@ -20,7 +18,7 @@ jobs:
       - name: Set up Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.x
           cache: yarn
       - name: Install dependencies
         run: yarn install --frozen-lockfile --immutable

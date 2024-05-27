@@ -1,9 +1,18 @@
 {
   "name": "sc4-plugin-manager",
   "version": "0.1.0",
-  "description": "An Electron application with React and TypeScript",
+  "description": "SC4 Plugin Manager interface using Electron",
+  "homepage": "https://github.com/Salinco96/sc4-plugin-manager#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Salinco96/sc4-plugin-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Salinco96/sc4-plugin-manager/issues"
+  },
+  "packageManager": "yarn@4.2.2",
   "main": "./out/main/index.js",
-  "author": "example.com",
+  "author": "Salinco96",
   "license": "MIT",
   "scripts": {
     "build": "electron-vite build",
@@ -14,7 +23,7 @@
     "make": "yarn build && yarn package",
     "package": "electron-builder --win",
     "postinstall": "husky install && electron-builder install-app-deps",
-    "precommit": "yarn lint",
+    "precommit": "yarn lint-staged",
     "preview": "electron-vite preview",
     "typecheck": "yarn typecheck:node && yarn typecheck:web",
     "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
@@ -29,7 +38,6 @@
     "@mui/material": "^5.15.17",
     "content-disposition": "^0.5.4",
     "electron-log": "^5.1.4",
-    "electron-updater": "^6.1.7",
     "escape-html": "^1.0.3",
     "glob": "^10.3.16",
     "immutability-helper": "^3.1.1",
@@ -62,11 +70,11 @@
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3",
+    "lint-staged": "^15.2.5",
     "prettier": "^3.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12"
-  },
-  "packageManager": "yarn@4.2.2"
+  }
 }
