@@ -15,9 +15,11 @@ jobs:
       env:
         ELECTRON_CACHE: /root/.cache/electron
         ELECTRON_BUILDER_CACHE: /root/.cache/electron-builder
+        WINEPREFIX: /root/.wine
       volumes:
         - /root/.cache/electron
         - /root/.cache/electron-builder
+        - /root/.wine
     permissions:
       contents: write
     steps:
