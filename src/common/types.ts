@@ -179,11 +179,11 @@ export function getCategory(info: PackageInfo): PackageCategory {
 }
 
 export function getDefaultVariant(info: PackageInfo): string {
-  if (info.variants.default) {
+  if (info.variants.default?.compatible) {
     return "default"
   } else {
     const variants = Object.values(info.variants)
-    return (variants.find(variant => variant?.compatible) ?? variants[0])!.id
+    return (variants.find(variant => variant?.compatible) ?? variants[0])?.id ?? "default"
   }
 }
 

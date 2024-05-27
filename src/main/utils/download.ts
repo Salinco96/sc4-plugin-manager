@@ -79,7 +79,7 @@ export async function extract(downloadPath: string): Promise<void> {
 
   // Extract archives
   for (const archivePath of archivePaths) {
-    console.log(`Extracting from ${archivePath}`)
+    console.debug(`Extracting from ${archivePath}`)
     const extractPath = path.join(downloadPath, archivePath.replace(/\.(jar|zip)$/, ""))
 
     // Extract only supported files

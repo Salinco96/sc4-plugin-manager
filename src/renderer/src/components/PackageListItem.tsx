@@ -43,7 +43,6 @@ export const PackageListItem = memo(function PackageListItem({
       elevation={active ? 8 : 1}
       onBlur={() => setFocus(false)}
       onClick={() => {
-        console.log(active, hover, hoverWithin, focus)
         if (active) {
           openPackageView()
         }

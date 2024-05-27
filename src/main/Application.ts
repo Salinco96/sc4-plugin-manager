@@ -680,13 +680,9 @@ export class Application {
       variantInfo.installing = true
       this.sendPackageUpdate(packageInfo)
 
-      console.log(variantKey)
-
       await this.tasks.install.queue(variantKey, async () => {
         const variantPath = this.getVariantPath(packageId, variantId)
         const docsPath = this.getPackageDocsPath(packageId)
-
-        console.log(variantInfo)
 
         const assetInfos = variantInfo.assets.map(asset => {
           const assetInfo = this.getAssetInfo(asset.assetId)
@@ -711,17 +707,12 @@ export class Application {
             const downloadKey = `${assetInfo.id}@${assetInfo.version}`
             const downloadPath = this.getDownloadPath(downloadKey)
 
-            console.log(assetInfo)
-            console.log(downloadPath, `*{${DOCEXTENSIONS.join(",")}}`)
-
             // Find all included documentation
             const docsPaths = await glob(`*{${DOCEXTENSIONS.join(",")}}`, {
               cwd: downloadPath,
               matchBase: true,
               nodir: true,
             })
-
-            console.log(docsPaths)
 
             // Create links
             for (const filePath of docsPaths) {
@@ -756,21 +747,16 @@ export class Application {
             }
           }
 
-          const docsPaths = await glob("*.{htm,html,md,txt}", {
+          const docsPaths = await glob("**/*.{htm,html,md,txt}", {
             cwd: this.getPackageDocsPath(packageId),
-            matchBase: true,
             nodir: true,
           })
 
           if (docsPaths.length) {
             packageInfo.docs =
               docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
-              docsPaths.find(file => path.basename(file).match(/.*readme.*\.html?$/i)) ??
-              docsPaths.find(file => path.basename(file).match(/.*readme.*\.md?$/i)) ??
-              docsPaths.find(file => path.basename(file).match(/.*readme.*\.txt?$/i)) ??
+              docsPaths.find(file => path.basename(file).match(/readme/i)) ??
               docsPaths[0]
-
-            console.log(packageInfo.id, packageInfo.docs)
           }
 
           variantInfo.files = files
@@ -1486,6 +1472,7 @@ export class Application {
       {
         name: packageInfo.name,
         category: packageInfo.category,
+        docs: packageInfo.docs,
         variants: Object.fromEntries(
           Object.entries(packageInfo.variants)
             .filter(([_, variant]) => !!variant?.installed)
@@ -1538,18 +1525,18 @@ export class Application {
   protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
     if (!this.databaseUpdatePromise || force) {
       this.databaseUpdatePromise = new Promise(resolve => {
-        console.log("Updating database...")
+        console.info("Updating database...")
         createChildProcess<unknown, { success?: boolean; error?: Error }>(childProcessPath, {
           onClose() {
-            console.log("Failed updating database:", "closed")
+            console.warn("Failed updating database:", "closed")
             resolve(false)
           },
           onMessage({ success, error }) {
             if (success) {
-              console.log("Updated database")
+              console.info("Updated database")
               resolve(true)
             } else {
-              console.log("Failed updating database:", error)
+              console.warn("Failed updating database:", error)
               resolve(false)
             }
           },

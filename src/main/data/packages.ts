@@ -1,7 +1,6 @@
 import fs from "fs/promises"
 import path from "path"
 
-import { glob } from "glob"
 import { parse } from "yaml"
 
 import { AssetInfo, PackageInfo, getDefaultVariant } from "@common/types"
@@ -24,6 +23,7 @@ interface VariantData {
 
 interface PackageData extends VariantData {
   category?: number
+  docs?: string
   variants?: {
     [variant: string]: VariantData
   }
@@ -72,7 +72,7 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
 
           const variantEntries = await fs.readdir(packagePath, { withFileTypes: true })
 
-          // console.log(`Found local package '${packageId}'`)
+          console.debug(`Found local package '${packageId}'`)
 
           const configEntry = variantEntries.find(
             entry => entry.isFile() && entry.name.match(/^package\.(json|ya?ml)$/),
@@ -84,13 +84,13 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
             const configPath = path.join(packagePath, configEntry.name)
             const configData = await fs.readFile(configPath, "utf8")
             config = configPath.endsWith("json") ? JSON.parse(configData) : parse(configData)
-
-            // console.log(`Found local package config '${configPath}'`)
+            console.debug(`Found local package config '${configPath}'`)
           }
 
           const info: PackageInfo = {
             author,
             category: config?.category ?? 800,
+            docs: config?.docs,
             format: configEntry ? path.extname(configEntry.name) : undefined,
             id: packageId,
             name: config?.name ?? packageEntry.name,
@@ -104,25 +104,8 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
               const variantConfig = config?.variants?.[variantId]
 
               // ~ is reserved for special folders, e.g. ~docs
-              if (variantId === "~docs") {
-                const files = await glob("*.{htm,html,md,txt}", {
-                  cwd: path.join(packagePath, variantId),
-                  matchBase: true,
-                  nodir: true,
-                })
-
-                if (files.length) {
-                  info.docs =
-                    files.find(file => path.basename(file).match(/^index\.html?$/i)) ??
-                    files.find(file => path.basename(file).match(/.*readme.*\.html?$/i)) ??
-                    files.find(file => path.basename(file).match(/.*readme.*\.md?$/i)) ??
-                    files.find(file => path.basename(file).match(/.*readme.*\.txt?$/i)) ??
-                    files[0]
-
-                  console.log(info.id, info.docs)
-                }
-              } else if (!variantId.startsWith("~")) {
-                // console.log(`Found local package variant '${packageId}#${variantId}'`)
+              if (!variantId.startsWith("~")) {
+                console.debug(`Found local package variant '${packageId}#${variantId}'`)
                 info.variants[variantId] = {
                   assets: [],
                   compatible: true,
@@ -151,8 +134,6 @@ export async function loadLocalPackages(): Promise<{ [id: string]: PackageInfo }
             packages[packageId] = info
             nPackages++
           }
-
-          if (info.author.length === 1) console.log(info)
         } else {
           console.warn(`Unexpected file '${packagePath}' inside Packages folder`)
         }

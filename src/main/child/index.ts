@@ -33,7 +33,7 @@ export default class ChildProcess extends AbstractChildProcess<
           fs,
           noTags: true,
           singleBranch: true,
-          url: "https://github.com/memo33/sc4pac",
+          url: "https://github.com/memo33/sc4pac", // TODO: Configurable origin
         })
       }
 

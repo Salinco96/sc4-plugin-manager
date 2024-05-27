@@ -125,7 +125,6 @@ const packageViewTabs: {
     id: "docs",
     component: PackageViewDocumentation,
     condition(info) {
-      console.log(info)
       return !!info.docs
     },
     name() {

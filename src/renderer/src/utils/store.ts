@@ -135,7 +135,7 @@ export const useStore = create<Store>()((set, get): Store => {
         return window.api.switchProfile(profileId)
       },
       updateState(data) {
-        console.log(data)
+        console.debug("Update state", data)
 
         if (data.loadStatus !== undefined) {
           updateState({ loadStatus: { $set: data.loadStatus } })
