@@ -1,11 +1,13 @@
 import { exec as cmd } from "child_process"
 import { ipcMain, net, protocol } from "electron/main"
+import fsSync from "fs"
 import fs from "fs/promises"
 import path from "path"
 import { pathToFileURL } from "url"
 
 import escapeHtml from "escape-html"
 import { glob } from "glob"
+import { getConfig } from "isomorphic-git"
 
 import { packageGroups } from "@common/packageGroups"
 import {
@@ -34,7 +36,7 @@ import {
   serializeConfig,
   writeFile,
 } from "./utils/files"
-import { getPluginsPath, getRootPath } from "./utils/paths"
+import { getDatabasePath, getPluginsPath, getRootPath } from "./utils/paths"
 import { TaskManager } from "./utils/tasks"
 
 const DOCEXTENSIONS = [".css", ".htm", ".html", ".jpeg", ".jpg", ".md", ".png", ".svg", ".txt"]
@@ -1524,9 +1526,18 @@ export class Application {
 
   protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
     if (!this.databaseUpdatePromise || force) {
+      console.log(
+        await getConfig({
+          dir: getDatabasePath(),
+          fs: fsSync,
+          path: "remote.origin.url",
+        }),
+      )
+
       this.databaseUpdatePromise = new Promise(resolve => {
         console.info("Updating database...")
         createChildProcess<unknown, { success?: boolean; error?: Error }>(childProcessPath, {
+          cwd: getDatabasePath(),
           onClose() {
             console.warn("Failed updating database:", "closed")
             resolve(false)

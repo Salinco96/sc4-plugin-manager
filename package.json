@@ -13,7 +13,7 @@
   "packageManager": "yarn@4.2.2",
   "main": "./out/main/index.js",
   "author": "Salinco96",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "scripts": {
     "build": "electron-vite build",
     "dev": "electron-vite dev --watch",

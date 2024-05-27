@@ -5,6 +5,7 @@ import { getRootPath } from "./utils/paths"
 export function createChildProcess<MessageIn, MessageOut>(
   modulePath: string,
   options: {
+    cwd?: string
     onClose?: () => void
     onMessage?: (data: MessageOut) => void
   } = {},
@@ -13,7 +14,7 @@ export function createChildProcess<MessageIn, MessageOut>(
 } {
   const { port1, port2 } = new MessageChannelMain()
 
-  const child = utilityProcess.fork(modulePath, [], { cwd: getRootPath() })
+  const child = utilityProcess.fork(modulePath, [], { cwd: options.cwd ?? getRootPath() })
 
   child.postMessage({ message: "hello" }, [port1])
 
