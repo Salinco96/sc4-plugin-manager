@@ -15,6 +15,7 @@ jobs:
       env:
         ELECTRON_CACHE: /root/.cache/electron
         ELECTRON_BUILDER_CACHE: /root/.cache/electron-builder
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WINEPREFIX: /root/.wine
       volumes:
         - /root/.cache/electron
@@ -40,15 +41,3 @@ jobs:
         run: yarn typecheck
       - name: Build application
         run: yarn make
-      # - name: Get version
-      #   id: get_version
-      #   run: echo "version=v$(npm pkg get version | tr -d '\"')" >> $GITHUB_OUTPUT
-      # - name: Create release
-      #   uses: ncipollo/release-action@v1
-      #   with:
-      #     allowUpdates: true
-      #     artifacts: dist/*.exe
-      #     draft: true
-      #     name: Release ${{ steps.get_version.outputs.version }}
-      #     tag: ${{ steps.get_version.outputs.version }}
-      #     updateOnlyUnreleased: true

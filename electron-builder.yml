@@ -14,5 +14,4 @@ portable:
 publish:
   provider: github
 win:
-  sign: ./src/sign.js
   target: portable
