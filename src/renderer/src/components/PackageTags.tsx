@@ -1,12 +1,10 @@
 import { MouseEvent, useCallback } from "react"
 
-import { Tooltip } from "@mui/material"
-import Chip from "@mui/material/Chip"
-import List from "@mui/material/List"
+import { Chip, List, Tooltip } from "@mui/material"
 
 import { PackageCategory, PackageInfo, PackageState, getCategory, getState } from "@common/types"
 import { Page } from "@renderer/pages"
-import { useLocation } from "@renderer/stores/navigation"
+import { useLocation } from "@renderer/utils/navigation"
 import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
 
 interface TagInfo {
@@ -98,15 +96,15 @@ const tags: TagInfo[] = [
     state: PackageState.LOCAL,
     color: "warning",
   },
+  {
+    id: "experimental",
+    label: "Experimental",
+    state: PackageState.EXPERIMENTAL,
+    color: "warning",
+  },
 ]
 
-export function PackageTag({
-  onHover,
-  tag,
-}: {
-  onHover?: (hover: boolean) => void
-  tag: TagInfo
-}): JSX.Element {
+export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
   const actions = useStoreActions()
   const filters = useStore(store => store.packageFilters)
   const location = useLocation()
@@ -148,8 +146,6 @@ export function PackageTag({
           component="li"
           label={tag.label}
           onClick={onClick}
-          onMouseEnter={() => onHover?.(true)}
-          onMouseLeave={() => onHover?.(false)}
           size="medium"
           sx={{ borderRadius: 2 }}
           variant={selected ? "filled" : "outlined"}
@@ -170,16 +166,11 @@ export function PackageTag({
   )
 }
 
-export function PackageTags({
-  onHover,
-  packageInfo,
-}: {
-  onHover?: (hover: boolean) => void
-  packageInfo: PackageInfo
-}): JSX.Element | null {
+export function PackageTags({ packageInfo }: { packageInfo: PackageInfo }): JSX.Element | null {
   const currentProfile = useCurrentProfile()
+  const variantInfo = packageInfo.variants[packageInfo.status.variantId]
 
-  const category = getCategory(packageInfo)
+  const category = getCategory(variantInfo)
   const packageTags = tags.filter(tag => {
     if (tag.category) {
       return tag.category === category
@@ -197,9 +188,12 @@ export function PackageTags({
   }
 
   return (
-    <List disablePadding sx={{ display: "flex", flexDirection: "row", gap: 1, marginTop: 1 }}>
+    <List
+      disablePadding
+      sx={{ display: "flex", flexDirection: "row", gap: 1, marginBottom: 1, marginTop: 1 }}
+    >
       {packageTags.map(tag => (
-        <PackageTag key={tag.id} onHover={onHover} tag={tag} />
+        <PackageTag key={tag.id} tag={tag} />
       ))}
     </List>
   )

@@ -1,58 +1,110 @@
+import { CategoryID } from "./categories"
 import { ProfileSettings } from "./profiles"
 
-export interface AssetData {
-  assetId: string
-  lastModified: string
+export const DEFAULT_VARIANT_ID = "default"
+
+/** Supported configuration formats */
+export enum ConfigFormat {
+  JSON = ".json",
+  YAML = ".yaml",
+  YML = ".yml",
+}
+
+export interface AssetInfo {
+  id: string
+  lastModified?: Date
   url: string
   version: string
 }
 
-export interface PackageData {
-  assets?: {
-    assetId: string
-    exclude?: string[]
-    include?: string[]
-  }[]
-  dependencies?: string[]
-  group: string
-  info?: {
-    author?: string
-    conflicts?: string
-    description?: string
-    summary?: string
-    website?: string
-  }
-  name: string
-  subfolder: string
-  variantDescriptions?: {
-    [key: string]: {
-      [value: string]: string
-    }
-  }
-  variants?: {
-    assets: {
-      assetId: string
-      exclude?: string[]
-      include?: string[]
-    }[]
-    dependencies?: string[]
-    variant: {
-      [key: string]: string
-    }
-  }[]
-  version: string
+export interface PackageAsset {
+  exclude?: PackageFile[]
+  include?: PackageFile[]
+  id: string
+}
+
+export interface PackageCondition {
+  [key: string]: boolean
 }
 
 export interface PackageConfig {
   enabled?: boolean
+  options?: PackageOptions
   variant?: string
 }
 
-export interface PackageStatus {
-  enabled?: boolean
-  requiredBy?: string[]
-  variant: string
+export interface PackageData extends VariantData {
+  name?: string
+  variants?: {
+    [variantId: string]: VariantData
+  }
 }
+
+export interface PackageFile {
+  category?: CategoryID
+  condition?: PackageCondition
+  path: string
+}
+
+export interface PackageInfo {
+  format?: ConfigFormat
+  id: string
+  local?: boolean
+  name: string
+  status: PackageStatus
+  variants: {
+    [variantId: string]: VariantInfo
+  }
+}
+
+export interface PackageOptions {
+  [key: string]: boolean
+}
+
+export interface PackageStatus {
+  enabled: boolean
+  options: PackageOptions
+  requiredBy: string[]
+  variantId: string
+}
+
+export interface VariantData {
+  assets?: PackageAsset[]
+  authors?: string[]
+  category?: number
+  conflictGroups?: string[]
+  dependencies?: string[]
+  deprecated?: boolean
+  description?: string
+  docs?: {
+    path?: string
+  }
+  experimental?: boolean
+  files?: PackageFile[]
+  name?: string
+  requirements?: PackageCondition
+  url?: string
+  version?: string
+}
+
+export interface BaseVariantInfo extends VariantData {
+  authors: string[]
+  category: CategoryID
+  id: string
+  incompatible?: string[]
+  issues?: string[]
+  name: string
+  version: string
+}
+
+export interface VariantInfo extends BaseVariantInfo {
+  action?: "installing" | "updating"
+  installed?: boolean
+  local?: boolean
+  update?: BaseVariantInfo
+}
+
+// OLD:
 
 export enum PackageCategory {
   MODS = "mods",
@@ -68,11 +120,12 @@ export enum PackageCategory {
 }
 
 export enum PackageState {
-  COMPATIBLE = "compatible",
   DEPENDENCY = "dependency",
   DISABLED = "disabled",
   ENABLED = "enabled",
   ERROR = "error",
+  EXPERIMENTAL = "experimental",
+  INCOMPATIBLE = "incompatible",
   INSTALLED = "installed",
   LOCAL = "local",
   OUTDATED = "outdated",
@@ -87,7 +140,7 @@ export interface ProfileData {
 
 export interface ProfileInfo {
   id: string
-  format?: string
+  format?: ConfigFormat
   name: string
   packages: {
     [packageId in string]?: PackageConfig
@@ -95,46 +148,14 @@ export interface ProfileInfo {
   settings: ProfileSettings
 }
 
-export interface PackageInfo {
-  author: string
-  category: number
-  docs?: string
-  format?: string
-  id: string
-  name: string
-  status: PackageStatus
-  variants: {
-    [id in string]?: VariantInfo
-  }
-}
-
-export interface VariantInfo {
-  assets: { assetId: string; exclude?: string[]; include?: string[] }[]
-  compatible: boolean
-  dependencies: string[]
-  files?: { category?: number; path: string }[]
-  id: string
-  installed?: string
-  installing?: boolean
-  local?: boolean
-  name: string
-  version: string
-}
-
-export interface AssetInfo {
-  id: string
-  lastModified: Date
-  url: string
-  version: string
-}
-
 export interface Settings {
   currentProfile?: string
-  format?: string
+  format?: ConfigFormat
   useYaml?: boolean
 }
 
-export function getCategory(info: PackageInfo): PackageCategory {
+/** @deprecated */
+export function getCategory(info: VariantInfo): PackageCategory {
   if (info.category < 100) {
     return PackageCategory.MODS
   }
@@ -178,23 +199,26 @@ export function getCategory(info: PackageInfo): PackageCategory {
   return PackageCategory.MODS
 }
 
-export function getDefaultVariant(info: PackageInfo): string {
-  if (info.variants.default?.compatible) {
-    return "default"
-  } else {
-    const variants = Object.values(info.variants)
-    return (variants.find(variant => variant?.compatible) ?? variants[0])?.id ?? "default"
+export function getDefaultVariant(info: PackageInfo): VariantInfo {
+  const defaultVariant = info.variants[DEFAULT_VARIANT_ID]
+  if (defaultVariant && !defaultVariant.incompatible) {
+    return defaultVariant
   }
+
+  const variants = Object.values(info.variants)
+  const firstCompatibleVariant = variants.find(variant => !variant.incompatible)
+  if (firstCompatibleVariant) {
+    return firstCompatibleVariant
+  }
+
+  return defaultVariant ?? variants[0]
 }
 
 export function getState(info: PackageInfo, state: PackageState, profile?: ProfileInfo): boolean {
   const config = profile?.packages?.[info.id]
-  const variant = info.variants[info.status.variant]
+  const variant = info.variants[info.status.variantId]
 
   switch (state) {
-    case PackageState.COMPATIBLE:
-      return !!variant?.compatible
-
     case PackageState.DEPENDENCY:
       return !!profile && !!info.status.enabled && !config?.enabled
 
@@ -205,7 +229,13 @@ export function getState(info: PackageInfo, state: PackageState, profile?: Profi
       return !!profile && !!info.status.enabled
 
     case PackageState.ERROR:
-      return !!profile && !!info.status.enabled && (!variant?.installed || !variant?.compatible) // TODO: More errors
+      return !!profile && !!info.status.enabled && (!variant?.installed || !!variant?.incompatible) // TODO: More errors
+
+    case PackageState.EXPERIMENTAL:
+      return !!variant?.experimental
+
+    case PackageState.INCOMPATIBLE:
+      return !!variant?.incompatible
 
     case PackageState.INSTALLED:
       return !!variant?.installed
@@ -214,6 +244,6 @@ export function getState(info: PackageInfo, state: PackageState, profile?: Profi
       return !!variant?.local
 
     case PackageState.OUTDATED:
-      return !!variant?.installed && variant.installed !== variant.version
+      return !!variant?.installed && !!variant.update
   }
 }

@@ -1,5 +1,6 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
+import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState } from "@common/state"
 
@@ -17,8 +18,8 @@ export const api = {
   async enablePackages(packageIds: string[]): Promise<boolean> {
     return ipcRenderer.invoke("enablePackages", packageIds)
   },
-  async getPackageDocsAsHtml(packageId: string): Promise<string> {
-    return ipcRenderer.invoke("getPackageDocsAsHtml", packageId)
+  async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
+    return ipcRenderer.invoke("getPackageDocsAsHtml", packageId, variantId)
   },
   async installPackages(packageIds: string[]): Promise<boolean> {
     return ipcRenderer.invoke("installPackages", packageIds)
@@ -36,11 +37,27 @@ export const api = {
   async setPackageVariant(packageId: string, variantId: string): Promise<boolean> {
     return ipcRenderer.invoke("setPackageVariant", packageId, variantId)
   },
-  subscribeToStateUpdates(handler: (update: Partial<ApplicationState>) => void): () => void {
-    const listener = (_: IpcRendererEvent, update: Partial<ApplicationState>) => handler(update)
-    ipcRenderer.on("updateState", listener)
-    ipcRenderer.invoke("getState").then(handler)
-    return () => ipcRenderer.off("updateState", listener)
+  subscribe(handlers: {
+    showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
+    updateState(data: Partial<ApplicationState>): void
+  }): () => void {
+    const showModal = async <T extends ModalID>(_: IpcRendererEvent, id: T, data: ModalData<T>) => {
+      const result = await handlers.showModal(id, data)
+      ipcRenderer.send("showModalResult", result)
+    }
+
+    const updateState = (_: IpcRendererEvent, data: Partial<ApplicationState>) => {
+      handlers.updateState(data)
+    }
+
+    ipcRenderer.on("showModal", showModal)
+    ipcRenderer.on("updateState", updateState)
+    ipcRenderer.invoke("getState").then(handlers.updateState)
+
+    return () => {
+      ipcRenderer.off("showModal", showModal)
+      ipcRenderer.off("updateState", updateState)
+    }
   },
   async switchProfile(profileId: string): Promise<boolean> {
     return ipcRenderer.invoke("switchProfile", profileId)

@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "types": ["electron-vite/node"],
     "paths": {
-      "@common/*": ["src/common/*"]
+      "@common/*": ["src/common/*"],
+      "@utils/*": ["src/main/utils/*"]
     }
   }
 }

@@ -2,10 +2,10 @@ import update, { Spec } from "immutability-helper"
 import { SnackbarKey, enqueueSnackbar, closeSnackbar } from "notistack"
 import { create } from "zustand"
 
+import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState } from "@common/state"
 import {
-  AssetInfo,
   PackageCategory,
   PackageInfo,
   PackageState,
@@ -18,12 +18,12 @@ import { SnackbarProps, SnackbarType } from "@renderer/providers/SnackbarProvide
 export interface PackageFilters {
   categories: PackageCategory[]
   dependencies: boolean
+  experimental: boolean
   incompatible: boolean
   onlyErrors: boolean
   onlyUpdates: boolean
   search: string
   state: PackageState | null
-  // states: PackageState[]
 }
 
 export interface StoreActions {
@@ -33,39 +33,31 @@ export interface StoreActions {
   editProfile(profileId: string, data: ProfileUpdate): Promise<boolean>
   enablePackages(packageIds: string[]): Promise<boolean>
   installPackages(packageIds: string[]): Promise<boolean>
-  getPackageDocsAsHtml(packageId: string): Promise<string>
+  getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string>
   openPackageFileInExplorer(packageId: string, variantId: string, filePath: string): Promise<void>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
   removePackages(packageIds: string[]): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
-  showModal(
-    id: "missing-packages",
-    data: {
-      packageIds: string[]
-    },
-  ): Promise<boolean>
+  showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
   switchProfile(profileId: string): Promise<boolean>
   updateState(update: Partial<ApplicationState>): void
 }
 
 export interface Store {
   actions: StoreActions
-  assets?: { [id: string]: AssetInfo }
+  conflictGroups?: {
+    [groupId: string]: string[]
+  }
   loadStatus: string | null
   modal?: {
     action: (result: boolean) => void
-    data: {
-      packageIds: string[]
-    }
-    id: "missing-packages"
+    data: ModalData<ModalID>
+    id: ModalID
   }
   ongoingDownloads: string[]
   ongoingExtracts: string[]
   packageFilters: PackageFilters
-  packageGroups?: {
-    [groupId: string]: string[]
-  }
   packages?: {
     [packageId: string]: PackageInfo
   }
@@ -104,8 +96,8 @@ export const useStore = create<Store>()((set, get): Store => {
       async enablePackages(packageIds) {
         return window.api.enablePackages(packageIds)
       },
-      async getPackageDocsAsHtml(packageId) {
-        return window.api.getPackageDocsAsHtml(packageId)
+      async getPackageDocsAsHtml(packageId, variantId) {
+        return window.api.getPackageDocsAsHtml(packageId, variantId)
       },
       async installPackages(packageIds) {
         return window.api.installPackages(packageIds)
@@ -128,14 +120,28 @@ export const useStore = create<Store>()((set, get): Store => {
       async setPackageVariant(packageId, variantId) {
         return window.api.setPackageVariant(packageId, variantId)
       },
-      async showModal(_id, _data) {
-        return true
+      async showModal(id, data) {
+        try {
+          const result = await new Promise<boolean>(resolve => {
+            set({ modal: { action: resolve, data, id } })
+          })
+          return result
+        } catch (error) {
+          console.error(error)
+          return false
+        } finally {
+          set({ modal: undefined })
+        }
       },
       async switchProfile(profileId) {
         return window.api.switchProfile(profileId)
       },
       updateState(data) {
-        console.debug("Update state", data)
+        console.log("Update state", data)
+
+        if (data.conflictGroups) {
+          updateState({ conflictGroups: { $set: data.conflictGroups } })
+        }
 
         if (data.loadStatus !== undefined) {
           updateState({ loadStatus: { $set: data.loadStatus } })
@@ -147,10 +153,6 @@ export const useStore = create<Store>()((set, get): Store => {
 
         if (data.ongoingExtracts) {
           updateState({ ongoingExtracts: { $set: data.ongoingExtracts } })
-        }
-
-        if (data.packageGroups) {
-          updateState({ packageGroups: { $set: data.packageGroups } })
         }
 
         if (data.packages) {
@@ -165,19 +167,6 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ settings: { $set: data.settings } })
         }
       },
-      // async showModal(id, data) {
-      //   try {
-      //     const result = await new Promise<boolean>(resolve => {
-      //       set({ modal: { action: resolve, data, id } })
-      //     })
-      //     return result
-      //   } catch (error) {
-      //     console.error(error)
-      //     return false
-      //   } finally {
-      //     set({ modal: undefined })
-      //   }
-      // },
     },
     loadStatus: null,
     ongoingDownloads: [],
@@ -185,6 +174,7 @@ export const useStore = create<Store>()((set, get): Store => {
     packageFilters: {
       categories: [],
       dependencies: false,
+      experimental: false,
       incompatible: false,
       onlyErrors: false,
       onlyUpdates: false,

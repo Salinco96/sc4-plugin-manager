@@ -3,8 +3,7 @@ import { ComponentType, ReactNode } from "react"
 import { CustomContentProps, SnackbarProvider as BaseSnackbarProvider } from "notistack"
 
 import { DownloadProgressSnackbar } from "@renderer/components/snackbars/DownloadProgressSnackbar"
-
-import { ProgressSnackbar } from "../components/snackbars/LoadProgressSnackbar"
+import { ProgressSnackbar } from "@renderer/components/snackbars/LoadProgressSnackbar"
 
 interface CustomProps {
   "download-progress": {}

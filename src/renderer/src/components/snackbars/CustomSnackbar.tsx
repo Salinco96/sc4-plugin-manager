@@ -1,7 +1,6 @@
 import { ReactNode, forwardRef } from "react"
 
-import Card from "@mui/material/Card"
-import { styled } from "@mui/material/styles"
+import { Card, styled } from "@mui/material"
 import { CustomContentProps, SnackbarContent } from "notistack"
 
 const _CustomSnackbar = forwardRef<

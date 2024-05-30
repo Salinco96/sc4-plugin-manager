@@ -1,6 +1,4 @@
-import Box from "@mui/material/Box"
-import CircularProgress from "@mui/material/CircularProgress"
-import { styled } from "@mui/material/styles"
+import { Box, CircularProgress, styled } from "@mui/material"
 
 const Container = styled(Box)`
   align-items: center;

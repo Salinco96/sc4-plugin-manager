@@ -1,13 +1,17 @@
-import CheckBoxIcon from "@mui/icons-material/CheckBox"
-import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
-import ClearIcon from "@mui/icons-material/Clear"
-import IncompatibleIcon from "@mui/icons-material/DoDisturb"
-import DownloadedIcon from "@mui/icons-material/Download"
-import EnabledIcon from "@mui/icons-material/FileDownloadDone"
-import LocalIcon from "@mui/icons-material/FileDownloadOff"
-import DependenciesIcon from "@mui/icons-material/ViewInAr"
+import {
+  CheckBox as CheckBoxIcon,
+  CheckBoxOutlineBlank as CheckBoxOutlineBlankIcon,
+  Clear as ClearIcon,
+  DoDisturb as IncompatibleIcon,
+  Download as DownloadedIcon,
+  FileDownloadDone as EnabledIcon,
+  FileDownloadOff as LocalIcon,
+  Science as ExperimentalIcon,
+  ViewInAr as DependenciesIcon,
+} from "@mui/icons-material"
 import {
   Autocomplete,
+  Box,
   Checkbox,
   IconButton,
   InputAdornment,
@@ -16,7 +20,6 @@ import {
   ToggleButtonGroup,
   Tooltip,
 } from "@mui/material"
-import Box from "@mui/material/Box"
 
 import { PackageCategory, PackageState } from "@common/types"
 import { useStore, useStoreActions } from "@renderer/utils/store"
@@ -56,12 +59,14 @@ export function PackageListFilters(): JSX.Element {
             ? []
             : [
                 packageFilters.dependencies && "dependencies",
+                packageFilters.experimental && "experimental",
                 packageFilters.incompatible && "incompatible",
               ].filter(Boolean)
         }
         onChange={(_, values) => {
           actions.setPackageFilters({
             dependencies: values.includes("dependencies"),
+            experimental: values.includes("experimental"),
             incompatible: values.includes("incompatible"),
           })
         }}
@@ -77,6 +82,18 @@ export function PackageListFilters(): JSX.Element {
         >
           <ToggleButton value="incompatible">
             <IncompatibleIcon />
+          </ToggleButton>
+        </Tooltip>
+        <Tooltip
+          placement="bottom"
+          title={
+            packageFilters.incompatible
+              ? "Hide experimental packages"
+              : "Show experimental packages"
+          }
+        >
+          <ToggleButton value="experimental">
+            <ExperimentalIcon />
           </ToggleButton>
         </Tooltip>
         <Tooltip

@@ -3,7 +3,7 @@ import { Suspense } from "react"
 import { Modal } from "./components/Modal"
 import { Page, getPageComponent } from "./pages"
 import { Loading } from "./pages/Loading"
-import { useLocation } from "./stores/navigation"
+import { useLocation } from "./utils/navigation"
 
 /**
  * Main page content.

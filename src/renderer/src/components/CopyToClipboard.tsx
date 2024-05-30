@@ -1,6 +1,5 @@
-import CopyIcon from "@mui/icons-material/ContentCopy"
-import IconButton from "@mui/material/IconButton"
-import Tooltip from "@mui/material/Tooltip"
+import { ContentCopy as CopyIcon } from "@mui/icons-material"
+import { IconButton, Tooltip } from "@mui/material"
 import { enqueueSnackbar } from "notistack"
 
 export function CopyToClipboard({ text }: { text: string }): JSX.Element {

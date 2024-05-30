@@ -1,22 +1,24 @@
-import CivicsIcon from "@mui/icons-material/AccountBalance"
-import ProfileIcon from "@mui/icons-material/AccountBox"
-import ResidentialIcon from "@mui/icons-material/Apartment"
-import EnergyIcon from "@mui/icons-material/Bolt"
-import LandmarksIcon from "@mui/icons-material/Church"
-import CommercialIcon from "@mui/icons-material/CorporateFare"
-import ModsIcon from "@mui/icons-material/Extension"
-import IndustrialIcon from "@mui/icons-material/Factory"
-import ParksIcon from "@mui/icons-material/LocalFlorist"
-import ProblemsIcon from "@mui/icons-material/Report"
-import SettingsIcon from "@mui/icons-material/Settings"
-import TransportIcon from "@mui/icons-material/Traffic"
-import UpdatesIcon from "@mui/icons-material/Update"
-import DependenciesIcon from "@mui/icons-material/ViewInAr"
-import AllPackagesIcon from "@mui/icons-material/WidgetsOutlined"
+import {
+  AccountBalance as CivicsIcon,
+  AccountBox as ProfileIcon,
+  Apartment as ResidentialIcon,
+  Bolt as EnergyIcon,
+  Church as LandmarksIcon,
+  CorporateFare as CommercialIcon,
+  Extension as ModsIcon,
+  Factory as IndustrialIcon,
+  LocalFlorist as ParksIcon,
+  Report as ProblemsIcon,
+  Settings as SettingsIcon,
+  Traffic as TransportIcon,
+  Update as UpdatesIcon,
+  ViewInAr as DependenciesIcon,
+  WidgetsOutlined as AllPackagesIcon,
+} from "@mui/icons-material"
 
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
 import { Page } from "@renderer/pages"
-import { Location } from "@renderer/stores/navigation"
+import { Location } from "@renderer/utils/navigation"
 import { PackageFilters, Store, getCurrentProfile } from "@renderer/utils/store"
 
 export interface TabInfo {
@@ -35,7 +37,9 @@ function countPackages(store: Store, category?: PackageCategory, state?: Package
   const profile = getCurrentProfile(store)
   return store.packages
     ? Object.values(store.packages).filter(info => {
-        if (category && getCategory(info) !== category) {
+        const variantInfo = info.variants[info.status.variantId]
+
+        if (category && getCategory(variantInfo) !== category) {
           return false
         }
 
@@ -50,14 +54,14 @@ function countPackages(store: Store, category?: PackageCategory, state?: Package
         if (!state) {
           if (
             !store.packageFilters.dependencies &&
-            getCategory(info) === PackageCategory.DEPENDENCIES
+            getCategory(variantInfo) === PackageCategory.DEPENDENCIES
           ) {
             return false
           }
 
           if (
             !store.packageFilters.incompatible &&
-            !getState(info, PackageState.COMPATIBLE, profile)
+            getState(info, PackageState.INCOMPATIBLE, profile)
           ) {
             return false
           }

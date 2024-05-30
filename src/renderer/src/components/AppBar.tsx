@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react"
 
-import SwitchProfileIcon from "@mui/icons-material/SwitchAccount"
-import MuiAppBar from "@mui/material/AppBar"
-import Box from "@mui/material/Box"
-import IconButton from "@mui/material/IconButton"
-import MenuItem from "@mui/material/MenuItem"
-import Select from "@mui/material/Select"
-import { styled } from "@mui/material/styles"
-import TextField from "@mui/material/TextField"
-import Toolbar from "@mui/material/Toolbar"
-import Tooltip from "@mui/material/Tooltip"
-import Typography from "@mui/material/Typography"
+import { SwitchAccount as SwitchProfileIcon } from "@mui/icons-material"
+import {
+  AppBar as MuiAppBar,
+  Box,
+  IconButton,
+  MenuItem,
+  Select,
+  styled,
+  TextField,
+  Toolbar,
+  Tooltip,
+  Typography,
+} from "@mui/material"
 
 import { ProfileInfo } from "@common/types"
 import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"

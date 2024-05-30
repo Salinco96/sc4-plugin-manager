@@ -9,7 +9,7 @@ export function DataProvider({ children }: { children: ReactNode }): JSX.Element
 
   const actions = useStoreActions()
 
-  useEffect(() => window.api.subscribeToStateUpdates(actions.updateState), [actions])
+  useEffect(() => window.api.subscribe(actions), [actions])
 
   useEffect(() => {
     if (isLoading) {

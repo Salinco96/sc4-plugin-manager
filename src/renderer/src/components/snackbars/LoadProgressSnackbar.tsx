@@ -1,7 +1,6 @@
 import { forwardRef, useEffect } from "react"
 
-import { CardActions, Typography } from "@mui/material"
-import CircularProgress from "@mui/material/CircularProgress"
+import { CardActions, CircularProgress, Typography } from "@mui/material"
 import { CustomContentProps } from "notistack"
 
 import { useStore, useStoreActions } from "@renderer/utils/store"

@@ -9,6 +9,7 @@ export default defineConfig({
     resolve: {
       alias: {
         "@common": resolve("src/common"),
+        "@utils": resolve("src/main/utils"),
       },
     },
   },

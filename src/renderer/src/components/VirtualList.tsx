@@ -1,21 +1,21 @@
 import { CSSProperties, ComponentType, Ref, forwardRef, memo, useContext, useMemo } from "react"
 
-import { SxProps } from "@mui/material"
-import Box from "@mui/material/Box"
+import { Box, SxProps } from "@mui/material"
 import AutoSizer from "react-virtualized-auto-sizer"
-import { FixedSizeList, ListChildComponentProps } from "react-window"
+import { VariableSizeList, ListChildComponentProps } from "react-window"
 
 import { createContext } from "@renderer/contexts/createContext"
 
 export interface VirtualListProps<T> {
+  baseSize: number
   itemComponent: ComponentType<VirtualListItemProps<T>>
   items: unknown[]
-  itemSize: number
+  itemSize: (item: T, baseSize: number) => number
   paddingBottom?: number
   paddingLeft?: number
   paddingRight?: number
   paddingTop?: number
-  ref?: Ref<FixedSizeList>
+  ref?: Ref<VariableSizeList<T>>
   spacing?: number
   sx?: SxProps
 }
@@ -90,9 +90,10 @@ const rowElementType = memo(function VirtualListItem<T>({
   )
 })
 
-const rootElementType = forwardRef<FixedSizeList, VirtualListProps<unknown>>(
+const rootElementType = forwardRef<VariableSizeList, VirtualListProps<unknown>>(
   (
     {
+      baseSize,
       itemComponent,
       items,
       itemSize,
@@ -115,17 +116,18 @@ const rootElementType = forwardRef<FixedSizeList, VirtualListProps<unknown>>(
         <VirtualListContext.Provider value={context}>
           <AutoSizer>
             {({ height, width }) => (
-              <FixedSizeList
+              <VariableSizeList
+                estimatedItemSize={baseSize + spacing}
                 height={height}
                 innerElementType={innerElementType}
                 itemCount={items.length}
                 itemData={itemComponent}
-                itemSize={itemSize + spacing}
+                itemSize={index => itemSize(items[index], baseSize) + spacing}
                 ref={ref}
                 width={width}
               >
                 {rowElementType}
-              </FixedSizeList>
+              </VariableSizeList>
             )}
           </AutoSizer>
         </VirtualListContext.Provider>

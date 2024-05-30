@@ -1,7 +1,5 @@
 import fs from "fs/promises"
 
-import { parse as yamlParse, stringify as yamlStringify } from "yaml"
-
 export async function exists(fullPath: string): Promise<boolean> {
   try {
     await fs.stat(fullPath)
@@ -73,12 +71,4 @@ export async function removeIfPresent(fullPath: string): Promise<boolean> {
       throw error
     }
   }
-}
-
-export function serializeConfig<T>(data: T, format: "json" | "yaml"): string {
-  return format === "json" ? JSON.stringify(data, undefined, 2) : yamlStringify(data)
-}
-
-export function deserializeConfig<T>(data: string, format: "json" | "yaml"): T {
-  return format === "json" ? JSON.parse(data) : yamlParse(data)
 }

@@ -1,5 +1,5 @@
 // Needs to be imported first for some reason - see https://github.com/mui/material-ui/issues/31835
-import CssBaseline from "@mui/material/CssBaseline"
+import { CssBaseline } from "@mui/material"
 
 import { Content } from "./Content"
 import { Layout } from "./Layout"

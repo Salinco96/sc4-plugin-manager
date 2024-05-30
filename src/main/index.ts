@@ -1,7 +1,6 @@
 import { app, protocol } from "electron/main"
 
 import { Application } from "./Application"
-import { initLogs } from "./utils/logs"
 
 protocol.registerSchemesAsPrivileged([
   {
@@ -11,7 +10,5 @@ protocol.registerSchemesAsPrivileged([
     },
   },
 ])
-
-initLogs()
 
 app.whenReady().then(() => new Application())

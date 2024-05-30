@@ -1,13 +1,7 @@
 import { useMemo, useRef, useState } from "react"
 
-import MoreOptionsIcon from "@mui/icons-material/MoreVert"
-import Box from "@mui/material/Box"
-import Button from "@mui/material/Button"
-import Divider from "@mui/material/Divider"
-import Menu from "@mui/material/Menu"
-import MenuItem from "@mui/material/MenuItem"
-import Select from "@mui/material/Select"
-import Tooltip from "@mui/material/Tooltip"
+import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
+import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
 
 import { PackageInfo } from "@common/types"
 import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
@@ -21,24 +15,16 @@ interface PackageAction {
   onClick: () => void
 }
 
-export function PackageActions({
-  onHover,
-  onMenuOpen,
-  packageInfo,
-}: {
-  onHover?: (hover: boolean) => void
-  onMenuOpen?: () => void
-  packageInfo: PackageInfo
-}): JSX.Element | null {
+export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): JSX.Element | null {
   const anchorRef = useRef<HTMLButtonElement>(null)
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
-  const variant = packageInfo.status.variant
+  const variant = packageInfo.status.variantId
 
   const compatibleVariants = Object.values(packageInfo.variants)
-    .filter(variant => variant?.compatible)
+    .filter(variant => !variant.incompatible)
     .map(variant => variant!.id)
 
   const packageActions = useMemo(() => {
@@ -50,14 +36,14 @@ export function PackageActions({
     const nRequires = packageInfo.status.requiredBy?.length ?? 0
     const isRequired = nRequires !== 0
 
-    if (variantInfo?.installed) {
-      if (variantInfo.installed !== variantInfo.version) {
+    if (variantInfo.installed) {
+      if (variantInfo.update) {
         packageActions.push({
           color: "warning",
-          description: !variantInfo.compatible
+          description: variantInfo.update.incompatible
             ? "This variant is not compatible with your profile"
             : `Update to version ${variantInfo.version}`,
-          disabled: !variantInfo.compatible,
+          disabled: !!variantInfo.update.incompatible,
           id: "update",
           label: "Update",
           onClick: async () => {
@@ -98,6 +84,10 @@ export function PackageActions({
         } else {
           packageActions.push({
             color: "success",
+            description: variantInfo.incompatible
+              ? "This variant is not compatible with your profile"
+              : "Enable this package",
+            disabled: !!variantInfo.incompatible,
             id: "enable",
             label: "Enable",
             onClick: async () => {
@@ -123,7 +113,7 @@ export function PackageActions({
       packageActions.push({
         color: "warning",
         description: "Fix this package",
-        disabled: !variantInfo || !!variantInfo.installing,
+        disabled: !variantInfo || !!variantInfo.action,
         id: "fix",
         label: "Fix",
         onClick: async () => {
@@ -146,7 +136,7 @@ export function PackageActions({
     } else {
       packageActions.push({
         description: "Download and enable this package",
-        disabled: !variantInfo?.compatible || !!variantInfo.installing,
+        disabled: !!variantInfo.incompatible || !!variantInfo.action,
         id: "add",
         label: "Add",
         onClick: async () => {
@@ -158,7 +148,7 @@ export function PackageActions({
 
       packageActions.push({
         description: "Download this package without enabling it",
-        disabled: !variantInfo?.compatible || !!variantInfo.installing,
+        disabled: !!variantInfo.incompatible || !!variantInfo.action,
         id: "download",
         label: "Download",
         onClick: async () => {
@@ -186,20 +176,7 @@ export function PackageActions({
             <Button
               color={mainAction.color}
               disabled={mainAction.disabled}
-              onClick={event => {
-                event.stopPropagation()
-                mainAction.onClick()
-              }}
-              onMouseEnter={() => {
-                if (onHover) {
-                  onHover(true)
-                }
-              }}
-              onMouseLeave={() => {
-                if (onHover) {
-                  onHover(false)
-                }
-              }}
+              onClick={mainAction.onClick}
               ref={anchorRef}
               sx={{ height: 40, paddingRight: hasMore ? 5.5 : 2, width: 160 }}
               variant="contained"
@@ -213,27 +190,7 @@ export function PackageActions({
             <Button
               aria-label="More options"
               color={mainAction.color}
-              onClick={event => {
-                event.stopPropagation()
-                setMenuOpen(true)
-                if (onMenuOpen) {
-                  onMenuOpen()
-                }
-
-                if (onHover) {
-                  setTimeout(() => onHover(true), 1)
-                }
-              }}
-              onMouseEnter={() => {
-                if (onHover) {
-                  onHover(true)
-                }
-              }}
-              onMouseLeave={() => {
-                if (onHover) {
-                  onHover(false)
-                }
-              }}
+              onClick={() => setMenuOpen(true)}
               size="small"
               sx={{
                 borderLeftColor: "white",
@@ -256,18 +213,8 @@ export function PackageActions({
               anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
               transformOrigin={{ horizontal: "right", vertical: "top" }}
               open={isMenuOpen}
-              onClose={() => {
-                setMenuOpen(false)
-                if (onHover) {
-                  setTimeout(() => onHover(false), 1)
-                }
-              }}
-              slotProps={{
-                paper: {
-                  onClick: event => event.stopPropagation(),
-                  sx: { minWidth: anchorRef.current?.offsetWidth },
-                },
-              }}
+              onClose={() => setMenuOpen(false)}
+              slotProps={{ paper: { sx: { minWidth: anchorRef.current?.offsetWidth } } }}
             >
               {moreActions.map(action => (
                 <Tooltip placement="left" key={action.id} title={action.description}>
@@ -276,9 +223,6 @@ export function PackageActions({
                     onClick={() => {
                       action.onClick()
                       setMenuOpen(false)
-                      if (onHover) {
-                        setTimeout(() => onHover(false), 1)
-                      }
                     }}
                   >
                     {action.label}
@@ -296,38 +240,17 @@ export function PackageActions({
             (compatibleVariants.length === 1 && variant === compatibleVariants[0])
           }
           fullWidth
-          MenuProps={{
-            onClose: () => {
-              setMenuOpen(false)
-              if (onHover) {
-                setTimeout(() => onHover(false), 1)
-              }
-            },
-            sx: { maxHeight: 320 },
-          }}
+          MenuProps={{ onClose: () => setMenuOpen(false), sx: { maxHeight: 320 } }}
           name="variant"
-          onChange={event => {
-            event.preventDefault()
-            actions.setPackageVariant(packageInfo.id, event.target.value)
-          }}
-          onMouseEnter={() => {
-            if (onHover) {
-              onHover(true)
-            }
-          }}
-          onMouseLeave={() => {
-            if (onHover) {
-              onHover(false)
-            }
-          }}
+          onChange={event => actions.setPackageVariant(packageInfo.id, event.target.value)}
           required
           size="small"
           value={variant}
           variant="outlined"
         >
           {Object.entries(packageInfo.variants).map(([id, variant]) => (
-            <MenuItem key={id} value={id} disabled={!variant?.compatible}>
-              {variant?.name}
+            <MenuItem key={id} value={id} disabled={!!variant.incompatible}>
+              {variant.name}
             </MenuItem>
           ))}
         </Select>

@@ -1,5 +1,4 @@
-import Box from "@mui/material/Box"
-import Divider from "@mui/material/Divider"
+import { Box, Divider } from "@mui/material"
 
 import { PackageList } from "@renderer/components/PackageList"
 import { PackageListFilters } from "@renderer/components/PackageListFilters"

@@ -3,6 +3,7 @@ import { normalizeString } from "./utils/types"
 export interface ProfileSettings {
   cam: boolean
   darknite: boolean
+  rhd: boolean
 }
 
 export interface ProfileUpdate {
@@ -13,6 +14,7 @@ export interface ProfileUpdate {
 export const defaultProfileSettings: ProfileSettings = {
   cam: false,
   darknite: false,
+  rhd: false,
 }
 
 export function createUniqueProfileId(name: string, existingIds: string[]): string {

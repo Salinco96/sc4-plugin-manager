@@ -1,15 +1,14 @@
 import { exec as cmd } from "child_process"
-import { ipcMain, net, protocol } from "electron/main"
-import fsSync from "fs"
+import { app, ipcMain, net, protocol } from "electron/main"
 import fs from "fs/promises"
 import path from "path"
 import { pathToFileURL } from "url"
 
+import log, { LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
-import { getConfig } from "isomorphic-git"
 
-import { packageGroups } from "@common/packageGroups"
+import { formatCategory } from "@common/categories"
 import {
   ProfileSettings,
   ProfileUpdate,
@@ -17,30 +16,37 @@ import {
   defaultProfileSettings,
 } from "@common/profiles"
 import { ApplicationState } from "@common/state"
-import { AssetInfo, PackageInfo, ProfileInfo, Settings, getDefaultVariant } from "@common/types"
-
-import childProcessPath from "./child?modulePath"
-import { loadLocalPackages, loadRemotePackages, toGlobPattern } from "./data/packages"
-import { MainWindow } from "./MainWindow"
-import { createChildProcess } from "./process"
-import { SplashScreen } from "./SplashScreen"
-import { download, extract } from "./utils/download"
 import {
-  createIfMissing,
-  deserializeConfig,
-  exists,
-  readFile,
-  readFileIfPresent,
-  removeIfEmpty,
-  removeIfPresent,
-  serializeConfig,
-  writeFile,
-} from "./utils/files"
-import { getDatabasePath, getPluginsPath, getRootPath } from "./utils/paths"
-import { TaskManager } from "./utils/tasks"
+  AssetInfo,
+  ConfigFormat,
+  PackageInfo,
+  ProfileInfo,
+  Settings,
+  getDefaultVariant,
+} from "@common/types"
 
-const DOCEXTENSIONS = [".css", ".htm", ".html", ".jpeg", ".jpg", ".md", ".png", ".svg", ".txt"]
-const SC4EXTENSIONS = [".dll", ".SC4Desc", ".SC4Lot", ".SC4Model", "._LooseDesc", ".dat"]
+import {
+  calculatePackageCompatibility,
+  checkoutPackages,
+  loadLocalPackages,
+  loadRemotePackages,
+  mergeLocalPackageInfo,
+  writePackageConfig,
+} from "./data/packages"
+import { MainWindow } from "./MainWindow"
+import {
+  UpdateDatabaseProcessData,
+  UpdateDatabaseProcessResponse,
+} from "./processes/updateDatabase/types"
+import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
+import { SplashScreen } from "./SplashScreen"
+import { loadConfig, readConfig, writeConfig } from "./utils/configs"
+import { DIRNAMES, DOCEXTENSIONS, FILENAMES, SC4EXTENSIONS } from "./utils/constants"
+import { download, extract } from "./utils/download"
+import { env, isDev, isURL } from "./utils/env"
+import { createIfMissing, exists, removeIfEmpty, removeIfPresent } from "./utils/files"
+import { createChildProcess } from "./utils/processes"
+import { TaskManager } from "./utils/tasks"
 
 const defaultSettings: Settings = {
   useYaml: true,
@@ -70,21 +76,9 @@ export interface Task<T = void> {
 }
 
 export class Application {
-  public dirnames = {
-    downloads: "Downloads",
-    packageDocs: "Packages",
-    packages: "Packages",
-    profiles: "Profiles",
-  }
-
-  public filenames = {
-    packageConfig: "package",
-    settings: "settings",
-  }
-
   public assets?: { [assetId: string]: AssetInfo }
   public loadStatus: string | null = null
-  public packageGroups?: { [groupId: string]: string[] }
+  public conflictGroups?: { [groupId: string]: string[] }
   public packages?: { [packageId: string]: PackageInfo }
   public profiles?: { [profileId: string]: ProfileInfo }
   public settings?: Settings
@@ -102,11 +96,8 @@ export class Application {
   public mainWindow?: MainWindow
   public splashScreen?: SplashScreen
 
-  public readonly configFormats: string[] = [".json", ".yaml", ".yml"]
-  public readonly maxParallelDownloads: number = 3
-  public readonly ongoingDownloads: OngoingDownload[] = []
-  public readonly pendingDownloads: PendingDownload[] = []
-  public readonly rootPath: string = getRootPath()
+  public readonly gamePath: string
+  public readonly rootPath: string
 
   public readonly links: { [from: string]: string } = {}
 
@@ -116,9 +107,6 @@ export class Application {
     readonly getAsset: TaskManager
     readonly install: TaskManager
     readonly linker: TaskManager
-
-    readonly downloading: Map<string, Promise<void>>
-    readonly installing: Map<string, Promise<void>>
     readonly writeProfiles: Task
     readonly writeSettings: Task
   } = {
@@ -127,9 +115,6 @@ export class Application {
     getAsset: new TaskManager(6),
     install: new TaskManager(6),
     linker: new TaskManager(1, this.onLinkTaskUpdate.bind(this)),
-
-    downloading: new Map(),
-    installing: new Map(),
     writeProfiles: {},
     writeSettings: {},
   }
@@ -137,6 +122,9 @@ export class Application {
   protected databaseUpdatePromise?: Promise<boolean>
 
   public constructor() {
+    this.gamePath = env.GAME_DIR || path.join(app.getPath("documents"), "SimCity 4")
+    this.rootPath = env.ROOT_DIR || path.join(this.gamePath, "Manager")
+
     this.initialize()
 
     // Custom protocol to load package docs in sandboxed iframe
@@ -158,6 +146,7 @@ export class Application {
       return net.fetch(pathToFileURL(fullPath).toString())
     })
 
+    // Register message handlers
     this.handle("createProfile")
     this.handle("disablePackages")
     this.handle("editProfile")
@@ -170,20 +159,26 @@ export class Application {
     this.handle("setPackageVariant")
     this.handle("switchProfile")
 
+    // Create main window
     this.createMainWindow()
   }
 
-  public async getPackageDocsAsHtml(packageId: string): Promise<string> {
+  public async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
     const packageInfo = this.getPackageInfo(packageId)
     if (!packageInfo) {
       throw Error(`Unknown package '${packageId}'`)
     }
 
-    if (!packageInfo.docs) {
-      throw Error(`Package '${packageId}' does not have documentation`)
+    const variantInfo = packageInfo.variants[variantId]
+    if (!packageInfo) {
+      throw Error(`Unknown variant '${packageId}#${variantId}'`)
     }
 
-    const docPath = path.join(this.getPackageDocsPath(packageId), packageInfo.docs)
+    if (!variantInfo.docs?.path) {
+      throw Error(`Package '${packageId}#${variantId}' does not have documentation`)
+    }
+
+    const docPath = path.join(this.getPackageDocsPath(packageId), variantInfo.docs.path)
     const docExt = path.extname(docPath)
 
     switch (docExt) {
@@ -211,40 +206,119 @@ export class Application {
     return profileId ? this.profiles?.[profileId] : undefined
   }
 
-  public getDefaultConfigFormat(): string {
-    return this.settings?.useYaml === false ? ".json" : ".yaml"
+  public getDataRepository(): string {
+    if (env.DATA_REPOSITORY) {
+      if (isURL(env.DATA_REPOSITORY) || path.isAbsolute(env.DATA_REPOSITORY)) {
+        return env.DATA_REPOSITORY
+      }
+
+      return path.join(__dirname, "..", env.DATA_REPOSITORY)
+    }
+
+    if (isDev()) {
+      // TODO: return path.join(__dirname, "../sc4-plugin-manager-data")
+    }
+
+    return "https://github.com/memo33/sc4pac" // TODO: "https://github.com/Salinco96/sc4-plugin-manager-data.git"
+  }
+
+  public getDatabasePath(): string {
+    const repository = this.getDataRepository()
+    return isURL(repository) ? path.join(this.rootPath, DIRNAMES.database) : repository
+  }
+
+  public getDefaultConfigFormat(): ConfigFormat {
+    return this.settings?.useYaml === false ? ConfigFormat.JSON : ConfigFormat.YAML
   }
 
   public getDownloadsPath(): string {
-    return path.join(this.rootPath, this.dirnames.downloads)
+    return path.join(this.rootPath, DIRNAMES.downloads)
   }
 
   public getDownloadPath(key: string): string {
-    return path.join(this.rootPath, this.dirnames.downloads, key)
+    return path.join(this.rootPath, DIRNAMES.downloads, key)
+  }
+
+  public getLogLevel(): LogLevel {
+    if (env.LOG_LEVEL && log.levels.includes(env.LOG_LEVEL)) {
+      return env.LOG_LEVEL as LogLevel
+    } else {
+      return isDev() ? "debug" : "info"
+    }
+  }
+
+  public getLogsFile(): string {
+    return path.join(this.rootPath, DIRNAMES.logs, FILENAMES.logs)
+  }
+
+  public getLogsPath(): string {
+    return path.join(this.rootPath, DIRNAMES.logs)
   }
 
   public getPackagesPath(): string {
-    return path.join(this.rootPath, this.dirnames.packages)
+    return path.join(this.rootPath, DIRNAMES.packages)
   }
 
   public getPackagePath(packageId: string): string {
-    return path.join(this.rootPath, this.dirnames.packages, packageId)
+    return path.join(this.rootPath, DIRNAMES.packages, packageId)
   }
 
   public getPackageDocsPath(packageId: string): string {
-    return path.join(this.rootPath, this.dirnames.packages, packageId, "~docs")
+    return path.join(this.rootPath, DIRNAMES.packages, packageId, DIRNAMES.packageDocs)
   }
 
-  public getVariantPath(packageId: string, variantId: string): string {
-    return path.join(this.rootPath, this.dirnames.packages, packageId, variantId)
+  public getPluginsPath(): string {
+    return path.join(this.gamePath, DIRNAMES.plugins)
   }
 
   public getProfilesPath(): string {
-    return path.join(this.rootPath, this.dirnames.profiles)
+    return path.join(this.rootPath, DIRNAMES.profiles)
+  }
+
+  public getVariantPath(packageId: string, variantId: string): string {
+    return path.join(this.rootPath, DIRNAMES.packages, packageId, variantId)
   }
 
   public getAssetInfo(assetId: string): AssetInfo | undefined {
-    return this.assets?.[assetId]
+    const assetInfo = this.assets?.[assetId]
+    if (assetInfo) {
+      return assetInfo
+    }
+
+    // Parse asset ID in format `source:id[#hash]@version`
+    const match = assetId.match(/^([\w-]+):([\w./-]+)(?:#([\w./-]+))?@([\w.-]+)$/)
+    if (match) {
+      const [, source, id, hash, version] = match
+
+      switch (source) {
+        // id = owner/repository
+        // version = release version
+        // hash = release artifact filename
+        case "github":
+          return {
+            id: `${source}/${id}/${hash}`,
+            url: `https://github.com/${id}/releases/download/${version}/${hash}`,
+            version,
+          }
+
+        // id = download ID
+        case "sc4evermore":
+          return {
+            id: `${source}/${id}`,
+            url: `https://www.sc4evermore.com/index.php/downloads?task=download.send&id=${id.replace("-", ":")}`,
+            version,
+          }
+
+        // id = download ID
+        // hash = variant (optional, only for downloads with multiple variants or to target older versions)
+        case "simtropolis":
+          return {
+            id: `${source}/${id}${hash ? `#${hash}` : ""}`,
+            url: `https://community.simtropolis.com/files/file/${id}/?do=download${hash ? `&r=${hash}` : ""}`,
+            version,
+          }
+      }
+    }
   }
 
   public getPackageInfo(packageId: string): PackageInfo | undefined {
@@ -255,61 +329,13 @@ export class Application {
     return this.profiles?.[profileId]
   }
 
-  public getDefaultCategoryName(category: number): string {
-    if (category < 100) {
-      return "Mods"
-    }
-
-    if (category < 200) {
-      return "Dependencies"
-    }
-
-    if (category < 300) {
-      return "Residential"
-    }
-
-    if (category === 360) {
-      return "Landmarks"
-    }
-
-    if (category < 400) {
-      return "Commercial"
-    }
-
-    if (category < 500) {
-      return "Industrial"
-    }
-
-    if (category < 600) {
-      return "Energy"
-    }
-
-    if (category === 660) {
-      return "Parks"
-    }
-
-    if (category < 700) {
-      return "Civics"
-    }
-
-    if (category < 800) {
-      return "Transport"
-    }
-
-    if (category >= 900) {
-      return "Overrides"
-    }
-
-    return "Custom"
-  }
-
   public async getState(): Promise<ApplicationState> {
     return {
       linking: false,
       loadStatus: this.loadStatus,
       ongoingDownloads: this.tasks.download.ongoingTasks,
       ongoingExtracts: this.tasks.extract.ongoingTasks,
-      packageGroups: this.packageGroups,
+      conflictGroups: this.conflictGroups,
       packages: this.packages,
       profiles: this.profiles,
       settings: this.settings,
@@ -330,6 +356,13 @@ export class Application {
   }
 
   protected async initialize(): Promise<void> {
+    // Initialize logs
+    app.setPath("logs", this.getLogsPath())
+    log.transports.console.level = this.getLogLevel()
+    log.transports.file.level = this.getLogLevel()
+    log.transports.file.resolvePathFn = this.getLogsFile.bind(this)
+    Object.assign(console, log.functions)
+
     // Launch database update in child process
     const databaseUpdatePromise = this.tryUpdateDatabase()
 
@@ -350,7 +383,7 @@ export class Application {
     // Load local packages...
     this.loadStatus = "Loading packages..."
     this.processUpdates()
-    const localPackages = await loadLocalPackages()
+    const localPackages = await loadLocalPackages(this.getPackagesPath())
     this.packages = localPackages
     this.markPackagesForUpdate()
 
@@ -362,33 +395,18 @@ export class Application {
     // Load remote packages...
     this.loadStatus = "Loading packages..."
     this.processUpdates()
-    const { assets, packages } = await loadRemotePackages()
+    const { assets, packages } = await loadRemotePackages(this.getDatabasePath())
     this.assets = assets
     this.packages = packages
 
     // Merge local and remote package definitions...
     for (const packageId in localPackages) {
-      const localPackage = localPackages[packageId]
-      this.packages[packageId] ??= localPackage
-      const info = this.packages[packageId]
-      info.docs = localPackage.docs
-      info.format = localPackage.format
-
-      for (const variantId in localPackage.variants) {
-        const localVariant = localPackage.variants[variantId]
-        if (localVariant) {
-          const variant = info.variants[variantId]
-          if (variant) {
-            variant.files = localVariant.files
-            variant.installed = localVariant.version
-          } else {
-            info.variants[variantId] = {
-              ...localVariant,
-              installed: localVariant.version,
-              local: true,
-            }
-          }
-        }
+      const localPackageInfo = localPackages[packageId]
+      const remotePackageInfo = this.packages?.[packageId]
+      if (remotePackageInfo) {
+        this.packages[packageId] = mergeLocalPackageInfo(localPackageInfo, remotePackageInfo)
+      } else {
+        this.packages[packageId] = localPackageInfo
       }
     }
 
@@ -398,14 +416,13 @@ export class Application {
       this.loadStatus = "Resolving dependencies..."
       this.processUpdates()
 
-      this.calculatePackages()
+      checkoutPackages(this.packages, currentProfile)
+      this.markPackagesForUpdate()
+      this.processUpdates()
+
+      calculatePackageCompatibility(this.packages, currentProfile.settings)
+      this.markPackagesForUpdate()
     }
-
-    // TODO: Initialize fetcher
-
-    this.loadStatus = "Synchronizing..."
-    this.processUpdates()
-    // TODO: Initialize linker
 
     // Done
     this.loadStatus = null
@@ -459,19 +476,15 @@ export class Application {
         info.status.enabled = false
         disabledPackageIds.add(packageId)
 
-        const variant = info.variants[info.status.variant]
-        if (variant) {
-          for (const dependencyId of variant.dependencies) {
+        const variantInfo = info.variants[info.status.variantId]
+        if (variantInfo.dependencies) {
+          for (const dependencyId of variantInfo.dependencies) {
             const dependencyInfo = this.getPackageInfo(dependencyId)
             if (dependencyInfo) {
-              if (dependencyInfo.status.requiredBy) {
+              if (dependencyInfo.status.requiredBy.length) {
                 const index = dependencyInfo.status.requiredBy.indexOf(packageId)
                 if (index >= 0) {
-                  if (dependencyInfo.status.requiredBy.length > 1) {
-                    dependencyInfo.status.requiredBy.splice(index, 1)
-                  } else {
-                    delete dependencyInfo.status.requiredBy
-                  }
+                  dependencyInfo.status.requiredBy.splice(index, 1)
                 }
               }
             }
@@ -487,32 +500,7 @@ export class Application {
       disableRecursively(packageId)
     }
 
-    // Check package groups
-    this.packageGroups ??= {}
-    for (const packageId of disabledPackageIds) {
-      if (packageGroups[packageId]) {
-        for (const groupId of packageGroups[packageId]) {
-          const index = this.packageGroups[groupId].indexOf(packageId)
-          if (index >= 0) {
-            this.packageGroups[groupId].splice(index, 1)
-
-            if (this.packageGroups[groupId].length === 0) {
-              delete this.packageGroups[groupId]
-
-              if (groupId === "cam") {
-                this.setProfileSetting("cam", false)
-              }
-
-              if (groupId === "darknite") {
-                this.setProfileSetting("darknite", false)
-              }
-            }
-          }
-        }
-      }
-    }
-
-    this.calculatePackageCompatibility()
+    calculatePackageCompatibility(this.packages, currentProfile.settings)
     this.markPackagesForUpdate()
     this.processUpdates()
 
@@ -531,7 +519,10 @@ export class Application {
 
     if (data.settings) {
       Object.assign(profile.settings, data.settings)
-      this.calculatePackageCompatibility()
+      if (this.packages) {
+        calculatePackageCompatibility(this.packages, profile.settings)
+        this.markPackagesForUpdate()
+      }
     }
 
     this.markProfileForUpdate(profile)
@@ -556,13 +547,14 @@ export class Application {
         info.status.enabled = true
         enabledPackageIds.add(packageId)
 
-        const variant = info.variants[info.status.variant]
+        const variantId = info.status.variantId
+        const variant = info.variants[variantId]
         if (variant) {
-          if (info.status.variant !== getDefaultVariant(info)) {
+          if (variant !== getDefaultVariant(info)) {
             if (config) {
-              config.variant = info.status.variant
+              config.variant = variantId
             } else {
-              currentProfile.packages[packageId] = { variant: info.status.variant }
+              currentProfile.packages[packageId] = { variant: variantId }
             }
           } else if (config) {
             delete config.variant
@@ -571,14 +563,16 @@ export class Application {
             }
           }
 
-          for (const dependencyId of variant.dependencies) {
-            const dependencyInfo = this.getPackageInfo(dependencyId)
-            if (dependencyInfo) {
-              dependencyInfo.status.requiredBy ??= []
-              dependencyInfo.status.requiredBy.push(packageId)
-            }
+          if (variant.dependencies) {
+            for (const dependencyId of variant.dependencies) {
+              const dependencyInfo = this.getPackageInfo(dependencyId)
+              if (dependencyInfo) {
+                dependencyInfo.status.requiredBy ??= []
+                dependencyInfo.status.requiredBy.push(packageId)
+              }
 
-            enableRecursively(dependencyId)
+              enableRecursively(dependencyId)
+            }
           }
         }
       }
@@ -589,26 +583,7 @@ export class Application {
       enableRecursively(packageId)
     }
 
-    // Check package groups
-    this.packageGroups ??= {}
-    for (const packageId of enabledPackageIds) {
-      if (packageGroups[packageId]) {
-        for (const groupId of packageGroups[packageId]) {
-          this.packageGroups[groupId] ??= []
-          this.packageGroups[groupId].push(packageId)
-
-          if (groupId === "cam") {
-            this.setProfileSetting("cam", true)
-          }
-
-          if (groupId === "darknite") {
-            this.setProfileSetting("darknite", true)
-          }
-        }
-      }
-    }
-
-    this.calculatePackageCompatibility()
+    calculatePackageCompatibility(this.packages, currentProfile.settings)
     this.markPackagesForUpdate()
     this.processUpdates()
 
@@ -630,20 +605,22 @@ export class Application {
           throw Error(`Unknown package '${packageId}'`)
         }
 
-        const variantId = packageInfo.status.variant
+        const variantId = packageInfo.status.variantId
         const variantInfo = packageInfo.variants[variantId]
         if (!variantInfo) {
           throw Error(`Unknown variant '${packageId}#${variantId}'`)
         }
 
         const isInstalled = !!variantInfo.installed
-        const isOutdated = variantInfo.installed !== variantInfo.version
+        const isOutdated = !!variantInfo.update
         if (!isInstalled || (isOutdated && packageIds.includes(packageId))) {
           missingPackages.set(packageId, variantInfo.id)
         }
 
-        for (const dependencyId of variantInfo.dependencies) {
-          checkedPackages.add(dependencyId)
+        if (variantInfo.dependencies) {
+          for (const dependencyId of variantInfo.dependencies) {
+            checkedPackages.add(dependencyId)
+          }
         }
       })
 
@@ -679,19 +656,20 @@ export class Application {
     try {
       const variantKey = `${packageId}#${variantId}`
 
-      variantInfo.installing = true
+      variantInfo.action = "installing"
       this.sendPackageUpdate(packageInfo)
 
       await this.tasks.install.queue(variantKey, async () => {
         const variantPath = this.getVariantPath(packageId, variantId)
         const docsPath = this.getPackageDocsPath(packageId)
+        const assets = variantInfo.update?.assets ?? variantInfo.assets ?? []
 
-        const assetInfos = variantInfo.assets.map(asset => {
-          const assetInfo = this.getAssetInfo(asset.assetId)
+        const assetInfos = assets.map(asset => {
+          const assetInfo = this.getAssetInfo(asset.id)
           if (assetInfo) {
             return assetInfo
           } else {
-            throw Error(`Unknown asset '${asset.assetId}'`)
+            throw Error(`Unknown asset '${asset.id}'`)
           }
         })
 
@@ -704,8 +682,8 @@ export class Application {
         try {
           const files: typeof variantInfo.files = []
 
-          for (const asset of variantInfo.assets) {
-            const assetInfo = this.getAssetInfo(asset.assetId)!
+          for (const asset of assets) {
+            const assetInfo = this.getAssetInfo(asset.id)!
             const downloadKey = `${assetInfo.id}@${assetInfo.version}`
             const downloadPath = this.getDownloadPath(downloadKey)
 
@@ -726,10 +704,10 @@ export class Application {
             }
 
             // Find all included files
-            const filePaths = await glob(asset.include?.map(toGlobPattern) ?? "**", {
+            const filePaths = await glob(asset.include?.map(file => file.path) ?? ["**"], {
               cwd: downloadPath,
               dot: true,
-              ignore: asset.exclude?.map(toGlobPattern),
+              ignore: asset.exclude?.map(file => file.path),
               matchBase: true,
               nodir: true,
             })
@@ -755,17 +733,24 @@ export class Application {
           })
 
           if (docsPaths.length) {
-            packageInfo.docs =
-              docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
-              docsPaths.find(file => path.basename(file).match(/readme/i)) ??
-              docsPaths[0]
+            variantInfo.docs = {
+              path:
+                docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
+                docsPaths.find(file => path.basename(file).match(/readme/i)) ??
+                docsPaths[0],
+            }
           }
 
           variantInfo.files = files
-          variantInfo.installed = variantInfo.version
+          variantInfo.installed = true
 
           // Rewrite config
           await this.writePackageConfig(packageInfo)
+
+          if (variantInfo.update) {
+            Object.assign(variantInfo, variantInfo.update)
+            delete variantInfo.update
+          }
         } catch (error) {
           delete variantInfo.files
           delete variantInfo.installed
@@ -773,7 +758,7 @@ export class Application {
         }
       })
     } finally {
-      delete variantInfo.installing
+      delete variantInfo.action
       this.sendPackageUpdate(packageInfo)
     }
   }
@@ -805,7 +790,7 @@ export class Application {
           return false
         }
 
-        const variantId = info.status.variant
+        const variantId = info.status.variantId
         const variant = info.variants[variantId]
         if (!variant) {
           return false
@@ -820,9 +805,9 @@ export class Application {
 
         if (variant.local) {
           const defaultVariant = getDefaultVariant(info)
-          info.status.variant = defaultVariant
-          this.setPackageVariantInConfig(packageId, defaultVariant)
-          delete info.variants[info.status.variant]
+          info.status.variantId = defaultVariant.id
+          this.setPackageVariantInConfig(packageId, defaultVariant.id)
+          delete info.variants[variantId]
         }
 
         if (Object.values(info.variants).some(variant => variant?.installed)) {
@@ -846,6 +831,7 @@ export class Application {
   }
 
   public async setPackageVariant(packageId: string, variantId: string): Promise<boolean> {
+    const currentProfile = this.getCurrentProfile()
     const info = this.getPackageInfo(packageId)
     if (!info) {
       return false
@@ -858,9 +844,11 @@ export class Application {
 
     // TODO: Check if compatible
 
-    info.status.variant = variantId
+    info.status.variantId = variantId
 
-    // TODO: Apply dependency changes
+    if (currentProfile) {
+      calculatePackageCompatibility(this.packages!, currentProfile.settings)
+    }
 
     this.markPackagesForUpdate()
     this.setPackageVariantInConfig(packageId, variantId)
@@ -871,13 +859,15 @@ export class Application {
 
   public async switchProfile(profileId: string): Promise<boolean> {
     const profile = this.getProfileInfo(profileId)
-    if (!this.settings || !profile) {
+    if (!this.settings || !this.packages || !profile) {
       return false
     }
 
     this.settings.currentProfile = profileId
     this.markSettingsForUpdate()
-    this.calculatePackages()
+    checkoutPackages(this.packages, profile)
+    calculatePackageCompatibility(this.packages, profile.settings)
+    // this.calculatePackages()
     this.processUpdates()
 
     return true
@@ -888,7 +878,7 @@ export class Application {
       return
     }
 
-    const pluginsPath = getPluginsPath()
+    const pluginsPath = this.getPluginsPath()
 
     await this.tasks.linker.queue(
       "init",
@@ -923,30 +913,9 @@ export class Application {
         async () => {
           console.debug("Linking packages...")
 
-          const categoryPaths = new Map<number, string>()
-
           await createIfMissing(pluginsPath)
-          const entries = await fs.readdir(pluginsPath, { withFileTypes: true })
-          for (const entry of entries) {
-            if (entry.isDirectory() && entry.name.match(/^\d{3}(?!\d)/)) {
-              const category = Number.parseInt(entry.name.slice(0, 3), 10)
-              categoryPaths.set(category, entry.name)
-            }
-          }
 
           const oldLinks = new Set(Object.keys(this.links))
-
-          const getCategoryPath = (category: number) => {
-            const existingPath = categoryPaths.get(category)
-            if (existingPath) {
-              return existingPath
-            }
-
-            const categoryName = this.getDefaultCategoryName(category)
-            const newPath = `${category.toString(10).padStart(3, "0")} - ${categoryName}`
-            categoryPaths.set(category, newPath)
-            return newPath
-          }
 
           const makeLink = async (from: string, to: string) => {
             await removeIfPresent(to)
@@ -958,17 +927,17 @@ export class Application {
           for (const packageId in this.packages) {
             const packageInfo = this.packages[packageId]
             if (packageInfo.status.enabled) {
-              const variantId = packageInfo.status.variant
+              const variantId = packageInfo.status.variantId
               const variantInfo = packageInfo.variants[variantId]
               if (variantInfo) {
                 const variantPath = this.getVariantPath(packageId, variantId)
                 if (variantInfo.files?.length) {
                   for (const file of variantInfo.files) {
                     const fullPath = path.join(variantPath, file.path)
-                    const categoryPath = getCategoryPath(file.category ?? packageInfo.category)
+                    const categoryPath = formatCategory(file.category ?? variantInfo.category)
 
                     // DLL files must be in Plugins root
-                    const targetPath = file.path.match(/\.dll$/i)
+                    const targetPath = file.path.match(/\.(dll|ini)$/i)
                       ? path.join(pluginsPath, path.basename(file.path))
                       : path.join(pluginsPath, categoryPath, packageId, file.path)
 
@@ -992,7 +961,7 @@ export class Application {
             delete this.links[linkPath]
 
             let parentPath = path.dirname(linkPath)
-            while (parentPath !== pluginsPath && (await removeIfEmpty(parentPath))) {
+            while (!pluginsPath.startsWith(parentPath) && (await removeIfEmpty(parentPath))) {
               parentPath = path.dirname(parentPath)
             }
           }
@@ -1006,140 +975,6 @@ export class Application {
     }
   }
 
-  protected calculatePackages(initial: boolean = false): void {
-    const currentProfile = this.getCurrentProfile()
-    if (!this.packages) {
-      return
-    }
-
-    if (!initial) {
-      for (const info of Object.values(this.packages)) {
-        delete info.status.enabled
-        delete info.status.requiredBy
-      }
-    }
-
-    if (currentProfile) {
-      // Set package variants
-      for (const packageId in currentProfile.packages) {
-        const config = currentProfile.packages[packageId]
-        const info = this.getPackageInfo(packageId)
-        if (info && config?.variant) {
-          if (info.variants[config.variant]) {
-            info.status.variant = config.variant
-          } else {
-            console.warn(`Unknown package variant '${packageId}#${config.variant}'`)
-          }
-        }
-      }
-
-      const enableRecursively = (packageId: string) => {
-        const info = this.getPackageInfo(packageId)
-        if (info && !info.status.enabled) {
-          info.status.enabled = true
-          const variant = info.variants[info.status.variant]
-
-          if (variant) {
-            for (const dependencyId of variant.dependencies) {
-              const dependencyInfo = this.getPackageInfo(dependencyId)
-              if (dependencyInfo) {
-                dependencyInfo.status.requiredBy ??= []
-                dependencyInfo.status.requiredBy.push(packageId)
-                enableRecursively(dependencyId)
-              } else {
-                console.warn(`Unknown package  '${dependencyId}'`)
-              }
-            }
-          }
-        }
-      }
-
-      // Enable packages and dependencies recursively
-      for (const packageId in currentProfile.packages) {
-        const config = currentProfile.packages[packageId]
-        const info = this.getPackageInfo(packageId)
-        if (config?.enabled) {
-          if (info) {
-            enableRecursively(packageId)
-          } else {
-            console.warn(`Unknown package '${packageId}'`)
-          }
-        }
-      }
-    }
-
-    this.calculatePackageGroups()
-  }
-
-  protected calculatePackageGroups(): void {
-    const profile = this.getCurrentProfile()
-    // Check package groups
-    this.packageGroups = {}
-    for (const packageId in packageGroups) {
-      if (this.getPackageInfo(packageId)?.status.enabled) {
-        for (const groupId of packageGroups[packageId]) {
-          this.packageGroups[groupId] ??= []
-          this.packageGroups[groupId].push(packageId)
-
-          if (profile) {
-            if (groupId === "cam" && !profile.settings.cam) {
-              profile.settings.cam = true
-              this.markProfileForUpdate(profile)
-            }
-
-            if (groupId === "darknite" && !profile.settings.darknite) {
-              profile.settings.darknite = true
-              this.markProfileForUpdate(profile)
-            }
-          }
-        }
-      }
-    }
-
-    this.calculatePackageCompatibility()
-  }
-
-  protected calculatePackageCompatibility(): void {
-    const profile = this.getCurrentProfile()
-    if (!profile) {
-      return
-    }
-
-    this.packageGroups ??= {}
-
-    // Check package compatibility
-    for (const packageId in this.packages) {
-      const info = this.packages[packageId]
-      for (const variantId in info.variants) {
-        const variant = info.variants[variantId]
-        if (variant) {
-          if (variantId === "nightmode=standard") {
-            variant.compatible =
-              !profile.settings.darknite && !packageGroups[packageId]?.includes("darknite")
-          } else if (variantId === "nightmode=dark") {
-            variant.compatible =
-              !!profile.settings.darknite || !!packageGroups[packageId]?.includes("darknite")
-          } else if (variantId === "CAM=yes") {
-            variant.compatible =
-              !!profile.settings.cam || !!packageGroups[packageId]?.includes("cam")
-          } else if (variantId === "CAM=no") {
-            variant.compatible = !profile.settings.cam && !packageGroups[packageId]?.includes("cam")
-          } else {
-            variant.compatible = true
-          }
-        }
-      }
-
-      if (!info.variants[info.status.variant]?.compatible) {
-        info.status.variant = getDefaultVariant(info)
-        this.setPackageVariantInConfig(info.id, info.status.variant)
-      }
-    }
-
-    this.markPackagesForUpdate()
-    this.processUpdates()
-  }
-
   protected setPackageVariantInConfig(packageId: string, variantId: string): void {
     const profile = this.getCurrentProfile()
     const info = this.getPackageInfo(packageId)
@@ -1148,7 +983,7 @@ export class Application {
 
       const config = profile.packages[packageId]
       const defaultVariant = getDefaultVariant(info)
-      if (variantId !== defaultVariant) {
+      if (variantId !== defaultVariant.id) {
         if (config) {
           changed = variantId !== config.variant
           config.variant = variantId
@@ -1267,7 +1102,7 @@ export class Application {
     const update: Partial<ApplicationState> = { loadStatus: this.loadStatus }
 
     if (this.update.packages) {
-      update.packageGroups = this.packageGroups
+      update.conflictGroups = this.conflictGroups
       update.packages = this.packages
       this.update.packages = false
       this.linkPackages()
@@ -1305,8 +1140,8 @@ export class Application {
 
     const entries = await fs.readdir(profilesPath, { withFileTypes: true })
     for (const entry of entries) {
-      const format = path.extname(entry.name)
-      if (entry.isFile() && this.configFormats.includes(format)) {
+      const format = path.extname(entry.name) as ConfigFormat
+      if (entry.isFile() && Object.values(ConfigFormat).includes(format)) {
         const profileId = path.basename(entry.name, format)
         const profilePath = path.join(profilesPath, entry.name)
         if (this.profiles[profileId]) {
@@ -1315,7 +1150,7 @@ export class Application {
         }
 
         try {
-          const profile = await this.readConfig<ProfileInfo>(profilePath)
+          const profile = await readConfig<ProfileInfo>(profilePath)
           profile.format = format
           profile.id = profileId
           profile.name ??= profileId
@@ -1337,7 +1172,7 @@ export class Application {
   protected async loadSettings(): Promise<Settings> {
     console.debug("Loading settings...")
 
-    const config = await this.loadConfig<Settings>(this.rootPath, this.filenames.settings)
+    const config = await this.loadConfig<Settings>(this.rootPath, FILENAMES.settings)
 
     this.settings = {
       format: config?.format,
@@ -1357,18 +1192,6 @@ export class Application {
     return this.settings
   }
 
-  // protected async updateSettings(update: Partial<Settings>): Promise<void> {
-  //   if (!this.settings) {
-  //     return
-  //   }
-
-  //   Object.assign(this.settings, update)
-
-  //   this.markSettingsForUpdate()
-
-  //   return this.writeSettings()
-  // }
-
   protected async writeProfile(profile: ProfileInfo): Promise<void> {
     if (this.tasks.writeProfiles.current) {
       const oldQueue = this.tasks.writeProfiles.queued
@@ -1382,10 +1205,11 @@ export class Application {
     console.debug(`Saving profile '${id}'...`)
 
     profile.format = this.getDefaultConfigFormat()
-    this.tasks.writeProfiles.current = this.writeConfig(
+    this.tasks.writeProfiles.current = writeConfig(
       this.getProfilesPath(),
       id,
       data,
+      profile.format,
       format,
     ).finally(() => {
       delete this.tasks.writeProfiles.current
@@ -1415,10 +1239,11 @@ export class Application {
     const { format, ...data } = this.settings
 
     this.settings.format = this.getDefaultConfigFormat()
-    this.tasks.writeSettings.current = this.writeConfig(
+    this.tasks.writeSettings.current = writeConfig(
       this.rootPath,
-      this.filenames.settings,
+      FILENAMES.settings,
       data,
+      this.settings.format,
       format,
     ).finally(() => {
       delete this.tasks.writeSettings.current
@@ -1434,62 +1259,15 @@ export class Application {
   protected async loadConfig<T>(
     basePath: string,
     filename: string,
-  ): Promise<{ data: T; format: string } | undefined> {
-    for (const format of this.configFormats) {
-      const fullPath = path.join(basePath, filename + format)
-      const raw = await readFileIfPresent(fullPath)
-      if (raw) {
-        const data = deserializeConfig<T>(raw, fullPath.endsWith(".json") ? "json" : "yaml")
-        return { data, format }
-      }
-    }
-  }
-
-  protected async readConfig<T>(fullPath: string): Promise<T> {
-    const raw = await readFile(fullPath)
-    return deserializeConfig<T>(raw, fullPath.endsWith(".json") ? "json" : "yaml")
-  }
-
-  protected async writeConfig<T>(
-    basePath: string,
-    filename: string,
-    data: T,
-    oldFormat?: string,
-  ): Promise<void> {
-    const newFormat = this.getDefaultConfigFormat()
-    const newPath = path.join(basePath, filename + newFormat)
-    const raw = serializeConfig(data, newFormat === ".json" ? "json" : "yaml")
-    await createIfMissing(path.dirname(newPath))
-    await writeFile(newPath, raw)
-    if (oldFormat && oldFormat !== newFormat) {
-      const oldPath = path.join(basePath, filename + oldFormat)
-      await removeIfPresent(oldPath)
-    }
+  ): Promise<{ data: T; format: ConfigFormat } | undefined> {
+    return loadConfig(basePath, filename)
   }
 
   protected async writePackageConfig(packageInfo: PackageInfo): Promise<void> {
-    await this.writeConfig(
+    await writePackageConfig(
       this.getPackagePath(packageInfo.id),
-      this.filenames.packageConfig,
-      {
-        name: packageInfo.name,
-        category: packageInfo.category,
-        docs: packageInfo.docs,
-        variants: Object.fromEntries(
-          Object.entries(packageInfo.variants)
-            .filter(([_, variant]) => !!variant?.installed)
-            .map(([id, variant]) => [
-              id,
-              {
-                dependencies: variant?.dependencies?.length ? variant.dependencies : undefined,
-                files: variant?.files?.length ? variant.files : undefined,
-                name: variant?.name,
-                version: variant?.installed,
-              },
-            ]),
-        ),
-      },
-      packageInfo.format,
+      packageInfo,
+      this.getDefaultConfigFormat(),
     )
   }
 
@@ -1526,32 +1304,37 @@ export class Application {
 
   protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
     if (!this.databaseUpdatePromise || force) {
-      console.log(
-        await getConfig({
-          dir: getDatabasePath(),
-          fs: fsSync,
-          path: "remote.origin.url",
-        }),
-      )
+      const repository = this.getDataRepository()
+      if (!isURL(repository)) {
+        return true
+      }
 
       this.databaseUpdatePromise = new Promise(resolve => {
-        console.info("Updating database...")
-        createChildProcess<unknown, { success?: boolean; error?: Error }>(childProcessPath, {
-          cwd: getDatabasePath(),
-          onClose() {
-            console.warn("Failed updating database:", "closed")
-            resolve(false)
-          },
-          onMessage({ success, error }) {
-            if (success) {
-              console.info("Updated database")
-              resolve(true)
-            } else {
-              console.warn("Failed updating database:", error)
+        const branch = env.DATA_BRANCH || "main"
+        console.info(`Updating database from ${repository}/${branch}...`)
+        createChildProcess<UpdateDatabaseProcessData, {}, UpdateDatabaseProcessResponse>(
+          updateDatabaseProcessPath,
+          {
+            cwd: this.getDatabasePath(),
+            data: {
+              branch,
+              origin: repository,
+            },
+            onClose() {
+              console.warn("Failed updating database:", "closed")
               resolve(false)
-            }
+            },
+            onMessage({ success, error }) {
+              if (success) {
+                console.info("Updated database")
+                resolve(true)
+              } else {
+                console.warn("Failed updating database:", error)
+                resolve(false)
+              }
+            },
           },
-        })
+        )
       })
     }
 

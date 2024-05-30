@@ -4,11 +4,14 @@ import path from "path"
 import { clone, currentBranch, fastForward, getConfig } from "isomorphic-git"
 import http from "isomorphic-git/http/node"
 
-import { AbstractChildProcess } from "./AbstractChildProcess"
+import { ChildProcess } from "../utils"
 
-export default class ChildProcess extends AbstractChildProcess<
-  unknown,
-  { success?: boolean; error?: Error }
+import { UpdateDatabaseProcessData, UpdateDatabaseProcessResponse } from "./types"
+
+export default class UpdateDatabaseProcess extends ChildProcess<
+  UpdateDatabaseProcessData,
+  {},
+  UpdateDatabaseProcessResponse
 > {
   protected onMessage(data: unknown): void {
     console.log(`Message from parent: ${data}`)
@@ -16,12 +19,10 @@ export default class ChildProcess extends AbstractChildProcess<
 
   protected async run(): Promise<void> {
     try {
-      const dir = process.cwd()
+      const { branch, origin } = this.data
 
-      // TODO: Make these configurable?
-      const origin = "https://github.com/memo33/sc4pac" // TODO: https://github.com/Salinco96/sc4-plugin-manager-data.git
+      const dir = process.cwd()
       const remote = "origin"
-      const branch = "main"
 
       let exists = false
 
@@ -78,4 +79,4 @@ export default class ChildProcess extends AbstractChildProcess<
   }
 }
 
-ChildProcess.execute()
+UpdateDatabaseProcess.execute()

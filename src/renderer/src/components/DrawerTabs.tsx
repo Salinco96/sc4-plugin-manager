@@ -1,23 +1,26 @@
 import { Fragment, useCallback, useMemo } from "react"
 
-import { Badge } from "@mui/material"
-import Divider from "@mui/material/Divider"
-import List from "@mui/material/List"
-import ListItem from "@mui/material/ListItem"
-import ListItemButton from "@mui/material/ListItemButton"
-import ListItemIcon from "@mui/material/ListItemIcon"
-import ListItemText from "@mui/material/ListItemText"
-import ListSubheader from "@mui/material/ListSubheader"
-import Tooltip from "@mui/material/Tooltip"
+import {
+  Badge,
+  Divider,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  ListSubheader,
+  Tooltip,
+} from "@mui/material"
 
 import { Page } from "@renderer/pages"
-import { history, useLocation } from "@renderer/stores/navigation"
 import { TabInfo, tabs } from "@renderer/tabs"
+import { useHistory, useLocation } from "@renderer/utils/navigation"
 import { useStore, useStoreActions } from "@renderer/utils/store"
 
 export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX.Element {
   const actions = useStoreActions()
   const count = useStore(store => tab.badgeCount?.(store) ?? 0)
+  const history = useHistory()
 
   const setActiveTab = useCallback(
     (tab: TabInfo) => {
@@ -28,7 +31,7 @@ export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX
         }
       }
     },
-    [actions, isActive],
+    [actions, history, isActive],
   )
 
   const button = (

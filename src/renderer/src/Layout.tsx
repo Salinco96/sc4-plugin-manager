@@ -1,9 +1,6 @@
 import { ReactNode } from "react"
 
-import Box from "@mui/material/Box"
-import Drawer from "@mui/material/Drawer"
-import { styled } from "@mui/material/styles"
-import Toolbar from "@mui/material/Toolbar"
+import { Box, Drawer, styled, Toolbar } from "@mui/material"
 
 import { AppBar } from "./components/AppBar"
 import { DrawerTabs } from "./components/DrawerTabs"

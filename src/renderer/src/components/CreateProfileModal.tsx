@@ -1,23 +1,25 @@
 import { useState } from "react"
 
-import HelpIcon from "@mui/icons-material/HelpOutline"
-import Button from "@mui/material/Button"
-import Dialog from "@mui/material/Dialog"
-import DialogActions from "@mui/material/DialogActions"
-import DialogContent from "@mui/material/DialogContent"
-import DialogContentText from "@mui/material/DialogContentText"
-import DialogTitle from "@mui/material/DialogTitle"
-import Divider from "@mui/material/Divider"
-import FormControl from "@mui/material/FormControl"
-import FormHelperText from "@mui/material/FormHelperText"
-import Icon from "@mui/material/Icon"
-import InputAdornment from "@mui/material/InputAdornment"
-import InputLabel from "@mui/material/InputLabel"
-import ListSubheader from "@mui/material/ListSubheader"
-import MenuItem from "@mui/material/MenuItem"
-import Select from "@mui/material/Select"
-import TextField from "@mui/material/TextField"
-import Tooltip from "@mui/material/Tooltip"
+import { HelpOutline as HelpIcon } from "@mui/icons-material"
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Divider,
+  FormControl,
+  FormHelperText,
+  Icon,
+  InputAdornment,
+  InputLabel,
+  ListSubheader,
+  MenuItem,
+  Select,
+  TextField,
+  Tooltip,
+} from "@mui/material"
 
 import { createUniqueProfileId } from "@common/profiles"
 import { ProfileInfo } from "@common/types"
