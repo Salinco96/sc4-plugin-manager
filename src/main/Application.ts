@@ -634,6 +634,13 @@ export class Application {
           .map(([packageId, variantId]) => this.installSinglePackage(packageId, variantId)),
       )
 
+      const currentProfile = this.getCurrentProfile()
+      if (currentProfile) {
+        calculatePackageCompatibility(this.packages!, currentProfile.settings)
+        this.markPackagesForUpdate()
+        this.processUpdates()
+      }
+
       this.linkPackages()
       return true
     } catch (error) {
@@ -815,6 +822,11 @@ export class Application {
           await this.writePackageConfig(info)
         } else {
           await removeIfPresent(this.getPackagePath(packageId))
+        }
+
+        const currentProfile = this.getCurrentProfile()
+        if (currentProfile) {
+          calculatePackageCompatibility(this.packages!, currentProfile.settings)
         }
 
         this.markPackagesForUpdate()

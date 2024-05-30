@@ -508,6 +508,10 @@ export function mergeLocalPackageInfo(
     }
   }
 
+  for (const variantId in remotePackageInfo.variants) {
+    localPackageInfo.variants[variantId] ??= remotePackageInfo.variants[variantId]
+  }
+
   return localPackageInfo
 }
 
@@ -645,14 +649,6 @@ export function calculatePackageCompatibility(
     }
   }
 
-  if (settings.cam) {
-    conflictGroups.cam ??= ["<external>"]
-  }
-
-  if (settings.darknite) {
-    conflictGroups.darknite ??= ["<external>"]
-  }
-
   // Check conflict groups
   for (const conflictGroup in conflictGroups) {
     const packageIds = conflictGroups[conflictGroup]
@@ -662,6 +658,14 @@ export function calculatePackageCompatibility(
         `Multiple enabled packages with conflict group '${conflictGroup}': ${packageIds.join(", ")}`,
       )
     }
+  }
+
+  if (settings.cam) {
+    conflictGroups.cam ??= ["<external>"]
+  }
+
+  if (settings.darknite) {
+    conflictGroups.darknite ??= ["<external>"]
   }
 
   // Check requirements
@@ -682,6 +686,9 @@ export function calculatePackageCompatibility(
     if (cached !== undefined) {
       return cached
     }
+
+    // Treated as compatible case of circular dependency
+    cache.set(packageInfo.id, true)
 
     let packageCompatible = false
 
@@ -716,6 +723,28 @@ export function calculatePackageCompatibility(
       }
 
       packageCompatible ||= !variantInfo.incompatible
+
+      delete variantInfo.issues
+      if (packageInfo.status.enabled && packageInfo.status.variantId === variantId) {
+        const issues: string[] = []
+
+        if (!variantInfo.installed) {
+          if (Object.values(packageInfo.variants).some(variant => variant.installed)) {
+            issues.push("The selected variant is not installed.")
+          } else {
+            issues.push("This package is not installed.")
+          }
+        }
+
+        if (variantInfo.incompatible) {
+          issues.push(...variantInfo.incompatible)
+          delete variantInfo.incompatible
+        }
+
+        if (issues.length) {
+          variantInfo.issues = issues
+        }
+      }
     }
 
     cache.set(packageInfo.id, packageCompatible)

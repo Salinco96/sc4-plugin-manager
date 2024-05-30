@@ -95,6 +95,11 @@ export const PackageListItem = memo(function PackageListItem({
             <b>Incompatible:</b> {reason}
           </PackageListItemBanner>
         ))}
+        {variantInfo.issues?.map(reason => (
+          <PackageListItemBanner key={reason}>
+            <b>Problem:</b> {reason}
+          </PackageListItemBanner>
+        ))}
         {variantInfo.update && (
           <PackageListItemBanner icon={<UpdateIcon />}>
             <b>Outdated:</b> A new version of this package is available.

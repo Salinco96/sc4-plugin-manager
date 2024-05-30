@@ -17,6 +17,7 @@ export function PackageList(): JSX.Element {
   const packageFilters = useStore(store => store.packageFilters)
   const history = useHistory()
 
+  // TODO: Messy filtering - should be moved to Zustand
   const filteredPackages = useMemo(() => {
     let packages = Object.values(allPackages || {})
 
@@ -84,6 +85,7 @@ export function PackageList(): JSX.Element {
 
         if (packageInfo) {
           const variantInfo = packageInfo.variants[packageInfo.status.variantId]
+
           if (variantInfo.deprecated) {
             size += PACKAGE_LIST_ITEM_BANNER_SIZE
           }
@@ -96,10 +98,15 @@ export function PackageList(): JSX.Element {
             size += PACKAGE_LIST_ITEM_BANNER_SIZE * variantInfo.incompatible.length
           }
 
+          if (variantInfo.issues) {
+            size += PACKAGE_LIST_ITEM_BANNER_SIZE * variantInfo.issues.length
+          }
+
           if (variantInfo.update) {
             size += PACKAGE_LIST_ITEM_BANNER_SIZE
           }
 
+          // We expect most packages to have a description so that is pre-included in base size
           if (!variantInfo.description) {
             size -= PACKAGE_LIST_ITEM_DESCRIPTION_SIZE
           }
