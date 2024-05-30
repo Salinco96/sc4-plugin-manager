@@ -1166,6 +1166,7 @@ export class Application {
           profile.format = format
           profile.id = profileId
           profile.name ??= profileId
+          profile.packages ??= {}
           profile.settings = { ...defaultProfileSettings, ...profile.settings }
           this.profiles[profileId] = profile
           this.markProfileForUpdate(profile)

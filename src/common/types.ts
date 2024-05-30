@@ -121,6 +121,7 @@ export enum PackageCategory {
 
 export enum PackageState {
   DEPENDENCY = "dependency",
+  DEPRECATED = "deprecated",
   DISABLED = "disabled",
   ENABLED = "enabled",
   ERROR = "error",
@@ -215,12 +216,14 @@ export function getDefaultVariant(info: PackageInfo): VariantInfo {
 }
 
 export function getState(info: PackageInfo, state: PackageState, profile?: ProfileInfo): boolean {
-  const config = profile?.packages?.[info.id]
   const variant = info.variants[info.status.variantId]
 
   switch (state) {
     case PackageState.DEPENDENCY:
-      return !!profile && !!info.status.enabled && !config?.enabled
+      return !!profile && !!info.status.enabled && !profile.packages[info.id]?.enabled
+
+    case PackageState.DEPRECATED:
+      return !!variant?.deprecated
 
     case PackageState.DISABLED:
       return !!profile && !!variant?.installed && !info.status.enabled
