@@ -229,13 +229,13 @@ export function getState(info: PackageInfo, state: PackageState, profile?: Profi
       return !!profile && !!info.status.enabled
 
     case PackageState.ERROR:
-      return !!profile && !!info.status.enabled && (!variant?.installed || !!variant?.incompatible) // TODO: More errors
+      return !!variant?.issues?.length
 
     case PackageState.EXPERIMENTAL:
       return !!variant?.experimental
 
     case PackageState.INCOMPATIBLE:
-      return !!variant?.incompatible
+      return !!variant?.incompatible?.length
 
     case PackageState.INSTALLED:
       return !!variant?.installed
