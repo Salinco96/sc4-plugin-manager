@@ -9,15 +9,36 @@ import { glob } from "glob"
 import { Open } from "unzipper"
 
 import { createIfMissing, removeIfPresent } from "./files"
+import { SIMTROPOLIS_ORIGIN, SimtropolisSession } from "./sessions/simtropolis"
 
-export async function download(key: string, url: string, downloadPath: string): Promise<void> {
+export async function download(
+  key: string,
+  url: string,
+  downloadPath: string,
+  sessions: {
+    simtropolis?: SimtropolisSession | null
+  },
+): Promise<void> {
+  const { origin } = new URL(url)
+
   console.debug(`Downloading ${key} from ${url}...`)
 
-  // TODO: Authenticate to Simtropolis to avoid daily limits
-  const response = await fetch(url)
+  const headers = new Headers()
+
+  if (origin === SIMTROPOLIS_ORIGIN && sessions.simtropolis) {
+    const cookies = Object.entries(sessions.simtropolis)
+      .map(([name, value]) => `${name}=${value}`)
+      .join(";")
+
+    headers.set("Cookie", cookies)
+  }
+
+  const response = await fetch(url, { headers })
 
   const contentDisposition = response.headers.get("Content-Disposition")
   const contentType = response.headers.get("Content-Type")
+
+  // TODO: Detect Simtropolis daily limit and request for login
 
   if (!response.ok) {
     // Log JSON response (may be an error response)

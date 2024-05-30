@@ -3,19 +3,20 @@ import { ReactNode, useEffect } from "react"
 import { useStore, useStoreActions } from "@renderer/utils/store"
 
 export function DataProvider({ children }: { children: ReactNode }): JSX.Element {
-  const isDownloading = useStore(store => store.ongoingDownloads.length !== 0)
-  const isExtracting = useStore(store => store.ongoingExtracts.length !== 0)
-  const isLoading = useStore(store => store.loadStatus !== null)
+  const isDownloading = useStore(store => !!store.status?.ongoingDownloads.length)
+  const isExtracting = useStore(store => !!store.status?.ongoingExtracts.length)
+  const isLinking = useStore(store => !!store.status?.linker)
+  const isLoading = useStore(store => !!store.status?.loader)
 
   const actions = useStoreActions()
 
   useEffect(() => window.api.subscribe(actions), [actions])
 
   useEffect(() => {
-    if (isLoading) {
+    if (isLinking || isLoading) {
       actions.openSnackbar("load-progress", {})
     }
-  }, [isLoading])
+  }, [isLinking, isLoading])
 
   useEffect(() => {
     if (isDownloading || isExtracting) {

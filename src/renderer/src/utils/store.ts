@@ -4,7 +4,7 @@ import { create } from "zustand"
 
 import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
-import { ApplicationState } from "@common/state"
+import { ApplicationState, ApplicationStatus, initialState } from "@common/state"
 import {
   PackageCategory,
   PackageInfo,
@@ -40,6 +40,8 @@ export interface StoreActions {
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
+  simtropolisLogin(): Promise<void>
+  simtropolisLogout(): Promise<void>
   switchProfile(profileId: string): Promise<boolean>
   updateState(update: Partial<ApplicationState>): void
 }
@@ -49,14 +51,11 @@ export interface Store {
   conflictGroups?: {
     [groupId: string]: string[]
   }
-  loadStatus: string | null
   modal?: {
     action: (result: boolean) => void
     data: ModalData<ModalID>
     id: ModalID
   }
-  ongoingDownloads: string[]
-  ongoingExtracts: string[]
   packageFilters: PackageFilters
   packages?: {
     [packageId: string]: PackageInfo
@@ -64,10 +63,16 @@ export interface Store {
   profiles?: {
     [profileId: string]: ProfileInfo
   }
+  sessions: {
+    simtropolis: {
+      userId?: string | null
+    }
+  }
   settings?: Settings
   snackbars: {
     [type in SnackbarType]?: SnackbarKey
   }
+  status: ApplicationStatus
 }
 
 export const useStore = create<Store>()((set, get): Store => {
@@ -133,6 +138,14 @@ export const useStore = create<Store>()((set, get): Store => {
           set({ modal: undefined })
         }
       },
+      async simtropolisLogin(): Promise<void> {
+        updateState({ sessions: { simtropolis: { $set: {} } } })
+        return window.api.simtropolisLogin()
+      },
+      async simtropolisLogout(): Promise<void> {
+        updateState({ sessions: { simtropolis: { $set: {} } } })
+        return window.api.simtropolisLogout()
+      },
       async switchProfile(profileId) {
         return window.api.switchProfile(profileId)
       },
@@ -143,18 +156,6 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ conflictGroups: { $set: data.conflictGroups } })
         }
 
-        if (data.loadStatus !== undefined) {
-          updateState({ loadStatus: { $set: data.loadStatus } })
-        }
-
-        if (data.ongoingDownloads) {
-          updateState({ ongoingDownloads: { $set: data.ongoingDownloads } })
-        }
-
-        if (data.ongoingExtracts) {
-          updateState({ ongoingExtracts: { $set: data.ongoingExtracts } })
-        }
-
         if (data.packages) {
           updateState({ packages: packages => ({ ...packages, ...data.packages }) })
         }
@@ -163,14 +164,20 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ profiles: profiles => ({ ...profiles, ...data.profiles }) })
         }
 
+        if (data.sessions) {
+          updateState({ sessions: sessions => ({ ...sessions, ...data.sessions }) })
+        }
+
         if (data.settings) {
           updateState({ settings: { $set: data.settings } })
         }
+
+        if (data.status) {
+          updateState({ status: { $set: data.status } })
+        }
       },
     },
-    loadStatus: null,
-    ongoingDownloads: [],
-    ongoingExtracts: [],
+    ...initialState,
     packageFilters: {
       categories: [],
       dependencies: false,

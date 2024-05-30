@@ -12,6 +12,8 @@ import {
   Toolbar,
   Tooltip,
   Typography,
+  Button,
+  CircularProgress,
 } from "@mui/material"
 
 import { ProfileInfo } from "@common/types"
@@ -52,6 +54,7 @@ export function AppBar(): JSX.Element {
   const currentProfile = useCurrentProfile()
   const profiles = useStore(store => store.profiles)
   const settings = useStore(store => store.settings)
+  const userId = useStore(store => store.sessions.simtropolis.userId)
 
   const isLoadingProfiles = profiles === undefined
   const hasProfiles = profiles && Object.keys(profiles).length !== 0
@@ -176,6 +179,31 @@ export function AppBar(): JSX.Element {
             </>
           )}
         </Box>
+
+        {userId === undefined && <CircularProgress color="inherit" size={24} />}
+
+        {userId === null && (
+          <Tooltip title="Simtropolis has a daily limit of 20 downloads for anonymous users. Sign it to bypass the limit.">
+            <Button color="inherit" onClick={actions.simtropolisLogin} variant="outlined">
+              Sign In
+            </Button>
+          </Tooltip>
+        )}
+
+        {userId && (
+          <>
+            <Tooltip title="Simtropolis user ID">
+              <Typography variant="body1" color="inherit" noWrap sx={{ marginRight: 2 }}>
+                User ID: {userId}
+              </Typography>
+            </Tooltip>
+            <Tooltip title="Sign out of Simtropolis">
+              <Button color="inherit" onClick={actions.simtropolisLogout} variant="outlined">
+                Sign Out
+              </Button>
+            </Tooltip>
+          </>
+        )}
 
         <CreateProfileModal onClose={() => setCreating(false)} open={isCreating} />
       </Toolbar>

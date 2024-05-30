@@ -1,5 +1,5 @@
 import { exec as cmd } from "child_process"
-import { app, ipcMain, net, protocol } from "electron/main"
+import { Session, app, ipcMain, net, protocol, session } from "electron/main"
 import fs from "fs/promises"
 import path from "path"
 import { pathToFileURL } from "url"
@@ -15,7 +15,7 @@ import {
   createUniqueProfileId,
   defaultProfileSettings,
 } from "@common/profiles"
-import { ApplicationState } from "@common/state"
+import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
   AssetInfo,
   ConfigFormat,
@@ -24,6 +24,13 @@ import {
   Settings,
   getDefaultVariant,
 } from "@common/types"
+import { pick } from "@common/utils/types"
+import {
+  SimtropolisSession,
+  getSimtropolisSession,
+  simtropolisLogin,
+  simtropolisLogout,
+} from "@utils/sessions/simtropolis"
 
 import {
   calculatePackageCompatibility,
@@ -77,24 +84,24 @@ export interface Task<T = void> {
 
 export class Application {
   public assets?: { [assetId: string]: AssetInfo }
-  public loadStatus: string | null = null
   public conflictGroups?: { [groupId: string]: string[] }
   public packages?: { [packageId: string]: PackageInfo }
   public profiles?: { [profileId: string]: ProfileInfo }
+  public sessions: { simtropolis?: SimtropolisSession | null } = {}
   public settings?: Settings
-
-  public update: {
-    packages: boolean | string[]
-    profiles: string[]
-    settings: boolean
-  } = {
-    packages: false,
-    profiles: [],
-    settings: false,
+  public status: ApplicationStatus = {
+    linker: null,
+    loader: null,
+    ongoingDownloads: [],
+    ongoingExtracts: [],
   }
+
+  public updateFields: (keyof ApplicationState)[] = []
 
   public mainWindow?: MainWindow
   public splashScreen?: SplashScreen
+
+  public readonly browserSession: Session = session.defaultSession
 
   public readonly gamePath: string
   public readonly rootPath: string
@@ -127,6 +134,16 @@ export class Application {
 
     this.initialize()
 
+    getSimtropolisSession(this.browserSession).then(session => {
+      if (session) {
+        console.info("Logged in to Simtropolis")
+        this.sessions.simtropolis = session
+        this.sendStateUpdates("sessions")
+      } else {
+        this.sessions.simtropolis = null
+      }
+    })
+
     // Custom protocol to load package docs in sandboxed iframe
     protocol.handle("docs", req => {
       const { pathname } = new URL(req.url)
@@ -157,6 +174,8 @@ export class Application {
     this.handle("openPackageFileInExplorer")
     this.handle("removePackages")
     this.handle("setPackageVariant")
+    this.handle("simtropolisLogin")
+    this.handle("simtropolisLogout")
     this.handle("switchProfile")
 
     // Create main window
@@ -329,16 +348,18 @@ export class Application {
     return this.profiles?.[profileId]
   }
 
-  public async getState(): Promise<ApplicationState> {
+  public getState(): ApplicationState {
     return {
-      linking: false,
-      loadStatus: this.loadStatus,
-      ongoingDownloads: this.tasks.download.ongoingTasks,
-      ongoingExtracts: this.tasks.extract.ongoingTasks,
       conflictGroups: this.conflictGroups,
       packages: this.packages,
       profiles: this.profiles,
+      sessions: {
+        simtropolis: {
+          userId: this.sessions.simtropolis && this.sessions.simtropolis.userId,
+        },
+      },
       settings: this.settings,
+      status: this.status,
     }
   }
 
@@ -369,32 +390,34 @@ export class Application {
     await fs.mkdir(this.getPackagesPath(), { recursive: true })
 
     // Load profiles...
-    this.loadStatus = "Loading profiles..."
-    this.processUpdates()
+    this.status.loader = "Loading profiles..."
+    this.sendStateUpdates("status")
     const profiles = await this.loadProfiles()
+    this.sendStateUpdates("profiles")
 
     // Load settings...
-    this.loadStatus = "Loading settings..."
-    this.processUpdates()
+    this.status.loader = "Loading settings..."
+    this.sendStateUpdates("status")
     const settings = await this.loadSettings()
+    this.sendStateUpdates("settings")
 
     const currentProfile = settings.currentProfile ? profiles[settings.currentProfile] : undefined
 
     // Load local packages...
-    this.loadStatus = "Loading packages..."
-    this.processUpdates()
+    this.status.loader = "Loading packages..."
+    this.sendStateUpdates("status")
     const localPackages = await loadLocalPackages(this.getPackagesPath())
     this.packages = localPackages
-    this.markPackagesForUpdate()
+    this.sendStateUpdates("packages")
 
     // Wait for database update...
-    this.loadStatus = "Updating database..."
-    this.processUpdates()
+    this.status.loader = "Updating database..."
+    this.sendStateUpdates("status")
     await databaseUpdatePromise
 
     // Load remote packages...
-    this.loadStatus = "Loading packages..."
-    this.processUpdates()
+    this.status.loader = "Loading packages..."
+    this.sendStateUpdates("status")
     const { assets, packages } = await loadRemotePackages(this.getDatabasePath())
     this.assets = assets
     this.packages = packages
@@ -410,23 +433,22 @@ export class Application {
       }
     }
 
-    this.markPackagesForUpdate()
+    this.sendStateUpdates("packages")
 
     if (currentProfile) {
-      this.loadStatus = "Resolving dependencies..."
-      this.processUpdates()
+      this.status.loader = "Resolving dependencies..."
+      this.sendStateUpdates("status")
 
       checkoutPackages(this.packages, currentProfile)
-      this.markPackagesForUpdate()
-      this.processUpdates()
+      this.sendStateUpdates("packages")
 
-      calculatePackageCompatibility(this.packages, currentProfile.settings)
-      this.markPackagesForUpdate()
+      this.calculatePackageCompatibility()
+      this.sendStateUpdates()
     }
 
     // Done
-    this.loadStatus = null
-    this.processUpdates()
+    this.status.loader = null
+    this.sendStateUpdates("status")
   }
 
   public async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
@@ -455,7 +477,7 @@ export class Application {
     }
 
     this.profiles[profile.id] = profile
-    this.markProfileForUpdate(profile)
+    this.sendStateUpdates("profiles")
 
     return this.switchProfile(profile.id)
   }
@@ -500,9 +522,9 @@ export class Application {
       disableRecursively(packageId)
     }
 
-    calculatePackageCompatibility(this.packages, currentProfile.settings)
-    this.markPackagesForUpdate()
-    this.processUpdates()
+    this.calculatePackageCompatibility()
+    this.markForUpdate("profiles")
+    this.sendStateUpdates()
 
     return true
   }
@@ -519,14 +541,14 @@ export class Application {
 
     if (data.settings) {
       Object.assign(profile.settings, data.settings)
+
       if (this.packages) {
-        calculatePackageCompatibility(this.packages, profile.settings)
-        this.markPackagesForUpdate()
+        this.calculatePackageCompatibility()
       }
     }
 
-    this.markProfileForUpdate(profile)
-    this.processUpdates()
+    this.markForUpdate("profiles")
+    this.sendStateUpdates()
 
     return true
   }
@@ -583,9 +605,8 @@ export class Application {
       enableRecursively(packageId)
     }
 
-    calculatePackageCompatibility(this.packages, currentProfile.settings)
-    this.markPackagesForUpdate()
-    this.processUpdates()
+    this.calculatePackageCompatibility()
+    this.sendStateUpdates()
 
     return true
   }
@@ -636,10 +657,11 @@ export class Application {
 
       const currentProfile = this.getCurrentProfile()
       if (currentProfile) {
-        calculatePackageCompatibility(this.packages!, currentProfile.settings)
-        this.markPackagesForUpdate()
-        this.processUpdates()
+        this.calculatePackageCompatibility()
       }
+
+      this.markForUpdate("packages")
+      this.sendStateUpdates()
 
       this.linkPackages()
       return true
@@ -664,7 +686,7 @@ export class Application {
       const variantKey = `${packageId}#${variantId}`
 
       variantInfo.action = "installing"
-      this.sendPackageUpdate(packageInfo)
+      this.sendStateUpdates("packages")
 
       await this.tasks.install.queue(variantKey, async () => {
         const variantPath = this.getVariantPath(packageId, variantId)
@@ -766,7 +788,7 @@ export class Application {
       })
     } finally {
       delete variantInfo.action
-      this.sendPackageUpdate(packageInfo)
+      this.sendStateUpdates("packages")
     }
   }
 
@@ -778,7 +800,9 @@ export class Application {
 
       const downloaded = await exists(downloadPath)
       if (!downloaded) {
-        await this.tasks.download.queue(key, () => download(key, assetInfo.url, downloadPath))
+        await this.tasks.download.queue(key, () =>
+          download(key, assetInfo.url, downloadPath, this.sessions),
+        )
       }
 
       await this.tasks.extract.queue(key, () => extract(downloadPath))
@@ -826,11 +850,11 @@ export class Application {
 
         const currentProfile = this.getCurrentProfile()
         if (currentProfile) {
-          calculatePackageCompatibility(this.packages!, currentProfile.settings)
+          this.calculatePackageCompatibility()
         }
 
-        this.markPackagesForUpdate()
-        this.processUpdates()
+        this.markForUpdate("packages")
+        this.sendStateUpdates()
         return true
       } catch (error) {
         console.error(error)
@@ -859,12 +883,12 @@ export class Application {
     info.status.variantId = variantId
 
     if (currentProfile) {
-      calculatePackageCompatibility(this.packages!, currentProfile.settings)
+      this.setPackageVariantInConfig(packageId, variantId)
+      this.calculatePackageCompatibility()
     }
 
-    this.markPackagesForUpdate()
-    this.setPackageVariantInConfig(packageId, variantId)
-    this.processUpdates()
+    this.markForUpdate("packages")
+    this.sendStateUpdates()
 
     return true
   }
@@ -876,13 +900,40 @@ export class Application {
     }
 
     this.settings.currentProfile = profileId
-    this.markSettingsForUpdate()
     checkoutPackages(this.packages, profile)
-    calculatePackageCompatibility(this.packages, profile.settings)
-    // this.calculatePackages()
-    this.processUpdates()
+    this.calculatePackageCompatibility()
+    this.markForUpdate("settings")
+    this.sendStateUpdates()
 
     return true
+  }
+
+  protected calculatePackageCompatibility(): void {
+    const profile = this.getCurrentProfile()
+    if (this.packages && profile) {
+      const { conflictGroups } = calculatePackageCompatibility(this.packages, profile.settings)
+      this.conflictGroups = conflictGroups
+      this.markForUpdate("conflictGroups")
+      this.markForUpdate("packages")
+    }
+  }
+
+  public async simtropolisLogin(): Promise<void> {
+    const session = await simtropolisLogin(this.browserSession)
+    if (session) {
+      console.info("Logged in to Simtropolis")
+      this.sessions.simtropolis = session
+      this.sendStateUpdates("sessions")
+    } else {
+      this.sessions.simtropolis = null
+    }
+  }
+
+  public async simtropolisLogout(): Promise<void> {
+    await simtropolisLogout(this.browserSession)
+    console.info("Logged out from Simtropolis")
+    this.sessions.simtropolis = null
+    this.sendStateUpdates("sessions")
   }
 
   protected async linkPackages(): Promise<void> {
@@ -991,29 +1042,22 @@ export class Application {
     const profile = this.getCurrentProfile()
     const info = this.getPackageInfo(packageId)
     if (info && profile) {
-      let changed = false
-
       const config = profile.packages[packageId]
       const defaultVariant = getDefaultVariant(info)
       if (variantId !== defaultVariant.id) {
         if (config) {
-          changed = variantId !== config.variant
           config.variant = variantId
         } else {
-          changed = true
           profile.packages[packageId] = { variant: variantId }
         }
       } else if (config) {
-        changed = true
         delete config.variant
         if (Object.keys(config).length === 0) {
           delete profile.packages[packageId]
         }
       }
 
-      if (changed) {
-        this.markProfileForUpdate(profile)
-      }
+      this.markForUpdate("profiles")
     }
   }
 
@@ -1021,28 +1065,21 @@ export class Application {
     const profile = this.getCurrentProfile()
     const info = this.getPackageInfo(packageId)
     if (info && profile) {
-      let changed = false
-
       const config = profile.packages[packageId]
       if (enabled) {
         if (config) {
-          changed = !config.enabled
           config.enabled = true
         } else {
-          changed = true
           profile.packages[packageId] = { enabled: true }
         }
       } else if (config) {
-        changed = true
         delete config.enabled
         if (Object.keys(config).length === 0) {
           delete profile.packages[packageId]
         }
       }
 
-      if (changed) {
-        this.markProfileForUpdate(profile)
-      }
+      this.markForUpdate("profiles")
     }
   }
 
@@ -1050,95 +1087,46 @@ export class Application {
     const profile = this.getCurrentProfile()
     if (profile && profile.settings[setting] !== value) {
       profile.settings[setting] = value
-      this.markProfileForUpdate(profile)
+      this.markForUpdate("profiles")
       return true
     } else {
       return false
     }
   }
 
-  protected markPackagesForUpdate(packageIds?: string[]): void {
-    if (packageIds) {
-      if (this.update.packages) {
-        if (this.update.packages !== true) {
-          this.update.packages.push(...packageIds)
-        }
-      } else {
-        this.update.packages = packageIds
-      }
-    } else {
-      this.update.packages = true
-    }
+  protected markForUpdate(field: keyof ApplicationState): void {
+    this.updateFields.push(field)
   }
 
-  protected markProfileForUpdate(profile: ProfileInfo): void {
-    this.update.profiles.push(profile.id)
-  }
-
-  protected markSettingsForUpdate(): void {
-    this.update.settings = true
-  }
-
-  protected sendPackageUpdate(packageInfo: PackageInfo): void {
-    this.mainWindow?.webContents.postMessage("updateState", {
-      packages: {
-        [packageInfo.id]: packageInfo,
-      },
-    })
-  }
-
-  protected sendStatusUpdate(status: string | null): void {
-    this.mainWindow?.webContents.postMessage("updateState", { loadStatus: status })
+  protected sendStateUpdates(field?: keyof ApplicationState): void {
+    const data = pick(this.getState(), field ? [field] : this.updateFields)
+    this.mainWindow?.webContents.postMessage("updateState", data)
+    this.updateFields = field ? this.updateFields : []
   }
 
   protected onDownloadTaskUpdate(ongoingDownloads: string[]): void {
-    this.mainWindow?.webContents.postMessage("updateState", { ongoingDownloads })
+    this.status.ongoingDownloads = ongoingDownloads
+    this.sendStateUpdates("status")
   }
 
   protected onExtractTaskUpdate(ongoingExtracts: string[]): void {
-    this.mainWindow?.webContents.postMessage("updateState", { ongoingExtracts })
+    this.status.ongoingExtracts = ongoingExtracts
+    this.sendStateUpdates("status")
   }
 
   protected onLinkTaskUpdate(ongoingTasks: string[]): void {
-    this.mainWindow?.webContents.postMessage("updateState", {
-      linking: !!ongoingTasks.length,
-      loadStatus:
-        {
-          link: "Linking packages...",
-          init: "Initializing...",
-        }[ongoingTasks[0]] ?? null,
-    })
-  }
-
-  protected processUpdates(): void {
-    const update: Partial<ApplicationState> = { loadStatus: this.loadStatus }
-
-    if (this.update.packages) {
-      update.conflictGroups = this.conflictGroups
-      update.packages = this.packages
-      this.update.packages = false
-      this.linkPackages()
+    switch (ongoingTasks[0]) {
+      case "init":
+        this.status.linker = "Initializing..."
+        break
+      case "link":
+        this.status.linker = "Linking packages..."
+        break
+      default:
+        this.status.linker = null
     }
 
-    if (this.update.profiles.length) {
-      update.profiles = {}
-      for (const profileId of this.update.profiles) {
-        const profile = this.getProfileInfo(profileId)
-        if (profile) {
-          update.profiles[profileId] = profile
-          this.writeProfile(profile)
-        }
-      }
-      this.update.profiles = []
-    }
-
-    if (this.update.settings) {
-      update.settings = this.settings
-      this.update.settings = false
-      this.writeSettings()
-    }
-
-    this.mainWindow?.webContents.postMessage("updateState", update)
+    this.sendStateUpdates("status")
   }
 
   protected async loadProfiles(): Promise<{ [id: string]: ProfileInfo }> {
@@ -1169,7 +1157,6 @@ export class Application {
           profile.packages ??= {}
           profile.settings = { ...defaultProfileSettings, ...profile.settings }
           this.profiles[profileId] = profile
-          this.markProfileForUpdate(profile)
           nProfiles++
         } catch (error) {
           console.warn(`Invalid profile configuration '${entry.name}'`, error)
@@ -1178,6 +1165,8 @@ export class Application {
     }
 
     console.debug(`Loaded ${nProfiles} profiles`)
+
+    this.markForUpdate("profiles")
 
     return this.profiles
   }
@@ -1200,7 +1189,7 @@ export class Application {
       this.settings.currentProfile = profileIds[0]
     }
 
-    this.markSettingsForUpdate()
+    this.markForUpdate("settings")
 
     return this.settings
   }
@@ -1231,6 +1220,8 @@ export class Application {
         delete this.tasks.writeProfiles.queued
       }
     })
+
+    this.markForUpdate("profiles")
 
     return this.tasks.writeSettings.current
   }
@@ -1266,6 +1257,8 @@ export class Application {
       }
     })
 
+    this.markForUpdate("settings")
+
     return this.tasks.writeSettings.current
   }
 
@@ -1282,6 +1275,8 @@ export class Application {
       packageInfo,
       this.getDefaultConfigFormat(),
     )
+
+    this.markForUpdate("packages")
   }
 
   protected createMainWindow(): MainWindow {
@@ -1309,7 +1304,7 @@ export class Application {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected handle<Event extends keyof this & string, Args extends any[]>(
-    this: { [key in Event]: (...args: Args) => Promise<unknown> },
+    this: { [key in Event]: (...args: Args) => unknown },
     event: Event,
   ): void {
     ipcMain.handle(event, (_, ...args: Args) => this[event](...args))

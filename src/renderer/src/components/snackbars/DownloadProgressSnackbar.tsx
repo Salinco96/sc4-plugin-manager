@@ -14,12 +14,12 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
     const [hover, setHover] = useState(false)
 
     const message = useStore(store => {
-      if (store.ongoingDownloads.length) {
-        return `Downloading ${store.ongoingDownloads[0]}...`
+      if (store.status?.ongoingDownloads.length) {
+        return `Downloading ${store.status.ongoingDownloads[0]}...`
       }
 
-      if (store.ongoingExtracts.length) {
-        return `Extracting ${store.ongoingExtracts[0]}...`
+      if (store.status?.ongoingExtracts.length) {
+        return `Extracting ${store.status.ongoingExtracts[0]}...`
       }
     })
 

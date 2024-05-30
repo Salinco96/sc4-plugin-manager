@@ -86,3 +86,15 @@ export function normalizeString(value: string): string {
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
 }
+
+export function pick<T extends object, K extends keyof T>(object: T, keys: K[]): Pick<T, K>
+export function pick<T extends object>(object: T, keys: (keyof T)[]): Partial<T>
+export function pick<T extends object>(object: T, keys: (keyof T)[]): Partial<T> {
+  const result: Partial<T> = {}
+
+  for (const key of keys) {
+    result[key] = object[key]
+  }
+
+  return result
+}

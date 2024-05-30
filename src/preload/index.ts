@@ -37,6 +37,12 @@ export const api = {
   async setPackageVariant(packageId: string, variantId: string): Promise<boolean> {
     return ipcRenderer.invoke("setPackageVariant", packageId, variantId)
   },
+  async simtropolisLogin(): Promise<void> {
+    return ipcRenderer.invoke("simtropolisLogin")
+  },
+  async simtropolisLogout(): Promise<void> {
+    return ipcRenderer.invoke("simtropolisLogout")
+  },
   subscribe(handlers: {
     showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
     updateState(data: Partial<ApplicationState>): void
