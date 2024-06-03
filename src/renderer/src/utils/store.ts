@@ -27,6 +27,7 @@ export interface PackageFilters {
 }
 
 export interface StoreActions {
+  check4GBPatch(): Promise<void>
   closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: string): Promise<boolean>
   disablePackages(packageIds: string[]): Promise<boolean>
@@ -34,7 +35,10 @@ export interface StoreActions {
   enablePackages(packageIds: string[]): Promise<boolean>
   installPackages(packageIds: string[]): Promise<boolean>
   getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string>
+  openExecutableDirectory(): Promise<void>
+  openInstallationDirectory(): Promise<void>
   openPackageFileInExplorer(packageId: string, variantId: string, filePath: string): Promise<void>
+  openProfileConfig(profileId: string): Promise<void>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
   removePackages(packageIds: string[]): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
@@ -82,6 +86,9 @@ export const useStore = create<Store>()((set, get): Store => {
 
   return {
     actions: {
+      async check4GBPatch() {
+        return window.api.check4GBPatch()
+      },
       closeSnackbar(type) {
         const id = get().snackbars[type]
         if (id !== undefined) {
@@ -107,8 +114,17 @@ export const useStore = create<Store>()((set, get): Store => {
       async installPackages(packageIds) {
         return window.api.installPackages(packageIds)
       },
+      async openInstallationDirectory() {
+        return window.api.openInstallationDirectory()
+      },
+      async openExecutableDirectory() {
+        return window.api.openExecutableDirectory()
+      },
       async openPackageFileInExplorer(packageId, variantId, filePath) {
         return window.api.openPackageFileInExplorer(packageId, variantId, filePath)
+      },
+      async openProfileConfig(profileId) {
+        return window.api.openProfileConfig(profileId)
       },
       openSnackbar(type, props) {
         if (get().snackbars[type] === undefined) {
@@ -180,9 +196,9 @@ export const useStore = create<Store>()((set, get): Store => {
     ...initialState,
     packageFilters: {
       categories: [],
-      dependencies: false,
-      experimental: false,
-      incompatible: false,
+      dependencies: true,
+      experimental: true,
+      incompatible: true,
       onlyErrors: false,
       onlyUpdates: false,
       search: "",

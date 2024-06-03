@@ -6,6 +6,9 @@ import { ApplicationState } from "@common/state"
 
 // Custom APIs for renderer
 export const api = {
+  async check4GBPatch(): Promise<void> {
+    return ipcRenderer.invoke("check4GBPatch")
+  },
   async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
@@ -27,12 +30,21 @@ export const api = {
   async removePackages(packageIds: string[]): Promise<boolean> {
     return ipcRenderer.invoke("removePackages", packageIds)
   },
+  async openExecutableDirectory(): Promise<void> {
+    return ipcRenderer.invoke("openExecutableDirectory")
+  },
+  async openInstallationDirectory(): Promise<void> {
+    return ipcRenderer.invoke("openInstallationDirectory")
+  },
   async openPackageFileInExplorer(
     packageId: string,
     variantId: string,
     filePath: string,
   ): Promise<void> {
     return ipcRenderer.invoke("openPackageFileInExplorer", packageId, variantId, filePath)
+  },
+  async openProfileConfig(profileId: string): Promise<void> {
+    return ipcRenderer.invoke("openProfileConfig", profileId)
   },
   async setPackageVariant(packageId: string, variantId: string): Promise<boolean> {
     return ipcRenderer.invoke("setPackageVariant", packageId, variantId)

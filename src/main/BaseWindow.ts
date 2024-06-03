@@ -16,7 +16,7 @@ export class BaseWindow extends BrowserWindow {
   public constructor(options: BrowserWindowConstructorOptions) {
     super({
       autoHideMenuBar: true,
-      icon: path.join(__dirname, "../renderer/splash.png"),
+      icon: path.join(__dirname, "../renderer/icon.png"),
       show: false,
       ...options,
     })

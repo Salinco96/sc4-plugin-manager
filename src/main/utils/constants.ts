@@ -11,6 +11,7 @@ export const DIRNAMES = {
 export const FILENAMES = {
   logs: "main.log",
   packageConfig: "package",
+  sc4exe: "Apps/SimCity 4.exe",
   settings: "settings",
 }
 
@@ -36,4 +37,11 @@ export const SC4EXTENSIONS = [
   ".SC4Lot",
   ".SC4Model",
   // "._LooseDesc",
+]
+
+/** Usual installation paths for the base game (non-exhaustive) */
+export const SC4INSTALLPATHS = [
+  // TODO: Non-Steam version? Is "SimCity 4 Deluxe" name even reliable?
+  "C:/Program Files (x86)/Steam/steamapps/common/SimCity 4 Deluxe",
+  "D:/Program Files (x86)/Steam/steamapps/common/SimCity 4 Deluxe",
 ]

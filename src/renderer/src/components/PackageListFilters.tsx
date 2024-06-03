@@ -117,6 +117,7 @@ export function PackageListFilters(): JSX.Element {
           sx: { paddingRight: 1 },
           title: "Clear",
         }}
+        autoFocus
         onChange={event => actions.setPackageFilters({ search: event.target.value })}
         label="Search"
         size="small"

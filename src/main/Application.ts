@@ -1,6 +1,17 @@
-import { exec as cmd } from "child_process"
-import { Session, app, ipcMain, net, protocol, session } from "electron/main"
-import fs from "fs/promises"
+import { exec as cmd, exec } from "child_process"
+import {
+  MessageBoxOptions,
+  MessageBoxReturnValue,
+  Session,
+  app,
+  dialog,
+  ipcMain,
+  net,
+  protocol,
+  session,
+} from "electron/main"
+import { existsSync, readFileSync, writeFileSync } from "fs"
+import fs, { FileHandle } from "fs/promises"
 import path from "path"
 import { pathToFileURL } from "url"
 
@@ -8,7 +19,7 @@ import log, { LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
 
-import { formatCategory } from "@common/categories"
+import { CategoryID, formatCategory } from "@common/categories"
 import {
   ProfileSettings,
   ProfileUpdate,
@@ -19,12 +30,13 @@ import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
   AssetInfo,
   ConfigFormat,
+  PackageCondition,
   PackageInfo,
   ProfileInfo,
   Settings,
   getDefaultVariant,
 } from "@common/types"
-import { pick } from "@common/utils/types"
+import { assert, pick } from "@common/utils/types"
 import {
   SimtropolisSession,
   getSimtropolisSession,
@@ -48,7 +60,13 @@ import {
 import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
 import { SplashScreen } from "./SplashScreen"
 import { loadConfig, readConfig, writeConfig } from "./utils/configs"
-import { DIRNAMES, DOCEXTENSIONS, FILENAMES, SC4EXTENSIONS } from "./utils/constants"
+import {
+  DIRNAMES,
+  DOCEXTENSIONS,
+  FILENAMES,
+  SC4EXTENSIONS,
+  SC4INSTALLPATHS,
+} from "./utils/constants"
 import { download, extract } from "./utils/download"
 import { env, isDev, isURL } from "./utils/env"
 import { createIfMissing, exists, removeIfEmpty, removeIfPresent } from "./utils/files"
@@ -129,8 +147,8 @@ export class Application {
   protected databaseUpdatePromise?: Promise<boolean>
 
   public constructor() {
-    this.gamePath = env.GAME_DIR || path.join(app.getPath("documents"), "SimCity 4")
-    this.rootPath = env.ROOT_DIR || path.join(this.gamePath, "Manager")
+    this.gamePath = this.loadGamePath()
+    this.rootPath = path.join(this.gamePath, "Manager")
 
     this.initialize()
 
@@ -164,6 +182,7 @@ export class Application {
     })
 
     // Register message handlers
+    this.handle("check4GBPatch")
     this.handle("createProfile")
     this.handle("disablePackages")
     this.handle("editProfile")
@@ -171,7 +190,10 @@ export class Application {
     this.handle("getPackageDocsAsHtml")
     this.handle("getState")
     this.handle("installPackages")
+    this.handle("openExecutableDirectory")
+    this.handle("openInstallationDirectory")
     this.handle("openPackageFileInExplorer")
+    this.handle("openProfileConfig")
     this.handle("removePackages")
     this.handle("setPackageVariant")
     this.handle("simtropolisLogin")
@@ -180,6 +202,262 @@ export class Application {
 
     // Create main window
     this.createMainWindow()
+  }
+
+  public async openExecutableDirectory(): Promise<void> {
+    if (this.settings?.install?.path) {
+      this.openInExplorer(path.dirname(path.join(this.settings.install.path, FILENAMES.sc4exe)))
+    }
+  }
+
+  public async openInstallationDirectory(): Promise<void> {
+    if (this.settings?.install?.path) {
+      this.openInExplorer(this.settings.install.path)
+    }
+  }
+
+  public async openProfileConfig(profileId: string): Promise<void> {
+    const profileInfo = this.getProfileInfo(profileId)
+    if (profileInfo?.format) {
+      this.openInExplorer(path.join(this.getProfilesPath(), profileId + profileInfo.format))
+    }
+  }
+
+  protected async checkGameInstall(): Promise<void> {
+    let installPath = this.settings?.install?.path
+    let installPathExists = false
+
+    if (installPath) {
+      installPathExists = await exists(path.join(installPath, FILENAMES.sc4exe))
+    } else {
+      for (const suggestedPath of SC4INSTALLPATHS) {
+        if (await exists(path.join(suggestedPath, FILENAMES.sc4exe))) {
+          console.debug(`Auto-detected installation path ${suggestedPath}`)
+          installPath = suggestedPath
+          installPathExists = true
+          break
+        }
+      }
+    }
+
+    while (!installPathExists) {
+      const result = await dialog.showOpenDialog(this.mainWindow!, {
+        title: "Select your SimCity 4 installation folder (containing SimCity_1.dat)",
+        defaultPath: installPath,
+        properties: ["openDirectory"],
+      })
+
+      if (result.filePaths.length) {
+        installPath = result.filePaths[0]
+        installPathExists = await exists(path.join(installPath, FILENAMES.sc4exe))
+      } else {
+        installPath = undefined
+        break
+      }
+    }
+
+    if (this.settings && installPath !== this.settings.install?.path) {
+      this.settings.install = { path: installPath }
+      this.sendStateUpdates("settings")
+      await this.writeSettings()
+    }
+
+    if (installPath) {
+      await this.check4GBPatch(true)
+      await this.checkExeVersion()
+    }
+  }
+
+  public async checkExeVersion(): Promise<void> {
+    if (this.settings?.install?.path) {
+      const exePath = path.join(this.settings.install.path, FILENAMES.sc4exe)
+
+      return new Promise((resolve, reject) => {
+        exec(
+          `wmic datafile where "name='${exePath.replace(/[\\'"]/g, "\\$&")}'" get version`,
+          (error, stdout, stderr) => {
+            if (error) {
+              return reject(error)
+            }
+
+            const match = stdout.match(/(\d+)\.(\d+)\.(\d+)\.(\d+)/)
+            if (!match) {
+              return reject(Error(stderr))
+            }
+
+            const version = match[0]
+            if (this.settings?.install && this.settings.install.version !== version) {
+              console.info(`Detected version ${version}`)
+              this.settings.install.version = version
+              this.sendStateUpdates("settings")
+              this.writeSettings()
+            }
+
+            return resolve()
+          },
+        )
+      })
+    }
+  }
+
+  public async check4GBPatch(isStartupCheck?: boolean): Promise<void> {
+    let file: FileHandle | undefined
+
+    try {
+      console.info("Checking 4GB Patch...")
+      if (this.settings?.install?.path) {
+        const filePath = path.join(this.settings.install.path, FILENAMES.sc4exe)
+        file = await fs.open(filePath, "r+") // read-write mode
+        const stat = await file.stat()
+
+        // Read MZ header
+        const mzHeader = Buffer.alloc(0x40)
+        assert(stat.size >= mzHeader.length, "Invalid file length")
+        await file.read(mzHeader, 0x00, mzHeader.length, 0x00)
+        assert(mzHeader.readUInt16LE(0x00) === 0x5a4d, "Invalid MZ header signature")
+        const peHeaderOffset = mzHeader.readInt32LE(0x3c)
+
+        // Read PE header
+        const peHeader = Buffer.alloc(0x18)
+        assert(stat.size >= peHeaderOffset + peHeader.length, "Invalid file length")
+        await file.read(peHeader, 0x00, peHeader.length, peHeaderOffset)
+        assert(peHeader.readUInt32LE(0x00) === 0x00004550, "Invalid PE header signature")
+        const flags = peHeader.readUInt16LE(0x16)
+        const largeAddressAwareFlag = 0x0020
+
+        const patched = (flags & largeAddressAwareFlag) !== 0
+        if (patched) {
+          console.info("4GB Patch is already applied")
+          if (!this.settings.install.patched) {
+            this.settings.install.patched = true
+            this.sendStateUpdates("settings")
+            await this.writeSettings()
+          }
+        } else if (isStartupCheck && this.settings.install.patched === false) {
+          // Skip startup check if "Do not ask again" was previously checked
+        } else {
+          delete this.settings.install.patched
+
+          // TODO: Handle main window not present
+          const [confirmed, doNotAskAgain] = await this.showConfirmation(
+            "4GB Patch",
+            "Do you want to apply the 4GB Patch?",
+            "The 4GB Patch is a one-time patch that turns on the Large-Address-Aware flag in the 'SimCity 4.exe' executable, increasing its virtual memory (RAM) usage cap from 2GB to 4GB. This allows the game to make better use of modern hardware and is necessary to run resource-intensive mods, such as the Network Addon Mod's improved pathfinding.\n\nA backup will be automatically created next to the original file.\n\nSystem Requirements: 8GB of RAM",
+            isStartupCheck,
+          )
+
+          if (confirmed) {
+            try {
+              // Create a backup
+              await fs.cp(filePath, filePath + ".backup")
+
+              // Rewrite PE header
+              const newFlags = flags | largeAddressAwareFlag
+              peHeader.writeUInt16LE(newFlags, 0x16)
+              await file.write(peHeader, 0x00, peHeader.length, peHeaderOffset)
+              await this.showSuccess("4GB Patch", "The 4GB Patch was applied successfully!")
+              this.settings.install.patched = true
+            } catch (error) {
+              const { message } = error as Error
+              console.error("Failed to apply the 4GB Patch", error)
+              await this.showError("4GB Patch", "Failed to apply the 4GB Patch.", message)
+            }
+          } else if (doNotAskAgain) {
+            this.settings.install.patched = false
+          }
+
+          this.sendStateUpdates("settings")
+          await this.writeSettings()
+        }
+      }
+    } catch (error) {
+      console.error("Failed to check for 4GB Patch", error)
+    } finally {
+      await file?.close()
+    }
+  }
+
+  protected async showConfirmation(
+    title: string,
+    message: string,
+    detail?: string,
+    doNotAskAgain?: boolean,
+  ): Promise<[confirmed: boolean, doNotAskAgain: boolean]> {
+    const options: MessageBoxOptions = {
+      buttons: ["Yes", "No"],
+      cancelId: 1,
+      checkboxChecked: false,
+      checkboxLabel: doNotAskAgain ? "Do not ask again" : undefined,
+      defaultId: 0,
+      detail,
+      message,
+      title,
+      type: "question",
+    }
+
+    let result: MessageBoxReturnValue
+
+    if (this.mainWindow) {
+      result = await dialog.showMessageBox(this.mainWindow, options)
+    } else {
+      result = await dialog.showMessageBox(options)
+    }
+
+    return [result.response === 0, result.checkboxChecked]
+  }
+
+  protected async showError(title: string, message: string, detail?: string): Promise<void> {
+    if (this.mainWindow) {
+      await dialog.showMessageBox(this.mainWindow, { detail, message, title, type: "error" })
+    } else {
+      await dialog.showMessageBox({ detail, message, title, type: "error" })
+    }
+  }
+
+  protected async showSuccess(title: string, message: string, detail?: string): Promise<void> {
+    if (this.mainWindow) {
+      await dialog.showMessageBox(this.mainWindow, { detail, message, title, type: "info" })
+    } else {
+      await dialog.showMessageBox({ detail, message, title, type: "info" })
+    }
+  }
+
+  protected loadGamePath(): string {
+    const configPath = path.join(app.getPath("userData"), "config.json")
+
+    console.log(configPath)
+
+    let config: { path?: string } | undefined
+
+    try {
+      config = JSON.parse(readFileSync(configPath, "utf8"))
+    } catch (error) {
+      if (!(error instanceof Error) || !error.message.match(/no such file or directory/i)) {
+        console.error("Failed to load config", error)
+      }
+    }
+
+    let gamePath = env.GAME_DIR || config?.path || path.join(app.getPath("documents"), "SimCity 4")
+
+    while (!existsSync(path.join(gamePath, DIRNAMES.plugins))) {
+      const result = dialog.showOpenDialogSync({
+        title: "Select your SimCity 4 data folder (containing your Plugins folder)",
+        defaultPath: app.getPath("documents"),
+        properties: ["openDirectory"],
+      })
+
+      if (result?.length === 1) {
+        gamePath = result[0]
+      } else {
+        throw Error("Aborted")
+      }
+    }
+
+    if (gamePath !== config?.path) {
+      writeFileSync(configPath, JSON.stringify({ path: gamePath }, undefined, 2))
+    }
+
+    return gamePath
   }
 
   public async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
@@ -403,10 +681,48 @@ export class Application {
 
     const currentProfile = settings.currentProfile ? profiles[settings.currentProfile] : undefined
 
+    // Config file does not exist, this must be the first time launching the manager
+    if (!settings.format) {
+      const plugins = await fs.readdir(this.getPluginsPath())
+
+      if (plugins.length) {
+        const [doBackup] = await this.showConfirmation(
+          "SC4 Plugin Manager",
+          "Do you want to back up your Plugins folder?",
+          "Your Plugins folder is not currently empty. The current version of the Plugin Manager is experimental and will not be able to detect conflicts with files you have added manually. We therefore recommend backing up your current Plugins folder, using the Plugin Manager on an empty folder, then copying additional plugins back.",
+        )
+
+        if (doBackup) {
+          try {
+            // Rename folder, then recreate new empty one
+            await fs.rename(this.getPluginsPath(), this.getPluginsPath() + " (Backup)")
+            await fs.mkdir(this.getPluginsPath())
+            await this.showSuccess(
+              "SC4 Plugin Manager",
+              "Your Plugins folder was backed up as Plugins (Backup).",
+            )
+          } catch (error) {
+            console.error("Failed to backup Plugins folder", error)
+            const { message } = error as Error
+            await this.showSuccess(
+              "SC4 Plugin Manager",
+              "Failed to backup Plugins folder.",
+              message,
+            )
+          }
+        }
+      }
+
+      await this.writeSettings()
+    }
+
     // Load local packages...
-    this.status.loader = "Loading packages..."
-    this.sendStateUpdates("status")
-    const localPackages = await loadLocalPackages(this.getPackagesPath())
+    const localPackages = await loadLocalPackages(this.getPackagesPath(), (c, t) => {
+      if (c % 10 === 0) {
+        this.status.loader = `Loading local packages (${Math.floor(100 * (c / t))}%)...`
+        this.sendStateUpdates("status")
+      }
+    })
     this.packages = localPackages
     this.sendStateUpdates("packages")
 
@@ -416,9 +732,12 @@ export class Application {
     await databaseUpdatePromise
 
     // Load remote packages...
-    this.status.loader = "Loading packages..."
-    this.sendStateUpdates("status")
-    const { assets, packages } = await loadRemotePackages(this.getDatabasePath())
+    const { assets, packages } = await loadRemotePackages(this.getDatabasePath(), (c, t) => {
+      if (c % 10 === 0) {
+        this.status.loader = `Loading remote packages (${Math.floor(100 * (c / t))}%)...`
+        this.sendStateUpdates("status")
+      }
+    })
     this.assets = assets
     this.packages = packages
 
@@ -449,6 +768,11 @@ export class Application {
     // Done
     this.status.loader = null
     this.sendStateUpdates("status")
+
+    // Check game installation
+    await this.checkGameInstall()
+
+    await this.linkPackages()
   }
 
   public async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
@@ -525,6 +849,7 @@ export class Application {
     this.calculatePackageCompatibility()
     this.markForUpdate("profiles")
     this.sendStateUpdates()
+    this.linkPackages()
 
     return true
   }
@@ -549,6 +874,8 @@ export class Application {
 
     this.markForUpdate("profiles")
     this.sendStateUpdates()
+    this.writeProfile(profile)
+    this.linkPackages()
 
     return true
   }
@@ -607,6 +934,7 @@ export class Application {
 
     this.calculatePackageCompatibility()
     this.sendStateUpdates()
+    this.linkPackages()
 
     return true
   }
@@ -732,26 +1060,59 @@ export class Application {
               await fs.symlink(fullPath, targetPath)
             }
 
-            // Find all included files
-            const filePaths = await glob(asset.include?.map(file => file.path) ?? ["**"], {
-              cwd: downloadPath,
-              dot: true,
-              ignore: asset.exclude?.map(file => file.path),
-              matchBase: true,
-              nodir: true,
-            })
+            const includes: {
+              category: CategoryID
+              condition?: PackageCondition
+              paths: string[]
+            }[] = []
 
-            // Create links
-            for (const filePath of filePaths) {
-              const fullPath = path.join(downloadPath, filePath)
-              const ext = path.extname(filePath)
-              if (SC4EXTENSIONS.includes(ext)) {
-                const targetPath = path.join(variantPath, filePath)
-                await createIfMissing(path.dirname(targetPath))
-                await fs.symlink(fullPath, targetPath)
-                files.push({ path: filePath })
-              } else if (!DOCEXTENSIONS.includes(ext)) {
-                console.warn(`File ${fullPath} has unsupported extension ${ext}`)
+            if (asset.include) {
+              for (const include of asset.include) {
+                const category = include.category ?? variantInfo.category
+                const condition = include.condition
+                const lastInclude = includes.at(-1)
+                // Paths with same category/condition can be resolved together
+                if (category === lastInclude?.category && condition === lastInclude.condition) {
+                  lastInclude.paths.push(include.path)
+                } else {
+                  includes.push({ category, condition, paths: [include.path] })
+                }
+              }
+            } else {
+              // If no explicit include is given, include everything
+              includes.push({ category: variantInfo.category, paths: ["**"] })
+            }
+
+            // Find all included files
+            const excludes = asset.exclude?.map(file => file.path) ?? []
+            for (const { category, condition, paths } of includes) {
+              const filePaths = await glob(paths, {
+                cwd: downloadPath,
+                dot: true,
+                ignore: excludes,
+                matchBase: true,
+                nodir: true,
+              })
+
+              // Included paths are excluded from being included again
+              excludes?.push(...paths)
+
+              // Create links
+              for (const filePath of filePaths) {
+                const fullPath = path.join(downloadPath, filePath)
+                const ext = path.extname(filePath)
+                if (SC4EXTENSIONS.includes(ext)) {
+                  const targetPath = path.join(variantPath, filePath)
+                  await createIfMissing(path.dirname(targetPath))
+                  await fs.symlink(fullPath, targetPath)
+                  files.push({
+                    path: filePath,
+                    condition,
+                    category: category !== variantInfo.category ? category : undefined,
+                  })
+                } else if (!DOCEXTENSIONS.includes(ext)) {
+                  console.warn(`File ${fullPath} has unsupported extension ${ext}`)
+                }
               }
             }
           }
@@ -773,13 +1134,13 @@ export class Application {
           variantInfo.files = files
           variantInfo.installed = true
 
-          // Rewrite config
-          await this.writePackageConfig(packageInfo)
-
           if (variantInfo.update) {
             Object.assign(variantInfo, variantInfo.update)
             delete variantInfo.update
           }
+
+          // Rewrite config
+          await this.writePackageConfig(packageInfo)
         } catch (error) {
           delete variantInfo.files
           delete variantInfo.installed
@@ -904,6 +1265,7 @@ export class Application {
     this.calculatePackageCompatibility()
     this.markForUpdate("settings")
     this.sendStateUpdates()
+    this.linkPackages()
 
     return true
   }
@@ -911,7 +1273,7 @@ export class Application {
   protected calculatePackageCompatibility(): void {
     const profile = this.getCurrentProfile()
     if (this.packages && profile) {
-      const { conflictGroups } = calculatePackageCompatibility(this.packages, profile.settings)
+      const { conflictGroups } = calculatePackageCompatibility(this.packages, profile)
       this.conflictGroups = conflictGroups
       this.markForUpdate("conflictGroups")
       this.markForUpdate("packages")
@@ -996,6 +1358,7 @@ export class Application {
                 const variantPath = this.getVariantPath(packageId, variantId)
                 if (variantInfo.files?.length) {
                   for (const file of variantInfo.files) {
+                    // TODO: Check file.condition
                     const fullPath = path.join(variantPath, file.path)
                     const categoryPath = formatCategory(file.category ?? variantInfo.category)
 
@@ -1115,15 +1478,12 @@ export class Application {
   }
 
   protected onLinkTaskUpdate(ongoingTasks: string[]): void {
-    switch (ongoingTasks[0]) {
-      case "init":
-        this.status.linker = "Initializing..."
-        break
-      case "link":
-        this.status.linker = "Linking packages..."
-        break
-      default:
-        this.status.linker = null
+    if (ongoingTasks[0] === "init") {
+      this.status.linker = "Initializing..."
+    } else if (ongoingTasks[0] === "link") {
+      this.status.linker = "Linking packages..."
+    } else {
+      this.status.linker = null
     }
 
     this.sendStateUpdates("status")

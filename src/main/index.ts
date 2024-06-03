@@ -2,13 +2,36 @@ import { app, protocol } from "electron/main"
 
 import { Application } from "./Application"
 
-protocol.registerSchemesAsPrivileged([
-  {
-    scheme: "docs",
-    privileges: {
-      bypassCSP: true,
+if (!app.requestSingleInstanceLock()) {
+  app.quit()
+} else {
+  protocol.registerSchemesAsPrivileged([
+    {
+      scheme: "docs",
+      privileges: {
+        bypassCSP: true,
+      },
     },
-  },
-])
+  ])
 
-app.whenReady().then(() => new Application())
+  let instance: Application
+
+  app.on("second-instance", () => {
+    if (instance?.mainWindow) {
+      if (instance.mainWindow.isMinimized()) {
+        instance.mainWindow.restore()
+      }
+
+      instance.mainWindow.focus()
+    }
+  })
+
+  app.whenReady().then(() => {
+    try {
+      instance = new Application()
+    } catch (error) {
+      console.error(error)
+      app.quit()
+    }
+  })
+}

@@ -7,11 +7,11 @@ import { BaseWindow } from "./BaseWindow"
 export class MainWindow extends BaseWindow {
   public constructor() {
     super({
-      width: 1200,
       height: 800,
       webPreferences: {
         preload: path.join(__dirname, "../preload/index.js"),
       },
+      width: 1200,
     })
 
     if (isDev()) {

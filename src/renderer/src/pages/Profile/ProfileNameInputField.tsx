@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react"
 
-import { TextField } from "@mui/material"
+import { SxProps, TextField } from "@mui/material"
 
 import { ProfileInfo } from "@common/types"
 import { useStoreActions } from "@renderer/utils/store"
 
-export function ProfileNameInputField({ profileInfo }: { profileInfo: ProfileInfo }): JSX.Element {
+export function ProfileNameInputField({
+  profileInfo,
+  sx,
+}: {
+  profileInfo: ProfileInfo
+  sx?: SxProps
+}): JSX.Element {
   const actions = useStoreActions()
 
   const [name, setName] = useState(profileInfo.name)
@@ -34,6 +40,7 @@ export function ProfileNameInputField({ profileInfo }: { profileInfo: ProfileInf
         setName(value)
       }}
       required
+      sx={sx}
       value={name}
       variant="standard"
     />

@@ -152,6 +152,11 @@ export interface ProfileInfo {
 export interface Settings {
   currentProfile?: string
   format?: ConfigFormat
+  install?: {
+    patched?: boolean
+    path?: string
+    version?: string
+  }
   useYaml?: boolean
 }
 

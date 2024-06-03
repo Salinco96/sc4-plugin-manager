@@ -67,30 +67,27 @@ interface MemoPackageData {
  */
 export async function loadLocalPackages(
   basePath: string,
+  onProgress: (current: number, total: number) => void,
 ): Promise<{ [packageId: string]: PackageInfo }> {
   console.info("Loading local packages...")
 
   const packages: { [packageId: string]: PackageInfo } = {}
 
-  const authorEntries = await fs.readdir(basePath, { withFileTypes: true })
-  for (const authorEntry of authorEntries) {
-    if (authorEntry.isDirectory()) {
-      const authorPath = path.join(basePath, authorEntry.name)
-      const packageEntries = await fs.readdir(authorPath, { withFileTypes: true })
-      for (const packageEntry of packageEntries) {
-        if (packageEntry.isDirectory()) {
-          const packageId = `${authorEntry.name}/${packageEntry.name}`
-          const packagePath = path.join(authorPath, packageEntry.name)
-          const packageInfo = await loadLocalPackageInfo(packageId, packagePath)
-          if (packageInfo) {
-            packages[packageId] = packageInfo
-          }
-        }
-      }
+  const packageIds = await glob("*/*/", { cwd: basePath, posix: true })
+
+  let nConfigs = 0
+  let nPackages = 0
+  for (const packageId of packageIds) {
+    onProgress(nConfigs++, packageIds.length)
+    const packagePath = path.join(basePath, packageId)
+    const packageInfo = await loadLocalPackageInfo(packageId, packagePath)
+    if (packageInfo) {
+      packages[packageId] = packageInfo
+      nPackages++
     }
   }
 
-  console.info(`Loaded ${Object.keys(packages).length} local packages`)
+  console.info(`Loaded ${nPackages} local packages`)
 
   return packages
 }
@@ -203,7 +200,10 @@ export function convertMemoPackageId(packageId: string): string {
 /**
  * Loads all remote packages.
  */
-export async function loadRemotePackages(basePath: string): Promise<{
+export async function loadRemotePackages(
+  basePath: string,
+  onProgress: (current: number, total: number) => void,
+): Promise<{
   assets: { [assetId: string]: AssetInfo }
   packages: { [packageId: string]: PackageInfo }
 }> {
@@ -214,10 +214,18 @@ export async function loadRemotePackages(basePath: string): Promise<{
 
   // TODO: Remove when own data repository has some interesting content?
   const memoPath = path.join(basePath, "src/yaml")
-  if (await exists(memoPath)) {
-    const configEntries = await glob("**/*.{yaml,yml}", { cwd: memoPath })
-    for (const configEntry of configEntries) {
-      const configPath = path.join(memoPath, configEntry)
+  const isMemo = await exists(memoPath)
+
+  const packagesPath = isMemo ? memoPath : path.join(basePath, "packages")
+  const configEntries = await glob("**/*.{yaml,yml}", { cwd: packagesPath })
+
+  let nConfigs = 0
+  let nPackages = 0
+  for (const configEntry of configEntries) {
+    onProgress(nConfigs++, configEntries.length)
+    const configPath = path.join(packagesPath, configEntry)
+
+    if (isMemo) {
       // TODO: This assumes that configs are correctly formatted
       const configs = await readConfigs<MemoAssetData | MemoPackageData>(configPath)
       for (const config of configs) {
@@ -369,27 +377,24 @@ export async function loadRemotePackages(basePath: string): Promise<{
           // Return the package only if some variants have been successfully loaded
           if (packageInfo.status.variantId) {
             packages[packageId] = packageInfo
+            nPackages++
           }
         }
       }
-    }
-  } else {
-    const dataPath = path.join(basePath, "packages")
-    const configEntries = await glob("**/*.{yaml,yml}", { cwd: dataPath })
-    for (const configEntry of configEntries) {
-      const configPath = path.join(dataPath, configEntry)
+    } else {
       // TODO: This assumes that configs are correctly formatted
       const configs = await readConfig<{ [packageId: string]: PackageData }>(configPath)
       for (const packageId in configs) {
         const packageInfo = loadRemotePackageInfo(packageId, configs[packageId])
         if (packageInfo) {
           packages[packageId] = packageInfo
+          nPackages++
         }
       }
     }
   }
 
-  console.info(`Loaded ${Object.keys(packages).length} remote packages`)
+  console.info(`Loaded ${nPackages} remote packages`)
 
   return { assets, packages }
 }
@@ -615,7 +620,7 @@ export function checkoutPackages(
 
 export function calculatePackageCompatibility(
   packages: { [packageId: string]: PackageInfo },
-  settings: ProfileSettings,
+  profile: ProfileInfo,
 ): {
   conflictGroups: { [group: string]: string[] }
   requirements: { [requirement: string]: { [value: string]: string[] } }
@@ -660,11 +665,11 @@ export function calculatePackageCompatibility(
     }
   }
 
-  if (settings.cam) {
+  if (profile.settings.cam) {
     conflictGroups.cam ??= ["<external>"]
   }
 
-  if (settings.darknite) {
+  if (profile.settings.darknite) {
     conflictGroups.darknite ??= ["<external>"]
   }
 
@@ -698,7 +703,7 @@ export function calculatePackageCompatibility(
       calculateVariantCompatibility(
         packageInfo.id,
         variantInfo,
-        settings,
+        profile.settings,
         conflictGroups,
         requirements,
       )
@@ -725,26 +730,36 @@ export function calculatePackageCompatibility(
       packageCompatible ||= !variantInfo.incompatible
 
       delete variantInfo.issues
-      if (packageInfo.status.enabled && packageInfo.status.variantId === variantId) {
-        const issues: string[] = []
+    }
 
-        if (!variantInfo.installed) {
-          if (Object.values(packageInfo.variants).some(variant => variant.installed)) {
-            issues.push("The selected variant is not installed.")
-          } else {
-            issues.push("This package is not installed.")
-          }
-        }
+    let selectedVariantInfo = packageInfo.variants[packageInfo.status.variantId]
 
-        if (variantInfo.incompatible) {
-          issues.push(...variantInfo.incompatible)
-          delete variantInfo.incompatible
-        }
+    const packageConfig = profile.packages[packageInfo.id]
+    const issues: string[] = []
 
-        if (issues.length) {
-          variantInfo.issues = issues
-        }
+    // If selected variant is incompatible and no variant is explicitly set for profile, reset to default variant
+    if (selectedVariantInfo.incompatible && !packageConfig?.variant) {
+      selectedVariantInfo = getDefaultVariant(packageInfo)
+      packageInfo.status.variantId = selectedVariantInfo.id
+    }
+
+    // If selected variant is still incompatible, treat incompatibilities as issues
+    if (selectedVariantInfo.incompatible && packageInfo.status.enabled) {
+      issues.push(...selectedVariantInfo.incompatible)
+      delete selectedVariantInfo.incompatible
+    }
+
+    // Check if package is enabled but not installed
+    if (packageInfo.status.enabled && !selectedVariantInfo.installed) {
+      if (Object.values(packageInfo.variants).some(variant => variant.installed)) {
+        issues.unshift("The selected variant is not installed.")
+      } else {
+        issues.unshift("This package is not installed.")
       }
+    }
+
+    if (issues.length) {
+      selectedVariantInfo.issues = issues
     }
 
     cache.set(packageInfo.id, packageCompatible)
@@ -801,7 +816,10 @@ function calculateVariantCompatibility(
       if (requirements[requirement] !== undefined) {
         for (const requiredValue in requirements[requirement]) {
           if (requiredValue !== String(value)) {
-            const conflictPackageId = requirements[requirement][requiredValue][0]
+            const conflictPackageId = requirements[requirement][requiredValue]?.find(
+              id => id !== packageId,
+            )
+
             if (conflictPackageId) {
               incompatible.push(`Conflicting requirement ${requirement} with ${conflictPackageId}`)
             }

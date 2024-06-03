@@ -1,3 +1,4 @@
+import { net } from "electron/main"
 import { createWriteStream } from "fs"
 import path from "path"
 import { Readable, pipeline } from "stream"
@@ -9,7 +10,11 @@ import { glob } from "glob"
 import { Open } from "unzipper"
 
 import { createIfMissing, removeIfPresent } from "./files"
-import { SIMTROPOLIS_ORIGIN, SimtropolisSession } from "./sessions/simtropolis"
+import {
+  SIMTROPOLIS_ORIGIN,
+  SimtropolisSession,
+  getSimtropolisSessionHeaders,
+} from "./sessions/simtropolis"
 
 export async function download(
   key: string,
@@ -23,17 +28,13 @@ export async function download(
 
   console.debug(`Downloading ${key} from ${url}...`)
 
-  const headers = new Headers()
+  let headers: HeadersInit | undefined
 
   if (origin === SIMTROPOLIS_ORIGIN && sessions.simtropolis) {
-    const cookies = Object.entries(sessions.simtropolis)
-      .map(([name, value]) => `${name}=${value}`)
-      .join(";")
-
-    headers.set("Cookie", cookies)
+    headers = getSimtropolisSessionHeaders(sessions.simtropolis)
   }
 
-  const response = await fetch(url, { headers })
+  const response = await net.fetch(url, { credentials: "include", headers })
 
   const contentDisposition = response.headers.get("Content-Disposition")
   const contentType = response.headers.get("Content-Type")

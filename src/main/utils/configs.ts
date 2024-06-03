@@ -44,7 +44,9 @@ export async function readConfigs<T>(fullPath: string): Promise<T[]> {
 }
 
 export function serializeConfig<T>(data: T, format: ConfigFormat): string {
-  return format === ConfigFormat.JSON ? JSON.stringify(data, undefined, 2) : yamlStringify(data)
+  return format === ConfigFormat.JSON
+    ? JSON.stringify(data, undefined, 2)
+    : yamlStringify(data, { lineWidth: 200 })
 }
 
 export async function writeConfig<T>(

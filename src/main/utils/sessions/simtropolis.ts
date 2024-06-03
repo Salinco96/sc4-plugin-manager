@@ -5,7 +5,9 @@ import { BaseWindow } from "../../BaseWindow"
 export const SIMTROPOLIS_DOMAIN = "community.simtropolis.com"
 export const SIMTROPOLIS_ORIGIN = `https://${SIMTROPOLIS_DOMAIN}`
 
+// TODO: Make sure Discord auth works (it probably does not atm?)
 const DISCORD_OAUTH2_URL = "https://discordapp.com/api/oauth2/authorize"
+
 const SIMTROPOLIS_LOGIN_URL = `${SIMTROPOLIS_ORIGIN}/sign-in/`
 const SIMTROPOLIS_LOST_PASSWORD_URL = `${SIMTROPOLIS_ORIGIN}/lostpassword/`
 const SIMTROPOLIS_REGISTER_URL = `${SIMTROPOLIS_ORIGIN}/register/`
@@ -85,6 +87,7 @@ export async function simtropolisLogin(
 
     browserSession.cookies.on("changed", onCookieChanged)
 
+    // When user clicks a link without target "_blank"
     window.webContents.on("will-navigate", (event, url) => {
       const { origin, pathname } = new URL(url)
       // Open non-auth URLS in browser instead (ignore query/hash)
@@ -94,6 +97,7 @@ export async function simtropolisLogin(
       }
     })
 
+    // When window is closed (by us after reading cookies or by the user)
     window.on("closed", () => {
       browserSession.cookies.off("changed", onCookieChanged)
       getSimtropolisSession(browserSession).then(resolve)
