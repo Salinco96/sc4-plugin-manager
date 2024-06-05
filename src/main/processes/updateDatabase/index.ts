@@ -14,7 +14,7 @@ export default class UpdateDatabaseProcess extends ChildProcess<
   UpdateDatabaseProcessResponse
 > {
   protected onMessage(data: unknown): void {
-    console.log(`Message from parent: ${data}`)
+    console.info(`Message from parent: ${data}`)
   }
 
   protected async run(): Promise<void> {

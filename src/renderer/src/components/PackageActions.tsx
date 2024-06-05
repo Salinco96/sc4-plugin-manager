@@ -32,128 +32,92 @@ export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): J
 
     const packageActions: PackageAction[] = []
 
-    const isEnabled = !!packageInfo.status.enabled
     const nRequires = packageInfo.status.requiredBy?.length ?? 0
+
+    const isEnabled = !!packageInfo.status.enabled
+    const isInstalled = !!variantInfo.installed
     const isRequired = nRequires !== 0
 
-    if (variantInfo.installed) {
-      if (variantInfo.update) {
-        packageActions.push({
-          color: "warning",
-          description: variantInfo.update.incompatible
-            ? "This variant is not compatible with your profile"
-            : `Update to version ${variantInfo.version}`,
-          disabled: !!variantInfo.update.incompatible,
-          id: "update",
-          label: "Update",
-          onClick: async () => {
-            await actions.installPackages([packageInfo.id])
-          },
-        })
-      }
-
-      if (currentProfile) {
-        if (isEnabled) {
-          packageActions.push({
-            color: "error",
-            description: isRequired
-              ? `This package cannot be disabled because it is required by ${nRequires} other package(s)`
-              : "Disable this package",
-            disabled: isRequired,
-            id: "disable",
-            label: "Disable",
-            onClick: async () => {
-              await actions.disablePackages([packageInfo.id])
-            },
-          })
-
-          // TODO: Only allows removing if not used by any other profile
-          packageActions.push({
-            color: "error",
-            description:
-              "Remove this package\nWARNING: This package may be required by another profile!",
-            disabled: isRequired,
-            id: "remove",
-            label: "Remove",
-            onClick: async () => {
-              if (await actions.disablePackages([packageInfo.id])) {
-                await actions.removePackages([packageInfo.id])
-              }
-            },
-          })
-        } else {
-          packageActions.push({
-            color: "success",
-            description: variantInfo.incompatible
-              ? "This variant is not compatible with your profile"
-              : "Enable this package",
-            disabled: !!variantInfo.incompatible,
-            id: "enable",
-            label: "Enable",
-            onClick: async () => {
-              await actions.enablePackages([packageInfo.id])
-            },
-          })
-
-          // TODO: Only allows removing if not used by any profile
-          packageActions.push({
-            color: "error",
-            description:
-              "Remove this package\nWARNING: This package may be required by another profile!",
-            disabled: isRequired,
-            id: "remove",
-            label: "Remove",
-            onClick: async () => {
-              await actions.removePackages([packageInfo.id])
-            },
-          })
-        }
-      }
-    } else if (isEnabled) {
+    if (currentProfile && isEnabled && !isInstalled) {
       packageActions.push({
         color: "warning",
-        description: "Fix this package",
-        disabled: !variantInfo || !!variantInfo.action,
-        id: "fix",
-        label: "Fix",
-        onClick: async () => {
-          await actions.installPackages([packageInfo.id])
-        },
+        description: variantInfo.incompatible
+          ? "This variant is not compatible with your profile"
+          : "Install this package",
+        disabled: !variantInfo || !!variantInfo.action || !!variantInfo.incompatible,
+        id: "install",
+        label: "Install",
+        onClick: () => actions.addPackage(packageInfo.id, variantInfo.id),
       })
+    } else if (variantInfo.update) {
+      packageActions.push({
+        color: "warning",
+        description: variantInfo.update.incompatible
+          ? "This variant is not compatible with your profile"
+          : `Update to version ${variantInfo.update.version}`,
+        disabled: !variantInfo || !!variantInfo.action || !!variantInfo.update.incompatible,
+        id: "update",
+        label: "Update",
+        onClick: () => actions.updatePackage(packageInfo.id),
+      })
+    }
 
+    if (currentProfile && isEnabled) {
       packageActions.push({
         color: "error",
         description: isRequired
           ? `This package cannot be disabled because it is required by ${nRequires} other package(s)`
           : "Disable this package",
-        disabled: isRequired,
+        disabled: isRequired || !!variantInfo.action,
         id: "disable",
         label: "Disable",
-        onClick: async () => {
-          await actions.disablePackages([packageInfo.id])
-        },
+        onClick: () => actions.disablePackage(packageInfo.id),
       })
-    } else {
+    }
+
+    if (currentProfile && isInstalled && !isEnabled) {
       packageActions.push({
-        description: "Download and enable this package",
+        color: "success",
+        description: variantInfo.incompatible
+          ? "This variant is not compatible with your profile"
+          : "Enable this package",
+        disabled: !!variantInfo.incompatible || !!variantInfo.action,
+        id: "enable",
+        label: "Enable",
+        onClick: () => actions.enablePackage(packageInfo.id),
+      })
+    }
+
+    if (isInstalled) {
+      // TODO: Only allows removing if not used by any profile
+      packageActions.push({
+        color: "error",
+        description:
+          "Remove this package\nWARNING: This package may be required by another profile!",
+        disabled: isRequired || !!variantInfo.action,
+        id: "remove",
+        label: "Remove",
+        onClick: () => actions.removePackage(packageInfo.id),
+      })
+    }
+
+    if (currentProfile && !isInstalled) {
+      packageActions.push({
+        description: "Install and enable this package",
         disabled: !!variantInfo.incompatible || !!variantInfo.action,
         id: "add",
         label: "Add",
-        onClick: async () => {
-          if (await actions.installPackages([packageInfo.id])) {
-            await actions.enablePackages([packageInfo.id])
-          }
-        },
+        onClick: () => actions.addPackage(packageInfo.id, variantInfo.id),
       })
+    }
 
+    if (!isInstalled && !isEnabled) {
       packageActions.push({
         description: "Download this package without enabling it",
         disabled: !!variantInfo.incompatible || !!variantInfo.action,
         id: "download",
         label: "Download",
-        onClick: async () => {
-          await actions.installPackages([packageInfo.id])
-        },
+        onClick: () => actions.installPackage(packageInfo.id, variantInfo.id),
       })
     }
 

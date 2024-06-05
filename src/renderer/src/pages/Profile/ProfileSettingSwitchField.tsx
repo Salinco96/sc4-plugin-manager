@@ -1,10 +1,11 @@
-import { FormControlLabel, Switch } from "@mui/material"
+import { Switch } from "@mui/material"
 
-import { ProfileSettings } from "@common/profiles"
 import { ProfileInfo } from "@common/types"
+import { FlexBox } from "@renderer/components/FlexBox"
+import { Text } from "@renderer/components/Text"
 import { useStoreActions } from "@renderer/utils/store"
 
-export function ProfileSettingSwitchField<T extends keyof ProfileSettings>({
+export function ProfileSettingSwitchField({
   disabled,
   label,
   name,
@@ -12,26 +13,33 @@ export function ProfileSettingSwitchField<T extends keyof ProfileSettings>({
 }: {
   disabled?: boolean
   label: string
-  name: T
-  profileInfo: ProfileInfo & { settings: { [K in T]: boolean } }
+  name: string
+  profileInfo: ProfileInfo
 }): JSX.Element | null {
   const actions = useStoreActions()
 
   return (
-    <FormControlLabel
-      checked={profileInfo.settings[name]}
-      control={<Switch color="primary" />}
-      disabled={disabled}
-      label={label}
-      labelPlacement="start"
-      onChange={async event => {
-        const value = (event.target as HTMLInputElement).checked
-        if (value !== profileInfo.settings[name]) {
-          actions.editProfile(profileInfo.id, { settings: { [name]: value } })
-        }
-      }}
-      slotProps={{ typography: { sx: { flex: 1 } } }}
-      sx={{ marginLeft: 0 }}
-    />
+    <FlexBox alignItems="center" gap={2} minHeight={40}>
+      <Text maxLines={3} sx={{ flex: 1 }}>
+        {label}
+      </Text>
+      <Switch
+        checked={profileInfo.externals[name]}
+        color="primary"
+        disabled={disabled}
+        inputRef={ref => {
+          if (ref) {
+            ref.checked = profileInfo.externals[name]
+          }
+        }}
+        onClick={async event => {
+          event.preventDefault()
+          const value = (event.target as HTMLInputElement).checked
+          if (value !== profileInfo.externals[name]) {
+            await actions.editProfile(profileInfo.id, { externals: { [name]: value } })
+          }
+        }}
+      />
+    </FlexBox>
   )
 }

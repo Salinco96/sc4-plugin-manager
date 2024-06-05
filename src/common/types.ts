@@ -1,7 +1,8 @@
 import { CategoryID } from "./categories"
-import { ProfileSettings } from "./profiles"
+import { ProfileExternals } from "./profiles"
 
 export const DEFAULT_VARIANT_ID = "default"
+export const EXTERNAL_PACKAGE_ID = "<external>"
 
 /** Supported configuration formats */
 export enum ConfigFormat {
@@ -51,10 +52,8 @@ export interface PackageInfo {
   id: string
   local?: boolean
   name: string
-  status: PackageStatus
-  variants: {
-    [variantId: string]: VariantInfo
-  }
+  status: { [profileId: string]: ProfileInfo }
+  variants: { [variantId: string]: VariantInfo }
 }
 
 export interface PackageOptions {
@@ -62,6 +61,7 @@ export interface PackageOptions {
 }
 
 export interface PackageStatus {
+  defaultVariantId?: string
   enabled: boolean
   options: PackageOptions
   requiredBy: string[]
@@ -146,7 +146,7 @@ export interface ProfileInfo {
   packages: {
     [packageId in string]?: PackageConfig
   }
-  settings: ProfileSettings
+  externals: ProfileExternals
 }
 
 export interface Settings {

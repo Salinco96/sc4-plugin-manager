@@ -27,34 +27,33 @@ export interface PackageFilters {
 }
 
 export interface StoreActions {
+  addPackage(packageId: string, variantId: string): Promise<boolean>
   check4GBPatch(): Promise<void>
   closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: string): Promise<boolean>
-  disablePackages(packageIds: string[]): Promise<boolean>
+  disablePackage(packageId: string): Promise<boolean>
   editProfile(profileId: string, data: ProfileUpdate): Promise<boolean>
-  enablePackages(packageIds: string[]): Promise<boolean>
-  installPackages(packageIds: string[]): Promise<boolean>
+  enablePackage(packageId: string): Promise<boolean>
   getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string>
+  installPackage(packageId: string, variantId: string): Promise<boolean>
   openExecutableDirectory(): Promise<void>
   openInstallationDirectory(): Promise<void>
   openPackageFileInExplorer(packageId: string, variantId: string, filePath: string): Promise<void>
   openProfileConfig(profileId: string): Promise<void>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
-  removePackages(packageIds: string[]): Promise<boolean>
+  removePackage(packageId: string): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
   simtropolisLogin(): Promise<void>
   simtropolisLogout(): Promise<void>
   switchProfile(profileId: string): Promise<boolean>
+  updatePackage(packageId: string): Promise<boolean>
   updateState(update: Partial<ApplicationState>): void
 }
 
 export interface Store {
   actions: StoreActions
-  conflictGroups?: {
-    [groupId: string]: string[]
-  }
   modal?: {
     action: (result: boolean) => void
     data: ModalData<ModalID>
@@ -86,6 +85,15 @@ export const useStore = create<Store>()((set, get): Store => {
 
   return {
     actions: {
+      async addPackage(packageId, variantId) {
+        try {
+          return await window.api.updatePackages({ [packageId]: variantId })
+        } catch (error) {
+          console.error(`Failed to add ${packageId}`, error)
+          enqueueSnackbar(`Failed to add ${packageId}`, { variant: "error" })
+          return false
+        }
+      },
       async check4GBPatch() {
         return window.api.check4GBPatch()
       },
@@ -99,20 +107,48 @@ export const useStore = create<Store>()((set, get): Store => {
       async createProfile(name, templateProfileId) {
         return window.api.createProfile(name, templateProfileId)
       },
-      async disablePackages(packageIds) {
-        return window.api.disablePackages(packageIds)
+      async disablePackage(packageId) {
+        try {
+          return await window.api.updatePackages({ [packageId]: null })
+        } catch (error) {
+          console.error(`Failed to disable ${packageId}`, error)
+          enqueueSnackbar(`Failed to disable ${packageId}`, { variant: "error" })
+          return false
+        }
       },
       async editProfile(profileId, data) {
         return window.api.editProfile(profileId, data)
       },
-      async enablePackages(packageIds) {
-        return window.api.enablePackages(packageIds)
+      async enablePackage(packageId) {
+        const packageInfo = get().packages?.[packageId]
+        if (!packageInfo) {
+          return false
+        }
+
+        const variantId = packageInfo.status.variantId
+        if (!variantId) {
+          return false
+        }
+
+        try {
+          return await window.api.updatePackages({ [packageId]: variantId })
+        } catch (error) {
+          console.error(`Failed to enable ${packageId}`, error)
+          enqueueSnackbar(`Failed to enable ${packageId}`, { variant: "error" })
+          return false
+        }
       },
       async getPackageDocsAsHtml(packageId, variantId) {
         return window.api.getPackageDocsAsHtml(packageId, variantId)
       },
-      async installPackages(packageIds) {
-        return window.api.installPackages(packageIds)
+      async installPackage(packageId, variantId) {
+        try {
+          return await window.api.installPackages({ [packageId]: variantId })
+        } catch (error) {
+          console.error(`Failed to install ${packageId}`, error)
+          enqueueSnackbar(`Failed to install ${packageId}`, { variant: "error" })
+          return false
+        }
       },
       async openInstallationDirectory() {
         return window.api.openInstallationDirectory()
@@ -132,8 +168,19 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ snackbars: { [type]: { $set: id } } })
         }
       },
-      async removePackages(packageIds) {
-        return window.api.removePackages(packageIds)
+      async removePackage(packageId) {
+        const disabled = await this.disablePackage(packageId)
+        if (!disabled) {
+          return false
+        }
+
+        try {
+          return await window.api.removePackages([packageId])
+        } catch (error) {
+          console.error(`Failed to remove ${packageId}`, error)
+          enqueueSnackbar(`Failed to remove ${packageId}`, { variant: "error" })
+          return false
+        }
       },
       setPackageFilters(filters) {
         updateState({ packageFilters: { $merge: filters } })
@@ -165,12 +212,31 @@ export const useStore = create<Store>()((set, get): Store => {
       async switchProfile(profileId) {
         return window.api.switchProfile(profileId)
       },
-      updateState(data) {
-        console.log("Update state", data)
-
-        if (data.conflictGroups) {
-          updateState({ conflictGroups: { $set: data.conflictGroups } })
+      async updatePackage(packageId) {
+        const packageInfo = get().packages?.[packageId]
+        if (!packageInfo) {
+          return false
         }
+
+        const variantId = packageInfo.status.variantId
+        if (!variantId) {
+          return false
+        }
+
+        try {
+          if (packageInfo.status.enabled) {
+            return await window.api.updatePackages({ [packageId]: variantId })
+          } else {
+            return await window.api.installPackages({ [packageId]: variantId })
+          }
+        } catch (error) {
+          console.error(`Failed to update ${packageId}`, error)
+          enqueueSnackbar(`Failed to update ${packageId}`, { variant: "error" })
+          return false
+        }
+      },
+      updateState(data) {
+        console.info("Update state", data)
 
         if (data.packages) {
           updateState({ packages: packages => ({ ...packages, ...data.packages }) })

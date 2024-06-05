@@ -1,20 +1,12 @@
 import { normalizeString } from "./utils/types"
 
-export interface ProfileSettings {
-  cam: boolean
-  darknite: boolean
-  rhd: boolean
+export interface ProfileExternals {
+  [groupId: string]: boolean
 }
 
 export interface ProfileUpdate {
   name?: string
-  settings?: Partial<ProfileSettings>
-}
-
-export const defaultProfileSettings: ProfileSettings = {
-  cam: false,
-  darknite: false,
-  rhd: false,
+  externals?: ProfileExternals
 }
 
 export function createUniqueProfileId(name: string, existingIds: string[]): string {

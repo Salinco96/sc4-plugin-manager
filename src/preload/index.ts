@@ -12,20 +12,17 @@ export const api = {
   async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
-  async disablePackages(packageIds: string[]): Promise<boolean> {
-    return ipcRenderer.invoke("disablePackages", packageIds)
-  },
   async editProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
     return ipcRenderer.invoke("editProfile", profileId, data)
-  },
-  async enablePackages(packageIds: string[]): Promise<boolean> {
-    return ipcRenderer.invoke("enablePackages", packageIds)
   },
   async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
     return ipcRenderer.invoke("getPackageDocsAsHtml", packageId, variantId)
   },
-  async installPackages(packageIds: string[]): Promise<boolean> {
-    return ipcRenderer.invoke("installPackages", packageIds)
+  async installPackages(packages: { [packageId: string]: string | null }): Promise<boolean> {
+    return ipcRenderer.invoke("installPackages", packages)
+  },
+  async updatePackages(packages: { [packageId: string]: string | null }): Promise<boolean> {
+    return ipcRenderer.invoke("updatePackages", packages)
   },
   async removePackages(packageIds: string[]): Promise<boolean> {
     return ipcRenderer.invoke("removePackages", packageIds)

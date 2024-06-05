@@ -6,11 +6,11 @@ import {
   ScienceOutlined as ExperimentalIcon,
   Update as UpdateIcon,
 } from "@mui/icons-material"
-import { Card, CardActions, CardContent, Link } from "@mui/material"
+import { Button, Card, CardActions, CardContent, Link } from "@mui/material"
 
 import { Page } from "@renderer/pages"
 import { useHistory } from "@renderer/utils/navigation"
-import { usePackageInfo } from "@renderer/utils/store"
+import { usePackageInfo, useStoreActions } from "@renderer/utils/store"
 
 import { PackageActions } from "./PackageActions"
 import { PackageListItemBanner } from "./PackageListItemBanner"
@@ -21,6 +21,7 @@ import { VirtualListItemProps } from "./VirtualList"
 export const PackageListItem = memo(function PackageListItem({
   item: packageId,
 }: VirtualListItemProps<string>): JSX.Element | null {
+  const actions = useStoreActions()
   const packageInfo = usePackageInfo(packageId)
   const history = useHistory()
 
@@ -81,17 +82,34 @@ export const PackageListItem = memo(function PackageListItem({
           </Text>
         )}
         {variantInfo.deprecated && (
+          // TODO: Suggest a replacement if possible
           <PackageListItemBanner icon={<DeprecatedIcon />} color="experimental">
             <b>Legacy:</b> This package is no longer maintained or recommended.
           </PackageListItemBanner>
         )}
         {variantInfo.experimental && (
+          // TODO: Suggest a replacement if possible
           <PackageListItemBanner icon={<ExperimentalIcon />} color="experimental">
             <b>Experimental:</b> This package should be used <b>for testing purposes only</b>.
           </PackageListItemBanner>
         )}
         {variantInfo.incompatible?.map(reason => (
-          <PackageListItemBanner key={reason} icon={<IncompatibleIcon />} color="incompatible">
+          <PackageListItemBanner
+            action={
+              <Button
+                aria-label="Replace existing packages"
+                color="inherit"
+                onClick={() => actions.addPackage(packageId, variantInfo.id)}
+                title="Replace existing packages"
+                variant="text"
+              >
+                Replace
+              </Button>
+            }
+            key={reason}
+            icon={<IncompatibleIcon />}
+            color="incompatible"
+          >
             <b>Incompatible:</b> {reason}
           </PackageListItemBanner>
         ))}
@@ -105,9 +123,6 @@ export const PackageListItem = memo(function PackageListItem({
             <b>Outdated:</b> A new version of this package is available.
           </PackageListItemBanner>
         )}
-        {variantInfo.conflictGroups?.map(groupId => (
-          <PackageListItemBanner key={groupId}>{variantInfo.description}</PackageListItemBanner>
-        ))}
       </CardContent>
       <CardActions sx={{ padding: 2 }}>
         <PackageActions packageInfo={packageInfo} />

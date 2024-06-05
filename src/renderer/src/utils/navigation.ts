@@ -37,7 +37,6 @@ export const useHistory = create<History>()((set, get) => ({
   current: initialLocation,
   entries: [],
   push(location) {
-    console.log(location)
     const { current, entries } = get()
     set({
       current: location as Location<Page>,

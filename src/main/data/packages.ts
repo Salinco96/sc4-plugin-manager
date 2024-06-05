@@ -4,7 +4,6 @@ import path from "path"
 import { glob } from "glob"
 
 import { CategoryID, parseCategoryID } from "@common/categories"
-import { ProfileSettings } from "@common/profiles"
 import {
   PackageAsset,
   PackageData,
@@ -16,6 +15,7 @@ import {
   DEFAULT_VARIANT_ID,
   ProfileInfo,
   getDefaultVariant,
+  EXTERNAL_PACKAGE_ID,
 } from "@common/types"
 import { readConfig, readConfigs, writeConfig } from "@utils/configs"
 import { FILENAMES } from "@utils/constants"
@@ -273,7 +273,7 @@ export async function loadRemotePackages(
                   ...(variant.dependencies ?? []).map(convertMemoPackageId),
                   ...(config.dependencies ?? []).map(convertMemoPackageId),
                 ],
-                deprecated: !!config.info?.summary?.match(/superseded/i),
+                deprecated: config.info?.summary?.match(/superseded/i) ? true : undefined,
                 description: config.info?.description,
                 id: variantId,
                 name: config.variantDescriptions?.[key]?.[value] ?? variantId,
@@ -358,7 +358,7 @@ export async function loadRemotePackages(
               authors: convertMemoAuthors(config.info?.author ?? config.group),
               category: parseCategoryID(config.subfolder),
               dependencies: config.dependencies?.map(convertMemoPackageId),
-              deprecated: !!config.info?.summary?.match(/superseded/i),
+              deprecated: config.info?.summary?.match(/superseded/i) ? true : undefined,
               description: config.info?.description,
               id: variantId,
               name: variantId,
@@ -507,6 +507,7 @@ export function mergeLocalPackageInfo(
         remoteVariantInfo.docs ??= localVariantInfo.docs
         remoteVariantInfo.files ??= localVariantInfo.files
         Object.assign(localVariantInfo, remoteVariantInfo)
+        localVariantInfo.installed = true
       } else {
         localVariantInfo.update = remoteVariantInfo
       }
@@ -628,6 +629,12 @@ export function calculatePackageCompatibility(
   const conflictGroups: { [group: string]: string[] } = {}
   const requirements: { [requirement: string]: { [value: string]: string[] } } = {}
 
+  for (const groupId in profile.externals) {
+    if (profile.externals[groupId]) {
+      conflictGroups[groupId] ??= [EXTERNAL_PACKAGE_ID]
+    }
+  }
+
   // Calculate conflict groups and requirements
   for (const packageId in packages) {
     const packageInfo = packages[packageId]
@@ -665,14 +672,6 @@ export function calculatePackageCompatibility(
     }
   }
 
-  if (profile.settings.cam) {
-    conflictGroups.cam ??= ["<external>"]
-  }
-
-  if (profile.settings.darknite) {
-    conflictGroups.darknite ??= ["<external>"]
-  }
-
   // Check requirements
   for (const requirement in requirements) {
     const values = Object.entries(requirements[requirement])
@@ -695,18 +694,12 @@ export function calculatePackageCompatibility(
     // Treated as compatible case of circular dependency
     cache.set(packageInfo.id, true)
 
-    let packageCompatible = false
+    const compatibleVariantIds: string[] = []
 
     for (const variantId in packageInfo.variants) {
       const variantInfo = packageInfo.variants[variantId]
 
-      calculateVariantCompatibility(
-        packageInfo.id,
-        variantInfo,
-        profile.settings,
-        conflictGroups,
-        requirements,
-      )
+      calculateVariantCompatibility(packageInfo.id, variantInfo, conflictGroups)
 
       if (!variantInfo.incompatible && variantInfo.dependencies) {
         const incompatibleDependencyIds = variantInfo.dependencies.filter(dependencyId => {
@@ -727,18 +720,39 @@ export function calculatePackageCompatibility(
         }
       }
 
-      packageCompatible ||= !variantInfo.incompatible
-
-      delete variantInfo.issues
+      if (!variantInfo.incompatible) {
+        compatibleVariantIds.push(variantId)
+      }
     }
+
+    if (compatibleVariantIds.length === 1) {
+      packageInfo.status.defaultVariantId = compatibleVariantIds[0]
+    } else if (packageInfo.variants[DEFAULT_VARIANT_ID]) {
+      packageInfo.status.defaultVariantId = DEFAULT_VARIANT_ID
+    } else {
+      delete packageInfo.status.defaultVariantId
+    }
+
+    const packageCompatible = compatibleVariantIds.length !== 0
+    cache.set(packageInfo.id, packageCompatible)
+    return packageCompatible
+  }
+
+  for (const packageId in packages) {
+    const packageInfo = packages[packageId]
+    checkRecursively(packageInfo)
+  }
+
+  for (const packageId in packages) {
+    const packageConfig = profile.packages[packageId]
+    const packageInfo = packages[packageId]
 
     let selectedVariantInfo = packageInfo.variants[packageInfo.status.variantId]
 
-    const packageConfig = profile.packages[packageInfo.id]
     const issues: string[] = []
 
-    // If selected variant is incompatible and no variant is explicitly set for profile, reset to default variant
     if (selectedVariantInfo.incompatible && !packageConfig?.variant) {
+      // Calculate new default variant if selected variant is incompatible
       selectedVariantInfo = getDefaultVariant(packageInfo)
       packageInfo.status.variantId = selectedVariantInfo.id
     }
@@ -761,20 +775,6 @@ export function calculatePackageCompatibility(
     if (issues.length) {
       selectedVariantInfo.issues = issues
     }
-
-    cache.set(packageInfo.id, packageCompatible)
-    return packageCompatible
-  }
-
-  for (const packageId in packages) {
-    const packageInfo = packages[packageId]
-
-    checkRecursively(packageInfo)
-
-    // Calculate new default variant if selected variant is incompatible
-    if (packageInfo.variants[packageInfo.status.variantId].incompatible) {
-      packageInfo.status.variantId = getDefaultVariant(packageInfo).id
-    }
   }
 
   return { conflictGroups, requirements }
@@ -783,10 +783,24 @@ export function calculatePackageCompatibility(
 function calculateVariantCompatibility(
   packageId: string,
   variantInfo: VariantInfo,
-  settings: ProfileSettings,
-  conflictGroups: { [group: string]: string[] },
-  requirements: { [requirement: string]: { [value: string]: string[] } },
+  conflictGroups: { readonly [groupId: string]: string[] },
 ): boolean {
+  const incompatibilities = getVariantIncompatibilities(packageId, variantInfo, conflictGroups)
+
+  if (incompatibilities.length === 0) {
+    delete variantInfo.incompatible
+    return true
+  } else {
+    variantInfo.incompatible = incompatibilities
+    return false
+  }
+}
+
+export function getVariantIncompatibilities(
+  packageId: string,
+  variantInfo: Readonly<VariantInfo>,
+  conflictGroups: { readonly [groupId: string]: string[] },
+): string[] {
   const incompatible: string[] = []
 
   // Check conflict groups
@@ -806,34 +820,36 @@ function calculateVariantCompatibility(
       const value = variantInfo.requirements[requirement]
 
       // Check conflict groups
-      const valueInSettings = settings[requirement as keyof ProfileSettings]
       const hasConflictGroup = !!conflictGroups[requirement]?.length
-      if ((valueInSettings || hasConflictGroup) !== value) {
+      if (value !== hasConflictGroup) {
         incompatible.push(`Requires ${requirement}${value ? "" : " not"} to be present`)
       }
 
       // Check other requirements
-      if (requirements[requirement] !== undefined) {
-        for (const requiredValue in requirements[requirement]) {
-          if (requiredValue !== String(value)) {
-            const conflictPackageId = requirements[requirement][requiredValue]?.find(
-              id => id !== packageId,
-            )
+      // if (requirements[requirement] !== undefined) {
+      //   for (const requiredValue in requirements[requirement]) {
+      //     if (requiredValue !== String(value)) {
+      //       const conflictPackageId = requirements[requirement][requiredValue]?.find(
+      //         id => id !== packageId,
+      //       )
 
-            if (conflictPackageId) {
-              incompatible.push(`Conflicting requirement ${requirement} with ${conflictPackageId}`)
-            }
-          }
-        }
-      }
+      //       if (conflictPackageId) {
+      //         incompatible.push(`Conflicting requirement ${requirement} with ${conflictPackageId}`)
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
 
-  if (incompatible.length === 0) {
-    delete variantInfo.incompatible
-    return true
-  } else {
-    variantInfo.incompatible = incompatible
-    return false
-  }
+  return incompatible
+}
+
+export function isVariantCompatible(
+  packageId: string,
+  variantInfo: Readonly<VariantInfo>,
+  conflictGroups: { readonly [group: string]: string[] },
+): boolean {
+  const incompatibilities = getVariantIncompatibilities(packageId, variantInfo, conflictGroups)
+  return incompatibilities.length === 0
 }

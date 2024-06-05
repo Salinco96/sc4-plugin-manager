@@ -8,7 +8,6 @@ export interface ApplicationStatus {
 }
 
 export interface ApplicationState {
-  conflictGroups?: { [groupId: string]: string[] }
   packages?: { [packageId: string]: PackageInfo }
   profiles?: { [profileId: string]: ProfileInfo }
   sessions: {

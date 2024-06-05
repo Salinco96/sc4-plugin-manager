@@ -2,13 +2,12 @@ import { Settings as ConfigIcon } from "@mui/icons-material"
 import { FormControl, FormGroup, IconButton, TextField, Tooltip } from "@mui/material"
 
 import { FlexBox } from "@renderer/components/FlexBox"
-import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
+import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
 
 import { ProfileNameInputField } from "./ProfileNameInputField"
 import { ProfileSettingSwitchField } from "./ProfileSettingSwitchField"
 
 function Profile(): JSX.Element {
-  const conflictGroups = useStore(store => store.conflictGroups)
   const profileInfo = useCurrentProfile()
   const actions = useStoreActions()
 
@@ -42,14 +41,12 @@ function Profile(): JSX.Element {
       <FormControl component="fieldset">
         <FormGroup>
           <ProfileSettingSwitchField
-            disabled={conflictGroups?.darknite?.some(id => id !== "<external>")}
-            label="Are you using a DarkNite mod?"
+            label="Have you installed a DarkNite mod outside of the Manager?"
             name="darknite"
             profileInfo={profileInfo}
           />
           <ProfileSettingSwitchField
-            disabled={conflictGroups?.cam?.some(id => id !== "<external>")}
-            label="Are you using the Colossus Addon Mod?"
+            label="Have you installed the Colossus Addon Mod outside of the Manager?"
             name="cam"
             profileInfo={profileInfo}
           />
