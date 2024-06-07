@@ -6,6 +6,7 @@ export const DIRNAMES = {
   packages: "Packages",
   plugins: "Plugins",
   profiles: "Profiles",
+  root: "Manager",
 }
 
 export const FILENAMES = {
@@ -18,6 +19,7 @@ export const FILENAMES = {
 /** Whitelisted documentation file extensions */
 export const DOCEXTENSIONS = [
   ".css",
+  ".gif",
   ".htm",
   ".html",
   ".jpeg",

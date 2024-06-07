@@ -273,7 +273,7 @@ export async function loadRemotePackages(
               )
 
               if (camMods.includes(packageId)) {
-                if (variantId === "cam=no") {
+                if (variantId.includes("cam=no")) {
                   continue
                 }
 
@@ -282,7 +282,7 @@ export async function loadRemotePackages(
               }
 
               if (darkniteMods.includes(packageId)) {
-                if (variantId === "nightmode=standard") {
+                if (variantId.includes("nightmode=standard")) {
                   continue
                 }
 
@@ -290,13 +290,13 @@ export async function loadRemotePackages(
                 variantInfo.conflictGroups.push("darknite")
               }
 
-              if (variantId === "nightmode=standard") {
+              if (variantId.includes("nightmode=standard")) {
                 variantInfo.name = "Maxis Nite"
                 variantInfo.requirements ??= {}
                 variantInfo.requirements.darknite = false
               }
 
-              if (variantId === "nightmode=dark") {
+              if (variantId.includes("nightmode=dark")) {
                 variantInfo.name = "Dark Nite"
                 if (!darkniteMods.includes(packageId)) {
                   variantInfo.requirements ??= {}
@@ -304,7 +304,7 @@ export async function loadRemotePackages(
                 }
               }
 
-              if (variantId === "cam=yes") {
+              if (variantId.includes("cam=yes")) {
                 variantInfo.name = "CAM"
                 if (!camMods.includes(packageId)) {
                   variantInfo.requirements ??= {}
@@ -312,19 +312,19 @@ export async function loadRemotePackages(
                 }
               }
 
-              if (variantId === "cam=no") {
+              if (variantId.includes("cam=no")) {
                 variantInfo.name = "Standard"
                 variantInfo.requirements ??= {}
                 variantInfo.requirements.cam = false
               }
 
-              if (variantId === "driveside=left") {
+              if (variantId.includes("driveside=left")) {
                 variantInfo.name = "Right-Hand Drive"
                 variantInfo.requirements ??= {}
                 variantInfo.requirements.rhd = true
               }
 
-              if (variantId === "driveside=right") {
+              if (variantId.includes("driveside=right")) {
                 variantInfo.name = "Left-Hand Drive"
                 variantInfo.requirements ??= {}
                 variantInfo.requirements.rhd = false

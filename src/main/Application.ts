@@ -133,28 +133,7 @@ export class Application {
 
   public constructor() {
     this.gamePath = this.loadGamePath()
-    this.rootPath = path.join(this.gamePath, "Manager")
-
-    this.initialize()
-
-    // Custom protocol to load package docs in sandboxed iframe
-    protocol.handle("docs", req => {
-      const { pathname } = new URL(req.url)
-      const fullPath = path.resolve(path.join(this.rootPath, decodeURI(pathname)))
-      const relativePath = path.relative(this.rootPath, fullPath)
-
-      // Only allow files under rootPath
-      if (path.isAbsolute(relativePath) || relativePath.includes("..")) {
-        return new Response("bad", { status: 400 })
-      }
-
-      // Only allow specific extensions (html, css, images)
-      if (!DOCEXTENSIONS.includes(path.extname(fullPath))) {
-        return new Response("bad", { status: 400 })
-      }
-
-      return net.fetch(pathToFileURL(fullPath).toString())
-    })
+    this.rootPath = path.join(this.gamePath, DIRNAMES.root)
 
     Menu.setApplicationMenu(
       Menu.buildFromTemplate([
@@ -178,6 +157,25 @@ export class Application {
       ]),
     )
 
+    // Custom protocol to load package docs in sandboxed iframe
+    protocol.handle("docs", req => {
+      const { pathname } = new URL(req.url)
+      const fullPath = path.resolve(path.join(this.rootPath, decodeURI(pathname)))
+      const relativePath = path.relative(this.rootPath, fullPath)
+
+      // Only allow files under rootPath
+      if (path.isAbsolute(relativePath) || relativePath.includes("..")) {
+        return new Response("bad", { status: 400 })
+      }
+
+      // Only allow specific extensions (html, css, images)
+      if (!DOCEXTENSIONS.includes(path.extname(fullPath))) {
+        return new Response("bad", { status: 400 })
+      }
+
+      return net.fetch(pathToFileURL(fullPath).toString())
+    })
+
     // Register message handlers
     this.handle("check4GBPatch")
     this.handle("createProfile")
@@ -195,8 +193,7 @@ export class Application {
     this.handle("switchProfile")
     this.handle("updatePackages")
 
-    // Create main window
-    this.createMainWindow()
+    this.initialize()
   }
 
   public async reload(): Promise<void> {
@@ -689,19 +686,15 @@ export class Application {
     // Launch database update in child process
     const databaseUpdatePromise = this.tryUpdateDatabase()
 
-    await fs.mkdir(this.getPackagesPath(), { recursive: true })
-
     // Load profiles...
     this.status.loader = "Loading profiles..."
     this.sendStatus()
-    const profiles = await this.loadProfiles()
-    this.sendProfiles()
+    await this.loadProfiles()
 
     // Load settings...
     this.status.loader = "Loading settings..."
     this.sendStatus()
     const settings = await this.loadSettings()
-    const currentProfile = settings.currentProfile ? profiles[settings.currentProfile] : undefined
 
     // TODO: Move to function
     // Config file does not exist, this must be the first time launching the manager
@@ -739,10 +732,13 @@ export class Application {
       this.writeSettings()
     }
 
+    this.createMainWindow()
+
     // Check game installation
     const checkGameInstallPromise = this.checkGameInstall()
 
     // Load local packages...
+    await createIfMissing(this.getPackagesPath())
     this.packages = await loadLocalPackages(this.getPackagesPath(), (c, t) => {
       if (c % 10 === 0) {
         this.status.loader = `Loading local packages (${Math.floor(100 * (c / t))}%)...`
@@ -786,6 +782,7 @@ export class Application {
     await checkGameInstallPromise
 
     // Resolving packages if profile exists
+    const currentProfile = this.getCurrentProfile()
     if (currentProfile) {
       this.status.loader = "Resolving dependencies..."
       this.sendStatus()
@@ -1652,7 +1649,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     this.profiles = {}
 
     const profilesPath = this.getProfilesPath()
-    await fs.mkdir(profilesPath, { recursive: true })
+    await createIfMissing(profilesPath)
 
     const entries = await fs.readdir(profilesPath, { withFileTypes: true })
     for (const entry of entries) {
@@ -1816,13 +1813,15 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
         return true
       }
 
+      const databasePath = this.getDatabasePath()
+      await createIfMissing(databasePath)
       this.databaseUpdatePromise = new Promise(resolve => {
         const branch = env.DATA_BRANCH || "main"
         console.info(`Updating database from ${repository}/${branch}...`)
         createChildProcess<UpdateDatabaseProcessData, {}, UpdateDatabaseProcessResponse>(
           updateDatabaseProcessPath,
           {
-            cwd: this.getDatabasePath(),
+            cwd: databasePath,
             data: {
               branch,
               origin: repository,
