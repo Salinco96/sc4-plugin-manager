@@ -8,8 +8,12 @@ export interface ApplicationStatus {
 }
 
 export interface ApplicationState {
-  packages?: { [packageId: string]: PackageInfo }
-  profiles?: { [profileId: string]: ProfileInfo }
+  packages?: {
+    [packageId: string]: PackageInfo | null
+  }
+  profiles?: {
+    [profileId: string]: ProfileInfo | null
+  }
   sessions: {
     simtropolis: {
       userId?: string | null

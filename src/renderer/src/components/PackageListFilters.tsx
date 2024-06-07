@@ -6,7 +6,7 @@ import {
   Download as DownloadedIcon,
   FileDownloadDone as EnabledIcon,
   FileDownloadOff as LocalIcon,
-  Science as ExperimentalIcon,
+  // Science as ExperimentalIcon,
   ViewInAr as DependenciesIcon,
 } from "@mui/icons-material"
 import {
@@ -84,7 +84,7 @@ export function PackageListFilters(): JSX.Element {
             <IncompatibleIcon />
           </ToggleButton>
         </Tooltip>
-        <Tooltip
+        {/* <Tooltip
           placement="bottom"
           title={
             packageFilters.incompatible
@@ -95,7 +95,7 @@ export function PackageListFilters(): JSX.Element {
           <ToggleButton value="experimental">
             <ExperimentalIcon />
           </ToggleButton>
-        </Tooltip>
+        </Tooltip> */}
         <Tooltip
           placement="bottom"
           title={packageFilters.dependencies ? "Hide dependencies" : "Show dependencies"}

@@ -18,6 +18,7 @@ import {
 
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
 import { Page } from "@renderer/pages"
+import { getCurrentVariant } from "@renderer/pages/PackageView"
 import { Location } from "@renderer/utils/navigation"
 import { PackageFilters, Store, getCurrentProfile } from "@renderer/utils/store"
 
@@ -37,17 +38,20 @@ function countPackages(store: Store, category?: PackageCategory, state?: Package
   const profile = getCurrentProfile(store)
   return store.packages
     ? Object.values(store.packages).filter(info => {
-        const variantInfo = info.variants[info.status.variantId]
+        const variantInfo = getCurrentVariant(info, profile)
 
         if (category && getCategory(variantInfo) !== category) {
           return false
         }
 
-        if (state && !getState(info, state, profile)) {
+        if (state && !getState(state, info, variantInfo.id, profile)) {
           return false
         }
 
-        if (store.packageFilters.state && !getState(info, store.packageFilters.state, profile)) {
+        if (
+          store.packageFilters.state &&
+          !getState(store.packageFilters.state, info, variantInfo.id, profile)
+        ) {
           return false
         }
 
@@ -61,7 +65,7 @@ function countPackages(store: Store, category?: PackageCategory, state?: Package
 
           if (
             !store.packageFilters.incompatible &&
-            getState(info, PackageState.INCOMPATIBLE, profile)
+            getState(PackageState.INCOMPATIBLE, info, variantInfo.id, profile)
           ) {
             return false
           }

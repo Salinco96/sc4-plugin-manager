@@ -3,6 +3,7 @@ import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState } from "@common/state"
+import { PackageConfig } from "@common/types"
 
 // Custom APIs for renderer
 export const api = {
@@ -18,14 +19,18 @@ export const api = {
   async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
     return ipcRenderer.invoke("getPackageDocsAsHtml", packageId, variantId)
   },
-  async installPackages(packages: { [packageId: string]: string | null }): Promise<boolean> {
+  async installPackages(packages: { [packageId: string]: string }): Promise<boolean> {
     return ipcRenderer.invoke("installPackages", packages)
   },
-  async updatePackages(packages: { [packageId: string]: string | null }): Promise<boolean> {
-    return ipcRenderer.invoke("updatePackages", packages)
+  async updatePackages(
+    profileId: string,
+    configUpdates: Partial<Record<string, PackageConfig>>,
+    externalUpdates: Partial<Record<string, boolean>> = {},
+  ): Promise<boolean> {
+    return ipcRenderer.invoke("updatePackages", profileId, configUpdates, externalUpdates)
   },
-  async removePackages(packageIds: string[]): Promise<boolean> {
-    return ipcRenderer.invoke("removePackages", packageIds)
+  async removePackages(packages: { [packageId: string]: string }): Promise<boolean> {
+    return ipcRenderer.invoke("removePackages", packages)
   },
   async openExecutableDirectory(): Promise<void> {
     return ipcRenderer.invoke("openExecutableDirectory")
@@ -42,9 +47,6 @@ export const api = {
   },
   async openProfileConfig(profileId: string): Promise<void> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
-  },
-  async setPackageVariant(packageId: string, variantId: string): Promise<boolean> {
-    return ipcRenderer.invoke("setPackageVariant", packageId, variantId)
   },
   async simtropolisLogin(): Promise<void> {
     return ipcRenderer.invoke("simtropolisLogin")

@@ -4,6 +4,7 @@ import { Chip, List, Tooltip } from "@mui/material"
 
 import { PackageCategory, PackageInfo, PackageState, getCategory, getState } from "@common/types"
 import { Page } from "@renderer/pages"
+import { getCurrentVariant } from "@renderer/pages/PackageView"
 import { useLocation } from "@renderer/utils/navigation"
 import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
 
@@ -168,8 +169,11 @@ export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
 
 export function PackageTags({ packageInfo }: { packageInfo: PackageInfo }): JSX.Element | null {
   const currentProfile = useCurrentProfile()
-  const variantInfo = packageInfo.variants[packageInfo.status.variantId]
+  if (!currentProfile) {
+    return null
+  }
 
+  const variantInfo = getCurrentVariant(packageInfo, currentProfile)
   const category = getCategory(variantInfo)
   const packageTags = tags.filter(tag => {
     if (tag.category) {
@@ -177,7 +181,7 @@ export function PackageTags({ packageInfo }: { packageInfo: PackageInfo }): JSX.
     }
 
     if (tag.state) {
-      return getState(packageInfo, tag.state, currentProfile)
+      return getState(tag.state, packageInfo, variantInfo.id, currentProfile)
     }
 
     return false

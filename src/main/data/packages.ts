@@ -13,9 +13,6 @@ import {
   AssetInfo,
   ConfigFormat,
   DEFAULT_VARIANT_ID,
-  ProfileInfo,
-  getDefaultVariant,
-  EXTERNAL_PACKAGE_ID,
 } from "@common/types"
 import { readConfig, readConfigs, writeConfig } from "@utils/configs"
 import { FILENAMES } from "@utils/constants"
@@ -119,12 +116,7 @@ export async function loadLocalPackageInfo(
     id: packageId,
     local: true,
     name: packageData.name ?? packageId,
-    status: {
-      enabled: false,
-      options: {},
-      requiredBy: [],
-      variantId: DEFAULT_VARIANT_ID,
-    },
+    status: {},
     variants: {},
   }
 
@@ -142,13 +134,8 @@ export async function loadLocalPackageInfo(
     }
   }
 
-  // Select default variant
-  if (!packageInfo.variants[DEFAULT_VARIANT_ID]) {
-    packageInfo.status.variantId = Object.keys(packageInfo.variants)[0]
-  }
-
   // Return the package only if some variants have been successfully loaded
-  if (packageInfo.status.variantId) {
+  if (Object.keys(packageInfo.variants).length) {
     return packageInfo
   }
 }
@@ -187,7 +174,7 @@ export function convertMemoPattern(pattern: string): string {
     pattern = pattern + "/**"
   }
 
-  return pattern
+  return pattern.replace(/\.(?!_?[a-z0-9]+$)/i, "?")
 }
 
 /**
@@ -243,12 +230,7 @@ export async function loadRemotePackages(
           const packageInfo: PackageInfo = {
             id: packageId,
             name: config.info?.summary ?? packageId,
-            status: {
-              enabled: false,
-              options: {},
-              requiredBy: [],
-              variantId: DEFAULT_VARIANT_ID,
-            },
+            status: {},
             variants: {},
           }
 
@@ -370,12 +352,12 @@ export async function loadRemotePackages(
           }
 
           // Select default variant
-          if (!packageInfo.variants[DEFAULT_VARIANT_ID]) {
-            packageInfo.status.variantId = Object.keys(packageInfo.variants)[0]
-          }
+          // if (!packageInfo.variants[DEFAULT_VARIANT_ID]) {
+          //   packageInfo.status.variantId = Object.keys(packageInfo.variants)[0]
+          // }
 
           // Return the package only if some variants have been successfully loaded
-          if (packageInfo.status.variantId) {
+          if (Object.keys(packageInfo.variants).length) {
             packages[packageId] = packageInfo
             nPackages++
           }
@@ -409,12 +391,7 @@ export function loadRemotePackageInfo(
   const packageInfo: PackageInfo = {
     id: packageId,
     name: packageData.name ?? packageId,
-    status: {
-      enabled: false,
-      options: {},
-      requiredBy: [],
-      variantId: DEFAULT_VARIANT_ID,
-    },
+    status: {},
     variants: {},
   }
 
@@ -427,12 +404,12 @@ export function loadRemotePackageInfo(
   }
 
   // Select default variant
-  if (!packageInfo.variants[DEFAULT_VARIANT_ID]) {
-    packageInfo.status.variantId = Object.keys(packageInfo.variants)[0]
-  }
+  // if (!packageInfo.variants[DEFAULT_VARIANT_ID]) {
+  //   packageInfo.status.variantId = Object.keys(packageInfo.variants)[0]
+  // }
 
   // Return the package only if some variants have been successfully loaded
-  if (packageInfo.status.variantId) {
+  if (Object.keys(packageInfo.variants).length) {
     return packageInfo
   }
 }
@@ -561,295 +538,4 @@ export async function writePackageConfig(
   )
 
   packageInfo.format = newFormat
-}
-
-export function checkoutPackages(
-  packages: { [packageId: string]: PackageInfo },
-  profile: ProfileInfo,
-): void {
-  // Enable explicit packages
-  for (const packageId in packages) {
-    const packageConfig = profile.packages[packageId]
-    const packageInfo = packages[packageId]
-
-    packageInfo.status.enabled = false
-    packageInfo.status.options = packageConfig?.options ?? {}
-    packageInfo.status.requiredBy = []
-
-    if (packageConfig?.variant) {
-      if (packageInfo.variants[packageConfig.variant]) {
-        packageInfo.status.variantId = packageConfig.variant
-      } else {
-        console.warn(`Unknown package variant '${packageId}#${packageConfig.variant}'`)
-        packageInfo.status.variantId = getDefaultVariant(packageInfo).id
-      }
-    } else {
-      packageInfo.status.variantId = getDefaultVariant(packageInfo).id
-    }
-  }
-
-  // Enable dependencies recursively
-  const enableRecursively = (packageInfo: PackageInfo) => {
-    if (!packageInfo.status.enabled) {
-      packageInfo.status.enabled = true
-
-      const variantInfo = packageInfo.variants[packageInfo.status.variantId]
-      variantInfo.dependencies?.forEach(dependencyId => {
-        const dependencyInfo = packages[dependencyId]
-        if (dependencyInfo) {
-          dependencyInfo.status.requiredBy.push(packageInfo.id)
-          enableRecursively(dependencyInfo)
-        } else {
-          console.warn(`Unknown dependency '${dependencyId}'`)
-        }
-      })
-    }
-  }
-
-  for (const packageId in profile.packages) {
-    const packageConfig = profile.packages[packageId]
-    const packageInfo = packages[packageId]
-    if (packageConfig?.enabled) {
-      if (packageInfo) {
-        enableRecursively(packageInfo)
-      } else {
-        console.warn(`Unknown package '${packageId}'`)
-      }
-    }
-  }
-}
-
-export function calculatePackageCompatibility(
-  packages: { [packageId: string]: PackageInfo },
-  profile: ProfileInfo,
-): {
-  conflictGroups: { [group: string]: string[] }
-  requirements: { [requirement: string]: { [value: string]: string[] } }
-} {
-  const conflictGroups: { [group: string]: string[] } = {}
-  const requirements: { [requirement: string]: { [value: string]: string[] } } = {}
-
-  for (const groupId in profile.externals) {
-    if (profile.externals[groupId]) {
-      conflictGroups[groupId] ??= [EXTERNAL_PACKAGE_ID]
-    }
-  }
-
-  // Calculate conflict groups and requirements
-  for (const packageId in packages) {
-    const packageInfo = packages[packageId]
-    if (packageInfo.status.enabled) {
-      const variantInfo = packageInfo.variants[packageInfo.status.variantId]
-
-      // Add conflict groups
-      if (variantInfo.conflictGroups) {
-        for (const conflictGroup of variantInfo.conflictGroups) {
-          conflictGroups[conflictGroup] ??= []
-          conflictGroups[conflictGroup].push(packageId)
-        }
-      }
-
-      // Add requirements
-      if (variantInfo.requirements) {
-        for (const requirement in variantInfo.requirements) {
-          const value = String(variantInfo.requirements[requirement])
-          requirements[requirement] ??= {}
-          requirements[requirement][value] ??= []
-          requirements[requirement][value].push(packageId)
-        }
-      }
-    }
-  }
-
-  // Check conflict groups
-  for (const conflictGroup in conflictGroups) {
-    const packageIds = conflictGroups[conflictGroup]
-    if (packageIds.length > 1) {
-      // TODO: Store the issue
-      console.warn(
-        `Multiple enabled packages with conflict group '${conflictGroup}': ${packageIds.join(", ")}`,
-      )
-    }
-  }
-
-  // Check requirements
-  for (const requirement in requirements) {
-    const values = Object.entries(requirements[requirement])
-    if (values.length > 1) {
-      // TODO: Store the issue
-      console.warn(
-        `Conflicting values for requirement '${requirement}': ${values.map(([value, packageIds]) => `'${value}' required by ${packageIds.join(", ")}`).join(" - ")}`,
-      )
-    }
-  }
-
-  // Calculate compatibility recursively
-  const cache = new Map<string, boolean>()
-  const checkRecursively = (packageInfo: PackageInfo): boolean => {
-    const cached = cache.get(packageInfo.id)
-    if (cached !== undefined) {
-      return cached
-    }
-
-    // Treated as compatible case of circular dependency
-    cache.set(packageInfo.id, true)
-
-    const compatibleVariantIds: string[] = []
-
-    for (const variantId in packageInfo.variants) {
-      const variantInfo = packageInfo.variants[variantId]
-
-      calculateVariantCompatibility(packageInfo.id, variantInfo, conflictGroups)
-
-      if (!variantInfo.incompatible && variantInfo.dependencies) {
-        const incompatibleDependencyIds = variantInfo.dependencies.filter(dependencyId => {
-          const dependencyInfo = packages[dependencyId]
-          return !!dependencyInfo && !checkRecursively(dependencyInfo)
-        })
-
-        if (incompatibleDependencyIds.length) {
-          if (incompatibleDependencyIds.length === 1) {
-            variantInfo.incompatible = [
-              `Dependency ${incompatibleDependencyIds[0]} is not compatible`,
-            ]
-          } else {
-            variantInfo.incompatible = [
-              `${incompatibleDependencyIds.length} dependencies are not compatible`,
-            ]
-          }
-        }
-      }
-
-      if (!variantInfo.incompatible) {
-        compatibleVariantIds.push(variantId)
-      }
-    }
-
-    if (compatibleVariantIds.length === 1) {
-      packageInfo.status.defaultVariantId = compatibleVariantIds[0]
-    } else if (packageInfo.variants[DEFAULT_VARIANT_ID]) {
-      packageInfo.status.defaultVariantId = DEFAULT_VARIANT_ID
-    } else {
-      delete packageInfo.status.defaultVariantId
-    }
-
-    const packageCompatible = compatibleVariantIds.length !== 0
-    cache.set(packageInfo.id, packageCompatible)
-    return packageCompatible
-  }
-
-  for (const packageId in packages) {
-    const packageInfo = packages[packageId]
-    checkRecursively(packageInfo)
-  }
-
-  for (const packageId in packages) {
-    const packageConfig = profile.packages[packageId]
-    const packageInfo = packages[packageId]
-
-    let selectedVariantInfo = packageInfo.variants[packageInfo.status.variantId]
-
-    const issues: string[] = []
-
-    if (selectedVariantInfo.incompatible && !packageConfig?.variant) {
-      // Calculate new default variant if selected variant is incompatible
-      selectedVariantInfo = getDefaultVariant(packageInfo)
-      packageInfo.status.variantId = selectedVariantInfo.id
-    }
-
-    // If selected variant is still incompatible, treat incompatibilities as issues
-    if (selectedVariantInfo.incompatible && packageInfo.status.enabled) {
-      issues.push(...selectedVariantInfo.incompatible)
-      delete selectedVariantInfo.incompatible
-    }
-
-    // Check if package is enabled but not installed
-    if (packageInfo.status.enabled && !selectedVariantInfo.installed) {
-      if (Object.values(packageInfo.variants).some(variant => variant.installed)) {
-        issues.unshift("The selected variant is not installed.")
-      } else {
-        issues.unshift("This package is not installed.")
-      }
-    }
-
-    if (issues.length) {
-      selectedVariantInfo.issues = issues
-    }
-  }
-
-  return { conflictGroups, requirements }
-}
-
-function calculateVariantCompatibility(
-  packageId: string,
-  variantInfo: VariantInfo,
-  conflictGroups: { readonly [groupId: string]: string[] },
-): boolean {
-  const incompatibilities = getVariantIncompatibilities(packageId, variantInfo, conflictGroups)
-
-  if (incompatibilities.length === 0) {
-    delete variantInfo.incompatible
-    return true
-  } else {
-    variantInfo.incompatible = incompatibilities
-    return false
-  }
-}
-
-export function getVariantIncompatibilities(
-  packageId: string,
-  variantInfo: Readonly<VariantInfo>,
-  conflictGroups: { readonly [groupId: string]: string[] },
-): string[] {
-  const incompatible: string[] = []
-
-  // Check conflict groups
-  if (variantInfo.conflictGroups) {
-    for (const conflictGroup of variantInfo.conflictGroups) {
-      const conflictPackageIds = conflictGroups[conflictGroup]
-      const conflictPackageId = conflictPackageIds?.find(id => id !== packageId)
-      if (conflictPackageId) {
-        incompatible.push(`Conflicting with ${conflictPackageId}`)
-      }
-    }
-  }
-
-  // Check requirements
-  if (variantInfo.requirements) {
-    for (const requirement in variantInfo.requirements) {
-      const value = variantInfo.requirements[requirement]
-
-      // Check conflict groups
-      const hasConflictGroup = !!conflictGroups[requirement]?.length
-      if (value !== hasConflictGroup) {
-        incompatible.push(`Requires ${requirement}${value ? "" : " not"} to be present`)
-      }
-
-      // Check other requirements
-      // if (requirements[requirement] !== undefined) {
-      //   for (const requiredValue in requirements[requirement]) {
-      //     if (requiredValue !== String(value)) {
-      //       const conflictPackageId = requirements[requirement][requiredValue]?.find(
-      //         id => id !== packageId,
-      //       )
-
-      //       if (conflictPackageId) {
-      //         incompatible.push(`Conflicting requirement ${requirement} with ${conflictPackageId}`)
-      //       }
-      //     }
-      //   }
-      // }
-    }
-  }
-
-  return incompatible
-}
-
-export function isVariantCompatible(
-  packageId: string,
-  variantInfo: Readonly<VariantInfo>,
-  conflictGroups: { readonly [group: string]: string[] },
-): boolean {
-  const incompatibilities = getVariantIncompatibilities(packageId, variantInfo, conflictGroups)
-  return incompatibilities.length === 0
 }

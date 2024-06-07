@@ -1,30 +1,48 @@
 import { ComponentType, useEffect, useState } from "react"
 
-import {
-  ArrowBack as BackIcon,
-  BedtimeOutlined as DeprecatedIcon,
-  DoDisturb as IncompatibleIcon,
-  ScienceOutlined as ExperimentalIcon,
-  Update as UpdateIcon,
-} from "@mui/icons-material"
+import { ArrowBack as BackIcon } from "@mui/icons-material"
 import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, IconButton, List, ListItem, Tab, Tooltip, Typography } from "@mui/material"
 import { create as createStore } from "zustand"
 
 import { getCategoryLabel } from "@common/categories"
-import { PackageInfo } from "@common/types"
+import { PackageInfo, PackageStatus, ProfileInfo, VariantInfo } from "@common/types"
 import { PackageActions } from "@renderer/components/PackageActions"
+import { PackageBanners } from "@renderer/components/PackageBanners"
 import { PackageListItem } from "@renderer/components/PackageListItem"
-import { PackageListItemBanner } from "@renderer/components/PackageListItemBanner"
 import { PackageTags } from "@renderer/components/PackageTags"
 import { Text } from "@renderer/components/Text"
 import { useHistory } from "@renderer/utils/navigation"
-import { usePackageInfo, useStore, useStoreActions } from "@renderer/utils/store"
+import { useCurrentProfile, usePackageInfo, useStore, useStoreActions } from "@renderer/utils/store"
 
 import { Loading } from "./Loading"
 
+export function getPackageStatus(
+  packageInfo: PackageInfo,
+  profileInfo?: ProfileInfo,
+): PackageStatus {
+  return (
+    (profileInfo && packageInfo.status[profileInfo.id]) || {
+      enabled: false,
+      issues: {},
+      options: {},
+      requiredBy: [],
+      variantId: Object.keys(packageInfo.variants)[0],
+    }
+  )
+}
+
+export function getCurrentVariant(
+  packageInfo: PackageInfo,
+  profileInfo?: ProfileInfo,
+): VariantInfo {
+  const { variantId } = getPackageStatus(packageInfo, profileInfo)
+  return packageInfo.variants[variantId]
+}
+
 function PackageViewInfo({ info }: { info: PackageInfo }): JSX.Element {
-  const variantInfo = info.variants[info.status.variantId]
+  const currentProfile = useCurrentProfile()
+  const variantInfo = getCurrentVariant(info, currentProfile)
 
   return (
     <Box>
@@ -67,35 +85,14 @@ function PackageViewInfo({ info }: { info: PackageInfo }): JSX.Element {
           </ul>
         </Typography>
       )}
-      {variantInfo.deprecated && (
-        <PackageListItemBanner icon={<DeprecatedIcon />} color="experimental">
-          <b>Legacy:</b> This package is no longer maintained or recommended.
-        </PackageListItemBanner>
-      )}
-      {variantInfo.experimental && (
-        <PackageListItemBanner icon={<ExperimentalIcon />} color="experimental">
-          <b>Experimental:</b> This package should be used <b>for testing purposes only</b>.
-        </PackageListItemBanner>
-      )}
-      {variantInfo.incompatible?.map(reason => (
-        <PackageListItemBanner key={reason} icon={<IncompatibleIcon />} color="incompatible">
-          <b>Incompatible:</b> {reason}
-        </PackageListItemBanner>
-      ))}
-      {variantInfo.update && (
-        <PackageListItemBanner icon={<UpdateIcon />}>
-          <b>Outdated:</b> A new version of this package is available.
-        </PackageListItemBanner>
-      )}
-      {variantInfo.conflictGroups?.map(groupId => (
-        <PackageListItemBanner key={groupId}>{variantInfo.description}</PackageListItemBanner>
-      ))}
+      <PackageBanners packageInfo={info} />
     </Box>
   )
 }
 
 function PackageViewDependencies({ info }: { info: PackageInfo }): JSX.Element {
-  const variantInfo = info.variants[info.status.variantId]
+  const currentProfile = useCurrentProfile()
+  const variantInfo = getCurrentVariant(info, currentProfile)
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
@@ -107,11 +104,14 @@ function PackageViewDependencies({ info }: { info: PackageInfo }): JSX.Element {
 }
 
 function PackageViewDocumentation({ info }: { info: PackageInfo }): JSX.Element {
+  const currentProfile = useCurrentProfile()
+  const status = getPackageStatus(info, currentProfile)
+
   const actions = useStoreActions()
   const [html, setHtml] = useState<string>()
 
   useEffect(() => {
-    actions.getPackageDocsAsHtml(info.id, info.status.variantId).then(setHtml).catch(console.error)
+    actions.getPackageDocsAsHtml(info.id, status.variantId).then(setHtml).catch(console.error)
   }, [actions, info.id])
 
   if (!html) {
@@ -122,7 +122,8 @@ function PackageViewDocumentation({ info }: { info: PackageInfo }): JSX.Element 
 }
 
 function PackageViewFiles({ info }: { info: PackageInfo }): JSX.Element {
-  const variantInfo = info.variants[info.status.variantId]
+  const currentProfile = useCurrentProfile()
+  const variantInfo = getCurrentVariant(info, currentProfile)
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
@@ -143,9 +144,12 @@ function PackageViewFiles({ info }: { info: PackageInfo }): JSX.Element {
 }
 
 function PackageViewRequiredBy({ info }: { info: PackageInfo }): JSX.Element {
+  const currentProfile = useCurrentProfile()
+  const status = getPackageStatus(info, currentProfile)
+
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {info.status.requiredBy?.map((dependencyId, index) => (
+      {status.requiredBy?.map((dependencyId, index) => (
         <PackageListItem key={dependencyId} index={index} item={dependencyId} />
       ))}
     </List>
@@ -155,15 +159,15 @@ function PackageViewRequiredBy({ info }: { info: PackageInfo }): JSX.Element {
 const packageViewTabs: {
   component: ComponentType<{ info: PackageInfo }>
   id: string
-  name: (info: PackageInfo) => string
-  condition?: (info: PackageInfo) => boolean
+  name: (info: PackageInfo, profile?: ProfileInfo) => string
+  condition?: (info: PackageInfo, profile?: ProfileInfo) => boolean
   fullsize?: boolean
 }[] = [
   {
     id: "info",
     component: PackageViewInfo,
-    condition(info) {
-      const variant = info.variants[info.status.variantId]
+    condition(info, profile) {
+      const variant = getCurrentVariant(info, profile)
       return !!variant
     },
     name() {
@@ -173,20 +177,21 @@ const packageViewTabs: {
   {
     id: "dependencies",
     component: PackageViewDependencies,
-    condition(info) {
-      const variant = info.variants[info.status.variantId]
+    condition(info, profile) {
+      const variant = getCurrentVariant(info, profile)
       return !!variant?.dependencies?.length
     },
-    name(info) {
-      const variant = info.variants[info.status.variantId]
+    name(info, profile) {
+      const variant = getCurrentVariant(info, profile)
       return `${variant?.dependencies?.length ?? 0} dependencies`
     },
   },
   {
     id: "requires",
     component: PackageViewRequiredBy,
-    condition(info) {
-      return !!info.status.requiredBy?.length
+    condition(info, profile) {
+      const status = getPackageStatus(info, profile)
+      return !!status.requiredBy?.length
     },
     name() {
       return "Required by"
@@ -195,20 +200,20 @@ const packageViewTabs: {
   {
     id: "files",
     component: PackageViewFiles,
-    condition(info) {
-      const variant = info.variants[info.status.variantId]
+    condition(info, profile) {
+      const variant = getCurrentVariant(info, profile)
       return !!variant?.files?.length
     },
-    name(info) {
-      const variant = info.variants[info.status.variantId]
+    name(info, profile) {
+      const variant = getCurrentVariant(info, profile)
       return `${variant?.files?.length ?? 0} files`
     },
   },
   {
     id: "docs",
     component: PackageViewDocumentation,
-    condition(info) {
-      const variant = info.variants[info.status.variantId]
+    condition(info, profile) {
+      const variant = getCurrentVariant(info, profile)
       return !!variant.docs?.path
     },
     name() {
@@ -230,6 +235,7 @@ const usePackageViewTab = createStore<{
 
 function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
   const { activeTab, setActiveTab } = usePackageViewTab()
+  const currentProfile = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
   const history = useHistory()
 
@@ -237,13 +243,14 @@ function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
     return null
   }
 
-  const variantInfo = packageInfo.variants[packageInfo.status.variantId]
-
+  const variantInfo = getCurrentVariant(packageInfo, currentProfile)
   if (!variantInfo) {
     return null
   }
 
-  const tabs = packageViewTabs.filter(tab => !tab.condition || tab.condition(packageInfo))
+  const tabs = packageViewTabs.filter(
+    tab => !tab.condition || tab.condition(packageInfo, currentProfile),
+  )
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", height: "100%", paddingTop: 1 }}>
@@ -272,7 +279,7 @@ function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
             {packageInfo.name} (v{variantInfo.installed ?? variantInfo.version})
           </Typography>
           <Typography variant="body2">
-            {packageInfo.id}#{packageInfo.status.variantId}
+            {packageInfo.id}#{variantInfo.id}
           </Typography>
           <PackageTags packageInfo={packageInfo} />
         </Box>
@@ -284,7 +291,7 @@ function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <TabList onChange={(_, value) => setActiveTab(value)}>
               {tabs.map(tab => (
-                <Tab key={tab.id} label={tab.name(packageInfo)} value={tab.id} />
+                <Tab key={tab.id} label={tab.name(packageInfo, currentProfile)} value={tab.id} />
               ))}
             </TabList>
           </Box>

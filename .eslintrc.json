@@ -77,6 +77,12 @@
         ],
         "pathGroupsExcludedImportTypes": ["react", "react-dom/*"]
       }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["debug", "error", "info", "warn"]
+      }
     ]
   },
   "settings": {

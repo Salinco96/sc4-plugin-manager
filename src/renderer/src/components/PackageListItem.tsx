@@ -1,19 +1,14 @@
 import { memo, useCallback, useState } from "react"
 
-import {
-  BedtimeOutlined as DeprecatedIcon,
-  DoDisturb as IncompatibleIcon,
-  ScienceOutlined as ExperimentalIcon,
-  Update as UpdateIcon,
-} from "@mui/icons-material"
-import { Button, Card, CardActions, CardContent, Link } from "@mui/material"
+import { Card, CardActions, CardContent, Link } from "@mui/material"
 
 import { Page } from "@renderer/pages"
+import { getCurrentVariant } from "@renderer/pages/PackageView"
 import { useHistory } from "@renderer/utils/navigation"
-import { usePackageInfo, useStoreActions } from "@renderer/utils/store"
+import { useCurrentProfile, usePackageInfo } from "@renderer/utils/store"
 
 import { PackageActions } from "./PackageActions"
-import { PackageListItemBanner } from "./PackageListItemBanner"
+import { PackageBanners } from "./PackageBanners"
 import { PackageTags } from "./PackageTags"
 import { Text } from "./Text"
 import { VirtualListItemProps } from "./VirtualList"
@@ -21,7 +16,7 @@ import { VirtualListItemProps } from "./VirtualList"
 export const PackageListItem = memo(function PackageListItem({
   item: packageId,
 }: VirtualListItemProps<string>): JSX.Element | null {
-  const actions = useStoreActions()
+  const currentProfile = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
   const history = useHistory()
 
@@ -38,11 +33,7 @@ export const PackageListItem = memo(function PackageListItem({
     return null
   }
 
-  const variantInfo = packageInfo.variants[packageInfo.status.variantId]
-
-  if (!variantInfo) {
-    return null
-  }
+  const variantInfo = getCurrentVariant(packageInfo, currentProfile)
 
   return (
     <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
@@ -67,7 +58,7 @@ export const PackageListItem = memo(function PackageListItem({
             {packageInfo.name} (v{variantInfo.version})
           </Text>
           <Text maxLines={1} variant="body2">
-            {packageInfo.id}#{packageInfo.status.variantId}
+            {packageInfo.id}#{variantInfo.id}
           </Text>
         </Link>
         <PackageTags packageInfo={packageInfo} />
@@ -81,48 +72,7 @@ export const PackageListItem = memo(function PackageListItem({
             {variantInfo.description}
           </Text>
         )}
-        {variantInfo.deprecated && (
-          // TODO: Suggest a replacement if possible
-          <PackageListItemBanner icon={<DeprecatedIcon />} color="experimental">
-            <b>Legacy:</b> This package is no longer maintained or recommended.
-          </PackageListItemBanner>
-        )}
-        {variantInfo.experimental && (
-          // TODO: Suggest a replacement if possible
-          <PackageListItemBanner icon={<ExperimentalIcon />} color="experimental">
-            <b>Experimental:</b> This package should be used <b>for testing purposes only</b>.
-          </PackageListItemBanner>
-        )}
-        {variantInfo.incompatible?.map(reason => (
-          <PackageListItemBanner
-            action={
-              <Button
-                aria-label="Replace existing packages"
-                color="inherit"
-                onClick={() => actions.addPackage(packageId, variantInfo.id)}
-                title="Replace existing packages"
-                variant="text"
-              >
-                Replace
-              </Button>
-            }
-            key={reason}
-            icon={<IncompatibleIcon />}
-            color="incompatible"
-          >
-            <b>Incompatible:</b> {reason}
-          </PackageListItemBanner>
-        ))}
-        {variantInfo.issues?.map(reason => (
-          <PackageListItemBanner key={reason}>
-            <b>Problem:</b> {reason}
-          </PackageListItemBanner>
-        ))}
-        {variantInfo.update && (
-          <PackageListItemBanner icon={<UpdateIcon />}>
-            <b>Outdated:</b> A new version of this package is available.
-          </PackageListItemBanner>
-        )}
+        <PackageBanners packageInfo={packageInfo} />
       </CardContent>
       <CardActions sx={{ padding: 2 }}>
         <PackageActions packageInfo={packageInfo} />

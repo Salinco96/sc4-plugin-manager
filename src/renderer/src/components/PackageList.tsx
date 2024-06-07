@@ -1,9 +1,14 @@
 import { useMemo, useRef } from "react"
 
+import { SearchOff as NoResultIcon } from "@mui/icons-material"
+import { Typography } from "@mui/material"
+
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
+import { getCurrentVariant, getPackageStatus } from "@renderer/pages/PackageView"
 import { useHistory } from "@renderer/utils/navigation"
 import { useCurrentProfile, useStore } from "@renderer/utils/store"
 
+import { FlexBox } from "./FlexBox"
 import { PackageListItem } from "./PackageListItem"
 import { VirtualList } from "./VirtualList"
 
@@ -19,54 +24,62 @@ export function PackageList(): JSX.Element {
 
   // TODO: Messy filtering - should be moved to Zustand
   const filteredPackages = useMemo(() => {
-    let packages = Object.values(allPackages || {})
+    const packages = Object.values(allPackages || {}).filter(info => {
+      const variant = getCurrentVariant(info, currentProfile)
 
-    if (packageFilters.categories.length) {
-      packages = packages.filter(info =>
-        packageFilters.categories.includes(getCategory(info.variants[info.status.variantId])),
-      )
-    }
-
-    if (packageFilters.state) {
-      packages = packages.filter(info => getState(info, packageFilters.state!, currentProfile))
-    }
-
-    if (!packageFilters.onlyErrors && !packageFilters.onlyUpdates) {
-      if (!packageFilters.dependencies) {
-        packages = packages.filter(
-          info =>
-            getCategory(info.variants[info.status.variantId]) !== PackageCategory.DEPENDENCIES,
-        )
+      if (packageFilters.categories.length) {
+        if (!packageFilters.categories.includes(getCategory(variant))) {
+          return false
+        }
       }
 
-      if (!packageFilters.experimental) {
-        packages = packages.filter(
-          info => !getState(info, PackageState.EXPERIMENTAL, currentProfile),
-        )
+      if (packageFilters.state) {
+        if (!getState(packageFilters.state, info, variant.id, currentProfile)) {
+          return false
+        }
       }
 
-      if (!packageFilters.incompatible) {
-        packages = packages.filter(
-          info => !getState(info, PackageState.INCOMPATIBLE, currentProfile),
-        )
+      if (!packageFilters.onlyErrors && !packageFilters.onlyUpdates) {
+        if (!packageFilters.dependencies) {
+          if (getCategory(variant) === PackageCategory.DEPENDENCIES) {
+            return false
+          }
+        }
+
+        if (!packageFilters.experimental) {
+          if (getState(PackageState.EXPERIMENTAL, info, variant.id, currentProfile)) {
+            return false
+          }
+        }
+
+        if (!packageFilters.incompatible) {
+          if (getState(PackageState.INCOMPATIBLE, info, variant.id, currentProfile)) {
+            return false
+          }
+        }
       }
-    }
 
-    if (packageFilters.onlyErrors) {
-      packages = packages.filter(info => getState(info, PackageState.ERROR, currentProfile))
-    }
+      if (packageFilters.onlyErrors) {
+        if (!getState(PackageState.ERROR, info, variant.id, currentProfile)) {
+          return false
+        }
+      }
 
-    if (packageFilters.onlyUpdates) {
-      packages = packages.filter(info => getState(info, PackageState.OUTDATED, currentProfile))
-    }
+      if (packageFilters.onlyUpdates) {
+        if (!getState(PackageState.OUTDATED, info, variant.id, currentProfile)) {
+          return false
+        }
+      }
 
-    if (packageFilters.search.trim().length > 2) {
-      packages = packages.filter(info =>
-        (info.id + "|" + info.name)
-          .toLowerCase()
-          .includes(packageFilters.search.trim().toLowerCase()),
-      )
-    }
+      if (packageFilters.search.trim().length > 2) {
+        const search = (info.id + "|" + info.name).toLowerCase()
+        if (!search.includes(packageFilters.search.trim().toLowerCase())) {
+          return false
+        }
+      }
+
+      return true
+    })
 
     packages.sort((a, b) => a.id.localeCompare(b.id))
 
@@ -74,6 +87,22 @@ export function PackageList(): JSX.Element {
   }, [allPackages, currentProfile, packageFilters])
 
   const scrolled = useRef(false)
+
+  if (filteredPackages.length === 0) {
+    return (
+      <FlexBox
+        alignItems="center"
+        direction="column"
+        fontSize={40}
+        height="100%"
+        justifyContent="center"
+        width="100%"
+      >
+        <NoResultIcon fontSize="inherit" />
+        <Typography variant="subtitle1">No packages found for these filters</Typography>
+      </FlexBox>
+    )
+  }
 
   return (
     <VirtualList<string>
@@ -84,7 +113,9 @@ export function PackageList(): JSX.Element {
         const packageInfo = useStore.getState().packages?.[packageId]
 
         if (packageInfo) {
-          const variantInfo = packageInfo.variants[packageInfo.status.variantId]
+          const packageStatus = getPackageStatus(packageInfo, currentProfile)
+          const variantInfo = getCurrentVariant(packageInfo, currentProfile)
+          const variantIssues = packageStatus.issues[packageStatus.variantId]
 
           if (variantInfo.deprecated) {
             size += PACKAGE_LIST_ITEM_BANNER_SIZE
@@ -94,12 +125,12 @@ export function PackageList(): JSX.Element {
             size += PACKAGE_LIST_ITEM_BANNER_SIZE
           }
 
-          if (variantInfo.incompatible) {
-            size += PACKAGE_LIST_ITEM_BANNER_SIZE * variantInfo.incompatible.length
+          if (packageStatus.enabled && !variantInfo.installed) {
+            size += PACKAGE_LIST_ITEM_BANNER_SIZE
           }
 
-          if (variantInfo.issues) {
-            size += PACKAGE_LIST_ITEM_BANNER_SIZE * variantInfo.issues.length
+          if (variantIssues?.length) {
+            size += PACKAGE_LIST_ITEM_BANNER_SIZE * variantIssues.length
           }
 
           if (variantInfo.update) {

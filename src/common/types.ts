@@ -1,8 +1,6 @@
 import { CategoryID } from "./categories"
-import { ProfileExternals } from "./profiles"
 
 export const DEFAULT_VARIANT_ID = "default"
-export const EXTERNAL_PACKAGE_ID = "<external>"
 
 /** Supported configuration formats */
 export enum ConfigFormat {
@@ -37,7 +35,7 @@ export interface PackageConfig {
 export interface PackageData extends VariantData {
   name?: string
   variants?: {
-    [variantId: string]: VariantData
+    [variantId in string]?: VariantData
   }
 }
 
@@ -52,8 +50,12 @@ export interface PackageInfo {
   id: string
   local?: boolean
   name: string
-  status: { [profileId: string]: ProfileInfo }
-  variants: { [variantId: string]: VariantInfo }
+  status: {
+    [profileId in string]?: PackageStatus
+  }
+  variants: {
+    [variantId in string]: VariantInfo
+  }
 }
 
 export interface PackageOptions {
@@ -61,8 +63,8 @@ export interface PackageOptions {
 }
 
 export interface PackageStatus {
-  defaultVariantId?: string
   enabled: boolean
+  issues: Partial<Record<string, string[]>>
   options: PackageOptions
   requiredBy: string[]
   variantId: string
@@ -91,14 +93,12 @@ export interface BaseVariantInfo extends VariantData {
   authors: string[]
   category: CategoryID
   id: string
-  incompatible?: string[]
-  issues?: string[]
   name: string
   version: string
 }
 
 export interface VariantInfo extends BaseVariantInfo {
-  action?: "installing" | "updating"
+  action?: "installing" | "updating" | "removing"
   installed?: boolean
   local?: boolean
   update?: BaseVariantInfo
@@ -137,6 +137,9 @@ export interface ProfileData {
   packages?: {
     [id in string]?: boolean | string | PackageConfig
   }
+  externals?: {
+    [groupId: string]: boolean | undefined
+  }
 }
 
 export interface ProfileInfo {
@@ -144,9 +147,11 @@ export interface ProfileInfo {
   format?: ConfigFormat
   name: string
   packages: {
-    [packageId in string]?: PackageConfig
+    [packageId: string]: PackageConfig | undefined
   }
-  externals: ProfileExternals
+  externals: {
+    [groupId: string]: boolean | undefined
+  }
 }
 
 export interface Settings {
@@ -205,53 +210,83 @@ export function getCategory(info: VariantInfo): PackageCategory {
   return PackageCategory.MODS
 }
 
-export function getDefaultVariant(info: PackageInfo): VariantInfo {
-  const defaultVariant = info.variants[DEFAULT_VARIANT_ID]
-  if (defaultVariant && !defaultVariant.incompatible) {
-    return defaultVariant
-  }
-
-  const variants = Object.values(info.variants)
-  const firstCompatibleVariant = variants.find(variant => !variant.incompatible)
-  if (firstCompatibleVariant) {
-    return firstCompatibleVariant
-  }
-
-  return defaultVariant ?? variants[0]
+export function isCompatible(info: PackageInfo, variantId: string, profile: ProfileInfo): boolean {
+  return !info.status[profile.id]?.issues[variantId]?.length
 }
 
-export function getState(info: PackageInfo, state: PackageState, profile?: ProfileInfo): boolean {
-  const variant = info.variants[info.status.variantId]
+export function getDefaultVariantStrict(
+  info: PackageInfo,
+  profile: ProfileInfo,
+): VariantInfo | undefined {
+  const variants = Object.values(info.variants)
+  const compatibleVariants = variants.filter(variant => isCompatible(info, variant.id, profile))
+  if (compatibleVariants.length === 1) {
+    return compatibleVariants[0]
+  }
+
+  const defaultVariant = info.variants[DEFAULT_VARIANT_ID]
+  if (isCompatible(info, DEFAULT_VARIANT_ID, profile)) {
+    return defaultVariant
+  }
+}
+
+export function getDefaultVariant(info: PackageInfo, profile?: ProfileInfo): VariantInfo {
+  const defaultVariant = info.variants[DEFAULT_VARIANT_ID]
+
+  if (profile) {
+    if (defaultVariant && isCompatible(info, DEFAULT_VARIANT_ID, profile)) {
+      return defaultVariant
+    }
+
+    const variants = Object.values(info.variants)
+    const compatibleVariant = variants.find(variant => isCompatible(info, variant.id, profile))
+    if (compatibleVariant) {
+      return compatibleVariant
+    }
+  }
+
+  return defaultVariant ?? Object.values(info.variants)[0]
+}
+
+export function getState(
+  state: PackageState,
+  packageInfo: PackageInfo,
+  variantId: string,
+  profileInfo?: ProfileInfo,
+): boolean {
+  const packageStatus = profileInfo ? packageInfo.status[profileInfo.id] : undefined
+  const variantInfo = packageInfo.variants[variantId]
+  const issues = packageStatus?.issues[variantId]
 
   switch (state) {
     case PackageState.DEPENDENCY:
-      return !!profile && !!info.status.enabled && !profile.packages[info.id]?.enabled
+      return !!packageStatus?.enabled && !profileInfo?.packages[packageInfo.id]?.enabled
 
     case PackageState.DEPRECATED:
-      return !!variant?.deprecated
+      return !!variantInfo?.deprecated
 
     case PackageState.DISABLED:
-      return !!profile && !!variant?.installed && !info.status.enabled
+      return !!variantInfo?.installed && packageStatus?.enabled === false
 
     case PackageState.ENABLED:
-      return !!profile && !!info.status.enabled
+      return !!packageStatus?.enabled
 
     case PackageState.ERROR:
-      return !!variant?.issues?.length
+      return !!packageStatus?.enabled && (!!issues?.length || !variantInfo.installed)
 
     case PackageState.EXPERIMENTAL:
-      return !!variant?.experimental
+      return !!variantInfo?.experimental
 
     case PackageState.INCOMPATIBLE:
-      return !!variant?.incompatible?.length
+      return packageStatus?.enabled === false && !!issues?.length
 
     case PackageState.INSTALLED:
-      return !!variant?.installed
+      return !!variantInfo?.installed
 
     case PackageState.LOCAL:
-      return !!variant?.local
+      return !!variantInfo?.local
 
     case PackageState.OUTDATED:
-      return !!variant?.installed && !!variant.update
+      return !!variantInfo?.installed && !!variantInfo.update
   }
 }

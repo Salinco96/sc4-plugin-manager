@@ -67,6 +67,7 @@ function Settings(): JSX.Element {
             }}
             slotProps={{ typography: { sx: { flex: 1 } } }}
             sx={{ marginLeft: 0 }}
+            title={settings?.install?.patched ? "The 4GB Patch has been applied." : undefined}
           />
         </FormGroup>
       </FormControl>

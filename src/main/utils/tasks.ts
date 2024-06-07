@@ -1,21 +1,35 @@
-interface Task<T> {
+export interface Task<T> {
   promise: Promise<T>
   reject: (error: Error) => void
   resolve: (result: T) => void
 }
 
-export class TaskManager<T = unknown> {
-  public maxParallel: number
-  public onTaskUpdate?: (ongoingTasks: string[]) => void
+export interface TaskManagerOptions {
+  onTaskUpdate?(ongoingTasks: string[]): void
+  parallel?: number
+}
 
+export interface TaskContext {
+  debug(...params: unknown[]): void
+  error(...params: unknown[]): void
+  key: string
+  info(...params: unknown[]): void
+  warn(...params: unknown[]): void
+}
+
+export class TaskManager<T = unknown> {
   public readonly cache: Map<string, T> = new Map()
+  public readonly name: string
+  public readonly onTaskUpdate?: (ongoingTasks: string[]) => void
   public readonly ongoingTasks: string[] = []
-  public readonly pendingTasks: Map<string, () => Promise<T>> = new Map()
+  public readonly parallel: number
+  public readonly pendingTasks: Map<string, (context: TaskContext) => Promise<T>> = new Map()
   public readonly tasks: Map<string, Task<T>> = new Map()
 
-  public constructor(maxParallel: number, onTaskUpdate?: (ongoingTasks: string[]) => void) {
-    this.maxParallel = maxParallel
-    this.onTaskUpdate = onTaskUpdate
+  public constructor(name: string, options: TaskManagerOptions = {}) {
+    this.parallel = options.parallel ?? 1
+    this.name = name
+    this.onTaskUpdate = options.onTaskUpdate
   }
 
   public hasOngoingTasks(): boolean {
@@ -44,7 +58,7 @@ export class TaskManager<T = unknown> {
 
   public async queue<S extends T>(
     key: string,
-    handler: () => Promise<S>,
+    handler: (context: TaskContext) => Promise<S>,
     options: { cache?: boolean; invalidate?: boolean } = {},
   ): Promise<S> {
     const existingTask = this.tasks.get(key)
@@ -73,7 +87,7 @@ export class TaskManager<T = unknown> {
     const promise = new Promise<T>((resolve, reject) => {
       task.reject = reject
       task.resolve = resolve
-      if (this.ongoingTasks.length < this.maxParallel) {
+      if (this.ongoingTasks.length < this.parallel) {
         this.run(key, handler)
         this.sendTaskUpdate()
       } else {
@@ -95,16 +109,16 @@ export class TaskManager<T = unknown> {
     return promise as Promise<S>
   }
 
-  protected async run(key: string, handler: () => Promise<T>): Promise<void> {
+  protected async run(key: string, handler: (context: TaskContext) => Promise<T>): Promise<void> {
+    const context = this.getContext(key)
+
     try {
       this.ongoingTasks.push(key)
-      const result = await handler()
+      const result = await handler(context)
       const task = this.tasks.get(key)
       // If task with same key is already pending, it means that current task was invalidated
       if (task && !this.pendingTasks.has(key)) {
         task.resolve(result)
-      } else {
-        console.debug(`Task ${key} finished but was invalidated:`, result)
       }
     } catch (error) {
       const task = this.tasks.get(key)
@@ -112,7 +126,7 @@ export class TaskManager<T = unknown> {
       if (task && !this.pendingTasks.has(key)) {
         task.reject(error as Error)
       } else {
-        console.warn(`Error raised during task ${key} but task was invalidated:`, error)
+        context.warn("Error raised but task was invalidated", error)
       }
     } finally {
       // Remove key from ongoing tasks
@@ -122,17 +136,36 @@ export class TaskManager<T = unknown> {
       }
 
       // Start pending tasks
-      if (this.ongoingTasks.length < this.maxParallel) {
+      if (this.ongoingTasks.length < this.parallel) {
         for (const [nextKey, nextTask] of this.pendingTasks) {
           this.pendingTasks.delete(nextKey)
           this.run(nextKey, nextTask)
-          if (this.ongoingTasks.length >= this.maxParallel) {
+          if (this.ongoingTasks.length >= this.parallel) {
             break
           }
         }
       }
 
       this.sendTaskUpdate()
+    }
+  }
+
+  protected getContext(key: string): TaskContext {
+    const prefix = `[${this.name}] (${key})`
+    return {
+      key,
+      debug(...params) {
+        console.debug(prefix, ...params)
+      },
+      error(...params) {
+        console.error(prefix, ...params)
+      },
+      info(...params) {
+        console.info(prefix, ...params)
+      },
+      warn(...params) {
+        console.warn(prefix, ...params)
+      },
     }
   }
 

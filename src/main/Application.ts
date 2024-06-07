@@ -1,5 +1,6 @@
 import { exec as cmd, exec } from "child_process"
 import {
+  Menu,
   MessageBoxOptions,
   MessageBoxReturnValue,
   Session,
@@ -20,23 +21,21 @@ import escapeHtml from "escape-html"
 import { glob } from "glob"
 
 import { CategoryID, formatCategory } from "@common/categories"
-import { ProfileExternals, ProfileUpdate, createUniqueProfileId } from "@common/profiles"
+import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
   AssetInfo,
   ConfigFormat,
-  EXTERNAL_PACKAGE_ID,
   PackageCondition,
   PackageConfig,
   PackageInfo,
-  PackageStatus,
+  ProfileData,
   ProfileInfo,
   Settings,
-  VariantInfo,
   getDefaultVariant,
+  getDefaultVariantStrict,
 } from "@common/types"
-import { removeElement } from "@common/utils/arrays"
-import { assert, pick } from "@common/utils/types"
+import { assert } from "@common/utils/types"
 import {
   SimtropolisSession,
   getSimtropolisSession,
@@ -45,14 +44,13 @@ import {
 } from "@utils/sessions/simtropolis"
 
 import {
-  calculatePackageCompatibility,
-  checkoutPackages,
-  isVariantCompatible,
   loadLocalPackages,
   loadRemotePackages,
   mergeLocalPackageInfo,
   writePackageConfig,
 } from "./data/packages"
+import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
+import { compactProfileConfig, fromProfileData, toProfileData } from "./data/profiles/configs"
 import { MainWindow } from "./MainWindow"
 import {
   UpdateDatabaseProcessData,
@@ -78,29 +76,6 @@ const defaultSettings: Settings = {
   useYaml: true,
 }
 
-export interface OngoingDownload {
-  key: string
-  promise: Promise<void>
-  url: string
-}
-
-export interface PendingDownload {
-  key: string
-  resolve(result: DownloadResult): void
-  url: string
-}
-
-export interface DownloadResult {
-  error?: Error
-  path: string
-  success: boolean
-}
-
-export interface Task<T = void> {
-  current?: Promise<T>
-  queued?: () => T
-}
-
 export class Application {
   public assets?: { [assetId: string]: AssetInfo }
   public packages?: { [packageId: string]: PackageInfo }
@@ -114,7 +89,11 @@ export class Application {
     ongoingExtracts: [],
   }
 
-  public updateFields: (keyof ApplicationState)[] = []
+  public dirty: {
+    packages?: { [packageId: string]: boolean } | boolean
+    profiles?: { [profileId: string]: boolean } | boolean
+    settings?: boolean
+  } = {}
 
   public mainWindow?: MainWindow
   public splashScreen?: SplashScreen
@@ -132,18 +111,22 @@ export class Application {
     readonly getAsset: TaskManager
     readonly install: TaskManager
     readonly linker: TaskManager
-    readonly loader: TaskManager
-    readonly writeProfiles: Task
-    readonly writeSettings: Task
+    readonly writer: TaskManager
   } = {
-    download: new TaskManager(6, this.onDownloadTaskUpdate.bind(this)),
-    extract: new TaskManager(3, this.onExtractTaskUpdate.bind(this)),
-    getAsset: new TaskManager(6),
-    install: new TaskManager(6),
-    linker: new TaskManager(1, this.onLinkTaskUpdate.bind(this)),
-    loader: new TaskManager(1, this.onLinkTaskUpdate.bind(this)),
-    writeProfiles: {},
-    writeSettings: {},
+    download: new TaskManager("AssetFetcher", {
+      onTaskUpdate: this.onDownloadTaskUpdate.bind(this),
+      parallel: 6,
+    }),
+    extract: new TaskManager("AssetExtractor", {
+      onTaskUpdate: this.onExtractTaskUpdate.bind(this),
+      parallel: 3,
+    }),
+    getAsset: new TaskManager("AssetManager", { parallel: 6 }),
+    install: new TaskManager("PackageInstaller", { parallel: 6 }),
+    linker: new TaskManager("PackageLinker", {
+      onTaskUpdate: this.onLinkTaskUpdate.bind(this),
+    }),
+    writer: new TaskManager("ConfigWriter"),
   }
 
   protected databaseUpdatePromise?: Promise<boolean>
@@ -153,16 +136,6 @@ export class Application {
     this.rootPath = path.join(this.gamePath, "Manager")
 
     this.initialize()
-
-    getSimtropolisSession(this.browserSession).then(session => {
-      if (session) {
-        console.info("Logged in to Simtropolis")
-        this.sessions.simtropolis = session
-        this.sendStateUpdates("sessions")
-      } else {
-        this.sessions.simtropolis = null
-      }
-    })
 
     // Custom protocol to load package docs in sandboxed iframe
     protocol.handle("docs", req => {
@@ -183,6 +156,28 @@ export class Application {
       return net.fetch(pathToFileURL(fullPath).toString())
     })
 
+    Menu.setApplicationMenu(
+      Menu.buildFromTemplate([
+        {
+          role: "fileMenu",
+          submenu: [
+            {
+              accelerator: "CmdOrCtrl+R",
+              click: () => this.reload(),
+              label: "Reload",
+            },
+            {
+              accelerator: "CmdOrCtrl+Q",
+              role: "quit",
+            },
+          ],
+        },
+        {
+          role: "editMenu",
+        },
+      ]),
+    )
+
     // Register message handlers
     this.handle("check4GBPatch")
     this.handle("createProfile")
@@ -195,7 +190,6 @@ export class Application {
     this.handle("openPackageFileInExplorer")
     this.handle("openProfileConfig")
     this.handle("removePackages")
-    this.handle("setPackageVariant")
     this.handle("simtropolisLogin")
     this.handle("simtropolisLogout")
     this.handle("switchProfile")
@@ -203,6 +197,24 @@ export class Application {
 
     // Create main window
     this.createMainWindow()
+  }
+
+  public async reload(): Promise<void> {
+    this.assets = undefined
+    this.packages = undefined
+    this.profiles = undefined
+    this.sessions = {}
+    this.settings = undefined
+    this.status = {
+      linker: null,
+      loader: null,
+      ongoingDownloads: [],
+      ongoingExtracts: [],
+    }
+
+    this.tasks.linker.invalidateCache("init")
+
+    await this.initialize()
   }
 
   public async openExecutableDirectory(): Promise<void> {
@@ -259,8 +271,8 @@ export class Application {
 
     if (this.settings && installPath !== this.settings.install?.path) {
       this.settings.install = { path: installPath }
-      this.sendStateUpdates("settings")
-      await this.writeSettings()
+      this.sendSettings()
+      this.writeSettings()
     }
 
     if (installPath) {
@@ -290,7 +302,7 @@ export class Application {
             if (this.settings?.install && this.settings.install.version !== version) {
               console.info(`Detected version ${version}`)
               this.settings.install.version = version
-              this.sendStateUpdates("settings")
+              this.sendSettings()
               this.writeSettings()
             }
 
@@ -331,8 +343,8 @@ export class Application {
           console.info("4GB Patch is already applied")
           if (!this.settings.install.patched) {
             this.settings.install.patched = true
-            this.sendStateUpdates("settings")
-            await this.writeSettings()
+            this.sendSettings()
+            this.writeSettings()
           }
         } else if (isStartupCheck && this.settings.install.patched === false) {
           // Skip startup check if "Do not ask again" was previously checked
@@ -367,8 +379,8 @@ export class Application {
             this.settings.install.patched = false
           }
 
-          this.sendStateUpdates("settings")
-          await this.writeSettings()
+          this.sendSettings()
+          this.writeSettings()
         }
       }
     } catch (error) {
@@ -652,7 +664,7 @@ export class Application {
   }
 
   protected openInExplorer(fullPath: string): void {
-    cmd(`explorer "${fullPath.replaceAll('"', '\\"')}"`)
+    cmd(`explorer "${fullPath}"`)
   }
 
   protected async initialize(): Promise<void> {
@@ -663,6 +675,17 @@ export class Application {
     log.transports.file.resolvePathFn = this.getLogsFile.bind(this)
     Object.assign(console, log.functions)
 
+    // Initialize session
+    getSimtropolisSession(this.browserSession).then(session => {
+      if (session) {
+        console.info("Logged in to Simtropolis")
+        this.sessions.simtropolis = session
+        this.sendSessions()
+      } else {
+        this.sessions.simtropolis = null
+      }
+    })
+
     // Launch database update in child process
     const databaseUpdatePromise = this.tryUpdateDatabase()
 
@@ -670,18 +693,17 @@ export class Application {
 
     // Load profiles...
     this.status.loader = "Loading profiles..."
-    this.sendStateUpdates("status")
+    this.sendStatus()
     const profiles = await this.loadProfiles()
-    this.sendStateUpdates("profiles")
+    this.sendProfiles()
 
     // Load settings...
     this.status.loader = "Loading settings..."
-    this.sendStateUpdates("status")
+    this.sendStatus()
     const settings = await this.loadSettings()
-    this.sendStateUpdates("settings")
-
     const currentProfile = settings.currentProfile ? profiles[settings.currentProfile] : undefined
 
+    // TODO: Move to function
     // Config file does not exist, this must be the first time launching the manager
     if (!settings.format) {
       const plugins = await fs.readdir(this.getPluginsPath())
@@ -714,63 +736,65 @@ export class Application {
         }
       }
 
-      await this.writeSettings()
+      this.writeSettings()
     }
 
+    // Check game installation
+    const checkGameInstallPromise = this.checkGameInstall()
+
     // Load local packages...
-    const localPackages = await loadLocalPackages(this.getPackagesPath(), (c, t) => {
+    this.packages = await loadLocalPackages(this.getPackagesPath(), (c, t) => {
       if (c % 10 === 0) {
         this.status.loader = `Loading local packages (${Math.floor(100 * (c / t))}%)...`
-        this.sendStateUpdates("status")
+        this.sendStatus()
       }
     })
-    this.packages = localPackages
-    this.sendStateUpdates("packages")
+
+    this.sendPackages()
 
     // Wait for database update...
     this.status.loader = "Updating database..."
-    this.sendStateUpdates("status")
+    this.sendStatus()
     await databaseUpdatePromise
 
     // Load remote packages...
-    const { assets, packages } = await loadRemotePackages(this.getDatabasePath(), (c, t) => {
+    const remote = await loadRemotePackages(this.getDatabasePath(), (c, t) => {
       if (c % 10 === 0) {
         this.status.loader = `Loading remote packages (${Math.floor(100 * (c / t))}%)...`
-        this.sendStateUpdates("status")
+        this.sendStatus()
       }
     })
-    this.assets = assets
-    this.packages = packages
+
+    this.assets = remote.assets
 
     // Merge local and remote package definitions...
-    for (const packageId in localPackages) {
-      const localPackageInfo = localPackages[packageId]
-      const remotePackageInfo = this.packages?.[packageId]
-      if (remotePackageInfo) {
+    for (const packageId in remote.packages) {
+      const remotePackageInfo = remote.packages[packageId]
+      const localPackageInfo = this.packages[packageId]
+      if (localPackageInfo) {
         this.packages[packageId] = mergeLocalPackageInfo(localPackageInfo, remotePackageInfo)
       } else {
-        this.packages[packageId] = localPackageInfo
+        this.packages[packageId] = remotePackageInfo
       }
     }
 
-    this.sendStateUpdates("packages")
+    this.sendPackages()
 
+    // Wait for installation check...
+    this.status.loader = "Checking installation..."
+    this.sendStatus()
+    await checkGameInstallPromise
+
+    // Resolving packages if profile exists
     if (currentProfile) {
       this.status.loader = "Resolving dependencies..."
-      this.sendStateUpdates("status")
-
-      this.checkoutPackages()
-      this.sendStateUpdates()
+      this.sendStatus()
+      this.recalculatePackages(currentProfile.id)
     }
 
     // Done
     this.status.loader = null
-    this.sendStateUpdates("status")
-
-    // Check game installation
-    await this.checkGameInstall()
-
-    await this.linkPackages()
+    this.sendStatus()
   }
 
   public async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
@@ -799,511 +823,279 @@ export class Application {
     }
 
     this.profiles[profile.id] = profile
-    this.sendStateUpdates("profiles")
+    this.writeProfile(profile.id)
 
     return this.switchProfile(profile.id)
   }
 
   public async updatePackages(
-    packages: { [packageId: string]: string | null },
-    externals: Partial<ProfileExternals> = {},
+    profileId: string,
+    configUpdates: Partial<Record<string, PackageConfig>>,
+    externalUpdates: Partial<Record<string, boolean>>,
   ): Promise<boolean> {
-    this.tasks.linker
-
-    const currentProfile = this.getCurrentProfile()
-    if (!this.packages || !currentProfile) {
+    const packages = this.packages
+    const profile = this.getProfileInfo(profileId)
+    if (!packages || !profile) {
       return false
     }
 
-    const resultingConfig: { [packageId in string]?: PackageConfig } = {}
-    const resultingStatus: { [packageId in string]?: PackageStatus } = {}
-    const resultingExternals = { ...currentProfile.externals, ...externals }
+    const {
+      explicitVariantChanges,
+      implicitVariantChanges,
+      incompatibleExternals,
+      incompatiblePackages,
+      installingVariants,
+      resultingConfigs,
+      resultingExternals,
+      resultingStatus,
+    } = resolvePackageUpdates(packages, profile, configUpdates, externalUpdates)
 
-    /** Configuration before the update (readonly) */
-    const getOldConfig = (packageId: string): Readonly<PackageConfig> => {
-      return currentProfile?.packages[packageId] ?? {}
-    }
-
-    /** Status before the update (readonly) */
-    const getOldStatus = (packageId: string): Readonly<PackageStatus> => {
-      return this.packages![packageId].status
-    }
-
-    /** Current computed config */
-    const getConfig = (packageId: string): PackageConfig => {
-      return (resultingConfig[packageId] ??= structuredClone(getOldConfig(packageId)))
-    }
-
-    /** Current computed status */
-    const getStatus = (packageId: string): PackageStatus => {
-      return (resultingStatus[packageId] ??= structuredClone(getOldStatus(packageId)))
-    }
-
-    // Compute initial config changes
-    for (const packageId in packages) {
-      const newVariantId = packages[packageId]
-      const newConfig = getConfig(packageId)
-
-      if (newVariantId) {
-        newConfig.enabled = true
-        newConfig.variant = newVariantId
-      } else {
-        newConfig.enabled = false
+    // Apply implicit variant changes automatically
+    if (Object.keys(implicitVariantChanges).length) {
+      for (const packageId in implicitVariantChanges) {
+        configUpdates[packageId] = { variant: implicitVariantChanges[packageId][1] }
       }
+
+      // Recalculate
+      return this.updatePackages(profileId, configUpdates, externalUpdates)
     }
 
-    /** Packages that are being updated (explicitly enabled with their already-enabled variant) */
-    const updatingPackageIds = new Set(
-      Object.keys(packages).filter(packageId => {
-        const oldStatus = getOldStatus(packageId)
-        return oldStatus.enabled && oldStatus.variantId === packages[packageId]
-      }),
-    )
+    // Confirm incompatible externals
+    if (incompatibleExternals.length) {
+      const groupNames = incompatibleExternals.map(groupId => {
+        return `  - ${groupId}`
+      })
 
-    /** Current computed variant */
-    const getVariant = (packageId: string): VariantInfo | null => {
-      const status = getStatus(packageId)
-      return status.enabled ? this.packages![packageId].variants[status.variantId] : null
-    }
+      // TODO: Use our own modal rather than system one?
+      const options: MessageBoxOptions = {
+        buttons: ["Replace external packages", "Ignore conflicts", "Cancel"],
+        cancelId: 2,
+        defaultId: 0,
+        detail: `The following external packages are incompatible with this change:
+${groupNames.sort().join("\n")}
 
-    /** Desired variant */
-    const getTargetVariant = (packageId: string): VariantInfo | null => {
-      const packageInfo = this.packages![packageId]
-      const config = getConfig(packageId)
-      const status = getStatus(packageId)
-      if (config.enabled || status.requiredBy.length) {
-        const variant = packageInfo.variants[config.variant ?? status.variantId]
-        if (updatingPackageIds.has(packageId) && variant.update) {
-          return variant.update
-        } else {
-          return variant
+If you wish to replace them, please remove all corresponding files from your Plugins folder before continuing. Otherwise, you can resolve each conflict manually later.`,
+        message: "Replace external packages?",
+        noLink: true,
+        title: "SC4 Plugin Manager",
+        type: "warning",
+      }
+
+      let result: MessageBoxReturnValue
+      if (this.mainWindow) {
+        result = await dialog.showMessageBox(this.mainWindow, options)
+      } else {
+        result = await dialog.showMessageBox(options)
+      }
+
+      // Cancel
+      if (result.response === 2) {
+        return false
+      }
+
+      // Ignore conflicted externals
+      if (result.response === 1) {
+        for (const groupId of incompatibleExternals) {
+          externalUpdates[groupId] = true
         }
+      }
+
+      // Disable conflicted externals
+      if (result.response === 0) {
+        for (const groupId of incompatibleExternals) {
+          externalUpdates[groupId] = false
+        }
+
+        // Recalculate
+        return this.updatePackages(profileId, configUpdates, externalUpdates)
+      }
+    }
+
+    // Confirm fully-incompatible packages
+    if (incompatiblePackages.length) {
+      const packageNames = incompatiblePackages.map(packageId => {
+        const info = this.getPackageInfo(packageId)!
+        return `  - ${info.name}`
+      })
+
+      // TODO: Use our own modal rather than system one?
+      const options: MessageBoxOptions = {
+        buttons: ["Disable incompatible packages", "Ignore conflicts", "Cancel"],
+        cancelId: 2,
+        defaultId: 0,
+        detail: `The following enabled packages are incompatible with this change:
+${packageNames.sort().join("\n")}
+
+You can either disable all incompatible packages now, or resolve each conflict manually later.`,
+        message: "Disable incompatible packages?",
+        noLink: true,
+        title: "SC4 Plugin Manager",
+        type: "warning",
+      }
+
+      let result: MessageBoxReturnValue
+      if (this.mainWindow) {
+        result = await dialog.showMessageBox(this.mainWindow, options)
       } else {
-        return null
+        result = await dialog.showMessageBox(options)
+      }
+
+      // Cancel
+      if (result.response === 2) {
+        return false
+      }
+
+      // Ignore conflicted packages
+      if (result.response === 1) {
+        for (const packageId of incompatiblePackages) {
+          configUpdates[packageId] = { enabled: true }
+        }
+      }
+
+      // Disable conflicted packages
+      if (result.response === 0) {
+        for (const packageId of incompatiblePackages) {
+          configUpdates[packageId] = { enabled: false }
+        }
+
+        // Recalculate
+        return this.updatePackages(profileId, configUpdates, externalUpdates)
       }
     }
 
-    const updatePackage = (packageId: string) => {
-      const status = getStatus(packageId)
-      const oldVariant = getVariant(packageId)
-      const newVariant = getTargetVariant(packageId)
-      if (oldVariant === newVariant) {
-        return
-      }
-
-      const oldDependencies = new Set<string>()
-      const newDependencies = new Set<string>()
-
-      if (oldVariant && status.enabled) {
-        status.enabled = false
-        oldVariant.dependencies?.forEach(dependencyId => {
-          const dependencyStatus = getStatus(dependencyId)
-          removeElement(dependencyStatus.requiredBy, packageId)
-          // If dependency is no longer required by anything, mark if for removal
-          if (dependencyStatus.requiredBy.length === 0) {
-            oldDependencies.add(dependencyId)
-          }
-        })
-      }
-
-      if (newVariant && !status.enabled) {
-        status.enabled = true
-        status.variantId = newVariant.id
-        newVariant.dependencies?.forEach(dependencyId => {
-          const dependencyStatus = getStatus(dependencyId)
-          dependencyStatus.requiredBy.push(packageId)
-          // Mark new dependency OR revert previous mark for removal
-          if (dependencyStatus.requiredBy.length === 1) {
-            oldDependencies.delete(dependencyId) || newDependencies.add(dependencyId)
-          }
-        })
-      }
-
-      oldDependencies.forEach(updatePackage)
-      newDependencies.forEach(updatePackage)
-    }
-
-    const tryUpdate = async (): Promise<boolean> => {
-      // Recursively compute status changes
-      Object.keys(resultingConfig).forEach(updatePackage)
-
-      console.log({ resultingConfig, resultingStatus })
-
-      /** Packages that will be disabled explicitly */
-      const disablingPackageIds: string[] = []
-      /** Packages that will be disabled implicitly (i.e. obsolete dependencies) */
-      const disablingDependencyIds: string[] = []
-      /** Packages that will be enabled explicitly */
-      const enablingPackageIds: string[] = []
-      /** Packages that will be enabled implicitly (i.e. new dependencies) */
-      const enablingDependencyIds: string[] = []
-      /** Packages that will be installed */
-      const installingPackageIds: string[] = []
-      /** Packages that will be installed implicitly (i.e. new non-installed dependencies) */
-      const installingDependencyIds: string[] = []
-
-      // Compute changelists
-      for (const packageId in resultingStatus) {
-        const oldStatus = getOldStatus(packageId)
-        const newStatus = getStatus(packageId)
-
-        if (newStatus.enabled !== oldStatus.enabled) {
-          if (newStatus.enabled) {
-            if (packages[packageId]) {
-              enablingPackageIds.push(packageId)
-            } else {
-              enablingDependencyIds.push(packageId)
-            }
+    // Confirm explicit variant changes
+    if (Object.keys(explicitVariantChanges).length) {
+      const packageNames = Object.entries(explicitVariantChanges).map(
+        ([packageId, [oldVariantId, newVariantId]]) => {
+          const packageInfo = packages[packageId]
+          const oldVariant = packageInfo.variants[oldVariantId]
+          const newVariant = packageInfo.variants[newVariantId]
+          if (oldVariant) {
+            return `  - ${packageInfo.name}: ${oldVariant.name} -> ${newVariant.name}`
           } else {
-            if (packages[packageId] === null) {
-              disablingPackageIds.push(packageId)
-            } else {
-              disablingDependencyIds.push(packageId)
-            }
+            return `  - ${packageInfo.name}`
           }
-        }
+        },
+      )
 
-        const variantInfo = getVariant(packageId)
-        if (variantInfo && (!variantInfo.installed || updatingPackageIds.has(packageId))) {
-          installingPackageIds.push(packageId)
-          if (!packages[packageId]) {
-            installingDependencyIds.push(packageId)
-          }
+      // TODO: Use our own modal rather than system one?
+      const options: MessageBoxOptions = {
+        buttons: ["Install compatible variants", "Ignore conflicts", "Cancel"],
+        cancelId: 2,
+        defaultId: 0,
+        detail: `The following enabled variants are incompatible with this change, but compatible variants can be installed:
+${packageNames.sort().join("\n")}
+
+You can either automatically install and switch to compatible variants now, or resolve each conflict manually later.`,
+        message: "Install incompatible variants?",
+        noLink: true,
+        title: "SC4 Plugin Manager",
+        type: "warning",
+      }
+
+      let result: MessageBoxReturnValue
+      if (this.mainWindow) {
+        result = await dialog.showMessageBox(this.mainWindow, options)
+      } else {
+        result = await dialog.showMessageBox(options)
+      }
+
+      // Cancel
+      if (result.response === 2) {
+        return false
+      }
+
+      // Ignore conflicted variants
+      if (result.response === 1) {
+        for (const packageId in explicitVariantChanges) {
+          configUpdates[packageId] = { variant: explicitVariantChanges[packageId][0] }
         }
       }
 
-      /** Resulting conflict groups */
-      const conflictGroups: { [groupId: string]: string[] } = {}
-
-      for (const groupId in resultingExternals) {
-        if (resultingExternals[groupId]) {
-          conflictGroups[groupId] ??= [EXTERNAL_PACKAGE_ID]
+      // Switch to compatible variants
+      if (result.response === 0) {
+        for (const packageId in explicitVariantChanges) {
+          configUpdates[packageId] = { variant: explicitVariantChanges[packageId][1] }
         }
+
+        // Recalculate
+        return this.updatePackages(profileId, configUpdates, externalUpdates)
       }
+    }
 
-      // Collect conflict groups
-      for (const packageId in this.packages) {
-        const info = this.packages[packageId]
-        const status = resultingStatus[packageId] ?? info.status
-        if (status.enabled) {
-          info.variants[status.variantId].conflictGroups?.forEach(groupId => {
-            conflictGroups[groupId] ??= []
-            conflictGroups[groupId].push(packageId)
-          })
-        }
-      }
+    // If there are packages to install...
+    if (Object.keys(installingVariants).length) {
+      /** Assets that will be downloaded */
+      const missingAssetIds = new Set<string>()
 
-      /** Incompatible packages with an available compatible variant (not installed) */
-      const explicitVariantChanges: { [packageId: string]: string } = {}
-      /** Incompatible packages with an available compatible variant (installed) */
-      const implicitVariantChanges: { [packageId: string]: string } = {}
-      /** Fully-incompatible packages (no compatible variant available) */
-      const incompatiblePackageIds: string[] = []
-      /** Incompatible externally-installed package groups */
-      const incompatibleExternals: string[] = []
-
-      // Check conflicts
-      for (const packageId in this.packages) {
-        const info = this.packages[packageId]
-        const status = resultingStatus[packageId] ?? info.status
-        if (status.enabled) {
-          const config = getConfig(packageId)
-
-          // Compute compatible variants
-          const compatibleVariants = Object.values(info.variants).filter(variant =>
-            isVariantCompatible(packageId, variant, conflictGroups),
-          )
-
-          // Compute default variant
-          const defaultVariant = compatibleVariants[0]
-
-          // If selected variant is the only compatible one, select it implicitly instead
-          // if (compatibleVariants.length === 1 && config.variant === compatibleVariants[0].id) {
-          //   delete config.variant
-          // }
-
-          // If current variable is incompatible, treat as conflict
-          if (!packages[packageId]) {
-            if (!compatibleVariants.includes(info.variants[status.variantId])) {
-              if (!defaultVariant) {
-                incompatiblePackageIds.push(packageId)
-              } else if (defaultVariant.installed && !config.variant) {
-                implicitVariantChanges[packageId] = defaultVariant.id
-              } else {
-                explicitVariantChanges[packageId] = defaultVariant.id
+      // Calculate list of missing assets
+      for (const packageId in installingVariants) {
+        const variantId = installingVariants[packageId]
+        const variantInfo = packages[packageId].variants[variantId]
+        if (variantInfo?.assets) {
+          for (const asset of variantInfo.assets) {
+            const assetInfo = this.getAssetInfo(asset.id)
+            if (assetInfo && !missingAssetIds.has(asset.id)) {
+              const key = `${assetInfo.id}@${assetInfo.version}`
+              const downloaded = await exists(this.getDownloadPath(key))
+              if (!downloaded) {
+                missingAssetIds.add(asset.id)
               }
             }
           }
         }
       }
 
-      for (const groupId in resultingExternals) {
-        if (resultingExternals[groupId] && !externals[groupId]) {
-          if (conflictGroups[groupId]?.some(packageId => packageId !== EXTERNAL_PACKAGE_ID)) {
-            incompatibleExternals.push(groupId)
-          }
-        }
-      }
+      const installingDependencyIds = Object.keys(installingVariants).filter(
+        packageId => !resultingConfigs[packageId]?.enabled,
+      )
 
-      let shouldRecalculate = false
-
-      // Apply implicit variant changes automatically
-      if (Object.keys(implicitVariantChanges).length) {
-        for (const packageId in implicitVariantChanges) {
-          getConfig(packageId).variant = implicitVariantChanges[packageId]
-          packages[packageId] = implicitVariantChanges[packageId]
-        }
-
-        return tryUpdate()
-      }
-
-      // Show incompatible externals
-      if (incompatibleExternals.length) {
-        const groupNames = incompatibleExternals.map(groupId => {
-          return `  - ${groupId}`
-        })
-
-        // TODO: Use our own modal rather than system one?
-        const options: MessageBoxOptions = {
-          buttons: ["Replace external packages", "Ignore conflicts", "Cancel"],
-          cancelId: 2,
-          defaultId: 0,
-          detail: `The following external packages are incompatible with this change:
-${groupNames.sort().join("\n")}
-
-If you wish to replace them, please remove all corresponding files from your Plugins folder before continuing. Otherwise, you can resolve each conflict manually later.`,
-          message: "Replace external packages?",
-          noLink: true,
-          title: "SC4 Plugin Manager",
-          type: "warning",
-        }
-
-        let result: MessageBoxReturnValue
-        if (this.mainWindow) {
-          result = await dialog.showMessageBox(this.mainWindow, options)
-        } else {
-          result = await dialog.showMessageBox(options)
-        }
-
-        // Cancel
-        if (result.response === 2) {
-          return false
-        }
-
-        // Disable conflicted packages
-        if (result.response === 0) {
-          for (const groupId of incompatibleExternals) {
-            resultingExternals[groupId] = false
-            externals[groupId] = false
-          }
-
-          shouldRecalculate = true
-        }
-      }
-
-      // Show fully-incompatible packages
-      if (incompatiblePackageIds.length) {
-        const packageNames = incompatiblePackageIds.map(packageId => {
+      // Confirm installation of dependencies
+      if (installingDependencyIds.length && missingAssetIds.size) {
+        const packages = installingDependencyIds.map(packageId => {
           const info = this.getPackageInfo(packageId)!
           return `  - ${info.name}`
         })
 
         // TODO: Use our own modal rather than system one?
-        const options: MessageBoxOptions = {
-          buttons: ["Disable incompatible packages", "Ignore conflicts", "Cancel"],
-          cancelId: 2,
-          defaultId: 0,
-          detail: `The following enabled packages are incompatible with this change:
-${packageNames.sort().join("\n")}
-
-You can either disable all incompatible packages now, or resolve each conflict manually later.`,
-          message: "Disable incompatible packages?",
-          noLink: true,
-          title: "SC4 Plugin Manager",
-          type: "warning",
-        }
-
-        let result: MessageBoxReturnValue
-        if (this.mainWindow) {
-          result = await dialog.showMessageBox(this.mainWindow, options)
-        } else {
-          result = await dialog.showMessageBox(options)
-        }
-
-        // Cancel
-        if (result.response === 2) {
-          return false
-        }
-
-        // Disable conflicted packages
-        if (result.response === 0) {
-          for (const packageId of incompatiblePackageIds) {
-            getConfig(packageId).enabled = false
-            packages[packageId] = null
-          }
-
-          shouldRecalculate = true
-        }
-      }
-
-      // Show explicit variant changes
-      if (Object.keys(explicitVariantChanges).length) {
-        const packageNames = Object.entries(explicitVariantChanges).map(
-          ([packageId, newVariantId]) => {
-            const info = this.getPackageInfo(packageId)!
-            const status = getStatus(packageId)
-            return `  - ${info.name}: ${info.variants[status.variantId].name} -> ${info.variants[newVariantId].name}`
-          },
-        )
-
-        // TODO: Use our own modal rather than system one?
-        const options: MessageBoxOptions = {
-          buttons: ["Install compatible variants", "Ignore conflicts", "Cancel"],
-          cancelId: 2,
-          defaultId: 0,
-          detail: `The following enabled variants are incompatible with this change, but compatible variants can be installed:
-${packageNames.sort().join("\n")}
-
-You can either automatically install and switch to compatible variants now, or resolve each conflict manually later.`,
-          message: "Install incompatible variants?",
-          noLink: true,
-          title: "SC4 Plugin Manager",
-          type: "warning",
-        }
-
-        let result: MessageBoxReturnValue
-        if (this.mainWindow) {
-          result = await dialog.showMessageBox(this.mainWindow, options)
-        } else {
-          result = await dialog.showMessageBox(options)
-        }
-
-        // Cancel
-        if (result.response === 2) {
-          return false
-        }
-
-        // Switch to compatible variants
-        if (result.response === 0) {
-          for (const packageId in explicitVariantChanges) {
-            getConfig(packageId).variant = explicitVariantChanges[packageId]
-            packages[packageId] = explicitVariantChanges[packageId]
-          }
-
-          shouldRecalculate = true
-        }
-      }
-
-      // Recalculate if there were fixable conflicts
-      // TODO: Keep track of ignored conflicts (sometimes we may show same popup again)
-      if (shouldRecalculate) {
-        return tryUpdate()
-      }
-
-      // If there are packages to install...
-      if (installingPackageIds) {
-        /** Assets that will be downloaded */
-        const missingAssetIds = new Set<string>()
-
-        // Calculate list of missing assets
-        for (const packageId of installingPackageIds) {
-          const variantInfo = getVariant(packageId)
-          if (variantInfo?.assets) {
-            for (const asset of variantInfo.assets) {
-              const assetInfo = this.getAssetInfo(asset.id)
-              if (assetInfo && !missingAssetIds.has(asset.id)) {
-                const key = `${assetInfo.id}@${assetInfo.version}`
-                const downloaded = await exists(this.getDownloadPath(key))
-                if (!downloaded) {
-                  missingAssetIds.add(asset.id)
-                }
-              }
-            }
-          }
-        }
-
-        // Ask confirmation for dependency installs
-        if (installingDependencyIds.length && missingAssetIds.size) {
-          const packages = installingDependencyIds.map(packageId => {
-            const info = this.getPackageInfo(packageId)!
-            return `  - ${info.name}`
-          })
-
-          // TODO: Use our own modal rather than system one?
-          const [confirmed] = await this.showConfirmation(
-            "SC4 Plugin Manager",
-            "Install new package?",
-            `This action requires the installation of ${installingDependencyIds.length} additional package(s):
+        const [confirmed] = await this.showConfirmation(
+          "SC4 Plugin Manager",
+          "Install new package?",
+          `This action requires the installation of ${installingDependencyIds.length} additional package(s):
 ${packages.sort().join("\n")}
 
 In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
-          )
-
-          if (!confirmed) {
-            return false
-          }
-        }
-
-        // Install all packages
-        await Promise.all(
-          installingPackageIds.map(packageId =>
-            this.installPackage(packageId, getStatus(packageId).variantId),
-          ),
         )
-      }
 
-      // Apply package config changes
-      for (const packageId in packages) {
-        const variantId = packages[packageId]
-        let config = currentProfile.packages[packageId]
-        if (variantId) {
-          config ??= {}
-          config.enabled = true
-          config.variant = variantId
-          currentProfile.packages[packageId] = config
-        } else if (config?.variant) {
-          delete config.enabled
-        } else {
-          delete currentProfile.packages[packageId]
+        if (!confirmed) {
+          return false
         }
       }
 
-      // Apply external config changes
-      for (const groupId in externals) {
-        if (externals[groupId]) {
-          currentProfile.externals[groupId] = true
-        } else {
-          delete currentProfile.externals[groupId]
-        }
-      }
+      // Install all packages
+      await Promise.all(
+        Object.entries(installingVariants).map(([packageId, variantId]) =>
+          this.installPackage(packageId, variantId),
+        ),
+      )
 
-      // Recalculate compatibility
-      this.checkoutPackages()
-      this.markForUpdate("profiles")
-
-      // Unselect default variants
-      for (const packageId in currentProfile.packages) {
-        const defaultVariantId = this.packages![packageId].status.defaultVariantId
-        const config = currentProfile.packages[packageId]
-        if (config?.variant && config.variant === defaultVariantId) {
-          if (Object.keys(config).length === 1) {
-            delete currentProfile.packages[packageId]
-          } else {
-            delete config.variant
-          }
-        }
-      }
-
-      this.markForUpdate("packages")
-      this.sendStateUpdates()
-
-      // Save updated profile config and trigger linking in background
-      this.writeProfile(currentProfile)
-      this.linkPackages()
-      return true
+      // Recalculate (conflicts may have changed during install)
+      return this.updatePackages(profileId, configUpdates, externalUpdates)
     }
 
-    return tryUpdate()
+    // Apply config changes
+    profile.externals = resultingExternals
+    profile.packages = resultingConfigs
+
+    // Apply status changes
+    for (const packageId in resultingStatus) {
+      packages[packageId].status[profileId] = resultingStatus[packageId]
+    }
+
+    this.writeProfile(profileId)
+    this.sendPackages()
+    this.linkPackages()
+    return true
   }
 
   public async editProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
@@ -1317,10 +1109,9 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     }
 
     if (data.externals) {
-      await this.updatePackages({}, data.externals)
+      await this.updatePackages(profileId, {}, data.externals)
     } else {
-      this.sendStateUpdates("profiles")
-      this.writeProfile(profile)
+      this.writeProfile(profileId)
     }
 
     return true
@@ -1340,10 +1131,10 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     try {
       const variantKey = `${packageId}#${variantId}`
 
-      variantInfo.action = "installing"
-      this.sendStateUpdates("packages")
+      variantInfo.action = variantInfo.installed ? "updating" : "installing"
+      this.sendPackage(packageId)
 
-      await this.tasks.install.queue(variantKey, async () => {
+      await this.tasks.install.queue(variantKey, async context => {
         const variantPath = this.getVariantPath(packageId, variantId)
         const docsPath = this.getPackageDocsPath(packageId)
         const assets = variantInfo.update?.assets ?? variantInfo.assets ?? []
@@ -1411,8 +1202,12 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
               includes.push({ category: variantInfo.category, paths: ["**"] })
             }
 
-            // Find all included files
             const excludes = asset.exclude?.map(file => file.path) ?? []
+
+            // Blasklist file
+            excludes.push("desktop.ini")
+
+            // Find all included files
             for (const { category, condition, paths } of includes) {
               const filePaths = await glob(paths, {
                 cwd: downloadPath,
@@ -1423,7 +1218,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
               })
 
               // Included paths are excluded from being included again
-              excludes?.push(...paths)
+              excludes.push(...paths)
 
               // Create links
               for (const filePath of filePaths) {
@@ -1439,7 +1234,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
                     category: category !== variantInfo.category ? category : undefined,
                   })
                 } else if (!DOCEXTENSIONS.includes(ext)) {
-                  console.warn(`File ${fullPath} has unsupported extension ${ext}`)
+                  context.warn(`File ${fullPath} has unsupported extension ${ext}`)
                 }
               }
             }
@@ -1477,7 +1272,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
       })
     } finally {
       delete variantInfo.action
-      this.sendStateUpdates("packages")
+      this.sendPackage(packageId)
     }
   }
 
@@ -1508,52 +1303,102 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     return true
   }
 
-  public async removePackages(packageIds: string[]): Promise<boolean> {
-    if (!this.assets || !this.packages) {
-      return false
+  public async removePackages(packages: { [packageId: string]: string }): Promise<boolean> {
+    const currentProfile = this.getCurrentProfile()
+    if (currentProfile) {
+      const enabledPackageIds: string[] = []
+      for (const packageId in packages) {
+        if (currentProfile.packages[packageId]?.enabled) {
+          const packageInfo = this.getPackageInfo(packageId)
+          const packageStatus = packageInfo?.status[currentProfile.id]
+          if (packageStatus?.variantId === packages[packageId]) {
+            enabledPackageIds.push(packageId)
+          }
+        }
+      }
+
+      // TODO: Do not show popup in other packages
+      if (enabledPackageIds.length) {
+        await this.updatePackages(
+          currentProfile.id,
+          Object.fromEntries(enabledPackageIds.map(packageId => [packageId, { enabled: false }])),
+          {},
+        )
+      }
     }
 
-    const promises = packageIds.map(async packageId => {
+    const promises = Object.entries(packages).map(async ([packageId, variantId]) => {
+      if (!this.assets || !this.packages || !this.profiles) {
+        return false
+      }
+
+      const packageInfo = this.packages[packageId]
+      if (!packageInfo) {
+        return false
+      }
+
+      const variantInfo = packageInfo.variants[variantId]
+      if (!variantInfo) {
+        return false
+      }
+
+      if (!variantInfo.installed) {
+        return true
+      }
+
       try {
-        const info = this.getPackageInfo(packageId)
-        if (!info) {
-          return false
+        const allVariants = Object.values(packageInfo.variants)
+        const installedVariants = allVariants.filter(variant => variant?.installed)
+        const isOnlyInstalledVariant = installedVariants.length === 1
+
+        if (variantInfo.local) {
+          const [confirmed] = await this.showConfirmation(
+            isOnlyInstalledVariant ? "Remove local package" : "Remove local variant",
+            isOnlyInstalledVariant ? "Remove local package?" : "Remove local variant?",
+            isOnlyInstalledVariant
+              ? `By removing package ${packageInfo.name}, all local files will be lost forever.`
+              : `By removing variant ${packageInfo.name}#${variantInfo.name}, all local files will be lost forever.`,
+          )
+
+          if (!confirmed) {
+            return false
+          }
         }
 
-        const variantId = info.status.variantId
-        const variant = info.variants[variantId]
-        if (!variant) {
-          return false
+        variantInfo.action = "removing"
+        this.sendPackage(packageId)
+
+        try {
+          delete variantInfo.files
+          delete variantInfo.installed
+
+          if (isOnlyInstalledVariant) {
+            await removeIfPresent(this.getPackagePath(packageId))
+          } else {
+            await removeIfPresent(this.getVariantPath(packageId, variantId))
+            await this.writePackageConfig(packageInfo)
+          }
+
+          // TODO: This assumes that package is disabled in all profiles
+          if (variantInfo.local) {
+            if (isOnlyInstalledVariant) {
+              delete this.packages[packageId]
+            } else {
+              delete packageInfo.variants[variantId]
+              for (const profileId in packageInfo.status) {
+                const packageStatus = packageInfo.status[profileId]
+                if (packageStatus?.variantId === variantId) {
+                  const defaultVariant = getDefaultVariant(packageInfo, this.profiles[profileId])
+                  packageStatus.variantId = defaultVariant.id
+                }
+              }
+            }
+          }
+        } finally {
+          delete variantInfo.action
+          this.sendPackage(packageId)
         }
 
-        if (!variant.installed) {
-          return true
-        }
-
-        delete variant.files
-        delete variant.installed
-
-        if (variant.local) {
-          const defaultVariant = getDefaultVariant(info)
-          info.status.variantId = defaultVariant.id
-          this.setPackageVariantInConfig(packageId, defaultVariant.id)
-          delete info.variants[variantId]
-        }
-
-        if (Object.values(info.variants).some(variant => variant?.installed)) {
-          await removeIfPresent(this.getVariantPath(packageId, variantId))
-          await this.writePackageConfig(info)
-        } else {
-          await removeIfPresent(this.getPackagePath(packageId))
-        }
-
-        const currentProfile = this.getCurrentProfile()
-        if (currentProfile) {
-          this.calculatePackageCompatibility()
-        }
-
-        this.markForUpdate("packages")
-        this.sendStateUpdates()
         return true
       } catch (error) {
         console.error(error)
@@ -1565,35 +1410,6 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     return !results.includes(false)
   }
 
-  public async setPackageVariant(packageId: string, variantId: string): Promise<boolean> {
-    const currentProfile = this.getCurrentProfile()
-    const info = this.getPackageInfo(packageId)
-    if (!info) {
-      return false
-    }
-
-    const variant = info.variants[variantId]
-    if (!variant) {
-      return false
-    }
-
-    if (info.status.enabled) {
-      await this.updatePackages({ [packageId]: variantId })
-    } else {
-      info.status.variantId = variantId
-
-      if (currentProfile) {
-        this.setPackageVariantInConfig(packageId, variantId)
-        this.calculatePackageCompatibility()
-      }
-
-      this.markForUpdate("packages")
-      this.sendStateUpdates()
-    }
-
-    return true
-  }
-
   public async switchProfile(profileId: string): Promise<boolean> {
     const profile = this.getProfileInfo(profileId)
     if (!this.settings || !this.packages || !profile) {
@@ -1601,32 +1417,27 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     }
 
     this.settings.currentProfile = profileId
-    this.markForUpdate("settings")
-
-    this.checkoutPackages()
-    this.sendStateUpdates()
 
     this.writeSettings()
-    this.linkPackages()
+    this.recalculatePackages(profileId)
 
     return true
   }
 
-  protected checkoutPackages(): void {
-    const profile = this.getCurrentProfile()
-    if (this.packages && profile) {
-      checkoutPackages(this.packages, profile)
-      calculatePackageCompatibility(this.packages, profile)
-      this.markForUpdate("packages")
+  protected recalculatePackages(profileId: string): void {
+    const packages = this.packages
+    const profile = this.getProfileInfo(profileId)
+    if (!packages || !profile) {
+      return
     }
-  }
 
-  protected calculatePackageCompatibility(): void {
-    const profile = this.getCurrentProfile()
-    if (this.packages && profile) {
-      calculatePackageCompatibility(this.packages, profile)
-      this.markForUpdate("packages")
+    const { resultingStatus } = resolvePackages(packages, profile.packages, profile.externals)
+    for (const packageId in resultingStatus) {
+      packages[packageId].status[profileId] = resultingStatus[packageId]
     }
+
+    this.sendPackages()
+    this.linkPackages()
   }
 
   public async simtropolisLogin(): Promise<void> {
@@ -1634,7 +1445,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     if (session) {
       console.info("Logged in to Simtropolis")
       this.sessions.simtropolis = session
-      this.sendStateUpdates("sessions")
+      this.sendSessions()
     } else {
       this.sessions.simtropolis = null
     }
@@ -1644,7 +1455,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     await simtropolisLogout(this.browserSession)
     console.info("Logged out from Simtropolis")
     this.sessions.simtropolis = null
-    this.sendStateUpdates("sessions")
+    this.sendSessions()
   }
 
   protected async linkPackages(): Promise<void> {
@@ -1656,8 +1467,10 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
 
     await this.tasks.linker.queue(
       "init",
-      async () => {
-        console.debug("Initializing links...")
+      async context => {
+        context.debug("Initializing links...")
+
+        let nLinks = 0
 
         const recursive = async (dirname: string) => {
           const entries = await fs.readdir(dirname, { withFileTypes: true })
@@ -1667,6 +1480,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
               await recursive(entryPath)
             } else if (entry.isSymbolicLink()) {
               this.links[entryPath] = await fs.readlink(entryPath)
+              nLinks++
             }
           }
         }
@@ -1674,22 +1488,24 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
         await createIfMissing(pluginsPath)
         await recursive(pluginsPath)
 
-        console.debug("Initializing links... ok")
+        context.debug(`Done (found ${nLinks})`)
       },
-      {
-        cache: true,
-      },
+      { cache: true },
     )
 
-    if (this.getCurrentProfile()) {
+    const currentProfile = this.getCurrentProfile()
+    if (currentProfile) {
       await this.tasks.linker.queue(
         "link",
-        async () => {
-          console.debug("Linking packages...")
+        async context => {
+          context.debug("Linking packages...")
 
           await createIfMissing(pluginsPath)
 
           const oldLinks = new Set(Object.keys(this.links))
+
+          let nCreatedLinks = 0
+          let nRemovedLinks = 0
 
           const makeLink = async (from: string, to: string) => {
             await removeIfPresent(to)
@@ -1700,8 +1516,9 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
 
           for (const packageId in this.packages) {
             const packageInfo = this.packages[packageId]
-            if (packageInfo.status.enabled) {
-              const variantId = packageInfo.status.variantId
+            const status = packageInfo.status[currentProfile.id]!
+            if (status.enabled) {
+              const variantId = status.variantId
               const variantInfo = packageInfo.variants[variantId]
               if (variantInfo) {
                 const variantPath = this.getVariantPath(packageId, variantId)
@@ -1719,18 +1536,18 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
                     oldLinks.delete(targetPath)
                     if (this.links[targetPath] !== fullPath) {
                       await makeLink(fullPath, targetPath)
-                      console.debug(`Added link: ${targetPath}`)
+                      nCreatedLinks++
                     }
                   }
                 } else {
-                  console.warn(`Package ${packageId} does not have files`)
+                  context.warn(`Package ${packageId} does not have files`)
                 }
               }
             }
           }
 
           for (const linkPath of oldLinks) {
-            console.debug(`Removed link: ${linkPath}`)
+            nRemovedLinks++
             await removeIfPresent(linkPath)
             await removeIfEmpty(path.dirname(linkPath))
             delete this.links[linkPath]
@@ -1741,56 +1558,79 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
             }
           }
 
-          console.debug("Linking packages... ok")
+          context.debug(`Done (added ${nCreatedLinks}, removed ${nRemovedLinks})`)
         },
-        {
-          invalidate: true,
-        },
+        { invalidate: true },
       )
     }
   }
 
-  protected setPackageVariantInConfig(packageId: string, variantId: string): void {
-    const profile = this.getCurrentProfile()
-    const info = this.getPackageInfo(packageId)
-    if (info && profile) {
-      const config = profile.packages[packageId]
-      const defaultVariant = getDefaultVariant(info)
-      if (variantId !== defaultVariant.id) {
-        if (config) {
-          config.variant = variantId
+  protected setPackageVariantInConfig(
+    profileId: string,
+    packageId: string,
+    variantId: string,
+  ): void {
+    const profileInfo = this.getProfileInfo(profileId)
+    const packageInfo = this.getPackageInfo(packageId)
+    if (packageInfo && profileInfo) {
+      const packageConfig = profileInfo.packages[packageId]
+      const defaultVariant = getDefaultVariantStrict(packageInfo, profileInfo)
+      if (variantId !== defaultVariant?.id) {
+        if (packageConfig) {
+          packageConfig.variant = variantId
         } else {
-          profile.packages[packageId] = { variant: variantId }
+          profileInfo.packages[packageId] = { variant: variantId }
         }
-      } else if (config) {
-        delete config.variant
-        if (Object.keys(config).length === 0) {
-          delete profile.packages[packageId]
+      } else if (packageConfig) {
+        delete packageConfig.variant
+        if (Object.keys(packageConfig).length === 0) {
+          delete profileInfo.packages[packageId]
         }
       }
-
-      this.markForUpdate("profiles")
     }
   }
 
-  protected markForUpdate(field: keyof ApplicationState): void {
-    this.updateFields.push(field)
+  protected sendPackage(packageId: string): void {
+    this.sendState({ packages: { [packageId]: this.getPackageInfo(packageId) ?? null } })
   }
 
-  protected sendStateUpdates(field?: keyof ApplicationState): void {
-    const data = pick(this.getState(), field ? [field] : this.updateFields)
+  protected sendPackages(): void {
+    this.sendState({ packages: this.packages })
+  }
+
+  protected sendProfile(profileId: string): void {
+    this.sendState({ profiles: { [profileId]: this.getProfileInfo(profileId) ?? null } })
+  }
+
+  protected sendProfiles(): void {
+    this.sendState({ profiles: this.profiles })
+  }
+
+  protected sendState(data: Partial<ApplicationState>): void {
     this.mainWindow?.webContents.postMessage("updateState", data)
-    this.updateFields = field ? this.updateFields : []
+  }
+
+  protected sendSessions(): void {
+    const simtropolisUserId = this.sessions.simtropolis && this.sessions.simtropolis.userId
+    this.sendState({ sessions: { simtropolis: { userId: simtropolisUserId } } })
+  }
+
+  protected sendSettings(): void {
+    this.sendState({ settings: this.settings })
+  }
+
+  protected sendStatus(): void {
+    this.sendState({ status: this.status })
   }
 
   protected onDownloadTaskUpdate(ongoingDownloads: string[]): void {
     this.status.ongoingDownloads = ongoingDownloads
-    this.sendStateUpdates("status")
+    this.sendStatus()
   }
 
   protected onExtractTaskUpdate(ongoingExtracts: string[]): void {
     this.status.ongoingExtracts = ongoingExtracts
-    this.sendStateUpdates("status")
+    this.sendStatus()
   }
 
   protected onLinkTaskUpdate(ongoingTasks: string[]): void {
@@ -1802,7 +1642,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
       this.status.linker = null
     }
 
-    this.sendStateUpdates("status")
+    this.sendStatus()
   }
 
   protected async loadProfiles(): Promise<{ [id: string]: ProfileInfo }> {
@@ -1826,12 +1666,9 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
         }
 
         try {
-          const profile = await readConfig<ProfileInfo>(profilePath)
+          const data = await readConfig<ProfileData>(profilePath)
+          const profile = fromProfileData(profileId, data)
           profile.format = format
-          profile.id = profileId
-          profile.name ??= profileId
-          profile.packages ??= {}
-          profile.externals ??= {}
           this.profiles[profileId] = profile
           nProfiles++
         } catch (error) {
@@ -1841,8 +1678,6 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     }
 
     console.debug(`Loaded ${nProfiles} profiles`)
-
-    this.markForUpdate("profiles")
 
     return this.profiles
   }
@@ -1865,77 +1700,65 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
       this.settings.currentProfile = profileIds[0]
     }
 
-    this.markForUpdate("settings")
-
     return this.settings
   }
 
-  protected async writeProfile(profile: ProfileInfo): Promise<void> {
-    if (this.tasks.writeProfiles.current) {
-      const oldQueue = this.tasks.writeProfiles.queued
-      return new Promise<void>(resolve => {
-        this.tasks.writeProfiles.queued = resolve
-      }).then(oldQueue)
-    }
+  protected async writeProfile(profileId: string): Promise<void> {
+    return this.tasks.writer.queue(
+      `profile:${profileId}`,
+      async context => {
+        const profile = this.getProfileInfo(profileId)
+        if (!profile) {
+          return
+        }
 
-    const { id, format, ...data } = profile
+        compactProfileConfig(profile)
 
-    console.debug(`Saving profile '${id}'...`)
+        context.debug(`Saving profile '${profileId}'...`)
 
-    profile.format = this.getDefaultConfigFormat()
-    this.tasks.writeProfiles.current = writeConfig(
-      this.getProfilesPath(),
-      id,
-      data,
-      profile.format,
-      format,
-    ).finally(() => {
-      delete this.tasks.writeProfiles.current
-      if (this.tasks.writeProfiles.queued) {
-        this.writeProfile(profile).then(this.tasks.writeProfiles.queued)
-        delete this.tasks.writeProfiles.queued
-      }
-    })
+        const oldFormat = profile.format
+        const newFormat = this.getDefaultConfigFormat()
 
-    this.markForUpdate("profiles")
+        await writeConfig<ProfileData>(
+          this.getProfilesPath(),
+          profileId,
+          toProfileData(profile),
+          newFormat,
+          oldFormat,
+        )
 
-    return this.tasks.writeSettings.current
+        profile.format = newFormat
+        this.sendProfile(profileId)
+
+        context.debug("Done")
+      },
+      { invalidate: true },
+    )
   }
 
   protected async writeSettings(): Promise<void> {
-    if (!this.settings) {
-      return
-    }
+    return this.tasks.writer.queue(
+      "settings",
+      async context => {
+        const settings = this.settings
+        if (!settings) {
+          return
+        }
 
-    if (this.tasks.writeSettings.current) {
-      const oldQueue = this.tasks.writeSettings.queued
-      return new Promise<void>(resolve => {
-        this.tasks.writeSettings.queued = resolve
-      }).then(oldQueue)
-    }
+        context.debug("Saving settings...")
 
-    console.debug("Saving settings...")
+        const { format: oldFormat, ...data } = settings
+        const newFormat = this.getDefaultConfigFormat()
 
-    const { format, ...data } = this.settings
+        await writeConfig<Settings>(this.rootPath, FILENAMES.settings, data, newFormat, oldFormat)
 
-    this.settings.format = this.getDefaultConfigFormat()
-    this.tasks.writeSettings.current = writeConfig(
-      this.rootPath,
-      FILENAMES.settings,
-      data,
-      this.settings.format,
-      format,
-    ).finally(() => {
-      delete this.tasks.writeSettings.current
-      if (this.tasks.writeSettings.queued) {
-        this.writeSettings().then(this.tasks.writeSettings.queued)
-        delete this.tasks.writeSettings.queued
-      }
-    })
+        settings.format = newFormat
+        this.sendSettings()
 
-    this.markForUpdate("settings")
-
-    return this.tasks.writeSettings.current
+        context.debug("Done")
+      },
+      { invalidate: true },
+    )
   }
 
   protected async loadConfig<T>(
@@ -1952,7 +1775,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
       this.getDefaultConfigFormat(),
     )
 
-    this.markForUpdate("packages")
+    this.sendPackage(packageInfo.id)
   }
 
   protected createMainWindow(): MainWindow {

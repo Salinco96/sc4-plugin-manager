@@ -4,6 +4,7 @@ import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
 import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
 
 import { PackageInfo } from "@common/types"
+import { getPackageStatus } from "@renderer/pages/PackageView"
 import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
 
 interface PackageAction {
@@ -21,44 +22,48 @@ export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): J
 
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
-  const variant = packageInfo.status.variantId
+  const packageStatus = getPackageStatus(packageInfo, currentProfile)
+  const packageId = packageInfo.id
+  const variantId = packageStatus.variantId
 
-  const compatibleVariants = Object.values(packageInfo.variants)
-    .filter(variant => !variant.incompatible)
-    .map(variant => variant!.id)
+  const compatibleVariants = Object.keys(packageInfo.variants).filter(
+    variantId => !packageStatus.issues[variantId]?.length,
+  )
+
+  const variantInfo = packageInfo.variants[variantId]
 
   const packageActions = useMemo(() => {
-    const variantInfo = packageInfo.variants[variant]
-
     const packageActions: PackageAction[] = []
 
-    const nRequires = packageInfo.status.requiredBy?.length ?? 0
+    const nRequires = packageStatus.requiredBy?.length ?? 0
 
-    const isEnabled = !!packageInfo.status.enabled
+    const isBusy = !!variantInfo?.action
+    const isEnabled = !!packageStatus.enabled
+    const isIncompatible = !!packageStatus.issues[variantId]?.length
     const isInstalled = !!variantInfo.installed
     const isRequired = nRequires !== 0
 
     if (currentProfile && isEnabled && !isInstalled) {
       packageActions.push({
         color: "warning",
-        description: variantInfo.incompatible
+        description: isIncompatible
           ? "This variant is not compatible with your profile"
           : "Install this package",
-        disabled: !variantInfo || !!variantInfo.action || !!variantInfo.incompatible,
+        disabled: isBusy || isIncompatible,
         id: "install",
         label: "Install",
-        onClick: () => actions.addPackage(packageInfo.id, variantInfo.id),
+        onClick: () => actions.addPackage(packageId, variantId),
       })
     } else if (variantInfo.update) {
       packageActions.push({
         color: "warning",
-        description: variantInfo.update.incompatible
+        description: isIncompatible
           ? "This variant is not compatible with your profile"
           : `Update to version ${variantInfo.update.version}`,
-        disabled: !variantInfo || !!variantInfo.action || !!variantInfo.update.incompatible,
+        disabled: isBusy || isIncompatible,
         id: "update",
         label: "Update",
-        onClick: () => actions.updatePackage(packageInfo.id),
+        onClick: () => actions.updatePackage(packageId),
       })
     }
 
@@ -68,23 +73,23 @@ export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): J
         description: isRequired
           ? `This package cannot be disabled because it is required by ${nRequires} other package(s)`
           : "Disable this package",
-        disabled: isRequired || !!variantInfo.action,
+        disabled: isBusy || isRequired,
         id: "disable",
         label: "Disable",
-        onClick: () => actions.disablePackage(packageInfo.id),
+        onClick: () => actions.disablePackage(packageId),
       })
     }
 
     if (currentProfile && isInstalled && !isEnabled) {
       packageActions.push({
         color: "success",
-        description: variantInfo.incompatible
+        description: isIncompatible
           ? "This variant is not compatible with your profile"
           : "Enable this package",
-        disabled: !!variantInfo.incompatible || !!variantInfo.action,
+        disabled: isBusy || isIncompatible,
         id: "enable",
         label: "Enable",
-        onClick: () => actions.enablePackage(packageInfo.id),
+        onClick: () => actions.enablePackage(packageId),
       })
     }
 
@@ -94,35 +99,35 @@ export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): J
         color: "error",
         description:
           "Remove this package\nWARNING: This package may be required by another profile!",
-        disabled: isRequired || !!variantInfo.action,
+        disabled: isBusy || isRequired,
         id: "remove",
         label: "Remove",
-        onClick: () => actions.removePackage(packageInfo.id),
+        onClick: () => actions.removePackage(packageId, variantId),
       })
     }
 
     if (currentProfile && !isInstalled) {
       packageActions.push({
         description: "Install and enable this package",
-        disabled: !!variantInfo.incompatible || !!variantInfo.action,
+        disabled: isBusy || isIncompatible,
         id: "add",
         label: "Add",
-        onClick: () => actions.addPackage(packageInfo.id, variantInfo.id),
+        onClick: () => actions.addPackage(packageId, variantId),
       })
     }
 
     if (!isInstalled && !isEnabled) {
       packageActions.push({
         description: "Download this package without enabling it",
-        disabled: !!variantInfo.incompatible || !!variantInfo.action,
+        disabled: isBusy || isIncompatible,
         id: "download",
         label: "Download",
-        onClick: () => actions.installPackage(packageInfo.id, variantInfo.id),
+        onClick: () => actions.installPackage(packageId, variantId),
       })
     }
 
     return packageActions
-  }, [currentProfile, packageInfo, variant])
+  }, [currentProfile, packageId, variantId, variantInfo])
 
   if (!packageActions.length) {
     return null
@@ -200,8 +205,9 @@ export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): J
       {Object.keys(packageInfo.variants).length > 1 && (
         <Select
           disabled={
+            !currentProfile ||
             compatibleVariants.length === 0 ||
-            (compatibleVariants.length === 1 && variant === compatibleVariants[0])
+            (compatibleVariants.length === 1 && variantId === compatibleVariants[0])
           }
           fullWidth
           MenuProps={{ onClose: () => setMenuOpen(false), sx: { maxHeight: 320 } }}
@@ -209,11 +215,11 @@ export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): J
           onChange={event => actions.setPackageVariant(packageInfo.id, event.target.value)}
           required
           size="small"
-          value={variant}
+          value={variantId}
           variant="outlined"
         >
           {Object.entries(packageInfo.variants).map(([id, variant]) => (
-            <MenuItem key={id} value={id} disabled={!!variant.incompatible}>
+            <MenuItem key={id} value={id} disabled={!compatibleVariants.includes(id)}>
               {variant.name}
             </MenuItem>
           ))}

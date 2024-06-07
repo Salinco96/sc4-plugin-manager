@@ -4,7 +4,7 @@ import { create } from "zustand"
 
 import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
-import { ApplicationState, ApplicationStatus, initialState } from "@common/state"
+import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
   PackageCategory,
   PackageInfo,
@@ -41,9 +41,10 @@ export interface StoreActions {
   openPackageFileInExplorer(packageId: string, variantId: string, filePath: string): Promise<void>
   openProfileConfig(profileId: string): Promise<void>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
-  removePackage(packageId: string): Promise<boolean>
+  removePackage(packageId: string, variantId: string): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
+  showErrorToast(message: string): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
   simtropolisLogin(): Promise<void>
   simtropolisLogout(): Promise<void>
@@ -86,11 +87,19 @@ export const useStore = create<Store>()((set, get): Store => {
   return {
     actions: {
       async addPackage(packageId, variantId) {
+        const profileId = get().settings?.currentProfile
+        const packageInfo = get().packages?.[packageId]
+        if (!packageInfo || !profileId) {
+          return false
+        }
+
         try {
-          return await window.api.updatePackages({ [packageId]: variantId })
+          return await window.api.updatePackages(profileId, {
+            [packageId]: { enabled: true, variant: variantId },
+          })
         } catch (error) {
           console.error(`Failed to add ${packageId}`, error)
-          enqueueSnackbar(`Failed to add ${packageId}`, { variant: "error" })
+          this.showErrorToast(`Failed to add ${packageId}`)
           return false
         }
       },
@@ -108,11 +117,19 @@ export const useStore = create<Store>()((set, get): Store => {
         return window.api.createProfile(name, templateProfileId)
       },
       async disablePackage(packageId) {
+        const profileId = get().settings?.currentProfile
+        const packageInfo = get().packages?.[packageId]
+        if (!packageInfo || !profileId) {
+          return false
+        }
+
         try {
-          return await window.api.updatePackages({ [packageId]: null })
+          return await window.api.updatePackages(profileId, {
+            [packageId]: { enabled: false },
+          })
         } catch (error) {
           console.error(`Failed to disable ${packageId}`, error)
-          enqueueSnackbar(`Failed to disable ${packageId}`, { variant: "error" })
+          this.showErrorToast(`Failed to disable ${packageId}`)
           return false
         }
       },
@@ -120,21 +137,19 @@ export const useStore = create<Store>()((set, get): Store => {
         return window.api.editProfile(profileId, data)
       },
       async enablePackage(packageId) {
+        const profileId = get().settings?.currentProfile
         const packageInfo = get().packages?.[packageId]
-        if (!packageInfo) {
-          return false
-        }
-
-        const variantId = packageInfo.status.variantId
-        if (!variantId) {
+        if (!packageInfo || !profileId) {
           return false
         }
 
         try {
-          return await window.api.updatePackages({ [packageId]: variantId })
+          return await window.api.updatePackages(profileId, {
+            [packageId]: { enabled: true },
+          })
         } catch (error) {
           console.error(`Failed to enable ${packageId}`, error)
-          enqueueSnackbar(`Failed to enable ${packageId}`, { variant: "error" })
+          this.showErrorToast(`Failed to enable ${packageId}`)
           return false
         }
       },
@@ -146,7 +161,7 @@ export const useStore = create<Store>()((set, get): Store => {
           return await window.api.installPackages({ [packageId]: variantId })
         } catch (error) {
           console.error(`Failed to install ${packageId}`, error)
-          enqueueSnackbar(`Failed to install ${packageId}`, { variant: "error" })
+          this.showErrorToast(`Failed to install ${packageId}`)
           return false
         }
       },
@@ -168,17 +183,12 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ snackbars: { [type]: { $set: id } } })
         }
       },
-      async removePackage(packageId) {
-        const disabled = await this.disablePackage(packageId)
-        if (!disabled) {
-          return false
-        }
-
+      async removePackage(packageId, variantId) {
         try {
-          return await window.api.removePackages([packageId])
+          return await window.api.removePackages({ [packageId]: variantId })
         } catch (error) {
           console.error(`Failed to remove ${packageId}`, error)
-          enqueueSnackbar(`Failed to remove ${packageId}`, { variant: "error" })
+          this.showErrorToast(`Failed to remove ${packageId}`)
           return false
         }
       },
@@ -186,7 +196,24 @@ export const useStore = create<Store>()((set, get): Store => {
         updateState({ packageFilters: { $merge: filters } })
       },
       async setPackageVariant(packageId, variantId) {
-        return window.api.setPackageVariant(packageId, variantId)
+        const profileId = get().settings?.currentProfile
+        const variantInfo = get().packages?.[packageId]?.variants[variantId]
+        if (!profileId || !variantInfo) {
+          return false
+        }
+
+        try {
+          return await window.api.updatePackages(profileId, {
+            [packageId]: { variant: variantId },
+          })
+        } catch (error) {
+          console.error(`Failed to select variant ${packageId}#${variantId}`, error)
+          this.showErrorToast(`Failed to select variant ${packageId}#${variantId}`)
+          return false
+        }
+      },
+      showErrorToast(message) {
+        enqueueSnackbar(message, { variant: "error" })
       },
       async showModal(id, data) {
         try {
@@ -213,25 +240,22 @@ export const useStore = create<Store>()((set, get): Store => {
         return window.api.switchProfile(profileId)
       },
       async updatePackage(packageId) {
+        const profileId = get().settings?.currentProfile
         const packageInfo = get().packages?.[packageId]
-        if (!packageInfo) {
+        if (!packageInfo || !profileId) {
           return false
         }
 
-        const variantId = packageInfo.status.variantId
+        const variantId = packageInfo.status[profileId]?.variantId
         if (!variantId) {
           return false
         }
 
         try {
-          if (packageInfo.status.enabled) {
-            return await window.api.updatePackages({ [packageId]: variantId })
-          } else {
-            return await window.api.installPackages({ [packageId]: variantId })
-          }
+          return await window.api.installPackages({ [packageId]: variantId })
         } catch (error) {
           console.error(`Failed to update ${packageId}`, error)
-          enqueueSnackbar(`Failed to update ${packageId}`, { variant: "error" })
+          this.showErrorToast(`Failed to update ${packageId}`)
           return false
         }
       },
@@ -239,11 +263,43 @@ export const useStore = create<Store>()((set, get): Store => {
         console.info("Update state", data)
 
         if (data.packages) {
-          updateState({ packages: packages => ({ ...packages, ...data.packages }) })
+          updateState({
+            packages: packages =>
+              Object.entries(data.packages!).reduce(
+                (packages, [id, info]) => {
+                  if (info) {
+                    packages[id] = info
+                  } else {
+                    delete packages[id]
+                  }
+
+                  return packages
+                },
+                {
+                  ...packages,
+                },
+              ),
+          })
         }
 
         if (data.profiles) {
-          updateState({ profiles: profiles => ({ ...profiles, ...data.profiles }) })
+          updateState({
+            profiles: profiles =>
+              Object.entries(data.profiles!).reduce(
+                (profiles, [id, info]) => {
+                  if (info) {
+                    profiles[id] = info
+                  } else {
+                    delete profiles[id]
+                  }
+
+                  return profiles
+                },
+                {
+                  ...profiles,
+                },
+              ),
+          })
         }
 
         if (data.sessions) {
@@ -259,7 +315,6 @@ export const useStore = create<Store>()((set, get): Store => {
         }
       },
     },
-    ...initialState,
     packageFilters: {
       categories: [],
       dependencies: true,
@@ -269,6 +324,15 @@ export const useStore = create<Store>()((set, get): Store => {
       onlyUpdates: false,
       search: "",
       state: null,
+    },
+    sessions: {
+      simtropolis: {},
+    },
+    status: {
+      linker: null,
+      loader: null,
+      ongoingDownloads: [],
+      ongoingExtracts: [],
     },
     snackbars: {},
   }
@@ -300,5 +364,8 @@ export function usePackageInfo(packageId: string): PackageInfo | undefined {
 }
 
 export function usePackageStatus(packageId: string): PackageStatus | undefined {
-  return useStore(store => store.packages?.[packageId]?.status)
+  return useStore(store => {
+    const currentProfile = getCurrentProfile(store)
+    return currentProfile && store.packages?.[packageId]?.status[currentProfile.id]
+  })
 }
