@@ -6,6 +6,7 @@ export const DIRNAMES = {
   packages: "Packages",
   plugins: "Plugins",
   profiles: "Profiles",
+  temp: "~temp",
   root: "Manager",
 }
 

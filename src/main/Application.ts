@@ -22,10 +22,11 @@ import { glob } from "glob"
 
 import { CategoryID, formatCategory } from "@common/categories"
 import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
-import { ApplicationState, ApplicationStatus } from "@common/state"
+import { ApplicationState, ApplicationStatus, TaskInfo } from "@common/state"
 import {
   AssetInfo,
   ConfigFormat,
+  PackageAsset,
   PackageCondition,
   PackageConfig,
   PackageInfo,
@@ -43,6 +44,7 @@ import {
   simtropolisLogout,
 } from "@utils/sessions/simtropolis"
 
+import { toAssetInfo } from "./data/assets"
 import {
   loadLocalPackages,
   loadRemotePackages,
@@ -77,7 +79,7 @@ const defaultSettings: Settings = {
 }
 
 export class Application {
-  public assets?: { [assetId: string]: AssetInfo }
+  public assets: { [assetId: string]: AssetInfo | undefined } = {}
   public packages?: { [packageId: string]: PackageInfo }
   public profiles?: { [profileId: string]: ProfileInfo }
   public sessions: { simtropolis?: SimtropolisSession | null } = {}
@@ -196,8 +198,12 @@ export class Application {
     this.initialize()
   }
 
+  public async quit(): Promise<void> {
+    await removeIfPresent(this.getTempPath())
+  }
+
   public async reload(): Promise<void> {
-    this.assets = undefined
+    this.assets = {}
     this.packages = undefined
     this.profiles = undefined
     this.sessions = {}
@@ -524,7 +530,7 @@ export class Application {
     }
 
     if (isDev()) {
-      // TODO: return path.join(__dirname, "../sc4-plugin-manager-data")
+      return path.join(__dirname, "../../sc4-plugin-manager-data")
     }
 
     return "https://github.com/memo33/sc4pac" // TODO: "https://github.com/Salinco96/sc4-plugin-manager-data.git"
@@ -545,6 +551,14 @@ export class Application {
 
   public getDownloadPath(key: string): string {
     return path.join(this.rootPath, DIRNAMES.downloads, key)
+  }
+
+  public getTempPath(): string {
+    return path.join(this.rootPath, DIRNAMES.temp)
+  }
+
+  public getTempDownloadPath(key: string): string {
+    return path.join(this.getTempPath(), DIRNAMES.downloads, key)
   }
 
   public getLogLevel(): LogLevel {
@@ -587,46 +601,8 @@ export class Application {
     return path.join(this.rootPath, DIRNAMES.packages, packageId, variantId)
   }
 
-  public getAssetInfo(assetId: string): AssetInfo | undefined {
-    const assetInfo = this.assets?.[assetId]
-    if (assetInfo) {
-      return assetInfo
-    }
-
-    // Parse asset ID in format `source:id[#hash]@version`
-    const match = assetId.match(/^([\w-]+):([\w./-]+)(?:#([\w./-]+))?@([\w.-]+)$/)
-    if (match) {
-      const [, source, id, hash, version] = match
-
-      switch (source) {
-        // id = owner/repository
-        // version = release version
-        // hash = release artifact filename
-        case "github":
-          return {
-            id: `${source}/${id}/${hash}`,
-            url: `https://github.com/${id}/releases/download/${version}/${hash}`,
-            version,
-          }
-
-        // id = download ID
-        case "sc4evermore":
-          return {
-            id: `${source}/${id}`,
-            url: `https://www.sc4evermore.com/index.php/downloads?task=download.send&id=${id.replace("-", ":")}`,
-            version,
-          }
-
-        // id = download ID
-        // hash = variant (optional, only for downloads with multiple variants or to target older versions)
-        case "simtropolis":
-          return {
-            id: `${source}/${id}${hash ? `#${hash}` : ""}`,
-            url: `https://community.simtropolis.com/files/file/${id}/?do=download${hash ? `&r=${hash}` : ""}`,
-            version,
-          }
-      }
-    }
+  public getAssetInfo(data: PackageAsset): AssetInfo | undefined {
+    return (this.assets[data.id] ??= toAssetInfo(data))
   }
 
   public getPackageInfo(packageId: string): PackageInfo | undefined {
@@ -1031,7 +1007,7 @@ You can either automatically install and switch to compatible variants now, or r
         const variantInfo = packages[packageId].variants[variantId]
         if (variantInfo?.assets) {
           for (const asset of variantInfo.assets) {
-            const assetInfo = this.getAssetInfo(asset.id)
+            const assetInfo = this.getAssetInfo(asset)
             if (assetInfo && !missingAssetIds.has(asset.id)) {
               const key = `${assetInfo.id}@${assetInfo.version}`
               const downloaded = await exists(this.getDownloadPath(key))
@@ -1137,7 +1113,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
         const assets = variantInfo.update?.assets ?? variantInfo.assets ?? []
 
         const assetInfos = assets.map(asset => {
-          const assetInfo = this.getAssetInfo(asset.id)
+          const assetInfo = this.getAssetInfo(asset)
           if (assetInfo) {
             return assetInfo
           } else {
@@ -1156,7 +1132,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
           const files: typeof variantInfo.files = []
 
           for (const asset of assets) {
-            const assetInfo = this.getAssetInfo(asset.id)!
+            const assetInfo = this.getAssetInfo(asset)!
             const downloadKey = `${assetInfo.id}@${assetInfo.version}`
             const downloadPath = this.getDownloadPath(downloadKey)
 
@@ -1278,15 +1254,34 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
 
     return this.tasks.getAsset.queue(key, async () => {
       const downloadPath = this.getDownloadPath(key)
+      const downloadTempPath = this.getTempDownloadPath(key)
 
       const downloaded = await exists(downloadPath)
       if (!downloaded) {
-        await this.tasks.download.queue(key, () =>
-          download(key, assetInfo.url, downloadPath, this.sessions),
-        )
+        await this.tasks.download.queue(key, async context => {
+          await download(
+            context,
+            key,
+            assetInfo.url,
+            downloadPath,
+            downloadTempPath,
+            assetInfo.size,
+            assetInfo.sha256,
+            this.sessions,
+            (bytes, totalBytes) => {
+              const progress = Math.floor(100 * (bytes / totalBytes))
+              context.setProgress(progress)
+            },
+          )
+        })
       }
 
-      await this.tasks.extract.queue(key, () => extract(downloadPath))
+      await this.tasks.extract.queue(key, async context => {
+        await extract(context, downloadPath, (bytes, totalBytes) => {
+          const progress = Math.floor(100 * (bytes / totalBytes))
+          context.setProgress(progress)
+        })
+      })
     })
   }
 
@@ -1376,7 +1371,7 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
             await this.writePackageConfig(packageInfo)
           }
 
-          // TODO: This assumes that package is disabled in all profiles
+          // TODO: This assumes that package is disabled in other profiles
           if (variantInfo.local) {
             if (isOnlyInstalledVariant) {
               delete this.packages[packageId]
@@ -1620,20 +1615,21 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
     this.sendState({ status: this.status })
   }
 
-  protected onDownloadTaskUpdate(ongoingDownloads: string[]): void {
+  protected onDownloadTaskUpdate(ongoingDownloads: TaskInfo[]): void {
     this.status.ongoingDownloads = ongoingDownloads
     this.sendStatus()
   }
 
-  protected onExtractTaskUpdate(ongoingExtracts: string[]): void {
+  protected onExtractTaskUpdate(ongoingExtracts: TaskInfo[]): void {
     this.status.ongoingExtracts = ongoingExtracts
     this.sendStatus()
   }
 
-  protected onLinkTaskUpdate(ongoingTasks: string[]): void {
-    if (ongoingTasks[0] === "init") {
+  protected onLinkTaskUpdate(ongoingTasks: TaskInfo[]): void {
+    const key = ongoingTasks[0]?.key
+    if (key === "init") {
       this.status.linker = "Initializing..."
-    } else if (ongoingTasks[0] === "link") {
+    } else if (key === "link") {
       this.status.linker = "Linking packages..."
     } else {
       this.status.linker = null

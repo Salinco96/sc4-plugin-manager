@@ -1,7 +1,9 @@
+import { Hash, createHash } from "crypto"
 import { net } from "electron/main"
 import { createWriteStream } from "fs"
+import { rename } from "fs/promises"
 import path from "path"
-import { Readable, pipeline } from "stream"
+import { Readable, Transform, TransformCallback, pipeline } from "stream"
 import { finished } from "stream/promises"
 import { ReadableStream } from "stream/web"
 
@@ -15,18 +17,52 @@ import {
   SimtropolisSession,
   getSimtropolisSessionHeaders,
 } from "./sessions/simtropolis"
+import { TaskContext } from "./tasks"
+
+export class DownloadTransformStream extends Transform {
+  public bytes: number = 0
+  public readonly hash: Hash
+  public readonly onProgress: (bytes: number) => void
+
+  public constructor(onProgress: (bytes: number) => void) {
+    super()
+    this.hash = createHash("sha256")
+    this.onProgress = onProgress
+  }
+
+  public override _transform(
+    chunk: Buffer,
+    encoding: BufferEncoding,
+    callback: TransformCallback,
+  ): void {
+    this.hash.update(chunk)
+    this.push(chunk)
+    this.bytes += chunk.length
+    this.onProgress(this.bytes)
+    callback()
+  }
+
+  public sha256(): string {
+    return this.hash.digest("hex")
+  }
+}
 
 export async function download(
+  context: TaskContext,
   key: string,
   url: string,
   downloadPath: string,
+  downloadTempPath: string,
+  expectedBytes: number | undefined,
+  exceptedHash: string | undefined,
   sessions: {
     simtropolis?: SimtropolisSession | null
   },
+  onProgress: (bytes: number, totalBytes: number) => void,
 ): Promise<void> {
   const { origin } = new URL(url)
 
-  console.debug(`Downloading ${key} from ${url}...`)
+  context.debug(`Downloading ${url}...`)
 
   let headers: HeadersInit | undefined
 
@@ -37,6 +73,7 @@ export async function download(
   const response = await net.fetch(url, { credentials: "include", headers })
 
   const contentDisposition = response.headers.get("Content-Disposition")
+  const contentLength = response.headers.get("Content-Length")
   const contentType = response.headers.get("Content-Type")
 
   // TODO: Detect Simtropolis daily limit and request for login
@@ -44,7 +81,7 @@ export async function download(
   if (!response.ok) {
     // Log JSON response (may be an error response)
     if (contentType === "application/json") {
-      console.warn(await response.json())
+      context.warn(await response.json())
     }
 
     throw Error(`Failed to download ${key} - Unexpected response code: ${response.status}`)
@@ -55,6 +92,10 @@ export async function download(
   }
 
   let filename: string | undefined
+
+  if (contentLength) {
+    expectedBytes = Number.parseInt(contentLength, 10) || expectedBytes
+  }
 
   // Read filename from Content-Disposition header
   if (contentDisposition) {
@@ -73,20 +114,35 @@ export async function download(
   const stream = Readable.fromWeb(response.body as ReadableStream)
 
   // TODO: Download to tmp folder then move to downloadPath only when completed
-  if (filename.endsWith(".zip")) {
-    const archivePath = path.join(downloadPath, filename)
-    await writeFromStream(stream, archivePath)
-    await extractArchive(archivePath, downloadPath)
-    await removeIfPresent(archivePath)
-    // TODO: Remove annoying extra nesting that some zip archives include
-  } else {
-    await writeFromStream(stream, path.join(downloadPath, filename))
+  const targetPath = path.join(downloadTempPath, filename)
+
+  try {
+    if (expectedBytes) {
+      onProgress(0, expectedBytes)
+    }
+
+    await writeFromStream(context, stream, targetPath, expectedBytes, exceptedHash, onProgress)
+
+    if (filename.endsWith(".zip")) {
+      await extractArchive(context, targetPath, downloadTempPath, undefined, onProgress)
+      await removeIfPresent(targetPath)
+      // TODO: Remove annoying extra nesting that some zip archives include
+    }
+
+    await createIfMissing(path.dirname(downloadPath))
+    await rename(downloadTempPath, downloadPath)
+  } finally {
+    await removeIfPresent(downloadTempPath)
   }
 
-  console.debug(`Downloaded ${key}`)
+  context.debug("Done")
 }
 
-export async function extract(downloadPath: string): Promise<void> {
+export async function extract(
+  context: TaskContext,
+  downloadPath: string,
+  onProgress: (bytes: number, totalBytes: number) => void,
+): Promise<void> {
   // TODO: How to deal with .exe installers?
   const archivePaths = await glob("*.{jar,zip}", {
     cwd: downloadPath,
@@ -97,48 +153,94 @@ export async function extract(downloadPath: string): Promise<void> {
   if (archivePaths.length) {
     // Extract all supported archives
     for (const archivePath of archivePaths) {
-      console.debug(`Extracting from ${archivePath}`)
+      context.debug(`Extracting from ${archivePath}`)
       const extractPath = path.join(downloadPath, archivePath.replace(/\.(jar|zip)$/, ""))
 
       // Extract only supported files
       const pattern = /\.(dat|dll|SC4Desc|SC4Lot|SC4Model|_LooseDesc|zip)$/
-      await extractArchive(path.join(downloadPath, archivePath), extractPath, pattern)
+      await extractArchive(
+        context,
+        path.join(downloadPath, archivePath),
+        extractPath,
+        pattern,
+        onProgress,
+      )
       await removeIfPresent(path.join(downloadPath, archivePath))
       // In case there are nested archives...
-      await extract(extractPath)
+      await extract(context, extractPath, onProgress)
     }
   }
 }
 
 async function extractArchive(
+  context: TaskContext,
   archivePath: string,
   extractPath: string,
-  pattern?: RegExp,
+  pattern: RegExp | undefined,
+  onProgress: (bytes: number, totalBytes: number) => void,
 ): Promise<void> {
   const archive = await Open.file(archivePath)
-  for (const file of archive.files) {
-    if (file.type === "File" && (!pattern || file.path.match(pattern))) {
-      console.debug(`Extracting ${file.path}`)
-      const targetPath = path.join(extractPath, file.path)
-      await createIfMissing(path.dirname(targetPath))
-      try {
-        await finished(
-          pipeline(file.stream(), createWriteStream(targetPath), error => {
-            if (error) {
-              console.error(`Failed to extract ${file.path}`, error)
-            }
-          }),
-        )
-      } catch (error) {
-        console.error(`Failed to extract ${file.path}`, error)
-        await removeIfPresent(targetPath)
-        throw error
-      }
+  const files = archive.files.filter(file => {
+    return file.type === "File" && pattern?.test(file.path) !== false
+  })
+
+  const totalUncompressedSize = files.reduce((total, file) => total + file.uncompressedSize, 0)
+
+  onProgress(0, totalUncompressedSize)
+
+  let bytes = 0
+  for (const file of files) {
+    context.debug(`Extracting ${file.path}`)
+    const targetPath = path.join(extractPath, file.path)
+    await createIfMissing(path.dirname(targetPath))
+    try {
+      await finished(
+        pipeline(file.stream(), createWriteStream(targetPath), error => {
+          if (error) {
+            context.error(`Failed to extract ${file.path}`, error)
+          }
+        }),
+      )
+
+      bytes += file.uncompressedSize
+      onProgress(bytes, totalUncompressedSize)
+    } catch (error) {
+      context.error(`Failed to extract ${file.path}`, error)
+      await removeIfPresent(targetPath)
+      throw error
     }
   }
 }
 
-async function writeFromStream(stream: Readable, downloadPath: string): Promise<void> {
+async function writeFromStream(
+  context: TaskContext,
+  stream: Readable,
+  downloadPath: string,
+  expectedBytes: number | undefined,
+  expectedHash: string | undefined,
+  onProgress: (bytes: number, totalBytes: number) => void,
+): Promise<string> {
+  const transform = new DownloadTransformStream(bytes => {
+    if (expectedBytes) {
+      onProgress(bytes, Math.max(bytes, expectedBytes))
+    }
+  })
+
   await createIfMissing(path.dirname(downloadPath))
-  await finished(stream.pipe(createWriteStream(downloadPath)))
+  await finished(stream.pipe(transform).pipe(createWriteStream(downloadPath)))
+
+  const actualBytes = transform.bytes
+  const actualHash = transform.sha256()
+
+  context.debug(`SHA-256: ${actualHash} (${actualBytes} bytes)`)
+
+  if (expectedBytes && expectedBytes !== actualBytes) {
+    throw Error(`Expected ${expectedBytes} bytes but received ${actualBytes}`)
+  }
+
+  if (expectedHash && expectedHash !== actualHash) {
+    throw Error(`Expected SHA-256 ${expectedHash}`)
+  }
+
+  return actualHash
 }

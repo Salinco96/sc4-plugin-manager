@@ -3,8 +3,8 @@ import { PackageInfo, ProfileInfo, Settings } from "./types"
 export interface ApplicationStatus {
   linker: string | null
   loader: string | null
-  ongoingDownloads: string[]
-  ongoingExtracts: string[]
+  ongoingDownloads: TaskInfo[]
+  ongoingExtracts: TaskInfo[]
 }
 
 export interface ApplicationState {
@@ -31,4 +31,9 @@ export const initialState: ApplicationState = {
     ongoingDownloads: [],
     ongoingExtracts: [],
   },
+}
+
+export interface TaskInfo {
+  readonly key: string
+  readonly progress?: number
 }

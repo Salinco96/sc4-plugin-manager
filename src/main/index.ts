@@ -26,6 +26,11 @@ if (!app.requestSingleInstanceLock()) {
     }
   })
 
+  app.on("window-all-closed", async () => {
+    await instance?.quit()
+    app.quit()
+  })
+
   app.whenReady().then(() => {
     try {
       instance = new Application()

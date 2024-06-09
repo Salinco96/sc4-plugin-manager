@@ -179,6 +179,9 @@ export function resolvePackages(
     const packageConfig = configs[packageId]
     const packageInfo = packages[packageId]
     const packageStatus = resultingStatus[packageId]
+    if (!packageInfo) {
+      return true
+    }
 
     const compatibleVariantIds: string[] = []
     for (const variantId in packageInfo.variants) {

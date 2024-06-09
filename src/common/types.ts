@@ -12,6 +12,8 @@ export enum ConfigFormat {
 export interface AssetInfo {
   id: string
   lastModified?: Date
+  sha256?: string
+  size?: number
   url: string
   version: string
 }
@@ -20,6 +22,9 @@ export interface PackageAsset {
   exclude?: PackageFile[]
   include?: PackageFile[]
   id: string
+  sha256?: string
+  size?: number
+  url?: string
 }
 
 export interface PackageCondition {
@@ -35,7 +40,7 @@ export interface PackageConfig {
 export interface PackageData extends VariantData {
   name?: string
   variants?: {
-    [variantId in string]?: VariantData
+    [variantId: string]: VariantData
   }
 }
 
@@ -51,10 +56,10 @@ export interface PackageInfo {
   local?: boolean
   name: string
   status: {
-    [profileId in string]?: PackageStatus
+    [profileId: string]: PackageStatus | undefined
   }
   variants: {
-    [variantId in string]: VariantInfo
+    [variantId: string]: VariantInfo
   }
 }
 
@@ -64,7 +69,9 @@ export interface PackageOptions {
 
 export interface PackageStatus {
   enabled: boolean
-  issues: Partial<Record<string, string[]>>
+  issues: {
+    [variantId: string]: string[] | undefined
+  }
   options: PackageOptions
   requiredBy: string[]
   variantId: string

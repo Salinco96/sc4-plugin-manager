@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from "react"
+import { forwardRef, useEffect, useRef } from "react"
 
 import { CardActions, CircularProgress, Typography } from "@mui/material"
 import { CustomContentProps } from "notistack"
@@ -12,8 +12,12 @@ export const ProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>((
 
   const message = useStore(store => store.status?.loader ?? store.status?.linker)
 
+  const lastMessageRef = useRef(message)
+
   useEffect(() => {
-    if (!message) {
+    if (message) {
+      lastMessageRef.current = message
+    } else {
       // Clear after short duration to prevent closing and reopening for successive tasks
       const timeout = setTimeout(() => actions.closeSnackbar("load-progress"), 100)
       return () => clearTimeout(timeout)
@@ -24,7 +28,7 @@ export const ProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>((
     <CustomSnackbar {...props} ref={ref} sx={{ backgroundColor: "#313131", color: "#fff" }}>
       <CardActions>
         <CircularProgress color="inherit" size={16} />
-        <Typography variant="body2">{message}</Typography>
+        <Typography variant="body2">{message ?? lastMessageRef.current}</Typography>
       </CardActions>
     </CustomSnackbar>
   )

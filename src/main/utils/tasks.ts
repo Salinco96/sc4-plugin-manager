@@ -1,26 +1,30 @@
+import { TaskInfo } from "@common/state"
+
 export interface Task<T> {
+  progress?: number
   promise: Promise<T>
   reject: (error: Error) => void
   resolve: (result: T) => void
 }
 
 export interface TaskManagerOptions {
-  onTaskUpdate?(ongoingTasks: string[]): void
+  onTaskUpdate?(ongoingTasks: TaskInfo[]): void
   parallel?: number
 }
 
 export interface TaskContext {
   debug(...params: unknown[]): void
   error(...params: unknown[]): void
-  key: string
   info(...params: unknown[]): void
+  readonly key: string
+  setProgress(progress: number): void
   warn(...params: unknown[]): void
 }
 
 export class TaskManager<T = unknown> {
   public readonly cache: Map<string, T> = new Map()
   public readonly name: string
-  public readonly onTaskUpdate?: (ongoingTasks: string[]) => void
+  public readonly onTaskUpdate?: (ongoingTasks: TaskInfo[]) => void
   public readonly ongoingTasks: string[] = []
   public readonly parallel: number
   public readonly pendingTasks: Map<string, (context: TaskContext) => Promise<T>> = new Map()
@@ -153,7 +157,6 @@ export class TaskManager<T = unknown> {
   protected getContext(key: string): TaskContext {
     const prefix = `[${this.name}] (${key})`
     return {
-      key,
       debug(...params) {
         console.debug(prefix, ...params)
       },
@@ -163,6 +166,14 @@ export class TaskManager<T = unknown> {
       info(...params) {
         console.info(prefix, ...params)
       },
+      key,
+      setProgress: progress => {
+        const task = this.tasks.get(key)
+        if (task && task.progress !== progress) {
+          task.progress = progress
+          this.sendTaskUpdate()
+        }
+      },
       warn(...params) {
         console.warn(prefix, ...params)
       },
@@ -170,6 +181,13 @@ export class TaskManager<T = unknown> {
   }
 
   protected sendTaskUpdate(): void {
-    this.onTaskUpdate?.(this.ongoingTasks)
+    if (this.onTaskUpdate) {
+      this.onTaskUpdate(
+        this.ongoingTasks.map(key => {
+          const task = this.tasks.get(key)
+          return { key, progress: task?.progress }
+        }),
+      )
+    }
   }
 }
