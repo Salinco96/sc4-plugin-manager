@@ -72,7 +72,7 @@ export function PackageList(): JSX.Element {
       }
 
       if (packageFilters.search.trim().length > 2) {
-        const search = (info.id + "|" + info.name).toLowerCase()
+        const search = [info.id, info.name].join("|").toLowerCase()
         if (!search.includes(packageFilters.search.trim().toLowerCase())) {
           return false
         }

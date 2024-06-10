@@ -214,7 +214,7 @@ const packageViewTabs: {
     component: PackageViewDocumentation,
     condition(info, profile) {
       const variant = getCurrentVariant(info, profile)
-      return !!variant.docs?.path
+      return !!variant.readme
     },
     name() {
       return "Readme"
@@ -276,7 +276,7 @@ function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
       >
         <Box sx={{ flexGrow: 1, paddingRight: 2 }}>
           <Typography variant="h6">
-            {packageInfo.name} (v{variantInfo.installed ?? variantInfo.version})
+            {packageInfo.name} (v{variantInfo.version})
           </Typography>
           <Typography variant="body2">
             {packageInfo.id}#{variantInfo.id}

@@ -153,7 +153,7 @@ export async function extract(
   if (archivePaths.length) {
     // Extract all supported archives
     for (const archivePath of archivePaths) {
-      context.debug(`Extracting from ${archivePath}`)
+      // context.debug(`Extracting from ${archivePath}`)
       const extractPath = path.join(downloadPath, archivePath.replace(/\.(jar|zip)$/, ""))
 
       // Extract only supported files
@@ -190,7 +190,7 @@ async function extractArchive(
 
   let bytes = 0
   for (const file of files) {
-    context.debug(`Extracting ${file.path}`)
+    // context.debug(`Extracting ${file.path}`)
     const targetPath = path.join(extractPath, file.path)
     await createIfMissing(path.dirname(targetPath))
     try {

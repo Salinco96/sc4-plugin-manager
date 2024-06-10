@@ -351,11 +351,6 @@ export async function loadRemotePackages(
             packageInfo.variants[variantId] = defaultVariantInfo
           }
 
-          // Select default variant
-          // if (!packageInfo.variants[DEFAULT_VARIANT_ID]) {
-          //   packageInfo.status.variantId = Object.keys(packageInfo.variants)[0]
-          // }
-
           // Return the package only if some variants have been successfully loaded
           if (Object.keys(packageInfo.variants).length) {
             packages[packageId] = packageInfo
@@ -437,10 +432,7 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
     ],
     deprecated: variantData.deprecated ?? packageData.deprecated,
     description: variantData.description ?? packageData.description,
-    docs: (packageData.docs || variantData.docs) && {
-      ...packageData.docs,
-      ...variantData.docs,
-    },
+    readme: variantData.readme ?? packageData.readme,
     experimental: variantData.experimental ?? packageData.experimental,
     files: (packageData.files || variantData.files) && [
       ...(variantData.files ?? []),
@@ -481,7 +473,7 @@ export function mergeLocalPackageInfo(
       // the remote version separately, as a potential update instead.
       if (remoteVariantInfo.version === localVariantInfo.version) {
         // Keep local installation paths calculated during install
-        remoteVariantInfo.docs ??= localVariantInfo.docs
+        remoteVariantInfo.readme ??= localVariantInfo.readme
         remoteVariantInfo.files ??= localVariantInfo.files
         Object.assign(localVariantInfo, remoteVariantInfo)
         localVariantInfo.installed = true
@@ -517,16 +509,15 @@ export async function writePackageConfig(
           .map<[string, VariantData]>(([id, variant]) => [
             id,
             {
-              assets: variant.assets?.length ? variant.assets : undefined,
               category: variant.category,
               conflictGroups: variant.conflictGroups?.length ? variant.conflictGroups : undefined,
               dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
               deprecated: variant.deprecated,
               description: variant.description,
-              docs: variant.docs,
               experimental: variant.experimental,
               files: variant.files,
               name: variant.name,
+              readme: variant.readme,
               requirements: variant.requirements,
               version: variant.version,
             },

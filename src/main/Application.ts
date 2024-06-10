@@ -29,6 +29,7 @@ import {
   PackageAsset,
   PackageCondition,
   PackageConfig,
+  PackageFile,
   PackageInfo,
   ProfileData,
   ProfileInfo,
@@ -487,11 +488,11 @@ export class Application {
       throw Error(`Unknown variant '${packageId}#${variantId}'`)
     }
 
-    if (!variantInfo.docs?.path) {
+    if (!variantInfo.readme) {
       throw Error(`Package '${packageId}#${variantId}' does not have documentation`)
     }
 
-    const docPath = path.join(this.getPackageDocsPath(packageId), variantInfo.docs.path)
+    const docPath = path.join(this.getVariantPath(packageId, variantId), variantInfo.readme)
     const docExt = path.extname(docPath)
 
     switch (docExt) {
@@ -583,10 +584,6 @@ export class Application {
 
   public getPackagePath(packageId: string): string {
     return path.join(this.rootPath, DIRNAMES.packages, packageId)
-  }
-
-  public getPackageDocsPath(packageId: string): string {
-    return path.join(this.rootPath, DIRNAMES.packages, packageId, DIRNAMES.packageDocs)
   }
 
   public getPluginsPath(): string {
@@ -999,7 +996,7 @@ You can either automatically install and switch to compatible variants now, or r
     // If there are packages to install...
     if (Object.keys(installingVariants).length) {
       /** Assets that will be downloaded */
-      const missingAssetIds = new Set<string>()
+      const missingAssets = new Map<string, PackageAsset>()
 
       // Calculate list of missing assets
       for (const packageId in installingVariants) {
@@ -1008,11 +1005,11 @@ You can either automatically install and switch to compatible variants now, or r
         if (variantInfo?.assets) {
           for (const asset of variantInfo.assets) {
             const assetInfo = this.getAssetInfo(asset)
-            if (assetInfo && !missingAssetIds.has(asset.id)) {
+            if (assetInfo && !missingAssets.has(asset.id)) {
               const key = `${assetInfo.id}@${assetInfo.version}`
               const downloaded = await exists(this.getDownloadPath(key))
               if (!downloaded) {
-                missingAssetIds.add(asset.id)
+                missingAssets.set(asset.id, asset)
               }
             }
           }
@@ -1024,20 +1021,29 @@ You can either automatically install and switch to compatible variants now, or r
       )
 
       // Confirm installation of dependencies
-      if (installingDependencyIds.length && missingAssetIds.size) {
+      if (missingAssets.size) {
         const packages = installingDependencyIds.map(packageId => {
           const info = this.getPackageInfo(packageId)!
           return `  - ${info.name}`
         })
 
+        const totalSize = Array.from(missingAssets.values()).reduce(
+          (total, asset) => (asset.size ? total + asset.size : NaN),
+          0,
+        )
+
         // TODO: Use our own modal rather than system one?
         const [confirmed] = await this.showConfirmation(
           "SC4 Plugin Manager",
           "Install new package?",
-          `This action requires the installation of ${installingDependencyIds.length} additional package(s):
+          `${
+            installingDependencyIds.length
+              ? `This action requires the installation of ${installingDependencyIds.length} additional package(s):
 ${packages.sort().join("\n")}
 
-In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
+In total, `
+              : ""
+          }${missingAssets.size} asset(s)${totalSize ? ` (${(totalSize / 1e6).toFixed(2)} Mo)` : ""} will be downloaded.`,
         )
 
         if (!confirmed) {
@@ -1109,7 +1115,6 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
 
       await this.tasks.install.queue(variantKey, async context => {
         const variantPath = this.getVariantPath(packageId, variantId)
-        const docsPath = this.getPackageDocsPath(packageId)
         const assets = variantInfo.update?.assets ?? variantInfo.assets ?? []
 
         const assetInfos = assets.map(asset => {
@@ -1129,110 +1134,129 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
         await createIfMissing(variantPath)
 
         try {
-          const files: typeof variantInfo.files = []
+          const files = new Map<string, PackageFile>()
 
           for (const asset of assets) {
             const assetInfo = this.getAssetInfo(asset)!
             const downloadKey = `${assetInfo.id}@${assetInfo.version}`
             const downloadPath = this.getDownloadPath(downloadKey)
 
-            // Find all included documentation
-            const docsPaths = await glob(`*{${DOCEXTENSIONS.join(",")}}`, {
-              cwd: downloadPath,
-              matchBase: true,
-              nodir: true,
-            })
+            const toPattern = (path: string) =>
+              path.startsWith("/") ? path.slice(1) : `**/${path}`
 
-            // Create links
-            for (const filePath of docsPaths) {
-              const fullPath = path.join(downloadPath, filePath)
-              const targetPath = path.join(docsPath, filePath)
-              await createIfMissing(path.dirname(targetPath))
-              await removeIfPresent(targetPath)
-              await fs.symlink(fullPath, targetPath)
-            }
-
-            const includes: {
-              category: CategoryID
-              condition?: PackageCondition
-              paths: string[]
-            }[] = []
-
-            if (asset.include) {
-              for (const include of asset.include) {
-                const category = include.category ?? variantInfo.category
-                const condition = include.condition
-                const lastInclude = includes.at(-1)
-                // Paths with same category/condition can be resolved together
-                if (category === lastInclude?.category && condition === lastInclude.condition) {
-                  lastInclude.paths.push(include.path)
-                } else {
-                  includes.push({ category, condition, paths: [include.path] })
-                }
-              }
-            } else {
-              // If no explicit include is given, include everything
-              includes.push({ category: variantInfo.category, paths: ["**"] })
-            }
-
-            const excludes = asset.exclude?.map(file => file.path) ?? []
+            // If no explicit include is given, include everything
+            const excludes = asset.exclude?.map(file => toPattern(file.path)) ?? []
 
             // Blasklist file
-            excludes.push("desktop.ini")
+            excludes.push("**/desktop.ini")
 
             // Find all included files
-            for (const { category, condition, paths } of includes) {
-              const filePaths = await glob(paths, {
-                cwd: downloadPath,
-                dot: true,
-                ignore: excludes,
-                matchBase: true,
-                nodir: true,
-              })
+            const sourcePath = asset.path ? path.join(downloadPath, asset.path) : downloadPath
 
-              // Included paths are excluded from being included again
-              excludes.push(...paths)
-
-              // Create links
-              for (const filePath of filePaths) {
-                const fullPath = path.join(downloadPath, filePath)
-                const ext = path.extname(filePath)
-                if (SC4EXTENSIONS.includes(ext)) {
-                  const targetPath = path.join(variantPath, filePath)
-                  await createIfMissing(path.dirname(targetPath))
-                  await fs.symlink(fullPath, targetPath)
-                  files.push({
-                    path: filePath,
+            const addFile = async (
+              oldPath: string,
+              newPath: string,
+              category?: CategoryID,
+              condition?: PackageCondition,
+            ) => {
+              const ext = path.extname(oldPath).toLowerCase()
+              if (SC4EXTENSIONS.includes(ext)) {
+                const targetPath = path.join(variantPath, newPath)
+                await createIfMissing(path.dirname(targetPath))
+                await fs.symlink(path.join(sourcePath, oldPath), targetPath)
+                if (files.has(newPath)) {
+                  context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
+                } else {
+                  files.set(newPath, {
+                    path: newPath,
                     condition,
                     category: category !== variantInfo.category ? category : undefined,
                   })
-                } else if (!DOCEXTENSIONS.includes(ext)) {
-                  context.warn(`File ${fullPath} has unsupported extension ${ext}`)
                 }
+              } else if (DOCEXTENSIONS.includes(ext)) {
+                const targetPath = path.join(variantPath, newPath)
+                await createIfMissing(path.dirname(targetPath))
+                await fs.symlink(path.join(sourcePath, oldPath), targetPath)
+              } else {
+                context.warn(`Ignoring file ${oldPath} with unsupported extension ${ext}`)
               }
+            }
+
+            const addDirectory = async (
+              oldPath: string,
+              newPath: string,
+              category?: CategoryID,
+              condition?: PackageCondition,
+            ) => {
+              const filePaths = await glob(path.join(oldPath, "**").replaceAll("\\", "/"), {
+                cwd: sourcePath,
+                dot: true,
+                ignore: excludes,
+                nodir: true,
+              })
+
+              for (const filePath of filePaths) {
+                await addFile(
+                  filePath,
+                  path.join(newPath, path.relative(oldPath, filePath)),
+                  category,
+                  condition,
+                )
+              }
+            }
+
+            if (asset.include) {
+              for (const include of asset.include) {
+                const pattern = toPattern(include.path)
+                const entries = await glob(pattern, {
+                  cwd: sourcePath,
+                  dot: true,
+                  ignore: excludes,
+                  withFileTypes: true,
+                })
+
+                if (entries.length === 0) {
+                  context.warn(`Include pattern ${include.path} did not match any file`)
+                }
+
+                for (const entry of entries) {
+                  const oldPath = entry.relative()
+                  const newPath = include.as
+                    ? path.relative(".", include.as).replace("*", entry.name)
+                    : oldPath
+
+                  if (entry.isDirectory()) {
+                    await addDirectory(oldPath, newPath, include.category, include.condition)
+                  } else {
+                    await addFile(oldPath, newPath, include.category, include.condition)
+                  }
+                }
+
+                // Included paths are excluded from being included again
+                excludes.push(pattern)
+              }
+            } else {
+              await addDirectory("", "")
             }
           }
 
           const docsPaths = await glob("**/*.{htm,html,md,txt}", {
-            cwd: this.getPackageDocsPath(packageId),
+            cwd: variantPath,
+            ignore: "*cleanitol*",
             nodir: true,
           })
 
-          if (docsPaths.length) {
-            variantInfo.docs = {
-              path:
-                docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
-                docsPaths.find(file => path.basename(file).match(/readme/i)) ??
-                docsPaths[0],
-            }
-          }
+          variantInfo.readme ??=
+            docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
+            docsPaths.find(file => path.basename(file).match(/readme/i)) ??
+            docsPaths[0]
 
           if (variantInfo.update) {
             Object.assign(variantInfo, variantInfo.update)
             delete variantInfo.update
           }
 
-          variantInfo.files = files
+          variantInfo.files = Array.from(files.values())
           variantInfo.installed = true
 
           // Rewrite config
@@ -1517,13 +1541,13 @@ In total, ${missingAssetIds.size} new asset(s) will be downloaded.`,
                 if (variantInfo.files?.length) {
                   for (const file of variantInfo.files) {
                     // TODO: Check file.condition
-                    const fullPath = path.join(variantPath, file.path)
+                    const fullPath = path.join(variantPath, file.path!)
                     const categoryPath = formatCategory(file.category ?? variantInfo.category)
 
                     // DLL files must be in Plugins root
-                    const targetPath = file.path.match(/\.(dll|ini)$/i)
-                      ? path.join(pluginsPath, path.basename(file.path))
-                      : path.join(pluginsPath, categoryPath, packageId, file.path)
+                    const targetPath = file.path!.match(/\.(dll|ini)$/i)
+                      ? path.join(pluginsPath, path.basename(file.path!))
+                      : path.join(pluginsPath, categoryPath, packageId, file.path!)
 
                     oldLinks.delete(targetPath)
                     if (this.links[targetPath] !== fullPath) {

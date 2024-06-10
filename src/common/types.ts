@@ -19,9 +19,11 @@ export interface AssetInfo {
 }
 
 export interface PackageAsset {
+  cleanitol?: string
   exclude?: PackageFile[]
   include?: PackageFile[]
   id: string
+  path?: string
   sha256?: string
   size?: number
   url?: string
@@ -45,6 +47,7 @@ export interface PackageData extends VariantData {
 }
 
 export interface PackageFile {
+  as?: string
   category?: CategoryID
   condition?: PackageCondition
   path: string
@@ -85,12 +88,10 @@ export interface VariantData {
   dependencies?: string[]
   deprecated?: boolean
   description?: string
-  docs?: {
-    path?: string
-  }
   experimental?: boolean
   files?: PackageFile[]
   name?: string
+  readme?: string
   requirements?: PackageCondition
   url?: string
   version?: string

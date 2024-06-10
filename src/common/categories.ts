@@ -8,6 +8,7 @@ const CATEGORIES: { [categoryId: number]: string } = {
   100: "Dependencies",
   110: "Textures",
   120: "Props",
+  130: "Audio",
   200: "Residential",
   210: "Residential (R$)",
   220: "Residential (R$$)",

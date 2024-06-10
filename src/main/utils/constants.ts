@@ -2,7 +2,6 @@ export const DIRNAMES = {
   database: "Database",
   downloads: "Downloads",
   logs: "Logs",
-  packageDocs: "~docs",
   packages: "Packages",
   plugins: "Plugins",
   profiles: "Profiles",

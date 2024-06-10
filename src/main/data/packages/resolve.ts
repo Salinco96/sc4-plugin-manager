@@ -142,7 +142,13 @@ export function resolvePackages(
 
   const enableRecursively = (packageId: string) => {
     const packageStatus = resultingStatus[packageId]
-    const variantInfo = packages[packageId].variants[packageStatus.variantId]
+    const packageInfo = packages[packageId]
+    if (!packageInfo) {
+      console.warn(`Unknown package '${packageId}'`)
+      return
+    }
+
+    const variantInfo = packageInfo.variants[packageStatus.variantId]
 
     if (variantInfo.dependencies) {
       for (const dependencyId of variantInfo.dependencies) {
@@ -319,6 +325,7 @@ export function resolvePackageUpdates(
         const ignoreConflicts = oldCompatibleVariantIds.length === 0 || !!configUpdates[packageId]
 
         const defaultVariantId = newCompatibleVariantIds[0]
+        const isChanged = !oldStatus.enabled || oldStatus.variantId !== newStatus.variantId
         const isConflicted = !newCompatibleVariantIds.includes(newStatus.variantId)
         const isInstalled = !!packageInfo.variants[newStatus.variantId].installed
 
@@ -342,7 +349,7 @@ export function resolvePackageUpdates(
         }
 
         // If selected variant is not installed, mark it for installation
-        if (!isInstalled) {
+        if (!isInstalled && (isChanged || configUpdates[packageId])) {
           installingVariants[packageId] = newStatus.variantId
         }
       } else if (oldStatus.enabled) {
