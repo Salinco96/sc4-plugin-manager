@@ -399,29 +399,29 @@ export function resolvePackageUpdates(
     }
   }
 
-  console.debug("Updating configs", {
-    packages: configUpdates,
-    externals: externalUpdates,
-  })
+  // console.debug("Updating configs", {
+  //   packages: configUpdates,
+  //   externals: externalUpdates,
+  // })
 
-  console.debug("Resulting configs", {
-    packages: resultingConfigs,
-    externals: resultingExternals,
-  })
+  // console.debug("Resulting configs", {
+  //   packages: resultingConfigs,
+  //   externals: resultingExternals,
+  // })
 
-  console.debug("Resulting changes", {
-    disablingPackages,
-    enablingPackages,
-    installingVariants,
-    selectingVariants,
-  })
+  // console.debug("Resulting changes", {
+  //   disablingPackages,
+  //   enablingPackages,
+  //   installingVariants,
+  //   selectingVariants,
+  // })
 
-  console.debug("Resulting conflicts", {
-    explicitVariantChanges,
-    implicitVariantChanges,
-    incompatibleExternals,
-    incompatiblePackages,
-  })
+  // console.debug("Resulting conflicts", {
+  //   explicitVariantChanges,
+  //   implicitVariantChanges,
+  //   incompatibleExternals,
+  //   incompatiblePackages,
+  // })
 
   return {
     disablingPackages,

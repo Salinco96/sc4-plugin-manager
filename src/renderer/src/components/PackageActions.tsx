@@ -201,7 +201,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
           </>
         )}
       </Box>
-      {Object.keys(packageInfo.variants).length > 1 && (
+      {(Object.keys(packageInfo.variants).length > 1 || !packageInfo.variants.default) && (
         <Select
           disabled={
             !currentProfile ||

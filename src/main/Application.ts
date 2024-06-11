@@ -780,10 +780,13 @@ export class Application {
               path.startsWith("/") ? path.slice(1) : `**/${path}`
 
             // If no explicit include is given, include everything
-            const excludes = asset.exclude?.map(file => toPattern(file.path)) ?? []
-
-            // Blasklist file
-            excludes.push("**/desktop.ini")
+            const excludes = ["**/desktop.ini"]
+            if (asset.exclude) {
+              for (const exclude of asset.exclude) {
+                const pattern = toPattern(exclude.path)
+                excludes.push(pattern, `${pattern}/**`)
+              }
+            }
 
             // Find all included files
             const sourcePath = asset.path ? path.join(downloadPath, asset.path) : downloadPath
@@ -794,7 +797,8 @@ export class Application {
               category?: CategoryID,
               condition?: PackageCondition,
             ) => {
-              const ext = path.extname(oldPath).toLowerCase()
+              // TODO: Ignore case
+              const ext = path.extname(oldPath)
               if (SC4EXTENSIONS.includes(ext)) {
                 const targetPath = path.join(variantPath, newPath)
                 await createIfMissing(path.dirname(targetPath))
@@ -868,7 +872,7 @@ export class Application {
                 }
 
                 // Included paths are excluded from being included again
-                excludes.push(pattern)
+                excludes.push(pattern, `${pattern}/**`)
               }
             } else {
               await addDirectory("", "")
@@ -893,8 +897,6 @@ export class Application {
 
           variantInfo.files = Array.from(files.values())
           variantInfo.installed = true
-
-          console.log(variantInfo)
 
           // Rewrite config
           await this.writePackageConfig(packageInfo)

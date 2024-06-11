@@ -122,7 +122,7 @@ export async function download(
     await writeFromStream(context, stream, targetPath, expectedBytes, exceptedHash, onProgress)
 
     if (filename.endsWith(".zip")) {
-      await extractArchive(context, targetPath, downloadTempPath, undefined, onProgress)
+      await extractArchive(context, targetPath, downloadTempPath, onProgress)
       await removeIfPresent(targetPath)
     }
 
@@ -151,14 +151,7 @@ export async function extract(
     for (const archivePath of archivePaths) {
       context.debug(`Extracting from ${archivePath}`)
       const extractPath = path.join(downloadPath, archivePath.replace(/\.(jar|zip)$/, ""))
-      const pattern = /\.(dat|dll|SC4Desc|SC4Lot|SC4Model|_LooseDesc|zip)$/
-      await extractArchive(
-        context,
-        path.join(downloadPath, archivePath),
-        extractPath,
-        pattern,
-        onProgress,
-      )
+      await extractArchive(context, path.join(downloadPath, archivePath), extractPath, onProgress)
 
       // Delete the archive after successful extraction
       await removeIfPresent(path.join(downloadPath, archivePath))
@@ -172,13 +165,10 @@ async function extractArchive(
   context: TaskContext,
   archivePath: string,
   extractPath: string,
-  pattern: RegExp | undefined,
   onProgress: (bytes: number, totalBytes: number) => void,
 ): Promise<void> {
   const archive = await Open.file(archivePath)
-  const files = archive.files.filter(file => {
-    return file.type === "File" && pattern?.test(file.path) !== false
-  })
+  const files = archive.files.filter(file => file.type === "File")
 
   const totalUncompressedSize = files.reduce((total, file) => total + file.uncompressedSize, 0)
 
