@@ -17,9 +17,10 @@ import {
 } from "@mui/icons-material"
 
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
+import { TagType } from "@renderer/components/PackageList/utils"
 import { Page } from "@renderer/pages"
-import { getCurrentVariant } from "@renderer/pages/PackageView"
 import { Location } from "@renderer/utils/navigation"
+import { getCurrentVariant } from "@renderer/utils/packages"
 import { PackageFilters, Store, getCurrentProfile } from "@renderer/utils/store"
 
 export interface TabInfo {
@@ -99,9 +100,9 @@ export const tabs: TabInfo[] = [
     label: "All",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [],
     },
   },
   {
@@ -114,9 +115,9 @@ export const tabs: TabInfo[] = [
     label: "Dependencies",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.DEPENDENCIES],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.DEPENDENCIES}`],
     },
     tooltip: "Textures, props",
   },
@@ -130,9 +131,9 @@ export const tabs: TabInfo[] = [
     label: "Mods",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.MODS],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.MODS}`],
     },
     tooltip: "Gameplay mods, bugfixes, DLLs",
   },
@@ -146,9 +147,9 @@ export const tabs: TabInfo[] = [
     label: "Residential",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.RESIDENTIAL],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.RESIDENTIAL}`],
     },
     tooltip: "Residential lots",
   },
@@ -162,9 +163,9 @@ export const tabs: TabInfo[] = [
     label: "Commercial",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.COMMERCIAL],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.COMMERCIAL}`],
     },
     tooltip: "Commercial lots",
   },
@@ -178,9 +179,9 @@ export const tabs: TabInfo[] = [
     label: "Industrial",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.INDUSTRIAL],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.INDUSTRIAL}`],
     },
     tooltip: "Industrial lots",
   },
@@ -194,9 +195,9 @@ export const tabs: TabInfo[] = [
     label: "Civics",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.CIVICS],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.CIVICS}`],
     },
     tooltip: "Civic buildings, rewards",
   },
@@ -210,9 +211,9 @@ export const tabs: TabInfo[] = [
     label: "Landmarks",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.LANDMARKS],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.LANDMARKS}`],
     },
     tooltip: "Landmarks",
   },
@@ -226,9 +227,9 @@ export const tabs: TabInfo[] = [
     label: "Parks",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.PARKS],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.PARKS}`],
     },
     tooltip: "Parks",
   },
@@ -242,9 +243,9 @@ export const tabs: TabInfo[] = [
     label: "Energy",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.ENERGY],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.ENERGY}`],
     },
     tooltip: "Energy infrastructure",
   },
@@ -258,9 +259,9 @@ export const tabs: TabInfo[] = [
     label: "Transport",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [PackageCategory.TRANSPORT],
       onlyErrors: false,
       onlyUpdates: false,
+      tags: [`${TagType.CATEGORY}:${PackageCategory.TRANSPORT}`],
     },
     tooltip: "Transportation infrastructure",
   },
@@ -275,9 +276,9 @@ export const tabs: TabInfo[] = [
     label: "Problems",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [],
       onlyErrors: true,
       onlyUpdates: false,
+      tags: [],
     },
   },
   {
@@ -291,9 +292,9 @@ export const tabs: TabInfo[] = [
     label: "Updates",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: [],
       onlyErrors: false,
       onlyUpdates: true,
+      tags: [],
     },
     tooltip: "Packages with updates available",
   },

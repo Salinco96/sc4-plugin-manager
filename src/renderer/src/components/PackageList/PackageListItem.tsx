@@ -7,9 +7,9 @@ import { PackageBanners } from "@renderer/components/PackageBanners"
 import { PackageTags } from "@renderer/components/PackageTags"
 import { Text } from "@renderer/components/Text"
 import { Page } from "@renderer/pages"
-import { getCurrentVariant } from "@renderer/pages/PackageView"
 import { useHistory } from "@renderer/utils/navigation"
-import { useCurrentProfile, usePackageInfo } from "@renderer/utils/store"
+import { getCurrentVariant, usePackageInfo } from "@renderer/utils/packages"
+import { useCurrentProfile } from "@renderer/utils/store"
 
 import { VirtualListItemProps } from "./VirtualList"
 
@@ -58,10 +58,10 @@ export const PackageListItem = memo(function PackageListItem({
             {packageInfo.name} (v{variantInfo.version})
           </Text>
           <Text maxLines={1} variant="body2">
-            {packageInfo.id}#{variantInfo.id}
+            {packageId}#{variantInfo.id}
           </Text>
         </Link>
-        <PackageTags packageInfo={packageInfo} />
+        <PackageTags packageId={packageId} />
         {variantInfo.description && (
           <Text
             maxLines={2}
@@ -72,10 +72,10 @@ export const PackageListItem = memo(function PackageListItem({
             {variantInfo.description}
           </Text>
         )}
-        <PackageBanners packageInfo={packageInfo} />
+        <PackageBanners packageId={packageId} />
       </CardContent>
       <CardActions sx={{ padding: 2 }}>
-        <PackageActions packageInfo={packageInfo} />
+        <PackageActions packageId={packageId} />
       </CardActions>
     </Card>
   )

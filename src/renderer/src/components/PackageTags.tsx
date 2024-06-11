@@ -1,12 +1,14 @@
-import { MouseEvent, useCallback } from "react"
+import { useCallback } from "react"
 
 import { Chip, List, Tooltip } from "@mui/material"
 
-import { PackageCategory, PackageInfo, PackageState, getCategory, getState } from "@common/types"
+import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
 import { Page } from "@renderer/pages"
-import { getCurrentVariant } from "@renderer/pages/PackageView"
 import { useLocation } from "@renderer/utils/navigation"
+import { useCurrentVariant, usePackageInfo } from "@renderer/utils/packages"
 import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
+
+import { TagType } from "./PackageList/utils"
 
 interface TagInfo {
   color?: "success" | "error" | "warning"
@@ -18,52 +20,52 @@ interface TagInfo {
 
 const tags: TagInfo[] = [
   {
-    id: "dependencies",
+    id: `${TagType.CATEGORY}:${PackageCategory.DEPENDENCIES}`,
     label: "Dependency",
     category: PackageCategory.DEPENDENCIES,
   },
   {
-    id: "mods",
+    id: `${TagType.CATEGORY}:${PackageCategory.MODS}`,
     label: "Mod",
     category: PackageCategory.MODS,
   },
   {
-    id: "residential",
+    id: `${TagType.CATEGORY}:${PackageCategory.RESIDENTIAL}`,
     label: "Residential",
     category: PackageCategory.RESIDENTIAL,
   },
   {
-    id: "commercial",
+    id: `${TagType.CATEGORY}:${PackageCategory.COMMERCIAL}`,
     label: "Commercial",
     category: PackageCategory.COMMERCIAL,
   },
   {
-    id: "industrial",
+    id: `${TagType.CATEGORY}:${PackageCategory.INDUSTRIAL}`,
     label: "Industrial",
     category: PackageCategory.INDUSTRIAL,
   },
   {
-    id: "civics",
+    id: `${TagType.CATEGORY}:${PackageCategory.CIVICS}`,
     label: "Civics",
     category: PackageCategory.CIVICS,
   },
   {
-    id: "landmarks",
+    id: `${TagType.CATEGORY}:${PackageCategory.LANDMARKS}`,
     label: "Landmark",
     category: PackageCategory.LANDMARKS,
   },
   {
-    id: "parks",
+    id: `${TagType.CATEGORY}:${PackageCategory.PARKS}`,
     label: "Park",
     category: PackageCategory.PARKS,
   },
   {
-    id: "energy",
+    id: `${TagType.CATEGORY}:${PackageCategory.ENERGY}`,
     label: "Energy",
     category: PackageCategory.ENERGY,
   },
   {
-    id: "transport",
+    id: `${TagType.CATEGORY}:${PackageCategory.TRANSPORT}`,
     label: "Transport",
     category: PackageCategory.TRANSPORT,
   },
@@ -112,32 +114,17 @@ export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
 
   const filtering = location.page === Page.Packages
 
-  const selected = tag.category !== undefined && filters.categories.includes(tag.category)
+  const selected = tag.category && filters.tags.includes(tag.id)
 
-  const onClick = useCallback(
-    (event: MouseEvent) => {
-      event.stopPropagation()
-
-      if (tag.category) {
-        actions.setPackageFilters({
-          ...filters,
-          categories: filters.categories.includes(tag.category)
-            ? filters.categories.filter(category => category !== tag.category)
-            : filters.categories.concat(tag.category),
-        })
+  const onClick = useCallback(() => {
+    if (tag.category) {
+      if (selected) {
+        actions.setPackageFilters({ tags: filters.tags.filter(id => id !== tag.id) })
+      } else {
+        actions.setPackageFilters({ tags: filters.tags.concat(tag.id) })
       }
-
-      // if (tag.state) {
-      //   actions.setPackageFilters({
-      //     ...filters,
-      //     states: filters.states.includes(tag.state)
-      //       ? filters.states.filter(state => state !== tag.state)
-      //       : filters.states.concat(tag.state),
-      //   })
-      // }
-    },
-    [actions, filters, selected],
-  )
+    }
+  }, [actions, filters, selected])
 
   if (filtering) {
     return (
@@ -167,14 +154,12 @@ export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
   )
 }
 
-export function PackageTags({ packageInfo }: { packageInfo: PackageInfo }): JSX.Element | null {
+export function PackageTags({ packageId }: { packageId: string }): JSX.Element | null {
   const currentProfile = useCurrentProfile()
-  if (!currentProfile) {
-    return null
-  }
-
-  const variantInfo = getCurrentVariant(packageInfo, currentProfile)
+  const packageInfo = usePackageInfo(packageId)
+  const variantInfo = useCurrentVariant(packageId)
   const category = getCategory(variantInfo)
+
   const packageTags = tags.filter(tag => {
     if (tag.category) {
       return tag.category === category

@@ -5,18 +5,10 @@ import { create } from "zustand"
 import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
-import {
-  PackageCategory,
-  PackageInfo,
-  PackageState,
-  ProfileInfo,
-  PackageStatus,
-  Settings,
-} from "@common/types"
+import { PackageInfo, PackageState, ProfileInfo, Settings } from "@common/types"
 import { SnackbarProps, SnackbarType } from "@renderer/providers/SnackbarProvider"
 
 export interface PackageFilters {
-  categories: PackageCategory[]
   dependencies: boolean
   experimental: boolean
   incompatible: boolean
@@ -24,6 +16,7 @@ export interface PackageFilters {
   onlyUpdates: boolean
   search: string
   state: PackageState | null
+  tags: string[]
 }
 
 export interface StoreActions {
@@ -49,7 +42,7 @@ export interface StoreActions {
   simtropolisLogin(): Promise<void>
   simtropolisLogout(): Promise<void>
   switchProfile(profileId: string): Promise<boolean>
-  updatePackage(packageId: string): Promise<boolean>
+  updatePackage(packageId: string, variantId: string): Promise<boolean>
   updateProfile(profileId: string, data: ProfileUpdate): Promise<boolean>
   updateState(update: Partial<ApplicationState>): void
 }
@@ -89,8 +82,7 @@ export const useStore = create<Store>()((set, get): Store => {
     actions: {
       async addPackage(packageId, variantId) {
         const profileId = get().settings?.currentProfile
-        const packageInfo = get().packages?.[packageId]
-        if (!packageInfo || !profileId) {
+        if (!profileId) {
           return false
         }
 
@@ -121,8 +113,7 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async disablePackage(packageId) {
         const profileId = get().settings?.currentProfile
-        const packageInfo = get().packages?.[packageId]
-        if (!packageInfo || !profileId) {
+        if (!profileId) {
           return false
         }
 
@@ -140,8 +131,7 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async enablePackage(packageId) {
         const profileId = get().settings?.currentProfile
-        const packageInfo = get().packages?.[packageId]
-        if (!packageInfo || !profileId) {
+        if (!profileId) {
           return false
         }
 
@@ -204,8 +194,7 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async setPackageVariant(packageId, variantId) {
         const profileId = get().settings?.currentProfile
-        const variantInfo = get().packages?.[packageId]?.variants[variantId]
-        if (!profileId || !variantInfo) {
+        if (!profileId) {
           return false
         }
 
@@ -248,18 +237,7 @@ export const useStore = create<Store>()((set, get): Store => {
       async switchProfile(profileId) {
         return window.api.switchProfile(profileId)
       },
-      async updatePackage(packageId) {
-        const profileId = get().settings?.currentProfile
-        const packageInfo = get().packages?.[packageId]
-        if (!packageInfo || !profileId) {
-          return false
-        }
-
-        const variantId = packageInfo.status[profileId]?.variantId
-        if (!variantId) {
-          return false
-        }
-
+      async updatePackage(packageId, variantId) {
         try {
           return await window.api.installPackages({ [packageId]: variantId })
         } catch (error) {
@@ -339,7 +317,6 @@ export const useStore = create<Store>()((set, get): Store => {
       },
     },
     packageFilters: {
-      categories: [],
       dependencies: true,
       experimental: true,
       incompatible: true,
@@ -347,6 +324,7 @@ export const useStore = create<Store>()((set, get): Store => {
       onlyUpdates: false,
       search: "",
       state: null,
+      tags: [],
     },
     sessions: {
       simtropolis: {},
@@ -361,17 +339,21 @@ export const useStore = create<Store>()((set, get): Store => {
   }
 })
 
-export function getStoreActions(store: Store): StoreActions {
-  return store.actions
-}
-
-export function useStoreActions(): StoreActions {
-  return useStore(getStoreActions)
-}
-
 export function getCurrentProfile(store: Store): ProfileInfo | undefined {
   const profileId = store.settings?.currentProfile
   return profileId ? store.profiles?.[profileId] : undefined
+}
+
+export function getPackageInfo(store: Store, packageId: string): PackageInfo | undefined {
+  return store.packages?.[packageId]
+}
+
+export function getProfileInfo(store: Store, profileId: string): ProfileInfo | undefined {
+  return store.profiles?.[profileId]
+}
+
+export function getStoreActions(store: Store): StoreActions {
+  return store.actions
 }
 
 export function useCurrentProfile(): ProfileInfo | undefined {
@@ -382,13 +364,6 @@ export function usePackageFilters(): PackageFilters | undefined {
   return useStore(store => store.packageFilters)
 }
 
-export function usePackageInfo(packageId: string): PackageInfo | undefined {
-  return useStore(store => store.packages?.[packageId])
-}
-
-export function usePackageStatus(packageId: string): PackageStatus | undefined {
-  return useStore(store => {
-    const currentProfile = getCurrentProfile(store)
-    return currentProfile && store.packages?.[packageId]?.status[currentProfile.id]
-  })
+export function useStoreActions(): StoreActions {
+  return useStore(getStoreActions)
 }

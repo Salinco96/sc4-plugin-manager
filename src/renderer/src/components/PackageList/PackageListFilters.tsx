@@ -1,7 +1,6 @@
+import { useMemo } from "react"
+
 import {
-  CheckBox as CheckBoxIcon,
-  CheckBoxOutlineBlank as CheckBoxOutlineBlankIcon,
-  Clear as ClearIcon,
   DoDisturb as IncompatibleIcon,
   Download as DownloadedIcon,
   FileDownloadDone as EnabledIcon,
@@ -12,9 +11,6 @@ import {
 import {
   Autocomplete,
   Box,
-  Checkbox,
-  IconButton,
-  InputAdornment,
   TextField,
   ToggleButton,
   ToggleButtonGroup,
@@ -22,11 +18,55 @@ import {
 } from "@mui/material"
 
 import { PackageCategory, PackageState } from "@common/types"
-import { useStore, useStoreActions } from "@renderer/utils/store"
+import { getCurrentVariant } from "@renderer/utils/packages"
+import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
+
+import { TagType, createTags, getTagLabel } from "./utils"
 
 export function PackageListFilters(): JSX.Element {
   const actions = useStoreActions()
+
+  const currentProfile = useCurrentProfile()
+  const packages = useStore(store => store.packages)
   const packageFilters = useStore(store => store.packageFilters)
+
+  const categories: string[] = useMemo(() => {
+    // TODO: More categories, filter by other tags, filter by authors
+    return Object.values(PackageCategory).sort()
+  }, [])
+
+  const authors: string[] = useMemo(() => {
+    const authors = new Set<string>()
+
+    if (packages) {
+      for (const packageInfo of Object.values(packages)) {
+        const variantInfo = getCurrentVariant(packageInfo, currentProfile)
+        for (const author of variantInfo.authors) {
+          authors.add(author)
+        }
+      }
+    }
+
+    return Array.from(authors).sort()
+  }, [currentProfile, packages])
+
+  const options: string[] = useMemo(() => {
+    if (!packageFilters.search.trim()) {
+      return []
+    }
+
+    const pattern = RegExp("\\b" + packageFilters.search.trim().replaceAll(/\W/g, "\\$&"), "i")
+    return [
+      ...createTags(
+        TagType.AUTHOR,
+        authors.filter(author => pattern.test(author)),
+      ),
+      ...createTags(
+        TagType.CATEGORY,
+        categories.filter(category => pattern.test(category)),
+      ),
+    ].filter(tag => !packageFilters.tags.includes(tag))
+  }, [authors, categories, packageFilters])
 
   return (
     <Box sx={{ display: "flex", gap: 2, padding: 2, justifyContent: "start" }}>
@@ -105,49 +145,27 @@ export function PackageListFilters(): JSX.Element {
           </ToggleButton>
         </Tooltip>
       </ToggleButtonGroup>
-      <TextField
-        InputProps={{
-          endAdornment: packageFilters.search.trim() ? (
-            <InputAdornment position="end">
-              <IconButton size="small" onClick={() => actions.setPackageFilters({ search: "" })}>
-                <ClearIcon fontSize="small" />
-              </IconButton>
-            </InputAdornment>
-          ) : undefined,
-          sx: { paddingRight: 1 },
-          title: "Clear",
-        }}
-        autoFocus
-        onChange={event => actions.setPackageFilters({ search: event.target.value })}
-        label="Search"
-        size="small"
-        sx={{ flex: 1 }}
-        value={packageFilters.search}
-      />
-      <Autocomplete<string, true>
+      <Autocomplete<string, true, false, true>
         disableCloseOnSelect
         disablePortal
-        limitTags={2}
+        filterOptions={options => options}
+        freeSolo
+        getOptionLabel={getTagLabel}
+        inputValue={packageFilters.search}
+        limitTags={4}
         multiple
-        onChange={(_, categories) => {
-          actions.setPackageFilters({ categories: categories as PackageCategory[] })
-        }}
-        options={Object.values(PackageCategory)}
+        onChange={(_, tags) => actions.setPackageFilters({ tags })}
+        onInputChange={(_, search) => actions.setPackageFilters({ search })}
+        options={options}
         size="small"
         sx={{ flex: 1 }}
-        renderInput={props => <TextField {...props} label="Categories" />}
-        renderOption={(props, option, { selected }) => (
+        renderInput={props => <TextField {...props} autoFocus label="Search" />}
+        renderOption={(props, option) => (
           <li key={option} {...props}>
-            <Checkbox
-              icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
-              checkedIcon={<CheckBoxIcon fontSize="small" />}
-              sx={{ marginRight: 1 }}
-              checked={selected}
-            />
-            {option}
+            {getTagLabel(option, true)}
           </li>
         )}
-        value={packageFilters.categories}
+        value={packageFilters.tags}
       />
     </Box>
   )

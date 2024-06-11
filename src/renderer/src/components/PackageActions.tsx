@@ -3,8 +3,7 @@ import { useMemo, useRef, useState } from "react"
 import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
 import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
 
-import { PackageInfo } from "@common/types"
-import { getPackageStatus } from "@renderer/pages/PackageView"
+import { usePackageInfo, usePackageStatus } from "@renderer/utils/packages"
 import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
 
 interface PackageAction {
@@ -16,14 +15,14 @@ interface PackageAction {
   onClick: () => void
 }
 
-export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): JSX.Element | null {
+export function PackageActions({ packageId }: { packageId: string }): JSX.Element | null {
   const anchorRef = useRef<HTMLButtonElement>(null)
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
-  const packageStatus = getPackageStatus(packageInfo, currentProfile)
-  const packageId = packageInfo.id
+  const packageInfo = usePackageInfo(packageId)
+  const packageStatus = usePackageStatus(packageId)
   const variantId = packageStatus.variantId
 
   const compatibleVariants = Object.keys(packageInfo.variants).filter(
@@ -63,7 +62,7 @@ export function PackageActions({ packageInfo }: { packageInfo: PackageInfo }): J
         disabled: isBusy || isIncompatible,
         id: "update",
         label: "Update",
-        onClick: () => actions.updatePackage(packageId),
+        onClick: () => actions.updatePackage(packageId, variantId),
       })
     }
 

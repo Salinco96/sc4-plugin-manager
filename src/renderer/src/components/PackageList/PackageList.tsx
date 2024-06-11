@@ -1,20 +1,22 @@
 import { useMemo, useRef } from "react"
 
-import { SearchOff as NoResultIcon } from "@mui/icons-material"
-import { Typography } from "@mui/material"
-
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
-import { FlexBox } from "@renderer/components/FlexBox"
-import { getCurrentVariant, getPackageStatus } from "@renderer/pages/PackageView"
+import { PACKAGE_BANNER_HEIGHT, PACKAGE_BANNER_SPACING } from "@renderer/components/PackageBanners"
+import { Page } from "@renderer/pages"
 import { useHistory } from "@renderer/utils/navigation"
+import { getCurrentVariant, getPackageStatus } from "@renderer/utils/packages"
 import { useCurrentProfile, useStore } from "@renderer/utils/store"
 
+import { EmptyPackageList } from "./EmptyPackageList"
 import { PackageListItem } from "./PackageListItem"
+import { TagType, parseTag } from "./utils"
 import { VirtualList } from "./VirtualList"
 
 const PACKAGE_LIST_ITEM_BASE_SIZE = 180
-const PACKAGE_LIST_ITEM_BANNER_SIZE = 72
+const PACKAGE_LIST_ITEM_BANNER_SIZE = PACKAGE_BANNER_HEIGHT + PACKAGE_BANNER_SPACING
 const PACKAGE_LIST_ITEM_DESCRIPTION_SIZE = 56
+const PACKAGE_LIST_ITEM_SPACING = 16
+const PACKAGE_LIST_PADDING = 16
 
 export function PackageList(): JSX.Element {
   const currentProfile = useCurrentProfile()
@@ -24,58 +26,80 @@ export function PackageList(): JSX.Element {
 
   // TODO: Messy filtering - should be moved to Zustand
   const filteredPackages = useMemo(() => {
-    const packages = Object.values(allPackages || {}).filter(info => {
-      const variant = getCurrentVariant(info, currentProfile)
+    let pattern: RegExp | undefined
 
-      if (packageFilters.categories.length) {
-        if (!packageFilters.categories.includes(getCategory(variant))) {
+    if (packageFilters.search.trim()) {
+      pattern = RegExp("\\b" + packageFilters.search.trim().replaceAll(/\W/g, "\\$&"), "i")
+    }
+
+    const authors: string[] = []
+    const categories: PackageCategory[] = []
+    for (const tag of packageFilters.tags) {
+      const { type, value } = parseTag(tag)
+      switch (type) {
+        case TagType.AUTHOR:
+          authors.push(value)
+          break
+        case TagType.CATEGORY:
+          categories.push(value as PackageCategory)
+      }
+    }
+
+    const packages = Object.values(allPackages ?? {}).filter(info => {
+      const variantInfo = getCurrentVariant(info, currentProfile)
+
+      if (authors.length) {
+        if (!variantInfo.authors.some(author => authors.includes(author))) {
+          return false
+        }
+      }
+
+      if (categories.length) {
+        if (!categories.includes(getCategory(variantInfo))) {
           return false
         }
       }
 
       if (packageFilters.state) {
-        if (!getState(packageFilters.state, info, variant.id, currentProfile)) {
+        if (!getState(packageFilters.state, info, variantInfo.id, currentProfile)) {
           return false
         }
       }
 
       if (!packageFilters.onlyErrors && !packageFilters.onlyUpdates) {
         if (!packageFilters.dependencies) {
-          if (getCategory(variant) === PackageCategory.DEPENDENCIES) {
+          if (getCategory(variantInfo) === PackageCategory.DEPENDENCIES) {
             return false
           }
         }
 
         if (!packageFilters.experimental) {
-          if (getState(PackageState.EXPERIMENTAL, info, variant.id, currentProfile)) {
+          if (getState(PackageState.EXPERIMENTAL, info, variantInfo.id, currentProfile)) {
             return false
           }
         }
 
         if (!packageFilters.incompatible) {
-          if (getState(PackageState.INCOMPATIBLE, info, variant.id, currentProfile)) {
+          if (getState(PackageState.INCOMPATIBLE, info, variantInfo.id, currentProfile)) {
             return false
           }
         }
       }
 
       if (packageFilters.onlyErrors) {
-        if (!getState(PackageState.ERROR, info, variant.id, currentProfile)) {
+        if (!getState(PackageState.ERROR, info, variantInfo.id, currentProfile)) {
           return false
         }
       }
 
       if (packageFilters.onlyUpdates) {
-        if (!getState(PackageState.OUTDATED, info, variant.id, currentProfile)) {
+        if (!getState(PackageState.OUTDATED, info, variantInfo.id, currentProfile)) {
           return false
         }
       }
 
-      if (packageFilters.search.trim().length > 2) {
-        const search = [info.id, info.name].join("|").toLowerCase()
-        if (!search.includes(packageFilters.search.trim().toLowerCase())) {
-          return false
-        }
+      if (pattern && !pattern?.test(info.id + "|" + info.name)) {
+        return false
       }
 
       return true
@@ -89,19 +113,7 @@ export function PackageList(): JSX.Element {
   const scrolled = useRef(false)
 
   if (filteredPackages.length === 0) {
-    return (
-      <FlexBox
-        alignItems="center"
-        direction="column"
-        fontSize={40}
-        height="100%"
-        justifyContent="center"
-        width="100%"
-      >
-        <NoResultIcon fontSize="inherit" />
-        <Typography variant="subtitle1">No packages found for these filters</Typography>
-      </FlexBox>
-    )
+    return <EmptyPackageList />
   }
 
   return (
@@ -110,7 +122,7 @@ export function PackageList(): JSX.Element {
       items={filteredPackages}
       itemComponent={PackageListItem}
       itemSize={(packageId, size) => {
-        const packageInfo = useStore.getState().packages?.[packageId]
+        const packageInfo = allPackages?.[packageId]
 
         if (packageInfo) {
           const packageStatus = getPackageStatus(packageInfo, currentProfile)
@@ -145,15 +157,15 @@ export function PackageList(): JSX.Element {
 
         return size
       }}
-      paddingBottom={16}
-      paddingLeft={16}
-      paddingRight={16}
-      paddingTop={16}
+      paddingBottom={PACKAGE_LIST_PADDING}
+      paddingLeft={PACKAGE_LIST_PADDING}
+      paddingRight={PACKAGE_LIST_PADDING}
+      paddingTop={PACKAGE_LIST_PADDING}
       ref={list => {
         list?.resetAfterIndex(0)
 
         // Scroll to package upon coming back from package view
-        if (list && history.previous?.page === "PackageView" && !scrolled.current) {
+        if (list && history.previous?.page === Page.PackageView && !scrolled.current) {
           const fromPackageId = history.previous.data.packageId
           const index = filteredPackages.indexOf(fromPackageId)
           if (index >= 0) {
@@ -163,7 +175,7 @@ export function PackageList(): JSX.Element {
           scrolled.current = true
         }
       }}
-      spacing={16}
+      spacing={PACKAGE_LIST_ITEM_SPACING}
       sx={{ flex: 1 }}
     />
   )

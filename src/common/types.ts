@@ -113,8 +113,7 @@ export interface VariantInfo extends BaseVariantInfo {
   update?: BaseVariantInfo
 }
 
-// OLD:
-
+/* @deprecated */
 export enum PackageCategory {
   MODS = "mods",
   RESIDENTIAL = "residential",

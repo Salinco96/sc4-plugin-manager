@@ -17,6 +17,8 @@ import { TabInfo, tabs } from "@renderer/tabs"
 import { useHistory, useLocation } from "@renderer/utils/navigation"
 import { useStore, useStoreActions } from "@renderer/utils/store"
 
+import { TagType, parseTag } from "./PackageList/utils"
+
 export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX.Element {
   const actions = useStoreActions()
   const count = useStore(store => tab.badgeCount?.(store) ?? 0)
@@ -59,7 +61,7 @@ export function DrawerTabs(): JSX.Element {
 
   const activeTabId = useMemo(() => {
     switch (page) {
-      case Page.Packages:
+      case Page.Packages: {
         if (packageFilters.onlyErrors) {
           return "packages:errors"
         }
@@ -68,11 +70,15 @@ export function DrawerTabs(): JSX.Element {
           return "packages:updates"
         }
 
-        if (packageFilters.categories.length === 1) {
-          return `packages:${packageFilters.categories[0]}`
+        const tags = packageFilters.tags.map(parseTag)
+        const categoryTags = tags.filter(tag => tag.type === TagType.CATEGORY)
+        if (categoryTags.length === 1) {
+          return `packages:${categoryTags[0].value}`
         }
 
         return "packages:all"
+      }
+
       case Page.Profile:
         return "profile"
       case Page.Settings:
