@@ -264,13 +264,14 @@ export async function loadRemotePackages(
               }
 
               // Fix CAM/DarkNite compatibility format
-
               const camMods = ["cam/colossus-addon-mod"]
               const darkniteMods = ["simfox/day-and-nite-mod"]
 
               variantInfo.dependencies = variantInfo.dependencies?.filter(
                 dependencyId => !darkniteMods.includes(dependencyId),
               )
+
+              // TODO: Improve this logic
 
               if (camMods.includes(packageId)) {
                 if (variantId.includes("cam=no")) {

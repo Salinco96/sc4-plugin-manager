@@ -141,14 +141,25 @@ export function resolvePackages(
   }
 
   const enableRecursively = (packageId: string) => {
-    const packageStatus = resultingStatus[packageId]
+    const packageConfig = configs[packageId]
     const packageInfo = packages[packageId]
+    const packageStatus = resultingStatus[packageId]
     if (!packageInfo) {
       console.warn(`Unknown package '${packageId}'`)
       return
     }
 
-    const variantInfo = packageInfo.variants[packageStatus.variantId]
+    let variantInfo = packageInfo.variants[packageStatus.variantId]
+
+    if (packageConfig?.version) {
+      if (packageConfig.version === variantInfo.update?.version) {
+        variantInfo = variantInfo.update
+      } else if (packageConfig.version !== variantInfo.version) {
+        console.warn(
+          `Unknown package version '${packageId}#${packageStatus.variantId}@${packageConfig.version}'`,
+        )
+      }
+    }
 
     if (variantInfo.dependencies) {
       for (const dependencyId of variantInfo.dependencies) {
@@ -191,7 +202,17 @@ export function resolvePackages(
 
     const compatibleVariantIds: string[] = []
     for (const variantId in packageInfo.variants) {
-      const variantInfo = packageInfo.variants[variantId]
+      let variantInfo = packageInfo.variants[variantId]
+
+      if (packageConfig?.version && packageStatus.variantId === variantId) {
+        if (packageConfig.version === variantInfo.update?.version) {
+          variantInfo = variantInfo.update
+        } else if (packageConfig.version !== variantInfo.version) {
+          console.warn(
+            `Unknown package version '${packageId}#${variantId}@${packageConfig.version}'`,
+          )
+        }
+      }
 
       const incompatibilities = getVariantIncompatibilities(packageInfo, variantId, conflictGroups)
 
@@ -302,6 +323,7 @@ export function resolvePackageUpdates(
     const packageInfo = packages[packageId]
     const oldStatus = packageInfo.status[profile.id]
     const newStatus = resultingStatus[packageId]
+    const variantInfo = packageInfo.variants[newStatus.variantId]
 
     if (oldStatus) {
       if (oldStatus.variantId !== newStatus.variantId) {
@@ -327,7 +349,7 @@ export function resolvePackageUpdates(
         const defaultVariantId = newCompatibleVariantIds[0]
         const isChanged = !oldStatus.enabled || oldStatus.variantId !== newStatus.variantId
         const isConflicted = !newCompatibleVariantIds.includes(newStatus.variantId)
-        const isInstalled = !!packageInfo.variants[newStatus.variantId].installed
+        const isInstalled = !!variantInfo.installed
 
         // If selected variant is not compatible, mark as conflict
         if (isConflicted && !ignoreConflicts) {
@@ -352,6 +374,11 @@ export function resolvePackageUpdates(
         if (!isInstalled && (isChanged || configUpdates[packageId])) {
           installingVariants[packageId] = newStatus.variantId
         }
+
+        // If selected variant is being updated, mark it for installation
+        if (packageConfig?.version && packageConfig.version === variantInfo.update?.version) {
+          installingVariants[packageId] = newStatus.variantId
+        }
       } else if (oldStatus.enabled) {
         disablingPackages.push(packageId)
       }
@@ -372,29 +399,29 @@ export function resolvePackageUpdates(
     }
   }
 
-  // console.debug("Updating configs", {
-  //   packages: configUpdates,
-  //   externals: externalUpdates,
-  // })
+  console.debug("Updating configs", {
+    packages: configUpdates,
+    externals: externalUpdates,
+  })
 
-  // console.debug("Resulting configs", {
-  //   packages: resultingConfigs,
-  //   externals: resultingExternals,
-  // })
+  console.debug("Resulting configs", {
+    packages: resultingConfigs,
+    externals: resultingExternals,
+  })
 
-  // console.debug("Resulting changes", {
-  //   disablingPackages,
-  //   enablingPackages,
-  //   installingVariants,
-  //   selectingVariants,
-  // })
+  console.debug("Resulting changes", {
+    disablingPackages,
+    enablingPackages,
+    installingVariants,
+    selectingVariants,
+  })
 
-  // console.debug("Resulting conflicts", {
-  //   explicitVariantChanges,
-  //   implicitVariantChanges,
-  //   incompatibleExternals,
-  //   incompatiblePackages,
-  // })
+  console.debug("Resulting conflicts", {
+    explicitVariantChanges,
+    implicitVariantChanges,
+    incompatibleExternals,
+    incompatiblePackages,
+  })
 
   return {
     disablingPackages,

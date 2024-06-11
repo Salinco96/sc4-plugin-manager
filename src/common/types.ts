@@ -37,6 +37,7 @@ export interface PackageConfig {
   enabled?: boolean
   options?: PackageOptions
   variant?: string
+  version?: string
 }
 
 export interface PackageData extends VariantData {

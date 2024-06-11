@@ -10,6 +10,8 @@ import { ConfigFormat } from "@common/types"
 
 import { createIfMissing, readFile, readFileIfPresent, removeIfPresent, writeFile } from "./files"
 
+// TODO: Just fully get rid of JSON to reduce complexity (YAML seems performant enough)
+
 export function deserializeConfig<T>(data: string, format: ConfigFormat): T {
   return format === ConfigFormat.JSON ? JSON.parse(data) : yamlParse(data)
 }

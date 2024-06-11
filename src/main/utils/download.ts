@@ -19,7 +19,8 @@ import {
 } from "./sessions/simtropolis"
 import { TaskContext } from "./tasks"
 
-export class DownloadTransformStream extends Transform {
+// Transform stream to compute hash/progress as data is being downloaded
+class DownloadTransformStream extends Transform {
   public bytes: number = 0
   public readonly hash: Hash
   public readonly onProgress: (bytes: number) => void
@@ -79,7 +80,6 @@ export async function download(
   // TODO: Detect Simtropolis daily limit and request for login
 
   if (!response.ok) {
-    // Log JSON response (may be an error response)
     if (contentType === "application/json") {
       context.warn(await response.json())
     }
@@ -112,8 +112,6 @@ export async function download(
   }
 
   const stream = Readable.fromWeb(response.body as ReadableStream)
-
-  // TODO: Download to tmp folder then move to downloadPath only when completed
   const targetPath = path.join(downloadTempPath, filename)
 
   try {
@@ -126,7 +124,6 @@ export async function download(
     if (filename.endsWith(".zip")) {
       await extractArchive(context, targetPath, downloadTempPath, undefined, onProgress)
       await removeIfPresent(targetPath)
-      // TODO: Remove annoying extra nesting that some zip archives include
     }
 
     await createIfMissing(path.dirname(downloadPath))
@@ -151,12 +148,9 @@ export async function extract(
   })
 
   if (archivePaths.length) {
-    // Extract all supported archives
     for (const archivePath of archivePaths) {
-      // context.debug(`Extracting from ${archivePath}`)
+      context.debug(`Extracting from ${archivePath}`)
       const extractPath = path.join(downloadPath, archivePath.replace(/\.(jar|zip)$/, ""))
-
-      // Extract only supported files
       const pattern = /\.(dat|dll|SC4Desc|SC4Lot|SC4Model|_LooseDesc|zip)$/
       await extractArchive(
         context,
@@ -165,6 +159,8 @@ export async function extract(
         pattern,
         onProgress,
       )
+
+      // Delete the archive after successful extraction
       await removeIfPresent(path.join(downloadPath, archivePath))
       // In case there are nested archives...
       await extract(context, extractPath, onProgress)
@@ -190,7 +186,7 @@ async function extractArchive(
 
   let bytes = 0
   for (const file of files) {
-    // context.debug(`Extracting ${file.path}`)
+    context.debug(`Extracting ${file.path}`)
     const targetPath = path.join(extractPath, file.path)
     await createIfMissing(path.dirname(targetPath))
     try {
@@ -234,10 +230,15 @@ async function writeFromStream(
 
   context.debug(`SHA-256: ${actualHash} (${actualBytes} bytes)`)
 
+  // TODO: Download URLs from Simtropolis/SC4Evermore are not versioned - this means that if/when they
+  // release a new version (therefore using the same URL), this strict length/hash integrity check will
+  // fail until the Manager DB is updated (which in low activity periods could take days/weeks). Thus it
+  // may make more sense to treat this as a warning, rather than failing the download.
   if (expectedBytes && expectedBytes !== actualBytes) {
     throw Error(`Expected ${expectedBytes} bytes but received ${actualBytes}`)
   }
 
+  // TODO: Same as above
   if (expectedHash && expectedHash !== actualHash) {
     throw Error(`Expected SHA-256 ${expectedHash}`)
   }

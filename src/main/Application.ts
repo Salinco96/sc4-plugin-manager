@@ -199,124 +199,6 @@ export class Application {
     this.initialize()
   }
 
-  public async quit(): Promise<void> {
-    await removeIfPresent(this.getTempPath())
-  }
-
-  public async reload(): Promise<void> {
-    this.assets = {}
-    this.packages = undefined
-    this.profiles = undefined
-    this.sessions = {}
-    this.settings = undefined
-    this.status = {
-      linker: null,
-      loader: null,
-      ongoingDownloads: [],
-      ongoingExtracts: [],
-    }
-
-    this.tasks.linker.invalidateCache("init")
-
-    await this.initialize()
-  }
-
-  public async openExecutableDirectory(): Promise<void> {
-    if (this.settings?.install?.path) {
-      this.openInExplorer(path.dirname(path.join(this.settings.install.path, FILENAMES.sc4exe)))
-    }
-  }
-
-  public async openInstallationDirectory(): Promise<void> {
-    if (this.settings?.install?.path) {
-      this.openInExplorer(this.settings.install.path)
-    }
-  }
-
-  public async openProfileConfig(profileId: string): Promise<void> {
-    const profileInfo = this.getProfileInfo(profileId)
-    if (profileInfo?.format) {
-      this.openInExplorer(path.join(this.getProfilesPath(), profileId + profileInfo.format))
-    }
-  }
-
-  protected async checkGameInstall(): Promise<void> {
-    let installPath = this.settings?.install?.path
-    let installPathExists = false
-
-    if (installPath) {
-      installPathExists = await exists(path.join(installPath, FILENAMES.sc4exe))
-    } else {
-      for (const suggestedPath of SC4INSTALLPATHS) {
-        if (await exists(path.join(suggestedPath, FILENAMES.sc4exe))) {
-          console.debug(`Auto-detected installation path ${suggestedPath}`)
-          installPath = suggestedPath
-          installPathExists = true
-          break
-        }
-      }
-    }
-
-    while (!installPathExists) {
-      const result = await dialog.showOpenDialog(this.mainWindow!, {
-        title: "Select your SimCity 4 installation folder (containing SimCity_1.dat)",
-        defaultPath: installPath,
-        properties: ["openDirectory"],
-      })
-
-      if (result.filePaths.length) {
-        installPath = result.filePaths[0]
-        installPathExists = await exists(path.join(installPath, FILENAMES.sc4exe))
-      } else {
-        installPath = undefined
-        break
-      }
-    }
-
-    if (this.settings && installPath !== this.settings.install?.path) {
-      this.settings.install = { path: installPath }
-      this.sendSettings()
-      this.writeSettings()
-    }
-
-    if (installPath) {
-      await this.check4GBPatch(true)
-      await this.checkExeVersion()
-    }
-  }
-
-  public async checkExeVersion(): Promise<void> {
-    if (this.settings?.install?.path) {
-      const exePath = path.join(this.settings.install.path, FILENAMES.sc4exe)
-
-      return new Promise((resolve, reject) => {
-        exec(
-          `wmic datafile where "name='${exePath.replace(/[\\'"]/g, "\\$&")}'" get version`,
-          (error, stdout, stderr) => {
-            if (error) {
-              return reject(error)
-            }
-
-            const match = stdout.match(/(\d+)\.(\d+)\.(\d+)\.(\d+)/)
-            if (!match) {
-              return reject(Error(stderr))
-            }
-
-            const version = match[0]
-            if (this.settings?.install && this.settings.install.version !== version) {
-              console.info(`Detected version ${version}`)
-              this.settings.install.version = version
-              this.sendSettings()
-              this.writeSettings()
-            }
-
-            return resolve()
-          },
-        )
-      })
-    }
-  }
-
   public async check4GBPatch(isStartupCheck?: boolean): Promise<void> {
     let file: FileHandle | undefined
 
@@ -394,87 +276,247 @@ export class Application {
     }
   }
 
-  protected async showConfirmation(
-    title: string,
-    message: string,
-    detail?: string,
-    doNotAskAgain?: boolean,
-  ): Promise<[confirmed: boolean, doNotAskAgain: boolean]> {
-    const options: MessageBoxOptions = {
-      buttons: ["Yes", "No"],
-      cancelId: 1,
-      checkboxChecked: false,
-      checkboxLabel: doNotAskAgain ? "Do not ask again" : undefined,
-      defaultId: 0,
-      detail,
-      message,
-      title,
-      type: "question",
-    }
+  public async checkExeVersion(): Promise<void> {
+    if (this.settings?.install?.path) {
+      const exePath = path.join(this.settings.install.path, FILENAMES.sc4exe)
 
-    let result: MessageBoxReturnValue
+      return new Promise((resolve, reject) => {
+        exec(
+          `wmic datafile where "name='${exePath.replace(/[\\'"]/g, "\\$&")}'" get version`,
+          (error, stdout, stderr) => {
+            if (error) {
+              return reject(error)
+            }
 
-    if (this.mainWindow) {
-      result = await dialog.showMessageBox(this.mainWindow, options)
-    } else {
-      result = await dialog.showMessageBox(options)
-    }
+            const match = stdout.match(/(\d+)\.(\d+)\.(\d+)\.(\d+)/)
+            if (!match) {
+              return reject(Error(stderr))
+            }
 
-    return [result.response === 0, result.checkboxChecked]
-  }
+            const version = match[0]
+            if (this.settings?.install && this.settings.install.version !== version) {
+              console.info(`Detected version ${version}`)
+              this.settings.install.version = version
+              this.sendSettings()
+              this.writeSettings()
+            }
 
-  protected async showError(title: string, message: string, detail?: string): Promise<void> {
-    const options: MessageBoxOptions = { detail, message, title, type: "error" }
-    if (this.mainWindow) {
-      await dialog.showMessageBox(this.mainWindow, options)
-    } else {
-      await dialog.showMessageBox(options)
+            return resolve()
+          },
+        )
+      })
     }
   }
 
-  protected async showSuccess(title: string, message: string, detail?: string): Promise<void> {
-    const options: MessageBoxOptions = { detail, message, title, type: "info" }
-    if (this.mainWindow) {
-      await dialog.showMessageBox(this.mainWindow, options)
+  protected async checkGameInstall(): Promise<void> {
+    let installPath = this.settings?.install?.path
+    let installPathExists = false
+
+    if (installPath) {
+      installPathExists = await exists(path.join(installPath, FILENAMES.sc4exe))
     } else {
-      await dialog.showMessageBox(options)
-    }
-  }
-
-  protected loadGamePath(): string {
-    const configPath = path.join(app.getPath("userData"), "config.json")
-
-    let config: { path?: string } | undefined
-
-    try {
-      config = JSON.parse(readFileSync(configPath, "utf8"))
-    } catch (error) {
-      if (!(error instanceof Error) || !error.message.match(/no such file or directory/i)) {
-        console.error("Failed to load config", error)
+      for (const suggestedPath of SC4INSTALLPATHS) {
+        if (await exists(path.join(suggestedPath, FILENAMES.sc4exe))) {
+          console.debug(`Auto-detected installation path ${suggestedPath}`)
+          installPath = suggestedPath
+          installPathExists = true
+          break
+        }
       }
     }
 
-    let gamePath = env.GAME_DIR || config?.path || path.join(app.getPath("documents"), "SimCity 4")
-
-    while (!existsSync(path.join(gamePath, DIRNAMES.plugins))) {
-      const result = dialog.showOpenDialogSync({
-        title: "Select your SimCity 4 data folder (containing your Plugins folder)",
-        defaultPath: app.getPath("documents"),
+    while (!installPathExists) {
+      const result = await dialog.showOpenDialog(this.mainWindow!, {
+        title: "Select your SimCity 4 installation folder (containing SimCity_1.dat)",
+        defaultPath: installPath,
         properties: ["openDirectory"],
       })
 
-      if (result?.length === 1) {
-        gamePath = result[0]
+      if (result.filePaths.length) {
+        installPath = result.filePaths[0]
+        installPathExists = await exists(path.join(installPath, FILENAMES.sc4exe))
       } else {
-        throw Error("Aborted")
+        installPath = undefined
+        break
       }
     }
 
-    if (gamePath !== config?.path) {
-      writeFileSync(configPath, JSON.stringify({ path: gamePath }, undefined, 2))
+    if (this.settings && installPath !== this.settings.install?.path) {
+      this.settings.install = { path: installPath }
+      this.sendSettings()
+      this.writeSettings()
     }
 
-    return gamePath
+    if (installPath) {
+      await this.check4GBPatch(true)
+      await this.checkExeVersion()
+    }
+  }
+
+  public async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
+    if (!this.profiles || !this.settings) {
+      return false
+    }
+
+    const profile: ProfileInfo = {
+      id: createUniqueProfileId(name, Object.keys(this.profiles)),
+      name,
+      packages: {},
+      externals: {},
+    }
+
+    const templateProfile = templateProfileId ? this.getProfileInfo(templateProfileId) : undefined
+    if (templateProfile) {
+      for (const packageId in templateProfile.packages) {
+        profile.packages[packageId] = {
+          ...templateProfile.packages[packageId],
+        }
+      }
+
+      profile.externals = {
+        ...templateProfile.externals,
+      }
+    }
+
+    this.profiles[profile.id] = profile
+    this.writeProfile(profile.id)
+
+    return this.switchProfile(profile.id)
+  }
+
+  protected createMainWindow(): MainWindow {
+    if (!this.mainWindow) {
+      if (!isDev()) {
+        this.splashScreen = new SplashScreen()
+        this.splashScreen.on("close", () => {
+          this.splashScreen = undefined
+        })
+      }
+
+      this.mainWindow = new MainWindow()
+      this.mainWindow.on("close", () => {
+        this.mainWindow = undefined
+      })
+
+      this.mainWindow.on("show", () => {
+        this.splashScreen?.close()
+      })
+    }
+
+    return this.mainWindow
+  }
+
+  public async editProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
+    const profile = this.getProfileInfo(profileId)
+    if (!profile) {
+      return false
+    }
+
+    if (data.name) {
+      profile.name = data.name
+    }
+
+    if (data.externals) {
+      await this.updatePackages(profileId, {}, data.externals)
+    } else {
+      this.writeProfile(profileId)
+    }
+
+    return true
+  }
+
+  protected async getAsset(assetInfo: AssetInfo): Promise<void> {
+    const key = `${assetInfo.id}@${assetInfo.version}`
+
+    return this.tasks.getAsset.queue(key, async () => {
+      const downloadPath = this.getDownloadPath(key)
+      const downloadTempPath = this.getTempDownloadPath(key)
+
+      const downloaded = await exists(downloadPath)
+      if (!downloaded) {
+        await this.tasks.download.queue(key, async context => {
+          await download(
+            context,
+            key,
+            assetInfo.url,
+            downloadPath,
+            downloadTempPath,
+            assetInfo.size,
+            assetInfo.sha256,
+            this.sessions,
+            (bytes, totalBytes) => {
+              const progress = Math.floor(100 * (bytes / totalBytes))
+              context.setProgress(progress)
+            },
+          )
+        })
+      }
+
+      await this.tasks.extract.queue(key, async context => {
+        await extract(context, downloadPath, (bytes, totalBytes) => {
+          const progress = Math.floor(100 * (bytes / totalBytes))
+          context.setProgress(progress)
+        })
+      })
+    })
+  }
+
+  public getAssetInfo(data: PackageAsset): AssetInfo | undefined {
+    return (this.assets[data.id] ??= toAssetInfo(data))
+  }
+
+  public getCurrentProfile(): ProfileInfo | undefined {
+    const profileId = this.settings?.currentProfile
+    return profileId ? this.profiles?.[profileId] : undefined
+  }
+
+  public getDatabasePath(): string {
+    const repository = this.getDataRepository()
+    return isURL(repository) ? path.join(this.rootPath, DIRNAMES.database) : repository
+  }
+
+  public getDataRepository(): string {
+    if (env.DATA_REPOSITORY) {
+      if (isURL(env.DATA_REPOSITORY) || path.isAbsolute(env.DATA_REPOSITORY)) {
+        return env.DATA_REPOSITORY
+      }
+
+      return path.join(__dirname, "..", env.DATA_REPOSITORY)
+    }
+
+    if (isDev()) {
+      return path.join(__dirname, "../../sc4-plugin-manager-data")
+    }
+
+    return "https://github.com/memo33/sc4pac" // TODO: "https://github.com/Salinco96/sc4-plugin-manager-data.git"
+  }
+
+  public getDefaultConfigFormat(): ConfigFormat {
+    return this.settings?.useYaml === false ? ConfigFormat.JSON : ConfigFormat.YAML
+  }
+
+  public getDownloadPath(key: string): string {
+    return path.join(this.rootPath, DIRNAMES.downloads, key)
+  }
+
+  public getDownloadsPath(): string {
+    return path.join(this.rootPath, DIRNAMES.downloads)
+  }
+
+  public getLogLevel(): LogLevel {
+    if (env.LOG_LEVEL && log.levels.includes(env.LOG_LEVEL)) {
+      return env.LOG_LEVEL as LogLevel
+    } else {
+      return isDev() ? "debug" : "info"
+    }
+  }
+
+  public getLogsFile(): string {
+    return path.join(this.rootPath, DIRNAMES.logs, FILENAMES.logs)
+  }
+
+  public getLogsPath(): string {
+    return path.join(this.rootPath, DIRNAMES.logs)
   }
 
   public async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
@@ -516,98 +558,28 @@ export class Application {
     }
   }
 
-  public getCurrentProfile(): ProfileInfo | undefined {
-    const profileId = this.settings?.currentProfile
-    return profileId ? this.profiles?.[profileId] : undefined
-  }
-
-  public getDataRepository(): string {
-    if (env.DATA_REPOSITORY) {
-      if (isURL(env.DATA_REPOSITORY) || path.isAbsolute(env.DATA_REPOSITORY)) {
-        return env.DATA_REPOSITORY
-      }
-
-      return path.join(__dirname, "..", env.DATA_REPOSITORY)
-    }
-
-    if (isDev()) {
-      return path.join(__dirname, "../../sc4-plugin-manager-data")
-    }
-
-    return "https://github.com/memo33/sc4pac" // TODO: "https://github.com/Salinco96/sc4-plugin-manager-data.git"
-  }
-
-  public getDatabasePath(): string {
-    const repository = this.getDataRepository()
-    return isURL(repository) ? path.join(this.rootPath, DIRNAMES.database) : repository
-  }
-
-  public getDefaultConfigFormat(): ConfigFormat {
-    return this.settings?.useYaml === false ? ConfigFormat.JSON : ConfigFormat.YAML
-  }
-
-  public getDownloadsPath(): string {
-    return path.join(this.rootPath, DIRNAMES.downloads)
-  }
-
-  public getDownloadPath(key: string): string {
-    return path.join(this.rootPath, DIRNAMES.downloads, key)
-  }
-
-  public getTempPath(): string {
-    return path.join(this.rootPath, DIRNAMES.temp)
-  }
-
-  public getTempDownloadPath(key: string): string {
-    return path.join(this.getTempPath(), DIRNAMES.downloads, key)
-  }
-
-  public getLogLevel(): LogLevel {
-    if (env.LOG_LEVEL && log.levels.includes(env.LOG_LEVEL)) {
-      return env.LOG_LEVEL as LogLevel
-    } else {
-      return isDev() ? "debug" : "info"
-    }
-  }
-
-  public getLogsFile(): string {
-    return path.join(this.rootPath, DIRNAMES.logs, FILENAMES.logs)
-  }
-
-  public getLogsPath(): string {
-    return path.join(this.rootPath, DIRNAMES.logs)
-  }
-
-  public getPackagesPath(): string {
-    return path.join(this.rootPath, DIRNAMES.packages)
+  public getPackageInfo(packageId: string): PackageInfo | undefined {
+    return this.packages?.[packageId]
   }
 
   public getPackagePath(packageId: string): string {
     return path.join(this.rootPath, DIRNAMES.packages, packageId)
   }
 
+  public getPackagesPath(): string {
+    return path.join(this.rootPath, DIRNAMES.packages)
+  }
+
   public getPluginsPath(): string {
     return path.join(this.gamePath, DIRNAMES.plugins)
   }
 
-  public getProfilesPath(): string {
-    return path.join(this.rootPath, DIRNAMES.profiles)
-  }
-
-  public getVariantPath(packageId: string, variantId: string): string {
-    return path.join(this.rootPath, DIRNAMES.packages, packageId, variantId)
-  }
-
-  public getAssetInfo(data: PackageAsset): AssetInfo | undefined {
-    return (this.assets[data.id] ??= toAssetInfo(data))
-  }
-
-  public getPackageInfo(packageId: string): PackageInfo | undefined {
-    return this.packages?.[packageId]
-  }
-
   public getProfileInfo(profileId: string): ProfileInfo | undefined {
     return this.profiles?.[profileId]
+  }
+
+  public getProfilesPath(): string {
+    return path.join(this.rootPath, DIRNAMES.profiles)
   }
 
   public getState(): ApplicationState {
@@ -624,17 +596,24 @@ export class Application {
     }
   }
 
-  public async openPackageFileInExplorer(
-    packageId: string,
-    variantId: string,
-    filePath: string,
-  ): Promise<void> {
-    const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
-    this.openInExplorer(path.extname(fullPath) ? path.dirname(fullPath) : fullPath)
+  public getTempDownloadPath(key: string): string {
+    return path.join(this.getTempPath(), DIRNAMES.downloads, key)
   }
 
-  protected openInExplorer(fullPath: string): void {
-    cmd(`explorer "${fullPath}"`)
+  public getTempPath(): string {
+    return path.join(this.rootPath, DIRNAMES.temp)
+  }
+
+  public getVariantPath(packageId: string, variantId: string): string {
+    return path.join(this.rootPath, DIRNAMES.packages, packageId, variantId)
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  protected handle<Event extends keyof this & string, Args extends any[]>(
+    this: { [key in Event]: (...args: Args) => unknown },
+    event: Event,
+  ): void {
+    ipcMain.handle(event, (_, ...args: Args) => this[event](...args))
   }
 
   protected async initialize(): Promise<void> {
@@ -767,35 +746,818 @@ export class Application {
     this.sendStatus()
   }
 
-  public async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
-    if (!this.profiles || !this.settings) {
-      return false
-    }
+  public async installPackages(packages: { [packageId: string]: string }): Promise<boolean> {
+    const updatingPackages: { [packageId: string]: PackageConfig } = {}
 
-    const profile: ProfileInfo = {
-      id: createUniqueProfileId(name, Object.keys(this.profiles)),
-      name,
-      packages: {},
-      externals: {},
-    }
+    // Check if we are updating already-enabled variants - in that case we need to recalculate
+    const currentProfile = this.getCurrentProfile()
+    if (currentProfile) {
+      for (const packageId in packages) {
+        const variantId = packages[packageId]
+        const packageInfo = this.getPackageInfo(packageId)
+        const packageStatus = packageInfo?.status[currentProfile.id]
 
-    const templateProfile = templateProfileId ? this.getProfileInfo(templateProfileId) : undefined
-    if (templateProfile) {
-      for (const packageId in templateProfile.packages) {
-        profile.packages[packageId] = {
-          ...templateProfile.packages[packageId],
+        if (packageStatus?.enabled && packageStatus?.variantId === variantId) {
+          const variantInfo = packageInfo?.variants[variantId]
+          if (variantInfo?.update) {
+            updatingPackages[packageId] = {
+              variant: packages[packageId],
+              version: variantInfo.update.version,
+            }
+          }
         }
       }
 
-      profile.externals = {
-        ...templateProfile.externals,
+      if (Object.keys(updatingPackages).length) {
+        const result = await this.updatePackages(currentProfile.id, updatingPackages, {})
+
+        if (!result) {
+          return false
+        }
       }
     }
 
-    this.profiles[profile.id] = profile
-    this.writeProfile(profile.id)
+    await Promise.all(
+      Object.entries(packages)
+        .filter(([packageId]) => !updatingPackages[packageId])
+        .map(([packageId, variantId]) => this.installVariant(packageId, variantId)),
+    )
 
-    return this.switchProfile(profile.id)
+    return true
+  }
+
+  protected async installVariant(packageId: string, variantId: string): Promise<void> {
+    const packageInfo = this.getPackageInfo(packageId)
+    if (!packageInfo) {
+      throw Error(`Unknown package '${packageId}'`)
+    }
+
+    const variantInfo = packageInfo.variants[variantId]
+    if (!variantInfo) {
+      throw Error(`Unknown variant '${packageId}#${variantId}'`)
+    }
+
+    try {
+      const variantKey = `${packageId}#${variantId}`
+
+      variantInfo.action = variantInfo.installed ? "updating" : "installing"
+      this.sendPackage(packageId)
+
+      await this.tasks.install.queue(variantKey, async context => {
+        const variantPath = this.getVariantPath(packageId, variantId)
+        const assets = variantInfo.update?.assets ?? variantInfo.assets ?? []
+
+        const assetInfos = assets.map(asset => {
+          const assetInfo = this.getAssetInfo(asset)
+          if (!assetInfo) {
+            throw Error(`Unknown asset '${asset.id}'`)
+          }
+
+          return assetInfo
+        })
+
+        // Download and extract all assets
+        await Promise.all(assetInfos.map(this.getAsset.bind(this)))
+
+        // Remove any previous installation files
+        await removeIfPresent(variantPath)
+        await createIfMissing(variantPath)
+
+        try {
+          const files = new Map<string, PackageFile>()
+
+          for (const asset of assets) {
+            const assetInfo = this.getAssetInfo(asset)
+            if (!assetInfo) {
+              throw Error(`Unknown asset '${asset.id}'`)
+            }
+
+            const downloadKey = `${assetInfo.id}@${assetInfo.version}`
+            const downloadPath = this.getDownloadPath(downloadKey)
+
+            const toPattern = (path: string) =>
+              path.startsWith("/") ? path.slice(1) : `**/${path}`
+
+            // If no explicit include is given, include everything
+            const excludes = asset.exclude?.map(file => toPattern(file.path)) ?? []
+
+            // Blasklist file
+            excludes.push("**/desktop.ini")
+
+            // Find all included files
+            const sourcePath = asset.path ? path.join(downloadPath, asset.path) : downloadPath
+
+            const addFile = async (
+              oldPath: string,
+              newPath: string,
+              category?: CategoryID,
+              condition?: PackageCondition,
+            ) => {
+              const ext = path.extname(oldPath).toLowerCase()
+              if (SC4EXTENSIONS.includes(ext)) {
+                const targetPath = path.join(variantPath, newPath)
+                await createIfMissing(path.dirname(targetPath))
+                await fs.symlink(path.join(sourcePath, oldPath), targetPath)
+                if (files.has(newPath)) {
+                  context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
+                } else {
+                  files.set(newPath, {
+                    path: newPath,
+                    condition,
+                    category: category !== variantInfo.category ? category : undefined,
+                  })
+                }
+              } else if (DOCEXTENSIONS.includes(ext)) {
+                const targetPath = path.join(variantPath, newPath)
+                await createIfMissing(path.dirname(targetPath))
+                await fs.symlink(path.join(sourcePath, oldPath), targetPath)
+              } else {
+                context.warn(`Ignoring file ${oldPath} with unsupported extension ${ext}`)
+              }
+            }
+
+            const addDirectory = async (
+              oldPath: string,
+              newPath: string,
+              category?: CategoryID,
+              condition?: PackageCondition,
+            ) => {
+              const filePaths = await glob(path.join(oldPath, "**").replaceAll("\\", "/"), {
+                cwd: sourcePath,
+                dot: true,
+                ignore: excludes,
+                nodir: true,
+              })
+
+              for (const filePath of filePaths) {
+                await addFile(
+                  filePath,
+                  path.join(newPath, path.relative(oldPath, filePath)),
+                  category,
+                  condition,
+                )
+              }
+            }
+
+            if (asset.include) {
+              for (const include of asset.include) {
+                const pattern = toPattern(include.path)
+                const entries = await glob(pattern, {
+                  cwd: sourcePath,
+                  dot: true,
+                  ignore: excludes,
+                  withFileTypes: true,
+                })
+
+                if (entries.length === 0) {
+                  context.warn(`Include pattern ${include.path} did not match any file`)
+                }
+
+                for (const entry of entries) {
+                  const oldPath = entry.relative()
+                  const newPath = include.as
+                    ? path.relative(".", include.as).replace("*", entry.name)
+                    : oldPath
+
+                  if (entry.isDirectory()) {
+                    await addDirectory(oldPath, newPath, include.category, include.condition)
+                  } else {
+                    await addFile(oldPath, newPath, include.category, include.condition)
+                  }
+                }
+
+                // Included paths are excluded from being included again
+                excludes.push(pattern)
+              }
+            } else {
+              await addDirectory("", "")
+            }
+          }
+
+          const docsPaths = await glob("**/*.{htm,html,md,txt}", {
+            cwd: variantPath,
+            ignore: "*cleanitol*",
+            nodir: true,
+          })
+
+          variantInfo.readme ??=
+            docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
+            docsPaths.find(file => path.basename(file).match(/readme/i)) ??
+            docsPaths[0]
+
+          if (variantInfo.update) {
+            Object.assign(variantInfo, variantInfo.update)
+            delete variantInfo.update
+          }
+
+          variantInfo.files = Array.from(files.values())
+          variantInfo.installed = true
+
+          console.log(variantInfo)
+
+          // Rewrite config
+          await this.writePackageConfig(packageInfo)
+        } catch (error) {
+          delete variantInfo.files
+          delete variantInfo.installed
+          throw error
+        }
+      })
+    } finally {
+      delete variantInfo.action
+      this.sendPackage(packageId)
+    }
+  }
+
+  protected async linkPackages(): Promise<void> {
+    if (!this.packages) {
+      return
+    }
+
+    const pluginsPath = this.getPluginsPath()
+
+    await this.tasks.linker.queue(
+      "init",
+      async context => {
+        context.debug("Initializing links...")
+
+        let nLinks = 0
+
+        const recursive = async (dirname: string) => {
+          const entries = await fs.readdir(dirname, { withFileTypes: true })
+          for (const entry of entries) {
+            const entryPath = path.join(dirname, entry.name)
+            if (entry.isDirectory()) {
+              await recursive(entryPath)
+            } else if (entry.isSymbolicLink()) {
+              this.links[entryPath] = await fs.readlink(entryPath)
+              nLinks++
+            }
+          }
+        }
+
+        await createIfMissing(pluginsPath)
+        await recursive(pluginsPath)
+
+        context.debug(`Done (found ${nLinks})`)
+      },
+      { cache: true },
+    )
+
+    const currentProfile = this.getCurrentProfile()
+    if (currentProfile) {
+      await this.tasks.linker.queue(
+        "link",
+        async context => {
+          context.debug("Linking packages...")
+
+          await createIfMissing(pluginsPath)
+
+          const oldLinks = new Set(Object.keys(this.links))
+
+          let nCreatedLinks = 0
+          let nRemovedLinks = 0
+
+          const makeLink = async (from: string, to: string) => {
+            await removeIfPresent(to)
+            await createIfMissing(path.dirname(to))
+            await fs.symlink(from, to)
+            this.links[to] = from
+          }
+
+          for (const packageId in this.packages) {
+            const packageInfo = this.packages[packageId]
+            const status = packageInfo.status[currentProfile.id]!
+            if (status.enabled) {
+              const variantId = status.variantId
+              const variantInfo = packageInfo.variants[variantId]
+              if (variantInfo) {
+                const variantPath = this.getVariantPath(packageId, variantId)
+                if (variantInfo.files?.length) {
+                  for (const file of variantInfo.files) {
+                    // TODO: Check file.condition
+                    const fullPath = path.join(variantPath, file.path!)
+                    const categoryPath = formatCategory(file.category ?? variantInfo.category)
+
+                    // DLL files must be in Plugins root
+                    const targetPath = file.path!.match(/\.(dll|ini)$/i)
+                      ? path.join(pluginsPath, path.basename(file.path!))
+                      : path.join(pluginsPath, categoryPath, packageId, file.path!)
+
+                    oldLinks.delete(targetPath)
+                    if (this.links[targetPath] !== fullPath) {
+                      await makeLink(fullPath, targetPath)
+                      nCreatedLinks++
+                    }
+                  }
+                } else {
+                  context.warn(`Package ${packageId} does not have files`)
+                }
+              }
+            }
+          }
+
+          for (const linkPath of oldLinks) {
+            nRemovedLinks++
+            await removeIfPresent(linkPath)
+            await removeIfEmpty(path.dirname(linkPath))
+            delete this.links[linkPath]
+
+            let parentPath = path.dirname(linkPath)
+            while (!pluginsPath.startsWith(parentPath) && (await removeIfEmpty(parentPath))) {
+              parentPath = path.dirname(parentPath)
+            }
+          }
+
+          context.debug(`Done (added ${nCreatedLinks}, removed ${nRemovedLinks})`)
+        },
+        { invalidate: true },
+      )
+    }
+  }
+
+  protected async loadConfig<T>(
+    basePath: string,
+    filename: string,
+  ): Promise<{ data: T; format: ConfigFormat } | undefined> {
+    return loadConfig(basePath, filename)
+  }
+
+  protected loadGamePath(): string {
+    const configPath = path.join(app.getPath("userData"), "config.json")
+
+    let config: { path?: string } | undefined
+
+    try {
+      config = JSON.parse(readFileSync(configPath, "utf8"))
+    } catch (error) {
+      if (!(error instanceof Error) || !error.message.match(/no such file or directory/i)) {
+        console.error("Failed to load config", error)
+      }
+    }
+
+    let gamePath = env.GAME_DIR || config?.path || path.join(app.getPath("documents"), "SimCity 4")
+
+    while (!existsSync(path.join(gamePath, DIRNAMES.plugins))) {
+      const result = dialog.showOpenDialogSync({
+        title: "Select your SimCity 4 data folder (containing your Plugins folder)",
+        defaultPath: app.getPath("documents"),
+        properties: ["openDirectory"],
+      })
+
+      if (result?.length === 1) {
+        gamePath = result[0]
+      } else {
+        throw Error("Aborted")
+      }
+    }
+
+    if (gamePath !== config?.path) {
+      writeFileSync(configPath, JSON.stringify({ path: gamePath }, undefined, 2))
+    }
+
+    return gamePath
+  }
+
+  protected async loadProfiles(): Promise<{ [id: string]: ProfileInfo }> {
+    console.debug("Loading profiles")
+
+    let nProfiles = 0
+    this.profiles = {}
+
+    const profilesPath = this.getProfilesPath()
+    await createIfMissing(profilesPath)
+
+    const entries = await fs.readdir(profilesPath, { withFileTypes: true })
+    for (const entry of entries) {
+      const format = path.extname(entry.name) as ConfigFormat
+      if (entry.isFile() && Object.values(ConfigFormat).includes(format)) {
+        const profileId = path.basename(entry.name, format)
+        const profilePath = path.join(profilesPath, entry.name)
+        if (this.profiles[profileId]) {
+          console.warn(`Duplicate profile configuration '${entry.name}'`)
+          continue
+        }
+
+        try {
+          const data = await readConfig<ProfileData>(profilePath)
+          const profile = fromProfileData(profileId, data)
+          profile.format = format
+          this.profiles[profileId] = profile
+          nProfiles++
+        } catch (error) {
+          console.warn(`Invalid profile configuration '${entry.name}'`, error)
+        }
+      }
+    }
+
+    console.debug(`Loaded ${nProfiles} profiles`)
+
+    return this.profiles
+  }
+
+  protected async loadSettings(): Promise<Settings> {
+    console.debug("Loading settings...")
+
+    const config = await this.loadConfig<Settings>(this.rootPath, FILENAMES.settings)
+
+    this.settings = {
+      format: config?.format,
+      ...defaultSettings,
+      ...config?.data,
+    }
+
+    // Select first profile if currently-selected profile no longer exists
+    const profileIds = Object.keys(this.profiles ?? {})
+    const currentProfileId = this.settings.currentProfile
+    if (!currentProfileId || !profileIds.includes(currentProfileId)) {
+      this.settings.currentProfile = profileIds[0]
+    }
+
+    return this.settings
+  }
+
+  protected onDownloadTaskUpdate(ongoingDownloads: TaskInfo[]): void {
+    this.status.ongoingDownloads = ongoingDownloads
+    this.sendStatus()
+  }
+
+  protected onExtractTaskUpdate(ongoingExtracts: TaskInfo[]): void {
+    this.status.ongoingExtracts = ongoingExtracts
+    this.sendStatus()
+  }
+
+  protected onLinkTaskUpdate(ongoingTasks: TaskInfo[]): void {
+    const key = ongoingTasks[0]?.key
+    if (key === "init") {
+      this.status.linker = "Initializing..."
+    } else if (key === "link") {
+      this.status.linker = "Linking packages..."
+    } else {
+      this.status.linker = null
+    }
+
+    this.sendStatus()
+  }
+
+  public async openExecutableDirectory(): Promise<void> {
+    if (this.settings?.install?.path) {
+      this.openInExplorer(path.dirname(path.join(this.settings.install.path, FILENAMES.sc4exe)))
+    }
+  }
+
+  protected openInExplorer(fullPath: string): void {
+    cmd(`explorer "${fullPath}"`)
+  }
+
+  public async openInstallationDirectory(): Promise<void> {
+    if (this.settings?.install?.path) {
+      this.openInExplorer(this.settings.install.path)
+    }
+  }
+
+  public async openPackageFileInExplorer(
+    packageId: string,
+    variantId: string,
+    filePath: string,
+  ): Promise<void> {
+    const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
+    this.openInExplorer(path.extname(fullPath) ? path.dirname(fullPath) : fullPath)
+  }
+
+  public async openProfileConfig(profileId: string): Promise<void> {
+    const profileInfo = this.getProfileInfo(profileId)
+    if (profileInfo?.format) {
+      this.openInExplorer(path.join(this.getProfilesPath(), profileId + profileInfo.format))
+    }
+  }
+
+  public async quit(): Promise<void> {
+    await removeIfPresent(this.getTempPath())
+  }
+
+  protected recalculatePackages(profileId: string): void {
+    const profile = this.getProfileInfo(profileId)
+    if (!this.packages || !profile) {
+      return
+    }
+
+    const { resultingStatus } = resolvePackages(this.packages, profile.packages, profile.externals)
+    for (const packageId in resultingStatus) {
+      this.packages[packageId].status[profileId] = resultingStatus[packageId]
+    }
+
+    this.sendPackages()
+    this.linkPackages()
+  }
+
+  public async reload(): Promise<void> {
+    this.assets = {}
+    this.packages = undefined
+    this.profiles = undefined
+    this.sessions = {}
+    this.settings = undefined
+    this.status = {
+      linker: null,
+      loader: null,
+      ongoingDownloads: [],
+      ongoingExtracts: [],
+    }
+
+    this.tasks.linker.invalidateCache("init")
+
+    // TODO: Send reload message to window so that it correctly clears its own data as well
+
+    await this.initialize()
+  }
+
+  public async removePackages(packages: { [packageId: string]: string }): Promise<boolean> {
+    // TODO: ATM we only check the current profile - removing package may break other profiles
+    const currentProfile = this.getCurrentProfile()
+    if (currentProfile) {
+      const enabledPackageIds: string[] = []
+      for (const packageId in packages) {
+        if (currentProfile.packages[packageId]?.enabled) {
+          const packageInfo = this.getPackageInfo(packageId)
+          const packageStatus = packageInfo?.status[currentProfile.id]
+          if (packageStatus?.variantId === packages[packageId]) {
+            enabledPackageIds.push(packageId)
+          }
+        }
+      }
+
+      if (enabledPackageIds.length) {
+        const result = await this.updatePackages(
+          currentProfile.id,
+          Object.fromEntries(enabledPackageIds.map(packageId => [packageId, { enabled: false }])),
+          {},
+        )
+
+        if (!result) {
+          return false
+        }
+      }
+    }
+
+    const promises = Object.entries(packages).map(async ([packageId, variantId]) => {
+      if (!this.assets || !this.packages || !this.profiles) {
+        return false
+      }
+
+      const packageInfo = this.packages[packageId]
+      if (!packageInfo) {
+        return false
+      }
+
+      const variantInfo = packageInfo.variants[variantId]
+      if (!variantInfo) {
+        return false
+      }
+
+      if (!variantInfo.installed) {
+        return true
+      }
+
+      try {
+        const allVariants = Object.values(packageInfo.variants)
+        const installedVariants = allVariants.filter(variant => variant?.installed)
+        const isOnlyInstalledVariant = installedVariants.length === 1
+
+        if (variantInfo.local) {
+          const [confirmed] = await this.showConfirmation(
+            isOnlyInstalledVariant ? "Remove local package" : "Remove local variant",
+            isOnlyInstalledVariant ? "Remove local package?" : "Remove local variant?",
+            isOnlyInstalledVariant
+              ? `By removing package ${packageInfo.name}, all local files will be lost forever.`
+              : `By removing variant ${packageInfo.name}#${variantInfo.name}, all local files will be lost forever.`,
+          )
+
+          if (!confirmed) {
+            return false
+          }
+        }
+
+        variantInfo.action = "removing"
+        this.sendPackage(packageId)
+
+        try {
+          delete variantInfo.files
+          delete variantInfo.installed
+
+          if (isOnlyInstalledVariant) {
+            await removeIfPresent(this.getPackagePath(packageId))
+          } else {
+            await removeIfPresent(this.getVariantPath(packageId, variantId))
+            await this.writePackageConfig(packageInfo)
+          }
+
+          // TODO: This assumes that package is disabled in other profiles
+          if (variantInfo.local) {
+            if (isOnlyInstalledVariant) {
+              delete this.packages[packageId]
+            } else {
+              delete packageInfo.variants[variantId]
+              for (const profileId in packageInfo.status) {
+                const packageStatus = packageInfo.status[profileId]
+                if (packageStatus?.variantId === variantId) {
+                  const defaultVariant = getDefaultVariant(packageInfo, this.profiles[profileId])
+                  packageStatus.variantId = defaultVariant.id
+                }
+              }
+            }
+          }
+        } finally {
+          delete variantInfo.action
+          this.sendPackage(packageId)
+        }
+
+        return true
+      } catch (error) {
+        console.error(error)
+        return false
+      }
+    })
+
+    const results = await Promise.all(promises)
+    return !results.includes(false)
+  }
+
+  protected setPackageVariantInConfig(
+    profileId: string,
+    packageId: string,
+    variantId: string,
+  ): void {
+    const profileInfo = this.getProfileInfo(profileId)
+    const packageInfo = this.getPackageInfo(packageId)
+    if (packageInfo && profileInfo) {
+      const packageConfig = profileInfo.packages[packageId]
+      const defaultVariant = getDefaultVariantStrict(packageInfo, profileInfo)
+      if (variantId !== defaultVariant?.id) {
+        if (packageConfig) {
+          packageConfig.variant = variantId
+        } else {
+          profileInfo.packages[packageId] = { variant: variantId }
+        }
+      } else if (packageConfig) {
+        delete packageConfig.variant
+        if (Object.keys(packageConfig).length === 0) {
+          delete profileInfo.packages[packageId]
+        }
+      }
+    }
+  }
+
+  protected sendPackage(packageId: string): void {
+    this.sendState({ packages: { [packageId]: this.getPackageInfo(packageId) ?? null } })
+  }
+
+  protected sendPackages(): void {
+    this.sendState({ packages: this.packages })
+  }
+
+  protected sendProfile(profileId: string): void {
+    this.sendState({ profiles: { [profileId]: this.getProfileInfo(profileId) ?? null } })
+  }
+
+  protected sendProfiles(): void {
+    this.sendState({ profiles: this.profiles })
+  }
+
+  protected sendSessions(): void {
+    const simtropolisUserId = this.sessions.simtropolis && this.sessions.simtropolis.userId
+    this.sendState({ sessions: { simtropolis: { userId: simtropolisUserId } } })
+  }
+
+  protected sendSettings(): void {
+    this.sendState({ settings: this.settings })
+  }
+
+  protected sendState(data: Partial<ApplicationState>): void {
+    this.mainWindow?.webContents.postMessage("updateState", data)
+  }
+
+  protected sendStatus(): void {
+    this.sendState({ status: this.status })
+  }
+
+  protected async showConfirmation(
+    title: string,
+    message: string,
+    detail?: string,
+    doNotAskAgain?: boolean,
+  ): Promise<[confirmed: boolean, doNotAskAgain: boolean]> {
+    const options: MessageBoxOptions = {
+      buttons: ["Yes", "No"],
+      cancelId: 1,
+      checkboxChecked: false,
+      checkboxLabel: doNotAskAgain ? "Do not ask again" : undefined,
+      defaultId: 0,
+      detail,
+      message,
+      title,
+      type: "question",
+    }
+
+    let result: MessageBoxReturnValue
+
+    if (this.mainWindow) {
+      result = await dialog.showMessageBox(this.mainWindow, options)
+    } else {
+      result = await dialog.showMessageBox(options)
+    }
+
+    return [result.response === 0, result.checkboxChecked]
+  }
+
+  protected async showError(title: string, message: string, detail?: string): Promise<void> {
+    const options: MessageBoxOptions = { detail, message, title, type: "error" }
+    if (this.mainWindow) {
+      await dialog.showMessageBox(this.mainWindow, options)
+    } else {
+      await dialog.showMessageBox(options)
+    }
+  }
+
+  protected async showSuccess(title: string, message: string, detail?: string): Promise<void> {
+    const options: MessageBoxOptions = { detail, message, title, type: "info" }
+    if (this.mainWindow) {
+      await dialog.showMessageBox(this.mainWindow, options)
+    } else {
+      await dialog.showMessageBox(options)
+    }
+  }
+
+  public async simtropolisLogin(): Promise<void> {
+    const session = await simtropolisLogin(this.browserSession)
+    if (session) {
+      console.info("Logged in to Simtropolis")
+      this.sessions.simtropolis = session
+      this.sendSessions()
+    } else {
+      this.sessions.simtropolis = null
+    }
+  }
+
+  public async simtropolisLogout(): Promise<void> {
+    await simtropolisLogout(this.browserSession)
+    console.info("Logged out from Simtropolis")
+    this.sessions.simtropolis = null
+    this.sendSessions()
+  }
+
+  public async switchProfile(profileId: string): Promise<boolean> {
+    const profile = this.getProfileInfo(profileId)
+    if (!this.settings || !this.packages || !profile) {
+      return false
+    }
+
+    this.settings.currentProfile = profileId
+
+    this.writeSettings()
+    this.recalculatePackages(profileId)
+
+    return true
+  }
+
+  protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
+    if (!this.databaseUpdatePromise || force) {
+      const repository = this.getDataRepository()
+      if (!isURL(repository)) {
+        return true
+      }
+
+      const databasePath = this.getDatabasePath()
+      await createIfMissing(databasePath)
+      this.databaseUpdatePromise = new Promise(resolve => {
+        const branch = env.DATA_BRANCH || "main"
+        console.info(`Updating database from ${repository}/${branch}...`)
+        createChildProcess<UpdateDatabaseProcessData, {}, UpdateDatabaseProcessResponse>(
+          updateDatabaseProcessPath,
+          {
+            cwd: databasePath,
+            data: {
+              branch,
+              origin: repository,
+            },
+            onClose() {
+              console.warn("Failed updating database:", "closed")
+              resolve(false)
+            },
+            onMessage({ success, error }) {
+              if (success) {
+                console.info("Updated database")
+                resolve(true)
+              } else {
+                console.warn("Failed updating database:", error)
+                resolve(false)
+              }
+            },
+          },
+        )
+      })
+    }
+
+    return this.databaseUpdatePromise
   }
 
   public async updatePackages(
@@ -1054,7 +1816,7 @@ In total, `
       // Install all packages
       await Promise.all(
         Object.entries(installingVariants).map(([packageId, variantId]) =>
-          this.installPackage(packageId, variantId),
+          this.installVariant(packageId, variantId),
         ),
       )
 
@@ -1077,647 +1839,14 @@ In total, `
     return true
   }
 
-  public async editProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
-    const profile = this.getProfileInfo(profileId)
-    if (!profile) {
-      return false
-    }
-
-    if (data.name) {
-      profile.name = data.name
-    }
-
-    if (data.externals) {
-      await this.updatePackages(profileId, {}, data.externals)
-    } else {
-      this.writeProfile(profileId)
-    }
-
-    return true
-  }
-
-  protected async installPackage(packageId: string, variantId: string): Promise<void> {
-    const packageInfo = this.getPackageInfo(packageId)
-    if (!packageInfo) {
-      throw Error(`Unknown package '${packageId}'`)
-    }
-
-    const variantInfo = packageInfo.variants[variantId]
-    if (!variantInfo) {
-      throw Error(`Unknown variant '${packageId}#${variantId}'`)
-    }
-
-    try {
-      const variantKey = `${packageId}#${variantId}`
-
-      variantInfo.action = variantInfo.installed ? "updating" : "installing"
-      this.sendPackage(packageId)
-
-      await this.tasks.install.queue(variantKey, async context => {
-        const variantPath = this.getVariantPath(packageId, variantId)
-        const assets = variantInfo.update?.assets ?? variantInfo.assets ?? []
-
-        const assetInfos = assets.map(asset => {
-          const assetInfo = this.getAssetInfo(asset)
-          if (assetInfo) {
-            return assetInfo
-          } else {
-            throw Error(`Unknown asset '${asset.id}'`)
-          }
-        })
-
-        // Download and extract all assets
-        await Promise.all(assetInfos.map(this.getAsset.bind(this)))
-
-        // Remove any previous installation files
-        await removeIfPresent(variantPath)
-        await createIfMissing(variantPath)
-
-        try {
-          const files = new Map<string, PackageFile>()
-
-          for (const asset of assets) {
-            const assetInfo = this.getAssetInfo(asset)!
-            const downloadKey = `${assetInfo.id}@${assetInfo.version}`
-            const downloadPath = this.getDownloadPath(downloadKey)
-
-            const toPattern = (path: string) =>
-              path.startsWith("/") ? path.slice(1) : `**/${path}`
-
-            // If no explicit include is given, include everything
-            const excludes = asset.exclude?.map(file => toPattern(file.path)) ?? []
-
-            // Blasklist file
-            excludes.push("**/desktop.ini")
-
-            // Find all included files
-            const sourcePath = asset.path ? path.join(downloadPath, asset.path) : downloadPath
-
-            const addFile = async (
-              oldPath: string,
-              newPath: string,
-              category?: CategoryID,
-              condition?: PackageCondition,
-            ) => {
-              const ext = path.extname(oldPath).toLowerCase()
-              if (SC4EXTENSIONS.includes(ext)) {
-                const targetPath = path.join(variantPath, newPath)
-                await createIfMissing(path.dirname(targetPath))
-                await fs.symlink(path.join(sourcePath, oldPath), targetPath)
-                if (files.has(newPath)) {
-                  context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
-                } else {
-                  files.set(newPath, {
-                    path: newPath,
-                    condition,
-                    category: category !== variantInfo.category ? category : undefined,
-                  })
-                }
-              } else if (DOCEXTENSIONS.includes(ext)) {
-                const targetPath = path.join(variantPath, newPath)
-                await createIfMissing(path.dirname(targetPath))
-                await fs.symlink(path.join(sourcePath, oldPath), targetPath)
-              } else {
-                context.warn(`Ignoring file ${oldPath} with unsupported extension ${ext}`)
-              }
-            }
-
-            const addDirectory = async (
-              oldPath: string,
-              newPath: string,
-              category?: CategoryID,
-              condition?: PackageCondition,
-            ) => {
-              const filePaths = await glob(path.join(oldPath, "**").replaceAll("\\", "/"), {
-                cwd: sourcePath,
-                dot: true,
-                ignore: excludes,
-                nodir: true,
-              })
-
-              for (const filePath of filePaths) {
-                await addFile(
-                  filePath,
-                  path.join(newPath, path.relative(oldPath, filePath)),
-                  category,
-                  condition,
-                )
-              }
-            }
-
-            if (asset.include) {
-              for (const include of asset.include) {
-                const pattern = toPattern(include.path)
-                const entries = await glob(pattern, {
-                  cwd: sourcePath,
-                  dot: true,
-                  ignore: excludes,
-                  withFileTypes: true,
-                })
-
-                if (entries.length === 0) {
-                  context.warn(`Include pattern ${include.path} did not match any file`)
-                }
-
-                for (const entry of entries) {
-                  const oldPath = entry.relative()
-                  const newPath = include.as
-                    ? path.relative(".", include.as).replace("*", entry.name)
-                    : oldPath
-
-                  if (entry.isDirectory()) {
-                    await addDirectory(oldPath, newPath, include.category, include.condition)
-                  } else {
-                    await addFile(oldPath, newPath, include.category, include.condition)
-                  }
-                }
-
-                // Included paths are excluded from being included again
-                excludes.push(pattern)
-              }
-            } else {
-              await addDirectory("", "")
-            }
-          }
-
-          const docsPaths = await glob("**/*.{htm,html,md,txt}", {
-            cwd: variantPath,
-            ignore: "*cleanitol*",
-            nodir: true,
-          })
-
-          variantInfo.readme ??=
-            docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
-            docsPaths.find(file => path.basename(file).match(/readme/i)) ??
-            docsPaths[0]
-
-          if (variantInfo.update) {
-            Object.assign(variantInfo, variantInfo.update)
-            delete variantInfo.update
-          }
-
-          variantInfo.files = Array.from(files.values())
-          variantInfo.installed = true
-
-          // Rewrite config
-          await this.writePackageConfig(packageInfo)
-        } catch (error) {
-          delete variantInfo.files
-          delete variantInfo.installed
-          throw error
-        }
-      })
-    } finally {
-      delete variantInfo.action
-      this.sendPackage(packageId)
-    }
-  }
-
-  protected async getAsset(assetInfo: AssetInfo): Promise<void> {
-    const key = `${assetInfo.id}@${assetInfo.version}`
-
-    return this.tasks.getAsset.queue(key, async () => {
-      const downloadPath = this.getDownloadPath(key)
-      const downloadTempPath = this.getTempDownloadPath(key)
-
-      const downloaded = await exists(downloadPath)
-      if (!downloaded) {
-        await this.tasks.download.queue(key, async context => {
-          await download(
-            context,
-            key,
-            assetInfo.url,
-            downloadPath,
-            downloadTempPath,
-            assetInfo.size,
-            assetInfo.sha256,
-            this.sessions,
-            (bytes, totalBytes) => {
-              const progress = Math.floor(100 * (bytes / totalBytes))
-              context.setProgress(progress)
-            },
-          )
-        })
-      }
-
-      await this.tasks.extract.queue(key, async context => {
-        await extract(context, downloadPath, (bytes, totalBytes) => {
-          const progress = Math.floor(100 * (bytes / totalBytes))
-          context.setProgress(progress)
-        })
-      })
-    })
-  }
-
-  public async installPackages(packages: { [packageId: string]: string }): Promise<boolean> {
-    await Promise.all(
-      Object.entries(packages).map(([packageId, variantId]) =>
-        this.installPackage(packageId, variantId),
-      ),
+  protected async writePackageConfig(packageInfo: PackageInfo): Promise<void> {
+    await writePackageConfig(
+      this.getPackagePath(packageInfo.id),
+      packageInfo,
+      this.getDefaultConfigFormat(),
     )
 
-    return true
-  }
-
-  public async removePackages(packages: { [packageId: string]: string }): Promise<boolean> {
-    const currentProfile = this.getCurrentProfile()
-    if (currentProfile) {
-      const enabledPackageIds: string[] = []
-      for (const packageId in packages) {
-        if (currentProfile.packages[packageId]?.enabled) {
-          const packageInfo = this.getPackageInfo(packageId)
-          const packageStatus = packageInfo?.status[currentProfile.id]
-          if (packageStatus?.variantId === packages[packageId]) {
-            enabledPackageIds.push(packageId)
-          }
-        }
-      }
-
-      // TODO: Do not show popup in other packages
-      if (enabledPackageIds.length) {
-        await this.updatePackages(
-          currentProfile.id,
-          Object.fromEntries(enabledPackageIds.map(packageId => [packageId, { enabled: false }])),
-          {},
-        )
-      }
-    }
-
-    const promises = Object.entries(packages).map(async ([packageId, variantId]) => {
-      if (!this.assets || !this.packages || !this.profiles) {
-        return false
-      }
-
-      const packageInfo = this.packages[packageId]
-      if (!packageInfo) {
-        return false
-      }
-
-      const variantInfo = packageInfo.variants[variantId]
-      if (!variantInfo) {
-        return false
-      }
-
-      if (!variantInfo.installed) {
-        return true
-      }
-
-      try {
-        const allVariants = Object.values(packageInfo.variants)
-        const installedVariants = allVariants.filter(variant => variant?.installed)
-        const isOnlyInstalledVariant = installedVariants.length === 1
-
-        if (variantInfo.local) {
-          const [confirmed] = await this.showConfirmation(
-            isOnlyInstalledVariant ? "Remove local package" : "Remove local variant",
-            isOnlyInstalledVariant ? "Remove local package?" : "Remove local variant?",
-            isOnlyInstalledVariant
-              ? `By removing package ${packageInfo.name}, all local files will be lost forever.`
-              : `By removing variant ${packageInfo.name}#${variantInfo.name}, all local files will be lost forever.`,
-          )
-
-          if (!confirmed) {
-            return false
-          }
-        }
-
-        variantInfo.action = "removing"
-        this.sendPackage(packageId)
-
-        try {
-          delete variantInfo.files
-          delete variantInfo.installed
-
-          if (isOnlyInstalledVariant) {
-            await removeIfPresent(this.getPackagePath(packageId))
-          } else {
-            await removeIfPresent(this.getVariantPath(packageId, variantId))
-            await this.writePackageConfig(packageInfo)
-          }
-
-          // TODO: This assumes that package is disabled in other profiles
-          if (variantInfo.local) {
-            if (isOnlyInstalledVariant) {
-              delete this.packages[packageId]
-            } else {
-              delete packageInfo.variants[variantId]
-              for (const profileId in packageInfo.status) {
-                const packageStatus = packageInfo.status[profileId]
-                if (packageStatus?.variantId === variantId) {
-                  const defaultVariant = getDefaultVariant(packageInfo, this.profiles[profileId])
-                  packageStatus.variantId = defaultVariant.id
-                }
-              }
-            }
-          }
-        } finally {
-          delete variantInfo.action
-          this.sendPackage(packageId)
-        }
-
-        return true
-      } catch (error) {
-        console.error(error)
-        return false
-      }
-    })
-
-    const results = await Promise.all(promises)
-    return !results.includes(false)
-  }
-
-  public async switchProfile(profileId: string): Promise<boolean> {
-    const profile = this.getProfileInfo(profileId)
-    if (!this.settings || !this.packages || !profile) {
-      return false
-    }
-
-    this.settings.currentProfile = profileId
-
-    this.writeSettings()
-    this.recalculatePackages(profileId)
-
-    return true
-  }
-
-  protected recalculatePackages(profileId: string): void {
-    const packages = this.packages
-    const profile = this.getProfileInfo(profileId)
-    if (!packages || !profile) {
-      return
-    }
-
-    const { resultingStatus } = resolvePackages(packages, profile.packages, profile.externals)
-    for (const packageId in resultingStatus) {
-      packages[packageId].status[profileId] = resultingStatus[packageId]
-    }
-
-    this.sendPackages()
-    this.linkPackages()
-  }
-
-  public async simtropolisLogin(): Promise<void> {
-    const session = await simtropolisLogin(this.browserSession)
-    if (session) {
-      console.info("Logged in to Simtropolis")
-      this.sessions.simtropolis = session
-      this.sendSessions()
-    } else {
-      this.sessions.simtropolis = null
-    }
-  }
-
-  public async simtropolisLogout(): Promise<void> {
-    await simtropolisLogout(this.browserSession)
-    console.info("Logged out from Simtropolis")
-    this.sessions.simtropolis = null
-    this.sendSessions()
-  }
-
-  protected async linkPackages(): Promise<void> {
-    if (!this.packages || !this.assets) {
-      return
-    }
-
-    const pluginsPath = this.getPluginsPath()
-
-    await this.tasks.linker.queue(
-      "init",
-      async context => {
-        context.debug("Initializing links...")
-
-        let nLinks = 0
-
-        const recursive = async (dirname: string) => {
-          const entries = await fs.readdir(dirname, { withFileTypes: true })
-          for (const entry of entries) {
-            const entryPath = path.join(dirname, entry.name)
-            if (entry.isDirectory()) {
-              await recursive(entryPath)
-            } else if (entry.isSymbolicLink()) {
-              this.links[entryPath] = await fs.readlink(entryPath)
-              nLinks++
-            }
-          }
-        }
-
-        await createIfMissing(pluginsPath)
-        await recursive(pluginsPath)
-
-        context.debug(`Done (found ${nLinks})`)
-      },
-      { cache: true },
-    )
-
-    const currentProfile = this.getCurrentProfile()
-    if (currentProfile) {
-      await this.tasks.linker.queue(
-        "link",
-        async context => {
-          context.debug("Linking packages...")
-
-          await createIfMissing(pluginsPath)
-
-          const oldLinks = new Set(Object.keys(this.links))
-
-          let nCreatedLinks = 0
-          let nRemovedLinks = 0
-
-          const makeLink = async (from: string, to: string) => {
-            await removeIfPresent(to)
-            await createIfMissing(path.dirname(to))
-            await fs.symlink(from, to)
-            this.links[to] = from
-          }
-
-          for (const packageId in this.packages) {
-            const packageInfo = this.packages[packageId]
-            const status = packageInfo.status[currentProfile.id]!
-            if (status.enabled) {
-              const variantId = status.variantId
-              const variantInfo = packageInfo.variants[variantId]
-              if (variantInfo) {
-                const variantPath = this.getVariantPath(packageId, variantId)
-                if (variantInfo.files?.length) {
-                  for (const file of variantInfo.files) {
-                    // TODO: Check file.condition
-                    const fullPath = path.join(variantPath, file.path!)
-                    const categoryPath = formatCategory(file.category ?? variantInfo.category)
-
-                    // DLL files must be in Plugins root
-                    const targetPath = file.path!.match(/\.(dll|ini)$/i)
-                      ? path.join(pluginsPath, path.basename(file.path!))
-                      : path.join(pluginsPath, categoryPath, packageId, file.path!)
-
-                    oldLinks.delete(targetPath)
-                    if (this.links[targetPath] !== fullPath) {
-                      await makeLink(fullPath, targetPath)
-                      nCreatedLinks++
-                    }
-                  }
-                } else {
-                  context.warn(`Package ${packageId} does not have files`)
-                }
-              }
-            }
-          }
-
-          for (const linkPath of oldLinks) {
-            nRemovedLinks++
-            await removeIfPresent(linkPath)
-            await removeIfEmpty(path.dirname(linkPath))
-            delete this.links[linkPath]
-
-            let parentPath = path.dirname(linkPath)
-            while (!pluginsPath.startsWith(parentPath) && (await removeIfEmpty(parentPath))) {
-              parentPath = path.dirname(parentPath)
-            }
-          }
-
-          context.debug(`Done (added ${nCreatedLinks}, removed ${nRemovedLinks})`)
-        },
-        { invalidate: true },
-      )
-    }
-  }
-
-  protected setPackageVariantInConfig(
-    profileId: string,
-    packageId: string,
-    variantId: string,
-  ): void {
-    const profileInfo = this.getProfileInfo(profileId)
-    const packageInfo = this.getPackageInfo(packageId)
-    if (packageInfo && profileInfo) {
-      const packageConfig = profileInfo.packages[packageId]
-      const defaultVariant = getDefaultVariantStrict(packageInfo, profileInfo)
-      if (variantId !== defaultVariant?.id) {
-        if (packageConfig) {
-          packageConfig.variant = variantId
-        } else {
-          profileInfo.packages[packageId] = { variant: variantId }
-        }
-      } else if (packageConfig) {
-        delete packageConfig.variant
-        if (Object.keys(packageConfig).length === 0) {
-          delete profileInfo.packages[packageId]
-        }
-      }
-    }
-  }
-
-  protected sendPackage(packageId: string): void {
-    this.sendState({ packages: { [packageId]: this.getPackageInfo(packageId) ?? null } })
-  }
-
-  protected sendPackages(): void {
-    this.sendState({ packages: this.packages })
-  }
-
-  protected sendProfile(profileId: string): void {
-    this.sendState({ profiles: { [profileId]: this.getProfileInfo(profileId) ?? null } })
-  }
-
-  protected sendProfiles(): void {
-    this.sendState({ profiles: this.profiles })
-  }
-
-  protected sendState(data: Partial<ApplicationState>): void {
-    this.mainWindow?.webContents.postMessage("updateState", data)
-  }
-
-  protected sendSessions(): void {
-    const simtropolisUserId = this.sessions.simtropolis && this.sessions.simtropolis.userId
-    this.sendState({ sessions: { simtropolis: { userId: simtropolisUserId } } })
-  }
-
-  protected sendSettings(): void {
-    this.sendState({ settings: this.settings })
-  }
-
-  protected sendStatus(): void {
-    this.sendState({ status: this.status })
-  }
-
-  protected onDownloadTaskUpdate(ongoingDownloads: TaskInfo[]): void {
-    this.status.ongoingDownloads = ongoingDownloads
-    this.sendStatus()
-  }
-
-  protected onExtractTaskUpdate(ongoingExtracts: TaskInfo[]): void {
-    this.status.ongoingExtracts = ongoingExtracts
-    this.sendStatus()
-  }
-
-  protected onLinkTaskUpdate(ongoingTasks: TaskInfo[]): void {
-    const key = ongoingTasks[0]?.key
-    if (key === "init") {
-      this.status.linker = "Initializing..."
-    } else if (key === "link") {
-      this.status.linker = "Linking packages..."
-    } else {
-      this.status.linker = null
-    }
-
-    this.sendStatus()
-  }
-
-  protected async loadProfiles(): Promise<{ [id: string]: ProfileInfo }> {
-    console.debug("Loading profiles")
-
-    let nProfiles = 0
-    this.profiles = {}
-
-    const profilesPath = this.getProfilesPath()
-    await createIfMissing(profilesPath)
-
-    const entries = await fs.readdir(profilesPath, { withFileTypes: true })
-    for (const entry of entries) {
-      const format = path.extname(entry.name) as ConfigFormat
-      if (entry.isFile() && Object.values(ConfigFormat).includes(format)) {
-        const profileId = path.basename(entry.name, format)
-        const profilePath = path.join(profilesPath, entry.name)
-        if (this.profiles[profileId]) {
-          console.warn(`Duplicate profile configuration '${entry.name}'`)
-          continue
-        }
-
-        try {
-          const data = await readConfig<ProfileData>(profilePath)
-          const profile = fromProfileData(profileId, data)
-          profile.format = format
-          this.profiles[profileId] = profile
-          nProfiles++
-        } catch (error) {
-          console.warn(`Invalid profile configuration '${entry.name}'`, error)
-        }
-      }
-    }
-
-    console.debug(`Loaded ${nProfiles} profiles`)
-
-    return this.profiles
-  }
-
-  protected async loadSettings(): Promise<Settings> {
-    console.debug("Loading settings...")
-
-    const config = await this.loadConfig<Settings>(this.rootPath, FILENAMES.settings)
-
-    this.settings = {
-      format: config?.format,
-      ...defaultSettings,
-      ...config?.data,
-    }
-
-    // Select first profile if currently-selected profile no longer exists
-    const profileIds = Object.keys(this.profiles ?? {})
-    const currentProfileId = this.settings.currentProfile
-    if (!currentProfileId || !profileIds.includes(currentProfileId)) {
-      this.settings.currentProfile = profileIds[0]
-    }
-
-    return this.settings
+    this.sendPackage(packageInfo.id)
   }
 
   protected async writeProfile(profileId: string): Promise<void> {
@@ -1776,94 +1905,5 @@ In total, `
       },
       { invalidate: true },
     )
-  }
-
-  protected async loadConfig<T>(
-    basePath: string,
-    filename: string,
-  ): Promise<{ data: T; format: ConfigFormat } | undefined> {
-    return loadConfig(basePath, filename)
-  }
-
-  protected async writePackageConfig(packageInfo: PackageInfo): Promise<void> {
-    await writePackageConfig(
-      this.getPackagePath(packageInfo.id),
-      packageInfo,
-      this.getDefaultConfigFormat(),
-    )
-
-    this.sendPackage(packageInfo.id)
-  }
-
-  protected createMainWindow(): MainWindow {
-    if (!this.mainWindow) {
-      // Show splash screen only in production build
-      if (import.meta.env.PROD) {
-        this.splashScreen = new SplashScreen()
-        this.splashScreen.on("close", () => {
-          this.splashScreen = undefined
-        })
-      }
-
-      this.mainWindow = new MainWindow()
-      this.mainWindow.on("close", () => {
-        this.mainWindow = undefined
-      })
-
-      this.mainWindow.on("show", () => {
-        this.splashScreen?.close()
-      })
-    }
-
-    return this.mainWindow
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  protected handle<Event extends keyof this & string, Args extends any[]>(
-    this: { [key in Event]: (...args: Args) => unknown },
-    event: Event,
-  ): void {
-    ipcMain.handle(event, (_, ...args: Args) => this[event](...args))
-  }
-
-  protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
-    if (!this.databaseUpdatePromise || force) {
-      const repository = this.getDataRepository()
-      if (!isURL(repository)) {
-        return true
-      }
-
-      const databasePath = this.getDatabasePath()
-      await createIfMissing(databasePath)
-      this.databaseUpdatePromise = new Promise(resolve => {
-        const branch = env.DATA_BRANCH || "main"
-        console.info(`Updating database from ${repository}/${branch}...`)
-        createChildProcess<UpdateDatabaseProcessData, {}, UpdateDatabaseProcessResponse>(
-          updateDatabaseProcessPath,
-          {
-            cwd: databasePath,
-            data: {
-              branch,
-              origin: repository,
-            },
-            onClose() {
-              console.warn("Failed updating database:", "closed")
-              resolve(false)
-            },
-            onMessage({ success, error }) {
-              if (success) {
-                console.info("Updated database")
-                resolve(true)
-              } else {
-                console.warn("Failed updating database:", error)
-                resolve(false)
-              }
-            },
-          },
-        )
-      })
-    }
-
-    return this.databaseUpdatePromise
   }
 }
