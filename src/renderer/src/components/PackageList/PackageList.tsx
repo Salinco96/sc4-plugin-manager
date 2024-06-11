@@ -4,11 +4,11 @@ import { SearchOff as NoResultIcon } from "@mui/icons-material"
 import { Typography } from "@mui/material"
 
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
+import { FlexBox } from "@renderer/components/FlexBox"
 import { getCurrentVariant, getPackageStatus } from "@renderer/pages/PackageView"
 import { useHistory } from "@renderer/utils/navigation"
 import { useCurrentProfile, useStore } from "@renderer/utils/store"
 
-import { FlexBox } from "./FlexBox"
 import { PackageListItem } from "./PackageListItem"
 import { VirtualList } from "./VirtualList"
 

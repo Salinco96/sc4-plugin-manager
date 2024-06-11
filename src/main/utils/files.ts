@@ -1,4 +1,9 @@
 import fs from "fs/promises"
+import path from "path"
+
+export function isChild(filePath: string, parentPath: string): boolean {
+  return path.resolve(parentPath, filePath).startsWith(parentPath + path.sep)
+}
 
 export async function exists(fullPath: string): Promise<boolean> {
   try {

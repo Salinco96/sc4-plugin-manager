@@ -29,8 +29,11 @@ export function ProfileNameInputField({
           return
         }
 
-        if (value && (await actions.editProfile(profileInfo.id, { name: value }))) {
-          return
+        if (value) {
+          const success = await actions.updateProfile(profileInfo.id, { name: value })
+          if (success) {
+            return
+          }
         }
 
         setName(profileInfo.name)

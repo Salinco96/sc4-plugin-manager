@@ -1,7 +1,6 @@
 import { Box, Divider } from "@mui/material"
 
-import { PackageList } from "@renderer/components/PackageList"
-import { PackageListFilters } from "@renderer/components/PackageListFilters"
+import { PackageList, PackageListFilters } from "@renderer/components/PackageList"
 
 function Packages(): JSX.Element {
   return (

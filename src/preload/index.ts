@@ -3,7 +3,6 @@ import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState } from "@common/state"
-import { PackageConfig } from "@common/types"
 
 // Custom APIs for renderer
 export const api = {
@@ -13,40 +12,29 @@ export const api = {
   async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
-  async editProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
-    return ipcRenderer.invoke("editProfile", profileId, data)
-  },
   async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
     return ipcRenderer.invoke("getPackageDocsAsHtml", packageId, variantId)
   },
   async installPackages(packages: { [packageId: string]: string }): Promise<boolean> {
     return ipcRenderer.invoke("installPackages", packages)
   },
-  async updatePackages(
-    profileId: string,
-    configUpdates: Partial<Record<string, PackageConfig>>,
-    externalUpdates: Partial<Record<string, boolean>> = {},
-  ): Promise<boolean> {
-    return ipcRenderer.invoke("updatePackages", profileId, configUpdates, externalUpdates)
+  async openExecutableDirectory(): Promise<boolean> {
+    return ipcRenderer.invoke("openExecutableDirectory")
+  },
+  async openInstallationDirectory(): Promise<boolean> {
+    return ipcRenderer.invoke("openInstallationDirectory")
+  },
+  async openPackageConfig(packageId: string): Promise<boolean> {
+    return ipcRenderer.invoke("openPackageConfig", packageId)
+  },
+  async openPackageFile(packageId: string, variantId: string, filePath: string): Promise<boolean> {
+    return ipcRenderer.invoke("openPackageFile", packageId, variantId, filePath)
+  },
+  async openProfileConfig(profileId: string): Promise<boolean> {
+    return ipcRenderer.invoke("openProfileConfig", profileId)
   },
   async removePackages(packages: { [packageId: string]: string }): Promise<boolean> {
     return ipcRenderer.invoke("removePackages", packages)
-  },
-  async openExecutableDirectory(): Promise<void> {
-    return ipcRenderer.invoke("openExecutableDirectory")
-  },
-  async openInstallationDirectory(): Promise<void> {
-    return ipcRenderer.invoke("openInstallationDirectory")
-  },
-  async openPackageFileInExplorer(
-    packageId: string,
-    variantId: string,
-    filePath: string,
-  ): Promise<void> {
-    return ipcRenderer.invoke("openPackageFileInExplorer", packageId, variantId, filePath)
-  },
-  async openProfileConfig(profileId: string): Promise<void> {
-    return ipcRenderer.invoke("openProfileConfig", profileId)
   },
   async simtropolisLogin(): Promise<void> {
     return ipcRenderer.invoke("simtropolisLogin")
@@ -78,6 +66,9 @@ export const api = {
   },
   async switchProfile(profileId: string): Promise<boolean> {
     return ipcRenderer.invoke("switchProfile", profileId)
+  },
+  async updateProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
+    return ipcRenderer.invoke("updateProfile", profileId, data)
   },
 }
 

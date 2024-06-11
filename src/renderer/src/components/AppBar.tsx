@@ -78,7 +78,7 @@ export function AppBar(): JSX.Element {
 
   const renameProfile = (profile: ProfileInfo, value: string): void => {
     if (value && value !== profile.name) {
-      actions.editProfile(profile.id, { name: value })
+      actions.updateProfile(profile.id, { name: value })
     }
 
     setRenaming(false)

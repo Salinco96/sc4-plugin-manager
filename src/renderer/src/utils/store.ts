@@ -32,14 +32,14 @@ export interface StoreActions {
   closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: string): Promise<boolean>
   disablePackage(packageId: string): Promise<boolean>
-  editProfile(profileId: string, data: ProfileUpdate): Promise<boolean>
   enablePackage(packageId: string): Promise<boolean>
   getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string>
   installPackage(packageId: string, variantId: string): Promise<boolean>
-  openExecutableDirectory(): Promise<void>
-  openInstallationDirectory(): Promise<void>
-  openPackageFileInExplorer(packageId: string, variantId: string, filePath: string): Promise<void>
-  openProfileConfig(profileId: string): Promise<void>
+  openExecutableDirectory(): Promise<boolean>
+  openInstallationDirectory(): Promise<boolean>
+  openPackageConfig(packageId: string): Promise<boolean>
+  openPackageFile(packageId: string, variantId: string, filePath: string): Promise<boolean>
+  openProfileConfig(profileId: string): Promise<boolean>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
   removePackage(packageId: string, variantId: string): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
@@ -50,6 +50,7 @@ export interface StoreActions {
   simtropolisLogout(): Promise<void>
   switchProfile(profileId: string): Promise<boolean>
   updatePackage(packageId: string): Promise<boolean>
+  updateProfile(profileId: string, data: ProfileUpdate): Promise<boolean>
   updateState(update: Partial<ApplicationState>): void
 }
 
@@ -94,8 +95,10 @@ export const useStore = create<Store>()((set, get): Store => {
         }
 
         try {
-          return await window.api.updatePackages(profileId, {
-            [packageId]: { enabled: true, variant: variantId },
+          return await window.api.updateProfile(profileId, {
+            packages: {
+              [packageId]: { enabled: true, variant: variantId },
+            },
           })
         } catch (error) {
           console.error(`Failed to add ${packageId}`, error)
@@ -124,17 +127,16 @@ export const useStore = create<Store>()((set, get): Store => {
         }
 
         try {
-          return await window.api.updatePackages(profileId, {
-            [packageId]: { enabled: false },
+          return await window.api.updateProfile(profileId, {
+            packages: {
+              [packageId]: { enabled: false },
+            },
           })
         } catch (error) {
           console.error(`Failed to disable ${packageId}`, error)
           this.showErrorToast(`Failed to disable ${packageId}`)
           return false
         }
-      },
-      async editProfile(profileId, data) {
-        return window.api.editProfile(profileId, data)
       },
       async enablePackage(packageId) {
         const profileId = get().settings?.currentProfile
@@ -144,8 +146,10 @@ export const useStore = create<Store>()((set, get): Store => {
         }
 
         try {
-          return await window.api.updatePackages(profileId, {
-            [packageId]: { enabled: true },
+          return await window.api.updateProfile(profileId, {
+            packages: {
+              [packageId]: { enabled: true },
+            },
           })
         } catch (error) {
           console.error(`Failed to enable ${packageId}`, error)
@@ -171,8 +175,11 @@ export const useStore = create<Store>()((set, get): Store => {
       async openExecutableDirectory() {
         return window.api.openExecutableDirectory()
       },
-      async openPackageFileInExplorer(packageId, variantId, filePath) {
-        return window.api.openPackageFileInExplorer(packageId, variantId, filePath)
+      async openPackageConfig(packageId) {
+        return window.api.openPackageConfig(packageId)
+      },
+      async openPackageFile(packageId, variantId, filePath) {
+        return window.api.openPackageFile(packageId, variantId, filePath)
       },
       async openProfileConfig(profileId) {
         return window.api.openProfileConfig(profileId)
@@ -203,8 +210,10 @@ export const useStore = create<Store>()((set, get): Store => {
         }
 
         try {
-          return await window.api.updatePackages(profileId, {
-            [packageId]: { variant: variantId },
+          return await window.api.updateProfile(profileId, {
+            packages: {
+              [packageId]: { variant: variantId },
+            },
           })
         } catch (error) {
           console.error(`Failed to select variant ${packageId}#${variantId}`, error)
@@ -256,6 +265,20 @@ export const useStore = create<Store>()((set, get): Store => {
         } catch (error) {
           console.error(`Failed to update ${packageId}`, error)
           this.showErrorToast(`Failed to update ${packageId}`)
+          return false
+        }
+      },
+      async updateProfile(profileId, data) {
+        const profileInfo = get().profiles?.[profileId]
+        if (!profileInfo) {
+          return false
+        }
+
+        try {
+          return await window.api.updateProfile(profileId, data)
+        } catch (error) {
+          console.error(`Failed to update profile ${profileInfo.name}`, error)
+          this.showErrorToast(`Failed to update profile ${profileInfo.name}`)
           return false
         }
       },

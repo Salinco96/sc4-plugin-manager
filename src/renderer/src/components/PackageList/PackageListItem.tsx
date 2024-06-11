@@ -2,15 +2,15 @@ import { memo, useCallback, useState } from "react"
 
 import { Card, CardActions, CardContent, Link } from "@mui/material"
 
+import { PackageActions } from "@renderer/components/PackageActions"
+import { PackageBanners } from "@renderer/components/PackageBanners"
+import { PackageTags } from "@renderer/components/PackageTags"
+import { Text } from "@renderer/components/Text"
 import { Page } from "@renderer/pages"
 import { getCurrentVariant } from "@renderer/pages/PackageView"
 import { useHistory } from "@renderer/utils/navigation"
 import { useCurrentProfile, usePackageInfo } from "@renderer/utils/store"
 
-import { PackageActions } from "./PackageActions"
-import { PackageBanners } from "./PackageBanners"
-import { PackageTags } from "./PackageTags"
-import { Text } from "./Text"
 import { VirtualListItemProps } from "./VirtualList"
 
 export const PackageListItem = memo(function PackageListItem({

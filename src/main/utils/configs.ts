@@ -10,8 +10,6 @@ import { ConfigFormat } from "@common/types"
 
 import { createIfMissing, readFile, readFileIfPresent, removeIfPresent, writeFile } from "./files"
 
-// TODO: Just fully get rid of JSON to reduce complexity (YAML seems performant enough)
-
 export function deserializeConfig<T>(data: string, format: ConfigFormat): T {
   return format === ConfigFormat.JSON ? JSON.parse(data) : yamlParse(data)
 }
@@ -31,18 +29,12 @@ export async function loadConfig<T>(
 }
 
 export async function readConfig<T>(fullPath: string): Promise<T> {
-  const raw = await readFile(fullPath)
-  return deserializeConfig<T>(raw, path.extname(fullPath) as ConfigFormat)
+  return deserializeConfig<T>(await readFile(fullPath), path.extname(fullPath) as ConfigFormat)
 }
 
 export async function readConfigs<T>(fullPath: string): Promise<T[]> {
-  const raw = await readFile(fullPath)
-  const docs = yamlParseMany(raw)
-  if ("empty" in docs) {
-    return []
-  }
-
-  return docs.map(doc => doc.toJS() as T)
+  const docs = yamlParseMany(await readFile(fullPath))
+  return "empty" in docs ? [] : docs.map(doc => doc.toJS() as T)
 }
 
 export function serializeConfig<T>(data: T, format: ConfigFormat): string {

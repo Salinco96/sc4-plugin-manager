@@ -1,12 +1,14 @@
+import { PackageConfig } from "./types"
 import { normalizeString } from "./utils/types"
 
-export interface ProfileExternals {
-  [groupId: string]: boolean
-}
-
 export interface ProfileUpdate {
+  externals?: {
+    [groupId: string]: boolean | undefined
+  }
   name?: string
-  externals?: ProfileExternals
+  packages?: {
+    [packageId: string]: PackageConfig | undefined
+  }
 }
 
 export function createUniqueProfileId(name: string, existingIds: string[]): string {

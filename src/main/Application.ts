@@ -7,14 +7,11 @@ import {
   app,
   dialog,
   ipcMain,
-  net,
-  protocol,
   session,
 } from "electron/main"
 import { existsSync, readFileSync, writeFileSync } from "fs"
 import fs, { FileHandle } from "fs/promises"
 import path from "path"
-import { pathToFileURL } from "url"
 
 import log, { LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
@@ -38,6 +35,7 @@ import {
   getDefaultVariantStrict,
 } from "@common/types"
 import { assert } from "@common/utils/types"
+import { handleDocsProtocol } from "@utils/protocols"
 import {
   SimtropolisSession,
   getSimtropolisSession,
@@ -138,64 +136,26 @@ export class Application {
     this.gamePath = this.loadGamePath()
     this.rootPath = path.join(this.gamePath, DIRNAMES.root)
 
-    Menu.setApplicationMenu(
-      Menu.buildFromTemplate([
-        {
-          role: "fileMenu",
-          submenu: [
-            {
-              accelerator: "CmdOrCtrl+R",
-              click: () => this.reload(),
-              label: "Reload",
-            },
-            {
-              accelerator: "CmdOrCtrl+Q",
-              role: "quit",
-            },
-          ],
-        },
-        {
-          role: "editMenu",
-        },
-      ]),
-    )
-
-    // Custom protocol to load package docs in sandboxed iframe
-    protocol.handle("docs", req => {
-      const { pathname } = new URL(req.url)
-      const fullPath = path.resolve(path.join(this.rootPath, decodeURI(pathname)))
-      const relativePath = path.relative(this.rootPath, fullPath)
-
-      // Only allow files under rootPath
-      if (path.isAbsolute(relativePath) || relativePath.includes("..")) {
-        return new Response("bad", { status: 400 })
-      }
-
-      // Only allow specific extensions (html, css, images)
-      if (!DOCEXTENSIONS.includes(path.extname(fullPath))) {
-        return new Response("bad", { status: 400 })
-      }
-
-      return net.fetch(pathToFileURL(fullPath).toString())
-    })
+    handleDocsProtocol(this.rootPath, DOCEXTENSIONS)
 
     // Register message handlers
     this.handle("check4GBPatch")
     this.handle("createProfile")
-    this.handle("editProfile")
     this.handle("getPackageDocsAsHtml")
     this.handle("getState")
     this.handle("installPackages")
     this.handle("openExecutableDirectory")
     this.handle("openInstallationDirectory")
-    this.handle("openPackageFileInExplorer")
+    this.handle("openPackageConfig")
+    this.handle("openPackageFile")
     this.handle("openProfileConfig")
     this.handle("removePackages")
     this.handle("simtropolisLogin")
     this.handle("simtropolisLogout")
     this.handle("switchProfile")
-    this.handle("updatePackages")
+    this.handle("updateProfile")
 
+    this.setApplicationMenu()
     this.initialize()
   }
 
@@ -404,25 +364,6 @@ export class Application {
     }
 
     return this.mainWindow
-  }
-
-  public async editProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
-    const profile = this.getProfileInfo(profileId)
-    if (!profile) {
-      return false
-    }
-
-    if (data.name) {
-      profile.name = data.name
-    }
-
-    if (data.externals) {
-      await this.updatePackages(profileId, {}, data.externals)
-    } else {
-      this.writeProfile(profileId)
-    }
-
-    return true
   }
 
   protected async getAsset(assetInfo: AssetInfo): Promise<void> {
@@ -769,7 +710,7 @@ export class Application {
       }
 
       if (Object.keys(updatingPackages).length) {
-        const result = await this.updatePackages(currentProfile.id, updatingPackages, {})
+        const result = await this.updateProfile(currentProfile.id, { packages: updatingPackages })
 
         if (!result) {
           return false
@@ -1200,36 +1141,62 @@ export class Application {
     this.sendStatus()
   }
 
-  public async openExecutableDirectory(): Promise<void> {
+  public async openExecutableDirectory(): Promise<boolean> {
     if (this.settings?.install?.path) {
       this.openInExplorer(path.dirname(path.join(this.settings.install.path, FILENAMES.sc4exe)))
+      return true
     }
+
+    return false
   }
 
   protected openInExplorer(fullPath: string): void {
     cmd(`explorer "${fullPath}"`)
   }
 
-  public async openInstallationDirectory(): Promise<void> {
+  public async openInstallationDirectory(): Promise<boolean> {
     if (this.settings?.install?.path) {
       this.openInExplorer(this.settings.install.path)
+      return true
     }
+
+    return false
   }
 
-  public async openPackageFileInExplorer(
+  public async openPackageConfig(packageId: string): Promise<boolean> {
+    const packageInfo = this.getPackageInfo(packageId)
+    const packagePath = this.getPackagePath(packageId)
+    if (packageInfo?.format) {
+      this.openInExplorer(path.join(packagePath, FILENAMES.packageConfig + packageInfo.format))
+      return true
+    }
+
+    return false
+  }
+
+  public async openPackageFile(
     packageId: string,
     variantId: string,
     filePath: string,
-  ): Promise<void> {
-    const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
-    this.openInExplorer(path.extname(fullPath) ? path.dirname(fullPath) : fullPath)
+  ): Promise<boolean> {
+    const packageInfo = this.getPackageInfo(packageId)
+    if (packageInfo) {
+      const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
+      this.openInExplorer(path.extname(fullPath) ? path.dirname(fullPath) : fullPath)
+      return true
+    }
+
+    return false
   }
 
-  public async openProfileConfig(profileId: string): Promise<void> {
+  public async openProfileConfig(profileId: string): Promise<boolean> {
     const profileInfo = this.getProfileInfo(profileId)
     if (profileInfo?.format) {
       this.openInExplorer(path.join(this.getProfilesPath(), profileId + profileInfo.format))
+      return true
     }
+
+    return false
   }
 
   public async quit(): Promise<void> {
@@ -1287,11 +1254,11 @@ export class Application {
       }
 
       if (enabledPackageIds.length) {
-        const result = await this.updatePackages(
-          currentProfile.id,
-          Object.fromEntries(enabledPackageIds.map(packageId => [packageId, { enabled: false }])),
-          {},
-        )
+        const result = await this.updateProfile(currentProfile.id, {
+          packages: Object.fromEntries(
+            enabledPackageIds.map(packageId => [packageId, { enabled: false }]),
+          ),
+        })
 
         if (!result) {
           return false
@@ -1440,6 +1407,30 @@ export class Application {
     this.sendState({ status: this.status })
   }
 
+  protected setApplicationMenu(): void {
+    Menu.setApplicationMenu(
+      Menu.buildFromTemplate([
+        {
+          role: "fileMenu",
+          submenu: [
+            {
+              accelerator: "CmdOrCtrl+R",
+              click: () => this.reload(),
+              label: "Reload",
+            },
+            {
+              accelerator: "CmdOrCtrl+Q",
+              role: "quit",
+            },
+          ],
+        },
+        {
+          role: "editMenu",
+        },
+      ]),
+    )
+  }
+
   protected async showConfirmation(
     title: string,
     message: string,
@@ -1560,282 +1551,288 @@ export class Application {
     return this.databaseUpdatePromise
   }
 
-  public async updatePackages(
-    profileId: string,
-    configUpdates: Partial<Record<string, PackageConfig>>,
-    externalUpdates: Partial<Record<string, boolean>>,
-  ): Promise<boolean> {
+  public async updateProfile(profileId: string, update: ProfileUpdate): Promise<boolean> {
     const packages = this.packages
     const profile = this.getProfileInfo(profileId)
     if (!packages || !profile) {
       return false
     }
 
-    const {
-      explicitVariantChanges,
-      implicitVariantChanges,
-      incompatibleExternals,
-      incompatiblePackages,
-      installingVariants,
-      resultingConfigs,
-      resultingExternals,
-      resultingStatus,
-    } = resolvePackageUpdates(packages, profile, configUpdates, externalUpdates)
+    // Changes to packages/externals require conflict computation and potential side-effects / confirmation
+    if (update.packages || update.externals) {
+      update.packages ??= {}
+      update.externals ??= {}
 
-    // Apply implicit variant changes automatically
-    if (Object.keys(implicitVariantChanges).length) {
-      for (const packageId in implicitVariantChanges) {
-        configUpdates[packageId] = { variant: implicitVariantChanges[packageId][1] }
+      const {
+        explicitVariantChanges,
+        implicitVariantChanges,
+        incompatibleExternals,
+        incompatiblePackages,
+        installingVariants,
+        resultingConfigs,
+        resultingExternals,
+        resultingStatus,
+      } = resolvePackageUpdates(packages, profile, update.packages, update.externals)
+
+      // Apply implicit variant changes automatically
+      if (Object.keys(implicitVariantChanges).length) {
+        for (const packageId in implicitVariantChanges) {
+          update.packages[packageId] = { variant: implicitVariantChanges[packageId][1] }
+        }
+
+        // Recalculate
+        return this.updateProfile(profileId, update)
       }
 
-      // Recalculate
-      return this.updatePackages(profileId, configUpdates, externalUpdates)
-    }
+      // Confirm incompatible externals
+      if (incompatibleExternals.length) {
+        const groupNames = incompatibleExternals.map(groupId => {
+          return `  - ${groupId}`
+        })
 
-    // Confirm incompatible externals
-    if (incompatibleExternals.length) {
-      const groupNames = incompatibleExternals.map(groupId => {
-        return `  - ${groupId}`
-      })
-
-      // TODO: Use our own modal rather than system one?
-      const options: MessageBoxOptions = {
-        buttons: ["Replace external packages", "Ignore conflicts", "Cancel"],
-        cancelId: 2,
-        defaultId: 0,
-        detail: `The following external packages are incompatible with this change:
+        // TODO: Use our own modal rather than system one?
+        const options: MessageBoxOptions = {
+          buttons: ["Replace external packages", "Ignore conflicts", "Cancel"],
+          cancelId: 2,
+          defaultId: 0,
+          detail: `The following external packages are incompatible with this change:
 ${groupNames.sort().join("\n")}
 
 If you wish to replace them, please remove all corresponding files from your Plugins folder before continuing. Otherwise, you can resolve each conflict manually later.`,
-        message: "Replace external packages?",
-        noLink: true,
-        title: "SC4 Plugin Manager",
-        type: "warning",
-      }
-
-      let result: MessageBoxReturnValue
-      if (this.mainWindow) {
-        result = await dialog.showMessageBox(this.mainWindow, options)
-      } else {
-        result = await dialog.showMessageBox(options)
-      }
-
-      // Cancel
-      if (result.response === 2) {
-        return false
-      }
-
-      // Ignore conflicted externals
-      if (result.response === 1) {
-        for (const groupId of incompatibleExternals) {
-          externalUpdates[groupId] = true
-        }
-      }
-
-      // Disable conflicted externals
-      if (result.response === 0) {
-        for (const groupId of incompatibleExternals) {
-          externalUpdates[groupId] = false
+          message: "Replace external packages?",
+          noLink: true,
+          title: "SC4 Plugin Manager",
+          type: "warning",
         }
 
-        // Recalculate
-        return this.updatePackages(profileId, configUpdates, externalUpdates)
-      }
-    }
-
-    // Confirm fully-incompatible packages
-    if (incompatiblePackages.length) {
-      const packageNames = incompatiblePackages.map(packageId => {
-        const info = this.getPackageInfo(packageId)!
-        return `  - ${info.name}`
-      })
-
-      // TODO: Use our own modal rather than system one?
-      const options: MessageBoxOptions = {
-        buttons: ["Disable incompatible packages", "Ignore conflicts", "Cancel"],
-        cancelId: 2,
-        defaultId: 0,
-        detail: `The following enabled packages are incompatible with this change:
-${packageNames.sort().join("\n")}
-
-You can either disable all incompatible packages now, or resolve each conflict manually later.`,
-        message: "Disable incompatible packages?",
-        noLink: true,
-        title: "SC4 Plugin Manager",
-        type: "warning",
-      }
-
-      let result: MessageBoxReturnValue
-      if (this.mainWindow) {
-        result = await dialog.showMessageBox(this.mainWindow, options)
-      } else {
-        result = await dialog.showMessageBox(options)
-      }
-
-      // Cancel
-      if (result.response === 2) {
-        return false
-      }
-
-      // Ignore conflicted packages
-      if (result.response === 1) {
-        for (const packageId of incompatiblePackages) {
-          configUpdates[packageId] = { enabled: true }
-        }
-      }
-
-      // Disable conflicted packages
-      if (result.response === 0) {
-        for (const packageId of incompatiblePackages) {
-          configUpdates[packageId] = { enabled: false }
+        let result: MessageBoxReturnValue
+        if (this.mainWindow) {
+          result = await dialog.showMessageBox(this.mainWindow, options)
+        } else {
+          result = await dialog.showMessageBox(options)
         }
 
-        // Recalculate
-        return this.updatePackages(profileId, configUpdates, externalUpdates)
-      }
-    }
-
-    // Confirm explicit variant changes
-    if (Object.keys(explicitVariantChanges).length) {
-      const packageNames = Object.entries(explicitVariantChanges).map(
-        ([packageId, [oldVariantId, newVariantId]]) => {
-          const packageInfo = packages[packageId]
-          const oldVariant = packageInfo.variants[oldVariantId]
-          const newVariant = packageInfo.variants[newVariantId]
-          if (oldVariant) {
-            return `  - ${packageInfo.name}: ${oldVariant.name} -> ${newVariant.name}`
-          } else {
-            return `  - ${packageInfo.name}`
-          }
-        },
-      )
-
-      // TODO: Use our own modal rather than system one?
-      const options: MessageBoxOptions = {
-        buttons: ["Install compatible variants", "Ignore conflicts", "Cancel"],
-        cancelId: 2,
-        defaultId: 0,
-        detail: `The following enabled variants are incompatible with this change, but compatible variants can be installed:
-${packageNames.sort().join("\n")}
-
-You can either automatically install and switch to compatible variants now, or resolve each conflict manually later.`,
-        message: "Install incompatible variants?",
-        noLink: true,
-        title: "SC4 Plugin Manager",
-        type: "warning",
-      }
-
-      let result: MessageBoxReturnValue
-      if (this.mainWindow) {
-        result = await dialog.showMessageBox(this.mainWindow, options)
-      } else {
-        result = await dialog.showMessageBox(options)
-      }
-
-      // Cancel
-      if (result.response === 2) {
-        return false
-      }
-
-      // Ignore conflicted variants
-      if (result.response === 1) {
-        for (const packageId in explicitVariantChanges) {
-          configUpdates[packageId] = { variant: explicitVariantChanges[packageId][0] }
-        }
-      }
-
-      // Switch to compatible variants
-      if (result.response === 0) {
-        for (const packageId in explicitVariantChanges) {
-          configUpdates[packageId] = { variant: explicitVariantChanges[packageId][1] }
+        // Cancel
+        if (result.response === 2) {
+          return false
         }
 
-        // Recalculate
-        return this.updatePackages(profileId, configUpdates, externalUpdates)
-      }
-    }
-
-    // If there are packages to install...
-    if (Object.keys(installingVariants).length) {
-      /** Assets that will be downloaded */
-      const missingAssets = new Map<string, PackageAsset>()
-
-      // Calculate list of missing assets
-      for (const packageId in installingVariants) {
-        const variantId = installingVariants[packageId]
-        const variantInfo = packages[packageId].variants[variantId]
-        if (variantInfo?.assets) {
-          for (const asset of variantInfo.assets) {
-            const assetInfo = this.getAssetInfo(asset)
-            if (assetInfo && !missingAssets.has(asset.id)) {
-              const key = `${assetInfo.id}@${assetInfo.version}`
-              const downloaded = await exists(this.getDownloadPath(key))
-              if (!downloaded) {
-                missingAssets.set(asset.id, asset)
-              }
-            }
+        // Ignore conflicted externals
+        if (result.response === 1) {
+          for (const groupId of incompatibleExternals) {
+            update.externals[groupId] = true
           }
         }
+
+        // Disable conflicted externals
+        if (result.response === 0) {
+          for (const groupId of incompatibleExternals) {
+            update.externals[groupId] = false
+          }
+
+          // Recalculate
+          return this.updateProfile(profileId, update)
+        }
       }
 
-      const installingDependencyIds = Object.keys(installingVariants).filter(
-        packageId => !resultingConfigs[packageId]?.enabled,
-      )
-
-      // Confirm installation of dependencies
-      if (missingAssets.size) {
-        const packages = installingDependencyIds.map(packageId => {
+      // Confirm fully-incompatible packages
+      if (incompatiblePackages.length) {
+        const packageNames = incompatiblePackages.map(packageId => {
           const info = this.getPackageInfo(packageId)!
           return `  - ${info.name}`
         })
 
-        const totalSize = Array.from(missingAssets.values()).reduce(
-          (total, asset) => (asset.size ? total + asset.size : NaN),
-          0,
-        )
-
         // TODO: Use our own modal rather than system one?
-        const [confirmed] = await this.showConfirmation(
-          "SC4 Plugin Manager",
-          "Install new package?",
-          `${
-            installingDependencyIds.length
-              ? `This action requires the installation of ${installingDependencyIds.length} additional package(s):
-${packages.sort().join("\n")}
+        const options: MessageBoxOptions = {
+          buttons: ["Disable incompatible packages", "Ignore conflicts", "Cancel"],
+          cancelId: 2,
+          defaultId: 0,
+          detail: `The following enabled packages are incompatible with this change:
+${packageNames.sort().join("\n")}
 
-In total, `
-              : ""
-          }${missingAssets.size} asset(s)${totalSize ? ` (${(totalSize / 1e6).toFixed(2)} Mo)` : ""} will be downloaded.`,
-        )
+You can either disable all incompatible packages now, or resolve each conflict manually later.`,
+          message: "Disable incompatible packages?",
+          noLink: true,
+          title: "SC4 Plugin Manager",
+          type: "warning",
+        }
 
-        if (!confirmed) {
+        let result: MessageBoxReturnValue
+        if (this.mainWindow) {
+          result = await dialog.showMessageBox(this.mainWindow, options)
+        } else {
+          result = await dialog.showMessageBox(options)
+        }
+
+        // Cancel
+        if (result.response === 2) {
           return false
+        }
+
+        // Ignore conflicted packages
+        if (result.response === 1) {
+          for (const packageId of incompatiblePackages) {
+            update.packages[packageId] = { enabled: true }
+          }
+        }
+
+        // Disable conflicted packages
+        if (result.response === 0) {
+          for (const packageId of incompatiblePackages) {
+            update.packages[packageId] = { enabled: false }
+          }
+
+          // Recalculate
+          return this.updateProfile(profileId, update)
         }
       }
 
-      // Install all packages
-      await Promise.all(
-        Object.entries(installingVariants).map(([packageId, variantId]) =>
-          this.installVariant(packageId, variantId),
-        ),
-      )
+      // Confirm explicit variant changes
+      if (Object.keys(explicitVariantChanges).length) {
+        const packageNames = Object.entries(explicitVariantChanges).map(
+          ([packageId, [oldVariantId, newVariantId]]) => {
+            const packageInfo = packages[packageId]
+            const oldVariant = packageInfo.variants[oldVariantId]
+            const newVariant = packageInfo.variants[newVariantId]
+            if (oldVariant) {
+              return `  - ${packageInfo.name}: ${oldVariant.name} -> ${newVariant.name}`
+            } else {
+              return `  - ${packageInfo.name}`
+            }
+          },
+        )
 
-      // Recalculate (conflicts may have changed during install)
-      return this.updatePackages(profileId, configUpdates, externalUpdates)
+        // TODO: Use our own modal rather than system one?
+        const options: MessageBoxOptions = {
+          buttons: ["Install compatible variants", "Ignore conflicts", "Cancel"],
+          cancelId: 2,
+          defaultId: 0,
+          detail: `The following enabled variants are incompatible with this change, but compatible variants can be installed:
+${packageNames.sort().join("\n")}
+
+You can either automatically install and switch to compatible variants now, or resolve each conflict manually later.`,
+          message: "Install incompatible variants?",
+          noLink: true,
+          title: "SC4 Plugin Manager",
+          type: "warning",
+        }
+
+        let result: MessageBoxReturnValue
+        if (this.mainWindow) {
+          result = await dialog.showMessageBox(this.mainWindow, options)
+        } else {
+          result = await dialog.showMessageBox(options)
+        }
+
+        // Cancel
+        if (result.response === 2) {
+          return false
+        }
+
+        // Ignore conflicted variants
+        if (result.response === 1) {
+          for (const packageId in explicitVariantChanges) {
+            update.packages[packageId] = { variant: explicitVariantChanges[packageId][0] }
+          }
+        }
+
+        // Switch to compatible variants
+        if (result.response === 0) {
+          for (const packageId in explicitVariantChanges) {
+            update.packages[packageId] = { variant: explicitVariantChanges[packageId][1] }
+          }
+
+          // Recalculate
+          return this.updateProfile(profileId, update)
+        }
+      }
+
+      // If there are packages to install...
+      if (Object.keys(installingVariants).length) {
+        /** Assets that will be downloaded */
+        const missingAssets = new Map<string, PackageAsset>()
+
+        // Calculate list of missing assets
+        for (const packageId in installingVariants) {
+          const variantId = installingVariants[packageId]
+          const variantInfo = packages[packageId].variants[variantId]
+          if (variantInfo?.assets) {
+            for (const asset of variantInfo.assets) {
+              const assetInfo = this.getAssetInfo(asset)
+              if (assetInfo && !missingAssets.has(asset.id)) {
+                const key = `${assetInfo.id}@${assetInfo.version}`
+                const downloaded = await exists(this.getDownloadPath(key))
+                if (!downloaded) {
+                  missingAssets.set(asset.id, asset)
+                }
+              }
+            }
+          }
+        }
+
+        const installingDependencyIds = Object.keys(installingVariants).filter(
+          packageId => !resultingConfigs[packageId]?.enabled,
+        )
+
+        // Confirm installation of dependencies
+        if (missingAssets.size) {
+          const packages = installingDependencyIds.map(packageId => {
+            const info = this.getPackageInfo(packageId)!
+            return `  - ${info.name}`
+          })
+
+          const totalSize = Array.from(missingAssets.values()).reduce(
+            (total, asset) => (asset.size ? total + asset.size : NaN),
+            0,
+          )
+
+          // TODO: Use our own modal rather than system one?
+          const [confirmed] = await this.showConfirmation(
+            "SC4 Plugin Manager",
+            "Install new package?",
+            `${
+              installingDependencyIds.length
+                ? `This action requires the installation of ${installingDependencyIds.length} additional package(s):
+${packages.sort().join("\n")}
+
+In total, `
+                : ""
+            }${missingAssets.size} asset(s)${totalSize ? ` (${(totalSize / 1e6).toFixed(2)} Mo)` : ""} will be downloaded.`,
+          )
+
+          if (!confirmed) {
+            return false
+          }
+        }
+
+        // Install all packages
+        await Promise.all(
+          Object.entries(installingVariants).map(([packageId, variantId]) =>
+            this.installVariant(packageId, variantId),
+          ),
+        )
+
+        // Recalculate (conflicts may have changed during install)
+        return this.updateProfile(profileId, update)
+      }
+
+      // Apply config changes
+      profile.externals = resultingExternals
+      profile.packages = resultingConfigs
+
+      // Apply status changes
+      for (const packageId in resultingStatus) {
+        packages[packageId].status[profileId] = resultingStatus[packageId]
+      }
+
+      this.sendPackages()
+      this.linkPackages()
     }
 
-    // Apply config changes
-    profile.externals = resultingExternals
-    profile.packages = resultingConfigs
-
-    // Apply status changes
-    for (const packageId in resultingStatus) {
-      packages[packageId].status[profileId] = resultingStatus[packageId]
-    }
+    // Other changes can be applied directly
+    profile.name = update.name || profile.name
 
     this.writeProfile(profileId)
-    this.sendPackages()
-    this.linkPackages()
     return true
   }
 

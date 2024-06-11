@@ -11,7 +11,7 @@ import { PackageInfo } from "@common/types"
 import { getCurrentVariant, getPackageStatus } from "@renderer/pages/PackageView"
 import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
 
-import { PackageListItemBanner } from "./PackageListItemBanner"
+import { PackageListItemBanner } from "./PackageList/PackageListItemBanner"
 
 export function PackageBanners({ packageInfo }: { packageInfo: PackageInfo }): JSX.Element {
   const actions = useStoreActions()

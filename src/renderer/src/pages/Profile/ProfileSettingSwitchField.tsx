@@ -36,7 +36,7 @@ export function ProfileSettingSwitchField({
           event.preventDefault()
           const value = (event.target as HTMLInputElement).checked
           if (value !== profileInfo.externals[name]) {
-            await actions.editProfile(profileInfo.id, { externals: { [name]: value } })
+            await actions.updateProfile(profileInfo.id, { externals: { [name]: value } })
           }
         }}
       />

@@ -9,13 +9,13 @@ import { getCategoryLabel } from "@common/categories"
 import { PackageInfo, PackageStatus, ProfileInfo, VariantInfo } from "@common/types"
 import { PackageActions } from "@renderer/components/PackageActions"
 import { PackageBanners } from "@renderer/components/PackageBanners"
-import { PackageListItem } from "@renderer/components/PackageListItem"
+import { PackageListItem } from "@renderer/components/PackageList/PackageListItem"
 import { PackageTags } from "@renderer/components/PackageTags"
 import { Text } from "@renderer/components/Text"
 import { useHistory } from "@renderer/utils/navigation"
-import { useCurrentProfile, usePackageInfo, useStore, useStoreActions } from "@renderer/utils/store"
+import { useCurrentProfile, usePackageInfo, useStoreActions } from "@renderer/utils/store"
 
-import { Loading } from "./Loading"
+import { Loading } from "../Loading"
 
 export function getPackageStatus(
   packageInfo: PackageInfo,
@@ -104,10 +104,10 @@ function PackageViewDependencies({ info }: { info: PackageInfo }): JSX.Element {
 }
 
 function PackageViewDocumentation({ info }: { info: PackageInfo }): JSX.Element {
+  const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
   const status = getPackageStatus(info, currentProfile)
 
-  const actions = useStoreActions()
   const [html, setHtml] = useState<string>()
 
   useEffect(() => {
@@ -122,6 +122,7 @@ function PackageViewDocumentation({ info }: { info: PackageInfo }): JSX.Element 
 }
 
 function PackageViewFiles({ info }: { info: PackageInfo }): JSX.Element {
+  const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
   const variantInfo = getCurrentVariant(info, currentProfile)
 
@@ -130,11 +131,7 @@ function PackageViewFiles({ info }: { info: PackageInfo }): JSX.Element {
       {variantInfo?.files?.map(file => (
         <ListItem
           key={file.path}
-          onClick={() => {
-            useStore
-              .getState()
-              .actions.openPackageFileInExplorer(info.id, variantInfo.id, file.path)
-          }}
+          onClick={() => actions.openPackageFile(info.id, variantInfo.id, file.path)}
         >
           {file.path}
         </ListItem>

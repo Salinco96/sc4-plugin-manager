@@ -1,18 +1,13 @@
-import { app, protocol } from "electron/main"
+import { app } from "electron/main"
+
+import { registerDocsProtocol } from "@utils/protocols"
 
 import { Application } from "./Application"
 
 if (!app.requestSingleInstanceLock()) {
   app.quit()
 } else {
-  protocol.registerSchemesAsPrivileged([
-    {
-      scheme: "docs",
-      privileges: {
-        bypassCSP: true,
-      },
-    },
-  ])
+  registerDocsProtocol()
 
   let instance: Application
 
