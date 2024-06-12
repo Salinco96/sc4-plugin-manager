@@ -1,6 +1,6 @@
 import { ReactNode, useEffect } from "react"
 
-import { useStore, useStoreActions } from "@renderer/utils/store"
+import { useStore, useStoreActions } from "@utils/store"
 
 export function DataProvider({ children }: { children: ReactNode }): JSX.Element {
   const isDownloading = useStore(store => !!store.status?.ongoingDownloads.length)

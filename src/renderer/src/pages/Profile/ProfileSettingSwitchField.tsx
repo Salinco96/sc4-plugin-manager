@@ -1,9 +1,9 @@
 import { Switch } from "@mui/material"
 
 import { ProfileInfo } from "@common/types"
-import { FlexBox } from "@renderer/components/FlexBox"
-import { Text } from "@renderer/components/Text"
-import { useStoreActions } from "@renderer/utils/store"
+import { FlexBox } from "@components/FlexBox"
+import { Text } from "@components/Text"
+import { useStoreActions } from "@utils/store"
 
 export function ProfileSettingSwitchField({
   disabled,

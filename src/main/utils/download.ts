@@ -3,14 +3,13 @@ import { net } from "electron/main"
 import { createWriteStream } from "fs"
 import { rename } from "fs/promises"
 import path from "path"
-import { Readable, Transform, TransformCallback, pipeline } from "stream"
+import { Readable, Transform, TransformCallback } from "stream"
 import { finished } from "stream/promises"
 import { ReadableStream } from "stream/web"
 
 import { parse as parseContentDisposition } from "content-disposition"
-import { glob } from "glob"
-import { Open } from "unzipper"
 
+import { extractArchive, extractMSI } from "./extract"
 import { createIfMissing, removeIfPresent } from "./files"
 import {
   SIMTROPOLIS_ORIGIN,
@@ -121,6 +120,11 @@ export async function download(
 
     await writeFromStream(context, stream, targetPath, expectedBytes, exceptedHash, onProgress)
 
+    if (filename.endsWith(".msi")) {
+      await extractMSI(context, targetPath, downloadTempPath)
+      await removeIfPresent(targetPath)
+    }
+
     if (filename.endsWith(".zip")) {
       await extractArchive(context, targetPath, downloadTempPath, onProgress)
       await removeIfPresent(targetPath)
@@ -133,69 +137,6 @@ export async function download(
   }
 
   context.debug("Done")
-}
-
-export async function extract(
-  context: TaskContext,
-  downloadPath: string,
-  onProgress: (bytes: number, totalBytes: number) => void,
-): Promise<void> {
-  // TODO: How to deal with .exe installers?
-  const archivePaths = await glob("*.{jar,zip}", {
-    cwd: downloadPath,
-    matchBase: true,
-    nodir: true,
-  })
-
-  if (archivePaths.length) {
-    for (const archivePath of archivePaths) {
-      context.debug(`Extracting from ${archivePath}`)
-      const extractPath = path.join(downloadPath, archivePath.replace(/\.(jar|zip)$/, ""))
-      await extractArchive(context, path.join(downloadPath, archivePath), extractPath, onProgress)
-
-      // Delete the archive after successful extraction
-      await removeIfPresent(path.join(downloadPath, archivePath))
-      // In case there are nested archives...
-      await extract(context, extractPath, onProgress)
-    }
-  }
-}
-
-async function extractArchive(
-  context: TaskContext,
-  archivePath: string,
-  extractPath: string,
-  onProgress: (bytes: number, totalBytes: number) => void,
-): Promise<void> {
-  const archive = await Open.file(archivePath)
-  const files = archive.files.filter(file => file.type === "File")
-
-  const totalUncompressedSize = files.reduce((total, file) => total + file.uncompressedSize, 0)
-
-  onProgress(0, totalUncompressedSize)
-
-  let bytes = 0
-  for (const file of files) {
-    context.debug(`Extracting ${file.path}`)
-    const targetPath = path.join(extractPath, file.path)
-    await createIfMissing(path.dirname(targetPath))
-    try {
-      await finished(
-        pipeline(file.stream(), createWriteStream(targetPath), error => {
-          if (error) {
-            context.error(`Failed to extract ${file.path}`, error)
-          }
-        }),
-      )
-
-      bytes += file.uncompressedSize
-      onProgress(bytes, totalUncompressedSize)
-    } catch (error) {
-      context.error(`Failed to extract ${file.path}`, error)
-      await removeIfPresent(targetPath)
-      throw error
-    }
-  }
 }
 
 async function writeFromStream(

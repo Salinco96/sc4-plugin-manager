@@ -1,9 +1,9 @@
 import { ArrowBack as BackIcon } from "@mui/icons-material"
 import { IconButton, Tooltip } from "@mui/material"
 
-import { FlexBox } from "@renderer/components/FlexBox"
-import { PackageHeader } from "@renderer/components/PackageHeader"
-import { useHistory } from "@renderer/utils/navigation"
+import { FlexBox } from "@components/FlexBox"
+import { PackageHeader } from "@components/PackageHeader"
+import { useHistory } from "@utils/navigation"
 
 import { PackageViewTabs } from "./PackageViewTabs/PackageViewTabs"
 

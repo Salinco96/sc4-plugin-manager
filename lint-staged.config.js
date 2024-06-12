@@ -1,6 +1,6 @@
 module.exports = {
   "**/*.{ts,tsx}": filenames => [
-    `eslint --fix ${filenames.map(filename => `"${filename}"`).join(" ")}`,
+    `eslint --fix --max-warnings 0 ${filenames.map(filename => `"${filename}"`).join(" ")}`,
     "yarn typecheck",
   ],
   "**/*.{js,jsx,json,md,yaml,yml}": filenames => [

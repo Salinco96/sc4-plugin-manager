@@ -3,10 +3,9 @@ import { useCallback } from "react"
 import { Chip, List, Tooltip } from "@mui/material"
 
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
-import { Page } from "@renderer/pages"
-import { useLocation } from "@renderer/utils/navigation"
-import { useCurrentVariant, usePackageInfo } from "@renderer/utils/packages"
-import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
+import { Page, useLocation } from "@utils/navigation"
+import { useCurrentVariant, usePackageInfo } from "@utils/packages"
+import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { TagType } from "./PackageList/utils"
 

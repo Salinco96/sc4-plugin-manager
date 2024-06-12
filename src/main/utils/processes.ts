@@ -1,3 +1,4 @@
+import { exec } from "child_process"
 import { MessageChannelMain, utilityProcess } from "electron/main"
 
 export interface ChildProcess<MessageIn> {
@@ -9,6 +10,22 @@ export interface ChildProcessOptions<Data, MessageOut> {
   data?: Data
   onClose?: () => void
   onMessage?: (data: MessageOut) => void
+}
+
+export async function cmd(command: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    exec(command, (error, stdout, stderr) => {
+      if (stderr) {
+        console.warn(stderr)
+      }
+
+      if (error) {
+        reject(error)
+      } else {
+        resolve(stdout)
+      }
+    })
+  })
 }
 
 export function createChildProcess<Data, MessageIn, MessageOut>(

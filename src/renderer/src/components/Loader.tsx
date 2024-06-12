@@ -7,10 +7,7 @@ const Container = styled(Box)`
   justify-content: center;
 `
 
-/**
- * Loading page.
- */
-export function Loading(): JSX.Element {
+export function Loader(): JSX.Element {
   return (
     <Container>
       <CircularProgress size={60} />

@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material"
 
 import { getCategoryLabel } from "@common/categories"
-import { PackageBanners } from "@renderer/components/PackageBanners"
-import { Text } from "@renderer/components/Text"
-import { useCurrentVariant } from "@renderer/utils/packages"
+import { PackageBanners } from "@components/PackageBanners"
+import { Text } from "@components/Text"
+import { useCurrentVariant } from "@utils/packages"
 
 export function PackageViewInfo({ packageId }: { packageId: string }): JSX.Element {
   const variantInfo = useCurrentVariant(packageId)

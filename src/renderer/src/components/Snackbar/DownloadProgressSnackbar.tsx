@@ -3,7 +3,7 @@ import { forwardRef, useEffect, useRef } from "react"
 import { Box, CardActions, LinearProgress, Typography } from "@mui/material"
 import { CustomContentProps } from "notistack"
 
-import { useStore, useStoreActions } from "@renderer/utils/store"
+import { useStore, useStoreActions } from "@utils/store"
 
 import { CustomSnackbar } from "./CustomSnackbar"
 

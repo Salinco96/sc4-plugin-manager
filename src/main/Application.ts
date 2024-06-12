@@ -1,4 +1,3 @@
-import { exec as cmd, exec } from "child_process"
 import {
   Menu,
   MessageBoxOptions,
@@ -31,10 +30,12 @@ import {
   ProfileData,
   ProfileInfo,
   Settings,
+  ToolInfo,
   getDefaultVariant,
   getDefaultVariantStrict,
 } from "@common/types"
 import { assert } from "@common/utils/types"
+import { extract } from "@utils/extract"
 import { handleDocsProtocol } from "@utils/protocols"
 import {
   SimtropolisSession,
@@ -67,10 +68,10 @@ import {
   SC4EXTENSIONS,
   SC4INSTALLPATHS,
 } from "./utils/constants"
-import { download, extract } from "./utils/download"
+import { download } from "./utils/download"
 import { env, isDev, isURL } from "./utils/env"
 import { createIfMissing, exists, removeIfEmpty, removeIfPresent } from "./utils/files"
-import { createChildProcess } from "./utils/processes"
+import { cmd, createChildProcess } from "./utils/processes"
 import { TaskManager } from "./utils/tasks"
 
 const defaultSettings: Settings = {
@@ -108,7 +109,9 @@ export class Application {
 
   public readonly tasks: {
     readonly download: TaskManager
-    readonly extract: TaskManager
+    readonly extract: TaskManager<{
+      runTool(tool: "7z" | "cicdec", ...args: string[]): Promise<string>
+    }>
     readonly getAsset: TaskManager
     readonly install: TaskManager
     readonly linker: TaskManager
@@ -149,6 +152,7 @@ export class Application {
     this.handle("openPackageConfig")
     this.handle("openPackageFile")
     this.handle("openProfileConfig")
+    this.handle("openVariantURL")
     this.handle("removePackages")
     this.handle("simtropolisLogin")
     this.handle("simtropolisLogout")
@@ -240,31 +244,22 @@ export class Application {
     if (this.settings?.install?.path) {
       const exePath = path.join(this.settings.install.path, FILENAMES.sc4exe)
 
-      return new Promise((resolve, reject) => {
-        exec(
-          `wmic datafile where "name='${exePath.replace(/[\\'"]/g, "\\$&")}'" get version`,
-          (error, stdout, stderr) => {
-            if (error) {
-              return reject(error)
-            }
+      const stdout = await cmd(
+        `wmic datafile where "name='${exePath.replace(/[\\'"]/g, "\\$&")}'" get version`,
+      )
 
-            const match = stdout.match(/(\d+)\.(\d+)\.(\d+)\.(\d+)/)
-            if (!match) {
-              return reject(Error(stderr))
-            }
+      const match = stdout.match(/(\d+)\.(\d+)\.(\d+)\.(\d+)/)
+      if (!match) {
+        throw Error("Failed to detect executable version")
+      }
 
-            const version = match[0]
-            if (this.settings?.install && this.settings.install.version !== version) {
-              console.info(`Detected version ${version}`)
-              this.settings.install.version = version
-              this.sendSettings()
-              this.writeSettings()
-            }
-
-            return resolve()
-          },
-        )
-      })
+      const version = match[0]
+      if (this.settings?.install && this.settings.install.version !== version) {
+        console.info(`Detected version ${version}`)
+        this.settings.install.version = version
+        this.sendSettings()
+        this.writeSettings()
+      }
     }
   }
 
@@ -366,39 +361,54 @@ export class Application {
     return this.mainWindow
   }
 
-  protected async getAsset(assetInfo: AssetInfo): Promise<void> {
-    const key = `${assetInfo.id}@${assetInfo.version}`
+  protected async downloadAsset(assetInfo: AssetInfo): Promise<void> {
+    const key = this.getDownloadKey(assetInfo)
+    const downloadPath = this.getDownloadPath(key)
+    const downloadTempPath = this.getTempDownloadPath(key)
+    const downloaded = await exists(downloadPath)
+    if (!downloaded) {
+      await this.tasks.download.queue(key, async context => {
+        await download(
+          context,
+          key,
+          assetInfo.url,
+          downloadPath,
+          downloadTempPath,
+          assetInfo.size,
+          assetInfo.sha256,
+          this.sessions,
+          (bytes, totalBytes) => {
+            const progress = Math.floor(100 * (bytes / totalBytes))
+            context.setProgress(progress)
+          },
+        )
+      })
+    }
+  }
 
-    return this.tasks.getAsset.queue(key, async () => {
-      const downloadPath = this.getDownloadPath(key)
-      const downloadTempPath = this.getTempDownloadPath(key)
-
-      const downloaded = await exists(downloadPath)
-      if (!downloaded) {
-        await this.tasks.download.queue(key, async context => {
-          await download(
-            context,
-            key,
-            assetInfo.url,
-            downloadPath,
-            downloadTempPath,
-            assetInfo.size,
-            assetInfo.sha256,
-            this.sessions,
-            (bytes, totalBytes) => {
-              const progress = Math.floor(100 * (bytes / totalBytes))
-              context.setProgress(progress)
-            },
-          )
-        })
-      }
-
-      await this.tasks.extract.queue(key, async context => {
+  protected async extractFiles(assetInfo: AssetInfo): Promise<void> {
+    const key = this.getDownloadKey(assetInfo)
+    const downloadPath = this.getDownloadPath(key)
+    await this.tasks.extract.queue(
+      key,
+      async context => {
         await extract(context, downloadPath, (bytes, totalBytes) => {
           const progress = Math.floor(100 * (bytes / totalBytes))
           context.setProgress(progress)
         })
-      })
+      },
+      {
+        extra: {
+          runTool: this.runTool.bind(this),
+        },
+      },
+    )
+  }
+
+  protected async getAsset(assetInfo: AssetInfo): Promise<void> {
+    return this.tasks.getAsset.queue(this.getDownloadKey(assetInfo), async () => {
+      await this.downloadAsset(assetInfo)
+      await this.extractFiles(assetInfo)
     })
   }
 
@@ -434,6 +444,10 @@ export class Application {
 
   public getDefaultConfigFormat(): ConfigFormat {
     return this.settings?.useYaml === false ? ConfigFormat.JSON : ConfigFormat.YAML
+  }
+
+  protected getDownloadKey(assetInfo: AssetInfo): string {
+    return `${assetInfo.id}@${assetInfo.version}`
   }
 
   public getDownloadPath(key: string): string {
@@ -543,6 +557,27 @@ export class Application {
 
   public getTempPath(): string {
     return path.join(this.rootPath, DIRNAMES.temp)
+  }
+
+  public getToolInfo(tool: "7z" | "cicdec"): ToolInfo {
+    return {
+      cicdec: {
+        exe: "cicdec.exe",
+        id: "github/Bioruebe/cicdec#cicdec.zip",
+        sha256: "551694690919e668625697be88fedac0b1cfefae321f2440ad48bc65920abe52",
+        size: 116324,
+        url: "https://github.com/Bioruebe/cicdec/releases/download/3.0.1/cicdec.zip",
+        version: "3.0.1",
+      },
+      "7z": {
+        exe: "7-Zip/7z.exe",
+        id: "github/ip7z/7zip#7z2406.msi",
+        sha256: "86d8bdc123a020c37904f781f723e9b6b9768c5dc8878c7d7bbcb3cf57bf8d41",
+        size: 1538560,
+        url: "https://github.com/ip7z/7zip/releases/download/24.06/7z2406.msi",
+        version: "24.06",
+      },
+    }[tool]
   }
 
   public getVariantPath(packageId: string, variantId: string): string {
@@ -1152,8 +1187,8 @@ export class Application {
     return false
   }
 
-  protected openInExplorer(fullPath: string): void {
-    cmd(`explorer "${fullPath}"`)
+  protected async openInExplorer(fullPath: string): Promise<void> {
+    await cmd(`explorer "${fullPath}"`)
   }
 
   public async openInstallationDirectory(): Promise<boolean> {
@@ -1181,14 +1216,8 @@ export class Application {
     variantId: string,
     filePath: string,
   ): Promise<boolean> {
-    const packageInfo = this.getPackageInfo(packageId)
-    if (packageInfo) {
-      const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
-      this.openInExplorer(path.extname(fullPath) ? path.dirname(fullPath) : fullPath)
-      return true
-    }
-
-    return false
+    this.openInExplorer(path.join(this.getVariantPath(packageId, variantId), filePath))
+    return true
   }
 
   public async openProfileConfig(profileId: string): Promise<boolean> {
@@ -1199,6 +1228,17 @@ export class Application {
     }
 
     return false
+  }
+
+  public async openVariantURL(packageId: string, variantId: string): Promise<boolean> {
+    const packageInfo = this.getPackageInfo(packageId)
+    const variantInfo = packageInfo?.variants[variantId]
+    if (variantInfo?.url) {
+      await this.openInExplorer(variantInfo.url)
+      return true
+    }
+
+    return true
   }
 
   public async quit(): Promise<void> {
@@ -1349,6 +1389,14 @@ export class Application {
 
     const results = await Promise.all(promises)
     return !results.includes(false)
+  }
+
+  public async runTool(tool: "7z" | "cicdec", ...args: string[]): Promise<string> {
+    const info = this.getToolInfo(tool)
+    const key = this.getDownloadKey(info)
+    const exe = path.join(this.getDownloadPath(key), info.exe)
+    await this.downloadAsset(info)
+    return cmd([exe, ...args].map(arg => `"${arg}"`).join(" "))
   }
 
   protected setPackageVariantInConfig(

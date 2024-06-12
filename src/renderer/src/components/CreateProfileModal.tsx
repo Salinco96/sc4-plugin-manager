@@ -23,7 +23,7 @@ import {
 
 import { createUniqueProfileId } from "@common/profiles"
 import { ProfileInfo } from "@common/types"
-import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
+import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 export interface CreateProfileModalProps {
   onClose(): void

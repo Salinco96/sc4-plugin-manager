@@ -18,6 +18,10 @@ export interface AssetInfo {
   version: string
 }
 
+export interface ToolInfo extends AssetInfo {
+  exe: string
+}
+
 export interface PackageAsset {
   cleanitol?: string
   exclude?: PackageFile[]

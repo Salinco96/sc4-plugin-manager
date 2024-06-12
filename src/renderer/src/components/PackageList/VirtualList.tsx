@@ -4,7 +4,7 @@ import { Box, SxProps } from "@mui/material"
 import AutoSizer from "react-virtualized-auto-sizer"
 import { VariableSizeList, ListChildComponentProps } from "react-window"
 
-import { createContext } from "@renderer/contexts/createContext"
+import { createContext } from "@utils/context"
 
 export interface VirtualListProps<T> {
   baseSize: number

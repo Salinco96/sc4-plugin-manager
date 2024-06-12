@@ -1,7 +1,7 @@
 import { List, ListItem } from "@mui/material"
 
-import { useCurrentVariant } from "@renderer/utils/packages"
-import { useStoreActions } from "@renderer/utils/store"
+import { useCurrentVariant } from "@utils/packages"
+import { useStoreActions } from "@utils/store"
 
 export function PackageViewFiles({ packageId }: { packageId: string }): JSX.Element {
   const actions = useStoreActions()

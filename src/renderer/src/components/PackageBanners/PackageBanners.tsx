@@ -1,4 +1,4 @@
-import { useCurrentVariant, usePackageStatus } from "@renderer/utils/packages"
+import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 
 import { PackageBannerConflict } from "./PackageBannerConflict"
 import { PackageBannerDeprecated } from "./PackageBannerDeprecated"

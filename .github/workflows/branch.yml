@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile --immutable
       - name: Run ESLint
-        run: yarn lint:ci
+        run: yarn lint
       - name: Run TypeScript
         run: yarn typecheck
       - name: Build application

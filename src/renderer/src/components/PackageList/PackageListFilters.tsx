@@ -18,8 +18,8 @@ import {
 } from "@mui/material"
 
 import { PackageCategory, PackageState } from "@common/types"
-import { getCurrentVariant } from "@renderer/utils/packages"
-import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
+import { getCurrentVariant } from "@utils/packages"
+import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { TagType, createTags, getTagLabel } from "./utils"
 

@@ -7,7 +7,10 @@
     "lib": ["esnext", "dom", "dom.iterable"],
     "paths": {
       "@common/*": ["src/common/*"],
-      "@renderer/*": ["src/renderer/src/*"]
+      "@components/*": ["src/renderer/src/components/*"],
+      "@pages/*": ["src/renderer/src/pages/*"],
+      "@providers/*": ["src/renderer/src/providers/*"],
+      "@utils/*": ["src/renderer/src/utils/*"]
     }
   }
 }

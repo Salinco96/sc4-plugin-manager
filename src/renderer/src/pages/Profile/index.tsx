@@ -1,8 +1,8 @@
 import { Settings as ConfigIcon } from "@mui/icons-material"
 import { FormControl, FormGroup, IconButton, TextField, Tooltip } from "@mui/material"
 
-import { FlexBox } from "@renderer/components/FlexBox"
-import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
+import { FlexBox } from "@components/FlexBox"
+import { useCurrentProfile, useStoreActions } from "@utils/store"
 
 import { ProfileNameInputField } from "./ProfileNameInputField"
 import { ProfileSettingSwitchField } from "./ProfileSettingSwitchField"

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 
-import { Loading } from "@renderer/pages/Loading"
-import { useCurrentVariant } from "@renderer/utils/packages"
-import { useStoreActions } from "@renderer/utils/store"
+import { Loader } from "@components/Loader"
+import { useCurrentVariant } from "@utils/packages"
+import { useStoreActions } from "@utils/store"
 
 export function PackageViewDocumentation({ packageId }: { packageId: string }): JSX.Element {
   const actions = useStoreActions()
@@ -15,7 +15,7 @@ export function PackageViewDocumentation({ packageId }: { packageId: string }): 
   }, [actions, packageId, variantId])
 
   if (!html) {
-    return <Loading />
+    return <Loader />
   }
 
   return <div dangerouslySetInnerHTML={{ __html: html }} style={{ height: "100%" }} />

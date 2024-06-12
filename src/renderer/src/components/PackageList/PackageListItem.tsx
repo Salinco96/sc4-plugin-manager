@@ -2,14 +2,15 @@ import { memo, useCallback, useState } from "react"
 
 import { Card, CardActions, CardContent, Link } from "@mui/material"
 
-import { PackageActions } from "@renderer/components/PackageActions"
-import { PackageBanners } from "@renderer/components/PackageBanners"
-import { PackageTags } from "@renderer/components/PackageTags"
-import { Text } from "@renderer/components/Text"
-import { Page } from "@renderer/pages"
-import { useHistory } from "@renderer/utils/navigation"
-import { getCurrentVariant, usePackageInfo } from "@renderer/utils/packages"
-import { useCurrentProfile } from "@renderer/utils/store"
+import { FlexBox } from "@components/FlexBox"
+import { PackageActions } from "@components/PackageActions"
+import { PackageBanners } from "@components/PackageBanners"
+import { PackageTags } from "@components/PackageTags"
+import { PackageTools } from "@components/PackageTools"
+import { Text } from "@components/Text"
+import { Page, useHistory } from "@utils/navigation"
+import { getCurrentVariant, usePackageInfo } from "@utils/packages"
+import { useCurrentProfile } from "@utils/store"
 
 import { VirtualListItemProps } from "./VirtualList"
 
@@ -57,10 +58,21 @@ export const PackageListItem = memo(function PackageListItem({
           <Text maxLines={1} variant="h6">
             {packageInfo.name} (v{variantInfo.version})
           </Text>
-          <Text maxLines={1} variant="body2">
-            {packageId}#{variantInfo.id}
-          </Text>
         </Link>
+        <FlexBox alignItems="center">
+          <Link
+            color="inherit"
+            onClick={() => openPackageView()}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            sx={{ cursor: "pointer", textDecoration: active ? "underline" : "unset" }}
+          >
+            <Text maxLines={1} variant="body2">
+              {packageId}#{variantInfo.id}
+            </Text>
+          </Link>
+          <PackageTools packageId={packageId} />
+        </FlexBox>
         <PackageTags packageId={packageId} />
         {variantInfo.description && (
           <Text

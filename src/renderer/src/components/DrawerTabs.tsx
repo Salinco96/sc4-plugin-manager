@@ -12,10 +12,9 @@ import {
   Tooltip,
 } from "@mui/material"
 
-import { Page } from "@renderer/pages"
-import { TabInfo, tabs } from "@renderer/tabs"
-import { useHistory, useLocation } from "@renderer/utils/navigation"
-import { useStore, useStoreActions } from "@renderer/utils/store"
+import { Page, useHistory, useLocation } from "@utils/navigation"
+import { useStore, useStoreActions } from "@utils/store"
+import { TabInfo, tabs } from "@utils/tabs"
 
 import { TagType, parseTag } from "./PackageList/utils"
 

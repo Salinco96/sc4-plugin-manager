@@ -3,8 +3,8 @@ import { useMemo, useRef, useState } from "react"
 import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
 import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
 
-import { usePackageInfo, usePackageStatus } from "@renderer/utils/packages"
-import { useCurrentProfile, useStoreActions } from "@renderer/utils/store"
+import { usePackageInfo, usePackageStatus } from "@utils/packages"
+import { useCurrentProfile, useStoreActions } from "@utils/store"
 
 interface PackageAction {
   color?: "error" | "success" | "warning"

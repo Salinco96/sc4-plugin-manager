@@ -1,6 +1,18 @@
 import { create } from "zustand"
 
-import { Page, PageData } from "@renderer/pages"
+export enum Page {
+  Packages = "Packages",
+  PackageView = "PackageView",
+  Profile = "Profile",
+  Settings = "Settings",
+}
+
+export type PageData<T extends Page> = {
+  Packages: {}
+  PackageView: { packageId: string }
+  Profile: {}
+  Settings: {}
+}[T]
 
 export type Location<T extends Page = Page> = {
   [K in T]: {

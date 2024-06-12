@@ -1,12 +1,14 @@
 export const DIRNAMES = {
   database: "Database",
+  docs: "~docs",
   downloads: "Downloads",
   logs: "Logs",
   packages: "Packages",
   plugins: "Plugins",
   profiles: "Profiles",
-  temp: "~temp",
   root: "Manager",
+  temp: "~temp",
+  tools: "Tools",
 }
 
 export const FILENAMES = {
@@ -18,6 +20,7 @@ export const FILENAMES = {
 
 /** Whitelisted documentation file extensions */
 export const DOCEXTENSIONS = [
+  ".bmp",
   ".css",
   ".gif",
   ".htm",

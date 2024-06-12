@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "@mui/material"
 
-import { useStore } from "@renderer/utils/store"
+import { useStore } from "@utils/store"
 
 export function Modal(): JSX.Element {
   const modal = useStore(store => store.modal)

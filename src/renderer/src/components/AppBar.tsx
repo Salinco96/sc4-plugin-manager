@@ -17,7 +17,7 @@ import {
 } from "@mui/material"
 
 import { ProfileInfo } from "@common/types"
-import { useCurrentProfile, useStore, useStoreActions } from "@renderer/utils/store"
+import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { CreateProfileModal } from "./CreateProfileModal"
 

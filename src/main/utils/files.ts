@@ -1,8 +1,16 @@
 import fs from "fs/promises"
 import path from "path"
 
-export function isChild(filePath: string, parentPath: string): boolean {
-  return path.resolve(parentPath, filePath).startsWith(parentPath + path.sep)
+export async function createIfMissing(fullPath: string): Promise<void> {
+  try {
+    await fs.mkdir(fullPath, { recursive: true })
+  } catch (error) {
+    if (error instanceof Error && error.message.match(/already exists/i)) {
+      return undefined
+    } else {
+      throw error
+    }
+  }
 }
 
 export async function exists(fullPath: string): Promise<boolean> {
@@ -16,6 +24,14 @@ export async function exists(fullPath: string): Promise<boolean> {
       throw error
     }
   }
+}
+
+export function getExtension(filePath: string): string {
+  return path.extname(filePath).toLowerCase()
+}
+
+export function isChild(filePath: string, parentPath: string): boolean {
+  return path.resolve(parentPath, filePath).startsWith(parentPath + path.sep)
 }
 
 export async function readFile(fullPath: string): Promise<string> {
@@ -34,20 +50,9 @@ export async function readFileIfPresent(fullPath: string): Promise<string | unde
   }
 }
 
-export async function writeFile(fullPath: string, data: string): Promise<void> {
-  await fs.writeFile(fullPath, data, "utf8")
-}
-
-export async function createIfMissing(fullPath: string): Promise<void> {
-  try {
-    await fs.mkdir(fullPath, { recursive: true })
-  } catch (error) {
-    if (error instanceof Error && error.message.match(/already exists/i)) {
-      return undefined
-    } else {
-      throw error
-    }
-  }
+export function removeExtension(filePath: string): string {
+  const extension = getExtension(filePath)
+  return extension ? filePath.slice(0, -extension.length) : filePath
 }
 
 export async function removeIfEmpty(fullPath: string): Promise<boolean> {
@@ -76,4 +81,8 @@ export async function removeIfPresent(fullPath: string): Promise<boolean> {
       throw error
     }
   }
+}
+
+export async function writeFile(fullPath: string, data: string): Promise<void> {
+  await fs.writeFile(fullPath, data, "utf8")
 }

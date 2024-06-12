@@ -17,11 +17,10 @@ import {
 } from "@mui/icons-material"
 
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
-import { TagType } from "@renderer/components/PackageList/utils"
-import { Page } from "@renderer/pages"
-import { Location } from "@renderer/utils/navigation"
-import { getCurrentVariant } from "@renderer/utils/packages"
-import { PackageFilters, Store, getCurrentProfile } from "@renderer/utils/store"
+import { TagType } from "@components/PackageList/utils"
+import { Page, Location } from "@utils/navigation"
+import { getCurrentVariant } from "@utils/packages"
+import { PackageFilters, Store, getCurrentProfile } from "@utils/store"
 
 export interface TabInfo {
   badgeColor?: "error"

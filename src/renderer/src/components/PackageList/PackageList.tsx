@@ -1,11 +1,10 @@
 import { useMemo, useRef } from "react"
 
 import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
-import { PACKAGE_BANNER_HEIGHT, PACKAGE_BANNER_SPACING } from "@renderer/components/PackageBanners"
-import { Page } from "@renderer/pages"
-import { useHistory } from "@renderer/utils/navigation"
-import { getCurrentVariant, getPackageStatus } from "@renderer/utils/packages"
-import { useCurrentProfile, useStore } from "@renderer/utils/store"
+import { PACKAGE_BANNER_HEIGHT, PACKAGE_BANNER_SPACING } from "@components/PackageBanners"
+import { Page, useHistory } from "@utils/navigation"
+import { getCurrentVariant, getPackageStatus } from "@utils/packages"
+import { useCurrentProfile, useStore } from "@utils/store"
 
 import { EmptyPackageList } from "./EmptyPackageList"
 import { PackageListItem } from "./PackageListItem"

@@ -24,7 +24,6 @@ export function handleDocsProtocol(rootPath: string, extensions: string[]): void
   protocol.handle(Protocol.DOCS, req => {
     const relativePath = decodeURI(new URL(req.url).pathname)
     const fullPath = path.resolve(path.join(rootPath, relativePath))
-    console.log(rootPath, relativePath, fullPath, pathToFileURL(fullPath).toString())
 
     if (!isChild(fullPath, rootPath)) {
       return new Response(`'${fullPath}' is not a child of '${rootPath}'`, {

@@ -1,7 +1,7 @@
 import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, Tab } from "@mui/material"
 
-import { useCurrentVariant, usePackageStatus } from "@renderer/utils/packages"
+import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 
 import { packageViewTabs, usePackageViewTab } from "./tabs"
 

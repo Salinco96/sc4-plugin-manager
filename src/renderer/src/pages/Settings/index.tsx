@@ -7,9 +7,9 @@ import {
   Typography,
 } from "@mui/material"
 
-import { FlexBox } from "@renderer/components/FlexBox"
-import { Text } from "@renderer/components/Text"
-import { useStore, useStoreActions } from "@renderer/utils/store"
+import { FlexBox } from "@components/FlexBox"
+import { Text } from "@components/Text"
+import { useStore, useStoreActions } from "@utils/store"
 
 function Settings(): JSX.Element {
   const settings = useStore(store => store.settings)

@@ -1,7 +1,7 @@
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 
-import { usePackageInfo, useVariantInfo } from "@renderer/utils/packages"
-import { useStoreActions } from "@renderer/utils/store"
+import { usePackageInfo, useVariantInfo } from "@utils/packages"
+import { useStoreActions } from "@utils/store"
 
 import { PackageBanner } from "./PackageBanner"
 

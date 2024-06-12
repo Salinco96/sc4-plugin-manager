@@ -28,7 +28,10 @@ export default defineConfig({
     resolve: {
       alias: {
         "@common": resolve("src/common"),
-        "@renderer": resolve("src/renderer/src"),
+        "@components": resolve("src/renderer/src/components"),
+        "@pages": resolve("src/renderer/src/pages"),
+        "@providers": resolve("src/renderer/src/providers"),
+        "@utils": resolve("src/renderer/src/utils"),
       },
     },
     plugins: [react()],

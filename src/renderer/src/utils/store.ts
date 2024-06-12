@@ -6,7 +6,8 @@ import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
 import { PackageInfo, PackageState, ProfileInfo, Settings } from "@common/types"
-import { SnackbarProps, SnackbarType } from "@renderer/providers/SnackbarProvider"
+
+import { SnackbarProps, SnackbarType } from "./snackbar"
 
 export interface PackageFilters {
   dependencies: boolean
@@ -34,6 +35,7 @@ export interface StoreActions {
   openPackageFile(packageId: string, variantId: string, filePath: string): Promise<boolean>
   openProfileConfig(profileId: string): Promise<boolean>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
+  openVariantURL(packageId: string, variantId: string): Promise<boolean>
   removePackage(packageId: string, variantId: string): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
@@ -179,6 +181,9 @@ export const useStore = create<Store>()((set, get): Store => {
           const id = enqueueSnackbar({ persist: true, variant: type, ...props })
           updateState({ snackbars: { [type]: { $set: id } } })
         }
+      },
+      async openVariantURL(packageId, variantId) {
+        return window.api.openVariantURL(packageId, variantId)
       },
       async removePackage(packageId, variantId) {
         try {
