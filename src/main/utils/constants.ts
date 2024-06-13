@@ -1,5 +1,9 @@
 export const DIRNAMES = {
-  database: "Database",
+  cleanitol: "~cleanitol",
+  db: "Database",
+  dbAssets: "assets",
+  dbMemo: "src/yaml",
+  dbPackages: "packages",
   docs: "~docs",
   downloads: "Downloads",
   logs: "Logs",
@@ -18,30 +22,37 @@ export const FILENAMES = {
   settings: "settings",
 }
 
-/** Whitelisted documentation file extensions */
+/** Whitelisted cleanitol file extensions (all lowercase) */
+export const CLEANITOLEXTENSIONS = [".txt"]
+
+/** Whitelisted documentation file extensions (all lowercase) */
 export const DOCEXTENSIONS = [
   ".bmp",
   ".css",
+  ".doc",
+  ".docx",
   ".gif",
   ".htm",
   ".html",
   ".jpeg",
   ".jpg",
   ".md",
+  ".pdf",
   ".png",
   ".svg",
   ".txt",
+  ".xcf",
 ]
 
-/** Whitelisted plugin file extensions */
+/** Whitelisted plugin file extensions (all lowercase) */
 export const SC4EXTENSIONS = [
   ".dat",
   ".dll",
   ".ini",
-  ".SC4Desc",
-  ".SC4Lot",
-  ".SC4Model",
-  // "._LooseDesc",
+  // "._loosedesc",
+  ".sc4desc",
+  ".sc4lot",
+  ".sc4model",
 ]
 
 /** Usual installation paths for the base game (non-exhaustive) */

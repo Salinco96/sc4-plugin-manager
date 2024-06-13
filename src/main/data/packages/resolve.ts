@@ -58,7 +58,7 @@ function getCompatibleVariantIds(
   return variantIds.filter(variantId => isVariantCompatible(packageInfo, variantId, conflictGroups))
 }
 
-function getConflictGroups(
+export function getConflictGroups(
   packages: ReadonlyDeep<Record<string, Omit<PackageInfo, "status">>>,
   status: ReadonlyDeep<Record<string, PackageStatus>>,
   externals: ReadonlyDeep<Partial<Record<string, boolean>>>,

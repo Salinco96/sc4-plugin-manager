@@ -1,5 +1,7 @@
 import { TaskInfo } from "@common/state"
 
+import { isDev } from "./env"
+
 export interface Task<T> {
   progress?: number
   promise: Promise<T>
@@ -21,6 +23,8 @@ export interface TaskContext<Q = unknown, T = unknown> {
   debug(...params: unknown[]): void
   error(...params: unknown[]): void
   info(...params: unknown[]): void
+  raise(message: string): never
+  raiseInDev(message: string): void
   setProgress(progress: number): void
   warn(...params: unknown[]): void
 }
@@ -173,6 +177,16 @@ export class TaskManager<Q = unknown, T = unknown> {
       },
       info(...params) {
         console.info(prefix, ...params)
+      },
+      raise(message) {
+        throw Error(message)
+      },
+      raiseInDev(message) {
+        if (isDev()) {
+          throw Error(message)
+        } else {
+          console.warn(message)
+        }
       },
       setProgress: progress => {
         const task = this.tasks.get(key)

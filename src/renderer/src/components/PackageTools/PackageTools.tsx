@@ -1,6 +1,7 @@
 import {
   Notes as ReadmeIcon,
   Folder as FilesIcon,
+  GitHub as GitHubIcon,
   Settings as ConfigIcon,
   Topic as DocsIcon,
   Language as WebIcon,
@@ -17,15 +18,23 @@ export function PackageTools({ packageId }: { packageId: string }): JSX.Element 
   const variantInfo = useCurrentVariant(packageId)
   const variantId = variantInfo.id
 
+  const docsPath = variantInfo.docs
   const readmePath = variantInfo.readme
 
   return (
     <FlexBox alignItems="center" gap={0.5} mx={0.5}>
       {variantInfo.url && (
         <PackageToolButton
-          description="Open URL"
+          description="Open website"
           icon={WebIcon}
           onClick={() => actions.openVariantURL(packageId, variantId)}
+        />
+      )}
+      {variantInfo.repository && (
+        <PackageToolButton
+          description="Open repository"
+          icon={GitHubIcon}
+          onClick={() => actions.openVariantRepository(packageId, variantId)}
         />
       )}
       {variantInfo.installed && (
@@ -42,14 +51,14 @@ export function PackageTools({ packageId }: { packageId: string }): JSX.Element 
           onClick={() => actions.openPackageFile(packageId, variantId, "")}
         />
       )}
-      {readmePath?.startsWith("~docs") && (
+      {variantInfo.installed && docsPath && (
         <PackageToolButton
           description="Open installed documentation"
           icon={DocsIcon}
-          onClick={() => actions.openPackageFile(packageId, variantId, "~docs")}
+          onClick={() => actions.openPackageFile(packageId, variantId, docsPath)}
         />
       )}
-      {readmePath && (
+      {variantInfo.installed && readmePath && (
         <PackageToolButton
           description="Open README"
           icon={ReadmeIcon}

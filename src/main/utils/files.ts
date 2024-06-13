@@ -34,6 +34,10 @@ export function isChild(filePath: string, parentPath: string): boolean {
   return path.resolve(parentPath, filePath).startsWith(parentPath + path.sep)
 }
 
+export function isURL(filePath: string): boolean {
+  return /^[a-z]+:[/][/]/.test(filePath)
+}
+
 export async function readFile(fullPath: string): Promise<string> {
   return fs.readFile(fullPath, "utf8")
 }
@@ -81,6 +85,10 @@ export async function removeIfPresent(fullPath: string): Promise<boolean> {
       throw error
     }
   }
+}
+
+export function toPosix(filePath: string): string {
+  return filePath.replaceAll(path.sep, "/")
 }
 
 export async function writeFile(fullPath: string, data: string): Promise<void> {

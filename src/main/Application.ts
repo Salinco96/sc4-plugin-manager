@@ -22,7 +22,6 @@ import { ApplicationState, ApplicationStatus, TaskInfo } from "@common/state"
 import {
   AssetInfo,
   ConfigFormat,
-  PackageAsset,
   PackageCondition,
   PackageConfig,
   PackageFile,
@@ -30,7 +29,6 @@ import {
   ProfileData,
   ProfileInfo,
   Settings,
-  ToolInfo,
   getDefaultVariant,
   getDefaultVariantStrict,
 } from "@common/types"
@@ -43,15 +41,16 @@ import {
   simtropolisLogin,
   simtropolisLogout,
 } from "@utils/sessions/simtropolis"
+import { TOOLS, Tool } from "@utils/tools"
 
-import { toAssetInfo } from "./data/assets"
+import { getAssetKey } from "./data/assets"
 import {
   loadLocalPackages,
   loadRemotePackages,
   mergeLocalPackageInfo,
   writePackageConfig,
 } from "./data/packages"
-import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
+import { getConflictGroups, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, fromProfileData, toProfileData } from "./data/profiles/configs"
 import { MainWindow } from "./MainWindow"
 import {
@@ -62,6 +61,7 @@ import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
 import { SplashScreen } from "./SplashScreen"
 import { loadConfig, readConfig, writeConfig } from "./utils/configs"
 import {
+  CLEANITOLEXTENSIONS,
   DIRNAMES,
   DOCEXTENSIONS,
   FILENAMES,
@@ -69,8 +69,16 @@ import {
   SC4INSTALLPATHS,
 } from "./utils/constants"
 import { download } from "./utils/download"
-import { env, isDev, isURL } from "./utils/env"
-import { createIfMissing, exists, removeIfEmpty, removeIfPresent } from "./utils/files"
+import { env, isDev } from "./utils/env"
+import {
+  createIfMissing,
+  exists,
+  getExtension,
+  isURL,
+  removeIfEmpty,
+  removeIfPresent,
+  toPosix,
+} from "./utils/files"
 import { cmd, createChildProcess } from "./utils/processes"
 import { TaskManager } from "./utils/tasks"
 
@@ -123,10 +131,14 @@ export class Application {
     }),
     extract: new TaskManager("AssetExtractor", {
       onTaskUpdate: this.onExtractTaskUpdate.bind(this),
-      parallel: 3,
+      parallel: 6,
     }),
-    getAsset: new TaskManager("AssetManager", { parallel: 6 }),
-    install: new TaskManager("PackageInstaller", { parallel: 6 }),
+    getAsset: new TaskManager("AssetManager", {
+      parallel: 30,
+    }),
+    install: new TaskManager("PackageInstaller", {
+      parallel: 30,
+    }),
     linker: new TaskManager("PackageLinker", {
       onTaskUpdate: this.onLinkTaskUpdate.bind(this),
     }),
@@ -152,6 +164,7 @@ export class Application {
     this.handle("openPackageConfig")
     this.handle("openPackageFile")
     this.handle("openProfileConfig")
+    this.handle("openVariantRepository")
     this.handle("openVariantURL")
     this.handle("removePackages")
     this.handle("simtropolisLogin")
@@ -412,8 +425,8 @@ export class Application {
     })
   }
 
-  public getAssetInfo(data: PackageAsset): AssetInfo | undefined {
-    return (this.assets[data.id] ??= toAssetInfo(data))
+  public getAssetInfo(assetId: string): AssetInfo | undefined {
+    return this.assets[assetId]
   }
 
   public getCurrentProfile(): ProfileInfo | undefined {
@@ -423,7 +436,7 @@ export class Application {
 
   public getDatabasePath(): string {
     const repository = this.getDataRepository()
-    return isURL(repository) ? path.join(this.rootPath, DIRNAMES.database) : repository
+    return isURL(repository) ? path.join(this.rootPath, DIRNAMES.db) : repository
   }
 
   public getDataRepository(): string {
@@ -439,7 +452,7 @@ export class Application {
       return path.join(__dirname, "../../sc4-plugin-manager-data")
     }
 
-    return "https://github.com/memo33/sc4pac" // TODO: "https://github.com/Salinco96/sc4-plugin-manager-data.git"
+    return "https://github.com/Salinco96/sc4-plugin-manager-data.git"
   }
 
   public getDefaultConfigFormat(): ConfigFormat {
@@ -447,11 +460,11 @@ export class Application {
   }
 
   protected getDownloadKey(assetInfo: AssetInfo): string {
-    return `${assetInfo.id}@${assetInfo.version}`
+    return getAssetKey(assetInfo.id, assetInfo.version)
   }
 
   public getDownloadPath(key: string): string {
-    return path.join(this.rootPath, DIRNAMES.downloads, key)
+    return path.join(this.getDownloadsPath(), key)
   }
 
   public getDownloadsPath(): string {
@@ -496,7 +509,7 @@ export class Application {
       case ".htm":
       case ".html": {
         const src = await fs.realpath(docPath)
-        const pathname = path.relative(this.rootPath, src).replaceAll("\\", "/")
+        const pathname = toPosix(path.relative(this.rootPath, src))
         return `<iframe height="100%" width="100%" sandbox="allow-popups" src="docs://sc4-plugin-manager/${pathname}" title="Documentation"></iframe>`
       }
 
@@ -557,27 +570,6 @@ export class Application {
 
   public getTempPath(): string {
     return path.join(this.rootPath, DIRNAMES.temp)
-  }
-
-  public getToolInfo(tool: "7z" | "cicdec"): ToolInfo {
-    return {
-      cicdec: {
-        exe: "cicdec.exe",
-        id: "github/Bioruebe/cicdec#cicdec.zip",
-        sha256: "551694690919e668625697be88fedac0b1cfefae321f2440ad48bc65920abe52",
-        size: 116324,
-        url: "https://github.com/Bioruebe/cicdec/releases/download/3.0.1/cicdec.zip",
-        version: "3.0.1",
-      },
-      "7z": {
-        exe: "7-Zip/7z.exe",
-        id: "github/ip7z/7zip#7z2406.msi",
-        sha256: "86d8bdc123a020c37904f781f723e9b6b9768c5dc8878c7d7bbcb3cf57bf8d41",
-        size: 1538560,
-        url: "https://github.com/ip7z/7zip/releases/download/24.06/7z2406.msi",
-        version: "24.06",
-      },
-    }[tool]
   }
 
   public getVariantPath(packageId: string, variantId: string): string {
@@ -781,10 +773,11 @@ export class Application {
 
       await this.tasks.install.queue(variantKey, async context => {
         const variantPath = this.getVariantPath(packageId, variantId)
+
         const assets = variantInfo.update?.assets ?? variantInfo.assets ?? []
 
         const assetInfos = assets.map(asset => {
-          const assetInfo = this.getAssetInfo(asset)
+          const assetInfo = this.getAssetInfo(asset.id)
           if (!assetInfo) {
             throw Error(`Unknown asset '${asset.id}'`)
           }
@@ -800,130 +793,223 @@ export class Application {
         await createIfMissing(variantPath)
 
         try {
+          const cleanitol = new Set<string>()
+          const docs = new Set<string>()
           const files = new Map<string, PackageFile>()
 
           for (const asset of assets) {
-            const assetInfo = this.getAssetInfo(asset)
+            const assetInfo = this.getAssetInfo(asset.id)
             if (!assetInfo) {
               throw Error(`Unknown asset '${asset.id}'`)
             }
 
-            const downloadKey = `${assetInfo.id}@${assetInfo.version}`
+            const downloadKey = this.getDownloadKey(assetInfo)
             const downloadPath = this.getDownloadPath(downloadKey)
 
-            const toPattern = (path: string) =>
-              path.startsWith("/") ? path.slice(1) : `**/${path}`
+            // Blacklist desktop.ini
+            const excludes = ["desktop.ini"]
 
-            // If no explicit include is given, include everything
-            const excludes = ["**/desktop.ini"]
-            if (asset.exclude) {
-              for (const exclude of asset.exclude) {
-                const pattern = toPattern(exclude.path)
-                excludes.push(pattern, `${pattern}/**`)
-              }
+            const getChildrenPattern = (pattern: string) => {
+              return pattern.includes("/") ? `${pattern}/**` : `**/${pattern}/**`
             }
 
-            // Find all included files
-            const sourcePath = asset.path ? path.join(downloadPath, asset.path) : downloadPath
+            const excludePath = async (pattern: string) => {
+              excludes.push(pattern, getChildrenPattern(pattern))
+            }
 
-            const addFile = async (
+            const includeFile = async (
               oldPath: string,
               newPath: string,
+              type: "cleanitol" | "docs" | "files",
               category?: CategoryID,
               condition?: PackageCondition,
             ) => {
-              // TODO: Ignore case
-              const ext = path.extname(oldPath)
-              if (SC4EXTENSIONS.includes(ext)) {
-                const targetPath = path.join(variantPath, newPath)
-                await createIfMissing(path.dirname(targetPath))
-                await fs.symlink(path.join(sourcePath, oldPath), targetPath)
-                if (files.has(newPath)) {
-                  context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
-                } else {
-                  files.set(newPath, {
-                    path: newPath,
-                    condition,
-                    category: category !== variantInfo.category ? category : undefined,
-                  })
+              const extension = getExtension(oldPath)
+
+              if (!DOCEXTENSIONS.includes(extension) && !SC4EXTENSIONS.includes(extension)) {
+                console.warn(`Ignoring file ${oldPath} with unsupported extension ${extension}`)
+              }
+
+              switch (type) {
+                case "cleanitol": {
+                  if (CLEANITOLEXTENSIONS.includes(extension)) {
+                    if (!cleanitol.has(oldPath)) {
+                      const targetPath = path.join(variantPath, DIRNAMES.cleanitol, newPath)
+                      await createIfMissing(path.dirname(targetPath))
+                      await fs.symlink(path.join(downloadPath, oldPath), targetPath)
+                      cleanitol.add(oldPath)
+                    }
+                  }
+
+                  break
                 }
-              } else if (DOCEXTENSIONS.includes(ext)) {
-                const targetPath = path.join(variantPath, newPath)
-                await createIfMissing(path.dirname(targetPath))
-                await fs.symlink(path.join(sourcePath, oldPath), targetPath)
-              } else {
-                context.warn(`Ignoring file ${oldPath} with unsupported extension ${ext}`)
+
+                case "docs": {
+                  if (DOCEXTENSIONS.includes(extension)) {
+                    if (!cleanitol.has(oldPath) && !docs.has(oldPath)) {
+                      const targetPath = path.join(variantPath, DIRNAMES.docs, newPath)
+                      await createIfMissing(path.dirname(targetPath))
+                      await fs.symlink(path.join(downloadPath, oldPath), targetPath)
+                      docs.add(oldPath)
+                    }
+                  }
+
+                  break
+                }
+
+                case "files": {
+                  if (SC4EXTENSIONS.includes(extension)) {
+                    if (files.has(newPath)) {
+                      context.raiseInDev(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
+                    } else {
+                      const targetPath = path.join(variantPath, newPath)
+                      await createIfMissing(path.dirname(targetPath))
+                      await fs.symlink(path.join(downloadPath, oldPath), targetPath)
+                      files.set(newPath, {
+                        path: newPath,
+                        condition,
+                        category: category !== variantInfo.category ? category : undefined,
+                      })
+                    }
+                  }
+                }
               }
             }
 
-            const addDirectory = async (
+            const includeDirectory = async (
               oldPath: string,
               newPath: string,
+              type: "cleanitol" | "docs" | "files",
               category?: CategoryID,
               condition?: PackageCondition,
             ) => {
-              const filePaths = await glob(path.join(oldPath, "**").replaceAll("\\", "/"), {
-                cwd: sourcePath,
+              const filePaths = await glob(getChildrenPattern(toPosix(oldPath)), {
+                cwd: downloadPath,
                 dot: true,
                 ignore: excludes,
+                matchBase: true,
                 nodir: true,
               })
 
               for (const filePath of filePaths) {
-                await addFile(
+                await includeFile(
                   filePath,
-                  path.join(newPath, path.relative(oldPath, filePath)),
+                  type === "cleanitol"
+                    ? path.basename(filePath)
+                    : path.join(newPath, path.relative(oldPath, filePath)),
+                  type,
                   category,
                   condition,
                 )
               }
             }
 
-            if (asset.include) {
-              for (const include of asset.include) {
-                const pattern = toPattern(include.path)
-                const entries = await glob(pattern, {
-                  cwd: sourcePath,
-                  dot: true,
-                  ignore: excludes,
-                  withFileTypes: true,
-                })
+            const includePath = async (
+              pattern: string,
+              type: "cleanitol" | "docs" | "files",
+              include?: PackageFile,
+            ) => {
+              const entries = await glob(pattern, {
+                cwd: downloadPath,
+                dot: true,
+                ignore: excludes,
+                includeChildMatches: false,
+                matchBase: true,
+                withFileTypes: true,
+              })
 
-                if (entries.length === 0) {
-                  context.warn(`Include pattern ${include.path} did not match any file`)
+              if (entries.length === 0 && pattern !== "*cleanitol*.txt") {
+                context.raiseInDev(`Pattern ${pattern} did not match any file`)
+              }
+
+              for (const entry of entries) {
+                const oldPath = entry.relative()
+
+                if (entry.isDirectory()) {
+                  await includeDirectory(
+                    oldPath,
+                    include?.as ?? "",
+                    type,
+                    include?.category,
+                    include?.condition,
+                  )
+                } else {
+                  const filename = path.basename(entry.name)
+                  await includeFile(
+                    oldPath,
+                    include?.as?.replace("*", filename) ?? filename,
+                    type,
+                    include?.category,
+                    include?.condition,
+                  )
                 }
+              }
+            }
 
-                for (const entry of entries) {
-                  const oldPath = entry.relative()
-                  const newPath = include.as
-                    ? path.relative(".", include.as).replace("*", entry.name)
-                    : oldPath
-
-                  if (entry.isDirectory()) {
-                    await addDirectory(oldPath, newPath, include.category, include.condition)
-                  } else {
-                    await addFile(oldPath, newPath, include.category, include.condition)
-                  }
-                }
-
-                // Included paths are excluded from being included again
-                excludes.push(pattern, `${pattern}/**`)
+            // Include cleanitol (everything if not specified)
+            if (asset.cleanitol) {
+              for (const include of asset.cleanitol) {
+                await includePath(include, "cleanitol")
               }
             } else {
-              await addDirectory("", "")
+              await includePath("*cleanitol*.txt", "cleanitol")
+            }
+
+            // Include docs (everything if not specified)
+            if (asset.docs) {
+              for (const include of asset.docs) {
+                if (typeof include === "string") {
+                  const [path, as] = include.split(":", 2)
+                  await includePath(path, "docs", { as, path })
+                } else {
+                  await includePath(include.path, "docs", include)
+                }
+              }
+            } else {
+              await includeDirectory("", "", "docs")
+            }
+
+            // Exclude files
+            if (asset.exclude) {
+              for (const exclude of asset.exclude) {
+                if (typeof exclude === "string") {
+                  excludePath(exclude)
+                } else {
+                  excludePath(exclude.path)
+                }
+              }
+            }
+
+            // Include files (everything if not specified)
+            if (asset.include) {
+              for (const include of asset.include) {
+                if (typeof include === "string") {
+                  const [path, as] = include.split(":", 2)
+                  await includePath(path, "files", { as, path })
+                  excludePath(path)
+                } else {
+                  await includePath(include.path, "files", include)
+                  excludePath(include.path)
+                }
+              }
+            } else {
+              await includeDirectory("", "", "files")
             }
           }
 
-          const docsPaths = await glob("**/*.{htm,html,md,txt}", {
-            cwd: variantPath,
-            ignore: "*cleanitol*",
-            nodir: true,
-          })
+          // Automatically detect README if not specified
+          if (!variantInfo.readme) {
+            const readmePaths = await glob(`${DIRNAMES.docs}/**/*.{htm,html,md,txt}`, {
+              cwd: variantPath,
+              ignore: ["*cleanitol*", "*license*"],
+              nodir: true,
+            })
 
-          variantInfo.readme ??=
-            docsPaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
-            docsPaths.find(file => path.basename(file).match(/readme/i)) ??
-            docsPaths[0]
+            variantInfo.readme =
+              readmePaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
+              readmePaths.find(file => path.basename(file).match(/readme/i)) ??
+              readmePaths[0]
+          }
 
           if (variantInfo.update) {
             Object.assign(variantInfo, variantInfo.update)
@@ -932,6 +1018,14 @@ export class Application {
 
           variantInfo.files = Array.from(files.values())
           variantInfo.installed = true
+
+          if (cleanitol.size) {
+            variantInfo.cleanitol = DIRNAMES.cleanitol
+          }
+
+          if (docs.size) {
+            variantInfo.docs = DIRNAMES.docs
+          }
 
           // Rewrite config
           await this.writePackageConfig(packageInfo)
@@ -1003,6 +1097,33 @@ export class Application {
             this.links[to] = from
           }
 
+          const conflictGroups = getConflictGroups(
+            this.packages!,
+            Object.fromEntries(
+              Object.entries(this.packages!).map(([id, info]) => [
+                id,
+                info.status[currentProfile.id]!,
+              ]),
+            ),
+            currentProfile.externals,
+          )
+
+          const checkCondition = (condition?: PackageCondition) => {
+            if (!condition) {
+              return true
+            }
+
+            for (const requirement in condition) {
+              const requiredValue = condition[requirement]
+              const value = !!conflictGroups[requirement]?.length
+              if (requiredValue !== undefined && requiredValue !== value) {
+                return false
+              }
+            }
+
+            return true
+          }
+
           for (const packageId in this.packages) {
             const packageInfo = this.packages[packageId]
             const status = packageInfo.status[currentProfile.id]!
@@ -1013,19 +1134,20 @@ export class Application {
                 const variantPath = this.getVariantPath(packageId, variantId)
                 if (variantInfo.files?.length) {
                   for (const file of variantInfo.files) {
-                    // TODO: Check file.condition
-                    const fullPath = path.join(variantPath, file.path!)
-                    const categoryPath = formatCategory(file.category ?? variantInfo.category)
+                    if (checkCondition(file.condition)) {
+                      const fullPath = path.join(variantPath, file.path!)
+                      const categoryPath = formatCategory(file.category ?? variantInfo.category)
 
-                    // DLL files must be in Plugins root
-                    const targetPath = file.path!.match(/\.(dll|ini)$/i)
-                      ? path.join(pluginsPath, path.basename(file.path!))
-                      : path.join(pluginsPath, categoryPath, packageId, file.path!)
+                      // DLL files must be in Plugins root
+                      const targetPath = file.path!.match(/\.(dll|ini)$/i)
+                        ? path.join(pluginsPath, path.basename(file.path!))
+                        : path.join(pluginsPath, categoryPath, packageId, file.path!)
 
-                    oldLinks.delete(targetPath)
-                    if (this.links[targetPath] !== fullPath) {
-                      await makeLink(fullPath, targetPath)
-                      nCreatedLinks++
+                      oldLinks.delete(targetPath)
+                      if (this.links[targetPath] !== fullPath) {
+                        await makeLink(fullPath, targetPath)
+                        nCreatedLinks++
+                      }
                     }
                   }
                 } else {
@@ -1230,15 +1352,24 @@ export class Application {
     return false
   }
 
+  public async openVariantRepository(packageId: string, variantId: string): Promise<boolean> {
+    const variantInfo = this.getPackageInfo(packageId)?.variants[variantId]
+    if (variantInfo?.repository) {
+      await this.openInExplorer(variantInfo.repository)
+      return true
+    }
+
+    return false
+  }
+
   public async openVariantURL(packageId: string, variantId: string): Promise<boolean> {
-    const packageInfo = this.getPackageInfo(packageId)
-    const variantInfo = packageInfo?.variants[variantId]
+    const variantInfo = this.getPackageInfo(packageId)?.variants[variantId]
     if (variantInfo?.url) {
       await this.openInExplorer(variantInfo.url)
       return true
     }
 
-    return true
+    return false
   }
 
   public async quit(): Promise<void> {
@@ -1391,12 +1522,17 @@ export class Application {
     return !results.includes(false)
   }
 
-  public async runTool(tool: "7z" | "cicdec", ...args: string[]): Promise<string> {
-    const info = this.getToolInfo(tool)
-    const key = this.getDownloadKey(info)
-    const exe = path.join(this.getDownloadPath(key), info.exe)
-    await this.downloadAsset(info)
-    return cmd([exe, ...args].map(arg => `"${arg}"`).join(" "))
+  public async runTool(tool: Tool, ...args: string[]): Promise<string> {
+    const assetInfo = this.getAssetInfo(TOOLS[tool].assetId)
+
+    if (assetInfo) {
+      const key = this.getDownloadKey(assetInfo)
+      const exe = path.join(this.getDownloadPath(key), TOOLS[tool].exe)
+      await this.downloadAsset(assetInfo)
+      return cmd([exe, ...args].map(arg => `"${arg}"`).join(" "))
+    }
+
+    return cmd([TOOLS[tool].exe, ...args].map(arg => `"${arg}"`).join(" "))
   }
 
   protected setPackageVariantInConfig(
@@ -1800,7 +1936,7 @@ You can either automatically install and switch to compatible variants now, or r
       // If there are packages to install...
       if (Object.keys(installingVariants).length) {
         /** Assets that will be downloaded */
-        const missingAssets = new Map<string, PackageAsset>()
+        const missingAssets = new Map<string, AssetInfo>()
 
         // Calculate list of missing assets
         for (const packageId in installingVariants) {
@@ -1808,12 +1944,12 @@ You can either automatically install and switch to compatible variants now, or r
           const variantInfo = packages[packageId].variants[variantId]
           if (variantInfo?.assets) {
             for (const asset of variantInfo.assets) {
-              const assetInfo = this.getAssetInfo(asset)
+              const assetInfo = this.getAssetInfo(asset.id)
               if (assetInfo && !missingAssets.has(asset.id)) {
-                const key = `${assetInfo.id}@${assetInfo.version}`
+                const key = this.getDownloadKey(assetInfo)
                 const downloaded = await exists(this.getDownloadPath(key))
                 if (!downloaded) {
-                  missingAssets.set(asset.id, asset)
+                  missingAssets.set(asset.id, assetInfo)
                 }
               }
             }

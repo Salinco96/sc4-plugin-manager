@@ -7,7 +7,7 @@ import { finished } from "stream/promises"
 import { glob } from "glob"
 import { Open } from "unzipper"
 
-import { createIfMissing, getExtension, removeExtension, removeIfPresent } from "./files"
+import { createIfMissing, getExtension, removeIfPresent } from "./files"
 import { cmd } from "./processes"
 import { TaskContext } from "./tasks"
 
@@ -28,8 +28,8 @@ export async function extract(
     for (const archivePath of archivePaths) {
       context.debug(`Extracting from ${archivePath}`)
       const extension = getExtension(archivePath)
-      const extractFullPath = path.join(downloadPath, removeExtension(archivePath))
       const archiveFullPath = path.join(downloadPath, archivePath)
+      const extractFullPath = path.join(downloadPath, path.dirname(archivePath))
       if (extension === ".exe") {
         await extractEXE(context, archiveFullPath, extractFullPath)
       } else if (extension === ".jar") {
@@ -47,9 +47,10 @@ export async function extract(
 
       // Delete the archive after successful extraction
       await removeIfPresent(path.join(downloadPath, archivePath))
-      // In case there are nested archives...
-      await extract(context, extractFullPath, onProgress)
     }
+
+    // In case there are nested archives...
+    await extract(context, downloadPath, onProgress)
   }
 }
 

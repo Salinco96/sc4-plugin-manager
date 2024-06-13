@@ -9,28 +9,31 @@ export enum ConfigFormat {
   YML = ".yml",
 }
 
-export interface AssetInfo {
-  id: string
-  lastModified?: Date
-  sha256?: string
-  size?: number
-  url: string
-  version: string
-}
-
-export interface ToolInfo extends AssetInfo {
-  exe: string
-}
-
-export interface PackageAsset {
-  cleanitol?: string
-  exclude?: PackageFile[]
-  include?: PackageFile[]
-  id: string
-  path?: string
+export interface AssetData {
   sha256?: string
   size?: number
   url?: string
+  version?: number | string
+}
+
+export interface AssetInfo extends AssetData {
+  id: string
+  lastModified?: Date
+  url: string
+  version?: string
+}
+
+export interface ToolInfo {
+  assetId: string
+  exe: string
+}
+
+export interface PackageAsset extends AssetData {
+  cleanitol?: string
+  docs?: (string | PackageFile)[]
+  exclude?: (string | PackageFile)[]
+  include?: (string | PackageFile)[]
+  id: string
 }
 
 export interface PackageCondition {
@@ -97,6 +100,7 @@ export interface VariantData {
   files?: PackageFile[]
   name?: string
   readme?: string
+  repository?: string
   requirements?: PackageCondition
   url?: string
   version?: string
@@ -112,6 +116,8 @@ export interface BaseVariantInfo extends VariantData {
 
 export interface VariantInfo extends BaseVariantInfo {
   action?: "installing" | "updating" | "removing"
+  cleanitol?: string
+  docs?: string
   installed?: boolean
   local?: boolean
   update?: BaseVariantInfo

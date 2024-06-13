@@ -15,8 +15,11 @@ import {
   DEFAULT_VARIANT_ID,
 } from "@common/types"
 import { readConfig, readConfigs, writeConfig } from "@utils/configs"
-import { FILENAMES } from "@utils/constants"
+import { DIRNAMES, FILENAMES } from "@utils/constants"
+import { isDev } from "@utils/env"
 import { exists } from "@utils/files"
+
+import { loadAssetInfo } from "./assets"
 
 interface MemoAssetData {
   assetId: string
@@ -128,6 +131,15 @@ export async function loadLocalPackageInfo(
       packageInfo.variants[variantId] = variantInfo
       variantInfo.installed = true
       variantInfo.local = true
+
+      if (await exists(path.join(packagePath, variantId, DIRNAMES.cleanitol))) {
+        variantInfo.cleanitol = DIRNAMES.cleanitol
+      }
+
+      if (await exists(path.join(packagePath, variantId, DIRNAMES.docs))) {
+        variantInfo.docs = DIRNAMES.docs
+      }
+
       if (!variantInfo.authors.length) {
         variantInfo.authors.push(packageId.split("/")[0])
       }
@@ -199,20 +211,21 @@ export async function loadRemotePackages(
   const assets: { [assetId: string]: AssetInfo } = {}
   const packages: { [packageId: string]: PackageInfo } = {}
 
-  // TODO: Remove when own data repository has some interesting content?
-  const memoPath = path.join(basePath, "src/yaml")
-  const isMemo = await exists(memoPath)
-
-  const packagesPath = isMemo ? memoPath : path.join(basePath, "packages")
-  const configEntries = await glob("**/*.{yaml,yml}", { cwd: packagesPath })
-
+  let nAssets = 0
   let nConfigs = 0
   let nPackages = 0
-  for (const configEntry of configEntries) {
-    onProgress(nConfigs++, configEntries.length)
-    const configPath = path.join(packagesPath, configEntry)
 
-    if (isMemo) {
+  // TODO: Remove when own data repository has some interesting content?
+  const memoPath = path.join(basePath, DIRNAMES.dbMemo)
+  const isMemo = await exists(memoPath)
+
+  if (isMemo) {
+    const configEntries = await glob("**/*.{yaml,yml}", { cwd: memoPath })
+
+    for (const configEntry of configEntries) {
+      onProgress(nConfigs++, configEntries.length)
+      const configPath = path.join(memoPath, configEntry)
+
       // TODO: This assumes that configs are correctly formatted
       const configs = await readConfigs<MemoAssetData | MemoPackageData>(configPath)
       for (const config of configs) {
@@ -225,6 +238,7 @@ export async function loadRemotePackages(
           }
 
           assets[assetInfo.id] = assetInfo
+          nAssets++
         } else {
           const packageId = `${config.group}/${config.name}`
           const packageInfo: PackageInfo = {
@@ -359,7 +373,32 @@ export async function loadRemotePackages(
           }
         }
       }
-    } else {
+    }
+  } else {
+    const assetsPath = path.join(basePath, DIRNAMES.dbAssets)
+    const assetsEntries = await glob("**/*.{yaml,yml}", { cwd: assetsPath })
+    const packagesPath = path.join(basePath, DIRNAMES.dbPackages)
+    const packagesEntries = await glob("**/*.{yaml,yml}", { cwd: packagesPath })
+
+    for (const assetsEntry of assetsEntries) {
+      onProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
+      const configPath = path.join(assetsPath, assetsEntry)
+
+      // TODO: This assumes that configs are correctly formatted
+      const configs = await readConfig<{ [assetId: string]: PackageData }>(configPath)
+      for (const assetId in configs) {
+        const assetInfo = loadAssetInfo(assetId, configs[assetId])
+        if (assetInfo) {
+          assets[assetId] = assetInfo
+          nAssets++
+        }
+      }
+    }
+
+    for (const packagesEntry of packagesEntries) {
+      onProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
+      const configPath = path.join(packagesPath, packagesEntry)
+
       // TODO: This assumes that configs are correctly formatted
       const configs = await readConfig<{ [packageId: string]: PackageData }>(configPath)
       for (const packageId in configs) {
@@ -367,11 +406,46 @@ export async function loadRemotePackages(
         if (packageInfo) {
           packages[packageId] = packageInfo
           nPackages++
+
+          // Check assets and add inlined ones
+          for (const variantId in packageInfo.variants) {
+            const variantInfo = packageInfo.variants[variantId]
+            if (variantInfo.assets) {
+              for (const asset of variantInfo.assets) {
+                // Inline asset definition should have at least one of these
+                if (asset.sha256 || asset.size || asset.url || asset.version) {
+                  if (assets[asset.id]) {
+                    // Do not allow redefining an existing asset
+                    if (isDev()) {
+                      throw Error(`Redefining asset ID ${asset.id}`)
+                    } else {
+                      console.warn(`Redefining asset ID ${asset.id}`)
+                    }
+                  } else {
+                    // Load inline asset
+                    const assetInfo = loadAssetInfo(asset.id, asset)
+                    if (assetInfo) {
+                      assets[asset.id] = assetInfo
+                      nAssets++
+                    }
+                  }
+                } else if (!assets[asset.id]) {
+                  // Otherwise require asset to already exist
+                  if (isDev()) {
+                    throw Error(`Asset ${asset.id} does not exist`)
+                  } else {
+                    console.warn(`Asset ${asset.id} does not exist`)
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
   }
 
+  console.info(`Loaded ${nAssets} assets`)
   console.info(`Loaded ${nPackages} remote packages`)
 
   return { assets, packages }
@@ -398,11 +472,6 @@ export function loadRemotePackageInfo(
       variantInfo.authors.push(packageId.split("/")[0])
     }
   }
-
-  // Select default variant
-  // if (!packageInfo.variants[DEFAULT_VARIANT_ID]) {
-  //   packageInfo.status.variantId = Object.keys(packageInfo.variants)[0]
-  // }
 
   // Return the package only if some variants have been successfully loaded
   if (Object.keys(packageInfo.variants).length) {
@@ -433,7 +502,6 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
     ],
     deprecated: variantData.deprecated ?? packageData.deprecated,
     description: variantData.description ?? packageData.description,
-    readme: variantData.readme ?? packageData.readme,
     experimental: variantData.experimental ?? packageData.experimental,
     files: (packageData.files || variantData.files) && [
       ...(variantData.files ?? []),
@@ -441,6 +509,8 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
     ],
     id: variantId,
     name: variantData.name ?? variantId,
+    readme: variantData.readme ?? packageData.readme,
+    repository: variantData.repository ?? packageData.repository,
     requirements: (packageData.requirements || variantData.requirements) && {
       ...packageData.requirements,
       ...variantData.requirements,

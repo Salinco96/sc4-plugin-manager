@@ -23,7 +23,3 @@ export const env = {
 export function isDev(): boolean {
   return import.meta.env.DEV
 }
-
-export function isURL(path: string): boolean {
-  return /^[a-z]+:[/][/]/.test(path)
-}

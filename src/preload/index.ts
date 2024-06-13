@@ -33,6 +33,9 @@ export const api = {
   async openProfileConfig(profileId: string): Promise<boolean> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
   },
+  async openVariantRepository(packageId: string, variantId: string): Promise<boolean> {
+    return ipcRenderer.invoke("openVariantRepository", packageId, variantId)
+  },
   async openVariantURL(packageId: string, variantId: string): Promise<boolean> {
     return ipcRenderer.invoke("openVariantURL", packageId, variantId)
   },

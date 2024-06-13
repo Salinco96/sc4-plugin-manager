@@ -1,44 +1,55 @@
-import { AssetInfo, PackageAsset } from "@common/types"
+import { AssetData, AssetInfo } from "@common/types"
+import { isDev } from "@utils/env"
 
-export function toAssetInfo(data: PackageAsset): AssetInfo | undefined {
-  // Parse asset ID in format `source:id[#hash]@version`
-  const match = data.id.match(/^([\w-]+):([\w./-]+)(?:#([\w./-]+))?@([\w.-]+)$/)
-  if (match) {
-    const [, source, id, hash, version] = match
+export function getAssetKey(assetId: string, version?: string): string {
+  return version ? `${assetId}@${version}` : assetId
+}
 
-    switch (source) {
-      // id = owner/repository
-      // version = release version
-      // hash = release artifact filename
-      case "github":
-        return {
-          id: `${source}/${id}/${hash}`,
-          sha256: data.sha256,
-          size: data.size,
-          url: `https://github.com/${id}/releases/download/${version}/${hash}`,
-          version,
-        }
+export function getAssetURL(assetId: string, data: AssetData): string | undefined {
+  // Parse asset ID in format `source/path[#hash]`
+  const match = assetId.match(/^([\w-]+)[/]([\w./-]+)(?:[#]([\w./-]+))?$/)
 
-      // id = download ID
-      case "sc4evermore":
-        return {
-          id: `${source}/${id}`,
-          sha256: data.sha256,
-          size: data.size,
-          url: `https://www.sc4evermore.com/index.php/downloads?task=download.send&id=${id.replace("-", ":")}`,
-          version,
-        }
+  if (data.url) {
+    let url = data.url
 
-      // id = download ID
-      // hash = variant (optional, only for downloads with multiple variants or to target older versions)
-      case "simtropolis":
-        return {
-          id: `${source}/${id}${hash ? `#${hash}` : ""}`,
-          sha256: data.sha256,
-          size: data.size,
-          url: `https://community.simtropolis.com/files/file/${id}/?do=download${hash ? `&r=${hash}` : ""}`,
-          version,
-        }
+    if (match) {
+      url = url.replaceAll("{path}", match[2])
+      url = url.replaceAll("{hash}", match[3])
     }
+
+    if (data.version !== undefined) {
+      url = url.replaceAll("{version}", String(data.version))
+    }
+
+    return url
+  }
+
+  if (match) {
+    const [, source, path, hash] = match
+
+    // path = download ID
+    if (source === "sc4evermore") {
+      return `https://www.sc4evermore.com/index.php/downloads?task=download.send&id=${path.replace("-", ":")}`
+    }
+
+    // path = download ID
+    // hash = variant (optional, only for downloads with multiple variants or to target older versions)
+    if (source === "simtropolis") {
+      return `https://community.simtropolis.com/files/file/${path}/?do=download${hash ? `&r=${hash}` : ""}`
+    }
+  }
+}
+
+export function loadAssetInfo(assetId: string, data: AssetData): AssetInfo | undefined {
+  const version = data.version !== undefined ? String(data.version) : undefined
+  const url = getAssetURL(assetId, data)
+  if (url) {
+    return { ...data, id: assetId, url, version }
+  } else if (isDev()) {
+    // Fail in development so we can notice issues more easily
+    throw Error(`Could not infer URL for asset ID ${assetId}`)
+  } else {
+    // Fail in development so we can notice issues more easily
+    console.warn(`Could not infer URL for asset ID ${assetId}`)
   }
 }

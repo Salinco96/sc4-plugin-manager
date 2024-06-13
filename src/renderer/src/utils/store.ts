@@ -35,6 +35,7 @@ export interface StoreActions {
   openPackageFile(packageId: string, variantId: string, filePath: string): Promise<boolean>
   openProfileConfig(profileId: string): Promise<boolean>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
+  openVariantRepository(packageId: string, variantId: string): Promise<boolean>
   openVariantURL(packageId: string, variantId: string): Promise<boolean>
   removePackage(packageId: string, variantId: string): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
@@ -181,6 +182,9 @@ export const useStore = create<Store>()((set, get): Store => {
           const id = enqueueSnackbar({ persist: true, variant: type, ...props })
           updateState({ snackbars: { [type]: { $set: id } } })
         }
+      },
+      async openVariantRepository(packageId, variantId) {
+        return window.api.openVariantRepository(packageId, variantId)
       },
       async openVariantURL(packageId, variantId) {
         return window.api.openVariantURL(packageId, variantId)
