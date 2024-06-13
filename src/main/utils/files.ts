@@ -1,12 +1,28 @@
 import fs from "fs/promises"
 import path from "path"
 
-export async function createIfMissing(fullPath: string): Promise<void> {
+export async function copyTo(fullPath: string, targetPath: string): Promise<void> {
+  await createIfMissing(path.dirname(targetPath))
+  await fs.copyFile(fullPath, targetPath)
+}
+
+export async function moveTo(fullPath: string, targetPath: string): Promise<void> {
+  await createIfMissing(path.dirname(targetPath))
+  try {
+    await fs.rename(fullPath, targetPath)
+  } catch (error) {
+    await fs.copyFile(fullPath, targetPath)
+    await fs.unlink(fullPath)
+  }
+}
+
+export async function createIfMissing(fullPath: string): Promise<boolean> {
   try {
     await fs.mkdir(fullPath, { recursive: true })
+    return true
   } catch (error) {
     if (error instanceof Error && error.message.match(/already exists/i)) {
-      return undefined
+      return false
     } else {
       throw error
     }

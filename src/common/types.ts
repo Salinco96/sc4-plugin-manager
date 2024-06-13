@@ -79,6 +79,7 @@ export interface PackageOptions {
 }
 
 export interface PackageStatus {
+  action?: "disabling" | "enabling"
   enabled: boolean
   issues: {
     [variantId: string]: string[] | undefined

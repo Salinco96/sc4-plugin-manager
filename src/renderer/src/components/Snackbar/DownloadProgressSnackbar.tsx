@@ -47,6 +47,11 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
       }
     }, [message])
 
+    // Sometimes the action may be so fast that message will already be empty by the time we show the toast
+    if (!message && !lastMessageRef.current) {
+      return <div ref={ref}></div>
+    }
+
     return (
       <CustomSnackbar
         {...props}

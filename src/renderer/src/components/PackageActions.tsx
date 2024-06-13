@@ -6,6 +6,8 @@ import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/mate
 import { usePackageInfo, usePackageStatus } from "@utils/packages"
 import { useCurrentProfile, useStoreActions } from "@utils/store"
 
+import { FlexBox } from "./FlexBox"
+
 interface PackageAction {
   color?: "error" | "success" | "warning"
   description?: string
@@ -36,7 +38,6 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
 
     const nRequires = packageStatus.requiredBy?.length ?? 0
 
-    const isBusy = !!variantInfo?.action
     const isEnabled = !!packageStatus.enabled
     const isIncompatible = !!packageStatus.issues[variantId]?.length
     const isInstalled = !!variantInfo.installed
@@ -48,7 +49,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
         description: isIncompatible
           ? "This variant is not compatible with your profile"
           : "Install this package",
-        disabled: isBusy || isIncompatible,
+        disabled: isIncompatible,
         id: "install",
         label: "Install",
         onClick: () => actions.addPackage(packageId, variantId),
@@ -59,7 +60,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
         description: isIncompatible
           ? "This variant is not compatible with your profile"
           : `Update to version ${variantInfo.update.version}`,
-        disabled: isBusy || isIncompatible,
+        disabled: isIncompatible,
         id: "update",
         label: "Update",
         onClick: () => actions.updatePackage(packageId, variantId),
@@ -72,7 +73,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
         description: isRequired
           ? `This package cannot be disabled because it is required by ${nRequires} other package(s)`
           : "Disable this package",
-        disabled: isBusy || isRequired,
+        disabled: isRequired,
         id: "disable",
         label: "Disable",
         onClick: () => actions.disablePackage(packageId),
@@ -85,7 +86,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
         description: isIncompatible
           ? "This variant is not compatible with your profile"
           : "Enable this package",
-        disabled: isBusy || isIncompatible,
+        disabled: isIncompatible,
         id: "enable",
         label: "Enable",
         onClick: () => actions.enablePackage(packageId),
@@ -98,7 +99,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
         color: "error",
         description:
           "Remove this package\nWARNING: This package may be required by another profile!",
-        disabled: isBusy || isRequired,
+        disabled: isRequired,
         id: "remove",
         label: "Remove",
         onClick: () => actions.removePackage(packageId, variantId),
@@ -108,7 +109,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
     if (currentProfile && !isInstalled) {
       packageActions.push({
         description: "Install and enable this package",
-        disabled: isBusy || isIncompatible,
+        disabled: isIncompatible,
         id: "add",
         label: "Add",
         onClick: () => actions.addPackage(packageId, variantId),
@@ -118,7 +119,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
     if (!isInstalled && !isEnabled) {
       packageActions.push({
         description: "Download this package without enabling it",
-        disabled: isBusy || isIncompatible,
+        disabled: isIncompatible,
         id: "download",
         label: "Download",
         onClick: () => actions.installPackage(packageId, variantId),
@@ -135,6 +136,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
   const mainAction = packageActions[0]
   const moreActions = packageActions.slice(1).filter(action => !action.disabled)
   const hasMore = !!moreActions.length && !mainAction.disabled
+  const disabled = !!mainAction.disabled || !!packageStatus.action || !!variantInfo.action
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width: 160 }}>
@@ -143,37 +145,43 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
           <span>
             <Button
               color={mainAction.color}
-              disabled={mainAction.disabled}
+              disabled={disabled}
               onClick={mainAction.onClick}
               ref={anchorRef}
               sx={{ height: 40, paddingRight: hasMore ? 5.5 : 2, width: 160 }}
               variant="contained"
             >
-              {mainAction.label}
+              {variantInfo.action === "installing"
+                ? "Installing..."
+                : variantInfo.action === "removing"
+                  ? "Removing..."
+                  : variantInfo.action === "updating"
+                    ? "Updating..."
+                    : packageStatus.action === "disabling"
+                      ? "Disabling..."
+                      : packageStatus.action === "enabling"
+                        ? "Enabling..."
+                        : mainAction.label}
             </Button>
           </span>
         </Tooltip>
         {hasMore && (
-          <>
+          <FlexBox ml={-3.5} sx={{ backgroundColor: "white" }} zIndex={1}>
+            <Divider color={disabled ? "lightgray" : "white"} orientation="vertical" />
             <Button
               aria-label="More options"
               color={mainAction.color}
+              disabled={disabled}
               onClick={() => setMenuOpen(true)}
               size="small"
               sx={{
-                borderLeftColor: "white",
-                borderLeftStyle: "solid",
                 borderRadius: "0 4px 4px 0",
                 boxShadow: "none !important",
-                display: "flex",
-                marginLeft: "-28px !important",
                 minWidth: 0,
                 padding: 0,
-                height: 40,
               }}
               variant="contained"
             >
-              <Divider color="white" orientation="vertical" />
               <MoreOptionsIcon color="inherit" fontSize="small" sx={{ margin: 0.5 }} />
             </Button>
             <Menu
@@ -198,7 +206,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
                 </Tooltip>
               ))}
             </Menu>
-          </>
+          </FlexBox>
         )}
       </Box>
       {(Object.keys(packageInfo.variants).length > 1 || !packageInfo.variants.default) && (

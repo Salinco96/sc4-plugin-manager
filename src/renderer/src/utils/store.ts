@@ -23,6 +23,7 @@ export interface PackageFilters {
 export interface StoreActions {
   addPackage(packageId: string, variantId: string): Promise<boolean>
   check4GBPatch(): Promise<void>
+  cleanVariant(packageId: string, variantId: string): Promise<void>
   closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: string): Promise<boolean>
   disablePackage(packageId: string): Promise<boolean>
@@ -42,6 +43,7 @@ export interface StoreActions {
   setPackageFilters(filters: Partial<PackageFilters>): void
   showErrorToast(message: string): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
+  showSuccessToast(message: string): void
   simtropolisLogin(): Promise<void>
   simtropolisLogout(): Promise<void>
   switchProfile(profileId: string): Promise<boolean>
@@ -103,6 +105,10 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async check4GBPatch() {
         return window.api.check4GBPatch()
+      },
+      async cleanVariant(packageId, variantId) {
+        await window.api.cleanVariant(packageId, variantId)
+        this.showSuccessToast("No conflicting files detected")
       },
       closeSnackbar(type) {
         const id = get().snackbars[type]
@@ -234,6 +240,9 @@ export const useStore = create<Store>()((set, get): Store => {
         } finally {
           set({ modal: undefined })
         }
+      },
+      showSuccessToast(message) {
+        enqueueSnackbar(message, { variant: "success" })
       },
       async simtropolisLogin(): Promise<void> {
         updateState({ sessions: { simtropolis: { $set: {} } } })

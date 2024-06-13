@@ -9,6 +9,9 @@ export const api = {
   async check4GBPatch(): Promise<void> {
     return ipcRenderer.invoke("check4GBPatch")
   },
+  async cleanVariant(packageId: string, variantId: string): Promise<void> {
+    return ipcRenderer.invoke("cleanVariant", packageId, variantId)
+  },
   async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
