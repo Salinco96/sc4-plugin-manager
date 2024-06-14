@@ -12,7 +12,6 @@ import {
   VariantInfo,
   AssetInfo,
   ConfigFormat,
-  DEFAULT_VARIANT_ID,
 } from "@common/types"
 import { readConfig, readConfigs, writeConfig } from "@utils/configs"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
@@ -348,8 +347,6 @@ export async function loadRemotePackages(
               packageInfo.variants[variantId] = variantInfo
             }
           } else {
-            const variantId = DEFAULT_VARIANT_ID
-
             const defaultVariantInfo: VariantInfo = {
               assets: config.assets?.map(convertMemoAsset),
               authors: convertMemoAuthors(config.info?.author ?? config.group),
@@ -357,13 +354,13 @@ export async function loadRemotePackages(
               dependencies: config.dependencies?.map(convertMemoPackageId),
               deprecated: config.info?.summary?.match(/superseded/i) ? true : undefined,
               description: config.info?.description,
-              id: variantId,
-              name: variantId,
+              id: "default",
+              name: "Default",
               url: config.info?.website,
               version: config.version,
             }
 
-            packageInfo.variants[variantId] = defaultVariantInfo
+            packageInfo.variants[defaultVariantInfo.id] = defaultVariantInfo
           }
 
           // Return the package only if some variants have been successfully loaded

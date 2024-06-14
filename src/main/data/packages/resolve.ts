@@ -106,20 +106,30 @@ export function resolvePackages(
     const packageConfig = configs[packageId]
     const packageInfo = packages[packageId]
 
-    const packageStatus: PackageStatus = {
-      enabled: packageConfig?.enabled ?? false,
-      issues: {},
-      options: packageConfig?.options ?? {},
-      requiredBy: [],
-      variantId: Object.keys(packageInfo.variants)[0],
-    }
+    const enabled = !!packageConfig?.enabled
 
+    let variantId: string | undefined
+
+    // Select configured variant if it exists
     if (packageConfig?.variant) {
       if (packageInfo.variants[packageConfig.variant]) {
-        packageStatus.variantId = packageConfig.variant
+        variantId = packageConfig.variant
       } else {
         console.warn(`Unknown package variant '${packageId}#${packageConfig.variant}'`)
       }
+    }
+
+    // Otherwise select the default (first) variant
+    if (!variantId) {
+      variantId = Object.keys(packageInfo.variants)[0]
+    }
+
+    const packageStatus: PackageStatus = {
+      enabled,
+      issues: {},
+      options: packageConfig?.options ?? {},
+      requiredBy: [],
+      variantId,
     }
 
     resultingStatus[packageId] = packageStatus
@@ -133,9 +143,11 @@ export function resolvePackages(
     if (!configs[packageId]?.variant) {
       const packageInfo = packages[packageId]
       const packageStatus = resultingStatus[packageId]
-      const compatibleVariantIds = getCompatibleVariantIds(packageInfo, initialConflictGroups)
-      if (compatibleVariantIds.length && !compatibleVariantIds.includes(packageStatus.variantId)) {
-        packageStatus.variantId = compatibleVariantIds[0]
+      if (packageStatus.variantId) {
+        const variantIds = getCompatibleVariantIds(packageInfo, initialConflictGroups)
+        if (variantIds.length && !variantIds.includes(packageStatus.variantId)) {
+          packageStatus.variantId = variantIds[0]
+        }
       }
     }
   }
@@ -149,8 +161,12 @@ export function resolvePackages(
       return
     }
 
-    let variantInfo = packageInfo.variants[packageStatus.variantId]
+    // Enabled packages must have a variant so select the default one
+    const variantId = packageStatus.variantId ?? Object.keys(packageInfo.variants)[0]
 
+    let variantInfo = packageInfo.variants[variantId]
+
+    // Use the specified version if available, otherwise the currently-installed version
     if (packageConfig?.version) {
       if (packageConfig.version === variantInfo.update?.version) {
         variantInfo = variantInfo.update
@@ -243,7 +259,11 @@ export function resolvePackages(
     // If at least one variant is compatible
     if (isCompatible) {
       // If implicitly-selected variant is incompatible, select the default compatible one
-      if (!packageConfig?.variant && !compatibleVariantIds.includes(packageStatus.variantId)) {
+      if (
+        packageStatus.variantId &&
+        !packageConfig?.variant &&
+        !compatibleVariantIds.includes(packageStatus.variantId)
+      ) {
         packageStatus.variantId = compatibleVariantIds[0]
       }
     }
@@ -289,18 +309,30 @@ export function resolvePackageUpdates(
   resultingStatus: { [packageId: string]: PackageStatus }
   /** Packages that will have their variant changed */
   selectingVariants: { [packageId: string]: string }
+  /** Whether to trigger side-effects such as linking */
+  shouldRecalculate: boolean
 } {
+  let shouldRecalculate = false
+
+  const resultingConfigs = { ...profile.packages }
+  const resultingExternals = { ...profile.externals }
+
   // Calculate resulting configs (do not mutate current configs)
-  const resultingConfigs = Object.entries(configUpdates).reduce(
-    (configs, [id, config]) => {
-      configs[id] = { ...configs[id], ...config }
-      return configs
-    },
-    { ...profile.packages },
-  )
+  for (const packageId in configUpdates) {
+    const oldStatus = packages[packageId].status[profile.id]
+    const oldConfig = profile.packages[packageId]
+    const newConfig = configUpdates[packageId]
+    resultingConfigs[packageId] = { ...oldConfig, ...newConfig }
+    shouldRecalculate ||= !!oldStatus?.enabled || !!newConfig?.enabled
+  }
 
   // Calculate resulting externals (do not mutate current externals)
-  const resultingExternals = { ...profile.externals, ...externalUpdates }
+  for (const groupId in externalUpdates) {
+    const oldValue = profile.externals[groupId] ?? false
+    const newValue = externalUpdates[groupId] ?? oldValue
+    resultingExternals[groupId] = newValue
+    shouldRecalculate ||= oldValue !== newValue
+  }
 
   // Calculate resulting status
   const { conflictGroups, resultingStatus } = resolvePackages(
@@ -323,6 +355,7 @@ export function resolvePackageUpdates(
     const packageInfo = packages[packageId]
     const oldStatus = packageInfo.status[profile.id]
     const newStatus = resultingStatus[packageId]
+
     const variantInfo = packageInfo.variants[newStatus.variantId]
 
     if (oldStatus) {
@@ -330,23 +363,24 @@ export function resolvePackageUpdates(
         selectingVariants[packageId] = newStatus.variantId
       }
 
+      const newCompatibleVariantIds = Object.keys(packageInfo.variants).filter(
+        variantId => !newStatus.issues[variantId]?.length,
+      )
+
+      const oldCompatibleVariantIds = Object.keys(packageInfo.variants).filter(
+        variantId => !oldStatus.issues[variantId]?.length,
+      )
+
+      const defaultVariantId = newCompatibleVariantIds[0]
+
       if (newStatus.enabled) {
         if (!oldStatus.enabled) {
           enablingPackages.push(packageId)
         }
 
-        const oldCompatibleVariantIds = Object.keys(packageInfo.variants).filter(
-          variantId => !oldStatus.issues[variantId]?.length,
-        )
-
-        const newCompatibleVariantIds = Object.keys(packageInfo.variants).filter(
-          variantId => !newStatus.issues[variantId]?.length,
-        )
-
         // Ignore conflicts from packages that were already incompatible or that are explicitly changed by this action
         const ignoreConflicts = oldCompatibleVariantIds.length === 0 || !!configUpdates[packageId]
 
-        const defaultVariantId = newCompatibleVariantIds[0]
         const isChanged = !oldStatus.enabled || oldStatus.variantId !== newStatus.variantId
         const isConflicted = !newCompatibleVariantIds.includes(newStatus.variantId)
         const isInstalled = !!variantInfo.installed
@@ -363,11 +397,6 @@ export function resolvePackageUpdates(
           } else {
             incompatiblePackages.push(packageId)
           }
-        }
-
-        // If only compatible variant is explicitly selected, remove explicit variant
-        if (newCompatibleVariantIds.length === 1 && packageConfig?.variant === defaultVariantId) {
-          resultingConfigs[packageId] = { ...packageConfig, variant: undefined }
         }
 
         // If selected variant is not installed, mark it for installation
@@ -399,29 +428,45 @@ export function resolvePackageUpdates(
     }
   }
 
-  // console.debug("Updating configs", {
-  //   packages: configUpdates,
-  //   externals: externalUpdates,
-  // })
+  // Remove explicit variant if it is the default
+  for (const packageId in resultingStatus) {
+    const packageConfig = resultingConfigs[packageId]
+    const packageInfo = packages[packageId]
 
-  // console.debug("Resulting configs", {
-  //   packages: resultingConfigs,
-  //   externals: resultingExternals,
-  // })
+    const defaultVariantId =
+      Object.keys(packageInfo.variants).find(
+        variantId => !resultingStatus[packageId].issues[variantId]?.length,
+      ) ?? Object.keys(packageInfo.variants)[0]
 
-  // console.debug("Resulting changes", {
-  //   disablingPackages,
-  //   enablingPackages,
-  //   installingVariants,
-  //   selectingVariants,
-  // })
+    if (packageConfig?.variant === defaultVariantId) {
+      resultingConfigs[packageId] = { ...packageConfig, variant: undefined }
+    }
+  }
 
-  // console.debug("Resulting conflicts", {
-  //   explicitVariantChanges,
-  //   implicitVariantChanges,
-  //   incompatibleExternals,
-  //   incompatiblePackages,
-  // })
+  console.debug("Updating configs", {
+    packages: configUpdates,
+    externals: externalUpdates,
+  })
+
+  console.debug("Resulting configs", {
+    packages: resultingConfigs,
+    externals: resultingExternals,
+    shouldRecalculate,
+  })
+
+  console.debug("Resulting changes", {
+    disablingPackages,
+    enablingPackages,
+    installingVariants,
+    selectingVariants,
+  })
+
+  console.debug("Resulting conflicts", {
+    explicitVariantChanges,
+    implicitVariantChanges,
+    incompatibleExternals,
+    incompatiblePackages,
+  })
 
   return {
     disablingPackages,
@@ -435,5 +480,6 @@ export function resolvePackageUpdates(
     resultingConfigs,
     resultingExternals,
     selectingVariants,
+    shouldRecalculate,
   }
 }

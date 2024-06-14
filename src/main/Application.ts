@@ -30,7 +30,6 @@ import {
   ProfileInfo,
   Settings,
   getDefaultVariant,
-  getDefaultVariantStrict,
 } from "@common/types"
 import { assert } from "@common/utils/types"
 import { extract } from "@utils/extract"
@@ -77,7 +76,7 @@ import {
   isURL,
   moveTo,
   readFile,
-  removeIfEmpty,
+  removeIfEmptyRecursive,
   removeIfPresent,
   toPosix,
 } from "./utils/files"
@@ -115,8 +114,8 @@ export class Application {
   public readonly gamePath: string
   public readonly rootPath: string
 
-  public readonly links: { [from: string]: string } = {}
-  public readonly externalFiles = new Set<string>()
+  public links: { [from: string]: string } = {}
+  public externalFiles = new Set<string>()
 
   public readonly tasks: {
     readonly download: TaskManager
@@ -188,6 +187,7 @@ export class Application {
     const targetPath = path.join(pluginsBackupPath, relativePath)
     await moveTo(fullPath, targetPath)
     this.externalFiles.delete(fullPath)
+    await removeIfEmptyRecursive(path.dirname(fullPath), pluginsPath)
   }
 
   public async check4GBPatch(isStartupCheck?: boolean): Promise<void> {
@@ -204,7 +204,7 @@ export class Application {
         const mzHeader = Buffer.alloc(0x40)
         assert(stat.size >= mzHeader.length, "Invalid file length")
         await file.read(mzHeader, 0x00, mzHeader.length, 0x00)
-        assert(mzHeader.readUInt16LE(0x00) === 0x5a4d, "Invalid MZ header signature")
+        assert(mzHeader.readUInt16LE(0xf00) === 0x5a4d, "Invalid MZ header signature")
         const peHeaderOffset = mzHeader.readInt32LE(0x3c)
 
         // Read PE header
@@ -342,7 +342,7 @@ export class Application {
       if (this.packages && currentProfile) {
         let nPackages = 0
         const nTotalPackages = Object.keys(this.packages).length
-        const increment = Math.floor(nTotalPackages / 30)
+        const increment = Math.floor(nTotalPackages / 100)
         for (const packageId in this.packages) {
           const packageStatus = this.packages[packageId].status[currentProfile.id]
           if (packageStatus?.enabled) {
@@ -724,6 +724,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     this.status.loader = "Loading profiles..."
     this.sendStatus()
     await this.loadProfiles()
+    this.sendProfiles()
 
     // Load settings...
     this.status.loader = "Loading settings..."
@@ -732,31 +733,35 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
 
     // TODO: Move to function
     // Config file does not exist, this must be the first time launching the manager
-    if (!settings.format) {
-      const plugins = await fs.readdir(this.getPluginsPath())
+    if (settings.format) {
+      this.sendSettings()
+    } else {
+      const pluginsPath = this.getPluginsPath()
+      const pluginsBackupPath = path.join(path.dirname(pluginsPath), DIRNAMES.pluginsBackup)
+      const plugins = await fs.readdir(pluginsPath)
 
       if (plugins.length) {
         const [doBackup] = await this.showConfirmation(
           "SC4 Plugin Manager",
-          "Do you want to back up your Plugins folder?",
-          "Your Plugins folder is not currently empty. The current version of the Plugin Manager is experimental and will not be able to detect conflicts with files you have added manually. We therefore recommend backing up your current Plugins folder, using the Plugin Manager on an empty folder, then copying additional plugins back.",
+          `Do you want to back up your ${DIRNAMES.plugins} folder?`,
+          `Your ${DIRNAMES.plugins} folder is not currently empty. The current version of the Plugin Manager is experimental and will not be able to detect conflicts with files you have added manually. We therefore recommend backing up your current ${DIRNAMES.plugins} folder, using the Plugin Manager on an empty folder, then copying additional plugins back.`,
         )
 
         if (doBackup) {
           try {
             // Rename folder, then recreate new empty one
-            await fs.rename(this.getPluginsPath(), this.getPluginsPath() + " (Backup)")
-            await fs.mkdir(this.getPluginsPath())
+            await moveTo(pluginsPath, pluginsBackupPath)
+            await createIfMissing(pluginsPath)
             await this.showSuccess(
               "SC4 Plugin Manager",
-              "Your Plugins folder was backed up as Plugins (Backup).",
+              `Your ${DIRNAMES.plugins} folder was backed up as ${DIRNAMES.pluginsBackup}.`,
             )
           } catch (error) {
-            console.error("Failed to backup Plugins folder", error)
+            console.error(`Failed to backup ${DIRNAMES.plugins} folder`, error)
             const { message } = error as Error
             await this.showSuccess(
               "SC4 Plugin Manager",
-              "Failed to backup Plugins folder.",
+              `Failed to backup ${DIRNAMES.plugins} folder.`,
               message,
             )
           }
@@ -822,12 +827,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     // Resolving packages if profile exists
     const currentProfile = this.getCurrentProfile()
     if (currentProfile) {
-      // this.status.loader = "Resolving dependencies..."
-      // this.sendStatus()
+      // Resolve package status and dependencies (will also trigger linking)
       await this.recalculatePackages(currentProfile.id)
-
-      // this.status.loader = "Checking for conflicts..."
-      // this.sendStatus()
+      // Run cleaner for all enabled packages
       await this.cleanAll()
     }
   }
@@ -1179,7 +1181,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
         })
 
         let nFiles = 0
-        const increment = Math.floor(files.length / 30)
+        const increment = Math.floor(files.length / 100)
         for (const file of files) {
           const fullPath = file.fullpath()
 
@@ -1251,11 +1253,11 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
 
           let nPackages = 0
           const nTotalPackages = Object.keys(this.packages!).length
-          const increment = Math.floor(nTotalPackages / 30)
+          const increment = Math.floor(nTotalPackages / 100)
 
           for (const packageId in this.packages) {
             const packageInfo = this.packages[packageId]
-            const status = packageInfo.status[currentProfile.id]!
+            const status = packageInfo.status[currentProfile.id]! // required at this time
             if (status.enabled) {
               const variantId = status.variantId
               const variantInfo = packageInfo.variants[variantId]
@@ -1304,13 +1306,8 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
           for (const linkPath of oldLinks) {
             nRemoved++
             await removeIfPresent(linkPath)
-            await removeIfEmpty(path.dirname(linkPath))
+            await removeIfEmptyRecursive(path.dirname(linkPath), pluginsPath)
             delete this.links[linkPath]
-
-            let parentPath = path.dirname(linkPath)
-            while (!pluginsPath.startsWith(parentPath) && (await removeIfEmpty(parentPath))) {
-              parentPath = path.dirname(parentPath)
-            }
           }
 
           context.debug(`Done (added ${nCreated}, removed ${nRemoved}, updated ${nUpdated})`)
@@ -1539,6 +1536,8 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
 
   public async reload(): Promise<void> {
     this.assets = {}
+    this.externalFiles = new Set()
+    this.links = {}
     this.packages = undefined
     this.profiles = undefined
     this.sessions = {}
@@ -1552,7 +1551,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
 
     this.tasks.linker.invalidateCache("init")
 
-    // TODO: Send reload message to window so that it correctly clears its own data as well
+    this.sendStateReset()
 
     await this.initialize()
   }
@@ -1690,7 +1689,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     const packageInfo = this.getPackageInfo(packageId)
     if (packageInfo && profileInfo) {
       const packageConfig = profileInfo.packages[packageId]
-      const defaultVariant = getDefaultVariantStrict(packageInfo, profileInfo)
+      const defaultVariant = getDefaultVariant(packageInfo, profileInfo)
       if (variantId !== defaultVariant?.id) {
         if (packageConfig) {
           packageConfig.variant = variantId
@@ -1707,36 +1706,40 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
   }
 
   protected sendPackage(packageId: string): void {
-    this.sendState({ packages: { [packageId]: this.getPackageInfo(packageId) ?? null } })
+    this.sendStateUpdate({ packages: { [packageId]: this.getPackageInfo(packageId) ?? null } })
   }
 
   protected sendPackages(): void {
-    this.sendState({ packages: this.packages })
+    this.sendStateUpdate({ packages: this.packages })
   }
 
   protected sendProfile(profileId: string): void {
-    this.sendState({ profiles: { [profileId]: this.getProfileInfo(profileId) ?? null } })
+    this.sendStateUpdate({ profiles: { [profileId]: this.getProfileInfo(profileId) ?? null } })
   }
 
   protected sendProfiles(): void {
-    this.sendState({ profiles: this.profiles })
+    this.sendStateUpdate({ profiles: this.profiles })
   }
 
   protected sendSessions(): void {
     const simtropolisUserId = this.sessions.simtropolis && this.sessions.simtropolis.userId
-    this.sendState({ sessions: { simtropolis: { userId: simtropolisUserId } } })
+    this.sendStateUpdate({ sessions: { simtropolis: { userId: simtropolisUserId } } })
   }
 
   protected sendSettings(): void {
-    this.sendState({ settings: this.settings })
+    this.sendStateUpdate({ settings: this.settings })
   }
 
-  protected sendState(data: Partial<ApplicationState>): void {
+  protected sendStateReset(): void {
+    this.mainWindow?.webContents.postMessage("resetState", this.getState())
+  }
+
+  protected sendStateUpdate(data: Partial<ApplicationState>): void {
     this.mainWindow?.webContents.postMessage("updateState", data)
   }
 
   protected sendStatus(): void {
-    this.sendState({ status: this.status })
+    this.sendStateUpdate({ status: this.status })
   }
 
   protected setApplicationMenu(): void {
@@ -1884,9 +1887,8 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
   }
 
   public async updateProfile(profileId: string, update: ProfileUpdate): Promise<boolean> {
-    const packages = this.packages
     const profile = this.getProfileInfo(profileId)
-    if (!packages || !profile) {
+    if (!this.packages || !profile) {
       return false
     }
 
@@ -1906,10 +1908,11 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
         resultingConfigs,
         resultingExternals,
         resultingStatus,
-      } = resolvePackageUpdates(packages, profile, update.packages, update.externals)
+        shouldRecalculate,
+      } = resolvePackageUpdates(this.packages, profile, update.packages, update.externals)
 
       try {
-        if (this.packages) {
+        if (shouldRecalculate) {
           for (const packageId of disablingPackages) {
             const packageStatus = this.packages[packageId].status[profileId]
             if (packageStatus) {
@@ -1923,248 +1926,248 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
               packageStatus.action = "enabling"
             }
           }
-        }
 
-        // Apply implicit variant changes automatically
-        if (Object.keys(implicitVariantChanges).length) {
-          for (const packageId in implicitVariantChanges) {
-            update.packages[packageId] = { variant: implicitVariantChanges[packageId][1] }
+          // Apply implicit variant changes automatically
+          if (Object.keys(implicitVariantChanges).length) {
+            for (const packageId in implicitVariantChanges) {
+              update.packages[packageId] = { variant: implicitVariantChanges[packageId][1] }
+            }
+
+            // Recalculate
+            return this.updateProfile(profileId, update)
           }
 
-          // Recalculate
-          return this.updateProfile(profileId, update)
-        }
+          // Confirm incompatible externals
+          if (incompatibleExternals.length) {
+            const groupNames = incompatibleExternals.map(groupId => {
+              return `  - ${groupId}`
+            })
 
-        // Confirm incompatible externals
-        if (incompatibleExternals.length) {
-          const groupNames = incompatibleExternals.map(groupId => {
-            return `  - ${groupId}`
-          })
-
-          // TODO: Use our own modal rather than system one?
-          const options: MessageBoxOptions = {
-            buttons: ["Replace external packages", "Ignore conflicts", "Cancel"],
-            cancelId: 2,
-            defaultId: 0,
-            detail: `The following external packages are incompatible with this change:
+            // TODO: Use our own modal rather than system one?
+            const options: MessageBoxOptions = {
+              buttons: ["Replace external packages", "Ignore conflicts", "Cancel"],
+              cancelId: 2,
+              defaultId: 0,
+              detail: `The following external packages are incompatible with this change:
 ${groupNames.sort().join("\n")}
 
 If you wish to replace them, please remove all corresponding files from your Plugins folder before continuing. Otherwise, you can resolve each conflict manually later.`,
-            message: "Replace external packages?",
-            noLink: true,
-            title: "SC4 Plugin Manager",
-            type: "warning",
-          }
-
-          let result: MessageBoxReturnValue
-          if (this.mainWindow) {
-            result = await dialog.showMessageBox(this.mainWindow, options)
-          } else {
-            result = await dialog.showMessageBox(options)
-          }
-
-          // Cancel
-          if (result.response === 2) {
-            return false
-          }
-
-          // Ignore conflicted externals
-          if (result.response === 1) {
-            for (const groupId of incompatibleExternals) {
-              update.externals[groupId] = true
-            }
-          }
-
-          // Disable conflicted externals
-          if (result.response === 0) {
-            for (const groupId of incompatibleExternals) {
-              update.externals[groupId] = false
+              message: "Replace external packages?",
+              noLink: true,
+              title: "SC4 Plugin Manager",
+              type: "warning",
             }
 
-            // Recalculate
-            return this.updateProfile(profileId, update)
-          }
-        }
-
-        // Confirm fully-incompatible packages
-        if (incompatiblePackages.length) {
-          const packageNames = incompatiblePackages.map(packageId => {
-            const info = this.getPackageInfo(packageId)!
-            return `  - ${info.name}`
-          })
-
-          // TODO: Use our own modal rather than system one?
-          const options: MessageBoxOptions = {
-            buttons: ["Disable incompatible packages", "Ignore conflicts", "Cancel"],
-            cancelId: 2,
-            defaultId: 0,
-            detail: `The following enabled packages are incompatible with this change:
-${packageNames.sort().join("\n")}
-
-You can either disable all incompatible packages now, or resolve each conflict manually later.`,
-            message: "Disable incompatible packages?",
-            noLink: true,
-            title: "SC4 Plugin Manager",
-            type: "warning",
-          }
-
-          let result: MessageBoxReturnValue
-          if (this.mainWindow) {
-            result = await dialog.showMessageBox(this.mainWindow, options)
-          } else {
-            result = await dialog.showMessageBox(options)
-          }
-
-          // Cancel
-          if (result.response === 2) {
-            return false
-          }
-
-          // Ignore conflicted packages
-          if (result.response === 1) {
-            for (const packageId of incompatiblePackages) {
-              update.packages[packageId] = { enabled: true }
-            }
-          }
-
-          // Disable conflicted packages
-          if (result.response === 0) {
-            for (const packageId of incompatiblePackages) {
-              update.packages[packageId] = { enabled: false }
+            let result: MessageBoxReturnValue
+            if (this.mainWindow) {
+              result = await dialog.showMessageBox(this.mainWindow, options)
+            } else {
+              result = await dialog.showMessageBox(options)
             }
 
-            // Recalculate
-            return this.updateProfile(profileId, update)
-          }
-        }
-
-        // Confirm explicit variant changes
-        if (Object.keys(explicitVariantChanges).length) {
-          const packageNames = Object.entries(explicitVariantChanges).map(
-            ([packageId, [oldVariantId, newVariantId]]) => {
-              const packageInfo = packages[packageId]
-              const oldVariant = packageInfo.variants[oldVariantId]
-              const newVariant = packageInfo.variants[newVariantId]
-              if (oldVariant) {
-                return `  - ${packageInfo.name}: ${oldVariant.name} -> ${newVariant.name}`
-              } else {
-                return `  - ${packageInfo.name}`
-              }
-            },
-          )
-
-          // TODO: Use our own modal rather than system one?
-          const options: MessageBoxOptions = {
-            buttons: ["Install compatible variants", "Ignore conflicts", "Cancel"],
-            cancelId: 2,
-            defaultId: 0,
-            detail: `The following enabled variants are incompatible with this change, but compatible variants can be installed:
-${packageNames.sort().join("\n")}
-
-You can either automatically install and switch to compatible variants now, or resolve each conflict manually later.`,
-            message: "Install incompatible variants?",
-            noLink: true,
-            title: "SC4 Plugin Manager",
-            type: "warning",
-          }
-
-          let result: MessageBoxReturnValue
-          if (this.mainWindow) {
-            result = await dialog.showMessageBox(this.mainWindow, options)
-          } else {
-            result = await dialog.showMessageBox(options)
-          }
-
-          // Cancel
-          if (result.response === 2) {
-            return false
-          }
-
-          // Ignore conflicted variants
-          if (result.response === 1) {
-            for (const packageId in explicitVariantChanges) {
-              update.packages[packageId] = { variant: explicitVariantChanges[packageId][0] }
-            }
-          }
-
-          // Switch to compatible variants
-          if (result.response === 0) {
-            for (const packageId in explicitVariantChanges) {
-              update.packages[packageId] = { variant: explicitVariantChanges[packageId][1] }
+            // Cancel
+            if (result.response === 2) {
+              return false
             }
 
-            // Recalculate
-            return this.updateProfile(profileId, update)
-          }
-        }
-
-        // If there are packages to install...
-        if (Object.keys(installingVariants).length) {
-          /** Assets that will be downloaded */
-          const missingAssets = new Map<string, AssetInfo>()
-
-          // Calculate list of missing assets
-          for (const packageId in installingVariants) {
-            const variantId = installingVariants[packageId]
-            const variantInfo = packages[packageId].variants[variantId]
-            if (variantInfo?.assets) {
-              for (const asset of variantInfo.assets) {
-                const assetInfo = this.getAssetInfo(asset.id)
-                if (assetInfo && !missingAssets.has(asset.id)) {
-                  const key = this.getDownloadKey(assetInfo)
-                  const downloaded = await exists(this.getDownloadPath(key))
-                  if (!downloaded) {
-                    missingAssets.set(asset.id, assetInfo)
-                  }
-                }
+            // Ignore conflicted externals
+            if (result.response === 1) {
+              for (const groupId of incompatibleExternals) {
+                update.externals[groupId] = true
               }
             }
+
+            // Disable conflicted externals
+            if (result.response === 0) {
+              for (const groupId of incompatibleExternals) {
+                update.externals[groupId] = false
+              }
+
+              // Recalculate
+              return this.updateProfile(profileId, update)
+            }
           }
 
-          const installingDependencyIds = Object.keys(installingVariants).filter(
-            packageId => !resultingConfigs[packageId]?.enabled,
-          )
-
-          // Confirm installation of dependencies
-          if (missingAssets.size) {
-            const packages = installingDependencyIds.map(packageId => {
+          // Confirm fully-incompatible packages
+          if (incompatiblePackages.length) {
+            const packageNames = incompatiblePackages.map(packageId => {
               const info = this.getPackageInfo(packageId)!
               return `  - ${info.name}`
             })
 
-            const totalSize = Array.from(missingAssets.values()).reduce(
-              (total, asset) => (asset.size ? total + asset.size : NaN),
-              0,
-            )
-
             // TODO: Use our own modal rather than system one?
-            const [confirmed] = await this.showConfirmation(
-              "SC4 Plugin Manager",
-              "Install new package?",
-              `${
-                installingDependencyIds.length
-                  ? `This action requires the installation of ${installingDependencyIds.length} additional package(s):
-${packages.sort().join("\n")}
+            const options: MessageBoxOptions = {
+              buttons: ["Disable incompatible packages", "Ignore conflicts", "Cancel"],
+              cancelId: 2,
+              defaultId: 0,
+              detail: `The following enabled packages are incompatible with this change:
+${packageNames.sort().join("\n")}
 
-In total, `
-                  : ""
-              }${missingAssets.size} asset(s)${totalSize ? ` (${(totalSize / 1e6).toFixed(2)} Mo)` : ""} will be downloaded.`,
-            )
+You can either disable all incompatible packages now, or resolve each conflict manually later.`,
+              message: "Disable incompatible packages?",
+              noLink: true,
+              title: "SC4 Plugin Manager",
+              type: "warning",
+            }
 
-            if (!confirmed) {
+            let result: MessageBoxReturnValue
+            if (this.mainWindow) {
+              result = await dialog.showMessageBox(this.mainWindow, options)
+            } else {
+              result = await dialog.showMessageBox(options)
+            }
+
+            // Cancel
+            if (result.response === 2) {
               return false
+            }
+
+            // Ignore conflicted packages
+            if (result.response === 1) {
+              for (const packageId of incompatiblePackages) {
+                update.packages[packageId] = { enabled: true }
+              }
+            }
+
+            // Disable conflicted packages
+            if (result.response === 0) {
+              for (const packageId of incompatiblePackages) {
+                update.packages[packageId] = { enabled: false }
+              }
+
+              // Recalculate
+              return this.updateProfile(profileId, update)
             }
           }
 
-          // Install all packages
-          await Promise.all(
-            Object.entries(installingVariants).map(([packageId, variantId]) =>
-              this.installVariant(packageId, variantId),
-            ),
-          )
+          // Confirm explicit variant changes
+          if (Object.keys(explicitVariantChanges).length) {
+            const packageNames = Object.entries(explicitVariantChanges).map(
+              ([packageId, [oldVariantId, newVariantId]]) => {
+                const packageInfo = this.getPackageInfo(packageId)
+                const oldVariant = packageInfo?.variants[oldVariantId]
+                const newVariant = packageInfo?.variants[newVariantId]
+                if (oldVariant) {
+                  return `  - ${packageInfo?.name}: ${oldVariant.name} -> ${newVariant?.name}`
+                } else {
+                  return `  - ${packageInfo?.name}`
+                }
+              },
+            )
 
-          // Recalculate (conflicts may have changed during install)
-          return this.updateProfile(profileId, update)
+            // TODO: Use our own modal rather than system one?
+            const options: MessageBoxOptions = {
+              buttons: ["Install compatible variants", "Ignore conflicts", "Cancel"],
+              cancelId: 2,
+              defaultId: 0,
+              detail: `The following enabled variants are incompatible with this change, but compatible variants can be installed:
+${packageNames.sort().join("\n")}
+
+You can either automatically install and switch to compatible variants now, or resolve each conflict manually later.`,
+              message: "Install incompatible variants?",
+              noLink: true,
+              title: "SC4 Plugin Manager",
+              type: "warning",
+            }
+
+            let result: MessageBoxReturnValue
+            if (this.mainWindow) {
+              result = await dialog.showMessageBox(this.mainWindow, options)
+            } else {
+              result = await dialog.showMessageBox(options)
+            }
+
+            // Cancel
+            if (result.response === 2) {
+              return false
+            }
+
+            // Ignore conflicted variants
+            if (result.response === 1) {
+              for (const packageId in explicitVariantChanges) {
+                update.packages[packageId] = { variant: explicitVariantChanges[packageId][0] }
+              }
+            }
+
+            // Switch to compatible variants
+            if (result.response === 0) {
+              for (const packageId in explicitVariantChanges) {
+                update.packages[packageId] = { variant: explicitVariantChanges[packageId][1] }
+              }
+
+              // Recalculate
+              return this.updateProfile(profileId, update)
+            }
+          }
+
+          // If there are packages to install...
+          if (Object.keys(installingVariants).length) {
+            /** Assets that will be downloaded */
+            const missingAssets = new Map<string, AssetInfo>()
+
+            // Calculate list of missing assets
+            for (const packageId in installingVariants) {
+              const variantId = installingVariants[packageId]
+              const variantInfo = this.getPackageInfo(packageId)?.variants[variantId]
+              if (variantInfo?.assets) {
+                for (const asset of variantInfo.assets) {
+                  const assetInfo = this.getAssetInfo(asset.id)
+                  if (assetInfo && !missingAssets.has(asset.id)) {
+                    const key = this.getDownloadKey(assetInfo)
+                    const downloaded = await exists(this.getDownloadPath(key))
+                    if (!downloaded) {
+                      missingAssets.set(asset.id, assetInfo)
+                    }
+                  }
+                }
+              }
+            }
+
+            const installingDependencyIds = Object.keys(installingVariants).filter(
+              packageId => !resultingConfigs[packageId]?.enabled,
+            )
+
+            // Confirm installation of dependencies
+            if (missingAssets.size) {
+              const packages = installingDependencyIds.map(packageId => {
+                const info = this.getPackageInfo(packageId)!
+                return `  - ${info.name}`
+              })
+
+              const totalSize = Array.from(missingAssets.values()).reduce(
+                (total, asset) => (asset.size ? total + asset.size : NaN),
+                0,
+              )
+
+              // TODO: Use our own modal rather than system one?
+              const [confirmed] = await this.showConfirmation(
+                "SC4 Plugin Manager",
+                "Install new package?",
+                `${
+                  installingDependencyIds.length
+                    ? `This action requires the installation of ${installingDependencyIds.length} additional package(s):
+${packages.sort().join("\n")}
+
+In total, `
+                    : ""
+                }${missingAssets.size} asset(s)${totalSize ? ` (${(totalSize / 1e6).toFixed(2)} Mo)` : ""} will be downloaded.`,
+              )
+
+              if (!confirmed) {
+                return false
+              }
+            }
+
+            // Install all packages
+            await Promise.all(
+              Object.entries(installingVariants).map(([packageId, variantId]) =>
+                this.installVariant(packageId, variantId),
+              ),
+            )
+
+            // Recalculate (conflicts may have changed during install)
+            return this.updateProfile(profileId, update)
+          }
         }
 
         // Apply config changes
@@ -2173,19 +2176,22 @@ In total, `
 
         // Apply status changes
         for (const packageId in resultingStatus) {
-          packages[packageId].status[profileId] = resultingStatus[packageId]
-        }
-
-        // Run cleaner
-        for (const packageId of enablingPackages) {
-          const { variantId } = resultingStatus[packageId]
-          await this.cleanVariant(packageId, variantId)
+          this.packages[packageId].status[profileId] = resultingStatus[packageId]
         }
 
         this.sendPackages()
-        this.linkPackages()
+
+        // Run cleaner and linker
+        if (shouldRecalculate) {
+          for (const packageId of enablingPackages) {
+            const { variantId } = resultingStatus[packageId]
+            await this.cleanVariant(packageId, variantId)
+          }
+
+          this.linkPackages()
+        }
       } finally {
-        if (this.packages) {
+        if (this.packages && shouldRecalculate) {
           for (const packageId of disablingPackages) {
             const packageStatus = this.packages[packageId].status[profileId]
             if (packageStatus?.action === "disabling") {

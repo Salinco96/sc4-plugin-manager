@@ -1,3 +1,11 @@
+import {
+  getVariantIssues,
+  isDeprecated,
+  isEnabled,
+  isExperimental,
+  isMissing,
+  isOutdated,
+} from "@common/packages"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 
 import { PackageBannerConflict } from "./PackageBannerConflict"
@@ -12,18 +20,20 @@ export function PackageBanners({ packageId }: { packageId: string }): JSX.Elemen
   const variantInfo = useCurrentVariant(packageId)
   const variantId = variantInfo.id
 
-  const issues = packageStatus.issues[variantId]
+  const issues = getVariantIssues(variantInfo, packageStatus)
 
   return (
     <>
-      {packageStatus.enabled && !variantInfo.installed && (
+      {isMissing(variantInfo, packageStatus) && (
         <PackageBannerMissing packageId={packageId} variantId={variantId} />
       )}
-      {variantInfo.update && <PackageBannerOutdated packageId={packageId} variantId={variantId} />}
-      {variantInfo.deprecated && <PackageBannerDeprecated />}
-      {variantInfo.experimental && <PackageBannerExperimental />}
+      {isOutdated(variantInfo) && (
+        <PackageBannerOutdated packageId={packageId} variantId={variantId} />
+      )}
+      {isDeprecated(variantInfo) && <PackageBannerDeprecated />}
+      {isExperimental(variantInfo) && <PackageBannerExperimental />}
       {issues?.map(reason =>
-        packageStatus.enabled ? (
+        isEnabled(variantInfo, packageStatus) ? (
           <PackageBannerConflict key={reason} reason={reason} />
         ) : (
           <PackageBannerIncompatible

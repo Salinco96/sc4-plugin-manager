@@ -5,7 +5,7 @@ import {
   Download as DownloadedIcon,
   FileDownloadDone as EnabledIcon,
   FileDownloadOff as LocalIcon,
-  // Science as ExperimentalIcon,
+  Science as ExperimentalIcon,
   ViewInAr as DependenciesIcon,
 } from "@mui/icons-material"
 import {
@@ -18,44 +18,29 @@ import {
 } from "@mui/material"
 
 import { PackageCategory, PackageState } from "@common/types"
-import { getCurrentVariant } from "@utils/packages"
-import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
+import { useAuthors, usePackageFilters, useStoreActions } from "@utils/store"
 
-import { TagType, createTags, getTagLabel } from "./utils"
+import { TagType, createTags, getTagLabel, isValidTag } from "./utils"
 
 export function PackageListFilters(): JSX.Element {
   const actions = useStoreActions()
 
-  const currentProfile = useCurrentProfile()
-  const packages = useStore(store => store.packages)
-  const packageFilters = useStore(store => store.packageFilters)
+  const authors = useAuthors()
+  const packageFilters = usePackageFilters()
 
   const categories: string[] = useMemo(() => {
     // TODO: More categories, filter by other tags, filter by authors
     return Object.values(PackageCategory).sort()
   }, [])
 
-  const authors: string[] = useMemo(() => {
-    const authors = new Set<string>()
-
-    if (packages) {
-      for (const packageInfo of Object.values(packages)) {
-        const variantInfo = getCurrentVariant(packageInfo, currentProfile)
-        for (const author of variantInfo.authors) {
-          authors.add(author)
-        }
-      }
-    }
-
-    return Array.from(authors).sort()
-  }, [currentProfile, packages])
-
   const options: string[] = useMemo(() => {
-    if (!packageFilters.search.trim()) {
+    const lastWord = packageFilters.search.match(/\s*,?\s*(\w+)\s*$/)?.[1]
+    if (!lastWord) {
       return []
     }
 
-    const pattern = RegExp("\\b" + packageFilters.search.trim().replaceAll(/\W/g, "\\$&"), "i")
+    const pattern = RegExp("\\b" + lastWord, "i")
+
     return [
       ...createTags(
         TagType.AUTHOR,
@@ -124,7 +109,7 @@ export function PackageListFilters(): JSX.Element {
             <IncompatibleIcon />
           </ToggleButton>
         </Tooltip>
-        {/* <Tooltip
+        <Tooltip
           placement="bottom"
           title={
             packageFilters.incompatible
@@ -135,7 +120,7 @@ export function PackageListFilters(): JSX.Element {
           <ToggleButton value="experimental">
             <ExperimentalIcon />
           </ToggleButton>
-        </Tooltip> */}
+        </Tooltip>
         <Tooltip
           placement="bottom"
           title={packageFilters.dependencies ? "Hide dependencies" : "Show dependencies"}
@@ -148,14 +133,32 @@ export function PackageListFilters(): JSX.Element {
       <Autocomplete<string, true, false, true>
         disableCloseOnSelect
         disablePortal
+        // We do our own filtering
         filterOptions={options => options}
         freeSolo
         getOptionLabel={getTagLabel}
         inputValue={packageFilters.search}
         limitTags={4}
         multiple
-        onChange={(_, tags) => actions.setPackageFilters({ tags })}
-        onInputChange={(_, search) => actions.setPackageFilters({ search })}
+        onChange={(_, tags, reason) => {
+          const validTags = tags.filter(isValidTag)
+
+          if (reason === "selectOption" && tags.length === validTags.length) {
+            actions.setPackageFilters({
+              tags: validTags,
+              search: packageFilters.search.replace(/\s*,?\s*(\w+)\s*$/, ""),
+            })
+          } else {
+            actions.setPackageFilters({
+              tags: validTags,
+            })
+          }
+        }}
+        onInputChange={(_, search, reason) => {
+          if (reason !== "reset") {
+            actions.setPackageFilters({ search })
+          }
+        }}
         options={options}
         size="small"
         sx={{ flex: 1 }}

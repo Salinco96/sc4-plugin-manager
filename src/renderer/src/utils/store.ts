@@ -6,8 +6,16 @@ import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
 import { PackageInfo, PackageState, ProfileInfo, Settings } from "@common/types"
+import { compact } from "@common/utils/objects"
 
+import { computePackageList, getPackageListItemSize } from "./packages"
 import { SnackbarProps, SnackbarType } from "./snackbar"
+
+export interface PackageUi {
+  itemSize: number
+  variantId: string
+  variantIds: string[]
+}
 
 export interface PackageFilters {
   dependencies: boolean
@@ -39,6 +47,7 @@ export interface StoreActions {
   openVariantRepository(packageId: string, variantId: string): Promise<boolean>
   openVariantURL(packageId: string, variantId: string): Promise<boolean>
   removePackage(packageId: string, variantId: string): Promise<boolean>
+  resetState(): void
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
   showErrorToast(message: string): void
@@ -54,12 +63,17 @@ export interface StoreActions {
 
 export interface Store {
   actions: StoreActions
+  authors: string[]
   modal?: {
     action: (result: boolean) => void
     data: ModalData<ModalID>
     id: ModalID
   }
   packageFilters: PackageFilters
+  filteredPackages: string[]
+  packageUi: {
+    [packageId: string]: PackageUi
+  }
   packages?: {
     [packageId: string]: PackageInfo
   }
@@ -204,17 +218,61 @@ export const useStore = create<Store>()((set, get): Store => {
           return false
         }
       },
+      resetState() {
+        console.debug("Reset state")
+
+        updateState({
+          $merge: {
+            authors: [],
+            filteredPackages: [],
+            packageUi: {},
+            packages: undefined,
+            profiles: undefined,
+            sessions: {
+              simtropolis: {},
+            },
+            settings: undefined,
+            status: {
+              linker: null,
+              loader: null,
+              ongoingDownloads: [],
+              ongoingExtracts: [],
+            },
+          },
+        })
+      },
       setPackageFilters(filters) {
-        updateState({ packageFilters: { $merge: filters } })
+        set(store => {
+          const packageFilters = { ...store.packageFilters, ...filters }
+          return { packageFilters, ...computePackageList({ ...store, packageFilters }, true) }
+        })
       },
       async setPackageVariant(packageId, variantId) {
-        const profileId = get().settings?.currentProfile
-        if (!profileId) {
+        const store = get()
+        const packageInfo = getPackageInfo(store, packageId)
+        const profileInfo = getCurrentProfile(store)
+        const variantInfo = packageInfo?.variants[variantId]
+        if (!packageInfo || !variantInfo) {
           return false
         }
 
+        if (!profileInfo) {
+          updateState({
+            packageUi: {
+              [packageId]: {
+                $merge: {
+                  itemSize: getPackageListItemSize(variantInfo),
+                  variantId,
+                },
+              },
+            },
+          })
+
+          return true
+        }
+
         try {
-          return await window.api.updateProfile(profileId, {
+          return await window.api.updateProfile(profileInfo.id, {
             packages: {
               [packageId]: { variant: variantId },
             },
@@ -279,71 +337,51 @@ export const useStore = create<Store>()((set, get): Store => {
         }
       },
       updateState(data) {
-        console.info("Update state", data)
+        try {
+          if (Object.keys(data).length !== 1 || !data.status) {
+            console.debug("Update state", data)
+          }
 
-        if (data.packages) {
-          updateState({
-            packages: packages =>
-              Object.entries(data.packages!).reduce(
-                (packages, [id, info]) => {
-                  if (info) {
-                    packages[id] = info
-                  } else {
-                    delete packages[id]
-                  }
+          if (data.packages) {
+            set(store => {
+              const packages = compact({ ...store.packages, ...data.packages })
+              return { packages, ...computePackageList({ ...store, packages }, false) }
+            })
+          }
 
-                  return packages
-                },
-                {
-                  ...packages,
-                },
-              ),
-          })
-        }
+          if (data.profiles) {
+            updateState({ profiles: profiles => compact({ ...profiles, ...data.profiles }) })
+          }
 
-        if (data.profiles) {
-          updateState({
-            profiles: profiles =>
-              Object.entries(data.profiles!).reduce(
-                (profiles, [id, info]) => {
-                  if (info) {
-                    profiles[id] = info
-                  } else {
-                    delete profiles[id]
-                  }
+          if (data.sessions) {
+            updateState({ sessions: sessions => compact({ ...sessions, ...data.sessions }) })
+          }
 
-                  return profiles
-                },
-                {
-                  ...profiles,
-                },
-              ),
-          })
-        }
+          if (data.settings) {
+            updateState({ settings: { $set: data.settings } })
+          }
 
-        if (data.sessions) {
-          updateState({ sessions: sessions => ({ ...sessions, ...data.sessions }) })
-        }
-
-        if (data.settings) {
-          updateState({ settings: { $set: data.settings } })
-        }
-
-        if (data.status) {
-          updateState({ status: { $set: data.status } })
+          if (data.status) {
+            updateState({ status: { $set: data.status } })
+          }
+        } catch (error) {
+          console.error(error)
         }
       },
     },
+    authors: [],
+    filteredPackages: [],
     packageFilters: {
-      dependencies: true,
-      experimental: true,
-      incompatible: true,
+      dependencies: false,
+      experimental: false,
+      incompatible: false,
       onlyErrors: false,
       onlyUpdates: false,
       search: "",
       state: null,
       tags: [],
     },
+    packageUi: {},
     sessions: {
       simtropolis: {},
     },
@@ -357,9 +395,17 @@ export const useStore = create<Store>()((set, get): Store => {
   }
 })
 
+export function getAuthors(store: Store): string[] {
+  return store.authors
+}
+
 export function getCurrentProfile(store: Store): ProfileInfo | undefined {
   const profileId = store.settings?.currentProfile
   return profileId ? store.profiles?.[profileId] : undefined
+}
+
+export function getPackageFilters(store: Store): PackageFilters {
+  return store.packageFilters
 }
 
 export function getPackageInfo(store: Store, packageId: string): PackageInfo | undefined {
@@ -374,12 +420,16 @@ export function getStoreActions(store: Store): StoreActions {
   return store.actions
 }
 
+export function useAuthors(): string[] {
+  return useStore(getAuthors)
+}
+
 export function useCurrentProfile(): ProfileInfo | undefined {
   return useStore(getCurrentProfile)
 }
 
-export function usePackageFilters(): PackageFilters | undefined {
-  return useStore(store => store.packageFilters)
+export function usePackageFilters(): PackageFilters {
+  return useStore(getPackageFilters)
 }
 
 export function useStoreActions(): StoreActions {

@@ -81,12 +81,30 @@ export async function removeIfEmpty(fullPath: string): Promise<boolean> {
     return true
   } catch (error) {
     if (error instanceof Error && error.message.match(/no such file or directory/i)) {
-      return true
+      return false
     } else if (error instanceof Error && error.message.match(/not empty/i)) {
       return false
     } else {
       throw error
     }
+  }
+}
+
+export async function removeIfEmptyRecursive(fullPath: string, rootPath: string): Promise<void> {
+  while (isChild(fullPath, rootPath)) {
+    try {
+      await fs.rmdir(fullPath)
+    } catch (error) {
+      if (error instanceof Error && error.message.match(/no such file or directory/i)) {
+        // Continue
+      } else if (error instanceof Error && error.message.match(/not empty/i)) {
+        return
+      } else {
+        throw error
+      }
+    }
+
+    fullPath = path.dirname(fullPath)
   }
 }
 

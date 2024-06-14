@@ -10,7 +10,7 @@ export interface VirtualListProps<T> {
   baseSize: number
   itemComponent: ComponentType<VirtualListItemProps<T>>
   items: unknown[]
-  itemSize: (item: T, baseSize: number) => number
+  itemSize: (item: T, baseSize: number) => number | undefined
   paddingBottom?: number
   paddingLeft?: number
   paddingRight?: number
@@ -122,7 +122,7 @@ const rootElementType = forwardRef<VariableSizeList, VirtualListProps<unknown>>(
                 innerElementType={innerElementType}
                 itemCount={items.length}
                 itemData={itemComponent}
-                itemSize={index => itemSize(items[index], baseSize) + spacing}
+                itemSize={index => (itemSize(items[index], baseSize) ?? baseSize) + spacing}
                 ref={ref}
                 width={width}
               >

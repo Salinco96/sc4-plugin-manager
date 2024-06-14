@@ -3,7 +3,13 @@ import { useMemo, useRef, useState } from "react"
 import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
 import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
 
-import { usePackageInfo, usePackageStatus } from "@utils/packages"
+import { isIncompatible } from "@common/packages"
+import {
+  useCurrentVariant,
+  useFilteredVariants,
+  usePackageInfo,
+  usePackageStatus,
+} from "@utils/packages"
 import { useCurrentProfile, useStoreActions } from "@utils/store"
 
 import { FlexBox } from "./FlexBox"
@@ -25,21 +31,23 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
   const currentProfile = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
   const packageStatus = usePackageStatus(packageId)
-  const variantId = packageStatus.variantId
+  const variantInfo = useCurrentVariant(packageId)
+  const variantIds = useFilteredVariants(packageId)
+  const variantId = variantInfo.id
 
-  const compatibleVariants = Object.keys(packageInfo.variants).filter(
-    variantId => !packageStatus.issues[variantId]?.length,
-  )
-
-  const variantInfo = packageInfo.variants[variantId]
+  const selectableVariantIds = packageStatus?.enabled
+    ? variantIds.filter(
+        variantId => !isIncompatible(packageInfo.variants[variantId], packageStatus),
+      )
+    : variantIds
 
   const packageActions = useMemo(() => {
     const packageActions: PackageAction[] = []
 
-    const nRequires = packageStatus.requiredBy?.length ?? 0
+    const nRequires = packageStatus?.requiredBy?.length ?? 0
 
-    const isEnabled = !!packageStatus.enabled
-    const isIncompatible = !!packageStatus.issues[variantId]?.length
+    const isEnabled = !!packageStatus?.enabled
+    const isIncompatible = !!packageStatus?.issues[variantId]?.length
     const isInstalled = !!variantInfo.installed
     const isRequired = nRequires !== 0
 
@@ -136,7 +144,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
   const mainAction = packageActions[0]
   const moreActions = packageActions.slice(1).filter(action => !action.disabled)
   const hasMore = !!moreActions.length && !mainAction.disabled
-  const disabled = !!mainAction.disabled || !!packageStatus.action || !!variantInfo.action
+  const disabled = !!mainAction.disabled || !!packageStatus?.action || !!variantInfo.action
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width: 160 }}>
@@ -157,9 +165,9 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
                   ? "Removing..."
                   : variantInfo.action === "updating"
                     ? "Updating..."
-                    : packageStatus.action === "disabling"
+                    : packageStatus?.action === "disabling"
                       ? "Disabling..."
-                      : packageStatus.action === "enabling"
+                      : packageStatus?.action === "enabling"
                         ? "Enabling..."
                         : mainAction.label}
             </Button>
@@ -212,9 +220,8 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
       {(Object.keys(packageInfo.variants).length > 1 || !packageInfo.variants.default) && (
         <Select
           disabled={
-            !currentProfile ||
-            compatibleVariants.length === 0 ||
-            (compatibleVariants.length === 1 && variantId === compatibleVariants[0])
+            selectableVariantIds.length === 0 ||
+            (selectableVariantIds.length === 1 && variantId === selectableVariantIds[0])
           }
           fullWidth
           MenuProps={{ onClose: () => setMenuOpen(false), sx: { maxHeight: 320 } }}
@@ -225,9 +232,9 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
           value={variantId}
           variant="outlined"
         >
-          {Object.entries(packageInfo.variants).map(([id, variant]) => (
-            <MenuItem key={id} value={id} disabled={!compatibleVariants.includes(id)}>
-              {variant.name}
+          {variantIds.map(id => (
+            <MenuItem key={id} value={id} disabled={!selectableVariantIds.includes(id)}>
+              {packageInfo.variants[id].name}
             </MenuItem>
           ))}
         </Select>

@@ -28,3 +28,8 @@ export function parseTag(tag: string): Tag {
   const [type, value] = tag.split(":", 2)
   return isEnum(type, TagType) ? { type, value } : { value: tag }
 }
+
+export function isValidTag(tag: string): boolean {
+  const [type] = tag.split(":", 2)
+  return isEnum(type, TagType)
+}

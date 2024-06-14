@@ -1,7 +1,5 @@
 import { CategoryID } from "./categories"
 
-export const DEFAULT_VARIANT_ID = "default"
-
 /** Supported configuration formats */
 export enum ConfigFormat {
   JSON = ".json",
@@ -30,9 +28,9 @@ export interface ToolInfo {
 
 export interface PackageAsset extends AssetData {
   cleanitol?: string
-  docs?: (string | PackageFile)[]
-  exclude?: (string | PackageFile)[]
-  include?: (string | PackageFile)[]
+  docs?: Array<string | PackageFile>
+  exclude?: Array<string | PackageFile>
+  include?: Array<string | PackageFile>
   id: string
 }
 
@@ -154,7 +152,7 @@ export enum PackageState {
 export interface ProfileData {
   name?: string
   packages?: {
-    [id in string]?: boolean | string | PackageConfig
+    [packageId: string]: boolean | string | PackageConfig | undefined
   }
   externals?: {
     [groupId: string]: boolean | undefined
@@ -162,14 +160,14 @@ export interface ProfileData {
 }
 
 export interface ProfileInfo {
-  id: string
+  externals: {
+    [groupId: string]: boolean | undefined
+  }
   format?: ConfigFormat
+  id: string
   name: string
   packages: {
     [packageId: string]: PackageConfig | undefined
-  }
-  externals: {
-    [groupId: string]: boolean | undefined
   }
 }
 
@@ -233,38 +231,17 @@ export function isCompatible(info: PackageInfo, variantId: string, profile: Prof
   return !info.status[profile.id]?.issues[variantId]?.length
 }
 
-export function getDefaultVariantStrict(
-  info: PackageInfo,
-  profile: ProfileInfo,
-): VariantInfo | undefined {
-  const variants = Object.values(info.variants)
-  const compatibleVariants = variants.filter(variant => isCompatible(info, variant.id, profile))
-  if (compatibleVariants.length === 1) {
-    return compatibleVariants[0]
-  }
-
-  const defaultVariant = info.variants[DEFAULT_VARIANT_ID]
-  if (isCompatible(info, DEFAULT_VARIANT_ID, profile)) {
-    return defaultVariant
-  }
-}
-
 export function getDefaultVariant(info: PackageInfo, profile?: ProfileInfo): VariantInfo {
-  const defaultVariant = info.variants[DEFAULT_VARIANT_ID]
+  const variants = Object.values(info.variants)
 
   if (profile) {
-    if (defaultVariant && isCompatible(info, DEFAULT_VARIANT_ID, profile)) {
-      return defaultVariant
-    }
-
-    const variants = Object.values(info.variants)
     const compatibleVariant = variants.find(variant => isCompatible(info, variant.id, profile))
     if (compatibleVariant) {
       return compatibleVariant
     }
   }
 
-  return defaultVariant ?? Object.values(info.variants)[0]
+  return variants[0]
 }
 
 export function getState(
@@ -285,7 +262,7 @@ export function getState(
       return !!variantInfo?.deprecated
 
     case PackageState.DISABLED:
-      return !!variantInfo?.installed && packageStatus?.enabled === false
+      return !!variantInfo?.installed && !!packageStatus && !packageStatus.enabled
 
     case PackageState.ENABLED:
       return !!packageStatus?.enabled
@@ -297,7 +274,7 @@ export function getState(
       return !!variantInfo?.experimental
 
     case PackageState.INCOMPATIBLE:
-      return packageStatus?.enabled === false && !!issues?.length
+      return !!packageStatus && !packageStatus.enabled && !!issues?.length
 
     case PackageState.INSTALLED:
       return !!variantInfo?.installed

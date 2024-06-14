@@ -13,8 +13,8 @@ import { PackageViewRequiredBy } from "./PackageViewRequiredBy"
 export const packageViewTabs: {
   component: ComponentType<{ packageId: string }>
   id: string
-  name: (variantInfo: VariantInfo, packageStatus: PackageStatus) => string
-  condition: (variantInfo: VariantInfo, packageStatus: PackageStatus) => boolean
+  name: (variantInfo: VariantInfo, packageStatus?: PackageStatus) => string
+  condition: (variantInfo: VariantInfo, packageStatus?: PackageStatus) => boolean
   fullsize?: boolean
 }[] = [
   {
@@ -38,10 +38,11 @@ export const packageViewTabs: {
     },
   },
   {
+    // TODO: Make this show not only enabled packages, according to filters
     id: "requires",
     component: PackageViewRequiredBy,
     condition(variantInfo, packageStatus) {
-      return !!packageStatus.requiredBy?.length
+      return !!packageStatus?.requiredBy?.length
     },
     name() {
       return "Required by"

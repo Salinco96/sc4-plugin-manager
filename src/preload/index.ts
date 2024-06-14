@@ -52,6 +52,7 @@ export const api = {
     return ipcRenderer.invoke("simtropolisLogout")
   },
   subscribe(handlers: {
+    resetState(): void
     showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
     updateState(data: Partial<ApplicationState>): void
   }): () => void {
@@ -60,15 +61,21 @@ export const api = {
       ipcRenderer.send("showModalResult", result)
     }
 
+    const resetState = () => {
+      handlers.resetState()
+    }
+
     const updateState = (_: IpcRendererEvent, data: Partial<ApplicationState>) => {
       handlers.updateState(data)
     }
 
+    ipcRenderer.on("resetState", resetState)
     ipcRenderer.on("showModal", showModal)
     ipcRenderer.on("updateState", updateState)
     ipcRenderer.invoke("getState").then(handlers.updateState)
 
     return () => {
+      ipcRenderer.off("resetState", resetState)
       ipcRenderer.off("showModal", showModal)
       ipcRenderer.off("updateState", updateState)
     }

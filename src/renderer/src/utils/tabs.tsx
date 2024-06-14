@@ -16,10 +16,10 @@ import {
   WidgetsOutlined as AllPackagesIcon,
 } from "@mui/icons-material"
 
-import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
+import { PackageCategory, PackageState } from "@common/types"
 import { TagType } from "@components/PackageList/utils"
 import { Page, Location } from "@utils/navigation"
-import { getCurrentVariant } from "@utils/packages"
+import { filterVariant } from "@utils/packages"
 import { PackageFilters, Store, getCurrentProfile } from "@utils/store"
 
 export interface TabInfo {
@@ -35,44 +35,23 @@ export interface TabInfo {
 }
 
 function countPackages(store: Store, category?: PackageCategory, state?: PackageState): number {
-  const profile = getCurrentProfile(store)
+  const profileInfo = getCurrentProfile(store)
+
+  const filters = {
+    ...store.packageFilters,
+    authors: [],
+    categories: category ? [category] : [],
+    onlyErrors: state === PackageState.ERROR,
+    onlyUpdates: state === PackageState.OUTDATED,
+    search: undefined,
+  }
+
   return store.packages
-    ? Object.values(store.packages).filter(info => {
-        const variantInfo = getCurrentVariant(info, profile)
-
-        if (category && getCategory(variantInfo) !== category) {
-          return false
-        }
-
-        if (state && !getState(state, info, variantInfo.id, profile)) {
-          return false
-        }
-
-        if (
-          store.packageFilters.state &&
-          !getState(store.packageFilters.state, info, variantInfo.id, profile)
-        ) {
-          return false
-        }
-
-        if (!state) {
-          if (
-            !store.packageFilters.dependencies &&
-            getCategory(variantInfo) === PackageCategory.DEPENDENCIES
-          ) {
-            return false
-          }
-
-          if (
-            !store.packageFilters.incompatible &&
-            getState(PackageState.INCOMPATIBLE, info, variantInfo.id, profile)
-          ) {
-            return false
-          }
-        }
-
-        return true
-      }).length
+    ? Object.values(store.packages).filter(packageInfo =>
+        Object.values(packageInfo.variants).some(variantInfo =>
+          filterVariant(packageInfo, variantInfo, profileInfo, filters),
+        ),
+      ).length
     : 0
 }
 

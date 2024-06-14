@@ -10,6 +10,24 @@ export function assert(condition: boolean, message?: string): asserts condition 
   }
 }
 
+export function ifDefined<T, R = T>(
+  value: T | undefined,
+  fn: (value: Exclude<T, undefined>) => R,
+): R | undefined {
+  return isDefined(value) ? fn(value) : undefined
+}
+
+export function isDefined<T>(value: T): value is Exclude<T, undefined> {
+  return value !== undefined
+}
+
+export function ifUndefined<T, R = T>(
+  value: T | undefined,
+  fn: () => R,
+): Exclude<T, undefined> | R {
+  return isDefined(value) ? value : fn()
+}
+
 /**
  * Checks that a value is an array.
  * @param value Value to check

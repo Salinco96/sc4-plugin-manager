@@ -9,16 +9,15 @@ import { PackageTags } from "@components/PackageTags"
 import { PackageTools } from "@components/PackageTools"
 import { Text } from "@components/Text"
 import { Page, useHistory } from "@utils/navigation"
-import { getCurrentVariant, usePackageInfo } from "@utils/packages"
-import { useCurrentProfile } from "@utils/store"
+import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 
 import { VirtualListItemProps } from "./VirtualList"
 
 export const PackageListItem = memo(function PackageListItem({
   item: packageId,
 }: VirtualListItemProps<string>): JSX.Element | null {
-  const currentProfile = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
+  const variantInfo = useCurrentVariant(packageId)
   const history = useHistory()
 
   const [focus, setFocus] = useState(false)
@@ -30,19 +29,13 @@ export const PackageListItem = memo(function PackageListItem({
     history.push({ page: Page.PackageView, data: { packageId } })
   }, [history, packageId])
 
-  if (!packageInfo) {
-    return null
-  }
-
-  const variantInfo = getCurrentVariant(packageInfo, currentProfile)
-
   return (
     <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
       <CardContent sx={{ flexGrow: 1 }}>
         <Link
           color="inherit"
           onBlur={() => setFocus(false)}
-          onClick={() => openPackageView()}
+          onClick={openPackageView}
           onFocus={event => setFocus(event.target === event.currentTarget)}
           onKeyDown={event => event.key === "Enter" && openPackageView()}
           onMouseEnter={() => setHover(true)}
@@ -62,7 +55,7 @@ export const PackageListItem = memo(function PackageListItem({
         <FlexBox alignItems="center">
           <Link
             color="inherit"
-            onClick={() => openPackageView()}
+            onClick={openPackageView}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             sx={{ cursor: "pointer", textDecoration: active ? "underline" : "unset" }}
