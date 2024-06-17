@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/common/**/*", "src/scripts/**/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "types": ["node"],
+    "paths": {
+      "@common/*": ["src/common/*"]
+    }
+  }
+}

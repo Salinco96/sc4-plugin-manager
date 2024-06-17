@@ -204,7 +204,7 @@ export class Application {
         const mzHeader = Buffer.alloc(0x40)
         assert(stat.size >= mzHeader.length, "Invalid file length")
         await file.read(mzHeader, 0x00, mzHeader.length, 0x00)
-        assert(mzHeader.readUInt16LE(0xf00) === 0x5a4d, "Invalid MZ header signature")
+        assert(mzHeader.readUInt16LE(0x00) === 0x5a4d, "Invalid MZ header signature")
         const peHeaderOffset = mzHeader.readInt32LE(0x3c)
 
         // Read PE header

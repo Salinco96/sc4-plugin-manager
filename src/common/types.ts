@@ -101,6 +101,7 @@ export interface VariantData {
   readme?: string
   repository?: string
   requirements?: PackageCondition
+  thumbnail?: string
   url?: string
   version?: string
 }

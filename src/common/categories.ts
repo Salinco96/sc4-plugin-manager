@@ -3,7 +3,10 @@ declare const Tag: unique symbol
 // 0 is pass-through, e.g. 337 will look (in order) for 337, then 330, then 300, then 0
 const CATEGORIES: { [categoryId: number]: string } = {
   0: "Mods",
-  30: "Colossus Addon Mod",
+  10: "Cheats",
+  20: "Graphical Mods",
+  30: "Gameplay Mods",
+  32: "Colossus Addon Mod",
   60: "DLL Mods",
   100: "Dependencies",
   110: "Textures",
@@ -25,7 +28,7 @@ const CATEGORIES: { [categoryId: number]: string } = {
   380: "Commercial (Custom)",
   390: "Commercial (Overrides)",
   400: "Industrial",
-  410: "Industrial (Agriculture)",
+  410: "Agriculture",
   420: "Industrial (Dirty)",
   430: "Industrial (Manufacture)",
   440: "Industrial (High-Tech)",
@@ -48,6 +51,7 @@ const CATEGORIES: { [categoryId: number]: string } = {
   690: "Civics (Overrides)",
   700: "Transport",
   710: "Automata",
+  730: "Waterfront",
   770: "Network Addon Mod",
   780: "Transport (Custom)",
   790: "Transport (Overrides)",

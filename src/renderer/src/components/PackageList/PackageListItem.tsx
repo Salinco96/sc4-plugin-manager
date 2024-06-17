@@ -8,6 +8,7 @@ import { PackageBanners } from "@components/PackageBanners"
 import { PackageTags } from "@components/PackageTags"
 import { PackageTools } from "@components/PackageTools"
 import { Text } from "@components/Text"
+import { Thumbnail } from "@components/Thumbnail"
 import { Page, useHistory } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 
@@ -32,45 +33,52 @@ export const PackageListItem = memo(function PackageListItem({
   return (
     <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
       <CardContent sx={{ flexGrow: 1 }}>
-        <Link
-          color="inherit"
-          onBlur={() => setFocus(false)}
-          onClick={openPackageView}
-          onFocus={event => setFocus(event.target === event.currentTarget)}
-          onKeyDown={event => event.key === "Enter" && openPackageView()}
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          sx={{
-            cursor: "pointer",
-            display: "block",
-            textDecoration: active ? "underline" : "unset",
-            width: "fit-content",
-          }}
-          tabIndex={0}
-        >
-          <Text maxLines={1} variant="h6">
-            {packageInfo.name} (v{variantInfo.version})
-          </Text>
-        </Link>
-        <FlexBox alignItems="center">
-          <Link
-            color="inherit"
-            onClick={openPackageView}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            sx={{ cursor: "pointer", textDecoration: active ? "underline" : "unset" }}
-          >
-            <Text maxLines={1} variant="body2">
-              {packageId}#{variantInfo.id}
-            </Text>
-          </Link>
-          <PackageTools packageId={packageId} />
+        <FlexBox direction="row">
+          {variantInfo.thumbnail && (
+            <Thumbnail mr={2} mt={1} size={84} src={variantInfo.thumbnail} />
+          )}
+          <FlexBox direction="column">
+            <Link
+              color="inherit"
+              onBlur={() => setFocus(false)}
+              onClick={openPackageView}
+              onFocus={event => setFocus(event.target === event.currentTarget)}
+              onKeyDown={event => event.key === "Enter" && openPackageView()}
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              sx={{
+                cursor: "pointer",
+                display: "block",
+                textDecoration: active ? "underline" : "unset",
+                width: "fit-content",
+              }}
+              tabIndex={0}
+            >
+              <Text maxLines={1} variant="h6">
+                {packageInfo.name} (v{variantInfo.version})
+              </Text>
+            </Link>
+            <FlexBox alignItems="center">
+              <Link
+                color="inherit"
+                onClick={openPackageView}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                sx={{ cursor: "pointer", textDecoration: active ? "underline" : "unset" }}
+              >
+                <Text maxLines={1} variant="body2">
+                  {packageId}#{variantInfo.id}
+                </Text>
+              </Link>
+              <PackageTools packageId={packageId} />
+            </FlexBox>
+            <PackageTags packageId={packageId} />
+          </FlexBox>
         </FlexBox>
-        <PackageTags packageId={packageId} />
         {variantInfo.description && (
           <Text
             maxLines={2}
-            sx={{ height: 40, marginTop: 2 }}
+            sx={{ height: 40, marginTop: 2, whiteSpace: "pre-wrap" }}
             title={variantInfo.description}
             variant="body2"
           >

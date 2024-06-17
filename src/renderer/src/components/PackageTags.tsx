@@ -178,7 +178,7 @@ export function PackageTags({ packageId }: { packageId: string }): JSX.Element |
   return (
     <List
       disablePadding
-      sx={{ display: "flex", flexDirection: "row", gap: 1, marginBottom: 1, marginTop: 1 }}
+      sx={{ display: "flex", flexDirection: "row", gap: 1, /* marginBottom: 1, */ marginTop: 1 }}
     >
       {packageTags.map(tag => (
         <PackageTag key={tag.id} tag={tag} />

@@ -6,6 +6,7 @@ import { PackageTags } from "@components/PackageTags"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 
 import { PackageTools } from "./PackageTools"
+import { Thumbnail } from "./Thumbnail"
 
 export function PackageHeader({ packageId }: { packageId: string }): JSX.Element {
   const packageInfo = usePackageInfo(packageId)
@@ -13,6 +14,7 @@ export function PackageHeader({ packageId }: { packageId: string }): JSX.Element
 
   return (
     <FlexBox alignItems="center" pb={2} px={2}>
+      {variantInfo.thumbnail && <Thumbnail mr={2} mt={1} size={84} src={variantInfo.thumbnail} />}
       <Box flexGrow={1} pr={2}>
         <Typography variant="h6">
           {packageInfo.name} (v{variantInfo.version})

@@ -11,7 +11,9 @@ export function PackageViewInfo({ packageId }: { packageId: string }): JSX.Eleme
   return (
     <Box>
       {variantInfo.description && (
-        <Typography variant="body2">{variantInfo.description}</Typography>
+        <Typography sx={{ whiteSpace: "pre-wrap" }} variant="body2">
+          {variantInfo.description}
+        </Typography>
       )}
       {/* TODO: Better formatting (with Simtropolis user links?) */}
       <Typography variant="body2">

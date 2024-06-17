@@ -512,6 +512,7 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...packageData.requirements,
       ...variantData.requirements,
     },
+    thumbnail: variantData.thumbnail ?? packageData.thumbnail,
     url: variantData.url ?? packageData.url,
     version: variantData.version ?? packageData.version ?? "0.0.0",
   }
