@@ -2,7 +2,7 @@ import { net, protocol } from "electron/main"
 import path from "path"
 import { pathToFileURL } from "url"
 
-import { isChild } from "./files"
+import { isChild } from "../../node/files"
 
 export enum Protocol {
   /* Custom protocol to load package docs in sandboxed iframe */

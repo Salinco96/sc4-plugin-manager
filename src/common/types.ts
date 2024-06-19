@@ -21,11 +21,6 @@ export interface AssetInfo extends AssetData {
   version?: string
 }
 
-export interface ToolInfo {
-  assetId: string
-  exe: string
-}
-
 export interface PackageAsset extends AssetData {
   cleanitol?: string
   docs?: Array<string | PackageFile>
@@ -87,6 +82,17 @@ export interface PackageStatus {
   variantId: string
 }
 
+export interface PackageWarning {
+  id?: "bulldoze"
+  message?: string
+  on?: "enable" | "disable"
+}
+
+export interface ToolInfo {
+  assetId: string
+  exe: string
+}
+
 export interface VariantData {
   assets?: PackageAsset[]
   authors?: string[]
@@ -98,12 +104,14 @@ export interface VariantData {
   experimental?: boolean
   files?: PackageFile[]
   name?: string
+  optional?: string[]
   readme?: string
   repository?: string
   requirements?: PackageCondition
   thumbnail?: string
   url?: string
   version?: string
+  warnings?: PackageWarning[]
 }
 
 export interface BaseVariantInfo extends VariantData {

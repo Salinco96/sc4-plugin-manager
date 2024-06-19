@@ -13,5 +13,3 @@ export const TOOLS = {
     exe: string
   }
 }
-
-export type Tool = keyof typeof TOOLS

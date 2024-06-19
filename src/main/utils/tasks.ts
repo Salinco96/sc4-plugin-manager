@@ -1,3 +1,4 @@
+import { Logger } from "@common/logs"
 import { TaskInfo } from "@common/state"
 
 import { isDev } from "./env"
@@ -14,28 +15,23 @@ export interface TaskManagerOptions {
   parallel?: number
 }
 
-export type TaskHandler<Q = unknown, T = unknown> = (context: TaskContext<Q, T>) => Promise<T>
+export type TaskHandler<T = void> = (context: TaskContext<T>) => Promise<T>
 
-export interface TaskContext<Q = unknown, T = unknown> {
-  readonly extra: Q
-  readonly handler: TaskHandler<Q, T>
+export interface TaskContext<T = void> extends Logger {
+  readonly handler: TaskHandler<T>
   readonly key: string
-  debug(...params: unknown[]): void
-  error(...params: unknown[]): void
-  info(...params: unknown[]): void
   raise(message: string): never
   raiseInDev(message: string): void
   setProgress(progress: number): void
-  warn(...params: unknown[]): void
 }
 
-export class TaskManager<Q = unknown, T = unknown> {
+export class TaskManager<T = void> {
   public readonly cache: Map<string, T> = new Map()
   public readonly name: string
   public readonly onTaskUpdate?: (ongoingTasks: TaskInfo[]) => void
   public readonly ongoingTasks: string[] = []
   public readonly parallel: number
-  public readonly pendingTasks: Map<string, TaskContext<Q, T>> = new Map()
+  public readonly pendingTasks: Map<string, TaskContext<T>> = new Map()
   public readonly tasks: Map<string, Task<T>> = new Map()
 
   public constructor(name: string, options: TaskManagerOptions = {}) {
@@ -68,13 +64,12 @@ export class TaskManager<Q = unknown, T = unknown> {
     this.cache.delete(key)
   }
 
-  public async queue<S extends T>(
+  public async queue(
     key: string,
-    handler: TaskHandler<Q, S>,
-    options: { cache?: boolean; extra?: Q; invalidate?: boolean } = {},
-  ): Promise<S> {
+    handler: TaskHandler<T>,
+    options: { cache?: boolean; invalidate?: boolean } = {},
+  ): Promise<T> {
     const existingTask = this.tasks.get(key)
-    const extra = (options.extra ?? {}) as Q
 
     if (options.invalidate) {
       this.cache.delete(key)
@@ -83,17 +78,17 @@ export class TaskManager<Q = unknown, T = unknown> {
     if (existingTask) {
       // Invalidate already-running/scheduled task by scheduling a new one
       if (options.invalidate) {
-        const context = this.getContext(key, handler, extra)
+        const context = this.getContext(key, handler)
         this.pendingTasks.set(key, context)
       }
 
       // Return existing task
-      return existingTask.promise as Promise<S>
+      return existingTask.promise
     }
 
     // Cached result of previous run
     if (options.cache && this.cache.has(key)) {
-      return this.cache.get(key) as S
+      return this.cache.get(key) as T
     }
 
     // Create new task
@@ -101,7 +96,7 @@ export class TaskManager<Q = unknown, T = unknown> {
     const promise = new Promise<T>((resolve, reject) => {
       task.reject = reject
       task.resolve = resolve
-      const context = this.getContext(key, handler, extra)
+      const context = this.getContext(key, handler)
       if (this.ongoingTasks.length < this.parallel) {
         this.run(key, context)
         this.sendTaskUpdate()
@@ -121,10 +116,10 @@ export class TaskManager<Q = unknown, T = unknown> {
     // Clean up task once done
     promise.finally(() => this.tasks.delete(key))
 
-    return promise as Promise<S>
+    return promise
   }
 
-  protected async run(key: string, context: TaskContext<Q, T>): Promise<void> {
+  protected async run(key: string, context: TaskContext<T>): Promise<void> {
     try {
       this.ongoingTasks.push(key)
       const result = await context.handler(context)
@@ -163,10 +158,9 @@ export class TaskManager<Q = unknown, T = unknown> {
     }
   }
 
-  protected getContext(key: string, handler: TaskHandler<Q, T>, extra: Q): TaskContext<Q, T> {
+  protected getContext<S extends T>(key: string, handler: TaskHandler<S>): TaskContext<S> {
     const prefix = `[${this.name}] (${key})`
     return {
-      extra,
       handler,
       key,
       debug(...params) {

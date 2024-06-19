@@ -1,17 +1,13 @@
 import path from "path"
 
-import {
-  parse as yamlParse,
-  parseAllDocuments as yamlParseMany,
-  stringify as yamlStringify,
-} from "yaml"
+import YAML from "yaml"
 
 import { ConfigFormat } from "@common/types"
 
 import { createIfMissing, readFile, readFileIfPresent, removeIfPresent, writeFile } from "./files"
 
 export function deserializeConfig<T>(data: string, format: ConfigFormat): T {
-  return format === ConfigFormat.JSON ? JSON.parse(data) : yamlParse(data)
+  return format === ConfigFormat.JSON ? JSON.parse(data) : YAML.parse(data)
 }
 
 export async function loadConfig<T>(
@@ -33,14 +29,14 @@ export async function readConfig<T>(fullPath: string): Promise<T> {
 }
 
 export async function readConfigs<T>(fullPath: string): Promise<T[]> {
-  const docs = yamlParseMany(await readFile(fullPath))
+  const docs = YAML.parseAllDocuments(await readFile(fullPath))
   return "empty" in docs ? [] : docs.map(doc => doc.toJS() as T)
 }
 
 export function serializeConfig<T>(data: T, format: ConfigFormat): string {
   return format === ConfigFormat.JSON
     ? JSON.stringify(data, undefined, 2)
-    : yamlStringify(data, { lineWidth: 200 })
+    : YAML.stringify(data, { lineWidth: 200, sortMapEntries: true }).replace(/\n\S/g, "\n$&")
 }
 
 export async function writeConfig<T>(

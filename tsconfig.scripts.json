@@ -1,12 +1,13 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/common/**/*", "src/scripts/**/*"],
+  "include": ["src/common/**/*", "src/node/**/*", "src/scripts/**/*"],
   "compilerOptions": {
     "baseUrl": ".",
     "module": "commonjs",
     "types": ["node"],
     "paths": {
-      "@common/*": ["src/common/*"]
+      "@common/*": ["src/common/*"],
+      "@node/*": ["src/node/*"]
     }
   }
 }

@@ -13,10 +13,10 @@ import {
   AssetInfo,
   ConfigFormat,
 } from "@common/types"
-import { readConfig, readConfigs, writeConfig } from "@utils/configs"
+import { readConfig, readConfigs, writeConfig } from "@node/configs"
+import { exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { isDev } from "@utils/env"
-import { exists } from "@utils/files"
 
 import { loadAssetInfo } from "./assets"
 
@@ -506,6 +506,10 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
     ],
     id: variantId,
     name: variantData.name ?? variantId,
+    optional: (packageData.optional || variantData.optional) && [
+      ...(variantData.optional ?? []),
+      ...(packageData.optional ?? []),
+    ],
     readme: variantData.readme ?? packageData.readme,
     repository: variantData.repository ?? packageData.repository,
     requirements: (packageData.requirements || variantData.requirements) && {
@@ -515,6 +519,10 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
     thumbnail: variantData.thumbnail ?? packageData.thumbnail,
     url: variantData.url ?? packageData.url,
     version: variantData.version ?? packageData.version ?? "0.0.0",
+    warnings: (packageData.warnings || variantData.warnings) && [
+      ...(variantData.warnings ?? []),
+      ...(packageData.warnings ?? []),
+    ],
   }
 
   return variantInfo

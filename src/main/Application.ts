@@ -6,6 +6,7 @@ import {
   app,
   dialog,
   ipcMain,
+  net,
   session,
 } from "electron/main"
 import { existsSync, readFileSync, writeFileSync } from "fs"
@@ -29,18 +30,26 @@ import {
   ProfileData,
   ProfileInfo,
   Settings,
+  ToolInfo,
   getDefaultVariant,
 } from "@common/types"
 import { assert } from "@common/utils/types"
-import { extract } from "@utils/extract"
-import { handleDocsProtocol } from "@utils/protocols"
+import { loadConfig, readConfig, writeConfig } from "@node/configs"
+import { download } from "@node/download"
+import { extractRecursively } from "@node/extract"
+import { get } from "@node/fetch"
 import {
-  SimtropolisSession,
-  getSimtropolisSession,
-  simtropolisLogin,
-  simtropolisLogout,
-} from "@utils/sessions/simtropolis"
-import { TOOLS, Tool } from "@utils/tools"
+  createIfMissing,
+  exists,
+  getExtension,
+  isURL,
+  moveTo,
+  readFile,
+  removeIfEmptyRecursive,
+  removeIfPresent,
+  toPosix,
+} from "@node/files"
+import { cmd } from "@node/processes"
 
 import { getAssetKey } from "./data/assets"
 import {
@@ -58,7 +67,6 @@ import {
 } from "./processes/updateDatabase/types"
 import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
 import { SplashScreen } from "./SplashScreen"
-import { loadConfig, readConfig, writeConfig } from "./utils/configs"
 import {
   CLEANITOLEXTENSIONS,
   DIRNAMES,
@@ -67,21 +75,19 @@ import {
   SC4EXTENSIONS,
   SC4INSTALLPATHS,
 } from "./utils/constants"
-import { download } from "./utils/download"
 import { env, isDev } from "./utils/env"
+import { createChildProcess } from "./utils/processes"
+import { handleDocsProtocol } from "./utils/protocols"
 import {
-  createIfMissing,
-  exists,
-  getExtension,
-  isURL,
-  moveTo,
-  readFile,
-  removeIfEmptyRecursive,
-  removeIfPresent,
-  toPosix,
-} from "./utils/files"
-import { cmd, createChildProcess } from "./utils/processes"
+  SIMTROPOLIS_ORIGIN,
+  SimtropolisSession,
+  getSimtropolisSession,
+  getSimtropolisSessionCookies,
+  simtropolisLogin,
+  simtropolisLogout,
+} from "./utils/sessions/simtropolis"
 import { TaskContext, TaskManager } from "./utils/tasks"
+import { TOOLS } from "./utils/tools"
 
 const defaultSettings: Settings = {
   useYaml: true,
@@ -119,9 +125,7 @@ export class Application {
 
   public readonly tasks: {
     readonly download: TaskManager
-    readonly extract: TaskManager<{
-      runTool(tool: "7z" | "cicdec", ...args: string[]): Promise<string>
-    }>
+    readonly extract: TaskManager
     readonly getAsset: TaskManager
     readonly install: TaskManager
     readonly linker: TaskManager
@@ -495,20 +499,29 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     const downloaded = await exists(downloadPath)
     if (!downloaded) {
       await this.tasks.download.queue(key, async context => {
-        await download(
-          context,
-          key,
-          assetInfo.url,
+        const response = await get(assetInfo.url, {
+          cookies: origin => {
+            // Pass Simtropolis credentials as cookie at that origin
+            if (origin === SIMTROPOLIS_ORIGIN && this.sessions.simtropolis) {
+              return getSimtropolisSessionCookies(this.sessions.simtropolis)
+            }
+          },
+          fetch: net.fetch,
+          logger: context,
+        })
+
+        await download(response, {
           downloadPath,
           downloadTempPath,
-          assetInfo.size,
-          assetInfo.sha256,
-          this.sessions,
-          (bytes, totalBytes) => {
-            const progress = Math.floor(100 * (bytes / totalBytes))
+          exePath: exe => this.getToolExePath(exe),
+          expectedHash: assetInfo.sha256,
+          expectedSize: assetInfo.size,
+          logger: context,
+          onProgress: (current, total) => {
+            const progress = Math.floor(100 * (current / total))
             context.setProgress(progress)
           },
-        )
+        })
       })
     }
   }
@@ -516,20 +529,16 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
   protected async extractFiles(assetInfo: AssetInfo): Promise<void> {
     const key = this.getDownloadKey(assetInfo)
     const downloadPath = this.getDownloadPath(key)
-    await this.tasks.extract.queue(
-      key,
-      async context => {
-        await extract(context, downloadPath, (bytes, totalBytes) => {
-          const progress = Math.floor(100 * (bytes / totalBytes))
+    await this.tasks.extract.queue(key, async context => {
+      await extractRecursively(downloadPath, {
+        exePath: exe => this.getToolExePath(exe),
+        logger: context,
+        onProgress: (current, total) => {
+          const progress = Math.floor(100 * (current / total))
           context.setProgress(progress)
-        })
-      },
-      {
-        extra: {
-          runTool: this.runTool.bind(this),
         },
-      },
-    )
+      })
+    })
   }
 
   protected async getAsset(assetInfo: AssetInfo): Promise<void> {
@@ -684,6 +693,32 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
 
   public getTempPath(): string {
     return path.join(this.rootPath, DIRNAMES.temp)
+  }
+
+  public async getToolExePath(tool: string): Promise<string> {
+    const toolInfo = this.getToolInfo(tool)
+    if (!toolInfo) {
+      throw Error(`Unknown tool '${tool}'`)
+    }
+
+    if (toolInfo.assetId) {
+      const assetInfo = this.getAssetInfo(toolInfo.assetId)
+      if (!assetInfo) {
+        throw Error(`Unknown asset '${toolInfo.assetId}'`)
+      }
+
+      await this.downloadAsset(assetInfo)
+
+      const downloadKey = this.getDownloadKey(assetInfo)
+      const downloadPath = this.getDownloadPath(downloadKey)
+      return path.join(downloadPath, toolInfo.exe)
+    }
+
+    return toolInfo.exe
+  }
+
+  public getToolInfo(tool: string): ToolInfo | undefined {
+    return TOOLS[tool as keyof typeof TOOLS]
   }
 
   public getVariantPath(packageId: string, variantId: string): string {
@@ -1126,9 +1161,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
             })
 
             variantInfo.readme =
-              readmePaths.find(file => path.basename(file).match(/^index\.html?$/i)) ??
-              readmePaths.find(file => path.basename(file).match(/readme/i)) ??
-              readmePaths[0]
+              readmePaths.find(file => path.basename(file).match(/read.?me/i)) ?? readmePaths[0]
           }
 
           if (variantInfo.update) {
@@ -1667,19 +1700,6 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return !results.includes(false)
   }
 
-  public async runTool(tool: Tool, ...args: string[]): Promise<string> {
-    const assetInfo = this.getAssetInfo(TOOLS[tool].assetId)
-
-    if (assetInfo) {
-      const key = this.getDownloadKey(assetInfo)
-      const exe = path.join(this.getDownloadPath(key), TOOLS[tool].exe)
-      await this.downloadAsset(assetInfo)
-      return cmd([exe, ...args].map(arg => `"${arg}"`).join(" "))
-    }
-
-    return cmd([TOOLS[tool].exe, ...args].map(arg => `"${arg}"`).join(" "))
-  }
-
   protected setPackageVariantInConfig(
     profileId: string,
     packageId: string,
@@ -1770,7 +1790,8 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     title: string,
     message: string,
     detail?: string,
-    doNotAskAgain?: boolean,
+    doNotAskAgain: boolean = false,
+    type: "question" | "warning" = "question",
   ): Promise<[confirmed: boolean, doNotAskAgain: boolean]> {
     const options: MessageBoxOptions = {
       buttons: ["Yes", "No"],
@@ -1781,7 +1802,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
       detail,
       message,
       title,
-      type: "question",
+      type,
     }
 
     let result: MessageBoxReturnValue
@@ -2098,6 +2119,116 @@ You can either automatically install and switch to compatible variants now, or r
               // Recalculate
               return this.updateProfile(profileId, update)
             }
+          }
+
+          // Confirm optional dependencies
+          const optionalDependencies: { [dependencyId: string]: boolean } = {}
+          for (const packageId of enablingPackages) {
+            const packageInfo = this.getPackageInfo(packageId)
+            const variantInfo = packageInfo?.variants[resultingStatus[packageId].variantId]
+            const dependencyIds = variantInfo?.optional?.filter(
+              dependencyId =>
+                this.getPackageInfo(dependencyId) &&
+                !resultingStatus[dependencyId]?.enabled &&
+                !resultingStatus[dependencyId]?.issues?.length &&
+                optionalDependencies[dependencyId] === undefined,
+            )
+
+            if (packageInfo && dependencyIds?.length) {
+              const packages = dependencyIds.map(packageId => {
+                const info = this.getPackageInfo(packageId)!
+                return `  - ${info.name}`
+              })
+
+              // TODO: Use our own modal rather than system one?
+              const [confirmed] = await this.showConfirmation(
+                packageInfo.name,
+                "Enable optional dependencies?",
+                `This package mentions the following optional dependencies:
+${packages.sort().join("\n")}
+
+Do you want to enable them?`,
+              )
+
+              for (const dependencyId of dependencyIds) {
+                optionalDependencies[dependencyId] = confirmed
+              }
+            }
+          }
+
+          if (Object.values(optionalDependencies).some(Boolean)) {
+            for (const packageId in optionalDependencies) {
+              if (optionalDependencies[packageId]) {
+                update.packages[packageId] = { enabled: true }
+              }
+            }
+
+            // Recalculate
+            return this.updateProfile(profileId, update)
+          }
+
+          // Confirm on-enable warnings
+          for (const packageId of enablingPackages) {
+            const packageInfo = this.getPackageInfo(packageId)
+            const variantInfo = packageInfo?.variants[resultingStatus[packageId].variantId]
+            if (packageInfo && variantInfo?.warnings) {
+              for (const warning of variantInfo.warnings) {
+                if (!warning.on || warning.on === "enable") {
+                  // TODO: Use our own modal rather than system one?
+                  const [confirmed] = await this.showConfirmation(
+                    packageInfo.name,
+                    "Enable package?",
+                    warning.message,
+                    undefined,
+                    "warning",
+                  )
+
+                  if (!confirmed) {
+                    return false
+                  }
+                }
+              }
+            }
+          }
+
+          // Confirm on-disable warnings
+          for (const packageId of disablingPackages) {
+            const packageInfo = this.getPackageInfo(packageId)
+            const variantInfo = packageInfo?.variants[resultingStatus[packageId].variantId]
+            if (packageInfo && variantInfo?.warnings) {
+              for (const warning of variantInfo.warnings) {
+                if (warning.on === "disable") {
+                  // TODO: Use our own modal rather than system one?
+                  const [confirmed] = await this.showConfirmation(
+                    packageInfo.name,
+                    "Disable package?",
+                    warning.message ??
+                      (warning.id
+                        ? {
+                            bulldoze: `Before disabling ${packageInfo.name}, you must bulldoze all corresponding lots from all relevant regions.`,
+                          }[warning.id]
+                        : undefined),
+                    undefined,
+                    "warning",
+                  )
+
+                  if (!confirmed) {
+                    return false
+                  }
+                }
+              }
+            }
+          }
+
+          if (Object.values(optionalDependencies).some(Boolean)) {
+            for (const packageId in optionalDependencies) {
+              if (optionalDependencies[packageId]) {
+                update.packages[packageId] = { enabled: true }
+              }
+            }
+
+            // Recalculate
+            return this.updateProfile(profileId, update)
           }
 
           // If there are packages to install...

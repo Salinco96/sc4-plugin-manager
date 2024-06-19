@@ -8,6 +8,7 @@ import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewDocumentation } from "./PackageViewDocumentation"
 import { PackageViewFiles } from "./PackageViewFiles"
 import { PackageViewInfo } from "./PackageViewInfo"
+import { PackageViewOptionalDependencies } from "./PackageViewOptionalDependencies"
 import { PackageViewRequiredBy } from "./PackageViewRequiredBy"
 
 export const packageViewTabs: {
@@ -35,6 +36,16 @@ export const packageViewTabs: {
     },
     name(variantInfo) {
       return `${variantInfo.dependencies?.length ?? 0} dependencies`
+    },
+  },
+  {
+    id: "optional",
+    component: PackageViewOptionalDependencies,
+    condition(variantInfo) {
+      return !!variantInfo.optional?.length
+    },
+    name(variantInfo) {
+      return `${variantInfo.optional?.length ?? 0} optional dependencies`
     },
   },
   {

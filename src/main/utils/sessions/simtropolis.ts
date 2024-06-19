@@ -1,5 +1,8 @@
 import { Cookie, Session } from "electron/main"
 
+import { compact } from "@common/utils/objects"
+import { getCookieHeader } from "@node/fetch"
+
 import { BaseWindow } from "../../BaseWindow"
 
 export const SIMTROPOLIS_DOMAIN = "community.simtropolis.com"
@@ -58,13 +61,24 @@ export async function getSimtropolisSession(
   }
 }
 
-export function getSimtropolisSessionHeaders(session: SimtropolisSession): HeadersInit {
+export function getSimtropolisSessionCookies(session: SimtropolisSession): {
+  [name: string]: string
+} {
+  return compact(
+    Object.fromEntries(
+      Object.entries(Cookies).map(([key, name]) => [
+        name,
+        session[key as keyof SimtropolisSession],
+      ]),
+    ),
+  )
+}
+
+export function getSimtropolisSessionHeaders(session: SimtropolisSession): {
+  [name: string]: string
+} {
   return {
-    Cookie: Object.entries(Cookies)
-      .map(([key, name]) => [name, session[key as keyof SimtropolisSession]])
-      .filter(([, value]) => !!value)
-      .map(([name, value]) => `${name}=${value}`)
-      .join(";"),
+    Cookie: getCookieHeader(getSimtropolisSessionCookies(session)),
   }
 }
 

@@ -1,0 +1,196 @@
+import console from "console"
+import { createWriteStream } from "fs"
+import { readdir } from "fs/promises"
+import path from "path"
+import { pipeline } from "stream"
+import { finished } from "stream/promises"
+
+import { glob } from "glob"
+import { Open } from "unzipper"
+
+import { Logger } from "@common/logs"
+
+import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
+import { cmd, run } from "./processes"
+
+export async function extractRecursively(
+  basePath: string,
+  options: {
+    exePath?(exe: string): Promise<string>
+    logger?: Logger
+    onProgress?(current: number, total: number): void
+  } = {},
+): Promise<void> {
+  const { logger = console } = options
+
+  const archivePaths = await glob("*.{7z,exe,jar,msi,zip}", {
+    cwd: basePath,
+    matchBase: true,
+    nodir: true,
+  })
+
+  if (archivePaths.length) {
+    for (const archivePath of archivePaths) {
+      logger.debug(`Extracting from ${archivePath}...`)
+      const archiveFullPath = path.join(basePath, archivePath)
+      const extractFullPath = path.join(basePath, path.dirname(archivePath))
+      await extract(archiveFullPath, extractFullPath, options)
+      // Delete the archive after successful extraction
+      await removeIfPresent(archiveFullPath)
+    }
+
+    // In case there are nested archives...
+    await extractRecursively(basePath, options)
+  }
+}
+
+export async function extract(
+  archivePath: string,
+  extractPath: string,
+  options: {
+    exePath?(exe: string): Promise<string>
+    logger?: Logger
+    onProgress?(current: number, total: number): void
+  } = {},
+): Promise<void> {
+  const extension = getExtension(archivePath)
+
+  switch (extension) {
+    case ".7z":
+      await extract7z(archivePath, extractPath, options)
+      break
+
+    case ".exe":
+      // Try to extract ClickTeam installer, then fallback to 7-zip
+      try {
+        await extractClickTeam(archivePath, extractPath, options)
+      } catch (error) {
+        await extract7z(archivePath, extractPath, options)
+      }
+      break
+
+    case ".jar":
+      await extractArchive(archivePath, extractPath, {
+        ...options,
+        // For .jar archives, extract only the contents of "installation" folder
+        transform(filePath) {
+          if (filePath.startsWith("installation/")) {
+            return filePath.replace("installation/", "")
+          } else {
+            return null
+          }
+        },
+      })
+      break
+
+    case ".msi":
+      await extractMSI(archivePath, extractPath)
+      break
+
+    case ".zip":
+      await extractArchive(archivePath, extractPath, options)
+      break
+
+    default:
+      throw Error(`Unsupported archive format ${extension}`)
+  }
+}
+
+export async function extract7z(
+  archivePath: string,
+  extractPath: string,
+  options: {
+    exePath?(exe: string): Promise<string>
+    logger?: Logger
+  } = {},
+): Promise<{ size: number }> {
+  const stdout = await run("7z", {
+    args: ["e", `-o${extractPath}`, archivePath],
+    ...options,
+  })
+
+  const sizeMatch = stdout.match(/Size: (\d+)/)
+  const size = sizeMatch ? Number.parseInt(sizeMatch[1], 10) : 0
+  return { size }
+}
+
+export async function extractArchive(
+  archivePath: string,
+  extractPath: string,
+  options: {
+    logger?: Logger
+    onProgress?(current: number, total: number): void
+    transform?(filePath: string): string | null
+  } = {},
+): Promise<{ size: number }> {
+  const { logger = console, onProgress, transform } = options
+
+  const archive = await Open.file(archivePath)
+  const files = archive.files.filter(file => file.type === "File")
+
+  const totalUncompressedSize = files.reduce((total, file) => total + file.uncompressedSize, 0)
+
+  if (onProgress) {
+    onProgress(0, totalUncompressedSize)
+  }
+
+  let size = 0
+  for (const file of files) {
+    const transformedPath = transform ? transform(file.path) : file.path
+    if (transformedPath) {
+      logger.debug(`Extracting ${file.path}`)
+      const targetPath = path.join(extractPath, transformedPath)
+      await createIfMissing(path.dirname(targetPath))
+      try {
+        await finished(
+          pipeline(file.stream(), createWriteStream(targetPath), error => {
+            if (error) {
+              logger.error(`Failed to extract ${file.path}`, error)
+            }
+          }),
+        )
+
+        size += file.uncompressedSize
+
+        if (onProgress) {
+          onProgress(size, totalUncompressedSize)
+        }
+      } catch (error) {
+        logger.error(`Failed to extract ${file.path}`, error)
+        await removeIfPresent(targetPath)
+        throw error
+      }
+    }
+  }
+
+  return { size }
+}
+
+export async function extractClickTeam(
+  archivePath: string,
+  extractPath: string,
+  options: {
+    exePath?(exe: string): Promise<string>
+    logger?: Logger
+  } = {},
+): Promise<void> {
+  await run("cicdec", {
+    args: [archivePath, extractPath],
+    ...options,
+  })
+}
+
+export async function extractMSI(archivePath: string, extractPath: string): Promise<void> {
+  // If installer is "foo/bar/baz.msi", extract to "foo/bar/~baz"
+  const tempName = `~${path.basename(archivePath, path.extname(archivePath))}`
+  const tempPath = path.join(path.dirname(archivePath), tempName)
+
+  await cmd(`msiexec /a "${archivePath}" TARGETDIR="${tempPath}" /qn`)
+
+  // For .msi installers, extract only the contents of "Files" folder
+  for (const entryPath of await readdir(path.join(tempPath, "Files"))) {
+    await moveTo(path.join(tempPath, "Files", entryPath), path.join(extractPath, entryPath))
+  }
+
+  await removeIfPresent(tempPath)
+}
