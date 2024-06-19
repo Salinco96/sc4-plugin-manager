@@ -1,108 +1,50 @@
-import { useCallback } from "react"
+import { Chip, Tooltip } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
-import { Chip, List, Tooltip } from "@mui/material"
-
-import { PackageCategory, PackageState, getCategory, getState } from "@common/types"
+import { getCategories } from "@common/categories"
+import { PackageState, getState } from "@common/types"
+import { toggleElement } from "@common/utils/arrays"
 import { Page, useLocation } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
-import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
+import { PackageFilters, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
-import { TagType } from "./PackageList/utils"
+import { FlexBox } from "./FlexBox"
+import { Tag, TagType, TagValue, getTagLabel, serializeTag } from "./PackageList/utils"
 
-interface TagInfo {
-  color?: "success" | "error" | "warning"
-  id: string
-  label: string
-  category?: PackageCategory
-  state?: PackageState
+type TagInfo<T extends TagType = TagType> = Tag<T> & {
+  color?: "error" | "success" | "warning"
 }
 
-const tags: TagInfo[] = [
+const tags: TagInfo<TagType.STATE>[] = [
   {
-    id: `${TagType.CATEGORY}:${PackageCategory.DEPENDENCIES}`,
-    label: "Dependency",
-    category: PackageCategory.DEPENDENCIES,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.MODS}`,
-    label: "Mod",
-    category: PackageCategory.MODS,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.RESIDENTIAL}`,
-    label: "Residential",
-    category: PackageCategory.RESIDENTIAL,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.COMMERCIAL}`,
-    label: "Commercial",
-    category: PackageCategory.COMMERCIAL,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.INDUSTRIAL}`,
-    label: "Industrial",
-    category: PackageCategory.INDUSTRIAL,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.CIVICS}`,
-    label: "Civics",
-    category: PackageCategory.CIVICS,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.LANDMARKS}`,
-    label: "Landmark",
-    category: PackageCategory.LANDMARKS,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.PARKS}`,
-    label: "Park",
-    category: PackageCategory.PARKS,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.ENERGY}`,
-    label: "Energy",
-    category: PackageCategory.ENERGY,
-  },
-  {
-    id: `${TagType.CATEGORY}:${PackageCategory.TRANSPORT}`,
-    label: "Transport",
-    category: PackageCategory.TRANSPORT,
-  },
-  {
-    id: "enabled",
-    label: "Enabled",
-    state: PackageState.ENABLED,
     color: "success",
+    type: TagType.STATE,
+    value: PackageState.ENABLED,
   },
   {
-    id: "disabled",
-    label: "Disabled",
-    state: PackageState.DISABLED,
     color: "error",
+    type: TagType.STATE,
+    value: PackageState.DISABLED,
   },
   {
-    id: "error",
-    label: "Error",
-    state: PackageState.ERROR,
     color: "error",
+    type: TagType.STATE,
+    value: PackageState.ERROR,
   },
   {
-    id: "outdated",
-    label: "Outdated",
-    state: PackageState.OUTDATED,
     color: "warning",
+    type: TagType.STATE,
+    value: PackageState.OUTDATED,
   },
   {
-    id: "local",
-    label: "Local",
-    state: PackageState.LOCAL,
     color: "warning",
+    type: TagType.STATE,
+    value: PackageState.LOCAL,
   },
   {
-    id: "experimental",
-    label: "Experimental",
-    state: PackageState.EXPERIMENTAL,
     color: "warning",
+    type: TagType.STATE,
+    value: PackageState.EXPERIMENTAL,
   },
 ]
 
@@ -111,45 +53,34 @@ export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
   const filters = useStore(store => store.packageFilters)
   const location = useLocation()
 
-  const filtering = location.page === Page.Packages
+  const { t } = useTranslation("PackageTag")
 
-  const selected = tag.category && filters.tags.includes(tag.id)
+  const key = {
+    author: "authors",
+    category: "categories",
+    state: "states",
+  }[tag.type] as keyof PackageFilters
 
-  const onClick = useCallback(() => {
-    if (tag.category) {
-      if (selected) {
-        actions.setPackageFilters({ tags: filters.tags.filter(id => id !== tag.id) })
-      } else {
-        actions.setPackageFilters({ tags: filters.tags.concat(tag.id) })
-      }
-    }
-  }, [actions, filters, selected])
+  const values = filters[key] as TagValue<TagType>[]
 
-  if (filtering) {
-    return (
-      <Tooltip title={selected ? "Remove filter" : "Add filter"}>
-        <Chip
-          color={tag.color}
-          component="li"
-          label={tag.label}
-          onClick={onClick}
-          size="medium"
-          sx={{ borderRadius: 2 }}
-          variant={selected ? "filled" : "outlined"}
-        />
-      </Tooltip>
-    )
-  }
+  const isSelectable = location.page === Page.Packages
+  const isSelected = values.includes(tag.value)
 
-  return (
+  const chip = (
     <Chip
       color={tag.color}
-      component="li"
-      label={tag.label}
+      label={getTagLabel(tag)}
+      onClick={() => actions.setPackageFilters({ [key]: toggleElement(values, tag.value) })}
       size="medium"
       sx={{ borderRadius: 2 }}
-      variant="filled"
+      variant={isSelected || !isSelectable ? "filled" : "outlined"}
     />
+  )
+
+  return isSelectable ? (
+    <Tooltip title={t(isSelected ? "actions.unselect" : "actions.select")}>{chip}</Tooltip>
+  ) : (
+    chip
   )
 }
 
@@ -157,32 +88,21 @@ export function PackageTags({ packageId }: { packageId: string }): JSX.Element |
   const currentProfile = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
-  const category = getCategory(variantInfo)
 
-  const packageTags = tags.filter(tag => {
-    if (tag.category) {
-      return tag.category === category
-    }
-
-    if (tag.state) {
-      return getState(tag.state, packageInfo, variantInfo.id, currentProfile)
-    }
-
-    return false
-  })
+  const packageTags = [
+    ...getCategories(variantInfo).map(category => ({ type: TagType.CATEGORY, value: category })),
+    ...tags.filter(tag => getState(tag.value, packageInfo, variantInfo.id, currentProfile)),
+  ] as TagInfo[]
 
   if (packageTags.length === 0) {
     return null
   }
 
   return (
-    <List
-      disablePadding
-      sx={{ display: "flex", flexDirection: "row", gap: 1, /* marginBottom: 1, */ marginTop: 1 }}
-    >
+    <FlexBox direction="row" gap={1} mt={1}>
       {packageTags.map(tag => (
-        <PackageTag key={tag.id} tag={tag} />
+        <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
       ))}
-    </List>
+    </FlexBox>
   )
 }

@@ -1,24 +1,24 @@
 import {
+  WidgetsOutlined as AllPackagesIcon,
   AccountBalance as CivicsIcon,
-  AccountBox as ProfileIcon,
-  Apartment as ResidentialIcon,
-  Bolt as EnergyIcon,
-  Church as LandmarksIcon,
   CorporateFare as CommercialIcon,
-  Extension as ModsIcon,
+  ViewInAr as DependenciesIcon,
+  Bolt as EnergyIcon,
   Factory as IndustrialIcon,
+  Church as LandmarksIcon,
+  Extension as ModsIcon,
   LocalFlorist as ParksIcon,
   Report as ProblemsIcon,
+  AccountBox as ProfileIcon,
+  Apartment as ResidentialIcon,
   Settings as SettingsIcon,
   Traffic as TransportIcon,
   Update as UpdatesIcon,
-  ViewInAr as DependenciesIcon,
-  WidgetsOutlined as AllPackagesIcon,
 } from "@mui/icons-material"
 
-import { PackageCategory, PackageState } from "@common/types"
-import { TagType } from "@components/PackageList/utils"
-import { Page, Location } from "@utils/navigation"
+import { PackageCategory } from "@common/categories"
+import { PackageState } from "@common/types"
+import { Location, Page } from "@utils/navigation"
 import { filterVariant } from "@utils/packages"
 import { PackageFilters, Store, getCurrentProfile } from "@utils/store"
 
@@ -34,16 +34,12 @@ export interface TabInfo {
   tooltip?: string
 }
 
-function countPackages(store: Store, category?: PackageCategory, state?: PackageState): number {
+function countPackages(store: Store, overrideFilters?: Partial<PackageFilters>): number {
   const profileInfo = getCurrentProfile(store)
 
   const filters = {
     ...store.packageFilters,
-    authors: [],
-    categories: category ? [category] : [],
-    onlyErrors: state === PackageState.ERROR,
-    onlyUpdates: state === PackageState.OUTDATED,
-    search: undefined,
+    ...overrideFilters,
   }
 
   return store.packages
@@ -70,7 +66,7 @@ export const tabs: TabInfo[] = [
   },
   {
     badgeCount(store) {
-      return countPackages(store)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <AllPackagesIcon />,
@@ -78,14 +74,15 @@ export const tabs: TabInfo[] = [
     label: "All",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [],
+      states: [],
     },
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.DEPENDENCIES)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <DependenciesIcon />,
@@ -93,15 +90,16 @@ export const tabs: TabInfo[] = [
     label: "Dependencies",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.DEPENDENCIES],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.DEPENDENCIES}`],
+      states: [],
     },
     tooltip: "Textures, props",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.MODS)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <ModsIcon />,
@@ -109,15 +107,16 @@ export const tabs: TabInfo[] = [
     label: "Mods",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.MODS],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.MODS}`],
+      states: [],
     },
     tooltip: "Gameplay mods, bugfixes, DLLs",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.RESIDENTIAL)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <ResidentialIcon />,
@@ -125,15 +124,16 @@ export const tabs: TabInfo[] = [
     label: "Residential",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.RESIDENTIAL],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.RESIDENTIAL}`],
+      states: [],
     },
     tooltip: "Residential lots",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.COMMERCIAL)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <CommercialIcon />,
@@ -141,15 +141,16 @@ export const tabs: TabInfo[] = [
     label: "Commercial",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.COMMERCIAL],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.COMMERCIAL}`],
+      states: [],
     },
     tooltip: "Commercial lots",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.INDUSTRIAL)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <IndustrialIcon />,
@@ -157,15 +158,16 @@ export const tabs: TabInfo[] = [
     label: "Industrial",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.INDUSTRIAL],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.INDUSTRIAL}`],
+      states: [],
     },
     tooltip: "Industrial lots",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.CIVICS)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <CivicsIcon />,
@@ -173,15 +175,16 @@ export const tabs: TabInfo[] = [
     label: "Civics",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.CIVICS],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.CIVICS}`],
+      states: [],
     },
     tooltip: "Civic buildings, rewards",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.LANDMARKS)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <LandmarksIcon />,
@@ -189,15 +192,16 @@ export const tabs: TabInfo[] = [
     label: "Landmarks",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.LANDMARKS],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.LANDMARKS}`],
+      states: [],
     },
     tooltip: "Landmarks",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.PARKS)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <ParksIcon />,
@@ -205,31 +209,33 @@ export const tabs: TabInfo[] = [
     label: "Parks",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.PARKS],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.PARKS}`],
+      states: [],
     },
     tooltip: "Parks",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.ENERGY)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <EnergyIcon />,
-    id: `packages:${PackageCategory.ENERGY}`,
-    label: "Energy",
+    id: `packages:${PackageCategory.UTILITIES}`,
+    label: "Utilities",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.UTILITIES],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.ENERGY}`],
+      states: [],
     },
-    tooltip: "Energy infrastructure",
+    tooltip: "Energy, water, waste",
   },
   {
     badgeCount(store) {
-      return countPackages(store, PackageCategory.TRANSPORT)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <TransportIcon />,
@@ -237,16 +243,17 @@ export const tabs: TabInfo[] = [
     label: "Transport",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [PackageCategory.TRANSPORT],
       onlyErrors: false,
       onlyUpdates: false,
-      tags: [`${TagType.CATEGORY}:${PackageCategory.TRANSPORT}`],
+      states: [],
     },
     tooltip: "Transportation infrastructure",
   },
   {
     badgeColor: "error",
     badgeCount(store) {
-      return countPackages(store, undefined, PackageState.ERROR)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <ProblemsIcon />,
@@ -254,15 +261,16 @@ export const tabs: TabInfo[] = [
     label: "Problems",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [],
       onlyErrors: true,
       onlyUpdates: false,
-      tags: [],
+      states: [PackageState.ERROR],
     },
   },
   {
     badgeColor: "error",
     badgeCount(store) {
-      return countPackages(store, undefined, PackageState.OUTDATED)
+      return countPackages(store, this.packageFilters)
     },
     group: "Packages",
     icon: <UpdatesIcon />,
@@ -270,9 +278,10 @@ export const tabs: TabInfo[] = [
     label: "Updates",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
+      categories: [],
       onlyErrors: false,
       onlyUpdates: true,
-      tags: [],
+      states: [PackageState.OUTDATED],
     },
     tooltip: "Packages with updates available",
   },

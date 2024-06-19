@@ -17,7 +17,8 @@ import log, { LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
 
-import { CategoryID, formatCategory } from "@common/categories"
+import { getCategoryPath } from "@common/categories"
+import { i18n, i18nConfig } from "@common/i18n"
 import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
 import { ApplicationState, ApplicationStatus, TaskInfo } from "@common/state"
 import {
@@ -154,9 +155,21 @@ export class Application {
   protected databaseUpdatePromise?: Promise<boolean>
 
   public constructor() {
+    // Initialize paths
     this.gamePath = this.loadGamePath()
     this.rootPath = path.join(this.gamePath, DIRNAMES.root)
 
+    // Initialize logs
+    app.setPath("logs", this.getLogsPath())
+    log.transports.console.level = this.getLogLevel()
+    log.transports.file.level = this.getLogLevel()
+    log.transports.file.resolvePathFn = this.getLogsFile.bind(this)
+    Object.assign(console, log.functions)
+
+    // Initialize translations
+    i18n.init(i18nConfig)
+
+    // Initialize custom protocols
     handleDocsProtocol(this.rootPath, DOCEXTENSIONS)
 
     // Register message handlers
@@ -734,13 +747,6 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
   }
 
   protected async initialize(): Promise<void> {
-    // Initialize logs
-    app.setPath("logs", this.getLogsPath())
-    log.transports.console.level = this.getLogLevel()
-    log.transports.file.level = this.getLogLevel()
-    log.transports.file.resolvePathFn = this.getLogsFile.bind(this)
-    Object.assign(console, log.functions)
-
     // Initialize session
     getSimtropolisSession(this.browserSession).then(session => {
       if (session) {
@@ -976,7 +982,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
               oldPath: string,
               newPath: string,
               type: "cleanitol" | "docs" | "files",
-              category?: CategoryID,
+              category?: number,
               condition?: PackageCondition,
             ) => {
               const extension = getExtension(oldPath)
@@ -1035,7 +1041,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
               oldPath: string,
               newPath: string,
               type: "cleanitol" | "docs" | "files",
-              category?: CategoryID,
+              category?: number,
               condition?: PackageCondition,
             ) => {
               const filePaths = await glob(getChildrenPattern(toPosix(oldPath)), {
@@ -1290,8 +1296,8 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
 
           for (const packageId in this.packages) {
             const packageInfo = this.packages[packageId]
-            const status = packageInfo.status[currentProfile.id]! // required at this time
-            if (status.enabled) {
+            const status = packageInfo.status[currentProfile.id]
+            if (status?.enabled) {
               const variantId = status.variantId
               const variantInfo = packageInfo.variants[variantId]
               if (variantInfo) {
@@ -1300,7 +1306,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
                   for (const file of variantInfo.files) {
                     if (checkCondition(file.condition)) {
                       const fullPath = path.join(variantPath, file.path)
-                      const categoryPath = formatCategory(file.category ?? variantInfo.category)
+                      const categoryPath = getCategoryPath(file.category ?? variantInfo.category)
 
                       // DLL files must be in Plugins root
                       const targetPath = file.path.match(/\.(dll|ini)$/i)

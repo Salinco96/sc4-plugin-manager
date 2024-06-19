@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
 import { SxProps, TextField } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 import { ProfileInfo } from "@common/types"
 import { useStoreActions } from "@utils/store"
@@ -19,10 +20,12 @@ export function ProfileNameInputField({
   // Update defaultValue if name changes in some other way
   useEffect(() => setName(profileInfo.name), [profileInfo.name])
 
+  const { t } = useTranslation("Profile")
+
   return (
     <TextField
       fullWidth
-      label="Profile name"
+      label={t("name.label")}
       onBlur={async event => {
         const value = event.target.value
         if (value === profileInfo.name) {

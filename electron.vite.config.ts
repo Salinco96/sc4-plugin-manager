@@ -9,6 +9,7 @@ export default defineConfig({
     resolve: {
       alias: {
         "@common": resolve("src/common"),
+        "@config": resolve("src/config"),
         "@node": resolve("src/node"),
         "@utils": resolve("src/main/utils"),
       },
@@ -30,6 +31,7 @@ export default defineConfig({
       alias: {
         "@common": resolve("src/common"),
         "@components": resolve("src/renderer/src/components"),
+        "@config": resolve("src/config"),
         "@pages": resolve("src/renderer/src/pages"),
         "@providers": resolve("src/renderer/src/providers"),
         "@utils": resolve("src/renderer/src/utils"),

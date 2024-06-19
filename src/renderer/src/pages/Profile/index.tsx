@@ -1,5 +1,6 @@
 import { Settings as ConfigIcon } from "@mui/icons-material"
 import { FormControl, FormGroup, IconButton, TextField, Tooltip } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
 import { useCurrentProfile, useStoreActions } from "@utils/store"
@@ -10,6 +11,8 @@ import { ProfileSettingSwitchField } from "./ProfileSettingSwitchField"
 function Profile(): JSX.Element {
   const profileInfo = useCurrentProfile()
   const actions = useStoreActions()
+
+  const { t } = useTranslation("Profile")
 
   if (!profileInfo) {
     return <FlexBox />
@@ -22,7 +25,7 @@ function Profile(): JSX.Element {
         <TextField
           InputProps={{
             endAdornment: (
-              <Tooltip arrow placement="left" title="Open configuration file">
+              <Tooltip arrow placement="left" title={t("actions.open")}>
                 <IconButton onClick={() => actions.openProfileConfig(profileInfo.id)} size="small">
                   <ConfigIcon fontSize="small" />
                 </IconButton>
@@ -31,7 +34,7 @@ function Profile(): JSX.Element {
           }}
           disabled
           fullWidth
-          label="Profile ID"
+          label={t("id.label")}
           required
           sx={{ flex: 1 }}
           value={profileInfo.id}
@@ -41,20 +44,16 @@ function Profile(): JSX.Element {
       <FormControl component="fieldset">
         <FormGroup>
           <ProfileSettingSwitchField
-            label="Have you installed a DarkNite mod outside of the Manager?"
+            label={t("externals.label", { name: t("darknite.full", { ns: "ConflictGroups" }) })}
             name="darknite"
             profileInfo={profileInfo}
           />
           <ProfileSettingSwitchField
-            label="Have you installed the Colossus Addon Mod outside of the Manager?"
+            label={t("externals.label", { name: t("cam.full", { ns: "ConflictGroups" }) })}
             name="cam"
             profileInfo={profileInfo}
           />
-          <ProfileSettingSwitchField
-            label="Do you have cars driving on the left?"
-            name="rhd"
-            profileInfo={profileInfo}
-          />
+          <ProfileSettingSwitchField label={t("rhd.label")} name="rhd" profileInfo={profileInfo} />
         </FormGroup>
       </FormControl>
     </FlexBox>

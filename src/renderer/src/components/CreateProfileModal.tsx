@@ -20,6 +20,7 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 import { createUniqueProfileId } from "@common/profiles"
 import { ProfileInfo } from "@common/types"
@@ -55,6 +56,8 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
   const profileIds = Object.keys(profiles)
   const hasProfiles = profileIds.length !== 0
 
+  const { t } = useTranslation("CreateProfileModal")
+
   const [templateId, setTemplateId] = useState(currentProfile?.id ?? templateProfiles[0].id)
   const [name, setName] = useState<string>()
 
@@ -63,23 +66,20 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
   const defaultName = sourceProfile ? `${sourceProfile.name} (Copy)` : hasProfiles ? "" : "Default"
 
   const nameValue = name ?? defaultName
-  const nameError = nameValue.trim() ? undefined : "Required"
+  const nameError = nameValue.trim() ? undefined : t("name.errors.required", { ns: "Profile" })
 
   const id = createUniqueProfileId(nameValue, profileIds)
 
   return (
     <>
-      <DialogTitle>{hasProfiles ? "Create profile" : "Create your first profile"}</DialogTitle>
+      <DialogTitle>{t(hasProfiles ? "title" : "titleFirst")}</DialogTitle>
       <DialogContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-        <DialogContentText>
-          Profiles allow you to enable different mods while playing different regions, without
-          having to manually move and rename folders, and without storing copies of any files.
-        </DialogContentText>
+        <DialogContentText>{t("description")}</DialogContentText>
         <TextField
           autoFocus
           fullWidth
           id="name"
-          label="Profile name"
+          label={t("name.label", { ns: "Profile" })}
           name="name"
           onChange={event => setName(event.target.value.trimStart())}
           onFocus={event => !name && event.target.select()}
@@ -94,7 +94,7 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
           id="id"
           InputProps={{
             endAdornment: (
-              <Tooltip title="Unique ID corresponding to the configuration filename in Profiles folder. Cannot be modified later.">
+              <Tooltip title={t("id.description")}>
                 <InputAdornment position="end">
                   <Icon aria-label="Help">
                     <HelpIcon />
@@ -103,14 +103,14 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
               </Tooltip>
             ),
           }}
-          label="Profile ID"
+          label={t("id.label", { ns: "Profile" })}
           name="id"
           value={id}
           variant="standard"
         />
         <FormControl fullWidth variant="standard">
           <InputLabel htmlFor="template" id="template-label">
-            {hasProfiles ? "Create from" : "Create from template"}
+            {t(hasProfiles ? "from.label" : "fromTemplate.label")}
           </InputLabel>
           <Select
             aria-describedby="template-description"
@@ -118,7 +118,7 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             id="template"
             sx={{ "& .MuiSelect-icon": { marginRight: 3 } }}
             endAdornment={
-              <Tooltip title="You can either duplicate one of your existing profiles or create a new profile from a predefined template.">
+              <Tooltip title={t("from.description")}>
                 <InputAdornment position="end">
                   <Icon aria-label="Help">
                     <HelpIcon />
@@ -134,16 +134,16 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             value={templateId}
             variant="standard"
           >
-            <MenuItem value={emptyValue}>Empty</MenuItem>
+            <MenuItem value={emptyValue}>{t("from.emptyValue")}</MenuItem>
             <Divider />
-            <ListSubheader>Template</ListSubheader>
+            <ListSubheader>{t("from.template")}</ListSubheader>
             {templateProfiles.map(template => (
               <MenuItem key={template.id} value={template.id}>
                 {template.name}
               </MenuItem>
             ))}
             {hasProfiles && <Divider />}
-            {hasProfiles && <ListSubheader>Profile</ListSubheader>}
+            {hasProfiles && <ListSubheader>{t("from.profile")}</ListSubheader>}
             {profileIds.map(profileId => (
               <MenuItem key={profileId} value={profileId}>
                 {profiles[profileId].name}
@@ -151,13 +151,15 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             ))}
           </Select>
           <FormHelperText id="template-description">
-            {templateId === emptyValue ? "Create an empty profile." : sourceTemplate?.description}
+            {templateId === emptyValue
+              ? t("from.emptyValueDescription")
+              : sourceTemplate?.description}
           </FormHelperText>
         </FormControl>
       </DialogContent>
       <DialogActions>
         <Button color="error" onClick={onClose}>
-          Cancel
+          {t("actions.cancel.label")}
         </Button>
         <Button
           disabled={!!nameError}
@@ -171,7 +173,7 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             onClose()
           }}
         >
-          Create
+          {t("actions.create.label")}
         </Button>
       </DialogActions>
     </>

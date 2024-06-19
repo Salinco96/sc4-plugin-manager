@@ -3,7 +3,7 @@ import { ReactNode, forwardRef } from "react"
 import { Card, styled } from "@mui/material"
 import { CustomContentProps, SnackbarContent } from "notistack"
 
-const _CustomSnackbar = forwardRef<
+const Snackbar = forwardRef<
   HTMLDivElement,
   CustomContentProps & { backgroundColor?: string; children: ReactNode }
 >((props, ref) => {
@@ -16,6 +16,6 @@ const _CustomSnackbar = forwardRef<
   )
 })
 
-_CustomSnackbar.displayName = "CustomSnackbar"
+Snackbar.displayName = "CustomSnackbar"
 
-export const CustomSnackbar = styled(_CustomSnackbar)({})
+export const CustomSnackbar = styled(Snackbar)({})

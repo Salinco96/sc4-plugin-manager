@@ -1,7 +1,8 @@
 import update, { Spec } from "immutability-helper"
-import { SnackbarKey, enqueueSnackbar, closeSnackbar } from "notistack"
+import { SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
 import { create } from "zustand"
 
+import { PackageCategory } from "@common/categories"
 import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
@@ -18,6 +19,8 @@ export interface PackageUi {
 }
 
 export interface PackageFilters {
+  authors: string[]
+  categories: PackageCategory[]
   dependencies: boolean
   experimental: boolean
   incompatible: boolean
@@ -25,7 +28,7 @@ export interface PackageFilters {
   onlyUpdates: boolean
   search: string
   state: PackageState | null
-  tags: string[]
+  states: PackageState[]
 }
 
 export interface StoreActions {
@@ -372,6 +375,8 @@ export const useStore = create<Store>()((set, get): Store => {
     authors: [],
     filteredPackages: [],
     packageFilters: {
+      authors: [],
+      categories: [],
       dependencies: false,
       experimental: false,
       incompatible: false,
@@ -379,7 +384,7 @@ export const useStore = create<Store>()((set, get): Store => {
       onlyUpdates: false,
       search: "",
       state: null,
-      tags: [],
+      states: [],
     },
     packageUi: {},
     sessions: {

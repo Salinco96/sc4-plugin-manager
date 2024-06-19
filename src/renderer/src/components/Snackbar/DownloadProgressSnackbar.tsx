@@ -2,6 +2,7 @@ import { forwardRef, useEffect, useRef } from "react"
 
 import { Box, CardActions, LinearProgress, Typography } from "@mui/material"
 import { CustomContentProps } from "notistack"
+import { useTranslation } from "react-i18next"
 
 import { useStore, useStoreActions } from "@utils/store"
 
@@ -11,17 +12,25 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
   (props, ref) => {
     const actions = useStoreActions()
 
+    const { t } = useTranslation("Snackbar")
+
     // const [hover, setHover] = useState(false)
 
     const message = useStore(store => {
       if (store.status?.ongoingDownloads.length) {
         const { key, progress } = store.status.ongoingDownloads[0]
-        return `Downloading ${key}${progress !== undefined ? ` (${progress}%)` : ""}...`
+        return t("downloading", {
+          key,
+          progress: progress !== undefined ? t("progress", { progress }) : undefined,
+        })
       }
 
       if (store.status?.ongoingExtracts.length) {
         const { key, progress } = store.status.ongoingExtracts[0]
-        return `Extracting ${key}${progress !== undefined ? ` (${progress}%)` : ""}...`
+        return t("extracting", {
+          key,
+          progress: progress !== undefined ? t("progress", { progress }) : undefined,
+        })
       }
     })
 

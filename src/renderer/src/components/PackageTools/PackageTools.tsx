@@ -1,11 +1,12 @@
 import {
-  Notes as ReadmeIcon,
-  Folder as FilesIcon,
-  GitHub as GitHubIcon,
   Settings as ConfigIcon,
   Topic as DocsIcon,
+  Folder as FilesIcon,
+  GitHub as GitHubIcon,
+  Notes as ReadmeIcon,
   Language as WebIcon,
 } from "@mui/icons-material"
+import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
 import { useCurrentVariant } from "@utils/packages"
@@ -21,46 +22,48 @@ export function PackageTools({ packageId }: { packageId: string }): JSX.Element 
   const docsPath = variantInfo.docs
   const readmePath = variantInfo.readme
 
+  const { t } = useTranslation("PackageTools")
+
   return (
     <FlexBox alignItems="center" gap={0.5} mx={0.5}>
       {variantInfo.url && (
         <PackageToolButton
-          description="Open website"
+          description={t("openUrl")}
           icon={WebIcon}
           onClick={() => actions.openVariantURL(packageId, variantId)}
         />
       )}
       {variantInfo.repository && (
         <PackageToolButton
-          description="Open repository"
+          description={t("openRepository")}
           icon={GitHubIcon}
           onClick={() => actions.openVariantRepository(packageId, variantId)}
         />
       )}
       {variantInfo.installed && (
         <PackageToolButton
-          description="Open configuration file"
+          description={t("openConfig")}
           icon={ConfigIcon}
           onClick={() => actions.openPackageConfig(packageId)}
         />
       )}
       {variantInfo.installed && (
         <PackageToolButton
-          description="Open installed files"
+          description={t("openFiles")}
           icon={FilesIcon}
           onClick={() => actions.openPackageFile(packageId, variantId, "")}
         />
       )}
       {variantInfo.installed && docsPath && (
         <PackageToolButton
-          description="Open installed documentation"
+          description={t("openDocs")}
           icon={DocsIcon}
           onClick={() => actions.openPackageFile(packageId, variantId, docsPath)}
         />
       )}
       {variantInfo.installed && readmePath && (
         <PackageToolButton
-          description="Open README"
+          description={t("openReadme")}
           icon={ReadmeIcon}
           onClick={() => actions.openPackageFile(packageId, variantId, readmePath)}
         />

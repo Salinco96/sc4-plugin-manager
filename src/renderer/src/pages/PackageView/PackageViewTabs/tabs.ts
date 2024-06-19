@@ -1,31 +1,36 @@
 import { ComponentType } from "react"
 
+import { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
 import { PackageStatus, VariantInfo } from "@common/types"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
-import { PackageViewDocumentation } from "./PackageViewDocumentation"
 import { PackageViewFiles } from "./PackageViewFiles"
-import { PackageViewInfo } from "./PackageViewInfo"
 import { PackageViewOptionalDependencies } from "./PackageViewOptionalDependencies"
+import { PackageViewReadme } from "./PackageViewReadme"
 import { PackageViewRequiredBy } from "./PackageViewRequiredBy"
+import { PackageViewSummary } from "./PackageViewSummary"
 
 export const packageViewTabs: {
   component: ComponentType<{ packageId: string }>
   id: string
-  name: (variantInfo: VariantInfo, packageStatus?: PackageStatus) => string
+  name: (
+    t: TFunction<"PackageViewTabs">,
+    variantInfo: VariantInfo,
+    packageStatus?: PackageStatus,
+  ) => string
   condition: (variantInfo: VariantInfo, packageStatus?: PackageStatus) => boolean
   fullsize?: boolean
 }[] = [
   {
-    id: "info",
-    component: PackageViewInfo,
+    id: "summary",
+    component: PackageViewSummary,
     condition() {
       return true
     },
-    name() {
-      return "Summary"
+    name(t) {
+      return t("summary")
     },
   },
   {
@@ -34,29 +39,29 @@ export const packageViewTabs: {
     condition(variantInfo) {
       return !!variantInfo.dependencies?.length
     },
-    name(variantInfo) {
-      return `${variantInfo.dependencies?.length ?? 0} dependencies`
+    name(t, variantInfo) {
+      return t("dependencies", { count: variantInfo.dependencies?.length })
     },
   },
   {
-    id: "optional",
+    id: "optionalDependencies",
     component: PackageViewOptionalDependencies,
     condition(variantInfo) {
       return !!variantInfo.optional?.length
     },
-    name(variantInfo) {
-      return `${variantInfo.optional?.length ?? 0} optional dependencies`
+    name(t, variantInfo) {
+      return t("optionalDependencies", { count: variantInfo.optional?.length })
     },
   },
   {
     // TODO: Make this show not only enabled packages, according to filters
-    id: "requires",
+    id: "requiredBy",
     component: PackageViewRequiredBy,
     condition(variantInfo, packageStatus) {
       return !!packageStatus?.requiredBy?.length
     },
-    name() {
-      return "Required by"
+    name(t, variantInfo, packageStatus) {
+      return t("requiredBy", { count: packageStatus?.requiredBy?.length })
     },
   },
   {
@@ -65,18 +70,18 @@ export const packageViewTabs: {
     condition(variantInfo) {
       return !!variantInfo.files?.length
     },
-    name(variantInfo) {
-      return `${variantInfo.files?.length ?? 0} files`
+    name(t, variantInfo) {
+      return t("files", { count: variantInfo.files?.length })
     },
   },
   {
-    id: "docs",
-    component: PackageViewDocumentation,
+    id: "readme",
+    component: PackageViewReadme,
     condition(variantInfo) {
       return !!variantInfo.readme
     },
-    name() {
-      return "Readme"
+    name(t) {
+      return t("readme")
     },
     fullsize: true,
   },

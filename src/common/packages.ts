@@ -1,11 +1,6 @@
-import {
-  PackageCategory,
-  PackageInfo,
-  PackageStatus,
-  ProfileInfo,
-  VariantInfo,
-  getCategory,
-} from "@common/types"
+import { PackageInfo, PackageStatus, ProfileInfo, VariantInfo } from "@common/types"
+
+import { PackageCategory, isCategory } from "./categories"
 
 export function getPackageStatus(
   packageInfo: PackageInfo,
@@ -22,7 +17,7 @@ export function getVariantIssues(
 }
 
 export function isDependency(variantInfo: VariantInfo): boolean {
-  return getCategory(variantInfo) === PackageCategory.DEPENDENCIES
+  return isCategory(variantInfo, PackageCategory.DEPENDENCIES)
 }
 
 export function isDeprecated(variantInfo: VariantInfo): boolean {

@@ -1,6 +1,11 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/common/**/*", "src/preload/*.d.ts", "src/renderer/src/**/*"],
+  "include": [
+    "src/common/**/*",
+    "src/config/**/*.json",
+    "src/preload/*.d.ts",
+    "src/renderer/src/**/*"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "react-jsx",
@@ -8,6 +13,7 @@
     "paths": {
       "@common/*": ["src/common/*"],
       "@components/*": ["src/renderer/src/components/*"],
+      "@config/*": ["src/config/*"],
       "@pages/*": ["src/renderer/src/pages/*"],
       "@providers/*": ["src/renderer/src/providers/*"],
       "@utils/*": ["src/renderer/src/utils/*"]

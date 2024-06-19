@@ -3,15 +3,15 @@ import path from "path"
 
 import { glob } from "glob"
 
-import { CategoryID, parseCategoryID } from "@common/categories"
+import { defaultCategory, parseCategory } from "@common/categories"
 import {
+  AssetInfo,
+  ConfigFormat,
   PackageAsset,
   PackageData,
   PackageInfo,
   VariantData,
   VariantInfo,
-  AssetInfo,
-  ConfigFormat,
 } from "@common/types"
 import { readConfig, readConfigs, writeConfig } from "@node/configs"
 import { exists } from "@node/files"
@@ -263,7 +263,7 @@ export async function loadRemotePackages(
                   ...(config.assets ?? []).map(convertMemoAsset),
                 ],
                 authors: convertMemoAuthors(config.info?.author ?? config.group),
-                category: parseCategoryID(config.subfolder),
+                category: parseCategory(config.subfolder),
                 dependencies: (variant.dependencies ?? variant.dependencies) && [
                   ...(variant.dependencies ?? []).map(convertMemoPackageId),
                   ...(config.dependencies ?? []).map(convertMemoPackageId),
@@ -350,7 +350,7 @@ export async function loadRemotePackages(
             const defaultVariantInfo: VariantInfo = {
               assets: config.assets?.map(convertMemoAsset),
               authors: convertMemoAuthors(config.info?.author ?? config.group),
-              category: parseCategoryID(config.subfolder),
+              category: parseCategory(config.subfolder),
               dependencies: config.dependencies?.map(convertMemoPackageId),
               deprecated: config.info?.summary?.match(/superseded/i) ? true : undefined,
               description: config.info?.description,
@@ -488,7 +488,7 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(packageData.assets ?? []),
     ],
     authors: [...(variantData.authors ?? []), ...(packageData.authors ?? [])],
-    category: (variantData.category ?? packageData.category ?? 800) as CategoryID,
+    category: variantData.category ?? packageData.category ?? defaultCategory,
     conflictGroups: (packageData.conflictGroups || variantData.conflictGroups) && [
       ...(variantData.conflictGroups ?? []),
       ...(packageData.conflictGroups ?? []),

@@ -3,6 +3,7 @@
   "include": [
     "electron.vite.config.*",
     "src/common/**/*",
+    "src/config/**/*.json",
     "src/main/**/*",
     "src/node/**/*",
     "src/preload/**/*"
@@ -12,6 +13,7 @@
     "types": ["electron-vite/node"],
     "paths": {
       "@common/*": ["src/common/*"],
+      "@config/*": ["src/config/*"],
       "@node/*": ["src/node/*"],
       "@utils/*": ["src/main/utils/*"]
     }

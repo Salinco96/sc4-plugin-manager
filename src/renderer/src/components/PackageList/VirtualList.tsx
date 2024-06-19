@@ -2,7 +2,7 @@ import { CSSProperties, ComponentType, Ref, forwardRef, memo, useContext, useMem
 
 import { Box, SxProps } from "@mui/material"
 import AutoSizer from "react-virtualized-auto-sizer"
-import { VariableSizeList, ListChildComponentProps } from "react-window"
+import { ListChildComponentProps, VariableSizeList } from "react-window"
 
 import { createContext } from "@utils/context"
 

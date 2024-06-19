@@ -1,6 +1,8 @@
 // Needs to be imported first for some reason - see https://github.com/mui/material-ui/issues/31835
 import { CssBaseline } from "@mui/material"
 
+import { I18nProvider } from "@providers/I18nProvider"
+
 import { Content } from "./Content"
 import { Layout } from "./Layout"
 import { DataProvider } from "./providers/DataProvider"
@@ -12,16 +14,18 @@ import { ThemeProvider } from "./providers/ThemeProvider"
  */
 function App(): JSX.Element {
   return (
-    <ThemeProvider>
-      <SnackbarProvider>
-        <CssBaseline />
-        <DataProvider>
-          <Layout>
-            <Content />
-          </Layout>
-        </DataProvider>
-      </SnackbarProvider>
-    </ThemeProvider>
+    <I18nProvider>
+      <ThemeProvider>
+        <SnackbarProvider>
+          <CssBaseline />
+          <DataProvider>
+            <Layout>
+              <Content />
+            </Layout>
+          </DataProvider>
+        </SnackbarProvider>
+      </ThemeProvider>
+    </I18nProvider>
   )
 }
 

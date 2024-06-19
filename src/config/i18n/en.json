@@ -1,0 +1,304 @@
+{
+  "AppBar": {
+    "actions": {
+      "createProfile": {
+        "label": "Create profile"
+      },
+      "renameProfile": {
+        "label": "Rename profile"
+      },
+      "selectProfile": {
+        "label": "Select profile"
+      },
+      "signIn": {
+        "description": "Simtropolis has a daily limit of 20 downloads for anonymous users. Sign it to bypass the limit.",
+        "label": "Sign In"
+      },
+      "signOut": {
+        "description": "Sign out of Simtropolis",
+        "label": "Sign Out"
+      }
+    },
+    "userId": {
+      "description": "Simtropolis user ID",
+      "label": "User ID"
+    }
+  },
+  "CreateProfileModal": {
+    "actions": {
+      "cancel": {
+        "label": "$t(General:cancel)"
+      },
+      "create": {
+        "label": "Create"
+      }
+    },
+    "description": "Profiles allow you to enable different mods while playing different regions, without having to manually move and rename folders, and without storing copies of any files.",
+    "from": {
+      "description": "You can either duplicate one of your existing profiles or create a new profile from a predefined template.",
+      "emptyValue": "Empty",
+      "emptyValueDescription": "Create an empty profile.",
+      "label": "Create from",
+      "profile": "Profile",
+      "template": "Template"
+    },
+    "fromTemplate": {
+      "label": "Create from template"
+    },
+    "id": {
+      "description": "Unique ID corresponding to the configuration filename in Profiles folder. Cannot be modified later."
+    },
+    "title": "Create profile",
+    "titleFirst": "Create your first profile"
+  },
+  "ConflictGroups": {
+    "cam": {
+      "full": "the Colossus Addon Mod",
+      "long": "Colossus Addon Mod",
+      "short": "CAM"
+    },
+    "darknite": {
+      "full": "a DarkNite mod",
+      "long": "Dark Nite",
+      "short": "DarkNite"
+    }
+  },
+  "General": {
+    "app": "SC4 Plugin Manager",
+    "back": "Go back",
+    "cam": "Colossus Addon Mod",
+    "cancel": "Cancel",
+    "darknite": "DarkNite",
+    "4gbpatch": "4GB Patch",
+    "emptyValue": "...",
+    "explorer": "Open in Explorer",
+    "nam": "Network Addon Mod",
+    "no": "No",
+    "required": "Required",
+    "yes": "Yes"
+  },
+  "PackageActions": {
+    "actions": {
+      "disabling": "Disabling...",
+      "enabling": "Enabling...",
+      "installing": "Installing...",
+      "removing": "Removing...",
+      "updating": "Updating..."
+    },
+    "add": {
+      "description": "Install and enable this package",
+      "label": "Add",
+      "reason": {
+        "incompatible": "This variant is not compatible with your profile"
+      }
+    },
+    "disable": {
+      "description": "Disable this package",
+      "label": "Disable",
+      "reason": {
+        "required_one": "This package cannot be disabled because it is required by another package",
+        "required_other": "This package cannot be disabled because it is required by {{count}} other packages"
+      }
+    },
+    "download": {
+      "description": "Install this package without enabling it",
+      "label": "Download"
+    },
+    "enable": {
+      "description": "Enable this package",
+      "label": "Enable",
+      "reason": {
+        "incompatible": "This variant is not compatible with your profile"
+      }
+    },
+    "install": {
+      "description": "Install this package",
+      "label": "Install",
+      "reason": {
+        "incompatible": "This variant is not compatible with your profile"
+      }
+    },
+    "more": "More options",
+    "remove": {
+      "description": "Remove this package\nWARNING: This package may be required by another profile!",
+      "label": "Remove",
+      "reason": {
+        "required_one": "This package cannot be disabled because it is required by another package",
+        "required_other": "This package cannot be disabled because it is required by {{count}} other packages"
+      }
+    },
+    "update": {
+      "description": "Update to version {{version}}",
+      "label": "Update",
+      "reason": {
+        "incompatible": "This variant is not compatible with your profile"
+      }
+    }
+  },
+  "PackageCategory": {
+    "agriculture": "Agriculture",
+    "audio": "Audio",
+    "automata": "Automata",
+    "blockers": "Maxis Blockers",
+    "bugfixes": "Bugfixes",
+    "cam": "CAM",
+    "cheats": "Cheats",
+    "civics": "Civics",
+    "commercial": "Commercial",
+    "commercial-co2": "$t(PackageCategory:commercial) (CO$$)",
+    "commercial-co3": "$t(PackageCategory:commercial) (CO$$$)",
+    "commercial-cs1": "$t(PackageCategory:commercial) (CS$)",
+    "commercial-cs2": "$t(PackageCategory:commercial) (CS$$)",
+    "commercial-cs3": "$t(PackageCategory:commercial) (CS$$$)",
+    "custom": "Custom",
+    "dependencies": "Dependencies",
+    "dll": "DLL Mods",
+    "education": "$t(PackageCategory:civics) (Education)",
+    "energy": "$t(PackageCategory:utilities) (Energy)",
+    "gameplay": "Gameplay Mods",
+    "government": "$t(PackageCategory:civics) (Governement)",
+    "graphics": "Graphical Mods",
+    "health": "$t(PackageCategory:civics) (Healthcare)",
+    "industrial": "Industrial",
+    "industrial-id": "$t(PackageCategory:industrial) (I-D)",
+    "industrial-iht": "$t(PackageCategory:industrial) (I-HT)",
+    "industrial-im": "$t(PackageCategory:industrial) (I-M)",
+    "irm": "IRM",
+    "landmarks": "Landmarks",
+    "mods": "Mods",
+    "nam": "NAM",
+    "ordinances": "Ordinances",
+    "overrides": "Overrides",
+    "parks": "Parks",
+    "props": "Props",
+    "religion": "$t(PackageCategory:civics) (Religion)",
+    "residential": "Residential",
+    "residential-r1": "$t(PackageCategory:residential) (R$)",
+    "residential-r2": "$t(PackageCategory:residential) (R$$)",
+    "residential-r3": "$t(PackageCategory:residential) (R$$$)",
+    "safety": "$t(PackageCategory:civics) (Safety)",
+    "spam": "SPAM",
+    "textures": "Textures",
+    "transport": "Transport",
+    "utilities": "Utilities",
+    "waste": "$t(PackageCategory:utilities) (Waste)",
+    "water": "$t(PackageCategory:utilities) (Water)",
+    "waterfront": "Waterfront"
+  },
+  "PackageList": {
+    "emptyList": "No packages found for these filters"
+  },
+  "PackageListFilters": {
+    "actions": {
+      "hideDependencies": "Hide dependencies",
+      "hideExperimental": "Hide experimental packages",
+      "hideIncompatible": "Hide incompatible packages",
+      "showDependencies": "Show dependencies",
+      "showExperimental": "Show experimental packages",
+      "showIncompatible": "Show incompatible packages",
+      "showOnlyEnabled": "Show only enabled packages",
+      "showOnlyInstalled": "Show only installed packages",
+      "showOnlyLocal": "Show only local packages"
+    },
+    "search": {
+      "label": "Search"
+    }
+  },
+  "PackageState": {
+    "dependency": "Dependency",
+    "deprecated": "Deprecated",
+    "disabled": "Disabled",
+    "enabled": "Enabled",
+    "error": "Error",
+    "experimental": "Experimental",
+    "incompatible": "Incompatible",
+    "installed": "Installed",
+    "local": "Local",
+    "outdated": "Outdated"
+  },
+  "PackageTag": {
+    "actions": {
+      "select": "Add filter",
+      "unselect": "Remove filter"
+    },
+    "author": "Author: {{label}}",
+    "category": "Category: {{label}}",
+    "state": "Status: {{label}}"
+  },
+  "PackageTools": {
+    "openConfig": "Open configuration file",
+    "openDocs": "Open installed documentation",
+    "openFiles": "Open installed files",
+    "openReadme": "Open README",
+    "openRepository": "Open repository",
+    "openUrl": "Open website"
+  },
+  "PackageViewSummary": {
+    "authors": "Authors",
+    "category": "Category",
+    "conflictGroups": "Conflict groups",
+    "requirements": "Requirements",
+    "repository": "Repository",
+    "url": "Website"
+  },
+  "PackageViewTabs": {
+    "dependencies_one": "{{count}} dependency",
+    "dependencies_other": "{{count}} dependencies",
+    "files_one": "{{count}} file",
+    "files_other": "{{count}} files",
+    "optionalDependencies_one": "{{count}} optional dependency",
+    "optionalDependencies_other": "{{count}} optional dependencies",
+    "readme": "Readme",
+    "requiredBy": "Required by",
+    "summary": "Summary"
+  },
+  "Profile": {
+    "actions": {
+      "open": "Open configuration file"
+    },
+    "externals": {
+      "label": "Have you installed {{name}} outside of the Manager?"
+    },
+    "id": {
+      "label": "Profile ID"
+    },
+    "name": {
+      "errors": {
+        "required": "$t(General:required)"
+      },
+      "label": "Profile Name"
+    },
+    "rhd": {
+      "label": "Do you have cars driving on the left?"
+    }
+  },
+  "Settings": {
+    "install": {
+      "patched": {
+        "label": "$t(General:4gbpatch)",
+        "reason": {
+          "applied": "The $t(General:4gbpatch) has been applied."
+        }
+      },
+      "path": {
+        "emptyValue": "$t(General:emptyValue)",
+        "label": "Installation path",
+        "actions": {
+          "explorer": "$t(General:explorer)"
+        }
+      },
+      "version": {
+        "emptyValue": "$t(General:emptyValue)",
+        "label": "Executable version",
+        "actions": {
+          "explorer": "$t(General:explorer)"
+        }
+      }
+    }
+  },
+  "Snackbar": {
+    "downloading": "Downloading {{key}}{{progress}}...",
+    "extracting": "Extracting {{key}}{{progress}}...",
+    "progress": " ({{progress}}%)"
+  }
+}

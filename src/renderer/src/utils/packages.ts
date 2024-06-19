@@ -1,5 +1,8 @@
 import { useCallback } from "react"
 
+import { Namespace, TFunction } from "i18next"
+
+import { isCategory } from "@common/categories"
 import {
   getVariantIssues,
   isDependency,
@@ -10,22 +13,20 @@ import {
   isMissing,
   isOutdated,
 } from "@common/packages"
-import {
-  PackageCategory,
-  PackageInfo,
-  PackageState,
-  PackageStatus,
-  ProfileInfo,
-  VariantInfo,
-  getCategory,
-  getState,
-} from "@common/types"
+import { PackageInfo, PackageStatus, ProfileInfo, VariantInfo, getState } from "@common/types"
 import { hasAny } from "@common/utils/arrays"
 import { mapValues } from "@common/utils/objects"
+import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import { PACKAGE_BANNER_HEIGHT, PACKAGE_BANNER_SPACING } from "@components/PackageBanners"
-import { TagType, parseTag } from "@components/PackageList/utils"
 
-import { PackageUi, Store, getCurrentProfile, getPackageInfo, useStore } from "./store"
+import {
+  PackageFilters,
+  PackageUi,
+  Store,
+  getCurrentProfile,
+  getPackageInfo,
+  useStore,
+} from "./store"
 
 export const PACKAGE_LIST_ITEM_BASE_SIZE = 180
 export const PACKAGE_LIST_ITEM_BANNER_SIZE = PACKAGE_BANNER_HEIGHT + PACKAGE_BANNER_SPACING
@@ -33,6 +34,14 @@ export const PACKAGE_LIST_ITEM_DESCRIPTION_SIZE = 56
 
 function getFilteredPackages(store: Store): string[] {
   return store.filteredPackages
+}
+
+export function getConflictGroupLabel(
+  t: TFunction<Namespace>,
+  groupId: string,
+  style: "full" | "short" | "long" = "long",
+): string {
+  return t(`${groupId}.${style}`, { defaultValue: groupId, ns: "ConflictGroups" })
 }
 
 export function getPackageListItemSize(
@@ -148,26 +157,20 @@ export function filterVariant(
   packageInfo: PackageInfo,
   variantInfo: VariantInfo,
   profileInfo: ProfileInfo | undefined,
-  filters: {
-    authors: string[]
-    categories: PackageCategory[]
-    dependencies?: boolean
-    experimental?: boolean
-    incompatible?: boolean
-    onlyErrors?: boolean
-    onlyUpdates?: boolean
-    pattern?: RegExp
-    state: PackageState | null
-  },
+  filters: Omit<PackageFilters, "search"> & { pattern?: RegExp },
 ): boolean {
   const packageStatus = getPackageStatus(packageInfo, profileInfo)
 
-  if (filters.authors.length && !hasAny(variantInfo.authors, filters.authors)) {
-    return false
+  if (filters.authors.length) {
+    if (!hasAny(variantInfo.authors, filters.authors)) {
+      return false
+    }
   }
 
-  if (filters.categories.length && !filters.categories.includes(getCategory(variantInfo))) {
-    return false
+  if (filters.categories.length) {
+    if (!filters.categories.some(category => isCategory(variantInfo, category))) {
+      return false
+    }
   }
 
   if (filters.onlyErrors && !isError(variantInfo, packageStatus)) {
@@ -180,6 +183,12 @@ export function filterVariant(
 
   if (filters.state && !getState(filters.state, packageInfo, variantInfo.id, profileInfo)) {
     return false
+  }
+
+  if (filters.states.length) {
+    if (!filters.states.some(state => getState(state, packageInfo, variantInfo.id, profileInfo))) {
+      return false
+    }
   }
 
   if (!filters.onlyErrors && !filters.onlyUpdates) {
@@ -224,26 +233,10 @@ export function computePackageList(
 
   // Match search query from start of words only, ignoring leading/trailing spaces
   const search = packageFilters.search.trim()
-  const pattern = search ? RegExp("\\b" + search.replaceAll(/\W/g, "\\$&"), "i") : undefined
+  const pattern = search ? getStartOfWordSearchRegex(search) : undefined
 
-  // Group tags by type
-  // Tags within each type are merged as OR, then types are merged as AND
-  // e.g. (author1 OR author2 OR author3) AND (category1 OR category2)
-  const filterAuthors: string[] = []
-  const filterCategories: PackageCategory[] = []
-  for (const tag of packageFilters.tags) {
-    const { type, value } = parseTag(tag)
-    if (type === TagType.AUTHOR) {
-      filterAuthors.push(value)
-    } else if (type === TagType.CATEGORY) {
-      filterCategories.push(value as PackageCategory)
-    }
-  }
-
-  const filters = {
+  const filters: Omit<PackageFilters, "search"> & { pattern?: RegExp } = {
     ...packageFilters,
-    authors: filterAuthors,
-    categories: filterCategories,
     // When showing errors, we do not want to exclude non-error variants
     // Instead we will check this for the selected variant only
     onlyErrors: false,

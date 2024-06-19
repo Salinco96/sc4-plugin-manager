@@ -1,5 +1,6 @@
 import { SearchOff as NoResultIcon } from "@mui/icons-material"
-import { Box, styled, Typography } from "@mui/material"
+import { Box, Typography, styled } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 const Container = styled(Box)`
   align-items: center;
@@ -12,10 +13,12 @@ const Container = styled(Box)`
 `
 
 export function EmptyPackageList(): JSX.Element {
+  const { t } = useTranslation("PackageList")
+
   return (
     <Container>
       <NoResultIcon fontSize="inherit" />
-      <Typography variant="subtitle1">No packages found for these filters</Typography>
+      <Typography variant="subtitle1">{t("emptyList")}</Typography>
     </Container>
   )
 }

@@ -1,12 +1,15 @@
 import { Box, Typography } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
-import { getCategoryLabel } from "@common/categories"
+import { getCategories, getCategoryLabel } from "@common/categories"
 import { PackageBanners } from "@components/PackageBanners"
 import { Text } from "@components/Text"
-import { useCurrentVariant } from "@utils/packages"
+import { getConflictGroupLabel, useCurrentVariant } from "@utils/packages"
 
-export function PackageViewInfo({ packageId }: { packageId: string }): JSX.Element {
+export function PackageViewSummary({ packageId }: { packageId: string }): JSX.Element {
   const variantInfo = useCurrentVariant(packageId)
+
+  const { t } = useTranslation("PackageViewSummary")
 
   return (
     <Box>
@@ -17,16 +20,25 @@ export function PackageViewInfo({ packageId }: { packageId: string }): JSX.Eleme
       )}
       {/* TODO: Better formatting (with Simtropolis user links?) */}
       <Typography variant="body2">
-        <b>Authors:</b> {variantInfo.authors.join(", ")}
+        <b>{t("authors")}:</b> {variantInfo.authors.join(", ")}
       </Typography>
       {/* TODO: Better formatting */}
       <Typography variant="body2">
-        <b>Category:</b> {getCategoryLabel(variantInfo.category)}
+        <b>{t("category")}:</b> {getCategories(variantInfo).map(getCategoryLabel).join(", ")}
       </Typography>
+      {/* TODO: Better formatting */}
+      {variantInfo.repository && (
+        <Text maxLines={1} variant="body2">
+          <b>{t("repository")}:</b>{" "}
+          <a href={variantInfo.repository} target="_blank" rel="noreferrer">
+            {variantInfo.repository}
+          </a>
+        </Text>
+      )}
       {/* TODO: Better formatting */}
       {variantInfo.url && (
         <Text maxLines={1} variant="body2">
-          <b>Website:</b>{" "}
+          <b>{t("url")}:</b>{" "}
           <a href={variantInfo.url} target="_blank" rel="noreferrer">
             {variantInfo.url}
           </a>
@@ -35,17 +47,19 @@ export function PackageViewInfo({ packageId }: { packageId: string }): JSX.Eleme
       {/* TODO: Better formatting */}
       {variantInfo.conflictGroups && (
         <Typography variant="body2">
-          <b>Conflict groups:</b> {variantInfo.conflictGroups.join(", ")}
+          <b>{t("conflictGroups")}:</b>{" "}
+          {variantInfo.conflictGroups.map(groupId => getConflictGroupLabel(t, groupId)).join(", ")}
         </Typography>
       )}
       {/* TODO: Better formatting */}
       {variantInfo.requirements && (
         <Typography variant="body2">
-          <b>Requirements:</b>
+          <b>{t("requirements")}:</b>
           <ul>
             {Object.entries(variantInfo.requirements).map(([requirement, value]) => (
               <li key={requirement}>
-                {requirement}: {String(value)}
+                {getConflictGroupLabel(t, requirement)}:{" "}
+                {t(value ? "yes" : "no", { ns: "General" })}
               </li>
             ))}
           </ul>

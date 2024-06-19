@@ -2,19 +2,20 @@ import { useEffect, useState } from "react"
 
 import { SwitchAccount as SwitchProfileIcon } from "@mui/icons-material"
 import {
-  AppBar as MuiAppBar,
   Box,
+  Button,
+  CircularProgress,
   IconButton,
   MenuItem,
+  AppBar as MuiAppBar,
   Select,
-  styled,
   TextField,
   Toolbar,
   Tooltip,
   Typography,
-  Button,
-  CircularProgress,
+  styled,
 } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 import { ProfileInfo } from "@common/types"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
@@ -63,6 +64,8 @@ export function AppBar(): JSX.Element {
   const [isRenaming, setRenaming] = useState(false)
   const [isSelecting, setSelecting] = useState(false)
 
+  const { t } = useTranslation("AppBar")
+
   useEffect(() => {
     if (hasProfiles === false) {
       setCreating(true)
@@ -88,9 +91,9 @@ export function AppBar(): JSX.Element {
     <MuiAppBar position="fixed" sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}>
       <Toolbar>
         <Box sx={{ alignItems: "center", display: "flex", flexGrow: 1 }}>
-          <Tooltip title={hasProfiles ? "Select profile" : "Create profile"}>
+          <Tooltip title={t(`actions.${hasProfiles ? "selectProfile" : "createProfile"}.label`)}>
             <IconButton
-              aria-label={hasProfiles ? "Select profile" : "Create profile"}
+              aria-label={t(`actions.${hasProfiles ? "selectProfile" : "createProfile"}.label`)}
               color="inherit"
               disabled={isLoadingProfiles}
               onClick={() => (hasProfiles ? setSelecting(true) : setCreating(true))}
@@ -131,11 +134,11 @@ export function AppBar(): JSX.Element {
                   {profile.name}
                 </MenuItem>
               ))}
-              <MenuItem value={newProfileId}>Create profile...</MenuItem>
+              <MenuItem value={newProfileId}>{t("actions.createProfile.label")}...</MenuItem>
             </ProfileSelect>
           ) : !currentProfile ? (
             <Typography component="h1" variant="h6" color="inherit" noWrap>
-              SC4 Plugin Manager
+              {t("app", { ns: "General" })}
             </Typography>
           ) : isRenaming ? (
             <ProfileNameInput
@@ -164,7 +167,7 @@ export function AppBar(): JSX.Element {
             />
           ) : (
             <>
-              <Tooltip title="Rename profile">
+              <Tooltip title={t("actions.renameProfile.label")}>
                 <Typography
                   component="h1"
                   variant="h6"
@@ -183,23 +186,23 @@ export function AppBar(): JSX.Element {
         {userId === undefined && <CircularProgress color="inherit" size={24} />}
 
         {userId === null && (
-          <Tooltip title="Simtropolis has a daily limit of 20 downloads for anonymous users. Sign it to bypass the limit.">
+          <Tooltip title={t("actions.signIn.description")}>
             <Button color="inherit" onClick={actions.simtropolisLogin} variant="outlined">
-              Sign In
+              {t("actions.signIn.label")}
             </Button>
           </Tooltip>
         )}
 
         {userId && (
           <>
-            <Tooltip title="Simtropolis user ID">
+            <Tooltip title={t("userId.description")}>
               <Typography variant="body1" color="inherit" noWrap sx={{ marginRight: 2 }}>
-                User ID: {userId}
+                {t("userId.label")}: {userId}
               </Typography>
             </Tooltip>
-            <Tooltip title="Sign out of Simtropolis">
+            <Tooltip title={t("actions.signOut.description")}>
               <Button color="inherit" onClick={actions.simtropolisLogout} variant="outlined">
-                Sign Out
+                {t("actions.signOut.label")}
               </Button>
             </Tooltip>
           </>

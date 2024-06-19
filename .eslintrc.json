@@ -83,6 +83,12 @@
       {
         "allow": ["debug", "error", "info", "warn"]
       }
+    ],
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreDeclarationSort": true
+      }
     ]
   },
   "settings": {

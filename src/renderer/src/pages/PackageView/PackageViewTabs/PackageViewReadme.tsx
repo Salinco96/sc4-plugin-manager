@@ -4,7 +4,7 @@ import { Loader } from "@components/Loader"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
-export function PackageViewDocumentation({ packageId }: { packageId: string }): JSX.Element {
+export function PackageViewReadme({ packageId }: { packageId: string }): JSX.Element {
   const actions = useStoreActions()
   const variantId = useCurrentVariant(packageId).id
 

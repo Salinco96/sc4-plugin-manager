@@ -6,6 +6,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
@@ -15,14 +16,16 @@ function Settings(): JSX.Element {
   const settings = useStore(store => store.settings)
   const actions = useStoreActions()
 
+  const { t } = useTranslation("Settings")
+
   return (
     <FlexBox direction="column" height="100%" gap={2} p={2}>
       <FormControl component="fieldset">
         <FormGroup>
           <FlexBox alignItems="center" height={38} gap={2}>
-            <Typography sx={{ flex: 1 }}>Installation path</Typography>
+            <Typography sx={{ flex: 1 }}>{t("install.path.label")}</Typography>
             {settings?.install?.path ? (
-              <Tooltip arrow placement="left" title="Open in Explorer">
+              <Tooltip arrow placement="left" title={t("install.path.actions.explorer")}>
                 <Text
                   color="primary"
                   maxLines={1}
@@ -33,13 +36,13 @@ function Settings(): JSX.Element {
                 </Text>
               </Tooltip>
             ) : (
-              "..."
+              t("install.path.emptyValue")
             )}
           </FlexBox>
           <FlexBox alignItems="center" height={38} gap={2}>
-            <Typography sx={{ flex: 1 }}>Executable version</Typography>
+            <Typography sx={{ flex: 1 }}>{t("install.version.label")}</Typography>
             {settings?.install?.version ? (
-              <Tooltip arrow placement="left" title="Open in Explorer">
+              <Tooltip arrow placement="left" title={t("install.version.actions.explorer")}>
                 <Text
                   color="primary"
                   maxLines={1}
@@ -50,14 +53,14 @@ function Settings(): JSX.Element {
                 </Text>
               </Tooltip>
             ) : (
-              "..."
+              t("install.version.emptyValue")
             )}
           </FlexBox>
           <FormControlLabel
             checked={!!settings?.install?.patched}
             control={<Switch color="primary" />}
             disabled={!settings?.install || !!settings?.install?.patched}
-            label="4GB Patch"
+            label={t("install.patched.label")}
             labelPlacement="start"
             onChange={async event => {
               const value = (event.target as HTMLInputElement).checked
@@ -67,32 +70,12 @@ function Settings(): JSX.Element {
             }}
             slotProps={{ typography: { sx: { flex: 1 } } }}
             sx={{ marginLeft: 0 }}
-            title={settings?.install?.patched ? "The 4GB Patch has been applied." : undefined}
+            title={settings?.install?.patched ? t("install.patched.reason.applied") : undefined}
           />
         </FormGroup>
       </FormControl>
     </FlexBox>
   )
-
-  // return (
-  //   <pre style={{ width: "100%" }}>
-  //     {JSON.stringify(settings, undefined, 2)}
-  //     <br />
-  //     DLL mods require{" "}
-  //     <a
-  //       href="https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2022"
-  //       rel="noreferrer"
-  //       target="_blank"
-  //     >
-  //       Microsoft Visual C++ Redistributable for Visual Studio
-  //     </a>
-  //     <br />
-  //     Download link:{" "}
-  //     <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="noreferrer" target="_blank">
-  //       https://aka.ms/vs/17/release/vc_redist.x86.exe
-  //     </a>
-  //   </pre>
-  // )
 }
 
 export default Settings

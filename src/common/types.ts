@@ -1,5 +1,3 @@
-import { CategoryID } from "./categories"
-
 /** Supported configuration formats */
 export enum ConfigFormat {
   JSON = ".json",
@@ -49,7 +47,7 @@ export interface PackageData extends VariantData {
 
 export interface PackageFile {
   as?: string
-  category?: CategoryID
+  category?: number
   condition?: PackageCondition
   path: string
 }
@@ -116,7 +114,7 @@ export interface VariantData {
 
 export interface BaseVariantInfo extends VariantData {
   authors: string[]
-  category: CategoryID
+  category: number
   id: string
   name: string
   version: string
@@ -129,20 +127,6 @@ export interface VariantInfo extends BaseVariantInfo {
   installed?: boolean
   local?: boolean
   update?: BaseVariantInfo
-}
-
-/* @deprecated */
-export enum PackageCategory {
-  MODS = "mods",
-  RESIDENTIAL = "residential",
-  COMMERCIAL = "commercial",
-  INDUSTRIAL = "industrial",
-  ENERGY = "energy",
-  CIVICS = "civics",
-  LANDMARKS = "landmarks",
-  PARKS = "parks",
-  DEPENDENCIES = "dependencies",
-  TRANSPORT = "transport",
 }
 
 export enum PackageState {
@@ -189,51 +173,6 @@ export interface Settings {
     version?: string
   }
   useYaml?: boolean
-}
-
-/** @deprecated */
-export function getCategory(info: VariantInfo): PackageCategory {
-  if (info.category < 100) {
-    return PackageCategory.MODS
-  }
-
-  if (info.category < 200) {
-    return PackageCategory.DEPENDENCIES
-  }
-
-  if (info.category < 300) {
-    return PackageCategory.RESIDENTIAL
-  }
-
-  if (info.category === 360) {
-    return PackageCategory.LANDMARKS
-  }
-
-  if (info.category < 400) {
-    return PackageCategory.COMMERCIAL
-  }
-
-  if (info.category < 500) {
-    return PackageCategory.INDUSTRIAL
-  }
-
-  if (info.category < 600) {
-    return PackageCategory.ENERGY
-  }
-
-  if (info.category === 660) {
-    return PackageCategory.PARKS
-  }
-
-  if (info.category < 700) {
-    return PackageCategory.CIVICS
-  }
-
-  if (info.category < 800) {
-    return PackageCategory.TRANSPORT
-  }
-
-  return PackageCategory.MODS
 }
 
 export function isCompatible(info: PackageInfo, variantId: string, profile: ProfileInfo): boolean {

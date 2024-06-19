@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from "react"
 
 import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
 import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 import { isIncompatible } from "@common/packages"
 import {
@@ -27,6 +28,8 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
   const anchorRef = useRef<HTMLButtonElement>(null)
   const [isMenuOpen, setMenuOpen] = useState(false)
 
+  const { t } = useTranslation("PackageActions")
+
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
@@ -44,33 +47,29 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
   const packageActions = useMemo(() => {
     const packageActions: PackageAction[] = []
 
-    const nRequires = packageStatus?.requiredBy?.length ?? 0
-
     const isEnabled = !!packageStatus?.enabled
     const isIncompatible = !!packageStatus?.issues[variantId]?.length
     const isInstalled = !!variantInfo.installed
-    const isRequired = nRequires !== 0
+    const isRequired = !!packageStatus?.requiredBy?.length
 
     if (currentProfile && isEnabled && !isInstalled) {
       packageActions.push({
         color: "warning",
-        description: isIncompatible
-          ? "This variant is not compatible with your profile"
-          : "Install this package",
+        description: isIncompatible ? t("install.reason.incompatible") : t("install.description"),
         disabled: isIncompatible,
         id: "install",
-        label: "Install",
+        label: t("install.label"),
         onClick: () => actions.addPackage(packageId, variantId),
       })
     } else if (variantInfo.update) {
       packageActions.push({
         color: "warning",
         description: isIncompatible
-          ? "This variant is not compatible with your profile"
-          : `Update to version ${variantInfo.update.version}`,
+          ? t("update.reason.incompatible")
+          : t("update.description", { version: variantInfo.update.version }),
         disabled: isIncompatible,
         id: "update",
-        label: "Update",
+        label: t("update.label"),
         onClick: () => actions.updatePackage(packageId, variantId),
       })
     }
@@ -79,11 +78,11 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
       packageActions.push({
         color: "error",
         description: isRequired
-          ? `This package cannot be disabled because it is required by ${nRequires} other package(s)`
-          : "Disable this package",
+          ? t("disable.reason.required", { count: packageStatus?.requiredBy?.length })
+          : t("disable.description"),
         disabled: isRequired,
         id: "disable",
-        label: "Disable",
+        label: t("disable.label"),
         onClick: () => actions.disablePackage(packageId),
       })
     }
@@ -91,12 +90,10 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
     if (currentProfile && isInstalled && !isEnabled) {
       packageActions.push({
         color: "success",
-        description: isIncompatible
-          ? "This variant is not compatible with your profile"
-          : "Enable this package",
+        description: isIncompatible ? t("enable.reason.incompatible") : t("enable.description"),
         disabled: isIncompatible,
         id: "enable",
-        label: "Enable",
+        label: t("enable.label"),
         onClick: () => actions.enablePackage(packageId),
       })
     }
@@ -105,37 +102,37 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
       // TODO: Only allows removing if not used by any profile
       packageActions.push({
         color: "error",
-        description:
-          "Remove this package\nWARNING: This package may be required by another profile!",
+        description: isRequired
+          ? t("remove.reason.required", { count: packageStatus?.requiredBy?.length })
+          : t("remove.description"),
         disabled: isRequired,
         id: "remove",
-        label: "Remove",
+        label: t("remove.label"),
         onClick: () => actions.removePackage(packageId, variantId),
       })
     }
 
     if (currentProfile && !isInstalled) {
       packageActions.push({
-        description: "Install and enable this package",
+        description: isIncompatible ? t("add.reason.incompatible") : t("add.description"),
         disabled: isIncompatible,
         id: "add",
-        label: "Add",
+        label: t("add.label"),
         onClick: () => actions.addPackage(packageId, variantId),
       })
     }
 
     if (!isInstalled && !isEnabled) {
       packageActions.push({
-        description: "Download this package without enabling it",
-        disabled: isIncompatible,
+        description: t("download.description"),
         id: "download",
-        label: "Download",
+        label: t("download.label"),
         onClick: () => actions.installPackage(packageId, variantId),
       })
     }
 
     return packageActions
-  }, [currentProfile, packageId, variantId, variantInfo])
+  }, [currentProfile, packageId, t, variantId, variantInfo])
 
   if (!packageActions.length) {
     return null
@@ -159,17 +156,11 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
               sx={{ height: 40, paddingRight: hasMore ? 5.5 : 2, width: 160 }}
               variant="contained"
             >
-              {variantInfo.action === "installing"
-                ? "Installing..."
-                : variantInfo.action === "removing"
-                  ? "Removing..."
-                  : variantInfo.action === "updating"
-                    ? "Updating..."
-                    : packageStatus?.action === "disabling"
-                      ? "Disabling..."
-                      : packageStatus?.action === "enabling"
-                        ? "Enabling..."
-                        : mainAction.label}
+              {variantInfo.action
+                ? t(`actions.${variantInfo.action}`)
+                : packageStatus?.action
+                  ? t(`actions.${packageStatus.action}`)
+                  : mainAction.label}
             </Button>
           </span>
         </Tooltip>
@@ -177,7 +168,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
           <FlexBox ml={-3.5} sx={{ backgroundColor: "white" }} zIndex={1}>
             <Divider color={disabled ? "lightgray" : "white"} orientation="vertical" />
             <Button
-              aria-label="More options"
+              aria-label={t("more")}
               color={mainAction.color}
               disabled={disabled}
               onClick={() => setMenuOpen(true)}

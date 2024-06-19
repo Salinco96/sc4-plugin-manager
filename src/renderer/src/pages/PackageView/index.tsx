@@ -1,5 +1,6 @@
 import { ArrowBack as BackIcon } from "@mui/icons-material"
 import { IconButton, Tooltip } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
 import { PackageHeader } from "@components/PackageHeader"
@@ -10,11 +11,13 @@ import { PackageViewTabs } from "./PackageViewTabs/PackageViewTabs"
 function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
   const history = useHistory()
 
+  const { t } = useTranslation("General")
+
   return (
     <FlexBox direction="column" height="100%" pt={1}>
       <Tooltip arrow placement="right" title="Go back">
         <IconButton
-          aria-label="Go back"
+          aria-label={t("back")}
           color="inherit"
           onClick={() => history.back()}
           size="small"

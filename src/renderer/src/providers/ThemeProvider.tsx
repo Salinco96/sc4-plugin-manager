@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
-import { createTheme, ThemeProvider as MuiThemeProvider } from "@mui/material"
+import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material"
 
 import "@fontsource/roboto/300.css"
 import "@fontsource/roboto/400.css"
