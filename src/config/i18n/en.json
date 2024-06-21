@@ -24,6 +24,20 @@
       "label": "User ID"
     }
   },
+  "BackupPluginsModal": {
+    "confirmation": "Do you want to back up your {{plugins}} folder?",
+    "description": "Your {{plugins}} folder is not currently empty. The $t(General:app) is still experimental, so we recommend backing up your current {{plugins}} folder, then copying files back as needed.",
+    "failure": "Failed to backup {{plugins}} folder.",
+    "success": "Your {{plugins}} folder was backed up as {{pluginsBackup}}.",
+    "title": "$t(General:app)"
+  },
+  "Check4GBPatchModal": {
+    "confirmation": "Do you want to apply the $t(General:4gbpatch)?",
+    "description": "The $t(General:4gbpatch) is a one-time patch that turns on the Large-Address-Aware flag in the 'SimCity 4.exe' executable, increasing its virtual memory (RAM) usage cap from 2GB to 4GB. This allows the game to make better use of modern hardware and is necessary to run resource-intensive mods, such as the $t(General:nam)'s improved pathfinding.\n\nA backup will be automatically created next to the original file.\n\nSystem Requirements: 8GB of RAM",
+    "failure": "Failed to apply the $t(General:4gbpatch).",
+    "success": "The $t(General:4gbpatch) was applied successfully!",
+    "title": "$t(General:4gbpatch)"
+  },
   "CreateProfileModal": {
     "actions": {
       "cancel": {
@@ -63,19 +77,72 @@
       "short": "DarkNite"
     }
   },
+  "DisableIncompatiblePackagesModal": {
+    "cancel": "$t(General:cancel)",
+    "confirm": "Disable incompatible packages",
+    "confirmation": "Disable incompatible packages?",
+    "description": "The following enabled packages are incompatible with this change:\n{{packages, join(format: name; multiline: true)}}\n\nYou can either disable all incompatible packages now, or resolve each conflict manually later.",
+    "ignore": "Ignore conflicts",
+    "title": "$t(General:app)"
+  },
+  "DisableWarningModal": {
+    "confirmation": "Disable package?",
+    "message": {
+      "bulldoze": "Before disabling {{packageInfo.name}}, you must bulldoze all corresponding lots from all relevant regions."
+    }
+  },
+  "DownloadAssetsModal": {
+    "confirmation": "Download new packages?",
+    "description": "{{dependencies, pluralize(key: description_dependencies; ns: DownloadAssetsModal)}}{{assets, pluralize(key: description_assets; ns: DownloadAssetsModal)}}",
+    "description_assets_one": "{{count}} asset{{totalSize, bytes(paren: true)}} will be downloaded.",
+    "description_assets_other": "{{count}} assets{{totalSize, bytes(paren: true)}} will be downloaded.",
+    "description_dependencies_one": "This action requires the installation of {{count}} additional dependency:\n{{dependencies, join(format: name; multiline: true)}}\n\nIn total, ",
+    "description_dependencies_other": "This action requires the installation of {{count}} additional dependencies:\n{{dependencies, join(format: name; multiline: true)}}\n\nIn total, ",
+    "description_dependencies_zero": "",
+    "title": "$t(General:app)"
+  },
+  "EnableOptionalDependencies": {
+    "confirmation": "Enable optional dependencies?",
+    "description": "{{packageInfo.name}} specifies the following optional dependencies:\n{{dependencies, join(format: name; multiline: true)}}\n\nDo you want to enable them?"
+  },
+  "EnableWarningModal": {
+    "confirmation": "Enable package?"
+  },
   "General": {
+    "4gbpatch": "4GB Patch",
     "app": "SC4 Plugin Manager",
     "back": "Go back",
     "cam": "Colossus Addon Mod",
     "cancel": "Cancel",
     "darknite": "DarkNite",
-    "4gbpatch": "4GB Patch",
+    "doNotAskAgain": "Do not ask again",
     "emptyValue": "...",
     "explorer": "Open in Explorer",
+    "game": "SimCity 4",
+    "li": "  - {{label}}",
     "nam": "Network Addon Mod",
     "no": "No",
+    "paren": " ({{value}})",
+    "reload": "Reload",
     "required": "Required",
+    "sep": ", ",
     "yes": "Yes"
+  },
+  "InstallCompatibleVariantsModal": {
+    "cancel": "$t(General:cancel)",
+    "confirm": "Install compatible variants",
+    "confirmation": "Install compatible variants?",
+    "description": "The following enabled variants are incompatible with this change, but compatible variants can be installed:\n{{variants, join(key: variant; ns: InstallCompatibleVariantsModal; multiline: true)}}\n\nYou can either automatically install and switch to compatible variants now, or resolve each conflict manually later.",
+    "ignore": "Ignore conflicts",
+    "title": "$t(General:app)",
+    "variant": "{{packageInfo.name}}: {{oldVariant.name}} -> {{newVariant.name}}"
+  },
+  "Issue": {
+    "conflictingPackage": "Conflicting with {{packageId}}",
+    "conflictingGroup": "Conflicting with $t(ConflictGroups:{{groupId}}.long)",
+    "incompatibleDependency": "Dependency {{dependencyId}} is not compatible",
+    "incompatibleDependencies_other": "{{count}} dependencies are not compatible",
+    "missingGroup": "Requires $t(ConflictGroups:{{groupId}}.long) to be present"
   },
   "PackageActions": {
     "actions": {
@@ -272,6 +339,33 @@
       "label": "Do you have cars driving on the left?"
     }
   },
+  "RemoveConflictingFilesModal": {
+    "confirmation": "Remove conflicting files?",
+    "description": "The following external files are conflicting with this plugin:\n{{files}}\n\nDo you want to remove these files? Backeups will be created in {{pluginsBackup}}."
+  },
+  "RemovePackageModal": {
+    "confirmation": "Remove local package?",
+    "description": "By removing package {{packageName}}, all local files will be lost forever."
+  },
+  "RemoveVariantModal": {
+    "confirmation": "Remove local variant?",
+    "description": "By removing variant {{variantName}}, all local files will be lost forever."
+  },
+  "ReplaceExternalPackagesModal": {
+    "cancel": "$t(General:cancel)",
+    "confirm": "Replace external packages",
+    "confirmation": "Replace external packages?",
+    "description": "The following external packages are incompatible with this change:\n{{groups, join(key: group; ns: ReplaceExternalPackagesModal; multiline: true)}}\n\nIf you wish to replace them, please remove all corresponding files from your Plugins folder before continuing. Otherwise, you can resolve each conflict manually later.",
+    "group": "$t(ConflictGroups:{{value}}.long)",
+    "ignore": "Ignore conflicts",
+    "title": "$t(General:app)"
+  },
+  "SelectGameDataFolderModal": {
+    "title": "Select your $t(General:game) data folder (containing your {{plugins}} folder)"
+  },
+  "SelectGameInstallFolderModal": {
+    "title": "Select your $t(General:game) installation folder (containing SimCity_1.dat)"
+  },
   "Settings": {
     "install": {
       "patched": {
@@ -300,5 +394,8 @@
     "downloading": "Downloading {{key}}{{progress}}...",
     "extracting": "Extracting {{key}}{{progress}}...",
     "progress": " ({{progress}}%)"
+  },
+  "Warning": {
+    "bulldoze": "Before disabling {{packageInfo.name}}, you must bulldoze all corresponding lots from all relevant regions."
   }
 }

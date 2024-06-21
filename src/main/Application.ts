@@ -2,6 +2,7 @@ import {
   Menu,
   MessageBoxOptions,
   MessageBoxReturnValue,
+  OpenDialogOptions,
   Session,
   app,
   dialog,
@@ -9,7 +10,6 @@ import {
   net,
   session,
 } from "electron/main"
-import { existsSync, readFileSync, writeFileSync } from "fs"
 import fs, { FileHandle } from "fs/promises"
 import path from "path"
 
@@ -18,9 +18,9 @@ import escapeHtml from "escape-html"
 import { glob } from "glob"
 
 import { getCategoryPath } from "@common/categories"
-import { i18n, i18nConfig } from "@common/i18n"
+import { i18n, initI18n, t, toList } from "@common/i18n"
 import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
-import { ApplicationState, ApplicationStatus, TaskInfo } from "@common/state"
+import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
   AssetInfo,
   ConfigFormat,
@@ -34,12 +34,12 @@ import {
   ToolInfo,
   getDefaultVariant,
 } from "@common/types"
-import { assert } from "@common/utils/types"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 import {
+  copyTo,
   createIfMissing,
   exists,
   getExtension,
@@ -50,6 +50,7 @@ import {
   removeIfPresent,
   toPosix,
 } from "@node/files"
+import { PEFlag, getPEFlag, getPEHeader, setPEFlag, setPEHeader } from "@node/pe"
 import { cmd } from "@node/processes"
 
 import { getAssetKey } from "./data/assets"
@@ -94,6 +95,10 @@ const defaultSettings: Settings = {
   useYaml: true,
 }
 
+export interface AppConfig {
+  path?: string
+}
+
 export class Application {
   public assets: { [assetId: string]: AssetInfo | undefined } = {}
   public packages?: { [packageId: string]: PackageInfo }
@@ -118,8 +123,8 @@ export class Application {
 
   public readonly browserSession: Session = session.defaultSession
 
-  public readonly gamePath: string
-  public readonly rootPath: string
+  public gamePath!: string
+  // public rootPath!: string
 
   public links: { [from: string]: string } = {}
   public externalFiles = new Set<string>()
@@ -133,11 +138,17 @@ export class Application {
     readonly writer: TaskManager
   } = {
     download: new TaskManager("AssetFetcher", {
-      onTaskUpdate: this.onDownloadTaskUpdate.bind(this),
+      onTaskUpdate: tasks => {
+        this.status.ongoingDownloads = tasks
+        this.sendStatus()
+      },
       parallel: 6,
     }),
     extract: new TaskManager("AssetExtractor", {
-      onTaskUpdate: this.onExtractTaskUpdate.bind(this),
+      onTaskUpdate: tasks => {
+        this.status.ongoingExtracts = tasks
+        this.sendStatus()
+      },
       parallel: 6,
     }),
     getAsset: new TaskManager("AssetManager", {
@@ -147,7 +158,20 @@ export class Application {
       parallel: 30,
     }),
     linker: new TaskManager("PackageLinker", {
-      onTaskUpdate: this.onLinkTaskUpdate.bind(this),
+      onTaskUpdate: tasks => {
+        const task = tasks[0]
+        if (task?.key === "init") {
+          this.status.linker = `Initializing...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
+        } else if (task?.key === "link") {
+          this.status.linker = `Linking packages...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
+        } else if (task?.key === "clean:all") {
+          this.status.linker = `Checking for conflicts...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
+        } else {
+          this.status.linker = null
+        }
+
+        this.sendStatus()
+      },
     }),
     writer: new TaskManager("ConfigWriter"),
   }
@@ -155,22 +179,8 @@ export class Application {
   protected databaseUpdatePromise?: Promise<boolean>
 
   public constructor() {
-    // Initialize paths
-    this.gamePath = this.loadGamePath()
-    this.rootPath = path.join(this.gamePath, DIRNAMES.root)
-
-    // Initialize logs
-    app.setPath("logs", this.getLogsPath())
-    log.transports.console.level = this.getLogLevel()
-    log.transports.file.level = this.getLogLevel()
-    log.transports.file.resolvePathFn = this.getLogsFile.bind(this)
-    Object.assign(console, log.functions)
-
     // Initialize translations
-    i18n.init(i18nConfig)
-
-    // Initialize custom protocols
-    handleDocsProtocol(this.rootPath, DOCEXTENSIONS)
+    initI18n(i18n)
 
     // Register message handlers
     this.handle("check4GBPatch")
@@ -191,11 +201,13 @@ export class Application {
     this.handle("simtropolisLogout")
     this.handle("switchProfile")
     this.handle("updateProfile")
-
-    this.setApplicationMenu()
-    this.initialize()
   }
 
+  /**
+   * Back up an external file from Plugins folder to Plugins (Backup)
+   * @param context Task context
+   * @param fullPath Absolute path to the file to back up
+   */
   protected async backUpFile(context: TaskContext, fullPath: string): Promise<void> {
     const pluginsPath = this.getPluginsPath()
     const pluginsBackupPath = path.join(path.dirname(pluginsPath), DIRNAMES.pluginsBackup)
@@ -204,9 +216,15 @@ export class Application {
     const targetPath = path.join(pluginsBackupPath, relativePath)
     await moveTo(fullPath, targetPath)
     this.externalFiles.delete(fullPath)
+    // Clean up empty folders
     await removeIfEmptyRecursive(path.dirname(fullPath), pluginsPath)
   }
 
+  /**
+   * Back up an external file from Plugins folder to Plugins (Backup)
+   * @param context Task context
+   * @param fullPath Absolute path to the file to back up
+   */
   public async check4GBPatch(isStartupCheck?: boolean): Promise<void> {
     let file: FileHandle | undefined
 
@@ -215,72 +233,61 @@ export class Application {
       if (this.settings?.install?.path) {
         const filePath = path.join(this.settings.install.path, FILENAMES.sc4exe)
         file = await fs.open(filePath, "r+") // read-write mode
-        const stat = await file.stat()
 
-        // Read MZ header
-        const mzHeader = Buffer.alloc(0x40)
-        assert(stat.size >= mzHeader.length, "Invalid file length")
-        await file.read(mzHeader, 0x00, mzHeader.length, 0x00)
-        assert(mzHeader.readUInt16LE(0x00) === 0x5a4d, "Invalid MZ header signature")
-        const peHeaderOffset = mzHeader.readInt32LE(0x3c)
+        try {
+          const header = await getPEHeader(file)
+          const patched = getPEFlag(header, PEFlag.LARGE_ADDRESS_AWARE)
+          if (patched) {
+            console.info("4GB Patch is already applied")
+            if (!this.settings.install.patched) {
+              this.settings.install.patched = true
+              this.writeSettings()
+            }
+          } else if (isStartupCheck && this.settings.install.patched === false) {
+            // Skip startup check if "Do not ask again" was previously checked
+          } else {
+            delete this.settings.install.patched
 
-        // Read PE header
-        const peHeader = Buffer.alloc(0x18)
-        assert(stat.size >= peHeaderOffset + peHeader.length, "Invalid file length")
-        await file.read(peHeader, 0x00, peHeader.length, peHeaderOffset)
-        assert(peHeader.readUInt32LE(0x00) === 0x00004550, "Invalid PE header signature")
-        const flags = peHeader.readUInt16LE(0x16)
-        const largeAddressAwareFlag = 0x0020
+            const [confirmed, doNotAskAgain] = await this.showConfirmation(
+              t("Check4GBPatchModal:title"),
+              t("Check4GBPatchModal:confirmation"),
+              t("Check4GBPatchModal:description"),
+              isStartupCheck,
+            )
 
-        const patched = (flags & largeAddressAwareFlag) !== 0
-        if (patched) {
-          console.info("4GB Patch is already applied")
-          if (!this.settings.install.patched) {
-            this.settings.install.patched = true
-            this.sendSettings()
+            if (confirmed) {
+              try {
+                // Create a backup
+                await copyTo(filePath, filePath.replace(".exe", " (Backup).exe"))
+
+                // Rewrite PE header
+                setPEFlag(header, PEFlag.LARGE_ADDRESS_AWARE, true)
+                await setPEHeader(file, header)
+                await this.showSuccess(
+                  t("Check4GBPatchModal:title"),
+                  t("Check4GBPatchModal:success"),
+                )
+                this.settings.install.patched = true
+              } catch (error) {
+                console.error("Failed to apply the 4GB Patch", error)
+                await this.showError(
+                  t("Check4GBPatchModal:title"),
+                  t("Check4GBPatchModal:failure"),
+                  (error as Error).message,
+                )
+              }
+            } else if (doNotAskAgain) {
+              this.settings.install.patched = false
+            }
+
             this.writeSettings()
           }
-        } else if (isStartupCheck && this.settings.install.patched === false) {
-          // Skip startup check if "Do not ask again" was previously checked
-        } else {
-          delete this.settings.install.patched
-
-          // TODO: Handle main window not present
-          const [confirmed, doNotAskAgain] = await this.showConfirmation(
-            "4GB Patch",
-            "Do you want to apply the 4GB Patch?",
-            "The 4GB Patch is a one-time patch that turns on the Large-Address-Aware flag in the 'SimCity 4.exe' executable, increasing its virtual memory (RAM) usage cap from 2GB to 4GB. This allows the game to make better use of modern hardware and is necessary to run resource-intensive mods, such as the Network Addon Mod's improved pathfinding.\n\nA backup will be automatically created next to the original file.\n\nSystem Requirements: 8GB of RAM",
-            isStartupCheck,
-          )
-
-          if (confirmed) {
-            try {
-              // Create a backup
-              await fs.cp(filePath, filePath.replace(".exe", " (Backup).exe"))
-
-              // Rewrite PE header
-              const newFlags = flags | largeAddressAwareFlag
-              peHeader.writeUInt16LE(newFlags, 0x16)
-              await file.write(peHeader, 0x00, peHeader.length, peHeaderOffset)
-              await this.showSuccess("4GB Patch", "The 4GB Patch was applied successfully!")
-              this.settings.install.patched = true
-            } catch (error) {
-              const { message } = error as Error
-              console.error("Failed to apply the 4GB Patch", error)
-              await this.showError("4GB Patch", "Failed to apply the 4GB Patch.", message)
-            }
-          } else if (doNotAskAgain) {
-            this.settings.install.patched = false
-          }
-
-          this.sendSettings()
-          this.writeSettings()
+        } finally {
+          await file.close()
         }
       }
     } catch (error) {
       console.error("Failed to check for 4GB Patch", error)
-    } finally {
-      await file?.close()
     }
   }
 
@@ -298,10 +305,9 @@ export class Application {
       }
 
       const version = match[0]
-      if (this.settings?.install && this.settings.install.version !== version) {
+      if (this.settings.install.version !== version) {
         console.info(`Detected version ${version}`)
         this.settings.install.version = version
-        this.sendSettings()
         this.writeSettings()
       }
     }
@@ -316,7 +322,7 @@ export class Application {
     } else {
       for (const suggestedPath of SC4INSTALLPATHS) {
         if (await exists(path.join(suggestedPath, FILENAMES.sc4exe))) {
-          console.debug(`Auto-detected installation path ${suggestedPath}`)
+          console.info(`Detected installation path ${suggestedPath}`)
           installPath = suggestedPath
           installPathExists = true
           break
@@ -325,24 +331,20 @@ export class Application {
     }
 
     while (!installPathExists) {
-      const result = await dialog.showOpenDialog(this.mainWindow!, {
-        title: "Select your SimCity 4 installation folder (containing SimCity_1.dat)",
-        defaultPath: installPath,
-        properties: ["openDirectory"],
-      })
+      installPath = await this.showFolderSelector(
+        t("SelectGameInstallFolderModal:title"),
+        installPath,
+      )
 
-      if (result.filePaths.length) {
-        installPath = result.filePaths[0]
+      if (installPath) {
         installPathExists = await exists(path.join(installPath, FILENAMES.sc4exe))
       } else {
-        installPath = undefined
         break
       }
     }
 
     if (this.settings && installPath !== this.settings.install?.path) {
       this.settings.install = { path: installPath }
-      this.sendSettings()
       this.writeSettings()
     }
 
@@ -352,6 +354,9 @@ export class Application {
     }
   }
 
+  /**
+   * Runs Cleanitol for all enabled packages.
+   */
   public async cleanAll(): Promise<void> {
     await this.tasks.linker.queue("clean:all", async context => {
       const currentProfile = this.getCurrentProfile()
@@ -374,43 +379,47 @@ export class Application {
     })
   }
 
+  /**
+   * Runs Cleanitol for a single variant.
+   */
   public async cleanVariant(packageId: string, variantId: string): Promise<void> {
     await this.tasks.linker.queue(`clean:${packageId}#${variantId}`, async context => {
       await this.doCleanVariant(context, packageId, variantId)
     })
   }
 
+  /**
+   * Creates and checks out a new profile.
+   * @param name Profile name
+   * @param templateProfileId ID of the profile to copy (create an empty profile otherwise)
+   */
   public async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
     if (!this.profiles || !this.settings) {
       return false
     }
 
-    const profile: ProfileInfo = {
-      id: createUniqueProfileId(name, Object.keys(this.profiles)),
-      name,
-      packages: {},
-      externals: {},
-    }
+    const profileId = createUniqueProfileId(name, Object.keys(this.profiles))
 
     const templateProfile = templateProfileId ? this.getProfileInfo(templateProfileId) : undefined
-    if (templateProfile) {
-      for (const packageId in templateProfile.packages) {
-        profile.packages[packageId] = {
-          ...templateProfile.packages[packageId],
-        }
-      }
 
-      profile.externals = {
-        ...templateProfile.externals,
-      }
+    const profile: ProfileInfo = {
+      externals: {},
+      packages: {},
+      ...structuredClone(templateProfile),
+      format: undefined,
+      id: profileId,
+      name,
     }
 
-    this.profiles[profile.id] = profile
-    this.writeProfile(profile.id)
+    this.profiles[profileId] = profile
+    this.writeProfile(profileId)
 
-    return this.switchProfile(profile.id)
+    return this.switchProfile(profileId)
   }
 
+  /**
+   * Creates and returns the main window, if it does not already exist.
+   */
   protected createMainWindow(): MainWindow {
     if (!this.mainWindow) {
       if (!isDev()) {
@@ -433,6 +442,9 @@ export class Application {
     return this.mainWindow
   }
 
+  /**
+   * Runs Cleanitol for a single variant (internal).
+   */
   protected async doCleanVariant(
     context: TaskContext,
     packageId: string,
@@ -441,7 +453,7 @@ export class Application {
     const packageInfo = this.getPackageInfo(packageId)
     const variantInfo = packageInfo?.variants[variantId]
     if (packageInfo && variantInfo) {
-      // context.debug(`Cleaning for package ${packageId}#${variantId}...`)
+      context.debug(`Cleaning for package ${packageId}#${variantId}...`)
 
       const pluginsPath = this.getPluginsPath()
       const conflictingFiles = new Set<string>()
@@ -449,19 +461,20 @@ export class Application {
       const filenames = new Set(variantInfo.files?.map(file => path.basename(file.path)))
 
       if (variantInfo.cleanitol) {
+        const variantPath = this.getVariantPath(packageId, variantId)
+        const cleanitolPath = path.join(variantPath, variantInfo.cleanitol)
+
         const cleanitolFiles = await glob("*.txt", {
-          cwd: path.join(this.getVariantPath(packageId, variantId), variantInfo.cleanitol),
+          cwd: cleanitolPath,
           dot: true,
           matchBase: true,
           nodir: true,
-          withFileTypes: true,
         })
 
         for (const cleanitolFile of cleanitolFiles) {
-          // context.debug(`Using cleanitol file ${cleanitolFile.relative()}`)
-          const contents = await readFile(cleanitolFile.fullpath())
+          const contents = await readFile(path.join(cleanitolPath, cleanitolFile))
           for (const line of contents.split("\n")) {
-            const filename = line.split(";", 2)[0].trim()
+            const filename = line.split(";")[0].trim()
 
             if (filename) {
               filenames.add(filename)
@@ -478,33 +491,36 @@ export class Application {
         }
       }
 
-      if (conflictingFiles.size === 0) {
-        // context.debug("Done (no conflicts)")
-        return
-      }
+      if (conflictingFiles.size) {
+        const [confirmed] = await this.showConfirmation(
+          packageInfo.name,
+          t("RemoveConflictingFilesModal:confirmation"),
+          t("RemoveConflictingFilesModal:description", {
+            files: toList(
+              Array.from(conflictingFiles)
+                .map(file => path.relative(pluginsPath, file))
+                .sort(),
+            ),
+            pluginsBackup: DIRNAMES.pluginsBackup,
+          }),
+        )
 
-      const [confirmed] = await this.showConfirmation(
-        packageInfo.name,
-        "Remove conflicting files?",
-        `The following external files are conflicting with this plugin:
-${Array.from(conflictingFiles)
-  .map(file => ` - ${path.relative(pluginsPath, file)}`)
-  .sort()
-  .join("\n")}
+        if (confirmed) {
+          for (const conflictingFile of conflictingFiles) {
+            await this.backUpFile(context, conflictingFile)
+          }
 
-Do you want to remove these files? Backeups will be created in ${DIRNAMES.pluginsBackup}.`,
-      )
-
-      if (confirmed) {
-        for (const conflictingFile of conflictingFiles) {
-          await this.backUpFile(context, conflictingFile)
+          context.debug(`Resolved ${conflictingFiles.size} conflicts`)
+        } else {
+          context.debug(`Ignored ${conflictingFiles.size} conflicts`)
         }
-
-        // context.debug(`Done (backed up ${conflictingFiles.size} files)`)
       }
     }
   }
 
+  /**
+   * Downloads an asset.
+   */
   protected async downloadAsset(assetInfo: AssetInfo): Promise<void> {
     const key = this.getDownloadKey(assetInfo)
     const downloadPath = this.getDownloadPath(key)
@@ -527,7 +543,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
           downloadPath,
           downloadTempPath,
           exePath: exe => this.getToolExePath(exe),
-          expectedHash: assetInfo.sha256,
+          expectedSha256: assetInfo.sha256,
           expectedSize: assetInfo.size,
           logger: context,
           onProgress: (current, total) => {
@@ -539,6 +555,19 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
   }
 
+  /**
+   * Ensures an asset is downloaded/extracted, or download/extract it as needed.
+   */
+  protected async ensureAsset(assetInfo: AssetInfo): Promise<void> {
+    return this.tasks.getAsset.queue(this.getDownloadKey(assetInfo), async () => {
+      await this.downloadAsset(assetInfo)
+      await this.extractFiles(assetInfo)
+    })
+  }
+
+  /**
+   * Recursively extracts archives inside a downloaded asset.
+   */
   protected async extractFiles(assetInfo: AssetInfo): Promise<void> {
     const key = this.getDownloadKey(assetInfo)
     const downloadPath = this.getDownloadPath(key)
@@ -554,59 +583,71 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     })
   }
 
-  protected async getAsset(assetInfo: AssetInfo): Promise<void> {
-    return this.tasks.getAsset.queue(this.getDownloadKey(assetInfo), async () => {
-      await this.downloadAsset(assetInfo)
-      await this.extractFiles(assetInfo)
-    })
-  }
-
+  /**
+   * Returns an asset's data by ID, if it exists.
+   */
   public getAssetInfo(assetId: string): AssetInfo | undefined {
     return this.assets[assetId]
   }
 
+  /**
+   * Returns the current profile's data, if any.
+   */
   public getCurrentProfile(): ProfileInfo | undefined {
     const profileId = this.settings?.currentProfile
     return profileId ? this.profiles?.[profileId] : undefined
   }
 
+  /**
+   * Returns the absolute path to the local database files:
+   * - When using a Git repository, returns the path to the local clone.
+   * - When using a local repository, returns the path to the repository itself.
+   */
   public getDatabasePath(): string {
     const repository = this.getDataRepository()
-    return isURL(repository) ? path.join(this.rootPath, DIRNAMES.db) : repository
+    return isURL(repository) ? path.join(this.getRootPath(), DIRNAMES.db) : repository
   }
 
+  /**
+   * Returns the absolute path or Git URL to the current data repository.
+   */
   public getDataRepository(): string {
-    if (env.DATA_REPOSITORY) {
-      if (isURL(env.DATA_REPOSITORY) || path.isAbsolute(env.DATA_REPOSITORY)) {
-        return env.DATA_REPOSITORY
-      }
-
-      return path.join(__dirname, "..", env.DATA_REPOSITORY)
-    }
-
-    if (isDev()) {
-      return path.join(__dirname, "../../sc4-plugin-manager-data")
-    }
-
-    return "https://github.com/Salinco96/sc4-plugin-manager-data.git"
+    // TODO: Make this overridable through Settings
+    const repository = env.DATA_REPOSITORY
+    return isURL(repository) ? repository : path.resolve(__dirname, "../..", env.DATA_REPOSITORY)
   }
 
+  /**
+   * Returns the default config format.
+   */
   public getDefaultConfigFormat(): ConfigFormat {
     return this.settings?.useYaml === false ? ConfigFormat.JSON : ConfigFormat.YAML
   }
 
+  /**
+   * Returns the download cache key for an asset.
+   */
   protected getDownloadKey(assetInfo: AssetInfo): string {
     return getAssetKey(assetInfo.id, assetInfo.version)
   }
 
+  /**
+   * Returns the download cache absolute path for a given key.
+   */
   public getDownloadPath(key: string): string {
     return path.join(this.getDownloadsPath(), key)
   }
 
+  /**
+   * Returns the absolute path to the download cache directory.
+   */
   public getDownloadsPath(): string {
-    return path.join(this.rootPath, DIRNAMES.downloads)
+    return path.join(this.getRootPath(), DIRNAMES.downloads)
   }
 
+  /**
+   * Returns the current log level.
+   */
   public getLogLevel(): LogLevel {
     if (env.LOG_LEVEL && log.levels.includes(env.LOG_LEVEL)) {
       return env.LOG_LEVEL as LogLevel
@@ -615,14 +656,23 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
   }
 
+  /**
+   * Returns the absolute path to the main log file.
+   */
   public getLogsFile(): string {
-    return path.join(this.rootPath, DIRNAMES.logs, FILENAMES.logs)
+    return path.join(this.getRootPath(), DIRNAMES.logs, FILENAMES.logs)
   }
 
+  /**
+   * Returns the absolute path to the log directory.
+   */
   public getLogsPath(): string {
-    return path.join(this.rootPath, DIRNAMES.logs)
+    return path.join(this.getRootPath(), DIRNAMES.logs)
   }
 
+  /**
+   * Returns the main README file for a given variant, as an HTML string.
+   */
   public async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
     const packageInfo = this.getPackageInfo(packageId)
     if (!packageInfo) {
@@ -645,7 +695,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
       case ".htm":
       case ".html": {
         const src = await fs.realpath(docPath)
-        const pathname = toPosix(path.relative(this.rootPath, src))
+        const pathname = toPosix(path.relative(this.getRootPath(), src))
         return `<iframe height="100%" width="100%" sandbox="allow-popups" src="docs://sc4-plugin-manager/${pathname}" title="Documentation"></iframe>`
       }
 
@@ -662,30 +712,58 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
   }
 
+  /**
+   * Returns a package's data by ID, if it exists.
+   */
   public getPackageInfo(packageId: string): PackageInfo | undefined {
     return this.packages?.[packageId]
   }
 
+  /**
+   * Returns the absolute package to an installed package, by ID.
+   */
   public getPackagePath(packageId: string): string {
-    return path.join(this.rootPath, DIRNAMES.packages, packageId)
+    return path.join(this.getRootPath(), DIRNAMES.packages, packageId)
   }
 
+  /**
+   * Returns the absolute package to the Packages directory.
+   */
   public getPackagesPath(): string {
-    return path.join(this.rootPath, DIRNAMES.packages)
+    return path.join(this.getRootPath(), DIRNAMES.packages)
   }
 
+  /**
+   * Returns the absolute package to the Plugins directory.
+   */
   public getPluginsPath(): string {
     return path.join(this.gamePath, DIRNAMES.plugins)
   }
 
+  /**
+   * Returns a profile's data by ID, if it exists.
+   */
   public getProfileInfo(profileId: string): ProfileInfo | undefined {
     return this.profiles?.[profileId]
   }
 
+  /**
+   * Returns the absolute package to the Profiles directory.
+   */
   public getProfilesPath(): string {
-    return path.join(this.rootPath, DIRNAMES.profiles)
+    return path.join(this.getRootPath(), DIRNAMES.profiles)
   }
 
+  /**
+   * Returns the absolute package to the Manager directory.
+   */
+  public getRootPath(): string {
+    return path.join(this.gamePath, DIRNAMES.root)
+  }
+
+  /**
+   * Returns the current state to synchronize with renderer.
+   */
   public getState(): ApplicationState {
     return {
       packages: this.packages,
@@ -700,14 +778,23 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
   }
 
+  /**
+   * Returns the temporary download path for a given key.
+   */
   public getTempDownloadPath(key: string): string {
     return path.join(this.getTempPath(), DIRNAMES.downloads, key)
   }
 
+  /**
+   * Returns the absolute package to the temporary download directory.
+   */
   public getTempPath(): string {
-    return path.join(this.rootPath, DIRNAMES.temp)
+    return path.join(this.getRootPath(), DIRNAMES.temp)
   }
 
+  /**
+   * Returns the path to the given tool's executable, downloading the tool as needed.
+   */
   public async getToolExePath(tool: string): Promise<string> {
     const toolInfo = this.getToolInfo(tool)
     if (!toolInfo) {
@@ -730,12 +817,18 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return toolInfo.exe
   }
 
+  /**
+   * Returns a tool's data, if it exists.
+   */
   public getToolInfo(tool: string): ToolInfo | undefined {
     return TOOLS[tool as keyof typeof TOOLS]
   }
 
+  /**
+   * Returns the absolute path to a variant's files.
+   */
   public getVariantPath(packageId: string, variantId: string): string {
-    return path.join(this.rootPath, DIRNAMES.packages, packageId, variantId)
+    return path.join(this.getPackagePath(packageId), variantId)
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -783,9 +876,13 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
 
       if (plugins.length) {
         const [doBackup] = await this.showConfirmation(
-          "SC4 Plugin Manager",
-          `Do you want to back up your ${DIRNAMES.plugins} folder?`,
-          `Your ${DIRNAMES.plugins} folder is not currently empty. The current version of the Plugin Manager is experimental and will not be able to detect conflicts with files you have added manually. We therefore recommend backing up your current ${DIRNAMES.plugins} folder, using the Plugin Manager on an empty folder, then copying additional plugins back.`,
+          t("BackupPluginsModal:title"),
+          t("BackupPluginsModal:confirmation", {
+            plugins: DIRNAMES.plugins,
+          }),
+          t("BackupPluginsModal:description", {
+            plugins: DIRNAMES.plugins,
+          }),
         )
 
         if (doBackup) {
@@ -794,16 +891,21 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
             await moveTo(pluginsPath, pluginsBackupPath)
             await createIfMissing(pluginsPath)
             await this.showSuccess(
-              "SC4 Plugin Manager",
-              `Your ${DIRNAMES.plugins} folder was backed up as ${DIRNAMES.pluginsBackup}.`,
+              t("BackupPluginsModal:title"),
+              t("BackupPluginsModal:success", {
+                plugins: DIRNAMES.plugins,
+                pluginsBackup: DIRNAMES.pluginsBackup,
+              }),
             )
           } catch (error) {
             console.error(`Failed to backup ${DIRNAMES.plugins} folder`, error)
-            const { message } = error as Error
+
             await this.showSuccess(
-              "SC4 Plugin Manager",
-              `Failed to backup ${DIRNAMES.plugins} folder.`,
-              message,
+              t("BackupPluginsModal:title"),
+              t("BackupPluginsModal:failure", {
+                plugins: DIRNAMES.plugins,
+              }),
+              (error as Error).message,
             )
           }
         }
@@ -947,7 +1049,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
         })
 
         // Download and extract all assets
-        await Promise.all(assetInfos.map(this.getAsset.bind(this)))
+        await Promise.all(assetInfos.map(this.ensureAsset.bind(this)))
 
         // Remove any previous installation files
         await removeIfPresent(variantPath)
@@ -1200,6 +1302,27 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
   }
 
+  /**
+   * Launches the application.
+   */
+  public async launch(): Promise<void> {
+    // Initialize app config
+    await this.loadAppConfig()
+
+    // Initialize logs
+    app.setPath("logs", this.getLogsPath())
+    log.transports.console.level = this.getLogLevel()
+    log.transports.file.level = this.getLogLevel()
+    log.transports.file.resolvePathFn = this.getLogsFile.bind(this)
+    Object.assign(console, log.functions)
+
+    // Initialize custom protocols
+    handleDocsProtocol(this.getRootPath(), DOCEXTENSIONS)
+
+    this.setApplicationMenu()
+    await this.initialize()
+  }
+
   protected async linkPackages(): Promise<void> {
     const pluginsPath = this.getPluginsPath()
 
@@ -1356,47 +1479,33 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
   }
 
-  protected async loadConfig<T>(
-    basePath: string,
-    filename: string,
-  ): Promise<{ data: T; format: ConfigFormat } | undefined> {
-    return loadConfig(basePath, filename)
-  }
+  protected async loadAppConfig(): Promise<void> {
+    const configPath = app.getPath("userData")
+    const config = await loadConfig<AppConfig>(configPath, FILENAMES.appConfig)
+    const data = config?.data ?? {}
 
-  protected loadGamePath(): string {
-    const configPath = path.join(app.getPath("userData"), "config.json")
+    // Auto-detect game data path
+    const defaultGamePath = path.join(app.getPath("documents"), "SimCity 4")
+    this.gamePath = env.GAME_DIR || data.path || defaultGamePath
 
-    let config: { path?: string } | undefined
+    // Fix invalid game data path
+    while (!(await exists(this.getPluginsPath()))) {
+      const result = await this.showFolderSelector(
+        t("SelectGameDataFolderModal:title", { plugins: DIRNAMES.plugins }),
+        app.getPath("documents"),
+      )
 
-    try {
-      config = JSON.parse(readFileSync(configPath, "utf8"))
-    } catch (error) {
-      if (!(error instanceof Error) || !error.message.match(/no such file or directory/i)) {
-        console.error("Failed to load config", error)
-      }
-    }
-
-    let gamePath = env.GAME_DIR || config?.path || path.join(app.getPath("documents"), "SimCity 4")
-
-    while (!existsSync(path.join(gamePath, DIRNAMES.plugins))) {
-      const result = dialog.showOpenDialogSync({
-        title: "Select your SimCity 4 data folder (containing your Plugins folder)",
-        defaultPath: app.getPath("documents"),
-        properties: ["openDirectory"],
-      })
-
-      if (result?.length === 1) {
-        gamePath = result[0]
+      if (result) {
+        this.gamePath = result
       } else {
         throw Error("Aborted")
       }
     }
 
-    if (gamePath !== config?.path) {
-      writeFileSync(configPath, JSON.stringify({ path: gamePath }, undefined, 2))
+    if (this.gamePath !== data.path) {
+      data.path = this.gamePath
+      await writeConfig(configPath, FILENAMES.appConfig, data, ConfigFormat.JSON, config?.format)
     }
-
-    return gamePath
   }
 
   protected async loadProfiles(): Promise<{ [id: string]: ProfileInfo }> {
@@ -1439,7 +1548,7 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
   protected async loadSettings(): Promise<Settings> {
     console.debug("Loading settings...")
 
-    const config = await this.loadConfig<Settings>(this.rootPath, FILENAMES.settings)
+    const config = await loadConfig<Settings>(this.getRootPath(), FILENAMES.settings)
 
     this.settings = {
       format: config?.format,
@@ -1457,31 +1566,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return this.settings
   }
 
-  protected onDownloadTaskUpdate(ongoingDownloads: TaskInfo[]): void {
-    this.status.ongoingDownloads = ongoingDownloads
-    this.sendStatus()
-  }
-
-  protected onExtractTaskUpdate(ongoingExtracts: TaskInfo[]): void {
-    this.status.ongoingExtracts = ongoingExtracts
-    this.sendStatus()
-  }
-
-  protected onLinkTaskUpdate(ongoingTasks: TaskInfo[]): void {
-    const task = ongoingTasks[0]
-    if (task?.key === "init") {
-      this.status.linker = `Initializing...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
-    } else if (task?.key === "link") {
-      this.status.linker = `Linking packages...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
-    } else if (task?.key === "clean:all") {
-      this.status.linker = `Checking for conflicts...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
-    } else {
-      this.status.linker = null
-    }
-
-    this.sendStatus()
-  }
-
+  /**
+   * Opens the game's executable directory in Explorer.
+   */
   public async openExecutableDirectory(): Promise<boolean> {
     if (this.settings?.install?.path) {
       this.openInExplorer(path.dirname(path.join(this.settings.install.path, FILENAMES.sc4exe)))
@@ -1491,10 +1578,16 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return false
   }
 
+  /**
+   * Opens a file in the default editor or a directory in Explorer.
+   */
   protected async openInExplorer(fullPath: string): Promise<void> {
     await cmd(`explorer "${fullPath}"`)
   }
 
+  /**
+   * Opens the game's installation directory in Explorer.
+   */
   public async openInstallationDirectory(): Promise<boolean> {
     if (this.settings?.install?.path) {
       this.openInExplorer(this.settings.install.path)
@@ -1504,6 +1597,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return false
   }
 
+  /**
+   * Opens a package's config file in the default text editor.
+   */
   public async openPackageConfig(packageId: string): Promise<boolean> {
     const packageInfo = this.getPackageInfo(packageId)
     const packagePath = this.getPackagePath(packageId)
@@ -1515,6 +1611,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return false
   }
 
+  /**
+   * Opens a variant's file in the default text editor.
+   */
   public async openPackageFile(
     packageId: string,
     variantId: string,
@@ -1524,6 +1623,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return true
   }
 
+  /**
+   * Opens a profile's config file in the default text editor.
+   */
   public async openProfileConfig(profileId: string): Promise<boolean> {
     const profileInfo = this.getProfileInfo(profileId)
     if (profileInfo?.format) {
@@ -1534,6 +1636,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return false
   }
 
+  /**
+   * Opens a variant's repository in browser, if present.
+   */
   public async openVariantRepository(packageId: string, variantId: string): Promise<boolean> {
     const variantInfo = this.getPackageInfo(packageId)?.variants[variantId]
     if (variantInfo?.repository) {
@@ -1544,6 +1649,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return false
   }
 
+  /**
+   * Opens a variant's homepage in browser, if present.
+   */
   public async openVariantURL(packageId: string, variantId: string): Promise<boolean> {
     const variantInfo = this.getPackageInfo(packageId)?.variants[variantId]
     if (variantInfo?.url) {
@@ -1558,6 +1666,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     await removeIfPresent(this.getTempPath())
   }
 
+  /**
+   * Recalculates package status/compatibility for the given profile.
+   */
   protected async recalculatePackages(profileId: string): Promise<void> {
     const profile = this.getProfileInfo(profileId)
     if (!this.packages || !profile) {
@@ -1570,9 +1681,14 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
 
     this.sendPackages()
+
+    // Trigger linking
     await this.linkPackages()
   }
 
+  /**
+   * Resets and reloads data from files.
+   */
   public async reload(): Promise<void> {
     this.assets = {}
     this.externalFiles = new Set()
@@ -1595,7 +1711,14 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     await this.initialize()
   }
 
+  /**
+   * Remove installed variants. If any variant is enabled in the current profile, it will be disabled first.
+   * @param packages map of package ID to variant ID
+   * @returns whether action was successful (i.e. not cancelled by user)
+   */
   public async removePackages(packages: { [packageId: string]: string }): Promise<boolean> {
+    // TODO: ATM this does not clean obsolete files from Downloads sub-folder!
+
     // TODO: ATM we only check the current profile - removing package may break other profiles
     const currentProfile = this.getCurrentProfile()
     if (currentProfile) {
@@ -1646,14 +1769,16 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
         const allVariants = Object.values(packageInfo.variants)
         const installedVariants = allVariants.filter(variant => variant?.installed)
         const isOnlyInstalledVariant = installedVariants.length === 1
+        const namespace = isOnlyInstalledVariant ? "RemovePackageModal" : "RemoveVariantModal"
 
         if (variantInfo.local) {
           const [confirmed] = await this.showConfirmation(
-            isOnlyInstalledVariant ? "Remove local package" : "Remove local variant",
-            isOnlyInstalledVariant ? "Remove local package?" : "Remove local variant?",
-            isOnlyInstalledVariant
-              ? `By removing package ${packageInfo.name}, all local files will be lost forever.`
-              : `By removing variant ${packageInfo.name}#${variantInfo.name}, all local files will be lost forever.`,
+            packageInfo.name,
+            t(`${namespace}:confirmation`),
+            t(`${namespace}:description`, {
+              packageName: packageInfo.name,
+              variantName: variantInfo.name,
+            }),
           )
 
           if (!confirmed) {
@@ -1775,11 +1900,13 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
           role: "fileMenu",
           submenu: [
             {
+              // Register Ctrl+R as Reload command
               accelerator: "CmdOrCtrl+R",
               click: () => this.reload(),
-              label: "Reload",
+              label: t("reload"),
             },
             {
+              // Register Ctrl+Q as Quit command
               accelerator: "CmdOrCtrl+Q",
               role: "quit",
             },
@@ -1792,18 +1919,23 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     )
   }
 
+  /**
+   * Shows a system confirmation dialog.
+   * @param doNotAskAgain whether to show a "Do not ask again" checkbox
+   * @returns whether the action was confirmed, and whether "Do not ask again" was checked
+   */
   protected async showConfirmation(
     title: string,
     message: string,
     detail?: string,
-    doNotAskAgain: boolean = false,
+    doNotAskAgain?: boolean,
     type: "question" | "warning" = "question",
   ): Promise<[confirmed: boolean, doNotAskAgain: boolean]> {
     const options: MessageBoxOptions = {
-      buttons: ["Yes", "No"],
+      buttons: [t("yes"), t("no")],
       cancelId: 1,
       checkboxChecked: false,
-      checkboxLabel: doNotAskAgain ? "Do not ask again" : undefined,
+      checkboxLabel: doNotAskAgain ? t("doNotAskAgain") : undefined,
       defaultId: 0,
       detail,
       message,
@@ -1822,6 +1954,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return [result.response === 0, result.checkboxChecked]
   }
 
+  /**
+   * Shows a system error dialog.
+   */
   protected async showError(title: string, message: string, detail?: string): Promise<void> {
     const options: MessageBoxOptions = { detail, message, title, type: "error" }
     if (this.mainWindow) {
@@ -1831,6 +1966,27 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
   }
 
+  /**
+   * Shows a system folder selector.
+   * @returns the absolute path to the selected folder, or undefined if the dialog was closed without selection.
+   */
+  protected async showFolderSelector(
+    title: string,
+    defaultPath?: string,
+  ): Promise<string | undefined> {
+    const options: OpenDialogOptions = { title, defaultPath, properties: ["openDirectory"] }
+    if (this.mainWindow) {
+      const result = await dialog.showOpenDialog(this.mainWindow, options)
+      return result.filePaths[0]
+    } else {
+      const result = await dialog.showOpenDialog(options)
+      return result.filePaths[0]
+    }
+  }
+
+  /**
+   * Shows a system success dialog.
+   */
   protected async showSuccess(title: string, message: string, detail?: string): Promise<void> {
     const options: MessageBoxOptions = { detail, message, title, type: "info" }
     if (this.mainWindow) {
@@ -1840,17 +1996,21 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     }
   }
 
+  /**
+   * Initiates a login to Simtropolis.
+   */
   public async simtropolisLogin(): Promise<void> {
     const session = await simtropolisLogin(this.browserSession)
     if (session) {
       console.info("Logged in to Simtropolis")
       this.sessions.simtropolis = session
       this.sendSessions()
-    } else {
-      this.sessions.simtropolis = null
     }
   }
 
+  /**
+   * Logs out of Simtropolis.
+   */
   public async simtropolisLogout(): Promise<void> {
     await simtropolisLogout(this.browserSession)
     console.info("Logged out from Simtropolis")
@@ -1858,6 +2018,9 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     this.sendSessions()
   }
 
+  /**
+   * Checks out a profile by ID.
+   */
   public async switchProfile(profileId: string): Promise<boolean> {
     const profile = this.getProfileInfo(profileId)
     if (!this.settings || !this.packages || !profile) {
@@ -1872,8 +2035,11 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
     return true
   }
 
-  protected async tryUpdateDatabase(force?: boolean): Promise<boolean> {
-    if (!this.databaseUpdatePromise || force) {
+  /**
+   * Attempts to pull latest data from the remote Git repository.
+   */
+  protected async tryUpdateDatabase(): Promise<boolean> {
+    if (!this.databaseUpdatePromise) {
       const repository = this.getDataRepository()
       if (!isURL(repository)) {
         return true
@@ -1966,22 +2132,21 @@ Do you want to remove these files? Backeups will be created in ${DIRNAMES.plugin
 
           // Confirm incompatible externals
           if (incompatibleExternals.length) {
-            const groupNames = incompatibleExternals.map(groupId => {
-              return `  - ${groupId}`
-            })
-
             // TODO: Use our own modal rather than system one?
             const options: MessageBoxOptions = {
-              buttons: ["Replace external packages", "Ignore conflicts", "Cancel"],
+              buttons: [
+                t("ReplaceExternalPackagesModal:confirm"),
+                t("ReplaceExternalPackagesModal:ignore"),
+                t("ReplaceExternalPackagesModal:cancel"),
+              ],
               cancelId: 2,
               defaultId: 0,
-              detail: `The following external packages are incompatible with this change:
-${groupNames.sort().join("\n")}
-
-If you wish to replace them, please remove all corresponding files from your Plugins folder before continuing. Otherwise, you can resolve each conflict manually later.`,
-              message: "Replace external packages?",
+              detail: t("ReplaceExternalPackagesModal:description", {
+                groups: incompatibleExternals,
+              }),
+              message: t("ReplaceExternalPackagesModal:confirmation"),
               noLink: true,
-              title: "SC4 Plugin Manager",
+              title: t("ReplaceExternalPackagesModal:title"),
               type: "warning",
             }
 
@@ -2017,23 +2182,21 @@ If you wish to replace them, please remove all corresponding files from your Plu
 
           // Confirm fully-incompatible packages
           if (incompatiblePackages.length) {
-            const packageNames = incompatiblePackages.map(packageId => {
-              const info = this.getPackageInfo(packageId)!
-              return `  - ${info.name}`
-            })
+            const packages = incompatiblePackages.map(id => this.getPackageInfo(id))
 
             // TODO: Use our own modal rather than system one?
             const options: MessageBoxOptions = {
-              buttons: ["Disable incompatible packages", "Ignore conflicts", "Cancel"],
+              buttons: [
+                t("DisableIncompatiblePackagesModal:confirm"),
+                t("DisableIncompatiblePackagesModal:ignore"),
+                t("DisableIncompatiblePackagesModal:cancel"),
+              ],
               cancelId: 2,
               defaultId: 0,
-              detail: `The following enabled packages are incompatible with this change:
-${packageNames.sort().join("\n")}
-
-You can either disable all incompatible packages now, or resolve each conflict manually later.`,
-              message: "Disable incompatible packages?",
+              detail: t("DisableIncompatiblePackagesModal:description", { packages }),
+              message: t("DisableIncompatiblePackagesModal:confirmation"),
               noLink: true,
-              title: "SC4 Plugin Manager",
+              title: t("DisableIncompatiblePackagesModal:title"),
               type: "warning",
             }
 
@@ -2069,31 +2232,28 @@ You can either disable all incompatible packages now, or resolve each conflict m
 
           // Confirm explicit variant changes
           if (Object.keys(explicitVariantChanges).length) {
-            const packageNames = Object.entries(explicitVariantChanges).map(
+            const variants = Object.entries(explicitVariantChanges).map(
               ([packageId, [oldVariantId, newVariantId]]) => {
-                const packageInfo = this.getPackageInfo(packageId)
-                const oldVariant = packageInfo?.variants[oldVariantId]
-                const newVariant = packageInfo?.variants[newVariantId]
-                if (oldVariant) {
-                  return `  - ${packageInfo?.name}: ${oldVariant.name} -> ${newVariant?.name}`
-                } else {
-                  return `  - ${packageInfo?.name}`
-                }
+                const packageInfo = this.getPackageInfo(packageId)!
+                const oldVariant = packageInfo.variants[oldVariantId]
+                const newVariant = packageInfo.variants[newVariantId]
+                return { packageInfo, oldVariant, newVariant }
               },
             )
 
             // TODO: Use our own modal rather than system one?
             const options: MessageBoxOptions = {
-              buttons: ["Install compatible variants", "Ignore conflicts", "Cancel"],
+              buttons: [
+                t("InstallCompatibleVariantsModal:confirm"),
+                t("InstallCompatibleVariantsModal:ignore"),
+                t("InstallCompatibleVariantsModal:cancel"),
+              ],
               cancelId: 2,
               defaultId: 0,
-              detail: `The following enabled variants are incompatible with this change, but compatible variants can be installed:
-${packageNames.sort().join("\n")}
-
-You can either automatically install and switch to compatible variants now, or resolve each conflict manually later.`,
-              message: "Install incompatible variants?",
+              detail: t("InstallCompatibleVariantsModal:description", { variants }),
+              message: t("InstallCompatibleVariantsModal:confirmation"),
               noLink: true,
-              title: "SC4 Plugin Manager",
+              title: t("InstallCompatibleVariantsModal:title"),
               type: "warning",
             }
 
@@ -2141,19 +2301,16 @@ You can either automatically install and switch to compatible variants now, or r
             )
 
             if (packageInfo && dependencyIds?.length) {
-              const packages = dependencyIds.map(packageId => {
-                const info = this.getPackageInfo(packageId)!
-                return `  - ${info.name}`
-              })
+              const dependencies = dependencyIds.map(id => this.getPackageInfo(id))
 
               // TODO: Use our own modal rather than system one?
               const [confirmed] = await this.showConfirmation(
                 packageInfo.name,
-                "Enable optional dependencies?",
-                `This package mentions the following optional dependencies:
-${packages.sort().join("\n")}
-
-Do you want to enable them?`,
+                t("EnableOptionalDependencies:confirmation"),
+                t("EnableOptionalDependencies:description", {
+                  dependencies,
+                  packageInfo,
+                }),
               )
 
               for (const dependencyId of dependencyIds) {
@@ -2183,8 +2340,8 @@ Do you want to enable them?`,
                   // TODO: Use our own modal rather than system one?
                   const [confirmed] = await this.showConfirmation(
                     packageInfo.name,
-                    "Enable package?",
-                    warning.message,
+                    t("EnableWarningModal:confirmation"),
+                    warning.message ?? t(warning.id!, { ns: "Warning", packageInfo }),
                     undefined,
                     "warning",
                   )
@@ -2207,13 +2364,8 @@ Do you want to enable them?`,
                   // TODO: Use our own modal rather than system one?
                   const [confirmed] = await this.showConfirmation(
                     packageInfo.name,
-                    "Disable package?",
-                    warning.message ??
-                      (warning.id
-                        ? {
-                            bulldoze: `Before disabling ${packageInfo.name}, you must bulldoze all corresponding lots from all relevant regions.`,
-                          }[warning.id]
-                        : undefined),
+                    t("DisableWarningModal:confirmation"),
+                    warning.message ?? t(warning.id!, { ns: "Warning", packageInfo }),
                     undefined,
                     "warning",
                   )
@@ -2266,28 +2418,23 @@ Do you want to enable them?`,
 
             // Confirm installation of dependencies
             if (missingAssets.size) {
-              const packages = installingDependencyIds.map(packageId => {
-                const info = this.getPackageInfo(packageId)!
-                return `  - ${info.name}`
-              })
+              const assets = Array.from(missingAssets.values())
+              const dependencies = installingDependencyIds.map(id => this.getPackageInfo(id))
 
-              const totalSize = Array.from(missingAssets.values()).reduce(
+              const totalSize = assets.reduce(
                 (total, asset) => (asset.size ? total + asset.size : NaN),
                 0,
               )
 
               // TODO: Use our own modal rather than system one?
               const [confirmed] = await this.showConfirmation(
-                "SC4 Plugin Manager",
-                "Install new package?",
-                `${
-                  installingDependencyIds.length
-                    ? `This action requires the installation of ${installingDependencyIds.length} additional package(s):
-${packages.sort().join("\n")}
-
-In total, `
-                    : ""
-                }${missingAssets.size} asset(s)${totalSize ? ` (${(totalSize / 1e6).toFixed(2)} Mo)` : ""} will be downloaded.`,
+                t("DownloadAssetsModal:title"),
+                t("DownloadAssetsModal:confirmation"),
+                t("DownloadAssetsModal:description", {
+                  assets,
+                  dependencies,
+                  totalSize: totalSize || undefined,
+                }),
               )
 
               if (!confirmed) {
@@ -2316,8 +2463,6 @@ In total, `
           this.packages[packageId].status[profileId] = resultingStatus[packageId]
         }
 
-        this.sendPackages()
-
         // Run cleaner and linker
         if (shouldRecalculate) {
           for (const packageId of enablingPackages) {
@@ -2343,6 +2488,8 @@ In total, `
             }
           }
         }
+
+        this.sendPackages()
       }
     }
 
@@ -2389,8 +2536,6 @@ In total, `
 
         profile.format = newFormat
         this.sendProfile(profileId)
-
-        context.debug("Done")
       },
       { invalidate: true },
     )
@@ -2410,12 +2555,16 @@ In total, `
         const { format: oldFormat, ...data } = settings
         const newFormat = this.getDefaultConfigFormat()
 
-        await writeConfig<Settings>(this.rootPath, FILENAMES.settings, data, newFormat, oldFormat)
+        await writeConfig<Settings>(
+          this.getRootPath(),
+          FILENAMES.settings,
+          data,
+          newFormat,
+          oldFormat,
+        )
 
         settings.format = newFormat
         this.sendSettings()
-
-        context.debug("Done")
       },
       { invalidate: true },
     )

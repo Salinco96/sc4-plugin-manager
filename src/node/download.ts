@@ -47,7 +47,7 @@ export async function download(
     downloadPath: string
     downloadTempPath?: string
     exePath?(exe: string): Promise<string>
-    expectedHash?: string
+    expectedSha256?: string
     expectedSize?: number
     logger?: Logger
     onProgress?(current: number, total: number): void
@@ -56,7 +56,7 @@ export async function download(
   const {
     downloadPath,
     downloadTempPath = downloadPath,
-    expectedHash,
+    expectedSha256,
     logger = console,
     onProgress,
   } = options
@@ -124,24 +124,24 @@ export async function download(
     await createIfMissing(downloadTempPath)
     await finished(stream.pipe(transform).pipe(createWriteStream(downloadTempFile)))
 
-    const actualHash = transform.sha256()
-    const actualSize = transform.size
+    const sha256 = transform.sha256()
+    const size = transform.size
 
     let uncompressedSize: number | undefined
 
-    logger.debug(`SHA-256: ${actualHash} (${actualSize} bytes)`)
+    logger.debug(`SHA-256: ${sha256} (${size} bytes)`)
 
     // TODO: Download URLs from Simtropolis/SC4Evermore are not versioned - this means that if/when they
     // release a new version (therefore using the same URL), this strict length/hash integrity check will
     // fail until the Manager DB is updated (which in low activity periods could take days/weeks). Thus it
     // may make more sense to treat this as a warning, rather than failing the download.
-    if (expectedSize && expectedSize !== actualSize) {
-      throw Error(`Expected ${expectedSize} bytes but received ${actualSize}`)
+    if (expectedSize && expectedSize !== size) {
+      throw Error(`Expected ${expectedSize} bytes but received ${size}`)
     }
 
     // TODO: Same as above
-    if (expectedHash && expectedHash !== actualHash) {
-      throw Error(`Expected SHA-256 ${expectedHash}`)
+    if (expectedSha256 && expectedSha256 !== sha256) {
+      throw Error(`Expected SHA-256 ${expectedSha256}`)
     }
 
     if (filename.endsWith(".7z")) {
@@ -168,7 +168,7 @@ export async function download(
 
     logger.debug("Done")
 
-    return { sha256: actualHash, size: actualSize, uncompressedSize }
+    return { sha256, size, uncompressedSize }
   } catch (error) {
     await removeIfPresent(downloadTempPath)
     throw error

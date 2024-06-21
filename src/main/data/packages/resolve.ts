@@ -1,3 +1,4 @@
+import { t } from "@common/i18n"
 import { PackageConfig, PackageInfo, PackageStatus, ProfileInfo } from "@common/types"
 
 export const EXTERNAL_PACKAGE_ID = "<external>"
@@ -21,7 +22,7 @@ function getVariantIncompatibilities(
       const conflictPackageId = conflictGroups[groupId]?.find(id => id !== packageInfo.id)
       if (conflictPackageId) {
         // TODO: Use ID/data object here, and convert to message in UI code
-        incompatibilities.push(`Conflicting with ${conflictPackageId}`)
+        incompatibilities.push(t("Issue:conflictingPackage", { packageId: conflictPackageId }))
       }
     }
   }
@@ -34,7 +35,11 @@ function getVariantIncompatibilities(
       // Check conflict group requirements
       if (value !== !!conflictGroups[groupId]?.length) {
         // TODO: Use ID/data object here, and convert to message in UI code
-        incompatibilities.push(`Requires ${groupId}${value ? "" : " not"} to be present`)
+        incompatibilities.push(
+          t(value ? "Issue:missingGroup" : "Issue:conflictingGroup", {
+            groupId: groupId,
+          }),
+        )
       }
     }
   }
@@ -240,9 +245,13 @@ export function resolvePackages(
 
         if (incompatibleIds.length) {
           if (incompatibleIds.length === 1) {
-            incompatibilities.push(`Dependency ${incompatibleIds[0]} is not compatible`)
+            incompatibilities.push(
+              t("Issue:incompatibleDependency", { dependencyId: incompatibleIds[0] }),
+            )
           } else {
-            incompatibilities.push(`${incompatibleIds.length} dependencies are not compatible`)
+            incompatibilities.push(
+              t("Issue:incompatibleDependencies", { count: incompatibleIds.length }),
+            )
           }
         }
       }
@@ -443,30 +452,30 @@ export function resolvePackageUpdates(
     }
   }
 
-  console.debug("Updating configs", {
-    packages: configUpdates,
-    externals: externalUpdates,
-  })
+  // console.debug("Updating configs", {
+  //   packages: configUpdates,
+  //   externals: externalUpdates,
+  // })
 
-  console.debug("Resulting configs", {
-    packages: resultingConfigs,
-    externals: resultingExternals,
-    shouldRecalculate,
-  })
+  // console.debug("Resulting configs", {
+  //   packages: resultingConfigs,
+  //   externals: resultingExternals,
+  //   shouldRecalculate,
+  // })
 
-  console.debug("Resulting changes", {
-    disablingPackages,
-    enablingPackages,
-    installingVariants,
-    selectingVariants,
-  })
+  // console.debug("Resulting changes", {
+  //   disablingPackages,
+  //   enablingPackages,
+  //   installingVariants,
+  //   selectingVariants,
+  // })
 
-  console.debug("Resulting conflicts", {
-    explicitVariantChanges,
-    implicitVariantChanges,
-    incompatibleExternals,
-    incompatiblePackages,
-  })
+  // console.debug("Resulting conflicts", {
+  //   explicitVariantChanges,
+  //   implicitVariantChanges,
+  //   incompatibleExternals,
+  //   incompatiblePackages,
+  // })
 
   return {
     disablingPackages,

@@ -26,9 +26,10 @@ if (!app.requestSingleInstanceLock()) {
     app.quit()
   })
 
-  app.whenReady().then(() => {
+  app.whenReady().then(async () => {
     try {
       instance = new Application()
+      await instance.launch()
     } catch (error) {
       console.error(error)
       app.quit()
