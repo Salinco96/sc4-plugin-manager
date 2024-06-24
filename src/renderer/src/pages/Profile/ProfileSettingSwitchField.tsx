@@ -1,19 +1,19 @@
 import { Switch } from "@mui/material"
 
-import { ProfileInfo } from "@common/types"
+import { Feature, ProfileInfo } from "@common/types"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
 import { useStoreActions } from "@utils/store"
 
-export function ProfileSettingSwitchField({
+export function ProfileSettingFeatureSwitchField({
   disabled,
+  feature,
   label,
-  name,
   profileInfo,
 }: {
   disabled?: boolean
+  feature: Feature
   label: string
-  name: string
   profileInfo: ProfileInfo
 }): JSX.Element | null {
   const actions = useStoreActions()
@@ -24,19 +24,19 @@ export function ProfileSettingSwitchField({
         {label}
       </Text>
       <Switch
-        checked={profileInfo.externals[name]}
+        checked={profileInfo.features[feature]}
         color="primary"
         disabled={disabled}
         inputRef={ref => {
           if (ref) {
-            ref.checked = profileInfo.externals[name]
+            ref.checked = profileInfo.features[feature]
           }
         }}
         onClick={async event => {
           event.preventDefault()
-          const value = (event.target as HTMLInputElement).checked
-          if (value !== profileInfo.externals[name]) {
-            await actions.updateProfile(profileInfo.id, { externals: { [name]: value } })
+          const { checked } = event.target as HTMLInputElement
+          if (checked !== profileInfo.features[feature]) {
+            await actions.updateProfile(profileInfo.id, { features: { [feature]: checked } })
           }
         }}
       />

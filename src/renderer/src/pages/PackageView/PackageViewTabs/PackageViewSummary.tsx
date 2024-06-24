@@ -2,9 +2,11 @@ import { Box, Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { getCategories, getCategoryLabel } from "@common/categories"
+import { getFeatureLabel } from "@common/i18n"
+import { entries } from "@common/utils/objects"
 import { PackageBanners } from "@components/PackageBanners"
 import { Text } from "@components/Text"
-import { getConflictGroupLabel, useCurrentVariant } from "@utils/packages"
+import { useCurrentVariant } from "@utils/packages"
 
 export function PackageViewSummary({ packageId }: { packageId: string }): JSX.Element {
   const variantInfo = useCurrentVariant(packageId)
@@ -45,10 +47,10 @@ export function PackageViewSummary({ packageId }: { packageId: string }): JSX.El
         </Text>
       )}
       {/* TODO: Better formatting */}
-      {variantInfo.conflictGroups && (
+      {variantInfo.features && (
         <Typography variant="body2">
-          <b>{t("conflictGroups")}:</b>{" "}
-          {variantInfo.conflictGroups.map(groupId => getConflictGroupLabel(t, groupId)).join(", ")}
+          <b>{t("features")}:</b>{" "}
+          {variantInfo.features.map(feature => getFeatureLabel(t, feature)).join(", ")}
         </Typography>
       )}
       {/* TODO: Better formatting */}
@@ -56,10 +58,9 @@ export function PackageViewSummary({ packageId }: { packageId: string }): JSX.El
         <Typography variant="body2">
           <b>{t("requirements")}:</b>
           <ul>
-            {Object.entries(variantInfo.requirements).map(([requirement, value]) => (
-              <li key={requirement}>
-                {getConflictGroupLabel(t, requirement)}:{" "}
-                {t(value ? "yes" : "no", { ns: "General" })}
+            {entries(variantInfo.requirements).map(([feature, value]) => (
+              <li key={feature}>
+                {getFeatureLabel(t, feature)}: {t(value ? "yes" : "no", { ns: "General" })}
               </li>
             ))}
           </ul>

@@ -18,13 +18,13 @@ import escapeHtml from "escape-html"
 import { glob } from "glob"
 
 import { getCategoryPath } from "@common/categories"
-import { i18n, initI18n, t, toList } from "@common/i18n"
+import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
   AssetInfo,
   ConfigFormat,
-  PackageCondition,
+  Feature,
   PackageConfig,
   PackageFile,
   PackageInfo,
@@ -34,6 +34,8 @@ import {
   ToolInfo,
   getDefaultVariant,
 } from "@common/types"
+import { mapDefined } from "@common/utils/arrays"
+import { keys } from "@common/utils/objects"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -60,7 +62,7 @@ import {
   mergeLocalPackageInfo,
   writePackageConfig,
 } from "./data/packages"
-import { getConflictGroups, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
+import { getFeatures, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, fromProfileData, toProfileData } from "./data/profiles/configs"
 import { MainWindow } from "./MainWindow"
 import {
@@ -403,7 +405,7 @@ export class Application {
     const templateProfile = templateProfileId ? this.getProfileInfo(templateProfileId) : undefined
 
     const profile: ProfileInfo = {
-      externals: {},
+      features: {},
       packages: {},
       ...structuredClone(templateProfile),
       format: undefined,
@@ -492,15 +494,15 @@ export class Application {
       }
 
       if (conflictingFiles.size) {
+        const fileNames = mapDefined(Array.from(conflictingFiles), file =>
+          path.relative(pluginsPath, file),
+        )
+
         const [confirmed] = await this.showConfirmation(
           packageInfo.name,
           t("RemoveConflictingFilesModal:confirmation"),
           t("RemoveConflictingFilesModal:description", {
-            files: toList(
-              Array.from(conflictingFiles)
-                .map(file => path.relative(pluginsPath, file))
-                .sort(),
-            ),
+            files: fileNames.sort(),
             pluginsBackup: DIRNAMES.pluginsBackup,
           }),
         )
@@ -1085,7 +1087,7 @@ export class Application {
               newPath: string,
               type: "cleanitol" | "docs" | "files",
               category?: number,
-              condition?: PackageCondition,
+              condition?: { [feature in Feature]?: boolean },
             ) => {
               const extension = getExtension(oldPath)
 
@@ -1144,7 +1146,7 @@ export class Application {
               newPath: string,
               type: "cleanitol" | "docs" | "files",
               category?: number,
-              condition?: PackageCondition,
+              condition?: { [feature in Feature]?: boolean },
             ) => {
               const filePaths = await glob(getChildrenPattern(toPosix(oldPath)), {
                 cwd: downloadPath,
@@ -1386,7 +1388,7 @@ export class Application {
             this.links[to] = from
           }
 
-          const conflictGroups = getConflictGroups(
+          const features = getFeatures(
             this.packages!,
             Object.fromEntries(
               Object.entries(this.packages!).map(([id, info]) => [
@@ -1394,17 +1396,17 @@ export class Application {
                 info.status[currentProfile.id]!,
               ]),
             ),
-            currentProfile.externals,
+            currentProfile.features,
           )
 
-          const checkCondition = (condition?: PackageCondition) => {
+          const checkCondition = (condition?: { [feature in Feature]?: boolean }) => {
             if (!condition) {
               return true
             }
 
-            for (const requirement in condition) {
+            for (const requirement of keys(condition)) {
               const requiredValue = condition[requirement]
-              const value = !!conflictGroups[requirement]?.length
+              const value = !!features[requirement]?.length
               if (requiredValue !== undefined && requiredValue !== value) {
                 return false
               }
@@ -1675,7 +1677,7 @@ export class Application {
       return
     }
 
-    const { resultingStatus } = resolvePackages(this.packages, profile.packages, profile.externals)
+    const { resultingStatus } = resolvePackages(this.packages, profile.packages, profile.features)
     for (const packageId in resultingStatus) {
       this.packages[packageId].status[profileId] = resultingStatus[packageId]
     }
@@ -2086,9 +2088,9 @@ export class Application {
     }
 
     // Changes to packages/externals require conflict computation and potential side-effects / confirmation
-    if (update.packages || update.externals) {
+    if (update.packages || update.features) {
       update.packages ??= {}
-      update.externals ??= {}
+      update.features ??= {}
 
       const {
         disablingPackages,
@@ -2102,7 +2104,7 @@ export class Application {
         resultingExternals,
         resultingStatus,
         shouldRecalculate,
-      } = resolvePackageUpdates(this.packages, profile, update.packages, update.externals)
+      } = resolvePackageUpdates(this.packages, profile, update.packages, update.features)
 
       try {
         if (shouldRecalculate) {
@@ -2142,7 +2144,9 @@ export class Application {
               cancelId: 2,
               defaultId: 0,
               detail: t("ReplaceExternalPackagesModal:description", {
-                groups: incompatibleExternals,
+                features: incompatibleExternals
+                  .map(feature => getFeatureLabel(t, feature, "long"))
+                  .sort(),
               }),
               message: t("ReplaceExternalPackagesModal:confirmation"),
               noLink: true,
@@ -2164,15 +2168,15 @@ export class Application {
 
             // Ignore conflicted externals
             if (result.response === 1) {
-              for (const groupId of incompatibleExternals) {
-                update.externals[groupId] = true
+              for (const feature of incompatibleExternals) {
+                update.features[feature] = true
               }
             }
 
             // Disable conflicted externals
             if (result.response === 0) {
-              for (const groupId of incompatibleExternals) {
-                update.externals[groupId] = false
+              for (const feature of incompatibleExternals) {
+                update.features[feature] = false
               }
 
               // Recalculate
@@ -2182,7 +2186,10 @@ export class Application {
 
           // Confirm fully-incompatible packages
           if (incompatiblePackages.length) {
-            const packages = incompatiblePackages.map(id => this.getPackageInfo(id))
+            const packageNames = mapDefined(
+              incompatiblePackages,
+              id => this.getPackageInfo(id)?.name,
+            )
 
             // TODO: Use our own modal rather than system one?
             const options: MessageBoxOptions = {
@@ -2193,7 +2200,9 @@ export class Application {
               ],
               cancelId: 2,
               defaultId: 0,
-              detail: t("DisableIncompatiblePackagesModal:description", { packages }),
+              detail: t("DisableIncompatiblePackagesModal:description", {
+                packages: packageNames.sort(),
+              }),
               message: t("DisableIncompatiblePackagesModal:confirmation"),
               noLink: true,
               title: t("DisableIncompatiblePackagesModal:title"),
@@ -2237,7 +2246,11 @@ export class Application {
                 const packageInfo = this.getPackageInfo(packageId)!
                 const oldVariant = packageInfo.variants[oldVariantId]
                 const newVariant = packageInfo.variants[newVariantId]
-                return { packageInfo, oldVariant, newVariant }
+                return t("InstallCompatibleVariantsModal:variant", {
+                  newVariantName: newVariant.name,
+                  oldVariantName: oldVariant.name,
+                  packageName: packageInfo.name,
+                })
               },
             )
 
@@ -2250,7 +2263,9 @@ export class Application {
               ],
               cancelId: 2,
               defaultId: 0,
-              detail: t("InstallCompatibleVariantsModal:description", { variants }),
+              detail: t("InstallCompatibleVariantsModal:description", {
+                variants: variants.sort(),
+              }),
               message: t("InstallCompatibleVariantsModal:confirmation"),
               noLink: true,
               title: t("InstallCompatibleVariantsModal:title"),
@@ -2301,15 +2316,15 @@ export class Application {
             )
 
             if (packageInfo && dependencyIds?.length) {
-              const dependencies = dependencyIds.map(id => this.getPackageInfo(id))
+              const dependencyNames = mapDefined(dependencyIds, id => this.getPackageInfo(id)?.name)
 
               // TODO: Use our own modal rather than system one?
               const [confirmed] = await this.showConfirmation(
                 packageInfo.name,
                 t("EnableOptionalDependencies:confirmation"),
                 t("EnableOptionalDependencies:description", {
-                  dependencies,
-                  packageInfo,
+                  dependencies: dependencyNames.sort(),
+                  packageName: packageInfo.name,
                 }),
               )
 
@@ -2337,11 +2352,13 @@ export class Application {
             if (packageInfo && variantInfo?.warnings) {
               for (const warning of variantInfo.warnings) {
                 if (!warning.on || warning.on === "enable") {
+                  const packageName = packageInfo.name
+
                   // TODO: Use our own modal rather than system one?
                   const [confirmed] = await this.showConfirmation(
                     packageInfo.name,
                     t("EnableWarningModal:confirmation"),
-                    warning.message ?? t(warning.id!, { ns: "Warning", packageInfo }),
+                    warning.message ?? t(warning.id!, { ns: "Warning", packageName }),
                     undefined,
                     "warning",
                   )
@@ -2361,11 +2378,13 @@ export class Application {
             if (packageInfo && variantInfo?.warnings) {
               for (const warning of variantInfo.warnings) {
                 if (warning.on === "disable") {
+                  const packageName = packageInfo.name
+
                   // TODO: Use our own modal rather than system one?
                   const [confirmed] = await this.showConfirmation(
                     packageInfo.name,
                     t("DisableWarningModal:confirmation"),
-                    warning.message ?? t(warning.id!, { ns: "Warning", packageInfo }),
+                    warning.message ?? t(warning.id!, { ns: "Warning", packageName }),
                     undefined,
                     "warning",
                   )
@@ -2419,7 +2438,10 @@ export class Application {
             // Confirm installation of dependencies
             if (missingAssets.size) {
               const assets = Array.from(missingAssets.values())
-              const dependencies = installingDependencyIds.map(id => this.getPackageInfo(id))
+              const dependencyNames = mapDefined(
+                installingDependencyIds,
+                id => this.getPackageInfo(id)?.name,
+              )
 
               const totalSize = assets.reduce(
                 (total, asset) => (asset.size ? total + asset.size : NaN),
@@ -2430,11 +2452,23 @@ export class Application {
               const [confirmed] = await this.showConfirmation(
                 t("DownloadAssetsModal:title"),
                 t("DownloadAssetsModal:confirmation"),
-                t("DownloadAssetsModal:description", {
-                  assets,
-                  dependencies,
-                  totalSize: totalSize || undefined,
-                }),
+                dependencyNames.length
+                  ? [
+                      t("DownloadAssetsModal:descriptionDependencies", {
+                        dependencies: dependencyNames.sort(),
+                        count: dependencyNames.length,
+                      }),
+                      t("DownloadAssetsModal:descriptionAssetsWithDependencies", {
+                        assets: assets.map(asset => asset.id).sort(),
+                        count: assets.length,
+                        totalSize,
+                      }),
+                    ].join("\n\n")
+                  : t("DownloadAssetsModal:descriptionAssets", {
+                      assets: assets.map(asset => asset.id).sort(),
+                      count: assets.length,
+                      totalSize,
+                    }),
               )
 
               if (!confirmed) {
@@ -2455,7 +2489,7 @@ export class Application {
         }
 
         // Apply config changes
-        profile.externals = resultingExternals
+        profile.features = resultingExternals
         profile.packages = resultingConfigs
 
         // Apply status changes

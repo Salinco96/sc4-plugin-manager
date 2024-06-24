@@ -1,4 +1,5 @@
 import { ProfileData, ProfileInfo } from "@common/types"
+import { keys } from "@common/utils/objects"
 
 import { ReadonlyDeep } from "../packages/resolve"
 
@@ -18,9 +19,9 @@ export function compactProfileConfig(profile: ProfileInfo): void {
     }
   }
 
-  for (const groupId in profile.externals) {
-    if (!profile.externals[groupId]) {
-      delete profile.externals[groupId]
+  for (const feature of keys(profile.features)) {
+    if (!profile.features[feature]) {
+      delete profile.features[feature]
     }
   }
 }
@@ -37,10 +38,10 @@ export function toProfileData(profile: ReadonlyDeep<ProfileInfo>): ProfileData {
     data.packages[packageId] = profile.packages[packageId]
   }
 
-  for (const groupId in profile.externals) {
+  for (const feature of keys(profile.features)) {
     data.externals ??= {}
-    if (profile.externals[groupId]) {
-      data.externals[groupId] = true
+    if (profile.features[feature]) {
+      data.externals[feature] = true
     }
   }
 
@@ -49,7 +50,7 @@ export function toProfileData(profile: ReadonlyDeep<ProfileInfo>): ProfileData {
 
 export function fromProfileData(profileId: string, data: ReadonlyDeep<ProfileData>): ProfileInfo {
   return {
-    externals: data.externals ?? {},
+    features: data.externals ?? {},
     id: profileId,
     name: data.name ?? profileId,
     packages: Object.fromEntries(

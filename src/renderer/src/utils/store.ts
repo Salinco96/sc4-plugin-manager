@@ -32,7 +32,7 @@ export interface PackageFilters {
 }
 
 export interface StoreActions {
-  addPackage(packageId: string, variantId: string): Promise<boolean>
+  addPackage(packageId: string, variantId: string, data?: ProfileUpdate): Promise<boolean>
   check4GBPatch(): Promise<void>
   cleanVariant(packageId: string, variantId: string): Promise<void>
   closeSnackbar(type: SnackbarType): void
@@ -102,7 +102,7 @@ export const useStore = create<Store>()((set, get): Store => {
 
   return {
     actions: {
-      async addPackage(packageId, variantId) {
+      async addPackage(packageId, variantId, data) {
         const profileId = get().settings?.currentProfile
         if (!profileId) {
           return false
@@ -110,7 +110,9 @@ export const useStore = create<Store>()((set, get): Store => {
 
         try {
           return await window.api.updateProfile(profileId, {
+            ...data,
             packages: {
+              ...data?.packages,
               [packageId]: { enabled: true, variant: variantId },
             },
           })
@@ -341,10 +343,6 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       updateState(data) {
         try {
-          if (Object.keys(data).length !== 1 || !data.status) {
-            console.debug("Update state", data)
-          }
-
           if (data.packages) {
             set(store => {
               const packages = compact({ ...store.packages, ...data.packages })

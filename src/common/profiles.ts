@@ -1,13 +1,13 @@
-import { PackageConfig } from "./types"
+import { Feature, PackageConfig } from "./types"
 import { normalizeString } from "./utils/types"
 
 export interface ProfileUpdate {
-  externals?: {
-    [groupId: string]: boolean | undefined
+  features?: {
+    [feature in Feature]?: boolean
   }
   name?: string
   packages?: {
-    [packageId: string]: PackageConfig | undefined
+    [packageId in string]?: PackageConfig
   }
 }
 

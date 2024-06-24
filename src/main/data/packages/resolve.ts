@@ -1,5 +1,14 @@
-import { t } from "@common/i18n"
-import { PackageConfig, PackageInfo, PackageStatus, ProfileInfo } from "@common/types"
+import {
+  Feature,
+  Issue,
+  PackageConfig,
+  PackageInfo,
+  PackageStatus,
+  ProfileInfo,
+  VariantIssue,
+} from "@common/types"
+import { removeElement } from "@common/utils/arrays"
+import { keys } from "@common/utils/objects"
 
 export const EXTERNAL_PACKAGE_ID = "<external>"
 
@@ -10,36 +19,50 @@ export type ReadonlyDeep<T> = {
 function getVariantIncompatibilities(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
   variantId: string,
-  conflictGroups: ReadonlyDeep<Record<string, string[]>>,
-): string[] {
+  features: ReadonlyDeep<{ [feature in Feature]?: string[] }>,
+): VariantIssue[] {
   const variantInfo = packageInfo.variants[variantId]
 
-  const incompatibilities: string[] = []
+  const incompatibilities: VariantIssue[] = []
 
-  // Check conflict groups
-  if (variantInfo.conflictGroups) {
-    for (const groupId of variantInfo.conflictGroups) {
-      const conflictPackageId = conflictGroups[groupId]?.find(id => id !== packageInfo.id)
-      if (conflictPackageId) {
-        // TODO: Use ID/data object here, and convert to message in UI code
-        incompatibilities.push(t("Issue:conflictingPackage", { packageId: conflictPackageId }))
+  // Check feature conflicts
+  if (variantInfo.features) {
+    for (const feature of variantInfo.features) {
+      const conflictPackageIds = features[feature]?.filter(id => id !== packageInfo.id)
+      if (conflictPackageIds?.length) {
+        incompatibilities.push({
+          id: Issue.CONFLICTING_FEATURE,
+          external: conflictPackageIds.includes(EXTERNAL_PACKAGE_ID),
+          feature,
+          packages: removeElement(conflictPackageIds, EXTERNAL_PACKAGE_ID),
+        })
       }
     }
   }
 
   // Check requirements
   if (variantInfo.requirements) {
-    for (const groupId in variantInfo.requirements) {
-      const value = variantInfo.requirements[groupId]
+    for (const feature of keys(variantInfo.requirements)) {
+      const featurePackageIds = features[feature]
+      const isEnabled = !!featurePackageIds?.length
+      const isRequired = variantInfo.requirements[feature]
 
-      // Check conflict group requirements
-      if (value !== !!conflictGroups[groupId]?.length) {
-        // TODO: Use ID/data object here, and convert to message in UI code
-        incompatibilities.push(
-          t(value ? "Issue:missingGroup" : "Issue:conflictingGroup", {
-            groupId: groupId,
-          }),
-        )
+      // Check feature requirements
+      if (isRequired !== isEnabled) {
+        if (isEnabled) {
+          incompatibilities.push({
+            id: Issue.INCOMPATIBLE_FEATURE,
+            external: featurePackageIds.includes(EXTERNAL_PACKAGE_ID),
+            feature,
+            packages: removeElement(featurePackageIds, EXTERNAL_PACKAGE_ID),
+          })
+        } else {
+          incompatibilities.push({
+            id: Issue.MISSING_FEATURE,
+            feature,
+            // TODO: List of packages including the feature
+          })
+        }
       }
     }
   }
@@ -50,48 +73,48 @@ function getVariantIncompatibilities(
 function isVariantCompatible(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
   variantId: string,
-  conflictGroups: ReadonlyDeep<Record<string, string[]>>,
+  features: ReadonlyDeep<Record<string, string[]>>,
 ): boolean {
-  return getVariantIncompatibilities(packageInfo, variantId, conflictGroups).length === 0
+  return getVariantIncompatibilities(packageInfo, variantId, features).length === 0
 }
 
 function getCompatibleVariantIds(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
-  conflictGroups: ReadonlyDeep<Record<string, string[]>>,
+  features: ReadonlyDeep<Record<string, string[]>>,
 ): string[] {
   const variantIds = Object.keys(packageInfo.variants)
-  return variantIds.filter(variantId => isVariantCompatible(packageInfo, variantId, conflictGroups))
+  return variantIds.filter(variantId => isVariantCompatible(packageInfo, variantId, features))
 }
 
-export function getConflictGroups(
+export function getFeatures(
   packages: ReadonlyDeep<Record<string, Omit<PackageInfo, "status">>>,
   status: ReadonlyDeep<Record<string, PackageStatus>>,
   externals: ReadonlyDeep<Partial<Record<string, boolean>>>,
 ): Record<string, string[]> {
-  const conflictGroups: Record<string, string[]> = {}
+  const features: Record<string, string[]> = {}
 
   for (const packageId in packages) {
     const packageStatus = status[packageId]
     if (packageStatus.enabled) {
       const packageInfo = packages[packageId]
       const variantInfo = packageInfo.variants[packageStatus.variantId]
-      if (variantInfo?.conflictGroups) {
-        for (const groupId of variantInfo.conflictGroups) {
-          conflictGroups[groupId] ??= []
-          conflictGroups[groupId].push(packageId)
+      if (variantInfo?.features) {
+        for (const feature of variantInfo.features) {
+          features[feature] ??= []
+          features[feature].push(packageId)
         }
       }
     }
   }
 
-  for (const groupId in externals) {
-    if (externals[groupId]) {
-      conflictGroups[groupId] ??= []
-      conflictGroups[groupId].unshift(EXTERNAL_PACKAGE_ID)
+  for (const feature in externals) {
+    if (externals[feature]) {
+      features[feature] ??= []
+      features[feature].unshift(EXTERNAL_PACKAGE_ID)
     }
   }
 
-  return conflictGroups
+  return features
 }
 
 export function resolvePackages(
@@ -99,8 +122,8 @@ export function resolvePackages(
   configs: ReadonlyDeep<Partial<Record<string, PackageConfig>>>,
   externals: ReadonlyDeep<Partial<Record<string, boolean>>>,
 ): {
-  /** Resulting conflict groups */
-  conflictGroups: { [groupId: string]: string[] }
+  /** Resulting features */
+  resultingFeatures: { [feature in Feature]?: string[] }
   /** Resulting package status */
   resultingStatus: { [packageId: string]: PackageStatus }
 } {
@@ -140,8 +163,8 @@ export function resolvePackages(
     resultingStatus[packageId] = packageStatus
   }
 
-  // Calculate initial conflict groups
-  const initialConflictGroups = getConflictGroups(packages, resultingStatus, externals)
+  // Calculate initial features
+  const initialFeatures = getFeatures(packages, resultingStatus, externals)
 
   // Select default compatible variant for packages without an explicit variant
   for (const packageId in packages) {
@@ -149,7 +172,7 @@ export function resolvePackages(
       const packageInfo = packages[packageId]
       const packageStatus = resultingStatus[packageId]
       if (packageStatus.variantId) {
-        const variantIds = getCompatibleVariantIds(packageInfo, initialConflictGroups)
+        const variantIds = getCompatibleVariantIds(packageInfo, initialFeatures)
         if (variantIds.length && !variantIds.includes(packageStatus.variantId)) {
           packageStatus.variantId = variantIds[0]
         }
@@ -201,8 +224,8 @@ export function resolvePackages(
     }
   }
 
-  // Calculate final conflict groups
-  const conflictGroups = getConflictGroups(packages, resultingStatus, externals)
+  // Calculate final features
+  const resultingFeatures = getFeatures(packages, resultingStatus, externals)
 
   const cache = new Map<string, boolean>()
   const checkRecursively = (packageId: string) => {
@@ -235,7 +258,11 @@ export function resolvePackages(
         }
       }
 
-      const incompatibilities = getVariantIncompatibilities(packageInfo, variantId, conflictGroups)
+      const incompatibilities = getVariantIncompatibilities(
+        packageInfo,
+        variantId,
+        resultingFeatures,
+      )
 
       // Variants with incompatible dependencies are also themselves incompatible
       if (!incompatibilities.length && variantInfo.dependencies) {
@@ -244,15 +271,10 @@ export function resolvePackages(
         })
 
         if (incompatibleIds.length) {
-          if (incompatibleIds.length === 1) {
-            incompatibilities.push(
-              t("Issue:incompatibleDependency", { dependencyId: incompatibleIds[0] }),
-            )
-          } else {
-            incompatibilities.push(
-              t("Issue:incompatibleDependencies", { count: incompatibleIds.length }),
-            )
-          }
+          incompatibilities.push({
+            id: Issue.INCOMPATIBLE_DEPENDENCIES,
+            packages: incompatibleIds,
+          })
         }
       }
 
@@ -287,14 +309,14 @@ export function resolvePackages(
     checkRecursively(packageId)
   }
 
-  return { conflictGroups, resultingStatus: resultingStatus }
+  return { resultingFeatures, resultingStatus }
 }
 
 export function resolvePackageUpdates(
   packages: ReadonlyDeep<Record<string, PackageInfo>>,
   profile: ReadonlyDeep<ProfileInfo>,
   configUpdates: ReadonlyDeep<Partial<Record<string, PackageConfig>>>,
-  externalUpdates: ReadonlyDeep<Partial<Record<string, boolean>>>,
+  externalUpdates: ReadonlyDeep<Partial<Record<Feature, boolean>>>,
 ): {
   /** Packages that will be disabled */
   disablingPackages: string[]
@@ -304,16 +326,16 @@ export function resolvePackageUpdates(
   explicitVariantChanges: { [packageId: string]: [old: string, new: string] }
   /** Incompatible packages with an available compatible variant (installed) */
   implicitVariantChanges: { [packageId: string]: [old: string, new: string] }
-  /** Incompatible externally-installed package groups */
-  incompatibleExternals: string[]
+  /** Incompatible externally-installed features */
+  incompatibleExternals: Feature[]
   /** Fully-incompatible packages (no compatible variant available) */
   incompatiblePackages: string[]
   /** Variants that will to be installed */
   installingVariants: { [packageId: string]: string }
   /** Resulting package configs */
-  resultingConfigs: { [packageId: string]: PackageConfig | undefined }
+  resultingConfigs: { [packageId in string]?: PackageConfig }
   /** Resulting externals */
-  resultingExternals: { [groupId: string]: boolean | undefined }
+  resultingExternals: { [feature in Feature]?: boolean }
   /** Resulting package status */
   resultingStatus: { [packageId: string]: PackageStatus }
   /** Packages that will have their variant changed */
@@ -324,7 +346,7 @@ export function resolvePackageUpdates(
   let shouldRecalculate = false
 
   const resultingConfigs = { ...profile.packages }
-  const resultingExternals = { ...profile.externals }
+  const resultingExternals = { ...profile.features }
 
   // Calculate resulting configs (do not mutate current configs)
   for (const packageId in configUpdates) {
@@ -336,15 +358,15 @@ export function resolvePackageUpdates(
   }
 
   // Calculate resulting externals (do not mutate current externals)
-  for (const groupId in externalUpdates) {
-    const oldValue = profile.externals[groupId] ?? false
-    const newValue = externalUpdates[groupId] ?? oldValue
-    resultingExternals[groupId] = newValue
+  for (const feature of keys(externalUpdates)) {
+    const oldValue = profile.features[feature] ?? false
+    const newValue = externalUpdates[feature] ?? oldValue
+    resultingExternals[feature] = newValue
     shouldRecalculate ||= oldValue !== newValue
   }
 
   // Calculate resulting status
-  const { conflictGroups, resultingStatus } = resolvePackages(
+  const { resultingFeatures, resultingStatus } = resolvePackages(
     packages,
     resultingConfigs,
     resultingExternals,
@@ -354,7 +376,7 @@ export function resolvePackageUpdates(
   const enablingPackages: string[] = []
   const explicitVariantChanges: { [packageId: string]: [old: string, new: string] } = {}
   const implicitVariantChanges: { [packageId: string]: [old: string, new: string] } = {}
-  const incompatibleExternals: string[] = []
+  const incompatibleExternals: Feature[] = []
   const incompatiblePackages: string[] = []
   const installingVariants: { [packageId: string]: string } = {}
   const selectingVariants: { [packageId: string]: string } = {}
@@ -424,15 +446,14 @@ export function resolvePackageUpdates(
   }
 
   // Check incompatible externals
-  for (const groupId in resultingExternals) {
-    if (resultingExternals[groupId]) {
+  for (const feature of keys(resultingExternals)) {
+    if (resultingExternals[feature]) {
       // Ignore conflicts from externals that are explicitly enabled by this action
-      const ignoreConflicts = !!externalUpdates[groupId]
-
-      const isConflicted = conflictGroups[groupId]?.some(id => id !== EXTERNAL_PACKAGE_ID)
+      const ignoreConflicts = !!externalUpdates[feature]
+      const isConflicted = resultingFeatures[feature]?.some(id => id !== EXTERNAL_PACKAGE_ID)
 
       if (isConflicted && !ignoreConflicts) {
-        incompatibleExternals.push(groupId)
+        incompatibleExternals.push(feature)
       }
     }
   }

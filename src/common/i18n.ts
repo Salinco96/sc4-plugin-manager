@@ -1,6 +1,9 @@
-import i18next from "i18next"
+import i18next, { Namespace, TFunction } from "i18next"
 
 import en from "@config/i18n/en.json"
+
+import { Feature } from "./types"
+import { isNumber, isString } from "./utils/types"
 
 declare module "i18next" {
   interface CustomTypeOptions {
@@ -13,25 +16,19 @@ export const i18n = i18next
 
 export function initI18n(i18n: typeof i18next): void {
   i18n.init({
-    debug: true,
     defaultNS: "General",
-    interpolation: { escapeValue: false },
+    interpolation: {
+      escapeValue: false,
+      skipOnVariables: false,
+    },
     lng: "en",
     resources: { en },
     returnEmptyString: true,
     returnObjects: true,
   })
 
-  i18n.services.formatter?.add("bytes", (value, lng, { paren }) => {
-    if (typeof value === "string") {
-      return value
-    }
-
-    if (typeof value !== "number" || !isFinite(value)) {
-      return ""
-    }
-
-    const formatted = value.toLocaleString(lng, {
+  i18n.services.formatter?.addCached("bytes", lng => {
+    const formatter = new Intl.NumberFormat(lng, {
       maximumFractionDigits: 2,
       notation: "compact",
       style: "unit",
@@ -39,70 +36,79 @@ export function initI18n(i18n: typeof i18next): void {
       unitDisplay: "narrow",
     })
 
-    return paren ? i18n.t("paren", { value: formatted }) : formatted
+    return value => {
+      if (isString(value)) {
+        return value
+      }
+
+      if (isNumber(value) && isFinite(value)) {
+        return formatter.format(value)
+      }
+
+      return ""
+    }
   })
 
-  i18n.services.formatter?.add(
-    "join",
-    (value, lng, { format, key, multiline, ns, separator, ...rest }) => {
-      if (!Array.isArray(value)) {
-        return ""
-      }
-
-      const labels = value.map(item => {
-        if (key) {
-          if (typeof item === "object") {
-            return i18n.t(key, { lng, ns, ...rest, ...item })
-          } else {
-            return i18n.t(key, { lng, ns, ...rest, value: item })
-          }
-        }
-
-        if (format) {
-          return i18n.format(item, format, lng, rest)
-        }
-
-        return String(item)
-      })
-
-      if (multiline) {
-        return labels.map(label => i18n.t("li", { label, lng, ns: "General", ...rest })).join("\n")
-      } else if (separator) {
-        return labels.join(separator)
-      } else {
-        return new Intl.ListFormat(lng, { type: "unit" }).format(labels)
-      }
-    },
-  )
-
-  i18n.services.formatter?.add("name", value => String(value?.name ?? value))
-
-  i18n.services.formatter?.add("percent", (value, lng, { paren }) => {
-    if (typeof value === "string") {
-      return value
-    }
-
-    if (typeof value !== "number" || !isFinite(value)) {
+  i18n.services.formatter?.add("join", (value, lng, { max, multiline, separator }) => {
+    if (!Array.isArray(value)) {
       return ""
     }
 
-    const formatted = value.toLocaleString(lng, {
+    const labels = value.map(String)
+
+    if (labels.length > max) {
+      const count = labels.length - (max - 1)
+      labels.splice(max - 1, count, i18n.t("others", { count, lng }))
+    }
+
+    if (multiline) {
+      return labels.map(label => i18n.t("li", { label, lng })).join("\n")
+    } else if (separator) {
+      return labels.join(separator)
+    } else {
+      return new Intl.ListFormat(lng).format(labels)
+    }
+  })
+
+  i18n.services.formatter?.add("paren", value => {
+    if (isString(value)) {
+      return value && i18n.t("paren", { value })
+    }
+
+    if (isNumber(value) && isFinite(value)) {
+      return i18n.t("paren", { value })
+    }
+
+    return ""
+  })
+
+  i18n.services.formatter?.addCached("percent", lng => {
+    const formatter = new Intl.NumberFormat(lng, {
       maximumFractionDigits: 0,
       notation: "compact",
       style: "percent",
     })
 
-    return paren ? i18n.t("paren", { value: formatted }) : formatted
-  })
+    return value => {
+      if (isString(value)) {
+        return value
+      }
 
-  i18n.services.formatter?.add("pluralize", (value, lng, { interpolationkey, key, ...options }) => {
-    const count = typeof value === "number" ? value : value?.length ?? 0
-    return i18n.t(key, { lng, ...options, count }) as string
+      if (isNumber(value) && isFinite(value)) {
+        return formatter.format(value)
+      }
+
+      return ""
+    }
   })
 }
 
 export const t = i18n.t
 
-export function toList(items: string[], compact?: boolean): string {
-  return compact ? items.join(t("sep")) : items.map(label => t("li", { label })).join("\n")
+export function getFeatureLabel(
+  t: TFunction<Namespace>,
+  feature: Feature,
+  style: "full" | "short" | "long" = "long",
+): string {
+  return t(`${feature}.${style}`, { defaultValue: feature, ns: "Features" })
 }

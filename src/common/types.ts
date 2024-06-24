@@ -19,16 +19,27 @@ export interface AssetInfo extends AssetData {
   version?: string
 }
 
+export enum Feature {
+  CAM = "cam",
+  DARKNITE = "darknite",
+  IRM = "irm",
+  NAM = "nam",
+  RHD = "rhd",
+}
+
+export enum Issue {
+  CONFLICTING_FEATURE = "conflicting-feature",
+  INCOMPATIBLE_DEPENDENCIES = "incompatible-dependencies",
+  INCOMPATIBLE_FEATURE = "incompatible-feature",
+  MISSING_FEATURE = "missing-feature",
+}
+
 export interface PackageAsset extends AssetData {
   cleanitol?: string
   docs?: Array<string | PackageFile>
   exclude?: Array<string | PackageFile>
   include?: Array<string | PackageFile>
   id: string
-}
-
-export interface PackageCondition {
-  [key: string]: boolean
 }
 
 export interface PackageConfig {
@@ -48,7 +59,9 @@ export interface PackageData extends VariantData {
 export interface PackageFile {
   as?: string
   category?: number
-  condition?: PackageCondition
+  condition?: {
+    [feature in Feature]?: boolean
+  }
   path: string
 }
 
@@ -73,7 +86,7 @@ export interface PackageStatus {
   action?: "disabling" | "enabling"
   enabled: boolean
   issues: {
-    [variantId: string]: string[] | undefined
+    [variantId in string]?: VariantIssue[]
   }
   options: PackageOptions
   requiredBy: string[]
@@ -95,7 +108,7 @@ export interface VariantData {
   assets?: PackageAsset[]
   authors?: string[]
   category?: number
-  conflictGroups?: string[]
+  features?: Feature[]
   dependencies?: string[]
   deprecated?: boolean
   description?: string
@@ -105,11 +118,20 @@ export interface VariantData {
   optional?: string[]
   readme?: string
   repository?: string
-  requirements?: PackageCondition
+  requirements?: {
+    [feature in Feature]?: boolean
+  }
   thumbnail?: string
   url?: string
   version?: string
   warnings?: PackageWarning[]
+}
+
+export interface VariantIssue {
+  external?: boolean
+  feature?: Feature
+  id: Issue
+  packages?: string[]
 }
 
 export interface BaseVariantInfo extends VariantData {
@@ -148,13 +170,13 @@ export interface ProfileData {
     [packageId: string]: boolean | string | PackageConfig | undefined
   }
   externals?: {
-    [groupId: string]: boolean | undefined
+    [feature in Feature]?: boolean
   }
 }
 
 export interface ProfileInfo {
-  externals: {
-    [groupId: string]: boolean | undefined
+  features: {
+    [feature in Feature]?: boolean
   }
   format?: ConfigFormat
   id: string

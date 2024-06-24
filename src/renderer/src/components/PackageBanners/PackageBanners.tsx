@@ -32,14 +32,14 @@ export function PackageBanners({ packageId }: { packageId: string }): JSX.Elemen
       )}
       {isDeprecated(variantInfo) && <PackageBannerDeprecated />}
       {isExperimental(variantInfo) && <PackageBannerExperimental />}
-      {issues?.map(reason =>
+      {issues?.map(issue =>
         isEnabled(variantInfo, packageStatus) ? (
-          <PackageBannerConflict key={reason} reason={reason} />
+          <PackageBannerConflict key={issue.id} issue={issue} />
         ) : (
           <PackageBannerIncompatible
-            key={reason}
+            key={issue.id}
+            issue={issue}
             packageId={packageId}
-            reason={reason}
             variantId={variantId}
           />
         ),

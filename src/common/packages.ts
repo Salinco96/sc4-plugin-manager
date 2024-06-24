@@ -1,4 +1,4 @@
-import { PackageInfo, PackageStatus, ProfileInfo, VariantInfo } from "@common/types"
+import { PackageInfo, PackageStatus, ProfileInfo, VariantInfo, VariantIssue } from "@common/types"
 
 import { PackageCategory, isCategory } from "./categories"
 
@@ -12,7 +12,7 @@ export function getPackageStatus(
 export function getVariantIssues(
   variantInfo: VariantInfo,
   packageStatus?: PackageStatus,
-): string[] {
+): VariantIssue[] {
   return packageStatus?.issues[variantInfo.id] ?? []
 }
 

@@ -1,7 +1,5 @@
 import { useCallback } from "react"
 
-import { Namespace, TFunction } from "i18next"
-
 import { isCategory } from "@common/categories"
 import {
   getVariantIssues,
@@ -34,14 +32,6 @@ export const PACKAGE_LIST_ITEM_DESCRIPTION_SIZE = 56
 
 function getFilteredPackages(store: Store): string[] {
   return store.filteredPackages
-}
-
-export function getConflictGroupLabel(
-  t: TFunction<Namespace>,
-  groupId: string,
-  style: "full" | "short" | "long" = "long",
-): string {
-  return t(`${groupId}.${style}`, { defaultValue: groupId, ns: "ConflictGroups" })
 }
 
 export function getPackageListItemSize(

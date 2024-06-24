@@ -19,18 +19,12 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
     const message = useStore(store => {
       if (store.status?.ongoingDownloads.length) {
         const { key, progress } = store.status.ongoingDownloads[0]
-        return t("downloading", {
-          key,
-          progress: progress !== undefined ? t("progress", { progress }) : undefined,
-        })
+        return t("downloading", { key, progress })
       }
 
       if (store.status?.ongoingExtracts.length) {
         const { key, progress } = store.status.ongoingExtracts[0]
-        return t("extracting", {
-          key,
-          progress: progress !== undefined ? t("progress", { progress }) : undefined,
-        })
+        return t("extracting", { key, progress })
       }
     })
 

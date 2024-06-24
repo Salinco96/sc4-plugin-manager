@@ -2,11 +2,12 @@ import { Settings as ConfigIcon } from "@mui/icons-material"
 import { FormControl, FormGroup, IconButton, TextField, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
+import { Feature } from "@common/types"
 import { FlexBox } from "@components/FlexBox"
 import { useCurrentProfile, useStoreActions } from "@utils/store"
 
 import { ProfileNameInputField } from "./ProfileNameInputField"
-import { ProfileSettingSwitchField } from "./ProfileSettingSwitchField"
+import { ProfileSettingFeatureSwitchField } from "./ProfileSettingSwitchField"
 
 function Profile(): JSX.Element {
   const profileInfo = useCurrentProfile()
@@ -43,17 +44,21 @@ function Profile(): JSX.Element {
       </FlexBox>
       <FormControl component="fieldset">
         <FormGroup>
-          <ProfileSettingSwitchField
-            label={t("externals.label", { name: t("darknite.full", { ns: "ConflictGroups" }) })}
-            name="darknite"
+          <ProfileSettingFeatureSwitchField
+            feature={Feature.DARKNITE}
+            label={t("externals.label", { name: t("darknite.full", { ns: "Features" }) })}
             profileInfo={profileInfo}
           />
-          <ProfileSettingSwitchField
-            label={t("externals.label", { name: t("cam.full", { ns: "ConflictGroups" }) })}
-            name="cam"
+          <ProfileSettingFeatureSwitchField
+            feature={Feature.CAM}
+            label={t("externals.label", { name: t("cam.full", { ns: "Features" }) })}
             profileInfo={profileInfo}
           />
-          <ProfileSettingSwitchField label={t("rhd.label")} name="rhd" profileInfo={profileInfo} />
+          <ProfileSettingFeatureSwitchField
+            feature={Feature.RHD}
+            label={t("rhd.label")}
+            profileInfo={profileInfo}
+          />
         </FormGroup>
       </FormControl>
     </FlexBox>

@@ -65,7 +65,7 @@
     "title": "Create profile",
     "titleFirst": "Create your first profile"
   },
-  "ConflictGroups": {
+  "Features": {
     "cam": {
       "full": "the Colossus Addon Mod",
       "long": "Colossus Addon Mod",
@@ -81,29 +81,29 @@
     "cancel": "$t(General:cancel)",
     "confirm": "Disable incompatible packages",
     "confirmation": "Disable incompatible packages?",
-    "description": "The following enabled packages are incompatible with this change:\n{{packages, join(format: name; multiline: true)}}\n\nYou can either disable all incompatible packages now, or resolve each conflict manually later.",
+    "description": "The following enabled packages are incompatible with this change:\n{{packages, join(multiline: true)}}\n\nYou can either disable all incompatible packages now, or resolve each conflict manually later.",
     "ignore": "Ignore conflicts",
     "title": "$t(General:app)"
   },
   "DisableWarningModal": {
     "confirmation": "Disable package?",
     "message": {
-      "bulldoze": "Before disabling {{packageInfo.name}}, you must bulldoze all corresponding lots from all relevant regions."
+      "bulldoze": "Before disabling {{packageName}}, you must bulldoze all corresponding lots from all relevant regions."
     }
   },
   "DownloadAssetsModal": {
     "confirmation": "Download new packages?",
-    "description": "{{dependencies, pluralize(key: description_dependencies; ns: DownloadAssetsModal)}}{{assets, pluralize(key: description_assets; ns: DownloadAssetsModal)}}",
-    "description_assets_one": "{{count}} asset{{totalSize, bytes(paren: true)}} will be downloaded.",
-    "description_assets_other": "{{count}} assets{{totalSize, bytes(paren: true)}} will be downloaded.",
-    "description_dependencies_one": "This action requires the installation of {{count}} additional dependency:\n{{dependencies, join(format: name; multiline: true)}}\n\nIn total, ",
-    "description_dependencies_other": "This action requires the installation of {{count}} additional dependencies:\n{{dependencies, join(format: name; multiline: true)}}\n\nIn total, ",
-    "description_dependencies_zero": "",
+    "descriptionAssets_one": "{{count}} asset{{totalSize, bytes, paren}} will be downloaded.",
+    "descriptionAssets_other": "{{count}} assets{{totalSize, bytes, paren}} will be downloaded.",
+    "descriptionAssetsWithDependencies_one": "In total, {{count}} asset{{totalSize, bytes, paren}} will be downloaded.",
+    "descriptionAssetsWithDependencies_other": "In total, {{count}} assets{{totalSize, bytes, paren}} will be downloaded.",
+    "descriptionDependencies_one": "This action requires the installation of {{count}} additional dependency:\n{{dependencies, join(multiline: true)}",
+    "descriptionDependencies_other": "This action requires the installation of {{count}} additional dependencies:\n{{dependencies, join(multiline: true)}",
     "title": "$t(General:app)"
   },
   "EnableOptionalDependencies": {
     "confirmation": "Enable optional dependencies?",
-    "description": "{{packageInfo.name}} specifies the following optional dependencies:\n{{dependencies, join(format: name; multiline: true)}}\n\nDo you want to enable them?"
+    "description": "{{packageName}} specifies the following optional dependencies:\n{{dependencies, join(multiline: true)}}\n\nDo you want to enable them?"
   },
   "EnableWarningModal": {
     "confirmation": "Enable package?"
@@ -122,6 +122,8 @@
     "li": "  - {{label}}",
     "nam": "Network Addon Mod",
     "no": "No",
+    "others_one": "{{count}} other",
+    "others_other": "{{count}} others",
     "paren": " ({{value}})",
     "reload": "Reload",
     "required": "Required",
@@ -132,17 +134,19 @@
     "cancel": "$t(General:cancel)",
     "confirm": "Install compatible variants",
     "confirmation": "Install compatible variants?",
-    "description": "The following enabled variants are incompatible with this change, but compatible variants can be installed:\n{{variants, join(key: variant; ns: InstallCompatibleVariantsModal; multiline: true)}}\n\nYou can either automatically install and switch to compatible variants now, or resolve each conflict manually later.",
+    "description": "The following enabled variants are incompatible with this change, but compatible variants can be installed:\n{{variants, join(multiline: true)}}\n\nYou can either automatically install and switch to compatible variants now, or resolve each conflict manually later.",
     "ignore": "Ignore conflicts",
     "title": "$t(General:app)",
-    "variant": "{{packageInfo.name}}: {{oldVariant.name}} -> {{newVariant.name}}"
+    "variant": "{{packageName}}: {{oldVariantName}} -> {{newVariantName}}"
   },
   "Issue": {
-    "conflictingPackage": "Conflicting with {{packageId}}",
-    "conflictingGroup": "Conflicting with $t(ConflictGroups:{{groupId}}.long)",
-    "incompatibleDependency": "Dependency {{dependencyId}} is not compatible",
-    "incompatibleDependencies_other": "{{count}} dependencies are not compatible",
-    "missingGroup": "Requires $t(ConflictGroups:{{groupId}}.long) to be present"
+    "conflicting-feature": "Conflicting with {{packages, join(max: 2)}}",
+    "conflicting-feature_zero": "Conflicting with $t(Features:{{feature}}.long)",
+    "incompatible-dependencies_one": "Dependency {{packages, join(max: 1)}} is not compatible",
+    "incompatible-dependencies_other": "Dependencies {{packages, join(max: 2)}} are not compatible",
+    "incompatible-feature": "Incompatible with {{packages, join(max: 2)}}",
+    "incompatible-feature_zero": "Incompatible with $t(Features:{{feature}}.long)",
+    "missing-feature": "Requires $t(Features:{{feature}}.long)"
   },
   "PackageActions": {
     "actions": {
@@ -200,6 +204,34 @@
       "reason": {
         "incompatible": "This variant is not compatible with your profile"
       }
+    }
+  },
+  "PackageBanner": {
+    "conflict": {
+      "actions": {
+        "disableExternal": {
+          "description": "Remove external package",
+          "label": "Fix"
+        },
+        "disablePackages": {
+          "description": "Disable {{packageName}}",
+          "label": "Fix"
+        }
+      },
+      "title": "Conflict"
+    },
+    "incompatible": {
+      "actions": {
+        "replaceExternal": {
+          "description": "Replace external package",
+          "label": "Replace"
+        },
+        "replacePackages": {
+          "description": "Replace {{packageName}}",
+          "label": "Replace"
+        }
+      },
+      "title": "Incompatible"
     }
   },
   "PackageCategory": {
@@ -303,7 +335,7 @@
   "PackageViewSummary": {
     "authors": "Authors",
     "category": "Category",
-    "conflictGroups": "Conflict groups",
+    "features": "Features",
     "requirements": "Requirements",
     "repository": "Repository",
     "url": "Website"
@@ -341,7 +373,7 @@
   },
   "RemoveConflictingFilesModal": {
     "confirmation": "Remove conflicting files?",
-    "description": "The following external files are conflicting with this plugin:\n{{files}}\n\nDo you want to remove these files? Backeups will be created in {{pluginsBackup}}."
+    "description": "The following external files are conflicting with this plugin:\n{{files, join(multiline: true)}}\n\nDo you want to remove these files? Backeups will be created in {{pluginsBackup}}."
   },
   "RemovePackageModal": {
     "confirmation": "Remove local package?",
@@ -355,8 +387,7 @@
     "cancel": "$t(General:cancel)",
     "confirm": "Replace external packages",
     "confirmation": "Replace external packages?",
-    "description": "The following external packages are incompatible with this change:\n{{groups, join(key: group; ns: ReplaceExternalPackagesModal; multiline: true)}}\n\nIf you wish to replace them, please remove all corresponding files from your Plugins folder before continuing. Otherwise, you can resolve each conflict manually later.",
-    "group": "$t(ConflictGroups:{{value}}.long)",
+    "description": "The following external packages are incompatible with this change:\n{{features, join(multiline: true)}}\n\nIf you wish to replace them, please remove all corresponding files from your Plugins folder before continuing. Otherwise, you can resolve each conflict manually later.",
     "ignore": "Ignore conflicts",
     "title": "$t(General:app)"
   },
@@ -391,11 +422,10 @@
     }
   },
   "Snackbar": {
-    "downloading": "Downloading {{key}}{{progress}}...",
-    "extracting": "Extracting {{key}}{{progress}}...",
-    "progress": " ({{progress}}%)"
+    "downloading": "Downloading {{key}}{{progress, percent, paren}}...",
+    "extracting": "Extracting {{key}}{{progress, percent, paren}}..."
   },
   "Warning": {
-    "bulldoze": "Before disabling {{packageInfo.name}}, you must bulldoze all corresponding lots from all relevant regions."
+    "bulldoze": "Before disabling {{packageName}}, you must bulldoze all corresponding lots from all relevant regions."
   }
 }

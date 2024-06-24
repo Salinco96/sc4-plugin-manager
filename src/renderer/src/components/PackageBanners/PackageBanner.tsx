@@ -24,6 +24,12 @@ const StyledAlert = styled(Alert)`
   }
 `
 
+export interface PackageBannerAction {
+  description: string
+  label: string
+  onClick: () => void
+}
+
 export function PackageBanner({
   action,
   children,
@@ -31,11 +37,7 @@ export function PackageBanner({
   header,
   icon,
 }: Pick<AlertProps, "children" | "color" | "icon"> & {
-  action?: {
-    description: string
-    label: string
-    onClick: () => void
-  }
+  action?: PackageBannerAction
   header?: string
 }): JSX.Element {
   return (

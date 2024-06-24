@@ -7,6 +7,7 @@ import { defaultCategory, parseCategory } from "@common/categories"
 import {
   AssetInfo,
   ConfigFormat,
+  Feature,
   PackageAsset,
   PackageData,
   PackageInfo,
@@ -279,6 +280,7 @@ export async function loadRemotePackages(
               // Fix CAM/DarkNite compatibility format
               const camMods = ["cam/colossus-addon-mod"]
               const darkniteMods = ["simfox/day-and-nite-mod"]
+              const names: string[] = []
 
               variantInfo.dependencies = variantInfo.dependencies?.filter(
                 dependencyId => !darkniteMods.includes(dependencyId),
@@ -287,61 +289,65 @@ export async function loadRemotePackages(
               // TODO: Improve this logic
 
               if (camMods.includes(packageId)) {
-                if (variantId.includes("cam=no")) {
+                if (variant.variant.cam === "yes") {
                   continue
                 }
 
-                variantInfo.conflictGroups ??= []
-                variantInfo.conflictGroups.push("cam")
+                variantInfo.features ??= []
+                variantInfo.features.push(Feature.CAM)
               }
 
               if (darkniteMods.includes(packageId)) {
-                if (variantId.includes("nightmode=standard")) {
+                if (variant.variant.nightmode === "standard") {
                   continue
                 }
 
-                variantInfo.conflictGroups ??= []
-                variantInfo.conflictGroups.push("darknite")
+                variantInfo.features ??= []
+                variantInfo.features.push(Feature.DARKNITE)
               }
 
-              if (variantId.includes("nightmode=standard")) {
-                variantInfo.name = "Maxis Nite"
+              if (variant.variant.nightmode === "standard") {
+                names.push("Maxis Nite")
                 variantInfo.requirements ??= {}
-                variantInfo.requirements.darknite = false
+                variantInfo.requirements[Feature.DARKNITE] = false
               }
 
-              if (variantId.includes("nightmode=dark")) {
-                variantInfo.name = "Dark Nite"
+              if (variant.variant.nightmode === "dark") {
+                names.push("Dark Nite")
                 if (!darkniteMods.includes(packageId)) {
                   variantInfo.requirements ??= {}
-                  variantInfo.requirements.darknite = true
+                  variantInfo.requirements[Feature.DARKNITE] = true
                 }
               }
 
-              if (variantId.includes("cam=yes")) {
-                variantInfo.name = "CAM"
+              if (variant.variant.cam === "yes") {
+                names.push("CAM")
                 if (!camMods.includes(packageId)) {
                   variantInfo.requirements ??= {}
-                  variantInfo.requirements.cam = true
+                  variantInfo.requirements[Feature.CAM] = true
                 }
               }
 
-              if (variantId.includes("cam=no")) {
-                variantInfo.name = "Standard"
+              if (variant.variant.cam === "no") {
+                names.push("Standard")
                 variantInfo.requirements ??= {}
-                variantInfo.requirements.cam = false
+                variantInfo.requirements[Feature.CAM] = false
               }
 
-              if (variantId.includes("driveside=left")) {
-                variantInfo.name = "Right-Hand Drive"
+              if (variant.variant.driveside === "left") {
+                names.push("Right-Hand Drive")
                 variantInfo.requirements ??= {}
-                variantInfo.requirements.rhd = true
+                variantInfo.requirements[Feature.RHD] = true
               }
 
-              if (variantId.includes("driveside=right")) {
-                variantInfo.name = "Left-Hand Drive"
+              if (variant.variant.driveside === "right") {
+                names.push("Left-Hand Drive")
                 variantInfo.requirements ??= {}
-                variantInfo.requirements.rhd = false
+                variantInfo.requirements[Feature.RHD] = false
+              }
+
+              if (names.length) {
+                variantInfo.name = names.join(", ")
               }
 
               packageInfo.variants[variantId] = variantInfo
@@ -489,9 +495,9 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
     ],
     authors: [...(variantData.authors ?? []), ...(packageData.authors ?? [])],
     category: variantData.category ?? packageData.category ?? defaultCategory,
-    conflictGroups: (packageData.conflictGroups || variantData.conflictGroups) && [
-      ...(variantData.conflictGroups ?? []),
-      ...(packageData.conflictGroups ?? []),
+    features: (packageData.features || variantData.features) && [
+      ...(variantData.features ?? []),
+      ...(packageData.features ?? []),
     ],
     dependencies: (packageData.dependencies || variantData.dependencies) && [
       ...(variantData.dependencies ?? []),
@@ -587,7 +593,7 @@ export async function writePackageConfig(
             id,
             {
               category: variant.category,
-              conflictGroups: variant.conflictGroups?.length ? variant.conflictGroups : undefined,
+              features: variant.features?.length ? variant.features : undefined,
               dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
               deprecated: variant.deprecated,
               description: variant.description,
