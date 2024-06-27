@@ -749,10 +749,90 @@ assets:
     authors:
       - RebaLynnTS
     category: 60
+    dependencies: []
+    description: |-
+      ========================================================
+
+      SPOT (Simpeg Plop Orientation Tool)
+
+      ========================================================
+
+      This is a set of props you can add to your lots to aid the player in seeing how to orient the lot.
+
+      Where needed, these will be used on Simpeg Team Projects, at the developers discretion.
+
+      They are bright orange in color, and should be easily seen in the preview. They are timed to show up, only one day, in a game year (Jan 1st).
+
+      --------------------------------------
+
+      PROPS
+
+      --------------------------------------
+
+      Diagonal - 4m
+
+      Diagonal - 8m
+
+      Diagonal - 12m
+
+      Straight - 4m
+
+      Straight - 8m
+
+      Straight - 12m
+
+      Straight - 16m
+
+      --------------------------------------
+
+      DEPENDENCIES
+
+      --------------------------------------
+
+      None
+
+      --------------------------------------
+
+      INSTALLATION
+
+      --------------------------------------
+
+      Unzip files to your 'Plugins' folder.
+
+      Default Folder for Installation:
+
+      .../My Documents/SimCity 4/Plugins/PEGPROD/SPOT
+
+      --------------------------------------
+
+      DEVELOPER NOTES
+
+      --------------------------------------
+
+      Please see the SPOT readme for general information.
+
+      --------------------------------------
+
+      CREDITS
+
+      --------------------------------------
+
+      BATs: Becca (RebaLynnTS)
+
+      Lotting and Images: Paeng
+    filename: PEG_SPOTv101.ZIP
+    files:
+      - PEGPROD/SPOT/SPOT_v-rc101.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2010/9b7b8eb1b6c2f900afbbd75bbd5c6303-spot_promo.jpg
     lastModified: 2018-10-13T01:28:58Z
     name: SPOT (Simpeg Plop Orientation Tool)
+    sha256: 147a101478d73e721d9885cbff79fb6753cb62d82e03929abf9c9fc238253581
+    size: 23560
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2010/thumb-9b7b8eb1b6c2f900afbbd75bbd5c6303-spot_promo.jpg
+    timestamp: 2024-06-27T15:10:38.073Z
     url: https://community.simtropolis.com/files/file/24509-spot-simpeg-plop-orientation-tool/
+    version: "1.01"
   simtropolis/25031-simmars-beta-3:
     authors:
       - SimMars Team
@@ -1504,7 +1584,7 @@ assets:
     sha256: cc608b1479dcc515e8055e23a6a64b9cb2a2e24db1759c2a60a2684993f473a8
     size: 58038
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/STEXIcon.thumb.png.46691a9dc1db4b041b41d00b1180e880.png
-    timestamp: 2024-06-26T12:05:17.971Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 131402
     url: https://community.simtropolis.com/files/file/36244-startup-performance-optimization-dll-for-simcity-4/
     version: 1.0.3
@@ -1565,4 +1645,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-cc76119e1615d738dc2f82f522af7ee3-sim-ruler.JPG
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
-timestamp: 2024-06-27T08:54:31.584Z
+timestamp: 2024-06-27T15:10:38.073Z

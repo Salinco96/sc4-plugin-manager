@@ -4263,7 +4263,7 @@ assets:
     sha256: c3eccba4557ba01e0c9d028ba9b50b666b28620a7204abcffe39844d90336db6
     size: 632916
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2006/thumb-7787272f99ada78ee84c28914f533b44-Bosham%20Church%20Day.jpg
-    timestamp: 2024-06-26T14:47:15.520Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 756897
     url: https://community.simtropolis.com/files/file/17530-bosham-church/
     version: "2.0"
@@ -9912,7 +9912,7 @@ assets:
     sha256: 38b62d29051979cfd0cd625034428b28fe5fcd6a86f6e0a3fee77adcfcf0f4d4
     size: 975734
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2015/thumb-783c9f1491712288f56aa19efc71d9d1-tennari35.jpg
-    timestamp: 2024-06-26T12:09:33.156Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 1184086
     url: https://community.simtropolis.com/files/file/27353-tennispalatsi/
     version: "1.0"
@@ -12216,10 +12216,88 @@ assets:
     authors:
       - "11241036"
     category: 600
+    dependencies: []
+    description: >-
+      Disclaimer:
+
+
+      Please feel free to develop your own lots using these lot foundations/retaining walls, but if sharing them, please point to this files as a dependency.
+
+
+      Short description:
+
+
+      Some lots, when being placed on slopes, will either raise the floor beneath them, or cut into the hill. In the former case, a lot foundation is being created, in the latter, a retaining wall.
+      Perhaps it's just me, but I'm quite surprised that I've only found very few plugins with custom foundations and none at all with retaining walls; therefore, I've turned some textures by Maxis or
+      other authors (see below for credits) into lot foundations and retaining walls. This plugin therefore acts as a dependency for plugin developers, providing them with the necessary textures and
+      exemplar files.
+
+
+      Dependencies:
+
+
+      As it is a dependency itself, this plugin has no external dependencies.
+
+
+      Contained Files:
+
+
+      LotFoundations.dat: Contains textures and exemplar files for lot foundations. Mandatory.
+
+
+      RetainingWalls.dat: Contains textures and exemplar files for retaining walls. Mandatory.
+
+
+      TestLots.dat: This file contains some testing lots that have one texture from both files applied to them, allowing you to test them in-game. These lots do not cost anything and do not have any
+      special features. They are at the bottom of the park menu. If you do not want these lots, you can remove this file safely.
+
+
+      Other than that, this download contains a Readme (unfortunately, due to its size, this time only in English) containing all necessary informations, as well as a tutorial on how to actually
+      switch to another fondation/retaining wall and how to use lots if they are supposed to be placed on slopes.
+
+
+      Installation:
+
+
+      Move or copy all files in this archive into the Plugins folder of your copy of SimCity 4. To uninstall, just remove these files.
+
+
+      Compatibility:
+
+
+      This plugin should be compatible with all versions of SimCity 4. If you find out that this is not the case, please tell me.
+
+
+      Credits:
+
+
+      My special thanks go to all authors that kindly gave me permission to modify and share their work. At the moment, this ist just one person:
+
+        -  Mas71: His set of Japanese hill retaining walls surely is part of the plugins that I'm using most frequently. Now, their functionability is even being expanded.
+
+      Support:
+
+
+      Please feel free to post issues, bug reports, and suggestions in this thread:
+    filename: Various Lot Foundations and Retaining Walls.zip
+    files:
+      - TestLots.dat
+      - Scr_1.jpg
+      - RetainingWalls.dat
+      - Readme.pdf
+      - LotFoundations.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.thumb.jpg.f55da6bf2b5ff6a084ff49f28359e41b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/Anleitung_3.thumb.png.cb0ee5322a751f204134fec329ea2025.png
     lastModified: 2020-10-07T14:16:30Z
     name: Various Lot Foundations and Retaining Walls
+    sha256: c27de1770c9839eee8c171d82c81b95db93b947e1f91aa208a50ee08d2555f96
+    size: 1991078
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.thumb.jpg.f55da6bf2b5ff6a084ff49f28359e41b.jpg
+    timestamp: 2024-06-27T15:10:38.073Z
+    uncompressed: 2079171
     url: https://community.simtropolis.com/files/file/31346-various-lot-foundations-and-retaining-walls/
+    version: "1.0"
   simtropolis/31373-rdg-town-hall-1:
     authors:
       - robdragon
@@ -14862,7 +14940,7 @@ assets:
     lastModified: 2024-06-01T23:30:50Z
     name: AGC A-Frame Houses
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/664e910c456a7_image(20).thumb.png.746ba7ef3a3c111c24a8a51245bbfe69.png
-    timestamp: 2024-06-26T14:47:15.520Z
+    timestamp: 2024-06-27T15:10:38.073Z
     url: https://community.simtropolis.com/files/file/36259-agc-a-frame-houses/
     variants:
       "201518":
@@ -14966,7 +15044,7 @@ assets:
     lastModified: 2024-06-09T00:10:46Z
     name: Cathedral
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f304c45dc_Regopolis-Dec.141301717888523.thumb.png.d776e6e5d7c63cb67073fcab2982a15f.png
-    timestamp: 2024-06-26T14:47:15.520Z
+    timestamp: 2024-06-27T15:10:38.073Z
     url: https://community.simtropolis.com/files/file/36268-cathedral/
     variants:
       "201657":
@@ -15028,7 +15106,7 @@ assets:
     lastModified: 2024-06-03T23:08:25Z
     name: AGC - Fishing Vessel G 01
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ce8810a8_image(23).thumb.png.030422ff88713a32256f26307233e1ce.png
-    timestamp: 2024-06-26T14:47:15.520Z
+    timestamp: 2024-06-27T15:10:38.073Z
     url: https://community.simtropolis.com/files/file/36279-agc-fishing-vessel-g-01/
     variants:
       "201555":
@@ -15080,7 +15158,7 @@ assets:
     lastModified: 2024-06-07T12:56:57Z
     name: AGC - Heavy Machinery DLC
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/Red-D3D-HeavyMachines.thumb.jpg.c466d829acbde1691482c66470778b6e.jpg
-    timestamp: 2024-06-26T14:47:15.520Z
+    timestamp: 2024-06-27T15:10:38.073Z
     url: https://community.simtropolis.com/files/file/36292-agc-heavy-machinery-dlc/
     variants:
       "201632":
@@ -15141,7 +15219,7 @@ assets:
     sha256: b75d7a23e44ebd910a79ec0b351bd0aab61b1d14678667ec960247758b5d0b6d
     size: 30968
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666305d01a703_image(26).thumb.png.0ee3d7a6f8456f9f9c935e8b6d8df55c.png
-    timestamp: 2024-06-26T14:47:15.520Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 0
     url: https://community.simtropolis.com/files/file/36293-agc-bucket-wheel-excavator/
     version: 1.0.0
@@ -15194,7 +15272,7 @@ assets:
     sha256: 57091585b1ef605765ba0e371fe78eefc2a06dbdfdbc2718b557ac97df8c1bdd
     size: 1575318
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666a3ffe1362d_image(28).thumb.png.09f2097d866e00a01f0e12f0d3f0aec2.png
-    timestamp: 2024-06-26T14:47:15.520Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 0
     url: https://community.simtropolis.com/files/file/36303-agc-cruiser-ukrayina-1990-abandoned/
     version: 1.0.0
@@ -15217,7 +15295,7 @@ assets:
     lastModified: 2024-06-16T12:32:18Z
     name: Elementary & High School
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7e651f3_Regopolis-Sep.281831718490186.thumb.png.1b78259567f144c2ff028e903cdc120e.png
-    timestamp: 2024-06-26T12:05:17.971Z
+    timestamp: 2024-06-27T15:10:38.073Z
     url: https://community.simtropolis.com/files/file/36305-elementary-high-school/
     variants:
       "201739":
@@ -17186,4 +17264,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-33d8981f5deb63706c817395eb328784-Simjez-Feb.%207,%20001060541163.JPG
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
-timestamp: 2024-06-27T08:54:31.584Z
+timestamp: 2024-06-27T15:10:38.073Z

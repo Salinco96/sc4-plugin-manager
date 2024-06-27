@@ -6293,7 +6293,7 @@ assets:
     sha256: a99e22311946fc4f4aaee1b0deccb692d40a608ca31bc732562c05c7901ceaa0
     size: 475924
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2010/thumb-0b356be2061e8c1831a6dd3ba4c9f953-screenDay.jpg
-    timestamp: 2024-06-26T12:09:33.156Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 1065061
     url: https://community.simtropolis.com/files/file/23004-scag-cargo-lots-v10/
     version: "1.0"
@@ -9797,10 +9797,87 @@ assets:
     authors:
       - "11241036"
     category: 700
+    dependencies:
+      - simtropolis/26793-network-addon-mod-for-windows-installer-offsite
+      - simtropolis/33651-11241036-textures
+      - simtropolis/30883-sc4fix-third-party-patches-for-sc4
+      - sc4evermore/13-sfbt-essentials
+      - sc4evermore/13-
+      - sc4evermore/90-mgb204-texture-pack
+    description: >-
+      Short Description:
+
+
+      This is a set of car, freight car, and bus traffic blockers for default maxis, SAM, GLR, and RHW routes. They will block one kind of traffic while allowing the other kinds of traffic and
+      pedestrians to pass. This may be useful for creating bus lines, simply reducing traffic, preventing cars from taking a shortcut through settlements, keeping freight cars away from residential
+      zones and so on. Traffic blockers for roads, one-way roads, avenues, side roads, and railway are already existing on the STEX, but not for SAM and RHW routes, so I thought they might be useful.
+
+
+      I've tried to keep them as inconspicuous as possible (so not to disrupt the look of your city); therefore the screenshots won't be spectacular. The screenshot below shows a small city where
+      buses and pedestrians are taking the SAM 2 Herringbone Street to get to work, while cars are forced to take a detour.
+
+
+      There are traffic blockers for the subsequently mentioned traffic routes:
+
+        -  Maxis routes: road, street, avenue, one-way road
+        -  SAM streets: 2-11
+        -  RHW routes: RHW-2, RHW-4, RHW-6, RHW-8, RHW-10, MIS
+        -  GLR: Tram-on-Road (only with concrete pavement in the center), Tram-on-Avenue, Tram-on-Street
+
+      For further information, please refer to the readme in the download.
+
+
+      Note: If you have downloaded this between April 15th, 2020, and June 16th, 2020, please remove the file TBS_Textures.dat, since it has become obsolete with the release of the 11241036 Textures.
+      Please download this dependency package instead.
+
+
+      Dependencies:
+
+
+      SFBT Essentials
+
+
+      https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials
+
+
+      MGB Texture Pack
+
+
+      https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack
+
+
+      Network Addon Mod Version 37.0 or newer
+
+
+      http://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer-offsite
+
+
+      11241036 Textures
+
+
+      To be done:
+
+        -  Also, I'd appreciate if someone could explain me how to make Menu Management Lots. Although traffic blockers are sometimes helpful, we probably won't use them everyday, and therefore you may probably want to save space in your game menu.
+        -  If I'm getting enough requests, I may include other traffic blockers in later updates.
+    filename: Traffic Blocker Set.zip
+    files:
+      - STEX/z_TBS SAM 8 Override.dat
+      - STEX/Traffic Blocker Set.dat
+      - STEX/Screenshot.jpg
+      - STEX/Readme.pdf
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_01_2014/b3e889c444c37b6950f9e07339bc5a74-test.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_04/Screenshot.thumb.jpg.9f733a5faa40abbd3b6c478754e3a153.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_04/5e973f61ad2a1_SAM8Override.thumb.jpg.f72e111b8dbddaad3060205663f06a46.jpg
     lastModified: 2024-03-09T20:55:24Z
     name: Traffic Blocker Set
+    sha256: da8c7c6ba9db976391137412e1390185d3e13ded4b5347e8f390ac4f0783c698
+    size: 757085
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_04/Screenshot.thumb.jpg.9f733a5faa40abbd3b6c478754e3a153.jpg
+    timestamp: 2024-06-27T15:10:38.073Z
+    uncompressed: 860211
     url: https://community.simtropolis.com/files/file/28975-traffic-blocker-set/
+    version: "3"
   simtropolis/28993-seoul-station:
     authors:
       - jijdlswns
@@ -12030,7 +12107,7 @@ assets:
     sha256: 45f5cc2e5390000db6334db383f59a2399b01a847bf4837488030ddd33cdc1d9
     size: 771234
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666d47464be5c_NewCity-Jan.7021718436878.thumb.jpg.554f26f731082d451f3ce8035758b75d.jpg
-    timestamp: 2024-06-26T12:05:17.971Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 785724
     url: https://community.simtropolis.com/files/file/35026-esa-gantries-vol-1/
     version: 2.0.0
@@ -13331,4 +13408,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-4e73e9a5e97f6ee8b1862cc09ff27f23-Allotments-Day.jpg
     url: https://community.simtropolis.com/files/file/999-bus-stop-with-allotments/
 
-timestamp: 2024-06-27T08:54:31.584Z
+timestamp: 2024-06-27T15:10:38.073Z

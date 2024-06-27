@@ -168,7 +168,7 @@ export const SC4EVERMORE: IndexerSource = {
     })
   },
   getEntryDetails(assetId, html) {
-    const description = html.querySelector(".jd_featured_detail")?.innerHTML
+    const description = html.querySelector(".jd_main")?.innerHTML
 
     const dependencies = Array.from(
       new Set([
@@ -183,6 +183,8 @@ export const SC4EVERMORE: IndexerSource = {
         ).map(match => `sc4evermore/${match[2]}`),
       ]),
     ).filter(dependencyId => dependencyId !== assetId)
+
+    const images = html.querySelectorAll(".jd_main img").map(img => img.attributes.src)
 
     return {
       dependencies,
@@ -211,13 +213,16 @@ export const SC4EVERMORE: IndexerSource = {
         .replace(/ *\n/gi, "\n")
         .replace(/\s*$/gi, "")
         .replace(/^\s*/gi, ""),
+      images,
       repository: description?.match(/https:\/\/github.com\/([\w-]+)\/([\w-]+)?/g)?.[0],
       version: html
         .querySelectorAll(".jd_field_row")
         ?.find(row => row.querySelector(".jd_field_title")?.textContent.match(/version/i))
         ?.querySelector(".jd_field_value")
-        ?.textContent.match(/(version )?(\d+[\w.-]*)/)
-        ?.at(2),
+        ?.textContent.match(/\d+[\w.-]*|\d+ rev\d+[\w.-]*|lex version/i)
+        ?.at(0)
+        ?.replace(/lex version/i, "1")
+        ?.replace(/\s+/g, "-"),
     }
   },
   getVariants() {

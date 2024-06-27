@@ -44,7 +44,7 @@ assets:
     sha256: a217ce3678757355d7045dc768ff9e17633de6c329f31f1fccfe9947daf95a3d
     size: 621364
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/AFS_s.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 1506960
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/106-american-foursquare-homes-by-homefryes
     version: "2"
@@ -76,7 +76,7 @@ assets:
     sha256: a5588670c03ccbfa07b7933db80956c5965683722af303f36f7ac565ec5994a8
     size: 5951607
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HF_Cambridge_day.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 7998787
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/107-cambridge-townhomes-by-homefryes
     version: "1"
@@ -159,7 +159,7 @@ assets:
     sha256: 43dffadfb85d12c81e527ae95556c3449299fdff9f424075586a93867b2c99cb
     size: 7992412
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 8490438
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/161-sc4d-lex-legacy-nybt-residentials-pack-darknite-version
     version: 1-DarkNite
@@ -231,7 +231,7 @@ assets:
     sha256: 9b96049214e916560335bbe8e83cce32075764f696e496f0b03fb2649b045913
     size: 8461054
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day1.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 8875365
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/162-sc4d-lex-legacy-nybt-residentials-pack-maxisnite-edition
     version: 1-MaxisNite
@@ -256,7 +256,7 @@ assets:
     sha256: 7c0cf2d6164f80c0ed44f5d44df903999394db829172f255b1dc004f9416697f
     size: 1074082
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_4_rue_des_Lilas_1.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 1286414
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/220-bsc-vip-girafe-4-rue-des-lilas-v2
     version: "2"
@@ -279,7 +279,7 @@ assets:
     sha256: 0d688c9090400af2cdacb3918ce08128024927463a362ab2af0c48eba1c0deb6
     size: 2168493
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_villa_Libeskind_1.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 2558345
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/221-bsc-vip-girafe-villa-libeskind-v2
     version: "2"
@@ -287,20 +287,154 @@ assets:
     authors:
       - SOMY
     category: 200
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+    description: >-
+      A set of apartments from SOMY. There are four different styles of low wealth residential buildings plus a water tower. These have been updated using SC4PIM and the models have been centred using
+      cogeo's Model Tweaker.
+
+      There are three different style of 2x5 growable lot - the original style made by SOMY, a set of lots with a LH corner and a set with a RH corner. There is also a set of 5x2 low wealth
+      residential lots.
+
+      There is a Cleanitol text file included as you will need to remove the original lots and models after you have bulldozed any existing lots from your cities. It is highly recommended to run the
+      provided Cleanitol_SOMY Danchi Apartments.txt cleanitol file for the compilation with one of the following 3rd party cleanitol tools, which can help you remove the old packs or you can remove
+      them manually:
+
+
+      nos.17 Cleanitol (new tool)
+
+
+      BSC Cleanitol (old tool).
+
+
+      Lot Details and Information
+
+
+      Growable Version:
+
+         Lot size: 2 x 5 and 5x2 tiles   Building style(s): Building: Residential,Building: R$,Style: Chicago,Style: New York,Style: Houston,Style: Euro   Growth stage: 5   Occupants: from 290 to 382 depending on model style   Bulldoze cost: § 247 to 284   Building Value: § 3941 to 5191   Construction Time: 26 days   Max. Fire Stage: 3   Power consumption: 2 MWh/month   Water consumption: 4 Gallons/month   Air pollution: 1 over 5 tiles   Water pollution: 1 over 5 tiles   Garbage pollution: 4 over 0 tiles
+
+      Water Tower:
+
+         Lot size: 1 x 1 tiles   Menu position: Building: Utility,Building: Water   Jobs: n/a   Plop cost: § 650   Bulldoze cost: § 30   Monthly cost: § 200   Water Produced 9400 gallons/month   Max. Fire Stage: 3   Power consumption: 2 MWh/month   Water consumption: 5 Gallons/month   Air pollution: 0 over 2 tiles   Water pollution: 0 over 0 tiles   Garbage pollution: 0 over 0 tiles      Installation
+
+      Installation: Copy/Extract the SOMY parent folder into your Plugins. If you extracted the ~Documents folder into your plugins, too, it's highly recommended to keep it, but move it out of the
+      Plugins folder.
+
+
+      Un-Installing: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+
+
+      Dependencies:
+
+      To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.
+
+        - SC4D LEX Legacy - SOMY Dependencies Pack V2
+
+        - SOMY Mega Props vol05 (it contains now the previously included SOMY_Danchi_Apartments.dat file)
+
+      Credits:
+
+
+      Original models and lots by SOMY. The models have been centred using cogoe's Model Tweaker and the descriptos have been remade using wounanagaine's SC4PIM. These lots are CAMpatible.
     downloads: 250
+    filename: SOMY Danchi Apartments LEX.zip
+    files:
+      - ~Documents/SOMY_Readmes/Readme_SOMY_Danchi_Apartments.htm
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SOMY Danchi Apartments.txt
+      - SOMY/Danchi Apartments/R$5_SOMY Danchi06.dat
+      - SOMY/Danchi Apartments/R$5_SOMY Danchi05.dat
+      - SOMY/Danchi Apartments/R$5_SOMY Danchi04.dat
+      - SOMY/Danchi Apartments/R$5_SOMY Danchi03.dat
+      - SOMY/Danchi Apartments/PLOP_1x1_SOMY Danchi Water Tower_391bacae.SC4Lot
+      - ~Documents/SOMY_Readmes/images/SOMYDanchi_sn.jpg
+      - ~Documents/SOMY_Readmes/images/SOMYDanchi_s.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SOMYDanchi_s.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SOMYDanchi_sn.jpg
     lastModified: 2024-01-27T17:34:38-08:00
     name: SOMY Danchi Apartments
+    sha256: d5ddcde6e67dd5916eda941b0f7f897c8407bae6da3adb7207d38f7515b581b1
+    size: 94019
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SOMYDanchi_s.jpg
+    timestamp: 2024-06-27T15:10:38.073Z
+    uncompressed: 158156
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/244-somy-danchi-apartments
+    version: "1"
   sc4evermore/245-somy-modern-japanese-house-set:
     authors:
       - SOMY
     category: 200
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+    description: >-
+      A set of 10 houses by SOMY that have been updated using the X_Tool and also have had the dummy building replaced by a building model. The capacity now varies according to the number and size of
+      houses on the lot. All except one are stage 3 R$$ and the lotting is unchanged from the originals.
+
+      If you have the originals please bulldoze any in your cities before installing these as the IIDs are also unchanged and although the city should not crash you may have problems.
+
+
+      Lot Details and Information
+
+
+      Growable Version:
+
+         Lot size: 1 x 4 tiles   Building style(s): Building: Residential,Building: R$$,Style: Chicago,Style: New York,Style: Houston,Style: Euro   Growth stage: 3   Occupants: R-$ : 44 to 94,R-$$ : 26 to 53   Bulldoze cost: § 215   Worth: § 678   Construction Time: 21 days   Max. Fire Stage: 3   Power consumption: 1 MWh/month   Water consumption: 2 Gallons/month   Air pollution: 1 over 5 tiles   Water pollution: 1 over 6 tiles   Garbage pollution: 4 over 0 tiles
+
+      Installation: Copy/Extract the SOMY parent folder into your Plugins. If you extracted the ~Documents folder into your plugins, too, it's highly recommended to keep it, but move it out of the
+      Plugins folder.
+
+
+      Un-Installing: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+
+
+      It is highly recommended to run the provided Cleanitol_SOMY_jpn_houses.txt cleanitol file for the compilation with one of the following 3rd party cleanitol tools, which can help you remove the
+      old packs or you can remove them manually:
+
+
+      nos.17 Cleanitol (new tool)
+
+
+      BSC Cleanitol (old tool).
+
+
+      Dependencies
+
+
+      To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.
+
+        - SC4D LEX Legacy - SOMY Dependencies Pack V2
+
+        - SOMY Mega Props vol07
+
+      Credits
+
+
+      Original BATs and lots by SOMY. Updating by BarbyW
     downloads: 216
+    filename: SOMY Modern Japanese House Set LEX.zip
+    files:
+      - ~Documents/SOMY_Readmes/somy-jpn-house1x4.jpg
+      - ~Documents/SOMY_Readmes/Readme_SOMY_jpn_houses_1x4.htm
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SOMY_jpn_houses.txt
+      - SOMY/Modern Japanese Houses (1x4)/somy-jpn-house-g02.dat
+      - SOMY/Modern Japanese Houses (1x4)/somy-jpn-house-g01b.dat
+      - SOMY/Modern Japanese Houses (1x4)/somy-jpn-house-f01.dat
+      - SOMY/Modern Japanese Houses (1x4)/somy-jpn-house-d01.dat
+      - SOMY/Modern Japanese Houses (1x4)/somy-jpn-house-c01.dat
+      - SOMY/Modern Japanese Houses (1x4)/somy-jpn-house-a01.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/somy-jpn-house1x4.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/simtop3.jpg
     lastModified: 2024-01-27T17:33:57-08:00
     name: SOMY Modern Japanese House Set
+    sha256: aeb9163ffe2b9d884ceecb0bfee17362ef05aee7c900b3178f843f65904a041a
+    size: 63543
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/somy-jpn-house1x4.jpg
+    timestamp: 2024-06-27T15:10:38.073Z
+    uncompressed: 121286
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/245-somy-modern-japanese-house-set
+    version: "1"
   sc4evermore/270-romualdillo-spanish-low-wealth-residental-lots:
     authors:
       - Romualdillo
@@ -324,7 +458,7 @@ assets:
     sha256: 4b32c1ff5424ed789ab7bcfea357fc534e7233bcd3cf95ff76dff3252b8c2719
     size: 514882
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Romualdillo - Spanish R Residental Lots.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 1619645
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/270-romualdillo-spanish-low-wealth-residental-lots
     version: "1"
@@ -399,7 +533,7 @@ assets:
     name: SC4D LEX Legacy - JMyers Homes Pack
     sha256: d544d11a9df1e2956d9df890bb865b814aa3516cc6694345463c696a26ac76fd
     size: 7403678
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 7417153
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/4-sc4d-lex-legacy-jmyers-homes-pack
     version: "1"
@@ -429,7 +563,7 @@ assets:
     name: SC4D LEX Legacy - CP Early 19th-Century Residentials Pack
     sha256: cf375e19a09ec1fb16f7e85f7144067187b260ef22b20dcb14f0be1336a3d0b2
     size: 13165904
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 13176163
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/5-sc4d-lex-legacy-cp-early19thcenturyresidentials-pack
     version: "1"
@@ -824,7 +958,7 @@ assets:
     sha256: b4bca9b5a4238f295868e4d7e341630c920715a660c3db5a5adf20691ab2afdc
     size: 31648806
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Almeda_lg0.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 31737062
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/98-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-darknite
     version: "1"
@@ -1216,9 +1350,9 @@ assets:
     sha256: 23ae9dde93334831e5a526f243153a67f2c52d2800959130a5a91cd1cdd8b8f2
     size: 32833740
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Almeda_lg.jpg
-    timestamp: 2024-06-27T12:00:05.980Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 32920643
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/99-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-maxisnite
     version: "1"
 
-timestamp: 2024-06-27T12:00:05.980Z
+timestamp: 2024-06-27T15:10:38.073Z

@@ -36,12 +36,16 @@ const dbPackagesDir = path.join(dbDir, "packages")
 
 runIndexer({
   exclude: [
-    "sc4evermore/2-network-addon-mod", // TODO: Needs work
-    "sc4evermore/40-nam-lite", // TODO: Needs work
-    "sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem", // TODO: Needs work
-    "sc4evermore/276-colossus-addon-mod-2-5-release-candidate-1", // TODO: Fix extract
     "sc4evermore/278-sc4fix", // TODO: Use https://github.com/nsgomez/sc4fix/releases/download/rev8/SC4Fix.dll
-    "simtropolis/16119-logistics-centres-megapack", // TODO: Fix .exe extract
+    // TODO: Below are packages that would need much more work to implement correctly
+    "sc4evermore/2-network-addon-mod",
+    "sc4evermore/40-nam-lite",
+    "sc4evermore/41-appalachian-terrain-mod-by-lowkee33",
+    "sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem",
+    // TODO: Below are installers that currently fail to be extracted
+    "sc4evermore/276-colossus-addon-mod-2-5-release-candidate-1",
+    "simtropolis/13866-jeronij-concrete-wall-addon-stairs",
+    "simtropolis/16119-logistics-centres-megapack",
     // TODO: Below are external tools, not supported atm
     "simtropolis/23407-gofsh-fsh-texture-editor",
     "simtropolis/27675-sc4datanode",
@@ -49,6 +53,11 @@ runIndexer({
     "simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn",
     "simtropolis/35790-sc4-cleanitol",
     "simtropolis/36227-dgvoodoo-2-simcity-4-edition",
+    // TODO: Below are deprecated
+    "simtropolis/15322-bsc-texture-pack-cycledogg-v01",
+    "simtropolis/32660-pc-prop-pack-vol-1",
+    "simtropolis/32732-pc-prop-pack-2",
+    "simtropolis/32832-pc-towering-sign-set-1",
   ],
   fetchEntryDetails: false,
   fetchNewEntries: false,
@@ -58,9 +67,10 @@ runIndexer({
   overrides,
   sources: [SC4EVERMORE, SIMTROPOLIS],
   superseded: {
-    "simtropolis/32660-pc-prop-pack-vol-1": "simtropolis/32952-pc-mega-props-vol-1",
-    "simtropolis/32732-pc-prop-pack-2": "simtropolis/32952-pc-mega-props-vol-1",
-    "simtropolis/32832-pc-towering-sign-set-1": "simtropolis/32952-pc-mega-props-vol-1",
+    "simtropolis/15322-bsc-texture-pack-cycledogg-v01": "cycledogg/textures-vol01",
+    "simtropolis/32660-pc-prop-pack-vol-1": "pclark06/mega-props-vol01",
+    "simtropolis/32732-pc-prop-pack-2": "pclark06/mega-props-vol01",
+    "simtropolis/32832-pc-towering-sign-set-1": "pclark06/mega-props-vol01",
   },
 })
 
@@ -235,6 +245,8 @@ async function runIndexer(options: IndexerOptions) {
     const outdated = !entry.timestamp || entry.lastModified > entry.timestamp
 
     try {
+      let wasUpdated = false
+
       if (outdated || !entry.version) {
         if (!entry.version || options.fetchEntryDetails) {
           console.debug(`Fetching ${entry.url}...`)
@@ -253,12 +265,16 @@ async function runIndexer(options: IndexerOptions) {
           entry.dependencies = details.dependencies
             ?.map(dependencyId => options.superseded?.[dependencyId] ?? dependencyId)
             ?.filter(dependencyId => dependencyId !== entryId)
+
+          wasUpdated = true
         }
       }
 
       await resolveVariant(entryId)
 
-      entry.timestamp = now
+      if (wasUpdated) {
+        entry.timestamp = now
+      }
 
       await writeConfig(dataAssetsDir, sourceName, sourceData, ConfigFormat.YAML)
     } catch (error) {
@@ -452,10 +468,10 @@ async function runIndexer(options: IndexerOptions) {
             darknite: !!variant?.match(/dark.?nig?th?e?|\bdn\b/i),
           }
         }
-      }
 
-      await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
-      await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
+        await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
+        await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
+      }
     }
   }
 }

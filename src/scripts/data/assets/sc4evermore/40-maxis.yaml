@@ -3,11 +3,41 @@ assets:
     authors:
       - Maxis
     category: 30
+    dependencies: []
+    description: >-
+      This upload contains the official "SimCity 4 Buildings as Props Vol 1" and "SimCity 4 Buildings as Props Vol 2" files provided by EA/Maxis.
+
+
+      These files provide all buildings available in the base SimCity 4 game and the ones which were added to SimCity 4 in the Rush Hour Expansion in prop form, for use in lot creation. A third file
+      can be found in the pack called Maxis DLC Props.dat, which contains the generic/common props from three of the official Maxis Landmark DLCs (Castleset.dat, Parthenon and Stonehange) and the
+      props from the very ancient Plugin Landmark Props (from version 2.1). The main castle model and prop, the castle wall props, the main Parthenon building and prop and the main Stonehange building
+      and prop are NOT part of this file. This file was compiled to address the commonly listed props as dependencies.
     downloads: 1936
+    filename: Maxis_Building_As_Props_and_DLC_Props_v2.1_3560.zip
+    files:
+      - _Documents/sc4buildingsaspropsvol2.jpg
+      - _Documents/sc4buildingsaspropsvol1.jpg
+      - _Documents/readme_Maxis Building As Props vol.1-vol.2.txt
+      - _Documents/Maxis DLC Props-index.jpg
+      - _Documents/Maxis Building as Props-pt04_index.jpg
+      - _Documents/Maxis Building as Props-pt03_index.jpg
+      - _Documents/Maxis Building as Props-pt02_index.jpg
+      - _Documents/Maxis Building as Props-pt01_index.jpg
+      - Maxis Original/Maxis DLC Props/Maxis DLC Props.dat
+      - Maxis Original/Building As Props/bldgprop_vol2.dat
+      - Maxis Original/Building As Props/bldgprop_vol1.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol2.jpg
     lastModified: 2023-12-06T07:41:39-08:00
     name: Maxis Buildings As Props and DLC Props
+    sha256: 59d4c4faa6f388e3b94bf066c447e8966f8e9b1aec10fe95db1cdb069a0c2955
+    size: 4507791
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol1.jpg
+    timestamp: 2024-06-27T15:10:38.073Z
+    uncompressed: 5958945
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/14-maxis-buildings-as-props-and-dlc-props-v2-1
+    version: "2.1"
   sc4evermore/235-maxis-plugins-landmarks-dlc:
     authors:
       - Maxis
@@ -123,4 +153,4 @@ assets:
     name: Nightlights Update
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/78-nightlights-update
 
-timestamp: 2024-06-27T08:54:31.584Z
+timestamp: 2024-06-27T15:10:38.073Z

@@ -26,7 +26,7 @@ export const overrides: IndexerOverrides = {
     packageId: "porkissimo/mega-props-vol01",
   },
   "sc4evermore/10-jenxporkie-expanded-porkie-props": {
-    packageId: "porkissimo/jenxporkie-expanded-porkie-props",
+    packageId: "porkissimo/jenx-porkie-expanded-props",
   },
   "sc4evermore/11-sc4d-lex-legacy-nob-dependencies-pack": {
     packageId: "nob/mega-props-collection",
@@ -34,17 +34,50 @@ export const overrides: IndexerOverrides = {
   "sc4evermore/13-sfbt-essentials": {
     packageId: "sfbt/essentials",
   },
+  "sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1": {
+    packageId: "maxis/maxis-buildings-as-props",
+  },
   "sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora": {
     packageId: "girafe/flora-pack",
   },
   "sc4evermore/36-lk33-seasonalflorapatch": {
     packageId: "lowkee33/seasonal-flora-patch",
   },
+  "sc4evermore/43-disable-bridge-wash-effect-mod-by-ripplejet": {
+    packageId: "ripplejet/disable-bridge-wash-effect",
+  },
+  "sc4evermore/44-block-maxis-hanggliders-mod-by-ripplejet": {
+    packageId: "ripplejet/block-maxis-hanggliders",
+  },
+  "sc4evermore/45-block-road-barriers-mod-by-ripplejet": {
+    packageId: "ripplejet/block-road-barriers",
+  },
+  "sc4evermore/46-brighter-street-lights-mod-by-ripplejet": {
+    packageId: "ripplejet/brighter-street-lights",
+  },
+  "sc4evermore/47-ghostbusters-by-ripplejet": {
+    packageId: "ripplejet/ghostbusters",
+  },
+  "sc4evermore/48-longer-night-lights-mod-by-ripplejet": {
+    packageId: "ripplejet/longer-night-lights",
+  },
+  "sc4evermore/49-toilet-paper-free-toilet-paper-tree-mod-by-ripplejet": {
+    packageId: "ripplejet/block-toilet-paper-trees",
+  },
   "sc4evermore/54-bsc-kevdan25-restaurants": {
     packageId: "kevdan25/restaurants",
   },
   "sc4evermore/59-gizmo-vehicle-props": {
     packageId: "gizmo/vehicle-props",
+  },
+  "sc4evermore/62-day-night-mod-by-gizmo28": {
+    packageId: "gizmo/day-night-mod",
+  },
+  "sc4evermore/63-ground-fog-effect-by-gizmo28": {
+    packageId: "gizmo/ground-fog-effect",
+  },
+  "sc4evermore/65-weather-effects-mod-by-gizmo28": {
+    packageId: "gizmo/weather-effects",
   },
   "sc4evermore/66-gizmo-train-props-collection": {
     packageId: "gizmo/train-props",
@@ -144,6 +177,12 @@ export const overrides: IndexerOverrides = {
   "sc4evermore/229-mattb325-simcoug-historic-shops": {
     packageId: "mattb325/simcoug-historic-shops",
   },
+  "sc4evermore/244-somy-danchi-apartments": {
+    packageId: "somy/danchi-apartments",
+  },
+  "sc4evermore/245-somy-modern-japanese-house-set": {
+    packageId: "somy/modern-japanese-house-set",
+  },
   "sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3": {
     packageId: "ncd/railyard-textures-vol01",
   },
@@ -173,6 +212,15 @@ export const overrides: IndexerOverrides = {
   },
   "simtropolis/20966-peg-mtp-super-pack": {
     packageId: "pegasus/mtp-super-pack",
+  },
+  "simtropolis/21118-simcity-4-extra-cheats-plugin": {
+    packageId: "buggi/extra-cheats",
+  },
+  "simtropolis/23004-scag-cargo-lots-v10": {
+    packageId: "shadeslayer/scag-cargo-lots",
+  },
+  "simtropolis/25433-pamu-bikes-inc": {
+    packageId: "murimk/bike-lots",
   },
   "simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp": {
     packageId: "murimk/bike-props",
@@ -285,6 +333,12 @@ export const overrides: IndexerOverrides = {
   "simtropolis/30773-hd-north-american-53ft-semi-trailers-vol1": {
     packageId: "mushymushy/hd-north-american-53ft-semi-trailers-vol01",
   },
+  "simtropolis/30883-sc4fix-third-party-patches-for-sc4": {
+    packageId: "simmaster07/sc4fix",
+  },
+  "simtropolis/31244-mgb-convenience-store": {
+    packageId: "mgb204/convenience-stores",
+  },
   "simtropolis/31423-supershk-fa3-parking-textures": {
     packageId: "kingofsimcity/supershk-mega-parking-textures",
   },
@@ -309,6 +363,15 @@ export const overrides: IndexerOverrides = {
   "simtropolis/33533-pc-mega-props-2": {
     packageId: "pclark06/mega-props-vol02",
   },
+  "simtropolis/33620-wmp-essentials-v101": {
+    packageId: "wmp/essentials",
+  },
+  "simtropolis/33621-wmp-mega-props-vol-01-misc-general-props": {
+    packageId: "wmp/mega-props-vol01",
+  },
+  "simtropolis/33651-11241036-textures": {
+    packageId: "11241036/textures",
+  },
   "simtropolis/34719-agc-benito-ju%C3%A1rez-monument-01": {
     packageId: "barroco-hispano/agc-benito-juarez-monument-01",
   },
@@ -321,7 +384,19 @@ export const overrides: IndexerOverrides = {
   "simtropolis/34787-pc-mega-props-3": {
     packageId: "pclark06/mega-props-vol03",
   },
+  "simtropolis/35031-pc-mgb-convenience-stores-global-expansion": {
+    packageId: "pclark06/mgb-convenience-stores",
+  },
+  "simtropolis/35026-esa-gantries-vol-1": {
+    packageId: "oidaas/esa-gantries-vol01",
+  },
   "simtropolis/35526-pc-mega-props-42": {
     packageId: "pclark06/mega-props-vol04",
+  },
+  "simtropolis/36242-resource-loading-hooks-dll-for-simcity-4": {
+    packageId: "null-45/resource-loading-hooks-dll",
+  },
+  "simtropolis/36244-startup-performance-optimization-dll-for-simcity-4": {
+    packageId: "null-45/startup-performance-optimization-dll",
   },
 }

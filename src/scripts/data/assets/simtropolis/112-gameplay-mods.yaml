@@ -665,7 +665,7 @@ assets:
     sha256: f8ba9ec24483cc0d907156096675bf2498f775df33df010971fa09bea2f3fad4
     size: 5271
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2004/thumb-9931d5076473c8f6816a23e0427acc38-default.jpg
-    timestamp: 2024-06-26T14:47:15.520Z
+    timestamp: 2024-06-27T15:10:38.073Z
     uncompressed: 14691
     url: https://community.simtropolis.com/files/file/21286-plugin-landmark-props/
     version: "1.0"
@@ -1857,10 +1857,65 @@ assets:
     authors:
       - simmaster07
     category: 30
+    dependencies: []
+    description: >-
+      What does this do?
+
+        -  Fixes a serialization bug that could corrupt the savegame, particularly when mods are installed that modify existing exemplars (i.e. Prop Pox).
+        -  Resolves a crash-to-desktop when hovering NAM puzzle pieces over transit-enabled lots.
+        -  Allows other DLLs to load into SC4's memory without a GZCOM framework.
+
+      Requirements
+
+      This fix is made for versions 640 and 641 of SimCity 4 on Windows. Version 640 is a fully-patched SC4 retail copy, and version 641 is a fully-patched digital distribution version (i.e. Steam,
+      Origin, GOG). Although v641 is supported, it has only been officially tested on Steam.
+
+
+      Installation
+
+      Unzip to Documents\SimCity 4\Plugins.
+
+
+      To see if SC4Fix is working properly, check the title of your game window. If you are playing in fullscreen mode, alt-tab out and hover over the SimCity taskbar icon. The titlebar will show
+      "SC4Fix (version #)" if loaded properly.
+
+
+      Repairing cities already affected by Prop Pox
+
+      Thanks to kingofsimcity for these instructions:
+
+        -  In the region view, open the graphics settings and change City Detail to Low.
+        -  Close and relaunch SC4.
+        -  Open the offending city tile and save immediately.
+        -  Exit to region without saving and change City Detail back to High.
+        -  Close and relaunch SC4.
+        -  Open the offending city tile and save again.
+
+      Demonstration
+
+      Click here for a video showing the ability to hover puzzle pieces over transit-enabled lots with this DLL.
+
+
+      Development Thread and Source Code
+
+      Development Thread
+
+      Source Code
+    filename: SC4Fix.zip
+    files:
+      - SC4Fix.dll
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2015_12/sc4fix.thumb.png.ced8b7b12af0c352bbb50b295298a062.png
     lastModified: 2018-01-21T05:11:27Z
     name: "SC4Fix: Third-party patches for SC4"
+    repository: https://github.com/nsgomez/sc4fix
+    sha256: ff30d3bf555fc987224fb88820fbb72e7b1fb73b7c689e1cc95c9a58722b4643
+    size: 62876
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_12/sc4fix.thumb.png.ced8b7b12af0c352bbb50b295298a062.png
+    timestamp: 2024-06-27T15:10:38.073Z
+    uncompressed: 112128
     url: https://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/
+    version: 1.0.7
   simtropolis/30936-simolean-rh-for-cam-210:
     authors:
       - InvisiChem
@@ -2233,10 +2288,114 @@ assets:
     authors:
       - memo
     category: 30
+    dependencies:
+      - simtropolis/36242-resource-loading-hooks-dll-for-simcity-4
+    description: >-
+      A DLL plugin for SimCity 4 that
+
+        -  enables submenu functionality: This DLL is a dependency for other submenu-compatible plugins.
+        -  adds more than 50 standard submenus such as Plazas, Green Spaces, Sports and many more.
+        -  fixes the game's menu rendering issues caused by duplicate or missing menu icons.
+        -  implements Exemplar Patching functionality.
+
+      System requirements
+
+        -  SimCity 4, version 1.1.641 (the digital release) (more info)
+        -  Windows 7+ or Linux
+
+      Dependencies
+
+        -  SC4ResourceLoadingHooks DLL by Null 45
+
+      Installation
+
+        -  Copy the DLLs into the top-level directory of either Plugins folder (place it directly in \SimCity 4\Plugins or \Plugins, not in a subfolder).
+        -  Copy the file submenu-essentials.dat and optionally the individual submenu files anywhere into your Plugins folder. You may skip installing an optional submenu if it contains neither Flora nor any sub-submenus. In that case, the buildings of that submenu will appear in the default top-level menu instead.
+
+      Alternatively, the mod can be installed with Sc4pac: memo:submenus-dll
+
+
+      Credits
+
+        -  Submenu icons created by @Panda
+        -  Exemplar Patching implemented in collaboration with @Null 45
+
+      Further information
+
+        -  The DLL dynamically creates new submenus by checking for some new exemplar properties, for example in the building exemplars of ploppable lots. This allows anyone to create additional submenus for their lot sets. The modding details are described in the Readme file.
+        -  List of Standard Submenus added by this mod.
+        -  Simtropolis discussion thread
+    filename: submenus-dll-1.1.3.zip
+    files:
+      - Third Party Notices.txt
+      - README.md
+      - memo.submenus.dll
+      - LICENSE.txt
+      - submenus/submenu-essentials.dat
+      - submenus/water-transit/waterfront-submenu.dat
+      - submenus/water-transit/seawall-submenu.dat
+      - submenus/water-transit/ports-ferries-submenu.dat
+      - submenus/water-transit/canal-submenu.dat
+      - submenus/residential/ploppable-R$-submenu.dat
+      - submenus/residential/ploppable-R$$-submenu.dat
+      - submenus/residential/ploppable-R$$$-submenu.dat
+      - submenus/rail/yards-submenu.dat
+      - submenus/rail/passenger-rail-submenu.dat
+      - submenus/rail/monorail-submenu.dat
+      - submenus/rail/hybrid-railway-submenu.dat
+      - submenus/rail/freight-rail-submenu.dat
+      - submenus/power/misc-power-submenu.dat
+      - submenus/power/dirty-energy-submenu.dat
+      - submenus/power/clean-energy-submenu.dat
+      - submenus/police/police-small-submenu.dat
+      - submenus/police/police-large-submenu.dat
+      - submenus/police/police-deluxe-submenu.dat
+      - submenus/police/military-submenu.dat
+      - submenus/park/sports-submenu.dat
+      - submenus/park/plaza-submenu.dat
+      - submenus/park/modular-parks-submenu.dat
+      - submenus/park/green-spaces-submenu.dat
+      - submenus/park/fillers-submenu.dat
+      - submenus/park/embankment-submenu.dat
+      - submenus/misc-transit/subway-submenu.dat
+      - submenus/misc-transit/parking-submenu.dat
+      - submenus/misc-transit/multimodal-stations-submenu.dat
+      - submenus/misc-transit/GLR-submenu.dat
+      - submenus/misc-transit/ElRail-submenu.dat
+      - submenus/misc-transit/bus-submenu.dat
+      - submenus/landmark/religion-submenu.dat
+      - submenus/landmark/government-submenu.dat
+      - submenus/landmark/entertainment-submenu.dat
+      - submenus/industrial/ploppable-Im-submenu.dat
+      - submenus/industrial/ploppable-Iht-submenu.dat
+      - submenus/industrial/ploppable-Id-submenu.dat
+      - submenus/industrial/ploppable-Ia-submenu.dat
+      - submenus/health/health-small-submenu.dat
+      - submenus/health/health-medium-submenu.dat
+      - submenus/health/health-large-submenu.dat
+      - submenus/education/library-museum-submenu.dat
+      - submenus/education/high-school-submenu.dat
+      - submenus/education/elementary-school-submenu.dat
+      - submenus/education/college-submenu.dat
+      - submenus/commercial/ploppable-CS$-submenu.dat
+      - submenus/commercial/ploppable-CS$$-submenu.dat
+      - submenus/commercial/ploppable-CS$$$-submenu.dat
+      - submenus/commercial/ploppable-CO$$-submenu.dat
+      - submenus/commercial/ploppable-CO$$$-submenu.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/glr-submenu.thumb.jpeg.b849d44b5fa1dc01e969a9deeff7a2dd.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/parks-submenus-animation.thumb.gif.b75852daa77bfc56195f094897aabc57.gif
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/commercial-submenus.thumb.jpeg.f89cbd91995393d55d216efa397f602c.jpeg
     lastModified: 2024-06-02T18:27:39Z
     name: Submenus DLL
+    repository: https://github.com/memo33/submenus-dll
+    sha256: e485456f1a839082ecf4c57607f7fdb585681d59975e68127f902c5d6e210dec
+    size: 705607
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/glr-submenu.thumb.jpeg.b849d44b5fa1dc01e969a9deeff7a2dd.jpeg
+    timestamp: 2024-06-27T15:10:38.073Z
+    uncompressed: 787826
     url: https://community.simtropolis.com/files/file/36142-submenus-dll/
+    version: 1.1.3
   simtropolis/36146-no-kickout-lower-wealth-dll-plugin:
     authors:
       - Null 45
@@ -2334,4 +2493,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-f497f4f8de9cd628f6c1ad0c9caf9305-Fun%20query%20Water%20pur.%20plant.jpg
     url: https://community.simtropolis.com/files/file/4536-daeleys-present/
 
-timestamp: 2024-06-27T08:54:31.584Z
+timestamp: 2024-06-27T15:10:38.073Z
