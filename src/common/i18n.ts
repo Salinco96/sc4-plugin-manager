@@ -95,7 +95,7 @@ export function initI18n(i18n: typeof i18next): void {
       }
 
       if (isNumber(value) && isFinite(value)) {
-        return formatter.format(value)
+        return formatter.format(value / 100)
       }
 
       return ""

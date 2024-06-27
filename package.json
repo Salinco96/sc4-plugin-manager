@@ -18,7 +18,7 @@
     "build": "electron-vite build",
     "dev": "electron-vite dev --watch",
     "format": "prettier --ignore-path .gitignore --write .",
-    "indexer": "ts-node --project tsconfig.scripts.json -r tsconfig-paths/register src/scripts/simtropolis/indexer.ts",
+    "indexer": "ts-node --project tsconfig.scripts.json -r tsconfig-paths/register src/scripts/indexer.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix --ignore-path .gitignore --max-warnings 0",
     "make": "yarn build && yarn package",
     "package": "electron-builder --win",

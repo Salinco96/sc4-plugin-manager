@@ -31,10 +31,17 @@ export async function extractRecursively(
 
   if (archivePaths.length) {
     for (const archivePath of archivePaths) {
-      logger.debug(`Extracting from ${archivePath}...`)
       const archiveFullPath = path.join(basePath, archivePath)
-      const extractFullPath = path.join(basePath, path.dirname(archivePath))
-      await extract(archiveFullPath, extractFullPath, options)
+
+      // Skip uninstallers, OpenJDK (from the NAM download), SC4DatPacker (from the CAM download), 4GB Patch, etc.
+      if (archivePath.match(/4gb_patch\.exe|openjdk.+\.msi|sc4datpacker.exe|uninst.+\.exe/i)) {
+        logger.debug(`Removing ${archivePath}...`)
+      } else {
+        logger.debug(`Extracting from ${archivePath}...`)
+        const extractFullPath = path.join(basePath, path.dirname(archivePath))
+        await extract(archiveFullPath, extractFullPath, options)
+      }
+
       // Delete the archive after successful extraction
       await removeIfPresent(archiveFullPath)
     }
@@ -105,7 +112,7 @@ export async function extract7z(
   } = {},
 ): Promise<{ size: number }> {
   const stdout = await run("7z", {
-    args: ["e", `-o${extractPath}`, archivePath],
+    args: ["e", "-y", `-o${extractPath}`, archivePath],
     ...options,
   })
 

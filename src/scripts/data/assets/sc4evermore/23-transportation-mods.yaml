@@ -1,0 +1,422 @@
+assets:
+  sc4evermore/128-gizmo-street-rr-gate-replacement-mod:
+    authors:
+      - Gizmo
+    category: 700
+    dependencies: []
+    downloads: 233
+    filename: Gizmo - Street-RR Gate Replacement Mod.zip
+    files:
+      - ~Documents/Gizmo_Readmes/rrgate.jpg
+      - ~Documents/Gizmo_Readmes/Read Me_Street-RR Gate Replacement Mod.htm
+      - Gizmo/Street-RR Gate Replacement Mod/Unzoned-Agricultural_Streets_to_Sign/Street_RR_Arms_Replacement_Mod.dat
+      - Gizmo/Street-RR Gate Replacement Mod/All_Street_RR_Gates_to_Sign/All_Street_RR_Arms_Replacement_Mod.dat
+    lastModified: 2023-08-17T12:21:29-07:00
+    name: Gizmo - Street-RR Gate Replacement Mod
+    sha256: 165ba17a69b91e2a3e201d7c51185dbafb98f2d475484821517b572461b43e84
+    size: 81374
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/rrgate.jpg
+    timestamp: 2024-06-27T12:00:05.980Z
+    uncompressed: 86026
+    url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/128-gizmo-street-rr-gate-replacement-mod
+    version: "1"
+  sc4evermore/25-gobias-hd-sidewalks:
+    authors:
+      - sc4evermore
+    category: 700
+    downloads: 387
+    lastModified: 2023-07-20T03:17:21-07:00
+    name: Gobias HD Sidewalks
+    url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/25-gobias-hd-sidewalks
+  sc4evermore/6-road-top-mass-transit:
+    authors:
+      - sc4evermore
+    category: 700
+    dependencies: []
+    downloads: 782
+    filename: RTMTV350.zip
+    files:
+      - RTMTV3/SC4TrashcanFix.dat
+      - RTMTV3/RTMTV3__MML.dat
+      - RTMTV3/RTMTV3_Stations_NAMCapacity_x5.dat
+      - RTMTV3/RTMTV3_Stations_NAMCapacity_x2.dat
+      - RTMTV3/RTMTV3_Stations_NAMCapacity_Standard.dat
+      - RTMTV3/RTMTV3_Stations_NAMCapacity_Radical.dat
+      - RTMTV3/RTMTV3_Stations_NAMCapacity_CAM.dat
+      - RTMTV3/RTMTV3_StationsAGLR_NAMCapacity_x5.dat
+      - RTMTV3/RTMTV3_StationsAGLR_NAMCapacity_x2.dat
+      - RTMTV3/RTMTV3_StationsAGLR_NAMCapacity_Standard.dat
+      - RTMTV3/RTMTV3_StationsAGLR_NAMCapacity_Radical.dat
+      - RTMTV3/RTMTV3_StationsAGLR_NAMCapacity_CAM.dat
+      - RTMTV3/RTMTV3_RoadTextures_Standard.dat
+      - RTMTV3/RTMTV3_RoadTextures_Euro.dat
+      - RTMTV3/RTMTV3_RoadMarkings_US_Wide.dat
+      - RTMTV3/RTMTV3_RoadMarkings_US_SingleLane.dat
+      - RTMTV3/RTMTV3_RoadMarkings_UK_Wide.dat
+      - RTMTV3/RTMTV3_RoadMarkings_UK_SingleLane.dat
+      - RTMTV3/RTMTV3_Lots_US.dat
+      - RTMTV3/RTMTV3_Lots_UK.dat
+      - RTMTV3/RTMTV3_Lots_NonRoadTop_US.dat
+      - RTMTV3/RTMTV3_Lots_NonRoadTop_UK.dat
+      - RTMTV3/RTMTV3_LotsAGLR_US.dat
+      - RTMTV3/RTMTV3_LotsAGLR_UK.dat
+      - RTMTV3/RTMTV3_Locales.dat
+      - RTMTV3/ReadMe.html
+      - RTMTV3/InstallationExamples.html
+      - RTMTV3/ReadMe_files/TimeTableRomen.jpg
+      - RTMTV3/ReadMe_files/TimeTableMG.jpg
+      - RTMTV3/ReadMe_files/SubwayNinjaWhite.jpg
+      - RTMTV3/ReadMe_files/SubwayLU.jpg
+      - RTMTV3/ReadMe_files/SubwayExt.jpg
+      - RTMTV3/ReadMe_files/SGS7S.jpg
+      - RTMTV3/ReadMe_files/SGS7F.jpg
+      - RTMTV3/ReadMe_files/SGS6S.jpg
+      - RTMTV3/ReadMe_files/SGS6F.jpg
+      - RTMTV3/ReadMe_files/SGS5S.jpg
+      - RTMTV3/ReadMe_files/SGS5F.jpg
+      - RTMTV3/ReadMe_files/SGS4S.jpg
+      - RTMTV3/ReadMe_files/SGS4F.jpg
+      - RTMTV3/ReadMe_files/SGS3S.jpg
+      - RTMTV3/ReadMe_files/SGS3F.jpg
+      - RTMTV3/ReadMe_files/SGS2S.jpg
+      - RTMTV3/ReadMe_files/SGS2F.jpg
+      - RTMTV3/ReadMe_files/SGS1S.jpg
+      - RTMTV3/ReadMe_files/SGS1F.jpg
+      - RTMTV3/ReadMe_files/RenameStation.jpg
+      - RTMTV3/ReadMe_files/Props.jpg
+      - RTMTV3/ReadMe_files/PlopSubway.jpg
+      - RTMTV3/ReadMe_files/PlopSlopes.jpg
+      - RTMTV3/ReadMe_files/PlopOneway2.jpg
+      - RTMTV3/ReadMe_files/PlopOneway.jpg
+      - RTMTV3/ReadMe_files/PlopBlockingAG.jpg
+      - RTMTV3/ReadMe_files/PlopBlocking.jpg
+      - RTMTV3/ReadMe_files/PlopAvenue2.jpg
+      - RTMTV3/ReadMe_files/PlopAvenue.jpg
+      - RTMTV3/ReadMe_files/PlopAlign.jpg
+      - RTMTV3/ReadMe_files/PhoneBoothYellow.jpg
+      - RTMTV3/ReadMe_files/PhoneBoothUK.jpg
+      - RTMTV3/ReadMe_files/PhoneBoothRed.jpg
+      - RTMTV3/ReadMe_files/PhoneBoothParis.jpg
+      - RTMTV3/ReadMe_files/NewStation.jpg
+      - RTMTV3/ReadMe_files/NewAGLRS.jpg
+      - RTMTV3/ReadMe_files/GLRTSC.jpg
+      - RTMTV3/ReadMe_files/GLRSW.jpg
+      - RTMTV3/ReadMe_files/GLRShMails.jpg
+      - RTMTV3/ReadMe_files/GLRLW.jpg
+      - RTMTV3/ReadMe_files/BusStopTfL.jpg
+      - RTMTV3/ReadMe_files/BusStopSG.jpg
+      - RTMTV3/ReadMe_files/BusStopDPMO.jpg
+      - RTMTV3/ReadMe_files/BusStopBB.jpg
+      - RTMTV3/ReadMe_files/BusSignTH.jpg
+      - RTMTV3/ReadMe_files/BusSignTfL.jpg
+      - RTMTV3/ReadMe_files/BusSignNinja.jpg
+      - RTMTV3/ReadMe_files/bblank.gif
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_RomenAlt.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_Romen.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_MGWhiteAlt.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_MGWhite.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_MGMetallicAlt.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_MGMetallic.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_MGBlueAlt.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_MGBlue.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_MGBlackAlt.dat
+      - RTMTV3/Props/RTMTV3_Prop_TimeTable_MGBlack.dat
+      - RTMTV3/Props/RTMTV3_Prop_PhoneBooth_UK.dat
+      - RTMTV3/Props/RTMTV3_Prop_PhoneBooth_RedShelter.dat
+      - RTMTV3/Props/RTMTV3_Prop_PhoneBooth_Paris.dat
+      - RTMTV3/Props/RTMTV3_Prop_PhoneBooth_BlueYellow.dat
+      - RTMTV3/Props/RTMTV3_Prop_BusSign_TH.dat
+      - RTMTV3/Props/RTMTV3_Prop_BusSign_TfL.dat
+      - RTMTV3/Props/RTMTV3_Prop_BusSign_Ninja.dat
+      - RTMTV3/Props/RTMTV3_PropS_Subway_Ninja_White.dat
+      - RTMTV3/Props/RTMTV3_PropS_Subway_LU.dat
+      - RTMTV3/Props/RTMTV3_PropS_GLR_TSC.dat
+      - RTMTV3/Props/RTMTV3_PropS_GLR_Shmails.dat
+      - RTMTV3/Props/RTMTV3_PropS_GLR_ModernShortWhite.dat
+      - RTMTV3/Props/RTMTV3_PropS_GLR_ModernLongWhite.dat
+      - RTMTV3/Props/RTMTV3_PropS_BusStop_TfL.dat
+      - RTMTV3/Props/RTMTV3_PropS_BusStop_DPMO.dat
+      - RTMTV3/Props/RTMTV3_PropS_BusStop_BigBlue.dat
+      - RTMTV3/Props/RTMTV3_PropF_Subway_Ninja_White.dat
+      - RTMTV3/Props/RTMTV3_PropF_Subway_LU.dat
+      - RTMTV3/Props/RTMTV3_PropF_GLR_TSC.dat
+      - RTMTV3/Props/RTMTV3_PropF_GLR_Shmails.dat
+      - RTMTV3/Props/RTMTV3_PropF_GLR_ModernShortWhite.dat
+      - RTMTV3/Props/RTMTV3_PropF_GLR_ModernLongWhite.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_20_Style7_Teal.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_19_Style7_Red.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_18_Style6_Teal2.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_17_Style6_Teal1.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_16_Style6_Red.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_15_Style5_Red.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_14_Style5_Aqua.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_13_Style5_Orange.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_12_Style4_Orange.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_11_Style4_Yellow.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_10_Style3_Teal.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_09_Style3_Black.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_08_Style3_Red.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_07_Style2_Black.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_06_Style2_White.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_05_Style2_Blue.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_04_Style1_Blue.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_03_Style1_Red.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_02_Style1_BlackAd.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_SG_01_Style1_Black.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_DPMO.dat
+      - RTMTV3/Props/RTMTV3_PropF_BusStop_BigBlue.dat
+      - RTMTV3/Props/RTMTV3_APropBase_Subway_Ninja.dat
+      - RTMTV3/Props/RTMTV3_APropBase_Subway_LU.dat
+      - RTMTV3/Props/RTMTV3_APropBase_GLR_TSC.dat
+      - RTMTV3/Props/RTMTV3_APropBase_GLR_Shmails.dat
+      - RTMTV3/Props/RTMTV3_APropBase_GLR_Modern.dat
+      - RTMTV3/Props/RTMTV3_APropBase_BusStop_SG.dat
+      - RTMTV3/Props/RTMTV3_APropBase_BusStop_DPMO.dat
+      - RTMTV3/Props/RTMTV3_APropBase_BusStop_BigBlue.dat
+      - RTMTV3/Models/RoadSideSubStairs-0x5ad0e817_0x8e26cb8b_0x30000.SC4Model
+      - RTMTV3/Models/LU_Narrow_SubStairs_mcdrye.SC4Model
+      - RTMTV3/Models/GLRShelterModern_StripedPlatforms.SC4Model
+      - RTMTV3/Models/GLRShelterModern_All.SC4Model
+    lastModified: 2023-07-20T03:12:33-07:00
+    name: Road-Top Mass Transit (RTMT) Version 3.50
+    sha256: 2b17a4440cfcfa765c3fcf7326a582edd287c97fc1fe319238fba44b60a50df0
+    size: 2769163
+    timestamp: 2024-06-27T12:00:05.980Z
+    uncompressed: 3568653
+    url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/6-road-top-mass-transit
+    version: "3.50"
+  sc4evermore/8-rtmt-add-on-pack-v3-60:
+    authors:
+      - sc4evermore
+    category: 700
+    dependencies: []
+    downloads: 595
+    filename: RTMT Add-On Pack V3.60.zip
+    files:
+      - UKBusStopMarkings ReadMe.htm
+      - SAM.jpg
+      - RTMT_Patch_351.html
+      - RTMTV3__MML.dat
+      - RTMTV3_Stations_NAMCapacity_Low.dat
+      - RTMTV3_Stations_NAMCapacity_High.dat
+      - RTMTV3_StationsAGLR_NAMCapacity_Low.dat
+      - RTMTV3_StationsAGLR_NAMCapacity_High.dat
+      - RTMTV3_RoadMarkings_US_Wide.dat
+      - RTMTV3_RoadMarkings_US_SingleLane.dat
+      - RTMTV3_RoadMarkings_UK_Wide.dat
+      - RTMTV3_RoadMarkings_UK_SingleLane.dat
+      - RTMTV3_RoadMarkings_UKnew_Standard.dat
+      - RTMTV3_RoadMarkings_UKnew_Euro.dat
+      - RTMTV3_RoadMarkings_UKnew.dat
+      - RTMTV3_RoadMarkings_DE_Vertical.dat
+      - RTMTV3_RoadMarkings_DE_Horizontal.dat
+      - RTMTV3_Queries.dat
+      - RTMTV3_Lots_US.dat
+      - RTMTV3_Lots_UK.dat
+      - RTMTV3_Lots_NonRoadTop_Low.dat
+      - RTMTV3_Lots_NonRoadTop_High.dat
+      - RTMTV3_LotsAGLR_US.dat
+      - RTMTV3_LotsAGLR_UK.dat
+      - RTMTV3_Locales.dat
+      - RTMT.jpg
+      - GermanRoadMarkings ReadMe.htm
+      - El.jpg
+      - "!!!README!!!_RTMT_Addon_Pack_V3.60.html"
+      - z_RTMT/GizmoFix.dat
+      - z_RTMT/Desktop.ini
+      - SAM/RTMT_SAM_US_Lots.dat
+      - SAM/RTMT_SAM_UK_Lots.dat
+      - SAM/RTMT_SAM_Textures.dat
+      - SAM/RTMT_SAM_Stations_Capacity_Low.dat
+      - SAM/RTMT_SAM_Stations_Capacity_High.dat
+      - SAM/RTMT_SAM_Locales.dat
+      - SAM/Desktop.ini
+      - Props/RTMTV3_Prop_BusSign_NYC.dat
+      - Props/RTMTV3_PropS_GLR_Xyloxadoria_Avenue.dat
+      - Props/RTMTV3_PropS_GLR_SimFox_Modern_Avenue.dat
+      - Props/RTMTV3_PropS_GLR_Shmails_Avenue.dat
+      - Props/RTMTV3_PropS_GLR_Historic_Station_Avenue.dat
+      - Props/RTMTV3_PropF_GLR_Xyloxadoria_Avenue.dat
+      - Props/RTMTV3_PropF_GLR_TSC_Avenue.dat
+      - Props/RTMTV3_PropF_GLR_SimFox_Modern_Avenue.dat
+      - Props/RTMTV3_PropF_GLR_Shmails_Avenue.dat
+      - Props/RTMTV3_PropF_GLR_Historic_Station_Avenue.dat
+      - Props/RTMTV3_PropF_BusStop_NYC_Road.dat
+      - Props/RTMTV3_APropBase_GLR_Xyloxadoria_Avenue.dat
+      - Props/RTMTV3_APropBase_GLR_TSC_Avenue.dat
+      - Props/RTMTV3_APropBase_GLR_SimFox_Modern_Avenue.dat
+      - Props/RTMTV3_APropBase_GLR_Shmails_Avenue.dat
+      - Props/RTMTV3_APropBase_GLR_Historic_Station_Avenue.dat
+      - Props/RTMTV3_APropBase_BusStop_NYC_Road.dat
+      - Props/Desktop.ini
+      - Models/Xyloxadoria's GLR Station.SC4Model
+      - Models/SimFox's GLR Station.SC4Model
+      - Models/ShmailsGLRStationAvenue1b HD.SC4Model
+      - Models/SG_BusStopLg.dat
+      - Models/SG_BusStop20.dat
+      - Models/SG_BusStop19.dat
+      - Models/SG_BusStop18.dat
+      - Models/SG_BusStop17.dat
+      - Models/SG_BusStop16.dat
+      - Models/SG_BusStop15.dat
+      - Models/SG_BusStop14.dat
+      - Models/SG_BusStop13.dat
+      - Models/SG_BusStop12.dat
+      - Models/SG_BusStop11.dat
+      - Models/SG_BusStop10.dat
+      - Models/SG_BusStop09.dat
+      - Models/SG_BusStop08.dat
+      - Models/SG_BusStop07.dat
+      - Models/SG_BusStop06.dat
+      - Models/SG_BusStop05.dat
+      - Models/SG_BusStop04.dat
+      - Models/SG_BusStop03.dat
+      - Models/SG_BusStop02.dat
+      - Models/SG_BusStop01.dat
+      - Models/RoadSideSubstairs_Ninja_0x8e26cb8b.SC4Model
+      - Models/RoadsideSubstairs_Mcdrye_0x33317b90.SC4Model
+      - Models/Historic GLR TramStation HD.SC4Model
+      - Models/Desktop.ini
+      - Models/BusStop_NYC.SC4Model.dat
+      - Models/BusSign_NYC.SC4Model.dat
+      - Models/BusSign Berlin.SC4Model
+      - Models/BerlinSubways.SC4Model
+      - Models/BerlinBusStops.SC4Model
+      - Models/Antoine_tram_station2-0x5ad0e817_0x538c2546_0x00030000.SC4Model
+      - GLR Transitions/RTMT_Tram_Transition_Textures.dat
+      - GLR Transitions/RTMT_Tram_Transition_Paths_Right.dat
+      - GLR Transitions/RTMT_Tram_Transition_Paths_Left.dat
+      - GLR Transitions/RTMT_Tram_in_Road_to_Underground.SC4Model
+      - GLR Transitions/RTMT_Tram_in_Road_to_Underground.SC4Lot
+      - GLR Transitions/RTMT_Tram_in_Avenue_to_Underground.SC4Model
+      - GLR Transitions/RTMT_Tram_in_Avenue_to_Underground.SC4Lot
+      - GLR Transitions/RTMT_KeepRight_NoUTurn_Rd-GLRInRoadTrans.SC4Model
+      - GLR Transitions/RTMT_KeepRightOrLeft_NoUTurn_Rd-GLRInRoadTrans.SC4Desc
+      - GLR Transitions/RTMT_KeepLeft_NoUTurn_Rd-GLRInRoadTrans.SC4Model
+      - GLR Transitions/Desktop.ini
+      - El Rail over Road/RTMT_Stations_El_Rail_Capacity_Low.dat
+      - El Rail over Road/RTMT_Stations_El_Rail_Capacity_High.dat
+      - El Rail over Road/RTMT_El_Road_Textures_Standard_Med_High.dat
+      - El Rail over Road/RTMT_El_Road_Textures_Standard_Low.dat
+      - El Rail over Road/RTMT_El_Road_Textures_Euro_Med_High.dat
+      - El Rail over Road/RTMT_El_Road_Textures_Euro_Low.dat
+      - El Rail over Road/RTMT_El_Rail_Lots_US.dat
+      - El Rail over Road/RTMT_El_Rail_Lots_UK.dat
+      - El Rail over Road/RTMT_El_Rail_Locales.dat
+      - El Rail over Road/Ele-Rail Prop.dat
+      - El Rail over Road/Desktop.ini
+      - DAMN Menus/Desktop.ini
+      - DAMN Menus/customMenuNews.dat
+      - DAMN Menus/customMenu.dat
+      - Models/Signs/Sub-Street.SC4Model
+      - Models/Signs/Sub-SAM-Herringbone.SC4Model
+      - Models/Signs/Sub-SAM-Cobblestone.SC4Model
+      - Models/Signs/Sub-SAM-Brick.SC4Model
+      - Models/Signs/Sub-SAM-Asphalt.SC4Model
+      - Models/Signs/Sub-Roadside.SC4Model
+      - Models/Signs/Sub-Road.SC4Model
+      - Models/Signs/Sub-OneWay.SC4Model
+      - Models/Signs/Sub-Ave.SC4Model
+      - Models/Signs/NoGLR-Sub-Ave.SC4Model
+      - Models/Signs/NoGLR-Bus-Sub-Ave 2.SC4Model
+      - Models/Signs/NoGLR-Bus-Road.SC4Model
+      - Models/Signs/NoGLR-Bus-Ave.SC4Model
+      - Models/Signs/NoGLR-Bus-Ave 2.SC4Model
+      - Models/Signs/NoEl-Sub-Street.SC4Model
+      - Models/Signs/NoEl-Sub-Road.SC4Model
+      - Models/Signs/NoEl-Bus-Sub-Street.SC4Model
+      - Models/Signs/NoEl-Bus-Sub-Road.SC4Model
+      - Models/Signs/NoEl-Bus-Street.SC4Model
+      - Models/Signs/NoEl-Bus-Road.SC4Model
+      - Models/Signs/GLR-Sub-Ave 2.SC4Model
+      - Models/Signs/GLR-Road 2.SC4Model
+      - Models/Signs/GLR-Bus-Sub-Ave 2.SC4Model
+      - Models/Signs/GLR-Bus-Road2.SC4Model
+      - Models/Signs/GLR-Bus-Ave 2.SC4Model
+      - Models/Signs/GLR-Ave 2.SC4Model
+      - Models/Signs/Bus-Sub-Street.SC4Model
+      - Models/Signs/Bus-Sub-SAM-Herringbone.SC4Model
+      - Models/Signs/Bus-Sub-SAM-Cobblestone.SC4Model
+      - Models/Signs/Bus-Sub-SAM-Brick.SC4Model
+      - Models/Signs/Bus-Sub-SAM-Asphalt.SC4Model
+      - Models/Signs/Bus-Sub-Roadside.SC4Model
+      - Models/Signs/Bus-Sub-Road.SC4Model
+      - Models/Signs/Bus-Sub-Road 2.SC4Model
+      - Models/Signs/Bus-Sub-OneWay.SC4Model
+      - Models/Signs/Bus-Sub-Ave 2.SC4Model
+      - Models/Signs/Bus-Street.SC4Model
+      - Models/Signs/Bus-SAM-Herringbone.SC4Model
+      - Models/Signs/Bus-SAM-Gravel.SC4Model
+      - Models/Signs/Bus-SAM-Dirt2.SC4Model
+      - Models/Signs/Bus-SAM-Dirt1.SC4Model
+      - Models/Signs/Bus-SAM-Cobblestone.SC4Model
+      - Models/Signs/Bus-SAM-Brick.SC4Model
+      - Models/Signs/Bus-SAM-Asphalt.SC4Model
+      - Models/Signs/Bus-Roadside.SC4Model
+      - Models/Signs/Bus-Road.SC4Model
+      - Models/Signs/Bus-Road 2.SC4Model
+      - Models/Signs/Bus-OneWay.SC4Model
+      - Models/Signs/Bus-Ave.SC4Model
+      - Models/Signs/Bus-Ave 2.SC4Model
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/6 - RTMT Avenue Stations/RTMT Avenue Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/5 - RTMT One-Way Road Stations/RTMT One-Way Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/RTMT Street Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/1 - RTMT Roadside Stations/RTMT Roadside Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/6 - RTMT Avenue Stations/RTMT Avenue Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/5 - RTMT One-Way Road Stations/RTMT One-Way Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/1 - RTMT Roadside Stations/RTMT Roadside Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/RTMT Street Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/6 - RTMT Avenue Stations/RTMT Avenue Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/5 - RTMT One-Way Road Stations/RTMT One-Way Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/RTMT Street Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/1 - RTMT Roadside Stations/RTMT Roadside Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/6 - RTMT Avenue Stations/RTMT Avenue Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/5 - RTMT One-Way Road Stations/RTMT One-Way Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/RTMT Street Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/1 - RTMT Roadside Stations/RTMT Roadside Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/6 - RTMT Avenue Stations/RTMT GLR in Avenue Stations/RTMT GLR in Avenue Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Tram on Road Stations/RTMT Tram on Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Tram in Road Stations/RTMT Tram in Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT El Rail over Road Stations/RTMT El Rail over Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/2 - RTMT El Rail over Street Stations/RTMT El Rail over Street Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Low/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/1 - RTMT SAM Stations/RTMT SAM Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/6 - RTMT Avenue Stations/RTMT GLR in Avenue Stations/RTMT GLR in Avenue Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Tram on Road Stations/RTMT Tram on Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Tram in Road Stations/RTMT Tram in Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT El Rail over Road Stations/RTMT El Rail over Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/2 - RTMT El Rail over Street Stations/RTMT El Rail over Street Stations.dat
+      - DAMN Menus/RTMT DAMN Menus High/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/1 - RTMT SAM Stations/RTMT SAM Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/6 - RTMT Avenue Stations/RTMT GLR in Avenue Stations/RTMT GLR in Avenue Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Tram on Road Stations/RTMT Tram on Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Tram in Road Stations/RTMT Tram in Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT El Rail over Road Stations/RTMT El Rail over Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/2 - RTMT El Rail over Street Stations/RTMT El Rail over Street Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro Low/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/1 - RTMT SAM Stations/RTMT SAM Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/6 - RTMT Avenue Stations/RTMT GLR in Avenue Stations/RTMT GLR in Avenue Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Tram on Road Stations/RTMT Tram on Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT Tram in Road Stations/RTMT Tram in Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT El Rail over Road Stations/RTMT El Rail over Road Stations.dat
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/2 - RTMT El Rail over Street Stations/RTMT El Rail over Street Stations
+      - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/1 - RTMT SAM Stations/RTMT SAM Stations.dat
+    lastModified: 2023-07-20T14:14:20-07:00
+    name: RTMT Add-On Pack V3.60
+    sha256: 96906d3319cfc082d33e524c327da1e1724b21d94c8a81b98194fa6120eab02b
+    size: 6426219
+    timestamp: 2024-06-27T12:00:05.980Z
+    uncompressed: 6523140
+    url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/8-rtmt-add-on-pack-v3-60
+    version: "3.60"
+  sc4evermore/86-sfbt-street-tree-mod:
+    authors:
+      - Andreas
+    category: 700
+    downloads: 486
+    lastModified: 2023-08-02T05:24:35-07:00
+    name: SFBT Street Tree Mod by Andreas
+    url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/86-sfbt-street-tree-mod
+
+timestamp: 2024-06-27T12:00:05.980Z

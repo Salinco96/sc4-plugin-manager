@@ -1,0 +1,207 @@
+assets:
+  simtropolis/19338-peg-security-fencing-kit:
+    authors:
+      - Pegasus
+    category: 0
+    description: >-
+      This resource pack is a collection of chain link fence props that can be used on any type of lot that requires security fencing. The props in this pack may be used by other developers to enhance
+      the appearance of their lots.
+
+
+      The pack contains two styles of fencing (with or without barb wire) and includes extra items such as diagonal fence sections, corner sections, pedestrian gates and automatic rolling styled
+      gates.
+
+
+      ** This dependency has no dependencies.
+
+
+      All Pegasus files are now legacy content and are no longer officially supported - however support from the wider community can be requested here.
+    filename: PEG_SecurityFence_RESOURCE_100.zip
+    files:
+      - PEGPROD/MODs/Security Fencing/readme_243.htm
+      - PEGPROD/MODs/Security Fencing/product_image.jpg
+      - PEGPROD/MODs/Security Fencing/PEG_ChainLinkFence_RESOURCE.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_02_2008/e93137f82ebbfe8be9f12c8d2085c058-product_image.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_02_2008/e93137f82ebbfe8be9f12c8d2085c058-product_image1.jpg
+    lastModified: 2015-07-08T07:51:58Z
+    name: PEG Security Fencing Kit
+    sha256: 555ed2486d8180e7dc25184a2e365a3586f1dee462896356cf966663e3f37a1f
+    size: 227413
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2008/thumb-e93137f82ebbfe8be9f12c8d2085c058-product_image.jpg
+    timestamp: 2024-06-26T12:05:17.971Z
+    uncompressed: 407399
+    url: https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/
+    version: "1.0"
+  simtropolis/19880-peg-cdk3-super-pak:
+    authors:
+      - Pegasus
+    category: 0
+    lastModified: 2015-07-08T03:01:12Z
+    name: PEG CDK3 SUPER PAK
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2008/thumb-e1b1c9d53f9b6fc379ec8bf0195776fd-product_image.jpg
+    url: https://community.simtropolis.com/files/file/19880-peg-cdk3-super-pak/
+  simtropolis/19881-peg-cdk3-sp-seaport-super-pak:
+    authors:
+      - Pegasus
+    category: 0
+    lastModified: 2015-07-08T02:57:15Z
+    name: PEG CDK3 SP SEAPORT SUPER PAK
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2008/thumb-5e54434cb76cfd9a9e4da90ed3649d5a-product_image.jpg
+    url: https://community.simtropolis.com/files/file/19881-peg-cdk3-sp-seaport-super-pak/
+  simtropolis/20966-peg-mtp-super-pack:
+    authors:
+      - Pegasus
+    category: 0
+    dependencies:
+      - simtropolis/26079-peg-spam-super-resource-pack
+    description: >-
+      UPDATE: 04.07.2022 - The PEG_MTP_SUPER_TEXTURES_PACK.dat has been replaced by the all inclusive PEG-SUPER_TEXTURES.dat, which contains all, but the textures from the PEG SPAM Super Resource Pack
+      (PEG-SPAM_TEXTURES_RESOURCE_b200.dat), created and released by Pegasus from the entire collection (including: CDK and CDK3, CDK3-OWW, OWW2 and Marina, Utopia, CSK, PPonds etc...). This update
+      brings all these textures under one DAT (which actually already have held 2/3 of the textures created by Pegasus). Bear in mind this is only part one of a major update and clean-up of this
+      dependency pack focusing on the textures for now.
+
+
+      For the full list of texture contents please check the included *-index.jpg files.
+
+
+      Install: copy/extract the PEGPROD parent folder into your plugins. If you extracted the _Documents* folder into your plugins, too, it's highly recommended to keep it, but move it out of the
+      Plugins folder.
+
+      In the _Documents folder you will find 2 other subfolders:
+
+        -  PEG Readmes: this folder will be the generic storage of all the readmes and images for the future updated PEGProd contents. This folder also contains the texture catalague index images of the base and overlay textures and the optional EU and RRW (Real-RailWay) texture overrides.
+        -  PEG Optional Texture Overrides: as a temporary solution it contains the PEG-SUPER_TEXTURES_EUOverride.dat and PEG-SUPER_TEXTURES_RRWOverride.dat files. To use either or both of the files, simply move/copy them into the main PEGPROD\Mountain Theme Pack\_MTP SUPER PACK\ folder, but make sure they load after the PEG-SUPER_TEXTURES.dat.
+
+      The v1.5 update is the first part of a collection wide update and cleanup focusing of the textures only. While the original textures and props where created by Pegasus and his team, this (and
+      the following) update was made by the @STEX Custodian (with the permission of Pegasus).
+
+
+      --------------------------------------------------------------------------------------------------------------------------------
+
+
+      Faster than a speeding Llama... ( a really old one... with gout )...
+
+
+      More Powerful than my breath after a Tequila and burrito binge......
+
+
+      Able to leap tall brown gift boxes in a single install.
+
+
+      "LOOK !! Up on the STEX !! Its a Mod !! Its a Lot !! Its... its..."
+
+
+      "Oh forget it. Its just a dependency."
+
+
+      You asked for it! And now you got it! The all-inclusive... the all encapsulating...one size fits all... MTP SUPER PACK !!
+
+
+      * Tights & Cape sold separately. Tights void where prohibited. Do not wear capes near jet aircraft engines. Installation of the SUPER PACK may not enable you to fly.
+
+
+      The MTP SUPER PACK combines all the standard MTP dependencies into a single download... and also includes a substantial amount of new material that will be used in future development. This file
+      will be the primary MTP dependency listed on all future MTP lots.
+
+
+
+
+      Please Note: This dependency contains no material that alters the appearance ofgame default props or textures... and will not interfere in any way with playing a non-MTP or rural themed city.
+
+
+
+
+      The MTP SUPER PACK combines both MTP props and textures into a single download. However, it will install props and textures as separate files to make any future updates easier and faster.
+
+
+      The MTP SUPERPACK replaces the following previous MTP dependencies... which can now be removed from your Plugins folder:
+
+
+      * PEG Mountain Theme Pack
+
+      ( PEG_MTP_RESOURCE_vol1.dat & PEG_MTP_TEXTURES_vol1.dat )
+
+
+      * PEG-MTP Texture Pack Volume 2
+
+      ( PEG-MTP_TEXTURES_vol2.dat )
+
+
+      * PEG-MTP Resource Pack 2 [beta]
+
+      ( PEG-MTP_RESOURCE2_b102.dat )
+
+
+      * PEG Pine Tree Mod [ resource file only ]
+
+      ( PEG-MTP_GM-TreeMod_RESOURCE )
+
+
+      ** This dependency has no dependencies.
+
+
+      All Pegasus files are now legacy content and are no longer officially supported - however support from the wider community can be requested here.
+
+
+      Moderator note (September 9th 2018):
+
+      File updated to version 1.02 from the old PLEX (thanks to @Tyberius06 for providing the updated files). The older v1.01 is available in the changelog section below.
+    filename: PEG-MTP MTP SUPER-PACK v1.5.zip
+    files:
+      - _Documents/PEG Optional Texture Overrides/PEG-SUPER_TEXTURES_RRWOverride.dat
+      - _Documents/PEG Optional Texture Overrides/PEG-SUPER_TEXTURES_EUOverride.dat
+      - _Documents/PEG Readmes/pspbrwse.jbf
+      - _Documents/PEG Readmes/product_image_324.jpg
+      - _Documents/PEG Readmes/PEG-SUPER_TEXTURES_RRWOverride-index.jpg
+      - _Documents/PEG Readmes/PEG-SUPER_TEXTURES_EUOverride-index.jpg
+      - _Documents/PEG Readmes/PEG SUPER TEXTURES_overlay-index.jpg
+      - _Documents/PEG Readmes/PEG SUPER TEXTURES_base-index.jpg
+      - _Documents/PEG Readmes/MTP_ResourceSuperPak_324.htm
+      - PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG_MTP_SUPER_RESOURCE_PACK.dat
+      - PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG-SUPER_TEXTURES.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_01_2009/0ec036904f575a8efe4bcea5e7624da1-product_image.jpg
+    lastModified: 2022-07-04T23:43:31Z
+    name: PEG MTP SUPER PACK
+    sha256: 0c7bfea9f8ccb3a70c10a9b7cfd11db16e48cc947a9e28ae061cf2014182b548
+    size: 5437785
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2009/thumb-0ec036904f575a8efe4bcea5e7624da1-product_image.jpg
+    timestamp: 2024-06-26T12:05:17.971Z
+    uncompressed: 7338663
+    url: https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/
+    version: v1.5
+  simtropolis/26080-simpeg-agricultural-mod-spam:
+    authors:
+      - Pegasus
+    category: 0
+    lastModified: 2015-07-11T08:16:55Z
+    name: SimPeg Agricultural Mod (SPAM)
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2012/thumb-39a2a7e52169570a7f3ca1b46e9174d9-.jpg
+    url: https://community.simtropolis.com/files/file/26080-simpeg-agricultural-mod-spam/
+  simtropolis/27711-peg-one-flag-many-nations-mod:
+    authors:
+      - Pegasus
+    category: 0
+    lastModified: 2015-07-07T00:20:46Z
+    name: PEG One Flag Many Nations Mod
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2012/thumb-75dbec6dd5d5e27c7b5d3b7a4d11a304-peg_ofmn.jpg
+    url: https://community.simtropolis.com/files/file/27711-peg-one-flag-many-nations-mod/
+  simtropolis/27712-the-peg-terrain-kit-7-n-1:
+    authors:
+      - Pegasus
+    category: 0
+    lastModified: 2018-07-19T01:23:57Z
+    name: The PEG Terrain Kit (7 n 1)
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2012/thumb-c40a9ed17c56e4053b91c28d5522fe2b-.jpg
+    url: https://community.simtropolis.com/files/file/27712-the-peg-terrain-kit-7-n-1/
+  simtropolis/30648-peg-cdk-tutorial:
+    authors:
+      - Pegasus
+    category: 0
+    lastModified: 2015-07-08T02:18:27Z
+    name: PEG CDK Tutorial
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_07/image022.thumb.jpg.65b2a105dbe97884aec5b39974b27643.jpg
+    url: https://community.simtropolis.com/files/file/30648-peg-cdk-tutorial/
+
+timestamp: 2024-06-27T08:54:31.584Z

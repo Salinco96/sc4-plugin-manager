@@ -227,6 +227,9 @@ export function computePackageList(
 
   const filters: Omit<PackageFilters, "search"> & { pattern?: RegExp } = {
     ...packageFilters,
+    dependencies: packageFilters.dependencies || packageFilters.onlyErrors,
+    experimental: packageFilters.experimental || packageFilters.onlyErrors,
+    incompatible: packageFilters.incompatible || packageFilters.onlyErrors,
     // When showing errors, we do not want to exclude non-error variants
     // Instead we will check this for the selected variant only
     onlyErrors: false,

@@ -97,8 +97,8 @@
     "descriptionAssets_other": "{{count}} assets{{totalSize, bytes, paren}} will be downloaded.",
     "descriptionAssetsWithDependencies_one": "In total, {{count}} asset{{totalSize, bytes, paren}} will be downloaded.",
     "descriptionAssetsWithDependencies_other": "In total, {{count}} assets{{totalSize, bytes, paren}} will be downloaded.",
-    "descriptionDependencies_one": "This action requires the installation of {{count}} additional dependency:\n{{dependencies, join(multiline: true)}",
-    "descriptionDependencies_other": "This action requires the installation of {{count}} additional dependencies:\n{{dependencies, join(multiline: true)}",
+    "descriptionDependencies_one": "This action requires the installation of {{count}} additional dependency:\n{{dependencies, join(multiline: true)}}",
+    "descriptionDependencies_other": "This action requires the installation of {{count}} additional dependencies:\n{{dependencies, join(multiline: true)}}",
     "title": "$t(General:app)"
   },
   "EnableOptionalDependencies": {
@@ -236,6 +236,7 @@
   },
   "PackageCategory": {
     "agriculture": "Agriculture",
+    "airports": "Airports",
     "audio": "Audio",
     "automata": "Automata",
     "blockers": "Maxis Blockers",
@@ -264,6 +265,7 @@
     "industrial-im": "$t(PackageCategory:industrial) (I-M)",
     "irm": "IRM",
     "landmarks": "Landmarks",
+    "mmps": "MMPs",
     "mods": "Mods",
     "nam": "NAM",
     "ordinances": "Ordinances",
@@ -275,6 +277,7 @@
     "residential-r1": "$t(PackageCategory:residential) (R$)",
     "residential-r2": "$t(PackageCategory:residential) (R$$)",
     "residential-r3": "$t(PackageCategory:residential) (R$$$)",
+    "rtmt": "RTMT",
     "safety": "$t(PackageCategory:civics) (Safety)",
     "spam": "SPAM",
     "textures": "Textures",

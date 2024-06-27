@@ -3,7 +3,7 @@ import path from "path"
 
 export async function copyTo(fullPath: string, targetPath: string): Promise<void> {
   await createIfMissing(path.dirname(targetPath))
-  await fs.cp(fullPath, targetPath)
+  await fs.cp(fullPath, targetPath, { recursive: true })
 }
 
 export async function moveTo(fullPath: string, targetPath: string): Promise<void> {
@@ -11,8 +11,8 @@ export async function moveTo(fullPath: string, targetPath: string): Promise<void
   try {
     await fs.rename(fullPath, targetPath)
   } catch (error) {
-    await fs.cp(fullPath, targetPath)
-    await fs.unlink(fullPath)
+    await fs.cp(fullPath, targetPath, { recursive: true })
+    await fs.rm(fullPath, { recursive: true })
   }
 }
 

@@ -1,5 +1,7 @@
 import { ComponentType, Suspense } from "react"
 
+import { ErrorBoundary } from "@components/ErrorBoundary"
+
 import { Loader } from "./components/Loader"
 import { Modal } from "./components/Modal"
 import { PageComponents } from "./pages"
@@ -15,8 +17,10 @@ export function Content<T extends Page>(): JSX.Element {
 
   return (
     <Suspense fallback={<Loader />}>
-      <PageComponent {...data} />
-      <Modal />
+      <ErrorBoundary>
+        <PageComponent {...data} />
+        <Modal />
+      </ErrorBoundary>
     </Suspense>
   )
 }

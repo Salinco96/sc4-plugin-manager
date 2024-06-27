@@ -6,17 +6,17 @@ export enum ConfigFormat {
 }
 
 export interface AssetData {
+  lastModified?: string
   sha256?: string
   size?: number
+  uncompressed?: number
   url?: string
-  version?: number | string
+  version?: string
 }
 
 export interface AssetInfo extends AssetData {
   id: string
-  lastModified?: Date
   url: string
-  version?: string
 }
 
 export enum Feature {
@@ -114,6 +114,7 @@ export interface VariantData {
   description?: string
   experimental?: boolean
   files?: PackageFile[]
+  images?: string[]
   name?: string
   optional?: string[]
   readme?: string

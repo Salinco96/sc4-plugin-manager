@@ -1,6 +1,7 @@
 // Needs to be imported first for some reason - see https://github.com/mui/material-ui/issues/31835
 import { CssBaseline } from "@mui/material"
 
+import { ErrorBoundary } from "@components/ErrorBoundary"
 import { I18nProvider } from "@providers/I18nProvider"
 
 import { Content } from "./Content"
@@ -16,14 +17,16 @@ function App(): JSX.Element {
   return (
     <I18nProvider>
       <ThemeProvider>
-        <SnackbarProvider>
-          <CssBaseline />
-          <DataProvider>
-            <Layout>
-              <Content />
-            </Layout>
-          </DataProvider>
-        </SnackbarProvider>
+        <ErrorBoundary>
+          <SnackbarProvider>
+            <CssBaseline />
+            <DataProvider>
+              <Layout>
+                <Content />
+              </Layout>
+            </DataProvider>
+          </SnackbarProvider>
+        </ErrorBoundary>
       </ThemeProvider>
     </I18nProvider>
   )

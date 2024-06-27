@@ -52,7 +52,7 @@ export async function download(
     logger?: Logger
     onProgress?(current: number, total: number): void
   },
-): Promise<{ sha256: string; size: number; uncompressedSize?: number }> {
+): Promise<{ filename: string; sha256: string; size: number; uncompressedSize?: number }> {
   const {
     downloadPath,
     downloadTempPath = downloadPath,
@@ -168,7 +168,7 @@ export async function download(
 
     logger.debug("Done")
 
-    return { sha256, size, uncompressedSize }
+    return { filename, sha256, size, uncompressedSize }
   } catch (error) {
     await removeIfPresent(downloadTempPath)
     throw error

@@ -232,7 +232,7 @@ export async function loadRemotePackages(
         if ("assetId" in config) {
           const assetInfo: AssetInfo = {
             id: config.assetId,
-            lastModified: new Date(config.lastModified),
+            lastModified: config.lastModified,
             url: config.url,
             version: config.version,
           }
