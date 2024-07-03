@@ -4,12 +4,21 @@ import path from "path"
 import { shell } from "electron"
 
 const WHITELISTED_ORIGINS = [
+  "https://adoptium.net",
   "https://community.simtropolis.com",
   "https://discordapp.com",
+  "https://en.wikipedia.org",
   "https://github.com",
+  "https://sc4evermore.com",
+  "https://www.keka.io",
   "https://www.sc4devotion.com",
   "https://www.sc4evermore.com",
   "https://www.sc4nam.com",
+  "https://www.youtube.com",
+  "https://www.7-zip.com",
+  // Consider supporting for donations
+  // "https://paypal.me",
+  // "https://www.paypal.com",
 ]
 
 export class BaseWindow extends BrowserWindow {

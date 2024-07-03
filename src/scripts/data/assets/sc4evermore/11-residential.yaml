@@ -3,7 +3,7 @@ assets:
     authors:
       - Mattb325
     category: 200
-    downloads: 821
+    downloads: 827
     lastModified: 2023-08-20T03:02:51-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Houses (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Alpha237_lg0.jpg
@@ -12,7 +12,7 @@ assets:
     authors:
       - Mattb325
     category: 200
-    downloads: 820
+    downloads: 830
     lastModified: 2023-08-20T02:53:24-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Houses (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Alpha237_lg.jpg
@@ -22,7 +22,68 @@ assets:
       - Homefryes
     category: 200
     dependencies: []
-    downloads: 625
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>\"Simple and pragmatic, the classic American Four Square home, popularized by pattern books and Sears Roebuck &amp; Company mail order
+      kits, spread to residential neighborhoods throughout the United States.\"</p>\r
+
+      <p>I have designed 12 homes altogether, 6 left-handed and 6 right-handed - in other words, mirrored, for variety. The lefts and rights are separated into the 2 \"…family.dat\" files. I put these
+      into 8 lots (2-1x1, 2-1x2, and 4-1x3), each designed to grow one of 6 homes at random; 4 lots for the lefts and 4 for the rights.</p>\r
+
+      <p>These first models, based on my parents' house and with ideas taken from some of the kit floor plans I found in the Sears online archives, feature a bumped-out dining room window and stairway
+      landing, full-width front porch, front and side dormers (some models), and many choices of siding and roofing materials and colors.</p>\r
+
+      <p><strong>    </strong><br><strong>Lot Details and Information</strong></p>\r
+
+      <p>Growable Version:<br>Lot size:     1x1, 1x2, 1x3<br>Building style(s):     Building: Residential,<br>Building: R$$,<br>Style: Chicago,<br>Style: New York,<br>Style: Houston,</p>\r
+
+      <p><br>Growth stage:    2/3/4<br>Occupants:     R-$ : 23,<br>R-$$ : 14<br>Bulldoze cost:     § 146<br>Building Value:     § 335<br>Construction Time:     14 days<br>Max. Fire Stage: 2<br>Power
+      consumption:     1 MWh/month<br>Water consumption:     3 Gallons/month<br>Air pollution:     0 over 5 tiles<br>Water pollution:     0 over 6 tiles<br>Garbage pollution:     2 over 0 tiles</p>\r
+
+      <p><strong>Compatibility</strong><br>This download is only compatible with SimCity 4 \"Rush Hour\" or SimCity 4 Deluxe.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <p>Copy/extract the <strong>Homefryes </strong>folder into your plugins folder.</p>\r
+
+      <p><strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r
+
+      <p><strong>File Paths</strong></p>\r
+
+      <p>The following paths are used for manual installing:<br><strong>Lot and Dat Files:</strong>     My DocsSimcity 4PluginsHomefryes<br><strong>Readme and JPGs:</strong>
+      _DocumentsHomefryes_Readmes</p>\r
+
+      <p><strong>Dependencies</strong></p>\r
+
+      <p>This file has no external dependencies.</p>\r
+
+      <p><strong>Notes about Nightlighting Effects</strong><br>In order to see the nightlighting, you must install the EP1-Update 1 for Rush Hour/Sim City 4 Deluxe, and then afterwards, install the
+      SC4-Update for nightlighting (note: you have to be logged in in order to see the download link). If this update isn't installed, you won't see any lighting effects on custom BAT buildings.</p>\r
+
+      <p><strong>Disclaimer</strong><br>The usage of this download is on your own risk. I try to test my lots extensively, so they should work properly, but errors may still exist. Feel free to modify
+      the lots for yourself and show them in your city journals, but please don't distribute them without asking first.</p>\r
+
+      <p><strong>Credits</strong><br>Original BATs and lots by homefryes.  A special \"thank you\" goes to BarbyW for putting together the building families, and I also credit JaWood's Aspen Village
+      Condominiums which inspired me to try the \"family\" concept.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/AFS_s.jpg\" data-lightbox=\"lightbox106\" data-alt=\"lightboxAFS_s.jpg|AFS_sn\"
+      target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/AFS_s.jpg\" alt=\"AFS_s\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/AFS_sn.jpg\" data-lightbox=\"lightbox106\" data-alt=\"lightboxAFS_s.jpg|AFS_sn\"
+      target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/AFS_sn.jpg\" alt=\"AFS_sn2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 632
     filename: Homefryes - American Four Square Homes v2_920.zip
     files:
       - _Documents/Homefryes_Readmes/Readme_The_American_Four_Square.htm
@@ -39,12 +100,15 @@ assets:
       - Homefryes/American Four Square Homes/American Four Squares R$$.dat
       - _Documents/Homefryes_Readmes/images/AFS_sn.jpg
       - _Documents/Homefryes_Readmes/images/AFS_s.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/AFS_s.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/AFS_sn.jpg
     lastModified: 2023-08-20T02:47:52-07:00
     name: American Foursquare Homes by Homefryes
     sha256: a217ce3678757355d7045dc768ff9e17633de6c329f31f1fccfe9947daf95a3d
     size: 621364
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/AFS_s.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 1506960
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/106-american-foursquare-homes-by-homefryes
     version: "2"
@@ -53,7 +117,334 @@ assets:
       - Homefryes
     category: 200
     dependencies: []
-    downloads: 719
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><div align=\"justify\">\r
+
+      <p class=\"text_normal\">This is a set of 10 R$$ lots using building and prop families for many possible variations as they grow.  The townhome/condominium buildings are based on a former
+      builder here in the US called Cambridge Homes. The company has since been bought out by another builder, but when Cambridge was building their communities, they would usually give the streets
+      British names. My buildings have the following features:</p>\r
+
+      <p class=\"text_normal\">• eight different colors (designed from real colors found on a vinyl siding website)<br>• right- and left-hand models<br>• 15°, 30° and 45° rotations to allow for
+      multiple townhome communities.</p>\r
+
+      <p class=\"text_normal\"> </p>\r
+
+      <p class=\"text_normal\"><strong>Lot Details and Information</strong></p>\r
+
+      <p><b>Growable Version:</b></p>\r
+
+      <table class=\"text_normal\" style=\"width: 780px; height: 469px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">\r
+
+      <tbody>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 99px;\">Lot size:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">2x2</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">3 x 3 </td>\r
+
+      <td style=\"text-align: center; width: 114px;\">4x4</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">5x4</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">6x4</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">6x6 7/8 houses</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 99px;\">Building style(s):</td>\r
+
+      <td style=\"width: 90px;\">Building: Residential,<br>Building: R$$,<br>Style: Chicago,<br>Style: New York,<br>Style: Houston,</td>\r
+
+      <td style=\"width: 131px;\">Building: Residential,<br>Building: R$$,<br>Style: Chicago,<br>Style: New York,<br>Style: Houston,</td>\r
+
+      <td style=\"width: 114px;\">Building: Residential,<br>Building: R$$,<br>Style: Chicago,<br>Style: New York,<br>Style: Houston,</td>\r
+
+      <td style=\"width: 103px;\">Building: Residential,<br>Building: R$$,<br>Style: Chicago,<br>Style: New York,<br>Style: Houston,<br>Style: Euro</td>\r
+
+      <td style=\"width: 78px;\">Building: Residential,<br>Building: R$$,<br>Style: Chicago,<br>Style: New York,<br>Style: Houston,</td>\r
+
+      <td style=\"width: 116px;\">Building: Residential<br>Building: R$$,<br>Style: Chicago,<br>Style: New York,<br>Style: Houston,</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 99px;\">Growth stage:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">4</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">3</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">4</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">5</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">5</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">5</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 99px;\">Occupants:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">R-$ : 60,<br>R-$$ : 35</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">R-$ : 77,<br>R-$$ : 44</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">R-$ : 182,<br>R-$$ : 102</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">R-$ : 571,<br>R-$$ :316</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">R-$ : 684<br>R-$$ : 379</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">R-$ :730/ 834,<br>R-$$ : 404/ 462</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 99px;\">Bulldoze cost:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">§ 137</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">§ 137</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">§ 245</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">§ 299</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">§ 352</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">§ 406/460</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 99px;\">Building Value:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">§ 865</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">§ 548</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">§ 2626</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">§ 8239</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">§ 9870</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">§ 10533/12034</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 99px;\">Construction Time:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">13 days</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">13 days</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">24 days</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">29 days</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">35 days</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">40/46 days</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 99px;\">Max. Fire Stage:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">3</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">2</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">3</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">4</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">4</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">4</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 99px;\">Power consumption:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">1 MWh/month</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">1 MWh/month</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">2 MWh/month</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">5 MWh/month</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">6 MWh/month</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">6/7 MWh/month</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 99px;\">Water consumption:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">3 Gallons/month</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">2 Gallons/month</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">5 Gallons/month</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">13 Gallons/month</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">15 Gallons/month</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">16/18 Gallons/month</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 99px;\">Air pollution:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">1 over 5 tiles</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">1 over 5 tiles</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">1 over 5 tiles</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">2 over 5 tiles</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">3 over 5 tiles</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">3 over 5 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 99px;\">Water pollution:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">1 over 6 tiles</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">1 over 6 tiles</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">1 over 6 tiles</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">1 over 6 tiles</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">1 over 6 tiles</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">1 over 6 tiles</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 99px;\">Garbage pollution:</td>\r
+
+      <td style=\"width: 90px; text-align: center;\">4 over 0 tiles</td>\r
+
+      <td style=\"text-align: center; width: 131px;\">4 over 0 tiles</td>\r
+
+      <td style=\"text-align: center; width: 114px;\">4 over 0 tiles</td>\r
+
+      <td style=\"text-align: center; width: 103px;\">4 over 0 tiles</td>\r
+
+      <td style=\"text-align: center; width: 78px;\">4 over 0 tiles</td>\r
+
+      <td style=\"text-align: center; width: 116px;\">4 over 0 tiles</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p> </p>\r
+
+      <p><strong>Compatibility</strong><br>This download is only compatible with SimCity 4 \"Rush Hour\" or SimCity 4 Deluxe.<br> <br><strong>Installation</strong></p>\r
+
+      <p><strong>Installation: </strong>Copy/extract the <strong>Homefryes </strong>folder into your plugins folder.</p>\r
+
+      <p><strong>Un-Installing: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder
+      afterwards.</strong><br><strong> </strong><br><strong>File Paths</strong></p>\r
+
+      <p>The following paths are used by the installer system.<br><strong>Lot and Dat Files</strong>     My DocsSimcity 4PluginsHomefryes<br><strong>Readme and JPGs</strong>
+      _DocumentsHomefryes_Readmes<br> <br><strong>Dependencies</strong></p>\r
+
+      <p>To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy BSC Common Dependencies Pack</a>\r
+
+      <ul>\r
+
+      <li><span class=\"text_normal\">BSC MEGA Props D66 Vol01 v2 (and above)</span></li>\r
+
+      <li><span class=\"text_normal\">BSC MEGA Props CP Vol01</span></li>\r
+
+      <li><span class=\"text_normal\">BSC TexturePack Cycledogg V01b</span></li>\r
+
+      <li><span class=\"text_normal\">BSC Textures Vol01</span></li>\r
+
+      <li><span class=\"text_normal\">BSC Textures Vol02</span></li>\r
+
+      <li><span class=\"text_normal\">BSC Textures Vol03 v3</span></li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <p><strong>Notes about Nightlighting Effects</strong><br>In order to see the nightlighting, you must install the EP1-Update 1 for Rush Hour/Sim City 4 Deluxe (or have a pre-patched digital
+      game), and then afterwards, install the SC4-Update for nightlighting (note: you have to be logged in in order to see the download link). If this update isn't installed, you won't see any
+      lighting effects on custom BAT buildings.</p>\r
+
+      <p><strong>Disclaimer</strong><br>The usage of this download is on your own risk. I try to test my lots extensively, so they should work properly, but errors may still exist. Feel free to modify
+      the lots for yourself and show them in your city journals, but please don't distribute them without asking first.</p>\r
+
+      <p><strong>Credits</strong><br>Original BATs and lots by Homefryes.  Modding and packaging by BarbyW.  Project ZIP repackaging by Tyberius06.</p>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/HF_Cambridge_day.jpg\" data-lightbox=\"lightbox107\"
+      data-alt=\"lightboxHF_Cambridge_day.jpg|HF_Cambridge_night\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HF_Cambridge_day.jpg\" alt=\"HF_Cambridge_day\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/HF_Cambridge_night.jpg\" data-lightbox=\"lightbox107\"
+      data-alt=\"lightboxHF_Cambridge_day.jpg|HF_Cambridge_night\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HF_Cambridge_night.jpg\" alt=\"HF_Cambridge_night2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 726
     filename: Homefryes - Cambridge Townhomes_2189.zip
     files:
       - _Documents/Homefryes_Readmes/Readme_Cambridge_Townhomes.htm
@@ -71,12 +462,15 @@ assets:
       - Homefryes/Cambridge Townhomes/Cambridge_Townhomes_R$$.dat
       - _Documents/Homefryes_Readmes/images/HF_Cambridge_night.jpg
       - _Documents/Homefryes_Readmes/images/HF_Cambridge_day.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HF_Cambridge_day.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HF_Cambridge_night.jpg
     lastModified: 2023-08-20T02:47:00-07:00
     name: Cambridge Townhomes by Homefryes
     sha256: a5588670c03ccbfa07b7933db80956c5965683722af303f36f7ac565ec5994a8
     size: 5951607
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HF_Cambridge_day.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 7998787
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/107-cambridge-townhomes-by-homefryes
     version: "1"
@@ -84,7 +478,7 @@ assets:
     authors:
       - zero7
     category: 200
-    downloads: 755
+    downloads: 762
     lastModified: 2023-08-26T23:57:53-07:00
     name: SC4D LEX Legacy - zero7 Residential Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JP_KitagataApts_Day.jpg
@@ -93,8 +487,95 @@ assets:
     authors:
       - NYBT
     category: 200
-    dependencies: []
-    downloads: 501
+    dependencies:
+      - simtropolis/22916-nybt-essentials
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>The SC4D LEX Legacy - NYBT Residentials Pack contains the Residential BATs released by the New York BAT Team (NYBT) on the former SC4
+      Devotion LEX. This is the Dark Nite edition (i.e., for use with the SimFox or gizmo28 Day-Night mods).</p>\r
+
+      <p><strong>CONTENTS</strong></p>\r
+
+      <ul>\r
+
+      <li>Bainbridge Row by Aaron Graham</li>\r
+
+      <li>Beck Arms by Aaron Graham</li>\r
+
+      <li>Concord Arms by Aaron Graham</li>\r
+
+      <li>Kingsbridge Apartments by Aaron Graham</li>\r
+
+      <li>Tapscott Houses by Aaron Graham<strong><br></strong></li>\r
+
+      </ul>\r
+
+      <p><strong>DEPENDENCIES</strong></p>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/22916-nybt-essentials/\">NYBT Essentials</a></li>\r
+
+      </ul>\r
+
+      <p><strong>COMPATIBILITY</strong></p>\r
+
+      <p>This download is only compatible with SimCity 4 \"Rush Hour\" or SimCity 4 Deluxe.</p>\r
+
+      <p><strong><span class=\"text_titel\">INSTALLATION</span></strong></p>\r
+
+      <div align=\"justify\">\r
+
+      <p class=\"text_normal\"><strong>Installation</strong>: Run the Java installer (.jar extension), which will guide you through the installation process, or open it using 7-zip or Keka for manual
+      install. If doing a manual install, go into the \"installation\" folder, then copy/extract the <span style=\"font-weight: bold;\">NYBT</span> parent folder into your plugins. If you extracted
+      the <span style=\"font-style: italic;\">_Documents</span> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r
+
+      <p class=\"text_normal\"><strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder
+      afterwards.</p>\r
+
+      </div>\r
+
+      <p class=\"text_normal\"><strong>CREDITS</strong></p>\r
+
+      <div align=\"justify\">\r
+
+      <div>\r
+
+      <p>BATs:</p>\r
+
+      <ul>\r
+
+      <li>Aaron Graham</li>\r
+
+      </ul>\r
+
+      <p>Project ZIP repackaging for SC4Evermore by Tyberius06, Ulisse Wolf, and Tarkus.</p>\r
+
+      </div>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Day.jpg\" data-lightbox=\"lightbox161\" data-alt=\"lightboxDay.jpg|Dark
+      Night.jpg|Day0.jpg|Dark Night0\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day.jpg\" alt=\"Day\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Dark Night.jpg\" data-lightbox=\"lightbox161\" data-alt=\"lightboxDay.jpg|Dark
+      Night.jpg|Day0.jpg|Dark Night0\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Dark Night.jpg\" alt=\"Dark Night2\"
+      ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Day0.jpg\" data-lightbox=\"lightbox161\" data-alt=\"lightboxDay.jpg|Dark
+      Night.jpg|Day0.jpg|Dark Night0\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day0.jpg\" alt=\"Day03\" ></a>
+      </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 507
     filename: SC4D_LEX_Legacy_NYBT_Residentials_DarkNite_V1.zip
     files:
       - _Documents/readme_SC4D LEX Legacy - NYBT Residentials.html
@@ -154,12 +635,16 @@ assets:
       - NYBT/Aaron Graham/NYBT Bainbridge Row/R$$7_2x2_Bainbridge Row02.dat
       - NYBT/Aaron Graham/NYBT Bainbridge Row/NYBT Bainbridge Row02.SC4Model
       - NYBT/Aaron Graham/NYBT Bainbridge Row/NYBT Bainbridge Row01.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Dark Night.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day0.jpg
     lastModified: 2023-09-24T23:05:49-07:00
     name: SC4D LEX Legacy - NYBT Residentials Pack - DarkNite Version
     sha256: 43dffadfb85d12c81e527ae95556c3449299fdff9f424075586a93867b2c99cb
     size: 7992412
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 8490438
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/161-sc4d-lex-legacy-nybt-residentials-pack-darknite-version
     version: 1-DarkNite
@@ -167,8 +652,96 @@ assets:
     authors:
       - NYBT
     category: 200
-    dependencies: []
-    downloads: 482
+    dependencies:
+      - simtropolis/22916-nybt-essentials
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>The SC4D LEX Legacy - NYBT Residentials Pack contains the Residential BATs released by the New York BAT Team (NYBT) on the former SC4
+      Devotion LEX. This is the Maxis Nite edition, for those not using a Day-Night Mod.</p>\r
+
+      <p><strong>CONTENTS</strong></p>\r
+
+      <ul>\r
+
+      <li>Bainbridge Row by Aaron Graham</li>\r
+
+      <li>Beck Arms by Aaron Graham</li>\r
+
+      <li>Concord Arms by Aaron Graham</li>\r
+
+      <li>Kingsbridge Apartments by Aaron Graham</li>\r
+
+      <li>Tapscott Houses by Aaron Graham<strong><br></strong></li>\r
+
+      </ul>\r
+
+      <p><strong>DEPENDENCIES</strong></p>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/22916-nybt-essentials/\">NYBT Essentials</a></li>\r
+
+      </ul>\r
+
+      <p><strong>COMPATIBILITY</strong></p>\r
+
+      <p>This download is only compatible with SimCity 4 \"Rush Hour\" or SimCity 4 Deluxe.</p>\r
+
+      <p><strong><span class=\"text_titel\">INSTALLATION</span></strong></p>\r
+
+      <div align=\"justify\">\r
+
+      <p class=\"text_normal\"><strong>Installation</strong>: Run the Java installer (.jar extension), which will guide you through the installation process, or open it using 7-zip or Keka for manual
+      install. If doing a manual install, go into the \"installation\" folder, then copy/extract the <span style=\"font-weight: bold;\">NYBT</span> parent folder into your plugins. If you extracted
+      the <span style=\"font-style: italic;\">_Documents</span> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r
+
+      <p class=\"text_normal\"><strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder
+      afterwards.</p>\r
+
+      </div>\r
+
+      <p class=\"text_normal\"><strong>CREDITS</strong></p>\r
+
+      <div align=\"justify\">\r
+
+      <div>\r
+
+      <p>BATs:</p>\r
+
+      <ul>\r
+
+      <li>Aaron Graham</li>\r
+
+      </ul>\r
+
+      <p>Project ZIP repackaging for SC4Evermore by Tyberius06, Ulisse Wolf, and Tarkus.</p>\r
+
+      </div>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Day1.jpg\" data-lightbox=\"lightbox162\"
+      data-alt=\"lightboxDay1.jpg|Night.jpg|Day2.jpg|Night0\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day1.jpg\"
+      alt=\"Day1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Night.jpg\" data-lightbox=\"lightbox162\"
+      data-alt=\"lightboxDay1.jpg|Night.jpg|Day2.jpg|Night0\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Night.jpg\"
+      alt=\"Night2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Day2.jpg\" data-lightbox=\"lightbox162\"
+      data-alt=\"lightboxDay1.jpg|Night.jpg|Day2.jpg|Night0\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day2.jpg\"
+      alt=\"Day23\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 489
     filename: SC4D_LEX_Legacy_NYBT_Residentials_MaxisNite_V1.zip
     files:
       - _Documents/readme_SC4D LEX Legacy - NYBT Residentials.html
@@ -226,12 +799,16 @@ assets:
       - NYBT/Aaron Graham/NYBT Bainbridge Row/R$$7_2x2_Bainbridge Row02.dat
       - NYBT/Aaron Graham/NYBT Bainbridge Row/NYBT Bainbridge Row02.SC4Model
       - NYBT/Aaron Graham/NYBT Bainbridge Row/NYBT Bainbridge Row01.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Night.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day2.jpg
     lastModified: 2023-09-24T23:07:57-07:00
     name: SC4D LEX Legacy - NYBT Residentials Pack - MaxisNite Edition
     sha256: 9b96049214e916560335bbe8e83cce32075764f696e496f0b03fb2649b045913
     size: 8461054
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Day1.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 8875365
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/162-sc4d-lex-legacy-nybt-residentials-pack-maxisnite-edition
     version: 1-MaxisNite
@@ -239,8 +816,235 @@ assets:
     authors:
       - Girafe
     category: 200
-    dependencies: []
-    downloads: 171
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This package includes day, maxisnite and darknite version of 4 rue des Lilas.<br><br>For LOTters, the LOT is available in Lot Editor,
+      under the name: R$$2_2x2_Grfe_4_rue_des_Lilas.<br><br><span style=\"text-decoration: line-through;\">This package includes few props:</span><br><br><span style=\"text-decoration:
+      line-through;\">- Grfe_barbecue</span><br><span style=\"text-decoration: line-through;\">- Grfe_mailbox</span><br><span style=\"text-decoration: line-through;\">-
+      Grfe_stone_small_wall_8x2</span><br><br>**As of v2 (version 2) because of the creation of the collective <a title=\"Grfe_Props_Pack_4_rue_des_Lilas.dat in BSC-VIP Girafe Urbanprops vol01\"
+      href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies</a> compilation, the formerly included props have
+      been taken out and restored in the mentioned dependency pack. The file names stayed the same (see below the dependency section).<br><br>Special thanks to <strong>VIP / SC4 devotion members for
+      their support</strong>.</p>\r
+
+      <p> </p>\r
+
+      <h3>LOT Details and information</h3>\r
+
+      <table style=\"border-collapse: collapse; width: 60%; height: 360px; border-color: #000000; border-style: solid;\" border=\"1\" cellspacing=\"2\" cellpadding=\"2\">\r
+
+      <tbody>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">LOT size</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">(R$$) 2x2</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Building style</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Building: residential, R$$, Style: Euro</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Growth stages</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">2,</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Capacity stages</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">R$: 24; R$$: 15</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Buldoze cost</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">147$</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Worth</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">147</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Max. Fire stage</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">2</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Flammability</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">40</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 48px;\">\r
+
+      <td style=\"width: 47.9245%; height: 48px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Power consumption</td>\r
+
+      <td style=\"width: 52.0755%; height: 48px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">1</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Water consumption</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">2</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Air pollution</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">1</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Water pollution</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">1</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Garbage pollution</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">4</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 47.9245%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">Construction time</td>\r
+
+      <td style=\"width: 52.0755%; height: 24px; background-color: #ecf0f1; vertical-align: middle; border: 1px dashed #000000;\">14</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p> </p>\r
+
+      <h3>INSTALLATION</h3>\r
+
+      <p><b><span lang=\"EN-US\">Installation:</span></b><span lang=\"EN-US\"> copy/extract the <strong>BSC </strong>parent folder into your plugins. If you extracted the <em>~Documents</em> folder
+      into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br><br></span><span style=\"color: #ba372a;\"><strong>Choose ONE from the two subfolders in the
+      4 rue des Lilas folder: either DN Model (dark/true-night) or MN Model (maxis night) and remove the one which you do NOT wish to use.</strong></span><br><br><b><span
+      lang=\"EN-US\">Un-Installing: </span></b><span lang=\"EN-US\">To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder
+      afterwards</span></p>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies v8</a> (or above)\r
+
+      <ul>\r
+
+      <li>BSC Essentials</li>\r
+
+      <li>BSC MEGA Props CP Vol01</li>\r
+
+      <li>BSC-VIP Girafe Urbanpack (CarPack vol04) vol01 - this contains now the <span style=\"color: #e03e2d;\"><big><small>Grfe_Props_Pack_4_rue_des_Lilas.dat</small></big></span> file</li>\r
+
+      <li>BSC-VIP Girafe Carpack vol03 v2</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li>BSC TexturePack Cycledogg V01b</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\">SC4D LEX Legacy - BSC VIP Girafe Flora Pack
+      V3</a>\r
+
+      <ul>\r
+
+      <li>BSC-VIP Girafe Narcissus</li>\r
+
+      <li>BSC-VIP Girafe Lindens</li>\r
+
+      <li>BSC-VIP Girafe Subalpine firs</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\">SimFox Day and Nite Modd</a> - if you are using the DN (Dark Night/True Night) models</li>\r
+
+      </ul>\r
+
+      <p><big></big>Note: run 1 year before timed props work correctly.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_4_rue_des_Lilas_1.jpg\" data-lightbox=\"lightbox220\"
+      data-alt=\"lightboxIcon_4_rue_des_Lilas_1.jpg|Icon_4_rue_des_Lilas_2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_4_rue_des_Lilas_1.jpg\" alt=\"Icon_4_rue_des_Lilas_1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_4_rue_des_Lilas_2.jpg\" data-lightbox=\"lightbox220\"
+      data-alt=\"lightboxIcon_4_rue_des_Lilas_1.jpg|Icon_4_rue_des_Lilas_2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_4_rue_des_Lilas_2.jpg\" alt=\"Icon_4_rue_des_Lilas_22\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 178
     filename: BSC-VIP Girafe 4 Rue Des Lilas v2_2978.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_4_rue_des_Lilas.html
@@ -251,12 +1055,15 @@ assets:
       - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
       - BSC/girafe/4 rue des Lilas/MN Model/pavillon2.9mn-0x5ad0e817_0x6167fe4b_0x30000.SC4Model
       - BSC/girafe/4 rue des Lilas/DN Model/pavillon2.9dn-0x5ad0e817_0x6167fe4b_0x30000.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_4_rue_des_Lilas_1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_4_rue_des_Lilas_2.jpg
     lastModified: 2024-01-22T07:22:02-08:00
     name: BSC-VIP Girafe 4 Rue Des Lilas v2
     sha256: 7c0cf2d6164f80c0ed44f5d44df903999394db829172f255b1dc004f9416697f
     size: 1074082
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_4_rue_des_Lilas_1.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 1286414
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/220-bsc-vip-girafe-4-rue-des-lilas-v2
     version: "2"
@@ -264,8 +1071,244 @@ assets:
     authors:
       - Girafe
     category: 200
-    dependencies: []
-    downloads: 229
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This package includes day, maxisnite and darknite version of villa Libeskind.<br><br>For LOTters, the LOT is available in Lot Editor,
+      under the name: R$$$4_3x2_Grfe_villa_Libeskind.<br><br><s>This package includes few props:<br><br></s></p>\r
+
+      <ul>\r
+
+      <li><s>- Grfe_wood_fence_A</s></li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><s>- Grfe_hedge...</s></li>\r
+
+      </ul>\r
+
+      <p><span lang=\"EN-US\">The LE props of this pack have been datpacked into two files: <strong>Grfe_Props_Pack_LE_Hedges.dat</strong> and <strong>Grfe_Props_Pack_Villa
+      Libeskind.dat</strong>**.<br><span style=\"text-decoration: line-through;\">Please use the provided Cleanitol_BSC-VIP Girafe Villa Libeskind v2.txt to remove the single sc4model+sc4desc file
+      combos.</span></span><br>**As of v2 (version 2) because of the creation of the collective <a title=\"Grfe_Props_Pack_LE_Hedges.dat in BSC-VIP Girafe Hedges and the Grfe_Props_Pack_Villa
+      Libeskind.dat in BSC-VIP Girafe Urbanprops vol01\" href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common
+      Dependencies</a> compilation, the formerly included props have been taken out and restored in the mentioned dependency pack. The file names stayed the same (see below the dependency
+      section).<br>Special thanks to <strong>Orange, Simfox, Badsim, Carl and all BSC members</strong>.</p>\r
+
+      <h3>LOT Details and information:</h3>\r
+
+      <table style=\"border-collapse: collapse; width: 60%; background-color: #ced4d9; border-color: #000000; border-style: solid;\" border=\"1\" cellspacing=\"2\" cellpadding=\"2\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">LOT size</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">(R$$$) 3x2</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Building style</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Building: residential, R$$$, Style: Euro</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Growth stages</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">4</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Capacity stages</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">R$: 81; R$$: 46 ; R$$$: 22</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Buldoze cost</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">143$</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Worth</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">143</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Max. Fire stage</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">3</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Flammability</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">35</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Power consumption</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">3</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Water consumption</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">7</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Air pollution</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">1</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Water pollution</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">1</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Garbage pollution</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">4</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">Construction time</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000;\">14</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p> </p>\r
+
+      <h3>Installation:</h3>\r
+
+      <p><b><span lang=\"EN-US\">Installation:</span></b><span lang=\"EN-US\"> copy/extract the <strong>BSC </strong>parent folder into your plugins. If you extracted the <em>~Documents</em> folder
+      into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br><br></span><span style=\"color: #ba372a;\"><strong>Choose ONE from the two subfolders in the
+      Villa Libeskind folder: either DN Model (dark/true-night) or MN Model (maxis night) and remove the one which you do NOT wish to use.</strong></span>  <span lang=\"EN-US\"> </span></p>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Un-Installing: </span></b><span lang=\"EN-US\">To un-install the files, simply bulldoze every lot from this download in your cities and delete the
+      files from the plugins folder afterwards.</span></p>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies v8</a> (or above)\r
+
+      <ul>\r
+
+      <li>BSC Essentials</li>\r
+
+      <li>BSC-VIP Girafe Hedges</li>\r
+
+      <li>BSC-VIP Girafe Urbanpack (CarPack vol04) vol01 - this contains now the <big><small>G</small></big><big><small>rfe_Props_Pack_Villa Libeskind.dat</small></big> file</li>\r
+
+      <li>BSC-VIP Girafe Carpack vol03 v2</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li>BSC TexturePack Cycledogg V01b</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\">SC4D LEX Legacy - BSC VIP Girafe Flora Pack
+      V3</a>\r
+
+      <ul>\r
+
+      <li>BSC-VIP Girafe Honey Locust</li>\r
+
+      <li>BSC-VIP Girafe Common Spruce</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\">SimFox Day and Nite Modd</a> - if you are using the DN (Dark Night/True Night) models</li>\r
+
+      </ul>\r
+
+      <p>Note: run 1 year before timed props work correctly.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_villa_Libeskind_1.jpg\" data-lightbox=\"lightbox221\"
+      data-alt=\"lightboxIcon_villa_Libeskind_1\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_villa_Libeskind_1.jpg\"
+      alt=\"Icon_villa_Libeskind_1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 237
     filename: BSC-VIP Girafe Villa Libeskind v2_3071.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_villa_Libeskind.html
@@ -274,12 +1317,14 @@ assets:
       - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
       - BSC/girafe/Villa Libeskind/MN Model/Villa1.61mn-0x5ad0e817_0xc20afa3d_0x30000.SC4Model
       - BSC/girafe/Villa Libeskind/DN Model/Villa1.61dn-0x5ad0e817_0xc20afa3d_0x30000.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_villa_Libeskind_1.jpg
     lastModified: 2024-01-22T07:25:55-08:00
     name: BSC-VIP Girafe Villa Libeskind v2
     sha256: 0d688c9090400af2cdacb3918ce08128024927463a362ab2af0c48eba1c0deb6
     size: 2168493
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_villa_Libeskind_1.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 2558345
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/221-bsc-vip-girafe-villa-libeskind-v2
     version: "2"
@@ -289,55 +1334,296 @@ assets:
     category: 200
     dependencies:
       - simtropolis/35790-sc4-cleanitol
-    description: >-
-      A set of apartments from SOMY. There are four different styles of low wealth residential buildings plus a water tower. These have been updated using SC4PIM and the models have been centred using
-      cogeo's Model Tweaker.
+    description: "<body>\r
 
-      There are three different style of 2x5 growable lot - the original style made by SOMY, a set of lots with a LH corner and a set with a RH corner. There is also a set of 5x2 low wealth
-      residential lots.
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A set of apartments from SOMY. There are four different styles of low wealth residential buildings plus a water tower. These have been
+      updated using SC4PIM and the models have been centred using cogeo's Model Tweaker.<br>There are three different style of 2x5 growable lot - the original style made by SOMY, a set of lots with a
+      LH corner and a set with a RH corner. There is also a set of 5x2 low wealth residential lots. <br><span style=\"color: #e03e2d;\"><strong>There is a Cleanitol text file included as you will need
+      to remove the original lots and models after you have bulldozed any existing lots from your cities.</strong></span> It is highly recommended to run the provided <em>Cleanitol_SOMY Danchi
+      Apartments.txt</em> cleanitol file for the compilation with one of the following 3rd party cleanitol tools, which can help you remove the old packs or you can remove them manually:<br><br><a
+      href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17 Cleanitol </a>(new tool)<br><br><a
+      href=\"https://sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\">BSC Cleanitol</a> (old tool).</p>\r
 
-      There is a Cleanitol text file included as you will need to remove the original lots and models after you have bulldozed any existing lots from your cities. It is highly recommended to run the
-      provided Cleanitol_SOMY Danchi Apartments.txt cleanitol file for the compilation with one of the following 3rd party cleanitol tools, which can help you remove the old packs or you can remove
-      them manually:
+      <h3>Lot Details and Information</h3>\r
 
+      <p><b>Growable Version:</b></p>\r
 
-      nos.17 Cleanitol (new tool)
+      <table class=\"text_normal\" border=\"0\" width=\"600\" cellspacing=\"0\" cellpadding=\"2\">\r
 
+      <tbody>\r
 
-      BSC Cleanitol (old tool).
+      <tr bgcolor=\"#e9ebf0\">\r
 
+      <td width=\"150\">Lot size:</td>\r
 
-      Lot Details and Information
+      <td width=\"450\">2 x 5 and 5x2 tiles</td>\r
 
+      </tr>\r
 
-      Growable Version:
+      <tr>\r
 
-         Lot size: 2 x 5 and 5x2 tiles   Building style(s): Building: Residential,Building: R$,Style: Chicago,Style: New York,Style: Houston,Style: Euro   Growth stage: 5   Occupants: from 290 to 382 depending on model style   Bulldoze cost: § 247 to 284   Building Value: § 3941 to 5191   Construction Time: 26 days   Max. Fire Stage: 3   Power consumption: 2 MWh/month   Water consumption: 4 Gallons/month   Air pollution: 1 over 5 tiles   Water pollution: 1 over 5 tiles   Garbage pollution: 4 over 0 tiles
+      <td>Building style(s):</td>\r
 
-      Water Tower:
+      <td>Building: Residential,Building: R$,Style: Chicago,Style: New York,Style: Houston,Style: Euro</td>\r
 
-         Lot size: 1 x 1 tiles   Menu position: Building: Utility,Building: Water   Jobs: n/a   Plop cost: § 650   Bulldoze cost: § 30   Monthly cost: § 200   Water Produced 9400 gallons/month   Max. Fire Stage: 3   Power consumption: 2 MWh/month   Water consumption: 5 Gallons/month   Air pollution: 0 over 2 tiles   Water pollution: 0 over 0 tiles   Garbage pollution: 0 over 0 tiles      Installation
+      </tr>\r
 
-      Installation: Copy/Extract the SOMY parent folder into your Plugins. If you extracted the ~Documents folder into your plugins, too, it's highly recommended to keep it, but move it out of the
-      Plugins folder.
+      <tr bgcolor=\"#e9ebf0\">\r
 
+      <td>Growth stage:</td>\r
 
-      Un-Installing: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      <td>5</td>\r
 
+      </tr>\r
 
-      Dependencies:
+      <tr>\r
 
-      To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.
+      <td>Occupants:</td>\r
 
-        - SC4D LEX Legacy - SOMY Dependencies Pack V2
+      <td>from 290 to  382 depending on model style</td>\r
 
-        - SOMY Mega Props vol05 (it contains now the previously included SOMY_Danchi_Apartments.dat file)
+      </tr>\r
 
-      Credits:
+      <tr bgcolor=\"#e9ebf0\">\r
 
+      <td>Bulldoze cost:</td>\r
 
-      Original models and lots by SOMY. The models have been centred using cogoe's Model Tweaker and the descriptos have been remade using wounanagaine's SC4PIM. These lots are CAMpatible.
-    downloads: 250
+      <td>§ 247 to 284</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Building Value:</td>\r
+
+      <td>§ 3941 to 5191</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Construction Time:</td>\r
+
+      <td>26 days</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Max. Fire Stage:</td>\r
+
+      <td>3</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Power consumption:</td>\r
+
+      <td>2 MWh/month</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Water consumption:</td>\r
+
+      <td>4 Gallons/month</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Air pollution:</td>\r
+
+      <td>1 over 5 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Water pollution:</td>\r
+
+      <td>1 over 5 tiles</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Garbage pollution:</td>\r
+
+      <td>4 over 0 tiles</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p><br><b>Water Tower:</b></p>\r
+
+      <table class=\"text_normal\" border=\"0\" width=\"600\" cellspacing=\"0\" cellpadding=\"2\">\r
+
+      <tbody>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td width=\"150\">Lot size:</td>\r
+
+      <td width=\"450\">1 x 1 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Menu position:</td>\r
+
+      <td>Building: Utility,Building: Water</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Jobs:</td>\r
+
+      <td>n/a</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Plop cost:</td>\r
+
+      <td>§ 650</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Bulldoze cost:</td>\r
+
+      <td>§ 30</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Monthly cost:</td>\r
+
+      <td>§ 200</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Water Produced</td>\r
+
+      <td>9400 gallons/month</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Max. Fire Stage:</td>\r
+
+      <td>3</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Power consumption:</td>\r
+
+      <td>2 MWh/month</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Water consumption:</td>\r
+
+      <td>5 Gallons/month</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Air pollution:</td>\r
+
+      <td>0 over 2 tiles</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Water pollution:</td>\r
+
+      <td>0 over 0 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Garbage pollution:</td>\r
+
+      <td>0 over 0 tiles</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <h3> </h3>\r
+
+      <h3>Installation</h3>\r
+
+      <p class=\"text_normal\"><b>Installation:</b> Copy/Extract the <strong>SOMY</strong> parent folder into your Plugins. If you extracted the <em>~Documents</em> folder into your plugins, too, it's
+      highly recommended to keep it, but move it out of the Plugins folder.</p>\r
+
+      <p class=\"text_normal\"><b>Un-Installing: </b>To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r
+
+      <p class=\"text_normal\"><strong><span style=\"font-size: 24px;\">Dependencies</span></strong>:<br>To ensure the proper functionality, make sure the files mentioned below are installed in the
+      plugins folder.</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/174-sc4d-lex-legacy-somy-dependencies-pack\" target=\"_blank\" rel=\"noopener\"><span class=\"text_normal\">SC4D LEX Legacy - SOMY
+      Dependencies Pack V2</span></a></li>\r
+
+      <ul>\r
+
+      <li><span class=\"text_normal\">SOMY Mega Props vol05 (it contains now the previously included SOMY_Danchi_Apartments.dat file)</span></li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <p><span class=\"text_normal\"><strong><span style=\"font-size: 24px;\">Credits</span></strong>:</span></p>\r
+
+      <p><span class=\"text_normal\">Original models and lots by SOMY. The models have been centred using cogoe's Model Tweaker and the descriptos have been remade using wounanagaine's SC4PIM. These
+      lots are CAMpatible.</span></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SOMYDanchi_s.jpg\" data-lightbox=\"lightbox244\"
+      data-alt=\"lightboxSOMYDanchi_s.jpg|SOMYDanchi_sn\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SOMYDanchi_s.jpg\"
+      alt=\"SOMYDanchi_s\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SOMYDanchi_sn.jpg\" data-lightbox=\"lightbox244\"
+      data-alt=\"lightboxSOMYDanchi_s.jpg|SOMYDanchi_sn\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SOMYDanchi_sn.jpg\"
+      alt=\"SOMYDanchi_sn2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 258
     filename: SOMY Danchi Apartments LEX.zip
     files:
       - ~Documents/SOMY_Readmes/Readme_SOMY_Danchi_Apartments.htm
@@ -357,7 +1643,7 @@ assets:
     sha256: d5ddcde6e67dd5916eda941b0f7f897c8407bae6da3adb7207d38f7515b581b1
     size: 94019
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SOMYDanchi_s.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 158156
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/244-somy-danchi-apartments
     version: "1"
@@ -367,51 +1653,181 @@ assets:
     category: 200
     dependencies:
       - simtropolis/35790-sc4-cleanitol
-    description: >-
-      A set of 10 houses by SOMY that have been updated using the X_Tool and also have had the dummy building replaced by a building model. The capacity now varies according to the number and size of
-      houses on the lot. All except one are stage 3 R$$ and the lotting is unchanged from the originals.
+    description: "<body>\r
 
-      If you have the originals please bulldoze any in your cities before installing these as the IIDs are also unchanged and although the city should not crash you may have problems.
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A set of 10 houses by <strong>SOMY </strong>that have been updated using the X_Tool and also have had the dummy building replaced by a
+      building model. The capacity now varies according to the number and size of houses on the lot. All except one are stage 3 R$$ and the lotting is unchanged from the originals.<br><strong><span
+      style=\"color: #e03e2d;\">If you have the originals please bulldoze any in your cities before installing these as the IIDs are also unchanged and although the city should not crash you may have
+      problems.</span></strong></p>\r
 
+      <h3>Lot Details and Information</h3>\r
 
-      Lot Details and Information
+      <p><b>Growable Version:</b></p>\r
 
+      <table class=\"text_normal\" border=\"0\" width=\"600\" cellspacing=\"0\" cellpadding=\"2\">\r
 
-      Growable Version:
+      <tbody>\r
 
-         Lot size: 1 x 4 tiles   Building style(s): Building: Residential,Building: R$$,Style: Chicago,Style: New York,Style: Houston,Style: Euro   Growth stage: 3   Occupants: R-$ : 44 to 94,R-$$ : 26 to 53   Bulldoze cost: § 215   Worth: § 678   Construction Time: 21 days   Max. Fire Stage: 3   Power consumption: 1 MWh/month   Water consumption: 2 Gallons/month   Air pollution: 1 over 5 tiles   Water pollution: 1 over 6 tiles   Garbage pollution: 4 over 0 tiles
+      <tr bgcolor=\"#e9ebf0\">\r
 
-      Installation: Copy/Extract the SOMY parent folder into your Plugins. If you extracted the ~Documents folder into your plugins, too, it's highly recommended to keep it, but move it out of the
-      Plugins folder.
+      <td width=\"150\">Lot size:</td>\r
 
+      <td width=\"450\">1 x 4 tiles</td>\r
 
-      Un-Installing: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </tr>\r
 
+      <tr>\r
 
-      It is highly recommended to run the provided Cleanitol_SOMY_jpn_houses.txt cleanitol file for the compilation with one of the following 3rd party cleanitol tools, which can help you remove the
-      old packs or you can remove them manually:
+      <td>Building style(s):</td>\r
 
+      <td>Building: Residential,Building: R$$,Style: Chicago,Style: New York,Style: Houston,Style: Euro</td>\r
 
-      nos.17 Cleanitol (new tool)
+      </tr>\r
 
+      <tr bgcolor=\"#e9ebf0\">\r
 
-      BSC Cleanitol (old tool).
+      <td>Growth stage:</td>\r
 
+      <td>3</td>\r
 
-      Dependencies
+      </tr>\r
 
+      <tr>\r
 
-      To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.
+      <td>Occupants:</td>\r
 
-        - SC4D LEX Legacy - SOMY Dependencies Pack V2
+      <td>R-$ : 44 to 94,R-$$ : 26 to 53</td>\r
 
-        - SOMY Mega Props vol07
+      </tr>\r
 
-      Credits
+      <tr bgcolor=\"#e9ebf0\">\r
 
+      <td>Bulldoze cost:</td>\r
 
-      Original BATs and lots by SOMY. Updating by BarbyW
-    downloads: 216
+      <td>§ 215</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Worth:</td>\r
+
+      <td>§ 678</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Construction Time:</td>\r
+
+      <td>21 days</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Max. Fire Stage:</td>\r
+
+      <td>3</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Power consumption:</td>\r
+
+      <td>1 MWh/month</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Water consumption:</td>\r
+
+      <td>2 Gallons/month</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Air pollution:</td>\r
+
+      <td>1 over 5 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Water pollution:</td>\r
+
+      <td>1 over 6 tiles</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td>Garbage pollution:</td>\r
+
+      <td>4 over 0 tiles</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p> </p>\r
+
+      <p class=\"text_normal\"><b>Installation:</b> Copy/Extract the <strong>SOMY </strong>parent folder into your Plugins. If you extracted the <em>~Documents</em> folder into your plugins, too, it's
+      highly recommended to keep it, but move it out of the Plugins folder.</p>\r
+
+      <p class=\"text_normal\"><b>Un-Installing: </b>To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r
+
+      <p class=\"text_normal\">It is highly recommended to run the provided <em>Cleanitol_SOMY_jpn_houses.txt</em> cleanitol file for the compilation with one of the following 3rd party cleanitol
+      tools, which can help you remove the old packs or you can remove them manually:<br><br><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17 Cleanitol </a>(new
+      tool)<br><br><a href=\"https://sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\">BSC Cleanitol</a> (old tool).</p>\r
+
+      <h3 class=\"text_normal\">Dependencies</h3>\r
+
+      <p class=\"text_normal\">To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/174-sc4d-lex-legacy-somy-dependencies-pack\" target=\"_blank\" rel=\"noopener\"><span class=\"text_normal\">SC4D LEX Legacy - SOMY
+      Dependencies Pack V2</span></a></li>\r
+
+      <ul>\r
+
+      <li><span class=\"text_normal\">SOMY Mega Props vol07</span></li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <h3><span class=\"text_normal\">Credits</span></h3>\r
+
+      <p><span class=\"text_normal\">Original BATs and lots by SOMY. Updating by BarbyW</span></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/somy-jpn-house1x4.jpg\" data-lightbox=\"lightbox245\"
+      data-alt=\"lightboxsomy-jpn-house1x4.jpg|simtop3\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/somy-jpn-house1x4.jpg\" alt=\"somy-jpn-house1x4\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/simtop3.jpg\" data-lightbox=\"lightbox245\"
+      data-alt=\"lightboxsomy-jpn-house1x4.jpg|simtop3\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/simtop3.jpg\"
+      alt=\"simtop32\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 221
     filename: SOMY Modern Japanese House Set LEX.zip
     files:
       - ~Documents/SOMY_Readmes/somy-jpn-house1x4.jpg
@@ -431,7 +1847,7 @@ assets:
     sha256: aeb9163ffe2b9d884ceecb0bfee17362ef05aee7c900b3178f843f65904a041a
     size: 63543
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/somy-jpn-house1x4.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 121286
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/245-somy-modern-japanese-house-set
     version: "1"
@@ -439,8 +1855,126 @@ assets:
     authors:
       - Romualdillo
     category: 200
-    dependencies: []
-    downloads: 90
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><h3><span style=\"color: #e03e2d;\">IMPORTANT INFORMATION</span></h3>\r
+
+      <div><em>This lot set was designed with manually set occupancy stats aiming for more realistic numbers on residents. It's stats for residents are much lower/different that what you would get
+      with Maxis PIM or SC4 PIM-X. It seems because of this playing with this lot set requires a more restricted gameplay. Since there seems to be a clear intention that it was deliberatey designed
+      this way, we did not update/adjust the values, but in the future, if time allows us, there's gonna be a new adjusted lot set provided which will be more in balance with the general game
+      play.</em></div>\r
+
+      <div> </div>\r
+
+      <h3>Description</h3>\r
+
+      <div> </div>\r
+
+      <div>This is a low wealth and low density residential set inspired in Spanish urban architecture from 1800's to 1920's. You can find this architecture in large areas of Spain and South
+      America. </div>\r
+
+      <div>This kind of houses are a variation of traditional Roman-Arabic houses in Spain, which were built around an inner courtyard. By the years most of these houses were split into two houses,
+      now with side-yards. During the XIX century new houses were built already in such way due to the lack of space in the fast growing cities.</div>\r
+
+      <div> </div>\r
+
+      <div>I tried to make the houses to match the style of as many countries as possible, so perhaps you won't recognize any special country in them. I hope you like them.</div>\r
+
+      <div> </div>\r
+
+      <div>This is my first building set.</div>\r
+
+      <div> </div>\r
+
+      <div>Lots' Information:</div>\r
+
+      <div> </div>\r
+
+      <div>* Zone: Residential</div>\r
+
+      <div>* Density: Low Density</div>\r
+
+      <div>* Wealth: Low Wealth</div>\r
+
+      <div>* Building Style: European</div>\r
+
+      <div>* Lot Sizes: 1x2,1x3,2x2,2x3 (corner lots: 1x2, 2x2)</div>\r
+
+      <div>* Inhabitants: 7 to 35 (7 per home)</div>\r
+
+      <div> </div>\r
+
+      <div>The lots represent different growth stages. You'll find lots with a lot of free space and others totally built. Normally all the free spaces disappear with the natural city growth.</div>\r
+
+      <div> </div>\r
+
+      <div>Please use the provided <em>Cleanitol_Romualdillo Spanish R$ Residental Lots.txt</em> to remove the old files by  one of the 3rd party cleanitol tools:</div>\r
+
+      <div> </div>\r
+
+      <div>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17 Cleanitol</a></p>\r
+
+      <p><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol</a></p>\r
+
+      </div>\r
+
+      <div>*****Installing Instructions*****</div>\r
+
+      <div> </div>\r
+
+      <div>Copy/extract the <strong>Romualdillo </strong>parent folder into your plugins. If you extracted the <em>~Document</em>s folder into your plugins, too, it's highly recommended to keep it,
+      but move it out of the Plugins folder.</div>\r
+
+      <div> </div>\r
+
+      <div>*****Dependencies*****</div>\r
+
+      <div> </div>\r
+
+      <div><a href=\"/index.php/downloads/download/22-dependencies/269-romualdillo-props-vol01-v1-2\" target=\"_blank\" rel=\"noopener\">Romualdillo Props VOL01 v1.2</a></div>\r
+
+      <div> </div>\r
+
+      <div><a href=\"/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC VIP
+      Girafe Flora V3</a></div>\r
+
+      <div>Girafe's Cypresses</div>\r
+
+      <div> </div>\r
+
+      <div> </div>\r
+
+      <div> </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Romualdillo - Spanish R Residental Lots.jpg\" data-lightbox=\"lightbox270\"
+      data-alt=\"lightboxRomualdillo - Spanish R Residental Lots.jpg|Romualdillo - Spanish R Residental Lots-n.jpg|Romualdillo - Spanish R Residental Lots2\" target=\"_blank\"><img
+      class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Romualdillo - Spanish R Residental Lots.jpg\" alt=\"Romualdillo - Spanish R Residental Lots\"
+      ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Romualdillo - Spanish R Residental Lots-n.jpg\" data-lightbox=\"lightbox270\"
+      data-alt=\"lightboxRomualdillo - Spanish R Residental Lots.jpg|Romualdillo - Spanish R Residental Lots-n.jpg|Romualdillo - Spanish R Residental Lots2\" target=\"_blank\"><img
+      class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Romualdillo - Spanish R Residental Lots-n.jpg\" alt=\"Romualdillo - Spanish R Residental
+      Lots-n2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Romualdillo - Spanish R Residental Lots2.jpg\" data-lightbox=\"lightbox270\"
+      data-alt=\"lightboxRomualdillo - Spanish R Residental Lots.jpg|Romualdillo - Spanish R Residental Lots-n.jpg|Romualdillo - Spanish R Residental Lots2\" target=\"_blank\"><img
+      class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Romualdillo - Spanish R Residental Lots2.jpg\" alt=\"Romualdillo - Spanish R Residental
+      Lots23\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 100
     filename: Romualdillo - Spanish R Residental Lots.zip
     files:
       - ~Documents/Romualdillo_Readmes/Spanish R$ Residental Lots.ReadMe.txt
@@ -453,12 +1987,16 @@ assets:
       - Romualdillo/Spanish R$ Residental Lots Vol01/Rom Spanish R$ Residential Lots Stage 3.dat
       - Romualdillo/Spanish R$ Residental Lots Vol01/Rom Spanish R$ Residential Lots Stage 2.dat
       - Romualdillo/Spanish R$ Residental Lots Vol01/Rom Spanish R$ Residential Lots Stage 1.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Romualdillo - Spanish R Residental Lots.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Romualdillo - Spanish R Residental Lots-n.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Romualdillo - Spanish R Residental Lots2.jpg
     lastModified: 2024-04-16T09:06:53-07:00
     name: Romualdillo - Spanish Low Wealth Residental Lots
     sha256: 4b32c1ff5424ed789ab7bcfea357fc534e7233bcd3cf95ff76dff3252b8c2719
     size: 514882
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Romualdillo - Spanish R Residental Lots.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 1619645
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/270-romualdillo-spanish-low-wealth-residental-lots
     version: "1"
@@ -466,7 +2004,7 @@ assets:
     authors:
       - SimGoober
     category: 200
-    downloads: 218
+    downloads: 240
     lastModified: 2024-05-01T07:54:12-07:00
     name: SC4D LEX Legacy - BSC SimGoober Residentials
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_RLS_Ashton_Day.jpg
@@ -475,7 +2013,7 @@ assets:
     authors:
       - SimGoober
     category: 200
-    downloads: 160
+    downloads: 174
     lastModified: 2024-05-02T16:14:31-07:00
     name: BSC SG JENX Parisian Corner Residentials
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_JenxParisHomes01.jpg
@@ -485,7 +2023,28 @@ assets:
       - sc4evermore
     category: 200
     dependencies: []
-    downloads: 1178
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A complete pack of homes made by JMyers2043 from the BSC Team.</p>\r
+
+      <p>Dependencies: <a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy BSC Common Dependencies Pack</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 1193
     filename: SC4D_LEX_LEGACY_JMyers_Homes_Pack_V1.zip
     files:
       - ~Documents/JMyers Homes Vol 1.html
@@ -529,11 +2088,12 @@ assets:
       - BSC/JMyers/Abby Glen/JFM_Homes_AbbyGlen_Lots.dat
       - BSC/JMyers/Allegheny/JFM_Homes_Allegheny_Models.dat
       - BSC/JMyers/Allegheny/JFM_Homes_Allegheny_Lots.dat
+    images: []
     lastModified: 2023-07-20T02:39:41-07:00
     name: SC4D LEX Legacy - JMyers Homes Pack
     sha256: d544d11a9df1e2956d9df890bb865b814aa3516cc6694345463c696a26ac76fd
     size: 7403678
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 7417153
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/4-sc4d-lex-legacy-jmyers-homes-pack
     version: "1"
@@ -541,8 +2101,38 @@ assets:
     authors:
       - sc4evermore
     category: 200
-    dependencies: []
-    downloads: 897
+    dependencies:
+      - simtropolis/20966-peg-mtp-super-pack
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A complete pack of Early 19th Century Residentials from c.p.</p>\r
+
+      <p>Dependencies:</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">LEX Legacy BSC Common Dependencies Pack</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\">PEG MTP Super Pack (on STEX)</a></li>\r
+
+      </ul> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 910
     filename: SC4D_LEX_LEGACY_CP_Early19thCenturyResidentials_Pack_V1.zip
     files:
       - ~Documents/LEX_TenementsMain.jpg
@@ -559,11 +2149,12 @@ assets:
       - BSC/CP/R$$MediumHouses/CP_Early19thCent_MedHse_Lots.dat
       - BSC/CP/R$$$Houses/CP_Early19thCentury_R$$$Houses_Models.dat
       - BSC/CP/R$$$Houses/CP_Early19thCentury_R$$$Houses_Lots.dat
+    images: []
     lastModified: 2023-07-20T14:14:56-07:00
     name: SC4D LEX Legacy - CP Early 19th-Century Residentials Pack
     sha256: cf375e19a09ec1fb16f7e85f7144067187b260ef22b20dcb14f0be1336a3d0b2
     size: 13165904
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 13176163
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/5-sc4d-lex-legacy-cp-early19thcenturyresidentials-pack
     version: "1"
@@ -572,7 +2163,240 @@ assets:
       - Mattb325
     category: 200
     dependencies: []
-    downloads: 1047
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the Multi-Unit Residentials by legendary BSC BATer Mattb325, which had been available on the
+      Lot Exchange (LEX) at SC4 Devotion. It includes the contents of 46 previously separate downloads. After battling a number of technical issues, software incompatibility ultimately shuttered the
+      LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one
+      go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>There are two versions of this package that exist as separate downloads. One (MN) is for Maxis Nite (the default night settings), while the other (DN) is for Dark Nite, and is optimized for
+      use with darker Night Mods, such as the mods by SimFox and gizmo28.</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <p><strong>Revision 2 (14 August 2023): Moved Lansdown Terrace Model to improve support for Lansdown Terrace Commercial in Commercial W2W Pack.</strong></p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      To expand options, click the small \"+\" next to the name of the section.</p>\r
+
+      <p>Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab
+      pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p><strong>NOTE about the Casa de Manana</strong>: The Casa de Manana building has two options, only one of which can be installed at one time. One is for use in Subtropical environments (think
+      palm trees) and one for Temperate environments. You can select which one you want in the installer.</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures):</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack (Version 4 / 9 August 2023 or
+      later)</a></li>\r
+
+      <li>Mattb325 Urban Civics Prop Pack Vol 01 - <a href=\"/index.php/downloads/download/22-dependencies/96-mattb325-urban-civics-prop-pack-vol01-darknite\">Dark Nite</a> or <a
+      href=\"/index.php/downloads/download/22-dependencies/97-mattb325-urban-civics-prop-pack-vol01-maxisnite\">Maxis Nite</a> Version</li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\">JENXPorkie Expanded Porkie Props</a></li>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Mattb325</li>\r
+
+      </ul>\r
+
+      <p>This package was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\"><a name=\"contents\"></a>\r
+
+      <h4> Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following previously-separate downloads. None of the Lots contained in the package exceed Stage 8, and all are designed for use with or without the Colossus Addon
+      Mod (CAM).</p>\r
+
+      <ol>\r
+
+      <li>Ainslee Condos</li>\r
+
+      <li>Alhambra Duplex</li>\r
+
+      <li>Alighieri Apts</li>\r
+
+      <li>Almeda Townhomes</li>\r
+
+      <li>Apartments Merdiques</li>\r
+
+      <li>Bayauxlaan Apartments</li>\r
+
+      <li>Beurlay Apartments</li>\r
+
+      <li>Beverly Apartments</li>\r
+
+      <li>Boom Style Terraces</li>\r
+
+      <li>Casa de Manana (comes in Subtropical or Temperate option - only one can be installed at one time)</li>\r
+
+      <li>City Rd Chippendale</li>\r
+
+      <li>Claridge II Townhomes</li>\r
+
+      <li>Commons Court</li>\r
+
+      <li>Confluence Apartments</li>\r
+
+      <li>Cube Apartments</li>\r
+
+      <li>DeVries Villa</li>\r
+
+      <li>Earls Court</li>\r
+
+      <li>Embassy Apartments</li>\r
+
+      <li>Emporio Apartments</li>\r
+
+      <li>Englewood Condos</li>\r
+
+      <li>Ennuyeuse Apartments</li>\r
+
+      <li>Exhibition Rd Kensington</li>\r
+
+      <li>Forbes St</li>\r
+
+      <li>Gertrude Apartments</li>\r
+
+      <li>Grosvenor Mansions</li>\r
+
+      <li>Holland Park</li>\r
+
+      <li>Houston Place Apartments</li>\r
+
+      <li>Kensington Apartments</li>\r
+
+      <li>L'Aquila Apartments</li>\r
+
+      <li>Lansdowne Terrace</li>\r
+
+      <li>Lennox Gardens</li>\r
+
+      <li>Little Riley Street</li>\r
+
+      <li>Modern R$ Terraces</li>\r
+
+      <li>Modern Townhouses</li>\r
+
+      <li>Modern Villas</li>\r
+
+      <li>Parkland Lofts</li>\r
+
+      <li>Regency Terraces</li>\r
+
+      <li>Regis Condos</li>\r
+
+      <li>Saville Condos</li>\r
+
+      <li>Small Apartments</li>\r
+
+      <li>The Residence</li>\r
+
+      <li>Veinte Apartments</li>\r
+
+      <li>Vivo Apartments</li>\r
+
+      <li>Wan Wan Apartments</li>\r
+
+      <li>Waterloo Apartments</li>\r
+
+      <li>Windmill St</li>\r
+
+      </ol>\r
+
+      <p>Various pieces of original documentation can be found in the \"~Documents\" folder, which, while installed in the Plugins directory, should be removed.</p>\r
+
+      <p><strong>rev1 update (11 Aug 2023)</strong> - moved Original Documents into .zip file to avoid issues with the Java installer reading them instead of installing them, and redesigned behavior
+      of folder installation process to have subfolders, instead of all files loose in the Residential Multi-Unit folder.  If you're already using Version 1, this update is strictly for housekeeping,
+      and not critical.  No changes to the actual SC4 content have been made.</p>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Almeda_lg0.jpg\" data-lightbox=\"lightbox98\"
+      data-alt=\"lightboxAlmeda_lg0.jpg|Beurlay_lg0.jpg|BoomStyleTerraces0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Almeda_lg0.jpg\" alt=\"Almeda_lg0\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Beurlay_lg0.jpg\" data-lightbox=\"lightbox98\"
+      data-alt=\"lightboxAlmeda_lg0.jpg|Beurlay_lg0.jpg|BoomStyleTerraces0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Beurlay_lg0.jpg\" alt=\"Beurlay_lg02\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/BoomStyleTerraces0.jpg\" data-lightbox=\"lightbox98\"
+      data-alt=\"lightboxAlmeda_lg0.jpg|Beurlay_lg0.jpg|BoomStyleTerraces0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BoomStyleTerraces0.jpg\" alt=\"BoomStyleTerraces03\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 1056
     filename: SC4D_LEX_LEGACY_Mattb325_Residential_Multi-Unit_DarkNite.zip
     files:
       - readme_mattb325_residential_multi-unit.html
@@ -953,12 +2777,16 @@ assets:
       - BSC/Mattb325/Residential Multi-Unit/Saville Condos/1x2/Mattb325_Saville_Condos(2)-0x6534284a-0x13a0bd51-0x7e2ab507.SC4Desc
       - BSC/Mattb325/Residential Multi-Unit/Saville Condos/1x2/Mattb325_Saville_Condos(1)-0x6534284a-0x13a0bd51-0x9e2ab4ca.SC4Desc
       - BSC/Mattb325/Residential Multi-Unit/Bayauxlaan Apartments/prop/Mattb325_Bayauxlaan_Apartments-0x6534284a-0x13a0bd51-0x3eb778ef.SC4Desc
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Almeda_lg0.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Beurlay_lg0.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BoomStyleTerraces0.jpg
     lastModified: 2023-08-20T05:50:16-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Multi-Unit Pack (Dark Nite)
     sha256: b4bca9b5a4238f295868e4d7e341630c920715a660c3db5a5adf20691ab2afdc
     size: 31648806
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Almeda_lg0.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 31737062
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/98-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-darknite
     version: "1"
@@ -967,7 +2795,240 @@ assets:
       - Mattb325
     category: 200
     dependencies: []
-    downloads: 863
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the Multi-Unit Residentials by legendary BSC BATer Mattb325, which had been available on the
+      Lot Exchange (LEX) at SC4 Devotion. It includes the contents of 46 previously separate downloads. After battling a number of technical issues, software incompatibility ultimately shuttered the
+      LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one
+      go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>There are two versions of this package that exist as separate downloads. One (MN) is for Maxis Nite (the default night settings), while the other (DN) is for Dark Nite, and is optimized for
+      use with darker Night Mods, such as the mods by SimFox and gizmo28.</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <p><strong>Revision 2 (14 August 2023): Moved Lansdown Terrace Model to improve support for Lansdown Terrace Commercial in Commercial W2W Pack.</strong></p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      To expand options, click the small \"+\" next to the name of the section.</p>\r
+
+      <p>Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab
+      pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p><strong>NOTE about the Casa de Manana</strong>: The Casa de Manana building has two options, only one of which can be installed at one time. One is for use in Subtropical environments (think
+      palm trees) and one for Temperate environments. You can select which one you want in the installer.</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures):</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack (Version 4 / 9 August 2023 or
+      later)</a></li>\r
+
+      <li>Mattb325 Urban Civics Prop Pack Vol 01 - <a href=\"/index.php/downloads/download/22-dependencies/96-mattb325-urban-civics-prop-pack-vol01-darknite\">Dark Nite</a> or <a
+      href=\"/index.php/downloads/download/22-dependencies/97-mattb325-urban-civics-prop-pack-vol01-maxisnite\">Maxis Nite</a> Version</li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\">JENXPorkie Expanded Porkie Props</a></li>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Mattb325</li>\r
+
+      </ul>\r
+
+      <p>This package was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\"><a name=\"contents\"></a>\r
+
+      <h4> Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following previously-separate downloads. None of the Lots contained in the package exceed Stage 8, and all are designed for use with or without the Colossus Addon
+      Mod (CAM).</p>\r
+
+      <ol>\r
+
+      <li>Ainslee Condos</li>\r
+
+      <li>Alhambra Duplex</li>\r
+
+      <li>Alighieri Apts</li>\r
+
+      <li>Almeda Townhomes</li>\r
+
+      <li>Apartments Merdiques</li>\r
+
+      <li>Bayauxlaan Apartments</li>\r
+
+      <li>Beurlay Apartments</li>\r
+
+      <li>Beverly Apartments</li>\r
+
+      <li>Boom Style Terraces</li>\r
+
+      <li>Casa de Manana (comes in Subtropical or Temperate option - only one can be installed at one time)</li>\r
+
+      <li>City Rd Chippendale</li>\r
+
+      <li>Claridge II Townhomes</li>\r
+
+      <li>Commons Court</li>\r
+
+      <li>Confluence Apartments</li>\r
+
+      <li>Cube Apartments</li>\r
+
+      <li>DeVries Villa</li>\r
+
+      <li>Earls Court</li>\r
+
+      <li>Embassy Apartments</li>\r
+
+      <li>Emporio Apartments</li>\r
+
+      <li>Englewood Condos</li>\r
+
+      <li>Ennuyeuse Apartments</li>\r
+
+      <li>Exhibition Rd Kensington</li>\r
+
+      <li>Forbes St</li>\r
+
+      <li>Gertrude Apartments</li>\r
+
+      <li>Grosvenor Mansions</li>\r
+
+      <li>Holland Park</li>\r
+
+      <li>Houston Place Apartments</li>\r
+
+      <li>Kensington Apartments</li>\r
+
+      <li>L'Aquila Apartments</li>\r
+
+      <li>Lansdowne Terrace</li>\r
+
+      <li>Lennox Gardens</li>\r
+
+      <li>Little Riley Street</li>\r
+
+      <li>Modern R$ Terraces</li>\r
+
+      <li>Modern Townhouses</li>\r
+
+      <li>Modern Villas</li>\r
+
+      <li>Parkland Lofts</li>\r
+
+      <li>Regency Terraces</li>\r
+
+      <li>Regis Condos</li>\r
+
+      <li>Saville Condos</li>\r
+
+      <li>Small Apartments</li>\r
+
+      <li>The Residence</li>\r
+
+      <li>Veinte Apartments</li>\r
+
+      <li>Vivo Apartments</li>\r
+
+      <li>Wan Wan Apartments</li>\r
+
+      <li>Waterloo Apartments</li>\r
+
+      <li>Windmill St</li>\r
+
+      </ol>\r
+
+      <p>Various pieces of original documentation can be found in the \"~Documents\" folder, which, while installed in the Plugins directory, should be removed.</p>\r
+
+      </div>\r
+
+      <p><strong>rev1 update (11 Aug 2023)</strong> - moved Original Documents into .zip file to avoid issues with the Java installer reading them instead of installing them, and redesigned behavior
+      of folder installation process to have subfolders, instead of all files loose in the Residential Multi-Unit folder.  If you're already using Version 1, this update is strictly for housekeeping,
+      and not critical.  No changes to the actual SC4 content have been made.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Almeda_lg.jpg\" data-lightbox=\"lightbox99\"
+      data-alt=\"lightboxAlmeda_lg.jpg|Beurlay_lg.jpg|BoomStyleTerraces\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Almeda_lg.jpg\" alt=\"Almeda_lg\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Beurlay_lg.jpg\" data-lightbox=\"lightbox99\"
+      data-alt=\"lightboxAlmeda_lg.jpg|Beurlay_lg.jpg|BoomStyleTerraces\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Beurlay_lg.jpg\" alt=\"Beurlay_lg2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/BoomStyleTerraces.jpg\" data-lightbox=\"lightbox99\"
+      data-alt=\"lightboxAlmeda_lg.jpg|Beurlay_lg.jpg|BoomStyleTerraces\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BoomStyleTerraces.jpg\" alt=\"BoomStyleTerraces3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 874
     filename: SC4D_LEX_LEGACY_Mattb325_Residential_Multi-Unit_MaxisNite.zip
     files:
       - readme_mattb325_residential_multi-unit.html
@@ -1345,14 +3406,18 @@ assets:
       - BSC/Mattb325/Residential Multi-Unit/-Casa de Manana-Subtropical/Mattb325_Casa_de_Manana-0x5ad0e817_0x9d0890b0_0x30000.SC4Model
       - BSC/Mattb325/Residential Multi-Unit/-Casa de Manana-Subtropical/Mattb325_Casa_de_Manana(prop)-0x6534284a-0x13a0bd51-0x9e47bf07.SC4Desc
       - BSC/Mattb325/Residential Multi-Unit/Bayauxlaan Apartments/prop/Mattb325_Bayauxlaan_Apartments-0x6534284a-0x13a0bd51-0x3eb778ef.SC4Desc
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Almeda_lg.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Beurlay_lg.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BoomStyleTerraces.jpg
     lastModified: 2023-08-20T03:08:11-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Multi-Unit Pack (Maxis Nite)
     sha256: 23ae9dde93334831e5a526f243153a67f2c52d2800959130a5a91cd1cdd8b8f2
     size: 32833740
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Almeda_lg.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 32920643
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/99-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-maxisnite
     version: "1"
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

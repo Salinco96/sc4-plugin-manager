@@ -13,6 +13,8 @@ export const Text = styled(Typography, {
       textOverflow: "ellipsis",
       WebkitBoxOrient: "vertical",
       WebkitLineClamp: maxLines,
+      whiteSpace: "pre-wrap",
+      wordBreak: "break-word",
     }
   }
 

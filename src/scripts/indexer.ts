@@ -3,12 +3,12 @@ import path from "path"
 import { config } from "dotenv"
 import { glob } from "glob"
 
-import { AssetData, ConfigFormat, PackageData } from "@common/types"
+import { AssetData, ConfigFormat, PackageAsset, PackageData, VariantData } from "@common/types"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
-import { exists, getExtension } from "@node/files"
+import { exists, getExtension, removeIfPresent } from "@node/files"
 
 import { overrides } from "./overrides"
 import { SC4EVERMORE } from "./sources/sc4evermore"
@@ -20,7 +20,7 @@ import {
   IndexerOptions,
   IndexerSource,
 } from "./types"
-import { readHTML, toID, wait } from "./utils"
+import { htmlToMd, readHTML, toID, wait } from "./utils"
 
 config({ path: ".env.local" })
 
@@ -37,30 +37,36 @@ const dbPackagesDir = path.join(dbDir, "packages")
 runIndexer({
   exclude: [
     "sc4evermore/278-sc4fix", // TODO: Use https://github.com/nsgomez/sc4fix/releases/download/rev8/SC4Fix.dll
-    // TODO: Below are packages that would need much more work to implement correctly
+    // TODO: Below are packages that would need more work to implement correctly
     "sc4evermore/2-network-addon-mod",
     "sc4evermore/40-nam-lite",
     "sc4evermore/41-appalachian-terrain-mod-by-lowkee33",
     "sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem",
+    "simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn",
     // TODO: Below are installers that currently fail to be extracted
     "sc4evermore/276-colossus-addon-mod-2-5-release-candidate-1",
-    "simtropolis/13866-jeronij-concrete-wall-addon-stairs",
-    "simtropolis/16119-logistics-centres-megapack",
     // TODO: Below are external tools, not supported atm
     "simtropolis/23407-gofsh-fsh-texture-editor",
     "simtropolis/27675-sc4datanode",
     "simtropolis/30033-mgb-maxis-texture-replacement-dev-kit",
-    "simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn",
+    "simtropolis/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac",
     "simtropolis/35790-sc4-cleanitol",
     "simtropolis/36227-dgvoodoo-2-simcity-4-edition",
+    // TODO: Below are duplicate packages (available from several sources)
+    "simtropolis/15287-bsc-mega-props-sg-vol-01-v3",
+    "simtropolis/26793-network-addon-mod-nam-for-windows-installer",
+    "simtropolis/26793-network-addon-mod-for-windows-installer-offsite",
     // TODO: Below are deprecated
+    "simtropolis/14842-bsc-prop-pack-cycledogg-no-1",
     "simtropolis/15322-bsc-texture-pack-cycledogg-v01",
     "simtropolis/32660-pc-prop-pack-vol-1",
     "simtropolis/32732-pc-prop-pack-2",
     "simtropolis/32832-pc-towering-sign-set-1",
+    "simtropolis/32879-pc-car-prop-pack",
+    "simtropolis/32921-pc-hd-car-props",
   ],
   fetchEntryDetails: false,
-  fetchNewEntries: false,
+  fetchNewEntries: true,
   include(entry) {
     return entry.lastModified >= "2024-06-01T00:00:00Z"
   },
@@ -74,15 +80,17 @@ runIndexer({
   },
 })
 
-async function loadAssetsFromDB(sources: IndexerSource[]): Promise<{
+async function loadAssetsFromDB(): Promise<{
   [sourceId: string]: { [assetId: string]: AssetData }
 }> {
   const configs: { [sourceId: string]: { [assetId: string]: AssetData } } = {}
 
-  for (const source of sources) {
-    console.debug(`Loading assets from ${source.id}...`)
-    const config = await loadConfig<{ [assetId: string]: AssetData }>(dbAssetsDir, source.id)
-    configs[source.id] = config?.data ?? {}
+  const filePaths = await glob("*.yaml", { cwd: dbAssetsDir })
+  for (const filePath of filePaths) {
+    const sourceId = path.basename(filePath, path.extname(filePath))
+    console.debug(`Loading assets from ${sourceId}...`)
+    const config = await loadConfig<{ [assetId: string]: AssetData }>(dbAssetsDir, sourceId)
+    configs[sourceId] = config?.data ?? {}
   }
 
   return configs
@@ -121,10 +129,6 @@ async function runIndexer(options: IndexerOptions) {
     return `${toID(entry.authors[0])}/${toID(entryId.split("/")[1].replace(/^\d+-/, ""))}`
   }
 
-  function getDefaultVariantID(entryId: string): string {
-    return options.overrides?.[entryId]?.variantId ?? "default"
-  }
-
   function getDownloadUrl(entryId: string, variant?: string): string {
     return options.overrides?.[entryId]?.downloadUrl ?? getDefaultDownloadUrl(entryId, variant)
   }
@@ -137,14 +141,65 @@ async function runIndexer(options: IndexerOptions) {
     return process.env[`INDEXER_EXE_PATH_${exe.toUpperCase()}`] || exe
   }
 
-  function getPackageID(entryId: string, entry: IndexerBaseEntry): string {
-    return options.overrides?.[entryId]?.packageId ?? getDefaultPackageID(entryId, entry)
+  function getPackageID(entryId: string, entry: IndexerEntry, variant?: string): string {
+    const entryOverrides = options.overrides?.[entryId]
+
+    if (variant) {
+      const variantOverrides = entryOverrides?.variants?.[variant]
+      if (variantOverrides?.packageId) {
+        return variantOverrides.packageId
+      }
+    }
+
+    if (entryOverrides?.packageId) {
+      return entryOverrides.packageId
+    }
+
+    return getDefaultPackageID(entryId, entry)
+  }
+
+  function getVariantID(entryId: string, entry: IndexerEntry, variant?: string): string {
+    const entryOverrides = options.overrides?.[entryId]
+
+    if (variant) {
+      const variantOverrides = entryOverrides?.variants?.[variant]
+      if (variantOverrides?.variantId) {
+        return variantOverrides.variantId
+      }
+    }
+
+    if (entryOverrides?.variantId) {
+      return entryOverrides.variantId
+    }
+
+    const variantEntry = variant ? entry.variants?.[variant] : entry
+    if (variantEntry?.filename) {
+      if (variantEntry.filename.match(/\b(dn|dark\s?nite)\b/i)) {
+        return "darknite"
+      }
+
+      if (variantEntry.filename.match(/\b(mn|maxis\s?nite)\b/i)) {
+        return "default"
+      }
+
+      if (variant && variantEntry.filename.match(/\b(hd)\b/i)) {
+        return "hd"
+      }
+
+      if (variant) {
+        return toID(variantEntry.filename.split(".").slice(0, -1).join("."))
+      }
+    }
+
+    return "default"
   }
 
   function getSource(entryId: string): IndexerSource {
     const sourceId = sourceNames[entryId].split("/")[0]
     return options.sources.find(source => source.id === sourceId)!
   }
+
+  const errors = new Set<string>()
 
   // Fetch asset lists
   for (const source of options.sources) {
@@ -203,8 +258,9 @@ async function runIndexer(options: IndexerOptions) {
     }
   }
 
-  const resolving = new Set<string>()
-  const dbAssetsConfigs = await loadAssetsFromDB(options.sources)
+  const resolvingEntries = new Set<string>()
+  const resolvingPackages = new Set<string>()
+  const dbAssetsConfigs = await loadAssetsFromDB()
   const dbPackagesConfigs = await loadPackagesFromDB()
 
   for (const entryId in sourceNames) {
@@ -216,24 +272,112 @@ async function runIndexer(options: IndexerOptions) {
     }
   }
 
-  async function resolveEntry(entryId: string) {
-    const entry = getEntry(entryId)
+  for (const authorId in dbPackagesConfigs) {
+    for (const packageId in dbPackagesConfigs[authorId]) {
+      const packageData = dbPackagesConfigs[authorId][packageId]
+      await resolvePackage(packageId, packageData)
+    }
+  }
 
+  async function resolvePackageAsset(
+    packageId: string,
+    variantId: string | undefined,
+    asset: PackageAsset,
+  ) {
+    const sourceId = asset.id.split("/")[0]
+    if (!dbAssetsConfigs[sourceId]?.[asset.id]) {
+      const [entryId, variant] = asset.id.split("#")
+      const entry = await resolveEntry(entryId)
+      if (!entry || (variant && !entry.variants?.[variant])) {
+        errors.add(
+          variantId
+            ? `In variant ${packageId}#${variantId} - Entry ${entryId} does not exist`
+            : `In package ${packageId} - Entry ${entryId} does not exist`,
+        )
+      }
+    }
+  }
+
+  async function resolvePackageVariant(
+    packageId: string,
+    variantId: string | undefined,
+    variantData: VariantData,
+  ) {
+    if (variantData.assets) {
+      for (const asset of variantData.assets) {
+        await resolvePackageAsset(packageId, variantId, asset)
+      }
+    }
+
+    if (variantData.dependencies) {
+      for (const dependencyId of variantData.dependencies) {
+        const authorId = dependencyId.split("/")[0]
+        const dependencyData = dbPackagesConfigs[authorId]?.[dependencyId]
+        if (dependencyData) {
+          await resolvePackage(dependencyId, dependencyData)
+        } else {
+          errors.add(
+            variantId
+              ? `In variant ${packageId}#${variantId} - Package ${dependencyId} does not exist`
+              : `In package ${packageId} - Package ${dependencyId} does not exist`,
+          )
+        }
+      }
+    }
+  }
+
+  async function resolvePackage(packageId: string, packageData: PackageData) {
     // Handle dependency loop
-    if (resolving.has(entryId)) {
+    if (resolvingPackages.has(packageId)) {
       return
     }
 
-    resolving.add(entryId)
+    resolvingPackages.add(packageId)
 
-    if (!entry) {
-      console.error(`Entry ${entryId} does not exist!`)
-      return
+    await resolvePackageVariant(packageId, undefined, packageData)
+
+    if (packageData.variants) {
+      for (const variantId in packageData.variants) {
+        const variantData = packageData.variants[variantId]
+        await resolvePackageVariant(packageId, variantId, variantData)
+      }
+    }
+  }
+
+  if (errors.size) {
+    const n = 100
+    console.error("".padEnd(n, "*"))
+    console.error(`* ${"ERRORS".padStart((n + 6 - 4) / 2, " ").padEnd(n - 4, " ")} *`)
+    console.error("".padEnd(n, "*"))
+    for (const error of errors) {
+      console.error(error)
+      console.error("---")
+    }
+  }
+
+  async function resolveEntry(entryId: string): Promise<IndexerEntry | undefined> {
+    const entry = getEntry(entryId)
+
+    // Handle dependency loop
+    if (resolvingEntries.has(entryId)) {
+      return entry
+    }
+
+    resolvingEntries.add(entryId)
+
+    if (options.overrides?.[entryId] === null) {
+      console.warn(`Skipping ${entryId}...`)
+      return entry
     }
 
     if (options.exclude?.includes(entryId)) {
       console.warn(`Skipping ${entryId}...`)
-      return
+      return entry
+    }
+
+    if (!entry) {
+      errors.add(`Entry ${entryId} does not exist!`)
+      return entry
     }
 
     console.debug(`Resolving ${entryId}...`)
@@ -253,8 +397,8 @@ async function runIndexer(options: IndexerOptions) {
           const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
           const details = source.getEntryDetails(entryId, html)
           if (!details.version) {
-            console.error(`Missing version for entry ${entryId}`)
-            return
+            errors.add(`Missing version for entry ${entryId}`)
+            return entry
           }
 
           entry.description = details.description
@@ -270,13 +414,14 @@ async function runIndexer(options: IndexerOptions) {
         }
       }
 
-      await resolveVariant(entryId)
+      if (await resolveVariant(entryId)) {
+        wasUpdated = true
+      }
 
       if (wasUpdated) {
         entry.timestamp = now
+        await writeConfig(dataAssetsDir, sourceName, sourceData, ConfigFormat.YAML)
       }
-
-      await writeConfig(dataAssetsDir, sourceName, sourceData, ConfigFormat.YAML)
     } catch (error) {
       // Write any progress even in case of error
       await writeConfig(dataAssetsDir, sourceName, sourceData, ConfigFormat.YAML)
@@ -288,13 +433,15 @@ async function runIndexer(options: IndexerOptions) {
         await resolveEntry(dependencyAssetId)
       }
     }
+
+    return entry
   }
 
-  async function resolveVariant(entryId: string, variant?: string) {
+  async function resolveVariant(entryId: string, variant?: string): Promise<boolean> {
     const entry = getEntry(entryId)
     if (!entry) {
-      console.error(`Entry ${entryId} does not exist!`)
-      return
+      errors.add(`Entry ${entryId} does not exist!`)
+      return false
     }
 
     const assetId = getAssetID(entryId, variant)
@@ -304,18 +451,30 @@ async function runIndexer(options: IndexerOptions) {
     const downloadUrl = getDownloadUrl(entryId, variant)
     const source = getSource(entryId)
 
-    const outdated = !entry.timestamp || entry.lastModified > entry.timestamp
-
     const variantEntry = variant ? entry.variants?.[variant] : entry
     if (!variantEntry) {
-      console.error(`Variant ${assetId} does not exist!`)
-      return
+      errors.add(`Variant ${assetId} does not exist!`)
+      return false
     }
 
-    if (outdated || !variantEntry.size || !variantEntry.files) {
+    if (variant && options.overrides?.[entryId]?.variants?.[variant] === null) {
+      console.warn(`Skipping ${entryId}#${variant}...`)
+      return false
+    }
+
+    const outdated = !entry.timestamp || entry.lastModified > entry.timestamp
+    const hasVariants = !variant && !!entry.variants
+    const missingSize = !variantEntry.size && !hasVariants
+    const missingFiles = !variantEntry.files && !hasVariants
+
+    let wasUpdated = false
+
+    if (outdated || missingSize || missingFiles) {
       let downloaded = await exists(downloadPath)
 
-      if (!variantEntry.size || (!downloaded && !variantEntry.files)) {
+      if (outdated || missingSize || (missingFiles && !downloaded)) {
+        await removeIfPresent(downloadPath)
+
         console.debug(`Downloading ${downloadUrl}...`)
 
         const response = await get(downloadUrl, { cookies: () => source.getCookies() })
@@ -330,14 +489,15 @@ async function runIndexer(options: IndexerOptions) {
           const html = await readHTML(response)
           const variants = source.getVariants(html)
 
+          delete entry.filename
+          delete entry.files
+          delete entry.sha256
+          delete entry.size
+          delete entry.uncompressed
           entry.variants ??= {}
           for (const variant in variants) {
-            const variantEntry = (entry.variants[variant] ??= {
-              variantId: toID(variants[variant].split(".")[0]),
-            })
-
+            const variantEntry = (entry.variants[variant] ??= {})
             variantEntry.filename = variants[variant]
-            await resolveVariant(entryId, variant)
           }
         } else {
           const { filename, sha256, size, uncompressedSize } = await download(response, {
@@ -352,13 +512,17 @@ async function runIndexer(options: IndexerOptions) {
           variantEntry.sha256 = sha256
           variantEntry.size = size
           variantEntry.uncompressed = uncompressedSize
+          wasUpdated = true
           downloaded = true
+
+          if (!variant) {
+            delete entry.variants
+          }
         }
       }
 
-      if (downloaded) {
+      if ((outdated || missingFiles) && downloaded) {
         console.debug(`Extracting ${downloadKey}...`)
-
         await extractRecursively(downloadPath, {
           async exePath(exe) {
             return getExePath(exe)
@@ -371,107 +535,142 @@ async function runIndexer(options: IndexerOptions) {
         })
 
         variantEntry.files = files.map(file => file.replaceAll(path.sep, "/"))
+        wasUpdated = true
       }
-    }
 
-    if (variantEntry.files) {
-      const variantId = variantEntry.variantId || getDefaultVariantID(entryId)
-      const packageId = getPackageID(entryId, entry)
-      const authorId = packageId.split("/")[0]
+      if (entry.version && variantEntry.files) {
+        const packageId = getPackageID(entryId, entry, variant)
+        const variantId = getVariantID(entryId, entry, variant)
+        const authorId = packageId.split("/")[0]
 
-      const dbAssetsConfig = (dbAssetsConfigs[source.id] ??= {})
-      const assetData = (dbAssetsConfig[assetId] ??= {})
+        const dbPackagesConfig = dbPackagesConfigs[authorId] ?? {}
+        const packageData = dbPackagesConfig[packageId] ?? {}
 
-      const dbPackagesConfig = (dbPackagesConfigs[authorId] ??= {})
-      const packageData = (dbPackagesConfig[packageId] ??= {})
+        if (outdated || !packageData.variants?.[variantId]) {
+          const dbAssetsConfig = dbAssetsConfigs[source.id] ?? {}
+          const assetData = dbAssetsConfig[assetId] ?? {}
 
-      if (outdated || !packageData.variants?.[variantId]) {
-        if (packageData.variants?.[variantId]) {
-          console.debug(`Updating variant ${packageId}#${variantId}...`)
-        } else {
-          console.debug(`Creating variant ${packageId}#${variantId}...`)
-        }
-
-        const [, major, minor, patch] = entry.version!.match(/(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)!
-
-        assetData.lastModified = entry.lastModified
-        assetData.sha256 = variantEntry.sha256
-        assetData.size = variantEntry.size
-        assetData.uncompressed = variantEntry.uncompressed
-        assetData.version = entry.version
-
-        if (downloadUrl !== getDefaultDownloadUrl(entryId, variant)) {
-          assetData.url = downloadUrl
-        } else {
-          assetData.url = undefined
-        }
-
-        packageData.authors ??= entry.authors
-        packageData.category ??= entry.category
-        packageData.description = entry.description
-        packageData.name ??= entry.name
-        packageData.variants ??= {}
-
-        const dependencies = Array.from(
-          new Set([
-            ...(packageData.dependencies ?? []),
-            ...(entry.dependencies?.map(dependencyEntryId => {
-              const dependencyEntry = getEntry(dependencyEntryId)
-              if (dependencyEntry) {
-                return getPackageID(dependencyEntryId, dependencyEntry)
-              } else {
-                return dependencyEntryId
-              }
-            }) ?? []),
-          ]),
-        ).sort()
-
-        packageData.images = entry.images?.length ? entry.images : undefined
-        packageData.dependencies = dependencies.length ? dependencies : undefined
-        packageData.repository = entry.repository
-        packageData.thumbnail = entry.thumbnail
-        packageData.url = entry.url
-
-        const variantData = (packageData.variants[variantId] ??= {})
-
-        variantData.assets ??= []
-        variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
-
-        let variantAsset = variantData.assets.find(variantAsset => variantAsset.id === assetId)
-
-        if (!variantAsset) {
-          variantAsset = { id: assetId }
-          variantData.assets.push(variantAsset)
-        }
-
-        const sc4Extensions = [
-          ".dat",
-          ".dll",
-          ".ini",
-          "._loosedesc",
-          ".sc4desc",
-          ".sc4lot",
-          ".sc4model",
-        ]
-
-        variantAsset.docs = variantEntry.files.filter(
-          file => !sc4Extensions.includes(getExtension(file)),
-        )
-
-        variantAsset.include = variantEntry.files.filter(file =>
-          sc4Extensions.includes(getExtension(file)),
-        )
-
-        if (entry.category >= 200 && entry.category < 800 && entry.category !== 660) {
-          packageData.warnings ??= [{ id: "bulldoze", on: "disable" }]
-          variantData.requirements ??= {
-            darknite: !!variant?.match(/dark.?nig?th?e?|\bdn\b/i),
+          if (packageData.variants?.[variantId]) {
+            console.debug(`Updating variant ${packageId}#${variantId}...`)
+          } else {
+            console.debug(`Creating variant ${packageId}#${variantId}...`)
           }
-        }
 
-        await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
-        await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
+          const [, major, minor, patch] = entry.version.match(/(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)!
+
+          assetData.lastModified = entry.lastModified
+          assetData.sha256 = variantEntry.sha256
+          assetData.size = variantEntry.size
+          assetData.uncompressed = variantEntry.uncompressed
+          assetData.version = entry.version
+
+          if (downloadUrl !== getDefaultDownloadUrl(entryId, variant)) {
+            assetData.url = downloadUrl
+          } else {
+            delete assetData.url
+          }
+
+          packageData.authors ??= entry.authors
+          packageData.category ??= entry.category
+          packageData.name ??= entry.name
+          packageData.variants ??= {}
+
+          const dependencies = Array.from(
+            new Set([
+              ...(packageData.dependencies ?? []),
+              ...(entry.dependencies?.map(dependencyEntryId => {
+                const dependencyEntry = getEntry(dependencyEntryId)
+                if (dependencyEntry) {
+                  return getPackageID(dependencyEntryId, dependencyEntry)
+                } else {
+                  return dependencyEntryId
+                }
+              }) ?? []),
+            ]),
+          ).sort()
+
+          if (dependencies?.length) {
+            packageData.dependencies = dependencies
+          } else {
+            delete packageData.dependencies
+          }
+
+          if (entry.description) {
+            packageData.description = htmlToMd(entry.description)
+          } else {
+            delete packageData.description
+          }
+
+          if (entry.images?.length) {
+            packageData.images = entry.images
+          } else {
+            delete packageData.images
+          }
+
+          packageData.repository = entry.repository
+          packageData.thumbnail = entry.thumbnail
+          packageData.url = entry.url
+
+          const variantData = (packageData.variants[variantId] ??= {})
+
+          variantData.assets ??= []
+          variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
+
+          let variantAsset = variantData.assets.find(variantAsset => variantAsset.id === assetId)
+
+          if (!variantAsset) {
+            variantAsset = { id: assetId }
+            variantData.assets.push(variantAsset)
+          }
+
+          const sc4Extensions = [
+            ".dat",
+            ".dll",
+            ".ini",
+            "._loosedesc",
+            ".sc4desc",
+            ".sc4lot",
+            ".sc4model",
+          ]
+
+          variantAsset.docs = variantEntry.files.filter(
+            file => !sc4Extensions.includes(getExtension(file)),
+          )
+
+          variantAsset.include = variantEntry.files.filter(file =>
+            sc4Extensions.includes(getExtension(file)),
+          )
+
+          if (entry.category >= 200 && entry.category < 800 && entry.category !== 660) {
+            packageData.warnings ??= [{ id: "bulldoze", on: "disable" }]
+            variantData.requirements ??= {
+              darknite: variantId === "darknite",
+            }
+          }
+
+          dbPackagesConfigs[authorId] ??= dbPackagesConfig
+          dbPackagesConfig[packageId] ??= packageData
+          dbAssetsConfigs[source.id] ??= dbAssetsConfig
+          dbAssetsConfig[assetId] ??= assetData
+
+          await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
+          await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
+        }
+      } else if (!hasVariants) {
+        if (entry.version) {
+          errors.add(`Missing files for entry ${entryId}`)
+        } else {
+          errors.add(`Missing version for entry ${entryId}`)
+        }
       }
     }
+
+    if (entry.variants && !variant) {
+      for (const variant in entry.variants) {
+        await resolveVariant(entryId, variant)
+      }
+    }
+
+    return wasUpdated
   }
 }

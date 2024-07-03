@@ -14,7 +14,7 @@
     "strict": true,
     "target": "esnext"
   },
-  "include": [],
+  "include": ["types/*.d.ts"],
   "references": [
     {
       "path": "./tsconfig.main.json"
@@ -25,5 +25,8 @@
     {
       "path": "./tsconfig.scripts.json"
     }
-  ]
+  ],
+  "ts-node": {
+    "files": true
+  }
 }

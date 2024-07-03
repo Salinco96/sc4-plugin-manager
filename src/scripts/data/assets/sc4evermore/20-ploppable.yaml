@@ -4,7 +4,49 @@ assets:
       - Jeronij
     category: 360
     dependencies: []
-    downloads: 500
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p><span style=\"font-family: Arial, Helvetica, sans-serif;\">These are all water plopable landmarks which include mostly two versions of
+      cargo ships (loaded and unloaded) like the Ned Lloyd and the Maritime Toyoma cargo ships in different colour variation. </span><span style=\"font-family: Arial, Helvetica, sans-serif;\">Useful
+      for industrial harbour areas.</span><span style=\"font-family: Arial, Helvetica, sans-serif;\"> The compilation also contains the</span> Spanish passenger ferry ship Juan J. Sister and
+      the Harland &amp; Wolff RMS Titanic.</p>\r
+
+      <p>These models are based on real life ships, for the cargo ships there are two versions included, one with a full container cargo, and the other one empty. The ships are to scale. Be advised
+      !!!</p>\r
+
+      <p>Before installing the modpack read the readme contained in the <em><strong>~Documents</strong></em> folder and run the <strong>cleanitol</strong> file to have a clean installation of the
+      mods.</p>\r
+
+      <p><span style=\"text-decoration: underline;\">Installation</span>: Copy/extract the <strong>BSC </strong>and the <strong>Jeronij </strong>parent folders into your plugins. If you extracted the
+      <em>_Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder<span style=\"font-family: Arial, Helvetica,
+      sans-serif;\">.</span></p>\r
+
+      <p><strong><span style=\"font-family: Arial, Helvetica, sans-serif;\">Dependencies:</span></strong></p>\r
+
+      <p><span style=\"font-family: Arial, Helvetica, sans-serif;\">BSC MEGA Props - JRJ Vol01 v2.dat - INCLUDED (you can find it in the BSC/BSCProps folder).</span></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_JJSister.jpg\" data-lightbox=\"lightbox165\"
+      data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg\" alt=\"JRJ_Ships_JJSister\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_Titanic.jpg\" data-lightbox=\"lightbox165\"
+      data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Titanic.jpg\" alt=\"JRJ_Ships_Titanic2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_Toyama_blue.jpg\" data-lightbox=\"lightbox165\"
+      data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Toyama_blue.jpg\" alt=\"JRJ_Ships_Toyama_blue3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 506
     filename: SC4D_LEX_LEGACY_Jeronij Ship Pack.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_JRJ Ships Compilation.txt
@@ -31,12 +73,16 @@ assets:
       - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green Full_30c052e8.SC4Lot
       - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue_d0bf13e3.SC4Lot
       - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue Full_30c05b68.SC4Lot
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Titanic.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Toyama_blue.jpg
     lastModified: 2023-11-11T08:29:27-08:00
     name: SC4D LEX LEGACY - Jeronij Ship Pack
     sha256: 655d592ae43b5c95f143eee8ae3bb4d536b0941d606a012bb9be8bcdb7136bbc
     size: 11699133
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 13748282
     url: https://www.sc4evermore.com/index.php/downloads/download/20-ploppable/165-sc4d-lex-legacy-jeronij-ship-pack
     version: "1.0"
@@ -44,7 +90,7 @@ assets:
     authors:
       - sc4evermore
     category: 360
-    downloads: 305
+    downloads: 312
     lastModified: 2023-11-11T07:36:03-08:00
     name: BSC ALN RRP Fences
     url: https://www.sc4evermore.com/index.php/downloads/download/20-ploppable/166-bsc-aln-rrp-fences
@@ -52,7 +98,7 @@ assets:
     authors:
       - Girafe
     category: 360
-    downloads: 123
+    downloads: 127
     lastModified: 2024-01-22T09:10:41-08:00
     name: BSC-VIP Girafe Lenin Mausoleum
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon Lenin's mausoleum 1.jpg
@@ -61,7 +107,7 @@ assets:
     authors:
       - Girafe
     category: 360
-    downloads: 148
+    downloads: 152
     lastModified: 2024-01-22T09:04:17-08:00
     name: BSC-VIP Girafe Ocean Pearl Yacht
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_Ocean_Pearl_yacht_1.jpg
@@ -70,10 +116,10 @@ assets:
     authors:
       - Kelis
     category: 360
-    downloads: 153
+    downloads: 159
     lastModified: 2024-01-23T07:26:12-08:00
     name: Kelis Tsutenkaku Tower
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stkt1.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/20-ploppable/230-kelis-tsutenkaku-tower
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

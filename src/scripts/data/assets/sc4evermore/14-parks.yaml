@@ -3,7 +3,7 @@ assets:
     authors:
       - Diggis
     category: 660
-    downloads: 1041
+    downloads: 1051
     lastModified: 2023-08-20T02:45:47-07:00
     name: SC4D LEX Legacy - BSC Diggis Complete Ponds and Streams
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Ponds Shingle Base Set.jpg
@@ -12,7 +12,7 @@ assets:
     authors:
       - Diggis
     category: 660
-    downloads: 329
+    downloads: 335
     lastModified: 2023-08-20T02:44:37-07:00
     name: BSC Diggis Streams - PEG Replacement Mod
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Peg Replacement Mod.jpg
@@ -21,7 +21,7 @@ assets:
     authors:
       - MAS71
     category: 660
-    downloads: 540
+    downloads: 544
     lastModified: 2024-01-20T05:20:14-08:00
     name: SC4D LEX Legacy - MAS71 Japanese River Project (JRP)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/jrp_013.jpg
@@ -30,7 +30,7 @@ assets:
     authors:
       - Girafe
     category: 660
-    downloads: 176
+    downloads: 184
     lastModified: 2024-01-20T07:36:37-08:00
     name: SC4D LEX Legacy - BSC-TSC Girafe Winterpack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/image_pack.jpg
@@ -39,7 +39,7 @@ assets:
     authors:
       - sc4evermore
     category: 660
-    downloads: 225
+    downloads: 229
     lastModified: 2024-02-12T13:12:11-08:00
     name: Ulisse Wolf - National Football League
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/maxresdefault.jpg.117506cbb498290ce0cd930f582fe09e.jpg
@@ -48,8 +48,262 @@ assets:
     authors:
       - BSC
     category: 660
-    dependencies: []
-    downloads: 133
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/12329-peg-pond-kit-ii-deluxe-edition-v206
+      - simtropolis/14809-peg-mtp-scenic-views
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the BSC Team and SC4D LEX Restoration Team-assembled canal and waterway uploads of multiple
+      popular BSC BATers and their associates like: <strong>SimGoober</strong>, <strong>Callagrafx</strong>, <strong>Newman Inc</strong> (<strong>CityNut</strong>), <strong>Zero7</strong>
+      (rp2004/2005), <strong>Mattb325 </strong>and <strong>MGB204/rsc204</strong> (with diagonal addons), which had been available on the Lot Exchange (LEX) at SC4 Devotion (and in some cases on
+      Simtropolis STEX too).<br>It includes the contents of 41 previously separate downloads (including some contents that were only available on the SC4D LEX DVD and an unreleased upload from
+      Callagrafx for his SG Remastered canal set).<br>After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007
+      onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs
+      they wish to install.</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <h3>CONTENTS:</h3>\r
+
+      <ul>\r
+
+      <li>SG BSC Brick Canals</li>\r
+
+      <li>SG Irrigation Canals 2004 - the old set</li>\r
+
+      <li>SG Irrigation Ditches 2009 - the new set</li>\r
+
+      <li>SG Urban Canals</li>\r
+
+      <li>CAL Remastered SG Canals</li>\r
+
+      <li>CAL Stone Canals</li>\r
+
+      <li>Newman Inc River and Pond Kit (RPK)</li>\r
+
+      <li>Newman Inc Agricultural Suburban Canals (ASC)</li>\r
+
+      <li>Zero7 Sunken Canals (addon for CAL Remastered SG Canals)</li>\r
+
+      </ul>\r
+
+      <h3>INSTALLATION:</h3>\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org/\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). After this, click over to the Install tab, and click
+      \"Start installation\" to begin the installation procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p><span style=\"color: #e03e2d;\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</span><br>Optionally in
+      the <em>~Documents</em> folder in the main ZIP you can find a collective/master and separately all the individual cleanitol files and by using either the newer <strong><a
+      href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a></strong> or the older <strong><a
+      href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC Cleanitol</a></strong> tool you can search and remove old and outdated
+      versions of these files.</p>\r
+
+      <p>Bear in mind that this Collection contains Prop packs only available with this upload. Those prop packs can be used and referenced by other contents may not part of this collection as
+      dependencies. If a 3rd party upload references one of the prop packs available in this Collection, you don't need to install everything, you can select and install only the referenced prop pack.
+      All prop packs (and the lot packs as well) have individual cleanitol files (besides the <em>Cleanitol_MASTER REMOVE LIST_BSC Canals Collection.txt</em>) and they have Prop Catalogue index images
+      as a help for lotters.</p>\r
+
+      <h3>DEPENDENCIES:</h3>\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures) (the below listed dependencies are covering a
+      full install; for dependencies for individual collections see the <strong><em>readme_SC4D LEX Legacy - BSC Canals Collection V1.html</em></strong> in the ZIP. Bear in mind that the original
+      readmes are also available in the<em> ~Documents/BSC_Readmes</em> folder, but they have <strong>not </strong>been updated):</p>\r
+
+      <ul>\r
+
+      <li><strong>SC4D LEX Legacy - BSC Canals and Waterways Collection v1</strong> (and above) - <strong><span style=\"color: #e03e2d;\">INCLUDED</span></strong><br>The below listed dependencies are
+      all can be found in the hereby linked dependency pack compilation.</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props - Canals SimGoober Brick Style</li>\r
+
+      <li>BSC MEGA Props - Canals CAL Remastered SimGoober Style</li>\r
+
+      <li>BSC MEGA Props - Canals CAL Stone Canals</li>\r
+
+      <li>BSC MEGA Props - Canals Newman Inc Rivers and Ponds</li>\r
+
+      <li>BSC BATProps SG Irrigation Canals v2</li>\r
+
+      <li>BSC BATProps SG Ditches 2009</li>\r
+
+      <li>BSC BATProps SG Urban Canal</li>\r
+
+      <li>Zero7 Sunken Canal Props</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\"><strong>SC4D LEX Legacy -
+      BSC Common Dependencies Pack v9</strong></a> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li>BSC Essentials</li>\r
+
+      <li>BSC MEGA Props - SG Vol01 v4</li>\r
+
+      <li>BSC MEGA Props - CP Vol01</li>\r
+
+      <li>BSC MEGA Props - RT Vol01 v4</li>\r
+
+      <li>BSC MEGA Props - SWI21 Vol01 v4</li>\r
+
+      <li>BSC MEGA Props - D66 Vol01 v3</li>\r
+
+      <li>BSC MEGA Props - D66 Vol02</li>\r
+
+      <li>BSC MEGA Props - JES Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - JES Vol03 v2</li>\r
+
+      <li>BSC MEGA Props - JES Vol04 v2</li>\r
+
+      <li>BSC MEGA Props - JES Vol05 v2</li>\r
+
+      <li>BSC MEGA Props - JES Vol07 v2</li>\r
+
+      <li>BSC MEGA Props - JES Vol08 v2</li>\r
+
+      <li>BSC MEGA Props - T1 Vol03</li>\r
+
+      <li>BSC MEGA Props - CAL Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - Newman Inc Vol01 v3</li>\r
+
+      <li>BSC MEGA Props - MISC Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - MISC Vol02 v4</li>\r
+
+      <li>BSC Prop Pack - CAL Small Boats Vol01</li>\r
+
+      <li>CSX MEGA Props - Vol01 v3</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li>BSC Textures Vol01</li>\r
+
+      <li>BSC Textures Vol02</li>\r
+
+      <li>BSC Textures Vol03 v4</li>\r
+
+      <li>BSC TexturePack Cycledogg V01b</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a title=\"PEG-SUPER_TEXTURES.dat\" href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\" target=\"_blank\" rel=\"noopener\"><strong>PEG MTP SUPER PACK
+      v1.5</strong></a> - you only need the PEG-SUPER_TEXTURES.dat for this.</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/12329-peg-pond-kit-ii-deluxe-edition-v206/\" target=\"_blank\" rel=\"noopener\"><strong>PEG PondKit 2 - Deluxe Edition
+      v206</strong></a></li>\r
+
+      <li><a title=\"PEG_ScenicViews_RESOURCE.dat\" href=\"https://community.simtropolis.com/files/file/14809-peg-mtp-scenic-views/\" target=\"_blank\" rel=\"noopener\"><strong>PEG MTP Scienic
+      Views</strong></a> (only the PEG_ScenicViews_RESOURCE.dat)</li>\r
+
+      <li><a href=\"/index.php/downloads/download/246-ncd-railyard-texture-mega-pack-vol01-v3\" target=\"_blank\" rel=\"noopener\"><strong>NCD Railyard Texture Mega-Pack Vol 1 v03</strong></a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/131-walkingsnake-sc4jeeks-parking-textures-vol-01\" target=\"_blank\" rel=\"noopener\"><strong>WalkingSnake (Sc4jeeks) Parking
+      Textures Vol 01</strong></a></li>\r
+
+      </ul>\r
+
+      <h3><strong>CREDITS:</strong></h3>\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>SimGoober (SG)</li>\r
+
+      <li>Callagrafx (CAL)</li>\r
+
+      <li>Newman Inc/Citynut</li>\r
+
+      <li>Zero7 (Z7/rp2004/rp2005 etc...)</li>\r
+
+      <li>Mattb325 and MGB204/rsc204 (for diagonal addons for SimGoober's and CAL's SG Remastered canals)</li>\r
+
+      </ul>\r
+
+      <p>This package was assembled by Tyberius06.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.<br><br>For memo for subsequent updates on the NAM/Java installer.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/header.jpg\" data-lightbox=\"lightbox277\"
+      data-alt=\"lightboxheader.jpg|SG_CanalSet01.jpg|ACS_re1\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/header.jpg\"
+      alt=\"header\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SG_CanalSet01.jpg\" data-lightbox=\"lightbox277\"
+      data-alt=\"lightboxheader.jpg|SG_CanalSet01.jpg|ACS_re1\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_CanalSet01.jpg\" alt=\"SG_CanalSet012\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/ACS_re1.jpg\" data-lightbox=\"lightbox277\"
+      data-alt=\"lightboxheader.jpg|SG_CanalSet01.jpg|ACS_re1\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ACS_re1.jpg\"
+      alt=\"ACS_re13\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 165
     filename: SC4D LEX Legacy - BSC Canals Collection V1.zip
     files:
       - readme_SC4D LEX Legacy - BSC Canals Collection V1.html
@@ -287,14 +541,18 @@ assets:
       - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/Without Path/Newman Inc ASC Canal BaseSet without path.dat
       - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/With Path/Newman Inc ASC Canal BaseSet with path.dat
       - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/Water Tiles/Newman Inc ASC Canal BaseSet WaterTiles.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/header.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_CanalSet01.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ACS_re1.jpg
     lastModified: 2024-06-08T18:21:57-07:00
     name: SC4D LEX Legacy - BSC Canals Collection
     sha256: b92498d7b88c28d4c5c5d68309d44ffb36e3bb082dadb27ef2a6e67889cfcc8f
     size: 65812885
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/header.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 67107674
     url: https://www.sc4evermore.com/index.php/downloads/download/14-park/277-sc4d-lex-legacy-bsc-canals-collection
     version: "1"
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

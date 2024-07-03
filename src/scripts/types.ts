@@ -11,10 +11,16 @@ export interface IndexerOptions {
 }
 
 export interface IndexerOverrides {
-  [entryId: string]: {
+  [entryId: string]: null | {
     downloadUrl?: string
     packageId?: string
     variantId?: string
+    variants?: {
+      [variant: string]: null | {
+        packageId?: string
+        variantId?: string
+      }
+    }
   }
 }
 
@@ -33,7 +39,6 @@ export interface IndexerVariantEntry {
   sha256?: string
   size?: number
   uncompressed?: number
-  variantId?: string
 }
 
 export interface IndexerEntryDetails {

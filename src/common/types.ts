@@ -50,6 +50,7 @@ export interface PackageConfig {
 }
 
 export interface PackageData extends VariantData {
+  disabled?: boolean
   name?: string
   variants?: {
     [variantId: string]: VariantData

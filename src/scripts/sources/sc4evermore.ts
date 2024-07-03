@@ -178,9 +178,9 @@ export const SC4EVERMORE: IndexerSource = {
         ).map(match => `simtropolis/${match[1]}`),
         ...Array.from(
           description?.matchAll(
-            /https:\/\/www.sc4evermore.com\/index.php\/downloads\/download\/([\w-]+)\/([\w-]+)\/?/g,
+            /(https:\/\/www.sc4evermore.com)?\/index.php\/downloads\/download\/([\w-]+)\/([\w-]+)\/?/g,
           ) ?? [],
-        ).map(match => `sc4evermore/${match[2]}`),
+        ).map(match => `sc4evermore/${match[3]}`),
       ]),
     ).filter(dependencyId => dependencyId !== assetId)
 
@@ -188,31 +188,7 @@ export const SC4EVERMORE: IndexerSource = {
 
     return {
       dependencies,
-      description: description
-        ?.replaceAll("\u00a0", " ")
-        .replaceAll("\u2013", "-")
-        .replaceAll("\u2018", "'")
-        .replaceAll("\u2019", "'")
-        .replaceAll("&amp;", "&")
-        .replaceAll("&apos;", "'")
-        .replaceAll("&gt;", ">")
-        .replaceAll("&lt;", "<")
-        .replaceAll("&quot;", '"')
-        .replace(/\s+/gi, " ")
-        .replace(/<iframe(.*)>(.*)<[/]iframe>/gi, "")
-        .replace(/<br( [^>]*)?>/gi, "\n")
-        .replace(/<p( [^>]*)?>/gi, "\n\n")
-        .replace(/<[/]li>/gi, "\n")
-        .replace(/<[/]ol>/gi, "\n")
-        .replace(/<[/]ul>/gi, "\n")
-        .replace(/<[/]p>/gi, "\n\n")
-        .replace(/\n */gi, "\n")
-        .replace(/\s*<li( [^>]*)?>/gi, "\n  - ")
-        .replace(/<[/]?[a-z][a-z0-9]*( [^>]*)?>/gi, "")
-        .replace(/\n\n+/gi, "\n\n")
-        .replace(/ *\n/gi, "\n")
-        .replace(/\s*$/gi, "")
-        .replace(/^\s*/gi, ""),
+      description: description ? `<body>${description}</body>` : undefined,
       images,
       repository: description?.match(/https:\/\/github.com\/([\w-]+)\/([\w-]+)?/g)?.[0],
       version: html

@@ -3,7 +3,7 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 186
+    downloads: 189
     lastModified: 2023-11-21T15:27:18-08:00
     name: Swamper77's Raised Rail Conversions
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/180-swamper77s-raised-rail-conversions
@@ -11,8 +11,105 @@ assets:
     authors:
       - Mikeseith
     category: 700
-    dependencies: []
-    downloads: 554
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>The <strong>SC4D LEX Legacy - Mikeseith Multi-level Modular Garages</strong> contains the popular 2-level and 8-level Modular Parking
+      Garages by MikeSeith, including the Airport Shuttle automatas. The 2-level garages have 8 modular pieces, including entrances (in prop family), several wall pieces and ramp piece. The 8-level
+      garages have 18 modular pieces, including an entrance, two different types of ramps, several wall pieces, overhanging bride pieces over other networks, a police kiosk/parking security, but
+      stop and an airport shuttle spawner bus stop. The original lots were created by MikeSeith, however they underwent some necessary revision and updates mostly performed
+      by rsc204/mgb204. <strong><span style=\"color: #e03e2d;\"><a style=\"color: #e03e2d;\"
+      href=\"https://community.simtropolis.com/forums/topic/761517-mgbs-lil-bits/?tab=comments#comment-1767404\">Most of the changes that he made are detailed in this post</a></span></strong>. A final
+      revision and update was made by Tyberius06 for this legacy compilation.</p>\r
+
+      <p class=\"text_normal\" align=\"justify\"><span style=\"text-decoration: underline;\"><strong><big>The highlights:</big></strong></span></p>\r
+
+      <ul>\r
+
+      <li class=\"text_normal\">Only the <strong>Entrance lot(s)</strong> and the <strong>Airport Shuttle Busstop</strong> have TE (transti enabled) parking garage function.</li>\r
+
+      <li class=\"text_normal\">All the lots (except the former Police Kiosk, now Parking Security which can be found in the Civic - Police menu) have been moved to the Misc Transportation menu from
+      the Park menu.</li>\r
+
+      <li class=\"text_normal\">The former Police Kiosk is now called as <strong>Parking Security</strong> and after some tweaks it sits somewhere between the Maxis Kiosk and Small Police Station in
+      terms of it's effectiveness, with a larger radius to keep it in line with the intended function around Airports.<br><strong><span style=\"color: #e03e2d;\">!!! VERY IMPORTANT !!!</span></strong>
+      - As with the Police Station Fix above, you can NOT use this override, until all prior instances of the original Police Station from this pack are removed from your cities. But given the overall
+      modifications here, that's a good idea more generally too if using this update.</li>\r
+
+      <li class=\"text_normal\">The <strong>Bus Stop</strong>, mainly just modded to conform to more modern TE standards.</li>\r
+
+      <li class=\"text_normal\">The <strong>Airport Shuttle</strong> now acts as a BusStop with parking function and optionally spawning airport shuttle automatas if the airport shuttles.dat is
+      installed.<br><span style=\"text-decoration: underline;\">Optionally</span>, both the Bus Stop and the Airport Shuttle lot recevied RTMT replacement versions, which alternately use the Bus
+      Shelter and Bus Sign Props from your RTMT setup, (v3.6 or later compatible), instead of the default prop.</li>\r
+
+      <li class=\"text_normal\">Some pieces, like the entrance and the corner pieces are offering commercial service jobs.</li>\r
+
+      <li class=\"text_normal\"> This legacy compilation meant to replace any previous versions of these parking garages. The formerly available <em>BSC MEGA Props Mikeseith vol02</em> (which
+      exclusively contains models and props only for these sets and which was formerly released as an individual upload on the SC4D LEX file exchange, then released as part of the SC4D LEX Legacy -
+      BSC Common Dependencies V6 and prior) has been included with this compilation (you will find it in the BSC/BSCProps folder) and will be removed with later updates from the BSC Common
+      Dependnecies (from version 7). So <span style=\"color: #e03e2d;\"><strong>LOTters using these models and props need to reference this upload (SC4D LEX Legacy - Mikeseith Multi-level Modular
+      Garages)</strong></span>, instead of the former SC4Devotion LEX link or the BSC Common Dependencies compilation. </li>\r
+
+      <li class=\"text_normal\">For more details check out the readme file in the <em>~Documents</em> folder. You will find a cleanitol file and prop catalogue index image of the contents of the
+      included dependency pack.</li>\r
+
+      </ul>\r
+
+      <p><span style=\"text-decoration: underline;\"><strong>Installation:</strong></span></p>\r
+
+      <p class=\"text_normal\"><strong>Installation</strong>: Run the Java installer (.jar extension), which will guide you through the installation process, or open it using 7-zip or Keka for manual
+      install. If doing a manual install, go into the \"installation\" folder, then copy/extract the BSC and Mikeseith parent folders into your plugins. If you extracted the <em>~Documents</em> folder
+      into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r
+
+      <p class=\"text_normal\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins. It might be necessary to bulldoze any existing lots
+      from the previous versions of these sets before you install this new version.<br>Optionally in the ~Documents folder in the main ZIP you can find the <em>Cleanitol_SC4D LEX Legacy - Mikeseith
+      Multi-level Modular Garages.txt</em> file and by using either the newer <strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17's SC4
+      Cleanitol</a></strong> or the older <strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\">BSC Cleanitol</a></strong> tool you can search and remove old and
+      outdated versions of these files.</p>\r
+
+      <p class=\"text_normal\"><strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder
+      afterwards.</p>\r
+
+      <p class=\"text_normal\"><span style=\"text-decoration: underline;\"><strong>Dependencies:</strong></span></p>\r
+
+      <p class=\"text_normal\">To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props Mikeseith Vol02 v2 - <strong><span style=\"color: #e03e2d;\">INCLUDED</span></strong><br>The formerly released version, that was available in the BSC Common Dependencies V6
+      (and prior), have been updated and have been removed from the BSC Common Dependencies compilation and have been made available exclusively with this SC4D LEX Legacy - Mikeseith Multi-Level
+      Modular Garages.</li>\r
+
+      </ul>\r
+
+      <p><strong><span style=\"text-decoration: underline;\">Credits:</span></strong></p>\r
+
+      <p> These modular parking garages pieces were modelled and originally lotted by Mikeseith. MGB204/RSC204 made significant facelift on the functionality of the lots, see details above. Final
+      update, packing the assembly of the prop pack, that is containing these models were originally created for Project ZIP then SC4D Legacy Restoration by Tyberius06.  </p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MikeSeiths 2 garages front.jpg\" data-lightbox=\"lightbox204\"
+      data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg\" alt=\"MikeSeiths 2 garages front\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/mikeseith 8 level garages1.JPG\" data-lightbox=\"lightbox204\"
+      data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mikeseith 8 level garages1.JPG\" alt=\"mikeseith 8 level garages12\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MikeSeith - airport shuttle.jpg\" data-lightbox=\"lightbox204\"
+      data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeith - airport shuttle.jpg\" alt=\"MikeSeith - airport shuttle3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 570
     filename: SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt
@@ -44,12 +141,16 @@ assets:
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle laquinta/Airport shuttle laquinta.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Enterprise/Airport shuttle Enterprise.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Dollar/Airport shuttle Dollar.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mikeseith 8 level garages1.JPG
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeith - airport shuttle.jpg
     lastModified: 2023-12-06T02:26:15-08:00
     name: SC4D LEX LEGACY - Mikeseith Multi-level Modular Garages
     sha256: beb5a4c113046109b25f9130832962bc699d3c59bf9efd9f0a4b0ed9a137964e
     size: 23338074
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 23453723
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/204-sc4d-lex-legacy-mikeseith-multi-level-modular-garages
     version: "3"
@@ -57,7 +158,7 @@ assets:
     authors:
       - Girafe
     category: 700
-    downloads: 230
+    downloads: 237
     lastModified: 2024-01-21T02:46:32-08:00
     name: BSC-VIP Girafe Parisian Transportation vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_Parisian_station_1.jpg
@@ -66,8 +167,38 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    dependencies: []
-    downloads: 2676
+    dependencies:
+      - simtropolis/26079-peg-spam-super-resource-pack
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><ul>\r
+
+      <li>Features content from the Aerospace Consortium (AC), the BSC, SimCity Airport Group (SCAG), xannepan, and tabi.</li>\r
+
+      <li>Includes AC/BSC Functional Airports Version 2.2, RMIP 2, TMIP, and ARIP, plus numerous plane liveries, and the full collection of AC Team MEGA Props.</li>\r
+
+      <li>Requires <a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">BSC Common Dependencies Pack (V3 minimum)</a>, <a
+      href=\"/index.php/downloads/download/22-dependencies/14-maxis-buildings-as-props-and-dlc-props-v2-1\">Maxis Buildings as Props</a>, and <a
+      href=\"https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/\">PEG SPAM Super Resource Pack</a></li>\r
+
+      </ul> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 2750
     filename: SC4D_LEX_Legacy_Ultimate_Airport_Pack_V1.zip
     files:
       - readme_ultimate_airport_pack.html
@@ -870,11 +1001,12 @@ assets:
       - X-Transport/X-Airports/@11 Prop and Texture Packs/Props#/AC MEGA Props Vol03/AC MEGA Props Vol03.dat
       - X-Transport/X-Airports/@11 Prop and Texture Packs/Props#/AC MEGA Props Vol02/AC MEGA Props Vol02 v2.dat
       - X-Transport/X-Airports/@11 Prop and Texture Packs/Props#/AC MEGA Props Vol01/AC MEGA Props - Vol 01.dat
+    images: []
     lastModified: 2023-07-20T03:12:23-07:00
     name: SC4D LEX Legacy Ultimate Airport Pack
     sha256: 2417155a66d07489b6cdce189e4a19a4e23b4c757d40e2fe74eef7a5b3cb9849
     size: 384953598
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 385120644
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/7-sc4d-lex-legacy-ultimate-airport-pack
     version: "1"
@@ -882,7 +1014,7 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 365
+    downloads: 371
     lastModified: 2023-11-11T08:10:56-08:00
     name: Ulisse Wolf - Mediterranean Transport Set Vol 1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Ulisse  MED Transport SET VOL 1  DAY.jpg
@@ -891,10 +1023,10 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 414
+    downloads: 423
     lastModified: 2024-05-23T15:16:46-07:00
     name: Ulisse Wolf - Hybrid Railway (HRW) Subway Converter
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Gotthard v1 placement.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/95-ulisse-wolf-hybrid-railway-hrw-subway-converter
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

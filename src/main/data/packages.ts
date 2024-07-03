@@ -405,6 +405,11 @@ export async function loadRemotePackages(
       // TODO: This assumes that configs are correctly formatted
       const configs = await readConfig<{ [packageId: string]: PackageData }>(configPath)
       for (const packageId in configs) {
+        // Skip disabled packages
+        if (configs[packageId].disabled) {
+          continue
+        }
+
         const packageInfo = loadRemotePackageInfo(packageId, configs[packageId])
         if (packageInfo) {
           packages[packageId] = packageInfo
@@ -511,6 +516,10 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(packageData.files ?? []),
     ],
     id: variantId,
+    images: (packageData.images || variantData.images) && [
+      ...(variantData.images ?? []),
+      ...(packageData.images ?? []),
+    ],
     name: variantData.name ?? variantId,
     optional: (packageData.optional || variantData.optional) && [
       ...(variantData.optional ?? []),

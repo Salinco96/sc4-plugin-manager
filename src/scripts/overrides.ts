@@ -198,8 +198,23 @@ export const overrides: IndexerOverrides = {
   "simtropolis/11421-jenx-porkie-expanded-porkie-props": {
     packageId: "porkissimo/jenx-porkie-expanded-props",
   },
+  "simtropolis/11617-ndex-texture-set-volume-1": {
+    packageId: "ndex/textures-vol01",
+  },
+  "simtropolis/12329-peg-pond-kit-ii-deluxe-edition-v206": {
+    packageId: "pegasus/pond-kit-2",
+  },
+  "simtropolis/14809-peg-mtp-scenic-views": {
+    packageId: "pegasus/mtp-scenic-views",
+  },
+  "simtropolis/19096-ndex-glenni-mega-props-vol01": {
+    packageId: "glenni/mega-props-vol01",
+  },
   "simtropolis/19338-peg-security-fencing-kit": {
     packageId: "pegasus/security-fencing-kit",
+  },
+  "simtropolis/19786-peg-cdk3-sp-rail-fleet": {
+    packageId: "pegasus/cdk3-sp-rail-fleet",
   },
   "simtropolis/19880-peg-cdk3-super-pak": {
     packageId: "pegasus/cdk3-super-pack",
@@ -215,6 +230,15 @@ export const overrides: IndexerOverrides = {
   },
   "simtropolis/21118-simcity-4-extra-cheats-plugin": {
     packageId: "buggi/extra-cheats",
+  },
+  "simtropolis/21770-lbt-mega-prop-pack-vol01": {
+    packageId: "lbt/mega-props-vol01",
+  },
+  "simtropolis/22527-hh-modular-parking-gray-version-2": {
+    packageId: "hoo47/modular-parking",
+  },
+  "simtropolis/22916-nybt-essentials": {
+    packageId: "nybt/essentials",
   },
   "simtropolis/23004-scag-cargo-lots-v10": {
     packageId: "shadeslayer/scag-cargo-lots",
@@ -297,6 +321,15 @@ export const overrides: IndexerOverrides = {
   "simtropolis/26965-wmp-art-deco-station": {
     packageId: "wmp/art-deco-station",
   },
+  "simtropolis/27200-light-replacement-mod-lrm-v40-mega-pack": {
+    packageId: "mandelsoft/light-replacement-mod",
+    variants: {
+      98162: null, // windows installer
+      98163: {
+        variantId: "default",
+      },
+    },
+  },
   "simtropolis/27698-murimk-props-vol03-industrials": {
     packageId: "murimk/props-vol03",
   },
@@ -321,6 +354,30 @@ export const overrides: IndexerOverrides = {
   "simtropolis/27990-wmp-rural-docklands-3": {
     packageId: "wmp/rural-docklands-3",
   },
+  "simtropolis/29880-historic-harbor": {
+    variants: {
+      141582: {
+        packageId: "historic-harbor/historic-harbor-props",
+        variantId: "hd",
+      },
+      141583: {
+        packageId: "historic-harbor/historic-harbor-props",
+        variantId: "default",
+      },
+      141584: {
+        packageId: "historic-harbor/historic-harbor-lots",
+        variantId: "default",
+      },
+      141585: {
+        packageId: "historic-harbor/historic-harbor-mmps",
+        variantId: "default",
+      },
+      141586: {
+        packageId: "historic-harbor/historic-harbor-props",
+        variantId: "default", // prop catalogue
+      },
+    },
+  },
   "simtropolis/30648-peg-cdk-tutorial": {
     packageId: "pegasus/cdk-tutorial",
   },
@@ -338,6 +395,9 @@ export const overrides: IndexerOverrides = {
   },
   "simtropolis/31244-mgb-convenience-store": {
     packageId: "mgb204/convenience-stores",
+  },
+  "simtropolis/31350-simmasters-extra-cheats-dll": {
+    packageId: "simmaster07/extra-cheats",
   },
   "simtropolis/31423-supershk-fa3-parking-textures": {
     packageId: "kingofsimcity/supershk-mega-parking-textures",
@@ -360,6 +420,15 @@ export const overrides: IndexerOverrides = {
   "simtropolis/32965-pc-rv-props": {
     packageId: "pclark06/rv-props",
   },
+  "simtropolis/32979-sm2-essentials-v4": {
+    packageId: "simmer2/essentials",
+  },
+  "simtropolis/32980-sm2-mega-prop-pack-vol1": {
+    packageId: "simmer2/mega-props-vol01",
+  },
+  "simtropolis/32981-sm2-mega-prop-pack-vol2": {
+    packageId: "simmer2/mega-props-vol02",
+  },
   "simtropolis/33533-pc-mega-props-2": {
     packageId: "pclark06/mega-props-vol02",
   },
@@ -379,13 +448,22 @@ export const overrides: IndexerOverrides = {
     packageId: "rretail/mega-props-vol03",
   },
   "simtropolis/34777-esa-rail-prop-pack": {
-    packageId: "oidaas/esa-rail-props-1",
+    packageId: "oidaas/esa-rail-props-vol01",
   },
   "simtropolis/34787-pc-mega-props-3": {
     packageId: "pclark06/mega-props-vol03",
   },
   "simtropolis/35031-pc-mgb-convenience-stores-global-expansion": {
     packageId: "pclark06/mgb-convenience-stores",
+  },
+  "simtropolis/35025-esa-rail-props-2": {
+    packageId: "oidaas/esa-rail-props-vol02",
+    variants: {
+      194734: null,
+      194735: {
+        variantId: "default",
+      },
+    },
   },
   "simtropolis/35026-esa-gantries-vol-1": {
     packageId: "oidaas/esa-gantries-vol01",
@@ -398,5 +476,45 @@ export const overrides: IndexerOverrides = {
   },
   "simtropolis/36244-startup-performance-optimization-dll-for-simcity-4": {
     packageId: "null-45/startup-performance-optimization-dll",
+  },
+  "simtropolis/36268-cathedral": {
+    packageId: "leonv93/cathedral",
+    variants: {
+      201657: null,
+      201658: {
+        variantId: "default",
+      },
+    },
+  },
+  "simtropolis/36271-the-moxie-bottling-company": {
+    variants: {
+      201514: {
+        variantId: "hd",
+      },
+      201515: {
+        variantId: "default",
+      },
+    },
+  },
+  "simtropolis/36273-quigley-acres": {
+    packageId: "leonv93/quigley-acres",
+    variants: {
+      201643: null,
+      201644: {
+        variantId: "default",
+      },
+    },
+  },
+  "simtropolis/36305-elementary-high-school": {
+    variants: {
+      201739: {
+        packageId: "leonv93/small-school",
+        variantId: "default",
+      },
+      201740: {
+        packageId: "leonv93/high-school",
+        variantId: "default",
+      },
+    },
   },
 }

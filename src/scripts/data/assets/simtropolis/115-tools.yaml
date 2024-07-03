@@ -750,76 +750,115 @@ assets:
       - RebaLynnTS
     category: 60
     dependencies: []
-    description: |-
-      ========================================================
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      SPOT (Simpeg Plop Orientation Tool)
 
-      ========================================================
 
-      This is a set of props you can add to your lots to aid the player in seeing how to orient the lot.
+      							
 
-      Where needed, these will be used on Simpeg Team Projects, at the developers discretion.
 
-      They are bright orange in color, and should be easily seen in the preview. They are timed to show up, only one day, in a game year (Jan 1st).
 
-      --------------------------------------
+      							
+      <p>========================================================</p>
 
-      PROPS
+      <p>SPOT (Simpeg Plop Orientation Tool)</p>
 
-      --------------------------------------
+      <p>========================================================</p>
 
-      Diagonal - 4m
+      <p> </p>
 
-      Diagonal - 8m
+      <p>This is a set of props you can add to your lots to aid the player in seeing how to orient the lot.</p>
 
-      Diagonal - 12m
+      <p> </p>
 
-      Straight - 4m
+      <p>Where needed, these will be used on Simpeg Team Projects, at the developers discretion.</p>
 
-      Straight - 8m
+      <p> </p>
 
-      Straight - 12m
+      <p>They  are bright orange in color, and should be easily seen in the preview.  They are timed to show up, only one day, in a game year (Jan 1st).</p>
 
-      Straight - 16m
+      <p> </p>
 
-      --------------------------------------
+      <p> </p>
 
-      DEPENDENCIES
+      <p>--------------------------------------</p>
 
-      --------------------------------------
+      <p>PROPS</p>
 
-      None
+      <p>--------------------------------------</p>
 
-      --------------------------------------
+      <p>   Diagonal - 4m</p>
 
-      INSTALLATION
+      <p>   Diagonal - 8m</p>
 
-      --------------------------------------
+      <p>   Diagonal - 12m</p>
 
-      Unzip files to your 'Plugins' folder.
+      <p>   Straight - 4m</p>
 
-      Default Folder for Installation:
+      <p>   Straight - 8m</p>
 
-      .../My Documents/SimCity 4/Plugins/PEGPROD/SPOT
+      <p>   Straight - 12m</p>
 
-      --------------------------------------
+      <p>   Straight - 16m</p>
 
-      DEVELOPER NOTES
+      <p> </p>
 
-      --------------------------------------
+      <p> </p>
 
-      Please see the SPOT readme for general information.
+      <p>--------------------------------------</p>
 
-      --------------------------------------
+      <p>DEPENDENCIES</p>
 
-      CREDITS
+      <p>--------------------------------------</p>
 
-      --------------------------------------
+      <p>   None</p>
 
-      BATs: Becca (RebaLynnTS)
+      <p> </p>
 
-      Lotting and Images: Paeng
+      <p>--------------------------------------</p>
+
+      <p>INSTALLATION</p>
+
+      <p>--------------------------------------</p>
+
+      <p>   Unzip files to your 'Plugins' folder.</p>
+
+      <p> </p>
+
+      <p>   Default Folder for Installation:</p>
+
+      <p>   .../My Documents/SimCity 4/Plugins/PEGPROD/SPOT</p>
+
+      <p> </p>
+
+      <p>--------------------------------------</p>
+
+      <p>DEVELOPER NOTES</p>
+
+      <p>--------------------------------------</p>
+
+      <p>   Please see the SPOT readme for general information.</p>
+
+      <p> </p>
+
+      <p> </p>
+
+      <p>--------------------------------------</p>
+
+      <p>CREDITS</p>
+
+      <p>--------------------------------------</p>
+
+      <p>   BATs: Becca (RebaLynnTS)</p>
+
+      <p>   Lotting and Images: Paeng</p>
+
+      						</body>
     filename: PEG_SPOTv101.ZIP
     files:
       - PEGPROD/SPOT/SPOT_v-rc101.dat
@@ -830,7 +869,7 @@ assets:
     sha256: 147a101478d73e721d9885cbff79fb6753cb62d82e03929abf9c9fc238253581
     size: 23560
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2010/thumb-9b7b8eb1b6c2f900afbbd75bbd5c6303-spot_promo.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/24509-spot-simpeg-plop-orientation-tool/
     version: "1.01"
   simtropolis/25031-simmars-beta-3:
@@ -1518,58 +1557,165 @@ assets:
     authors:
       - Null 45
     category: 60
-    description: |-
-      Optimizes the DBPF plugin loading that the game performs on startup.
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      The effect that the plugin has on the game's startup time will depend on your system and plugins. It may have little to no effect for some configurations.
 
-      Features
 
-        -  Reduces the time for the game to show the SC4 logo by up to 90%.
-        -  Adds an optimization to the game code for large data reads.
-        -  Disables the game code that searches the entire file if the DBPF signature was not found.
-        -  Changes the game code that loads the .SC4* files to ignore files with non-DBPF file extensions, .txt, .png, etc.
-        -  With this change only .SC4Desc, .SC4Lot, .SC4Model, and files without any file extension will be loaded.
-        -  Files without any file extension are included due to some older plugins having that issue.
-        -  Changes the 'missing plugin' dialog to display the plugin pack ID in hexadecimal.
+      							
 
-      System Requirements
 
-        -  SimCity 4 version 641
-        -  Windows 10 or later
 
-      The plugin may work on Windows 7 or later with the Microsoft Visual C++ 2022 x86 Redistribute installed, but I do not have the ability to test that.
+      							
+      <p>
+      	Optimizes the DBPF plugin loading that the game performs on startup.
+      </p>
 
-      Installation
 
-        -  Close SimCity 4.
-        -  Copy SC4DBPFLoading.dll into the top level of either plugins folder (place it directly in \SimCity 4\Plugins or \Plugins, not in a subfolder).
-        -  Start SimCity 4.
+      <p>
+      	The effect that the plugin has on the game's startup time will depend on your system and plugins. It may have little to no effect for some configurations.
+      </p>
 
-      Command Line Argument
 
-      The plugin adds a -StartupDBPFLoadTrace: command line argument that can be used for advanced tracing/debugging of the plugin loading process.
+      <p>
+      	<strong>Features</strong>
+      </p>
 
-      It supports to following options (only 1 can be used at a time):
 
-        -  ShowLoadTime - shows a message box with the resource loading time in milliseconds.
-        -  WinAPI - shows message boxes before and after the resource loading code runs, this allows the user to start and stop a Process Monitor trace when the message box is shown.
-        -  ListLoadedFiles - writes the loaded DBPF files to the plugin's log file in the order SC4 reads them.
+      <ul>
+      	<li>
+      		Reduces the time for the game to show the SC4 logo by up to 90%.
+      	</li>
+      	<li>
+      		Adds an optimization to the game code for large data reads.
+      	</li>
+      	<li>
+      		Disables the game code that searches the entire file if the DBPF signature was not found.
+      	</li>
+      	<li>
+      		Changes the game code that loads the .SC4* files to ignore files with non-DBPF file extensions, .txt, .png, etc.
+      		<ul>
+      			<li>
+      				With this change only .SC4Desc, .SC4Lot, .SC4Model, and files without any file extension will be loaded.
+      			</li>
+      			<li>
+      				Files without any file extension are included due to some older plugins having that issue.
+      			</li>
+      		</ul>
+      	</li>
+      	<li>
+      		Changes the 'missing plugin' dialog to display the plugin pack ID in hexadecimal.
+      	</li>
+      </ul>
 
-      Troubleshooting
 
-      The plugin should write a SC4DBPFLoading.log file in the same folder as the plugin.
-      The log contains status information for the most recent run of the plugin.
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
 
-      Source Code and Support
 
-      Plugin thread: https://community.simtropolis.com/forums/topic/763113-sc4dbpfloading
+      <ul>
+      	<li>
+      		SimCity 4 version 641
+      	</li>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
 
-      The plugin's source code and issue tracker are located on GitHub: https://github.com/0xC0000054/sc4-dbpf-loading
 
-      If you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: https://paypal.me/0xC0000054
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
 
-      Thanks to the few people who have donated to me.
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4DBPFLoading.dll</em> into the top level of either plugins folder (place it directly in <em>&lt;Documents&gt;\SimCity 4\Plugins</em> or <em>&lt;SC4 install folder&gt;\Plugins</em>, not in a subfolder).
+      	</li>
+      	<li>
+      		Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Command Line Argument</strong>
+      </p>
+
+
+      <p>
+      	The plugin adds a <em>-StartupDBPFLoadTrace:</em> command line argument that can be used for advanced tracing/debugging of the plugin loading process.
+      </p>
+
+
+      <p>
+      	It supports to following options (only 1 can be used at a time):
+      </p>
+
+
+      <ul>
+      	<li>
+      		<em>ShowLoadTime </em>- shows a message box with the resource loading time in milliseconds.
+      	</li>
+      	<li>
+      		<em>WinAPI</em> - shows message boxes before and after the resource loading code runs, this allows the user to start and stop a Process Monitor trace when the message box is shown.
+      	</li>
+      	<li>
+      		<em>ListLoadedFiles</em> - writes the loaded DBPF files to the plugin's log file in the order SC4 reads them.
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4DBPFLoading.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/763113-sc4dbpfloading" rel="">https://community.simtropolis.com/forums/topic/763113-sc4dbpfloading</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-dbpf-loading" rel="external nofollow">https://github.com/0xC0000054/sc4-dbpf-loading</a>
+      </p>
+
+
+      <p>
+      	If you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: <a href="https://paypal.me/0xC0000054" rel="external nofollow">https://paypal.me/0xC0000054</a>
+      </p>
+
+
+      <p>
+      	Thanks to the few people who have donated to me.
+      </p>
+
+      						</body>
     filename: SC4DBPFLoading.zip
     files:
       - Third Party Notices.txt
@@ -1584,7 +1730,7 @@ assets:
     sha256: cc608b1479dcc515e8055e23a6a64b9cb2a2e24db1759c2a60a2684993f473a8
     size: 58038
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/STEXIcon.thumb.png.46691a9dc1db4b041b41d00b1180e880.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 131402
     url: https://community.simtropolis.com/files/file/36244-startup-performance-optimization-dll-for-simcity-4/
     version: 1.0.3
@@ -1645,4 +1791,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-cc76119e1615d738dc2f82f522af7ee3-sim-ruler.JPG
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

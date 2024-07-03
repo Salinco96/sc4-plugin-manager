@@ -355,81 +355,242 @@ assets:
     authors:
       - Buggi
     category: 10
-    description: >-
-      The SimCity 4 Extra Cheats Plugin
+    dependencies: []
+    description: "<body>
 
+      \                           \
 
-      Overview:
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
+      \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
+      style=\"\" width=\"34\" height=\"53\">
 
-      The SimCity 4 Extra Cheats Plugin was originally an internal SimCity 4 file, used by Maxis during the development phase to test the game before its release to the public. However, in the years
-      following the release of the game, Buggi, a prominent modder resident here at Simtropolis, contacted Maxis and was given permission to release this file to the public.
+      \t\t\t\t\t\t\t\t</div>
 
+      \t\t\t\t\t\t\t
 
-      The extra cheats plugin adds many additional features to the game, such as the ability to plop any building or lot at will, the ability to easily set how much money is in your city's treasury
-      and even the ability to add snow to your terrains, as well as many other additional functions.
+      \t\t\t\t\t\t\t<p>\r
 
+      \t<em><strong>The SimCity 4 Extra Cheats Plugin</strong></em>\r
 
-      However, it should be kept in mind that this file was originally never intended to be released to the public. It was built for testing purposes only. As a result, it should be treated with
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>Overview:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThe SimCity 4 Extra Cheats Plugin was originally an internal SimCity 4 file, used by Maxis during the development phase to test the game before its release to the public. However, in the years
+      following the release of the game, Buggi, a prominent modder resident here at Simtropolis, contacted Maxis and was given permission to release this file to the public.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThe extra cheats plugin adds many additional features to the game, such as the ability to plop any building or lot at will, the ability to easily set how much money is in your city's treasury
+      and even the ability to add snow to your terrains, as well as many other additional functions.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tHowever, it should be kept in mind that this file was originally never intended to be released to the public. It was built for testing purposes only. As a result, it should be treated with
       caution. Using this file incorrectly can lead to game instability and even crashes. No guarantees or comprehensive user guides can be provided with this file, if you choose to use it, you must
-      do so at your own risk.
+      do so at your own risk.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>How to use this file in the game:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tAfter you install (see below), enter a city and press the key combination [CTRL] + [x] to open the cheat box. Right click anywhere within the cheat box, you will see a drop down list appear.
+      You can now select a cheat from the list by clicking on it. After you have selected a cheat, press enter to confirm your selection.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tBelow is a list of all known cheat codes enabled by this file (as well as the standard game cheats) and a description of their effects. As the effects of some cheats are unknown, not all
+      cheats have available descriptions.<br>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"43861\" data-unique=\"diyzxsxp6\"
+      src=\"https://www.simtropolis.com/objects/attachments/monthly_2019_02/ExtraCheats.png.7f81cfd14dc2740e27142fa75d7ccee8.png\" style=\"\" alt=\"ExtraCheats.png\">\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>UPDATE:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tTo fill in some unknowns Maxis has given me the details on a few of the missing descriptions.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \t<strong>Barstuck </strong>- Once invoked, all of your small commercial services (low-density 1x3 lots) start turning into coffee bars, and then they stay that way forever.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>WatchMeMove </strong>- Enables animation stepping. After it is enabled, control-shift-alt-F11 and control-shift-alt-P implement animation stepping and pausing, respectively.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>GP </strong>&lt;on | off&gt; - Enables or disables game pause when you switch to another application. This is useful for if you go away from the game and you want it to sleep while it
+      is in the background. \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>Flora </strong>(on | off) | (preserve on | off) | (propogation on | off) | (blast &lt;splat_count&gt; &lt;per_splat_count&gt; &lt;splat radius&gt;)\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tControls flora simulation parameters. By default, during city play flora simulation is on, preservation is off, and propogation is off. Preservation refers to the keeping of trees on land when
+      the land is developed. Propogation refers to the spreading of seeds and automatic creation of new flora life in the city.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tExample(s)\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tFlora on\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tFlora preserve off\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tFlora propogation on\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tFlora blast 5 8 60\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>Installation Instructions:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tExtract the file <strong>SimCity 4 Extra Cheats Plugin.dll</strong> to the root directory of your plugins folder. This means put the file in <strong>C:\\...\\My Documents\\SimCity
+      4\\Plugins</strong>. DO NOT put the file into a sub-folder, it will only work if placed into the main directory. Then enter your game and follow the instructions above.\r
+
+      </p>\r
 
 
-      How to use this file in the game:
-
-
-      After you install (see below), enter a city and press the key combination [CTRL] + [x] to open the cheat box. Right click anywhere within the cheat box, you will see a drop down list appear. You
-      can now select a cheat from the list by clicking on it. After you have selected a cheat, press enter to confirm your selection.
-
-
-      Below is a list of all known cheat codes enabled by this file (as well as the standard game cheats) and a description of their effects. As the effects of some cheats are unknown, not all cheats
-      have available descriptions.
-
-
-
-
-      UPDATE:
-
-
-      To fill in some unknowns Maxis has given me the details on a few of the missing descriptions.
-
-
-      Barstuck - Once invoked, all of your small commercial services (low-density 1x3 lots) start turning into coffee bars, and then they stay that way forever.
-
-
-      WatchMeMove - Enables animation stepping. After it is enabled, control-shift-alt-F11 and control-shift-alt-P implement animation stepping and pausing, respectively.
-
-
-      GP  - Enables or disables game pause when you switch to another application. This is useful for if you go away from the game and you want it to sleep while it is in the background.
-
-
-      Flora (on | off) | (preserve on | off) | (propogation on | off) | (blast <splat_count> <per_splat_count> )
-
-
-      Controls flora simulation parameters. By default, during city play flora simulation is on, preservation is off, and propogation is off. Preservation refers to the keeping of trees on land when
-      the land is developed. Propogation refers to the spreading of seeds and automatic creation of new flora life in the city.
-
-
-      Example(s)
-
-
-      Flora on
-
-
-      Flora preserve off
-
-
-      Flora propogation on
-
-
-      Flora blast 5 8 60
-
-
-      Installation Instructions:
-
-
-      Extract the file SimCity 4 Extra Cheats Plugin.dll to the root directory of your plugins folder. This means put the file in C:\...\My Documents\SimCity 4\Plugins. DO NOT put the file into a
-      sub-folder, it will only work if placed into the main directory. Then enter your game and follow the instructions above.
+      \t\t\t\t\t\t</body>"
     filename: extra_cheats_plugin.zip
     files:
       - SimCity 4 Extra Cheats Plugin.dll
@@ -442,7 +603,7 @@ assets:
     sha256: 79b5259f47df4952950963acb703b38c62d9fd5498e6af0ef6792657e4087b6e
     size: 211030
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2014/thumb-5d12c6891edb0468eecd951049c52248-extra_cheats_plugin_01.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 354582
     url: https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/
     version: "1.0"
@@ -970,10 +1131,88 @@ assets:
     authors:
       - simmaster07
     category: 10
+    dependencies:
+      - simtropolis/21118-simcity-4-extra-cheats-plugin
+      - simtropolis/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac
+      - simtropolis/30883-sc4fix-third-party-patches-for-sc4
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	This is a DLL for SimCity 4 that adds a few more cheat codes beyond <a href="https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/" rel="">Buggi's Extra Cheats DLL</a>.
+      </p>
+
+
+      <ul><li>
+      		<strong>SievertBeGone</strong> — removes all radiation from a city, including from buildings that produce radiation when plopped (such as the advanced research center).
+      	</li>
+      	<li>
+      		<b>Chernobyl</b> — irradiates an entire city
+      	</li>
+      	<li>
+      		<strong>hazmat</strong> — creates a toxic spill disaster on whatever tile the mouse is pointed at
+      	</li>
+      	<li>
+      		<strong>UncivilDisobedience</strong> — creates a riot disaster on whatever tile the mouse is pointed at. The mouse must be pointed at a road, street or avenue tile.
+      	</li>
+      </ul><p>
+      	The development thread can be found at <a href="https://community.simtropolis.com/forums/topic/70495-game-framework-compatible-dll-loading-and-other-modding-discoveries/" rel="">this link</a>. Source code can be found <a href="https://github.com/nsgomez/gzcom-dll/blob/master/gzcom-dll/src/cGZExtraExtraCheatsDllDirector.cpp" rel="external nofollow">here</a>. Make sure to follow this file in case more cheats are added!
+      </p>
+
+
+      <p>
+      	<b>Installation</b><br>
+      	Move to your Plugins directory.
+      </p>
+
+
+      <ul><li>
+      		On Windows and the Mac versions on disc and Steam, this is in Documents\SimCity 4\Plugins.
+      	</li>
+      	<li>
+      		On the Mac App Store version, this is in ~/Library/Containers/com.aspyr.simcity4.appstore/Data/Documents/SimCity 4/Plugins
+      	</li>
+      </ul><p>
+      	Create these directories if they do not exist yet.
+      </p>
+
+
+      <p>
+      	<strong>Mac users</strong>: you will need to install <a href="https://community.simtropolis.com/files/file/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac/" rel="">SC4MacInjector</a> before using this plugin. You only need the .so file, not the .dll.
+      </p>
+
+
+      <p>
+      	<strong>Compatibility</strong><br>
+      	Tested and working on 1.1.641.0 (Steam/GOG/Origin) on Windows and the Steam version for Mac. Also works in combination with <a href="https://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/" rel="">SC4Fix</a> and the <a href="https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/" rel="">Extra Cheats DLL</a>. Untested on other versions but should work with any version of SimCity 4 Deluxe or SimCity 4 w/ Rush Hour.
+      </p>
+
+      						</body>
+    filename: ExtraExtraCheats.dll
+    files:
+      - ExtraExtraCheats.dll
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/spills.thumb.PNG.0943721225dea37e7bf774d50dd1e215.PNG
     lastModified: 2020-06-05T05:32:22Z
     name: Simmaster's Extra Cheats DLL
+    repository: https://github.com/nsgomez/gzcom-dll
+    sha256: bc67b8ade3254258e9ee4410d3fb7474f2f1c5f47a9b0eefd03dd526962b759f
+    size: 137216
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/spills.thumb.PNG.0943721225dea37e7bf774d50dd1e215.PNG
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/31350-simmasters-extra-cheats-dll/
+    version: 1.1.1
   simtropolis/32048-broken-buggis-extra-cheats-for-mac:
     authors:
       - simmaster07
@@ -1103,4 +1342,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-62fc352a7264906d58dc8698b752fbf6-Banking%20City-Mar.jpg
     url: https://community.simtropolis.com/files/file/925-first-national-bank-of-simnation/
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

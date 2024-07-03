@@ -6,6 +6,42 @@ const origin = "https://community.simtropolis.com"
 
 const categories: IndexerCategory[] = [
   {
+    category: 100,
+    id: "32-simpeg-plex-files",
+  },
+  {
+    category: 600,
+    id: "33-plex-custom-lots-mods",
+  },
+  {
+    category: 730,
+    id: "34-cdk-coastal-development-kit",
+  },
+  {
+    category: 100,
+    id: "35-mtp-mountain-theme-pack",
+  },
+  {
+    category: 411,
+    id: "36-spam-simpeg-agricultural-mods",
+  },
+  {
+    category: 600,
+    id: "37-peg-utopian-series",
+  },
+  {
+    category: 0,
+    id: "64-simcitypolska-files",
+  },
+  {
+    category: 0,
+    id: "67-simcitybrasil-files",
+  },
+  {
+    category: 0,
+    id: "73-workingman-productions-wmp",
+  },
+  {
     category: 200,
     id: "101-residential",
   },
@@ -68,30 +104,6 @@ const categories: IndexerCategory[] = [
   {
     category: 100,
     id: "118-dependencies",
-  },
-  {
-    category: 0,
-    id: "32-simpeg-plex-files",
-  },
-  {
-    category: 730,
-    id: "34-cdk-coastal-development-kit",
-  },
-  {
-    category: 411,
-    id: "36-spam-simpeg-agricultural-mods",
-  },
-  {
-    category: 0,
-    id: "64-simcitypolska-files",
-  },
-  {
-    category: 0,
-    id: "67-simcitybrasil-files",
-  },
-  {
-    category: 0,
-    id: "73-workingman-productions-wmp",
   },
 ]
 
@@ -193,31 +205,7 @@ export const SIMTROPOLIS: IndexerSource = {
 
     return {
       dependencies,
-      description: description
-        ?.replaceAll("\u00a0", " ")
-        .replaceAll("\u2013", "-")
-        .replaceAll("\u2018", "'")
-        .replaceAll("\u2019", "'")
-        .replaceAll("&amp;", "&")
-        .replaceAll("&apos;", "'")
-        .replaceAll("&gt;", ">")
-        .replaceAll("&lt;", "<")
-        .replaceAll("&quot;", '"')
-        .replace(/\s+/gi, " ")
-        .replace(/<iframe(.*)>(.*)<[/]iframe>/gi, "")
-        .replace(/<br( [^>]*)?>/gi, "\n")
-        .replace(/<p( [^>]*)?>/gi, "\n\n")
-        .replace(/<[/]li>/gi, "\n")
-        .replace(/<[/]ol>/gi, "\n")
-        .replace(/<[/]ul>/gi, "\n")
-        .replace(/<[/]p>/gi, "\n\n")
-        .replace(/\n */gi, "\n")
-        .replace(/\s*<li( [^>]*)?>/gi, "\n  - ")
-        .replace(/<[/]?[a-z][a-z0-9]*( [^>]*)?>/gi, "")
-        .replace(/\n\n+/gi, "\n\n")
-        .replace(/ *\n/gi, "\n")
-        .replace(/\s*$/gi, "")
-        .replace(/^\s*/gi, ""),
+      description: description ? `<body>${description}</body>` : undefined,
       images,
       repository: description?.match(/https:\/\/github.com\/([\w-]+)\/([\w-]+)?/g)?.[0],
       version: html.querySelector(".stex-title-version")?.textContent,

@@ -2299,10 +2299,399 @@ assets:
     authors:
       - cogeo
     category: 700
+    dependencies:
+      - simtropolis/15582-warehouses-batprops-part-a
+      - simtropolis/15583-warehouses-batprops-part-b
+    description: >-
+      <body>
+
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      <p>
+      	This pack contains 5 Logistics Centres Lots for your cities, 4 <abbr title="Residential, Commercial, Industrial">RCI</abbr> and an Enhanced Freight Rail Station.
+      </p>
+
+
+      <p>
+      	The BATs are warehouses and ancillary buildings. They are completely fictional, but I have used the logos and liveries of containers of real companies.
+      </p>
+
+
+      <p>
+      	All lots look the same and are 10x10 tiles large. They widely use prop families. As a result, you will get a different prop combination (and appearance) each time you grow or plop them. In addition many of them are time-dependent, eg the trucks appear and disappear periodically while the gates close during the night. The streets inside the lots as well as the parking areas are transit- and <abbr title="U-Drive-It">UDI</abbr>-enabled. Also they spawn freight truck and train vehicles.
+      </p>
+
+
+      <p>
+      	The <abbr title="Residential, Commercial, Industrial">RCI</abbr> lots are actually commercial services. One would say to make them industrial, however this kind of operations is essentially commercial, plus industry tends to decline as HQ and EQ rise while CS demand is usually all-high, especially after offices have developed and displaced services. The stats are all the same.
+      </p>
+
+
+      <p>
+      	The Freight Rail Station is specially modded so as to become two-way (provide both rail-to-truck and truck-to-rail traffic conversions). It also lifts caps for the ID and IM sectors.
+      </p>
+
+
+      <p>
+      	The lots are installed by an installer and there is nothing else you need to do except of installing the needed dependencies. However it is possible to customise the lots' appearance. Please check the readme for detailed instructions, and also for tips on placing them. If you don't want some certain lots, eg the ploppables, you can delete their .SC4Lot files.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><strong>Dependencies</strong></span>
+      </p>
+
+
+      <ol>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/15582-warehouses-batprops-part-a/" rel="">Warehouses BATProps Part A</a>  <span style="font-size:12px;">(These are the BATs)</span>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/15583-warehouses-batprops-part-b/" rel="">Warehouses BATProps Part B</a>  <span style="font-size:12px;">(These are the BATs)</span>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=342" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Mega Props JES Vol 01</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol 01</a>
+      	</li>
+      </ol>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="0" cellspacing="1" style="background-color:#e0d0c0;" summary="">
+      	<tbody>
+      		<tr>
+      			<th align="center">
+      				Lot Statistics
+      			</th>
+      			<th align="left">
+      				 Growable CS$/CS$$ 
+      			</th>
+      			<th align="left">
+      				 Ploppable CS$/CS$$ 
+      			</th>
+      			<th align="left">
+      				 Freight Rail Station 
+      			</th>
+      		</tr>
+      		<tr style="background-color:#f0e0d0;">
+      			<td>
+      				 Lot size
+      			</td>
+      			<td>
+      				 10x10
+      			</td>
+      			<td>
+      				 10x10
+      			</td>
+      			<td>
+      				 10x10
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 Building Styles
+      			</td>
+      			<td>
+      				 Chic,NY,Hous,Euro
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      		</tr>
+      		<tr style="background-color:#f0e0d0;">
+      			<td>
+      				 Growth Stage
+      			</td>
+      			<td>
+      				 5
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 Plop Cost
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      			<td>
+      				 $15000/$25000
+      			</td>
+      			<td>
+      				 $25000
+      			</td>
+      		</tr>
+      		<tr style="background-color:#f0e0d0;">
+      			<td>
+      				 Bulldoze Cost
+      			</td>
+      			<td>
+      				 $1100
+      			</td>
+      			<td>
+      				 $1100
+      			</td>
+      			<td>
+      				 $1100
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 Monthly Cost
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      			<td>
+      				 $500
+      			</td>
+      		</tr>
+      		<tr style="background-color:#f0e0d0;">
+      			<td nowrap>
+      				 Demand Cap Relief
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      			<td nowrap>
+      				 ID:25000, IM:25000
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 Building Value
+      			</td>
+      			<td>
+      				 $8000/$10000
+      			</td>
+      			<td>
+      				 $8000/$10000
+      			</td>
+      			<td>
+      				 -
+      			</td>
+      		</tr>
+      		<tr style="background-color:#f0e0d0;">
+      			<td>
+      				 Jobs
+      			</td>
+      			<td>
+      				 1191/793
+      			</td>
+      			<td>
+      				 1191/793
+      			</td>
+      			<td>
+      				 158$ 72$$ 23$$$
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 Flamability/Stage
+      			</td>
+      			<td>
+      				 45/4
+      			</td>
+      			<td>
+      				 45/4
+      			</td>
+      			<td>
+      				 45/4
+      			</td>
+      		</tr>
+      		<tr style="background-color:#f0e0d0;">
+      			<td>
+      				 Power Consumed
+      			</td>
+      			<td>
+      				 225 MWh/mo
+      			</td>
+      			<td>
+      				 225 MWh/mo
+      			</td>
+      			<td>
+      				 225 MWh/mo
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 Water Consumed
+      			</td>
+      			<td>
+      				 800 cu.m/mo
+      			</td>
+      			<td>
+      				 800 cu.m/mo
+      			</td>
+      			<td>
+      				 800 cu.m/mo
+      			</td>
+      		</tr>
+      		<tr style="background-color:#f0e0d0;">
+      			<td nowrap>
+      				 Pollution (Air/Water) 
+      			</td>
+      			<td>
+      				 35/25 over 6/7 tiles
+      			</td>
+      			<td>
+      				 35/25 over 6/7 tiles
+      			</td>
+      			<td>
+      				 35/25 over 6/7 tiles
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 Garbage Produced
+      			</td>
+      			<td>
+      				 80 tons/mo
+      			</td>
+      			<td>
+      				 80 tons/mo
+      			</td>
+      			<td>
+      				 80 tons/mo
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br>
+      	<span style="font-size:16px;"><strong>Credits</strong></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Special thanks to <a href="https://community.simtropolis.com/profile/27468-jestarr/content/?type=downloads_file" rel="">Jestarr</a> for his custom consist prop models.
+      	</li>
+      	<li>
+      		Special thanks to <a href="https://community.simtropolis.com/profile/21263-swamper77/content/?type=downloads_file" rel="">Swamper77</a> for the automata-spawning scripts.
+      	</li>
+      	<li>
+      		Many thanks to <a href="https://community.simtropolis.com/profile/6605-barbyw/content/?type=downloads_file" rel="">BarbyW</a> and <a href="https://community.simtropolis.com/profile/48496-t-wrecks/content/?type=downloads_file" rel="">T Wrecks</a> for their modding and stats help.
+      	</li>
+      </ul>
+
+
+      <p>
+      	<br>
+      	<a href="https://community.simtropolis.com/profile/45188-cogeo/content/?type=downloads_file" rel="">View my other Lots on the STEX</a>
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="font-size:13px; color:#2980b9;"><strong>-CB Edit:</strong> Updated links and added note to inform others of a possible solution for missing models on these lots.</span>
+      </p>
+
+      						</body>
+    filename: Install_LogisticsCentresMegaPackV1.zip
+    files:
+      - Utils_10x10_FreightRailStation_LogisticsCentre.SC4Lot
+      - LogisticsCentresPack_Readme.html
+      - LCP_UK_PathingPatch.dat
+      - LCP_Props_SemiTrailers_SG_Jes.dat
+      - LCP_Props_ParkedTrucks_Jes.dat
+      - LCP_Props_DistributionTrucks_SC_SG.dat
+      - LCP_Props_Consists_Jes.dat
+      - LCP_PropsAndTextures.dat
+      - LCP_Locale_US.dat
+      - FreightAutomataSpawningScripts_Swamper77.dat
+      - CS$PLOP_10x10_LogisticsCentre.SC4Lot
+      - CS$5_10x10_LogisticsCentre.SC4Lot
+      - CS$$PLOP_10x10_LogisticsCentre.SC4Lot
+      - CS$$5_10x10_LogisticsCentre.SC4Lot
+      - Props/LCP_Prop_Warehouse_White.dat
+      - Props/LCP_Prop_Warehouse_Jade.dat
+      - Props/LCP_Prop_Warehouse_DkRed.dat
+      - Props/LCP_Prop_RetailLoading_White.dat
+      - Props/LCP_Prop_RetailLoading_Jade.dat
+      - Props/LCP_Prop_RetailLoading_DkRed.dat
+      - Props/LCP_Prop_Main_PONedlloyd.dat
+      - Props/LCP_Prop_Main_Maersk.dat
+      - Props/LCP_Prop_Main_HapagLloyd.dat
+      - Props/LCP_Prop_Main_Gartner.dat
+      - Props/LCP_Prop_Main_ECS.dat
+      - Props/LCP_Prop_Admin_NY2.dat
+      - Props/LCP_Prop_Admin_NY1.dat
+      - Props/LCP_Prop_Admin_Hou3.dat
+      - Props/LCP_Prop_Admin_Hou2.dat
+      - Props/LCP_Prop_Admin_Hou1.dat
+      - Props/LCP_Prop_Admin_Euro2.dat
+      - Props/LCP_Prop_Admin_Euro1.dat
+      - Props/LCP_Prop_Admin_Chi1.dat
+      - Models/jestarr_AdditionalPropModels.SC4Model
+      - LogisticsCentresPack_Readme_files/Zoning.jpg
+      - LogisticsCentresPack_Readme_files/TransitEnabling.jpg
+      - LogisticsCentresPack_Readme_files/PropWHWhite.jpg
+      - LogisticsCentresPack_Readme_files/PropWHRed.jpg
+      - LogisticsCentresPack_Readme_files/PropWHJade.jpg
+      - LogisticsCentresPack_Readme_files/PropRLWhite.jpg
+      - LogisticsCentresPack_Readme_files/PropRLRed.jpg
+      - LogisticsCentresPack_Readme_files/PropRLJade.jpg
+      - LogisticsCentresPack_Readme_files/PropMainPonl.jpg
+      - LogisticsCentresPack_Readme_files/PropMainMaersk.jpg
+      - LogisticsCentresPack_Readme_files/PropMainHL.jpg
+      - LogisticsCentresPack_Readme_files/PropMainGartner.jpg
+      - LogisticsCentresPack_Readme_files/PropMainECS.jpg
+      - LogisticsCentresPack_Readme_files/PropAdminNY2.jpg
+      - LogisticsCentresPack_Readme_files/PropAdminNY1.jpg
+      - LogisticsCentresPack_Readme_files/PropAdminHou3.jpg
+      - LogisticsCentresPack_Readme_files/PropAdminHou2.jpg
+      - LogisticsCentresPack_Readme_files/PropAdminHou1.jpg
+      - LogisticsCentresPack_Readme_files/PropAdminEuro2.jpg
+      - LogisticsCentresPack_Readme_files/PropAdminEuro1.jpg
+      - LogisticsCentresPack_Readme_files/PropAdminChi1.jpg
+      - LogisticsCentresPack_Readme_files/LotBuildings.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_06_2008/195c4fa65c373a74b16e342dca6b49bc-LPLeft2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_06_2008/195c4fa65c373a74b16e342dca6b49bc-LPRight2.jpg
     lastModified: 2018-07-18T21:44:36Z
     name: Logistics Centres MegaPack
+    sha256: 00239627fd77370b128af8425b825b324030dffc4dc3fbd2b943d24e630c6812
+    size: 1470569
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2008/thumb-195c4fa65c373a74b16e342dca6b49bc-LPLeft2.jpg
+    timestamp: 2024-07-01T10:39:10.701Z
+    uncompressed: 1484240
     url: https://community.simtropolis.com/files/file/16119-logistics-centres-megapack/
+    version: "1.0"
   simtropolis/16121-german-highway-signs-grass-version:
     authors:
       - tag_one
@@ -5963,10 +6352,103 @@ assets:
     authors:
       - hoo47
     category: 700
+    dependencies: []
+    description: >-
+      <body>
+
+
+
+
+      <p><span style="font-family:Helvetica, Arial, sans-serif;">This is a series of 1x1 lots that allow you to create parking lots of various sizes and configurations. This is the base set for
+      several planned add-ons which will allow you to make many different kinds of parking lots.  There are 11 lots total, 6 entrance lots, which function as parking lots with a capacity of 1,500, and
+      5 eye candy lots.</span></p>
+
+      <p> </p>
+
+      <p><span style="font-family:Helvetica, Arial, sans-serif;">This is a replacement for the original set released on the STEX in August 2009.  If you have the original set, I highly recommend you
+      replace it with this set.  There are several improvements to the original set, including improved entrance textures, more variety of cars, lamp post placement improved, improved menu icons and
+      the capacity of the entrance lots has been increased from 1,000 to 1,500.  You do not have to demolish lots you have already placed, although the props will not update unless you
+      replop.</span></p>
+
+      <p> </p>
+
+      <p>Stats are as follows:</p>
+
+      <p></p>
+
+      <p><b>Entrance Lots:</b></p>
+
+      <table cellspacing="0" cellpadding="2" border="0" style="width:419px;height:149px;"><tbody><tr bgcolor="#e9ebf0"><td width="150">Lot size:</td>            <td width="450">1 x 1
+      tiles</td>        </tr><tr><td>Menu position:</td>            <td>Building: Transportation,Building: MiscTransit</td>        </tr><tr bgcolor="#e9ebf0"><td>Jobs:</td>            <td>Jobs $ :
+      2</td>        </tr><tr><td>Plop cost:</td>            <td>§ 30</td>        </tr><tr bgcolor="#e9ebf0"><td>Bulldoze cost:</td>            <td>§ 2</td>        </tr><tr><td>Monthly
+      cost:</td>            <td>§ 1</td>        </tr><tr><td>Capacity:</td>            <td>1,500</td>        </tr></tbody></table><p><b>Other Lots:</b></p>
+
+      <p> </p>
+
+      <p></p>
+
+      <table cellspacing="0" cellpadding="2" border="0" style="width:427px;height:86px;"><tbody><tr bgcolor="#e9ebf0"><td width="150">Lot size:</td>            <td width="450">1 x 1
+      tiles</td>        </tr><tr><td>Menu position:</td>            <td>Building: Transportation,Building: MiscTransit</td>        </tr><tr><td>Plop cost:</td>            <td>§ 5</td>        </tr><tr
+      bgcolor="#e9ebf0"><td>Bulldoze cost:</td>            <td>§ 1</td>        </tr></tbody></table><span style="font-family:Helvetica, Arial, sans-serif;"></span><p>Dependencies:</p>
+
+      <p></p>
+
+      <p>To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>
+
+      <ul><li>
+
+      <span><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol 01.dat  -  Available on the <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external
+      nofollow"><abbr title="Lot EXchange (SC4Devotion)">LEX</abbr></a> or the <a href="../../stex/details.cfm?id=15287" rel="">STEX</a></span>    </li>
+
+      <li><span><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - Misc Vol02.dat - Available on the <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1771" rel="external
+      nofollow"><abbr title="Lot EXchange (SC4Devotion)">LEX</abbr></a>  </span></li>    <li>
+
+      <span><abbr title="BATT Squad Certification">BSC</abbr> Hedges (for BSC_ParkFeatures.dat, for arrows, very helpful when placing lots) -  Available on the <a
+      href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=283" rel="external nofollow"><abbr title="Lot EXchange (SC4Devotion)">LEX</abbr></a></span><p>    </p>
+
+      </li>    <li><span>WalkingSnake Textures Vol 01.dat - Available on the <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1181" rel="external nofollow"><abbr title="Lot EXchange
+      (SC4Devotion)">LEX</abbr></a> or the <a href="../../stex/details.cfm?id=15354" rel="">STEX</a>  </span></li>    <li><span>HH Parking Textures 1a.dat - included</span></li>
+
+      </ul>Special thanks to RippleJet for his invaluable assistance.<p> </p>
+
+      <p>Please see my <a href="https://www.sc4devotion.com/forums/index.php?topic=8523.0" rel="external nofollow">Building Thread</a> on <a href="http://www.sc4devotion.com/" rel="external
+      nofollow">SC4Devotion</a> for any feedback or support issues. I will attempt to answer them to the best of my knowledge, and as quickly as possible.</p>
+
+      <p> </p>
+
+      <p>Also available in black.  You can find all my  lots <a href="../../stex/index.cfm?p=files&amp;keyword=hooha47&amp;view=all" rel="">here</a>, or by searching on the STEX for hooha47.</p>
+
+      						</body>
+    filename: HH Modular Parking Gray.zip
+    files:
+      - HH Parking Textures 1a.dat
+      - HH Modular Parking T entrance Right Gray_17895a21.SC4Lot
+      - HH Modular Parking T entrance Left Gray_178b448d.SC4Lot
+      - HH Modular Parking T  Gray_37895ae8.SC4Lot
+      - HH Modular Parking Straight Gray_77896295.SC4Lot
+      - HH Modular Parking Straight Entrance  Gray_97896249.SC4Lot
+      - HH Modular Parking Right Corner Gray_178964b1.SC4Lot
+      - HH Modular Parking Right Corner Entrance Gray_178964c1.SC4Lot
+      - HH Modular Parking Left Corner Gray_978963e9.SC4Lot
+      - HH Modular Parking Left Corner Entrance Gray_f78963de.SC4Lot
+      - HH Modular Parking Gray Read Me.html
+      - HH Modular Parking End Gray_978969ac.SC4Lot
+      - HH Modular Parking 4- way entrance gray_b789d947.SC4Lot
+      - HH Modular Parking 4- way entrance gray_b789d947.sav
+      - images/Gray Individual Lots numbered.jpg
+      - images/Gray Daytime Lots.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_09_2009/6d0597da79681182938137c9d03fde65-Gray%20Closeup1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2009/6d0597da79681182938137c9d03fde65-Gray%20Daytime%20Lots1.jpg
     lastModified: 2009-09-22T00:12:10Z
     name: HH Modular Parking Gray (Version 2)
+    sha256: bacde81b4fa9b87d0834b0293acf8f339376bfb87da7075f8e961fa23e2ae997
+    size: 1568481
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2009/thumb-6d0597da79681182938137c9d03fde65-Gray%20Closeup1.jpg
+    timestamp: 2024-07-01T10:39:10.701Z
+    uncompressed: 1669443
     url: https://community.simtropolis.com/files/file/22527-hh-modular-parking-gray-version-2/
+    version: "2"
   simtropolis/22528-hh-modular-parking-black-version-2:
     authors:
       - hoo47
@@ -6188,93 +6670,258 @@ assets:
       - ShadeSlayer
     category: 700
     dependencies:
-      - simtropolis/15322-bsc-texture-pack-cycledogg-v01
+      - cycledogg/textures-vol01
       - simtropolis/15582-warehouses-batprops-part-a
       - simtropolis/15583-warehouses-batprops-part-b
       - simtropolis/16119-logistics-centres-megapack
     description: >-
-      About
+      <body>
 
 
-      It's finally here! SCAG Cargo Lots by ShadeSlayer (SCAG-CLSS) is a series of lots aimed to enhance the cargo aspect of SimCity Airports.
 
 
-      There is a large update for this pack planned for April 2010. While game crashes are unlikely, we are going to remove that possibility and update dependencies. Thanks.
+      <h2>
+      	About
+      </h2>
 
 
-      SCAG-CLSS are purely eyecandy, and are not functional.
+      <p>
+      	It's finally here! <abbr title="SimCity Airport Group">SCAG</abbr> Cargo Lots by ShadeSlayer (<abbr title="SimCity Airport Group">SCAG</abbr>-CLSS) is a series of lots aimed to enhance the cargo aspect of SimCity Airports.
+      </p>
 
 
-      Included with this package are the following:
-
-        -  The plane/building lots;
-        -  Some cargo props created by various members of SCAG (noted below);
-        -  A readme file;
-        -  A cleanitol dependency checker; and
-        -  Some pictures to make it look pretty.
-
-      All of this is contained in a .zip file. There is no EXE installer as to maintain cross-compatability between different Operating Systems.
-
-       Installation Instructions
-
-      Unzip (extract) the .ZIP file into your "My Documents/SimCity 4/Plugins" folder.
-
-       Dependencies
-
-      Sorry for the huge amount of dependencies, but I created this under the assumption that most users downloading this would already have airports, and thus, have about half of the dependencies
-      already.
-
-        -  AC MEGA Textures vol1
-        -  AC Cargo Planes vol1
-        -  AC MEGA Props vol2
-        -  AC MEGA Props vol5
-        -  ACB-VLT Series 2
-        -  BSC MEGA Textures Cycledogg vol1
-        -  BSC MEGA Props jestarr vol1
-        -  BSC MEGA Props jestarr vol2
-        -  BSC MEGA Props jestarr vol3
-        -  BSC MEGA Props Gascooker vol1
-        -  Warehouse BATProps Part A
-        -  Warehouse BATProps Part B
-        -  Warehouse Mega Pack
-
-      You may also use the included Cleanitol file to make this job easier...
-
-       Credits/Thanks
-
-      This package was created by myself, with assistance with some fellow team members in the area of prop making, namely:
+      <p>
+      	 
+      </p>
 
 
-      joelyboy911: Cargo Loaders
+      <p>
+      	<em><strong>There is a large update for this pack planned for April 2010. While game crashes are unlikely, we are going to remove that possibility and update dependencies. Thanks.</strong></em>
+      </p>
 
 
-      cameron1991: LD3 containers
+      <p>
+      	 
+      </p>
 
 
-      RustyXL: LD3 carts
+      <p>
+      	<abbr title="SimCity Airport Group">SCAG</abbr>-CLSS are purely eyecandy, and are <strong>not</strong> functional.
+      </p>
 
 
-      AC Team: for creating the plane models
+      <p>
+      	 
+      </p>
 
 
-      Also thanks to the SCAG team. Without them, this probably wouldn't have been as face-smashingly awesome.
-
-       Copyright
-
-      Copyright © 2009, SimCity Aviation Group
+      <p>
+      	Included with this package are the following:
+      </p>
 
 
-      Protected under the Creative Commons License
+      <ol><li>
+      		The plane/building lots;
+      	</li>
+      	<li>
+      		Some cargo props created by various members of <abbr title="SimCity Airport Group">SCAG</abbr> (noted below);
+      	</li>
+      	<li>
+      		A readme file;
+      	</li>
+      	<li>
+      		A cleanitol dependency checker; and
+      	</li>
+      	<li>
+      		Some pictures to make it look pretty.
+      	</li>
+      </ol><p>
+      	All of this is contained in a .zip file. There is no EXE installer as to maintain cross-compatability between different Operating Systems.
+      </p>
 
 
-      Do not redistribute the included lots without direct permission.
-
-       Contact
-
-      If you wish to contact me, my email is:
+      <p>
+      	 
+      </p>
 
 
-      SCAG Team Room: www.sc4devotion.com/forums/index.php
+      <h2>
+      	Installation Instructions
+      </h2>
+
+
+      <p>
+      	Unzip (extract) the <u>.ZIP</u> file into your "My Documents/SimCity 4/Plugins" folder.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <h2>
+      	Dependencies
+      </h2>
+
+
+      <p>
+      	Sorry for the huge amount of dependencies, but I created this under the assumption that most users downloading this would already have airports, and thus, have about half of the dependencies already.
+      </p>
+
+
+      <ol><li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1896" rel="external nofollow">AC MEGA Textures vol1</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1895" rel="external nofollow">AC Cargo Planes vol1</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1892" rel="external nofollow">AC MEGA Props vol2</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2044" rel="external nofollow">AC MEGA Props vol5</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2055" rel="external nofollow">ACB-VLT Series 2</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/15322-bsc-texture-pack-cycledogg-v01/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> MEGA Textures Cycledogg vol1</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=342" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props jestarr vol1</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=338" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props jestarr vol2</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=339" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props jestarr vol3</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=397" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props Gascooker vol1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/15582-warehouses-batprops-part-a/" rel="">Warehouse BATProps Part A</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/15583-warehouses-batprops-part-b/" rel="">Warehouse BATProps Part B</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/16119-logistics-centres-megapack/" rel="">Warehouse Mega Pack</a>
+      	</li>
+      </ol><p>
+      	You may also use the included Cleanitol file to make this job easier...
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <h2>
+      	Credits/Thanks
+      </h2>
+
+
+      <p>
+      	This package was created by myself, with assistance with some fellow team members in the area of prop making, namely:
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	joelyboy911: Cargo Loaders
+      </p>
+
+
+      <p>
+      	cameron1991: LD3 containers
+      </p>
+
+
+      <p>
+      	RustyXL: LD3 carts
+      </p>
+
+
+      <p>
+      	AC Team: for creating the plane models
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Also thanks to the <abbr title="SimCity Airport Group">SCAG</abbr> team. Without them, this probably wouldn't have been as face-smashingly awesome.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <h2>
+      	Copyright
+      </h2>
+
+
+      <p>
+      	Copyright © 2009, SimCity Aviation Group
+      </p>
+
+
+      <p>
+      	Protected under the Creative Commons License
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Do not redistribute the included lots without direct permission.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <h2>
+      	Contact
+      </h2>
+
+
+      <p>
+      	If you wish to contact me, my email is: <img alt="528623761.gif" src="http://img44.imageshack.us/img44/6824/528623761.gif" style="width:166px;height:20px;" ></p>
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<abbr title="SimCity Airport Group">SCAG</abbr> Team Room: <a href="https://www.sc4devotion.com/forums/index.php?board=266.0" rel="external nofollow">www.sc4devotion.com/forums/index.php</a>
+      </p>
+
+
+      <h2>
+      	 
+      </h2>
+
+      						</body>
     filename: SCAG-CLSS.zip
     files:
       - SCAG-CLSS/screenNight.gif
@@ -6293,7 +6940,7 @@ assets:
     sha256: a99e22311946fc4f4aaee1b0deccb692d40a608ca31bc732562c05c7901ceaa0
     size: 475924
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2010/thumb-0b356be2061e8c1831a6dd3ba4c9f953-screenDay.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 1065061
     url: https://community.simtropolis.com/files/file/23004-scag-cargo-lots-v10/
     version: "1.0"
@@ -9805,60 +10452,231 @@ assets:
       - sc4evermore/13-
       - sc4evermore/90-mgb204-texture-pack
     description: >-
-      Short Description:
+      <body>
 
 
-      This is a set of car, freight car, and bus traffic blockers for default maxis, SAM, GLR, and RHW routes. They will block one kind of traffic while allowing the other kinds of traffic and
-      pedestrians to pass. This may be useful for creating bus lines, simply reducing traffic, preventing cars from taking a shortcut through settlements, keeping freight cars away from residential
-      zones and so on. Traffic blockers for roads, one-way roads, avenues, side roads, and railway are already existing on the STEX, but not for SAM and RHW routes, so I thought they might be useful.
 
 
-      I've tried to keep them as inconspicuous as possible (so not to disrupt the look of your city); therefore the screenshots won't be spectacular. The screenshot below shows a small city where
-      buses and pedestrians are taking the SAM 2 Herringbone Street to get to work, while cars are forced to take a detour.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Short Description:</strong></span>
+      </p>
 
 
-      There are traffic blockers for the subsequently mentioned traffic routes:
-
-        -  Maxis routes: road, street, avenue, one-way road
-        -  SAM streets: 2-11
-        -  RHW routes: RHW-2, RHW-4, RHW-6, RHW-8, RHW-10, MIS
-        -  GLR: Tram-on-Road (only with concrete pavement in the center), Tram-on-Avenue, Tram-on-Street
-
-      For further information, please refer to the readme in the download.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">This is a set of car, freight car, and bus traffic blockers for default maxis, <abbr title="Street Addon Mod">SAM</abbr>, <abbr title="Ground Light Rail">GLR</abbr>, and <abbr title="RealHighway">RHW</abbr> routes. They will block one kind of traffic while allowing the other kinds of traffic and pedestrians to pass. This may be useful for creating bus lines, simply reducing traffic, preventing cars from taking a shortcut through settlements, keeping freight cars away from residential zones and so on. Traffic blockers for roads, one-way roads, avenues, side roads, and railway are already existing on the STEX, but not for <abbr title="Street Addon Mod">SAM</abbr> and <abbr title="RealHighway">RHW</abbr> routes, so I thought they might be useful.</span>
+      </p>
 
 
-      Note: If you have downloaded this between April 15th, 2020, and June 16th, 2020, please remove the file TBS_Textures.dat, since it has become obsolete with the release of the 11241036 Textures.
-      Please download this dependency package instead.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">I've tried to keep them as inconspicuous as possible (so not to disrupt the look of your city); therefore the screenshots won't be spectacular. The screenshot below shows a small city where buses and pedestrians are taking the <abbr title="Street Addon Mod">SAM</abbr> 2 Herringbone Street to get to work, while cars are forced to take a detour.</span>
+      </p>
 
 
-      Dependencies:
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">There are traffic blockers for the subsequently mentioned traffic routes:</span>
+      </p>
 
 
-      SFBT Essentials
+      <ul>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">Maxis routes: road, street, avenue, one-way road</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><abbr title="Street Addon Mod">SAM</abbr> streets: 2-11</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><abbr title="RealHighway">RHW</abbr> routes: <abbr title="RealHighway">RHW</abbr>-2, <abbr title="RealHighway">RHW</abbr>-4, <abbr title="RealHighway">RHW</abbr>-6, <abbr title="RealHighway">RHW</abbr>-8, <abbr title="RealHighway">RHW</abbr>-10, <abbr title="Modular Interchange System">MIS</abbr></span>
+      	</li>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><abbr title="Ground Light Rail">GLR</abbr>: Tram-on-Road (only with concrete pavement in the center), Tram-on-Avenue, Tram-on-Street</span>
+      	</li>
+      </ul>
 
 
-      https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">For further information, please refer to the readme in the download.</span>
+      </p>
 
 
-      MGB Texture Pack
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><span style="color:#e74c3c;"><strong>Note: </strong>If you have downloaded this between April 15<sup>th</sup>, 2020, and June 16<sup>th</sup>, 2020, please remove the file TBS_Textures.dat, since it has become obsolete with the release of the 11241036 Textures. Please download this dependency package instead.</span></span>
+      </p>
 
 
-      https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack
+      <p>
+      	 
+      </p>
 
 
-      Network Addon Mod Version 37.0 or newer
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><span style="color:rgb(0,0,255);"><strong>Dependencies:</strong></span></span>
+      </p>
 
 
-      http://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer-offsite
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong><abbr title="SimForum BAT Team">SFBT</abbr> Essentials</strong></span>
+      </p>
 
 
-      11241036 Textures
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-<abbr title="SimForum BAT Team">sfbt</abbr>-essentials</a>
+      </p>
 
 
-      To be done:
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>MGB Texture Pack</strong></span>
+      </p>
 
-        -  Also, I'd appreciate if someone could explain me how to make Menu Management Lots. Although traffic blockers are sometimes helpful, we probably won't use them everyday, and therefore you may probably want to save space in your game menu.
-        -  If I'm getting enough requests, I may include other traffic blockers in later updates.
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack</a>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Network Addon Mod Version 37.0 or newer</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer-offsite" rel="">http://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer-offsite</a></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>11241036 Textures</strong></span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed3450166797" scrolling="no"
+      src="https://community.simtropolis.com/files/file/33651-11241036-textures/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>SC4Fix: Third-party patches for SC4</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Not really required, but it resolves that nasty crash-to-desktop bug occurring whenever you hover with a puzzle piece over a transit-enabled lot.</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2719018586" scrolling="no"
+      src="https://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Currently available languages: </strong>English, German</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Installation:</strong></span>
+      </p>
+
+
+      <p style="text-align:justify;">
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><span lang="en-us" xml:lang="en-us">Download the archive and extract all files to a folder where you will find them. Move or copy this folder into your Plugins sub-folder of your edition of SimCity 4 (for instance: C:/Programs/Maxis/SimCity 4/Plugins).</span></span>
+      </p>
+
+
+      <p style="text-align:justify;">
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><span lang="en-us" xml:lang="en-us">To uninstall, please bulldoze all instances of this plugin in your cities, then remove all of its files from your Plugins subfolder.</span></span>
+      </p>
+
+
+      <p style="text-align:justify;">
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><b><span lang="en-us" xml:lang="en-us">Note, if you have versions prior to version 3 installed:</span></b><span lang="en-us" xml:lang="en-us"> Please remove it before installing the new plugin. You don't need to bulldoze your already existing traffic stops, and nothing will change in-game. However, to tidy up this plugin, I've reorganized the files and packed them into one big file. You'll have them twice if you simply copy this plugin into your plugin folder.</span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><b><span lang="en-us" xml:lang="en-us">Extra note:</span></b><span lang="en-us" xml:lang="en-us"> For people using my Cobblestone Street Override mod, I've added the extra file <i>z_TBS <abbr title="Street Addon Mod">SAM</abbr> 8 Override.dat</i>, which will alter the base texture to a cobblestone texture. Remove this file if you don't want this (see screenshots).</span></span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Compatibility:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Since this plugin requires installation of the Network Addon Mod, it is only compatible with SimCity 4: Rush Hour, or SimCity Deluxe.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Credits:</strong></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">The Network Addon Mod Team for the textures of the routes</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">odrzutowiec for the idea of introducing the <abbr title="Ground Light Rail">GLR</abbr> traffic blockers</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Support:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Please feel free to post issues, bug reports, and suggestions in this thread:</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2740235343" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed" style="height:208px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>To be done:</strong></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">Also, I'd appreciate if someone could explain me how to make Menu Management Lots. Although traffic blockers are sometimes helpful, we probably won't use them everyday, and therefore you may probably want to save space in your game menu.</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">If I'm getting enough requests, I may include other traffic blockers in later updates.</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
     filename: Traffic Blocker Set.zip
     files:
       - STEX/z_TBS SAM 8 Override.dat
@@ -9874,7 +10692,7 @@ assets:
     sha256: da8c7c6ba9db976391137412e1390185d3e13ded4b5347e8f390ac4f0783c698
     size: 757085
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_04/Screenshot.thumb.jpg.9f733a5faa40abbd3b6c478754e3a153.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 860211
     url: https://community.simtropolis.com/files/file/28975-traffic-blocker-set/
     version: "3"
@@ -12036,34 +12854,58 @@ assets:
       - simtropolis/34777-esa-rail-prop-pack
       - simtropolis/35025-esa-rail-props-2
     description: >-
-      About
+      <body>
 
 
-      This is a series of lots that yoy can use for your railway. It is lot based thus not modded to be used when dragging a railway, Lots are found in the power menu. And lastly, forgive my modding,
-      i'm a batter first an foremost.
 
 
-      Stats
+      <p>
+      	<strong>About </strong>
+      </p>
 
 
-      Size: 1x1
-
-      Bulldoze cost:10
-
-      Wealth: None
-
-      Pollution at center:0
-
-      Flammability:0
-
-      Plop cost: 40
-
-      Occupant groups:Utility, Power
-
-      Budget cost: 5
+      <p>
+      	This is a series of lots that yoy can use for your railway. It is lot based thus not modded to be used when dragging a railway,  Lots are found in the power menu. And lastly, forgive my modding, i'm a batter first an foremost.
+      </p>
 
 
-      Dependencies
+      <p>
+      	<strong>Stats</strong>
+      </p>
+
+
+      <p>
+      	Size: 1x1<br>
+      	Bulldoze cost:10<br>
+      	Wealth: None<br>
+      	Pollution at center:0<br>
+      	Flammability:0<br>
+      	Plop cost: 40<br>
+      	Occupant groups:Utility, Power<br>
+      	Budget cost: 5
+      </p>
+
+
+      <p>
+      	<strong>Dependencies</strong>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed8301896847" scrolling="no"
+      src="https://community.simtropolis.com/files/file/34777-esa-rail-prop-pack/?do=embed" style="height:364px;max-width:502px;"></iframe><iframe allowfullscreen=""
+      data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed4648744731" scrolling="no"
+      src="https://community.simtropolis.com/files/file/35025-esa-rail-props-2/?do=embed" style="height:322px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
     filename: ESA Gantries.zip
     files:
       - ESA Gantries/ESA/Lots/Pz1x1_Morabrygga 4 spar diag_0f4b40d9.SC4Lot
@@ -12107,7 +12949,7 @@ assets:
     sha256: 45f5cc2e5390000db6334db383f59a2399b01a847bf4837488030ddd33cdc1d9
     size: 771234
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666d47464be5c_NewCity-Jan.7021718436878.thumb.jpg.554f26f731082d451f3ce8035758b75d.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 785724
     url: https://community.simtropolis.com/files/file/35026-esa-gantries-vol-1/
     version: 2.0.0
@@ -13408,4 +14250,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-4e73e9a5e97f6ee8b1862cc09ff27f23-Allotments-Day.jpg
     url: https://community.simtropolis.com/files/file/999-bus-stop-with-allotments/
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

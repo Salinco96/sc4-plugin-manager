@@ -1620,7 +1620,7 @@ assets:
       - pezzajn
     category: 730
     lastModified: 2017-08-09T22:09:30Z
-    name: Cruise Ship Port (CSP) – Broadway Cruise Ship Terminal
+    name: Cruise Ship Port (CSP) - Broadway Cruise Ship Terminal
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2013/thumb-12c6c5fedc4ad91ed9995784fc0f1447-csp_bcst_intro.jpg
     url: https://community.simtropolis.com/files/file/28424-cruise-ship-port-csp-%E2%80%93-broadway-cruise-ship-terminal/
   simtropolis/28734-modular-containers-lots-set:
@@ -1675,10 +1675,101 @@ assets:
     authors:
       - nbvc
     category: 730
+    dependencies: []
+    description: >-
+      <body>
+
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      <p>This file contains 12 marina piers with different shapes and sizes. It also contains some seawalls for the marina.</p>
+
+      <p> </p>
+
+      <p>Everything is located in the seaport menu.</p>
+
+      <p> </p>
+
+      <p>The props can also be used in the Lot-Editor for your custom lots.<br>No dependencies.</p>
+
+      						</body>
+    filename: NBVC_Marina.zip
+    files:
+      - NBVC_Marina/NBVC_MarinaWall2_3f265186.SC4Lot
+      - NBVC_Marina/NBVC_MarinaWall1_beee8a15.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierY1_9f2e22b5.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierTSmall1_103-0x6534284a-0xdd040c94-0x5eed4d91.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierTSmall1_103-0x5ad0e817_0x417c8605_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierSmall3_df13f67e.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierSmall3_102-0x6534284a-0xdd040c94-0x9f13e454.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierSmall3_102-0x5ad0e817_0x621871ca_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierMediumT3_106-0x6534284a-0xdd040c94-0x5f12d084.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierMediumT3_106-0x5ad0e817_0xc1efd099_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierMediumT2_109-0x6534284a-0xdd040c94-0xdf113ae2.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierMediumT2_109-0x5ad0e817_0xe1c7fe8f_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierMediumL2T2_101-0x6534284a-0xdd040c94-0xff1d2247.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierMediumL2T2_101-0x5ad0e817_0x81ac5358_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierMediumL2T1_105-0x6534284a-0xdd040c94-0x7f136afa.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierMediumL2T1_105-0x5ad0e817_0xa217f5ae_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierLarge2TBend2_106-0x6534284a-0xdd040c94-0xff2c714b.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierLarge2TBend2_106-0x5ad0e817_0xa1bba58a_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierLarge2TBend1_103-0x6534284a-0xdd040c94-0x5f261d09.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierLarge2TBend1_103-0x5ad0e817_0x81b55127_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierLarge2T3_9f2f448f.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierLarge2T3_103-0x6534284a-0xdd040c94-0xbf2f4409.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierLarge2T3_103-0x5ad0e817_0x4088a69d_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierLarge2T2_9f2e0cee.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierLarge2T2_103-0x6534284a-0xdd040c94-0x5f2e0cb2.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierLarge2T2_103-0x5ad0e817_0x61bd38d5_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierLarge2T1_104-0x6534284a-0xdd040c94-0x1f2d3c77.SC4Desc
+      - NBVC_Marina/NBVC_MarinaPierLarge2T1_104-0x5ad0e817_0xa1bc70be_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaPierLarge1T2_df2d3cc7.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierL2TBend2_bf2c718b.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierL2TBend1_3f261d46.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierL2T2_bf1d22aa.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPierL2T2_3f12d42e.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPier3_ff12d0d5.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPier2_5f08cc99.SC4Lot
+      - NBVC_Marina/NBVC_MarinaPier1_feed4e3d.SC4Lot
+      - NBVC_Marina/NBVC_MarinaOuterCorner_1ef30fab.SC4Lot
+      - NBVC_Marina/NBVC_MarinaNoBuilding-0x6534284a-0xdd040c94-0xdeed4eca.SC4Desc
+      - NBVC_Marina/NBVC_MarinaNoBuilding-0x5ad0e817_0x17c883a_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaInnerCorner_1ef31203.SC4Lot
+      - NBVC_Marina/NBVC_MarinaConcreteDiagPiersPierBoats_114-0x6534284a-0xdd040c94-0xdf2e2281.SC4Desc
+      - NBVC_Marina/NBVC_MarinaConcreteDiagPiersPierBoats_114-0x5ad0e817_0x61bd57d8_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaConcreteBaseOuterCorner1_100-0x6534284a-0xdd040c94-0x3ef30f1c.SC4Desc
+      - NBVC_Marina/NBVC_MarinaConcreteBaseOuterCorner1_100-0x5ad0e817_0xc1805bd6_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaConcreteBaseOpenBenchPeople1_100-0x6534284a-0xdd040c94-0x1f2f470f.SC4Desc
+      - NBVC_Marina/NBVC_MarinaConcreteBaseOpenBenchPeople1_100-0x5ad0e817_0x6088ae63_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaConcreteBaseOpen1_100-0x6534284a-0xdd040c94-0x1eed4d84.SC4Desc
+      - NBVC_Marina/NBVC_MarinaConcreteBaseOpen1_100-0x5ad0e817_0x617c839c_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaConcreteBaseInnerCornerQR1_107-0x6534284a-0xdd040c94-0x3ef311bd.SC4Desc
+      - NBVC_Marina/NBVC_MarinaConcreteBaseInnerCornerQR1_107-0x5ad0e817_0xe1824a44_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaConcreteBaseClosedPeople2_101-0x6534284a-0xdd040c94-0x5f265148.SC4Desc
+      - NBVC_Marina/NBVC_MarinaConcreteBaseClosedPeople2_101-0x5ad0e817_0x1b58938_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaConcreteBaseClosedBench1_104-0x6534284a-0xdd040c94-0x3f16294a.SC4Desc
+      - NBVC_Marina/NBVC_MarinaConcreteBaseClosedBench1_104-0x5ad0e817_0xa1a561f1_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaConcreteBaseClosed1_100-0x6534284a-0xdd040c94-0xdeee89ca.SC4Desc
+      - NBVC_Marina/NBVC_MarinaConcreteBaseClosed1_100-0x5ad0e817_0x17dc27c_0x30000.SC4Model
+      - NBVC_Marina/NBVC_MarinaBench_5f1629b2.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_09_2013/1a49828064e1b2f5c418b7020a7afcdd-marina1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2013/df4594d907fb1bc1c6e24cbd046a3546-marina2.jpg
     lastModified: 2013-09-01T14:00:32Z
     name: Marina
+    sha256: f1667614f6d342f0a872f10f8ced3e57fa610af0f45412cd6d2a84be7b17451a
+    size: 4433258
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2013/thumb-1a49828064e1b2f5c418b7020a7afcdd-marina1.jpg
+    timestamp: 2024-07-01T10:39:10.701Z
+    uncompressed: 5068545
     url: https://community.simtropolis.com/files/file/28951-marina/
+    version: "1.0"
   simtropolis/29028-mcp-mega-seaport:
     authors:
       - Crysspm
@@ -1741,119 +1832,223 @@ assets:
     category: 730
     dependencies: []
     description: >-
-      Historic Harbor is a comprehensive 'modular set' that includes over 1,000 BATed models, a wide assortment of MMPs, and over 100 individual lots (each with custom icons).
+      <body>
 
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      We named it 'Historic Harbor' because it is supposed to represent what a harbor might look like in the late 19th century, but that doesn't mean it can't be used in conjunction with modern
-      cities. Look around at many waterfront cities today and you will find traces from a bygone era.
+      							<p>
+      	Historic Harbor is a comprehensive 'modular set' that includes over 1,000 BATed models, a wide assortment of <abbr title="Mayor Mode Ploppables">MMPs</abbr>, and over 100 individual lots (each with custom icons).
+      </p>
 
 
-      Dependencies:
+      <p>
+      	We named it 'Historic Harbor' because it is supposed to represent what a harbor might look like in the late 19th century, but that doesn't mean it can't be used in conjunction with modern cities. Look around at many waterfront cities today and you will find traces from a bygone era.
+      </p>
 
 
-      None!
+      <p>
+      	 
+      </p>
 
 
-      Everything included in this download has been hand crafted for use with this set and any future 'Historic' add-ons. We will be updating the Historic Harbor - Dependencies with additional
-      props/textures/resource files in order to consolidate everything in one 'master' dependency.
+      <p>
+      	<strong><span style="font-size:18px;">Dependencies:</span></strong>
+      </p>
 
 
-      Installation:
+      <p>
+      	<span style="color:#27ae60;"><strong>None!</strong></span>
+      </p>
 
 
-      Simply choose the version you wish (HD or SD) and unzip the folder and place into your plugin folder. If you want to play with the accompanying lots and MMPs, then be sure to download those
-      files as well (and place in your plugins folder). What if you change your mind and want to switch from HD to SD (or vise-versa)? No problem! Simply remove the version you don't want and place
-      the new version into your plugin folder. The models will switch automatically and you do not need to bulldoze anything.
+      <p>
+      	Everything included in this download has been hand crafted for use with this set and any future 'Historic' add-ons. We will be updating the <em>Historic Harbor - Dependencies</em> with additional props/textures/resource files in order to consolidate everything in one 'master' dependency.
+      </p>
 
 
-      The set is broken down in an organized fashion, so users who are comfortable with customizing their setup may remove the lots that may not be used. For example you may not want to use any of the
-      'Under Construction' lots - in that case simply remove the file 'Under Construction.dat' from the Lots folder and those will not show up in your menu when you start the game. If you are using
-      lots from a category that you wish to remove, it is advisable to delete all instances of those lots before you remove them from your plugins folder (per standard SC4 operating procedure).
+      <p>
+      	 
+      </p>
 
 
-      Once installed, the lots will be at the end of the 'Seaport' menu. The lots will be grouped together in similar categories (Pier, Quay, Filler, etc.). Despite their organized appearance, the
-      sheer number of lots will make for lots of scrolling, so if you are a DAMN user, it is recommended that you take advantage of that program for this set.
+      <p>
+      	<strong><span style="font-size:18px;">Installation:</span></strong>
+      </p>
 
 
-      A few stray lots will fall in their respected menu categories, such as the 'bus stop' and 'waste' lots (you will find this lot in the 'power' menu), but 99% of the lots will be in the 'Seaport'
-      menu.
+      <p>
+      	Simply choose the version you wish (HD or SD) and unzip the folder and place into your plugin folder. If you want to play with the accompanying lots and <abbr title="Mayor Mode Ploppables">MMPs</abbr>, then be sure to download those files as well (and place in your plugins folder). What if you change your mind and want to switch from HD to SD (or vise-versa)? No problem! Simply remove the version you don't want and place the new version into your plugin folder. The models will switch automatically and you do not need to bulldoze anything.
+      </p>
 
 
-      Gameplay:
+      <p>
+      	The set is broken down in an organized fashion, so users who are comfortable with customizing their setup may remove the lots that may not be used. For example you may not want to use any of the 'Under Construction' lots - in that case simply remove the file 'Under Construction.dat' from the Lots folder and those will not show up in your menu when you start the game. If you are using lots from a category that you wish to remove, it is advisable to delete all instances of those lots before you remove them from your plugins folder (per standard SC4 operating procedure).
+      </p>
 
 
-      For detailed instructions and example regarding the lots and MMPs, you will find everything you need in the 'readme' file located in both the Historic Harbor - Lots download and the Historic
-      Harbor - MMPs download. We encourage everyone to browse through the readme - it contains loads of vital information and it looks really cool!
+      <p>
+      	Once installed, the lots will be at the end of the 'Seaport' menu. The lots will be grouped together in similar categories (Pier, Quay, Filler, etc.). Despite their organized appearance, the sheer number of lots will make for lots of scrolling, so if you are a <abbr title="Daeley's Advanced Menu Navigator">DAMN</abbr> user, it is recommended that you take advantage of that program for this set.
+      </p>
 
 
-      Known Bugs:
+      <p>
+      	A few stray lots will fall in their respected menu categories, such as the 'bus stop' and 'waste' lots (you will find this lot in the 'power' menu), but 99% of the lots will be in the 'Seaport' menu.
+      </p>
 
 
-      There are a number of known issues and visual glitches associated with these lots (although easily remedied) and the accompanying readme explains everything in detail. So once again - please
-      read the readme!
+      <p>
+      	 
+      </p>
 
 
-      Developer notes:
+      <p>
+      	<strong><span style="font-size:18px;">Gameplay:</span></strong>
+      </p>
 
 
-      This is a massive set that has been years in the making. There has been a thorough testing of each piece, but that doesn't mean everything will work perfectly. If you run into any problems,
-      please feel free to contact us (see 'Support' below).
+      <p>
+      	For detailed instructions and example regarding the lots and <abbr title="Mayor Mode Ploppables">MMPs</abbr>, you will find everything you need in the 'readme' file located in both the <em>Historic Harbor - Lots</em> download and the <em>Historic Harbor - <abbr title="Mayor Mode Ploppables">MMPs</abbr></em> download. <span style="color:rgb(255,0,0);">We encourage everyone to browse through the readme - it contains loads of vital information and it looks really cool!</span>
+      </p>
 
 
-      For additional information regarding tips, known bugs, and how-to examples, please consult the readme.
+      <p>
+      	 
+      </p>
 
 
-      Please do not distribute any Historic Harbor content without the developers consent.
+      <p>
+      	<strong><span style="font-size:18px;">Known Bugs:</span></strong>
+      </p>
 
 
-      For those who wish to create lots using the models from this set, please feel free to download the 'prop catalog' - it will help sort through the thousands of props that are available.
+      <p>
+      	There are a number of known issues and visual glitches associated with these lots (although easily remedied) and the accompanying readme explains everything in detail. <span style="color:rgb(255,0,0);">So once again - please read the readme!</span>
+      </p>
 
 
-      Support:
+      <p>
+      	 
+      </p>
 
 
-      For questions regarding this set, please feel free to visit this thread here at Simtropolis.
+      <p>
+      	<strong><span style="font-size:18px;">Developer notes:</span></strong>
+      </p>
 
 
-      Special Thanks:
+      <p>
+      	This is a massive set that has been years in the making. There has been a thorough testing of each piece, but that doesn't mean everything will work perfectly. If you run into any problems, please feel free to contact us (see 'Support' below).
+      </p>
 
 
-      Thanks goes out to all the folks over at SimPeg who were gracious enough to offer suggestions, ideas and criticism that made this set better than anything the three of us could pull off on our
-      own.
+      <p>
+      	For additional information regarding tips, known bugs, and how-to examples, <span style="color:rgb(255,0,0);">please consult the readme</span>.
+      </p>
 
 
-      Specifically, we would like to thank our volunteer beta testers for graciously donating their time to go through this set and find all our mistakes:
+      <p>
+      	Please do not distribute any Historic Harbor content without the developers consent.
+      </p>
 
 
-      -mgb
+      <p>
+      	For those who wish to create lots using the models from this set, please feel free to download the 'prop catalog' - it will help sort through the thousands of props that are available.
+      </p>
 
 
-      -Paeng
+      <p>
+      	 
+      </p>
 
 
-      -tariel
+      <p>
+      	<strong><span style="font-size:18px;">Support:</span></strong>
+      </p>
 
 
-      -epicblunder
+      <p>
+      	For questions regarding this set, please feel free to visit <strong><a href="https://community.simtropolis.com/topic/64293-historic-harbor-support-thread/" rel="">this thread</a></strong> here at Simtropolis.
+      </p>
 
 
-      -cmdp123789
+      <p>
+      	 
+      </p>
 
 
-      -Chris11
+      <p>
+      	<strong><span style="font-size:18px;">Special Thanks:</span></strong>
+      </p>
 
 
-      -NielsC007
+      <p>
+      	Thanks goes out to all the folks over at SimPeg who were gracious enough to offer suggestions, ideas and criticism that made this set better than anything the three of us could pull off on our own.
+      </p>
 
 
-      -rathefalcon
+      <p>
+      	Specifically, we would like to thank our volunteer beta testers for graciously donating their time to go through this set and find all our mistakes:
+      </p>
 
 
-      -Indiana Joe
+      <p>
+      	-mgb
+      </p>
 
 
-      Also, we would like to acknowledge NBVC for providing the BAT script that allows custom LOD's to work at all zoom levels - it makes a world of difference when viewing the Historic Harbor pieces
-      from afar.
+      <p>
+      	-Paeng
+      </p>
+
+
+      <p>
+      	-tariel
+      </p>
+
+
+      <p>
+      	-epicblunder
+      </p>
+
+
+      <p>
+      	-cmdp123789
+      </p>
+
+
+      <p>
+      	-Chris11
+      </p>
+
+
+      <p>
+      	-NielsC007
+      </p>
+
+
+      <p>
+      	-rathefalcon
+      </p>
+
+
+      <p>
+      	-Indiana Joe
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Also, we would like to acknowledge NBVC for providing the <abbr title="Building Architect Tool">BAT</abbr> script that allows custom <abbr title="Level Of Detail">LOD</abbr>'s to work at all zoom levels - it makes a world of difference when viewing the Historic Harbor pieces from afar.<br>
+      	 
+      </p>
+
+      						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_09_2014/1baae1deb88b6e63553edbe1475a8402-hh_cover_art.jpg
       - https://www.simtropolis.com/objects/screens/monthly_09_2014/b72b9d29247d3dc8fe5adeda43f1b4c4-screenshot6.jpg
@@ -1865,7 +2060,7 @@ assets:
     lastModified: 2014-09-03T21:07:45Z
     name: Historic Harbor
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2014/thumb-1baae1deb88b6e63553edbe1475a8402-hh_cover_art.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/29880-historic-harbor/
     variants:
       "141582":
@@ -3419,4 +3614,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-95551d0236de2d4a115733d90bd60c29-vabeachboardwalk.JPG
     url: https://community.simtropolis.com/files/file/944-virginia-beach-boardwalk/
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

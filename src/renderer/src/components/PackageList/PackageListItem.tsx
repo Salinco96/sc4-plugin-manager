@@ -5,6 +5,7 @@ import { Card, CardActions, CardContent, Link } from "@mui/material"
 import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
 import { PackageBanners } from "@components/PackageBanners"
+import { PackageImages } from "@components/PackageImages"
 import { PackageTags } from "@components/PackageTags"
 import { PackageTools } from "@components/PackageTools"
 import { Text } from "@components/Text"
@@ -30,12 +31,28 @@ export const PackageListItem = memo(function PackageListItem({
     history.push({ page: Page.PackageView, data: { packageId } })
   }, [history, packageId])
 
+  const [openImages, setOpenImages] = useState(false)
+
   return (
     <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
       <CardContent sx={{ flexGrow: 1 }}>
+        {!!variantInfo.images?.length && (
+          <PackageImages
+            images={variantInfo.images}
+            onClose={() => setOpenImages(false)}
+            open={openImages}
+          />
+        )}
         <FlexBox direction="row">
           {variantInfo.thumbnail && (
-            <Thumbnail mr={2} mt={1} size={84} src={variantInfo.thumbnail} />
+            <Thumbnail
+              disabled={!variantInfo.images?.length}
+              mr={2}
+              mt={1}
+              size={84}
+              onClick={() => setOpenImages(true)}
+              src={variantInfo.thumbnail}
+            />
           )}
           <FlexBox direction="column">
             <Link
@@ -78,7 +95,7 @@ export const PackageListItem = memo(function PackageListItem({
         {variantInfo.description && (
           <Text
             maxLines={2}
-            sx={{ height: 40, marginTop: 2, whiteSpace: "pre-wrap" }}
+            sx={{ height: 40, marginTop: 2 }}
             title={variantInfo.description}
             variant="body2"
           >

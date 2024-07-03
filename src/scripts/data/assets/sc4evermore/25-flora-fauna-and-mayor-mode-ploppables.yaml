@@ -3,7 +3,7 @@ assets:
     authors:
       - c
     category: 670
-    downloads: 554
+    downloads: 558
     lastModified: 2024-01-23T07:55:04-08:00
     name: BSC CP MMPs for CP MEGA Prop Packs
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MMP_PP2.jpg
@@ -12,7 +12,7 @@ assets:
     authors:
       - sc4evermore
     category: 670
-    downloads: 383
+    downloads: 388
     lastModified: 2023-09-15T16:33:15-07:00
     name: SC4D LEX Legacy - JENX FAUNA
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/155-sc4d-lex-legacy-jenx-fauna
@@ -20,7 +20,7 @@ assets:
     authors:
       - sc4evermore
     category: 670
-    downloads: 308
+    downloads: 310
     lastModified: 2023-11-11T07:36:40-08:00
     name: BSC ALN RRP Pasture Flora
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/167-bsc-aln-rrp-pasture-flora
@@ -28,7 +28,7 @@ assets:
     authors:
       - Orange_O
     category: 670
-    downloads: 281
+    downloads: 287
     lastModified: 2024-01-22T09:32:45-08:00
     name: VIP Orange Aesculus
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/aesculus left.jpg
@@ -46,8 +46,216 @@ assets:
     authors:
       - Girafe
     category: 670
-    dependencies: []
-    downloads: 7432
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>Complete pack of Girafe Flora, including props and mayor-mode ploppables (MMPs).</p>\r
+
+      <ul>\r
+
+      <li>Requires <a href=\"/index.php/downloads/download/24-terrain-mods-and-tree-controllers/36-lk33-seasonalflorapatch\">Seasonal Flora Patch</a> in order for Seasonal Mayor-Mode Ploppables (MMPs)
+      to work.</li>\r
+
+      <li>Updated to Version 2 on 4 September 2023 (fixed file encoding issue preventing Canary Date Palms from being DatPacked, moved _Documents folder out of installer)</li>\r
+
+      </ul>\r
+
+      <p><strong>CHANGE LOG</strong>:</p>\r
+
+      <ul>\r
+
+      <li>20.01.2024 - Update to Version 3</li>\r
+
+      <ul>\r
+
+      <li>Official update in the installer itself</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>the Girafe Wheat and the BSC-TSC Girafe Serbian Spruces v1 have been added to the compilation that concludes all of Girafe's flora that have been released so far.</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org/\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.<br><br>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install
+      (making no changes here will install everything). Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the
+      Cleanup tab, click \"Start scan\" to find any outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to
+      a safe location. (The option to \"Delete\" them also exists, but is not recommended.)** After this, click over to the Install tab, and click \"Start installation\" to begin the installation
+      procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p>** Though there is an inbuilt cleanitol function in the installer, at this point it is not working entirely properly so it is highly recommended to run the individual cleanitol files or the
+      master cleanitol for the compilation with one of the following 3rd party cleanitol tools:</p>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17 Cleanitol</a> (new tool released a month ago)</p>\r
+
+      <p><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol</a> (old, but stable tool)</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Girafe</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following formerly available single Flora Packs from Girafe:</p>\r
+
+      <ul>\r
+
+      <li>MM Flora separator</li>\r
+
+      <li>Serbian Spruces v1<br>this is the older BSC-TSC version - <strong><span style=\"color: #e67e23;\">new addition to Version 3</span></strong></li>\r
+
+      <li>Abies Grandis v1</li>\r
+
+      <li>Abies Grandis v2</li>\r
+
+      <li>Alders</li>\r
+
+      <li>Ashes v2</li>\r
+
+      <li>Beeches 3</li>\r
+
+      <li>Berries</li>\r
+
+      <li>Birches v2</li>\r
+
+      <li>Bushes v2</li>\r
+
+      <li>Canary Date Palms</li>\r
+
+      <li>Cattails v2.1</li>\r
+
+      <li>Chestnuts</li>\r
+
+      <li>Common Spruce</li>\r
+
+      <li>Conifers</li>\r
+
+      <li>Cypresses</li>\r
+
+      <li>Daisy v2</li>\r
+
+      <li>Elms</li>\r
+
+      <li>Feather Grass</li>\r
+
+      <li>Honey locust</li>\r
+
+      <li>Larches</li>\r
+
+      <li>Lindens</li>\r
+
+      <li>Lupins</li>\r
+
+      <li>Maples</li>\r
+
+      <li>Maples v2</li>\r
+
+      <li>Narcissus</li>\r
+
+      <li>Norway maples v2</li>\r
+
+      <li>Oaks v2</li>\r
+
+      <li>Parasol Pine</li>\r
+
+      <li>Poplar</li>\r
+
+      <li>Poppies</li>\r
+
+      <li>Rowan trees v3</li>\r
+
+      <li>Serbian Spruces v2</li>\r
+
+      <li>Sparaxis</li>\r
+
+      <li>Subalpine firs</li>\r
+
+      <li>Vines v</li>\r
+
+      <li>Walnut Trees</li>\r
+
+      <li>Wheat - <strong><span style=\"color: #e67e23;\">new addition to Version 3<br></span></strong>Bear in mind that the Girafe Wheat can also be found in the <strong>BSC-VIP Girafe AgriPack vol01
+      v2</strong></li>\r
+
+      </ul>\r
+
+      <p>Various pieces of original documentation can be found in the \"~Documents\" folder, which, while installed in the Plugins directory, should be removed.</p>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_alders_2.jpg\" data-lightbox=\"lightbox27\"
+      data-alt=\"lightboxIcon_alders_2.jpg|Icon_Conifers_1.jpg|Icon_oak_1\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_alders_2.jpg\" alt=\"Icon_alders_2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_Conifers_1.jpg\" data-lightbox=\"lightbox27\"
+      data-alt=\"lightboxIcon_alders_2.jpg|Icon_Conifers_1.jpg|Icon_oak_1\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_Conifers_1.jpg\" alt=\"Icon_Conifers_12\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_oak_1.jpg\" data-lightbox=\"lightbox27\"
+      data-alt=\"lightboxIcon_alders_2.jpg|Icon_Conifers_1.jpg|Icon_oak_1\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_oak_1.jpg\" alt=\"Icon_oak_13\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 7517
     filename: SC4D LEX Legacy - BSC VIP Girafe Flora V3.zip
     files:
       - ~Documents/Cleanitol_SC4D LEX Legacy - BSC-VIP Girafe Flora Pack V3__master.txt
@@ -316,12 +524,16 @@ assets:
       - ~Documents/BSC_Readmes/girafe/images/Icon cattails 1.jpg
       - ~Documents/BSC_Readmes/girafe/images/Banniere_VIP.jpg
       - ~Documents/BSC_Readmes/girafe/images/banniere_new.png
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_alders_2.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_Conifers_1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_oak_1.jpg
     lastModified: 2024-01-20T04:12:48-08:00
     name: SC4D LEX LEGACY - BSC VIP Girafe Flora Pack
     sha256: d5604d1e4b6fc51b8b3ed06b597d1cef2396b098b97c4e52e1ac49d836e27b9c
     size: 243243893
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_alders_2.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 244422050
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora
     version: "3"
@@ -329,8 +541,117 @@ assets:
     authors:
       - Lowkee33
     category: 670
-    dependencies: []
-    downloads: 1932
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p class=\"text_normal\">The Flora Tuning Exemplar defines the maximum height a tree will be placed in god-mode.   It also makes it
+      possible for seasonal flora to exist.  Many terrain mods use this exemplar with different tree heights, however since they were made before seasonal flora was understood, a patch should be made.
+      This is such a patch.</p>\r
+
+      <p class=\"text_normal\">This cross-platform package was assembled by Tyberius06. This installer aims to replace the former *.exe installer while keeping the functionality of that one. The files
+      were created by BSC member Lowkee33.</p>\r
+
+      <p class=\"text_normal\"><strong>Compatibility</strong></p>\r
+
+      <ul>\r
+
+      <li>Maxis Default Terrain</li>\r
+
+      <li>Every CycleDogg (CP) Terrain Mod on the LEX</li>\r
+
+      <li>Every Heblem Terrain Mod on the STEX</li>\r
+
+      <li>Orange_O's Pyrenean Terrain Mod on TSC</li>\r
+
+      <li>Every Terrain Mod on the PLEX</li>\r
+
+      <li>Every \"Terrain Add-on\" such as Eneddi's Jagged Edge mod, DobDriver's Stary Night Background, or a no-erosion mod that you may use.</li>\r
+
+      </ul>\r
+
+      <p class=\"text_normal\"><strong><br></strong>Note:  The PyreneanTerrain Mod and Terrain Mods on the PLEX do not use the Flora Tuning Parameters.  If you use these mods you should select \"Maxis
+      defualt or ANY other Terrain Mod\" during Installation.<br><br>Also note that this patch will have no effect on your non-seasonal items.  However, there may be seasonal items that are not known.
+      Please contact me in my <a href=\"https://www.sc4devotion.com/forums/index.php?topic=12571.0\">Flora Works at SC4D</a> with any discoveries.<br><br>At this point I hope that any new terrain mod
+      will correct the Flora Tuning Parameters for Seasonal flora.  Which is done by setting \"mnMonthsBetweenCellCoverage\" to \"1\".   At that point it is also reccomended to set
+      \"mnRandomSeedingCellsPerMonth\" to \"0\"</p>\r
+
+      <p class=\"text_titel\" align=\"justify\"><strong>Installation</strong></p>\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org/\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which files you wish to install (making no changes here will install everything). To
+      expand options, click the small \"+\" next to the name of the section.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.)<span style=\"color: #ba372a;\">** </span>After this, click over to the Install tab, and click \"Start installation\" to begin the installation
+      procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p><span style=\"color: #ba372a;\">** Though there is an inbuilt cleanitol function in the installer, at this point it is not working entirely properly so it is highly recommended to run the
+      individual cleanitol files or the master cleanitol for the compilation with one of the following 3rd party cleanitol tools</span>:</p>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17 Cleanitol</a> (new tool)</p>\r
+
+      <p><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol</a> (old tool)</p>\r
+
+      <p> </p>\r
+
+      <p class=\"text_normal\">The following paths are used by the installer system.</p>\r
+
+      <table class=\"text_normal\" border=\"0\" width=\"650\" cellspacing=\"0\" cellpadding=\"2\">\r
+
+      <tbody>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td width=\"150\">Lot and Dat Files</td>\r
+
+      <td width=\"500\">My DocsSimcity 4Pluginsz___terrainmod</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Readme and JPGs</td>\r
+
+      <td>~DocumentsBSC_ReadmesLowkee33</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p> </p>\r
+
+      <p>From this update both this and the <a href=\"/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\"><em>BSC LK33 Appalachian Terrain
+      Mod</em></a> are using the <strong>z___terrainmod</strong> as default folder to ensure they load after most of the other terrain mods. However you should only use ONE terrain mod at a time. </p>
+      </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/LEXimageLK33seasonalpatch.jpg\" data-lightbox=\"lightbox36\"
+      data-alt=\"lightboxLEXimageLK33seasonalpatch\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/LEXimageLK33seasonalpatch.jpg\" alt=\"LEXimageLK33seasonalpatch\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 1975
     filename: SC4D LEX Legacy - BSC LK33 Terrain Seasonal Flora Patch.zip
     files:
       - z___terrainmod#/CHOOSE_ONE!! READ README!!.txt
@@ -357,12 +678,14 @@ assets:
       - z___terrainmod#/-CP Canyonlands and LowerSnowPatch/z_LK_FloraTuningParameters_Seasonal_CP_Canyonlands_and_LowerSnowPatch.dat
       - ~Documents/BSC_Readmes/Lowkee33/FloraTuningParameters_Seasonal_Readme.html
       - ~Documents/BSC_Readmes/Lowkee33/images/LEXimageLK33seasonalpatch.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/LEXimageLK33seasonalpatch.jpg
     lastModified: 2024-01-28T13:59:53-08:00
     name: SC4D LEX Legacy - BSC LK33 Terrain Seasonal Flora Patch
     sha256: 5b9ef5b4a1fb3f83d0602cc2c3bfd5591ac7193fb97ba19862ebd6d1bf88134b
     size: 221840
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/LEXimageLK33seasonalpatch.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 246275
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/36-lk33-seasonalflorapatch
     version: "2"
@@ -370,7 +693,7 @@ assets:
     authors:
       - gizmo28
     category: 670
-    downloads: 372
+    downloads: 374
     lastModified: 2023-07-27T11:58:15-07:00
     name: Gizmo - Water Flora
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/64-water-flora-by-gizmo28
@@ -378,10 +701,10 @@ assets:
     authors:
       - c
     category: 670
-    downloads: 472
+    downloads: 474
     lastModified: 2024-01-23T02:57:12-08:00
     name: BSC CP Ploppable Rocks - Complete Set v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GrayRocksAndBoulders.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/85-bsc-cp-ploppable-rocks-complete-set
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

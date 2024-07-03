@@ -24046,41 +24046,115 @@ assets:
     dependencies:
       - simtropolis/27563-shk-parking-pack
       - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn
     description: >-
-      This package contains a small convenience store, with three model variations in a buildings family, along with lots to use them. Inside the "Models" folder, please ensure you remove 3 files you
-      will not need. Included are models for the following options:
-
-        -   HD (High Definition/Better Quality textures)
-        -   SD (Default texture quality)
-        -   DN (DarkNite, for users of SimFox's DarkNite mod)
-        -   MN (MaxisNite, for default lighting)
-
-      So for example, if you are using HD-MN, you should remove the files ending HD-DN, SD-DN and SD-MN, leaving only your preferred choice behind.
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
 
-      Using my Retail Signage Pack dependency, these stores will show randomly one of the installed Banner/Logo options.
+
+      							
 
 
-      3 Lots are included:
 
-        -   Stage 2 CS$$ 3x2
-        -   Stage 2 CS$$ 3x3 (Right Corner)
-        -   Stage 1 CS$$ 4x4.
-
-      Dependencies (Required for all Lots)
-
-        -  MGB Retail Signage Pack (RSP)
-        -  Girafe Urbanpack
-        -  Girafe Elms
-        -  Girafe Ashes
-        -  VIP Vnaoned Post Office
-      Note: only the file Grfe_hedge_3m.dat from this package is required.
-        -  SHK Parking Pack:
-
-      Each lot has 54 CS$$ Jobs and stats generated using PIM-X. For full details see the included readme file.
+      							
+      <p>
+      	This package contains a small convenience store, with three model variations in a buildings family, along with lots to use them. Inside the "Models" folder, please ensure you remove 3 files you will not need. Included are models for the following options:
+      </p>
 
 
-      Ensure you keep the file MGB_ConvenienceStore_Resource.dat or these lots will not function correctly. But you can discard any of the lots you may not wish to use.
+      <ul><li>
+      		<div style="text-align:left;">
+      			HD (High Definition/Better Quality textures)
+      		</div>
+      	</li>
+      	<li>
+      		<div style="text-align:left;">
+      			SD (Default texture quality)
+      		</div>
+      	</li>
+      	<li>
+      		<div style="text-align:left;">
+      			DN (DarkNite, for users of SimFox's DarkNite mod)
+      		</div>
+      	</li>
+      	<li>
+      		<div style="text-align:left;">
+      			MN (MaxisNite, for default lighting)
+      		</div>
+      	</li>
+      </ul><p style="text-align:left;">
+      	So for example, if you are using HD-MN, you should remove the files ending HD-DN, SD-DN and SD-MN, leaving only your preferred choice behind.
+      </p>
+
+
+      <p style="text-align:left;">
+      	Using my Retail Signage Pack dependency, these stores will show randomly one of the installed Banner/Logo options.
+      </p>
+
+
+      <p style="text-align:left;">
+      	3 Lots are included:
+      </p>
+
+
+      <ul><li>
+      		<div style="text-align:left;">
+      			Stage 2 CS$$ 3x2
+      		</div>
+      	</li>
+      	<li>
+      		<div style="text-align:left;">
+      			Stage 2 CS$$ 3x3 (Right Corner)  
+      		</div>
+      	</li>
+      	<li>
+      		<div style="text-align:left;">
+      			Stage 1 CS$$ 4x4.
+      		</div>
+      	</li>
+      </ul><p style="text-align:left;">
+      	<strong><u>Dependencies (Required for all Lots)</u></strong>
+      </p>
+
+
+      <ul><li style="text-align:left;">
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3392" rel="external nofollow">MGB Retail Signage Pack (RSP)</a>
+      	</li>
+      	<li style="text-align:left;">
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3192" rel="external nofollow">Girafe Urbanpack</a>
+      	</li>
+      	<li style="text-align:left;">
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3347" rel="external nofollow">Girafe Elms</a>
+      	</li>
+      	<li style="text-align:left;">
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2854" rel="external nofollow">Girafe Ashes</a>
+      	</li>
+      	<li style="text-align:left;">
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3002" rel="external nofollow">VIP Vnaoned Post Office</a><br><strong>Note</strong>: only the file Grfe_hedge_3m.dat from this package is required.
+      	</li>
+      	<li style="text-align:left;">
+      		SHK Parking Pack:<iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/27563-shk-parking-pack/?do=embed"></iframe>
+      	</li>
+      	<li style="text-align:left;">
+      		SuperSHK MEGA Parking Textures:<iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/?do=embed"></iframe>
+      	</li>
+      	<li style="text-align:left;">
+      		<span style="color:rgb(255,140,0);">or Alternately</span><iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/31248-koscs-supershk-mega-parking-for-tgn-swn/?do=embed"></iframe>
+      	</li>
+      </ul><p style="text-align:left;">
+      	Each lot has 54 CS$$ Jobs and stats generated using <abbr title="Plugin Manager">PIM</abbr>-X. For full details see the included readme file.
+      </p>
+
+
+      <p style="text-align:left;">
+      	Ensure you keep the file MGB_ConvenienceStore_Resource.dat or these lots will not function correctly. But you can discard any of the lots you may not wish to use.
+      </p>
+
+      						</body>
     filename: MGB Convenience Store.zip
     files:
       - MGB_ConvenienceStore_Resource.dat
@@ -24102,7 +24176,7 @@ assets:
     sha256: 41957a585f3d59093490aac86ed203d0aceb7d47f1ac8b7a094604db49fb2429
     size: 8300080
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_08/Store_day.thumb.jpg.f73e48729370e6afc6f78083b66d14c2.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 9917078
     url: https://community.simtropolis.com/files/file/31244-mgb-convenience-store/
     version: 1.0.1
@@ -31602,45 +31676,395 @@ assets:
       - simtropolis/32473-rr-mega-prop-pack-vol-2
       - simtropolis/34747-rr-mega-prop-pack-vol-3
     description: >-
-      This is not an April Fool's joke. I have made some new global brands for the MGB Convenience store. I felt like it would be the right time to revisit the modular nature of @rsc204's model and
-      the props to go along with it, and create additional stores from areas around the world that had not been covered by that. These don't use prop families, nor do they overlap with the original
-      props for this, since over the years I have made unique props for these brands and figured, why not use them for this project? Each are in individual growable 4x4 lots. They are all separated by
-      region, and you can choose which folders you want to use, or if you like a chaotic, global region, use all of them (be my guest!). If you want to plop these lots, use the LotPlop cheat from the
-      Extra Cheats DLL. Also many of the gas canopies used are by @RRetail and were of great help for this project so special thanks to him for making them!
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-          UK     ASDA petrol
-      B&M     EuroGarages/Shell     Iceland
 
-      Morning, Noon, and Night (taken over by Scotmid in the mid-2000s)     Poundland     Poundstretcher     Scotmid         Benelux     Avia     Delhaize/Q8     Jumbo     Plus
-          Canada     Bulk Barn     Lawton Drugs     Mac's/Circle K pumps     Needs Convenience/Shell
-          Italy     Conad     CRAI     Eurospin
-      Famila (forgot to add this so it's in zip file now)     IP petrol station
-          Iberia (Spain/Portugal)     Galp/Tangerina     Continente     Froiz     Dia     Eroski     Repsol/Repshop     Cepsa/Depaso     Minipreco
-          Scandinavia (Nor/Icl/Swe/Den)     Rema 1000 (DEN/NOR)     Pressbryan (SWE)     Preem (SWE)     Bonus (ICL)     Kiwi (DEN/NOR)     Handlarn (SWE)     Narvesen (NOR)     Bunnpris (NOR)     Joker (NOR)     Olis (ICL)     N1/Nesti (ICL)     Willys (SWE)
-          Caribbean - mostly Puerto Rican brands     Amigo     Pueblo     Econo     Puma/Super7
-          Asia-Australia     CU (Korea)     Cheers/Esso (Singapore)     FairpriceXpress/Esso (Singapore)     Seiyu (Japan)     NightOwl (AU)
 
-      Dependencies
+      							
 
-        -  MGB Convenience Stores and any dependencies with that
-        -  BSC - VIP Girafe Carpack
-        -  PC Mega Prop Pack 1
-        -  PC Mega Prop Pack 2
-        -  SHK Parking Pack
-        -  SuperSHK MEGA Parking Textures 1.0.1
-        -  SuperSHK + FA3 Parking Textures
-        -  RR Mega Prop Pack 1
-        -  RR Mega Prop Pack 2
-        -  RR Mega Prop Pack 3 (additional props needed for Esso and Shell canopies)
-        -  BSC - VIP Girafe Trees/Shrubs
-        -  Beech Trees
-        -  Birch Trees
-        -  Feather Grass
-        -  Hedges
-        -  Linden Trees
-        -  Maple Trees
-        -  Poplar Trees
-        -  Rowan Trees
+
+
+      							
+      <p>
+      	<strong>This is not an April Fool's joke. </strong>I have made some new global brands for the MGB Convenience store. I felt like it would be the right time to revisit the modular nature of <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a>'s model and the props to go along with it, and create additional stores from areas around the world that had not been covered by that. These don't use prop families, nor do they overlap with the original props for this, since over the years I have made unique props for these brands and figured, why not use them for this project? Each are in individual growable 4x4 lots. They are all separated by region, and you can choose which folders you want to use, or if you like a chaotic, global region, use all of them (be my guest!). If you want to plop these lots, use the LotPlop cheat from the <a href="https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/" rel="">Extra Cheats DLL</a>. Also many of the gas canopies used are by <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/744613-rretail/?do=hovercard" data-mentionid="744613" href="https://community.simtropolis.com/profile/744613-rretail/" rel="">@RRetail</a> and were of great help for this project so special thanks to him for making them!<br>
+      	 
+      </p>
+
+
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" width="310">
+      	<tbody>
+      		<tr>
+      			<td height="19" width="310">
+      				<u><strong>UK</strong></u>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				ASDA petrol<br>
+      				B&amp;M
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				EuroGarages/Shell
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Iceland<br>
+      				Morning, Noon, and Night <em>(taken over by Scotmid in the mid-2000s)</em>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Poundland
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Poundstretcher
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Scotmid
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				<u><strong>Benelux</strong></u>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Avia
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Delhaize/Q8
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Jumbo
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Plus<br>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				<u><strong>Canada</strong></u>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Bulk Barn
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Lawton Drugs
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Mac's/Circle K pumps
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Needs Convenience/Shell<br>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				<u><strong>Italy</strong></u>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Conad
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				CRAI
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Eurospin<br>
+      				Famila (forgot to add this so it's in zip file now)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				IP petrol station<br>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				<u><strong>Iberia (Spain/Portugal)</strong></u>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Galp/Tangerina
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Continente
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Froiz
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Dia
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Eroski
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Repsol/Repshop
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Cepsa/Depaso
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Minipreco<br>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				<u><strong>Scandinavia (Nor/Icl/Swe/Den)</strong></u>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Rema 1000 (DEN/NOR)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Pressbryan (SWE)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Preem (SWE)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Bonus (ICL)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Kiwi (DEN/NOR)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="21">
+      				Handlarn (SWE)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Narvesen (NOR)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Bunnpris (NOR)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Joker (NOR)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Olis (ICL)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				N1/Nesti (ICL)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Willys (SWE)<br>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				<u><strong>Caribbean - mostly Puerto Rican brands</strong></u>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Amigo 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Pueblo
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Econo
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Puma/Super7<br>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				<u><strong>Asia-Australia</strong></u>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				CU (Korea)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Cheers/Esso (Singapore)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				FairpriceXpress/Esso (Singapore)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				Seiyu (Japan)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				NightOwl (AU)
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br>
+      	<br>
+      	<strong>Dependencies</strong>
+      </p>
+
+
+      <ul style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31244-mgb-convenience-store/" rel="">MGB Convenience Stores and any dependencies with that</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2821" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP Girafe Carpack</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/32952-pc-mega-props-vol-1/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/33533-pc-mega-props-2/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 2</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="" style="background-color:transparent;color:#1f5e8d;">SHK Parking Pack</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="" style="background-color:transparent;color:#1f5e8d;">SuperSHK MEGA Parking Textures 1.0.1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31423-supershk-fa3-parking-textures/" rel="" style="background-color:transparent;color:#1f5e8d;">SuperSHK + FA3 Parking Textures</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/32781-rr-mega-prop-pack-vol-1/" rel="" style="background-color:transparent;color:#1f5e8d;">RR Mega Prop Pack 1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/32473-rr-mega-prop-pack-vol-2/" rel="" style="background-color:transparent;color:#1f5e8d;">RR Mega Prop Pack 2</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/34747-rr-mega-prop-pack-vol-3/" rel="">RR Mega Prop Pack 3</a> (additional props needed for Esso and Shell canopies)
+      	</li>
+      	<li>
+      		<abbr style="border-bottom:none;" title="BATT Squad Certification">BSC</abbr><span> </span>- VIP Girafe<span><span> </span>Trees/Shrubs</span>
+      		<ul>
+      			<li>
+      				<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2995" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Beech Trees</a>
+      			</li>
+      			<li>
+      				<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2620" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Birch Trees</a>
+      			</li>
+      			<li>
+      				<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3001" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Feather Grass</a>
+      			</li>
+      			<li>
+      				<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3071" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Hedges</a>
+      			</li>
+      			<li>
+      				<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2869" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Linden Trees</a>
+      			</li>
+      			<li>
+      				<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2809" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Maple Trees</a>
+      			</li>
+      			<li>
+      				<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3579" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Poplar Trees</a>
+      			</li>
+      			<li>
+      				<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3244" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Rowan Trees</a>
+      			</li>
+      		</ul>
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
     filename: PC MGB Convenience Stores Global Expansion.zip
     files:
       - PC MGB Convenience Stores Global Expansion/UK/PC Scotmid Coop UK-0x5ad0e817_0xaf3537d7_0x30000.SC4Model
@@ -31820,7 +32244,7 @@ assets:
     sha256: 2ebe946d3b6f892c857af90d52bfa4279910807989a7a39aee5e9854f5b0b83e
     size: 1906901
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_04/6246fe1411873_Oolong-Dec.1001647306758.thumb.png.e5237597b904baff2570859202ab07f4.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 2341166
     url: https://community.simtropolis.com/files/file/35031-pc-mgb-convenience-stores-global-expansion/
     version: 1.0.0
@@ -33468,10 +33892,17 @@ assets:
     authors:
       - leonv93
     category: 300
+    dependencies: []
     description: |-
-      Kwik-E-Mart; Commercial $$; No Dependencies
+      <body>
+                                  
+      							
+      <p>
+      	Kwik-E-Mart; Commercial $$; No Dependencies
+      </p>
 
-      Kwik-E-Mart.zip
+      <p><a class="ipsAttachLink" href="//community.simtropolis.com/applications/core/interface/file/attachment.php?id=102474">Kwik-E-Mart.zip</a></p>
+      						</body>
     filename: Kwik-E-Mart.zip
     files:
       - Kwik-E-Mart/KWIK2-0x6534284a-0x732c7d7a-0xd3678209.SC4Desc
@@ -33488,7 +33919,7 @@ assets:
     sha256: b013f08771ebaf0d63a41f75838718e29f6098412720138f3600863d8a956211
     size: 357387
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/665bb9638f243_Regopolis-Dec.171281717286166.thumb.png.8099368f750346cab202ac566b123c0d.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 392027
     url: https://community.simtropolis.com/files/file/36274-kwik-e-mart/
     version: 1.0.0
@@ -33496,10 +33927,17 @@ assets:
     authors:
       - leonv93
     category: 300
+    dependencies: []
     description: |-
-      Lard Lad's Donuts; CS$$/Landmark/ No Dependencies
+      <body>
+                                  
+      							
+      <p>
+      	Lard Lad's Donuts; CS$$/Landmark/ No Dependencies 
+      </p>
 
-      Lard Lad&#039;s Donuts.zip
+      <p><a class="ipsAttachLink" href="//community.simtropolis.com/applications/core/interface/file/attachment.php?id=102518">Lard Lad&#039;s Donuts.zip</a></p>
+      						</body>
     filename: Lard Lad's Donuts.zip
     files:
       - Lard Lad's Donuts/Lard Lads-0x5ad0e817_0xd3614412_0x30000.SC4Model
@@ -33514,7 +33952,7 @@ assets:
     sha256: 0232b9b11601a6bebacfd9b1549fae79a76bdee8408a400db12934ad592e4966
     size: 400888
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/665cf2d79cc91_NewCity-Jan.2001717302790.thumb.png.7bb26d18f0b09ca45008d987152dfafd.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 463461
     url: https://community.simtropolis.com/files/file/36277-lard-lads-donuts/
     version: 1.0.0
@@ -33525,95 +33963,99 @@ assets:
     dependencies:
       - simtropolis/27353-tennispalatsi
     description: >-
-      TG Autotalo is a building from Helsinki, Finland.
-
-      Two towers were built 1958 and were inspired by Lever House from Manhattan. During the years the complex grew to four towers, which don't share the looks of the original two and Autotalo now
-      occupies whole city block in Kamppi. Besides offices building has several bars and nightclubs and restaurants, from lowly fast-food to one of the finest ones in Helsinki. Tenants in towers vary
-      from small one people business to head offices of several hundreds of people; here you find offices of great Krioworks.
+      <body>
+                                  
 
 
-      If you want to recreate Helsinki in your SimCity, download Tennispalatsi and place it next to Autotalo.
+
+      							
+      <p>
+      	<strong>TG Autotalo</strong> is a building from Helsinki, Finland.<br>
+      	Two towers were built 1958 and were inspired by Lever House from Manhattan. During the years the complex grew to four towers, which don't share the looks of the original two and Autotalo now occupies whole city block in Kamppi. Besides offices building has several bars and nightclubs and restaurants, from lowly fast-food to one of the finest ones in Helsinki. Tenants in towers vary from small one people business to head offices of several hundreds of people; here you find offices of great Krioworks. 
+      </p>
 
 
-      Growable Version:
+      <p>
+      	If you want to recreate Helsinki in your SimCity, download <a href="https://community.simtropolis.com/files/file/27353-tennispalatsi/" rel="">Tennispalatsi</a> and place it next to Autotalo. 
+      </p>
 
 
-      Lot size: 4 x 4 tiles
-
-      Building style(s): Building: Commercial,Style: Euro,Building: CO$$
-
-      Growth stage: 7
-
-      Occupants: CO-$$ : 2692
-
-      Bulldoze cost: § 897
-
-      Worth: § 18817
-
-      Construction Time: 89 days
-
-      Max. Fire Stage: 40
-
-      Power consumption: 54 MWh/month
-
-      Water consumption: 548 Gallons/month
-
-      Air pollution: 10 over 5 tiles
-
-      Water pollution: 10 over 6 tiles
-
-      Garbage pollution: 5 over 0 tiles
+      <p>
+      	<strong><em>Growable Version:</em></strong>
+      </p>
 
 
-      Ploppable Version:
+      <p>
+      	Lot size:    4 x 4 tiles<br>
+      	Building style(s):    Building: Commercial,Style: Euro,Building: CO$$<br>
+      	Growth stage:    7<br>
+      	Occupants:    CO-$$ : 2692<br>
+      	Bulldoze cost:    § 897<br>
+      	Worth:    § 18817<br>
+      	Construction Time:    89 days<br>
+      	Max. Fire Stage:    40<br>
+      	Power consumption:    54 MWh/month<br>
+      	Water consumption:    548 Gallons/month<br>
+      	Air pollution:    10 over 5 tiles<br>
+      	Water pollution:    10 over 6 tiles<br>
+      	Garbage pollution:    5 over 0 tiles
+      </p>
 
 
-      Lot size: 4 x 4 tiles
-
-      Menu position: Building: Landmark,Building: CO$$
-
-      Jobs: CO-$$ : 1348
-
-      Plop cost: § 12540
-
-      Bulldoze cost: § 897
-
-      Monthly cost: § 0
-
-      Park effect: over tiles
-
-      Landmark effect: over tiles
-
-      Max. Fire Stage: 40
-
-      Power consumption: 27 MWh/month
-
-      Water consumption: 279 Gallons/month
-
-      Air pollution: 5 over 5 tiles
-
-      Water pollution: 5 over 6 tiles
-
-      Garbage pollution: 4 over 0 tiles
+      <p>
+      	<br>
+      	<strong><em>Ploppable Version:</em></strong>
+      </p>
 
 
-      Installation: COPY/Extract the Team Grater parent folder from the *.zip into your Plugins folder. If you extracted the ~Documents folder into your plugins, too, it's highly recommended to keep
-      it, but move it out of the Plugins folder.
+      <p>
+      	Lot size:    4 x 4 tiles<br>
+      	Menu position:    Building: Landmark,Building: CO$$<br>
+      	Jobs:    CO-$$ : 1348<br>
+      	Plop cost:    § 12540<br>
+      	Bulldoze cost:    § 897<br>
+      	Monthly cost:    § 0<br>
+      	Park effect:    over tiles<br>
+      	Landmark effect:    over tiles<br>
+      	Max. Fire Stage:    40<br>
+      	Power consumption:    27 MWh/month<br>
+      	Water consumption:    279 Gallons/month<br>
+      	Air pollution:    5 over 5 tiles<br>
+      	Water pollution:    5 over 6 tiles<br>
+      	Garbage pollution:    4 over 0 tiles
+      </p>
 
 
-      To uninstall: bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      <p>
+      	<strong>Installation</strong>: COPY/Extract the <strong>Team Grater</strong> parent folder from the *.zip into your Plugins folder. If you extracted the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>
+      	<br>
+      	<strong>To uninstall</strong>: bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      </p>
 
 
-      Dependencies:
-
-        -  NONE
-
-      Credits:
+      <p>
+      	<strong>Dependencies</strong>:
+      </p>
 
 
-      Model and lot files: Krio
+      <ul>
+      	<li>
+      		NONE
+      	</li>
+      </ul>
 
-      Revision, readme, packaging and initial upload: Tyberius06
+
+      <p>
+      	<strong>Credits</strong>:
+      </p>
+
+
+      <p>
+      	Model and lot files: Krio<br>
+      	Revision, readme, packaging and initial upload: Tyberius06
+      </p>
+
+      						</body>
     filename: TG Krio Autotalo.zip
     files:
       - ~Documents/Krio_Readmes/TG Krio Autotalo_readme.htm
@@ -33631,7 +34073,7 @@ assets:
     sha256: 0b3f96de7051f9c80c560b228c22227ae5c9c925825a03ccb821773a300559be
     size: 2064191
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/6660c5ba604fa_TGKrioAutotalo-d.thumb.jpg.9a919612bb112d57a04fdaf4b7af5460.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 2240511
     url: https://community.simtropolis.com/files/file/36289-tg-krio-autotalo/
     version: 1.0.0
@@ -33643,130 +34085,139 @@ assets:
       - simtropolis/36152-agc-streets-dlc
       - simtropolis/31006-supershk-mega-parking-textures
     description: >-
-      Fictious office building by Krio, based on 70's American brutalist style housing research company Brand, subsidary of Roxxon.
+      <body>
+                                  
 
 
-      Growable Version CAM Stage 11:
+
+      							
+      <p>
+      	Fictious office building by Krio, based on 70's American brutalist style housing research company Brand, subsidary of Roxxon.
+      </p>
 
 
-      Lot size: 4 x 2 tiles
-
-      Building style(s): Building: Commercial,Style: Euro, Style: Huston, Style: Chicago, Style: New York, Building: CO$$, CAM: Co$$ CAMeLot, CAM: Co$$ Stage 11
-
-      Growth stage: 11
-
-      Occupants: CO-$$ : 3280
-
-      Bulldoze cost: § 1939
-
-      Building Value: § 22927
-
-      Construction Time: 193 days
-
-      Max. Fire Stage: 40
-
-      Power consumption: 66 MWh/month
-
-      Water consumption: 666 Gallons/month
-
-      Air pollution: 13 over 5 tiles
-
-      Water pollution: 13 over 6 tiles
-
-      Garbage pollution: 6 over 0 tiles
+      <p>
+      	<em><strong>Growable Version <span style="color:#c0392b;"><abbr title="Colossus Addon Mod">CAM</abbr> Stage 11</span></strong></em>:
+      </p>
 
 
-      Growable Version Regular Stage 8:
+      <p>
+      	Lot size:    4 x 2 tiles<br>
+      	Building style(s):    Building: Commercial,Style: Euro, Style: Huston, Style: Chicago, Style: New York, Building: CO$$, <abbr title="Colossus Addon Mod">CAM</abbr>: Co$$ CAMeLot, <abbr title="Colossus Addon Mod">CAM</abbr>: Co$$ Stage 11<br>
+      	Growth stage:    11<br>
+      	Occupants:    CO-$$ : 3280<br>
+      	Bulldoze cost:    § 1939<br>
+      	Building Value:    § 22927<br>
+      	Construction Time:    193 days<br>
+      	Max. Fire Stage:    40<br>
+      	Power consumption:    66 MWh/month<br>
+      	Water consumption:    666 Gallons/month<br>
+      	Air pollution:    13 over 5 tiles<br>
+      	Water pollution:    13 over 6 tiles<br>
+      	Garbage pollution:    6 over 0 tiles
+      </p>
 
 
-      Lot size: 4 x 3 tiles
-
-      Building style(s): Building: Commercial,Style: Euro, Style: Huston, Style: Chicago, Style: New York, Building: CO$$
-
-      Growth stage: 8
-
-      Occupants: CO-$$ : 2798
-
-      Bulldoze cost: § 1939
-
-      Building Value: § 19558
-
-      Construction Time: 193 days
-
-      Max. Fire Stage: 40
-
-      Power consumption: 56 MWh/month
-
-      Water consumption: 569 Gallons/month
-
-      Air pollution: 11 over 5 tiles
-
-      Water pollution: 11 over 6 tiles
-
-      Garbage pollution: 5 over 0 tiles
+      <p>
+      	<br>
+      	<em><strong>Growable Version Regular Stage 8</strong></em>:
+      </p>
 
 
-      Ploppable Version:
+      <p>
+      	Lot size:    4 x 3 tiles<br>
+      	Building style(s):    Building: Commercial,Style: Euro, Style: Huston, Style: Chicago, Style: New York, Building: CO$$<br>
+      	Growth stage:    8<br>
+      	Occupants:    CO-$$ : 2798<br>
+      	Bulldoze cost:    § 1939<br>
+      	Building Value:    § 19558<br>
+      	Construction Time:    193 days<br>
+      	Max. Fire Stage:    40<br>
+      	Power consumption:    56 MWh/month<br>
+      	Water consumption:    569 Gallons/month<br>
+      	Air pollution:    11 over 5 tiles<br>
+      	Water pollution:    11 over 6 tiles<br>
+      	Garbage pollution:    5 over 0 tiles
+      </p>
 
 
-      Lot size: 4 x 2 tiles
-
-      Menu position: Building: Landmark,Building: CO$$
-
-      Jobs: CO-$$ : 1931
-
-      Plop cost: § 25000
-
-      Bulldoze cost: § 1939
-
-      Monthly cost: § 0
-
-      Park effect: over tiles
-
-      Landmark effect: over tiles
-
-      Max. Fire Stage: 40
-
-      Power consumption: 39 MWh/month
-
-      Water consumption: 396 Gallons/month
-
-      Air pollution: 7 over 5 tiles
-
-      Water pollution: 7 over 6 tiles
-
-      Garbage pollution: 4 over 0 tiles
+      <p>
+      	<br>
+      	<em><strong>Ploppable Version</strong></em>:
+      </p>
 
 
-      Installation
-
-      COPY/Extract the Team Grater and CAM* parent folders from the *.zip into your Plugins folder. If you extracted the ~Documents folder into your plugins, too, it's highly recommended to keep it,
-      but move it out of the Plugins folder.
-
-      *Bear in mind, that with the Project ZIP efforts the CAM (Colossus Addon Mod) related LOTs are having a dedicated folder for now on.
-
-      If you play with the CAM lot, make sure that you kept the TG_Brand-Plaza01-0x5ad0e817_0x29d24ef9_0x30000.SC4Model in the Team Grater/Krio/TG Brand Plaza folder or elsewhere in your plugins, as
-      it is essential to avoid an ugly brown box.
-
-
-      To uninstall: bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
-
-
-      Dependencies:
-
-        -  SC4D LEX Legacy - BSC Common Dependencies Pack v9a (and above)
-        -  BSC-VIP Girafe Urbanpack (CarPack vol04) vol01 (Grfe_Props_Pack_Urbanpack.dat)
-        -  AGC - Streets DLC v3
-        -  AGC - Automobile DLC v6
-        -  KOSC SuperSHK MEGA Parking Textures
-        -  Colossus Addon Mod 2.1.0 - only if you want to use the Stage 11 CAM lot.
-
-      Credits:
+      <p>
+      	Lot size:    4 x 2 tiles<br>
+      	Menu position:    Building: Landmark,Building: CO$$<br>
+      	Jobs:    CO-$$ :  1931<br>
+      	Plop cost:    § 25000<br>
+      	Bulldoze cost:    § 1939<br>
+      	Monthly cost:    § 0<br>
+      	Park effect:    over tiles<br>
+      	Landmark effect:    over tiles<br>
+      	Max. Fire Stage:    40<br>
+      	Power consumption:    39 MWh/month<br>
+      	Water consumption:    396 Gallons/month<br>
+      	Air pollution:    7 over 5 tiles<br>
+      	Water pollution:    7 over 6 tiles<br>
+      	Garbage pollution:    4 over 0 tiles
+      </p>
 
 
-      Model: Krio
+      <p>
+      	<u><strong>Installation</strong></u><br>
+      	COPY/Extract the <strong>Team Grater</strong> and <strong><abbr title="Colossus Addon Mod">CAM</abbr></strong>* parent folders from the *.zip into your Plugins folder. If you extracted the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>
+      	*Bear in mind, that with the Project ZIP efforts the <abbr title="Colossus Addon Mod">CAM</abbr> (Colossus Addon Mod) related LOTs are having a dedicated folder for now on.<br>
+      	If you play with the <abbr title="Colossus Addon Mod">CAM</abbr> lot, make sure that you kept the <strong>TG_Brand-Plaza01-0x5ad0e817_0x29d24ef9_0x30000.SC4Model</strong> in the <em>Team Grater/Krio/TG Brand Plaza</em> folder or elsewhere in your plugins, as it is essential to avoid an ugly brown box.<br>
+      	<br>
+      	<strong>To uninstall</strong>: bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      </p>
 
-      Lotting, readme, packaging and initial upload: Tyberius06
+
+      <p>
+      	<strong>Dependencies</strong>:
+      </p>
+
+
+      <ul>
+      	<li>
+      		<a href="https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack v9a</a> (and above)
+
+      		<ul>
+      			<li>
+      				<abbr title="BATT Squad Certification">BSC</abbr>-VIP Girafe Urbanpack (CarPack vol04) vol01 (Grfe_Props_Pack_Urbanpack.dat)
+      			</li>
+      			<br>
+      			 
+      		</ul>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/36152-agc-streets-dlc/" target="_blank" rel="">AGC - Streets DLC v3</a>
+      	</li>
+      	<li>
+      		<a href="AGC%20-%20Automobile%20DLC" target="_blank" rel="">AGC - Automobile DLC v6</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" target="_blank" rel="">KOSC SuperSHK MEGA Parking Textures</a>
+      	</li>
+      	<li>
+      		<a href="https://sc4evermore.com/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem" rel="external nofollow">Colossus Addon Mod 2.1.0</a> - <strong>only if you want to use the <span style="color:#c0392b;">Stage 11 <abbr title="Colossus Addon Mod">CAM</abbr></span> lot</strong>.
+      	</li>
+      </ul>
+
+
+      <p style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">
+      	<strong>Credits</strong>:
+      </p>
+
+
+      <p style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">
+      	Model: Krio<br>
+      	Lotting, readme, packaging and initial upload: Tyberius06
+      </p>
+
+      						</body>
     filename: TG Krio Brand Plaza.zip
     files:
       - ~Documents/Krio_Readmes/TG Krio Brand Plaza_readme.htm
@@ -33789,7 +34240,7 @@ assets:
     sha256: 3da898add16f5401e5b15895f82e2fa88ccb8cddebd2caaf68c18c99c1a0c653
     size: 2341259
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/6661b01081923_TGBrandPlaza-d1.thumb.jpg.a4afce4da2099679ae04041268381d7d.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 2573182
     url: https://community.simtropolis.com/files/file/36290-tg-krio-brand-plaza/
     version: 1.0.0
@@ -33798,47 +34249,100 @@ assets:
       - Dead_End
     category: 300
     dependencies:
+      - simtropolis/30033-mgb-maxis-texture-replacement-dev-kit
       - simtropolis/20564-ndex-glenni-mega-props-vol02
       - simtropolis/31006-supershk-mega-parking-textures
       - simtropolis/27563-shk-parking-pack
       - simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp
       - simtropolis/33965-girafe-maxis-fence-hd-replacement-mod
       - simtropolis/31374-rdg-prop-pack-1
+      - simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn
       - sc4evermore/41-appalachian-terrain-mod-by-lowkee33
       - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
     description: >-
-      Spar is a Dutch multinational franchise of supermarkets. I created this 6x4 growable lot specifically for my Scandinavian towns and cities, but it should fit in well with other regional styles
-      as well. In theory this should grow on any of the tile sets, but I recommend plopping it through the 'buildingplop' cheat if you're having issues.
+      <body>
+                                  
 
 
-      The attached screenshot shows my custom pavement (created through @rsc204's MTRDK) and grass (Lowkee's Appalachian terrain mod). As far as I know the used texture ID's are standard, so it should
-      work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!
+
+      							
+      <p>
+      	<a href="https://en.wikipedia.org/wiki/Spar_(retailer)" rel="external nofollow">Spar</a> is a Dutch multinational franchise of supermarkets. I created this 6x4 growable lot specifically for my Scandinavian towns and cities, but it should fit in well with other regional styles as well. In theory this should grow on any of the tile sets, but I recommend plopping it through the 'buildingplop' cheat if you're having issues.
+      </p>
 
 
-      Special thanks to @Glenni for creating this building model!
+      <p>
+      	The attached screenshot shows my custom pavement (created through <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a>'s <a href="https://community.simtropolis.com/files/file/30033-mgb-maxis-texture-replacement-dev-kit/" rel="">MTRDK</a>) and grass (Lowkee's <a href="https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33" rel="external nofollow">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!
+      </p>
 
 
-      Stats
+      <p>
+      	Special thanks to <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/53300-glenni/?do=hovercard" data-mentionid="53300" href="https://community.simtropolis.com/profile/53300-glenni/" rel="">@Glenni</a> for creating this building model!
+      </p>
 
-        -  6x4 lot
-        -  Medium wealth
-        -  CS$ 475/CS$$ 121
 
-      Dependencies
+      <p>
+      	<strong>Stats</strong>
+      </p>
 
-        -  NDEX Glenni MEGA Props Vol02.dat
-        -  SuperSHK MEGA Parking Textures
-        -  SHK Parking Pack
-        -  Murimk - Props Vol01 - Bicycle Props with Bikers MMP
-        -  Girafe Maxis Fence HD Replacement Mod
-        -  RDG Prop Pack 1
-        -  SC4D LEX LEGACY - BSC VIP Girafe Flora Pack
 
-      Optional
+      <ul>
+      	<li>
+      		6x4 lot
+      	</li>
+      	<li>
+      		Medium wealth
+      	</li>
+      	<li>
+      		CS$ 475/CS$$ 121
+      	</li>
+      </ul>
 
-        -
 
-      KOSC's SuperSHK+ MEGA Parking for TGN / SWN (changes grass and pavement on the parking textures)
+      <p>
+      	<strong>Dependencies</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/20564-ndex-glenni-mega-props-vol02/" rel=""><abbr title="N74707 (N), DuskTrooper (D), and Equinox (EX)">NDEX</abbr> Glenni MEGA Props Vol02.dat</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="">SuperSHK MEGA Parking Textures</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp/" rel="">Murimk - Props Vol01 - Bicycle Props with Bikers <abbr title="Mayor Mode Ploppable">MMP</abbr></a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/33965-girafe-maxis-fence-hd-replacement-mod/" rel="">Girafe Maxis Fence HD Replacement Mod</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/" rel="">RDG Prop Pack 1</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> LEGACY - <abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Flora Pack</a>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Optional</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<p>
+      			<a href="https://community.simtropolis.com/files/file/31248-koscs-supershk-mega-parking-for-tgn-swn/" rel="">KOSC's SuperSHK+ MEGA Parking for <abbr title="Terrain Grass NAM">TGN</abbr> / <abbr title="Sidewalk NAM">SWN</abbr></a> (changes grass and pavement on the parking textures)
+      		</p>
+      	</li>
+      </ul>
+
+      						</body>
     filename: DE_Spar-Glenni.zip
     files:
       - DE_Spar-Glenni/DE_Glenni-Spar_grocerystore_6x4_73f449c3.SC4Lot
@@ -33850,7 +34354,7 @@ assets:
     sha256: 3548cc78cf855bd0d39d6a7f6057e9a3083ef912156a657b4fde0f989e9a5eeb
     size: 3801
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/66707bd95e57a_ScreenshotSpar.thumb.JPG.f50981464fc8cc1992447d09b9019d12.JPG
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 18053
     url: https://community.simtropolis.com/files/file/36314-spar-supermarket/
     version: 1.0.0
@@ -33859,6 +34363,7 @@ assets:
       - Dead_End
     category: 300
     dependencies:
+      - simtropolis/30033-mgb-maxis-texture-replacement-dev-kit
       - simtropolis/31244-mgb-convenience-store
       - simtropolis/35031-pc-mgb-convenience-stores-global-expansion
       - simtropolis/31006-supershk-mega-parking-textures
@@ -33868,45 +34373,93 @@ assets:
       - simtropolis/31374-rdg-prop-pack-1
       - simtropolis/11421-jenx-porkie-expanded-porkie-props
       - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn
       - sc4evermore/41-appalachian-terrain-mod-by-lowkee33
       - sc4evermore/13-sfbt-essentials
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
     description: >-
-      This download contains lots for three different supermarket franchises from Scandinavian countries: Joker (growable 3x2 and 4x2) Kiwi (ploppable monument 3x2) and REMA 1000 (growable 3x2). The
-      latter two lots are meant for more urban environments and as such do only come with a parking lot for bikes . All lots feature 32 CS$$ jobs. I created these for my own towns and cities, but
-      hopefully someone else will find them useful as well.
+      <body>
+                                  
 
 
-      The attached screenshot shows my custom pavement (created through @rsc204's MTRDK) and grass (Lowkee's Appalachian terrain mod). As far as I know the used texture ID's are standard, so it should
-      work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!
+
+      							
+      <p>
+      	This download contains lots for three different supermarket franchises from Scandinavian countries: <a href="https://en.wikipedia.org/wiki/Joker_(store)" rel="external nofollow">Joker</a> (growable 3x2 and 4x2) <a href="https://en.wikipedia.org/wiki/Kiwi_(store)" rel="external nofollow">Kiwi</a> (ploppable monument 3x2) and <a href="https://en.wikipedia.org/wiki/REMA_1000" rel="external nofollow">REMA 1000</a> (growable 3x2). The latter two lots are meant for more urban environments and as such do only come with a parking lot for bikes <img alt="^_^" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_5.gif" srcset="https://community.simtropolis.com/assets/emoticons/happy@2x.png 2x" title="^_^" width="15" >. All lots feature 32 CS$$ jobs. I created these for my own towns and cities, but hopefully someone else will find them useful as well.
+      </p>
 
 
-      Special thanks to @rsc204 for the building models and @pclark06 for the branding props!
+      <p>
+      	The attached screenshot shows my custom pavement (created through <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a>'s <a href="https://community.simtropolis.com/files/file/30033-mgb-maxis-texture-replacement-dev-kit/" rel="">MTRDK</a>) and grass (Lowkee's <a href="https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33" rel="external nofollow">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!
+      </p>
 
 
-      Dependencies
-
-        -  MGB - Convenience Store
-        -  PC MGB Convenience Stores Global Expansion
-        -  SuperSHK MEGA Parking Textures
-        -  SHK Parking Pack
-        -  Murimk - Props Vol01 - Bicycle Props with Bikers MMP
-        -  Girafe Maxis Fence HD Replacement Mod
-        -  RDG Prop Pack 1
-        -  JENX-Porkie Expanded Porkie Props
-        -  SFBT Essentials
-        -  BSC Mega Props SG Vol 01
-        -  PEG MTP SUPER PACK
-
-      Optional
-
-        -
-
-      KOSC's SuperSHK+ MEGA Parking for TGN / SWN (changes grass and pavement on the parking textures)
+      <p>
+      	Special thanks to <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a> for the building models and <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/364367-pclark06/?do=hovercard" data-mentionid="364367" href="https://community.simtropolis.com/profile/364367-pclark06/" rel="">@pclark06</a> for the branding props!
+      </p>
 
 
-      Note: Only after uploading this set I realized the sign for the REMA 1000 was off-centered in comparison to the other two supermarkets. This has since been fixed, but the screenshot does show
-      the older version. It should show up fine in the game.
+      <p>
+      	<strong>Dependencies</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31244-mgb-convenience-store/" rel="">MGB - Convenience Store</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/35031-pc-mgb-convenience-stores-global-expansion/" rel="">PC MGB Convenience Stores Global Expansion</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="">SuperSHK MEGA Parking Textures</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp/" rel="">Murimk - Props Vol01 - Bicycle Props with Bikers <abbr title="Mayor Mode Ploppable">MMP</abbr></a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/33965-girafe-maxis-fence-hd-replacement-mod/" rel="">Girafe Maxis Fence HD Replacement Mod</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/" rel="">RDG Prop Pack 1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/11421-jenx-porkie-expanded-porkie-props/" rel="">JENX-Porkie Expanded Porkie Props</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials" rel="external nofollow"><abbr title="SimForum BAT Team">SFBT</abbr> Essentials</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Mega Props SG Vol 01</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/" rel=""><abbr title="Pegasus">PEG</abbr> <abbr title="Mountain Theme Pack">MTP</abbr> SUPER PACK</a>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Optional</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<p>
+      			<a href="https://community.simtropolis.com/files/file/31248-koscs-supershk-mega-parking-for-tgn-swn/" rel="">KOSC's SuperSHK+ MEGA Parking for <abbr title="Terrain Grass NAM">TGN</abbr> / <abbr title="Sidewalk NAM">SWN</abbr></a> (changes grass and pavement on the parking textures)
+      		</p>
+      	</li>
+      </ul>
+
+
+      <p>
+      	Note: Only after uploading this set I realized the sign for the REMA 1000 was off-centered in comparison to the other two supermarkets. This has since been fixed, but the screenshot does show the older version. It should show up fine in the game.
+      </p>
+
+      						</body>
     filename: DE_MGB_pclark06_Supermarket.zip
     files:
       - DE_MGB_pclark06_Supermarket/Rema1000/DE_MGB_Retail_Roofbrown_Rema1000_23f34b8e.SC4Lot
@@ -33924,9 +34477,1601 @@ assets:
     sha256: 876049978cea723cabae0d8046cc02c8d8ff51924591200a03b06f62432a3b3b
     size: 16424
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/Screenshot_Joker.thumb.JPG.5fd989b62a14f80fe9433f0ecf6c3622.JPG
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 37003
     url: https://community.simtropolis.com/files/file/36316-scandinavian-supermarkets/
+    version: 1.0.0
+  simtropolis/36323-new-york-cs-shops:
+    authors:
+      - giraffemountain
+    category: 300
+    dependencies:
+      - simtropolis/27563-shk-parking-pack
+      - cycledogg/textures-vol01
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	Contains a set of five 1x2 low-density (stage 3 for the corner lots, stage 2 for the others), medium-wealth growable commercial lots. Also includes a ploppable 5x2 landmark with all five buildings.
+      </p>
+
+
+      <p>
+      	They are inspired by wall-to-wall businesses in Brooklyn, and will grow on NY tileset only. 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Dependencies:
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/15322-bsc-texture-pack-cycledogg-v01/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> Texture Pack Cycledogg V01</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	This is my first STEX upload. Please let me know what you think!
+      </p>
+
+      						</body>
+    filename: NY Shops.zip
+    files:
+      - NY Shops/NY Shops Right Corner-0x6534284a-0x5331d3fe-0x738b4714.SC4Desc
+      - NY Shops/NY Shops Right Corner PROP-0x6534284a-0x5331d3fe-0x338b4abb.SC4Desc
+      - NY Shops/NY Shops LM-0x6534284a-0x5331d3fe-0x538b4b1b.SC4Desc
+      - NY Shops/NY Shops Left Corner-0x6534284a-0x5331d3fe-0x538b4735.SC4Desc
+      - NY Shops/NY Shops 3-0x6534284a-0x5331d3fe-0xf38b4756.SC4Desc
+      - NY Shops/NY Shops 3-0x6534284a-0x5331d3fe-0x338b4a7e.SC4Desc
+      - NY Shops/NY Shops 2-0x6534284a-0x5331d3fe-0x938b4a12.SC4Desc
+      - NY Shops/NY Shops 2-0x6534284a-0x5331d3fe-0x338b4779.SC4Desc
+      - NY Shops/NY Shops 1-0x6534284a-0x5331d3fe-0xf38b4794.SC4Desc
+      - NY Shops/NY Shops 1-0x6534284a-0x5331d3fe-0xd38b4952.SC4Desc
+      - NY Shops/models/NY Shops Right Corner-0x5ad0e817_0x5331d3fe_0x3d0000.SC4Model
+      - NY Shops/models/NY Shops Left Corner-0x5ad0e817_0x5331d3fe_0x3c0000.SC4Model
+      - NY Shops/models/NY Shops 3-0x5ad0e817_0x5331d3fe_0x3b0000.SC4Model
+      - NY Shops/models/NY Shops 2-0x5ad0e817_0x5331d3fe_0x3a0000.SC4Model
+      - NY Shops/models/NY Shops 1-0x5ad0e817_0x5331d3fe_0x390000.SC4Model
+      - NY Shops/lots/LM_5x2_NY Shops_d38b59b6.SC4Lot
+      - NY Shops/lots/CS$$3_1x2_NY Shops Right Corner_f38b4f0c.SC4Lot
+      - NY Shops/lots/CS$$3_1x2_NY Shops Left Corner_d38b4e30.SC4Lot
+      - NY Shops/lots/CS$$2_1x2_NY Shops 3_b38b5324.SC4Lot
+      - NY Shops/lots/CS$$2_1x2_NY Shops 2_538b52f2.SC4Lot
+      - NY Shops/lots/CS$$2_1x2_NY Shops 1_d38b52ba.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/nyshops.thumb.jpg.4f8b95d646fbdabfe4260dc22eb60259.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/back.thumb.jpg.81bf5bbe975a1378ee1a0e2c8391fd72.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/leftside.thumb.jpg.7990c42fba4e929e9a406cd2415c484b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/rightside.thumb.jpg.9ed02828cfaae1009cbe14c4139a5bb5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/nitelites.thumb.jpg.c07112e0e08332844c0f26396ae9e876.jpg
+    lastModified: 2024-06-30T00:48:57Z
+    name: New York CS$$ Shops
+    sha256: 1d3817628e498891d9860a4c216085f92b4a08ac68415d3ff8d569ddb43b59c6
+    size: 882440
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/nyshops.thumb.jpg.4f8b95d646fbdabfe4260dc22eb60259.jpg
+    timestamp: 2024-07-01T10:39:10.701Z
+    uncompressed: 1163388
+    url: https://community.simtropolis.com/files/file/36323-new-york-cs-shops/
+    version: 1.0.0
+  simtropolis/36325-pc-midcentury-grocery-pharmacy-set-modern-brands:
+    authors:
+      - pclark06
+    category: 300
+    dependencies:
+      - simtropolis/34720-agc-environment-dlc
+      - simtropolis/35470-pre-2000-car-props-pack
+      - simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp
+      - simtropolis/32952-pc-mega-props-vol-1
+      - simtropolis/33533-pc-mega-props-2
+      - simtropolis/34787-pc-mega-props-3
+      - simtropolis/35526-pc-mega-props-41
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/31423-supershk-fa3-parking-textures
+      - simtropolis/32781-rr-mega-prop-pack-vol-1
+      - simtropolis/32473-rr-mega-prop-pack-vol-2
+      - simtropolis/32980-sm2-mega-prop-pack-vol1
+      - simtropolis/32981-sm2-mega-prop-pack-vol2
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>
+      	Similar to the Australian retail set I did, I wanted to use the same base building to create some regional American supermarkets around this size. Grocery stores nowadays are massive but the base building goes back to a time when these stores were much smaller, and which, many still exist whether a pharmacy is using that space, or whether it's a smaller regional grocery chain that prides itself on customer service. Some of the buildings are smaller scale retailers in larger urban areas, and the grow lots can be utilized in a corner <abbr title="Wall-to-Wall">W2W</abbr> space. These buildings fill in the gaps of the national retailers on the side. There are 90 buildings in total.<br>
+      	<br>
+      	If you use lotplop, you can access all these as plop buildings. Grow lots are 3x6 and plop lots are 7x6.
+      </p>
+
+
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" width="502">
+      	<tbody>
+      		<tr>
+      			<td height="20" width="502">
+      				-Arlans - TX
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Atwood’s Farm Store
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Bashas - AZ, NM
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Big Y - MA, CT
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Bi-Mart - WA, OR
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Bomgaars Farm &amp; Ranch Supply
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Boyer’s - PA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Brandt’s - fictional
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Brookshire’s - TX, LA, OK, AR
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Buehler’s - OH
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Canhams - fictional
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Carrs-Safeway - AK
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Cherry Valley - NY
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Coborns - MN, SD, ND
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Cosentino’s-Price Chopper - KS, MO
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-C-Town - NY, CT, MA, PA, NJ
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-D’Agostino - NY
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Dollar General Market*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Dierbergs - MO, IL
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Fairway - NY
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Fareway - IA, NE, KS, IL, SD, MN, MO
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Festival Foods - WI, MN
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Food Bazaar - NY
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Fresh Market - east coast
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Gabe’s - off price clothing retailer in eastern US that takes over old grocery sites*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Gelson’s - CA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Greers Food Tiger - LA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Gristedes - NY<br>
+      				-Grocery Outlet*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Haggen - WA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Harmons - UT
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Harps - AR, OK, 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Heinens - OH, IL
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Hen House - KS, MO
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-HG Hill - TN
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Homeland - OK, AR, GA, KS
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Ideal Food Basket - east coast
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-IGA (5 versions)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Kent’s - UT
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Key Food - east coast
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-King Kullen - NY (Long Island)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Kinney Drug - NY (Upstate)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Kroger with new logo*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Lazy Acres-Bristol Farms - CA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Lund &amp; Byerly’s - MN
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Maceys - UT
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Marcs - OK
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Market Basket - NH, MA, ME, RI
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Martin’s - MD, PA, DE, WV
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Met Foods - NY
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Morton Williams - NY
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-New Seasons - OR, WA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Nob Hill - CA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Patel Brothers - national
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Pavilions - CA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-PCC Community Markets - WA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Peoples Choice - fictional
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Publix*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-QFC - WA, OR
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Randalls - TX
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Ream’s - UT
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Reasors - OK
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Redners - PA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Renfroes - AL, GA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Ridley’s - WY, UT, ID, NV, CO
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Roche Bros - MA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Rosauers - WA, ID, MT, OR
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Rouses - LA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Save A Lot old logo
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Save Mart - CA*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Schmidmart - fictional
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Schnucks - MO, IL, IN, KY, WI*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Sendik’s - WA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Sentry - WA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Shaw’s - MA, NH, VT, ME, RI*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Smart and Final - West Coast*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Stater Bros - CA*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Strack Van Til - IN
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Supervalu (3 versions)
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Times Supermarkets - HI
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-United Supermarkets - TX, NM*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Western Beef - NY, NJ, CT, FL
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Woodmans - IL, WI
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="20" width="502">
+      				-Yoke’s - WA, ID, MT<br>
+      				<br>
+      				* = plop lot included
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	Dependencies
+      </p>
+
+
+      <ul style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/34720-agc-environment-dlc/" rel="">AGC Environment DLC</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/35470-pre-2000-car-props-pack/" rel="" style="background-color:transparent;color:#1f5e8d;">Art128 Pre 2000s Car Props</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp/" rel="">Murmink Bikes</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/32952-pc-mega-props-vol-1/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/33533-pc-mega-props-2/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 2</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/34787-pc-mega-props-3/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 3</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/35526-pc-mega-props-41/" rel="">PC Mega Prop Pack 4</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="" style="background-color:transparent;color:#1f5e8d;">SHK Parking Pack</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="" style="background-color:transparent;color:#1f5e8d;">SuperSHK MEGA Parking Textures 1.0.1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/31423-supershk-fa3-parking-textures/" rel="" style="background-color:transparent;color:#1f5e8d;">SuperSHK + FA3 Parking Textures</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/32781-rr-mega-prop-pack-vol-1/" rel="" style="background-color:transparent;color:#1f5e8d;">RR Mega Prop Pack 1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/32473-rr-mega-prop-pack-vol-2/" rel="" style="background-color:transparent;color:#1f5e8d;">RR Mega Prop Pack 2</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/" rel="" style="background-color:transparent;color:#1f5e8d;">SM2 Mega Prop Pack Vol 1</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/32981-sm2-mega-prop-pack-vol2/" rel="" style="background-color:transparent;color:#1f5e8d;">SM2 Mega Prop Pack Vol 2</a>
+      	</li>
+      	<li>
+      		<a href="https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP Girafe Trees/Shrubs</a>
+      	</li>
+      </ul>
+
+      						</body>
+    filename: PC Midcentury Supermarkets - Modern Brands.zip
+    files:
+      - PC Midcentury Supermarkets - Modern Brands/Yokes/PC Yokes-0x6534284a-0xbf2aa679-0x736de6a7.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Yokes/PC Yokes-0x5ad0e817_0x93660640_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Yokes/CS$$3_3x6_PC_Yokes_13895409.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Woodmans/PC Woodmans Markets-0x6534284a-0xbf2aa679-0xd37dc12e.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Woodmans/PC Woodmans Markets-0x5ad0e817_0x3375a249_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Woodmans/CS$$3_3x6_PC_Woodmans_33806848.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Western Beef/PC Western Beef-0x6534284a-0xbf2aa679-0x737dbd46.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Western Beef/PC Western Beef-0x5ad0e817_0x73759700_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Western Beef/CS$$3_3x6_PC_WesternBeef_93806837.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/United Supermarkets/PLOP_7x6_PCUnitedSupermarket_538175c9.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/United Supermarkets/PC United Supermarkets-0x6534284a-0xbf2aa679-0xd380736f.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/United Supermarkets/PC United Supermarkets-0x6534284a-0xbf2aa679-0xd3636359.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/United Supermarkets/PC United Supermarkets-0x5ad0e817_0xd35c8d06_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/United Supermarkets/CS$$3_3x6_PC_UnitedSupermarkets_73636ea6.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Times Supermarket/PC Times Supermarket Hawaii-0x6534284a-0xbf2aa679-0xd35ca559.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Times Supermarket/PC Times Supermarket Hawaii-0x5ad0e817_0x135605a2_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Times Supermarket/CS$$3_3x6_PC_TimesSupermarket_b35cbf56.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/PC SuperValu-0x6534284a-0xbf2aa679-0x9350e8c9.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/PC SuperValu-0x5ad0e817_0x334a29f3_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/PC SuperValu 3-0x6534284a-0xbf2aa679-0xd35a0bc6.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/PC SuperValu 3-0x5ad0e817_0xd35368e7_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/PC SuperValu 2-0x6534284a-0xbf2aa679-0x735a0bbc.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/PC SuperValu 2-0x5ad0e817_0x7353587a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/CS$$3_3x6_PC_SuperValuUS_d350edb6.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/CS$$3_3x6_PC_SuperValuUS3_135b5a37.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/SuperValu versions/CS$$3_3x6_PC_SuperValuUS2_735b5a26.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Strack Van Til/PC Strack-Van Til Food Market-0x6534284a-0xbf2aa679-0xb34f8453.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Strack Van Til/PC Strack-Van Til Food Market-0x5ad0e817_0xf347a89b_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Strack Van Til/CS$$3_3x6_PC_StrackVanTil_b34f9ad5.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Stater Bros/PLOP_7x6_PCStaterBros_138179e7.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Stater Bros/PC Stater Bros-0x6534284a-0xbf2aa679-0xb380702e.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Stater Bros/PC Stater Bros-0x6534284a-0xbf2aa679-0x7350db6f.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Stater Bros/PC Stater Bros-0x5ad0e817_0x53491289_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Stater Bros/CS$$3_3x6_PC_StaterBros_d350ede7.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Smart And Final/PLOP_7x6_PCSmartAndFinal_538173e0.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Smart And Final/PC Smart And Final-0x6534284a-0xbf2aa679-0xd3807150.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Smart And Final/PC Smart And Final-0x6534284a-0xbf2aa679-0x934a1fd6.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Smart And Final/PC Smart And Final-0x5ad0e817_0xb3428a2f_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Smart And Final/PC Smart And Final Sign-0x6534284a-0xbf2aa679-0x934a2704.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Smart And Final/PC Smart And Final Sign-0x5ad0e817_0x13438df7_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Smart And Final/CS$$3_3x6_PC_SmartAndFinal_734a32c0.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Shaws/PLOP_7x6_PCShaws_33817488.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Shaws/PC Shaws-0x6534284a-0xbf2aa679-0xb3806eba.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Shaws/PC Shaws-0x6534284a-0xbf2aa679-0xb3537a0e.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Shaws/PC Shaws-0x5ad0e817_0xd34cce58_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Shaws/CS$$3_3x6_PC_Shaws_3353b12c.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Sentry Foods/PC Sentry Foods-0x6534284a-0xbf2aa679-0xd358eefc.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Sentry Foods/PC Sentry Foods-0x5ad0e817_0x33521002_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Sentry Foods/CS$$3_3x6_PC_SentryFoods_d359e90f.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Sendiks/PC Sendiks-0x6534284a-0xbf2aa679-0x136de6b9.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Sendiks/PC Sendiks-0x5ad0e817_0x3365f861_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Sendiks/CS$$3_3x6_PC_Sendiks_b38b1689.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Schnucks/PLOP_7x6_PCSchnucks_d381743c.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Schnucks/PC Schnucks-0x6534284a-0xbf2aa679-0x93490311.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Schnucks/PC Schnucks-0x6534284a-0xbf2aa679-0x13806e72.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Schnucks/PC Schnucks-0x5ad0e817_0xb3424e98_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Schnucks/CS$$3_3x6_PC_Schnucks_b34911ca.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Schmidmart/PC SchmidMart-0x6534284a-0xbf2aa679-0xd3746ad0.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Schmidmart/PC SchmidMart-0x5ad0e817_0x136c9a29_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Schmidmart/CS$$3_3x6_PC_SchmidMart_d3747be0.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Save A Lot Retro/PC Save A Lot 90s-0x6534284a-0xbf2aa679-0x535b43d5.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Save A Lot Retro/PC Save A Lot 90s-0x5ad0e817_0x935384cd_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Save A Lot Retro/CS$$3_3x6_PC_SaveALotRetro_335b5aa9.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Save Mart/PLOP_7x6_PCSaveMart_338179cc.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Save Mart/PC Save Mart Supermarket-0x6534284a-0xbf2aa679-0x9350fb12.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Save Mart/PC Save Mart Supermarket-0x6534284a-0xbf2aa679-0x13807069.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Save Mart/PC Save Mart Supermarket-0x5ad0e817_0xb34a5a68_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Save Mart/CS$$3_3x6_PC_SaveMart_d3510392.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Rouses/PC Rouses Market-0x6534284a-0xbf2aa679-0x135253ec.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Rouses/PC Rouses Market-0x5ad0e817_0x534b68dc_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Rouses/CS$$3_3x6_PC_RousesMarket_f3525fc1.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Rosauers/PC Rosauers-0x6534284a-0xbf2aa679-0x1375bb0c.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Rosauers/PC Rosauers-0x5ad0e817_0xd36efa7b_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Rosauers/CS$$3_3x6_PC_Rosauers_d375ed52.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Roche Bros/PC Roche Bros-0x6534284a-0xbf2aa679-0x13576263.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Roche Bros/PC Roche Bros-0x5ad0e817_0xf350c062_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Roche Bros/CS$$3_3x6_PC_RocheBros_73577ec6.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Ridleys/PC Ridleys-0x6534284a-0xbf2aa679-0xd36de6c4.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Ridleys/PC Ridleys-0x5ad0e817_0xf364c87c_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Ridleys/CS$$3_3x6_PC_Ridleys_b38b1708.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Renfroes/PC Renfroes-0x6534284a-0xbf2aa679-0xb375e1f2.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Renfroes/PC Renfroes-0x5ad0e817_0x536f28d2_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Renfroes/CS$$3_3x6_PC_Renfroes_b375ed6b.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Redners/PC Redners-0x6534284a-0xbf2aa679-0x7375bb14.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Redners/PC Redners-0x5ad0e817_0x736f0c5f_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Redners/CS$$3_3x6_PC_Redners_3375ed3d.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Reasors/PC Reasors-0x6534284a-0xbf2aa679-0x336200cc.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Reasors/PC Reasors-0x5ad0e817_0xb35b3940_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Reasors/CS$$3_3x6_PC_Reasors_93621282.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Reams/PC Reams-0x6534284a-0xbf2aa679-0x3359ecf8.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Reams/PC Reams-0x5ad0e817_0xf3525cba_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Reams/CS$$3_3x6_PC_Reams_535b5ace.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Randalls/PC Randalls-0x6534284a-0xbf2aa679-0x736a11e9.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Randalls/PC Randalls-0x5ad0e817_0xb3637196_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Randalls/CS$$3_3x6_PC_Randalls_336a1bc2.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/QFC/PC QFC-0x6534284a-0xbf2aa679-0x53620062.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/QFC/PC QFC-0x5ad0e817_0x135b559a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/QFC/CS$$3_3x6_PC_QFC_33621ec8.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Publix/PLOP_7x6_PCPublixRetro_7380791c.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Publix/PC Publix Retro-0x6534284a-0xbf2aa679-0x535b6c59.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Publix/PC Publix Retro-0x6534284a-0xbf2aa679-0x33806c5c.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Publix/PC Publix Retro-0x5ad0e817_0xb354c93a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Publix/CS$$3_3x6_PC_PublixRetro_735b881a.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/PCC Markets/PC PCC Community Markets-0x6534284a-0xbf2aa679-0xf38056cc.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/PCC Markets/PC PCC Community Markets-0x5ad0e817_0x7379a471_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/PCC Markets/CS$$3_3x6_PC_PCCMarkets_d3806821.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Pavilions/PC Pavilions-0x6534284a-0xbf2aa679-0x935b88bb.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Pavilions/PC Pavilions-0x5ad0e817_0x3354dd4c_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Pavilions/CS$$3_3x6_PC_Pavilions_d35cbebe.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Patel Brothers/PC Patel Brothers Indian Market-0x6534284a-0xbf2aa679-0x73805701.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Patel Brothers/PC Patel Brothers Indian Market-0x5ad0e817_0xd379b87f_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Patel Brothers/CS$$3_3x6_PC_PatelBrothersIndianMarket_b38067a2.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Nob Hill/PC Nob Hill Foods-0x6534284a-0xbf2aa679-0x9363636e.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Nob Hill/PC Nob Hill Foods-0x5ad0e817_0x135cafe2_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Nob Hill/CS$$3_3x6_PC_NobHill_93636edd.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/New Seasons/PC New Seasons Market-0x6534284a-0xbf2aa679-0x7372f030.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/New Seasons/PC New Seasons Market-0x5ad0e817_0x936c51c7_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/New Seasons/CS$$3_3x6_PC_NewSeasonsMarket_b373005b.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Morton WIlliams/PC Morton Williams-0x6534284a-0xbf2aa679-0x737dc137.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Morton WIlliams/PC Morton Williams-0x5ad0e817_0x9375add7_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Morton WIlliams/CS$$3_3x6_PC_MortonWilliams_538b16b6.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Met Foods/PC Met Foods-0x6534284a-0xbf2aa679-0xd38056ba.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Met Foods/PC Met Foods-0x5ad0e817_0x537986d1_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Met Foods/CS$$3_3x6_PC_MetFoods_d38067c1.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Martins/PC Martins-0x6534284a-0xbf2aa679-0x33746ab6.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Martins/PC Martins-0x5ad0e817_0x936dbc78_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Martins/CS$$3_3x6_PC_Martins_f3747bfc.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Market Basket-Demoulas/PC Market Basket-0x6534284a-0xbf2aa679-0x53622e6d.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Market Basket-Demoulas/PC Market Basket-0x5ad0e817_0x935b8cbf_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Market Basket-Demoulas/CS$$3_3x6_PC_MarketBasketDemoulas_f3631630.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Marcs/PC Marcs-0x6534284a-0xbf2aa679-0x13662436.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Marcs/PC Marcs-0x5ad0e817_0xd35f7be4_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Marcs/CS$$3_3x6_PC_Marcs_3369b159.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Maceys/PC Maceys-0x6534284a-0xbf2aa679-0x3362005a.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Maceys/PC Maceys-0x5ad0e817_0x135b60c7_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Maceys/CS$$3_3x6_PC_Maceys_136213ff.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Lund And Byerlys/PC Lunds And Byerlys-0x6534284a-0xbf2aa679-0x534f845d.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Lund And Byerlys/PC Lunds And Byerlys-0x5ad0e817_0x1347b39f_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Lund And Byerlys/CS$$3_3x6_PC_LundAndByerlys_334f9c1f.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Lucky Supermarkets/PLOP_7x6_PCLuckyMarket_73817a29.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Lucky Supermarkets/PC Lucky Market-0x6534284a-0xbf2aa679-0xd3807094.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Lucky Supermarkets/PC Lucky Market-0x6534284a-0xbf2aa679-0x13479675.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Lucky Supermarkets/PC Lucky Market-0x5ad0e817_0xd340f099_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Lucky Supermarkets/CS$$3_3x6_PC_LuckySupermarket_b347b073.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Kinney Drug/PC Kinney Drugs-0x6534284a-0xbf2aa679-0x93771826.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Kinney Drug/PC Kinney Drugs-0x5ad0e817_0xf3706054_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Kinney Drug/CS$$3_3x6_PC_KinneyDrugs_737722be.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Kroger/PLOP_7x6_PCKrogerNewLogo_f38077ef.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Kroger/PC Kroger with New Logo-0x6534284a-0xbf2aa679-0x33806c39.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Kroger/PC Kroger with New Logo-0x6534284a-0xbf2aa679-0x1352540a.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Kroger/PC Kroger with New Logo-0x5ad0e817_0xf34ba41b_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Kroger/PC Kroger Sign New Logo-0x6534284a-0xbf2aa679-0x335254d5.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Kroger/PC Kroger Sign New Logo-0x5ad0e817_0x134bbd04_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Kroger/CS$$3_3x6_PC_KrogerNewLogo_13525f4c.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Key Food/PC Key Food-0x6534284a-0xbf2aa679-0x137dc151.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Key Food/PC Key Food-0x5ad0e817_0xb375e04d_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Key Food/CS$$3_3x6_PC_KeyFood_538068ae.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Kents/PC Kents Market-0x6534284a-0xbf2aa679-0xd38180d9.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Kents/PC Kents Market-0x5ad0e817_0xf37ae305_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Kents/CS$$3_3x6_PC_Kents_13818d67.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Whitmores-0x6534284a-0xbf2aa679-0x9353a631.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Whitmores-0x5ad0e817_0xb34cf246_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Putnams-0x6534284a-0xbf2aa679-0xd357421c.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Putnams-0x5ad0e817_0x7350a446_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Metcalfs-0x6534284a-0xbf2aa679-0x1389658f.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Metcalfs-0x5ad0e817_0x3382c7f3_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Hometown Market-0x6534284a-0xbf2aa679-0x7349031d.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Hometown Market-0x5ad0e817_0x13425d85_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Girards-0x6534284a-0xbf2aa679-0x7353a6b7.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/PC IGA Girards-0x5ad0e817_0x934cf9d0_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/CS$$3_3x6_PC_IGAWhitmores_3353b0d6.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/CS$$3_3x6_PC_IGAPutnams_53577dee.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/CS$$3_3x6_PC_IGAMetcalfs_538997df.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/CS$$3_3x6_PC_IGAHometownMarket_b34911f6.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/IGA versions/CS$$3_3x6_PC_IGAGirards_7353b0c0.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Ideal/PC Ideal Food Basket-0x6534284a-0xbf2aa679-0x337dc13f.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Ideal/PC Ideal Food Basket-0x5ad0e817_0x9375bb57_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Ideal/CS$$3_3x6_PC_IdealFoodBasket_33806878.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Homeland/PC Homeland-0x6534284a-0xbf2aa679-0x336200d3.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Homeland/PC Homeland-0x5ad0e817_0x935b2d15_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Homeland/CS$$3_3x6_PC_Homeland_d3621267.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/HG Hill/PC HG HIll Food Stores-0x6534284a-0xbf2aa679-0xf34f8483.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/HG Hill/PC HG HIll Food Stores-0x5ad0e817_0x1348b7d2_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/HG Hill/CS$$3_3x6_PC_HGHill_d34f9c8c.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Hen House/PC Hen House-0x6534284a-0xbf2aa679-0xb35a29d2.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Hen House/PC Hen House-0x5ad0e817_0x735375a8_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Hen House/CS$$3_3x6_PC_HenHouseKC_f35b5ae9.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Heinens/PC Heinens-0x6534284a-0xbf2aa679-0xf35cb4db.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Heinens/PC Heinens-0x5ad0e817_0x93561463_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Heinens/CS$$3_3x6_PC_Heinens_335cbf3c.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Harps/PC Harps-0x6534284a-0xbf2aa679-0xb359ed04.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Harps/PC Harps-0x5ad0e817_0x1353492c_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Harps/CS$$3_3x6_PC_Harps_135b5abe.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Harmons/PC Harmons Grocery-0x6534284a-0xbf2aa679-0x1358eeec.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Harmons/PC Harmons Grocery-0x5ad0e817_0x7351fc5d_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Harmons/CS$$3_3x6_PC_Harmons_338956ed.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Haggen/PC Haggen-0x6534284a-0xbf2aa679-0x535cd927.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Haggen/PC Haggen-0x5ad0e817_0xb3563852_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Haggen/CS$$3_3x6_PC_Haggen_33631570.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Grocery Outlet/PLOP_7x6_PCGroceryOutlet_73817201.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Grocery Outlet/PC Grocery Outlet-0x6534284a-0xbf2aa679-0xf3807296.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Grocery Outlet/PC Grocery Outlet-0x6534284a-0xbf2aa679-0x334a6141.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Grocery Outlet/PC Grocery Outlet-0x5ad0e817_0x1343c0dd_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Grocery Outlet/PC Grocery Outlet Sign-0x6534284a-0xbf2aa679-0xb34a6134.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Grocery Outlet/PC Grocery Outlet Sign-0x5ad0e817_0x3343c925_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Grocery Outlet/CS$$3_3x6_PC_GroceryOutlet_134a69f1.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Gristedes/PC Gristedes-0x6534284a-0xbf2aa679-0x5350ee9a.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Gristedes/PC Gristedes-0x5ad0e817_0x1348f042_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Gristedes/CS$$3_3x6_PC_Gristedes_b38b1677.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Greers Food Tiger/PC Greers Food Tiger-0x6534284a-0xbf2aa679-0x937dc1c5.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Greers Food Tiger/PC Greers Food Tiger-0x5ad0e817_0xb376f5a7_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Greers Food Tiger/CS$$3_3x6_PC_GreersFoodTiger_f38068d7.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/King Kullen/PC King Kullen-0x6534284a-0xbf2aa679-0x93749073.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/King Kullen/PC King Kullen-0x5ad0e817_0xb36deefe_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/King Kullen/CS$$3_3x6_PC_KingKullen_f3749ef4.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Gelsons/PC Gelsons-0x6534284a-0xbf2aa679-0x73620070.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Gelsons/PC Gelsons-0x5ad0e817_0x335b4505_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Gelsons/CS$$3_3x6_PC_Gelsons-Mayfair_3362124d.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Gabes/PC Gabes-0x6534284a-0xbf2aa679-0x134a2031.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Gabes/PC Gabes-0x5ad0e817_0x3343808d_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Gabes/PC Gabes Sign-0x6534284a-0xbf2aa679-0x334a26f9.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Gabes/PC Gabes Sign-0x5ad0e817_0xd3438d28_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Gabes/CS$$3_3x6_PC_Gabes_f34a3260.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Fresh Market/PC The Fresh Market-0x6534284a-0xbf2aa679-0xd34f84a0.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Fresh Market/PC The Fresh Market-0x5ad0e817_0x7348e58a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Fresh Market/CS$$3_3x6_PC_FreshMarket_334f9c55.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Food Bazaar/PC Food Bazaar-0x6534284a-0xbf2aa679-0xf3774619.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Food Bazaar/PC Food Bazaar-0x5ad0e817_0xf370a90c_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Food Bazaar/CS$$3_3x6_PC_FoodBazaar_537c1e17.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Festival Foods/PC Festival Foods-0x6534284a-0xbf2aa679-0x3358ef03.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Festival Foods/PC Festival Foods-0x5ad0e817_0x53521af4_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Festival Foods/CS$$3_3x6_PC_FestivalFoods_f359ea70.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Fareway/PC Fareway-0x6534284a-0xbf2aa679-0xb3771849.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Fareway/PC Fareway-0x5ad0e817_0xf3706fa9_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Fareway/CS$$3_3x6_PC_Fareway_93772276.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Fairway NYC/PC Fairway NYC-0x6534284a-0xbf2aa679-0x33771855.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Fairway NYC/PC Fairway NYC-0x5ad0e817_0xd3707882_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Fairway NYC/CS$$3_3x6_PC_FairwayNYC_93772262.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Schneider Orange Cab-0x6534284a-0xbf2aa679-0x72f1ec49.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Schneider Orange Cab-0x5ad0e817_0x12eb507a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Schneider Gray Cab-0x6534284a-0xbf2aa679-0xb2f1ec57.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Schneider Gray Cab-0x5ad0e817_0xb2eb50e4_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Lays-0x6534284a-0xbf2aa679-0x130d88b5.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Lays-0x5ad0e817_0xf306eeed_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Kroger-0x6534284a-0xbf2aa679-0x132940ff.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Kroger-0x5ad0e817_0x73229f8e_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL JB Hunt-0x6534284a-0xbf2aa679-0x12f1ed3b.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL JB Hunt-0x5ad0e817_0x12eb52b1_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Frito Lay-0x6534284a-0xbf2aa679-0x730d88a8.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Frito Lay-0x5ad0e817_0x3306ed94_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Doritos-0x6534284a-0xbf2aa679-0x530d889b.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Doritos-0x5ad0e817_0x1306ecf9_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Dollar General-0x6534284a-0xbf2aa679-0xd3243601.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Dollar General-0x5ad0e817_0xd31d9deb_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Albertsons-0x6534284a-0xbf2aa679-0x332c0738.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Volvo VNL Albertsons-0x5ad0e817_0xd3255b82_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 White-0x6534284a-0xbf2aa679-0xf3881332.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 White-0x5ad0e817_0x1380877a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Silver-0x6534284a-0xbf2aa679-0xd38813a4.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Silver-0x5ad0e817_0xb3816bb7_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Red-Black Two Tone-0x6534284a-0xbf2aa679-0xf38813c3.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Red-Black Two Tone-0x5ad0e817_0x93817036_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Red-0x6534284a-0xbf2aa679-0x1388133e.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Red-0x5ad0e817_0xb38167e6_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Blue-Black Two Tone-0x6534284a-0xbf2aa679-0x338813cf.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Blue-Black Two Tone-0x5ad0e817_0xb38172e6_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Blue-0x6534284a-0xbf2aa679-0xd3881362.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Blue-0x5ad0e817_0x338169bd_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Black-0x6534284a-0xbf2aa679-0x338813ad.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Extra Props/PC Toyota Camry 25 Black-0x5ad0e817_0xb3816e41_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Dierbergs/PC Dierbergs-0x6534284a-0xbf2aa679-0x5358ef1f.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Dierbergs/PC Dierbergs-0x5ad0e817_0xb35249a1_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Dierbergs/CS$$3_3x6_PC_Dierbergs_d359e8c2.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/DG Market/PLOP_7x6_PCDGMarket_3381712e.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/DG Market/PC DG Market-0x6534284a-0xbf2aa679-0xd37dc1b3.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/DG Market/PC DG Market-0x6534284a-0xbf2aa679-0x73806cc8.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/DG Market/PC DG Market-0x5ad0e817_0xf376ea9f_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/DG Market/CS$$3_3x6_PC_DGMarket_338068c4.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Dagostino/PC Dagostino-0x6534284a-0xbf2aa679-0x537dc147.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Dagostino/PC Dagostino-0x5ad0e817_0x5375c8ec_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Dagostino/CS$$3_3x6_PC_DagostinoNYC_53806896.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Cosentinos-Price Chopper/PC Cosentinos Price Chopper KS-0x6534284a-0xbf2aa679-0x737dc1bb.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Cosentinos-Price Chopper/PC Cosentinos Price Chopper KS-0x5ad0e817_0x33770787_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Cosentinos-Price Chopper/CS$$3_3x6_PC_CosentinosPriceChopperKS_538068ed.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Coborns/PC Coborns-0x6534284a-0xbf2aa679-0x535ca548.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Coborns/PC Coborns-0x5ad0e817_0xf355f902_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Coborns/CS$$3_3x6_PC_Coborns_535cbf6b.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Cherry Valley/PC Cherry Valley Marketplace-0x6534284a-0xbf2aa679-0x738056f8.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Cherry Valley/PC Cherry Valley Marketplace-0x5ad0e817_0xd379b0cf_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Cherry Valley/CS$$3_3x6_PC_CherryValley_9380680b.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Carrs-Safeway/PC Carrs-Safeway-0x6534284a-0xbf2aa679-0xf3577867.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Carrs-Safeway/PC Carrs-Safeway-0x5ad0e817_0x9350d65d_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Carrs-Safeway/CS$$3_3x6_PC_Carrs-Safeway_73577be6.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Canhams/PC Canhams-0x6534284a-0xbf2aa679-0xb353a628.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Canhams/PC Canhams-0x5ad0e817_0x734ceb6c_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Canhams/CS$$3_3x6_PC_Canhams_b353b165.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/C-Town/PC C-Town Supermarket-0x6534284a-0xbf2aa679-0x136a11e1.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/C-Town/PC C-Town Supermarket-0x5ad0e817_0x3363503b_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/C-Town/CS$$3_3x6_PC_C-TownSupermarket_f36a1c20.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Buehlers/PC Buehlers-0x6534284a-0xbf2aa679-0xb364ca24.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Buehlers/PC Buehlers-0x5ad0e817_0x335df51a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Buehlers/CS$$3_3x6_PC_Buehlers_d365bc18.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Brookshires/PC Brookshires-0x6534284a-0xbf2aa679-0x7364ca2e.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Brookshires/PC Brookshires-0x5ad0e817_0x735e05ab_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Brookshires/CS$$3_3x6_PC_Brookshires_1365bbc7.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Bristol Farms-Lazy Acres/PC Bristol Farms-Lazy Acres-0x6534284a-0xbf2aa679-0xf38056c4.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Bristol Farms-Lazy Acres/PC Bristol Farms-Lazy Acres-0x5ad0e817_0x937996e0_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Bristol Farms-Lazy Acres/CS$$3_3x6_PC_BristolFarms-LazyAcres_b380690e.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Brandts/PC Brandts-0x6534284a-0xbf2aa679-0xd358eee4.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Brandts/PC Brandts-0x5ad0e817_0x7351f30b_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Brandts/CS$$3_3x6_PC_Brandts_9359e991.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Boyers/PC Boyers-0x6534284a-0xbf2aa679-0xd366242d.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Boyers/PC Boyers-0x5ad0e817_0xb35f65aa_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Boyers/CS$$3_3x6_PC_Boyers_7369b142.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Bomgaars/PC Bomgaars-0x6534284a-0xbf2aa679-0x33884075.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Bomgaars/PC Bomgaars-0x5ad0e817_0xb354af30_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Bomgaars/CS$$3_3x6_PC_Bomgaars_f38845c8.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Big Y/PC Big Y-0x6534284a-0xbf2aa679-0xf36a11d9.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Big Y/PC Big Y-0x5ad0e817_0x13632f38_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Big Y/CS$$3_3x6_PC_BigY_d36a1be4.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Bi-Mart/PC Bi-Mart-0x6534284a-0xbf2aa679-0x9358ef0f.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Bi-Mart/PC Bi-Mart-0x5ad0e817_0x73522fa0_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Bi-Mart/CS$$3_3x6_PC_Bi-Mart_5359ea53.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Bashas/PC Bashas-0x6534284a-0xbf2aa679-0x534f843f.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Bashas/PC Bashas-0x5ad0e817_0xd343aa42_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Bashas/CS$$3_3x6_PC_Bashas_734f998e.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Atwoods/PC Atwoods Ranch And Home-0x6534284a-0xbf2aa679-0x534f848f.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Atwoods/PC Atwoods Ranch And Home-0x5ad0e817_0x9348c2ee_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Atwoods/CS$$3_3x6_PC_AtwoodsHomeAndRanch_334f9c75.SC4Lot
+      - PC Midcentury Supermarkets - Modern Brands/Arlans/PC Arlans-0x6534284a-0xbf2aa679-0xf364ca37.SC4Desc
+      - PC Midcentury Supermarkets - Modern Brands/Arlans/PC Arlans-0x5ad0e817_0x135e2c5d_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Modern Brands/Arlans/CS$$3_3x6_PC_Arlans_1365bb74.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66841302ee82c_Saxton-Feb.1271716495830.thumb.png.dd6a9c93cfe5c940faf78e4a7b5c424c.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66841303a1b7d_AlexiaLake-Dec.27951719872667.thumb.png.97408ae2528db3a535ba5533d0b4a8b9.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6684130430090_AlexiaLake-Dec.27951719873076.thumb.png.bcb918ef301cbd0dae055ce3d36fc435.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66841304a08e2_AlexiaLake-Dec.27951719873104.thumb.png.4d08cae7424dca993b351d78d6995f33.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668413051d962_AlexiaLake-Dec.27951719872712.thumb.png.1ee06c8da4ad07e68df55f0d8ece0f12.png
+    lastModified: 2024-07-02T14:47:33Z
+    name: PC Midcentury Grocery & Pharmacy Set - Modern Brands
+    sha256: 2e38c06c93055ae4adb03eb25f7bbde54600ce4a4c33cf127dd6412b3d4ecb71
+    size: 56863731
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/66841302ee82c_Saxton-Feb.1271716495830.thumb.png.dd6a9c93cfe5c940faf78e4a7b5c424c.png
+    timestamp: 2024-07-03T09:08:15.228Z
+    uncompressed: 66297742
+    url: https://community.simtropolis.com/files/file/36325-pc-midcentury-grocery-pharmacy-set-modern-brands/
+    version: 1.0.0
+  simtropolis/36326-pc-midcentury-grocery-pharmacy-set-retro-brands:
+    authors:
+      - pclark06
+    category: 300
+    dependencies:
+      - simtropolis/34720-agc-environment-dlc
+      - simtropolis/35470-pre-2000-car-props-pack
+      - simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp
+      - simtropolis/32952-pc-mega-props-vol-1
+      - simtropolis/33533-pc-mega-props-2
+      - simtropolis/34787-pc-mega-props-3
+      - simtropolis/35526-pc-mega-props-41
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/31423-supershk-fa3-parking-textures
+      - simtropolis/32781-rr-mega-prop-pack-vol-1
+      - simtropolis/32473-rr-mega-prop-pack-vol-2
+      - simtropolis/32980-sm2-mega-prop-pack-vol1
+      - simtropolis/32981-sm2-mega-prop-pack-vol2
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Similar to the Australian retail set I did, I wanted to use the same base building to create some regional American supermarkets around this size. Grocery stores nowadays are massive but the base building goes back to a time when these stores were much smaller, and which, many still exist whether a pharmacy is using that space, or whether it's a smaller regional grocery chain that prides itself on customer service. These are retro brands that are either defunct, or have few locations remaining after mergers. There are 30 classic grocery stores in this set.</span><br style="background-color:#ffffff;color:#353535;font-size:14px;" >
+      	<br style="background-color:#ffffff;color:#353535;font-size:14px;" >
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">If you use lotplop, you can access all these as plop buildings. Grow lots are 3x6 and plop lots are 7x6.</span><br>
+      	<br>
+      	 
+      </p>
+
+
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" width="546">
+      	<tbody>
+      		<tr>
+      			<td height="19" width="546">
+      				-A&amp;P  - national, this one has the tacky 1970s color scheme
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-AJ Bayless/AJ’s Fine Foods - AZ, still exists, owned by Bashas
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Almacs - RI, MA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Big Bear - OH, WV, PA*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Bruno’s - AL
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Cat &amp; Fiddle - VA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Clemens - PA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Dominick’s - IL
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Farm Fresh - VA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Farmer Jack - MI
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Furr’s - NM, TX
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Genuardi’s - PA, NJ, DE
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Grand Union - east coast; reopened in 2021, owned by C&amp;S/Tops*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Great Scott - MI<br>
+      				-Henke &amp; Pillot - TX; logo influenced Kroger's logo after Kroger bought them out
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Hinky Dinky - NE, IA*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Jitney Jungle - MS, AL, LA, GA, FL*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Johnnie’s Foodmaster - MA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Kash N’ Karry - FL*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Kienows - OR
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Lucky Markets - CA, AZ, UT; still exists as a subsidiary*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Marsh - IN, OH, KY
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-McCrory Five And Dime - national*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Mick-Or-Mack - VA, TN
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Osco Drug - still exists in Albertsons-owned stores but not as standalone*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Owen’s - IN, bought by Kroger
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Pamida - Great Plains/Mountain States
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Phar-Mor - Midwest
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Red Owl (two versions) - one still exists in Green Bay, WI
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Revco Pharmacy - Midwest, Bought by CVS
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Sim’s Food - fictional grocery store from SimCity 3000 with yellow-blue color scheme
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Skaggs Alpha Beta - west coast before acquisition by Safeway*
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Thriftway - Winn-Dixie Subsidiary in OH, KY, south
+      			</td>
+      		</tr>
+      		<tr>
+      			<td height="19">
+      				-Waldbaums - NY, CT, NJ, MA - closed alongside A&amp;P in 2015<br>
+      				 
+      				<table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-collapse:collapse;border-spacing:0px;color:#353535;font-size:14px;" width="502">
+      					<tbody>
+      						<tr>
+      							<td height="20" style="padding:0px;" width="502">
+      								* = plop lot included
+      							</td>
+      						</tr>
+      					</tbody>
+      				</table>
+
+      				<p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      					Dependencies
+      				</p>
+
+      				<ul style="background-color:#ffffff;color:#353535;font-size:14px;">
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/34720-agc-environment-dlc/" rel="" style="background-color:transparent;color:#1f5e8d;">AGC Environment DLC</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/35470-pre-2000-car-props-pack/" rel="" style="background-color:transparent;color:#1f5e8d;">Art128 Pre 2000s Car Props</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp/" rel="" style="background-color:transparent;color:#1f5e8d;">Murmink Bikes</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/32952-pc-mega-props-vol-1/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 1</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/33533-pc-mega-props-2/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 2</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/34787-pc-mega-props-3/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 3</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/35526-pc-mega-props-41/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 4</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="" style="background-color:transparent;color:#1f5e8d;">SHK Parking Pack</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="" style="background-color:transparent;color:#1f5e8d;">SuperSHK MEGA Parking Textures 1.0.1</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/31423-supershk-fa3-parking-textures/" rel="" style="background-color:transparent;color:#1f5e8d;">SuperSHK + FA3 Parking Textures</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/32781-rr-mega-prop-pack-vol-1/" rel="" style="background-color:transparent;color:#1f5e8d;">RR Mega Prop Pack 1</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/32473-rr-mega-prop-pack-vol-2/" rel="" style="background-color:transparent;color:#1f5e8d;">RR Mega Prop Pack 2</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/" rel="" style="background-color:transparent;color:#1f5e8d;">SM2 Mega Prop Pack Vol 1</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/32981-sm2-mega-prop-pack-vol2/" rel="" style="background-color:transparent;color:#1f5e8d;">SM2 Mega Prop Pack Vol 2</a>
+      					</li>
+      					<li>
+      						<a href="https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;"><abbr style="border-bottom:none;" title="BATT Squad Certification">BSC</abbr><span> </span>- VIP Girafe Trees/Shrubs</a>
+      					</li>
+      				</ul>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      						</body>
+    filename: PC Midcentury Supermarkets - Retro Brands.zip
+    files:
+      - PC Midcentury Supermarkets - Retro Brands/Waldbaums/PC Waldbaums-0x6534284a-0xbf2aa679-0x73746aaa.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Waldbaums/PC Waldbaums-0x5ad0e817_0xd36dcb9c_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Waldbaums/CS$$3_3x6_PC_Waldbaums_d3747b44.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Thriftway/PC Thriftway-0x6534284a-0xbf2aa679-0xb3636396.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Thriftway/PC Thriftway-0x5ad0e817_0x935cc569_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Thriftway/CS$$3_3x6_PC_Thriftway_f3636f15.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Skaggs Alpha Beta/PLOP_7x6_PCSkaggsAlphaBeta_138178c1.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Skaggs Alpha Beta/PC Skaggs Alpha Beta-0x6534284a-0xbf2aa679-0x73806eeb.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Skaggs Alpha Beta/PC Skaggs Alpha Beta-0x6534284a-0xbf2aa679-0x53479681.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Skaggs Alpha Beta/PC Skaggs Alpha Beta-0x5ad0e817_0x9340f919_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Skaggs Alpha Beta/CS$$3_3x6_PC_SkaggsAlphaBeta_9347b0af.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Sims Food (SC3K)/PC Sims Food-0x6534284a-0xbf2aa679-0x93886b05.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Sims Food (SC3K)/PC Sims Food-0x5ad0e817_0x5349262d_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Sims Food (SC3K)/CS$$3_3x6_PC_SimsFoodSC3_f3886f7b.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Revco/PC Revco-0x6534284a-0xbf2aa679-0x5358eecc.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Revco/PC Revco-0x5ad0e817_0xd3510927_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Revco/CS$$3_3x6_PC_Revco_7359e8f4.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Red Owl/PC Red Owl-0x6534284a-0xbf2aa679-0xd3576248.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Red Owl/PC Red Owl-0x5ad0e817_0xf350aeff_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Red Owl/PC Red Owl 2-0x6534284a-0xbf2aa679-0xd3576254.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Red Owl/PC Red Owl 2-0x5ad0e817_0xb350b5af_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Red Owl/CS$$3_3x6_PC_RedOwl2_b3577c29.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Red Owl/CS$$3_3x6_PC_RedOwl1_f3577c05.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Phar-Mor/PC PharMor-0x6534284a-0xbf2aa679-0x135b43dd.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Phar-Mor/PC PharMor-0x5ad0e817_0x9354a367_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Phar-Mor/CS$$3_3x6_PC_PharMor_535b5a91.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Peoples Choice/PC Peoples Choice-0x6534284a-0xbf2aa679-0x93537a04.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Peoples Choice/PC Peoples Choice-0x5ad0e817_0xd34cd81f_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Peoples Choice/CS$$3_3x6_PC_PeoplesChoice_7353b557.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Pamida/PC Pamida-0x6534284a-0xbf2aa679-0xb358eed6.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Pamida/PC Pamida-0x5ad0e817_0x9350fe66_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Pamida/CS$$3_3x6_PC_Pamida_9359e9b8.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Owens/PC Owens-0x6534284a-0xbf2aa679-0x7358eef5.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Owens/PC Owens-0x5ad0e817_0xf3520692_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Owens/CS$$3_3x6_PC_Owens_5359e923.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Osco Drug/PLOP_7x6_PCOscoDrug_d381795c.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Osco Drug/PC Osco Drug-0x6534284a-0xbf2aa679-0x734f8473.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Osco Drug/PC Osco Drug-0x6534284a-0xbf2aa679-0x33806d89.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Osco Drug/PC Osco Drug-0x5ad0e817_0xf347bf09_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Osco Drug/CS$$3_3x6_PC_OscoDrug_734f9b45.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Mick Or Mack/PC Mick-Or-Mack-0x6534284a-0xbf2aa679-0xf3636362.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Mick Or Mack/PC Mick-Or-Mack-0x5ad0e817_0x735ca4a5_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Mick Or Mack/CS$$3_3x6_PC_MickOrMack_33636ec9.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/McCrory/PLOP_7x6_PCMcCrory_33817564.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/McCrory/PC McCrory-0x6534284a-0xbf2aa679-0x33636376.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/McCrory/PC McCrory-0x6534284a-0xbf2aa679-0x13807390.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/McCrory/PC McCrory-0x5ad0e817_0x935cb6e5_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/McCrory/CS$$3_3x6_PC_McCrory_f3636ef8.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Marsh/PC Marsh Supermarket-0x6534284a-0xbf2aa679-0x7348ebff.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Marsh/PC Marsh Supermarket-0x5ad0e817_0xb3423a73_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Marsh/CS$$3_3x6_PC_MarshSupermarket_b349118e.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Kienows/PC Kienows-0x6534284a-0xbf2aa679-0x7375e232.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Kienows/PC Kienows-0x5ad0e817_0x936f3b6b_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Kienows/CS$$3_3x6_PC_Kienows_3375ed23.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Kash N Karry/PLOP_7x6_PCKashNKarry_b381793b.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Kash N Karry/PC Kash N Karry-0x6534284a-0xbf2aa679-0xd364ca19.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Kash N Karry/PC Kash N Karry-0x6534284a-0xbf2aa679-0x53806f97.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Kash N Karry/PC Kash N Karry-0x5ad0e817_0x935de5cf_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Kash N Karry/CS$$3_3x6_PC_KashNKarry_1365b8d2.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Johnnies Foodmaster/PC Johnnies Foodmaster-0x6534284a-0xbf2aa679-0xf3525401.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Johnnies Foodmaster/PC Johnnies Foodmaster-0x5ad0e817_0x734b9328_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Johnnies Foodmaster/CS$$3_3x6_PC_JohnniesFoodmaster_f3525f79.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Jitney Jungle/PLOP_7x6_PCJitneyJungle_53817815.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Jitney Jungle/PC Jitney Jungle-0x6534284a-0xbf2aa679-0xb3807201.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Jitney Jungle/PC Jitney Jungle-0x6534284a-0xbf2aa679-0x334f8467.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Jitney Jungle/PC Jitney Jungle-0x5ad0e817_0xb347881c_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Jitney Jungle/CS$$3_3x6_PC_JitneyJungle_f34f9b6d.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Hinky Dinky/PLOP_7x6_PCHinkyDinky_938173fd.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Hinky Dinky/PC Hinky Dinky-0x6534284a-0xbf2aa679-0x734f844a.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Hinky Dinky/PC Hinky Dinky-0x6534284a-0xbf2aa679-0x138071e1.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Hinky Dinky/PC Hinky Dinky-0x5ad0e817_0x53477b9e_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Hinky Dinky/CS$$3_3x6_PC_HinkyDinky_b34f9ab5.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Henke And Pillot/PLOP_7x6_PCHenkeAndPillot_338175e7.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Henke And Pillot/PC Henke And Pillot-0x6534284a-0xbf2aa679-0x938073be.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Henke And Pillot/PC Henke And Pillot-0x6534284a-0xbf2aa679-0x93537a17.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Henke And Pillot/PC Henke And Pillot-0x5ad0e817_0xf34cb5bd_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Henke And Pillot/CS$$3_3x6_PC_Henke And Pillot_1353b197.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Great Scott/PC Great Scott-0x6534284a-0xbf2aa679-0xb350e8ad.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Great Scott/PC Great Scott-0x5ad0e817_0x93491d15_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Great Scott/CS$$3_3x6_PC_GreatScott_d350edca.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Grand Union/PLOP_7x6_PCGrandUnion_738172cc.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Grand Union/PC Grand Union-0x6534284a-0xbf2aa679-0xb34f847c.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Grand Union/PC Grand Union-0x6534284a-0xbf2aa679-0x73806f2d.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Grand Union/PC Grand Union-0x5ad0e817_0xf347c84a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Grand Union/CS$$3_3x6_PC_GrandUnion_b34f9b8f.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Furrs/PC Furrs-0x6534284a-0xbf2aa679-0x13746abe.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Furrs/PC Furrs-0x5ad0e817_0x136daf74_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Furrs/CS$$3_3x6_PC_Furrs_73747cae.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Genuardis/PC Genuardis-0x6534284a-0xbf2aa679-0x9372fbec.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Genuardis/PC Genuardis-0x5ad0e817_0x536c5d8e_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Genuardis/CS$$3_3x6_PC_Genuardis_73730046.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Farm Fresh/PC Farm Fresh-0x6534284a-0xbf2aa679-0x1386ba66.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Farm Fresh/PC Farm Fresh-0x5ad0e817_0x13801c33_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Farm Fresh/CS$$3_3x6_PC_FarmFresh_9386c338.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Dominicks/PC Dominicks-0x6534284a-0xbf2aa679-0xb358ef17.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Dominicks/PC Dominicks-0x5ad0e817_0x53523e2e_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Dominicks/CS$$3_3x6_PC_Dominicks_1359e9fc.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Farmer Jack/PC Farmer Jack-0x6534284a-0xbf2aa679-0xb350e8c0.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Farmer Jack/PC Farmer Jack-0x5ad0e817_0x734a10aa_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Farmer Jack/CS$$3_3x6_PC_FarmerJackUS_b350ed87.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Schneider Orange Cab-0x6534284a-0xbf2aa679-0x72f1ec49.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Schneider Orange Cab-0x5ad0e817_0x12eb507a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Schneider Gray Cab-0x6534284a-0xbf2aa679-0xb2f1ec57.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Schneider Gray Cab-0x5ad0e817_0xb2eb50e4_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Lays-0x6534284a-0xbf2aa679-0x130d88b5.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Lays-0x5ad0e817_0xf306eeed_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Kroger-0x6534284a-0xbf2aa679-0x132940ff.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Kroger-0x5ad0e817_0x73229f8e_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL JB Hunt-0x6534284a-0xbf2aa679-0x12f1ed3b.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL JB Hunt-0x5ad0e817_0x12eb52b1_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Frito Lay-0x6534284a-0xbf2aa679-0x730d88a8.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Frito Lay-0x5ad0e817_0x3306ed94_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Doritos-0x6534284a-0xbf2aa679-0x530d889b.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Doritos-0x5ad0e817_0x1306ecf9_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Dollar General-0x6534284a-0xbf2aa679-0xd3243601.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Dollar General-0x5ad0e817_0xd31d9deb_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Albertsons-0x6534284a-0xbf2aa679-0x332c0738.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Volvo VNL Albertsons-0x5ad0e817_0xd3255b82_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 White-0x6534284a-0xbf2aa679-0xf3881332.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 White-0x5ad0e817_0x1380877a_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Silver-0x6534284a-0xbf2aa679-0xd38813a4.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Silver-0x5ad0e817_0xb3816bb7_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Red-Black Two Tone-0x6534284a-0xbf2aa679-0xf38813c3.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Red-Black Two Tone-0x5ad0e817_0x93817036_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Red-0x6534284a-0xbf2aa679-0x1388133e.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Red-0x5ad0e817_0xb38167e6_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Blue-Black Two Tone-0x6534284a-0xbf2aa679-0x338813cf.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Blue-Black Two Tone-0x5ad0e817_0xb38172e6_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Blue-0x6534284a-0xbf2aa679-0xd3881362.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Blue-0x5ad0e817_0x338169bd_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Black-0x6534284a-0xbf2aa679-0x338813ad.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Extra Props/PC Toyota Camry 25 Black-0x5ad0e817_0xb3816e41_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Clemens/PC Clemens-0x6534284a-0xbf2aa679-0xd3746adb.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Clemens/PC Clemens-0x5ad0e817_0x336c8ede_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Clemens/CS$$3_3x6_PC_Clemens_f3747c95.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Cat And Fiddle/PC Cat And Fiddle-0x6534284a-0xbf2aa679-0x5357623a.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Cat And Fiddle/PC Cat And Fiddle-0x5ad0e817_0xd34d23bf_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Cat And Fiddle/CS$$3_3x6_PC_CatAndFiddle_93577f93.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Brunos/PC Brunos-0x6534284a-0xbf2aa679-0xf375bb21.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Brunos/PC Brunos-0x5ad0e817_0x136f19d5_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Brunos/CS$$3_3x6_PC_Brunos_1375ed7d.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Big Bear/PLOP_7x6_PCBigBear_338172ed.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Big Bear/PC Big Bear-0x6534284a-0xbf2aa679-0xf34f8498.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Big Bear/PC Big Bear-0x6534284a-0xbf2aa679-0xd38071bf.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Big Bear/PC Big Bear-0x5ad0e817_0x1348d31b_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Big Bear/CS$$3_3x6_PC_BigBear_b34f9a04.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/Almacs/PC Almacs-0x6534284a-0xbf2aa679-0x53746ac7.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/Almacs/PC Almacs-0x5ad0e817_0x936cb47f_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/Almacs/CS$$3_3x6_PC_Almacs_73747c1a.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/AJ Bayless/PC AJs Fine Foods-0x6534284a-0xbf2aa679-0x7372f03c.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/AJ Bayless/PC AJs Fine Foods-0x5ad0e817_0xd3672dac_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/AJ Bayless/CS$$3_3x6_PC_AJsFineFoods_d3730072.SC4Lot
+      - PC Midcentury Supermarkets - Retro Brands/A&P/PC AP Food Market 70s-0x6534284a-0xbf2aa679-0x135253f8.SC4Desc
+      - PC Midcentury Supermarkets - Retro Brands/A&P/PC AP Food Market 70s-0x5ad0e817_0x134b76a9_0x30000.SC4Model
+      - PC Midcentury Supermarkets - Retro Brands/A&P/CS$$3_3x6_PC_APFoodMarket70s_b3525f97.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66841917c1e77_Leavittown-Jan.174311715199622(2).thumb.png.e0ac46a8f6889ab69b50e808d56fbb42.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6684191845a55_AlexiaLake-Dec.27951719872830(2).thumb.png.dafeb6c6b8021fb61dc09179844ac80a.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66841918b85af_AlexiaLake-Dec.27951719872862.thumb.png.c1d2515c4ff3407ee8134177f0c22263.png
+    lastModified: 2024-07-02T15:16:46Z
+    name: PC Midcentury Grocery & Pharmacy Set - Retro Brands
+    sha256: 3a8e277714ecc1f1dbbfe26270fdff75b75499763308f03448492926b4d94cda
+    size: 22637926
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/66841917c1e77_Leavittown-Jan.174311715199622(2).thumb.png.e0ac46a8f6889ab69b50e808d56fbb42.png
+    timestamp: 2024-07-03T09:08:15.228Z
+    uncompressed: 26407322
+    url: https://community.simtropolis.com/files/file/36326-pc-midcentury-grocery-pharmacy-set-retro-brands/
+    version: 1.0.0
+  simtropolis/36327-pc-office-park-10-12:
+    authors:
+      - pclark06
+    category: 300
+    dependencies:
+      - simtropolis/21118-simcity-4-extra-cheats-plugin
+      - simtropolis/34163-agc-automobile-dlc
+      - simtropolis/35470-pre-2000-car-props-pack
+      - simtropolis/35526-pc-mega-props-4
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/31423-supershk-fa3-parking-textures
+      - simtropolis/34747-rr-mega-prop-pack-vol-3
+    description: >-
+      <body>
+                                  
+
+      							
+      <div style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	Plots 10-12 of my office buildings that I made from 2022-23. I just never got around to releasing the rest of the buildings. These are one floor versions (others I have released are two floors). 
+      </div>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	27 office buildings, with 9 in each "office plot," for suburban areas. Inspired by the endless amounts of office buildings that often have no deviation on one another in N. America. These are all stage 2 3x2 commercial offices with 8 or so different brands on each one. Can be used with<span> </span><a href="https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/" rel="" style="background-color:transparent;color:#1f5e8d;">LotPlop</a><span> </span>for office parks or can be built individually/grown. Often these buildings are used for branch offices outside of main headquarters for various reasons.<br>
+      	<br>
+      	The readme is a list of the companies on these buildings.
+      </p>
+
+
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" width="546">
+      	<tbody>
+      		<tr>
+      			<td height="19">
+      				<p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      					Dependencies
+      				</p>
+
+      				<ul style="background-color:#ffffff;color:#353535;font-size:14px;">
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/34163-agc-automobile-dlc/" rel="" style="background-color:transparent;color:#1f5e8d;">AGC Automobile DLC</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/35470-pre-2000-car-props-pack/" rel="" style="background-color:transparent;color:#1f5e8d;">Art128 Pre 2000s Car Props</a>
+      					</li>
+      					<li>
+      						<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2821" rel="external nofollow" style="background-color:#ffffff;color:#1f5e8d;"><abbr style="border-bottom:none;" title="BATT Squad Certification">BSC</abbr><span> </span>- VIP Girafe Carpack</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/35526-pc-mega-props-4/" rel="" style="background-color:transparent;color:#1f5e8d;">PC Mega Prop Pack 4.1</a>.1
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="" style="background-color:transparent;color:#1f5e8d;">SHK Parking Pack</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="" style="background-color:transparent;color:#1f5e8d;">SuperSHK MEGA Parking Textures 1.0.1</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/31423-supershk-fa3-parking-textures/" rel="" style="background-color:transparent;color:#1f5e8d;">SuperSHK + FA3 Parking Textures</a>
+      					</li>
+      					<li>
+      						<a href="https://community.simtropolis.com/files/file/34747-rr-mega-prop-pack-vol-3/" rel="" style="background-color:transparent;color:#1f5e8d;">RR Mega Prop Pack 3</a> for table umbrellas
+      					</li>
+      					<li>
+      						<abbr style="border-bottom:none;" title="BATT Squad Certification">BSC</abbr><span> </span>- VIP Girafe<span><span> </span>Trees/Shrubs</span>
+      						<ul>
+      							<li>
+      								<a href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2995" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Beech Trees</a>
+      							</li>
+      							<li>
+      								<a href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2620" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Birch Trees</a>
+      							</li>
+      							<li>
+      								<a href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3001" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Feather Grass</a>
+      							</li>
+      							<li>
+      								<a href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3071" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Hedges</a>
+      							</li>
+      							<li>
+      								<a href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2869" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Linden Trees</a>
+      							</li>
+      							<li>
+      								<a href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2809" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Maple Trees</a>
+      							</li>
+      							<li>
+      								<a href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3579" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Poplar Trees</a>
+      							</li>
+      							<li>
+      								<a href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3244" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Rowan Trees</a>
+      							</li>
+      						</ul>
+      					</li>
+      					<li>
+      						 
+      					</li>
+      				</ul>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      						</body>
+    filename: PC Office Park 10-12.zip
+    files:
+      - 10-12 readme.txt
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12C3_b1125d25.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12C2_31125c1f.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12C1_d11257ee.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12B3_111257c0.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12B2_710f9306.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12B1_310e8f56.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12A3_d10d6b5d.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12A2_d10d0e4c.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark12A1_510b8c95.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11C3_310abb6c.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11C2_91094bdb.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11C1_3108e811.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11B3_7107f730.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11B2_5107ac57.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11B1_7107ac4b.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11A3_11067184.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11A2_b104eb29.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark11A1_9104c4d8.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10C3_b10508a0.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10C2_1104dd80.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10C1_b104dd75.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10B3_b0fc008a.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10B2_50fc007c.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10B1_50fc005b.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10A3_10fc004e.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10A2_70fc0042.SC4Lot
+      - PC Office Park 10-12/Lots/CO$$2_4x3_PCModularOfficePark10A1_50fbd037.SC4Lot
+      - PC Office Park 10-12/Models/PC Modular Office 12C3-0x6534284a-0xbf2aa679-0x11124d86.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12C3-0x5ad0e817_0x910a4ce4_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 12C2-0x6534284a-0xbf2aa679-0xf1124d92.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12C2-0x5ad0e817_0xf10a4547_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 12C1-0x6534284a-0xbf2aa679-0x31124da0.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12C1-0x5ad0e817_0xd10a3a03_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 12B3-0x6534284a-0xbf2aa679-0x71124dac.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12B3-0x5ad0e817_0xf10a2f37_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 12B2-0x6534284a-0xbf2aa679-0x710f841d.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12B2-0x5ad0e817_0x91079546_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 12B1-0x6534284a-0xbf2aa679-0x710e5de4.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12B1-0x5ad0e817_0xf1065302_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 12A3-0x6534284a-0xbf2aa679-0x910e5dd3.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12A3-0x5ad0e817_0xb1064cd2_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 12A2-0x6534284a-0xbf2aa679-0x910cf6c2.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12A2-0x5ad0e817_0x9104e92e_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 12A1-0x6534284a-0xbf2aa679-0x910b859f.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 12A1-0x5ad0e817_0xd10397db_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11C3-0x6534284a-0xbf2aa679-0x310ab3bf.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11C3-0x5ad0e817_0x31029609_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11C2-0x6534284a-0xbf2aa679-0xf1093a2c.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11C2-0x5ad0e817_0xf1014c3c_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11C1-0x6534284a-0xbf2aa679-0xb108ded3.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11C1-0x5ad0e817_0x3100f056_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11B3-0x6534284a-0xbf2aa679-0x3107f330.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11B3-0x5ad0e817_0x9100054e_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11B2-0x6534284a-0xbf2aa679-0xd107a621.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11B2-0x5ad0e817_0xd0ffb701_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11B1-0x6534284a-0xbf2aa679-0xb107a607.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11B1-0x5ad0e817_0xb0ffad6b_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11A3-0x6534284a-0xbf2aa679-0x510668cf.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11A3-0x5ad0e817_0x90fe79a3_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11A3-0x5ad0e817_0x10fe785f_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11A2-0x6534284a-0xbf2aa679-0xb104e6d5.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11A2-0x5ad0e817_0xf0fcf7de_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 11A1-0x6534284a-0xbf2aa679-0x1104b73b.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 11A1-0x5ad0e817_0x70fa2eca_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10C3-0x6534284a-0xbf2aa679-0x7104d957.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10C3-0x5ad0e817_0xd0f53db8_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10C2-0x6534284a-0xbf2aa679-0xb104d947.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10C2-0x5ad0e817_0x70f52cda_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10C1-0x6534284a-0xbf2aa679-0xf104d934.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10C1-0x5ad0e817_0x10f504b6_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10B3-0x6534284a-0xbf2aa679-0x50fbfa52.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10B3-0x5ad0e817_0x50f40b73_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10B2-0x6534284a-0xbf2aa679-0xb0fbfa49.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10B2-0x5ad0e817_0x10f404e2_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10B1-0x6534284a-0xbf2aa679-0xd0fbfa23.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10B1-0x5ad0e817_0x30f3fd8f_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10A3-0x6534284a-0xbf2aa679-0x90fbfa1b.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10A3-0x5ad0e817_0x30f3f271_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10A2-0x6534284a-0xbf2aa679-0x50fbfa11.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10A2-0x5ad0e817_0x30f3e8fd_0x30000.SC4Model
+      - PC Office Park 10-12/Models/PC Modular Office 10A1-0x6534284a-0xbf2aa679-0x10fbc98a.SC4Desc
+      - PC Office Park 10-12/Models/PC Modular Office 10A1-0x5ad0e817_0x10f3d644_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66844231e16cf_Saxton-Apr.25201677276013.thumb.png.e9ea692b27cb014cf17890086c313fc8.png
+    lastModified: 2024-07-02T18:08:50Z
+    name: PC Office Park 10-12
+    sha256: 5bee4a75bc6890492de258a5f42245252f603c862d6ab008307d28abc62df0c6
+    size: 13781442
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/66844231e16cf_Saxton-Apr.25201677276013.thumb.png.e9ea692b27cb014cf17890086c313fc8.png
+    timestamp: 2024-07-03T09:08:15.228Z
+    uncompressed: 15606702
+    url: https://community.simtropolis.com/files/file/36327-pc-office-park-10-12/
     version: 1.0.0
   simtropolis/3633-frogface-telecom:
     authors:
@@ -35705,4 +37850,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-c5e8b238b44aacefde9225fafa008033-drive-day.JPG
     url: https://community.simtropolis.com/files/file/991-community-drivein-with-indoor-theater/
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

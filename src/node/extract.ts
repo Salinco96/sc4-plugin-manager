@@ -34,7 +34,11 @@ export async function extractRecursively(
       const archiveFullPath = path.join(basePath, archivePath)
 
       // Skip uninstallers, OpenJDK (from the NAM download), SC4DatPacker (from the CAM download), 4GB Patch, etc.
-      if (archivePath.match(/4gb_patch\.exe|openjdk.+\.msi|sc4datpacker.exe|uninst.+\.exe/i)) {
+      if (
+        archivePath.match(
+          /4gb_patch\.exe|Install_LRM.+\.exe|openjdk.+\.msi|sc4datpacker.exe|uninst.+\.exe/i,
+        )
+      ) {
         logger.debug(`Removing ${archivePath}...`)
       } else {
         logger.debug(`Extracting from ${archivePath}...`)
@@ -116,7 +120,7 @@ export async function extract7z(
     ...options,
   })
 
-  const sizeMatch = stdout.match(/Size: (\d+)/)
+  const sizeMatch = stdout.match(/size:\s*(\d+)/i)
   const size = sizeMatch ? Number.parseInt(sizeMatch[1], 10) : 0
   return { size }
 }

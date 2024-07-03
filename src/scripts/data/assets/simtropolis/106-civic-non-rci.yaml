@@ -4197,44 +4197,85 @@ assets:
     category: 600
     dependencies: []
     description: >-
-      Bosham Church, Established AD 850 and featured in the Bayeux tapestry depicting the visit of Harold II to the church.
+      <body>
 
 
-      Situated within the Diocese of Chichester (Uk) this is one of the earliest churches in Sussex.
 
 
-      Plop cost $5000.
+      <p>
+      	Bosham Church, Established AD 850 and featured in the Bayeux tapestry depicting the visit of Harold II to the church.
+      </p>
 
 
-      Monthly cost $98
+      <p>
+      	 Situated within the Diocese of Chichester (Uk) this is one of the earliest churches in Sussex.
+      </p>
 
 
-      Installation: COPY/Extract the Mntoes parent folder from the *.zip into your Plugins folder. If you extracted the ~Documents folder into your plugins, too, it's highly recommended to keep it,
-      but move it out of the Plugins folder.
+      <p>
+      	Plop cost $5000.
+      </p>
 
 
-      Please make sure that you first removed the original/former Mntoes Bosham Church.dat
+      <p>
+      	Monthly cost $98
+      </p>
 
 
-      To uninstall: bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      <p>
+      	<strong>Installation</strong>: COPY/Extract the <strong>Mntoes</strong> parent folder from the *.zip into your Plugins folder. If you extracted the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>
+      	<br>
+      	<strong><span style="color:#c0392b;">Please make sure that you first removed the original/former Mntoes Bosham Church.dat</span></strong><br>
+      	<br>
+      	<strong>To uninstall</strong>: bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      </p>
 
 
-      For more information on the Bayeux Tapestry follow this link:-
+      <p>
+      	 
+      </p>
 
 
-      http://www.bayeuxtapestry.org.uk/BayeuxContents.htm
+      <p>
+      	For more information on the Bayeux Tapestry follow this link:-
+      </p>
 
 
-      Thanks go to Simfox for advice concerning texturing of the roof (much appreicated).
+      <p>
+      	<a href="http://www.bayeuxtapestry.org.uk/BayeuxContents.htm" rel="external nofollow">http://www.bayeuxtapestry.org.uk/BayeuxContents.htm</a>
+      </p>
 
 
-      Enjoy
+      <p>
+      	 
+      </p>
 
 
-      Mntoes.
+      <p>
+      	Thanks go to Simfox for advice concerning texturing of the roof (much appreicated).
+      </p>
 
 
-      updated 13.06.2024 - by Tyberius06 and memo
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Enjoy
+      </p>
+
+
+      <p>
+      	Mntoes.
+      </p>
+
+
+      <p>
+      	<span style="font-size:12px;"><span style="color:#2980b9;">updated 13.06.2024 - by Tyberius06 and memo</span></span>
+      </p>
+
+      						</body>
     filename: Mntoes Bosham Church v2.zip
     files:
       - ~Documents/Mntoes/Bosham Church read me.html
@@ -4263,7 +4304,7 @@ assets:
     sha256: c3eccba4557ba01e0c9d028ba9b50b666b28620a7204abcffe39844d90336db6
     size: 632916
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2006/thumb-7787272f99ada78ee84c28914f533b44-Bosham%20Church%20Day.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 756897
     url: https://community.simtropolis.com/files/file/17530-bosham-church/
     version: "2.0"
@@ -9871,32 +9912,12 @@ assets:
     authors:
       - Krio
     category: 600
+    dependencies: []
     description: >-
-      Tennispalatsi is the largest cinema complex in Finland with 14 auditoriums. Originally built for Helsinki Olympics in 1937, building was first turned into car showroom before Helsinki hosted
-      olympics in 1952 and basketball games was played there. Tennis was played in newer Kisahalli. After the Olympics it was converted to department store and in 1993 it was converted to cinema
-      complex with museums, restaurants and small movie-themed shops.
+      <body>
 
-
-      In the SimCity it acts as static landmark. Despite the pictures, building has nightlights.
-
-
-      STATS
-
-      Lot size: 4x7
-
-      Plop Cost: 15 000 §
-
-      Monthly Cost: 150 §
-
-
-      Dependacies:
-
-      BSC Textures vol.1
-
-      BSC Textures vol.2
-
-
-      All feedback should go here instead: Krioworks at SimPeg
+      							<p><strong>Tennispalatsi</strong> is the largest cinema complex in Finland with 14 auditoriums. Originally built for Helsinki Olympics in 1937, building was first turned into car showroom before Helsinki hosted olympics in 1952 and basketball games was played there. Tennis was played in newer Kisahalli. After the Olympics it was converted to department store and in 1993 it was converted to cinema complex with museums, restaurants and small movie-themed shops.<br><br>In the SimCity it acts as static landmark. Despite the pictures, building has nightlights.<br><br>STATS<br>Lot size: 4x7<br>Plop Cost: 15 000 §<br>Monthly Cost: 150 §<br><br>Dependacies:<br><abbr title="BATT Squad Certification">BSC</abbr> Textures vol.1<br><abbr title="BATT Squad Certification">BSC</abbr> Textures vol.2<br><br>All feedback should go here instead: <a href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/forum/index.php?topic=6097.0" rel="external nofollow">Krioworks at SimPeg </a></p>
+      						</body>
     filename: TG Tennispalatsi.zip
     files:
       - TG Tennispalatsi/TG_Tennispalatsi01-0x6534284a-0x546817ab-0xbb4c2581.SC4Desc
@@ -9912,7 +9933,7 @@ assets:
     sha256: 38b62d29051979cfd0cd625034428b28fe5fcd6a86f6e0a3fee77adcfcf0f4d4
     size: 975734
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2015/thumb-783c9f1491712288f56aa19efc71d9d1-tennari35.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 1184086
     url: https://community.simtropolis.com/files/file/27353-tennispalatsi/
     version: "1.0"
@@ -12218,67 +12239,162 @@ assets:
     category: 600
     dependencies: []
     description: >-
-      Disclaimer:
+      <body>
+
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
 
-      Please feel free to develop your own lots using these lot foundations/retaining walls, but if sharing them, please point to this files as a dependency.
 
 
-      Short description:
 
 
-      Some lots, when being placed on slopes, will either raise the floor beneath them, or cut into the hill. In the former case, a lot foundation is being created, in the latter, a retaining wall.
-      Perhaps it's just me, but I'm quite surprised that I've only found very few plugins with custom foundations and none at all with retaining walls; therefore, I've turned some textures by Maxis or
-      other authors (see below for credits) into lot foundations and retaining walls. This plugin therefore acts as a dependency for plugin developers, providing them with the necessary textures and
-      exemplar files.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Disclaimer:</strong></span>
+      </p>
 
 
-      Dependencies:
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Please feel free to develop your own lots using these lot foundations/retaining walls, but if sharing them, please point to this files as a dependency.</span>
+      </p>
 
 
-      As it is a dependency itself, this plugin has no external dependencies.
+      <p>
+      	 
+      </p>
 
 
-      Contained Files:
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Short description:</strong></span>
+      </p>
 
 
-      LotFoundations.dat: Contains textures and exemplar files for lot foundations. Mandatory.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Some lots, when being placed on slopes, will either raise the floor beneath them, or cut into the hill. In the former case, a lot foundation is being created, in the latter, a retaining wall. Perhaps it's just me, but I'm quite surprised that I've only found very few plugins with custom foundations and none at all with retaining walls; therefore, I've turned some textures by Maxis or other authors (see below for credits) into lot foundations and retaining walls. This plugin therefore acts as a dependency for plugin developers, providing them with the necessary textures and exemplar files.</span>
+      </p>
 
 
-      RetainingWalls.dat: Contains textures and exemplar files for retaining walls. Mandatory.
+      <p>
+      	 
+      </p>
 
 
-      TestLots.dat: This file contains some testing lots that have one texture from both files applied to them, allowing you to test them in-game. These lots do not cost anything and do not have any
-      special features. They are at the bottom of the park menu. If you do not want these lots, you can remove this file safely.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><span style="color:rgb(255,140,0);"><strong>Dependencies:</strong></span></span>
+      </p>
 
 
-      Other than that, this download contains a Readme (unfortunately, due to its size, this time only in English) containing all necessary informations, as well as a tutorial on how to actually
-      switch to another fondation/retaining wall and how to use lots if they are supposed to be placed on slopes.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">As it is a dependency itself, this plugin has no external dependencies.</span>
+      </p>
 
 
-      Installation:
+      <p>
+      	 
+      </p>
 
 
-      Move or copy all files in this archive into the Plugins folder of your copy of SimCity 4. To uninstall, just remove these files.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Contained Files:</strong></span>
+      </p>
 
 
-      Compatibility:
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>LotFoundations.dat: </strong>Contains textures and exemplar files for lot foundations. Mandatory.</span>
+      </p>
 
 
-      This plugin should be compatible with all versions of SimCity 4. If you find out that this is not the case, please tell me.
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>RetainingWalls.dat:</strong> Contains textures and exemplar files for retaining walls. Mandatory.</span>
+      </p>
 
 
-      Credits:
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>TestLots.dat: </strong>This file contains some testing lots that have one texture from both files applied to them, allowing you to test them in-game. These lots do not cost anything and do not have any special features. They are at the bottom of the park menu. If you do not want these lots, you can remove this file safely.</span>
+      </p>
 
 
-      My special thanks go to all authors that kindly gave me permission to modify and share their work. At the moment, this ist just one person:
-
-        -  Mas71: His set of Japanese hill retaining walls surely is part of the plugins that I'm using most frequently. Now, their functionability is even being expanded.
-
-      Support:
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Other than that, this download contains a <strong>Readme </strong>(unfortunately, due to its size, this time only in English) containing all necessary informations, as well as a tutorial on how to actually switch to another fondation/retaining wall and how to use lots if they are supposed to be placed on slopes.</span>
+      </p>
 
 
-      Please feel free to post issues, bug reports, and suggestions in this thread:
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Installation:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Move or copy all files in this archive into the Plugins folder of your copy of SimCity 4. To uninstall, just remove these files.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Compatibility:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">This plugin should be compatible with all versions of SimCity 4. If you find out that this is not the case, please tell me.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Credits:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong><span style="color:rgb(255,140,0);">My special thanks go to all authors that kindly gave me permission to modify and share their work. </span></strong>At the moment, this ist just one person:</span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Mas71:</strong> His set of Japanese hill retaining walls surely is part of the plugins that I'm using most frequently. Now, their functionability is even being expanded.</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Support:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Please feel free to post issues, bug reports, and suggestions in this thread:</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2740235343" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed" style="height:208px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
     filename: Various Lot Foundations and Retaining Walls.zip
     files:
       - TestLots.dat
@@ -12294,7 +12410,7 @@ assets:
     sha256: c27de1770c9839eee8c171d82c81b95db93b947e1f91aa208a50ee08d2555f96
     size: 1991078
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.thumb.jpg.f55da6bf2b5ff6a084ff49f28359e41b.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 2079171
     url: https://community.simtropolis.com/files/file/31346-various-lot-foundations-and-retaining-walls/
     version: "1.0"
@@ -14903,34 +15019,88 @@ assets:
       - Barroco Hispano
     category: 600
     dependencies: []
-    description: |-
-      Specs:
+    description: >-
+      <body>
 
-      The file contains 7 1x1 lots (MMP Friendly)
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      Lot editor:
 
-      AGC_Buildings_A-Frame_
 
-      AGC_Buildings_Forest_House_
 
-      Ubication: Landmarks
 
-      Icon:
 
-      Includes Maxisnite and Darknite (Choose just one).
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Specs</strong>:
+      </p>
 
-      Dependencies:
 
-      No
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">The file contains 7 1x1 lots (<abbr title="Mayor Mode Ploppable">MMP</abbr> Friendly)</span>
+      </p>
 
-      Scale of the models: 133% on all axes.
 
-      If you like my work, you can make a donation to fund my other projects!
+      <p>
+      	<span style="color:#3498db;"><strong><span style="background-color:rgb(255,255,255);font-size:14px;">Lot editor:</span></strong></span>
+      </p>
 
-      https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU
 
-      Thanks to the few people who have donated to me.
+      <p>
+      	<strong><span style="background-color:#ffffff;color:#353535;font-size:14px;">AGC_Buildings_A-Frame_</span></strong>
+      </p>
+
+
+      <p>
+      	<strong><span style="background-color:#ffffff;color:#353535;font-size:14px;">AGC_Buildings_Forest_House_</span></strong>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;">Ubication:</strong><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> Landmarks</span></span>
+      </p>
+
+
+      <p>
+      	<strong><span style="background-color:#ffffff;color:#353535;font-size:14px;">Icon:  </span></strong><img alt="664e908f18826_image(25).png.ed95282c4ee3b1cb9c0fac125e3c249f.png" class="ipsImage ipsImage_thumbnailed" data-fileid="102323" src="https://www.simtropolis.com/objects/attachments/monthly_2024_05/664e908f18826_image(25).png.ed95282c4ee3b1cb9c0fac125e3c249f.png" >
+      </p>
+
+
+      <p>
+      	<strong style="color:#2980b9;font-size:16px;">Includes Maxisnite and Darknite (Choose just one).</strong>
+      </p>
+
+
+      <p>
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">Dependencies:</span></strong></span>
+      </p>
+
+
+      <p>
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">No</span></strong></span>
+      </p>
+
+
+      <p>
+      	<strong style="color:#353535;font-size:14px;">Scale of the models:</strong><span style="color:#353535;font-size:14px;"><span><span> </span></span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>133% on all axes.</strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#006600;"><strong>If you like my work, you can make a donation to fund my other projects! <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Thanks to the few people who have donated to me.</strong>
+      </p>
+
+      						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e910c456a7_image(20).thumb.png.746ba7ef3a3c111c24a8a51245bbfe69.png
       - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e910d07e1e_image(22).thumb.png.d8a3aad32557ae8646d27531c7305d7a.png
@@ -14940,7 +15110,7 @@ assets:
     lastModified: 2024-06-01T23:30:50Z
     name: AGC A-Frame Houses
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/664e910c456a7_image(20).thumb.png.746ba7ef3a3c111c24a8a51245bbfe69.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/36259-agc-a-frame-houses/
     variants:
       "201518":
@@ -15035,7 +15205,23 @@ assets:
       - leonv93
     category: 600
     dependencies: []
-    description: Large Gothic Cathedral; no dependencies
+    description: >-
+      <body>
+
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      <p>
+      	Large Gothic Cathedral; no dependencies 
+      </p>
+
+      						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f30369960_Regopolis-Dec.141301717888542.thumb.png.b1780fce026c051a7c5c16454967f220.png
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f30422766_Regopolis-Dec.141301717888530.thumb.png.aa54f79c8d46e145c7c64c70a22a88e2.png
@@ -15044,7 +15230,7 @@ assets:
     lastModified: 2024-06-09T00:10:46Z
     name: Cathedral
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f304c45dc_Regopolis-Dec.141301717888523.thumb.png.d776e6e5d7c63cb67073fcab2982a15f.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/36268-cathedral/
     variants:
       "201657":
@@ -15073,32 +15259,83 @@ assets:
       - Barroco Hispano
     category: 600
     dependencies: []
-    description: |-
-      Specs:
+    description: >-
+      <body>
 
-      The file contains an 1x5 lot. You can plop in the water or on the ground (You can also use MMP under or around the model).
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      Lot editor:
 
-      AGC_FV_Generic_1985_V01_S1_90
 
-      Ubication: Water transportation
 
-      Icon:
 
-      Includes Maxisnite and Darknite (Choose just one).
 
-      Dependencies:
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Specs:</strong>
+      </p>
 
-      No
 
-      Scale of the models: 100% on all axes (Real World Scale).
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	The file contains an 1x5 lot.<span> </span><span style="background-color:#ffffff;color:#353535;font-size:14px;">You can plop in the water or on the ground (You can also use<span> </span></span><abbr style="background-color:#ffffff;border-bottom:none;color:#353535;font-size:14px;" title="Mayor Mode Ploppable">MMP</abbr><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> </span>under or around the model).</span>
+      </p>
 
-      If you like my work, you can make a donation to fund my other projects!
 
-      https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU
+      <p>
+      	<span style="color:#3498db;"><strong><span style="background-color:rgb(255,255,255);font-size:14px;">Lot editor:</span></strong></span>
+      </p>
 
-      Thanks to the few people who have donated to me.
+
+      <p>
+      	<strong><span style="background-color:#ffffff;color:#353535;font-size:14px;">AGC_FV_Generic_1985_V01_S1_90</span></strong>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;">Ubication:</strong><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> Water transportation</span></span>
+      </p>
+
+
+      <p>
+      	<strong><span style="background-color:#ffffff;color:#353535;font-size:14px;">Icon:  </span></strong><img class="ipsImage ipsImage_thumbnailed" data-fileid="102543" src="https://www.simtropolis.com/objects/attachments/monthly_2024_06/Fishing_Vessel_ICON.png.e4114ddc0d515979aaf98e1288a62b12.png" alt="Fishing_Vessel_ICON.png.e4114ddc0d515979aaf98e1288a62b12.png" >
+      </p>
+
+
+      <p>
+      	<strong style="color:#2980b9;font-size:16px;">Includes Maxisnite and Darknite (Choose just one).</strong>
+      </p>
+
+
+      <p>
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">Dependencies:</span></strong></span>
+      </p>
+
+
+      <p>
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">No</span></strong></span>
+      </p>
+
+
+      <p>
+      	<strong style="color:#353535;font-size:14px;">Scale of the models:</strong><span style="color:#353535;font-size:14px;"><span><span> </span></span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>100% on all axes (Real World Scale).</strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#006600;"><strong>If you like my work, you can make a donation to fund my other projects! <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Thanks to the few people who have donated to me.</strong>
+      </p>
+
+      						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ce528877_image(25).thumb.png.2f6df8d92ccb8920973089912e4bfc9c.png
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ce66d031_image(24).thumb.png.0d21a9b2b38beace6dff0fd4c0dfe169.png
@@ -15106,7 +15343,7 @@ assets:
     lastModified: 2024-06-03T23:08:25Z
     name: AGC - Fishing Vessel G 01
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ce8810a8_image(23).thumb.png.030422ff88713a32256f26307233e1ce.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/36279-agc-fishing-vessel-g-01/
     variants:
       "201555":
@@ -15135,30 +15372,69 @@ assets:
       - Barroco Hispano
     category: 600
     dependencies: []
-    description: |-
-      This DLC contains props (Doesn't include lots). So far it only includes a Bucket Wheel Excavator. I will add more machinery later.
+    description: >-
+      <body>
 
-      Lot editor:
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      AGC_BWE_
 
-      I will update this DLC constantly so you must be on the lookout.
 
-      Includes Maxisnite and Darknite (Choose just one).
 
-      Scale of the models: 133% on all axes.
 
-      If you like my work, you can make a donation to fund my other projects!
 
-      https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">This DLC contains props (Doesn't include lots). So far it only includes a Bucket Wheel Excavator. I will add more machinery later.</span>
+      </p>
 
-      Thanks to the few people who have donated to me.
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#3498db;font-size:14px;"><span style="background-color:#ffffff;font-size:14px;">Lot editor:</span></strong>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="background-color:#ffffff;color:#353535;font-size:14px;">AGC_BWE_</span></strong>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#27ae60;font-size:14px;">I will update this DLC constantly so you must be on the lookout.</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="color:#2980b9;font-size:16px;">Includes Maxisnite and Darknite (Choose just one).</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="color:#353535;font-size:14px;">Scale of the models:</strong><span style="color:#353535;font-size:14px;"><span><span> </span></span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>133% on all axes.</strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#006600;"><strong>If you like my work, you can make a donation to fund my other projects! <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Thanks to the few people who have donated to me.</strong>
+      </p>
+
+      						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/Red-D3D-HeavyMachines.thumb.jpg.c466d829acbde1691482c66470778b6e.jpg
     lastModified: 2024-06-07T12:56:57Z
     name: AGC - Heavy Machinery DLC
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/Red-D3D-HeavyMachines.thumb.jpg.c466d829acbde1691482c66470778b6e.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/36292-agc-heavy-machinery-dlc/
     variants:
       "201632":
@@ -15186,26 +15462,76 @@ assets:
     category: 600
     dependencies:
       - simtropolis/36292-agc-heavy-machinery-dlc
-    description: |-
-      Specs:
+    description: >-
+      <body>
 
-      The file contains a 4x4 lot (MMP Friendly).
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      Lot editor:
 
-      AGC_BWE_Soviet_
 
-      Ubication: Landmarks
 
-      Dependencies:
 
-      Scale of the models: 133% on all axes.
 
-      If you like my work, you can make a donation to fund my other projects!
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Specs</strong>:
+      </p>
 
-      https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU
 
-      Thanks to the few people who have donated to me.
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">The file contains a 4x4 lot (<abbr style="border-bottom:none;" title="Mayor Mode Ploppable">MMP</abbr><span> </span>Friendly).</span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#3498db;font-size:14px;"><span style="background-color:#ffffff;font-size:14px;">Lot editor:</span></strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="background-color:#ffffff;color:#353535;font-size:14px;">AGC_BWE_Soviet_</span></strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;">Ubication:</strong><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> Landmarks</span></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#000000;font-size:14px;"><span style="font-size:16px;">Dependencies:</span></strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed719781402" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36292-agc-heavy-machinery-dlc/?do=embed" style="height:361px;max-width:502px;"></iframe>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="color:#353535;font-size:14px;">Scale of the models:</strong><span style="color:#353535;font-size:14px;"><span><span> </span></span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>133% on all axes.</strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#006600;"><strong>If you like my work, you can make a donation to fund my other projects! <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Thanks to the few people who have donated to me.</strong>
+      </p>
+
+      						</body>
     filename: AGC Bucket Wheel Excavator.7z
     files:
       - AGC_BWE_Soviet_V01_S1_90_136d9bca.SC4Lot
@@ -15219,7 +15545,7 @@ assets:
     sha256: b75d7a23e44ebd910a79ec0b351bd0aab61b1d14678667ec960247758b5d0b6d
     size: 30968
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666305d01a703_image(26).thumb.png.0ee3d7a6f8456f9f9c935e8b6d8df55c.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 0
     url: https://community.simtropolis.com/files/file/36293-agc-bucket-wheel-excavator/
     version: 1.0.0
@@ -15228,36 +15554,93 @@ assets:
       - Barroco Hispano
     category: 600
     dependencies: []
-    description: |-
-      History:
+    description: >-
+      <body>
 
-      Wikipedia
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      Specs:
 
-      The file contains an 2x12 lot. You can plop in the water or on the ground (You can also use MMP under or around the model).
 
-      Lot editor:
 
-      AGC_Cruisers_UKN_
 
-      Ubication: Water transportation
 
-      Icon:
+      <p>
+      	<strong>History:</strong>
+      </p>
 
-      No nightlights
 
-      Dependencies:
+      <p>
+      	<a href="https://en.wikipedia.org/wiki/Ukrainian_cruiser_Ukraina" rel="external nofollow">Wikipedia</a>
+      </p>
 
-      No
 
-      Scale of the models: 100% on all axes (Real World Scale).
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Specs:</strong>
+      </p>
 
-      If you like my work, you can make a donation to fund my other projects!
 
-      https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	The file contains an 2x12 lot.<span> </span><span style="background-color:#ffffff;color:#353535;font-size:14px;">You can plop in the water or on the ground (You can also use<span> </span></span><abbr style="background-color:#ffffff;border-bottom:none;color:#353535;font-size:14px;" title="Mayor Mode Ploppable">MMP</abbr><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> </span>under or around the model).</span>
+      </p>
 
-      Thanks to the few people who have donated to me.
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#3498db;font-size:14px;"><span style="background-color:#ffffff;font-size:14px;">Lot editor:</span></strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="background-color:#ffffff;color:#353535;font-size:14px;">AGC_Cruisers_UKN_</span></strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;">Ubication:</strong><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> Water transportation</span></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="background-color:#ffffff;color:#353535;font-size:14px;">Icon:</span></strong><img class="ipsImage ipsImage_thumbnailed" data-fileid="102708" src="https://www.simtropolis.com/objects/attachments/monthly_2024_06/Ukraina_Cruiser_DMG_ICON.png.66fb588b11b94d7ee9ad6efd2144d2b0.png" alt="Ukraina_Cruiser_DMG_ICON.png.66fb588b11b94d7ee9ad6efd2144d2b0.png" >
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#2980b9;font-size:16px;">No nightlights</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">Dependencies:</span></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">No</span></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="color:#353535;font-size:14px;">Scale of the models:</strong><span style="color:#353535;font-size:14px;"><span><span> </span></span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>100% on all axes (Real World Scale).</strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#006600;"><strong>If you like my work, you can make a donation to fund my other projects! <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Thanks to the few people who have donated to me.</strong>
+      </p>
+
+      						</body>
     filename: AGC Cruiser Ukrayina Abandoned.7z
     files:
       - AGC_Cruisers_UKN_Ukraina_1990_V100_90_5376036f.SC4Lot
@@ -15272,7 +15655,7 @@ assets:
     sha256: 57091585b1ef605765ba0e371fe78eefc2a06dbdfdbc2718b557ac97df8c1bdd
     size: 1575318
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666a3ffe1362d_image(28).thumb.png.09f2097d866e00a01f0e12f0d3f0aec2.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 0
     url: https://community.simtropolis.com/files/file/36303-agc-cruiser-ukrayina-1990-abandoned/
     version: 1.0.0
@@ -15280,10 +15663,26 @@ assets:
     authors:
       - leonv93
     category: 600
-    description: |-
-      Elementary and High school; No dependencies
+    dependencies: []
+    description: >-
+      <body>
 
-      High School.zip
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      <p>
+      	Elementary and High school; No dependencies
+      </p>
+
+
+      <p><a class="ipsAttachLink" href="//community.simtropolis.com/applications/core/interface/file/attachment.php?id=102814">High School.zip</a></p>
+      						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7ab7194_Regopolis-Nov.11831718490343.thumb.png.70438ae593da61bd3bfaf542d8f7f1e0.png
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7b66e65_Regopolis-Sep.281831718490304.thumb.png.b2800114a2ec61e24d9f3930cebb2f85.png
@@ -15295,7 +15694,7 @@ assets:
     lastModified: 2024-06-16T12:32:18Z
     name: Elementary & High School
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7e651f3_Regopolis-Sep.281831718490186.thumb.png.1b78259567f144c2ff028e903cdc120e.png
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/36305-elementary-high-school/
     variants:
       "201739":
@@ -15318,6 +15717,278 @@ assets:
         size: 1773023
         uncompressed: 2030160
         variantId: high-school
+    version: 1.0.0
+  simtropolis/36321-coal-and-ore-port-facilities:
+    authors:
+      - Paulus
+    category: 600
+    dependencies:
+      - simtropolis/32979-sm2-essentials-v4
+      - simtropolis/28951-marina
+    description: >-
+      <body>
+
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      <p>
+      	This set contains various lots to build your own (sort of) realistic looking coal- and ore yards and port facilities. Included in this set are:<br>
+      	- 2 cranes to unload coal and ore from large bulk carriers.<br>
+      	- 2 ship loaders to transfer coal and ore to smaller vessels.<br>
+      	- 2 bucket wheel excavators, used for transferring ore to and from temporary storage lots.<br>
+      	- a silo used for loading ore on trains.<br>
+      	- Large concrete silo's.<br>
+      	- 1 large ship.<br>
+      	- 7 lots with ore and coal heaps.<br>
+      	- various lots with single, double, triple or quadruple conveyor belts, to transport ore and coal.<br>
+      	- various miscellanious lots to spice up your coal yard.
+      </p>
+
+
+      <p>
+      	Most of the models sit on 1x1 lots, with parts overhanging, to make it easier to combine them and run roads or railways through them.  
+      </p>
+
+
+      <p>
+      	All of these lots are eye candy only; so that means none of them are functional. The lots can be found in the Parks menu, and are grouped together. 
+      </p>
+
+
+      <p>
+      	The seawalls in the pictures are not included in this set, but the cranes and ship are placed in such a way on their lots that they fit nicely with this particular set of seawalls. The ship model is offset from the center, so that it appears very close to the seawall.  
+      </p>
+
+
+      <p>
+      	I am not entirely satisfied by some of the textures, especially the coal, ore and sand textures. So when (if) I manage to improve my texturing skills, I'll try to update some of the lots in this set, or add new ones. And no nightlights for now.
+      </p>
+
+
+      <p>
+      	I would suggest using some of the excellent prop sets out there to further add detail to the lots.
+      </p>
+
+
+      <p>
+      	<strong>Dependencies </strong>
+      </p>
+
+
+      <p>
+      	For the base textures on the lots: <br>
+      	SM2 Arrow Precast textures, found in the SM2 essentials prop pack, by Simmer2.<br>
+      	<a href="https://community.simtropolis.com/files/file/32979-sm2-essentials-v4/" rel="">https://community.simtropolis.com/files/file/32979-sm2-essentials-v4/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	The seawalls are from Nbvc's marina set:<br>
+      	<a href="https://community.simtropolis.com/files/file/28951-marina" rel="">https://community.simtropolis.com/files/file/28951-marina</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Created by Paulus
+      </p>
+
+      						</body>
+    filename: Coal and ore port.rar
+    files:
+      - Trainsilo2-0x5ad0e817_0xb1e7c79d_0x30000.SC4Model
+      - Silos Concrete B2-0x5ad0e817_0x51e778ee_0x30000.SC4Model
+      - Silos Concrete A2-0x5ad0e817_0x51e911cf_0x30000.SC4Model
+      - Ship2-0x5ad0e817_0x71ea638f_0x30000.SC4Model
+      - PLOP_1x1_Coalyard Belt2 with Roof_e3f4de6c.SC4Lot
+      - PLOP_1x1_Coalyard Belt1 single_a3f4d497.SC4Lot
+      - PLOP Train loader_a26a3cac.SC4Lot
+      - PLOP Silos Large A_8273da9c.SC4Lot
+      - PLOP Silo Large B_c273da3c.SC4Lot
+      - PLOP Ship Loader B_b1bf3518.SC4Lot
+      - PLOP Ship Loader B_6273ca83.SC4Lot
+      - PLOP Excavator B_01c1cf70.SC4Lot
+      - PLOP Excavator A_c1c1cfe7.SC4Lot
+      - PLOP Crane B_124adfc8.SC4Lot
+      - PLOP Crane A_924ae028.SC4Lot
+      - PLOP Coalyard Belt1 end Pit_93b8260e.SC4Lot
+      - PLOP Coal ship A_a26b9cca.SC4Lot
+      - PLOP Belt3 Distribution tower_826b9838.SC4Lot
+      - PLOP Belt2 corner_a26a3b35.SC4Lot
+      - PLOP Belt1 end Silo_627a5f3e.SC4Lot
+      - PLOP 1x1 Belt4_c273c995.SC4Lot
+      - Ore Sand transition1-0x5ad0e817_0x1384c35b_0x30000.SC4Model
+      - Ore heap2 DEF2-0x5ad0e817_0xf386112e_0x30000.SC4Model
+      - Ore heap1 DEF-0x5ad0e817_0xd375e59e_0x30000.SC4Model
+      - Loader4 Y10-0x5ad0e817_0x313e0045_0x30000.SC4Model
+      - Loader B-0x5ad0e817_0x31f249e2_0x30000.SC4Model
+      - Instructions.txt
+      - excavator12B Y10-0x5ad0e817_0x514094bf_0x30000.SC4Model
+      - excavator12 Y10-0x5ad0e817_0x91408d5b_0x30000.SC4Model
+      - Distribution tower-0x5ad0e817_0x72c6f116_0x30000.SC4Model
+      - Crane8OUT Y10 XYZ25-0x5ad0e817_0x914af459_0x30000.SC4Model
+      - Crane8IN Y10 XYZ25-0x5ad0e817_0x114ae9bf_0x30000.SC4Model
+      - Coalyard 5.jpg
+      - Coalyard 4.jpg
+      - Coalyard 3.jpg
+      - Coalyard 2.jpg
+      - Coalyard 1.jpg
+      - Coal Sand transition1-0x5ad0e817_0xb384cc07_0x30000.SC4Model
+      - Coal heap1 DEF-0x5ad0e817_0x1375ea1e_0x30000.SC4Model
+      - Coal heap transition1 DEF-0x5ad0e817_0x9377172b_0x30000.SC4Model
+      - Coal  heap2 DEF2-0x5ad0e817_0xb380c2d5_0x30000.SC4Model
+      - Belt4 rails-0x5ad0e817_0x31f24c44_0x30000.SC4Model
+      - Belt4 end A4-0x5ad0e817_0x535a3fa0_0x30000.SC4Model
+      - Belt4 end A4 Mirror-0x5ad0e817_0xf35a0758_0x30000.SC4Model
+      - Belt4  end B-0x5ad0e817_0xd3555a33_0x30000.SC4Model
+      - Belt3-2 transition3-0x5ad0e817_0x91ea4c5d_0x30000.SC4Model
+      - Belt2 T junction V3-0x5ad0e817_0x72c6f00a_0x30000.SC4Model
+      - Belt2 straight1-0x5ad0e817_0x51a21e57_0x30000.SC4Model
+      - Belt2 straight1 Roof-0x5ad0e817_0xf374f853_0x30000.SC4Model
+      - Belt2 R3-0x5ad0e817_0xb1e7a449_0x30000.SC4Model
+      - Belt2 end Silo2-0x5ad0e817_0x31f54140_0x30000.SC4Model
+      - Belt2 end Pit2-0x5ad0e817_0x93370527_0x30000.SC4Model
+      - Belt1 transition1-0x5ad0e817_0x935be708_0x30000.SC4Model
+      - Belt1 single2 no tracks-0x5ad0e817_0x935be817_0x30000.SC4Model
+      - Belt1 single1-0x5ad0e817_0x71a222bf_0x30000.SC4Model
+      - Belt1 end1-0x5ad0e817_0x91a2246b_0x30000.SC4Model
+      - 8x5 Coalyard ore-coal transition1_53f71644.SC4Lot
+      - 8x5 Coalyard Ore heap2_6405f639.SC4Lot
+      - 8x5 Coalyard Ore heap1_73f716e8.SC4Lot
+      - 8x5 Coalyard Coal heap1_e3f71696.SC4Lot
+      - 8x5 Coal heap2_a400a709.SC4Lot
+      - 8x3 Coalyard Ore Sand transition1_8404b683.SC4Lot
+      - 8x3 Coalyard Coal Sand transition1_c404b659.SC4Lot
+      - 2x1 Belt2_1273d8ff.SC4Lot
+      - 1x1 Empty dirt1_1df07026.SC4Lot
+      - 1x1 Coalyard Distribution tower_93b985ac.SC4Lot
+      - 1x1 Coalyard Belt4 end C_03d9e4f8.SC4Lot
+      - 1x1 Coalyard Belt4 end A_63dbbccb.SC4Lot
+      - 1x1 Coalyard Belt4 end A Mirror_13dbbd72.SC4Lot
+      - 1x1 Coalyard Belt2 T junction_33b98584.SC4Lot
+      - 1x1 Coalyard Belt1 rails_13f4d3a7.SC4Lot
+      - 1x1 Coalyard Belt1 fly over_23dbca7c.SC4Lot
+      - 1x1 Coalyard Belt1 end_e3f4d354.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb34b6f0_Coalyard5.thumb.jpg.c10a9df208dd190a8e6dac0e2b7b8581.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb37cf6e_Coalyard1.thumb.jpg.770d97e5a92b9f1822b4b4afb61beb66.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb3a874f_Coalyard2.thumb.jpg.1f626b54849816ba6cfca454f505a9ff.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb3de3ee_Coalyard3.thumb.jpg.dac50a18887a02077ddb95cbd85d01ff.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb41b4cb_Coalyard4.thumb.jpg.b8bf56def18a6c644be3388188783d09.jpg
+    lastModified: 2024-06-29T21:26:31Z
+    name: Coal and ore port facilities
+    sha256: 7e1e107b6a697a0ad76ff0398c0b5b9e25d0bddddd44e725b94a5f428113be21
+    size: 11610570
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb34b6f0_Coalyard5.thumb.jpg.c10a9df208dd190a8e6dac0e2b7b8581.jpg
+    timestamp: 2024-07-01T10:39:10.701Z
+    uncompressed: 0
+    url: https://community.simtropolis.com/files/file/36321-coal-and-ore-port-facilities/
+    version: 1.0.0
+  simtropolis/36322-sim-university:
+    authors:
+      - leonv93
+    category: 600
+    dependencies: []
+    description: >-
+      <body>
+
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      <p>
+      	Sim University; Contains (5) 12x12 lots (1)12x6 lot. All dependencies are included in the file. 
+      </p>
+
+      						</body>
+    filename: University.zip
+    files:
+      - University/Univesity Lot C-0x6534284a-0x732c7d7a-0xb388d7fa.SC4Desc
+      - University/UNIVERSITYSTORE-0x6534284a-0x732c7d7a-0xb38ac209.SC4Desc
+      - University/UNIVERSITYSTORE-0x5ad0e817_0x1384257b_0x30000.SC4Model
+      - University/universitymarket-0x5ad0e817_0x7383463b_0x30000.SC4Model
+      - University/universitylecturehalltower-0x5ad0e817_0xb38216cb_0x30000.SC4Model
+      - University/universitylecturehallbasic-0x5ad0e817_0x73822d89_0x30000.SC4Model
+      - University/universitylecturehall-0x5ad0e817_0xf381f393_0x30000.SC4Model
+      - University/UniversityGateOne-0x5ad0e817_0x7382181d_0x30000.SC4Model
+      - University/universitychurch-0x6534284a-0x732c7d7a-0xf383179a.SC4Desc
+      - University/universitychurch-0x5ad0e817_0x937c7c3b_0x30000.SC4Model
+      - University/UniversityAuditorium-0x5ad0e817_0xf38218cd_0x30000.SC4Model
+      - University/University Lot E-0x6534284a-0x732c7d7a-0x938b662f.SC4Desc
+      - University/University Lot A-0x6534284a-0x732c7d7a-0x1388c0df.SC4Desc
+      - University/UN7-0x6534284a-0x732c7d7a-0xf389fe23.SC4Desc
+      - University/UN7-0x6534284a-0x732c7d7a-0x33836356.SC4Desc
+      - University/UN7-0x5ad0e817_0x737caece_0x30000.SC4Model
+      - University/uc1-0x5ad0e817_0x73824263_0x30000.SC4Model
+      - University/Quarter F_338a087e.SC4Lot
+      - University/Quarter E New_d38b67d3.SC4Lot
+      - University/Quarter D_7389fc01.SC4Lot
+      - University/Quarter C_7389f834.SC4Lot
+      - University/Quarter B_f389f36a.SC4Lot
+      - University/Quarter A_7389eec4.SC4Lot
+      - University/Quad-0x6534284a-0x732c7d7a-0x138b5afc.SC4Desc
+      - University/ONIONDOME-0x6534284a-0x732c7d7a-0x538abdc4.SC4Desc
+      - University/ONIONDOME-0x5ad0e817_0xf3841e4b_0x30000.SC4Model
+      - University/nicewallcorner-0x6534284a-0x732c7d7a-0xd38c8330.SC4Desc
+      - University/nicewallcorner-0x5ad0e817_0x5385eb06_0x30000.SC4Model
+      - University/nicewall-0x6534284a-0x732c7d7a-0xb38c82ff.SC4Desc
+      - University/nicewall-0x5ad0e817_0x1385e995_0x30000.SC4Model
+      - University/MainLibrary1-0x5ad0e817_0x73821579_0x30000.SC4Model
+      - University/Lecture Hall D-0x6534284a-0x732c7d7a-0x1388c891.SC4Desc
+      - University/Lecture hall C-0x6534284a-0x732c7d7a-0x7388c279.SC4Desc
+      - University/Lecture Hall B -0x6534284a-0x732c7d7a-0x3388c1dc.SC4Desc
+      - University/Lecture Hall A-0x6534284a-0x732c7d7a-0x7388c19c.SC4Desc
+      - University/lake-0x6534284a-0x732c7d7a-0x3389faf0.SC4Desc
+      - University/lake-0x5ad0e817_0x338354d7_0x30000.SC4Model
+      - University/Gate A-0x6534284a-0x732c7d7a-0x7388c2b6.SC4Desc
+      - University/dormsquadtype-0x5ad0e817_0xd384b863_0x30000.SC4Model
+      - University/dormitoryflip-0x6534284a-0x732c7d7a-0x3388ddbb.SC4Desc
+      - University/dormitoryflip-0x5ad0e817_0x93823c5c_0x30000.SC4Model
+      - University/Dormitory-0x6534284a-0x732c7d7a-0x7388c51d.SC4Desc
+      - University/dormitory-0x5ad0e817_0xb3822917_0x30000.SC4Model
+      - University/CORRIDOR-0x6534284a-0x732c7d7a-0x938abde3.SC4Desc
+      - University/CORRIDOR-0x5ad0e817_0x13841cf6_0x30000.SC4Model
+      - University/bookstore-0x6534284a-0x732c7d7a-0xb388dd8b.SC4Desc
+      - University/bookstore-0x5ad0e817_0x13823c09_0x30000.SC4Model
+      - University/Admin Building-0x5ad0e817_0x1384c883_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f27d59e_Peoria-Apr.26171719631848.thumb.png.5c3bfd988e487c5581f5f0d541440e51.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f3206dc_Peoria-Aug.30181719632111.thumb.png.2645c0f67b3e5d3119ebc265c854dac0.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f39782a_Peoria-Feb.18171719631824.thumb.png.7a5ac0a1f31b32bd51d3728bc5753a11.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f41bb30_Peoria-Jul.11181719632083.thumb.png.f1e8ca0dc2714d6c8332b1461d770159.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f48b908_Peoria-Nov.8181719706937.thumb.png.48b0d0fd58081395ec5481880a4b62bc.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f5083f7_Peoria-Nov.8181719707098.thumb.png.2ef1c87a26082fdfe815dd7efcd5fbcd.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f5772bf_Peoria-Oct.18161719631802.thumb.png.12a3ded58b31435707a4275eb81a2d2f.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f5e40c3_Peoria-Oct.27161719631810.thumb.png.dde571092b1ba62585228d3b49d5be17.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f65cec7_Peoria-Sep.20161719631795.thumb.png.ef7bd54e4d5fcbd09bf8508377a0b096.png
+    lastModified: 2024-06-30T00:33:58Z
+    name: Sim University
+    sha256: 0c5823594bb24701296356fbd2d0a65836f705d01540b2fa70a417d6d9129019
+    size: 13230276
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f48b908_Peoria-Nov.8181719706937.thumb.png.48b0d0fd58081395ec5481880a4b62bc.png
+    timestamp: 2024-07-01T10:39:10.701Z
+    uncompressed: 15366535
+    url: https://community.simtropolis.com/files/file/36322-sim-university/
     version: 1.0.0
   simtropolis/3644-stratosphere-towerlas-vegas:
     authors:
@@ -17264,4 +17935,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-33d8981f5deb63706c817395eb328784-Simjez-Feb.%207,%20001060541163.JPG
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

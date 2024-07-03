@@ -4,19 +4,45 @@ assets:
       - Gizmo
     category: 700
     dependencies: []
-    downloads: 233
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p class=\"style18\">There are two versions included in this mod, you can only use one at time, chose which one you want and delete the
+      other folder.</p>\r
+
+      <p class=\"style18\">All_Street_RR_Gates_to_Sign Folder: Changes all Crossing gates to RR Xing Signs.<br>Unzoned-Agricultural_Streets_to_Sign Folder: Changes gates in Agricultural zones and on
+      unzoned land to RR Xing Signs.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/rrgate.jpg\" data-lightbox=\"lightbox128\" data-alt=\"lightboxrrgate\"
+      target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/rrgate.jpg\" alt=\"rrgate\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 237
     filename: Gizmo - Street-RR Gate Replacement Mod.zip
     files:
       - ~Documents/Gizmo_Readmes/rrgate.jpg
       - ~Documents/Gizmo_Readmes/Read Me_Street-RR Gate Replacement Mod.htm
       - Gizmo/Street-RR Gate Replacement Mod/Unzoned-Agricultural_Streets_to_Sign/Street_RR_Arms_Replacement_Mod.dat
       - Gizmo/Street-RR Gate Replacement Mod/All_Street_RR_Gates_to_Sign/All_Street_RR_Arms_Replacement_Mod.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/rrgate.jpg
     lastModified: 2023-08-17T12:21:29-07:00
     name: Gizmo - Street-RR Gate Replacement Mod
     sha256: 165ba17a69b91e2a3e201d7c51185dbafb98f2d475484821517b572461b43e84
     size: 81374
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/rrgate.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 86026
     url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/128-gizmo-street-rr-gate-replacement-mod
     version: "1"
@@ -24,7 +50,7 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 387
+    downloads: 392
     lastModified: 2023-07-20T03:17:21-07:00
     name: Gobias HD Sidewalks
     url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/25-gobias-hd-sidewalks
@@ -33,7 +59,26 @@ assets:
       - sc4evermore
     category: 700
     dependencies: []
-    downloads: 782
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>Version 3.50 of Road-Top Mass Transit (RTMT).</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 790
     filename: RTMTV350.zip
     files:
       - RTMTV3/SC4TrashcanFix.dat
@@ -177,11 +222,12 @@ assets:
       - RTMTV3/Models/LU_Narrow_SubStairs_mcdrye.SC4Model
       - RTMTV3/Models/GLRShelterModern_StripedPlatforms.SC4Model
       - RTMTV3/Models/GLRShelterModern_All.SC4Model
+    images: []
     lastModified: 2023-07-20T03:12:33-07:00
     name: Road-Top Mass Transit (RTMT) Version 3.50
     sha256: 2b17a4440cfcfa765c3fcf7326a582edd287c97fc1fe319238fba44b60a50df0
     size: 2769163
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 3568653
     url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/6-road-top-mass-transit
     version: "3.50"
@@ -190,7 +236,28 @@ assets:
       - sc4evermore
     category: 700
     dependencies: []
-    downloads: 595
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>RTMT Add-On Pack V3.60.</p>\r
+
+      <p>Requires <a href=\"/index.php/downloads/download/23-transportation-mods/6-road-top-mass-transit\">RTMT Version V3.50</a>.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 600
     filename: RTMT Add-On Pack V3.60.zip
     files:
       - UKBusStopMarkings ReadMe.htm
@@ -402,11 +469,12 @@ assets:
       - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/4 - RTMT Road Stations/RTMT El Rail over Road Stations/RTMT El Rail over Road Stations.dat
       - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/2 - RTMT El Rail over Street Stations/RTMT El Rail over Street Stations
       - DAMN Menus/RTMT DAMN Menus Euro High/Transport/RTMT (Road Top Mass Transit)/3 - RTMT Street Stations/1 - RTMT SAM Stations/RTMT SAM Stations.dat
+    images: []
     lastModified: 2023-07-20T14:14:20-07:00
     name: RTMT Add-On Pack V3.60
     sha256: 96906d3319cfc082d33e524c327da1e1724b21d94c8a81b98194fa6120eab02b
     size: 6426219
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 6523140
     url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/8-rtmt-add-on-pack-v3-60
     version: "3.60"
@@ -414,9 +482,9 @@ assets:
     authors:
       - Andreas
     category: 700
-    downloads: 486
+    downloads: 493
     lastModified: 2023-08-02T05:24:35-07:00
     name: SFBT Street Tree Mod by Andreas
     url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/86-sfbt-street-tree-mod
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

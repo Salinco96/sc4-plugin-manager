@@ -10,7 +10,7 @@ import { parse as parseContentDisposition } from "content-disposition"
 import { Logger } from "@common/logs"
 
 import { extract7z, extractArchive, extractMSI } from "./extract"
-import { createIfMissing, moveTo, removeIfPresent } from "./files"
+import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
 
 // Transform stream to compute hash/progress as data is being downloaded
 export class DownloadTransformStream extends Transform {
@@ -144,19 +144,22 @@ export async function download(
       throw Error(`Expected SHA-256 ${expectedSha256}`)
     }
 
-    if (filename.endsWith(".7z")) {
+    const extension = getExtension(filename)
+    if (extension === ".7z" || extension === ".rar") {
       const { size } = await extract7z(downloadTempFile, downloadTempPath, options)
       await removeIfPresent(downloadTempFile)
       uncompressedSize = size
     }
 
-    if (filename.endsWith(".msi")) {
+    if (extension === ".msi") {
       await extractMSI(downloadTempFile, downloadTempPath)
       await removeIfPresent(downloadTempFile)
     }
 
-    if (filename.endsWith(".zip")) {
-      const { size } = await extractArchive(downloadTempFile, downloadTempPath, options)
+    if (extension === ".zip") {
+      const { size } = await extractArchive(downloadTempFile, downloadTempPath, options).catch(() =>
+        extract7z(downloadTempFile, downloadTempPath, options),
+      )
       await removeIfPresent(downloadTempFile)
       uncompressedSize = size
     }
@@ -177,11 +180,19 @@ export async function download(
 
 function inferExtensionFromContentType(contentType: string): string | undefined {
   switch (contentType) {
+    case "application/x-7z":
     case "application/x-7z-compressed":
       return ".7z"
 
-    case "application/x-zip":
+    case "application/vnd.rar":
+    case "application/x-rar":
+    case "application/x-rar-compressed":
+      return ".rar"
+
     case "application/zip":
+    case "application/x-zip":
+    case "application/x-zip-compressed":
+    case "multipart/x-zip":
       return ".zip"
   }
 }

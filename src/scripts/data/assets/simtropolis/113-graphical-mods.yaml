@@ -1859,12 +1859,32 @@ assets:
     authors:
       - nbvc
     category: 20
-    description: |-
-      Bikes for the mayor menu.
+    dependencies: []
+    description: >-
+      <body>
 
-      You can change the color and direction of a bike with additional clicks on the same bike.
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      The bikes can also be used as props in the Lot-Editor for your custom lots.
+
+
+
+
+
+      <p>Bikes for the mayor menu.</p>
+
+      <p> </p>
+
+      <p>You can change the color and direction of a bike with additional clicks  on the same bike.</p>
+
+      <p> </p>
+
+      <p>The bikes can also be used as props in the Lot-Editor for your custom  lots.</p>
+
+      <p> </p>
+
+      						</body>
     filename: NBVC_Bikes.zip
     files:
       - NBVC_Bikes/NBVC_Bikes_100.dat
@@ -1897,7 +1917,7 @@ assets:
     sha256: bbc03e2aaaf57df91572fc16708dde08c85d19518c7d7b622ff827b303b9d9ac
     size: 87548
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2010/thumb-d9e9da16b3f6f3b7d51b14e65e76b4fd-Nbvc_bikes1.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 162483
     url: https://community.simtropolis.com/files/file/24859-bikes/
     version: "1.0"
@@ -2521,59 +2541,16 @@ assets:
     authors:
       - MandelSoft
     category: 20
+    dependencies: []
     description: >-
-      !!! PLEASE READ THE INCLUDED README. IT CONTAINS ESSENTIAL INSTALLATION INSTRUCTIONS !!!
+      <body>
 
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-      NOTE: Fixes are available at the support thread. Check the support thread first before reporting bugs.
-
-
-      Description
-
-      The Light Replacement Mod (LRM) v4.0 Mega Pack consists of three parts: a prop pack, some plopable streetlights sets and a streetlight override mod.
-
-      The first part, the prop pack, is essential for this mod. It contains 59 new streetlight designs and over 200 new props you can use for lots.
-
-      The second part, the plopable streetlights sets, contains 31 sets of plopable streetlights for on the road sides and 20 sets for RHW medians. These can be used to enlighten your (Real) Highways.
-      With lots of variation, there's plenty of choice for everyone!
-
-      The third part, the streetlight override mod, contains overrides for all streetlights in-game, replacing the Maxis streetlights with custom designs. This will give your city an unique and
-      characteristic look. There's a large variety of designs available in various styles. Want to make your cities look more American, European or Commie? No problem! You can even compose your own
-      style, isn't that great?
-
-      All streetlights in this pack also have a more uniform light spreading, making your cities not only looking great from up close, but also from further away. So what are you waiting for? Install
-      some new lights and give your city a whole new look at day and night!
-
-
-      Dependencies
-
-      There are no dependencies for this package, since it's a dependency by itself.
-
-
-      Compatibility
-
-      The streetlight override part of this mod is incompatible with the Uniform Streetlight Mod or earlier versions of the Light Replacement Mod. This mod also replaces the following packs with a
-      new, updated version:
-
-      - LRM Plopable RHW Median Light Pack 01
-
-      - LRM Plopable Streetlights 01 & 02
-
-      - LRM Prop Pack 01 & 02
-
-
-      Feedback and support
-
-      For Frequently Asked Questions feedback or support issues, please visit the LRM Support & Development Thread on SimTropolis. We will attempt to answer them to the best of our knowledge, and as
-      quickly as possible.
-
-
-      Note: Download the Windows version for an automatic installer. Download the MAC version for manual installation.
-
-
-      Best,
-
-      Maarten
+      							<p>	<span style="color:#ff0000;">!!! PLEASE READ THE INCLUDED README. IT CONTAINS ESSENTIAL INSTALLATION INSTRUCTIONS !!!<br><br>	NOTE: Fixes are available at the support thread. Check the support thread first before reporting bugs.</span><br><br><strong>Description</strong><br>	The Light Replacement Mod (<abbr title="Light Replacement Mod">LRM</abbr>) v4.0 Mega Pack consists of three parts: a prop pack, some plopable streetlights sets and a streetlight override mod.<br>	The first part, the prop pack, is essential for this mod. It contains 59 new streetlight designs and over 200 new props you can use for lots.<br>	The second part, the plopable streetlights sets, contains 31 sets of plopable streetlights for on the road sides and 20 sets for <abbr title="RealHighway">RHW</abbr> medians. These can be used to enlighten your (Real) Highways. With lots of variation, there's plenty of choice for everyone!<br>	The third part, the streetlight override mod, contains overrides for all streetlights in-game, replacing the Maxis streetlights with custom designs. This will give your city an unique and characteristic look. There's a large variety of designs available in various styles. Want to make your cities look more American, European or Commie? No problem! You can even compose your own style, isn't that great?<br>	All streetlights in this pack also have a more uniform light spreading, making your cities not only looking great from up close, but also from further away. So what are you waiting for? Install some new lights and give your city a whole new look at day and night!<br><br><strong>Dependencies</strong><br>	There are no dependencies for this package, since it's a dependency by itself.<br><br><strong>Compatibility</strong><br>	The streetlight override part of this mod is incompatible with the Uniform Streetlight Mod or earlier versions of the Light Replacement Mod. This mod also replaces the following packs with a new, updated version:<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Plopable <abbr title="RealHighway">RHW</abbr> Median Light Pack 01<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Plopable Streetlights 01 &amp; 02<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Prop Pack 01 &amp; 02<br><br><strong>Feedback and support</strong><br>	For Frequently Asked Questions feedback or support issues, please visit the <a href="https://www.simtropolis.com/forum/topic/45710-lrm-light-replacement-mod-support-development-and-discussion/" rel="external nofollow"><abbr title="Light Replacement Mod">LRM</abbr> Support &amp; Development Thread on SimTropolis</a>. We will attempt to answer them to the best of our knowledge, and as quickly as possible.<br><br><strong>Note</strong>: Download the Windows version for an automatic installer. Download the MAC version for manual installation.<br><br>	Best,<br>	Maarten</p>
+      						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_03_2012/307fdb483c3fe24f4cbd76290323326a-promo.jpg
       - https://www.simtropolis.com/objects/screens/monthly_03_2012/594d1ee4c52b50e13d43561a47aec946-preview01.jpg
@@ -2582,537 +2559,11 @@ assets:
     lastModified: 2017-05-12T23:01:52Z
     name: Light Replacement Mod (LRM) v4.0 Mega Pack
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2012/thumb-307fdb483c3fe24f4cbd76290323326a-promo.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     url: https://community.simtropolis.com/files/file/27200-light-replacement-mod-lrm-v40-mega-pack/
     variants:
       "98162":
         filename: LRMv4.0 Mega Pack (Windows Version).zip
-        files:
-          - T21_TuLEP_Lights.dat
-          - T21_TL_Roads.dat
-          - T21_Roundabouts.dat
-          - T21_Road_Lights.dat
-          - T21_RoadDiag_Lights_3.dat
-          - T21_OneWay_Lights.dat
-          - T21_OneWayDiag_Lights_3.dat
-          - T21_NWM_Lights.dat
-          - T21_MHW_NoLights.dat
-          - T21_MHW_MedianLights.dat
-          - T21_Bridge_STR_Plain.dat
-          - T21_Bridge_RD_UnderTruss.dat
-          - T21_Bridge_RD_StoneArch.dat
-          - T21_Bridge_RD_SmallSteelArch.dat
-          - T21_Bridge_RD_OverdeckTruss.dat
-          - T21_Bridge_RD_MediumSuspension.dat
-          - T21_Bridge_RD_LevelBridge.dat
-          - T21_Bridge_RD_CantileverTruss.dat
-          - T21_Bridge_OWR_UnderTruss.dat
-          - T21_Bridge_OWR_StoneArch.dat
-          - T21_Bridge_OWR_Plain.dat
-          - T21_Bridge_OWR_OverdeckTruss.dat
-          - T21_Bridge_OWR_MediumSuspension.dat
-          - T21_Bridge_MHW_LevelBridge.dat
-          - T21_Bridge_GHW_UnderTruss.dat
-          - T21_Bridge_GHW_StoneArch.dat
-          - T21_Bridge_GHW_SmallSteelArch.dat
-          - T21_Bridge_GHW_OverdeckTruss.dat
-          - T21_Bridge_GHW_MediumSuspension.dat
-          - T21_Bridge_GHW_LongSuspension.dat
-          - T21_Bridge_GHW_LargeSteelArch.dat
-          - T21_Bridge_GHW_GoldenGate.dat
-          - T21_Bridge_GHW_CantileverTruss.dat
-          - T21_Bridge_GHW_CableStayed.dat
-          - T21_Bridge_EHW_UnderTruss.dat
-          - T21_Bridge_EHW_StoneArch.dat
-          - T21_Bridge_EHW_SmallSteelArch.dat
-          - T21_Bridge_EHW_OverdeckTruss.dat
-          - T21_Bridge_EHW_MediumSuspension.dat
-          - T21_Bridge_EHW_LongSuspension.dat
-          - T21_Bridge_EHW_LargeSteelArch.dat
-          - T21_Bridge_EHW_GoldenGate.dat
-          - T21_Bridge_EHW_CantileverTruss.dat
-          - T21_Bridge_EHW_CableStayed.dat
-          - T21_Bridge_AVE_UnderTruss.dat
-          - T21_Bridge_AVE_StoneArch.dat
-          - T21_Bridge_AVE_SmallSteelArch.dat
-          - T21_Bridge_AVE_OverdeckTruss.dat
-          - T21_Bridge_AVE_MediumSuspension.dat
-          - T21_Bridge_AVE_LongSuspension.dat
-          - T21_Bridge_AVE_LargeSteelArch.dat
-          - T21_Bridge_AVE_CantileverTruss.dat
-          - T21_Bridge_AVE_CableStayed.dat
-          - T21_Avenue_SideLights.dat
-          - T21_Avenue_MedianLights.dat
-          - ReadMe_LRMv40_Mega_Pack.pdf
-          - modern-wizard.bmp
-          - LRMv4_Props.dat
-          - LRMv4_Models_Streetlights_USA.dat
-          - LRMv4_Models_Streetlights_UK.dat
-          - LRMv4_Models_Streetlights_theNetherlands.dat
-          - LRMv4_Models_Streetlights_Sweden.dat
-          - LRMv4_Models_Streetlights_NFSU.dat
-          - LRMv4_Models_Streetlights_Misc.dat
-          - LRMv4_Models_Streetlights_Imaginia.dat
-          - LRMv4_Models_Streetlights_Germany.dat
-          - LRMv4_Models_Streetlights_France.dat
-          - LRMv4_Models_Streetlights_CitiesXL.dat
-          - LRMv4_Models_Streetlights_Belgium_WHITE.dat
-          - LRMv4_Models_Streetlights_Belgium_GREY.dat
-          - LRMv4_Models_Streetlights_Belgium_GREEN.dat
-          - LRMv4_Models_LightCones_MaxisNite.dat
-          - LRMv4_Models_LightCones_DarkNite.dat
-          - LRMv4_Lights_ST_$_USA_Gen_S.dat
-          - LRMv4_Lights_ST_$_UK_Sub.dat
-          - LRMv4_Lights_ST_$_SE_Got.dat
-          - LRMv4_Lights_ST_$_NFSU_Gen_C.dat
-          - LRMv4_Lights_ST_$_DE_SH.dat
-          - LRMv4_Lights_ST_$_DE_NrWf_W.dat
-          - LRMv4_Lights_ST_$_DE_NrWf_O.dat
-          - LRMv4_Lights_ST_$_DE_HH.dat
-          - LRMv4_Lights_ST_$_DE_Gen_W.dat
-          - LRMv4_Lights_ST_$_DE_Gen_O.dat
-          - LRMv4_Lights_ST_$_DE_BFP.dat
-          - LRMv4_Lights_ST_$_DE_BFH.dat
-          - LRMv4_Lights_ST_$_BE_Li.dat
-          - LRMv4_Lights_ST_$_BE_An.dat
-          - LRMv4_Lights_ST_$$_USA_Gen_S.dat
-          - LRMv4_Lights_ST_$$_UK_Sub.dat
-          - LRMv4_Lights_ST_$$_SE_Got.dat
-          - LRMv4_Lights_ST_$$_NFSU_Gen_C.dat
-          - LRMv4_Lights_ST_$$_DE_SH.dat
-          - LRMv4_Lights_ST_$$_DE_NrWf_W.dat
-          - LRMv4_Lights_ST_$$_DE_NrWf_O.dat
-          - LRMv4_Lights_ST_$$_DE_HH.dat
-          - LRMv4_Lights_ST_$$_DE_Gen_W.dat
-          - LRMv4_Lights_ST_$$_DE_Gen_O.dat
-          - LRMv4_Lights_ST_$$_DE_BFP.dat
-          - LRMv4_Lights_ST_$$_DE_BFH.dat
-          - LRMv4_Lights_ST_$$_BE_Li.dat
-          - LRMv4_Lights_ST_$$_BE_An.dat
-          - LRMv4_Lights_ST_$$$_USA_CBD.dat
-          - LRMv4_Lights_ST_$$$_UK_Park.dat
-          - LRMv4_Lights_ST_$$$_NL_BSt.dat
-          - LRMv4_Lights_ST_$$$_GEN_OT2.dat
-          - LRMv4_Lights_ST_$$$_GEN_OT1.dat
-          - LRMv4_Lights_ST_$$$_FR_VT2.dat
-          - LRMv4_Lights_ST_$$$_FR_VT1.dat
-          - LRMv4_Lights_ST_$$$_DE_Fr.dat
-          - LRMv4_Lights_Roundabouts_USA_CBD.dat
-          - LRMv4_Lights_Roundabouts_UK_Park.dat
-          - LRMv4_Lights_Roundabouts_NL_VINEX.dat
-          - LRMv4_Lights_Roundabouts_GEN_OT1.dat
-          - LRMv4_Lights_Roundabouts_FR_VT1.dat
-          - LRMv4_Lights_Roundabouts_DE_Fr.dat
-          - LRMv4_Lights_Roundabouts_DE_BP.dat
-          - LRMv4_Lights_Roundabouts_CXL_Md.dat
-          - LRMv4_Lights_RD_$_USA_Gen.dat
-          - LRMv4_Lights_RD_$_UK_Sub.dat
-          - LRMv4_Lights_RD_$_UK_Gen.dat
-          - LRMv4_Lights_RD_$_SE_Got.dat
-          - LRMv4_Lights_RD_$_SE_Gen.dat
-          - LRMv4_Lights_RD_$_NL_Gen_Md.dat
-          - LRMv4_Lights_RD_$_NL_Gen_Cl.dat
-          - LRMv4_Lights_RD_$_NFSU_Gen_C.dat
-          - LRMv4_Lights_RD_$_NFSU_BH.dat
-          - LRMv4_Lights_RD_$_LU_Gen.dat
-          - LRMv4_Lights_RD_$_IM_Yu.dat
-          - LRMv4_Lights_RD_$_IM_Br.dat
-          - LRMv4_Lights_RD_$_DE_SW_W.dat
-          - LRMv4_Lights_RD_$_DE_SW_O.dat
-          - LRMv4_Lights_RD_$_DE_SH.dat
-          - LRMv4_Lights_RD_$_DE_NrWf_W.dat
-          - LRMv4_Lights_RD_$_DE_NrWf_O.dat
-          - LRMv4_Lights_RD_$_DE_HH.dat
-          - LRMv4_Lights_RD_$_DE_Gen_W.dat
-          - LRMv4_Lights_RD_$_DE_Gen_O.dat
-          - LRMv4_Lights_RD_$_DE_BFP.dat
-          - LRMv4_Lights_RD_$_DE_BFH.dat
-          - LRMv4_Lights_RD_$_BE_Li.dat
-          - LRMv4_Lights_RD_$_BE_An.dat
-          - LRMv4_Lights_RD_$$_USA_Gen.dat
-          - LRMv4_Lights_RD_$$_UK_Sub.dat
-          - LRMv4_Lights_RD_$$_UK_Gen.dat
-          - LRMv4_Lights_RD_$$_SE_Got.dat
-          - LRMv4_Lights_RD_$$_SE_Gen.dat
-          - LRMv4_Lights_RD_$$_NL_Gen_Md.dat
-          - LRMv4_Lights_RD_$$_NL_Gen_Cl.dat
-          - LRMv4_Lights_RD_$$_NFSU_Gen_C.dat
-          - LRMv4_Lights_RD_$$_NFSU_BH.dat
-          - LRMv4_Lights_RD_$$_LU_Gen.dat
-          - LRMv4_Lights_RD_$$_IM_Yu.dat
-          - LRMv4_Lights_RD_$$_IM_Br.dat
-          - LRMv4_Lights_RD_$$_DE_SW_W.dat
-          - LRMv4_Lights_RD_$$_DE_SW_O.dat
-          - LRMv4_Lights_RD_$$_DE_SH.dat
-          - LRMv4_Lights_RD_$$_DE_NrWf_W.dat
-          - LRMv4_Lights_RD_$$_DE_NrWf_O.dat
-          - LRMv4_Lights_RD_$$_DE_HH.dat
-          - LRMv4_Lights_RD_$$_DE_Gen_W.dat
-          - LRMv4_Lights_RD_$$_DE_Gen_O.dat
-          - LRMv4_Lights_RD_$$_DE_BFP.dat
-          - LRMv4_Lights_RD_$$_DE_BFH.dat
-          - LRMv4_Lights_RD_$$_BE_Li.dat
-          - LRMv4_Lights_RD_$$_BE_An.dat
-          - LRMv4_Lights_RD_$$$_USA_Man.dat
-          - LRMv4_Lights_RD_$$$_USA_CBD.dat
-          - LRMv4_Lights_RD_$$$_UK_Park.dat
-          - LRMv4_Lights_RD_$$$_SE_Got.dat
-          - LRMv4_Lights_RD_$$$_SE_Gen.dat
-          - LRMv4_Lights_RD_$$$_NL_BSt.dat
-          - LRMv4_Lights_RD_$$$_NFSU_JH.dat
-          - LRMv4_Lights_RD_$$$_GEN_OT2.dat
-          - LRMv4_Lights_RD_$$$_GEN_OT1.dat
-          - LRMv4_Lights_RD_$$$_FR_VT2.dat
-          - LRMv4_Lights_RD_$$$_FR_VT1.dat
-          - LRMv4_Lights_RD_$$$_FR_CE.dat
-          - LRMv4_Lights_RD_$$$_DE_Sol.dat
-          - LRMv4_Lights_RD_$$$_DE_Res_Yellow.dat
-          - LRMv4_Lights_RD_$$$_DE_Res_Red.dat
-          - LRMv4_Lights_RD_$$$_DE_Res_Green.dat
-          - LRMv4_Lights_RD_$$$_DE_Res_Blue.dat
-          - LRMv4_Lights_RD_$$$_DE_LH.dat
-          - LRMv4_Lights_RD_$$$_DE_Fr.dat
-          - LRMv4_Lights_RD_$$$_CXL_Cl.dat
-          - LRMv4_Lights_NWM_$_USA_Man.dat
-          - LRMv4_Lights_NWM_$_USA_Chi.dat
-          - LRMv4_Lights_NWM_$_UK_Mid_Yellow.dat
-          - LRMv4_Lights_NWM_$_UK_Mid_Red.dat
-          - LRMv4_Lights_NWM_$_UK_Mid_Green.dat
-          - LRMv4_Lights_NWM_$_UK_Mid_Blue.dat
-          - LRMv4_Lights_NWM_$_UK_Ind.dat
-          - LRMv4_Lights_NWM_$_UK_Gen.dat
-          - LRMv4_Lights_NWM_$_SE_Got.dat
-          - LRMv4_Lights_NWM_$_SE_Gen.dat
-          - LRMv4_Lights_NWM_$_NL_Gen_Md.dat
-          - LRMv4_Lights_NWM_$_NL_Gen_Cl.dat
-          - LRMv4_Lights_NWM_$_NFSU_Gen_C.dat
-          - LRMv4_Lights_NWM_$_NFSU_BH.dat
-          - LRMv4_Lights_NWM_$_LU_Gen.dat
-          - LRMv4_Lights_NWM_$_IM_Yu.dat
-          - LRMv4_Lights_NWM_$_IM_Br.dat
-          - LRMv4_Lights_NWM_$_DE_SW_W.dat
-          - LRMv4_Lights_NWM_$_DE_SW_O.dat
-          - LRMv4_Lights_NWM_$_DE_SH.dat
-          - LRMv4_Lights_NWM_$_DE_NrWf_W.dat
-          - LRMv4_Lights_NWM_$_DE_NrWf_O.dat
-          - LRMv4_Lights_NWM_$_DE_HH.dat
-          - LRMv4_Lights_NWM_$_DE_BLA.dat
-          - LRMv4_Lights_NWM_$_DE_BFP.dat
-          - LRMv4_Lights_NWM_$_DE_BFH.dat
-          - LRMv4_Lights_NWM_$_DE_BAP.dat
-          - LRMv4_Lights_NWM_$_BE_Li.dat
-          - LRMv4_Lights_NWM_$_BE_Br.dat
-          - LRMv4_Lights_NWM_$_BE_An.dat
-          - LRMv4_Lights_NWM_$$_USA_Man.dat
-          - LRMv4_Lights_NWM_$$_USA_Chi.dat
-          - LRMv4_Lights_NWM_$$_UK_Mid_Yellow.dat
-          - LRMv4_Lights_NWM_$$_UK_Mid_Red.dat
-          - LRMv4_Lights_NWM_$$_UK_Mid_Green.dat
-          - LRMv4_Lights_NWM_$$_UK_Mid_Blue.dat
-          - LRMv4_Lights_NWM_$$_UK_Ind.dat
-          - LRMv4_Lights_NWM_$$_UK_Gen.dat
-          - LRMv4_Lights_NWM_$$_SE_Got.dat
-          - LRMv4_Lights_NWM_$$_SE_Gen.dat
-          - LRMv4_Lights_NWM_$$_NL_Gen_Md.dat
-          - LRMv4_Lights_NWM_$$_NL_Gen_Cl.dat
-          - LRMv4_Lights_NWM_$$_NFSU_Gen_C.dat
-          - LRMv4_Lights_NWM_$$_NFSU_BH.dat
-          - LRMv4_Lights_NWM_$$_LU_Gen.dat
-          - LRMv4_Lights_NWM_$$_IM_Yu.dat
-          - LRMv4_Lights_NWM_$$_IM_Br.dat
-          - LRMv4_Lights_NWM_$$_DE_SW_W.dat
-          - LRMv4_Lights_NWM_$$_DE_SW_O.dat
-          - LRMv4_Lights_NWM_$$_DE_SH.dat
-          - LRMv4_Lights_NWM_$$_DE_NrWf_W.dat
-          - LRMv4_Lights_NWM_$$_DE_NrWf_O.dat
-          - LRMv4_Lights_NWM_$$_DE_HH.dat
-          - LRMv4_Lights_NWM_$$_DE_BLA.dat
-          - LRMv4_Lights_NWM_$$_DE_BFP.dat
-          - LRMv4_Lights_NWM_$$_DE_BFH.dat
-          - LRMv4_Lights_NWM_$$_DE_BAP.dat
-          - LRMv4_Lights_NWM_$$_BE_Li.dat
-          - LRMv4_Lights_NWM_$$_BE_Br.dat
-          - LRMv4_Lights_NWM_$$_BE_An.dat
-          - LRMv4_Lights_NWM_$$$_USA_Man.dat
-          - LRMv4_Lights_NWM_$$$_USA_CBD.dat
-          - LRMv4_Lights_NWM_$$$_UK_Park.dat
-          - LRMv4_Lights_NWM_$$$_SE_Got.dat
-          - LRMv4_Lights_NWM_$$$_SE_Gen.dat
-          - LRMv4_Lights_NWM_$$$_NFSU_JH.dat
-          - LRMv4_Lights_NWM_$$$_GEN_OT2.dat
-          - LRMv4_Lights_NWM_$$$_GEN_OT1.dat
-          - LRMv4_Lights_NWM_$$$_FR_VT2.dat
-          - LRMv4_Lights_NWM_$$$_FR_VT1.dat
-          - LRMv4_Lights_NWM_$$$_FR_CE.dat
-          - LRMv4_Lights_NWM_$$$_DE_Sol.dat
-          - LRMv4_Lights_NWM_$$$_DE_Res_Yellow.dat
-          - LRMv4_Lights_NWM_$$$_DE_Res_Red.dat
-          - LRMv4_Lights_NWM_$$$_DE_Res_Green.dat
-          - LRMv4_Lights_NWM_$$$_DE_Res_Blue.dat
-          - LRMv4_Lights_NWM_$$$_DE_LH.dat
-          - LRMv4_Lights_NWM_$$$_DE_BLA.dat
-          - LRMv4_Lights_NWM_$$$_CXL_Cl.dat
-          - LRMv4_Lights_MHW_Sides_USA_Man.dat
-          - LRMv4_Lights_MHW_Sides_USA_Gen.dat
-          - LRMv4_Lights_MHW_Sides_USA_Chi.dat
-          - LRMv4_Lights_MHW_Sides_UK_In.dat
-          - LRMv4_Lights_MHW_Sides_UK_Gen.dat
-          - LRMv4_Lights_MHW_Sides_SE_Gen.dat
-          - LRMv4_Lights_MHW_Sides_NL_Gen_Md.dat
-          - LRMv4_Lights_MHW_Sides_NL_Gen_FW.dat
-          - LRMv4_Lights_MHW_Sides_NL_Gen_Cl.dat
-          - LRMv4_Lights_MHW_Sides_NFSU_Gen_FW.dat
-          - LRMv4_Lights_MHW_Sides_LU_Gen.dat
-          - LRMv4_Lights_MHW_Sides_IM_Yu.dat
-          - LRMv4_Lights_MHW_Sides_IM_Br.dat
-          - LRMv4_Lights_MHW_Sides_DE_SW_W.dat
-          - LRMv4_Lights_MHW_Sides_DE_SW_O.dat
-          - LRMv4_Lights_MHW_Sides_DE_HH.dat
-          - LRMv4_Lights_MHW_Sides_DE_BLA.dat
-          - LRMv4_Lights_MHW_Sides_DE_BAP.dat
-          - LRMv4_Lights_MHW_Sides_BE_Li.dat
-          - LRMv4_Lights_MHW_Sides_BE_Br.dat
-          - LRMv4_Lights_MHW_Sides_BE_An.dat
-          - LRMv4_Lights_MHW_Median_USA_Man.dat
-          - LRMv4_Lights_MHW_Median_USA_Gen.dat
-          - LRMv4_Lights_MHW_Median_USA_Chi.dat
-          - LRMv4_Lights_MHW_Median_UK_In.dat
-          - LRMv4_Lights_MHW_Median_UK_Gen.dat
-          - LRMv4_Lights_MHW_Median_SE_Gen.dat
-          - LRMv4_Lights_MHW_Median_NL_Gen_Md.dat
-          - LRMv4_Lights_MHW_Median_NL_Gen_FW.dat
-          - LRMv4_Lights_MHW_Median_NL_Gen_Cl.dat
-          - LRMv4_Lights_MHW_Median_NFSU_Gen_FW.dat
-          - LRMv4_Lights_MHW_Median_LU_Gen.dat
-          - LRMv4_Lights_MHW_Median_IM_Yu.dat
-          - LRMv4_Lights_MHW_Median_IM_Br.dat
-          - LRMv4_Lights_MHW_Median_GEN_LT_W.dat
-          - LRMv4_Lights_MHW_Median_GEN_LT_O.dat
-          - LRMv4_Lights_MHW_Median_DE_SW_W.dat
-          - LRMv4_Lights_MHW_Median_DE_SW_O.dat
-          - LRMv4_Lights_MHW_Median_DE_HH.dat
-          - LRMv4_Lights_MHW_Median_DE_BLA.dat
-          - LRMv4_Lights_MHW_Median_DE_BAP.dat
-          - LRMv4_Lights_MHW_Median_BE_Li.dat
-          - LRMv4_Lights_MHW_Median_BE_Br.dat
-          - LRMv4_Lights_MHW_Median_BE_An.dat
-          - LRMv4_Lights_MedSuspBridges_SE_Got.dat
-          - LRMv4_Lights_MedSuspBridges_NL_BSt.dat
-          - LRMv4_Lights_MedSuspBridges_NFSU_JH.dat
-          - LRMv4_Lights_MedSuspBridges_GEN_OT2.dat
-          - LRMv4_Lights_MedSuspBridges_FR_VT2.dat
-          - LRMv4_Lights_MedSuspBridges_FR_CE.dat
-          - LRMv4_Lights_MedSuspBridges_DE_LH.dat
-          - LRMv4_Lights_MedSuspBridges_CXL_Cl.dat
-          - LRMv4_Lights_MedSuspBridges_BE_Li.dat
-          - LRMv4_Lights_LOT_$$_USA_CBD.dat
-          - LRMv4_Lights_LOT_$$_UK_Park.dat
-          - LRMv4_Lights_LOT_$$_NL_VINEX.dat
-          - LRMv4_Lights_LOT_$$_GEN_OT1.dat
-          - LRMv4_Lights_LOT_$$_FR_VT1.dat
-          - LRMv4_Lights_LOT_$$_DE_Fr.dat
-          - LRMv4_Lights_LOT_$$_DE_BP.dat
-          - LRMv4_Lights_LOT_$$_CXL_Md.dat
-          - LRMv4_Lights_LOT_$$$_USA_CBD.dat
-          - LRMv4_Lights_LOT_$$$_UK_Park.dat
-          - LRMv4_Lights_LOT_$$$_NL_BSt.dat
-          - LRMv4_Lights_LOT_$$$_GEN_OT2.dat
-          - LRMv4_Lights_LOT_$$$_GEN_OT1.dat
-          - LRMv4_Lights_LOT_$$$_FR_VT2.dat
-          - LRMv4_Lights_Bridges_ZM_CR.dat
-          - LRMv4_Lights_Bridges_USA_Mixed.dat
-          - LRMv4_Lights_Bridges_UK_Gen.dat
-          - LRMv4_Lights_Bridges_SE_Mixed.dat
-          - LRMv4_Lights_Bridges_NL_Gen_Md.dat
-          - LRMv4_Lights_Bridges_NL_Gen_Cl.dat
-          - LRMv4_Lights_Bridges_NFSU_Mixed.dat
-          - LRMv4_Lights_Bridges_LU_Gen.dat
-          - LRMv4_Lights_Bridges_IM_Yu.dat
-          - LRMv4_Lights_Bridges_IM_Br.dat
-          - LRMv4_Lights_Bridges_DE_SW_W.dat
-          - LRMv4_Lights_Bridges_DE_SW_O.dat
-          - LRMv4_Lights_Bridges_DE_SH.dat
-          - LRMv4_Lights_Bridges_DE_NrWf_W.dat
-          - LRMv4_Lights_Bridges_DE_NrWf_O.dat
-          - LRMv4_Lights_Bridges_DE_HH.dat
-          - LRMv4_Lights_Bridges_DE_BFH.dat
-          - LRMv4_Lights_Bridges_CXL_Cl.dat
-          - LRMv4_Lights_Bridges_BE_Li.dat
-          - LRMv4_Lights_Bridges_BE_An.dat
-          - LRMv4_Lights_AVE-4_$_ZM_CR.dat
-          - LRMv4_Lights_AVE-4_$_USA_Man.dat
-          - LRMv4_Lights_AVE-4_$_USA_Gen.dat
-          - LRMv4_Lights_AVE-4_$_USA_Chi.dat
-          - LRMv4_Lights_AVE-4_$_UK_Lon_Yellow.dat
-          - LRMv4_Lights_AVE-4_$_UK_Lon_Red.dat
-          - LRMv4_Lights_AVE-4_$_UK_Lon_Green.dat
-          - LRMv4_Lights_AVE-4_$_UK_Lon_Blue.dat
-          - LRMv4_Lights_AVE-4_$_UK_Gen.dat
-          - LRMv4_Lights_AVE-4_$_SE_Got.dat
-          - LRMv4_Lights_AVE-4_$_SE_Gen.dat
-          - LRMv4_Lights_AVE-4_$_NL_Gen_Md.dat
-          - LRMv4_Lights_AVE-4_$_NL_Gen_Cl.dat
-          - LRMv4_Lights_AVE-4_$_NL_Al.dat
-          - LRMv4_Lights_AVE-4_$_NFSU_Gen_C.dat
-          - LRMv4_Lights_AVE-4_$_LU_Gen.dat
-          - LRMv4_Lights_AVE-4_$_IM_Yu.dat
-          - LRMv4_Lights_AVE-4_$_IM_Br.dat
-          - LRMv4_Lights_AVE-4_$_DE_SW_W.dat
-          - LRMv4_Lights_AVE-4_$_DE_SW_O.dat
-          - LRMv4_Lights_AVE-4_$_DE_SH.dat
-          - LRMv4_Lights_AVE-4_$_DE_NrWf_W.dat
-          - LRMv4_Lights_AVE-4_$_DE_NrWf_O.dat
-          - LRMv4_Lights_AVE-4_$_DE_HH.dat
-          - LRMv4_Lights_AVE-4_$_DE_BLA.dat
-          - LRMv4_Lights_AVE-4_$_DE_BFP.dat
-          - LRMv4_Lights_AVE-4_$_DE_BFH.dat
-          - LRMv4_Lights_AVE-4_$_DE_BAP.dat
-          - LRMv4_Lights_AVE-4_$_BE_Li.dat
-          - LRMv4_Lights_AVE-4_$_BE_Br.dat
-          - LRMv4_Lights_AVE-4_$_BE_An.dat
-          - LRMv4_Lights_AVE-4_$$_ZM_CR.dat
-          - LRMv4_Lights_AVE-4_$$_USA_Man.dat
-          - LRMv4_Lights_AVE-4_$$_USA_Gen.dat
-          - LRMv4_Lights_AVE-4_$$_USA_Chi.dat
-          - LRMv4_Lights_AVE-4_$$_UK_Lon_Yellow.dat
-          - LRMv4_Lights_AVE-4_$$_UK_Lon_Red.dat
-          - LRMv4_Lights_AVE-4_$$_UK_Lon_Green.dat
-          - LRMv4_Lights_AVE-4_$$_UK_Lon_Blue.dat
-          - LRMv4_Lights_AVE-4_$$_UK_Gen.dat
-          - LRMv4_Lights_AVE-4_$$_SE_Got.dat
-          - LRMv4_Lights_AVE-4_$$_SE_Gen.dat
-          - LRMv4_Lights_AVE-4_$$_NL_Gen_Md.dat
-          - LRMv4_Lights_AVE-4_$$_NL_Gen_Cl.dat
-          - LRMv4_Lights_AVE-4_$$_NL_Al.dat
-          - LRMv4_Lights_AVE-4_$$_NFSU_Gen_C.dat
-          - LRMv4_Lights_AVE-4_$$_NFSU_BH.dat
-          - LRMv4_Lights_AVE-4_$$_LU_Gen.dat
-          - LRMv4_Lights_AVE-4_$$_IM_Yu.dat
-          - LRMv4_Lights_AVE-4_$$_IM_Br.dat
-          - LRMv4_Lights_AVE-4_$$_DE_SW_W.dat
-          - LRMv4_Lights_AVE-4_$$_DE_SW_O.dat
-          - LRMv4_Lights_AVE-4_$$_DE_SH.dat
-          - LRMv4_Lights_AVE-4_$$_DE_NrWf_W.dat
-          - LRMv4_Lights_AVE-4_$$_DE_NrWf_O.dat
-          - LRMv4_Lights_AVE-4_$$_DE_HH.dat
-          - LRMv4_Lights_AVE-4_$$_DE_BLA.dat
-          - LRMv4_Lights_AVE-4_$$_DE_BFP.dat
-          - LRMv4_Lights_AVE-4_$$_DE_BFH.dat
-          - LRMv4_Lights_AVE-4_$$_DE_BAP.dat
-          - LRMv4_Lights_AVE-4_$$_BE_Li.dat
-          - LRMv4_Lights_AVE-4_$$_BE_Br.dat
-          - LRMv4_Lights_AVE-4_$$_BE_An.dat
-          - LRMv4_Lights_AVE-4_$$$_USA_Man.dat
-          - LRMv4_Lights_AVE-4_$$$_SE_Got.dat
-          - LRMv4_Lights_AVE-4_$$$_SE_Gen.dat
-          - LRMv4_Lights_AVE-4_$$$_NFSU_BH.dat
-          - LRMv4_Lights_AVE-4_$$$_FR_CE.dat
-          - LRMv4_Lights_AVE-4_$$$_DE_Sol.dat
-          - LRMv4_Lights_AVE-4_$$$_DE_Res_Yellow.dat
-          - LRMv4_Lights_AVE-4_$$$_DE_Res_Red.dat
-          - LRMv4_Lights_AVE-4_$$$_DE_Res_Green.dat
-          - LRMv4_Lights_AVE-4_$$$_DE_Res_Blue.dat
-          - LRMv4_Lights_AVE-4_$$$_DE_LH.dat
-          - LRMv4_Lights_AVE-4_$$$_DE_BLA.dat
-          - LRMv4_Lights_AVE-4_$$$_CXL_Cl.dat
-          - LRMv4_Lights_AVE-2_$_USA_Man.dat
-          - LRMv4_Lights_AVE-2_$_USA_Gen_S.dat
-          - LRMv4_Lights_AVE-2_$_USA_Gen.dat
-          - LRMv4_Lights_AVE-2_$_UK_Lon_Yellow.dat
-          - LRMv4_Lights_AVE-2_$_UK_Lon_Red.dat
-          - LRMv4_Lights_AVE-2_$_UK_Lon_Green.dat
-          - LRMv4_Lights_AVE-2_$_UK_Lon_Blue.dat
-          - LRMv4_Lights_AVE-2_$_UK_Gen.dat
-          - LRMv4_Lights_AVE-2_$_SE_Got.dat
-          - LRMv4_Lights_AVE-2_$_NL_Gen_Md.dat
-          - LRMv4_Lights_AVE-2_$_NL_Gen_Cl.dat
-          - LRMv4_Lights_AVE-2_$_NFSU_Gen_C.dat
-          - LRMv4_Lights_AVE-2_$_LU_Gen.dat
-          - LRMv4_Lights_AVE-2_$_IM_Yu.dat
-          - LRMv4_Lights_AVE-2_$_IM_Br.dat
-          - LRMv4_Lights_AVE-2_$_DE_NrWf_W.dat
-          - LRMv4_Lights_AVE-2_$_DE_NrWf_O.dat
-          - LRMv4_Lights_AVE-2_$_DE_Gen_W.dat
-          - LRMv4_Lights_AVE-2_$_DE_Gen_O.dat
-          - LRMv4_Lights_AVE-2_$_DE_BFP.dat
-          - LRMv4_Lights_AVE-2_$_DE_BFH.dat
-          - LRMv4_Lights_AVE-2_$_BE_Li.dat
-          - LRMv4_Lights_AVE-2_$_BE_An.dat
-          - LRMv4_Lights_AVE-2_$$_USA_Man.dat
-          - LRMv4_Lights_AVE-2_$$_USA_Gen_S.dat
-          - LRMv4_Lights_AVE-2_$$_USA_Gen.dat
-          - LRMv4_Lights_AVE-2_$$_UK_Lon_Yellow.dat
-          - LRMv4_Lights_AVE-2_$$_UK_Lon_Red.dat
-          - LRMv4_Lights_AVE-2_$$_UK_Lon_Green.dat
-          - LRMv4_Lights_AVE-2_$$_UK_Lon_Blue.dat
-          - LRMv4_Lights_AVE-2_$$_UK_Gen.dat
-          - LRMv4_Lights_AVE-2_$$_SE_Got.dat
-          - LRMv4_Lights_AVE-2_$$_NL_Gen_Md.dat
-          - LRMv4_Lights_AVE-2_$$_NL_Gen_Cl.dat
-          - LRMv4_Lights_AVE-2_$$_NFSU_Gen_C.dat
-          - LRMv4_Lights_AVE-2_$$_LU_Gen.dat
-          - LRMv4_Lights_AVE-2_$$_IM_Yu.dat
-          - LRMv4_Lights_AVE-2_$$_IM_Br.dat
-          - LRMv4_Lights_AVE-2_$$_DE_NrWf_W.dat
-          - LRMv4_Lights_AVE-2_$$_DE_NrWf_O.dat
-          - LRMv4_Lights_AVE-2_$$_DE_HH.dat
-          - LRMv4_Lights_AVE-2_$$_DE_Gen_W.dat
-          - LRMv4_Lights_AVE-2_$$_DE_Gen_O.dat
-          - LRMv4_Lights_AVE-2_$$_DE_BFP.dat
-          - LRMv4_Lights_AVE-2_$$_DE_BFH.dat
-          - LRMv4_Lights_AVE-2_$$_BE_Li.dat
-          - LRMv4_Lights_AVE-2_$$_BE_An.dat
-          - LRMv4_Lights_AVE-2_$$$_USA_Gen.dat
-          - LRMv4_Lights_AVE-2_$$$_USA_CBD.dat
-          - LRMv4_Lights_AVE-2_$$$_UK_Park.dat
-          - LRMv4_Lights_AVE-2_$$$_GEN_OT2.dat
-          - LRMv4_Lights_AVE-2_$$$_FR_VT2.dat
-          - LRMv4_Lights_AVE-2_$$$_DE_Sol.dat
-          - LRMv4_Lights_AVE-2_$$$_DE_Res_Yellow.dat
-          - LRMv4_Lights_AVE-2_$$$_DE_Res_Red.dat
-          - LRMv4_Lights_AVE-2_$$$_DE_Res_Green.dat
-          - LRMv4_Lights_AVE-2_$$$_DE_Res_Blue.dat
-          - LRMv4_Lights_AVE-2_$$$_DE_Gen_W.dat
-          - LRMv4_Lights_AVE-2_$$$_DE_Gen_O.dat
-          - LRMv4_Lights_AVE-2_$$$_CXL_Md.dat
-          - LRMv4_Lights_AVE-2_$$$_CXL_Cl.dat
-          - LRM RHW Median Lights - Set 20 - UK Industria.dat
-          - LRM RHW Median Lights - Set 19 - US Manhattan.dat
-          - LRM RHW Median Lights - Set 18 - US Chicago.dat
-          - LRM RHW Median Lights - Set 17 - US Generic.dat
-          - LRM RHW Median Lights - Set 16 - NL Generic Freeway.dat
-          - LRM RHW Median Lights - Set 15 - DE Schwarzwald.dat
-          - LRM RHW Median Lights - Set 14 - BE Ardennes.dat
-          - LRM RHW Median Lights - Set 13 - BE E313.dat
-          - LRM RHW Median Lights - Set 11 - LU A1.dat
-          - LRM RHW Median Lights - Set 10 - SE Generic.dat
-          - LRM RHW Median Lights - Set 09 - IM Brinasken.dat
-          - LRM RHW Median Lights - Set 08 - NL Generic City.dat
-          - LRM RHW Median Lights - Set 07 - BE 'Ossenkop'.dat
-          - LRM RHW Median Lights - Set 06 - BE Brussels.dat
-          - LRM RHW Median Lights - Set 05 - IM Jonker.dat
-          - LRM RHW Median Lights - Set 04 - NFSU Generic.dat
-          - LRM RHW Median Lights - Set 03 - NL Catenary Lights.dat
-          - LRM RHW Median Lights - Set 02 - IM Yutan.dat
-          - LRM RHW Median Lights - Set 01 - IM Andaluh.dat
-          - LRM Plopable Streetlights - Set 11 - Misc.dat
-          - LRM Plopable Streetlights - Set 10 - NFSU.dat
-          - LRM Plopable Streetlights - Set 09 - Imaginia.dat
-          - LRM Plopable Streetlights - Set 08 - Generic Light Towers.dat
-          - LRM Plopable Streetlights - Set 07 - Luxembourg.dat
-          - LRM Plopable Streetlights - Set 06 - Sweden.dat
-          - LRM Plopable Streetlights - Set 05 - Belgium.dat
-          - LRM Plopable Streetlights - Set 04 - The Netherlands.dat
-          - LRM Plopable Streetlights - Set 03 - Germany.dat
-          - LRM Plopable Streetlights - Set 02 - UK.dat
-          - LRM Plopable Streetlights - Set 01 - USA.dat
-          - ioSpecial.ini
-          - InstallOptions.dll
-          - EmptyModelFile.SC4Model
-        sha256: 337a8d20f9bbf0e35c24820503ebb8d815cc5a7f449d45778a96df2230ee586b
-        size: 4583604
-        uncompressed: 4844893
-        variantId: lrmv4
       "98163":
         filename: LRMv4.0 Mega Pack (MAC Version).zip
         files:
@@ -3255,24 +2706,6 @@ assets:
           - LRMv4 Plopable Lights (Roadsides)/LRM Plopable Streetlights - Set 03 - Germany.dat
           - LRMv4 Plopable Lights (Roadsides)/LRM Plopable Streetlights - Set 02 - UK.dat
           - LRMv4 Plopable Lights (Roadsides)/LRM Plopable Streetlights - Set 01 - USA.dat
-          - LRMv4 Models & Props/LRMv4_Props.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_USA.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_UK.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_theNetherlands.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Sweden.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_NFSU.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Misc.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Luxembourg.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Imaginia.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Germany.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_France.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_CitiesXL.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Belgium_WHITE.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Belgium_GREY.dat
-          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Belgium_GREEN.dat
-          - LRMv4 Models & Props/LRMv4_Models_LightCones_MaxisNite.dat
-          - LRMv4 Models & Props/LRMv4_Models_LightCones_DarkNite.dat
-          - LRMv4 Models & Props/EmptyModelFile.SC4Model
           - LRMv4 Plopable Lights (RHW Median)/LRM RHW Median Lights - Set 20 - UK Industria.dat
           - LRMv4 Plopable Lights (RHW Median)/LRM RHW Median Lights - Set 19 - US Manhattan.dat
           - LRMv4 Plopable Lights (RHW Median)/LRM RHW Median Lights - Set 18 - US Chicago.dat
@@ -3293,6 +2726,24 @@ assets:
           - LRMv4 Plopable Lights (RHW Median)/LRM RHW Median Lights - Set 03 - NL Catenary Lights.dat
           - LRMv4 Plopable Lights (RHW Median)/LRM RHW Median Lights - Set 02 - IM Yutan.dat
           - LRMv4 Plopable Lights (RHW Median)/LRM RHW Median Lights - Set 01 - IM Andaluh.dat
+          - LRMv4 Models & Props/LRMv4_Props.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_USA.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_UK.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_theNetherlands.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Sweden.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_NFSU.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Misc.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Luxembourg.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Imaginia.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Germany.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_France.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_CitiesXL.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Belgium_WHITE.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Belgium_GREY.dat
+          - LRMv4 Models & Props/LRMv4_Models_Streetlights_Belgium_GREEN.dat
+          - LRMv4 Models & Props/LRMv4_Models_LightCones_MaxisNite.dat
+          - LRMv4 Models & Props/LRMv4_Models_LightCones_DarkNite.dat
+          - LRMv4 Models & Props/EmptyModelFile.SC4Model
           - LRMv4 Replacement Sets/T21 Mods/T21_TuLEP_Lights.dat
           - LRMv4 Replacement Sets/T21 Mods/T21_TL_Roads.dat
           - LRMv4 Replacement Sets/T21 Mods/T21_Roundabouts.dat
@@ -3434,20 +2885,6 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/Bridges/LRMv4_Lights_Bridges_CXL_Cl.dat
           - LRMv4 Replacement Sets/Override Sets/Bridges/LRMv4_Lights_Bridges_BE_Li.dat
           - LRMv4 Replacement Sets/Override Sets/Bridges/LRMv4_Lights_Bridges_BE_An.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_USA_Gen_S.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_UK_Sub.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_SE_Got.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_NFSU_Gen_C.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_SH.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_NrWf_W.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_NrWf_O.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_HH.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_Gen_W.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_Gen_O.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_BFP.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_BFH.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_BE_Li.dat
-          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_BE_An.dat
           - LRMv4 Replacement Sets/Override Sets/$-RD/LRMv4_Lights_RD_$_USA_Gen.dat
           - LRMv4 Replacement Sets/Override Sets/$-RD/LRMv4_Lights_RD_$_UK_Sub.dat
           - LRMv4 Replacement Sets/Override Sets/$-RD/LRMv4_Lights_RD_$_UK_Gen.dat
@@ -3472,6 +2909,20 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/$-RD/LRMv4_Lights_RD_$_DE_BFH.dat
           - LRMv4 Replacement Sets/Override Sets/$-RD/LRMv4_Lights_RD_$_BE_Li.dat
           - LRMv4 Replacement Sets/Override Sets/$-RD/LRMv4_Lights_RD_$_BE_An.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_USA_Gen_S.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_UK_Sub.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_SE_Got.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_NFSU_Gen_C.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_SH.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_NrWf_W.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_NrWf_O.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_HH.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_Gen_W.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_Gen_O.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_BFP.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_DE_BFH.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_BE_Li.dat
+          - LRMv4 Replacement Sets/Override Sets/$-ST/LRMv4_Lights_ST_$_BE_An.dat
           - LRMv4 Replacement Sets/Override Sets/$-NWM/LRMv4_Lights_NWM_$_ZM_CR.dat
           - LRMv4 Replacement Sets/Override Sets/$-NWM/LRMv4_Lights_NWM_$_USA_Man.dat
           - LRMv4 Replacement Sets/Override Sets/$-NWM/LRMv4_Lights_NWM_$_USA_Chi.dat
@@ -3505,6 +2956,29 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/$-NWM/LRMv4_Lights_NWM_$_BE_Li.dat
           - LRMv4 Replacement Sets/Override Sets/$-NWM/LRMv4_Lights_NWM_$_BE_Br.dat
           - LRMv4 Replacement Sets/Override Sets/$-NWM/LRMv4_Lights_NWM_$_BE_An.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Man.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Gen_S.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Gen.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Lon_Yellow.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Lon_Red.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Lon_Green.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Lon_Blue.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Gen.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_SE_Got.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_NL_Gen_Md.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_NL_Gen_Cl.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_NFSU_Gen_C.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_LU_Gen.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_IM_Yu.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_IM_Br.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_NrWf_W.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_NrWf_O.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_Gen_W.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_Gen_O.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_BFP.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_BFH.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_BE_Li.dat
+          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_BE_An.dat
           - LRMv4 Replacement Sets/Override Sets/$-AVE-4/LRMv4_Lights_AVE-4_$_ZM_CR.dat
           - LRMv4 Replacement Sets/Override Sets/$-AVE-4/LRMv4_Lights_AVE-4_$_USA_Man.dat
           - LRMv4 Replacement Sets/Override Sets/$-AVE-4/LRMv4_Lights_AVE-4_$_USA_Gen.dat
@@ -3539,44 +3013,6 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/$-AVE-4/LRMv4_Lights_AVE-4_$_BE_Li.dat
           - LRMv4 Replacement Sets/Override Sets/$-AVE-4/LRMv4_Lights_AVE-4_$_BE_Br.dat
           - LRMv4 Replacement Sets/Override Sets/$-AVE-4/LRMv4_Lights_AVE-4_$_BE_An.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Man.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Gen_S.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Gen.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Lon_Yellow.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Lon_Red.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Lon_Green.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Lon_Blue.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_UK_Gen.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_SE_Got.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_NL_Gen_Md.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_NL_Gen_Cl.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_NFSU_Gen_C.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_LU_Gen.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_IM_Yu.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_IM_Br.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_NrWf_W.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_NrWf_O.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_Gen_W.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_Gen_O.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_BFP.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_DE_BFH.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_BE_Li.dat
-          - LRMv4 Replacement Sets/Override Sets/$-AVE-2/LRMv4_Lights_AVE-2_$_BE_An.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$_USA_Gen_S.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_USA_Gen_S.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_UK_Sub.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_SE_Got.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_NFSU_Gen_C.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_SH.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_NrWf_W.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_NrWf_O.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_HH.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_Gen_W.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_Gen_O.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_BFP.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_BFH.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_BE_Li.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_BE_An.dat
           - LRMv4 Replacement Sets/Override Sets/$$-RD/LRMv4_Lights_RD_$$_USA_Gen.dat
           - LRMv4 Replacement Sets/Override Sets/$$-RD/LRMv4_Lights_RD_$$_USA_Gem.dat
           - LRMv4 Replacement Sets/Override Sets/$$-RD/LRMv4_Lights_RD_$$_UK_Sub.dat
@@ -3602,6 +3038,21 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/$$-RD/LRMv4_Lights_RD_$$_DE_BFH.dat
           - LRMv4 Replacement Sets/Override Sets/$$-RD/LRMv4_Lights_RD_$$_BE_Li.dat
           - LRMv4 Replacement Sets/Override Sets/$$-RD/LRMv4_Lights_RD_$$_BE_An.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$_USA_Gen_S.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_USA_Gen_S.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_UK_Sub.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_SE_Got.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_NFSU_Gen_C.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_SH.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_NrWf_W.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_NrWf_O.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_HH.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_Gen_W.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_Gen_O.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_BFP.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_DE_BFH.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_BE_Li.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-ST/LRMv4_Lights_ST_$$_BE_An.dat
           - LRMv4 Replacement Sets/Override Sets/$$-NWM/LRMv4_Lights_NWM_$$_ZM_CR.dat
           - LRMv4 Replacement Sets/Override Sets/$$-NWM/LRMv4_Lights_NWM_$$_USA_Man.dat
           - LRMv4 Replacement Sets/Override Sets/$$-NWM/LRMv4_Lights_NWM_$$_USA_Chi.dat
@@ -3635,14 +3086,6 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/$$-NWM/LRMv4_Lights_NWM_$$_BE_Li.dat
           - LRMv4 Replacement Sets/Override Sets/$$-NWM/LRMv4_Lights_NWM_$$_BE_Br.dat
           - LRMv4 Replacement Sets/Override Sets/$$-NWM/LRMv4_Lights_NWM_$$_BE_An.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_USA_CBD.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_UK_Park.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_NL_VINEX.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_GEN_OT1.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_FR_VT1.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_DE_Fr.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_DE_BP.dat
-          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_CXL_Md.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-4/LRMv4_Lights_AVE-4_$$_ZM_CR.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-4/LRMv4_Lights_AVE-4_$$_USA_Man.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-4/LRMv4_Lights_AVE-4_$$_USA_Gen.dat
@@ -3678,6 +3121,14 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-4/LRMv4_Lights_AVE-4_$$_BE_Li.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-4/LRMv4_Lights_AVE-4_$$_BE_Br.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-4/LRMv4_Lights_AVE-4_$$_BE_An.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_USA_CBD.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_UK_Park.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_NL_VINEX.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_GEN_OT1.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_FR_VT1.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_DE_Fr.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_DE_BP.dat
+          - LRMv4 Replacement Sets/Override Sets/$$-LOT/LRMv4_Lights_LOT_$$_CXL_Md.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Man.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Gen_S.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-2/LRMv4_Lights_AVE-2_$_USA_Gen.dat
@@ -3706,6 +3157,25 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-2/LRMv4_Lights_AVE-2_$$_DE_BFH.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-2/LRMv4_Lights_AVE-2_$$_BE_Li.dat
           - LRMv4 Replacement Sets/Override Sets/$$-AVE-2/LRMv4_Lights_AVE-2_$$_BE_An.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_USA_Man.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_USA_CBD.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_UK_Park.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_SE_Got.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_SE_Gen.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_NFSU_JH.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_GEN_OT2.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_GEN_OT1.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_FR_VT2.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_FR_VT1.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_FR_CE.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Sol.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Res_Yellow.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Res_Red.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Res_Green.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Res_Blue.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_LH.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_BLA.dat
+          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_CXL_Cl.dat
           - LRMv4 Replacement Sets/Override Sets/$$$-ST/LRMv4_Lights_ST_$$$_USA_CBD.dat
           - LRMv4 Replacement Sets/Override Sets/$$$-ST/LRMv4_Lights_ST_$$$_UK_Park.dat
           - LRMv4 Replacement Sets/Override Sets/$$$-ST/LRMv4_Lights_ST_$$$_NL_BSt.dat
@@ -3734,25 +3204,6 @@ assets:
           - LRMv4 Replacement Sets/Override Sets/$$$-RD/LRMv4_Lights_RD_$$$_DE_LH.dat
           - LRMv4 Replacement Sets/Override Sets/$$$-RD/LRMv4_Lights_RD_$$$_DE_Fr.dat
           - LRMv4 Replacement Sets/Override Sets/$$$-RD/LRMv4_Lights_RD_$$$_CXL_Cl.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_USA_Man.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_USA_CBD.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_UK_Park.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_SE_Got.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_SE_Gen.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_NFSU_JH.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_GEN_OT2.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_GEN_OT1.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_FR_VT2.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_FR_VT1.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_FR_CE.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Sol.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Res_Yellow.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Res_Red.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Res_Green.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_Res_Blue.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_LH.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_DE_BLA.dat
-          - LRMv4 Replacement Sets/Override Sets/$$$-NWM/LRMv4_Lights_NWM_$$$_CXL_Cl.dat
           - LRMv4 Replacement Sets/Override Sets/$$$-LOT/LRMv4_Lights_LOT_$$$_USA_CBD.dat
           - LRMv4 Replacement Sets/Override Sets/$$$-LOT/LRMv4_Lights_LOT_$$$_UK_Park.dat
           - LRMv4 Replacement Sets/Override Sets/$$$-LOT/LRMv4_Lights_LOT_$$$_NL_BSt.dat
@@ -3791,7 +3242,6 @@ assets:
         sha256: 4ada0ccf39461fe72ec51146ab4c6aee19ee2cf1310aaf390fdc16c1945abc8b
         size: 8166383
         uncompressed: 12352529
-        variantId: lrmv4
     version: "1.0"
   simtropolis/27211-scag-embraer-e-jets:
     authors:
@@ -5284,10 +4734,719 @@ assets:
     authors:
       - Barroco Hispano
     category: 20
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	This DLC will contain trees, plants, rocks, ponds and everything related to the environment.
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px;"><span style="color:#ff0000;"><strong>Updated to version 5.0, see below to see what's new.</strong></span></span>
+      </p>
+
+
+      <p>
+      	You can find images of what this DLC contains here:
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed3380292146" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/761177-agc-enviroment-dlc/?do=embed&amp;comment=1765301&amp;embedComment=1765301&amp;embedDo=findComment"
+      style="height:282px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Specs:</strong>
+      </p>
+
+
+      <p>
+      	You can find them as <abbr title="Mayor Mode Ploppable">MMP</abbr>'s and props <strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="color:#ff0000;">(Note that seasonal props end in "Summer" and "Autumn." I removed the winter state that means that the winter version is everwinter).</span></strong>
+      </p>
+
+
+      <p>
+      	<img alt="image.png.f22e9805a1e8ecc7176a3a7a7d306d73.png" class="ipsImage ipsImage_thumbnailed" data-fileid="80781" src="https://www.simtropolis.com/objects/attachments/monthly_2021_12/image.png.f22e9805a1e8ecc7176a3a7a7d306d73.png" >
+      </p>
+
+
+      <p>
+      	<span style="color:#27ae60;"><strong>I will update this DLC constantly so you must be on the lookout.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Scale of the models:</strong><span><span> </span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>133% on all axes.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Installation:</strong>
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#e74c3c;">Unzip the "Barroco Hispano DLCs" in your Plugins Folder (I highly recommend respecting my folder system because I plan to export or update thousands of BATs).</span></strong>
+      </p>
+
+
+      <p>
+      	-------------------------------------------------------------------------------------------------------
+      </p>
+
+
+      <p>
+      	<span style="color:#006600;"><strong>I will buy more trees with the money I receive (I decided to use Paypal instead of Patreon because I want everyone to have access to my content). <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p>
+      	<strong>Thanks to all people who have donated to me!</strong>
+      </p>
+
+      						</body>
+    filename: AGC Environment DLC.7z
+    files:
+      - AGC_Trees_Wollemi_Pine_V03_8m_S1_90-0x6534284a-0xdd573712-0x8fa8a660.SC4Desc
+      - AGC_Trees_Wollemi_Pine_V03_8m_S1_90-0x5ad0e817_0xaf9aa2a6_0x30000.SC4Model
+      - AGC_Trees_Wollemi_Pine_V02_10.7m_S1_90-0x6534284a-0xdd573712-0x0fa8a676.SC4Desc
+      - AGC_Trees_Wollemi_Pine_V02_10.7m_S1_90-0x5ad0e817_0x8f9a9b53_0x30000.SC4Model
+      - AGC_Trees_Wollemi_Pine_V01_13.4m_S1_90-0x6534284a-0xdd573712-0xcfa8a699.SC4Desc
+      - AGC_Trees_Wollemi_Pine_V01_13.4m_S1_90-0x5ad0e817_0xef9a90fc_0x30000.SC4Model
+      - AGC_Trees_Wollemi_and_Norfolk_Island_Pine_P1_90_MMP.dat
+      - AGC_Trees_Tuckeroo_V02_6m_S1_90-0x6534284a-0xdd573712-0x8fa91447.SC4Desc
+      - AGC_Trees_Tuckeroo_V02_6m_S1_90-0x5ad0e817_0x8f798894_0x30000.SC4Model
+      - AGC_Trees_Tuckeroo_V01_6.7m_S1_90-0x6534284a-0xdd573712-0x0fa91459.SC4Desc
+      - AGC_Trees_Tuckeroo_V01_6.7m_S1_90-0x5ad0e817_0xaf7971eb_0x30000.SC4Model
+      - AGC_Trees_Tuckeroo_P1_MMP.dat
+      - AGC_Trees_Salmon_Gun_P1_90_MMP.dat
+      - AGC_Trees_Salmon_Gum_V07_9.2m_S1_90-0x6534284a-0xdd573712-0x2f994981.SC4Desc
+      - AGC_Trees_Salmon_Gum_V07_9.2m_S1_90-0x5ad0e817_0x2f8d4eed_0x30000.SC4Model
+      - AGC_Trees_Salmon_Gum_V06_4.8m_S1_90-0x6534284a-0xdd573712-0x0f994971.SC4Desc
+      - AGC_Trees_Salmon_Gum_V06_4.8m_S1_90-0x5ad0e817_0xef8d1e04_0x30000.SC4Model
+      - AGC_Trees_Salmon_Gum_V05_6.9m_S1_90-0x6534284a-0xdd573712-0x0f994961.SC4Desc
+      - AGC_Trees_Salmon_Gum_V05_6.9m_S1_90-0x5ad0e817_0xcf8cf8fd_0x30000.SC4Model
+      - AGC_Trees_Salmon_Gum_V04_9.8m_S1_90-0x6534284a-0xdd573712-0x6f994947.SC4Desc
+      - AGC_Trees_Salmon_Gum_V04_9.8m_S1_90-0x5ad0e817_0x6f8c2890_0x30000.SC4Model
+      - AGC_Trees_Salmon_Gum_V03_14.6m_S1_90-0x6534284a-0xdd573712-0xef99490c.SC4Desc
+      - AGC_Trees_Salmon_Gum_V03_14.6m_S1_90-0x5ad0e817_0x2f8b8c20_0x30000.SC4Model
+      - AGC_Trees_Salmon_Gum_V02_14.8m_S1_90-0x6534284a-0xdd573712-0xef994935.SC4Desc
+      - AGC_Trees_Salmon_Gum_V02_14.8m_S1_90-0x5ad0e817_0x8f8a3ca9_0x30000.SC4Model
+      - AGC_Trees_Salmon_Gum_V01_9.3m_S1_90-0x6534284a-0xdd573712-0x8f9948cf.SC4Desc
+      - AGC_Trees_Salmon_Gum_V01_9.3m_S1_90-0x5ad0e817_0xef8956a5_0x30000.SC4Model
+      - AGC_Trees_Red_Flowering_Gum_V06_7.3m_S1_90-0x6534284a-0xdd573712-0x8fa0d88b.SC4Desc
+      - AGC_Trees_Red_Flowering_Gum_V06_7.3m_S1_90-0x5ad0e817_0x2f97a75f_0x30000.SC4Model
+      - AGC_Trees_Red_Flowering_Gum_V05_8.8m_S1_90-0x6534284a-0xdd573712-0x4fa0d871.SC4Desc
+      - AGC_Trees_Red_Flowering_Gum_V05_8.8m_S1_90-0x5ad0e817_0x4f9793d7_0x30000.SC4Model
+      - AGC_Trees_Red_Flowering_Gum_V04_10.7m_S1_90-0x6534284a-0xdd573712-0x2fa0d85e.SC4Desc
+      - AGC_Trees_Red_Flowering_Gum_V04_10.7m_S1_90-0x5ad0e817_0xef9775e5_0x30000.SC4Model
+      - AGC_Trees_Red_Flowering_Gum_V03_7.5m_S1_90-0x6534284a-0xdd573712-0xafa0d846.SC4Desc
+      - AGC_Trees_Red_Flowering_Gum_V03_7.5m_S1_90-0x5ad0e817_0x4f96a562_0x30000.SC4Model
+      - AGC_Trees_Red_Flowering_Gum_V02_9.7m_S1_90-0x6534284a-0xdd573712-0x8fa0d821.SC4Desc
+      - AGC_Trees_Red_Flowering_Gum_V02_9.7m_S1_90-0x5ad0e817_0x6f96910a_0x30000.SC4Model
+      - AGC_Trees_Red_Flowering_Gum_V01_8m_S1_90-0x6534284a-0xdd573712-0x6fa0d808.SC4Desc
+      - AGC_Trees_Red_Flowering_Gum_V01_8m_S1_90-0x5ad0e817_0x6f965293_0x30000.SC4Model
+      - AGC_Trees_Red_Flowering_Gum_P1_90_MMP.dat
+      - AGC_Trees_Queensland_Bottle_V03_12m_S1_90-0x5ad0e817_0x6f956476_0x30000.SC4Model
+      - AGC_Trees_Queensland_Bottle_V02_11.2m_S1_90-0x5ad0e817_0x8f95531d_0x30000.SC4Model
+      - AGC_Trees_Queensland_Bottle_V01_7.9m_S1_90-0x5ad0e817_0x4f941202_0x30000.SC4Model
+      - AGC_Trees_Queensland_Bottle_P1_90_MMP.dat
+      - AGC_Trees_Portuguese_Oak_V06_28m_S1_90-0x6534284a-0xdd573712-0x6eaabf4d.SC4Desc
+      - AGC_Trees_Portuguese_Oak_V06_28m_S1_90-0x5ad0e817_0x9139f298_0x30000.SC4Model
+      - AGC_Trees_Portuguese_Oak_V05_25.8m_S1_90-0x6534284a-0xdd573712-0xceab5d0e.SC4Desc
+      - AGC_Trees_Portuguese_Oak_V05_25.8m_S1_90-0x5ad0e817_0x513a9200_0x30000.SC4Model
+      - AGC_Trees_Portuguese_Oak_V04_22m_S1_90-0x6534284a-0xdd573712-0x2eab750e.SC4Desc
+      - AGC_Trees_Portuguese_Oak_V04_22m_S1_90-0x5ad0e817_0x313aa859_0x30000.SC4Model
+      - AGC_Trees_Portuguese_Oak_V03_18.8m_S1_90-0x6534284a-0xdd573712-0xceabb57c.SC4Desc
+      - AGC_Trees_Portuguese_Oak_V03_18.8m_S1_90-0x5ad0e817_0x313ae804_0x30000.SC4Model
+      - AGC_Trees_Portuguese_Oak_V02_16.2m_S1_90-0x6534284a-0xdd573712-0x0eac1ae7.SC4Desc
+      - AGC_Trees_Portuguese_Oak_V02_16.2m_S1_90-0x5ad0e817_0xd13b4a6d_0x30000.SC4Model
+      - AGC_Trees_Portuguese_Oak_V01_13.1m_S1_90-0x6534284a-0xdd573712-0x6eacb16d.SC4Desc
+      - AGC_Trees_Portuguese_Oak_V01_13.1m_S1_90-0x5ad0e817_0xf13be9ca_0x30000.SC4Model
+      - AGC_Trees_Portuguese_Oak_P2_90_MMP.dat
+      - AGC_Trees_Portuguese_Oak_P1_90_MMP.dat
+      - AGC_Trees_Populus_Nigra_V01_31.9m_S1_90-0x6534284a-0xdd573712-0x4e7d9074.SC4Desc
+      - AGC_Trees_Populus_Nigra_V01_31.9m_S1_90-0x5ad0e817_0x6fe1af2b_0x30000.SC4Model
+      - AGC_Trees_Populus_Nigra_V01_28m_S1_90-0x6534284a-0xdd573712-0x4e7d90f6.SC4Desc
+      - AGC_Trees_Populus_Nigra_V01_28m_S1_90-0x5ad0e817_0x300aa994_0x30000.SC4Model
+      - AGC_Trees_Populus_Nigra_V01_24m_S1_90-0x6534284a-0xdd573712-0x8e7d9126.SC4Desc
+      - AGC_Trees_Populus_Nigra_V01_24m_S1_90-0x5ad0e817_0xd00ab371_0x30000.SC4Model
+      - AGC_Trees_Populus_Nigra_V01_19m_S1_90-0x6534284a-0xdd573712-0xae7d9140.SC4Desc
+      - AGC_Trees_Populus_Nigra_V01_19m_S1_90-0x5ad0e817_0x500ac14d_0x30000.SC4Model
+      - AGC_Trees_Populus_Nigra_P1_90_MMP.dat
+      - AGC_Trees_Pinus_Pinea_V06_17.9m_S1_35-0x6534284a-0xdd573712-0x6e7dabd8.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V06_17.9m_S1_35-0x5ad0e817_0x7030bfda_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V06_13.2m_S1_90-0x6534284a-0xdd573712-0xae7dabfb.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V06_13.2m_S1_90-0x5ad0e817_0x50095839_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V05_17m_S1_90-0x6534284a-0xdd573712-0x2e7dac58.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V05_17m_S1_90-0x5ad0e817_0xd0d193b8_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V05_13.4m_S1_90-0x6534284a-0xdd573712-0x6e7dad5b.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V05_13.4m_S1_90-0x5ad0e817_0x70a8c306_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V04_15.3m_S1_90-0x6534284a-0xdd573712-0x2e7dad1f.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V04_15.3m_S1_90-0x5ad0e817_0x90d18369_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V04_11.5m_S1_90-0x6534284a-0xdd573712-0xce7dad3b.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V04_11.5m_S1_90-0x5ad0e817_0x70d12079_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V03_13.7m_S1_90-0x6534284a-0xdd573712-0x4e7dac1c.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V03_13.7m_S1_90-0x5ad0e817_0xb0d1a76b_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V03_11.5m_S1_90-0x6534284a-0xdd573712-0xee7dac38.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V03_11.5m_S1_90-0x5ad0e817_0xd0d1a1ac_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V02_12.1m_S1_90-0x6534284a-0xdd573712-0x6e7daaa9.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V02_12.1m_S1_90-0x5ad0e817_0x70d1bb92_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V02_10.6m_S1_90-0x6534284a-0xdd573712-0xce7daac4.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V02_10.6m_S1_90-0x5ad0e817_0xb0d1b5f5_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V01_9m_S1_90-0x6534284a-0xdd573712-0xee7daa61.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V01_9m_S1_90-0x5ad0e817_0xd0d1d2bd_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_V01_7m_S1_90-0x6534284a-0xdd573712-0x8e7daa85.SC4Desc
+      - AGC_Trees_Pinus_Pinea_V01_7m_S1_90-0x5ad0e817_0x50d1ce1f_0x30000.SC4Model
+      - AGC_Trees_Pinus_Pinea_P2_90_MMP.dat
+      - AGC_Trees_Pinus_Pinea_P1_90_MMP.dat
+      - AGC_Trees_Pinus_Halepensis_V07_14.9m_S1_90-0x6534284a-0xdd573712-0x105db022.SC4Desc
+      - AGC_Trees_Pinus_Halepensis_V07_14.9m_S1_90-0x5ad0e817_0x1055c3c7_0x30000.SC4Model
+      - AGC_Trees_Pinus_Halepensis_V06_27.3m_S1_90-0x6534284a-0xdd573712-0xadc7c6aa.SC4Desc
+      - AGC_Trees_Pinus_Halepensis_V06_27.3m_S1_90-0x5ad0e817_0x7007cb79_0x30000.SC4Model
+      - AGC_Trees_Pinus_Halepensis_V05_19.4m_S1_90-0x6534284a-0xdd573712-0xadc7c676.SC4Desc
+      - AGC_Trees_Pinus_Halepensis_V05_19.4m_S1_90-0x5ad0e817_0x8fdef6ae_0x30000.SC4Model
+      - AGC_Trees_Pinus_Halepensis_V04_23.4m_S1_90-0x6534284a-0xdd573712-0xcdc7c64a.SC4Desc
+      - AGC_Trees_Pinus_Halepensis_V04_23.4m_S1_90-0x5ad0e817_0xd007e9ad_0x30000.SC4Model
+      - AGC_Trees_Pinus_Halepensis_V03_20.4m_S1_90-0x6534284a-0xdd573712-0x8dc7c618.SC4Desc
+      - AGC_Trees_Pinus_Halepensis_V03_20.4m_S1_90-0x5ad0e817_0xf0080a3a_0x30000.SC4Model
+      - AGC_Trees_Pinus_Halepensis_V02_19.3m_S1_90-0x6534284a-0xdd573712-0x2dc7c5e9.SC4Desc
+      - AGC_Trees_Pinus_Halepensis_V02_19.3m_S1_90-0x5ad0e817_0x702f028a_0x30000.SC4Model
+      - AGC_Trees_Pinus_Halepensis_V01_16.6m_S1_90-0x6534284a-0xdd573712-0xcdc7c59a.SC4Desc
+      - AGC_Trees_Pinus_Halepensis_V01_16.6m_S1_90-0x5ad0e817_0xb02f2c43_0x30000.SC4Model
+      - AGC_Trees_Pinus_Halepensis_P2_90_MMP.dat
+      - AGC_Trees_Pinus_Halepensis_P1_90_MMP.dat
+      - AGC_Trees_Pinus_Brutia_V06_21m_S1_90-0x6534284a-0xdd573712-0x0dde50da.SC4Desc
+      - AGC_Trees_Pinus_Brutia_V06_21m_S1_90-0x5ad0e817_0x50a88f39_0x30000.SC4Model
+      - AGC_Trees_Pinus_Brutia_V05_19m_S1_90-0x6534284a-0xdd573712-0x8dde510c.SC4Desc
+      - AGC_Trees_Pinus_Brutia_V05_19m_S1_90-0x5ad0e817_0xd0802194_0x30000.SC4Model
+      - AGC_Trees_Pinus_Brutia_V04_20m_S1_90-0x6534284a-0xdd573712-0xcdde522c.SC4Desc
+      - AGC_Trees_Pinus_Brutia_V04_20m_S1_90-0x5ad0e817_0x907fe13d_0x30000.SC4Model
+      - AGC_Trees_Pinus_Brutia_V03_16.5m_S1_90-0x6534284a-0xdd573712-0x6dde52ac.SC4Desc
+      - AGC_Trees_Pinus_Brutia_V03_16.5m_S1_90-0x5ad0e817_0x907f6891_0x30000.SC4Model
+      - AGC_Trees_Pinus_Brutia_V02_18.1m_S1_90-0x6534284a-0xdd573712-0xcdde5319.SC4Desc
+      - AGC_Trees_Pinus_Brutia_V02_18.1m_S1_90-0x5ad0e817_0x30585c0e_0x30000.SC4Model
+      - AGC_Trees_Pinus_Brutia_V01_15.5m_S1_90-0x6534284a-0xdd573712-0xcdde5275.SC4Desc
+      - AGC_Trees_Pinus_Brutia_V01_15.5m_S1_90-0x5ad0e817_0xb07fb243_0x30000.SC4Model
+      - AGC_Trees_Pinus_Brutia_P2_90_MMP.dat
+      - AGC_Trees_Pinus_Brutia_P1_90_MMP.dat
+      - AGC_Trees_Pink_Trumpet_V06_11.5m_S1_90-0x6534284a-0xdd573712-0xf16fa315.SC4Desc
+      - AGC_Trees_Pink_Trumpet_V06_11.5m_S1_90-0x5ad0e817_0x5167b5f6_0x30000.SC4Model
+      - AGC_Trees_Pink_Trumpet_V05_13.2m_S1_90-0x6534284a-0xdd573712-0x716f9824.SC4Desc
+      - AGC_Trees_Pink_Trumpet_V05_13.2m_S1_90-0x5ad0e817_0x3167ade6_0x30000.SC4Model
+      - AGC_Trees_Pink_Trumpet_V04_15.3m_S1_90-0x6534284a-0xdd573712-0xb16f8a0d.SC4Desc
+      - AGC_Trees_Pink_Trumpet_V04_15.3m_S1_90-0x5ad0e817_0x91679ffd_0x30000.SC4Model
+      - AGC_Trees_Pink_Trumpet_V03_17.5m_S1_90-0x6534284a-0xdd573712-0xb16f8222.SC4Desc
+      - AGC_Trees_Pink_Trumpet_V03_17.5m_S1_90-0x5ad0e817_0x516797a7_0x30000.SC4Model
+      - AGC_Trees_Pink_Trumpet_V02_19.8m_S1_90-0x6534284a-0xdd573712-0x516f77be.SC4Desc
+      - AGC_Trees_Pink_Trumpet_V02_19.8m_S1_90-0x5ad0e817_0x9166b1f1_0x30000.SC4Model
+      - AGC_Trees_Pink_Trumpet_V01_21.8m_S1_90-0x6534284a-0xdd573712-0x116d402a.SC4Desc
+      - AGC_Trees_Pink_Trumpet_V01_21.8m_S1_90-0x5ad0e817_0x11655441_0x30000.SC4Model
+      - AGC_Trees_Pink_Trumpet_Tree_P1_90_MMP.dat
+      - AGC_Trees_Norfolk_Island_Pine_V03_12.2m_S1_90-0x6534284a-0xdd573712-0xefa8a624.SC4Desc
+      - AGC_Trees_Norfolk_Island_Pine_V03_12.2m_S1_90-0x5ad0e817_0xf0456f0_0x30000.SC4Model
+      - AGC_Trees_Norfolk_Island_Pine_V02_11.7m_S1_90-0x6534284a-0xdd573712-0xefa8a635.SC4Desc
+      - AGC_Trees_Norfolk_Island_Pine_V02_11.7m_S1_90-0x5ad0e817_0x2f0441a8_0x30000.SC4Model
+      - AGC_Trees_Norfolk_Island_Pine_V01_12.1m_S1_90-0x6534284a-0xdd573712-0xafa8a645.SC4Desc
+      - AGC_Trees_Norfolk_Island_Pine_V01_12.1m_S1_90-0x5ad0e817_0x4edb77b3_0x30000.SC4Model
+      - AGC_Trees_Narrow-Leaved_Paperbark_P1_90_MMP.dat
+      - AGC_Trees_Mulan_Magnolia_V06_9.6m_S1_90-0x6534284a-0xdd573712-0xd18380ab.SC4Desc
+      - AGC_Trees_Mulan_Magnolia_V06_9.6m_S1_90-0x5ad0e817_0x117b9701_0x30000.SC4Model
+      - AGC_Trees_Mulan_Magnolia_V05_10.2m_S1_90-0x6534284a-0xdd573712-0x51837af0.SC4Desc
+      - AGC_Trees_Mulan_Magnolia_V05_10.2m_S1_90-0x5ad0e817_0x717b8ed1_0x30000.SC4Model
+      - AGC_Trees_Mulan_Magnolia_V04_11.3m_S1_90-0x6534284a-0xdd573712-0x51833bf7.SC4Desc
+      - AGC_Trees_Mulan_Magnolia_V04_11.3m_S1_90-0x5ad0e817_0xd17b4f28_0x30000.SC4Model
+      - AGC_Trees_Mulan_Magnolia_V03_12.2m_S1_90-0x6534284a-0xdd573712-0xf18332c5.SC4Desc
+      - AGC_Trees_Mulan_Magnolia_V03_12.2m_S1_90-0x5ad0e817_0xf17b44fb_0x30000.SC4Model
+      - AGC_Trees_Mulan_Magnolia_V02_12.4m_S1_90-0x6534284a-0xdd573712-0x91826381.SC4Desc
+      - AGC_Trees_Mulan_Magnolia_V02_12.4m_S1_90-0x5ad0e817_0xd17a759f_0x30000.SC4Model
+      - AGC_Trees_Mulan_Magnolia_V01_12.3m_S1_90-0x6534284a-0xdd573712-0xb18257d5.SC4Desc
+      - AGC_Trees_Mulan_Magnolia_V01_12.3m_S1_90-0x5ad0e817_0x917a6874_0x30000.SC4Model
+      - AGC_Trees_Mulan_Magnolia_P1_90_MMP.dat
+      - AGC_Trees_Melaleuca_Linariifolia_V06_12.6m_S1_90-0x6534284a-0xdd573712-0xaee7312e.SC4Desc
+      - AGC_Trees_Melaleuca_Linariifolia_V06_12.6m_S1_90-0x5ad0e817_0xb0150361_0x30000.SC4Model
+      - AGC_Trees_Melaleuca_Linariifolia_V06_10.6m_S1_90-0x6534284a-0xdd573712-0x4ee81ca4.SC4Desc
+      - AGC_Trees_Melaleuca_Linariifolia_V06_10.6m_S1_90-0x5ad0e817_0x303c33e0_0x30000.SC4Model
+      - AGC_Trees_Melaleuca_Linariifolia_V05_12.8m_S1_90-0x6534284a-0xdd573712-0xaeea07d7.SC4Desc
+      - AGC_Trees_Melaleuca_Linariifolia_V05_12.8m_S1_90-0x5ad0e817_0x7015450d_0x30000.SC4Model
+      - AGC_Trees_Melaleuca_Linariifolia_V04_11.2m_S1_90-0x6534284a-0xdd573712-0xaee86742.SC4Desc
+      - AGC_Trees_Melaleuca_Linariifolia_V04_11.2m_S1_90-0x5ad0e817_0xd03c7893_0x30000.SC4Model
+      - AGC_Trees_Melaleuca_Linariifolia_V03_8.5m_S1_90-0x6534284a-0xdd573712-0x8ee8a237.SC4Desc
+      - AGC_Trees_Melaleuca_Linariifolia_V03_8.5m_S1_90-0x5ad0e817_0xb03cc015_0x30000.SC4Model
+      - AGC_Trees_Melaleuca_Linariifolia_V02_7.9m_S1_90-0x6534284a-0xdd573712-0xeee9712e.SC4Desc
+      - AGC_Trees_Melaleuca_Linariifolia_V02_7.9m_S1_90-0x5ad0e817_0x70651be3_0x30000.SC4Model
+      - AGC_Trees_Maritime_Pine_V06_31.5m_S1_90-0x6534284a-0xdd573712-0xaea55e7b.SC4Desc
+      - AGC_Trees_Maritime_Pine_V06_31.5m_S1_90-0x5ad0e817_0xf1349332_0x30000.SC4Model
+      - AGC_Trees_Maritime_Pine_V05_28.3m_S1_90-0x6534284a-0xdd573712-0xaea54420.SC4Desc
+      - AGC_Trees_Maritime_Pine_V05_28.3m_S1_90-0x5ad0e817_0x313477d5_0x30000.SC4Model
+      - AGC_Trees_Maritime_Pine_V04_24.7m_S1_90-0x6534284a-0xdd573712-0xaea526ea.SC4Desc
+      - AGC_Trees_Maritime_Pine_V04_24.7m_S1_90-0x5ad0e817_0xd1345cb5_0x30000.SC4Model
+      - AGC_Trees_Maritime_Pine_V03_22.6m_S1_90-0x6534284a-0xdd573712-0x8ea4f149.SC4Desc
+      - AGC_Trees_Maritime_Pine_V03_22.6m_S1_90-0x5ad0e817_0x113425fc_0x30000.SC4Model
+      - AGC_Trees_Maritime_Pine_V02_20.4m_S1_90-0x6534284a-0xdd573712-0xcea4d6ec.SC4Desc
+      - AGC_Trees_Maritime_Pine_V02_20.4m_S1_90-0x5ad0e817_0xd1340cad_0x30000.SC4Model
+      - AGC_Trees_Maritime_Pine_V01_17.9m_S1_90-0x6534284a-0xdd573712-0x8ea42398.SC4Desc
+      - AGC_Trees_Maritime_Pine_V01_17.9m_S1_90-0x5ad0e817_0x31335994_0x30000.SC4Model
+      - AGC_Trees_Maritime_Pine_P2_90_MMP.dat
+      - AGC_Trees_Maritime_Pine_P1_90_MMP.dat
+      - AGC_Trees_Manchurian_Catalpa_V06_14.3m_S1_90-0x6534284a-0xdd573712-0x517f919f.SC4Desc
+      - AGC_Trees_Manchurian_Catalpa_V06_14.3m_S1_90-0x5ad0e817_0x3177a76b_0x30000.SC4Model
+      - AGC_Trees_Manchurian_Catalpa_V05_14.3m_S1_90-0x6534284a-0xdd573712-0x117f2637.SC4Desc
+      - AGC_Trees_Manchurian_Catalpa_V05_14.3m_S1_90-0x5ad0e817_0xd176823e_0x30000.SC4Model
+      - AGC_Trees_Manchurian_Catalpa_V04_17.3m_S1_90-0x6534284a-0xdd573712-0x917e66fa.SC4Desc
+      - AGC_Trees_Manchurian_Catalpa_V04_17.3m_S1_90-0x5ad0e817_0x31767423_0x30000.SC4Model
+      - AGC_Trees_Manchurian_Catalpa_V03_20.2m_S1_90-0x6534284a-0xdd573712-0x117e2ea9.SC4Desc
+      - AGC_Trees_Manchurian_Catalpa_V03_20.2m_S1_90-0x5ad0e817_0x1176392d_0x30000.SC4Model
+      - AGC_Trees_Manchurian_Catalpa_V02_22m_S1_90-0x6534284a-0xdd573712-0x717bd264.SC4Desc
+      - AGC_Trees_Manchurian_Catalpa_V02_22m_S1_90-0x5ad0e817_0x3173e5e8_0x30000.SC4Model
+      - AGC_Trees_Manchurian_Catalpa_V01_22.2m_S1_90-0x6534284a-0xdd573712-0x917928ab.SC4Desc
+      - AGC_Trees_Manchurian_Catalpa_V01_22.2m_S1_90-0x5ad0e817_0xf1713c87_0x30000.SC4Model
+      - AGC_Trees_Manchurian_Catalpa_P1_90_MMP.dat
+      - AGC_Trees_London_Plane_V06_16.5m_S1_90-0x6534284a-0xdd573712-0xcfa8a47c.SC4Desc
+      - AGC_Trees_London_Plane_V06_16.5m_S1_90-0x5ad0e817_0xf51fefd_0x30000.SC4Model
+      - AGC_Trees_London_Plane_V05_19m_S1_90-0x6534284a-0xdd573712-0x4fa8a48c.SC4Desc
+      - AGC_Trees_London_Plane_V05_19m_S1_90-0x5ad0e817_0x8f51ea3d_0x30000.SC4Model
+      - AGC_Trees_London_Plane_V04_7.5m_S1_90-0x6534284a-0xdd573712-0xafa8a49f.SC4Desc
+      - AGC_Trees_London_Plane_V04_7.5m_S1_90-0x5ad0e817_0x8f51c623_0x30000.SC4Model
+      - AGC_Trees_London_Plane_V03_11.7m_S1_90-0x6534284a-0xdd573712-0x6fa8a4ab.SC4Desc
+      - AGC_Trees_London_Plane_V03_11.7m_S1_90-0x5ad0e817_0xf51b10c_0x30000.SC4Model
+      - AGC_Trees_London_Plane_V02_15.8m_S1_90-0x6534284a-0xdd573712-0xefa8a4c4.SC4Desc
+      - AGC_Trees_London_Plane_V02_15.8m_S1_90-0x5ad0e817_0xef51a315_0x30000.SC4Model
+      - AGC_Trees_London_Plane_V01_14m_S1_90-0x6534284a-0xdd573712-0x4fa8a4d2.SC4Desc
+      - AGC_Trees_London_Plane_V01_14m_S1_90-0x5ad0e817_0x2f28e969_0x30000.SC4Model
+      - AGC_Trees_London_Plane_P1_MMP.dat
+      - AGC_Trees_Joshua_V03_9.3m_S1_90-0x6534284a-0xdd573712-0x8fa8a7d8.SC4Desc
+      - AGC_Trees_Joshua_V03_9.3m_S1_90-0x5ad0e817_0x2f82d226_0x30000.SC4Model
+      - AGC_Trees_Joshua_V02_8.6m_S1_90-0x6534284a-0xdd573712-0x6fa8a7ca.SC4Desc
+      - AGC_Trees_Joshua_V02_8.6m_S1_90-0x5ad0e817_0x6f83b6a1_0x30000.SC4Model
+      - AGC_Trees_Joshua_V01_8.0m_S1_90-0x6534284a-0xdd573712-0x6fa8a7b3.SC4Desc
+      - AGC_Trees_Joshua_V01_8.0m_S1_90-0x5ad0e817_0x8f83d876_0x30000.SC4Model
+      - AGC_Trees_Joshua_P1_90_MMP.dat
+      - AGC_Trees_Japanese_Cherry_V06_9.7m_S1_90-0x6534284a-0xdd573712-0x316953ae.SC4Desc
+      - AGC_Trees_Japanese_Cherry_V06_9.7m_S1_90-0x5ad0e817_0xb24c14e9_0x30000.SC4Model
+      - AGC_Trees_Japanese_Cherry_V05_13.4m_S1_90-0x6534284a-0xdd573712-0x316951d8.SC4Desc
+      - AGC_Trees_Japanese_Cherry_V05_13.4m_S1_90-0x5ad0e817_0xb24c12a2_0x30000.SC4Model
+      - AGC_Trees_Japanese_Cherry_V04_13.5m_S1_90-0x6534284a-0xdd573712-0x1167fcae.SC4Desc
+      - AGC_Trees_Japanese_Cherry_V04_13.5m_S1_90-0x5ad0e817_0x5223140e_0x30000.SC4Model
+      - AGC_Trees_Japanese_Cherry_V03_14.4m_S1_90-0x6534284a-0xdd573712-0x9164d4d5.SC4Desc
+      - AGC_Trees_Japanese_Cherry_V03_14.4m_S1_90-0x5ad0e817_0x31d23ee2_0x30000.SC4Model
+      - AGC_Trees_Japanese_Cherry_V02_16.8m_S1_90-0x6534284a-0xdd573712-0x1163f289.SC4Desc
+      - AGC_Trees_Japanese_Cherry_V02_16.8m_S1_90-0x5ad0e817_0x91a9cc23_0x30000.SC4Model
+      - AGC_Trees_Japanese_Cherry_V01_16.5m_S1_90-0x6534284a-0xdd573712-0x9162a0fb.SC4Desc
+      - AGC_Trees_Japanese_Cherry_V01_16.5m_S1_90-0x5ad0e817_0x3182335e_0x30000.SC4Model
+      - AGC_Trees_Japanese_Cherry_P1_90_MMP.dat
+      - AGC_Trees_Jacaranda_P2_90_MMP.dat
+      - AGC_Trees_Jacaranda_P1_90_MMP.dat
+      - AGC_Trees_Jacaranda_Mimosifolia_V12_14.3m_S1_90-0x6534284a-0xdd573712-0x315bac92.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V12_14.3m_S1_90-0x5ad0e817_0x70bad3d8_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V11_16.2m_S1_90-0x6534284a-0xdd573712-0x715b9ee3.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V11_16.2m_S1_90-0x5ad0e817_0xb0bac425_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V10_15.7m_S1_90-0x6534284a-0xdd573712-0x3159813d.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V10_15.7m_S1_90-0x5ad0e817_0x315192a5_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V09_19.6m_S1_90-0x6534284a-0xdd573712-0xd1597273.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V09_19.6m_S1_90-0x5ad0e817_0x91516aa3_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V08_20.5m_S1_90-0x6534284a-0xdd573712-0xd1593d2a.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V08_20.5m_S1_90-0x5ad0e817_0xb1514ccb_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V07_20.2m_S1_90-0x6534284a-0xdd573712-0x51541839.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V07_20.2m_S1_90-0x5ad0e817_0x514c2897_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V06_15.2m_S1_90-0x6534284a-0xdd573712-0x8ee6d53f.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V06_15.2m_S1_90-0x5ad0e817_0x3014b7fd_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V05_14m_S1_90-0x6534284a-0xdd573712-0xeee5e838.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V05_14m_S1_90-0x5ad0e817_0x4febdb29_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V04_13.8m_S1_90-0x6534284a-0xdd573712-0xeee617db.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V04_13.8m_S1_90-0x5ad0e817_0x2fec6eb7_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V03_6.4m_S1_90-0x6534284a-0xdd573712-0x0ee5f5bf.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V03_6.4m_S1_90-0x5ad0e817_0x6fec4ae7_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V02_7.6m_S1_90-0x6534284a-0xdd573712-0xeee5e7fc.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V02_7.6m_S1_90-0x5ad0e817_0xfec4077_0x30000.SC4Model
+      - AGC_Trees_Jacaranda_Mimosifolia_V01_7.2m_S1_90-0x6534284a-0xdd573712-0xcee4bfb1.SC4Desc
+      - AGC_Trees_Jacaranda_Mimosifolia_V01_7.2m_S1_90-0x5ad0e817_0x6fc38a70_0x30000.SC4Model
+      - AGC_Trees_Golden_Wattle_V04_12.6m_S1_90-0x6534284a-0xdd573712-0xcfa13ad2.SC4Desc
+      - AGC_Trees_Golden_Wattle_V04_12.6m_S1_90-0x5ad0e817_0x4f99383e_0x30000.SC4Model
+      - AGC_Trees_Golden_Wattle_V03_5.9m_S1_90-0x6534284a-0xdd573712-0x6fa13ac2.SC4Desc
+      - AGC_Trees_Golden_Wattle_V03_5.9m_S1_90-0x5ad0e817_0x2f99148f_0x30000.SC4Model
+      - AGC_Trees_Golden_Wattle_V02_6.4m_S1_90-0x6534284a-0xdd573712-0x8fa13aad.SC4Desc
+      - AGC_Trees_Golden_Wattle_V02_6.4m_S1_90-0x5ad0e817_0xcf9902e7_0x30000.SC4Model
+      - AGC_Trees_Golden_Wattle_V01_8.3m_S1_90-0x6534284a-0xdd573712-0xafa0d89d.SC4Desc
+      - AGC_Trees_Golden_Wattle_V01_8.3m_S1_90-0x5ad0e817_0xaf98c205_0x30000.SC4Model
+      - AGC_Trees_Golden_Wattle_P1_90_MMP.dat
+      - AGC_Trees_Golden_Rain_V06_4.4m_S1_90-0x6534284a-0xdd573712-0x11764115.SC4Desc
+      - AGC_Trees_Golden_Rain_V06_4.4m_S1_90-0x5ad0e817_0x716e5792_0x30000.SC4Model
+      - AGC_Trees_Golden_Rain_V05_6.9m_S1_90-0x6534284a-0xdd573712-0x11763ba8.SC4Desc
+      - AGC_Trees_Golden_Rain_V05_6.9m_S1_90-0x5ad0e817_0xb16e518b_0x30000.SC4Model
+      - AGC_Trees_Golden_Rain_V04_8.4m_S1_90-0x6534284a-0xdd573712-0xd1753bec.SC4Desc
+      - AGC_Trees_Golden_Rain_V04_8.4m_S1_90-0x5ad0e817_0xb16d5207_0x30000.SC4Model
+      - AGC_Trees_Golden_Rain_V03_8.3m_S1_90-0x6534284a-0xdd573712-0x91752d38.SC4Desc
+      - AGC_Trees_Golden_Rain_V03_8.3m_S1_90-0x5ad0e817_0x116d4369_0x30000.SC4Model
+      - AGC_Trees_Golden_Rain_V02_8.7m_S1_90-0x6534284a-0xdd573712-0xf1750927.SC4Desc
+      - AGC_Trees_Golden_Rain_V02_8.7m_S1_90-0x5ad0e817_0x316d1efb_0x30000.SC4Model
+      - AGC_Trees_Golden_Rain_V01_9.8m_S1_90-0x6534284a-0xdd573712-0xf1736cad.SC4Desc
+      - AGC_Trees_Golden_Rain_V01_9.8m_S1_90-0x5ad0e817_0xd16b8260_0x30000.SC4Model
+      - AGC_Trees_Golden_Rain_P1_90_MMP.dat
+      - AGC_Trees_Glacous_Cassia_V06_9.6m_S1_90-0x6534284a-0xdd573712-0xf14d313b.SC4Desc
+      - AGC_Trees_Glacous_Cassia_V06_9.6m_S1_90-0x5ad0e817_0x71454763_0x30000.SC4Model
+      - AGC_Trees_Glacous_Cassia_V05_9.9m_S1_90-0x6534284a-0xdd573712-0x914d2e59.SC4Desc
+      - AGC_Trees_Glacous_Cassia_V05_9.9m_S1_90-0x5ad0e817_0xb1454476_0x30000.SC4Model
+      - AGC_Trees_Glacous_Cassia_V04_12.1m_S1_90-0x6534284a-0xdd573712-0x714c3d81.SC4Desc
+      - AGC_Trees_Glacous_Cassia_V04_12.1m_S1_90-0x5ad0e817_0xd144533e_0x30000.SC4Model
+      - AGC_Trees_Glacous_Cassia_V03_13.2m_S1_90-0x6534284a-0xdd573712-0xb1499c02.SC4Desc
+      - AGC_Trees_Glacous_Cassia_V03_13.2m_S1_90-0x5ad0e817_0x5141b151_0x30000.SC4Model
+      - AGC_Trees_Glacous_Cassia_V02_13.4m_S1_90-0x6534284a-0xdd573712-0x714991dc.SC4Desc
+      - AGC_Trees_Glacous_Cassia_V02_13.4m_S1_90-0x5ad0e817_0x1141a5bf_0x30000.SC4Model
+      - AGC_Trees_Glacous_Cassia_V01_14.6m_S1_90-0x6534284a-0xdd573712-0x1149484d.SC4Desc
+      - AGC_Trees_Glacous_Cassia_V01_14.6m_S1_90-0x5ad0e817_0x51415d6d_0x30000.SC4Model
+      - AGC_Trees_Glacous_Cassia_P1_90_MMP.dat
+      - AGC_Trees_Ghost_Gun_P1_90_MMP.dat
+      - AGC_Trees_Ghost_Gum_V05_12.2m_S1_90-0x6534284a-0xdd573712-0x4f9bdef4.SC4Desc
+      - AGC_Trees_Ghost_Gum_V05_12.2m_S1_90-0x5ad0e817_0x6f926094_0x30000.SC4Model
+      - AGC_Trees_Ghost_Gum_V04_12.7m_S1_90-0x6534284a-0xdd573712-0xcf9bdf2c.SC4Desc
+      - AGC_Trees_Ghost_Gum_V04_12.7m_S1_90-0x5ad0e817_0xef921bd1_0x30000.SC4Model
+      - AGC_Trees_Ghost_Gum_V03_8.4m_S1_90-0x6534284a-0xdd573712-0x4f9bdf40.SC4Desc
+      - AGC_Trees_Ghost_Gum_V03_8.4m_S1_90-0x5ad0e817_0x4f9155a6_0x30000.SC4Model
+      - AGC_Trees_Ghost_Gum_V02_8m_S1_90-0x6534284a-0xdd573712-0x4f9bdf52.SC4Desc
+      - AGC_Trees_Ghost_Gum_V02_8m_S1_90-0x5ad0e817_0xf913b6a_0x30000.SC4Model
+      - AGC_Trees_Ghost_Gum_V01_17.8m_S1_90-0x6534284a-0xdd573712-0x2f9bdf5f.SC4Desc
+      - AGC_Trees_Ghost_Gum_V01_17.8m_S1_90-0x5ad0e817_0xf9018d6_0x30000.SC4Model
+      - AGC_Trees_Ficus_Carica_V06_12.95m_S1_90-0x6534284a-0xdd573712-0x8dde5012.SC4Desc
+      - AGC_Trees_Ficus_Carica_V06_12.95m_S1_90-0x5ad0e817_0x50f94a69_0x30000.SC4Model
+      - AGC_Trees_Ficus_Carica_V05_10.65m_S1_90-0x6534284a-0xdd573712-0x0dde4fe0.SC4Desc
+      - AGC_Trees_Ficus_Carica_V05_10.65m_S1_90-0x5ad0e817_0x71220a62_0x30000.SC4Model
+      - AGC_Trees_Ficus_Carica_V04_9.6m_S1_90-0x6534284a-0xdd573712-0x4dde4fa9.SC4Desc
+      - AGC_Trees_Ficus_Carica_V04_9.6m_S1_90-0x5ad0e817_0x51223574_0x30000.SC4Model
+      - AGC_Trees_Ficus_Carica_V03_8.2m_S1_90-0x6534284a-0xdd573712-0x0dde4f6b.SC4Desc
+      - AGC_Trees_Ficus_Carica_V03_8.2m_S1_90-0x5ad0e817_0x3149a519_0x30000.SC4Model
+      - AGC_Trees_Ficus_Carica_V02_7.6m_S1_90-0x6534284a-0xdd573712-0x0dde4f3d.SC4Desc
+      - AGC_Trees_Ficus_Carica_V02_7.6m_S1_90-0x5ad0e817_0xd06138a5_0x30000.SC4Model
+      - AGC_Trees_Ficus_Carica_V01_6.5m_S1_90-0x6534284a-0xdd573712-0xcdde4f01.SC4Desc
+      - AGC_Trees_Ficus_Carica_V01_6.5m_S1_90-0x5ad0e817_0x9061608d_0x30000.SC4Model
+      - AGC_Trees_Ficus_Carica_P2_90_MMP.dat
+      - AGC_Trees_Ficus_Carica_P1_90_MMP.dat
+      - AGC_Trees_English_Oak_V12_W_22.8m_S1_90-0x6534284a-0xdd573712-0xaed24eb9.SC4Desc
+      - AGC_Trees_English_Oak_V12_W_22.8m_S1_90-0x5ad0e817_0x3161868b_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V12_A_22.8m_S1_90_Autumn-0x6534284a-0xdd573712-0x4ed249a9.SC4Desc
+      - AGC_Trees_English_Oak_V12_A_22.8m_S1_90-0x5ad0e817_0xd1617dd8_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V12_22.8m_S1_90_Summer-0x6534284a-0xdd573712-0xaecf8828.SC4Desc
+      - AGC_Trees_English_Oak_V12_22.8m_S1_90-0x6534284a-0xdd573712-0xcecf880b.SC4Desc
+      - AGC_Trees_English_Oak_V12_22.8m_S1_90-0x5ad0e817_0x915ebd94_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V11_W_22m_S1_90-0x6534284a-0xdd573712-0x4ed22044.SC4Desc
+      - AGC_Trees_English_Oak_V11_W_22m_S1_90-0x5ad0e817_0x71615220_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V11_A_22m_S1_90_Autumn-0x6534284a-0xdd573712-0x0ed21037.SC4Desc
+      - AGC_Trees_English_Oak_V11_A_22m_S1_90-0x5ad0e817_0x716142ec_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V11_22m_S1_90_Summer-0x6534284a-0xdd573712-0xeecf0a4c.SC4Desc
+      - AGC_Trees_English_Oak_V11_22m_S1_90-0x6534284a-0xdd573712-0xaecf0a36.SC4Desc
+      - AGC_Trees_English_Oak_V11_22m_S1_90-0x5ad0e817_0xd15e40e8_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V10_W_19m_S1_90-0x6534284a-0xdd573712-0xaed0f1d7.SC4Desc
+      - AGC_Trees_English_Oak_V10_W_19m_S1_90-0x5ad0e817_0x716026fe_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V10_A_19m_S1_90_Autumn-0x6534284a-0xdd573712-0x0ed0ea60.SC4Desc
+      - AGC_Trees_English_Oak_V10_A_19m_S1_90-0x5ad0e817_0x316020a8_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V10_19m_S1_90_Summer-0x6534284a-0xdd573712-0xaece4f1d.SC4Desc
+      - AGC_Trees_English_Oak_V10_19m_S1_90-0x6534284a-0xdd573712-0xeece4f0d.SC4Desc
+      - AGC_Trees_English_Oak_V10_19m_S1_90-0x5ad0e817_0xb15d8651_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V09_W_22.8m_S1_90-0x6534284a-0xdd573712-0xced0927a.SC4Desc
+      - AGC_Trees_English_Oak_V09_W_22.8m_S1_90-0x5ad0e817_0x115fca33_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V09_A_22.8m_S1_90_Autumn-0x6534284a-0xdd573712-0x8ed06dc5.SC4Desc
+      - AGC_Trees_English_Oak_V09_A_22.8m_S1_90-0x5ad0e817_0x715fa49c_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V09_22.8m_S1_90_Summer-0x6534284a-0xdd573712-0xaece3b4c.SC4Desc
+      - AGC_Trees_English_Oak_V09_22.8m_S1_90-0x6534284a-0xdd573712-0x6ece3b3c.SC4Desc
+      - AGC_Trees_English_Oak_V09_22.8m_S1_90-0x5ad0e817_0x515d6db5_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V08_W_23.7m_S1_90-0x6534284a-0xdd573712-0x4ed05d75.SC4Desc
+      - AGC_Trees_English_Oak_V08_W_23.7m_S1_90-0x5ad0e817_0xb15ef09a_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V08_A_23.7m_S1_90_Autumn-0x6534284a-0xdd573712-0x4ecfadbc.SC4Desc
+      - AGC_Trees_English_Oak_V08_A_23.7m_S1_90-0x5ad0e817_0x915ee4e4_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V08_23.7m_S1_90_Summer-0x6534284a-0xdd573712-0x4ecdba9a.SC4Desc
+      - AGC_Trees_English_Oak_V08_23.7m_S1_90-0x6534284a-0xdd573712-0xcecdba51.SC4Desc
+      - AGC_Trees_English_Oak_V08_23.7m_S1_90-0x5ad0e817_0x715cf13e_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V07_W_23m_S1_90-0x6534284a-0xdd573712-0x2eccfdd0.SC4Desc
+      - AGC_Trees_English_Oak_V07_W_23m_S1_90-0x5ad0e817_0x315c3580_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V07_A_23m_S1_90_Autumn-0x6534284a-0xdd573712-0xaeccf496.SC4Desc
+      - AGC_Trees_English_Oak_V07_A_23m_S1_90-0x5ad0e817_0xf15c28b7_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V07_23m_S1_90_Summer-0x6534284a-0xdd573712-0x4eccb467.SC4Desc
+      - AGC_Trees_English_Oak_V07_23m_S1_90-0x6534284a-0xdd573712-0x0eccb41d.SC4Desc
+      - AGC_Trees_English_Oak_V07_23m_S1_90-0x5ad0e817_0x915bea04_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V06_W_14.4m_S1_90-0x6534284a-0xdd573712-0x2ecb316f.SC4Desc
+      - AGC_Trees_English_Oak_V06_W_14.4m_S1_90-0x5ad0e817_0x112a173a_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V06_A_14.4m_S1_90_Autumn-0x6534284a-0xdd573712-0x8ecb87a6.SC4Desc
+      - AGC_Trees_English_Oak_V06_A_14.4m_S1_90-0x5ad0e817_0xf1013e8d_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V06_14.4m_S1_90_Summer-0x6534284a-0xdd573712-0x8ecb878d.SC4Desc
+      - AGC_Trees_English_Oak_V06_14.4m_S1_90-0x6534284a-0xdd573712-0x2ebd12cc.SC4Desc
+      - AGC_Trees_English_Oak_V06_14.4m_S1_90-0x5ad0e817_0x50b0b2bf_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V05_W_14.2m_S1_90-0x6534284a-0xdd573712-0x4ecb2ad7.SC4Desc
+      - AGC_Trees_English_Oak_V05_W_14.2m_S1_90-0x5ad0e817_0xf12a0f7c_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V05_A_14.2m_S1_90_Autumn-0x6534284a-0xdd573712-0xcecb8a41.SC4Desc
+      - AGC_Trees_English_Oak_V05_A_14.2m_S1_90-0x5ad0e817_0x1100d428_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V05_14.2m_S1_90_Summer-0x6534284a-0xdd573712-0xeecb8a1b.SC4Desc
+      - AGC_Trees_English_Oak_V05_14.2m_S1_90-0x6534284a-0xdd573712-0x2ebd085f.SC4Desc
+      - AGC_Trees_English_Oak_V05_14.2m_S1_90-0x5ad0e817_0x90b0af40_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V04_W_13.3m_S1_90-0x6534284a-0xdd573712-0xaeca5903.SC4Desc
+      - AGC_Trees_English_Oak_V04_W_13.3m_S1_90-0x5ad0e817_0x512a1abe_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V04_A_13.3m_S1_90_Autumn-0x6534284a-0xdd573712-0xaecb8363.SC4Desc
+      - AGC_Trees_English_Oak_V04_A_13.3m_S1_90-0x5ad0e817_0x5129af4f_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V04_13.3m_S1_90_Summer-0x6534284a-0xdd573712-0x2ecb83c3.SC4Desc
+      - AGC_Trees_English_Oak_V04_13.3m_S1_90-0x6534284a-0xdd573712-0x0ebc9e6f.SC4Desc
+      - AGC_Trees_English_Oak_V04_13.3m_S1_90-0x5ad0e817_0x50b0420e_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V03_W_12.7m_S1_90-0x6534284a-0xdd573712-0x8eca54c0.SC4Desc
+      - AGC_Trees_English_Oak_V03_W_12.7m_S1_90-0x5ad0e817_0x312a1efe_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V03_A_12.7m_S1_90_Autumn-0x6534284a-0xdd573712-0x2ec7ae56.SC4Desc
+      - AGC_Trees_English_Oak_V03_A_12.7m_S1_90-0x5ad0e817_0xd129cdb6_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V03_12.7m_S1_90_Summer-0x6534284a-0xdd573712-0x0ec72833.SC4Desc
+      - AGC_Trees_English_Oak_V03_12.7m_S1_90-0x6534284a-0xdd573712-0x2eb7ea7f.SC4Desc
+      - AGC_Trees_English_Oak_V03_12.7m_S1_90-0x5ad0e817_0x901000cf_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V02_W_11m_S1_90-0x6534284a-0xdd573712-0x2ec72690.SC4Desc
+      - AGC_Trees_English_Oak_V02_W_11m_S1_90-0x5ad0e817_0x712a21b7_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V02_A_11m_S1_90_Autumn-0x6534284a-0xdd573712-0x4ec71c9f.SC4Desc
+      - AGC_Trees_English_Oak_V02_A_11m_S1_90-0x5ad0e817_0xf129dc5a_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V02_11m_S1_90_Summer-0x6534284a-0xdd573712-0x4ec71a45.SC4Desc
+      - AGC_Trees_English_Oak_V02_11m_S1_90-0x6534284a-0xdd573712-0xeeb7dfba.SC4Desc
+      - AGC_Trees_English_Oak_V02_11m_S1_90-0x5ad0e817_0xd00ff1ce_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V01_W_9.8m_S1_90-0x6534284a-0xdd573712-0x0ec672bb.SC4Desc
+      - AGC_Trees_English_Oak_V01_W_9.8m_S1_90-0x5ad0e817_0x512a2557_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V01_A_9.8m_S1_90_Autumn-0x6534284a-0xdd573712-0xeec66c14.SC4Desc
+      - AGC_Trees_English_Oak_V01_A_9.8m_S1_90-0x5ad0e817_0x5129e68a_0x30000.SC4Model
+      - AGC_Trees_English_Oak_V01_9.8m_S1_Summer-0x6534284a-0xdd573712-0x2ec669ec.SC4Desc
+      - AGC_Trees_English_Oak_V01_9.8m_S1_90-0x6534284a-0xdd573712-0x4eb7d5bf.SC4Desc
+      - AGC_Trees_English_Oak_V01_9.8m_S1_90-0x5ad0e817_0xb00fdc1c_0x30000.SC4Model
+      - AGC_Trees_Empress_Tree_V06_22.6m_S1_90-0x6534284a-0xdd573712-0xb1517bf7.SC4Desc
+      - AGC_Trees_Empress_Tree_V06_22.6m_S1_90-0x5ad0e817_0x11499078_0x30000.SC4Model
+      - AGC_Trees_Empress_Tree_V05_22.7m_S1_90-0x6534284a-0xdd573712-0x91514937.SC4Desc
+      - AGC_Trees_Empress_Tree_V05_22.7m_S1_90-0x5ad0e817_0x91495d50_0x30000.SC4Model
+      - AGC_Trees_Empress_Tree_V04_22.6m_S1_90-0x6534284a-0xdd573712-0xb15055cd.SC4Desc
+      - AGC_Trees_Empress_Tree_V04_22.6m_S1_90-0x5ad0e817_0x91486924_0x30000.SC4Model
+      - AGC_Trees_Empress_Tree_V03_23.2m_S1_90-0x6534284a-0xdd573712-0x51503d16.SC4Desc
+      - AGC_Trees_Empress_Tree_V03_23.2m_S1_90-0x5ad0e817_0xb1485125_0x30000.SC4Model
+      - AGC_Trees_Empress_Tree_V02_23.4m_S1_90-0x6534284a-0xdd573712-0xd15004c7.SC4Desc
+      - AGC_Trees_Empress_Tree_V02_23.4m_S1_90-0x5ad0e817_0x714814d4_0x30000.SC4Model
+      - AGC_Trees_Empress_Tree_V01_25m_S1_90-0x6534284a-0xdd573712-0x314d975c.SC4Desc
+      - AGC_Trees_Empress_Tree_V01_25m_S1_90-0x5ad0e817_0x7145abc6_0x30000.SC4Model
+      - AGC_Trees_Empress_Tree_P1_90_MMP.dat
+      - AGC_Trees_Date_Palm_V06_4.9m_S1_90-0x6534284a-0xdd573712-0x6eafe13c.SC4Desc
+      - AGC_Trees_Date_Palm_V06_4.9m_S1_90-0x5ad0e817_0x113f1a0e_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V06_3.4m_S1_90-0x6534284a-0xdd573712-0x2eafe69a.SC4Desc
+      - AGC_Trees_Date_Palm_V06_3.4m_S1_90-0x5ad0e817_0xb13f1f77_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V05_6.7m_S1_90-0x6534284a-0xdd573712-0x2eaea741.SC4Desc
+      - AGC_Trees_Date_Palm_V05_6.7m_S1_90-0x5ad0e817_0x913de071_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V04_10.8m_S1_90-0x6534284a-0xdd573712-0xaeae899e.SC4Desc
+      - AGC_Trees_Date_Palm_V04_10.8m_S1_90-0x5ad0e817_0xb13dc242_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V03_31.8m_S1_90-0x6534284a-0xdd573712-0x2ead4ee9.SC4Desc
+      - AGC_Trees_Date_Palm_V03_31.8m_S1_90-0x5ad0e817_0x913c8655_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V03_22.5m_S1_90-0x6534284a-0xdd573712-0xaeafa5c1.SC4Desc
+      - AGC_Trees_Date_Palm_V03_22.5m_S1_90-0x5ad0e817_0x513eda9a_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V02_27.8m_S1_90-0x6534284a-0xdd573712-0x8eae207a.SC4Desc
+      - AGC_Trees_Date_Palm_V02_27.8m_S1_90-0x5ad0e817_0x513d5978_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01_6m_S1_90-0x6534284a-0xdd573712-0x6eb0a0d7.SC4Desc
+      - AGC_Trees_Date_Palm_V01_6m_S1_90-0x5ad0e817_0x913fd9dc_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01_4m_S1_90-0x6534284a-0xdd573712-0xaeaf609e.SC4Desc
+      - AGC_Trees_Date_Palm_V01_4m_S1_90-0x5ad0e817_0x513e99b1_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01_28m_S1_90-0x6534284a-0xdd573712-0x6ead60d2.SC4Desc
+      - AGC_Trees_Date_Palm_V01_28m_S1_90-0x5ad0e817_0x513c996f_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01_19.7m_S1_90-0x6534284a-0xdd573712-0x6eaf7500.SC4Desc
+      - AGC_Trees_Date_Palm_V01_19.7m_S1_90-0x5ad0e817_0xb13eadcd_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01e_32m_S1_90-0x6534284a-0xdd573712-0xaeb272e7.SC4Desc
+      - AGC_Trees_Date_Palm_V01e_32m_S1_90-0x5ad0e817_0xb141abaa_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01d_7m_S1_90-0x6534284a-0xdd573712-0x8eb12fe0.SC4Desc
+      - AGC_Trees_Date_Palm_V01d_7m_S1_90-0x5ad0e817_0x3140692d_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01c_7.6m_S1_90-0x6534284a-0xdd573712-0x2eb0b170.SC4Desc
+      - AGC_Trees_Date_Palm_V01c_7.6m_S1_90-0x5ad0e817_0xf13fea8b_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01b_15.9m_S1_90-0x6534284a-0xdd573712-0x6eb0ab03.SC4Desc
+      - AGC_Trees_Date_Palm_V01b_15.9m_S1_90-0x5ad0e817_0x113fe422_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01a_26.6m_S1_90-0x6534284a-0xdd573712-0xeeae3ed3.SC4Desc
+      - AGC_Trees_Date_Palm_V01a_26.6m_S1_90-0x5ad0e817_0x313d7799_0x30000.SC4Model
+      - AGC_Trees_Date_Palm_V01a_11.6m_S1_90-0x6534284a-0xdd573712-0x2eae5baf.SC4Desc
+      - AGC_Trees_Date_Palm_V01a_11.6m_S1_90-0x5ad0e817_0x513d9385_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V06_23.7m_S1_90-0x6534284a-0xdd573712-0xee7d7f1f.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V06_23.7m_S1_90-0x5ad0e817_0x90714345_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V06_18.3m_S1_90-0x6534284a-0xdd573712-0xae7d7f46.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V06_18.3m_S1_90-0x5ad0e817_0xb0712d74_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V06_14.6m_S1_90-0x6534284a-0xdd573712-0x6e7d7f6f.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V06_14.6m_S1_90-0x5ad0e817_0xb071391d_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V05_30.5m_S1_90-0x6534284a-0xdd573712-0xce7d4258.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V05_30.5m_S1_90-0x5ad0e817_0x10711a1f_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V05_25.5m_S1_90-0x6534284a-0xdd573712-0xce7d4562.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V05_25.5m_S1_90-0x5ad0e817_0xb07112c2_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V05_21.4m_S1_90-0x6534284a-0xdd573712-0x2e7d47ad.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V05_21.4m_S1_90-0x5ad0e817_0xd0705a18_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V05_17m_S1_90-0x6534284a-0xdd573712-0xce7d4909.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V05_17m_S1_90-0x5ad0e817_0xb0703e2d_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V05_14m_S1_90-0x6534284a-0xdd573712-0x6e7d491e.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V05_14m_S1_90-0x5ad0e817_0x3070e545_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V04_27m_S1_90-0x6534284a-0xdd573712-0xade0f3dd.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V04_27m_S1_90-0x5ad0e817_0xf07010b6_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V04_23.2m_S1_90-0x6534284a-0xdd573712-0xade0f3ee.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V04_23.2m_S1_90-0x5ad0e817_0x306ffdb4_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V04_19m_S1_90-0x6534284a-0xdd573712-0x0de0f3ff.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V04_19m_S1_90-0x5ad0e817_0x706f9a3f_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V04_16m_S1_90-0x6534284a-0xdd573712-0x2de0f48a.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V04_16m_S1_90-0x5ad0e817_0xb06ee744_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V04_13m_S1_90-0x6534284a-0xdd573712-0xede0f45a.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V04_13m_S1_90-0x5ad0e817_0x906efa8b_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V03_26.6m_S1_90-0x6534284a-0xdd573712-0x6e7d5980.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V03_26.6m_S1_90-0x5ad0e817_0x506c4fc9_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V03_20.4m_S1_90-0x6534284a-0xdd573712-0x4e7d62dc.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V03_20.4m_S1_90-0x5ad0e817_0x506c3d9a_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V03_15.3m_S1_90-0x6534284a-0xdd573712-0xce7d62f3.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V03_15.3m_S1_90-0x5ad0e817_0x906c2951_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V02_28m_S1_90-0x6534284a-0xdd573712-0x2e7c8150.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V02_28m_S1_90-0x5ad0e817_0x3062d64a_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V02_24m_S1_90-0x6534284a-0xdd573712-0x6e7c8578.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V02_24m_S1_90-0x5ad0e817_0x3061cf54_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V02_19m_S1_90-0x6534284a-0xdd573712-0x0e7c9065.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V02_19m_S1_90-0x5ad0e817_0x1061ca83_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V02_16m_S1_90-0x6534284a-0xdd573712-0x2e7c908d.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V02_16m_S1_90-0x5ad0e817_0x106185d1_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V02_12m_S1_90-0x6534284a-0xdd573712-0x0e7c946b.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V02_12m_S1_90-0x5ad0e817_0xd06272f3_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V01_29.5m_S1_90-0x6534284a-0xdd573712-0xee7adb51.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V01_29.5m_S1_90-0x5ad0e817_0xf066690e_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V01_25.5m_S1_90-0x6534284a-0xdd573712-0x0e7ae39d.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V01_25.5m_S1_90-0x5ad0e817_0xb065526f_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V01_20.5m_S1_90-0x6534284a-0xdd573712-0xae7af3f7.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V01_20.5m_S1_90-0x5ad0e817_0x106535ab_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V01_17.5m_S1_90-0x6534284a-0xdd573712-0xce7b0caf.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V01_17.5m_S1_90-0x5ad0e817_0xb06515fd_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_V01_12.5m_S1_90-0x6534284a-0xdd573712-0x2e7b0c3e.SC4Desc
+      - AGC_Trees_Cupressus_Sempervirens_V01_12.5m_S1_90-0x5ad0e817_0x106465ac_0x30000.SC4Model
+      - AGC_Trees_Cupressus_Sempervirens_P2_90_MMP.dat
+      - AGC_Trees_Cupressus_Sempervirens_P1_90_MMP.dat
+      - AGC_Trees_Citrus_Limon_V06_4.6m_S1_90-0x6534284a-0xdd573712-0x6e115da5.SC4Desc
+      - AGC_Trees_Citrus_Limon_V06_4.6m_S1_90-0x5ad0e817_0xb0a079f2_0x30000.SC4Model
+      - AGC_Trees_Citrus_Limon_V05_4.6m_S1_90-0x6534284a-0xdd573712-0xee115d85.SC4Desc
+      - AGC_Trees_Citrus_Limon_V05_4.6m_S1_90-0x5ad0e817_0x309fb3d8_0x30000.SC4Model
+      - AGC_Trees_Citrus_Limon_V04_4.6m_S1_90-0x6534284a-0xdd573712-0xae115d5f.SC4Desc
+      - AGC_Trees_Citrus_Limon_V04_4.6m_S1_90-0x5ad0e817_0x709e6b0b_0x30000.SC4Model
+      - AGC_Trees_Citrus_Limon_V03_3.2m_S1_90-0x6534284a-0xdd573712-0xce115d38.SC4Desc
+      - AGC_Trees_Citrus_Limon_V03_3.2m_S1_90-0x5ad0e817_0x309e5c18_0x30000.SC4Model
+      - AGC_Trees_Citrus_Limon_V02_2.9m_S1_90-0x6534284a-0xdd573712-0xee0b34d0.SC4Desc
+      - AGC_Trees_Citrus_Limon_V02_2.9m_S1_90-0x5ad0e817_0x109a6c42_0x30000.SC4Model
+      - AGC_Trees_Citrus_Limon_V01_1.9m_S1_90-0x6534284a-0xdd573712-0xce09b7b9.SC4Desc
+      - AGC_Trees_Citrus_Limon_V01_1.9m_S1_90-0x5ad0e817_0x1098f01f_0x30000.SC4Model
+      - AGC_Trees_Citrus_Limon_P2_90_MMP.dat
+      - AGC_Trees_Citrus_Limon_P1_90_MMP.dat
+      - AGC_Trees_Chinese_Fringetree_V06_11.4m_S1_90-0x6534284a-0xdd573712-0x51486895.SC4Desc
+      - AGC_Trees_Chinese_Fringetree_V06_11.4m_S1_90-0x5ad0e817_0xf1407932_0x30000.SC4Model
+      - AGC_Trees_Chinese_Fringetree_V05_11.5m_S1_90-0x6534284a-0xdd573712-0x91483d5f.SC4Desc
+      - AGC_Trees_Chinese_Fringetree_V05_11.5m_S1_90-0x5ad0e817_0x11404834_0x30000.SC4Model
+      - AGC_Trees_Chinese_Fringetree_V04_11.7m_S1_90-0x6534284a-0xdd573712-0x7147fbfc.SC4Desc
+      - AGC_Trees_Chinese_Fringetree_V04_11.7m_S1_90-0x5ad0e817_0x114010ba_0x30000.SC4Model
+      - AGC_Trees_Chinese_Fringetree_V03_14.8m_S1_90-0x6534284a-0xdd573712-0x3146efa1.SC4Desc
+      - AGC_Trees_Chinese_Fringetree_V03_14.8m_S1_90-0x5ad0e817_0x713ef733_0x30000.SC4Model
+      - AGC_Trees_Chinese_Fringetree_V02_15.2m_S1_90-0x6534284a-0xdd573712-0x1146a75f.SC4Desc
+      - AGC_Trees_Chinese_Fringetree_V02_15.2m_S1_90-0x5ad0e817_0x513ebbb2_0x30000.SC4Model
+      - AGC_Trees_Chinese_Fringetree_V01_16.6m_S1_90-0x6534284a-0xdd573712-0xd14530e6.SC4Desc
+      - AGC_Trees_Chinese_Fringetree_V01_16.6m_S1_90-0x5ad0e817_0xf13d422f_0x30000.SC4Model
+      - AGC_Trees_Chinese_Fringetree_P1_90_MMP.dat
+      - AGC_Trees_Camphor_V12_17m_S1_90-0x6534284a-0xdd573712-0xeee46a77.SC4Desc
+      - AGC_Trees_Camphor_V12_17m_S1_90-0x5ad0e817_0x4fc33281_0x30000.SC4Model
+      - AGC_Trees_Camphor_V11_20.2m_S1_90-0x6534284a-0xdd573712-0xeee425f7.SC4Desc
+      - AGC_Trees_Camphor_V11_20.2m_S1_90-0x5ad0e817_0x6fc2eddb_0x30000.SC4Model
+      - AGC_Trees_Camphor_V10_20m_S1_90-0x6534284a-0xdd573712-0xcee37342.SC4Desc
+      - AGC_Trees_Camphor_V10_20m_S1_90-0x5ad0e817_0x2f9bfe52_0x30000.SC4Model
+      - AGC_Trees_Camphor_V09_22m_S1_90-0x6534284a-0xdd573712-0x0ee3575f.SC4Desc
+      - AGC_Trees_Camphor_V09_22m_S1_90-0x5ad0e817_0x2f9be089_0x30000.SC4Model
+      - AGC_Trees_Camphor_V08_23m_S1_90-0x6534284a-0xdd573712-0xeee321eb.SC4Desc
+      - AGC_Trees_Camphor_V08_23m_S1_90-0x5ad0e817_0xcf9ba637_0x30000.SC4Model
+      - AGC_Trees_Camphor_V07_23m_S1_90-0x6534284a-0xec736ecd-0xaedd9827.SC4Desc
+      - AGC_Trees_Camphor_V07_23m_S1_90-0x5ad0e817_0x2efd2a77_0x30000.SC4Model
+      - AGC_Trees_Camphor_V06_16.1m_S1_90-0x6534284a-0xdd573712-0x4ee21dd7.SC4Desc
+      - AGC_Trees_Camphor_V06_16.1m_S1_90-0x5ad0e817_0x8f7321aa_0x30000.SC4Model
+      - AGC_Trees_Camphor_V05_15.6m_S1_90-0x6534284a-0xdd573712-0x4ee20d2d.SC4Desc
+      - AGC_Trees_Camphor_V05_15.6m_S1_90-0x5ad0e817_0x4f730d53_0x30000.SC4Model
+      - AGC_Trees_Camphor_V04_17.2m_S1_90-0x6534284a-0xdd573712-0xeee188ce.SC4Desc
+      - AGC_Trees_Camphor_V04_17.2m_S1_90-0x5ad0e817_0xef728ace_0x30000.SC4Model
+      - AGC_Trees_Camphor_V03_18.2m_S1_90-0x6534284a-0xdd573712-0x4ee0c5ab.SC4Desc
+      - AGC_Trees_Camphor_V03_18.2m_S1_90-0x5ad0e817_0xf4b8d48_0x30000.SC4Model
+      - AGC_Trees_Camphor_V02_21.7m_S1_90-0x6534284a-0xdd573712-0x6ee0b145.SC4Desc
+      - AGC_Trees_Camphor_V02_21.7m_S1_90-0x5ad0e817_0xf4b72fb_0x30000.SC4Model
+      - AGC_Trees_Camphor_V01_22m_S1_90-0x6534284a-0xec736ecd-0xcedd8692.SC4Desc
+      - AGC_Trees_Camphor_V01_22m_S1_90-0x5ad0e817_0x4ed4851e_0x30000.SC4Model
+      - AGC_Trees_Camphor_P2_90_MMP.dat
+      - AGC_Trees_Camphor_P1_90_MMP.dat
+      - AGC_Trees_Cali_Fan_Palm_V06_20.3m_S1_90-0x6534284a-0xdd573712-0xaf92b1ed.SC4Desc
+      - AGC_Trees_Cali_Fan_Palm_V06_20.3m_S1_90-0x5ad0e817_0xf858e44_0x30000.SC4Model
+      - AGC_Trees_Cali_Fan_Palm_V05_19m_S1_90-0x6534284a-0xdd573712-0x6f8d569a.SC4Desc
+      - AGC_Trees_Cali_Fan_Palm_V05_19m_S1_90-0x5ad0e817_0x2f856c37_0x30000.SC4Model
+      - AGC_Trees_Cali_Fan_Palm_V04_14m_S1_90-0x6534284a-0xdd573712-0xcf92b29c.SC4Desc
+      - AGC_Trees_Cali_Fan_Palm_V04_14m_S1_90-0x5ad0e817_0x8f86dcd9_0x30000.SC4Model
+      - AGC_Trees_Cali_Fan_Palm_V03_13m_S1_90-0x6534284a-0xdd573712-0xaf92b2f4.SC4Desc
+      - AGC_Trees_Cali_Fan_Palm_V03_13m_S1_90-0x5ad0e817_0xaf879c4d_0x30000.SC4Model
+      - AGC_Trees_Cali_Fan_Palm_V02_10.6m_S1_90-0x6534284a-0xdd573712-0xcf92b31c.SC4Desc
+      - AGC_Trees_Cali_Fan_Palm_V02_10.6m_S1_90-0x5ad0e817_0xef882321_0x30000.SC4Model
+      - AGC_Trees_Cali_Fan_Palm_V01_7.8m_S1_90-0x6534284a-0xdd573712-0x4f92b3a9.SC4Desc
+      - AGC_Trees_Cali_Fan_Palm_V01_7.8m_S1_90-0x5ad0e817_0xef8832e3_0x30000.SC4Model
+      - AGC_Trees_Bay_Laurel_V06_8.7m_S1_90-0x6534284a-0xdd573712-0x2ea674d2.SC4Desc
+      - AGC_Trees_Bay_Laurel_V06_8.7m_S1_90-0x5ad0e817_0xd135ac29_0x30000.SC4Model
+      - AGC_Trees_Bay_Laurel_V05_8.4m_S1_90-0x6534284a-0xdd573712-0x0ea78c61.SC4Desc
+      - AGC_Trees_Bay_Laurel_V05_8.4m_S1_90-0x5ad0e817_0x9136c4d5_0x30000.SC4Model
+      - AGC_Trees_Bay_Laurel_V04_5.6m_S1_90-0x6534284a-0xdd573712-0xcea8028e.SC4Desc
+      - AGC_Trees_Bay_Laurel_V04_5.6m_S1_90-0x5ad0e817_0x91373b62_0x30000.SC4Model
+      - AGC_Trees_Bay_Laurel_V03_5.2m_S1_90-0x6534284a-0xdd573712-0xcea8179d.SC4Desc
+      - AGC_Trees_Bay_Laurel_V03_5.2m_S1_90-0x5ad0e817_0xb1375055_0x30000.SC4Model
+      - AGC_Trees_Bay_Laurel_V02_3.5m_S1_90-0x6534284a-0xdd573712-0x2ea81ffe.SC4Desc
+      - AGC_Trees_Bay_Laurel_V02_3.5m_S1_90-0x5ad0e817_0x513758d1_0x30000.SC4Model
+      - AGC_Trees_Bay_Laurel_V01_2.6m_S1_90-0x6534284a-0xdd573712-0xaea8c433.SC4Desc
+      - AGC_Trees_Bay_Laurel_V01_2.6m_S1_90-0x5ad0e817_0x9137fd50_0x30000.SC4Model
+      - AGC_Trees_Balitbitan_V05_12.3m_S1_90-0x6534284a-0xdd573712-0x2f8c0573.SC4Desc
+      - AGC_Trees_Balitbitan_V05_12.3m_S1_90-0x5ad0e817_0x106a5f6d_0x30000.SC4Model
+      - AGC_Trees_Balitbitan_V04_10.7m_S1_90-0x6534284a-0xdd573712-0x0f8c055b.SC4Desc
+      - AGC_Trees_Balitbitan_V04_10.7m_S1_90-0x5ad0e817_0xb06ae99c_0x30000.SC4Model
+      - AGC_Trees_Balitbitan_V03_10.5m_S1_90-0x6534284a-0xdd573712-0x0f8c0544.SC4Desc
+      - AGC_Trees_Balitbitan_V03_10.5m_S1_90-0x5ad0e817_0xd091ded4_0x30000.SC4Model
+      - AGC_Trees_Balitbitan_V02_9m_S1_90-0x6534284a-0xdd573712-0x0f8c0524.SC4Desc
+      - AGC_Trees_Balitbitan_V02_9m_S1_90-0x5ad0e817_0x509266be_0x30000.SC4Model
+      - AGC_Trees_Balitbitan_V01_7.4m_S1_90-0x6534284a-0xdd573712-0x2f8c04bb.SC4Desc
+      - AGC_Trees_Balitbitan_V01_7.4m_S1_90-0x5ad0e817_0x50927702_0x30000.SC4Model
+      - AGC_Trees_Balitbitan_P1_90_MMP.dat
+      - AGC_Plants_Lavandula_Angustifolia_V05_2.2m_S1_90-0x6534284a-0xdd573712-0x4e7d997d.SC4Desc
+      - AGC_Plants_Lavandula_Angustifolia_V05_2.2m_S1_90-0x5ad0e817_0x709f354b_0x30000.SC4Model
+      - AGC_Plants_Lavandula_Angustifolia_V05_1.7m_S2_90-0x6534284a-0xdd573712-0xee7d995a.SC4Desc
+      - AGC_Plants_Lavandula_Angustifolia_V05_1.7m_S2_90-0x5ad0e817_0x2f940267_0x30000.SC4Model
+      - AGC_Plants_Lavandula_Angustifolia_V05_1.7m_S1_90-0x6534284a-0xdd573712-0xee0feadb.SC4Desc
+      - AGC_Plants_Lavandula_Angustifolia_V05_1.7m_S1_90-0x5ad0e817_0x709f21ae_0x30000.SC4Model
+      - AGC_Plants_Lavandula_Angustifolia_P1_90_MMP.dat
+      - AGC_Oceania_trees.dat
+      - AGC_Mediterranean_trees.dat
+      - AGC_European_trees.dat
+      - AGC_English_Oak_S_P2_90_MMP.dat
+      - AGC_English_Oak_S_P1_90_MMP.dat
+      - AGC_English_Oak_P2_90_MMP.dat
+      - AGC_English_Oak_P1_90_MMP.dat
+      - AGC_Date_Palm_P3_90_MMP.dat
+      - AGC_Date_Palm_P2_90_MMP.dat
+      - AGC_Date_Palm_P1_90_MMP.dat
+      - AGC_Cali_Fan_Palm_P1_90_MMP.dat
+      - AGC_Bay_Laurel_P2_90_MMP.dat
+      - AGC_Bay_Laurel_P1_90_MMP.dat
+      - AGC_Asian_trees.dat
+      - AGC_American_trees.dat
+      - AGC_Africa_and_Middle_East_trees.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ENVIRONMENT_ICON.thumb.png.23983403c43fd3c75145954b13e123ed.png
     lastModified: 2023-06-10T16:11:53Z
     name: AGC - Environment DLC
+    sha256: c8c023d4e34cfd6752529dd9eead4b9e98ae63a92fbba3ee500aca226d0e3b8c
+    size: 35920333
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_10/ENVIRONMENT_ICON.thumb.png.23983403c43fd3c75145954b13e123ed.png
+    timestamp: 2024-07-03T09:08:15.228Z
+    uncompressed: 50426564
     url: https://community.simtropolis.com/files/file/34720-agc-environment-dlc/
+    version: 5.0.0
   simtropolis/34814-agc-crane-vessel-sscv-thialf:
     authors:
       - Barroco Hispano
@@ -5617,4 +5776,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-43c2c618fac6b7de4fc16966c4966243-SW_Hydro%20Dam.jpg
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z

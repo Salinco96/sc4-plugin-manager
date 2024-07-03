@@ -1,5 +1,7 @@
 import { Box, Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
+import Markdown, { defaultUrlTransform } from "react-markdown"
+import remarkGfm from "remark-gfm"
 
 import { getCategories, getCategoryLabel } from "@common/categories"
 import { getFeatureLabel } from "@common/i18n"
@@ -16,9 +18,29 @@ export function PackageViewSummary({ packageId }: { packageId: string }): JSX.El
   return (
     <Box>
       {variantInfo.description && (
-        <Typography sx={{ whiteSpace: "pre-wrap" }} variant="body2">
+        <Markdown
+          components={{
+            p({ ref, ...props }) {
+              return <Typography component="p" mb={2} variant="body2" {...props} />
+            },
+          }}
+          remarkPlugins={[remarkGfm]}
+          urlTransform={(url, key, node) => {
+            if (url.startsWith("/index.php/")) {
+              url = "https://www.sc4evermore.com" + url
+            }
+
+            if (node.tagName === "a") {
+              node.properties.rel = "noreferrer"
+              node.properties.target = "_blank"
+              node.properties.title = url
+            }
+
+            return defaultUrlTransform(url)
+          }}
+        >
           {variantInfo.description}
-        </Typography>
+        </Markdown>
       )}
       {/* TODO: Better formatting (with Simtropolis user links?) */}
       <Typography variant="body2">

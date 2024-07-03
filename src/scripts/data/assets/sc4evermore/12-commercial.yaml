@@ -3,8 +3,306 @@ assets:
     authors:
       - Mattb325
     category: 300
-    dependencies: []
-    downloads: 981
+    dependencies:
+      - simtropolis/19338-peg-security-fencing-kit
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31006-supershk-mega-parking-textures
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the standard Commercial BATs by legendary BSC BATer Mattb325, which had been available on
+      the Lot Exchange (LEX) at SC4 Devotion. It includes the contents of 73 previously separate downloads. After battling a number of technical issues, software incompatibility ultimately shuttered
+      the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in
+      one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>There are two versions of this package that exist as separate downloads. One (MN) is for Maxis Nite (the default night settings), while the other (DN) is for Dark Nite, and is optimized for
+      use with darker Night Mods, such as the mods by SimFox and gizmo28.</p>\r
+
+      <p>Some of the Lots in here come with additional Ploppable options, or are Ploppable Only. Ploppable Only Lots are noted as \"(Ploppable)\" in the installer, and those with options will have the
+      Ploppable option deselectable at a sublevel (click \"+\" to expand and deselect the Ploppable verison if you do not wish to install it).</p>\r
+
+      <p>Updated to Version 2 (17 August 2023): Added Nokia Building CO and City College CS.</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which files you wish to install (making no changes here will install everything). To
+      expand options, click the small \"+\" next to the name of the section.</p>\r
+
+      <p>Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab
+      pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures):</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack (Version 4 / 9 August 2023 or
+      later)</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\">JENXPorkie Expanded Porkie Props</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/14-maxis-buildings-as-props-and-dlc-props-v2-1\">Maxis Buildings As Props and DLC Props</a></li>\r
+
+      <li>Mattb325 Urban Civics Prop Pack Vol 01 - <a href=\"/index.php/downloads/download/22-dependencies/96-mattb325-urban-civics-prop-pack-vol01-darknite\">DarkNite</a> or <a
+      href=\"/index.php/downloads/download/22-dependencies/97-mattb325-urban-civics-prop-pack-vol01-maxisnite\">MaxisNite</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/\">PEG Security Fencing Kit</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\">SHK Parking Pack</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/\">Super SHK MEGA Parking Textures</a></li>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Mattb325</li>\r
+
+      </ul>\r
+
+      <p>This package was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following previously-separate downloads. None of the Lots contained in the package exceed Stage 8, and all are designed for use with or without the Colossus Addon
+      Mod (CAM).</p>\r
+
+      <ol>\r
+
+      <li>17th St, Washington, DC</li>\r
+
+      <li>45 East Ave, Rochester, NY</li>\r
+
+      <li>85 Elizabeth St, Sydney (has optional Ploppable)</li>\r
+
+      <li>100 King St, Manchester</li>\r
+
+      <li>American Cement Building</li>\r
+
+      <li>American City Bank</li>\r
+
+      <li>Ardmore Investments</li>\r
+
+      <li>Ashland Ave Food Court</li>\r
+
+      <li>Audi Dealership</li>\r
+
+      <li>Bauhaus Mannheim</li>\r
+
+      <li>Bonzai Building</li>\r
+
+      <li>Bullocks Wilshire</li>\r
+
+      <li>Canadian Bitters-CS</li>\r
+
+      <li>Catalina Restaurant (Ploppable Only)</li>\r
+
+      <li>Chevrolet Dealer</li>\r
+
+      <li>Chez Mondo</li>\r
+
+      <li>Ciro's Nightclub</li>\r
+
+      <li>City College (CS)</li>\r
+
+      <li>Civic Offices</li>\r
+
+      <li>Columbia Savings Bank</li>\r
+
+      <li>Concord NH Post Office (has optional Ploppable)</li>\r
+
+      <li>Crosstown Hotel</li>\r
+
+      <li>David Jones (has optional Ploppable)</li>\r
+
+      <li>Debenhams (has optional Ploppable)</li>\r
+
+      <li>DHL Offices</li>\r
+
+      <li>Downtown Hotel</li>\r
+
+      <li>Eddy Hall-CS</li>\r
+
+      <li>Envoy Motel</li>\r
+
+      <li>Europa House</li>\r
+
+      <li>First Federal Bank</li>\r
+
+      <li>GE Money</li>\r
+
+      <li>Golden State Insurance</li>\r
+
+      <li>Harlequin Bldg (has optional Ploppable)</li>\r
+
+      <li>Harrods (has optional Ploppable)</li>\r
+
+      <li>Her Majesty's Hotel and Theatre</li>\r
+
+      <li>HP Offices</li>\r
+
+      <li>Hua Seng Enterprises Inc</li>\r
+
+      <li>Hungry Jacks</li>\r
+
+      <li>ING Direct Sydney</li>\r
+
+      <li>Kia Car Dealership (Lexington, KY)</li>\r
+
+      <li>Kyneton Sq</li>\r
+
+      <li>Luxury Car Dealership</li>\r
+
+      <li>Mail Distribution Center CS</li>\r
+
+      <li>McDonalds (new)</li>\r
+
+      <li>Millennium Hotel Knightsbridge</li>\r
+
+      <li>Mini Cooper Dealership (has optional Ploppable)</li>\r
+
+      <li>Modern Office</li>\r
+
+      <li>Motorola Building</li>\r
+
+      <li>Myer Department Store (has optional Ploppable)</li>\r
+
+      <li>National Geographic Headquarters</li>\r
+
+      <li>Niche Moderne</li>\r
+
+      <li>Nokia Building (CS)</li>\r
+
+      <li>Novotel</li>\r
+
+      <li>Omega Services</li>\r
+
+      <li>Pine Valley Growables</li>\r
+
+      <li>Pine Valley Mall (Ploppable Only, 18x18 Mega Lot)</li>\r
+
+      <li>PinYin Enterprises Ltd</li>\r
+
+      <li>PWN London CS</li>\r
+
+      <li>Quay House</li>\r
+
+      <li>Red Cross House-CO</li>\r
+
+      <li>Retro Tower</li>\r
+
+      <li>SAC Commercial</li>\r
+
+      <li>Sagra Technology</li>\r
+
+      <li>SAKS Fifth Ave L.A.</li>\r
+
+      <li>SPACE Furniture Showroom</li>\r
+
+      <li>SPAR Distribution-CS</li>\r
+
+      <li>Standard Federal Savings and Loan</li>\r
+
+      <li>Teville Square</li>\r
+
+      <li>The Bon Marche</li>\r
+
+      <li>Transport Indemnity Building</li>\r
+
+      <li>Internet Troll Factory</li>\r
+
+      <li>UK Retailers Pack</li>\r
+
+      <li>United Central Bank</li>\r
+
+      <li>Virgin Mobile</li>\r
+
+      <li>Zurich Insurance</li>\r
+
+      </ol>\r
+
+      <p>Various pieces of original documentation can be found in the \"~Documents\" folder, which, while installed in the Plugins directory, should be removed.</p>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/UK_DN_lg.jpg\" data-lightbox=\"lightbox102\"
+      data-alt=\"lightboxUK_DN_lg.jpg|McDonalds_lg.jpg|DHL_sn\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/UK_DN_lg.jpg\"
+      alt=\"UK_DN_lg\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/McDonalds_lg.jpg\" data-lightbox=\"lightbox102\"
+      data-alt=\"lightboxUK_DN_lg.jpg|McDonalds_lg.jpg|DHL_sn\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/McDonalds_lg.jpg\" alt=\"McDonalds_lg2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/DHL_sn.jpg\" data-lightbox=\"lightbox102\"
+      data-alt=\"lightboxUK_DN_lg.jpg|McDonalds_lg.jpg|DHL_sn\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/DHL_sn.jpg\"
+      alt=\"DHL_sn3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 989
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_DarkNite.zip
     files:
       - readme_mattb325_commercial.html
@@ -406,12 +704,16 @@ assets:
       - BSC/Mattb325/Commercial/David Jones_DN#/Ploppable/PLOP_5x4_Mattb325 David Jones_2c537a1a.SC4Lot
       - BSC/Mattb325/Commercial/Concord NH Post Office#/Ploppable/PLOP_3x3_Mattb325 Concord N.H. Post Office_284d28b2.SC4Lot
       - BSC/Mattb325/Commercial/85 Elizabeth St_DN#/Ploppable/PLOP_1x2_Mattb325 85 ElizabethSt (Overhanging)_4c331566.SC4Lot
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/UK_DN_lg.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/McDonalds_lg.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/DHL_sn.jpg
     lastModified: 2023-08-20T03:01:46-07:00
     name: SC4D LEX Legacy - Mattb325 Commercial Pack (Dark Nite)
     sha256: 93cbf66fb6124b4ced9ff3472f132781fa7823e9f4d834d6e23b7b083bb98f2c
     size: 72220583
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/UK_DN_lg.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 72287405
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/102-sc4d-lex-legacy-mattb325-commercial-pack-darknite
     version: 1-Dark
@@ -419,8 +721,306 @@ assets:
     authors:
       - Mattb325
     category: 300
-    dependencies: []
-    downloads: 1068
+    dependencies:
+      - simtropolis/19338-peg-security-fencing-kit
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31006-supershk-mega-parking-textures
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the standard Commercial BATs by legendary BSC BATer Mattb325, which had been available on
+      the Lot Exchange (LEX) at SC4 Devotion. It includes the contents of 73 previously separate downloads. After battling a number of technical issues, software incompatibility ultimately shuttered
+      the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in
+      one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>There are two versions of this package that exist as separate downloads. One (MN) is for Maxis Nite (the default night settings), while the other (DN) is for Dark Nite, and is optimized for
+      use with darker Night Mods, such as the mods by SimFox and gizmo28.</p>\r
+
+      <p>Some of the Lots in here come with additional Ploppable options, or are Ploppable Only. Ploppable Only Lots are noted as \"(Ploppable)\" in the installer, and those with options will have the
+      Ploppable option deselectable at a sublevel (click \"+\" to expand and deselect the Ploppable verison if you do not wish to install it).</p>\r
+
+      <p>Updated to Version 2 (17 August 2023): Added Nokia Building CO and City College CS.</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which files you wish to install (making no changes here will install everything). To
+      expand options, click the small \"+\" next to the name of the section.</p>\r
+
+      <p>Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab
+      pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures):</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack (Version 4 / 9 August 2023 or
+      later)</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\">JENXPorkie Expanded Porkie Props</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/14-maxis-buildings-as-props-and-dlc-props-v2-1\">Maxis Buildings As Props and DLC Props</a></li>\r
+
+      <li>Mattb325 Urban Civics Prop Pack Vol 01 - <a href=\"/index.php/downloads/download/22-dependencies/96-mattb325-urban-civics-prop-pack-vol01-darknite\">DarkNite</a> or <a
+      href=\"/index.php/downloads/download/22-dependencies/97-mattb325-urban-civics-prop-pack-vol01-maxisnite\">MaxisNite</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/\">PEG Security Fencing Kit</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\">SHK Parking Pack</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/\">Super SHK MEGA Parking Textures</a></li>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Mattb325</li>\r
+
+      </ul>\r
+
+      <p>This package was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following previously-separate downloads. None of the Lots contained in the package exceed Stage 8, and all are designed for use with or without the Colossus Addon
+      Mod (CAM).</p>\r
+
+      <ol>\r
+
+      <li>17th St, Washington, DC</li>\r
+
+      <li>45 East Ave, Rochester, NY</li>\r
+
+      <li>85 Elizabeth St, Sydney (has optional Ploppable)</li>\r
+
+      <li>100 King St, Manchester</li>\r
+
+      <li>American Cement Building</li>\r
+
+      <li>American City Bank</li>\r
+
+      <li>Ardmore Investments</li>\r
+
+      <li>Ashland Ave Food Court</li>\r
+
+      <li>Audi Dealership</li>\r
+
+      <li>Bauhaus Mannheim</li>\r
+
+      <li>Bonzai Building</li>\r
+
+      <li>Bullocks Wilshire</li>\r
+
+      <li>Canadian Bitters-CS</li>\r
+
+      <li>Catalina Restaurant (Ploppable Only)</li>\r
+
+      <li>Chevrolet Dealer</li>\r
+
+      <li>Chez Mondo</li>\r
+
+      <li>Ciro's Nightclub</li>\r
+
+      <li>City College (CS)</li>\r
+
+      <li>Civic Offices</li>\r
+
+      <li>Columbia Savings Bank</li>\r
+
+      <li>Concord NH Post Office (has optional Ploppable)</li>\r
+
+      <li>Crosstown Hotel</li>\r
+
+      <li>David Jones (has optional Ploppable)</li>\r
+
+      <li>Debenhams (has optional Ploppable)</li>\r
+
+      <li>DHL Offices</li>\r
+
+      <li>Downtown Hotel</li>\r
+
+      <li>Eddy Hall-CS</li>\r
+
+      <li>Envoy Motel</li>\r
+
+      <li>Europa House</li>\r
+
+      <li>First Federal Bank</li>\r
+
+      <li>GE Money</li>\r
+
+      <li>Golden State Insurance</li>\r
+
+      <li>Harlequin Bldg (has optional Ploppable)</li>\r
+
+      <li>Harrods (has optional Ploppable)</li>\r
+
+      <li>Her Majesty's Hotel and Theatre</li>\r
+
+      <li>HP Offices</li>\r
+
+      <li>Hua Seng Enterprises Inc</li>\r
+
+      <li>Hungry Jacks</li>\r
+
+      <li>ING Direct Sydney</li>\r
+
+      <li>Kia Car Dealership (Lexington, KY)</li>\r
+
+      <li>Kyneton Sq</li>\r
+
+      <li>Luxury Car Dealership</li>\r
+
+      <li>Mail Distribution Center CS</li>\r
+
+      <li>McDonalds (new)</li>\r
+
+      <li>Millennium Hotel Knightsbridge</li>\r
+
+      <li>Mini Cooper Dealership (has optional Ploppable)</li>\r
+
+      <li>Modern Office</li>\r
+
+      <li>Motorola Building</li>\r
+
+      <li>Myer Department Store (has optional Ploppable)</li>\r
+
+      <li>National Geographic Headquarters</li>\r
+
+      <li>Niche Moderne</li>\r
+
+      <li>Nokia Building (CO)</li>\r
+
+      <li>Novotel</li>\r
+
+      <li>Omega Services</li>\r
+
+      <li>Pine Valley Growables</li>\r
+
+      <li>Pine Valley Mall (Ploppable Only, 18x18 Mega Lot)</li>\r
+
+      <li>PinYin Enterprises Ltd</li>\r
+
+      <li>PWN London CS</li>\r
+
+      <li>Quay House</li>\r
+
+      <li>Red Cross House-CO</li>\r
+
+      <li>Retro Tower</li>\r
+
+      <li>SAC Commercial</li>\r
+
+      <li>Sagra Technology</li>\r
+
+      <li>SAKS Fifth Ave L.A.</li>\r
+
+      <li>SPACE Furniture Showroom</li>\r
+
+      <li>SPAR Distribution-CS</li>\r
+
+      <li>Standard Federal Savings and Loan</li>\r
+
+      <li>Teville Square</li>\r
+
+      <li>The Bon Marche</li>\r
+
+      <li>Transport Indemnity Building</li>\r
+
+      <li>Internet Troll Factory</li>\r
+
+      <li>UK Retailers Pack</li>\r
+
+      <li>United Central Bank</li>\r
+
+      <li>Virgin Mobile</li>\r
+
+      <li>Zurich Insurance</li>\r
+
+      </ol>\r
+
+      <p>Various pieces of original documentation can be found in the \"~Documents\" folder, which, while installed in the Plugins directory, should be removed.</p>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/UK_MN_lg.jpg\" data-lightbox=\"lightbox103\"
+      data-alt=\"lightboxUK_MN_lg.jpg|McDonalds_lg0.jpg|DHL_sn0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/UK_MN_lg.jpg\" alt=\"UK_MN_lg\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/McDonalds_lg0.jpg\" data-lightbox=\"lightbox103\"
+      data-alt=\"lightboxUK_MN_lg.jpg|McDonalds_lg0.jpg|DHL_sn0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/McDonalds_lg0.jpg\" alt=\"McDonalds_lg02\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/DHL_sn0.jpg\" data-lightbox=\"lightbox103\"
+      data-alt=\"lightboxUK_MN_lg.jpg|McDonalds_lg0.jpg|DHL_sn0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/DHL_sn0.jpg\" alt=\"DHL_sn03\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 1078
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_MaxisNite.zip
     files:
       - readme_mattb325_commercial.html
@@ -824,12 +1424,16 @@ assets:
       - BSC/Mattb325/Commercial/David Jones_MN#/Ploppable/PLOP_5x4_Mattb325 David Jones_2c537a1a.SC4Lot
       - BSC/Mattb325/Commercial/Concord NH Post Office#/Ploppable/PLOP_3x3_Mattb325 Concord N.H. Post Office_284d28b2.SC4Lot
       - BSC/Mattb325/Commercial/85 Elizabeth St_MN#/Ploppable/PLOP_1x2_Mattb325 85 ElizabethSt (Overhanging)_4c331566.SC4Lot
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/UK_MN_lg.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/McDonalds_lg0.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/DHL_sn0.jpg
     lastModified: 2023-08-20T03:02:34-07:00
     name: SC4D LEX Legacy - Mattb325 Commercial Pack (Maxis Nite)
     sha256: 9392d9ef0531a7c5d4de80de5bf3e5c4211e7b458fd5d7b2261663e42f0f2359
     size: 75991731
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/UK_MN_lg.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 76057782
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/103-sc4d-lex-legacy-mattb325-commercial-pack-maxisnite
     version: 2-Maxis
@@ -838,7 +1442,223 @@ assets:
       - Mattb325
     category: 300
     dependencies: []
-    downloads: 709
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the Commercial Wall-to-Wall (W2W) BATs by legendary BSC BATer Mattb325, which had been
+      available on the Lot Exchange (LEX) at SC4 Devotion. It includes the contents of 41 previously separate downloads. After battling a number of technical issues, software incompatibility
+      ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to
+      install them all in one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>There are two versions of this package that exist as separate downloads. One (MN) is for Maxis Nite (the default night settings), while the other (DN) is for Dark Nite, and is optimized for
+      use with darker Night Mods, such as the mods by SimFox and gizmo28.</p>\r
+
+      <p>Some of the Lots in here come with additional Ploppable options, or are Ploppable Only. Ploppable Only Lots are noted as \"(Ploppable)\" in the installer, and those with options will have the
+      Ploppable option deselectable at a sublevel (click \"+\" to expand and deselect the Ploppable verison if you do not wish to install it).</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which files you wish to install (making no changes here will install everything). To
+      expand options, click the small \"+\" next to the name of the section.</p>\r
+
+      <p>Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab
+      pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures):</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack (Version 4 / 9 August 2023 or
+      later)</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\">JENXPorkie Expanded Porkie Props</a></li>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Mattb325</li>\r
+
+      </ul>\r
+
+      <p>This package was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following previously-separate downloads. None of the Lots contained in the package exceed Stage 8, and all are designed for use with or without the Colossus Addon
+      Mod (CAM).</p>\r
+
+      <ol>\r
+
+      <li>1960s Diagonal Offices</li>\r
+
+      <li>1970s W2W Offices</li>\r
+
+      <li>5657 Wilshire Blvd</li>\r
+
+      <li>Amestoy Bldg</li>\r
+
+      <li>Bank Row</li>\r
+
+      <li>Bond Street</li>\r
+
+      <li>Boutiques</li>\r
+
+      <li>British Pub (Immoderate Cur)</li>\r
+
+      <li>Cheyne House</li>\r
+
+      <li>Clarence Street</li>\r
+
+      <li>Colourful Living Interiors</li>\r
+
+      <li>Coopers Hall</li>\r
+
+      <li>Exhibition Rd Kensington</li>\r
+
+      <li>Foveaux St</li>\r
+
+      <li>Foveaux St Lettings</li>\r
+
+      <li>Grosvenor Hotel</li>\r
+
+      <li>Harris St</li>\r
+
+      <li>High St</li>\r
+
+      <li>High Street Corner Offices</li>\r
+
+      <li>High Street Shops &amp; Offices</li>\r
+
+      <li>Historic Shops</li>\r
+
+      <li>Holland Park House</li>\r
+
+      <li>JB Covington Services</li>\r
+
+      <li>King George House</li>\r
+
+      <li>King St ACA Building</li>\r
+
+      <li>King St Sydney</li>\r
+
+      <li>Lundstrom House</li>\r
+
+      <li>McDonalds W2W</li>\r
+
+      <li>Miller St Offices</li>\r
+
+      <li>Newtown Post Office</li>\r
+
+      <li>Offices of the Exchequer</li>\r
+
+      <li>Pirie St Adelaide</li>\r
+
+      <li>QBE Insurance</li>\r
+
+      <li>Regent House</li>\r
+
+      <li>Sim Telecom Call Centre</li>\r
+
+      <li>Spy Bar</li>\r
+
+      <li>St Georges Hall Post Office</li>\r
+
+      <li>Swan Insurance</li>\r
+
+      <li>Sydney Gazette Offices</li>\r
+
+      <li>W2W Chinese Restaurant (Slow Boat Restaurant)</li>\r
+
+      <li>Woodstock Road</li>\r
+
+      </ol>\r
+
+      <p>Various pieces of original documentation can be found in the \"~Documents\" folder, which, while installed in the Plugins directory, should be removed.</p>\r
+
+      <p>Minor rev1 update (16 Aug 2023) to eliminate duplication of Mattb325_Post_Offices.dat.</p>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Amestoy_lg.jpg\" data-lightbox=\"lightbox104\"
+      data-alt=\"lightboxAmestoy_lg.jpg|ImmoderateCur_s.jpg|PWN_lg\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Amestoy_lg.jpg\" alt=\"Amestoy_lg\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/ImmoderateCur_s.jpg\" data-lightbox=\"lightbox104\"
+      data-alt=\"lightboxAmestoy_lg.jpg|ImmoderateCur_s.jpg|PWN_lg\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ImmoderateCur_s.jpg\" alt=\"ImmoderateCur_s2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/PWN_lg.jpg\" data-lightbox=\"lightbox104\"
+      data-alt=\"lightboxAmestoy_lg.jpg|ImmoderateCur_s.jpg|PWN_lg\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/PWN_lg.jpg\" alt=\"PWN_lg3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 718
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_W2W_DarkNite.zip
     files:
       - readme_mattb325_commercial_w2w.html
@@ -993,12 +1813,16 @@ assets:
       - BSC/Mattb325/Commercial W2W/1960s Diag Office (Ploppable)/mattb325_60s_Offices(Diag)-0x5ad0e817_0x7633f67d_0x30000.SC4Model
       - BSC/Mattb325/Commercial W2W/Historic Shops_DN/Ploppable/PLOP_1x2_MattB_HistoricShops_86c675dc.SC4Lot
       - BSC/Mattb325/Commercial W2W/Historic Shops_DN/Ploppable/PLOP_1x1_MattB_HistoricShops_a6c675ff.SC4Lot
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Amestoy_lg.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ImmoderateCur_s.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/PWN_lg.jpg
     lastModified: 2023-08-20T03:04:31-07:00
     name: SC4D LEX Legacy - Mattb325 Commercial W2W Pack (Dark Nite)
     sha256: add8e4b214c3d20b7aa6e8feaa4206d9e3bc32e329e6b658fa053dbd480d43f0
     size: 12237836
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Amestoy_lg.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 12277807
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/104-sc4d-lex-legacy-mattb325-commercial-w2w-pack-darknite
     version: "1"
@@ -1007,7 +1831,223 @@ assets:
       - Mattb325
     category: 300
     dependencies: []
-    downloads: 633
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the Commercial Wall-to-Wall (W2W) BATs by legendary BSC BATer Mattb325, which had been
+      available on the Lot Exchange (LEX) at SC4 Devotion. It includes the contents of 41 previously separate downloads. After battling a number of technical issues, software incompatibility
+      ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to
+      install them all in one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>There are two versions of this package that exist as separate downloads. One (MN) is for Maxis Nite (the default night settings), while the other (DN) is for Dark Nite, and is optimized for
+      use with darker Night Mods, such as the mods by SimFox and gizmo28.</p>\r
+
+      <p>Some of the Lots in here come with additional Ploppable options, or are Ploppable Only. Ploppable Only Lots are noted as \"(Ploppable)\" in the installer, and those with options will have the
+      Ploppable option deselectable at a sublevel (click \"+\" to expand and deselect the Ploppable verison if you do not wish to install it).</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which files you wish to install (making no changes here will install everything). To
+      expand options, click the small \"+\" next to the name of the section.</p>\r
+
+      <p>Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab
+      pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures):</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack (Version 4 / 9 August 2023 or
+      later)</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\">JENXPorkie Expanded Porkie Props</a></li>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Mattb325</li>\r
+
+      </ul>\r
+
+      <p>This package was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following previously-separate downloads. None of the Lots contained in the package exceed Stage 8, and all are designed for use with or without the Colossus Addon
+      Mod (CAM).</p>\r
+
+      <ol>\r
+
+      <li>1960s Diagonal Offices</li>\r
+
+      <li>1970s W2W Offices</li>\r
+
+      <li>5657 Wilshire Blvd</li>\r
+
+      <li>Amestoy Bldg</li>\r
+
+      <li>Bank Row</li>\r
+
+      <li>Bond Street</li>\r
+
+      <li>Boutiques</li>\r
+
+      <li>British Pub (Immoderate Cur)</li>\r
+
+      <li>Cheyne House</li>\r
+
+      <li>Clarence Street</li>\r
+
+      <li>Colourful Living Interiors</li>\r
+
+      <li>Coopers Hall</li>\r
+
+      <li>Exhibition Rd Kensington</li>\r
+
+      <li>Foveaux St</li>\r
+
+      <li>Foveaux St Lettings</li>\r
+
+      <li>Grosvenor Hotel</li>\r
+
+      <li>Harris St</li>\r
+
+      <li>High St</li>\r
+
+      <li>High Street Corner Offices</li>\r
+
+      <li>High Street Shops &amp; Offices</li>\r
+
+      <li>Historic Shops</li>\r
+
+      <li>Holland Park House</li>\r
+
+      <li>JB Covington Services</li>\r
+
+      <li>King George House</li>\r
+
+      <li>King St ACA Building</li>\r
+
+      <li>King St Sydney</li>\r
+
+      <li>Lundstrom House</li>\r
+
+      <li>McDonalds W2W</li>\r
+
+      <li>Miller St Offices</li>\r
+
+      <li>Newtown Post Office</li>\r
+
+      <li>Offices of the Exchequer</li>\r
+
+      <li>Pirie St Adelaide</li>\r
+
+      <li>QBE Insurance</li>\r
+
+      <li>Regent House</li>\r
+
+      <li>Sim Telecom Call Centre</li>\r
+
+      <li>Spy Bar</li>\r
+
+      <li>St Georges Hall Post Office</li>\r
+
+      <li>Swan Insurance</li>\r
+
+      <li>Sydney Gazette Offices</li>\r
+
+      <li>W2W Chinese Restaurant (Slow Boat Restaurant)</li>\r
+
+      <li>Woodstock Road</li>\r
+
+      </ol>\r
+
+      <p>Various pieces of original documentation can be found in the \"~Documents\" folder, which, while installed in the Plugins directory, should be removed.</p>\r
+
+      <p>Minor rev1 update (16 Aug 2023) to eliminate duplication of Mattb325_Post_Offices.dat.</p>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Amestoy_lg0.jpg\" data-lightbox=\"lightbox105\"
+      data-alt=\"lightboxAmestoy_lg0.jpg|ImmoderateCur_s0.jpg|PWN_lg0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Amestoy_lg0.jpg\" alt=\"Amestoy_lg0\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/ImmoderateCur_s0.jpg\" data-lightbox=\"lightbox105\"
+      data-alt=\"lightboxAmestoy_lg0.jpg|ImmoderateCur_s0.jpg|PWN_lg0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ImmoderateCur_s0.jpg\" alt=\"ImmoderateCur_s02\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/PWN_lg0.jpg\" data-lightbox=\"lightbox105\"
+      data-alt=\"lightboxAmestoy_lg0.jpg|ImmoderateCur_s0.jpg|PWN_lg0\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/PWN_lg0.jpg\" alt=\"PWN_lg03\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 645
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_W2W_MaxisNite.zip
     files:
       - readme_mattb325_commercial_w2w.html
@@ -1162,12 +2202,16 @@ assets:
       - BSC/Mattb325/Commercial W2W/1960s Diag Office/PLOP_2x1_Mattb325 Diagonal 1960s Office_a91e2bfb.SC4Lot
       - BSC/Mattb325/Commercial W2W/1960s Diag Office/mattb325_60s_Offices(Diagonal)-0x6534284a-0x13a0bd51-0xb6aeaa38.SC4Desc
       - BSC/Mattb325/Commercial W2W/1960s Diag Office/mattb325_60s_Offices(Diag)-0x5ad0e817_0x7633f67d_0x30000.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Amestoy_lg0.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ImmoderateCur_s0.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/PWN_lg0.jpg
     lastModified: 2023-08-20T03:05:00-07:00
     name: SC4D LEX Legacy - Mattb325 Commercial W2W Pack (Maxis Nite)
     sha256: a3b465f0f155684148f9971399e7ca04652c524ab932a69749a7e80e183e9a1a
     size: 12302774
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Amestoy_lg0.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 12343123
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/105-sc4d-lex-legacy-mattb325-commercial-w2w-pack-maxisnite
     version: "1"
@@ -1175,8 +2219,233 @@ assets:
     authors:
       - zero7
     category: 300
-    dependencies: []
-    downloads: 786
+    dependencies:
+      - simtropolis/19096-ndex-glenni-mega-props-vol01
+      - simtropolis/11617-ndex-texture-set-volume-1
+      - simtropolis/21770-lbt-mega-prop-pack-vol01
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/19338-peg-security-fencing-kit
+      - simtropolis/22527-hh-modular-parking-gray-version-2
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the Commercial BATs by zero7, which had been available on the Lot Exchange (LEX) at SC4
+      Devotion, encompassing a total of 19 downloads. After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007
+      onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs
+      they wish to install.</p>\r
+
+      <p>Please note that this pack <strong>may</strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly maintain,
+      update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4> Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab
+      pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p>This pack does include one CAMeLot: the Stage 9 Commercial Service version of the Natama Building. If you are not using the CAM, simply uncheck the \"CAM\" box in the installer.</p>\r
+
+      <p>The original documentation can be found in the \"_Documents\" folder inside the download.</p>\r
+
+      <div class=\"bannerfull\"><a name=\"credits\"></a>\r
+
+      <h4> Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>In order to avoid \"brown boxes\" from missing models, or blank spots from missing textures, ensure the following are installed.</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">BSC Common Dependencies</a> - specific files from the set include:\r
+
+      <ul>\r
+
+      <li>BSC Textures Vol 01</li>\r
+
+      <li>BSC Textures Vol 02</li>\r
+
+      <li>BSC Texture Pack Cycledogg V01b</li>\r
+
+      <li>BSC MEGA Props JES Vol01</li>\r
+
+      <li>BSC MEGA Props D66 Vol01 v2</li>\r
+
+      <li>BSC MEGA Props swi21 Vol01 v3</li>\r
+
+      <li>BSC MEGA Props Gascooker Vol01</li>\r
+
+      <li>BSC MEGA Props Mikeseith Vol01</li>\r
+
+      <li>BSC MEGA Props SG Vol01 v2</li>\r
+
+      <li>BSC MEGA Props CP Vol01</li>\r
+
+      <li>BSC MEGA Props Misc Vol02</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\">JENXPorkie Expanded Porkie Props</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/19096-ndex-glenni-mega-props-vol01/\">NDEX Glenni MEGA Props Vol01</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11617-ndex-texture-set-volume-1/\">NDEX Textures Vol 01</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/21770-lbt-mega-prop-pack-vol01/\">LBT MEGA Prop Pack Vol01</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\">PEG MTP SUPER PACK</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/\">PEG Security Fencing Kit</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/22527-hh-modular-parking-gray-version-2/\">HH Modular Parking (only HH Parking Textures 1a.dat is needed)</a></li>\r
+
+      </ul>\r
+
+      <p>If using the CAMeLots, the Colossus Addon Mod is needed - Version 2.1.0a for <a
+      href=\"/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem\">Windows</a> or <a
+      href=\"/index.php/downloads/download/26-gameplay-mods/52-colossus-addon-mod-version-2-1-0a-mac-by-invisichem\">Mac</a>.</p>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\"><a name=\"credits\"></a>\r
+
+      <h4> Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <ul>\r
+
+      <li>zero7</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\"><a name=\"contents\"></a>\r
+
+      <h4> Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following Commercial BATs by zero7. All are Growable unless marked:</p>\r
+
+      <ol>\r
+
+      <li>Abacus Financial Services</li>\r
+
+      <li>Bond Court</li>\r
+
+      <li>Bright Ideas Ltd</li>\r
+
+      <li>Calltech Office</li>\r
+
+      <li>Cathedral Street Studios</li>\r
+
+      <li>EIP Insurance Wok In</li>\r
+
+      <li>Enterprise House</li>\r
+
+      <li>Ginza Pearl</li>\r
+
+      <li>Horizon House (Ploppable Diagonal)</li>\r
+
+      <li>Louis Vuitton</li>\r
+
+      <li>Mirror Box Blue</li>\r
+
+      <li>Natama Building (requires CAM)</li>\r
+
+      <li>New Horizon House (Ploppable Diagonal)</li>\r
+
+      <li>Odeon Cinema</li>\r
+
+      <li>Richer Sounds and Rooms</li>\r
+
+      <li>Royal Oak Pub</li>\r
+
+      <li>Sunny Days Roadsters</li>\r
+
+      <li>Tamana Building</li>\r
+
+      <li>Wedge Tower</li>\r
+
+      </ol>\r
+
+      <p>Various pieces of original documentation and earlier Cleanitol definitions can be found in the \"_Documents\" folder in the download.</p>\r
+
+      </div>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/GinzaPearl_day.jpg\" data-lightbox=\"lightbox138\"
+      data-alt=\"lightboxGinzaPearl_day.jpg|Z7_CatStStudioDay.jpg|GinzaPearl_night.jpg|Z7_CatStStudioNight\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GinzaPearl_day.jpg\" alt=\"GinzaPearl_day\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Z7_CatStStudioDay.jpg\" data-lightbox=\"lightbox138\"
+      data-alt=\"lightboxGinzaPearl_day.jpg|Z7_CatStStudioDay.jpg|GinzaPearl_night.jpg|Z7_CatStStudioNight\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_CatStStudioDay.jpg\" alt=\"Z7_CatStStudioDay2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/GinzaPearl_night.jpg\" data-lightbox=\"lightbox138\"
+      data-alt=\"lightboxGinzaPearl_day.jpg|Z7_CatStStudioDay.jpg|GinzaPearl_night.jpg|Z7_CatStStudioNight\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GinzaPearl_night.jpg\" alt=\"GinzaPearl_night3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 794
     filename: SC4D_LEX_Legacy_zero7_Commercial_Pack.zip
     files:
       - readme_zero7_commercial.html
@@ -1302,12 +2571,16 @@ assets:
       - zero7/Commercial/Abacus Financial Services/CO$$5_4x3_Abacus Financial Services - zero7_67cd0d9f.SC4Lot
       - zero7/Commercial/Abacus Financial Services/CO$$3_5x4_Abacus Financial Services - zero7_f777793d.SC4Lot
       - zero7/Commercial/Abacus Financial Services/Abacus Financial Services - zero7-0x6534284a-0x73cb3347-0xb7cd0d71.SC4Desc
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GinzaPearl_day.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_CatStStudioDay.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GinzaPearl_night.jpg
     lastModified: 2023-08-26T23:57:58-07:00
     name: SC4D LEX Legacy - zero7 Commercial Pack
     sha256: 8f42a46b29c28c7a7be60bc69819ad2e25265d050e00afc3bff1ee8db52b1d5c
     size: 12166702
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GinzaPearl_day.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 12271710
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/138-sc4d-lex-legacy-zero7-commercial-pack
     version: "1"
@@ -1315,7 +2588,7 @@ assets:
     authors:
       - sc4evermore
     category: 300
-    downloads: 332
+    downloads: 336
     lastModified: 2024-05-23T15:17:53-07:00
     name: Ulisse Wolf - Five Nights At Freddy's
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/FNAF DAY.jpg
@@ -1324,8 +2597,180 @@ assets:
     authors:
       - Girafe
     category: 300
-    dependencies: []
-    downloads: 162
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This package includes darknite / maxisnite growable version of the Chalet Edelweiss.<br><span lang=\"EN-US\">For LOTters, the LOT is
+      available in Lot Editor, under the name: <b>CS$$2_4x4_Grfe_Edelweis.</b><br>Special thanks to <b>Mattb325 </b>for the modding and lotting, TSC <b>/ Simtropolis / SC4 devotion members</b> for
+      their support.</span></p>\r
+
+      <h3>LOT Details and information</h3>\r
+
+      <table style=\"border-collapse: collapse; width: 60%; height: 360px; background-color: #95a5a6; border-color: #000000; border-style: solid;\">\r
+
+      <tbody>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Lot size:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">4x4</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Building style:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Building: commercial, building CS$$, Style: Euro</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Growth stages:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">2</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Capacity satisfied:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">CS$: 342, C$$: 88</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Bulldoze cost:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">229$</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Worth:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">229</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Max. Fire stage:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">3</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Flammability:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">40</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 48px;\">\r
+
+      <td style=\"width: 29.2867%; height: 48px; background-color: #ced4d9; border: 1px solid #000000;\">Power consumption:</td>\r
+
+      <td style=\"width: 69.3497%; height: 48px; background-color: #ced4d9; border: 1px solid #000000;\">7</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Water consumption:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">86</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Air pollution:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">3</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Water pollution:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">2</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Garbage pollution:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">4</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"width: 29.2867%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">Construction time:</td>\r
+
+      <td style=\"width: 69.3497%; height: 24px; background-color: #ced4d9; border: 1px solid #000000;\">22</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p> </p>\r
+
+      <h3>Installation:</h3>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Installation:</span></b><span lang=\"EN-US\"> </span><span lang=\"EN-US\">Copy/Extract the <strong>BSC </strong>folder into your plugins (let it
+      merge with other other folder if you already have BSC or BSC/girafe folders in your plugins.</span></p>\r
+
+      <p class=\"textnormal\"><span style=\"color: #ba372a;\"><strong>Choose ONE from the two subfolders in the Chalet Edelweiss folder: either DN Model (dark/true-night) or MN Model (maxis night) and
+      remove the one which you do NOT wish to use. </strong></span> <span lang=\"EN-US\"> </span></p>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Un-Installing: </span></b><span lang=\"EN-US\">To un-install the files, simply bulldoze every lot from this download in your cities and delete the
+      files from the plugins folder afterwards.</span></p>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <p class=\"textnormal\"><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies
+      v8</a></p>\r
+
+      <p class=\"textnormal\">        BSC Essentials<br>        BSC MEGA Props CP Vol01<br>        BSC MEGA Props CP Vol02<br>        BSC TexturePack Cycledogg V01b<br><br><a
+      href=\"https://sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\">SC4D LEX Legacy - BSC VIP Girafe Flora Pack
+      V3</a><br>        BSC-VIP Girafe Subalpine firs</p>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\">SimFox Day and Nite Modd</a> - if you are using the DN (Dark Night/True Night) models</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Image_Chalet_Edelweiss_1.jpg\" data-lightbox=\"lightbox222\"
+      data-alt=\"lightboxImage_Chalet_Edelweiss_1.jpg|Image_Chalet_Edelweiss_2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_Chalet_Edelweiss_1.jpg\" alt=\"Image_Chalet_Edelweiss_1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Image_Chalet_Edelweiss_2.jpg\" data-lightbox=\"lightbox222\"
+      data-alt=\"lightboxImage_Chalet_Edelweiss_1.jpg|Image_Chalet_Edelweiss_2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_Chalet_Edelweiss_2.jpg\" alt=\"Image_Chalet_Edelweiss_22\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 169
     filename: BSC-VIP Girafe Chalet Edelweiss_2817.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_Chalet_Edelweiss.html
@@ -1335,12 +2780,15 @@ assets:
       - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
       - BSC/girafe/Chalet Edelweiss/MN Model/Grfe_Edelweiss_maxisnite-0x5ad0e817_0xbbda7073_0x30000.SC4Model
       - BSC/girafe/Chalet Edelweiss/DN Model/Grfe_Edelweiss_darknite-0x5ad0e817_0xbbda7073_0x30000.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_Chalet_Edelweiss_1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_Chalet_Edelweiss_2.jpg
     lastModified: 2024-01-22T07:36:51-08:00
     name: BSC-VIP Girafe Chalet Edelweiss
     sha256: c4ee1eeaf3eb3748356e0aa1f6205994e81e380889d50726d846e4084748ba64
     size: 3738861
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_Chalet_Edelweiss_1.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 4401626
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/222-bsc-vip-girafe-chalet-edelweiss
     version: "1.0"
@@ -1348,8 +2796,199 @@ assets:
     authors:
       - Girafe
     category: 300
-    dependencies: []
-    downloads: 252
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This package includes darknite and maxis night version of the CB21 Tower located in La Defense in Paris, France.<br><span
+      lang=\"EN-US\">For LOTters, these LOTs are available in Lot Editor, under the name: <b>PLOP_5x4_CB21_Tower.</b><br>Special thanks to Orange for modding, <b>BSC</b> <b>/ Simtropolis
+      Members</b>...</span></p>\r
+
+      <h3>LOT Details and information:</h3>\r
+
+      <table style=\"border-collapse: collapse; width: 60%; background-color: #ced4d9; border-color: #000000; border-style: solid;\" border=\"1\" cellspacing=\"1\" cellpadding=\"1\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>Lot size:</p>\r
+
+      </td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">5x4</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>Menu position:</p>\r
+
+      </td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>Building: Landmark CO$$$</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">Jobs:</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">CO$$ 7204 CO$$$ 5039</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>Plop cost:</p>\r
+
+      </td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>§ 32.578</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>Bulldoze cost:</p>\r
+
+      </td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>§ 2083</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>Monthly cost:</p>\r
+
+      </td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">\r
+
+      <p>-</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">Max fire stages:</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">5</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">Power consumption:</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">169</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">Water consumption:</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">1815</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">Air pollution:</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">25/6</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">Water pollution:</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">25/7</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">Garbage pollution:</td>\r
+
+      <td style=\"background-color: #ced4d9; border: 1px solid #000000; vertical-align: middle;\">10</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <h3> </h3>\r
+
+      <h3>Installation:</h3>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Installation:</span></b><span lang=\"EN-US\"> </span><span lang=\"EN-US\">Copy/Extract the <strong>BSC </strong>folder into your plugins (let it
+      merge with other other folder if you already have BSC or BSC/girafe folders in your plugins. </span><span lang=\"EN-US\">If you extracted the <em>~Documents</em> folder into your plugins, too,
+      it's highly recommended to keep it, but move it out of the Plugins folder.</span></p>\r
+
+      <p class=\"textnormal\"><span style=\"color: #ba372a;\"><strong>Choose ONE from the two subfolders in the CB21 Tower folder: either DN Model (dark/true-night) or MN Model (maxis night) and
+      remove the one which you do NOT wish to use. </strong></span> <span lang=\"EN-US\"> </span></p>\r
+
+      <p class=\"textnormal\">Bear in mind, you can find two *.sc4desc files. Those are building props, but since the IIDs of the two different night version models are the same these props are
+      duplicates (<strong>in their case the maxisnite/darknite designation doesn't have any relevance</strong>).</p>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Un-Installing: </span></b><span lang=\"EN-US\">To un-install the files, simply bulldoze every lot from this download in your cities and delete the
+      files from the plugins folder afterwards.</span></p>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\">SimFox Day and Nite Modd</a> - if you are using the DN (Dark Night/True Night) models</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_CB21_1.jpg\" data-lightbox=\"lightbox223\"
+      data-alt=\"lightboxIcon_CB21_1.jpg|Icon_CB21_2.jpg|Icon_CB21_3\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_CB21_1.jpg\" alt=\"Icon_CB21_1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_CB21_2.jpg\" data-lightbox=\"lightbox223\"
+      data-alt=\"lightboxIcon_CB21_1.jpg|Icon_CB21_2.jpg|Icon_CB21_3\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_CB21_2.jpg\" alt=\"Icon_CB21_22\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_CB21_3.jpg\" data-lightbox=\"lightbox223\"
+      data-alt=\"lightboxIcon_CB21_1.jpg|Icon_CB21_2.jpg|Icon_CB21_3\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_CB21_3.jpg\" alt=\"Icon_CB21_33\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 258
     filename: BSC-VIP Girafe CB21 Tower_2725.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_CB21_Tower.html
@@ -1362,12 +3001,16 @@ assets:
       - BSC/girafe/CB21 Tower/DN Model/CB21_tower_darknite-0x5ad0e817_0xdbcb0a94_0x30000.SC4Model
       - BSC/girafe/CB21 Tower/MN Model/CB21_tower_maxisnite-0x6534284a-0xf0c4599b-0x3bd2f0e7.SC4Desc
       - BSC/girafe/CB21 Tower/MN Model/CB21_tower_maxisnite-0x5ad0e817_0xdbcb0a94_0x30000.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_CB21_1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_CB21_2.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_CB21_3.jpg
     lastModified: 2024-01-22T07:51:47-08:00
     name: BSC-VIP Girafe CB21 Tower
     sha256: a73b1416b28e6bc23ea212097a04932d716cd62c383c95215b2b2f803c656da7
     size: 8764509
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_CB21_1.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 10088911
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/223-bsc-vip-girafe-cb21-tower
     version: "1.0"
@@ -1375,8 +3018,175 @@ assets:
     authors:
       - Girafe
     category: 300
-    dependencies: []
-    downloads: 250
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This package includes maxisnite and darknite  versions of the EDF Tower located in La Défense in Paris, France.<br><span
+      lang=\"EN-US\">For LOTters, these LOTs are available in Lot Editor, under the name: <b>PLOP_6x3_EDF_Tower.</b><br>Special thanks to Jmyers2043 &amp; Mattb325 for modding, <b>BSC</b> <b>/
+      Simtropolis Members</b>...</span></p>\r
+
+      <h3>LOT Details and information:</h3>\r
+
+      <table style=\"border-collapse: collapse; width: 60%; height: 328px; background-color: #ced4d9; border-color: #000000; border-style: solid;\" border=\"2\" cellspacing=\"1\" cellpadding=\"1\">\r
+
+      <tbody>\r
+
+      <tr style=\"height: 40px;\">\r
+
+      <td style=\"height: 40px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">\r
+
+      <p>Lot size:</p>\r
+
+      </td>\r
+
+      <td style=\"background-color: #ced4d9; vertical-align: middle; height: 40px; border: 1px solid #000000;\">6x3</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 40px;\">\r
+
+      <td style=\"height: 40px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">\r
+
+      <p>Menu position:</p>\r
+
+      </td>\r
+
+      <td style=\"height: 40px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">\r
+
+      <p>Building: Landmark CO$$$</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">Jobs:</td>\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">CO$$ 5285 CO$$$ 3697</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 40px;\">\r
+
+      <td style=\"height: 40px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">\r
+
+      <p>Plop cost:</p>\r
+
+      </td>\r
+
+      <td style=\"height: 40px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">\r
+
+      <p>§ 26322</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 40px;\">\r
+
+      <td style=\"height: 40px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">\r
+
+      <p>Bulldoze cost:</p>\r
+
+      </td>\r
+
+      <td style=\"height: 40px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">\r
+
+      <p>§ 1683</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">Max fire stages:</td>\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">5</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">Power consumption:</td>\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">144</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">Water consumption:</td>\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">1557</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">Air pollution:</td>\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">21</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">Water pollution:</td>\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">21</td>\r
+
+      </tr>\r
+
+      <tr style=\"height: 24px;\">\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">Garbage pollution:</td>\r
+
+      <td style=\"height: 24px; vertical-align: middle; background-color: #ced4d9; border: 1px solid #000000;\">8</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <h3>Installation:</h3>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Installation:</span></b><span lang=\"EN-US\"> </span><span lang=\"EN-US\">Copy/Extract the <strong>BSC</strong> folder into your plugins (let it
+      merge with other other folder if you already have BSC or BSC/girafe folders in your plugins.</span></p>\r
+
+      <p class=\"textnormal\"><strong><span style=\"color: #ba372a;\">Choose ONE from the two subfolders in the EDF Tower folder: either DN Model (dark/true-night) or MN Model (maxis night) and remove
+      the one which you do NOT wish to use.</span></strong>  <span lang=\"EN-US\"> </span></p>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Un-Installing: </span></b><span lang=\"EN-US\">To un-install the files, simply bulldoze every lot from this download in your cities and delete the
+      files from the plugins folder afterwards.</span></p>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\">SimFox Day and Nite Modd</a> - if you are using the DN (Dark Night/True Night) models</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_EDF_1.jpg\" data-lightbox=\"lightbox224\"
+      data-alt=\"lightboxIcon_EDF_1.jpg|Icon_EDF_2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_EDF_1.jpg\"
+      alt=\"Icon_EDF_1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_EDF_2.jpg\" data-lightbox=\"lightbox224\"
+      data-alt=\"lightboxIcon_EDF_1.jpg|Icon_EDF_2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_EDF_2.jpg\"
+      alt=\"Icon_EDF_22\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 257
     filename: BSC-VIP Girafe EDF Tower_2820.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_EDF_Tower.html
@@ -1388,12 +3198,15 @@ assets:
       - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
       - BSC/girafe/EDF Tower/MN Model/EDF_tower_maxisnite-0x5ad0e817_0xfcafc2e5_0x30000.SC4Model
       - BSC/girafe/EDF Tower/DN Model/EDF_tower_darknite-0x5ad0e817_0xfcafc2e5_0x30000.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_EDF_1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_EDF_2.jpg
     lastModified: 2024-01-22T08:02:21-08:00
     name: BSC-VIP Girafe EDF Tower
     sha256: 933b3f5f1cb427b5802ca702c9e676f9501cee29bee0388bef264772af6a63db
     size: 8573084
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_EDF_1.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 9846940
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/224-bsc-vip-girafe-edf-tower
     version: "1.0"
@@ -1402,7 +3215,74 @@ assets:
       - Mattb325
     category: 300
     dependencies: []
-    downloads: 252
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>These are a series (16 models) of 19th century looking commercial shops that you typically find in the historical center of old towns
+      and cities. The models were made by <strong>Mattb325 </strong>the lotting and modding was made by <strong>SimCoug</strong>. </p>\r
+
+      <blockquote>\r
+
+      <p>I mentioned to mattb325 about an idea I had for some 19th century looking commercial shops that you typically find in the historical center of old towns and cities. He was gracious enough to
+      whip up some amazing models, so I was left to try and make some lots that would show these beauties.<br>Mattb made a huge number of variations (16 total models) so I modded them into prop
+      families. <br>There are 9 growable CS$$ lots, sized 1x1, 1x2 and 2x2.  The stats are in line with similar maxis buildings.<br>The US looking buildings will grow on the Chicago and NY tilesets,
+      while the UK looking models will grow on the European tileset.<br>I've also included two ploppable landmark lots with CS$$ jobs.</p>\r
+
+      <p>- SimCoug</p>\r
+
+      </blockquote>\r
+
+      <h3>Installation<strong>:</strong></h3>\r
+
+      <p><span style=\"text-decoration: underline;\">Installation</span><strong>: </strong>Copy/Extract the <strong>BSC </strong>parent folder into your Plugins. If you extracted
+      the <em>~Documents</em> folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r
+
+      <p>Feel free to delete the growable or ploppable lots, depending on your needs.    The MattB325_HistoricShops_Resource.dat is necessary though - don't remove that. In the <em>BSCProps</em>
+      folder you will find a <strong>Mattb325_Old_Shops_DN.dat</strong> and a <strong>Mattb325_Old_Shops_MN.dat</strong>.</p>\r
+
+      <p>Choose one of them depending on if you are using Dark Night/True Night (DN) mod or not.</p>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <p>Just the mattb325 models - <strong>INCLUDED</strong></p>\r
+
+      <p>If you use the dark nite version, you will need a dark nite mod. Either: (<a
+      href=\"http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\">http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>) OR (<a
+      href=\"http://gizmo.aplaceforwebsite.com/index.php\">http://gizmo.aplaceforwebsite.com/index.php</a>)</p>\r
+
+      <h3>Developer notes:</h3>\r
+
+      <p>I created these lots to fit in any city or town - everything is lotted using maxis so as to limit the dependencies.  Please feel free to change textures/props as you wish.  Think of this as
+      the bare bones version.     </p>\r
+
+      <h3>Support:</h3>\r
+
+      <p>For questions regarding this set, please feel free to visit my Lot Development Thread (<a href=\"https://community.simtropolis.com/forums/topic/68540-simcougs-lotmod-den/\"><strong>SimCoug's
+      Lot Den</strong></a>).</p>\r
+
+      <h3>Special Thanks:</h3>\r
+
+      <p>mattb325 of course!  Go over to his <a href=\"https://www.sc4devotion.com/forums/index.php?topic=327.0\">BAT thread</a> and give him a huge thanks</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MattB325_HistoricShops-d.jpg\" data-lightbox=\"lightbox229\"
+      data-alt=\"lightboxMattB325_HistoricShops-d.jpg|MattB325_HistoricShops-n\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MattB325_HistoricShops-d.jpg\" alt=\"MattB325_HistoricShops-d\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MattB325_HistoricShops-n.jpg\" data-lightbox=\"lightbox229\"
+      data-alt=\"lightboxMattB325_HistoricShops-d.jpg|MattB325_HistoricShops-n\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MattB325_HistoricShops-n.jpg\" alt=\"MattB325_HistoricShops-n2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 263
     filename: Mattb325-SimCoug Historic Shops.zip
     files:
       - BSC/BSCProps/Mattb325_Old_Shops_MN.dat
@@ -1419,12 +3299,15 @@ assets:
       - ~Documents/BSC_Readmes/Mattb325/MattB325_HistoricShops-d2.jpg
       - ~Documents/BSC_Readmes/Mattb325/MattB325_HistoricShops-d1.jpg
       - ~Documents/BSC_Readmes/Mattb325/MattB325_HistoricShops-d.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MattB325_HistoricShops-d.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MattB325_HistoricShops-n.jpg
     lastModified: 2024-01-23T07:14:48-08:00
     name: Mattb325-SimCoug Historic Shops
     sha256: 4119fbe5b91ba8f593903f7d342138d3afb6e420c59abbd8d66b220bc3aa5d33
     size: 8153788
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MattB325_HistoricShops-d.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 9470641
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/229-mattb325-simcoug-historic-shops
     version: "1.0"
@@ -1432,7 +3315,7 @@ assets:
     authors:
       - Kelis
     category: 300
-    downloads: 230
+    downloads: 234
     lastModified: 2024-01-23T07:39:12-08:00
     name: BNL Kelis Wilhelminatoren
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BNL_KELIS_Wihelminatoren_DAY.jpg
@@ -1441,7 +3324,7 @@ assets:
     authors:
       - Kelis
     category: 300
-    downloads: 193
+    downloads: 194
     lastModified: 2024-01-23T07:54:28-08:00
     name: BNL Kelis ABN AMRO Bank
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ABNDAY.jpg
@@ -1451,7 +3334,99 @@ assets:
       - kevdan25
     category: 300
     dependencies: []
-    downloads: 758
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A set of chain restaurants BATs by the BSC's kevdan25, on predominantly growable Lots.  Originally Lotted and Modded by BarbyW and
+      jplumbley, and repackaged by Tyberius06 and Tarkus.  All Lots are either CS$ or CS$$, ranging from Stage 1 up to Stage 5, and are compatible with both Maxis and CAM gameplay.</p>\r
+
+      <p>Dependencies:</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack</a>\r
+
+      <ul>\r
+
+      <li>BSC Essentials</li>\r
+
+      <li>BSC MEGA Props KevDan25  Vol01 v2</li>\r
+
+      <li>BSC MEGA Props Mikeseith Vol01</li>\r
+
+      <li>CSX MEGA Props Vol03 v3</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li><a href=\"/index.php/downloads/download/39-maxis-files/53-maxis-day-of-peace-dlc\">Maxis Day of Peace DLC</a></li>\r
+
+      </ul>\r
+
+      <p>Among the restaurants included are:</p>\r
+
+      <ul>\r
+
+      <li>Applebee's (4x4, CS$$ Stage 2)</li>\r
+
+      <li>Burger King (4x4, CS$$ Stage 1, also includes ploppable)</li>\r
+
+      <li>Chick-Fil-A (3x3, CS$$ Stage 2)</li>\r
+
+      <li>Chili's (3x3, CS$$ Stage 3)</li>\r
+
+      <li>Dairy Queen (4x3, CS$ Stage 3)</li>\r
+
+      <li>Del Taco (3x3, CS$ Stage 3)</li>\r
+
+      <li>Denny's (4x3, CS$$ Stage 2)</li>\r
+
+      <li>Dunkin' Donuts (3x3, CS$ Stage 3)</li>\r
+
+      <li>Friendly's (4x4, CS$$ Stage 2)</li>\r
+
+      <li>Hard Rock Cafe (4x4, CS$$ Stage 2, also includes Landmark)</li>\r
+
+      <li>Jack In The Box (3x4, CS$ Stage 5)</li>\r
+
+      <li>KFC/A&amp;W [Combo] (3x3, CS$ Stage 3)</li>\r
+
+      <li>Long John Silver's/Pizza Hut Express [Combo] (3x3, CS$ Stage 3)</li>\r
+
+      <li>McDonald's (3x4, CS$ Stage 3, also includes ploppable highway sign)</li>\r
+
+      <li>Sonic Drive-In (4x4, CS$ Stage 3)</li>\r
+
+      <li>Taco Bell (3x3, CS$$ Stage 2)</li>\r
+
+      <li>Wendy's (3x3, CS$ Stage 3)</li>\r
+
+      <li>Whataburger (4x3, CS$ Stage 3)</li>\r
+
+      </ul> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/kevdanlotspack.jpg\" data-lightbox=\"lightbox54\"
+      data-alt=\"lightboxkevdanlotspack.jpg|BK_s.jpg|BK_sn\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/kevdanlotspack.jpg\" alt=\"kevdanlotspack\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/BK_s.jpg\" data-lightbox=\"lightbox54\"
+      data-alt=\"lightboxkevdanlotspack.jpg|BK_s.jpg|BK_sn\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BK_s.jpg\"
+      alt=\"BK_s2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/BK_sn.jpg\" data-lightbox=\"lightbox54\"
+      data-alt=\"lightboxkevdanlotspack.jpg|BK_s.jpg|BK_sn\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BK_sn.jpg\"
+      alt=\"BK_sn3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 770
     filename: BSC kevdan25 Restaurant Lots.zip
     files:
       - _Documents/kevdan25lots - Replace Cleanitol - RUN ONCE BEFORE installing.txt
@@ -1484,14 +3459,18 @@ assets:
       - _Documents/BSC_Readmes/kevdan25/images/footer.gif
       - _Documents/BSC_Readmes/kevdan25/images/BK_sn.jpg
       - _Documents/BSC_Readmes/kevdan25/images/BK_s.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/kevdanlotspack.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BK_s.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BK_sn.jpg
     lastModified: 2024-01-20T04:57:28-08:00
     name: BSC kevdan25 Restaurants
     sha256: ae55a3623b4af9618bdd296f16bfb74d9ff8116b5905585311eb1a13ea25880b
     size: 1108924
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/kevdanlotspack.jpg
-    timestamp: 2024-06-27T15:10:38.073Z
+    timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 1198797
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/54-bsc-kevdan25-restaurants
     version: "2"
 
-timestamp: 2024-06-27T15:10:38.073Z
+timestamp: 2024-07-03T09:08:15.228Z
