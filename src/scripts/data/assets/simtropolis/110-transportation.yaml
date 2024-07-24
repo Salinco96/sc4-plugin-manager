@@ -903,6 +903,385 @@ assets:
     name: Small UK Suburban Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2005/thumb-d82acb5006a673ec5edd1678f8c31290-gggffrywuoituyrt87r8tpuofjdjvghuipdaghohgboeaghusaipupujgvfhgb.JPG
     url: https://community.simtropolis.com/files/file/12912-small-uk-suburban-station/
+  simtropolis/12913-bsc-dedwd-elrail-shops:
+    authors:
+      - deadwoods
+    category: 700
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/13153-bsc-mega-props-dae-vol02
+      - simtropolis/14973-bsc-mega-props-dae-vol01
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
+      	DEDWD Elevated Rail Shops<br>
+      	by deadwoods
+      </h1>
+
+
+      <p style="color:#000000; text-align:justify">
+      	Want public transport in your congested cities, but hate giving up valuable realestate to monorail or elevated rail. This set of lots combine elevated rail with commercial services (CS$) providing jobs for your sims in a series of brick arch style shops and workshops. Each is network enabled, so just plop and run the rail over it. The lots feature prop a prop family for the shopfronts, so a different combination will appear each time one of them is plopped.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This package contains four plopable lots; one 3 tiles wide (in the direction of the rail), one four tiles wide, one five tiles wide and one six tiles wide. All the lots are one tile deep, so you could have parallel rail lines running. Because the lots are network enabled they cannot be joined end-to-end; there must be a one tile gap (perhaps for a road). They are also very gradient sensitive. If you want to join a string of them together you should level the area first.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	These lots are not the same as simrolle's sbahhoff lots. His are are plopped on either side of a rail line (or elevated road) with the rail running down the middle. These are single lots that include the relevant rail. His are three tiles deep whereas these are one tile deep. His have special lots to include roads/avenues. These do not.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	These lots are <abbr title="BATT Squad Certification">BSC</abbr> BTE enabled. This means they will contribute to reward chains. Having enough of these in your city may entitle you to specific rewards.
+      </p>
+
+
+      <hr style="color:#000000; font-size:13.3333px; text-align:justify">
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="color:#cc0000">This is Version 3 (v103). All the lots have been updated with SC4PIM-X (x-tool), some underlying issues have been fixed and the contents have got the "Project ZIP" threatment</span>.<span> </span><span style="color:#cc0000">The IDs remained the same in this pack.</span>
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This v103 version (released as an update on STEX) will be equivalent with the version that is/will be released on SC4Evermore as part of the SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy compilations.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	In all cases players who has previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. For removing old versions you need to run the included cleanitol scrip with the<span> </span><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" target="_blank">nos.17's SC4 Cleanitol</a><span> </span>or with the<span> </span><a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow" target="_blank"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM</a><span> </span>tool.
+      </p>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Lot Specs
+      </h2>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				STAGE:
+      			</td>
+      			<td>
+      				N/A
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				LOT_SIZE:
+      			</td>
+      			<td>
+      				3 x 1, 4 x 1, 5 x 1, 6 x 1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				TYPE:
+      			</td>
+      			<td>
+      				Services
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				POLLUTION_EFFECT:
+      			</td>
+      			<td>
+      				Air = 2 (3x), 4 (4x), 6 (5x), 7 (6x)<br>
+      				Water = 1 (3x), 2 (4x), 3 (5x), 3 (6x)<br>
+      				Garbage = 8 (3x), 13 (4x), 18 (5x), 22 (6x)<br>
+      				Radiation = 0 
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				POLLUTION_RADII:
+      			</td>
+      			<td>
+      				Air = 5, Water = 5, Garbage = 0, Radiation = 0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				OCCUPANT_GROUPS:
+      			</td>
+      			<td>
+      				<table border="0" cellspacing="0" style="text-align:justify">
+      					<tbody>
+      						<tr>
+      							<td width="45%">
+      								0x1003
+      							</td>
+      							<td>
+      								Building: Transportation
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0x1303
+      							</td>
+      							<td>
+      								Building: El Train
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0x130A
+      							</td>
+      							<td>
+      								Building: MiscTransit
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0x13110
+      							</td>
+      							<td>
+      								Building: CS$
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0xB5C00A08
+      							</td>
+      							<td>
+      								0xB5C00A08
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0xB5C00200
+      							</td>
+      							<td>
+      								0xB5C00200
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0xB5C00202
+      							</td>
+      							<td>
+      								0xB5C00202
+      							</td>
+      						</tr>
+      					</tbody>
+      				</table>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				POWER_CONSUMED:
+      			</td>
+      			<td>
+      				6 (3x), 9 (4x), 13 (5x), 15 (6x)
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				WATER_CONSUMED:
+      			</td>
+      			<td>
+      				61 (3x), 90 (4x), 127 (5x), 150 (6x)
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				BULLDOZE_COST:
+      			</td>
+      			<td>
+      				192
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				PLOP_COST:
+      			</td>
+      			<td>
+      				90 (3x), 120 (4x), 200 (5x), 300 (6x)
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				WORTH:
+      			</td>
+      			<td>
+      				192
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				CAPACITY_SATISFIED (JOBS):
+      			</td>
+      			<td>
+      				<table border="0" cellspacing="0" style="text-align:justify">
+      					<tbody>
+      						<tr>
+      							<td width="45%">
+      								CS$ commerce
+      							</td>
+      							<td>
+      								116 (3x), 156 (4x), 177 (5x), 259 (6x)
+      							</td>
+      						</tr>
+      					</tbody>
+      				</table>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				DEMAND_SATISFIED:
+      			</td>
+      			<td>
+      				<table border="0" cellspacing="0" style="text-align:justify">
+      					<tbody>
+      						<tr>
+      							<td width="45%">
+      								Amenities $
+      							</td>
+      							<td>
+      								116 (3x), 156 (4x), 177 (5x), 259 (6x)
+      							</td>
+      						</tr>
+      					</tbody>
+      				</table>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				INCOME:
+      			</td>
+      			<td>
+      				0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				COST:
+      			</td>
+      			<td>
+      				10 (3x), 12 (4x), 15 (5x), 20 (6x)
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Installation
+      </h2>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Pre-reqs
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This lot needs the following pre-reqs. If they are not contained in the package, there's a hyperlink to them on the STEX.
+      </p>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				<b>File</b>
+      			</td>
+      			<td>
+      				<b>Link to file (if not in zip)</b>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				Custom Query
+      			</td>
+      			<td style="text-align:center">
+      				<p>
+      					<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow" target="_blank" title="BSC Common Dependnecies v9b"><abbr title="BATT Squad Certification">BSC</abbr> Essesntials 2024a</a><br>
+      					<span>(</span><small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small><span>)</span><br>
+      					<span style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">you might need the following file:</span><br style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">
+      					<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/?do=download&amp;r=202051&amp;confirm=1&amp;t=1&amp;csrfKey=470d6add04459050f421150d34b6a840" rel="" style="background-color:#e3eee6; color:#1f5e8d; font-size:14px; text-align:center">DEDWD_Commercial_commonfiles</a>
+      				</p>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_UnderRailShops_commonfiles.dat
+      			</td>
+      			<td colspan="1" rowspan="3" style="text-align:center">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol01 v3</a><br>
+      				(<small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small>)<br>
+      				<a href="https://community.simtropolis.com/files/file/14973-bsc-mega-props-dae-vol01/" rel="">Alternatively from<span> </span><span>STEX</span></a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_UnderRailShops_cs1_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_UnderRailShops_buildings.dat
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Install/Un-install
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	Copy/Extract the<span> </span><strong><span>Deadwoods</span><span> </span></strong>parent folder into your plugins. If you extracted the<span> ~</span><em><span>Documents</span><span> </span></em>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	To<span> </span><b>Un-Install<span> </span></b>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="background-color:#ffffff; color:#2980b9; font-size:12px; text-align:start">- Tyberius06 Edit: complete update of the package, see details in change log - 21.07.2024</span>
+      </p>
+
+      						</body>
+    filename: BSC DEDWD ElRail Shops v103.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_DEDWD_UnderRailShops_ElRail.txt
+      - deadwoods/Under Rail Shops/DEDWD_6x1_ElRailShops_6wide.SC4Lot
+      - deadwoods/Under Rail Shops/DEDWD_5x1_ElRailShops_5wide.SC4Lot
+      - deadwoods/Under Rail Shops/DEDWD_4x1_ElRailShops_4wide.SC4Lot
+      - deadwoods/Under Rail Shops/DEDWD_3x1_ElRailShops_3wide.SC4Lot
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_ElRailShops_stexpic2.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_ElRailShops_stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_ElRailShops_README.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/d6c34a2e472e9bd5c35c4ac79388f67c-DEDWD_ElRailShops_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/d6c34a2e472e9bd5c35c4ac79388f67c-DEDWD_ElRailShops_stexpic2.jpg
+    lastModified: 2024-07-21T22:58:12Z
+    name: BSC DEDWD ElRail Shops
+    sha256: d577f27539d0a7cf8a6419591840acfbdedcf05c260edc110589bd5a961c3005
+    size: 208998
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-d6c34a2e472e9bd5c35c4ac79388f67c-DEDWD_ElRailShops_stexpic1.jpg
+    timestamp: 2024-07-23T09:03:18.391Z
+    uncompressed: 265665
+    url: https://community.simtropolis.com/files/file/12913-bsc-dedwd-elrail-shops/
+    version: v103
   simtropolis/12913-dedwd-elevated-rail-shops:
     authors:
       - deadwoods
@@ -911,6 +1290,388 @@ assets:
     name: DEDWD Elevated Rail Shops
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-d6c34a2e472e9bd5c35c4ac79388f67c-DEDWD_ElRailShops_stexpic1.jpg
     url: https://community.simtropolis.com/files/file/12913-dedwd-elevated-rail-shops/
+  simtropolis/12914-bsc-dedwd-monorail-shops:
+    authors:
+      - deadwoods
+    category: 700
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/13153-bsc-mega-props-dae-vol02
+      - simtropolis/14973-bsc-mega-props-dae-vol01
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
+      	DEDWD Monorail Shops<br>
+      	by deadwoods
+      </h1>
+
+
+      <p style="color:#000000; text-align:justify">
+      	Want public transport in your congested cities, but hate giving up valuable realestate to monorail or elevated rail. This set of lots combine monorail with commercial services (CS$) providing jobs for your sims in a series of brick arch style shops and workshops. Each is network enabled, so just plop and run the rail over it. The lots feature prop a prop family for the shopfronts, so a different combination will appear each time one of them is plopped.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This package contains four plopable lots; one 3 tiles wide (in the direction of the rail), one four tiles wide, one five tiles wide and one six tiles wide. All the lots are one tile deep, so you could have parallel rail lines running. Because the lots are network enabled they cannot be joined end-to-end; there must be a one tile gap (perhaps for a road). They are also very gradient sensitive. If you want to join a string of them together you should level the area first.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	These lots are not the same as simrolle's sbahhoff lots. His are plopped on either side of a rail line (or elevated road) with the rail running down the middle. These are single lots that include the relevant rail. His are three tiles deep whereas these are one tile deep. His have special lots to include roads/avenues. These do not.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	These lots are <abbr title="BATT Squad Certification">BSC</abbr> BTE enabled. This means they will contribute to reward chains. Having enough of these in your city may entitle you to specific rewards.
+      </p>
+
+
+      <hr style="color:#000000; font-size:13.3333px; text-align:justify">
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="color:#cc0000">This is Version 3 (v103). All the lots have been updated with SC4PIM-X (x-tool), some underlying issues have been fixed and the contents have got the "Project ZIP" threatment</span>.<span> </span><span style="color:#cc0000">The IDs remained the same in this pack.</span>
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This v103 version (released as an update on STEX) will be equivalent with the version that is/will be released on SC4Evermore as part of the SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy compilations.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	In all cases players who has previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. For removing old versions you need to run the included cleanitol scrip with the<span> </span><strong><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" target="_blank" rel="">nos.17's SC4 Cleanitol</a></strong><span> </span>or with the<span> </span><strong><a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" target="_blank" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM</a></strong><span> </span>tool.
+      </p>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Lot Specs
+      </h2>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				STAGE:
+      			</td>
+      			<td>
+      				N/A
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				LOT_SIZE:
+      			</td>
+      			<td>
+      				3 x 1, 4 x 1, 5 x 1, 6 x 1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				TYPE:
+      			</td>
+      			<td>
+      				Services
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				POLLUTION_EFFECT:
+      			</td>
+      			<td>
+      				Air = 2 (3x), 4 (4x), 6 (5x), 7 (6x)<br>
+      				Water = 1 (3x), 2 (4x), 3 (5x), 3 (6x)<br>
+      				Garbage = 8 (3x), 13 (4x), 18 (5x), 22 (6x)<br>
+      				Radiation = 0 
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				POLLUTION_RADII:
+      			</td>
+      			<td>
+      				Air = 5, Water = 5, Garbage = 0, Radiation = 0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				OCCUPANT_GROUPS:
+      			</td>
+      			<td>
+      				<table border="0" cellspacing="0" style="text-align:justify">
+      					<tbody>
+      						<tr>
+      							<td width="45%">
+      								0x1003
+      							</td>
+      							<td>
+      								Building: Transportation
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0x1300
+      							</td>
+      							<td>
+      								Building: Rail
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0x1307
+      							</td>
+      							<td>
+      								Building: MonoRail
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0x13110
+      							</td>
+      							<td>
+      								Building: CS$
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0xB5C00A08
+      							</td>
+      							<td>
+      								0xB5C00A08
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0xB5C00200
+      							</td>
+      							<td>
+      								0xB5C00200
+      							</td>
+      						</tr>
+      						<tr>
+      							<td width="45%">
+      								0xB5C00202
+      							</td>
+      							<td>
+      								0xB5C00202
+      							</td>
+      						</tr>
+      					</tbody>
+      				</table>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				POWER_CONSUMED:
+      			</td>
+      			<td>
+      				6 (3x), 9 (4x), 13 (5x), 15 (6x)
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				WATER_CONSUMED:
+      			</td>
+      			<td>
+      				61 (3x), 90 (4x), 127 (5x), 150 (6x)
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				BULLDOZE_COST:
+      			</td>
+      			<td>
+      				192
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				PLOP_COST:
+      			</td>
+      			<td>
+      				90 (3x), 120 (4x), 200 (5x), 300 (6x)
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				WORTH:
+      			</td>
+      			<td>
+      				192
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				CAPACITY_SATISFIED (JOBS):
+      			</td>
+      			<td>
+      				<table border="0" cellspacing="0" style="text-align:justify">
+      					<tbody>
+      						<tr>
+      							<td width="45%">
+      								CS$ commerce
+      							</td>
+      							<td>
+      								116 (3x), 156 (4x), 177 (5x), 259 (6x)
+      							</td>
+      						</tr>
+      					</tbody>
+      				</table>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				DEMAND_SATISFIED:
+      			</td>
+      			<td>
+      				<table border="0" cellspacing="0" style="text-align:justify">
+      					<tbody>
+      						<tr>
+      							<td width="45%">
+      								Amenities $
+      							</td>
+      							<td>
+      								116 (3x), 156 (4x), 177 (5x), 259 (6x)
+      							</td>
+      						</tr>
+      					</tbody>
+      				</table>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				INCOME:
+      			</td>
+      			<td>
+      				0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="35%">
+      				COST:
+      			</td>
+      			<td>
+      				10 (3x), 12 (4x), 15 (5x), 20 (6x)
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Installation
+      </h2>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Pre-reqs
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This lot needs the following pre-reqs. If they are not contained in the package, there's a hyperlink to them on the STEX.
+      </p>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				<b>File</b>
+      			</td>
+      			<td>
+      				<b>Link to file (if not in zip)</b>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				Custom Query
+      			</td>
+      			<td style="text-align:center">
+      				<p>
+      					<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow" style="background-color:#e3eee6; color:#1f5e8d; font-size:14px; text-align:center" target="_blank" title="BSC Common Dependnecies v9b"><abbr style="border-bottom:none" title="BATT Squad Certification">BSC</abbr><span> </span>Essesntials 2024a</a><br style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">
+      					<span style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">(</span><small style="background-color:#e3eee6; color:#353535; font-size:11.2px; text-align:center">SC4D<span> </span><abbr style="border-bottom:none" title="Lot EXchange (SC4Devotion)">LEX</abbr><span> </span>Legacy -<span> </span><abbr style="border-bottom:none" title="BATT Squad Certification">BSC</abbr><span> </span>Common Dependencies</small><span style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">)</span><br style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">
+      					<span style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">you might need the following file:</span><br style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">
+      					<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/?do=download&amp;r=202051&amp;confirm=1&amp;t=1&amp;csrfKey=470d6add04459050f421150d34b6a840" rel="" style="background-color:#e3eee6; color:#1f5e8d; font-size:14px; text-align:center">DEDWD_Commercial_commonfiles</a><br>
+      					 
+      				</p>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_UnderRailShops_commonfiles.dat
+      			</td>
+      			<td colspan="1" rowspan="3" style="text-align:center">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol01 v3</a><br>
+      				(<small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small>)<br>
+      				<a href="https://community.simtropolis.com/files/file/14973-bsc-mega-props-dae-vol01/" rel="">Alternatively from<span> </span><span>STEX</span></a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_UnderRailShops_cs1_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_UnderRailShops_buildings.dat
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Install/Un-install
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	Copy/Extract the<span> </span><strong><span>Deadwoods</span><span> </span></strong>parent folder into your plugins. If you extracted the<span> ~</span><em><span>Documents</span><span> </span></em>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	To<span> </span><b>Un-Install<span> </span></b>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="background-color:#ffffff; color:#2980b9; font-size:12px; text-align:start">- Tyberius06 Edit: complete update of the package, see details in change log - 21.07.2024</span>
+      </p>
+
+      						</body>
+    filename: BSC DEDWD Monorail Shops v103.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_DEDWD_UnderRailShops_MonoRail.txt
+      - deadwoods/Under Rail Shops/DEDWD_6x1_MonoRailShops_6wide.SC4Lot
+      - deadwoods/Under Rail Shops/DEDWD_5x1_MonoRailShops_5wide.SC4Lot
+      - deadwoods/Under Rail Shops/DEDWD_4x1_MonoRailShops_4wide.SC4Lot
+      - deadwoods/Under Rail Shops/DEDWD_3x1_MonoRailShops_3wide.SC4Lot
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_MonorailShops_stexpic2.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_MonorailShops_stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_MonorailShops_README.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/1deca5e4e9d5f67206ebd678dfb789cc-DEDWD_MonorailShops_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/1deca5e4e9d5f67206ebd678dfb789cc-DEDWD_MonorailShops_stexpic2.jpg
+    lastModified: 2024-07-21T23:05:04Z
+    name: BSC DEDWD Monorail Shops
+    sha256: f72b4e0fd78207b9413aac0c1ddcf2e2cd1e0e02e9f7dbc8fbf022c3f309a1b5
+    size: 202135
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-1deca5e4e9d5f67206ebd678dfb789cc-DEDWD_MonorailShops_stexpic1.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 257741
+    url: https://community.simtropolis.com/files/file/12914-bsc-dedwd-monorail-shops/
+    version: v103
   simtropolis/12914-dedwd-monorail-shops:
     authors:
       - deadwoods
@@ -1459,10 +2220,91 @@ assets:
     authors:
       - uroncha
     category: 700
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	Brand-New RoadTop Subway-Bus station include Diagonal and Intersection.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-style:italic;">Bus Stop (12 Lots)</span>
+      </p>
+
+
+      <p>
+      	<span style="font-style:italic;">Street: Straight,Diagonal,T Intersection,X Intersection</span><br style="font-style:italic;">
+      	<span style="font-style:italic;">Road: Straight,Diagonal,T Intersection,X Intersection</span><br style="font-style:italic;">
+      	<span style="font-style:italic;">Oneway Road: Straight,Diagonal</span><br style="font-style:italic;">
+      	<span style="font-style:italic;">Avenue: Straight,Diagonal</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-style:italic;">Subway-Bus Station (8 Lots)</span><br style="font-style:italic;">
+      	<span style="font-style:italic;">Road: Straight,Diagonal,T Intersection,X Intersection</span><br style="font-style:italic;">
+      	<span style="font-style:italic;">Oneway Road: Straight,Diagonal</span><br style="font-style:italic;">
+      	<span style="font-style:italic;">Avenue: Straight,Diagonal</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Option: EuroRoad Texture
+      </p>
+
+
+      <p>
+      	Dependence: none
+      </p>
+
+      						</body>
+    filename: MTRT-V1.zip
+    files:
+      - MTRT-V1/readme.txt
+      - MTRT-V1/MTRT-TexEuro.dat
+      - MTRT-V1/MTRT-Tex.dat
+      - MTRT-V1/MTRT-StraightV1.dat
+      - MTRT-V1/MTRT-Models.dat
+      - MTRT-V1/MTRT-IntersectionV1.dat
+      - MTRT-V1/MTRT-DiagonalV1.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_10_2005/05bb619f69f6434ea102f1e88aa90592-Bus.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_10_2005/05bb619f69f6434ea102f1e88aa90592-Subway.jpg
     lastModified: 2023-09-11T09:45:42Z
     name: Diagonal  Intersection RoadTop SubwayBus Station
+    sha256: 05dff1a740f6b3486bc8b903755ae3546f71b8390109ce7503ffde73e591a720
+    size: 891914
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2005/thumb-05bb619f69f6434ea102f1e88aa90592-Bus.jpg
+    timestamp: 2024-07-23T09:03:18.391Z
+    uncompressed: 1746401
     url: https://community.simtropolis.com/files/file/14010-diagonal-intersection-roadtop-subwaybus-station/
+    version: "1.0"
   simtropolis/14020-bsc-its-glr-tramway-interchange-station:
     authors:
       - ILL Tonkso
@@ -6670,7 +7512,6 @@ assets:
       - ShadeSlayer
     category: 700
     dependencies:
-      - cycledogg/textures-vol01
       - simtropolis/15582-warehouses-batprops-part-a
       - simtropolis/15583-warehouses-batprops-part-b
       - simtropolis/16119-logistics-centres-megapack
@@ -7244,10 +8085,101 @@ assets:
     authors:
       - khoianh94
     category: 700
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p><strong>New: Additional lots with HD bus stops for <abbr title="Fractional Angle Railroad">FARR</abbr> and some updates are available <a
+      href="https://www.simtropolis.com/stex/details.cfm?id=23722" rel="external nofollow">here</a>.</strong><br><br>This Download contains 15 lots with several bus and tram stops for your city:</p>
+
+      <ul><li>Five lots with normal bus stops just like the ones from Maxis, but with higher capacities. They base on two models: The first (made by khoianh) is available in three different colours
+      while the second (made by Fluggi) comes as normal and diagonal version.</li>    <li>Four lots with bus stops which can be placed on roads. Three of them base on narrower versions of khoianh's
+      normal bus stop models, the forth lot has a simple bench for areas with low congestion.</li>    <li>Six lots for the tramway (<abbr title="Ground Light Rail">GLR</abbr>) with the three narrow
+      bus models and two lot sizes (2x1, 3x1) with different capacities.</li>
+
+      </ul><p>khoianh's Models and props are HD rendered to show the maximum amount of details.</p>
+
+      <p><strong>Dependencies:</strong></p>
+
+      <ul><li>Network Addon Mod (for tram stations)</li></ul><table cellspacing="1" cellpadding="1" border="1" align="left"
+      style="width:490px;height:273px;"><tbody><tr><td> </td>            <td>normal (khoianh)</td>            <td>normal
+      (Fluggi)</td>            <td>narrow</td>            <td>bench</td>            <td>Tram 2x1</td>            <td>Tram 3x1</td>        </tr><tr><td>Lot size:</td>            <td colspan="4"
+      style="text-align:center;">1x1</td>            <td style="text-align:center;">2x1</td>            <td style="text-align:center;">3x1</td>        </tr><tr><td>Plop cost:</td>            <td
+      style="text-align:center;">200 §</td>            <td colspan="2" style="text-align:center;">150 §</td>            <td style="text-align:center;">100 §</td>            <td
+      style="text-align:center;">150 §</td>            <td style="text-align:center;">200 §</td>        </tr><tr><td>Bulldoze cost:</td>            <td colspan="2" style="text-align:center;">10
+      §</td>            <td style="text-align:center;">15 §</td>            <td style="text-align:center;">10 §</td>            <td style="text-align:center;"> 25 §</td>            <td
+      style="text-align:center;">50 §</td>        </tr><tr><td>Monthly cost:</td>            <td style="text-align:center;">15 §</td>            <td colspan="2"
+      style="text-align:center;">10</td>            <td style="text-align:center;">5 §</td>            <td style="text-align:center;">15 §</td>            <td style="text-align:center;">20
+      §</td>        </tr><tr><td>Capacity:</td>            <td style="text-align:center;">3,000</td>            <td style="text-align:center;">2,500</td>            <td
+      style="text-align:center;">5,000</td>            <td style="text-align:center;">2,500</td>            <td style="text-align:center;">3,000</td>            <td
+      style="text-align:center;">5,000</td>        </tr><tr><td>Max. Fire Stage:</td>            <td colspan="6" style="text-align:center;">10</td>        </tr><tr><td>Power
+      consumption:</td>            <td style="text-align:center;">2 MWh/Month</td>            <td style="text-align:center;" colspan="3">1 MWh/Month</td>            <td
+      style="text-align:center;">            <p>3</p>            </td>            <td style="text-align:center;">5</td>        </tr><tr><td>Water consumption:</td>            <td colspan="2"
+      style="text-align:center;">1 Gallon/month</td>            <td colspan="2" style="text-align:center;">0</td>            <td colspan="2" style="text-align:center;">2
+      Gallons/month</td>        </tr><tr><td>Air pollution/radius:</td>            <td>1/1</td>            <td>1/1</td>            <td colspan="2" style="text-align:center;">2/1</td>            <td
+      colspan="2" style="text-align:center;">1/1</td>        </tr><tr><td>Water pollution/rad:</td>            <td>1/1</td>            <td>1/1</td>            <td colspan="2"
+      style="text-align:center;">1/1</td>            <td colspan="2" style="text-align:center;">1/1</td>        </tr><tr><td>Garbage pollution:</td>            <td colspan="4"
+      style="text-align:center;">1/0</td>            <td colspan="2" style="text-align:center;">2/0</td>        </tr></tbody></table><p> </p>
+
+      <p> </p>
+
+      <p> </p>
+
+      						</body>
+    filename: European Bus and Tram Stops.zip
+    files:
+      - Readme.txt
+      - Overview Tram Stops.jpg
+      - Overview Bus Stops.jpg
+      - European Bus and Tram Stops/Tram Stops/khoianh_Strassenbahnhaltestelle_rot_f8881bf4.SC4Lot
+      - European Bus and Tram Stops/Tram Stops/khoianh_Strassenbahnhaltestelle_grau_d8881c3d.SC4Lot
+      - European Bus and Tram Stops/Tram Stops/khoianh_Strassenbahnhaltestelle_blau_f8881390.SC4Lot
+      - European Bus and Tram Stops/Tram Stops/khoianh_kleine_Strassenbahnhaltestelle_rot_9888a77e.SC4Lot
+      - European Bus and Tram Stops/Tram Stops/khoianh_kleine_Strassenbahnhaltestelle_grau_9888a7b2.SC4Lot
+      - European Bus and Tram Stops/Tram Stops/khoianh_kleine_Strassenbahnhaltestelle_blau_1888a718.SC4Lot
+      - European Bus and Tram Stops/Props/khoianh_Sitzbank-0x6534284a-0xd6821eaa-0xd6efdfa5.SC4Desc
+      - European Bus and Tram Stops/Props/khoianh_Haltestellenschild_ohne-0x6534284a-0xd6821eaa-0x56efe10c.SC4Desc
+      - European Bus and Tram Stops/Props/khoianh_Haltestellenschild-0x6534284a-0xd6821eaa-0xf6efe0ea.SC4Desc
+      - European Bus and Tram Stops/Props/khoianh_Fahrkartenautomat-0x6534284a-0xd6821eaa-0x76efe116.SC4Desc
+      - European Bus and Tram Stops/Props/khoianh_Bushaltestelle-rot_schmal_Prop-0x6534284a-0xd6821eaa-0x36f0b6a7.SC4Desc
+      - European Bus and Tram Stops/Props/khoianh_Bushaltestelle-grau_schmal_Prop-0x6534284a-0xd6821eaa-0x76f0b66e.SC4Desc
+      - European Bus and Tram Stops/Props/khoianh_Bushaltestelle-blau_schmal_Prop-0x6534284a-0xd6821eaa-0xf6f0b6c4.SC4Desc
+      - European Bus and Tram Stops/Narrow (Roadtop)/khoianh_Bushaltestelle_Version_RTL-rot_96f0b91a.SC4Lot
+      - European Bus and Tram Stops/Narrow (Roadtop)/khoianh_Bushaltestelle_Version_RTL-klein_96efe4ed.SC4Lot
+      - European Bus and Tram Stops/Narrow (Roadtop)/khoianh_Bushaltestelle_Version_RTL-grau_d6f0b8ef.SC4Lot
+      - European Bus and Tram Stops/Narrow (Roadtop)/khoianh_Bushaltestelle_Version_RTL-blau_36f0b8c7.SC4Lot
+      - European Bus and Tram Stops/Models/khoianh_Sitzbank-0x5ad0e817_0xd6821eaa_0x120000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Haltestellenschild_ohne-0x5ad0e817_0xd6821eaa_0xe0000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Haltestellenschild-0x5ad0e817_0xd6821eaa_0x100000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Fahrkartenautomat-0x5ad0e817_0xd6821eaa_0xf0000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Bushaltestelle-rot_schmal-0x5ad0e817_0xd6821eaa_0x140000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Bushaltestelle-rot01-0x5ad0e817_0xd6821eaa_0xb0000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Bushaltestelle-grau_schmal-0x5ad0e817_0xd6821eaa_0x150000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Bushaltestelle-grau-0x5ad0e817_0xd6821eaa_0xc0000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Bushaltestelle-blau_schmal-0x5ad0e817_0xd6821eaa_0x130000.SC4Model
+      - European Bus and Tram Stops/Models/khoianh_Bushaltestelle-blau-0x5ad0e817_0xd6821eaa_0xa0000.SC4Model
+      - European Bus and Tram Stops/Models/Fluggi_BusStop_dia-0x5ad0e817_0x17aada02_0xd0000.SC4Model
+      - European Bus and Tram Stops/Models/Fluggi_BusStop-0x5ad0e817_0x17aada02_0xe0000.SC4Model
+      - European Bus and Tram Stops/Large/khoianh_Bushaltestelle_Version_1c_rot_b8888be4.SC4Lot
+      - European Bus and Tram Stops/Large/khoianh_Bushaltestelle_Version_1c_grau_18888bcd.SC4Lot
+      - European Bus and Tram Stops/Large/khoianh_Bushaltestelle_Version_1c_blau_18888a12.SC4Lot
+      - European Bus and Tram Stops/Large/Fluggi_Bushaltestelle_orthogonal_b8888c79.SC4Lot
+      - European Bus and Tram Stops/Large/Fluggi_Bushaltestelle_diagonal_58896e48.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_04_2010/a8569421f4c4261ce4cfb49a70cb9fb6-stex-bild1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_04_2010/a8569421f4c4261ce4cfb49a70cb9fb6-stex-bild2.jpg
     lastModified: 2010-04-16T16:22:16Z
     name: European Bus and Tram Stops
+    sha256: a4e7f8d911d63c811f948abb0dbb97a4ff08732f11b0402032263d194b14dce1
+    size: 1384654
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2010/thumb-a8569421f4c4261ce4cfb49a70cb9fb6-stex-bild1.jpg
+    timestamp: 2024-07-23T09:03:18.391Z
+    uncompressed: 1557956
     url: https://community.simtropolis.com/files/file/23417-european-bus-and-tram-stops/
+    version: "1.0"
   simtropolis/23418-super-bus-depo:
     authors:
       - Droidika
@@ -8180,10 +9112,106 @@ assets:
     authors:
       - tjh876
     category: 700
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p>Back again with my v2 of my modern realsitic subway station. V2 includes some features, like better textures, a redesigned elevator, plotable versions for not only roads, but avenues too.
+      Both are <abbr title="U-Drive-It">UDI</abbr> enabled, so it acts as a road/avenue, and a subway station. The model is similar to v1, but v2 has improved models, as well as textures, higher
+      capacity and more realsitic ulitity usage, and improved lot layout. There is included installation instructions, as well as all dependencies are included. Here are some more details about each
+      lot.</p>
+
+      <p> </p>
+
+      <p>Road Station</p>
+
+      <p><img alt="subwayroad2.jpg" src="http://img375.imageshack.us/img375/2097/subwayroad2.jpg" ></p>
+
+      <p><img alt="subwayroad1.jpg" src="http://img828.imageshack.us/img828/7862/subwayroad1.jpg" ></p>
+
+      <p>Size: 1x1</p>
+
+      <p>Capacity: 5000</p>
+
+      <p>Water Consumed: 10</p>
+
+      <p>Power Consumed: 10</p>
+
+      <p>Cost to plot: 100</p>
+
+      <p>Cost to Bulldoze: 100</p>
+
+      <p>Monthly cost: 20</p>
+
+      <p>No wealth</p>
+
+      <p><abbr title="U-Drive-It">UDI</abbr>/Traffic enabled: Yes</p>
+
+      <p> </p>
+
+      <p>Avenue Station</p>
+
+      <p><img alt="subwayave2lq.jpg" src="http://img571.imageshack.us/img571/7026/subwayave2lq.jpg" ></p>
+
+      <p>Size: 2x2</p>
+
+      <p>Water Consumed: 10</p>
+
+      <p>Power Consumed: 10</p>
+
+      <p>Capacity: 15000 (Larger station then road, each entrance can take up to 5000)</p>
+
+      <p>Cost to Plot: 100</p>
+
+      <p>Cost to Bulldoze: 100</p>
+
+      <p>Monthly cost: 20</p>
+
+      <p>No Wealth</p>
+
+      <p><abbr title="U-Drive-It">UDI</abbr>/Traffic enabled: Yes</p>
+
+      <p> </p>
+
+      <p><strong>DEPENDENCIES INCLUDED</strong></p>
+
+      <p> </p>
+
+      <p>Thanks for everyone's recomndations and support, as well as people who have gave me help in making these lots. Thanks to people who have tagged along in my <abbr title="Building Architect
+      Tool">BAT</abbr> thread, and their support is escpeccially helpful. This lot is endorsed by the SImtropolis Transit <abbr title="Building Architect Tool">BAT</abbr> Team. Please do not upload
+      these lots or any part of this upload without my permission and written approval. Thanks for veiwing my lots.</p>
+
+      <p> </p>
+
+      						</body>
+    filename: realisticsubwayv2.zip
+    files:
+      - realisticsubwayv2/Utils2x1_realisticsubway_avenue_596b3c3d.SC4Lot
+      - realisticsubwayv2/Utils1x1_SubwayStationrealisticv2_596b3a71.SC4Lot
+      - realisticsubwayv2/subwayiiredotextureattempti-0x6534284a-0x99472a58-0xf96b50aa.SC4Desc
+      - realisticsubwayv2/subwayiiredotextureattempti-0x6534284a-0x99472a58-0x796b3c63.SC4Desc
+      - realisticsubwayv2/subwayiiredotextureattempti-0x6534284a-0x99472a58-0x196b094e.SC4Desc
+      - realisticsubwayv2/subwayiiredotextureattempti-0x5ad0e817_0x39671410_0x30000.SC4Model
+      - realisticsubwayv2/subwayiiredotextureattempti-0x5ad0e817_0x19675b6c_0x30000.SC4Model
+      - realisticsubwayv2/README.txt
+      - realisticsubwayv2/mcdoinfos.dat
+      - realisticsubwayv2/elevatorsubwaytextureredomotorsee-0x6534284a-0x99472a58-0x196b3abd.SC4Desc
+      - realisticsubwayv2/elevatorsubwaytextureredomotorsee-0x5ad0e817_0xb9674605_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_08_2010/34fa3b222db43fa192d6fee4f7b30d36-frontpagesubwayv2fixv1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2010/34fa3b222db43fa192d6fee4f7b30d36-subwayave1.jpg
     lastModified: 2010-08-08T22:08:05Z
     name: Modern Realistic Subway Station V2
+    sha256: 5a3962e49e977900b5f4fea6fa29d3a882d66a074bce30d90ba46d94cfbb1fb5
+    size: 133823
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2010/thumb-34fa3b222db43fa192d6fee4f7b30d36-frontpagesubwayv2fixv1.jpg
+    timestamp: 2024-07-23T09:03:18.391Z
+    uncompressed: 159829
     url: https://community.simtropolis.com/files/file/24596-modern-realistic-subway-station-v2/
+    version: "2"
   simtropolis/24599-modern-realistic-subway-avenue-crosswalk-update:
     authors:
       - tjh876
@@ -11486,6 +12514,238 @@ assets:
     name: Scoty sub-bus A
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_09/arret_bus.thumb.png.826d57fcc0ae1c21aeea9421f4c3f147.png
     url: https://community.simtropolis.com/files/file/31940-scoty-sub-bus-a/
+  simtropolis/31940-scoty-subway-bus-stations:
+    authors:
+      - hugues aroux
+    category: 700
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/13698-additional-subway-entrance-props
+      - simtropolis/24596-modern-realistic-subway-station-v2
+      - simtropolis/23417-european-bus-and-tram-stops
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+      - simtropolis/34720-agc-environment-dlc
+      - simtropolis/35560-agc-casual-sims-dlc
+      - simtropolis/36152-agc-streets-dlc
+      - simtropolis/14010-diagonal-intersection-roadtop-subwaybus-station
+      - sc4evermore/214-bsc-tsc-girafe-french-road-signs
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/13-sfbt-essentials
+      - sc4evermore/188-vip-vnaoned-props-pack-vol01
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	Introduced in 2017 (scoty sub-bus A) with a single Bus and Metro line<span style="font-size:16px;"><strong><span style="color:#c0392b;">*</span></strong></span>, Scoty Subway &amp; Bus Stations, is a new version of this plugin, offering not one, but three sets of Stations.<br>
+      	Here are the A, B and C lines.<br>
+      	<span style="color:#ffffff;"><strong><span style="background-color:#27ae60;">A</span></strong></span> - The <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/86503-namspopof/?do=hovercard" data-mentionid="86503" href="https://community.simtropolis.com/profile/86503-namspopof/" rel="">@namspopof</a> shelters, from the previous version of the plugin.<br>
+      	<span style="color:#ffffff;"><span style="background-color:#d35400;">B</span></span> - Shelters, sims and street furnitures from <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/415633-barroco-hispano/?do=hovercard" data-mentionid="415633" href="https://community.simtropolis.com/profile/415633-barroco-hispano/" rel="">@Barroco Hispano</a><br>
+      	<span style="color:#ffffff;"><span style="background-color:#2980b9;">C</span></span> - Shelters from <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/28733-uroncha/?do=hovercard" data-mentionid="28733" href="https://community.simtropolis.com/profile/28733-uroncha/" rel="">@uroncha</a> (back to the origins! .. And the source of inspiration for this plugin).
+      </p>
+
+
+      <p>
+      	Each Set includes 22 Lots of subway stations and bus stops.<br>
+      	.. 12 bus stops :<br>
+      	    On street, road, oneway and avenue: ortho, diagonal.<br>
+      	    On street and road T and X.<br>
+      	.. 10 metro + bus stations :<br>
+      	    On street ortho and diagonal<br>
+      	    On road ortho, diagonal, T and X.<br>
+      	    On oneway and avenue ortho and diagonal.
+      </p>
+
+
+      <p>
+      	The capacity of the bus stop: Street, Road and oneway: 17000+ ; Avenue: 20000.<br>
+      	The capacity of the metro stations: 24000+.
+      </p>
+
+
+      <p>
+      	Note that stations on T and X can be placed in front of residences, without blocking the «road connection».<br>
+      	These lots appear in the miscellaneous transport menu.            
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#2980b9;">Road markings styles &amp; Textures</span></strong>
+      </p>
+
+
+      <p>
+      	This version 1.4 offers 8 styles of road markings. Each is available for Avenue, Oneway, Route EU, Route US, and for the 3 streets textures variants: Maxis, TarSealedStreets by Rivit and WestWindStreets by ... me.
+      </p>
+
+
+      <p>
+      	The inspiration for some of these marker styles comes from markers seen in a city in the country indicated in the file suffix: DE, NL, ES, IT and UK. It’s just a file name! The STD and STDW (for white) formats are visible in several countries. And the 8th «NoM» for: no marking, also visible in (many) countries!<br>
+      	With the exception of OneWay-Avenue, each network file is separate, allowing you to mix and match styles.
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#2980b9;">Previous version</span></strong><br>
+      	Lots from previous versions (1 to 1.3), planted in your cities, don’t have to be deleted. The names of the A-line DAT files have changed, but not the IDs.
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#2980b9;">Installation</span></strong><br>
+      	If this is not your first installation, or|and to check the presence of dependencies of this plugin, use the <span style="color:#8e44ad;">Clean&amp;Dep_scoty_SBS_1-4.txt</span> (.. <span style="font-size:16px;"><strong><span style="color:#c0392b;">**</span></strong></span> .. ) file in <a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="">SC4Cleanitol</a> or the old <a href="https://www.sc4evermore.com/index.php/downloads/download/18-bsc-cleanitol" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol</a>.<br>
+      	Place the contents of the ZIP file in your \Plugins directory.<br>
+      	<span style="color:#2980b9;">Then select the files you wish to keep</span>:<br>
+      	In \scoty_SubBusStations_A|B|C, select EUs or US, <abbr title="Left Hand Drive">LHD</abbr> or <abbr title="Right Hand Drive">RHD</abbr>.<br>
+      	In \scoty_SubBusStations_textures, multiple choice:<br>
+      	    - Either keep a directory (a marking style) in which you retain only the installed ; choose  your Street Maxis, TSR or WWS and for ow-avenue and road : EU or US.<br>
+      	    - Or you can mix one of the 8 styles, retaining only one of ow-ave, road and street.
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Dependences</strong></span><br>
+      	--- SBS A, B et C<br>
+      	.. <a href="https://www.toutsimcities.com/downloads/view/1882" rel="external nofollow">Nams PROPS PACK Vol 2</a><br>
+      	.. <a href="https://community.simtropolis.com/files/file/13698-additional-subway-entrance-props/" rel="">Additional Subway Entrance Props</a> ... (can keep only the model:<br>
+      	    RoadsideSubstairs_Mcdrye_0x33317b90.SC4Model<br>
+      	    RTMTV3_PropF_Subway_Mcdrye_SteelBlue.dat)<br>
+      	.. <a href="https://community.simtropolis.com/files/file/24596-modern-realistic-subway-station-v2/" rel="">Modern Realistic Subway Station V2</a> ... (can keep only the model:<br>
+      	     subwayiiredotextureattempti-0x5ad0e817_0x39671410_0x30000.SC4Model<br>
+      	    subwayiiredotextureattempti-0x6534284a-0x99472a58-0x796b3c63.SC4Desc)<br>
+      	.. <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/214-bsc-tsc-girafe-french-road-signs" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr>-<abbr title="ToutSimCities">TSC</abbr> Girafe French Road Signs</a><br>
+      	.. <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack</a><br>
+      	.. <a href="https://community.simtropolis.com/files/file/23417-european-bus-and-tram-stops/" rel="">European Bus and Tram Stops</a>    (can keep only the \models and \props directories)<br>
+      	.. <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials" rel="external nofollow"><abbr title="SimForum BAT Team">SFBT</abbr> Essentials</a><br>
+      	.. <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/188-vip-vnaoned-props-pack-vol01" rel="external nofollow">VIP Vnaoned Props Pack vol01 v3</a><br>
+      	.. <a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> LEGACY - <abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Flora Pack</a><br>
+      	    (lupins / cypresses / berries / maples / maples v2 <strong><span style="color:#c0392b;">**</span></strong>)<br>
+      	.. <a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-nam-cross-platform/" rel=""><abbr title="Network Addon Mod">NAM</abbr> 48+</a><br>
+      	--- SBS - B<br>
+      	.. <a href="https://community.simtropolis.com/files/file/34720-agc-environment-dlc/" rel="">AGC - Environment DLC</a> <span style="color:#c0392b;"><strong>**</strong></span><br>
+      	.. <a href="https://community.simtropolis.com/files/file/35560-agc-casual-sims-dlc/" rel="">AGC - Casual Sims DLC</a> <strong><span style="color:#c0392b;">**</span></strong><br>
+      	.. <a href="https://community.simtropolis.com/files/file/36152-agc-streets-dlc/" rel="">AGC - Streets DLC</a> <strong><span style="color:#c0392b;">**</span></strong><br>
+      	--- SBS - C<br>
+      	.. <a href="https://community.simtropolis.com/files/file/14010-diagonal-intersection-roadtop-subwaybus-station/" rel="">Diagonal Intersection RoadTop SubwayBus Station</a> .. (only MTRT-Models.dat)
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Thanks to all the creators of the props used here: Namspopof, Barroco-Hispano, Uroncha, Girafe (always !), McDrye, tjh876, khoianh &amp; Fluggi, Vnaoned, the <abbr title="SimForum BAT Team">SFBT</abbr> team and The <abbr title="Network Addon Mod">NAM</abbr>-Team!
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#c0392b;">* </span></strong>.. <em>«bah non !» ... Of course, there’s no «Lines» management in SC4! ..</em> <img alt="*;)" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_2.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_2@2x.gif 2x" title="*;)" width="15" ><br>
+      	<strong><span style="color:#c0392b;">**</span></strong> .. <em>make sure you have all the files for these DLC and Pack-Element (Simple ref. in Cleanitol) !!</em>
+      </p>
+
+      						</body>
+    filename: scoty_SubBusStations_1-4-1.zip
+    files:
+      - Scoty/scoty_SubBusStations/SBS_notice_1-4.pdf
+      - Scoty/scoty_SubBusStations/Clean&Dep_scoty_SBS_1-4.txt
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_street_RHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_street_LHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_street.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_road_US.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_road_EU_RHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_road_EU_LHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_road_EU.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_oneway.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_C/scoty_SBStations_C_avenue.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_B/scoty_SBStations_B_street.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_B/scoty_SBStations_B_road_US.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_B/scoty_SBStations_B_road_EU_RHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_B/scoty_SBStations_B_road_EU_LHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_B/scoty_SBStations_B_road_EU.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_B/scoty_SBStations_B_oneway.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_B/scoty_SBStations_B_avenue.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBS_A_languages_ave.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_street_RHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_street_LHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_street.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_road_US_RHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_road_EU_RHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_road_EU_LHD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_road_EU.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_oneway.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_A/scoty_SBStations_A_avenue.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_UK/scoty_SBStations_tex_street_WWS_UK.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_UK/scoty_SBStations_tex_street_TSR_UK.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_UK/scoty_SBStations_tex_street_Maxis_UK.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_UK/scoty_SBStations_tex_road_US_UK.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_UK/scoty_SBStations_tex_road_UK.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_UK/scoty_SBStations_tex_ow_ave_UK.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STDW/scoty_SBStations_tex_street_WWS_STDW.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STDW/scoty_SBStations_tex_street_TSR_STDW.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STDW/scoty_SBStations_tex_street_Maxis_STDW.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STDW/scoty_SBStations_tex_road_US_STDW.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STDW/scoty_SBStations_tex_road_EU_STDW.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STDW/scoty_SBStations_tex_ow_ave_STDW.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NoM/scoty_SBStations_tex_street_WWS_NoM.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NoM/scoty_SBStations_tex_street_TSR_NoM.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NoM/scoty_SBStations_tex_street_Maxis_NoM.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NoM/scoty_SBStations_tex_road_US_NoM.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NoM/scoty_SBStations_tex_road_EU_NoM.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NoM/scoty_SBStations_tex_ow_ave_NoM.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STD/scoty_SBStations_tex_street_WWS_STD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STD/scoty_SBStations_tex_street_TSR_STD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STD/scoty_SBStations_tex_street_Maxis_STD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STD/scoty_SBStations_tex_road_US_STD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STD/scoty_SBStations_tex_road_EU_STD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_STD/scoty_SBStations_tex_ow_ave_STD.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NL/scoty_SBStations_tex_street_WWS_NL.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NL/scoty_SBStations_tex_street_TSR_NL.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NL/scoty_SBStations_tex_street_Maxis_NL.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NL/scoty_SBStations_tex_road_US_NL.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NL/scoty_SBStations_tex_road_EU_NL.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_NL/scoty_SBStations_tex_ow_ave_NL.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_IT/scoty_SBStations_tex_street_WWS_IT.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_IT/scoty_SBStations_tex_street_TSR_IT.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_IT/scoty_SBStations_tex_street_Maxis_IT.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_IT/scoty_SBStations_tex_road_US_IT.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_IT/scoty_SBStations_tex_road_EU_IT.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_IT/scoty_SBStations_tex_ow_ave_IT.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_ES/scoty_SBStations_tex_street_WWS_ES.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_ES/scoty_SBStations_tex_street_TSR_ES.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_ES/scoty_SBStations_tex_street_Maxis_ES.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_ES/scoty_SBStations_tex_road_US_ES.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_ES/scoty_SBStations_tex_road_EU_ES.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_ES/scoty_SBStations_tex_ow_ave_ES.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_DE/scoty_SBStations_tex_street_WWS_DE.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_DE/scoty_SBStations_tex_street_TSR_DE.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_DE/scoty_SBStations_tex_street_Maxis_DE.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_DE/scoty_SBStations_tex_road_US_DE.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_DE/scoty_SBStations_tex_road_EU_DE.dat
+      - Scoty/scoty_SubBusStations/scoty_SubBusStations_textures/SubBusStations_tex_DE/scoty_SBStations_tex_ow_ave_DE.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/annonce_01.thumb.jpg.f610d853868146661e57e894bafd1f0b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/sbs_B_STD_s.thumb.jpg.cf04e023dd0360060d6db54908436d98.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/sbs_tex_styles.thumb.jpg.2cd9a39cf2aa368b31140cfeff294546.jpg
+    lastModified: 2024-07-18T22:47:11Z
+    name: Scoty Subway & Bus Stations
+    sha256: fae516fd24b26c9a7ac4d65ce80fa8adf343e7de9d7602ad77bb17774ffdaab4
+    size: 4030787
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/annonce_01.thumb.jpg.f610d853868146661e57e894bafd1f0b.jpg
+    timestamp: 2024-07-23T09:03:18.391Z
+    uncompressed: 5565549
+    url: https://community.simtropolis.com/files/file/31940-scoty-subway-bus-stations/
+    version: 1.4.1
   simtropolis/31949-kazukis-g-hsr-to-subway-network-conversion-lot:
     authors:
       - STEX Custodian
@@ -13321,6 +14581,497 @@ assets:
     name: Diagonal Road Tunnel
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/664eed206287a_LindinCity-Sep.264301716447990.thumb.jpg.36d8106cc6679e15bcee55dea184b1e2.jpg
     url: https://community.simtropolis.com/files/file/36260-diagonal-road-tunnel/
+  simtropolis/36317-next-gen-planes-pack-1:
+    authors:
+      - JoelMk2
+    category: 700
+    dependencies:
+      - sc4evermore/7-sc4d-lex-legacy-ultimate-airport-pack
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	In years gone by, SC4 aviation creators gave us modular airports allowing city builders to create more realistic, sometimes-sprawling airports with customisable terminals, concourses and runways.
+      </p>
+
+
+      <p>
+      	But in 2024, some aspects could use an update. New models of aircraft have been designed and launched, while older ones have retired. Airlines have started up, closed down, merged and rebranded. 
+      </p>
+
+
+      <p>
+      	This set is designed to bring a new set of airliners to the modular airport systems released by <strong>AC Team</strong> and others, which are now all found in the <a href="https://www.sc4evermore.com/index.php/downloads/download/19-transportation/7-sc4d-lex-legacy-ultimate-airport-pack" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy Ultimate Airport Pack</a>. This pack is the only external dependency for this set (and this set also doesn't make sense unless used together with the runways, taxiways and terminals found in the legacy pack).  
+      </p>
+
+
+      <p>
+      	<strong>What's included here:</strong>
+      </p>
+
+
+      <p>
+      	Passenger airliners from five aircraft families in a range of airline liveries:
+      </p>
+
+
+      <ul>
+      	<li>
+      		<strong>Airbus A220 - </strong>the smallest Airbus, a large regional jet or small mainline jet.
+      	</li>
+      	<li>
+      		<strong>Airbus A320neo - </strong>the 'new engine option' versions of the A320 family, a single-aisle jet that is one of the most common in the sky.
+      	</li>
+      	<li>
+      		<strong>Airbus A330neo - </strong>the 'new engine option' version of the A330 family, a twin-engine widebody jet for medium/long-haul flights.
+      	</li>
+      	<li>
+      		<strong>Airbus A350XWB - </strong>the newest Airbus widebody jet equipped with advanced tech, capable of ultra long haul flights.
+      	</li>
+      	<li>
+      		<strong>Boeing 777 - </strong>the largest Boeing twin-engine jet, also used on long-haul routes.
+      	</li>
+      </ul>
+
+
+      <p>
+      	Each one is lotted on a jetway lot. The widebody jets are on lots designed to fit in with the original AC Team Boeing 747 gates, while the narrowbody jets fit in with original Airbus A320 and Boeing 737 gates. There are also a few planes on 'remote' gates - using air-stairs rather than a jetway. These will link nicely to passenger walkways from the 'RMIP' sets.
+      </p>
+
+
+      <p>
+      	There are lots for empty gates, and some lots included if you want to customise things with parked planes and planes on your taxiways. 
+      </p>
+
+
+      <p>
+      	These are primarily for visually simulating an airport - but the planes do return some revenue to your city (in line with other modular plane lots released in the past - simulating fees paid by airlines). 
+      </p>
+
+
+      <p>
+      	<i><span style="color:#3498db;">The A320neo, A330neo and 777 have been developed as updates starting with models I recovered in old files from when I was part of the SimCity Aviation Group (<abbr title="SimCity Airport Group">SCAG</abbr>). Original 777 model credit to <strong>Pilotdaryl</strong>.</span><span style="color:#2980b9;"> </span><span style="color:#27ae60;">A350 and A220 models I have created new.</span> </i>
+      </p>
+
+
+      <p>
+      	<strong>Dependency:</strong>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/19-transportation/7-sc4d-lex-legacy-ultimate-airport-pack" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy Ultimate Airport Pack</a> - specifically the AC Mega Textures and AC Mega Props packs. 
+      </p>
+
+
+      <p>
+      	<i><strong>Note on installation:</strong></i>
+      </p>
+
+
+      <p>
+      	In order to overcome an issue with uploading, I've split the download into <strong>two .<em>zip </em>files</strong>. Core files needed for all airliner lots are in Vol1. Further airliners are in Vol2. Please download both - hopefully these can be combined in future. 
+      </p>
+
+
+      <p>
+      	The contents are structured into folders under <strong>JoelMk2/Next Gen Planes/<span style="color:#27ae60;">[Aircraft Model]</span>/<span style="color:#3498db;">[Airline Name]</span></strong>. For the planes/liveries you <strong><em>don't </em></strong>want to use you can remove either the .sc4lot file in this folder, or the entire folder (this will remove the lot and the aircraft props). I would suggest this if you want to reduce your plugins folder size and your Airports menu length. 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/667d1c7a1ce01_NextGenPlanesReleasePic1.thumb.jpg.27f5df3f30587732b40a7d9c627c90b6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/667d1c7a3181a_NextGenPlanesReleasePic2.thumb.jpg.73a529613c59389404db20af8dd11391.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/667d1c7a469b7_NextGenPlanesReleasePic4.thumb.jpg.0d225a3f76b0122176853de4199db9b4.jpg
+    lastModified: 2024-06-28T09:24:07Z
+    name: Next Gen Planes Pack 1
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/667d1c7a1ce01_NextGenPlanesReleasePic1.thumb.jpg.27f5df3f30587732b40a7d9c627c90b6.jpg
+    timestamp: 2024-07-23T10:27:16.370Z
+    url: https://community.simtropolis.com/files/file/36317-next-gen-planes-pack-1/
+    variants:
+      "201785":
+        filename: Next Gen Planes 1 vol2.zip
+        files:
+          - JoelMk2/Next Gen Planes/Boeing 777/United/JLY 77W United Taxi 90-0x6534284a-0xb365fe9d-0xb3e10b16.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/United/JLY 77W United Taxi 90-0x5ad0e817_0x529f3b4a_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/United/JLY 77W United Active-0x6534284a-0xb365fe9d-0x33de6a92.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/United/JLY 77W United Active-0x5ad0e817_0xb35d4007_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/United/JLY 77W Gate United_7370b650.SC4Lot
+          - JoelMk2/Next Gen Planes/Boeing 777/LATAM/JLY 77W LATAM Taxi 90-0x6534284a-0xb365fe9d-0x93e10b0d.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/LATAM/JLY 77W LATAM Taxi 90-0x5ad0e817_0x729f3a33_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/LATAM/JLY 77W LATAM Active-0x6534284a-0xb365fe9d-0x33dbb897.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/LATAM/JLY 77W LATAM Active-0x5ad0e817_0x935bc0db_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/LATAM/JLY 77W Gate LATAM_5370b61c.SC4Lot
+          - JoelMk2/Next Gen Planes/Boeing 777/American/JLY 77W Gate American_3370b5eb.SC4Lot
+          - JoelMk2/Next Gen Planes/Boeing 777/American/JLY 77W American Taxi 90-0x6534284a-0xb365fe9d-0x53e10b04.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/American/JLY 77W American Taxi 90-0x5ad0e817_0x929f4223_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/American/JLY 77W American Active-0x6534284a-0xb365fe9d-0xd3dbb89b.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/American/JLY 77W American Active-0x5ad0e817_0x135bcc22_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/Air NZ/JLY 77W Gate Air New Zealand_b370b533.SC4Lot
+          - JoelMk2/Next Gen Planes/Boeing 777/Air NZ/JLY 77W Air NZ Taxi 90-0x6534284a-0xb365fe9d-0x33e10b00.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/Air NZ/JLY 77W Air NZ Taxi 90-0x5ad0e817_0xf29f3ae0_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/Air NZ/JLY 77W Air NZ Active-0x6534284a-0xb365fe9d-0x13dbb8ae.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/Air NZ/JLY 77W Air NZ Active-0x5ad0e817_0x735bc89f_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/Air Canada/JLY 77W Gate Air Canada_b370b5a8.SC4Lot
+          - JoelMk2/Next Gen Planes/Boeing 777/Air Canada/JLY 77W Air Canada Taxi 90-0x6534284a-0xb365fe9d-0x13e10af3.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/Air Canada/JLY 77W Air Canada Taxi 90-0x5ad0e817_0x129f389d_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Boeing 777/Air Canada/JLY 77W Air Canada Active-0x6534284a-0xb365fe9d-0x13dbb8b6.SC4Desc
+          - JoelMk2/Next Gen Planes/Boeing 777/Air Canada/JLY 77W Air Canada Active-0x5ad0e817_0xf35bd3e6_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Virgin/JLY A35X Virgin Taxi 90-0x6534284a-0xb365fe9d-0xb3e10caa.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Virgin/JLY A35X Virgin Taxi 90-0x5ad0e817_0x129f4f06_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Virgin/JLY A35X Virgin Active-0x6534284a-0xb365fe9d-0x73de6cf5.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Virgin/JLY A35X Virgin Active-0x5ad0e817_0x735e778c_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Virgin/JLY A350-1000XWB Gate Virgin Atlantic_1370c9ce.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Singapore/JLY A359 Singapore Taxi 90-0x6534284a-0xb365fe9d-0x93e10c5b.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Singapore/JLY A359 Singapore Taxi 90-0x5ad0e817_0x729f4365_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Singapore/JLY A359 Singapore Active-0x6534284a-0xb365fe9d-0xb3de6d6f.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Singapore/JLY A359 Singapore Active-0x5ad0e817_0x735d4939_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Singapore/JLY A350-900XWB Gate Singapore Airlines_5370c8de.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/SAS/JLY A359 SAS Taxi 90-0x6534284a-0xb365fe9d-0x53e10c66.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/SAS/JLY A359 SAS Taxi 90-0x5ad0e817_0x129f4a37_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/SAS/JLY A359 SAS Active-0x6534284a-0xb365fe9d-0x33ef5867.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/SAS/JLY A359 SAS Active-0x5ad0e817_0x9458c8ae_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/SAS/JLY A350-900XWB Gate SAS Scandinavian_9370c8c4.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Qatar/JLY A35X Qatar Taxi 90-0x6534284a-0xb365fe9d-0x53e10ca0.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Qatar/JLY A35X Qatar Taxi 90-0x5ad0e817_0x529f4d54_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Qatar/JLY A35X Qatar Active-0x6534284a-0xb365fe9d-0x33dfa5d5.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Qatar/JLY A35X Qatar Active-0x5ad0e817_0x935e94b5_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Qatar/JLY A350-1000XWB Gate Qatar Airways_5370c9b7.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Qantas/JLY A35X Qantas Taxi 90-0x6534284a-0xb365fe9d-0xb3e10c99.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Qantas/JLY A35X Qantas Taxi 90-0x5ad0e817_0x329f4cff_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Qantas/JLY A35X Qantas Active-0x6534284a-0xb365fe9d-0x53dfa5fa.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Qantas/JLY A35X Qantas Active-0x5ad0e817_0xb35fb7f8_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Qantas/JLY A350-1000XWB Gate Qantas_d370c9a0.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/JAL/JLY A35X JAL Taxi 90-0x6534284a-0xb365fe9d-0x13e10c8c.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/JAL/JLY A35X JAL Taxi 90-0x5ad0e817_0x129f4c9b_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/JAL/JLY A35X JAL Active-0x6534284a-0xb365fe9d-0x93de6c5a.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/JAL/JLY A35X JAL Active-0x5ad0e817_0x535d4a7b_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/JAL/JLY A350-1000XWB Gate JAL Japan Airlines_b370c981.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Lufthansa/JLY A359 Lufthansa Taxi 90-0x6534284a-0xb365fe9d-0x13e10c55.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Lufthansa/JLY A359 Lufthansa Taxi 90-0x5ad0e817_0xb29f492a_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Lufthansa/JLY A359 Lufthansa Active-0x6534284a-0xb365fe9d-0x13dd0239.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Lufthansa/JLY A359 Lufthansa Active-0x5ad0e817_0xd35cfff8_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Lufthansa/JLY A350-900XWB Gate Lufthansa_7370c8a9.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Finnair/JLY A359 Finnair Taxi 90-0x6534284a-0xb365fe9d-0xd3e10c4b.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Finnair/JLY A359 Finnair Taxi 90-0x5ad0e817_0xf29f47d7_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Finnair/JLY A359 Finnair Active-0x6534284a-0xb365fe9d-0xd3de6d57.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Finnair/JLY A359 Finnair Active-0x5ad0e817_0xb35e6c4f_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Finnair/JLY A350-900XWB Gate Finnair_9370c88d.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Fiji/JLY A359 Fiji Taxi 90-0x6534284a-0xb365fe9d-0xd3e10c43.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Fiji/JLY A359 Fiji Taxi 90-0x5ad0e817_0xd29f44f6_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Fiji/JLY A359 Fiji Active-0x6534284a-0xb365fe9d-0x73dbd059.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Fiji/JLY A359 Fiji Active-0x5ad0e817_0x335be91c_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Fiji/JLY A350-900XWB Gate Fiji Airways_d370c872.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Etihad/JLY A35X Etihad Taxi 90-0x6534284a-0xb365fe9d-0x33e10c74.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Etihad/JLY A35X Etihad Taxi 90-0x5ad0e817_0xb29f4b16_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Etihad/JLY A35X Etihad Active-0x6534284a-0xb365fe9d-0xd3de6c24.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Etihad/JLY A35X Etihad Active-0x5ad0e817_0x935d44b6_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Etihad/JLY A350-1000XWB Gate Etihad Airways_1370c963.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Air France/JLY A359 Air France Taxi 90-0x6534284a-0xb365fe9d-0xd3e10c16.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Air France/JLY A359 Air France Taxi 90-0x5ad0e817_0x529f4849_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Air France/JLY A359 Air France Active-0x6534284a-0xb365fe9d-0xb3dd026d.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Air France/JLY A359 Air France Active-0x5ad0e817_0x535c755a_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Air France/JLY A350-900XWB Gate Air France_b370c828.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Delta/JLY A359 Delta Taxi 90-0x6534284a-0xb365fe9d-0x53e10c3d.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Delta/JLY A359 Delta Taxi 90-0x5ad0e817_0x729f4496_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Delta/JLY A359 Delta Active-0x6534284a-0xb365fe9d-0x73ef5859.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Delta/JLY A359 Delta Active-0x5ad0e817_0x7458aeaf_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Delta/JLY A350-900XWB Gate Delta_1370c857.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/British/JLY A35X British Taxi 90-0x6534284a-0xb365fe9d-0x73f4b5cf.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/British/JLY A35X British Taxi 90-0x5ad0e817_0xb3748254_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/British/JLY A35X British Active-0x6534284a-0xb365fe9d-0x73d9116e.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/British/JLY A35X British Active-0x5ad0e817_0x73592bd5_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/British/JLY A350-1000XWB Gate British Airways_1370c921.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A350/Air China/JLY A359 Air China Taxi 90-0x6534284a-0xb365fe9d-0x33e10c0f.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Air China/JLY A359 Air China Taxi 90-0x5ad0e817_0x129f4436_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Air China/JLY A359 Air China Active-0x6534284a-0xb365fe9d-0x33ef5849.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A350/Air China/JLY A359 Air China Active-0x5ad0e817_0x7458a925_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A350/Air China/JLY A350-900XWB Gate Air China_5370c804.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Virgin/JLY A339 Virgin Taxi 90-0x6534284a-0xb365fe9d-0x93e10bf8.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Virgin/JLY A339 Virgin Taxi 90-0x5ad0e817_0xf29f1d60_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Virgin/JLY A339 Virgin Atlantic Active-0x6534284a-0xb365fe9d-0x53d7e1b3.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Virgin/JLY A339 Virgin Atlantic Active-0x5ad0e817_0x5357e3c2_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Virgin/JLY A330-900neo Gate Virgin Atlantic_b370c7bb.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A330neo/TAP/JLY A339 TAP Taxi 90-0x6534284a-0xb365fe9d-0x33f4b5e8.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/TAP/JLY A339 TAP Taxi 90-0x5ad0e817_0x1374bffc_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/TAP/JLY A339 TAP Active-0x6534284a-0xb365fe9d-0x13d3d166.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/TAP/JLY A339 TAP Active-0x5ad0e817_0x3353e530_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/TAP/JLY A330-900neo Gate TAP_1370c730.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A330neo/ITA/JLY A339 ITA Taxi 90-0x6534284a-0xb365fe9d-0xd3e10bee.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/ITA/JLY A339 ITA Taxi 90-0x5ad0e817_0x329f1c5b_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/ITA/JLY A339 ITA Active-0x6534284a-0xb365fe9d-0xb3d3d15e.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/ITA/JLY A339 ITA Active-0x5ad0e817_0x9353ed00_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/ITA/JLY A330-900neo Gate ITA_7370c719.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Greenland/JLY A338 Air Greenland Taxi 90-0x6534284a-0xb365fe9d-0x13e10bc0.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Greenland/JLY A338 Air Greenland Taxi 90-0x5ad0e817_0x929f19a1_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Greenland/JLY A338 Air Greenland Active-0x6534284a-0xb365fe9d-0x53d9115c.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Greenland/JLY A338 Air Greenland Active-0x5ad0e817_0x13591c0b_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Greenland/JLY A330-800neo Gate Air Greenland_5370c6a0.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Delta/JLY A339 Delta Taxi 90-0x6534284a-0xb365fe9d-0xb3f4b5f0.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Delta/JLY A339 Delta Taxi 90-0x5ad0e817_0x53749fca_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Delta/JLY A339 Delta Active-0x6534284a-0xb365fe9d-0x53d7e1ae.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Delta/JLY A339 Delta Active-0x5ad0e817_0x5357e7c1_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Delta/JLY A330-900neo Gate Delta_5370c701.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Condor/JLY A339 Condor Taxi 90-0x6534284a-0xb365fe9d-0x33e10bdb.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Condor/JLY A339 Condor Taxi 90-0x5ad0e817_0x729f1f27_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Condor/JLY A339 Condor Active-0x6534284a-0xb365fe9d-0x33d3d14d.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Condor/JLY A339 Condor Active-0x5ad0e817_0x5353e85e_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Condor/JLY A330-900neo Gate Condor_1370c6dc.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Azul/JLY A339 Azul Taxi 90-0x6534284a-0xb365fe9d-0x13f4b5fe.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Azul/JLY A339 Azul Taxi 90-0x5ad0e817_0x3374987e_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Azul/JLY A339 Azul Active-0x6534284a-0xb365fe9d-0x5359395b.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Azul/JLY A339 Azul Active-0x5ad0e817_0x33529f36_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A330neo/Azul/JLY A330-900neo Gate Azul_b370c6c6.SC4Lot
+        sha256: ba9a30ab9efd6b6a93550b674a7309ad8acd7b0b1d00fc98cf1d820d6ab49dbe
+        size: 15919028
+        uncompressed: 18478727
+      "201786":
+        filename: Next Gen Planes 1 vol1.zip
+        files:
+          - JoelMk2/Next Gen Planes/_Misc Lots/JLY Widebody Gate Empty_737b83f4.SC4Lot
+          - JoelMk2/Next Gen Planes/_Misc Lots/JLY Remote Gate Empty_d37cc0ce.SC4Lot
+          - JoelMk2/Next Gen Planes/_Misc Lots/JLY Narrowbody Gate Empty_137b8501.SC4Lot
+          - JoelMk2/Next Gen Planes/_Misc Lots/JLY Customisable Taxiway Section_5382f451.SC4Lot
+          - JoelMk2/Next Gen Planes/_Misc Lots/JLY Customisable Taxiway Section (Widebodies)_5382f66c.SC4Lot
+          - JoelMk2/Next Gen Planes/_Misc Lots/JLY Customisable Taxiway Section (Narrowbodies)_5382f6cc.SC4Lot
+          - JoelMk2/Next Gen Planes/_Misc Lots/JLY Customisable Ramp Section Widebody_5382ee57.SC4Lot
+          - JoelMk2/Next Gen Planes/_Misc Lots/JLY Customisable Ramp Section Narrowbody_5382f3b5.SC4Lot
+          - JoelMk2/Next Gen Planes/_Common Files (do not delete)/Planes Cohort.dat
+          - JoelMk2/Next Gen Planes/_Common Files (do not delete)/Pallets and Trolleys.dat
+          - JoelMk2/Next Gen Planes/_Common Files (do not delete)/Loaders.dat
+          - JoelMk2/Next Gen Planes/_Common Files (do not delete)/Jetways.dat
+          - JoelMk2/Next Gen Planes/_Common Files (do not delete)/Fuel and Catering.dat
+          - JoelMk2/Next Gen Planes/_Common Files (do not delete)/Containers and Trolleys.dat
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Wizz/JLY A321neo STAIRGate Wizz Air_f3723bd1.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Wizz/JLY A321neo Gate Wizz Air_7370c657.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Wizz/JLY A321N Wizz Taxi 90-0x6534284a-0xb365fe9d-0x33e0618a.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Wizz/JLY A321N Wizz Taxi 90-0x5ad0e817_0x535fec4c_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Wizz/JLY A321N Wizz Stair-0x6534284a-0xb365fe9d-0x53dfbd0e.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Wizz/JLY A321N Wizz Stair-0x5ad0e817_0x535fd59e_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Wizz/JLY A321N Wizz Active-0x6534284a-0xb365fe9d-0xb3d52273.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Wizz/JLY A321N Wizz Active-0x5ad0e817_0xf3553fb7_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/United/JLY A321neo Gate United_7370c641.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/United/JLY A321N United Taxi 90-0x6534284a-0xb365fe9d-0x33e0617e.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/United/JLY A321N United Taxi 90-0x5ad0e817_0x135fe986_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/United/JLY A321N United Active-0x6534284a-0xb365fe9d-0xd3d7e19d.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/United/JLY A321N United Active-0x5ad0e817_0x9357fa31_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Spirit/JLY A320neo STAIRGate Spirit_33723d2b.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Spirit/JLY A320neo Gate Spirit_3370c1c9.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Spirit/JLY A320N Spirit Taxi 90-0x6534284a-0xb365fe9d-0x73e060ff.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Spirit/JLY A320N Spirit Taxi 90-0x5ad0e817_0x935ff1ad_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Spirit/JLY A320N Spirit Stair-0x6534284a-0xb365fe9d-0xb3dfbcf8.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Spirit/JLY A320N Spirit Stair-0x5ad0e817_0x535fd525_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Spirit/JLY A320N Spirit Active-0x6534284a-0xb365fe9d-0x13d7e0f2.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Spirit/JLY A320N Spirit Active-0x5ad0e817_0x1357f497_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/SAS/JLY A320neo Gate SAS Scandinavian_1370c1b2.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/SAS/JLY A320N Scandinavian Taxi 90-0x5ad0e817_0xd35ff085_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/SAS/JLY A320N SAS Taxi 90-0x6534284a-0xb365fe9d-0xb3e060f6.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/SAS/JLY A320N SAS Active-0x6534284a-0xb365fe9d-0x73d7e0eb.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/SAS/JLY A320N SAS Active-0x5ad0e817_0xf357f496_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Lufthansa/JLY A320neo Gate Lufthansa_7370c18c.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Lufthansa/JLY A320N Lufthansa Taxi 90-0x6534284a-0xb365fe9d-0x13e06117.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Lufthansa/JLY A320N Lufthansa Taxi 90-0x5ad0e817_0xd35ff02b_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Lufthansa/JLY A320N Lufthansa Active-0x6534284a-0xb365fe9d-0x53d726b3.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Lufthansa/JLY A320N Lufthansa Active-0x5ad0e817_0xf35743cb_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetstar/JLY A321neo STAIRGate JetStar_b3723e76.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetstar/JLY A321neo Gate JetStar_1370c62c.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetstar/JLY A321N Jetstar Taxi 90-0x6534284a-0xb365fe9d-0x93e06171.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetstar/JLY A321N Jetstar Taxi 90-0x5ad0e817_0x335febd4_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetstar/JLY A321N Jetstar Stair-0x6534284a-0xb365fe9d-0x13dfbd1b.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetstar/JLY A321N Jetstar Stair-0x5ad0e817_0xf35fcc8d_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetstar/JLY A321N Jetstar Active-0x6534284a-0xb365fe9d-0x53d7e191.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetstar/JLY A321N Jetstar Active-0x5ad0e817_0xb357fa34_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetblue/JLY A321neo Gate JetBlue_5370c601.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetblue/JLY A321N JetBlue Taxi 90-0x6534284a-0xb365fe9d-0x73e0613c.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetblue/JLY A321N JetBlue Taxi 90-0x5ad0e817_0x735feb5d_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetblue/JLY A321N JetBlue Active-0x6534284a-0xb365fe9d-0xd3d50fc8.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Jetblue/JLY A321N JetBlue Active-0x5ad0e817_0x53552be9_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/EasyJet/JLY A320neo STAIRGate EasyJet_13723a54.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/EasyJet/JLY A320neo Gate EasyJet_137236ee.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/EasyJet/JLY A320N EasyJet Taxi 90-0x6534284a-0xb365fe9d-0x53e060b5.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/EasyJet/JLY A320N EasyJet Taxi 90-0x5ad0e817_0xf35ff139_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/EasyJet/JLY A320N EasyJet Stair-0x6534284a-0xb365fe9d-0x93dfbcee.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/EasyJet/JLY A320N EasyJet Stair-0x5ad0e817_0xf35fcf8f_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/EasyJet/JLY A320N EasyJet Active-0x6534284a-0xb365fe9d-0xb3d504ca.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/EasyJet/JLY A320N EasyJet Active-0x5ad0e817_0x5355220c_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/American/JLY A321neo Gate American_f370c5d1.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/American/JLY A321N American Taxi 90-0x6534284a-0xb365fe9d-0x33e061b6.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/American/JLY A321N American Taxi 90-0x5ad0e817_0x935fea7b_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/American/JLY A321N American Active-0x6534284a-0xb365fe9d-0x13d7e15f.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/American/JLY A321N American Active-0x5ad0e817_0x9357f859_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/AirAsia/JLY A320neo STAIRGate AirAsia_13723cc0.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/AirAsia/JLY A320neo Gate AirAsia_7370c145.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/AirAsia/JLY A320N AirAsia Taxi 90-0x6534284a-0xb365fe9d-0xb3e06097.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/AirAsia/JLY A320N AirAsia Taxi 90-0x5ad0e817_0x335fef15_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/AirAsia/JLY A320N AirAsia Stair-0x6534284a-0xb365fe9d-0x93dfbd03.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/AirAsia/JLY A320N AirAsia Stair-0x5ad0e817_0xf35fcebe_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/AirAsia/JLY A320N AirAsia Active-0x6534284a-0xb365fe9d-0x13d7e0dd.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/AirAsia/JLY A320N AirAsia Active-0x5ad0e817_0xd357f0e6_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A321neo Gate Air New Zealand_d370c5bc.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A321neo Gate Air New Zealand (Black)_3370c5a7.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A321N Air NZTaxi 90-0x5ad0e817_0x135fea03_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A321N Air NZ Taxi 90-0x6534284a-0xb365fe9d-0x53e0612a.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A321N Air NZ Active-0x6534284a-0xb365fe9d-0x73d7e107.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A321N Air NZ Active-0x5ad0e817_0x1357f64e_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A321N Air NZ (Black) Active-0x6534284a-0xb365fe9d-0xd3d7e0ff.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A321N Air NZ (Black) Active-0x5ad0e817_0x1357f5ec_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A320neo Gate Air New Zealand_f370c100.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A320N Air NZ Taxi 90-0x6534284a-0xb365fe9d-0xb3e0608f.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A320N Air NZ Taxi 90-0x5ad0e817_0x535fef6e_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A320N Air NZ Active-0x6534284a-0xb365fe9d-0x53d504d1.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air New Zealand/JLY A320N Air NZ Active-0x5ad0e817_0xb3540a6e_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air China/JLY A320neo Gate Air China_1370c0e7.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air China/JLY A320N Air China Taxi 90-0x6534284a-0xb365fe9d-0xd3e06043.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air China/JLY A320N Air China Taxi 90-0x5ad0e817_0xd35fee9d_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air China/JLY A320N Air China Active-0x6534284a-0xb365fe9d-0x33dd132f.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A320neo/Air China/JLY A320N Air China Active-0x5ad0e817_0x335d2efe_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Swiss/JLY A221 Swiss Taxi 90-0x6534284a-0xb365fe9d-0x93e10b2e.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Swiss/JLY A221 Swiss Taxi 90-0x5ad0e817_0x929f152f_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Swiss/JLY A221 Swiss Active-0x6534284a-0xb365fe9d-0x73d7269f.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Swiss/JLY A221 Swiss Active-0x5ad0e817_0xf35742f7_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Swiss/JLY A221 Gate Swiss_5370bf1c.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Qantas/JLY A223 Qantas Taxi 90-0x6534284a-0xb365fe9d-0xd3e10bb3.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Qantas/JLY A223 Qantas Taxi 90-0x5ad0e817_0x329f181e_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Qantas/JLY A223 Qantas Active-0x6534284a-0xb365fe9d-0xb3d91141.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Qantas/JLY A223 Qantas Active-0x5ad0e817_0xd3592839_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Qantas/JLY A223 Gate QantasLink_1370c008.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Lufthansa/JLY A223 Lufthansa Taxi 90-0x6534284a-0xb365fe9d-0x13e10b90.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Lufthansa/JLY A223 Lufthansa Taxi 90-0x5ad0e817_0xf29f17cb_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Lufthansa/JLY A223 Lufthansa Active-0x6534284a-0xb365fe9d-0xd3dd0205.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Lufthansa/JLY A223 Lufthansa Active-0x5ad0e817_0x135cf237_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Lufthansa/JLY A223 Gate Lufthansa City_3370bfe6.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Korean/JLY A223 Korean Taxi 90-0x6534284a-0xb365fe9d-0x53e10b8a.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Korean/JLY A223 Korean Taxi 90-0x5ad0e817_0x729f175f_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Korean/JLY A223 Korean Active-0x6534284a-0xb365fe9d-0x13dd0bf9.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Korean/JLY A223 Korean Active-0x5ad0e817_0x135d2969_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Korean/JLY A223 Gate Korean Air_5370bfc8.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Jetblue/JLY A223 JetBlue Taxi 90-0x6534284a-0xb365fe9d-0x73e10b7a.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Jetblue/JLY A223 JetBlue Taxi 90-0x5ad0e817_0x929f170d_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Jetblue/JLY A223 JetBlue Active-0x6534284a-0xb365fe9d-0xb3dd01eb.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Jetblue/JLY A223 JetBlue Active-0x5ad0e817_0x735cf8d0_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Jetblue/JLY A223 Gate JetBlue_9370bfb0.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/ITA/JLY A221 ITA Taxi 90-0x6534284a-0xb365fe9d-0x13e10b38.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/ITA/JLY A221 ITA Taxi 90-0x5ad0e817_0xb29f14e5_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/ITA/JLY A221 ITA Active-0x6534284a-0xb365fe9d-0x93dd0159.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/ITA/JLY A221 ITA Active-0x5ad0e817_0x735d09c0_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/ITA/JLY A221 Gate ITA_3370bf0b.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Delta/JLY A221 Gate Delta_b370bef9.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Delta/JLY A221 Delta Taxi 90-0x6534284a-0xb365fe9d-0x53ea088d.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Delta/JLY A221 Delta Taxi 90-0x5ad0e817_0x93b7eee9_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Delta/JLY A221 Delta Active-0x6534284a-0xb365fe9d-0x33dd0143.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Delta/JLY A221 Delta Active-0x5ad0e817_0x735d0055_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Baltic/JLY A223 Gate AirBaltic_b370bf9c.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Baltic/JLY A223 AirBaltic Taxi 90-0x6534284a-0xb365fe9d-0x13e10b75.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Baltic/JLY A223 AirBaltic Taxi 90-0x5ad0e817_0xf29f168a_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Baltic/JLY A223 AirBaltic Active-0x6534284a-0xb365fe9d-0x93de6f7a.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Baltic/JLY A223 AirBaltic Active-0x5ad0e817_0xb35e7ecf_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Air France/JLY A223 Gate Air France_9370bf86.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Air France/JLY A223 Air FranceActive-0x5ad0e817_0xd35c723e_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Air France/JLY A223 Air France Taxi 90-0x6534284a-0xb365fe9d-0xb3e10b67.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Air France/JLY A223 Air France Taxi 90-0x5ad0e817_0xd29f1619_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Air France/JLY A223 Air France Active-0x6534284a-0xb365fe9d-0x93dd018d.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Air Canada/JLY A223 Gate Air Canada_d370bf50.SC4Lot
+          - JoelMk2/Next Gen Planes/Airbus A220/Air Canada/JLY A223 Air Canada Taxi 90-0x6534284a-0xb365fe9d-0x53e10b5d.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Air Canada/JLY A223 Air Canada Taxi 90-0x5ad0e817_0x729f15df_0x30000.SC4Model
+          - JoelMk2/Next Gen Planes/Airbus A220/Air Canada/JLY A223 Air Canada Active-0x6534284a-0xb365fe9d-0xd3dd01a3.SC4Desc
+          - JoelMk2/Next Gen Planes/Airbus A220/Air Canada/JLY A223 Air Canada Active-0x5ad0e817_0xd35c756b_0x30000.SC4Model
+        sha256: c33c646c118605f0bd9f5967886f6ca716993e84fa77acf8e03372617406be3d
+        size: 9191238
+        uncompressed: 11365334
+    version: 1.0.2
+  simtropolis/36344-blam-mx-passenger-rail-station:
+    authors:
+      - MarcosMX
+    category: 700
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>
+      	As sometines happens, files from the various SimCity 4 sites go missing. When possible and practical, we make attempts to restore those files when found. In all such cases, this is done in good faith for the benefit the author and the community. This particular item has been uploaded here under <strong>MarcosMX</strong>'s account as part of the <abbr title="BATers, LOTers and MODders">BLaM</abbr> team as it had been uploaded on the original location. The station's function and stats <em>have </em>been updated to <abbr title="Network Addon Mod">NAM</abbr>/MTA standards.
+      </p>
+
+
+      <p>
+      	Passenger Rail Station, by MarcosMX
+      </p>
+
+
+      <p>
+      	<strong>Stats (same as Maxis Passenger Rail Station)</strong>
+      </p>
+
+
+      <p>
+      	Lot size:    3 x 4 tiles<br>
+      	Building style(s):    Building: Transportation,Building: Rail,Building: Strikable Transit,Building: Taxi_Maker,Building: PassengerRail, Building: Bus Stop<br>
+      	Capacity    70000<br>
+      	Demand Created    Jobs-$: 14, Jobs-$$: 5, Jobs-$$$: 0, R $: 14, R-$$: 5, R-$$$: 0<br>
+      	Bulldoze cost:    50<br>
+      	Max. Fire Stage:    37<br>
+      	Power consumption:    4 MWh/month<br>
+      	Water consumption:    13 Gallons/month<br>
+      	Air pollution:    3 over 1 tiles<br>
+      	Water pollution:    2 over 2 tiles<br>
+      	Garbage pollution:    6 over 0 tiles<br>
+      	Plop Cost    650<br>
+      	Menu Position:    Rail Menu
+      </p>
+
+
+      <p>
+      	This download is only compatible with SimCity 4 "Rush Hour" or SimCity 4 Deluxe.
+      </p>
+
+
+      <p>
+      	<strong>Dependencies:</strong>
+      </p>
+
+
+      <p>
+      	<abbr title="BATT Squad Certification">NO DEPENDENCIES</abbr>
+      </p>
+
+
+      <p>
+      	<abbr title="BATT Squad Certification">In order to see the nightlighting, you must install the EP1-Update 1 for Rush Hour/SimCity 4 Deluxe, and then afterwards, install the SC4-Update for nightlighting (note: you have to be logged in in order to see the download link). If this update isn't installed, you won't see any lighting effects on custom <abbr title="Building Architect Tool">BAT</abbr> buildings.</abbr>
+      </p>
+
+
+      <p>
+      	Original modified and uploaded by CaptCity, clean-up and more technical update by Tyberius06
+      </p>
+
+      						</body>
+    filename: BLaM MX Passenger Rail Station.zip
+    files:
+      - _Documents/BLaM_Readers/MarcosMX/Passenger Rail Station_Readme.txt
+      - BLaM/MarcosMX/Passenger Rail Station/BlaM Passenger Rail Station_SC4Model.dat
+      - BLaM/MarcosMX/Passenger Rail Station/BlaM MX Passenger Rail Station_LOT.dat
+      - _Documents/BLaM_Readers/MarcosMX/images/BLaM_MX_Passenger Rail Station-N.jpg
+      - _Documents/BLaM_Readers/MarcosMX/images/BLaM_MX_Passenger Rail Station-D.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/PRD.thumb.JPG.c885a3e03b71642c96f386036e3623f3.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/PRNi.thumb.JPG.30ae638c0f2ebfead0d1282179d04d6a.JPG
+    lastModified: 2024-07-15T01:12:25Z
+    name: BLaM MX Passenger Rail Station
+    sha256: f63eef7dc76cc9a02dabab44ff28b2b56719c61c598fb5ccf9719a30686d12b8
+    size: 456830
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/PRD.thumb.JPG.c885a3e03b71642c96f386036e3623f3.JPG
+    timestamp: 2024-07-23T10:27:16.370Z
+    uncompressed: 498443
+    url: https://community.simtropolis.com/files/file/36344-blam-mx-passenger-rail-station/
+    version: 1.0.0
   simtropolis/3669-passenger-rail-stations-4tracks:
     authors:
       - JayMan
@@ -14250,4 +16001,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-4e73e9a5e97f6ee8b1862cc09ff27f23-Allotments-Day.jpg
     url: https://community.simtropolis.com/files/file/999-bus-stop-with-allotments/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

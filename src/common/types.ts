@@ -24,13 +24,13 @@ export enum Feature {
   DARKNITE = "darknite",
   IRM = "irm",
   NAM = "nam",
-  RHD = "rhd",
 }
 
 export enum Issue {
   CONFLICTING_FEATURE = "conflicting-feature",
   INCOMPATIBLE_DEPENDENCIES = "incompatible-dependencies",
   INCOMPATIBLE_FEATURE = "incompatible-feature",
+  INCOMPATIBLE_OPTION = "incompatible-option",
   MISSING_FEATURE = "missing-feature",
 }
 
@@ -44,7 +44,7 @@ export interface PackageAsset extends AssetData {
 
 export interface PackageConfig {
   enabled?: boolean
-  options?: PackageOptions
+  options?: Options
   variant?: string
   version?: string
 }
@@ -60,9 +60,7 @@ export interface PackageData extends VariantData {
 export interface PackageFile {
   as?: string
   category?: number
-  condition?: {
-    [feature in Feature]?: boolean
-  }
+  condition?: Requirements
   path: string
 }
 
@@ -79,17 +77,69 @@ export interface PackageInfo {
   }
 }
 
-export interface PackageOptions {
-  [key: string]: boolean
+export enum OptionType {
+  BOOLEAN = "boolean",
+  NUMBER = "number",
+  STRING = "string",
 }
+
+export interface OptionChoice<T> {
+  description?: string
+  label?: string
+  value: T
+}
+
+export type OptionInfo<T extends OptionType = OptionType> = {
+  condition?: Requirements
+  default?: OptionValue<T> | OptionValue<T>[]
+  description?: string
+  filename?: string
+  global?: boolean
+  id: string
+  label?: string
+  multi?: boolean
+  section?: string
+  type: T
+} & {
+  [OptionType.BOOLEAN]: {
+    default?: boolean
+    display?: "checkbox" | "switch"
+    type: OptionType.BOOLEAN
+  }
+  [OptionType.NUMBER]: {
+    choices?: Array<number | OptionChoice<number>>
+    default?: number
+    display?: "checkbox" | "select"
+    max?: number
+    min?: number
+    step?: number
+    type: OptionType.NUMBER
+  }
+  [OptionType.STRING]: {
+    choices: Array<string | OptionChoice<string>>
+    display?: "checkbox" | "select"
+    default?: string
+    type: OptionType.STRING
+  }
+}[T]
+
+export type OptionValue<T extends OptionType = OptionType> = {
+  [OptionType.BOOLEAN]: boolean
+  [OptionType.NUMBER]: number
+  [OptionType.STRING]: string
+}[T]
+
+export type Requirements = Partial<Record<string, OptionValue>>
+
+export type Options = Partial<Record<string, OptionValue | ReadonlyArray<OptionValue>>>
+
+export type Features = Partial<Record<Feature, boolean>>
 
 export interface PackageStatus {
   action?: "disabling" | "enabling"
   enabled: boolean
-  issues: {
-    [variantId in string]?: VariantIssue[]
-  }
-  options: PackageOptions
+  issues: Partial<Record<string, VariantIssue[]>>
+  options: Options
   requiredBy: string[]
   variantId: string
 }
@@ -118,11 +168,10 @@ export interface VariantData {
   images?: string[]
   name?: string
   optional?: string[]
+  options?: OptionInfo[]
   readme?: string
   repository?: string
-  requirements?: {
-    [feature in Feature]?: boolean
-  }
+  requirements?: Requirements
   thumbnail?: string
   url?: string
   version?: string
@@ -132,8 +181,10 @@ export interface VariantData {
 export interface VariantIssue {
   external?: boolean
   feature?: Feature
+  option?: string
   id: Issue
   packages?: string[]
+  value?: OptionValue
 }
 
 export interface BaseVariantInfo extends VariantData {
@@ -167,25 +218,19 @@ export enum PackageState {
 }
 
 export interface ProfileData {
+  features?: Features
   name?: string
-  packages?: {
-    [packageId: string]: boolean | string | PackageConfig | undefined
-  }
-  externals?: {
-    [feature in Feature]?: boolean
-  }
+  options?: Options
+  packages?: Partial<Record<string, PackageConfig | boolean | string>>
 }
 
-export interface ProfileInfo {
-  features: {
-    [feature in Feature]?: boolean
-  }
+export interface ProfileInfo extends ProfileData {
+  features: Features
   format?: ConfigFormat
   id: string
   name: string
-  packages: {
-    [packageId: string]: PackageConfig | undefined
-  }
+  options: Options
+  packages: Partial<Record<string, PackageConfig>>
 }
 
 export interface Settings {

@@ -903,6 +903,14 @@ assets:
     name: Hillsboro Apartments
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2005/thumb-b888ce1b83962521fe57634279e82379-HillsboroApartmentsDay.jpg
     url: https://community.simtropolis.com/files/file/11811-hillsboro-apartments/
+  simtropolis/11851-dominante-tower:
+    authors:
+      - Thorsten DHF
+    category: 200
+    lastModified: 2024-07-14T16:16:33Z
+    name: Dominante Tower
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2005/thumb-8b1d21ae34bfa8d649eca31446a9842c-Dominante%20Desk.jpg
+    url: https://community.simtropolis.com/files/file/11851-dominante-tower/
   simtropolis/1186-multifoods-international-inc:
     authors:
       - NiagaranEagle
@@ -10095,6 +10103,230 @@ assets:
     name: Stare domy
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2014/thumb-308c6ce5e21b0c6ba48d04d32719cbae-new-city-jan-7--001418313516.jpg
     url: https://community.simtropolis.com/files/file/30038-stare-domy/
+  simtropolis/30051-british-english-stone-houses:
+    authors:
+      - Bombardiere
+    category: 200
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p>
+      	My British building journey continues. This time three stone building variations. Historic houses that can be found in Northern England and possibly in Scotland and Ireland. Two residences and one small commercial shop. These can be used in both rural and town environments as 1x2 lots are wall-to-wall buildings.
+      </p>
+
+
+      <p>
+      	The buildings and textures are based on Bilteezi railway model cardkits. This has helped me to get sizes and shapes right. Also, for some reason, Bilteezi texture suite well with HD. There are little ill effects even in level 5 zoom.
+      </p>
+
+
+      <p>
+      	Maxis Nightlight only
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES</strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li>
+      		<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy – <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies v9a</a> (and above)
+
+      		<ul type="circle">
+      			<li>
+      				<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props Gascooker Vol01 v2<br>
+      				(Pub benches and greenhouses. Nonessential for play)
+      			</li>
+      		</ul>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Installation</strong>:<br>
+      	Copy/Extract the <strong>Bombardiere </strong>parent folder into your plugins. If you extracted the ~<em>Documents </em>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      </p>
+
+
+      <p>
+      	To <strong>Un-Install </strong>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+
+      <p>
+      	<span style="font-size:12.0pt"> </span>
+      </p>
+
+
+      <p>
+      	Keswick House          R$, 2x2, 2x1, 1x2 Lots
+      </p>
+
+
+      <p>
+      	Capacity Satisfied      19 R$
+      </p>
+
+
+      <p>
+      	Building Value           258
+      </p>
+
+
+      <p>
+      	Pollution                     Air:1 Water:1 Garbage: 4
+      </p>
+
+
+      <p>
+      	Power Consumed       1
+      </p>
+
+
+      <p>
+      	Water Consumed        1
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Thursby Manor           R$$, 2x2, 2x1, 1x2 Lots
+      </p>
+
+
+      <p>
+      	Capacity Satisfied      16 R$$
+      </p>
+
+
+      <p>
+      	Building Value           389
+      </p>
+
+
+      <p>
+      	Pollution                     Air:1 Water:1 Garbage: 4
+      </p>
+
+
+      <p>
+      	Power Consumed       1
+      </p>
+
+
+      <p>
+      	Water Consumed        2
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Fleece Inn                   CS$, 2x2, 2x1, 1x2 Lots
+      </p>
+
+
+      <p>
+      	Capacity Satisfied      27 CS$
+      </p>
+
+
+      <p>
+      	Building Value           206
+      </p>
+
+
+      <p>
+      	Pollution                     Air:1 Water:1 Garbage: 4
+      </p>
+
+
+      <p>
+      	Power Consumed       1
+      </p>
+
+
+      <p>
+      	Water Consumed        7         
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Enjoy
+      </p>
+
+
+      <p>
+      	Bombardiere a.k.a Kimmo 2014
+      </p>
+
+
+      <p>
+      	This is my third upload. I will continue to build more houses from the British Isles in due time. Please let me know if I have done mistakes with the BATS. And the feedback is appriciated thanks.
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><span style="font-size:11px;">updated by Tyberius06, 23.07.2024</span></span>
+      </p>
+
+      						</body>
+    filename: Bombardiere - British Stone Houses v2.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Bombardiere Stone Houses.txt
+      - ~Documents/Bombardiere_Readmes/StoneHouse_Night.jpg
+      - ~Documents/Bombardiere_Readmes/StoneHouse_Day.jpg
+      - ~Documents/Bombardiere_Readmes/FleeceInn.jpg
+      - ~Documents/Bombardiere_Readmes/Bombardiere StoneHouse_Read Me.rtf
+      - Bombardiere/British Stone Houses/Thursby Manor/Thursby Manor-0x5ad0e817_0xc04f3385_0x30000.SC4Model
+      - Bombardiere/British Stone Houses/Thursby Manor/R$$4_2x1_Thursby Manor_c1dffaee.SC4Lot
+      - Bombardiere/British Stone Houses/Thursby Manor/R$$4_1x2_Thursby Manor_21dfe113.SC4Lot
+      - Bombardiere/British Stone Houses/Thursby Manor/R$$3_2x2_Thursby Manor_018ce644.SC4Lot
+      - Bombardiere/British Stone Houses/Keswick House/R$3_2x1_Keswick House_81dffdaf.SC4Lot
+      - Bombardiere/British Stone Houses/Keswick House/R$3_1x2_Keswick House_91dfe011.SC4Lot
+      - Bombardiere/British Stone Houses/Keswick House/R$1_2x2_Keswick House_a18ce668.SC4Lot
+      - Bombardiere/British Stone Houses/Keswick House/Keswick House-0x5ad0e817_0x20017b36_0x30000.SC4Model
+      - Bombardiere/British Stone Houses/Fleece Inn/Fleece Inn-0x5ad0e817_0x2026582c_0x30000.SC4Model
+      - Bombardiere/British Stone Houses/Fleece Inn/CS$2_2x1_Fleece Inn_91dff7de.SC4Lot
+      - Bombardiere/British Stone Houses/Fleece Inn/CS$2_1x2_Fleece Inn_a1dfe0cc.SC4Lot
+      - Bombardiere/British Stone Houses/Fleece Inn/CS$1_2x2_Fleece Inn_418ce516.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_12_2014/68232edc64ec3d7dc24123d09c441e64-stonehouse_day.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2014/0c8bec6163cd83afbac174a634d7699f-stonehouse_night.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2014/97cf353d9c52c17a160dbc7a69d592ee-fleeceinn.jpg
+    lastModified: 2024-07-22T23:31:30Z
+    name: British-English Stone Houses
+    sha256: 8b69d59fc2656a88f761eb66d9b4cc3af09a60cc55800d438ec0e93a46fd7ac5
+    size: 1230941
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2014/thumb-68232edc64ec3d7dc24123d09c441e64-stonehouse_day.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 1406501
+    url: https://community.simtropolis.com/files/file/30051-british-english-stone-houses/
+    version: "2.0"
   simtropolis/30051-english-stone-houses:
     authors:
       - Bombardiere
@@ -14550,7 +14782,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -14649,7 +14897,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -14698,7 +14962,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -14747,7 +15027,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -14818,6 +15114,14 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
       <p>
       	This is a low wealth rowhouse which grows on a 1x2 lot. It was based by some 80s rowhouses in my town.
@@ -14868,6 +15172,14 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
 
 
 
@@ -14974,6 +15286,180 @@ assets:
     timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 2870190
     url: https://community.simtropolis.com/files/file/36324-south-indian-tea-plantation-houses/
+    version: 1.0.0
+  simtropolis/36348-charmeuse-apartments:
+    authors:
+      - giraffemountain
+    category: 200
+    dependencies:
+      - simtropolis/15322-bsc-texture-pack-cycledogg-v01
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	I've been wanting to add more slope-friendly buildings to my cities for a long time. This NYC-inspired apartment building has a custom foundation, and the stairs and ramps will show on mildly sloped terrain. It is a medium density residential lot and only grows on the New York tileset.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Lot Size: 3x2
+      </p>
+
+
+      <p>
+      	Growth Stage: 6
+      </p>
+
+
+      <p>
+      	Capacity: 255 R$$
+      </p>
+
+
+      <p>
+      	Building Style: New York
+      </p>
+
+
+      <p>
+      	Power Consumed: 4
+      </p>
+
+
+      <p>
+      	Water Consumed: 36
+      </p>
+
+
+      <p>
+      	<br>
+      	Dependencies:
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/15322-bsc-texture-pack-cycledogg-v01/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> Texture Pack Cycledogg V01</a>
+      </p>
+
+      						</body>
+    filename: Charmeuse Apartments.zip
+    files:
+      - Charmeuse Apartments/R$$6_3x2_CharmeuseApartments_b396a781.SC4Lot
+      - Charmeuse Apartments/charmeuseFoundation01-0x6534284a-0x5331d3fe-0xf394b16d.SC4Desc
+      - Charmeuse Apartments/charmeuseFoundation01-0x5ad0e817_0x5331d3fe_0x4c1000.SC4Model
+      - Charmeuse Apartments/charmeuse-0x5ad0e817_0x5331d3fe_0x500000.SC4Model
+      - Charmeuse Apartments/Charmeuse Apartments-0x6534284a-0x5331d3fe-0x1396a3a1.SC4Desc
+      - Charmeuse Apartments/Charmeuse Apartments README.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/charmeuse1.thumb.jpg.1eb902a6f7d93ec2785a3312e4d91dc1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/charmeuse2.thumb.jpg.ceee07a3dfeae0085f40109175e60321.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/charmeuse3.thumb.jpg.7f99e76d974701eebef47fe3cbf4c127.jpg
+    lastModified: 2024-07-20T04:35:38Z
+    name: Charmeuse Apartments
+    sha256: 2e4628f1a14f58a1751a0b2457edcb53f0edc517431931823fcc48cc112e5006
+    size: 457605
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/charmeuse1.thumb.jpg.1eb902a6f7d93ec2785a3312e4d91dc1.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 603786
+    url: https://community.simtropolis.com/files/file/36348-charmeuse-apartments/
+    version: 1.0.0
+  simtropolis/36349-jacquard-apartments:
+    authors:
+      - giraffemountain
+    category: 200
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Continuing my effort to create more slope-friendly apartment buildings - this NYC-inspired building has a custom foundation, and the stairs will show on mildly sloped terrain. It is a medium density residential lot and only grows on the New York tileset.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Lot Size: 3x2</span>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Growth Stage: 6</span>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Capacity: 306 R$$</span>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Building Style: New York</span>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Power Consumed: 5</span>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Water Consumed: 48</span>
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Dependencies:</span>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">None!</span>
+      </p>
+
+      						</body>
+    filename: Jacquard Apartments.zip
+    files:
+      - Jacquard Apartments/R$$6_3x2_Jacquard Apartments_b3a936c0.SC4Lot
+      - Jacquard Apartments/jacquardFOUNDATION01-0x5ad0e817_0x5331d3fe_0x521000.SC4Model
+      - Jacquard Apartments/jacquardFOUNDATION-0x6534284a-0x5331d3fe-0x13a931a6.SC4Desc
+      - Jacquard Apartments/jacquard06-0x5ad0e817_0x5331d3fe_0x510000.SC4Model
+      - Jacquard Apartments/Jacquard Apartments-0x6534284a-0x5331d3fe-0x33a931f3.SC4Desc
+      - Jacquard Apartments/Jacquard Apartments README.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/jacquard2.thumb.jpg.0447121a67bb591cdf04d2c4bfde5b31.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/jacquard3.thumb.jpg.fbbd649adfc2a35759acd81cd9b1ade8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/jacquard4.thumb.jpg.661d8472be24a7fb9538e73e238b096d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/jacquard1.thumb.jpg.f3e1743617d0c10c9a0efd088dd25dcd.jpg
+    lastModified: 2024-07-21T19:23:11Z
+    name: Jacquard Apartments
+    sha256: 4d8e6a6b6283e63811ffdf712e1e8836006d727ab302e05d1a655543d989d1f6
+    size: 620326
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/jacquard1.thumb.jpg.f3e1743617d0c10c9a0efd088dd25dcd.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 714897
+    url: https://community.simtropolis.com/files/file/36349-jacquard-apartments/
     version: 1.0.0
   simtropolis/3639-nikolaispeicher:
     authors:
@@ -15552,4 +16038,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-4dfac80c148518ee94e4e855165b9e7c-Small%20B&B.JPG
     url: https://community.simtropolis.com/files/file/992-small-bb-the-greeley-house/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

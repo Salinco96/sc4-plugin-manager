@@ -6,7 +6,15 @@ import { PackageCategory } from "@common/categories"
 import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
-import { PackageInfo, PackageState, ProfileInfo, Settings } from "@common/types"
+import {
+  Feature,
+  OptionInfo,
+  OptionValue,
+  PackageInfo,
+  PackageState,
+  ProfileInfo,
+  Settings,
+} from "@common/types"
 import { compact } from "@common/utils/objects"
 
 import { computePackageList, getPackageListItemSize } from "./packages"
@@ -39,7 +47,7 @@ export interface StoreActions {
   createProfile(name: string, templateProfileId?: string): Promise<boolean>
   disablePackage(packageId: string): Promise<boolean>
   enablePackage(packageId: string): Promise<boolean>
-  getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string>
+  getPackageReadme(packageId: string, variantId: string): Promise<{ html?: string; md?: string }>
   installPackage(packageId: string, variantId: string): Promise<boolean>
   openExecutableDirectory(): Promise<boolean>
   openInstallationDirectory(): Promise<boolean>
@@ -51,8 +59,17 @@ export interface StoreActions {
   openVariantURL(packageId: string, variantId: string): Promise<boolean>
   removePackage(packageId: string, variantId: string): Promise<boolean>
   resetState(): void
+  setPackageOption(
+    packageId: string,
+    optionId: string,
+    optionValue: OptionValue | ReadonlyArray<OptionValue>,
+  ): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
+  setProfileOption(
+    optionId: string,
+    optionValue: OptionValue | ReadonlyArray<OptionValue>,
+  ): Promise<boolean>
   showErrorToast(message: string): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
   showSuccessToast(message: string): void
@@ -67,11 +84,13 @@ export interface StoreActions {
 export interface Store {
   actions: StoreActions
   authors: string[]
+  features: Partial<Record<Feature, string[]>>
   modal?: {
     action: (result: boolean) => void
     data: ModalData<ModalID>
     id: ModalID
   }
+  options?: OptionInfo[]
   packageFilters: PackageFilters
   filteredPackages: string[]
   packageUi: {
@@ -175,8 +194,8 @@ export const useStore = create<Store>()((set, get): Store => {
           return false
         }
       },
-      async getPackageDocsAsHtml(packageId, variantId) {
-        return window.api.getPackageDocsAsHtml(packageId, variantId)
+      async getPackageReadme(packageId, variantId) {
+        return window.api.getPackageReadme(packageId, variantId)
       },
       async installPackage(packageId, variantId) {
         try {
@@ -229,7 +248,9 @@ export const useStore = create<Store>()((set, get): Store => {
         updateState({
           $merge: {
             authors: [],
+            features: {},
             filteredPackages: [],
+            options: undefined,
             packageUi: {},
             packages: undefined,
             profiles: undefined,
@@ -251,6 +272,25 @@ export const useStore = create<Store>()((set, get): Store => {
           const packageFilters = { ...store.packageFilters, ...filters }
           return { packageFilters, ...computePackageList({ ...store, packageFilters }, true) }
         })
+      },
+      async setPackageOption(packageId, optionId, optionValue) {
+        const store = get()
+        const profileInfo = getCurrentProfile(store)
+        if (!profileInfo) {
+          return false
+        }
+
+        try {
+          return await window.api.updateProfile(profileInfo.id, {
+            packages: {
+              [packageId]: { options: { [optionId]: optionValue } },
+            },
+          })
+        } catch (error) {
+          console.error(`Failed to change option ${packageId}#${optionId}`, error)
+          this.showErrorToast(`Failed to change option ${packageId}#${optionId}`)
+          return false
+        }
       },
       async setPackageVariant(packageId, variantId) {
         const store = get()
@@ -285,6 +325,23 @@ export const useStore = create<Store>()((set, get): Store => {
         } catch (error) {
           console.error(`Failed to select variant ${packageId}#${variantId}`, error)
           this.showErrorToast(`Failed to select variant ${packageId}#${variantId}`)
+          return false
+        }
+      },
+      async setProfileOption(optionId, optionValue) {
+        const store = get()
+        const profileInfo = getCurrentProfile(store)
+        if (!profileInfo) {
+          return false
+        }
+
+        try {
+          return await window.api.updateProfile(profileInfo.id, {
+            options: { [optionId]: optionValue },
+          })
+        } catch (error) {
+          console.error(`Failed to change option ${optionId}`, error)
+          this.showErrorToast(`Failed to change option ${optionId}`)
           return false
         }
       },
@@ -343,6 +400,14 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       updateState(data) {
         try {
+          if (data.features) {
+            updateState({ features: { $set: data.features } })
+          }
+
+          if (data.options) {
+            updateState({ options: { $set: data.options } })
+          }
+
           if (data.packages) {
             set(store => {
               const packages = compact({ ...store.packages, ...data.packages })
@@ -371,6 +436,7 @@ export const useStore = create<Store>()((set, get): Store => {
       },
     },
     authors: [],
+    features: {},
     filteredPackages: [],
     packageFilters: {
       authors: [],

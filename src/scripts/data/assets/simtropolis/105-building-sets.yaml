@@ -2791,6 +2791,114 @@ assets:
     name: Dutch Riverside Buildings
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2008/thumb-c918fda02d3281bd7826e2c222cdd4d7-Haarlem%20Hagestraat%201.jpg
     url: https://community.simtropolis.com/files/file/19455-dutch-riverside-buildings/
+  simtropolis/19455-hagestraat-dutch-riverside-buildings:
+    authors:
+      - Haarlemmergold
+    category: 200
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/171-haarl-mega-props-dutch-vol-01
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p>
+      	Hagestraat (Spaarne) Dutch Riverside Buildings
+      </p>
+
+
+      <p>
+      	Two buildings that are neighbouring buildings in real-life too. They overlook the river Spaarne in downtown Haarlem, Holland. The stepped gable is a nice example of Dutch architecture around 1610-1630 and the left building has probably been built shortly after the French occupation ended. My guess is that only to front gable was rebuilt by 1820 and the inside and back side are in fact much older.
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#c0392b;">This is Version 2</span></strong>.
+      </p>
+
+
+      <p>
+      	In all cases players who have previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. For removing old versions you need to run the included cleanitol scrip with the<br>
+      	<a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="">nos.17's SC4 Cleanitol</a> or with the <a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM tool</a>
+      </p>
+
+
+      <p>
+      	STATS R$$$ 1x1:
+      </p>
+
+
+      <p>
+      	Lot size :           1x1<br>
+      	Growth Stage:         6 (medium &amp; high density residential zoning)<br>
+      	Bulldoze Cost:       § 302<br>
+      	Capacity Satisfied:  R$ - 65, R$$ - 37 R$$$ - 18<br>
+      	Pollution:           1 (Air)/ 1 (Water)/ 4 (Garbage)<br>
+      	Pollution Radius:    6/7/0<br>
+      	Power Consumed:         2 Mwh<br>
+      	Water Consumed:      6 Gal/Month<br>
+      	Building Style:      Euro/NY<br>
+      	Occupant Group:         High Wealth Residential Building
+      </p>
+
+
+      <p>
+      	<br>
+      	Dependencies: 
+      </p>
+
+
+      <p>
+      	NONE*
+      </p>
+
+
+      <p>
+      	*Alternatively you can use the <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/171-haarl-mega-props-dutch-vol-01" rel="external nofollow">Haarlemmergold Dutch MEGA Pack v2</a>, that contains the essential model for this upload.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>Installation</strong>:<br>
+      	Copy/Extract the <strong>Haarlemmergold </strong>parent folder into your plugins. If you extracted the ~<em>Documents </em>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      </p>
+
+
+      <p>
+      	To <strong>Un-Install</strong> the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.<br>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:10px;"><span style="color:#2980b9;">Tyberius06 edit; see change log, 22.07.2024</span></span>
+      </p>
+
+      						</body>
+    filename: Haarl - Hagestraat Dutch Riverside Buildings v2.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Hagestraat Dutch Riverside Buildings.txt
+      - ~Documents/Haarlemmergold_Readmes/Haarlem Hagestraat 2.jpg
+      - ~Documents/Haarlemmergold_Readmes/Haarlem Hagestraat 1.jpg
+      - ~Documents/Haarlemmergold_Readmes/HAARL - Hagestraat Dutch Riverside Buildings_Readme.txt
+      - Haarlemmergold/Dutch Building Series/Hagestraat Dutch Riverside Buildings/R$$$6_1x1 H Hagestraat Houses.dat
+      - Haarlemmergold/Dutch Building Series/Hagestraat Dutch Riverside Buildings/Dutch Row House 110hist-0x5ad0e817_0x34cade2d_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_03_2008/c918fda02d3281bd7826e2c222cdd4d7-Haarlem%20Hagestraat%201.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_03_2008/c918fda02d3281bd7826e2c222cdd4d7-Haarlem%20Hagestraat%202.jpg
+    lastModified: 2024-07-22T18:16:07Z
+    name: Hagestraat Dutch Riverside Buildings
+    sha256: 8bd2d2ee0a41cb35191c10990889b60f8e3a219b410bdffa86b0593476652dfa
+    size: 288274
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2008/thumb-c918fda02d3281bd7826e2c222cdd4d7-Haarlem%20Hagestraat%201.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 320654
+    url: https://community.simtropolis.com/files/file/19455-hagestraat-dutch-riverside-buildings/
+    version: "2.0"
   simtropolis/19459-dutch-old-city-corner:
     authors:
       - Haarlemmergold
@@ -4883,10 +4991,45 @@ assets:
     authors:
       - Aarsgevogelte
     category: 200
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	Two Dutch <abbr title="Wall-to-Wall">W2W</abbr> buildings (LM &amp; CO$$). Can also be used as a corner lot if you're brave enough.
+      </p>
+
+      						</body>
+    filename: Heuvelstraat_109_Stationsstraat_41_Tilburg.rar
+    files:
+      - LM - Dutch_W2W_Buildings_2561e0c1.SC4Lot
+      - AGV_Heuvelstraat_109_Stationsstraat_41_Tilburg-0x6534284a-0x439f9e9c-0xc789aecf.SC4Desc
+      - AGV_Heuvelstraat_109_Stationsstraat_41_Tilburg-0x5ad0e817_0x89158a2_0x30000.SC4Model
+      - Props/AVG_Tree_5-0x6534284a-0x439f9e9c-0x17e912f5.SC4Desc
+      - Props/AVG_Tree_5-0x5ad0e817_0x87692dba_0x30000.SC4Model
+      - Props/AVG_Flowers_1-0x6534284a-0x439f9e9c-0x17ea40d7.SC4Desc
+      - Props/AVG_Flowers_1-0x5ad0e817_0x676a5ecb_0x30000.SC4Model
+      - Props/AVG_Bench_1-0x6534284a-0x439f9e9c-0x57ea6b70.SC4Desc
+      - Props/AVG_Bench_1-0x5ad0e817_0x76a89b7_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/D.thumb.jpg.7efc6d287ea77cba3015f18c7c08788f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/N.thumb.jpg.6f49e85ba4770e29b28cf2aa8f734df3.jpg
     lastModified: 2018-02-09T11:10:38Z
     name: Heuvelstraat 109 & Stationsstraat 41, Tilburg
+    sha256: 04079175908d09d80a50d11c68c90aa1fe8dba5e3074431c92dcac60c36c8e03
+    size: 651887
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2018_02/D.thumb.jpg.7efc6d287ea77cba3015f18c7c08788f.jpg
+    timestamp: 2024-07-23T10:27:16.370Z
+    uncompressed: 794444
     url: https://community.simtropolis.com/files/file/31406-heuvelstraat-109-stationsstraat-41-tilburg/
+    version: "2"
   simtropolis/31407-damrak-60-62-amsterdam:
     authors:
       - Aarsgevogelte
@@ -5784,4 +5927,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-232789d5486669d92d9274d470ae880a-Kronenpalais%20Screen.jpg
     url: https://community.simtropolis.com/files/file/4572-berlin-set-v2-kronenstrasse-8/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

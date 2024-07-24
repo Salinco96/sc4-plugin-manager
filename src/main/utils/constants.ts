@@ -19,6 +19,7 @@ export const DIRNAMES = {
 export const FILENAMES = {
   appConfig: "config",
   logs: "main.log",
+  dbOptions: "options",
   packageConfig: "package",
   sc4exe: "Apps/SimCity 4.exe",
   settings: "settings",

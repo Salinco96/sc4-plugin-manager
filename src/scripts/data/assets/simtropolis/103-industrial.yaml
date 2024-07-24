@@ -2895,6 +2895,15 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
       <p>
       	There were these two guys with a faible for bicycles, dreaming how good it would be to have bikes roaming all over the sim-planet... better air, fewer fat people, new business opportunities... So they put together their meager resources, leased a run down warehouse, started deforming metal... and built an empire!
@@ -6145,6 +6154,148 @@ assets:
     name: Take-A-Whizz Brewing Company
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/Whizz-Day.thumb.jpg.59c1bbff820e0eca73e49e7433506d2e.jpg
     url: https://community.simtropolis.com/files/file/35620-take-a-whizz-brewing-company/
+  simtropolis/35633-1x1-dirty-industrials:
+    authors:
+      - jestarr
+    category: 400
+    dependencies:
+      - simtropolis/35753-jes_resourcepack_vol27
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/3-sc4d-
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	A set of four 1x1 I-D growable and ploppable lots.
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot Details and Information:
+      </p>
+
+
+      <p>
+      	Lot size:     1x1 tiles<br>
+      	Building style(s):     Building: Industrial, Building: ID, Industry: Anchor, BTE: Ind - Dirty<br>
+      	Growth stage:     1<br>
+      	Occupants:     I-D – 2 to 4<br>
+      	Bulldoze cost:     $100 to $141<br>
+      	Max. Fire Stage:     1 to 2<br>
+      	Power consumption:     1 to 2 MWh/month<br>
+      	Water consumption:     1 to 3 Gallons/month<br>
+      	Air pollution:     1 over 16 tiles<br>
+      	Water pollution:     1 over 20 tiles<br>
+      	Garbage pollution:     4 over 0 tiles
+      </p>
+
+
+      <p>
+      	<br>
+      	Compatibility:
+      </p>
+
+
+      <p>
+      	This download is only compatible with SimCity 4 “Rush Hour” or SimCity 4 Deluxe.
+      </p>
+
+
+      <p>
+      	<br>
+      	Installation:
+      </p>
+
+
+      <p>
+      	Unzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a seperate folder or deleted.
+      </p>
+
+
+      <p>
+      	To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+
+      <p>
+      	<br>
+      	Dependencies:
+      </p>
+
+
+      <p>
+      	To ensure the proper functionality, make sure the below files are installed in your plugins folder.
+      </p>
+
+
+      <p>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> Essentials<br>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01<br>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - Misc Vol02<br>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> Mega Props - JES Vol01<br>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> Mega Props - JES Vol02<br>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> Mega Props - JES Vol04<br>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> Mega Props - JES Vol05<br>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> Mega Props - JES Vol09<br>
+      	    <abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol01
+      </p>
+
+
+      <p>
+      	The above files can be found at <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack"/.</a>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed9562014010" scrolling="no"
+      src="https://community.simtropolis.com/files/file/35753-jes_resourcepack_vol27/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: 1x1_DirtyIndustrials v3.zip
+    files:
+      - Documentation/Readme_1x1_I-D_Lots.html
+      - Documentation/Styles/stylesheet.css
+      - Documentation/Images/logo.png
+      - Documentation/Images/footer1.jpg
+      - Documentation/Images/1x1_IndustrialLots_Nite.png
+      - Documentation/Images/1x1_IndustrialLots_Day.png
+      - BSC/jestarr/PumpingStation/jes_PumpingStation01-0x5ad0e817_0x520a4f30_0x30000.SC4Model
+      - BSC/jestarr/PumpingStation/jes_1x1_plop_PumpingStation_d2199fe9.SC4Lot
+      - BSC/jestarr/PumpingStation/ID$$1_1x1_jes_PumpingStation01_e291f9db.SC4Lot
+      - BSC/jestarr/MechanicalBuilding/jes_MechanicalBuilding-0x5ad0e817_0x5209ffdf_0x30000.SC4Model
+      - BSC/jestarr/MechanicalBuilding/jes_1x1_plop_MechanicalBuilding_d2199bcd.SC4Lot
+      - BSC/jestarr/MechanicalBuilding/ID$$1_1x1_jes_MechanicalBuilding_9291f9c8.SC4Lot
+      - BSC/jestarr/ContainerOnBlocks/jes_ContainerOnBlocks-0x5ad0e817_0x320a77af_0x30000.SC4Model
+      - BSC/jestarr/ContainerOnBlocks/jes_1x1_plop_ContainerOnBlocks_d2199900.SC4Lot
+      - BSC/jestarr/ContainerOnBlocks/ID$$1_1x1_jes_ContainerOnBlocks_b291fa51.SC4Lot
+      - BSC/jestarr/ContainerOffice/jes_ContainerOffice-0x5ad0e817_0xf20f3c5c_0x30000.SC4Model
+      - BSC/jestarr/ContainerOffice/jes_1x1_plop_ContainerOffice_d219946b.SC4Lot
+      - BSC/jestarr/ContainerOffice/ID$$1_1x1_jes_ContainerOffice_9291f99d.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/1x1_IndustrialLots_Day.thumb.jpg.64e1b7b4cf129cc3757b1578d0fe9723.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/1x1_IndustrialLots_Nite.thumb.jpg.9a19e45b297430f7fb6b0e91cf13a472.jpg
+    lastModified: 2024-07-22T18:31:28Z
+    name: 1x1 Dirty Industrials
+    sha256: e8ed02943693acc6226b2041bac52665bbf89cd3d6b547a0ce6a8e552a6af5b3
+    size: 1124702
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/1x1_IndustrialLots_Day.thumb.jpg.64e1b7b4cf129cc3757b1578d0fe9723.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 1233960
+    url: https://community.simtropolis.com/files/file/35633-1x1-dirty-industrials/
+    version: 1.0.3
   simtropolis/35633-1x1_dirtyindustrials:
     authors:
       - jestarr
@@ -6319,7 +6470,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6509,7 +6678,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6744,7 +6931,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6906,6 +7111,15 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7082,7 +7296,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7245,6 +7477,15 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7423,7 +7664,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7594,7 +7853,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7765,6 +8042,84 @@ assets:
     timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 1678425
     url: https://community.simtropolis.com/files/file/36311-phil-irm-fillers-dirt-angles/
+    version: 1.0.0
+  simtropolis/36328-pacific-supply:
+    authors:
+      - Rott
+    category: 400
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A plain old building supply warehouse in a now very run down part of Oakland, California.
+      </p>
+
+
+      <p>
+      	Figured we needed more nondescript industrial as fillers so I made this one. Because there isn't really a proper industrial designation for this type of thing we made it an I-M lot but modified the stats to reflect it more accurately of a warehouse found in an industrial area, pollutes way less and uses way less city resources than a typical I-M at the cost of having much less jobs and taking up more space than a typical larger industrial lot would (5 x 3 lot).
+      </p>
+
+
+      <p>
+      	Also, this is just the vanilla version, there is a much more decorated prop dependent version I'm working on I will release soon.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Thanks <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/279388-sejr99999/?do=hovercard" data-mentionid="279388" href="https://community.simtropolis.com/profile/279388-sejr99999/" rel="">@sejr99999</a> for testing <abbr>this</abbr>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: Pacific Supply.zip
+    files:
+      - Pacific Supply/Pacific Supply-0x6534284a-0x6cdd12c0-0x5384c0b5.SC4Desc
+      - Pacific Supply/I-m1_5x3_Pacific Supply_53906698.SC4Lot
+      - Pacific Supply/BLB_Pacific Supply-0x5ad0e817_0x93770cf2_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/1.thumb.jpg.59fcdf24134dcf851f5a54d7bdff1792.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/2.thumb.jpg.eefb6fa53247d8169028855bcecd741c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/3.thumb.jpg.1b8fd471a696d459a6d89bad8b1359a3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/4.thumb.jpg.b995f78b1e496d3de335637c38166af8.jpg
+    lastModified: 2024-07-04T02:17:26Z
+    name: Pacific Supply
+    sha256: 26257a45051d7aa437848d69f8e768096ee4da663f9bf654329e0294d527dae1
+    size: 617689
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/1.thumb.jpg.59fcdf24134dcf851f5a54d7bdff1792.jpg
+    timestamp: 2024-07-05T06:56:57.513Z
+    uncompressed: 704272
+    url: https://community.simtropolis.com/files/file/36328-pacific-supply/
     version: 1.0.0
   simtropolis/3746-simworld-auto-truck-engine-plant-ver-12:
     authors:
@@ -8127,4 +8482,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-7595867db4de7599ada3df6de405bad4-umbrella.jpg
     url: https://community.simtropolis.com/files/file/976-umbrella-inc-research-facility/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

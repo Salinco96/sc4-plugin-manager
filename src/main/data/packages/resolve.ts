@@ -1,6 +1,10 @@
+import { getOptionDefaultValue } from "@common/packages"
 import {
   Feature,
+  Features,
   Issue,
+  OptionInfo,
+  Options,
   PackageConfig,
   PackageInfo,
   PackageStatus,
@@ -8,18 +12,16 @@ import {
   VariantIssue,
 } from "@common/types"
 import { removeElement } from "@common/utils/arrays"
-import { keys } from "@common/utils/objects"
+import { ReadonlyDeep, keys } from "@common/utils/objects"
+import { isEnum } from "@common/utils/types"
 
 export const EXTERNAL_PACKAGE_ID = "<external>"
-
-export type ReadonlyDeep<T> = {
-  readonly [P in keyof T]: ReadonlyDeep<T[P]>
-}
 
 function getVariantIncompatibilities(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
   variantId: string,
-  features: ReadonlyDeep<{ [feature in Feature]?: string[] }>,
+  options: ReadonlyDeep<Options>,
+  features: ReadonlyDeep<Partial<Record<Feature, string[]>>>,
 ): VariantIssue[] {
   const variantInfo = packageInfo.variants[variantId]
 
@@ -42,25 +44,37 @@ function getVariantIncompatibilities(
 
   // Check requirements
   if (variantInfo.requirements) {
-    for (const feature of keys(variantInfo.requirements)) {
-      const featurePackageIds = features[feature]
-      const isEnabled = !!featurePackageIds?.length
-      const isRequired = variantInfo.requirements[feature]
+    for (const requirement in variantInfo.requirements) {
+      if (isEnum(requirement, Feature)) {
+        const featurePackageIds = features[requirement]
+        const isEnabled = !!featurePackageIds?.length
+        const isRequired = !!variantInfo.requirements[requirement]
 
-      // Check feature requirements
-      if (isRequired !== isEnabled) {
-        if (isEnabled) {
+        // Check feature requirements
+        if (isRequired !== isEnabled) {
+          if (isEnabled) {
+            incompatibilities.push({
+              id: Issue.INCOMPATIBLE_FEATURE,
+              external: featurePackageIds.includes(EXTERNAL_PACKAGE_ID),
+              feature: requirement,
+              packages: removeElement(featurePackageIds, EXTERNAL_PACKAGE_ID),
+            })
+          } else {
+            incompatibilities.push({
+              id: Issue.MISSING_FEATURE,
+              feature: requirement,
+              // TODO: List of packages including the feature
+            })
+          }
+        }
+      } else {
+        const requiredValue = variantInfo.requirements[requirement]
+        const value = options[requirement] // TODO: Default value
+        if (requiredValue !== value) {
           incompatibilities.push({
-            id: Issue.INCOMPATIBLE_FEATURE,
-            external: featurePackageIds.includes(EXTERNAL_PACKAGE_ID),
-            feature,
-            packages: removeElement(featurePackageIds, EXTERNAL_PACKAGE_ID),
-          })
-        } else {
-          incompatibilities.push({
-            id: Issue.MISSING_FEATURE,
-            feature,
-            // TODO: List of packages including the feature
+            id: Issue.INCOMPATIBLE_OPTION,
+            option: requirement,
+            value: requiredValue,
           })
         }
       }
@@ -73,25 +87,29 @@ function getVariantIncompatibilities(
 function isVariantCompatible(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
   variantId: string,
-  features: ReadonlyDeep<Record<string, string[]>>,
+  options: ReadonlyDeep<Options>,
+  features: ReadonlyDeep<Partial<Record<Feature, string[]>>>,
 ): boolean {
-  return getVariantIncompatibilities(packageInfo, variantId, features).length === 0
+  return getVariantIncompatibilities(packageInfo, variantId, options, features).length === 0
 }
 
 function getCompatibleVariantIds(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
-  features: ReadonlyDeep<Record<string, string[]>>,
+  options: ReadonlyDeep<Options>,
+  features: ReadonlyDeep<Partial<Record<Feature, string[]>>>,
 ): string[] {
   const variantIds = Object.keys(packageInfo.variants)
-  return variantIds.filter(variantId => isVariantCompatible(packageInfo, variantId, features))
+  return variantIds.filter(variantId =>
+    isVariantCompatible(packageInfo, variantId, options, features),
+  )
 }
 
 export function getFeatures(
   packages: ReadonlyDeep<Record<string, Omit<PackageInfo, "status">>>,
   status: ReadonlyDeep<Record<string, PackageStatus>>,
-  externals: ReadonlyDeep<Partial<Record<string, boolean>>>,
-): Record<string, string[]> {
-  const features: Record<string, string[]> = {}
+  externals: ReadonlyDeep<Features>,
+): Partial<Record<Feature, string[]>> {
+  const features: Partial<Record<Feature, string[]>> = {}
 
   for (const packageId in packages) {
     const packageStatus = status[packageId]
@@ -100,17 +118,17 @@ export function getFeatures(
       const variantInfo = packageInfo.variants[packageStatus.variantId]
       if (variantInfo?.features) {
         for (const feature of variantInfo.features) {
-          features[feature] ??= []
-          features[feature].push(packageId)
+          const featurePackages = (features[feature] ??= [])
+          featurePackages.push(packageId)
         }
       }
     }
   }
 
-  for (const feature in externals) {
+  for (const feature of keys(externals)) {
     if (externals[feature]) {
-      features[feature] ??= []
-      features[feature].unshift(EXTERNAL_PACKAGE_ID)
+      const featurePackages = (features[feature] ??= [])
+      featurePackages.unshift(EXTERNAL_PACKAGE_ID)
     }
   }
 
@@ -120,10 +138,11 @@ export function getFeatures(
 export function resolvePackages(
   packages: ReadonlyDeep<Record<string, Omit<PackageInfo, "status">>>,
   configs: ReadonlyDeep<Partial<Record<string, PackageConfig>>>,
-  externals: ReadonlyDeep<Partial<Record<string, boolean>>>,
+  options: ReadonlyDeep<Options>,
+  externals: ReadonlyDeep<Features>,
 ): {
   /** Resulting features */
-  resultingFeatures: { [feature in Feature]?: string[] }
+  resultingFeatures: Partial<Record<Feature, string[]>>
   /** Resulting package status */
   resultingStatus: { [packageId: string]: PackageStatus }
 } {
@@ -172,7 +191,7 @@ export function resolvePackages(
       const packageInfo = packages[packageId]
       const packageStatus = resultingStatus[packageId]
       if (packageStatus.variantId) {
-        const variantIds = getCompatibleVariantIds(packageInfo, initialFeatures)
+        const variantIds = getCompatibleVariantIds(packageInfo, options, initialFeatures)
         if (variantIds.length && !variantIds.includes(packageStatus.variantId)) {
           packageStatus.variantId = variantIds[0]
         }
@@ -261,6 +280,7 @@ export function resolvePackages(
       const incompatibilities = getVariantIncompatibilities(
         packageInfo,
         variantId,
+        options,
         resultingFeatures,
       )
 
@@ -315,8 +335,10 @@ export function resolvePackages(
 export function resolvePackageUpdates(
   packages: ReadonlyDeep<Record<string, PackageInfo>>,
   profile: ReadonlyDeep<ProfileInfo>,
+  options: ReadonlyDeep<OptionInfo[]>,
   configUpdates: ReadonlyDeep<Partial<Record<string, PackageConfig>>>,
-  externalUpdates: ReadonlyDeep<Partial<Record<Feature, boolean>>>,
+  optionUpdates: ReadonlyDeep<Options>,
+  externalUpdates: ReadonlyDeep<Features>,
 ): {
   /** Packages that will be disabled */
   disablingPackages: string[]
@@ -333,9 +355,13 @@ export function resolvePackageUpdates(
   /** Variants that will to be installed */
   installingVariants: { [packageId: string]: string }
   /** Resulting package configs */
-  resultingConfigs: { [packageId in string]?: PackageConfig }
+  resultingConfigs: { [packageId: string]: PackageConfig }
   /** Resulting externals */
-  resultingExternals: { [feature in Feature]?: boolean }
+  resultingExternals: Features
+  /** Resulting features */
+  resultingFeatures: Partial<Record<Feature, string[]>>
+  /** Resulting profile options */
+  resultingOptions: Options
   /** Resulting package status */
   resultingStatus: { [packageId: string]: PackageStatus }
   /** Packages that will have their variant changed */
@@ -345,15 +371,24 @@ export function resolvePackageUpdates(
 } {
   let shouldRecalculate = false
 
-  const resultingConfigs = { ...profile.packages }
+  const resultingConfigs = { ...profile.packages } as { [packageId: string]: PackageConfig }
   const resultingExternals = { ...profile.features }
+  const resultingOptions = { ...profile.options }
 
   // Calculate resulting configs (do not mutate current configs)
   for (const packageId in configUpdates) {
     const oldStatus = packages[packageId].status[profile.id]
     const oldConfig = profile.packages[packageId]
     const newConfig = configUpdates[packageId]
-    resultingConfigs[packageId] = { ...oldConfig, ...newConfig }
+    resultingConfigs[packageId] = {
+      ...oldConfig,
+      ...newConfig,
+      options: {
+        ...oldConfig?.options,
+        ...newConfig?.options,
+      },
+    }
+
     shouldRecalculate ||= !!oldStatus?.enabled || !!newConfig?.enabled
   }
 
@@ -365,10 +400,25 @@ export function resolvePackageUpdates(
     shouldRecalculate ||= oldValue !== newValue
   }
 
+  // Calculate resulting options (do not mutate current options)
+  for (const optionId in optionUpdates) {
+    const option = options.find(option => option.id === optionId)
+    const oldValue = profile.options[optionId] ?? false // TODO: Default value
+    const newValue = optionUpdates[optionId] ?? oldValue
+    if (option && newValue === getOptionDefaultValue(option)) {
+      delete resultingOptions[optionId]
+    } else {
+      resultingOptions[optionId] = newValue
+    }
+
+    shouldRecalculate ||= oldValue !== newValue
+  }
+
   // Calculate resulting status
   const { resultingFeatures, resultingStatus } = resolvePackages(
     packages,
     resultingConfigs,
+    resultingOptions,
     resultingExternals,
   )
 
@@ -459,44 +509,65 @@ export function resolvePackageUpdates(
   }
 
   // Remove explicit variant if it is the default
-  for (const packageId in resultingStatus) {
+  for (const packageId in resultingConfigs) {
     const packageConfig = resultingConfigs[packageId]
     const packageInfo = packages[packageId]
+    const variantInfo = packageInfo.variants[resultingStatus[packageId].variantId]
 
-    const defaultVariantId =
-      Object.keys(packageInfo.variants).find(
-        variantId => !resultingStatus[packageId].issues[variantId]?.length,
-      ) ?? Object.keys(packageInfo.variants)[0]
+    if (packageConfig?.variant) {
+      const defaultVariantId =
+        Object.keys(packageInfo.variants).find(
+          variantId => !resultingStatus[packageId].issues[variantId]?.length,
+        ) ?? Object.keys(packageInfo.variants)[0]
 
-    if (packageConfig?.variant === defaultVariantId) {
-      resultingConfigs[packageId] = { ...packageConfig, variant: undefined }
+      if (packageConfig.variant === defaultVariantId) {
+        delete packageConfig.variant
+      }
+    }
+
+    if (packageConfig?.options) {
+      for (const requirement in packageConfig.options) {
+        const option = variantInfo.options?.find(option => option.id === requirement)
+        if (option) {
+          const defaultValue = getOptionDefaultValue(option)
+          if (packageConfig.options?.[requirement] === defaultValue) {
+            delete packageConfig.options[requirement]
+          }
+        }
+      }
+
+      if (Object.keys(packageConfig.options).length === 0) {
+        delete packageConfig.options
+      }
     }
   }
 
-  console.debug("Updating configs", {
-    packages: configUpdates,
-    externals: externalUpdates,
-  })
+  // console.debug("Updating configs", {
+  //   features: externalUpdates,
+  //   options: optionUpdates,
+  //   packages: configUpdates,
+  // })
 
-  console.debug("Resulting configs", {
-    packages: resultingConfigs,
-    externals: resultingExternals,
-    shouldRecalculate,
-  })
+  // console.debug("Resulting configs", {
+  //   features: resultingExternals,
+  //   options: resultingOptions,
+  //   packages: resultingConfigs,
+  //   shouldRecalculate,
+  // })
 
-  console.debug("Resulting changes", {
-    disablingPackages,
-    enablingPackages,
-    installingVariants,
-    selectingVariants,
-  })
+  // console.debug("Resulting changes", {
+  //   disablingPackages,
+  //   enablingPackages,
+  //   installingVariants,
+  //   selectingVariants,
+  // })
 
-  console.debug("Resulting conflicts", {
-    explicitVariantChanges,
-    implicitVariantChanges,
-    incompatibleExternals,
-    incompatiblePackages,
-  })
+  // console.debug("Resulting conflicts", {
+  //   explicitVariantChanges,
+  //   implicitVariantChanges,
+  //   incompatibleExternals,
+  //   incompatiblePackages,
+  // })
 
   return {
     disablingPackages,
@@ -509,6 +580,8 @@ export function resolvePackageUpdates(
     resultingStatus,
     resultingConfigs,
     resultingExternals,
+    resultingFeatures,
+    resultingOptions,
     selectingVariants,
     shouldRecalculate,
   }

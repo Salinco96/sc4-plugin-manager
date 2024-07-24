@@ -835,10 +835,98 @@ assets:
     authors:
       - Andreas Roth
     category: 20
+    dependencies: []
+    description: >-
+      <body>
+
+
+
+
+
+      <div align="justify">Following in jeronij's footsteps, this is another "all inclusive" mod that changes the look of your streets. The main focus is set to residential streets; however, a few
+      commercial and agricultural zones can be altered as well. Other optional files will also change the look of the default Maxis trees on roads and oneway roads. The main goal of this mod is to add
+      trees to streets in residential zones, as well as parked cars, which is a very common sight throughout Europe.<br><br><strong>Mod Details<br></strong>
+
+      </div>
+
+      <p align="justify">This mod is fully modular, so you can decide which street and road tiles should be affected by the mod, and you can also decide which trees should show up there. For this
+      purpose, several street tree DATs have been created. It's even possible to mix the various tree styles, however the result will look best when you only install one DAT at once. More tree style
+      DATs can be created later to use trees by other designers as well. Unfortunately, this method doesn't work for seasonal trees, but a seasonal tree version of this mod might be released later.
+      <br><br>Depending on wealth type and zone density, the look of the streets varies. You won't see any cars parked on the curb in high-wealth low density zones, and only medium and high density
+      zones will have parking bays and dirt circles for the trees. Please note that the DATs for roads and oneway roads will only change the trees, but they do not add any cars or parking bays to your
+      roads. The DAT for agricultural zones doesn't add any cars or parking bays either.<br><br>You can install or uninstall the mod at any time you want. To update your streets with the new look (or
+      the default Maxis look again), simply select the street tool and click on your streets, i. e. on the crossroads. The props will change automatically in a radius of a few tiles. By clicking more
+      than one time, you can also alter the appearance of the trees, in case the first click didn't meet your liking for some reason. If brown boxes are showing up, please make sure you have all
+      dependencies, as listed below.<br><br><strong>Compatibility<br></strong><br>This mod is <strong>not</strong> compatible with any other street mod, such as jeronij's streetside mod, ardecila's
+      street tree mod, swamper77's no palm mod (however, the files that remove the palms from lots etc. will work fine) or Pegasus' no street junk mod. If other mods that modify the look of the
+      streets are installed, only the one that is loaded last will determine the appearance in the game.<br><br><strong>Dependencies</strong><br><br>If you want to use Cycledogg's or Pegasus' trees,
+      you also have to install the following files. The files described above will use trees from all four packs by Cycledogg, so make sure these are installed properly. If you don't install the
+      dependencies, brown boxes will show up on your streets.</p>
+
+      <ul><li>    <div align="justify"><font color="#000000"><a href="https://www.simtropolis.com/stex/index.cfm?id=14842" rel="external nofollow">CP_PropPack_Vol01.dat</a></font></div>    </li>
+
+      <li>    <div align="justify"><font color="#000000"><a href="https://www.simtropolis.com/stex/index.cfm?id=15796" rel="external
+      nofollow">CP_PropPack_Vol02.dat</a></font></div>    </li>    <li>    <div align="justify"><font color="#000000"><a href="https://www.simtropolis.com/stex/index.cfm?id=12360" rel="external
+      nofollow">CPT_No8_TreeModelsPartOne.dat</a></font></div>    </li>    <li>    <div align="justify"><font color="#000000"><a href="https://www.simtropolis.com/stex/index.cfm?id=12361"
+      rel="external nofollow">CPT_No9_TreeModelsPartTwo.dat</a></font></div>    </li>    <li>    <div align="justify"><font color="#000000"><a
+      href="https://www.simtropolis.com/stex/index.cfm?id=14025" rel="external nofollow">PEG_MTP_RESOURCE_vol1.dat</a></font></div>    </li>
+
+      </ul><p align="justify">Please make sure to read the readme file for further details. This mod is using an installer, Mac users can find a ZIP version</p>
+
+      						</body>
+    filename: SFBT_Street_Tree_Mod1.zip
+    files:
+      - SFBT_DirtCircle_Remover.dat
+      - readme_SFBT_street_tree_mod.htm
+      - Tree Props/SFBT_PEG_Street_Pines.dat
+      - Tree Props/SFBT_Maxis_Street_Pine_Trees.dat
+      - Tree Props/SFBT_Maxis_Street_Palm_Trees.dat
+      - Tree Props/SFBT_Maxis_Street_Deciduous_Trees.dat
+      - Tree Props/SFBT_CP_Street_Shore_Pinyon_Pines.dat
+      - Tree Props/SFBT_CP_Street_Ponderosa_Pines.dat
+      - Tree Props/SFBT_CP_Street_Deciduous_Trees.dat
+      - Street Mods/SFBT_StreetsideMod_R$MD.dat
+      - Street Mods/SFBT_StreetsideMod_R$LD.dat
+      - Street Mods/SFBT_StreetsideMod_R$HD.dat
+      - Street Mods/SFBT_StreetsideMod_R$$MD.dat
+      - Street Mods/SFBT_StreetsideMod_R$$LD.dat
+      - Street Mods/SFBT_StreetsideMod_R$$HD.dat
+      - Street Mods/SFBT_StreetsideMod_R$$$MD.dat
+      - Street Mods/SFBT_StreetsideMod_R$$$LD.dat
+      - Street Mods/SFBT_StreetsideMod_R$$$HD.dat
+      - Street Mods/SFBT_StreetsideMod_Plop.dat
+      - Street Mods/SFBT_StreetsideMod_IR.dat
+      - Street Mods/SFBT_StreetsideMod_Diagonal_RCI_LD.dat
+      - Street Mods/SFBT_StreetsideMod_C$$MDHD.dat
+      - Street Mods/SFBT_RoadsideMod_R$$_C$$LDMDHD.dat
+      - Street Mods/SFBT_OnewayRoadsideMod_R$$LDMDHD.dat
+      - Parking Lots/JRJ Street side mod Yellow parking bays.dat
+      - Parking Lots/JRJ Street side mod White parking bays.dat
+      - Parking Lots/JRJ Street side mod neutral parking bays.dat
+      - Parking Lots/JRJ Street side mod Blue parking bays.dat
+      - images/SFBT_street_tree_mod_8.jpg
+      - images/SFBT_street_tree_mod_7.jpg
+      - images/SFBT_street_tree_mod_6.jpg
+      - images/SFBT_street_tree_mod_5.jpg
+      - images/SFBT_street_tree_mod_4.jpg
+      - images/SFBT_street_tree_mod_3.jpg
+      - images/SFBT_street_tree_mod_2.jpg
+      - images/SFBT_street_tree_mod_1.jpg
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/ioSpecial.ini
+      - $PLUGINSDIR/InstallOptions.dll
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2009/a5c726fdb5d9e3d4b5089c059871afc1-SFBT_street_tree_mod1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2009/a5c726fdb5d9e3d4b5089c059871afc1-SFBT_street_tree_mod2.jpg
     lastModified: 2009-07-20T16:27:41Z
     name: BSC SFBT Street Tree Mod
+    sha256: 1ac3830756cc3b25dfa60fec056ba17c956b8a1052a4acc0136dcdca3fbe58d8
+    size: 382762
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2009/thumb-a5c726fdb5d9e3d4b5089c059871afc1-SFBT_street_tree_mod1.jpg
+    timestamp: 2024-07-05T07:02:43.202Z
+    uncompressed: 400654
     url: https://community.simtropolis.com/files/file/16098-bsc-sfbt-street-tree-mod/
+    version: "1.0"
   simtropolis/16130-food-modd-watercolor-mural-background:
     authors:
       - Mr food11
@@ -4737,14 +4825,22 @@ assets:
     dependencies: []
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
-      							
 
-      							
+
+
+
+
+
+
+
+
+
+
       <p>
       	This DLC will contain trees, plants, rocks, ponds and everything related to the environment.
       </p>
@@ -5531,10 +5627,254 @@ assets:
     authors:
       - Barroco Hispano
     category: 20
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	This DLC contain 60 sims.
+      </p>
+
+
+      <p>
+      	<strong>Specs:</strong>
+      </p>
+
+
+      <p>
+      	You can find them as <abbr title="Mayor Mode Ploppable">MMP</abbr>'s and props (<strong>Props= AGC_Sims_Casual_F and AGC_Sims_Casual_M</strong>)
+      </p>
+
+
+      <p>
+      	<img alt="image.png" class="ipsImage ipsImage_thumbnailed" height="157" src="https://cdn.discordapp.com/attachments/904385776584912936/1123955699706232842/image.png" width="241" >
+      </p>
+
+
+      <p>
+      	<span style="color:#27ae60;"><strong>I will update this DLC constantly so you must be on the lookout.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Scale of the models:</strong><span><span> </span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>133% on all axes.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Installation:</strong>
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#e74c3c;">Unzip the "Barroco Hispano DLCs" in your Plugins Folder (I highly recommend respecting my folder system because I plan to export or update thousands of BATs).</span></strong>
+      </p>
+
+
+      <p>
+      	-------------------------------------------------------------------------------------------------------
+      </p>
+
+
+      <p>
+      	<span style="color:#006600;"><strong>I will buy more 3d models with the money I receive (I decided to use Paypal instead of Patreon because I want everyone to have access to my content). <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p>
+      	<strong>Thanks to all people who have donated to me!</strong>
+      </p>
+
+      						</body>
+    filename: AGC Casual Sims DLC.7z
+    files:
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V27_S1_Walk_1_20-0x6534284a-0xdd573712-0xb1a8a640.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V27_S1_Walk_1_20-0x5ad0e817_0xd1a0bd02_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V26_S1_Walk_1_25-0x6534284a-0xdd573712-0xf1a8a654.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V26_S1_Walk_1_25-0x5ad0e817_0x11a0bb25_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V25_S1_Walk_1_35-0x6534284a-0xdd573712-0x91a8a0b5.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V25_S1_Walk_1_35-0x5ad0e817_0x31a0af19_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V24_S1_Walk_1_90-0x6534284a-0xdd573712-0xf1a8920b.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V24_S1_Walk_1_90-0x5ad0e817_0xd1a09bbf_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V23_S1_Idle_1_90-0x6534284a-0xdd573712-0x91a87d48.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V23_S1_Idle_1_90-0x5ad0e817_0x71a04b8e_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V22_S1_Idle_1_90-0x6534284a-0xdd573712-0x51a8304b.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V22_S1_Idle_1_90-0x5ad0e817_0x71a03df6_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V21_S1_Walk_1_45-0x6534284a-0xdd573712-0x31a810df.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V21_S1_Walk_1_45-0x5ad0e817_0xd19f1605_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V20_S1_Idle_1_90-0x6534284a-0xdd573712-0x91a5fe35.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V20_S1_Idle_1_90-0x5ad0e817_0x719e10cd_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V19_S1_Idle_1_30-0x6534284a-0xdd573712-0x11a5f4f2.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V19_S1_Idle_1_30-0x5ad0e817_0x119e09e7_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V18_S1_Idle_1_45-0x6534284a-0xdd573712-0xf1a581cb.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V18_S1_Idle_1_45-0x5ad0e817_0xb19d8537_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V17_S1_Idle_1_90-0x6534284a-0xdd573712-0x11a44658.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V17_S1_Idle_1_90-0x5ad0e817_0xd19c598f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V16_S1_Idle_1_67-0x6534284a-0xdd573712-0x51a43e6e.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V16_S1_Idle_1_67-0x5ad0e817_0xb19c4a6c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V15_S1_Idle_1_15-0x6534284a-0xdd573712-0xd1a42f13.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V15_S1_Idle_1_15-0x5ad0e817_0x519c3f52_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V14_S1_Walk_1_55-0x6534284a-0xdd573712-0x119f6daa.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V14_S1_Walk_1_55-0x5ad0e817_0x919782c3_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V13_S1_Idle_1_65-0x6534284a-0xdd573712-0x719f5aef.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V13_S1_Idle_1_65-0x5ad0e817_0xb19764cf_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V12_S1_Walk_1_90-0x6534284a-0xdd573712-0x919eddaf.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V12_S1_Walk_1_90-0x5ad0e817_0x5196f474_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V11_S1_Idle_1_45-0x6534284a-0xdd573712-0x519de1b9.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V11_S1_Idle_1_45-0x5ad0e817_0x5195f86f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V10_S1_Idle_1_90-0x6534284a-0xdd573712-0x519b2b00.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V10_S1_Idle_1_90-0x5ad0e817_0x7193418a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V09_S1_Walk_1_90-0x6534284a-0xdd573712-0xb19a13d1.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V09_S1_Walk_1_90-0x5ad0e817_0x71922976_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V09_S1_Walk_1_45-0x6534284a-0xdd573712-0x919a13c0.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V09_S1_Walk_1_45-0x5ad0e817_0x31922a08_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V08_S1_Walk_1_22-0x6534284a-0xdd573712-0x11a60a08.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V08_S1_Walk_1_22-0x5ad0e817_0x319e1cdc_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V08_S1_Idle_1_90-0x6534284a-0xdd573712-0xb1975604.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V08_S1_Idle_1_90-0x5ad0e817_0x718f3edc_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V08_S1_Idle_1_40-0x6534284a-0xdd573712-0x519755f5.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V08_S1_Idle_1_40-0x5ad0e817_0xf18f6c7a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Idle_2_30-0x6534284a-0xdd573712-0xd1a029e4.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Idle_2_30-0x5ad0e817_0x91983e08_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Idle_1_90-0x6534284a-0xdd573712-0xd19a190d.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Idle_1_90-0x5ad0e817_0x71922f0f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Idle_1_30-0x6534284a-0xdd573712-0x319a1900.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Idle_1_30-0x5ad0e817_0xd1922fb7_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Cam_1_90-0x6534284a-0xdd573712-0x71962470.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Cam_1_90-0x5ad0e817_0xf18df72c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Cam_1_45-0x6534284a-0xdd573712-0x31962461.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V07_S1_Cam_1_45-0x5ad0e817_0x118df828_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V06_S1_Walk_1_90-0x6534284a-0xdd573712-0x31933412.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V06_S1_Walk_1_90-0x5ad0e817_0x72749ec0_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V06_S1_Walk_1_45-0x6534284a-0xdd573712-0xf1932fad.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V06_S1_Walk_1_45-0x5ad0e817_0xd2749fc1_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V05_S1_Walk_1_90-0x6534284a-0xdd573712-0xd1932afb.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V05_S1_Walk_1_90-0x5ad0e817_0x72749934_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V05_S1_Walk_1_23-0x6534284a-0xdd573712-0xf1932aec.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V05_S1_Walk_1_23-0x5ad0e817_0x32749a1f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V04_S1_Walk_1_67-0x6534284a-0xdd573712-0x519e0cec.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V04_S1_Walk_1_67-0x5ad0e817_0x91962367_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V04_S1_Idle_1_59-0x6534284a-0xdd573712-0xd192fd40.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V04_S1_Idle_1_59-0x5ad0e817_0x12746d37_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V04_S1_Idle_1_19-0x6534284a-0xdd573712-0xd192fd51.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V04_S1_Idle_1_19-0x5ad0e817_0xb2746c81_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V03_S1_Idle_1_90-0x6534284a-0xdd573712-0x31924beb.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V03_S1_Idle_1_90-0x5ad0e817_0x124d7fd0_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V03_S1_Idle_1_64-0x6534284a-0xdd573712-0x51924bd8.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V03_S1_Idle_1_64-0x5ad0e817_0xf24d808f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V02_S1_Idle_1_90-0x6534284a-0xdd573712-0x319213d2.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V02_S1_Idle_1_90-0x5ad0e817_0xf24d4854_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V02_S1_Idle_1_45-0x6534284a-0xdd573712-0x5192193d.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V02_S1_Idle_1_45-0x5ad0e817_0x724d4dba_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V01_S1_Idle_1_90-0x6534284a-0xdd573712-0x11920843.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V01_S1_Idle_1_90-0x5ad0e817_0x524d3cb5_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V01_S1_Idle_1_37-0x6534284a-0xdd573712-0xb1920fc2.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_M_V01_S1_Idle_1_37-0x5ad0e817_0x724d445a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V22_S1_Idle_1_15-0x6534284a-0xdd573712-0x71a8a0a6.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V22_S1_Idle_1_15-0x5ad0e817_0xb1a0b72e_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V21_S1_Idle_1_20-0x6534284a-0xdd573712-0x71a891fd.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V21_S1_Idle_1_20-0x5ad0e817_0xf1a0a877_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V20_S1_Idle_1_50-0x6534284a-0xdd573712-0x11a87d3b.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V20_S1_Idle_1_50-0x5ad0e817_0x71a0937b_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V19_S1_Idle_1_62-0x6534284a-0xdd573712-0x51a8303f.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V19_S1_Idle_1_62-0x5ad0e817_0xd1a04688_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V18_S1_Idle_1_35-0x6534284a-0xdd573712-0x91a810d0.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V18_S1_Idle_1_35-0x5ad0e817_0xb1a0277c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V17_S1_Idle_1_65-0x6534284a-0xdd573712-0xb1a609fb.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V17_S1_Idle_1_65-0x5ad0e817_0x319e1fd1_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V16_S1_Idle_1_90-0x6534284a-0xdd573712-0x51a5fe26.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V16_S1_Idle_1_90-0x5ad0e817_0xd19e14b7_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V15_S1_Walk_1_60-0x6534284a-0xdd573712-0x71a5f4e4.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V15_S1_Walk_1_60-0x5ad0e817_0xd19e0bb0_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V14_S1_Walk_1_90-0x6534284a-0xdd573712-0xd1a581bc.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V14_S1_Walk_1_90-0x5ad0e817_0x519d985b_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V13_S1_Idle_1_90-0x6534284a-0xdd573712-0x91a42f05.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V13_S1_Idle_1_90-0x5ad0e817_0x319c4103_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V12_S1_Walk_1_55-0x6534284a-0xdd573712-0xd1a029d1.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V12_S1_Walk_1_55-0x5ad0e817_0x71984078_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V11_S1_Walk_1_90-0x6534284a-0xdd573712-0xb19f6d9d.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V11_S1_Walk_1_90-0x5ad0e817_0x31978458_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V10_S1_Idle_1_35-0x6534284a-0xdd573712-0xf19f5ae0.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V10_S1_Idle_1_35-0x5ad0e817_0x319770c8_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V09_S1_Idle_1_90-0x6534284a-0xdd573712-0x919ee0a6.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V09_S1_Idle_1_90-0x5ad0e817_0x1196f771_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V08_S1_Idle_1_60-0x6534284a-0xdd573712-0x919dedbb.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V08_S1_Idle_1_60-0x5ad0e817_0x1196045b_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V07_S1_Idle_1_22-0x6534284a-0xdd573712-0x519ddd14.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V07_S1_Idle_1_22-0x5ad0e817_0x7195f3ce_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V06_S1_Idle_1_90-0x6534284a-0xdd573712-0xd19a1d41.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V06_S1_Idle_1_90-0x5ad0e817_0x71923353_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V06_S1_Idle_1_63-0x6534284a-0xdd573712-0xf19a1d32.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V06_S1_Idle_1_63-0x5ad0e817_0x319233e8_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V05_S1_Walk_1_22-0x6534284a-0xdd573712-0x31a43e5b.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V05_S1_Walk_1_22-0x5ad0e817_0xf19c551f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V05_S1_Idle_1_55-0x6534284a-0xdd573712-0x9195a157.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V05_S1_Idle_1_55-0x5ad0e817_0xb18cfae0_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V05_S1_Idle_1_10-0x6534284a-0xdd573712-0xb195a166.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V05_S1_Idle_1_10-0x5ad0e817_0x518cf6d8_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V04_S1_Idle_1_90-0x6534284a-0xdd573712-0x51946cd2.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V04_S1_Idle_1_90-0x5ad0e817_0xb18c8213_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V04_S1_Idle_1_60-0x6534284a-0xdd573712-0xf1946cc5.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V04_S1_Idle_1_60-0x5ad0e817_0xd18c82ae_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V03_S1_Walk_1_90-0x6534284a-0xdd573712-0x51932071.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V03_S1_Walk_1_90-0x5ad0e817_0x32748f62_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V03_S1_Walk_1_50-0x6534284a-0xdd573712-0xf193205d.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V03_S1_Walk_1_50-0x5ad0e817_0x92749052_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V03_S1_Idle_1_90-0x6534284a-0xdd573712-0x919a2f3b.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V03_S1_Idle_1_90-0x5ad0e817_0x719244ef_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V03_S1_Idle_1_35-0x6534284a-0xdd573712-0xb19a2f2a.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V03_S1_Idle_1_35-0x5ad0e817_0x919245cf_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_4_30-0x6534284a-0xdd573712-0x119e1081.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_4_30-0x5ad0e817_0xf1962742_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_3_90-0x6534284a-0xdd573712-0x919844b0.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_3_90-0x5ad0e817_0x9190596f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_3_64-0x6534284a-0xdd573712-0x719843c1.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_3_64-0x5ad0e817_0x51905a1e_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_2_67-0x6534284a-0xdd573712-0x91931359.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_2_67-0x5ad0e817_0x12748392_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_2_13-0x6534284a-0xdd573712-0x71931368.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_2_13-0x5ad0e817_0x127481a8_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_1_90-0x6534284a-0xdd573712-0x1192455e.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_1_90-0x5ad0e817_0x524d7902_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_1_55-0x6534284a-0xdd573712-0xd192454d.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V02_S1_Idle_1_55-0x5ad0e817_0xb24d7a09_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Walk_1_90-0x6534284a-0xdd573712-0x719235ad.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Walk_1_90-0x5ad0e817_0x324d69de_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Walk_1_25-0x6534284a-0xdd573712-0xf1923597.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Walk_1_25-0x5ad0e817_0x124d6a5f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Idle_2_45-0x6534284a-0xdd573712-0x11a44646.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Idle_2_45-0x5ad0e817_0xf19c5d02_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Idle_1_90-0x6534284a-0xdd573712-0xf1984cf2.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Idle_1_90-0x5ad0e817_0x71906214_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Idle_1_30-0x6534284a-0xdd573712-0xf1984cdf.SC4Desc
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Sims_Casual_F_V01_S1_Idle_1_30-0x5ad0e817_0x319062b9_0x30000.SC4Model
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Casual_Sims_V01_P2_MMP.dat
+      - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Casual_Sims_V01_P1_MMP.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_06/649d7c3b24c1f_image(1).thumb.png.1f8c7ae0702254a1ab2c2b2ed663de2a.png
     lastModified: 2023-06-29T12:42:35Z
     name: AGC - Casual Sims DLC
+    sha256: aa8a555c8978d9a61cf3757201b838c0288d72f1c080296140bbd69c3fd97de4
+    size: 388142
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_06/649d7c3b24c1f_image(1).thumb.png.1f8c7ae0702254a1ab2c2b2ed663de2a.png
+    timestamp: 2024-07-23T09:03:18.391Z
+    uncompressed: 1628489
     url: https://community.simtropolis.com/files/file/35560-agc-casual-sims-dlc/
+    version: 1.0.0
   simtropolis/35580-air-quality-index:
     authors:
       - Ryuu Tenno
@@ -5563,10 +5903,83 @@ assets:
     authors:
       - hugues aroux
     category: 20
+    dependencies:
+      - simtropolis/16098-bsc-sfbt-street-tree-mod
+      - sc4evermore/86-sfbt-street-tree-mod
+    description: >-
+      <body>
+
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong><abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod <abbr title="Type 21 Exemplar">T21</abbr> overhaul.</strong></span>
+      </p>
+
+
+      <p>
+      	The plugin: <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod, by Andreas, available on <a href="https://community.simtropolis.com/files/file/16098-bsc-sfbt-street-tree-mod/" rel=""><abbr title="Simtropolis">ST</abbr> : bsc-<abbr title="SimForum BAT Team">sfbt</abbr>-street-tree-mod</a>  -- <a href="https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/86-sfbt-street-tree-mod" rel="external nofollow"><abbr title="SC4Evermore">SC4E</abbr> : 86-<abbr title="SimForum BAT Team">sfbt</abbr>-street-tree-mod</a> offers in the directory: Street Tree Mod\Street Mods\<br>
+      	a set of <abbr title="Type 21 Exemplar">T21</abbr>-type files (15) which place a number of Props along the street: mainly trees, parking bays and cars, and more... ; depending on the nature of the street (wealth, density, Zone).<br>
+      	Some of these files, despite Andreas’s hard work - great for 2006! - contained a few errors in the placement, overlapping and orientation of bays and other accessories...<br>
+      	So I revised all 170+ of <abbr title="Type 21 Exemplar">T21</abbr> exemplars.<br>
+      	Mainly: I repositioned the parking bays and cars towards the edges of the street - out of the traffic lane, and I repositioned the benches, trees, hydrants, ... straddling the parking spaces.
+      </p>
+
+
+      <p>
+      	<img class="ipsImage ipsImage_thumbnailed" data-fileid="97057" src="https://www.simtropolis.com/objects/attachments/monthly_2023_10/sfbt_illustra1.jpg.506fe6f917ff555d8316047faa5c9e68.jpg" alt="sfbt_illustra1.jpg.506fe6f917ff555d8316047faa5c9e68.jpg" ><br>
+      	This may have been deliberate for some, but I find them rather strange and unsightly. I’ve also removed the «big potted flowers»!
+      </p>
+
+
+      <p>
+      	<br>
+      	The [.dat] files have been renamed with a [z_] prefix to avoid overwriting. You can therefore unzip these new (15) files into the <abbr title="SimForum BAT Team">SFBT</abbr>\Street Tree Mod\Street Mods\ directory of the same name (as presented in the ZIP) and choose the fate of the old files.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SFBT Street Tree Mod - Revised-Scoty_v2.zip
+    files:
+      - SFBT_Street_mod_revised-v2.pdf
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$MD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$LD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$HD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$$MD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$$LD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$$HD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$$$MD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$$$LD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_R$$$HD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_Plop.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_IR.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_Diagonal_RCI_LD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_StreetsideMod_C$$MDHD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_RoadsideMod_R$$_C$$LDMDHD.dat
+      - Street Tree Mod/Street Mods/z_SFBT_OnewayRoadsideMod_R$$LDMDHD.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/img_overhaul.thumb.png.ec1553f24392990dac90e55b916f83bb.png
     lastModified: 2023-10-07T21:00:17Z
     name: SFBT Street Tree Mod - REVISED
+    sha256: b273ca4b84f4f6b49226d5e35bc3b1f7a9432fb56a14b74a5b559b7936d86acc
+    size: 153447
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/img_overhaul.thumb.png.ec1553f24392990dac90e55b916f83bb.png
+    timestamp: 2024-07-05T07:02:43.202Z
+    uncompressed: 205745
     url: https://community.simtropolis.com/files/file/35660-sfbt-street-tree-mod-revised/
+    version: 2.0.0
   simtropolis/35686-mmp-paths-pack-1:
     authors:
       - JulioC
@@ -5599,6 +6012,412 @@ assets:
     name: DgVoodoo 2 - SimCity 4 Edition
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/communityIcon_pznebvf29ih91.thumb.jpg.ff024df162ef710ab91aae67c66745e4.jpg
     url: https://community.simtropolis.com/files/file/36227-dgvoodoo-2-simcity-4-edition/
+  simtropolis/36330-westwind-streets:
+    authors:
+      - hugues aroux
+    category: 20
+    dependencies:
+      - simtropolis/35660-sfbt-street-tree-mod-revised
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	The WestWind Streets (WWS) is a texture replacement mod for Maxis Streets. It covers all intersections with the various networks present in the <abbr title="Network Addon Mod">NAM</abbr> (47,48,...). Such as RealRailWay (<abbr title="RealRailway">RRW</abbr>), Tram (<abbr title="Ground Light Rail">GLR</abbr>) or the various <abbr title="Network Widening Mod">NWM</abbr> roads with 3, 4, ... lanes.
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	It adds a little variety to the street network with 4 types of T and X crossroads (one type for wealth0 ; 1 ; 2-3 ; 4-5-6), plus a set of "countryside" textures (w7) in 2 options versions: unkerbed or gravel-sides. WWStreets also cover the Tram-in-Street (<abbr title="Ground Light Rail">GLR</abbr>) network and the <abbr title="FLexible UnderPasses">FLUPS</abbr> underground tunnels.
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	A number of segments have been produced in <abbr title="Right Hand Drive">RHD</abbr> and <abbr title="Left Hand Drive">LHD</abbr>. A fairly generic <abbr title="Left Hand Drive">LHD</abbr>, between Oceania and the UK. 
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	Insofar as the network's operating rules allow.
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	Following the example of RIVIT's Tarseal Street plugin, I offer texture replacement for JRJ Parking Bays - for the <abbr title="SimForum BAT Team">SFBT</abbr> Street Mod plugin (since I use it!) And as a small tribute to RIVIT, an adaptation of its Lot textures.
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	Of course, the automata paths are adapted accordingly. As well as some <abbr title="Left Hand Drive">LHD</abbr> and <abbr title="Right Hand Drive">RHD</abbr> <abbr title="Type 21 Exemplar">T21s</abbr>.
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	 
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	<span style="font-size:16px;"><b>Distribution</b></span><b><span style="font-size:14pt;"></span></b>
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	You can download, on this page, the ready-to-play version with Maxis grass textures. 
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	Or you can pick up the WestWindStreets_Fabrik_x (<a href="https://1drv.ms/f/s!AlD-_0WBCRHjiyfobnRthZ2S9PHX" rel="external nofollow">on my drive</a>) to generate the set with your own grass textures. Using GoFSH (From RIVIT). Production file : <i>build_WWStreets.txt</i>
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	News, preparation for updating this mod ... on <a href="https://community.simtropolis.com/forums/topic/761614-scotys-small-tinkering/" rel="">this thread</a> ! 
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	 
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	<span style="font-size:16px;"><b>Installation</b></span><b><span style="font-size:14pt;"></span></b>
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	.. As this Mod must be loaded after the <abbr title="Network Addon Mod">NAM</abbr>, and others... drop the contents of the ZIP: <span style="color:#8e44ad;">z__scoty_mods\</span> directly in the Plugins folder : <span style="color:#8e44ad;">Documents\SimCity 4\Plugins\</span>
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	.. To be on the safe side, keep the tree structure of the ready-to-play version. And for the Fabrik version, place the contents of _prod\ in a directory named: z____scoty_mods.
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	<b>For all distribution ..</b>
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	.. To keep or not to keep the [WWS - zOptional Cul-de-Sac] directory: Circular end street. (See screenshots above).
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	.. If you're an <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod user (<a href="https://community.simtropolis.com/files/file/35660-sfbt-street-tree-mod-revised/" rel="">here revised version</a>), the directory: WWS - JRJ Side Parking bays, contains an overload of this plugin adapted for WWStreets.
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	.. Delete the WWS - <abbr title="Type 21 Exemplar">T21s</abbr> [<abbr title="Left Hand Drive">LHD</abbr>|RLHD]] directory according to your driving direction.
+      </p>
+
+
+      <p style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:35.4pt;line-height:normal;">
+      	WWStreets modifies/adapts the positioning of some intersection props (<abbr title="Type 21 Exemplar">T21</abbr>). Maxis and <abbr title="Network Addon Mod">NAM</abbr>. Please ensure that these files are not overloaded by another plugin. Such as Mandelsoft's Stoplights_replacement_mod plugin. The latter can coexist with WWStreets, without any degradation, if it is loaded beforehand.
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	<b>In Scoty-WWStreets\</b> directory ..
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	.. discard files that are not for your traffic direction (<abbr title="Left Hand Drive">LHD</abbr>/<abbr title="Right Hand Drive">RHD</abbr>) and your region: EU and US (for the moment) - or both, e.g.: EU <abbr title="Left Hand Drive">LHD</abbr>, ...
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	.. and choose one of the Rural option :<span>  </span>Unkerbed or Gravel sides. (See screenshots above).
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	.. Keep only the <abbr title="Street Addon Mod">SAM</abbr> transitions (scoty-WWStreets - z_opt WWS-<abbr title="Street Addon Mod">SAM</abbr> nnnnn.dat) for which you have installed the plugins (Rivit, MGB, Magneto).
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	<b><span style="font-size:18pt;color:#336699;"></span></b>
+      </p>
+
+      						</body>
+    filename: WestWindStreets_maxis_1-5-48.zip
+    files:
+      - z____scoty_mods/ReadMe_WWStreet_1-5-48_240707.pdf
+      - z____scoty_mods/WWS - zOptional Cul-de-Sac/scoty-WWStreets - Optional Cul-de-sac - Tex.dat
+      - z____scoty_mods/WWS - zOptional Cul-de-Sac/scoty-WWStreets - Optional Cul-de-sac - Paths&Props.dat
+      - z____scoty_mods/WWS - T21s RHD/scoty-WWStreets - NAM T21s RHD.dat
+      - z____scoty_mods/WWS - T21s RHD/scoty-WWStreets - MAXIS T21s RHD.dat
+      - z____scoty_mods/WWS - T21s LHD/scoty-WWStreets - NAM T21s LHD.dat
+      - z____scoty_mods/WWS - T21s LHD/scoty-WWStreets - MAXIS T21s LHD.dat
+      - z____scoty_mods/WWS - Paths/scoty-WWStreets - NAM_Paths.dat
+      - z____scoty_mods/WWS - Paths/scoty-WWStreets - Common_Paths.dat
+      - z____scoty_mods/WWS - NAM_Supp/scoty-WWStreets FLUP tunnel-ramp.dat
+      - z____scoty_mods/WWS - NAM_Supp/scoty-WWStreets - NAM Street tunnel.dat
+      - z____scoty_mods/WWS - JRJ Side Parking bays/scoty-WWStreets - JRJ Side Parking bays.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM7 MGB bikepaths.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM6 darkned MGB.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM5 RVT TSR Rural.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM4 RVT NZ Gravel.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM2 RVT Grey H-Brick.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM1 Parking Magneto.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - WWS-SAM11 EU.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - US.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Street-SAM bases.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rural Unkerbed.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rural Gravel sides.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - RRWx RHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - RRWx LHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rivit Lot Support.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Lots SCILT CULDESAC.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR TIS US.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR TIS EU.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU RHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU LHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common RHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common LHD.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668aa03dca016_Capturedcran2024-07-07131254.thumb.jpg.abf38ff1a307797cd63719b9a114336b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_various-intersections-1.thumb.jpg.9eb7134097ae1d6dbc474cdf988df42a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_rural_gravel_option.thumb.jpg.94aa46349c6f2d00de3dbfc57d033e90.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_rural_unkerbed_option.thumb.jpg.49b52085e0030f9165cbf2e70d594495.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_SAMs_NAM.thumb.jpg.633d348f408a2798e310a4feb41f84b1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_NWM.thumb.jpg.e7e9ae606858c6b8a10047cfcd4965c3.jpg
+    lastModified: 2024-07-07T14:03:45Z
+    name: WestWind Streets
+    sha256: bdcd88dde734c2f5ebdc5b5b471ff38c3da6abb4a755a72003b9cdd7a84fc075
+    size: 16076288
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/668aa03dca016_Capturedcran2024-07-07131254.thumb.jpg.abf38ff1a307797cd63719b9a114336b.jpg
+    timestamp: 2024-07-16T08:06:07.759Z
+    uncompressed: 30024429
+    url: https://community.simtropolis.com/files/file/36330-westwind-streets/
+    version: 1.5.48
+  simtropolis/36339-cp-floral-mmp-collection:
+    authors:
+      - "11241036"
+    category: 20
+    dependencies:
+      - simtropolis/36142-submenus-dll
+      - sc4evermore/36-lk33-seasonalflorapatch
+      - sc4evermore/132-bsc-cp-mmp-for-cp-mega-prop-packs
+      - sc4evermore/132-bsc-cp-
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<span style="color:#c0392b;"><strong>Warning! Please take yourself time to read the Readme in order to avoid nasty side effects, such as the double icon bug, and some entries not working the way you want.</strong></span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Dependencies:</strong></span>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack Version 8 or higher: </strong><a href="https://sc4evermore.com/index.php/downloads/download/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://sc4evermore.com/index.php/downloads/download/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	<em>In particular, you need the following files: <abbr title="BATT Squad Certification">BSC</abbr> MEGA Props – CP Vol01.dat, <abbr title="BATT Squad Certification">BSC</abbr> Mega Props – CP Vol02.dat</em>
+      </p>
+
+
+      <p>
+      	<strong>Seasonal Flora Patch</strong> (if your terrain mod doesn’t support seasonal flora): <a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/36-lk33-seasonalflorapatch" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/36-lk33-seasonalflorapatch</a>
+      </p>
+
+
+      <p>
+      	<strong>Submenus DLL</strong> (optional): <a href="https://community.simtropolis.com/files/file/36142-submenus-dll/" rel="">https://community.simtropolis.com/files/file/36142-submenus-dll/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Other <abbr title="Mayor Mode Ploppable">MMP</abbr> plugins related to CP's content you might be interested in:</strong></span>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="BATT Squad Certification">BSC</abbr> CP <abbr title="Mayor Mode Ploppables">MMPs</abbr> for CP MEGA Prop Packs:</strong> <a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/132-bsc-cp-mmp-for-cp-mega-prop-packs" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/132-bsc-cp-<abbr title="Mayor Mode Ploppable">mmp</abbr>-for-cp-mega-prop-packs</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Description:</strong></span>
+      </p>
+
+
+      <p>
+      	This plugin contains, as its name already implies, a few plant <abbr title="Mayor Mode Ploppable">MMP</abbr>'s derivated from CP's props. Like all other <abbr title="Mayor Mode Ploppable">MMP</abbr>'s, they are available in your Mayor Mode menu. There's nothing special to tell about them, and there isn't really a coherent theme they all would be part of, but in my opinion they are a nice addition to the game, and they aren't part of any other upload. Some of them are seasonal, therefore, please read the item descriptions carefully, because some of these seasonal items need to be planted in in-game September, and some in March.
+      </p>
+
+
+      <p>
+      	<strong>Note about the adapting <abbr title="Mayor Mode Ploppable">MMP</abbr>'s:</strong>
+      </p>
+
+
+      <p>
+      	Two of the <abbr title="Mayor Mode Ploppable">MMP</abbr>'s are seasonal but come with 4 seasons. Unfortunately, it is not possible yet to make <abbr title="Mayor Mode Ploppable">MMP</abbr>'s with 4 rotating seasons (the maximum is 3), thus, I've resorted to a bit of a dirty trick there that, as far as I know, hasn't ever been used by anybody yet: Both of these <abbr title="Mayor Mode Ploppable">MMP</abbr>'s (the Cherry and the Plum Tree) have been turned into so-called <strong>adapting <abbr title="Mayor Mode Ploppable">MMP</abbr>'s</strong>. That means: They will not change the look over in-game time, but after plopping them in your cities and saving, you can just replace a file to make them look differently (the graphics will adapt automatically). There are 4 files per tree, and they have been named accordingly, but please make sure to read the installation instructions below to avoid the double icon bug!
+      </p>
+
+
+      <p>
+      	By the way, the cherry and plum tree additionally come with 3 variants with different season cycles, where I simply left out one of the seasons each. Please read the in-game description to know which seasons will be applicable. The flowers also come in both an always flourishing and a seasonal variant. The seasonal variant will be there for 3 months after plopping, and then turn invisible.
+      </p>
+
+
+      <p>
+      	<strong>Available languages:</strong> English, German
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Submenu compatibility:</strong></span>
+      </p>
+
+
+      <p>
+      	This upload has been optimized for usage with memo's Submenus DLL mod. This means that users who have installed this mod will find all entries located in their own submenu (in the Mayor Mode menu, where all other <abbr title="Mayor Mode Ploppable">MMP</abbr>'s are). Users who haven't installed it will simply find all entries somewhere in the <abbr title="Mayor Mode Ploppable">MMP</abbr> menu. The submenu icon looks like this:
+      </p>
+
+
+      <p>
+      	<img alt="SubI_CP.thumb.png.950f4701ce6e4bc288fabd" class="ipsImage ipsImage_thumbnailed" height="44" src="https://www.simtropolis.com/objects/screens/monthly_2024_07/SubI_CP.thumb.png.950f4701ce6e4bc288fabdb20c4a9504.png" width="176" >
+      </p>
+
+
+      <p>
+      	Please also note that due to the number of entries there are <strong>3 further submenus</strong>: Trees – Seasonal Flowers – Evergreen Flowers. All other entries are located in the default CP Floral <abbr title="Mayor Mode Ploppable">MMP</abbr>'s submenu.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Installation:</strong></span>
+      </p>
+
+
+      <p>
+      	Step 1: Move or copy all files except the Readme into your Plugins folder of SC4.
+      </p>
+
+
+      <p>
+      	Step 2: The folders "Cherry Tree" and "Plum Tree" contain 4 files each, every file with the same entry but with varying graphics. <strong>Only use one of these files per folder!</strong> Remove the 3 others from your Plugins folder. To change the season, you can just replace the file you've left there with any of the other files.
+      </p>
+
+
+      <p>
+      	To uninstall, remove all of the <abbr title="Mayor Mode Ploppable">MMP</abbr>'s that come with this plugin, and then remove all of its files.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Compatibility:</strong></span>
+      </p>
+
+
+      <p>
+      	This plugin is only compatible with SC4 Deluxe or SC4 with the Rush Hour Expansion Pack.
+      </p>
+
+      						</body>
+    filename: CP Floral MMP Collection.zip
+    files:
+      - Scr_CP.png
+      - Readme.pdf
+      - CP Floral MMP Collection_Submenu.dat
+      - CP Floral MMP Collection_Core Files.dat
+      - Plum Tree/CP_Plum_Winter.dat
+      - Plum Tree/CP_Plum_Summer.dat
+      - Plum Tree/CP_Plum_Spring.dat
+      - Plum Tree/CP_Plum_Fall.dat
+      - Cherry Tree/CP_Cherry_Winter.dat
+      - Cherry Tree/CP_Cherry_Summer.dat
+      - Cherry Tree/CP_Cherry_Spring.dat
+      - Cherry Tree/CP_Cherry_Fall.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/Scr_CP.thumb.jpg.f9e9867a177bfea36552fc94ae96f919.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/SubI_CP.thumb.png.950f4701ce6e4bc288fabdb20c4a9504.png
+    lastModified: 2024-07-13T15:22:33Z
+    name: CP Floral MMP Collection
+    sha256: 55d4d27c247f71abdb0f22ceaff356dcfcd4e378648d963f679aa0df946ebee2
+    size: 1821356
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/Scr_CP.thumb.jpg.f9e9867a177bfea36552fc94ae96f919.jpg
+    timestamp: 2024-07-16T08:06:07.759Z
+    uncompressed: 1875916
+    url: https://community.simtropolis.com/files/file/36339-cp-floral-mmp-collection/
+    version: "1"
   simtropolis/3651-navigation-buoys:
     authors:
       - Odd from Sweden
@@ -5635,10 +6454,38 @@ assets:
     authors:
       - JohnB
     category: 20
+    dependencies: []
+    description: >-
+      <body>
+
+      							<p>Finally realistic desert regions are possible!!! This mod consists of 3 different types of saguaro cacti. Large cactus, Small cactus, Cactus with 3 arms at different height. These cacti can be placed as flora in mayor mode. The plop cost is 5 sim dollars. </p>
+      <p>In order to install this mod put the .dat file into your My Documents/SimCity4/Plugins folder.</p>
+
+      <p>I would like to thank Gizmo28 for all the hard work in making the cacti into flora. I would also like to thank DarkMatter for helping me and giving me advice on how to best make the Saguaros.
+      I am hoping to see some desert CJ's made with these cacti. Enjoy!!! </p>
+
+      <p>Here is a link to the latest desert terrain mod by Thalassicus.It's based on the mod by Teirusu, but gives you even more terrain styles to choose from. No desert region is complete without
+      it. It's truly the best. <a href="https://www.simtropolis.com/stex/index.cfm?id=4483" rel="external nofollow">Link to mod</a></p>
+
+      <p><font color="#000000"></font></p>
+
+      						</body>
+    filename: Desert Flora Mod.zip
+    files:
+      - Desert Flora Mod/JohnB-Cactus.dat
+      - Desert Flora Mod/Desert Flora Mod.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_03_2006/cab6c02d74015a052238f2c0b0e72252-Ghost%20town5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_03_2006/cab6c02d74015a052238f2c0b0e72252-cactusin3dsmax.jpg
     lastModified: 2006-03-31T11:49:41Z
     name: Desert Flora Mod
+    sha256: 053d8535fdf72d1e6755d76e01af3e72c379694cfefebca20ac18bb49b2dcd97
+    size: 60574
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2006/thumb-cab6c02d74015a052238f2c0b0e72252-Ghost%20town5.jpg
+    timestamp: 2024-07-05T07:02:43.202Z
+    uncompressed: 122120
     url: https://community.simtropolis.com/files/file/4344-desert-flora-mod/
+    version: "1.0"
   simtropolis/4402-muddy-water:
     authors:
       - timotheus4
@@ -5776,4 +6623,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-43c2c618fac6b7de4fc16966c4966243-SW_Hydro%20Dam.jpg
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

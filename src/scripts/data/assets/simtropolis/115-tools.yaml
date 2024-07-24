@@ -759,7 +759,27 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1410,10 +1430,94 @@ assets:
     authors:
       - kegsmr
     category: 60
-    lastModified: 2024-05-29T15:23:31Z
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	The SC4MP Launcher brings easy, seamless multiplayer gameplay to SimCity 4. Build cities in multiplayer regions over the internet, hassle-free.
+      </p>
+
+
+      <p>
+      	The launcher simplifies the otherwise complex process of playing in SimCity 4 multiplayer regions. No more file-swapping over Dropbox or Discord. Just pick a server, and the launcher does the rest.
+      </p>
+
+
+      <p>
+      	The SC4MP network is open for anyone to host their own server. Once you've made your server available over the internet, it will be automatically added to the launcher's server list for anyone to join.
+      </p>
+
+
+      <p>
+      	For more information on the SimCity 4 Multiplayer Project, check out the <a href="https://community.simtropolis.com/forums/topic/762508-introducing-the-simcity-4-multiplayer-project/" rel="">forum post</a> or visit <a href="https://www.sc4mp.org" rel="external nofollow">www.sc4mp.org</a>.
+      </p>
+
+
+      <p>
+      	Support the SimCity 4 Multiplayer Project by becoming a patron on <a href="https://www.patreon.com/sc4mp" rel="external nofollow">Patreon</a>.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <p>
+      	<u>Launcher:</u>   Run the installer and follow the on-screen instructions. Alternatively, download one of the standalone ZIP-files and extract the files to a directory of your choosing. Refer to the included <em>Readme.html</em> file for help getting started.
+      </p>
+
+
+      <p>
+      	<u>Server:</u>   Run the installer and follow the on-screen instructions. Alternatively, download one of the standalone ZIP-files and extract the files to a directory of your choosing. The server can also be deployed as a <a href="https://www.docker.com/" rel="external nofollow">Docker</a> container using the <a href="https://github.com/andreRBarata/sc4mp-server-docker" rel="external nofollow">SC4MP Server Dockerizer</a> by <a href="https://github.com/andreRBarata" rel="external nofollow">andreRBarata</a>. Refer to the included <em>Readme.html</em> file for help setting up your server.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/1.thumb.png.9eca9704100ac31a7c9aad17ebd4a5cf.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/2.thumb.jpg.11bed8054c1496617080482d3b190ab4.jpg
+    lastModified: 2024-07-16T22:16:11Z
     name: SimCity 4 Multiplayer Project Launcher
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/1.thumb.png.7ee3465eebeaf93272d15db7814765a5.png
+    repository: https://github.com/andreRBarata/sc4mp-server-docker
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/1.thumb.png.9eca9704100ac31a7c9aad17ebd4a5cf.png
     url: https://community.simtropolis.com/files/file/35621-simcity-4-multiplayer-project-launcher/
+    variants:
+      "202015":
+        filename: SC4MP Launcher (installer).exe
+        sha256: 7b36ffead0cffcc4a73228865275ca7db0a519a277e0984d99e7689c550c4419
+        size: 15774216
+      "202016":
+        filename: SC4MP Launcher (standalone, 32-bit).zip
+      "202017":
+        filename: SC4MP Launcher (standalone, 64-bit).zip
+      "202018":
+        filename: SC4MP Launcher (standalone, python 3.8).zip
+      "202019":
+        filename: SC4MP Server (installer).exe
+      "202020":
+        filename: SC4MP Server (standalone, 32-bit).zip
+      "202021":
+        filename: SC4MP Server (standalone, 64-bit).zip
+      "202022":
+        filename: SC4MP Server (standalone, python 3.8).zip
+    version: "0.6"
   simtropolis/35741-sc4-message-viewer:
     authors:
       - Killeroo
@@ -1495,12 +1599,12 @@ assets:
       - net7.0-windows/1
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2023_12/concise.thumb.png.64702797309cae9e660595eacc3c8c37.png
-    lastModified: 2024-05-03T23:39:42Z
+    lastModified: 2024-07-13T19:22:59Z
     name: SC4 Cleanitol
     repository: https://github.com/wouanagaine/BSC-Cleanitol
     sha256: 47b388cf0b3852287bed6c84059f4624ea7c160aaac2169cee8646e60aa83592
     size: 583928
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/concise.thumb.png.64702797309cae9e660595eacc3c8c37.png
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/concise.thumb.png.6bf3582198b0adda5be7d1d8e1d174d7.png
     timestamp: 2024-06-27T06:32:51.411Z
     uncompressed: 2066386
     url: https://community.simtropolis.com/files/file/35790-sc4-cleanitol/
@@ -1509,10 +1613,146 @@ assets:
     authors:
       - Null 45
     category: 60
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	A DLL plugin for SimCity 4 that provides modders with more <abbr title="Residential, Commercial, Industrial">RCI</abbr> demand info.
+      </p>
+
+
+      <p>
+      	With this plugin installed there will be the following new variables that can be used from LUA scripts and UI files:
+      </p>
+
+
+      <p>
+      	<strong>  Variable name                       Description</strong><br>
+      	  g_cs1_active_demand          Cs§ active demand<br>
+      	  g_cs1_demand                       Cs§ demand<br>
+      	  g_cs2_active_demand          Cs§§ active demand<br>
+      	  g_cs2_demand                       Cs§§ demand<br>
+      	  g_cs3_active_demand          Cs§§§ active demand<br>
+      	  g_cs3_demand                       Cs§§§ demand<br>
+      	  g_ir_active_demand               IR (I-Ag) active demand<br>
+      	  g_ir_demand                           IR (I-Ag) demand<br>
+      	  g_current_ir_cap                    Current IR (I-Ag) cap<br>
+      	  g_id_demand                          ID demand<br>
+      	  g_im_demand                        IM demand<br>
+      	  g_iht_demand                        IHT demand<br>
+      	  g_region_r1_population       Region R§ population<br>
+      	  g_region_r2_population       Region R§§ population<br>
+      	  g_region_r3_population       Region R§§§ population<br>
+      	  g_region_cs1_population    Region Cs§ population<br>
+      	  g_region_cs2_population    Region Cs§§ population<br>
+      	  g_region_cs3_population    Region Cs§§§ population<br>
+      	  g_region_co2_population    Region Co§§ population<br>
+      	  g_region_co3_population    Region Co§§§ population<br>
+      	  g_region_ir_population        Region IR (I-Ag) population<br>
+      	  g_region_id_population       Region ID population<br>
+      	  g_region_im_population      Region IM population<br>
+      	  g_region_iht_population      Region IHT population
+      </p>
+
+
+      <p>
+      	The download includes a patch for RippleJet's Census Repository v3.5 that shows the new data, you will need to have the <a href="https://sc4evermore.com/index.php/downloads/download/21-other/39-bsc-census-repository-building-by-ripplejet" rel="external nofollow">original mod</a> installed.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4MoreDemandInfo.dll</em> from the <strong>Dll</strong><strong> </strong>folder into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Replace the original <em>RJ - Census_Repository_Model_and_Query_3.1.dat</em> with the one in the <strong>Census Repository v3.5 Patch</strong> folder.
+      	</li>
+      	<li>
+      		Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4MoreDemandInfo.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762906-sc4moredemandinfo" rel="">https://community.simtropolis.com/forums/topic/762906-sc4moredemandinfo</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-more-demand-info" rel="external nofollow">https://github.com/0xC0000054/sc4-more-demand-info</a>
+      </p>
+
+      						</body>
+    filename: SC4MoreDemandInfo.zip
+    files:
+      - Readme.txt
+      - Dll/Third Party Notices.txt
+      - Dll/SC4MoreDemandInfo.dll
+      - Dll/README.txt
+      - Dll/LICENSE.txt
+      - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.thumb.png.4baf70a67eff4ba39d69bcbd17bfe144.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_01/MoreDemandInfo.thumb.png.ec03107b3e79c5af25a7c16f3d47c15f.png
     lastModified: 2024-05-08T04:14:13Z
     name: SC4 More Demand Info
+    repository: https://github.com/0xC0000054/sc4-more-demand-info
+    sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
+    size: 1699084
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.thumb.png.4baf70a67eff4ba39d69bcbd17bfe144.png
+    timestamp: 2024-07-23T10:50:08.315Z
+    uncompressed: 2040510
     url: https://community.simtropolis.com/files/file/35978-sc4-more-demand-info/
+    version: 1.2.0
   simtropolis/36048-sc4-cpu-priority:
     authors:
       - Null 45
@@ -1567,7 +1807,27 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1738,10 +1998,344 @@ assets:
     authors:
       - Null 45
     category: 60
-    lastModified: 2024-05-20T21:07:23Z
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <div>
+      	<p>
+      		A DLL plugin for SimCity 4 that implements Discord rich presence support.
+      	</p>
+
+      	<p>
+      		This provides more detail about what the player is doing than Discord's default behavior for SimCity 4, which only shows the total play time.
+      	</p>
+
+      	<p>
+      		In the city view, the plugin displays the city name, various city statistics and the elapsed time. In the region view, the plugin displays the region name and various region statistics. When establishing a city, the plugin displays Establishing City in &lt;region name&gt;.
+      	</p>
+
+      	<p>
+      		The city and region statistics are changed at approximately 30 second intervals and include the following values.
+      	</p>
+
+      	<p>
+      		<strong>City Statistics</strong>
+      	</p>
+
+      	<ul>
+      		<li>
+      			Mayor name
+      		</li>
+      		<li>
+      			Mayor rating
+      		</li>
+      		<li>
+      			Residential population
+      		</li>
+      		<li>
+      			Commercial population
+      		</li>
+      		<li>
+      			Industrial population
+      		</li>
+      		<li>
+      			City age in years
+      		</li>
+      		<li>
+      			Monthly net income
+      		</li>
+      		<li>
+      			Total funds
+      		</li>
+      	</ul>
+
+      	<p>
+      		<strong>Region Statistics</strong>
+      	</p>
+
+      	<ul>
+      		<li>
+      			Population
+      		</li>
+      		<li>
+      			Commercial jobs
+      		</li>
+      		<li>
+      			Industrial jobs
+      		</li>
+      		<li>
+      			Total funds
+      		</li>
+      		<li>
+      			Total cities
+      		</li>
+      		<li>
+      			Developed city count
+      		</li>
+      		<li>
+      			Undeveloped city count
+      		</li>
+      	</ul>
+
+      	<p>
+      		There are some rich presence customization options that the plugin doesn't currently implement, e.g. using the small status image (a small circular image that covers the 4 in the SC4 icon). I have considered using that image to show certain city and/or player actions, emergency pause, bulldozer active, <abbr title="U-Drive-It">UDI</abbr> active, etc. But the main barrier with that feature is that I don't have appropriate images to use for those states. Discord also requires fairly large images, minimum of 512x512 pixels with a recommended size of 1024x1024 pixels.
+      	</p>
+
+      	<p>
+      		Suggestions would be welcome.
+      	</p>
+
+      	<p>
+      		<strong>System Requirements</strong>
+      	</p>
+
+      	<ul>
+      		<li>
+      			Windows 10 or later
+      		</li>
+      	</ul>
+
+      	<p>
+      		The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      	</p>
+
+      	<p>
+      		<strong>Installation</strong>
+      	</p>
+
+      	<ol>
+      		<li>
+      			Close SimCity 4.
+      		</li>
+      		<li>
+      			Copy the <em>Apps</em> folder into your SimCity 4 installation directory.
+      		</li>
+      		<li>
+      			Copy the <em>Plugins</em> folder into the SimCity 4 installation directory or Documents/SimCity 4 directory.
+      		</li>
+      		<li>
+      			Start SimCity 4.
+      		</li>
+      	</ol>
+
+      	<p>
+      		<strong>Troubleshooting</strong>
+      	</p>
+
+      	<p>
+      		The plugin should write a <em>SC4DiscordRichPresence.log</em> file in the same folder as the plugin.<br>
+      		The log contains status information for the most recent run of the plugin.
+      	</p>
+
+      	<p>
+      		If the log file was not created, ensure that <em>discord_game_sdk.dll </em>is in the Apps folder next to SimCity 4.exe and that the Microsoft Visual C++ 2022 x86 Redistribute has been installed.
+      	</p>
+
+      	<p>
+      		<strong> Source Code and Support</strong>
+      	</p>
+
+      	<p>
+      		Plugin thread: <a href="https://community.simtropolis.com/forums/topic/763193-discord-rich-presence-dll-for-simcity-4/" rel="">https://community.simtropolis.com/forums/topic/763193-discord-rich-presence-dll-for-SimCity-4/</a>
+      	</p>
+
+      	<p>
+      		The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-discord-rich-presence" rel="external nofollow">https://github.com/0xC0000054/sc4-discord-rich-presence</a>
+      	</p>
+
+      	<p>
+      		If you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: <a href="https://paypal.me/0xC0000054" rel="external nofollow">https://paypal.me/0xC0000054</a>
+      	</p>
+
+      	<p>
+      		Thanks to the few people who have donated to me.
+      	</p>
+      </div>
+
+      						</body>
+    filename: SC4DiscordRichPresence.zip
+    files:
+      - Third Party Notices.txt
+      - README.txt
+      - LICENSE.txt
+      - Plugins/SC4DiscordRichPresence.dll
+      - Apps/discord_game_sdk.dll
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/CityView.thumb.png.818934e4f48e68aa102934cd3876cea0.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/RegionView.thumb.png.7652d19068c781c368272b56afaa5d17.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/EstablishCity.thumb.png.e62c5079777cb9f3c68191554a1a0ed7.png
+    lastModified: 2024-06-29T01:51:30Z
     name: Discord Rich Presence DLL for SimCity 4
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/CityView.thumb.png.cdd509394546b3620b9c24850b31263c.png
+    repository: https://github.com/0xC0000054/sc4-discord-rich-presence
+    sha256: 8e73aea1e702ad99a19c0330d04d207ed5644ea57235d5010cb4da7d29265301
+    size: 1361689
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/CityView.thumb.png.818934e4f48e68aa102934cd3876cea0.png
+    timestamp: 2024-07-23T10:27:16.370Z
+    uncompressed: 3041507
     url: https://community.simtropolis.com/files/file/36257-discord-rich-presence-dll-for-simcity-4/
+    version: 1.1.0
+  simtropolis/36341-sc4ltextt-sc4-ltext-translator:
+    authors:
+      - nos.17
+    category: 60
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p>
+      	<span style="font-family:Georgia,serif;">SC4LTEXT Translator is an assistant for translating SimCity 4 <a href="https://wiki.sc4devotion.com/index.php?title=LTEXT" rel="external nofollow">LTEXT</a> files.</span>
+      </p>
+
+
+      <p dir="auto">
+      	<span style="font-family:Georgia,serif;">To use, select a DBPF file housing the LTEXT files you wish to translate. Choose the language you wish to translate to, and translate each of the desired LTEXT files, either manually or automatically via the Azure AI Text Translation service. Each LTEXT will turn green to indicate it has been translated. <em>SC4LTEXTT</em> can currently translate to all of the 18 languages supported in-game. More languages are possible; let me know if you have one you would like to add. An internet connection is required for the automatic translations.</span>
+      </p>
+
+
+      <p dir="auto">
+      	<span style="font-family:Georgia,serif;">Each LTEXT <abbr title="Group ID">GID</abbr> will be incremented by the appropriate offset for the translated language. Currently all LTEXT files are written uncompressed.</span>
+      </p>
+
+
+      <p dir="auto">
+      	<em><span style="font-family:Georgia,serif;"><span style="color:#2980b9;">It is important to note that due to </span><a href="https://community.simtropolis.com/forums/topic/761192-please-help-mz-crime-and-police-language-translations/?do=findComment&amp;comment=1762752" rel=""><span style="color:#2980b9;">reported issues</span></a><span style="color:#2980b9;"> with how Reader handles text encoding, certain 4-byte characters will appear as garbage data when viewed in Reader. This applies to all characters of languages such as Chinese, Korean, Thai, and Japanese, but also certain diacriticals for European languages too. If you open a file containing LTEXTs with these characters in Reader, <strong>DO NOT SAVE</strong>. If you do, the correctly functioning (but merely incorrectly displayed) characters will be overwritten by Reader with the garbage displayed characters.</span></span></em>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia,serif;">This program is an extension of <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/240203-rivit/?do=hovercard" data-mentionid="240203" href="https://community.simtropolis.com/profile/240203-rivit/" id="ips_uid_5256_4" rel="">@rivit</a>'s great little <a href="https://community.simtropolis.com/forums/topic/761192-please-help-mz-crime-and-police-language-translations/?page=2&amp;tab=comments#comment-1762969" rel="">LTEXTER tool</a> and aims to make translation of LTEXT files significantly easier by managing all translations within the app (no need to export/import/edit in an external text editor), and critically, provide the opportunity for automatic translations for <strong>all </strong>the languages supported by the game</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia,serif;"><span style="font-size:20px;"><span style="color:#8e44ad;"><strong><u>Requirements</u></strong></span></span></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><span style="font-size:14px;"><strong>Windows 10 or higher</strong></span></span>
+      	</li>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><strong>.NET7 runtime version &gt; 7.0.0</strong></span> - <span style="font-family:Georgia,serif;">To determine which version is installed, open Command Prompt and type</span><span style="font-family:Courier New,Courier,monospace;"> <span style="color:#3498db;"><strong><code class="language-plaintext highlighter-rouge">dotnet --list-runtimes</code></strong></span></span><span style="font-family:Georgia,serif;">. If the version is less than 7.0.0 installed, download the most recent version <a href="https://dotnet.microsoft.com/en-us/download" rel="external nofollow">here</a>. Alternatively, if you run the executable without the correct .NET runtime, you will receive an error message. Follow the prompts to download the correct version.</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#8e44ad;"><span style="font-family:Georgia,serif;"><u><span style="font-size:20px;">Downloading</span></u></span></span></strong><br>
+      	<span style="font-family:Georgia,serif;">Download from the STEX or visit the <a href="https://github.com/noah-severyn/SC4LTEXTT/releases/latest" rel="external nofollow">latest release</a> on Github.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#8e44ad;"><span style="font-family:Georgia,serif;"><u><span style="font-size:20px;">Support</span></u></span></span></strong><br>
+      	<span style="font-family:Georgia,serif;">Consult the <a href="https://noah-severyn.github.io/SC4Cleanitol/UserManual.html" rel="external nofollow" target="_blank">user manual</a>, which contains information on both using the program and creating scripts with the new functionality introduced with this program.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia,serif;">This is an open source application. The source code and issue tracker are posted <a href="https://github.com/noah-severyn/SC4LTEXTT" rel="external nofollow">here</a>. Requests or questions are welcomed here in the <a href="https://community.simtropolis.com/forums/topic/763287-sc4ltextt-sc4-ltext-translator/" rel="">dedicated thread</a> or in the <a href="https://github.com/noah-severyn/SC4LTEXTT/issues" rel="external nofollow">Github issue tracker</a>.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SC4LTEXTT_WPF-0.4.zip
+    files:
+      - net8.0-windows/_RDATA
+      - net8.0-windows/System.Memory.Data.dll
+      - net8.0-windows/SixLabors.ImageSharp.dll
+      - net8.0-windows/SC4LTEXTT.runtimeconfig.json
+      - net8.0-windows/SC4LTEXTT.pdb
+      - net8.0-windows/SC4LTEXTT.dll
+      - net8.0-windows/SC4LTEXTT.deps.json
+      - net8.0-windows/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+      - net8.0-windows/Microsoft.TestPlatform.PlatformAbstractions.dll
+      - net8.0-windows/Microsoft.TestPlatform.CoreUtilities.dll
+      - net8.0-windows/Microsoft.Bcl.AsyncInterfaces.dll
+      - net8.0-windows/Epsylon.TextureSquish.xml
+      - net8.0-windows/Epsylon.TextureSquish.pdb
+      - net8.0-windows/Epsylon.TextureSquish.dll
+      - net8.0-windows/csDBPF.xml
+      - net8.0-windows/csDBPF.pdb
+      - net8.0-windows/csDBPF.dll
+      - net8.0-windows/Azure.Core.dll
+      - net8.0-windows/Azure.AI.Translation.Text.dll
+      - net8.0-windows/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/it/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/de/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll
+      - net8.0-windows/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+      - net8.0-windows/es/Microsoft.TestPlatform.CoreUtilities.resources.dll
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/ProductImage.thumb.png.e8ee3d7f0a38471c3830a66ce722f12c.png
+    lastModified: 2024-07-13T19:57:03Z
+    name: "SC4LTEXTT : SC4 LTEXT Translator"
+    repository: https://github.com/noah-severyn/SC4LTEXTT
+    sha256: 269ef5e1acd19d7059fc9a887a59af5bdf9fedc9c19ea1445646d0f606b1f2c9
+    size: 1846962
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/ProductImage.thumb.png.e8ee3d7f0a38471c3830a66ce722f12c.png
+    timestamp: 2024-07-23T10:27:16.370Z
+    uncompressed: 5060243
+    url: https://community.simtropolis.com/files/file/36341-sc4ltextt-sc4-ltext-translator/
+    version: "0.4"
   simtropolis/3654-making-custom-building-families-with-datgen:
     authors:
       - DarkMatter
@@ -1791,4 +2385,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-cc76119e1615d738dc2f82f522af7ee3-sim-ruler.JPG
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:50:08.315Z

@@ -1,8 +1,6 @@
 import { ProfileData, ProfileInfo } from "@common/types"
 import { keys } from "@common/utils/objects"
 
-import { ReadonlyDeep } from "../packages/resolve"
-
 export function compactProfileConfig(profile: ProfileInfo): void {
   for (const packageId in profile.packages) {
     const config = profile.packages[packageId]
@@ -20,17 +18,27 @@ export function compactProfileConfig(profile: ProfileInfo): void {
   }
 
   for (const feature of keys(profile.features)) {
-    if (!profile.features[feature]) {
+    if (profile.features[feature] === false) {
       delete profile.features[feature]
     }
   }
 }
 
-export function toProfileData(profile: ReadonlyDeep<ProfileInfo>): ProfileData {
+export function toProfileData(profile: Readonly<ProfileInfo>): ProfileData {
   const data: ProfileData = {}
 
   if (profile.name !== profile.id) {
     data.name = profile.name
+  }
+
+  for (const feature of keys(profile.features)) {
+    data.features ??= {}
+    data.features[feature] = profile.features[feature]
+  }
+
+  for (const optionId in profile.options) {
+    data.options ??= {}
+    data.options[optionId] = profile.options[optionId]
   }
 
   for (const packageId in profile.packages) {
@@ -38,21 +46,15 @@ export function toProfileData(profile: ReadonlyDeep<ProfileInfo>): ProfileData {
     data.packages[packageId] = profile.packages[packageId]
   }
 
-  for (const feature of keys(profile.features)) {
-    data.externals ??= {}
-    if (profile.features[feature]) {
-      data.externals[feature] = true
-    }
-  }
-
   return data
 }
 
-export function fromProfileData(profileId: string, data: ReadonlyDeep<ProfileData>): ProfileInfo {
+export function fromProfileData(profileId: string, data: Readonly<ProfileData>): ProfileInfo {
   return {
-    features: data.externals ?? {},
+    features: data.features ?? {},
     id: profileId,
     name: data.name ?? profileId,
+    options: data.options ?? {},
     packages: Object.fromEntries(
       Object.entries(data.packages ?? {}).map(([packageId, config]) => {
         if (typeof config === "boolean") {

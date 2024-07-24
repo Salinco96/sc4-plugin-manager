@@ -29,6 +29,15 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
       <p>
       	The Bridges of Shoreline County, batte(re)d &amp; lotted by DocRorlach WorkingMan BATtery
@@ -416,7 +425,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -545,7 +572,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -676,10 +721,119 @@ assets:
     authors:
       - STEX Custodian
     category: 0
+    dependencies:
+      - simtropolis/33620-wmp-essentials-v10
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	<strong>WMP Mega Textures v1.02</strong> is a dependency pack, which superseds many of the previously released single, individual WMP texture packs and the previous WMP Mega Textures by <strong>DocRorlach</strong>.<br>
+      	<br>
+      	<strong><span style="color:#c0392b;"><span style="background-color:#ffffff;font-size:14px;">This is a </span>dependency package<span style="background-color:#ffffff;font-size:14px;">, and it doesn't contain any ploppable or growable elements. </span></span><span><span style="background-color:#ffffff;font-size:14px;">Although it can be used for creating new lots with Maxis Lot Editor or </span><abbr title="Plugin Manager">PIM</abbr><span style="background-color:#ffffff;font-size:14px;">-X.</span></span></strong>
+      </p>
+
+
+      <p>
+      	Since the original workingman-productions.co.uk/ website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href="https://www.sc4devotion.com/csxlex/lex_main.php" rel="external nofollow"><abbr title="Lot EXchange (SC4Devotion)">LEX</abbr></a> and <a href="https://community.simtropolis.com/files/category/73-workingman-productions-wmp/" rel="" title="Simtropolis Exchange - Workingman Productions (WMP)">STEX</a>) as legacy contents on behalf of <strong>DocRorlach</strong>. For easier access and due to a more userfriendly approach, we put together these mega packs, which are completely replacing the previous smaller prop packs.
+      </p>
+
+
+      <p>
+      	Some of the single wmp texture packs and the previous wmp mega textures also contained custom transit (TE) paths, which have been taken out from the new mega texture pack and they will be released with the NEW <strong><a href="https://community.simtropolis.com/files/file/33620-wmp-essentials-v10/" rel=""><span style="color:#c0392b;">WMP Essentials</span></a></strong>.<br>
+      	<br>
+      	This new Mega Texture set contains the textures from all the previosly released WMP Texture packs (<strong>WMP Textures 1-10</strong> and the <strong>WMP Mega Textures</strong>) and it also has the textures from the previous <strong>wmp_spam_freight_props2</strong>, <strong>rfy_warehouse</strong> and <strong>rfy_cardealer</strong> props, which contained some textures.
+      </p>
+
+
+      <p>
+      	It is highly recommended to use the attached cleanitol file (WMP Mega Textures v1.02 cleanitol.txt) and remove all the listed contents. The best way to do it, if you use the <strong><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97" rel="external nofollow"><span style="color:#c0392b;"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong> tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.<br>
+      	<br>
+      	<span style="color:#c0392b;"><strong>Also from now, these mega prop packs are required to be referenced as dependencies instead of the single prop packs.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>: Unzip the whole bundle, or COPY the "<strong>WMP</strong>" folder from the *.zip into your plugin folder. You don't need to keep the "<em>_Documents</em>" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      </p>
+
+
+      <p>
+      	<em>For further details, please read the provided readme AND IF you still have questions, ask <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard" data-mentionid="660284" href="https://community.simtropolis.com/profile/660284-tyberius06/" rel="">@Tyberius06</a></em>.
+      </p>
+
+
+      <p>
+      	<strong>Credits</strong>:
+      </p>
+
+
+      <ul>
+      	<li>
+      		<b>DocRorlach</b>, the<span> </span><b>WMP Team</b><span> </span><b>pLynn</b><span> </span>and the<span> </span><b>RFY Team</b><span> </span>for creating these custom textures and the original texture packs.
+      	</li>
+      	<li>
+      		David (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges
+      	</li>
+      	<li>
+      		xxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>
+      		 
+      	</li>
+      </ul>
+
+
+      <div>
+      	<strong>Support</strong>:
+      </div>
+
+
+      <p>
+      	These WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested <a href="https://www.sc4devotion.com/forums/index.php?topic=18355.40" rel="external nofollow">here</a> or in the <a href="https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic" rel="">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.
+      </p>
+
+      						</body>
+    filename: WMP Mega Textures v1.02.zip
+    files:
+      - _Documents/WMP Mega Textures v1.02 pt4.jpg
+      - _Documents/WMP Mega Textures v1.02 pt3.jpg
+      - _Documents/WMP Mega Textures v1.02 pt2.jpg
+      - _Documents/WMP Mega Textures v1.02 pt1.jpg
+      - _Documents/WMP Mega Textures v1.02 cleanitol.txt
+      - _Documents/WMP Mega Textures v1.02 .html
+      - _Documents/images/workingman_lottery.png
+      - _Documents/images/sc4t_footer2.png
+      - WMP/Textures/WMP Mega Textures v1.02.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe5b20913c_WMPMegaTextures.thumb.jpg.cce0093554e6ec9d2cdd3fc187d9e16e.jpg
     lastModified: 2020-05-25T15:35:14Z
     name: WMP Mega Textures v1.02
+    sha256: 2564d6f5d7f626626482d3cc92a135a44e9b3ca079d8e0d4a1a63f6731b1e43e
+    size: 7355424
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe5b20913c_WMPMegaTextures.thumb.jpg.cce0093554e6ec9d2cdd3fc187d9e16e.jpg
+    timestamp: 2024-07-05T07:19:34.157Z
+    uncompressed: 8496173
     url: https://community.simtropolis.com/files/file/33626-wmp-mega-textures-v102/
+    version: 1.0.2
   simtropolis/33627-rfy-mega-props-vol-01:
     authors:
       - STEX Custodian
@@ -697,4 +851,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_06/5ee9f3ec87861_WMP-CausewayTutorialLRG.thumb.jpg.a2265144f8eb2e2d7f6ea687fb88bd75.jpg
     url: https://community.simtropolis.com/files/file/33653-wmp-causeway-tutorial/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

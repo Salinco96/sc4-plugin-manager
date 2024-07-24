@@ -75,6 +75,11 @@
       "full": "a DarkNite mod",
       "long": "Dark Nite",
       "short": "DarkNite"
+    },
+    "nam": {
+      "full": "the Network Addon Mod",
+      "long": "Network Addon Mod",
+      "short": "NAM"
     }
   },
   "DisableIncompatiblePackagesModal": {
@@ -146,6 +151,7 @@
     "incompatible-dependencies_other": "Dependencies {{packages, join(max: 2)}} are not compatible",
     "incompatible-feature": "Incompatible with {{packages, join(max: 2)}}",
     "incompatible-feature_zero": "Incompatible with $t(Features:{{feature}}.long)",
+    "incompatible-option": "Requires option {{option}} to be {{value}}",
     "missing-feature": "Requires $t(Features:{{feature}}.long)"
   },
   "PackageActions": {
@@ -215,6 +221,10 @@
         },
         "disablePackages": {
           "description": "Disable {{packageName}}",
+          "label": "Fix"
+        },
+        "setOption": {
+          "description": "Set option {{option}} to {{value}}",
           "label": "Fix"
         }
       },
@@ -333,7 +343,8 @@
     "openFiles": "Open installed files",
     "openReadme": "Open README",
     "openRepository": "Open repository",
-    "openUrl": "Open website"
+    "openUrl": "Open website",
+    "options": "Open options"
   },
   "PackageViewSummary": {
     "authors": "Authors",
@@ -348,6 +359,7 @@
     "dependencies_other": "{{count}} dependencies",
     "files_one": "{{count}} file",
     "files_other": "{{count}} files",
+    "options": "Options",
     "optionalDependencies_one": "{{count}} optional dependency",
     "optionalDependencies_other": "{{count}} optional dependencies",
     "readme": "Readme",
@@ -369,9 +381,6 @@
         "required": "$t(General:required)"
       },
       "label": "Profile Name"
-    },
-    "rhd": {
-      "label": "Do you have cars driving on the left?"
     }
   },
   "RemoveConflictingFilesModal": {

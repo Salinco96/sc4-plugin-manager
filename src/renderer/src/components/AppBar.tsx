@@ -54,7 +54,6 @@ export function AppBar(): JSX.Element {
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
   const profiles = useStore(store => store.profiles)
-  const settings = useStore(store => store.settings)
   const userId = useStore(store => store.sessions.simtropolis.userId)
 
   const isLoadingProfiles = profiles === undefined
@@ -71,13 +70,6 @@ export function AppBar(): JSX.Element {
       setCreating(true)
     }
   }, [hasProfiles])
-
-  // TODO: Remove this
-  useEffect(() => {
-    if (profiles?.length && settings && !currentProfile) {
-      actions.switchProfile(profiles[0].id)
-    }
-  }, [currentProfile, profiles, settings])
 
   const renameProfile = (profile: ProfileInfo, value: string): void => {
     if (value && value !== profile.name) {

@@ -4,7 +4,7 @@ export interface IndexerOptions {
   exclude?: string[]
   fetchEntryDetails?: boolean
   fetchNewEntries?: boolean
-  include: (entry: IndexerBaseEntry) => boolean
+  include: (entry: IndexerBaseEntry, entryId: string) => boolean
   overrides?: IndexerOverrides
   sources: IndexerSource[]
   superseded?: { [entryId: string]: string }

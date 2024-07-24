@@ -1,10 +1,14 @@
 import { List, ListItem } from "@mui/material"
 
+import { checkCondition } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
+import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 export function PackageViewFiles({ packageId }: { packageId: string }): JSX.Element {
   const actions = useStoreActions()
+  const features = useStore(store => store.features)
+  const profileInfo = useCurrentProfile()
+  const profileOptions = useStore(store => store.options)
   const variantInfo = useCurrentVariant(packageId)
 
   return (
@@ -13,6 +17,18 @@ export function PackageViewFiles({ packageId }: { packageId: string }): JSX.Elem
         <ListItem
           key={file.path}
           onClick={() => actions.openPackageFile(packageId, variantInfo.id, file.path)}
+          sx={{
+            opacity: checkCondition(
+              file.condition,
+              packageId,
+              variantInfo,
+              profileInfo,
+              profileOptions,
+              features,
+            )
+              ? undefined
+              : 0.5,
+          }}
         >
           {file.path}
         </ListItem>

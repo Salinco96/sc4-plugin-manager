@@ -3,64 +3,21 @@ import path from "path"
 
 import { glob } from "glob"
 
-import { defaultCategory, parseCategory } from "@common/categories"
+import { defaultCategory } from "@common/categories"
 import {
   AssetInfo,
   ConfigFormat,
-  Feature,
-  PackageAsset,
   PackageData,
   PackageInfo,
   VariantData,
   VariantInfo,
 } from "@common/types"
-import { readConfig, readConfigs, writeConfig } from "@node/configs"
+import { readConfig, writeConfig } from "@node/configs"
 import { exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { isDev } from "@utils/env"
 
 import { loadAssetInfo } from "./assets"
-
-interface MemoAssetData {
-  assetId: string
-  lastModified: string
-  url: string
-  version: string
-}
-
-interface MemoPackageAsset {
-  assetId: string
-  exclude?: string[]
-  include?: string[]
-}
-
-interface MemoPackageData {
-  assets?: MemoPackageAsset[]
-  dependencies?: string[]
-  group: string
-  info?: {
-    author?: string
-    conflicts?: string
-    description?: string
-    summary?: string
-    website?: string
-  }
-  name: string
-  subfolder: string
-  variantDescriptions?: {
-    [key: string]: {
-      [value: string]: string
-    }
-  }
-  variants?: {
-    assets: MemoPackageAsset[]
-    dependencies?: string[]
-    variant: {
-      [key: string]: string
-    }
-  }[]
-  version: string
-}
 
 /**
  * Loads all local packages.
@@ -153,50 +110,6 @@ export async function loadLocalPackageInfo(
 }
 
 /**
- * Converts an asset reference from memo33's format to our own.
- */
-export function convertMemoAsset(asset: MemoPackageAsset): PackageAsset {
-  return {
-    id: asset.assetId,
-    include: asset.include?.map(pattern => ({ path: convertMemoPattern(pattern) })),
-    exclude: asset.exclude?.map(pattern => ({ path: convertMemoPattern(pattern) })),
-  }
-}
-
-/**
- * Converts an author list from memo33's format to our own.
- */
-export function convertMemoAuthors(authors: string): string[] {
-  return authors.replace(/\s*and many others$/i, "").split(/,\s*/)
-}
-
-/**
- * Converts a file pattern from memo33's format to a {@link glob} pattern.
- */
-export function convertMemoPattern(pattern: string): string {
-  if (pattern.startsWith("/")) {
-    pattern = "**" + pattern
-  } else {
-    pattern = "**/" + pattern
-  }
-
-  if (pattern.endsWith("/")) {
-    pattern = pattern + "**"
-  } else if (!pattern.match(/\.[^/]*$/)) {
-    pattern = pattern + "/**"
-  }
-
-  return pattern.replace(/\.(?!_?[a-z0-9]+$)/i, "?")
-}
-
-/**
- * Converts a package ID from memo33's format to our own.
- */
-export function convertMemoPackageId(packageId: string): string {
-  return packageId.replace(":", "/")
-}
-
-/**
  * Loads all remote packages.
  */
 export async function loadRemotePackages(
@@ -215,235 +128,71 @@ export async function loadRemotePackages(
   let nConfigs = 0
   let nPackages = 0
 
-  // TODO: Remove when own data repository has some interesting content?
-  const memoPath = path.join(basePath, DIRNAMES.dbMemo)
-  const isMemo = await exists(memoPath)
+  const assetsPath = path.join(basePath, DIRNAMES.dbAssets)
+  const assetsEntries = await glob("**/*.{yaml,yml}", { cwd: assetsPath })
+  const packagesPath = path.join(basePath, DIRNAMES.dbPackages)
+  const packagesEntries = await glob("**/*.{yaml,yml}", { cwd: packagesPath })
 
-  if (isMemo) {
-    const configEntries = await glob("**/*.{yaml,yml}", { cwd: memoPath })
+  for (const assetsEntry of assetsEntries) {
+    onProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
+    const configPath = path.join(assetsPath, assetsEntry)
 
-    for (const configEntry of configEntries) {
-      onProgress(nConfigs++, configEntries.length)
-      const configPath = path.join(memoPath, configEntry)
-
-      // TODO: This assumes that configs are correctly formatted
-      const configs = await readConfigs<MemoAssetData | MemoPackageData>(configPath)
-      for (const config of configs) {
-        if ("assetId" in config) {
-          const assetInfo: AssetInfo = {
-            id: config.assetId,
-            lastModified: config.lastModified,
-            url: config.url,
-            version: config.version,
-          }
-
-          assets[assetInfo.id] = assetInfo
-          nAssets++
-        } else {
-          const packageId = `${config.group}/${config.name}`
-          const packageInfo: PackageInfo = {
-            id: packageId,
-            name: config.info?.summary ?? packageId,
-            status: {},
-            variants: {},
-          }
-
-          if (config.variants) {
-            for (const variant of config.variants) {
-              const variantKeyValues = Object.entries(variant.variant)
-              const variantId = variantKeyValues
-                .map(([k, v]) => `${k}=${v}`)
-                .join("&")
-                .toLowerCase()
-
-              const [[key, value]] = variantKeyValues
-
-              const variantInfo: VariantInfo = {
-                assets: (config.assets || variant.assets) && [
-                  ...(variant.assets ?? []).map(convertMemoAsset),
-                  ...(config.assets ?? []).map(convertMemoAsset),
-                ],
-                authors: convertMemoAuthors(config.info?.author ?? config.group),
-                category: parseCategory(config.subfolder),
-                dependencies: (variant.dependencies ?? variant.dependencies) && [
-                  ...(variant.dependencies ?? []).map(convertMemoPackageId),
-                  ...(config.dependencies ?? []).map(convertMemoPackageId),
-                ],
-                deprecated: config.info?.summary?.match(/superseded/i) ? true : undefined,
-                description: config.info?.description,
-                id: variantId,
-                name: config.variantDescriptions?.[key]?.[value] ?? variantId,
-                url: config.info?.website,
-                version: config.version,
-              }
-
-              // Fix CAM/DarkNite compatibility format
-              const camMods = ["cam/colossus-addon-mod"]
-              const darkniteMods = ["simfox/day-and-nite-mod"]
-              const names: string[] = []
-
-              variantInfo.dependencies = variantInfo.dependencies?.filter(
-                dependencyId => !darkniteMods.includes(dependencyId),
-              )
-
-              // TODO: Improve this logic
-
-              if (camMods.includes(packageId)) {
-                if (variant.variant.cam === "yes") {
-                  continue
-                }
-
-                variantInfo.features ??= []
-                variantInfo.features.push(Feature.CAM)
-              }
-
-              if (darkniteMods.includes(packageId)) {
-                if (variant.variant.nightmode === "standard") {
-                  continue
-                }
-
-                variantInfo.features ??= []
-                variantInfo.features.push(Feature.DARKNITE)
-              }
-
-              if (variant.variant.nightmode === "standard") {
-                names.push("Maxis Nite")
-                variantInfo.requirements ??= {}
-                variantInfo.requirements[Feature.DARKNITE] = false
-              }
-
-              if (variant.variant.nightmode === "dark") {
-                names.push("Dark Nite")
-                if (!darkniteMods.includes(packageId)) {
-                  variantInfo.requirements ??= {}
-                  variantInfo.requirements[Feature.DARKNITE] = true
-                }
-              }
-
-              if (variant.variant.cam === "yes") {
-                names.push("CAM")
-                if (!camMods.includes(packageId)) {
-                  variantInfo.requirements ??= {}
-                  variantInfo.requirements[Feature.CAM] = true
-                }
-              }
-
-              if (variant.variant.cam === "no") {
-                names.push("Standard")
-                variantInfo.requirements ??= {}
-                variantInfo.requirements[Feature.CAM] = false
-              }
-
-              if (variant.variant.driveside === "left") {
-                names.push("Right-Hand Drive")
-                variantInfo.requirements ??= {}
-                variantInfo.requirements[Feature.RHD] = true
-              }
-
-              if (variant.variant.driveside === "right") {
-                names.push("Left-Hand Drive")
-                variantInfo.requirements ??= {}
-                variantInfo.requirements[Feature.RHD] = false
-              }
-
-              if (names.length) {
-                variantInfo.name = names.join(", ")
-              }
-
-              packageInfo.variants[variantId] = variantInfo
-            }
-          } else {
-            const defaultVariantInfo: VariantInfo = {
-              assets: config.assets?.map(convertMemoAsset),
-              authors: convertMemoAuthors(config.info?.author ?? config.group),
-              category: parseCategory(config.subfolder),
-              dependencies: config.dependencies?.map(convertMemoPackageId),
-              deprecated: config.info?.summary?.match(/superseded/i) ? true : undefined,
-              description: config.info?.description,
-              id: "default",
-              name: "Default",
-              url: config.info?.website,
-              version: config.version,
-            }
-
-            packageInfo.variants[defaultVariantInfo.id] = defaultVariantInfo
-          }
-
-          // Return the package only if some variants have been successfully loaded
-          if (Object.keys(packageInfo.variants).length) {
-            packages[packageId] = packageInfo
-            nPackages++
-          }
-        }
+    // TODO: This assumes that configs are correctly formatted
+    const configs = await readConfig<{ [assetId: string]: PackageData }>(configPath)
+    for (const assetId in configs) {
+      const assetInfo = loadAssetInfo(assetId, configs[assetId])
+      if (assetInfo) {
+        assets[assetId] = assetInfo
+        nAssets++
       }
     }
-  } else {
-    const assetsPath = path.join(basePath, DIRNAMES.dbAssets)
-    const assetsEntries = await glob("**/*.{yaml,yml}", { cwd: assetsPath })
-    const packagesPath = path.join(basePath, DIRNAMES.dbPackages)
-    const packagesEntries = await glob("**/*.{yaml,yml}", { cwd: packagesPath })
+  }
 
-    for (const assetsEntry of assetsEntries) {
-      onProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
-      const configPath = path.join(assetsPath, assetsEntry)
+  for (const packagesEntry of packagesEntries) {
+    onProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
+    const configPath = path.join(packagesPath, packagesEntry)
 
-      // TODO: This assumes that configs are correctly formatted
-      const configs = await readConfig<{ [assetId: string]: PackageData }>(configPath)
-      for (const assetId in configs) {
-        const assetInfo = loadAssetInfo(assetId, configs[assetId])
-        if (assetInfo) {
-          assets[assetId] = assetInfo
-          nAssets++
-        }
+    // TODO: This assumes that configs are correctly formatted
+    const configs = await readConfig<{ [packageId: string]: PackageData }>(configPath)
+    for (const packageId in configs) {
+      // Skip disabled packages
+      if (configs[packageId].disabled) {
+        continue
       }
-    }
 
-    for (const packagesEntry of packagesEntries) {
-      onProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
-      const configPath = path.join(packagesPath, packagesEntry)
+      const packageInfo = loadRemotePackageInfo(packageId, configs[packageId])
+      if (packageInfo) {
+        packages[packageId] = packageInfo
+        nPackages++
 
-      // TODO: This assumes that configs are correctly formatted
-      const configs = await readConfig<{ [packageId: string]: PackageData }>(configPath)
-      for (const packageId in configs) {
-        // Skip disabled packages
-        if (configs[packageId].disabled) {
-          continue
-        }
-
-        const packageInfo = loadRemotePackageInfo(packageId, configs[packageId])
-        if (packageInfo) {
-          packages[packageId] = packageInfo
-          nPackages++
-
-          // Check assets and add inlined ones
-          for (const variantId in packageInfo.variants) {
-            const variantInfo = packageInfo.variants[variantId]
-            if (variantInfo.assets) {
-              for (const asset of variantInfo.assets) {
-                // Inline asset definition should have at least one of these
-                if (asset.sha256 || asset.size || asset.url || asset.version) {
-                  if (assets[asset.id]) {
-                    // Do not allow redefining an existing asset
-                    if (isDev()) {
-                      throw Error(`Redefining asset ID ${asset.id}`)
-                    } else {
-                      console.warn(`Redefining asset ID ${asset.id}`)
-                    }
-                  } else {
-                    // Load inline asset
-                    const assetInfo = loadAssetInfo(asset.id, asset)
-                    if (assetInfo) {
-                      assets[asset.id] = assetInfo
-                      nAssets++
-                    }
-                  }
-                } else if (!assets[asset.id]) {
-                  // Otherwise require asset to already exist
+        // Check assets and add inlined ones
+        for (const variantId in packageInfo.variants) {
+          const variantInfo = packageInfo.variants[variantId]
+          if (variantInfo.assets) {
+            for (const asset of variantInfo.assets) {
+              // Inline asset definition should have at least one of these
+              if (asset.sha256 || asset.size || asset.url || asset.version) {
+                if (assets[asset.id]) {
+                  // Do not allow redefining an existing asset
                   if (isDev()) {
-                    throw Error(`Asset ${asset.id} does not exist`)
+                    throw Error(`Redefining asset ID ${asset.id}`)
                   } else {
-                    console.warn(`Asset ${asset.id} does not exist`)
+                    console.warn(`Redefining asset ID ${asset.id}`)
                   }
+                } else {
+                  // Load inline asset
+                  const assetInfo = loadAssetInfo(asset.id, asset)
+                  if (assetInfo) {
+                    assets[asset.id] = assetInfo
+                    nAssets++
+                  }
+                }
+              } else if (!assets[asset.id]) {
+                // Otherwise require asset to already exist
+                if (isDev()) {
+                  throw Error(`Asset ${asset.id} does not exist`)
+                } else {
+                  console.warn(`Asset ${asset.id} does not exist`)
                 }
               }
             }
@@ -495,35 +244,39 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
 
   const variantInfo: VariantInfo = {
     assets: (packageData.assets || variantData.assets) && [
-      ...(variantData.assets ?? []),
       ...(packageData.assets ?? []),
+      ...(variantData.assets ?? []),
     ],
-    authors: [...(variantData.authors ?? []), ...(packageData.authors ?? [])],
+    authors: [...(packageData.authors ?? []), ...(variantData.authors ?? [])],
     category: variantData.category ?? packageData.category ?? defaultCategory,
     features: (packageData.features || variantData.features) && [
-      ...(variantData.features ?? []),
       ...(packageData.features ?? []),
+      ...(variantData.features ?? []),
     ],
     dependencies: (packageData.dependencies || variantData.dependencies) && [
-      ...(variantData.dependencies ?? []),
       ...(packageData.dependencies ?? []),
+      ...(variantData.dependencies ?? []),
     ],
     deprecated: variantData.deprecated ?? packageData.deprecated,
     description: variantData.description ?? packageData.description,
     experimental: variantData.experimental ?? packageData.experimental,
     files: (packageData.files || variantData.files) && [
-      ...(variantData.files ?? []),
       ...(packageData.files ?? []),
+      ...(variantData.files ?? []),
     ],
     id: variantId,
     images: (packageData.images || variantData.images) && [
-      ...(variantData.images ?? []),
       ...(packageData.images ?? []),
+      ...(variantData.images ?? []),
     ],
     name: variantData.name ?? variantId,
     optional: (packageData.optional || variantData.optional) && [
-      ...(variantData.optional ?? []),
       ...(packageData.optional ?? []),
+      ...(variantData.optional ?? []),
+    ],
+    options: (packageData.options || variantData.options) && [
+      ...(packageData.options ?? []),
+      ...(variantData.options ?? []),
     ],
     readme: variantData.readme ?? packageData.readme,
     repository: variantData.repository ?? packageData.repository,
@@ -535,8 +288,8 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
     url: variantData.url ?? packageData.url,
     version: variantData.version ?? packageData.version ?? "0.0.0",
     warnings: (packageData.warnings || variantData.warnings) && [
-      ...(variantData.warnings ?? []),
       ...(packageData.warnings ?? []),
+      ...(variantData.warnings ?? []),
     ],
   }
 

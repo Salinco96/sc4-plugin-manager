@@ -4,6 +4,7 @@ import { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
 import { PackageStatus, VariantInfo } from "@common/types"
+import { PackageOptionsForm } from "@components/Options"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewFiles } from "./PackageViewFiles"
@@ -84,6 +85,16 @@ export const packageViewTabs: {
       return t("readme")
     },
     fullsize: true,
+  },
+  {
+    id: "options",
+    component: PackageOptionsForm,
+    condition(variantInfo) {
+      return !!variantInfo.options?.length
+    },
+    name(t) {
+      return t("options")
+    },
   },
 ]
 

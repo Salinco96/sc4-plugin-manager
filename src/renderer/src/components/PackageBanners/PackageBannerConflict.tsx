@@ -16,7 +16,7 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
   const { t } = useTranslation("PackageBanner")
 
   const action = useMemo(() => {
-    const { id, feature, packages } = issue
+    const { id, feature, option, packages, value } = issue
     if (!currentProfile) {
       return
     }
@@ -46,13 +46,36 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
             },
           }
         }
+
+        break
+      }
+
+      case Issue.INCOMPATIBLE_OPTION: {
+        if (option) {
+          return {
+            description: t("conflict.actions.setOption.description", { option, value }),
+            label: t("conflict.actions.setOption.label"),
+            onClick: async () => {
+              await actions.updateProfile(currentProfile.id, {
+                options: { [option]: value },
+              })
+            },
+          }
+        }
       }
     }
   }, [actions, currentProfile, issue, packageNames])
 
   return (
     <PackageBanner action={action} header={t("conflict.title")}>
-      {t(issue.id, { ns: "Issue", ...issue, count: packageNames?.length, packages: packageNames })}
+      {t(issue.id, {
+        ns: "Issue",
+        ...issue,
+        count: packageNames?.length,
+        option: issue.option,
+        packages: packageNames,
+        value: issue.value,
+      })}
     </PackageBanner>
   )
 }

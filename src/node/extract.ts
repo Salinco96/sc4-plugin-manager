@@ -33,12 +33,9 @@ export async function extractRecursively(
     for (const archivePath of archivePaths) {
       const archiveFullPath = path.join(basePath, archivePath)
 
-      // Skip uninstallers, OpenJDK (from the NAM download), SC4DatPacker (from the CAM download), 4GB Patch, etc.
-      if (
-        archivePath.match(
-          /4gb_patch\.exe|Install_LRM.+\.exe|openjdk.+\.msi|sc4datpacker.exe|uninst.+\.exe/i,
-        )
-      ) {
+      // Skip OpenJDK (from the NAM download), $PLUGINSDIR (from the CAM download), 4GB Patch, etc.
+      // TODO: Indicate this in package config somehow?
+      if (archivePath.match(/\$PLUGINSDIR|4gb_patch\.exe|install_lrm.+\.exe|openjdk.+\.msi/i)) {
         logger.debug(`Removing ${archivePath}...`)
       } else {
         logger.debug(`Extracting from ${archivePath}...`)
@@ -116,7 +113,7 @@ export async function extract7z(
   } = {},
 ): Promise<{ size: number }> {
   const stdout = await run("7z", {
-    args: ["e", "-y", `-o${extractPath}`, archivePath],
+    args: ["x", "-y", `-o${extractPath}`, archivePath],
     ...options,
   })
 

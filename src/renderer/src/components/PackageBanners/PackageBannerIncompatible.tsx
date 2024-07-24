@@ -4,7 +4,7 @@ import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 import { useTranslation } from "react-i18next"
 
 import { Issue, VariantIssue } from "@common/types"
-import { getPackageInfo, useStore, useStoreActions } from "@utils/store"
+import { getPackageInfo, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { PackageBanner } from "./PackageBanner"
 
@@ -18,13 +18,17 @@ export function PackageBannerIncompatible({
   variantId: string
 }): JSX.Element {
   const actions = useStoreActions()
+  const currentProfile = useCurrentProfile()
 
   const packageNames = useStore(store => issue.packages?.map(id => getPackageInfo(store, id)?.name))
 
   const { t } = useTranslation("PackageBanner")
 
   const action = useMemo(() => {
-    const { id, feature, packages } = issue
+    const { id, feature, option, packages, value } = issue
+    if (!currentProfile) {
+      return
+    }
 
     switch (id) {
       case Issue.CONFLICTING_FEATURE:
@@ -58,8 +62,22 @@ export function PackageBannerIncompatible({
 
         break
       }
+
+      case Issue.INCOMPATIBLE_OPTION: {
+        if (option) {
+          return {
+            description: t("conflict.actions.setOption.description", { option, value }),
+            label: t("conflict.actions.setOption.label"),
+            onClick: async () => {
+              await actions.updateProfile(currentProfile.id, {
+                options: { [option]: value },
+              })
+            },
+          }
+        }
+      }
     }
-  }, [actions, issue, packageNames])
+  }, [actions, currentProfile, issue, packageNames])
 
   return (
     <PackageBanner

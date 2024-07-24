@@ -135,7 +135,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 3625
+    downloads: 3673
     filename: SC4D_LEX_Legacy_HKABT_Dependencies_Pack.zip
     files:
       - readme_hkabt_dependencies.html
@@ -314,7 +314,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1752
+    downloads: 1845
     filename: JENX-Porkie Expanded Porkie Props.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/JENX-Porkie Expanded Porkie Props_index.png
@@ -556,7 +556,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1924
+    downloads: 1973
     filename: SC4D LEX Legacy - NOB Dependencies Pack V2.zip
     files:
       - readme_nob_dependencies.html
@@ -609,7 +609,7 @@ assets:
     authors:
       - Mattb325
     category: 100
-    downloads: 975
+    downloads: 1014
     lastModified: 2023-08-20T02:42:21-07:00
     name: Mattb325 Multifunction Stations Prop Pack (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MultiStationPropPack_s0.jpg
@@ -618,7 +618,7 @@ assets:
     authors:
       - Mattb325
     category: 100
-    downloads: 744
+    downloads: 782
     lastModified: 2023-08-20T02:43:16-07:00
     name: Mattb325 Multifunction Stations Prop Pack (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MultiStationPropPack_s1.jpg
@@ -627,7 +627,7 @@ assets:
     authors:
       - Kenworth
     category: 100
-    downloads: 549
+    downloads: 579
     lastModified: 2023-08-17T10:36:33-07:00
     name: SFBT Props Kenworth and royal Railway Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Eisenbahnprops_01.jpg
@@ -636,7 +636,7 @@ assets:
     authors:
       - Royal
     category: 100
-    downloads: 446
+    downloads: 478
     lastModified: 2023-08-17T10:44:15-07:00
     name: SFBT Props royal Light Signal Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Lichtsignale_01.jpg
@@ -645,7 +645,7 @@ assets:
     authors:
       - Royal
     category: 100
-    downloads: 472
+    downloads: 501
     lastModified: 2023-08-17T10:59:45-07:00
     name: SFBT Props royal Semaphore Signals Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Formsignale_01.jpg
@@ -654,7 +654,7 @@ assets:
     authors:
       - rambuckel
     category: 100
-    downloads: 436
+    downloads: 465
     lastModified: 2023-08-17T11:13:36-07:00
     name: SFBT Props rambuckel Horse Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SFBT_Pferde_Props_01.jpg
@@ -663,7 +663,7 @@ assets:
     authors:
       - Sam
     category: 100
-    downloads: 467
+    downloads: 501
     lastModified: 2023-08-17T11:19:43-07:00
     name: SFBT Props Sam Johnson Playground Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Spielplatzprops_01.jpg
@@ -672,7 +672,7 @@ assets:
     authors:
       - Peterycristi
     category: 100
-    downloads: 576
+    downloads: 617
     lastModified: 2023-08-17T11:24:20-07:00
     name: SFBT Props peterycristi Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/peterycristi_Props_01.jpg
@@ -681,7 +681,7 @@ assets:
     authors:
       - Gizmo
     category: 100
-    downloads: 416
+    downloads: 446
     lastModified: 2023-08-17T11:33:25-07:00
     name: Gizmo - Civic Vehicle Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/civic.jpg
@@ -690,7 +690,7 @@ assets:
     authors:
       - Gizmo
     category: 100
-    downloads: 415
+    downloads: 444
     lastModified: 2023-08-17T12:07:35-07:00
     name: Gizmo - SCC Bus Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/bus.jpg
@@ -735,7 +735,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 2987
+    downloads: 3158
     filename: SFBT Essentials December 2015__INSTALLER English_750.zip
     files:
       - IMPORTANT NOTE ON SFBT ESSENTIALS.txt
@@ -848,7 +848,7 @@ assets:
     authors:
       - WalkingSnake
     category: 100
-    downloads: 556
+    downloads: 606
     lastModified: 2023-08-20T17:51:29-07:00
     name: WalkingSnake (Sc4jeeks) Parking Textures Vol 01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/WS Textures.jpg
@@ -857,7 +857,7 @@ assets:
     authors:
       - sc4evermore
     category: 100
-    downloads: 666
+    downloads: 680
     lastModified: 2023-11-11T08:06:20-08:00
     name: Ulisse Wolf - Fallout Prop Pack Vol 2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/DD.jpg
@@ -866,7 +866,7 @@ assets:
     authors:
       - SimFox
     category: 100
-    downloads: 638
+    downloads: 674
     lastModified: 2024-01-20T05:28:02-08:00
     name: SimFox Tree Pack 1 - Chestnuts
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SFChestnuts_d.jpg
@@ -875,16 +875,244 @@ assets:
     authors:
       - APTX
     category: 100
-    downloads: 889
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the BSC Team and SC4D LEX Restoration Team-assembled prop packs of popular Japanese
+      BATer APTX_8590, which had been available on the Lot Exchange (LEX) at SC4 Devotion. This compilation also contains most (if not all) of the models that APTX ever released on their websites over
+      the years. After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is
+      designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to
+      properly maintain, update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\"><a name=\"installation\"></a>\r
+
+      <h4> Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.)** After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the
+      tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p>** Though there is an inbuilt cleanitol function in the installer, at this point it is not working entirely properly so it is highly recommended to run the individual cleanitol files or the
+      master cleanitol for the compilation with one of the following 3rd party cleanitol tools:</p>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17 Cleanitol</a> (new tool)</p>\r
+
+      <p><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol</a> (old tool)</p>\r
+
+      <div class=\"bannerfull\"><a name=\"credits\"></a>\r
+
+      <h4> Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following members contributed models to this collection:</p>\r
+
+      <ul>\r
+
+      <li>APTX_8590<br>Bear in mind that most of the models with the original lots created by APTX are still available on the hidden parts of the Hide-inoki (HaS) site as archives:<br><a
+      href=\"http://sc4batworks.web.fc2.com/dbat.html\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/sc4_0886.html<br></a></li>\r
+
+      </ul>\r
+
+      <p>The revision and update of these contents and the assemble of this package have been made by Tyberius06. Previous Prop Pack assembly performed by members of the BSC.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4 Devotion and SC4Evermore.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      <div class=\"bannerfull\"><a name=\"contents\"></a>\r
+
+      <h4> Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following Dependency Packs*:</p>\r
+
+      <p>*This installer contains the contents of the APTX Ultra Prop Pack, which has replaced the formerly available APTX Prop Packs 01-07 and Exemplars. The former prop packs have been reworked and
+      repurposed upon the creation of the Ultra Prop Pack.  There is a list below, that details the contents that have been compiled into each prop packs: </p>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li>APTX Mega Prop Pack01</li>\r
+
+      <ul>\r
+
+      <li>Mall/Department Store like low and midrise buildings<br>(from the former Prop Packs vol01, vol02, vol03 and vol04 - for the list of models and props check the APTX Mega Prop
+      Pack01_index.jpg)</li>\r
+
+      </ul>\r
+
+      <li>APTX Mega Prop Pack02</li>\r
+
+      <ul>\r
+
+      <li>Highrises and office towers<br>(from the former Prop Packs vol01, vol02, vol05, vol06 - for the list of models and props check the APTX Mega Prop Pack02_index.jpg)</li>\r
+
+      </ul>\r
+
+      <li>APTX Mega Prop Pack03</li>\r
+
+      <ul>\r
+
+      <li>mainly civic and few commercial buildings<br>(from the former Prop Packs vol01, vol02, vol03, vol05 - for the list of models and props check the APTX Mega Prop Pack03_index.jpg)</li>\r
+
+      </ul>\r
+
+      <li>APTX Mega Prop Pack04</li>\r
+
+      <ul>\r
+
+      <li>completely new compilation which contains mostly APTX's elrail station and the props which originally had come with these (Sakuragicho Terminus, Toyoko Terminus, Shibuya Station etc...)<br>-
+      for the list of models and props check the APTX Mega Prop Pack04_index.jpg</li>\r
+
+      </ul>\r
+
+      <li>APTX Mega Prop Pack05</li>\r
+
+      <ul>\r
+
+      <li>completely new compilation which contains mostly APTX's rail, high speed rail/monorail, subway and bus station models and props (Yokohama Station, Tokio Central etc...)<br>- for the list of
+      models and props check the APTX Mega Prop Pack05_index.jpg</li>\r
+
+      </ul>\r
+
+      <li>APTX Mega Prop Pack06</li>\r
+
+      <ul>\r
+
+      <li>mainly contains the Nippon Space Ship Yard models and some other industrial like contents which previosly were not included in Prop Packs<br>(the Nippon Yard props formerly were available in
+      the Prop Pack vol07) - for the list of models and props check the APTX Mega Prop Pack06_index.jpg</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <br>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li>APTX Textures Vol01\r
+
+      <ul>\r
+
+      <li>the original textures that came with of APTX's uploads (8590_RailTexture.dat, 8590texture_OPL.dat, hachiko-base.dat, OCHbase.dat) have been compiled into this small texture pack. The texture
+      pack also contains updated texture ID-s that should be used if one decided to use these textures for lotting purposes.</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <p>Various pieces of original documentation and earlier Cleanitol definitions can be found in the \"~Documents\" folder.</p>\r
+
+      </div>\r
+
+      </div>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/APTX Ultra Props_banner_LEX.jpg\" data-lightbox=\"lightbox142\"
+      data-alt=\"lightboxAPTX Ultra Props_banner_LEX\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/APTX Ultra
+      Props_banner_LEX.jpg\" alt=\"APTX Ultra Props_banner_LEX\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 926
+    filename: SC4D LEX Legacy - APTX Dependencies Pack V1.zip
+    files:
+      - readme_APTX Dependency Pack V1.html
+      - readme.css
+      - ~Documents/readme_APTX Dependency Pack V1.html
+      - ~Documents/readme.css
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4 LEGACY - APTX Compilation V1__master.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_APTX Textures vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_APTX Mega Props vol06.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_APTX Mega Props vol05.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_APTX Mega Props vol04.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_APTX Mega Props vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_APTX Mega Props vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_APTX Mega Props vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/APTX Textures vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/APTX Mega Prop Pack06_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/APTX Mega Prop Pack05_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/APTX Mega Prop Pack04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/APTX Mega Prop Pack03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/APTX Mega Prop Pack02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/APTX Mega Prop Pack01_index.jpg
+      - APTX/Textures#/APTX Textures Vol01/APTX Textures Vol01.dat
+      - APTX/MEGA Props#/APTX Mega Prop Pack Vol06/APTX MEGA Pack Vol06.dat
+      - APTX/MEGA Props#/APTX Mega Prop Pack Vol05/APTX MEGA Pack Vol05.dat
+      - APTX/MEGA Props#/APTX Mega Prop Pack Vol04/APTX MEGA Pack Vol04.dat
+      - APTX/MEGA Props#/APTX Mega Prop Pack Vol03/APTX MEGA Pack Vol03.dat
+      - APTX/MEGA Props#/APTX Mega Prop Pack Vol02/APTX MEGA Pack Vol02.dat
+      - APTX/MEGA Props#/APTX Mega Prop Pack Vol01/APTX MEGA Pack Vol01.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/APTX Ultra Props_banner_LEX.jpg
     lastModified: 2024-01-20T05:16:24-08:00
     name: SC4D LEX Legacy - APTX Dependencies Pack V1
+    sha256: 6461310f07b97276fc06631132f8682790ba63fff55e65374055bd9978f95f4f
+    size: 100451132
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/APTX Ultra Props_banner_LEX.jpg
+    timestamp: 2024-07-05T07:19:34.157Z
+    uncompressed: 100524235
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/142-aptx-ultra-prop-pack
+    version: "1"
   sc4evermore/153-sc4d-lex-legacy-ks-jpn-dependencies:
     authors:
       - ks_jpn
     category: 100
-    downloads: 1077
+    downloads: 1109
     lastModified: 2024-01-20T05:46:39-08:00
     name: SC4D LEX Legacy - ks_JPN Dependencies Pack V2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SC4D LEX Legacy - ks_JPN Dependencies Pack V2_SC4E.jpg
@@ -893,7 +1121,7 @@ assets:
     authors:
       - Girafe
     category: 100
-    downloads: 495
+    downloads: 524
     lastModified: 2023-11-11T08:19:39-08:00
     name: BSC VIP Girafe MGB204 Bicyclepack vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_bicyclepack.jpg
@@ -902,7 +1130,7 @@ assets:
     authors:
       - Marrast
     category: 100
-    downloads: 784
+    downloads: 817
     lastModified: 2023-11-11T08:18:49-08:00
     name: SC4D LEX Legacy - Marrast MEGA Props Vol 01 and 02
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BSC MEGA Props - Marrast Vol01 v2-index.jpg
@@ -971,7 +1199,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 600
+    downloads: 636
     filename: Vortext - Vortexture 1 and 2  (Base Set - Grass and Dirt).zip
     files:
       - ~Documents/Vortext_Readmes/Vortexture 2_lex pic vrtxtr2v2 large.jpg
@@ -1007,15 +1235,51 @@ assets:
     authors:
       - Haarlemmergold
     category: 100
-    downloads: 475
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This is a MEGA pack of all Haarlemmergold Dutch buildings to date. It has been made and uploaded with his full permission. <br>There is
+      a Cleanitol and a Prop Catalogue index image in the zip which you can use use to remove the models or use BSC Cleanitol to do the work for you.</p>\r
+
+      <p>INSTALLATION: copy/extract the Haarlemmergold parent folder from the ZIP into your Plugins. If you extracted the ~Documents folder too, it is highly recommended to keep it, but move it out of
+      your plugins folder to a safe location.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 513
+    filename: HAARL MEGA Props Dutch Vol01 v2_1374.zip
+    files:
+      - ~Documents/readme_HAARL MEGA Props Dutch Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Haarlemmergold Dutch MEGA Pack v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Haarlemmergold Dutch MEGA Pack v2.txt
+      - Haarlemmergold/Prop Packs/Haarlemmergold Dutch MEGA Pack v2.dat
+    images: []
     lastModified: 2023-11-12T08:42:49-08:00
     name: HAARL MEGA Props Dutch Vol 01
+    sha256: 72e4adfe28f57077b99a48a62b666de6a26daaab963ec9229b49fd44f3b7b576
+    size: 13918664
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 16118403
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/171-haarl-mega-props-dutch-vol-01
+    version: "2"
   sc4evermore/172-haarl-mega-props-german-vol-01:
     authors:
       - Haarlemmergold
     category: 100
-    downloads: 313
+    downloads: 337
     lastModified: 2023-11-12T08:42:40-08:00
     name: HAARL MEGA Props German Vol 01
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/172-haarl-mega-props-german-vol-01
@@ -1023,7 +1287,7 @@ assets:
     authors:
       - Haarlemmergold
     category: 100
-    downloads: 281
+    downloads: 305
     lastModified: 2023-11-12T08:43:45-08:00
     name: HAARL MEGA Props Hungarian Vol 01
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/173-haarl-mega-props-hungarian-vol-01
@@ -1195,7 +1459,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 915
+    downloads: 951
     filename: SC4D LEX Legacy - SOMY Dependencies Pack V2.zip
     files:
       - readme_SOMY_dependencies.html
@@ -1249,7 +1513,7 @@ assets:
     authors:
       - c
     category: 100
-    downloads: 824
+    downloads: 854
     lastModified: 2024-01-20T06:05:39-08:00
     name: CPT Terrain Essentials No8 and No9
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/CPTNo8.JPG
@@ -1258,7 +1522,7 @@ assets:
     authors:
       - sc4evermore
     category: 100
-    downloads: 463
+    downloads: 491
     lastModified: 2023-11-21T15:13:34-08:00
     name: LBT Mega Prop Pack
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/176-lbt-mega-prop-pack
@@ -1266,7 +1530,7 @@ assets:
     authors:
       - sc4evermore
     category: 100
-    downloads: 463
+    downloads: 489
     lastModified: 2023-11-21T15:15:42-08:00
     name: LBT Mega Texture Pack vol01
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/177-lbt-mega-texture-pack-vol01
@@ -1274,7 +1538,7 @@ assets:
     authors:
       - sc4evermore
     category: 100
-    downloads: 302
+    downloads: 331
     lastModified: 2023-11-21T15:18:56-08:00
     name: LBT Prop Pack Latin American Housepack
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/178-lbt-prop-pack-latin-american-housepack
@@ -1282,7 +1546,7 @@ assets:
     authors:
       - sc4evermore
     category: 100
-    downloads: 328
+    downloads: 357
     lastModified: 2023-11-21T15:21:07-08:00
     name: Swamper77's Automata Essentials
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/179-swamper77s-automata-essentials
@@ -1290,7 +1554,7 @@ assets:
     authors:
       - Delecto
     category: 100
-    downloads: 326
+    downloads: 363
     lastModified: 2024-01-20T06:14:55-08:00
     name: VIP Delecto Ploppable People
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_ploppable_people.jpg
@@ -1299,7 +1563,7 @@ assets:
     authors:
       - CityMax
     category: 100
-    downloads: 308
+    downloads: 338
     lastModified: 2024-01-22T09:49:35-08:00
     name: TSC Props Pack - CM Champs Elysee Prop Pack v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/TSC Prop Pack - CM Champs Elysee v2.jpg
@@ -1308,16 +1572,176 @@ assets:
     authors:
       - Vnaoned
     category: 100
-    downloads: 483
+    dependencies:
+      - simtropolis/26808-vip-carpack-vol1
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This package includes many and varied props (227 props altogether through on three individual prop packs) created by
+      Vnaoned.<br><br>For LOTters, the PROPS are available in Lot Editor, under the names: VV_ and VIP_Props_VV<br><br>Xmas lights are timed props (1st december to 15th january).<br>Inflatable pool
+      are timed props (summer / rest of the year).<br>Dead leaves are timed props (autumn).<br><br>Contents as of Version 3 (v3):</p>\r
+
+      <ul>\r
+
+      <li>VIP Vnaoned Propspack vol01 v2 (VIP_Props_VV_Propspack vol01 v2.dat)**</li>\r
+
+      <li>VIP Vnaoned Vehicules v2 (VIP_Props_VV_Vehicules v2.dat)*</li>\r
+
+      <li>VIP Vnaoned Monuments Props v2 (VIP_Props_VV_Monuments v2.dat)**</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>VV CarPackVol1 MMP v2 (VV_CarPackVol1_MMP_v2.dat)**</li>\r
+
+      </ul>\r
+
+      <p>Special thanks to <strong>Barbyw &amp; Girafe for packaging and renaming and TSC / VIP members for their suppor</strong>t.</p>\r
+
+      <h3>Change Log</h3>\r
+
+      <p>*Update 2023 - updated to Version 2 (v2).</p>\r
+
+      <div>General <em>Project ZIP</em> treatment</div>\r
+
+      <div>The pack contains now the <strong>VIP_Vnaoned_Vehicules.dat</strong> as separate file in the same package.<br><br></div>\r
+
+      <p>**<strong>Update February 2024 - updated to <span style=\"color: #e03e2d;\">Version 3</span> (v3)</strong>.</p>\r
+
+      <div>\r
+
+      <ul>\r
+
+      <li>The pack now contains the <strong>VIP_Props_VV_Monuments v2.dat</strong> and the <strong>VV_CarPackVol1_MMP_v2.dat</strong></li>\r
+
+      <li>Both the <strong>VIP_Props_VV_Vehicules v2.dat </strong>and the <strong>VV_CarPackVol1_MMP_v2.dat </strong>are identical with the same files in the <strong><a
+      href=\"https://community.simtropolis.com/files/file/26808-vip-carpack-vol1/\">VIP Girafe-Vnaoned CarPack Vol01-Vol02 v2</a></strong> upload.<br>(<em><span style=\"color: #3598db;\">They are
+      taking place in the same folder structure, so when you install both of the prop sets and keep the original folder structure as it is recommended the files will safely overwrite
+      eachother.</span></em>)</li>\r
+
+      <li>The files got renamed to be in line with other VIP contents that got similar treatment.</li>\r
+
+      <li>Small update on the main VV Propspack, which reasulted in the new <strong>VIP_Props_VV_Propspack vol01 v2.dat</strong></li>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <p>You will find a <em>Cleanitol_VIP Vnaoned Props Pack vol01 v3.txt</em> file in the ~Documents that help you remove the unnecessary files. It is highly recommended to run the provided
+      cleanitol file for the compilation with one of the following 3rd party cleanitol tools, which can help you remove the old packs or you can remove them manually:<br><br><a
+      href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17 Cleanitol</a> (new tool)<br><br><a
+      href=\"https://sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC Cleanitol </a>(old tool).</p>\r
+
+      <h3><strong>Large Screenshot</strong></h3>\r
+
+      <p><img src=\"/images/jdownloads/screenshots/Icon_propspack%20vol.%201.jpg\" width=\"1018\" height=\"521\" ></p>\r
+
+      <p><img src=\"/images/jdownloads/screenshots/Icon_VIP_Vnaoned_Vehicules%20v2.jpg\" ></p>\r
+
+      <table style=\"border-collapse: collapse; width: 47.623%; height: 330px;\" border=\"1\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td style=\"width: 50.041%;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/images/jdownloads/screenshots/Icon_Louis_XVI_column_1.jpg\" ></td>\r
+
+      <td style=\"width: 50.041%;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/images/jdownloads/screenshots/Icon_Luxor_obelisk_1.jpg\" ></td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 50.041%;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/images/jdownloads/screenshots/Icon_royal_fountain_1.jpg\" ></td>\r
+
+      <td style=\"width: 50.041%; text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\"
+      src=\"/images/jdownloads/screenshots/thumbnails/Icon_virgin_fountain_1.jpg\" width=\"250\" height=\"187\" ></td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <h3>Installation:</h3>\r
+
+      <p><strong>Installation</strong>: Copy/extract the <strong>VIP </strong>parent folder into your Plugins. If you extracted the <em>~Documents</em> folder as well, it is highly recommended you to
+      keep it for further use/reference, but move it out of the Plugins into a safe location.<br><br><strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this
+      download in your cities and delete the files from the plugins folder afterwards.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_propspack_1.jpg\" data-lightbox=\"lightbox188\"
+      data-alt=\"lightboxIcon_propspack_1.jpg|Icon_props_monument_1.jpg|Icon_fountain_Concorde_1.jpg|Icon_propspack vol.
+      1.jpg|Icon_Louis_XVI_column_1.jpg|Icon_Luxor_obelisk_1.jpg|Icon_VIP_Vnaoned_Vehicules v2.jpg|Icon_royal_fountain_1.jpg|Icon_virgin_fountain_1\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_propspack_1.jpg\" alt=\"Icon_propspack_1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_props_monument_1.jpg\" data-lightbox=\"lightbox188\"
+      data-alt=\"lightboxIcon_propspack_1.jpg|Icon_props_monument_1.jpg|Icon_fountain_Concorde_1.jpg|Icon_propspack vol.
+      1.jpg|Icon_Louis_XVI_column_1.jpg|Icon_Luxor_obelisk_1.jpg|Icon_VIP_Vnaoned_Vehicules v2.jpg|Icon_royal_fountain_1.jpg|Icon_virgin_fountain_1\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_props_monument_1.jpg\" alt=\"Icon_props_monument_12\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Icon_fountain_Concorde_1.jpg\" data-lightbox=\"lightbox188\"
+      data-alt=\"lightboxIcon_propspack_1.jpg|Icon_props_monument_1.jpg|Icon_fountain_Concorde_1.jpg|Icon_propspack vol.
+      1.jpg|Icon_Louis_XVI_column_1.jpg|Icon_Luxor_obelisk_1.jpg|Icon_VIP_Vnaoned_Vehicules v2.jpg|Icon_royal_fountain_1.jpg|Icon_virgin_fountain_1\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_fountain_Concorde_1.jpg\" alt=\"Icon_fountain_Concorde_13\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 523
+    filename: VIP Vnaoned Props Pack vol01 v3.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/VIP_Vnaoned_Vehicules v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/VIP_Vnaoned_Propspack vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/VIP_Vnaoned_Monuments_Props_v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_VIP Vnaoned Props Pack vol01 v3.txt
+      - VIP/VIPProps/VIP_Props_VV_Vehicules v2.dat
+      - VIP/VIPProps/VIP_Props_VV_Propspack vol01 v2.dat
+      - VIP/VIPProps/VIP_Props_VV_Monuments v2.dat
+      - ~Documents/VIP_Readmes/Vnaoned/readme_VIP_Vnaoned_propspack_vol01 v3.html
+      - VIP/Vnaoned/CarPack/VIP_VV_CarPackVol1_MMP_v2.dat
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_virgin_fountain_1.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_VIP_Vnaoned_Vehicules v2.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_royal_fountain_1.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_props_monument_1.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_propspack_1.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_propspack vol. 1.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_Luxor_obelisk_1.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_Louis_XVI_column_1.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_fountain_Concorde_2.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Icon_fountain_Concorde_1.jpg
+      - ~Documents/VIP_Readmes/Vnaoned/Images/Banniere_VIP.jpg
+    images:
+      - /images/jdownloads/screenshots/Icon_propspack%20vol.%201.jpg
+      - /images/jdownloads/screenshots/Icon_VIP_Vnaoned_Vehicules%20v2.jpg
+      - /images/jdownloads/screenshots/Icon_Louis_XVI_column_1.jpg
+      - /images/jdownloads/screenshots/Icon_Luxor_obelisk_1.jpg
+      - /images/jdownloads/screenshots/Icon_royal_fountain_1.jpg
+      - /images/jdownloads/screenshots/thumbnails/Icon_virgin_fountain_1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_propspack_1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_props_monument_1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_fountain_Concorde_1.jpg
     lastModified: 2024-02-06T06:28:16-08:00
     name: VIP Vnaoned Props Pack vol01 v3
+    sha256: d57a1293df950c9f606eae3d3a755d5fd326274c3a578183d78dfe3a82e00fbc
+    size: 10174115
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_propspack_1.jpg
+    timestamp: 2024-07-23T09:03:18.391Z
+    uncompressed: 13161621
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/188-vip-vnaoned-props-pack-vol01
+    version: "3"
   sc4evermore/189-tsc-props-pack-orange-mega-props:
     authors:
       - Orange_O
     category: 100
-    downloads: 345
+    downloads: 375
     lastModified: 2024-01-22T09:46:44-08:00
     name: TSC Props Pack - Orange Mega Props v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/TSC Props Pack - Orange Mega Props Vol01 v2.jpg
@@ -1326,7 +1750,7 @@ assets:
     authors:
       - eggman121
     category: 100
-    downloads: 424
+    downloads: 471
     lastModified: 2024-01-28T16:21:45-08:00
     name: Real RailWay (RRW) Reskin 3rd Party Lot Support
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/NCD-BSC RealRailway Texture Pack V1-01.jpg
@@ -1335,7 +1759,7 @@ assets:
     authors:
       - Simmer2
     category: 100
-    downloads: 305
+    downloads: 343
     lastModified: 2024-01-20T02:23:32-08:00
     name: SM2 RRW Legacy Lottex Mega Texture Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/RRW_Lottex_SM2.jpg
@@ -1344,7 +1768,7 @@ assets:
     authors:
       - Cogeo
     category: 100
-    downloads: 308
+    downloads: 333
     lastModified: 2024-01-20T16:58:13-08:00
     name: Cogeo Logistics Centre Dependency Pack V2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/logistics_1.jpg
@@ -1353,7 +1777,7 @@ assets:
     authors:
       - Girafe
     category: 100
-    downloads: 219
+    downloads: 250
     lastModified: 2024-01-21T02:25:51-08:00
     name: BSC-VIP Girafe Flags
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_flags.jpg
@@ -1362,16 +1786,72 @@ assets:
     authors:
       - Girafe
     category: 100
-    downloads: 243
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This is a props pack that regroup 130 french road signs in 90° degree version.<br>For LOTters, these props are available in Lot Editor
+      Ptops Section's, under the name: <b>SignFR...</b><br>Special thanks to <b>BSC</b> <b>/ TSC Members</b>.</p>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Installation:</span></b><span lang=\"EN-US\"> copy/extract the BSC parent folder into your plugins. If you extracted the <em>~Documents</em>
+      folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</span></p>\r
+
+      <p class=\"textnormal\"><b><span lang=\"EN-US\">Un-Installing: </span></b><span lang=\"EN-US\">To un-install the files, simply bulldoze every lot from this download in your cities and delete the
+      files from the plugins folder afterwards.</span></p>\r
+
+      <p class=\"textnormal\"> </p>\r
+
+      <p class=\"textnormal\"><span lang=\"EN-US\"><strong>Dependencies</strong>:</span></p>\r
+
+      <p class=\"textnormal\">Note: few props use darknite version from Simfox</p>\r
+
+      <p class=\"textnormal\"><a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\">SimFox Day and Nite Modd</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/icon panneau.jpg\" data-lightbox=\"lightbox214\" data-alt=\"lightboxicon
+      panneau.jpg|Sans titre\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/icon panneau.jpg\" alt=\"icon panneau\" ></a>
+      </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Sans titre.jpg\" data-lightbox=\"lightbox214\" data-alt=\"lightboxicon
+      panneau.jpg|Sans titre\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Sans titre.jpg\" alt=\"Sans titre2\" ></a>
+      </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 274
+    filename: BSC-TSC Girafe French Road Signs.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC-TSC Girafe French Road Signs_index.jpg
+      - ~Documents/BSC_Readmes/girafe/readme_french_road_signs.html
+      - BSC/BSCProps/Grfe_Props/Grfe_Props_Pack_French Road Signs.dat
+      - ~Documents/BSC_Readmes/girafe/images/Sans titre.jpg
+      - ~Documents/BSC_Readmes/girafe/images/icon panneau.jpg
+      - ~Documents/BSC_Readmes/girafe/images/banniere_new.png
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/icon panneau.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Sans titre.jpg
     lastModified: 2024-01-21T02:24:54-08:00
     name: BSC-TSC Girafe French Road Signs
+    sha256: e9e3f2c16065c95285eb79c8233b494ac71e76e4502857c3d6d416b6157a1194
+    size: 1733870
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/icon panneau.jpg
+    timestamp: 2024-07-23T09:03:18.391Z
+    uncompressed: 3150338
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/214-bsc-tsc-girafe-french-road-signs
+    version: "1.0"
   sc4evermore/228-bnl-franku-essentials-v2:
     authors:
       - FrankU
     category: 100
-    downloads: 322
+    downloads: 353
     lastModified: 2024-01-29T17:28:07-08:00
     name: BNL FrankU Essentials V2.1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BNL Essentials V2.0 LEX image.jpg
@@ -1380,7 +1860,7 @@ assets:
     authors:
       - Patfirefghtr
     category: 100
-    downloads: 205
+    downloads: 230
     lastModified: 2024-01-23T08:02:07-08:00
     name: ITC Pat Texture Pack Vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ViewOne.jpg
@@ -1389,7 +1869,7 @@ assets:
     authors:
       - Sciurus
     category: 100
-    downloads: 227
+    downloads: 255
     lastModified: 2024-01-23T08:53:58-08:00
     name: KSTeam S54 - Prop Pack Vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/IMGS54PropPack.jpg
@@ -1398,7 +1878,7 @@ assets:
     authors:
       - NUTs
     category: 100
-    downloads: 231
+    downloads: 257
     lastModified: 2024-01-23T09:14:41-08:00
     name: NUTs Props Pack A v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/NUTs Prop Pack A.jpg
@@ -1407,7 +1887,7 @@ assets:
     authors:
       - Mozukuss
     category: 100
-    downloads: 351
+    downloads: 379
     lastModified: 2024-01-23T15:38:35-08:00
     name: SC4D LEX Legacy - Mozukuss Dependency Pack V1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mozukuss_megapack1.jpg
@@ -1416,7 +1896,7 @@ assets:
     authors:
       - Raika
     category: 100
-    downloads: 347
+    downloads: 371
     lastModified: 2024-01-28T14:01:02-08:00
     name: SC4D LEX Legacy - Raika Dependency Pack V1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Raika Mega Pack VOl 01 LEX Image.jpg
@@ -1425,7 +1905,7 @@ assets:
     authors:
       - Torremayor
     category: 100
-    downloads: 387
+    downloads: 414
     lastModified: 2024-01-23T15:49:45-08:00
     name: SC4D LEX Legacy - Torremayor Dependency Pack V1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/torremayor MEGA Pack vol01_day.jpg
@@ -1434,7 +1914,7 @@ assets:
     authors:
       - NHP
     category: 100
-    downloads: 298
+    downloads: 323
     lastModified: 2024-01-23T16:11:05-08:00
     name: SC4D LEX Legacy - NHP Dependency Compilation
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Proppackvol1.jpg
@@ -1443,7 +1923,7 @@ assets:
     authors:
       - XiahouDun
     category: 100
-    downloads: 276
+    downloads: 302
     lastModified: 2024-01-23T16:24:16-08:00
     name: SC4D LEX Legacy - XDs Parking Lot Dependency Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Props lot readme.jpg
@@ -1452,7 +1932,7 @@ assets:
     authors:
       - Yoman
     category: 100
-    downloads: 244
+    downloads: 265
     lastModified: 2024-01-24T02:06:41-08:00
     name: SMP Yoman Prop Pack Vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SMPPortRealismProjectPropPackVolume1.jpg
@@ -1461,7 +1941,7 @@ assets:
     authors:
       - Tabi
     category: 100
-    downloads: 250
+    downloads: 277
     lastModified: 2024-01-27T17:35:04-08:00
     name: Tabi Mega Prop Pack vol04 - Navy Ship Sets
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Tabi Mega Prop Pack vol04_LEX250.jpg
@@ -1557,7 +2037,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 376
+    downloads: 429
     filename: ncd Railyard Texture Mega-Pack Vol01 v3.zip
     files:
       - ncd/Textures/Railyard Texture Mega-Pack Vol01 v3.dat
@@ -1583,7 +2063,7 @@ assets:
     authors:
       - NCD
     category: 100
-    downloads: 292
+    downloads: 315
     lastModified: 2024-01-28T16:34:39-08:00
     name: NCD Railyard Texture Mega-Pack Vol02
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Railyard Mega Pack 2a.jpg
@@ -1592,7 +2072,7 @@ assets:
     authors:
       - Jondor
     category: 100
-    downloads: 245
+    downloads: 264
     lastModified: 2024-01-29T07:41:20-08:00
     name: Jondor Modular RR Props - Phase 1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/modular-rr.jpg
@@ -1682,7 +2162,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 120
+    downloads: 146
     filename: Romualdillo - Props VOL01 v1.2.zip
     files:
       - ~Documents/Romualdillo_Readmes/Romualdillo_props_vol01_ReadMe.txt
@@ -2391,7 +2871,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 36202
+    downloads: 37371
     filename: SC4D LEX Legacy - BSC Common Dependencies Pack V9a.zip
     files:
       - readme_bsc_common_dependencies.html
@@ -3012,7 +3492,7 @@ assets:
     authors:
       - Gizmo
     category: 100
-    downloads: 655
+    downloads: 689
     lastModified: 2023-08-17T11:34:17-07:00
     name: Gizmo - Effect Props
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/58-gizmo-effect-props
@@ -3044,7 +3524,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 721
+    downloads: 758
     filename: Gizmo - Vehicle Props v5.0.zip
     files:
       - ~Documents/Gizmo_Readmes/vehicles.jpg
@@ -3121,7 +3601,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 790
+    downloads: 827
     filename: Gizmo - Train Props Collection v1.zip
     files:
       - ~Documents/Gizmo_Readmes/Read Me_Gizmos Train Props Collection.htm
@@ -3205,7 +3685,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1114
+    downloads: 1158
     filename: MAS71 Mega Prop Pack vol01 - Misc.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Mas71 Mega Props vol01_index.jpg
@@ -3254,7 +3734,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 992
+    downloads: 1044
     filename: AoT.zip
     files:
       - MGB_AoT.dat
@@ -3308,7 +3788,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 599
+    downloads: 654
     filename: fae_v_1_3.zip
     files:
       - Fantozzi/Fz_AudioEssentials_1_3.pdf
@@ -3365,7 +3845,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1431
+    downloads: 1477
     filename: Porkissimo MEGA Props vol01 v2.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Porkissimo MEGA Props vol01 v2_index.jpg
@@ -3460,7 +3940,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 863
+    downloads: 906
     filename: MGB TexturePack_V1.zip
     files:
       - _MGB_TexturePack_Cleanitol.txt
@@ -3539,7 +4019,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 584
+    downloads: 612
     filename: MGB_RetailSignagePack RSP.zip
     files:
       - SAMPLE.jpg
@@ -3603,7 +4083,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 968
+    downloads: 999
     filename: MGBs Rail Depot Pack 1.01 Setup.zip
     files:
       - zMGB_RDPTextureType_RoadUS.dat
@@ -3642,7 +4122,7 @@ assets:
     authors:
       - sc4evermore
     category: 100
-    downloads: 434
+    downloads: 453
     lastModified: 2023-11-11T08:08:51-08:00
     name: Ulisse Wolf - Fallout Prop Pack Vol1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/DayLotTestFalloutPropVol1.jpg
@@ -3677,7 +4157,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1499
+    downloads: 1565
     filename: Mattb325 Urban Civics Prop Pack_DN_Vol01.zip
     files:
       - BSC/BSCProps/Mattb325_UrbanCivics_DN_Vol01.dat
@@ -3720,7 +4200,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1485
+    downloads: 1544
     filename: Mattb325 Urban Civics Prop Pack_MN_Vol01.zip
     files:
       - BSC/BSCProps/Mattb325_UrbanCivics_MN_Vol01.dat
@@ -3736,4 +4216,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/97-mattb325-urban-civics-prop-pack-vol01-maxisnite
     version: 1-Maxis
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

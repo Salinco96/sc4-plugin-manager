@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import { Feature } from "@common/types"
 import { FlexBox } from "@components/FlexBox"
+import { ProfileOptionsForm } from "@components/Options"
 import { useCurrentProfile, useStoreActions } from "@utils/store"
 
 import { ProfileNameInputField } from "./ProfileNameInputField"
@@ -55,12 +56,13 @@ function Profile(): JSX.Element {
             profileInfo={profileInfo}
           />
           <ProfileSettingFeatureSwitchField
-            feature={Feature.RHD}
-            label={t("rhd.label")}
+            feature={Feature.NAM}
+            label={t("externals.label", { name: t("nam.full", { ns: "Features" }) })}
             profileInfo={profileInfo}
           />
         </FormGroup>
       </FormControl>
+      <ProfileOptionsForm />
     </FlexBox>
   )
 }

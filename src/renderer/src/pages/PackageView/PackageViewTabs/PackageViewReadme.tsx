@@ -1,22 +1,31 @@
 import { useEffect, useState } from "react"
 
 import { Loader } from "@components/Loader"
+import { MarkdownView } from "@components/MarkdownView"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
-export function PackageViewReadme({ packageId }: { packageId: string }): JSX.Element {
+export function PackageViewReadme({ packageId }: { packageId: string }): JSX.Element | null {
   const actions = useStoreActions()
   const variantId = useCurrentVariant(packageId).id
 
-  const [html, setHtml] = useState<string>()
+  const [readme, setReadme] = useState<{ html?: string; md?: string }>()
 
   useEffect(() => {
-    actions.getPackageDocsAsHtml(packageId, variantId).then(setHtml).catch(console.error)
+    actions.getPackageReadme(packageId, variantId).then(setReadme).catch(console.error)
   }, [actions, packageId, variantId])
 
-  if (!html) {
+  if (!readme) {
     return <Loader />
   }
 
-  return <div dangerouslySetInnerHTML={{ __html: html }} style={{ height: "100%" }} />
+  if (readme.html) {
+    return <div dangerouslySetInnerHTML={{ __html: readme.html }} style={{ height: "100%" }} />
+  }
+
+  if (readme.md) {
+    return <MarkdownView md={readme.md} />
+  }
+
+  return null
 }

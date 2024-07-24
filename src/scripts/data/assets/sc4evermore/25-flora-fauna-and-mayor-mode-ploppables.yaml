@@ -3,16 +3,186 @@ assets:
     authors:
       - c
     category: 670
-    downloads: 558
+    dependencies:
+      - sc4evermore/36-lk33-seasonalflorapatch
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This download contains 4 files that will add several flora items to you mayor-mode flora menu, including several types of seasonal
+      flora. By default all 4 files are installed, but you can remove any of them if you don't want to use them. If you use the seasonal flora, you will have to run the game to anytime between August
+      5 and September 1, and then PAUSE, before plopping them. (These instructions will appear on the menu, in-game).</p>\r
+
+      <h3>Change Log:</h3>\r
+
+      <p>Updated 23 January 2023 to do some tidy up. Nothing has changed functionally in the contents (readme location and some updated links in the readme and in the description).</p>\r
+
+      <p>Updated 21 August 2023 to add the MMPs for CP MEGA Prop Vol01.</p>\r
+
+      <h3>Contents:</h3>\r
+
+      <ul>\r
+
+      <li><strong>MMP_for_BSC MEGA PropPack - CP Vol1.dat</strong><br>Contains flora that will grow over time, along with ploppable logs, such as found along rivers and beaches of Northwestern North
+      America, (and probably many other places too). This file adds 10 items to your mayor mode flora menu. (The menu icons have an orange background). The 10 items are:</li>\r
+
+      <li>Cypress Trees</li>\r
+
+      <li>Spruce Trees</li>\r
+
+      <li>Red Cedar Trees</li>\r
+
+      <li>Lodgepole Pine Trees</li>\r
+
+      <li>Redwood Trees</li>\r
+
+      <li>Juniper Trees</li>\r
+
+      <li>Subalpine Fir Trees</li>\r
+
+      <li>Ponderosa Pine Trees</li>\r
+
+      <li>Cottonwood Trees</li>\r
+
+      <li>Logs</li>\r
+
+      </ul>\r
+
+      <p><br><strong>CP_MMP_Grow_CP_MegaPropPack2.dat</strong><br>Contains flora that will grow over time. This file adds 6 items to your mayor mode flora menu. (The menu icons have an orange
+      background). The 6 items are:</p>\r
+
+      <ul>\r
+
+      <li>Tropical Trees</li>\r
+
+      <li>Semi-Tropical Trees</li>\r
+
+      <li>Medium-size Pine Trees</li>\r
+
+      <li>Tall Conifer Trees</li>\r
+
+      <li>Mediterranean Trees</li>\r
+
+      <li>Desert Flora</li>\r
+
+      </ul>\r
+
+      <p><strong>CP_MMP_Seasonal_CP_MegaPropPack2.dat</strong><br>Contains seasonal flora that changes three times per year. (This requires a dependency, noted below.) This file adds 6 items to your
+      mayor mode flora menu. (The menu items have a greenish background.) The 6 items are:</p>\r
+
+      <ul>\r
+
+      <li>Small Seasonal Shrubs</li>\r
+
+      <li>Large Seasonal Shrubs</li>\r
+
+      <li>Wide Seasonal Trees</li>\r
+
+      <li>Small Seasonal Trees</li>\r
+
+      <li>Street Trees (tree models with a narrow LOD at the trunk)</li>\r
+
+      <li>Seasonal Riparian Trees</li>\r
+
+      </ul>\r
+
+      <p><strong>CP_MMP_SemiSeasonal_CP_MegaPropPack2_Desert.dat</strong><br>Contains semi-seasonal flora that changes two times per year. (This requires a dependency, noted below.) This file adds 1
+      item to your mayor mode flora menu, which contains semi-seasonal desert flora.</p>\r
+
+      <p>It also contains two simple park lots with CycleDogg's timber flora. Look for the Timber Park - Spurce lots.</p>\r
+
+      <p><br>This download is only compatible with SimCity 4 \"Rush Hour\" or SimCity 4 Deluxe.</p>\r
+
+      <p><strong>DEPENDENCIES</strong></p>\r
+
+      <p>The following dependency is required in order for seasonal flora to work properly:</p>\r
+
+      <p><a href=\"/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/36-lk33-seasonalflorapatch\"> </a><a
+      href=\"/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/36-lk33-seasonalflorapatch\"><span style=\"color: #0000ff;\">SC4D LEX Legacy - BSC LK33 Terrain Seasonal Flora
+      Patch</span></a></p>\r
+
+      <p>The following dependency contains the necessary models:</p>\r
+
+      <p><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies</a></p>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props CP Vol01</li>\r
+
+      <li>BSC MEGA Props CP Vol02</li>\r
+
+      </ul>\r
+
+      <p> </p>\r
+
+      <div align=\"justify\"><strong>Installation: </strong>Copy/Extract the <strong>BSC </strong>parent folder into your Plugins. If you extracted the <em>~Documents</em> folder into you plugins too,
+      it's highly recommended to keep it, but move it out of the Plugins folder.</div>\r
+
+      <div align=\"justify\">\r
+
+      <p class=\"text_zwischentitel\"><strong>Un-Installing: </strong><span style=\"font-size: 1rem;\">Bulldoze all tres planted with this mod and remove this file from your plugins.</span></p>\r
+
+      </div>\r
+
+      <p class=\"text_normal\" align=\"justify\"><strong>DISCLAIMER</strong></p>\r
+
+      <div align=\"justify\">The usage of this download is at your own risk.</div>\r
+
+      <div align=\"justify\"> </div>\r
+
+      <p><strong>CREDITS</strong></p>\r
+
+      <div align=\"justify\">Thanks to members of the BSC for testing this mod, especially JMeyers2043, Lowkee33, and Mattb325. </div>\r
+
+      <div align=\"justify\"> </div>\r
+
+      <div align=\"justify\">Project ZIP repackaging by Tyberius06 and Tarkus.</div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MMP_PP2.jpg\" data-lightbox=\"lightbox132\"
+      data-alt=\"lightboxMMP_PP2.jpg|LEXMMP2b\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MMP_PP2.jpg\" alt=\"MMP_PP2\"
+      ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/LEXMMP2b.jpg\" data-lightbox=\"lightbox132\"
+      data-alt=\"lightboxMMP_PP2.jpg|LEXMMP2b\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/LEXMMP2b.jpg\"
+      alt=\"LEXMMP2b2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 594
+    filename: BSC CP MMPs for CP MEGA Prop Packs.zip
+    files:
+      - ~Documents/BSC_Readmes/CP/Readme_BSC CP MMPs for CP MEGA Prop Packs.htm
+      - BSC/CP/Timber Park/CP_TimberPark_Spruce_f1051482.SC4Lot
+      - BSC/CP/Timber Park/CP_TimberPark_SpruceSingle_3105149f.SC4Lot
+      - BSC/CP/MMP/CP_MMP_SemiSeasonal_CP_MegaPropPack2_Desert.dat
+      - BSC/CP/MMP/CP_MMP_Seasonal_CP_MegaPropPack2.dat
+      - BSC/CP/MMP/CP_MMP_Grow_CP_MegaPropPack2.dat
+      - BSC/CP/MMP/CP_MMP_for_BSC MEGA PropPack - CP Vol1.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MMP_PP2.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/LEXMMP2b.jpg
     lastModified: 2024-01-23T07:55:04-08:00
     name: BSC CP MMPs for CP MEGA Prop Packs
+    sha256: aa86f3d4e28e19129bc7d8de2d663641fb55ab5087227ac5aff707af11d188de
+    size: 195539
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MMP_PP2.jpg
+    timestamp: 2024-07-05T07:02:43.202Z
+    uncompressed: 263619
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/132-bsc-cp-mmp-for-cp-mega-prop-packs
+    version: "2"
   sc4evermore/155-sc4d-lex-legacy-jenx-fauna:
     authors:
       - sc4evermore
     category: 670
-    downloads: 388
+    downloads: 411
     lastModified: 2023-09-15T16:33:15-07:00
     name: SC4D LEX Legacy - JENX FAUNA
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/155-sc4d-lex-legacy-jenx-fauna
@@ -20,7 +190,7 @@ assets:
     authors:
       - sc4evermore
     category: 670
-    downloads: 310
+    downloads: 329
     lastModified: 2023-11-11T07:36:40-08:00
     name: BSC ALN RRP Pasture Flora
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/167-bsc-aln-rrp-pasture-flora
@@ -28,7 +198,7 @@ assets:
     authors:
       - Orange_O
     category: 670
-    downloads: 287
+    downloads: 303
     lastModified: 2024-01-22T09:32:45-08:00
     name: VIP Orange Aesculus
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/aesculus left.jpg
@@ -37,7 +207,7 @@ assets:
     authors:
       - Orange_O
     category: 670
-    downloads: 279
+    downloads: 293
     lastModified: 2024-01-22T09:29:44-08:00
     name: VIP Orange Fagus
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/fagus left.jpg
@@ -255,7 +425,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 7517
+    downloads: 7851
     filename: SC4D LEX Legacy - BSC VIP Girafe Flora V3.zip
     files:
       - ~Documents/Cleanitol_SC4D LEX Legacy - BSC-VIP Girafe Flora Pack V3__master.txt
@@ -651,7 +821,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1975
+    downloads: 2078
     filename: SC4D LEX Legacy - BSC LK33 Terrain Seasonal Flora Patch.zip
     files:
       - z___terrainmod#/CHOOSE_ONE!! READ README!!.txt
@@ -693,7 +863,7 @@ assets:
     authors:
       - gizmo28
     category: 670
-    downloads: 374
+    downloads: 389
     lastModified: 2023-07-27T11:58:15-07:00
     name: Gizmo - Water Flora
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/64-water-flora-by-gizmo28
@@ -701,10 +871,10 @@ assets:
     authors:
       - c
     category: 670
-    downloads: 474
+    downloads: 494
     lastModified: 2024-01-23T02:57:12-08:00
     name: BSC CP Ploppable Rocks - Complete Set v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GrayRocksAndBoulders.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/85-bsc-cp-ploppable-rocks-complete-set
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

@@ -33,6 +33,22 @@ turndown.addRule("remove-simtropolis-popular-icon", {
   },
 })
 
+turndown.addRule("resolve-full-href", {
+  filter(node) {
+    return (
+      node.tagName.toLowerCase() === "a" && !!node.getAttribute("href")?.startsWith("/index.php/")
+    )
+  },
+  replacement(content, node) {
+    const href = node instanceof HTMLElement ? node.getAttribute("href") : undefined
+    if (href && href !== content) {
+      return `[${content}](https://www.sc4evermore.com${href})`
+    } else {
+      return content
+    }
+  },
+})
+
 turndown.addRule("remove-image-link", {
   filter(node) {
     return (

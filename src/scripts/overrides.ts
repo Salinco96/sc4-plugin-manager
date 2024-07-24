@@ -40,6 +40,9 @@ export const overrides: IndexerOverrides = {
   "sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora": {
     packageId: "girafe/flora-pack",
   },
+  "sc4evermore/32-cycledogg-tree-controllers": {
+    packageId: "cycledogg/tree-controllers",
+  },
   "sc4evermore/36-lk33-seasonalflorapatch": {
     packageId: "lowkee33/seasonal-flora-patch",
   },
@@ -64,6 +67,9 @@ export const overrides: IndexerOverrides = {
   "sc4evermore/49-toilet-paper-free-toilet-paper-tree-mod-by-ripplejet": {
     packageId: "ripplejet/block-toilet-paper-trees",
   },
+  "sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem": {
+    packageId: "cam/colossus-addon-mod",
+  },
   "sc4evermore/54-bsc-kevdan25-restaurants": {
     packageId: "kevdan25/restaurants",
   },
@@ -81,6 +87,9 @@ export const overrides: IndexerOverrides = {
   },
   "sc4evermore/66-gizmo-train-props-collection": {
     packageId: "gizmo/train-props",
+  },
+  "sc4evermore/86-sfbt-street-tree-mod": {
+    packageId: "sfbt/street-tree-mod",
   },
   "sc4evermore/87-mas71-mega-prop-pack-vol01-misc": {
     packageId: "mas71/mega-props-vol01",
@@ -137,8 +146,14 @@ export const overrides: IndexerOverrides = {
   "sc4evermore/128-gizmo-street-rr-gate-replacement-mod": {
     packageId: "gizmo/street-rr-gate-replacement-mod",
   },
+  "sc4evermore/132-bsc-cp-mmp-for-cp-mega-prop-packs": {
+    packageId: "cycledogg/mega-props-mmps",
+  },
   "sc4evermore/138-sc4d-lex-legacy-zero7-commercial-pack": {
     packageId: "zero7/commercial-pack",
+  },
+  "sc4evermore/142-aptx-ultra-prop-pack": {
+    packageId: "aptx/mega-props-collection",
   },
   "sc4evermore/161-sc4d-lex-legacy-nybt-residentials-pack-darknite-version": {
     packageId: "nybt/residentials-pack",
@@ -156,8 +171,14 @@ export const overrides: IndexerOverrides = {
   "sc4evermore/174-sc4d-lex-legacy-somy-dependencies-pack": {
     packageId: "somy/mega-props-collection",
   },
+  "sc4evermore/188-vip-vnaoned-props-pack-vol01": {
+    packageId: "vnaoned/vip-props-vol01",
+  },
   "sc4evermore/204-sc4d-lex-legacy-mikeseith-multi-level-modular-garages": {
     packageId: "mikeseith/multi-level-modular-garages",
+  },
+  "sc4evermore/214-bsc-tsc-girafe-french-road-signs": {
+    packageId: "girafe/french-road-signs",
   },
   "sc4evermore/220-bsc-vip-girafe-4-rue-des-lilas-v2": {
     packageId: "girafe/4-rue-des-lilas",
@@ -191,6 +212,10 @@ export const overrides: IndexerOverrides = {
   },
   "sc4evermore/270-romualdillo-spanish-low-wealth-residental-lots": {
     packageId: "romualdillo/spanish-low-wealth-residentals-vol01",
+  },
+  "sc4evermore/276-colossus-addon-mod-2-5-release-candidate-1": {
+    packageId: "cam/colossus-addon-mod",
+    variantId: "experimental",
   },
   "sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection": {
     packageId: "bsc/canals-collection",
@@ -233,6 +258,9 @@ export const overrides: IndexerOverrides = {
   },
   "simtropolis/21770-lbt-mega-prop-pack-vol01": {
     packageId: "lbt/mega-props-vol01",
+  },
+  "simtropolis/22400-maxis-prop-names-and-query-fix": {
+    packageId: "maxis/maxis-buildings-as-props",
   },
   "simtropolis/22527-hh-modular-parking-gray-version-2": {
     packageId: "hoo47/modular-parking",
@@ -405,6 +433,9 @@ export const overrides: IndexerOverrides = {
   "simtropolis/32473-rr-mega-prop-pack-vol-2": {
     packageId: "rretail/mega-props-vol02",
   },
+  "simtropolis/32612-snt": {
+    packageId: "stex-custodian/swiss-network-textures",
+  },
   "simtropolis/32660-pc-prop-pack-vol-1": {
     packageId: "pclark06/props-vol01",
   },
@@ -429,6 +460,12 @@ export const overrides: IndexerOverrides = {
   "simtropolis/32981-sm2-mega-prop-pack-vol2": {
     packageId: "simmer2/mega-props-vol02",
   },
+  "simtropolis/33068-cloqlo-parking-textures": {
+    packageId: "cloqlo/parking-textures",
+  },
+  "simtropolis/33304-sm2-mega-prop-pack-vol4": {
+    packageId: "simmer2/mega-props-vol04",
+  },
   "simtropolis/33533-pc-mega-props-2": {
     packageId: "pclark06/mega-props-vol02",
   },
@@ -437,6 +474,9 @@ export const overrides: IndexerOverrides = {
   },
   "simtropolis/33621-wmp-mega-props-vol-01-misc-general-props": {
     packageId: "wmp/mega-props-vol01",
+  },
+  "simtropolis/33626-wmp-mega-textures-v102": {
+    packageId: "wmp/mega-textures",
   },
   "simtropolis/33651-11241036-textures": {
     packageId: "11241036/textures",
@@ -468,8 +508,30 @@ export const overrides: IndexerOverrides = {
   "simtropolis/35026-esa-gantries-vol-1": {
     packageId: "oidaas/esa-gantries-vol01",
   },
+  "simtropolis/35353-pegasus-cdk3-collection": {
+    packageId: "pegasus/cdk3-collection",
+  },
   "simtropolis/35526-pc-mega-props-42": {
     packageId: "pclark06/mega-props-vol04",
+  },
+  "simtropolis/35660-sfbt-street-tree-mod-revised": {
+    packageId: "sfbt/street-tree-mod",
+    variantId: "hugues-aroux",
+  },
+  "simtropolis/35753-jes_resourcepack_vol27": {
+    packageId: "jestarr/resourcepack-vol27",
+  },
+  "simtropolis/35753-jes_resourcepack_vol27-v3": {
+    packageId: "jestarr/resourcepack-vol27",
+  },
+  "simtropolis/35978-sc4-more-demand-info": {
+    packageId: "null-45/more-demand-info-dll",
+  },
+  "simtropolis/36202-query-tool-ui-extensions-dll-for-simcity-4": {
+    packageId: "null-45/query-tool-ui-extensions-dll",
+  },
+  "simtropolis/36112-allow-more-building-styles-dll-plugin": {
+    packageId: "null-45/more-building-styles-dll",
   },
   "simtropolis/36242-resource-loading-hooks-dll-for-simcity-4": {
     packageId: "null-45/resource-loading-hooks-dll",
@@ -513,6 +575,42 @@ export const overrides: IndexerOverrides = {
       },
       201740: {
         packageId: "leonv93/high-school",
+        variantId: "default",
+      },
+    },
+  },
+  "simtropolis/36317-next-gen-planes-pack-1": {
+    variants: {
+      201785: {
+        packageId: "joelmk2/next-gen-planes-vol01",
+        variantId: "default",
+      },
+      201786: {
+        packageId: "joelmk2/next-gen-planes-vol01",
+        variantId: "default",
+      },
+    },
+  },
+  "simtropolis/36320-jes_buildingprops": {
+    variants: {
+      201805: {
+        packageId: "jestarr/warehouses-props",
+        variantId: "hd",
+      },
+      201806: {
+        packageId: "jestarr/warehouses-props",
+        variantId: "default",
+      },
+    },
+  },
+  "simtropolis/36329-fa2-and-fa3-mid-rises": {
+    variants: {
+      201909: {
+        packageId: "giraffemountain/fa3-mid-rises",
+        variantId: "default",
+      },
+      201910: {
+        packageId: "giraffemountain/fa2-mid-rises",
         variantId: "default",
       },
     },

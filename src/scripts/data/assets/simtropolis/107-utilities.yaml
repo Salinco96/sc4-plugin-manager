@@ -3851,10 +3851,159 @@ assets:
     authors:
       - Simmer2
     category: 500
-    lastModified: 2019-12-02T05:10:21Z
+    dependencies:
+      - simtropolis/32979-sm2-essentials-v4
+      - simtropolis/32980-sm2-mega-prop-pack-vol1
+      - simtropolis/33304-sm2-mega-prop-pack-vol4
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	<strong>SM2 Medium Water Treatment Plant</strong>
+      </p>
+
+
+      <p>
+      	Plop 1 or 2 of these plants and watch the water pollution recede.
+      </p>
+
+
+      <p>
+      	Flatten terrain before placing and connect it to the water network.
+      </p>
+
+
+      <p>
+      	Requires power to function.
+      </p>
+
+
+      <p>
+      	Lot size 3X2
+      </p>
+
+
+      <p>
+      	Plop cost 1500
+      </p>
+
+
+      <p>
+      	Bulldoze cost 150
+      </p>
+
+
+      <p>
+      	Power req 9
+      </p>
+
+
+      <p>
+      	Water req 20
+      </p>
+
+
+      <p>
+      	Monthly maintenance cost 50
+      </p>
+
+
+      <p>
+      	<strong>Cleans up to 80,000m3 of water over 50 tiles radius.</strong>
+      </p>
+
+
+      <p>
+      	You will find it under the water menu.
+      </p>
+
+
+      <p>
+      	Simmer2
+      </p>
+
+
+      <p>
+      	Dependencies
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/32979-sm2-essentials-v4/" rel="">SM2 Essentials</a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/" rel="">SM2 Mega Prop Pack Vol1</a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/33304-sm2-mega-prop-pack-vol4/" rel="">SM2 Mega Prop Pack Vol4</a>
+      </p>
+
+
+      <div class="ipsSpoiler" data-ipsspoiler="" data-ipsspoiler-option="Original Outdated Linkys">
+      	<div class="ipsSpoiler_header">
+      		<span>Spoiler</span>
+      	</div>
+
+      	<div class="ipsSpoiler_contents">
+      		<p>
+      			 
+      		</p>
+
+      		<p>
+      			SM2 Essentials <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3586" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3586</a>
+      		</p>
+
+      		<p>
+      			SM2 Mega Prop Pack Vol1 <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3640" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3640</a>
+      		</p>
+
+      		<p>
+      			SM2 Mega Prop Pack Vol4 <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3885" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3885</a>
+      		</p>
+
+      		<p>
+      			 
+      		</p>
+      	</div>
+      </div>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Cori Edit:</strong> I updated the dependency linkys, but left the old ones in a spoiler box in case there's any reason we still want to know where they used to be.</span>
+      </p>
+
+      						</body>
+    filename: SM2 Medium Water Treatment Plant v2.zip
+    files:
+      - SM2/SM2 Medium Water Treatment Plant/PLOP_3x2_SM2 Medium Water Treatment Plant_2b2a8ccd.SC4Lot
+      - SM2/Documents/wtm3.jpg
+      - SM2/Documents/ReadMe MWTP.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_10/wtm1.thumb.jpg.3fbaaebb688113fca165bb6f762d3bc9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_10/wtm2.thumb.jpg.ab5c4351c4f367c49e9b4d053ba80365.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_10/wtm3.thumb.jpg.49ded876fae675f42a6887032a9dccfc.jpg
+    lastModified: 2024-07-20T12:41:23Z
     name: SM2 Medium Water Treatment Plant
+    sha256: c71a3d6dffd2189bac17cca5b837c1e845be495b25939e65f8db0a07e692a6c7
+    size: 1168192
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_10/wtm3.thumb.jpg.49ded876fae675f42a6887032a9dccfc.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 1193115
     url: https://community.simtropolis.com/files/file/33238-sm2-medium-water-treatment-plant/
+    version: 1.0.0
   simtropolis/33249-sm2-co2-scrubber-mini:
     authors:
       - Simmer2
@@ -4744,4 +4893,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-0dc48ffa24d273347ad085ec0439ad86-day.JPG
     url: https://community.simtropolis.com/files/file/983-hydro-electric-dam/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

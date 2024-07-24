@@ -15990,6 +15990,514 @@ assets:
     uncompressed: 15366535
     url: https://community.simtropolis.com/files/file/36322-sim-university/
     version: 1.0.0
+  simtropolis/36329-fa2-and-fa3-mid-rises:
+    authors:
+      - giraffemountain
+    category: 600
+    dependencies: []
+    description: |-
+      <body>
+
+
+      <p>
+      	This is a set of four buildings for fractionally angled networks. Included is an FA2 building overhanging a 2x2 lot, an FA3 building overhanging a 3x2 lot, and a mirrored version of each.
+      </p>
+
+      <p>
+      	They are inspired by mid-rise New York apartment buildings, but are ploppable, rather than residential, so that they can be placed along <abbr title="Fractional Angle">FA</abbr> roads.
+      </p>
+
+      <p>
+      	Each building costs $100 to plop, and functions as a landmark.
+      </p>
+
+      <p>
+      	No dependencies!
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/famidrises1.thumb.png.9e71764e6fbbf31b63eb857116a28155.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/fa3midrises.thumb.jpg.8851a18ce43de0f511e1fee3a2609d6a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/fa2midrises.thumb.jpg.42a36a851d32fd5249034212f6ce7c98.jpg
+    lastModified: 2024-07-04T04:33:16Z
+    name: FA2 and FA3 Mid-rises
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/famidrises1.thumb.png.9e71764e6fbbf31b63eb857116a28155.png
+    timestamp: 2024-07-05T06:56:57.513Z
+    url: https://community.simtropolis.com/files/file/36329-fa2-and-fa3-mid-rises/
+    variants:
+      "201909":
+        filename: FA3 NY mid-rises.zip
+        files:
+          - FA3 NY mid-rises/LM3x2_FA3 NY_d38f50bd.SC4Lot
+          - FA3 NY mid-rises/LM3x2_FA3 NY mirror_738f513d.SC4Lot
+          - FA3 NY mid-rises/FA3 NY-0x6534284a-0x5331d3fe-0xd38f4caa.SC4Desc
+          - FA3 NY mid-rises/FA3 NY-0x5ad0e817_0x5331d3fe_0x430000.SC4Model
+          - FA3 NY mid-rises/FA3 NY mirror-0x6534284a-0x5331d3fe-0xb38f4c87.SC4Desc
+          - FA3 NY mid-rises/FA3 NY mirror-0x5ad0e817_0x5331d3fe_0x450000.SC4Model
+          - FA3 NY mid-rises/FA3 NY BLANK-0x6534284a-0x5331d3fe-0xb388c718.SC4Desc
+          - FA3 NY mid-rises/FA3 NY BLANK-0x5ad0e817_0x5331d3fe_0x350000.SC4Model
+        sha256: 5fadff470748023e70aafbf3001bb7b218520ebd42710d7c4e464950470b11ea
+        size: 1516579
+        uncompressed: 1656018
+      "201910":
+        filename: FA2 NY mid-rises.zip
+        files:
+          - FA2 NY mid-rises/LM2x2_FA2 NY_3390afde.SC4Lot
+          - FA2 NY mid-rises/LM2x2_FA2 NY mirror_3390b0f9.SC4Lot
+          - FA2 NY mid-rises/FA2 NY26-0x5ad0e817_0x5331d3fe_0x480000.SC4Model
+          - FA2 NY mid-rises/FA2 NY-0x6534284a-0x5331d3fe-0x7390ad59.SC4Desc
+          - FA2 NY mid-rises/FA2 NY mirror-0x6534284a-0x5331d3fe-0xd390ad2f.SC4Desc
+          - FA2 NY mid-rises/FA2 NY mirror-0x5ad0e817_0x5331d3fe_0x490000.SC4Model
+          - FA2 NY mid-rises/FA2 NY BLANK-0x6534284a-0x5331d3fe-0x137a0ebe.SC4Desc
+          - FA2 NY mid-rises/FA2 NY BLANK-0x5ad0e817_0x5331d3fe_0x310000.SC4Model
+        sha256: 1456ebb765811e348bda1e2cc2a99a01275aa9543490f9109cb3425aae676b20
+        size: 840427
+        uncompressed: 978379
+    version: 1.0.0
+  simtropolis/36331-milcoln-tower:
+    authors:
+      - davide1983it
+    category: 600
+    dependencies: []
+    description: |-
+      <body>
+                                  
+      							
+      <p>
+      	Milcon Tower
+      </p>
+
+      <p>
+      	An Art-deco skyscraper
+      </p>
+
+      <p>
+      	 
+      </p>
+
+      <p>
+      	CS $$ - lot 2x2
+      </p>
+
+      						</body>
+    filename: milcoln tower.rar
+    files:
+      - milcon tower (2).png
+      - milcon tower (1).png
+      - Davide1983it - Milcon Tower.SC4Model
+      - Davide1983it - Milcon Tower.SC4Lot
+      - Davide1983it - Milcon Tower.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668ac3fe5397f_milcontower(1).thumb.png.349b0620fb6ef6050a550b8c5e3cb534.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668ac3fee5c6a_milcontower(2).thumb.png.227c642402ee5a3eeb04c1dd584d6aca.png
+    lastModified: 2024-07-07T16:36:15Z
+    name: Milcoln Tower
+    sha256: 360a1372ccf9007140690e8d8597217b357b7c6922e50f10edfaaba5798596de
+    size: 3808257
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/668ac3fe5397f_milcontower(1).thumb.png.349b0620fb6ef6050a550b8c5e3cb534.png
+    timestamp: 2024-07-16T08:06:07.759Z
+    uncompressed: 4874963
+    url: https://community.simtropolis.com/files/file/36331-milcoln-tower/
+    version: 1.0.0
+  simtropolis/36334-wz-recreation-palais:
+    authors:
+      - debussyman
+    category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	A recreation of a <abbr title="Building Architect Tool">BAT</abbr> by WolfZe. This one works as a landmark. No dependencies required.
+      </p>
+
+      						</body>
+    filename: DBSSY_WZ_Palais.zip
+    files:
+      - WZPalais.PNG
+      - DBSSY_WZRec_Palais_139bfe1e.SC4Lot
+      - DBSSY_WZRec_Palais-0x5ad0e817_0x54324473_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/WZPalais.thumb.PNG.9e3c35f53b09bb6cbd370acba8956aca.PNG
+    lastModified: 2024-07-11T20:30:17Z
+    name: "WZ Recreation: Palais"
+    sha256: 9c802cd5f05d868d1082edb2cca0eb7bb95431a51cae737fcba04711f9c104ef
+    size: 1197581
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/WZPalais.thumb.PNG.9e3c35f53b09bb6cbd370acba8956aca.PNG
+    timestamp: 2024-07-16T08:06:07.759Z
+    uncompressed: 1343938
+    url: https://community.simtropolis.com/files/file/36334-wz-recreation-palais/
+    version: 1.0.0
+  simtropolis/36340-agc-uss-fletcher-1942:
+    authors:
+      - Barroco Hispano
+    category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;">History:</strong>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><a href="https://en.wikipedia.org/wiki/USS_Fletcher_(DD-445)" rel="external nofollow">Wikipedia</a></strong>
+      </p>
+
+
+      <p>
+      	<strong style="color:#353535;font-size:14px;">Specs:</strong>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">The file contains an 1x7 lot (<abbr title="Mayor Mode Ploppable">MMP</abbr> friendly). It also includes a lot that includes the ship wake. It should be placed next to the ship.</span>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#3498db;font-size:14px;"><span style="background-color:#ffffff;font-size:14px;">Lot editor:</span></strong>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="background-color:#ffffff;color:#353535;font-size:14px;">AGC_Destroyers_USS_Fletcher_1942_V100_V01_90</span></strong>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="background-color:#ffffff;color:#353535;font-size:14px;">AGC_Destroyers_USS_Fletcher_1942_W_V100_V01_90</span></strong>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;">Ubication:</strong><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> Water transportation</span></span>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="background-color:#ffffff;color:#353535;font-size:14px;">Icon:           </span></strong><img class="ipsImage ipsImage_thumbnailed" data-fileid="103523" src="https://www.simtropolis.com/objects/attachments/monthly_2024_07/D_Fletcher_01_90.png.e38d2c7bef4f62d5f254382aa2dcbb2b.png" alt="D_Fletcher_01_90.png.e38d2c7bef4f62d5f254382aa2dcbb2b.png" >
+      </p>
+
+
+      <p>
+      	<b>Wake icon:</b><img class="ipsImage ipsImage_thumbnailed" data-fileid="103524" src="https://www.simtropolis.com/objects/attachments/monthly_2024_07/D_Fletcher_01_90_W.png.79e73d93a54f7bbab7bfcaa80d2e32e4.png" alt="D_Fletcher_01_90_W.png.79e73d93a54f7bbab7bfcaa80d2e32e4.png" >
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#2980b9;font-size:16px;">Includes Maxisnite and Darknite (Choose just one).</strong>
+      </p>
+
+
+      <p>
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">Dependencies:</span></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">No</span></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="color:#353535;font-size:14px;">Scale of the models:</strong><span style="color:#353535;font-size:14px;"><span><span> </span></span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>100% on all axes (Real World Scale).</strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#006600;"><strong>If you like my work, you can make a donation to fund my other projects! <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Thanks to the few people who have donated to me.</strong>
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a7ff9a3a2_image(31).thumb.png.80054cc6756bbe545d1250fd95268bd7.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a800089fe_image(33).thumb.png.1da5db779b49585aee840adf5473f82e.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a8006e04d_image(32).thumb.png.4b1cb550f8b52bf0108b3ba0f9c0f011.png
+    lastModified: 2024-07-13T16:14:56Z
+    name: AGC USS Fletcher 1942
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a8006e04d_image(32).thumb.png.4b1cb550f8b52bf0108b3ba0f9c0f011.png
+    timestamp: 2024-07-16T08:06:07.759Z
+    url: https://community.simtropolis.com/files/file/36340-agc-uss-fletcher-1942/
+    variants:
+      "201966":
+        filename: AGC USS Fletcher 1942 MN V100.7z
+        files:
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_W_V01_90_537dfd98.SC4Lot
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_W_V01_90-0x6534284a-0x337ddd49-0x337dfc8b.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_W_V01_90-0x5ad0e817_0xb3776413_0x30000.SC4Model
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_V01_90_537ddeaf.SC4Lot
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_V01_90-0x6534284a-0x337ddd49-0xb39d9836.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_V01_90-0x6534284a-0x337ddd49-0x537ddd4a.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_V01_90-0x5ad0e817_0x53773f3a_0x30000.SC4Model
+        sha256: 1e42771afd91ec2af4ad4f9390046f9f12efd909d32e2cf97268807a266e10a7
+        size: 1789983
+        uncompressed: 2331008
+      "201967":
+        filename: AGC USS Fletcher 1942 DN V100 .7z
+        files:
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_W_V01_90_537dfd98.SC4Lot
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_W_V01_90-0x6534284a-0x337ddd49-0x337dfc8b.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_W_V01_90-0x5ad0e817_0xb3776413_0x30000.SC4Model
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_V01_90_537ddeaf.SC4Lot
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_V01_90-0x6534284a-0x337ddd49-0xb39d9836.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_V01_90-0x6534284a-0x337ddd49-0x537ddd4a.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Warships/Destroyers/AGC_Destroyers_USS_Fletcher_1942_V100_V01_90-0x5ad0e817_0x53773f3a_0x30000.SC4Model
+        sha256: 43a1c3e935856afbe56820a2966d96cd88658ff596067fdab69926689f56a799
+        size: 1771291
+        uncompressed: 2291644
+    version: 1.0.0
+  simtropolis/36342-mediterranean-style-buildings:
+    authors:
+      - Creador2003
+    category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	This is a small package consisting of 3 Mediterranean style buildings.
+      </p>
+
+
+      <p>
+      	They are all 1x2 and grow in stage 3. I hope you enjoy it.
+      </p>
+
+
+      <p>
+      	PS: Any errors, please inform me.
+      </p>
+
+      						</body>
+    filename: Edificios Mediterraneos.rar
+    files:
+      - Edificios Mediterraneos/edificios mediterraneos.png
+      - Edificios Mediterraneos/3/R$4_1x2_Edificio Mediterraneo 3_34185fde.SC4Lot
+      - Edificios Mediterraneos/3/Edificio Mediterraneo 3-0x6534284a-0x1332dca7-0x94185fce.SC4Desc
+      - Edificios Mediterraneos/3/-0x5ad0e817_0x53987d88_0x30000.SC4Model
+      - Edificios Mediterraneos/2/R$4_1x2_Edificio Mediterraneo 2_c4185c0d.SC4Lot
+      - Edificios Mediterraneos/2/Edificio Mediterraneo 2-0x6534284a-0x1332dca7-0xb4185c01.SC4Desc
+      - Edificios Mediterraneos/2/-0x5ad0e817_0x739878fe_0x30000.SC4Model
+      - Edificios Mediterraneos/1/R$5_1x2_Edificio Mediterraneo 1_141824c6.SC4Lot
+      - Edificios Mediterraneos/1/Edificio Mediterraneo 1-0x6534284a-0x1332dca7-0xd418247f.SC4Desc
+      - Edificios Mediterraneos/1/-0x5ad0e817_0x539841d9_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692daa82e5e9_edificiosmediterraneos.thumb.png.bce5f13a908007efeb098cb4e85f3422.png
+    lastModified: 2024-07-13T19:51:04Z
+    name: Mediterranean style buildings
+    sha256: a8761713915a1d9221007f3fa15503b9596768a83d7ec11495457c34640db6ab
+    size: 1321937
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/6692daa82e5e9_edificiosmediterraneos.thumb.png.bce5f13a908007efeb098cb4e85f3422.png
+    timestamp: 2024-07-16T08:06:07.759Z
+    uncompressed: 1353740
+    url: https://community.simtropolis.com/files/file/36342-mediterranean-style-buildings/
+    version: 1.0.0
+  simtropolis/36343-agc-pirate-ship-1750-01:
+    authors:
+      - Barroco Hispano
+    category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="color:#353535;font-size:14px;">Specs:</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">The file contains an 1x4 lot (<abbr style="border-bottom:none;" title="Mayor Mode Ploppable">MMP</abbr><span> </span>friendly).</span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#3498db;font-size:14px;"><span style="background-color:#ffffff;font-size:14px;">Lot editor:</span></strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>AGC_SS_Pirate_1750_V01_S1_90</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;">Ubication:</strong><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> Water transportation</span></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;"><span style="background-color:#ffffff;color:#353535;font-size:14px;">Icon: </span></strong><img class="ipsImage ipsImage_thumbnailed" data-fileid="103530" src="https://www.simtropolis.com/objects/attachments/monthly_2024_07/SS_Pirate_Ship_01_ICON.png.6610117fe9e72b0956bbaa7ac41fd12a.png" alt="SS_Pirate_Ship_01_ICON.png.6610117fe9e72b0956bbaa7ac41fd12a.png" >
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="background-color:#ffffff;color:#2980b9;font-size:16px;">Includes Maxisnite and Darknite (Choose just one).</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">Dependencies:</span></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#000000;"><strong><span style="font-size:16px;">No</span></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong style="color:#353535;font-size:14px;">Scale of the models:</strong><span style="color:#353535;font-size:14px;"><span><span> </span></span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>100% on all axes (Real World Scale).</strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#006600;"><strong>If you like my work, you can make a donation to fund my other projects! <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Thanks to the few people who have donated to me.</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692f06265260_image(34).thumb.png.b0d9566351be5bc02efc6e62b24f4c4d.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692f06311279_image(35).thumb.png.9231fd7dce0652e82ac5eb0aa74e343d.png
+    lastModified: 2024-07-13T21:23:47Z
+    name: AGC - Pirate Ship 1750 01
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/6692f06265260_image(34).thumb.png.b0d9566351be5bc02efc6e62b24f4c4d.png
+    timestamp: 2024-07-16T08:06:07.759Z
+    url: https://community.simtropolis.com/files/file/36343-agc-pirate-ship-1750-01/
+    variants:
+      "201981":
+        filename: AGC SS PIrate 1750 V100 V01 MN.7z
+        files:
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Sailing Ships/AGC_SS_Pirate_1750_V01_S1_90_f370cb2b.SC4Lot
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Sailing Ships/AGC_SS_Pirate_1750_V01_S1_90-0x6534284a-0xdd573712-0x5370c9ce.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Sailing Ships/AGC_SS_Pirate_1750_V01_S1_90-0x6534284a-0x337ddd49-0xd39ec7be.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Sailing Ships/AGC_SS_Pirate_1750_V01_S1_90-0x5ad0e817_0x93b7f782_0x30000.SC4Model
+        sha256: 7af7ff200045d92b679bdc50688d2ec01b6a0a9d1633ac42342c317264cd2191
+        size: 1332494
+        uncompressed: 1658540
+      "201982":
+        filename: AGC SS PIrate 1750 V100 V01 DN.7z
+        files:
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Sailing Ships/AGC_SS_Pirate_1750_V01_S1_90_f370cb2b.SC4Lot
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Sailing Ships/AGC_SS_Pirate_1750_V01_S1_90-0x6534284a-0xdd573712-0x5370c9ce.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Sailing Ships/AGC_SS_Pirate_1750_V01_S1_90-0x6534284a-0x337ddd49-0xd39ec7be.SC4Desc
+          - Barroco Hispano DLCs/Vehicles DLC/Vessels/Sailing Ships/AGC_SS_Pirate_1750_V01_S1_90-0x5ad0e817_0x93b7f782_0x30000.SC4Model
+        sha256: 17b4b849482b7fdb9bfa0a038cd4149dfa3714e86df8da2922fc5ceda48db9fa
+        size: 1301636
+        uncompressed: 1608513
+    version: 1.0.0
+  simtropolis/36347-sport-hall:
+    authors:
+      - sander97
+    category: 600
+    dependencies: []
+    description: |-
+      <body>
+
+
+      <p>
+      	This is a sport hall for gymnastic clubs and for elementairy schools to do their gym class. There's a small version on a 3x4 lot and a large on a 4x5 lot. They can be found in the park-menu.
+      </p>
+
+      						</body>
+    filename: Gymzaal.zip
+    files:
+      - Gymzaal groot/Sportzaal groot-0x6534284a-0x9249206a-0x93a1bf8a.SC4Desc
+      - Gymzaal groot/Sportzaal groot 2_73a1c745.SC4Lot
+      - Gymzaal groot/gymzaal groter klaar-0x5ad0e817_0x9249206a_0x310000.SC4Model
+      - Gymzaal/Sportzaal-0x6534284a-0x9249206a-0xf3a17b89.SC4Desc
+      - Gymzaal/Sportzaal 3x4 verbeterd_53a18ccc.SC4Lot
+      - Gymzaal/gymzaal klaar-0x5ad0e817_0x9249206a_0x300000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/Gymzalen.thumb.jpg.0a7f85dc2d6fbba8162696500cdbaced.jpg
+    lastModified: 2024-07-15T20:38:58Z
+    name: Sport hall
+    sha256: e4c7f3f27980a4a9e8d91fdf84459eeee3999e4c4f66cece409c3b06ef8c6d7e
+    size: 985032
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/Gymzalen.thumb.jpg.0a7f85dc2d6fbba8162696500cdbaced.jpg
+    timestamp: 2024-07-16T07:55:15.885Z
+    uncompressed: 1133999
+    url: https://community.simtropolis.com/files/file/36347-sport-hall/
+    version: 1.0.0
   simtropolis/3644-stratosphere-towerlas-vegas:
     authors:
       - NintendoMaster128
@@ -16438,6 +16946,68 @@ assets:
     name: Fairhaven Baptist Church
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2004/thumb-41335b627e98158f8bd11ba523ed17b0-FrontView.jpg
     url: https://community.simtropolis.com/files/file/4182-fairhaven-baptist-church/
+  simtropolis/4191-nasinneula-observation-tower:
+    authors:
+      - prepo
+    category: 600
+    dependencies: []
+    description: |-
+      <body>
+                                  
+      							
+      <p>
+      	Nasinneula Observation Tower. Origin: Tampere, Finland.
+      </p>
+
+      <p>
+      	2x2 size lot, cost $28000, maintain cost $89.
+      </p>
+
+      <p>
+      	 
+      </p>
+
+      <p>
+      	The tallest (168 m) observation tower in the Nordic countries, opened in 1971. In real world, Nasinneula is a part of Sarkanniemi Amusement Park (I'm not going to model rest of that park).
+      </p>
+
+      <p>
+      	The entrance is not (yet) like original, i didn't find good photos, I might update later (there is actually a quite large building down there).
+      </p>
+
+      <p>
+      	Created by Prepo
+      </p>
+
+      <p>
+      	 
+      </p>
+
+      <p>
+      	<span style="color:#2980b9;">File was retrieved and re-uploaded by staff. No changes were made. - CaptCity</span>
+      </p>
+
+      						</body>
+    filename: prepo_NÃ¤sinneula_Observation_Tower.zip
+    files:
+      - N�sinneula-0x6534284a-0x6e0c008f-0x6e3ab529.SC4Desc
+      - Nasinneula_LM_2x2_4e3ab68d.SC4Lot
+      - Nasinneula2c.jpg
+      - Nasinneula1c.jpg
+      - Nasinneula0.8-0x5ad0e817_0x6e0c008f_0x270000.SC4Model
+      - Nasinneula Readme.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_08_2004/bd45df786ee586d71b3b53c392b29055-Nasinneula1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2004/bd45df786ee586d71b3b53c392b29055-Nasinneula2.jpg
+    lastModified: 2024-07-14T18:30:36Z
+    name: Nasinneula Observation Tower
+    sha256: 2aa9e7612937d9f00c6c7b5452bda80ecf642d463593cbd1220ea7b3a203ead8
+    size: 453932
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2004/thumb-bd45df786ee586d71b3b53c392b29055-Nasinneula1.jpg
+    timestamp: 2024-07-16T08:06:07.759Z
+    uncompressed: 527485
+    url: https://community.simtropolis.com/files/file/4191-nasinneula-observation-tower/
+    version: "1.0"
   simtropolis/420-middle-school:
     authors:
       - lospantalones
@@ -17935,4 +18505,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-33d8981f5deb63706c817395eb328784-Simjez-Feb.%207,%20001060541163.JPG
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

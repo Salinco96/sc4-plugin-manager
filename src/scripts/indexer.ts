@@ -36,27 +36,40 @@ const dbPackagesDir = path.join(dbDir, "packages")
 
 runIndexer({
   exclude: [
-    "sc4evermore/278-sc4fix", // TODO: Use https://github.com/nsgomez/sc4fix/releases/download/rev8/SC4Fix.dll
     // TODO: Below are packages that would need more work to implement correctly
-    "sc4evermore/2-network-addon-mod",
     "sc4evermore/40-nam-lite",
     "sc4evermore/41-appalachian-terrain-mod-by-lowkee33",
-    "sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem",
     "simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn",
-    // TODO: Below are installers that currently fail to be extracted
-    "sc4evermore/276-colossus-addon-mod-2-5-release-candidate-1",
+    "simtropolis/35353-pegasus-cdk3-collection",
+    "simtropolis/36257-discord-rich-presence-dll-for-simcity-4",
     // TODO: Below are external tools, not supported atm
+    "sc4evermore/18-bsc-cleanitol",
+    "sc4evermore/273-dgvoodoo-2-sc4-edition",
     "simtropolis/23407-gofsh-fsh-texture-editor",
     "simtropolis/27675-sc4datanode",
     "simtropolis/30033-mgb-maxis-texture-replacement-dev-kit",
     "simtropolis/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac",
+    "simtropolis/35621-simcity-4-multiplayer-project-launcher",
     "simtropolis/35790-sc4-cleanitol",
     "simtropolis/36227-dgvoodoo-2-simcity-4-edition",
-    // TODO: Below are duplicate packages (available from several sources)
+    // Below are duplicate packages (available from several sources)
+    "sc4evermore/278-sc4fix",
+    "simtropolis/11455-dedwd-aussie-retail-series-props-vol1",
+    "simtropolis/11456-dedwd-aussie-retail-series-props-vol2",
+    "simtropolis/13153-bsc-mega-props-dae-vol02",
+    "simtropolis/13153-dedwd-small-shop-prop-pack",
+    "simtropolis/14973-bsc-mega-props-dae-vol01",
     "simtropolis/15287-bsc-mega-props-sg-vol-01-v3",
+    "simtropolis/15976-rail-yard-and-spur-textures-mega-pack-1",
+    "simtropolis/16098-bsc-sfbt-street-tree-mod",
+    "simtropolis/22325-ncd-railyard-texture-mega-pack-vol01-v3",
     "simtropolis/26793-network-addon-mod-nam-for-windows-installer",
     "simtropolis/26793-network-addon-mod-for-windows-installer-offsite",
-    // TODO: Below are deprecated
+    "simtropolis/26808-vip-carpack-vol1",
+    "simtropolis/35753-jes_resourcepack_vol27-v3",
+    "simtropolis/35978-sc4moredemandinfo",
+    "simtropolis/36341-sc4ltextt-sc4-ltext-translator",
+    // Below are deprecated
     "simtropolis/14842-bsc-prop-pack-cycledogg-no-1",
     "simtropolis/15322-bsc-texture-pack-cycledogg-v01",
     "simtropolis/32660-pc-prop-pack-vol-1",
@@ -66,17 +79,64 @@ runIndexer({
     "simtropolis/32921-pc-hd-car-props",
   ],
   fetchEntryDetails: false,
-  fetchNewEntries: true,
+  fetchNewEntries: false,
   include(entry) {
     return entry.lastModified >= "2024-06-01T00:00:00Z"
   },
   overrides,
   sources: [SC4EVERMORE, SIMTROPOLIS],
   superseded: {
-    "simtropolis/15322-bsc-texture-pack-cycledogg-v01": "cycledogg/textures-vol01",
-    "simtropolis/32660-pc-prop-pack-vol-1": "pclark06/mega-props-vol01",
-    "simtropolis/32732-pc-prop-pack-2": "pclark06/mega-props-vol01",
-    "simtropolis/32832-pc-towering-sign-set-1": "pclark06/mega-props-vol01",
+    "sc4evermore/3-sc4d-": "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
+    "sc4evermore/13-": "sc4evermore/13-sfbt-essentials",
+    "sc4evermore/132-bsc-cp-": "sc4evermore/132-bsc-cp-mmp-for-cp-mega-prop-packs",
+    "sc4evermore/278-sc4fix": "simtropolis/30883-sc4fix-third-party-patches-for-sc4",
+    "simtropolis/11455-dedwd-aussie-retail-series-props-vol1":
+      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
+    "simtropolis/11456-dedwd-aussie-retail-series-props-vol2":
+      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
+    "simtropolis/13153-bsc-mega-props-dae-vol02":
+      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
+    "simtropolis/13153-dedwd-small-shop-prop-pack":
+      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
+    "simtropolis/13168-dedwd-small-shops-1x1-set":
+      "sc4evermore/13168-bsc-dedwd-small-shops-1x1-set",
+    "simtropolis/13169-dedwd-small-shops-1x2-set":
+      "sc4evermore/13169-bsc-dedwd-small-shops-1x2-set",
+    "simtropolis/13396-dedwd-small-shops-flatroof-set":
+      "sc4evermore/13396-bsc-dedwd-small-shops-flat-roof-versions-set",
+    "simtropolis/14973-bsc-mega-props-dae-vol01":
+      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
+    "simtropolis/15287-bsc-mega-props-sg-vol-01":
+      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
+    "simtropolis/15322-bsc-texture-pack-cycledogg-v01":
+      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
+    "simtropolis/15976-rail-yard-and-spur-textures-mega-pack-1":
+      "sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3",
+    "simtropolis/16098-bsc-sfbt-street-tree-mod": "sc4evermore/86-sfbt-street-tree-mod",
+    "simtropolis/20966-peg-": "simtropolis/20966-peg-mtp-super-pack",
+    "simtropolis/22325-ncd-railyard-texture-mega-pack-vol01-v3":
+      "sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3",
+    "simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-":
+      "simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp",
+    "simtropolis/25888-murimk-props-vol02": "simtropolis/25888-murimk-props-vol02-mixed-props",
+    "simtropolis/26171-": "simtropolis/26171-wmp-the-bridges-of-shoreline-county",
+    "simtropolis/26793-network-addon-mod-": "sc4evermore/2-network-addon-mod",
+    "simtropolis/26793-network-addon-mod-nam-cross-platform": "sc4evermore/2-network-addon-mod",
+    "simtropolis/26793-network-addon-mod-nam-for-windows-installer":
+      "sc4evermore/2-network-addon-mod",
+    "simtropolis/26793-network-addon-mod-windows-installer-offsite":
+      "sc4evermore/2-network-addon-mod",
+    "simtropolis/26808-vip-carpack-vol1": "sc4evermore/188-vip-vnaoned-props-pack-vol01",
+    "simtropolis/31988-ncd-bsc-realrailway-texture-pack-v2":
+      "simtropolis/31988-real-railway-rrw-reskin-3rd-party-lot-support",
+    "simtropolis/32660-pc-prop-pack-vol-1": "simtropolis/32952-pc-mega-props-vol-1",
+    "simtropolis/32732-pc-prop-pack-2": "simtropolis/32952-pc-mega-props-vol-1",
+    "simtropolis/32832-pc-towering-sign-set-1": "simtropolis/32952-pc-mega-props-vol-1",
+    "simtropolis/33620-wmp-essentials-v10": "simtropolis/33620-wmp-essentials-v101",
+    "simtropolis/35526-pc-mega-props-4": "simtropolis/35526-pc-mega-props-42",
+    "simtropolis/35526-pc-mega-props-41": "simtropolis/35526-pc-mega-props-42",
+    "simtropolis/35753-jes_resourcepack_vol27-v3": "simtropolis/35753-jes_resourcepack_vol27",
+    "simtropolis/35978-sc4moredemandinfo": "simtropolis/35978-sc4-more-demand-info",
   },
 })
 
@@ -235,7 +295,7 @@ async function runIndexer(options: IndexerOptions) {
             // If we encounter any item last modified before our last cache time, we are thus done with new items
             if (source === SIMTROPOLIS && timestamp && baseEntry.lastModified < timestamp) {
               page = nPages
-              break
+              continue
             }
 
             data.assets[entryId] = {
@@ -267,7 +327,7 @@ async function runIndexer(options: IndexerOptions) {
     const sourceName = sourceNames[entryId]
     const sourceId = sourceName.split("/")[0]
     const entry = entries[sourceName].assets[entryId]
-    if (dbAssetsConfigs[sourceId]?.[entryId] || options.include(entry)) {
+    if (dbAssetsConfigs[sourceId]?.[entryId] || options.include(entry, entryId)) {
       await resolveEntry(entryId)
     }
   }
@@ -344,6 +404,7 @@ async function runIndexer(options: IndexerOptions) {
     }
   }
 
+  // Show errors
   if (errors.size) {
     const n = 100
     console.error("".padEnd(n, "*"))
@@ -391,27 +452,25 @@ async function runIndexer(options: IndexerOptions) {
     try {
       let wasUpdated = false
 
-      if (outdated || !entry.version) {
-        if (!entry.version || options.fetchEntryDetails) {
-          console.debug(`Fetching ${entry.url}...`)
-          const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
-          const details = source.getEntryDetails(entryId, html)
-          if (!details.version) {
-            errors.add(`Missing version for entry ${entryId}`)
-            return entry
-          }
-
-          entry.description = details.description
-          entry.images = details.images
-          entry.repository = details.repository
-          entry.version = details.version
-
-          entry.dependencies = details.dependencies
-            ?.map(dependencyId => options.superseded?.[dependencyId] ?? dependencyId)
-            ?.filter(dependencyId => dependencyId !== entryId)
-
-          wasUpdated = true
+      if (outdated || !entry.version || options.fetchEntryDetails) {
+        console.debug(`Fetching ${entry.url}...`)
+        const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
+        const details = source.getEntryDetails(entryId, html)
+        if (!details.version) {
+          errors.add(`Missing version for entry ${entryId}`)
+          return entry
         }
+
+        entry.description = details.description
+        entry.images = details.images
+        entry.repository = details.repository
+        entry.version = details.version
+
+        entry.dependencies = details.dependencies?.filter(
+          dependencyId => options.superseded?.[dependencyId] ?? dependencyId !== entryId,
+        )
+
+        wasUpdated = true
       }
 
       if (await resolveVariant(entryId)) {
@@ -429,8 +488,8 @@ async function runIndexer(options: IndexerOptions) {
     }
 
     if (entry.dependencies) {
-      for (const dependencyAssetId of entry.dependencies) {
-        await resolveEntry(dependencyAssetId)
+      for (const dependencyId of entry.dependencies) {
+        await resolveEntry(options.superseded?.[dependencyId] ?? dependencyId)
       }
     }
 
@@ -472,7 +531,7 @@ async function runIndexer(options: IndexerOptions) {
     if (outdated || missingSize || missingFiles) {
       let downloaded = await exists(downloadPath)
 
-      if (outdated || missingSize || (missingFiles && !downloaded)) {
+      if (missingSize || (outdated && !missingFiles) || (missingFiles && !downloaded)) {
         await removeIfPresent(downloadPath)
 
         console.debug(`Downloading ${downloadUrl}...`)
@@ -537,131 +596,131 @@ async function runIndexer(options: IndexerOptions) {
         variantEntry.files = files.map(file => file.replaceAll(path.sep, "/"))
         wasUpdated = true
       }
+    }
 
-      if (entry.version && variantEntry.files) {
-        const packageId = getPackageID(entryId, entry, variant)
-        const variantId = getVariantID(entryId, entry, variant)
-        const authorId = packageId.split("/")[0]
+    if (entry.version && variantEntry.files) {
+      const packageId = getPackageID(entryId, entry, variant)
+      const variantId = getVariantID(entryId, entry, variant)
+      const authorId = packageId.split("/")[0]
 
-        const dbPackagesConfig = dbPackagesConfigs[authorId] ?? {}
-        const packageData = dbPackagesConfig[packageId] ?? {}
+      const dbPackagesConfig = dbPackagesConfigs[authorId] ?? {}
+      const packageData = dbPackagesConfig[packageId] ?? {}
 
-        if (outdated || !packageData.variants?.[variantId]) {
-          const dbAssetsConfig = dbAssetsConfigs[source.id] ?? {}
-          const assetData = dbAssetsConfig[assetId] ?? {}
+      if (outdated || !packageData.variants?.[variantId]) {
+        const dbAssetsConfig = dbAssetsConfigs[source.id] ?? {}
+        const assetData = dbAssetsConfig[assetId] ?? {}
 
-          if (packageData.variants?.[variantId]) {
-            console.debug(`Updating variant ${packageId}#${variantId}...`)
-          } else {
-            console.debug(`Creating variant ${packageId}#${variantId}...`)
-          }
-
-          const [, major, minor, patch] = entry.version.match(/(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)!
-
-          assetData.lastModified = entry.lastModified
-          assetData.sha256 = variantEntry.sha256
-          assetData.size = variantEntry.size
-          assetData.uncompressed = variantEntry.uncompressed
-          assetData.version = entry.version
-
-          if (downloadUrl !== getDefaultDownloadUrl(entryId, variant)) {
-            assetData.url = downloadUrl
-          } else {
-            delete assetData.url
-          }
-
-          packageData.authors ??= entry.authors
-          packageData.category ??= entry.category
-          packageData.name ??= entry.name
-          packageData.variants ??= {}
-
-          const dependencies = Array.from(
-            new Set([
-              ...(packageData.dependencies ?? []),
-              ...(entry.dependencies?.map(dependencyEntryId => {
-                const dependencyEntry = getEntry(dependencyEntryId)
-                if (dependencyEntry) {
-                  return getPackageID(dependencyEntryId, dependencyEntry)
-                } else {
-                  return dependencyEntryId
-                }
-              }) ?? []),
-            ]),
-          ).sort()
-
-          if (dependencies?.length) {
-            packageData.dependencies = dependencies
-          } else {
-            delete packageData.dependencies
-          }
-
-          if (entry.description) {
-            packageData.description = htmlToMd(entry.description)
-          } else {
-            delete packageData.description
-          }
-
-          if (entry.images?.length) {
-            packageData.images = entry.images
-          } else {
-            delete packageData.images
-          }
-
-          packageData.repository = entry.repository
-          packageData.thumbnail = entry.thumbnail
-          packageData.url = entry.url
-
-          const variantData = (packageData.variants[variantId] ??= {})
-
-          variantData.assets ??= []
-          variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
-
-          let variantAsset = variantData.assets.find(variantAsset => variantAsset.id === assetId)
-
-          if (!variantAsset) {
-            variantAsset = { id: assetId }
-            variantData.assets.push(variantAsset)
-          }
-
-          const sc4Extensions = [
-            ".dat",
-            ".dll",
-            ".ini",
-            "._loosedesc",
-            ".sc4desc",
-            ".sc4lot",
-            ".sc4model",
-          ]
-
-          variantAsset.docs = variantEntry.files.filter(
-            file => !sc4Extensions.includes(getExtension(file)),
-          )
-
-          variantAsset.include = variantEntry.files.filter(file =>
-            sc4Extensions.includes(getExtension(file)),
-          )
-
-          if (entry.category >= 200 && entry.category < 800 && entry.category !== 660) {
-            packageData.warnings ??= [{ id: "bulldoze", on: "disable" }]
-            variantData.requirements ??= {
-              darknite: variantId === "darknite",
-            }
-          }
-
-          dbPackagesConfigs[authorId] ??= dbPackagesConfig
-          dbPackagesConfig[packageId] ??= packageData
-          dbAssetsConfigs[source.id] ??= dbAssetsConfig
-          dbAssetsConfig[assetId] ??= assetData
-
-          await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
-          await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
-        }
-      } else if (!hasVariants) {
-        if (entry.version) {
-          errors.add(`Missing files for entry ${entryId}`)
+        if (packageData.variants?.[variantId]) {
+          console.debug(`Updating variant ${packageId}#${variantId}...`)
         } else {
-          errors.add(`Missing version for entry ${entryId}`)
+          console.debug(`Creating variant ${packageId}#${variantId}...`)
         }
+
+        const [, major, minor, patch] = entry.version.match(/(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)!
+
+        assetData.lastModified = entry.lastModified
+        assetData.sha256 = variantEntry.sha256
+        assetData.size = variantEntry.size
+        assetData.uncompressed = variantEntry.uncompressed
+        assetData.version = entry.version
+
+        if (downloadUrl !== getDefaultDownloadUrl(entryId, variant)) {
+          assetData.url = downloadUrl
+        } else {
+          delete assetData.url
+        }
+
+        packageData.authors ??= entry.authors
+        packageData.category ??= entry.category
+        packageData.name ??= entry.name
+        packageData.variants ??= {}
+
+        const dependencies = Array.from(
+          new Set([
+            ...(packageData.dependencies ?? []),
+            ...(entry.dependencies?.map(dependencyId => {
+              const dependencyEntry = getEntry(options.superseded?.[dependencyId] ?? dependencyId)
+              if (dependencyEntry) {
+                return getPackageID(dependencyId, dependencyEntry)
+              } else {
+                return dependencyId
+              }
+            }) ?? []),
+          ]),
+        ).sort()
+
+        if (dependencies?.length) {
+          packageData.dependencies = dependencies
+        } else {
+          delete packageData.dependencies
+        }
+
+        if (entry.description) {
+          packageData.description = htmlToMd(entry.description)
+        } else {
+          delete packageData.description
+        }
+
+        if (entry.images?.length) {
+          packageData.images = entry.images
+        } else {
+          delete packageData.images
+        }
+
+        packageData.repository = entry.repository
+        packageData.thumbnail = entry.thumbnail
+        packageData.url = entry.url
+
+        const variantData = (packageData.variants[variantId] ??= {})
+
+        variantData.assets ??= []
+        variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
+
+        let variantAsset = variantData.assets.find(variantAsset => variantAsset.id === assetId)
+
+        if (!variantAsset) {
+          variantAsset = { id: assetId }
+          variantData.assets.push(variantAsset)
+        }
+
+        const sc4Extensions = [
+          ".dat",
+          ".dll",
+          ".ini",
+          "._loosedesc",
+          ".sc4desc",
+          ".sc4lot",
+          ".sc4model",
+        ]
+
+        variantAsset.docs = variantEntry.files.filter(
+          file => !sc4Extensions.includes(getExtension(file)),
+        )
+
+        variantAsset.include = variantEntry.files.filter(file =>
+          sc4Extensions.includes(getExtension(file)),
+        )
+
+        if (entry.category >= 200 && entry.category < 800 && entry.category !== 660) {
+          packageData.warnings ??= [{ id: "bulldoze", on: "disable" }]
+          variantData.requirements ??= {
+            darknite: variantId === "darknite",
+          }
+        }
+
+        dbPackagesConfigs[authorId] ??= dbPackagesConfig
+        dbPackagesConfig[packageId] ??= packageData
+        dbAssetsConfigs[source.id] ??= dbAssetsConfig
+        dbAssetsConfig[assetId] ??= assetData
+
+        await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
+        await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
+      }
+    } else if (!hasVariants) {
+      if (entry.version) {
+        errors.add(`Missing files for entry ${entryId}`)
+      } else {
+        errors.add(`Missing version for entry ${entryId}`)
       }
     }
 

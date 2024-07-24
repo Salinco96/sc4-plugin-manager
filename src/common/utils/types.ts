@@ -33,7 +33,7 @@ export function ifUndefined<T, R = T>(
  * @param value Value to check
  * @returns whether the value is an array
  */
-export function isArray(value: unknown): value is unknown[] {
+export function isArray(value: unknown): value is ReadonlyArray<unknown> {
   return Array.isArray(value)
 }
 
@@ -46,7 +46,7 @@ export function isArray(value: unknown): value is unknown[] {
 export function isArrayOf<T>(
   value: unknown,
   itemPredicate: (value: unknown) => value is T,
-): value is T[] {
+): value is ReadonlyArray<T> {
   return Array.isArray(value) && value.every(itemPredicate)
 }
 

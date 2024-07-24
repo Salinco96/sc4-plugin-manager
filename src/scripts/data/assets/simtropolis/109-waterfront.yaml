@@ -3417,10 +3417,508 @@ assets:
     authors:
       - STEX Custodian
     category: 730
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+      							
+      <div style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">
+      	<p>
+      		The Coastal Development Kit 3 (<abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr>) Collection is a collated package of all of the previous<span> </span><abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr><span> </span>downloads released by Pegasus Productions. Rather than download and install a large number of packages, it is now possible to get everything you need in just one single self-contained download, including all required dependencies.
+      	</p>
+
+      	<p>
+      		The installer package allows you to simply select those parts of the<span> </span><abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr><span> </span>theme you want, then it will smartly install only those dependencies that are required to use them. After making your selections and letting the installation complete, you can go straight in game and just play with all the fantastic content, no need to mess with anything further. The installer handles everything automatically, so say goodbye to the stress of installing such modular sets and tracking down dependencies and hello to better coastal views in SimCity 4.
+      	</p>
+
+      	<p>
+      		A huge thank you to Pegasus for giving permission to repackage everything in this manner, helping to make content more accessible into the future.
+      	</p>
+
+      	<p>
+      		Every<span> </span><abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr><span> </span>package, previously over 130 separate downloads, has been organized by their themes, for example the Seaports, Marinas and so on. You can customize exactly which specific parts of each<span> </span><abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr><span> </span>theme you want and select from any relevant options. The installer will then install your choices and automatically handle all related dependencies. Literally the<span> </span><abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr><span> </span>in its entirety is now installable in a small fraction of the time it used to take. Better still, we've ruthlessly optimised the process, ensured no duplicate files exist and made everything more consistent, so the installation and your Plugins folder is kept neat and tidy.
+      	</p>
+
+      	<p>
+      		Note that because this package was taken from what were originally many separate downloads, rather than try to merge all the Readme's into one place, we've kept them separate, but all the included options are are installed for reference. Please note all the Readmes are located inside of<span> </span><font color="#FF0000">\Documents\SimCity 4\<abbr style="border-bottom:none" title="Pegasus">PEG</abbr><span> </span>Readmes</font>, so they don't clutter your Plugins folder.
+      	</p>
+      </div>
+
+
+      <p align="center" style="background-color:#ffffff; color:#353535; font-size:14px">
+      	<b>This package requires no external dependencies.</b>
+      </p>
+
+
+      <p align="center" style="background-color:#ffffff; color:#353535; font-size:14px">
+      	<font color="#0080c0"><i><b>All discussions and support for this product are now hosted on the<span> </span><a href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/" rel="" style="background-color:transparent; color:#1f5e8d"><abbr style="border-bottom:none" title="Pegasus Lot Exchange">PLEX</abbr><span> </span>on the STEX - Community Support thread at Simtropolis</a></b></i></font>
+      </p>
+
+
+      <p align="center" style="background-color:#ffffff; color:#353535; font-size:14px">
+      	 
+      </p>
+
+
+      <p align="center" style="background-color:#ffffff; color:#353535; font-size:14px">
+      	<b><font color="#FF0000" size="4">!!! Functional Seaports / Seaport Controller - IMPORTANT INFORMATION !!!</font></b>
+      </p>
+
+
+      <table border="0" bordercolor="#0080c0" cellpadding="0" cellspacing="6" id="AutoNumber5" style="background-color:#ffffff; border-collapse:collapse; border-spacing:0px; color:#353535;
+      font-size:14px; text-align:start" width="90%">
+      	<tbody>
+      		<tr>
+      			<td align="left" style="font-size:10pt; padding:0px" valign="top" width="100%">
+      				<p>
+      					If you choose to install one or more of the Functional Seaport lots, use of them will require that the Pegasus Seaport Controller is installed. Note that this will replace the in-game seaport in the Water Transit menu.
+      				</p>
+
+      				<p>
+      					<b><font color="#FF0000">!!! It is imperative that you do not install more than one Seaport Controller - failure to adhere to this warning, could prevent you from opening your cities and render them useless. !!!</font></b>
+      				</p>
+
+      				<p>
+      					By installing the controller, you are confirming that you have no other Seaport Controller installed. To avoid conflicts that could prevent you from being able to load your cities, you should never use any other functional Seaport Mod or Lot, except those supported by this package, which are as follows:
+      				</p>
+
+      				<blockquote>
+      					<blockquote>
+      						<blockquote>
+      							<ul>
+      								<li style="text-align:left">
+      									<abbr style="border-bottom:none" title="Pegasus">PEG</abbr>-<abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr>-SP_Container-Seaport.dat*
+      								</li>
+      								<li style="text-align:left">
+      									<abbr style="border-bottom:none" title="Pegasus">PEG</abbr>-<abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr>-SP_Pier-Seaport.dat*
+      								</li>
+      								<li style="text-align:left">
+      									<abbr style="border-bottom:none" title="Pegasus">PEG</abbr>-<abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr>-SP_Break-Bulk-SeaPort.dat*
+      								</li>
+      								<li style="text-align:left">
+      									CSK2 Canal Small Seaport
+      								</li>
+      								<li style="text-align:left">
+      									SWAP Package Handling Centre
+      								</li>
+      							</ul>
+
+      							<p>
+      								Note: Items marked with * are included with this package, everything else is not part of the<span> </span><abbr style="border-bottom:none" title="Coastal Development Kit 3">CDK3</abbr>, although the included Seaport Controller will support their use.
+      							</p>
+      						</blockquote>
+      					</blockquote>
+      				</blockquote>
+
+      				<p>
+      					If you are unsure if you have any unsupported Seaports, we<span> </span><i><b>strongly</b></i><span> </span>suggest testing them in a new, blank test city first. If you can Plop the Seaports, save, exit and reload the city all without issue, then you should be safe to use them in your existing cities. Additionally, we recommend making a backup of your Regions BEFORE using any of the functional Seaports, this way if something does go wrong, you have a way to fix the problem.
+      				</p>
+
+      				<p>
+      					We can not be held responsible for your failure to read, understand or follow the advice here. Whilst this is necessary due to the way the game works, there really isn't anything to worry about, provided you never install more than one such controller, but the warnings are here because if you do, the consequences are not good.
+      				</p>
+
+      				<p style="text-align: center;">
+      					<b><font color="#FF0000" size="4">Users with pre-existing <abbr title="Coastal Development Kit 3">CDK3</abbr> installed</font></b>
+      				</p>
+
+      				<p style="text-align: left;">
+      					The package was originally designed for new users of the <abbr title="Coastal Development Kit 3">CDK3</abbr>, given that it's main purpose was to simplify the installation, that doesn't really do anything for those with existing installs. However, a Cleanitol RemoveList is attached here, which should be ran before running the <abbr title="Coastal Development Kit 3">CDK3</abbr> Collection Installer, will find and remove all the original <abbr title="Coastal Development Kit 3">CDK3</abbr> content from your Plugins folder:
+      				</p>
+
+      				<p style="text-align: left; margin-left: 40px;">
+      					<a class="ipsAttachLink" href="https://community.simtropolis.com/applications/core/interface/file/attachment.php?id=99081" data-fileid="99081" rel="">RemoveList - <abbr title="Coastal Development Kit 3">CDK3</abbr> Collection.txt</a>
+      				</p>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      						</body>
+    filename: PEG Production's CDK3 Collection 1.0 Setup.exe
+    files:
+      - _Resource/PEG-SUPER_TEXTURES.dat
+      - _Resource/PEG-ChainLinkFence_RESOURCE.dat
+      - MODs/PEG-OFMN_Flag_USA.dat
+      - MODs/PEG-OFMN_Flag_Ukraine.dat
+      - MODs/PEG-OFMN_Flag_UK.dat
+      - MODs/PEG-OFMN_Flag_Thai.dat
+      - MODs/PEG-OFMN_Flag_Taiwan.dat
+      - MODs/PEG-OFMN_Flag_SWED.dat
+      - MODs/PEG-OFMN_Flag_Spain.dat
+      - MODs/PEG-OFMN_Flag_SKorea.dat
+      - MODs/PEG-OFMN_Flag_PORT.dat
+      - MODs/PEG-OFMN_Flag_Poland.dat
+      - MODs/PEG-OFMN_Flag_NZ.dat
+      - MODs/PEG-OFMN_Flag_Norway.dat
+      - MODs/PEG-OFMN_Flag_NETH.dat
+      - MODs/PEG-OFMN_Flag_Japan.dat
+      - MODs/PEG-OFMN_Flag_Italy.dat
+      - MODs/PEG-OFMN_Flag_Germany.dat
+      - MODs/PEG-OFMN_Flag_France.dat
+      - MODs/PEG-OFMN_Flag_Finland.dat
+      - MODs/PEG-OFMN_Flag_Danish.dat
+      - MODs/PEG-OFMN_Flag_China.dat
+      - MODs/PEG-OFMN_Flag_CAN.dat
+      - MODs/PEG-OFMN_Flag_Brazil.dat
+      - MODs/PEG-OFMN_Flag_AUS.dat
+      - CDK3/PEG-CDK_Leveler.dat
+      - CDK3/PEG-CDK3_VandyShipping.dat
+      - CDK3/PEG-CDK3_SmallFerryLanding.dat
+      - CDK3/PEG-CDK3_GarbageDock.dat
+      - CDK3/PEG-CDK3_FuertaDePego.dat
+      - CDK3/PEG-CDK3_Fishery.dat
+      - CDK3/PEG-CDK3_CoastGuardStationSouth.dat
+      - CDK3/PEG-CDK3_CoastGuardStation.dat
+      - CDK3/PEG-CDK3_CoastalFort.dat
+      - CDK3/PEG-CDK3_CaptJacksLanding.dat
+      - CDK3/PEG-CDK3_BlackiesBoatYard.dat
+      - CDK3/PEG-CDK3_Basics.dat
+      - CDK3/PEG-CDK3_AlgaeFarm.dat
+      - $PLUGINSDIR/System.dll
+      - $PLUGINSDIR/OFMN.bmp
+      - $PLUGINSDIR/nsDialogs.dll
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/modern-header.bmp
+      - _Resource/Patches/PEG-SUPER_TEXTURES_RRWOverride.dat
+      - _Resource/Patches/PEG-SUPER_TEXTURES_EUOverride.dat
+      - _Resource/Patches/PEG-OWW_OWW2-ConversionPatch.dat
+      - _Resource/Patches/PEG-OWW2_Patch_SquareOC.dat
+      - _Resource/Patches/PEG-OWW2_Patch_RoundedOC.dat
+      - _Resource/Patches/PEG-OWW2_Patch_ControlFreak.dat
+      - _Resource/Patches/PEG-CDK3_BasicsCementPatch.dat
+      - _Resource/CDK3/PEG-OWW2_RESOURCE2.dat
+      - _Resource/CDK3/PEG-OWW2_RESOURCE1.dat
+      - _Resource/CDK3/PEG-OWW2-BDK_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3_SUPER_PAK_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3_GarbageDock_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3_FuertaDePego_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3_CoastGuardStation_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3_CoastalFort_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3_BoatYard_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3_AlgaeFarm_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3-SP_SUPER_PAK_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3-SP_ShipTraffic1_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3-SP_RailFleet_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3-SP_Container-Fleet_RESOURCE.dat
+      - _Resource/CDK3/PEG-CDK3-M_SUPER_PAK_RESOURCE.dat
+      - CDK3/z_Functional Seaports/PEG-MasterSeaportController.dat
+      - CDK3/z_Functional Seaports/PEG-CDK3-SP_Pier-Seaport.dat
+      - CDK3/z_Functional Seaports/PEG-CDK3-SP_Container-Seaport.dat
+      - CDK3/z_Functional Seaports/PEG-CDK3-SP_Break-Bulk-SeaPort.dat
+      - CDK3/Seaports/PEG-CDK3-SP_WH_BubbasBulkBarge.dat
+      - CDK3/Seaports/PEG-CDK3-SP_WH_Break-Bulk Dock.dat
+      - CDK3/Seaports/PEG-CDK3-SP_VandyShipping.dat
+      - CDK3/Seaports/PEG-CDK3-SP_ShipTraffic7.SC4Lot
+      - CDK3/Seaports/PEG-CDK3-SP_ShipTraffic6.SC4Lot
+      - CDK3/Seaports/PEG-CDK3-SP_ShipTraffic5.SC4Lot
+      - CDK3/Seaports/PEG-CDK3-SP_ShipTraffic4.SC4Lot
+      - CDK3/Seaports/PEG-CDK3-SP_ShipTraffic3.SC4Lot
+      - CDK3/Seaports/PEG-CDK3-SP_ShipTraffic2.SC4Lot
+      - CDK3/Seaports/PEG-CDK3-SP_ShipTraffic1.SC4Lot
+      - CDK3/Seaports/PEG-CDK3-SP_RowWarehouses.dat
+      - CDK3/Seaports/PEG-CDK3-SP_RCI-Dock.dat
+      - CDK3/Seaports/PEG-CDK3-SP_Pier-One_WV.dat
+      - CDK3/Seaports/PEG-CDK3-SP_Pier-One_LV.dat
+      - CDK3/Seaports/PEG-CDK3-SP_NavigationBuoys.dat
+      - CDK3/Seaports/PEG-CDK3-SP_Dock_x1.dat
+      - CDK3/Seaports/PEG-CDK3-SP_Dock_WH_wBarge.dat
+      - CDK3/Seaports/PEG-CDK3-SP_Dock-Corners.dat
+      - CDK3/Seaports/PEG-CDK3-SP_Dock-BusStop_WT-IconDupe.dat
+      - CDK3/Seaports/PEG-CDK3-SP_Dock-BusStop.dat
+      - CDK3/Seaports/PEG-CDK3-SP_ContainerDock.dat
+      - CDK3/OWW2/PEG-OWW2_RightEnd.dat
+      - CDK3/OWW2/PEG-OWW2_Ramp.dat
+      - CDK3/OWW2/PEG-OWW2_Plaza.dat
+      - CDK3/OWW2/PEG-OWW2_ParkingLot.dat
+      - CDK3/OWW2/PEG-OWW2_OWWTransRight.dat
+      - CDK3/OWW2/PEG-OWW2_OWWTransLeft.dat
+      - CDK3/OWW2/PEG-OWW2_OuterCorner.dat
+      - CDK3/OWW2/PEG-OWW2_ObservationDeck.dat
+      - CDK3/OWW2/PEG-OWW2_Lighthouse1.dat
+      - CDK3/OWW2/PEG-OWW2_LeftEnd.dat
+      - CDK3/OWW2/PEG-OWW2_FountainPlaza.dat
+      - CDK3/OWW2/PEG-OWW2_FoodCourt.dat
+      - CDK3/OWW2/PEG-OWW2_FishingPier.dat
+      - CDK3/OWW2/PEG-OWW2_FishermansWharf.dat
+      - CDK3/OWW2/PEG-OWW2_FireStation.dat
+      - CDK3/OWW2/PEG-OWW2_Ferry.dat
+      - CDK3/OWW2/PEG-OWW2_CopDock.dat
+      - CDK3/OWW2/PEG-OWW2_CaptainNemos.dat
+      - CDK3/OWW2/PEG-OWW2_Annabellin.dat
+      - CDK3/OWW2/PEG-OWW2_ InnerCorner.dat
+      - CDK3/Marinas/PEG-CDK3-M_YachtClub.dat
+      - CDK3/Marinas/PEG-CDK3-M_SportFishing.dat
+      - CDK3/Marinas/PEG-CDK3-M_ParkingLot.dat
+      - CDK3/Marinas/PEG-CDK3-M_MarinaMain.dat
+      - CDK3/Marinas/PEG-CDK3-M_IC_Chandlery.dat
+      - CDK3/Marinas/PEG-CDK3-M_GuestServices.dat
+      - CDK3/Marinas/PEG-CDK3-M_Docks.dat
+      - CDK3/Marinas/PEG-CDK3-M_Dock-Extension.dat
+      - CDK3/Marinas/PEG-CDK3-M_Dock-End.dat
+      - CDK3/Marinas/PEG-CDK3-M_BoatRamp.dat
+      - CDK3/Marinas/PEG-CDK3-M_Boat Storage_1x.dat
+      - CDK3/OWW2/Seaport Village/PEG-OWW2-SV_Shops.dat
+      - CDK3/OWW2/Seaport Village/PEG-OWW2-SV_SeaportVillage.dat
+      - CDK3/OWW2/Seaport Village/PEG-OWW2-SV_SeaportSammys.dat
+      - CDK3/OWW2/Seaport Village/PEG-OWW2-SV_CornerShops.dat
+      - CDK3/OWW2/Seaport Village/PEG-OWW2-SV_Carousel.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI_OuterCorner.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI_ObsDeck.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI_InnerCorner.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI_Dock.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI-Pier_Tile_x2.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI-Pier_Tile_x1.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI-Pier_SnackBar.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI-Pier_Restroom.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI-Pier_PicnicArea.dat
+      - CDK3/OWW2/RCI/PEG-OWW2-RCI-Pier_Head.dat
+      - CDK3/OWW2/Pier/PEG-OWW2_PierSet_Wing.dat
+      - CDK3/OWW2/Pier/PEG-OWW2_PierSet_LifeguardTower.dat
+      - CDK3/OWW2/Pier/PEG-OWW2_PierSet_House.dat
+      - CDK3/OWW2/Pier/PEG-OWW2_PierSet_BoatPass.dat
+      - CDK3/OWW2/Pier/PEG-OWW2_PierSet_BoatDock.dat
+      - CDK3/OWW2/Pier/PEG-OWW2_PierSet_Arcade.dat
+      - CDK3/OWW2/Pier/PEG-OWW2_PierSet.dat
+      - CDK3/OWW2/Pier/PEG-OWW2_PierHead.dat
+      - CDK3/OWW2/Beach/PEG-OWW2-BDK_Beach_Hut.dat
+      - CDK3/OWW2/Beach/PEG-OWW2-BDK_Beach_Bathrooms.dat
+      - CDK3/OWW2/Beach/PEG-OWW2-BDK_Beaches.dat
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_PEG CDK3 Collection.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK_TerraformingTutorial.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK_LevelerTool_007.htm
+      - $DOCUMENTS/SimCity 4/Plugins/Maxis Original/dayopeace.dat
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_RightEnd_215.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_Ramp_218.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_PoliceStation_230.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_Plaza_207.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_ParkingLot_208.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_OWWTransitions_223.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_OuterCorner_210.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_ObservationDeck_216.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_LighthouseMuseum_238.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_LeftEnd_214.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_InnerCorner_209.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_FountainPlaza_231.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_FoodCourt_225.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_FishingPier_237.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_FishermansWharf_211.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_FireStation_224.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_FerryLanding_226.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_CaptainNemosWildRide_239.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2_AnnabellelinRestaurant_235.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/PEG_SecurityFencingKit_Resource_243.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/OWW2_ResourcePack2_236.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/OWW2_ResourcePack1_206.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/CDK3_ReourceSuperPak_259.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/CDK3-SP_ResourceSeaportSuperPak_263.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/CDK3-SP_ResourceRailFleetPropPack_252.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/CDK3-SP_ContainerShipFleetPack_248.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Misc/product_image_009.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Misc/PEG_OneFlagManyNations_009.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_VandyShipping_172.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_TheBasics_175.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_SmallFerryLanding_174.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_PuertaDePego_193.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_GarbageDock_173.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_FuertaDePego_194.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_FredGingerFishery_190.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_CoastGaurdStation_242.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_CaptJacksLanding_196.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_BlackiesBoatYard_197.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/CDK3_AlgaeFarm_191.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_YachtClub_200.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_SportFishing_201.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_ParkingLot_199.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_Marina_198.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_GuestServices_203.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_Docks_232.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_DockExtension_305.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_DockEnd_306.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_Chandlery_307.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_BoatStorage_205.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/CDK3-M_BoatRamp_202.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_239.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_238.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_237.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_235.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_231.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_230.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_226.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_225.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_224.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_223.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_218.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_216.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_215.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_214.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_211.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_210.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_209.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_208.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/_img/product_image_207.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/Patches/OWW2_Patch_OCType.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/Patches/OWW2_Patch_ControlFreak.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/Patches/OWW2_OWWConversionMod_224.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/OWW2-SV_Shops_x2_303.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/OWW2-SV_SeaportVillage_217.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/OWW2-SV_SeaportSammys_219.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/OWW2-SV_CornerShops_302.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/OWW2-SV_Carousel_304.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-RCI/OWW2_RCI_Boardwalks_PierFillers_343.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-RCI/OWW2_RCI_Boardwalks_Corners_342.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-RCI/OWW2_RCI_Boardwalks_341.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-BDK/OWW2-BDK_RebaLynnsBeachHut_244.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-BDK/OWW2-BDK_BeachRestrooms_234.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-BDK/OWW2-BDK_BeachDevelopmentKit_229.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/_img/product_image_263.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/_img/product_image_259.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/_img/product_image_252.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/_img/product_image_248.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/_img/product_image_243.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/_img/product_image_236.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Resource/_img/product_image_206.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_242.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_197.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_196.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_194.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_193.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_191.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_190.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_175.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_174.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_173.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/CDK3/_img/product_image_172.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_307.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_306.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_305.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_232.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_205.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_203.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_202.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_201.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_200.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_199.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Marina/_img/product_image_198.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/OWW2-Pier_Wing_220.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/OWW2-Pier_LifegaurdTower_228.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/OWW2-Pier_House_222.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/OWW2-Pier_Head_213.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/OWW2-Pier_BoatPass_221.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/OWW2-Pier_BoatDock_227.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/OWW2-Pier_BaseSet_212.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/OWW2-Pier_Arcade_241.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/Patches/_img/product_image_224.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/tip3.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/tip2.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/tip1.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/product_image_007.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_022.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_021.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_020.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_019.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_018.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_017.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_016.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_015.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_014.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_013.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_012.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_011.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_010.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_009.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_008.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_007.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_006.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_005.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_004.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_003.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK_Tut_image_002.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/_img/CDK3Collection.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/_img/product_image_304.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/_img/product_image_303.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/_img/product_image_302.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/_img/product_image_219.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-SV/_img/product_image_217.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-RCI/_img/product_image_343.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-RCI/_img/product_image_342.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-RCI/_img/product_image_341_3.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-RCI/_img/product_image_341_2.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-RCI/_img/product_image_341.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-BDK/_img/product_image_244.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-BDK/_img/product_image_234.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-BDK/_img/product_image_229.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_VandysShipping_254.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_RowWarehouses_255.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_RCIDock_251.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_PloppableShipsPack_267.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_PierOne_262.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_FunctionalSeaport-MasterController_264.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_FunctionalPierSeaport_266.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_FunctionalContainerSeaport_247.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_FunctionalBreakBulkDock_257.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_CornerDocks_253.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_ContainerDock_249.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_BuoyzfromDaHood_265.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_BubbasBulkandBarge_258.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_BreakBulkDock_260.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_BargeWarehouses_261.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/CDK3-SP_1xLots_250.htm
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/_img/product_image_241.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/_img/product_image_228.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/_img/product_image_227.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/_img/product_image_222.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/_img/product_image_221.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/_img/product_image_220.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/_img/product_image_213.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/OWW2/OWW2-Pier/_img/product_image_212.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0267.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0266.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0265.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0264.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0262.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0261.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0260.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0258.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0257.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0255.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0254.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0253.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0251.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0250.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0249.jpg
+      - $DOCUMENTS/SimCity 4/PEG Readmes/Seaport/_img/0247.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/CDK3Collection.thumb.jpg.4ea43935a60525b01987203d7a805e8f.jpg
     lastModified: 2024-01-02T13:25:27Z
     name: Pegasus CDK3 Collection
+    sha256: 8aef1632b73443d58b332e5b6200a531616cad06ed897c00c145a76200812fdf
+    size: 64312825
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_12/CDK3Collection.thumb.jpg.4ea43935a60525b01987203d7a805e8f.jpg
+    timestamp: 2024-07-05T07:19:34.157Z
     url: https://community.simtropolis.com/files/file/35353-pegasus-cdk3-collection/
+    version: 1.0.0
   simtropolis/3585-marina-port:
     authors:
       - Pooty
@@ -3614,4 +4112,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-95551d0236de2d4a115733d90bd60c29-vabeachboardwalk.JPG
     url: https://community.simtropolis.com/files/file/944-virginia-beach-boardwalk/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

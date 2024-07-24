@@ -1,14 +1,11 @@
-import { Feature, PackageConfig } from "./types"
+import { Features, Options, PackageConfig } from "./types"
 import { normalizeString } from "./utils/types"
 
 export interface ProfileUpdate {
-  features?: {
-    [feature in Feature]?: boolean
-  }
+  features?: Features
   name?: string
-  packages?: {
-    [packageId in string]?: PackageConfig
-  }
+  options?: Options
+  packages?: { [packageId: string]: PackageConfig }
 }
 
 export function createUniqueProfileId(name: string, existingIds: string[]): string {

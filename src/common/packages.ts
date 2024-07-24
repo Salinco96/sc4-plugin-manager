@@ -1,6 +1,100 @@
-import { PackageInfo, PackageStatus, ProfileInfo, VariantInfo, VariantIssue } from "@common/types"
+import {
+  Feature,
+  OptionInfo,
+  OptionType,
+  OptionValue,
+  Options,
+  PackageInfo,
+  PackageStatus,
+  ProfileInfo,
+  Requirements,
+  VariantInfo,
+  VariantIssue,
+} from "@common/types"
 
 import { PackageCategory, isCategory } from "./categories"
+import { ReadonlyDeep } from "./utils/objects"
+import { isArray, isNumber, isString } from "./utils/types"
+
+export function checkCondition(
+  condition?: ReadonlyDeep<Requirements>,
+  packageId?: string,
+  variantInfo?: ReadonlyDeep<VariantInfo>,
+  profileInfo?: ReadonlyDeep<ProfileInfo>,
+  profileOptions?: ReadonlyDeep<OptionInfo[]>,
+  features?: ReadonlyDeep<Partial<Record<Feature, string[]>>>,
+): boolean {
+  if (!condition) {
+    return true
+  }
+
+  const packageConfig = packageId ? profileInfo?.packages[packageId] : undefined
+
+  const profileOptionValues = profileInfo?.options ?? {}
+  const packageOptionValues = { ...packageConfig?.options, ...profileOptionValues }
+
+  return Object.entries(condition).every(([requirement, requiredValue]) => {
+    if (requiredValue === undefined) {
+      return true
+    }
+
+    const packageOption = variantInfo?.options?.find(option => option.id === requirement)
+    if (packageOption) {
+      const value = getOptionValue(packageOption, packageOptionValues)
+      return isArray(value) ? value.includes(requiredValue) : value === requiredValue
+    }
+
+    const profileOption = profileOptions?.find(option => option.id === requirement)
+    if (profileOption) {
+      const value = getOptionValue(profileOption, profileOptionValues)
+      return isArray(value) ? value.includes(requiredValue) : value === requiredValue
+    }
+
+    return requiredValue === !!features?.[requirement as Feature]?.length
+  })
+}
+
+export function getOptionDefaultValue(
+  option: ReadonlyDeep<OptionInfo>,
+): OptionValue | ReadonlyArray<OptionValue> {
+  if (option.default !== undefined) {
+    return option.default
+  }
+
+  if (option.multi) {
+    return []
+  }
+
+  switch (option.type) {
+    case OptionType.BOOLEAN:
+      return false
+
+    case OptionType.NUMBER: {
+      const firstChoice = option.choices?.at(0)
+      if (firstChoice !== undefined) {
+        return isNumber(firstChoice) ? firstChoice : firstChoice.value
+      }
+
+      return option.min ?? 0
+    }
+
+    case OptionType.STRING: {
+      const firstChoice = option.choices.at(0)
+      if (firstChoice !== undefined) {
+        return isString(firstChoice) ? firstChoice : firstChoice.value
+      }
+
+      return "default"
+    }
+  }
+}
+
+export function getOptionValue(
+  option: ReadonlyDeep<OptionInfo>,
+  options?: ReadonlyDeep<Options>,
+): OptionValue | ReadonlyArray<OptionValue> {
+  return options?.[option.id] ?? getOptionDefaultValue(option)
+}
 
 export function getPackageStatus(
   packageInfo: PackageInfo,

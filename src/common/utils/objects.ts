@@ -1,3 +1,10 @@
+export type ReadonlyDeep<T> =
+  T extends ReadonlyArray<infer S>
+    ? ReadonlyArray<S>
+    : {
+        readonly [P in keyof T]: ReadonlyDeep<T[P]>
+      }
+
 export function entries<K extends string, T>(object: Readonly<Partial<Record<K, T>>>): [K, T][] {
   return Object.entries(object) as [K, T][]
 }

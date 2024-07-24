@@ -14935,6 +14935,76 @@ assets:
     name: Snowys Ice Cream
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-0dd98e069936935635d37d2ce3926aca-snowys1.jpg
     url: https://community.simtropolis.com/files/file/3632-snowys-ice-cream/
+  simtropolis/36332-crown-union-jack-gardens:
+    authors:
+      - justforfun
+    category: 660
+    dependencies:
+      - simtropolis/31406-heuvelstraat-109-stationsstraat-41-tilburg
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	A pair of floral arrangements that can be used together or separately to decorate your parks and plazas.<br>
+      	The Crown measures 6x5 tiles, the Union Jack is made of two rotated 4x5 lots. Both have a monthly maintenance cost of 200 and come with custom query sounds.
+      </p>
+
+
+      <p>
+      	DEPENDENCIES:
+      </p>
+
+
+      <p>
+      	<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - D66 Vol01 contained in the <a href="https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack</a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/31406-heuvelstraat-109-stationsstraat-41-tilburg/" rel="">AGV Heuvelstraat 109 &amp; Stationsstraat 41</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	As usual stay tuned for more coming to the STEX!
+      </p>
+
+
+      <p>
+      	<br>
+      	justforfun
+      </p>
+
+      						</body>
+    filename: JFFCrown&UnionJackGardens.zip
+    files:
+      - JFFCrown&UnionJackGardens/JFF_Crown&UnionJack_Gardens_Readme.txt
+      - JFFCrown&UnionJackGardens/JFF UnionJack Gardens.SC4Lot
+      - JFFCrown&UnionJackGardens/JFF Crown-UJack Gardens.jpg
+      - JFFCrown&UnionJackGardens/JFF Crown Gardens.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668c202f3ba1a_JFFCrown-UJackGardens.thumb.jpg.20b235d64a0736fd9f9ef63f97bfb843.jpg
+    lastModified: 2024-07-08T17:34:29Z
+    name: Crown & Union Jack Gardens
+    sha256: d70a2e802190c684fa0ddf519438f0534ea8936393144d00643d5a20d8d8548e
+    size: 6087671
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/668c202f3ba1a_JFFCrown-UJackGardens.thumb.jpg.20b235d64a0736fd9f9ef63f97bfb843.jpg
+    timestamp: 2024-07-23T10:27:16.370Z
+    uncompressed: 6451277
+    url: https://community.simtropolis.com/files/file/36332-crown-union-jack-gardens/
+    version: 1.0.0
   simtropolis/3648-tragicomicus-town-square:
     authors:
       - tragicomicus1
@@ -17016,4 +17086,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-18bf807f2f09de4980b386687e38a613-Nice%20Park%20Day.jpg
     url: https://community.simtropolis.com/files/file/998-large-park/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z

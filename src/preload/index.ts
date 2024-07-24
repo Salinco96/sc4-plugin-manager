@@ -15,8 +15,11 @@ export const api = {
   async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
-  async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
-    return ipcRenderer.invoke("getPackageDocsAsHtml", packageId, variantId)
+  async getPackageReadme(
+    packageId: string,
+    variantId: string,
+  ): Promise<{ html?: string; md?: string }> {
+    return ipcRenderer.invoke("getPackageReadme", packageId, variantId)
   },
   async installPackages(packages: { [packageId: string]: string }): Promise<boolean> {
     return ipcRenderer.invoke("installPackages", packages)

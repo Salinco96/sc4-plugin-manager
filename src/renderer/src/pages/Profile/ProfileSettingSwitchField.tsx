@@ -24,7 +24,7 @@ export function ProfileSettingFeatureSwitchField({
         {label}
       </Text>
       <Switch
-        checked={profileInfo.features[feature]}
+        checked={!!profileInfo.features[feature]}
         color="primary"
         disabled={disabled}
         inputRef={ref => {

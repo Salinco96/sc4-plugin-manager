@@ -10,7 +10,7 @@ import {
   net,
   session,
 } from "electron/main"
-import fs, { FileHandle } from "fs/promises"
+import fs, { FileHandle, writeFile } from "fs/promises"
 import path from "path"
 
 import log, { LogLevel } from "electron-log"
@@ -19,12 +19,14 @@ import { glob } from "glob"
 
 import { getCategoryPath } from "@common/categories"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
+import { checkCondition, getOptionValue } from "@common/packages"
 import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
   AssetInfo,
   ConfigFormat,
   Feature,
+  OptionInfo,
   PackageConfig,
   PackageFile,
   PackageInfo,
@@ -35,7 +37,6 @@ import {
   getDefaultVariant,
 } from "@common/types"
 import { mapDefined } from "@common/utils/arrays"
-import { keys } from "@common/utils/objects"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -62,7 +63,7 @@ import {
   mergeLocalPackageInfo,
   writePackageConfig,
 } from "./data/packages"
-import { getFeatures, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
+import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, fromProfileData, toProfileData } from "./data/profiles/configs"
 import { MainWindow } from "./MainWindow"
 import {
@@ -103,6 +104,8 @@ export interface AppConfig {
 
 export class Application {
   public assets: { [assetId: string]: AssetInfo | undefined } = {}
+  public features?: Partial<Record<Feature, string[]>>
+  public options?: OptionInfo[]
   public packages?: { [packageId: string]: PackageInfo }
   public profiles?: { [profileId: string]: ProfileInfo }
   public sessions: { simtropolis?: SimtropolisSession | null } = {}
@@ -188,7 +191,7 @@ export class Application {
     this.handle("check4GBPatch")
     this.handle("cleanVariant")
     this.handle("createProfile")
-    this.handle("getPackageDocsAsHtml")
+    this.handle("getPackageReadme")
     this.handle("getState")
     this.handle("installPackages")
     this.handle("openExecutableDirectory")
@@ -406,6 +409,7 @@ export class Application {
 
     const profile: ProfileInfo = {
       features: {},
+      options: {},
       packages: {},
       ...structuredClone(templateProfile),
       format: undefined,
@@ -675,7 +679,10 @@ export class Application {
   /**
    * Returns the main README file for a given variant, as an HTML string.
    */
-  public async getPackageDocsAsHtml(packageId: string, variantId: string): Promise<string> {
+  public async getPackageReadme(
+    packageId: string,
+    variantId: string,
+  ): Promise<{ html?: string; md?: string }> {
     const packageInfo = this.getPackageInfo(packageId)
     if (!packageInfo) {
       throw Error(`Unknown package '${packageId}'`)
@@ -698,14 +705,23 @@ export class Application {
       case ".html": {
         const src = await fs.realpath(docPath)
         const pathname = toPosix(path.relative(this.getRootPath(), src))
-        return `<iframe height="100%" width="100%" sandbox="allow-popups" src="docs://sc4-plugin-manager/${pathname}" title="Documentation"></iframe>`
+        return {
+          html: `<iframe height="100%" width="100%" sandbox="allow-popups" src="docs://sc4-plugin-manager/${pathname}" title="Documentation"></iframe>`,
+        }
       }
 
-      // TODO: Markdown viewer? It is at least readable enough for now
-      case ".md":
+      case ".md": {
+        const contents = await fs.readFile(docPath, "utf8")
+        return {
+          md: contents,
+        }
+      }
+
       case ".txt": {
         const contents = escapeHtml(await fs.readFile(docPath, "utf8"))
-        return `<pre style="height: 100%; margin: 0; overflow: auto; padding: 16px; white-space: pre-wrap">${contents}</pre>`
+        return {
+          html: `<pre style="height: 100%; margin: 0; overflow: auto; padding: 16px; white-space: pre-wrap">${contents}</pre>`,
+        }
       }
 
       // TODO: Support PDF? (Is any package using that?)
@@ -768,6 +784,8 @@ export class Application {
    */
   public getState(): ApplicationState {
     return {
+      features: this.features,
+      options: this.options,
       packages: this.packages,
       profiles: this.profiles,
       sessions: {
@@ -937,6 +955,10 @@ export class Application {
     this.sendStatus()
     await databaseUpdatePromise
 
+    // Load profile options...
+    await this.loadOptions()
+    this.sendOptions()
+
     // Load remote packages...
     const remote = await loadRemotePackages(this.getDatabasePath(), (c, t) => {
       if (c % 10 === 0) {
@@ -975,7 +997,7 @@ export class Application {
       // Resolve package status and dependencies (will also trigger linking)
       await this.recalculatePackages(currentProfile.id)
       // Run cleaner for all enabled packages
-      await this.cleanAll()
+      // await this.cleanAll()
     }
   }
 
@@ -1366,8 +1388,8 @@ export class Application {
       { cache: true },
     )
 
-    const currentProfile = this.getCurrentProfile()
-    if (currentProfile) {
+    const profileInfo = this.getCurrentProfile()
+    if (profileInfo) {
       await this.tasks.linker.queue(
         "link",
         async context => {
@@ -1388,40 +1410,13 @@ export class Application {
             this.links[to] = from
           }
 
-          const features = getFeatures(
-            this.packages!,
-            Object.fromEntries(
-              Object.entries(this.packages!).map(([id, info]) => [
-                id,
-                info.status[currentProfile.id]!,
-              ]),
-            ),
-            currentProfile.features,
-          )
-
-          const checkCondition = (condition?: { [feature in Feature]?: boolean }) => {
-            if (!condition) {
-              return true
-            }
-
-            for (const requirement of keys(condition)) {
-              const requiredValue = condition[requirement]
-              const value = !!features[requirement]?.length
-              if (requiredValue !== undefined && requiredValue !== value) {
-                return false
-              }
-            }
-
-            return true
-          }
-
           let nPackages = 0
           const nTotalPackages = Object.keys(this.packages!).length
           const increment = Math.floor(nTotalPackages / 100)
 
           for (const packageId in this.packages) {
             const packageInfo = this.packages[packageId]
-            const status = packageInfo.status[currentProfile.id]
+            const status = packageInfo.status[profileInfo.id]
             if (status?.enabled) {
               const variantId = status.variantId
               const variantInfo = packageInfo.variants[variantId]
@@ -1429,7 +1424,16 @@ export class Application {
                 const variantPath = this.getVariantPath(packageId, variantId)
                 if (variantInfo.files?.length) {
                   for (const file of variantInfo.files) {
-                    if (checkCondition(file.condition)) {
+                    if (
+                      checkCondition(
+                        file.condition,
+                        packageId,
+                        variantInfo,
+                        profileInfo,
+                        this.options,
+                        this.features,
+                      )
+                    ) {
                       const fullPath = path.join(variantPath, file.path)
                       const categoryPath = getCategoryPath(file.category ?? variantInfo.category)
 
@@ -1453,6 +1457,40 @@ export class Application {
                         } else {
                           nUpdated++
                         }
+                      }
+                    }
+                  }
+
+                  if (variantInfo.options) {
+                    const configFiles: { [filename: string]: OptionInfo[] } = {}
+                    for (const option of variantInfo.options) {
+                      if (option.filename) {
+                        configFiles[option.filename] ??= []
+                        configFiles[option.filename].push(option)
+                      }
+                    }
+
+                    for (const filename in configFiles) {
+                      let ini = ""
+                      let lastSection = ""
+                      for (const option of configFiles[filename]) {
+                        const [section, field] = option.id.split(".", 2)
+                        if (section !== lastSection) {
+                          ini += `[${section}]\n`
+                          lastSection = section
+                        }
+
+                        const value = getOptionValue(option, {
+                          ...profileInfo.options,
+                          ...profileInfo.packages[packageId]?.options,
+                        })
+
+                        ini += `${field}=${value}\n`
+                      }
+
+                      if (ini) {
+                        const targetPath = path.join(pluginsPath, filename)
+                        await writeFile(targetPath, ini, "utf8")
                       }
                     }
                   }
@@ -1508,6 +1546,21 @@ export class Application {
       data.path = this.gamePath
       await writeConfig(configPath, FILENAMES.appConfig, data, ConfigFormat.JSON, config?.format)
     }
+  }
+
+  protected async loadOptions(): Promise<OptionInfo[]> {
+    console.debug("Loading options...")
+
+    const config = await loadConfig<{ options: OptionInfo[] }>(
+      this.getDatabasePath(),
+      FILENAMES.dbOptions,
+    )
+
+    this.options = config?.data.options ?? []
+
+    console.info(`Loaded ${this.options.length} options`)
+
+    return this.options
   }
 
   protected async loadProfiles(): Promise<{ [id: string]: ProfileInfo }> {
@@ -1677,7 +1730,14 @@ export class Application {
       return
     }
 
-    const { resultingStatus } = resolvePackages(this.packages, profile.packages, profile.features)
+    const { resultingFeatures, resultingStatus } = resolvePackages(
+      this.packages,
+      profile.packages,
+      profile.options,
+      profile.features,
+    )
+
+    this.features = resultingFeatures
     for (const packageId in resultingStatus) {
       this.packages[packageId].status[profileId] = resultingStatus[packageId]
     }
@@ -1858,12 +1918,16 @@ export class Application {
     }
   }
 
+  protected sendOptions(): void {
+    this.sendStateUpdate({ options: this.options })
+  }
+
   protected sendPackage(packageId: string): void {
     this.sendStateUpdate({ packages: { [packageId]: this.getPackageInfo(packageId) ?? null } })
   }
 
   protected sendPackages(): void {
-    this.sendStateUpdate({ packages: this.packages })
+    this.sendStateUpdate({ features: this.features, packages: this.packages })
   }
 
   protected sendProfile(profileId: string): void {
@@ -2083,14 +2147,15 @@ export class Application {
 
   public async updateProfile(profileId: string, update: ProfileUpdate): Promise<boolean> {
     const profile = this.getProfileInfo(profileId)
-    if (!this.packages || !profile) {
+    if (!this.options || !this.packages || !profile) {
       return false
     }
 
     // Changes to packages/externals require conflict computation and potential side-effects / confirmation
-    if (update.packages || update.features) {
-      update.packages ??= {}
+    if (update.features || update.options || update.packages) {
       update.features ??= {}
+      update.options ??= {}
+      update.packages ??= {}
 
       const {
         disablingPackages,
@@ -2102,9 +2167,18 @@ export class Application {
         installingVariants,
         resultingConfigs,
         resultingExternals,
+        resultingFeatures,
+        resultingOptions,
         resultingStatus,
         shouldRecalculate,
-      } = resolvePackageUpdates(this.packages, profile, update.packages, update.features)
+      } = resolvePackageUpdates(
+        this.packages,
+        profile,
+        this.options,
+        update.packages,
+        update.options,
+        update.features,
+      )
 
       try {
         if (shouldRecalculate) {
@@ -2490,7 +2564,9 @@ export class Application {
 
         // Apply config changes
         profile.features = resultingExternals
+        profile.options = resultingOptions
         profile.packages = resultingConfigs
+        this.features = resultingFeatures
 
         // Apply status changes
         for (const packageId in resultingStatus) {

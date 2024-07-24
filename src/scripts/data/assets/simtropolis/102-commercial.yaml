@@ -3143,22 +3143,1800 @@ assets:
     name: NDEX DRK Tower by DT and EB
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-439952d51c2e4b041b7f47ab9b3769cb-DRK_stex1.jpg
     url: https://community.simtropolis.com/files/file/13164-ndex-drk-tower-by-dt-and-eb/
+  simtropolis/13168-bsc-dedwd-small-shops-1x1-set:
+    authors:
+      - deadwoods
+    category: 300
+    dependencies:
+      - simtropolis/13153-bsc-mega-props-dae-vol02
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/13153-dedwd-small-shop-prop-pack
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
+      	DEDWD Small Shops 1x1 Pack<br>
+      	by deadwoods
+      </h1>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This package contains a set of small shops on 1x1 lots. I noticed a distinct lack of unique buildings in this space provided by Maxis (Simgoober has created some great 1x1 lots). The buildings on these lots are based on brick shops found in many of the older (early 20th Century) suburbs in Australia. However the style is very common and can be found in many places worldwide. I've seen shops like these in small towns in the USA.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	There are two buildings in this set; a single storey one and a double storey one. Each one has different roof and plumbing texture combinations, so there are actually a dozen models. The buildings are in building families so they appear randomly. The shopfronts are provided by the shop front props in the <s>DEDWD_SmallShops_Props pack</s> <strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props DEDWD/DAE Vol02</a>. </strong>With the combination of building models and storefront props there are about 800 possible combinations providing a bit of variety to your cities.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	There are also CS$ and CS$$ varieties of each. So there are four lots in all.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	These lots are <abbr title="BATT Squad Certification">BSC</abbr> BTE enabled. This means they will contribute to reward chains. Having enough of these in your city may entitle you to specific rewards.
+      </p>
+
+
+      <hr style="color:#000000; font-size:13.3333px; text-align:justify">
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="color:#cc0000">This is Version 3 (v103). All the lots have been updated with SC4PIM-X (x-tool), some underlying issues have been fixed and the contents have got the "Project ZIP" threatment</span>.<span> </span><span style="color:#cc0000"><u>The IDs remained the same in this pack</u>.</span>
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This v103 version (released as an update on STEX) will be equivalent with the version that is/will be released on SC4Evermore as part of the SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy compilations.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	In all cases players who have previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. <span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">For removing old versions you need to run the included cleanitol scrip with </span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">the<span> </span></span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" style="background-color:transparent; color:#1f5e8d">nos.17's SC4 Cleanitol</a></strong><strong style="background-color:#ffffff; color:#22262a; font-size:16px; text-align:start"> </strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">or with the </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow" style="background-color:transparent; color:#1f5e8d" target="_blank"><abbr style="border-bottom:none" title="BATT Squad Certification">BSC</abbr><span> </span>Cleanitol TM</a></strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><span> </span>tool</span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">.</span>
+      </p>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Lot Specs
+      </h2>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				Setting
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				 
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				STAGE:
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				3
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				LOT_SIZE:
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				TYPE:
+      			</td>
+      			<td>
+      				Services
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_EFFECT:
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_RADII:
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				OCCUPANT_GROUPS:
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POWER_CONSUMED:
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WATER_CONSUMED:
+      			</td>
+      			<td>
+      				7
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				13
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				BULLDOZE_COST:
+      			</td>
+      			<td>
+      				120
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WORTH:
+      			</td>
+      			<td>
+      				120
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				CAPACITY_SATISFIED (JOBS):
+      			</td>
+      			<td>
+      				CS$: 26
+      			</td>
+      			<td>
+      				CS$: 40
+      			</td>
+      			<td>
+      				CS$: 26<br>
+      				CS$$: 9
+      			</td>
+      			<td>
+      				CS$: 40<br>
+      				CS$$: 12
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				VALUE:
+      			</td>
+      			<td>
+      				199
+      			</td>
+      			<td>
+      				306
+      			</td>
+      			<td>
+      				223
+      			</td>
+      			<td>
+      				343
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Installation
+      </h2>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Pre-reqs
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This lot needs the following pre-reqs. If they are not contained in the package, there's a hyperlink to them on the STEX.
+      </p>
+
+
+      <table border="0" style="text-align:justify">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				<b>File</b>
+      			</td>
+      			<td>
+      				<b>Link to file (if not in zip)</b>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				Custom Query
+      			</td>
+      			<td style="text-align:center">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow" target="_blank" title="BSC Common Dependnecies v9b"><abbr title="BATT Squad Certification">BSC</abbr> Essentials 2024a</a><br>
+      				<span>(</span><small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small><span>)</span><br>
+      				<span style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">you might need the following file:</span><br style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">
+      				<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/?do=download&amp;r=202051&amp;confirm=1&amp;t=1&amp;csrfKey=470d6add04459050f421150d34b6a840" rel="" style="background-color:#e3eee6; color:#1f5e8d; font-size:14px; text-align:center">DEDWD_Commercial_commonfiles</a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop1_buildings.dat
+      			</td>
+      			<td colspan="1" rowspan="5" style="text-align:center; vertical-align:middle">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol02</a><br>
+      				(<small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small>)<br>
+      				<a href="https://community.simtropolis.com/files/file/13153-dedwd-small-shop-prop-pack/" rel="">Alternatively from<span> </span><span>STEX</span></a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop2_buildings.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop1_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop2_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShops_commonfiles.dat
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Install/Un-install
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	Copy/Extract the<span> </span><strong><span>Deadwoods</span><span> </span></strong>parent folder into your plugins. If you extracted the<span> ~</span><span>Documents</span><span> </span>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	To<span> </span><b>Un-Install<span> </span></b>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="color:#2980b9; font-size:12px">- Tyberius06 Edit: complete update of the package, see details in change log - 21.07.2024</span>
+      </p>
+
+      						</body>
+    filename: BSC DEDWD Small Shops 1x1 v103.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_DEDWD Small Shops 1x1.txt
+      - deadwoods/Small Shops/CS$3_1x1_DEDWD_SmallShop2_2fd72e8c.SC4Lot
+      - deadwoods/Small Shops/CS$2_1x1_DEDWD_SmallShop1_6fd4496f.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x1_DEDWD_SmallShop2_2fe6fe3e.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x1_DEDWD_SmallShop1_efe6fc9e.SC4Lot
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x1_stexpic2.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x1_stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x1_README.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/149344fed48b75345316e8a9c921ee91-DEDWD_SmallShops_1x1_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/149344fed48b75345316e8a9c921ee91-DEDWD_SmallShops_1x1_stexpic2.jpg
+    lastModified: 2024-07-21T14:30:32Z
+    name: BSC DEDWD Small Shops 1x1 Set
+    sha256: 93519081fc730599da625089afda0cf46d6d59a86a1d78d521d84b0a20c8e90c
+    size: 168566
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-149344fed48b75345316e8a9c921ee91-DEDWD_SmallShops_1x1_stexpic1.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 252420
+    url: https://community.simtropolis.com/files/file/13168-bsc-dedwd-small-shops-1x1-set/
+    version: v103
   simtropolis/13168-dedwd-small-shops-1x1-set:
     authors:
       - deadwoods
     category: 300
+    dependencies:
+      - simtropolis/13153-bsc-mega-props-dae-vol02
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/13153-dedwd-small-shop-prop-pack
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
+      	DEDWD Small Shops 1x1 Pack<br>
+      	by deadwoods
+      </h1>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This package contains a set of small shops on 1x1 lots. I noticed a distinct lack of unique buildings in this space provided by Maxis (Simgoober has created some great 1x1 lots). The buildings on these lots are based on brick shops found in many of the older (early 20th Century) suburbs in Australia. However the style is very common and can be found in many places worldwide. I've seen shops like these in small towns in the USA.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	There are two buildings in this set; a single storey one and a double storey one. Each one has different roof and plumbing texture combinations, so there are actually a dozen models. The buildings are in building families so they appear randomly. The shopfronts are provided by the shop front props in the <s>DEDWD_SmallShops_Props pack</s> <strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props DEDWD/DAE Vol02</a>. </strong>With the combination of building models and storefront props there are about 800 possible combinations providing a bit of variety to your cities.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	There are also CS$ and CS$$ varieties of each. So there are four lots in all.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	These lots are <abbr title="BATT Squad Certification">BSC</abbr> BTE enabled. This means they will contribute to reward chains. Having enough of these in your city may entitle you to specific rewards.
+      </p>
+
+
+      <hr style="color:#000000; font-size:13.3333px; text-align:justify">
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="color:#cc0000">This is Version 3 (v103). All the lots have been updated with SC4PIM-X (x-tool), some underlying issues have been fixed and the contents have got the "Project ZIP" threatment</span>.<span> </span><span style="color:#cc0000"><u>The IDs remained the same in this pack</u>.</span>
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This v103 version (released as an update on STEX) will be equivalent with the version that is/will be released on SC4Evermore as part of the SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy compilations.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	In all cases players who have previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. <span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">For removing old versions you need to run the included cleanitol scrip with </span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">the<span> </span></span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" style="background-color:transparent; color:#1f5e8d">nos.17's SC4 Cleanitol</a></strong><strong style="background-color:#ffffff; color:#22262a; font-size:16px; text-align:start"> </strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">or with the </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow" style="background-color:transparent; color:#1f5e8d" target="_blank"><abbr style="border-bottom:none" title="BATT Squad Certification">BSC</abbr><span> </span>Cleanitol TM</a></strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><span> </span>tool</span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">.</span>
+      </p>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Lot Specs
+      </h2>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				Setting
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				 
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				STAGE:
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				3
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				LOT_SIZE:
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				TYPE:
+      			</td>
+      			<td>
+      				Services
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_EFFECT:
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_RADII:
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				OCCUPANT_GROUPS:
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POWER_CONSUMED:
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WATER_CONSUMED:
+      			</td>
+      			<td>
+      				7
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				13
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				BULLDOZE_COST:
+      			</td>
+      			<td>
+      				120
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WORTH:
+      			</td>
+      			<td>
+      				120
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				CAPACITY_SATISFIED (JOBS):
+      			</td>
+      			<td>
+      				CS$: 26
+      			</td>
+      			<td>
+      				CS$: 40
+      			</td>
+      			<td>
+      				CS$: 26<br>
+      				CS$$: 9
+      			</td>
+      			<td>
+      				CS$: 40<br>
+      				CS$$: 12
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				VALUE:
+      			</td>
+      			<td>
+      				199
+      			</td>
+      			<td>
+      				306
+      			</td>
+      			<td>
+      				223
+      			</td>
+      			<td>
+      				343
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Installation
+      </h2>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Pre-reqs
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This lot needs the following pre-reqs. If they are not contained in the package, there's a hyperlink to them on the STEX.
+      </p>
+
+
+      <table border="0" style="text-align:justify">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				<b>File</b>
+      			</td>
+      			<td>
+      				<b>Link to file (if not in zip)</b>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				Custom Query
+      			</td>
+      			<td style="text-align:center">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow" target="_blank" title="BSC Common Dependnecies v9b"><abbr title="BATT Squad Certification">BSC</abbr> Essentials 2024a</a><br>
+      				<span>(</span><small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small><span>)</span><br>
+      				<span style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">you might need the following file:</span><br style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">
+      				<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/?do=download&amp;r=202051&amp;confirm=1&amp;t=1&amp;csrfKey=470d6add04459050f421150d34b6a840" rel="" style="background-color:#e3eee6; color:#1f5e8d; font-size:14px; text-align:center">DEDWD_Commercial_commonfiles</a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop1_buildings.dat
+      			</td>
+      			<td colspan="1" rowspan="5" style="text-align:center; vertical-align:middle">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol02</a><br>
+      				(<small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small>)<br>
+      				<a href="https://community.simtropolis.com/files/file/13153-dedwd-small-shop-prop-pack/" rel="">Alternatively from<span> </span><span>STEX</span></a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop2_buildings.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop1_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop2_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShops_commonfiles.dat
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Install/Un-install
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	Copy/Extract the<span> </span><strong><span>Deadwoods</span><span> </span></strong>parent folder into your plugins. If you extracted the<span> ~</span><span>Documents</span><span> </span>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	To<span> </span><b>Un-Install<span> </span></b>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="color:#2980b9; font-size:12px">- Tyberius06 Edit: complete update of the package, see details in change log - 21.07.2024</span>
+      </p>
+
+      						</body>
+    filename: BSC DEDWD Small Shops 1x1 v103.zip
+    files:
+      - deadwoods/Small Shops/CS$3_1x1_DEDWD_SmallShop2_2fd72e8c.SC4Lot
+      - deadwoods/Small Shops/CS$2_1x1_DEDWD_SmallShop1_6fd4496f.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x1_DEDWD_SmallShop2_2fe6fe3e.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x1_DEDWD_SmallShop1_efe6fc9e.SC4Lot
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_DEDWD Small Shops 1x1.txt
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x1_stexpic2.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x1_stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x1_README.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/149344fed48b75345316e8a9c921ee91-DEDWD_SmallShops_1x1_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/149344fed48b75345316e8a9c921ee91-DEDWD_SmallShops_1x1_stexpic2.jpg
     lastModified: 2005-07-26T23:54:36Z
     name: DEDWD Small Shops 1x1 Set
+    sha256: 93519081fc730599da625089afda0cf46d6d59a86a1d78d521d84b0a20c8e90c
+    size: 168566
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-149344fed48b75345316e8a9c921ee91-DEDWD_SmallShops_1x1_stexpic1.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 252420
     url: https://community.simtropolis.com/files/file/13168-dedwd-small-shops-1x1-set/
+    version: v103
+  simtropolis/13169-bsc-dedwd-small-shops-1x2-set:
+    authors:
+      - deadwoods
+    category: 300
+    dependencies:
+      - simtropolis/13153-bsc-mega-props-dae-vol02
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <div align="justify">
+      	<h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
+      		DEDWD Small Shops 1x2 Pack<br>
+      		by deadwoods
+      	</h1>
+
+      	<p style="color:#000000; text-align:justify">
+      		This package contains a set of small shops on 1x2 lots. These are modifications of my 1x1 series buildings, so have the same look and textures. They also use the same shopfronts as the 1x1's. The buildings on these lots are based on brick shops found in many of the older (early 20th Century) suburbs in Australia. However the style is very common and can be found in many places worldwide. I've seen shops like these in small towns in the USA.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		There are two buildings in this set; a single storey one and a double storey one. Each one has different roof and plumbing texture combinations, so there are actually a dozen models. The buildings are in building families so they appear randomly. The shopfronts are provided by the shop front props in the<span> </span><s>DEDWD_SmallShops_Props pack</s><span> </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props DEDWD/DAE Vol02</a></strong>. With the combination of building models and storefront props there are about 800 possible combinations providing a bit of variety to your cities.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		There are also CS$ and CS$$ varieties of each. So there are four lots in all.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		These lots are <abbr title="BATT Squad Certification">BSC</abbr> BTE enabled. This means they will contribute to reward chains. Having enough of these in your city may entitle you to specific rewards.
+      	</p>
+
+      	<hr style="color:#000000; font-size:13.3333px; text-align:justify">
+      	<p style="color:#000000; text-align:justify">
+      		<span style="color:#cc0000">This is Version 3 (v103). All the lots have been updated with SC4PIM-X (x-tool), some underlying issues have been fixed and the contents have got the "Project ZIP" threatment</span>.<span> </span><span style="color:#cc0000">The IDs remained the same in this pack.</span>
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		This v103 version (released as an update on STEX) will be equivalent with the version that is/will be released on SC4Evermore as part of the SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy compilations.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		In all cases players who has previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. <span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">For removing old versions you need to run the included cleanitol scrip with </span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">the<span> </span></span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" style="background-color:transparent; color:#1f5e8d" target="_blank">nos.17's SC4 Cleanitol</a></strong><strong style="background-color:#ffffff; color:#22262a; font-size:16px; text-align:start"> </strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">or with the </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow" style="background-color:transparent; color:#1f5e8d" target="_blank"><abbr style="border-bottom:medium none" title="BATT Squad Certification">BSC</abbr><span> </span>Cleanitol TM</a></strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><span> </span>tool</span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">.</span>
+      	</p>
+
+      	<h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      		Lot Specs
+      	</h2>
+
+      	<table border="0" style="text-align:justify" width="100%">
+      		<tbody>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					Setting
+      				</td>
+      				<td>
+      					CS1
+      				</td>
+      				<td>
+      					CS1
+      				</td>
+      				<td>
+      					CS2
+      				</td>
+      				<td>
+      					CS2
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					 
+      				</td>
+      				<td>
+      					Single
+      				</td>
+      				<td>
+      					Double
+      				</td>
+      				<td>
+      					Single
+      				</td>
+      				<td>
+      					Double
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					STAGE:
+      				</td>
+      				<td>
+      					2
+      				</td>
+      				<td>
+      					3
+      				</td>
+      				<td>
+      					2
+      				</td>
+      				<td>
+      					2
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					LOT_SIZE:
+      				</td>
+      				<td>
+      					1x2
+      				</td>
+      				<td>
+      					1x2
+      				</td>
+      				<td>
+      					1x2
+      				</td>
+      				<td>
+      					1x2
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					TYPE:
+      				</td>
+      				<td>
+      					Services
+      				</td>
+      				<td>
+      					"
+      				</td>
+      				<td>
+      					"
+      				</td>
+      				<td>
+      					"
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					POLLUTION_EFFECT:
+      				</td>
+      				<td>
+      					1,1,4,0
+      				</td>
+      				<td>
+      					1,1,4,0
+      				</td>
+      				<td>
+      					1,1,4,0
+      				</td>
+      				<td>
+      					1,1,4,0
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					POLLUTION_RADII:
+      				</td>
+      				<td>
+      					5,5,0,0,
+      				</td>
+      				<td>
+      					5,5,0,0,
+      				</td>
+      				<td>
+      					5,6,0,0,
+      				</td>
+      				<td>
+      					5,6,0,0,
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					OCCUPANT_GROUPS:
+      				</td>
+      				<td>
+      					Building: Commercial<br>
+      					Building: CS$<br>
+      					Style: Chicago<br>
+      					Style: New York<br>
+      					Style: Houston<br>
+      					Style: Euro<br>
+      					0xB5C00200<br>
+      					0xB5C00204<br>
+      					0xB5C00A08
+      				</td>
+      				<td>
+      					Building: Commercial<br>
+      					Building: CS$<br>
+      					Style: Chicago<br>
+      					Style: New York<br>
+      					Style: Houston<br>
+      					Style: Euro<br>
+      					0xB5C00200<br>
+      					0xB5C00204<br>
+      					0xB5C00A08
+      				</td>
+      				<td>
+      					Building: Commercial<br>
+      					Building: CS$$<br>
+      					Style: Chicago<br>
+      					Style: New York<br>
+      					Style: Houston<br>
+      					Style: Euro<br>
+      					0xB5C00200<br>
+      					0xB5C00204<br>
+      					0xB5C00A08
+      				</td>
+      				<td>
+      					Building: Commercial<br>
+      					Building: CS$$<br>
+      					Style: Chicago<br>
+      					Style: New York<br>
+      					Style: Houston<br>
+      					Style: Euro<br>
+      					0xB5C00200<br>
+      					0xB5C00204<br>
+      					0xB5C00A08
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					POWER_CONSUMED:
+      				</td>
+      				<td>
+      					1
+      				</td>
+      				<td>
+      					2
+      				</td>
+      				<td>
+      					1
+      				</td>
+      				<td>
+      					2
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					WATER_CONSUMED:
+      				</td>
+      				<td>
+      					10
+      				</td>
+      				<td>
+      					13
+      				</td>
+      				<td>
+      					14
+      				</td>
+      				<td>
+      					17
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					BULLDOZE_COST:
+      				</td>
+      				<td>
+      					122
+      				</td>
+      				<td>
+      					170
+      				</td>
+      				<td>
+      					125
+      				</td>
+      				<td>
+      					174
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					WORTH:
+      				</td>
+      				<td>
+      					122
+      				</td>
+      				<td>
+      					170
+      				</td>
+      				<td>
+      					125
+      				</td>
+      				<td>
+      					174
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					CAPACITY_SATISFIED (JOBS):
+      				</td>
+      				<td>
+      					CS$: 42
+      				</td>
+      				<td>
+      					CS$: 58
+      				</td>
+      				<td>
+      					CS$: 42<br>
+      					CS$$: 13
+      				</td>
+      				<td>
+      					CS$: 58<br>
+      					CS$$: 17
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					VALUE:
+      				</td>
+      				<td>
+      					321
+      				</td>
+      				<td>
+      					444
+      				</td>
+      				<td>
+      					360
+      				</td>
+      				<td>
+      					497
+      				</td>
+      			</tr>
+      		</tbody>
+      	</table>
+
+      	<h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      		Installation
+      	</h2>
+
+      	<h3 style="color:#000000; text-align:justify">
+      		Pre-reqs
+      	</h3>
+
+      	<p style="color:#000000; text-align:justify">
+      		This lot needs the following pre-reqs. If they are not contained in the package, there's a hyperlink to them on the STEX.
+      	</p>
+
+      	<table border="0" style="text-align:justify">
+      		<tbody>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					<b>File</b>
+      				</td>
+      				<td>
+      					<b>Link to file (if not in zip)</b>
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					Custom Query
+      				</td>
+      				<td style="text-align:center">
+      					<p>
+      						<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" target="_blank" title="BSC Common Dependnecies v9b" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Essesntials 2024a</a><br>
+      						<span>(</span><small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small><span>)</span><br>
+      						you might need the following file:<br>
+      						<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/?do=download&amp;r=202051&amp;confirm=1&amp;t=1&amp;csrfKey=470d6add04459050f421150d34b6a840" rel="">DEDWD_Commercial_commonfiles</a>
+      					</p>
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShop1_buildings.dat
+      				</td>
+      				<td colspan="1" rowspan="5" style="text-align:center; vertical-align:middle">
+      					<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol02</a><br>
+      					(<small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small>)<br>
+      					<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" target="_blank" rel="">Alternatively from<span> </span><span>STEX</span></a>
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShop2_buildings.dat
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShop1_props.dat
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShop2_props.dat
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShops_commonfiles.dat
+      				</td>
+      			</tr>
+      		</tbody>
+      	</table>
+
+      	<h3 style="color:#000000; text-align:justify">
+      		Install/Un-install
+      	</h3>
+
+      	<p style="color:#000000; text-align:justify">
+      		Copy/Extract the<span> </span><strong><span>Deadwoods</span><span> </span></strong>parent folder into your plugins. If you extracted the<span> </span><span>~<em>Documents</em></span><em><span> </span></em>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		To<span> </span><b>Un-Install<span> </span></b>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      	</p>
+      </div>
+
+
+      <p>
+      	<span style="color:#2980b9; font-size:12px;"><strong>-CB Edit:</strong> Fixed description formatting and dependency links. Thanks <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/136306-gwada971/?do=hovercard" data-mentionid="136306" href="https://community.simtropolis.com/profile/136306-gwada971/" id="ips_uid_1261_4" rel="">@gwada971</a> for reporting.<br>
+      	- Tyberius06 Edit: complete update of the package, see details in change log - 21.07.2024</span>
+      </p>
+
+      						</body>
+    filename: BSC DEDWD Small Shops 1x2 v103.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_DEDWD Small Shops 1x2.txt
+      - deadwoods/Small Shops/CS$3_1x2_DEDWD_SmallShop4_efec29b0.SC4Lot
+      - deadwoods/Small Shops/CS$2_1x2_DEDWD_SmallShop3_8fec271e.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x2_DEDWD_SmallShop4_4fec2c6a.SC4Lot
+      - deadwoods/Small Shops/CS$$1_1x2_DEDWD_SmallShop3_0fec2b3a.SC4Lot
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x2_stexpic2.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x2_stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x2_README.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/56abd0cb52e5dcb78bc231ba8edb4471-DEDWD_SmallShops_1x2_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/56abd0cb52e5dcb78bc231ba8edb4471-DEDWD_SmallShops_1x2_stexpic2.jpg
+    lastModified: 2024-07-21T14:29:43Z
+    name: BSC DEDWD Small Shops 1x2 Set
+    sha256: 40fbd4bb6200e36f42f2c1be520144d23de4fccf7d68cdffc6baad6a50552507
+    size: 168436
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-56abd0cb52e5dcb78bc231ba8edb4471-DEDWD_SmallShops_1x2_stexpic1.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 259243
+    url: https://community.simtropolis.com/files/file/13169-bsc-dedwd-small-shops-1x2-set/
+    version: v103
   simtropolis/13169-dedwd-small-shops-1x2-set:
     authors:
       - deadwoods
     category: 300
+    dependencies:
+      - simtropolis/13153-bsc-mega-props-dae-vol02
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <div align="justify">
+      	<h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
+      		DEDWD Small Shops 1x2 Pack<br>
+      		by deadwoods
+      	</h1>
+
+      	<p style="color:#000000; text-align:justify">
+      		This package contains a set of small shops on 1x2 lots. These are modifications of my 1x1 series buildings, so have the same look and textures. They also use the same shopfronts as the 1x1's. The buildings on these lots are based on brick shops found in many of the older (early 20th Century) suburbs in Australia. However the style is very common and can be found in many places worldwide. I've seen shops like these in small towns in the USA.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		There are two buildings in this set; a single storey one and a double storey one. Each one has different roof and plumbing texture combinations, so there are actually a dozen models. The buildings are in building families so they appear randomly. The shopfronts are provided by the shop front props in the<span> </span><s>DEDWD_SmallShops_Props pack</s><span> </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props DEDWD/DAE Vol02</a></strong>. With the combination of building models and storefront props there are about 800 possible combinations providing a bit of variety to your cities.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		There are also CS$ and CS$$ varieties of each. So there are four lots in all.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		These lots are <abbr title="BATT Squad Certification">BSC</abbr> BTE enabled. This means they will contribute to reward chains. Having enough of these in your city may entitle you to specific rewards.
+      	</p>
+
+      	<hr style="color:#000000; font-size:13.3333px; text-align:justify">
+      	<p style="color:#000000; text-align:justify">
+      		<span style="color:#cc0000">This is Version 3 (v103). All the lots have been updated with SC4PIM-X (x-tool), some underlying issues have been fixed and the contents have got the "Project ZIP" threatment</span>.<span> </span><span style="color:#cc0000">The IDs remained the same in this pack.</span>
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		This v103 version (released as an update on STEX) will be equivalent with the version that is/will be released on SC4Evermore as part of the SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy compilations.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		In all cases players who has previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. <span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">For removing old versions you need to run the included cleanitol scrip with </span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">the<span> </span></span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" style="background-color:transparent; color:#1f5e8d" target="_blank">nos.17's SC4 Cleanitol</a></strong><strong style="background-color:#ffffff; color:#22262a; font-size:16px; text-align:start"> </strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">or with the </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow" style="background-color:transparent; color:#1f5e8d" target="_blank"><abbr style="border-bottom:medium none" title="BATT Squad Certification">BSC</abbr><span> </span>Cleanitol TM</a></strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><span> </span>tool</span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">.</span>
+      	</p>
+
+      	<h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      		Lot Specs
+      	</h2>
+
+      	<table border="0" style="text-align:justify" width="100%">
+      		<tbody>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					Setting
+      				</td>
+      				<td>
+      					CS1
+      				</td>
+      				<td>
+      					CS1
+      				</td>
+      				<td>
+      					CS2
+      				</td>
+      				<td>
+      					CS2
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					 
+      				</td>
+      				<td>
+      					Single
+      				</td>
+      				<td>
+      					Double
+      				</td>
+      				<td>
+      					Single
+      				</td>
+      				<td>
+      					Double
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					STAGE:
+      				</td>
+      				<td>
+      					2
+      				</td>
+      				<td>
+      					3
+      				</td>
+      				<td>
+      					2
+      				</td>
+      				<td>
+      					2
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					LOT_SIZE:
+      				</td>
+      				<td>
+      					1x2
+      				</td>
+      				<td>
+      					1x2
+      				</td>
+      				<td>
+      					1x2
+      				</td>
+      				<td>
+      					1x2
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					TYPE:
+      				</td>
+      				<td>
+      					Services
+      				</td>
+      				<td>
+      					"
+      				</td>
+      				<td>
+      					"
+      				</td>
+      				<td>
+      					"
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					POLLUTION_EFFECT:
+      				</td>
+      				<td>
+      					1,1,4,0
+      				</td>
+      				<td>
+      					1,1,4,0
+      				</td>
+      				<td>
+      					1,1,4,0
+      				</td>
+      				<td>
+      					1,1,4,0
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					POLLUTION_RADII:
+      				</td>
+      				<td>
+      					5,5,0,0,
+      				</td>
+      				<td>
+      					5,5,0,0,
+      				</td>
+      				<td>
+      					5,6,0,0,
+      				</td>
+      				<td>
+      					5,6,0,0,
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					OCCUPANT_GROUPS:
+      				</td>
+      				<td>
+      					Building: Commercial<br>
+      					Building: CS$<br>
+      					Style: Chicago<br>
+      					Style: New York<br>
+      					Style: Houston<br>
+      					Style: Euro<br>
+      					0xB5C00200<br>
+      					0xB5C00204<br>
+      					0xB5C00A08
+      				</td>
+      				<td>
+      					Building: Commercial<br>
+      					Building: CS$<br>
+      					Style: Chicago<br>
+      					Style: New York<br>
+      					Style: Houston<br>
+      					Style: Euro<br>
+      					0xB5C00200<br>
+      					0xB5C00204<br>
+      					0xB5C00A08
+      				</td>
+      				<td>
+      					Building: Commercial<br>
+      					Building: CS$$<br>
+      					Style: Chicago<br>
+      					Style: New York<br>
+      					Style: Houston<br>
+      					Style: Euro<br>
+      					0xB5C00200<br>
+      					0xB5C00204<br>
+      					0xB5C00A08
+      				</td>
+      				<td>
+      					Building: Commercial<br>
+      					Building: CS$$<br>
+      					Style: Chicago<br>
+      					Style: New York<br>
+      					Style: Houston<br>
+      					Style: Euro<br>
+      					0xB5C00200<br>
+      					0xB5C00204<br>
+      					0xB5C00A08
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					POWER_CONSUMED:
+      				</td>
+      				<td>
+      					1
+      				</td>
+      				<td>
+      					2
+      				</td>
+      				<td>
+      					1
+      				</td>
+      				<td>
+      					2
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					WATER_CONSUMED:
+      				</td>
+      				<td>
+      					10
+      				</td>
+      				<td>
+      					13
+      				</td>
+      				<td>
+      					14
+      				</td>
+      				<td>
+      					17
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					BULLDOZE_COST:
+      				</td>
+      				<td>
+      					122
+      				</td>
+      				<td>
+      					170
+      				</td>
+      				<td>
+      					125
+      				</td>
+      				<td>
+      					174
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					WORTH:
+      				</td>
+      				<td>
+      					122
+      				</td>
+      				<td>
+      					170
+      				</td>
+      				<td>
+      					125
+      				</td>
+      				<td>
+      					174
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					CAPACITY_SATISFIED (JOBS):
+      				</td>
+      				<td>
+      					CS$: 42
+      				</td>
+      				<td>
+      					CS$: 58
+      				</td>
+      				<td>
+      					CS$: 42<br>
+      					CS$$: 13
+      				</td>
+      				<td>
+      					CS$: 58<br>
+      					CS$$: 17
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="30%">
+      					VALUE:
+      				</td>
+      				<td>
+      					321
+      				</td>
+      				<td>
+      					444
+      				</td>
+      				<td>
+      					360
+      				</td>
+      				<td>
+      					497
+      				</td>
+      			</tr>
+      		</tbody>
+      	</table>
+
+      	<h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      		Installation
+      	</h2>
+
+      	<h3 style="color:#000000; text-align:justify">
+      		Pre-reqs
+      	</h3>
+
+      	<p style="color:#000000; text-align:justify">
+      		This lot needs the following pre-reqs. If they are not contained in the package, there's a hyperlink to them on the STEX.
+      	</p>
+
+      	<table border="0" style="text-align:justify">
+      		<tbody>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					<b>File</b>
+      				</td>
+      				<td>
+      					<b>Link to file (if not in zip)</b>
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					Custom Query
+      				</td>
+      				<td style="text-align:center">
+      					<p>
+      						<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" target="_blank" title="BSC Common Dependnecies v9b" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Essesntials 2024a</a><br>
+      						<span>(</span><small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small><span>)</span><br>
+      						you might need the following file:<br>
+      						<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/?do=download&amp;r=202051&amp;confirm=1&amp;t=1&amp;csrfKey=470d6add04459050f421150d34b6a840" rel="">DEDWD_Commercial_commonfiles</a>
+      					</p>
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShop1_buildings.dat
+      				</td>
+      				<td colspan="1" rowspan="5" style="text-align:center; vertical-align:middle">
+      					<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol02</a><br>
+      					(<small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small>)<br>
+      					<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" target="_blank" rel="">Alternatively from<span> </span><span>STEX</span></a>
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShop2_buildings.dat
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShop1_props.dat
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShop2_props.dat
+      				</td>
+      			</tr>
+      			<tr bgcolor="#e3eee6" valign="top">
+      				<td width="40%">
+      					DEDWD_SmallShops_commonfiles.dat
+      				</td>
+      			</tr>
+      		</tbody>
+      	</table>
+
+      	<h3 style="color:#000000; text-align:justify">
+      		Install/Un-install
+      	</h3>
+
+      	<p style="color:#000000; text-align:justify">
+      		Copy/Extract the<span> </span><strong><span>Deadwoods</span><span> </span></strong>parent folder into your plugins. If you extracted the<span> </span><span>~<em>Documents</em></span><em><span> </span></em>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      	</p>
+
+      	<p style="color:#000000; text-align:justify">
+      		To<span> </span><b>Un-Install<span> </span></b>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      	</p>
+      </div>
+
+
+      <p>
+      	<span style="color:#2980b9; font-size:12px;"><strong>-CB Edit:</strong> Fixed description formatting and dependency links. Thanks <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/136306-gwada971/?do=hovercard" data-mentionid="136306" href="https://community.simtropolis.com/profile/136306-gwada971/" id="ips_uid_1261_4" rel="">@gwada971</a> for reporting.<br>
+      	- Tyberius06 Edit: complete update of the package, see details in change log - 21.07.2024</span>
+      </p>
+
+      						</body>
+    filename: BSC DEDWD Small Shops 1x2 v103.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_DEDWD Small Shops 1x2.txt
+      - deadwoods/Small Shops/CS$3_1x2_DEDWD_SmallShop4_efec29b0.SC4Lot
+      - deadwoods/Small Shops/CS$2_1x2_DEDWD_SmallShop3_8fec271e.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x2_DEDWD_SmallShop4_4fec2c6a.SC4Lot
+      - deadwoods/Small Shops/CS$$1_1x2_DEDWD_SmallShop3_0fec2b3a.SC4Lot
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x2_stexpic2.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x2_stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_1x2_README.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/56abd0cb52e5dcb78bc231ba8edb4471-DEDWD_SmallShops_1x2_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2005/56abd0cb52e5dcb78bc231ba8edb4471-DEDWD_SmallShops_1x2_stexpic2.jpg
     lastModified: 2022-07-30T16:01:18Z
     name: DEDWD Small Shops 1x2 Set
+    sha256: 40fbd4bb6200e36f42f2c1be520144d23de4fccf7d68cdffc6baad6a50552507
+    size: 168436
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-56abd0cb52e5dcb78bc231ba8edb4471-DEDWD_SmallShops_1x2_stexpic1.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 259243
     url: https://community.simtropolis.com/files/file/13169-dedwd-small-shops-1x2-set/
+    version: v103
   simtropolis/13179-ndex-michigan-ave-center-by-geoffdiamond:
     authors:
       - Equinox
@@ -3439,14 +5217,1484 @@ assets:
     name: Kings Reach Tower
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2005/thumb-ca325c932d542ced6211783f27666c20-Kingsreachday.jpg
     url: https://community.simtropolis.com/files/file/13392-kings-reach-tower/
+  simtropolis/13396-bsc-dedwd-small-shops-flat-roof-versions-set:
+    authors:
+      - deadwoods
+    category: 300
+    dependencies:
+      - simtropolis/13153-bsc-mega-props-dae-vol02
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
+      	DEDWD Small Shops Flat Roof Pack<br>
+      	by deadwoods
+      </h1>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This package contains a set of small shops on 1x1 and 1x2 lots. After the first set of Small Shops, I had a request for a flat roofed set (as is more common in the US). So here they are. There are five buildings in this set; two single storey and three double storey one. The shopfronts are provided by the shop front props in the<span> </span><s>DEDWD_SmallShops_Props pack</s><span> </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props DEDWD/DAE Vol02</a></strong>. With the combination of building models and storefront props there are hundreds of possible combinations providing a bit of variety to your cities. You can use these lots in conjunction with the other sets of Small Shops (the 1x1 and 1x2 sets).
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	There are also CS$ and CS$$ varieties of each. So there are eight lots in all (<s><span>these are the same lots as the other sets</span></s><strong><span style="color:#c0392b;">**</span></strong> I've just added some more buildings to the same building families).
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	These lots are <abbr title="BATT Squad Certification">BSC</abbr> BTE enabled. This means they will contribute to reward chains. Having enough of these in your city may entitle you to specific rewards.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="color:#cc0000">This is Version 3 (v103). All the lots have been updated with SC4PIM-X (x-tool), some underlying issues have been fixed and the contents have got the "Project ZIP" threatment</span>. 
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<strong><u><span style="color:#cc0000">**The Instance IDs for the lots have been changed in this set</span></u></strong>, because they shared the same IDs as the other two DEDWD Small Shops Sets. This update therefore brings 8 unique lot files that can be used with or without the other two sets.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This v103 version (released as an update on STEX) will be equivalent with the version that is/will be released on SC4Evermore as part of the SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy compilations.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	In all cases players who has previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. <span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">For removing old versions you need to run the included cleanitol scrip with </span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">the<span> </span></span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" style="background-color:transparent; color:#1f5e8d" target="_blank">nos.17's SC4 Cleanitol</a></strong><strong style="background-color:#ffffff; color:#22262a; font-size:16px; text-align:start"> </strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">or with the </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow" style="background-color:transparent; color:#1f5e8d" target="_blank"><abbr style="border-bottom:medium none" title="BATT Squad Certification">BSC</abbr><span> </span>Cleanitol TM</a></strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><span> </span>tool</span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">.</span>
+      </p>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Lot Specs
+      </h2>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<b>1x1 Lots</b>
+      </p>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				Setting
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				 
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				STAGE:
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				3
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				LOT_SIZE:
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				TYPE:
+      			</td>
+      			<td>
+      				Services
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_EFFECT:
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_RADII:
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				OCCUPANT_GROUPS:
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POWER_CONSUMED:
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WATER_CONSUMED:
+      			</td>
+      			<td>
+      				7
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				13
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				BULLDOZE_COST:
+      			</td>
+      			<td>
+      				120
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WORTH:
+      			</td>
+      			<td>
+      				120
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				CAPACITY_SATISFIED (JOBS):
+      			</td>
+      			<td>
+      				CS$: 26
+      			</td>
+      			<td>
+      				CS$: 40
+      			</td>
+      			<td>
+      				CS$: 26<br>
+      				CS$$: 9
+      			</td>
+      			<td>
+      				CS$: 40<br>
+      				CS$$: 12
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				VALUE:
+      			</td>
+      			<td>
+      				199
+      			</td>
+      			<td>
+      				306
+      			</td>
+      			<td>
+      				223
+      			</td>
+      			<td>
+      				343
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<b>1x2 Lots</b>
+      </p>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				Setting
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				 
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				STAGE:
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				3
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				LOT_SIZE:
+      			</td>
+      			<td>
+      				1x2
+      			</td>
+      			<td>
+      				1x2
+      			</td>
+      			<td>
+      				1x2
+      			</td>
+      			<td>
+      				1x2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				TYPE:
+      			</td>
+      			<td>
+      				Services
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_EFFECT:
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_RADII:
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,6,0,0,
+      			</td>
+      			<td>
+      				5,6,0,0,
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				OCCUPANT_GROUPS:
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POWER_CONSUMED:
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WATER_CONSUMED:
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				13
+      			</td>
+      			<td>
+      				14
+      			</td>
+      			<td>
+      				17
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				BULLDOZE_COST:
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				125
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WORTH:
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				125
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				CAPACITY_SATISFIED (JOBS):
+      			</td>
+      			<td>
+      				CS$: 42
+      			</td>
+      			<td>
+      				CS$: 58
+      			</td>
+      			<td>
+      				CS$: 42<br>
+      				CS$$: 13
+      			</td>
+      			<td>
+      				CS$: 58<br>
+      				CS$$: 17
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				VALUE:
+      			</td>
+      			<td>
+      				321
+      			</td>
+      			<td>
+      				444
+      			</td>
+      			<td>
+      				360
+      			</td>
+      			<td>
+      				497
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Installation
+      </h2>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Pre-reqs
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This lot needs the following pre-reqs. If they are not contained in the package, there's a hyperlink to them on the STEX.
+      </p>
+
+
+      <table border="0" style="text-align:justify">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				<b>File</b>
+      			</td>
+      			<td>
+      				<b>Link to file (if not in zip)</b>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				Custom Query
+      			</td>
+      			<td style="text-align:center">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" target="_blank" title="BSC Common Dependnecies v9b" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Essesntials 2024a</a><br>
+      				<span>(</span><small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small><span>)</span><br>
+      				<span style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">you might need the following file:</span><br style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">
+      				<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/?do=download&amp;r=202051&amp;confirm=1&amp;t=1&amp;csrfKey=470d6add04459050f421150d34b6a840" rel="" style="background-color:#e3eee6; color:#1f5e8d; font-size:14px; text-align:center">DEDWD_Commercial_commonfiles</a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop1_buildings.dat
+      			</td>
+      			<td colspan="1" rowspan="5" style="text-align:center; vertical-align:middle">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol02</a><br>
+      				(<small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small>)<br>
+      				<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" target="_blank" rel="">Alternatively from<span> </span><span>STEX</span></a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop2_buildings.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop1_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop2_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShops_commonfiles.dat
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Install/Un-install
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	Copy/Extract the<span> </span><span>Deadwoods</span><span> </span>parent folder into your plugins. If you extracted the<span> </span><span>~Documents</span><span> </span>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	To<span> </span><b>Un-Install<span> </span></b>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+      						</body>
+    filename: BSC DEDWD Small Shops Flat Roof Versions v103.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_DEDWD Small Shops Flat Roofs.txt
+      - deadwoods/Small Shops/CS$3_1x2_DEDWD_SmallShop4_1f9196d2.SC4Lot
+      - deadwoods/Small Shops/CS$3_1x1_DEDWD_SmallShop2_f90d144c.SC4Lot
+      - deadwoods/Small Shops/CS$2_1x2_DEDWD_SmallShop3_54083b2b.SC4Lot
+      - deadwoods/Small Shops/CS$2_1x1_DEDWD_SmallShop1_1b3d86c2.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x2_DEDWD_SmallShop4_2141534f.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x1_DEDWD_SmallShop2_57e2b868.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x1_DEDWD_SmallShop1_400314da.SC4Lot
+      - deadwoods/Small Shops/CS$$1_1x2_DEDWD_SmallShop3_4254be34.SC4Lot
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_FlatRoof_stexpic2.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_FlatRoof_stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_FlatRoof_README.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_08_2005/8e4347acef8947590713acc357d3adde-DEDWD_SmallShops_FlatRoof_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2005/8e4347acef8947590713acc357d3adde-DEDWD_SmallShops_FlatRoof_stexpic2.jpg
+    lastModified: 2024-07-21T14:34:26Z
+    name: BSC DEDWD Small Shops Flat Roof Versions Set
+    sha256: 114052b7391040a1d0f046f816bc77ec0ce97091457d21af0c3a5ef9a6d19f12
+    size: 180098
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2005/thumb-8e4347acef8947590713acc357d3adde-DEDWD_SmallShops_FlatRoof_stexpic1.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 250849
+    url: https://community.simtropolis.com/files/file/13396-bsc-dedwd-small-shops-flat-roof-versions-set/
+    version: v103
   simtropolis/13396-dedwd-small-shops-flatroof-set:
     authors:
       - deadwoods
     category: 300
+    dependencies:
+      - simtropolis/13153-bsc-mega-props-dae-vol02
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
+      	DEDWD Small Shops Flat Roof Pack<br>
+      	by deadwoods
+      </h1>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This package contains a set of small shops on 1x1 and 1x2 lots. After the first set of Small Shops, I had a request for a flat roofed set (as is more common in the US). So here they are. There are five buildings in this set; two single storey and three double storey one. The shopfronts are provided by the shop front props in the<span> </span><s>DEDWD_SmallShops_Props pack</s><span> </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props DEDWD/DAE Vol02</a></strong>. With the combination of building models and storefront props there are hundreds of possible combinations providing a bit of variety to your cities. You can use these lots in conjunction with the other sets of Small Shops (the 1x1 and 1x2 sets).
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	There are also CS$ and CS$$ varieties of each. So there are eight lots in all (<s><span>these are the same lots as the other sets</span></s><strong><span style="color:#c0392b;">**</span></strong> I've just added some more buildings to the same building families).
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	These lots are <abbr title="BATT Squad Certification">BSC</abbr> BTE enabled. This means they will contribute to reward chains. Having enough of these in your city may entitle you to specific rewards.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<span style="color:#cc0000">This is Version 3 (v103). All the lots have been updated with SC4PIM-X (x-tool), some underlying issues have been fixed and the contents have got the "Project ZIP" threatment</span>. 
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<strong><u><span style="color:#cc0000">**The Instance IDs for the lots have been changed in this set</span></u></strong>, because they shared the same IDs as the other two DEDWD Small Shops Sets. This update therefore brings 8 unique lot files that can be used with or without the other two sets.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This v103 version (released as an update on STEX) will be equivalent with the version that is/will be released on SC4Evermore as part of the SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy compilations.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	In all cases players who has previous versions installed of these lots are required to bulldoze these lots in their cities and remove them from their plugins folder before installing this update. <span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">For removing old versions you need to run the included cleanitol scrip with </span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">the<span> </span></span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" style="background-color:transparent; color:#1f5e8d" target="_blank">nos.17's SC4 Cleanitol</a></strong><strong style="background-color:#ffffff; color:#22262a; font-size:16px; text-align:start"> </strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">or with the </span><strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow" style="background-color:transparent; color:#1f5e8d" target="_blank"><abbr style="border-bottom:medium none" title="BATT Squad Certification">BSC</abbr><span> </span>Cleanitol TM</a></strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><span> </span>tool</span><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">.</span>
+      </p>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Lot Specs
+      </h2>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<b>1x1 Lots</b>
+      </p>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				Setting
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				 
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				STAGE:
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				3
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				LOT_SIZE:
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      			<td>
+      				1x1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				TYPE:
+      			</td>
+      			<td>
+      				Services
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_EFFECT:
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_RADII:
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				OCCUPANT_GROUPS:
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POWER_CONSUMED:
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				1
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WATER_CONSUMED:
+      			</td>
+      			<td>
+      				7
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				13
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				BULLDOZE_COST:
+      			</td>
+      			<td>
+      				120
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WORTH:
+      			</td>
+      			<td>
+      				120
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				CAPACITY_SATISFIED (JOBS):
+      			</td>
+      			<td>
+      				CS$: 26
+      			</td>
+      			<td>
+      				CS$: 40
+      			</td>
+      			<td>
+      				CS$: 26<br>
+      				CS$$: 9
+      			</td>
+      			<td>
+      				CS$: 40<br>
+      				CS$$: 12
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				VALUE:
+      			</td>
+      			<td>
+      				199
+      			</td>
+      			<td>
+      				306
+      			</td>
+      			<td>
+      				223
+      			</td>
+      			<td>
+      				343
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p style="color:#000000; text-align:justify">
+      	<b>1x2 Lots</b>
+      </p>
+
+
+      <table border="0" style="text-align:justify" width="100%">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				Setting
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS1
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      			<td>
+      				CS2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				 
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      			<td>
+      				Single
+      			</td>
+      			<td>
+      				Double
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				STAGE:
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				3
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				LOT_SIZE:
+      			</td>
+      			<td>
+      				1x2
+      			</td>
+      			<td>
+      				1x2
+      			</td>
+      			<td>
+      				1x2
+      			</td>
+      			<td>
+      				1x2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				TYPE:
+      			</td>
+      			<td>
+      				Services
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      			<td>
+      				"
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_EFFECT:
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      			<td>
+      				1,1,4,0
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POLLUTION_RADII:
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,5,0,0,
+      			</td>
+      			<td>
+      				5,6,0,0,
+      			</td>
+      			<td>
+      				5,6,0,0,
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				OCCUPANT_GROUPS:
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      			<td>
+      				Building: Commercial<br>
+      				Building: CS$$<br>
+      				Style: Chicago<br>
+      				Style: New York<br>
+      				Style: Houston<br>
+      				Style: Euro<br>
+      				0xB5C00200<br>
+      				0xB5C00204<br>
+      				0xB5C00A08
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				POWER_CONSUMED:
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				2
+      			</td>
+      			<td>
+      				1
+      			</td>
+      			<td>
+      				2
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WATER_CONSUMED:
+      			</td>
+      			<td>
+      				10
+      			</td>
+      			<td>
+      				13
+      			</td>
+      			<td>
+      				14
+      			</td>
+      			<td>
+      				17
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				BULLDOZE_COST:
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				125
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				WORTH:
+      			</td>
+      			<td>
+      				122
+      			</td>
+      			<td>
+      				170
+      			</td>
+      			<td>
+      				125
+      			</td>
+      			<td>
+      				174
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				CAPACITY_SATISFIED (JOBS):
+      			</td>
+      			<td>
+      				CS$: 42
+      			</td>
+      			<td>
+      				CS$: 58
+      			</td>
+      			<td>
+      				CS$: 42<br>
+      				CS$$: 13
+      			</td>
+      			<td>
+      				CS$: 58<br>
+      				CS$$: 17
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="30%">
+      				VALUE:
+      			</td>
+      			<td>
+      				321
+      			</td>
+      			<td>
+      				444
+      			</td>
+      			<td>
+      				360
+      			</td>
+      			<td>
+      				497
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h2 style="background-color:#c0c8db; color:#000000; text-align:justify">
+      	Installation
+      </h2>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Pre-reqs
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	This lot needs the following pre-reqs. If they are not contained in the package, there's a hyperlink to them on the STEX.
+      </p>
+
+
+      <table border="0" style="text-align:justify">
+      	<tbody>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				<b>File</b>
+      			</td>
+      			<td>
+      				<b>Link to file (if not in zip)</b>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				Custom Query
+      			</td>
+      			<td style="text-align:center">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" target="_blank" title="BSC Common Dependnecies v9b" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Essesntials 2024a</a><br>
+      				<span>(</span><small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small><span>)</span><br>
+      				<span style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">you might need the following file:</span><br style="background-color:#e3eee6; color:#353535; font-size:14px; text-align:center">
+      				<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/?do=download&amp;r=202051&amp;confirm=1&amp;t=1&amp;csrfKey=470d6add04459050f421150d34b6a840" rel="" style="background-color:#e3eee6; color:#1f5e8d; font-size:14px; text-align:center">DEDWD_Commercial_commonfiles</a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop1_buildings.dat
+      			</td>
+      			<td colspan="1" rowspan="5" style="text-align:center; vertical-align:middle">
+      				<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol02</a><br>
+      				(<small>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies</small>)<br>
+      				<a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" target="_blank" rel="">Alternatively from<span> </span><span>STEX</span></a>
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop2_buildings.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop1_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShop2_props.dat
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e3eee6" valign="top">
+      			<td width="40%">
+      				DEDWD_SmallShops_commonfiles.dat
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <h3 style="color:#000000; text-align:justify">
+      	Install/Un-install
+      </h3>
+
+
+      <p style="color:#000000; text-align:justify">
+      	Copy/Extract the<span> </span><span>Deadwoods</span><span> </span>parent folder into your plugins. If you extracted the<span> </span><span>~Documents</span><span> </span>folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.
+      </p>
+
+
+      <p style="color:#000000; text-align:justify">
+      	To<span> </span><b>Un-Install<span> </span></b>the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+      						</body>
+    filename: BSC DEDWD Small Shops Flat Roof Versions v103.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_DEDWD Small Shops Flat Roofs.txt
+      - deadwoods/Small Shops/CS$3_1x2_DEDWD_SmallShop4_1f9196d2.SC4Lot
+      - deadwoods/Small Shops/CS$3_1x1_DEDWD_SmallShop2_f90d144c.SC4Lot
+      - deadwoods/Small Shops/CS$2_1x2_DEDWD_SmallShop3_54083b2b.SC4Lot
+      - deadwoods/Small Shops/CS$2_1x1_DEDWD_SmallShop1_1b3d86c2.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x2_DEDWD_SmallShop4_2141534f.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x1_DEDWD_SmallShop2_57e2b868.SC4Lot
+      - deadwoods/Small Shops/CS$$2_1x1_DEDWD_SmallShop1_400314da.SC4Lot
+      - deadwoods/Small Shops/CS$$1_1x2_DEDWD_SmallShop3_4254be34.SC4Lot
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_FlatRoof_stexpic2.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_FlatRoof_stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_SmallShops_FlatRoof_README.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_08_2005/8e4347acef8947590713acc357d3adde-DEDWD_SmallShops_FlatRoof_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2005/8e4347acef8947590713acc357d3adde-DEDWD_SmallShops_FlatRoof_stexpic2.jpg
     lastModified: 2005-08-19T00:04:43Z
     name: DEDWD Small Shops FlatRoof Set
+    sha256: 114052b7391040a1d0f046f816bc77ec0ce97091457d21af0c3a5ef9a6d19f12
+    size: 180098
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2005/thumb-8e4347acef8947590713acc357d3adde-DEDWD_SmallShops_FlatRoof_stexpic1.jpg
+    timestamp: 2024-07-23T08:00:45.339Z
+    uncompressed: 250849
     url: https://community.simtropolis.com/files/file/13396-dedwd-small-shops-flatroof-set/
+    version: v103
   simtropolis/13405-moose-factory-bar-and-grill:
     authors:
       - A Nonny Moose
@@ -24049,18 +27297,20 @@ assets:
       - simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
 
 
-      							
 
 
 
-      							
+
+
+
+
       <p>
       	This package contains a small convenience store, with three model variations in a buildings family, along with lots to use them. Inside the "Models" folder, please ensure you remove 3 files you will not need. Included are models for the following options:
       </p>
@@ -24216,10 +27466,95 @@ assets:
     authors:
       - nos.17
     category: 300
-    lastModified: 2017-12-26T03:59:30Z
+    dependencies:
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/22400-maxis-prop-names-and-query-fix
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<img class="ipsImage ipsImage_thumbnailed" data-fileid="103526" data-unique="bhkzs50ar" src="https://www.simtropolis.com/objects/attachments/monthly_2024_07/andrew-s-fashion-centre_orig.gif.ffd557067677c6f7d8c0eccdc0da2d1d.gif" alt="andrew-s-fashion-centre_orig.gif">
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;">A bigger and better version of the largest Maxis CS$$$ building in the game.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;">Utilizes CP's seasonal trees, custom textures, and was designed to be easily compatible and expandable with KOSC's modular parking sets.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;">With </span><span style="font-family:Georgia, serif;">Lotplop</span><span style="font-family:Georgia, serif;">, it can be found under <strong>CS$$$_60x62_1ChiFashionCentre_</strong>   (it is the last CS$$$ family</span><span style="font-family:Georgia, serif;">)</span>
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="font-family:Georgia, serif;"><span style="color:#800080;">------------------<br>
+      	Dependencies:<br>
+      	------------------</span></span><br>
+      	<span style="font-family:'Trebuchet MS', Helvetica, sans-serif;"><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props CP Vol. 1</a><br>
+      	<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props CP Vol. 2</a><br>
+      	<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="">SuperSHK MEGA Parking Textures</a><br>
+      	<a href="https://community.simtropolis.com/index.php?app=downloads&amp;showfile=27563" rel="">SHK Parking Pack</a></span><br>
+      	<span style="font-family:'Trebuchet MS', Helvetica, sans-serif;"><em>Bldgprop Vol 1&amp; 2 OR <a href="https://community.simtropolis.com/files/file/22400-maxis-prop-names-and-query-fix/" rel="">Maxis Prop Names &amp; Query Fix</a><br>
+      	  </em></span><em><span style="font-family:Georgia, serif;">(the latter is strongly recommended)</span></em><br>
+      	<span style="font-family:'Trebuchet MS', Helvetica, sans-serif;">CS$$$1_6x6_MOD_Textures.dat</span><span style="font-family:Georgia, serif;">  <em>(included)</em></span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="font-family:Georgia, serif;"><span style="font-size:16px;"><span style="color:#ee82ee;">:: </span><a href="https://community.simtropolis.com/gallery/image/1964-andrews-fashion-centregif/" rel=""><span style="color:#ee82ee;"><span style="background-color:#e6e6fa;">VOTE HERE</span></span></a><span style="color:#ee82ee;"> ::</span></span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:10px;"><span style="font-family:Georgia, serif;"><em>Update 13 July 2024 - Fixed image link and update description. No file updates.</em></span></span>
+      </p>
+
+      						</body>
+    filename: Facelift S3-10c ... Andrew'sFashionCentre.zip
+    files:
+      - Facelift S3-10c ... Andrew'sFashionCentre/CS$$$1_6x6_MOD_Textures.dat
+      - Facelift S3-10c ... Andrew'sFashionCentre/CS$$$1_6x6_MOD_Readme.txt
+      - Facelift S3-10c ... Andrew'sFashionCentre/CS$$$1_6x6_MOD_e4e35e59.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_09/5.thumb.png.953a576d80d8eb069dfd86e41c6d445e.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_09/6.thumb.png.8c992b2b8aa6b92adc0400ccf530f784.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_09/7.thumb.png.5bddf663367ea4981e488eb480ff21fa.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_09/8.thumb.png.3b240c5bce5b76836080c1314f0bb99d.png
+    lastModified: 2024-07-13T20:21:32Z
     name: Andrew's Fashion Centre
+    sha256: 1cfcb3ae79c9302577883d80dfa24c190feae0dbc03716a2b6854aed82c5866e
+    size: 74057
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_09/5.thumb.png.953a576d80d8eb069dfd86e41c6d445e.png
+    timestamp: 2024-07-16T08:06:07.759Z
+    uncompressed: 91596
     url: https://community.simtropolis.com/files/file/31289-andrews-fashion-centre/
+    version: "1.0"
   simtropolis/31294-cs-pack-santiaguino-1:
     authors:
       - Adrianor
@@ -31677,18 +35012,20 @@ assets:
       - simtropolis/34747-rr-mega-prop-pack-vol-3
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
 
 
-      							
 
 
 
-      							
+
+
+
+
       <p>
       	<strong>This is not an April Fool's joke. </strong>I have made some new global brands for the MGB Convenience store. I felt like it would be the right time to revisit the modular nature of <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a>'s model and the props to go along with it, and create additional stores from areas around the world that had not been covered by that. These don't use prop families, nor do they overlap with the original props for this, since over the years I have made unique props for these brands and figured, why not use them for this project? Each are in individual growable 4x4 lots. They are all separated by region, and you can choose which folders you want to use, or if you like a chaotic, global region, use all of them (be my guest!). If you want to plop these lots, use the LotPlop cheat from the <a href="https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/" rel="">Extra Cheats DLL</a>. Also many of the gas canopies used are by <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/744613-rretail/?do=hovercard" data-mentionid="744613" href="https://community.simtropolis.com/profile/744613-rretail/" rel="">@RRetail</a> and were of great help for this project so special thanks to him for making them!<br>
       	 
@@ -33895,8 +37232,8 @@ assets:
     dependencies: []
     description: |-
       <body>
-                                  
-      							
+
+
       <p>
       	Kwik-E-Mart; Commercial $$; No Dependencies
       </p>
@@ -33930,8 +37267,8 @@ assets:
     dependencies: []
     description: |-
       <body>
-                                  
-      							
+
+
       <p>
       	Lard Lad's Donuts; CS$$/Landmark/ No Dependencies 
       </p>
@@ -33964,11 +37301,12 @@ assets:
       - simtropolis/27353-tennispalatsi
     description: >-
       <body>
-                                  
 
 
 
-      							
+
+
+
       <p>
       	<strong>TG Autotalo</strong> is a building from Helsinki, Finland.<br>
       	Two towers were built 1958 and were inspired by Lever House from Manhattan. During the years the complex grew to four towers, which don't share the looks of the original two and Autotalo now occupies whole city block in Kamppi. Besides offices building has several bars and nightclubs and restaurants, from lowly fast-food to one of the finest ones in Helsinki. Tenants in towers vary from small one people business to head offices of several hundreds of people; here you find offices of great Krioworks. 
@@ -34086,11 +37424,12 @@ assets:
       - simtropolis/31006-supershk-mega-parking-textures
     description: >-
       <body>
-                                  
 
 
 
-      							
+
+
+
       <p>
       	Fictious office building by Krio, based on 70's American brutalist style housing research company Brand, subsidary of Roxxon.
       </p>
@@ -34261,11 +37600,12 @@ assets:
       - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
     description: >-
       <body>
-                                  
 
 
 
-      							
+
+
+
       <p>
       	<a href="https://en.wikipedia.org/wiki/Spar_(retailer)" rel="external nofollow">Spar</a> is a Dutch multinational franchise of supermarkets. I created this 6x4 growable lot specifically for my Scandinavian towns and cities, but it should fit in well with other regional styles as well. In theory this should grow on any of the tile sets, but I recommend plopping it through the 'buildingplop' cheat if you're having issues.
       </p>
@@ -34379,11 +37719,12 @@ assets:
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
     description: >-
       <body>
-                                  
 
 
 
-      							
+
+
+
       <p>
       	This download contains lots for three different supermarket franchises from Scandinavian countries: <a href="https://en.wikipedia.org/wiki/Joker_(store)" rel="external nofollow">Joker</a> (growable 3x2 and 4x2) <a href="https://en.wikipedia.org/wiki/Kiwi_(store)" rel="external nofollow">Kiwi</a> (ploppable monument 3x2) and <a href="https://en.wikipedia.org/wiki/REMA_1000" rel="external nofollow">REMA 1000</a> (growable 3x2). The latter two lots are meant for more urban environments and as such do only come with a parking lot for bikes <img alt="^_^" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_5.gif" srcset="https://community.simtropolis.com/assets/emoticons/happy@2x.png 2x" title="^_^" width="15" >. All lots feature 32 CS$$ jobs. I created these for my own towns and cities, but hopefully someone else will find them useful as well.
       </p>
@@ -34487,21 +37828,22 @@ assets:
     category: 300
     dependencies:
       - simtropolis/27563-shk-parking-pack
-      - cycledogg/textures-vol01
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
 
 
-      							
 
 
 
-      							
+
+
+
+
       <p>
       	Contains a set of five 1x2 low-density (stage 3 for the corner lots, stage 2 for the others), medium-wealth growable commercial lots. Also includes a ploppable 5x2 landmark with all five buildings.
       </p>
@@ -34601,9 +37943,10 @@ assets:
       - simtropolis/32981-sm2-mega-prop-pack-vol2
     description: >-
       <body>
-                                  
 
-      							
+
+
+
       <p>
       	Similar to the Australian retail set I did, I wanted to use the same base building to create some regional American supermarkets around this size. Grocery stores nowadays are massive but the base building goes back to a time when these stores were much smaller, and which, many still exist whether a pharmacy is using that space, or whether it's a smaller regional grocery chain that prides itself on customer service. Some of the buildings are smaller scale retailers in larger urban areas, and the grow lots can be utilized in a corner <abbr title="Wall-to-Wall">W2W</abbr> space. These buildings fill in the gaps of the national retailers on the side. There are 90 buildings in total.<br>
       	<br>
@@ -35459,9 +38802,10 @@ assets:
       - simtropolis/32981-sm2-mega-prop-pack-vol2
     description: >-
       <body>
-                                  
 
-      							
+
+
+
       <p>
       	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Similar to the Australian retail set I did, I wanted to use the same base building to create some regional American supermarkets around this size. Grocery stores nowadays are massive but the base building goes back to a time when these stores were much smaller, and which, many still exist whether a pharmacy is using that space, or whether it's a smaller regional grocery chain that prides itself on customer service. These are retro brands that are either defunct, or have few locations remaining after mergers. There are 30 classic grocery stores in this set.</span><br style="background-color:#ffffff;color:#353535;font-size:14px;" >
       	<br style="background-color:#ffffff;color:#353535;font-size:14px;" >
@@ -35890,9 +39234,10 @@ assets:
       - simtropolis/34747-rr-mega-prop-pack-vol-3
     description: >-
       <body>
-                                  
 
-      							
+
+
+
       <div style="background-color:#ffffff;color:#353535;font-size:14px;">
       	Plots 10-12 of my office buildings that I made from 2022-23. I just never got around to releasing the rest of the buildings. These are one floor versions (others I have released are two floors). 
       </div>
@@ -36081,6 +39426,101 @@ assets:
     name: Frogface Telecom
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-fc323b6cac79f4c7823db309340c7cde-telecom1.jpg
     url: https://community.simtropolis.com/files/file/3633-frogface-telecom/
+  simtropolis/36345-blam-burger-king:
+    authors:
+      - MarcosMX
+    category: 300
+    dependencies:
+      - simtropolis/36346-mx-essentials
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	As sometines happens, files from the various SimCity 4 sites go missing. When possible and practical, we make attempts to restore those files when found. In all such cases, this is done in good faith for the benefit the author and the community. This particular item has been uploaded here under MarcosMX's account as part of the <abbr title="BATers, LOTers and MODders">BLaM</abbr> team as it had been uploaded on the original location. The files are provided in the same condition that they had been in when they were previously available with one exception. The readme has been replaced with updated information regarding dependencies. Otherwise, the files are presented as is with no other changes made. If anyone has information that would help clarify this upload, or if any issues arise, please contact any staff member.
+      </p>
+
+
+      <p>
+      	Burger King, by MarcosMX<br>
+      	Burger King (often abbreviated to BK) is a large international chain of fast food restaurants, predominantly selling burgers, french fries, soft drinks, desserts, and various sandwiches. It is headquartered in unincorporated Miami-Dade County, Florida, just outside the city of Miami.
+      </p>
+
+
+      <p>
+      	Growable Version: (Ploppable version included)
+      </p>
+
+
+      <p>
+      	Lot size:    3 x 3 tiles<br>
+      	Building style(s):    Building: Landmark,Building: CS$$,Style: Chicago,Style: New York,Style: Houston,Style: Euro<br>
+      	Growth stage:    4<br>
+      	Occupants:    CS-$$<br>
+      	Bulldoze cost:    § 120<br>
+      	Max. Fire Stage:    10<br>
+      	Power consumption:    45 MWh/month<br>
+      	Water consumption:    5 Gallons/month<br>
+      	Air pollution:    2 over 2 tiles<br>
+      	Water pollution:    1 over 2 tiles<br>
+      	Garbage pollution:    8 over 0 tiles<br>
+      	Menu position:    Landmark Menu<br>
+      	Plop cost:    § 2740<br>
+      	Jobs:    24 Cs-$$
+      </p>
+
+
+      <p>
+      	This download is only compatible with SimCity 4 "Rush Hour" or SimCity 4 Deluxe.
+      </p>
+
+
+      <p>
+      	Dependencies:
+      </p>
+
+
+      <p>
+      	To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder:<br>
+      	MarcosMX Essentials - <a href="https://community.simtropolis.com/files/file/36346-mx-essentials/" rel="">On the STEX</a><br>
+      	<abbr title="BATT Squad Certification">BSC</abbr> Texture Mega Pack Vol 1 found in the <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Common Dependency Pack</a>.
+      </p>
+
+
+      <p>
+      	In order to see the nightlighting, you must install the EP1-Update 1 for Rush Hour/SimCity 4 Deluxe, and then afterwards, install the SC4-Update for nightlighting (note: you have to be logged in in order to see the download link). If this update isn't installed, you won't see any lighting effects on custom <abbr title="Building Architect Tool">BAT</abbr> buildings.
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;">Reviewed and posted by staff.</span>
+      </p>
+
+      						</body>
+    filename: BLaM_MX_Burger King.zip
+    files:
+      - BurgerKingQuery.dat
+      - BurgerKingDAT.dat
+      - Burger King Readme.txt
+      - BKN.JPG
+      - BKD.JPG
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/BKD.thumb.JPG.b813e870488262d79f0b7b8827c9fb50.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/BKN.thumb.JPG.b9b8443f02673aaf23740d168ab77360.JPG
+    lastModified: 2024-07-14T04:54:12Z
+    name: BLaM Burger King
+    sha256: 96fac7f52fb059008b37157ec6a37b6da3c3e0093decc8577194353905710f75
+    size: 441666
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/BKD.thumb.JPG.b813e870488262d79f0b7b8827c9fb50.JPG
+    timestamp: 2024-07-16T08:06:07.759Z
+    uncompressed: 489621
+    url: https://community.simtropolis.com/files/file/36345-blam-burger-king/
+    version: 1.0.0
   simtropolis/3637-circuit-city:
     authors:
       - UrbanLegend
@@ -37850,4 +41290,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-c5e8b238b44aacefde9225fafa008033-drive-day.JPG
     url: https://community.simtropolis.com/files/file/991-community-drivein-with-indoor-theater/
 
-timestamp: 2024-07-03T09:08:15.228Z
+timestamp: 2024-07-23T10:27:16.370Z
