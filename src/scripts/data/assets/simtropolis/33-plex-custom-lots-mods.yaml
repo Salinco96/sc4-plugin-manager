@@ -27,10 +27,75 @@ assets:
     authors:
       - Pegasus
     category: 600
+    dependencies:
+      - simtropolis/4526-peg-random-woods-v206
+      - simtropolis/11083-peg-stream-kit-ii-v205
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	 
+      </p>
+
+
+      <p align="justify">
+      	<font face="Arial, Helvetica, sans-serif">The <abbr title="Pegasus">PEG</abbr> Trail Parks have returned with a whole new visual makeover. This initial release introduces the new version of the basic Trail Parks... designed to blend seamlessly with the the <a href="https://community.simtropolis.com/files/file/4526-peg-random-woods-v206/" rel=""><abbr title="Pegasus">PEG</abbr> Random Woods</a> &amp; the <a href="https://community.simtropolis.com/files/file/11083-peg-stream-kit-ii-v205/" rel=""><abbr title="Pegasus">PEG</abbr> Stream Kit II</a>. </font>
+      </p>
+
+
+      <p align="justify">
+      	<font face="Arial, Helvetica, sans-serif">These new parks feature <abbr title="Building Architect Tool">BAT</abbr> modeled pathways that replace the old textured paths. This means that the paths now show while you are plopping the lots. This makes them much easier to use. </font>
+      </p>
+
+
+      <p align="justify">
+      	<font face="Arial, Helvetica, sans-serif">These Trail Parks also feature two new trail lots that will allow you to run your trails anywhere. The new EL Transit lot will allow you to extend the trails under elevated rail &amp; highways. The new Pedestrian Tunnel allows you to visually run your trails under any road or rail... or even under entire buildings or blocks. </font>
+      </p>
+
+
+      <p style="margin-top:0px;font-family:Roboto, sans-serif;line-height:22px;">
+      	<strong style="color:rgb(255,0,0);line-height:22px;">**This file currently contains an .exe installer suitable for windows users.  These files are in the process of being updated with zip files and this message will be removed once the update is complete.</strong>
+      </p>
+
+
+      <p style="font-family:Roboto, sans-serif;line-height:22px;">
+      	<strong style="line-height:22px;"><span style="color:rgb(128,0,0);">All Pegasus files are now legacy content and are no longer officially supported - however support from the wider community can be requested</span> <u><a href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/" rel="" style="color:rgb(51,122,183);">here</a></u></strong>.
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>-Cori Edit: </strong>Made mentioned files clickable linkys.</span>
+      </p>
+
+      						</body>
+    filename: PEG_TrailPark_305b_SU.zip
+    files:
+      - readme_021.htm
+      - product_image.jpg
+      - PEG_TrailParks_305b.dat
+      - PEG_TrailPark-Engine_305a.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0016/8c4309f065ce08a2c18dd286d80a80f0-product_image.jpg
     lastModified: 2018-07-18T14:27:02Z
     name: PEG Trail Parks III
+    sha256: 8646e44b8a97a40738cfa62a67e1d92c9c2ef99fb4ddedede11765add5d6c416
+    size: 551634
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2004/thumb-8c4309f065ce08a2c18dd286d80a80f0-product_image.jpg
+    timestamp: 2024-07-29T09:55:36.596Z
+    uncompressed: 557992
     url: https://community.simtropolis.com/files/file/11001-peg-trail-parks-iii/
+    version: "1.0"
   simtropolis/11054-peg-seasonal-trail-parks-v305:
     authors:
       - Pegasus
@@ -43,10 +108,72 @@ assets:
     authors:
       - Pegasus
     category: 600
+    dependencies:
+      - simtropolis/12426-peg-stream-kit-deluxe-edition
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <p align="justify">
+      	Newer version is: <a href="https://community.simtropolis.com/files/file/12426-peg-stream-kit-deluxe-edition/" rel=""><abbr title="Pegasus">PEG</abbr> Stream Kit Deluxe Edition</a>
+      </p>
+
+
+      <p align="justify">
+      	<font face="Arial, Helvetica, sans-serif">This update of an old classic will allow you to extend your water ways to virtually any part of your city. Ideal for winding down mountains and valleys, they also make a delightful addition to mid-town parks and residential areas.<br>
+      	<br>
+      	These streams were designed to integrate with the all of the <abbr title="Pegasus">PEG</abbr> trail park and forest/woods kits. Obviously, they can be used by themselves in any manner you choose.<br>
+      	<br>
+      	This new version uses <abbr title="Building Architect Tool">BAT</abbr> models as opposed to base textures and actually carves into the terrain surface. The water level is realistically  below the level of the surrounding terrain which creates a true 3D appearance . </font>
+      </p>
+
+
+      <p align="justify">
+      	<font face="Arial, Helvetica, sans-serif">* All Stream sections are comparable to a standard small Green Park in most categories.</font>
+      </p>
+
+
+      <p align="justify">
+      	 
+      </p>
+
+
+      <p style="margin-top:0px;font-family:Roboto, sans-serif;line-height:22px;">
+      	<strong style="color:rgb(255,0,0);line-height:22px;">**This file currently contains an .exe installer suitable for windows users.  These files are in the process of being updated with zip files and this message will be removed once the update is complete.</strong>
+      </p>
+
+
+      <p style="font-family:Roboto, sans-serif;line-height:22px;">
+      	<strong style="line-height:22px;"><span style="color:rgb(128,0,0);">All Pegasus files are now legacy content and are no longer officially supported - however support from the wider community can be requested</span> <u><a href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/" rel="" style="color:rgb(51,122,183);">here</a></u></strong>.
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>-Cori Edit: </strong>Added linky to newer version.</span>
+      </p>
+
+      						</body>
+    filename: PEG_StreamKit_205_SU.zip
+    files:
+      - readme_020.htm
+      - product_image.jpg
+      - PEG_WaterPlants_PROP_205.dat
+      - PEG_Stream-Kit_205.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0005/2669b1e632723db8f484b853bcd54e4b-product_image.jpg
+      - https://www.simtropolis.com/objects/screens/0005/2669b1e632723db8f484b853bcd54e4b-promo3-bridge-el.jpg
     lastModified: 2018-07-18T15:15:51Z
     name: PEG Stream Kit II v205
+    sha256: b2fd96cae6536793586efdaa2275ac87ce147577186fb1f9eb05975e5da148ef
+    size: 1309002
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2004/thumb-2669b1e632723db8f484b853bcd54e4b-product_image.jpg
+    timestamp: 2024-07-29T09:55:36.596Z
+    uncompressed: 1315492
     url: https://community.simtropolis.com/files/file/11083-peg-stream-kit-ii-v205/
+    version: "1.0"
   simtropolis/11097-peg-christmas-development-kit:
     authors:
       - Pegasus
@@ -147,10 +274,73 @@ assets:
     authors:
       - Pegasus
     category: 600
+    dependencies:
+      - simtropolis/11001-peg-trail-parks-iii
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <p align="justify">
+      	I went out and bought <abbr title="SimCity 4">SC4</abbr> on the very first day it was released. And from that day, the default tennis court park has bothered me and I couldn't figure out why. I even mentally played a tennis game on the default court: I serve... it goes long... and I watch the ball bounce out across the street and bean some old lady in the head. My second serve is returned and flies high and to the right... and I watch it skip across the railroad tracks and get crushed by a passing forklift.
+      </p>
+
+
+      <p align="justify">
+      	And then it hit me... <b>NO FENCES!!</b>  I've never seen a tennis court that wasn't fenced in. Without fences, there would be 20 minute delays between serves while the players ran off to shag balls. An otherwise enjoyable game... would radically suck!
+      </p>
+
+
+      <p align="justify">
+      	Anyway... I put a custom <abbr title="Building Architect Tool">BAT</abbr> fence around the courts, stuffed 2 on a 3x3 lot and gave it some adequate parking. Voila!! Instant Tennis Park!!
+      </p>
+
+
+      <p align="justify">
+      	This 3x3 park has all the size, costs and benefits of the game's standard large park. The park was designed to be used with the <a href="https://community.simtropolis.com/files/file/11001-peg-trail-parks-iii/" rel=""><abbr title="Pegasus">PEG</abbr> Trail Parks</a> but works just as well by itself. It does not require that you have the <abbr title="Pegasus">PEG</abbr> Trail Parks installed. It is fully self-contained and has no dependencies.
+      </p>
+
+
+      <p align="justify">
+      	<br>
+      	* Like the <abbr title="Pegasus">PEG</abbr> Krispy Kremes, this lot also uses a <abbr title="Building Architect Tool">BAT</abbr> modeled parking area instead of textures. This allows true 3D curbs, planters and sidewalks that add a depth and realism to the lot.
+      </p>
+
+
+      <p style="margin-top:0px;font-family:Roboto, sans-serif;line-height:22px;">
+      	<strong style="color:rgb(255,0,0);line-height:22px;">**This file currently contains an .exe installer suitable for windows users.  These files are in the process of being updated with zip files and this message will be removed once the update is complete.</strong>
+      </p>
+
+
+      <p style="font-family:Roboto, sans-serif;line-height:22px;">
+      	<strong style="line-height:22px;"><span style="color:rgb(128,0,0);">All Pegasus files are now legacy content and are no longer officially supported - however support from the wider community can be requested</span> <u><a href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/" rel="" style="color:rgb(51,122,183);">here</a></u></strong>.
+      </p>
+
+
+      <p style="font-family:Roboto, sans-serif;line-height:22px;">
+      	<span style="color:#2980b9;"><strong style="line-height:22px;">-Cori Edit: </strong>Added clickable linky to mentioned file.</span>
+      </p>
+
+      						</body>
+    filename: PEG_TennisPark_205_SU.zip
+    files:
+      - readme_048.htm
+      - product_image.jpg
+      - PEG_Tennis Park_205.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0025/e63299972e6865ad473e39850634a4d1-product_image.jpg
+      - https://www.simtropolis.com/objects/screens/0025/e63299972e6865ad473e39850634a4d1-product_image2.jpg
     lastModified: 2018-07-18T16:06:01Z
     name: PEG Tennis Park
+    sha256: 60338fbcdb0dda7cf79dfae7d7d7ed220ad8fd047d5a46327148cd7ed6dc4b57
+    size: 444700
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2005/thumb-e63299972e6865ad473e39850634a4d1-product_image.jpg
+    timestamp: 2024-07-29T09:55:36.596Z
+    uncompressed: 451037
     url: https://community.simtropolis.com/files/file/11688-peg-tennis-park/
+    version: "1.0"
   simtropolis/11695-peg-presents-charas-bt-records:
     authors:
       - Pegasus
@@ -279,21 +469,7 @@ assets:
 
 
 
-
-
-
-
-
-
-
       							
-
-
-
-
-
-
-
 
 
 
@@ -352,14 +528,14 @@ assets:
       - PEG_Ponds_206.dat
       - PEG_Pond-WF_Medium_206.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_04_2005/2ccf83fe8cf607c33d11e3b798cc2911-product_image1.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_04_2005/2ccf83fe8cf607c33d11e3b798cc2911-product_image21.jpg
+      - https://www.simtropolis.com/objects/screens/0006/2ccf83fe8cf607c33d11e3b798cc2911-product_image1.jpg
+      - https://www.simtropolis.com/objects/screens/0006/2ccf83fe8cf607c33d11e3b798cc2911-product_image21.jpg
     lastModified: 2016-09-28T22:56:11Z
     name: PEG Pond Kit II Deluxe Edition v206
     sha256: 33b310771931791023fbddbe11051bd01d900a48b39085d0937ca3825b4e003f
     size: 1332961
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2005/thumb-2ccf83fe8cf607c33d11e3b798cc2911-product_image1.jpg
-    timestamp: 2024-07-02T11:51:04.847Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1339354
     url: https://community.simtropolis.com/files/file/12329-peg-pond-kit-ii-deluxe-edition-v206/
     version: "1.0"
@@ -383,10 +559,85 @@ assets:
     authors:
       - Pegasus
     category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p> </p>
+
+      <p>
+
+      </p>
+
+      <p align="justify">... and to compliment your shiny new Ponds, Pegasus Productions does the "ditto" thing with this <b>Deluxe Edition</b> of <b><font color="#000080">The Stream
+      Kit</font></b>.</p>
+
+      <p align="justify"> </p>
+
+      <p align="justify">Improvements in the Deluxe Edition include:</p>
+
+      <p align="justify">1. <b>NO SEAMS!!</b>  Again... those pesky hairline seams that appeared between many sections are now gone for good.</p>
+
+      <p align="justify">2. <b>Improved Slope Tolerance</b>. It is now possible to build a straight stream up a modest slope. Using roads to predefine &amp; smooth your path, you can now easily wind
+      your streams up almost any slope. And for those slopes that are just too steep, we now have...</p>
+
+      <p align="justify">3. <b>Improved WATERFALLS!!!</b> Yes... we finally engineered an improved system for making waterfalls that are easy to plop and nice to look at. Blending old &amp; new...
+      texture and <abbr title="Building Architect Tool">BAT</abbr>, we now have a waterfall that will flex and stretch to fit any single-tile height slope you create. Unlike the previous Stream
+      Waterfall, the new deluxe version also includes the top, center and bottom of the falls all in a single lot. No more separate top and bottom lots to contend with.</p>
+
+      <p align="justify">4. <b>Open Modular Architecture</b>. Like the new Ponds, the new Stream Kit has also been restructured from the ground up to allow easier add-ons. This includes completely
+      new  stream styles that you will be able to change as easily as a rock or water mod style by simply exchanging a single file.</p>
+
+      <p align="justify">5. <b>Reduced Costs... Reduced Effects</b>. The plop and maintenance costs have been reduced significantly. Accordingly, the Park &amp; Landmark effects have been reduced as
+      well. Although the cost and effects for each lot was fairly modest, collectively, it all could easily add up to a significant monthly expense and and an easily capped out desirability. The new
+      reductions should make even extensive water systems affordable and viable in rural and agricultural areas.</p>
+
+      <p align="justify">6. <b>Transparent Texturing!!</b> All Stream Kit lots now have transparent textures. This allows the the streams to blend better with natural terrain and rocks mods at higher
+      altitudes. This also allows the streams to be used with add-on terrain mods such as the snow/artic mod.</p>
+
+      <p style="margin-top:0px;font-family:Roboto, sans-serif;line-height:22px;"><strong style="color:rgb(255,0,0);line-height:22px;">**This file currently contains an .exe installer suitable for
+      windows users.  These files are in the process of being updated with zip files and this message will be removed once the update is complete.</strong></p>
+
+      <p style="font-family:Roboto, sans-serif;line-height:22px;"><strong style="line-height:22px;"><span style="color:rgb(128,0,0);">All Pegasus files are now legacy content and are no longer
+      officially supported - however support from the wider community can be requested</span> <u><a style="color:rgb(51,122,183);"
+      href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/" rel="">here</a></u></strong>.</p>
+
+      <p align="center"> </p>
+
+      <p> </p>
+
+      						</body>
+    filename: PEG_StreamKit-DeluxeEdition_206_SU.zip
+    files:
+      - readme_020.htm
+      - product_image.jpg
+      - plop1.jpg
+      - PEG_WaterPlants_PROP_205.dat
+      - PEG_Stream-Kit_Style1_206.dat
+      - PEG_Stream-Kit_206.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0025/dfcb5a71f33fb1c36f5ebf162dd1f4a0-product_image.jpg
+      - https://www.simtropolis.com/objects/screens/0025/dfcb5a71f33fb1c36f5ebf162dd1f4a0-PRODUCT_IMAGE2.jpg
     lastModified: 2015-07-10T10:26:04Z
     name: PEG Stream Kit  Deluxe Edition
+    sha256: ec1ebbe1f4791b1225897594053058b135c00aa6fa6308b9928affd639ba93e8
+    size: 1332209
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2005/thumb-dfcb5a71f33fb1c36f5ebf162dd1f4a0-product_image.jpg
+    timestamp: 2024-07-29T09:55:36.596Z
+    uncompressed: 1338721
     url: https://community.simtropolis.com/files/file/12426-peg-stream-kit-deluxe-edition/
+    version: "1.0"
   simtropolis/12540-peg-mariners-memorial:
     authors:
       - Pegasus
@@ -836,4 +1087,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-09333c9a2eac98e62c483c65bf81e3a3-product_image.jpg
     url: https://community.simtropolis.com/files/file/4592-peg-oasis-park-v205/
 
-timestamp: 2024-07-23T10:27:16.370Z
+timestamp: 2024-07-30T08:53:33.543Z

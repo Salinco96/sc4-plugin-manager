@@ -761,23 +761,7 @@ assets:
 
 
 
-
-
-
-
-
-
-
-
       							
-
-
-
-
-
-
-
-
 
 
 
@@ -883,13 +867,13 @@ assets:
     files:
       - PEGPROD/SPOT/SPOT_v-rc101.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_07_2010/9b7b8eb1b6c2f900afbbd75bbd5c6303-spot_promo.jpg
+      - https://www.simtropolis.com/objects/screens/0017/9b7b8eb1b6c2f900afbbd75bbd5c6303-spot_promo.jpg
     lastModified: 2018-10-13T01:28:58Z
     name: SPOT (Simpeg Plop Orientation Tool)
     sha256: 147a101478d73e721d9885cbff79fb6753cb62d82e03929abf9c9fc238253581
     size: 23560
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2010/thumb-9b7b8eb1b6c2f900afbbd75bbd5c6303-spot_promo.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/24509-spot-simpeg-plop-orientation-tool/
     version: "1.01"
   simtropolis/25031-simmars-beta-3:
@@ -1440,7 +1424,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -1621,7 +1617,15 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
       							
+
+
+
+
 
       							
       <p>
@@ -1741,15 +1745,15 @@ assets:
       - Dll/LICENSE.txt
       - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.thumb.png.4baf70a67eff4ba39d69bcbd17bfe144.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_01/MoreDemandInfo.thumb.png.ec03107b3e79c5af25a7c16f3d47c15f.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.png.59c37a3a6c5bd2aa3f9d1f55d9094d62.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_01/MoreDemandInfo.png.c3511a969cc46a867c82ffdad708ec45.png
     lastModified: 2024-05-08T04:14:13Z
     name: SC4 More Demand Info
     repository: https://github.com/0xC0000054/sc4-more-demand-info
     sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
     size: 1699084
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.thumb.png.4baf70a67eff4ba39d69bcbd17bfe144.png
-    timestamp: 2024-07-23T10:50:08.315Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 2040510
     url: https://community.simtropolis.com/files/file/35978-sc4-more-demand-info/
     version: 1.2.0
@@ -1809,23 +1813,7 @@ assets:
 
 
 
-
-
-
-
-
-
-
-
       							
-
-
-
-
-
-
-
-
 
 
 
@@ -1983,14 +1971,14 @@ assets:
       - README.txt
       - LICENSE.txt
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/STEXIcon.thumb.png.46691a9dc1db4b041b41d00b1180e880.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/STEXIcon.png.9174478a28a769493ac7948ea0b7f5b1.png
     lastModified: 2024-06-17T00:51:07Z
     name: Startup Performance Optimization DLL for SimCity 4
     repository: https://github.com/0xC0000054/sc4-dbpf-loading
     sha256: cc608b1479dcc515e8055e23a6a64b9cb2a2e24db1759c2a60a2684993f473a8
     size: 58038
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/STEXIcon.thumb.png.46691a9dc1db4b041b41d00b1180e880.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 131402
     url: https://community.simtropolis.com/files/file/36244-startup-performance-optimization-dll-for-simcity-4/
     version: 1.0.3
@@ -2007,7 +1995,19 @@ assets:
       								</div>
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
       							
@@ -2192,6 +2192,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
 
       							
@@ -2385,4 +2391,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-cc76119e1615d738dc2f82f522af7ee3-sim-ruler.JPG
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
-timestamp: 2024-07-23T10:50:08.315Z
+timestamp: 2024-07-30T08:53:33.543Z

@@ -3,8 +3,9 @@ import { ComponentType } from "react"
 import { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
-import { PackageStatus, VariantInfo } from "@common/types"
 import { PackageOptionsForm } from "@components/Options"
+import { getCurrentVariant, getDependentPackages } from "@utils/packages"
+import { Store } from "@utils/store"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewFiles } from "./PackageViewFiles"
@@ -13,75 +14,80 @@ import { PackageViewReadme } from "./PackageViewReadme"
 import { PackageViewRequiredBy } from "./PackageViewRequiredBy"
 import { PackageViewSummary } from "./PackageViewSummary"
 
-export const packageViewTabs: {
+export type PackageViewTabInfo = {
   component: ComponentType<{ packageId: string }>
   id: string
-  name: (
-    t: TFunction<"PackageViewTabs">,
-    variantInfo: VariantInfo,
-    packageStatus?: PackageStatus,
-  ) => string
-  condition: (variantInfo: VariantInfo, packageStatus?: PackageStatus) => boolean
+  label: (t: TFunction<"PackageViewTabs">, packageId: string, store: Store) => string
+  condition: (packageId: string, store: Store) => boolean
   fullsize?: boolean
-}[] = [
+}
+
+export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "summary",
     component: PackageViewSummary,
     condition() {
       return true
     },
-    name(t) {
+    label(t) {
       return t("summary")
     },
   },
   {
     id: "dependencies",
     component: PackageViewDependencies,
-    condition(variantInfo) {
+    condition(packageId, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
       return !!variantInfo.dependencies?.length
     },
-    name(t, variantInfo) {
+    label(t, packageId, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
       return t("dependencies", { count: variantInfo.dependencies?.length })
     },
   },
   {
     id: "optionalDependencies",
     component: PackageViewOptionalDependencies,
-    condition(variantInfo) {
+    condition(packageId, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
       return !!variantInfo.optional?.length
     },
-    name(t, variantInfo) {
+    label(t, packageId, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
       return t("optionalDependencies", { count: variantInfo.optional?.length })
     },
   },
   {
-    // TODO: Make this show not only enabled packages, according to filters
     id: "requiredBy",
+    fullsize: true,
     component: PackageViewRequiredBy,
-    condition(variantInfo, packageStatus) {
-      return !!packageStatus?.requiredBy?.length
+    condition(packageId, store) {
+      return !!getDependentPackages(store, packageId).length
     },
-    name(t, variantInfo, packageStatus) {
-      return t("requiredBy", { count: packageStatus?.requiredBy?.length })
+    label(t, packageId, store) {
+      return t("requiredBy", { count: getDependentPackages(store, packageId).length })
     },
   },
   {
     id: "files",
     component: PackageViewFiles,
-    condition(variantInfo) {
+    condition(packageId, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
       return !!variantInfo.files?.length
     },
-    name(t, variantInfo) {
+    label(t, packageId, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
       return t("files", { count: variantInfo.files?.length })
     },
   },
   {
     id: "readme",
     component: PackageViewReadme,
-    condition(variantInfo) {
+    condition(packageId, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
       return !!variantInfo.readme
     },
-    name(t) {
+    label(t) {
       return t("readme")
     },
     fullsize: true,
@@ -89,10 +95,11 @@ export const packageViewTabs: {
   {
     id: "options",
     component: PackageOptionsForm,
-    condition(variantInfo) {
+    condition(packageId, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
       return !!variantInfo.options?.length
     },
-    name(t) {
+    label(t) {
       return t("options")
     },
   },

@@ -4198,10 +4198,13 @@ assets:
     dependencies: []
     description: >-
       <body>
+                                  
 
 
 
 
+
+      							
       <p>
       	Bosham Church, Established AD 850 and featured in the Bayeux tapestry depicting the visit of Harold II to the church.
       </p>
@@ -4297,14 +4300,14 @@ assets:
       - ~Documents/Mntoes/images/Bosham Church.JPG
       - ~Documents/Mntoes/images/Bosham Church night.JPG
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_12_2006/7787272f99ada78ee84c28914f533b44-Bosham%20Church%20Day.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_12_2006/7787272f99ada78ee84c28914f533b44-Bosham%20Church%20night.jpg
+      - https://www.simtropolis.com/objects/screens/0014/7787272f99ada78ee84c28914f533b44-Bosham%20Church%20Day.jpg
+      - https://www.simtropolis.com/objects/screens/0014/7787272f99ada78ee84c28914f533b44-Bosham%20Church%20night.jpg
     lastModified: 2024-06-13T11:55:03Z
     name: Bosham Church
     sha256: c3eccba4557ba01e0c9d028ba9b50b666b28620a7204abcffe39844d90336db6
     size: 632916
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2006/thumb-7787272f99ada78ee84c28914f533b44-Bosham%20Church%20Day.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 756897
     url: https://community.simtropolis.com/files/file/17530-bosham-church/
     version: "2.0"
@@ -9915,7 +9918,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       							<p><strong>Tennispalatsi</strong> is the largest cinema complex in Finland with 14 auditoriums. Originally built for Helsinki Olympics in 1937, building was first turned into car showroom before Helsinki hosted olympics in 1952 and basketball games was played there. Tennis was played in newer Kisahalli. After the Olympics it was converted to department store and in 1993 it was converted to cinema complex with museums, restaurants and small movie-themed shops.<br><br>In the SimCity it acts as static landmark. Despite the pictures, building has nightlights.<br><br>STATS<br>Lot size: 4x7<br>Plop Cost: 15 000 §<br>Monthly Cost: 150 §<br><br>Dependacies:<br><abbr title="BATT Squad Certification">BSC</abbr> Textures vol.1<br><abbr title="BATT Squad Certification">BSC</abbr> Textures vol.2<br><br>All feedback should go here instead: <a href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/forum/index.php?topic=6097.0" rel="external nofollow">Krioworks at SimPeg </a></p>
       						</body>
     filename: TG Tennispalatsi.zip
@@ -9933,7 +9936,7 @@ assets:
     sha256: 38b62d29051979cfd0cd625034428b28fe5fcd6a86f6e0a3fee77adcfcf0f4d4
     size: 975734
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2015/thumb-783c9f1491712288f56aa19efc71d9d1-tennari35.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1184086
     url: https://community.simtropolis.com/files/file/27353-tennispalatsi/
     version: "1.0"
@@ -12240,7 +12243,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -12249,7 +12252,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p>
       	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Disclaimer:</strong></span>
       </p>
@@ -12271,7 +12280,7 @@ assets:
 
 
       <p>
-      	<span style="font-family:Arial, Helvetica, sans-serif;">Some lots, when being placed on slopes, will either raise the floor beneath them, or cut into the hill. In the former case, a lot foundation is being created, in the latter, a retaining wall. Perhaps it's just me, but I'm quite surprised that I've only found very few plugins with custom foundations and none at all with retaining walls; therefore, I've turned some textures by Maxis or other authors (see below for credits) into lot foundations and retaining walls. This plugin therefore acts as a dependency for plugin developers, providing them with the necessary textures and exemplar files.</span>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Some lots, when being placed on slopes, will either raise the floor beneath them, or cut into the hill. In the former case, a lot foundation is being created, in the latter, a retaining wall. Perhaps it's just me, but I’m quite surprised that I’ve only found very few plugins with custom foundations and none at all with retaining walls; therefore, I’ve turned some textures by Maxis or other authors (see below for credits) into lot foundations and retaining walls. This plugin therefore acts as a dependency for plugin developers, providing them with the necessary textures and exemplar files.</span>
       </p>
 
 
@@ -12367,7 +12376,7 @@ assets:
 
       <ul>
       	<li>
-      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Mas71:</strong> His set of Japanese hill retaining walls surely is part of the plugins that I'm using most frequently. Now, their functionability is even being expanded.</span>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Mas71:</strong> His set of Japanese hill retaining walls surely is part of the plugins that I’m using most frequently. Now, their functionability is even being expanded.</span>
       	</li>
       </ul>
 
@@ -12403,14 +12412,14 @@ assets:
       - Readme.pdf
       - LotFoundations.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.thumb.jpg.f55da6bf2b5ff6a084ff49f28359e41b.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2016_11/Anleitung_3.thumb.png.cb0ee5322a751f204134fec329ea2025.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.jpg.d34b5066fa746c20427bb6e6fea90199.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/Anleitung_3.png.de43eb44243c947ce7eff75c17b88c17.png
     lastModified: 2020-10-07T14:16:30Z
     name: Various Lot Foundations and Retaining Walls
     sha256: c27de1770c9839eee8c171d82c81b95db93b947e1f91aa208a50ee08d2555f96
     size: 1991078
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.thumb.jpg.f55da6bf2b5ff6a084ff49f28359e41b.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 2079171
     url: https://community.simtropolis.com/files/file/31346-various-lot-foundations-and-retaining-walls/
     version: "1.0"
@@ -15021,7 +15030,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15030,7 +15039,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p style="background-color:#ffffff;color:#353535;font-size:14px;">
       	<strong>Specs</strong>:
       </p>
@@ -15102,15 +15117,15 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e910c456a7_image(20).thumb.png.746ba7ef3a3c111c24a8a51245bbfe69.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e910d07e1e_image(22).thumb.png.d8a3aad32557ae8646d27531c7305d7a.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e910ecad18_image(23).thumb.png.34090a746b6de51f467712cfd2fcbef6.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e91112ecf5_image(24).thumb.png.0582d2050214ebd3eb0e468e8b63fa16.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665baecfe8265_image(20).thumb.png.149f0e92a2c79c3d319635ec8f0ac2d7.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e8fb97369a_image(20).png.31e7c075214f9870ad9a81ddf0694a6e.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e8fbf321d7_image(22).png.eef29235e29806f87d0f53fe8c8b4079.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e8fc451caa_image(23).png.d2d65b67f1aaad69f0c05485d2778ba0.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664e8fc94380a_image(24).png.4b94aafe2e7292299ce6c85a1704778d.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665bae96ded29_image(20).png.02fea7f99fd7c65c7d0354f0898ee705.png
     lastModified: 2024-06-01T23:30:50Z
     name: AGC A-Frame Houses
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/664e910c456a7_image(20).thumb.png.746ba7ef3a3c111c24a8a51245bbfe69.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36259-agc-a-frame-houses/
     variants:
       "201518":
@@ -15207,7 +15222,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15216,21 +15231,27 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p>
       	Large Gothic Cathedral; no dependencies 
       </p>
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f30369960_Regopolis-Dec.141301717888542.thumb.png.b1780fce026c051a7c5c16454967f220.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f30422766_Regopolis-Dec.141301717888530.thumb.png.aa54f79c8d46e145c7c64c70a22a88e2.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f304c45dc_Regopolis-Dec.141301717888523.thumb.png.d776e6e5d7c63cb67073fcab2982a15f.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f30586fd8_Regopolis-Mar.111311717888791.thumb.png.9550b64b97ade5644d5f23c3569d68f7.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f2d2f0994_Regopolis-Dec.141301717888542.png.63b73cf216af2e66773f4a1f7c5bbff7.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f2d4cc528_Regopolis-Dec.141301717888530.png.75a23a18acbd9db250f90ab13acd3abd.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f2d68b5e9_Regopolis-Dec.141301717888523.png.2ee26b0f587b4df339d666ccc2224239.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f2ecef7c2_Regopolis-Mar.111311717888791.png.4512e9306eed64787818dcbd7dbce663.png
     lastModified: 2024-06-09T00:10:46Z
     name: Cathedral
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f304c45dc_Regopolis-Dec.141301717888523.thumb.png.d776e6e5d7c63cb67073fcab2982a15f.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36268-cathedral/
     variants:
       "201657":
@@ -15261,7 +15282,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15270,7 +15291,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p style="background-color:#ffffff;color:#353535;font-size:14px;">
       	<strong>Specs:</strong>
       </p>
@@ -15337,13 +15364,13 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ce528877_image(25).thumb.png.2f6df8d92ccb8920973089912e4bfc9c.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ce66d031_image(24).thumb.png.0d21a9b2b38beace6dff0fd4c0dfe169.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ce8810a8_image(23).thumb.png.030422ff88713a32256f26307233e1ce.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4b9cc3aea_image(25).png.cc75499b19acfd21ad03b6171c94cbef.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4b9f95d05_image(24).png.819dd58a0c978141a750de04aa6c7f78.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ba40899b_image(23).png.2306ae711bcc03ce01b3fcdc7096e434.png
     lastModified: 2024-06-03T23:08:25Z
     name: AGC - Fishing Vessel G 01
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/665e4ce8810a8_image(23).thumb.png.030422ff88713a32256f26307233e1ce.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36279-agc-fishing-vessel-g-01/
     variants:
       "201555":
@@ -15374,7 +15401,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15383,7 +15410,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p>
       	<span style="background-color:#ffffff;color:#353535;font-size:14px;">This DLC contains props (Doesn't include lots). So far it only includes a Bucket Wheel Excavator. I will add more machinery later.</span>
       </p>
@@ -15430,11 +15463,11 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/Red-D3D-HeavyMachines.thumb.jpg.c466d829acbde1691482c66470778b6e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/Red-D3D-HeavyMachines.jpg.1883881dd25ca14609bc70ccba688501.jpg
     lastModified: 2024-06-07T12:56:57Z
     name: AGC - Heavy Machinery DLC
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/Red-D3D-HeavyMachines.thumb.jpg.c466d829acbde1691482c66470778b6e.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36292-agc-heavy-machinery-dlc/
     variants:
       "201632":
@@ -15464,7 +15497,7 @@ assets:
       - simtropolis/36292-agc-heavy-machinery-dlc
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15473,7 +15506,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p style="background-color:#ffffff;color:#353535;font-size:14px;">
       	<strong>Specs</strong>:
       </p>
@@ -15537,15 +15576,15 @@ assets:
       - AGC_BWE_Soviet_V01_S1_90_136d9bca.SC4Lot
       - AGC_BWE_Soviet_V01_S1_90-0x6534284a-0xdd573712-0x936d9ace.SC4Desc
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666305d01a703_image(26).thumb.png.0ee3d7a6f8456f9f9c935e8b6d8df55c.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666305d12760f_image(27).thumb.png.ae3fee94fce6d357b16754eebefc2da4.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666305d2db3ad_image(28).thumb.png.798f301ef73f8711e3e864f86a4642b5.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66630499a4030_image(26).png.03e0d507760f282c6f1f3cf28a122156.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666304cfd23c8_image(27).png.92f8603ef02e700aab7663e66a414f5b.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666304fb552e7_image(28).png.970aa20bf5a38d9eccc73bbe917f9775.png
     lastModified: 2024-06-07T13:06:27Z
     name: AGC - Bucket Wheel Excavator
     sha256: b75d7a23e44ebd910a79ec0b351bd0aab61b1d14678667ec960247758b5d0b6d
     size: 30968
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666305d01a703_image(26).thumb.png.0ee3d7a6f8456f9f9c935e8b6d8df55c.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 0
     url: https://community.simtropolis.com/files/file/36293-agc-bucket-wheel-excavator/
     version: 1.0.0
@@ -15556,7 +15595,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15565,7 +15604,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p>
       	<strong>History:</strong>
       </p>
@@ -15647,15 +15692,15 @@ assets:
       - AGC_Cruisers_UKN_Ukraina_1990_V100_90-0x6534284a-0xdd573712-0x137601ca.SC4Desc
       - AGC_Cruisers_UKN_Ukraina_1990_V100_90-0x5ad0e817_0x9458c057_0x30000.SC4Model
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666a3ffe1362d_image(28).thumb.png.09f2097d866e00a01f0e12f0d3f0aec2.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666a4003465e8_image(30).thumb.png.3f0119eccc6def1d6b97abd0848d8514.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666a400602b74_image(29).thumb.png.aacb1379374d6279d534fe76f1e02acf.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666a3edb841c1_image(28).png.1242b7efe5cd5ddd4cfa549575da8598.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666a3fd52df0e_image(30).png.ec0bf7ae9f5eaa8cf534a6a4e7614d51.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666a3fd9bc458_image(29).png.f79ae2e8cc194beb4ec7c88e138ff658.png
     lastModified: 2024-06-13T00:40:38Z
     name: AGC Cruiser Ukrayina 1990 (Abandoned)
     sha256: 57091585b1ef605765ba0e371fe78eefc2a06dbdfdbc2718b557ac97df8c1bdd
     size: 1575318
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666a3ffe1362d_image(28).thumb.png.09f2097d866e00a01f0e12f0d3f0aec2.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 0
     url: https://community.simtropolis.com/files/file/36303-agc-cruiser-ukrayina-1990-abandoned/
     version: 1.0.0
@@ -15666,7 +15711,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15675,7 +15720,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p>
       	Elementary and High school; No dependencies
       </p>
@@ -15684,17 +15735,17 @@ assets:
       <p><a class="ipsAttachLink" href="//community.simtropolis.com/applications/core/interface/file/attachment.php?id=102814">High School.zip</a></p>
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7ab7194_Regopolis-Nov.11831718490343.thumb.png.70438ae593da61bd3bfaf542d8f7f1e0.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7b66e65_Regopolis-Sep.281831718490304.thumb.png.b2800114a2ec61e24d9f3930cebb2f85.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7c19010_Regopolis-Sep.281831718490291.thumb.png.f2eb4940fdb365d8dfd8291637eac54c.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7cdd199_Regopolis-Sep.281831718490223.thumb.png.5c5c3fa2d4d1b4ba5ae46a45cf1879cc.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7d9e4a1_Regopolis-Sep.281831718490208.thumb.png.f623d989186c6e742e2a038e38b028d0.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7e651f3_Regopolis-Sep.281831718490186.thumb.png.1b78259567f144c2ff028e903cdc120e.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7f17487_Regopolis-Sep.281831718490176.thumb.png.c95a487d0858ec44f30aaedc846d7944.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e0ef327c_Regopolis-Nov.11831718490343.png.cff125152feb00175b6d919fe27bc003.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e12abe10_Regopolis-Sep.281831718490304.png.7f8583e10bd571addf3c9e9427e2fe29.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e16163bc_Regopolis-Sep.281831718490291.png.189e6e54cb8e08bc2ddbebc7135632e9.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e19a2384_Regopolis-Sep.281831718490223.png.11420c0da2a9434e1bdbab0cfbad0636.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e1cc1a3a_Regopolis-Sep.281831718490208.png.249bb3f040ca9ef2058b47ad55345469.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e1fd16b8_Regopolis-Sep.281831718490186.png.014ae01ccafde610a1d2240970e315b1.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e231729c_Regopolis-Sep.281831718490176.png.cc3d96598590cecd0fcfe198cca91f51.png
     lastModified: 2024-06-16T12:32:18Z
     name: Elementary & High School
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/666e1e7e651f3_Regopolis-Sep.281831718490186.thumb.png.1b78259567f144c2ff028e903cdc120e.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36305-elementary-high-school/
     variants:
       "201739":
@@ -15727,7 +15778,7 @@ assets:
       - simtropolis/28951-marina
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15736,7 +15787,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p>
       	This set contains various lots to build your own (sort of) realistic looking coal- and ore yards and port facilities. Included in this set are:<br>
       	- 2 cranes to unload coal and ore from large bulk carriers.<br>
@@ -15885,17 +15942,17 @@ assets:
       - 1x1 Coalyard Belt1 fly over_23dbca7c.SC4Lot
       - 1x1 Coalyard Belt1 end_e3f4d354.SC4Lot
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb34b6f0_Coalyard5.thumb.jpg.c10a9df208dd190a8e6dac0e2b7b8581.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb37cf6e_Coalyard1.thumb.jpg.770d97e5a92b9f1822b4b4afb61beb66.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb3a874f_Coalyard2.thumb.jpg.1f626b54849816ba6cfca454f505a9ff.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb3de3ee_Coalyard3.thumb.jpg.dac50a18887a02077ddb95cbd85d01ff.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb41b4cb_Coalyard4.thumb.jpg.b8bf56def18a6c644be3388188783d09.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807ad185842_Coalyard5.jpg.0b9897ef793bfd84215f9d4d4c627a01.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807ad2472f6_Coalyard1.jpg.f4010b69182c8b500c4c55d9694e4de8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807ad336d98_Coalyard2.jpg.40b43d3c6cb14f12610c82dcfc7bbe1e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807ad45049d_Coalyard3.jpg.a435a4ca8600c5d3c11286fb333dedf1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/66807ad51c876_Coalyard4.jpg.2df481f36f8bee33a83219ea2c162cb0.jpg
     lastModified: 2024-06-29T21:26:31Z
     name: Coal and ore port facilities
     sha256: 7e1e107b6a697a0ad76ff0398c0b5b9e25d0bddddd44e725b94a5f428113be21
     size: 11610570
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/66807bb34b6f0_Coalyard5.thumb.jpg.c10a9df208dd190a8e6dac0e2b7b8581.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 0
     url: https://community.simtropolis.com/files/file/36321-coal-and-ore-port-facilities/
     version: 1.0.0
@@ -15906,7 +15963,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -15915,7 +15972,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p>
       	Sim University; Contains (5) 12x12 lots (1)12x6 lot. All dependencies are included in the file. 
       </p>
@@ -15972,21 +16035,21 @@ assets:
       - University/bookstore-0x5ad0e817_0x13823c09_0x30000.SC4Model
       - University/Admin Building-0x5ad0e817_0x1384c883_0x30000.SC4Model
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f27d59e_Peoria-Apr.26171719631848.thumb.png.5c3bfd988e487c5581f5f0d541440e51.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f3206dc_Peoria-Aug.30181719632111.thumb.png.2645c0f67b3e5d3119ebc265c854dac0.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f39782a_Peoria-Feb.18171719631824.thumb.png.7a5ac0a1f31b32bd51d3728bc5753a11.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f41bb30_Peoria-Jul.11181719632083.thumb.png.f1e8ca0dc2714d6c8332b1461d770159.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f48b908_Peoria-Nov.8181719706937.thumb.png.48b0d0fd58081395ec5481880a4b62bc.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f5083f7_Peoria-Nov.8181719707098.thumb.png.2ef1c87a26082fdfe815dd7efcd5fbcd.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f5772bf_Peoria-Oct.18161719631802.thumb.png.12a3ded58b31435707a4275eb81a2d2f.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f5e40c3_Peoria-Oct.27161719631810.thumb.png.dde571092b1ba62585228d3b49d5be17.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f65cec7_Peoria-Sep.20161719631795.thumb.png.ef7bd54e4d5fcbd09bf8508377a0b096.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a71baf3ee_Peoria-Apr.26171719631848.png.6a5e5566a64df5fbdf8eb77dd1cc3cec.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a71dd9e2c_Peoria-Aug.30181719632111.png.ee25b0529ce1eb3d861ee4995bd45a1b.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a71f88a4a_Peoria-Feb.18171719631824.png.dd77eeeeae7be08af21e9b5d3bcda1c7.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a72145893_Peoria-Jul.11181719632083.png.eb4a2d25665be3bcde3e674360b6b120.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a723264c7_Peoria-Nov.8181719706937.png.4e8fd3c9aefdd7f999e4f3ca11140e38.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a724d7274_Peoria-Nov.8181719707098.png.d883922e5f819321e5703df00d11c10c.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7269b667_Peoria-Oct.18161719631802.png.74c314ae7727afa153c42bc89264e9d3.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a728715fe_Peoria-Oct.27161719631810.png.90ced4aecdb7cd62e9e70ba3c55a83c1.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a72a43f90_Peoria-Sep.20161719631795.png.1c81c16fc06373f305add619cf022a81.png
     lastModified: 2024-06-30T00:33:58Z
     name: Sim University
     sha256: 0c5823594bb24701296356fbd2d0a65836f705d01540b2fa70a417d6d9129019
     size: 13230276
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/6680a7f48b908_Peoria-Nov.8181719706937.thumb.png.48b0d0fd58081395ec5481880a4b62bc.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 15366535
     url: https://community.simtropolis.com/files/file/36322-sim-university/
     version: 1.0.0
@@ -15995,21 +16058,38 @@ assets:
       - giraffemountain
     category: 600
     dependencies: []
-    description: |-
+    description: >-
       <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
 
+
+
+
+      							
+
+
+
+
+
+      							
       <p>
       	This is a set of four buildings for fractionally angled networks. Included is an FA2 building overhanging a 2x2 lot, an FA3 building overhanging a 3x2 lot, and a mirrored version of each.
       </p>
+
 
       <p>
       	They are inspired by mid-rise New York apartment buildings, but are ploppable, rather than residential, so that they can be placed along <abbr title="Fractional Angle">FA</abbr> roads.
       </p>
 
+
       <p>
       	Each building costs $100 to plop, and functions as a landmark.
       </p>
+
 
       <p>
       	No dependencies!
@@ -16017,13 +16097,13 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/famidrises1.thumb.png.9e71764e6fbbf31b63eb857116a28155.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/fa3midrises.thumb.jpg.8851a18ce43de0f511e1fee3a2609d6a.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/fa2midrises.thumb.jpg.42a36a851d32fd5249034212f6ce7c98.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/famidrises1.png.ff4589d00990d9d8d510c1c8db43c127.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/fa3midrises.jpg.e66e80fdd5358f520a4a2b54c394152e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/fa2midrises.jpg.ea4a7ca37063f1836ab9b89b34a5185c.jpg
     lastModified: 2024-07-04T04:33:16Z
     name: FA2 and FA3 Mid-rises
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/famidrises1.thumb.png.9e71764e6fbbf31b63eb857116a28155.png
-    timestamp: 2024-07-05T06:56:57.513Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36329-fa2-and-fa3-mid-rises/
     variants:
       "201909":
@@ -16089,14 +16169,14 @@ assets:
       - Davide1983it - Milcon Tower.SC4Lot
       - Davide1983it - Milcon Tower.SC4Desc
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668ac3fe5397f_milcontower(1).thumb.png.349b0620fb6ef6050a550b8c5e3cb534.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668ac3fee5c6a_milcontower(2).thumb.png.227c642402ee5a3eeb04c1dd584d6aca.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668ac39287b2d_milcontower(1).png.202d1ea0528ec6739268d21156a6691e.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668ac3d32b87b_milcontower(2).png.01b9e912410b2a1dd9c1ddc820995f73.png
     lastModified: 2024-07-07T16:36:15Z
     name: Milcoln Tower
     sha256: 360a1372ccf9007140690e8d8597217b357b7c6922e50f10edfaaba5798596de
     size: 3808257
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/668ac3fe5397f_milcontower(1).thumb.png.349b0620fb6ef6050a550b8c5e3cb534.png
-    timestamp: 2024-07-16T08:06:07.759Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 4874963
     url: https://community.simtropolis.com/files/file/36331-milcoln-tower/
     version: 1.0.0
@@ -16115,7 +16195,9 @@ assets:
 
 
 
+
       							
+
 
 
 
@@ -16132,13 +16214,13 @@ assets:
       - DBSSY_WZRec_Palais_139bfe1e.SC4Lot
       - DBSSY_WZRec_Palais-0x5ad0e817_0x54324473_0x30000.SC4Model
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/WZPalais.thumb.PNG.9e3c35f53b09bb6cbd370acba8956aca.PNG
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/WZPalais.PNG.c2e98a4eae8585a4b0bea61a433c8e90.PNG
     lastModified: 2024-07-11T20:30:17Z
     name: "WZ Recreation: Palais"
     sha256: 9c802cd5f05d868d1082edb2cca0eb7bb95431a51cae737fcba04711f9c104ef
     size: 1197581
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/WZPalais.thumb.PNG.9e3c35f53b09bb6cbd370acba8956aca.PNG
-    timestamp: 2024-07-16T08:06:07.759Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1343938
     url: https://community.simtropolis.com/files/file/36334-wz-recreation-palais/
     version: 1.0.0
@@ -16157,7 +16239,9 @@ assets:
 
 
 
+
       							
+
 
 
 
@@ -16249,13 +16333,13 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a7ff9a3a2_image(31).thumb.png.80054cc6756bbe545d1250fd95268bd7.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a800089fe_image(33).thumb.png.1da5db779b49585aee840adf5473f82e.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a8006e04d_image(32).thumb.png.4b1cb550f8b52bf0108b3ba0f9c0f011.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a30741850_image(31).png.1116ccf9eabf883469672556ec02bd94.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a30f33429_image(33).png.9e4414b1267ceda7e60a62ac29adc159.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a315b7fa4_image(32).png.9acb152e155eb20e70aed7c5a9d426ed.png
     lastModified: 2024-07-13T16:14:56Z
     name: AGC USS Fletcher 1942
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/6692a8006e04d_image(32).thumb.png.4b1cb550f8b52bf0108b3ba0f9c0f011.png
-    timestamp: 2024-07-16T08:06:07.759Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36340-agc-uss-fletcher-1942/
     variants:
       "201966":
@@ -16300,7 +16384,9 @@ assets:
 
 
 
+
       							
+
 
 
 
@@ -16334,13 +16420,13 @@ assets:
       - Edificios Mediterraneos/1/Edificio Mediterraneo 1-0x6534284a-0x1332dca7-0xd418247f.SC4Desc
       - Edificios Mediterraneos/1/-0x5ad0e817_0x539841d9_0x30000.SC4Model
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692daa82e5e9_edificiosmediterraneos.thumb.png.bce5f13a908007efeb098cb4e85f3422.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692d939e2e11_edificiosmediterraneos.png.6d3651fcdd71a371a0b123aef619b556.png
     lastModified: 2024-07-13T19:51:04Z
     name: Mediterranean style buildings
     sha256: a8761713915a1d9221007f3fa15503b9596768a83d7ec11495457c34640db6ab
     size: 1321937
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/6692daa82e5e9_edificiosmediterraneos.thumb.png.bce5f13a908007efeb098cb4e85f3422.png
-    timestamp: 2024-07-16T08:06:07.759Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1353740
     url: https://community.simtropolis.com/files/file/36342-mediterranean-style-buildings/
     version: 1.0.0
@@ -16359,7 +16445,9 @@ assets:
 
 
 
+
       							
+
 
 
 
@@ -16436,12 +16524,12 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692f06265260_image(34).thumb.png.b0d9566351be5bc02efc6e62b24f4c4d.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692f06311279_image(35).thumb.png.9231fd7dce0652e82ac5eb0aa74e343d.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692ee8048bc7_image(34).png.935bdda89bc3a2b4b540225be74a521a.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/6692ee884b684_image(35).png.d23dd393871b3f1ccfab0743df8cbf4c.png
     lastModified: 2024-07-13T21:23:47Z
     name: AGC - Pirate Ship 1750 01
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/6692f06265260_image(34).thumb.png.b0d9566351be5bc02efc6e62b24f4c4d.png
-    timestamp: 2024-07-16T08:06:07.759Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36343-agc-pirate-ship-1750-01/
     variants:
       "201981":
@@ -16472,8 +16560,8 @@ assets:
     dependencies: []
     description: |-
       <body>
-
-
+                                  
+      							
       <p>
       	This is a sport hall for gymnastic clubs and for elementairy schools to do their gym class. There's a small version on a 3x4 lot and a large on a 4x5 lot. They can be found in the park-menu.
       </p>
@@ -16488,15 +16576,260 @@ assets:
       - Gymzaal/Sportzaal 3x4 verbeterd_53a18ccc.SC4Lot
       - Gymzaal/gymzaal klaar-0x5ad0e817_0x9249206a_0x300000.SC4Model
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/Gymzalen.thumb.jpg.0a7f85dc2d6fbba8162696500cdbaced.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/Gymzalen.jpg.85bca212fc91b48fa81da2efb75a0f90.jpg
     lastModified: 2024-07-15T20:38:58Z
     name: Sport hall
     sha256: e4c7f3f27980a4a9e8d91fdf84459eeee3999e4c4f66cece409c3b06ef8c6d7e
     size: 985032
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/Gymzalen.thumb.jpg.0a7f85dc2d6fbba8162696500cdbaced.jpg
-    timestamp: 2024-07-16T07:55:15.885Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1133999
     url: https://community.simtropolis.com/files/file/36347-sport-hall/
+    version: 1.0.0
+  simtropolis/36354-wtc-complex-sc4d-lex-legacy-bsc-custodian-rubik:
+    authors:
+      - rubik3
+    category: 600
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+      - simtropolis/2879-foss-construction-tower-crane
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p style="text-align:center">
+      	<span style="font-size:24px"><strong>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Custodian Rubik WTC Complex</strong></span>
+      </p>
+
+
+      <p style="text-align:left">
+      	This SC4 Devotion <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy Pack features the complete set of World Trade Center Compelex (Pre 11/9/2001) by Rubik, including Props and Lots, which had been available on the Lot Exchange (<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>) at SC4 Devotion. 
+      </p>
+
+
+      <p style="text-align:left">
+      	It includes the contents of 7 previously separate downloads.<br>
+      	After battling a number of technical issues, software incompatibility ultimately shuttered the <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to install.
+      </p>
+
+
+      <p style="text-align:left">
+      	Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly maintain, update, and provide technical support for the pack.
+      </p>
+
+
+      <h3>
+      	CONTENTS:
+      </h3>
+
+
+      <ul>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props Rubik3 Vol01 - WTC Props
+      	</li>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> Rubik3 WTC Landmark
+      	</li>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> Rubik3 WTC Placeholder
+      	</li>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> Rubik3 WTC Reward
+      	</li>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> WTC Submenu
+      	</li>
+      </ul>
+
+
+      <h3>
+      	INSTALLATION:
+      </h3>
+
+
+      <p>
+      	This package is a simple .zip file. Just extract the <abbr title="BATT Squad Certification">BSC</abbr> folder to your My DocumentsSimCity 4Plugins directory (or equivalent, if you have a custom Plugins folder location).
+      </p>
+
+
+      <p>
+      	It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.<br>
+      	ptionally in the ~Documents folder in the main ZIP you can find a collective/master and separately all the individual cleanitol files and by using either the newer  <span><strong><a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" target="_blank">nos.17's SC4 Cleanitol</a></strong></span> or the older <span><strong><a href="index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="" target="_blank"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol</a></strong></span> tool you can search and remove old and outdated versions of these files.
+      </p>
+
+
+      <h3>
+      	DLL DEPENDENCIES:
+      </h3>
+
+
+      <p>
+      	In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed dependencies are covering a full install):
+      </p>
+
+
+      <ul>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/36142-submenus-dll/" target="Submenus DLL" title="memo.submenus.dll" rel=""><strong>Submenus DLL</strong></a> - You need it to get the package submenu working.
+
+      		<p>
+      			<span style="color:#e03e2d">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsfot Windows and Linux only).</span>
+      		</p>
+      	</li>
+      </ul>
+
+
+      <h3>
+      	DEPENDENCIES:
+      </h3>
+
+
+      <p>
+      	The following files are required in order for the contents of this package to appear correctly (i.e., no "brown boxes" or missing textures) (the below listed dependencies are covering a full install; for dependencies for individual collections see the <em><strong>readme_bsc_custodian_rubik_wtc_complex.html</strong></em> in the ZIP. Bear in mind that the original readmes are also available in the<em> ~Documents/BSC_Readmes</em> folder, but they have <strong>not </strong>been updated):
+      </p>
+
+
+      <ul>
+      	<li>
+      		<strong>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Custodian Rubik WTC Complex v1</strong> (and above) - <span style="color:#ba372a">INCLUDED</span><br>
+      		The below listed dependencies are all can be found in the hereby linked dependency pack compilation.
+      	</li>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - Rubik3 Vol01 - WTC Props v2
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <ul>
+      	<li>
+      		<a href="https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow" target="_blank"><strong>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack v9</strong></a> (and above)<br>
+      		The below listed dependencies are all can be found in the hereby linked dependency pack compilation.
+      	</li>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol01 v4
+      	</li>
+      	<li>
+      		CSX MEGA Props - Vol01 v3
+      	</li>
+      	<li>
+      		CSX MEGA Props - Vol04 v3
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <ul>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol01
+      	</li>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol03 v4
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <ul>
+      	<li>
+      		<strong><a href="https://community.simtropolis.com/files/file/2879-foss-construction-tower-crane/" target="Foss Construction Tower Crane" title="Foss Construction Tower Crane" rel="">Foss Construction Tower Crane</a></strong> - You need them to make the cranes appear in the WTC Placeholder Lot.
+      	</li>
+      </ul>
+
+
+      <h3>
+      	<strong>CREDITS:</strong>
+      </h3>
+
+
+      <p>
+      	The following <abbr title="BATT Squad Certification">BSC</abbr> members contributed models, textures, and modding support to this collection:
+      </p>
+
+
+      <ul>
+      	<li>
+      		Rubik
+      	</li>
+      	<li>
+      		BarbyW
+      	</li>
+      	<li>
+      		callagrafx
+      	</li>
+      	<li>
+      		RippleJet
+      	</li>
+      	<li>
+      		SimGoober
+      	</li>
+      </ul>
+
+
+      <p>
+      	This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Ulisse Wolf.
+      </p>
+
+
+      <h5>
+      	Special Thanks
+      </h5>
+
+
+      <p>
+      	Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.<br>
+      	<br>
+      	For memo for subsequent updates on the <abbr title="Network Addon Mod">NAM</abbr>/Java installer.
+      </p>
+
+
+      <p>
+      	And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone that may of helped somewhere along the lines.
+      </p>
+
+
+      <p>
+      	And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!
+      </p>
+
+
+      <p>
+      	And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)
+      </p>
+
+
+      <p style="text-align:center">
+      	<strong><span style="color:#e03e2d; font-size:36px">We will never forget 9/11, the victims and the heroes of this day</span></strong>
+      </p>
+
+
+      <p style="text-align:center">
+      	 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/Night.jpg.03e1efc8bdd5c6050d80db0a0aae61bf.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/day.jpg.b8017a226e7794ba9ce0310711068bf7.jpg
+    lastModified: 2024-07-29T12:39:23Z
+    name: WTC Complex - SC4D LEX Legacy - BSC Custodian Rubik
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/day.thumb.jpg.8ebdb0f45e33f988bf41592b40dd3b86.jpg
+    url: https://community.simtropolis.com/files/file/36354-wtc-complex-sc4d-lex-legacy-bsc-custodian-rubik/
     version: 1.0.0
   simtropolis/3644-stratosphere-towerlas-vegas:
     authors:
@@ -16997,14 +17330,14 @@ assets:
       - Nasinneula0.8-0x5ad0e817_0x6e0c008f_0x270000.SC4Model
       - Nasinneula Readme.txt
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_08_2004/bd45df786ee586d71b3b53c392b29055-Nasinneula1.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_08_2004/bd45df786ee586d71b3b53c392b29055-Nasinneula2.jpg
+      - https://www.simtropolis.com/objects/screens/0021/bd45df786ee586d71b3b53c392b29055-Nasinneula1.jpg
+      - https://www.simtropolis.com/objects/screens/0021/bd45df786ee586d71b3b53c392b29055-Nasinneula2.jpg
     lastModified: 2024-07-14T18:30:36Z
     name: Nasinneula Observation Tower
     sha256: 2aa9e7612937d9f00c6c7b5452bda80ecf642d463593cbd1220ea7b3a203ead8
     size: 453932
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2004/thumb-bd45df786ee586d71b3b53c392b29055-Nasinneula1.jpg
-    timestamp: 2024-07-16T08:06:07.759Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 527485
     url: https://community.simtropolis.com/files/file/4191-nasinneula-observation-tower/
     version: "1.0"
@@ -18505,4 +18838,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-33d8981f5deb63706c817395eb328784-Simjez-Feb.%207,%20001060541163.JPG
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
-timestamp: 2024-07-23T10:27:16.370Z
+timestamp: 2024-07-30T08:53:33.543Z

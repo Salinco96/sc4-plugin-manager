@@ -105,6 +105,7 @@ export interface AppConfig {
 export class Application {
   public assets: { [assetId: string]: AssetInfo | undefined } = {}
   public features?: Partial<Record<Feature, string[]>>
+  public ignoredWarnings = new Set<string>()
   public options?: OptionInfo[]
   public packages?: { [packageId: string]: PackageInfo }
   public profiles?: { [profileId: string]: ProfileInfo }
@@ -2426,19 +2427,25 @@ export class Application {
             if (packageInfo && variantInfo?.warnings) {
               for (const warning of variantInfo.warnings) {
                 if (!warning.on || warning.on === "enable") {
-                  const packageName = packageInfo.name
+                  if (!warning.id || !this.ignoredWarnings.has(warning.id)) {
+                    const packageName = packageInfo.name
 
-                  // TODO: Use our own modal rather than system one?
-                  const [confirmed] = await this.showConfirmation(
-                    packageInfo.name,
-                    t("EnableWarningModal:confirmation"),
-                    warning.message ?? t(warning.id!, { ns: "Warning", packageName }),
-                    undefined,
-                    "warning",
-                  )
+                    // TODO: Use our own modal rather than system one?
+                    const [confirmed, doNotAskAgain] = await this.showConfirmation(
+                      packageInfo.name,
+                      t("EnableWarningModal:confirmation"),
+                      warning.message ?? t(warning.id!, { ns: "Warning", packageName }),
+                      !!warning.id,
+                      "warning",
+                    )
 
-                  if (!confirmed) {
-                    return false
+                    if (doNotAskAgain && warning.id) {
+                      this.ignoredWarnings.add(warning.id)
+                    }
+
+                    if (!confirmed) {
+                      return false
+                    }
                   }
                 }
               }
@@ -2452,19 +2459,25 @@ export class Application {
             if (packageInfo && variantInfo?.warnings) {
               for (const warning of variantInfo.warnings) {
                 if (warning.on === "disable") {
-                  const packageName = packageInfo.name
+                  if (!warning.id || !this.ignoredWarnings.has(warning.id)) {
+                    const packageName = packageInfo.name
 
-                  // TODO: Use our own modal rather than system one?
-                  const [confirmed] = await this.showConfirmation(
-                    packageInfo.name,
-                    t("DisableWarningModal:confirmation"),
-                    warning.message ?? t(warning.id!, { ns: "Warning", packageName }),
-                    undefined,
-                    "warning",
-                  )
+                    // TODO: Use our own modal rather than system one?
+                    const [confirmed, doNotAskAgain] = await this.showConfirmation(
+                      packageInfo.name,
+                      t("DisableWarningModal:confirmation"),
+                      warning.message ?? t(warning.id!, { ns: "Warning", packageName }),
+                      !!warning.id,
+                      "warning",
+                    )
 
-                  if (!confirmed) {
-                    return false
+                    if (doNotAskAgain && warning.id) {
+                      this.ignoredWarnings.add(warning.id)
+                    }
+
+                    if (!confirmed) {
+                      return false
+                    }
                   }
                 }
               }

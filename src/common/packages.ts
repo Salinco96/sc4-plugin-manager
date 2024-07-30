@@ -39,7 +39,7 @@ export function checkCondition(
     }
 
     const packageOption = variantInfo?.options?.find(option => option.id === requirement)
-    if (packageOption) {
+    if (packageOption && !packageOption.global) {
       const value = getOptionValue(packageOption, packageOptionValues)
       return isArray(value) ? value.includes(requiredValue) : value === requiredValue
     }
@@ -58,6 +58,10 @@ export function getOptionDefaultValue(
   option: ReadonlyDeep<OptionInfo>,
 ): OptionValue | ReadonlyArray<OptionValue> {
   if (option.default !== undefined) {
+    if (option.multi && "choices" in option && option.default === "all") {
+      return option.choices!.map(choice => (typeof choice === "object" ? choice.value : choice))
+    }
+
     return option.default
   }
 

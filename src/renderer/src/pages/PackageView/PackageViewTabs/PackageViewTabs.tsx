@@ -2,7 +2,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, Tab } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { useCurrentVariant, usePackageStatus } from "@utils/packages"
+import { useStore } from "@utils/store"
 
 import { packageViewTabs, usePackageViewTab } from "./tabs"
 
@@ -10,10 +10,9 @@ export function PackageViewTabs({ packageId }: { packageId: string }): JSX.Eleme
   const { activeTab, setActiveTab } = usePackageViewTab()
   const { t } = useTranslation("PackageViewTabs")
 
-  const packageStatus = usePackageStatus(packageId)
-  const variantInfo = useCurrentVariant(packageId)
+  const tabs = useStore(store => packageViewTabs.filter(tab => tab.condition(packageId, store)))
+  const labels = useStore(store => tabs.map(tab => tab.label(t, packageId, store)))
 
-  const tabs = packageViewTabs.filter(tab => tab.condition(variantInfo, packageStatus))
   if (tabs.length === 0) {
     return null
   }
@@ -24,8 +23,8 @@ export function PackageViewTabs({ packageId }: { packageId: string }): JSX.Eleme
     <TabContext value={currentTab.id}>
       <Box borderBottom={1} borderColor="divider">
         <TabList onChange={(_, value) => setActiveTab(value)}>
-          {tabs.map(tab => (
-            <Tab key={tab.id} label={tab.name(t, variantInfo, packageStatus)} value={tab.id} />
+          {tabs.map((tab, index) => (
+            <Tab key={tab.id} label={labels[index]} value={tab.id} />
           ))}
         </TabList>
       </Box>

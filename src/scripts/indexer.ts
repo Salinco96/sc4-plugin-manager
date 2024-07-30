@@ -39,7 +39,10 @@ runIndexer({
     // TODO: Below are packages that would need more work to implement correctly
     "sc4evermore/40-nam-lite",
     "sc4evermore/41-appalachian-terrain-mod-by-lowkee33",
+    "simtropolis/11083-peg-stream-kit-ii-v205",
+    "simtropolis/12426-peg-stream-kit-deluxe-edition",
     "simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn",
+    "simtropolis/32690-mysimtropolis-members-immortalized-in-sc4",
     "simtropolis/35353-pegasus-cdk3-collection",
     "simtropolis/36257-discord-rich-presence-dll-for-simcity-4",
     // TODO: Below are external tools, not supported atm
@@ -69,6 +72,7 @@ runIndexer({
     "simtropolis/35753-jes_resourcepack_vol27-v3",
     "simtropolis/35978-sc4moredemandinfo",
     "simtropolis/36341-sc4ltextt-sc4-ltext-translator",
+    "simtropolis/36354-wtc-complex-sc4d-lex-legacy-bsc-custodian-rubik",
     // Below are deprecated
     "simtropolis/14842-bsc-prop-pack-cycledogg-no-1",
     "simtropolis/15322-bsc-texture-pack-cycledogg-v01",
@@ -78,8 +82,12 @@ runIndexer({
     "simtropolis/32879-pc-car-prop-pack",
     "simtropolis/32921-pc-hd-car-props",
   ],
-  fetchEntryDetails: false,
-  fetchNewEntries: false,
+  fetchEntryDetails() {
+    return false
+  },
+  fetchNewEntries() {
+    return false
+  },
   include(entry) {
     return entry.lastModified >= "2024-06-01T00:00:00Z"
   },
@@ -137,6 +145,8 @@ runIndexer({
     "simtropolis/35526-pc-mega-props-41": "simtropolis/35526-pc-mega-props-42",
     "simtropolis/35753-jes_resourcepack_vol27-v3": "simtropolis/35753-jes_resourcepack_vol27",
     "simtropolis/35978-sc4moredemandinfo": "simtropolis/35978-sc4-more-demand-info",
+    "simtropolis/36354-wtc-complex-sc4d-lex-legacy-bsc-custodian-rubik":
+      "sc4evermore/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex",
   },
 })
 
@@ -273,7 +283,7 @@ async function runIndexer(options: IndexerOptions) {
       const timestamp = config?.data.timestamp
       entries[sourceName] = data
 
-      if (options.fetchNewEntries) {
+      if (options.fetchNewEntries?.(source, category)) {
         console.debug(`Fetching entries from ${sourceName}...`)
 
         let nPages: number | undefined
@@ -452,7 +462,7 @@ async function runIndexer(options: IndexerOptions) {
     try {
       let wasUpdated = false
 
-      if (outdated || !entry.version || options.fetchEntryDetails) {
+      if (outdated || !entry.version || options.fetchEntryDetails?.(entry, entryId)) {
         console.debug(`Fetching ${entry.url}...`)
         const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
         const details = source.getEntryDetails(entryId, html)

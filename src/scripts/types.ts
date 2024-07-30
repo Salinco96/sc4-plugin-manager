@@ -2,8 +2,8 @@ import { HTMLElement } from "node-html-parser"
 
 export interface IndexerOptions {
   exclude?: string[]
-  fetchEntryDetails?: boolean
-  fetchNewEntries?: boolean
+  fetchEntryDetails?: (entry: IndexerBaseEntry, entryId: string) => boolean
+  fetchNewEntries?: (source: IndexerSource, category: IndexerCategory) => boolean
   include: (entry: IndexerBaseEntry, entryId: string) => boolean
   overrides?: IndexerOverrides
   sources: IndexerSource[]

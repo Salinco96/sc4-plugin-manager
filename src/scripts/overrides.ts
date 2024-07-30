@@ -220,6 +220,9 @@ export const overrides: IndexerOverrides = {
   "sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection": {
     packageId: "bsc/canals-collection",
   },
+  "simtropolis/11001-peg-trail-parks-iii": {
+    packageId: "pegasus/peg-trail-parks-3",
+  },
   "simtropolis/11421-jenx-porkie-expanded-porkie-props": {
     packageId: "porkissimo/jenx-porkie-expanded-props",
   },
@@ -258,6 +261,9 @@ export const overrides: IndexerOverrides = {
   },
   "simtropolis/21770-lbt-mega-prop-pack-vol01": {
     packageId: "lbt/mega-props-vol01",
+  },
+  "simtropolis/21323-stupid-news-ticker-mod-v12": {
+    packageId: "redlotus/stupid-news-ticker",
   },
   "simtropolis/22400-maxis-prop-names-and-query-fix": {
     packageId: "maxis/maxis-buildings-as-props",
@@ -466,6 +472,9 @@ export const overrides: IndexerOverrides = {
   "simtropolis/33304-sm2-mega-prop-pack-vol4": {
     packageId: "simmer2/mega-props-vol04",
   },
+  "simtropolis/33497-polish-mega-props-misc-vol01-v2": {
+    packageId: "simcity-polska/polish-mega-props-misc-vol01",
+  },
   "simtropolis/33533-pc-mega-props-2": {
     packageId: "pclark06/mega-props-vol02",
   },
@@ -611,6 +620,15 @@ export const overrides: IndexerOverrides = {
       },
       201910: {
         packageId: "giraffemountain/fa2-mid-rises",
+        variantId: "default",
+      },
+    },
+  },
+  "simtropolis/36353-arc-park": {
+    variants: {
+      202140: null,
+      202141: {
+        packageId: "sander97/arc-park",
         variantId: "default",
       },
     },

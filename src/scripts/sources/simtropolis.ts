@@ -200,8 +200,9 @@ export const SIMTROPOLIS: IndexerSource = {
     ).filter(dependencyId => dependencyId !== assetId)
 
     const images = html
-      .querySelectorAll(".cDownloadsCarousel .ipsCarousel_item img")
-      .map(element => element.attributes.src.replace("/thumb-", "/"))
+      .querySelectorAll(".cDownloadsCarousel .ipsCarousel_item span")
+      .map(e => e.attributes["data-fullURL"] || e.querySelector("img")?.attributes.src)
+      .filter(Boolean) as string[]
 
     return {
       dependencies,

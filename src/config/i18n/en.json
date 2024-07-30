@@ -346,6 +346,9 @@
     "openUrl": "Open website",
     "options": "Open options"
   },
+  "PackageViewFiles": {
+    "openFile": "Open file location"
+  },
   "PackageViewSummary": {
     "authors": "Authors",
     "category": "Category",
@@ -363,7 +366,7 @@
     "optionalDependencies_one": "{{count}} optional dependency",
     "optionalDependencies_other": "{{count}} optional dependencies",
     "readme": "Readme",
-    "requiredBy": "Required by",
+    "requiredBy": "{{count}} dependent packages",
     "summary": "Summary"
   },
   "Profile": {

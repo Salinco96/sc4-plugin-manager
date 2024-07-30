@@ -358,7 +358,9 @@ assets:
     dependencies: []
     description: "<body>
 
-      \                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+      \                           \
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
       \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
       style=\"\" width=\"34\" height=\"53\">
@@ -601,7 +603,7 @@ assets:
     sha256: 79b5259f47df4952950963acb703b38c62d9fd5498e6af0ef6792657e4087b6e
     size: 211030
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2014/thumb-5d12c6891edb0468eecd951049c52248-extra_cheats_plugin_01.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 354582
     url: https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/
     version: "1.0"
@@ -1144,19 +1146,7 @@ assets:
 
 
 
-
-
-
-
-
-
       							
-
-
-
-
-
-
 
 
 
@@ -1217,14 +1207,14 @@ assets:
     files:
       - ExtraExtraCheats.dll
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2016_11/spills.thumb.PNG.0943721225dea37e7bf774d50dd1e215.PNG
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/spills.PNG.5bfe8d3c3a62f7f64b57d447dc4eed7e.PNG
     lastModified: 2020-06-05T05:32:22Z
     name: Simmaster's Extra Cheats DLL
     repository: https://github.com/nsgomez/gzcom-dll
     sha256: bc67b8ade3254258e9ee4410d3fb7474f2f1c5f47a9b0eefd03dd526962b759f
     size: 137216
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/spills.thumb.PNG.0943721225dea37e7bf774d50dd1e215.PNG
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/31350-simmasters-extra-cheats-dll/
     version: 1.1.1
   simtropolis/32048-broken-buggis-extra-cheats-for-mac:
@@ -1356,4 +1346,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-62fc352a7264906d58dc8698b752fbf6-Banking%20City-Mar.jpg
     url: https://community.simtropolis.com/files/file/925-first-national-bank-of-simnation/
 
-timestamp: 2024-07-23T10:27:16.370Z
+timestamp: 2024-07-30T08:53:33.543Z

@@ -1275,10 +1275,159 @@ assets:
     authors:
       - STEX Custodian
     category: 0
+    dependencies:
+      - simtropolis/33309-ac-saturn-prop-pack
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	UPDATE: 11.07.2021 - There are mayor changes comparing to the previously released Polish Mega Prop Pack Vol. 1.dat. As it was mentioned by some fellow players one year ago, the original package was too big and less coherent. It took a while, but I did a separation (see changelog below), and took out the industrial related and/or previously released individual contents. Though I added a few generic items from Kbieniu, now most of the industrial related creations from Aras and some others can be found in a separate <a href="https://community.simtropolis.com/files/file/33309-ac-saturn-prop-pack/" rel="">Polish Mega Props - MISC Industrials</a>.   
+      </p>
+
+
+      <p>
+      	<s>This is an overall compilation of separate unique prop packs from the SimCity Polska site, which is no longer running.</s> This is a <strong>dependency package</strong>, and it doesn't contain any ploppable or growable elements. Although it can be used for creating new lots with Maxis Lot Editor or <abbr title="Plugin Manager">PIM</abbr>-X.<br>
+      	(Sidenote: none of these models and props are my (Tyberius06/STEX Custodian) creations. These were created by the below listed custom content creators. All credits go to them.)
+      </p>
+
+
+      <p>
+      	This is a dependency package, which contains 155 models and props (it doesn't contain any ingame ploppable elements) compiled/merged into one single *.dat file. These are not new contents per se, they were released either separatelly in smaller prop packs or as part of other uploads on the demissed SimCity Polska (SCP) site. The props and models for the mega prop pack come from different sets from different times and therefore their quality is not equal. It contains props and models from the original Polish Prop Packs (1-2) made by <strong>Fordoniak</strong>/adik151/adrian10; from<strong> Aras</strong>'s Polish Bus Props Pack; Bus Depo, border control office, rural polish bus sheds and Palm Tree props made by <strong>Kbieniu</strong>, and some smaller separatelly released props from different creators, like <strong>RaV</strong>, <strong>Ferox </strong>and <strong>szymcar </strong>.
+      </p>
+
+
+      <p>
+      	Detailed list of the used contents is available in the attached readme file. 
+      </p>
+
+
+      <table border="0" cellpadding="2" cellspacing="0" style="background-color:#ffffff;font-size:12px;" width="720">
+      	<tbody>
+      		<tr bgcolor="#e9ebf0">
+      			<td width="250">
+      				<b>Installing:</b>
+      			</td>
+      			<td width="600">
+      				Copy/Extract the "<strong>SCP</strong>" folder from the *.zip into your plugin folder. You don't need to keep the "_Documents" folder in your plugin folder, you can remove it to a safe location.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td width="250">
+      				<b>Un-Installing:</b>
+      			</td>
+      			<td width="600">
+      				To un-install the files, simply bulldoze every lot which are related to this download in your cities and delete the files from the plugins folder afterwards.
+      			</td>
+      		</tr>
+      		<tr bgcolor="#e9ebf0">
+      			<td width="300">
+      				Defaul path for Dat File(s) should be like:
+      			</td>
+      			<td width="600">
+      				\My Docs\SimCity 4\Plugins\SCP\SCP_Props\Polish SCP Mega Prop Pack vol. 1_v2.dat
+      			</td>
+      		</tr>
+      		<tr>
+      			<td width="250">
+      				Readme and JPGs
+      			</td>
+      			<td width="600">
+      				<p>
+      					Anywhere outside your plugins folder. You will find all the necessary details in the readme file which is in the<span> _</span><b>Documents\SCP_Readmes</b><span> </span>folder.
+      				</p>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<strong>Dependencies:</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">
+      	To ensure the proper functionality, make sure the files mentioned below are installed on to your computer.
+      </p>
+
+
+      <p style="text-align:center;">
+      	<span>It doesn't have actual dependencies, because this upload is a DEPENDENCY, <span style="color:#c0392b;"><strong>but highly recommended to install the following tool, and run the included cleanintol....txt file</strong></span>.</span>
+      </p>
+
+
+      <ul style="background-color:#ffffff;color:#000000;font-size:medium;text-align:justify;">
+      	<li>
+      		<span style="font-size:12px;"><strong><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM</a></strong><br>
+      		- It's<span> </span><b>essential</b><span> </span>to run the included<span> </span><b><i>CleanItol_SCP Polish Mega Prop Pack vol. 1.txt</i></b><span> </span>file with the Cleanitol tool, and get the rid of the duplications what you might have in your plugin folder, specially if you already have most of the contens from the old SimCity Polska site.</span>
+      	</li>
+      </ul>
+
+
+      <ul style="background-color:#ffffff;color:#000000;font-size:medium;text-align:justify;">
+      	<li>
+      		<span style="font-size:12px;"><b>CleanItol_SCP Polish Mega Prop Pack vol. 1 v2.txt</b><span> </span>- included</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Credits and thanks</strong>:
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Thanks for the following great custom content creators for their work:</span><br style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;" >
+      	<b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Fordoniak/adik151/adrian10</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><span> </span>- The original Polish Prop Packs, and the Polish House and Block Packs</span><br style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;" >
+      	<b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Aras</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><span> </span>- all the great models and props under the AC alias and for the Polish Bus and Saturn prop packs</span><br style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;" >
+      	<b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Kbieniu7</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><span> </span>- Polish Road Signs, Bus Depo and Palm Tree props. Also the support and help with the SCP Restoration Project and to allow me to create this mega prop pack as part of it.</span><br style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;" >
+      	<b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">MRQS</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><span> </span>- Railcar Set and the Mineshaft model</span><br style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;" >
+      	<b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">RaV</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">,<span> </span></span><b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Rajfurke</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">,<span> </span></span><b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Ferox</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">,<span> </span></span><b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">szymcar</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><span> </span>and<span> </span></span><b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Perun</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">: for the various misc props and models which can be found in this pack.</span><br style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;" >
+      	<b style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Tyberius06 and the STEX Custodian</b><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><span> </span>- compiling/merging the separate prop packs and creating this mega prop pack, the readme and the cleanitol file.</span><br style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;" >
+      	<span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Also Special thanks for everybody who has been involved collecting the lost SimCity Polska contents, for the help and support from the<span> </span></span><a href="https://community.simtropolis.com/forums/topic/75514-current-collection/" rel="" style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><b>Current Collection/SimCity Polska Organization Club</b></a><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">: Yarahi, kschmidt, sejr99999, CorinaMarie, Cyclone Boom, catty-cb, Mika88, ramrec, monkeywater, RaV, Duco, AsimPika3172, matias93, 11241036.</span>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><strong>Support</strong>:</span>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">Although these are legacy contents, therefore the support of them is very limited, please post any feedback or support issues in the appropriate forums at Simtropolis<span> </span></span><a href="https://community.simtropolis.com/clubs/27-simcity-polska-organization/" rel="" style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;" title="Current Collection"><b>SimCity Polska Organization Club</b></a><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><span> </span>and/or<span> </span></span><a href="https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic/" rel="" style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;"><b>STEX Custodian General Support Topic</b></a><span style="background-color:#ffffff;color:#000000;font-size:12px;text-align:justify;">. We will attempt to answer them to the best of our knowledge, and as quickly as possible.</span>
+      </p>
+
+      						</body>
+    filename: Polish Mega Props - MISC vol01 v2.zip
+    files:
+      - _Documents/SCP_Readmes/SCP Polish Mega Prop Pack vol. 1_index.jpg
+      - _Documents/SCP_Readmes/readme_SCP Polish Mega Prop Pack vol. 1 v2.html
+      - _Documents/SCP_Readmes/CleanItol_SCP Polish Mega Prop Pack vol. 1 v2.txt
+      - SCP/SCP_Props/Polish SCP Mega Prop Pack vol. 1_v2.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_03/5e6c1319ddfc4_Polishproppackvol.1.jpg.4aed1aae7e735c576823cf245f11b9b1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_03/5e6c131bdf5f0_Polishproppackvol.2.jpg.c68b95f832e3dcf2e0bb34f7f50c0930.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60eadd9b3d0c1_SCPPolishMegaPropPackvol.1_index.jpg.816f3653ce858a0f6d84c7653ba304b8.jpg
     lastModified: 2021-07-11T12:35:41Z
     name: Polish Mega Props - MISC vol01 v2
+    sha256: 82e069c2c768e66913e7feb622f1b849935702265bd35ae8723b9dedd70cb2f0
+    size: 8390271
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_07/60eade9c29889_SCPPolishMegaPropPackvol.1_index.thumb.jpg.3046b2e5795bb89855bf68498773472f.jpg
+    timestamp: 2024-07-29T09:55:36.596Z
+    uncompressed: 10689354
     url: https://community.simtropolis.com/files/file/33497-polish-mega-props-misc-vol01-v2/
+    version: "2.0"
   simtropolis/34419-lodz-tuwima-by-tao:
     authors:
       - sejr99999
@@ -1368,4 +1517,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/651976872295c_FordoniakPolishPrimarySchool-d.thumb.jpg.b1696412851f8b5786eec9201462da1e.jpg
     url: https://community.simtropolis.com/files/file/35645-fordoniak-polish-primary-school-podstawowka/
 
-timestamp: 2024-07-23T10:27:16.370Z
+timestamp: 2024-07-30T08:53:33.543Z

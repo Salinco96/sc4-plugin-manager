@@ -1,4 +1,5 @@
-import { List, ListItem } from "@mui/material"
+import { Button, List, ListItem } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 import { checkCondition } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
@@ -11,28 +12,38 @@ export function PackageViewFiles({ packageId }: { packageId: string }): JSX.Elem
   const profileOptions = useStore(store => store.options)
   const variantInfo = useCurrentVariant(packageId)
 
+  const { t } = useTranslation("PackageViewFiles")
+
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {variantInfo?.files?.map(file => (
-        <ListItem
-          key={file.path}
-          onClick={() => actions.openPackageFile(packageId, variantInfo.id, file.path)}
-          sx={{
-            opacity: checkCondition(
-              file.condition,
-              packageId,
-              variantInfo,
-              profileInfo,
-              profileOptions,
-              features,
-            )
-              ? undefined
-              : 0.5,
-          }}
-        >
-          {file.path}
-        </ListItem>
-      ))}
+      {variantInfo?.files
+        ?.sort((a, b) => a.path.localeCompare(b.path))
+        .map(file => (
+          <ListItem key={file.path} sx={{ padding: 0 }}>
+            <Button
+              color="inherit"
+              disabled={
+                !checkCondition(
+                  file.condition,
+                  packageId,
+                  variantInfo,
+                  profileInfo,
+                  profileOptions,
+                  features,
+                )
+              }
+              onClick={async () => {
+                const path = file.path.replace(/[\\/]?[^\\/]+$/, "")
+                await actions.openPackageFile(packageId, variantInfo.id, path)
+              }}
+              sx={{ justifyContent: "start", textTransform: "unset", width: "100%" }}
+              title={t("openFile")}
+              variant="outlined"
+            >
+              {file.path.replaceAll(/[\\/]/g, " / ")}
+            </Button>
+          </ListItem>
+        ))}
     </List>
   )
 }

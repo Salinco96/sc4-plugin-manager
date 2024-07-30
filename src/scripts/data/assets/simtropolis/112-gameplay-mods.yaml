@@ -654,7 +654,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -663,17 +663,13 @@ assets:
 
 
 
+      							
 
 
 
 
 
-
-
-
-
-
-
+      							
       <p>
       	This modd contains the plugin landmark props that Maxis forgot. (eg. The Grand Central Station etc.)
       </p>
@@ -685,13 +681,13 @@ assets:
       - Readme.txt
       - Plugin_landmarks_and_other_missing_Props.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_01_2004/9931d5076473c8f6816a23e0427acc38-default.jpg
+      - https://www.simtropolis.com/objects/screens/0017/9931d5076473c8f6816a23e0427acc38-default.jpg
     lastModified: 2023-07-20T18:54:39Z
     name: Plugin Landmark Props
     sha256: f8ba9ec24483cc0d907156096675bf2498f775df33df010971fa09bea2f3fad4
     size: 5271
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2004/thumb-9931d5076473c8f6816a23e0427acc38-default.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 14691
     url: https://community.simtropolis.com/files/file/21286-plugin-landmark-props/
     version: "1.0"
@@ -887,6 +883,88 @@ assets:
     name: "'Stupid News Ticker' Mod V1.1"
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2004/thumb-21c26c630801c14cc47a7be39ba16216-default.jpg
     url: https://community.simtropolis.com/files/file/21323-stupid-news-ticker-mod-v11/
+  simtropolis/21323-stupid-news-ticker-mod-v12:
+    authors:
+      - redlotus
+    category: 30
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	Tired of having to clear out a message box full of useless news items?  Or are you sick of missing important messages because you were ignoring all of the junk that your advisors were throwing at you?
+      </p>
+
+
+      <p>
+      	The end is here.  This mod eliminates nearly all of the useless 'news items' that keep popping up.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>Version History:</strong>
+      </p>
+
+
+      <p>
+      	V1.2:<br>
+      	Fix by <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/826662-drfrankinstein93/?do=hovercard" data-mentionid="826662" href="https://community.simtropolis.com/profile/826662-drfrankinstein93/" id="ips_uid_405_4" rel="">@DrFrankinStein93</a>: fixed a bug that made the airport upgrade prompt unavailable even though requirements were met.
+      </p>
+
+
+      <p>
+      	V1.1:<br>
+      	Fixed a bug that made rewards unavailable even though requirements were met.  I had to allow all City Planner messages through in order to fix this, so you will have more messages coming through.
+      </p>
+
+
+      <p>
+      	V1.0:<br>
+      	Rather than listing the many messages that were deleted, here is a list of the types of messages you will still get:<br>
+      	Reward and Airport Upgrade alerts.<br>
+      	All messages that contain direct links to problem areas.<br>
+      	Messages that warn you about underfunded civic buildings where a strike is imminent.<br>
+      	Disaster and Strike Messages.<br>
+      	Population Milestones (I took out most of the other "Good Job" messages, so I had to leave something).<br>
+      	Reward 'news-only' items.<br>
+      	A few misc 'run-once' news items.
+      </p>
+
+
+      <p>
+      	<br>
+      	To Install:<br>
+      	Unzip the .dat file and place into your Maxis\SimCity 4\Plugins folder.
+      </p>
+
+
+      <p>
+      	To Uninstall:<br>
+      	Simply delete or move out of the Plugins folder.
+      </p>
+
+      						</body>
+    filename: News_Filter_1_2.zip
+    files:
+      - News_Filter_1_2/Readme.txt
+      - News_Filter_1_2/News_Filter.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0005/21c26c630801c14cc47a7be39ba16216-default.jpg
+    lastModified: 2024-07-24T23:10:02Z
+    name: "'Stupid News Ticker' Mod V1.2"
+    sha256: 197eb39a5e8bbf95f6b2d1961a2d9deec6cebe2da7689635122ed33ccc98c99b
+    size: 86978
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2004/thumb-21c26c630801c14cc47a7be39ba16216-default.jpg
+    timestamp: 2024-07-26T11:00:23.375Z
+    uncompressed: 97693
+    url: https://community.simtropolis.com/files/file/21323-stupid-news-ticker-mod-v12/
+    version: "1.2"
   simtropolis/21326-transit-supermod-v20-rh-patch1:
     authors:
       - DarkMatter
@@ -1070,7 +1148,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -1079,9 +1157,13 @@ assets:
 
 
 
+      							
 
 
 
+
+
+      							
       <p>
       	<strong><big>Prop Names and Query Fix</big></strong>
       </p>
@@ -1199,14 +1281,14 @@ assets:
       - PropFix_1_BEFORE.jpg
       - All Maxis building props with proper names.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_09_2009/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_1_BEFORE.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_09_2009/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_2_AFTER.jpg
+      - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_1_BEFORE.jpg
+      - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_2_AFTER.jpg
     lastModified: 2023-07-21T10:03:18Z
     name: Maxis Prop Names and Query Fix
     sha256: 505c30cf671ad4f75cde50f2e44bb854b8b0863e5649b568813096b141c726cd
     size: 97969
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2009/thumb-0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_1_BEFORE.jpg
-    timestamp: 2024-07-05T07:02:43.202Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 463635
     url: https://community.simtropolis.com/files/file/22400-maxis-prop-names-and-query-fix/
     version: "1.0"
@@ -1265,7 +1347,9 @@ assets:
     dependencies: []
     description: "<body>
 
-      \                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+      \                           \
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
       \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
       style=\"\" width=\"34\" height=\"53\">
@@ -1311,7 +1395,7 @@ assets:
     sha256: 805a3a8fc4f265b0f9b86ab0eb9fef29deb46db67f6d69a12cbdb50c65c08cee
     size: 299038
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2011/thumb-0d98a026f5b952e8a0fe90c15ae81ef6-daynnitestex.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 495430
     url: https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/
     version: "1.0"
@@ -2074,7 +2158,9 @@ assets:
     dependencies: []
     description: "<body>
 
-      \                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+      \                           \
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
       \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
       style=\"\" width=\"34\" height=\"53\">
@@ -2226,14 +2312,14 @@ assets:
     files:
       - SC4Fix.dll
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2015_12/sc4fix.thumb.png.ced8b7b12af0c352bbb50b295298a062.png
+      - https://www.simtropolis.com/objects/screens/monthly_2015_12/sc4fix.png.d2cd8a6bac0d8094806a384a70846a0e.png
     lastModified: 2018-01-21T05:11:27Z
     name: "SC4Fix: Third-party patches for SC4"
     repository: https://github.com/nsgomez/sc4fix
     sha256: ff30d3bf555fc987224fb88820fbb72e7b1fb73b7c689e1cc95c9a58722b4643
     size: 62876
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_12/sc4fix.thumb.png.ced8b7b12af0c352bbb50b295298a062.png
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 112128
     url: https://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/
     version: 1.0.7
@@ -2345,10 +2431,698 @@ assets:
     authors:
       - Cyclone Boom
     category: 30
-    lastModified: 2024-05-25T04:27:24Z
+    dependencies:
+      - simtropolis/36238-amps
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<div style="float:left; width:280px; padding:10px; cursor:default;">
+      	<span style="display:none;">CoriBoom™ Productions </span>
+      	<div>
+      		<a href="https://community.simtropolis.com/tags/CoriBoom/" rel=""><img alt="CoriBoom_Productions_Logo.png" class="ipsImage" src="https://www.simtropolis.com/library/misc/CoriBoom_Productions_Logo.png" style="width:225px; height:auto; border:none;"></a>
+      	</div>
+
+      	<div>
+      		<span style="margin-left:2px; font-size:13px; color:#909CB0; text-shadow:1px 1px 1px #DBFBFE;"><em>Proudly Presents...</em></span><span style="display:none;"> </span>
+      	</div>
+
+      	<div style="margin-bottom:10px;">
+      		<span style="font-size:36px;"><span style="display:block; font-weight:800; text-shadow:1px 1px 0px #CBCBCB; margin-top:-10px;"><span style="color:#1ADCFF;"><strong>MySim</strong></span><span style="color:#122850;">tropolis</span></span></span><span style="display:none;">: </span>
+      	</div>
+      </div>
+
+      <style type="text/css">
+
+      .myst-format {
+      	 background: #235F92 !important;
+      	 color: gold !important;
+      	 padding: 0px 10px 0px 10px !important;
+      	 text-shadow: 1px 1px 0px #333333;
+      	 box-shadow: 1px 1px 0px 0px gold;
+      	 margin-top: 5px;
+          }</style>
+      <p>
+      	<span style="font-size:18px; color:#FC942C;"><strong>Simtropolis Members immortalized in SimCity 4!</strong></span><span style="display:none;"> </span>
+      </p>
+
+
+      <p>
+      	In our 1st official <em><span style="color:#FF00FF;">Cori</span><span style="color:#1F4EAC;">Boom</span></em>™ release to the STEX, <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/737259-corinamarie/?do=hovercard" data-mentionid="737259" href="https://community.simtropolis.com/profile/737259-corinamarie/" rel="" style="">@CorinaMarie</a> and I have humbly created a mod collectively designed for everyone here at Simtropolis. <img alt="*:)" data-emoticon="1" height="15" src="https://community.simtropolis.com/assets/emoticons/default_1.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_1@2x.gif 2x" title="*:)" width="15">
+      </p>
+
+
+      <p>
+      	I'm sure many of you will have heard of <strong>MySim Mode</strong> in SC4. The idea being to establish up to 5 Sims per city, giving them a place to interact and see how they feel and respond to their surroundings from <a href="https://community.simtropolis.com/forums/topic/74611-mysim-thought-and-speech-balloon-dictionary/" rel="">speech balloons</a>.
+      </p>
+
+
+      <p>
+      	However, it really only serves as a secondary aspect of the simulation, and doesn't directly influence gameplay mechanics. It's possible to select from a list of 21 predefined characters, or import those you've made yourself from <em>The Sims</em> game. This is all well and good. But in the grand scheme of things, it may seem a bit of a non-personable side show, and not so much everyone's idea of fun.
+      </p>
+
+
+      <p>
+      	But fear not, that's where <span style="font-size:16px; font-weight:800; text-shadow:1px 1px 0px #CBCBCB;"><span style="color:#1ADCFF;"><strong>MySim</strong></span><span style="color:#122850;">tropolis</span></span> comes in, allowing community profiles to be immortalized and played as visible characters in the game. Find a house, take up a job, and watch your Sim live, work, and play. This could be inside a ritzy suburban estate, a glitzy skyscraper tower, somewhere hidden amid a town called <em>Middle Of</em> (near <em>Nowhere</em>), on an idyllic remote island, an amazing castle town, or even on another planet!
+      </p>
+
+
+      <p>
+      	It's completely up to you... <img alt="*;)" data-emoticon="1" height="15" src="https://community.simtropolis.com/assets/emoticons/default_2.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_2@2x.gif 2x" title="*;)" width="15">
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px; color:#122850;"><strong>Total of <span style="color:goldenrod;">202</span> Members Included</strong>  (So Far)</span>
+      </p>
+
+
+      <p>
+      	Following the <a href="https://community.simtropolis.com/forums/topic/757768-mysimtropolis-invitation-to-become-a-simcity-4-mysim/" rel="">Sign Up thread</a>, we announced the successful breakthrough technical development of a hex editing method. This has allowed data to be imported in the MySim entry format recognised by the game, adding each to the selection panel. There's a seemingly unlimited number of places, and so we've asked members to volunteer and have their <abbr title="Simtropolis">ST</abbr> identity preserved in our mod.
+      </p>
+
+
+      <p>
+      	The profile for each <span style="font-size:16px; font-weight:800; text-shadow:1px 1px 0px #CBCBCB;"><span style="color:#1ADCFF;"><strong>MySim</strong></span><span style="color:#122850;">tropolis</span></span> Sim consists of:
+      </p>
+
+
+      <ul>
+      	<li>
+      		Avatar
+      	</li>
+      	<li>
+      		Name
+      	</li>
+      	<li>
+      		Gender
+      	</li>
+      	<li>
+      		Zodiac
+      	</li>
+      </ul>
+
+
+      <p>
+      	<br>
+      	As of this update (25 May 2024), the following members are included as part of this initiative:
+      </p>
+
+
+      <div class="ipsSpoiler" data-ipsspoiler="" data-ipsspoiler-option="The List" style="background:none; border:none;">
+      	<div class="ipsSpoiler_header">
+      		<span>Spoiler</span>
+      	</div>
+
+      	<div class="ipsSpoiler_contents">
+      		<p style="text-align:center;">
+      			<span style="font-size:18px; font-weight:800; text-shadow:1px 1px 0px #CBCBCB;"><span style="color:#1ADCFF;"><strong>MySim</strong></span><span style="color:#122850;">tropolis <strong>Immortalized Members</strong></span></span>
+      		</p>
+
+      		<p style="background: rgb(255, 247, 239); padding: 10px; border: 1px solid goldenrod; border-radius: 5px; font-size: 14px; line-height: 2; text-align:center;">
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/737259-corinamarie/?do=hovercard" data-mentionid="737259" href="https://community.simtropolis.com/profile/737259-corinamarie/" rel="">CorinaMarie</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/533355-cyclone-boom/?do=hovercard" data-mentionid="533355" href="https://community.simtropolis.com/profile/533355-cyclone-boom/" rel="">Cyclone Boom</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/3-dirktator/?do=hovercard" data-mentionid="3" href="https://community.simtropolis.com/profile/3-dirktator/" rel="">Dirktator</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/323727-airman15/?do=hovercard" data-mentionid="323727" href="https://community.simtropolis.com/profile/323727-airman15/" rel="">airman15</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/157989-catty-cb/?do=hovercard" data-mentionid="157989" href="https://community.simtropolis.com/profile/157989-catty-cb/" rel="">catty-cb</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/572544-robertlm78/?do=hovercard" data-mentionid="572544" href="https://community.simtropolis.com/profile/572544-robertlm78/" rel="">RobertLM78</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/771247-meph/?do=hovercard" data-mentionid="771247" href="https://community.simtropolis.com/profile/771247-meph/" rel="">Meph</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/398933-androgeos/?do=hovercard" data-mentionid="398933" href="https://community.simtropolis.com/profile/398933-androgeos/" rel="">Androgeos</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/541510-evansre4/?do=hovercard" data-mentionid="541510" href="https://community.simtropolis.com/profile/541510-evansre4/" rel="">EvansRE4</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/766239-reddunovn/?do=hovercard" data-mentionid="766239" href="https://community.simtropolis.com/profile/766239-reddunovn/" rel="">RedDunoVn</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/3311-mrbisonm/?do=hovercard" data-mentionid="3311" href="https://community.simtropolis.com/profile/3311-mrbisonm/" rel="">mrbisonm</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/50114-jimc/?do=hovercard" data-mentionid="50114" href="https://community.simtropolis.com/profile/50114-jimc/" rel="">JimC</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/760649-wolfze/?do=hovercard" data-mentionid="760649" href="https://community.simtropolis.com/profile/760649-wolfze/" rel="">WolfZe</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/377592-robdragon/?do=hovercard" data-mentionid="377592" href="https://community.simtropolis.com/profile/377592-robdragon/" rel="">robdragon</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard" data-mentionid="660284" href="https://community.simtropolis.com/profile/660284-tyberius06/" rel="">Tyberius06</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/25195-prophet42/?do=hovercard" data-mentionid="25195" href="https://community.simtropolis.com/profile/25195-prophet42/" rel="">Prophet42</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/752460-huggy-bear/?do=hovercard" data-mentionid="752460" href="https://community.simtropolis.com/profile/752460-huggy-bear/" rel="">Huggy-Bear</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/35144-nmuspidey/?do=hovercard" data-mentionid="35144" href="https://community.simtropolis.com/profile/35144-nmuspidey/" rel="">NMUSpidey</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/500306-whte_rbt/?do=hovercard" data-mentionid="500306" href="https://community.simtropolis.com/profile/500306-whte_rbt/" rel="">Whte_rbt</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/34076-captcity/?do=hovercard" data-mentionid="34076" href="https://community.simtropolis.com/profile/34076-captcity/" rel="">CaptCity</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/233473-jp-schriefer/?do=hovercard" data-mentionid="233473" href="https://community.simtropolis.com/profile/233473-jp-schriefer/" rel="">JP Schriefer</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/195880-tekindust/?do=hovercard" data-mentionid="195880" href="https://community.simtropolis.com/profile/195880-tekindust/" rel="">TekindusT</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/123879-flann/?do=hovercard" data-mentionid="123879" href="https://community.simtropolis.com/profile/123879-flann/" rel="">Flann</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/235805-terring/?do=hovercard" data-mentionid="235805" href="https://community.simtropolis.com/profile/235805-terring/" rel="">Terring</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/745852-asimpika3172/?do=hovercard" data-mentionid="745852" href="https://community.simtropolis.com/profile/745852-asimpika3172/" rel="">AsimPika3172</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/34177-andreharv/?do=hovercard" data-mentionid="34177" href="https://community.simtropolis.com/profile/34177-andreharv/" rel="">andreharv</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/35200-slickbg56/?do=hovercard" data-mentionid="35200" href="https://community.simtropolis.com/profile/35200-slickbg56/" rel="">slickbg56</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/685798-_michael/?do=hovercard" data-mentionid="685798" href="https://community.simtropolis.com/profile/685798-_michael/" rel="">_Michael</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/278337-tonraq/?do=hovercard" data-mentionid="278337" href="https://community.simtropolis.com/profile/278337-tonraq/" rel="">Tonraq</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/406778-fosc-tule00/?do=hovercard" data-mentionid="406778" href="https://community.simtropolis.com/profile/406778-fosc-tule00/" rel="">FOSC tule00</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/96537-haljackey/?do=hovercard" data-mentionid="96537" href="https://community.simtropolis.com/profile/96537-haljackey/" rel="">Haljackey</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/55542-sc4-meister/?do=hovercard" data-mentionid="55542" href="https://community.simtropolis.com/profile/55542-sc4-meister/" rel="">SC4 meister</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/643881-mrsmartman/?do=hovercard" data-mentionid="643881" href="https://community.simtropolis.com/profile/643881-mrsmartman/" rel="">mrsmartman</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/321174-ulisse/?do=hovercard" data-mentionid="321174" href="https://community.simtropolis.com/profile/321174-ulisse/" rel="">ulisse</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/754298-surrodox2001/?do=hovercard" data-mentionid="754298" href="https://community.simtropolis.com/profile/754298-surrodox2001/" rel="">surrodox2001</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/643361-jeffryfisher/?do=hovercard" data-mentionid="643361" href="https://community.simtropolis.com/profile/643361-jeffryfisher/" rel="">jeffryfisher</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/744613-rretail/?do=hovercard" data-mentionid="744613" href="https://community.simtropolis.com/profile/744613-rretail/" rel="">RRetail</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/166423-wustmann/?do=hovercard" data-mentionid="166423" href="https://community.simtropolis.com/profile/166423-wustmann/" rel="">Wustmann</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/116681-tysons4/?do=hovercard" data-mentionid="116681" href="https://community.simtropolis.com/profile/116681-tysons4/" rel="">Tysons4</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/439990-doctoryzer/?do=hovercard" data-mentionid="439990" href="https://community.simtropolis.com/profile/439990-doctoryzer/" rel="">Doctoryzer</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/315477-toby-ferrian/?do=hovercard" data-mentionid="315477" href="https://community.simtropolis.com/profile/315477-toby-ferrian/" rel="">Toby Ferrian</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/312346-lucario-boricua/?do=hovercard" data-mentionid="312346" href="https://community.simtropolis.com/profile/312346-lucario-boricua/" rel="">Lucario Boricua</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/729746-manuel832/?do=hovercard" data-mentionid="729746" href="https://community.simtropolis.com/profile/729746-manuel832/" rel="">manuel832</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/594316-duco/?do=hovercard" data-mentionid="594316" href="https://community.simtropolis.com/profile/594316-duco/" rel="">Duco</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/85340-jasoncw/?do=hovercard" data-mentionid="85340" href="https://community.simtropolis.com/profile/85340-jasoncw/" rel="">Jasoncw</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/294058-andrey-km/?do=hovercard" data-mentionid="294058" href="https://community.simtropolis.com/profile/294058-andrey-km/" rel="">Andrey km</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/722681-f3cs/?do=hovercard" data-mentionid="722681" href="https://community.simtropolis.com/profile/722681-f3cs/" rel="">f3cs</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/758498-nathaniel-herapen/?do=hovercard" data-mentionid="758498" href="https://community.simtropolis.com/profile/758498-nathaniel-herapen/" rel="">Nathaniel Herapen</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/753315-the-british-sausage/?do=hovercard" data-mentionid="753315" href="https://community.simtropolis.com/profile/753315-the-british-sausage/" rel="">The British Sausage</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/531648-esp15/?do=hovercard" data-mentionid="531648" href="https://community.simtropolis.com/profile/531648-esp15/" rel="">ESP15</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/113488-silur/?do=hovercard" data-mentionid="113488" href="https://community.simtropolis.com/profile/113488-silur/" rel="">Silur</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/288589-manuel-ito/?do=hovercard" data-mentionid="288589" href="https://community.simtropolis.com/profile/288589-manuel-ito/" rel="">Manuel-ito</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/771934-velinoxx/?do=hovercard" data-mentionid="771934" href="https://community.simtropolis.com/profile/771934-velinoxx/" rel="">Velinoxx</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/279388-sejr99999/?do=hovercard" data-mentionid="279388" href="https://community.simtropolis.com/profile/279388-sejr99999/" rel="">sejr99999</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/332342-toothless-stitch/?do=hovercard" data-mentionid="332342" href="https://community.simtropolis.com/profile/332342-toothless-stitch/" rel="">Toothless Stitch</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/705046-eaglesong/?do=hovercard" data-mentionid="705046" href="https://community.simtropolis.com/profile/705046-eaglesong/" rel="">eaglesong</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/444001-simmer2/?do=hovercard" data-mentionid="444001" href="https://community.simtropolis.com/profile/444001-simmer2/" rel="">Simmer2</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/44148-hayleyrenanemeth/?do=hovercard" data-mentionid="44148" href="https://community.simtropolis.com/profile/44148-hayleyrenanemeth/" rel="">HayleyRenaNemeth</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/706629-gtaman3/?do=hovercard" data-mentionid="706629" href="https://community.simtropolis.com/profile/706629-gtaman3/" rel="">gtaman3</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/772018-alastriona/?do=hovercard" data-mentionid="772018" href="https://community.simtropolis.com/profile/772018-alastriona/" rel="">Alastriona</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/753861-reaper1219/?do=hovercard" data-mentionid="753861" href="https://community.simtropolis.com/profile/753861-reaper1219/" rel="">reaper1219</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/664314-jjbers/?do=hovercard" data-mentionid="664314" href="https://community.simtropolis.com/profile/664314-jjbers/" rel="">JJBers</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/711736-angelucho22/?do=hovercard" data-mentionid="711736" href="https://community.simtropolis.com/profile/711736-angelucho22/" rel="">angelucho22</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/20315-mcduell/?do=hovercard" data-mentionid="20315" href="https://community.simtropolis.com/profile/20315-mcduell/" rel="">McDuell</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/744631-doni98/?do=hovercard" data-mentionid="744631" href="https://community.simtropolis.com/profile/744631-doni98/" rel="">Doni98</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/148997-the-thinker/?do=hovercard" data-mentionid="148997" href="https://community.simtropolis.com/profile/148997-the-thinker/" rel="">The Thinker</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/565059-sapador-castelo/?do=hovercard" data-mentionid="565059" href="https://community.simtropolis.com/profile/565059-sapador-castelo/" rel="">Sapador Castelo</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/770290-oasisarchitect/?do=hovercard" data-mentionid="770290" href="https://community.simtropolis.com/profile/770290-oasisarchitect/" rel="">OasisArchitect</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/86690-hamish/?do=hovercard" data-mentionid="86690" href="https://community.simtropolis.com/profile/86690-hamish/" rel="">Hamish</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/63762-vegeman/?do=hovercard" data-mentionid="63762" href="https://community.simtropolis.com/profile/63762-vegeman/" rel="">vegeman</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/741373-june88/?do=hovercard" data-mentionid="741373" href="https://community.simtropolis.com/profile/741373-june88/" rel="">June88</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/694242-abrams124/?do=hovercard" data-mentionid="694242" href="https://community.simtropolis.com/profile/694242-abrams124/" rel="">Abrams124</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/679038-jackspital/?do=hovercard" data-mentionid="679038" href="https://community.simtropolis.com/profile/679038-jackspital/" rel="">Jackspital</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/649091-alan-waters/?do=hovercard" data-mentionid="649091" href="https://community.simtropolis.com/profile/649091-alan-waters/" rel="">Alan Waters</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/763548-zexcoilerkingbolt24/?do=hovercard" data-mentionid="763548" href="https://community.simtropolis.com/profile/763548-zexcoilerkingbolt24/" rel="">zexcoilerkingbolt24</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/358450-ceafus-88/?do=hovercard" data-mentionid="358450" href="https://community.simtropolis.com/profile/358450-ceafus-88/" rel="">Ceafus 88</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/467073-drack/?do=hovercard" data-mentionid="467073" href="https://community.simtropolis.com/profile/467073-drack/" rel="">Drack</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/342692-bryan623/?do=hovercard" data-mentionid="342692" href="https://community.simtropolis.com/profile/342692-bryan623/" rel="">Bryan623</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/437815-azurespecter/?do=hovercard" data-mentionid="437815" href="https://community.simtropolis.com/profile/437815-azurespecter/" rel="">Azurespecter</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/37137-dedgren/?do=hovercard" data-mentionid="37137" href="https://community.simtropolis.com/profile/37137-dedgren/" rel="">dedgren</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/33566-kingofsimcity/?do=hovercard" data-mentionid="33566" href="https://community.simtropolis.com/profile/33566-kingofsimcity/" rel="">kingofsimcity</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/20442-simdragon/?do=hovercard" data-mentionid="20442" href="https://community.simtropolis.com/profile/20442-simdragon/" rel="">SimDragon</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/240203-rivit/?do=hovercard" data-mentionid="240203" href="https://community.simtropolis.com/profile/240203-rivit/" rel="">rivit</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/773222-terubby/?do=hovercard" data-mentionid="773222" href="https://community.simtropolis.com/profile/773222-terubby/" rel="">terubby</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/259348-xdefconx/?do=hovercard" data-mentionid="259348" href="https://community.simtropolis.com/profile/259348-xdefconx/" rel="">xDEFCONx</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/599026-foxiehikari/?do=hovercard" data-mentionid="599026" href="https://community.simtropolis.com/profile/599026-foxiehikari/" rel="">FoxieHikari</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/248268-biff/?do=hovercard" data-mentionid="248268" href="https://community.simtropolis.com/profile/248268-biff/" rel="">biff</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/773864-lamude/?do=hovercard" data-mentionid="773864" href="https://community.simtropolis.com/profile/773864-lamude/" rel="">Lamude</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/469132-miss-cuddly/?do=hovercard" data-mentionid="469132" href="https://community.simtropolis.com/profile/469132-miss-cuddly/" rel="">Miss Cuddly</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/308820-towerdude/?do=hovercard" data-mentionid="308820" href="https://community.simtropolis.com/profile/308820-towerdude/" rel="">TowerDude</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/46565-andisart/?do=hovercard" data-mentionid="46565" href="https://community.simtropolis.com/profile/46565-andisart/" rel="">AndisArt</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/12106-a-nonny-moose/?do=hovercard" data-mentionid="12106" href="https://community.simtropolis.com/profile/12106-a-nonny-moose/" rel="">A Nonny Moose</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/178350-adroman_66/?do=hovercard" data-mentionid="178350" href="https://community.simtropolis.com/profile/178350-adroman_66/" rel="">adroman_66</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/6605-barbyw/?do=hovercard" data-mentionid="6605" href="https://community.simtropolis.com/profile/6605-barbyw/" rel="">BarbyW</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/3857-darmok/?do=hovercard" data-mentionid="3857" href="https://community.simtropolis.com/profile/3857-darmok/" rel="">Darmok</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/147057-docrorlach/?do=hovercard" data-mentionid="147057" href="https://community.simtropolis.com/profile/147057-docrorlach/" rel="">DocRorlach</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/3408-geoffhaw/?do=hovercard" data-mentionid="3408" href="https://community.simtropolis.com/profile/3408-geoffhaw/" rel="">geoffhaw</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/84818-jmouse/?do=hovercard" data-mentionid="84818" href="https://community.simtropolis.com/profile/84818-jmouse/" rel="">Jmouse</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/103981-onlyplace4/?do=hovercard" data-mentionid="103981" href="https://community.simtropolis.com/profile/103981-onlyplace4/" rel="">onlyplace4</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/9619-suico/?do=hovercard" data-mentionid="9619" href="https://community.simtropolis.com/profile/9619-suico/" rel="">SUICO</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/774035-ilovedumbphones/?do=hovercard" data-mentionid="774035" href="https://community.simtropolis.com/profile/774035-ilovedumbphones/" rel="">ilovedumbphones</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/32937-vinlabsc3k/?do=hovercard" data-mentionid="32937" href="https://community.simtropolis.com/profile/32937-vinlabsc3k/" rel="">vinlabsc3k</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/339246-simmytu/?do=hovercard" data-mentionid="339246" href="https://community.simtropolis.com/profile/339246-simmytu/" rel="">simmytu</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/8584-sabretooth78/?do=hovercard" data-mentionid="8584" href="https://community.simtropolis.com/profile/8584-sabretooth78/" rel="">Sabretooth78</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/198496-papa-j/?do=hovercard" data-mentionid="198496" href="https://community.simtropolis.com/profile/198496-papa-j/" rel="">PaPa-J</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/516093-gogot/?do=hovercard" data-mentionid="516093" href="https://community.simtropolis.com/profile/516093-gogot/" rel="">Gogot</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/18753-toby66/?do=hovercard" data-mentionid="18753" href="https://community.simtropolis.com/profile/18753-toby66/" rel="">Toby66</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/776357-gadg8eer/?do=hovercard" data-mentionid="776357" href="https://community.simtropolis.com/profile/776357-gadg8eer/" rel="">Gadg8eer</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/126651-arn71/?do=hovercard" data-mentionid="126651" href="https://community.simtropolis.com/profile/126651-arn71/" rel="">Arn71</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/61000-scaley-mcslither/?do=hovercard" data-mentionid="61000" href="https://community.simtropolis.com/profile/61000-scaley-mcslither/" rel="">Scaley McSlither</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/49042-vigilante1987/?do=hovercard" data-mentionid="49042" href="https://community.simtropolis.com/profile/49042-vigilante1987/" rel="">Vigilante1987</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/321618-northwestern/?do=hovercard" data-mentionid="321618" href="https://community.simtropolis.com/profile/321618-northwestern/" rel="">Northwestern</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/340166-lot-creator/?do=hovercard" data-mentionid="340166" href="https://community.simtropolis.com/profile/340166-lot-creator/" rel="">Lot Creator</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/696099-bugeyeddragon/?do=hovercard" data-mentionid="696099" href="https://community.simtropolis.com/profile/696099-bugeyeddragon/" rel="">BugeyedDragon</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/98503-masochist/?do=hovercard" data-mentionid="98503" href="https://community.simtropolis.com/profile/98503-masochist/" rel="">masochist</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/724957-hugues-aroux/?do=hovercard" data-mentionid="724957" href="https://community.simtropolis.com/profile/724957-hugues-aroux/" rel="">hugues aroux</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/415234-tomasu92/?do=hovercard" data-mentionid="415234" href="https://community.simtropolis.com/profile/415234-tomasu92/" rel="">Tomasu92</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/336959-waterclaw/?do=hovercard" data-mentionid="336959" href="https://community.simtropolis.com/profile/336959-waterclaw/" rel="">Waterclaw</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/235818-pink77punk/?do=hovercard" data-mentionid="235818" href="https://community.simtropolis.com/profile/235818-pink77punk/" rel="">pink77punk</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/643154-jmsepe/?do=hovercard" data-mentionid="643154" href="https://community.simtropolis.com/profile/643154-jmsepe/" rel="">jmsepe</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/159533-craig-abcvs/?do=hovercard" data-mentionid="159533" href="https://community.simtropolis.com/profile/159533-craig-abcvs/" rel="">Craig-Abcvs</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/55338-carlosmarcelo/?do=hovercard" data-mentionid="55338" href="https://community.simtropolis.com/profile/55338-carlosmarcelo/" rel="">carlosmarcelo</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/737345-togamasterjohn/?do=hovercard" data-mentionid="737345" href="https://community.simtropolis.com/profile/737345-togamasterjohn/" rel="">TogaMasterJohn</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/728498-ekcja1/?do=hovercard" data-mentionid="728498" href="https://community.simtropolis.com/profile/728498-ekcja1/" rel="">ekcja1</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/317887-c4bl3fl4m3/?do=hovercard" data-mentionid="317887" href="https://community.simtropolis.com/profile/317887-c4bl3fl4m3/" rel="">c4bl3fl4m3</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/248974-huston/?do=hovercard" data-mentionid="248974" href="https://community.simtropolis.com/profile/248974-huston/" rel="">Huston</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/188659-lab-rat/?do=hovercard" data-mentionid="188659" href="https://community.simtropolis.com/profile/188659-lab-rat/" rel="">Lab Rat</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/782668-2tec/?do=hovercard" data-mentionid="782668" href="https://community.simtropolis.com/profile/782668-2tec/" rel="">2tec</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/780357-raymond7cn/?do=hovercard" data-mentionid="780357" href="https://community.simtropolis.com/profile/780357-raymond7cn/" rel="">Raymond7cn</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/40672-thecitiescenter/?do=hovercard" data-mentionid="40672" href="https://community.simtropolis.com/profile/40672-thecitiescenter/" rel="">thecitiescenter</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/784035-valkonig/?do=hovercard" data-mentionid="784035" href="https://community.simtropolis.com/profile/784035-valkonig/" rel="">Valkonig</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/784270-chasemc215/?do=hovercard" data-mentionid="784270" href="https://community.simtropolis.com/profile/784270-chasemc215/" rel="">chasemc215</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/331032-davidkopravitko/?do=hovercard" data-mentionid="331032" href="https://community.simtropolis.com/profile/331032-davidkopravitko/" rel="">davidkopravitko</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/666780-peek-a-boo/?do=hovercard" data-mentionid="666780" href="https://community.simtropolis.com/profile/666780-peek-a-boo/" rel="">peek-a-boo</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/68757-rebalynnts/?do=hovercard" data-mentionid="68757" href="https://community.simtropolis.com/profile/68757-rebalynnts/" rel="">RebaLynnTS</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/694088-turnstyled/?do=hovercard" data-mentionid="694088" href="https://community.simtropolis.com/profile/694088-turnstyled/" rel="">Turnstyled</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/707592-majamystic256/?do=hovercard" data-mentionid="707592" href="https://community.simtropolis.com/profile/707592-majamystic256/" rel="">MajaMystic256</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/253604-klyte45/?do=hovercard" data-mentionid="253604" href="https://community.simtropolis.com/profile/253604-klyte45/" rel="">Klyte45</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/780461-jholden675/?do=hovercard" data-mentionid="780461" href="https://community.simtropolis.com/profile/780461-jholden675/" rel="">jholden675</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/110589-patfirefghtr/?do=hovercard" data-mentionid="110589" href="https://community.simtropolis.com/profile/110589-patfirefghtr/" rel="">patfirefghtr</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/637510-vitoraju/?do=hovercard" data-mentionid="637510" href="https://community.simtropolis.com/profile/637510-vitoraju/" rel="">Vitoraju</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/190597-thingfishs/?do=hovercard" data-mentionid="190597" href="https://community.simtropolis.com/profile/190597-thingfishs/" rel="">thingfishs</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/53300-glenni/?do=hovercard" data-mentionid="53300" href="https://community.simtropolis.com/profile/53300-glenni/" rel="">Glenni</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/788118-garlicked/?do=hovercard" data-mentionid="788118" href="https://community.simtropolis.com/profile/788118-garlicked/" rel="">Garlicked</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/790500-missecho/?do=hovercard" data-mentionid="790500" href="https://community.simtropolis.com/profile/790500-missecho/" rel="">Missecho</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/516720-wzngt/?do=hovercard" data-mentionid="516720" href="https://community.simtropolis.com/profile/516720-wzngt/" rel="">WZNGT</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/790226-kloudkicker/?do=hovercard" data-mentionid="790226" href="https://community.simtropolis.com/profile/790226-kloudkicker/" rel="">Kloudkicker</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/663346-city_slider/?do=hovercard" data-mentionid="663346" href="https://community.simtropolis.com/profile/663346-city_slider/" rel="">City_Slider</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/784872-matrim-cauthon/?do=hovercard" data-mentionid="784872" href="https://community.simtropolis.com/profile/784872-matrim-cauthon/" rel="">Matrim Cauthon</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/794103-unknownpro/?do=hovercard" data-mentionid="794103" href="https://community.simtropolis.com/profile/794103-unknownpro/" rel="">UnknownPro</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/529575-daeris/?do=hovercard" data-mentionid="529575" href="https://community.simtropolis.com/profile/529575-daeris/" rel="">Daeris</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/6878-sklis/?do=hovercard" data-mentionid="6878" href="https://community.simtropolis.com/profile/6878-sklis/" rel="">sklis</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/723479-tiepinl/?do=hovercard" data-mentionid="723479" href="https://community.simtropolis.com/profile/723479-tiepinl/" rel="">TiepiNL</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/788493-20huskies/?do=hovercard" data-mentionid="788493" href="https://community.simtropolis.com/profile/788493-20huskies/" rel="">20huskies</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/116289-ironfanz/?do=hovercard" data-mentionid="116289" href="https://community.simtropolis.com/profile/116289-ironfanz/" rel="">Ironfanz</a> <br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/774001-ryuu-tenno/?do=hovercard" data-mentionid="774001" href="https://community.simtropolis.com/profile/774001-ryuu-tenno/" rel="">Ryuu Tenno</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/517895-mows-4-u/?do=hovercard" data-mentionid="517895" href="https://community.simtropolis.com/profile/517895-mows-4-u/" rel="">MOWS 4 U</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/11060-simwario/?do=hovercard" data-mentionid="11060" href="https://community.simtropolis.com/profile/11060-simwario/" rel="">simwario</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/752818-paulo-sm/?do=hovercard" data-mentionid="752818" href="https://community.simtropolis.com/profile/752818-paulo-sm/" rel="">Paulo S.M.</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/693618-akip-tsaqif/?do=hovercard" data-mentionid="693618" href="https://community.simtropolis.com/profile/693618-akip-tsaqif/" rel="">Akip Tsaqif</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/797619-winnerxl/?do=hovercard" data-mentionid="797619" href="https://community.simtropolis.com/profile/797619-winnerxl/" rel="">Winnerxl</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/477760-dracoceros/?do=hovercard" data-mentionid="477760" href="https://community.simtropolis.com/profile/477760-dracoceros/" rel="">Dracoceros</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/689840-anthracite/?do=hovercard" data-mentionid="689840" href="https://community.simtropolis.com/profile/689840-anthracite/" rel="">Anthracite</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/569676-themurderouscricket/?do=hovercard" data-mentionid="569676" href="https://community.simtropolis.com/profile/569676-themurderouscricket/" rel="">TheMurderousCricket</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/155588-njdevi66/?do=hovercard" data-mentionid="155588" href="https://community.simtropolis.com/profile/155588-njdevi66/" rel="">njdevi66</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/100353-ironjaw/?do=hovercard" data-mentionid="100353" href="https://community.simtropolis.com/profile/100353-ironjaw/" rel="">ironjaw</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/178048-z1/?do=hovercard" data-mentionid="178048" href="https://community.simtropolis.com/profile/178048-z1/" rel="">z1</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/369338-ncgaio/?do=hovercard" data-mentionid="369338" href="https://community.simtropolis.com/profile/369338-ncgaio/" rel="">NCGAIO</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/783167-franyer/?do=hovercard" data-mentionid="783167" href="https://community.simtropolis.com/profile/783167-franyer/" rel="">franyer</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/325971-tonyr/?do=hovercard" data-mentionid="325971" href="https://community.simtropolis.com/profile/325971-tonyr/" rel="">tonyr</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/693526-thetimvh1/?do=hovercard" data-mentionid="693526" href="https://community.simtropolis.com/profile/693526-thetimvh1/" rel="">TheTimvh1</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/807435-tjp/?do=hovercard" data-mentionid="807435" href="https://community.simtropolis.com/profile/807435-tjp/" rel="">TJP</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/807600-pauluk614/?do=hovercard" data-mentionid="807600" href="https://community.simtropolis.com/profile/807600-pauluk614/" rel="">Pauluk614</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/807924-sirgamers/?do=hovercard" data-mentionid="807924" href="https://community.simtropolis.com/profile/807924-sirgamers/" rel="">SirGamers</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/686829-thepabray75/?do=hovercard" data-mentionid="686829" href="https://community.simtropolis.com/profile/686829-thepabray75/" rel="">thepabray75</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/809096-haeleigh/?do=hovercard" data-mentionid="809096" href="https://community.simtropolis.com/profile/809096-haeleigh/" rel="">Haeleigh</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/806276-minkytimmy2729/?do=hovercard" data-mentionid="806276" href="https://community.simtropolis.com/profile/806276-minkytimmy2729/" rel="">MinkyTimmy2729</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/461089-markshot/?do=hovercard" data-mentionid="461089" href="https://community.simtropolis.com/profile/461089-markshot/" rel="">MarkShot</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/802367-tg24/?do=hovercard" data-mentionid="802367" href="https://community.simtropolis.com/profile/802367-tg24/" rel="">TG24</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/551294-aom1550/?do=hovercard" data-mentionid="551294" href="https://community.simtropolis.com/profile/551294-aom1550/" rel="">AOM1550</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/810364-godman101/?do=hovercard" data-mentionid="810364" href="https://community.simtropolis.com/profile/810364-godman101/" rel="">godman101</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/789103-asasnat/?do=hovercard" data-mentionid="789103" href="https://community.simtropolis.com/profile/789103-asasnat/" rel="">asasnat</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/645628-louisandre/?do=hovercard" data-mentionid="645628" href="https://community.simtropolis.com/profile/645628-louisandre/" rel="">LouisAndre</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/140564-slagonia/?do=hovercard" data-mentionid="140564" href="https://community.simtropolis.com/profile/140564-slagonia/" rel="">SLagonia</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/809300-proob25/?do=hovercard" data-mentionid="809300" href="https://community.simtropolis.com/profile/809300-proob25/" rel="">Proob25</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/515530-mayor-k-slank/?do=hovercard" data-mentionid="515530" href="https://community.simtropolis.com/profile/515530-mayor-k-slank/" rel="">Mayor K-slank</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/367798-hermonster/?do=hovercard" data-mentionid="367798" href="https://community.simtropolis.com/profile/367798-hermonster/" rel="">HerMonster</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/135036-dragonsteincole/?do=hovercard" data-mentionid="135036" href="https://community.simtropolis.com/profile/135036-dragonsteincole/" rel="">dragonsteincole</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/200655-jonnboy1976/?do=hovercard" data-mentionid="200655" href="https://community.simtropolis.com/profile/200655-jonnboy1976/" rel="">jonnboy1976</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/40734-cougar2004/?do=hovercard" data-mentionid="40734" href="https://community.simtropolis.com/profile/40734-cougar2004/" rel="">Cougar2004</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/64713-oidaas/?do=hovercard" data-mentionid="64713" href="https://community.simtropolis.com/profile/64713-oidaas/" rel="">Oidaas</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/157047-gn_leugim/?do=hovercard" data-mentionid="157047" href="https://community.simtropolis.com/profile/157047-gn_leugim/" rel="">Gn_leugim</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/477323-aspct/?do=hovercard" data-mentionid="477323" href="https://community.simtropolis.com/profile/477323-aspct/" rel="">Aspct</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/228980-madmartigan/?do=hovercard" data-mentionid="228980" href="https://community.simtropolis.com/profile/228980-madmartigan/" rel="">Madmartigan</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/819323-marble1mc/?do=hovercard" data-mentionid="819323" href="https://community.simtropolis.com/profile/819323-marble1mc/" rel="">Marble1MC</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/239723-pcwhiz24/?do=hovercard" data-mentionid="239723" href="https://community.simtropolis.com/profile/239723-pcwhiz24/" rel="">pcwhiz24</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/820907-cortana/?do=hovercard" data-mentionid="820907" href="https://community.simtropolis.com/profile/820907-cortana/" rel="">Cortana</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/802867-iznogood63/?do=hovercard" data-mentionid="802867" href="https://community.simtropolis.com/profile/802867-iznogood63/" rel="">Iznogood63</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/823150-nacattack73/?do=hovercard" data-mentionid="823150" href="https://community.simtropolis.com/profile/823150-nacattack73/" rel="">NacAttack73</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/788150-mr_robotico/?do=hovercard" data-mentionid="788150" href="https://community.simtropolis.com/profile/788150-mr_robotico/" rel="">Mr_Robotico</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/796662-skyroguen/?do=hovercard" data-mentionid="796662" href="https://community.simtropolis.com/profile/796662-skyroguen/" rel="">Skyroguen</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/771793-robertame/?do=hovercard" data-mentionid="771793" href="https://community.simtropolis.com/profile/771793-robertame/" rel="">RobertaME</a><br style="margin-bottom:3px;">
+      			<br>
+      			<span style="font-size:12px; color:#FF00FF;"><em>You could be next...</em></span>
+      		</p>
+
+      		<p>
+      			<span style="display:inline-block; font-size:30px; font-family:Georgia,serif; color:goldenrod; text-shadow:1px 1px 0px #122850; cursor:help;"><strong><abbr title="202">CCII</abbr></strong></span>  <span style="font-size:18px; font-family:Georgia,serif; color:goldenrod;">total</span>
+      		</p>
+
+      		<p>
+      			 
+      		</p>
+
+      		<p style="text-align:center;">
+      			<span style="font-size:18px; color:#122850;"><strong>Honored Members</strong></span>
+      		</p>
+
+      		<p style="background: rgb(255, 247, 239); padding: 10px; border: 1px solid goldenrod; border-radius: 5px; font-size: 14px; line-height: 2; text-align:center;">
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/12106-a-nonny-moose/?do=hovercard" data-mentionid="12106" href="https://community.simtropolis.com/profile/12106-a-nonny-moose/" rel="">A Nonny Moose</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/178350-adroman_66/?do=hovercard" data-mentionid="178350" href="https://community.simtropolis.com/profile/178350-adroman_66/" rel="">adroman_66</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/6605-barbyw/?do=hovercard" data-mentionid="6605" href="https://community.simtropolis.com/profile/6605-barbyw/" rel="">BarbyW</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/3857-darmok/?do=hovercard" data-mentionid="3857" href="https://community.simtropolis.com/profile/3857-darmok/" rel="">Darmok</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/147057-docrorlach/?do=hovercard" data-mentionid="147057" href="https://community.simtropolis.com/profile/147057-docrorlach/" rel="">DocRorlach</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/3408-geoffhaw/?do=hovercard" data-mentionid="3408" href="https://community.simtropolis.com/profile/3408-geoffhaw/" rel="">geoffhaw</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/84818-jmouse/?do=hovercard" data-mentionid="84818" href="https://community.simtropolis.com/profile/84818-jmouse/" rel="">Jmouse</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/103981-onlyplace4/?do=hovercard" data-mentionid="103981" href="https://community.simtropolis.com/profile/103981-onlyplace4/" rel="">onlyplace4</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/9619-suico/?do=hovercard" data-mentionid="9619" href="https://community.simtropolis.com/profile/9619-suico/" rel="">SUICO</a>  <a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/68757-rebalynnts/?do=hovercard" data-mentionid="68757" href="https://community.simtropolis.com/profile/68757-rebalynnts/" rel="">RebaLynnTS</a><br>
+      			<a class="myst-format" contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/796662-skyroguen/?do=hovercard" data-mentionid="796662" href="https://community.simtropolis.com/profile/796662-skyroguen/" rel="">Skyroguen</a>
+      		</p>
+
+      		<p>
+      			From <strong>v1.101</strong> (11 Mar 2019) and the <strong>v1.136</strong> update (02 Mar 2020), after a <a href="https://community.simtropolis.com/forums/topic/757897-honoring-st-members-whove-passed-on-poll-and-discussion/?do=findComment&amp;comment=1709762" rel="">community consensus poll</a>, included and honored as a tribute are 10 members who sadly passed away.
+      		</p>
+
+      		<p>
+      			Update <strong>v1.202</strong> (25 May 2024) includes RobertaME's late brother Skyroguen, who died of a sudden stroke. He is also immortalized forever in SC4, overseeing the <a href="https://community.simtropolis.com/files/file/36238-amps/" rel=""><abbr title="Allied Municipal Power of Simtropolis">AMPS</abbr></a> (Allied Municipal Power of Simtropolis) electricity grid, together with RobertaME.
+      		</p>
+      	</div>
+      </div>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px; color:#122850;"><strong>Installation</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="display:inline-block; padding:12px; background:#FFC880; border:1px solid #FF6A00; border-radius:5px;"><i class="fa fa-exclamation-triangle fa-lg" style="color:#FF422E; cursor:default;"> </i><strong><span style="color:#FF422E;">IMPORTANT:</span>  The main files <span style="color:#FF422E;"><em>must not</em></span> be installed inside Plugins, unlike regular SC4 content!</strong></span>   <img alt="*:read:" data-emoticon="1" src="https://community.simtropolis.com/assets/emoticons/default_49.gif" title="*:read:">
+      </p>
+
+
+      <p>
+      	<br>
+      	Inside the zip file there is a readme document and 2 folders:
+      </p>
+
+
+      <ol>
+      	<li>
+      		<span style="font-size:16px;"><u>MySim</u></span><br>
+      		<span style="color:#16A085;"><strong>Copy entire contents to:</strong></span><span style="font-family:Courier New,Courier,monospace; font-size:16px;"> C:\Users\<span style="color:#8E44AD;">UserName</span>\Documents\SimCity 4\<strong>MySim</strong></span><br>
+      		This contains the avatars of each Sim as 36x41 BMP files, each featuring <abbr title='"Three Pink Pixel Technology" (As discovered by Spamoidutout)'>TPPT</abbr> corner transparency. Most essentially it also contains a file named<span style="font-family:Courier New,Courier,monospace; font-size:16px; color:#E67E22;"> <strong>MySims.dat</strong> </span>which is the 'brains' behind all the functionality being the hex data.<br>
+      		<br>
+      		If the "MySim" folder doesn't already exist, it needs creating at this location.<br>
+      		<br>
+      		<u>Note</u>: For the Aspyr/App Store Mac version, this MySim folder must be created at:<br>
+      		<span style="font-family:Courier New,Courier,monospace;">/Users/<span style="color:#8E44AD;">UserName</span>/Library/Containers/com.aspyr.simcity4.appstore/Data/Documents/SimCity 4/<strong>MySim</strong></span><br>
+      		<br>
+      		 
+      	</li>
+      	<li>
+      		<span style="font-size:16px;"><u>Locale</u></span>  (Recommended)<br>
+      		<span style="color:#16A085;"><strong>Copy included file to:</strong></span><span style="font-family:Courier New,Courier,monospace; font-size:16px;"> C:\Users\<span style="color:#8E44AD;">UserName</span>\Documents\SimCity 4\<strong>Plugins</strong></span><br>
+      		This is an optional file named<span style="font-family:Courier New,Courier,monospace; font-size:16px; color:#E67E22;"> <strong>MySimtropolis_Rulez.dat</strong> </span>which serves as an overhaul to the MySim Mode. (See details below for more info.)<br>
+      		<br>
+      		<u>Note</u>: For the Aspyr/App Store Mac version, the Plugins folder is located at:<br>
+      		<span style="font-family:Courier New,Courier,monospace;">/Users/<span style="color:#8E44AD;">UserName</span>/Library/Containers/com.aspyr.simcity4.appstore/Data/Documents/SimCity 4/<strong>Plugins</strong></span>
+      	</li>
+      </ol>
+
+
+      <p>
+      	<br>
+      	Thanks to <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/317887-c4bl3fl4m3/?do=hovercard" data-mentionid="317887" href="https://community.simtropolis.com/profile/317887-c4bl3fl4m3/" rel="">@c4bl3fl4m3</a> for <a href="https://community.simtropolis.com/forums/topic/757768-mysimtropolis-invitation-to-become-a-simcity-4-mysim/?do=findComment&amp;comment=1720855" rel="">clarifying</a> the Mac details! <img alt="*:)" data-emoticon="1" height="15" src="https://community.simtropolis.com/assets/emoticons/default_1.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_1@2x.gif 2x" title="*:)" width="15">
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px; color:#122850;"><strong>The Selection Panel</strong></span>
+      </p>
+
+
+      <p>
+      	Here is where all the MySims can be viewed. There are 3 rows of 7 per page, and they're all listed in sequence as per the order of immortalization for those who've signed up.
+      </p>
+
+
+      <p>
+      	As follows:
+      </p>
+
+
+      <p>
+      	<img alt="MySimtropolis_Selection Panel Main.png" class="ipsImage" data-fileid="42931" data-unique="3eocxgca7" src="https://www.simtropolis.com/objects/attachments/monthly_2018_12/5c2a9fd3e0fcc_MySimtropolis_SelectionPanelMain.png.5b27c91fc24c1188eda1d36516ed73a0.png" style="">
+      </p>
+
+
+      <p>
+      	<br>
+      	The pages can be navigated by clicking each number, and over on the left side there are filter options to sort alphabetically, by gender, or zodiac sign.
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="font-size:16px;"><u>Please Note</u>:</span>
+      </p>
+
+
+      <p>
+      	Although we've made every effort to ensure data entry is correct, we are human and it's possible there are mistakes. Should you notice anything in error or wish to request an avatar amendment, feel free to post in the main thread, the comments below, or send us a PM to let us know. Thanks!
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px; color:#122850;"><strong>MySimtropolis <em>Rulez</em></strong>  (Recommended)</span>
+      </p>
+
+
+      <p>
+      	This is an added bonus which transforms the display of the MySims Mode. The most notable feature is by removing all default Sims from the selection panel. It also renames titles and labels in the menus. It's not required for the MySims to be displayed in the game, but for added authenticity it's something we recommend using too.
+      </p>
+
+
+      <p>
+      	In Summary:
+      </p>
+
+
+      <ul>
+      	<li>
+      		Prevents the default<strong> </strong>MySims from displaying for selection.
+      	</li>
+      	<li>
+      		Renames <em>"My Sim Mode"</em> to <em>"<span style="color:#2980B9;">MySimtropolis Mode</span>"</em>.
+      	</li>
+      	<li>
+      		Renames <em>"Select A My Sim"</em> to <em>"<span style="color:#2980B9;">Select MySimtropolis Member</span>"</em>.
+      	</li>
+      	<li>
+      		Renames "My Sims" to <span style="color:#2980b9;"><em>"Resident<span style="font-family:Courier New,Courier,monospace;"> </span></em></span><span style="color:#8e44ad;"><span style="font-family: Courier New,Courier,monospace;"><strong>&lt;CityName&gt;</strong></span></span><span style="color:#2980b9;"><em><span style="font-family:Courier New,Courier,monospace;"> </span>MySimtropolis Sims"</em></span>.<br>
+      		 
+      	</li>
+      	<li>
+      		Plus over 20 other locale edits in-keeping with the <span style="font-size:16px; font-weight:800; text-shadow:1px 1px 0px #CBCBCB;"><span style="color:#1ADCFF;"><strong>MySim</strong></span><span style="color:#122850;">tropolis</span></span> idea.
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<u>Note</u>: As an alternative to the main <em>Rulez</em> file, there's also a "<em>Less Rulez</em>" edition available <a href="https://community.simtropolis.com/forums/topic/757768-mysimtropolis-invitation-to-become-a-simcity-4-mysim/?do=findComment&amp;comment=1720913" rel="">here</a>.
+      </p>
+
+
+      <p>
+      	Use this version instead if you wish to preserve the 21 built-in Sims as well.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px; color:#122850;"><strong>You can join too!</strong></span>
+      </p>
+
+
+      <p>
+      	You may have just become aware of this mod, and at this point might be wondering if you can also be immortalized as a MySim. The good news is it's not too late, nor is there a deadline to join yourself. The idea is anyone can post and be included in the next available slot just like everyone else.
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px; color:#FF00FF;"><em>Sign up in this thread:</em></span>
+      </p>
+
+      <iframe allowfullscreen="" class="ipsEmbed_finishedLoading" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed4185443747" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/757768-mysimtropolis-invitation-to-become-a-simcity-4-mysim/?do=embed" style="overflow:hidden; height:330px; max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:12px; color:#FF00FF;"><em>You can be next...</em></span>
+      </p>
+
+
+      <p>
+      	<br>
+      	We'll then release periodic updates to this file entry here on the STEX, including those newly immortalized who are equally welcome to be part of this as well. We plan to do this in batches, aiming for around a weekly basis (time dependent of course on our other current commitments).
+      </p>
+
+
+      <p>
+      	<br>
+      	Want to share your <span style="font-size:16px; font-weight:800; text-shadow:1px 1px 0px #CBCBCB;"><span style="color:#1ADCFF;"><strong>MySim</strong></span><span style="color:#122850;">tropolis</span></span> pics?
+      </p>
+
+
+      <p>
+      	Post in the dedicated <em><a href="https://community.simtropolis.com/forums/topic/757866-show-us-your-mysimtropolis-sims/" rel="">Show Us Your MySimtropolis Sims</a></em> topic.
+      </p>
+
+
+      <p>
+      	<br>
+      	Interested in the technical details as a quick and efficient means of adding your own MySims?
+      </p>
+
+
+      <p>
+      	View this thread:<br>
+      	<a href="https://community.simtropolis.com/forums/topic/757889-mysimsdat-the-techy-hexy-details/" rel="">MySims.dat - The Techy, Hexy Details</a>
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="font-size:16px; color:goldenrod;"><strong>As a little bonus...</strong></span>
+      </p>
+
+
+      <p>
+      	Additionally, everyone who signs up to be included receives a special commemorative profile badge.
+      </p>
+
+
+      <p>
+      	As follows:
+      </p>
+
+
+      <p style="margin-top:20px;">
+      	<img _title="MySimtropolis Immortalized Member" alt="MySimtropolis_Badge.png" data-ipstooltip="" height="62" src="https://www.simtropolis.com/library/misc/MySimtropolis_Badge.png" style="border: medium none;" width="50">
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px; color:#122850;"><strong>Future Idea</strong></span>
+      </p>
+
+
+      <p>
+      	In due course as hinted about <a href="https://community.simtropolis.com/forums/topic/757768-mysimtropolis-invitation-to-become-a-simcity-4-mysim/?do=findComment&amp;comment=1706709" rel="">here</a>, we've got an additional mod planned, expanding on the usefulness of MySims to measure simulation factors with greater accuracy.
+      </p>
+
+
+      <p>
+      	Stay tuned!
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px; color:#122850;"><strong>Special Thanks</strong></span>
+      </p>
+
+
+      <p>
+      	From what started as something prospectively small, the response to our idea has been overwhelmingly positive and kind. Cori and I both agree this reception and feedback already fully exceeded our expectations. We're truly grateful for everyone who has decided to get involved, and anyone who still wishes to do so.
+      </p>
+
+
+      <p>
+      	Thanks to each and every one of you.
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px; font-weight:800; text-shadow:1px 1px 0px #CBCBCB;"><span style="color:#1ADCFF;"><strong>MySim</strong></span><span style="color:#122850;">tropolis</span></span> quite simply wouldn't have been possible otherwise, and this release is our gift to you all. <img alt="*:)" data-emoticon="1" height="15" src="https://community.simtropolis.com/assets/emoticons/default_1.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_1@2x.gif 2x" title="*:)" width="15">
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="display:block; padding:5px; background:#F7F7F7; border:1px solid #1ADCFF; border-radius:5px; font-family:Courier New,Courier,monospace; font-size:12px; color:#122850; text-align:center;">// CoriBoom™ Productions Release \\<br>
+      	<strong>MySimtropolis v1.202</strong> — (25 May 2024)</span>
+      </p>
+
+      						</body>
+    filename: MySimtropolis_v1.202.zip
+    files:
+      - ReadMe_MySimtropolis_v1.202.txt
+      - MySimtropolis Members Summary_v1.202.png
+      - Locale/MySimtropolis_Rulez.dat
+      - MySim/MySim__Michael.bmp
+      - MySim/MySim_zexcoilerkingbolt24.bmp
+      - MySim/MySim_z1.bmp
+      - MySim/MySim_xDEFCONx.bmp
+      - MySim/MySim_WZNGT.bmp
+      - MySim/MySim_Wustmann.bmp
+      - MySim/MySim_WolfZe.bmp
+      - MySim/MySim_Winnerxl.bmp
+      - MySim/MySim_Whte_rbt.bmp
+      - MySim/MySim_Waterclaw.bmp
+      - MySim/MySim_Vitoraju.bmp
+      - MySim/MySim_vinlabsc3k.bmp
+      - MySim/MySim_Vigilante1987.bmp
+      - MySim/MySim_Velinoxx.bmp
+      - MySim/MySim_vegeman.bmp
+      - MySim/MySim_Valkonig.bmp
+      - MySim/MySim_UnknownPro.bmp
+      - MySim/MySim_ulisse.bmp
+      - MySim/MySim_Tysons4.bmp
+      - MySim/MySim_Tyberius06.bmp
+      - MySim/MySim_Turnstyled.bmp
+      - MySim/MySim_TowerDude.bmp
+      - MySim/MySim_Toothless Stitch.bmp
+      - MySim/MySim_tonyr.bmp
+      - MySim/MySim_Tonraq.bmp
+      - MySim/MySim_Tomasu92.bmp
+      - MySim/MySim_TogaMasterJohn.bmp
+      - MySim/MySim_Toby66.bmp
+      - MySim/MySim_Toby Ferrian.bmp
+      - MySim/MySim_TJP.bmp
+      - MySim/MySim_TiepiNL.bmp
+      - MySim/MySim_thingfishs.bmp
+      - MySim/MySim_TheTimvh1.bmp
+      - MySim/MySim_thepabray75.bmp
+      - MySim/MySim_TheMurderousCricket.bmp
+      - MySim/MySim_thecitiescenter.bmp
+      - MySim/MySim_The Thinker.bmp
+      - MySim/MySim_The British Sausage.bmp
+      - MySim/MySim_TG24.bmp
+      - MySim/MySim_terubby.bmp
+      - MySim/MySim_Terring.bmp
+      - MySim/MySim_TekindusT.bmp
+      - MySim/MySim_surrodox2001.bmp
+      - MySim/MySim_SUICO.bmp
+      - MySim/MySim_slickbg56.bmp
+      - MySim/MySim_SLagonia.bmp
+      - MySim/MySim_Skyroguen.bmp
+      - MySim/MySim_sklis.bmp
+      - MySim/MySim_SirGamers.bmp
+      - MySim/MySim_simwario.bmp
+      - MySim/MySim_simmytu.bmp
+      - MySim/MySim_Simmer2.bmp
+      - MySim/MySim_SimDragon.bmp
+      - MySim/MySim_Silur.bmp
+      - MySim/MySim_sejr99999.bmp
+      - MySim/MySim_Scaley McSlither.bmp
+      - MySim/MySim_SC4 meister.bmp
+      - MySim/MySim_Sapador Castelo.bmp
+      - MySim/MySim_Sabretooth78.bmp
+      - MySim/MySim_Ryuu Tenno.bmp
+      - MySim/MySim_RRetail.bmp
+      - MySim/MySim_RobertLM78.bmp
+      - MySim/MySim_RobertaME.bmp
+      - MySim/MySim_robdragon.bmp
+      - MySim/MySim_rivit.bmp
+      - MySim/MySim_RedDunoVn.bmp
+      - MySim/MySim_RebaLynnTS.bmp
+      - MySim/MySim_reaper1219.bmp
+      - MySim/MySim_Raymond7cn.bmp
+      - MySim/MySim_Prophet42.bmp
+      - MySim/MySim_Proob25.bmp
+      - MySim/MySim_pink77punk.bmp
+      - MySim/MySim_peek-a-boo.bmp
+      - MySim/MySim_pcwhiz24.bmp
+      - MySim/MySim_Pauluk614.bmp
+      - MySim/MySim_Paulo S.M..bmp
+      - MySim/MySim_patfirefghtr.bmp
+      - MySim/MySim_PaPa-J.bmp
+      - MySim/MySim_onlyplace4.bmp
+      - MySim/MySim_Oidaas.bmp
+      - MySim/MySim_OasisArchitect.bmp
+      - MySim/MySim_Northwestern.bmp
+      - MySim/MySim_NMUSpidey.bmp
+      - MySim/MySim_Njdevi66.bmp
+      - MySim/MySim_NCGAIO.bmp
+      - MySim/MySim_Nathaniel Herapen.bmp
+      - MySim/MySim_NacAttack73.bmp
+      - MySim/MySim_Mr_Robotico.bmp
+      - MySim/MySim_mrsmartman.bmp
+      - MySim/MySim_mrbisonm.bmp
+      - MySim/MySim_MOWS 4 U.bmp
+      - MySim/MySim_Missecho.bmp
+      - MySim/MySim_Miss Cuddly.bmp
+      - MySim/MySim_MinkyTimmy2729.bmp
+      - MySim/MySim_Meph.bmp
+      - MySim/MySim_McDuell.bmp
+      - MySim/MySim_Mayor K-slank.bmp
+      - MySim/MySim_Matrim Cauthon.bmp
+      - MySim/MySim_masochist.bmp
+      - MySim/MySim_MarkShot.bmp
+      - MySim/MySim_Marble1MC.bmp
+      - MySim/MySim_manueld832.bmp
+      - MySim/MySim_Manuel-ito.bmp
+      - MySim/MySim_MajaMystic256.bmp
+      - MySim/MySim_Madmartigan.bmp
+      - MySim/MySim_Lucario Boricua.bmp
+      - MySim/MySim_LouisAndre.bmp
+      - MySim/MySim_Lot Creator.bmp
+      - MySim/MySim_Lamude.bmp
+      - MySim/MySim_Lab Rat.bmp
+      - MySim/MySim_Klyte45.bmp
+      - MySim/MySim_Kloudkicker.bmp
+      - MySim/MySim_kingofsimcity.bmp
+      - MySim/MySim_June88.bmp
+      - MySim/MySim_JP Schriefer.bmp
+      - MySim/MySim_jonnboy1976.bmp
+      - MySim/MySim_jmsepe.bmp
+      - MySim/MySim_Jmouse.bmp
+      - MySim/MySim_JJBers.bmp
+      - MySim/MySim_JimC.bmp
+      - MySim/MySim_jholden675.bmp
+      - MySim/MySim_jeffryfisher.bmp
+      - MySim/MySim_Jasoncw.bmp
+      - MySim/MySim_Jackspital.bmp
+      - MySim/MySim_Iznogood63.bmp
+      - MySim/MySim_ironjaw.bmp
+      - MySim/MySim_Ironfanz.bmp
+      - MySim/MySim_ilovedumbphones.bmp
+      - MySim/MySim_Huston.bmp
+      - MySim/MySim_hugues aroux.bmp
+      - MySim/MySim_Huggy-Bear.bmp
+      - MySim/MySim_HerMonster.bmp
+      - MySim/MySim_HayleyRenaNemeth.bmp
+      - MySim/MySim_Hamish.bmp
+      - MySim/MySim_Haljackey.bmp
+      - MySim/MySim_Haeleigh.bmp
+      - MySim/MySim_gtaman3.bmp
+      - MySim/MySim_Gogot.bmp
+      - MySim/MySim_godman101.bmp
+      - MySim/MySim_Gn_leugim.bmp
+      - MySim/MySim_Glenni.bmp
+      - MySim/MySim_geoffhaw.bmp
+      - MySim/MySim_Garlicked.bmp
+      - MySim/MySim_Gadg8eer.bmp
+      - MySim/MySim_franyer.bmp
+      - MySim/MySim_FoxieHikari.bmp
+      - MySim/MySim_FOSC tule00.bmp
+      - MySim/MySim_Flann.bmp
+      - MySim/MySim_f3cs.bmp
+      - MySim/MySim_EvansRE4.bmp
+      - MySim/MySim_ESP15.bmp
+      - MySim/MySim_ekcja1.bmp
+      - MySim/MySim_eaglesong.bmp
+      - MySim/MySim_Duco.bmp
+      - MySim/MySim_dragonsteincole.bmp
+      - MySim/MySim_Dracoceros.bmp
+      - MySim/MySim_Drack.bmp
+      - MySim/MySim_Doni98.bmp
+      - MySim/MySim_Doctoryzer.bmp
+      - MySim/MySim_DocRorlach.bmp
+      - MySim/MySim_Dirk.bmp
+      - MySim/MySim_dedgren.bmp
+      - MySim/MySim_davidkopravitko.bmp
+      - MySim/MySim_Darmok.bmp
+      - MySim/MySim_Daeris.bmp
+      - MySim/MySim_Craig-Abcvs.bmp
+      - MySim/MySim_Cougar2004.bmp
+      - MySim/MySim_Cortana.bmp
+      - MySim/MySim_Cori.bmp
+      - MySim/MySim_City_Slider.bmp
+      - MySim/MySim_chasemc215.bmp
+      - MySim/MySim_Ceafus 88.bmp
+      - MySim/MySim_CB.bmp
+      - MySim/MySim_catty-cb.bmp
+      - MySim/MySim_carlosmarcelo.bmp
+      - MySim/MySim_CaptCity.bmp
+      - MySim/MySim_c4bl3fl4m3.bmp
+      - MySim/MySim_BugeyedDragon.bmp
+      - MySim/MySim_Bryan623.bmp
+      - MySim/MySim_biff.bmp
+      - MySim/MySim_BarbyW.bmp
+      - MySim/MySim_Azurespecter.bmp
+      - MySim/MySim_Aspct.bmp
+      - MySim/MySim_AsimPika3172.bmp
+      - MySim/MySim_asasnat.bmp
+      - MySim/MySim_Arn71.bmp
+      - MySim/MySim_AOM1550.bmp
+      - MySim/MySim_Anthracite.bmp
+      - MySim/MySim_angelucho22.bmp
+      - MySim/MySim_Androgeos.bmp
+      - MySim/MySim_Andrey km.bmp
+      - MySim/MySim_andreharv.bmp
+      - MySim/MySim_AndisArt.bmp
+      - MySim/MySim_Alastriona.bmp
+      - MySim/MySim_Alan Waters.bmp
+      - MySim/MySim_Akip Tsaqif.bmp
+      - MySim/MySim_airman15.bmp
+      - MySim/MySim_adroman_66.bmp
+      - MySim/MySim_Abrams124.bmp
+      - MySim/MySim_A Nonny Moose.bmp
+      - MySim/MySim_2tec.bmp
+      - MySim/MySim_20huskies.bmp
+      - MySim/MySims.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acac1e84d1_01-MySimtropolis_MainPreview.jpg.169d7d03c35d074971d439af32b613af.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acac8a0408_03-MySimtropolis_MenuPreview.jpg.e52da9f8b38681655480705e466c5b77.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acacd7014f_04-MySimtropolis_ModePreview.jpg.7704eb9c24d830866605bf9af3ffd419.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acad53d642_05-MySimtropolis_ResidentPreview.jpg.d306179e2bb65415c48c4e1224c5f73a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/6651bbd22705d_02-MySimtropolis_SelectionPanelAvatars_v1_202.png.993c8442bf85447eaf747d9b909d1877.png
+    lastModified: 2024-07-30T01:44:21Z
     name: "MySimtropolis: Members Immortalized in SC4"
+    sha256: f889be48aedcdcd91352a47b26a6c6f65906b94965a766245770247042ff8d02
+    size: 1311026
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acd4a5eb23_01-MySimtropolis_MainPreview.thumb.jpg.7b2e23befe828d41efeaf2d6f1387980.jpg
+    timestamp: 2024-07-29T09:55:36.596Z
+    uncompressed: 1568253
     url: https://community.simtropolis.com/files/file/32690-mysimtropolis-members-immortalized-in-sc4/
+    version: "1.202"
   simtropolis/32745-fix-for-italian-collection:
     authors:
       - "11241036"
@@ -2613,7 +3387,7 @@ assets:
       - simtropolis/36242-resource-loading-hooks-dll-for-simcity-4
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -2622,17 +3396,13 @@ assets:
 
 
 
+      							
 
 
 
 
 
-
-
-
-
-
-
+      							
       <p>
       	A DLL plugin for SimCity 4 that
       </p>
@@ -2793,16 +3563,16 @@ assets:
       - submenus/commercial/ploppable-CO$$-submenu.dat
       - submenus/commercial/ploppable-CO$$$-submenu.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/glr-submenu.thumb.jpeg.b849d44b5fa1dc01e969a9deeff7a2dd.jpeg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/parks-submenus-animation.thumb.gif.b75852daa77bfc56195f094897aabc57.gif
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/commercial-submenus.thumb.jpeg.f89cbd91995393d55d216efa397f602c.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/glr-submenu.jpeg.37cdc1aba8ba5f84d543d46c579de1d4.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/parks-submenus-animation.gif.fc7b73b36d2cfd59d4aca263a753285c.gif
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/commercial-submenus.jpeg.7fd15082d193a82259d3a0fff766ebf7.jpeg
     lastModified: 2024-06-02T18:27:39Z
     name: Submenus DLL
     repository: https://github.com/memo33/submenus-dll
     sha256: e485456f1a839082ecf4c57607f7fdb585681d59975e68127f902c5d6e210dec
     size: 705607
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/glr-submenu.thumb.jpeg.b849d44b5fa1dc01e969a9deeff7a2dd.jpeg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 787826
     url: https://community.simtropolis.com/files/file/36142-submenus-dll/
     version: 1.1.3
@@ -2879,13 +3649,18 @@ assets:
       - simtropolis/35978-sc4moredemandinfo
       - simtropolis/36112-allow-more-building-styles-dll-plugin
       - simtropolis/36244-startup-performance-optimization-dll-for-simcity-4
+      - simtropolis/32690-mysimtropolis-members-immortalized-in-sc4
     description: >-
       <body>
                                   
 
+
+
       							
       <p>
-      	<u><abbr title="Residential, Commercial, Industrial">RCI</abbr> DLL Query Upgrade Mod, by Kel9509</u>
+      	<u><abbr title="Residential, Commercial, Industrial">RCI</abbr> DLL Query Upgrade Mod, by Kel9509</u><br>
+      	v1.0 - May 10, 2024<br>
+      	v1.1 - July 27, 2024
       </p>
 
 
@@ -2916,6 +3691,15 @@ assets:
 
 
       <p>
+      	VERSION 1.1 RELEASE NOTES:<br>
+      	 - Added a Building Lot Growth Stage indicator to show the Stage that the lot grows under.<br>
+      	 - Expanded the room of the Building Style display, so it can show many more building styles available for a building.<br>
+      	 - Fixed some typos in the Residential Query to ensure there's enough space and make it consistent with the Commercial and Industrial Queries.  Now supports showing up to 999,999,999 Sims in the city and in the region, for those with very large cities and regions.<br>
+      	 - Added the MySim name, as well as support for the MySimtropolis: Members Immortalized in SC4 mod, and moved the icon to be more compact with the overall Query.
+      </p>
+
+
+      <p>
       	REQUIRED DEPENDENCIES:<br>
       	The <abbr title="Residential, Commercial, Industrial">RCI</abbr> DLL Query Upgrade Mod will not work unless the following dependencies are installed:<br>
       	1. <a href="https://community.simtropolis.com/files/file/36202-query-tool-ui-extensions-dll-for-simcity-4/" rel="">Query Tool UI Extensions DLL for SimCity 4</a>, by Null45 <br>
@@ -2933,12 +3717,8 @@ assets:
       	OPTIONAL DEPENDENCIES:<br>
       	These dependencies are optional, but the <abbr title="Residential, Commercial, Industrial">RCI</abbr> DLL Query Upgrade Mod is designed to use them:<br>
       	1. <a href="https://community.simtropolis.com/files/file/36112-allow-more-building-styles-dll-plugin/" rel="">Allow More Building Styles - DLL Plugin</a>, by Null45<br>
-      	2. <a href="https://community.simtropolis.com/files/file/36244-startup-performance-optimization-dll-for-simcity-4/" rel="">Startup Performance Optimization DLL Plugin</a>, by Null45
-      </p>
-
-
-      <p>
-      	 
+      	2. <a href="https://community.simtropolis.com/files/file/36244-startup-performance-optimization-dll-for-simcity-4/" rel="">Startup Performance Optimization DLL Plugin</a>, by Null45<br>
+      	3. <a href="https://community.simtropolis.com/files/file/32690-mysimtropolis-members-immortalized-in-sc4/" rel="">MySimtropolis: Members Immortalized in SC4</a>, by CoriBoom (CorinaMaria and Cyclone Boom): 
       </p>
 
 
@@ -2961,11 +3741,6 @@ assets:
       	TO INSTALL: <br>
       	Make sure Simcity4 is not running prior to installation.<br>
       	Extract all files into your Simcity4 Plugins folder.
-      </p>
-
-
-      <p>
-      	 
       </p>
 
 
@@ -2994,15 +3769,16 @@ assets:
       	Crime<br>
       	Traffic Noise<br>
       	Commute<br>
+      	Building Lot Growth Stage*<br>
       	X Make Historical
       </p>
 
 
       <p>
-      	City RS Capacity (and Region*)<br>
-      	City R$$ Capacity (and Region*)<br>
-      	City R$$$ Capacity (and Region*)<br>
-      	City Residents (and Capacity)<br>
+      	RS Capacity City / and Region*<br>
+      	R$$ Capacity City / and Region*<br>
+      	R$$$ Capacity City / and Region*<br>
+      	City Residents / and Capacity<br>
       	Regional Residential Capacity<br>
       	Citywide Total Workforce<br>
       	Regional Total Workforce
@@ -3031,6 +3807,11 @@ assets:
 
 
       <p>
+      	MySim Icon and MySim Name
+      </p>
+
+
+      <p>
       	COMMERCIAL QUERY:<br>
       	The Commercial Query displays all standard Maxis commercial information, as well as the new items available with DLLs noted with the * (asterisk) below:
       </p>
@@ -3047,16 +3828,17 @@ assets:
       	Garbage<br>
       	Crime<br>
       	Customers<br>
+      	Building Lot Growth Stage*<br>
       	X Make Historical
       </p>
 
 
       <p>
-      	CO$$ Capacity City (and Region*)<br>
-      	CO$$$ Capacity City (and Region*)<br>
-      	CS$ Capacity City (and Region*)<br>
-      	CS$$ Capacity City (and Region*)<br>
-      	CS$$$ Capacity City (and Region*)<br>
+      	CO$$ Capacity City / and Region*<br>
+      	CO$$$ Capacity City / and Region*<br>
+      	CS$ Capacity City / and Region*<br>
+      	CS$$ Capacity City / and Region*<br>
+      	CS$$$ Capacity City / and Region*<br>
       	Citywide Commercial Capacity<br>
       	Regional Commercial Capacity<br>
       	CO$$ and $$$ Cap Status<br>
@@ -3096,15 +3878,16 @@ assets:
       	Garbage<br>
       	Crime<br>
       	Freight Trips<br>
+      	Building Lot Growth Stage*<br>
       	X Make Historical
       </p>
 
 
       <p>
-      	I-Ag (agricultural Farms) Capacity City (and Region*)<br>
-      	I-D Capacity City (and Region*)<br>
-      	I-M Capacity City (and Region*)<br>
-      	I-HT Capacity City (and Region*)<br>
+      	I-Ag (agricultural Farms) Capacity City / and Region*<br>
+      	I-D Capacity City / and Region*<br>
+      	I-M Capacity City / and Region*<br>
+      	I-HT Capacity City / and Region*<br>
       	Citywide Industrial Capacity<br>
       	Regional Industrial Capacity<br>
       	I-Ag*/I-D/I-M/I-HT Demand Caps
@@ -3151,28 +3934,30 @@ assets:
       </p>
 
       						</body>
-    filename: RCI DLL Query Upgrade.zip
+    filename: RCI DLL Query Upgrade v1.1.zip
     files:
-      - RCI DLL Query Upgrade/RCI DLL Query Upgrade.txt
-      - RCI DLL Query Upgrade/RCI DLL Query - Residential.jpg
-      - RCI DLL Query Upgrade/RCI DLL Query - Residential Building UI (4A5672BF).dat
-      - RCI DLL Query Upgrade/RCI DLL Query - Industrial.jpg
-      - RCI DLL Query Upgrade/RCI DLL Query - Industrial Building UI (2A567DC1).dat
-      - RCI DLL Query Upgrade/RCI DLL Query - Commercial.jpg
-      - RCI DLL Query Upgrade/RCI DLL Query - Commercial Building UI (CA56783A).dat
+      - RCI DLL Query Upgrade v1.1/RCI DLL Query Upgrade v1.1.txt
+      - RCI DLL Query Upgrade v1.1/RCI DLL Query - Residential Building v1.1.jpg
+      - RCI DLL Query Upgrade v1.1/RCI DLL Query - Residential Building UI (4A5672BF) v1.1.dat
+      - RCI DLL Query Upgrade v1.1/RCI DLL Query - Residential Building - With MySimtropolis Icon - v1.1.jpg
+      - RCI DLL Query Upgrade v1.1/RCI DLL Query - Industrial Building v1.1.jpg
+      - RCI DLL Query Upgrade v1.1/RCI DLL Query - Industrial Building UI (2A567DC1) v1.1.dat
+      - RCI DLL Query Upgrade v1.1/RCI DLL Query - Commercial Building v1.1.jpg
+      - RCI DLL Query Upgrade v1.1/RCI DLL Query - Commercial Building UI (CA56783A) v1.1.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/663dc541920ed_RCIDLLQuery-Residential.thumb.jpg.fb58437e5f0df2acf9d752d24cd83007.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/663dc54255734_RCIDLLQuery-Commercial.thumb.jpg.47a22e2b59718a158435cff1e06d05c2.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/663dc543136de_RCIDLLQuery-Industrial.thumb.jpg.9231640139775e973f95111181fb12df.jpg
-    lastModified: 2024-07-10T04:47:18Z
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a5757aed289_RCIDLLQuery-ResidentialBuildingv1.1.jpg.fd2df5c582654c57157ec2d276b3297e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a5757f76d97_RCIDLLQuery-ResidentialBuilding-WithMySimtropolisIcon-v1.1.jpg.044b8b0364c88819c8d0d7f7673c8ec8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a5758408896_RCIDLLQuery-CommercialBuildingv1.1.jpg.884d532237fd875cba9fb3eb8997a282.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a575886795f_RCIDLLQuery-IndustrialBuildingv1.1.jpg.43f41b1342b772db5ee7b9c6623fe696.jpg
+    lastModified: 2024-07-27T22:49:25Z
     name: RCI DLL Query Upgrade
-    sha256: db83743549cb9a6c998c876d3e2e096ca97e5c365ed8a5fbc3482629c53332e2
-    size: 231528
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/663dc541920ed_RCIDLLQuery-Residential.thumb.jpg.fb58437e5f0df2acf9d752d24cd83007.jpg
-    timestamp: 2024-07-23T10:27:16.370Z
-    uncompressed: 340050
+    sha256: 66462f1a29ed7e86ce57ffdff12693a9ca04d5db62430ba3b9e5f9da258d470f
+    size: 324665
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/66a5759d8c188_RCIDLLQuery-ResidentialBuildingv1.1.thumb.jpg.daf6562144118bf74cbe5c765d045442.jpg
+    timestamp: 2024-07-29T09:55:36.596Z
+    uncompressed: 444656
     url: https://community.simtropolis.com/files/file/36239-rci-dll-query-upgrade/
-    version: 1.0.0
+    version: 1.1.0
   simtropolis/36245-census-repository-building-dll-upgrade-patch:
     authors:
       - Kel9509
@@ -3198,4 +3983,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-f497f4f8de9cd628f6c1ad0c9caf9305-Fun%20query%20Water%20pur.%20plant.jpg
     url: https://community.simtropolis.com/files/file/4536-daeleys-present/
 
-timestamp: 2024-07-23T10:27:16.370Z
+timestamp: 2024-07-30T08:53:33.543Z

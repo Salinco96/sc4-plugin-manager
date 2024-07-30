@@ -78,9 +78,28 @@ export function OptionsField({
     if (option.display === "checkbox") {
       if (option.multi) {
         const values = isArray(value) ? value : [value]
+        const allValues = option.choices.map(choice =>
+          typeof choice === "object" ? choice.value : choice,
+        )
+        const allChecked = allValues.every(value => values.includes(value))
+
         return (
           <FormControl fullWidth>
             <FormLabel id={option.id + "-label"}>{label}</FormLabel>
+            {option.choices.length > 2 && (
+              <FormControlLabel
+                checked={allChecked}
+                control={<Checkbox />}
+                onChange={() => {
+                  if (allChecked) {
+                    onChange([])
+                  } else {
+                    onChange(allValues)
+                  }
+                }}
+                label="All"
+              />
+            )}
             {option.choices.map(choice =>
               isNumber(choice) || isString(choice) ? (
                 <FormControlLabel

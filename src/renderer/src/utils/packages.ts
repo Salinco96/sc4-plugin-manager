@@ -80,16 +80,27 @@ function getPackageStatus(
   return profileInfo && packageInfo.status[profileInfo.id]
 }
 
+export function getCurrentVariant(store: Store, packageId: string): VariantInfo {
+  const packageInfo = getPackageInfo(store, packageId)!
+  return packageInfo.variants[store.packageUi[packageId].variantId]
+}
+
 export function useCurrentVariant(packageId: string): VariantInfo {
-  return useStore(
-    useCallback(
-      store => {
-        const packageInfo = getPackageInfo(store, packageId)!
-        return packageInfo.variants[store.packageUi[packageId].variantId]
-      },
-      [packageId],
-    ),
-  )
+  return useStore(useCallback(store => getCurrentVariant(store, packageId), [packageId]))
+}
+
+export function getDependentPackages(store: Store, dependencyId: string): string[] {
+  const { packages = {} } = store
+
+  return Object.keys(packages).filter(packageId => {
+    return Object.values(packages[packageId].variants).some(variantInfo => {
+      return !!variantInfo.dependencies?.includes(dependencyId)
+    })
+  })
+}
+
+export function useDependentPackages(dependencyId: string): string[] {
+  return useStore(useCallback(store => getDependentPackages(store, dependencyId), [dependencyId]))
 }
 
 export function useFilteredPackages(): string[] {

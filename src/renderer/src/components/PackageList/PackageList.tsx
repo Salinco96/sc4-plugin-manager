@@ -1,11 +1,7 @@
 import { useRef } from "react"
 
 import { Page, useHistory } from "@utils/navigation"
-import {
-  PACKAGE_LIST_ITEM_BASE_SIZE,
-  useFilteredPackages,
-  usePackageListItemSize,
-} from "@utils/packages"
+import { PACKAGE_LIST_ITEM_BASE_SIZE, usePackageListItemSize } from "@utils/packages"
 
 import { EmptyPackageList } from "./EmptyPackageList"
 import { PackageListItem } from "./PackageListItem"
@@ -14,21 +10,20 @@ import { VirtualList } from "./VirtualList"
 const PACKAGE_LIST_ITEM_SPACING = 16
 const PACKAGE_LIST_PADDING = 16
 
-export function PackageList(): JSX.Element {
-  const filteredPackages = useFilteredPackages()
+export function PackageList({ packageIds }: { packageIds: string[] }): JSX.Element {
   const getItemSize = usePackageListItemSize()
   const history = useHistory()
 
   const scrolled = useRef(false)
 
-  if (filteredPackages.length === 0) {
+  if (packageIds.length === 0) {
     return <EmptyPackageList />
   }
 
   return (
     <VirtualList<string>
       baseSize={PACKAGE_LIST_ITEM_BASE_SIZE}
-      items={filteredPackages}
+      items={packageIds}
       itemComponent={PackageListItem}
       itemSize={getItemSize}
       paddingBottom={PACKAGE_LIST_PADDING}
@@ -41,7 +36,7 @@ export function PackageList(): JSX.Element {
         // Scroll to package upon coming back from package view
         if (list && history.previous?.page === Page.PackageView && !scrolled.current) {
           const fromPackageId = history.previous.data.packageId
-          const index = filteredPackages.indexOf(fromPackageId)
+          const index = packageIds.indexOf(fromPackageId)
           if (index >= 0) {
             list.scrollToItem(index, "start")
           }
@@ -50,7 +45,7 @@ export function PackageList(): JSX.Element {
         }
       }}
       spacing={PACKAGE_LIST_ITEM_SPACING}
-      sx={{ flex: 1 }}
+      sx={{ flex: 1, height: "100%" }}
     />
   )
 }

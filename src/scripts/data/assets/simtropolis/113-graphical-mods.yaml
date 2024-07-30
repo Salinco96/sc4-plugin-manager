@@ -1950,7 +1950,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -1959,7 +1959,13 @@ assets:
 
 
 
+      							
 
+
+
+
+
+      							
       <p>Bikes for the mayor menu.</p>
 
       <p> </p>
@@ -1999,13 +2005,13 @@ assets:
       - NBVC_Bikes/NBVC_bike1-0x6534284a-0x947da1d3-0x59668597.SC4Desc
       - NBVC_Bikes/NBVC_bike1-0x5ad0e817_0xb8ed3951_0x30000.SC4Model
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_09_2010/d9e9da16b3f6f3b7d51b14e65e76b4fd-Nbvc_bikes1.jpg
+      - https://www.simtropolis.com/objects/screens/0024/d9e9da16b3f6f3b7d51b14e65e76b4fd-Nbvc_bikes1.jpg
     lastModified: 2010-09-12T04:47:39Z
     name: Bikes
     sha256: bbc03e2aaaf57df91572fc16708dde08c85d19518c7d7b622ff827b303b9d9ac
     size: 87548
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2010/thumb-d9e9da16b3f6f3b7d51b14e65e76b4fd-Nbvc_bikes1.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 162483
     url: https://community.simtropolis.com/files/file/24859-bikes/
     version: "1.0"
@@ -2632,12 +2638,12 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
-
-      							<p>	<span style="color:#ff0000;">!!! PLEASE READ THE INCLUDED README. IT CONTAINS ESSENTIAL INSTALLATION INSTRUCTIONS !!!<br><br>	NOTE: Fixes are available at the support thread. Check the support thread first before reporting bugs.</span><br><br><strong>Description</strong><br>	The Light Replacement Mod (<abbr title="Light Replacement Mod">LRM</abbr>) v4.0 Mega Pack consists of three parts: a prop pack, some plopable streetlights sets and a streetlight override mod.<br>	The first part, the prop pack, is essential for this mod. It contains 59 new streetlight designs and over 200 new props you can use for lots.<br>	The second part, the plopable streetlights sets, contains 31 sets of plopable streetlights for on the road sides and 20 sets for <abbr title="RealHighway">RHW</abbr> medians. These can be used to enlighten your (Real) Highways. With lots of variation, there's plenty of choice for everyone!<br>	The third part, the streetlight override mod, contains overrides for all streetlights in-game, replacing the Maxis streetlights with custom designs. This will give your city an unique and characteristic look. There's a large variety of designs available in various styles. Want to make your cities look more American, European or Commie? No problem! You can even compose your own style, isn't that great?<br>	All streetlights in this pack also have a more uniform light spreading, making your cities not only looking great from up close, but also from further away. So what are you waiting for? Install some new lights and give your city a whole new look at day and night!<br><br><strong>Dependencies</strong><br>	There are no dependencies for this package, since it's a dependency by itself.<br><br><strong>Compatibility</strong><br>	The streetlight override part of this mod is incompatible with the Uniform Streetlight Mod or earlier versions of the Light Replacement Mod. This mod also replaces the following packs with a new, updated version:<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Plopable <abbr title="RealHighway">RHW</abbr> Median Light Pack 01<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Plopable Streetlights 01 &amp; 02<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Prop Pack 01 &amp; 02<br><br><strong>Feedback and support</strong><br>	For Frequently Asked Questions feedback or support issues, please visit the <a href="https://www.simtropolis.com/forum/topic/45710-lrm-light-replacement-mod-support-development-and-discussion/" rel="external nofollow"><abbr title="Light Replacement Mod">LRM</abbr> Support &amp; Development Thread on SimTropolis</a>. We will attempt to answer them to the best of our knowledge, and as quickly as possible.<br><br><strong>Note</strong>: Download the Windows version for an automatic installer. Download the MAC version for manual installation.<br><br>	Best,<br>	Maarten</p>
+      							
+      							<p>	<span style="color:#ff0000;">!!! PLEASE READ THE INCLUDED README. IT CONTAINS ESSENTIAL INSTALLATION INSTRUCTIONS !!!<br><br>	NOTE: Fixes are available at the support thread. Check the support thread first before reporting bugs.</span><br><br><strong>Description</strong><br>	The Light Replacement Mod (<abbr title="Light Replacement Mod">LRM</abbr>) v4.0 Mega Pack consists of three parts: a prop pack, some plopable streetlights sets and a streetlight override mod.<br>	The first part, the prop pack, is essential for this mod. It contains 59 new streetlight designs and over 200 new props you can use for lots.<br>	The second part, the plopable streetlights sets, contains 31 sets of plopable streetlights for on the road sides and 20 sets for <abbr title="RealHighway">RHW</abbr> medians. These can be used to enlighten your (Real) Highways. With lots of variation, there’s plenty of choice for everyone!<br>	The third part, the streetlight override mod, contains overrides for all streetlights in-game, replacing the Maxis streetlights with custom designs. This will give your city an unique and characteristic look. There’s a large variety of designs available in various styles. Want to make your cities look more American, European or Commie? No problem! You can even compose your own style, isn’t that great?<br>	All streetlights in this pack also have a more uniform light spreading, making your cities not only looking great from up close, but also from further away. So what are you waiting for? Install some new lights and give your city a whole new look at day and night!<br><br><strong>Dependencies</strong><br>	There are no dependencies for this package, since it’s a dependency by itself.<br><br><strong>Compatibility</strong><br>	The streetlight override part of this mod is incompatible with the Uniform Streetlight Mod or earlier versions of the Light Replacement Mod. This mod also replaces the following packs with a new, updated version:<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Plopable <abbr title="RealHighway">RHW</abbr> Median Light Pack 01<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Plopable Streetlights 01 &amp; 02<br>	- <abbr title="Light Replacement Mod">LRM</abbr> Prop Pack 01 &amp; 02<br><br><strong>Feedback and support</strong><br>	For Frequently Asked Questions feedback or support issues, please visit the <a href="https://www.simtropolis.com/forum/topic/45710-lrm-light-replacement-mod-support-development-and-discussion/" rel="external nofollow"><abbr title="Light Replacement Mod">LRM</abbr> Support &amp; Development Thread on SimTropolis</a>. We will attempt to answer them to the best of our knowledge, and as quickly as possible.<br><br><strong>Note</strong>: Download the Windows version for an automatic installer. Download the MAC version for manual installation.<br><br>	Best,<br>	Maarten</p>
       						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_03_2012/307fdb483c3fe24f4cbd76290323326a-promo.jpg
@@ -2647,7 +2653,7 @@ assets:
     lastModified: 2017-05-12T23:01:52Z
     name: Light Replacement Mod (LRM) v4.0 Mega Pack
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2012/thumb-307fdb483c3fe24f4cbd76290323326a-promo.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
+    timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/27200-light-replacement-mod-lrm-v40-mega-pack/
     variants:
       "98162":
@@ -4825,7 +4831,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -4834,13 +4840,13 @@ assets:
 
 
 
+      							
 
 
 
 
 
-
-
+      							
       <p>
       	This DLC will contain trees, plants, rocks, ponds and everything related to the environment.
       </p>
@@ -5533,13 +5539,13 @@ assets:
       - AGC_American_trees.dat
       - AGC_Africa_and_Middle_East_trees.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ENVIRONMENT_ICON.thumb.png.23983403c43fd3c75145954b13e123ed.png
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ENVIRONMENT_ICON.png.9ef96068a94834cce519aed06c392fb8.png
     lastModified: 2023-06-10T16:11:53Z
     name: AGC - Environment DLC
     sha256: c8c023d4e34cfd6752529dd9eead4b9e98ae63a92fbba3ee500aca226d0e3b8c
     size: 35920333
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_10/ENVIRONMENT_ICON.thumb.png.23983403c43fd3c75145954b13e123ed.png
-    timestamp: 2024-07-03T09:08:15.228Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 50426564
     url: https://community.simtropolis.com/files/file/34720-agc-environment-dlc/
     version: 5.0.0
@@ -5636,7 +5642,13 @@ assets:
       								</div>
 
 
+
+
+
       							
+
+
+
 
 
       							
@@ -5865,13 +5877,13 @@ assets:
       - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Casual_Sims_V01_P2_MMP.dat
       - Barroco Hispano DLCs/Environment DLC/Flora/Sims and Animals/Casual Sims/AGC_Casual_Sims_V01_P1_MMP.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2023_06/649d7c3b24c1f_image(1).thumb.png.1f8c7ae0702254a1ab2c2b2ed663de2a.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_06/649d7b0d8cb06_image(1).png.a50b033afacff103b8d00d725981b1af.png
     lastModified: 2023-06-29T12:42:35Z
     name: AGC - Casual Sims DLC
     sha256: aa8a555c8978d9a61cf3757201b838c0288d72f1c080296140bbd69c3fd97de4
     size: 388142
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_06/649d7c3b24c1f_image(1).thumb.png.1f8c7ae0702254a1ab2c2b2ed663de2a.png
-    timestamp: 2024-07-23T09:03:18.391Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1628489
     url: https://community.simtropolis.com/files/file/35560-agc-casual-sims-dlc/
     version: 1.0.0
@@ -5908,7 +5920,7 @@ assets:
       - sc4evermore/86-sfbt-street-tree-mod
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -5917,9 +5929,13 @@ assets:
 
 
 
+      							
 
 
 
+
+
+      							
       <p>
       	<span style="color:#2980b9;"><strong><abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod <abbr title="Type 21 Exemplar">T21</abbr> overhaul.</strong></span>
       </p>
@@ -5970,13 +5986,13 @@ assets:
       - Street Tree Mod/Street Mods/z_SFBT_RoadsideMod_R$$_C$$LDMDHD.dat
       - Street Tree Mod/Street Mods/z_SFBT_OnewayRoadsideMod_R$$LDMDHD.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2023_10/img_overhaul.thumb.png.ec1553f24392990dac90e55b916f83bb.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/img_overhaul.png.cc8d08caf08d44fc61a7c4ee25491ba3.png
     lastModified: 2023-10-07T21:00:17Z
     name: SFBT Street Tree Mod - REVISED
     sha256: b273ca4b84f4f6b49226d5e35bc3b1f7a9432fb56a14b74a5b559b7936d86acc
     size: 153447
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/img_overhaul.thumb.png.ec1553f24392990dac90e55b916f83bb.png
-    timestamp: 2024-07-05T07:02:43.202Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 205745
     url: https://community.simtropolis.com/files/file/35660-sfbt-street-tree-mod-revised/
     version: 2.0.0
@@ -6047,7 +6063,7 @@ assets:
 
 
       <p style="margin-bottom:0cm;line-height:normal;">
-      	A number of segments have been produced in <abbr title="Right Hand Drive">RHD</abbr> and <abbr title="Left Hand Drive">LHD</abbr>. A fairly generic <abbr title="Left Hand Drive">LHD</abbr>, between Oceania and the UK. 
+      	A number of segments have been produced in <abbr title="Right Hand Drive">RHD</abbr> and <abbr title="Left Hand Drive">LHD</abbr>. A fairly generic <abbr title="Left Hand Drive">LHD</abbr>, between Oceania and the UK.
       </p>
 
 
@@ -6072,12 +6088,12 @@ assets:
 
 
       <p style="margin-bottom:0cm;line-height:normal;">
-      	<span style="font-size:16px;"><b>Distribution</b></span><b><span style="font-size:14pt;"></span></b>
+      	<span style="font-size:16px;"><b>Distribution</b></span>
       </p>
 
 
       <p style="margin-bottom:0cm;line-height:normal;">
-      	You can download, on this page, the ready-to-play version with Maxis grass textures. 
+      	You can download, on this page, the ready-to-play version with Maxis grass textures.
       </p>
 
 
@@ -6087,7 +6103,7 @@ assets:
 
 
       <p style="margin-bottom:0cm;line-height:normal;">
-      	News, preparation for updating this mod ... on <a href="https://community.simtropolis.com/forums/topic/761614-scotys-small-tinkering/" rel="">this thread</a> ! 
+      	News, preparation for updating this mod ... on <a href="https://community.simtropolis.com/forums/topic/761614-scotys-small-tinkering/" rel="">this thread</a> !
       </p>
 
 
@@ -6097,7 +6113,7 @@ assets:
 
 
       <p style="margin-bottom:0cm;line-height:normal;">
-      	<span style="font-size:16px;"><b>Installation</b></span><b><span style="font-size:14pt;"></span></b>
+      	<span style="font-size:16px;"><b>Installation</b></span>
       </p>
 
 
@@ -6157,7 +6173,19 @@ assets:
 
 
       <p style="margin-bottom:0cm;line-height:normal;">
-      	<b><span style="font-size:18pt;color:#336699;"></span></b>
+      	 
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	-----
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:normal;">
+      	Added WestWindStreet to RUM - for those in the know.<br>
+      	Since version 8.48, Rivit's RUM Mod - and MGB rails - supports WestWindStreet. As it should be, the RUM plugin should be loaded after WWS.<br>
+      	Or, download the zip on my Drive, here <a href="https://1drv.ms/f/s!AlD-_0WBCRHjiyfobnRthZ2S9PHX" rel="external nofollow">Doc_SC4</a> : 202407 RUM MGB - E5 HuguesAroux StreetX.zip, ...
       </p>
 
       						</body>
@@ -6200,18 +6228,18 @@ assets:
       - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common RHD.dat
       - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common LHD.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668aa03dca016_Capturedcran2024-07-07131254.thumb.jpg.abf38ff1a307797cd63719b9a114336b.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_various-intersections-1.thumb.jpg.9eb7134097ae1d6dbc474cdf988df42a.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_rural_gravel_option.thumb.jpg.94aa46349c6f2d00de3dbfc57d033e90.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_rural_unkerbed_option.thumb.jpg.49b52085e0030f9165cbf2e70d594495.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_SAMs_NAM.thumb.jpg.633d348f408a2798e310a4feb41f84b1.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_NWM.thumb.jpg.e7e9ae606858c6b8a10047cfcd4965c3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/668a9533a5f78_Capturedcran2024-07-07131254.jpg.a79f4f5fd5bd7196e749f5eba1b37a8c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_various-intersections-1.jpg.73d1e96bc8a727906a9438881ac79e0a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_rural_gravel_option.jpg.0204a86d0d18012fef8e88a3c1a8fdc1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_rural_unkerbed_option.jpg.56807bcc2585ff61fe5362a5b52481e9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_SAMs_NAM.jpg.4953d66c8b49ee237645e61c0139bcc0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_NWM.jpg.1aa8f5b02cd587a89f1141ef0c36b419.jpg
     lastModified: 2024-07-07T14:03:45Z
     name: WestWind Streets
     sha256: bdcd88dde734c2f5ebdc5b5b471ff38c3da6abb4a755a72003b9cdd7a84fc075
     size: 16076288
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/668aa03dca016_Capturedcran2024-07-07131254.thumb.jpg.abf38ff1a307797cd63719b9a114336b.jpg
-    timestamp: 2024-07-16T08:06:07.759Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 30024429
     url: https://community.simtropolis.com/files/file/36330-westwind-streets/
     version: 1.5.48
@@ -6407,14 +6435,14 @@ assets:
       - Cherry Tree/CP_Cherry_Spring.dat
       - Cherry Tree/CP_Cherry_Fall.dat
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/Scr_CP.thumb.jpg.f9e9867a177bfea36552fc94ae96f919.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/SubI_CP.thumb.png.950f4701ce6e4bc288fabdb20c4a9504.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/Scr_CP.jpg.720dc96a65120ac388460663e1cdcc06.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/SubI_CP.png.763b73b929417d1cafbeb0604870ecec.png
     lastModified: 2024-07-13T15:22:33Z
     name: CP Floral MMP Collection
     sha256: 55d4d27c247f71abdb0f22ceaff356dcfcd4e378648d963f679aa0df946ebee2
     size: 1821356
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/Scr_CP.thumb.jpg.f9e9867a177bfea36552fc94ae96f919.jpg
-    timestamp: 2024-07-16T08:06:07.759Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1875916
     url: https://community.simtropolis.com/files/file/36339-cp-floral-mmp-collection/
     version: "1"
@@ -6457,7 +6485,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       							<p>Finally realistic desert regions are possible!!! This mod consists of 3 different types of saguaro cacti. Large cactus, Small cactus, Cactus with 3 arms at different height. These cacti can be placed as flora in mayor mode. The plop cost is 5 sim dollars. </p>
       <p>In order to install this mod put the .dat file into your My Documents/SimCity4/Plugins folder.</p>
 
@@ -6475,14 +6503,14 @@ assets:
       - Desert Flora Mod/JohnB-Cactus.dat
       - Desert Flora Mod/Desert Flora Mod.txt
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_03_2006/cab6c02d74015a052238f2c0b0e72252-Ghost%20town5.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_03_2006/cab6c02d74015a052238f2c0b0e72252-cactusin3dsmax.jpg
+      - https://www.simtropolis.com/objects/screens/0022/cab6c02d74015a052238f2c0b0e72252-Ghost%20town5.jpg
+      - https://www.simtropolis.com/objects/screens/0022/cab6c02d74015a052238f2c0b0e72252-cactusin3dsmax.jpg
     lastModified: 2006-03-31T11:49:41Z
     name: Desert Flora Mod
     sha256: 053d8535fdf72d1e6755d76e01af3e72c379694cfefebca20ac18bb49b2dcd97
     size: 60574
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2006/thumb-cab6c02d74015a052238f2c0b0e72252-Ghost%20town5.jpg
-    timestamp: 2024-07-05T07:02:43.202Z
+    timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 122120
     url: https://community.simtropolis.com/files/file/4344-desert-flora-mod/
     version: "1.0"
@@ -6623,4 +6651,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-43c2c618fac6b7de4fc16966c4966243-SW_Hydro%20Dam.jpg
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
-timestamp: 2024-07-23T10:27:16.370Z
+timestamp: 2024-07-30T08:53:33.543Z
