@@ -13,6 +13,7 @@ export const DIRNAMES = {
   profiles: "Profiles",
   root: "Manager",
   temp: "~temp",
+  templates: "Templates",
   tools: "Tools",
 }
 
@@ -25,11 +26,13 @@ export const FILENAMES = {
   settings: "settings",
 }
 
+export const TEMPLATE_PREFIX = "template:"
+
 /** Whitelisted cleanitol file extensions (all lowercase) */
-export const CLEANITOLEXTENSIONS = [".txt"]
+export const CLEANITOL_EXTENSIONS = [".txt"]
 
 /** Whitelisted documentation file extensions (all lowercase) */
-export const DOCEXTENSIONS = [
+export const DOC_EXTENSIONS = [
   ".bmp",
   ".css",
   ".doc",
@@ -48,7 +51,7 @@ export const DOCEXTENSIONS = [
 ]
 
 /** Whitelisted plugin file extensions (all lowercase) */
-export const SC4EXTENSIONS = [
+export const SC4_EXTENSIONS = [
   ".dat",
   ".dll",
   ".ini",
@@ -59,7 +62,7 @@ export const SC4EXTENSIONS = [
 ]
 
 /** Usual installation paths for the base game (non-exhaustive) */
-export const SC4INSTALLPATHS = [
+export const SC4_INSTALL_PATHS = [
   // TODO: Non-Steam version? Is "SimCity 4 Deluxe" name even reliable?
   "C:\\Program Files (x86)\\Steam\\steamapps\\common\\SimCity 4 Deluxe",
   "D:\\Program Files (x86)\\Steam\\steamapps\\common\\SimCity 4 Deluxe",

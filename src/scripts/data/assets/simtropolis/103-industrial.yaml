@@ -2884,14 +2884,29 @@ assets:
       - paeng
     category: 400
     dependencies:
-      - simtropolis/20966-peg-mtp-super-pack
-      - simtropolis/15287-bsc-mega-props-sg-vol-01
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - simtropolis/19338-peg-security-fencing-kit
       - simtropolis/19786-peg-cdk3-sp-rail-fleet
+      - simtropolis/20966-peg-mtp-super-pack
       - simtropolis/24859-bikes
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6152,9 +6167,8 @@ assets:
       - jestarr
     category: 400
     dependencies:
-      - simtropolis/35753-jes_resourcepack_vol27
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
-      - sc4evermore/3-sc4d-
+      - simtropolis/35753-jes_resourcepack_vol27-v4
     description: >-
       <body>
                                   
@@ -6166,7 +6180,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6452,14 +6496,13 @@ assets:
       - jestarr
     category: 400
     dependencies:
-      - simtropolis/35753-jes_resourcepack_vol27
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem
+      - simtropolis/35753-jes_resourcepack_vol27-v4
       - simtropolis/35961-bsc-batprops_hd-jes-vol10
       - simtropolis/36046-bsc-batprops_hd-jes-vol12
       - simtropolis/36094-bsc-batprops_hd-jes-vol13
       - simtropolis/36194-bsc-batprops_hd-jes-vol15
-      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
-      - sc4evermore/3-sc4d-
-      - sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem
     description: >-
       <body>
                                   
@@ -6471,7 +6514,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6644,16 +6717,16 @@ assets:
       - JoelMk2
     category: 400
     dependencies:
-      - simtropolis/30773-hd-north-american-53ft-semi-trailers-vol1
-      - simtropolis/30733-hd-north-american-40ft-semi-trailers-vol1
-      - simtropolis/30732-hd-north-american-semi-truck-cabs-vol1
-      - simtropolis/19338-peg-security-fencing-kit
-      - simtropolis/27563-shk-parking-pack
-      - simtropolis/27200-light-replacement-mod-lrm-v40-mega-pack
-      - simtropolis/23004-scag-cargo-lots-v10
-      - simtropolis/26252-scag-mega-dependency-1
       - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
       - sc4evermore/7-sc4d-lex-legacy-ultimate-airport-pack
+      - simtropolis/19338-peg-security-fencing-kit
+      - simtropolis/23004-scag-cargo-lots-v10
+      - simtropolis/26252-scag-mega-dependency-1
+      - simtropolis/27200-light-replacement-mod-lrm-v40-mega-pack
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/30732-hd-north-american-semi-truck-cabs-vol1
+      - simtropolis/30733-hd-north-american-40ft-semi-trailers-vol1
+      - simtropolis/30773-hd-north-american-53ft-semi-trailers-vol1
     description: >-
       <body>
                                   
@@ -6665,7 +6738,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6889,10 +6992,10 @@ assets:
       - philforhockey51
     category: 400
     dependencies:
-      - simtropolis/27698-murimk-props-vol03-industrials
-      - sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3
       - sc4evermore/13-sfbt-essentials
+      - sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/27698-murimk-props-vol03-industrials
     description: >-
       <body>
                                   
@@ -6904,7 +7007,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7062,12 +7195,27 @@ assets:
       - philforhockey51
     category: 400
     dependencies:
-      - simtropolis/27698-murimk-props-vol03-industrials
       - sc4evermore/13-sfbt-essentials
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/27698-murimk-props-vol03-industrials
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7234,9 +7382,9 @@ assets:
       - philforhockey51
     category: 400
     dependencies:
-      - simtropolis/27698-murimk-props-vol03-industrials
       - sc4evermore/13-sfbt-essentials
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/27698-murimk-props-vol03-industrials
     description: >-
       <body>
                                   
@@ -7248,7 +7396,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7407,12 +7585,27 @@ assets:
       - philforhockey51
     category: 400
     dependencies:
-      - simtropolis/27698-murimk-props-vol03-industrials
       - sc4evermore/13-sfbt-essentials
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/27698-murimk-props-vol03-industrials
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7581,9 +7774,9 @@ assets:
       - philforhockey51
     category: 400
     dependencies:
-      - simtropolis/27698-murimk-props-vol03-industrials
       - sc4evermore/13-sfbt-essentials
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/27698-murimk-props-vol03-industrials
     description: >-
       <body>
                                   
@@ -7595,7 +7788,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7755,10 +7978,10 @@ assets:
       - philforhockey51
     category: 400
     dependencies:
-      - simtropolis/27698-murimk-props-vol03-industrials
-      - sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3
       - sc4evermore/13-sfbt-essentials
+      - sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/27698-murimk-props-vol03-industrials
     description: >-
       <body>
                                   
@@ -7770,7 +7993,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7960,7 +8213,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8015,6 +8298,378 @@ assets:
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 704272
     url: https://community.simtropolis.com/files/file/36328-pacific-supply/
+    version: 1.0.0
+  simtropolis/36370-small-brick-factory:
+    authors:
+      - jestarr
+    category: 400
+    dependencies:
+      - simtropolis/35753-jes_resourcepack_vol27-v4
+      - simtropolis/35961-bsc-batprops_hd-jes-vol10
+      - simtropolis/36006-bsc-batprops_hd-jes-vol11
+      - simtropolis/36046-bsc-batprops_hd-jes-vol12
+      - simtropolis/36094-bsc-batprops_hd-jes-vol13
+      - simtropolis/36110-bsc-batprops_hd-jes-vol14
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	Makers of products used in architectural concept modeling. This comes as an IM$$3 growable and a ploppable with jobs in HD and SD. All are BTE enabled for industrial reward chains.
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot Details and Information:
+      </p>
+
+
+      <p>
+      	Lot Size: 2x2 tiles<br>
+      	Building Style(s): Building: Industrial, Building: IM, Industry: Anchor, BTE: Ind - Manufacturing<br>
+      	Growth Stage: 3<br>
+      	Menu Position: Landmarks [Ploppable]<br>
+      	Occupants: 52 - IM<br>
+      	Bulldoze Cost: $323<br>
+      	Building Value: $396<br>
+      	Construction Time: 32 days<br>
+      	Max. Fire Stage: 3<br>
+      	Power Consumption: 4 MWh/month<br>
+      	Water Consumption:     46 Gallons/month<br>
+      	Air Pollution: 3 over 9 tiles<br>
+      	Water Pollution: 2 over 13 tiles<br>
+      	Garbage Pollution: 4 over 0 tiles
+      </p>
+
+
+      <p>
+      	<br>
+      	Compatibility:
+      </p>
+
+
+      <p>
+      	This download is only compatible with SimCity 4 “Rush Hour” or SimCity 4 Deluxe.
+      </p>
+
+
+      <p>
+      	<br>
+      	Installation:
+      </p>
+
+
+      <p>
+      	Unzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a seperate folder or deleted.
+      </p>
+
+
+      <p>
+      	To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+
+      <p>
+      	<br>
+      	Dependencies:
+      </p>
+
+
+      <p>
+      	To ensure the proper functionality, make sure the files mentioned below are installed in your plugins folder.
+      </p>
+
+
+      <p>
+      	Grfe_props_pack_LE_chestnuts<br>
+      	Grfe_props_pack_MM_chestnuts<br>
+      	Grfe_props_pack_LE_Oaks
+      </p>
+
+
+      <p>
+      	The above files are available at <a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<br>
+      	Grfe_props_pack_Carpack vol04<br>
+      	<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol02
+      </p>
+
+
+      <p>
+      	The above files are available at <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack/" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack/</a>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed3248353291" scrolling="no"
+      src="https://community.simtropolis.com/files/file/35753-jes_resourcepack_vol27/?do=embed" style="height:364px;max-width:502px;"></iframe><iframe allowfullscreen=""
+      data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed5988225659" scrolling="no"
+      src="https://community.simtropolis.com/files/file/35961-bsc-batprops_hd-jes-vol10/?do=embed" style="height:364px;max-width:502px;"></iframe><iframe allowfullscreen=""
+      data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed6802665999" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36006-bsc-batprops_hd-jes-vol11/?do=embed" style="height:364px;max-width:502px;"></iframe><iframe allowfullscreen=""
+      data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed6114527246" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36046-bsc-batprops_hd-jes-vol12/?do=embed" style="height:364px;max-width:502px;"></iframe><iframe allowfullscreen=""
+      data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed5953782140" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36094-bsc-batprops_hd-jes-vol13/?do=embed" style="height:364px;max-width:502px;"></iframe><iframe allowfullscreen=""
+      data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed9607858419" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36110-bsc-batprops_hd-jes-vol14/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/jes_SmallBrickFactory_Day.jpg.1d7b399b0b242767e3a33c870b561b46.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/jes_SmallBrickFactory_Nite.jpg.d5b9ecb3842c89d9c4158a943f0e98b1.jpg
+    lastModified: 2024-08-07T14:40:31Z
+    name: Small Brick Factory
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/jes_SmallBrickFactory_Day.thumb.jpg.cffd9131448602466cc79b87dab843a3.jpg
+    timestamp: 2024-08-09T12:18:09.417Z
+    url: https://community.simtropolis.com/files/file/36370-small-brick-factory/
+    variants:
+      "202227":
+        filename: jes_SmallBrickFactory_HD.zip
+        files:
+          - Documentation/Readme_SmallBrickFactory_HD.html
+          - Documentation/Styles/stylesheet.css
+          - Documentation/images/logo.png
+          - Documentation/images/jes_SmallBrickFactory_Nite.jpg
+          - Documentation/images/jes_SmallBrickFactory_Day.jpg
+          - Documentation/images/footer1.jpg
+          - BSC/BSCProps/jes_SmallBrickFactory_HD_90-0x5ad0e817_0xf3b0b3a6_0x30000.SC4Model
+          - BSC/jestarr/jes_SmallBrickFactory_HD/Ploppable/jes_2x2_plop_SmallBrickFactory_HD_90_443099b1.SC4Lot
+          - BSC/jestarr/jes_SmallBrickFactory_HD/Growable/IM$$3_2x2_jes_SmallBrickFactory_HD_90_2433d410.SC4Lot
+        sha256: 5f6e0a6f3d5ab8dcef46cbf0f837e8e512b557d4c9a6daeae2d796a98b70ffa9
+        size: 845437
+        uncompressed: 993660
+      "202228":
+        filename: jes_SmallBrickFactory_SD.zip
+        files:
+          - Documentation/Readme_SmallBrickFactory_SD.html
+          - Documentation/Styles/stylesheet.css
+          - Documentation/images/logo.png
+          - Documentation/images/jes_SmallBrickFactory_Nite.jpg
+          - Documentation/images/jes_SmallBrickFactory_Day.jpg
+          - Documentation/images/footer1.jpg
+          - BSC/BSCProps/jes_SmallBrickFactory_SD_90-0x5ad0e817_0x53b0b1d2_0x30000.SC4Model
+          - BSC/jestarr/jes_SmallBrickFactory_SD/Ploppable/jes_2x2_plop_SmallBrickFactory_SD_90_643099c4.SC4Lot
+          - BSC/jestarr/jes_SmallBrickFactory_SD/Growable/IM$$3_2x2_jes_SmallBrickFactory_SD_90_e433d422.SC4Lot
+        sha256: 927f5ae91d7803a0e77f1accdfeaaf08fa569db9e5125aec05fb01f97ddcef5f
+        size: 565088
+        uncompressed: 653533
+    version: 1.0.0
+  simtropolis/36381-fall-river-mill:
+    authors:
+      - jestarr
+    category: 400
+    dependencies:
+      - simtropolis/35961-bsc-batprops_hd-jes-vol10
+      - simtropolis/36006-bsc-batprops_hd-jes-vol11
+      - simtropolis/36046-bsc-batprops_hd-jes-vol12
+      - simtropolis/36258-bsc-batprops_hd-jes-vol16
+      - simtropolis/36318-bsc-batprops_hd-jes-vol17
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <p>
+      	Grinding grain into flour. This comes as a ploppable only. It's transit enabled for rail and truck.
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot Details and Information:
+      </p>
+
+
+      <p>
+      	Lot Size: 14x5 tiles<br>
+      	Building Style(s): Building: Industrial, Building: IM, Industry: Anchor, BTE: Ind - Manufacturing<br>
+      	Menu Position: Landmarks [Ploppable]<br>
+      	Occupants: 1574 - IM<br>
+      	Bulldoze Cost: $606<br>
+      	Building Value: $6,767<br>
+      	Max. Fire Stage: 4<br>
+      	Plop Cost: $9,246<br>
+      	Power Consumption: 54 MWh/month<br>
+      	Water Consumption:     798 Gallons/month<br>
+      	Air Pollution: 53 over 9 tiles<br>
+      	Water Pollution: 35 over 13 tiles<br>
+      	Garbage Pollution: 8 over 0 tiles
+      </p>
+
+
+      <p>
+      	<br>
+      	Compatibility:
+      </p>
+
+
+      <p>
+      	This download is only compatible with SimCity 4 “Rush Hour” or SimCity 4 Deluxe.
+      </p>
+
+
+      <p>
+      	<br>
+      	Installation:
+      </p>
+
+
+      <p>
+      	Unzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a seperate folder or deleted.
+      </p>
+
+
+      <p>
+      	To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      </p>
+
+
+      <p>
+      	<br>
+      	Dependencies:
+      </p>
+
+
+      <p>
+      	To ensure the proper functionality, make sure the files mentioned below are installed in your plugins folder.
+      </p>
+
+
+      <p>
+      	    •jes_FallRiverMill_Props_HD [included]<br>
+      	    •jes_FallRiverMillTextures [included]
+      </p>
+
+
+      <p>
+      	<br>
+      	    •<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01<br>
+      	    •<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol01 v4<br>
+      	    •Grfe_props_pack_Carpack vol01-vol02-Remastered<br>
+      	    •Grfe_props_pack_Carpack vol04<br>
+      	    •<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol02<br>
+      	    •<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol03 v4
+      </p>
+
+
+      <p>
+      	The above files are available at <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack/" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed1792154661" scrolling="no"
+      src="https://community.simtropolis.com/files/file/35961-bsc-batprops_hd-jes-vol10/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed8383160600" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36006-bsc-batprops_hd-jes-vol11/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed7441967221" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36046-bsc-batprops_hd-jes-vol12/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed39997813" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36258-bsc-batprops_hd-jes-vol16/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed5760217276" scrolling="no"
+      src="https://community.simtropolis.com/files/file/36318-bsc-batprops_hd-jes-vol17/?do=embed" style="height:364px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/jes_FallRiver_Day.jpg.aaee37e193b3f330b52a66bf1d6a406d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/jes_FallRiver_Nite.jpg.2f66a55d03eec05aa3aeff2ca8542dc6.jpg
+    lastModified: 2024-08-09T02:52:22Z
+    name: Fall River Mill
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/jes_FallRiver_Day.thumb.jpg.b121295293db982a785bd385de193b39.jpg
+    timestamp: 2024-08-09T12:18:09.417Z
+    url: https://community.simtropolis.com/files/file/36381-fall-river-mill/
+    variants:
+      "202344":
+        filename: jes_FallRiverMill_HD.zip
+        files:
+          - Documentation/Readme_FallRiverMill_HD.html
+          - Documentation/Styles/stylesheet.css
+          - Documentation/images/logo.png
+          - Documentation/images/footer1.jpg
+          - Documentation/images/FallRiver_Nite.jpg
+          - Documentation/images/FallRiver_Day.jpg
+          - BSC/BSCTextures/jes_FallRiverMillTextures.dat
+          - BSC/BSCProps/jes_FallRiverMill_Props_HD.dat
+          - BSC/BSCProps/jes_FallRiverMill_HD-0x5ad0e817_0xb3a83527_0x30000.SC4Model
+          - BSC/jestarr/jes_FallRiverMill_HD/jes_14x5_plop_FallRiverMill_HD_b42cc621.SC4Lot
+        sha256: 661060cb4130f735f9ecc1dc3e059b99f23789c5a13e2b4ffdb07b2cfca0ff97
+        size: 6185401
+        uncompressed: 7439959
+      "202345":
+        filename: jes_FallRiverMill_SD.zip
+        files:
+          - Documentation/Readme_FallRiverMill_SD.html
+          - Documentation/Styles/stylesheet.css
+          - Documentation/images/logo.png
+          - Documentation/images/footer1.jpg
+          - Documentation/images/FallRiver_Nite.jpg
+          - Documentation/images/FallRiver_Day.jpg
+          - BSC/BSCTextures/jes_FallRiverMillTextures.dat
+          - BSC/BSCProps/jes_FallRiverMill_SD-0x5ad0e817_0x33a822e0_0x30000.SC4Model
+          - BSC/BSCProps/jes_FallRiverMill_Props_HD.dat
+          - BSC/jestarr/jes_FallRiverMill_SD/jes_14x5_plop_FallRiverMill_SD_d3b2a4ac.SC4Lot
+        sha256: 5819ea000e194beca6937dfc109618d4e448a20c06c27f1239005b6b7e1807a6
+        size: 3451776
+        uncompressed: 4031926
     version: 1.0.0
   simtropolis/3746-simworld-auto-truck-engine-plant-ver-12:
     authors:
@@ -8377,4 +9032,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-7595867db4de7599ada3df6de405bad4-umbrella.jpg
     url: https://community.simtropolis.com/files/file/976-umbrella-inc-research-facility/
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T13:48:06.421Z

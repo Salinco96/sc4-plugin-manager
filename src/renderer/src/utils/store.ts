@@ -112,6 +112,9 @@ export interface Store {
     [type in SnackbarType]?: SnackbarKey
   }
   status: ApplicationStatus
+  templates?: {
+    [profileId: string]: ProfileInfo
+  }
 }
 
 export const useStore = create<Store>()((set, get): Store => {
@@ -429,6 +432,10 @@ export const useStore = create<Store>()((set, get): Store => {
 
           if (data.status) {
             updateState({ status: { $set: data.status } })
+          }
+
+          if (data.templates) {
+            updateState({ templates: templates => compact({ ...templates, ...data.templates }) })
           }
         } catch (error) {
           console.error(error)

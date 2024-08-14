@@ -14,7 +14,7 @@ const categories: IndexerCategory[] = [
     id: "33-plex-custom-lots-mods",
   },
   {
-    category: 730,
+    category: 750,
     id: "34-cdk-coastal-development-kit",
   },
   {
@@ -74,7 +74,7 @@ const categories: IndexerCategory[] = [
     id: "108-parks-plazas",
   },
   {
-    category: 730,
+    category: 750,
     id: "109-waterfront",
   },
   {
@@ -82,7 +82,7 @@ const categories: IndexerCategory[] = [
     id: "110-transportation",
   },
   {
-    category: 710,
+    category: 790,
     id: "111-automata",
   },
   {

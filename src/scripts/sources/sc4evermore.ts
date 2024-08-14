@@ -6,7 +6,7 @@ const origin = "https://www.sc4evermore.com"
 
 const categories: IndexerCategory[] = [
   {
-    category: 720,
+    category: 7,
     id: "6-network-addon-mod-nam",
   },
   {
@@ -78,7 +78,7 @@ const categories: IndexerCategory[] = [
     id: "40-maxis",
   },
   {
-    category: 710,
+    category: 790,
     id: "41-automata-mods",
   },
   {

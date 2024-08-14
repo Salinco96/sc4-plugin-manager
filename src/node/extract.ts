@@ -23,7 +23,7 @@ export async function extractRecursively(
 ): Promise<void> {
   const { logger = console } = options
 
-  const archivePaths = await glob("*.{7z,exe,jar,msi,zip}", {
+  const archivePaths = await glob("*.{7z,exe,jar,msi,rar,zip}", {
     cwd: basePath,
     matchBase: true,
     nodir: true,
@@ -65,6 +65,7 @@ export async function extract(
 
   switch (extension) {
     case ".7z":
+    case ".rar":
       await extract7z(archivePath, extractPath, options)
       break
 

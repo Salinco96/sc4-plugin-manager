@@ -908,14 +908,27 @@ assets:
       - deadwoods
     category: 700
     dependencies:
-      - simtropolis/35790-sc4-cleanitol
-      - simtropolis/13153-bsc-mega-props-dae-vol02
-      - simtropolis/14973-bsc-mega-props-dae-vol01
       - sc4evermore/18-bsc-cleanitol
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/35790-sc4-cleanitol
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1298,14 +1311,27 @@ assets:
       - deadwoods
     category: 700
     dependencies:
-      - simtropolis/35790-sc4-cleanitol
-      - simtropolis/13153-bsc-mega-props-dae-vol02
-      - simtropolis/14973-bsc-mega-props-dae-vol01
       - sc4evermore/18-bsc-cleanitol
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/35790-sc4-cleanitol
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2236,7 +2262,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3165,7 +3221,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7219,6 +7305,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
       <p><span style="font-family:Helvetica, Arial, sans-serif;">This is a series of 1x1 lots that allow you to create parking lots of various sizes and configurations. This is the base set for
       several planned add-ons which will allow you to make many different kinds of parking lots.  There are 11 lots total, 6 entrance lots, which function as parking lots with a capacity of 1,500, and
@@ -7531,13 +7632,28 @@ assets:
       - ShadeSlayer
     category: 700
     dependencies:
-      - simtropolis/15322-bsc-texture-pack-cycledogg-v01
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - simtropolis/15582-warehouses-batprops-part-a
       - simtropolis/15583-warehouses-batprops-part-b
       - simtropolis/16119-logistics-centres-megapack
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8112,6 +8228,21 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9142,6 +9273,21 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11061,10 +11207,96 @@ assets:
     authors:
       - Building Architecht Dude
     category: 700
-    lastModified: 2017-01-18T19:40:46Z
+    dependencies:
+      - simtropolis/26079-peg-spam-super-resource-pack
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/19880-peg-cdk3-super-pak
+    description: >-
+      <body>
+                                  
+
+
+
+
+
+
+      							
+      <p>
+      	Been looking for a better Large Freight Yard? Well, look no further!
+      </p>
+
+
+      <p>
+      	Thanks to an incredible amount of reviews I have put together an improved version of the original Large Freight Yard. This new version has extensive updating to stats, textures, props, main building, and more!<br>
+      	<br>
+      	<strong>Stats</strong>
+      </p>
+
+
+      <p>
+      	Power: 180 Volts<br>
+      	Water: 20<br>
+      	Capacity: 6000<br>
+      	Monthly Maintenance Fee: 200 Simolians
+      </p>
+
+
+      <p>
+      	<strong>Dependencies</strong><br>
+      	<a href="https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/" rel=""><abbr title="SimPeg Agricultural Mod">SPAM</abbr> SUPER RESOURCE PACK</a><br>
+      	<a href="https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/" rel=""><abbr title="Pegasus">PEG</abbr> <abbr title="Mountain Theme Pack">MTP</abbr> SUPER PACK</a><br>
+      	<a href="https://community.simtropolis.com/files/file/19880-peg-cdk3-super-pak/" rel=""><abbr title="Pegasus">PEG</abbr> <abbr title="Coastal Development Kit 3">CDK3</abbr> SUPER PAK</a>
+      </p>
+
+
+      <p>
+      	<strong>Changelog</strong>
+      </p>
+
+
+      <p>
+      	V 1.1 Texture Overhaul, added new rail lines, second building and deepened lot.
+      </p>
+
+
+      <p>
+      	I would like to thank all of those who helped me to improve this <abbr title="Building Architect Tool">BAT</abbr> with their reviews! Thank you all!
+      </p>
+
+
+      <p>
+      	Building Architecht Dude
+      </p>
+
+
+      <hr>
+
+      <p>
+      	<span style="font-size:12px;"><span style="color:#0000FF;">Mod Edit:</span> Added unlisted dependencies above.</span>
+      </p>
+
+      						</body>
+    filename: Large Freight Train Station.zip
+    files:
+      - Large Freight Train Station/Water Tower-0x5ad0e817_0xdd1c4b5e_0x230000.SC4Model
+      - Large Freight Train Station/Simcity Rail and Freight Water Tower-0x6534284a-0xdd1c4b5e-0x9d3abf41.SC4Desc
+      - Large Freight Train Station/Simcity Rail and Freight Main Building Version 2-0x6534284a-0xdd1c4b5e-0xbd3b824a.SC4Desc
+      - Large Freight Train Station/Simcity Rail and Freight Main Building Version 2-0x5ad0e817_0xdd1c4b5e_0x240000.SC4Model
+      - Large Freight Train Station/Simcity Freight And Rail Yard Version 1.1_3d3b823c.SC4Lot
+      - Large Freight Train Station/Readme.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_08_2012/c5c54e3f5fea1b797226f65feb41433a-main-large-freight-train-v11-pic.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2012/64b62fd247ac0df37752835e9bafdd94-night-time-large-train-v11.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2012/46af2f7755d9f31178c9555cc8b0a397-day-time-view-large-freight-train-v11.jpg
+    lastModified: 2024-08-06T09:36:25Z
     name: Large Freight Train Station
+    sha256: f90381ee1e3e6496eeca24415901d2042f45ef33bdfcf5ee6670228ca6ed60f6
+    size: 380643
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2012/c5c54e3f5fea1b797226f65feb41433a-main-large-freight-train-v11-pic.jpg
+    timestamp: 2024-08-06T13:57:29.522Z
+    uncompressed: 431552
     url: https://community.simtropolis.com/files/file/27938-large-freight-train-station/
+    version: "1.0"
   simtropolis/27994-swiss-autobahn-signage-set:
     authors:
       - MandelSoft
@@ -11502,15 +11734,29 @@ assets:
       - "11241036"
     category: 700
     dependencies:
-      - simtropolis/26793-network-addon-mod-for-windows-installer-offsite
-      - simtropolis/33651-11241036-textures
-      - simtropolis/30883-sc4fix-third-party-patches-for-sc4
       - sc4evermore/13-sfbt-essentials
-      - sc4evermore/13-
       - sc4evermore/90-mgb204-texture-pack
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+      - simtropolis/30883-sc4fix-third-party-patches-for-sc4
+      - simtropolis/33651-11241036-textures
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12551,20 +12797,20 @@ assets:
       - hugues aroux
     category: 700
     dependencies:
-      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/13-sfbt-essentials
+      - sc4evermore/188-vip-vnaoned-props-pack-vol01
+      - sc4evermore/214-bsc-tsc-girafe-french-road-signs
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - simtropolis/13698-additional-subway-entrance-props
-      - simtropolis/24596-modern-realistic-subway-station-v2
+      - simtropolis/14010-diagonal-intersection-roadtop-subwaybus-station
       - simtropolis/23417-european-bus-and-tram-stops
+      - simtropolis/24596-modern-realistic-subway-station-v2
       - simtropolis/26793-network-addon-mod-nam-cross-platform
       - simtropolis/34720-agc-environment-dlc
       - simtropolis/35560-agc-casual-sims-dlc
+      - simtropolis/35790-sc4-cleanitol
       - simtropolis/36152-agc-streets-dlc
-      - simtropolis/14010-diagonal-intersection-roadtop-subwaybus-station
-      - sc4evermore/214-bsc-tsc-girafe-french-road-signs
-      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
-      - sc4evermore/13-sfbt-essentials
-      - sc4evermore/188-vip-vnaoned-props-pack-vol01
-      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
     description: >-
       <body>
                                   
@@ -12576,7 +12822,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14159,6 +14435,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
       <p>
       	<strong>About </strong>
@@ -14639,7 +14930,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15048,6 +15369,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
       <p>
       	As sometines happens, files from the various SimCity 4 sites go missing. When possible and practical, we make attempts to restore those files when found. In all such cases, this is done in good faith for the benefit the author and the community. This particular item has been uploaded here under <strong>MarcosMX</strong>'s account as part of the <abbr title="BATers, LOTers and MODders">BLaM</abbr> team as it had been uploaded on the original location. The station's function and stats <em>have </em>been updated to <abbr title="Network Addon Mod">NAM</abbr>/MTA standards.
@@ -15124,6 +15460,109 @@ assets:
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 498443
     url: https://community.simtropolis.com/files/file/36344-blam-mx-passenger-rail-station/
+    version: 1.0.0
+  simtropolis/36386-farr-passenger-train-station:
+    authors:
+      - justforfun
+    category: 700
+    dependencies:
+      - simtropolis/34809-victorian-row-shops-pack-01
+      - simtropolis/35527-victorian-row-shops-diagonal
+      - simtropolis/36034-post-offices-pack-2
+      - simtropolis/29965-british-boxes
+      - simtropolis/27627-london-taxis-cab
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>
+      	So... your sims need to get the train on fractional-angle railroads but they can't for lack of stations?<br>
+      	Here is one to plop on 72-degree <abbr title="Fractional Angle Railroad">rail</abbr>, that is <abbr title="Fractional Angle Railroad">FARR</abbr> 3,  with a capacity of 65,000 passengers and modding revised by @Tyberius to the best <abbr title="Network Addon Mod">NAM</abbr> standard. It sits on a 4x2 lot and features an overhanging platform. <br>
+      	The model is a true 3d therefore suitable for any camera angles, and the whole package weighs a mere 57 KB!
+      </p>
+
+
+      <p>
+      	DEPENDENCIES:
+      </p>
+
+
+      <p>
+      	Essential for the model to appear correctly:
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/34809-victorian-row-shops-pack-01/" rel="">JFF Row Shops Pack 01</a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/35527-victorian-row-shops-diagonal/" rel="">JFF Row Shops Diagonal</a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/36034-post-offices-pack-2/" rel="">JFF Post Offices Pack 2</a>
+      </p>
+
+
+      <p>
+      	Recommended:
+      </p>
+
+
+      <p>
+      	(<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01<br>
+      	<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - DAE Vol01) contained in the <a href="https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack</a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/29965-british-boxes/" rel="">Bombardiere British Boxes</a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/27627-london-taxis-cab" rel="">Simfanatik London Taxis Cab</a>  - unless you plan to replace the taxis in the <abbr title="Lot Editor">LE</abbr>!
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	What do your sims think of their new oblique facility? Let me know through likes and reviews, and as usual stay tuned for more coming to the STEX!
+      </p>
+
+
+      <p>
+      	justforfun
+      </p>
+
+      						</body>
+    filename: JFF FARRstation.zip
+    files:
+      - JFF FARRstation/JFF FARR Passenger Station.dat
+      - JFF FARRstation/JFF FARR Passenger Station Readme.txt
+      - JFF FARRstation/JFF FARR Passenger Station Images/right.jpg
+      - JFF FARRstation/JFF FARR Passenger Station Images/platform.jpg
+      - JFF FARRstation/JFF FARR Passenger Station Images/front.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/front.jpg.0af350a673e9e9b2207c6d7b3c69ad76.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/platform.jpg.612858bec599d234350c1f87eb149e17.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/right.jpg.58a22ee0b0c23a94ea020b1d2d882990.jpg
+    lastModified: 2024-08-11T21:43:14Z
+    name: FARR Passenger Train Station
+    sha256: 63bca55bff5b383963b37ec5382343b4022943c49529f24a115c1109ff952574
+    size: 971845
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/front.thumb.jpg.d22f5cd03d3664f3e33491d773e8c82c.jpg
+    timestamp: 2024-08-13T14:26:32.086Z
+    uncompressed: 981598
+    url: https://community.simtropolis.com/files/file/36386-farr-passenger-train-station/
     version: 1.0.0
   simtropolis/3669-passenger-rail-stations-4tracks:
     authors:
@@ -16054,4 +16493,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-4e73e9a5e97f6ee8b1862cc09ff27f23-Allotments-Day.jpg
     url: https://community.simtropolis.com/files/file/999-bus-stop-with-allotments/
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T14:26:32.086Z

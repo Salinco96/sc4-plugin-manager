@@ -761,7 +761,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -960,10 +990,305 @@ assets:
     authors:
       - rivit
     category: 60
+    dependencies: []
+    description: "<body>
+
+      \                           \
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+
+      \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
+      style=\"\" width=\"34\" height=\"53\">
+
+      \t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t<p>\r
+
+      \t<strong>SC4DataNode - A SimCity 4 Exemplary</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t- is intended as a Gold Standard SC4 Audit Tool\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t- is NOT an Editing Tool - for this there are Reader, SC4Tool, Lot Editor and a number of others.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThe program supports four main Tasks\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t1. Audit/Review of Loading Sequence, file redundancies and Overrides\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t2. Dependency verification (as many as possible)\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t3. Audit/Review of\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \ta. SC4 file integrity (.dat etc) and\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tb. TGI file content integrity (Exemplars etc) to the Property Level\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t4. Exploration - a really good informative display of Exemplar Property Values and file contents so that one can learn something of how SC4 works.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tTasks 1 and 3a focus on the physical SC4File View\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tTasks 2,3b and 4 mostly on the TGIFile view (SC4 Content)\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThese tasks can focus on the whole SC4 Environment or incidentally scanned files/folders (or both)\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tPotential Audiences are:\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t- The User who wants to make sure that some new plugins aren't broken\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t- The User who wants to make sure the game loads plugins in the right order\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t- The Modder who wants to learn what/how things work\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t- The Modder who publishes work and wants to make sure its correct, and will work correctly with a given environment\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t- The SysAdmin who wants to make sure their site is only hosting quality products\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t- Potentially programmers to make use of the functionality (of the SC4DataNode.dll)\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tHow it works:\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tSC4DataNode loads all of the files that SimCity would load, in the order it would load them when starting a game. It then marks all files that are redundant, checks the contents for accuracy,
+      finds the interdependencies and marks them as found or not and offers a number of views of the resultant data. This can also be carried out for any given set of files.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tUse the included installer (program can be installed anywhere) and you're on your way\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThe program is written in VB.NET v2.0 and should run on any machine that can run the .NET 2.0 Framework or an equivalent.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tIt also installs one very clear to read Font. Full Documentation is accessible from within the program. (Docs Button)\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tcheers Ron\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tMay/Jun 2012\r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: SC4DataNode_1.33.msi.zip
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_06_2012/1ec9d30a2e3727328d86300c7713ff56-.gif
+      - https://www.simtropolis.com/objects/screens/monthly_2020_04/SC4DataNodeDisp0.gif.fb6f9bb21ec0de5966f835fd8a1ff1ce.gif
     lastModified: 2024-06-06T02:12:28Z
     name: SC4DataNode
+    sha256: 992160aa1cb6b44ec44b16bed9919bdd35a977864262cf90722e36a56f5abdc2
+    size: 2534060
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2012/thumb-1ec9d30a2e3727328d86300c7713ff56-.gif
+    uncompressed: 4065280
     url: https://community.simtropolis.com/files/file/27675-sc4datanode/
+    version: "1.33"
   simtropolis/27871-custom-sc4terraformer-texture-and-colors:
     authors:
       - jose L Ortiz
@@ -1487,8 +1812,8 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/1.thumb.png.9eca9704100ac31a7c9aad17ebd4a5cf.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_07/2.thumb.jpg.11bed8054c1496617080482d3b190ab4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/1.png.ba916b8415ef7e3fa1e0896da2d59191.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/2.jpg.6dab61482f0bb11ca31067607482b882.jpg
     lastModified: 2024-07-16T22:16:11Z
     name: SimCity 4 Multiplayer Project Launcher
     repository: https://github.com/andreRBarata/sc4mp-server-docker
@@ -1544,36 +1869,110 @@ assets:
     category: 60
     dependencies: []
     description: >-
-      SC4 Cleanitol is a modern implementation of the original BSC Cleanitol program released in 2013. This program provides an easy way to clean your plugins folder of all non SC4 related files
-      making the game quicker to load, can remove out of date and obsolete plugins, and can tell you what dependencies you have and which dependencies you need for a given mod.
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
 
-      This new version is designed to be backwards compatible with old Cleanitol scripts, but nevertheless includes numerous improvements, two of the major ones being:
-
-        -  Ability to specify TGIs in addition to file names as a dependency. One of the drawbacks of using filenames only is if a user renames a file or datpacks their plugins folder, the old Cleanitol program will report a missing dependency even if that asset might actually be there.
-        -  Ability to specify conditional dependencies - i.e. only report item A as a dependency if item B is present. This is very useful for mods which may allow the user to choose certain components to install. This way the user will not be prompted for a missing dependency for a component they did not install.
-
-      Requirements
-
-        -  Windows 10 or higher
-        -  .NET7 runtime version > 7.0.0 - To determine which version is installed, open Command Prompt and type dotnet --list-runtimes. If the version is less than 7.0.0 installed, download the most recent version here. Alternatively, if you run the executable without the correct .NET runtime, you will receive an error message. Follow the prompts to download the correct version.
-
-      Downloading
-
-      Download from the STEX or visit the latest release on Github.
 
 
-      Support
-
-      Consult the user manual, which contains information on both using the program and creating scripts with the new functionality introduced with this program.
 
 
-      This is an open source application. The source code and issue tracker are posted here. Requests or questions are welcomed here in the dedicated thread, in the Github issue tracker, or in the
-      SC4D Discord thread.
-    filename: SC4CleanitolWPF-0.7.1.zip
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	<span style="font-family:Georgia,serif;">SC4 Cleanitol is a modern implementation of the original <a href="https://github.com/wouanagaine/BSC-Cleanitol" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol</a> program released in 2013. This program provides an easy way to clean your plugins folder of all non SC4 related files making the game quicker to load, can remove out of date and obsolete plugins, and can tell you what dependencies you have and which dependencies you need for a given mod. </span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia,serif;">This new version is designed to be backwards compatible with old Cleanitol scripts, but nevertheless includes numerous improvements, two of the major ones being:</span>
+      </p>
+
+
+      <ol>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><strong>Ability to specify TGIs in addition to file names as a dependency</strong>. One of the drawbacks of using filenames only is if a user renames a file or datpacks their plugins folder, the old Cleanitol program will report a missing dependency even if that asset might <em>actually</em> be there.</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><strong>Ability to specify conditional dependencies</strong> - i.e. only report</span><span style="color:#c0392b;"><em><span style="font-family:Courier New,Courier,monospace;"> <code class="language-plaintext highlighter-rouge">item A</code> </span></em></span><span style="font-family:Georgia,serif;">as a dependency if</span><span style="color:#e74c3c;"><em><span style="font-family:Courier New,Courier,monospace;"> <code class="language-plaintext highlighter-rouge">item B</code> </span></em></span><span style="font-family:Georgia,serif;">is present. This is very useful for mods which may allow the user to choose certain components to install. This way the user will not be prompted for a missing dependency for a component they did not install.</span>
+      	</li>
+      </ol>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia,serif;"><span style="font-size:20px;"><span style="color:#8e44ad;"><strong><u>Requirements</u></strong></span></span></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><span style="font-size:14px;"><strong>Windows 10 or higher</strong></span></span>
+      	</li>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><strong>.NET7 runtime version &gt; 7.0.0</strong></span> - <span style="font-family:Georgia,serif;">To determine which version is installed, open Command Prompt and type</span><span style="font-family:Courier New,Courier,monospace;"> <span style="color:#3498db;"><strong><code class="language-plaintext highlighter-rouge">dotnet --list-runtimes</code></strong></span></span><span style="font-family:Georgia,serif;">. If the version is less than 7.0.0 installed, download the most recent version <a href="https://dotnet.microsoft.com/en-us/download" rel="external nofollow">here</a>. Alternatively, if you run the executable without the correct .NET runtime, you will receive an error message. Follow the prompts to download the correct version.</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#8e44ad;"><span style="font-family:Georgia,serif;"><u><span style="font-size:20px;">Downloading</span></u></span></span></strong><br>
+      	<span style="font-family:Georgia,serif;">Download from the STEX or visit the <a href="https://github.com/noah-severyn/SC4Cleanitol/releases/latest" rel="external nofollow" target="_blank">latest release</a> on Github.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#8e44ad;"><span style="font-family:Georgia,serif;"><u><span style="font-size:20px;">Support</span></u></span></span></strong><br>
+      	<span style="font-family:Georgia,serif;">Consult the <a href="https://noah-severyn.github.io/SC4Cleanitol/UserManual.html" rel="external nofollow" target="_blank">user manual</a>, which contains information on both using the program and creating scripts with the new functionality introduced with this program.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia,serif;">This is an open source application. The source code and issue tracker are posted <a href="https://github.com/noah-severyn/SC4Cleanitol" rel="external nofollow" target="_blank">here</a>. Requests or questions are welcomed here in the <a href="https://community.simtropolis.com/forums/topic/762783-sc4cleanitol/" rel="">dedicated thread</a>, in the <a href="https://github.com/noah-severyn/SC4Cleanitol/issues" rel="external nofollow">Github issue tracker</a>, or in the <a href="https://discord.com/channels/383313438065033228/1163604447738474536" rel="external nofollow">SC4D Discord thread</a>.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SC4CleanitolWPF-0.8.0.zip
     files:
       - net7.0-windows/_RDATA
-      - net7.0-windows/version.txt
       - net7.0-windows/SummaryTemplate.html
       - net7.0-windows/SC4CleanitolWPF.xml
       - net7.0-windows/SC4CleanitolWPF.runtimeconfig.json
@@ -1592,19 +1991,20 @@ assets:
       - net7.0-windows/csDBPF.pdb
       - net7.0-windows/csDBPF.dll
       - net7.0-windows/CleanupList.txt
-      - net7.0-windows/1
+      - net7.0-windows/Resources/SummaryTemplate.html
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2023_12/concise.thumb.png.64702797309cae9e660595eacc3c8c37.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/concise.png.3ea2e2511f7c46105402d9c878291b44.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/settings.png.058f1ba08d04658ed24b63389ec1a22e.png
     lastModified: 2024-07-13T19:22:59Z
     name: SC4 Cleanitol
     repository: https://github.com/wouanagaine/BSC-Cleanitol
-    sha256: 47b388cf0b3852287bed6c84059f4624ea7c160aaac2169cee8646e60aa83592
-    size: 583928
+    sha256: 9d491529ab7ca9a5b86a6a27f21d4afb60161da7b16d52819bf5bea64afced14
+    size: 587101
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/concise.thumb.png.6bf3582198b0adda5be7d1d8e1d174d7.png
-    timestamp: 2024-06-27T06:32:51.411Z
-    uncompressed: 2066386
+    timestamp: 2024-08-05T09:17:28.059Z
+    uncompressed: 2072991
     url: https://community.simtropolis.com/files/file/35790-sc4-cleanitol/
-    version: 0.7.1
+    version: 0.8.0
   simtropolis/35978-sc4-more-demand-info:
     authors:
       - Null 45
@@ -1621,7 +2021,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1813,7 +2243,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2001,7 +2461,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2192,6 +2682,21 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2391,4 +2896,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-cc76119e1615d738dc2f82f522af7ee3-sim-ruler.JPG
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T13:48:06.421Z

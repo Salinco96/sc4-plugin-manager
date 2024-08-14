@@ -3,7 +3,7 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 207
+    downloads: 214
     lastModified: 2023-11-21T15:27:18-08:00
     name: Swamper77's Raised Rail Conversions
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/180-swamper77s-raised-rail-conversions
@@ -109,7 +109,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 618
+    downloads: 643
     filename: SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt
@@ -158,11 +158,183 @@ assets:
     authors:
       - Girafe
     category: 700
-    downloads: 287
+    downloads: 306
     lastModified: 2024-01-21T02:46:32-08:00
     name: BSC-VIP Girafe Parisian Transportation vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_Parisian_station_1.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/211-bsc-vip-girafe-parisian-transportation-vol01
+  sc4evermore/280-blp-ndex-boston-big-dig-project:
+    authors:
+      - Blahdy
+    category: 700
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/2-network-addon-mod
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p style=\"text-align: center;\"><span style=\"font-size: 36px;\"><strong>BLP-NDEX Boston Central Artery-Tunnel (Big
+      Dig)</strong></span></p>\r
+
+      <p style=\"text-align: left;\"> </p>\r
+
+      <p style=\"text-align: left;\">This SC4 Devotion LEX Legacy Pack features the complete set of Boston Central Artery-Tunnel (Big Dig) by Blahdy, including Props and Lots, which had been available
+      on the Lot Exchange (LEX) at SC4 Devotion. </p>\r
+
+      <p style=\"text-align: left;\"><em><strong><span class=\"--l --r sentence_highlight\">This mod has partial support for Left Hand Drive (LHD). </span><span class=\"--l --r
+      sentence_highlight\">Only the Ground Maxis Highway ramp is not compatible with Left Hand Drive (LHD) and cannot have support because of how the prop was rendered</span></strong></em></p>\r
+
+      <p style=\"text-align: left;\">It includes the contents of 2 previously separate downloads.<br>After battling a number of technical issues, software incompatibility ultimately shuttered the LEX
+      (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or
+      carefully select exactly which packs they wish to install.</p>\r
+
+      <p style=\"text-align: left;\">Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would
+      complicate efforts to properly maintain, update, and provide technical support for the pack.</p>\r
+
+      <h3>INSTALLATION:</h3>\r
+
+      <p>This package is a simple .zip file.</p>\r
+
+      <p>Copy/extract the <em><strong>Blahdy</strong></em> parent folders into your plugins (or equivalent, if you have a custom Plugins folder location). If you extracted the ~Documents folder into
+      your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r
+
+      <p>It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.<br>ptionally in the ~Documents folder in the main ZIP you can find
+      a collective/master and separately all the individual cleanitol files and by using either the newer <strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\"
+      target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a></strong> or the older <strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\"
+      rel=\"noopener\">BSC Cleanitol</a></strong> tool you can search and remove old and outdated versions of these files.</p>\r
+
+      <h3>DLL DEPENDENCIES:</h3>\r
+
+      <p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):</p>\r
+
+      <ul>\r
+
+      <li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a> - You need it to get the
+      package submenu working.\r
+
+      <p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span></p>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <h3>DEPENDENCIES:</h3>\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly and they work correctly (i.e., no \"brown boxes\" or missing textures) (Bear in mind that the
+      original readmes are also available in the<em> ~Documents/Boston BigDig_Readmes</em> folder, but they have <strong>not </strong>been updated):</p>\r
+
+      <ul>\r
+
+      <li><strong>Boston Central Artery - Tunnel Project (Big Dig) Resources</strong> (and above) - <span style=\"color: #ba372a;\">INCLUDED</span></li>\r
+
+      </ul>\r
+
+      <p> </p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/6-network-addon-mod-nam/2-network-addon-mod\" target=\"_blank\" rel=\"noopener\"><strong>Network Addon Mod</strong></a> <br>Important if you want to
+      use FLUPS and Subway FLUPS mode.</li>\r
+
+      </ul>\r
+
+      <h3><strong>CREDITS:</strong></h3>\r
+
+      <p>The following members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Blahdy</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Ulisse Wolf.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.<br><br>For memo for subsequent updates on the NAM/Java installer.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/stex-a-cn1.jpg\" data-lightbox=\"lightbox280\"
+      data-alt=\"lightboxstex-a-cn1.jpg|stex-a-cn2.jpg|stex-bigd1.jpg|stex-bigd2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-a-cn1.jpg\" alt=\"stex-a-cn1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/stex-a-cn2.jpg\" data-lightbox=\"lightbox280\"
+      data-alt=\"lightboxstex-a-cn1.jpg|stex-a-cn2.jpg|stex-bigd1.jpg|stex-bigd2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-a-cn2.jpg\" alt=\"stex-a-cn22\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/stex-bigd1.jpg\" data-lightbox=\"lightbox280\"
+      data-alt=\"lightboxstex-a-cn1.jpg|stex-a-cn2.jpg|stex-bigd1.jpg|stex-bigd2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-bigd1.jpg\" alt=\"stex-bigd13\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 34
+    filename: BLP-NDEX Boston Big Dig Project v2.zip
+    files:
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Bladhy - Boston BigDig.txt
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Prop-Texture Catalogue Index and Cleanitol/Blahdy_Boston_Big_Dig_Project_Props_index.jpg
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Boston BigDig_Readmes/User_Guide_1.0.22.pdf
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Boston BigDig_Readmes/stex-bigd2.jpg
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Boston BigDig_Readmes/stex-bigd1.jpg
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Boston BigDig_Readmes/stex-a-cn2.jpg
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Boston BigDig_Readmes/stex-a-cn1.jpg
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Boston BigDig_Readmes/Boston Central Artery-Tunnel 2.0 (Big Dig)_readme.docx
+      - BLP-NDEX Boston Big Dig Project v2/~Documents/Boston BigDig_Readmes/Boston Central Artery-Tunnel (Big Dig)_readme.docx
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/_Resources/Boston_Big_Dig_Essentials.dat
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/_Resources/Blahdy_Boston_Big_Dig_Project_Props.dat
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/_Resources/Blahdy_Boston_Big_Dig_Project_Paths.dat
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/_Resources/Big Dig Submenu.dat
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Tunel Ramps/BLP Big Dig - Short-Straight Onramp (BIGD-T1X-ONR1B)_b24acb0e.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Tunel Ramps/BLP Big Dig - Leverett Connector Onramp (BIGD-T1X-ONR1)_922b242e.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Tunel Ramps/BLP Big Dig - Ground Highway to Tunnel_11cc4577.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Tunel Ramps/BLP Big Dig - Atlantic Connector Ramp (BIGD-C17A6.A-CN)_52934fb7.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Tunel Ramps/BLP Big Dig - 3 Lane High-Capacity Tunnel Entrance_51cc4679.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Tunel Ramps/BLP Big Dig - 2 Lane Onramp Tunnel_11cc3694.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Tunel Ramps/BLP Big Dig - 2 Lane Offramp Intersecting_31cc36c2.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Tunel Ramps/BLP Big Dig - 2 Lane Offramp Extended_d1cc36f9.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BRAC HW Sign 6 lane_b1571af0.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BRAC HW Electronic Sign 6 lane_3157d412.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - MSL Highway Sign 3 VF1420_f299ec9b.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - MSL Highway Sign 1 with LCS_529874ab.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - LCS Highway Sign Post_9298a358.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - Blue Pipe Street Sign Road 90_124f9132.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - Blue Gantry Street Sign Road 92_9298a61f.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - Blue Gantry Street Sign Road 90_324f9105.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - Black Gantry Street Sign Road 92_9298a499.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - Black Gantry Street Sign Road 90_924ef3ca.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Highways Signs/BLP Boston CAT 2 - Avenue MTunnel Entrance Sign_b24ef3a3.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Construction Lots/BLP Boston CAT 2 - On Slope Construction Exit_9298a038.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Construction Lots/BLP Boston CAT 2 - On Slope Construction Entrance_92989a16.SC4Lot
+      - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Construction Lots/BLP Big Dig - Slurry Wall Construction_b1eeaa8d.SC4Lot
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-a-cn1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-a-cn2.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-bigd1.jpg
+    lastModified: 2024-08-07T16:37:17-07:00
+    name: BLP-NDEX Boston Central Artery-Tunnel (Big Dig)
+    sha256: 111a38b2246765970782f77de985b0e07b78a27d7ec6c4dcb81376de5969b9f1
+    size: 6800946
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-a-cn1.jpg
+    timestamp: 2024-08-09T11:48:57.739Z
+    uncompressed: 7565640
+    url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/280-blp-ndex-boston-big-dig-project
+    version: "2.0"
   sc4evermore/7-sc4d-lex-legacy-ultimate-airport-pack:
     authors:
       - sc4evermore
@@ -198,7 +370,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 2930
+    downloads: 3002
     filename: SC4D_LEX_Legacy_Ultimate_Airport_Pack_V1.zip
     files:
       - readme_ultimate_airport_pack.html
@@ -1014,7 +1186,7 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 413
+    downloads: 435
     lastModified: 2023-11-11T08:10:56-08:00
     name: Ulisse Wolf - Mediterranean Transport Set Vol 1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Ulisse  MED Transport SET VOL 1  DAY.jpg
@@ -1023,10 +1195,10 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 468
+    downloads: 490
     lastModified: 2024-05-23T15:16:46-07:00
     name: Ulisse Wolf - Hybrid Railway (HRW) Subway Converter
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Gotthard v1 placement.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/95-ulisse-wolf-hybrid-railway-hrw-subway-converter
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T13:48:06.421Z

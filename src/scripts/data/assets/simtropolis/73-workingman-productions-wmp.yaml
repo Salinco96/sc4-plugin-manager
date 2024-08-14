@@ -20,11 +20,25 @@ assets:
       - d_j_p1
     category: 0
     dependencies:
+      - simtropolis/33620-wmp-essentials-v101
       - simtropolis/33621-wmp-mega-props-vol-01-misc-general-props
-      - simtropolis/33620-wmp-essentials-v10
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -398,10 +412,106 @@ assets:
     authors:
       - d_j_p1
     category: 0
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>The Cougar Fruit Packing Ltd. is the latest in the WMP <abbr title="SimPeg Agricultural Mod">SPAM</abbr> Workplaces series. Formerly an independent family concern, it was acquired by a global
+      food brand in the late eighties and, during season, ships several local apple varieties from the local orchards to markets world-wide.</p>
+
+      <p> </p>
+
+      <p>Sitting on a 7x6 lot, the company employs 50 permanent staff from the nearby township rather than the transients favoured by the industry in general.</p>
+
+      <p> </p>
+
+      <p>While all props have been rendered in HD, the main building - due to its complexity - remains an SD export.</p>
+
+      <p> </p>
+
+      <p><strong>Lot Details and Information:</strong></p>
+
+      <p>Lot size: 7 x 6 tiles</p>
+
+      <p>Menu position: Transportation - FreightRail</p>
+
+      <p>Jobs: $ : 45, $$ : 5</p>
+
+      <p>Plop cost: $ 2,200</p>
+
+      <p>Bulldoze cost: $ 1,000</p>
+
+      <p>Monthly cost: $ 110</p>
+
+      <p>Power consumption: 60 MWh/month</p>
+
+      <p>Water consumption: 45 Gallons/month</p>
+
+      <p>Pollution: Water: 5 over 10 tiles; Garbage: 15 over 10 tiles</p>
+
+      <p> </p>
+
+      <p><strong>Dependencies:</strong></p>
+
+      <p>To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>
+
+      <p>WMP Dependencies:</p>
+
+      <ul><li>
+
+      <a href="http://workingman-productions.co.uk/dlTracker.asp?GET=downloads/exchange/wmp_spam_freight_props.zip" rel="external nofollow">wmp_spam_freight_props.dat</a><br></li>
+
+      <li>wmp_spam_freight_props2.dat (included with main download)<br></li>
+
+      <li>
+
+      <a href="http://workingman-productions.co.uk/dlTracker.asp?GET=downloads/exchange/wmp_texture10.zip" rel="external nofollow">wmp_texture10.dat</a><br></li>
+
+      </ul><p></p>
+
+      <p> </p>
+
+      <p>External Dependencies:</p>
+
+      <ul><li>
+
+      <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">BSCBATPropsMattb325_Vol02.dat</a><br></li></ul><p></p>
+
+      <p><strong>Credits</strong>:</p>
+
+      <p>Thanks go to Rivit for his invaluable assistance in creating the special rail pathing; d_j_p1 for his patient testing of all WMP lots &amp; mods; and Simcoug for suggesting the idea and
+      providing research.</p>
+
+      <p> </p>
+
+      <p><strong>Problems?</strong></p>
+
+      <p>If you have problems with this lot it is most likely that you did not download all the dependencies or - just as likely - that we made a mistake. You can contact us via email at <a
+      href="mailto:comments@workingman-productions.co.uk?subject=WMP%20Packing%20Shed" rel="">comments@workingman-productions.co.uk</a>. Best to include a screen-shot illustrating the problem.</p>
+
+      						</body>
+    filename: WMP_Packing_Shed.zip
+    files:
+      - wmp_spam_freight_props2.dat
+      - WMP_Packing_Shed_1d56bd80.SC4Lot
+      - wmp_packingshed_bldgs.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_09_2012/0d5e1defeb70a82b5ba3f532bec5f368-packingshed_day.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2012/b18d217d23f5f8eff4c9fef374eb5345-packingshed_night.jpg
     lastModified: 2012-09-12T11:58:02Z
     name: The Cougar Fruit Packing Ltd.
+    sha256: c7d1207ed2d979ad44752f1184d601a5be3021f6956b670b42a35a617658f0d8
+    size: 1627506
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2012/thumb-0d5e1defeb70a82b5ba3f532bec5f368-packingshed_day.jpg
+    timestamp: 2024-08-09T11:48:57.739Z
+    uncompressed: 1895215
     url: https://community.simtropolis.com/files/file/28015-the-cougar-fruit-packing-ltd/
+    version: "1.0"
   simtropolis/33620-wmp-essentials-v101:
     authors:
       - STEX Custodian
@@ -418,7 +528,35 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -549,7 +687,35 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -649,40 +815,407 @@ assets:
     authors:
       - STEX Custodian
     category: 0
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	The <strong>WMP Mega Props vol. 02</strong> is the second dependency pack, which superseds many of the previously released single, individual WMP prop packs by <strong>DocRorlach</strong>.<br>
+      	<br>
+      	<strong><span style="color:#c0392b;"><span style="background-color:#ffffff;font-size:14px;">This is a </span>dependency package<span style="background-color:#ffffff;font-size:14px;">, and it doesn't contain any ploppable or growable elements. </span></span><span><span style="background-color:#ffffff;font-size:14px;">Although it can be used for creating new lots with Maxis Lot Editor or </span><abbr title="Plugin Manager">PIM</abbr><span style="background-color:#ffffff;font-size:14px;">-X.</span></span></strong>
+      </p>
+
+
+      <p>
+      	Since the original workingman-productions.co.uk/ website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href="https://www.sc4devotion.com/csxlex/lex_main.php" rel="external nofollow"><abbr title="Lot EXchange (SC4Devotion)">LEX</abbr></a> and <a href="https://community.simtropolis.com/files/category/73-workingman-productions-wmp/" rel="" title="Simtropolis Exchange - Workingman Productions (WMP)">STEX</a>) as legacy contents on behalf of DocRorlach. For easier access and due to a more userfriendly approach, we put together these mega prop packs which are completely replacing the previous smaller prop packs.
+      </p>
+
+
+      <p>
+      	It is highly recommended to use the attached cleanitol file (WMP Mega Props Vol. 01-05 cleanitol.txt) and remove all the listed contents. The best way to do it, if you use the <strong><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97" rel="external nofollow"><span style="color:#c0392b;"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong> tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.<br>
+      	<br>
+      	<span style="color:#c0392b;"><strong>Also from now, these mega prop packs are required to be referenced as dependencies instead of the single prop packs.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>: Unzip the whole bundle, or COPY the "<strong>WMP</strong>" folder from the *.zip into your plugin folder. You don't need to keep the "<em>_Documents</em>" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      </p>
+
+
+      <p>
+      	<em>For further details, please read the provided readme AND IF you still have questions, ask <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard" data-mentionid="660284" href="https://community.simtropolis.com/profile/660284-tyberius06/" rel="">@Tyberius06</a></em>.
+      </p>
+
+
+      <p>
+      	<strong>Credits</strong>:
+      </p>
+
+
+      <ul>
+      	<li>
+      		DocRorlach and the WMP team for creating the models, props and the original prop packs.
+      	</li>
+      	<li>
+      		David (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges
+      	</li>
+      	<li>
+      		xxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>
+      		 
+      	</li>
+      </ul>
+
+
+      <div>
+      	<strong>Support</strong>:
+      </div>
+
+
+      <p>
+      	These WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested <a href="https://www.sc4devotion.com/forums/index.php?topic=18355.40" rel="external nofollow">here</a> or in the <a href="https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic" rel="">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.
+      </p>
+
+      						</body>
+    filename: WMP Mega Props vol. 02 - Misc Industrial Props.zip
+    files:
+      - _Documents/WMP Mega Props vol. 2 pt.2.jpg
+      - _Documents/WMP Mega Props vol. 2 pt.1.jpg
+      - _Documents/WMP Mega Props vol. 02 - Misc Industrial Props.html
+      - _Documents/WMP Mega Props Vol. 01-05 cleanitol.txt
+      - _Documents/images/workingman_lottery.png
+      - _Documents/images/WMP megapack vol 2 pt5.jpg
+      - _Documents/images/WMP megapack vol 2 pt4.jpg
+      - _Documents/images/WMP megapack vol 2 pt3.jpg
+      - _Documents/images/WMP megapack vol 2 pt2.jpg
+      - _Documents/images/WMP megapack vol 2 pt1.jpg
+      - _Documents/images/sc4t_footer2.png
+      - WMP/Props/WMP Mega Props vol. 02 - Misc Industrial Props.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe3d27f260_WMPmegapackvol2.jpg.cca6ed80dd84c0cbc3f757c3dff2dba2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe3d4768fc_WMPmegapackvol2pt1.jpg.2a4caa2e5795b0ecaf80b37b7b785445.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe3d67e960_WMPmegapackvol2pt2.jpg.d7236c5855e2aeb88f0cbded866b0eb3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe3d866d65_WMPmegapackvol2pt3.jpg.e187cf26b38c300f56f9676abdb1a345.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe3d9f2308_WMPmegapackvol2pt4.jpg.66593fff5dd0c06f39e86fbb9eb0802f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe3db89c0a_WMPmegapackvol2pt5.jpg.bcdd9c5ba7beee5e707077dc89521df5.jpg
     lastModified: 2020-05-25T15:27:43Z
     name: WMP Mega Props vol. 02 - Misc Industrial Props
+    sha256: 53ed6127d4d8021d90ed9b619ee79f519c5393ad40cb02c925fc76df622adc55
+    size: 29403383
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe3eea8c3f_WMPmegapackvol2.thumb.jpg.f5e8a7f96c1dc106f3238dbc13cae31f.jpg
+    timestamp: 2024-08-09T12:18:09.417Z
+    uncompressed: 34634895
     url: https://community.simtropolis.com/files/file/33622-wmp-mega-props-vol-02-misc-industrial-props/
+    version: 1.0.0
   simtropolis/33623-wmp-mega-props-vol-03-port-autority-ferry:
     authors:
       - STEX Custodian
     category: 0
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p>
+      	The <strong>WMP Mega Props vol. 03</strong> is the third dependency pack, which superseds many of the previously released single, individual WMP prop packs by <strong>DocRorlach</strong>.<br>
+      	<br>
+      	<strong><span style="color:#c0392b;"><span style="background-color:#ffffff;font-size:14px;">This is a </span>dependency package<span style="background-color:#ffffff;font-size:14px;">, and it doesn't contain any ploppable or growable elements. </span></span><span><span style="background-color:#ffffff;font-size:14px;">Although it can be used for creating new lots with Maxis Lot Editor or </span><abbr title="Plugin Manager">PIM</abbr><span style="background-color:#ffffff;font-size:14px;">-X.</span></span></strong><br>
+      	<br>
+      	Since the original workingman-productions.co.uk/ website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href="https://www.sc4devotion.com/csxlex/lex_main.php" rel="external nofollow"><abbr title="Lot EXchange (SC4Devotion)">LEX</abbr></a> and <a href="https://community.simtropolis.com/files/category/73-workingman-productions-wmp/" rel="" title="Simtropolis Exchange - Workingman Productions (WMP)">STEX</a>) as legacy contents on behalf of DocRorlach. For easier access and due to a more userfriendly approach, we put together these mega prop packs which are completely replacing the previous smaller prop packs.
+      </p>
+
+
+      <p>
+      	It is highly recommended to use the attached cleanitol file (WMP Mega Props Vol. 01-05 cleanitol.txt) and remove all the listed contents. The best way to do it, if you use the <strong><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97" rel="external nofollow"><span style="color:#c0392b;"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong> tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.<br>
+      	<br>
+      	<span style="color:#c0392b;"><strong>Also from now, these mega prop packs are required to be referenced as dependencies instead of the single prop packs.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>: Unzip the whole bundle, or COPY the "<strong>WMP</strong>" folder from the *.zip into your plugin folder. You don't need to keep the "<em>_Documents</em>" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      </p>
+
+
+      <p>
+      	<em>For further details, please read the provided readme AND IF you still have questions, ask <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard" data-mentionid="660284" href="https://community.simtropolis.com/profile/660284-tyberius06/" rel="">@Tyberius06</a></em>.
+      </p>
+
+
+      <p>
+      	<strong>Credits</strong>:
+      </p>
+
+
+      <ul>
+      	<li>
+      		DocRorlach and the WMP team for creating the models, props and the original prop packs.
+      	</li>
+      	<li>
+      		David (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges
+      	</li>
+      	<li>
+      		xxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>
+      		 
+      	</li>
+      </ul>
+
+
+      <div>
+      	<strong>Support</strong>:
+      </div>
+
+
+      <p>
+      	These WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested <a href="https://www.sc4devotion.com/forums/index.php?topic=18355.40" rel="external nofollow">here</a> or in the <a href="https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic" rel="">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.
+      </p>
+
+      						</body>
+    filename: WMP Mega Props vol. 03 - Port Autority Ferry.zip
+    files:
+      - _Documents/WMP Mega Props vol. 3.jpg
+      - _Documents/WMP Mega Props vol. 03 - Port Autority Ferry.html
+      - _Documents/WMP Mega Props Vol. 01-05 cleanitol.txt
+      - _Documents/images/workingman_lottery.png
+      - _Documents/images/WMP megapack vol 3 pt3.jpg
+      - _Documents/images/WMP megapack vol 3 pt2.jpg
+      - _Documents/images/WMP megapack vol 3 pt1.jpg
+      - _Documents/images/sc4t_footer2.png
+      - WMP/Props/WMP Mega Props vol. 03 - Port Autority Ferry.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe428d2261_WMPmegapackvol3.jpg.298f9fb12d9a8abdf8968ea1291c18d8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe42a2a3b7_WMPmegapackvol3pt1.jpg.24397cf9b7268bd69be0a338e977b0de.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe42b2de0e_WMPmegapackvol3pt2.jpg.8dd1f4e46d3c6adc1974b228178093b1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe42c68d79_WMPmegapackvol3pt3.jpg.d784fa30b6afc49c1680097cabda01e6.jpg
     lastModified: 2020-05-25T15:29:22Z
     name: WMP Mega Props vol. 03 - Port Autority Ferry
+    sha256: 8ce3311e257b9ec35b1c6343f713ec114989bb5e76e4f094d16bf43ce14e0278
+    size: 16943438
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe451607ed_WMPmegapackvol3.thumb.jpg.835bc443562b3717708a84d87e4bcc28.jpg
+    timestamp: 2024-08-09T20:05:53.377Z
+    uncompressed: 18875583
     url: https://community.simtropolis.com/files/file/33623-wmp-mega-props-vol-03-port-autority-ferry/
+    version: 1.0.0
   simtropolis/33624-wmp-mega-props-vol-04-port-autority-seawalls:
     authors:
       - STEX Custodian
     category: 0
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	The <strong>WMP Mega Props vol. 04</strong> is the forth dependency pack, which superseds many of the previously released single, individual WMP prop packs by <strong>DocRorlach</strong>.<br>
+      	<br>
+      	<strong><span style="color:#c0392b;"><span style="background-color:#ffffff;font-size:14px;">This is a </span>dependency package<span style="background-color:#ffffff;font-size:14px;">, and it doesn't contain any ploppable or growable elements. </span></span><span><span style="background-color:#ffffff;font-size:14px;">Although it can be used for creating new lots with Maxis Lot Editor or </span><abbr title="Plugin Manager">PIM</abbr><span style="background-color:#ffffff;font-size:14px;">-X.</span></span></strong>
+      </p>
+
+
+      <p>
+      	Since the original workingman-productions.co.uk/ website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href="https://www.sc4devotion.com/csxlex/lex_main.php" rel="external nofollow"><abbr title="Lot EXchange (SC4Devotion)">LEX</abbr></a> and <a href="https://community.simtropolis.com/files/category/73-workingman-productions-wmp/" rel="" title="Simtropolis Exchange - Workingman Productions (WMP)">STEX</a>) as legacy contents on behalf of DocRorlach. For easier access and due to a more userfriendly approach, we put together these mega prop packs which are completely replacing the previous smaller prop packs.
+      </p>
+
+
+      <p>
+      	It is highly recommended to use the attached cleanitol file (WMP Mega Props Vol. 01-05 cleanitol.txt) and remove all the listed contents. The best way to do it, if you use the <strong><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97" rel="external nofollow"><span style="color:#c0392b;"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong> tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.<br>
+      	<br>
+      	<span style="color:#c0392b;"><strong>Also from now, these mega prop packs are required to be referenced as dependencies instead of the single prop packs.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>: Unzip the whole bundle, or COPY the "<strong>WMP</strong>" folder from the *.zip into your plugin folder. You don't need to keep the "<em>_Documents</em>" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      </p>
+
+
+      <p>
+      	<em>For further details, please read the provided readme AND IF you still have questions, ask <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard" data-mentionid="660284" href="https://community.simtropolis.com/profile/660284-tyberius06/" rel="">@Tyberius06</a></em>.
+      </p>
+
+
+      <p>
+      	<strong>Credits</strong>:
+      </p>
+
+
+      <ul>
+      	<li>
+      		DocRorlach and the WMP team for creating the models, props and the original prop packs.
+      	</li>
+      	<li>
+      		David (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges
+      	</li>
+      	<li>
+      		xxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>
+      		 
+      	</li>
+      </ul>
+
+
+      <div>
+      	<strong>Support</strong>:
+      </div>
+
+
+      <p>
+      	These WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested <a href="https://www.sc4devotion.com/forums/index.php?topic=18355.40" rel="external nofollow">here</a> or in the <a href="https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic" rel="">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.
+      </p>
+
+      						</body>
+    filename: WMP Mega Props vol. 04 - Port Autority Seawalls.zip
+    files:
+      - _Documents/WMP Mega Props vol. 4.jpg
+      - _Documents/WMP Mega Props vol. 04 - Port Autority Seawalls.html
+      - _Documents/WMP Mega Props Vol. 01-05 cleanitol.txt
+      - _Documents/images/workingman_lottery.png
+      - _Documents/images/WMP megapack vol 4 pt4.jpg
+      - _Documents/images/WMP megapack vol 4 pt3.jpg
+      - _Documents/images/WMP megapack vol 4 pt2.jpg
+      - _Documents/images/WMP megapack vol 4 pt1.jpg
+      - _Documents/images/sc4t_footer2.png
+      - WMP/Props/WMP Mega Props vol. 04 - Port Autority Seawalls.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe49e38219_WMPmegapackvol4.jpg.ef69b8b51ef366e6b80cd1bb57d28132.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe4a08879e_WMPmegapackvol4pt1.jpg.95f8bf75386d0fba59b6e0475a45d53d.jpg
     lastModified: 2020-05-25T15:31:04Z
     name: WMP Mega Props vol. 04 - Port Autority Seawalls
+    sha256: f21e121ed255998f84564f85376b3da2a3fff82b32a85ebe3f028d89f7eca1bc
+    size: 22927465
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe4b7450cf_WMPmegapackvol4.thumb.jpg.ad8581f3b571ed88b6d849839fd7858e.jpg
+    timestamp: 2024-08-09T20:05:53.377Z
+    uncompressed: 25880685
     url: https://community.simtropolis.com/files/file/33624-wmp-mega-props-vol-04-port-autority-seawalls/
+    version: 1.0.0
   simtropolis/33625-wmp-mega-props-vol-05-railway-props:
     authors:
       - STEX Custodian
     category: 0
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	The <strong>WMP Mega Props vol. 05</strong> is the fifth dependency pack, which superseds many of the previously released single, individual WMP prop packs by <strong>DocRorlach</strong>.<br>
+      	<br>
+      	<strong><span style="color:#c0392b;"><span style="background-color:#ffffff;font-size:14px;">This is a </span>dependency package<span style="background-color:#ffffff;font-size:14px;">, and it doesn't contain any ploppable or growable elements. </span></span><span><span style="background-color:#ffffff;font-size:14px;">Although it can be used for creating new lots with Maxis Lot Editor or </span><abbr title="Plugin Manager">PIM</abbr><span style="background-color:#ffffff;font-size:14px;">-X.</span></span></strong>
+      </p>
+
+
+      <p>
+      	Since the original workingman-productions.co.uk/ website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href="https://www.sc4devotion.com/csxlex/lex_main.php" rel="external nofollow"><abbr title="Lot EXchange (SC4Devotion)">LEX</abbr></a> and <a href="https://community.simtropolis.com/files/category/73-workingman-productions-wmp/" rel="" title="Simtropolis Exchange - Workingman Productions (WMP)">STEX</a>) as legacy contents on behalf of DocRorlach. For easier access and due to a more userfriendly approach, we put together these mega prop packs which are completely replacing the previous smaller prop packs.
+      </p>
+
+
+      <p>
+      	It is highly recommended to use the attached cleanitol file (WMP Mega Props Vol. 01-05 cleanitol.txt) and remove all the listed contents. The best way to do it, if you use the <strong><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97" rel="external nofollow"><span style="color:#c0392b;"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong> tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.<br>
+      	<br>
+      	<span style="color:#c0392b;"><strong>Also from now, these mega prop packs are required to be referenced as dependencies instead of the single prop packs.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>: Unzip the whole bundle, or COPY the "<strong>WMP</strong>" folder from the *.zip into your plugin folder. You don't need to keep the "<em>_Documents</em>" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.
+      </p>
+
+
+      <p>
+      	<em>For further details, please read the provided readme AND IF you still have questions, ask <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard" data-mentionid="660284" href="https://community.simtropolis.com/profile/660284-tyberius06/" rel="">@Tyberius06</a></em>.
+      </p>
+
+
+      <p>
+      	<strong>Credits</strong>:
+      </p>
+
+
+      <ul>
+      	<li>
+      		DocRorlach and the WMP team for creating the models, props and the original prop packs.
+      	</li>
+      	<li>
+      		David (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges
+      	</li>
+      	<li>
+      		xxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>
+      		 
+      	</li>
+      </ul>
+
+
+      <div>
+      	<strong>Support</strong>:
+      </div>
+
+
+      <p>
+      	These WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested <a href="https://www.sc4devotion.com/forums/index.php?topic=18355.40" rel="external nofollow">here</a> or in the <a href="https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic" rel="">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.
+      </p>
+
+      						</body>
+    filename: WMP Mega Props vol. 05 - Railway Props.zip
+    files:
+      - _Documents/WMP Mega Props vol. 5-index.jpg
+      - _Documents/WMP Mega Props vol. 05 - Railway Props.html
+      - _Documents/WMP Mega Props Vol. 01-05 cleanitol.txt
+      - _Documents/images/workingman_lottery.png
+      - _Documents/images/WMP megapack vol 5 - small rail props.jpg
+      - _Documents/images/WMP megapack vol 5 - rail yard and freight props.jpg
+      - _Documents/images/WMP megapack vol 5 - central station props.jpg
+      - _Documents/images/WMP megapack vol 5 - AD station props.jpg
+      - _Documents/images/sc4t_footer2.png
+      - WMP/Props/WMP Mega Props vol. 05 - Railway Props.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe50c47bac_WMPmegapackvol5.jpg.acd1105d5321e7302a32f69515660fda.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe50e06a6b_WMPmegapackvol5-ADstationprops.jpg.8058b15b117ef1261ad8b59b570757c6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe50f837af_WMPmegapackvol5-centralstationprops.jpg.2c5194832f3771b5b2197a5aca4a5a73.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe51172357_WMPmegapackvol5-railyardandfreightprops.jpg.9b6b0c8db28aa9a9f99c7e28a076e0a3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe5134da46_WMPmegapackvol5-smallrailprops.jpg.30b07c599cac315892c7097fec5ffca1.jpg
     lastModified: 2020-05-25T15:33:00Z
     name: WMP Mega Props vol. 05 - Railway Props
+    sha256: 837d3c90cd820ea3369b86a8a5b5ba01302280208483b831682cfb39d3f5278c
+    size: 23451795
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe529c4283_WMPmegapackvol5.thumb.jpg.404eb0ac46dc64882e312df43fe82632.jpg
+    timestamp: 2024-08-09T20:05:53.377Z
+    uncompressed: 27069374
     url: https://community.simtropolis.com/files/file/33625-wmp-mega-props-vol-05-railway-props/
+    version: 1.0.0
   simtropolis/33626-wmp-mega-textures-v102:
     authors:
       - STEX Custodian
     category: 0
     dependencies:
-      - simtropolis/33620-wmp-essentials-v10
+      - simtropolis/33620-wmp-essentials-v101
     description: >-
       <body>
                                   
@@ -694,7 +1227,35 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -805,4 +1366,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_06/5ee9f3ec87861_WMP-CausewayTutorialLRG.thumb.jpg.a2265144f8eb2e2d7f6ea687fb88bd75.jpg
     url: https://community.simtropolis.com/files/file/33653-wmp-causeway-tutorial/
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T13:48:06.421Z

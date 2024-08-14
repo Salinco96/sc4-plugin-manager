@@ -1,26 +1,36 @@
 import { HTMLElement } from "node-html-parser"
 
 export interface IndexerOptions {
-  exclude?: string[]
   fetchEntryDetails?: (entry: IndexerBaseEntry, entryId: string) => boolean
-  fetchNewEntries?: (source: IndexerSource, category: IndexerCategory) => boolean
+  fetchNewEntries?: (
+    data: IndexerEntryList | undefined,
+    source: IndexerSource,
+    category: IndexerCategory,
+  ) => boolean
   include: (entry: IndexerBaseEntry, entryId: string) => boolean
   overrides?: IndexerOverrides
   sources: IndexerSource[]
   superseded?: { [entryId: string]: string }
 }
 
-export interface IndexerOverrides {
-  [entryId: string]: null | {
-    downloadUrl?: string
-    packageId?: string
-    variantId?: string
-    variants?: {
-      [variant: string]: null | {
-        packageId?: string
-        variantId?: string
-      }
+export interface IndexerOverride {
+  // assetId?: string
+  downloadUrl?: string
+  packageId?: string
+  superseded?: string
+  variantId?: string
+  variants?: {
+    [variant: string]: null | {
+      downloadUrl?: string
+      packageId?: string
+      variantId?: string
     }
+  }
+}
+
+export type IndexerOverrides = {
+  [sourceId: string]: {
+    [entryId: number]: IndexerOverride | null | undefined
   }
 }
 

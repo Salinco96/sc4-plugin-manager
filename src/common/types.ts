@@ -225,6 +225,7 @@ export interface ProfileData {
 }
 
 export interface ProfileInfo extends ProfileData {
+  description?: string
   features: Features
   format?: ConfigFormat
   id: string

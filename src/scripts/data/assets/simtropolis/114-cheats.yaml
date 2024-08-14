@@ -358,9 +358,7 @@ assets:
     dependencies: []
     description: "<body>
 
-      \                           \
-
-      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+      \                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
       \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
       style=\"\" width=\"34\" height=\"53\">
@@ -1133,8 +1131,8 @@ assets:
     category: 10
     dependencies:
       - simtropolis/21118-simcity-4-extra-cheats-plugin
-      - simtropolis/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac
       - simtropolis/30883-sc4fix-third-party-patches-for-sc4
+      - simtropolis/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac
     description: >-
       <body>
                                   
@@ -1146,7 +1144,33 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1277,10 +1301,336 @@ assets:
     authors:
       - Null 45
     category: 10
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that adds a cheat code to convert plopped buildings to a growable <abbr title="Residential, Commercial, Industrial">RCI</abbr> zone type.
+      </p>
+
+
+      <p>
+      	This mod is an in-game equivalent to the <a href="https://github.com/sebamarynissen/sc4" rel="external nofollow">SC4</a> command line tool's <em>growify</em> command for editing save games (and the <a href="https://community.simtropolis.com/forums/topic/760843-growifiercom-ploppable-residentials/" rel="">website version</a>).
+      </p>
+
+
+      <p>
+      	One of the differences between the two tools is the building exemplar property that is used to detect the <abbr title="Residential, Commercial, Industrial">RCI</abbr> building type.<br>
+      	The SC4 command line tool uses the <em>Capacity Satisfied</em> property from the savegame's lot subfile.<br>
+      	This plugin uses the <em>Purpose</em> property from the building's exemplar.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		SimCity 4 version 641
+      	</li>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4Growify.dll</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Using The Plugin</strong>
+      </p>
+
+
+      <p>
+      	The plugin adds a <em>Growify </em>cheat code with the following syntax:
+      </p>
+
+
+      <p>
+      	<em>Growify &lt;zone type&gt; &lt;zone density&gt; [make historical]</em>
+      </p>
+
+
+      <p>
+      	The <strong>&lt;zone type&gt;</strong> parameter is one of: Residential, Commercial, Agriculture or Industrial.<br>
+      	The<strong> &lt;zone density&gt;</strong> parameter is one of: Low, Medium or High.<br>
+      	The <strong>[make historical] </strong>parameter is optional, when not present it will default to<em> true</em>. This behavior is intended to prevent the game from replacing the plopped building as part of its normal zone redevelopment process. Setting the value to <em>false</em> will preserve the game's existing historical option for that lot.
+      </p>
+
+
+      <p>
+      	All commands are case-insensitive.
+      </p>
+
+
+      <p>
+      	<strong>Example Commands</strong>
+      </p>
+
+
+      <p>
+      	The following command converts all commercial plopped buildings to the Commercial Medium-density zone: <em>Growify Commercial Medium</em> To save typing, you could also use: <em>Growify Com Med</em><strong> </strong>or <em>Growify C M</em>. This works with any zone or density value.
+      </p>
+
+
+      <p>
+      	Because the Agriculture zone only has 1 density, it can be used with just the zone name: <em>Growify Agriculture</em>.
+      </p>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4Growify.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/763046-growify-plopped-buildings-cheat-dll-plugin/" rel="">https://community.simtropolis.com/forums/topic/763046-growify-plopped-buildings-cheat-dll-plugin/</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-growify" rel="external nofollow">https://github.com/0xC0000054/sc4-growify</a>
+      </p>
+
+
+      <p>
+      	If you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: <a href="https://paypal.me/0xC0000054" rel="external nofollow">https://paypal.me/0xC0000054</a>
+      </p>
+
+
+      <p>
+      	Thanks to the few people who have donated to me.
+      </p>
+
+      						</body>
+    filename: SC4Growify.zip
+    files:
+      - Third Party Notices.txt
+      - SC4Growify.dll
+      - README.txt
+      - LICENSE.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_03/STEXIcon.png.09224f391af4ce10fd1a51810f26633e.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_03/Before.jpg.b3944172ebbdc52f6e0878fd2c10699a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_03/After.jpg.6d7423b6d948306a7465a8ae298a3803.jpg
     lastModified: 2024-05-23T05:03:09Z
     name: Growify Plopped Buildings Cheat - DLL Plugin
+    repository: https://github.com/sebamarynissen/sc4
+    sha256: 02dae5d6cacfb8091b9fe5db4eb4948519d01fde48a08d59f53a52c7ed062ad3
+    size: 41414
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_03/STEXIcon.thumb.png.49fdef61e541247ae4aeaacdc0e6a4d5.png
+    timestamp: 2024-08-05T05:43:23.044Z
+    uncompressed: 92824
     url: https://community.simtropolis.com/files/file/36180-growify-plopped-buildings-cheat-dll-plugin/
+    version: 1.0.1
+  simtropolis/36384-sc4-auto-run-cheats-dll-plugin:
+    authors:
+      - Null 45
+    category: 10
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that automatically executes cheat codes when loading the game or a city.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4AutoRunCheats.dll</em> and <em>SC4AutoRunCheats.ini </em>into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Configure the plugin settings, see the Configuring the plugin section.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Configuring the plugin</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Open <em>SC4AutoRunCheats.ini</em> in a text editor (e.g. Notepad). Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with administrator permissions to be able to save the file.
+      	</li>
+      	<li>
+      		Adjust the settings in the <em>[Startup]</em>,<em> [Tile]</em>, <em>[EstablishedTile]</em> and <em>[UnestablishedTile]</em> sections to your preferences.
+      	</li>
+      	<li>
+      		Save the file and start the game.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Settings overview</strong>
+      </p>
+
+
+      <p>
+      	The options are entered as a comma-separated list of cheat codes that will be applied at the specified stages in the game's loading process. The <em>RunOnce</em> versions will only be applied for the first matching city tile that is loaded.
+      </p>
+
+
+      <p>
+      	[Startup]: The commands in this section will be run once when the game starts up.<br>
+      	[Tile]: The commands in this section will be run when loading either an established or unestablished city tile.<br>
+      	[EstablishedTile]: The commands in this section will be run when loading an established city tile.<br>
+      	[UnestablishedTile]: The commands in this section will be run when loading an unestablished city tile.
+      </p>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a SC4AutoRunCheats.log file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/763349-sc4-auto-run-cheats-dll-plugin/" rel="">https://community.simtropolis.com/forums/topic/763349-sc4-auto-run-cheats-dll-plugin/</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-auto-run-cheats" rel="external nofollow">https://github.com/0xC0000054/sc4-auto-run-cheats</a>
+      </p>
+
+
+      <p>
+      	If you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: <a href="https://paypal.me/0xC0000054" rel="external nofollow">https://paypal.me/0xC0000054</a>
+      </p>
+
+
+      <p>
+      	Thanks to the few people who have donated to me.
+      </p>
+
+      						</body>
+    filename: SC4AutoRunCheats.zip
+    files:
+      - Third Party Notices.txt
+      - SC4AutoRunCheats.ini
+      - SC4AutoRunCheats.dll
+      - README.txt
+      - LICENSE.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/STEXIcon.png.b0766777b89d637524e08ec53f9d7da7.png
+    lastModified: 2024-08-11T01:20:28Z
+    name: SC4 Auto Run Cheats - DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-auto-run-cheats
+    sha256: ff0c333f6eda7f5fec4550ddd9de4b8692f8f1018fed2cbf22cbf398d892cc74
+    size: 56229
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/STEXIcon.thumb.png.72fa844d04c6aae9acea9dd1f3bf97b6.png
+    timestamp: 2024-08-13T14:26:32.086Z
+    uncompressed: 125366
+    url: https://community.simtropolis.com/files/file/36384-sc4-auto-run-cheats-dll-plugin/
+    version: 1.0.1
   simtropolis/3808-the-plopmatic-9000:
     authors:
       - mfc_app
@@ -1346,4 +1696,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-62fc352a7264906d58dc8698b752fbf6-Banking%20City-Mar.jpg
     url: https://community.simtropolis.com/files/file/925-first-national-bank-of-simnation/
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T14:26:32.086Z

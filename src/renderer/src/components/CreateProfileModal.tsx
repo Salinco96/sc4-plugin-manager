@@ -33,18 +33,6 @@ export interface CreateProfileModalProps {
 
 const emptyValue = "template:empty"
 
-const templateProfiles: {
-  description?: string
-  id: string
-  name: string
-}[] = [
-  {
-    description: "Contains only basic mods and bugfixes.",
-    id: "template:essentials",
-    name: "Essentials",
-  },
-]
-
 export interface CreateProfileFormProps {
   onClose(): void
 }
@@ -53,16 +41,19 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
   const profiles = useStore(store => store.profiles) || {}
+  const templateProfiles = useStore(store => store.templates) || {}
   const profileIds = Object.keys(profiles)
   const hasProfiles = profileIds.length !== 0
 
   const { t } = useTranslation("CreateProfileModal")
 
-  const [templateId, setTemplateId] = useState(currentProfile?.id ?? templateProfiles[0].id)
   const [name, setName] = useState<string>()
+  const [templateId, setTemplateId] = useState(
+    currentProfile?.id ?? Object.values(templateProfiles)[0].id,
+  )
 
   const sourceProfile = profiles[templateId] as ProfileInfo | undefined
-  const sourceTemplate = templateProfiles.find(profile => profile.id === templateId)
+  const sourceTemplate = templateProfiles[templateId] as ProfileInfo | undefined
   const defaultName = sourceProfile ? `${sourceProfile.name} (Copy)` : hasProfiles ? "" : "Default"
 
   const nameValue = name ?? defaultName
@@ -137,7 +128,7 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             <MenuItem value={emptyValue}>{t("from.emptyValue")}</MenuItem>
             <Divider />
             <ListSubheader>{t("from.template")}</ListSubheader>
-            {templateProfiles.map(template => (
+            {Object.values(templateProfiles).map(template => (
               <MenuItem key={template.id} value={template.id}>
                 {template.name}
               </MenuItem>

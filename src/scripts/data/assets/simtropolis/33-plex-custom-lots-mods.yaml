@@ -28,8 +28,8 @@ assets:
       - Pegasus
     category: 600
     dependencies:
-      - simtropolis/4526-peg-random-woods-v206
       - simtropolis/11083-peg-stream-kit-ii-v205
+      - simtropolis/4526-peg-random-woods-v206
     description: >-
       <body>
                                   
@@ -39,7 +39,33 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -113,6 +139,19 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -279,6 +318,19 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -469,7 +521,33 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -569,7 +647,33 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1018,10 +1122,106 @@ assets:
     authors:
       - paeng
     category: 600
+    dependencies:
+      - simtropolis/27563-shk-parking-pack
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/26923-paengs-parks-revisited
+      - simtropolis/26110-paengs-bicycle-paths-with-alley-parks
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+      							
+      <p>
+      	Originally hosted on SimPeg.
+      </p>
+
+
+      <p>
+      	A small set of four lots for diagonal parking that comes in three flavors:
+      </p>
+
+
+      <ul>
+      	<li>
+      		Standalone
+      	</li>
+      	<li>
+      		Parks205 Sidings*
+      	</li>
+      	<li>
+      		BikePaths-compatible*
+      	</li>
+      </ul>
+
+
+      <p>
+      	Each version is supplied in a separate DAT, so you can install only those options you require.
+      </p>
+
+
+      <p>
+      	<u><strong>DEPENDENCIES</strong></u>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a><br>
+      	<a href="https://community.simtropolis.com/files/file/15287-bsc-mega-props-sg-vol-01/" rel=""><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props SG Vol 01</a>
+      </p>
+
+
+      <p>
+      	<strong>* - Note</strong>: The P205- and BikePath versions are add-ons for Paeng's Parks 205 Sidings and Paeng's Bicycle Paths. They should only be installed if you are using these other modular sets by Paeng:<br>
+      	<a href="https://community.simtropolis.com/files/file/26923-paengs-parks-revisited/" rel="">Paeng's Parks Revisited</a><br>
+      	<a href="https://community.simtropolis.com/files/file/26110-paengs-bicycle-paths-with-alley-parks/" rel="">Paeng's Bicycle Paths with Alley Parks</a>
+      </p>
+
+
+      <p>
+      	All items can be found in the 'Transport | Miscellaneous' menu with custom icons. The Left/Right Ends of each version are functional parking and generate a small income. All items are compatible with any installed sidewalk mods.
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>-Cori Edit:</strong> Changed author to Paeng and un-expanded dep linkys for clarity.</span>
+      </p>
+
+      						</body>
+    filename: StreetSideDiagonalParking.zip
+    files:
+      - SSDP_Standalone.dat
+      - SSDP_Sidings205.dat
+      - ssdp_readme.txt
+      - SSDP_Bikepaths.dat
+      - KEEP_SSDP_Resource.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_07/SSDP_Day.jpg.44a9afd8e681f2f71eaf5bede5183c9d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_07/SSDP_Night.jpg.043173288c1288172ef16bd37c30ac27.jpg
     lastModified: 2021-01-18T20:06:13Z
     name: Paeng's StreetSide Diagonal Parking (SSDP)
+    sha256: 73a34dbb934d03060faf90626d2702a79530fc1c1e59985aea23295683d6c79f
+    size: 83675
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_07/SSDP_Day.thumb.jpg.6d2e160b293f41002a6928fb70e9a63f.jpg
+    timestamp: 2024-08-06T05:36:11.524Z
+    uncompressed: 122847
     url: https://community.simtropolis.com/files/file/31162-paengs-streetside-diagonal-parking-ssdp/
+    version: "1.0"
   simtropolis/4513-peg-old-west-prop-pack-205:
     authors:
       - Pegasus
@@ -1034,10 +1234,72 @@ assets:
     authors:
       - Pegasus
     category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+      							
+      <p> Prepare for the onslaught as hoards of Leafers besiege your city every Fall to take in the beauty of the Autumn leaves. The Seasonal Woods lots are very similar to the <abbr
+      title="Pegasus">PEG</abbr> Random Woods... except these trees change with the seasons. Winter, Spring, Summer &amp; Fall... the trees change to reflect the time of year in your cities. The
+      Seasonal Woods also shuns the game's default "lolly-pop" trees and introduces 18 new BATed trees for greater realism.</p>
+
+      <p>The Seasonal Woods provides you with a fast &amp; flexible means of adding realistic woodlands to your cities and surrounding rural areas. The Seasonal Woods randomly generates different
+      types of trees as you plop the lot. This eliminates the need of constantly rotating the lot when plopping for a random look... and provides a more natural &amp; realistic look when covering
+      large areas.</p>
+
+      <p>The Seasonal Woods includes 4 new lots: A 1x1 lot with full ground texture. A 2x2 lot with full ground texture. A 1x1 lot with transparent ground texture. A 2x2 lot with transparent ground
+      texture.</p>
+
+      <p>The Random Forest is <abbr title="Pegasus">PEG</abbr> tested &amp; Tree-Hugger approved. Each lot has properties similar to a small green park with slightly improved air pollution qualities.
+      This lot is also 'Slope Conforming' so you can place it almost anywhere.</p>
+
+      <p>** This lot was designed for seamless integration with the <abbr title="Pegasus">PEG</abbr> Trail Parks and the <abbr title="Pegasus">PEG</abbr> Stream Kit. Obviously, it can be used by
+      itself, singularly or in groups, anywhere in your cities where you need a little flourish of flora.</p>
+
+      <p style="margin-top:0px;font-family:Roboto, sans-serif;line-height:22px;"><strong style="color:rgb(255,0,0);line-height:22px;">**This file currently contains an .exe installer suitable for
+      windows users.  These files are in the process of being updated with zip files and this message will be removed once the update is complete.</strong></p>
+
+      <p style="font-family:Roboto, sans-serif;line-height:22px;"><strong style="line-height:22px;"><span style="color:rgb(128,0,0);">All Pegasus files are now legacy content and are no longer
+      officially supported - however support from the wider community can be requested</span> <u><a style="color:rgb(51,122,183);"
+      href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/" rel="">here</a></u></strong>.</p>
+
+      						</body>
+    filename: PEG_Seasonal-Woods_206b_SU.zip
+    files:
+      - readme_011.htm
+      - product_image.jpg
+      - PEG_Seasonal-Woods_206a.dat
+      - PEG_Seasonal-Woods-t_206a.dat
+      - PEG_Seasonal-Tree-Pack_206b.Dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0028/fe3f12ba258a7384a446b96957480326-product_image.jpg
     lastModified: 2015-07-11T08:01:42Z
     name: PEG Seasonal Woods v206b
+    sha256: d6713a497e308e30371c36945b5ee3f56e374b42d6bb340f6df43627e10f1cf7
+    size: 754291
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2004/thumb-fe3f12ba258a7384a446b96957480326-product_image.jpg
+    timestamp: 2024-08-05T15:27:36.285Z
+    uncompressed: 761173
     url: https://community.simtropolis.com/files/file/4515-peg-seasonal-woods-v206b/
+    version: "1.0"
   simtropolis/4516-peg-arizona-memorial-v205:
     authors:
       - Pegasus
@@ -1087,4 +1349,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-09333c9a2eac98e62c483c65bf81e3a3-product_image.jpg
     url: https://community.simtropolis.com/files/file/4592-peg-oasis-park-v205/
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T13:48:06.421Z

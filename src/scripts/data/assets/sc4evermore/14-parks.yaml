@@ -3,16 +3,260 @@ assets:
     authors:
       - Diggis
     category: 660
-    downloads: 1114
-    lastModified: 2023-08-20T02:45:47-07:00
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><h4 style=\"text-align: center;\"><span style=\"font-size: 36px;\"><strong> SC4D LEX Legacy - Diggis Complete Ponds and
+      Streams</strong></span></h4>\r
+
+      <p> </p>\r
+
+      <p>This SC4 Devotion LEX Legacy Pack features the complete set of the ponds and streams by Diggis, including Props and Lots, which had been available on the Lot Exchange (LEX) at SC4 Devotion.
+      After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to
+      collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to
+      properly maintain, update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h3>INSTALLATION:</h3>\r
+
+      <p>This package is a simple .zip file. Just extract the BSC folder to your My DocumentsSimCity 4Plugins directory (or equivalent, if you have a custom Plugins folder location).</p>\r
+
+      <p>It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.<br>ptionally in the ~Documents folder in the main ZIP you can find a
+      collective/master and separately all the individual cleanitol files and by using either the newer  <span style=\"text-decoration: underline;\"><strong><a
+      href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a></strong></span> or the older <span
+      style=\"text-decoration: underline;\"><strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC
+      Cleanitol</a></strong></span> tool you can search and remove old and outdated versions of these files.</p>\r
+
+      <h3>DLL DEPENDENCIES:</h3>\r
+
+      <p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):</p>\r
+
+      <ul>\r
+
+      <li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a> - You need it to get the
+      package submenu working.\r
+
+      <p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsfot Windows and Linux only).</span></p>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <h3>DEPENDENCIES:</h3>\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures) (the below listed dependencies are covering a
+      full install):</p>\r
+
+      <ul>\r
+
+      <li><strong>SC4D LEX Legacy - BSC Diggis Complete Ponds and Streams v2 (and above)</strong> - <span style=\"color: #e03e2d;\">INCLUDED</span><br>The below listed dependencies are all can be
+      found in the hereby linked dependency pack compilation.</li>\r
+
+      <li>BSC MEGA Props - Canals Diggis Streams and Ponds</li>\r
+
+      </ul>\r
+
+      <p> </p>\r
+
+      <ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\"><strong>SC4D LEX Legacy -
+      BSC Common Dependencies Pack v9</strong></a> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+
+      <li>BSC Essentials 2024a</li>\r
+
+      </ul>\r
+
+      <p> </p>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <div class=\"bannerfull\">\r
+
+      <h3><strong>CREDITS:</strong></h3>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following BSC members contributed models, textures, lotting, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>Diggis</li>\r
+
+      <li>BarbyW</li>\r
+
+      <li>callagrafx</li>\r
+
+      <li>RippleJet</li>\r
+
+      <li>SimGoober</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus and Ulisse Wolf.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Contents</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following LEX Files:</p>\r
+
+      <ol start=\"1\">\r
+
+      <li>BSC Prop Pack - Diggis Ponds 1</li>\r
+
+      <li>BSC Prop Pack - Diggis Ponds 2</li>\r
+
+      <li>BSC Prop Pack - Diggis Streams 1</li>\r
+
+      <li>BSC Prop Pack - Diggis Streams 2</li>\r
+
+      <li>BSC Diggis Ponds Shingle Base Set</li>\r
+
+      <li>BSC Diggis Ponds Grass Base Set</li>\r
+
+      <li>BSC Diggis Streams Shingle Base Set</li>\r
+
+      <li>BSC Diggis Streams Diagonal Shingle Base Set</li>\r
+
+      <li>BSC Diggis Streams Grass Base Set</li>\r
+
+      <li>BSC Diggis Ponds Addon Set 1</li>\r
+
+      <li>BSC Diggis Ponds Addon Set 2</li>\r
+
+      </ol>\r
+
+      <p>The BSC Diggis Streams PEG Replacement Mod is available as a separate download.</p>\r
+
+      <p>Various pieces of original documentation can be found in the \"_Documents\" folder, which should not be installed in the Plugins directory.</p>\r
+
+      </div>\r
+
+      </div>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Diggis LEX image Ponds Shingle Base Set.jpg\" data-lightbox=\"lightbox108\"
+      data-alt=\"lightboxDiggis LEX image Ponds Shingle Base Set.jpg|Diggis Ponds Grass Base Set BSC.jpg|Diggis LEX image Streams Shingle Base diagonal Set.jpg|Diggis Ponds Addon Set 1 BSC\"
+      target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Ponds Shingle Base Set.jpg\" alt=\"Diggis LEX image
+      Ponds Shingle Base Set\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Diggis Ponds Grass Base Set BSC.jpg\" data-lightbox=\"lightbox108\"
+      data-alt=\"lightboxDiggis LEX image Ponds Shingle Base Set.jpg|Diggis Ponds Grass Base Set BSC.jpg|Diggis LEX image Streams Shingle Base diagonal Set.jpg|Diggis Ponds Addon Set 1 BSC\"
+      target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis Ponds Grass Base Set BSC.jpg\" alt=\"Diggis Ponds Grass Base Set
+      BSC2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Diggis LEX image Streams Shingle Base diagonal Set.jpg\"
+      data-lightbox=\"lightbox108\" data-alt=\"lightboxDiggis LEX image Ponds Shingle Base Set.jpg|Diggis Ponds Grass Base Set BSC.jpg|Diggis LEX image Streams Shingle Base diagonal Set.jpg|Diggis
+      Ponds Addon Set 1 BSC\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Streams Shingle Base diagonal
+      Set.jpg\" alt=\"Diggis LEX image Streams Shingle Base diagonal Set3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 1152
+    filename: SC4D LEX Legacy - BSC Diggis Complete Ponds and Streams v2.zip
+    files:
+      - ~Documents/readme_diggis_complete_ponds_and_streams.html
+      - ~Documents/readme.css
+      - ~Documents/Cleanitol_MASTER REMOVE LIST_BSC Diggis Ponds and Stream Collection.txt
+      - BSC/BSCProps/BSC MEGA Props - Canals Diggis Streams and Ponds.dat
+      - BSC/BSC Submenu/BSC_Diggis_Canals_Submenu.dat
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC MEGA Props - Canals Diggis Streams and Ponds.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - Canals Diggis Streams and Ponds_index.jpg
+      - BSC/Diggis/Streams/Diggis Stream Shingle Diagonal Base Lots.dat
+      - BSC/Diggis/Streams/Diggis Stream Shingle Base Lots.dat
+      - BSC/Diggis/Streams/Diggis Stream Grass Base Lots.dat
+      - BSC/Diggis/Ponds/Diggis Ponds Grass Base Lots.dat
+      - BSC/Diggis/Ponds/Diggis Ponds Addon Set 2 Lots.dat
+      - BSC/Diggis/Ponds/Diggis Ponds Addon Set 1 Lots.dat
+      - BSC/Diggis/Ponds/Diggis Pond Shingle Base Lots.dat
+      - ~Documents/BSC_Readmes/Diggis/Diggis_Remove_streams_Models.txt
+      - ~Documents/BSC_Readmes/Diggis/Diggis_Remove_streams_Lots.txt
+      - ~Documents/BSC_Readmes/Diggis/Diggis_Remove_ponds_Models.txt
+      - ~Documents/BSC_Readmes/Diggis/Diggis_Remove_ponds_lots.txt
+      - ~Documents/BSC_Readmes/Diggis/Diggis Streams Shingle Diagonal Base Set BSC.htm
+      - ~Documents/BSC_Readmes/Diggis/Diggis Streams Shingle Base Set BSC.htm
+      - ~Documents/BSC_Readmes/Diggis/Diggis Streams Grass Base Set BSC.htm
+      - ~Documents/BSC_Readmes/Diggis/Diggis Ponds Shingle Base Set BSC.htm
+      - ~Documents/BSC_Readmes/Diggis/Diggis Ponds Grass Base Set BSC.htm
+      - ~Documents/BSC_Readmes/Diggis/Diggis Ponds Addon Set 2 BSC.htm
+      - ~Documents/BSC_Readmes/Diggis/Diggis Ponds Addon Set 1 BSC.htm
+      - ~Documents/BSC_Readmes/Diggis/BSC Prop Pack - Diggis Streams 2.html
+      - ~Documents/BSC_Readmes/Diggis/BSC Prop Pack - Diggis Streams 1.html
+      - ~Documents/BSC_Readmes/Diggis/BSC Prop Pack - Diggis Ponds 2.html
+      - ~Documents/BSC_Readmes/Diggis/BSC Prop Pack - Diggis Ponds 1.html
+      - ~Documents/BSC_Readmes/Diggis/images/header.gif
+      - ~Documents/BSC_Readmes/Diggis/images/footer.gif
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis.gif
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Streams Shingle Diagonal Base 2.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Streams Shingle Diagonal Base 1.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Streams Shingle Base 2.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Streams Shingle Base 1.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Streams Grass Base 2.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Streams Grass Base 1.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis ponds night.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Ponds Grass Flowers.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Ponds Grass Bridge.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Ponds Corner.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis DAMN 2.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis DAMN 1.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Addon Rowboat.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Addon Kayaks.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Addon Docks.jpg
+      - ~Documents/BSC_Readmes/Diggis/images/Diggis Addon CAN-AM.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Ponds Shingle Base Set.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis Ponds Grass Base Set BSC.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Streams Shingle Base diagonal Set.jpg
+    lastModified: 2024-08-07T16:32:06-07:00
     name: SC4D LEX Legacy - BSC Diggis Complete Ponds and Streams
+    sha256: 3879fbde9b68074dc36c43244c959a621bce5ab36e090f95f1553aa4a85faab1
+    size: 16803430
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Ponds Shingle Base Set.jpg
+    timestamp: 2024-08-09T11:48:57.739Z
+    uncompressed: 20928441
     url: https://www.sc4evermore.com/index.php/downloads/download/14-park/108-sc4d-lex-legacy-bsc-diggis-complete-ponds-and-streams
+    version: "2.0"
   sc4evermore/109-bsc-diggis-streams-peg-replacement-mod:
     authors:
       - Diggis
     category: 660
-    downloads: 355
+    downloads: 367
     lastModified: 2023-08-20T02:44:37-07:00
     name: BSC Diggis Streams - PEG Replacement Mod
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Peg Replacement Mod.jpg
@@ -21,16 +265,339 @@ assets:
     authors:
       - MAS71
     category: 660
-    downloads: 575
-    lastModified: 2024-01-20T05:20:14-08:00
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+      - simtropolis/21640-simfox-treepack-2
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/87-mas71-mega-prop-pack-vol01-misc
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/10-jenxporkie-expanded-porkie-props
+      - sc4evermore/67-sc4d-lex-legacy-3dsmax-gmax-models-pack
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p style=\"text-align: center;\"><span style=\"font-size: 36px;\"><strong>SC4D LEX Legacy - MAS71 Japanese River Project
+      (JRP)</strong></span></p>\r
+
+      <p>This SC4 Devotion LEX Legacy Pack features the Japanese River Project (JRP) canal set by MAS71 (including the Suburban Canal Set and MAS71 MEGA Props Vol 02), which had been available on the
+      Lot Exchange (LEX) at SC4 Devotion. After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June
+      2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to
+      install.</p>\r
+
+      <div class=\"regtext\">\r
+
+      <p>Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to
+      properly maintain, update, and provide technical support for the pack.</p>\r
+
+      <h3>INSTALLATION:</h3>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<strong><a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is
+      recommended</a></strong>--or a zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <strong><a href=\"https://www.7-zip.org/\">7-zip</a></strong>, and
+      for macOS, use <strong><a href=\"https://www.keka.io/en/\">Keka</a></strong>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). After this, click over to the Install tab, and click
+      \"Start installation\" to begin the installation procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p>It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins. However it is also highly recommended to keep regular back-ups of your
+      plugins folder or specific contents listed in the cleanitol scripts just to be on the safe side.<br>Optionally in the ~Documents folder in the main ZIP you can find a collective/master and
+      separately all the individual cleanitol files and by using either the newer <strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\"
+      rel=\"noopener\">nos.17's SC4 Cleanitol</a></strong> or the older <strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC
+      Cleanitol</a></strong> tool you can search and remove old and outdated versions of these files.</p>\r
+
+      <p>Bear in mind that this Collection contains Prop packs only available with this upload. Those prop packs can be used and referenced by other contents may not part of this collection as
+      dependencies. If a 3rd party upload references one of the prop packs available in this Collection, you don't need to install everything, you can select and install only the referenced prop pack.
+      All prop packs (and the lot packs as well) have individual cleanitol files (besides the <em><strong>Cleanitol_MASTER REMOVE LIST_Mas71 JRP Project.txt</strong></em>) and they have Prop Catalogue
+      index images as a help for lotters.</p>\r
+
+      <h5 class=\"leftheading\"><em>Special Note Regarding \"_Documents\" Folder</em></h5>\r
+
+      <p>The \"~Documents\" folder in this download, which is not part of the installer, does contain some optional files related to the JRP. The \"_alternative version -- see individual readme\"
+      folder contains a version of the JRP in which the pontoons are taken off the V-curves. Additionally, there is an MML (Menu Management Lot) option within the \"Z___BSC MODs\" folder. Simply
+      dragging either (or both) of these folders into your Plugins should suffice for proper installation, if you wish to use these options.</p>\r
+
+      <h3>DLL DEPENDENCIES:</h3>\r
+
+      <p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):</p>\r
+
+      <ul>\r
+
+      <li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a> - You need it to get the
+      package submenu working.\r
+
+      <p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsfot Windows and Linux only).</span></p>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <h3>DEPENDENCIES:</h3>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following files are dependencies of the Japanese River Project complete set. Failure to install may result in missing textures and/or brown boxes appearing in your city.</p>\r
+
+      <ul>\r
+
+      <li><strong>SC4D LEX Legacy MAS71 Japanese River Project V2</strong> - <span style=\"color: #e03e2d;\">INCLUDED</span><br>The below listed dependencies are all can be found in the hereby linked
+      dependency pack compilation.</li>\r
+
+      <li>Mas71 Mega Props vol02 v2.dat</li>\r
+
+      <li>01_JRPSC prop_Canal.dat - required by Suburban Canals (can be found in the 01_Essential (canal props))</li>\r
+
+      <li>01_JRPSC prop_SAKURA.dat - required by Suburban Canals (can be found in the 01_Essential (canal props))</li>\r
+
+      </ul>\r
+
+      </div>\r
+
+      </div>\r
+
+      </div>\r
+
+      <p> </p>\r
+
+      <ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/87-mas71-mega-prop-pack-vol01-misc\" target=\"_blank\" rel=\"noopener\">MAS71 MEGA Prop Pack Vol01 -
+      Misc</a></li>\r
+
+      </ul>\r
+
+      <p> </p>\r
+
+      <ul>\r
+
+      <li><strong><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy -
+      BSC Common Dependencies Pack v9</a> </strong>(and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+
+      <li>BSC MEGA Props SG Vol 01</li>\r
+
+      <li>BSC MEGA Props CP Vol 01 - required by Suburban Canals</li>\r
+
+      <li>BSC Textures Vol01</li>\r
+
+      </ul>\r
+
+      <p> </p>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/21640-simfox-treepack-2/\"><strong>SimFox Tree Pack 2</strong></a> (optional, only required if using SimFox Trees option on Suburban
+      Canals)</li>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\"><strong>JENXPorkie-Expanded Porkie Props</strong></a> (optional, only
+      required if using Porkissimo Trees option on Suburban Canals)</li>\r
+
+      </ul>\r
+
+      <p> </p>\r
+
+      <div class=\"regtext\">\r
+
+      <div class=\"regtext\">\r
+
+      <div class=\"regtext\">\r
+
+      <h3><strong>CREDITS:</strong></h3>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>MAS71</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4 Devotion.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      <h4>Contents</h4>\r
+
+      <div class=\"regtext\">\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package contains the following former LEX downloads:</p>\r
+
+      <ul>\r
+
+      <li>MAS71 Mega Props Vol02 (this replaced the JRP-PROP Pack Vol01-05 in June 2022)</li>\r
+
+      <li>JRP-Core Lot Pack</li>\r
+
+      <li>JRP-Addon Lot Pack 1</li>\r
+
+      <li>JRP-Addon Lot Pack 2</li>\r
+
+      <li>JRP Suburban Canal</li>\r
+
+      </ul>\r
+
+      <p>The Lots may be found under the Seaports menu.</p>\r
+
+      <p>The source model files, originally available for download on the LEX, can be found in the <a href=\"/index.php/downloads/download/8-other/67-sc4d-lex-legacy-3dsmax-gmax-models-pack\">SC4D LEX
+      Legacy - 3DSMAX &amp; GMAX Models Pack</a>.</p>\r
+
+      <p>Various pieces of original documentation (in both English and Japanese) and earlier Cleanitol definitions can be found in the \"~Documents\" folder, which, while installed in the Plugins
+      directory, should be removed.</p>\r
+
+      </div>\r
+
+      </div>\r
+
+      </div>\r
+
+      </div>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/jrp_013.jpg\" data-lightbox=\"lightbox152\"
+      data-alt=\"lightboxjrp_013.jpg|jrp_alp2_11.jpg|Suburban Canal Addon1_01\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/jrp_013.jpg\" alt=\"jrp_013\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/jrp_alp2_11.jpg\" data-lightbox=\"lightbox152\"
+      data-alt=\"lightboxjrp_013.jpg|jrp_alp2_11.jpg|Suburban Canal Addon1_01\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/jrp_alp2_11.jpg\" alt=\"jrp_alp2_112\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Suburban Canal Addon1_01.jpg\" data-lightbox=\"lightbox152\"
+      data-alt=\"lightboxjrp_013.jpg|jrp_alp2_11.jpg|Suburban Canal Addon1_01\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Suburban Canal Addon1_01.jpg\" alt=\"Suburban Canal Addon1_013\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 586
+    filename: SC4D LEX Legacy - MAS71 Japanese River Project V2.zip
+    files:
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/readme_mas71_japanese_river_project.html
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/readme.css
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/Cleanitol_MASTER REMOVE LIST_Mas71 JRP Project.txt
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@2MAS71 Submenu/MAS71_JPR_Canals.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@1^Props Pack#/Mas71 Mega Props vol02 v2.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/_alternative version -- see individual readme/zz_mas71_jrp046_v-curves_none-ponton_v-curves.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/_alternative version -- see individual readme/readme_mas71_jrp046_v-curves_none-pontoon.txt
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/_alternative version -- see individual readme/product_073_mas71_jrp046_v-curves_none-pontoon.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/Prop-Texture Catalogue Index and Cleanitol/Mas71 Mega Props vol02 v2_index.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_MAS71 Mega Prop Pack vol02 v2.txt
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_MAS71 JRP Lot Collection.txt
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol file_MAS71 JPR Suburban Canals.txt
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Suburban Canal.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Suburban Canal Addon1_01.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Readme_JRP-SC_Japanese.htm
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Readme_JRP-SC_English.htm
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Readme_JRP-CLP_JPN.htm
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Readme_JRP-CLP_ENG.htm
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Readme_JRP-ALP2_Japanese.htm
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Readme_JRP-ALP2_Engligh.htm
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Readme_JRP-ALP01_JPN.htm
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/Readme_JRP-ALP01_ENG.htm
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@3Addon Lot Pack 02#/MAS71 JRP Addon Lot Pack 02.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@2Addon Lot Pack 01/MAS71 JRP Addon Lot Pack 01.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@1Core Lot Pack/MAS71 JRP Core Lot Pack.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@1^Props Pack#/z_MAS71 JRP fix/zzzMas71_JRP_fix_z2.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@1^Props Pack#/z_MAS71 JRP fix/zzzMas71_JRP_fix_z1.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/Z___BSC MODs/MML/zz_Mas71_JRP-MML_080714.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/Thumbs.db
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/Mas71_jrpsc_05.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/Mas71_jrpsc_04.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/Mas71_jrpsc_03.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/Mas71_jrpsc_02.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/Mas71_jrpsc_01.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_bg.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_12.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_11.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_10.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_06.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_05.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_04.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_03.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_02.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp2_01.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp1_07.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp1_06.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp1_05.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp1_04.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp1_03.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp1_02.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_alp1_01.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_019.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_018.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_017.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_016.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_015.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_014_02.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_014_01.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_013.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_012.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_011.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_010.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_009.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_008.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_007.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_006.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_005.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_004.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_003.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_002.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_001.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/~Documents/MAS71_Readmes/image/jrp_000.jpg
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@5!xx_Options#/!Transparent Water Lots/JRP_Transparent Water_LOTs.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@5!xx_Options#/!JRP Water Mod Beta/JRP_WaterMod_Beta.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@7!Lot Set - CHERRY tree/MAS71 JRP Suburban Canals - Cherry Tree Lot Pack.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@5!Lot Set - PORKISSIMO tree/MAS71 JRP Suburban Canals - Porkissimo Tree Lot Pack.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@6!Lot Set - SIMFOX tree/MAS71 JRP Suburban Canals - SimFox Tree Lot Pack.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@4Lot Set - MAXIS tree/MAS71 JRP Suburban Canals - Maxis Tree Lot Pack.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@303_OPTION (Guardrail)/03_JRPSC prop_Option Gurdrail 01.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@101_Essential (canal props)/01_JRPSC prop_SAKURA.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@101_Essential (canal props)/01_JRPSC prop_Canal.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@202_Fence Colors (Choose Only ONE file)#/=White/02_JRPSC prop_Fence-WHITE.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@202_Fence Colors (Choose Only ONE file)#/-Green/02_JRPSC prop_Fence-GREEN.dat
+      - SC4D LEX Legacy - MAS71 Japanese River Project V2/@3Japanese River Project/@4Suburban Canal/@202_Fence Colors (Choose Only ONE file)#/-Black/02_JRPSC prop_Fence-BLACK.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/jrp_013.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/jrp_alp2_11.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Suburban Canal Addon1_01.jpg
+    lastModified: 2024-08-10T07:44:55-07:00
     name: SC4D LEX Legacy - MAS71 Japanese River Project (JRP)
+    sha256: 9a9bd48e9a38c35c6e53fca12dbc290e0c4904924843a923fd9a3bca12a40723
+    size: 38717942
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/jrp_013.jpg
+    timestamp: 2024-08-13T13:48:06.421Z
+    uncompressed: 39130129
     url: https://www.sc4evermore.com/index.php/downloads/download/14-park/152-sc4d-lex-legacy-mas71-japanese-river-project-jrp
+    version: "2"
   sc4evermore/209-sc4d-lex-legacy-bsc-tsc-girafe-winterpack:
     authors:
       - Girafe
     category: 660
-    downloads: 203
+    downloads: 211
     lastModified: 2024-01-20T07:36:37-08:00
     name: SC4D LEX Legacy - BSC-TSC Girafe Winterpack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/image_pack.jpg
@@ -39,7 +606,7 @@ assets:
     authors:
       - sc4evermore
     category: 660
-    downloads: 251
+    downloads: 259
     lastModified: 2024-02-12T13:12:11-08:00
     name: Ulisse Wolf - National Football League
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/maxresdefault.jpg.117506cbb498290ce0cd930f582fe09e.jpg
@@ -50,9 +617,13 @@ assets:
     category: 660
     dependencies:
       - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
       - simtropolis/20966-peg-mtp-super-pack
       - simtropolis/12329-peg-pond-kit-ii-deluxe-edition-v206
       - simtropolis/14809-peg-mtp-scenic-views
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/131-walkingsnake-sc4jeeks-parking-textures-vol-01
     description: "<body>\r
 
       \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the BSC Team and SC4D LEX Restoration Team-assembled canal and waterway uploads of multiple
@@ -112,6 +683,22 @@ assets:
       dependencies. If a 3rd party upload references one of the prop packs available in this Collection, you don't need to install everything, you can select and install only the referenced prop pack.
       All prop packs (and the lot packs as well) have individual cleanitol files (besides the <em>Cleanitol_MASTER REMOVE LIST_BSC Canals Collection.txt</em>) and they have Prop Catalogue index images
       as a help for lotters.</p>\r
+
+      <h3>DLL DEPENDENCIES:</h3>\r
+
+      <p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):</p>\r
+
+      <ul>\r
+
+      <li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a> - You need it to get the
+      package submenu working.\r
+
+      <p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span></p>\r
+
+      </li>\r
+
+      </ul>\r
 
       <h3>DEPENDENCIES:</h3>\r
 
@@ -303,20 +890,44 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 277
-    filename: SC4D LEX Legacy - BSC Canals Collection V1.zip
+    downloads: 351
+    filename: SC4D LEX Legacy - BSC Canals Collection V2.zip
     files:
-      - readme_SC4D LEX Legacy - BSC Canals Collection V1.html
+      - readme_SC4D LEX Legacy - BSC Canals Collection V2.html
       - readme.css
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_MASTER REMOVE LIST_BSC Canals Collection.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Zero7_SunkenCanalProps_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Newman Inc Rivers and Ponds_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Canals SimGoober Brick Style_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Canals CAL Stone Canals_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Canals CAL Remastered SimGoober Style_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps SG Urban Canal_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps SG Irrigation Canals v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps SG Ditches 2009_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_Zero7 Sunken Canal Props.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC MEGA Props - Newman Inc Rivers and Ponds.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC MEGA Props - Canals SimGoober Brick Style.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC MEGA Props - Canals CAL Stone Canals.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC MEGA Props - Canals CAL Remastered SimGoober Style.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC BATProps SG Urban Canal.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC BATProps SG Irrigation Canals v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC BATProps SG Ditches 2009.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_Zero7 Sunken Canals.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC SG Urban Canals.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC SG Irrigation Ditches 2009.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC SG Irrigation Canals 2004.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC SG Canals Collection.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC Newman Inc RPK Campgrounds.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC Newman Inc RPK (River and Pond Kit) Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC Newman Inc ASC (Agricultural Suburban Canals).txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC CAL Stone Canal Collection.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC CAL SG-Remastered Canals Collection.txt
       - ~Documents/BSC_Readmes/Zero7 Sunken Canals/Z7_SunkenCanals_Night.jpg
       - ~Documents/BSC_Readmes/Zero7 Sunken Canals/Z7_SunkenCanals_Baseset.jpg
       - ~Documents/BSC_Readmes/Zero7 Sunken Canals/Readme_Z7_SunkenCanals.htm
       - ~Documents/BSC_Readmes/SG Urban Canals/SG_Readme_UrbanCanals.htm
       - ~Documents/BSC_Readmes/SG Irrigation Ditches 2009/SG_Readme_Ditches2009.htm
       - ~Documents/BSC_Readmes/SG Irrigation Canals 2004/Readme_SG_IrrigationCanals1.htm
-      - ~Documents/BSC_Readmes/Newman Inc RPK/Readme_NewmanInc_RPK-Campground.html
-      - ~Documents/BSC_Readmes/Newman Inc RPK/Readme_BSC_RPK.htm
       - ~Documents/BSC_Readmes/SG BSC Brick Canals/SG_WaterPurifier02.jpg
       - ~Documents/BSC_Readmes/SG BSC Brick Canals/SG_WaterPurifier01.jpg
       - ~Documents/BSC_Readmes/SG BSC Brick Canals/SG_Readme_CoalWharf.htm
@@ -356,6 +967,8 @@ assets:
       - ~Documents/BSC_Readmes/SG BSC Brick Canals/large_SGCanal_ND.jpg
       - ~Documents/BSC_Readmes/SG BSC Brick Canals/BSC_EagleStatue01.jpg
       - ~Documents/BSC_Readmes/SG BSC Brick Canals/BSC_CanalParks_Nite.jpg
+      - ~Documents/BSC_Readmes/Newman Inc RPK/Readme_NewmanInc_RPK-Campground.html
+      - ~Documents/BSC_Readmes/Newman Inc RPK/Readme_BSC_RPK.htm
       - ~Documents/BSC_Readmes/Newman Inc ASC/Readme_ACS.htm
       - ~Documents/BSC_Readmes/Callagrafx/readme_gateshead.htm
       - ~Documents/BSC_Readmes/CAL-SG Remastered Canals/SG-CAL Canal Diagonal Pieces.jpg
@@ -376,42 +989,8 @@ assets:
       - ~Documents/BSC_Readmes/CAL Stone Canals/Readme_CAL_Canals.htm
       - ~Documents/BSC_Readmes/CAL Stone Canals/Readme_CAL_BrixhamSculling.htm
       - ~Documents/BSC_Readmes/CAL Stone Canals/CAL Canal Bridges NE Readme.htm
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Zero7_SunkenCanalProps_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Newman Inc Rivers and Ponds_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Canals SimGoober Brick Style_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Canals CAL Stone Canals_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Canals CAL Remastered SimGoober Style_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps SG Urban Canal_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps SG Irrigation Canals v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps SG Ditches 2009_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_Zero7 Sunken Canal Props.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC MEGA Props - Newman Inc Rivers and Ponds.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC MEGA Props - Canals SimGoober Brick Style.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC MEGA Props - Canals CAL Stone Canals.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC MEGA Props - Canals CAL Remastered SimGoober Style.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC BATProps SG Urban Canal.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC BATProps SG Irrigation Canals v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC BATProps SG Ditches 2009.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_Zero7 Sunken Canals.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC SG Urban Canals.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC SG Irrigation Ditches 2009.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC SG Irrigation Canals 2004.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC SG Canals Collection.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC Newman Inc RPK Campgrounds.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC Newman Inc RPK (River and Pond Kit) Vol01.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC Newman Inc ASC (Agricultural Suburban Canals).txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC CAL Stone Canal Collection.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_BSC CAL SG-Remastered Canals Collection.txt
       - BSC/CAL/Gateshead for SG Brick Canals/SG Brick Canals CAL Gateshead Millennium Bridge_d36ff416.SC4Lot
-      - BSC/@2Canals/Zero7 Sunken Canals/Zero7 Sunken Canals.dat
-      - BSC/@1BSCProps#/@8BSC BATProps SG Urban Canal/BSC BATProps SG Urban Canal.dat
-      - BSC/@1BSCProps#/@7BSC BATProps SG Ditches 2009/BSC BATProps SG Ditches 2009.dat
-      - BSC/@1BSCProps#/@6BSC BATProps SG Irrigation Canals v2/BSC BATProps SG Irrigation Canals v2.dat
-      - BSC/@1BSCProps#/@5Zero7 Sunken Canal Props/Zero7_SunkenCanalProps.dat
-      - BSC/@1BSCProps#/@4BSC MEGA Props - Canals Newman Inc Rivers and Ponds/BSC MEGA Props - Canals Newman Inc Rivers and Ponds.dat
-      - BSC/@1BSCProps#/@3BSC MEGA Props - Canals CAL Stone Canals/BSC MEGA Props - Canals CAL Stone Canals.dat
-      - BSC/@1BSCProps#/@2BSC MEGA Props - Canals CAL Remastered SimGoober Style/BSC MEGA Props - Canals CAL Remastered SimGoober Style.dat
-      - BSC/@1BSCProps#/@1BSC MEGA Props - Canals SimGoober Brick Style/BSC MEGA Props - Canals SimGoober Brick Style.dat
+      - BSC/@3Canals/Zero7 Sunken Canals/Zero7 Sunken Canals.dat
       - ~Documents/BSC_Readmes/SG Urban Canals/Images/SG_UrbanCanals02.jpg
       - ~Documents/BSC_Readmes/SG Urban Canals/Images/SG_UrbanCanals01.jpg
       - ~Documents/BSC_Readmes/SG Urban Canals/Images/header.gif
@@ -426,6 +1005,11 @@ assets:
       - ~Documents/BSC_Readmes/SG Irrigation Canals 2004/images/footer.gif
       - ~Documents/BSC_Readmes/SG Irrigation Canals 2004/images/BSC_SG_IrrigationCanals02.jpg
       - ~Documents/BSC_Readmes/SG Irrigation Canals 2004/images/BSC_SG_IrrigationCanals01.jpg
+      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/SG_CanalTerracesExp02.jpg
+      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/SG_CanalTerracesExp01.jpg
+      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/header.gif
+      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/footer.gif
+      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/Diagonals_s.jpg
       - ~Documents/BSC_Readmes/Newman Inc RPK/images/peg2cnut.jpg
       - ~Documents/BSC_Readmes/Newman Inc RPK/images/logo_header.jpg
       - ~Documents/BSC_Readmes/Newman Inc RPK/images/header.jpg
@@ -434,11 +1018,6 @@ assets:
       - ~Documents/BSC_Readmes/Newman Inc RPK/images/desktop.ini
       - ~Documents/BSC_Readmes/Newman Inc RPK/images/Campground2.jpg
       - ~Documents/BSC_Readmes/Newman Inc RPK/images/Campground1.jpg
-      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/SG_CanalTerracesExp02.jpg
-      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/SG_CanalTerracesExp01.jpg
-      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/header.gif
-      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/footer.gif
-      - ~Documents/BSC_Readmes/SG BSC Brick Canals/images/Diagonals_s.jpg
       - ~Documents/BSC_Readmes/Newman Inc ASC/images/header.gif
       - ~Documents/BSC_Readmes/Newman Inc ASC/images/footer.gif
       - ~Documents/BSC_Readmes/Newman Inc ASC/images/ACS_re2.jpg
@@ -477,82 +1056,91 @@ assets:
       - ~Documents/BSC_Readmes/CAL Stone Canals/images/bridges_readme.jpg
       - ~Documents/BSC_Readmes/CAL Stone Canals/images/bridgeheader.jpg
       - ~Documents/BSC_Readmes/CAL Stone Canals/images/baseset_pics.jpg
-      - BSC/@2Canals/SimGoober Sets/Urban Canals/SG Urban Canals.dat
-      - BSC/@2Canals/SimGoober Sets/Irrigation Ditches 2009#/Ponds/SG Irrigation Ditches 2009 - Ponds.dat
-      - BSC/@2Canals/SimGoober Sets/Irrigation Ditches 2009#/Water Sources/SG Irrigation Ditches 2009 - Water Sources.dat
-      - BSC/@2Canals/SimGoober Sets/Irrigation Ditches 2009#/Channels/SG Irrigation Ditches 2009 - Channels.dat
-      - BSC/@2Canals/SimGoober Sets/Irrigation Canals 2004#/Water Sources/SG Irrigation Canals 2004 - Water Sources.dat
-      - BSC/@2Canals/SimGoober Sets/Irrigation Canals 2004#/SG Canal Transition/SG Irrigation Canals 2004 - SG Canal Transition.dat
-      - BSC/@2Canals/SimGoober Sets/Irrigation Canals 2004#/Ponds/SG Irrigation Canals 2004 - Ponds.dat
-      - BSC/@2Canals/SimGoober Sets/Irrigation Canals 2004#/Channels/SG Irrigation Canals 2004 - Channels.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Narrow Canals Waterfall/SG Narrow Canals Waterfall.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Narrow Canals Diagonals/SG Narrow Canals Diagonals.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Narrow Canals Bridges/SG Narrow Canals Bridges.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Narrow Canals BaseSet/SG Narrow Canals BaseSet.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Wharves/SG Brick Canals Wharves.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Utilities/SG Brick Canals Utilities.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Terraces/SG Brick Canals Terraces.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Paddleboats/SG Brick Canals Paddleboats.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Overhangs/SG Brick Canals Overhangs.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Locks/SG Brick Canals Locks.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Gondola Landings/SG Brick Canals Gondola Landings.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Diagonals (Mattb325 and MGB204)/SG Brick Canals Diagonals (Mattb325 and MGB204).dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Culverts/SG Brick Canals Culverts.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Canal Parks/SG Brick Canals Canal Parks.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Bridges/SG Brick Canals Bridges.dat
-      - BSC/@2Canals/SimGoober Sets/Brick Canals#/SG Brick Canals BaseSet/SG Brick Canals BaseSet.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@4Campgrounds/BSC Newman Inc RPK Campgrounds.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Water Sources/Newman Inc ASC Canal Water Pumps.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Water Sources/Newman Inc ASC Canal Water Pumps with path.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Ditch Set/Newman Inc ASC Ditch Set.dat
-      - BSC/@2Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Overhangs/CAL Stone Canals Overhangs.dat
-      - BSC/@2Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Morris Marina/CAL Stone Canals Morris Marina.dat
-      - BSC/@2Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Brixham Sculling Club/CAL Stone Canals Brixham Sculling Club.dat
-      - BSC/@2Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Bridges NE/CAL Stone Canals Bridges NE.dat
-      - BSC/@2Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Bridges/CAL Stone Canals Bridges.dat
-      - BSC/@2Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Base Set/CAL Stone Canals Base Set.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@bCAL SG-Remasted Canal Industrial Wharves/CAL SG-Remasted Canal Industrial Wharves.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@aCAL SG-Remasted Canal Holiday Inn/CAL SG-Remasted Canal Holiday Inn.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@9CAL SG-Remasted Canal Terraces/CAL SG-Remasted Canal Terraces.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@8CAL SG-Remasted Canal Pedalos/CAL SG-Remasted Canal Pedalos.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@7CAL SG-Remasted Canal Canal Parks/CAL SG-Remasted Canal Canal Parks.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@6CAL SG-Remasted Canal Aqueduct/CAL SG-Remasted Canal Aqueduct.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@5CAL SG-Remasted Canal Millennium Bridge/CAL SG-Remasted Canal Millennium Bridge v2.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@4CAL SG-Remasted Canal Lock and Bridges/CAL SG-Remasted Canal Lock and Bridges.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@3CAL SG-Remasted Canal Overhangs/CAL SG-Remasted Canal Overhangs.dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@2CAL SG-Remasted Canal Diagonals (Mattb325 and MGB204)/CAL SG-Remasted Canal Diagonals (Mattb325 and MGB204).dat
-      - BSC/@2Canals/Callagrafx Sets/Remastered SG Canals#/@1CAL SG-Remasted Canal Baseset/CAL SG-Remasted Canal Baseset.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@3Waterfalls and Extras/WaterLogs/BSC Newman Inc RPK WaterLogs.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@3Waterfalls and Extras/Waterfall with Rapids/BSC Newman Inc RPK Waterfall with Rapids.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@3Waterfalls and Extras/Waterfall/BSC Newman Inc RPK Waterfall.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@2Transitions/BSC River to SG Canals/BSC Newman Inc RPK River to SG Canals Transition.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@2Transitions/BSC River to PEG Waters/BSC Newman Inc RPK River to PEG Waters Transition.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@2Transitions/BSC Calm Water to Rapids/BSC Newman Inc RPK Calm Water to Rapids Transition.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@1Base Sets/Rapids/BSC Newman Inc RPK BaseSet with Rapids.dat
-      - BSC/@2Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@1Base Sets/Calm Water/BSC Newman Inc RPK BaseSet.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to SG Canals/Newman Inc ASC Canal to SG Canal Transition with path.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to RPK set/Newman Inc ASC Canal to RPK Transition.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to RPK set/Newman Inc ASC Canal to RPK Transition with path.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to Rivers/Newman Inc ASC Canal to River Transition with path.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to PEG Ponds and Sreams/Newman Inc ASC Canal to PEG River Transition.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to PEG Ponds and Sreams/Newman Inc ASC Canal to PEG Pond Transition.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to PEG Ponds and Sreams/Newman Inc ASC Canal to PEG Pond Transition with path.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to Ditch set/Newman Inc ASC Canal to Ditch Transition.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/Without Path/Newman Inc ASC Canal BaseSet without path.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/With Path/Newman Inc ASC Canal BaseSet with path.dat
-      - BSC/@2Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/Water Tiles/Newman Inc ASC Canal BaseSet WaterTiles.dat
+      - BSC/@2BSC Submenu/BSC_Canals_Submenu.dat
+      - BSC/@3Canals/SimGoober Sets/Urban Canals/SG Urban Canals.dat
+      - BSC/@1BSCProps#/@8BSC BATProps SG Urban Canal/BSC BATProps SG Urban Canal.dat
+      - BSC/@1BSCProps#/@7BSC BATProps SG Ditches 2009/BSC BATProps SG Ditches 2009.dat
+      - BSC/@1BSCProps#/@6BSC BATProps SG Irrigation Canals v2/BSC BATProps SG Irrigation Canals v2.dat
+      - BSC/@1BSCProps#/@5Zero7 Sunken Canal Props/Zero7_SunkenCanalProps.dat
+      - BSC/@1BSCProps#/@4BSC MEGA Props - Canals Newman Inc Rivers and Ponds/BSC MEGA Props - Canals Newman Inc Rivers and Ponds.dat
+      - BSC/@1BSCProps#/@3BSC MEGA Props - Canals CAL Stone Canals/BSC MEGA Props - Canals CAL Stone Canals.dat
+      - BSC/@1BSCProps#/@2BSC MEGA Props - Canals CAL Remastered SimGoober Style/BSC MEGA Props - Canals CAL Remastered SimGoober Style.dat
+      - BSC/@1BSCProps#/@1BSC MEGA Props - Canals SimGoober Brick Style/BSC MEGA Props - Canals SimGoober Brick Style.dat
+      - BSC/@3Canals/SimGoober Sets/Irrigation Ditches 2009#/Water Sources/SG Irrigation Ditches 2009 - Water Sources.dat
+      - BSC/@3Canals/SimGoober Sets/Irrigation Ditches 2009#/Ponds/SG Irrigation Ditches 2009 - Ponds.dat
+      - BSC/@3Canals/SimGoober Sets/Irrigation Ditches 2009#/Channels/SG Irrigation Ditches 2009 - Channels.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@4Campgrounds/BSC Newman Inc RPK Campgrounds.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Water Sources/Newman Inc ASC Canal Water Pumps.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Water Sources/Newman Inc ASC Canal Water Pumps with path.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Ditch Set/Newman Inc ASC Ditch Set.dat
+      - BSC/@3Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Morris Marina/CAL Stone Canals Morris Marina.dat
+      - BSC/@3Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Overhangs/CAL Stone Canals Overhangs.dat
+      - BSC/@3Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Bridges NE/CAL Stone Canals Bridges NE.dat
+      - BSC/@3Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Brixham Sculling Club/CAL Stone Canals Brixham Sculling Club.dat
+      - BSC/@3Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Bridges/CAL Stone Canals Bridges.dat
+      - BSC/@3Canals/Callagrafx Sets/Stone Canals#/CAL Stone Canals Base Set/CAL Stone Canals Base Set.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@aCAL SG-Remasted Canal Holiday Inn/CAL SG-Remasted Canal Holiday Inn.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@bCAL SG-Remasted Canal Industrial Wharves/CAL SG-Remasted Canal Industrial Wharves.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@8CAL SG-Remasted Canal Pedalos/CAL SG-Remasted Canal Pedalos.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@9CAL SG-Remasted Canal Terraces/CAL SG-Remasted Canal Terraces.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@6CAL SG-Remasted Canal Aqueduct/CAL SG-Remasted Canal Aqueduct.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@7CAL SG-Remasted Canal Canal Parks/CAL SG-Remasted Canal Canal Parks.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@5CAL SG-Remasted Canal Millennium Bridge/CAL SG-Remasted Canal Millennium Bridge v2.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@4CAL SG-Remasted Canal Lock and Bridges/CAL SG-Remasted Canal Lock and Bridges.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Narrow Canals Waterfall/SG Narrow Canals Waterfall.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@2CAL SG-Remasted Canal Diagonals (Mattb325 and MGB204)/CAL SG-Remasted Canal Diagonals (Mattb325 and MGB204).dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@3CAL SG-Remasted Canal Overhangs/CAL SG-Remasted Canal Overhangs.dat
+      - BSC/@3Canals/Callagrafx Sets/Remastered SG Canals#/@1CAL SG-Remasted Canal Baseset/CAL SG-Remasted Canal Baseset.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Narrow Canals Diagonals/SG Narrow Canals Diagonals.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Narrow Canals BaseSet/SG Narrow Canals BaseSet.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Narrow Canals Bridges/SG Narrow Canals Bridges.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Wharves/SG Brick Canals Wharves.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Utilities/SG Brick Canals Utilities.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Paddleboats/SG Brick Canals Paddleboats.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Terraces/SG Brick Canals Terraces.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Overhangs/SG Brick Canals Overhangs.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Locks/SG Brick Canals Locks.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Gondola Landings/SG Brick Canals Gondola Landings.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Diagonals (Mattb325 and MGB204)/SG Brick Canals Diagonals (Mattb325 and MGB204).dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Culverts/SG Brick Canals Culverts.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Canal Parks/SG Brick Canals Canal Parks.dat
+      - BSC/@3Canals/SimGoober Sets/Irrigation Canals 2004#/SG Canal Transition/SG Irrigation Canals 2004 - SG Canal Transition.dat
+      - BSC/@3Canals/SimGoober Sets/Irrigation Canals 2004#/Ponds/SG Irrigation Canals 2004 - Ponds.dat
+      - BSC/@3Canals/SimGoober Sets/Irrigation Canals 2004#/Water Sources/SG Irrigation Canals 2004 - Water Sources.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@3Waterfalls and Extras/WaterLogs/BSC Newman Inc RPK WaterLogs.dat
+      - BSC/@3Canals/SimGoober Sets/Irrigation Canals 2004#/Channels/SG Irrigation Canals 2004 - Channels.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@3Waterfalls and Extras/Waterfall with Rapids/BSC Newman Inc RPK Waterfall with Rapids.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@3Waterfalls and Extras/Waterfall/BSC Newman Inc RPK Waterfall.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@2Transitions/BSC River to SG Canals/BSC Newman Inc RPK River to SG Canals Transition.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@2Transitions/BSC Calm Water to Rapids/BSC Newman Inc RPK Calm Water to Rapids Transition.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@2Transitions/BSC River to PEG Waters/BSC Newman Inc RPK River to PEG Waters Transition.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@1Base Sets/Rapids/BSC Newman Inc RPK BaseSet with Rapids.dat
+      - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@1Base Sets/Calm Water/BSC Newman Inc RPK BaseSet.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to SG Canals/Newman Inc ASC Canal to SG Canal Transition with path.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to RPK set/Newman Inc ASC Canal to RPK Transition.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to RPK set/Newman Inc ASC Canal to RPK Transition with path.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to Rivers/Newman Inc ASC Canal to River Transition with path.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to PEG Ponds and Sreams/Newman Inc ASC Canal to PEG River Transition.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to PEG Ponds and Sreams/Newman Inc ASC Canal to PEG Pond Transition.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to PEG Ponds and Sreams/Newman Inc ASC Canal to PEG Pond Transition with path.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Transitions/to Ditch set/Newman Inc ASC Canal to Ditch Transition.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/Without Path/Newman Inc ASC Canal BaseSet without path.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/With Path/Newman Inc ASC Canal BaseSet with path.dat
+      - BSC/@3Canals/Newman INC Sets/Agricultural Suburban Canals (ASC)#/Base Sets/Water Tiles/Newman Inc ASC Canal BaseSet WaterTiles.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals Bridges/SG Brick Canals Bridges.dat
+      - BSC/@3Canals/SimGoober Sets/Brick Canals#/SG Brick Canals BaseSet/SG Brick Canals BaseSet.dat
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/header.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_CanalSet01.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ACS_re1.jpg
-    lastModified: 2024-06-08T18:21:57-07:00
+    lastModified: 2024-08-07T16:31:27-07:00
     name: SC4D LEX Legacy - BSC Canals Collection
-    sha256: b92498d7b88c28d4c5c5d68309d44ffb36e3bb082dadb27ef2a6e67889cfcc8f
-    size: 65812885
+    sha256: 6bb8f2fa84eea5afdf84b6a795e63c36398cb3df9b5402d0318c4543902a4690
+    size: 65923205
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/header.jpg
-    timestamp: 2024-07-01T10:39:10.701Z
-    uncompressed: 67107674
+    timestamp: 2024-08-09T11:48:57.739Z
+    uncompressed: 67225502
     url: https://www.sc4evermore.com/index.php/downloads/download/14-park/277-sc4d-lex-legacy-bsc-canals-collection
-    version: "1"
+    version: "2"
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T13:48:06.421Z

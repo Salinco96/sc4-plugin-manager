@@ -95,7 +95,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -220,10 +272,10 @@ assets:
       - deadwoods
     category: 100
     dependencies:
-      - simtropolis/13153-bsc-mega-props-dae-vol02
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
     description: >-
       <body>
+                                  
 
 
 
@@ -233,6 +285,17 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+      							
       <p>
       	<span style="color:#c0392b;">The contents of this prop pack have been compiled into the </span><a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" rel=""><span style="color:#c0392b;"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props DAE Vol02</span></a><span style="color:#c0392b;"> (it also can be found in the </span><a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><span style="color:#c0392b;"><abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies V8</span></a><span style="color:#c0392b;"> and above packs). Clicking to the DOWNLOAD button will redirect you to the linked dependency pack. </span>
       </p>
@@ -275,7 +338,7 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_01_2005/a8143e52397f63e0e4f8b17f14b3b28c-DEDWD_ars_Series1_props_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/0019/a8143e52397f63e0e4f8b17f14b3b28c-DEDWD_ars_Series1_props_stexpic1.jpg
     lastModified: 2024-07-22T00:07:51Z
     name: DEDWD Aussie Retail Series Props Vol1
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2005/thumb-a8143e52397f63e0e4f8b17f14b3b28c-DEDWD_ars_Series1_props_stexpic1.jpg
@@ -286,10 +349,10 @@ assets:
       - deadwoods
     category: 100
     dependencies:
-      - simtropolis/13153-bsc-mega-props-dae-vol02
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
     description: >-
       <body>
+                                  
 
 
 
@@ -298,6 +361,16 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+      							
       <p style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">
       	<span style="color:#c0392b">The contents of this prop pack have been compiled into the<strong><span> </span></strong></span><strong><a href="https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/" rel="" style="background-color:transparent; color:#1f5e8d"><span style="color:#c0392b"><abbr style="border-bottom:none" title="BATT Squad Certification">BSC</abbr><span> </span>MEGA Props DAE Vol02</span></a></strong><span style="color:#c0392b"><strong><span> </span></strong>(it also can be found in the<span> </span></span><strong><a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow" style="background-color:transparent; color:#1f5e8d" target="_blank"><span style="color:#c0392b"><abbr style="border-bottom:none" title="BATT Squad Certification">BSC</abbr><span> </span>Common Dependencies V8</span></a></strong><span style="color:#c0392b"><span> </span>and above packs). Clicking to the DOWNLOAD button will redirect you to the linked dependency pack. </span>
       </p>
@@ -340,8 +413,8 @@ assets:
 
       						</body>
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_01_2005/5da5b1a0f50471612b5c7d05fc4213bd-DEDWD_ars_Series2_props_stexpic1.jpg
-      - https://www.simtropolis.com/objects/screens/monthly_01_2005/5da5b1a0f50471612b5c7d05fc4213bd-DEDWD_ars_Series2_props_stexpic2.jpg
+      - https://www.simtropolis.com/objects/screens/0011/5da5b1a0f50471612b5c7d05fc4213bd-DEDWD_ars_Series2_props_stexpic1.jpg
+      - https://www.simtropolis.com/objects/screens/0011/5da5b1a0f50471612b5c7d05fc4213bd-DEDWD_ars_Series2_props_stexpic2.jpg
     lastModified: 2024-07-22T00:10:02Z
     name: DEDWD Aussie Retail Series Props Vol2
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2005/thumb-5da5b1a0f50471612b5c7d05fc4213bd-DEDWD_ars_Series2_props_stexpic1.jpg
@@ -371,7 +444,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -667,12 +792,12 @@ assets:
       - deadwoods
     category: 100
     dependencies:
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - simtropolis/13168-dedwd-small-shops-1x1-set
       - simtropolis/13169-dedwd-small-shops-1x2-set
       - simtropolis/13396-dedwd-small-shops-flatroof-set
       - simtropolis/35790-sc4-cleanitol
-      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
-      - sc4evermore/18-bsc-cleanitol
     description: >-
       <body>
 
@@ -824,12 +949,12 @@ assets:
       - deadwoods
     category: 100
     dependencies:
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - simtropolis/13168-dedwd-small-shops-1x1-set
       - simtropolis/13169-dedwd-small-shops-1x2-set
       - simtropolis/13396-dedwd-small-shops-flatroof-set
       - simtropolis/35790-sc4-cleanitol
-      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
-      - sc4evermore/18-bsc-cleanitol
     description: >-
       <body>
 
@@ -1040,6 +1165,32 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1375,9 +1526,9 @@ assets:
       - deadwoods
     category: 100
     dependencies:
-      - simtropolis/35790-sc4-cleanitol
       - sc4evermore/18-bsc-cleanitol
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/35790-sc4-cleanitol
     description: >-
       <body>
 
@@ -1608,10 +1759,80 @@ assets:
     authors:
       - Sc4jeeks
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+      							
+      <p><span style="font-weight:bold;">Updated to fix conflict with other textures.</span></p>
+
+      <p> </p>
+
+      <p>
+
+      This is a Mega Pack. It includes Packs 1, 2, 3 and the new pack 4.</p>
+
+      <p> </p>
+
+      <p>
+
+      Those same-<span>ol</span>' parking lot textures in SC4 are getting pretty old,  aren't they? And putting <span>a lot</span> of them together to make a big parking lot usually doesn't show the
+      desired effect. Now you can make really nice, really big parking lots for your <span>sim</span> Super-Stores!</p>
+
+      <p> </p>
+
+      <p>
+       This adds several new base textures and overlays for making large, shopping-center-like parking lots. No lots are included, these are textures only.</p>
+      <p> </p>
+
+      <p>
+
+      <span style="font-weight:bold;">This pack includes Packs 1, 2, and 3, plus all new overlay textures exclusive to this pack. </span>These overlays can be "stacked" by pressing Ctrl+D before
+      plopping these into the lot editor.</p>
+
+      <p> </p>
+
+      <p>
+          You <span style="font-weight:bold;">may not </span>redistribute these files without special permission. However, you may list them as a dependency by linking to this download.</p>
+
+      						</body>
+    filename: Install_WalkingSnake_Textures_Vol01.zip
+    files:
+      - WS Textures.jpg
+      - WalkingSnake Textures Vol 01.dat
+      - Cleanitol_WalkingSnake_Textures_Vol_01.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0013/71b6f48b497460c7f597458760ee5630-parkingpack4.jpg
+      - https://www.simtropolis.com/objects/screens/0013/71b6f48b497460c7f597458760ee5630-parkingpack4a.jpg
     lastModified: 2007-09-19T17:18:09Z
     name: Shopping Center Parking Pack 4 and More
+    sha256: b069a9fcef66902cb0976bf2889cc79ea76b4ce9e915d39f570aa1a956ab11ed
+    size: 320882
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2007/thumb-71b6f48b497460c7f597458760ee5630-parkingpack4.jpg
+    timestamp: 2024-08-06T13:57:29.522Z
+    uncompressed: 327546
     url: https://community.simtropolis.com/files/file/15354-shopping-center-parking-pack-4-and-more/
+    version: "1.0"
   simtropolis/15356-wild-west-mega-pack-vol-1:
     authors:
       - onlyplace4
@@ -1652,7 +1873,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1708,7 +1981,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2295,7 +2620,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2424,10 +2801,86 @@ assets:
     authors:
       - RebaLynnTS
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>This is the second revision of my prop pack that will contain all of my fences for all future lots (Feel free to use them as you wish).</p>
+
+      <p>There are no dependencies, and they come with a self installer for windows users.</p>
+
+      <p>(There is also a zip with no installer for manual installation)</p>
+
+      <p>Mac users can use File Juicer.</p>
+
+      <p>Email me at <a href="mailto:rebeccalmcgee@charter.net" rel="">rebeccalmcgee@charter.net</a> if you have any problems.</p>
+
+      <p>NOTE: The read me file is online at <a href="http://RLMproductions.angelfire.com/RLMFenceProps.htm" rel="external nofollow">http://RLMproductions.angelfire.com/RLMFenceProps.htm</a></p>
+
+      						</body>
+    filename: RLM Fence Props.zip
+    files:
+      - ReadMe RLM Fence Props.txt
+      - Fence Props/ReadMe RLM Fence Props.txt
+      - RLM Props/RLM_Wood_TimedGates.dat
+      - RLM Props/RLM_Wood_Fence.dat
+      - RLM Props/RLM_SplitRail_TimedGates.dat
+      - RLM Props/RLM_SplitRail_Fence.dat
+      - RLM Props/RLM_Lattice_TimedGates.dat
+      - RLM Props/RLM_Lattice_Fence.dat
+      - RLM Props/RLM_CountryRail_TimedGates.dat
+      - RLM Props/RLM_CountryRail_Fence.dat
+      - RLM Props/RLM_Cinder_TimedGates.dat
+      - RLM Props/RLM_Cinder_Fence.dat
+      - RLM Props/RLM_Chain_Gates.dat
+      - RLM Props/RLM_Chain_Fence.dat
+      - RLM Props/RLM_Brick_TimedGates.dat
+      - RLM Props/RLM_Brick_Fence.dat
+      - RLM Props/RLM_Aluminum_TimedGates1.dat
+      - RLM Props/RLM_Aluminum_Fence1.dat
+      - Fence Props/RLM Props/RLM_Wood_TimedGates.dat
+      - Fence Props/RLM Props/RLM_Wood_Fence.dat
+      - Fence Props/RLM Props/RLM_SplitRail_TimedGates.dat
+      - Fence Props/RLM Props/RLM_SplitRail_Fence.dat
+      - Fence Props/RLM Props/RLM_Lattice_TimedGates.dat
+      - Fence Props/RLM Props/RLM_Lattice_Fence.dat
+      - Fence Props/RLM Props/RLM_CountryRail_TimedGates.dat
+      - Fence Props/RLM Props/RLM_CountryRail_Fence.dat
+      - Fence Props/RLM Props/RLM_Cinder_TimedGates.dat
+      - Fence Props/RLM Props/RLM_Cinder_Fence.dat
+      - Fence Props/RLM Props/RLM_Chain_Gates.dat
+      - Fence Props/RLM Props/RLM_Chain_Fence.dat
+      - Fence Props/RLM Props/RLM_Brick_TimedGates.dat
+      - Fence Props/RLM Props/RLM_Brick_Fence.dat
+      - Fence Props/RLM Props/RLM_Aluminum_TimedGates1.dat
+      - Fence Props/RLM Props/RLM_Aluminum_Fence1.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0014/7de579c300899e50ce42a4a4ec3f3e2a-Fences02.jpg
+      - https://www.simtropolis.com/objects/screens/0014/7de579c300899e50ce42a4a4ec3f3e2a-Fences01.jpg
     lastModified: 2008-03-16T18:05:55Z
     name: RLM Fence Props Revision 2
+    sha256: 17ff7e4c4154b691715c378e6bb4e7886d4296a6fb9b427a502f9693df14387b
+    size: 4096286
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2008/thumb-7de579c300899e50ce42a4a4ec3f3e2a-Fences02.jpg
+    timestamp: 2024-08-09T11:48:57.739Z
+    uncompressed: 4096020
     url: https://community.simtropolis.com/files/file/19536-rlm-fence-props-revision-2/
+    version: "1.0"
   simtropolis/19571-ps-textures:
     authors:
       - squidi
@@ -2548,7 +3001,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2666,7 +3171,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2730,7 +3287,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2854,10 +3463,59 @@ assets:
     authors:
       - SimFox
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>Good day to you all!</p>
+
+      <p> </p>
+
+      <p>Here is a pack of 7 trees in a form of both Props and Mayoyor Mode Ploppables.</p>
+
+      <p>Installation is extremelly simple - unpack the conten into your Plug-in Folder.</p>
+
+      <p> </p>
+
+      <p>Enjoy!</p>
+
+      <p> </p>
+
+      <p>PS</p>
+
+      <p>File had been updated on May 4th 9 AM CET to include missing prop exemplar for 2 models. </p>
+
+      <p> </p>
+
+      <p> </p>
+
+      <p> </p>
+
+      						</body>
+    filename: SF_TreePack21.zip
+    files:
+      - SF_TreePack2.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0026/e9fb36f5a103a762ac3afd1fdfaf2c07-Title1.jpg
+      - https://www.simtropolis.com/objects/screens/0026/e9fb36f5a103a762ac3afd1fdfaf2c07-Title2.jpg
     lastModified: 2009-05-04T02:19:52Z
     name: "SimFox TreePack #2"
+    sha256: f76c07f30c6c700b0b559f48ae4ea33f13472ba31d8e1fb55b6cc47d013fade2
+    size: 1047349
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2009/thumb-e9fb36f5a103a762ac3afd1fdfaf2c07-Title1.jpg
+    timestamp: 2024-08-13T13:48:06.421Z
+    uncompressed: 1228474
     url: https://community.simtropolis.com/files/file/21640-simfox-treepack-2/
+    version: "2"
   simtropolis/21755-mm3-essentials:
     authors:
       - MaxMan3
@@ -2890,7 +3548,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3109,8 +3819,8 @@ assets:
       - north country dude
     category: 100
     dependencies:
+      - simtropolis/31988-real-railway-rrw-reskin-3rd-party-lot-support
       - simtropolis/35790-sc4-cleanitol
-      - simtropolis/31988-ncd-bsc-realrailway-texture-pack-v2
     description: >-
       <body>
 
@@ -3341,10 +4051,30 @@ assets:
     authors:
       - paeng
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<p>This is a set of overlay textures (for pathways) and is a dependency for many of my lots and sets.<br><br>The overlays are for paths of all kinds - narrow and wide paths, straight, curve, tee, cross, diagonal, wide-to-narrow-transitions etc.<br><br>This <span style="color:#A0522D;"><strong>updated</strong></span> version maintains all textures from the previous version and now includes a number of additional matching overlays for more intricate path-variations. Plus some... ;-)<br><br><br>All you need to do is to <strong>remove the previous file</strong> -<br><span style="color:#A0522D;">Paeng_Textures_v103.dat</span> (old)<br><br><strong>and replace it</strong> with the one from this upload -<br><span style="color:#008000;"><strong>Paeng_TexturePack_v104.dat</strong></span> (current)<br><br><br><br>No further action required :-)<br><br><br>Lot designers are free to utilize these textures, but the DAT file is not to be included with any download package. Please link to this upload instead.<br><br><br><strong>NOTICE: This pack does not contain any lots!</strong><br><br><br><br>To install:<br>Place the DAT file in your \My Documents\SimCity 4\Plugins directory.<br><br>To uninstall:<br>Delete it from your \My Documents\SimCity 4\Plugins directory.</p>
+      						</body>
+    filename: paeng_TexturePack_v104.zip
+    files:
+      - paeng_TexturePack_v104/paeng_TexturePack_v104.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_12_2013/8b6d75ee83126d9dbfcf29987d30e3f6-texture-splash.jpg
     lastModified: 2013-12-16T06:47:02Z
     name: Paeng Textures Vol104
+    sha256: 731e897af8ec76a8cfc8a26b62567030a5632ea683fc5556e2a907ca7553cbd5
+    size: 533482
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2013/thumb-8b6d75ee83126d9dbfcf29987d30e3f6-texture-splash.jpg
+    timestamp: 2024-08-06T05:36:11.524Z
+    uncompressed: 820597
     url: https://community.simtropolis.com/files/file/22823-paeng-textures-vol104/
+    version: "1.04"
   simtropolis/22916-nybt-essentials:
     authors:
       - Gwail
@@ -3361,7 +4091,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3645,7 +4427,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3796,7 +4630,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4026,6 +4912,32 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
       <p><span style="font-family:'Trebuchet MS';">This package contains props, textures and custom queries for use in upcoming SimCity Aviation Group (</span><abbr title="SimCity Airport Group"><span
       style="font-family:'Trebuchet MS';">SCAG</span></abbr><span style="font-family:'Trebuchet MS';">) releases. </span></p>
@@ -4225,7 +5137,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4387,7 +5351,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5025,10 +6041,529 @@ assets:
     authors:
       - Bombardiere
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>UPDATE 11.3.2016* New Props</strong>
+      </p>
+
+
+      <p>
+      	EDIT: 1.11.2014. Attention. I keep doing mistakes. If now the missing prop the K6 Type PhoneBox Prop is included. Please again download the new file.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	This is a prop pack for Victorian and early 20th century British style street furniture. These props are intended to period use, but time scale is long. The props are based on real life examples and can be seen on British streets even today. Although many, such as village pump or cattle trough, are left as ornate and do not carry anymore the original function.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	I have made and included 23 props and 4 functional lots.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span>1 x Police box (Prop &amp; Functional police kiosk)</span>
+      </p>
+
+
+      <p>
+      	<span>1 x Village Pump (Prop &amp; Functional water tower)</span>
+      </p>
+
+
+      <p>
+      	<span>2 x Phone Boxes (K1 and K6 type)</span>
+      </p>
+
+
+      <p>
+      	<span>1 x Drinking Fountain</span>
+      </p>
+
+
+      <p>
+      	<span>6 x Mail Boxes</span>
+      </p>
+
+
+      <p>
+      	<span>2 x Bollards</span>
+      </p>
+
+
+      <p>
+      	<span>2 x Benches</span>
+      </p>
+
+
+      <p>
+      	<span>2 x Litter Bins</span>
+      </p>
+
+
+      <p>
+      	<span>2 x Cattle Troughs</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	As for a bonus, three Irish colour variations.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>*Update March 2016</strong>
+      </p>
+
+
+      <p>
+      	8 x Newspaper Headlines Boards
+      </p>
+
+
+      <p>
+      	4 x Pub Sign Sandwhich Boards.
+      </p>
+
+
+      <p>
+      	4 x Pub Benches.
+      </p>
+
+
+      <p>
+      	(These are intended as props for my forthcoming Clerkenwell Close building pack.)
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Items are grouped into separate folders and unwanted can be deleted. For example, the functional lots can be deleted as these are not dependencies.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Functional Lots
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Police Kiosk:
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Plop Cost 60
+      </p>
+
+
+      <p>
+      	Radius 240
+      </p>
+
+
+      <p>
+      	Monthly Cost 30
+      </p>
+
+
+      <p>
+      	Total Dispatches 0
+      </p>
+
+
+      <p>
+      	Jail Capacity 0
+      </p>
+
+
+      <p>
+      	Department Police Department
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Water Tower
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Plop Cost 150
+      </p>
+
+
+      <p>
+      	Capacity 2600 cu
+      </p>
+
+
+      <p>
+      	Monthly Cost 50
+      </p>
+
+
+      <p>
+      	Department Water Department
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Phone box Square High Wealth
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Plop Cost 60
+      </p>
+
+
+      <p>
+      	Park Effect 40 / 15
+      </p>
+
+
+      <p>
+      	Landmark Effect 40 / 15
+      </p>
+
+
+      <p>
+      	Monthly Cost 12
+      </p>
+
+
+      <p>
+      	Demand Satisfied R$ CAP 1000, R$$ CAP 1000 R$$$ CAP 1000
+      </p>
+
+
+      <p>
+      	Pollution Air -1, Water 0, Garbage 0
+      </p>
+
+
+      <p>
+      	Department Park and Rec
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Drinking Fountain Square Medium Wealth
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Plop Cost 40
+      </p>
+
+
+      <p>
+      	Park Effect 50 / 15
+      </p>
+
+
+      <p>
+      	Landmark Effect 20 / 15
+      </p>
+
+
+      <p>
+      	Monthly Cost 8
+      </p>
+
+
+      <p>
+      	Demand Satisfied R$ CAP 500, R$$ CAP 500, R$$$ CAP 500
+      </p>
+
+
+      <p>
+      	Pollution Air -2, Water -1, Garbage 0
+      </p>
+
+
+      <p>
+      	Department Park and Rec
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	NO DEPENDENCIES
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	(However the props included in the pack are needed for the functional lots)
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	This is my first upload, so I appreciate feedback. Just in case I have done something silly. I have a Bat thread, so please visit and say hello.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/topic/64330-bombardieres-london-english-bats/page-2">https://community.simtropolis.com/topic/64330-bombardieres-london-english-bats/page-2</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Enjoy
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: British Boxes.zip
+    files:
+      - British Boxes/UpdateMar16.jpg
+      - British Boxes/Read Me.rtf
+      - British Boxes/British Boxes.jpg
+      - British Boxes/British Boxes Lots.jpg
+      - British Boxes/Village Pump/VillageBump-0x5ad0e817_0xe18f70f3_0x30000.SC4Model
+      - British Boxes/Village Pump/PLOP_1x1_VillageBump_81486136.SC4Lot
+      - British Boxes/Village Pump/Bom_VillageBump-0x6534284a-0xbee9ef48-0x11c04ee1.SC4Desc
+      - British Boxes/UpdateMar2016/Family 0x5F85E716_Bom_NewsSigns-0x05342861-0x67bddf0c-0x6f85e716.SC4Desc
+      - British Boxes/UpdateMar2016/Family 0x5F85E715_Bom_PubBench-0x05342861-0x67bddf0c-0x6f85e715.SC4Desc
+      - British Boxes/UpdateMar2016/Family 0x5F85E714_Bom_PubSigns-0x05342861-0x67bddf0c-0x6f85e714.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubSign4-0x6534284a-0x543d328f-0x5459f18d.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubSign4-0x5ad0e817_0xe3d3996a_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_PubSign3-0x6534284a-0x543d328f-0x3459f17f.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubSign3-0x5ad0e817_0x83d39900_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_PubSign2-0x6534284a-0x543d328f-0x5459f174.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubSign2-0x5ad0e817_0xc3d395e9_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_PubSign1-0x6534284a-0x543d328f-0xb459f16a.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubSign1-0x5ad0e817_0x63d39840_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_PubBenchRed-0x6534284a-0x543d328f-0x1459f160.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubBenchRed-0x5ad0e817_0xc3d3a801_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_PubBenchLtBrown-0x6534284a-0x543d328f-0x3459f158.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubBenchLtBrown-0x5ad0e817_0x63d3a796_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_PubBenchBrown-0x6534284a-0x543d328f-0xd459f14e.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubBenchBrown-0x5ad0e817_0xe3d3a285_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_PubBenchBlack-0x6534284a-0x543d328f-0x1459f141.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_PubBenchBlack-0x5ad0e817_0x3db860b_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_NewsSignJC1-0x6534284a-0x543d328f-0x7459f0fd.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_NewsSignJC1-0x5ad0e817_0xc3d39c5d_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_NewsSignHG1-0x6534284a-0x543d328f-0x1459f0f3.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_NewsSignHG1-0x5ad0e817_0x23d39c00_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_NewsSignFT1-0x6534284a-0x543d328f-0x7459f0eb.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_NewsSignFT1-0x5ad0e817_0x23d39bb2_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_NewsSignES4-0x6534284a-0x543d328f-0x3459f0e1.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_NewsSignES4-0x5ad0e817_0xe3d39b56_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_NewsSignES3-0x6534284a-0x543d328f-0x1459f0d5.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_NewsSignES3-0x5ad0e817_0xe3d39b06_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_NewsSignES2-0x6534284a-0x543d328f-0x1459f0cb.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_NewsSignES2-0x5ad0e817_0xa3d39ab1_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_NewsSignES1-0x6534284a-0x543d328f-0xd459f0c3.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_NewsSignES1-0x5ad0e817_0xe3d39a65_0x30000.SC4Model
+      - British Boxes/UpdateMar2016/Bom_NewsSignDN1-0x6534284a-0x543d328f-0xd459f0bb.SC4Desc
+      - British Boxes/UpdateMar2016/Bom_NewsSignDN1-0x5ad0e817_0x83d39a13_0x30000.SC4Model
+      - British Boxes/Props/Family 0x5F85E704_Bom_LitterBin-0x05342861-0x67bddf0c-0x6f85e704.SC4Desc
+      - British Boxes/Props/Family 0x5F85E703_Bom_Trough-0x05342861-0x67bddf0c-0x6f85e703.SC4Desc
+      - British Boxes/Props/Family 0x5F85E702_Bom_Bench-0x05342861-0x67bddf0c-0x6f85e702.SC4Desc
+      - British Boxes/Props/Family 0x5F85E701_Bom_Kiosks-0x05342861-0x67bddf0c-0x6f85e701.SC4Desc
+      - British Boxes/Props/Family 0x5F85E700_Bom_MailPillar-0x05342861-0x67bddf0c-0x6f85e700.SC4Desc
+      - British Boxes/Props/Drinking Fountain-0x5ad0e817_0x6145ac2a_0x30000.SC4Model
+      - British Boxes/Props/Bom_Victorian Bench_Black-0x6534284a-0xbee9ef48-0x31c583f9.SC4Desc
+      - British Boxes/Props/Bom_Victorian Bench_Black-0x5ad0e817_0x4146e954_0x30000.SC4Model
+      - British Boxes/Props/Bom_Victorian Bench-0x6534284a-0xbee9ef48-0x71c43658.SC4Desc
+      - British Boxes/Props/Bom_Victorian Bench-0x5ad0e817_0x6145a59d_0x30000.SC4Model
+      - British Boxes/Props/Bom_PillarBox_Small-0x6534284a-0xbee9ef48-0x31c2febf.SC4Desc
+      - British Boxes/Props/Bom_PillarBox_Small-0x5ad0e817_0xa1446246_0x30000.SC4Model
+      - British Boxes/Props/Bom_PillarBox_Blue-0x6534284a-0xbee9ef48-0x31c18a49.SC4Desc
+      - British Boxes/Props/Bom_PillarBox_Blue-0x5ad0e817_0x142f835_0x30000.SC4Model
+      - British Boxes/Props/Bom_PillarBoxOval-0x6534284a-0xbee9ef48-0x91c18a55.SC4Desc
+      - British Boxes/Props/Bom_PillarBoxOval-0x5ad0e817_0x8142f889_0x30000.SC4Model
+      - British Boxes/Props/Bom_PillarBox-0x6534284a-0xbee9ef48-0x71c18a3c.SC4Desc
+      - British Boxes/Props/Bom_PillarBox-0x5ad0e817_0x2142f865_0x30000.SC4Model
+      - British Boxes/Props/Bom_PenfoldBox_Green-0x6534284a-0xbee9ef48-0x91c43ee4.SC4Desc
+      - British Boxes/Props/Bom_PenfoldBox_Green-0x5ad0e817_0x6145aeb0_0x30000.SC4Model
+      - British Boxes/Props/Bom_PenfoldBox-0x6534284a-0xbee9ef48-0x11c18a25.SC4Desc
+      - British Boxes/Props/Bom_PenfoldBox-0x5ad0e817_0xe142f983_0x30000.SC4Model
+      - British Boxes/Props/Bom_LitterBin_RoundTop-0x6534284a-0xbee9ef48-0x71befe3b.SC4Desc
+      - British Boxes/Props/Bom_LitterBin_RoundTop-0x5ad0e817_0xc167f49f_0x30000.SC4Model
+      - British Boxes/Props/Bom_LitterBin_Round-0x6534284a-0xbee9ef48-0xb1befe34.SC4Desc
+      - British Boxes/Props/Bom_LitterBin_Round-0x5ad0e817_0x167f4de_0x30000.SC4Model
+      - British Boxes/Props/Bom_K6box-0x6534284a-0xbee9ef48-0x91b70971.SC4Desc
+      - British Boxes/Props/Bom_K6box-0x5ad0e817_0xc12f650f_0x30000.SC4Model
+      - British Boxes/Props/Bom_K1box_Green-0x6534284a-0xbee9ef48-0x31c442c0.SC4Desc
+      - British Boxes/Props/Bom_K1box_Green-0x5ad0e817_0x2145b27f_0x30000.SC4Model
+      - British Boxes/Props/Bom_K1box-0x6534284a-0xbee9ef48-0x31c2feb6.SC4Desc
+      - British Boxes/Props/Bom_K1box-0x5ad0e817_0xe1446e61_0x30000.SC4Model
+      - British Boxes/Props/Bom_Drinking Fountain-0x6534284a-0xbee9ef48-0x11c43d04.SC4Desc
+      - British Boxes/Props/Bom_CattleTrough_Ver-0x6534284a-0xbee9ef48-0x31c58409.SC4Desc
+      - British Boxes/Props/Bom_CattleTrough_Ver-0x5ad0e817_0x6146f0a2_0x30000.SC4Model
+      - British Boxes/Props/Bom_CattleTrough-0x6534284a-0xbee9ef48-0xb1c58414.SC4Desc
+      - British Boxes/Props/Bom_CattleTrough-0x5ad0e817_0x4146eeee_0x30000.SC4Model
+      - British Boxes/Props/Bom_Bollard_ver-0x6534284a-0xbee9ef48-0x11c5841d.SC4Desc
+      - British Boxes/Props/Bom_Bollard_ver-0x5ad0e817_0x2146f37b_0x30000.SC4Model
+      - British Boxes/Props/Bom_Bollard-0x6534284a-0xbee9ef48-0xd1c05975.SC4Desc
+      - British Boxes/Props/Bom_Bollard-0x5ad0e817_0xa18f9154_0x30000.SC4Model
+      - British Boxes/Police Box/Police Box-0x5ad0e817_0xc142f7d3_0x30000.SC4Model
+      - British Boxes/Police Box/PLOP_1x1_Police Box_c148613f.SC4Lot
+      - British Boxes/Police Box/Bom_PoliceBox-0x6534284a-0xbee9ef48-0x91c189dc.SC4Desc
+      - British Boxes/Phone Box Square/PLOP_1x1_Phone Box Square_a14c622a.SC4Lot
+      - British Boxes/Irish/Bom_Irish_PillarBox-0x6534284a-0xbee9ef48-0x71c58a84.SC4Desc
+      - British Boxes/Irish/Bom_Irish_PillarBox-0x5ad0e817_0xc146fa44_0x30000.SC4Model
+      - British Boxes/Irish/Bom_Irish_K6box-0x6534284a-0xbee9ef48-0x71c58994.SC4Desc
+      - British Boxes/Irish/Bom_Irish_K6box-0x5ad0e817_0x2146f741_0x30000.SC4Model
+      - British Boxes/Irish/Bom_Irish_K1box-0x6534284a-0xbee9ef48-0xd1c5899b.SC4Desc
+      - British Boxes/Irish/Bom_Irish_K1box-0x5ad0e817_0x146f932_0x30000.SC4Model
+      - British Boxes/Drinking Fountain Square/PLOP_1x1_Drinking Fountain Square_814c6218.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_11_2014/4ddc83f310f793e089425bd251db4b32-british-boxes.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_11_2014/c15084d2e0d19f60a763518b96b55eb3-british-boxes-lots.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_03/UpdateMar16.jpg.2a211247faa0c967aafc01bf98347826.jpg
     lastModified: 2016-03-11T10:57:21Z
     name: British Boxes
+    sha256: 94a1fccee54c8f3e9ae9a2ae6594d244437a1d5417ebf4820806bafb65d54c88
+    size: 740603
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_03/56e2a3b006735_BritishBoxes.thumb.jpg.bca9b5982b95e9c4b2479892ea5c4e15.jpg
+    timestamp: 2024-08-09T11:48:57.739Z
+    uncompressed: 1136909
     url: https://community.simtropolis.com/files/file/29965-british-boxes/
+    version: "1.0"
   simtropolis/3000-tank-props:
     authors:
       - r3b00t
@@ -5103,7 +6638,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5348,7 +6935,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5588,7 +7227,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6071,7 +7762,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6325,7 +8068,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6374,7 +8169,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6562,16 +8409,15 @@ assets:
       - Eggman121
     category: 100
     dependencies:
-      - simtropolis/35790-sc4-cleanitol
-      - simtropolis/15976-rail-yard-and-spur-textures-mega-pack-1
-      - simtropolis/22325-ncd-railyard-texture-mega-pack-vol01-v3
+      - sc4evermore/11-sc4d-lex-legacy-nob-dependencies-pack
+      - sc4evermore/142-aptx-ultra-prop-pack
+      - sc4evermore/2-network-addon-mod
+      - sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - simtropolis/20966-peg-mtp-super-pack
       - simtropolis/33626-wmp-mega-textures-v102
       - simtropolis/35353-pegasus-cdk3-collection
-      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
-      - sc4evermore/142-aptx-ultra-prop-pack
-      - sc4evermore/11-sc4d-lex-legacy-nob-dependencies-pack
-      - sc4evermore/2-network-addon-mod
+      - simtropolis/35790-sc4-cleanitol
     description: >-
       <body>
                                   
@@ -6583,7 +8429,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6877,10 +8775,72 @@ assets:
     authors:
       - Sciurus
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	Hello everybody !<br>
+      	<br>
+      	Here it is... the waited S54 PropPack Vol.1 from the KSTeam. This propack includes many props I use in my own LOTs and Krasner use too. It'll be very usefull to make your LOTs more frenchy or just european... this download includes a file .dat which groups prop families from Girafe vehicules. So the following sentence is very important !
+      </p>
+
+
+      <p>
+      	<span style="color:#e74c3c;"><span style="font-size:16px;"><strong>THIS DEPENDENCY HAS GOT ANOTHER DEPENDENCY !!!!</strong></span></span>
+      </p>
+
+
+      <p>
+      	<span>Make sure that you have these following files BEFORE downloading this one :</span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2821" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP girafe carpack vol. 1 &amp; 2</a></span>
+      	</li>
+      	<li>
+      		<span><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2860" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP girafe carpack vol. 3</a></span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	Thank you for reading and enjoy this prop pack. Next uploads will come in the next days. Stay tuned..
+      </p>
+
+
+      <p>
+      	______________________________________________
+      </p>
+
+
+      <p>
+      	<em>Sciurus from KSTeam</em>
+      </p>
+
+      						</body>
+    filename: S54 - ProPack_Feb18.zip
+    files:
+      - S54 - PropPack Vol01.dat
+      - S54 - Girafe Vehicules.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/IMGS54PropPack.jpg.e2884b0416e0e82cb2522c9553093dc9.jpg
     lastModified: 2018-02-26T19:14:54Z
     name: S54 PropPack Vol.1
+    sha256: 9c18d28bcf13d5b76e61de443c8e403241bf0be12b04c037975acac0f0e6db8a
+    size: 493694
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2018_02/IMGS54PropPack.thumb.jpg.7c165e3e02550d09c39b0a4d3b6216f8.jpg
+    timestamp: 2024-08-09T12:18:09.417Z
+    uncompressed: 1084792
     url: https://community.simtropolis.com/files/file/32149-s54-proppack-vol1/
+    version: 1.1.0
   simtropolis/32178-modern-hd-car-props-incl-mmp:
     authors:
       - AndisArt
@@ -6937,7 +8897,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7845,6 +9857,32 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
       <div style="text-align:justify;">
       	The SNT is a project that aims to create overlay textures that can then be used in the Lot Editor. The textures imitate as much as possible the road markings that can be found in Switzerland and the rest of Europe, which is why there are two different colors for pedestrian crossings in the textures: yellow for Switzerland and white for Europe. The aim of the SNT is ultimately to cover all road networks, be they those of Maxis or <abbr title="Network Addon Mod">NAM</abbr>, except the Maxis highway and <abbr title="Network Addon Mod">NAM</abbr> <abbr title="RealHighway">RHW</abbr>.
@@ -8095,9 +10133,7 @@ assets:
     dependencies: []
     description: "<body>
 
-      \                           \
-
-      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+      \                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
       \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
       style=\"\" width=\"34\" height=\"53\">
@@ -10311,11 +12347,8 @@ assets:
       - pclark06
     category: 100
     dependencies:
-      - simtropolis/32921-pc-hd-car-props
-      - simtropolis/32879-pc-car-prop-pack
-      - simtropolis/32660-pc-prop-pack-vol-1
-      - simtropolis/32732-pc-prop-pack-2
       - simtropolis/32832-pc-towering-sign-set-1
+      - simtropolis/32952-pc-mega-props-vol-1
     description: >-
       <body>
                                   
@@ -10327,7 +12360,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12052,7 +14137,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12158,7 +14295,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12224,7 +14413,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12309,7 +14550,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12393,7 +14686,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12492,7 +14837,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13554,10 +15951,47 @@ assets:
     authors:
       - Oidaas
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <p>
+      	This is a prop pack containing several buildings I've made over the years for you to use as you wish.
+      </p>
+
+
+      <p>
+      	Contains several houses, from 1700s to 1930 and outbuildings and fences.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: ESA props vol 1.dat
+    files:
+      - ESA props vol 1.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecaa3766b15d_esaproppack.png.cc025a3137f647034b53ec4557484202.png
     lastModified: 2021-05-05T03:05:17Z
     name: ESA Proppack
+    sha256: 2928a95d3e75dabadabe1cdc4bbe2efafa72af0437092cafd25f6d70c84b2a78
+    size: 5787245
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecaa53a41fc4_esaproppack.thumb.png.9e9e906371d0f6945d5498c0853db39c.png
+    timestamp: 2024-08-13T13:48:06.421Z
     url: https://community.simtropolis.com/files/file/33619-esa-proppack/
+    version: 1.0.2
   simtropolis/33635-scoty-mp-textures:
     authors:
       - hugues aroux
@@ -13579,8 +16013,8 @@ assets:
       - "11241036"
     category: 100
     dependencies:
-      - simtropolis/31351-modular-plaza-system-mps
       - simtropolis/28975-traffic-blocker-set
+      - simtropolis/31351-modular-plaza-system-mps
     description: >-
       <body>
                                   
@@ -13592,7 +16026,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13796,7 +16282,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13917,7 +16455,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15247,10 +17837,158 @@ assets:
     authors:
       - davide1983it
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	Here some prop, from sketchup forum i converted some item into SimCity 
+      </p>
+
+
+      <p>
+      	American car
+      </p>
+
+
+      <p>
+      	1 patio
+      </p>
+
+
+      <p>
+      	garden forniture as deck, table, umbrella, driveway (3 style), plants
+      </p>
+
+
+      <p>
+      	3 different swimming pool
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: outdoor v1.rar
+    files:
+      - outdoor v1/Thumbs.db
+      - outdoor v1/outdoor set (2).jpg
+      - outdoor v1/outdoor set (1).jpg
+      - outdoor v1/Davide1983it - trash bin park.SC4Desc
+      - outdoor v1/Davide1983it - trash bin park..SC4Model
+      - outdoor v1/Davide1983it - trash bin big.SC4Model
+      - outdoor v1/davide1983it - trash bin 3set.SC4Model
+      - outdoor v1/davide1983it - trash bin 3set.SC4Desc
+      - outdoor v1/davide1983it - table v1.SC4Model
+      - outdoor v1/davide1983it - table v1.SC4Desc
+      - outdoor v1/Davide1983it - Table Umbrella1.SC4Model
+      - outdoor v1/Davide1983it - Table Umbrella1.SC4Desc
+      - outdoor v1/Davide1983it - swimmingpool3.SC4Model
+      - outdoor v1/Davide1983it - swimmingpool3.SC4Desc
+      - outdoor v1/Davide1983it - Swimmingpool2.SC4Model
+      - outdoor v1/Davide1983it - Swimmingpool2.SC4Desc
+      - outdoor v1/Davide1983it - swimmingpool1.SC4Model
+      - outdoor v1/Davide1983it - Swimmingpool1.SC4Desc
+      - outdoor v1/Davide1983it - sofa-umbrella2.SC4Model
+      - outdoor v1/Davide1983it - sofa-umbrella2.SC4Desc
+      - outdoor v1/Davide1983it - sofa-umbrella1.SC4Model
+      - outdoor v1/Davide1983it - sofa-umbrella1.SC4Desc
+      - outdoor v1/Davide1983it - pool-shower.SC4Model
+      - outdoor v1/Davide1983it - pool-shower.SC4Desc
+      - outdoor v1/Davide1983it - Playground 2x2 V5.SC4Lot
+      - outdoor v1/Davide1983it - Playground 2x2 V4.SC4Lot
+      - outdoor v1/Davide1983it - Playground 2x2 V3.SC4Lot
+      - outdoor v1/Davide1983it - Playground 2x2 V2.SC4Lot
+      - outdoor v1/Davide1983it - Playground 2x2 V1.SC4Lot
+      - outdoor v1/Davide1983it - Planter5.SC4Model
+      - outdoor v1/Davide1983it - Planter5.SC4Desc
+      - outdoor v1/Davide1983it - Planter4.SC4Model
+      - outdoor v1/Davide1983it - Planter4.SC4Desc
+      - outdoor v1/Davide1983it - Planter3.SC4Model
+      - outdoor v1/Davide1983it - Planter3.SC4Desc
+      - outdoor v1/Davide1983it - Planter2.SC4Model
+      - outdoor v1/Davide1983it - Planter2.SC4Desc
+      - outdoor v1/Davide1983it - Planter1.SC4Model
+      - outdoor v1/Davide1983it - Planter1.SC4Desc
+      - outdoor v1/Davide1983it - Patio1.SC4Model
+      - outdoor v1/Davide1983it - Patio1.SC4Desc
+      - outdoor v1/Davide1983it - ford - mercury grand marquis 1980.SC4Model
+      - outdoor v1/Davide1983it - ford - mercury grand marquis 1980.SC4Desc
+      - outdoor v1/davide1983it - driveway - ortho v3.SC4Model
+      - outdoor v1/davide1983it - driveway - ortho v3.SC4Desc
+      - outdoor v1/davide1983it - driveway - ortho v2.SC4Model
+      - outdoor v1/davide1983it - driveway - ortho v2.SC4Desc
+      - outdoor v1/davide1983it - driveway - ortho v1.SC4Model
+      - outdoor v1/davide1983it - driveway - ortho v1.SC4Desc
+      - outdoor v1/davide1983it - driveway - curve v3.SC4Model
+      - outdoor v1/davide1983it - driveway - curve v3.SC4Desc
+      - outdoor v1/davide1983it - driveway - curve v2.SC4Model
+      - outdoor v1/davide1983it - driveway - curve v2.SC4Desc
+      - outdoor v1/davide1983it - driveway - curve v1.SC4Model
+      - outdoor v1/davide1983it - driveway - curve v1.SC4Desc
+      - outdoor v1/davide1983it - driveway - cross 4 v3.SC4Model
+      - outdoor v1/davide1983it - driveway - cross 4 v3.SC4Desc
+      - outdoor v1/davide1983it - driveway - cross 4 v2.SC4Model
+      - outdoor v1/davide1983it - driveway - cross 4 v2.SC4Desc
+      - outdoor v1/davide1983it - driveway - cross 4 v1.SC4Model
+      - outdoor v1/davide1983it - driveway - cross 4 v1.SC4Desc
+      - outdoor v1/davide1983it - driveway - cross 3 v3.SC4Model
+      - outdoor v1/davide1983it - driveway - cross 3 v3.SC4Desc
+      - outdoor v1/davide1983it - driveway - cross 3 v2.SC4Model
+      - outdoor v1/davide1983it - driveway - cross 3 v2.SC4Desc
+      - outdoor v1/davide1983it - driveway - cross 3 v1.SC4Model
+      - outdoor v1/davide1983it - driveway - cross 3 v1.SC4Desc
+      - outdoor v1/Davide1983it - Drink Fountain.SC4Model
+      - outdoor v1/Davide1983it - Drink Fountain.SC4Desc
+      - outdoor v1/Davide1983it - deckchair3.SC4Model
+      - outdoor v1/Davide1983it - deckchair3.SC4Desc
+      - outdoor v1/Davide1983it - deckchair2.SC4Model
+      - outdoor v1/Davide1983it - deckchair2.SC4Desc
+      - outdoor v1/Davide1983it - deckchair1.SC4Model
+      - outdoor v1/Davide1983it - deckchair1.SC4Desc
+      - outdoor v1/Davide1983it - deckchair oscar neimeyer.SC4Model
+      - outdoor v1/Davide1983it - deckchair oscar neimeyer.SC4Desc
+      - outdoor v1/davide1983it - chevrolet-convert-1959.SC4Model
+      - outdoor v1/davide1983it - chevrolet-convert-1959.SC4Desc
+      - outdoor v1/davide1983it - chevrolet-belair-1957.SC4Model
+      - outdoor v1/davide1983it - chevrolet-belair-1957.SC4Desc
+      - outdoor v1/Davide1983it - chair v1.SC4Model
+      - outdoor v1/Davide1983it - chair v1.SC4Desc
+      - outdoor v1/Davide1983it - bench v2.SC4Model
+      - outdoor v1/Davide1983it - bench v2.SC4Desc
+      - outdoor v1/Davide1983it - bench v1.SC4Model
+      - outdoor v1/Davide1983it - bench v1.SC4Desc
+      - outdoor v1/Davide1983it - Bbq1.SC4Model
+      - outdoor v1/Davide1983it - Bbq1.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60eb60b32abec_outdoorset(1).jpg.a2e1cd05738a05a2ac7dd3975a129784.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60eb60b876c25_outdoorset(2).jpg.7bacebed70a0438a2f90420b98615c0d.jpg
     lastModified: 2021-08-09T13:14:38Z
     name: Outdoor Set V1
+    sha256: a1c5f881f2dc86460cbe39ad74d76de55f3053929634a43d7f85c455a4e8e7ea
+    size: 1731925
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_07/60eb61357bb91_outdoorset(1).thumb.jpg.d472832f29791a2132b45e9ca7a3ef1f.jpg
+    timestamp: 2024-08-09T11:48:57.739Z
+    uncompressed: 2089431
     url: https://community.simtropolis.com/files/file/34586-outdoor-set-v1/
+    version: 2.0.0
   simtropolis/34610-space-1999-the-eagle:
     authors:
       - davide1983it
@@ -15347,7 +18085,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16841,15 +19631,7 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
-
-
-
-
       							
-
-
-
-
 
       							
       <p>
@@ -16877,18 +19659,18 @@ assets:
       src="https://www.simtropolis.com/objects/attachments/monthly_2021_12/61af313ab3327_Gllivarefardigperspektiv.jpg.f4912bc66ca0382d36f0f1ba6f40dcab.jpg" class="ipsImage ipsImage_thumbnailed"
       alt="Gällivare fardig perspektiv.jpg"></a></p>
       						</body>
-    filename: ESA Railpack Vol 1.zip
+    filename: ESA Railpack vol 1 update.rar
     files:
-      - ESA Railpack Vol 1.dat
+      - ESA Railpack vol 1 update/ESA/ESA Railpack vol 1 Update/ESA Railpack Vol 1 update.dat
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2021_12/61af305740495_ESARailpackpic.jpg.183a6ad28f45823897938480a60ad4a0.jpg
-    lastModified: 2021-12-07T10:03:25Z
+    lastModified: 2024-08-10T10:20:21Z
     name: ESA Rail prop pack
-    sha256: 4d02f10f095c6dbb1de8000119a4cf4a62674eef7715394fa7d11f2a0eb137c2
-    size: 13272258
+    sha256: b36b7850a2b807fa9a52f2ad3777c038be5d322307a784c19d33056362d10a9d
+    size: 11058404
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_12/61af316ca79d2_ESARailpackpic.thumb.jpg.9c5fb7e1dc9b836165dfe2403ae134cb.jpg
-    timestamp: 2024-07-24T12:13:33.510Z
-    uncompressed: 18313637
+    timestamp: 2024-08-13T14:26:32.086Z
+    uncompressed: 18101022
     url: https://community.simtropolis.com/files/file/34777-esa-rail-prop-pack/
     version: 1.0.0
   simtropolis/34787-pc-mega-props-3:
@@ -16907,7 +19689,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17844,7 +20678,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20813,8 +23699,8 @@ assets:
       - pclark06
     category: 100
     dependencies:
-      - simtropolis/35470-pre-2000-car-props-pack
       - simtropolis/34163-agc-automobile-dlc
+      - simtropolis/35470-pre-2000-car-props-pack
     description: >-
       <body>
                                   
@@ -20826,7 +23712,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30237,7 +33175,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30383,6 +33373,123 @@ assets:
     uncompressed: 3164769
     url: https://community.simtropolis.com/files/file/35753-jes_resourcepack_vol27-v3/
     version: 1.0.3
+  simtropolis/35753-jes_resourcepack_vol27-v4:
+    authors:
+      - jestarr
+    category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	This is a consolidation of my latest SD props &amp; newer textures to keep your plugins file neat and tidy. I'll be adding to this over time. There's a cleanitol file included.
+      </p>
+
+
+      <p>
+      	<br>
+      	Installation:<br>
+      	Unzip the file into your plugins folder. The documentation file should be moved or deleted.
+      </p>
+
+
+      <p>
+      	<br>
+      	Files to be removed:
+      </p>
+
+
+      <p>
+      	    •BSC_PropPack_JES_Vol27.dat<br>
+      	    •BSC_TexturePack_JES_Vol27.dat<br>
+      	    •jes_1x1_IndustrialResource.dat<br>
+      	    •jes_ACMEPool&amp;GardenSupplyResource.dat<br>
+      	    •jes_ACMETireRecappersResource.dat<br>
+      	    • jes_CentralCo-opCreameryTextures.dat<br>
+      	    •jes_GibsonTextures.dat<br>
+      	    •jes_RussianFactoryResource.dat<br>
+      	    • jes_WeldingShopTextures.dat<br>
+      	    •jes_WhizzResource.dat
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: jes_ResourcePack_Vol27 v4.zip
+    files:
+      - Documentation/jes_ResourcePack_Vol27 v4.txt
+      - Documentation/cleanitol.txt
+      - Documentation/BSC_TexturePack_JES_Vol27 v3.jpg
+      - Documentation/BSC_PropPack_JES_Vol27 v3.jpg
+      - BSC/BSCTextures/BSC_TexturePack_JES_Vol27 v4.dat
+      - BSC/BSCProps/BSC_PropPack_JES_Vol27 v3.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665b5c002243f_BSC_PropPack_JES_Vol27v2a.jpg.ba891ab81276dd0fb69d5908da6c1697.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_06/665b5c0752dea_BSC_TexturePack_JES_Vol27v2a.jpg.2dc10f59baba60444205666c6b30e0c3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_07/669ea1266866e_BSC_TexturePack_JES_Vol27v2.jpg.a2f46d88fd8ee3e410b827ddf51fbde3.jpg
+    lastModified: 2024-08-04T22:52:58Z
+    name: jes_ResourcePack_Vol27 v4
+    sha256: 212968298b5d87194414885a8c59211716da3fd20c858d63712f08dd0cb588fa
+    size: 2295250
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/665b5c38055cc_BSC_PropPack_JES_Vol27v2a.thumb.jpg.11d10fe0a4c77c00e440e8b64db95c06.jpg
+    timestamp: 2024-08-05T07:13:26.238Z
+    uncompressed: 3183528
+    url: https://community.simtropolis.com/files/file/35753-jes_resourcepack_vol27-v4/
+    version: 1.0.4
   simtropolis/35758-agc-lunar-dlc:
     authors:
       - Barroco Hispano
@@ -30463,7 +33570,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30537,10 +33696,97 @@ assets:
     authors:
       - jestarr
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	<abbr title="BATT Squad Certification">BSC</abbr> BATProps_HD - JES Vol11
+      </p>
+
+
+      <p>
+      	<br>
+      	This is a pack of 100 props rendered in HD. Most are rendered in 90, 45 and 22.5 degrees.
+      </p>
+
+
+      <p>
+      	<br>
+      	Installation:<br>
+      	Unzip the file into your plugins folder. The documentation file should be moved or deleted.
+      </p>
+
+      						</body>
+    filename: BSC BATProps_HD - JES Vol11.1.zip
+    files:
+      - Documentation/Readme_jes_BATProps_HD_ Vol11.txt
+      - Documentation/BSC BATProps_HD - JES Vol11.jpg
+      - BSC/BSCProps/BSC BATProps_HD - JES Vol11.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_01/65a1be5b31e4c_BSCBATProps_HD-JESVol11.jpg.a228fdc2559381ca6347a90246c4a9b8.jpg
     lastModified: 2024-01-19T23:03:56Z
     name: BSC BATProps_HD - JES Vol11
+    sha256: e6ef91fc19f723c1adc107e25671fe35ad2b05912d033d0206c422ac88dee75e
+    size: 2693324
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_01/65a1beaa99e55_BSCBATProps_HD-JESVol11.thumb.jpg.72f974c6538e974b415837442be952b9.jpg
+    timestamp: 2024-08-05T05:43:23.044Z
+    uncompressed: 3945207
     url: https://community.simtropolis.com/files/file/36006-bsc-batprops_hd-jes-vol11/
+    version: 1.0.1
   simtropolis/36046-bsc-batprops_hd-jes-vol12:
     authors:
       - jestarr
@@ -30557,7 +33803,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30643,7 +33941,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30696,10 +34046,91 @@ assets:
     authors:
       - jestarr
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	This is a pack of 76 props rendered in HD for use in the <abbr title="Lot Editor">LE</abbr>.
+      </p>
+
+
+      <p>
+      	<br>
+      	Installation:<br>
+      	Unzip the file into your plugins folder. The documentation file should be moved or deleted.
+      </p>
+
+      						</body>
+    filename: BSC BATProps_HD - JES Vol14.zip
+    files:
+      - Documentation/Readme_BSC BATProps_HD - JES Vol14.txt
+      - Documentation/BSC BATProps_HD - JES Vol14.jpg
+      - BSC/BSCProps/BSC BATProps_HD - JES Vol14.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/65c5999e1f08c_BSCBATProps_HD-JESVol14.jpg.b80e8f1c0c56b9721a6b666e7de17a55.jpg
     lastModified: 2024-02-09T03:20:11Z
     name: BSC BATProps_HD - JES Vol14
+    sha256: 3223eda86a6f7bf249f3259f72808e045e21c7d5388730fb9d3feece9fcf2c8f
+    size: 2732446
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/65c599eaefcc3_BSCBATProps_HD-JESVol14.thumb.jpg.8fdafb5e528f71235b4bb095ce75883b.jpg
+    timestamp: 2024-08-05T05:43:23.044Z
+    uncompressed: 3857847
     url: https://community.simtropolis.com/files/file/36110-bsc-batprops_hd-jes-vol14/
+    version: 1.0.0
   simtropolis/36112-allow-more-building-styles-dll-plugin:
     authors:
       - Null 45
@@ -30714,7 +34145,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30912,7 +34395,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -31210,7 +34745,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -31279,11 +34866,7 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
-
-
       							
-
-
 
       							
       <p>
@@ -31302,7 +34885,7 @@ assets:
 
 
       <p>
-      	The following new variables that can be used in the LTEXT files of a building query dialog in the form of #variable_name#.
+      	The DLL provides a number of new variables that can be used in the LTEXT files of a building query dialog in the form of #variable_name#.
       </p>
 
 
@@ -31313,14 +34896,30 @@ assets:
       				Name
       			</th>
       			<th>
-      				Description
+      				 Description
       			</th>
       		</tr>
       	</thead>
       	<tbody>
       		<tr>
       			<td>
-      				building_styles   
+      				building_full_funding_capacity    
+      			</td>
+      			<td>
+      				The cost for Education, Fire, Health, Police and Power buildings at the full (100%) capacity. For Fire and Police stations this is the coverage radius.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				building_full_funding_coverage
+      			</td>
+      			<td>
+      				The cost for Education, and Health buildings at the full (100%) coverage radius (School Bus/Ambulance).
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				building_styles
       			</td>
       			<td>
       				Shows a list of the building's styles.
@@ -31539,8 +35138,7 @@ assets:
 
 
       <p>
-      	Multiple <em>*_</em>occupancy<em> </em>and <em>*_capacity</em> variables can be combined in a LTEXT query to show the filled/available occupancy,<br>
-      	e.g. #cs1_occupancy#/#cs1_capacity#.
+      	Multiple *_occupancy and *_capacity variables can be combined in a LTEXT query to show the filled/available occupancy. e.g. #cs1_occupancy#/#cs1_capacity#.
       </p>
 
 
@@ -31550,9 +35148,12 @@ assets:
 
 
       <p>
-      	A custom advanced/debug query tool tip is provided for the transportation networks, excluding power lines and pipes.   <br>
-      	This tool tip is accessed by holding <em>Control + Alt + Shift</em> when hovering over a network piece.
-      </p>
+      	 
+      	</p>
+      <p>
+      		A custom advanced/debug query tool tip is provided for the transportation networks, excluding power lines and pipes.   <br>
+      		This tool tip is accessed by holding <em>Control + Alt + Shift</em> when hovering over a network piece.
+      	</p>
 
 
       <p>
@@ -31571,7 +35172,7 @@ assets:
 
 
       <p>
-      	The plugin may work on Windows 7 or later, but I do not have the ability to test that.
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
       </p>
 
 
@@ -31638,16 +35239,16 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_04/STEXIcon.png.37043c91bc3b2c34245c6ef2bcf8a07c.png
       - https://www.simtropolis.com/objects/screens/monthly_2024_04/CustomNetworkTooltip.jpg.2cbf9c5d0ac1069689147b7427fbeebc.jpg
-    lastModified: 2024-07-27T15:11:24Z
+    lastModified: 2024-08-13T02:25:48Z
     name: Query Tool UI Extensions DLL for SimCity 4
     repository: https://github.com/0xC0000054/sc4-query-ui-hooks
-    sha256: b5a05d76b870524a748003942b5ecb4cd5fcc61791b7d54b98e02061ffb3f333
-    size: 138403
+    sha256: bfa0b89300a5d20a1de14c8abe2a10d0a7dfb1856b56a46e3499c7fef9fdbb7b
+    size: 138431
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/STEXIcon.thumb.png.ff8b2dce5ef2d377f18e5401653e1c02.png
-    timestamp: 2024-07-29T09:55:36.596Z
-    uncompressed: 283812
+    timestamp: 2024-08-13T14:26:32.086Z
+    uncompressed: 283751
     url: https://community.simtropolis.com/files/file/36202-query-tool-ui-extensions-dll-for-simcity-4/
-    version: 1.3.0
+    version: 1.4.0
   simtropolis/36209-historic-navy-pack-22-ammo-train:
     authors:
       - AP
@@ -31688,7 +35289,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -31801,10 +35454,51 @@ assets:
     authors:
       - jestarr
     category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	This is a pack of 25 props rendered in HD for use in the <abbr title="Lot Editor">LE</abbr>. Most of the props are buildings rendered in both 90 and 45 degrees.
+      </p>
+
+
+      <p>
+      	<br>
+      	Installation:<br>
+      	Unzip the file into your plugins folder. The documentation older should be moved or deleted.
+      </p>
+
+      						</body>
+    filename: BSC BATProps_HD - JES Vol16.zip
+    files:
+      - Documentation/Readme_BSC BATProps_HD - JES Vol16.txt
+      - Documentation/BSC BATProps_HD - JES Vol16.jpg
+      - BSC/BSCProps/BSC BATProps_HD - JES Vol16.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664d15c18fbe5_BSCBATProps_HD-JESVol16.jpg.a27e25bd607271f7d3481c527605904e.jpg
     lastModified: 2024-05-21T21:46:05Z
     name: BSC BATProps_HD - JES Vol16
+    sha256: 9b10df20b4a5575f3ac5e1505d2ffe94535e6c8cff26bcfb454e99a47bf8f5dc
+    size: 5415840
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/664d161d6e138_BSCBATProps_HD-JESVol16.thumb.jpg.d99820ac44af87c5ad988aa1fe4d8d4d.jpg
+    timestamp: 2024-08-09T12:18:09.417Z
+    uncompressed: 6363089
     url: https://community.simtropolis.com/files/file/36258-bsc-batprops_hd-jes-vol16/
+    version: 1.0.0
   simtropolis/36270-historic-navy-pack-24-sailors:
     authors:
       - AP
@@ -31829,7 +35523,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -31873,7 +35619,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -31969,7 +35767,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32021,7 +35871,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32114,7 +36016,25 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32122,7 +36042,7 @@ assets:
 
       							
       <p>
-      	Eight buildings as props rendered in 45 &amp; 90 degrees. One building as a prop rendered at 45 degrees only. There are both SD &amp; HD versions.
+      	Eight buildings as props rendered in 45 &amp; 90 degrees. Three buildings as a prop rendered at 45 degrees only. There are both SD &amp; HD versions.
       </p>
 
 
@@ -32138,31 +36058,49 @@ assets:
       						</body>
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/jes_BuildingProps.jpg.8f36f6109cda7a627f7c43318cc39b37.jpg
-    lastModified: 2024-06-29T21:18:03Z
+    lastModified: 2024-08-04T23:12:20Z
     name: jes_BuildingProps
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/jes_BuildingProps.thumb.jpg.ceac21acb4eb99855013553598450ecb.jpg
-    timestamp: 2024-07-24T12:13:33.510Z
+    timestamp: 2024-08-05T14:55:56.605Z
     url: https://community.simtropolis.com/files/file/36320-jes_buildingprops/
     variants:
       "201805":
-        filename: jes_BuildingProps01_HD.zip
-        files:
-          - Documentation/Noname.png
-          - Documentation/jes_BuildingProps_HD.txt
-          - BSC/BSCProps/jes_BuildingProps01_HD.dat
-        sha256: 435893195fb3bff5997125786594ed3630e5744a7c8294aebc55f510e2d1a959
-        size: 7086543
-        uncompressed: 8625278
-      "201806":
-        filename: jes_BuildingProps01_SD.zip
+        filename: jes_BuildingProps_SD_v2.zip
         files:
           - Documentation/Noname.png
           - Documentation/jes_BuildingProps_SD.txt
-          - BSC/BSCProps/jes_BuildingProps01_SD.dat
-        sha256: c5cc96fa2a62d31fb33f2b4de20850d00c5866706c9b17b565b26054c84fcd16
-        size: 3393819
-        uncompressed: 4126008
-    version: 1.0.0
+          - BSC/BSCProps/jes_BuildingProps_SD_v2.dat
+        sha256: 6c852aa207622bf5bcdf81d13e539f2e80693b744658b21c4b6ab4e17eb0bef1
+        size: 5184637
+        uncompressed: 6173521
+      "201806":
+        filename: jes_BuildingProps_SD_v2.zip
+        files:
+          - Documentation/Noname.png
+          - Documentation/jes_BuildingProps_SD.txt
+          - BSC/BSCProps/jes_BuildingProps_SD_v2.dat
+        sha256: 6c852aa207622bf5bcdf81d13e539f2e80693b744658b21c4b6ab4e17eb0bef1
+        size: 5184637
+        uncompressed: 6173521
+      "202235":
+        filename: jes_BuildingProps_HD_v2.zip
+        files:
+          - Documentation/jes_BuildingProps_HD_v2.txt
+          - Documentation/jes_BuildingProps_HD_v2.jpg
+          - BSC/BSCProps/jes_BuildingProps_HD_v2.dat
+        sha256: eb698d1e6896fdfe1099282c91e909ce79980214eacdad1a656fa46f441a6ef3
+        size: 11942864
+        uncompressed: 14239174
+      "202236":
+        filename: jes_BuildingProps_SD_v2.zip
+        files:
+          - Documentation/Noname.png
+          - Documentation/jes_BuildingProps_SD.txt
+          - BSC/BSCProps/jes_BuildingProps_SD_v2.dat
+        sha256: 6c852aa207622bf5bcdf81d13e539f2e80693b744658b21c4b6ab4e17eb0bef1
+        size: 5184637
+        uncompressed: 6173521
+    version: 1.0.2
   simtropolis/36335-historic-navy-pack-27-ammo-lighters:
     authors:
       - AP
@@ -32179,7 +36117,59 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32274,6 +36264,32 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
       <p>
       	As sometines happens, files from the various SimCity 4 sites go missing. When possible and practical, we make attempts to restore those files when found. In all such cases, this is done in good faith for the benefit the author and the community. This particular item has been uploaded here under MarcosMX's account as part of the <abbr title="BATers, LOTers and MODders">BLaM</abbr> team as it had been uploaded on the original location. The files are provided in the same condition that they had been in when they were previously available. No changes were made. If anyone has information that would help clarify this upload, or if any issues arise, please contact any staff member.
@@ -32342,7 +36358,9 @@ assets:
 
 
 
+
       							
+
 
 
 
@@ -32413,7 +36431,7 @@ assets:
       <p><a href="https://www.simtropolis.com/objects/attachments/monthly_2024_07/image.png.c9a2d1177912241f4ac3b462621812f0.png" class="ipsAttachLink ipsAttachLink_image"><img data-fileid="104091"
       src="https://www.simtropolis.com/objects/attachments/monthly_2024_07/image.png.c9a2d1177912241f4ac3b462621812f0.png" class="ipsImage ipsImage_thumbnailed" alt="image.png"></a></p>
       						</body>
-    filename: A_1P_historic navy_Collier Proteus Class.zip
+    filename: A_1P_historic navy_Collier Proteus Class_v1.1.zip
     files:
       - A_1P_Proteus Class_props.dat
       - A_1P_Proteus Class_models.dat
@@ -32425,14 +36443,111 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/GnuIO6P.jpeg.3f9a38bd5d26563b189d4bbc6b236b4f.jpeg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/1pCKU8V.jpeg.6f06a4065c46e77ff8bb8208cbb74eff.jpeg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/Ipjm2MA.jpeg.05acb6058d04fd73e33d63879d9e9312.jpeg
-    lastModified: 2024-07-26T16:00:21Z
+    lastModified: 2024-08-08T16:44:45Z
     name: Historic Navy - pack 28 - Proteus Class Collier
-    sha256: 0d14ee4d27ceaf1f18327d0ce6873da65a52d46ae5736097803e2a0b29a5a986
-    size: 8224451
+    sha256: 2655196a7960d86b70ca49b89e2832f5152dd620806ff84705fae2b563944474
+    size: 8224498
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/banner_Vol28.thumb.png.1079ed0d01ab44416e0c4e657e8a0e3b.png
-    timestamp: 2024-07-29T09:55:36.596Z
-    uncompressed: 9401195
+    timestamp: 2024-08-09T12:18:09.417Z
+    uncompressed: 9401832
     url: https://community.simtropolis.com/files/file/36351-historic-navy-pack-28-proteus-class-collier/
+    version: "1.1"
+  simtropolis/36378-historic-navy-pack-29-collier-vestal:
+    authors:
+      - AP
+    category: 100
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	<img alt="banner_Vol29.png.ae94b024af305142fb70f46" class="ipsImage ipsImage_thumbnailed" height="791" src="https://www.simtropolis.com/objects/screens/monthly_2024_08/banner_Vol29.png.ae94b024af305142fb70f467d345d152.png" width="1120" >
+      </p>
+
+
+      <p>
+      	<b><span lang="en-gb" style="font-size:16pt;" xml:lang="en-gb">VESTAL CLASS Repair Ship<i> </i></span></b>
+      </p>
+
+
+      <p>
+      	<b><i><span lang="en-gb" style="font-size:16pt;" xml:lang="en-gb">USS Vestal - 1908 </span></i></b>
+      </p>
+
+
+      <p>
+      	<b><span lang="en-gb" style="font-size:10pt;" xml:lang="en-gb">12,585 tons – 142m (465 ft) length – 18.3m (60 ft) beam – 7.9m (26 ft) draft – 16 knots –4x76.2mm (3-in) guns -- compliment: 35 officers and 748 enlisted. </span></b>
+      </p>
+
+
+      <p style="line-height:115%;">
+      	<span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">The <i>USS Vestal </i>was commissioned into service in 1908 as a fleet collier (<i>Prometheus Class</i>), but was taken out of service in 1912, overhauled, converted, and recommissioned in 1913 as a fleet repair ship. Many navies had various auxiliary support ships lying about their harbours – accommodation ships, depot ships for destroyers, colliers, depot ships for submarines – and usually one or more repair ships of various types. The United States, unlike Great Britain, did not have numerous colonial ports and coaling stations where repair facilities would be available, and the problem was particularly troubling in the vast reaches of the Pacific. Since repairs could not be preformed in Guam or the Philippines, a fleet would have to be maintained on the voyage out, while operating in the area, and on the return voyage to the West Coast. Consequently, the US Navy practically invented the concept of “Fleet Trains”. Like supply trains for a marching army, the Fleet Trains would sail with the warships and carry supplies, ammunition, fuel, and the necessary repair facilities across the wide Pacific. Vestal was capable of preforming blacksmith work, boiler repair, carpentry, coppersmithing, electrical work, foundry work, pipe-fitting, plating and sheet metal work, welding, and repair of optical instruments and mechanical components. </span>
+      </p>
+
+
+      <p style="line-height:115%;">
+      	<i><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">Vestal</span></i><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb"> was anchored astern of the <i>USS Arizona</i> on 7 December 1941. She was damaged, but survived the war years to anchor among the battle fleet for Japan’s surrender in Tokyo Bay in 1945. Along the way, she earned two Battle Stars for action against the enemy. After 38 years of active sea service, <i>Vestal </i>was stricken from the Naval Register in 1946 and sold for scrap in 1950. </span>
+      </p>
+
+
+      <p>
+      	<img class="ipsImage ipsImage_thumbnailed" data-fileid="104732" src="https://www.simtropolis.com/objects/attachments/monthly_2024_08/image.png.56c9cfffa91e8de408309a1042a558a4.png" alt="image.png.56c9cfffa91e8de408309a1042a558a4.png" >
+      </p>
+
+
+      <p>
+      	<img class="ipsImage ipsImage_thumbnailed" data-fileid="104733" src="https://www.simtropolis.com/objects/attachments/monthly_2024_08/image.png.69d7cf470db356bd58920317f5d1a121.png" alt="image.png.69d7cf470db356bd58920317f5d1a121.png" >   <img class="ipsImage ipsImage_thumbnailed" data-fileid="104734" src="https://www.simtropolis.com/objects/attachments/monthly_2024_08/image.png.9c2ec5c90d97c2417aa6c786d20940cf.png" alt="image.png.9c2ec5c90d97c2417aa6c786d20940cf.png" >
+      </p>
+
+
+      <p style="margin:0cm;line-height:115%;">
+      	<span style="font-size:18px;"><b><span lang="en-gb" xml:lang="en-gb">How to use</span></b></span>
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:115%;">
+      	<span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">This pack contains .SC4model-files and props as .SC4desc-files. So, by installing this pack nothing will directly appear in your game. You can use the props on your own lots or convert the SC4models into buildings, as you please. Since most props are to be used on water lots and props naturally align with the surface level, they will sink to the sea floor, if you do not stick to the guidelines on how to use </span><a href="https://community.simtropolis.com/omnibus/simcity-4/bat-lot-editor-tutorials/tutorial-for-props-on-water-r852/" rel=""><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">props on water lots</span></a><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">. Finally you will need to follow the </span><a href="https://community.simtropolis.com/forums/topic/37597-sc4dot-sign-shop/?do=findComment&amp;comment=1030546" rel=""><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">instructions on how to make a lot transparent</span></a><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">.</span><span lang="en-gb" xml:lang="en-gb"> </span><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">You will find the props in any Lot-Editor under the prefix <b>A_1P_h_</b></span>
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#c0392b;">As per request from the community, I have also included a version of the ship without historic flags and crew.</span></strong>
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px;"><strong><span style="color:#3498db;">Please visit <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/683435-dreadnought/?do=hovercard" data-mentionid="683435" href="https://community.simtropolis.com/profile/683435-dreadnought/" rel="">@Dreadnought</a>'s CJ to get detailed descriptions and the historical backgrounds to these prop packs. You will see a wonderful display of the results of our long collaboration there and can get a preview of what might be hidden in the coming prop packs or simply get some inspiration for your own harbour!</span></strong></span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed5374015970" scrolling="no"
+      src="https://community.simtropolis.com/journals/journal/6006-imperial-dockyards-cuxhaven/?do=embed" style="height:345px;max-width:502px;"></iframe>
+
+      						</body>
+    filename: A_1P_historic navy_Collier Vestal.zip
+    files:
+      - A_1P_historic navy_Collier Vestal.pdf
+      - A_1P_Collier Vestal_props.dat
+      - A_1P_Collier Vestal_models.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/banner_Vol29.png.ae94b024af305142fb70f467d345d152.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/2qKD7AP.jpg.b6c3319c73af43ce2aa49fadb805bd46.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/4m3wx8j.jpg.34e19dada5f496f94efeffd79fd98fc1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/GYbP7Yw.jpg.f1f8e9fb6a6b15fa188a85ba02aed217.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/IizlDNa.jpeg.35c1c982ccd7a40ac26e4c88a44abece.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/MVd48F5.jpg.04c2f5997e33e7e80f76b3b9ab67dc57.jpg
+    lastModified: 2024-08-08T19:46:56Z
+    name: Historic Navy - pack 29 - Collier Vestal
+    sha256: 1059ab90806aeb94b716181a2e5a09e47d17e0080de145536e07db6e0946e684
+    size: 7450571
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/banner_Vol29.thumb.png.a45ff87a84c125073caefa3201c7ac09.png
+    timestamp: 2024-08-09T12:18:09.417Z
+    uncompressed: 8321929
+    url: https://community.simtropolis.com/files/file/36378-historic-navy-pack-29-collier-vestal/
     version: 1.0.0
   simtropolis/3652-nexis-big-rock-props:
     authors:
@@ -32595,4 +36710,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-68c8b5b9d329a151902f6e02398a5f12-texturepack.jpg
     url: https://community.simtropolis.com/files/file/948-texturepack/
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T14:26:32.086Z

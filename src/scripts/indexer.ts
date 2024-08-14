@@ -10,7 +10,7 @@ import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 import { exists, getExtension, removeIfPresent } from "@node/files"
 
-import { overrides } from "./overrides"
+import { OVERRIDES } from "./overrides"
 import { SC4EVERMORE } from "./sources/sc4evermore"
 import { SIMTROPOLIS } from "./sources/simtropolis"
 import {
@@ -18,6 +18,7 @@ import {
   IndexerEntry,
   IndexerEntryList,
   IndexerOptions,
+  IndexerOverride,
   IndexerSource,
 } from "./types"
 import { htmlToMd, readHTML, toID, wait } from "./utils"
@@ -35,119 +36,22 @@ const dbAssetsDir = path.join(dbDir, "assets")
 const dbPackagesDir = path.join(dbDir, "packages")
 
 runIndexer({
-  exclude: [
-    // TODO: Below are packages that would need more work to implement correctly
-    "sc4evermore/40-nam-lite",
-    "sc4evermore/41-appalachian-terrain-mod-by-lowkee33",
-    "simtropolis/11083-peg-stream-kit-ii-v205",
-    "simtropolis/12426-peg-stream-kit-deluxe-edition",
-    "simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn",
-    "simtropolis/32690-mysimtropolis-members-immortalized-in-sc4",
-    "simtropolis/35353-pegasus-cdk3-collection",
-    "simtropolis/36257-discord-rich-presence-dll-for-simcity-4",
-    // TODO: Below are external tools, not supported atm
-    "sc4evermore/18-bsc-cleanitol",
-    "sc4evermore/273-dgvoodoo-2-sc4-edition",
-    "simtropolis/23407-gofsh-fsh-texture-editor",
-    "simtropolis/27675-sc4datanode",
-    "simtropolis/30033-mgb-maxis-texture-replacement-dev-kit",
-    "simtropolis/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac",
-    "simtropolis/35621-simcity-4-multiplayer-project-launcher",
-    "simtropolis/35790-sc4-cleanitol",
-    "simtropolis/36227-dgvoodoo-2-simcity-4-edition",
-    // Below are duplicate packages (available from several sources)
-    "sc4evermore/278-sc4fix",
-    "simtropolis/11455-dedwd-aussie-retail-series-props-vol1",
-    "simtropolis/11456-dedwd-aussie-retail-series-props-vol2",
-    "simtropolis/13153-bsc-mega-props-dae-vol02",
-    "simtropolis/13153-dedwd-small-shop-prop-pack",
-    "simtropolis/14973-bsc-mega-props-dae-vol01",
-    "simtropolis/15287-bsc-mega-props-sg-vol-01-v3",
-    "simtropolis/15976-rail-yard-and-spur-textures-mega-pack-1",
-    "simtropolis/16098-bsc-sfbt-street-tree-mod",
-    "simtropolis/22325-ncd-railyard-texture-mega-pack-vol01-v3",
-    "simtropolis/26793-network-addon-mod-nam-for-windows-installer",
-    "simtropolis/26793-network-addon-mod-for-windows-installer-offsite",
-    "simtropolis/26808-vip-carpack-vol1",
-    "simtropolis/35753-jes_resourcepack_vol27-v3",
-    "simtropolis/35978-sc4moredemandinfo",
-    "simtropolis/36341-sc4ltextt-sc4-ltext-translator",
-    "simtropolis/36354-wtc-complex-sc4d-lex-legacy-bsc-custodian-rubik",
-    // Below are deprecated
-    "simtropolis/14842-bsc-prop-pack-cycledogg-no-1",
-    "simtropolis/15322-bsc-texture-pack-cycledogg-v01",
-    "simtropolis/32660-pc-prop-pack-vol-1",
-    "simtropolis/32732-pc-prop-pack-2",
-    "simtropolis/32832-pc-towering-sign-set-1",
-    "simtropolis/32879-pc-car-prop-pack",
-    "simtropolis/32921-pc-hd-car-props",
-  ],
   fetchEntryDetails() {
     return false
   },
-  fetchNewEntries() {
-    return false
+  fetchNewEntries(data) {
+    if (data?.timestamp) {
+      const hour = 60 * 60 * 1000
+      return Date.now() >= new Date(data.timestamp).getTime() + 6 * hour
+    }
+
+    return true
   },
-  include(entry) {
-    return entry.lastModified >= "2024-06-01T00:00:00Z"
+  include(entry, entryId) {
+    return entry.lastModified >= "2024-06-01T00:00:00Z" || entryId.includes("15354")
   },
-  overrides,
+  overrides: OVERRIDES,
   sources: [SC4EVERMORE, SIMTROPOLIS],
-  superseded: {
-    "sc4evermore/3-sc4d-": "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
-    "sc4evermore/13-": "sc4evermore/13-sfbt-essentials",
-    "sc4evermore/132-bsc-cp-": "sc4evermore/132-bsc-cp-mmp-for-cp-mega-prop-packs",
-    "sc4evermore/278-sc4fix": "simtropolis/30883-sc4fix-third-party-patches-for-sc4",
-    "simtropolis/11455-dedwd-aussie-retail-series-props-vol1":
-      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
-    "simtropolis/11456-dedwd-aussie-retail-series-props-vol2":
-      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
-    "simtropolis/13153-bsc-mega-props-dae-vol02":
-      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
-    "simtropolis/13153-dedwd-small-shop-prop-pack":
-      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
-    "simtropolis/13168-dedwd-small-shops-1x1-set":
-      "sc4evermore/13168-bsc-dedwd-small-shops-1x1-set",
-    "simtropolis/13169-dedwd-small-shops-1x2-set":
-      "sc4evermore/13169-bsc-dedwd-small-shops-1x2-set",
-    "simtropolis/13396-dedwd-small-shops-flatroof-set":
-      "sc4evermore/13396-bsc-dedwd-small-shops-flat-roof-versions-set",
-    "simtropolis/14973-bsc-mega-props-dae-vol01":
-      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
-    "simtropolis/15287-bsc-mega-props-sg-vol-01":
-      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
-    "simtropolis/15322-bsc-texture-pack-cycledogg-v01":
-      "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
-    "simtropolis/15976-rail-yard-and-spur-textures-mega-pack-1":
-      "sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3",
-    "simtropolis/16098-bsc-sfbt-street-tree-mod": "sc4evermore/86-sfbt-street-tree-mod",
-    "simtropolis/20966-peg-": "simtropolis/20966-peg-mtp-super-pack",
-    "simtropolis/22325-ncd-railyard-texture-mega-pack-vol01-v3":
-      "sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3",
-    "simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-":
-      "simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp",
-    "simtropolis/25888-murimk-props-vol02": "simtropolis/25888-murimk-props-vol02-mixed-props",
-    "simtropolis/26171-": "simtropolis/26171-wmp-the-bridges-of-shoreline-county",
-    "simtropolis/26793-network-addon-mod-": "sc4evermore/2-network-addon-mod",
-    "simtropolis/26793-network-addon-mod-nam-cross-platform": "sc4evermore/2-network-addon-mod",
-    "simtropolis/26793-network-addon-mod-nam-for-windows-installer":
-      "sc4evermore/2-network-addon-mod",
-    "simtropolis/26793-network-addon-mod-windows-installer-offsite":
-      "sc4evermore/2-network-addon-mod",
-    "simtropolis/26808-vip-carpack-vol1": "sc4evermore/188-vip-vnaoned-props-pack-vol01",
-    "simtropolis/31988-ncd-bsc-realrailway-texture-pack-v2":
-      "simtropolis/31988-real-railway-rrw-reskin-3rd-party-lot-support",
-    "simtropolis/32660-pc-prop-pack-vol-1": "simtropolis/32952-pc-mega-props-vol-1",
-    "simtropolis/32732-pc-prop-pack-2": "simtropolis/32952-pc-mega-props-vol-1",
-    "simtropolis/32832-pc-towering-sign-set-1": "simtropolis/32952-pc-mega-props-vol-1",
-    "simtropolis/33620-wmp-essentials-v10": "simtropolis/33620-wmp-essentials-v101",
-    "simtropolis/35526-pc-mega-props-4": "simtropolis/35526-pc-mega-props-42",
-    "simtropolis/35526-pc-mega-props-41": "simtropolis/35526-pc-mega-props-42",
-    "simtropolis/35753-jes_resourcepack_vol27-v3": "simtropolis/35753-jes_resourcepack_vol27",
-    "simtropolis/35978-sc4moredemandinfo": "simtropolis/35978-sc4-more-demand-info",
-    "simtropolis/36354-wtc-complex-sc4d-lex-legacy-bsc-custodian-rubik":
-      "sc4evermore/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex",
-  },
 })
 
 async function loadAssetsFromDB(): Promise<{
@@ -184,62 +88,80 @@ async function loadPackagesFromDB(): Promise<{
 }
 
 async function runIndexer(options: IndexerOptions) {
-  const sourceNames: { [entryId: string]: string } = {}
-  const entries: { [sourceName: string]: IndexerEntryList } = {}
+  const assetIds: { [sourceId: string]: { [entryId: number]: string } } = {}
+  const assets: { [assetId: string]: IndexerEntry } = {}
+  const sourceFiles: { [sourceName: string]: IndexerEntryList } = {}
+  const sourceNames: { [assetId: string]: string } = {}
 
-  function getAssetID(entryId: string, variant?: string): string {
-    return variant ? `${entryId}#${variant}` : entryId
+  const sources: { [sourceId: string]: IndexerSource } = {}
+  for (const source of options.sources) {
+    sources[source.id] = source
   }
 
-  function getDefaultDownloadUrl(entryId: string, variant?: string): string {
-    return getSource(entryId).getDownloadUrl(entryId, variant)
+  function getDefaultDownloadUrl(assetId: string, variant?: string): string {
+    return getSource(assetId).getDownloadUrl(assetId, variant)
   }
 
-  function getDefaultPackageID(entryId: string, entry: IndexerBaseEntry): string {
-    return `${toID(entry.authors[0])}/${toID(entryId.split("/")[1].replace(/^\d+-/, ""))}`
+  function getDefaultPackageID(assetId: string, entry: IndexerBaseEntry): string {
+    return `${toID(entry.authors[0])}/${toID(assetId.split("/")[1].replace(/^\d+-/, ""))}`
   }
 
-  function getDownloadUrl(entryId: string, variant?: string): string {
-    return options.overrides?.[entryId]?.downloadUrl ?? getDefaultDownloadUrl(entryId, variant)
+  function getDependencyAssetID(originalAssetId: string): string {
+    const sourceId = getSourceID(originalAssetId)
+    const entryId = getEntryID(originalAssetId)
+    const assetId = assetIds[sourceId][entryId] ?? originalAssetId
+    return getOverrides(assetId)?.superseded ?? assetId
   }
 
-  function getEntry(entryId: string): IndexerEntry | undefined {
-    return entries[sourceNames[entryId]]?.assets[entryId]
+  function getDownloadUrl(assetId: string, variant?: string): string {
+    const overrides = getOverrides(assetId, variant)
+
+    if (overrides?.downloadUrl) {
+      return overrides.downloadUrl
+    }
+
+    return getDefaultDownloadUrl(assetId, variant)
+  }
+
+  function getEntry(assetId: string): IndexerEntry | undefined {
+    return assets[assetId]
+  }
+
+  function getEntryID(assetId: string): number {
+    return Number(assetId.split("/")[1].split("-")[0])
   }
 
   function getExePath(exe: string): string {
     return process.env[`INDEXER_EXE_PATH_${exe.toUpperCase()}`] || exe
   }
 
-  function getPackageID(entryId: string, entry: IndexerEntry, variant?: string): string {
-    const entryOverrides = options.overrides?.[entryId]
+  function getPackageID(assetId: string, entry: IndexerEntry, variant?: string): string {
+    const overrides = getOverrides(assetId, variant)
 
-    if (variant) {
-      const variantOverrides = entryOverrides?.variants?.[variant]
-      if (variantOverrides?.packageId) {
-        return variantOverrides.packageId
-      }
+    if (overrides?.packageId) {
+      return overrides.packageId
     }
 
-    if (entryOverrides?.packageId) {
-      return entryOverrides.packageId
-    }
-
-    return getDefaultPackageID(entryId, entry)
+    return getDefaultPackageID(assetId, entry)
   }
 
-  function getVariantID(entryId: string, entry: IndexerEntry, variant?: string): string {
-    const entryOverrides = options.overrides?.[entryId]
+  function getSource(assetId: string): IndexerSource {
+    return sources[getSourceID(assetId)]
+  }
 
-    if (variant) {
-      const variantOverrides = entryOverrides?.variants?.[variant]
-      if (variantOverrides?.variantId) {
-        return variantOverrides.variantId
-      }
-    }
+  function getSourceID(assetId: string): string {
+    return assetId.split("/")[0]
+  }
 
-    if (entryOverrides?.variantId) {
-      return entryOverrides.variantId
+  function getVariantAssetID(assetId: string, variant?: string): string {
+    return variant ? `${assetId}#${variant}` : assetId
+  }
+
+  function getVariantID(assetId: string, entry: IndexerEntry, variant?: string): string {
+    const overrides = getOverrides(assetId, variant)
+
+    if (overrides?.variantId) {
+      return overrides.variantId
     }
 
     const variantEntry = variant ? entry.variants?.[variant] : entry
@@ -264,26 +186,46 @@ async function runIndexer(options: IndexerOptions) {
     return "default"
   }
 
-  function getSource(entryId: string): IndexerSource {
-    const sourceId = sourceNames[entryId].split("/")[0]
-    return options.sources.find(source => source.id === sourceId)!
+  function getOverrides(assetId: string, variant?: string): IndexerOverride | null | undefined {
+    const overrides = options.overrides?.[getSourceID(assetId)]?.[getEntryID(assetId)]
+
+    if (variant && overrides?.variants) {
+      const variantOverrides = overrides.variants[variant]
+      if (variantOverrides === null) {
+        return null
+      }
+
+      if (variantOverrides !== undefined) {
+        return { ...overrides, ...variantOverrides }
+      }
+    }
+
+    return overrides
   }
 
   const errors = new Set<string>()
 
   // Fetch asset lists
   for (const source of options.sources) {
+    const sourceId = source.id
+    assetIds[sourceId] = {}
+
     for (const category of source.categories) {
-      const sourceName = `${source.id}/${category.id}`
+      const sourceName = `${sourceId}/${category.id}`
 
       console.debug(`Loading entries from ${sourceName}...`)
 
       const config = await loadConfig<IndexerEntryList>(dataAssetsDir, sourceName)
       const data = { assets: config?.data.assets ?? {}, timestamp: now }
       const timestamp = config?.data.timestamp
-      entries[sourceName] = data
+      sourceFiles[sourceName] = data
 
-      if (options.fetchNewEntries?.(source, category)) {
+      for (const assetId in data.assets) {
+        const entryId = getEntryID(assetId)
+        assetIds[sourceId][entryId] = assetId
+      }
+
+      if (options.fetchNewEntries?.(config?.data, source, category)) {
         console.debug(`Fetching entries from ${sourceName}...`)
 
         let nPages: number | undefined
@@ -300,7 +242,7 @@ async function runIndexer(options: IndexerOptions) {
 
           const entries = source.getEntries(html)
 
-          for (const [entryId, baseEntry] of entries) {
+          for (const [assetId, baseEntry] of entries) {
             // Results are sorted by last-modified-time (most recent first)
             // If we encounter any item last modified before our last cache time, we are thus done with new items
             if (source === SIMTROPOLIS && timestamp && baseEntry.lastModified < timestamp) {
@@ -308,8 +250,12 @@ async function runIndexer(options: IndexerOptions) {
               continue
             }
 
-            data.assets[entryId] = {
-              ...data.assets[entryId],
+            const entryId = getEntryID(assetId)
+
+            assetIds[sourceId][entryId] = assetId
+
+            data.assets[assetId] = {
+              ...data.assets[assetId],
               ...baseEntry,
               category: category.category,
             }
@@ -322,8 +268,9 @@ async function runIndexer(options: IndexerOptions) {
         await writeConfig(dataAssetsDir, sourceName, data, ConfigFormat.YAML, config?.format)
       }
 
-      for (const entryId in data.assets) {
-        sourceNames[entryId] = sourceName
+      for (const assetId in data.assets) {
+        assets[assetId] = data.assets[assetId]
+        sourceNames[assetId] = sourceName
       }
     }
   }
@@ -333,12 +280,11 @@ async function runIndexer(options: IndexerOptions) {
   const dbAssetsConfigs = await loadAssetsFromDB()
   const dbPackagesConfigs = await loadPackagesFromDB()
 
-  for (const entryId in sourceNames) {
-    const sourceName = sourceNames[entryId]
-    const sourceId = sourceName.split("/")[0]
-    const entry = entries[sourceName].assets[entryId]
-    if (dbAssetsConfigs[sourceId]?.[entryId] || options.include(entry, entryId)) {
-      await resolveEntry(entryId)
+  for (const assetId in assets) {
+    const entry = assets[assetId]
+    const sourceId = getSourceID(assetId)
+    if (dbAssetsConfigs[sourceId]?.[assetId] || options.include(entry, assetId)) {
+      await resolveEntry(assetId)
     }
   }
 
@@ -436,14 +382,15 @@ async function runIndexer(options: IndexerOptions) {
 
     resolvingEntries.add(entryId)
 
-    if (options.overrides?.[entryId] === null) {
+    const overrides = getOverrides(entryId)
+
+    if (overrides === null) {
       console.warn(`Skipping ${entryId}...`)
       return entry
     }
 
-    if (options.exclude?.includes(entryId)) {
-      console.warn(`Skipping ${entryId}...`)
-      return entry
+    if (overrides?.superseded) {
+      return resolveEntry(overrides.superseded)
     }
 
     if (!entry) {
@@ -454,7 +401,7 @@ async function runIndexer(options: IndexerOptions) {
     console.debug(`Resolving ${entryId}...`)
 
     const sourceName = sourceNames[entryId]
-    const sourceData = entries[sourceName]
+    const sourceData = sourceFiles[sourceName]
     const source = getSource(entryId)
 
     const outdated = !entry.timestamp || entry.lastModified > entry.timestamp
@@ -476,9 +423,9 @@ async function runIndexer(options: IndexerOptions) {
         entry.repository = details.repository
         entry.version = details.version
 
-        entry.dependencies = details.dependencies?.filter(
-          dependencyId => options.superseded?.[dependencyId] ?? dependencyId !== entryId,
-        )
+        entry.dependencies = details.dependencies
+          ?.map(getDependencyAssetID)
+          ?.filter(dependencyId => dependencyId !== entryId)
 
         wasUpdated = true
       }
@@ -499,35 +446,35 @@ async function runIndexer(options: IndexerOptions) {
 
     if (entry.dependencies) {
       for (const dependencyId of entry.dependencies) {
-        await resolveEntry(options.superseded?.[dependencyId] ?? dependencyId)
+        await resolveEntry(dependencyId)
       }
     }
 
     return entry
   }
 
-  async function resolveVariant(entryId: string, variant?: string): Promise<boolean> {
-    const entry = getEntry(entryId)
+  async function resolveVariant(assetId: string, variant?: string): Promise<boolean> {
+    const entry = getEntry(assetId)
     if (!entry) {
-      errors.add(`Entry ${entryId} does not exist!`)
+      errors.add(`Entry ${assetId} does not exist!`)
       return false
     }
 
-    const assetId = getAssetID(entryId, variant)
-    const downloadKey = `${assetId}@${entry.version}`
+    const variantAssetId = getVariantAssetID(assetId, variant)
+    const downloadKey = `${variantAssetId}@${entry.version}`
     const downloadPath = path.join(dataDownloadsDir, downloadKey)
     const downloadTempPath = path.join(dataDownloadsDir, downloadKey.replace("/", "/~"))
-    const downloadUrl = getDownloadUrl(entryId, variant)
-    const source = getSource(entryId)
+    const downloadUrl = getDownloadUrl(assetId, variant)
+    const source = getSource(assetId)
 
     const variantEntry = variant ? entry.variants?.[variant] : entry
     if (!variantEntry) {
-      errors.add(`Variant ${assetId} does not exist!`)
+      errors.add(`Variant ${variantAssetId} does not exist!`)
       return false
     }
 
-    if (variant && options.overrides?.[entryId]?.variants?.[variant] === null) {
-      console.warn(`Skipping ${entryId}#${variant}...`)
+    if (getOverrides(assetId, variant) === null) {
+      console.warn(`Skipping ${variantAssetId}...`)
       return false
     }
 
@@ -609,8 +556,8 @@ async function runIndexer(options: IndexerOptions) {
     }
 
     if (entry.version && variantEntry.files) {
-      const packageId = getPackageID(entryId, entry, variant)
-      const variantId = getVariantID(entryId, entry, variant)
+      const packageId = getPackageID(assetId, entry, variant)
+      const variantId = getVariantID(assetId, entry, variant)
       const authorId = packageId.split("/")[0]
 
       const dbPackagesConfig = dbPackagesConfigs[authorId] ?? {}
@@ -618,7 +565,7 @@ async function runIndexer(options: IndexerOptions) {
 
       if (outdated || !packageData.variants?.[variantId]) {
         const dbAssetsConfig = dbAssetsConfigs[source.id] ?? {}
-        const assetData = dbAssetsConfig[assetId] ?? {}
+        const assetData = dbAssetsConfig[variantAssetId] ?? {}
 
         if (packageData.variants?.[variantId]) {
           console.debug(`Updating variant ${packageId}#${variantId}...`)
@@ -634,7 +581,7 @@ async function runIndexer(options: IndexerOptions) {
         assetData.uncompressed = variantEntry.uncompressed
         assetData.version = entry.version
 
-        if (downloadUrl !== getDefaultDownloadUrl(entryId, variant)) {
+        if (downloadUrl !== getDefaultDownloadUrl(assetId, variant)) {
           assetData.url = downloadUrl
         } else {
           delete assetData.url
@@ -649,7 +596,7 @@ async function runIndexer(options: IndexerOptions) {
           new Set([
             ...(packageData.dependencies ?? []),
             ...(entry.dependencies?.map(dependencyId => {
-              const dependencyEntry = getEntry(options.superseded?.[dependencyId] ?? dependencyId)
+              const dependencyEntry = getEntry(dependencyId)
               if (dependencyEntry) {
                 return getPackageID(dependencyId, dependencyEntry)
               } else {
@@ -684,12 +631,15 @@ async function runIndexer(options: IndexerOptions) {
         const variantData = (packageData.variants[variantId] ??= {})
 
         variantData.assets ??= []
+        variantData.name = { darknite: "Dark Nite", default: "Default", hd: "HD" }[variantId]
         variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
 
-        let variantAsset = variantData.assets.find(variantAsset => variantAsset.id === assetId)
+        let variantAsset = variantData.assets.find(
+          variantAsset => variantAsset.id === variantAssetId,
+        )
 
         if (!variantAsset) {
-          variantAsset = { id: assetId }
+          variantAsset = { id: variantAssetId }
           variantData.assets.push(variantAsset)
         }
 
@@ -721,22 +671,22 @@ async function runIndexer(options: IndexerOptions) {
         dbPackagesConfigs[authorId] ??= dbPackagesConfig
         dbPackagesConfig[packageId] ??= packageData
         dbAssetsConfigs[source.id] ??= dbAssetsConfig
-        dbAssetsConfig[assetId] ??= assetData
+        dbAssetsConfig[variantAssetId] ??= assetData
 
         await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
         await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
       }
     } else if (!hasVariants) {
       if (entry.version) {
-        errors.add(`Missing files for entry ${entryId}`)
+        errors.add(`Missing files for entry ${assetId}`)
       } else {
-        errors.add(`Missing version for entry ${entryId}`)
+        errors.add(`Missing version for entry ${assetId}`)
       }
     }
 
     if (entry.variants && !variant) {
       for (const variant in entry.variants) {
-        await resolveVariant(entryId, variant)
+        await resolveVariant(assetId, variant)
       }
     }
 

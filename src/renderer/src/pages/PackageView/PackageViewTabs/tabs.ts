@@ -3,9 +3,8 @@ import { ComponentType } from "react"
 import { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
+import { VariantInfo } from "@common/types"
 import { PackageOptionsForm } from "@components/Options"
-import { getCurrentVariant, getDependentPackages } from "@utils/packages"
-import { Store } from "@utils/store"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewFiles } from "./PackageViewFiles"
@@ -17,8 +16,12 @@ import { PackageViewSummary } from "./PackageViewSummary"
 export type PackageViewTabInfo = {
   component: ComponentType<{ packageId: string }>
   id: string
-  label: (t: TFunction<"PackageViewTabs">, packageId: string, store: Store) => string
-  condition: (packageId: string, store: Store) => boolean
+  label: (
+    t: TFunction<"PackageViewTabs">,
+    variantInfo: VariantInfo,
+    dependentPackages: string[],
+  ) => string
+  condition: (variantInfo: VariantInfo, dependentPackages: string[]) => boolean
   fullsize?: boolean
 }
 
@@ -36,24 +39,20 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "dependencies",
     component: PackageViewDependencies,
-    condition(packageId, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition(variantInfo) {
       return !!variantInfo.dependencies?.length
     },
-    label(t, packageId, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    label(t, variantInfo) {
       return t("dependencies", { count: variantInfo.dependencies?.length })
     },
   },
   {
     id: "optionalDependencies",
     component: PackageViewOptionalDependencies,
-    condition(packageId, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition(variantInfo) {
       return !!variantInfo.optional?.length
     },
-    label(t, packageId, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    label(t, variantInfo) {
       return t("optionalDependencies", { count: variantInfo.optional?.length })
     },
   },
@@ -61,30 +60,27 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     id: "requiredBy",
     fullsize: true,
     component: PackageViewRequiredBy,
-    condition(packageId, store) {
-      return !!getDependentPackages(store, packageId).length
+    condition(variantInfo, dependentPackages) {
+      return !!dependentPackages.length
     },
-    label(t, packageId, store) {
-      return t("requiredBy", { count: getDependentPackages(store, packageId).length })
+    label(t, variantInfo, dependentPackages) {
+      return t("requiredBy", { count: dependentPackages.length })
     },
   },
   {
     id: "files",
     component: PackageViewFiles,
-    condition(packageId, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition(variantInfo) {
       return !!variantInfo.files?.length
     },
-    label(t, packageId, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    label(t, variantInfo) {
       return t("files", { count: variantInfo.files?.length })
     },
   },
   {
     id: "readme",
     component: PackageViewReadme,
-    condition(packageId, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition(variantInfo) {
       return !!variantInfo.readme
     },
     label(t) {
@@ -95,8 +91,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "options",
     component: PackageOptionsForm,
-    condition(packageId, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition(variantInfo) {
       return !!variantInfo.options?.length
     },
     label(t) {

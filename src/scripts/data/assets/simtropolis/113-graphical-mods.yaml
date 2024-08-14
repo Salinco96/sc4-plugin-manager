@@ -1959,7 +1959,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4840,7 +4870,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5645,7 +5705,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5916,8 +6006,8 @@ assets:
       - hugues aroux
     category: 20
     dependencies:
-      - simtropolis/16098-bsc-sfbt-street-tree-mod
       - sc4evermore/86-sfbt-street-tree-mod
+      - simtropolis/16098-bsc-sfbt-street-tree-mod
     description: >-
       <body>
                                   
@@ -5929,7 +6019,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6024,10 +6144,143 @@ assets:
     authors:
       - Ulisse Wolf
     category: 20
-    lastModified: 2024-06-01T11:17:04Z
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p style="color:#22262a; font-size:16px; text-align:center;">
+      	<strong><span style="font-size:36px">DgVoodoo 2 - SimCity 4 Edition</span></strong>
+      </p>
+
+
+      <p style="font-size:16px;">
+      	This package allows a quick installation of DgVoodoo 2 for SimCity 4 and its configuration. It also offers solutions on how to solve possible compatibility problems with DgVoodoo 2 and SC4 with modern CPUs. 
+      </p>
+
+
+      <p style="font-size:16px;">
+      	This version of DgVoodoo has already been configured for maximum performance from the game but we still recommend that you edit "Adapter(s) to use / enable" to include your primary GPU
+      </p>
+
+
+      <p style="font-size:16px;">
+      	Before installing DgVoodoo 2 "SC4 Version" you must make sure that the 4GB Patch is applied as it is essential for the corect operation of DgVoodoo 2.
+      </p>
+
+
+      <p style="font-size:16px;">
+      	Generally the 4GB Patch is included in <abbr title="Network Addon Mod">NAM</abbr> 40 or later versions and <abbr title="Colossus Addon Mod">CAM</abbr> 2.5 or later versions but in the case the 4GB Patch was included in this package.
+      </p>
+
+
+      <p style="font-size:16px;">
+      	 
+      </p>
+
+
+      <p style="font-size:16px;">
+      	<strong>INSTALLATION</strong>
+      </p>
+
+
+      <p style="font-size:16px;">
+      	1) Copy the contents of the SimCity 4 folder inside the SimCity 4 installation folder and overwrite the indicated files during the transfer step<br>
+      	2) Go inside the APPS folder and drag SimCity4.exe to 4gb_patch.exe to apply the 4 GB patch.<br>
+      	3) Depending on your GPU you need to follow the Fixes given in the other text files in the package. <br>
+      	   3a) If you have Intel GPUs then you need to follow the procedures indicated on Intel GPU Fix.txt.<br>
+      	   3b) If you have AMD GPU then you need to follow the procedures indicated on AMD GPU Fix.txt<br>
+      	   3c) If you have NVIDIA GPU then you need to follow the procedures given on NVIDIA GPU Fix.txt<br>
+      	4) Configuration completed
+      </p>
+
+
+      <p style="font-size:16px;">
+      	 
+      </p>
+
+
+      <p style="font-size:16px;">
+      	<strong>CREDITS</strong>
+      </p>
+
+
+      <p style="font-size:16px;">
+      	Thanks to the original creator DgVoodoo 2 (dege-diosg) for developing a wrapper that converts old DirectX calls to DirectX 9/11/12 calls. You can find his work here 
+      </p>
+
+
+      <p style="font-size:16px;">
+      	<a href="https://github.com/dege-diosg/dgVoodoo2" ipsnoembed="true" rel="external nofollow">https://github.com/dege-diosg/dgVoodoo2</a>
+      </p>
+
+
+      <p style="font-size:16px;">
+      	Thanks to RSC204 / MGB who provided specially modified versions of the Graphics Rules.sgr and Video Cards.sgr files of SimCity 4, which ensure DgVoodoo runs optimally.
+      </p>
+
+
+      <p style="font-size:16px;">
+      	Thanks to the creator of the 4GB Patch for developing the tool that allows SimCity 4 to use 4GB of RAM instead of 2GB of RAM.
+      </p>
+
+
+      <p style="font-size:16px;">
+      	Thanks to jdenm8 for posting a solution to improve SimCity 4 compatibility on AMD video cards.
+      </p>
+
+      						</body>
+    filename: DgVoodoo 2 SC4 Version.zip
+    files:
+      - DgVoodoo 2 SC4 Version/3c - NVIDIA GPU Fix.txt
+      - DgVoodoo 2 SC4 Version/3b - AMD GPU Fix.txt
+      - DgVoodoo 2 SC4 Version/3a - Intel GPU Fix.txt
+      - DgVoodoo 2 SC4 Version/01 - Installation guide.txt
+      - DgVoodoo 2 SC4 Version/SimCity 4/Video Cards.sgr
+      - DgVoodoo 2 SC4 Version/SimCity 4/Graphics Rules.sgr
+      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/dgVoodoo.conf
+      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/DDraw.dll
+      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/D3DImm.dll
+      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/D3D9.dll
+      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/D3D8.dll
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/communityIcon_pznebvf29ih91.jpg.280703d35609822b6611b442e81c3082.jpg
+    lastModified: 2024-08-11T11:58:25Z
     name: DgVoodoo 2 - SimCity 4 Edition
+    repository: https://github.com/dege-diosg/dgVoodoo2
+    sha256: a8ee58d2f36482fc6c231027bea70c1be370e86b81bea972936b3bf9c55563dd
+    size: 1540947
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/communityIcon_pznebvf29ih91.thumb.jpg.ff024df162ef710ab91aae67c66745e4.jpg
+    timestamp: 2024-08-05T10:23:31.202Z
+    uncompressed: 1839447
     url: https://community.simtropolis.com/files/file/36227-dgvoodoo-2-simcity-4-edition/
+    version: "2.0"
   simtropolis/36330-westwind-streets:
     authors:
       - hugues aroux
@@ -6045,7 +6298,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6248,10 +6531,9 @@ assets:
       - "11241036"
     category: 20
     dependencies:
-      - simtropolis/36142-submenus-dll
-      - sc4evermore/36-lk33-seasonalflorapatch
       - sc4evermore/132-bsc-cp-mmp-for-cp-mega-prop-packs
-      - sc4evermore/132-bsc-cp-
+      - sc4evermore/36-lk33-seasonalflorapatch
+      - simtropolis/36142-submenus-dll
     description: >-
       <body>
                                   
@@ -6263,7 +6545,37 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6445,6 +6757,219 @@ assets:
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1875916
     url: https://community.simtropolis.com/files/file/36339-cp-floral-mmp-collection/
+    version: "1"
+  simtropolis/36379-transparent-texture-fix-dll:
+    authors:
+      - memo
+    category: 20
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	This DLL plugin fixes the underground view bug (<a href="https://community.simtropolis.com/forums/topic/760847-coris-partial-water-bug-fix-ready-for-testing/" rel="">water bug</a>) that occurs on lots using overlay textures without a base texture, after exiting the underground view.
+      </p>
+
+
+      <p>
+      	<strong>System requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		SimCity 4, version 1.1.641 (the digital edition) (<a href="https://community.simtropolis.com/forums/topic/762980-the-future-of-sc4-modding-the-matter-of-digital-vs-disc-and-windows-vs-macos-in-the-dll-era/" rel="">more info</a>)
+      	</li>
+      	<li>
+      		Windows 10+ or Linux
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <p>
+      	Copy the DLL into the top-level directory of either Plugins folder (place it directly in <span style="background-color:#dddddd;">&lt;Documents&gt;\SimCity 4\Plugins</span> or <span style="background-color:#dddddd;">&lt;SC4 install folder&gt;\Plugins</span>, not in a subfolder).
+      </p>
+
+
+      <p>
+      	Alternatively, the mod can be installed with <em>sc4pac</em>: <a href="https://memo33.github.io/sc4pac/channel/?pkg=memo:transparent-texture-fix-dll" rel="external nofollow">memo:transparent-texture-fix-dll</a>
+      </p>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a .log file in the folder containing the plugin. The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	If no .log file is written, the DLL failed to load. In this case, make sure the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022+ x86 Redistributable</a> is installed.
+      </p>
+
+
+      <p>
+      	<strong>Source Code</strong>
+      </p>
+
+
+      <p>
+      	Available on <a href="https://github.com/memo33/transparent-texture-fix-dll" rel="external nofollow">GitHub</a>.
+      </p>
+
+      						</body>
+    filename: transparent-texture-fix-dll-1.0.0.zip
+    files:
+      - Third Party Notices.txt
+      - README.md
+      - memo.transparent-texture-fix.dll
+      - LICENSE.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/before-after.jpeg.0ff9c72de8289d13d1854c204a6efc49.jpeg
+    lastModified: 2024-08-08T20:09:26Z
+    name: Transparent Texture Fix DLL
+    repository: https://github.com/memo33/transparent-texture-fix-dll
+    sha256: f24275e69667e5afbfb3795d78d59ee4b45fce06ec72b2d09e6f3c4b2c852979
+    size: 43314
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/before-after.thumb.jpeg.dce7652797c99365f8945704768dd0b8.jpeg
+    timestamp: 2024-08-09T12:18:09.417Z
+    uncompressed: 93946
+    url: https://community.simtropolis.com/files/file/36379-transparent-texture-fix-dll/
+    version: 1.0.0
+  simtropolis/36380-fa-roads-t21-mod:
+    authors:
+      - "11241036"
+    category: 20
+    dependencies:
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <p>
+      	<span style="color:#2980b9;"><strong>Description:</strong></span>
+      </p>
+
+
+      <p>
+      	This mod alters the <abbr title="Fractional Angle">FA</abbr>-2 and <abbr title="Fractional Angle">FA</abbr>-3 roads (only straight routes) that come with <abbr title="Network Addon Mod">NAM</abbr> to remove the trees (and the lanterns, if you want) there. The idea to do this came to me after reading this thread: <a href="https://community.simtropolis.com/forums/topic/763344-fractional-angle-w2w/" rel="">https://community.simtropolis.com/forums/topic/763344-fractional-angle-<abbr title="Wall-to-Wall">w2w</abbr>/</a><br>
+      	Please make sure to read the installation instructions below, the plugin needs to be customized to avoid unwanted effects.
+      </p>
+
+
+      <p>
+      	<strong>Please note:</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		In unzoned and agricultural areas, no objects show up, anyway. This mod doesn't change this.
+      	</li>
+      	<li>
+      		To make the change reflected in-game close to already grown zones, you may need to plop with the Road tool into a <abbr title="Fractional Angle">FA</abbr>-2 or <abbr title="Fractional Angle">FA</abbr>-3 route.
+      	</li>
+      	<li>
+      		If you are growifying a plopped building with the Growify DLL, the zone changes to low, medium, or high density. This will affect adjacent routes, but only if you drag them again or plop into them with the Road tool.
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Dependencies:</strong></span>
+      </p>
+
+
+      <p>
+      	Network Addon Mod: <a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer/" rel="">http://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#2980b9;">Installation:</span></strong>
+      </p>
+
+
+      <p>
+      	There are 3 files coming with this plugin, <strong>only install one of them</strong>. Please check the screenshots to observe the visual result.<br>
+      	To install, put one out of these 3 files into your Plugins folder, however, you need to make sure that it loads after <abbr title="Network Addon Mod">NAM</abbr> or it won't work. To make this sure, create a folder with a name that comes later than the <abbr title="Network Addon Mod">NAM</abbr> folder in alphabet (or just put the entire folder zFA Roads <abbr title="Type 21 Exemplar">T21</abbr> Mod into your Plugins folder).<br>
+      	What the files do:
+      </p>
+
+
+      <ul>
+      	<li>
+      		<em><abbr title="Fractional Angle">FA</abbr> Roads <abbr title="Type 21 Exemplar">T21</abbr> Mod_Remove All.dat</em>: removes all objects whatsoever from straight <abbr title="Fractional Angle">FA</abbr>-2 and <abbr title="Fractional Angle">FA</abbr>-3 routes.
+      	</li>
+      	<li>
+      		<em><abbr title="Fractional Angle">FA</abbr> Roads <abbr title="Type 21 Exemplar">T21</abbr> Mod_Remove Trees all D.dat</em>: removes all trees whatsoever from straight <abbr title="Fractional Angle">FA</abbr>-2 and <abbr title="Fractional Angle">FA</abbr>-3 routes (the lanters remain).
+      	</li>
+      	<li>
+      		<em><abbr title="Fractional Angle">FA</abbr> Roads <abbr title="Type 21 Exemplar">T21</abbr> Mod_Remove Trees Lanterns HD.dat</em>: removes all objects from straight <abbr title="Fractional Angle">FA</abbr>-2 and <abbr title="Fractional Angle">FA</abbr>-3 routes, but only on high-density zoning (residential, commercial, and industrial). Low-density zoning (only residential and commercial), as well as the plopped zone, are not affected.
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#c0392b;"><strong>Compatibility:</strong></span><br>
+      	This mod is only compatible with SC4: Deluxe or SC4 with Rush Hour installed. Furthermore, <strong>this mod is incompatible with any other mod altering the placement of props via editing the <abbr title="Type 21 Exemplar">T21</abbr> exemplar files with the same <abbr title="Instance ID">IID</abbr> the <abbr title="Network Addon Mod">NAM</abbr> uses.</strong>
+      </p>
+
+      						</body>
+    filename: zFA Roads T21 Mod.zip
+    files:
+      - zFA Roads T21 Mod/Scr.jpg
+      - zFA Roads T21 Mod/Readme.txt
+      - zFA Roads T21 Mod/FA Roads T21 Mod_Remove Trees Lanterns HD.dat
+      - zFA Roads T21 Mod/FA Roads T21 Mod_Remove Trees all D.dat
+      - zFA Roads T21 Mod/FA Roads T21 Mod_Remove All.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/Scr.jpg.ed5e98ef6bc367a380d71e0369f0c545.jpg
+    lastModified: 2024-08-08T21:15:30Z
+    name: FA Roads T21 Mod
+    sha256: 995c6c58c35c436190688b988a364bc8ddddae6cb295ebd6c77389e62f4ea61e
+    size: 529621
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/Scr.thumb.jpg.5d95f6f7180546b207c2f93d8a1d2274.jpg
+    timestamp: 2024-08-09T12:18:09.417Z
+    uncompressed: 554302
+    url: https://community.simtropolis.com/files/file/36380-fa-roads-t21-mod/
     version: "1"
   simtropolis/3651-navigation-buoys:
     authors:
@@ -6651,4 +7176,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-43c2c618fac6b7de4fc16966c4966243-SW_Hydro%20Dam.jpg
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
-timestamp: 2024-07-30T08:53:33.543Z
+timestamp: 2024-08-13T13:48:06.421Z

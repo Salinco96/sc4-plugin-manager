@@ -2,7 +2,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, Tab } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { useStore } from "@utils/store"
+import { useCurrentVariant, useDependentPackages } from "@utils/packages"
 
 import { packageViewTabs, usePackageViewTab } from "./tabs"
 
@@ -10,8 +10,11 @@ export function PackageViewTabs({ packageId }: { packageId: string }): JSX.Eleme
   const { activeTab, setActiveTab } = usePackageViewTab()
   const { t } = useTranslation("PackageViewTabs")
 
-  const tabs = useStore(store => packageViewTabs.filter(tab => tab.condition(packageId, store)))
-  const labels = useStore(store => tabs.map(tab => tab.label(t, packageId, store)))
+  const dependentPackages = useDependentPackages(packageId)
+  const variantInfo = useCurrentVariant(packageId)
+
+  const tabs = packageViewTabs.filter(tab => tab.condition(variantInfo, dependentPackages))
+  const labels = tabs.map(tab => tab.label(t, variantInfo, dependentPackages))
 
   if (tabs.length === 0) {
     return null

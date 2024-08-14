@@ -23,6 +23,9 @@ export interface ApplicationState {
   }
   settings?: Settings
   status: ApplicationStatus
+  templates?: {
+    [profileId: string]: ProfileInfo | null
+  }
 }
 
 export const initialState: ApplicationState = {

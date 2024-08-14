@@ -73,12 +73,13 @@ import {
 import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
 import { SplashScreen } from "./SplashScreen"
 import {
-  CLEANITOLEXTENSIONS,
+  CLEANITOL_EXTENSIONS,
   DIRNAMES,
-  DOCEXTENSIONS,
+  DOC_EXTENSIONS,
   FILENAMES,
-  SC4EXTENSIONS,
-  SC4INSTALLPATHS,
+  SC4_EXTENSIONS,
+  SC4_INSTALL_PATHS,
+  TEMPLATE_PREFIX,
 } from "./utils/constants"
 import { env, isDev } from "./utils/env"
 import { createChildProcess } from "./utils/processes"
@@ -117,6 +118,7 @@ export class Application {
     ongoingDownloads: [],
     ongoingExtracts: [],
   }
+  public templates?: { [profileId: string]: ProfileInfo }
 
   public dirty: {
     packages?: { [packageId: string]: boolean } | boolean
@@ -326,7 +328,7 @@ export class Application {
     if (installPath) {
       installPathExists = await exists(path.join(installPath, FILENAMES.sc4exe))
     } else {
-      for (const suggestedPath of SC4INSTALLPATHS) {
+      for (const suggestedPath of SC4_INSTALL_PATHS) {
         if (await exists(path.join(suggestedPath, FILENAMES.sc4exe))) {
           console.info(`Detected installation path ${suggestedPath}`)
           installPath = suggestedPath
@@ -397,16 +399,20 @@ export class Application {
   /**
    * Creates and checks out a new profile.
    * @param name Profile name
-   * @param templateProfileId ID of the profile to copy (create an empty profile otherwise)
+   * @param fromProfileId ID of the profile to copy (create an empty profile otherwise)
    */
-  public async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
+  public async createProfile(name: string, fromProfileId?: string): Promise<boolean> {
     if (!this.profiles || !this.settings) {
       return false
     }
 
     const profileId = createUniqueProfileId(name, Object.keys(this.profiles))
 
-    const templateProfile = templateProfileId ? this.getProfileInfo(templateProfileId) : undefined
+    const templateProfile = fromProfileId
+      ? fromProfileId.startsWith(TEMPLATE_PREFIX)
+        ? this.getProfileTemplate(fromProfileId)
+        : this.getProfileInfo(fromProfileId)
+      : undefined
 
     const profile: ProfileInfo = {
       features: {},
@@ -774,6 +780,13 @@ export class Application {
   }
 
   /**
+   * Returns a profile template by ID, if it exists.
+   */
+  public getProfileTemplate(profileId: string): ProfileInfo | undefined {
+    return this.templates?.[profileId]
+  }
+
+  /**
    * Returns the absolute package to the Manager directory.
    */
   public getRootPath(): string {
@@ -796,6 +809,7 @@ export class Application {
       },
       settings: this.settings,
       status: this.status,
+      templates: this.templates,
     }
   }
 
@@ -811,6 +825,13 @@ export class Application {
    */
   public getTempPath(): string {
     return path.join(this.getRootPath(), DIRNAMES.temp)
+  }
+
+  /**
+   * Returns the absolute package to the Templates data directory.
+   */
+  public getTemplatesPath(): string {
+    return path.join(this.getDatabasePath(), DIRNAMES.templates)
   }
 
   /**
@@ -983,6 +1004,9 @@ export class Application {
 
     this.sendPackages()
 
+    // Templates are loaded in the background
+    const loadTemplatesPromise = this.loadTemplates()
+
     // Wait for installation check...
     this.status.loader = "Checking installation..."
     this.sendStatus()
@@ -1000,6 +1024,8 @@ export class Application {
       // Run cleaner for all enabled packages
       // await this.cleanAll()
     }
+
+    await loadTemplatesPromise
   }
 
   public async installPackages(packages: { [packageId: string]: string }): Promise<boolean> {
@@ -1114,13 +1140,13 @@ export class Application {
             ) => {
               const extension = getExtension(oldPath)
 
-              if (!DOCEXTENSIONS.includes(extension) && !SC4EXTENSIONS.includes(extension)) {
+              if (!DOC_EXTENSIONS.includes(extension) && !SC4_EXTENSIONS.includes(extension)) {
                 console.warn(`Ignoring file ${oldPath} with unsupported extension ${extension}`)
               }
 
               switch (type) {
                 case "cleanitol": {
-                  if (CLEANITOLEXTENSIONS.includes(extension)) {
+                  if (CLEANITOL_EXTENSIONS.includes(extension)) {
                     if (!cleanitol.has(oldPath)) {
                       const targetPath = path.join(variantPath, DIRNAMES.cleanitol, newPath)
                       await createIfMissing(path.dirname(targetPath))
@@ -1133,7 +1159,7 @@ export class Application {
                 }
 
                 case "docs": {
-                  if (DOCEXTENSIONS.includes(extension)) {
+                  if (DOC_EXTENSIONS.includes(extension)) {
                     if (!cleanitol.has(oldPath) && !docs.has(oldPath)) {
                       const targetPath = path.join(variantPath, DIRNAMES.docs, newPath)
                       await createIfMissing(path.dirname(targetPath))
@@ -1146,7 +1172,7 @@ export class Application {
                 }
 
                 case "files": {
-                  if (SC4EXTENSIONS.includes(extension)) {
+                  if (SC4_EXTENSIONS.includes(extension)) {
                     if (files.has(newPath)) {
                       context.raiseInDev(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                     } else {
@@ -1197,7 +1223,9 @@ export class Application {
               type: "cleanitol" | "docs" | "files",
               include?: PackageFile,
             ) => {
-              const entries = await glob(pattern, {
+              const conditionRegex = /{{([^}]+)}}/g
+
+              const entries = await glob(pattern.replace(conditionRegex, "*"), {
                 cwd: downloadPath,
                 dot: true,
                 ignore: excludes,
@@ -1213,13 +1241,35 @@ export class Application {
               for (const entry of entries) {
                 const oldPath = entry.relative()
 
+                let condition = include?.condition
+
+                if (pattern.match(conditionRegex)) {
+                  const regex = new RegExp(
+                    "^" +
+                      (pattern.includes("/") ? "" : "(?:.*[\\\\/])?") +
+                      pattern
+                        .replace(/[$()+.[\]^|]/g, "\\$&")
+                        .replaceAll("/", "[\\\\/]")
+                        .replaceAll("**", ".*")
+                        .replaceAll("*", "[^\\\\/]*")
+                        .replaceAll("?", "[^\\\\/]?")
+                        .replace(conditionRegex, "(?<$1>[^\\\\/]*)") +
+                      "$",
+                  )
+
+                  condition = {
+                    ...condition,
+                    ...regex.exec(oldPath)?.groups,
+                  }
+                }
+
                 if (entry.isDirectory()) {
                   await includeDirectory(
                     oldPath,
                     include?.as ?? "",
                     type,
                     include?.category,
-                    include?.condition,
+                    condition,
                   )
                 } else {
                   const filename = path.basename(entry.name)
@@ -1228,7 +1278,7 @@ export class Application {
                     include?.as?.replace("*", filename) ?? filename,
                     type,
                     include?.category,
-                    include?.condition,
+                    condition,
                   )
                 }
               }
@@ -1342,7 +1392,7 @@ export class Application {
     Object.assign(console, log.functions)
 
     // Initialize custom protocols
-    handleDocsProtocol(this.getRootPath(), DOCEXTENSIONS)
+    handleDocsProtocol(this.getRootPath(), DOC_EXTENSIONS)
 
     this.setApplicationMenu()
     await this.initialize()
@@ -1620,6 +1670,44 @@ export class Application {
     }
 
     return this.settings
+  }
+
+  protected async loadTemplates(): Promise<{ [id: string]: ProfileInfo }> {
+    console.debug("Loading profile templates")
+
+    let nTemplates = 0
+    this.templates = {}
+
+    const templatesPath = this.getTemplatesPath()
+    await createIfMissing(templatesPath)
+
+    const entries = await fs.readdir(templatesPath, { withFileTypes: true })
+    for (const entry of entries) {
+      const format = path.extname(entry.name) as ConfigFormat
+      if (entry.isFile() && Object.values(ConfigFormat).includes(format)) {
+        const profileId = TEMPLATE_PREFIX + path.basename(entry.name, format)
+        const profilePath = path.join(templatesPath, entry.name)
+        if (this.templates[profileId]) {
+          console.warn(`Duplicate profile template '${entry.name}'`)
+          continue
+        }
+
+        try {
+          const data = await readConfig<ProfileData>(profilePath)
+          const profile = fromProfileData(profileId, data)
+          profile.format = format
+          this.templates[profileId] = profile
+          nTemplates++
+        } catch (error) {
+          console.warn(`Invalid profile template '${entry.name}'`, error)
+        }
+      }
+    }
+
+    console.debug(`Loaded ${nTemplates} profile templates`)
+    this.sendTemplates()
+
+    return this.templates
   }
 
   /**
@@ -1958,6 +2046,10 @@ export class Application {
 
   protected sendStatus(): void {
     this.sendStateUpdate({ status: this.status })
+  }
+
+  protected sendTemplates(): void {
+    this.sendStateUpdate({ templates: this.templates })
   }
 
   protected setApplicationMenu(): void {

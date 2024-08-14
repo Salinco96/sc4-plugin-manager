@@ -1,4 +1,4 @@
-import { useCallback } from "react"
+import { useCallback, useMemo } from "react"
 
 import { isCategory } from "@common/categories"
 import {
@@ -89,9 +89,10 @@ export function useCurrentVariant(packageId: string): VariantInfo {
   return useStore(useCallback(store => getCurrentVariant(store, packageId), [packageId]))
 }
 
-export function getDependentPackages(store: Store, dependencyId: string): string[] {
-  const { packages = {} } = store
-
+export function getDependentPackages(
+  packages: { [packageId: string]: PackageInfo },
+  dependencyId: string,
+): string[] {
   return Object.keys(packages).filter(packageId => {
     return Object.values(packages[packageId].variants).some(variantInfo => {
       return !!variantInfo.dependencies?.includes(dependencyId)
@@ -100,7 +101,9 @@ export function getDependentPackages(store: Store, dependencyId: string): string
 }
 
 export function useDependentPackages(dependencyId: string): string[] {
-  return useStore(useCallback(store => getDependentPackages(store, dependencyId), [dependencyId]))
+  const packages = useStore(store => store.packages)
+
+  return useMemo(() => getDependentPackages(packages ?? {}, dependencyId), [dependencyId, packages])
 }
 
 export function useFilteredPackages(): string[] {
