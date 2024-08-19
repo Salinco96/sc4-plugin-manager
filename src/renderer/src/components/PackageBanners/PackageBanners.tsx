@@ -20,7 +20,7 @@ export function PackageBanners({ packageId }: { packageId: string }): JSX.Elemen
   const variantInfo = useCurrentVariant(packageId)
   const variantId = variantInfo.id
 
-  const issues = getVariantIssues(variantInfo, packageStatus)
+  const issues = getVariantIssues(variantId, packageStatus)
 
   return (
     <>

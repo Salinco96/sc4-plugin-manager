@@ -302,7 +302,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1053
+    downloads: 1064
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_DarkNite.zip
     files:
       - readme_mattb325_commercial.html
@@ -1020,7 +1020,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1159
+    downloads: 1166
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_MaxisNite.zip
     files:
       - readme_mattb325_commercial.html
@@ -1658,7 +1658,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 786
+    downloads: 795
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_W2W_DarkNite.zip
     files:
       - readme_mattb325_commercial_w2w.html
@@ -2047,7 +2047,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 713
+    downloads: 718
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_W2W_MaxisNite.zip
     files:
       - readme_mattb325_commercial_w2w.html
@@ -2445,7 +2445,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 872
+    downloads: 884
     filename: SC4D_LEX_Legacy_zero7_Commercial_Pack.zip
     files:
       - readme_zero7_commercial.html
@@ -2588,11 +2588,117 @@ assets:
     authors:
       - sc4evermore
     category: 300
-    downloads: 359
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/31006-supershk-mega-parking-textures
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p style=\"text-align: center;\"><span style=\"font-size: 36px;\"><strong>Ulisse Wolf - Five Nights At Freddy's</strong></span></p>\r
+
+      <p style=\"text-align: center;\"><em><strong>Welcome to Freddy Fazbear’s Pizza, a magical place for kids and grown ups alike, where fantasy and fun come to life</strong></em></p>\r
+
+      <p>Finally the Five Nights At Freddy's experience in SimCity 4 is finally available. This is the modpack of FNAF-themed mods in which there are buildings that function as both normal comemrcial
+      buildings but also Landmarks in which strange events and brutal murders by cute animatronics occur during the night.</p>\r
+
+      <p><strong>INSTALLATION</strong></p>\r
+
+      <p>During installation you will need to select the Dark Nite or Maxis Nite version to have the props compatible with the night mode you use.<br>In addition, the modpack contains new news tickets
+      and an Alert system when you build the Landmark version. Select the non-invasive version if you do not want to have the security breach alert when you enter the city where landmark is
+      built</p>\r
+
+      <p><strong>DEPENDENCIES</strong></p>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">SimFox Day and Nite Modd</a> (Only if you are using the Dark Night/DN version)</p>\r
+
+      <p><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"external nofollow noopener\">SC4D <abbr title=\"Lot EXchange
+      (SC4Devotion)\">LEX</abbr> Legacy - <abbr title=\"BATT Squad Certification\">BSC</abbr> Common Dependencies Pack</a></p>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/\" rel=\"\">SuperSHK MEGA Parking Textures</a></p>\r
+
+      <p><strong>CREATOR OF ORIGINAL MODELS</strong></p>\r
+
+      <p>Freddy Fazbear's Pizza: <a href=\"https://3dwarehouse.sketchup.com/model/15c6a195-f3d0-459a-94c3-b8a04cc25008/Freddy-Fazbears-Pizza\" target=\"_blank\" rel=\"external nofollow noopener\">Joey
+      W.</a></p>\r
+
+      <p><strong>LICENSING:</strong></p>\r
+
+      <p>This prop pack is provided as free content to SimCity 4 players, who are free to modify it for their use and for production of derivative for publication. Should the author be absent from
+      SC4Devotion/SC4Evermore and Simtropolis.com for more than a year, site staff or individual users may re-host the file, as long as due credit is given to him, user Ulisse Wolf</p>\r
+
+      <p><b>UPDATE HISTORY</b></p>\r
+
+      <p><b>February 12, 2024 (Version 1.0)</b></p>\r
+
+      <p>First release version</p>\r
+
+      <p>Update in the installation method</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/FNAF DAY.jpg\" data-lightbox=\"lightbox160\" data-alt=\"lightboxFNAF DAY.jpg|FNAF
+      NIGHT.jpg|five-nights-at-freddys-group-i61034.jpg.7d778071d9b67d3b8543ae5fefe7f390\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/FNAF DAY.jpg\" alt=\"FNAF DAY\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/FNAF NIGHT.jpg\" data-lightbox=\"lightbox160\" data-alt=\"lightboxFNAF DAY.jpg|FNAF
+      NIGHT.jpg|five-nights-at-freddys-group-i61034.jpg.7d778071d9b67d3b8543ae5fefe7f390\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/FNAF NIGHT.jpg\" alt=\"FNAF NIGHT2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/five-nights-at-freddys-group-i61034.jpg.7d778071d9b67d3b8543ae5fefe7f390.jpg\"
+      data-lightbox=\"lightbox160\" data-alt=\"lightboxFNAF DAY.jpg|FNAF NIGHT.jpg|five-nights-at-freddys-group-i61034.jpg.7d778071d9b67d3b8543ae5fefe7f390\" target=\"_blank\"><img
+      class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/five-nights-at-freddys-group-i61034.jpg.7d778071d9b67d3b8543ae5fefe7f390.jpg\"
+      alt=\"five-nights-at-freddys-group-i61034.jpg.7d778071d9b67d3b8543ae5fefe7f3903\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 363
+    filename: Ulisse Wolf - Five Nights At Freddys.zip
+    files:
+      - Ulisse Wolf - Five Nights At Freddys/Main.txt
+      - Ulisse Wolf - Five Nights At Freddys/~Documents/Ulisse Wolf - Five Nights At Freddy's.pdf
+      - Ulisse Wolf - Five Nights At Freddys/^~Documents#/Ulisse Wolf - Five Nights At Freddy's.pdf
+      - Ulisse Wolf - Five Nights At Freddys/^~Documents#/Main.txt
+      - Ulisse Wolf - Five Nights At Freddys/~Documents/Prop-Texture Catalogue Index and Cleanitol/Ulisse Wolf - Five Nights At Freddy's Cleanitol.txt
+      - Ulisse Wolf - Five Nights At Freddys/^~Documents#/Prop-Texture Catalogue Index and Cleanitol/Ulisse Wolf - Five Nights At Freddy's Cleanitol.txt
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Lots/Freddy Fazbear's Pizza/PLOP_6x6_Freddy Fazbear's Pizza (Landmark)_22781a8e.SC4Lot
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Lots/Freddy Fazbear's Pizza/Main.txt
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Lots/Freddy Fazbear's Pizza/CS$$2_6x6_Freddy Fazbear's Pizza_527772fa.SC4Lot
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/= Dependency - Maxis Nite/Ulisse Wolf - FNAF Building-0x6534284a-0x904b7d34-0x3276c431.SC4Desc
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/= Dependency - Maxis Nite/Ulisse Wolf  - FNAF Sign-0x6534284a-0x904b7d34-0x5276ca26.SC4Desc
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/= Dependency - Maxis Nite/Maxis Crime Scene-0x6534284a-0x904b7d34-0xd278160f.SC4Desc
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/= Dependency - Maxis Nite/Main.txt
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/= Dependency - Maxis Nite/Freddy Fazbear's Pizza-0x6534284a-0x904b7d34-0x12777088.SC4Desc
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/= Dependency - Maxis Nite/FNAF_Sign_MN.SC4Model
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/= Dependency - Maxis Nite/FNAF_Building_MN.SC4Model
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/- Dependency - Dark Nite/Ulisse Wolf - FNAF Building-0x6534284a-0x904b7d34-0x3276c431.SC4Desc
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/- Dependency - Dark Nite/Ulisse Wolf  - FNAF Sign-0x6534284a-0x904b7d34-0x5276ca26.SC4Desc
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/- Dependency - Dark Nite/Maxis Crime Scene-0x6534284a-0x904b7d34-0xd278160f.SC4Desc
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/- Dependency - Dark Nite/Main.txt
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/- Dependency - Dark Nite/Freddy Fazbear's Pizza-0x6534284a-0x904b7d34-0x12777088.SC4Desc
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/- Dependency - Dark Nite/FNAF_Sign_DN.SC4Model
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Dependency/- Dependency - Dark Nite/FNAF_Building_DN.SC4Model
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Allert News/= Allert News - No Invasive/Main.txt
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Allert News/= Allert News - No Invasive/FNAF News Alert.dat
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Allert News/- Allert News - Original/Main.txt
+      - Ulisse Wolf - Five Nights At Freddys/Ulisse Wolf/Five Nights At Freddy's/Allert News/- Allert News - Original/FNAF News Alert.dat
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/FNAF DAY.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/FNAF NIGHT.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/five-nights-at-freddys-group-i61034.jpg.7d778071d9b67d3b8543ae5fefe7f390.jpg
     lastModified: 2024-05-23T15:17:53-07:00
     name: Ulisse Wolf - Five Nights At Freddy's
+    sha256: b99e0c27b53479b0b5126584f674b711548578a61b617f9fb679f60d1618467c
+    size: 3542581
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/FNAF DAY.jpg
+    timestamp: 2024-08-15T09:27:03.207Z
+    uncompressed: 3565229
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/160-ulisse-wolf-five-nights-at-freddys
+    version: "2.0"
   sc4evermore/222-bsc-vip-girafe-chalet-edelweiss:
     authors:
       - Girafe
@@ -2770,7 +2876,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 197
+    downloads: 201
     filename: BSC-VIP Girafe Chalet Edelweiss_2817.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_Chalet_Edelweiss.html
@@ -2988,7 +3094,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 297
+    downloads: 301
     filename: BSC-VIP Girafe CB21 Tower_2725.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_CB21_Tower.html
@@ -3186,7 +3292,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 297
+    downloads: 301
     filename: BSC-VIP Girafe EDF Tower_2820.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_EDF_Tower.html
@@ -3282,7 +3388,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 316
+    downloads: 323
     filename: Mattb325-SimCoug Historic Shops.zip
     files:
       - BSC/BSCProps/Mattb325_Old_Shops_MN.dat
@@ -3315,7 +3421,7 @@ assets:
     authors:
       - Kelis
     category: 300
-    downloads: 273
+    downloads: 275
     lastModified: 2024-01-23T07:39:12-08:00
     name: BNL Kelis Wilhelminatoren
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BNL_KELIS_Wihelminatoren_DAY.jpg
@@ -3324,7 +3430,7 @@ assets:
     authors:
       - Kelis
     category: 300
-    downloads: 230
+    downloads: 232
     lastModified: 2024-01-23T07:54:28-08:00
     name: BNL Kelis ABN AMRO Bank
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ABNDAY.jpg
@@ -3426,7 +3532,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 844
+    downloads: 852
     filename: BSC kevdan25 Restaurant Lots.zip
     files:
       - _Documents/kevdan25lots - Replace Cleanitol - RUN ONCE BEFORE installing.txt
@@ -3473,4 +3579,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/54-bsc-kevdan25-restaurants
     version: "2"
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

@@ -12,7 +12,7 @@ import { FlexBox } from "./FlexBox"
 import { Tag, TagType, TagValue, getTagLabel, serializeTag } from "./PackageList/utils"
 
 type TagInfo<T extends TagType = TagType> = Tag<T> & {
-  color?: "error" | "success" | "warning"
+  color?: "error" | "info" | "success" | "warning"
 }
 
 const tags: TagInfo<TagType.STATE>[] = [
@@ -20,6 +20,11 @@ const tags: TagInfo<TagType.STATE>[] = [
     color: "success",
     type: TagType.STATE,
     value: PackageState.ENABLED,
+  },
+  {
+    color: "info",
+    type: TagType.STATE,
+    value: PackageState.DEPENDENCY,
   },
   {
     color: "error",
@@ -30,6 +35,11 @@ const tags: TagInfo<TagType.STATE>[] = [
     color: "error",
     type: TagType.STATE,
     value: PackageState.ERROR,
+  },
+  {
+    color: "info",
+    type: TagType.STATE,
+    value: PackageState.NEW,
   },
   {
     color: "warning",
@@ -66,21 +76,25 @@ export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
   const isSelectable = location.page === Page.Packages
   const isSelected = values.includes(tag.value)
 
-  const chip = (
+  return isSelectable ? (
+    <Tooltip title={t(isSelected ? "actions.unselect" : "actions.select")}>
+      <Chip
+        color={tag.color}
+        label={getTagLabel(tag)}
+        onClick={() => actions.setPackageFilters({ [key]: toggleElement(values, tag.value) })}
+        size="medium"
+        sx={{ borderRadius: 2 }}
+        variant={isSelected ? "filled" : "outlined"}
+      />
+    </Tooltip>
+  ) : (
     <Chip
       color={tag.color}
       label={getTagLabel(tag)}
-      onClick={() => actions.setPackageFilters({ [key]: toggleElement(values, tag.value) })}
       size="medium"
       sx={{ borderRadius: 2 }}
-      variant={isSelected || !isSelectable ? "filled" : "outlined"}
+      variant="filled"
     />
-  )
-
-  return isSelectable ? (
-    <Tooltip title={t(isSelected ? "actions.unselect" : "actions.select")}>{chip}</Tooltip>
-  ) : (
-    chip
   )
 }
 

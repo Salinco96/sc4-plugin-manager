@@ -3,7 +3,7 @@ assets:
     authors:
       - Mattb325
     category: 200
-    downloads: 906
+    downloads: 922
     lastModified: 2023-08-20T03:02:51-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Houses (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Alpha237_lg0.jpg
@@ -12,7 +12,7 @@ assets:
     authors:
       - Mattb325
     category: 200
-    downloads: 899
+    downloads: 906
     lastModified: 2023-08-20T02:53:24-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Houses (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Alpha237_lg.jpg
@@ -83,7 +83,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 704
+    downloads: 715
     filename: Homefryes - American Four Square Homes v2_920.zip
     files:
       - _Documents/Homefryes_Readmes/Readme_The_American_Four_Square.htm
@@ -444,7 +444,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 802
+    downloads: 815
     filename: Homefryes - Cambridge Townhomes_2189.zip
     files:
       - _Documents/Homefryes_Readmes/Readme_Cambridge_Townhomes.htm
@@ -478,7 +478,7 @@ assets:
     authors:
       - zero7
     category: 200
-    downloads: 829
+    downloads: 839
     lastModified: 2023-08-26T23:57:53-07:00
     name: SC4D LEX Legacy - zero7 Residential Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JP_KitagataApts_Day.jpg
@@ -575,7 +575,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 564
+    downloads: 573
     filename: SC4D_LEX_Legacy_NYBT_Residentials_DarkNite_V1.zip
     files:
       - _Documents/readme_SC4D LEX Legacy - NYBT Residentials.html
@@ -741,7 +741,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 532
+    downloads: 538
     filename: SC4D_LEX_Legacy_NYBT_Residentials_MaxisNite_V1.zip
     files:
       - _Documents/readme_SC4D LEX Legacy - NYBT Residentials.html
@@ -1044,7 +1044,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 201
+    downloads: 206
     filename: BSC-VIP Girafe 4 Rue Des Lilas v2_2978.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_4_rue_des_Lilas.html
@@ -1308,7 +1308,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 269
+    downloads: 275
     filename: BSC-VIP Girafe Villa Libeskind v2_3071.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_villa_Libeskind.html
@@ -1623,7 +1623,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 294
+    downloads: 301
     filename: SOMY Danchi Apartments LEX.zip
     files:
       - ~Documents/SOMY_Readmes/Readme_SOMY_Danchi_Apartments.htm
@@ -1827,7 +1827,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 253
+    downloads: 259
     filename: SOMY Modern Japanese House Set LEX.zip
     files:
       - ~Documents/SOMY_Readmes/somy-jpn-house1x4.jpg
@@ -1974,7 +1974,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 122
+    downloads: 130
     filename: Romualdillo - Spanish R Residental Lots.zip
     files:
       - ~Documents/Romualdillo_Readmes/Spanish R$ Residental Lots.ReadMe.txt
@@ -2004,20 +2004,982 @@ assets:
     authors:
       - SimGoober
     category: 200
-    downloads: 340
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/11122-rls-homes-the-ashton
+      - simtropolis/12716-rls-homes-the-berwick
+      - simtropolis/11238-rls-homes-the-birka
+      - simtropolis/11180-rls-homes-the-claridge
+      - simtropolis/11503-rls-cottages
+      - simtropolis/15987-country-homes
+      - simtropolis/11123-rls-homes-the-legacy
+      - simtropolis/12717-rls-homes-suburban-collection
+      - simtropolis/11239-rls-small-homes
+      - simtropolis/11444-rls-homes-swedish-villa-siljac
+      - simtropolis/11443-rls-homes-swedish-modern
+      - simtropolis/4241-brownstone-apartments
+      - simtropolis/4200-bsc-evening-town-homes
+      - simtropolis/14108-sardina-row-homes
+      - simtropolis/14167-scuttlebutt-row-homes
+      - simtropolis/11124-rls-suburban-condos
+      - simtropolis/11125-rls-suburban-townhomes
+      - simtropolis/4240-baltimore-sweel-front-town-homes
+      - simtropolis/12718-rls-home-the-cheriton
+      - simtropolis/13769-rls-home-the-hagerman
+      - simtropolis/11925-rls-homes-the-highgrove
+      - simtropolis/11391-rls-homes-the-colonial
+      - simtropolis/12326-sugar-cane-farms
+      - simtropolis/14189-mathew-keenan-townhome
+      - simtropolis/12961-astoria-pointe-apartments
+      - simtropolis/12956-walldoff-apartments
+      - simtropolis/11518-rls-mobile-homes
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1
+      - sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the Residential Houses by legendary BSC BATer <strong>SimGoober</strong>, which had been
+      available on the Lot Exchange (LEX) at SC4 Devotion and also on the Simtropolis STEX. It includes the contents of 36 previously separate downloads (including one previously unavailable \"lost\"
+      content, the <em>Schmucker House</em>).<br>After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in
+      June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to
+      install.</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <p>Bear in mind this Lot Collection contains lots which will only grow/work if <span style=\"color: #e03e2d;\"><strong>CAM </strong></span>(<strong>Colossus Addon Mod</strong>) is
+      installed.<br><span style=\"color: #e03e2d;\">In this installer the CAM folder (which contains the CAM lots) is NOT selected by default, if you play with the Colossus Addon Mod and wish to use
+      these CAMelots you need to select the folder manually when you run the installer.</span></p>\r
+
+      <h3><strong>INSTALLATION</strong></h3>\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org/\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). After this, click over to the Install tab, and click
+      \"Start installation\" to begin the installation procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p><span style=\"color: #e03e2d;\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</span><br>Optionally in
+      the ~Documents folder in the main ZIP you can find a <span style=\"color: #e03e2d;\">collective</span> and optionally separately<span style=\"color: #e03e2d;\"> all the individual</span>
+      cleanitol files and by using either the newer <strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4
+      Cleanitol</a> </strong>or the older <strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC Cleanitol</a></strong> tool
+      you can search and remove old and outdated versions of these files.</p>\r
+
+      <h3><strong>DEPENDENCIES</strong></h3>\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures):</p>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC
+      Common Dependencies Pack <span style=\"color: #e03e2d;\"><strong>v9</strong></span></a> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack
+      compilation.</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li>BSC Essentials</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC SG Residential Models vol01 <span style=\"color: #e03e2d;\"><strong>v3</strong></span></li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC SG Residential Models vol02<strong><span style=\"color: #e03e2d;\"> v3</span></strong></li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC SG Residential Models vol03<strong><span style=\"color: #e03e2d;\"> v3</span></strong></li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC SG Residential Models vol04<span style=\"color: #e03e2d;\"><strong> v3</strong></span></li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props SG Vol01<span style=\"color: #e03e2d;\"><strong> v4</strong></span></li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props CP Vol01</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props Gascooker Vol01 v2</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props MJB Vol01 v3</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props D66 Vol01 v3</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props D66 Vol03</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props SWI21 Vol01 v4</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props DAE Vol01 v3</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props MISC Vol01 v2</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props Misc Vol02 v4</li>\r
+
+      <li>CSX MEGA Props Vol01 v3</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li>BSC Textures Vol01</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC Textures Vol02</li>\r
+
+      <li>BSC TexturePack Cycledogg V01b</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li><a title=\"PEG-SUPER_TEXTURES.dat\" href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\" target=\"_blank\" rel=\"noopener\">PEG MTP SUPER PACK v1.5</a> - you only
+      need the PEG-SUPER_TEXTURES.dat for this.</li>\r
+
+      <li><a href=\"/index.php/downloads/download/40-maxis/14-maxis-buildings-as-props-and-dlc-props-v2-1\" target=\"_blank\" rel=\"noopener\">Maxis Building As Props and DLC Props v2.1</a></li>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem\">Colossus Addon Mod 2.1.0</a></li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <h3><strong>CREDITS</strong></h3>\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>SimGoober</li>\r
+
+      </ul>\r
+
+      <p>This package was assembled by Tyberius06.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.<br><br>For memo for subsequent updates on the NAM/Java installer.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      <h3><strong>CONTENTS</strong></h3>\r
+
+      <p>This package contains the following previously-separate downloads (where you see links in those cases the original uploads are still available, <span style=\"color: #e03e2d;\"><strong>but the
+      contents of this package are superior compared to those old versions</strong></span>) . Some of the Lots contained in the package exceed Stage 8, and therefore require the use of the Colossus
+      Addon Mod (CAM). See the notes, which contents require CAM to be installed. </p>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li><strong>SG Residential Lot Collection Vol01</strong> - Small Homes and Cottages</li>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11122-rls-homes-the-ashton/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Ashton</a> (stage 2 and stage 3 and stage 4 R$$
+      lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/12716-rls-homes-the-berwick/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Berwick</a> (stage 2 and stage 3 R$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11238-rls-homes-the-birka/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Birka</a> (stage 2 and stage 3 R$ lots and stage 1,
+      stage 2 and stage 3 R$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11180-rls-homes-the-claridge/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Claridge</a> (stage 3, stage 4 and stage 5 R$$
+      lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11503-rls-cottages/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - Cottages</a> (stage 2 and stage 3 and stage 4 R$$
+      lots)<br>(Ashley River, Jacobson, Rachael Anne)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/15987-country-homes/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - Country and Glenn Allan</a> (stage 2, stage 3 and stage 4 R$$
+      lots for Country and stage 3, stage 4 and stage 5 R$$ lots for Glenn Allen)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11123-rls-homes-the-legacy/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Legacy</a> (stage 2, stage 3, stage 4 and stage 5
+      R$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/12717-rls-homes-suburban-collection/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - Suburban Homes</a> (stage 2, stage 3, stage 4
+      and stage 5 R$$ lots)<br>(Emily, Greendale, Katie)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11239-rls-small-homes/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - Small Homes</a> (stage 1 and stage 3 R$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11444-rls-homes-swedish-villa-siljac/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - Swedish Villa Siljac</a> (stage 3 and stage 4
+      R$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11443-rls-homes-swedish-modern/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - Swedish Modern Homes</a> (stage 3 and stage 4 R$$
+      lots)</li>\r
+
+      <li>SG RLS Homes - Sepsis Cabins (stage 1, stage 2 and stage 4 R$ lots)<br>(officially it was part of the now obsolete BSC BATProps SG Vol04 dependency pack and as a true separate release, when
+      the prop pack got merged into the BSC MEGA Props SG vol01, it was hosted on the now defunct SimcityKurier/Simcity Plaza site.)</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li><strong>SG Residential Lot Collection Vol02</strong> - Condos and Rowhomes</li>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/4241-brownstone-apartments\" target=\"_blank\" rel=\"noopener\">SG BrownStone Appartments</a> (stage 5 and stage 6 R$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/4200-bsc-evening-town-homes/\" target=\"_blank\" rel=\"noopener\">SG Evening Town Homes</a> (stage 6 R$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/14108-sardina-row-homes/\" target=\"_blank\" rel=\"noopener\">SG Sardina Row Homes</a> (stage 4 and stage 5 R$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/14167-scuttlebutt-row-homes/\" target=\"_blank\" rel=\"noopener\">SG Scuttle Butt Row Homes</a> (stage 4 and stage 5 and stage 6 R$
+      lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11124-rls-suburban-condos/\" target=\"_blank\" rel=\"noopener\">SG RLS Suburban Condos</a> (stage 4 and stage 5 R$$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11125-rls-suburban-townhomes/\" target=\"_blank\" rel=\"noopener\">SG RLS Suburban Townhomes</a> (stage 5 R$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/4240-baltimore-sweel-front-town-homes\" target=\"_blank\" rel=\"noopener\">SG Baltimore Sweel Front Townhomes</a> (stage 5 and stage 6
+      R$$ lots)</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li><strong>SG Residential Lot Collection Vol03</strong> - Luxory Homes and Mansions</li>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/12718-rls-home-the-cheriton/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Cheriton</a> (stage 3 and stage 4 R$$$
+      lots)</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/13769-rls-home-the-hagerman/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Hagerman</a> (stage 4 R$$$ lots)</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11925-rls-homes-the-highgrove/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Highgrove</a> (stage 2 and stage 3 R$$$
+      lots)</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11391-rls-homes-the-colonial/\" target=\"_blank\" rel=\"noopener\">SG RLS Homes - The Colonial</a> (stage 5 R$$ lots)</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/12326-sugar-cane-farms/\" target=\"_blank\" rel=\"noopener\">SG Sugarcane Farms</a> (including the Sugar Plantation Villas R$$$) (stage
+      4 R$$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/14189-mathew-keenan-townhome\" target=\"_blank\" rel=\"noopener\">SG Mathew Keenan Townhomes</a> (this includes Commercial Offices too)
+      (stage 4 R$$$ lots and stage 4 and stage 5 Co$$$ lots)</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li><strong>SG Residential Lot Collection Vol04</strong> - Hi-Rise Blocks</li>\r
+
+      <ul>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/12961-astoria-pointe-apartments/\" target=\"_blank\" rel=\"noopener\">SG Astoria Pointe Apartments</a> (stage 6 R$$$ lots)</li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/12956-walldoff-apartments/\" target=\"_blank\" rel=\"noopener\">SG Walldoff Apartments</a> (stage 6 and stage 7 R$$$ lots)</li>\r
+
+      <li>SG Princess Tower (stage 10 R$$$ CAM lot)<span style=\"color: #e03e2d;\"><strong> - Requires CAM</strong></span></li>\r
+
+      <li>SG Smith Block (stage 9 and stage 10 R$ CAM lots)<strong><span style=\"color: #e03e2d;\"> - Requires CAM</span></strong></li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li><strong><a href=\"https://community.simtropolis.com/files/file/11518-rls-mobile-homes/\" target=\"_blank\" rel=\"noopener\">Mobil Homes</a> </strong>(stage 1 and stage 2 and stage 3 R$
+      lots)</li>\r
+
+      <li><strong>Apartment Block Set</strong> (stage 4 and stage 5 R$ lots)</li>\r
+
+      <li><strong>Mary Sue</strong> (stage 4 and stage 5 R$$ lots)</li>\r
+
+      <li><strong>Susan B Anthony Building</strong> (residentials and museum) (stage 4 and stage 5 R$$ lots)</li>\r
+
+      <li><strong>Schmucker Hous</strong>e (residential and museum) (stage 4 R$$$ lot)</li>\r
+
+      <li><strong>Elwood Tower</strong> (stage 8 and stage 9 R$ lots)<span style=\"color: #e03e2d;\"><strong> - the stage 9 lot Requires CAM</strong></span></li>\r
+
+      <li><strong>Pencil Towers</strong> (stage 9 and stage 10 and stage 11 R$ lots)<strong><span style=\"color: #e03e2d;\"> - Requires CAM</span></strong></li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <p>Various pieces of original documentation can be found in the \"~Documents\" folder, which, while installed in the Plugins directory, should be removed.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SG_RLS_Ashton_Day.jpg\" data-lightbox=\"lightbox274\"
+      data-alt=\"lightboxSG_RLS_Ashton_Day.jpg|SG Schmucker-d.jpg|SG_WallDoffApartments_Day\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_RLS_Ashton_Day.jpg\" alt=\"SG_RLS_Ashton_Day\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SG Schmucker-d.jpg\" data-lightbox=\"lightbox274\"
+      data-alt=\"lightboxSG_RLS_Ashton_Day.jpg|SG Schmucker-d.jpg|SG_WallDoffApartments_Day\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG Schmucker-d.jpg\" alt=\"SG Schmucker-d2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SG_WallDoffApartments_Day.jpg\" data-lightbox=\"lightbox274\"
+      data-alt=\"lightboxSG_RLS_Ashton_Day.jpg|SG Schmucker-d.jpg|SG_WallDoffApartments_Day\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_WallDoffApartments_Day.jpg\" alt=\"SG_WallDoffApartments_Day3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 358
+    filename: SC4D LEX Legacy - BSC SimGoober Residentials V1.zip
+    files:
+      - readme_BSC_SG_Residential_Collection.html
+      - readme.css
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4D LEX Legacy - SimGoober Residential Pack V1.txt
+      - ~Documents/BSC_Readmes/Simgoober/SG RES Vol04.jpg
+      - ~Documents/BSC_Readmes/Simgoober/SG RES Vol03.jpg
+      - ~Documents/BSC_Readmes/Simgoober/SG RES Vol02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/SG RES Vol01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_SusanBAnthonyBuilding.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_Schmucker House.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_Residentials Vol04.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_Residentials Vol03.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_Residentials Vol02.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_Residentials Vol01.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_PencilTowers.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_Mobile_Homes.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_MarySue.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_ElwoodTower.htm
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_ApartmentBlocks01.htm
+      - Simgoober/Residentials/Susan B Anthony House/STATs_Susan B Anthony House.txt
+      - Simgoober/Residentials/Susan B Anthony House/SG_House_SusanBAnthony_GROW.dat
+      - Simgoober/Residentials/Schmucker House/STATs_Schmucker House.txt
+      - Simgoober/Residentials/Schmucker House/R$$$4_4x3_SG_SchmuckerHouse_72c9ca68.SC4Lot
+      - Simgoober/Residentials/Mary Sue Home/STATs_Mary Sue House.txt
+      - Simgoober/Residentials/Mary Sue Home/R$$5_2x2_SG_Home_MarySue01_9527ab6f.SC4Lot
+      - Simgoober/Residentials/Mary Sue Home/R$$4_3x2_SG_Home_MarySue01_a527aba1.SC4Lot
+      - Simgoober/Residentials/Elwood Tower/STATs_Apartment Block Elwood.txt
+      - Simgoober/Residentials/Elwood Tower/R$8_2x3_SG_ApartmentBlockElwood_0807688b.SC4Lot
+      - Simgoober/Landmarks/WallDoff Hotel/SG_3x3_WallDoff Hotel_Plop.dat
+      - Simgoober/Landmarks/Pencil Towers/PLOP_3x3_SG_ApartmentTower-Musgrave_d795f70a.SC4Lot
+      - Simgoober/Landmarks/Astoria Pointe/SG_5x4_AstoriaPointe_Plop.dat
+      - Simgoober/Landmarks/Schmucker House/SG_3x3_SchmuckerHouse_32c9cad7.SC4Lot
+      - ~Documents/BSC_Readmes/Simgoober/images/Thumbs.db
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_WallDoffApartments_Day2.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_WallDoffApartments_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_SugarPlantation.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_SuburbanCondos_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_SuburbanCondos_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_SmithBlock.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_SepsisCabins_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_SepsisCabins_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_ScuttlebuttRow_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_ScuttlebuttRow_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_SardinaRow_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_SardinaRow_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLS_SuburbanTownhomes_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLS_SuburbanTownhomes_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLS_SmallHomes.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLS_Legacy_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLS_Legacy_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLS_Ashton_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLS_Ashton_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLSHomes_Colonial_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLSHomes_Colonial_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLSHomes_ClaridgePlus.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLSHomes_Claridge01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLSCottages_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_RLSCottages_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_PrincessTower.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_PencilTowers02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_PencilTowers01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_MobileHomes_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_MobileHomes_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_MathewKeenan_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_MathewKeenan_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Katie02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Katie01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Homes_SwedishVilla_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Homes_SwedishVilla_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Homes_SwedishModern02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Homes_SwedishModern01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Homes_HighGrove_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Homes_HighGrove_Day01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_HomesCountry02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_HomesCountry01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Hagerman_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Hagerman_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Greendale02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Greendale01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Emily02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Emily01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Cheriton02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Cheriton01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_BrownStones_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_BrownStones_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_BirkaAddon_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_BirkaAddon_Day.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Berwick02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Berwick01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_BaltimoreTownhomes.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Astoria02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_Astoria01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_ApartmentElwoodTower02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_ApartmentElwoodTower01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_ApartmentBlocks1_02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG_ApartmentBlocks1_01.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG Schmucker-n.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SG Schmucker-d.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SBA_ren.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/SBA_red.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/MarySue_ren.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/MarySue_red.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/logo_header.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/header.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/header.gif
+      - ~Documents/BSC_Readmes/Simgoober/images/footer.gif
+      - ~Documents/BSC_Readmes/Simgoober/images/BSC_SG_EveningTownhomes_Nite.jpg
+      - ~Documents/BSC_Readmes/Simgoober/images/BSC_SG_EveningTownhomes_Day.jpg
+      - Simgoober/Residentials/Apartment Blocks/STATs_Apartment Blocks.txt
+      - Simgoober/Residentials/Apartment Blocks/SG_ApartmentBlocks01_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol04/Walldoff Apartments/STATs_Walldoff Apartments.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol04/Walldoff Apartments/SG_Walldoff_Apartments_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol04/Astoria Pointe Apartments/STATs_Astoria Pointe Apartments.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol04/Astoria Pointe Apartments/SG_AstoriaPointe_Apartments_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol03/The Highgrove/STATs_The Highgrove.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol03/The Highgrove/SG_RLS_Homes_Highgrove_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol03/The Hagerman/STATs_The Hagerman.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol03/The Hagerman/SG_RLS_Homes_Hagerman_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol03/The Colonials/STATs_The Colonial.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol03/The Colonials/SG_RLS_Homes_Colonials_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol03/The Cheriton/STATs_The Cheriton.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol03/The Cheriton/SG_RLS_Homes_Cheriton_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol03/Mathew Keenan Townhomes/STATs_Mathew Keenan Townhomes.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol03/Mathew Keenan Townhomes/SG_MathewKeenan_R$$$_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol03/Plantation Villas/STATs_Sugar Plantation Villas.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol03/Plantation Villas/SG_PlantationVillas_R$$$_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Suburban Townhomes/STATs_Suburban Townhomes.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Suburban Townhomes/SG_RLS_SuburbanTownhomes_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Suburban Condos/STATs_Suburban Condos.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Suburban Condos/SG_SuburbanCondos_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Scuttle Butt Row/STATs_Scuttle Butt Row.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Scuttle Butt Row/SG_ScuttleButtRow_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Evening Townhomes/STATs_Evening Town Homes.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Evening Townhomes/SG_EveningTownHomes_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Sardina Row/STATs_Sardina Row Homes.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Sardina Row/SG_SardinaRow_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Baltimore Swell Front Townhomes/STATs_Baltimore Swell Front Townhomes.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Baltimore Swell Front Townhomes/SG_BaltimoreSwellFrontTownhomes_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Brownstones/STATs_Brownstones.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol02/Brownstones/SG_Brownstones_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Legacy/STATs_The Legacy.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Legacy/SG_RLS_Homes_Legacy_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Cottages/STATs_The Cottages.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Cottages/SG_RLS_Cottages_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Claridge/STATs_The Claridge.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Claridge/SG_RLS_Homes_Claridge_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Birka/STATs_The Birka.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Birka/SG_Homes_Birka_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Berwick/STATs_The Berwick.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Berwick/SG_RLS_Homes_Berwick_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Ashton/STATs_The Ashton.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/The Ashton/SG_RLS_Homes_Ashton_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Suburban Homes/STATs_Suburban Homes.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Suburban Homes/SG_RLS_Homes_Suburban_Homes_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Swedish Modern Homes/STATs_Swedish Modern Homes.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Swedish Modern Homes/SG_Homes_Swedish_Modern_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Swedish Villas/STATs_Swedish Villa Siljan.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Swedish Villas/SG_Homes_Swedish_Villas_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Small Homes/STATs_Small Homes.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Small Homes/SG_Homes_Small_Homes_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Sepsis Cabins/STATs_Sepsis Cabins.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Sepsis Cabins/SG_Homes_Sepsis_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Rachael Anne Cottages/STATs_Rachael Anne Cottages.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Rachael Anne Cottages/SG_RLS_Cottages_RachaelAnne_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Jacobson Cottages/STATs_Jacobson Cottages.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Jacobson Cottages/SG_RLS_Cottages_Jacobson_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Glenn Allen/STATs_Glenn Allen.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Glenn Allen/SG_RLS_Homes_GlennAllen_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Country/STATs_Country.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Country/SG_Homes_Country_GROW.dat
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Ashley River Cottages/STATs_Ashley River Cottages.txt
+      - Simgoober/Residentials/Residential LOT Collection Vol01/Ashley River Cottages/SG_RLS_Cottages_AshleyRiver_GROW.dat
+      - Simgoober/Commercials/Offices/Mathew Keegen Offices/STATs_Mathew Keenan Offices.txt
+      - Simgoober/Commercials/Offices/Mathew Keegen Offices/SG_MathewKeegen_Offices.dat
+      - Simgoober/Civic/Education/Schmucker House Museum/SG SchmuckerHouse Museum_9f64ad09.SC4Lot
+      - Simgoober/Civic/Education/SB Anthony Museum/SG_1x2_Susan B Anthony Museum_65188d8c.SC4Lot
+      - "!CAM/Simgoober/Residentials#/Princess Tower/STATs_Princess Tower.txt"
+      - "!CAM/Simgoober/Residentials#/Princess Tower/SG_PrincessTower_CAM_GROW.dat"
+      - "!CAM/Simgoober/Residentials#/Smith Block/STATs_Smith Block.txt"
+      - "!CAM/Simgoober/Residentials#/Smith Block/SG_SmithBlock_CAM_GROW.dat"
+      - "!CAM/Simgoober/Residentials#/Elwood Tower/STATs_Apartment Block Elwood (CAM).txt"
+      - "!CAM/Simgoober/Residentials#/Elwood Tower/R$9_2x2_SG_ApartmentBlockElwood_d807687a.SC4Lot"
+      - Simgoober/Residentials/Mobile Homes/Sunnydale Park_5x4/STATs_Sunnydale Park.txt
+      - Simgoober/Residentials/Mobile Homes/Sunnydale Park_5x4/SG_MobileHomePark01_R$2_5x4.dat
+      - Simgoober/Residentials/Mobile Homes/NESCO Rollerhomes_5x4/STATs_NESCO Rollerhomes.txt
+      - Simgoober/Residentials/Mobile Homes/NESCO Rollerhomes_5x4/SG_NESCO_Rollerhomes_GROW.dat
+      - Simgoober/Residentials/Mobile Homes/Mobile Homes/STATs_Mobile Homes.txt
+      - Simgoober/Residentials/Mobile Homes/Mobile Homes/SG_MobileHomes_GROW.dat
+      - Simgoober/Residentials/Mobile Homes/House Trailers/STATs_House Trailers.txt
+      - Simgoober/Residentials/Mobile Homes/House Trailers/SG_HouseTrailers_GROW.dat
+      - Simgoober/Residentials/Mobile Homes/Fernelle Manor_5x4/STATs_Fernelle Manor.txt
+      - Simgoober/Residentials/Mobile Homes/Fernelle Manor_5x4/SG_MobileHomePark02_R$2_5x4.dat
+      - Simgoober/Residentials/Mobile Homes/Colony Mobile Home Park_10x10/STATs_Colony Mobile Home Park.txt
+      - Simgoober/Residentials/Mobile Homes/Colony Mobile Home Park_10x10/SG_MobileHomePark01_R$2_10x10.dat
+      - "!CAM/Simgoober/Residentials#/Pencil Towers/Musgrave/STATs_Pencil Towers_Musgrave.txt"
+      - "!CAM/Simgoober/Residentials#/Pencil Towers/Musgrave/SG_ApartmentTowers_Musgrave_GROW.dat"
+      - "!CAM/Simgoober/Residentials#/Pencil Towers/Cumberland/STATs_Pencil Towers_Cumberland.txt"
+      - "!CAM/Simgoober/Residentials#/Pencil Towers/Cumberland/SG_ApartmentTowers_Cumberland_GROW.dat"
+      - "!CAM/Simgoober/Residentials#/Pencil Towers/Atlas/STATs_Pencil Towers_Atlas.txt"
+      - "!CAM/Simgoober/Residentials#/Pencil Towers/Atlas/SG_ApartmentTowers_Atlas_GROW.dat"
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_RLS_Ashton_Day.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG Schmucker-d.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_WallDoffApartments_Day.jpg
     lastModified: 2024-05-01T07:54:12-07:00
     name: SC4D LEX Legacy - BSC SimGoober Residentials
+    sha256: b70f83375275b915fe2f73ed5d7f88c899102022a5ae35e19c144c141680d8c7
+    size: 5315969
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_RLS_Ashton_Day.jpg
+    timestamp: 2024-08-15T09:20:40.206Z
+    uncompressed: 6557046
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/274-sc4d-lex-legacy-bsc-simgoober-residentials
+    version: "1"
   sc4evermore/275-bsc-sg-jenx-parisian-corner-residential:
     authors:
       - SimGoober
     category: 200
-    downloads: 238
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/10-jenxporkie-expanded-porkie-props
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p class=\"textnormal\"><span lang=\"EN-GB\">Using many of those fantastic buildings that <span class=\"SpellE\">Xannepan</span> made, I
+      came up with a series of Residential blocks, for high wealth areas of your cities.<br><br>This package contains LOTS only. The buildings are available in prop packs, listed in the dependency
+      section. If you don't get them, you will <span class=\"SpellE\">simplay</span> see blank lots growing in your city.</span></p>\r
+
+      <p class=\"textnormal\">All the lots have been updated with SC4PIM-X (X-tool), that had effect on occupancy and grow stages. The original lots were Stage 5 R$$$ growables, among the updated lots
+      there are three which still will grow on stage 5, seven will grow on stage 6 and another three will grow on stage 7.</p>\r
+
+      <p class=\"textnormal\">There is a <em>Cleanitol_BSC SG JENX Residentials.txt</em> that will help you to remove the old files. Use any of the third party cleanitol tools:</p>\r
+
+      <p class=\"textnormal\"><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17 SC4 Cleanitol</a></p>\r
+
+      <p class=\"textnormal\"><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\">BSC Cleanitol</a></p>\r
+
+      <h3 style=\"font-weight: 400;\"><strong>LOT DETAILS</strong></h3>\r
+
+      <p style=\"font-weight: 400;\"><strong>Growable</strong><strong> Version :</strong> The growable version of this lot will be built by your Sims when the appropriate zone is provided.</p>\r
+
+      <table width=\"600\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td width=\"150\">\r
+
+      <p>Lot size:</p>\r
+
+      </td>\r
+
+      <td width=\"450\">\r
+
+      <p>4 x 4 tiles (13 lots total), Residential</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Building Style(s):</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>Euro</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Growth Stage:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>5, 6, 7</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Occupants:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>varing bettween 557-780 R§§§</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Bulldoze cost:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>varing between § 950- §1319</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Flammability:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>35</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Power consumption:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>70-98 MWh/month</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Water consumption:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>96-132 Gallons/month</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Air pollution:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>8-11 over 6 tiles</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Water pollution:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>2-3 over 7 tiles</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>\r
+
+      <p>Garbage pollution:</p>\r
+
+      </td>\r
+
+      <td>\r
+
+      <p>4 tons per month</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p> </p>\r
+
+      <h3><strong>INSTALLATION</strong></h3>\r
+
+      <p><b><span lang=\"EN-GB\">Installation:</span></b><span lang=\"EN-GB\"> </span><span lang=\"EN-GB\">Copy/extract the <strong>Simgoober </strong>parent folder into your plugins. If you extracted
+      the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br></span><br><b><span
+      lang=\"EN-GB\">Un-Installing: </span></b><span lang=\"EN-GB\">To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the <span
+      class=\"SpellE\">plugins</span> folder afterwards</span>.</p>\r
+
+      <h3><strong>DEPENDENCIES</strong></h3>\r
+
+      <p style=\"font-weight: 400;\">To ensure the proper functionality, make sure the files mentioned Below are installed in the plugins folder.<br><br><a
+      href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack v9</a> (and
+      above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</p>\r
+
+      <ul style=\"font-weight: 400;\">\r
+
+      <ul style=\"font-weight: 400;\">\r
+
+      <li>BSC Essentials v2024a</li>\r
+
+      <li>BSC MEGA Props JENX Vol01 <b>v4</b></li>\r
+
+      <li>BSC MEGA Props SG Vol01 v4</li>\r
+
+      <li>BSC MEGA Props SWI21 Vol01 v4</li>\r
+
+      <li>BSC MEGA Props D66 Vol01 V3</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul style=\"font-weight: 400;\">\r
+
+      <li>BSC Textures Vol01</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <p><span style=\"font-weight: 400;\"><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\">JENX-Porki Expanded Porkie Props</a></span></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SG_JenxParisHomes01.jpg\" data-lightbox=\"lightbox275\"
+      data-alt=\"lightboxSG_JenxParisHomes01.jpg|SG_JenxParisHomes02\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_JenxParisHomes01.jpg\" alt=\"SG_JenxParisHomes01\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SG_JenxParisHomes02.jpg\" data-lightbox=\"lightbox275\"
+      data-alt=\"lightboxSG_JenxParisHomes01.jpg|SG_JenxParisHomes02\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_JenxParisHomes02.jpg\" alt=\"SG_JenxParisHomes022\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 254
+    filename: BSC SG JENX Parisian Corner Residential.zip
+    files:
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC SG JENX Residentials.txt
+      - ~Documents/BSC_Readmes/Simgoober/Readme_SG_Paris Residentials.htm
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$7_4x4_JENX_ParisBlock13_2f86d049.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$7_4x4_JENX_ParisBlock06_8f86ce3c.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$7_4x4_JENX_ParisBlock05_0f86ce15.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$6_4x4_JENX_ParisBlock12_cf86d007.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$6_4x4_JENX_ParisBlock11_0f86cfd5.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$6_4x4_JENX_ParisBlock10_af86cf9f.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$6_4x4_JENX_ParisBlock09_4f86cf40.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$6_4x4_JENX_ParisBlock08_ef86cede.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$6_4x4_JENX_ParisBlock07_2f86ce7f.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$6_4x4_JENX_ParisBlock04_cf86cde9.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$5_4x4_JENX_ParisBlock03_v2_8f86cdb1.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$5_4x4_JENX_ParisBlock02_v2_cf86cd72.SC4Lot
+      - Simgoober/Residentials/JENX Paris ReLots/R$$$5_4x4_JENX_ParisBlock01_v2_2f86cd32.SC4Lot
+      - ~Documents/BSC_Readmes/Simgoober/imgages/SG_JenxParisHomes02.jpg
+      - ~Documents/BSC_Readmes/Simgoober/imgages/SG_JenxParisHomes01.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_JenxParisHomes01.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_JenxParisHomes02.jpg
     lastModified: 2024-05-02T16:14:31-07:00
     name: BSC SG JENX Parisian Corner Residentials
+    sha256: 36fb5b1bb30b20ac475a3bcc743320ab629d85d8de7d151d9f558f2f35b3d159
+    size: 105382
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SG_JenxParisHomes01.jpg
+    timestamp: 2024-08-15T09:27:03.207Z
+    uncompressed: 207496
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/275-bsc-sg-jenx-parisian-corner-residential
+    version: "1"
   sc4evermore/4-sc4d-lex-legacy-jmyers-homes-pack:
     authors:
       - sc4evermore
@@ -2044,7 +3006,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1271
+    downloads: 1277
     filename: SC4D_LEX_LEGACY_JMyers_Homes_Pack_V1.zip
     files:
       - ~Documents/JMyers Homes Vol 1.html
@@ -2132,7 +3094,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 990
+    downloads: 994
     filename: SC4D_LEX_LEGACY_CP_Early19thCenturyResidentials_Pack_V1.zip
     files:
       - ~Documents/LEX_TenementsMain.jpg
@@ -2396,7 +3358,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1113
+    downloads: 1126
     filename: SC4D_LEX_LEGACY_Mattb325_Residential_Multi-Unit_DarkNite.zip
     files:
       - readme_mattb325_residential_multi-unit.html
@@ -3028,7 +3990,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 958
+    downloads: 965
     filename: SC4D_LEX_LEGACY_Mattb325_Residential_Multi-Unit_MaxisNite.zip
     files:
       - readme_mattb325_residential_multi-unit.html
@@ -3420,4 +4382,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/99-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-maxisnite
     version: "1"
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

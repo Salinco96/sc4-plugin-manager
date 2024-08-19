@@ -1974,7 +1974,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -2521,10 +2533,235 @@ assets:
     authors:
       - VIP Team
     category: 20
+    dependencies:
+      - sc4evermore/21-sc4pim
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<span style="font-size:14px;">This pack contains seasonal plopables plant, and various decorative elements for your landscape. The seasonal props has the S logo. <img alt="logomm11.png" class="ipsImage" src="http://i79.servimg.com/u/f79/14/59/99/73/logomm11.png"></span><br>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Note: For fitting with other seasonal items, props need to be planted the <strong>1st September</strong>. We do not recommand you to use seasonal trees on growable LOTs.<br>
+      	<br>
+      	<span style="color:rgb(255,0,0);">Important</span>  </span><span style="font-size:16px;"><strong><span style="color:rgb(0,128,128);">EDIT</span></strong>:</span><span style="font-size:14px;"> If you download this modd before September 27th 13:00 (GMT +1) you can re-download to get all the icons</span>
+      </p>
+
+
+      <p>
+      	This updated pack contains new seasonal props in the revised prop packs. The files (in the <strong>VIPProps </strong>folder) starting with VIP_Props_ are essential for the proper work of this mod as they contain the necessary model files, but they also contain props that can be used with <a href="https://www.sc4evermore.com/index.php/downloads/download/29-modding-and-creation-tools/21-sc4pim" rel="external nofollow">SC4PIM-X </a>(X-Tool) or Maxis Lot Editor (<abbr title="Lot Editor">LE</abbr>)<br>
+      	<br>
+      	<span style="font-size:14px;">The Pack are included:</span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-size:14px;">Corylus seasonal </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Narcissus seasonal </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Populus seasonal </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">2 pampa grass </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Iris pseudacorus seasonal </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Pteridum Aquilinum seasonal </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Sarothamnus scoparius seasonal </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Nymphaea </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Potamogeton natans </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">2 Arundo donax </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Mossy Rock </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Kayaks </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Boats </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Bathers and Fishermen </span>
+      	</li>
+      	<li>
+      		Cows and cow dung
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Chicken </span>
+      	</li>
+      	<li>
+      		<span style="font-size:14px;">Heron </span>
+      	</li>
+      	<li>
+      		Pigeon - v2 from Rural Pack Expanions
+      	</li>
+      	<li>
+      		Raven - v2 from Rural Pack Expanions
+      	</li>
+      	<li>
+      		seasonal cherry tree - v2 from Rural Pack Expanions
+      	</li>
+      	<li>
+      		other 6 various seasonal trees - v2 from Rural Pack Expanions
+      	</li>
+      	<li>
+      		garbage <abbr title="Mayor Mode Ploppables">MMPs</abbr>
+      	</li>
+      	<li>
+      		seasonally appearing cows
+      	</li>
+      </ul>
+
+
+      <p>
+      	<span style="font-size:14px;">The Plopable props are found near the end of the Mayor Mode Flora menu.<br>
+      	<br>
+      	<span style="color:rgb(0,128,128);"><strong>DEPENDENCIES</strong></span><br>
+      	<br>
+      	<span style="color:rgb(255,0,0);">Important</span> There is one dependency concerning the flora tuning parameters:</span><br>
+      	<br>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/36-lk33-seasonalflorapatch" rel="external nofollow" target="_blank">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> LK33 Terrain Seasonal Flora Patch V2</a><br>
+      	<br>
+      	<span style="font-size:14px;"><span style="color:rgb(0,128,128);"><strong>INSTALLATION</strong></span></span><br>
+      	<br>
+      	<strong>Installation</strong>: Copy/extract the <strong>VIP </strong>parent folder into your plugins. If you extracted the ~Documents folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>
+      	<br>
+      	<strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.<br>
+      	<br>
+      	<span style="font-size:14px;"><span style="color:rgb(0,128,128);"><strong>CREDIT AND FEEDBACK</strong></span><br>
+      	<br>
+      	Models by Ben, Girafe, Orange, Vnaoned. Modding by Badsim.<br>
+      	If you have questions or problems you can leave us a message <a href="https://www.sc4devotion.com/forums/index.php?topic=12695.0" rel="external nofollow">SC4devotion thread</a></span><br>
+      	<img alt="110927120839846488803306.jpg" class="ipsImage" src="http://nsm05.casimages.com/img/2011/09/27/110927120839846488803306.jpg">
+      </p>
+
+
+      <hr>
+
+      <p>
+      	<span style="font-size:12px;"><span style="color:rgb(0,0,255);">Mod Edit:</span> Fixed description BBCode formatting.</span>
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><span style="font-size:12px;"><strong>Updated: 30.01.2024</strong> - updated for Project ZIP - Tyberius06</span></span><br>
+      	<span style="color:#2980b9;"><span style="font-size:12px;"><strong>Updated: 04.02.2024</strong> - further consolidation by merging the Expansion set into this main upload (see changelog below) - Tyberius06</span></span>
+      </p>
+
+      						</body>
+    filename: VIP Rural Pack v2.zip
+    files:
+      - ~Documents/VIP_Readmes/ReadMe VIPRuralPack v2.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/VIP_Rural_Pack_v2-pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/VIP_Rural_Pack_v2-pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_VIP Rural Pack.txt
+      - VIP/VIPProps/VIP_Props_VV_Various_Trees_Seasonal.dat
+      - VIP/VIPProps/VIP_Props_VV_Ravens.dat
+      - VIP/VIPProps/VIP_Props_VV_Pigeons.dat
+      - VIP/VIPProps/VIP_Props_VV_Perso_Pecheurs.dat
+      - VIP/VIPProps/VIP_Props_VV_Perso_Baigneurs.dat
+      - VIP/VIPProps/VIP_Props_VV_Herons.dat
+      - VIP/VIPProps/VIP_Props_VV_Genets_Seasonal.dat
+      - VIP/VIPProps/VIP_Props_VV_Fougeres_Seasonal.dat
+      - VIP/VIPProps/VIP_Props_VV_Cows.dat
+      - VIP/VIPProps/VIP_Props_VV_Chickens.dat
+      - VIP/VIPProps/VIP_Props_VV_Bouses.dat
+      - VIP/VIPProps/VIP_Props_VV_Barques.dat
+      - VIP/VIPProps/VIP_Props_R6_Roseaux_Small.dat
+      - VIP/VIPProps/VIP_Props_R6_Roseaux_Big.dat
+      - VIP/VIPProps/VIP_Props_R6_Rochers.dat
+      - VIP/VIPProps/VIP_Props_R6_Potamot.dat
+      - VIP/VIPProps/VIP_Props_R6_Nenuphars.dat
+      - VIP/VIPProps/VIP_Props_R6_Iris_Des_Marais_Seasonal.dat
+      - VIP/VIPProps/VIP_Props_R6_Herbes_Pampa_Small.dat
+      - VIP/VIPProps/VIP_Props_R6_Herbes_Pampa_Big.dat
+      - VIP/VIPProps/VIP_Props_Or_Populus_Seasonal.dat
+      - VIP/VIPProps/VIP_Props_Or_Narcissus_Seasonal.dat
+      - VIP/VIPProps/VIP_Props_Or_Corylus_Seasonal.dat
+      - VIP/VIPProps/VIP_Props_Man_Cows v2.dat
+      - VIP/VIPProps/VIP_Props_Grfe-R6-VV_Kayaks_And_Zodiacs.dat
+      - VIP/Rural Pack/VIP_Kayaks_And_Zodiacs_MMP.dat
+      - VIP/Rural Pack/VIP_Garbage_MMP.dat
+      - ~Documents/VIP_Readmes/images/VIP_Separator.jpg
+      - ~Documents/VIP_Readmes/images/VIP_RuralPack_R.jpg
+      - ~Documents/VIP_Readmes/images/VIP_RuralPack_L.jpg
+      - ~Documents/VIP_Readmes/images/VIP_RuralPack_Exp_R.jpg
+      - ~Documents/VIP_Readmes/images/VIP_RuralPack_Exp_L.jpg
+      - ~Documents/VIP_Readmes/images/VIP_Banner.jpg
+      - ~Documents/VIP_Readmes/images/VIP_Background_Title.jpg
+      - ~Documents/VIP_Readmes/images/VIP_Background_Table.jpg
+      - ~Documents/VIP_Readmes/images/VIP_Background_Chapter.jpg
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Varioius_Trees_Seasonal_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Ravens_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Pigeons_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Perso_Pecheurs_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Perso_Baigneurs_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Herons_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Genets_Seasonal_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Fougeres_Seasonal_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Cows_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Chickens_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Bouses_MMP.dat
+      - VIP/Rural Pack/Vnaoned/VIP_VV_Barques_MMP.dat
+      - VIP/Rural Pack/R6/VIP_R6_Roseaux_Small_MMP.dat
+      - VIP/Rural Pack/R6/VIP_R6_Roseaux_Big_MMP.dat
+      - VIP/Rural Pack/R6/VIP_R6_Rochers_MMP.dat
+      - VIP/Rural Pack/R6/VIP_R6_Potamot_MMP.dat
+      - VIP/Rural Pack/R6/VIP_R6_Nenuphars_MMP.dat
+      - VIP/Rural Pack/R6/VIP_R6_Iris_Des_Marais_Seasonal_MMP.dat
+      - VIP/Rural Pack/R6/VIP_R6_Herbes_Pampa_Small_MMP.dat
+      - VIP/Rural Pack/R6/VIP_R6_Herbes_Pampa_Big_MMP.dat
+      - VIP/Rural Pack/Orange/VIP_Or_Populus_Seasonal_MMP.dat
+      - VIP/Rural Pack/Orange/VIP_Or_Narcissus_Seasonal_MMP.dat
+      - VIP/Rural Pack/Orange/VIP_Or_Corylus_Seasonal_MMP.dat
+      - VIP/Rural Pack/Manchou/VIP_Man_Cows_Seasonal_MMP.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_09_2011/83efce19914a0839f44897e772c39146-imagelexruralpack.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2011/8cd557cdab17f72b420035626b280e8b-imagedepresentation1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2011/a0af8df9ca83196f936be48071380ce6-img2.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/VIP_RuralPack_Exp_L.jpg.e6d7cbe0b6cf50e377aea408831d1596.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/VIP_RuralPack_Exp_R.jpg.622abddd465405a802e98c78582c9b7d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/65bf71f486a7a_VIPRuralExp-main.jpg.1ae24f09fe6bf1a7193f784710967875.jpg
     lastModified: 2024-02-04T11:22:34Z
     name: VIP Rural Pack v2
+    sha256: 9c19071030b54720904835d88952b42315c950ea62c911231411865f3e0d8543
+    size: 9257973
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2011/thumb-83efce19914a0839f44897e772c39146-imagelexruralpack.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 12426871
     url: https://community.simtropolis.com/files/file/26806-vip-rural-pack-v2/
+    version: "2.0"
   simtropolis/26807-vip-aubracwallmmp:
     authors:
       - VIP Team
@@ -4179,18 +4416,990 @@ assets:
     authors:
       - rsc204
     category: 20
+    dependencies:
+      - simtropolis/30896-mgb-terrain-grass-nam-tgn-for-lowkee-appalachian
+      - simtropolis/30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean
+      - simtropolis/30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+      - simtropolis/29797-mgb-diagonal-filler-set
+      - simtropolis/26923-paengs-parks-revisited
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	This mod replaces the grass textures on transport networks with grass that blends in with your terrain mod.
+      </p>
+
+
+      <p style="text-align:center;">
+      	<strong>Gobias' Berner Oberland (BO/BOu) Versions</strong><br>
+      	<em><span style="color:rgb(255,165,0);">Click these links to download either the <a href="https://community.simtropolis.com/files/file/30896-mgb-terrain-grass-nam-tgn-for-lowkee-appalachian/" rel="">Appalachian</a>, <a href="https://community.simtropolis.com/files/file/30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean/" rel="">Pyrenean</a> or <a href="https://community.simtropolis.com/files/file/30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley/" rel="">Sudden Valley</a> versions of <abbr title="Terrain Grass NAM">TGN</abbr>.</span></em>
+      </p>
+
+
+      <p style="text-align:center;">
+      	 <span style="color:rgb(255,0,0);"><strong>When you click download on this page, you will be required to select ONE of TWO files:</strong></span>
+      </p>
+
+
+      <p style="text-align:center;">
+      	The default multi-wealth "<span style="color:#ff0000;">MGB <abbr title="Terrain Grass NAM">TGN</abbr> #.## - BO Setup</span>" or unified wealth "<span style="color:#ff0000;">MGB <abbr title="Terrain Grass NAM">TGN</abbr> #.## - BO Unified Wealth Setup</span>" variant.
+      </p>
+
+
+      <p>
+      	Multi-wealth has three grass types, one for each wealth used in-game, $, $$ and $$$. Whereas the unified versions use the same $$ wealth grass texture for all three wealths. Perfect for creating a hassle-free, totally unified set of transport textures. Avoiding the problem of matching up different wealth grasses forever :).
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This mod is packaged as a Windows .exe installer. For those that would prefer not/are unable to use an Installer, the NSIS installer files can be opened with 7zip or a similar application. If you wish to do this, you will have to manually setup the folder/file structure with the correct individual files within the archive.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	Please refer to the installed documentation for further details, note these files are installed here:
+      </p>
+
+
+      <p style="margin-left:80px;">
+      	<span style="color:#f39c12;"><em>My Documents</em></span><span style="color:#0000ff;">\SimCity 4\LEX_Downloads\MGB Mods</span>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This is to avoid cluttering up your Plugins folders with non-<abbr title="SimCity 4">SC4</abbr> files.
+      </p>
+
+
+      <p>
+      	<b>De-Coupling Rail Crossing and Street Textures</b>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	When installing <abbr title="Terrain Grass NAM">TGN</abbr>, you can de-select both the Rail Crossing Textures and Maxis Street Textures. These options exist, so users with other mods for those features, will no have issues when installing <abbr title="Terrain Grass NAM">TGN</abbr>, even if <abbr title="Terrain Grass NAM">TGN</abbr> loads after them.
+      </p>
+
+
+      <ul style="margin-left:80px;">
+      	<li>
+      		The Rail Crossing Textures should be de-selected if you are using the <abbr title="RealRailway">RRW</abbr> Reskin mod.
+      	</li>
+      	<li>
+      		The Maxis Street Textures should be de-selected if you do not use the default Maxis Streets.<br>
+      		For example, if you use Tarkus’ Asphalt Streets or Rivit’s Urban TSR Streets.
+      	</li>
+      </ul>
+
+
+      <p style="margin-left:40px;">
+      	<strong><span style="color:#353535;font-size:10.5pt;">Note</span></strong><span style="color:#353535;font-size:10.5pt;"><span>: No <abbr title="Terrain Grass NAM">TGN</abbr> support is included for such optional custom textures, you need to get <abbr title="Terrain Grass NAM">TGN</abbr> compatible versions from elsewhere, or those networks will remain with the default grasses. This feature simply allows you to prevent <abbr title="Terrain Grass NAM">TGN</abbr> from conflicting with them, by simply not installing any Street textures.</span> <a href="https://community.simtropolis.com/forums/topic/73260-texture-automation/?do=findComment&amp;comment=1665066" rel="">See here for details</a> of how to create your own <abbr title="Terrain Grass NAM">TGN</abbr> compatible versions of many texture mods.</span>
+      </p>
+
+
+      <p>
+      	<meta charset="UTF-8">
+      </p>
+
+
+      <p style="color:#353535; font-size:14px; text-align:start">
+      	<strong>Compatibility / Dependencies</strong>
+      </p>
+
+
+      <p style="color: rgb(53, 53, 53); font-size: 14px; text-align: start; margin-left: 40px;">
+      	This mod is designed for either the US or EU Cosmetic ReTexture mod in the<span> </span><abbr style="border-bottom-style:none" title="Network Addon Mod">NAM</abbr>. Both<span> </span><abbr style="border-bottom-style:none" title="Right Hand Drive">RHD</abbr><span> </span>and<span> </span><abbr style="border-bottom-style:none" title="Left Hand Drive">LHD </abbr>textures are supported. Additionally you can select from three rail types,<span> </span><abbr style="border-bottom-style:none" title="RealRailway">RRW</abbr><span> </span>(Real Railway -<span> </span><abbr style="border-bottom-style:none" title="Network Addon Mod">NAM </abbr>Default) or legacy Maxis/<abbr style="border-bottom-style:none" title="Pegasus">PEG</abbr><span> </span>styles. Coverage for all<span> </span><abbr style="border-bottom-style:none" title="Network Addon Mod">NAM</abbr><span> </span>road networks excluding<span> </span><abbr style="border-bottom-style:none" title="Real Highway Mod"><abbr style="border-bottom-style:none" title="RealHighway">RHW</abbr></abbr>.
+      </p>
+
+
+      <p style="color: rgb(53, 53, 53); font-size: 14px; text-align: start; margin-left: 40px;">
+      	There are technically no dependencies for this mod, the base changes are suitable for use with the vanilla game. However I highly recommend using it in conjunction with the Terrain Mod it was made for and the latest version of the Network Addon Mod.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	<em>Highly Recommended:</em>
+      </p>
+
+
+      <ul style="margin-left:40px;">
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-nam-cross-platform/" rel="">Network Addon Mod</a>.
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2834" rel="external nofollow">Gobias Berner Oberland HD Terrain Mod</a><br>
+      		<strong>Note</strong>: You should install the "Base Texture Replacer" from this package.
+      	</li>
+      	<li>
+      		My <a href="https://community.simtropolis.com/files/file/29797-mgb-diagonal-filler-set/" rel=""><font color="#0066cc">MGB Diagonal Filler Set</font></a>.
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/26923-paengs-parks-revisited/" rel=""><font color="#0066cc">Paeng's Parks 205</font></a>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Help make this mod better</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	Found a missing or unsupported texture? Having problems or Got comments? Then why not visit my thread at either SC4D (<a href="https://www.sc4devotion.com/forums/index.php?topic=16939.0" rel="external nofollow"><span style="color:#0066cc;">MGB's Mods and other stuff</span></a>) or Simtropolis (<a href="https://community.simtropolis.com/forums/topic/64116-mgb-lot-and-mod-shack/" rel=""><span style="color:#0066cc;">MGB's Lot and Mod Shack</span></a>)?
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#353535;font-size:10.5pt;">I would like to say a big thank you to the following people</span></strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Rivit, for the huge support and tools that made this mod possible in the first place.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Memo, for the original tools. Without which, I would never have embarked upon such a project in the first place.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Flann, for greatly helping me cope with the current deluge of textures by passing me updates directly.</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong><span style="color:#353535;font-size:10.5pt;">Notes:</span></strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">This mod is pretty comprehensive, with much more detailed textures. Be aware at over 100MB you may find your game loading slower with these installed. In-game performance should not be affected though.<br>
+      		Since every included texture is an override of an existing <abbr style="border-bottom:none;" title="Network Addon Mod">NAM</abbr> one, DATPacking <abbr title="Terrain Grass NAM">TGN</abbr> and the <abbr style="border-bottom:none;" title="Network Addon Mod">NAM</abbr> (Network Addon Mod) folder together will make your game startup faster. Be sure the structure you DATPack will ensure <abbr title="Terrain Grass NAM">TGN</abbr> loads last if you attempt this.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Whilst the mod is designed to compliment HD Terrain Mods, none of the included textures are themselves so-called HD. All are standard 128x128 textures and will run with software rendering. Bear in mind though that Hardware rending is required to use a HD Terrain mod in the first place.</span>
+      	</li>
+      </ul>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_01/5686c205ac955_BO-Wherethisstarted.jpg.d8ddaf6279929b3e65725649304b3595.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_01/5686c20abe584_BOUS-CoastalHousing.jpg.cca4062f067bcf6ad8de94ae28ff4441.jpg
     lastModified: 2022-11-27T07:10:07Z
     name: MGB - Terrain Grass NAM (TGN) for Gobias Berner Oberland
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_01/5686c23ac9d2c_BO-Wherethisstarted.thumb.jpg.f85f40e81ea8c0fd75a04881e6bea124.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/30159-mgb-terrain-grass-nam-tgn-for-gobias-berner-oberland/
+    variants:
+      "195716":
+        filename: MGB TGN 2.45 - BO Setup.exe
+        files:
+          - TGN S3D Textures.dat
+          - TGN Parks 205 Override.dat
+          - TGN Mntoes HFC Override.dat
+          - TGN Diag Filler Override.dat
+          - TGN BSC Vol1-3 Override.dat
+          - 5 - Rail Textures/TGN SAM-9 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-9 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-9 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-7 RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-6 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-6 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-6 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-10 RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN OWR RRW Crossings.dat
+          - 5 - Rail Textures/TGN OWR PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN OWR Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN Maxis Street RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN GLR Crossings - US.dat
+          - 5 - Rail Textures/TGN GLR Crossings - EU.dat
+          - 5 - Rail Textures/TGN Ave RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Ave PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - LHD.dat
+          - 3 - Maxis Street/zoption_TGN Maxis Street CullDeSac Patch.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-9.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-8.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-7.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-6.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-5.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-4.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-3.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-2.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-11 - US.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-11 - EU.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-10.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-1.dat
+          - 3 - Maxis Street/TGN Maxis Street Roundabouts - US.dat
+          - 3 - Maxis Street/TGN Maxis Street Roundabouts - EU.dat
+          - 3 - Maxis Street/TGN Maxis Street - US.dat
+          - 3 - Maxis Street/TGN Maxis Street - EU.dat
+          - 2 - SAM/zoption_TGN SAM-7 CullDeSac Patch.dat
+          - 2 - SAM/TGN SAM-9 - US.dat
+          - 2 - SAM/TGN SAM-9 - EU.dat
+          - 2 - SAM/TGN SAM-8 - US.dat
+          - 2 - SAM/TGN SAM-8 - EU.dat
+          - 2 - SAM/TGN SAM-7 - US.dat
+          - 2 - SAM/TGN SAM-7 - EU.dat
+          - 2 - SAM/TGN SAM-6 - US.dat
+          - 2 - SAM/TGN SAM-6 - EU.dat
+          - 2 - SAM/TGN SAM-5 - US.dat
+          - 2 - SAM/TGN SAM-5 - EU.dat
+          - 2 - SAM/TGN SAM-4 - US.dat
+          - 2 - SAM/TGN SAM-4 - EU.dat
+          - 2 - SAM/TGN SAM-3 - US.dat
+          - 2 - SAM/TGN SAM-3 - EU.dat
+          - 2 - SAM/TGN SAM-2 - US.dat
+          - 2 - SAM/TGN SAM-2 - EU.dat
+          - 2 - SAM/TGN SAM-11 - US.dat
+          - 2 - SAM/TGN SAM-11 - EU.dat
+          - 2 - SAM/TGN SAM-10 - US.dat
+          - 2 - SAM/TGN SAM-10 - EU.dat
+          - 2 - SAM/TGN SAM-1.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN Zebra Crossings Patch - EU.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - US.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Road WRCs - US.dat
+          - 1 - Maxis & Basic NAM/TGN Road WRCs - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Road RTL - EU RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Road RTL - EU LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Road - US.dat
+          - 1 - Maxis & Basic NAM/TGN Road - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Pedmalls.dat
+          - 1 - Maxis & Basic NAM/TGN PedCrosswalks - US.dat
+          - 1 - Maxis & Basic NAM/TGN PedCrosswalks - EU.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - US RHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - US LHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - EU RHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - EU LHD.dat
+          - 1 - Maxis & Basic NAM/TGN NWM Grass.dat
+          - 1 - Maxis & Basic NAM/TGN GLR Alt Drag.dat
+          - 1 - Maxis & Basic NAM/TGN FTL - US.dat
+          - 1 - Maxis & Basic NAM/TGN FTL - EU.dat
+          - 1 - Maxis & Basic NAM/TGN FLUPs.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL - RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL - LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave - US.dat
+          - 1 - Maxis & Basic NAM/TGN Ave - EU.dat
+          - $PLUGINSDIR/System.dll
+          - $PLUGINSDIR/Roadtype.bmp
+          - $PLUGINSDIR/RailTexture.bmp
+          - $PLUGINSDIR/nsDialogs.dll
+          - $PLUGINSDIR/modern-wizard.bmp
+          - $PLUGINSDIR/modern-header.bmp
+          - $PLUGINSDIR/DrivingSide.bmp
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/MGB TGN Readme.htm
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_3.jpg
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_2.jpg
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_1.jpg
+        sha256: 2589e8b260242ea6c2c16d13501b88239e4b1ba9938e0727508f9668ed73acc4
+        size: 75235562
+      "195717":
+        filename: MGB TGN 2.45 - BO Unified Wealth Setup.exe
+        files:
+          - TGN S3D Textures.dat
+          - TGN Parks 205 Override.dat
+          - TGN Mntoes HFC Override.dat
+          - TGN Diag Filler Override.dat
+          - TGN BSC Vol1-3 Override.dat
+          - 5 - Rail Textures/TGN SAM-9 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-9 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-9 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-7 RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-6 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-6 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-6 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-10 RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN OWR RRW Crossings.dat
+          - 5 - Rail Textures/TGN OWR PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN OWR Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN Maxis Street RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN GLR Crossings - US.dat
+          - 5 - Rail Textures/TGN GLR Crossings - EU.dat
+          - 5 - Rail Textures/TGN Ave RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Ave PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - LHD.dat
+          - 3 - Maxis Street/zoption_TGN Maxis Street CullDeSac Patch.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-9.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-8.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-7.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-6.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-5.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-4.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-3.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-2.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-11 - US.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-11 - EU.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-10.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-1.dat
+          - 3 - Maxis Street/TGN Maxis Street Roundabouts - US.dat
+          - 3 - Maxis Street/TGN Maxis Street Roundabouts - EU.dat
+          - 3 - Maxis Street/TGN Maxis Street - US.dat
+          - 3 - Maxis Street/TGN Maxis Street - EU.dat
+          - 2 - SAM/zoption_TGN SAM-7 CullDeSac Patch.dat
+          - 2 - SAM/TGN SAM-9 - US.dat
+          - 2 - SAM/TGN SAM-9 - EU.dat
+          - 2 - SAM/TGN SAM-8 - US.dat
+          - 2 - SAM/TGN SAM-8 - EU.dat
+          - 2 - SAM/TGN SAM-7 - US.dat
+          - 2 - SAM/TGN SAM-7 - EU.dat
+          - 2 - SAM/TGN SAM-6 - US.dat
+          - 2 - SAM/TGN SAM-6 - EU.dat
+          - 2 - SAM/TGN SAM-5 - US.dat
+          - 2 - SAM/TGN SAM-5 - EU.dat
+          - 2 - SAM/TGN SAM-4 - US.dat
+          - 2 - SAM/TGN SAM-4 - EU.dat
+          - 2 - SAM/TGN SAM-3 - US.dat
+          - 2 - SAM/TGN SAM-3 - EU.dat
+          - 2 - SAM/TGN SAM-2 - US.dat
+          - 2 - SAM/TGN SAM-2 - EU.dat
+          - 2 - SAM/TGN SAM-11 - US.dat
+          - 2 - SAM/TGN SAM-11 - EU.dat
+          - 2 - SAM/TGN SAM-10 - US.dat
+          - 2 - SAM/TGN SAM-10 - EU.dat
+          - 2 - SAM/TGN SAM-1.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN Zebra Crossings Patch - EU.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - US.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Road WRCs - US.dat
+          - 1 - Maxis & Basic NAM/TGN Road WRCs - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Road RTL - EU RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Road RTL - EU LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Road - US.dat
+          - 1 - Maxis & Basic NAM/TGN Road - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Pedmalls.dat
+          - 1 - Maxis & Basic NAM/TGN PedCrosswalks - US.dat
+          - 1 - Maxis & Basic NAM/TGN PedCrosswalks - EU.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - US RHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - US LHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - EU RHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - EU LHD.dat
+          - 1 - Maxis & Basic NAM/TGN NWM Grass.dat
+          - 1 - Maxis & Basic NAM/TGN GLR Alt Drag.dat
+          - 1 - Maxis & Basic NAM/TGN FTL - US.dat
+          - 1 - Maxis & Basic NAM/TGN FTL - EU.dat
+          - 1 - Maxis & Basic NAM/TGN FLUPs.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL - RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL - LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave - US.dat
+          - 1 - Maxis & Basic NAM/TGN Ave - EU.dat
+          - $PLUGINSDIR/System.dll
+          - $PLUGINSDIR/Roadtype.bmp
+          - $PLUGINSDIR/RailTexture.bmp
+          - $PLUGINSDIR/nsDialogs.dll
+          - $PLUGINSDIR/modern-wizard.bmp
+          - $PLUGINSDIR/modern-header.bmp
+          - $PLUGINSDIR/DrivingSide.bmp
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/MGB TGN Readme.htm
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_3.jpg
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_2.jpg
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_1.jpg
+        sha256: ca73d567b14320ccf34abbc27c62b05b9af9ce8d152a565bf38aa15b62a8afb2
+        size: 68131601
+    version: "2.45"
   simtropolis/30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley:
     authors:
       - rsc204
     category: 20
+    dependencies:
+      - simtropolis/30896-mgb-terrain-grass-nam-tgn-for-lowkee-appalachian
+      - simtropolis/30159-mgb-terrain-grass-nam-tgn-for-gobias-berner-oberland
+      - simtropolis/30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+      - simtropolis/29797-mgb-diagonal-filler-set
+      - simtropolis/26923-paengs-parks-revisited
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	This mod replaces the grass textures on transport networks with grass that blends in with your terrain mod.
+      </p>
+
+
+      <p style="text-align:center;">
+      	<strong>Gobias' Sudden Valley (SV/SVu) Versions</strong><br>
+      	<em><span style="color:rgb(255,165,0);">Click these links to download either the <a href="https://community.simtropolis.com/files/file/30896-mgb-terrain-grass-nam-tgn-for-lowkee-appalachian/" rel="">Appalachian</a>, <a href="https://community.simtropolis.com/files/file/30159-mgb-terrain-grass-nam-tgn-for-gobias-berner-oberland/" rel="">Berner Oberland</a> or <a href="https://community.simtropolis.com/files/file/30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean/" rel="">Pyrenean</a> versions of <abbr title="Terrain Grass NAM">TGN</abbr>.</span></em>
+      </p>
+
+
+      <p style="text-align:center;">
+      	 <span style="color:rgb(255,0,0);"><strong>When you click download on this page, you will be required to select ONE of TWO files:</strong></span>
+      </p>
+
+
+      <p style="text-align:center;">
+      	The default multi-wealth "<span style="color:#ff0000;">MGB <abbr title="Terrain Grass NAM">TGN</abbr> #.## - SV Setup</span>" or unified wealth "<span style="color:#ff0000;">MGB <abbr title="Terrain Grass NAM">TGN</abbr> #.## - SV Unified Wealth Setup</span>" variant.
+      </p>
+
+
+      <p>
+      	Multi-wealth has three grass types, one for each wealth used in-game, $, $$ and $$$. Whereas the unified versions use the same $$ wealth grass texture for all three wealths. Perfect for creating a hassle-free, totally unified set of transport textures. Avoiding the problem of matching up different wealth grasses forever :).
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This mod is packaged as a Windows .exe installer. For those that would prefer not/are unable to use an Installer, the NSIS installer files can be opened with 7zip or a similar application. If you wish to do this, you will have to manually setup the folder/file structure with the correct individual files within the archive.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	Please refer to the installed documentation for further details, note these files are installed here:
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	<span style="color:#f39c12;"><em>My Documents</em></span><span style="color:#0000ff;">\SimCity 4\LEX_Downloads\MGB Mods</span>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This is to avoid cluttering up your Plugins folders with non-<abbr title="SimCity 4">SC4</abbr> files.
+      </p>
+
+
+      <p>
+      	<b>De-Coupling Rail Crossing and Street Textures</b>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	When installing <abbr title="Terrain Grass NAM">TGN</abbr>, you can de-select both the Rail Crossing Textures and Maxis Street Textures. These options exist, so users with other mods for those features, will no have issues when installing <abbr title="Terrain Grass NAM">TGN</abbr>, even if <abbr title="Terrain Grass NAM">TGN</abbr> loads after them.
+      </p>
+
+
+      <ul style="margin-left:40px;">
+      	<li style="margin-left:40px;">
+      		The Rail Crossing Textures should be de-selected if you are using the <abbr title="RealRailway">RRW</abbr> Reskin mod.
+      	</li>
+      	<li style="margin-left:40px;">
+      		The Maxis Street Textures should be de-selected if you do not use the default Maxis Streets.<br>
+      		For example, if you use Tarkus’ Asphalt Streets or Rivit’s Urban TSR Streets.
+      	</li>
+      </ul>
+
+
+      <p style="margin-left:40px;">
+      	<strong><span style="color:#353535;font-size:10.5pt;">Note</span></strong><span style="color:#353535;font-size:10.5pt;"><span>: No <abbr title="Terrain Grass NAM">TGN</abbr> support is included for such optional custom textures, you need to get <abbr title="Terrain Grass NAM">TGN</abbr> compatible versions from elsewhere, or those networks will remain with the default grasses. This feature simply allows you to prevent <abbr title="Terrain Grass NAM">TGN</abbr> from conflicting with them, by simply not installing any Street textures.</span> <a href="https://community.simtropolis.com/forums/topic/73260-texture-automation/?do=findComment&amp;comment=1665066" rel="">See here for details</a> of how to create your own <abbr title="Terrain Grass NAM">TGN</abbr> compatible versions of many texture mods.</span>
+      </p>
+
+
+      <p>
+      	<meta charset="UTF-8">
+      </p>
+
+
+      <p style="color:#353535; font-size:14px; text-align:start">
+      	<strong>Compatibility / Dependencies</strong>
+      </p>
+
+
+      <p style="color: rgb(53, 53, 53); font-size: 14px; text-align: start; margin-left: 40px;">
+      	This mod is designed for either the US or EU Cosmetic ReTexture mod in the<span> </span><abbr style="border-bottom-style:none" title="Network Addon Mod">NAM</abbr>. Both<span> </span><abbr style="border-bottom-style:none" title="Right Hand Drive">RHD</abbr><span> </span>and<span> </span><abbr style="border-bottom-style:none" title="Left Hand Drive">LHD </abbr>textures are supported. Additionally you can select from three rail types,<span> </span><abbr style="border-bottom-style:none" title="RealRailway">RRW</abbr><span> </span>(Real Railway -<span> </span><abbr style="border-bottom-style:none" title="Network Addon Mod">NAM </abbr>Default) or legacy Maxis/<abbr style="border-bottom-style:none" title="Pegasus">PEG</abbr><span> </span>styles. Coverage for all<span> </span><abbr style="border-bottom-style:none" title="Network Addon Mod">NAM</abbr><span> </span>road networks excluding<span> </span><abbr style="border-bottom-style:none" title="Real Highway Mod"><abbr style="border-bottom-style:none" title="RealHighway">RHW</abbr></abbr>.
+      </p>
+
+
+      <p style="color: rgb(53, 53, 53); font-size: 14px; text-align: start; margin-left: 40px;">
+      	There are technically no dependencies for this mod, the base changes are suitable for use with the vanilla game. However I highly recommend using it in conjunction with the Terrain Mod it was made for and the latest version of the Network Addon Mod.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	<em>Highly Recommended:</em>
+      </p>
+
+
+      <ul style="margin-left:80px;">
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-nam-cross-platform/" rel="">Network Addon Mod</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2867" rel="external nofollow">Gobias Sudden Valley HD Terrain Mod</a><br>
+      		<strong>Note</strong>: You should install the "Base Texture Replacer" from this package.
+      	</li>
+      	<li>
+      		My <a href="https://community.simtropolis.com/files/file/29797-mgb-diagonal-filler-set/" rel=""><font color="#0066cc">MGB Diagonal Filler Set</font></a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/26923-paengs-parks-revisited/" rel=""><font color="#0066cc">Paeng's Parks 205</font></a>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Help make this mod better</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	Found a missing or unsupported texture? Having problems or Got comments? Then why not visit my thread at either SC4D (<a href="https://www.sc4devotion.com/forums/index.php?topic=16939.0" rel="external nofollow"><span style="color:#0066cc;">MGB's Mods and other stuff</span></a>) or Simtropolis (<a href="https://community.simtropolis.com/forums/topic/64116-mgb-lot-and-mod-shack/" rel=""><span style="color:#0066cc;">MGB's Lot and Mod Shack</span></a>)?
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#353535;font-size:10.5pt;">I would like to say a big thank you to the following people</span></strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Rivit, for the huge support and tools that made this mod possible in the first place.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Memo, for the original tools. Without which, I would never have embarked upon such a project in the first place.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Flann, for greatly helping me cope with the current deluge of textures by passing me updates directly.</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong><span style="color:#353535;font-size:10.5pt;">Notes:</span></strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">This mod is pretty comprehensive, with much more detailed textures. Be aware at over 100MB you may find your game loading slower with these installed. In-game performance should not be affected though.<br>
+      		Since every included texture is an override of an existing <abbr style="border-bottom:none;" title="Network Addon Mod">NAM</abbr> one, DATPacking <abbr title="Terrain Grass NAM">TGN</abbr> and the <abbr style="border-bottom:none;" title="Network Addon Mod">NAM</abbr> (Network Addon Mod) folder together will make your game startup faster. Be sure the structure you DATPack will ensure <abbr title="Terrain Grass NAM">TGN</abbr> loads last if you attempt this.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Whilst the mod is designed to compliment HD Terrain Mods, none of the included textures are themselves so-called HD. All are standard 128x128 textures and will run with software rendering. Bear in mind though that Hardware rending is required to use a HD Terrain mod in the first place.</span>
+      	</li>
+      </ul>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_01/TGN_SV2.jpg.7fcf8ef4b2f2ad0684f437410edddefb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_01/TGN_SV1.jpg.236bd195a1083fdd55007dbd549aa5c4.jpg
     lastModified: 2022-11-27T21:57:28Z
     name: MGB - Terrain Grass NAM (TGN) for Gobias Sudden Valley
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_01/TGN_SV2.thumb.jpg.82256100c8ef1a354cdb525b56ee1cec.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley/
+    variants:
+      "195731":
+        filename: MGB TGN 2.45 - SV Setup.exe
+        files:
+          - TGN S3D Textures.dat
+          - TGN Parks 205 Override.dat
+          - TGN Mntoes HFC Override.dat
+          - TGN Diag Filler Override.dat
+          - TGN BSC Vol1-3 Override.dat
+          - 5 - Rail Textures/TGN SAM-9 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-9 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-9 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-7 RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-6 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-6 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-6 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-10 RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN OWR RRW Crossings.dat
+          - 5 - Rail Textures/TGN OWR PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN OWR Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN Maxis Street RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN GLR Crossings - US.dat
+          - 5 - Rail Textures/TGN GLR Crossings - EU.dat
+          - 5 - Rail Textures/TGN Ave RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Ave PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - LHD.dat
+          - 3 - Maxis Street/zoption_TGN Maxis Street CullDeSac Patch.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-9.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-8.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-7.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-6.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-5.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-4.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-3.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-2.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-11 - US.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-11 - EU.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-10.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-1.dat
+          - 3 - Maxis Street/TGN Maxis Street Roundabouts - US.dat
+          - 3 - Maxis Street/TGN Maxis Street Roundabouts - EU.dat
+          - 3 - Maxis Street/TGN Maxis Street - US.dat
+          - 3 - Maxis Street/TGN Maxis Street - EU.dat
+          - 2 - SAM/zoption_TGN SAM-7 CullDeSac Patch.dat
+          - 2 - SAM/TGN SAM-9 - US.dat
+          - 2 - SAM/TGN SAM-9 - EU.dat
+          - 2 - SAM/TGN SAM-8 - US.dat
+          - 2 - SAM/TGN SAM-8 - EU.dat
+          - 2 - SAM/TGN SAM-7 - US.dat
+          - 2 - SAM/TGN SAM-7 - EU.dat
+          - 2 - SAM/TGN SAM-6 - US.dat
+          - 2 - SAM/TGN SAM-6 - EU.dat
+          - 2 - SAM/TGN SAM-5 - US.dat
+          - 2 - SAM/TGN SAM-5 - EU.dat
+          - 2 - SAM/TGN SAM-4 - US.dat
+          - 2 - SAM/TGN SAM-4 - EU.dat
+          - 2 - SAM/TGN SAM-3 - US.dat
+          - 2 - SAM/TGN SAM-3 - EU.dat
+          - 2 - SAM/TGN SAM-2 - US.dat
+          - 2 - SAM/TGN SAM-2 - EU.dat
+          - 2 - SAM/TGN SAM-11 - US.dat
+          - 2 - SAM/TGN SAM-11 - EU.dat
+          - 2 - SAM/TGN SAM-10 - US.dat
+          - 2 - SAM/TGN SAM-10 - EU.dat
+          - 2 - SAM/TGN SAM-1.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN Zebra Crossings Patch - EU.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - US.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Road WRCs - US.dat
+          - 1 - Maxis & Basic NAM/TGN Road WRCs - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Road RTL - EU RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Road RTL - EU LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Road - US.dat
+          - 1 - Maxis & Basic NAM/TGN Road - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Pedmalls.dat
+          - 1 - Maxis & Basic NAM/TGN PedCrosswalks - US.dat
+          - 1 - Maxis & Basic NAM/TGN PedCrosswalks - EU.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - US RHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - US LHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - EU RHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - EU LHD.dat
+          - 1 - Maxis & Basic NAM/TGN NWM Grass.dat
+          - 1 - Maxis & Basic NAM/TGN GLR Alt Drag.dat
+          - 1 - Maxis & Basic NAM/TGN FTL - US.dat
+          - 1 - Maxis & Basic NAM/TGN FTL - EU.dat
+          - 1 - Maxis & Basic NAM/TGN FLUPs.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL - RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL - LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave - US.dat
+          - 1 - Maxis & Basic NAM/TGN Ave - EU.dat
+          - $PLUGINSDIR/System.dll
+          - $PLUGINSDIR/Roadtype.bmp
+          - $PLUGINSDIR/RailTexture.bmp
+          - $PLUGINSDIR/nsDialogs.dll
+          - $PLUGINSDIR/modern-wizard.bmp
+          - $PLUGINSDIR/modern-header.bmp
+          - $PLUGINSDIR/DrivingSide.bmp
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/MGB TGN Readme.htm
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_3.jpg
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_2.jpg
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_1.jpg
+        sha256: c0914cba41aac597e2e7d46e525943191fc0ab493cff9e8eea5ee512767d949c
+        size: 77276249
+      "195732":
+        filename: MGB TGN 2.45 - SV Unified Wealth Setup.exe
+        files:
+          - TGN S3D Textures.dat
+          - TGN Parks 205 Override.dat
+          - TGN Mntoes HFC Override.dat
+          - TGN Diag Filler Override.dat
+          - TGN BSC Vol1-3 Override.dat
+          - 5 - Rail Textures/TGN SAM-9 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-9 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-9 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-8 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-7 RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-6 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-6 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-6 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-5 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-4 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-3 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 RRW Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-2 Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN SAM-10 RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road RRW Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US RHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US LHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU RHD.dat
+          - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU LHD.dat
+          - 5 - Rail Textures/TGN OWR RRW Crossings.dat
+          - 5 - Rail Textures/TGN OWR PEG Rail Crossings.dat
+          - 5 - Rail Textures/TGN OWR Maxis Rail Crossings.dat
+          - 5 - Rail Textures/TGN Maxis Street RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN GLR Crossings - US.dat
+          - 5 - Rail Textures/TGN GLR Crossings - EU.dat
+          - 5 - Rail Textures/TGN Ave RRW Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave RRW Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Ave PEG Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave PEG Rail Crossings - LHD.dat
+          - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - RHD.dat
+          - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - LHD.dat
+          - 2 - SAM/zoption_TGN SAM-7 CullDeSac Patch.dat
+          - 2 - SAM/TGN SAM-9 - US.dat
+          - 2 - SAM/TGN SAM-9 - EU.dat
+          - 2 - SAM/TGN SAM-8 - US.dat
+          - 2 - SAM/TGN SAM-8 - EU.dat
+          - 2 - SAM/TGN SAM-7 - US.dat
+          - 2 - SAM/TGN SAM-7 - EU.dat
+          - 2 - SAM/TGN SAM-6 - US.dat
+          - 2 - SAM/TGN SAM-6 - EU.dat
+          - 2 - SAM/TGN SAM-5 - US.dat
+          - 2 - SAM/TGN SAM-5 - EU.dat
+          - 2 - SAM/TGN SAM-4 - US.dat
+          - 2 - SAM/TGN SAM-4 - EU.dat
+          - 2 - SAM/TGN SAM-3 - US.dat
+          - 2 - SAM/TGN SAM-3 - EU.dat
+          - 2 - SAM/TGN SAM-2 - US.dat
+          - 2 - SAM/TGN SAM-2 - EU.dat
+          - 2 - SAM/TGN SAM-11 - US.dat
+          - 2 - SAM/TGN SAM-11 - EU.dat
+          - 2 - SAM/TGN SAM-10 - US.dat
+          - 2 - SAM/TGN SAM-10 - EU.dat
+          - 2 - SAM/TGN SAM-1.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN Zebra Crossings Patch - EU.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - US.dat
+          - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Road WRCs - US.dat
+          - 1 - Maxis & Basic NAM/TGN Road WRCs - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Road RTL - EU RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Road RTL - EU LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Road - US.dat
+          - 1 - Maxis & Basic NAM/TGN Road - EU.dat
+          - 1 - Maxis & Basic NAM/TGN Pedmalls.dat
+          - 1 - Maxis & Basic NAM/TGN PedCrosswalks - US.dat
+          - 1 - Maxis & Basic NAM/TGN PedCrosswalks - EU.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - US RHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - US LHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - EU RHD.dat
+          - 1 - Maxis & Basic NAM/TGN OWR REW - EU LHD.dat
+          - 1 - Maxis & Basic NAM/TGN NWM Grass.dat
+          - 1 - Maxis & Basic NAM/TGN GLR Alt Drag.dat
+          - 1 - Maxis & Basic NAM/TGN FTL - US.dat
+          - 1 - Maxis & Basic NAM/TGN FTL - EU.dat
+          - 1 - Maxis & Basic NAM/TGN FLUPs.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL - RHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave RTL - LHD.dat
+          - 1 - Maxis & Basic NAM/TGN Ave - US.dat
+          - 1 - Maxis & Basic NAM/TGN Ave - EU.dat
+          - 3 - Maxis Street/zoption_TGN Maxis Street CullDeSac Patch.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-9.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-8.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-7.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-6.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-5.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-4.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-3.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-2.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-11 - US.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-11 - EU.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-10.dat
+          - 3 - Maxis Street/TGN Maxis Street SAM-1.dat
+          - 3 - Maxis Street/TGN Maxis Street Roundabouts - US.dat
+          - 3 - Maxis Street/TGN Maxis Street Roundabouts - EU.dat
+          - 3 - Maxis Street/TGN Maxis Street - US.dat
+          - 3 - Maxis Street/TGN Maxis Street - EU.dat
+          - $PLUGINSDIR/System.dll
+          - $PLUGINSDIR/Roadtype.bmp
+          - $PLUGINSDIR/RailTexture.bmp
+          - $PLUGINSDIR/nsDialogs.dll
+          - $PLUGINSDIR/modern-wizard.bmp
+          - $PLUGINSDIR/modern-header.bmp
+          - $PLUGINSDIR/DrivingSide.bmp
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/MGB TGN Readme.htm
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_3.jpg
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_2.jpg
+          - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_1.jpg
+        sha256: c4396ed37f4479907f75970aade03a1b2f7f34085446df608a80b0a8444ab590
+        size: 68732105
+    version: "2.45"
   simtropolis/30179-lockheed-c-5-galaxy:
     authors:
       - xonedl
@@ -4251,18 +5460,641 @@ assets:
     authors:
       - rsc204
     category: 20
+    dependencies:
+      - simtropolis/30159-mgb-terrain-grass-nam-tgn-for-gobias-berner-oberland
+      - simtropolis/30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean
+      - simtropolis/30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+      - simtropolis/29797-mgb-diagonal-filler-set
+      - simtropolis/26923-paengs-parks-revisited
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	This mod replaces the grass textures on transport networks with grass that blends in with your terrain mod.
+      </p>
+
+
+      <p style="text-align:center;">
+      	<strong>Lowkee's Appalachian (AP) Version</strong><br>
+      	<em><span style="color:rgb(255,165,0);">Click these links to download either the </span><a href="https://community.simtropolis.com/files/file/30159-mgb-terrain-grass-nam-tgn-for-gobias-berner-oberland/" rel=""><span style="color:rgb(0,0,128);"><u>Berner Oberland</u></span></a><span style="color:rgb(255,165,0);">, <a href="https://community.simtropolis.com/files/file/30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean/" rel="">Pyrenean</a> or </span><a href="https://community.simtropolis.com/files/file/30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley/" rel=""><span style="color:rgb(0,0,128);">Sudden Valley</span></a><span style="color:rgb(255,165,0);"> versions of <abbr title="Terrain Grass NAM">TGN</abbr>.</span></em>
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This mod is packaged as a Windows .exe installer. For those that would prefer not/are unable to use an Installer, the NSIS installer files can be opened with 7zip or a similar application. If you wish to do this, you will have to manually setup the folder/file structure with the correct individual files within the archive.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	Please refer to the installed documentation for further details, note these files are installed here:
+      </p>
+
+
+      <p style="margin-left:80px;">
+      	<span style="color:#f39c12;"><em>My Documents</em></span><span style="color:#0000ff;">\SimCity 4\LEX_Downloads\MGB Mods</span>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This is to avoid cluttering up your Plugins folders with non-<abbr title="SimCity 4">SC4</abbr> files.
+      </p>
+
+
+      <p>
+      	<b>De-Coupling Rail Crossing and Street Textures</b>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	When installing <abbr title="Terrain Grass NAM">TGN</abbr>, you can de-select both the Rail Crossing Textures and Maxis Street Textures. These options exist, so users with other mods for those features, will no have issues when installing <abbr title="Terrain Grass NAM">TGN</abbr>, even if <abbr title="Terrain Grass NAM">TGN</abbr> loads after them.
+      </p>
+
+
+      <ul style="margin-left:80px;">
+      	<li>
+      		The Rail Crossing Textures should be de-selected if you are using the <abbr title="RealRailway">RRW</abbr> Reskin mod.
+      	</li>
+      	<li>
+      		The Maxis Street Textures should be de-selected if you do not use the default Maxis Streets.<br>
+      		For example, if you use Tarkus’ Asphalt Streets or Rivit’s Urban TSR Streets.
+      	</li>
+      </ul>
+
+
+      <p style="margin-left:40px;">
+      	<strong><span style="color:#353535;font-size:10.5pt;">Note</span></strong><span><span style="color:#353535;font-size:10.5pt;">: No <abbr title="Terrain Grass NAM">TGN</abbr> support is included for such optional custom textures, you need to get <abbr title="Terrain Grass NAM">TGN</abbr> compatible versions from elsewhere, or those networks will remain with the default grasses. This feature simply allows you to prevent <abbr title="Terrain Grass NAM">TGN</abbr> from conflicting with them, by simply not installing any Street textures.</span> <a href="https://community.simtropolis.com/forums/topic/73260-texture-automation/?do=findComment&amp;comment=1665066" rel="">See here for details</a> of how to create your own <abbr title="Terrain Grass NAM">TGN</abbr> compatible versions of many texture mods.</span>
+      </p>
+
+
+      <p>
+      	<strong>Compatibility / Dependencies</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This mod is designed for either the US or EU Cosmetic ReTexture mod in the <abbr title="Network Addon Mod">NAM</abbr>. Both <abbr title="Right Hand Drive">RHD</abbr> and <abbr title="Left Hand Drive">LHD</abbr> textures are supported. Additionally you can select from three rail types, <abbr title="RealRailway">RRW</abbr> (Real Railway - <abbr title="Network Addon Mod">NAM</abbr> Default) or legacy Maxis/<abbr title="Pegasus">PEG</abbr> styles. Coverage for all <abbr title="Network Addon Mod">NAM</abbr> road networks excluding <abbr title="Real Highway Mod"><abbr title="RealHighway">RHW</abbr></abbr>.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	<meta charset="UTF-8"><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">There are technically no dependencies for this mod, the base changes are suitable for use with the vanilla game. However I highly recommend using it in conjunction with the Terrain Mod it was made for and the latest version of the Network Addon Mod.</span>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	<em>Highly Recommended:</em>
+      </p>
+
+
+      <ul style="margin-left:40px;">
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-nam-cross-platform/" rel="">Network Addon Mod</a>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2753" rel="external nofollow"><span style="color:rgb(0,0,255);">Lowkee's Appalachian HD Terrain Mod</span></a>
+      	</li>
+      	<li>
+      		My <a href="https://community.simtropolis.com/files/file/29797-mgb-diagonal-filler-set/" rel=""><span style="color:rgb(0,0,255);"><u>MGB Diagonal Filler Set</u></span></a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/26923-paengs-parks-revisited/" rel=""><span style="color:rgb(0,0,255);"><u>Paeng's Parks 205</u></span></a>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Help make this mod better</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	Found a missing or unsupported texture? Having problems or Got comments? Then why not visit my thread at either SC4D (<a href="https://www.sc4devotion.com/forums/index.php?topic=16939.0" rel="external nofollow"><span style="color:#0066cc;">MGB's Mods and other stuff</span></a>) or Simtropolis (<a href="https://community.simtropolis.com/forums/topic/64116-mgb-lot-and-mod-shack/" rel=""><span style="color:#0066cc;">MGB's Lot and Mod Shack</span></a>)?
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#353535;font-size:10.5pt;">I would like to say a big thank you to the following people</span></strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Rivit, for the huge support and tools that made this mod possible in the first place.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Memo, for the original tools. Without which, I would never have embarked upon such a project in the first place.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Flann, for greatly helping me cope with the current deluge of textures by passing me updates directly.</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong><span style="color:#353535;font-size:10.5pt;">Notes:</span></strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">This mod is pretty comprehensive, with much more detailed textures. Be aware at over 100MB you may find your game loading slower with these installed. In-game performance should not be affected though.<br>
+      		Since every included texture is an override of an existing <abbr style="border-bottom:none;" title="Network Addon Mod">NAM</abbr> one, DATPacking <abbr title="Terrain Grass NAM">TGN</abbr> and the <abbr style="border-bottom:none;" title="Network Addon Mod">NAM</abbr> (Network Addon Mod) folder together will make your game startup faster. Be sure the structure you DATPack will ensure <abbr title="Terrain Grass NAM">TGN</abbr> loads last if you attempt this.</span>
+      	</li>
+      	<li style="color:#353535;">
+      		<span style="font-size:10.5pt;">Whilst the mod is designed to compliment HD Terrain Mods, none of the included textures are themselves so-called HD. All are standard 128x128 textures and will run with software rendering. Bear in mind though that Hardware rending is required to use a HD Terrain mod in the first place.</span>
+      	</li>
+      </ul>
+
+      						</body>
+    filename: MGB TGN 2.45 - AP Setup.exe
+    files:
+      - TGN S3D Textures.dat
+      - TGN Parks 205 Override.dat
+      - TGN Mntoes HFC Override.dat
+      - TGN Diag Filler Override.dat
+      - TGN BSC Vol1-3 Override.dat
+      - TGN Base Textures.dat
+      - 5 - Rail Textures/TGN SAM-9 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-9 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-9 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-8 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-8 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-8 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-7 RRW Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-7 RRW Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-6 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-6 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-6 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-5 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-5 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-5 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-4 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-4 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-4 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-3 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-3 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-3 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-2 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-2 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-2 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-10 RRW Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-10 RRW Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Road RRW Crossings - US RHD.dat
+      - 5 - Rail Textures/TGN Road RRW Crossings - US LHD.dat
+      - 5 - Rail Textures/TGN Road RRW Crossings - EU RHD.dat
+      - 5 - Rail Textures/TGN Road RRW Crossings - EU LHD.dat
+      - 5 - Rail Textures/TGN Road PEG Rail Crossings - US RHD.dat
+      - 5 - Rail Textures/TGN Road PEG Rail Crossings - US LHD.dat
+      - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU RHD.dat
+      - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU LHD.dat
+      - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US RHD.dat
+      - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US LHD.dat
+      - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU RHD.dat
+      - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU LHD.dat
+      - 5 - Rail Textures/TGN OWR RRW Crossings.dat
+      - 5 - Rail Textures/TGN OWR PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN OWR Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN Maxis Street RRW Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Maxis Street RRW Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN GLR Crossings - US.dat
+      - 5 - Rail Textures/TGN GLR Crossings - EU.dat
+      - 5 - Rail Textures/TGN Ave RRW Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Ave RRW Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Ave PEG Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Ave PEG Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - LHD.dat
+      - 3 - Maxis Street/zoption_TGN Maxis Street CullDeSac Patch.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-9.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-8.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-7.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-6.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-5.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-4.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-3.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-2.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-11 - US.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-11 - EU.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-10.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-1.dat
+      - 3 - Maxis Street/TGN Maxis Street Roundabouts - US.dat
+      - 3 - Maxis Street/TGN Maxis Street Roundabouts - EU.dat
+      - 3 - Maxis Street/TGN Maxis Street - US.dat
+      - 3 - Maxis Street/TGN Maxis Street - EU.dat
+      - 2 - SAM/zoption_TGN SAM-7 CullDeSac Patch.dat
+      - 2 - SAM/TGN SAM-9 - US.dat
+      - 2 - SAM/TGN SAM-9 - EU.dat
+      - 2 - SAM/TGN SAM-8 - US.dat
+      - 2 - SAM/TGN SAM-8 - EU.dat
+      - 2 - SAM/TGN SAM-7 - US.dat
+      - 2 - SAM/TGN SAM-7 - EU.dat
+      - 2 - SAM/TGN SAM-6 - US.dat
+      - 2 - SAM/TGN SAM-6 - EU.dat
+      - 2 - SAM/TGN SAM-5 - US.dat
+      - 2 - SAM/TGN SAM-5 - EU.dat
+      - 2 - SAM/TGN SAM-4 - US.dat
+      - 2 - SAM/TGN SAM-4 - EU.dat
+      - 2 - SAM/TGN SAM-3 - US.dat
+      - 2 - SAM/TGN SAM-3 - EU.dat
+      - 2 - SAM/TGN SAM-2 - US.dat
+      - 2 - SAM/TGN SAM-2 - EU.dat
+      - 2 - SAM/TGN SAM-11 - US.dat
+      - 2 - SAM/TGN SAM-11 - EU.dat
+      - 2 - SAM/TGN SAM-10 - US.dat
+      - 2 - SAM/TGN SAM-10 - EU.dat
+      - 2 - SAM/TGN SAM-1.dat
+      - 1 - Maxis & Basic NAM/zoption_TGN Zebra Crossings Patch - EU.dat
+      - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - US.dat
+      - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - EU.dat
+      - 1 - Maxis & Basic NAM/TGN Road WRCs - US.dat
+      - 1 - Maxis & Basic NAM/TGN Road WRCs - EU.dat
+      - 1 - Maxis & Basic NAM/TGN Road RTL - EU RHD.dat
+      - 1 - Maxis & Basic NAM/TGN Road RTL - EU LHD.dat
+      - 1 - Maxis & Basic NAM/TGN Road - US.dat
+      - 1 - Maxis & Basic NAM/TGN Road - EU.dat
+      - 1 - Maxis & Basic NAM/TGN Pedmalls.dat
+      - 1 - Maxis & Basic NAM/TGN PedCrosswalks - US.dat
+      - 1 - Maxis & Basic NAM/TGN PedCrosswalks - EU.dat
+      - 1 - Maxis & Basic NAM/TGN OWR REW - US RHD.dat
+      - 1 - Maxis & Basic NAM/TGN OWR REW - US LHD.dat
+      - 1 - Maxis & Basic NAM/TGN OWR REW - EU RHD.dat
+      - 1 - Maxis & Basic NAM/TGN OWR REW - EU LHD.dat
+      - 1 - Maxis & Basic NAM/TGN NWM Grass.dat
+      - 1 - Maxis & Basic NAM/TGN GLR Alt Drag.dat
+      - 1 - Maxis & Basic NAM/TGN FTL - US.dat
+      - 1 - Maxis & Basic NAM/TGN FTL - EU.dat
+      - 1 - Maxis & Basic NAM/TGN FLUPs.dat
+      - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - RHD.dat
+      - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - LHD.dat
+      - 1 - Maxis & Basic NAM/TGN Ave RTL - RHD.dat
+      - 1 - Maxis & Basic NAM/TGN Ave RTL - LHD.dat
+      - 1 - Maxis & Basic NAM/TGN Ave - US.dat
+      - 1 - Maxis & Basic NAM/TGN Ave - EU.dat
+      - $PLUGINSDIR/System.dll
+      - $PLUGINSDIR/Roadtype.bmp
+      - $PLUGINSDIR/RailTexture.bmp
+      - $PLUGINSDIR/nsDialogs.dll
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/modern-header.bmp
+      - $PLUGINSDIR/DrivingSide.bmp
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/MGB TGN Readme.htm
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_3.jpg
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_2.jpg
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_1.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_01/5686c6d893a46_AP-HousingEstate.jpg.e4ac80a7d1836de8524b37691714ea24.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_01/5686c6de53c85_AP-ParkandSchool.jpg.4eadfe25b7eb61e8224bdd6af8d84c6a.jpg
     lastModified: 2022-11-27T06:51:23Z
     name: MGB - Terrain Grass NAM (TGN) for Lowkee Appalachian
+    sha256: 6e213ed65433ba2184f57371ba83d6598191e4487aa56389399718573879ddce
+    size: 68557638
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_01/5686c87cc48c7_AP-ParkandSchool.thumb.jpg.f46a34afdff28e4ca77c2d2321dce654.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/30896-mgb-terrain-grass-nam-tgn-for-lowkee-appalachian/
+    version: "2.45"
   simtropolis/30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean:
     authors:
       - rsc204
     category: 20
+    dependencies:
+      - simtropolis/30896-mgb-terrain-grass-nam-tgn-for-lowkee-appalachian
+      - simtropolis/30159-mgb-terrain-grass-nam-tgn-for-gobias-berner-oberland
+      - simtropolis/30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+      - simtropolis/29797-mgb-diagonal-filler-set
+      - simtropolis/26923-paengs-parks-revisited
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	This mod replaces the grass textures on transport networks with grass that blends in with your terrain mod.
+      </p>
+
+
+      <p align="center" style="text-align:center;">
+      	<strong><abbr title="ToutSimCities">TSC</abbr>/Orange Pyrenean (PY) Version</strong><br>
+      	<em><span style="color:#FFA500;">Click these links to download either the </span><a href="https://community.simtropolis.com/files/file/30896-mgb-terrain-grass-nam-tgn-for-lowkee-appalachian/" rel=""><span style="color:#000080;">Appalachian</span></a><span style="color:#FFA500;">, </span><a href="https://community.simtropolis.com/files/file/30159-mgb-terrain-grass-nam-tgn-for-gobias-berner-oberland/" rel=""><span style="color:#000080;">Berner Oberland</span></a><span style="color:#FFA500;"> or </span><a href="https://community.simtropolis.com/files/file/30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley/" rel=""><span style="color:#000080;">Sudden Valley</span></a><span style="color:#FFA500;"> versions of <abbr title="Terrain Grass NAM">TGN</abbr>.</span></em>
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This mod is packaged as a Windows .exe installer. For those that would prefer not/are unable to use an Installer, the NSIS installer files can be opened with 7zip or a similar application. If you wish to do this, you will have to manually setup the folder/file structure with the correct individual files within the archive.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	Please refer to the installed documentation for further details, note these files are installed here:
+      </p>
+
+
+      <p style="margin-left:80px;">
+      	<span style="color:#f39c12;"><em>My Documents</em></span><span style="color:#0000ff;">\SimCity 4\LEX_Downloads\MGB Mods</span>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This is to avoid cluttering up your Plugins folders with non-<abbr title="SimCity 4">SC4</abbr> files.
+      </p>
+
+
+      <p>
+      	<b>De-Coupling Rail Crossing and Street Textures</b>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	When installing <abbr title="Terrain Grass NAM">TGN</abbr>, you can de-select both the Rail Crossing Textures and Maxis Street Textures. These options exist, so users with other mods for those features, will no have issues when installing <abbr title="Terrain Grass NAM">TGN</abbr>, even if <abbr title="Terrain Grass NAM">TGN</abbr> loads after them.
+      </p>
+
+
+      <ul style="margin-left:80px;">
+      	<li>
+      		The Rail Crossing Textures should be de-selected if you are using the <abbr title="RealRailway">RRW</abbr> Reskin mod.
+      	</li>
+      	<li>
+      		The Maxis Street Textures should be de-selected if you do not use the default Maxis Streets.<br>
+      		For example, if you use Tarkus’ Asphalt Streets or Rivit’s Urban TSR Streets.
+      	</li>
+      </ul>
+
+
+      <p style="margin-left:40px;">
+      	<strong><span style="color:#353535;font-size:10.5pt;">Note</span></strong><span style="color:#353535;font-size:10.5pt;"><span>: No <abbr title="Terrain Grass NAM">TGN</abbr> support is included for such optional custom textures, you need to get <abbr title="Terrain Grass NAM">TGN</abbr> compatible versions from elsewhere, or those networks will remain with the default grasses. This feature simply allows you to prevent <abbr title="Terrain Grass NAM">TGN</abbr> from conflicting with them, by simply not installing any Street textures.</span> <a href="https://community.simtropolis.com/forums/topic/73260-texture-automation/?do=findComment&amp;comment=1665066" rel="">See here for details</a> of how to create your own <abbr title="Terrain Grass NAM">TGN</abbr> compatible versions of many texture mods.</span>
+      </p>
+
+
+      <p>
+      	<strong>Compatibility / Dependencies</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	This mod is designed for either the US or EU Cosmetic ReTexture mod in the <abbr title="Network Addon Mod">NAM</abbr>. Both <abbr title="Right Hand Drive">RHD</abbr> and <abbr title="Left Hand Drive">LHD</abbr> textures are supported. Additionally you can select from three rail types, <abbr title="RealRailway">RRW</abbr> (Real Railway - <abbr title="Network Addon Mod">NAM</abbr> Default) or legacy Maxis/<abbr title="Pegasus">PEG</abbr> styles. Coverage for all <abbr title="Network Addon Mod">NAM</abbr> road networks excluding <abbr title="Real Highway Mod"><abbr title="RealHighway">RHW</abbr></abbr>.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	There are technically no dependencies for this mod, the base changes are suitable for use with the vanilla game. However I highly recommend using it in conjunction with the Terrain Mod it was made for and the latest version of the Network Addon Mod.
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	<em>Highly Recommended:</em>
+      </p>
+
+
+      <ul style="margin-left:40px;" type="disc">
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-nam-cross-platform/" rel="">Network Addon Mod</a>
+      	</li>
+      	<li>
+      		<u><a href="https://www.toutsimcities.com/downloads/view/1641" rel="external nofollow"><abbr title="ToutSimCities">TSC</abbr>/Orange - Pyrenean Terrain Mod</a></u>
+      	</li>
+      	<li>
+      		My <a href="https://community.simtropolis.com/files/file/29797-mgb-diagonal-filler-set/" rel="">MGB Diagonal Filler Set</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/26923-paengs-parks-revisited/" rel="">Paeng's Parks 205</a>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Help make this mod better</strong>
+      </p>
+
+
+      <p style="margin-left:40px;">
+      	Found a missing or unsupported texture? Having problems or Got comments? Then why not visit my thread at either SC4D (<a href="https://www.sc4devotion.com/forums/index.php?topic=16939.0" rel="external nofollow"><span style="color:#0066cc;">MGB's Mods and other stuff</span></a>) or Simtropolis (<a href="https://community.simtropolis.com/forums/topic/64116-mgb-lot-and-mod-shack/" rel=""><span style="color:#0066cc;">MGB's Lot and Mod Shack</span></a>)?
+      </p>
+
+
+      <p>
+      	<strong>I would like to say a big thank you to the following people</strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li>
+      		Rivit, for the huge support and tools that made this mod possible in the first place.
+      	</li>
+      	<li>
+      		Memo, for the original tools. Without which, I would never have embarked upon such a project in the first place.
+      	</li>
+      	<li>
+      		Flann, for greatly helping me cope with the current deluge of textures by passing me updates directly.
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Notes:</strong>
+      </p>
+
+
+      <ul type="disc">
+      	<li>
+      		This mod is pretty comprehensive, with much more detailed textures. Be aware at over 100MB you may find your game loading slower with these installed. In-game performance should not be affected though.<br>
+      		Since every included texture is an override of an existing <abbr title="Network Addon Mod">NAM</abbr> one, DATPacking <abbr title="Terrain Grass NAM">TGN</abbr> and the <abbr title="Network Addon Mod">NAM</abbr> (Network Addon Mod) folder together will make your game startup faster. Be sure the structure you DATPack will ensure <abbr title="Terrain Grass NAM">TGN</abbr> loads last if you attempt this.
+      	</li>
+      	<li>
+      		Whilst the mod is designed to compliment HD Terrain Mods, none of the included textures are themselves so-called HD. All are standard 128x128 textures and will run with software rendering. Bear in mind though that Hardware rending is required to use a HD Terrain mod in the first place.
+      	</li>
+      </ul>
+
+      						</body>
+    filename: MGB TGN 2.45 - PY Setup.exe
+    files:
+      - TGN S3D Textures.dat
+      - TGN Parks 205 Override.dat
+      - TGN Mntoes HFC Override.dat
+      - TGN Diag Filler Override.dat
+      - TGN BSC Vol1-3 Override.dat
+      - TGN Base Textures.dat
+      - 3 - Maxis Street/zoption_TGN Maxis Street CullDeSac Patch.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-9.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-8.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-7.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-6.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-5.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-4.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-3.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-2.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-11 - US.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-11 - EU.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-10.dat
+      - 3 - Maxis Street/TGN Maxis Street SAM-1.dat
+      - 3 - Maxis Street/TGN Maxis Street Roundabouts - US.dat
+      - 3 - Maxis Street/TGN Maxis Street Roundabouts - EU.dat
+      - 3 - Maxis Street/TGN Maxis Street - US.dat
+      - 3 - Maxis Street/TGN Maxis Street - EU.dat
+      - 5 - Rail Textures/TGN SAM-9 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-9 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-9 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-8 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-8 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-8 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-7 RRW Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-7 RRW Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-7 PEG Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-7 Maxis Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-6 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-6 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-6 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-5 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-5 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-5 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-4 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-4 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-4 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-3 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-3 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-3 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-2 RRW Crossings.dat
+      - 5 - Rail Textures/TGN SAM-2 PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-2 Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN SAM-10 RRW Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-10 RRW Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-10 PEG Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN SAM-10 Maxis Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Road RRW Crossings - US RHD.dat
+      - 5 - Rail Textures/TGN Road RRW Crossings - US LHD.dat
+      - 5 - Rail Textures/TGN Road RRW Crossings - EU RHD.dat
+      - 5 - Rail Textures/TGN Road RRW Crossings - EU LHD.dat
+      - 5 - Rail Textures/TGN Road PEG Rail Crossings - US RHD.dat
+      - 5 - Rail Textures/TGN Road PEG Rail Crossings - US LHD.dat
+      - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU RHD.dat
+      - 5 - Rail Textures/TGN Road PEG Rail Crossings - EU LHD.dat
+      - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US RHD.dat
+      - 5 - Rail Textures/TGN Road Maxis Rail Crossings - US LHD.dat
+      - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU RHD.dat
+      - 5 - Rail Textures/TGN Road Maxis Rail Crossings - EU LHD.dat
+      - 5 - Rail Textures/TGN OWR RRW Crossings.dat
+      - 5 - Rail Textures/TGN OWR PEG Rail Crossings.dat
+      - 5 - Rail Textures/TGN OWR Maxis Rail Crossings.dat
+      - 5 - Rail Textures/TGN Maxis Street RRW Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Maxis Street RRW Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Maxis Street PEG Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Maxis Street Maxis Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN GLR Crossings - US.dat
+      - 5 - Rail Textures/TGN GLR Crossings - EU.dat
+      - 5 - Rail Textures/TGN Ave RRW Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Ave RRW Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Ave PEG Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Ave PEG Rail Crossings - LHD.dat
+      - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - RHD.dat
+      - 5 - Rail Textures/TGN Ave Maxis Rail Crossings - LHD.dat
+      - 2 - SAM/zoption_TGN SAM-7 CullDeSac Patch.dat
+      - 2 - SAM/TGN SAM-9 - US.dat
+      - 2 - SAM/TGN SAM-9 - EU.dat
+      - 2 - SAM/TGN SAM-8 - US.dat
+      - 2 - SAM/TGN SAM-8 - EU.dat
+      - 2 - SAM/TGN SAM-7 - US.dat
+      - 2 - SAM/TGN SAM-7 - EU.dat
+      - 2 - SAM/TGN SAM-6 - US.dat
+      - 2 - SAM/TGN SAM-6 - EU.dat
+      - 2 - SAM/TGN SAM-5 - US.dat
+      - 2 - SAM/TGN SAM-5 - EU.dat
+      - 2 - SAM/TGN SAM-4 - US.dat
+      - 2 - SAM/TGN SAM-4 - EU.dat
+      - 2 - SAM/TGN SAM-3 - US.dat
+      - 2 - SAM/TGN SAM-3 - EU.dat
+      - 2 - SAM/TGN SAM-2 - US.dat
+      - 2 - SAM/TGN SAM-2 - EU.dat
+      - 2 - SAM/TGN SAM-11 - US.dat
+      - 2 - SAM/TGN SAM-11 - EU.dat
+      - 2 - SAM/TGN SAM-10 - US.dat
+      - 2 - SAM/TGN SAM-10 - EU.dat
+      - 2 - SAM/TGN SAM-1.dat
+      - 1 - Maxis & Basic NAM/zoption_TGN Zebra Crossings Patch - EU.dat
+      - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - US.dat
+      - 1 - Maxis & Basic NAM/zoption_TGN CullDeSac Patch - EU.dat
+      - 1 - Maxis & Basic NAM/TGN Road WRCs - US.dat
+      - 1 - Maxis & Basic NAM/TGN Road WRCs - EU.dat
+      - 1 - Maxis & Basic NAM/TGN Road RTL - EU RHD.dat
+      - 1 - Maxis & Basic NAM/TGN Road RTL - EU LHD.dat
+      - 1 - Maxis & Basic NAM/TGN Road - US.dat
+      - 1 - Maxis & Basic NAM/TGN Road - EU.dat
+      - 1 - Maxis & Basic NAM/TGN Pedmalls.dat
+      - 1 - Maxis & Basic NAM/TGN PedCrosswalks - US.dat
+      - 1 - Maxis & Basic NAM/TGN PedCrosswalks - EU.dat
+      - 1 - Maxis & Basic NAM/TGN OWR REW - US RHD.dat
+      - 1 - Maxis & Basic NAM/TGN OWR REW - US LHD.dat
+      - 1 - Maxis & Basic NAM/TGN OWR REW - EU RHD.dat
+      - 1 - Maxis & Basic NAM/TGN OWR REW - EU LHD.dat
+      - 1 - Maxis & Basic NAM/TGN NWM Grass.dat
+      - 1 - Maxis & Basic NAM/TGN GLR Alt Drag.dat
+      - 1 - Maxis & Basic NAM/TGN FTL - US.dat
+      - 1 - Maxis & Basic NAM/TGN FTL - EU.dat
+      - 1 - Maxis & Basic NAM/TGN FLUPs.dat
+      - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - RHD.dat
+      - 1 - Maxis & Basic NAM/TGN Ave RTL UKOld - LHD.dat
+      - 1 - Maxis & Basic NAM/TGN Ave RTL - RHD.dat
+      - 1 - Maxis & Basic NAM/TGN Ave RTL - LHD.dat
+      - 1 - Maxis & Basic NAM/TGN Ave - US.dat
+      - 1 - Maxis & Basic NAM/TGN Ave - EU.dat
+      - $PLUGINSDIR/System.dll
+      - $PLUGINSDIR/Roadtype.bmp
+      - $PLUGINSDIR/RailTexture.bmp
+      - $PLUGINSDIR/nsDialogs.dll
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/modern-header.bmp
+      - $PLUGINSDIR/DrivingSide.bmp
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/MGB TGN Readme.htm
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_3.jpg
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_2.jpg
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/TGN_1.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_01/PY-1.jpg.a110458b62f3bd8f56a72c985e49c919.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_01/PY-2.jpg.8af1a7f2472174b3a5beb70a17f2fb02.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_01/PY-3.jpg.a891728c779a0a500947b46760332928.jpg
     lastModified: 2022-11-27T06:56:45Z
     name: MGB - Terrain Grass NAM (TGN) for TSC Pyrenean
+    sha256: 997f12acb6e99722da454933dfb1ee47b4e579ddea6ae23a442cd0d9cc0bf6a7
+    size: 68890155
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_01/PY-3.thumb.jpg.2e96ba311817554807164c4ede2eabcd.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean/
+    version: "2.45"
   simtropolis/30907-catalysts-asphalt-sidwalk-extension-mod:
     authors:
       - Bloemkoli
@@ -4315,10 +6147,539 @@ assets:
     authors:
       - matias93
     category: 20
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<span style="font-size:22px;"><strong>Veredas Santiaguinas</strong></span><br><em>A sidewalk mod made by matias93</em>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#FFD700;">Este mismo texto está en español adentro del archivo!</span>
+      </p>
+
+
+      <p>
+      	<strong>AKNOWLEGDEMENTS:</strong>
+      </p>
+
+
+      <p>
+      	This mod couldn't be possible without the impressing work of Rivit and MGB204 (rsc204), creators of GoFSH and the (not yet published) Automated Sidewalk Mod. To make a mod as big as this by hand, as many other creators had done before, is a titanical task that deserves sheer aknowlegdement; I just created a couple of textures and clicked buttons once and then.
+      </p>
+
+
+      <p>
+      	<strong>DESCRIPTION:</strong>
+      </p>
+
+
+      <p>
+      	This textures are inspired in the 'veredas' or sidewalks that were built around 1980 in Santiago, Chile: they are little concrete tiles with geometrical designs, that form big square shapes using black or red tiles. In the game, I chose to keep an uniform colour, trying to avoid the sudden colour changes that make Maxis' textures so unappealing; instead, only coloured tiles change with wealth level, as the general condition of the sidewalk: ochre tiles with clean and orange-y concrete in high wealth sidewalks, red burgundy squares and grey concrete in mid-wealth textures, and blackish borders with stained concrete in the low-wealth sidewalk.
+      </p>
+
+
+      <p>
+      	Thanks to MGB204's scripts, this mod can change all textures that correspond originally to Maxis' white tiles: sidewalks on all streets, roads and avenues (including <abbr title="RealHighway"><abbr title="RealHighway"><abbr title="RealHighway"><abbr title="RealHighway">RHW</abbr></abbr></abbr></abbr> intersections), crossings with all other networks, pedmalls, plazas and residential, commercial, industrial and services' lots; it is even compatible with the new additions on <abbr title="Network Addon Mod"><abbr title="Network Addon Mod"><abbr title="Network Addon Mod"><abbr title="Network Addon Mod">NAM</abbr></abbr></abbr></abbr> 34. An important exception are <abbr title="Ground Light Rail"><abbr title="Ground Light Rail"><abbr title="Ground Light Rail"><abbr title="Ground Light Rail">GLR</abbr></abbr></abbr></abbr> (tramway) tracks, that get sorrounded by the new texture but not completely replaced. Depending on the existence of more advanced scripts, this could change in a newer version.
+      </p>
+
+
+      <p>
+      	<strong>INSTRUCTIONS:</strong> &lt;-- Jump here if you don't like the details
+      </p>
+
+
+      <p>
+      	This mod has to be installed MANUALLY. Is not enough to copy and paste everything: you'll end with a cluttered folder and surely your prefered networks will be oddly patched.
+      </p>
+
+
+      <ol><li>
+      		Copy the folder called z___veredasstgo to your Plugins folder (the one that is on My Documents/Documents/). It is preferable that you delete all other sidewalk mods, but the folder is named in a way that will load it the last, overwriting other conflictive textures.
+      	</li>
+      	<li>
+      		Open the folder you just copied and delete the files you won't use:<br>
+      		a. "Veredas Stgo BASE" chenges most street, road and avenue sidewalks, so you should keep it.<br>
+      		b. "Veredas Stgo sitios y plazas (LOTS)" change the lots' textures, allowing a more uniform result. You should keep it; delete it only if you prefer to use another texture on lots and plazas.<br>
+      		c. "Veredas Stgo <abbr title="Network Addon Mod"><abbr title="Network Addon Mod"><abbr title="Network Addon Mod"><abbr title="Network Addon Mod">NAM</abbr></abbr></abbr></abbr>" folders will only work if you had installed the Network Addon Mod (very recommended); YOU MUST KEEP ONLY ONE FOLDER. Choose the one that corresponds to the driving side your game uses (LHD: on the left as in the United Kingdom, RHD: on the right as in Europe), and to the roads' lines colour (US: yellow lines as in the United States, EU: white lines as in Europe).
+      	</li>
+      	<li>
+      		Open the folder you had kept: there you'll find one or two more folders with options:<br>
+      		a. Open the folder called "Rail Options" and delete the files that doesn't match the kind of rail tracks you use: Maxis, <abbr title="Pegasus"><abbr title="Pegasus"><abbr title="Pegasus"><abbr title="Pegasus">PEG</abbr></abbr></abbr></abbr> or RealRailway (RRW).<br>
+      		There shall to be just two files, with the same ending.<br>
+      		b. Only if you have installed EU white lines with the <abbr title="Network Addon Mod"><abbr title="Network Addon Mod"><abbr title="Network Addon Mod"><abbr title="Network Addon Mod">NAM</abbr></abbr></abbr></abbr>, open "<abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)">TuLEP</abbr></abbr></abbr></abbr> Options" folder and delete all the files that doesn't match to the <abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)">TuLEP</abbr></abbr></abbr></abbr> textures you installed with the <abbr title="Network Addon Mod"><abbr title="Network Addon Mod"><abbr title="Network Addon Mod"><abbr title="Network Addon Mod">NAM</abbr></abbr></abbr></abbr>. Most surely you are using Maxis default ones, but make sure it is that way.<br>
+      		There shall to be just two files, with the same name after the "<abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)"><abbr title="Turning Lane Extension Piece(s)">TuLEP</abbr></abbr></abbr></abbr>".
+      	</li>
+      	<li>
+      		Close the folder "z___veredasstgo". If you use DATpacker or other program that packs your plugins, get sure not to pack this folder, unless you are certain no other mod could overwrite this textures.
+      	</li>
+      </ol><p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	This mod replaces textures without using any dependency. You can extract the textures to use it as dependencies for other creations, but they aren't currently in the right format to do so.
+      </p>
+
+
+      <p>
+      	<strong style="line-height:1.6;">COMPATIBILITY:</strong>
+      </p>
+
+
+      <p>
+      	This mod cannot be used with any other sidewalk mod, unless you combine it deleting parts of each one; if you know how to do that, you aren't surely reading this instructions.<br>
+      	This mod also don't work with plugins that change some textures that seems non-modified after using. I'm refering particularly to MGB204's Super Light Asphalt AddOns; it changes the <abbr title="Ground Light Rail"><abbr title="Ground Light Rail"><abbr title="Ground Light Rail"><abbr title="Ground Light Rail">GLR</abbr></abbr></abbr></abbr> textures already modified by this mod, and depending on the loading order, it could result on this mod overwriting MGB's one completely, or his mod changing <abbr title="Ground Light Rail"><abbr title="Ground Light Rail"><abbr title="Ground Light Rail"><abbr title="Ground Light Rail">GLR</abbr></abbr></abbr></abbr> side textures to ML's Super Light Asphalt, which is lighter and non tiled.<br>
+      	Anyway, is your option to test with this, but you are warned.
+      </p>
+
+
+      <p>
+      	<strong>LICENSE:</strong>
+      </p>
+
+
+      <p>
+      	This mod has a Creative Commons Attribution - Non Commercial 4.0 International licence, what means you can use all its content directly or creating something derivately, while you give explicit attribution to all previous authors, and while you don't charge for accessing or using this content or a derivate you create of it.
+      </p>
+
+
+      <p>
+      	To create the textures, I used a tile texture made by Patrick Hoesly, a dirt texture by dfass12 and a grass one that is on the public domain.
+      </p>
+
+
+      <p>
+      	<strong>SUPPORT and HELP:</strong>
+      </p>
+
+
+      <p>
+      	I made a development and support thread on Simtropolis, you can visit it with the following link:
+      </p>
+
+
+      <p>
+      	<iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/forums/topic/70802-matias93-unexpected-mod-workshop/?do=embed"></iframe>
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_07/5782fde5e3f5e_LoSnchez-11En.001468180454.png.22f1f7a615b8f673b761dbd5ea6992f9.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/583af49204a49_CiudaddelLago-Centro-2Oct.5141468176787.png.0f4eb21231ea927e7a6b0be40fb95434.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/583af49fa01d0_CiudaddelLago-Centro-2Sep.10051476705048.png.1714fbd2aa88a91916bc22319dee5634.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/583af4b09b70c_CiudaddelLago-Centro-3Mar.7711469304612.png.7ea1ee95227ab2a321837fc20d89a564.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/583af4bcd3594_CiudaddelLago-Centro-7Oct.5141468176813.png.8b31106a8c4db5fa7edb1886a40a29f7.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/583af4cc813d0_CiudaddelLago-Centro-12Oct.5141468176840.png.f251293a53667e7adf1e8fe58df98092.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/583af4dd4ba8c_CiudaddelLago-Centro-18Oct.5141468176878.png.3bba102bbbb5436eb215ca239c15b2e1.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/583af4e7cf900_CiudaddelLago-Centro-25Oct.5141468176966.png.db91483f3013ad7af1574624abedc92c.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/583af4f4915f9_CiudaddelLago-Centro-30Oct.5141468177044.png.f406d343a5bf6982079790fad1e6775f.png
     lastModified: 2018-05-02T18:11:27Z
     name: Veredas Santiaguinas - Sidewalk Mod
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/583af50228080_CiudaddelLago-Centro-2Sep.10051476705048.thumb.png.b642ee9468f7a49db527b7489c05020e.png
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/31166-veredas-santiaguinas-sidewalk-mod/
+    variants:
+      "170719":
+        filename: Veredas Santiaguinas - Sidewalk mod.zip
+        files:
+          - Veredas Santiaguinas - Sidewalk mod/z__NO COPIES Y PEGUES TODO.txt
+          - Veredas Santiaguinas - Sidewalk mod/z__DON'T COPY AND PASTE ALL.txt
+          - Veredas Santiaguinas - Sidewalk mod/INSTRUCTIONS (EN).txt
+          - Veredas Santiaguinas - Sidewalk mod/INSTRUCCIONES (ES).txt
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/z__NO COPIES Y PEGUES TODO.txt
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/z__DON'T COPY AND PASTE ALL.txt
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo sitios y plazas (LOTS).dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo BASE.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Viaduct Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom URail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Turbo RA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom RTMT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom RHW Intersections.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom RHW FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Pedmalls.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom New Ave Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Misc.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom MHW Interchanges.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom EL-Rail Ave+RD4.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Drag Road Viaducts.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Viaduct Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom URail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Turbo RA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom RTMT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom RHW Intersections.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom RHW FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Pedmalls.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom New Ave Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Misc.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom MHW Interchanges.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom EL-Rail Ave+RD4.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Drag Road Viaducts.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Viaduct Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom URail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Turbo RA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom RTMT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom RHW Intersections.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Pedmalls.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom New Ave Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Misc.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom MHW Interchanges.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom EL-Rail Ave+RD4.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Drag Road Viaducts.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Viaduct Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom URail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Turbo RA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom RTMT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom RHW Intersections.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom RHW FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Pedmalls.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom New Ave Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Misc.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom MHW Interchanges.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom EL-Rail Ave+RD4.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Drag Road Viaducts.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom FLUPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom FLUPs PEG 205 Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom FLUPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR TiS.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR TiR + ToR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR TiA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR Lot Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR Drag.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR Drag Rural.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom FLUPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom FLUPs PEG 205 Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom FLUPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR TiS.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR TiR + ToR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR TiA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR Lot Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR Drag.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR Drag Rural.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/Rail Options/SWN Custom FLUPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/Rail Options/SWN Custom FLUPs PEG 205 Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/Rail Options/SWN Custom FLUPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR TiS.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR TiR + ToR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR TiA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR Lot Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR Drag.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR Drag Rural.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom FLUPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom FLUPs PEG 205 Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom FLUPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR TiS.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR TiR + ToR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR TiA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR Lot Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR Drag.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR Drag Rural.dat
+        sha256: 01ce5cf56306b5882cc4cb681acdb3d6df901175c58c1613f9d66c98c462910d
+        size: 31034135
+        uncompressed: 48984342
+      "170720":
+        filename: Veredas Santiaguinas SCILT.zip
+        files:
+          - Veredas Santiaguinas SCILT.dat
+        sha256: 3b2fb7f0a45b988333a41ef5ccb14a94393b2f17c4cb974a58356e24f49e0325
+        size: 700753
+        uncompressed: 3218399
+      "170721":
+        filename: Veredas Santiaguinas - Sidewalk mod.7z
+        files:
+          - Veredas Santiaguinas - Sidewalk mod/z__NO COPIES Y PEGUES TODO.txt
+          - Veredas Santiaguinas - Sidewalk mod/z__DON'T COPY AND PASTE ALL.txt
+          - Veredas Santiaguinas - Sidewalk mod/INSTRUCTIONS (EN).txt
+          - Veredas Santiaguinas - Sidewalk mod/INSTRUCCIONES (ES).txt
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/z__NO COPIES Y PEGUES TODO.txt
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/z__DON'T COPY AND PASTE ALL.txt
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo sitios y plazas (LOTS).dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo SCILT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo BASE.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Viaduct Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom URail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Turbo RA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom RTMT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom RHW Intersections.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom RHW FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Pedmalls.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom New Ave Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Misc.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom MHW Interchanges.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom EL-Rail Ave+RD4.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/SWN Custom Drag Road Viaducts.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Viaduct Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom URail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Turbo RA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom RTMT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom RHW Intersections.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Pedmalls.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom New Ave Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Misc.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom MHW Interchanges.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom EL-Rail Ave+RD4.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/SWN Custom Drag Road Viaducts.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Viaduct Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom URail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Turbo RA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom RTMT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom RHW Intersections.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom RHW FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Pedmalls.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom New Ave Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Misc.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom MHW Interchanges.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom EL-Rail Ave+RD4.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/SWN Custom Drag Road Viaducts.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Viaduct Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom URail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Turbo RA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom RTMT.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom RHW Intersections.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom RHW FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Pedmalls.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom New Ave Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Misc.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom MHW Interchanges.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom FLUPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom EL-Rail Ave+RD4.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/SWN Custom Drag Road Viaducts.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom FLUPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom FLUPs PEG 205 Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/Rail Options/SWN Custom FLUPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR TiS.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR TiR + ToR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR TiA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR Lot Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR Drag.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI blanco (LHD-EU)/GLR/SWN Custom GLR Drag Rural.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs RIGA Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Old UK Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs MRTN Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/TuLEP Options/SWN Custom TuLEPs Dexter UK Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/Rail Options/SWN Custom FLUPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/Rail Options/SWN Custom FLUPs PEG 205 Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/Rail Options/SWN Custom FLUPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR TiS.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR TiR + ToR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR TiA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR Lot Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR Drag.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD blanco (RHD-EU)/GLR/SWN Custom GLR Drag Rural.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom FLUPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom FLUPs PEG 205 Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/Rail Options/SWN Custom FLUPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR TiS.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR TiR + ToR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR TiA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR Lot Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR Drag.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMD amarillo (RHD-US)/GLR/SWN Custom GLR Drag Rural.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom TuLEPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom TuLEPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom FLUPs RRW.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom FLUPs PEG 205 Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/Rail Options/SWN Custom FLUPs Maxis Rail.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR TiS.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR TiR + ToR.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR TiA.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR Lot Textures.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR Drag.dat
+          - Veredas Santiaguinas - Sidewalk mod/z___veredastgo/Veredas Stgo NAM - CMI amarillo (LHD-US)/GLR/SWN Custom GLR Drag Rural.dat
+        sha256: b1e09c821f333ba748090ecb78f389b8d1214561a1af6cda45d9933b8677be86
+        size: 6794155
+        uncompressed: 52203196
+      "170722":
+        filename: veredas sin pasto.7z
+        files:
+          - z__NO COPIES Y PEGUES TODO.txt
+          - z__DON'T COPY AND PASTE ALL.txt
+          - veredas sin pasto scilt.dat
+          - veredas sin pasto lotes.dat
+          - veredas sin pasto base.dat
+          - INSTRUCTIONS (EN).txt
+          - INSTRUCCIONES (ES).txt
+          - veredas sin pasto NAM/SWN Custom Pedmalls.dat
+          - veredas sin pasto NAM/SWN Custom MHW Interchanges.dat
+          - veredas sin pasto NAM/SWN Custom FLUPs RRW.dat
+          - veredas sin pasto NAM/SWN Custom FLUPs PEG 205 Rail.dat
+          - veredas sin pasto NAM/SWN Custom FLUPs Maxis Rail.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom Viaduct Rail - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom URail - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom Turbo RA - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom TuLEPs RRW - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom TuLEPs Maxis Rail - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom TuLEPs LHD - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom TuLEPs - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom RTMT - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom RHW Intersections - EU RHD.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom RHW Intersections - EU LHD.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom RHW FLUPs - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom New Ave Textures - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom Misc - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom FLUPs - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom EL-Rail Ave+RD4 - EU.dat
+          - veredas sin pasto NAM/2_EU/SWN Custom Drag Road Viaducts - EU.dat
+          - veredas sin pasto NAM/1_US/SWN Custom Viaduct Rail - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom URail - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom Turbo RA - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom TuLEPs RRW - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom TuLEPs Maxis Rail - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom TuLEPs - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom RTMT - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom RHW Intersections - US RHD.dat
+          - veredas sin pasto NAM/1_US/SWN Custom RHW Intersections - US LHD.dat
+          - veredas sin pasto NAM/1_US/SWN Custom RHW FLUPs - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom New Ave Textures - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom Misc - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom FLUPs - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom EL-Rail Ave+RD4 - US.dat
+          - veredas sin pasto NAM/1_US/SWN Custom Drag Road Viaducts - US.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs RIGA.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs RIGA RRW.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs RIGA Maxis Rail.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs RIGA LHD.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs Old UK.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs Old UK RRW.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs Old UK Maxis Rail.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs Old UK LHD.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs MRTN.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs MRTN RRW.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs MRTN Maxis Rail.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs MRTN LHD.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs Dexter UK.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs Dexter UK RRW.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs Dexter UK Maxis Rail.dat
+          - veredas sin pasto NAM/2_EU/Optional EU Tuleps/SWN Custom TuLEPs Dexter UK LHD.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR TiS - EU RHD.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR TiS - EU LHD.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR TiR + ToR - EU.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR TiA - EU.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR Lot Textures - EU.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR Drag Rural - EU RHD.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR Drag Rural - EU LHD.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR Drag - EU RHD.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR Drag - EU LHD.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR - EU RHD.dat
+          - veredas sin pasto NAM/2_EU/GLR/SWN Custom GLR - EU LHD.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR TiS - US RHD.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR TiS - US LHD.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR TiR + ToR - US.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR TiA - US.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR Lot Textures - US.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR Drag Rural - US RHD.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR Drag Rural - US LHD.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR Drag - US RHD.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR Drag - US LHD.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR - US RHD.dat
+          - veredas sin pasto NAM/1_US/GLR/SWN Custom GLR - US LHD.dat
+        sha256: d0d944c0808f1d91b499296888f904de280a1a99caf2d75fa3947b200beeb065
+        size: 6733957
+        uncompressed: 32858102
+    version: "1.2"
   simtropolis/31211-basaltic-sands-texture-mod:
     authors:
       - matias93
@@ -4642,10 +7003,152 @@ assets:
     authors:
       - "11241036"
     category: 20
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Short description:</strong>
+      </p>
+
+
+      <p>
+      	This plugin makes SimGoober’s Azaleas, Hydrangeas, and Wildflowers that are already featured in many plugins in the internet, available for your Mayor Mode Menu, for your gardening pleasure. For a long time, up to still now, they have played an important role in park and garden design. There are, admittedly, more detailed graphics available, but they are still quite useful and versatile and fulfill their purpose – this time, even from out of your Mayor Mode Menu, to give you even more freedom in designing your parks and gardens.
+      </p>
+
+
+      <p>
+      	<span style="color:#e74c3c;"><strong>Please make sure to read the installation instructions to avoid unwanted side effects!</strong></span>
+      </p>
+
+
+      <p>
+      	For further information, please refer to the Readme in the download.
+      </p>
+
+
+      <p>
+      	<u>Available languages</u>: English, German
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Dependencies:</strong></span>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack</strong>: <a href="https://sc4evermore.com/index.php/downloads/download/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://sc4evermore.com/index.php/downloads/download/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Installation:</strong>
+      </p>
+
+
+      <p>
+      	Move or copy all files (except the Readme) coming with this plugin into the Plugins folder of your edition of SimCity 4. To uninstall, please remove all azaleas, hydrangeas, and wildflowers that have been planted with this plugin, and then remove all files from this plugin.
+      </p>
+
+
+      <p>
+      	<span style="color:#e74c3c;"><strong>Please only keep one of the two .dat files – they are not compatible, and keeping both may cause unwanted side effects!</strong></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<em>SG Gardening <abbr title="Mayor Mode Ploppable">MMP</abbr> Collection_Combined Entries.dat</em>: Keep this file to save space in your Mayor Mode Menu. There are only 5 entries; all wildflowers and all blooming azaleas and hydrangeas are grouped together to one entry each, and the non-blooming azaleas and hydrangeas get their own entries, each.
+      	</li>
+      	<li>
+      		<em>SG Gardening <abbr title="Mayor Mode Ploppable">MMP</abbr> Collection_Separate Entries.dat</em>: Every object gets its own entry. The reason: Since Windows 10, there have been some users affected by a strange bug that, while planting <abbr title="Mayor Mode Ploppable">MMP</abbr>’s, causes every other item to be skipped, effectively only making half of the entries available. This was the only somewhat feasible solution to this problem.
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Compatibility:</strong>
+      </p>
+
+
+      <p>
+      	This plugin should be compatible with all editions of SimCity 4. If not, please feel free to tell me.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Support:</strong>
+      </p>
+
+
+      <p>
+      	Please feel free to post questions, suggestions, and bug reports in this thread:
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed3942231524" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed" style="height:210px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SG Gardening MMP Collection.zip
+    files:
+      - SG Gardening MMP Collection_Separate Entries.dat
+      - SG Gardening MMP Collection_Combined Entries.dat
+      - Scr2.jpg
+      - Scr1.jpg
+      - Dokumentation_Deutsch.pdf
+      - Documentation_English.pdf
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Scr1.png.87a60078fa22f5c3b7f34eca78d2b31c.png
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Scr2.jpg.94ca9456ff83eff1b3bd30ca31a1bdfa.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Scr3.png.bdd4e0f1c292b23a97e45f79c1557c3f.png
     lastModified: 2024-05-14T03:48:27Z
     name: SG Gardening MMP Collection
+    sha256: 9da5f0d2d1a9d0b16ce101d3dafe1827319defb48e3d017511f619dc76306589
+    size: 897917
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/Scr2.thumb.jpg.85f8f9550cf130e308fc580fe7a70973.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 944829
     url: https://community.simtropolis.com/files/file/33897-sg-gardening-mmp-collection/
+    version: "1"
   simtropolis/33979-sm2-supertanker-corina:
     authors:
       - Simmer2
@@ -4885,7 +7388,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -5720,7 +8235,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -6034,7 +8561,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -6162,7 +8701,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -6313,7 +8864,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -6560,7 +9123,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -6772,7 +9347,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -6864,6 +9451,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
 
 
@@ -6971,6 +9564,109 @@ assets:
     uncompressed: 554302
     url: https://community.simtropolis.com/files/file/36380-fa-roads-t21-mod/
     version: "1"
+  simtropolis/36396-region-thumbnail-fix-dll:
+    authors:
+      - memo
+    category: 20
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	This DLL plugin fixes the rendering bug of a city's region view thumbnail that affects large screen sizes.
+      </p>
+
+
+      <p>
+      	The bug occurs with any vertical screen resolution larger than 1024 pixels. When saving a large city tile, it results in an incomplete rendering of the terrain, leading to a visible gap in the region view.
+      </p>
+
+
+      <p>
+      	<strong>System requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		SimCity 4, version 1.1.641 (the digital edition) (<a href="https://community.simtropolis.com/forums/topic/762980-the-future-of-sc4-modding-the-matter-of-digital-vs-disc-and-windows-vs-macos-in-the-dll-era/" rel="" style="background-color:transparent;color:#1f5e8d;">more info</a>)
+      	</li>
+      	<li>
+      		Windows 10+ or Linux
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Copy the DLL into the top-level directory of either Plugins folder (place it directly in<span> </span></span><span style="background-color:#dddddd;color:#353535;font-size:14px;">&lt;Documents&gt;\SimCity 4\Plugins</span><span style="background-color:#ffffff;color:#353535;font-size:14px;"> or<span> </span></span><span style="background-color:#dddddd;color:#353535;font-size:14px;">&lt;SC4 install folder&gt;\Plugins</span><span style="background-color:#ffffff;color:#353535;font-size:14px;">, not in a subfolder).</span>
+      </p>
+
+
+      <p>
+      	Alternatively, the mod can be installed with <em>sc4pac</em>: <a href="https://memo33.github.io/sc4pac/channel/?pkg=memo:region-thumbnail-fix-dll" rel="external nofollow">memo:region-thumbnail-fix-dll</a>
+      </p>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	The plugin should write a .log file in the folder containing the plugin. The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	If no .log file is written, the DLL failed to load. In this case, make sure the<span> </span><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">Microsoft Visual C++ 2022+ x86 Redistributable</a><span> </span>is installed.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Source Code</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	Available on <a href="https://github.com/memo33/sc4-thumbnail-fix-dll" rel="external nofollow">GitHub</a>.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	Thanks to <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/321174-ulisse-wolf/?do=hovercard" data-mentionid="321174" href="https://community.simtropolis.com/profile/321174-ulisse-wolf/" rel="">@Ulisse Wolf</a>, <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a>, <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/101198-redfox85/?do=hovercard" data-mentionid="101198" href="https://community.simtropolis.com/profile/101198-redfox85/" rel="">@redfox85</a> and <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/205071-eggman121/?do=hovercard" data-mentionid="205071" href="https://community.simtropolis.com/profile/205071-eggman121/" rel="">@Eggman121</a> for testing the DLL.
+      </p>
+
+      						</body>
+    filename: thumbnail-fix-dll-1.0.0.zip
+    files:
+      - LICENSE.txt
+      - memo.thumbnail-fix.dll
+      - README.md
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/before-after.jpeg.147e3ee01bff54be8999236ff119a78b.jpeg
+    lastModified: 2024-08-17T10:12:54Z
+    name: Region Thumbnail Fix DLL
+    repository: https://github.com/memo33/sc4-thumbnail-fix-dll
+    sha256: 0c9958c005b90ad2f6660727f8b8e3751577cee1b1e4d22f48b303b7222be05c
+    size: 43395
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/before-after.thumb.jpeg.6908f13c639304448a7d9bc9a4295b25.jpeg
+    timestamp: 2024-08-19T05:43:53.512Z
+    uncompressed: 94044
+    url: https://community.simtropolis.com/files/file/36396-region-thumbnail-fix-dll/
+    version: 1.0.0
   simtropolis/3651-navigation-buoys:
     authors:
       - Odd from Sweden
@@ -7176,4 +9872,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-43c2c618fac6b7de4fc16966c4966243-SW_Hydro%20Dam.jpg
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

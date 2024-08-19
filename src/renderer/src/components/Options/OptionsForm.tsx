@@ -29,7 +29,7 @@ export function OptionsForm({
 
   const sectionIds = Object.keys(sections).filter(sectionId => sectionId !== NOSECTION)
 
-  const [expanded, setExpanded] = useState<string | null>(null)
+  const [expanded, setExpanded] = useState<string | undefined>(sectionIds[0])
 
   return (
     <FormControl component="fieldset" fullWidth sx={{ gap: 2, mt: 1 }}>
@@ -41,7 +41,7 @@ export function OptionsForm({
             elevation={0}
             expanded={expanded === sectionId}
             key={sectionId}
-            onChange={() => setExpanded(expanded === sectionId ? null : sectionId)}
+            onChange={() => setExpanded(expanded === sectionId ? undefined : sectionId)}
             sx={{
               border: `1px solid ${theme.palette.divider}`,
               "&:not(:last-child)": { borderBottom: 0 },

@@ -1123,6 +1123,8 @@ export class Application {
             // Blacklist desktop.ini
             const excludes = ["desktop.ini"]
 
+            const conditionRegex = /{{([^}]+)}}/g
+
             const getChildrenPattern = (pattern: string) => {
               return pattern.includes("/") ? `${pattern}/**` : `**/${pattern}/**`
             }
@@ -1223,8 +1225,6 @@ export class Application {
               type: "cleanitol" | "docs" | "files",
               include?: PackageFile,
             ) => {
-              const conditionRegex = /{{([^}]+)}}/g
-
               const entries = await glob(pattern.replace(conditionRegex, "*"), {
                 cwd: downloadPath,
                 dot: true,
@@ -1324,10 +1324,10 @@ export class Application {
                 if (typeof include === "string") {
                   const [path, as] = include.split(":", 2)
                   await includePath(path, "files", { as, path })
-                  excludePath(path)
+                  excludePath(path.replace(conditionRegex, "*"))
                 } else {
                   await includePath(include.path, "files", include)
-                  excludePath(include.path)
+                  excludePath(include.path.replace(conditionRegex, "*"))
                 }
               }
             } else {

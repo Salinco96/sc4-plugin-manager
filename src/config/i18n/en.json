@@ -173,8 +173,7 @@
       "description": "Disable this package",
       "label": "Disable",
       "reason": {
-        "required_one": "This package cannot be disabled because it is required by another package",
-        "required_other": "This package cannot be disabled because it is required by {{count}} other packages"
+        "required": "Disable this package (some files will still be included as dependencies)"
       }
     },
     "download": {
@@ -348,6 +347,7 @@
     "incompatible": "Incompatible",
     "installed": "Installed",
     "local": "Local",
+    "new": "New",
     "outdated": "Outdated"
   },
   "PackageTag": {
@@ -371,6 +371,23 @@
   "PackageViewFiles": {
     "openFile": "Open file location"
   },
+  "PackageViewLots": {
+    "bulldoze": "Bulldoze cost",
+    "cost": "Plop cost",
+    "demand": "Occupants",
+    "excludeLot": "Exclude lot",
+    "flamability": "Flamability",
+    "garbage": "Garbage production",
+    "includeLot": "Include lot",
+    "pollution": "Air pollution",
+    "power": "Energy consumption",
+    "powerProduction": "Energy production",
+    "size": "Size",
+    "stage": "Growth stage",
+    "water": "Water consumption",
+    "waterPollution": "Water pollution",
+    "waterProduction": "Water production"
+  },
   "PackageViewSummary": {
     "authors": "Authors",
     "category": "Category",
@@ -384,6 +401,8 @@
     "dependencies_other": "{{count}} dependencies",
     "files_one": "{{count}} file",
     "files_other": "{{count}} files",
+    "lots_one": "{{count}} lot",
+    "lots_other": "{{count}} lots",
     "options": "Options",
     "optionalDependencies_one": "{{count}} optional dependency",
     "optionalDependencies_other": "{{count}} optional dependencies",

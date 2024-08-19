@@ -1,3 +1,5 @@
+import { isNew } from "./packages"
+
 /** Supported configuration formats */
 export enum ConfigFormat {
   JSON = ".json",
@@ -104,11 +106,12 @@ export type OptionInfo<T extends OptionType = OptionType> = {
   [OptionType.BOOLEAN]: {
     default?: boolean
     display?: "checkbox" | "switch"
+    multi?: false
     type: OptionType.BOOLEAN
   }
   [OptionType.NUMBER]: {
     choices?: Array<number | OptionChoice<number>>
-    default?: number
+    default?: number | number[]
     display?: "checkbox" | "select"
     max?: number
     min?: number
@@ -118,7 +121,7 @@ export type OptionInfo<T extends OptionType = OptionType> = {
   [OptionType.STRING]: {
     choices: Array<string | OptionChoice<string>>
     display?: "checkbox" | "select"
-    default?: string
+    default?: string | string[]
     type: OptionType.STRING
   }
 }[T]
@@ -137,10 +140,10 @@ export type Features = Partial<Record<Feature, boolean>>
 
 export interface PackageStatus {
   action?: "disabling" | "enabling"
-  enabled: boolean
-  issues: Partial<Record<string, VariantIssue[]>>
-  options: Options
-  requiredBy: string[]
+  enabled?: boolean
+  issues?: Partial<Record<string, VariantIssue[]>>
+  options?: Options
+  requiredBy?: string[]
   variantId: string
 }
 
@@ -155,6 +158,70 @@ export interface ToolInfo {
   exe: string
 }
 
+export interface LotData {
+  /** Bulldoze cost */
+  bulldoze?: number
+  /** Category (TODO) */
+  category?: number
+  /** Requirements (e.g. CAM for stage 9+ growables) */
+  condition?: Requirements
+  /** Plop cost */
+  cost?: number
+  /** Whether lot is enabled by default (this defaults to true) */
+  default?: boolean
+  /** Number of jobs or residential capacity */
+  demand?: {
+    /** Medium-Wealth Offices */
+    co$$?: number
+    /** High-Wealth Offices */
+    co$$$?: number
+    /** Low-Wealth Services */
+    cs$?: number
+    /** Medium-Wealth Services */
+    cs$$?: number
+    /** High-Wealth Services */
+    cs$$$?: number
+    /** Dirty Industry */
+    id?: number
+    /** High-Tech Industry */
+    iht?: number
+    /** Manufacture */
+    im?: number
+    /** Agriculture */
+    ir?: number
+    /** Low-Wealth Residential */
+    r$?: number
+    /** Medium-Wealth Residential */
+    r$$?: number
+    /** High-Wealth Residential */
+    r$$$?: number
+  }
+  /** Flamability (number between 0 and 100) */
+  flamability?: number
+  /** Garbage produced */
+  garbage?: number | `${number} over ${number} tiles`
+  /** Lot ID within the Manager (usually the SC4Lot filename) */
+  id: string
+  /** Lot name */
+  label?: string
+  /** Air pollution */
+  pollution?: number | `${number} over ${number} tiles`
+  /** Electricity consumed */
+  power?: number
+  /** Electricity produced */
+  powerProduction?: number
+  /** Lot size in AxB format (e.g. 2x3) */
+  size?: `${number}x${number}`
+  /** Growth stage */
+  stage?: number
+  /** Water consumed */
+  water?: number
+  /** Water pollution */
+  waterPollution?: number | `${number} over ${number} tiles`
+  /** Water produced */
+  waterProduction?: number
+}
+
 export interface VariantData {
   assets?: PackageAsset[]
   authors?: string[]
@@ -166,9 +233,11 @@ export interface VariantData {
   experimental?: boolean
   files?: PackageFile[]
   images?: string[]
+  lots?: LotData[]
   name?: string
   optional?: string[]
   options?: OptionInfo[]
+  release?: string
   readme?: string
   repository?: string
   requirements?: Requirements
@@ -214,6 +283,7 @@ export enum PackageState {
   INCOMPATIBLE = "incompatible",
   INSTALLED = "installed",
   LOCAL = "local",
+  NEW = "new",
   OUTDATED = "outdated",
 }
 
@@ -246,7 +316,7 @@ export interface Settings {
 }
 
 export function isCompatible(info: PackageInfo, variantId: string, profile: ProfileInfo): boolean {
-  return !info.status[profile.id]?.issues[variantId]?.length
+  return !info.status[profile.id]?.issues?.[variantId]?.length
 }
 
 export function getDefaultVariant(info: PackageInfo, profile?: ProfileInfo): VariantInfo {
@@ -268,39 +338,46 @@ export function getState(
   variantId: string,
   profileInfo?: ProfileInfo,
 ): boolean {
+  const packageConfig = profileInfo?.packages[packageInfo.id]
   const packageStatus = profileInfo ? packageInfo.status[profileInfo.id] : undefined
   const variantInfo = packageInfo.variants[variantId]
-  const issues = packageStatus?.issues[variantId]
+
+  const enabled = !!packageStatus?.enabled
+  const explicit = !!packageConfig?.enabled
+  const incompatible = !!packageStatus?.issues?.[variantId]?.length
 
   switch (state) {
     case PackageState.DEPENDENCY:
-      return !!packageStatus?.enabled && !profileInfo?.packages[packageInfo.id]?.enabled
+      return enabled && !explicit
 
     case PackageState.DEPRECATED:
-      return !!variantInfo?.deprecated
+      return !!variantInfo.deprecated
 
     case PackageState.DISABLED:
-      return !!variantInfo?.installed && !!packageStatus && !packageStatus.enabled
+      return !!profileInfo && !!variantInfo.installed && !enabled
 
     case PackageState.ENABLED:
-      return !!packageStatus?.enabled
+      return enabled && explicit
 
     case PackageState.ERROR:
-      return !!packageStatus?.enabled && (!!issues?.length || !variantInfo.installed)
+      return enabled && (incompatible || !variantInfo.installed)
 
     case PackageState.EXPERIMENTAL:
-      return !!variantInfo?.experimental
+      return !!variantInfo.experimental
 
     case PackageState.INCOMPATIBLE:
-      return !!packageStatus && !packageStatus.enabled && !!issues?.length
+      return incompatible && !enabled
 
     case PackageState.INSTALLED:
-      return !!variantInfo?.installed
+      return !!variantInfo.installed
 
     case PackageState.LOCAL:
-      return !!variantInfo?.local
+      return !!variantInfo.local
+
+    case PackageState.NEW:
+      return isNew(variantInfo)
 
     case PackageState.OUTDATED:
-      return !!variantInfo?.installed && !!variantInfo.update
+      return !!variantInfo.installed && !!variantInfo.update
   }
 }

@@ -7,7 +7,12 @@ export interface IndexerOptions {
     source: IndexerSource,
     category: IndexerCategory,
   ) => boolean
-  include: (entry: IndexerBaseEntry, entryId: string) => boolean
+  include: (
+    entry: IndexerBaseEntry,
+    entryId: string,
+    source: IndexerSource,
+    category: IndexerCategory,
+  ) => boolean
   overrides?: IndexerOverrides
   sources: IndexerSource[]
   superseded?: { [entryId: string]: string }

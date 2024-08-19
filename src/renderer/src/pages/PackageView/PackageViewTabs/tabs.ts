@@ -8,6 +8,7 @@ import { PackageOptionsForm } from "@components/Options"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewFiles } from "./PackageViewFiles"
+import { PackageViewLots } from "./PackageViewLots"
 import { PackageViewOptionalDependencies } from "./PackageViewOptionalDependencies"
 import { PackageViewReadme } from "./PackageViewReadme"
 import { PackageViewRequiredBy } from "./PackageViewRequiredBy"
@@ -34,6 +35,16 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     },
     label(t) {
       return t("summary")
+    },
+  },
+  {
+    id: "lots",
+    component: PackageViewLots,
+    condition(variantInfo) {
+      return !!variantInfo.lots?.length
+    },
+    label(t, variantInfo) {
+      return t("lots", { count: variantInfo.lots?.length })
     },
   },
   {

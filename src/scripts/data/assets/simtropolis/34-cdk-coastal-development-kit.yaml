@@ -787,10 +787,59 @@ assets:
     authors:
       - Pegasus
     category: 750
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p> </p>
+
+      <p>
+
+      </p>
+
+      <p align="justify">This is a collection of 7 container ship props to be used with the upcoming <span style="font-weight:bold;color:rgb(0,0,102);"><abbr title="Pegasus">PEG</abbr>-<abbr
+      title="Coastal Development Kit 3">CDK3</abbr> Seaport</span> (<abbr title="Coastal Development Kit 3">CDK3</abbr>-SP) series of lots. It is a required dependency, specifically, for the Container
+      Ship Seaport lot and may be used with other <span style="font-weight:bold;color:rgb(51,0,153);"><abbr title="Coastal Development Kit 3">CDK3</abbr>-SP</span> lots.</p>
+
+      <p align="justify">* Players and developers may use these props on their own lots... subject to the terms of the EULA that is documented in the included readme file.</p>
+
+      <p style="text-align:center;"><strong style="font-family:Roboto, sans-serif;line-height:22px;"><span style="color:rgb(128,0,0);">All Pegasus files are now legacy content and are no longer
+      officially supported - however support from the wider community can be requested</span> <u><a style="color:rgb(51,122,183);"
+      href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/" rel="">here</a></u></strong>.</p>
+
+      <p> </p>
+
+      						</body>
+    filename: PEG-CDK3-SP_ContainerShipFleet_101.zip
+    files:
+      - PEGPROD/CDK3/SEAPORT/Container Ship Fleet/readme_248.htm
+      - PEGPROD/CDK3/SEAPORT/Container Ship Fleet/product_image.jpg
+      - PEGPROD/CDK3/SEAPORT/Container Ship Fleet/CDK3-SP_Container-Fleet_RESOURCE.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0017/9a57e91e92c954ee460896c165554887-product_image.jpg
+      - https://www.simtropolis.com/objects/screens/0017/9a57e91e92c954ee460896c165554887-product_image1.jpg
     lastModified: 2015-07-08T07:15:56Z
     name: PEG CDK3 SP Container Ship Fleet
+    sha256: c3e4dcffda8930b7e0e3f59b8f8b5438aa3e6c36ca71a12a643fbc8667e5056b
+    size: 3299297
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2008/thumb-9a57e91e92c954ee460896c165554887-product_image.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 3641169
     url: https://community.simtropolis.com/files/file/19577-peg-cdk3-sp-container-ship-fleet/
+    version: "101"
   simtropolis/19594-peg-cdk3-sp-container-seaport:
     authors:
       - Pegasus
@@ -1114,4 +1163,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-a8850ec9e57d2949aa06e51f2649b341-product_image.jpg
     url: https://community.simtropolis.com/files/file/4527-peg-cdk-leveler-v205/
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

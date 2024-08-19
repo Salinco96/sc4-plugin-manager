@@ -1,17 +1,24 @@
 import { useCallback, useMemo } from "react"
 
-import { isCategory } from "@common/categories"
+import { PackageCategory, isCategory } from "@common/categories"
 import {
   getVariantIssues,
-  isDependency,
   isDeprecated,
+  isEnabled,
   isError,
   isExperimental,
   isIncompatible,
   isMissing,
   isOutdated,
 } from "@common/packages"
-import { PackageInfo, PackageStatus, ProfileInfo, VariantInfo, getState } from "@common/types"
+import {
+  PackageInfo,
+  PackageState,
+  PackageStatus,
+  ProfileInfo,
+  VariantInfo,
+  getState,
+} from "@common/types"
 import { hasAny } from "@common/utils/arrays"
 import { mapValues } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
@@ -38,7 +45,7 @@ export function getPackageListItemSize(
   variantInfo: VariantInfo,
   packageStatus?: PackageStatus,
 ): number {
-  const issues = getVariantIssues(variantInfo, packageStatus)
+  const issues = getVariantIssues(variantInfo.id, packageStatus)
 
   let nBanners = 0
   let size = PACKAGE_LIST_ITEM_BASE_SIZE
@@ -185,8 +192,14 @@ export function filterVariant(
     return false
   }
 
-  if (filters.state && !getState(filters.state, packageInfo, variantInfo.id, profileInfo)) {
-    return false
+  if (filters.state) {
+    if (filters.state === PackageState.ENABLED && filters.dependencies) {
+      if (!isEnabled(variantInfo, packageStatus)) {
+        return false
+      }
+    } else if (!getState(filters.state, packageInfo, variantInfo.id, profileInfo)) {
+      return false
+    }
   }
 
   if (filters.states.length) {
@@ -196,7 +209,7 @@ export function filterVariant(
   }
 
   if (!filters.onlyErrors && !filters.onlyUpdates) {
-    if (!filters.dependencies && isDependency(variantInfo)) {
+    if (!filters.dependencies && isCategory(variantInfo, PackageCategory.DEPENDENCIES)) {
       return false
     }
 

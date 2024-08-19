@@ -934,6 +934,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <h1 style="background-color:#e3eee6; color:#373a65; text-align:justify">
       	DEDWD Elevated Rail Shops<br>
@@ -1317,6 +1323,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
 
 
@@ -2277,7 +2289,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -3236,7 +3260,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -7320,6 +7356,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p><span style="font-family:Helvetica, Arial, sans-serif;">This is a series of 1x1 lots that allow you to create parking lots of various sizes and configurations. This is the base set for
       several planned add-ons which will allow you to make many different kinds of parking lots.  There are 11 lots total, 6 entrance lots, which function as parking lots with a capacity of 1,500, and
@@ -7639,6 +7681,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
 
 
@@ -8228,6 +8276,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
 
 
@@ -9273,6 +9327,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
 
 
@@ -11220,6 +11280,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p>
       	Been looking for a better Large Freight Yard? Well, look no further!
@@ -11742,6 +11808,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
 
 
@@ -12397,26 +12469,505 @@ assets:
     authors:
       - kingofsimcity
     category: 700
+    dependencies:
+      - simtropolis/30955-kosc-sp-damn-menus
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/24509-spot-simpeg-plop-orientation-tool
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>	<span style="font-size:20px;"><em><span style="font-family:Calibri, 'sans-serif';">KOSC presents: <b>SuperParking Modular Parking – Base Set</b></span></em></span></p>
+
+      <p>	<span style="font-size:14px;"><strong><u>Introduction</u></strong><br><br>	It’s been a long time coming, but it’s finally here! This is the <b>1<sup>st</sup></b> part of my <b>SuperParking
+      </b>modular parking series, which is aimed towards creating even more realistic and crazy parking derivatives from the original <b>SHK Parking Pack</b>. This is the base set, which contains all
+      the essentials for making orthogonal oriented parking lots, junctions, and more.</span><br><br><strong><u>Package Overview</u></strong></p>
+
+      <p>	<span style="font-size:14px;">There are two different packages available for download: one for <b>Right-hand Drive </b>and <b>Left-hand Drive. </b>Choose one.</span></p>
+
+      <p>	<span style="font-size:14px;">The set contains a set of <b>49 </b>lots. There are <b>7 </b>functional “parking garage” pieces, with Transit Enabled connections which are located in the
+      <b>Misc Transportation</b> menu, and <b>42 </b>cosmetic pieces located near the top of the <b>Parks </b>menu. All of the menus are grouped and color coded according to the specific type of
+      parking, ranging from <b>A </b>to <b>D </b>type. These are broken down in the included readme. For those that prefer less cluttered menus, there's<a
+      href="https://community.simtropolis.com/files/file/30955-kosc-sp-damn-menus/" rel=""> <strong><abbr title="Daeley's Advanced Menu Navigator">DAMN</abbr> Support</strong></a><strong> </strong>for
+      these.</span></p>
+
+      <p>	<span style="font-size:14px;"><b><u>General Stats</u></b></span></p>
+
+      <p>	<span style="font-size:14px;"><b><i>Street Entrances </i></b><br><i>Plop Cost: $250<br>	Capacity: 1,000<br><br><b>Road Entrance</b><br>	Plop Cost: $500<br>	Capacity:
+      1,500</i><br><br><strong><em>Cosmetic Pieces</em></strong><br><em>Plop Cost: $0 - $6*</em></span><br><br><span style="font-size:14px;"><em>*The minor plop cost introduced here was to allow for
+      cleaner organization of menu items, so that like groups are kept together.</em><br><br>	All of the cosmetic pieces are considered “neutral lots”, meaning they have pretty much no stats, come at
+      <i>no </i>maintenance cost, and are not of any particular wealth. The detailing on these lots were kept minimal, as to ensure that MMPs can be used on them liberally.</span></p>
+
+      <p>	<span style="font-size:14px;"><b><u>Install Instructions</u></b></span></p>
+
+      <p>	<span style="font-size:14px;">Pick one version (either <b>RHD or LHD) </b>and drop the files into your My Documents/SimCity 4/Plugins folder.<br><br><span
+      style="color:#B22222;"><strong><u>Dependencies</u></strong></span></span><br><br><span style="font-size:14px;">You will need the following:</span></p>
+
+      <p>	<span style="font-size:14px;"><a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="">SuperSHK MEGA Parking Textures</a><br><a
+      href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a><br><a href="https://community.simtropolis.com/files/file/24509-spot/" rel="">SPOT</a> (for
+      the positioning helpers)</span></p>
+
+      <p>	<span style="font-size:14px;"><span style="color:#000000;">Credit goes to <strong><a contenteditable="false" data-ipshover=""
+      data-ipshover-target="https://community.simtropolis.com/profile/455740-nos17/?do=hovercard" data-mentionid="455740" href="https://community.simtropolis.com/profile/455740-nos17/"
+      rel="">@nos.17</a> </strong>for the rounded endcaps suggestion, and <strong><a contenteditable="false" data-ipshover=""
+      data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/"
+      rel="">@rsc204</a> </strong>for his  invaluable assistance in providing me with tools and sample textures to use. Additional shoutouts to all the regulars in my lot thread that like/leave
+      comments and feedback, you know who you are. <img alt="*:P" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_3.gif"
+      srcset="https://community.simtropolis.com/assets/emoticons/default_3@2x.gif 2x" title=":P" width="15" ></span></span></p>
+
+      <p>	<span style="font-size:14px;"><span style="color:#000000;">Last but not least, credit to the <strong><abbr title="SimForum BAT Team">SFBT</abbr> </strong>team for the awesome helper pieces
+      (v1.1 and older), credit to <strong>RebaLynnTS </strong>for the helper pieces (1.2), and </span></span><b>shokthrpy</b><span style="font-size:14px;"><span style="color:#000000;"> for his awesome
+      parking set.</span></span></p>
+
+      <p>	<span style="font-size:14px;"><span style="color:#000000;"><em>V1.2 Update: <abbr title="SimForum BAT Team">SFBT</abbr> Essentials is no longer a dependency for this
+      set.</em></span></span></p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/2016-02-07_00010.jpg.893d66e13ca9359296ae751cbb02a703.jpg.515308407fbd5fb5da4095702f74415e.jpg.388e1914456f333f944da6813f703044.jpg.4fdfc243858d607b00d7c0dbe1b90129.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411111152_1.jpg.257510dbefa22d41c554430d4401d400.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411111241_1.jpg.15b40fee7f3a4de3dc94e703b9aab9a5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411111353_1.jpg.919aa106b9b47e68e5e0888bfbf19715.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411111429_1.jpg.6cc99fec366c5ea9acdbd7e3d0eea8f5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411111517_1.jpg.a0b545660990c60b9504a14c5d62816a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411111657_1.jpg.19f00b8f0b5012430a9b24048f655df9.jpg
     lastModified: 2016-04-12T00:10:08Z
     name: KOSC SP Modular Parking - Base Set
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_04/2016-02-07_00010.jpg.893d66e13ca9359296ae751cbb02a703.jpg.515308407fbd5fb5da4095702f74415e.jpg.388e1914456f333f944da6813f703044.thumb.jpg.96d002a3e3a583089308fe6a1379376d.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/30941-kosc-sp-modular-parking-base-set/
+    variants:
+      "161328":
+        filename: KOSC_SP_ModularParking_BaseSet v1.3 (RHD).zip
+        files:
+          - KOSC Superparking/SuperParking Modular Set.pdf
+          - KOSC Superparking/Starter Set (RHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Path_Ortho_Stop_543bd008.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Path_Ortho_NoMarkings_443cdc10.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Path_Ortho_84390e74.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Path_Curve_e43bcf6a.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Junction_4_64390db0.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Junction_3_c4390cea.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Fillers/PLOP_1x1_KOSC_Superparking_Pavement_Filler_443f31cf.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Fillers/PLOP_1x1_KOSC_Superparking_Grass_Filler_74462cff.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_C_Right_c43b9e1a.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_C_Left_843b9d8c.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_C_343b9071.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_A_Right_343b8fa9.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_A_Left_643b8f09.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_A_243b8dcf.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Road_Gate_243b8cb0.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Middle_1438e6fd.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Junction_Middle_NoMarkings_d43cd3ed.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Junction_Middle_9438e5c1.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Junction_End_943be68c.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Exit_1438e7a1.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Entry_7438e638.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Outer_Corner_2438c07f.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Right_143aacb0.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Middle_NoMarkings_d43cb62d.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Middle_c43aab7c.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Left_543aac3a.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Inner_Corner_e438d37f.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_CtoA_Outer_Corner_Right_7438c242.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_CtoA_Outer_Corner_Left_6438c1d1.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C2_e43aa13f.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C1_7438bf18.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Junction_Middle_NoMarkings_843cd388.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Junction_Middle_143bce7c.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Junction_End_743aa76b.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Inner_Turn_d438d474.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B2_2438beb2.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B1_a438be22.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Outer_Corner_a438d55e.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Stop_Right_9440e04a.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Stop_Left_0440dfb5.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Right_343aa92f.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Middle_NoMarkings_c43cb58d.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Middle_443aaaa7.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Left_c43aa9d5.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Inner_Corner_5438e931.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_AtoC_Inner_Corner_Right_243bd127.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_AtoC_Inner_Corner_Left_c43bd1ba.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A2_e439485b.SC4Lot
+          - KOSC Superparking/Starter Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A1_1438bbf0.SC4Lot
+        sha256: ee572bf1bdcd9d7fb84090db8420a680aada7fe966e6fa41b7c09edf8151e0b0
+        size: 3666740
+        uncompressed: 3831201
+      "161329":
+        filename: KOSC_SP_ModularParking_BaseSet v1.3 (LHD).zip
+        files:
+          - KOSC Superparking/SuperParking Modular Set.pdf
+          - KOSC Superparking/Starter Set (LHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Path_Ortho_Stop_543bd008.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Path_Ortho_NoMarkings_443cdc10.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Path_Ortho_84390e74.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Path_Curve_e43bcf6a.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Junction_4_64390db0.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Junctions and Paths/PLOP_1x1_KOSC_Superparking_Junction_3_c4390cea.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Fillers/PLOP_1x1_KOSC_Superparking_Pavement_Filler_443f31cf.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Fillers/PLOP_1x1_KOSC_Superparking_Grass_Filler_74462cff.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_C_Right_c43b9e1a.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_C_Left_843b9d8c.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_C_343b9071.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_A_Right_343b8fa9.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_A_Left_643b8f09.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_A_243b8dcf.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Road_Gate_243b8cb0.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Middle_1438e6fd.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Junction_Middle_NoMarkings_d43cd3ed.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Junction_Middle_9438e5c1.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Junction_End_943be68c.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Exit_1438e7a1.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Entry_7438e638.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Outer_Corner_2438c07f.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Right_143aacb0.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Middle_NoMarkings_d43cb62d.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Middle_c43aab7c.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Left_543aac3a.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Inner_Corner_e438d37f.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_CtoA_Outer_Corner_Right_7438c242.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_CtoA_Outer_Corner_Left_6438c1d1.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C2_e43aa13f.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C1_7438bf18.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Junction_Middle_NoMarkings_843cd388.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Junction_Middle_143bce7c.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Junction_End_743aa76b.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Inner_Turn_d438d474.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B2_2438beb2.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B1_a438be22.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Outer_Corner_a438d55e.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Stop_Right_9440e04a.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Stop_Left_0440dfb5.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Right_343aa92f.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Middle_NoMarkings_c43cb58d.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Middle_443aaaa7.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Left_c43aa9d5.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Inner_Corner_5438e931.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_AtoC_Inner_Corner_Right_243bd127.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_AtoC_Inner_Corner_Left_c43bd1ba.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A2_e439485b.SC4Lot
+          - KOSC Superparking/Starter Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A1_1438bbf0.SC4Lot
+        sha256: 7e00d18ef9d12d93002498aa98893ccca3decfc6899e43291445b7e0f51e1d39
+        size: 3666763
+        uncompressed: 3831201
+    version: "1.3"
   simtropolis/30953-kosc-sp-modular-parking-diagonal-set:
     authors:
       - kingofsimcity
     category: 700
+    dependencies:
+      - simtropolis/30955-kosc-sp-damn-menus
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/24509-spot-simpeg-plop-orientation-tool
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<span style="font-size:20px;"><em><span style="font-family:Calibri, 'sans-serif';">KOSC presents: <b>SuperParking Modular Parking – Expansion 1: Diagonal Set </b></span></em></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><strong><u>Introduction</u></strong><br><br>
+      	This is the <b>1<sup>st</sup> expansion pack</b> of my <b>SuperParking </b>modular parking series, which is aimed towards creating even more realistic and crazy parking derivatives from the original <b>SHK Parking Pack</b>. This set covers <strong>diagonals</strong> - largely uncharted territory - by adding a plethora of new parking options for your cities including the ability to create fully-diagonal oriented parking lots. As if that wasn't enough, there's a wealth of different orthogonal transitions and connector pieces to combine with the base set for even more ridiculous combinations.</span><br><br><strong><u>Package Overview</u></strong>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">There are two different packages available for download: one for <b>Right-hand Drive </b>and <b>Left-hand Drive. </b>Choose one.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">The set contains a set of <b>50 </b>lots. There are <b>3 </b>functional “parking garage” pieces, with Transit Enabled connections which are located in the <b>Misc Transportation</b> menu, and <b>47 </b>cosmetic pieces located near the top of the <b>Parks </b>menu. All of the menus are grouped and color coded according to the specific type of parking, including <strong>A, B, </strong>and <strong>Joiner </strong>categories. For users that prefer less clutter, there's <strong><a href="https://community.simtropolis.com/files/file/30955-kosc-sp-damn-menus/" rel="">DAMN Support</a> </strong>for these!</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><b><u>General Stats</u></b></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><b><i>Entrances </i></b><br><i>Plop Cost: $250<br>
+      	Capacity: 1,000</i><br><br><strong><em>Cosmetic Pieces</em></strong><br><em>Plop Cost: $0 - $6*<br><br>
+      	*The minor plop cost introduced here was to allow for cleaner organization of menu items, so that like groups are kept together.</em><br><br>
+      	All of the cosmetic pieces are considered “neutral lots”, meaning they have pretty much no stats, come at <i>no </i>maintenance cost, and are not of any particular wealth. The detailing on these lots were kept minimal, as to ensure that MMPs can be used on them liberally.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><b><u>Install Instructions</u></b></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Pick one version (either <b>RHD or LHD) </b>and drop the files into your My Documents/SimCity 4/Plugins folder. Note that if you already have the base set, you can safely merge the parent folder.<br><br><span style="color:#B22222;"><strong><u>Dependencies</u></strong></span></span><br><br><span style="font-size:14px;">You will need the following:</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><a href="https://community.simtropolis.com/files/file/30934-supershk-parking-textures-vol-1/" rel="">SuperSHK MEGA Parking Textures</a><br><a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a><br><a href="https://community.simtropolis.com/files/file/24509-spot/" rel="">SPOT</a> (for the positioning helpers)</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><span style="color:#000000;">Once again, some credit needs to go to <strong><a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a> </strong>for providing me with his blended width transition stubs.</span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><span style="color:#000000;">Last but not least, credit to <strong>RebaLynnTS </strong>for the helper pieces, and </span></span><b>shokthrpy</b><span style="font-size:14px;"><span style="color:#000000;"> for his awesome parking set.</span></span>
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/vol11.jpg.a6aeab752fbae5a8f3046e8c27f90844.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/splash.jpg.c4e06a77e6c2650cb0af2d988f79ae50.jpg.12ce55b7c8601be48f8725e46bc96ae6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160410234925_1.jpg.f424a2a670ef65adc44d748e44ffe04f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160410192433_1.jpg.d5dce583671347c492ad7e8bf209fee0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160410193218_1.jpg.015ee22fa0af619107e97353a57566bb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160410193926_1.jpg.11b97235b953d0421c1cd56f8c1ed191.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160410194651_1.jpg.5a3078c7e642c1771e689e5bc415fe55.jpg
     lastModified: 2016-04-11T07:11:26Z
     name: KOSC SP Modular Parking - Diagonal Set
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_04/splash.jpg.c4e06a77e6c2650cb0af2d988f79ae50.thumb.jpg.e5305712b37c565446eff36cb1c3b035.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/30953-kosc-sp-modular-parking-diagonal-set/
+    variants:
+      "161306":
+        filename: KOSC_SP_ModularParking_DiagonalSet v1.2 (RHD).zip
+        files:
+          - KOSC Superparking/SuperParking Diagonal Modular Set.pdf
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/PLOP_1x1_KOSC_Superparking_Path_Diag_NoMarkings_544539b2.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/PLOP_1x1_KOSC_Superparking_Diag_Joiner_Dual_9438f4d6.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/PLOP_1x1_KOSC_Superparking_Diag_Joiner_043e6158.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Diag_Junction_Right_Entrance_9442527c.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Diag_Junction_Middle_Entrance_14424f65.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Diag_Junction_Left_Entrance_24425237.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/PLOP_2x1_KOSC_Superparking_Diag_B_Inner_Turn_a438f64d.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Diag_B2_543e59de.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Diag_B1_7438f3ad.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_B_Diag_End_Right_64438c10.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_B_Diag_End_Left_54438875.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_A_Diag_End_Top_Right_d443d837.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_A_Diag_End_Top_Left_94438c87.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_A_Diag_End_Bottom_Right_d443d5f8.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_A_Diag_End_Bottom_Left_34438d15.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_Joiner_Ortho_End_Right_a43fc160.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_Joiner_Ortho_End_Left_043fc2ec.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Staggered_B_84453b90.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Staggered_A_c4450eca.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Right_343f85cc.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Middle_NoMarkings_943f8446.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Middle_b43f83ba.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Left_443f8532.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Diag_A_Outer_Corner_d438f5c4.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Diag_A_Inner_Corner_8439557f.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Diag_A2_e43e5ac9.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Diag_A1_9438f460.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/Junctions/PLOP_1x1_KOSC_Superparking_Diag_B_Ortho_End_B_Right_443f9683.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/Junctions/PLOP_1x1_KOSC_Superparking_Diag_B_Ortho_End_B_Left_843fc788.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/Junctions/PLOP_1x1_KOSC_Superparking_Diag_B_Ortho_End_A_d43f8ef8.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_to_Ortho_B_Inner_Turn_Right_e438fd29.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_to_Ortho_B_Inner_Turn_Left_9438fbb4.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_End_B2_843e68f3.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_End_B1_e4428c45.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_End_A2_a4429131.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_End_A1_94421917.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_OC_Right_9439229c.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_OC_Left_a439238b.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_IC_Right_04391a71.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_IC_Left_34392689.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_315_IC_Right_e43e5dd6.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_315_IC_Left_c4395477.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_OC_Right_b43fc835.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_OC_Left_243fc8f2.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_IT_Right_943e8b56.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_IT_Left_743e8c86.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_IC_Right_c442965e.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_IC_Left_a44295d0.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Junctions/PLOP_1x1_KOSC_Superparking_Diag_A_Ortho_End_Right_1438f8bf.SC4Lot
+          - KOSC Superparking/Diagonal Set (RHD)/A/Junctions/PLOP_1x1_KOSC_Superparking_Diag_A_Ortho_End_Left_e438fac8.SC4Lot
+        sha256: 546136f5efc161075e5eb77fe0a35acacc2ef41f85db01a7e2b2ff2166af59dd
+        size: 2672811
+        uncompressed: 2860450
+      "161307":
+        filename: KOSC_SP_ModularParking_DiagonalSet v1.2 (LHD).zip
+        files:
+          - KOSC Superparking/SuperParking Diagonal Modular Set.pdf
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/PLOP_1x1_KOSC_Superparking_Path_Diag_NoMarkings_544539b2.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/PLOP_1x1_KOSC_Superparking_Diag_Joiner_Dual_9438f4d6.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/PLOP_1x1_KOSC_Superparking_Diag_Joiner_043e6158.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Diag_Junction_Right_Entrance_9442527c.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Diag_Junction_Middle_Entrance_14424f65.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Diag_Junction_Left_Entrance_24425237.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_B_Diag_End_Right_64438c10.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_B_Diag_End_Left_54438875.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_A_Diag_End_Top_Right_d443d837.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_A_Diag_End_Top_Left_94438c87.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_A_Diag_End_Bottom_Right_d443d5f8.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Bisectors/PLOP_1x1_KOSC_Superparking_Ortho_A_Diag_End_Bottom_Left_34438d15.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/PLOP_2x1_KOSC_Superparking_Diag_B_Inner_Turn_a438f64d.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Diag_B2_543e59de.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Diag_B1_7438f3ad.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Diag_A_Outer_Corner_d438f5c4.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Diag_A_Inner_Corner_8439557f.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Diag_A2_e43e5ac9.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Diag_A1_9438f460.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_Joiner_Ortho_End_Right_a43fc160.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_Joiner_Ortho_End_Left_043fc2ec.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Staggered_B_84453b90.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Staggered_A_c4450eca.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Right_343f85cc.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Middle_NoMarkings_943f8446.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Middle_b43f83ba.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/Joiners, Junctions, Misc/Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Left_443f8532.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/Junctions/PLOP_1x1_KOSC_Superparking_Diag_B_Ortho_End_B_Right_443f9683.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/Junctions/PLOP_1x1_KOSC_Superparking_Diag_B_Ortho_End_B_Left_843fc788.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/Junctions/PLOP_1x1_KOSC_Superparking_Diag_B_Ortho_End_A_d43f8ef8.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_to_Ortho_B_Inner_Turn_Right_e438fd29.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_to_Ortho_B_Inner_Turn_Left_9438fbb4.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_End_B2_843e68f3.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_End_B1_e4428c45.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_End_A2_a4429131.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/B/End Stubs and Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_B_End_A1_94421917.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_OC_Right_9439229c.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_OC_Left_a439238b.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_IC_Right_04391a71.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_IC_Left_34392689.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_315_IC_Right_e43e5dd6.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_C_315_IC_Left_c4395477.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_OC_Right_b43fc835.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_OC_Left_243fc8f2.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_IT_Right_943e8b56.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_IT_Left_743e8c86.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_IC_Right_c442965e.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Ortho Transitions/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_IC_Left_a44295d0.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Junctions/PLOP_1x1_KOSC_Superparking_Diag_A_Ortho_End_Right_1438f8bf.SC4Lot
+          - KOSC Superparking/Diagonal Set (LHD)/A/Junctions/PLOP_1x1_KOSC_Superparking_Diag_A_Ortho_End_Left_e438fac8.SC4Lot
+        sha256: 540cfe900b666cabd3b5df7e0509c586a405abd274968bf9bb3a787e44c9cc56
+        size: 2672809
+        uncompressed: 2860450
+    version: "1.2"
   simtropolis/30958-kosc-sp-modular-parking-add-on-pack-1:
     authors:
       - kingofsimcity
     category: 700
+    dependencies:
+      - simtropolis/30955-kosc-sp-damn-menus
+      - simtropolis/30941-kosc-sp-modular-parking-base-set
+      - simtropolis/30953-kosc-sp-modular-parking-diagonal-set
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/24509-spot-simpeg-plop-orientation-tool
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>	<span style="font-size:20px;"><em><span style="font-family:Calibri, 'sans-serif';">KOSC presents: <b>SuperParking Modular Parking – Add-on Pack 1</b></span></em></span></p>
+
+      <p>	<span style="font-size:14px;"><strong><u>Introduction</u></strong><br><br>	This is the <b>1<sup>st</sup> addon pack</b> of my <b>SuperParking </b>modular parking series. Unlike a full-blown
+      expansion, this small pack covers some odds and ends that I missed on the original sets. These include full no road marking support for all junction variations, and a couple of transitions for a
+      few awkward spots.</span><br><br><strong><u>Package Overview</u></strong></p>
+
+      <p>	<span style="font-size:14px;">There is only one version for this pack.</span></p>
+
+      <p>	<span style="font-size:14px;">The set contains a set of <b>14 </b>lots<b>, </b>all of which are cosmetic pieces located near the top of the <b>Parks </b>menu. Like before all of the menus
+      are grouped and color coded according to the specific type of parking.</span> <abbr title="Daeley's Advanced Menu Navigator">DAMN</abbr> menu support for this addon pack is included in the
+      <strong>integrated package <a href="https://community.simtropolis.com/files/file/30955-kosc-sp-damn-menus/" rel="">here.</a></strong></p>
+
+      <p>	<span style="font-size:14px;"><b><u>General Stats</u></b></span><br><br><span style="font-size:14px;"><strong><em>Cosmetic Pieces</em></strong><br><em>Plop Cost: $0 - $9*<br><br>	*The minor
+      plop cost introduced here was to allow for cleaner organization of menu items, so that like groups are kept together.</em><br><br>	All of the cosmetic pieces are considered “neutral lots”,
+      meaning they have pretty much no stats, come at <i>no </i>maintenance cost, and are not of any particular wealth. The detailing on these lots were kept minimal, as to ensure that MMPs can be
+      used on them liberally.</span></p>
+
+      <p>	<span style="font-size:14px;"><b><u>Install Instructions</u></b></span></p>
+
+      <p>	<span style="font-size:14px;">Drop the files into your My Documents/SimCity 4/Plugins folder. Note that if you already have the base sets, you can safely merge the parent folder.</span></p>
+
+      <p>	<span style="font-size:14px;"><span style="color:#B22222;"><strong><u>Dependencies</u></strong></span></span></p>
+
+      <p>	<a href="https://community.simtropolis.com/files/file/30941-kosc-sp-modular-parking-base-set/" rel="">SP Modular Parking Base Set</a><br><a
+      href="https://community.simtropolis.com/files/file/30953-kosc-sp-modular-parking-diagonal-set/" rel="">SP Modular Parking Expansion 1: Diagonal Set</a><br><br>	Not <em>truly </em>necessary, but
+      these lots will feel a little pointless without the base sets. <img alt="*:D" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_9.gif"
+      srcset="https://community.simtropolis.com/assets/emoticons/default_9@2x.gif 2x" title=":D" width="15" ><br><br><span style="font-size:14px;">Additionally, you will need the following:</span></p>
+
+      <p>	<span style="font-size:14px;"><a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="">SuperSHK MEGA Parking Textures</a></span><br><span
+      style="font-size:14px;"><a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a><br><a
+      href="https://community.simtropolis.com/files/file/24509-spot/" rel="">SPOT</a> (for the positioning helpers)</span></p>
+
+      <p>	<span style="font-size:14px;"><span style="color:#000000;">Last but not least, credit to <strong>RebaLynnTS </strong>for the helper pieces, and </span></span><b>shokthrpy</b><span
+      style="font-size:14px;"><span style="color:#000000;"> for his awesome parking set.</span></span></p>
+
+      						</body>
+    filename: KOSC_SP_ModularParking_AddonPack1 v1.1.zip
+    files:
+      - KOSC Superparking/SuperParking Addons 1.pdf
+      - KOSC Superparking/Addon Set 1/Paths/PLOP_1x1_KOSC_Superparking_Path_Curve_NoMarkings_4448b2b1.SC4Lot
+      - KOSC Superparking/Addon Set 1/Diagonal Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Staggered_B_NoMarkings_94490880.SC4Lot
+      - KOSC Superparking/Addon Set 1/Diagonal Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Staggered_A_NoMarkings_a44908e5.SC4Lot
+      - KOSC Superparking/Addon Set 1/Diagonal Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Right_NoMarkings_5449082b.SC4Lot
+      - KOSC Superparking/Addon Set 1/Diagonal Junctions/PLOP_1x1_KOSC_Superparking_Diag_Ortho_Junction_Left_NoMarkings_a448c25b.SC4Lot
+      - KOSC Superparking/Addon Set 1/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Junction_End_NoMarkings_a4491f37.SC4Lot
+      - KOSC Superparking/Addon Set 1/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Right_NoMarkings_74491e76.SC4Lot
+      - KOSC Superparking/Addon Set 1/C/PLOP_1x1_KOSC_Superparking_Ortho_C_Junction_Left_NoMarkings_64491dfa.SC4Lot
+      - KOSC Superparking/Addon Set 1/B/PLOP_1x1_KOSC_Superparking_Ortho_B_Junction_End_NoMarkings_54491532.SC4Lot
+      - KOSC Superparking/Addon Set 1/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Curb_Right_d448ac7b.SC4Lot
+      - KOSC Superparking/Addon Set 1/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Curb_Left_2448b7a9.SC4Lot
+      - KOSC Superparking/Addon Set 1/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Right_NoMarkings_04490b2e.SC4Lot
+      - KOSC Superparking/Addon Set 1/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Junction_Left_NoMarkings_c4490ac6.SC4Lot
+      - KOSC Superparking/Addon Set 1/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Curb_e449096d.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411160907_1.jpg.a323db7ce82118f6a1493bea06aa2d48.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411125330_1.jpg.2cdd343fc33e8cfa3e5bd764792d4c44.jpg
     lastModified: 2016-04-11T23:16:34Z
     name: KOSC SP Modular Parking - Add-on Pack 1
+    sha256: 0b9bf91fac58e2a7f0a8a0a33ad20b03706a7dea16bb311181019e1b6b277a2d
+    size: 1176109
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411160907_1.thumb.jpg.8d4caebddec1ad54011a48702a3f12da.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 1230928
     url: https://community.simtropolis.com/files/file/30958-kosc-sp-modular-parking-add-on-pack-1/
+    version: "1.1"
   simtropolis/30960-sm2-hump-yard:
     authors:
       - Simmer2
@@ -12445,10 +12996,188 @@ assets:
     authors:
       - kingofsimcity
     category: 700
+    dependencies:
+      - simtropolis/30955-kosc-sp-damn-menus
+      - simtropolis/30941-kosc-sp-modular-parking-base-set
+      - simtropolis/30953-kosc-sp-modular-parking-diagonal-set
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/24509-spot-simpeg-plop-orientation-tool
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>	<span style="font-size:20px;"><em><span style="font-family:Calibri, 'sans-serif';">KOSC presents: <b>SuperParking Modular Parking – Extension Set</b></span></em></span></p>
+
+      <p>	<span style="font-size:14px;"><strong><u>Introduction</u></strong></span><br><br><span style="font-size:14px;">This is the <b>2<sup>nd</sup> expansion pack</b> of my <b>SuperParking
+      </b>modular parking series, which unlocks even more ridiculous combinations for your parking lots. This set adds some much needed larger basic pieces and covers advanced pathing, S-curves, and
+      more. </span><br><br><strong><u>Package Overview</u></strong></p>
+
+      <p>	<span style="font-size:14px;">There are two different packages available for download: one for <b>Right-hand Drive </b>and <b>Left-hand Drive. </b>Choose one.</span></p>
+
+      <p>	<span style="font-size:14px;">The set contains a set of <b>44 </b>lots. There are <b>2 </b>functional “parking garage” pieces, with Transit Enabled connections which are located in the
+      <b>Misc Transportation</b> menu, and <b>42 </b>cosmetic pieces located near the top of the <b>Parks </b>menu. All of the menus are grouped and color coded according to the specific type of
+      parking, ranging from <b>A </b>to <b>D </b>type. These are broken down in the included readme, which also includes a couple of useful tips for some of the more complex combinations. <strong><a
+      href="https://community.simtropolis.com/files/file/30955-kosc-sp-damn-menus/" rel=""><abbr title="Daeley Advanced Menu Navigator"><abbr title="Daeley's Advanced Menu
+      Navigator">DAMN</abbr></abbr> Support is available with v 1.2 of my <abbr title="Daeley Advanced Menu Navigator"><abbr title="Daeley's Advanced Menu Navigator">DAMN</abbr></abbr>
+      menus</a>.</strong></span></p>
+
+      <p>	<span style="font-size:14px;"><b><u>General Stats</u></b></span></p>
+
+      <p>	<span style="font-size:14px;"><b><i>Street Entrance</i></b><br><i>Plop Cost: $250<br>	Capacity: 1,000<br><br><b>Avenue Entrance</b><br>	Plop Cost: $500<br>	Capacity:
+      3,000</i><br><br><strong><em>Cosmetic Pieces</em></strong><br><em>Plop Cost: $0 - $9*</em></span><br><br><span style="font-size:14px;"><em>*The minor plop cost introduced here was to allow for
+      cleaner organization of menu items, so that like groups are kept together.</em><br><br>	All of the cosmetic pieces are considered “neutral lots”, meaning they have pretty much no stats, come at
+      <i>no </i>maintenance cost, and are not of any particular wealth. The detailing on these lots were kept minimal, as to ensure that MMPs can be used on them liberally.</span></p>
+
+      <p>	<span style="font-size:14px;"><b><u>Install Instructions</u></b></span></p>
+
+      <p>	<span style="font-size:14px;">Pick one version (either <b>RHD or LHD) </b>and drop the files into your My Documents/SimCity 4/Plugins folder.<br><br><span
+      style="color:#B22222;"><strong><u>Dependencies</u></strong></span></span><br><br><a href="https://community.simtropolis.com/files/file/30941-kosc-sp-modular-parking-base-set/" rel="">SP Modular
+      Parking Base Set</a><br><a href="https://community.simtropolis.com/files/file/30953-kosc-sp-modular-parking-diagonal-set/" rel="">SP Modular Parking Expansion 1: Diagonal Set</a><br><br>	Not
+      <em>truly </em>necessary, but some of these lots will feel a little pointless without the base sets. <img alt="*:D" data-emoticon="" height="15"
+      src="https://community.simtropolis.com/assets/emoticons/default_9.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_9@2x.gif 2x" title=":D" width="15" > It is also HIGHLY
+      recommended that you get the latest up-to-date versions of these releases.<br><br><span style="font-size:14px;">You will also need the following:</span></p>
+
+      <p>	<span style="font-size:14px;"><a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="">SuperSHK MEGA Parking Textures</a><br><a
+      href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a><br><a href="https://community.simtropolis.com/files/file/24509-spot/" rel="">SPOT</a> (for
+      the positioning helpers)</span></p>
+
+      <p>	<span style="font-size:14px;"><span style="color:#000000;">Last but not least, credit to <strong>RebaLynnTS </strong>for the helper pieces, and </span></span><b>shokthrpy</b><span
+      style="font-size:14px;"><span style="color:#000000;"> for his awesome parking set.</span></span></p>
+
+      <p>	 </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411164831_1.jpg.ec07a6b8cf3e7fe54e19b3e37aae4ce1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411164809_1.jpg.6e0d7b2fe2e7e41aa588546e8aab35ec.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411165009_1.jpg.6b01173bf4e0d88d481195e35ad28dc2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411165141_1.jpg.dcc3cd8cfa772f6b265ddb186d2691db.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411170409_1.jpg.a4553cab659b15631cc0784f751d27af.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411171306_1.jpg.2d78bc1f1902c0420aaf190c866ba85a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411171656_1.jpg.2de5d0d5e541b603e45270af57d69baa.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411171822_1.jpg.2297666a50d9f0f37992443363164357.jpg
     lastModified: 2016-04-14T03:43:39Z
     name: KOSC SP Modular Parking - Extension Set
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_04/20160411164831_1.thumb.jpg.b7f21baac0cfca077234b2b7420c5ee1.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/31024-kosc-sp-modular-parking-extension-set/
+    variants:
+      "161347":
+        filename: KOSC_SP_ModularParking_ExtensionSet v1.0 (RHD).zip
+        files:
+          - KOSC Superparking/SuperParking Extension Set.pdf
+          - KOSC Superparking/Extension Set (RHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Right_NoMarkings_a485470c.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Right_0485403e.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Middle_Right_NoMarkings_d485519a.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Middle_Right_848555aa.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Middle_Left_NoMarkings_948547b6.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Middle_Left_74855137.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Left_NoMarkings_e48542b7.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Left_1484738a.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/Paths/PLOP_1x2_KOSC_Superparking_Path_45_Turn_Right_NoMarkings_748fce78.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/Paths/PLOP_1x2_KOSC_Superparking_Path_45_Turn_Left_NoMarkings_548fccab.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/Paths/PLOP_1x1_KOSC_Superparking_Path_Ortho_Y_Split_NoMarkings_348ff72c.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/Paths/PLOP_1x1_KOSC_Superparking_Path_Diag_Inner_Corner_NoMarkings_e48fe0e7.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/Entrances/PLOP_2x2_KOSC_Superparking_Entrance_Avenue_7485925e.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_0490099c.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/Diagonals/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_315_OC_Right_548d4c07.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/Diagonals/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_315_OC_Left_d48d4991.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_2x2_KOSC_Superparking_Ortho_D_Dual_Middle_c48e8c67.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x2_KOSC_Superparking_Ortho_D_Diag_Exit_Right_948fec90.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x2_KOSC_Superparking_Ortho_D_Diag_Exit_Left_548ff027.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x2_KOSC_Superparking_Ortho_D_Diag_Entry_Right_a48ff1ff.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x2_KOSC_Superparking_Ortho_D_Diag_Entry_Left_348ff352.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Exit_Stop_d48fbd4c.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Exit_2_Stop_048d2599.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Exit_2_a48d22a1.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Entry_2_448d26f3.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Curve_b48d2880.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/C/PLOP_3x1_KOSC_Superparking_Ortho_C_548538e0.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_to_Diag_Path_Right_048d4d28.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_to_Diag_Path_Left_048d5e6d.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/B/PLOP_3x1_KOSC_Superparking_Ortho_B_b48479ea.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_EndC_64842c9b.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_EndA_74842da8.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_3x1_KOSC_Superparking_Ortho_A_b48533d6.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Ortho_Path_Right_a48d8dd9.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Ortho_Path_Left_848e8718.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Diag_Path_Right_54846f60.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Diag_Path_Left_e4846e86.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Handicap_14853f0b.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_EndC_Right_b484308d.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_EndC_Left_e4842ff4.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_EndA_Right_04843eac.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_EndA_Left_5484331f.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Curb_Outer_Curve_548d1b6a.SC4Lot
+          - KOSC Superparking/Extension Set (RHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Curb_Inner_Curve_b48d1cce.SC4Lot
+        sha256: 4e1dd8b6b5d19b58ad8a57ca491f425ea8b331bf83fc09ca7b2fe5d4b38ac45c
+        size: 3308023
+        uncompressed: 3545177
+      "161348":
+        filename: KOSC_SP_ModularParking_ExtensionSet v1.0 (LHD).zip
+        files:
+          - KOSC Superparking/SuperParking Extension Set.pdf
+          - KOSC Superparking/Extension Set (LHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Right_NoMarkings_a485470c.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Right_0485403e.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Middle_Right_NoMarkings_d485519a.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Middle_Right_848555aa.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Middle_Left_NoMarkings_948547b6.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Middle_Left_74855137.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/S Curve/PLOP_2x3_KOSC_Superparking_Ortho_ABA_Junction_SCurve_Left_NoMarkings_e48542b7.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/S Curve/PLOP_2x3_KOSC_Superparking_ABA_Junction_SCurve_Left_1484738a.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/Paths/PLOP_1x2_KOSC_Superparking_Path_45_Turn_Right_NoMarkings_748fce78.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/Paths/PLOP_1x2_KOSC_Superparking_Path_45_Turn_Left_NoMarkings_548fccab.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/Paths/PLOP_1x1_KOSC_Superparking_Path_Ortho_Y_Split_NoMarkings_348ff72c.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/Paths/PLOP_1x1_KOSC_Superparking_Path_Diag_Inner_Corner_NoMarkings_e48fe0e7.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/Entrances/PLOP_2x2_KOSC_Superparking_Entrance_Avenue_7485925e.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/Entrances/PLOP_1x1_KOSC_Superparking_Entrance_Street_0490099c.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/Diagonals/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_315_OC_Right_548d4c07.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/Diagonals/PLOP_1x1_KOSC_Superparking_Diag_A_to_Ortho_A_315_OC_Left_d48d4991.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_2x2_KOSC_Superparking_Ortho_D_Dual_Middle_c48e8c67.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x2_KOSC_Superparking_Ortho_D_Diag_Exit_Right_948fec90.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x2_KOSC_Superparking_Ortho_D_Diag_Exit_Left_548ff027.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x2_KOSC_Superparking_Ortho_D_Diag_Entry_Right_a48ff1ff.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x2_KOSC_Superparking_Ortho_D_Diag_Entry_Left_348ff352.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Exit_Stop_d48fbd4c.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Exit_2_Stop_048d2599.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Exit_2_a48d22a1.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Entry_2_448d26f3.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/D/PLOP_1x1_KOSC_Superparking_Ortho_D_Curve_b48d2880.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/C/PLOP_3x1_KOSC_Superparking_Ortho_C_548538e0.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_to_Diag_Path_Right_048d4d28.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/C/PLOP_1x1_KOSC_Superparking_Ortho_C_to_Diag_Path_Left_048d5e6d.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/B/PLOP_3x1_KOSC_Superparking_Ortho_B_b48479ea.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_EndC_64842c9b.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/B/PLOP_1x1_KOSC_Superparking_Ortho_B_EndA_74842da8.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_3x1_KOSC_Superparking_Ortho_A_b48533d6.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Ortho_Path_Right_a48d8dd9.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Ortho_Path_Left_848e8718.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Diag_Path_Right_54846f60.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_to_Diag_Path_Left_e4846e86.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Handicap_14853f0b.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_EndC_Right_b484308d.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_EndC_Left_e4842ff4.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_EndA_Right_04843eac.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_EndA_Left_5484331f.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Curb_Outer_Curve_548d1b6a.SC4Lot
+          - KOSC Superparking/Extension Set (LHD)/A/PLOP_1x1_KOSC_Superparking_Ortho_A_Curb_Inner_Curve_b48d1cce.SC4Lot
+        sha256: 50961f2c336fcf059d5090845fcc274970f0bc2d308ce55974a4991d78de2805
+        size: 3308016
+        uncompressed: 3545177
+    version: "1.0"
   simtropolis/31046-diagonal-rail-tunnel:
     authors:
       - TakemeThere
@@ -12837,7 +13566,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -14450,6 +15191,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p>
       	<strong>About </strong>
@@ -14549,10 +15296,150 @@ assets:
     authors:
       - Ulisse Wolf
     category: 700
+    dependencies:
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p style="text-align:center;">
+      	<span style="font-size:28px;"><strong>Hybrid Railway (<abbr title="Hybrid Railway">HRW</abbr>) Subway Converter</strong></span>
+      </p>
+
+
+      <p>
+      	After a long development finally Hybrid Railway (<abbr title="Hybrid Railway">HRW</abbr>) has a tunnel system. This mod is a pioneer in the field of Hybrid Railway as it is the only mod that manages to convert rail and monorail traffic into subways and vice versa simultaneously. 
+      </p>
+
+
+      <p>
+      	This mod was developed in collaboration with MTA (Mass Transit Authority) a group of the <abbr title="Network Addon Mod">NAM</abbr> team responsible for creating stations and station development standards.
+      </p>
+
+
+      <p>
+      	This mod obviously has a limitation. Using the subway this lot cannot transfer rail freight transport using the subway. In addition, the traffic inside the tunnel is considered as subway traffic and for this reason when you use this mod the subway you use as a tunnel the game classifies it as if it were a normal subway. For this you have to avoid connections with other <em>normal subway</em> networks if you want optimal management of <abbr title="Hybrid Railway">HRW</abbr> Subway Converter.
+      </p>
+
+
+      <p>
+      	Also in this mod there is <abbr title="Hybrid Railway">HRW</abbr> Subway Ramp developed by <span><span><a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a></span></span> who gave me permission to publish his mod in this package
+      </p>
+
+
+      <p>
+      	The lots in this package support U-RAIL allowing the use of the underground rail and therefore also the support for freight trains. For the moment U-RAIL does not support monorail but the <abbr title="Network Addon Mod">NAM</abbr> Team is thinking of including support in a later <abbr title="Network Addon Mod">NAM</abbr> version.
+      </p>
+
+
+      <p>
+      	The Gotthard Base Tunnel version contains two lots that perform the same function but year slightly different configurations for U-RAIL support. The Gotthard Base Tunnel version contains two batches that perform the same function but have slightly different configurations for the U-RAIL support that can cause aesthetic alterations. You can install both or one of the two versions (V1 or V2). 
+      </p>
+
+
+      <p>
+      	To make this lots work you need only one dependency
+      </p>
+
+
+      <p>
+      	<span style="font-size:22px;"><strong>INSTALLATION</strong></span>
+      </p>
+
+
+      <p>
+      	The installation method has been automated but the user must choose which version of the mod to install based on the traffic direction.
+      </p>
+
+
+      <ul>
+      	<li>
+      		If using <abbr title="Right Hand Drive">RHD</abbr> (Right Hand Drive) then he must select <abbr title="Hybrid Railway">HRW</abbr> Subway Converters <abbr title="Right Hand Drive">RHD</abbr>.
+      	</li>
+      	<li>
+      		If using <abbr title="Left Hand Drive">LHD</abbr> (Left Hand Drive) then he must select <abbr title="Hybrid Railway">HRW</abbr> Subway Converters <abbr title="Left Hand Drive">LHD</abbr>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<span style="font-size:22px;"><strong>DEPENDENCY</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><strong><a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-nam-cross-platform/" rel="">Network Addon Mod</a></strong></span>
+      </p>
+
+
+      <p>
+      	Thanks to <span><span><a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard" data-mentionid="660284" href="https://community.simtropolis.com/profile/660284-tyberius06/" rel="">@Tyberius06</a></span></span>, <span><a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/70889-ids2/?do=hovercard" data-mentionid="70889" href="https://community.simtropolis.com/profile/70889-ids2/" rel="">@IDS2</a></span>, rsc204 for helping me make this package
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px;"><strong>LICENSING:</strong></span><br>
+      	This lot (Excluding <abbr title="Hybrid Railway">HRW</abbr> Ramp Subway Converter whose credits go to MGB /rsc204) is provided as free content to SimCity 4 players, who are free to modify it for their use and for production of derivative maps for publication.<br>
+      	Should the author be absent from Simtropolis.com for more than a year, site staff or individual users may re-host the file, as long as due credit is given to him, user <span><a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/321174-ulisse/?do=hovercard" data-mentionid="321174" href="https://community.simtropolis.com/profile/321174-ulisse/" rel="">@ulisse</a></span>
+      </p>
+
+      						</body>
+    filename: Ulisse Wolf HRW Subway Converters.zip
+    files:
+      - Ulisse Wolf HRW Subway Converters/Main.txt
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/~Documents.txt
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/Ulisse Wolf - HRW Subway Converters Cleanitol.txt
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/HRW Subway Converter_README.pdf
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/HRW Gotthard v1 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/2 HRW Gotthard v2 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/1 HRW Gotthard v2 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/Ulisse Wolf - HRW Subway Converters Cleanitol.txt
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/HRW Subway Converter_README.pdf
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/HRW Gotthard v1 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/2 HRW Gotthard v2 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/1 HRW Gotthard v2 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/HRW to Subway Ramp_1979ed30.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/HRW Ramp_Resource.dat
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/HRW Ramp-0x5ad0e817_0x115c283e_0x30000.SC4Model
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/HRW Ramp Paths_RHD.dat
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/GOTTHARD_BASE_TUNNEL-0x6534284a-0xde67cc52-0x3f7a0d0c.SC4Desc
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/GOTTHARD_BASE_TUNNEL-0x5ad0e817_0x8ef8d683_0x30000.SC4Model
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/Gotthard Base Tunnel HRW (Subway Converter)_5f78a430.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/Gotthard Base Tunnel HRW (Subway Converter) v2_1cd3dfe1.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/HRW to Subway Ramp_1979ed30.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/HRW Ramp_Resource.dat
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/HRW Ramp-0x5ad0e817_0x115c283e_0x30000.SC4Model
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/HRW Ramp Paths_LHD.dat
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/GOTTHARD_BASE_TUNNEL-0x6534284a-0xde67cc52-0x3f7a0d0c.SC4Desc
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/GOTTHARD_BASE_TUNNEL-0x5ad0e817_0x8ef8d683_0x30000.SC4Model
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/Gotthard Base Tunnel HRW (Subway Converter)_5f78a430.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/Gotthard Base Tunnel HRW (Subway Converter) v2_1cd3dfe1.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/6249f98c9af8c_HRWGotthardv2placement.jpg.4f365f0089df539351ba86a8bb74353e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/6249f9900add0_HRWGotthardv1placement.jpg.6361c0ff362cef7c20425d1c1125f2d1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/6249fa80ae995_HRWSubwayConverter3.jpg.eb5ec01433160c53cd8f055498cd13b5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/6249fa840ca0a_HRWSubwayConverter4.jpg.659df7342504ea84c10919609beb8069.jpg
     lastModified: 2024-05-22T19:44:21Z
     name: Hybrid Railway (HRW) Subway Converter
+    sha256: a8a23f13648cdf4b65379c71057751eb26306717e1c589150ae59c779a93dc75
+    size: 5934387
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_04/6249ffac09645_HRWSubwayConverter3.thumb.jpg.07fa47863977562637951254765b011e.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 5942463
     url: https://community.simtropolis.com/files/file/35036-hybrid-railway-hrw-subway-converter/
+    version: "2.0"
   simtropolis/3504-general-aviation-facility0dc8c7a4:
     authors:
       - jondecker
@@ -14669,10 +15556,308 @@ assets:
     authors:
       - atsf189
     category: 700
+    dependencies:
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+      - sc4evermore/7-sc4d-lex-legacy-ultimate-airport-pack
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	<span style="font-size:18px;"><strong>Xannepan's Jenx Dulles and JFK Airport Patch and Transit Mod</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><strong><span style="color:#e74c3c;">WARNING.......WARNING.......WARNING.......<br>
+      	READ THIS FIRST<br>
+      	You should be using SC4 Functional Airports, Version 2.2 or above and must have<br>
+      	<abbr title="Network Addon Mod">NAM</abbr>. It has been tested on <abbr title="Network Addon Mod">NAM</abbr> Version 43 thru 45.</span><br>
+      	<u>You must bulldoze all Dulles Departure and JFK airports that are in any of your<br>
+      	existing cities. Just the main buildings:</u></strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">JENX Dulles International Departures<br>
+      	JENX Dulles Regional Departures<br>
+      	JENX Dulles Local Departures<br>
+      	Regional Airport - JFK TWA Terminal</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><strong>IF YOU DO NOT DO THIS YOUR CITIES COULD BECOME<br>
+      	UNRECOVERABLE AFTER A CRASH TO DESKTOP.</strong><br>
+      	This is because when an airport is created in SimCity other files are updated and if not deleted these<br>
+      	files will still have the old airport information.</span>
+      </p>
+
+
+      <p>
+      	<strong><u>ABOUT THIS FILE</u></strong>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Theses files will make the 4 JENX airports truly functional. The airport icon should show up in the regional<br>
+      	view and the menu query will show airport statistics. Only some settings in the files were modified the instance<br>
+      	ID's are not changed.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">The<br>
+      	JENX Dulles International Departures<br>
+      	JENX Dulles Regional Departures<br>
+      	JENX Dulles Local Departures<br>
+      	have a new transit station that will<br>
+      	allow the use of Hybrid Rail (<abbr title="High Speed Rail">HSR</abbr> ONLY)<br>
+      	<abbr title="High Speed Rail">HSR</abbr>/Monorail only version of this <abbr title="Hybrid Railway">HRW</abbr> station.<br>
+      	This will only produce the Monorail type trains.<br>
+      	Regular Passenger trains (<abbr title="RealRailway">RRW</abbr>) and<br>
+      	Freight trains can also pass through this station.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">The 3 Arrival terminals were also up graded with bus, car and pedestrian transit routes.<br>
+      	You do not need to delete the old versions of the Arrival terminals since they are not truly airports.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">The Regional Airport - JFK TWA Terminal was upgraded with bus, car and pedestrian transit routes.<br>
+      	This airport can also be used a light rail/tram station. Only some settings in the files were modified the instance<br>
+      	ID was not changed. The JFK TWA Terminal airport will be truly functional. The airport icon should show up<br>
+      	in the regional view and the menu query will show airport statistics.</span>
+      </p>
+
+
+      <p>
+      	<u><strong><span style="font-size:14px;">INSTALLATION</span></strong></u>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Step 1:<br>
+      	You must bulldoze all Dulles Departure and JFK airports that are in any of your existing cities. Just the main<br>
+      	buildings:<br>
+      	JENX Dulles International Departures<br>
+      	JENX Dulles Regional Departures<br>
+      	JENX Dulles Local Departures<br>
+      	Regional Airport - JFK TWA Terminal</span>
+      </p>
+
+
+      <p>
+      	<span style="color:#e74c3c;"><strong><span style="font-size:14px;">IF YOU DO NOT DO THIS FIRST YOUR CITIES COULD BECOME<br>
+      	UNRECOVERABLE AFTER A CRASH TO DESKTOP.<br>
+      	YOU HAVE BEEN WARNED TWICE NOW!!!</span></strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Step 2:<br>
+      	Go to your plugins folder and locate the JENXAIRPORT_JFK_TWA_Terminal folder:<br>
+      	Delete the PLOP_JENXAIRPORT_JFK_TWA_Terminal_da10d6c0.SC4Lot file<br>
+      	Save the old file if you want to uninstall.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Step 3:<br>
+      	Go to your plugins folder and locate the JENXAIRPORT_Dulles_Airport folder:<br>
+      	Add the 3 files from this download that are inside  JENXAIRPORT_Dulles_Airport folder<br>
+      	PLOP_JENXAIRPORT_Dulles_Arrivals_Stage1_e62eaef5.SC4Lot<br>
+      	PLOP_JENXAIRPORT_Dulles_Arrivals_Stage2_9eabef25.SC4Lot<br>
+      	PLOP_JENXAIRPORT_Dulles_Arrivals_Stage3_9eabef7e.SC4Lot<br>
+      	This will overwrite your 3 files of the same name<br>
+      	Save the old files if you want to uninstall.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Step 4:<br>
+      	Go to the x-ports folder and navigate to the Airports folder<br>
+      	Add the file SC4_Functional_Airports_V2.2.bat from this download that is inside the Airports Folder.<br>
+      	This will overwrite your file of the same name<br>
+      	Save a copy of the old file if you want to uninstall.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Step 5:<br>
+      	Go to the x-ports folder in your plugins folder and open the Airports folder then open the Enablers folder<br>
+      	Add the 2 files from this download that are inside the Enablers folder<br>
+      	Enable JENXAIRPORT Dulles.dat<br>
+      	Enable JENXAIRPORT JFK.bat<br>
+      	This will overwrite your 2 files of the same name<br>
+      	Save a copies of the old files if you want to uninstall later.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Step 6:<br>
+      	Rebuild any airports that you had to bulldoze.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><u><strong>How to connect the Light Rail/Tram to the JFK Airport</strong></u><br>
+      	The Regional Airport - JFK TWA Terminal was built on a small lot. The building model overhangs the lot.<br>
+      	You can see this from the underground view or by hovering the bulldoze tool over the Airport.<br>
+      	I connected the Light Rail/Tram using puzzle pieces. Just make the tracks touch the Airport lot, See picture JFK Underground.jpg.<br>
+      	I used the left side so that trains are not hitting any objects on the lot. You will not see the tracks but the trains<br>
+      	look OK coming into the Airport here.</span>
+      </p>
+
+
+      <p>
+      	<u><strong><span style="font-size:14px;">Dependencies:</span></strong></u>
+      </p>
+
+
+      <p>
+      	JENXAIRPORT JFK TWA Terminal (v1.0)  <font color="#353535"><font color="#ff0000"><b>SEE NOTE BELOW</b></font></font><br>
+      	JENXAIRPORT Dulles Airport Saarinen Terminal (v. 1.0) by xannepan <font color="#353535"><font color="#ff0000"><b>SEE NOTE BELOW</b></font></font><br>
+      	<span style="font-size:14px;">SC4 Functional Airports, Version 2.2 </span><font color="#353535"><font color="#ff0000"><b>SEE NOTE BELOW</b></font></font>
+      </p>
+
+
+      <p>
+      	 NOTE: THE ABOVE 3 DEPENDENCIES ARE NOW CONTAINED WITHIN<strong>: </strong>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/19-transportation/7-sc4d-lex-legacy-ultimate-airport-pack" rel="external nofollow"><font color="#006600"><font face="Roboto, Helvetica Neue, Helvetica, Arial, sans-serif"><font size="2" style="font-size:10pt;"><span><u><span><span> SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy Ultimate Airport Pack</span></span></u></span></font></font></font></a>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-nam-cross-platform/" rel=""><font color="#006600"><font face="Roboto, Helvetica Neue, Helvetica, Arial, sans-serif"><font size="2" style="font-size:10pt;"><span><u><span><span>Network Addon Mod v43 and above</span></span></u></span></font></font></font></a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">THANK YOU Xannepan for creating these great models</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">This has not been tested on the Apple Platform</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:8px;"><span style="background-color:rgb(255,255,255);color:rgb(58,67,78);">The use of this download is done at your own discretion and risk and with agreement that you will be solely responsible for any damage to your computer system or loss of data that results from such activities. You are solely responsible for adequate protection and backup of the data and equipment used in connection with any of this download, and I will not be liable for any damages that you may suffer in connection with using, modifying or distributing any of this download. No advice or information, whether oral or written, obtained by you from this download shall create any warranty for these files.</span></span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_11/6385517eb4066_DullesQuery.jpg.658bb68df18ae82d68b99e1cd203e6de.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_11/6385518ba5015_JFKQuery.jpg.d9e892cd533e9d235179462745f99d68.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_11/6385519838c4e_DullesRouteQuery.jpg.bb2be96036b7b9338eb0fcf795a970ed.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_11/638551a114662_JFKRouteQuery.jpg.d41d5577d75480b1d0e8414f5c623788.jpg
     lastModified: 2024-05-06T17:07:56Z
     name: Jenx Dulles and JFK Airport Patch and Transit Route Mod
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_11/63855bd91a053_DullesQuery.thumb.jpg.18a959d1f4decac2dee97ab59845a827.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
     url: https://community.simtropolis.com/files/file/35341-jenx-dulles-and-jfk-airport-patch-and-transit-route-mod/
+    variants:
+      "201173":
+        filename: Dulles Airport.jpg
+        files:
+          - Dulles Airport.jpg
+        sha256: c0099f3f9711a36b33ea9cff7bfd11d0f882e741bb7cc3c7367248b604b11cb5
+        size: 338518
+      "201174":
+        filename: Dulles Route Query.jpg
+        files:
+          - Dulles Route Query.jpg
+        sha256: c1605ae7490ae6c16346be5d13f18e41577cf383b1c0cf7a94ee44e79b19325b
+        size: 520436
+      "201175":
+        filename: JFK Airport.jpg
+        files:
+          - JFK Airport.jpg
+        sha256: a55dd6f4667986b9996e6a371c075e5d8c1ad0af7404f616dc9866499d0e7565
+        size: 484853
+      "201176":
+        filename: JFK Route Query.jpg
+        files:
+          - JFK Route Query.jpg
+        sha256: ad101ad4c4c1646e397c5b710c93f9515b5e81fc9b77fc5e5da134a8d13e700c
+        size: 487175
+      "201177":
+        filename: JFK Underground.jpg
+        files:
+          - JFK Underground.jpg
+        sha256: 2d678c58078f135dab8980c8a0a7b68a35a8d6704b76ad590fc90d5ccd418b41
+        size: 334819
+      "201178":
+        filename: PLOP_JENXAIRPORT_Dulles_Arrivals_Stage1_e62eaef5.SC4Lot
+        files:
+          - PLOP_JENXAIRPORT_Dulles_Arrivals_Stage1_e62eaef5.SC4Lot
+        sha256: fa157ef13f7cd204f9c9ebaaed2051bf1ddad26e344c6cf957c2f410eec49781
+        size: 28170
+      "201179":
+        filename: PLOP_JENXAIRPORT_Dulles_Arrivals_Stage2_9eabef25.SC4Lot
+        files:
+          - PLOP_JENXAIRPORT_Dulles_Arrivals_Stage2_9eabef25.SC4Lot
+        sha256: eb1567558e0a81c59cbc8505a39c46a31158009542377b2414cae71c1ace1e2b
+        size: 29039
+      "201180":
+        filename: PLOP_JENXAIRPORT_Dulles_Arrivals_Stage3_9eabef7e.SC4Lot
+        files:
+          - PLOP_JENXAIRPORT_Dulles_Arrivals_Stage3_9eabef7e.SC4Lot
+        sha256: 2fd5acc61b441fddb116c7be79183b94a48cb03b3ed13546d6b494df42e835dc
+        size: 22288
+      "201181":
+        filename: README.pdf
+        files:
+          - README.pdf
+        sha256: 012f3f87980456586c0a298dbcbe9011109ec1242d50478a5c9cef734aee8ef6
+        size: 1631110
+      "201182":
+        filename: Enable JENXAIRPORT Dulles.dat
+        files:
+          - Enable JENXAIRPORT Dulles.dat
+        sha256: b00d75f9da38da73384286024fc1a00a0d319ae6517c1536a99818a4b89b9b19
+        size: 1877
+      "201183":
+        filename: Enable JENXAIRPORT JFK.dat
+        files:
+          - Enable JENXAIRPORT JFK.dat
+        sha256: cd83db77c0aa1fd7f7e25012d4533324fb6863c77eea4a8f4030c505e4da9acf
+        size: 635
+      "201184":
+        filename: SC4_Functional_Airports_V2.2.dat
+        files:
+          - SC4_Functional_Airports_V2.2.dat
+        sha256: 673a15f3992ea72b292e4e4ce3cdb7e5fd3822c073d3859888333b2e985a5a24
+        size: 1593305
+    version: 1.2.0
   simtropolis/35355-multifunctional-transit-buildings:
     authors:
       - urbanmosaic
@@ -14909,10 +16094,46 @@ assets:
     authors:
       - TakemeThere
     category: 700
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<span style="background-color:#ffffff;color:#353535;font-size:14px;">Have you ever wanted to make a diagonal road tunnel? Well now you can! The base version is a functional tunnel with a capacity of 5000 and can be found in the transportation menu. The lot will convert road traffic into subway traffic and vice versa allowing you to create modular rail tunnels under any kind of terrain or development. Otherwise you can make use of it solely for cosmetic purposes. For some currently unknown reason car traffic will not use the tunnel, but it is passable by foot or bus. I recommend placing a bus station close by so that car users can 'transfer' onto buses in order to pass through the tunnel. No dependencies are required. </span>
+      </p>
+
+      						</body>
+    filename: Diagonal road tunnel.zip
+    files:
+      - Diagonal road tunnel/Tunnel - Diagonal road.SC4Model
+      - Diagonal road tunnel/Tunnel - Diagonal road prop.SC4Desc
+      - Diagonal road tunnel/Tunnel - Diagonal road grass.SC4Lot
+      - Diagonal road tunnel/Diagonal road Textures.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664eeb9f7a313_LindinCity-Sep.264301716447990.jpg.5b5bc74c523b71394031486b3ebcfd56.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/664eeba41d9bd_LindinCity-Sep.264301716448017.jpg.b1feb80716ee2a9e51073810d82380c8.jpg
     lastModified: 2024-05-23T07:15:45Z
     name: Diagonal Road Tunnel
+    sha256: 4ae4db3a84a498203670bf252a5ed0937efd55f0f26dbca4a27d9411bc0442b8
+    size: 108759
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/664eed206287a_LindinCity-Sep.264301716447990.thumb.jpg.36d8106cc6679e15bcee55dea184b1e2.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 161071
     url: https://community.simtropolis.com/files/file/36260-diagonal-road-tunnel/
+    version: 1.0.0
   simtropolis/36317-next-gen-planes-pack-1:
     authors:
       - JoelMk2
@@ -14945,7 +16166,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -15384,6 +16617,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p>
       	As sometines happens, files from the various SimCity 4 sites go missing. When possible and practical, we make attempts to restore those files when found. In all such cases, this is done in good faith for the benefit the author and the community. This particular item has been uploaded here under <strong>MarcosMX</strong>'s account as part of the <abbr title="BATers, LOTers and MODders">BLaM</abbr> team as it had been uploaded on the original location. The station's function and stats <em>have </em>been updated to <abbr title="Network Addon Mod">NAM</abbr>/MTA standards.
@@ -15474,6 +16713,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
       							
       <p>
@@ -16493,4 +17738,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-4e73e9a5e97f6ee8b1862cc09ff27f23-Allotments-Day.jpg
     url: https://community.simtropolis.com/files/file/999-bus-stop-with-allotments/
 
-timestamp: 2024-08-13T14:26:32.086Z
+timestamp: 2024-08-19T05:43:53.512Z

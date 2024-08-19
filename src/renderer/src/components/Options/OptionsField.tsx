@@ -28,15 +28,15 @@ export function OptionsField({
   option: OptionInfo
   value: OptionValue | ReadonlyArray<OptionValue>
 }): JSX.Element | null {
-  const label = option.label ?? option.id
-
   if (option.type === OptionType.BOOLEAN) {
     if (option.display === "switch") {
       return (
         <FlexBox alignItems="center" title={option.description}>
-          <Text maxLines={3} sx={{ flex: 1, mr: 1 }}>
-            {label}
-          </Text>
+          {option.label && (
+            <Text maxLines={3} sx={{ flex: 1, mr: 1 }}>
+              {option.label}
+            </Text>
+          )}
           <Switch
             checked={value === true}
             color="primary"
@@ -67,9 +67,11 @@ export function OptionsField({
           }}
           sx={{ p: 0 }}
         />
-        <Text maxLines={3} sx={{ flex: 1, ml: 1 }}>
-          {label}
-        </Text>
+        {option.label && (
+          <Text maxLines={3} sx={{ flex: 1, ml: 1 }}>
+            {option.label}
+          </Text>
+        )}
       </FlexBox>
     )
   }
@@ -85,7 +87,7 @@ export function OptionsField({
 
         return (
           <FormControl fullWidth>
-            <FormLabel id={option.id + "-label"}>{label}</FormLabel>
+            {option.label && <FormLabel id={option.id + "-label"}>{option.label}</FormLabel>}
             {option.choices.length > 2 && (
               <FormControlLabel
                 checked={allChecked}
@@ -140,7 +142,7 @@ export function OptionsField({
 
       return (
         <FormControl fullWidth>
-          <FormLabel id={option.id + "-label"}>{label}</FormLabel>
+          {option.label && <FormLabel id={option.id + "-label"}>{option.label}</FormLabel>}
           <RadioGroup
             aria-labelledby={option.id + "-label"}
             name={option.id}
@@ -172,12 +174,12 @@ export function OptionsField({
 
     return (
       <FormControl fullWidth>
-        <InputLabel id={option.id + "-label"}>{label}</InputLabel>
+        {option.label && <InputLabel id={option.id + "-label"}>{option.label}</InputLabel>}
         <Select<OptionValue | OptionValue[]>
           disabled={disabled}
           fullWidth
           labelId={option.id + "-label"}
-          label={label}
+          label={option.label}
           multiple={option.multi}
           name={option.id}
           onChange={event => {
@@ -218,7 +220,7 @@ export function OptionsField({
             step: option.step ?? 1,
           },
         }}
-        label={label}
+        label={option.label}
         name={option.id}
         onChange={event => {
           const newValue = Number.parseFloat(event.target.value)

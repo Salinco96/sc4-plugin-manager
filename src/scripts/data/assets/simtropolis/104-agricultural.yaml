@@ -115,7 +115,21 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
       							
       <center><strong><abbr title="BATT Squad Certification">BSC</abbr> Irrigation Canal System</strong></center>
@@ -279,10 +293,54 @@ assets:
     authors:
       - SimGoober
     category: 410
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<table cellspacing="0" cellpadding="4" width="450" align="center" bgcolor="#ffffff" border="0"><tbody><tr><td colspan="2"><div align="justify"><p><span><span></span></span><font size="1">This is the beginnings of a new chain of lots, that will all start with Sugar farms. This set will be a base, on which other lots will build on. There will be several rewards which will require the existance of these base lots for them to be fully functional.<br><br>Enclosed a 3 Sugar farms, one in each stage. There are also two residential lots using one of the custom models I made for these. These Residential lots were created by BarbyW. Thanks Barby!</font></p></div></td></tr><tr><td colspan="2"><table cellspacing="0" cellpadding="0" width="100%" border="0"><tbody><tr><td bgcolor="#4b4d91" height="20"><span><strong><font face="Arial" color="#ffffff" size="1"> Lot Details and Information</font></strong></span></td></tr></tbody></table></td></tr><tr><td colspan="2">
+      <p><font size="1">Farm Lots</font></p>
+
+      <p align="justify"><font size="1">These farms are growables, and will need Ag zoning.</font></p>
+
+      <table cellspacing="0" cellpadding="2" width="450" border="0"><tbody><tr bgcolor="#e9ebf0"><td width="150"><font size="1">Lot size:</font></td>
+
+      <td width="300"><font size="1">2 x 3 tiles , Industrial Ag - Candy's Sugar Fields</font></td>
+
+      </tr><tr><td><font size="1">Bulldoze cost:</font></td>
+
+      <td><font size="1"></font></td>
+
+      </tr></tbody></table></td></tr></tbody></table>
+      						</body>
+    filename: SG_Install_SugarcaneFarms1.zip
+    files:
+      - SG_SugarPlantation.jpg
+      - SG_SugarMill.jpg
+      - SG_SugarFarms.dat
+      - SG_PlantationVillas.dat
+      - Readme_SG_SugarFarms.htm
+      - R$$$2_5x4_SG_Sugar_Plantation_af5476ba.SC4Lot
+      - R$$$2_4x4_SG_Sugar_Plantation_af5476ba.SC4Lot
+      - I-r3_5x5_SG_SugarCanePlantation_8f53510d.SC4Lot
+      - I-r2_4x4_SG_SugarFarm_4f673365.SC4Lot
+      - I-r1_2x3_SG_SugarFarm_af6731a8.SC4Lot
+      - BSC Textures SG Vol 01.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0017/95a01eff1ad7edec1ed832e908477eee-SG_SugarPlantation.jpg
+      - https://www.simtropolis.com/objects/screens/0017/95a01eff1ad7edec1ed832e908477eee-SG_SugarMill.jpg
     lastModified: 2005-04-27T14:39:00Z
     name: Sugar Cane Farms
+    sha256: 815420e30b02ba077b0b912a886e6df649da5830cf7e3e4b93b8cf41d2a04388
+    size: 1711512
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2005/thumb-95a01eff1ad7edec1ed832e908477eee-SG_SugarPlantation.jpg
+    timestamp: 2024-08-15T09:27:03.207Z
+    uncompressed: 1717682
     url: https://community.simtropolis.com/files/file/12326-sugar-cane-farms/
+    version: "1.0"
   simtropolis/12342-jbm-new-crops:
     authors:
       - Mary Maurine Mayo
@@ -975,10 +1033,70 @@ assets:
     authors:
       - HunD88
     category: 410
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>Using the same method, these sunflowers are </p>
+
+      <p>adaptive to slopes, so they can cover the area <em>whitout</em></p>
+
+      <p>any eye-soring "side-effect." if you know what i mean..</p>
+
+      <p>I hope you like it, (and i hope i got the files right <img src="https://community.simtropolis.com/assets/emoticons/LlamaTounge.gif" alt=":P"
+      srcset="https://community.simtropolis.com/assets/emoticons/LlamaTounge@2x.gif 2x" width="30" height="30" >)</p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(255,102,0);"><strong> Modification:</strong></span></p>
+
+      <p>Now added a no-shadow version for people who had</p>
+
+      <p>trouble with the original set. This won't cause any tearing.</p>
+
+      <p> </p>
+
+      <p> </p>
+
+      						</body>
+    filename: Sunflower fields1.zip
+    files:
+      - READ FIRST!.txt
+      - Sunflower (Shadows)/Screen3.jpg
+      - Sunflower (Shadows)/Screen2.jpg
+      - Sunflower (Shadows)/Screen1.jpg
+      - Sunflower (Shadows)/H88 plant3-0x6534284a-0xd6c5d067-0x96cbe176.SC4Desc
+      - Sunflower (Shadows)/H88 plant3-0x5ad0e817_0xd6c5d067_0xa0000.SC4Model
+      - Sunflower (Shadows)/Farm Field_ea6e4721.SC4Lot
+      - Sunflower (No Shadows)/SF no shadow.jpg
+      - Sunflower (No Shadows)/H88 plant3-0x6534284a-0xd6c5d067-0x96cbe176.SC4Desc
+      - Sunflower (No Shadows)/H88 plant3-0x5ad0e817_0xd6c5d067_0xa0000.SC4Model
+      - Sunflower (No Shadows)/Farm Field_ea6e4721.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/0004/174adaab569346bbc4f6228d7e8a1324-Screen1.jpg
+      - https://www.simtropolis.com/objects/screens/0004/174adaab569346bbc4f6228d7e8a1324-Screen3.jpg
     lastModified: 2009-07-09T11:36:16Z
     name: Sunflower field
+    sha256: 8352e0a2193e567d381989fd06eb1b3b8baf83944b82a14e56bd76c46af9c57a
+    size: 781413
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2009/thumb-174adaab569346bbc4f6228d7e8a1324-Screen1.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 794221
     url: https://community.simtropolis.com/files/file/21220-sunflower-field/
+    version: "1.0"
   simtropolis/21284-farming-jobs-multiplier:
     authors:
       - RalphaelNinja
@@ -1415,10 +1533,209 @@ assets:
     authors:
       - Framly
     category: 410
+    dependencies:
+      - simtropolis/33622-wmp-mega-props-vol-02-misc-industrial-props
+      - simtropolis/26806-vip-rural-pack-v2
+      - sc4evermore/13-sfbt-essentials
+      - sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <div style="text-align:center;">
+      	<p>
+      		<em><strong>RFR Maize Set</strong></em>
+      	</p>
+      </div>
+
+
+      <div style="text-align:left;">
+      	<p>
+      		<em>A pack for even more variety in rural areas consisting of:</em>
+      	</p>
+
+      	<p>
+      		<strong>- 2 growable Farmlots (5x3 and 5x5 tiles) with 10/15 I$-Jobs + a maize field lot</strong>
+      	</p>
+
+      	<p>
+      		<strong>- 5 Lots (maizefield orthogonal, maizefield diagonal, stubblefield orthogonal, stubblefield diagonal, harvest szene)</strong>
+      	</p>
+
+      	<p>
+      		<strong>- 5 <abbr title="Mayor Mode Ploppables">MMPs</abbr> (Maize, Stubbles, Maizechopper, Trailer, Tractor/Deutz Agrotron X 710)</strong>
+      	</p>
+
+      	<p>
+      		The fieldlots and the <abbr title="Mayor Mode Ploppables">MMPs</abbr> are HD-rendered and are therefore clear displayable even in Zoom 5.
+      	</p>
+      </div>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <div style="text-align:center;">
+      	<p>
+      		<strong>This is the first project of RFR-Team.</strong>
+      	</p>
+
+      	<p>
+      		<em><strong>Thanks to:</strong></em>
+      	</p>
+
+      	<p>
+      		<em><strong>Framly: Ideas and implementation</strong></em>
+      	</p>
+
+      	<p>
+      		<em><strong>rambuckel, igc: </strong></em><abbr title="Building Architect Tool"><em><strong>BAT</strong></em></abbr>
+      	</p>
+
+      	<p>
+      		<em><strong>carlfatal: Lotting</strong></em>
+      	</p>
+
+      	<p>
+      		<em><strong>Framly, carlfatal: Modding</strong></em>
+      	</p>
+
+      	<p>
+      		<em><strong>SimForum Community: helpful critics and suggestions</strong></em><em><strong> </strong></em>
+      	</p>
+
+      	<p>
+      		<em><strong><strong>And a special thanks to "German Batter-Queen"-Theresa formerly known as Rambuckel</strong></strong></em><em><strong> </strong></em><img alt="44.gif" src="https://www.simtropolis.com/forum/public/style_emoticons/default/44.gif"><em><strong> </strong></em>
+      	</p>
+      </div>
+
+
+      <div style="text-align:center;">
+      	<p>
+      		<span style="color:#ff0000;"><strong>Update: 4/8/2012: Additional Files for FrankU's projects!</strong></span>
+      	</p>
+
+      	<p>
+      		 
+      	</p>
+
+      	<p>
+      		<em><span style="text-decoration:underline;"><strong><span style="font-size:14px;">Dependencies:</span></strong></span></em><em><span style="text-decoration:underline;"><strong> </strong></span></em>
+      	</p>
+
+      	<ul>
+      		<li style="text-align: left;">
+      			<strong><a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials" target="_blank" rel="external nofollow"><abbr title="SimForum BAT Team">SFBT</abbr> Essentials</a></strong>
+      		</li>
+      		<li style="text-align: left;">
+      			<strong><a href="https://www.sc4evermore.com/index.php/downloads/download/40-maxis/14-maxis-buildings-as-props-and-dlc-props-v2-1" target="_blank" rel="external nofollow">Maxis Buildings As Props and DLC Props v2.1</a></strong>
+      		</li>
+      		<li style="text-align: left;">
+      			<strong><a href="https://community.simtropolis.com/files/file/33622-wmp-mega-props-vol-02-misc-industrial-props/" rel=""><abbr title="WorkingMan Productions">WMP</abbr> MEGA Props Vol02</a></strong>
+      		</li>
+      		<li style="text-align: left;">
+      			<strong><a href="https://community.simtropolis.com/files/file/26806-vip-ruralpack/" rel="">VIP Rural Pack</a></strong>
+      		</li>
+      		<li style="text-align: left;">
+      			<strong><a href="https://www.toutsimcities.com/downloads/view/1780" rel="external nofollow"><abbr title="ToutSimCities">TSC</abbr> Nams Props Pack Vol01</a></strong>
+      		</li>
+      		<li style="text-align: left;">
+      			<strong><a href="https://www.toutsimcities.com/downloads/view/1882" rel="external nofollow"><abbr title="ToutSimCities">TSC</abbr> Nams Props Pack Vol02</a></strong>
+      		</li>
+      		<li style="text-align: left;">
+      			<strong><a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" target="_blank" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack</a></strong> v8 (or above)
+      		</li>
+      		<li style="text-align: left;">
+      			The below listed dependencies are all can be found in the hereby linked dependency pack compilation.
+      			<ul>
+      				<li>
+      					<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props CP Vol01
+      				</li>
+      				<li>
+      					<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props JMyers Agriculture 01 v2<br>
+      					 
+      				</li>
+      				<li>
+      					<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol01
+      				</li>
+      				<li>
+      					<abbr title="BATT Squad Certification">BSC</abbr> TexturePack Cycledogg V01
+      				</li>
+      				<br>
+      				 
+      			</ul>
+      		</li>
+      	</ul>
+
+      	<p style="text-align:left;">
+      		<strong><span style="font-size:14px;">RFR Team</span></strong>
+      	</p>
+
+      	<p>
+      		 
+      	</p>
+
+      	<p style="text-align:left;">
+      		<span style="font-size:12px;"><strong style="cursor:help;" title="CoriBoom">-<span style="color:#ff00ff;">C</span><span style="color:#0092cb;">B</span> <span style="color:#2c3e50;">Note:  </span></strong>Fixed dependency links. Thanks <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/724957-hugues-aroux/?do=hovercard" data-mentionid="724957" href="https://community.simtropolis.com/profile/724957-hugues-aroux/" id="ips_uid_430_5" rel="">@hugues aroux</a> for reporting.</span>
+      	</p>
+
+      	<p style="text-align:left;">
+      		<span style="color:#2980b9;"><span style="font-size:12px;">- Update 29.12.2023 - to v2 by Tyberius (see changelog)</span></span>
+      	</p>
+      </div>
+
+      						</body>
+    filename: SFBT RFR Maize Set v2.zip
+    files:
+      - ~Documents/SFBT_ReadMe/readme_maize_set.htm
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/SFBT RFR Maize Set_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_RFR Maize Set v2.txt
+      - SFBT/SFBT_Props/SFBT_Mais_Props v2.dat
+      - SFBT/RFR Maize Set/PLOP_SFBT_2x3_Maisernte_1be9933c.SC4Lot
+      - SFBT/RFR Maize Set/PLOP_SFBT_1x1 Maisstoppeln orthogonal_5be9cf3e.SC4Lot
+      - SFBT/RFR Maize Set/PLOP_SFBT_1x1 Maisstoppeln diagonal rechts_a548682d.SC4Lot
+      - SFBT/RFR Maize Set/PLOP_SFBT_1x1 Maisstoppeln diagonal links_5be9d0f9.SC4Lot
+      - SFBT/RFR Maize Set/PLOP_SFBT_1x1 Maisfeld orthogonal_3be9934d.SC4Lot
+      - SFBT/RFR Maize Set/PLOP_SFBT_1x1 Maisfeld diagonal rechts_c54868af.SC4Lot
+      - SFBT/RFR Maize Set/PLOP_SFBT_1x1 Maisfeld diagonal links_5be9d48e.SC4Lot
+      - SFBT/RFR Maize Set/IR$1_SFBT_5x5_Maishof_3be98d24.SC4Lot
+      - SFBT/RFR Maize Set/IR$1_SFBT_3x5_Maisdepot_fbe98d3a.SC4Lot
+      - SFBT/RFR Maize Set/IR$1_SFBT_1x1_Maisfeld_bc4efa52.SC4Lot
+      - SFBT/Mayor Mode Ploppables/SFBT_Mais_MMP v2.dat
+      - ~Documents/SFBT_ReadMe/images/sfbt_logo.gif
+      - ~Documents/SFBT_ReadMe/images/rfr_logo.png
+      - ~Documents/SFBT_ReadMe/images/Mais-Set_02.jpg
+      - ~Documents/SFBT_ReadMe/images/Mais-Set_01.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_04_2012/19d8829c3db61be362efb9dc7f66d641-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_04_2012/07987db07034e942776212d3eb0f42ef-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_04_2012/d2f70b7ac62c35d71bcebdf432cd5fb0-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_04_2012/b07d35bbba9c440fb1268194f0a388e1-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_04_2012/7b723d69e343976dafc91d20471a89bc-.jpg
     lastModified: 2023-12-29T14:33:22Z
     name: SFBT RFR Maize Set
+    sha256: 44d1fb419a6a8826b69c5087b884d348fa3b0146d965411f9dfcd2e05facb7de
+    size: 4678401
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2012/thumb-19d8829c3db61be362efb9dc7f66d641-.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 5419225
     url: https://community.simtropolis.com/files/file/27139-sfbt-rfr-maize-set/
+    version: "2"
   simtropolis/27175-drunk-power:
     authors:
       - drunkapple
@@ -2460,4 +2777,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-72c64c05c6bd3deddb1f3b260797d16f-SC4%20Vineyards.JPG
     url: https://community.simtropolis.com/files/file/973-imperial-vineyard-estate/
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

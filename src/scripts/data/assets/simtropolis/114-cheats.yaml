@@ -1157,7 +1157,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -1319,7 +1331,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -1497,7 +1521,17 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
       							
+
+
+
+
+
 
       							
       <p>
@@ -1564,15 +1598,40 @@ assets:
 
 
       <p>
-      	The options are entered as a comma-separated list of cheat codes that will be applied at the specified stages in the game's loading process. The <em>RunOnce</em> versions will only be applied for the first matching city tile that is loaded.
+      	The commands or cheat codes will be applied at the specified stages in the game's loading process. The RunOnce versions will only be applied for the first matching city tile that is loaded.
       </p>
+
+
+      <p>
+      	The command strings can use one of two formats:
+      </p>
+
+
+      <ul>
+      	<li>
+      		A comma-separated list of commands/cheats.
+      	</li>
+      	<li>
+      		A File:&lt;path&gt; string that specifies an external file containing the commands/cheats.
+      	</li>
+      </ul>
 
 
       <p>
       	[Startup]: The commands in this section will be run once when the game starts up.<br>
       	[Tile]: The commands in this section will be run when loading either an established or unestablished city tile.<br>
-      	[EstablishedTile]: The commands in this section will be run when loading an established city tile.<br>
+      	[EstablishedTile]: The commands in this section will be run when loading an established city tile or when a city is established.<br>
       	[UnestablishedTile]: The commands in this section will be run when loading an unestablished city tile.
+      </p>
+
+
+      <p>
+      	<strong>External File Format</strong>
+      </p>
+
+
+      <p>
+      	The external file must place each command or cheat on its own line. The cheats/commands will be executed sequentially starting from the top of the file.
       </p>
 
 
@@ -1621,16 +1680,16 @@ assets:
       - LICENSE.txt
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_08/STEXIcon.png.b0766777b89d637524e08ec53f9d7da7.png
-    lastModified: 2024-08-11T01:20:28Z
+    lastModified: 2024-08-14T01:30:06Z
     name: SC4 Auto Run Cheats - DLL Plugin
     repository: https://github.com/0xC0000054/sc4-auto-run-cheats
-    sha256: ff0c333f6eda7f5fec4550ddd9de4b8692f8f1018fed2cbf22cbf398d892cc74
-    size: 56229
+    sha256: d1a95b4e40288261256f3b076d6a5d342d984949741a43a470d0454d05da4cf6
+    size: 58086
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/STEXIcon.thumb.png.72fa844d04c6aae9acea9dd1f3bf97b6.png
-    timestamp: 2024-08-13T14:26:32.086Z
-    uncompressed: 125366
+    timestamp: 2024-08-14T13:14:02.567Z
+    uncompressed: 130106
     url: https://community.simtropolis.com/files/file/36384-sc4-auto-run-cheats-dll-plugin/
-    version: 1.0.1
+    version: 1.1.0
   simtropolis/3808-the-plopmatic-9000:
     authors:
       - mfc_app
@@ -1696,4 +1755,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-62fc352a7264906d58dc8698b752fbf6-Banking%20City-Mar.jpg
     url: https://community.simtropolis.com/files/file/925-first-national-bank-of-simnation/
 
-timestamp: 2024-08-13T14:26:32.086Z
+timestamp: 2024-08-19T05:43:53.512Z

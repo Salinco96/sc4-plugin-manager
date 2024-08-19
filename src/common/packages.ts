@@ -4,6 +4,7 @@ import {
   OptionType,
   OptionValue,
   Options,
+  // PackageConfig,
   PackageInfo,
   PackageStatus,
   ProfileInfo,
@@ -12,7 +13,6 @@ import {
   VariantIssue,
 } from "@common/types"
 
-import { PackageCategory, isCategory } from "./categories"
 import { ReadonlyDeep } from "./utils/objects"
 import { isArray, isNumber, isString } from "./utils/types"
 
@@ -36,6 +36,11 @@ export function checkCondition(
   return Object.entries(condition).every(([requirement, requiredValue]) => {
     if (requiredValue === undefined) {
       return true
+    }
+
+    // Never include lots unless explicitly enabled
+    if (requirement === "lots" && !packageConfig?.enabled) {
+      return false
     }
 
     const packageOption = variantInfo?.options?.find(option => option.id === requirement)
@@ -107,15 +112,12 @@ export function getPackageStatus(
   return profileInfo && packageInfo.status[profileInfo.id]
 }
 
-export function getVariantIssues(
-  variantInfo: VariantInfo,
-  packageStatus?: PackageStatus,
-): VariantIssue[] {
-  return packageStatus?.issues[variantInfo.id] ?? []
+export function getVariantIssues(variantId: string, packageStatus?: PackageStatus): VariantIssue[] {
+  return packageStatus?.issues?.[variantId] ?? []
 }
 
-export function isDependency(variantInfo: VariantInfo): boolean {
-  return isCategory(variantInfo, PackageCategory.DEPENDENCIES)
+export function hasIssues(variantId: string, packageStatus?: ReadonlyDeep<PackageStatus>): boolean {
+  return !!packageStatus?.issues?.[variantId]?.length
 }
 
 export function isDeprecated(variantInfo: VariantInfo): boolean {
@@ -127,8 +129,8 @@ export function isEnabled(variantInfo: VariantInfo, packageStatus?: PackageStatu
 }
 
 export function isError(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
-  const issues = getVariantIssues(variantInfo, packageStatus)
-  return isEnabled(variantInfo, packageStatus) && (!!issues.length || !variantInfo.installed)
+  const issues = hasIssues(variantInfo.id, packageStatus)
+  return isEnabled(variantInfo, packageStatus) && (!!issues || !variantInfo.installed)
 }
 
 export function isExperimental(variantInfo: VariantInfo): boolean {
@@ -136,12 +138,18 @@ export function isExperimental(variantInfo: VariantInfo): boolean {
 }
 
 export function isIncompatible(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
-  const issues = getVariantIssues(variantInfo, packageStatus)
-  return !isEnabled(variantInfo, packageStatus) && !!issues.length
+  const issues = hasIssues(variantInfo.id, packageStatus)
+  return !isEnabled(variantInfo, packageStatus) && !!issues
 }
 
 export function isMissing(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
   return isEnabled(variantInfo, packageStatus) && !variantInfo.installed
+}
+
+export function isNew(variantInfo: VariantInfo): boolean {
+  const now = new Date()
+  now.setDate(now.getDate() - 15)
+  return !!variantInfo.release && variantInfo.release > now.toISOString()
 }
 
 export function isOutdated(variantInfo: VariantInfo): boolean {

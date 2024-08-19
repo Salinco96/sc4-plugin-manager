@@ -195,10 +195,70 @@ assets:
     authors:
       - onlyplace4
     category: 60
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>This is a very small download specifically aimed at people using the Lot Editor. It is <strong>NOT</strong> a model as such, nor is it a prop, it is simply a small blank that can be used in
+      place of a building so you can make your own lots without the need to actually place a building on them.</p>
+
+      <p> </p>
+
+      <p>In this archive you will find a single file: <abbr title="BATers, LOTers and MODders">BLaM</abbr>-0x5ad0e817_0x713d210c_0x30000.SC4Model</p>
+
+      <p> </p>
+
+      <p>To use this blank you will first need to rename it to whatever you want, i.e: My_Building-0x5ad0e817_0x713d210c_0x30000.SC4Model, and having done that (making sure that this file is in your
+      <strong><em>My Documents/SimCity 4/Plugins</em></strong> folder) open the <strong>Plugin Manager</strong> to create the .sc4desc file that will be associated with the blank. This is where you
+      give the lot it's resulting statistics and characteristics. For example, if you want a landmark building you would drag the model file onto the Landmark option in the folder tree to the left of
+      Plugin Manager and then adjust the settings to your taste. Likewise, to create a library, drag the model file to the library option within the folder tree.</p>
+
+      <p> </p>
+
+      <p>Having created the .sc4desc file you may close the Plugin Manager and open the <strong>Lot Editor</strong>. Here you will need to select an existing lot of the same type as you have just
+      created within the Plugin Manager. Thus, if you have created an .sc4desc file for a Landmark lot you <strong>MUST</strong> open a Landmark lot. Now select the Building tab in the Lot Editor,
+      click on Replace Item, and select the blank from the resulting menu. Now finish off your new lot with the props of your choosing and save it with a NEW name ... <strong>DO NOT</strong> save it
+      with the name of the lot you opened as this will replace the in-game lot (though that lot will reappear if you simply delete the new one from your Plugins folder).</p>
+
+      <p> </p>
+
+      <p>And that's all there is to it. You may freely use this blank in any lots you create and distribute without having to ask permission, though a mention would be nice!</p>
+
+      <p> </p>
+
+      <p>Remember, this is not a building, or a lot, or a prop ... it is simply a small 1 metre square blank to enable you to create your own lots without the need for a building <em>per se</em>.
+      Before you comment please be aware of just exactly what this file is. Don't go and comment "What's this?" as the explanation is right here! This is a file for people who need to create a blank
+      lot ... it is nothing more!</p>
+
+      						</body>
+    filename: BLaM Blank.zip
+    files:
+      - BLaM Blank/readme.txt
+      - BLaM Blank/BLaM-0x5ad0e817_0x713d210c_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_05_2011/ea4e859e96c796ba2d1864d0202eea77-pic1.jpg
     lastModified: 2011-05-13T03:30:11Z
     name: BLaM Blank
+    sha256: bafb16715d37797bbde9f97417d108a116655435594b708fa111c96324ed0c8b
+    size: 4539
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2011/thumb-ea4e859e96c796ba2d1864d0202eea77-pic1.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 11964
     url: https://community.simtropolis.com/files/file/17996-blam-blank/
+    version: "1.0"
   simtropolis/18244-draggable-glr-stations-patch:
     authors:
       - NAM Team
@@ -776,7 +836,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -993,9 +1065,7 @@ assets:
     dependencies: []
     description: "<body>
 
-      \                           \
-
-      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+      \                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
       \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
       style=\"\" width=\"34\" height=\"53\">
@@ -1571,10 +1641,145 @@ assets:
     authors:
       - kingofsimcity
     category: 60
+    dependencies:
+      - simtropolis/30941-kosc-sp-modular-parking-base-set
+      - simtropolis/30953-kosc-sp-modular-parking-diagonal-set
+      - simtropolis/31024-kosc-sp-modular-parking-extension-set
+      - simtropolis/30958-kosc-sp-modular-parking-add-on-pack-1
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	<span style="font-size:20px;"><em><strong>SP <abbr title="Daeley Advanced Menu Navigator">DAMN</abbr></strong></em></span>
+      </p>
+
+
+      <p>
+      	<u><strong>Introduction</strong></u>
+      </p>
+
+
+      <p>
+      	This is a collection of alternative menus using <strong>Daeley's Advanced Menu Navigator (<abbr title="Daeley Advanced Menu Navigator">DAMN</abbr>)</strong> for my <strong>Superparking Modular Parking Lot</strong> series. Version<strong> 1.2 </strong>includes support for the <a href="https://community.simtropolis.com/files/file/30941-kosc-sp-modular-parking-base-set/" rel=""><strong>Base Set</strong>,</a> <strong><a href="https://community.simtropolis.com/files/file/30953-kosc-sp-modular-parking-diagonal-set/" rel="">Diagonal Expansion Set,</a></strong> <strong><a href="https://community.simtropolis.com/files/file/31024-kosc-sp-modular-parking-extension-set/" rel="">Extension Set</a></strong> &amp; <a href="https://community.simtropolis.com/files/file/30958-kosc-sp-modular-parking-add-on-pack-1/" rel=""><strong>Addon Pack 1</strong>.</a> Future updates will roll out support for newer expansions when possible.
+      </p>
+
+
+      <p>
+      	<strong><u>Package Overview</u></strong>
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#FF0000;">Update 1.2: The base and diagonal set individual menus have been depreciated in favor of the combined menu. For users that want the individual menus still, you may download them by viewing the previous versions below.</span> </strong>
+      </p>
+
+
+      <p>
+      	There is one package included - this contains menus for every single set released up until this point. Inside you will find two folders, <strong>Superparking </strong>and <strong>zzzzzz_DAMN_Hidden. </strong>Superparking contains all the menus, while the hidden folder hides the existing menu icons in the parks/misc trans menu.
+      </p>
+
+
+      <p>
+      	<span style="color:#B22222;"><u><strong>Install Instructions</strong></u></span>
+      </p>
+
+
+      <p>
+      	Drop the <strong>Superparking</strong> folder inside your <strong><abbr title="Daeley Advanced Menu Navigator">DAMN</abbr>/Root</strong> within the SimCity 4 install directory Plugins folder (not documents).
+      </p>
+
+
+      <p>
+      	<strong>For CD/DVD users, the default is - C:/Program Files (x86)/Maxis/SimCity 4/Plugins/<abbr title="Daeley Advanced Menu Navigator">DAMN</abbr>/Root<br>
+      	For Steam users, the default is - C:/Program Files (x86)</strong>/<strong>Steam/SteamApps/common/SimCity 4 Deluxe/Plugins/<abbr title="Daeley Advanced Menu Navigator">DAMN</abbr>/Root</strong>
+      </p>
+
+
+      <p>
+      	Drop the <strong>zzzzzz_DAMN_Hidden </strong>folder into your standard My Documents/SimCity 4/Plugins folder. If you still want access to the original menu icons, feel free to delete this folder entirely.
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;"><span style="color:#B22222;"><strong><u>Dependencies</u></strong></span></span>
+      </p>
+
+
+      <p>
+      	You will need <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1775" rel="external nofollow"><abbr title="Daeley Advanced Menu Navigator">DAMN</abbr></a> for these menus to show up/work.
+      </p>
+
+
+      <p>
+      	<u><strong>Bugs</strong></u>
+      </p>
+
+
+      <p>
+      	There are a couple of missing icons for a couple of the lots, though this doesn't affect the actual lots at all.
+      </p>
+
+
+      <p>
+      	Thanks to <strong>Daeley </strong>for creating this ingenious menu system, and <strong>yild </strong>for creating <strong><abbr title="Daeley Advanced Menu Navigator">DAMN</abbr> Manager.</strong>
+      </p>
+
+      						</body>
+    filename: KOSC_SP_DAMN_Combined_v1.2.zip
+    files:
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Transitions.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_S-Curves.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Paths.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Path Connectors.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Ortho End Stubs.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Ortho Diagonal Transitions.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_No Marking Junctions.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Junctions.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Junction Connectors.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Fillers.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Entrances.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Diagonals.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Diagonal Transitions.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Diagonal End Stubs.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Diagonal Basic Pieces.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_D Ortho Basic Pieces.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_Curbs.dat
+      - zzzzzz_DAMN_Hidden/DAMN_Root_Superparking_ABC Ortho Basic Pieces.dat
+      - Superparking/DAMN-Menu_1455493075741.dat
+      - Superparking/S-Curves/DAMN-Menu_1460601903631.dat
+      - Superparking/Paths/DAMN-Menu_1455955703671.dat
+      - Superparking/Ortho Transitions/DAMN-Menu_1455955976674.dat
+      - Superparking/Path Connectors/DAMN-Menu_1460602392254.dat
+      - Superparking/Ortho End Stubs/DAMN-Menu_1455956432351.dat
+      - Superparking/Ortho Diagonal Transitions/DAMN-Menu_1460602379716.dat
+      - Superparking/No Marking Junctions/DAMN-Menu_1455956042856.dat
+      - Superparking/Junctions/DAMN-Menu_1455955697407.dat
+      - Superparking/Junction Connectors/DAMN-Menu_1455956478946.dat
+      - Superparking/Fillers/DAMN-Menu_1455955711512.dat
+      - Superparking/Entrances/DAMN-Menu_1455956141873.dat
+      - Superparking/Diagonals/DAMN-Menu_1460602802135.dat
+      - Superparking/D Ortho Basic Pieces/DAMN-Menu_1460602229539.dat
+      - Superparking/Curbs/DAMN-Menu_1455956073020.dat
+      - Superparking/ABC Ortho Basic Pieces/DAMN-Menu_1455826306137.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_02/2016-02-14_00014.jpg.77409c8340fb2c90a6cb994bdab23a95.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_02/2016-02-14_00015.jpg.f2846d05e884cf8784f2a3e040eead52.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_02/2016-02-20_00001.jpg.00c0fc6588e361b92de29f00844541e0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_02/2016-02-20_00002.jpg.9fde5b57376bcc759da53928b5ea7823.jpg
     lastModified: 2016-04-14T03:42:29Z
     name: KOSC SP - DAMN Menus
+    sha256: a1982d60765805cfb72b44c2cf4f6a5f9892cc8d07cf8a9487e1c18170f97f07
+    size: 252243
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_04/2016-02-14_00014.thumb.jpg.04da27ea85e971e32022a960f9d5ec87.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 588523
     url: https://community.simtropolis.com/files/file/30955-kosc-sp-damn-menus/
+    version: "1.2"
   simtropolis/31729-simcity-4-deluxe-game-manual-pdf:
     authors:
       - CorinaMarie
@@ -1755,7 +1960,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -1885,7 +2102,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -2036,7 +2265,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -2258,7 +2499,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -2476,7 +2729,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -2705,6 +2970,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p>
       	<span style="font-family:Georgia,serif;">SC4LTEXT Translator is an assistant for translating SimCity 4 <a href="https://wiki.sc4devotion.com/index.php?title=LTEXT" rel="external nofollow">LTEXT</a> files.</span>
@@ -2896,4 +3167,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-cc76119e1615d738dc2f82f522af7ee3-sim-ruler.JPG
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

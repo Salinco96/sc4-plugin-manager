@@ -2819,6 +2819,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p>
       	Hagestraat (Spaarne) Dutch Riverside Buildings
@@ -5030,7 +5036,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -5709,6 +5727,146 @@ assets:
     name: Berlin Set 3 Nickolaiviertel
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-5ddbb9e83ddb11592efb8197de1b1fb6-Pack3.jpg
     url: https://community.simtropolis.com/files/file/3638-berlin-set-3-nickolaiviertel/
+  simtropolis/36394-japanese-w2w-zakkyo-set-relots:
+    authors:
+      - Edvarz
+    category: 200
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+      							
+      <p>
+      	Documentación en Español incluida en la descarga.
+      </p>
+
+
+      <p>
+      	<strong>Description</strong><br>
+      	This is a pack of japanese “<abbr title="Wall-to-Wall">w2w</abbr>” growable lots for your dense urban environments, their style makes them look great in any kind of city, not just asian ones. I’ve taken these building models, given them new stats, put them in lots and even combined some of them together to achieve that dense, built-up look of a modern downtown.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong><br>
+      	Just unzip the folder with the lot files anywhere in your Plugins directory. It's recommended to keep the folder structure intact to help maintain your content organized.<br>
+      	Don't extract the Documentation files to your Plugins folder!
+      </p>
+
+
+      <p>
+      	<strong>Uninstallation</strong><br>
+      	Make sure you bulldoze every instance of these buildings you may have in your cities. After that, remove the files from your Plugins folder.
+      </p>
+
+
+      <p>
+      	<strong>Dependencies</strong><br>
+      	Make sure you have all the files in your Plugins, if you don't, you will get brown boxes instead of the actual buildings and some textures could also be missing.<br>
+      	-<a href="https://community.simtropolis.com/files/file/26808-vip-girafe-vnaoned-carpack-vol01-vol02-v2/" rel="">girafe carpack 1 &amp; 2</a><br>
+      	-rush_zakkyo_1-10<br>
+      	-rush_zakkyo_11-20<br>
+      	-rush_zakkyo_20-26<br>
+      	Download from <a href="http://sim4rush.tuzikaze.com/sc4/bat.html" rel="external nofollow">here</a>, scroll down until you see the following, then click the links shown below:
+      </p>
+
+
+      <p>
+      	<img alt="66bec1be7bfe6_Rushzakkyo.jpg.ee21ca238535a557d424456cb85de1a4.jpg" class="ipsImage ipsImage_thumbnailed ipsAttachLink_image ipsAttachLink_left" data-fileid="104966" src="https://www.simtropolis.com/objects/attachments/monthly_2024_08/66bec1be7bfe6_Rushzakkyo.jpg.ee21ca238535a557d424456cb85de1a4.jpg" style="width:920px;height:auto;float:left;" >
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Notes</strong><br>
+      	I did not make the model(s) and do not claim any credit for them. The modding of this buildings was made using the <abbr title="Plugin Manager">PIM</abbr>-X tool, so there shouldn't be any problem with these buildings throwing the game off balance.<br>
+      	If you run into any issues, or want to see other things I'm working on, pay a visit to my lot thread in Simtropolis, you can also PM me here.
+      </p>
+
+
+      <p>
+      	Enjoy!
+      </p>
+
+      						</body>
+    filename: Japanese W2W zakkyo set.zip
+    files:
+      - Japanese W2W zakkyo set/Rush zakkyo set relot 1-26.dat
+      - Readme-Leeme.docx
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66bebfa701331_Setzakkyopromo.jpg.6af2b4a29e89847f19a07cd8775d3574.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66bebfaa2b79a_Setzakkyorelot.jpg.08009343917dfc14835e6eb8a3a44a62.jpg
+    lastModified: 2024-08-16T03:08:41Z
+    name: Japanese W2W zakkyo set relots
+    sha256: ec7f3a54ea7e9d66aebcc8e795813f24b34472282ca94353aaf56b1526aeba8b
+    size: 174527
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/66bec2b937c7d_Setzakkyopromo.thumb.jpg.185fd416af601e3412ddd8ca8a5255b9.jpg
+    timestamp: 2024-08-16T12:43:44.223Z
+    uncompressed: 278128
+    url: https://community.simtropolis.com/files/file/36394-japanese-w2w-zakkyo-set-relots/
+    version: 1.0.0
   simtropolis/3696-berlin-medical:
     authors:
       - Erdmoebel
@@ -5825,10 +5983,29 @@ assets:
     authors:
       - Vanderaap
     category: 200
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      							<p>Small Dutch village house (1900-1915), based on Geerweg 31 in Langeraar. Sober Art Nouveau with green glazed brick accents. Garage door by Couchpotato (revised). V-apps, 07-28-04 / 08-09-04</p>
+      						</body>
+    filename: vda_langeraar_geerweg_31.zip
+    files:
+      - Vanderaap - Langeraar Geerweg 31_8e13ed2a.SC4Lot
+      - Vanderaap - Langeraar Geerweg 31-0x6534284a-0x8df82a66-0x4e13eaef.SC4Desc
+      - Vanderaap - Langeraar Geerweg 31-0x5ad0e817_0x8df82a66_0x180000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/0019/a76ffb799aa180528e616f8ba560379e-vda_langeraar_geerweg_31_01.jpg
+      - https://www.simtropolis.com/objects/screens/0019/a76ffb799aa180528e616f8ba560379e-vda_langeraar_geerweg_31_02.jpg
     lastModified: 2004-08-10T02:52:03Z
     name: vda Langeraar Geerweg 31
+    sha256: fb828f69bd71d0367d74e03497269efd87ed917945f4aa5cce3453f243654f67
+    size: 134644
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2004/thumb-a76ffb799aa180528e616f8ba560379e-vda_langeraar_geerweg_31_01.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 171082
     url: https://community.simtropolis.com/files/file/4049-vda-langeraar-geerweg-31/
+    version: "1.0"
   simtropolis/4050-vda-amsterdam-nieuwezijds-voorburgwal-86-88:
     authors:
       - Vanderaap
@@ -5974,4 +6151,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-232789d5486669d92d9274d470ae880a-Kronenpalais%20Screen.jpg
     url: https://community.simtropolis.com/files/file/4572-berlin-set-v2-kronenstrasse-8/
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

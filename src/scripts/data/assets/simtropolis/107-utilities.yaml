@@ -1515,10 +1515,43 @@ assets:
     authors:
       - kaos78414
     category: 500
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>This is sorta like the wonder tree, similar stats, §10 a month, §500 to plop, produces 50 power. It has a transparent base texture so you can place it on any kind of terrain and plop any
+      trees you may have on/around it so it can be more hidden if it needs to be. The purpose of this kinda lot is to allow you to have secluded areas, lots, buildings and what-have-you, without
+      having to build another power plant. This one is more realistic IMO because a lot of people buy generators for their homes or offices or whatever. It has a rusted look about it so it will fit
+      well with rural areas. Enjoy!</p>
+
+      <p> </p>
+
+      <p>
+
+      No dependencies by the way.</p>
+
+      						</body>
+    filename: KAOS - Generator-0x5ad0e817_0x34c7da5e_0x120000.zip
+    files:
+      - KAOS - Power - Generator_d4d58b65.SC4Lot
+      - KAOS - Generator-0x6534284a-0x34c7da5e-0xd4d58a9a.SC4Desc
+      - KAOS - Generator-0x5ad0e817_0x34c7da5e_0x120000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/0010/57335d1302931aecdc87ee1b09781995-generator%20pic.JPG
     lastModified: 2008-03-01T16:58:39Z
     name: KAOS Rusty Generator
+    sha256: d976383aab3d13f7e75f52a6164434728640244e31e46a10406f1fc8ab6cfc10
+    size: 52660
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2008/thumb-57335d1302931aecdc87ee1b09781995-generator%20pic.JPG
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 59460
     url: https://community.simtropolis.com/files/file/19458-kaos-rusty-generator/
+    version: "1.0"
   simtropolis/19493-mars-water-tower-15:
     authors:
       - AREA-55
@@ -3379,10 +3412,38 @@ assets:
     authors:
       - TakemeThere
     category: 500
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<div>	<p>		<strong>Info:</strong>	</p>	<p>		Have you ever wanted to properly end your power lines with a transformer substation? Well now you can! By previous request I'm releasing this file which I first displayed on my <abbr title="City Journal">CJ</abbr> a while back. Originally the plan was to include this lot as part of a set of several different types of transitions(1-line, 2-line, 2-way, 4-way etc.) for both the in-game maxis power lines and also MandelSoft's <a href="http://i.imgur.com/1WnrSOH.jpg" rel="external nofollow">custom power line set</a>. However I've decided to abandon that much delayed project in favor of a completely new custom power line set I'm currently working on.<br><br>		This substation can be used to properly cap the beginning and end of your power lines using a couple of very simple <abbr title="Building Architect Tool">BAT</abbr>. The lot provides 400 units of power, the idea behind that being that while a substation doesn't actually generate power it plays an important part in prevent transmission power loses by stepping up and the reducing the voltages across a long distance power line. It can be found near the bottom of the power menu. No dependencies are required.	</p>	<p>		<br><strong>Stats:</strong><br><br>		Plop Cost: $400<br>		Power produced: 400 (8MW)<br>		Monthly Cost: $4<br>		Demolition cost: $100<br><br><br><strong>Dependencies</strong>:	</p>	<p>		None!	</p>
+      </div>
+      						</body>
+    filename: Transformer station with maxis power line hookup.zip
+    files:
+      - Transformer station with maxis power line hookup/wire3-0x6534284a-0xb2682b4a-0x952156a0.SC4Desc
+      - Transformer station with maxis power line hookup/wire3-0x5ad0e817_0x64a40ff2_0x30000.SC4Model
+      - Transformer station with maxis power line hookup/wire1-0x6534284a-0xb2682b4a-0xd5215692.SC4Desc
+      - Transformer station with maxis power line hookup/wire1-0x5ad0e817_0xe4a413ca_0x30000.SC4Model
+      - Transformer station with maxis power line hookup/wire pole3-0x6534284a-0x9dd0f4c0-0xc1a79d4c.SC4Desc
+      - Transformer station with maxis power line hookup/wire pole3-0x5ad0e817_0x41a2573f_0x30000.SC4Model
+      - Transformer station with maxis power line hookup/Power - 2x2 Transformer Station - old style_64a800cd.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_07/trans.jpg.a231e0e1e389664a66b549c3488e61c5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_07/trans2.jpg.b977f8beaea6e5822c89d2bb609f6b07.jpg
     lastModified: 2016-08-18T21:59:18Z
     name: Transformer Substation
+    sha256: 4615a0b8dd8611c97609c9c44f9a2fd23aa64ad972b27861f3d91873c5e90f00
+    size: 72881
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_07/trans2.thumb.jpg.c41ae18e0f2ee0cec04517e1aa711780.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 93992
     url: https://community.simtropolis.com/files/file/31217-transformer-substation/
+    version: "1.0"
   simtropolis/31227-water-storage-tank:
     authors:
       - Mary Maurine Mayo
@@ -3467,10 +3528,97 @@ assets:
     authors:
       - Simmer2
     category: 500
+    dependencies:
+      - simtropolis/32980-sm2-mega-prop-pack-vol1
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>SM2 Main Transformers</strong>
+      </p>
+
+
+      <p>
+      	Two more power substations to play with.
+      </p>
+
+
+      <p>
+      	1) 1x2 lot with 600 output.<br>
+      	2) 2x2 lot with 1000 output.
+      </p>
+
+
+      <p>
+      	Textures included.
+      </p>
+
+
+      <p>
+      	1 dependency : SM2 Mega Prop Pack Vol1 <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3640" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3640</a>
+      </p>
+
+
+      <p>
+      	<strong>Alternate links for my packs only</strong>
+      </p>
+
+
+      <p>
+      	SM2 Mega Prop Pack Vol1 <a href="https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/" rel="">https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/</a>
+      </p>
+
+
+      <p>
+      	Enjoy.
+      </p>
+
+
+      <p>
+      	Simmer2
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SM2 Main Transformers v2.zip
+    files:
+      - SM2/Main Transformers/PLOP_2x2_SM2 Main Transformer with building._a5b3aa9f.SC4Lot
+      - SM2/Main Transformers/PLOP_2x1_SM2 Main Transformer_95b3a8b8.SC4Lot
+      - SM2/Documents/SM2 Main Transformers.Read Me.txt
+      - SM2/Documents/SM2 Main Transformers.jpg
+      - SM2/Textures/SM2_Transformer_Tex.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/2.jpg.2a05d55ded81d70b4300b93e04a07a79.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/1.jpg.b0aee1a007e9126e6c7aac2fc7311f95.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/3.jpg.f0641f4a7889f337e6eec194409c72d8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/4.jpg.0e1a483d56aa6b8b91003f5deb28f68f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_11/Logotr.jpg.6fb33f79ed8f17f07fbe26c9a3108e5c.jpg
     lastModified: 2019-06-28T19:03:41Z
     name: SM2 Main Transformers
+    sha256: 708751c9a4406d6785a67912b9ec5a3d495bd0e4a3642e94c2d4fec626a034fa
+    size: 175208
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/Logotr.thumb.jpg.17d741652fb4b8a21bc15f53c98bdd4b.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 209716
     url: https://community.simtropolis.com/files/file/31369-sm2-main-transformers/
+    version: 2.0.0
   simtropolis/31389-energy-data-packaging-plant:
     authors:
       - SecretMbr_735754
@@ -3491,10 +3639,97 @@ assets:
     authors:
       - Simmer2
     category: 500
+    dependencies:
+      - simtropolis/32980-sm2-mega-prop-pack-vol1
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>SM2 Mobile Power Generator.</strong>
+      </p>
+
+
+      <p>
+      	For all your sports events, outdoor entertainment and emergency needs.
+      </p>
+
+
+      <p>
+      	Lot is 1x2 with no base texture. Plop it and dress it.
+      </p>
+
+
+      <p>
+      	Power output = 1500 with little to no emissions.
+      </p>
+
+
+      <p>
+      	Enjoy
+      </p>
+
+
+      <p>
+      	Simmer2
+      </p>
+
+
+      <p>
+      	Dependencies
+      </p>
+
+
+      <p>
+      	SM2 Mega Prop Pack Vol1 <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3640" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3640</a>
+      </p>
+
+
+      <p>
+      	<strong>Alternate links for my packs only</strong>
+      </p>
+
+
+      <p>
+      	SM2 Mega Prop Pack Vol1 <a href="https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/" rel="">https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SM2 Mobile Power Generator v2.zip
+    files:
+      - SM2/Mobile Power Generator/PLOP_1x2_SM2 Mobile Power Generator L_65fc4df7.SC4Lot
+      - SM2/Documents/Mobile power generator2.jpg
+      - SM2/Documents/Mobile power generator1.jpg
+      - SM2/Documents/Mobile power generator.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_01/12.jpg.7518895ed6e8f5ba490d274befe8b1f0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_01/14.jpg.6442586457ff10b6dcc06b20587f89b7.jpg
     lastModified: 2019-06-28T18:55:08Z
     name: SM2 Mobile Power Generator
+    sha256: 50fea09e44a14242f3e1b5acea412a8012adf091bc72be8526f86d173334512d
+    size: 2471465
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_01/14.thumb.jpg.0282720cc0789faec015d5f0edeff857.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 2496509
     url: https://community.simtropolis.com/files/file/31431-sm2-mobile-power-generator/
+    version: 2.0.0
   simtropolis/31432-sm2-water-towers:
     authors:
       - Simmer2
@@ -3787,10 +4022,79 @@ assets:
     authors:
       - Simmer2
     category: 500
+    dependencies:
+      - simtropolis/34872-sm2-mega-prop-pack-vol6
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	SM2 HV Transformer
+      </p>
+
+
+      <p>
+      	A nondescript 1x1 power lot designed to blend in any urban and non urban setting just like real life ones.
+      </p>
+
+
+      <p>
+      	Lot size 1x1
+      </p>
+
+
+      <p>
+      	Power output 7500.
+      </p>
+
+
+      <p>
+      	Dependencies
+      </p>
+
+
+      <p>
+      	SM2 Mega Prop Pack Vol6 <a href="https://community.simtropolis.com/files/file/34872-sm2-mega-prop-pack-vol6/" rel="">https://community.simtropolis.com/files/file/34872-sm2-mega-prop-pack-vol6/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SM2 HV Transformer v2.zip
+    files:
+      - SM2/SM2 HV Transformer/PLOP_1x1_SM2 HV Transformer_e9fdf13b.SC4Lot
+      - SM2/Documents/ReadMe HV.txt
+      - SM2/Documents/hv3.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_03/hv1.jpg.0a23dca3909a3af4c2f4056439f19778.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_03/hv2.jpg.9a6e9bb11c339169b3a1058e5d66cda1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_03/hv3.jpg.9b0df013658a4fb68db3ade9c24ce7f2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_03/hv4.jpg.8b8ee116e86e6baa1be16ce4e7d7392d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_03/hv5.jpg.925fdc67cf9b18692dfa72b6611b27ce.jpg
     lastModified: 2022-02-25T19:40:27Z
     name: SM2 HV Transformer
+    sha256: 36ddd1c048d7fefb5266054374730302713aa0ce8ef3d29382eb82427dbdfbcd
+    size: 1142970
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_03/hv3.thumb.jpg.e266d22f6831940bc904f920e8dcca91.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 1154569
     url: https://community.simtropolis.com/files/file/32790-sm2-hv-transformer/
+    version: "2.0"
   simtropolis/32800-sm2-cold-fusion-reactors:
     authors:
       - Simmer2
@@ -3878,7 +4182,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -4166,10 +4482,187 @@ assets:
     authors:
       - Kloudkicker
     category: 500
+    dependencies:
+      - simtropolis/33600-very-old-building-props
+      - simtropolis/34316-sm2-mega-prop-pack-vol5
+      - simtropolis/32980-sm2-mega-prop-pack-vol1
+      - simtropolis/32981-sm2-mega-prop-pack-vol2
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+      - simtropolis/26793-network-addon-mod-nam-cross-platform
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p style="font-size:11pt;">
+      	<strong><span style="font-size:18px;">KK Transformer Lots-Small</span></strong><br>
+      	Brought to you by Kloudkicker Industries. This is a <abbr title="Allied Municipal Power of Simtropolis">AMPS</abbr> Certified Mod.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	This pack provides you with 33- 1x1 and 1x2 lots and 4- <abbr title="Transit Enabled">TE</abbr> street lots. For a total of 37 lots, and can be found in the power menu. These transformers are for use in small areas and do not require road access (except the 4 <abbr title="Transit Enabled">TE</abbr> lots), or when you only need a little more power but don't need a full scale plant or substation.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	All the lots are designed to blend into their appropriate surrounding's as best as possible while giving a variety of looks. Some lots use family props, so they wont look the same with each plop. No jobs, no water used and no pollution produced. You can pick and chose which set or sets you would like to use. Pick just 1 set to all 7 of them, your choice. Just remove the set('s) your not using from the Plugins folder.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	<span style="font-size:11pt;">These lots can be used as mini independent power stations. Or used as they were deigned to be, intended as core files for a mod underdevelopment and is in testing stages called <abbr title="Allied Municipal Power of Simtropolis">AMPS</abbr>. The <abbr title="Allied Municipal Power of Simtropolis">AMPS</abbr> (Allied Municipal Power of Simtropolis) mod is underdevelopment and is in testing stages. More information can be found in the <abbr title="Allied Municipal Power of Simtropolis">AMPS</abbr> Development Thread. </span><a href="https://community.simtropolis.com/forums/topic/760305-mod-amps-development-thread/" rel=""><span style="font-size:10pt;">https://community.simtropolis.com/forums/topic/760305-mod-amps-development-thread/</span></a>
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	<u><span>Dependences</span></u>:<br>
+      	<span style="font-size:11pt;">*a.) <abbr title="BATT Squad Certification">BSC</abbr> Textures Vol 01<span>  </span></span><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow"><span style="font-size:10pt;">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90</span></a><br>
+      	<span style="font-size:11pt;">*b.) <abbr title="BATT Squad Certification">BSC</abbr> Textures Vol 03 </span><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1806" rel="external nofollow"><span style="font-size:10pt;">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1806</span></a><br>
+      	<span style="font-size:11pt;">*c.) Plugin_RCI_Buildings_Prop_Modd<span>  </span>-found in- </span><a href="https://community.simtropolis.com/files/file/33600-very-old-building-props/" rel=""><span style="font-size:10pt;">https://community.simtropolis.com/files/file/33600-very-old-building-props/</span></a><br>
+      	<span>*All Maxis building props with proper names</span><br>
+      	<span style="font-size:11pt;"><span> </span>*d SM2 Mega Prop Pack Vol5<span>  </span></span><a href="https://community.simtropolis.com/files/file/34316-sm2-mega-prop-pack-vol5/" rel=""><span style="font-size:10pt;">https://community.simtropolis.com/files/file/34316-sm2-mega-prop-pack-vol5/</span></a><br>
+      	<span style="font-size:11pt;">e.) SM2 Mega Prop Pack Vol1<span>  </span></span><a href="https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/" rel=""><span style="font-size:10pt;">https://community.simtropolis.com/files/file/32980-sm2-mega-prop-pack-vol1/</span></a><br>
+      	<span style="font-size:11pt;">f.) SM2 Mega Prop Pack Vol2<span>  </span></span><a href="https://community.simtropolis.com/files/file/32981-sm2-mega-prop-pack-vol2/" rel=""><span style="font-size:10pt;">https://community.simtropolis.com/files/file/32981-sm2-mega-prop-pack-vol2/</span></a><br>
+      	<span style="font-size:11pt;">h.) <abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - Misc Vol02<span>  </span></span><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1771" rel="external nofollow"><span style="font-size:10pt;">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1771</span></a><br>
+      	<span style="font-size:11pt;">i.) NetworkAddonMod_Props.dat -found in- </span><a href="https://community.simtropolis.com/files/file/26793-network-addon-mod-NAM-cross-platform/" rel=""><span style="font-size:10pt;">https://community.simtropolis.com/files/file/26793-network-addon-mod-<abbr title="Network Addon Mod">NAM</abbr>-cross-platform/</span></a>
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	* These four mods that were never mentioned at initial release and the strikethrough depend was not needed.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	NOTE: All of the dependences are required for a complete looking lot; without any brown boxes, missing textures or objects. Some thing I should try and remember!
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	<u>Stats</u>:<br>
+      	The categories of transformers are as follows:<br>
+      	<span>   </span>Qty.- Output<br>
+      	1.)<span>  </span>2- 1 MW, <abbr title="Transit Enabled">TE</abbr> pole mounted lot with two version so the pole will end up in any of the four corners you chose.<br>
+      	2.)<span>  </span>2- 2 MW, <abbr title="Transit Enabled">TE</abbr> pad mounted transformer with two versions which will let you place the transformer in any four corners of the lot.<br>
+      	3.) 6- 15 MW, lot with a variety of basic, but nice park designs. For use in residential zones.<br>
+      	4.) 6- 30 MW, lot with a half park/ half plaza design for both residential and commercial.<br>
+      	5.) 7- 90 MW, 1x1 lot with a lovely plaza style for dense commercial zones.<br>
+      	6.) 6- 180 MW, 1x1 lot with transformer in a fenced enclose for use in industrial zones.<br>
+      	7.) 8- 360 MW, 1x2 lot with transformer secure behind a fence with a industrial theme.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	1.) $1/month for the 1 MW(25 kVA), $4 to plop and $20 to bulldoze<br>
+      	2.) $1/month for the 2 MW(50 kVA), $8 to plop and $20 to bulldoze<br>
+      	3.) $4/month for the 15 MW(250 kVA), $40 to plop and $20 to bulldoze<br>
+      	4.) $8/month for the 30 MW(500 kVA), $75 to plop and $20 to bulldoze<br>
+      	5.) $23/month for the 90 MW(1500 kVA), $225 to plop and $20 to bulldoze<br>
+      	6.) $45/month for the 180 MW(3 MVA), $450 to plop and $20 to bulldoze<br>
+      	7.) $90/month for the 360 MW(6 MVA), $900 to plop and $40 to bulldoze
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	<u><span>Names of included files</span></u>:<span>                                     </span><u><span>Letter of dependence needed per individual pack</span></u>:<br>
+      	(Sets)<br>
+      	(1.) KK_1x1_TE_25kVA_Street_Pole.dat<span>           </span>a, d<br>
+      	(2.) KK_1x1_TE_50kVA_Street_Box.dat<span>            </span>a, d<br>
+      	(3.) KK_1x1_PK_250kVA_1_2d2f6722.dat<span>        </span>a, b, f<br>
+      	(4.) KK_1x1_PKZ_500kVA_1_ad300aef.dat<span>      </span>a, b, e<br>
+      	(5.) KK_1x1_PZ_1500kVA_2_2d2f5802.dat<span>      </span>e<br>
+      	(6.) KK_1x1_ID_3MVA_2_cd30721b.dat<span>            </span>e, c, h<br>
+      	(7.) KK_1x2_ID_6MVA_3_ad302940.dat<span>            </span>a, e, g, i
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	KK Transformer Small Lots 2.jpg, KK Transformer Small Lots 4.jpg<br>
+      	KK TransformerLotsSmall README.txt
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	<u><span>Installation</span></u>: For SimCity 4 Deluxe and SimCity 4 Rush Hour Only<br>
+      	After downloading, extract the folder and open it. Than open folder inside named "Kloudkicker" and open folder in there labeled "KK Transformer Lots Small README". After reading the README text file inside, remove folder "KK Transformer Lots Small README" and store it in a separate place other than the two plugin folders or discard it. Take folder "Kloudkicker" and place it in the Documents SimCity 4 Plugins folder. Enjoy while playing
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	<u><span>Uninstalling</span></u>:<br>
+      	Bulldoze all of the lots in every city they were placed and then remove the file from your Plugin folder. Please reconsider, I'll behave.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	<u><span>Credits</span></u>:<br>
+      	I would like to thank RobertaME, for all of her valuable time and hard work with these lots. Simmer2 for props that I love to use, <abbr title="BATT Squad Certification">BSC</abbr> team for the awesome props, and the <abbr title="Network Addon Mod">NAM</abbr> team for using their textures, and thanks to CorinaMarie and RalphaelNinja for the old prop files. I used them before I realized I was not suppose to use them. Also I would like to thank you to all of the Simtropolis community, SC4D and Maxis of course. But a Big Thanks goes to Dirktator, the founder of Simtropolis, for starting Simtropolis in 2002. Thank you Everyone.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	This lot was designed by me(Kloudkicker) and by RobertaME. These lots have been tested and moded to match real life as much as possible. Much care has been take to ensure that there are no errors, but this does not mean that errors do not exist. How can anyone ensure that when the game is not perfect itself? Use at your own risk.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	Feel free to use this mod for any reason. Please, just give credit when it's due. However, Do Not upload this mod to any site without my permission.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	KK<span>  </span>March 12, 2021
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	Updated April 9, 2021: Only changed the folder structure, dependence link and added credit to TWrecks. No change to lot file.
+      </p>
+
+
+      <p style="font-size:11pt;">
+      	Updated May 9,2021- No change to lot file. Updating the dependence list to include four missed dependences and removed one that was not needed. Added a dependence legend to "Names of included files" section for each separate set. Edited credits. Enclosed README updated the same.
+      </p>
+
+      						</body>
+    filename: KK Transformer Lots Small.zip
+    files:
+      - Kloudkicker/KK Transformer Lots Small README/KK TransformerLotsSmall README.txt
+      - Kloudkicker/KK Transformer Lots Small README/KK Transformer Small Lots 4.jpg
+      - Kloudkicker/KK Transformer Lots Small README/KK Transformer Small Lots 2.jpg
+      - Kloudkicker/Electrical/KK_Transformer Lots Small/KK_1x2_ID_6MVA_3_ad302940.dat
+      - Kloudkicker/Electrical/KK_Transformer Lots Small/KK_1x1_TE_50kVA_Street_Box.dat
+      - Kloudkicker/Electrical/KK_Transformer Lots Small/KK_1x1_TE_25kVA_Street_Pole.dat
+      - Kloudkicker/Electrical/KK_Transformer Lots Small/KK_1x1_PZ_1500kVA_2_2d2f5802.dat
+      - Kloudkicker/Electrical/KK_Transformer Lots Small/KK_1x1_PK_250kVA_1_2d2f6722.dat
+      - Kloudkicker/Electrical/KK_Transformer Lots Small/KK_1x1_PKZ_500kVA_1_ad300aef.dat
+      - Kloudkicker/Electrical/KK_Transformer Lots Small/KK_1x1_ID_3MVA_2_cd30721b.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/604c1914960e7_KKTransformerSmallLots3.jpg.8dcbee6f0d0757478728d3f5da30de41.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/604c191b08b28_KKTransformerSmallLots2.jpg.cca6fc594c4b428bd554e8714cc7d25b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/604c1920669a8_KKTransformerSmallLots1.jpg.7a30eb9e561be0b990cfc184837607b3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/604c19238eade_KKTransformerSmallLots4.jpg.37f70895e0e8bb48f3d2e5a8d4a557ba.jpg
     lastModified: 2021-05-10T02:53:02Z
     name: KK Transformer Lots-Small
+    sha256: dda118f1d9e75066e8fc39659c76a3ac46f838cec421465fa641703abde64bef
+    size: 3118952
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/604c1c3bb48aa_KKTransformerSmallLots3.thumb.jpg.18ece35ca364e066c6f74781872882f4.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 3131934
     url: https://community.simtropolis.com/files/file/34273-kk-transformer-lots-small/
+    version: 1.0.2
   simtropolis/34291-kk-transmission-substation-pack-whookup:
     authors:
       - Kloudkicker
@@ -4923,4 +5416,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-0dc48ffa24d273347ad085ec0439ad86-day.JPG
     url: https://community.simtropolis.com/files/file/983-hydro-electric-dam/
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

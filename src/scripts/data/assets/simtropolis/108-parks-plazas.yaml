@@ -1769,6 +1769,13 @@ assets:
                                   
 
 
+
+
+
+
+
+
+
       							
       <table>
       	<tbody>
@@ -2682,6 +2689,13 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
 
 
 
@@ -5652,34 +5666,481 @@ assets:
     authors:
       - aldara6166
     category: 660
+    dependencies:
+      - simtropolis/11421-jenx-porkie-expanded-porkie-props
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong><span style="font-size:16px;">The <abbr title="Modular Amusement Park Pack">MAPP</abbr></span></strong> -<em> <strong>the first official download of 2007</strong></em> - is finally here!!<br><br>
+      	Are trips to the local mall, or the local zoo and aquarium the only entertainment that you can provide for your Sims? Have your Sims every wanted for something more to do on a long, summer's weekend than just go to the beach?<br>
+      	Well now you too can provide the fun and entertainment that your Sims so desperately deserve. Introducing the Modular Amusement Park Pack (<abbr title="Modular Amusement Park Pack">MAPP</abbr>) presented by RJM Designs.
+      </p>
+
+
+      <p>
+      	This set is made up of amusement park rides, roller coasters, midway entertainment and more. Currently there are a few amusement park BATs available on the STEX, but this pack draws everything together.[/size]<br>
+      	So dive right in and create that "dream park" that you have always dreamt of, or re-create your favorite amusement park from the memories of your childhood.<br>
+      	The <abbr title="Modular Amusement Park Pack">MAPP</abbr> . . . making your Sims' entertainment dreams a reality!
+      </p>
+
+
+      <p>
+      	* <span style="color:#2980b9;">NOTE - The <abbr title="Modular Amusement Park Pack">MAPP</abbr> uses the ped-malls that are included in Network Addon Mod to tie all of our custom BATs together. See How to build an Amusement Park in the readme file for instructions.</span>*
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;">This is the Essentials pack. It includes several custom props, textures, etc. This pack also includes many buildings that you would normally associate as "core buildings" within any amusement park. Without this pack the other packs will not function properly.</span><br><br><u>Please delete any and all prior versions of all <abbr title="Modular Amusement Park Pack">MAPP</abbr> lots (including the construction lot) prior to installation to avoid conflicts.</u><br><br><span style="font-size:16px;"><u><strong>Dependancies:</strong></u></span>
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/11421-porkie-props-vol1-european-street-accessories/" rel="">Porkie Props Vol.1 </a><br><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Textures Mega Pack</a>
+      </p>
+
+      						</body>
+    filename: Setup_MAPP_Ancillary_Buildings_Essentials.zip
+    files:
+      - MAPP_readme.htm
+      - images/topbarright.gif
+      - images/topbarleft.gif
+      - images/topbar.gif
+      - images/MAPP_Rollercoasters.jpg
+      - images/MAPP_Modern_Rides.jpg
+      - images/MAPP_Classic_Rides.jpg
+      - images/MAPP_Ancillary_Buildings.jpg
+      - images/leftheader.jpg
+      - Essentials/MAPP_Props1.dat
+      - Essentials/MAPP_Essentials1.dat
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/ioSpecial.ini
+      - $PLUGINSDIR/InstallOptions.dll
+      - Ancillary Buildings/Small Entrance/MAPP_EntranceSmallProp.SC4Desc
+      - Ancillary Buildings/Small Entrance/MAPP_EntranceSmall.SC4Model
+      - Ancillary Buildings/Small Entrance/MAPP_EntranceSmall.SC4Lot
+      - Ancillary Buildings/Security Kiosk/MAPP_SecurityKioskProps.dat
+      - Ancillary Buildings/Security Kiosk/MAPP_SecurityKiosk.SC4Lot
+      - Ancillary Buildings/Parking Lots/MAPP_Parking_D.SC4Lot
+      - Ancillary Buildings/Parking Lots/MAPP_Parking_C.SC4Lot
+      - Ancillary Buildings/Parking Lots/MAPP_Parking_B.SC4Lot
+      - Ancillary Buildings/Parking Lots/MAPP_Parking_A.SC4Lot
+      - Ancillary Buildings/Parking Lots/MAPP_ParkingLightPolesProps.dat
+      - Ancillary Buildings/Maintenance Building/MAPP_MaintenanceShedProp.dat
+      - Ancillary Buildings/Maintenance Building/MAPP_MaintenanceBuildingProp.SC4Desc
+      - Ancillary Buildings/Maintenance Building/MAPP_MaintenanceBuilding.SC4Model
+      - Ancillary Buildings/Maintenance Building/MAPP_MaintenanceBuilding.SC4Lot
+      - Ancillary Buildings/Main Entrance/MAPP_EntranceSignProp.dat
+      - Ancillary Buildings/Main Entrance/MAPP_EntranceBigProp.SC4Desc
+      - Ancillary Buildings/Main Entrance/MAPP_EntranceBig.SC4Model
+      - Ancillary Buildings/Main Entrance/MAPP_EntranceBig.SC4Lot
+      - Ancillary Buildings/Game Stands/MAPP_GameStandsProps.dat
+      - Ancillary Buildings/Game Stands/MAPP_GameStands.SC4Lot
+      - Ancillary Buildings/Fountain/MAPP_FountainProp.SC4Desc
+      - Ancillary Buildings/Fountain/MAPP_Fountain.SC4Model
+      - Ancillary Buildings/Fountain/MAPP_Fountain.SC4Lot
+      - Ancillary Buildings/Food Stands/MAPP_FoodStandsSmallProps.dat
+      - Ancillary Buildings/Food Stands/MAPP_FoodStandsSmall.SC4Lot
+      - Ancillary Buildings/Food Stands/MAPP_FoodStandsBigProps.dat
+      - Ancillary Buildings/Food Stands/MAPP_FoodStandsBig.SC4Lot
+      - Ancillary Buildings/Fences/MAPP_FenceStraight.SC4Lot
+      - Ancillary Buildings/Fences/MAPP_FenceProps.dat
+      - Ancillary Buildings/Fences/MAPP_FenceDiagonal.SC4Lot
+      - Ancillary Buildings/Fences/MAPP_FenceCorner.SC4Lot
+      - Ancillary Buildings/Exhibition Tent/MAPP_ExhibitionTentProp.SC4Desc
+      - Ancillary Buildings/Exhibition Tent/MAPP_ExhibitionTent.SC4Model
+      - Ancillary Buildings/Exhibition Tent/MAPP_ExhibitionTent.SC4Lot
+      - Ancillary Buildings/Bus Entrance/MAPP_BusEntranceProp.SC4Desc
+      - Ancillary Buildings/Bus Entrance/MAPP_BusEntrance.SC4Model
+      - Ancillary Buildings/Bus Entrance/MAPP_BusEntrance.SC4Lot
+      - Ancillary Buildings/Bathrooms/MAPP_BathroomsProps.dat
+      - Ancillary Buildings/Bathrooms/MAPP_Bathrooms.SC4Lot
+      - Ancillary Buildings/Arcade/MAPP_ArcadeProp.SC4Desc
+      - Ancillary Buildings/Arcade/MAPP_Arcade.SC4Model
+      - Ancillary Buildings/Arcade/MAPP_Arcade.SC4Lot
+      - Ancillary Buildings/3D Cinema/MAPP_3DCinemaProp.SC4Desc
+      - Ancillary Buildings/3D Cinema/MAPP_3DCinema.SC4Model
+      - Ancillary Buildings/3D Cinema/MAPP_3DCinema.SC4Lot
+      - Ancillary Buildings/Admin Center/MAPP_AdminCenterProp.SC4Desc
+      - Ancillary Buildings/Admin Center/MAPP_AdminCenter.SC4Model
+      - Ancillary Buildings/Admin Center/MAPP_AdminCenter.SC4Lot
+      - $DOCUMENTS/SimCity 4/Plugins/zz_BSC MML Mod/MAPP_ConstructionSignProp.dat
+      - $DOCUMENTS/SimCity 4/Plugins/zz_BSC MML Mod/MAPP_ConstructionCoasterProp.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/zz_BSC MML Mod/MAPP_ConstructionCoaster.SC4Model
+      - $DOCUMENTS/SimCity 4/Plugins/zz_BSC MML Mod/MAPP_ConstructionCoaster.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_05_2011/9ea96d20d60fae9dc52ac9366efcf37e-mapp_ancillary1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_05_2011/a5481ffffca08a633308484e7a642b2b-mapp_ancillary2.jpg
     lastModified: 2017-05-09T17:20:38Z
     name: Modular Amusement Park Pack Essentials
+    sha256: fafa0a69bca1adf86aa4ad11aa73a91ed89cb4c1c0334c1a49faa71a60f5f102
+    size: 6070000
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2011/thumb-9ea96d20d60fae9dc52ac9366efcf37e-mapp_ancillary1.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 6087460
     url: https://community.simtropolis.com/files/file/17557-modular-amusement-park-pack-essentials/
+    version: "1.0"
   simtropolis/17558-modular-amusement-park-pack-classic-rides:
     authors:
       - aldara6166
     category: 660
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <div><span style="font-size:8pt;">The <abbr title="Modular Amusement Park Pack">MAPP</abbr> - <em><strong>the first official download of 2007</strong></em> - is finally here!!<br><br> Are trips
+      to the local mall, or the local zoo and aquarium the only entertainment that you can provide for your Sims? Have your Sims every wanted for something more to do on a long, summer's weekend than
+      just go to the beach? </span></div>
+
+      <div><span style="font-size:8pt;">Well now you too can provide the fun and entertainment that your Sims so desperately deserve. Introducing the Modular Amusement Park Pack (<abbr title="Modular
+      Amusement Park Pack">MAPP</abbr>) presented by RJM Designs.</span></div>
+
+      <div><span style="font-size:8pt;">This set is made up of amusement park rides, roller coasters, midway entertainment and more. Currently there are a few amusement park BATs available on the
+      STEX, but this pack draws everything together.</span></div>
+
+      <div><span style="font-size:8pt;">So dive right in and create that "dream park" that you have always dreamt of, or re-create your favorite amusement park from the memories of your
+      childhood.</span></div>
+
+      <div><span style="font-size:8pt;">The <abbr title="Modular Amusement Park Pack">MAPP</abbr> . . . making your Sims' entertainment dreams a reality!</span></div>
+
+      <div align="center">
+
+      <strong><em><span style="font-size:8pt;color:#0000FF;">* NOTE - The <abbr title="Modular Amusement Park Pack">MAPP</abbr> uses the ped-malls that are included in Network Addon Mod to tie all of
+      our custom BATs together. See How to build an Amusement Park in the readme file for instructions.</span></em></strong><strong><em><span
+      style="font-size:8pt;color:#0000FF;">* </span></em></strong>
+
+      </div>
+
+      <div style="margin:0in 0in 0pt;" align="center"><strong><em><span style="font-size:8pt;color:#0000FF;"></span></em></strong></div>
+
+      <div style="margin:0in 0in 0pt;"><span style="font-size:8pt;">This pack includes many classic amusement park rides that you would normally associate with any amusement park.  Without the
+      Essentials pack, this pack will not function properly.<br><br>Please delete any and all prior versions of all <abbr title="Modular Amusement Park Pack">MAPP</abbr> lots (including the
+      construction lot) prior to installation to avoid conflicts.<br><br><strong><u>dependencies:</u></strong><strong><u><br></u></strong>  </span></div>
+
+      <div align="center"><table style="width:95%;" cellspacing="3" cellpadding="0" width="95%" border="1"><tbody><tr style="height:14.25pt;"><td
+      style="border-right:#ece9d8;padding-right:1.5pt;border-top:#ece9d8;padding-left:1.5pt;padding-bottom:1.5pt;border-left:#ece9d8;padding-top:1.5pt;border-bottom:#ece9d8;height:14.25pt;background-color:transparent;">            <div
+      style="margin:0in 0in 0pt;"><strong><u><span style="font-size:8pt;">Porkie Props Vol. 1 </span></u></strong></div>            </td>            <td
+      style="border-right:#ece9d8;padding-right:1.5pt;border-top:#ece9d8;padding-left:1.5pt;padding-bottom:1.5pt;border-left:#ece9d8;padding-top:1.5pt;border-bottom:#ece9d8;height:14.25pt;background-color:transparent;">            <div
+      style="margin:0in 0in 0pt;"><span style="font-size:8pt;"><a href="https://www.simtropolis.com/stex/index.cfm?id=11421" rel="external
+      nofollow"><strong>https://www.simtropolis.com/STEX/index.cfm?id=11421</strong></a></span></div>            </td>        </tr><tr style="height:14.25pt;"><td
+      style="border-right:#ece9d8;padding-right:1.5pt;border-top:#ece9d8;padding-left:1.5pt;padding-bottom:1.5pt;border-left:#ece9d8;padding-top:1.5pt;border-bottom:#ece9d8;height:14.25pt;background-color:transparent;">            <div
+      style="margin:0in 0in 0pt;">
+
+      <strong><u><span style="font-size:8pt;"><abbr title="BATT Squad Certification">BSC</abbr> <abbr title="Pegasus">PEG</abbr> Texture Pack Vol. 01 </span></u></strong><strong><u><span
+      style="font-size:8pt;"><br><strong>- or - </strong><br><strong><abbr title="BATT Squad Certification">BSC</abbr> Textures Mega Pack </strong></span></u></strong>
+
+      </div>            </td>            <td style="border-right:#ece9d8;padding-right:1.5pt;border-top:#ece9d8;"></td>
+
+      </tr></tbody></table></div>
+
+      						</body>
+    filename: Setup_MAPP_Classic_Rides.zip
+    files:
+      - MAPP_readme.htm
+      - images/topbarright.gif
+      - images/topbarleft.gif
+      - images/topbar.gif
+      - images/MAPP_Rollercoasters.jpg
+      - images/MAPP_Modern_Rides.jpg
+      - images/MAPP_Classic_Rides.jpg
+      - images/MAPP_Ancillary_Buildings.jpg
+      - images/leftheader.jpg
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/ioSpecial.ini
+      - $PLUGINSDIR/InstallOptions.dll
+      - Rides/Water Park/MAPP_WavePoolProp.SC4Desc
+      - Rides/Water Park/MAPP_WavePool.SC4Model
+      - Rides/Water Park/MAPP_WaterSlideTowerProp.SC4Desc
+      - Rides/Water Park/MAPP_WaterSlideTower.SC4Model
+      - Rides/Water Park/MAPP_WaterPark.SC4Lot
+      - Rides/The Haunted House/MAPP_TheHauntedHouseProp.SC4Desc
+      - Rides/The Haunted House/MAPP_TheHauntedHouse.SC4Model
+      - Rides/The Haunted House/MAPP_TheHauntedHouse.SC4Lot
+      - Rides/Tea Cups Ride/MAPP_TeaCupsRideProp.SC4Desc
+      - Rides/Tea Cups Ride/MAPP_TeaCupsRide.SC4Model
+      - Rides/Tea Cups Ride/MAPP_TeaCupsRide.SC4Lot
+      - Rides/Super Slide/MAPP_SuperSlideProp.SC4Desc
+      - Rides/Super Slide/MAPP_SuperSlide.SC4Model
+      - Rides/Super Slide/MAPP_SuperSlide.SC4Lot
+      - Rides/One Eyed Monster/MAPP_OneEyedMonsterProp.SC4Desc
+      - Rides/One Eyed Monster/MAPP_OneEyedMonster.SC4Model
+      - Rides/One Eyed Monster/MAPP_OneEyedMonster.SC4Lot
+      - Rides/Large Bumper Cars/MAPP_BumperCarsBig_Version2Prop.SC4Desc
+      - Rides/Large Bumper Cars/MAPP_BumperCarsBig_Version2.SC4Model
+      - Rides/Large Bumper Cars/MAPP_BumperCarsBig_Version1Prop.SC4Desc
+      - Rides/Large Bumper Cars/MAPP_BumperCarsBig_Version1.SC4Model
+      - Rides/Large Bumper Cars/MAPP_BumperCarsBig.SC4Lot
+      - Rides/Kiddie Bumper Cars/MAPP_KiddieBumperCarsProp.SC4Desc
+      - Rides/Kiddie Bumper Cars/MAPP_KiddieBumperCars.SC4Model
+      - Rides/Kiddie Bumper Cars/MAPP_KiddieBumperCars.SC4Lot
+      - Rides/Ferris Wheel/MAPP_FerrisWheelProp.SC4Desc
+      - Rides/Ferris Wheel/MAPP_FerrisWheel.SC4Model
+      - Rides/Ferris Wheel/MAPP_FerrisWheel.SC4Lot
+      - Rides/Carousel/MAPP_CarouselProp.SC4Desc
+      - Rides/Carousel/MAPP_CarouselFenceProp.dat
+      - Rides/Carousel/MAPP_Carousel.SC4Model
+      - Rides/Carousel/MAPP_Carousel.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/0024/de33e244078e09448cf950a949cd2900-MAPP_ClassicRides1.jpg
+      - https://www.simtropolis.com/objects/screens/0024/de33e244078e09448cf950a949cd2900-MAPP_ClassicRides2.jpg
     lastModified: 2007-01-01T08:53:17Z
     name: Modular Amusement Park Pack Classic Rides
+    sha256: f040dc91067ea8fb341c6e1730f915adcc3dab89b20af6126314ee9490199c07
+    size: 5236068
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2007/thumb-de33e244078e09448cf950a949cd2900-MAPP_ClassicRides1.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 5253702
     url: https://community.simtropolis.com/files/file/17558-modular-amusement-park-pack-classic-rides/
+    version: "1.0"
   simtropolis/17559-modular-amusement-park-pack-modern-rides:
     authors:
       - aldara6166
     category: 660
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <div><span style="font-size:8pt;">The <abbr title="Modular Amusement Park Pack">MAPP</abbr> - <em><strong>the first official download of 2007</strong></em> - is finally here!!<br><br> Are trips
+      to the local mall, or the local zoo and aquarium the only entertainment that you can provide for your Sims? Have your Sims every wanted for something more to do on a long, summer's weekend than
+      just go to the beach? </span></div>
+
+      <div><span style="font-size:8pt;">Well now you too can provide the fun and entertainment that your Sims so desperately deserve. Introducing the Modular Amusement Park Pack (<abbr title="Modular
+      Amusement Park Pack">MAPP</abbr>) presented by RJM Designs.</span></div>
+
+      <div><span style="font-size:8pt;">This set is made up of amusement park rides, roller coasters, midway entertainment and more. Currently there are a few amusement park BATs available on the
+      STEX, but this pack draws everything together.</span></div>
+
+      <div><span style="font-size:8pt;">So dive right in and create that "dream park" that you have always dreamt of, or re-create your favorite amusement park from the memories of your
+      childhood.</span></div>
+
+      <div><span style="font-size:8pt;">The <abbr title="Modular Amusement Park Pack">MAPP</abbr> . . . making your Sims' entertainment dreams a reality!</span></div>
+
+      <div align="center">
+
+      <strong><em><span style="font-size:8pt;color:#0000FF;">* NOTE - The <abbr title="Modular Amusement Park Pack">MAPP</abbr> uses the ped-malls that are included in Network Addon Mod to tie all of
+      our custom BATs together. See How to build an Amusement Park in the readme file for instructions.</span></em></strong><strong><em><span
+      style="font-size:8pt;color:#0000FF;">* </span></em></strong>
+
+      </div>
+
+      <div style="margin:0in 0in 0pt;" align="center"><strong><em><span style="font-size:8pt;color:#0000FF;"></span></em></strong></div>
+
+      <div style="margin:0in 0in 0pt;"><span style="font-size:8pt;">This pack includes many modern amusement park rides that you would normally associate with most larger amusement parks.  Without the
+      Essentials pack, this pack will not function properly.<br><br>Please delete any and all prior versions of all <abbr title="Modular Amusement Park Pack">MAPP</abbr> lots (including the
+      construction lot) prior to installation to avoid conflicts.<br><br><strong><u>dependencies:</u></strong><strong><u><br></u></strong>  </span></div>
+
+      <div align="center"><table style="width:95%;" cellspacing="3" cellpadding="0" width="95%" border="1"><tbody><tr style="height:14.25pt;"><td
+      style="padding-right:1.5pt;padding-left:1.5pt;border-left-color:#ece9d8;border-bottom-color:#ece9d8;padding-bottom:1.5pt;border-top-color:#ece9d8;padding-top:1.5pt;height:14.25pt;background-color:transparent;border-right-color:#ece9d8;">            <div
+      style="margin:0in 0in 0pt;"><strong><u><span style="font-size:8pt;">Porkie Props Vol. 1 </span></u></strong></div>            </td>            <td
+      style="padding-right:1.5pt;padding-left:1.5pt;border-left-color:#ece9d8;border-bottom-color:#ece9d8;padding-bottom:1.5pt;border-top-color:#ece9d8;padding-top:1.5pt;height:14.25pt;background-color:transparent;border-right-color:#ece9d8;">            <div
+      style="margin:0in 0in 0pt;"><span style="font-size:8pt;"><a href="https://www.simtropolis.com/stex/index.cfm?id=11421" rel="external
+      nofollow"><strong>https://www.simtropolis.com/STEX/index.cfm?id=11421</strong></a></span></div>            </td>        </tr><tr style="height:14.25pt;"><td
+      style="padding-right:1.5pt;padding-left:1.5pt;border-left-color:#ece9d8;border-bottom-color:#ece9d8;padding-bottom:1.5pt;border-top-color:#ece9d8;padding-top:1.5pt;height:14.25pt;background-color:transparent;border-right-color:#ece9d8;">            <div
+      style="margin:0in 0in 0pt;">
+
+      <strong><u><span style="font-size:8pt;"><abbr title="BATT Squad Certification">BSC</abbr> <abbr title="Pegasus">PEG</abbr> Texture Pack Vol. 01 </span></u></strong><strong><u><span
+      style="font-size:8pt;"><br><strong>- or - </strong><br><strong><abbr title="BATT Squad Certification">BSC</abbr> Textures Mega Pack </strong></span></u></strong>
+
+      </div>            </td>            <td></td>
+
+      </tr></tbody></table></div>
+
+      						</body>
+    filename: Setup_MAPP_Modern_Rides.zip
+    files:
+      - MAPP_readme.htm
+      - images/topbarright.gif
+      - images/topbarleft.gif
+      - images/topbar.gif
+      - images/MAPP_Rollercoasters.jpg
+      - images/MAPP_Modern_Rides.jpg
+      - images/MAPP_Classic_Rides.jpg
+      - images/MAPP_Ancillary_Buildings.jpg
+      - images/leftheader.jpg
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/ioSpecial.ini
+      - $PLUGINSDIR/InstallOptions.dll
+      - Rides/The Ring Of Fire/MAPP_TheRingOfFireProp.SC4Desc
+      - Rides/The Ring Of Fire/MAPP_TheRingOfFire.SC4Model
+      - Rides/The Ring Of Fire/MAPP_TheRingOfFire.SC4Lot
+      - Rides/The Ranger/MAPP_TheRangerProp.SC4Desc
+      - Rides/The Ranger/MAPP_TheRanger.SC4Model
+      - Rides/The Ranger/MAPP_TheRanger.SC4Lot
+      - Rides/The Gravitron/MAPP_TheGravitronProp.SC4Desc
+      - Rides/The Gravitron/MAPP_TheGravitron.SC4Model
+      - Rides/The Gravitron/MAPP_TheGravitron.SC4Lot
+      - Rides/The Enterprise/MAPP_TheEnterpriseProp.SC4Desc
+      - Rides/The Enterprise/MAPP_TheEnterprise.SC4Model
+      - Rides/The Enterprise/MAPP_TheEnterprise.SC4Lot
+      - Rides/GoKart Track/MAPP_GoKartTrackProp.SC4Desc
+      - Rides/GoKart Track/MAPP_GoKartTrackLampPostProp.dat
+      - Rides/GoKart Track/MAPP_GoKartTrack.SC4Model
+      - Rides/GoKart Track/MAPP_GoKartTrack.SC4Lot
+      - Rides/Drop Zone/MAPP_DropZoneProp.SC4Desc
+      - Rides/Drop Zone/MAPP_DropZone.SC4Model
+      - Rides/Drop Zone/MAPP_DropZone.SC4Lot
+      - Rides/Disko/MAPP_DiskoProp.SC4Desc
+      - Rides/Disko/MAPP_Disko.SC4Model
+      - Rides/Disko/MAPP_Disko.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/0021/bec1fe8fc6b3193f16bedc6beb0e2910-MAPP_ModernRides1.jpg
+      - https://www.simtropolis.com/objects/screens/0021/bec1fe8fc6b3193f16bedc6beb0e2910-MAPP_ModernRides2.jpg
     lastModified: 2007-01-01T09:04:41Z
     name: Modular Amusement Park Pack Modern Rides
+    sha256: 34be742f861c38b9edcf262f045da152ddf5593e9c256f0dcadbb2403942cacb
+    size: 6028085
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2007/thumb-bec1fe8fc6b3193f16bedc6beb0e2910-MAPP_ModernRides1.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 6045563
     url: https://community.simtropolis.com/files/file/17559-modular-amusement-park-pack-modern-rides/
+    version: "1.0"
   simtropolis/17560-modular-amusement-park-pack-roller-coasters:
     authors:
       - aldara6166
     category: 660
+    dependencies:
+      - simtropolis/11421-jenx-porkie-expanded-porkie-props
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	The <abbr title="Modular Amusement Park Pack">MAPP</abbr> - <em><strong>the first official download of 2007</strong></em> - is finally here!!<br><br>
+      	Are trips to the local mall, or the local zoo and aquarium the only entertainment that you can provide for your Sims? Have your Sims every wanted for something more to do on a long, summer's weekend than just go to the beach?
+      </p>
+
+
+      <p>
+      	<span style="font-size:14px;">Well now you too can provide the fun and entertainment that your Sims so desperately deserve. Introducing the Modular Amusement Park Pack (<abbr title="Modular Amusement Park Pack">MAPP</abbr>) presented by RJM Designs.</span> This set is made up of amusement park rides, roller coasters, midway entertainment and more. Currently there are a few amusement park BATs available on the STEX, but this pack draws everything together
+      </p>
+
+
+      <p>
+      	So dive right in and create that "dream park" that you have always dreamt of, or re-create your favorite amusement park from the memories of your childhood.
+      </p>
+
+
+      <p>
+      	<strong><span style="font-size:16px;">The <abbr title="Modular Amusement Park Pack">MAPP</abbr> . . . making your Sims' entertainment dreams a reality!</span></strong>
+      </p>
+
+
+      <p>
+      	* <span style="color:#2980b9;">NOTE - The <abbr title="Modular Amusement Park Pack">MAPP</abbr> uses the ped-malls that are included in Network Addon Mod to tie all of our custom BATs together. See How to build an Amusement Park in the readme file for instructions</span>*
+      </p>
+
+
+      <p>
+      	*<span style="color:#2980b9;">This pack includes all of the roller coasters that were previously on the STEX and a few new ones. The coasters have be reproduced with the original author's permission and have been completely reworked from the lots on up. Without the Essentials pack, this pack will not function properly.</span>*<br><br><u>Please delete any and all prior versions of all <abbr title="Modular Amusement Park Pack">MAPP</abbr> lots (including the construction lot) prior to installation to avoid conflicts.</u><br><br><u><strong><span style="font-size:16px;">Dependancies:</span></strong></u><br><br><a href="https://community.simtropolis.com/files/file/11421-porkie-props-vol1-european-street-accessories/" rel="">Porkie Props Vol.1</a>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Texture Pack Vol 01</a>
+      </p>
+
+      						</body>
+    filename: Setup_MAPP_Coasters.zip
+    files:
+      - MAPP_readme.htm
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/ioSpecial.ini
+      - $PLUGINSDIR/InstallOptions.dll
+      - images/topbarright.gif
+      - images/topbarleft.gif
+      - images/topbar.gif
+      - images/MAPP_Rollercoasters.jpg
+      - images/MAPP_Modern_Rides.jpg
+      - images/MAPP_Classic_Rides.jpg
+      - images/MAPP_Ancillary_Buildings.jpg
+      - images/leftheader.jpg
+      - Coasters/Wicked Timber/MAPP_WickedTimberProp.SC4Desc
+      - Coasters/Wicked Timber/MAPP_WickedTimber.SC4Model
+      - Coasters/Wicked Timber/MAPP_WickedTimber.SC4Lot
+      - Coasters/Thunderlooper/MAPP_ThunderLooperProp.SC4Desc
+      - Coasters/Thunderlooper/MAPP_ThunderLooper.SC4Model
+      - Coasters/Thunderlooper/MAPP_ThunderLooper.SC4Lot
+      - Coasters/The Viper/MAPP_TheViperProp.SC4Desc
+      - Coasters/The Viper/MAPP_TheViper.SC4Model
+      - Coasters/The Viper/MAPP_TheViper.SC4Lot
+      - Coasters/The Cyclone/MAPP_TheCycloneProp.SC4Desc
+      - Coasters/The Cyclone/MAPP_TheCyclone.SC4Model
+      - Coasters/The Cyclone/MAPP_TheCyclone.SC4Lot
+      - Coasters/Steel Venom/MAPP_SteelVenomProp.SC4Desc
+      - Coasters/Steel Venom/MAPP_SteelVenom.SC4Model
+      - Coasters/Steel Venom/MAPP_SteelVenom.SC4Lot
+      - Coasters/Massasauga/MAPP_MassasaugaProp.SC4Desc
+      - Coasters/Massasauga/MAPP_Massasauga.SC4Model
+      - Coasters/Massasauga/MAPP_Massasauga.SC4Lot
+      - Coasters/Kiddie Coaster/MAPP_KiddieCoasterProp.SC4Desc
+      - Coasters/Kiddie Coaster/MAPP_KiddieCoaster.SC4Model
+      - Coasters/Kiddie Coaster/MAPP_KiddieCoaster.SC4Lot
+      - Coasters/King Cobra/MAPP_KingCobraProp.SC4Desc
+      - Coasters/King Cobra/MAPP_KingCobra.SC4Model
+      - Coasters/King Cobra/MAPP_KingCobra.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_08_2011/1c4683cfbac1506ebb45571c779bf6a4-mapp_rollercoasters1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2011/3e7a8d9cc2af360480e7860ec6f2d1e7-mapp_rollercoasters2.jpg
     lastModified: 2017-05-09T17:16:19Z
     name: Modular Amusement Park Pack Roller Coasters
+    sha256: c04942217207e5f2c8f1baf9771567027ac384c4c2f8a43dd499e5b0618f320b
+    size: 6938055
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2011/thumb-1c4683cfbac1506ebb45571c779bf6a4-mapp_rollercoasters1.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 6955426
     url: https://community.simtropolis.com/files/file/17560-modular-amusement-park-pack-roller-coasters/
+    version: "1.0"
   simtropolis/17583-6-plaza-lots:
     authors:
       - Glenni
@@ -10297,6 +10758,13 @@ assets:
       <body>
                                   
 
+
+
+
+
+
+
+
       							
       <p>
       	<u><em><strong>Ancient Stone Walls:</strong></em></u> This is the second version of the ancient stone walls, the first version are ugly and incomplete. So I made a new version more original, prolix and complete with new parts for a better result. As an added benefit it are very flexible (with the pending) and it have intersections.
@@ -10961,7 +11429,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -11511,7 +11993,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -12672,10 +13168,160 @@ assets:
     authors:
       - rsc204
     category: 660
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <h2>
+      	<font face="Verdana">Intro</font>
+      </h2>
+
+
+      <p>
+      	<font face="Verdana">Far too long in the works, but finally here, is version 2 of my Filler Set.<br>
+      	<br>
+      	Used together, this set of lots can provide a powerful set of tools to deal with the diagonal jaggies problem and help to create more visually pleasing areas. The basic filler lots are texture-based and intended to transition cleanly between Sidewalks, Grass &amp; Concrete textures. Sometimes though, we want to fill half a tile or an unsightly gap, which such fillers alone can't handle. Due to game limitations, a lot can either be fully transparent or completely show a texture. If you try to use partial transparency, the water bug appears, which is both ugly and annoying. Overhanging Lots can help here, because they do not use textures, but models that display them. So we can use transparency and/or extend textures beyond the boundaries of the lots they are upon. The main downside is that such models aren't very slope tolerant.<br>
+      	<br>
+      	During install, you can choose which types, if any, of overhanging fillers to install. Note that different textures include different pieces, I've tried to balance flexibility whilst being mindful of the number of menu items. Each sidewalk variant has 8 lots, grass comes with 5 and all others just 2. But, I think for most users that will cover the bulk of situations you will really need. Find all installed lots at the top of your Parks Menu. The Extender options are as follows:</font>
+      </p>
+
+
+      <p>
+      	<img alt="DFS_3.jpg.ec1bd2bf5a3d93dcbd225cb4a8b73b" src="https://www.simtropolis.com/objects/screens/monthly_2019_02/DFS_3.jpg.ec1bd2bf5a3d93dcbd225cb4a8b73b1f.jpg" ><br>
+      	<br>
+      	<font face="Verdana">Lotters/Tinkerers will find 156 props to play with, 13 for each of the 12 supported textures. So if you are willing to make some lots, it's possible to have every prop type for every network. But that wasn't something I felt I wanted to do for various reasons. The complete package runs to 60-ish lots already too, you have to stop somewhere.</font><br>
+      	<br>
+      	<font face="Verdana">Included are the following options, which can be selected from the installer of this download:</font>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<font face="Verdana"><b>Diagonal Filler Lots</b></font><br>
+      		<font face="Verdana">Like the v1 release, but with many updates/tweaks and a few new lots. All lots are sidewalk adaptable and supported by <abbr title="Terrain Grass NAM">TGN</abbr>.</font>
+      	</li>
+      	<li>
+      		<font face="Verdana"><b>Overhanging Filler Lots</b></font><br>
+      		<font face="Verdana">Using S3D / RTK0 Props, here is a very flexible set of Lots and Props, which unlike traditional <abbr title="Building Architect Tool">BAT</abbr> models, are not fixed in terms of the textures upon them. AutoMagically™ certified, most of these props will simply adapt to your installed texture choices. Some will require overriding included textures to adapt, but this is still a new level of flexibility for such items. Lots for the following networks are included:</font>
+      		<ul>
+      			<li>
+      				<font face="Verdana">Sidewalks (all wealths)</font>
+      			</li>
+      			<li>
+      				<font face="Verdana">Rural / Dirt (used for Rail/I-AG zoning)</font>
+      			</li>
+      			<li>
+      				<font face="Verdana">Grass (all wealths)</font>
+      			</li>
+      			<li>
+      				<font face="Verdana">Concrete (I-M &amp; I-HT)</font>
+      			</li>
+      			<li>
+      				<font face="Verdana">Pedmalls (Cobble, Red Brick &amp; Sandstone)</font>
+      			</li>
+      		</ul>
+      	</li>
+      	<li>
+      		<font face="Verdana"><b>Overrides for Paeng's Mods</b></font><br>
+      		<font face="Verdana">Extenders for Paeng's Parks, Bikepaths and overhanging models made by Krashspeed, which were used in various releases by Paeng. See <a href="https://community.simtropolis.com/forums/topic/64116-mgb-lot-and-mod-shack/?do=findComment&amp;comment=1708989" rel="">this post</a> for a more complete explanation and links to those files. Installing these will convert existing and new lots from the fixed models to my adaptable set instead. Allowing sidewalks, grass and other elements to be customised like never before.</font><br>
+      		<img alt="DFS_5.jpg.aa2519ca5d345509e8661e5f2f410012.jpg" src="https://www.simtropolis.com/objects/screens/monthly_2019_02/DFS_5.jpg.aa2519ca5d345509e8661e5f2f410012.jpg" style="width:600px;height:auto;" >
+      	</li>
+      </ul>
+
+
+      <h2>
+      	<font face="Verdana">Install</font>
+      </h2>
+
+
+      <p>
+      	<font face="Verdana">Run the installer package after downloading it. From there you can select which parts of the mod you wish to install. Note that it is built with NSIS, so can be opened using 7zip if you prefer to manually install everything.</font>
+      </p>
+
+
+      <h2>
+      	<font face="Verdana">Dependencies</font>
+      </h2>
+
+
+      <p>
+      	<font face="Verdana">There is only one main dependency, <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=750" rel="external nofollow"><abbr title="SimForum BAT Team">SFBT</abbr> Essentials</a>. Only the file "<font color="#FF0000">SFBT_ArkenbergeJoe_Texturen.dat</font>" from this package is actually required. <abbr title="Terrain Grass NAM">TGN</abbr> users will not need this file either, provided the "Diagonal Filler Override" option was selected when installing it.</font>
+      </p>
+
+
+      <p align="left">
+      	<font face="Verdana">Additionally if you use <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1504" rel="external nofollow">MAS71's Walls Pack 2</a> and have the file"<font color="#FF0000">01_Mas71-Walls2_Essentials-090924.dat</font>" from that pack installed. You will then see an optional helper piece when placing some fillers, designed to make orienting/placement easier.</font>
+      </p>
+
+
+      <h2>
+      	<font face="Verdana">Support</font>
+      </h2>
+
+
+      <p>
+      	<font face="Verdana">Problems / Comments? Please visit my development thread, <span>MGB Lot and Mod Shack</span>, here on Simtropolis:</font>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed7995824382" scrolling="no"
+      src="https://community.simtropolis.com/topic/64116-mgb-lot-and-mod-shack/?do=embed" style="height:324px;max-width:500px;"></iframe>
+
+      						</body>
+    filename: Filler Set 2 Setup.exe
+    files:
+      - MGB S3D Props.dat
+      - MGB Overhanging Filler Lots Sidewalk $.dat
+      - MGB Overhanging Filler Lots Sidewalk $$.dat
+      - MGB Overhanging Filler Lots Sidewalk $$$.dat
+      - MGB Overhanging Filler Lots Rural.dat
+      - MGB Overhanging Filler Lots Pedmalls.dat
+      - MGB Overhanging Filler Lots Grass $.dat
+      - MGB Overhanging Filler Lots Grass $$.dat
+      - MGB Overhanging Filler Lots Grass $$$.dat
+      - MGB Overhanging Filler Lots Concrete.dat
+      - MGB Filler Set.dat
+      - $PLUGINSDIR/System.dll
+      - $PLUGINSDIR/nsDialogs.dll
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/modern-header.bmp
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/MGB Filler Set Readme.htm
+      - $DOCUMENTS/SimCity 4/Plugins/z____MGB Mods/V - Overrides/Paeng-KS SandstoneProp Overrides.dat
+      - $DOCUMENTS/SimCity 4/Plugins/z____MGB Mods/V - Overrides/Paeng Park Extenders Overrides.dat
+      - $DOCUMENTS/SimCity 4/Plugins/z____MGB Mods/V - Overrides/Paeng Bikepath Extender Overrides.dat
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/DFS_5.jpg
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/DFS_4.jpg
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/DFS_3.jpg
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/DFS_2.jpg
+      - $DOCUMENTS/SimCity 4/LEX_Downloads/MGB Mods/_images/DFS_1.jpg
+    images:
+      - https://www.simtropolis.com/objects/attachments/monthly_2019_02/SandstoneBooster.jpg.9769f346e6c322bba6a2703e529ff548.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_03_2015/2b7cda864a79ad816295611fe5e21d10-mgb-diag-fillers.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_02/DFS_1.jpg.f504b5c529d3ffd8e91dd295ffd5577b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_02/DFS_3.jpg.ec1bd2bf5a3d93dcbd225cb4a8b73b1f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_02/DFS_5.jpg.aa2519ca5d345509e8661e5f2f410012.jpg
     lastModified: 2019-07-06T11:15:57Z
     name: MGB - Diagonal Filler Set
+    sha256: e2537a8359bd7d49e568f09d539c7c69016f920d5a000d219fac8967775438ce
+    size: 1235952
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_02/DFS_1.thumb.jpg.494007598f816c3037f8180f7e337644.jpg
+    timestamp: 2024-08-15T09:33:52.214Z
     url: https://community.simtropolis.com/files/file/29797-mgb-diagonal-filler-set/
+    version: "2.2"
   simtropolis/29851-mgb-london-eye-parks-205-relot:
     authors:
       - rsc204
@@ -13131,7 +13777,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -15607,7 +16267,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -15710,6 +16384,13 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
       <p>
       	One of the nicer things present in the gameplay loop of Cities: Skylines that was never <em>truly</em> around in the entire SimCity series is the monuments that you can build as an end-goal prize after completing a lot of challenges. I'm hoping to bring at least a little bit of that to SimCity 4 by making landmarks with larger goals to unlock them.
@@ -15770,7 +16451,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -15976,6 +16671,13 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
 
 
 
@@ -18237,4 +18939,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-18bf807f2f09de4980b386687e38a613-Nice%20Park%20Day.jpg
     url: https://community.simtropolis.com/files/file/998-large-park/
 
-timestamp: 2024-08-13T14:21:41.352Z
+timestamp: 2024-08-19T05:43:53.512Z

@@ -4221,6 +4221,14 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
       <p>
       	Bosham Church, Established AD 850 and featured in the Bayeux tapestry depicting the visit of Harold II to the church.
@@ -12286,7 +12294,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -12547,7 +12571,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -14406,10 +14446,131 @@ assets:
     authors:
       - "11241036"
     category: 600
+    dependencies:
+      - simtropolis/28443-the-italian-collection
+      - simtropolis/31346-various-lot-foundations-and-retaining-walls
+      - simtropolis/33651-11241036-textures
+      - simtropolis/28675-aqua_textures_01
+      - simtropolis/25888-murimk-props-vol02-mixed-props
+    description: >-
+      <body>
+                                  
+
+
+
+
+
+
+      							
+      <p>
+      	<strong>Short Description:</strong><br>
+      	This is some sort of administration building (its Italian name is “direzione compartimentale”; I couldn’t find any other translation as “compartmental management”, Google, however, pointed me to some Italian sites, leading me to the conclusion that a direzione compartimentale rules some matters such as railway transport, tourism, trade etc. on a regional scale) that I found while looking through the Italian Collection by simcity4ever88. Since it realls looks like an administration building to me, I relocated it into the Reward menu, it is, however, available anytime without the need to meet any requirements.<br>
+      	For further information, please refer to the Readme in the download.<br>
+      	<u>Available languages</u>: English, German
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Dependencies:</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>The Italian Collection:</strong> This plugin contains all building graphics.<br>
+      	Link: <a href="https://community.simtropolis.com/files/file/28443-the-italian-collection/" rel="">https://community.simtropolis.com/files/file/28443-the-italian-collection/</a>
+      </p>
+
+
+      <p>
+      	<u>How to properly install the Italian Collection:</u><br>
+      	Make sure to think twice before just tossing all files coming with the Italian Collection into your Plugins folder. You may obtain hundreds of lots in your game menu that you cannot (or don’t want to) make use of them; and some of them are growables that you can’t control. Please take yourself time to read these instructions.<br>
+      	Step 1: Download the Italian Collection and unpack all files; you may want to check if you have installed the full v2.2, and if not, download the update.<br>
+      	Step 2: Look into all subfolders of the Italian Collection and decide for yourself if you want to keep the buildings/lots you are getting – I’m literally talking about more than 1,000 lots! If not, just remove the corresponding files with the file extension .SC4Lot. You can remove or keep all of these files as it fits you best, this won’t affect the functionality of my plugin. You only need to keep all files with the file extension .dat, .SC4Model, and .SC4Desc.
+      </p>
+
+
+      <p>
+      	<strong><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Flora Pack:</strong> contain some mayor mode ploppable trees.
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<strong>Various prop/texture packages:</strong> These just contain props, retaining walls, or textures and no lots.
+      </p>
+
+
+      <ul>
+      	<li>
+      		Various Lot Foundations and Retaining Walls: <a href="https://community.simtropolis.com/files/file/31346-various-lot-foundations-and-retaining-walls/" rel="">https://community.simtropolis.com/files/file/31346-various-lot-foundations-and-retaining-walls/</a>
+      	</li>
+      	<li>
+      		11241036 Textures: <a href="https://community.simtropolis.com/files/file/33651-11241036-textures/" rel="">https://community.simtropolis.com/files/file/33651-11241036-textures/</a>
+      	</li>
+      	<li>
+      		Aqua Textures 1: <a href="https://community.simtropolis.com/files/file/28675-aqua_textures_01/" rel="">https://community.simtropolis.com/files/file/28675-aqua_textures_01/</a>
+      	</li>
+      	<li>
+      		<abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack: <a href="https://sc4evermore.com/index.php/downloads/download/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://sc4evermore.com/index.php/downloads/download/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      	</li>
+      	<li>
+      		Murimk Props Vol02: <a href="https://community.simtropolis.com/files/file/25888-murimk-props-vol02/" rel="">https://community.simtropolis.com/files/file/25888-murimk-props-vol02/</a>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Installation:</strong><br>
+      	Please move or copy all existing files (except the Readme files) into the Plugins folder of your edition of SimCity 4. To uninstall this plugin, please bulldoze all instances of these lots in your cities and then remove all files coming with this plugin from your Plugins folder.
+      </p>
+
+
+      <p>
+      	<strong>Compatibility:</strong><br>
+      	This plugin should be compatible with all versions of SimCity 4. If not, please feel free to tell me.
+      </p>
+
+
+      <p>
+      	<strong>Credits:</strong><br>
+      	<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/579262-simcity4ever88/?do=hovercard" data-mentionid="579262" href="https://community.simtropolis.com/profile/579262-simcity4ever88/" rel="">@simcity4ever88</a> for creating these buildings in the first place.
+      </p>
+
+
+      <p>
+      	<strong>Support:</strong>
+      </p>
+
+
+      <p>
+      	Please feel free to post issues, bug reports, and suggestions in this thread:
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed9800267695" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed" style="height:208px;max-width:502px;"></iframe>
+
+      						</body>
+    filename: Direzione Compartimentale.zip
+    files:
+      - IC_Direzione Compartimentale.png
+      - IC_Direzione Compartimentale.dat
+      - Dokumentation_Deutsch.pdf
+      - Documentation_English.pdf
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_08/5f2f3d66c62a6_IC_DirezioneCompartimentale.png.65137f7c9d10894c528ce5c8c1df95e3.png
     lastModified: 2024-05-14T03:52:36Z
     name: "Italian Collection Relots: Direzione Compartimentale"
+    sha256: 2c57de8c78a48cacbad916e852c47d36eab02aa2bf34883fd56d82462e09fb92
+    size: 903338
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_08/5f2f3df20ad6c_IC_DirezioneCompartimentale.thumb.png.48400d335e52a9204ec6f557fba10907.png
+    timestamp: 2024-08-15T09:33:52.214Z
+    uncompressed: 927923
     url: https://community.simtropolis.com/files/file/33753-italian-collection-relots-direzione-compartimentale/
+    version: 1a
   simtropolis/33764-afc-urgent-care:
     authors:
       - RRetail
@@ -15518,18 +15679,343 @@ assets:
     authors:
       - "11241036"
     category: 600
+    dependencies:
+      - simtropolis/11935-bsc-farm-fields-sg-vol-02
+      - simtropolis/33651-11241036-textures
+      - simtropolis/26080-simpeg-agricultural-mod-spam
+      - simtropolis/26079-peg-spam-super-resource-pack
+      - simtropolis/33621-wmp-mega-props-vol-01-misc-general-props
+      - simtropolis/33621-wmp-mega-props-vol-01-misc-general-props
+      - simtropolis/28639-bnl-essentials
+      - simtropolis/21220-sunflower-field
+      - simtropolis/36142-submenus-dll
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<span style="color:#2980b9;"><strong>Description:</strong></span>
+      </p>
+
+
+      <p>
+      	This is a small set of community gardens, working as a supplement to the default Maxis community gardens, for those mayors that want their sims to grow their own food. These lots come in 4 sizes, from 1x1 to 2x2, and provide a small park effect, as well as a small farming demand cap relief, while charging only low monthly cost.
+      </p>
+
+
+      <p>
+      	For further information and lot statistics, please refer to the Readme.
+      </p>
+
+
+      <p>
+      	<strong>Available languages:</strong> English and German
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Dependencies</strong></span>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="BATT Squad Certification">BSC</abbr> Farm Fields SG Vol 02: </strong><a href="https://community.simtropolis.com/files/file/11935-bsc-farm-fields-sg-vol-02/" rel="">https://community.simtropolis.com/files/file/11935-bsc-farm-fields-sg-vol-02/</a>
+      </p>
+
+
+      <p>
+      	<strong>11241036 Textures <span style="color:#c0392b;">Version 3 or higher:</span> </strong>If you have downloaded the 11241036 Textures before May 11th, 2024, please download and install them again. You can just overwrite previous versions with the new version.
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/33651-11241036-textures/" rel="">https://community.simtropolis.com/files/file/33651-11241036-textures/</a>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="SimPeg Agricultural Mod">SimPeg Agricultural Mod "SPAM" </abbr></strong>(either full mod or Super Resource Pack):
+      </p>
+
+
+      <p>
+      	Full Mod: <a href="https://community.simtropolis.com/files/file/26080-simpeg-agricultural-mod-spam/" rel="">https://community.simtropolis.com/files/file/26080-simpeg-agricultural-mod-spam/</a>
+      </p>
+
+
+      <p>
+      	Super Resource Pack: <a href="https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/" rel="">https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/</a>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack <span style="color:#c0392b;">Version 8 or higher</span>: </strong><a href="https://sc4evermore.com/index.php/downloads/download/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://sc4evermore.com/index.php/downloads/download/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	<em>You need the following files:</em>
+      </p>
+
+
+      <p>
+      	<em><abbr title="BATT Squad Certification">BSC</abbr> Textures Vol 01.dat</em>
+      </p>
+
+
+      <p>
+      	<em>BSC_TexturePack_Cycledogg_V 01.dat</em>
+      </p>
+
+
+      <p>
+      	<em><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props – Misc Vol02.dat</em>
+      </p>
+
+
+      <p>
+      	<em><abbr title="BATT Squad Certification">BSC</abbr> Mega Props – CP Vol02.dat</em>
+      </p>
+
+
+      <p>
+      	<em><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props – MJB Vol01.dat</em>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="WorkingMan Productions">WMP</abbr> Mega Props vol. 01 - Misc General Props: </strong><a href="https://community.simtropolis.com/files/file/33621-wmp-mega-props-vol-01-misc-general-props/" rel="">https://community.simtropolis.com/files/file/33621-<abbr title="WorkingMan Productions">wmp</abbr>-mega-props-vol-01-misc-general-props/</a>
+      </p>
+
+
+      <p>
+      	<strong>BNL Essentials <span style="color:#c0392b;">and its subsequent dependencies: </span></strong><a href="https://community.simtropolis.com/files/file/28639-bnl-essentials/" rel="">https://community.simtropolis.com/files/file/28639-bnl-essentials/</a>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Flora Pack: </strong><a href="https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<em>You need the following parts: Common Spruces</em>
+      </p>
+
+
+      <p>
+      	<strong>Sunflower Field: </strong><a href="https://community.simtropolis.com/files/file/21220-sunflower-field/" rel="">https://community.simtropolis.com/files/file/21220-sunflower-field/</a>
+      </p>
+
+
+      <p>
+      	<em>You only need the .SC4Model and .SC4Desc files.</em>
+      </p>
+
+
+      <p>
+      	<strong>Maxis Castle Set </strong>(direct download link): <a href="https://community.simtropolis.com/library/maxis/sc4/buildings/Longfellow_Castle.zip" rel="">https://community.simtropolis.com/library/maxis/sc4/buildings/Longfellow_Castle.zip</a>
+      </p>
+
+
+      <p>
+      	 
+      	</p>
+      <p>
+      		<span style="color:#c0392b;"><strong>Special notes:</strong></span>
+      	</p>
+
+
+      <p>
+      	<strong>This plugin contains seasonal and semi-seasonal props. </strong>They may not always show up right after plopping. Please let the game run for a few in-game months, and they will appear sooner or later.
+      </p>
+
+
+      <p>
+      	<strong>This plugin has been optimized for usage with memo’s Submenus DLL mod.</strong> This means that users who have downloaded this mod will find this plugin being packed into its own submenu (make sure to read the installation instructions below). Users who don’t use it will simply find it in their park menu, somewhere in the center. The submenu icon looks like this (only one of the 4 circles is visible at a time):
+      </p>
+
+
+      <p>
+      	<img alt="Icon_CG_Submenu.thumb.png.ac068eaec43b7f" class="ipsImage ipsImage_thumbnailed" height="44" src="https://www.simtropolis.com/objects/screens/monthly_2024_05/Icon_CG_Submenu.thumb.png.ac068eaec43b7fd77ddfe937d18a241c.png" width="176" >
+      </p>
+
+
+      <p>
+      	You may want to download memo’s Submenus DLL mod here: <a href="https://community.simtropolis.com/files/file/36142-submenus-dll/" rel="">https://community.simtropolis.com/files/file/36142-submenus-dll/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Installation:</strong></span>
+      </p>
+
+
+      <p>
+      	Step 1: To install the lots themselves, please put the file Community Gardens.dat into your Plugins folder.
+      </p>
+
+
+      <p>
+      	Step 2 (optional): To allow the submenu button to show up, please <u>either</u> put the file <em>CG_Submenu Community Gardens.dat</em> <u>or</u> the file <em>CG_Submenu Park.dat</em> into your Plugins folder (do not install both files). The first one will make the community garden submenu show up under memo’s own Community Gardens submenu, the latter one will simply put it into your Park menu.
+      </p>
+
+
+      <p>
+      	To uninstall this plugin, please remove all instances of this plugin from your cities and then remove all files coming with it.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Compatibility:</strong></span>
+      </p>
+
+
+      <p>
+      	This plugin is only compatible with SC4 Deluxe or SC4 with the Rush Hour Expansion.
+      </p>
+
+      						</body>
+    filename: Community Gardens.zip
+    files:
+      - Community Gardens_Readme.pdf
+      - Community Gardens.dat
+      - CG_Submenu Park.dat
+      - CG_Submenu Community Gardens.dat
+      - CG_Scr.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/CG_Scr.jpg.3dc07c1f7c103e42c75a59d52b82cf8e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/Icon_CG_Submenu.png.3b8b1d7ee92435a55d29c1369d3865ae.png
     lastModified: 2024-05-16T12:07:03Z
     name: Community Gardens
+    sha256: 8c31dceabe2d0eb8f49f87b0d798c5d8bf74de18d97d100e5ad87c16b9480b12
+    size: 1476996
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/CG_Scr.thumb.jpg.df3abc6f591d6fec367144c5af9b7850.jpg
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 1529170
     url: https://community.simtropolis.com/files/file/36243-community-gardens/
+    version: 1a
   simtropolis/36255-10-villas-low-wealth:
     authors:
       - davide1983it
     category: 600
+    dependencies:
+      - simtropolis/34972-davide-prop-v1
+      - simtropolis/34720-agc-environment-dlc
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<br>
+      	Here a little set of 10 Villa for Low Wealth $
+      </p>
+
+
+      <p>
+      	Vila Avondale<br>
+      	Villa Scottsdale<br>
+      	Villa Duluth<br>
+      	Villa Elmwood<br>
+      	Villa Catalna<br>
+      	Villa Bethel<br>
+      	Villa Lynwood<br>
+      	Villa stanton<br>
+      	Villa Irving<br>
+      	Villa Wilmington
+      </p>
+
+
+      <p>
+      	Depedencie<br>
+      	<a href="https://community.simtropolis.com/files/file/34972-davide-prop-v1/" rel="">https://community.simtropolis.com/files/file/34972-davide-prop-v1/</a><br>
+      	<a href="https://community.simtropolis.com/files/file/34720-agc-environment-dlc/" rel="">https://community.simtropolis.com/files/file/34720-agc-environment-dlc/</a>
+      </p>
+
+      						</body>
+    filename: set 10 villa $.rar
+    files:
+      - Davide1983it - Villa Wilmington.SC4Model
+      - Davide1983it - Villa Wilmington.SC4Lot
+      - Davide1983it - Villa Wilmington.SC4Desc
+      - Davide1983it - Villa Stanton.SC4Model
+      - Davide1983it - Villa Stanton.SC4Lot
+      - Davide1983it - Villa Stanton.SC4Desc
+      - Davide1983it - Villa Scottsdale.SC4Model
+      - Davide1983it - Villa Scottsdale.SC4Lot
+      - Davide1983it - Villa Scottsdale.SC4Desc
+      - Davide1983it - Villa Lynwood.SC4Model
+      - Davide1983it - Villa Lynwood.SC4Lot
+      - Davide1983it - Villa Lynwood.SC4Desc
+      - Davide1983it - Villa Irving.SC4Model
+      - Davide1983it - Villa Irving.SC4Lot
+      - Davide1983it - Villa Irving.SC4Desc
+      - Davide1983it - Villa Elmwood.SC4Model
+      - Davide1983it - Villa Elmwood.SC4Lot
+      - Davide1983it - Villa Elmwood.SC4Desc
+      - Davide1983it - Villa Duluth.SC4Model
+      - Davide1983it - Villa Duluth.SC4Lot
+      - Davide1983it - Villa Duluth.SC4Desc
+      - Davide1983it - Villa Catalina.SC4Model
+      - Davide1983it - Villa Catalina.SC4Lot
+      - Davide1983it - Villa Catalina.SC4Desc
+      - Davide1983it - Villa Bethel.SC4Model
+      - Davide1983it - Villa Bethel.SC4Lot
+      - Davide1983it - Villa Bethel.SC4Desc
+      - Davide1983it - Villa Avondale.SC4Model
+      - Davide1983it - Villa Avondale.SC4Lot
+      - Davide1983it - Villa Avondale.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/6648be0359446_10villaset.png.dee2eb53cbb1feccbebad70d041ce6e1.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/6648be3c133cf_10villaset(2).png.4ee94a03643b1dd965f4320f70d305ca.png
     lastModified: 2024-05-18T14:42:30Z
     name: 10 Villas Low Wealth
+    sha256: 53cebe02852b55e3503b7cd06c1abf7e79b69f8031510ecd0807f406c13ef4cd
+    size: 2880926
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/6648be531b0d2_10villaset.thumb.png.db3b6de8e2803fece04df0f7943aafd1.png
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 3279752
     url: https://community.simtropolis.com/files/file/36255-10-villas-low-wealth/
+    version: 1.0.0
   simtropolis/36259-agc-a-frame-houses:
     authors:
       - Barroco Hispano
@@ -15563,7 +16049,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -15744,19 +16246,56 @@ assets:
     authors:
       - leonv93
     category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	Modular medical center contains 3 separate lots. No dependencies. 
+      </p>
+
+      						</body>
+    filename: Sim Medical Center.zip
+    files:
+      - Sim Medical Center/sgh15-0x5ad0e817_0x732c7d7a_0x500000.SC4Model
+      - Sim Medical Center/SGH-0x6534284a-0x732c7d7a-0x735c01c2.SC4Desc
+      - Sim Medical Center/OldBuilding_535bf9bc.SC4Lot
+      - Sim Medical Center/och-0x6534284a-0x732c7d7a-0x335bf693.SC4Desc
+      - Sim Medical Center/och-0x5ad0e817_0x732c7d7a_0x450000.SC4Model
+      - Sim Medical Center/Main Building_935c03e8.SC4Lot
+      - Sim Medical Center/AP4-0x6534284a-0x732c7d7a-0x935c0462.SC4Desc
+      - Sim Medical Center/AP4-0x5ad0e817_0x13556a1a_0x30000.SC4Model
+      - Sim Medical Center/AdminBuilding_935c054c.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/66501fab526a5_Regopolis-Sep.29901716526650.png.85ad3b86ba1e20417407b60d33766a11.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/66501fae4fc4e_Regopolis-Sep.29901716526606.png.3448388850af7b767b79d0345e78ba30.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/66501fb14796b_Regopolis-Sep.29901716526596.png.43c7ccdc02b5524a7cb9e9a2738883ec.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/66501fb44c1c4_Regopolis-Aug.7901716526549.png.6051e630c54d971d238ede86566340f2.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/66501fb737746_Regopolis-Jul.25901716526535.png.7332daeaed9f1b5b5e6d9bd901bfa6fc.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/66501fb9f19a3_Regopolis-Oct.5891716526498.png.9e1a80103e8cb39a1505dd057ab6a847.png
     lastModified: 2024-05-24T05:06:44Z
     name: Sim Medical Center
+    sha256: 5661ccbfc28e23702acc2af222c3c5a896250cf443fd63964ea096d1fa0416ef
+    size: 2184240
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/6650205f842ee_Regopolis-Sep.29901716526650.thumb.png.06c8533cc5686a0a42a901ea04ae6c57.png
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 2640990
     url: https://community.simtropolis.com/files/file/36262-sim-medical-center/
+    version: 1.0.0
   simtropolis/36267-large-church:
-    authors:
-      - leonv93
-    category: 600
-    lastModified: 2024-05-27T15:04:01Z
-    name: Large Church
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/6654a0de18966_Regopolis-Aug.111111716743481.thumb.png.bb7bcbe85dd79e5994af7d536243cacb.png
-    url: https://community.simtropolis.com/files/file/36267-large-church/
-  simtropolis/36268-cathedral:
     authors:
       - leonv93
     category: 600
@@ -15771,46 +16310,49 @@ assets:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       							
 
 
 
 
+      							
+      <p>
+      	Landmark Lot; large gothic church
+      </p>
 
+      						</body>
+    filename: Church1.zip
+    files:
+      - Church1/Vetnor Ave. Parish_735f58f4.SC4Lot
+      - Church1/GC4-0x6534284a-0x732c7d7a-0x335f5615.SC4Desc
+      - Church1/GC4-0x5ad0e817_0x7358b741_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/6654a032c56ca_Regopolis-Aug.111111716743481.png.32aa217938e512de6a354971244cbbe5.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/6654a0358889f_Regopolis-Aug.111111716743473.png.fb4783f2680667fdff298720ebaa2e7b.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/6654a04d5111e_Regopolis-Aug.31291716821192.png.f44a1927b37da1121247e32f9cfabebf.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_05/6654a050ad2ff_Regopolis-Aug.31291716821184.png.07de1e06933698d1f8bdcc45122440d2.png
+    lastModified: 2024-05-27T15:04:01Z
+    name: Large Church
+    sha256: 2a31db55e3cbee9985e75f69c3fb531904ce886a0ddb8f35b44251d9104fef37
+    size: 706952
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/6654a0de18966_Regopolis-Aug.111111716743481.thumb.png.bb7bcbe85dd79e5994af7d536243cacb.png
+    timestamp: 2024-08-15T14:29:31.994Z
+    uncompressed: 857393
+    url: https://community.simtropolis.com/files/file/36267-large-church/
+    version: 1.0.0
+  simtropolis/36268-cathedral:
+    authors:
+      - leonv93
+    category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      							
 
       							
       <p>
@@ -15818,38 +16360,24 @@ assets:
       </p>
 
       						</body>
+    filename: Gothic Cathedral.zip
+    files:
+      - Gothic Cathedral/Cathedral-0x6534284a-0x732c7d7a-0xd3cbd483.SC4Desc
+      - Gothic Cathedral/Cathedral_d3cbd864.SC4Lot
+      - Gothic Cathedral/gothica3-0x5ad0e817_0x93c5285a_0x30000.SC4Model
     images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f2d2f0994_Regopolis-Dec.141301717888542.png.63b73cf216af2e66773f4a1f7c5bbff7.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f2d4cc528_Regopolis-Dec.141301717888530.png.75a23a18acbd9db250f90ab13acd3abd.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f2d68b5e9_Regopolis-Dec.141301717888523.png.2ee26b0f587b4df339d666ccc2224239.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f2ecef7c2_Regopolis-Mar.111311717888791.png.4512e9306eed64787818dcbd7dbce663.png
-    lastModified: 2024-06-09T00:10:46Z
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c09e0449a8e_NewCity-Feb.17001723898885.png.1d89c3487f92451fa04c03083dd0f623.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c09e09b3598_NewCity-Jan.7001723777616.png.238b0c82cd6f1742ce2564c4d8bf156f.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c09e0b15927_NewCity-Jan.7001723846317.png.2e7f8c8a39ee3557b1cee26e5c51cba6.png
+    lastModified: 2024-08-17T12:57:12Z
     name: Cathedral
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/6664f304c45dc_Regopolis-Dec.141301717888523.thumb.png.d776e6e5d7c63cb67073fcab2982a15f.png
-    timestamp: 2024-07-24T12:13:33.510Z
+    sha256: cf231d1a12335d634d6d2e5ae101aeb43ddf22be38f07791161c9621d0f7f281
+    size: 1178120
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/66c09e2756f24_NewCity-Feb.17001723898885.thumb.png.29303821d92dd4ca52e85a23f7e5140d.png
+    timestamp: 2024-08-19T05:43:53.512Z
+    uncompressed: 1323976
     url: https://community.simtropolis.com/files/file/36268-cathedral/
-    variants:
-      "201657":
-        filename: Cathedral1.zip
-        files:
-          - Cathedral1/GoCa3-0x6534284a-0x732c7d7a-0x735fe667.SC4Desc
-          - Cathedral1/GoCa3-0x5ad0e817_0x335942f4_0x30000.SC4Model
-          - Cathedral1/cathedral_935fd874.SC4Lot
-        sha256: c5b6fa441209440d5c305bc32edf652f89633d0ba3fe5db37fc9c30cd79af99f
-        size: 1218500
-        uncompressed: 1489009
-        variantId: cathedral1
-      "201658":
-        filename: Sim Cathedral 2.0.zip
-        files:
-          - Sim Cathedral 2.0/Sim Cathedral_7370d056.SC4Lot
-          - Sim Cathedral 2.0/Sim Cathedral-0x6534284a-0x732c7d7a-0x5370ce49.SC4Desc
-          - Sim Cathedral 2.0/GCV3-0x5ad0e817_0xb36a09f2_0x30000.SC4Model
-        sha256: 39e1636c3cfb40eafe87ac3703df48e88ea13c444b6718c85f853049b2a5a1cb
-        size: 2531486
-        uncompressed: 2865715
-        variantId: sim-cathedral-2
-    version: 1.1.0
+    version: "1.2"
   simtropolis/36279-agc-fishing-vessel-g-01:
     authors:
       - Barroco Hispano
@@ -15883,7 +16411,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -16036,7 +16580,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -16166,7 +16726,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -16298,7 +16874,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -16448,7 +17040,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -16549,7 +17157,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -16768,7 +17392,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -16899,7 +17539,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -17060,7 +17716,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -17138,7 +17810,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -17317,7 +18005,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -17412,7 +18116,23 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
 
 
 
@@ -17580,6 +18300,14 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
+
 
 
 
@@ -17917,6 +18645,14 @@ assets:
       <body>
                                   
 
+
+
+
+
+
+
+
+
       							
       <p style="text-align:justify;">
       	<span style="font-size:16px;">Hello friends! I bring you a new package of add-ons for your cities. This time it is about typical buildings from Spanish cities.</span>
@@ -17965,6 +18701,82 @@ assets:
     timestamp: 2024-08-13T13:54:12.506Z
     uncompressed: 3161580
     url: https://community.simtropolis.com/files/file/36392-spanish-buildings-pack-1/
+    version: 1.0.0
+  simtropolis/36393-dresden-frauenkirche:
+    authors:
+      - debussyman
+    category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+
+
+
+
+      							
+      <p>
+      	This is a model of the Frauenkirche in Dresden, a protestant church. Originally built in the XVIII century. It has been textured to look "new", similar to the reconstruction in RL after it was destroyed in WW2.
+      </p>
+
+
+      <p>
+      	Aviable on the "Landmarks" Menu
+      </p>
+
+      						</body>
+    filename: DBSSY_Dresden_Frauenkirche-0x5ad0e817_0xf3c16cc5_0x30000.zip
+    files:
+      - PLOP_4x4_Dresden Frauenkirche_644243f2.SC4Lot
+      - DBSSY_Dresden_Frauenkirche-0x5ad0e817_0xf3c16cc5_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/FrauenkircheLight.png.7ca7e0acb69fc0cf35cdfb5d44757eef.png
+    lastModified: 2024-08-15T02:05:03Z
+    name: Dresden Frauenkirche
+    sha256: cc5adda8c8d9389d23cda01f247803925ebd854e378d09492877036929cbfdd4
+    size: 1761485
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/FrauenkircheLight.thumb.png.d7d1e54772d298e53438a4a208f7c4b6.png
+    timestamp: 2024-08-15T06:15:43.045Z
+    uncompressed: 1949722
+    url: https://community.simtropolis.com/files/file/36393-dresden-frauenkirche/
+    version: 1.0.0
+  simtropolis/36395-dresden-frauenkirche-pre-war-version:
+    authors:
+      - debussyman
+    category: 600
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	Pre-war look of a previously uploaded church. Also located under "Landmarks"
+      </p>
+
+      						</body>
+    filename: Dresden_Frauenkirche_Dark.zip
+    files:
+      - DBSSY_Dresden_Frauenkirche_Dark-0x5ad0e817_0xd3c4e311_0x30000.SC4Model
+      - PLOP_4x4_Dresden Frauenkirche_Dark_53cb8009.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/FrauenkircheDark.png.f0ec6fd84202b8e17a24e121a7b25f78.png
+    lastModified: 2024-08-16T20:23:01Z
+    name: Dresden Frauenkirche Pre-War version
+    sha256: dd7135a31bfa8335600cc0bdc7e854768c2054f67dbbd2e8907da67cc37b5fb7
+    size: 1835000
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/FrauenkircheDark.thumb.png.31506a9fac39389e4de90713543fed23.png
+    timestamp: 2024-08-19T05:43:53.512Z
+    uncompressed: 2024897
+    url: https://community.simtropolis.com/files/file/36395-dresden-frauenkirche-pre-war-version/
     version: 1.0.0
   simtropolis/3644-stratosphere-towerlas-vegas:
     authors:
@@ -19973,4 +20785,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-33d8981f5deb63706c817395eb328784-Simjez-Feb.%207,%20001060541163.JPG
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
-timestamp: 2024-08-13T13:54:12.506Z
+timestamp: 2024-08-19T05:43:53.512Z

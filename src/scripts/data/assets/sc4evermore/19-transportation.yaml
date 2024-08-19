@@ -3,7 +3,7 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 214
+    downloads: 215
     lastModified: 2023-11-21T15:27:18-08:00
     name: Swamper77's Raised Rail Conversions
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/180-swamper77s-raised-rail-conversions
@@ -109,7 +109,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 643
+    downloads: 648
     filename: SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt
@@ -158,7 +158,7 @@ assets:
     authors:
       - Girafe
     category: 700
-    downloads: 306
+    downloads: 312
     lastModified: 2024-01-21T02:46:32-08:00
     name: BSC-VIP Girafe Parisian Transportation vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_Parisian_station_1.jpg
@@ -284,7 +284,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 34
+    downloads: 43
     filename: BLP-NDEX Boston Big Dig Project v2.zip
     files:
       - BLP-NDEX Boston Big Dig Project v2/~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Bladhy - Boston BigDig.txt
@@ -370,7 +370,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 3002
+    downloads: 3020
     filename: SC4D_LEX_Legacy_Ultimate_Airport_Pack_V1.zip
     files:
       - readme_ultimate_airport_pack.html
@@ -1186,7 +1186,7 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 435
+    downloads: 439
     lastModified: 2023-11-11T08:10:56-08:00
     name: Ulisse Wolf - Mediterranean Transport Set Vol 1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Ulisse  MED Transport SET VOL 1  DAY.jpg
@@ -1195,10 +1195,116 @@ assets:
     authors:
       - sc4evermore
     category: 700
-    downloads: 490
+    dependencies:
+      - sc4evermore/2-network-addon-mod
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>After a long development finally Hybrid Railway (<abbr title=\"Hybrid Railway\">HRW</abbr>) has a tunnel system. This mod is a pioneer
+      in the field of Hybrid Railway as it is the only mod that manages to convert rail and monorail traffic into subways and vice versa simultaneously. </p>\r
+
+      <p>This mod was developed in collaboration with MTA (Mass Transit Authority) a group of the <abbr title=\"Network Addon Mod\">NAM</abbr> team responsible for creating stations and station
+      development standards.</p>\r
+
+      <p>This mod obviously has a limitation. Using the subway this lot cannot transfer rail freight transport using the subway. In addition, the traffic inside the tunnel is considered as subway
+      traffic and for this reason when you use this mod the subway you use as a tunnel the game classifies it as if it were a normal subway. For this you have to avoid connections with
+      other <em>normal subway</em> networks if you want optimal management of <abbr title=\"Hybrid Railway\">HRW</abbr> Subway Converter.</p>\r
+
+      <p>Also in this mod there is <abbr title=\"Hybrid Railway\">HRW</abbr> Subway Ramp developed by MGB204 who gave me permission to publish his mod in this package</p>\r
+
+      <p>The lots in this package support U-RAIL allowing the use of the underground rail and therefore also the support for freight trains. For the moment U-RAIL does not support monorail but
+      the <abbr title=\"Network Addon Mod\">NAM</abbr> Team is thinking of including support in a later <abbr title=\"Network Addon Mod\">NAM</abbr> version.</p>\r
+
+      <p>The Gotthard Base Tunnel version contains two lots that perform the same function but year slightly different configurations for U-RAIL support. The Gotthard Base Tunnel version contains two
+      batches that perform the same function but have slightly different configurations for the U-RAIL support that can cause aesthetic alterations. You can install both or one of the two versions (V1
+      or V2). </p>\r
+
+      <p>To make this lots work you need only one dependency</p>\r
+
+      <p><strong>INSTALLATION</strong></p>\r
+
+      <p>The installation method has been automated but the user must choose which version of the mod to install based on the traffic direction.</p>\r
+
+      <ul>\r
+
+      <li>If using <abbr title=\"Right Hand Drive\">RHD</abbr> (Right Hand Drive) then he must select <abbr title=\"Hybrid Railway\">HRW</abbr> Subway Converters <abbr title=\"Right Hand
+      Drive\">RHD</abbr>.</li>\r
+
+      <li>If using <abbr title=\"Left Hand Drive\">LHD</abbr> (Left Hand Drive) then he must select <abbr title=\"Hybrid Railway\">HRW</abbr> Subway Converters <abbr title=\"Left Hand
+      Drive\">LHD</abbr></li>\r
+
+      </ul>\r
+
+      <p><strong>DEPENDENCY</strong></p>\r
+
+      <p><strong><a href=\"/index.php/downloads/download/6-network-addon-mod-nam/2-network-addon-mod\">Network Addon Mod</a></strong></p>\r
+
+      <p>Thanks to Tyberius06, IDS2, MGB204 for helping me make this package</p>\r
+
+      <p><strong>LICENSING:</strong><br>This lot (Excluding <abbr title=\"Hybrid Railway\">HRW</abbr> Ramp Subway Converter whose credits go to MGB /rsc204) is provided as free content to SimCity 4
+      players, who are free to modify it for their use and for production of derivative maps for publication.<br>Should the author be absent from SC4Devotion and Simtropolis.com for more than a year,
+      site staff or individual users may re-host the file, as long as due credit is given to him, Ulisse Wolf</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/HRW Gotthard v1 placement.jpg\" data-lightbox=\"lightbox95\" data-alt=\"lightboxHRW
+      Gotthard v1 placement.jpg|HRW Subway Converter 4\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Gotthard v1
+      placement.jpg\" alt=\"HRW Gotthard v1 placement\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/HRW Subway Converter 4.jpg\" data-lightbox=\"lightbox95\" data-alt=\"lightboxHRW
+      Gotthard v1 placement.jpg|HRW Subway Converter 4\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Subway Converter
+      4.jpg\" alt=\"HRW Subway Converter 42\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 495
+    filename: Ulisse Wolf HRW Subway Converters.zip
+    files:
+      - Ulisse Wolf HRW Subway Converters/Main.txt
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/~Documents.txt
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/Ulisse Wolf - HRW Subway Converters Cleanitol.txt
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/HRW Subway Converter_README.pdf
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/HRW Gotthard v1 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/2 HRW Gotthard v2 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/~Documents/Ulisse Wolf_Readmes/1 HRW Gotthard v2 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/Ulisse Wolf - HRW Subway Converters Cleanitol.txt
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/HRW Subway Converter_README.pdf
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/HRW Gotthard v1 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/2 HRW Gotthard v2 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/^~Documents#/Ulisse Wolf_Readmes/1 HRW Gotthard v2 placement.jpg
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/HRW to Subway Ramp_1979ed30.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/HRW Ramp_Resource.dat
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/HRW Ramp-0x5ad0e817_0x115c283e_0x30000.SC4Model
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/HRW Ramp Paths_RHD.dat
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/GOTTHARD_BASE_TUNNEL-0x6534284a-0xde67cc52-0x3f7a0d0c.SC4Desc
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/GOTTHARD_BASE_TUNNEL-0x5ad0e817_0x8ef8d683_0x30000.SC4Model
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/Gotthard Base Tunnel HRW (Subway Converter)_5f78a430.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/= HRW Subway Converter RHD/Gotthard Base Tunnel HRW (Subway Converter) v2_1cd3dfe1.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/HRW to Subway Ramp_1979ed30.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/HRW Ramp_Resource.dat
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/HRW Ramp-0x5ad0e817_0x115c283e_0x30000.SC4Model
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/HRW Ramp Paths_LHD.dat
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/GOTTHARD_BASE_TUNNEL-0x6534284a-0xde67cc52-0x3f7a0d0c.SC4Desc
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/GOTTHARD_BASE_TUNNEL-0x5ad0e817_0x8ef8d683_0x30000.SC4Model
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/Gotthard Base Tunnel HRW (Subway Converter)_5f78a430.SC4Lot
+      - Ulisse Wolf HRW Subway Converters/Ulisse Wolf/Hybrid Railway/- HRW Subway Converter LHD/Gotthard Base Tunnel HRW (Subway Converter) v2_1cd3dfe1.SC4Lot
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Gotthard v1 placement.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Subway Converter 4.jpg
     lastModified: 2024-05-23T15:16:46-07:00
     name: Ulisse Wolf - Hybrid Railway (HRW) Subway Converter
+    sha256: a8a23f13648cdf4b65379c71057751eb26306717e1c589150ae59c779a93dc75
+    size: 5934387
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Gotthard v1 placement.jpg
+    timestamp: 2024-08-15T09:27:03.207Z
+    uncompressed: 5942463
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/95-ulisse-wolf-hybrid-railway-hrw-subway-converter
+    version: "2.0"
 
-timestamp: 2024-08-13T13:48:06.421Z
+timestamp: 2024-08-19T05:43:53.512Z

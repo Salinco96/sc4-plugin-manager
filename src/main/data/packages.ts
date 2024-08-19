@@ -7,6 +7,7 @@ import { defaultCategory } from "@common/categories"
 import {
   AssetInfo,
   ConfigFormat,
+  OptionType,
   PackageData,
   PackageInfo,
   VariantData,
@@ -269,6 +270,10 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(packageData.images ?? []),
       ...(variantData.images ?? []),
     ],
+    lots: (packageData.lots || variantData.lots) && [
+      ...(packageData.lots ?? []),
+      ...(variantData.lots ?? []),
+    ],
     name: variantData.name ?? variantId,
     optional: (packageData.optional || variantData.optional) && [
       ...(packageData.optional ?? []),
@@ -279,6 +284,7 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(variantData.options ?? []),
     ],
     readme: variantData.readme ?? packageData.readme,
+    release: variantData.release ?? packageData.release,
     repository: variantData.repository ?? packageData.repository,
     requirements: (packageData.requirements || variantData.requirements) && {
       ...packageData.requirements,
@@ -291,6 +297,20 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(packageData.warnings ?? []),
       ...(variantData.warnings ?? []),
     ],
+  }
+
+  if (variantInfo.lots && !variantInfo.options?.some(option => option.id === "lots")) {
+    variantInfo.options ??= []
+
+    variantInfo.options.unshift({
+      choices: variantInfo.lots.map(lot => ({ label: lot.label, value: lot.id })),
+      default: "all",
+      display: "checkbox",
+      id: "lots",
+      multi: true,
+      section: "Lots", // TODO: i18n?
+      type: OptionType.STRING,
+    })
   }
 
   return variantInfo

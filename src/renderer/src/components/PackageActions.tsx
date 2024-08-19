@@ -16,7 +16,7 @@ import { useCurrentProfile, useStoreActions } from "@utils/store"
 import { FlexBox } from "./FlexBox"
 
 interface PackageAction {
-  color?: "error" | "success" | "warning"
+  color?: "error" | "info" | "success" | "warning"
   description?: string
   disabled?: boolean
   id: string
@@ -32,6 +32,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
 
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
+  const packageConfig = currentProfile?.packages[packageId]
   const packageInfo = usePackageInfo(packageId)
   const packageStatus = usePackageStatus(packageId)
   const variantInfo = useCurrentVariant(packageId)
@@ -48,7 +49,9 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
     const packageActions: PackageAction[] = []
 
     const isEnabled = !!packageStatus?.enabled
-    const isIncompatible = !!packageStatus?.issues[variantId]?.length
+    const isExplicitlyEnabled = isEnabled && packageConfig?.enabled
+    const isImplicitlyEnabled = isEnabled && !packageConfig?.enabled
+    const isIncompatible = !!packageStatus?.issues?.[variantId]?.length
     const isInstalled = !!variantInfo.installed
     const isRequired = !!packageStatus?.requiredBy?.length
 
@@ -74,20 +77,19 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
       })
     }
 
-    if (currentProfile && isEnabled) {
+    if (currentProfile && isExplicitlyEnabled) {
       packageActions.push({
         color: "error",
         description: isRequired
           ? t("disable.reason.required", { count: packageStatus?.requiredBy?.length })
           : t("disable.description"),
-        disabled: isRequired,
         id: "disable",
         label: t("disable.label"),
         onClick: () => actions.disablePackage(packageId),
       })
     }
 
-    if (currentProfile && isInstalled && !isEnabled) {
+    if (currentProfile && isInstalled && !isExplicitlyEnabled) {
       packageActions.push({
         color: "success",
         description: isIncompatible ? t("enable.reason.incompatible") : t("enable.description"),
@@ -98,7 +100,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
       })
     }
 
-    if (isInstalled) {
+    if (isInstalled && !isImplicitlyEnabled) {
       // TODO: Only allows removing if not used by any profile
       packageActions.push({
         color: "error",
@@ -112,7 +114,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
       })
     }
 
-    if (currentProfile && !isInstalled) {
+    if (currentProfile && !isInstalled && !isEnabled) {
       packageActions.push({
         description: isIncompatible ? t("add.reason.incompatible") : t("add.description"),
         disabled: isIncompatible,
@@ -132,7 +134,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
     }
 
     return packageActions
-  }, [currentProfile, packageId, t, variantId, variantInfo])
+  }, [currentProfile, packageConfig, packageId, t, variantId, variantInfo])
 
   if (!packageActions.length) {
     return null

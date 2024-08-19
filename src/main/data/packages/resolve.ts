@@ -1,4 +1,4 @@
-import { getOptionDefaultValue } from "@common/packages"
+import { getOptionDefaultValue, hasIssues } from "@common/packages"
 import {
   Feature,
   Features,
@@ -227,6 +227,7 @@ export function resolvePackages(
     if (variantInfo.dependencies) {
       for (const dependencyId of variantInfo.dependencies) {
         const dependencyStatus = resultingStatus[dependencyId]
+        dependencyStatus.requiredBy ??= []
         dependencyStatus.requiredBy.push(packageId)
         if (!dependencyStatus.enabled) {
           dependencyStatus.enabled = true
@@ -299,6 +300,7 @@ export function resolvePackages(
       }
 
       if (incompatibilities.length) {
+        packageStatus.issues ??= {}
         packageStatus.issues[variantId] = incompatibilities
       } else {
         compatibleVariantIds.push(variantId)
@@ -445,11 +447,11 @@ export function resolvePackageUpdates(
       }
 
       const newCompatibleVariantIds = Object.keys(packageInfo.variants).filter(
-        variantId => !newStatus.issues[variantId]?.length,
+        variantId => !hasIssues(variantId, newStatus),
       )
 
       const oldCompatibleVariantIds = Object.keys(packageInfo.variants).filter(
-        variantId => !oldStatus.issues[variantId]?.length,
+        variantId => !hasIssues(variantId, oldStatus),
       )
 
       const defaultVariantId = newCompatibleVariantIds[0]
@@ -517,7 +519,7 @@ export function resolvePackageUpdates(
     if (packageConfig?.variant) {
       const defaultVariantId =
         Object.keys(packageInfo.variants).find(
-          variantId => !resultingStatus[packageId].issues[variantId]?.length,
+          variantId => !hasIssues(variantId, resultingStatus[packageId]),
         ) ?? Object.keys(packageInfo.variants)[0]
 
       if (packageConfig.variant === defaultVariantId) {
