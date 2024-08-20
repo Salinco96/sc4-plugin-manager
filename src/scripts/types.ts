@@ -65,7 +65,7 @@ export interface IndexerEntryDetails {
 }
 
 export interface IndexerEntry extends IndexerBaseEntry, IndexerEntryDetails, IndexerVariantEntry {
-  category: number
+  category: string
   timestamp?: string
   variants?: { [variant: string]: IndexerVariantEntry }
 }
@@ -76,7 +76,7 @@ export interface IndexerEntryList {
 }
 
 export interface IndexerCategory {
-  category: number
+  category: string
   id: string
 }
 

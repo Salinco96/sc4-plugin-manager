@@ -2,7 +2,7 @@ assets:
   sc4evermore/128-gizmo-street-rr-gate-replacement-mod:
     authors:
       - Gizmo
-    category: 700
+    category: transport/mods
     dependencies: []
     description: "<body>\r
 
@@ -28,7 +28,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 271
+    downloads: 275
     filename: Gizmo - Street-RR Gate Replacement Mod.zip
     files:
       - ~Documents/Gizmo_Readmes/rrgate.jpg
@@ -49,15 +49,15 @@ assets:
   sc4evermore/25-gobias-hd-sidewalks:
     authors:
       - sc4evermore
-    category: 700
-    downloads: 427
+    category: transport/mods
+    downloads: 430
     lastModified: 2023-07-20T03:17:21-07:00
     name: Gobias HD Sidewalks
     url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/25-gobias-hd-sidewalks
   sc4evermore/6-road-top-mass-transit:
     authors:
       - sc4evermore
-    category: 700
+    category: transport/mods
     dependencies: []
     description: "<body>\r
 
@@ -78,7 +78,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 866
+    downloads: 868
     filename: RTMTV350.zip
     files:
       - RTMTV3/SC4TrashcanFix.dat
@@ -234,7 +234,7 @@ assets:
   sc4evermore/8-rtmt-add-on-pack-v3-60:
     authors:
       - sc4evermore
-    category: 700
+    category: transport/mods
     dependencies: []
     description: "<body>\r
 
@@ -257,7 +257,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 645
+    downloads: 648
     filename: RTMT Add-On Pack V3.60.zip
     files:
       - UKBusStopMarkings ReadMe.htm
@@ -481,7 +481,7 @@ assets:
   sc4evermore/86-sfbt-street-tree-mod:
     authors:
       - Andreas
-    category: 700
+    category: transport/mods
     dependencies:
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - sc4evermore/32-cycledogg-tree-controllers
@@ -622,7 +622,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 552
+    downloads: 557
     filename: SFBT Andreas Street Tree Mod_INSTALLER_1196.zip
     files:
       - _Documents/SFBT_DirtCircle_Remover.dat
@@ -710,4 +710,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/23-transportation-mods/86-sfbt-street-tree-mod
     version: "1"
 
-timestamp: 2024-08-19T05:43:53.512Z
+timestamp: 2024-08-20T10:45:45.232Z

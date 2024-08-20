@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 
 import { getCategories } from "@common/categories"
 import { PackageState, getState } from "@common/types"
-import { toggleElement } from "@common/utils/arrays"
+import { removeElement, removeElement$ } from "@common/utils/arrays"
 import { Page, useLocation } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 import { PackageFilters, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
@@ -60,6 +60,7 @@ const tags: TagInfo<TagType.STATE>[] = [
 
 export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
   const actions = useStoreActions()
+  const categories = useStore(store => store.categories)
   const filters = useStore(store => store.packageFilters)
   const location = useLocation()
 
@@ -81,7 +82,22 @@ export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
       <Chip
         color={tag.color}
         label={getTagLabel(tag)}
-        onClick={() => actions.setPackageFilters({ [key]: toggleElement(values, tag.value) })}
+        onClick={() => {
+          if (values.includes(tag.value)) {
+            actions.setPackageFilters({ [key]: removeElement(values, tag.value) })
+          } else {
+            const newValues = [...values, tag.value]
+            if (tag.type === TagType.CATEGORY) {
+              let category = categories[tag.value]?.parent
+              while (category) {
+                removeElement$(newValues, category)
+                category = categories[category]?.parent
+              }
+            }
+
+            actions.setPackageFilters({ [key]: newValues })
+          }
+        }}
         size="medium"
         sx={{ borderRadius: 2 }}
         variant={isSelected ? "filled" : "outlined"}

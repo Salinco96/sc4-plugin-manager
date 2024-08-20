@@ -63,6 +63,10 @@ export function DrawerTabs(): JSX.Element {
           return "packages:errors"
         }
 
+        if (packageFilters.onlyNew) {
+          return "packages:new"
+        }
+
         if (packageFilters.onlyUpdates) {
           return "packages:updates"
         }

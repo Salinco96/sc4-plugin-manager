@@ -2,11 +2,11 @@ import update, { Spec } from "immutability-helper"
 import { SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
 import { create } from "zustand"
 
-import { PackageCategory } from "@common/categories"
 import { ModalData, ModalID } from "@common/modals"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
+  CategoryInfo,
   Feature,
   OptionInfo,
   OptionValue,
@@ -28,11 +28,12 @@ export interface PackageUi {
 
 export interface PackageFilters {
   authors: string[]
-  categories: PackageCategory[]
+  categories: string[]
   dependencies: boolean
   experimental: boolean
   incompatible: boolean
   onlyErrors: boolean
+  onlyNew: boolean
   onlyUpdates: boolean
   search: string
   state: PackageState | null
@@ -84,6 +85,7 @@ export interface StoreActions {
 export interface Store {
   actions: StoreActions
   authors: string[]
+  categories: Partial<Record<string, CategoryInfo>>
   features: Partial<Record<Feature, string[]>>
   modal?: {
     action: (result: boolean) => void
@@ -251,6 +253,7 @@ export const useStore = create<Store>()((set, get): Store => {
         updateState({
           $merge: {
             authors: [],
+            categories: {},
             features: {},
             filteredPackages: [],
             options: undefined,
@@ -403,6 +406,10 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       updateState(data) {
         try {
+          if (data.categories) {
+            updateState({ categories: { $set: data.categories } })
+          }
+
           if (data.features) {
             updateState({ features: { $set: data.features } })
           }
@@ -443,6 +450,7 @@ export const useStore = create<Store>()((set, get): Store => {
       },
     },
     authors: [],
+    categories: {},
     features: {},
     filteredPackages: [],
     packageFilters: {
@@ -452,6 +460,7 @@ export const useStore = create<Store>()((set, get): Store => {
       experimental: false,
       incompatible: false,
       onlyErrors: false,
+      onlyNew: false,
       onlyUpdates: false,
       search: "",
       state: null,

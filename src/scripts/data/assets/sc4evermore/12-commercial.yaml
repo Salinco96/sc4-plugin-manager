@@ -2,7 +2,7 @@ assets:
   sc4evermore/102-sc4d-lex-legacy-mattb325-commercial-pack-darknite:
     authors:
       - Mattb325
-    category: 300
+    category: commercial
     dependencies:
       - simtropolis/19338-peg-security-fencing-kit
       - simtropolis/27563-shk-parking-pack
@@ -302,7 +302,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1064
+    downloads: 1069
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_DarkNite.zip
     files:
       - readme_mattb325_commercial.html
@@ -720,7 +720,7 @@ assets:
   sc4evermore/103-sc4d-lex-legacy-mattb325-commercial-pack-maxisnite:
     authors:
       - Mattb325
-    category: 300
+    category: commercial
     dependencies:
       - simtropolis/19338-peg-security-fencing-kit
       - simtropolis/27563-shk-parking-pack
@@ -1020,7 +1020,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1166
+    downloads: 1171
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_MaxisNite.zip
     files:
       - readme_mattb325_commercial.html
@@ -1440,7 +1440,7 @@ assets:
   sc4evermore/104-sc4d-lex-legacy-mattb325-commercial-w2w-pack-darknite:
     authors:
       - Mattb325
-    category: 300
+    category: commercial
     dependencies: []
     description: "<body>\r
 
@@ -1658,7 +1658,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 795
+    downloads: 798
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_W2W_DarkNite.zip
     files:
       - readme_mattb325_commercial_w2w.html
@@ -1829,7 +1829,7 @@ assets:
   sc4evermore/105-sc4d-lex-legacy-mattb325-commercial-w2w-pack-maxisnite:
     authors:
       - Mattb325
-    category: 300
+    category: commercial
     dependencies: []
     description: "<body>\r
 
@@ -2047,7 +2047,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 718
+    downloads: 721
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_W2W_MaxisNite.zip
     files:
       - readme_mattb325_commercial_w2w.html
@@ -2218,7 +2218,7 @@ assets:
   sc4evermore/138-sc4d-lex-legacy-zero7-commercial-pack:
     authors:
       - zero7
-    category: 300
+    category: commercial
     dependencies:
       - simtropolis/11617-ndex-texture-set-volume-1
       - simtropolis/19096-ndex-glenni-mega-props-vol01
@@ -2445,7 +2445,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 884
+    downloads: 886
     filename: SC4D_LEX_Legacy_zero7_Commercial_Pack.zip
     files:
       - readme_zero7_commercial.html
@@ -2587,7 +2587,7 @@ assets:
   sc4evermore/160-ulisse-wolf-five-nights-at-freddys:
     authors:
       - sc4evermore
-    category: 300
+    category: commercial
     dependencies:
       - simtropolis/23089-simfox-day-and-nite-modd
       - simtropolis/31006-supershk-mega-parking-textures
@@ -2656,7 +2656,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 363
+    downloads: 365
     filename: Ulisse Wolf - Five Nights At Freddys.zip
     files:
       - Ulisse Wolf - Five Nights At Freddys/Main.txt
@@ -2702,7 +2702,7 @@ assets:
   sc4evermore/222-bsc-vip-girafe-chalet-edelweiss:
     authors:
       - Girafe
-    category: 300
+    category: commercial
     dependencies:
       - simtropolis/23089-simfox-day-and-nite-modd
     description: "<body>\r
@@ -2876,7 +2876,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 201
+    downloads: 203
     filename: BSC-VIP Girafe Chalet Edelweiss_2817.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_Chalet_Edelweiss.html
@@ -2901,7 +2901,7 @@ assets:
   sc4evermore/223-bsc-vip-girafe-cb21-tower:
     authors:
       - Girafe
-    category: 300
+    category: commercial
     dependencies:
       - simtropolis/23089-simfox-day-and-nite-modd
     description: "<body>\r
@@ -3094,7 +3094,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 301
+    downloads: 303
     filename: BSC-VIP Girafe CB21 Tower_2725.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_CB21_Tower.html
@@ -3123,7 +3123,7 @@ assets:
   sc4evermore/224-bsc-vip-girafe-edf-tower:
     authors:
       - Girafe
-    category: 300
+    category: commercial
     dependencies:
       - simtropolis/23089-simfox-day-and-nite-modd
     description: "<body>\r
@@ -3292,7 +3292,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 301
+    downloads: 303
     filename: BSC-VIP Girafe EDF Tower_2820.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_EDF_Tower.html
@@ -3319,7 +3319,7 @@ assets:
   sc4evermore/229-mattb325-simcoug-historic-shops:
     authors:
       - Mattb325
-    category: 300
+    category: commercial
     dependencies: []
     description: "<body>\r
 
@@ -3388,7 +3388,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 323
+    downloads: 326
     filename: Mattb325-SimCoug Historic Shops.zip
     files:
       - BSC/BSCProps/Mattb325_Old_Shops_MN.dat
@@ -3420,8 +3420,8 @@ assets:
   sc4evermore/231-bnl-kelis-wilhelminatoren:
     authors:
       - Kelis
-    category: 300
-    downloads: 275
+    category: commercial
+    downloads: 278
     lastModified: 2024-01-23T07:39:12-08:00
     name: BNL Kelis Wilhelminatoren
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BNL_KELIS_Wihelminatoren_DAY.jpg
@@ -3429,8 +3429,8 @@ assets:
   sc4evermore/232-bnl-kelis-abn-amro-bank:
     authors:
       - Kelis
-    category: 300
-    downloads: 232
+    category: commercial
+    downloads: 235
     lastModified: 2024-01-23T07:54:28-08:00
     name: BNL Kelis ABN AMRO Bank
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ABNDAY.jpg
@@ -3438,7 +3438,7 @@ assets:
   sc4evermore/54-bsc-kevdan25-restaurants:
     authors:
       - kevdan25
-    category: 300
+    category: commercial
     dependencies: []
     description: "<body>\r
 
@@ -3532,7 +3532,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 852
+    downloads: 856
     filename: BSC kevdan25 Restaurant Lots.zip
     files:
       - _Documents/kevdan25lots - Replace Cleanitol - RUN ONCE BEFORE installing.txt
@@ -3579,4 +3579,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/54-bsc-kevdan25-restaurants
     version: "2"
 
-timestamp: 2024-08-19T05:43:53.512Z
+timestamp: 2024-08-20T10:45:45.232Z

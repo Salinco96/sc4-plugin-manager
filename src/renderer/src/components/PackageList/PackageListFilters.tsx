@@ -18,11 +18,11 @@ import {
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { PackageCategory, getCategoryLabel, getStateLabel } from "@common/categories"
+import { getCategoryLabel, getStateLabel } from "@common/categories"
 import { PackageState } from "@common/types"
 import { difference } from "@common/utils/arrays"
 import { getLastWord, getStartOfWordSearchRegex, removeLastWord } from "@common/utils/regex"
-import { useAuthors, usePackageFilters, useStoreActions } from "@utils/store"
+import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
 
 import {
   TagType,
@@ -41,7 +41,7 @@ export function PackageListFilters(): JSX.Element {
 
   const { t } = useTranslation("PackageListFilters")
 
-  const categories = useMemo(() => Object.values(PackageCategory).sort(), [])
+  const categories = Object.keys(useStore(store => store.categories))
   const states = useMemo(() => Object.values(PackageState).sort(), [])
 
   const options: string[] = useMemo(() => {
@@ -174,6 +174,10 @@ export function PackageListFilters(): JSX.Element {
 
           if (!filters.states.includes(PackageState.ERROR)) {
             filters.onlyErrors = false
+          }
+
+          if (!filters.states.includes(PackageState.NEW)) {
+            filters.onlyNew = false
           }
 
           if (!filters.states.includes(PackageState.OUTDATED)) {

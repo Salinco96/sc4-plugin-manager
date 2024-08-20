@@ -3,9 +3,10 @@ import path from "path"
 
 import { glob } from "glob"
 
-import { defaultCategory } from "@common/categories"
+import { isNew } from "@common/packages"
 import {
   AssetInfo,
+  CategoryInfo,
   ConfigFormat,
   OptionType,
   PackageData,
@@ -25,6 +26,7 @@ import { loadAssetInfo } from "./assets"
  */
 export async function loadLocalPackages(
   basePath: string,
+  categories: { [categoryId: string]: CategoryInfo | undefined },
   onProgress: (current: number, total: number) => void,
 ): Promise<{ [packageId: string]: PackageInfo }> {
   console.info("Loading local packages...")
@@ -38,7 +40,7 @@ export async function loadLocalPackages(
   for (const packageId of packageIds) {
     onProgress(nConfigs++, packageIds.length)
     const packagePath = path.join(basePath, packageId)
-    const packageInfo = await loadLocalPackageInfo(packageId, packagePath)
+    const packageInfo = await loadLocalPackageInfo(packageId, packagePath, categories)
     if (packageInfo) {
       packages[packageId] = packageInfo
       nPackages++
@@ -56,6 +58,7 @@ export async function loadLocalPackages(
 export async function loadLocalPackageInfo(
   packageId: string,
   packagePath: string,
+  categories: { [categoryId: string]: CategoryInfo | undefined },
 ): Promise<PackageInfo | undefined> {
   const entries = await fs.readdir(packagePath, { withFileTypes: true })
 
@@ -85,7 +88,7 @@ export async function loadLocalPackageInfo(
     // ~ is reserved for special folders, e.g. ~docs
     if (entry.isDirectory() && !entry.name.startsWith("~")) {
       const variantId = entry.name
-      const variantInfo = loadVariantInfo(variantId, packageData)
+      const variantInfo = loadVariantInfo(variantId, packageData, categories)
       packageInfo.variants[variantId] = variantInfo
       variantInfo.installed = true
       variantInfo.local = true
@@ -115,6 +118,7 @@ export async function loadLocalPackageInfo(
  */
 export async function loadRemotePackages(
   basePath: string,
+  categories: { [categoryId: string]: CategoryInfo | undefined },
   onProgress: (current: number, total: number) => void,
 ): Promise<{
   assets: { [assetId: string]: AssetInfo }
@@ -161,7 +165,7 @@ export async function loadRemotePackages(
         continue
       }
 
-      const packageInfo = loadRemotePackageInfo(packageId, configs[packageId])
+      const packageInfo = loadRemotePackageInfo(packageId, configs[packageId], categories)
       if (packageInfo) {
         packages[packageId] = packageInfo
         nPackages++
@@ -215,6 +219,7 @@ export async function loadRemotePackages(
 export function loadRemotePackageInfo(
   packageId: string,
   packageData: PackageData,
+  categories: { [categoryId: string]: CategoryInfo | undefined },
 ): PackageInfo | undefined {
   const packageInfo: PackageInfo = {
     id: packageId,
@@ -224,7 +229,7 @@ export function loadRemotePackageInfo(
   }
 
   for (const variantId in packageData.variants) {
-    const variantInfo = loadVariantInfo(variantId, packageData)
+    const variantInfo = loadVariantInfo(variantId, packageData, categories)
     packageInfo.variants[variantId] = variantInfo
     if (!variantInfo.authors.length) {
       variantInfo.authors.push(packageId.split("/")[0])
@@ -237,11 +242,42 @@ export function loadRemotePackageInfo(
   }
 }
 
+export function parseCategory(
+  category: string,
+  categories: { [categoryId: string]: CategoryInfo | undefined },
+): string[] {
+  const subcategories = category.split(/\s*,\s*/)
+
+  let subcategory: string | undefined
+  for (subcategory of subcategories) {
+    while (subcategory) {
+      const info: CategoryInfo | undefined = categories[subcategory]
+
+      if (!subcategories.includes(subcategory)) {
+        subcategories.unshift(subcategory)
+      }
+
+      subcategory = info?.parent
+    }
+  }
+
+  return subcategories
+}
+
 /**
  * Loads a variant from a package configuration.
  */
-export function loadVariantInfo(variantId: string, packageData: PackageData): VariantInfo {
+export function loadVariantInfo(
+  variantId: string,
+  packageData: PackageData,
+  categories: { [categoryId: string]: CategoryInfo | undefined },
+): VariantInfo {
   const variantData = packageData.variants?.[variantId] ?? {}
+
+  const category = variantData.category ?? packageData.category ?? "mods"
+  const subcategories = parseCategory(category, categories)
+  const priorities = subcategories.map(categoryId => categories[categoryId]?.priority ?? 0)
+  const priority = Math.max(...priorities)
 
   const variantInfo: VariantInfo = {
     assets: (packageData.assets || variantData.assets) && [
@@ -249,7 +285,7 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(variantData.assets ?? []),
     ],
     authors: [...(packageData.authors ?? []), ...(variantData.authors ?? [])],
-    category: variantData.category ?? packageData.category ?? defaultCategory,
+    categories: subcategories,
     features: (packageData.features || variantData.features) && [
       ...(packageData.features ?? []),
       ...(variantData.features ?? []),
@@ -270,10 +306,12 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(packageData.images ?? []),
       ...(variantData.images ?? []),
     ],
-    lots: (packageData.lots || variantData.lots) && [
-      ...(packageData.lots ?? []),
-      ...(variantData.lots ?? []),
-    ],
+    lots:
+      (packageData.lots || variantData.lots) &&
+      [...(packageData.lots ?? []), ...(variantData.lots ?? [])].map(lot => ({
+        ...lot,
+        categories: lot.category ? parseCategory(lot.category, categories) : undefined,
+      })),
     name: variantData.name ?? variantId,
     optional: (packageData.optional || variantData.optional) && [
       ...(packageData.optional ?? []),
@@ -283,6 +321,7 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(packageData.options ?? []),
       ...(variantData.options ?? []),
     ],
+    priority,
     readme: variantData.readme ?? packageData.readme,
     release: variantData.release ?? packageData.release,
     repository: variantData.repository ?? packageData.repository,
@@ -297,6 +336,10 @@ export function loadVariantInfo(variantId: string, packageData: PackageData): Va
       ...(packageData.warnings ?? []),
       ...(variantData.warnings ?? []),
     ],
+  }
+
+  if (isNew(variantInfo)) {
+    variantInfo.new = true
   }
 
   if (variantInfo.lots && !variantInfo.options?.some(option => option.id === "lots")) {
@@ -374,13 +417,17 @@ export async function writePackageConfig(
           .map<[string, VariantData]>(([id, variant]) => [
             id,
             {
-              category: variant.category,
+              category: variant.categories.join(","),
               features: variant.features?.length ? variant.features : undefined,
               dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
               deprecated: variant.deprecated,
               description: variant.description,
               experimental: variant.experimental,
               files: variant.files,
+              lots: variant.lots?.map(({ categories, ...lot }) => ({
+                category: categories?.join(","),
+                ...lot,
+              })),
               name: variant.name,
               readme: variant.readme,
               requirements: variant.requirements,

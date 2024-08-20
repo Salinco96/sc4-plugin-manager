@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from "react"
 
-import { PackageCategory, isCategory } from "@common/categories"
+import { isCategory } from "@common/categories"
 import {
   getVariantIssues,
   isDeprecated,
@@ -188,6 +188,10 @@ export function filterVariant(
     return false
   }
 
+  if (filters.onlyNew && !variantInfo.new) {
+    return false
+  }
+
   if (filters.onlyUpdates && !isOutdated(variantInfo)) {
     return false
   }
@@ -209,7 +213,7 @@ export function filterVariant(
   }
 
   if (!filters.onlyErrors && !filters.onlyUpdates) {
-    if (!filters.dependencies && isCategory(variantInfo, PackageCategory.DEPENDENCIES)) {
+    if (!filters.dependencies && isCategory(variantInfo, "dependencies")) {
       return false
     }
 

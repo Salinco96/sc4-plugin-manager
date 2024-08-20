@@ -2,7 +2,7 @@ assets:
   sc4evermore/165-sc4d-lex-legacy-jeronij-ship-pack:
     authors:
       - Jeronij
-    category: 360
+    category: landmarks
     dependencies: []
     description: "<body>\r
 
@@ -46,7 +46,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 560
+    downloads: 562
     filename: SC4D_LEX_LEGACY_Jeronij Ship Pack.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_JRJ Ships Compilation.txt
@@ -89,16 +89,16 @@ assets:
   sc4evermore/166-bsc-aln-rrp-fences:
     authors:
       - sc4evermore
-    category: 360
-    downloads: 356
+    category: landmarks
+    downloads: 359
     lastModified: 2023-11-11T07:36:03-08:00
     name: BSC ALN RRP Fences
     url: https://www.sc4evermore.com/index.php/downloads/download/20-ploppable/166-bsc-aln-rrp-fences
   sc4evermore/225-bsc-vip-girafe-lenin-mausoleum:
     authors:
       - Girafe
-    category: 360
-    downloads: 149
+    category: landmarks
+    downloads: 151
     lastModified: 2024-01-22T09:10:41-08:00
     name: BSC-VIP Girafe Lenin Mausoleum
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon Lenin's mausoleum 1.jpg
@@ -106,8 +106,8 @@ assets:
   sc4evermore/226-bsc-vip-girafe-ocean-pearl-yacht:
     authors:
       - Girafe
-    category: 360
-    downloads: 178
+    category: landmarks
+    downloads: 180
     lastModified: 2024-01-22T09:04:17-08:00
     name: BSC-VIP Girafe Ocean Pearl Yacht
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_Ocean_Pearl_yacht_1.jpg
@@ -115,8 +115,8 @@ assets:
   sc4evermore/230-kelis-tsutenkaku-tower:
     authors:
       - Kelis
-    category: 360
-    downloads: 189
+    category: landmarks
+    downloads: 191
     lastModified: 2024-01-23T07:26:12-08:00
     name: Kelis Tsutenkaku Tower
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stkt1.jpg
@@ -124,7 +124,7 @@ assets:
   sc4evermore/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex:
     authors:
       - Rubik
-    category: 360
+    category: landmarks
     dependencies:
       - simtropolis/35790-sc4-cleanitol
       - simtropolis/36142-submenus-dll
@@ -205,9 +205,15 @@ assets:
       <ul>\r
 
       <li><strong>SC4D LEX Legacy - BSC Custodian Rubik WTC Complex v1</strong> (and above) - <span style=\"color: #ba372a;\">INCLUDED</span><br>The below listed dependencies are all can be found in
-      the hereby linked dependency pack compilation.</li>\r
+      the hereby linked dependency pack compilation.\r
+
+      <ul>\r
 
       <li>BSC MEGA Props - Rubik3 Vol01 - WTC Props v2</li>\r
+
+      </ul>\r
+
+      </li>\r
 
       </ul>\r
 
@@ -216,7 +222,9 @@ assets:
       <ul>\r
 
       <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\"><strong>SC4D LEX Legacy -
-      BSC Common Dependencies Pack v9</strong></a> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+      BSC Common Dependencies Pack v9</strong></a> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.\r
+
+      <ul>\r
 
       <li>BSC Essentials (custom queries for the CAM lots)</li>\r
 
@@ -228,13 +236,25 @@ assets:
 
       </ul>\r
 
+      </li>\r
+
+      </ul>\r
+
       <p> </p>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
 
       <ul>\r
 
       <li>BSC Textures Vol01</li>\r
 
       <li>BSC Textures Vol03 v4</li>\r
+
+      </ul>\r
+
+      </li>\r
 
       </ul>\r
 
@@ -304,42 +324,42 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 127
+    downloads: 129
     filename: SC4D LEX Legacy - BSC Custodian Rubik WTC Complex V2.zip
     files:
-      - ~Documents/readme_bsc_custodian_rubik_wtc_complex.html
-      - ~Documents/readme.css
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Rubik3 - WTC Complex.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC MEGA Props - Rubik3 - WTC Props v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - Rubik3 Vol01 - WTC Props v2_index.jpg
-      - BSC/BSCProps/BSC MEGA Props - Rubik3 Vol01 - WTC Props v2.dat
-      - BSC/BSC Submenu/BSC_WTC_Submenu.dat
-      - ~Documents/BSC_Readmes/Rubik3/Rubik WTC Towers.jpg
-      - ~Documents/BSC_Readmes/Rubik3/RewardWTC.jpg
-      - ~Documents/BSC_Readmes/Rubik3/readme_One and Two WTC Towers v2 (updated).html
-      - ~Documents/BSC_Readmes/Rubik3/Readme_BSC_WTC_Reward Lot.htm
-      - ~Documents/BSC_Readmes/Rubik3/Readme_BSC_WTC_Placeholder Lot.htm
-      - ~Documents/BSC_Readmes/Rubik3/Readme_BSC_WTC_Landmark Lot.htm
-      - ~Documents/BSC_Readmes/Rubik3/PlaceholderWTC.jpg
-      - ~Documents/BSC_Readmes/Rubik3/LandmarkWTC.jpg
-      - CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_Two World Trade_Co$$$_043264c8.SC4Lot
-      - CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_One World Trade_Co$$$_243260d7.SC4Lot
-      - BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Reward_ae3f8aea.SC4Lot
-      - BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Placeholder_0e44f044.SC4Lot
-      - BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Landmark_4e4dd98d.SC4Lot
-      - BSC/BSC Custodian/Rubik3/Two World Trade Tower/Two World Trade with Jobs.dat
       - BSC/BSC Custodian/Rubik3/One World Trade Tower/One World Trade with Jobs.dat
+      - BSC/BSC Custodian/Rubik3/Two World Trade Tower/Two World Trade with Jobs.dat
+      - BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Landmark_4e4dd98d.SC4Lot
+      - BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Placeholder_0e44f044.SC4Lot
+      - BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Reward_ae3f8aea.SC4Lot
+      - CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_One World Trade_Co$$$_243260d7.SC4Lot
+      - CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_Two World Trade_Co$$$_043264c8.SC4Lot
+      - ~Documents/BSC_Readmes/Rubik3/LandmarkWTC.jpg
+      - ~Documents/BSC_Readmes/Rubik3/PlaceholderWTC.jpg
+      - ~Documents/BSC_Readmes/Rubik3/Readme_BSC_WTC_Landmark Lot.htm
+      - ~Documents/BSC_Readmes/Rubik3/Readme_BSC_WTC_Placeholder Lot.htm
+      - ~Documents/BSC_Readmes/Rubik3/Readme_BSC_WTC_Reward Lot.htm
+      - ~Documents/BSC_Readmes/Rubik3/readme_One and Two WTC Towers v2 (updated).html
+      - ~Documents/BSC_Readmes/Rubik3/RewardWTC.jpg
+      - ~Documents/BSC_Readmes/Rubik3/Rubik WTC Towers.jpg
+      - BSC/BSC Submenu/BSC_WTC_Submenu.dat
+      - BSC/BSCProps/BSC MEGA Props - Rubik3 Vol01 - WTC Props v2.dat
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - Rubik3 Vol01 - WTC Props v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC MEGA Props - Rubik3 - WTC Props v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Rubik3 - WTC Complex.txt
+      - ~Documents/readme.css
+      - ~Documents/readme_bsc_custodian_rubik_wtc_complex.html
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/day.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Night1.jpg
-    lastModified: 2024-08-07T16:31:45-07:00
+    lastModified: 2024-08-20T02:51:32-07:00
     name: SC4D LEX Legacy - BSC Custodian Rubik WTC Complex
     sha256: 56bc4d0d88bfd0fb3e5c68530ce71810441b8953706619eba4ad6ab3a187e4f9
     size: 29738626
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/day.jpg
-    timestamp: 2024-08-09T11:48:57.739Z
+    timestamp: 2024-08-20T10:45:45.232Z
     uncompressed: 34422124
     url: https://www.sc4evermore.com/index.php/downloads/download/20-ploppable/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex
     version: "2.0"
 
-timestamp: 2024-08-19T05:43:53.512Z
+timestamp: 2024-08-20T10:45:45.232Z

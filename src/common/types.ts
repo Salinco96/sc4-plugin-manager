@@ -1,5 +1,3 @@
-import { isNew } from "./packages"
-
 /** Supported configuration formats */
 export enum ConfigFormat {
   JSON = ".json",
@@ -19,6 +17,11 @@ export interface AssetData {
 export interface AssetInfo extends AssetData {
   id: string
   url: string
+}
+
+export interface CategoryInfo {
+  parent?: string
+  priority?: number
 }
 
 export enum Feature {
@@ -61,9 +64,9 @@ export interface PackageData extends VariantData {
 
 export interface PackageFile {
   as?: string
-  category?: number
   condition?: Requirements
   path: string
+  priority?: number
 }
 
 export interface PackageInfo {
@@ -161,8 +164,8 @@ export interface ToolInfo {
 export interface LotData {
   /** Bulldoze cost */
   bulldoze?: number
-  /** Category (TODO) */
-  category?: number
+  /** Category */
+  category?: string
   /** Requirements (e.g. CAM for stage 9+ growables) */
   condition?: Requirements
   /** Plop cost */
@@ -222,10 +225,14 @@ export interface LotData {
   waterProduction?: number
 }
 
+export interface LotInfo extends LotData {
+  categories?: string[]
+}
+
 export interface VariantData {
   assets?: PackageAsset[]
   authors?: string[]
-  category?: number
+  category?: string
   features?: Feature[]
   dependencies?: string[]
   deprecated?: boolean
@@ -258,9 +265,11 @@ export interface VariantIssue {
 
 export interface BaseVariantInfo extends VariantData {
   authors: string[]
-  category: number
+  categories: string[]
   id: string
+  lots?: LotInfo[]
   name: string
+  priority: number
   version: string
 }
 
@@ -270,6 +279,7 @@ export interface VariantInfo extends BaseVariantInfo {
   docs?: string
   installed?: boolean
   local?: boolean
+  new?: boolean
   update?: BaseVariantInfo
 }
 
@@ -375,7 +385,7 @@ export function getState(
       return !!variantInfo.local
 
     case PackageState.NEW:
-      return isNew(variantInfo)
+      return !!variantInfo.new
 
     case PackageState.OUTDATED:
       return !!variantInfo.installed && !!variantInfo.update

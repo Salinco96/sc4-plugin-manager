@@ -2,11 +2,11 @@ assets:
   simtropolis/19338-peg-security-fencing-kit:
     authors:
       - Pegasus
-    category: 0
+    category: mods
     dependencies: []
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -34,7 +34,6 @@ assets:
 
 
 
-      							
 
 
 
@@ -59,7 +58,8 @@ assets:
 
 
 
-      							
+
+
       <p align="justify">This resource pack is a collection of chain link fence props that can be used on any type of lot that requires security fencing.  The props in this pack may be used by
       other developers to enhance the appearance of their lots.</p>
 
@@ -95,11 +95,11 @@ assets:
   simtropolis/19880-peg-cdk3-super-pak:
     authors:
       - Pegasus
-    category: 0
+    category: mods
     dependencies: []
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -114,7 +114,6 @@ assets:
 
 
 
-      							
 
 
 
@@ -126,7 +125,8 @@ assets:
 
 
 
-      							
+
+
       <p align="justify">This is a compilation of the primary <span style="font-weight:bold;color:rgb(0,0,102);"><abbr title="Coastal Development Kit 3">CDK3</abbr></span> dependency files. If you
       already have the dependency files listed below, you will not have to download and install this file. However, all future <abbr title="Coastal Development Kit 3">CDK3</abbr> lots requiring any of
       the listed dependencies, will list this file instead. There also may be a slight game load time reduction having all the dependencies combined into a single file.</p>
@@ -197,7 +197,7 @@ assets:
   simtropolis/19881-peg-cdk3-sp-seaport-super-pak:
     authors:
       - Pegasus
-    category: 0
+    category: mods
     lastModified: 2015-07-08T02:57:15Z
     name: PEG CDK3 SP SEAPORT SUPER PAK
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2008/thumb-5e54434cb76cfd9a9e4da90ed3649d5a-product_image.jpg
@@ -205,12 +205,12 @@ assets:
   simtropolis/20966-peg-mtp-super-pack:
     authors:
       - Pegasus
-    category: 0
+    category: mods
     dependencies:
       - simtropolis/26079-peg-spam-super-resource-pack
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -238,7 +238,6 @@ assets:
 
 
 
-      							
 
 
 
@@ -263,7 +262,8 @@ assets:
 
 
 
-      							
+
+
       <p>
       	<span style="color:#c0392b;"><strong>UPDATE: 04.07.2022</strong></span> - The <em>PEG_MTP_SUPER_TEXTURES_PACK.dat</em> has been replaced by the all inclusive <strong><abbr title="Pegasus">PEG</abbr>-SUPER_TEXTURES.dat</strong>, which contains all, but the textures from the <a href="https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/" rel=""><abbr title="Pegasus">PEG</abbr> <abbr title="SimPeg Agricultural Mod">SPAM</abbr> Super Resource Pack</a> (<abbr title="Pegasus">PEG</abbr>-SPAM_TEXTURES_RESOURCE_b200.dat), created and released by Pegasus from the entire collection (including: <abbr title="Coastal Development Kit">CDK</abbr> and <abbr title="Coastal Development Kit 3">CDK3</abbr>, <abbr title="Coastal Development Kit 3">CDK3</abbr>-<abbr title="Old Wooden Waterfront">OWW</abbr>, <abbr title="Old Wooden Waterfront 2">OWW2</abbr> and Marina, Utopia, CSK, PPonds etc...). This update brings all these textures under one DAT (which actually already have held 2/3 of the textures created by Pegasus). Bear in mind this is only part one of a major update and clean-up of this dependency pack focusing on the textures for now. 
       </p>
@@ -420,16 +420,16 @@ assets:
   simtropolis/26080-simpeg-agricultural-mod-spam:
     authors:
       - Pegasus
-    category: 0
+    category: mods
     dependencies:
       - simtropolis/20966-peg-mtp-super-pack
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
-      							
+
       							<p>
       	The <strong>S</strong>im<strong>P</strong>eg <strong>A</strong>gricultural <strong>M</strong>od (<strong><abbr title="SimPeg Agricultural Mod">SPAM</abbr></strong>) is an absolute, total and complete replacement for the game-default farming system.
       </p>
@@ -629,11 +629,11 @@ assets:
   simtropolis/27711-peg-one-flag-many-nations-mod:
     authors:
       - Pegasus
-    category: 0
+    category: mods
     dependencies: []
     description: >-
       <body>
-                                  
+
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -641,12 +641,12 @@ assets:
 
 
 
-      							
 
 
 
 
-      							
+
+
       <p>
       	<strong><span style="color:#800000;"><abbr title="Pegasus">PEG</abbr> One Flag Many Nations Mod</span></strong><br>
       	<strong><span style="color:#800000;">By Pegasus</span></strong><br>
@@ -725,7 +725,7 @@ assets:
   simtropolis/27712-the-peg-terrain-kit-7-n-1:
     authors:
       - Pegasus
-    category: 0
+    category: mods
     lastModified: 2018-07-19T01:23:57Z
     name: The PEG Terrain Kit (7 n 1)
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2012/thumb-c40a9ed17c56e4053b91c28d5522fe2b-.jpg
@@ -733,10 +733,10 @@ assets:
   simtropolis/30648-peg-cdk-tutorial:
     authors:
       - Pegasus
-    category: 0
+    category: mods
     lastModified: 2015-07-08T02:18:27Z
     name: PEG CDK Tutorial
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_07/image022.thumb.jpg.65b2a105dbe97884aec5b39974b27643.jpg
     url: https://community.simtropolis.com/files/file/30648-peg-cdk-tutorial/
 
-timestamp: 2024-08-19T05:43:53.512Z
+timestamp: 2024-08-20T10:45:45.232Z

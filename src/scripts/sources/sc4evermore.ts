@@ -6,87 +6,87 @@ const origin = "https://www.sc4evermore.com"
 
 const categories: IndexerCategory[] = [
   {
-    category: 7,
+    category: "mods/nam",
     id: "6-network-addon-mod-nam",
   },
   {
-    category: 200,
+    category: "residential",
     id: "11-residential",
   },
   {
-    category: 300,
+    category: "commercial",
     id: "12-commercial",
   },
   {
-    category: 400,
+    category: "industry",
     id: "13-industrial",
   },
   {
-    category: 660,
+    category: "parks",
     id: "14-parks",
   },
   {
-    category: 500,
+    category: "utilities",
     id: "15-utility",
   },
   {
-    category: 600,
+    category: "civics",
     id: "16-civic",
   },
   {
-    category: 600,
+    category: "rewards",
     id: "18-reward",
   },
   {
-    category: 700,
+    category: "transport",
     id: "19-transportation",
   },
   {
-    category: 360,
+    category: "landmarks",
     id: "20-ploppable",
   },
   {
-    category: 360,
+    category: "landmarks",
     id: "21-other",
   },
   {
-    category: 100,
+    category: "dependencies",
     id: "22-dependencies",
   },
   {
-    category: 700,
+    category: "transport/mods",
     id: "23-transportation-mods",
   },
   {
-    category: 670,
+    category: "mmps/flora",
     id: "25-flora-fauna-and-mayor-mode-ploppables",
   },
   {
-    category: 30,
+    category: "gameplay",
     id: "26-gameplay-mods",
   },
   {
-    category: 20,
+    category: "terrains",
     id: "37-terrain-mods-and-tree-controllers",
   },
   {
-    category: 30,
+    category: "mods",
     id: "38-other-mods",
   },
   {
-    category: 30,
+    category: "mods",
     id: "40-maxis",
   },
   {
-    category: 790,
+    category: "automata",
     id: "41-automata-mods",
   },
   {
-    category: 60,
+    category: "mods/dll",
     id: "42-dll-mods",
   },
   {
-    category: 410,
+    category: "agriculture",
     id: "43-agriculture",
   },
 ]

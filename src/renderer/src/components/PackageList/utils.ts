@@ -1,4 +1,4 @@
-import { PackageCategory, getCategoryLabel, getStateLabel } from "@common/categories"
+import { getCategoryLabel, getStateLabel } from "@common/categories"
 import { t } from "@common/i18n"
 import { PackageState } from "@common/types"
 import { isEnum } from "@common/utils/types"
@@ -18,27 +18,13 @@ export enum TagType {
 
 export type TagValue<T extends TagType> = {
   [TagType.AUTHOR]: string
-  [TagType.CATEGORY]: PackageCategory
+  [TagType.CATEGORY]: string
   [TagType.STATE]: PackageState
 }[T]
 
 export function deserializeTag(tag: string): Tag {
   const [type, value] = tag.split(":", 2)
-
-  switch (type) {
-    case TagType.AUTHOR:
-      return { type, value }
-
-    case TagType.CATEGORY: {
-      return { type, value: value as PackageCategory }
-    }
-
-    case TagType.STATE: {
-      return { type, value: value as PackageState }
-    }
-  }
-
-  throw Error(`Invalid tag type: ${type}`)
+  return { type, value } as Tag
 }
 
 export function getLongTagLabel(tag: Tag): string {

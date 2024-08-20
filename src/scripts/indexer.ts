@@ -772,21 +772,21 @@ async function runIndexer(options: IndexerOptions) {
                 .replace("-", "")
                 .toLowerCase() ?? ""
 
-            const category: number | undefined = {
-              co$$: 340,
-              co$$$: 350,
-              cs$: 310,
-              cs$$: 320,
-              cs$$$: 330,
-              ia: 410,
-              id: 420,
-              iht: 440,
-              im: 430,
-              ir: 410,
-              plop: packageData.category < 360 ? 360 : undefined,
-              r$: 210,
-              r$$: 220,
-              r$$$: 230,
+            const category: string | undefined = {
+              co$$: "co$$",
+              co$$$: "co$$$",
+              cs$: "cs$",
+              cs$$: "cs$$",
+              cs$$$: "cs$$$",
+              ia: "agriculture",
+              id: "i-d",
+              iht: "i-ht",
+              im: "i-m",
+              ir: "agriculture",
+              plop: "landmark",
+              r$: "r$",
+              r$$: "r$$",
+              r$$$: "r$$$",
             }[kind]
 
             lots[filename] = {
@@ -830,7 +830,7 @@ async function runIndexer(options: IndexerOptions) {
         if (variantId === "default") {
           packageData.release ??= now
         } else if (packageData.release !== now) {
-          variantData.release = now
+          variantData.release ??= now
         }
 
         dbPackagesConfigs[authorId] ??= dbPackagesConfig

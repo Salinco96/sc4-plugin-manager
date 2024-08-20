@@ -718,6 +718,9 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
+    29972: {
+      packageId: "mntoes/holt-farm-close",
+    },
     29976: {
       variants: {
         202444: {
@@ -1231,6 +1234,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     35753: {
       packageId: "jestarr/resourcepack-vol27",
+    },
+    35763: {
+      packageId: "justforfun/tenement-01",
     },
     35790: null, // 35790-sc4-cleanitol
     35797: {

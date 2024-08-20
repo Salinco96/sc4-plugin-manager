@@ -1,4 +1,4 @@
-import { Feature, OptionInfo, PackageInfo, ProfileInfo, Settings } from "./types"
+import { CategoryInfo, Feature, OptionInfo, PackageInfo, ProfileInfo, Settings } from "./types"
 
 export interface ApplicationStatus {
   linker: string | null
@@ -8,6 +8,7 @@ export interface ApplicationStatus {
 }
 
 export interface ApplicationState {
+  categories?: Partial<Record<string, CategoryInfo>>
   features?: Partial<Record<Feature, string[]>>
   options?: OptionInfo[]
   packages?: {

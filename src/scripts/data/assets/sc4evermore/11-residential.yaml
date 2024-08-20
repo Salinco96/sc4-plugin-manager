@@ -2,8 +2,8 @@ assets:
   sc4evermore/100-sc4d-lex-legacy-mattb325-residential-houses-pack-darknite:
     authors:
       - Mattb325
-    category: 200
-    downloads: 922
+    category: residential
+    downloads: 925
     lastModified: 2023-08-20T03:02:51-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Houses (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Alpha237_lg0.jpg
@@ -11,8 +11,8 @@ assets:
   sc4evermore/101-sc4d-lex-legacy-mattb325-residential-houses-pack-maxisnite:
     authors:
       - Mattb325
-    category: 200
-    downloads: 906
+    category: residential
+    downloads: 909
     lastModified: 2023-08-20T02:53:24-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Houses (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Alpha237_lg.jpg
@@ -20,7 +20,7 @@ assets:
   sc4evermore/106-american-foursquare-homes-by-homefryes:
     authors:
       - Homefryes
-    category: 200
+    category: residential
     dependencies: []
     description: "<body>\r
 
@@ -83,7 +83,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 715
+    downloads: 718
     filename: Homefryes - American Four Square Homes v2_920.zip
     files:
       - _Documents/Homefryes_Readmes/Readme_The_American_Four_Square.htm
@@ -115,7 +115,7 @@ assets:
   sc4evermore/107-cambridge-townhomes-by-homefryes:
     authors:
       - Homefryes
-    category: 200
+    category: residential
     dependencies: []
     description: "<body>\r
 
@@ -444,7 +444,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 815
+    downloads: 817
     filename: Homefryes - Cambridge Townhomes_2189.zip
     files:
       - _Documents/Homefryes_Readmes/Readme_Cambridge_Townhomes.htm
@@ -477,8 +477,8 @@ assets:
   sc4evermore/139-sc4d-lex-legacy-zero7-residential-pack:
     authors:
       - zero7
-    category: 200
-    downloads: 839
+    category: residential
+    downloads: 841
     lastModified: 2023-08-26T23:57:53-07:00
     name: SC4D LEX Legacy - zero7 Residential Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JP_KitagataApts_Day.jpg
@@ -486,7 +486,7 @@ assets:
   sc4evermore/161-sc4d-lex-legacy-nybt-residentials-pack-darknite-version:
     authors:
       - NYBT
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/22916-nybt-essentials
     description: "<body>\r
@@ -575,7 +575,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 573
+    downloads: 575
     filename: SC4D_LEX_Legacy_NYBT_Residentials_DarkNite_V1.zip
     files:
       - _Documents/readme_SC4D LEX Legacy - NYBT Residentials.html
@@ -651,7 +651,7 @@ assets:
   sc4evermore/162-sc4d-lex-legacy-nybt-residentials-pack-maxisnite-edition:
     authors:
       - NYBT
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/22916-nybt-essentials
     description: "<body>\r
@@ -741,7 +741,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 538
+    downloads: 540
     filename: SC4D_LEX_Legacy_NYBT_Residentials_MaxisNite_V1.zip
     files:
       - _Documents/readme_SC4D LEX Legacy - NYBT Residentials.html
@@ -815,7 +815,7 @@ assets:
   sc4evermore/220-bsc-vip-girafe-4-rue-des-lilas-v2:
     authors:
       - Girafe
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/23089-simfox-day-and-nite-modd
     description: "<body>\r
@@ -1044,7 +1044,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 206
+    downloads: 208
     filename: BSC-VIP Girafe 4 Rue Des Lilas v2_2978.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_4_rue_des_Lilas.html
@@ -1070,7 +1070,7 @@ assets:
   sc4evermore/221-bsc-vip-girafe-villa-libeskind-v2:
     authors:
       - Girafe
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/23089-simfox-day-and-nite-modd
     description: "<body>\r
@@ -1308,7 +1308,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 275
+    downloads: 277
     filename: BSC-VIP Girafe Villa Libeskind v2_3071.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_villa_Libeskind.html
@@ -1331,7 +1331,7 @@ assets:
   sc4evermore/244-somy-danchi-apartments:
     authors:
       - SOMY
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/35790-sc4-cleanitol
     description: "<body>\r
@@ -1623,7 +1623,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 301
+    downloads: 304
     filename: SOMY Danchi Apartments LEX.zip
     files:
       - ~Documents/SOMY_Readmes/Readme_SOMY_Danchi_Apartments.htm
@@ -1650,7 +1650,7 @@ assets:
   sc4evermore/245-somy-modern-japanese-house-set:
     authors:
       - SOMY
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/35790-sc4-cleanitol
     description: "<body>\r
@@ -1827,7 +1827,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 259
+    downloads: 261
     filename: SOMY Modern Japanese House Set LEX.zip
     files:
       - ~Documents/SOMY_Readmes/somy-jpn-house1x4.jpg
@@ -1854,7 +1854,7 @@ assets:
   sc4evermore/270-romualdillo-spanish-low-wealth-residental-lots:
     authors:
       - Romualdillo
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/35790-sc4-cleanitol
     description: "<body>\r
@@ -1974,7 +1974,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 130
+    downloads: 132
     filename: Romualdillo - Spanish R Residental Lots.zip
     files:
       - ~Documents/Romualdillo_Readmes/Spanish R$ Residental Lots.ReadMe.txt
@@ -2003,7 +2003,7 @@ assets:
   sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials:
     authors:
       - SimGoober
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/35790-sc4-cleanitol
       - simtropolis/20966-peg-mtp-super-pack
@@ -2453,7 +2453,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 358
+    downloads: 360
     filename: SC4D LEX Legacy - BSC SimGoober Residentials V1.zip
     files:
       - readme_BSC_SG_Residential_Collection.html
@@ -2671,7 +2671,7 @@ assets:
   sc4evermore/275-bsc-sg-jenx-parisian-corner-residential:
     authors:
       - SimGoober
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/35790-sc4-cleanitol
       - sc4evermore/18-bsc-cleanitol
@@ -2948,7 +2948,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 254
+    downloads: 255
     filename: BSC SG JENX Parisian Corner Residential.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC SG JENX Residentials.txt
@@ -2983,7 +2983,7 @@ assets:
   sc4evermore/4-sc4d-lex-legacy-jmyers-homes-pack:
     authors:
       - sc4evermore
-    category: 200
+    category: residential
     dependencies: []
     description: "<body>\r
 
@@ -3006,7 +3006,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1277
+    downloads: 1280
     filename: SC4D_LEX_LEGACY_JMyers_Homes_Pack_V1.zip
     files:
       - ~Documents/JMyers Homes Vol 1.html
@@ -3062,7 +3062,7 @@ assets:
   sc4evermore/5-sc4d-lex-legacy-cp-early19thcenturyresidentials-pack:
     authors:
       - sc4evermore
-    category: 200
+    category: residential
     dependencies:
       - simtropolis/20966-peg-mtp-super-pack
     description: "<body>\r
@@ -3094,7 +3094,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 994
+    downloads: 997
     filename: SC4D_LEX_LEGACY_CP_Early19thCenturyResidentials_Pack_V1.zip
     files:
       - ~Documents/LEX_TenementsMain.jpg
@@ -3123,7 +3123,7 @@ assets:
   sc4evermore/98-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-darknite:
     authors:
       - Mattb325
-    category: 200
+    category: residential
     dependencies: []
     description: "<body>\r
 
@@ -3358,7 +3358,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1126
+    downloads: 1128
     filename: SC4D_LEX_LEGACY_Mattb325_Residential_Multi-Unit_DarkNite.zip
     files:
       - readme_mattb325_residential_multi-unit.html
@@ -3755,7 +3755,7 @@ assets:
   sc4evermore/99-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-maxisnite:
     authors:
       - Mattb325
-    category: 200
+    category: residential
     dependencies: []
     description: "<body>\r
 
@@ -3990,7 +3990,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 965
+    downloads: 970
     filename: SC4D_LEX_LEGACY_Mattb325_Residential_Multi-Unit_MaxisNite.zip
     files:
       - readme_mattb325_residential_multi-unit.html
@@ -4382,4 +4382,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/99-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-maxisnite
     version: "1"
 
-timestamp: 2024-08-19T05:43:53.512Z
+timestamp: 2024-08-20T10:45:45.232Z

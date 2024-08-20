@@ -1,6 +1,7 @@
 import { Card, CardContent, Checkbox, List, ListItem, Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
+import { getCategoryLabel } from "@common/categories"
 import { checkCondition, getOptionValue } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
@@ -70,6 +71,14 @@ export function PackageViewLots({ packageId }: { packageId: string }): JSX.Eleme
                   />
                 </FlexBox>
               </FlexBox>
+
+              {/* TODO: Better formatting */}
+              <Typography variant="body2">
+                <b>{t("category")}:</b>{" "}
+                {(lot.categories ?? variantInfo.categories)
+                  .map(categoryId => getCategoryLabel(categoryId))
+                  .join(", ")}
+              </Typography>
 
               {/* TODO: Better formatting */}
               {lot.stage && (

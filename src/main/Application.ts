@@ -17,13 +17,14 @@ import log, { LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
 
-import { getCategoryPath } from "@common/categories"
+import { getPriorityLabel } from "@common/categories"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { checkCondition, getOptionValue } from "@common/packages"
 import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
   AssetInfo,
+  CategoryInfo,
   ConfigFormat,
   Feature,
   OptionInfo,
@@ -105,6 +106,7 @@ export interface AppConfig {
 
 export class Application {
   public assets: { [assetId: string]: AssetInfo | undefined } = {}
+  public categories: { [categoryId: string]: CategoryInfo | undefined } = {}
   public features?: Partial<Record<Feature, string[]>>
   public ignoredWarnings = new Set<string>()
   public options?: OptionInfo[]
@@ -798,6 +800,7 @@ export class Application {
    */
   public getState(): ApplicationState {
     return {
+      categories: this.categories,
       features: this.features,
       options: this.options,
       packages: this.packages,
@@ -896,6 +899,12 @@ export class Application {
     // Launch database update in child process
     const databaseUpdatePromise = this.tryUpdateDatabase()
 
+    // Load categories...
+    this.status.loader = "Loading categories..."
+    this.sendStatus()
+    await this.loadCategories()
+    this.sendCategories()
+
     // Load profiles...
     this.status.loader = "Loading profiles..."
     this.sendStatus()
@@ -963,7 +972,7 @@ export class Application {
 
     // Load local packages...
     await createIfMissing(this.getPackagesPath())
-    this.packages = await loadLocalPackages(this.getPackagesPath(), (c, t) => {
+    this.packages = await loadLocalPackages(this.getPackagesPath(), this.categories, (c, t) => {
       if (c % 10 === 0) {
         this.status.loader = `Loading local packages (${Math.floor(100 * (c / t))}%)...`
         this.sendStatus()
@@ -982,7 +991,7 @@ export class Application {
     this.sendOptions()
 
     // Load remote packages...
-    const remote = await loadRemotePackages(this.getDatabasePath(), (c, t) => {
+    const remote = await loadRemotePackages(this.getDatabasePath(), this.categories, (c, t) => {
       if (c % 10 === 0) {
         this.status.loader = `Loading remote packages (${Math.floor(100 * (c / t))}%)...`
         this.sendStatus()
@@ -1137,7 +1146,7 @@ export class Application {
               oldPath: string,
               newPath: string,
               type: "cleanitol" | "docs" | "files",
-              category?: number,
+              priority?: number,
               condition?: { [feature in Feature]?: boolean },
             ) => {
               const extension = getExtension(oldPath)
@@ -1182,9 +1191,9 @@ export class Application {
                       await createIfMissing(path.dirname(targetPath))
                       await fs.symlink(path.join(downloadPath, oldPath), targetPath)
                       files.set(newPath, {
-                        path: newPath,
                         condition,
-                        category: category !== variantInfo.category ? category : undefined,
+                        path: newPath,
+                        priority: priority !== variantInfo.priority ? priority : undefined,
                       })
                     }
                   }
@@ -1196,7 +1205,7 @@ export class Application {
               oldPath: string,
               newPath: string,
               type: "cleanitol" | "docs" | "files",
-              category?: number,
+              priority?: number,
               condition?: { [feature in Feature]?: boolean },
             ) => {
               const filePaths = await glob(getChildrenPattern(toPosix(oldPath)), {
@@ -1214,7 +1223,7 @@ export class Application {
                     ? path.basename(filePath)
                     : path.join(newPath, path.relative(oldPath, filePath)),
                   type,
-                  category,
+                  priority,
                   condition,
                 )
               }
@@ -1268,7 +1277,7 @@ export class Application {
                     oldPath,
                     include?.as ?? "",
                     type,
-                    include?.category,
+                    include?.priority,
                     condition,
                   )
                 } else {
@@ -1277,7 +1286,7 @@ export class Application {
                     oldPath,
                     include?.as?.replace("*", filename) ?? filename,
                     type,
-                    include?.category,
+                    include?.priority,
                     condition,
                   )
                 }
@@ -1486,12 +1495,12 @@ export class Application {
                       )
                     ) {
                       const fullPath = path.join(variantPath, file.path)
-                      const categoryPath = getCategoryPath(file.category ?? variantInfo.category)
+                      const priority = file.priority ?? variantInfo.priority
 
                       // DLL files must be in Plugins root
                       const targetPath = file.path.match(/\.(dll|ini)$/i)
                         ? path.join(pluginsPath, path.basename(file.path))
-                        : path.join(pluginsPath, categoryPath, packageId, file.path)
+                        : path.join(pluginsPath, getPriorityLabel(priority), packageId, file.path)
 
                       oldLinks.delete(targetPath)
 
@@ -1597,6 +1606,21 @@ export class Application {
       data.path = this.gamePath
       await writeConfig(configPath, FILENAMES.appConfig, data, ConfigFormat.JSON, config?.format)
     }
+  }
+
+  protected async loadCategories(): Promise<{ [categoryId: string]: CategoryInfo | undefined }> {
+    console.debug("Loading categories...")
+
+    const config = await loadConfig<{ [categoryId: string]: CategoryInfo | undefined }>(
+      this.getDatabasePath(),
+      FILENAMES.dbCategories,
+    )
+
+    this.categories = config?.data ?? {}
+
+    console.info(`Loaded ${Object.keys(this.categories).length} categories`)
+
+    return this.categories
   }
 
   protected async loadOptions(): Promise<OptionInfo[]> {
@@ -2005,6 +2029,10 @@ export class Application {
         }
       }
     }
+  }
+
+  protected sendCategories(): void {
+    this.sendStateUpdate({ categories: this.categories })
   }
 
   protected sendOptions(): void {

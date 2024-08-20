@@ -6,107 +6,107 @@ const origin = "https://community.simtropolis.com"
 
 const categories: IndexerCategory[] = [
   {
-    category: 100,
+    category: "dependencies",
     id: "32-simpeg-plex-files",
   },
   {
-    category: 600,
+    category: "civics",
     id: "33-plex-custom-lots-mods",
   },
   {
-    category: 750,
+    category: "waterfront",
     id: "34-cdk-coastal-development-kit",
   },
   {
-    category: 100,
+    category: "dependencies",
     id: "35-mtp-mountain-theme-pack",
   },
   {
-    category: 411,
+    category: "mods/spam",
     id: "36-spam-simpeg-agricultural-mods",
   },
   {
-    category: 600,
+    category: "mods",
     id: "37-peg-utopian-series",
   },
   {
-    category: 0,
+    category: "mods",
     id: "64-simcitypolska-files",
   },
   {
-    category: 0,
+    category: "mods",
     id: "67-simcitybrasil-files",
   },
   {
-    category: 0,
+    category: "mods",
     id: "73-workingman-productions-wmp",
   },
   {
-    category: 200,
+    category: "residential",
     id: "101-residential",
   },
   {
-    category: 300,
+    category: "commercial",
     id: "102-commercial",
   },
   {
-    category: 400,
+    category: "industry",
     id: "103-industrial",
   },
   {
-    category: 410,
+    category: "agriculture",
     id: "104-agricultural",
   },
   {
-    category: 200,
+    category: "residential",
     id: "105-building-sets",
   },
   {
-    category: 600,
+    category: "civics",
     id: "106-civic-non-rci",
   },
   {
-    category: 500,
+    category: "utilities",
     id: "107-utilities",
   },
   {
-    category: 660,
+    category: "parks",
     id: "108-parks-plazas",
   },
   {
-    category: 750,
+    category: "waterfront",
     id: "109-waterfront",
   },
   {
-    category: 700,
+    category: "transport",
     id: "110-transportation",
   },
   {
-    category: 790,
+    category: "automata",
     id: "111-automata",
   },
   {
-    category: 30,
+    category: "gameplay",
     id: "112-gameplay-mods",
   },
   {
-    category: 20,
+    category: "graphics",
     id: "113-graphical-mods",
   },
   {
-    category: 10,
+    category: "cheats",
     id: "114-cheats",
   },
   {
-    category: 60,
+    category: "mods",
     id: "115-tools",
   },
   {
-    category: 100,
+    category: "dependencies",
     id: "118-dependencies",
   },
   {
-    category: 100,
+    category: "dependencies",
     id: "120-obsolete-legacy",
   },
 ]

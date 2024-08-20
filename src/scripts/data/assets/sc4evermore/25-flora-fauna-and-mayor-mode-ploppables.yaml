@@ -2,7 +2,7 @@ assets:
   sc4evermore/132-bsc-cp-mmp-for-cp-mega-prop-packs:
     authors:
       - c
-    category: 670
+    category: mmps/flora
     dependencies:
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - sc4evermore/36-lk33-seasonalflorapatch
@@ -156,7 +156,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 632
+    downloads: 635
     filename: BSC CP MMPs for CP MEGA Prop Packs.zip
     files:
       - ~Documents/BSC_Readmes/CP/Readme_BSC CP MMPs for CP MEGA Prop Packs.htm
@@ -181,24 +181,24 @@ assets:
   sc4evermore/155-sc4d-lex-legacy-jenx-fauna:
     authors:
       - sc4evermore
-    category: 670
-    downloads: 445
+    category: mmps/flora
+    downloads: 449
     lastModified: 2023-09-15T16:33:15-07:00
     name: SC4D LEX Legacy - JENX FAUNA
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/155-sc4d-lex-legacy-jenx-fauna
   sc4evermore/167-bsc-aln-rrp-pasture-flora:
     authors:
       - sc4evermore
-    category: 670
-    downloads: 355
+    category: mmps/flora
+    downloads: 359
     lastModified: 2023-11-11T07:36:40-08:00
     name: BSC ALN RRP Pasture Flora
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/167-bsc-aln-rrp-pasture-flora
   sc4evermore/190-vip-orange-aesculus:
     authors:
       - Orange_O
-    category: 670
-    downloads: 327
+    category: mmps/flora
+    downloads: 330
     lastModified: 2024-01-22T09:32:45-08:00
     name: VIP Orange Aesculus
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/aesculus left.jpg
@@ -206,8 +206,8 @@ assets:
   sc4evermore/191-vip-orange-fagus:
     authors:
       - Orange_O
-    category: 670
-    downloads: 313
+    category: mmps/flora
+    downloads: 316
     lastModified: 2024-01-22T09:29:44-08:00
     name: VIP Orange Fagus
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/fagus left.jpg
@@ -215,7 +215,7 @@ assets:
   sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora:
     authors:
       - Girafe
-    category: 670
+    category: mmps/flora
     dependencies:
       - simtropolis/35790-sc4-cleanitol
     description: "<body>\r
@@ -425,7 +425,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 8231
+    downloads: 8249
     filename: SC4D LEX Legacy - BSC VIP Girafe Flora V3.zip
     files:
       - ~Documents/Cleanitol_SC4D LEX Legacy - BSC-VIP Girafe Flora Pack V3__master.txt
@@ -710,7 +710,7 @@ assets:
   sc4evermore/281-bsc-jestarr-mayor-mode-ploppable-livestock:
     authors:
       - Jestarr
-    category: 670
+    category: mmps/flora
     dependencies:
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
     description: "<body>\r
@@ -745,9 +745,15 @@ assets:
       <ul>\r
 
       <li><strong><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy -
-      BSC Common Dependencies Pack v9</a></strong> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+      BSC Common Dependencies Pack v9</a></strong> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.\r
+
+      <ul>\r
 
       <li>BSC MEGA Props JES Vol07 v2</li>\r
+
+      </ul>\r
+
+      </li>\r
 
       </ul>\r
 
@@ -795,38 +801,38 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 42
+    downloads: 45
     filename: BSC jestarr Mayor Mode Ploppable Livestock.zip
     files:
-      - BSC/BSCProps/jes_SheepProps.dat
-      - BSC/BSCProps/jes_PigProps_Family.dat
-      - BSC/BSCProps/jes_CowProps_Family.dat
-      - ~Documents/BSC_Readmes/Jestarr/readme_jestarr_MayorModePloppableLivestock.html
-      - BSC/jestarr/MMP/jes_MayorMode_PloppableSheep.dat
-      - BSC/jestarr/MMP/jes_MayorMode_PloppablePigs_Red.dat
-      - BSC/jestarr/MMP/jes_MayorMode_PloppablePigs_Black.dat
-      - BSC/jestarr/MMP/jes_MayorMode_PloppableCows_Hereford.dat
-      - BSC/jestarr/MMP/jes_MayorMode_PloppableCows_Brown.dat
-      - BSC/jestarr/MMP/jes_MayorMode_PloppableCows_Brown and White.dat
-      - BSC/jestarr/MMP/jes_MayorMode_PloppableCows_Angus.dat
-      - ~Documents/BSC_Readmes/Jestarr/images/MayorModePloppableLivestock_s.jpg
-      - ~Documents/BSC_Readmes/Jestarr/images/header.gif
       - ~Documents/BSC_Readmes/Jestarr/images/footer.gif
+      - ~Documents/BSC_Readmes/Jestarr/images/header.gif
+      - ~Documents/BSC_Readmes/Jestarr/images/MayorModePloppableLivestock_s.jpg
+      - ~Documents/BSC_Readmes/Jestarr/readme_jestarr_MayorModePloppableLivestock.html
+      - BSC/jestarr/MMP/jes_MayorMode_PloppableCows_Angus.dat
+      - BSC/jestarr/MMP/jes_MayorMode_PloppableCows_Brown and White.dat
+      - BSC/jestarr/MMP/jes_MayorMode_PloppableCows_Brown.dat
+      - BSC/jestarr/MMP/jes_MayorMode_PloppableCows_Hereford.dat
+      - BSC/jestarr/MMP/jes_MayorMode_PloppablePigs_Black.dat
+      - BSC/jestarr/MMP/jes_MayorMode_PloppablePigs_Red.dat
+      - BSC/jestarr/MMP/jes_MayorMode_PloppableSheep.dat
+      - BSC/BSCProps/jes_CowProps_Family.dat
+      - BSC/BSCProps/jes_PigProps_Family.dat
+      - BSC/BSCProps/jes_SheepProps.dat
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MayorModePloppableLivestock_s.jpg
-    lastModified: 2024-08-10T06:15:17-07:00
+    lastModified: 2024-08-20T02:49:50-07:00
     name: BSC Jestarr - Mayor Mode Ploppable Livestock
     sha256: 5515914e1ceed0528507e7e91bd9d62a1295d6c11ee174ea626f4aa009f6aeec
     size: 385831
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MayorModePloppableLivestock_s.jpg
-    timestamp: 2024-08-13T13:48:06.421Z
+    timestamp: 2024-08-20T10:45:45.232Z
     uncompressed: 1164402
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/281-bsc-jestarr-mayor-mode-ploppable-livestock
     version: "1.0"
   sc4evermore/282-bsc-jestarr-mayor-mode-ploppable-rocks:
     authors:
       - Jestarr
-    category: 670
+    category: mmps/flora
     dependencies:
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
     description: "<body>\r
@@ -856,9 +862,15 @@ assets:
       <ul>\r
 
       <li><strong><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy -
-      BSC Common Dependencies Pack v9</a></strong> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+      BSC Common Dependencies Pack v9</a></strong> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.\r
+
+      <ul>\r
 
       <li>BSC MEGA Props JES Vol07 v2</li>\r
+
+      </ul>\r
+
+      </li>\r
 
       </ul>\r
 
@@ -905,37 +917,37 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 37
+    downloads: 41
     filename: BSC jestarr Mayor Mode Ploppable Rocks.zip
     files:
-      - BSC/BSCProps/jes_RockProps_family.dat
-      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Small.dat
-      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Nano.dat
-      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Mini.dat
-      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Micro.dat
-      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Medium.dat
-      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Large.dat
-      - ~Documents/BSC_Readmes/Jestarr/Mayor Mode Ploppable Rocks by Jestarr.html
-      - ~Documents/BSC_Readmes/Jestarr/images/rocks misc.jpg
-      - ~Documents/BSC_Readmes/Jestarr/images/logo_header.jpg
-      - ~Documents/BSC_Readmes/Jestarr/images/header.jpg
-      - ~Documents/BSC_Readmes/Jestarr/images/header.gif
       - ~Documents/BSC_Readmes/Jestarr/images/footer.gif
+      - ~Documents/BSC_Readmes/Jestarr/images/header.gif
+      - ~Documents/BSC_Readmes/Jestarr/images/header.jpg
+      - ~Documents/BSC_Readmes/Jestarr/images/logo_header.jpg
+      - ~Documents/BSC_Readmes/Jestarr/images/rocks misc.jpg
+      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Large.dat
+      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Medium.dat
+      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Micro.dat
+      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Mini.dat
+      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Nano.dat
+      - BSC/jestarr/MMP/jes_MayorModePloppableRocks_Small.dat
+      - ~Documents/BSC_Readmes/Jestarr/Mayor Mode Ploppable Rocks by Jestarr.html
+      - BSC/BSCProps/jes_RockProps_family.dat
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/rocks misc.jpg
-    lastModified: 2024-08-10T06:15:35-07:00
+    lastModified: 2024-08-20T02:49:11-07:00
     name: BSC Jestarr - Mayor Mode Ploppable Rocks
     sha256: 588c868676249990e14f3e29707654be42711f5fc614ae8f29e46b91e4e1f3ee
     size: 235590
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/rocks misc.jpg
-    timestamp: 2024-08-13T13:48:06.421Z
+    timestamp: 2024-08-20T10:45:45.232Z
     uncompressed: 505993
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/282-bsc-jestarr-mayor-mode-ploppable-rocks
     version: "1.0"
   sc4evermore/36-lk33-seasonalflorapatch:
     authors:
       - Lowkee33
-    category: 670
+    category: mmps/flora
     dependencies:
       - simtropolis/35790-sc4-cleanitol
     description: "<body>\r
@@ -1046,7 +1058,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 2210
+    downloads: 2221
     filename: SC4D LEX Legacy - BSC LK33 Terrain Seasonal Flora Patch.zip
     files:
       - z___terrainmod#/CHOOSE_ONE!! READ README!!.txt
@@ -1087,19 +1099,19 @@ assets:
   sc4evermore/64-water-flora-by-gizmo28:
     authors:
       - gizmo28
-    category: 670
-    downloads: 407
+    category: mmps/flora
+    downloads: 411
     lastModified: 2023-07-27T11:58:15-07:00
     name: Gizmo - Water Flora
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/64-water-flora-by-gizmo28
   sc4evermore/85-bsc-cp-ploppable-rocks-complete-set:
     authors:
       - c
-    category: 670
-    downloads: 522
+    category: mmps/flora
+    downloads: 525
     lastModified: 2024-01-23T02:57:12-08:00
     name: BSC CP Ploppable Rocks - Complete Set v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GrayRocksAndBoulders.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/85-bsc-cp-ploppable-rocks-complete-set
 
-timestamp: 2024-08-19T05:43:53.512Z
+timestamp: 2024-08-20T10:45:45.232Z
