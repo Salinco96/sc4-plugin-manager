@@ -1,24 +1,30 @@
-import { AssetData, AssetInfo } from "@common/types"
-import { isDev } from "@utils/env"
+import { AssetData, AssetID, AssetInfo } from "@common/assets"
+import { failInDev } from "@utils/env"
 
-export function getAssetKey(assetId: string, version?: string): string {
+import { loadDate, loadInteger, loadString } from "./loader"
+
+export function getAssetKey(assetId: AssetID, version?: string): string {
   return version ? `${assetId}@${version}` : assetId
 }
 
-export function getAssetURL(assetId: string, data: AssetData): string | undefined {
+function getAssetURL(
+  assetId: string,
+  rawUrl: string | undefined,
+  version: string | undefined,
+): string | undefined {
   // Parse asset ID in format `source/path[#hash]`
-  const match = assetId.match(/^([\w-]+)[/]([\w./-]+)(?:[#]([\w./-]+))?$/)
+  const match = assetId.match(/^([\w-]+)[/]([%\w./-]+)(?:[#]([\w./-]+))?$/)
 
-  if (data.url) {
-    let url = data.url
+  if (rawUrl) {
+    let url = rawUrl
 
     if (match) {
       url = url.replaceAll("{path}", match[2])
       url = url.replaceAll("{hash}", match[3])
     }
 
-    if (data.version !== undefined) {
-      url = url.replaceAll("{version}", String(data.version))
+    if (version) {
+      url = url.replaceAll("{version}", version)
     }
 
     return url
@@ -37,19 +43,29 @@ export function getAssetURL(assetId: string, data: AssetData): string | undefine
     if (source === "simtropolis") {
       return `https://community.simtropolis.com/files/file/${path}/?do=download${hash ? `&r=${hash}` : ""}`
     }
+
+    // path = download ID (only the first numeric part)
+    if (source === "toutsimcities") {
+      return `https://www.toutsimcities.com/downloads/start/${path.split("-")[0]}`
+    }
   }
 }
 
 export function loadAssetInfo(assetId: string, data: AssetData): AssetInfo | undefined {
-  const version = data.version !== undefined ? String(data.version) : undefined
-  const url = getAssetURL(assetId, data)
+  const rawUrl = loadString(data.url, assetId, "url")
+  const version = loadString(data.version, assetId, "version")
+  const url = getAssetURL(assetId, rawUrl, version)
   if (url) {
-    return { ...data, id: assetId, url, version }
-  } else if (isDev()) {
-    // Fail in development so we can notice issues more easily
-    throw Error(`Could not infer URL for asset ID ${assetId}`)
+    return {
+      id: assetId as AssetID,
+      lastModified: loadDate(data.lastModified, assetId, "lastModified"),
+      sha256: loadString(data.sha256, assetId, "sha256"),
+      size: loadInteger(data.size, assetId, "size"),
+      uncompressed: loadInteger(data.uncompressed, assetId, "uncompressed"),
+      url,
+      version,
+    }
   } else {
-    // Fail in development so we can notice issues more easily
-    console.warn(`Could not infer URL for asset ID ${assetId}`)
+    failInDev(`Could not infer URL for asset ID ${assetId}`)
   }
 }

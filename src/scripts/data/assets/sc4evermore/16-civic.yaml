@@ -3,7 +3,7 @@ assets:
     authors:
       - Mattb325
     category: civics
-    downloads: 976
+    downloads: 990
     lastModified: 2023-08-20T02:40:33-07:00
     name: SC4D LEX Legacy - Mattb325 Civics and Rewards (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ModernLibrary_lg.jpg
@@ -12,7 +12,7 @@ assets:
     authors:
       - Mattb325
     category: civics
-    downloads: 897
+    downloads: 905
     lastModified: 2023-08-20T02:38:42-07:00
     name: SC4D LEX Legacy - Mattb325 Civics and Rewards (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ModernLibrary_lg0.jpg
@@ -21,10 +21,347 @@ assets:
     authors:
       - JBSimio
     category: civics
-    downloads: 1304
-    lastModified: 2023-08-24T05:07:10-07:00
-    name: SC4D LEX Legacy - JBSimio Education Compilation
-    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Clayhurst_EP1_Readme.jpg
-    url: https://www.sc4evermore.com/index.php/downloads/download/16-civic/136-sc4d-lex-legacy-jbsimio-education-compilation
+    dependencies:
+      - simtropolis/27711-peg-one-flag-many-nations-mod
+      - sc4evermore/283-sc4d-lex-legacy-bsc-parks-collection
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1
+    description: "<body>\r
 
-timestamp: 2024-08-20T10:45:45.232Z
+      \        <div class=\"jd_description_wrapper jd_clear\"><p class=\"text_normal\" align=\"justify\">The SC4D LEX Legacy - BSC JBSimio Education Compilation contains the popular Education Civic
+      BATs by JBSimio, including the contents of School Pack Volumes 01-04, and the University of Clayhurst set, including both the Starter Pack and the Expansion Pack.  The stats for the School Packs
+      have been updated using SC4PIM/PIM-X by Tyberius06.</p>\r
+
+      <p><span style=\"font-size: 24px;\"><strong>ChangeLog</strong></span>:</p>\r
+
+      <ul>\r
+
+      <li><strong>Version 2 (20.08.2024)</strong></li>\r
+
+      <ul>\r
+
+      <li>The installer have been updated to the latest version and all the readmes have been updated.</li>\r
+
+      <li>The BSC Park Textures have been updated to be in line with the versions that can be found in the <a href=\"/index.php/downloads/download/14-park/283-sc4d-lex-legacy-bsc-parks-collection\"
+      target=\"_blank\" rel=\"noopener\"><strong>BSC Parks Compilation</strong></a>.</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <p><strong><span style=\"font-size: 24px;\">Contents</span></strong>:</p>\r
+
+      <p class=\"text_normal\" align=\"justify\">It contains the following BATs from the School Packs:</p>\r
+
+      <ul>\r
+
+      <li class=\"text_normal\"><strong>Lil Red Schoolhouse</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Handley School</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Lincoln Elementary</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Parkside Elementary</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Schultz Memorial High School</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Washington High School</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Central High School</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Manthey Correctional School</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Holy Cross Church and School</strong></li>\r
+
+      <li class=\"text_normal\"><strong>Peace Church and School</strong></li>\r
+
+      <li class=\"text_normal\"><strong><span style=\"font-weight: bold;\">Eisenhower Elementary School</span></strong></li>\r
+
+      <li class=\"text_normal\"><strong><span style=\"font-weight: bold;\">Westwood Elementary School</span></strong></li>\r
+
+      <li class=\"text_normal\"><strong><span style=\"font-weight: bold;\">Helen Krump Elementary School</span></strong></li>\r
+
+      <li class=\"text_normal\"><strong><span style=\"font-weight: bold;\">Roth Elementary School</span></strong></li>\r
+
+      <li class=\"text_normal\"><strong><span style=\"font-weight: bold;\">John Novac Memorial School</span></strong></li>\r
+
+      </ul>\r
+
+      <p>Plus the following from the University of Clayhurst Starter Pack:</p>\r
+
+      <ul>\r
+
+      <li class=\"text_normal\">14 individual Path Lots</li>\r
+
+      <li class=\"text_normal\">6 larger \"Quad\" Lots</li>\r
+
+      <li class=\"text_normal\">19 Driveway and Parking Lots</li>\r
+
+      <li class=\"text_normal\">3 Academic Classroom Buildings</li>\r
+
+      <li class=\"text_normal\">4 fully functional support Buildings</li>\r
+
+      <li class=\"text_normal\">10 eye candy University Buildings</li>\r
+
+      </ul>\r
+
+      <p>And from the University of Clayhurst Expansion Pack:</p>\r
+
+      <ul>\r
+
+      <li class=\"text_normal\">3 Academic Classroom Buildings</li>\r
+
+      <li class=\"text_normal\">3 University Shuttle Bus Lots</li>\r
+
+      <li class=\"text_normal\">2 fully functional Security Buildings</li>\r
+
+      <li class=\"text_normal\">11 eye candy University Buildings</li>\r
+
+      <li class=\"text_normal\">5 larger \"Quad\" Lots</li>\r
+
+      <li class=\"text_normal\">3 Driveway and Parking Lots</li>\r
+
+      <li class=\"text_normal\">1 additional Path Lot</li>\r
+
+      </ul>\r
+
+      <p class=\"text_normal\">The University of Clayhurst sets rely on the BSC Park Paths for their textures. As such, the BSC Park Textures have been included in this package, so as to avoid an
+      additional dependency, but are installed in such a way that they will not interfere with an installation of BSC Parks.</p>\r
+
+      <p><strong>Compatibility</strong></p>\r
+
+      <p>This download is only compatible with SimCity 4 \"Rush Hour\" or SimCity 4 Deluxe.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <p>Installation: Run the Java installer (.jar extension), which will guide you through the installation process, or open it using 7-zip or Keka for manual install. If doing a manual install, go
+      into the \"installation\" folder, then copy/extract the BSC parent folder into your plugins. If you extracted the ~Documents folder into your plugins too, it's highly recommended to keep it, but
+      move it out of the Plugins folder.</p>\r
+
+      <p>The \"setup\" tab includes a Cleanitol feature, and will remove previous installations of any of the contents of this compilation.  It is <strong>highly recommended</strong> that you do so,
+      given that the stats of the Lots have been updated using SC4PIM/PIM-X in this compilation.  (Manual installation users can simply open the \"cleanup.txt\" file in the root of the .jar file for a
+      list of files, or use BSC Cleanitol with the definitions contained within the ~Documents folder.)</p>\r
+
+      <p>Note that only one option for the path textures (drawn from the BSC Park Textures) can be selected/installed. You can select which one in the installer by expanding \"BSC\" &gt; \"BSC
+      Textures\" &gt; \"Park Textures\", and then selecting one of the options, or you can simply rely on the default. Alternatively, if doing a manual install, you can simply keep one of the enclosed
+      texture .dat files contained within, discarding the rest. If you already have the BSC Park Textures installed previously, you can ignore this selection, and simply rely on your previous
+      installation.</p>\r
+
+      <p>Un-Installing: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.<br> </p>\r
+
+      <p><strong>File Paths</strong></p>\r
+
+      <p>The following paths are used by the installer system.</p>\r
+
+      <p>Lot and Dat Files: My DocsSimcity 4PluginsBSCJBSimio</p>\r
+
+      <p>Readme and JPGs: ~DocumentsBSC_ReadmesJBSimio<br> </p>\r
+
+      <p><strong>Dependencies</strong></p>\r
+
+      <p>To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r
+
+      <ul>\r
+
+      <li class=\"text_normal\"><strong>BSC Park Textures </strong>(a variety of base textures with the same ID. They meant to be replaceable and interchangeable with each other - CHOOSE ONLY
+      ONE)<span style=\"color: #e03e2d;\"><strong> - INCLUDED</strong></span></li>\r
+
+      <li class=\"text_normal\"><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D
+      LEX Legacy - BSC Common Dependencies Pack v9b (and above)</a><br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li class=\"text_normal\">BSC Essentials</li>\r
+
+      <li class=\"text_normal\">BSC MEGA Props CP Vol01</li>\r
+
+      <li class=\"text_normal\">BSC MEGA Props D66 Vol01 v3</li>\r
+
+      <li class=\"text_normal\">BSC MEGA Props D66 Vol02 v2</li>\r
+
+      <li class=\"text_normal\">BSC MEGA Props JBSimio Vol03 v2 - it is essential you to get the V2 to avoid brown boxes.</li>\r
+
+      <li class=\"text_normal\">BSC MEGA Props MJB Vol01 v3</li>\r
+
+      <li class=\"text_normal\">BSC MEGA Props SG Vol01 v4</li>\r
+
+      <li class=\"text_normal\">BSC MEGA Props DAE Vol01 v4</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li style=\"list-style-type: none;\">\r
+
+      <ul>\r
+
+      <li class=\"text_normal\">BSC Textures Vol01</li>\r
+
+      <li class=\"text_normal\">BSC Textures Vol02</li>\r
+
+      <li class=\"text_normal\">BSC Textures Vol03 v5</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/27711-peg-one-flag-many-nations-mod/%20\" target=\"_blank\" rel=\"noopener\">PEG One Flag Many Nations Mod</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/40-maxis/14-maxis-buildings-as-props-and-dlc-props-v2-1\" target=\"_blank\" rel=\"noopener\">Maxis Building As Props and DLC Props v2.1</a></li>\r
+
+      </ul>\r
+
+      <p><strong>Notes about Nightlighting Effects</strong></p>\r
+
+      <p>In order to see the nightlighting, you must install the EP1-Update 1 for Rush Hour/Sim City 4 Deluxe, and then afterwards, install the SC4-Update for nightlighting (note: you have to be
+      logged in in order to see the download link). If this update isn't installed, you won't see any lighting effects on custom BAT buildings.<br> </p>\r
+
+      <p><strong>Disclaimer</strong><br>The usage of this download is on your own risk. I try to test my lots extensively, so they should work properly, but errors may still exist. Feel free to modify
+      the lots for yourself and show them in your city journals, but please don't distribute them without asking first.</p>\r
+
+      <p><br><strong>Credits</strong></p>\r
+
+      <p>Special thanks to Andreas Roth who has shown as much enthusiasm and dedication to this project as I have.  The custom menu icons and descriptions, installer, readme, and modding the multiple
+      languages are all here because of his help.  Also thanks to the following people for providing translations:</p>\r
+
+      <p>    Andreas Roth (German)<br>    jeronij (Spanish)<br>    Kwakelaar (Norwegian)<br>    Marco Berzacola (Italian)<br>    Rayden (Portuguese)<br>    RippleJet (Finnish, Swedish)<br>
+      Serkanner (Dutch)<br>    vester_DK (Danish)<br>    wouanagaine (French)</p>\r
+
+      <p>Thanks to the BSC and my regular followers for all their feedback and support.  I am happy, proud, and honored to work with such knowledgeable and friendly people. Thank you to the amazing
+      people at SC4 Devotion for remembering what community is all about and providing a home for all those who love the game.</p>\r
+
+      <p>Project ZIP repackaging for SC4Evermore by Tyberius06 and Tarkus.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Clayhurst_EP1_Readme.jpg\" data-lightbox=\"lightbox136\"
+      data-alt=\"lightboxClayhurst_EP1_Readme.jpg|JB_School Pack Vol01.jpg|JB_School Pack Vol02.jpg|JB_School Pack Vol03.jpg|SchoolPack_Vol04\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Clayhurst_EP1_Readme.jpg\" alt=\"Clayhurst_EP1_Readme\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JB_School Pack Vol01.jpg\" data-lightbox=\"lightbox136\"
+      data-alt=\"lightboxClayhurst_EP1_Readme.jpg|JB_School Pack Vol01.jpg|JB_School Pack Vol02.jpg|JB_School Pack Vol03.jpg|SchoolPack_Vol04\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JB_School Pack Vol01.jpg\" alt=\"JB_School Pack Vol012\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JB_School Pack Vol02.jpg\" data-lightbox=\"lightbox136\"
+      data-alt=\"lightboxClayhurst_EP1_Readme.jpg|JB_School Pack Vol01.jpg|JB_School Pack Vol02.jpg|JB_School Pack Vol03.jpg|SchoolPack_Vol04\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JB_School Pack Vol02.jpg\" alt=\"JB_School Pack Vol023\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 1343
+    filename: SC4D LEX Legacy - BSC JBSimio Education Compilation V2.zip
+    files:
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@0=BSC Park Textures zDefault/BSC_Park_Textures_zDefault.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@1-BSC Park Textures AngledBrick/BSC_Park_Textures_AngledBrick.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@2-BSC Park Textures BrownBrickLarge/BSC_Park_Textures_BrownBrickLarge.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@3-BSC Park Textures BrownDirt/BSC_Park_Textures_BrownDirt.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@4-BSC Park Textures GreyPavers/BSC_Park_Textures_GreyPavers.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@5-BSC Park Textures GreyRock/BSC_Park_Textures_GreyRock.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@6-BSC Park Textures RedBrickSmal/BSC_Park_Textures_RedBrickSmal.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@7-BSC Park Textures SandPavers/BSC_Park_Textures_SandPavers.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@8-BSC Park Textures Addon 00 Retrowave/BSC_Park_Textures_Add_0_Retrowave.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@9-BSC Park Textures Addon 01 Limestone/BSC_Park_Textures_Add_1_Limestone.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@a-BSC Park Textures Addon 02 BrownSandstone/BSC_Park_Textures_Add_2_BrownSandstone.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@b-BSC Park Textures Addon 03 CinderBrick/BSC_Park_Textures_Add_3_CinderBrick.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@c-BSC Park Textures Addon 04 StarMosaic/BSC_Park_Textures_Add_4_StarMosaic.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@d-BSC Park Textures Addon 05 RedMosaic/BSC_Park_Textures_Add_5_RedMosaic.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@e-BSC Park Textures Addon 06 GoldenMosaic/BSC_Park_Textures_Add_6_GoldenMosaic.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@f-BSC Park Textures Addon 07 BlueSlate/BSC_Park_Textures_Add_7_BlueSlate.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@g-BSC Park Textures Addon 08 GreenSlate/BSC_Park_Textures_Add_8_GreenSlate.dat
+      - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@h-BSC Park Textures Addon 09 BrownSlate/BSC_Park_Textures_Add_9_BrownSlate.dat
+      - BSC/JBSimio/Schoolpack/Central High School/CV9x7_JB_Central High School_Tennis v2_525ce4b7.SC4Lot
+      - BSC/JBSimio/Schoolpack/Eisenhower Elementary/CV4x4_JB_Eisenhower Elementary v2_362191d2.SC4Lot
+      - BSC/JBSimio/Schoolpack/Handley Schools/CV3x4_JB_Handley Consolidated v2_b2664fb4.SC4Lot
+      - BSC/JBSimio/Schoolpack/Handley Schools/CV3x4_JB_Handley Elementary v2_b266499f.SC4Lot
+      - BSC/JBSimio/Schoolpack/Helen Krump Elementary/CV4x4_JB_Helen Krump Elementary v2_961f31cf.SC4Lot
+      - BSC/JBSimio/Schoolpack/Holy Cross Church and School/CV6x4_JB_Holy Cross Church and School v2_92b3d47d.SC4Lot
+      - BSC/JBSimio/Schoolpack/John Novac Memorial/CV9x6_JB_John Novac Consolidated School v2_d1f5663c.SC4Lot
+      - BSC/JBSimio/Schoolpack/John Novac Memorial/CV9x6_JB_John Novac Memorial School v2_46cede11.SC4Lot
+      - BSC/JBSimio/Schoolpack/Lil Red Schoolhouse/CV2x2_JB_Lil Red Schoolhouse v2_92201226.SC4Lot
+      - BSC/JBSimio/Schoolpack/Lincoln Elementary/CV4x4_JB_Lincoln Elementary School v2_921ffc8c.SC4Lot
+      - BSC/JBSimio/Schoolpack/Parkside Elementary/CV4x4_JB_Parkside Elementary v2_5264db6e.SC4Lot
+      - BSC/JBSimio/Schoolpack/Peace Church and School/CV9x5_JB_Peace Church and School v2_52c631e9.SC4Lot
+      - BSC/JBSimio/Schoolpack/Roth Elementary/CV5x3_JB_Roth Elementary v2_d6220063.SC4Lot
+      - BSC/JBSimio/Schoolpack/Schultz Memorial High School/CV6x3_JB_Schultz Memorial HS v2_329eed60.SC4Lot
+      - BSC/JBSimio/Schoolpack/Washington High School/CV7x5_JB_Washington High School v2_f2b12e86.SC4Lot
+      - BSC/JBSimio/Schoolpack/Walter Manthey Correctional School/CV5x4_JB_Walter Manthey Correctional School v2_52842fd5.SC4Lot
+      - BSC/JBSimio/Schoolpack/Westwood Elementary/CV5x4_JB_Westwood Elementary v2_26ceb51c.SC4Lot
+      - ~Documents/BSC_Readmes/JBSimio/images/Clayhurst_Arrows.jpg
+      - ~Documents/BSC_Readmes/JBSimio/images/Clayhurst_EP1_Readme.jpg
+      - ~Documents/BSC_Readmes/JBSimio/images/Clayhurst_Readme.jpg
+      - ~Documents/BSC_Readmes/JBSimio/images/JB_School Pack Vol01.jpg
+      - ~Documents/BSC_Readmes/JBSimio/images/JB_School Pack Vol02.jpg
+      - ~Documents/BSC_Readmes/JBSimio/images/JB_School Pack Vol03.jpg
+      - ~Documents/BSC_Readmes/JBSimio/images/SchoolPack_Vol04.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-0.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-1.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-2.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-3.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-4.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-5.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-6.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-7.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-8.jpg
+      - ~Documents/BSC_Readmes/JBSimio/Images of texture addons/BSC-Park-Base-Texture-9.jpg
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Buildings_0.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Buildings_1.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Buildings_2.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Buildings_3.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Driveways_1.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Driveways_2.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Paths_1.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Paths_2.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Quads_1.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Quads_2.dat
+      - BSC/JBSimio/University of Clayhurst/JB_Univ_Shuttle.dat
+      - ~Documents/BSC_Readmes/JBSimio/BSC_Parksv2_TextureSet-stexpic1.jpg
+      - ~Documents/BSC_Readmes/JBSimio/BSC_Parksv2_TextureSet-stexpic2.jpg
+      - ~Documents/BSC_Readmes/JBSimio/BSC_Parksv2_TextureSet_readme.html
+      - ~Documents/BSC_Readmes/JBSimio/Cleanitol_SC4D LEX Legacy - BSC JBSimio Education Compilation.txt
+      - ~Documents/BSC_Readmes/JBSimio/readme_JBSimio_Clayhurst_Expansion.html
+      - ~Documents/BSC_Readmes/JBSimio/readme_JBSimio_Clayhurst_Starter.html
+      - ~Documents/BSC_Readmes/JBSimio/readme_JBSimio_Schoolpack_Vol01.html
+      - ~Documents/BSC_Readmes/JBSimio/readme_JBSimio_Schoolpack_Vol02.html
+      - ~Documents/BSC_Readmes/JBSimio/readme_JBSimio_Schoolpack_Vol03.html
+      - ~Documents/BSC_Readmes/JBSimio/readme_JBSimio_Schoolpack_Vol04.html
+      - readme_SC4D LEX Legacy - BSC JBSimio Education Compilation.html
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Clayhurst_EP1_Readme.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JB_School Pack Vol01.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JB_School Pack Vol02.jpg
+    lastModified: 2024-08-21T16:48:21-07:00
+    name: SC4D LEX Legacy - JBSimio Education Compilation
+    sha256: 207269bb7e86ea07498de258f1df77fb659d26f3abe5a4aaf2c3e6ece5ee2d9b
+    size: 3634239
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Clayhurst_EP1_Readme.jpg
+    timestamp: 2024-08-22T13:06:29.434Z
+    uncompressed: 3817587
+    url: https://www.sc4evermore.com/index.php/downloads/download/16-civic/136-sc4d-lex-legacy-jbsimio-education-compilation
+    version: "2"
+
+timestamp: 2024-08-28T07:56:44.780Z

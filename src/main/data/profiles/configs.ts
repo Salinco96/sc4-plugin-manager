@@ -31,19 +31,16 @@ export function toProfileData(profile: Readonly<ProfileInfo>): ProfileData {
     data.name = profile.name
   }
 
-  for (const feature of keys(profile.features)) {
-    data.features ??= {}
-    data.features[feature] = profile.features[feature]
+  if (Object.keys(profile.features).length) {
+    data.features = profile.features
   }
 
-  for (const optionId in profile.options) {
-    data.options ??= {}
-    data.options[optionId] = profile.options[optionId]
+  if (Object.keys(profile.options).length) {
+    data.options = profile.options
   }
 
-  for (const packageId in profile.packages) {
-    data.packages ??= {}
-    data.packages[packageId] = profile.packages[packageId]
+  if (Object.keys(profile.packages).length) {
+    data.packages = profile.packages
   }
 
   return data

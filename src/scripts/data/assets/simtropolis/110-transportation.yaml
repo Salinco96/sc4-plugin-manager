@@ -16809,6 +16809,176 @@ assets:
     uncompressed: 981598
     url: https://community.simtropolis.com/files/file/36386-farr-passenger-train-station/
     version: 1.0.0
+  simtropolis/36409-parking-lot-system-pls:
+    authors:
+      - "11241036"
+    category: transport
+    dependencies:
+      - simtropolis/33651-11241036-textures
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/33889-seasonal-woods-2nd-iteration
+      - simtropolis/24509-spot-simpeg-plop-orientation-tool
+      - simtropolis/36142-submenus-dll
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <p>
+      	<span style="color:#2980b9;"><strong>Description:</strong></span>
+      </p>
+
+
+      <p style="text-align:justify;">
+      	This plugin contains some sets of modular parking lots that can be put together in many ways (your imagination is your limit) to create parking lots. Since there are already some modular systems with asphalt textures with white parking lines online, I created sets with gravel and dirt textures instead. Most of these lots allow cars to park on them; however, it is arguable whether this is so useful, since, as you may know, one cannot put several transit-enabled lots next to each other because traffic cannot travel between two lots. Currently, there is a total of three sets, sorted by texture: Gravel, dark dirt, and light dirt.
+      </p>
+
+
+      <p>
+      	For further information, please refer to the Readme in the download.
+      </p>
+
+
+      <p>
+      	<strong>Note: </strong>There's been a last-minute change which is not reflected in the screenshot. I had to use different car props due to some technical issues with some cars appearing only during the day, others only appearing during the night. However, they are mostly placed the same way it looks in the screenshot.
+      </p>
+
+
+      <p>
+      	<strong>Available languages:</strong> English, German
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Dependencies:</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>11241036 Textures <span style="color:#c0392b;">Version 4 (Aug 20th, 2024) and above</span>:</strong> <a href="https://community.simtropolis.com/files/file/33651-11241036-textures/" rel="">https://community.simtropolis.com/files/file/33651-11241036-textures/</a>
+      </p>
+
+
+      <p>
+      	<strong><abbr title="Pegasus">PEG</abbr> <abbr title="Mountain Theme Pack">MTP</abbr> Super Pack:</strong> <a href="https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/" rel="">https://community.simtropolis.com/files/file/20966-peg-<abbr title="Mountain Theme Pack">mtp</abbr>-super-pack/</a>
+      </p>
+
+
+      <p>
+      	<strong>KSTeam S54 – Prop Pack Vol01:</strong> <a href="https://www.sc4evermore.com/index.php/downloads/download/234-ksteam-s54-prop-pack-vol01" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/234-ksteam-s54-prop-pack-vol01</a>
+      </p>
+
+
+      <p>
+      	<strong>SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack:</strong> <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	<em>You only need the files containing the <abbr title="BATT Squad Certification">BSC</abbr>-VIP Girafe Carpack vol01-vol02 v2 (Original) and the <abbr title="BATT Squad Certification">BSC</abbr>-VIP Girafe Carpack vol03 v2.</em>
+      </p>
+
+
+      <p>
+      	<strong>Seasonal Woods (2nd iteration) </strong>(you only need the file <em>GSW_Dummy Props.dat</em>): <a href="https://community.simtropolis.com/files/file/33889-seasonal-woods-2nd-iteration/" rel="">https://community.simtropolis.com/files/file/33889-seasonal-woods-2nd-iteration/</a>
+      </p>
+
+
+      <p>
+      	Optional but helpful:
+      </p>
+
+
+      <p>
+      	<strong>SPOT </strong>(for the yellow orientation blocks): <a href="https://community.simtropolis.com/files/file/24509-spot-simpeg-plop-orientation-tool/" rel="">https://community.simtropolis.com/files/file/24509-spot-simpeg-plop-orientation-tool/</a>
+      </p>
+
+
+      <p>
+      	<strong>Submenus DLL:</strong> <a href="https://community.simtropolis.com/files/file/36142-submenus-dll/" rel="">https://community.simtropolis.com/files/file/36142-submenus-dll/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Installation:</strong></span>
+      </p>
+
+
+      <p style="text-align:justify;">
+      	Copy or move all files coming with this plugin into your Plugins folder. There is one file per set of parking lots; decide yourself which ones you want to keep (you can keep all of them, they don’t override each other). The file <em>PLS Submenus.dat</em> contains the entries for the submenu and is mandatory for those users that use the Submenus DLL mod.
+      </p>
+
+
+      <p>
+      	To uninstall, please remove all instances of these parking lots from your cities and then remove all PLS files from your Plugins folder.
+      </p>
+
+
+      <p>
+      	<span><strong>Submenu compatibility:</strong></span>
+      </p>
+
+
+      <p style="text-align:justify;">
+      	This plugin has been optimized for usage with Memo’s Submenus DLL. This means that users that have downloaded and installed this mod will find all parking lots being placed into their own submenus. You will find a PLS submenu containing three lower submenus, each containing one texture set of parking lots. All other users will simply find these lots in the Miscellaneous Transport menu. The PLS submenu icon looks like this (not very creative, but it will have to do):
+      </p>
+
+
+      <p>
+      	<img alt="66ca44047c37c_PLSSubmenu.thumb.png.8c44e" class="ipsImage ipsImage_thumbnailed" height="44" src="https://www.simtropolis.com/objects/screens/monthly_2024_08/66ca44047c37c_PLSSubmenu.thumb.png.8c44ea481923d60ff0fe07d34f5ee043.png" width="176" >
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#2980b9;"><strong>Compatibility:</strong></span>
+      </p>
+
+
+      <p>
+      	This plugin is only compatible with SC4: Deluxe or SC4 with the Rush Hour Expansion pack installed.
+      </p>
+
+      						</body>
+    filename: Parking Lot System.zip
+    files:
+      - PLS DirtDark.dat
+      - PLS DirtLight.dat
+      - PLS Gravel.dat
+      - PLS Submenus.dat
+      - Readme.pdf
+      - Scr1.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/Scr1.jpg.ad44d509ae68a8e596c5e20a4f7a6df8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66ca4252eb48e_PLSSubmenu.png.5dd282bcd77411c9f87a62d0bfcc8f7e.png
+    lastModified: 2024-08-24T21:25:05Z
+    name: Parking Lot System (PLS)
+    sha256: b409051dc765934b8941ca565b95f9914a8aaff8847322e3f4c301d02181fa29
+    size: 984476
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/Scr1.thumb.jpg.bc7052b0238de14f13b068a4debf926e.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 1071213
+    url: https://community.simtropolis.com/files/file/36409-parking-lot-system-pls/
+    version: "1"
   simtropolis/3669-passenger-rail-stations-4tracks:
     authors:
       - JayMan
@@ -17738,4 +17908,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-4e73e9a5e97f6ee8b1862cc09ff27f23-Allotments-Day.jpg
     url: https://community.simtropolis.com/files/file/999-bus-stop-with-allotments/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z

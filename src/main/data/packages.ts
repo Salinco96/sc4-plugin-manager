@@ -3,17 +3,11 @@ import path from "path"
 
 import { glob } from "glob"
 
+import { AssetData, AssetInfo } from "@common/assets"
+import { Categories, CategoryID, CategoryInfo } from "@common/categories"
+import { OptionID, OptionType } from "@common/options"
 import { isNew } from "@common/packages"
-import {
-  AssetInfo,
-  CategoryInfo,
-  ConfigFormat,
-  OptionType,
-  PackageData,
-  PackageInfo,
-  VariantData,
-  VariantInfo,
-} from "@common/types"
+import { ConfigFormat, PackageData, PackageInfo, VariantData, VariantInfo } from "@common/types"
 import { readConfig, writeConfig } from "@node/configs"
 import { exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
@@ -26,7 +20,7 @@ import { loadAssetInfo } from "./assets"
  */
 export async function loadLocalPackages(
   basePath: string,
-  categories: { [categoryId: string]: CategoryInfo | undefined },
+  categories: Categories,
   onProgress: (current: number, total: number) => void,
 ): Promise<{ [packageId: string]: PackageInfo }> {
   console.info("Loading local packages...")
@@ -58,7 +52,7 @@ export async function loadLocalPackages(
 export async function loadLocalPackageInfo(
   packageId: string,
   packagePath: string,
-  categories: { [categoryId: string]: CategoryInfo | undefined },
+  categories: Categories,
 ): Promise<PackageInfo | undefined> {
   const entries = await fs.readdir(packagePath, { withFileTypes: true })
 
@@ -118,7 +112,7 @@ export async function loadLocalPackageInfo(
  */
 export async function loadRemotePackages(
   basePath: string,
-  categories: { [categoryId: string]: CategoryInfo | undefined },
+  categories: Categories,
   onProgress: (current: number, total: number) => void,
 ): Promise<{
   assets: { [assetId: string]: AssetInfo }
@@ -143,7 +137,7 @@ export async function loadRemotePackages(
     const configPath = path.join(assetsPath, assetsEntry)
 
     // TODO: This assumes that configs are correctly formatted
-    const configs = await readConfig<{ [assetId: string]: PackageData }>(configPath)
+    const configs = await readConfig<{ [assetId: string]: AssetData }>(configPath)
     for (const assetId in configs) {
       const assetInfo = loadAssetInfo(assetId, configs[assetId])
       if (assetInfo) {
@@ -219,7 +213,7 @@ export async function loadRemotePackages(
 export function loadRemotePackageInfo(
   packageId: string,
   packageData: PackageData,
-  categories: { [categoryId: string]: CategoryInfo | undefined },
+  categories: Categories,
 ): PackageInfo | undefined {
   const packageInfo: PackageInfo = {
     id: packageId,
@@ -242,13 +236,10 @@ export function loadRemotePackageInfo(
   }
 }
 
-export function parseCategory(
-  category: string,
-  categories: { [categoryId: string]: CategoryInfo | undefined },
-): string[] {
-  const subcategories = category.split(/\s*,\s*/)
+export function parseCategory(category: string, categories: Categories): CategoryID[] {
+  const subcategories = category.split(/\s*,\s*/) as CategoryID[]
 
-  let subcategory: string | undefined
+  let subcategory: CategoryID | undefined
   for (subcategory of subcategories) {
     while (subcategory) {
       const info: CategoryInfo | undefined = categories[subcategory]
@@ -270,7 +261,7 @@ export function parseCategory(
 export function loadVariantInfo(
   variantId: string,
   packageData: PackageData,
-  categories: { [categoryId: string]: CategoryInfo | undefined },
+  categories: Categories,
 ): VariantInfo {
   const variantData = packageData.variants?.[variantId] ?? {}
 
@@ -346,10 +337,15 @@ export function loadVariantInfo(
     variantInfo.options ??= []
 
     variantInfo.options.unshift({
-      choices: variantInfo.lots.map(lot => ({ label: lot.label, value: lot.id })),
-      default: "all",
+      choices: variantInfo.lots.map(lot => ({
+        condition: lot.requirements,
+        description: lot.description,
+        label: lot.label,
+        value: lot.id,
+      })),
+      default: variantInfo.lots.filter(lot => lot.default !== false).map(lot => lot.id),
       display: "checkbox",
-      id: "lots",
+      id: "lots" as OptionID,
       multi: true,
       section: "Lots", // TODO: i18n?
       type: OptionType.STRING,

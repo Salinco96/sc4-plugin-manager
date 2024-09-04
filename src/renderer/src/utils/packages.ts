@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from "react"
 
-import { isCategory } from "@common/categories"
+import { CategoryID, isCategory } from "@common/categories"
 import {
   getVariantIssues,
   isDeprecated,
@@ -213,7 +213,7 @@ export function filterVariant(
   }
 
   if (!filters.onlyErrors && !filters.onlyUpdates) {
-    if (!filters.dependencies && isCategory(variantInfo, "dependencies")) {
+    if (!filters.dependencies && isCategory(variantInfo, CategoryID.DEPENDENCIES)) {
       return false
     }
 

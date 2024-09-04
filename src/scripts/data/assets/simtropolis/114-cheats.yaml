@@ -1516,26 +1516,35 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
 
 
+      							
 
 
 
-
-
-
-
-
-
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that automatically executes cheat codes when loading the game or a city.
+      </p>
 
 
       <p>
-      	A DLL Plugin for SimCity 4 that automatically executes cheat codes when loading the game or a city.
+      	<strong>LoadZoneBitmap Cheat Code</strong>
+      </p>
+
+
+      <p>
+      	This cheat code allows the user to manually load a zone bitmap within the city view. The format is:<em> LoadZoneBitmap &lt;path&gt;</em>
+      </p>
+
+
+      <p>
+      	The command will be run before the cheat box is closed, if an error occurs an in-game message box will be shown. Depending on the number of zones in the bitmap it may take some time for the command to run. See the<em> ZoneBitmap Command</em> section for a description of the format.
       </p>
 
 
@@ -1626,12 +1635,56 @@ assets:
 
 
       <p>
-      	<strong>External File Format</strong>
+      	<strong>External Command File Format</strong>
       </p>
 
 
       <p>
-      	The external file must place each command or cheat on its own line. The cheats/commands will be executed sequentially starting from the top of the file.
+      	The external command file must place each command or cheat on its own line. The cheats/commands will be executed sequentially starting from the top of the file.
+      </p>
+
+
+      <p>
+      	<strong>ZoneBitmap Command</strong>
+      </p>
+
+
+      <p>
+      	The <em>ZoneBitmap</em> command can be used to load a zone bitmap that will be applied when loading a city. the command syntax is <em>ZoneBitmap &lt;path&gt;</em>. The ZoneBitmap format the DLL uses is based on the one developed by <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/533355-cyclone-boom/?do=hovercard" data-mentionid="533355" href="https://community.simtropolis.com/profile/533355-cyclone-boom/" rel="">@Cyclone Boom</a> and <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/737259-corinamarie/?do=hovercard" data-mentionid="737259" href="https://community.simtropolis.com/profile/737259-corinamarie/" rel="">@CorinaMarie</a> for their Image2zones tool.
+      </p>
+
+
+      <p>
+      	The required zone bitmap size varies depending on the city size. The zone bitmap is one row taller than the city tile because the last row is used to specify the colors for each zone and a few other options.
+      </p>
+
+
+      <p>
+      	Small city tile (4096 cells): 64x65<br>
+      	Medium city tile (16384 cells): 128x129<br>
+      	Large city tile (65536 cells): 256x257
+      </p>
+
+
+      <p>
+      	The command will write a text file containing the zone colors in the same location as the image file. The color information can be used to create an override plugin for the Zone Manager's displayed zone colors.
+      </p>
+
+
+      <p>
+      	<strong>Control Row</strong>
+      </p>
+
+
+      <p>
+      	The last row in the zone bitmap is the control row. The first 16 pixels from the bottom left indicate which colors map to the game's 16 zone types. Currently only zone types 1 through 9 are usable. The next 3 pixels control various zone layout options, these options are enabled if the corresponding pixel is set to a <abbr title="Red, Green, Blue">RGB</abbr> value of 255,165,0.
+      </p>
+
+
+      <p>
+      	Pixel 16 - Custom Size: Use a custom size for the zone grid. Equivalent to holding down Control when using the zoning tool.<br>
+      	Pixel 17 - Alternate Layout: Use an alternate layout when placing the zone grid. Equivalent to holding down Alt when using the zoning tool.<br>
+      	Pixel 18 - Place Streets: Place streets in the zoned areas. Equivalent to not pressing Shift when using the zoning tool.
       </p>
 
 
@@ -1673,23 +1726,23 @@ assets:
       						</body>
     filename: SC4AutoRunCheats.zip
     files:
-      - Third Party Notices.txt
-      - SC4AutoRunCheats.ini
-      - SC4AutoRunCheats.dll
-      - README.txt
       - LICENSE.txt
+      - README.txt
+      - SC4AutoRunCheats.dll
+      - SC4AutoRunCheats.ini
+      - Third Party Notices.txt
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_08/STEXIcon.png.b0766777b89d637524e08ec53f9d7da7.png
-    lastModified: 2024-08-14T01:30:06Z
+    lastModified: 2024-08-27T01:44:17Z
     name: SC4 Auto Run Cheats - DLL Plugin
     repository: https://github.com/0xC0000054/sc4-auto-run-cheats
-    sha256: d1a95b4e40288261256f3b076d6a5d342d984949741a43a470d0454d05da4cf6
-    size: 58086
+    sha256: 0b4c1585197c8dd9ca824e057f84adf93b16865a099744258b7ed77d6c23b7a2
+    size: 148841
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/STEXIcon.thumb.png.72fa844d04c6aae9acea9dd1f3bf97b6.png
-    timestamp: 2024-08-14T13:14:02.567Z
-    uncompressed: 130106
+    timestamp: 2024-08-27T09:21:20.239Z
+    uncompressed: 344522
     url: https://community.simtropolis.com/files/file/36384-sc4-auto-run-cheats-dll-plugin/
-    version: 1.1.0
+    version: 1.2.1
   simtropolis/3808-the-plopmatic-9000:
     authors:
       - mfc_app
@@ -1755,4 +1808,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-62fc352a7264906d58dc8698b752fbf6-Banking%20City-Mar.jpg
     url: https://community.simtropolis.com/files/file/925-first-national-bank-of-simnation/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z

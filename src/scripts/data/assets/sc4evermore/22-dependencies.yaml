@@ -135,7 +135,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 3750
+    downloads: 3764
     filename: SC4D_LEX_Legacy_HKABT_Dependencies_Pack.zip
     files:
       - readme_hkabt_dependencies.html
@@ -314,7 +314,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1954
+    downloads: 1987
     filename: JENX-Porkie Expanded Porkie Props.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/JENX-Porkie Expanded Porkie Props_index.png
@@ -556,7 +556,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 2060
+    downloads: 2074
     filename: SC4D LEX Legacy - NOB Dependencies Pack V2.zip
     files:
       - readme_nob_dependencies.html
@@ -609,7 +609,7 @@ assets:
     authors:
       - Mattb325
     category: dependencies
-    downloads: 1060
+    downloads: 1070
     lastModified: 2023-08-20T02:42:21-07:00
     name: Mattb325 Multifunction Stations Prop Pack (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MultiStationPropPack_s0.jpg
@@ -618,7 +618,7 @@ assets:
     authors:
       - Mattb325
     category: dependencies
-    downloads: 827
+    downloads: 836
     lastModified: 2023-08-20T02:43:16-07:00
     name: Mattb325 Multifunction Stations Prop Pack (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MultiStationPropPack_s1.jpg
@@ -627,7 +627,7 @@ assets:
     authors:
       - Kenworth
     category: dependencies
-    downloads: 612
+    downloads: 618
     lastModified: 2023-08-17T10:36:33-07:00
     name: SFBT Props Kenworth and royal Railway Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Eisenbahnprops_01.jpg
@@ -636,7 +636,7 @@ assets:
     authors:
       - Royal
     category: dependencies
-    downloads: 509
+    downloads: 513
     lastModified: 2023-08-17T10:44:15-07:00
     name: SFBT Props royal Light Signal Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Lichtsignale_01.jpg
@@ -645,7 +645,7 @@ assets:
     authors:
       - Royal
     category: dependencies
-    downloads: 532
+    downloads: 537
     lastModified: 2023-08-17T10:59:45-07:00
     name: SFBT Props royal Semaphore Signals Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Formsignale_01.jpg
@@ -654,7 +654,7 @@ assets:
     authors:
       - rambuckel
     category: dependencies
-    downloads: 497
+    downloads: 501
     lastModified: 2023-08-17T11:13:36-07:00
     name: SFBT Props rambuckel Horse Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SFBT_Pferde_Props_01.jpg
@@ -663,7 +663,7 @@ assets:
     authors:
       - Sam
     category: dependencies
-    downloads: 531
+    downloads: 537
     lastModified: 2023-08-17T11:19:43-07:00
     name: SFBT Props Sam Johnson Playground Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Spielplatzprops_01.jpg
@@ -672,7 +672,7 @@ assets:
     authors:
       - Peterycristi
     category: dependencies
-    downloads: 657
+    downloads: 664
     lastModified: 2023-08-17T11:24:20-07:00
     name: SFBT Props peterycristi Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/peterycristi_Props_01.jpg
@@ -681,7 +681,7 @@ assets:
     authors:
       - Gizmo
     category: dependencies
-    downloads: 474
+    downloads: 483
     lastModified: 2023-08-17T11:33:25-07:00
     name: Gizmo - Civic Vehicle Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/civic.jpg
@@ -690,7 +690,7 @@ assets:
     authors:
       - Gizmo
     category: dependencies
-    downloads: 480
+    downloads: 487
     lastModified: 2023-08-17T12:07:35-07:00
     name: Gizmo - SCC Bus Props
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/bus.jpg
@@ -735,7 +735,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 3394
+    downloads: 3443
     filename: SFBT Essentials December 2015__INSTALLER English_750.zip
     files:
       - IMPORTANT NOTE ON SFBT ESSENTIALS.txt
@@ -894,7 +894,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 670
+    downloads: 682
     filename: WalkingSnake_Textures_Vol01.zip
     files:
       - _Documents/WS Textures.jpg
@@ -915,7 +915,7 @@ assets:
     authors:
       - sc4evermore
     category: dependencies
-    downloads: 694
+    downloads: 698
     lastModified: 2023-11-11T08:06:20-08:00
     name: Ulisse Wolf - Fallout Prop Pack Vol 2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/DD.jpg
@@ -924,7 +924,7 @@ assets:
     authors:
       - SimFox
     category: dependencies
-    downloads: 721
+    downloads: 733
     lastModified: 2024-01-20T05:28:02-08:00
     name: SimFox Tree Pack 1 - Chestnuts
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SFChestnuts_d.jpg
@@ -1126,7 +1126,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 973
+    downloads: 982
     filename: SC4D LEX Legacy - APTX Dependencies Pack V1.zip
     files:
       - readme_APTX Dependency Pack V1.html
@@ -1170,16 +1170,423 @@ assets:
     authors:
       - ks_jpn
     category: dependencies
-    downloads: 1149
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the BSC-assembled prop packs of popular Japanese BATer ks_jpn, which had been available on
+      the Lot Exchange (LEX) at SC4 Devotion. After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in
+      June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to
+      install.</p>\r
+
+      <p>Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to
+      properly maintain, update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <p><strong><span style=\"font-size: 24px;\">CHANGE LOG</span></strong></p>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <ul>\r
+
+      <li>20.01.2024 - Update to Version 2</li>\r
+
+      <ul>\r
+
+      <li>Official update in the installer itself</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>Some small adjustments and clean-ups in the prop packs and within the upload</li>\r
+
+      <li>ks_jpn MEGA Props Vol04 has been updated to v2 as the Jade Hotel model had to be pulled out. That model is not a ks_JPN creation (as it turned out recently), but it is Raika's (another
+      Japanese BATter) creation that was released almost 20 years ago with the Freyman Hotel upload. The said model is/will be available in the SC4D LEX Legacy - Raika Dependency Collection V1,
+      shortly.</li>\r
+
+      <li>ks_jpn MEGA Props Vol11 has been updated to v2 after it received a recently recovered model; the Christmas version of the Akasaka Prince Hotel</li>\r
+
+      <li>ks_jpn MEGA Props Vol14 has been updated to v2 after the included LTUArena-001_text.dat had to be updated as the the texture inside the DAT used a dummy and conflicting ID based on the
+      provided test range by the SC4Tool. The corresponding lot will be updated with the new texture ID.</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <p><span style=\"font-size: 24px;\"><strong>Installation</strong></span></p>\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
+      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
+      them also exists, but is not recommended.)<span style=\"color: #ba372a;\">**</span> After this, click over to the Install tab, and click \"Start installation\" to begin the installation
+      procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p><span style=\"color: #ba372a;\">** Though there is an inbuilt cleanitol function in the installer, at this point it is not working entirely properly so it is highly recommended to run the
+      individual cleanitol files or the master cleanitol for the compilation with one of the following 3rd party cleanitol tools</span>:</p>\r
+
+      <p><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17 Cleanitol</a> (new tool)</p>\r
+
+      <p><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol</a> (old tool)</p>\r
+
+      <p><strong><span style=\"font-size: 24px;\">Credits</span></strong></p>\r
+
+      <p>The following members contributed models to this collection:</p>\r
+
+      <ul>\r
+
+      <li>ks_jpn</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus. Previous Prop Pack assembly performed by members of the BSC.</p>\r
+
+      <h5 class=\"leftheading\"><span style=\"font-size: 18px;\">Special Thanks</span></h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4 Devotion and SC4Evermore.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      <p><strong><span style=\"font-size: 24px;\">Contents</span></strong></p>\r
+
+      <p>This package contains the following Dependency Packs:</p>\r
+
+      <h4>MEGA Prop Packs</h4>\r
+
+      <ol>\r
+
+      <ol>\r
+
+      <li>ks_jpn MEGA Props Vol01</li>\r
+
+      <ul>\r
+
+      <li>21st Century Tower</li>\r
+
+      <li>Al Attar Tower</li>\r
+
+      <li>API World Tower</li>\r
+
+      <li>Ayad Hassan Bin Habshi</li>\r
+
+      <li>Coventry Tower</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol02</li>\r
+
+      <ul>\r
+
+      <li>Bahrain WTC</li>\r
+
+      <li>Infinity Tower</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol03</li>\r
+
+      <ul>\r
+
+      <li>Burj Al Arab</li>\r
+
+      <li>Dorra Bay</li>\r
+
+      <li>Dusit Dubai</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol04 v2 - updated to v2 in Version 2</li>\r
+
+      <ul>\r
+
+      <li>Vienna Tower</li>\r
+
+      <li>Marina Residence</li>\r
+
+      <li>Marina Crown</li>\r
+
+      <li><s>Jade Hotel</s> - this model had to be removed as this is a creation of Raika and not a creation of ks_JPN</li>\r
+
+      <li>Fortune Serene</li>\r
+
+      <li>Eliot Tower</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol05</li>\r
+
+      <ul>\r
+
+      <li>Wilton Tower</li>\r
+
+      <li>Najd Tower</li>\r
+
+      <li>Millennium Tower</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol06</li>\r
+
+      <ul>\r
+
+      <li>Zayeed Residence</li>\r
+
+      <li>Tower Residence B</li>\r
+
+      <li>Tower Residence</li>\r
+
+      <li>Sompo Japan</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol07</li>\r
+
+      <ul>\r
+
+      <li>Chelsea Tower</li>\r
+
+      <li>Shinjuku Mitsui Building</li>\r
+
+      <li>Shinjuku Sumitomo Building</li>\r
+
+      <li>Shiodome Media Tower</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol08</li>\r
+
+      <ul>\r
+
+      <li>Sears Tower</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol09</li>\r
+
+      <ul>\r
+
+      <li>Rosslare Tower</li>\r
+
+      <li>Oceanic Tower</li>\r
+
+      <li>Princess Tower</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol10</li>\r
+
+      <ul>\r
+
+      <li>Shinjuku Nomura Building</li>\r
+
+      <li>Two Prudential Plaza</li>\r
+
+      <li>Toshiba Building</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol11 v2 - updated to v2 in Version 2</li>\r
+
+      <ul>\r
+
+      <li>Grand Prince Hotel Akasaka</li>\r
+
+      <li>Grand Prince Hotel Akasaka (Christmas Version)</li>\r
+
+      <li>Lighthouse Tower</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol12 (Stadiums Part 1)</li>\r
+
+      <ul>\r
+
+      <li>Allianz Arena</li>\r
+
+      <li>Osaka Expo '70 Stadium</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol13 (Stadiums Part 2)</li>\r
+
+      <ul>\r
+
+      <li>Kashima Stadium</li>\r
+
+      <li>Stadion Feyenoord (DeKuip)</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol14 (Stadiums Part 3) v2 - updated to v2 in Version 2</li>\r
+
+      <ul>\r
+
+      <li>LTU Arena</li>\r
+
+      <li>Kobe Wing Stadium</li>\r
+
+      <li>Kobe Wing Stadium FIFA Worldcup Version</li>\r
+
+      <li>Yurtec Stadium</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol15</li>\r
+
+      <ul>\r
+
+      <li>Lake City Tower</li>\r
+
+      <li>Worldwide Plaza </li>\r
+
+      <li>Tour Montparnasse</li>\r
+
+      <li>Silicon Gates</li>\r
+
+      </ul>\r
+
+      <li>ks_jpn MEGA Props Vol16</li>\r
+
+      <ul>\r
+
+      <li>Arabian Canal</li>\r
+
+      <li>Oasis Park</li>\r
+
+      <li>Palm Square</li>\r
+
+      <li>Bahrein WTC (recovered version)</li>\r
+
+      </ul>\r
+
+      </ol>\r
+
+      </ol>\r
+
+      <p>Various pieces of original documentation and earlier Cleanitol definitions can be found in the \"_Documents\" folder.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/SC4D LEX Legacy - ks_JPN Dependencies Pack V2_SC4E.jpg\"
+      data-lightbox=\"lightbox153\" data-alt=\"lightboxSC4D LEX Legacy - ks_JPN Dependencies Pack V2_SC4E\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SC4D LEX Legacy - ks_JPN Dependencies Pack V2_SC4E.jpg\" alt=\"SC4D LEX Legacy - ks_JPN Dependencies Pack V2_SC4E\"
+      ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 1180
+    filename: SC4D LEX Legacy - ks_JPN Dependencies Pack V2.zip
+    files:
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol01/ks_jpn MEGA Props Vol01.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol01/note_ks_jpn MEGA Props Vol01.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol02/ks_jpn MEGA Props Vol02.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol02/note_ks_jpn MEGA Props Vol02.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol03/ks_jpn MEGA Props Vol03.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol03/note_ks_jpn MEGA Props Vol03.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol04 v2/ks_jpn MEGA Props Vol04 v2.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol04 v2/note_ks_jpn MEGA Props Vol04.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol05/ks_jpn MEGA Props Vol05.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol05/note_ks_jpn MEGA Props Vol05.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol06/ks_jpn MEGA Props Vol06.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol06/note_ks_jpn MEGA Props Vol06.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol07/ks_jpn MEGA Props Vol07.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol07/note_ks_jpn MEGA Props Vol07.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol08/ks_jpn MEGA Props Vol08.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol08/note_ks_jpn MEGA Props Vol08.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol09/ks_jpn MEGA Props Vol09.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol09/note_ks_jpn MEGA Props Vol09.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol10/ks_jpn MEGA Props Vol10.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol10/note_ks_jpn MEGA Props Vol10.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol11 v2/ks_jpn MEGA Props Vol11 v2.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol11 v2/note_ks_jpn MEGA Props Vol11 v2.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol12 (Stadiums Part 1)/ks_jpn MEGA Props Vol12.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol12 (Stadiums Part 1)/note_ks_jpn MEGA Props Vol12.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol13 (Stadiums Part 2)/ks_jpn MEGA Props Vol13.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol13 (Stadiums Part 2)/note_ks_jpn MEGA Props Vol13.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol14 (Stadiums Part 3) v2/ks_jpn MEGA Props Vol14 v2.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol14 (Stadiums Part 3) v2/note_ks_jpn MEGA Props Vol14 v2.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol15/ks_jpn MEGA Props Vol15.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol15/note_ks_jpn MEGA Props Vol15.txt
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol16/ks_jpn MEGA Props Vol16.dat
+      - ks_JPN/MEGA Props#/ks_jpn MEGA Props Vol16/note_ks_jpn MEGA Props Vol16.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol04 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol05.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol06.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol07.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol08.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol09.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol10.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol11 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol12.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol13.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol14 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol15.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_ks_jpn MEGA Props Vol16.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol04 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol05_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol06_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol07_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol08_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol09_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol10_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol11 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol12_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol13_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol14 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol15_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/ks_jpn MEGA Props Vol16_index.jpg
+      - ~Documents/readme.css
+      - ~Documents/readme_ks_jpn_dependencies.html
+      - readme.css
+      - readme_ks_jpn_dependencies.html
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SC4D LEX Legacy - ks_JPN Dependencies Pack V2_SC4E.jpg
     lastModified: 2024-01-20T05:46:39-08:00
     name: SC4D LEX Legacy - ks_JPN Dependencies Pack V2
+    sha256: 70cd2cfa7be8a07573dc428cc70df4b03dbadf073530612473102bb9b8229c5d
+    size: 172123373
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SC4D LEX Legacy - ks_JPN Dependencies Pack V2_SC4E.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 172215248
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/153-sc4d-lex-legacy-ks-jpn-dependencies
+    version: "2"
   sc4evermore/154-bsc-vip-girafe-mgb204-bicyclepack-vol01:
     authors:
       - Girafe
     category: dependencies
-    downloads: 566
+    downloads: 574
     lastModified: 2023-11-11T08:19:39-08:00
     name: BSC VIP Girafe MGB204 Bicyclepack vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_bicyclepack.jpg
@@ -1188,7 +1595,7 @@ assets:
     authors:
       - Marrast
     category: dependencies
-    downloads: 853
+    downloads: 858
     lastModified: 2023-11-11T08:18:49-08:00
     name: SC4D LEX Legacy - Marrast MEGA Props Vol 01 and 02
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BSC MEGA Props - Marrast Vol01 v2-index.jpg
@@ -1257,7 +1664,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 684
+    downloads: 706
     filename: Vortext - Vortexture 1 and 2  (Base Set - Grass and Dirt).zip
     files:
       - ~Documents/Vortext_Readmes/Vortexture 2_lex pic vrtxtr2v2 large.jpg
@@ -1317,7 +1724,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 563
+    downloads: 570
     filename: HAARL MEGA Props Dutch Vol01 v2_1374.zip
     files:
       - ~Documents/readme_HAARL MEGA Props Dutch Vol01 v2.txt
@@ -1337,7 +1744,7 @@ assets:
     authors:
       - Haarlemmergold
     category: dependencies
-    downloads: 366
+    downloads: 369
     lastModified: 2023-11-12T08:42:40-08:00
     name: HAARL MEGA Props German Vol 01
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/172-haarl-mega-props-german-vol-01
@@ -1345,7 +1752,7 @@ assets:
     authors:
       - Haarlemmergold
     category: dependencies
-    downloads: 336
+    downloads: 340
     lastModified: 2023-11-12T08:43:45-08:00
     name: HAARL MEGA Props Hungarian Vol 01
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/173-haarl-mega-props-hungarian-vol-01
@@ -1517,7 +1924,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1004
+    downloads: 1012
     filename: SC4D LEX Legacy - SOMY Dependencies Pack V2.zip
     files:
       - readme_SOMY_dependencies.html
@@ -1571,7 +1978,7 @@ assets:
     authors:
       - c
     category: dependencies
-    downloads: 901
+    downloads: 911
     lastModified: 2024-01-20T06:05:39-08:00
     name: CPT Terrain Essentials No8 and No9
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/CPTNo8.JPG
@@ -1580,7 +1987,7 @@ assets:
     authors:
       - sc4evermore
     category: dependencies
-    downloads: 533
+    downloads: 538
     lastModified: 2023-11-21T15:13:34-08:00
     name: LBT Mega Prop Pack
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/176-lbt-mega-prop-pack
@@ -1588,7 +1995,7 @@ assets:
     authors:
       - sc4evermore
     category: dependencies
-    downloads: 522
+    downloads: 527
     lastModified: 2023-11-21T15:15:42-08:00
     name: LBT Mega Texture Pack vol01
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/177-lbt-mega-texture-pack-vol01
@@ -1596,7 +2003,7 @@ assets:
     authors:
       - sc4evermore
     category: dependencies
-    downloads: 364
+    downloads: 369
     lastModified: 2023-11-21T15:18:56-08:00
     name: LBT Prop Pack Latin American Housepack
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/178-lbt-prop-pack-latin-american-housepack
@@ -1604,7 +2011,7 @@ assets:
     authors:
       - sc4evermore
     category: dependencies
-    downloads: 393
+    downloads: 397
     lastModified: 2023-11-21T15:21:07-08:00
     name: Swamper77's Automata Essentials
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/179-swamper77s-automata-essentials
@@ -1612,7 +2019,7 @@ assets:
     authors:
       - Delecto
     category: dependencies
-    downloads: 399
+    downloads: 408
     lastModified: 2024-01-20T06:14:55-08:00
     name: VIP Delecto Ploppable People
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_ploppable_people.jpg
@@ -1621,7 +2028,7 @@ assets:
     authors:
       - CityMax
     category: dependencies
-    downloads: 371
+    downloads: 377
     lastModified: 2024-01-22T09:49:35-08:00
     name: TSC Props Pack - CM Champs Elysee Prop Pack v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/TSC Prop Pack - CM Champs Elysee v2.jpg
@@ -1753,7 +2160,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 562
+    downloads: 577
     filename: VIP Vnaoned Props Pack vol01 v3.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/VIP_Vnaoned_Vehicules v2_index.jpg
@@ -1799,7 +2206,7 @@ assets:
     authors:
       - Orange_O
     category: dependencies
-    downloads: 405
+    downloads: 411
     lastModified: 2024-01-22T09:46:44-08:00
     name: TSC Props Pack - Orange Mega Props v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/TSC Props Pack - Orange Mega Props Vol01 v2.jpg
@@ -1808,7 +2215,7 @@ assets:
     authors:
       - eggman121
     category: dependencies
-    downloads: 528
+    downloads: 542
     lastModified: 2024-01-28T16:21:45-08:00
     name: Real RailWay (RRW) Reskin 3rd Party Lot Support
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/NCD-BSC RealRailway Texture Pack V1-01.jpg
@@ -1817,7 +2224,7 @@ assets:
     authors:
       - Simmer2
     category: dependencies
-    downloads: 384
+    downloads: 391
     lastModified: 2024-01-20T02:23:32-08:00
     name: SM2 RRW Legacy Lottex Mega Texture Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/RRW_Lottex_SM2.jpg
@@ -1826,7 +2233,7 @@ assets:
     authors:
       - Cogeo
     category: dependencies
-    downloads: 381
+    downloads: 388
     lastModified: 2024-01-20T16:58:13-08:00
     name: Cogeo Logistics Centre Dependency Pack V2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/logistics_1.jpg
@@ -1835,7 +2242,7 @@ assets:
     authors:
       - Girafe
     category: dependencies
-    downloads: 285
+    downloads: 291
     lastModified: 2024-01-21T02:25:51-08:00
     name: BSC-VIP Girafe Flags
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_flags.jpg
@@ -1884,7 +2291,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 323
+    downloads: 332
     filename: BSC-TSC Girafe French Road Signs.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC-TSC Girafe French Road Signs_index.jpg
@@ -1909,7 +2316,7 @@ assets:
     authors:
       - FrankU
     category: dependencies
-    downloads: 392
+    downloads: 401
     lastModified: 2024-01-29T17:28:07-08:00
     name: BNL FrankU Essentials V2.1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BNL Essentials V2.0 LEX image.jpg
@@ -1918,7 +2325,7 @@ assets:
     authors:
       - Patfirefghtr
     category: dependencies
-    downloads: 262
+    downloads: 268
     lastModified: 2024-01-23T08:02:07-08:00
     name: ITC Pat Texture Pack Vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ViewOne.jpg
@@ -1927,16 +2334,79 @@ assets:
     authors:
       - Sciurus
     category: dependencies
-    downloads: 286
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>Here it is... the waited S54 PropPack Vol.1 from the KSTeam. This propack includes many props I use in my own LOTs and Krasner use too.
+      It'll be very usefull to make your LOTs more frenchy or just european... this download includes a file .dat which groups prop families from Girafe vehicules. So the following sentence is very
+      important !</p>\r
+
+      <p><span style=\"color: #e03e2d;\"><strong>THIS DEPENDENCY HAS GOT ANOTHER DEPENDENCY !!!!</strong></span></p>\r
+
+      <p>Make sure that you have these following files BEFORE downloading this one:</p>\r
+
+      <p><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">SC4D LEX Legacy - BSC Common Dependencies Pack v8</a> (and
+      above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</p>\r
+
+      <ul>\r
+
+      <li>BSC-VIP Girafe Carpack vol01-vol02 v2 (Original)</li>\r
+
+      <li>BSC-VIP Girafe Carpack vol03 v2</li>\r
+
+      </ul>\r
+
+      <p><span style=\"text-decoration: underline;\"><strong>Installation</strong></span>: Copy/extract the <strong>KSTeam </strong>parent folder into your Plugins. If you extracted
+      the <em>~Documents</em> folder into you plugins too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r
+
+      <p>Thank you for reading and enjoy this prop pack. Next uploads will come in the next days. Stay tuned..</p>\r
+
+      <p><em>Sciurus from KSTeam</em></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/IMGS54PropPack.jpg\" data-lightbox=\"lightbox234\"
+      data-alt=\"lightboxIMGS54PropPack.jpg|KSTeam S54 - Prop Pack Vol01_index\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/IMGS54PropPack.jpg\" alt=\"IMGS54PropPack\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/KSTeam S54 - Prop Pack Vol01_index.jpg\" data-lightbox=\"lightbox234\"
+      data-alt=\"lightboxIMGS54PropPack.jpg|KSTeam S54 - Prop Pack Vol01_index\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/KSTeam S54 - Prop Pack Vol01_index.jpg\" alt=\"KSTeam S54 - Prop Pack Vol01_index2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 298
+    filename: KSTeam S54 - Prop Pack Vol01_3582.zip
+    files:
+      - KSTeam/Sciurus/PropPack vol1/S54 - Girafe Vehicules.dat
+      - KSTeam/Sciurus/PropPack vol1/S54 - PropPack Vol01.dat
+      - ~Documents/KSTeam_Readmes/KSTeam S54 - Prop Pack Vol01_Readme.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/KSTeam S54 - Prop Pack Vol01_index.jpg
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/IMGS54PropPack.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/KSTeam S54 - Prop Pack Vol01_index.jpg
     lastModified: 2024-01-23T08:53:58-08:00
     name: KSTeam S54 - Prop Pack Vol01
+    sha256: b7b9ec2216f2a553beb6f4087eb3bec4880c48122c85fd5ab0fe90dff12c7f55
+    size: 1126465
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/IMGS54PropPack.jpg
+    timestamp: 2024-08-28T10:33:57.224Z
+    uncompressed: 1813880
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/234-ksteam-s54-prop-pack-vol01
+    version: "1.0"
   sc4evermore/236-nuts-props-pack-a-v2:
     authors:
       - NUTs
     category: dependencies
-    downloads: 292
+    downloads: 298
     lastModified: 2024-01-23T09:14:41-08:00
     name: NUTs Props Pack A v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/NUTs Prop Pack A.jpg
@@ -1945,7 +2415,7 @@ assets:
     authors:
       - Mozukuss
     category: dependencies
-    downloads: 422
+    downloads: 429
     lastModified: 2024-01-23T15:38:35-08:00
     name: SC4D LEX Legacy - Mozukuss Dependency Pack V1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mozukuss_megapack1.jpg
@@ -1954,7 +2424,7 @@ assets:
     authors:
       - Raika
     category: dependencies
-    downloads: 408
+    downloads: 415
     lastModified: 2024-01-28T14:01:02-08:00
     name: SC4D LEX Legacy - Raika Dependency Pack V1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Raika Mega Pack VOl 01 LEX Image.jpg
@@ -1963,7 +2433,7 @@ assets:
     authors:
       - Torremayor
     category: dependencies
-    downloads: 451
+    downloads: 460
     lastModified: 2024-01-23T15:49:45-08:00
     name: SC4D LEX Legacy - Torremayor Dependency Pack V1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/torremayor MEGA Pack vol01_day.jpg
@@ -1972,7 +2442,7 @@ assets:
     authors:
       - NHP
     category: dependencies
-    downloads: 358
+    downloads: 366
     lastModified: 2024-01-23T16:11:05-08:00
     name: SC4D LEX Legacy - NHP Dependency Compilation
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Proppackvol1.jpg
@@ -1981,7 +2451,7 @@ assets:
     authors:
       - XiahouDun
     category: dependencies
-    downloads: 337
+    downloads: 345
     lastModified: 2024-01-23T16:24:16-08:00
     name: SC4D LEX Legacy - XDs Parking Lot Dependency Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Props lot readme.jpg
@@ -1990,7 +2460,7 @@ assets:
     authors:
       - Yoman
     category: dependencies
-    downloads: 300
+    downloads: 308
     lastModified: 2024-01-24T02:06:41-08:00
     name: SMP Yoman Prop Pack Vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/SMPPortRealismProjectPropPackVolume1.jpg
@@ -1999,7 +2469,7 @@ assets:
     authors:
       - Tabi
     category: dependencies
-    downloads: 311
+    downloads: 318
     lastModified: 2024-01-27T17:35:04-08:00
     name: Tabi Mega Prop Pack vol04 - Navy Ship Sets
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Tabi Mega Prop Pack vol04_LEX250.jpg
@@ -2095,7 +2565,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 483
+    downloads: 506
     filename: ncd Railyard Texture Mega-Pack Vol01 v3.zip
     files:
       - ncd/Textures/Railyard Texture Mega-Pack Vol01 v3.dat
@@ -2121,7 +2591,7 @@ assets:
     authors:
       - NCD
     category: dependencies
-    downloads: 336
+    downloads: 341
     lastModified: 2024-01-28T16:34:39-08:00
     name: NCD Railyard Texture Mega-Pack Vol02
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Railyard Mega Pack 2a.jpg
@@ -2130,7 +2600,7 @@ assets:
     authors:
       - Jondor
     category: dependencies
-    downloads: 289
+    downloads: 293
     lastModified: 2024-01-29T07:41:20-08:00
     name: Jondor Modular RR Props - Phase 1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/modular-rr.jpg
@@ -2220,7 +2690,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 166
+    downloads: 172
     filename: Romualdillo - Props VOL01 v1.2.zip
     files:
       - ~Documents/Romualdillo_Readmes/Romualdillo_props_vol01_ReadMe.txt
@@ -2252,6 +2722,11 @@ assets:
     category: dependencies
     dependencies:
       - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex
+      - sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/165-sc4d-lex-legacy-jeronij-ship-pack
+      - sc4evermore/204-sc4d-lex-legacy-mikeseith-multi-level-modular-garages
     description: "<body>\r
 
       \        <div class=\"jd_description_wrapper jd_clear\"><p>The SC4D LEX Legacy - BSC Common Dependencies Pack is a unified package with a Java installer, containing over 150 frequently used
@@ -2260,89 +2735,68 @@ assets:
 
       <p><span style=\"text-decoration: underline;\"><strong>CHANGELOG</strong></span></p>\r
 
-      <p><span style=\"text-decoration: underline;\"><strong>IMPORTANT NOTE:<br></strong></span>The <strong>Version 9 update(s)</strong> of the BSC Common Dependencies will be a series of smaller
-      updates (before we move to version 10) mostly related to the BSC Essentials and the SimGoober related model packs. These small updates will be noted by the next alphabetical letter in line and a
-      note about the release date. Please keep an eye on the changelog.</p>\r
+      <p><span style=\"text-decoration: underline;\"><strong>IMPORTANT NOTE:<br></strong></span><span style=\"text-decoration: line-through;\">The <strong>Version 9 update(s)</strong> of the BSC
+      Common Dependencies will be a series of smaller updates (before we move to version 10) mostly related to the BSC Essentials and the SimGoober related model packs. </span>These small updates will
+      be noted by the next alphabetical letter in line and a note about the release date. Please keep an eye on the changelog.**</p>\r
 
-      <p><strong>Version 9a re-update (02 May 2024)</strong></p>\r
+      <p>**Version 9b update turned out to be a bit bigger update. Check the ChangeLog, please.</p>\r
 
-      <p>An unfortunate bug was brought to my attention which relates to the Master Cleanitol script and the separate cleanitol script for the BSC Textures vol03 v4. For some reason the SC4 Cleanitol
-      tool (NOT The BSC Cleanitol) was removing contents based on the names of 3 DAT files in the mentioned scripts which can have negative side effects on already installed contents. The three files
-      names (names of ancient and currently unavailable files) have been removed from the scripts. Sorry for the inconviniences.</p>\r
-
-      <p><strong>Version 9a update (30 April 2024)</strong>: </p>\r
+      <p><strong>Version 9b update (21 August 2024)</strong></p>\r
 
       <ul>\r
 
-      <li>Yet another small fix on the latest version of the <em>BSC MEGA Props JENX Vol01</em>, so now it's running on version 4. (<strong>BSC MEGA Props JENX Vol01<span style=\"color:
-      #e03e2d;\"> v4</span></strong>)</li>\r
+      <li>The <strong>BSC MEGA Props - Rubik3 Vol01 - WTC Props</strong> dependency pack has been <strong><span style=\"text-decoration: underline; color: #e03e2d;\">REMOVED</span></strong> from this
+      compilation as with a recent update it has been moved into its own legacy pack: <strong><a href=\"/index.php/downloads/download/20-ploppable/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex\"
+      target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Custodian Rubik WTC Complex V2</a></strong></li>\r
 
-      <li>A new model (Leurink Architects) have been recovered and added to the <strong>BSC MEGA Props T1<span style=\"color: #e03e2d;\"> v2</span></strong> dependency pack.</li>\r
+      <li>The <strong>BSC BATProps Newman Inc RPK Vol01 v2</strong> dependency pack has been <span style=\"text-decoration: underline;\"><strong><span style=\"color: #e03e2d; text-decoration:
+      underline;\">REMOVED</span></strong></span> from this compilation as with recent updates it has been moved into the <strong><a
+      href=\"/index.php/downloads/download/14-park/277-sc4d-lex-legacy-bsc-canals-collection\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Canals Collection V2</a></strong></li>\r
 
-      <li>Some additional props were recovered and added to the <strong>BSC MEGA Props SG Vol01<span style=\"color: #e03e2d;\"> v4</span></strong><span style=\"color: #e03e2d;\"> </span>dependency
-      pack.</li>\r
+      <li>The brand new <strong>BSC MEGA Props Caliban Vol01</strong> dependency pack has been added to the compilation, bringing back Caliban's ancient models and props to support up coming
+      re-hosting efforts.</li>\r
 
-      <li>All four<strong> BSC SG Residentials Models (vol01-vol04)</strong> dependency pack has been slightly updated as preparation for the release of the SC4D LEX Legacy - SimGoober
-      Residentials pack. Now they are running on<strong><span style=\"color: #e03e2d;\"> v3</span></strong>. </li>\r
+      <li>The brand new <strong>BSC MEGA Props YDR Vol01</strong> dependency pack has been added to the compilation as a preparation for the re-hosting efforts of some of Yoder7652's uploads.</li>\r
 
-      <li>As a result of the improvement and clean-up of the BSC Essentials now it has been updated to <strong>BSC Essentials<span style=\"color: #e03e2d;\"> 2024a</span></strong>. </li>\r
+      <li>BSC Essentials has received further custom UIs (including the DEDWD_Commercial_commonfiles.dat - released on STEX as a side file of the <strong><a
+      href=\"https://community.simtropolis.com/files/file/13153-bsc-mega-props-dae-vol02/\" target=\"_blank\" rel=\"noopener\">BSC MEGA Props DAE Vol02</a></strong> download -, which is a collection
+      of custom UIs created by Deadwoods for his Aussie and other commercial shop sets) and now it's running as <strong>BSC Essentials <span style=\"color: #e03e2d;\">v2024b</span></strong>.</li>\r
 
-      <li>The <strong>BSC Mod Prop Family Names<span style=\"color: #e03e2d;\"> v4</span></strong> got a few new propfamily names cohort properties to be used with LE or PIM-X.</li>\r
+      <li>After it was discovered that the former MS Textures file (MikeSeiths custom textures for his dealerships) that was merged into the BSC Textures Vol03 has the wrong ID structure (it used the
+      dummy test ID range from the SC4Tool), this has been fixed andincorporated into the new updated <strong>BSC Textures Vol03<span style=\"color: #e03e2d;\"> v5</span></strong>.</li>\r
 
-      <li>The installer itself have got 2-4 important updates, though they came last minute so they are not listed in the readme:\r
+      <li>A few new models and props have been added to the second volume of Debussyman's dependency pack which runs now as <strong>BSC MEGA Props DBSSYMN Vol02<span style=\"color:
+      #e03e2d;\"> v3</span></strong>.</li>\r
 
-      <ul>\r
+      <li>A few new props have been added to the first volume of Deadwoods' dependency pack, which runs now as <strong>BSC MEGA Props DEDWD Vol01<span style=\"color:
+      #e03e2d;\"> v4</span></strong>.</li>\r
 
-      <li>added scroll bars to Welcome Panel</li>\r
-
-      <li>added support for clickable links in HTML (when the license/welcome panel is HTML based and not text based)</li>\r
-
-      <li>switch to HTML based Welcome Panel</li>\r
-
-      <li>the inbuild cleanitol feature has been removed as it did not function properly, so it is highly recommended to use one of the available 3rd party cleanitol tools.</li>\r
-
-      </ul>\r
-
-      </li>\r
+      <li>From the <strong>Grfe_Props_Pack_Carpack vol04.dat</strong> an MMP template exemplar has been removed as it does not have any purpose, but was able to cause confusion. There is no version
+      change this time. Just re-install the file from this update.</li>\r
 
       </ul>\r
 
-      <p>As always <span style=\"color: #e03e2d;\">it is highly recommended to run one of the 3rd party cleanitol tools and remove any previous versions from your plugins before you install the new
-      version.</span><br>In the <strong><em>~Documents</em></strong> folder in the main ZIP you will find the <strong><em>Prop-Texture Catalogue Index and Cleanitol</em></strong> subfolder where you
-      can find <em>Cleanitol_MASTER REMOVE LIST_BSC Common Dependencies Pack Version ##.txt</em> or optionally you can find all the individual cleanitol files in the <strong>Prop-Texture Catalogue
-      Index and CleanitolCleanitols</strong> and by using either the newer <strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\"
-      rel=\"noopener\">nos.17's SC4 Cleanitol</a></strong> or the older <strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC
-      Cleanitol</a></strong> tool you can search and remove the old and outdated versions of these files. Again to avoid possible conflicts and glitches it is highly recommended to run either of these
-      tools.</p>\r
+      <hr>\r
 
-      <p>If your last installed version was the Version 8 of the BSC Common Dependencies Pack, you may manually remove the following files:</p>\r
+      <p>As always it is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins, but also do NOT forget to make back-ups of your plugins folder,
+      just in case.<br>Optionally in the<em> ~Documents</em> folder in the main ZIP you can find the all the individual cleanitol files and by using either the newer <strong><a
+      href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a></strong> or the older <strong><a
+      href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC Cleanitol</a></strong> tool you can search and remove old and outdated
+      versions of these files.</p>\r
 
-      <ul>\r
+      <p>IMPORTANT NOTE:</p>\r
 
-      <li>BSC MEGA Props - JENX Vol01 v3.dat</li>\r
+      <p>From Version 9b temporarily the <em>Cleanitol_MASTER REMOVE LIST_BSC Common Dependencies Pack Version ##.txt</em> has been removed until the LEX Restoration efforts will reach a more advanced
+      state. The individual cleanitol files will be kept available in the meantime, so players have more control what they want to remove, and a new cleanitol script will be added which is aiming to
+      remove the older file versions from previous Common Dependency installs with each updates. </p>\r
 
-      <li>BSC MEGA Props - T1 Vol01.dat</li>\r
+      <p>Always keep back-ups of your cities and plugins folders before you update from earlier versions or if you start using the BSC Common Dependencies for the first time and you already have old
+      (pre-SC4Evermore) BSC Team related custom contents either from LEX or from other exchanges. </p>\r
 
-      <li>BSC MEGA Props - SG Vol01 v3.dat</li>\r
-
-      <li>BSC Essentials v2023.dat</li>\r
-
-      <li>BSC_PropFamilyNames v3.dat</li>\r
-
-      <li>SG Models Residentials Vol01 v2.dat</li>\r
-
-      <li>SG Models Residentials Vol02 v2.dat</li>\r
-
-      <li>SG Models Residentials Vol03 v2.dat</li>\r
-
-      <li>SG Models Residentials Vol04 v2.dat</li>\r
-
-      </ul>\r
-
-      <p>from the BSC/BSCProps folder, and run the installer.</p>\r
-
-      <p>If this is the first time you install the BSC Common Dependencies Pack or your last installed version was Version 7 or below, then please use the <em>Cleanitol_MASTER REMOVE LIST_BSC Common
-      Dependencies Pack Version ##.txt</em> with one of the above mentioned cleanitol tools.</p>\r
+      <p>If you have issues with the <strong>SimGoober Commercials and Industrials</strong>, please read <strong><a title=\"info about the SG Commercial and Industrial Lots\"
+      href=\"https://community.simtropolis.com/forums/topic/763347-simgoober-content-and-bsc-common-dependencies-pack/?tab=comments#comment-1794707\" rel=\"tag\">the following post on
+      Simtropolis</a></strong>. I shared a link there, where I <strong><span style=\"color: #e03e2d;\">temporarily </span></strong>made the last Project ZIPped LEX versions of the SG Commercials and
+      Industrials available. The officially rehosted version however will get further updates, so those are packs are not the final versions.</p>\r
 
       <p>What all is in the SC4D LEX Legacy - BSC Common Dependencies Pack?</p>\r
 
@@ -2352,8 +2806,8 @@ assets:
 
       <ol>\r
 
-      <li><span style=\"text-decoration: line-through;\">BSC Essentials v2023 - updated in BSC Common Dependencies Version 7.</span> <br><strong><span style=\"color: #2dc26b;\">BSC Essentials v2024a -
-      updated in BSC Common Dependencies Version 9a</span></strong><br>Please note, this pack will receive further updates and improvements in future releases.</li>\r
+      <li><span style=\"text-decoration: line-through;\">BSC Essentials v2023 - updated in BSC Common Dependencies Version 7.</span> <br><span style=\"color: #2dc26b;\"><strong>BSC Essentials v2024b -
+      updated in BSC Common Dependencies Version 9b</strong></span><br>Please note, this pack will receive further updates and improvements in future releases.</li>\r
 
       </ol>\r
 
@@ -2413,13 +2867,15 @@ assets:
 
       <li>BSC MEGA Props D66 vol03 - <span style=\"color: #e67e23;\"><strong>ADDED: new pack in BSC Common Dependencies Version 7</strong></span></li>\r
 
-      <li>BSC MEGA Props DAE Vol01 v3 - <strong><span style=\"color: #f1c40f;\">updated to v3 in BSC Common Dependencies Version 7</span></strong></li>\r
+      <li>BSC MEGA Props DAE Vol01 v3 - updated to v3 in BSC Common Dependencies Version 7<br><strong><span style=\"color: #2dc26b;\">BSC MEGA Props DAE Vol01 v4 - updated to v4 in BSC Common
+      Dependencies Version 9b</span></strong></li>\r
 
-      <li>BSC MEGA Props DAE Vol02 - <strong><span style=\"color: #e67e23;\">ADDED: new pack in BSC Common Dependencies Version 7</span></strong></li>\r
+      <li>BSC MEGA Props DAE Vol02<strong><span style=\"color: #f1c40f;\"> - ADDED: new pack in BSC Common Dependencies Version 7</span></strong></li>\r
 
       <li>BSC MEGA Props DBSSYMN Vol01 v2 - <strong><span style=\"color: #f1c40f;\">updated to v2 in BSC Common Dependencies Version 7</span></strong></li>\r
 
-      <li>BSC MEGA Props DBSSYMN Vol02 v2 - <strong><span style=\"color: #f1c40f;\">updated to v2 in BSC Common Dependencies Version 7</span></strong></li>\r
+      <li><span style=\"text-decoration: line-through;\">BSC MEGA Props DBSSYMN Vol02 v2 - updated to v2 in BSC Common Dependencies Version 7</span><br><strong><span style=\"color: #2dc26b;\">BSC MEGA
+      Props DBSSYMN Vol02 v3 - updated to v3 in BSC Common Dependencies Version 9b</span></strong></li>\r
 
       <li>BSC MEGA Props Gascooker Vol01 v2 - <strong><span style=\"color: #f1c40f;\">updated to v2 in BSC Common Dependencies Version 7</span></strong></li>\r
 
@@ -2549,7 +3005,10 @@ assets:
 
       <li>BSC MEGA Props RT WFK Vol02 - WIMPS - <strong><span style=\"color: #e67e23;\">ADDED: new pack in BSC Common Dependencies Version 7 - see CHANGELOG in the Readme</span></strong></li>\r
 
-      <li>BSC MEGA Props Rubik3 Vol01 - WTC Props</li>\r
+      <li><strong><span style=\"text-decoration: line-through;\"><span style=\"color: #e03e2d; text-decoration: line-through;\">BSC MEGA Props Rubik3 Vol01 - WTC Props</span></span></strong> - <span
+      style=\"text-decoration: underline;\"><strong><span style=\"color: #e03e2d; text-decoration: underline;\">REMOVED</span></strong></span>: Models and props can be found in the <strong><a
+      href=\"/index.php/downloads/download/20-ploppable/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Custodian Rubik WTC Complex
+      V2</a></strong></li>\r
 
       <li><span style=\"text-decoration: line-through;\">BSC MEGA Props SG Vol01 v3 - updated to v3 in BSC Common Dependencies Version 7</span><strong><span style=\"color: #f1c40f;\"><br><span
       style=\"color: #2dc26b;\">BSC MEGA Props SG Vol01 v4 - updated to v3 in BSC Common Dependencies Version 9a</span></span></strong></li>\r
@@ -2572,6 +3031,10 @@ assets:
       <li>BSC MEGA Props T1 vol03 - <strong><span style=\"color: #e67e23;\">ADDED: new pack in BSC Common Dependencies Version 7</span></strong></li>\r
 
       <li>BSC MEGA Props T1 vol04 - <strong><span style=\"color: #e67e23;\">ADDED: new pack in BSC Common Dependencies Version 7</span></strong></li>\r
+
+      <li>BSC MEGA Props Caliban Vol01<span style=\"color: #2dc26b;\"><strong> - ADDED: new pack in BSC Common Dependencies Version 9b</strong></span></li>\r
+
+      <li>BSC MEGA Props YDR Vol01<strong><span style=\"color: #2dc26b;\"> - ADDED: new pack in BSC Common Dependencies Version 9b</span></strong></li>\r
 
       </ol>\r
 
@@ -2656,7 +3119,9 @@ assets:
 
       <li>BSC BATProps Newman Inc WFK Vol01</li>\r
 
-      <li>BSC BATProps Newman Inc RPK Vol01 v2 - <strong><span style=\"color: #f1c40f;\">updated to v2 in BSC Common Dependencies Version 7</span></strong></li>\r
+      <li><span style=\"text-decoration: line-through;\">BSC BATProps Newman Inc RPK Vol01 v2</span> - <span style=\"text-decoration: underline;\"><span style=\"color: #e03e2d; text-decoration:
+      underline;\"><strong>REMOVED</strong></span></span>: Models and props can be found in the <strong><a href=\"/index.php/downloads/download/14-park/277-sc4d-lex-legacy-bsc-canals-collection\"
+      target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Canals Collection V2</a></strong> </li>\r
 
       <li>BSC BATProps VDK Vol01 v2 v2 - <strong><span style=\"color: #f1c40f;\">updated to v2 in BSC Common Dependencies Version 7</span></strong></li>\r
 
@@ -2760,7 +3225,7 @@ assets:
 
       <li>BSC VIP Girafe Carpack Vol03 v2 - <strong><span style=\"color: #f1c40f;\">updated to v2 in BSC Common Dependencies Version 7</span></strong></li>\r
 
-      <li>BSC VIP Girafe Carpack Vol04</li>\r
+      <li>BSC VIP Girafe Carpack Vol04<strong><span style=\"color: #2dc26b;\"> - updated in BSC Common Dependencies Version 9b</span></strong></li>\r
 
       <li>BSC VIP Girafe Urbanpack Vol01 - <strong><span style=\"color: #f1c40f;\">see detailed information in the CHANGELOG in the Readme</span></strong></li>\r
 
@@ -2794,9 +3259,8 @@ assets:
 
       </ol>\r
 
-      <p>Various pieces of original documentation and completely reworked and updated new individual Cleanitol definitions (alongside with a <em>Cleanitol_MASTER REMOVE LIST_BSC Common Dependencies
-      Pack Version 7.txt</em> file) can be found in the \"<em>~Documents</em>\" folder in the main ZIP, which, while installed in the Plugins directory, should be removed. The installer by default no
-      longer installs these additional documentation files.</p>\r
+      <p>Various pieces of original documentation and completely reworked and updated new individual Cleanitol definitions can be found in the \"<em>~Documents</em>\" folder in the main ZIP, which,
+      while installed in the Plugins directory, should be removed. The installer by default no longer installs these additional documentation files.</p>\r
 
       <p> </p>\r
 
@@ -2808,6 +3272,8 @@ assets:
       <ul>\r
 
       <li>BarbyW (BLS)</li>\r
+
+      <li>Caliban</li>\r
 
       <li>callagrafx (CAL)</li>\r
 
@@ -2887,6 +3353,8 @@ assets:
 
       <li>xannepan (JENX)</li>\r
 
+      <li>Yoder7652 (YDR)</li>\r
+
       </ul>\r
 
       <p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus. Cleanitol definition provided by Ulisse Wolf and Tyberius06.</p>\r
@@ -2903,10 +3371,8 @@ assets:
       href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
 
       <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
-      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any
-      outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\"
-      them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab
-      pop up a message indicating it, after which you are safe to close the installer.</p>\r
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). After this, click over to the Install tab, and click
+      \"Start installation\" to begin the installation procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
 
       <p><strong>It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</strong><br>Optionally in the <em>~Documents </em>folder in the
       main ZIP you can find the <span style=\"text-decoration: underline;\">all the individual cleanitol</span> files and by using either the newer <strong><a
@@ -2919,8 +3385,9 @@ assets:
 
       \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
 
-      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/sidebar0.png\" data-lightbox=\"lightbox3\" data-alt=\"lightboxsidebar0\"
-      target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sidebar0.png\" alt=\"sidebar0\" ></a> </span>\r
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/BSC_Common_Dependencies_Pack_V9b.png\" data-lightbox=\"lightbox3\"
+      data-alt=\"lightboxBSC_Common_Dependencies_Pack_V9b\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BSC_Common_Dependencies_Pack_V9b.png\" alt=\"BSC_Common_Dependencies_Pack_V9b\" ></a> </span>\r
 
       \            <span class=\"jd_screenshot\"> </span>\r
 
@@ -2929,628 +3396,628 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 38885
-    filename: SC4D LEX Legacy - BSC Common Dependencies Pack V9a.zip
+    downloads: 39279
+    filename: SC4D LEX Legacy - BSC Common Dependencies Pack V9b.zip
     files:
-      - readme_bsc_common_dependencies.html
-      - readme.css
-      - BSC_Reward_essential.dat
-      - BSC Essentials v2024a.dat
-      - ~Documents/readme_bsc_common_dependencies.html
-      - ~Documents/readme.css
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_MASTER REMOVE LIST_BSC Common Dependencies Pack Version 9a.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models W2W Commercials.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Utilities.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Transportation v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Small Shops v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Sainsbury v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Restaurants v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Residentials Vol04 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Residentials Vol03 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Residentials Vol02 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Residentials Vol01 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Offices Medium v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Offices HiRise2 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Offices HiRise1 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Motels v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Medium Shops v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Malls v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Large Stores v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models I-M2 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models I-M1 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models I-Ht v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Hotels2 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Hotels1 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Grocery Stores v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Entertainment v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Education v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Department Stores v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Civic Services.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Civic Rewards.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Agriculture v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Adult v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_JRJ CPT Trees as props V2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_Grfe_Props_Pack_LE_Hedges.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol09 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol08 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol07 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol06 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol05 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol04 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol03 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol02 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol01 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC_PropFamilyNames v4.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC_Essentials v2024a.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC-VIP Girafe Urbanpack (CarPack vol04) vol01.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC-VIP Girafe Carpack vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC-VIP Girafe Carpack vol01-vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC-VIP Girafe Carpack vol01-vol02 (Remastered).txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Textures vol03 v4.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Textures Vol02.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Textures Vol01.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Prop Pack - JENX Tree Props Vol03 (HD).txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Prop Pack - JENX Tree Props Vol02  (SD).txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Prop Pack - Geoffhaw Flag Pack Compilation.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - W2W Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - T1 vol04.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - T1 vol03.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - T1 vol02.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - T1 vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SWI21 Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SWI21 vol01 v4.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SNM Vol02 - Naval v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SNM Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SG Vol01 v4.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Rubik3 - WTC Props.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT WFK Vol02.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT WFK Vol01 - CdS v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT Vol04 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT Vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT Vol01 v4.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - prepo Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol05.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol04 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol01 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MJB vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MJB vol01 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Misc Vol03.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Misc Vol02 v4.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Misc Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Mikeseith vol03.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Mikeseith vol01.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MBEAR Vol04 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MBEAR Vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MBEAR Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MBEAR Vol01 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - LiL Vol01.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - KWK Vol03.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - KWK Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - KWK Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - KevDan25 Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol06 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol05 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol04 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JMyersAgriculture02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JMyersAgriculture01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JMyers Common Props.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol09 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol08 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol07 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol06 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol05 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol04 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Jen_P Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol05.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol04.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol01 v4.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JBSimio vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JBSimio vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JBSimio vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - GAZ Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Gascooker vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Gascooker vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - DEDWD vol02.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - DEDWD vol01 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - DBSSYMN Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - DBSSYMN Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - D66 vol03.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - D66 vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - D66 vol01 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Vol02.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Vol01.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Industrials.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Houses.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Civics.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol06.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol05.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol04.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol03.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol02.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol01.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol08.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol07.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol06.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol05.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol04.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol03.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol02.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol01 v3.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CAL vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - ALN Vol03 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - ALN Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC BATProps VDK Vol02 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC BATProps VDK Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC BATProps Newman Inc RPK Vol01 v2.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC BATProps MattB325 Vol01.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_W2W_Commercials_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Utilities_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Transportation v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Small_Shops v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Sainsbury v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Restaurants v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Residentials_Vol04 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Residentials_Vol03 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Residentials_Vol02 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Residentials_Vol01 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Offices_Medium v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Offices_HiRise2 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Offices_HiRise1 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Motels_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Medium_Shops v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Malls v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Large_Stores v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_IM2 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_IM1 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_I-HT v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Hotels2 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Hotels1 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Grocery_Stores v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Entertainment v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Education v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Department_Stores v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Civic_Services_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Civic_Rewards_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Agriculture v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Adult v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Urbanpack_and_Mixed_Props_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_LE_Hedges_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Carpack vol04_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Carpack vol03_v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Carpack vol01-vol02_v2_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Carpack vol01-vol02_v2_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol09 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol08 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol07 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol06 v3-pt02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol06 v3-pt01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol05 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol04 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol03 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol02 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol01 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-VIP Girafe Carpack vol. 1-2 (Remastered)_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt6_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt5_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt6_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt5_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures vol03 v4-overlay_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures vol03 v4-overlay_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures vol03 v4-base_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures vol03 v4-base_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-overlay_pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-overlay_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-overlay_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-base_pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-base_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-base_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt6_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt5_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-base_pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-base_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-base_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - JRJ CPT Trees as props V2.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - JENX Tree Props Vol03 (HD)_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - JENX Tree Props Vol02 (SD)_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - JENX Tree Props Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - Geoffhaw Flag Pack Compilation_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - CAL Small Boats Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - CAL Ships Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props MISC Vol02 v4-pt04_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props MISC Vol02 v4-pt03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props MISC Vol02 v4-pt02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props MISC Vol02 v4-pt01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props D66 Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props D66 Vol01 v3-pt02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props D66 Vol01 v3-pt01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - W2W Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - T1 vol04_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - T1 vol03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - T1 vol02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - T1 vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SWI21 Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SWI21 Vol01 v4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SNM Vol02 - Naval v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SNM Vol01 v2-pt02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SNM Vol01 v2-pt01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt5_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Rubik3 Vol01 - WTC Props_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT WFK Vol02 - WIMPS_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT WFK Vol01 - CdS v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT Vol04 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT Vol03 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT Vol01 v4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - prepo Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol05_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol04 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol03 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol01 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MJB Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MJB Vol01 v3-pt02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MJB Vol01 v3-pt01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Misc Vol03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Misc Vol01 v2-pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Misc Vol01 v2-pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt6_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt5_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt5_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MBEAR Vol04 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MBEAR Vol03 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MBEAR Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MBEAR Vol01 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - LiL Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - KWK Vol03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - KWK Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - KWK Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - KevDan25 Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol06 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol05 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol04 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol03 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JMyers Common Props_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JMyers Agriculture 02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JMyers Agriculture 01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol09 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol08 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol07 v2-pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol07 v2-pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol06 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol05 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol04 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol03 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol01 v2-pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol01 v2-pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol01 v2-pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Jen_P Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol05_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol04_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol03 v2-pt02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol03 v2-pt01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol01 v4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JBSimio vol03 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JBSimio vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JBSimio vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - GAZ Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Gascooker vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - GasCooker Vol01 v2-pt02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - GasCooker Vol01 v2-pt01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol01 v3-pt04_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol01 v3-pt03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol01 v3-pt02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol01 v3-pt01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DBSSYMN Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DBSSYMN Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - D66 vol03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol02_pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol02_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol02_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt5_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt4_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt1_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Industrials_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Houses_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Civics_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol06_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol05_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol04_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol08_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol07_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol06_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol05_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol04_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol01 v3_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CAL Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - ALN Vol03 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - ALN Vol02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - ALN Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps VDK Vol02 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps VDK Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Newman Inc WFK Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Newman Inc RPK Vol01 v2_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 W2W Prop Pack Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps MattB325 Vol04_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps MattB325 Vol03_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps MattB325 Vol02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps MattB325 Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 Small Modern House Pack_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 Shopping Mall Pack Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 McMansion Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 London W2W Vol01_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 Cottages Ornee Vol02_index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 Cottages Ornee Vol01_index.jpg
-      - ~Documents/BSC_Readmes/Xannepan/jenx megaprops v1.JPG
-      - ~Documents/BSC_Readmes/Xannepan/BSC Prop Pack - JENX Tree Props Vol01_readme.txt
-      - ~Documents/BSC_Readmes/Xannepan/BSC Prop Pack - JENX Tree Props Vol01.jpg
-      - ~Documents/BSC_Readmes/Vester/BSC_BATProps_VDK_Vol02.jpg
-      - ~Documents/BSC_Readmes/Vester/BSC_BATProps_VDK_Vol01.jpg
-      - ~Documents/BSC_Readmes/Mattb325/Readme_BSC BATProps MattB325 Vol04.html
-      - ~Documents/BSC_Readmes/Mattb325/batprops01_sn.jpg
-      - ~Documents/BSC_Readmes/Mattb325/batprops01_s.jpg
-      - ~Documents/BSC_Readmes/Mattb325/Batprops readme.html
-      - ~Documents/BSC_Readmes/Jestarr/Readme_BSCMegaProps_JES_Vol07.txt
-      - ~Documents/BSC_Readmes/Jestarr/Readme_BSCMegaProps_JES_Vol06.txt
-      - ~Documents/BSC_Readmes/Jestarr/BSCMegaProps_JES_Vol06.jpg
-      - ~Documents/BSC_Readmes/Jeronij/CPTTreesaspropsV2.jpg
-      - ~Documents/BSC_Readmes/Jeronij/CPT Trees as props V2  readme.htm
-      - ~Documents/BSC_Readmes/girafe/readme_urbanpack_vol. 1.html
-      - ~Documents/BSC_Readmes/girafe/readme_carpack_vol. 3.html
-      - ~Documents/BSC_Readmes/girafe/readme_carpack_vol. 1 & 2.html
-      - ~Documents/BSC_Readmes/girafe/readme_carpack_vol. 1 & 2 remastered.html
-      - ~Documents/BSC_Readmes/CP/Readme_BSC MEGA PropPack - CP Vol01.htm
-      - ~Documents/BSC_Readmes/CP/BSC MEGA Props CP Vol 02.htm
-      - ~Documents/BSC_Readmes/Deadwoods/ur.gif
-      - ~Documents/BSC_Readmes/Deadwoods/ul.gif
-      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
-      - ~Documents/BSC_Readmes/Deadwoods/lr.gif
-      - ~Documents/BSC_Readmes/Deadwoods/ll.gif
-      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_MegaPropPack_readme.htm
-      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_MegaPropPack-stexpic1.jpg
-      - CSX/CSXProps#/CSX MEGA Props - Vol09 v2/CSX MEGA Props - Vol09 v2.dat
-      - CSX/CSXProps#/CSX MEGA Props - Vol08 v2/CSX MEGA Props - Vol08 v2.dat
-      - CSX/CSXProps#/CSX MEGA Props - Vol07 v3/CSX MEGA Props - Vol07 v3.dat
-      - CSX/CSXProps#/CSX MEGA Props - Vol06 v3/CSX MEGA Props - Vol06 v3.dat
-      - CSX/CSXProps#/CSX MEGA Props - Vol05 v3/CSX MEGA Props - Vol05 v3.dat
-      - CSX/CSXProps#/CSX MEGA Props - Vol04 v3/CSX MEGA Props - Vol04 v3.dat
-      - CSX/CSXProps#/CSX MEGA Props - Vol03 v3/CSX MEGA Props - Vol03 v3.dat
-      - CSX/CSXProps#/CSX MEGA Props - Vol02 v3/CSX MEGA Props - Vol02 v3.dat
-      - CSX/CSXProps#/CSX MEGA Props - Vol01 v3/CSX MEGA Props - Vol01 v3.dat
-      - BSC/BSCTextures#/BSC Textures Vol03 v4/BSC Textures vol03 v4.dat
-      - BSC/BSCTextures#/BSC Textures Vol02/BSC Textures Vol02.dat
-      - BSC/BSCTextures#/BSC Textures Vol01/BSC Textures Vol01.dat
-      - BSC/BSCTextures#/BSC TexturePack Cycledogg V01b/BSC TexturePack Cycledogg V01.dat
-      - BSC/BSCProps#/SG Models W2W Commercials/SG Models W2W Commercials.dat
-      - BSC/BSCProps#/SG Models Utilities/SG Models Utilities.dat
-      - BSC/BSCProps#/SG Models Transportation v2/SG Models Transportation v2.dat
-      - BSC/BSCProps#/SG Models Small Shops v3/SG Models Small Shops v3.dat
-      - BSC/BSCProps#/SG Models Sainsbury v2/SG Models Sainsbury v2.dat
-      - BSC/BSCProps#/SG Models Restaurants v2/SG Models Restaurants v2.dat
-      - BSC/BSCProps#/SG Models Residentials Vol04 v3/SG Models Residentials Vol04 v3.dat
-      - BSC/BSCProps#/SG Models Residentials Vol03 v3/SG Models Residentials Vol03 v3.dat
-      - BSC/BSCProps#/SG Models Residentials Vol02 v3/SG Models Residentials Vol02 v3.dat
-      - BSC/BSCProps#/SG Models Offices Medium v3/SG Models Offices Medium v3.dat
-      - BSC/BSCProps#/SG Models Residentials Vol01 v3/SG Models Residentials Vol01 v3.dat
-      - BSC/BSCProps#/SG Models Offices HiRise2 v2/SG Models Offices HiRise2 v2.dat
-      - BSC/BSCProps#/SG Models Offices HiRise1 v3/SG Models Offices HiRise1 v3.dat
-      - BSC/BSCProps#/SG Models Motels v2/SG Models Motels v2.dat
-      - BSC/BSCProps#/SG Models Medium Shops v2/SG Models Medium Shops v2.dat
-      - BSC/BSCProps#/SG Models Malls v3/SG Models Malls v3.dat
-      - BSC/BSCProps#/SG Models Large Stores v2/SG Models Large Stores v2.dat
-      - BSC/BSCProps#/SG Models IM2 v2/SG Models IM2 v2.dat
-      - BSC/BSCProps#/SG Models IM1 v2/SG Models IM1 v2.dat
-      - BSC/BSCProps#/SG Models I-HT v2/SG Models I-HT v2.dat
-      - BSC/BSCProps#/SG Models Hotels2 v2/SG Models Hotels2 v2.dat
-      - BSC/BSCProps#/SG Models Hotels1 v2/SG Models Hotels1 v2.dat
-      - BSC/BSCProps#/SG Models Grocery Stores v3/SG Models Grocery Stores v3.dat
-      - BSC/BSCProps#/SG Models Entertainment v2/SG Models Entertainment v2.dat
-      - BSC/BSCProps#/SG Models Department Stores v2/SG Models Department Stores v2.dat
-      - BSC/BSCProps#/SG Models Civic Services/SG Models Civic Services.dat
-      - BSC/BSCProps#/SG Models Civic Rewards/SG Models Civic Rewards.dat
-      - BSC/BSCProps#/SG Models Civic Education v2/SG Models Civic Education v2.dat
-      - BSC/BSCProps#/SG Models Agriculture v2/SG Models Agriculture v2.dat
-      - BSC/BSCProps#/SG Models Adult v2/SG Models Adult v2.dat
-      - BSC/BSCProps#/BSC_PropFamilyNames v4/BSC_PropFamilyNames v4.dat
-      - BSC/BSCProps#/BSC VIP Girafe Urbanpack Vol01/Grfe_Props_Pack_Wood_Fence_4m.dat
-      - BSC/BSCProps#/BSC VIP Girafe Urbanpack Vol01/Grfe_Props_Pack_Villa Libeskind.dat
-      - BSC/BSCProps#/BSC VIP Girafe Urbanpack Vol01/Grfe_Props_Pack_Urbanpack.dat
-      - BSC/BSCProps#/BSC VIP Girafe Urbanpack Vol01/Grfe_Props_Pack_4_rue_des_Lilas.dat
-      - BSC/BSCProps#/BSC VIP Girafe Hedges/Grfe_Props_Pack_LE_Hedges.dat
-      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol04/Grfe_Props_Pack_Carpack vol04.dat
-      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol03/Grfe_Props_Pack_Carpack vol03 v2.dat
-      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol03/Grfe_CarPack_MMP vol03.dat
-      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol01-02 Remastered/Grfe_Props_Pack_Carpack vol01-vol02-Remastered.dat
-      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol01-02 Original v2/Grfe_Props_Pack_Carpack vol01-vol02-Original v2.dat
-      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol01-02 Original v2/Grfe_CarPack_MMP vol01.dat
-      - BSC/BSCProps#/BSC Prop Pack - JRJ CPT Trees as props V2/BSC Prop Pack - JRJ CPT Trees as props V2.dat
-      - BSC/BSCProps#/BSC Prop Pack - JENX Tree Props Vol03 (HD)/BSC Prop Pack - JENX Tree Props Vol03 (HD).dat
-      - BSC/BSCProps#/BSC Prop Pack - JENX Tree Props Vol02 (SD)/BSC Prop Pack - JENX Tree Props Vol02 (SD).dat
-      - BSC/BSCProps#/BSC Prop Pack - JENX Tree Props Vol01/BSC Prop Pack - JENX Tree Props Vol01.dat
-      - BSC/BSCProps#/BSC Prop Pack - CAL Small Boats Vol01/BSC Prop Pack - CAL Small Boats Vol01.dat
-      - BSC/BSCProps#/BSC Prop Pack - Geoffhaw Flag Pack Compilation/BSC Prop Pack - Geoffhaw Flag Pack Compilation.dat
-      - BSC/BSCProps#/BSC Prop Pack - CAL Ships Vol01/BSC Prop Pack - CAL Ships Vol01.dat
-      - BSC/BSCProps#/BSC MEGA Props - W2W Vol01 v2/BSC MEGA Props - W2W Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - T1 vol04/BSC MEGA Props - T1 vol04.dat
-      - BSC/BSCProps#/BSC MEGA Props - T1 vol03/BSC MEGA Props - T1 vol03.dat
-      - BSC/BSCProps#/BSC MEGA Props - T1 vol02/BSC MEGA Props - T1 vol02.dat
-      - BSC/BSCProps#/BSC MEGA Props - T1 vol01 v2/BSC MEGA Props - T1 vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - SWI21 Vol02 v2/BSC MEGA Props - SWI21 Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - SWI21 Vol01 v4/BSC MEGA Props - SWI21 Vol01 v4.dat
-      - BSC/BSCProps#/BSC MEGA Props - SNM Vol02 - Naval v2/BSC MEGA Props - SNM Vol02 - Naval v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - SNM Vol01 v2/BSC MEGA Props - SNM Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - SG Vol01 v4/BSC MEGA Props - SG Vol01 v4.dat
-      - BSC/BSCProps#/BSC MEGA Props - Rubik3 Vol01 - WTC Props/BSC MEGA Props - Rubik3 Vol01 - WTC Props.dat
-      - BSC/BSCProps#/BSC MEGA Props - RT WFK Vol02 - WIMPS/BSC MEGA Props - RT WFK Vol02 - WIMPS.dat
-      - BSC/BSCProps#/BSC MEGA Props - RT WFK Vol01 - CdS v2/BSC MEGA Props - RT WFK Vol01 - CdS v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - RT Vol04 v2/BSC MEGA Props - RT Vol04 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - RT Vol03 v2/BSC MEGA Props - RT Vol03 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - RT Vol02 v2/BSC MEGA Props - RT Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - RT Vol01 v4/BSC MEGA Props - RT Vol01 v4.dat
-      - BSC/BSCProps#/BSC MEGA Props - prepo Vol01 v2/BSC MEGA Props - prepo Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol05/BSC MEGA Props - NewmanInc Vol05.dat
-      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol04 v2/BSC MEGA Props - NewmanInc Vol04 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol02 v2/BSC MEGA Props - NewmanInc Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol03 v2/BSC MEGA Props - NewmanInc Vol03 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol01 v3/BSC MEGA Props - NewmanInc Vol01 v3.dat
-      - BSC/BSCProps#/BSC MEGA Props - MJB Vol02 v2/BSC MEGA Props - MJB Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - MJB Vol01 v3/BSC MEGA Props - MJB Vol01 v3.dat
-      - BSC/BSCProps#/BSC MEGA Props - Misc Vol03/BSC MEGA Props - Misc Vol03.dat
-      - BSC/BSCProps#/BSC MEGA Props - Misc Vol02 v4/BSC MEGA Props - Misc Vol02 v4.dat
-      - BSC/BSCProps#/BSC MEGA Props - Misc Vol01 v2/BSC MEGA Props - Misc Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - Mikeseith Vol03/BSC MEGA Props - Mikeseith Vol03.dat
-      - BSC/BSCProps#/BSC MEGA Props - Mikeseith Vol01/BSC MEGA Props - Mikeseith Vol01.dat
-      - BSC/BSCProps#/BSC MEGA Props - MBEAR Vol04 v3/BSC MEGA Props - MBEAR Vol04 v3.dat
-      - BSC/BSCProps#/BSC MEGA Props - MBEAR Vol03 v2/BSC MEGA Props - MBEAR Vol03 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - MBEAR Vol02 v2/BSC MEGA Props - MBEAR Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - MBEAR Vol01 v3/BSC MEGA Props - MBEAR Vol01 v3.dat
-      - BSC/BSCProps#/BSC MEGA Props - LiL Vol01/BSC MEGA Props - LiL Vol01.dat
-      - BSC/BSCProps#/BSC MEGA Props - KWK Vol03/BSC MEGA Props - KWK Vol03.dat
-      - BSC/BSCProps#/BSC MEGA Props - KWK Vol02 v2/BSC MEGA Props - KWK Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - KWK Vol01 v2/BSC MEGA Props - KWK Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - KevDan25  Vol01 v2/BSC MEGA Props - KevDan25 Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol06 v2/BSC MEGA Props - JRJ Vol06 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol05 v2/BSC MEGA Props - JRJ Vol05 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol04 v2/BSC MEGA Props - JRJ Vol04 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol03 v2/BSC MEGA Props - JRJ Vol03 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol02 v2/BSC MEGA Props - JRJ Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JMyers Common Props/BSC MEGA Props - JMyers Common Props.dat
-      - BSC/BSCProps#/BSC MEGA Props - JMyers Agriculture 02 v2/BSC MEGA Props - JMyers Agriculture 02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JMyers Agriculture 01 v2/BSC MEGA Props - JMyers Agriculture 01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol09 v2/BSC MEGA Props - JES Vol09 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol08 v2/BSC MEGA Props - JES Vol08 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol07 v2/BSC MEGA Props - JES Vol07 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol06 v2/BSC MEGA Props - JES Vol06 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol05 v2/BSC MEGA Props - JES Vol05 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol04 v2/BSC MEGA Props - JES Vol04 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol03 v2/BSC MEGA Props - JES Vol03 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol02 v2/BSC MEGA Props - JES Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JES Vol01 v2/BSC MEGA Props - JES Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - Jen_P Vol01 v2/BSC MEGA Props - Jen_P Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JENX Vol05 - Medieval/BSC MEGA Props - JENX Vol05 - Medieval.dat
-      - BSC/BSCProps#/BSC MEGA Props - JENX Vol04/BSC MEGA Props - JENX Vol04.dat
-      - BSC/BSCProps#/BSC MEGA Props - JENX Vol03 v2/BSC MEGA Props - JENX Vol03 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JENX Vol02 - PARIS v2/BSC MEGA Props - JENX Vol02 - PARIS v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JENX Vol01 v4/BSC MEGA Props - JENX Vol01 v4.dat
-      - BSC/BSCProps#/BSC MEGA Props - JBSimio vol03 v2/BSC MEGA Props - JBSimio vol03 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JBSimio vol02 v2/BSC MEGA Props - JBSimio vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - GAZ Vol01 v2/BSC MEGA Props - GAZ Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - JBSimio vol01 v2/BSC MEGA Props - JBSimio vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - Gascooker Vol02 v2/BSC MEGA Props - Gascooker vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - Gascooker Vol01 v2/BSC MEGA Props - Gascooker Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - DBSSYMN Vol02 v2/BSC MEGA Props - DBSSYMN Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - DBSSYMN Vol01 v2/BSC MEGA Props - DBSSYMN Vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - DAE Vol02/BSC MEGA Props - DAE Vol02.dat
-      - BSC/BSCProps#/BSC MEGA Props - DAE Vol01 v3/BSC MEGA Props - DAE Vol01 v3.dat
-      - BSC/BSCProps#/BSC MEGA Props - D66 vol03/BSC MEGA Props - D66 vol03.dat
-      - BSC/BSCProps#/BSC MEGA Props - D66 Vol02 v2/BSC MEGA Props - D66 Vol02 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - D66 Vol01 v3/BSC MEGA Props - D66 Vol01 v3.dat
-      - BSC/BSCProps#/BSC MEGA Props - CP Vol02/BSC MEGA Props - CP Vol02.dat
-      - BSC/BSCProps#/BSC MEGA Props - CP Vol01/BSC MEGA Props - CP Vol01.dat
-      - BSC/BSCProps#/BSC MEGA Props - CP Houses/BSC MEGA Props - CP Houses.dat
-      - BSC/BSCProps#/BSC MEGA Props - CP Industrials/BSC MEGA Props - CP Industrials.dat
-      - BSC/BSCProps#/BSC MEGA Props - CP Civics/BSC MEGA Props - CP Civics.dat
-      - BSC/BSCProps#/BSC MEGA Props - COBB Vol06/BSC MEGA Props - COBB Vol06.dat
-      - BSC/BSCProps#/BSC MEGA Props - COBB Vol05/BSC MEGA Props - COBB Vol05.dat
-      - BSC/BSCProps#/BSC MEGA Props - COBB Vol04/BSC MEGA Props - COBB Vol04.dat
-      - BSC/BSCProps#/BSC MEGA Props - COBB Vol03/BSC MEGA Props - COBB Vol03.dat
-      - BSC/BSCProps#/BSC MEGA Props - COBB Vol02/BSC MEGA Props - COBB Vol02.dat
-      - BSC/BSCProps#/BSC MEGA Props - COBB Vol01/BSC MEGA Props - COBB Vol01.dat
-      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol08/BSC MEGA Props - CARCH Vol08.dat
-      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol07/BSC MEGA Props - CARCH Vol07.dat
-      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol06/BSC MEGA Props - CARCH Vol06.dat
-      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol05/BSC MEGA Props - CARCH Vol05.dat
-      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol04/BSC MEGA Props - CARCH Vol04.dat
-      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol03/BSC MEGA Props - CARCH Vol03.dat
-      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol02/BSC MEGA Props - CARCH Vol02.dat
-      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol01 v3/BSC MEGA Props - CARCH Vol01 v3.dat
-      - BSC/BSCProps#/BSC MEGA Props - CAL vol01 v2/BSC MEGA Props - CAL vol01 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - ALN Vol03 v2/BSC MEGA Props - ALN Vol03 v2.dat
-      - BSC/BSCProps#/BSC MEGA Props - ALN Vol02/BSC MEGA Props - ALN Vol02.dat
-      - BSC/BSCProps#/BSC MEGA Props - ALN Vol01 v2/BSC MEGA Props - ALN Vol01 v2.dat
-      - BSC/BSCProps#/BSC BATProps VDK Vol02 v2/BSC BATProps VDK Vol02 v2.dat
-      - BSC/BSCProps#/BSC BATProps VDK Vol01 v2/BSC BATProps VDK Vol01 v2.dat
-      - BSC/BSCProps#/BSC BATProps Newman Inc WFK Vol01/BSC BATProps Newman Inc WFK Vol01.dat
-      - BSC/BSCProps#/BSC BATProps Newman Inc RPK Vol01 v2/BSC BATProps Newman Inc RPK Vol01 v2.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 W2W Prop Pack Vol01/BSC BATProps Mattb325 W2W Prop Pack Vol01.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 Vol04/BSC BATProps Mattb325 Vol04.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 Vol03/BSC BATProps Mattb325 Vol03.dat
+      - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Icon_Carpack1&2_1.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Icon_Carpack1&2_remastered_1.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Icon_Carpack3_1.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Icon_urbanpack_vol. 1.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Image_1.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Image_urbanpack_props.jpg
+      - ~Documents/BSC_Readmes/Mattb325/Images/Mattb325 PropPack Vol04.jpg
+      - BSC/BSCProps#/BSC BATProps Mattb325 Cottages Ornee Vol01/BSC BATProps Mattb325 Cottages Ornee Vol01.dat
+      - BSC/BSCProps#/BSC BATProps Mattb325 Cottages Ornee Vol02/BSC BATProps Mattb325 Cottages Ornee Vol02.dat
+      - BSC/BSCProps#/BSC BATProps Mattb325 London W2W Vol01/BSC BATProps Mattb325 London W2W Vol01.dat
+      - BSC/BSCProps#/BSC BATProps Mattb325 McMansion Vol01/BSC BATProps Mattb325 McMansion Vol01.dat
+      - BSC/BSCProps#/BSC BATProps Mattb325 Shopping Mall Pack Vol01/BSC BATProps Mattb325 Shopping Mall Pack Vol01.dat
+      - BSC/BSCProps#/BSC BATProps Mattb325 Small Modern House Pack/BSC BATProps Mattb325 Small Modern House Pack.dat
       - BSC/BSCProps#/BSC BATProps Mattb325 Vol02/BSC BATProps Mattb325 Vol02.dat
       - BSC/BSCProps#/BSC BATProps Mattb325 Vol01/BSC BATProps Mattb325 Vol01.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 Small Modern House Pack/BSC BATProps Mattb325 Small Modern House Pack.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 Shopping Mall Pack Vol01/BSC BATProps Mattb325 Shopping Mall Pack Vol01.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 McMansion Vol01/BSC BATProps Mattb325 McMansion Vol01.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 London W2W Vol01/BSC BATProps Mattb325 London W2W Vol01.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 Cottages Ornee Vol02/BSC BATProps Mattb325 Cottages Ornee Vol02.dat
-      - BSC/BSCProps#/BSC BATProps Mattb325 Cottages Ornee Vol01/BSC BATProps Mattb325 Cottages Ornee Vol01.dat
-      - ~Documents/BSC_Readmes/Mattb325/Images/Mattb325 PropPack Vol04.jpg
-      - ~Documents/BSC_Readmes/girafe/Images/Image_urbanpack_props.jpg
-      - ~Documents/BSC_Readmes/girafe/Images/Image_1.jpg
-      - ~Documents/BSC_Readmes/girafe/Images/Icon_urbanpack_vol. 1.jpg
-      - ~Documents/BSC_Readmes/girafe/Images/Icon_Carpack3_1.jpg
-      - ~Documents/BSC_Readmes/girafe/Images/Icon_Carpack1&2_remastered_1.jpg
-      - ~Documents/BSC_Readmes/girafe/Images/Icon_Carpack1&2_1.jpg
-      - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
+      - BSC/BSCProps#/BSC BATProps Mattb325 Vol04/BSC BATProps Mattb325 Vol04.dat
+      - BSC/BSCProps#/BSC BATProps Mattb325 Vol03/BSC BATProps Mattb325 Vol03.dat
+      - BSC/BSCProps#/BSC BATProps Newman Inc WFK Vol01/BSC BATProps Newman Inc WFK Vol01.dat
+      - BSC/BSCProps#/BSC BATProps Mattb325 W2W Prop Pack Vol01/BSC BATProps Mattb325 W2W Prop Pack Vol01.dat
+      - BSC/BSCProps#/BSC BATProps VDK Vol01 v2/BSC BATProps VDK Vol01 v2.dat
+      - BSC/BSCProps#/BSC BATProps VDK Vol02 v2/BSC BATProps VDK Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - ALN Vol02/BSC MEGA Props - ALN Vol02.dat
+      - BSC/BSCProps#/BSC MEGA Props - ALN Vol01 v2/BSC MEGA Props - ALN Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - CAL vol01 v2/BSC MEGA Props - CAL vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - ALN Vol03 v2/BSC MEGA Props - ALN Vol03 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol01 v3/BSC MEGA Props - CARCH Vol01 v3.dat
+      - BSC/BSCProps#/BSC MEGA Props - Caliban Vol01/BSC MEGA Props - Caliban Vol01.dat
+      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol02/BSC MEGA Props - CARCH Vol02.dat
+      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol03/BSC MEGA Props - CARCH Vol03.dat
+      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol04/BSC MEGA Props - CARCH Vol04.dat
+      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol05/BSC MEGA Props - CARCH Vol05.dat
+      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol06/BSC MEGA Props - CARCH Vol06.dat
+      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol07/BSC MEGA Props - CARCH Vol07.dat
+      - BSC/BSCProps#/BSC MEGA Props - CARCH Vol08/BSC MEGA Props - CARCH Vol08.dat
+      - BSC/BSCProps#/BSC MEGA Props - COBB Vol01/BSC MEGA Props - COBB Vol01.dat
+      - BSC/BSCProps#/BSC MEGA Props - COBB Vol03/BSC MEGA Props - COBB Vol03.dat
+      - BSC/BSCProps#/BSC MEGA Props - COBB Vol02/BSC MEGA Props - COBB Vol02.dat
+      - BSC/BSCProps#/BSC MEGA Props - COBB Vol04/BSC MEGA Props - COBB Vol04.dat
+      - BSC/BSCProps#/BSC MEGA Props - COBB Vol05/BSC MEGA Props - COBB Vol05.dat
+      - BSC/BSCProps#/BSC MEGA Props - COBB Vol06/BSC MEGA Props - COBB Vol06.dat
+      - BSC/BSCProps#/BSC MEGA Props - CP Civics/BSC MEGA Props - CP Civics.dat
+      - BSC/BSCProps#/BSC MEGA Props - CP Houses/BSC MEGA Props - CP Houses.dat
+      - BSC/BSCProps#/BSC MEGA Props - CP Industrials/BSC MEGA Props - CP Industrials.dat
+      - BSC/BSCProps#/BSC MEGA Props - CP Vol01/BSC MEGA Props - CP Vol01.dat
+      - BSC/BSCProps#/BSC MEGA Props - CP Vol02/BSC MEGA Props - CP Vol02.dat
+      - BSC/BSCProps#/BSC MEGA Props - D66 Vol01 v3/BSC MEGA Props - D66 Vol01 v3.dat
+      - BSC/BSCProps#/BSC MEGA Props - D66 Vol02 v2/BSC MEGA Props - D66 Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - D66 vol03/BSC MEGA Props - D66 vol03.dat
+      - BSC/BSCProps#/BSC MEGA Props - DAE Vol01 v4/BSC MEGA Props - DAE Vol01 v4.dat
+      - BSC/BSCProps#/BSC MEGA Props - DAE Vol02/BSC MEGA Props - DAE Vol02.dat
+      - BSC/BSCProps#/BSC MEGA Props - DBSSYMN Vol01 v2/BSC MEGA Props - DBSSYMN Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - DBSSYMN Vol02 v3/BSC MEGA Props - DBSSYMN Vol02 v3.dat
+      - BSC/BSCProps#/BSC MEGA Props - Gascooker Vol02 v2/BSC MEGA Props - Gascooker vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - GAZ Vol01 v2/BSC MEGA Props - GAZ Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - Gascooker Vol01 v2/BSC MEGA Props - Gascooker Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JBSimio vol01 v2/BSC MEGA Props - JBSimio vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JENX Vol01 v4/BSC MEGA Props - JENX Vol01 v4.dat
+      - BSC/BSCProps#/BSC MEGA Props - JBSimio vol02 v2/BSC MEGA Props - JBSimio vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JBSimio vol03 v2/BSC MEGA Props - JBSimio vol03 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JENX Vol02 - PARIS v2/BSC MEGA Props - JENX Vol02 - PARIS v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JENX Vol04/BSC MEGA Props - JENX Vol04.dat
+      - BSC/BSCProps#/BSC MEGA Props - JENX Vol03 v2/BSC MEGA Props - JENX Vol03 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JENX Vol05 - Medieval/BSC MEGA Props - JENX Vol05 - Medieval.dat
+      - BSC/BSCProps#/BSC MEGA Props - Jen_P Vol01 v2/BSC MEGA Props - Jen_P Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol01 v2/BSC MEGA Props - JES Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol02 v2/BSC MEGA Props - JES Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol03 v2/BSC MEGA Props - JES Vol03 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol04 v2/BSC MEGA Props - JES Vol04 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol05 v2/BSC MEGA Props - JES Vol05 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol06 v2/BSC MEGA Props - JES Vol06 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol07 v2/BSC MEGA Props - JES Vol07 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol08 v2/BSC MEGA Props - JES Vol08 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JES Vol09 v2/BSC MEGA Props - JES Vol09 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JMyers Agriculture 01 v2/BSC MEGA Props - JMyers Agriculture 01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JMyers Common Props/BSC MEGA Props - JMyers Common Props.dat
+      - BSC/BSCProps#/BSC MEGA Props - JMyers Agriculture 02 v2/BSC MEGA Props - JMyers Agriculture 02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol02 v2/BSC MEGA Props - JRJ Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol03 v2/BSC MEGA Props - JRJ Vol03 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol05 v2/BSC MEGA Props - JRJ Vol05 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol04 v2/BSC MEGA Props - JRJ Vol04 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - KevDan25  Vol01 v2/BSC MEGA Props - KevDan25 Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - JRJ Vol06 v2/BSC MEGA Props - JRJ Vol06 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - KWK Vol01 v2/BSC MEGA Props - KWK Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - KWK Vol02 v2/BSC MEGA Props - KWK Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - LiL Vol01/BSC MEGA Props - LiL Vol01.dat
+      - BSC/BSCProps#/BSC MEGA Props - KWK Vol03/BSC MEGA Props - KWK Vol03.dat
+      - BSC/BSCProps#/BSC MEGA Props - MBEAR Vol01 v3/BSC MEGA Props - MBEAR Vol01 v3.dat
+      - BSC/BSCProps#/BSC MEGA Props - MBEAR Vol02 v2/BSC MEGA Props - MBEAR Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - Mikeseith Vol01/BSC MEGA Props - Mikeseith Vol01.dat
+      - BSC/BSCProps#/BSC MEGA Props - MBEAR Vol03 v2/BSC MEGA Props - MBEAR Vol03 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - MBEAR Vol04 v3/BSC MEGA Props - MBEAR Vol04 v3.dat
+      - BSC/BSCProps#/BSC MEGA Props - Mikeseith Vol03/BSC MEGA Props - Mikeseith Vol03.dat
+      - BSC/BSCProps#/BSC MEGA Props - Misc Vol01 v2/BSC MEGA Props - Misc Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - Misc Vol02 v4/BSC MEGA Props - Misc Vol02 v4.dat
+      - BSC/BSCProps#/BSC MEGA Props - Misc Vol03/BSC MEGA Props - Misc Vol03.dat
+      - BSC/BSCProps#/BSC MEGA Props - MJB Vol01 v3/BSC MEGA Props - MJB Vol01 v3.dat
+      - BSC/BSCProps#/BSC MEGA Props - MJB Vol02 v2/BSC MEGA Props - MJB Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol01 v3/BSC MEGA Props - NewmanInc Vol01 v3.dat
+      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol02 v2/BSC MEGA Props - NewmanInc Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol03 v2/BSC MEGA Props - NewmanInc Vol03 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol04 v2/BSC MEGA Props - NewmanInc Vol04 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - RT Vol01 v4/BSC MEGA Props - RT Vol01 v4.dat
+      - BSC/BSCProps#/BSC MEGA Props - NewmanInc Vol05/BSC MEGA Props - NewmanInc Vol05.dat
+      - BSC/BSCProps#/BSC MEGA Props - prepo Vol01 v2/BSC MEGA Props - prepo Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - RT Vol02 v2/BSC MEGA Props - RT Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - RT Vol03 v2/BSC MEGA Props - RT Vol03 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - RT Vol04 v2/BSC MEGA Props - RT Vol04 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - RT WFK Vol01 - CdS v2/BSC MEGA Props - RT WFK Vol01 - CdS v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - SG Vol01 v4/BSC MEGA Props - SG Vol01 v4.dat
+      - BSC/BSCProps#/BSC MEGA Props - SNM Vol01 v2/BSC MEGA Props - SNM Vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - RT WFK Vol02 - WIMPS/BSC MEGA Props - RT WFK Vol02 - WIMPS.dat
+      - BSC/BSCProps#/BSC MEGA Props - SNM Vol02 - Naval v2/BSC MEGA Props - SNM Vol02 - Naval v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - SWI21 Vol02 v2/BSC MEGA Props - SWI21 Vol02 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - SWI21 Vol01 v4/BSC MEGA Props - SWI21 Vol01 v4.dat
+      - BSC/BSCProps#/BSC MEGA Props - T1 vol01 v2/BSC MEGA Props - T1 vol01 v2.dat
+      - BSC/BSCProps#/BSC MEGA Props - T1 vol04/BSC MEGA Props - T1 vol04.dat
+      - BSC/BSCProps#/BSC MEGA Props - T1 vol02/BSC MEGA Props - T1 vol02.dat
+      - BSC/BSCProps#/BSC MEGA Props - T1 vol03/BSC MEGA Props - T1 vol03.dat
+      - BSC/BSCProps#/BSC Prop Pack - CAL Ships Vol01/BSC Prop Pack - CAL Ships Vol01.dat
+      - BSC/BSCProps#/BSC MEGA Props - YDR Vol01/BSC MEGA Props - YDR Vol01.dat
+      - BSC/BSCProps#/BSC MEGA Props - W2W Vol01 v2/BSC MEGA Props - W2W Vol01 v2.dat
+      - BSC/BSCProps#/BSC Prop Pack - CAL Small Boats Vol01/BSC Prop Pack - CAL Small Boats Vol01.dat
+      - BSC/BSCProps#/BSC Prop Pack - Geoffhaw Flag Pack Compilation/BSC Prop Pack - Geoffhaw Flag Pack Compilation.dat
+      - BSC/BSCProps#/BSC Prop Pack - JENX Tree Props Vol01/BSC Prop Pack - JENX Tree Props Vol01.dat
+      - BSC/BSCProps#/BSC Prop Pack - JENX Tree Props Vol02 (SD)/BSC Prop Pack - JENX Tree Props Vol02 (SD).dat
+      - BSC/BSCProps#/BSC Prop Pack - JENX Tree Props Vol03 (HD)/BSC Prop Pack - JENX Tree Props Vol03 (HD).dat
+      - BSC/BSCProps#/SG Models Residentials Vol02 v3/SG Models Residentials Vol02 v3.dat
+      - BSC/BSCProps#/SG Models Offices Medium v3/SG Models Offices Medium v3.dat
+      - BSC/BSCProps#/BSC Prop Pack - JRJ CPT Trees as props V2/BSC Prop Pack - JRJ CPT Trees as props V2.dat
+      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol01-02 Original v2/Grfe_CarPack_MMP vol01.dat
+      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol01-02 Original v2/Grfe_Props_Pack_Carpack vol01-vol02-Original v2.dat
+      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol01-02 Remastered/Grfe_Props_Pack_Carpack vol01-vol02-Remastered.dat
+      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol03/Grfe_CarPack_MMP vol03.dat
+      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol03/Grfe_Props_Pack_Carpack vol03 v2.dat
+      - BSC/BSCProps#/BSC VIP Girafe Carpack Vol04/Grfe_Props_Pack_Carpack vol04.dat
+      - BSC/BSCProps#/BSC VIP Girafe Hedges/Grfe_Props_Pack_LE_Hedges.dat
+      - BSC/BSCProps#/BSC VIP Girafe Urbanpack Vol01/Grfe_Props_Pack_4_rue_des_Lilas.dat
+      - BSC/BSCProps#/BSC VIP Girafe Urbanpack Vol01/Grfe_Props_Pack_Urbanpack.dat
+      - BSC/BSCProps#/BSC VIP Girafe Urbanpack Vol01/Grfe_Props_Pack_Villa Libeskind.dat
+      - BSC/BSCProps#/BSC VIP Girafe Urbanpack Vol01/Grfe_Props_Pack_Wood_Fence_4m.dat
+      - BSC/BSCProps#/BSC_PropFamilyNames v4/BSC_PropFamilyNames v4.dat
+      - BSC/BSCProps#/SG Models Adult v2/SG Models Adult v2.dat
+      - BSC/BSCProps#/SG Models Agriculture v2/SG Models Agriculture v2.dat
+      - BSC/BSCProps#/SG Models Civic Education v2/SG Models Civic Education v2.dat
+      - BSC/BSCProps#/SG Models Civic Rewards/SG Models Civic Rewards.dat
+      - BSC/BSCProps#/SG Models Civic Services/SG Models Civic Services.dat
+      - BSC/BSCProps#/SG Models Department Stores v2/SG Models Department Stores v2.dat
+      - BSC/BSCProps#/SG Models Entertainment v2/SG Models Entertainment v2.dat
+      - BSC/BSCProps#/SG Models Grocery Stores v3/SG Models Grocery Stores v3.dat
+      - BSC/BSCProps#/SG Models Hotels1 v2/SG Models Hotels1 v2.dat
+      - BSC/BSCProps#/SG Models Hotels2 v2/SG Models Hotels2 v2.dat
+      - BSC/BSCProps#/SG Models I-HT v2/SG Models I-HT v2.dat
+      - BSC/BSCProps#/SG Models IM1 v2/SG Models IM1 v2.dat
+      - BSC/BSCProps#/SG Models IM2 v2/SG Models IM2 v2.dat
+      - BSC/BSCProps#/SG Models Large Stores v2/SG Models Large Stores v2.dat
+      - BSC/BSCProps#/SG Models Malls v3/SG Models Malls v3.dat
+      - BSC/BSCProps#/SG Models Medium Shops v2/SG Models Medium Shops v2.dat
+      - BSC/BSCProps#/SG Models Motels v2/SG Models Motels v2.dat
+      - BSC/BSCProps#/SG Models Offices HiRise2 v2/SG Models Offices HiRise2 v2.dat
+      - BSC/BSCProps#/SG Models Offices HiRise1 v3/SG Models Offices HiRise1 v3.dat
+      - BSC/BSCProps#/SG Models Residentials Vol01 v3/SG Models Residentials Vol01 v3.dat
+      - BSC/BSCProps#/SG Models Residentials Vol03 v3/SG Models Residentials Vol03 v3.dat
+      - BSC/BSCProps#/SG Models Residentials Vol04 v3/SG Models Residentials Vol04 v3.dat
+      - BSC/BSCProps#/SG Models Restaurants v2/SG Models Restaurants v2.dat
+      - BSC/BSCProps#/SG Models Sainsbury v2/SG Models Sainsbury v2.dat
+      - BSC/BSCProps#/SG Models Transportation v2/SG Models Transportation v2.dat
+      - BSC/BSCProps#/SG Models Utilities/SG Models Utilities.dat
+      - BSC/BSCProps#/SG Models Small Shops v3/SG Models Small Shops v3.dat
+      - BSC/BSCProps#/SG Models W2W Commercials/SG Models W2W Commercials.dat
+      - BSC/BSCTextures#/BSC TexturePack Cycledogg V01b/BSC TexturePack Cycledogg V01.dat
+      - BSC/BSCTextures#/BSC Textures Vol01/BSC Textures Vol01.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol01 v3/CSX MEGA Props - Vol01 v3.dat
+      - BSC/BSCTextures#/BSC Textures Vol02/BSC Textures Vol02.dat
+      - BSC/BSCTextures#/BSC Textures Vol03 v5/BSC Textures Vol03 v5.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol02 v3/CSX MEGA Props - Vol02 v3.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol03 v3/CSX MEGA Props - Vol03 v3.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol04 v3/CSX MEGA Props - Vol04 v3.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol05 v3/CSX MEGA Props - Vol05 v3.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol06 v3/CSX MEGA Props - Vol06 v3.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol07 v3/CSX MEGA Props - Vol07 v3.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol08 v2/CSX MEGA Props - Vol08 v2.dat
+      - CSX/CSXProps#/CSX MEGA Props - Vol09 v2/CSX MEGA Props - Vol09 v2.dat
+      - ~Documents/BSC_Readmes/CP/BSC MEGA Props CP Vol 02.htm
+      - ~Documents/BSC_Readmes/CP/Readme_BSC MEGA PropPack - CP Vol01.htm
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_MegaPropPack-stexpic1.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/DEDWD_MegaPropPack_readme.htm
+      - ~Documents/BSC_Readmes/Deadwoods/ll.gif
+      - ~Documents/BSC_Readmes/Deadwoods/lr.gif
+      - ~Documents/BSC_Readmes/Deadwoods/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/Deadwoods/ul.gif
+      - ~Documents/BSC_Readmes/Deadwoods/ur.gif
+      - ~Documents/BSC_Readmes/girafe/readme_carpack_vol. 1 & 2 remastered.html
+      - ~Documents/BSC_Readmes/girafe/readme_carpack_vol. 1 & 2.html
+      - ~Documents/BSC_Readmes/girafe/readme_carpack_vol. 3.html
+      - ~Documents/BSC_Readmes/girafe/readme_urbanpack_vol. 1.html
+      - ~Documents/BSC_Readmes/Jeronij/CPT Trees as props V2  readme.htm
+      - ~Documents/BSC_Readmes/Jeronij/CPTTreesaspropsV2.jpg
+      - ~Documents/BSC_Readmes/Jestarr/BSCMegaProps_JES_Vol06.jpg
+      - ~Documents/BSC_Readmes/Jestarr/Readme_BSCMegaProps_JES_Vol06.txt
+      - ~Documents/BSC_Readmes/Jestarr/Readme_BSCMegaProps_JES_Vol07.txt
+      - ~Documents/BSC_Readmes/Mattb325/Batprops readme.html
+      - ~Documents/BSC_Readmes/Mattb325/batprops01_s.jpg
+      - ~Documents/BSC_Readmes/Mattb325/batprops01_sn.jpg
+      - ~Documents/BSC_Readmes/Mattb325/Readme_BSC BATProps MattB325 Vol04.html
+      - ~Documents/BSC_Readmes/Vester/BSC_BATProps_VDK_Vol01.jpg
+      - ~Documents/BSC_Readmes/Vester/BSC_BATProps_VDK_Vol02.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 Cottages Ornee Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 Cottages Ornee Vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 London W2W Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 McMansion Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 Shopping Mall Pack Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 Small Modern House Pack_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps MattB325 Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps MattB325 Vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps MattB325 Vol03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps MattB325 Vol04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Mattb325 W2W Prop Pack Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps Newman Inc WFK Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps VDK Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps VDK Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - ALN Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - ALN Vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - ALN Vol03 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CAL Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Caliban Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol01 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol05_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol06_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol07_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CARCH Vol08_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol05_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - COBB Vol06_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Civics_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Houses_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Industrials_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol01_pt5_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol02_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol02_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - CP Vol02_pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - D66 vol03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DBSSYMN Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DBSSYMN Vol02 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol01 v4-pt01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol01 v4-pt02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol01 v4-pt03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol01 v4-pt04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - DEDWD vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - GasCooker Vol01 v2-pt01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - GasCooker Vol01 v2-pt02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Gascooker vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - GAZ Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JBSimio vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JBSimio vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JBSimio vol03 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol01 v4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol03 v2-pt01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol03 v2-pt02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JENX Vol05_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Jen_P Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol01 v2-pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol01 v2-pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol01 v2-pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol03 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol04 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol05 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol06 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol07 v2-pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol07 v2-pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol08 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JES Vol09 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JMyers Agriculture 01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JMyers Agriculture 02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JMyers Common Props_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol03 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol04 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol05 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - JRJ Vol06 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - KevDan25 Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - KWK Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - KWK Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - KWK Vol03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - LiL Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MBEAR Vol01 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MBEAR Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MBEAR Vol03 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MBEAR Vol04 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol01-pt5_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt5_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Mikeseith vol03-pt6_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Misc Vol01 v2-pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Misc Vol01 v2-pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - Misc Vol03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MJB Vol01 v3-pt01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MJB Vol01 v3-pt02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - MJB Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol01 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol03 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol04 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - NewmanInc Vol05_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - prepo Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT Vol01 v4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT Vol03 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT Vol04 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT WFK Vol01 - CdS v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - RT WFK Vol02 - WIMPS_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SG Vol 01 v4-pt5_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SNM Vol01 v2-pt01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SNM Vol01 v2-pt02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SNM Vol02 - Naval v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SWI21 Vol01 v4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - SWI21 Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - T1 vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - T1 vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - T1 vol03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - T1 vol04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - W2W Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props - YDR Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props D66 Vol01 v3-pt01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props D66 Vol01 v3-pt02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props D66 Vol02 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props MISC Vol02 v4-pt01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props MISC Vol02 v4-pt02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props MISC Vol02 v4-pt03_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC MEGA Props MISC Vol02 v4-pt04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - CAL Ships Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - CAL Small Boats Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - Geoffhaw Flag Pack Compilation_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - JENX Tree Props Vol01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - JENX Tree Props Vol02 (SD)_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - JENX Tree Props Vol03 (HD)_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Prop Pack - JRJ CPT Trees as props V2.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-base_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-base_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-base_pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt5_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol01-overlay_pt6_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-base_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-base_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-base_pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-overlay_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-overlay_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures Vol02-overlay_pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures vol03 v5-base_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures vol03 v5-base_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures vol03 v5-overlay_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC Textures vol03 v5-overlay_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt5_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-base_pt6_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt4_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt5_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC TexturesPack CycleDogg-overlay_pt6_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-VIP Girafe Carpack vol. 1-2 (Remastered)_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol01 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol02 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol03 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol04 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol05 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol06 v3-pt01_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol06 v3-pt02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol07 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol08 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/CSX MEGA Props - Vol09 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Carpack vol01-vol02_v2_pt1_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Carpack vol01-vol02_v2_pt2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Carpack vol03_v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Carpack vol04_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_LE_Hedges_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/Grfe_Props_Pack_Urbanpack_and_Mixed_Props_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Adult v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Agriculture v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Civic_Rewards_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Civic_Services_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Department_Stores v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Education v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Entertainment v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Grocery_Stores v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Hotels1 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Hotels2 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_I-HT v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_IM1 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_IM2 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Large_Stores v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Malls v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Medium_Shops v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Motels_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Offices_HiRise1 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Offices_HiRise2 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Offices_Medium v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Residentials_Vol01 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Residentials_Vol02 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Residentials_Vol03 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Residentials_Vol04 v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Restaurants v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Sainsbury v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Small_Shops v3_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Transportation v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_Utilities_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/SG_Models_W2W_Commercials_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC BATProps MattB325 Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC BATProps VDK Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC BATProps VDK Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - ALN Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - ALN Vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CAL vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Caliban Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol01 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol04.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol05.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol06.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol07.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CARCH Vol08.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol04.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol05.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - COBB Vol06.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Civics.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Houses.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Industrials.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - CP Vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - D66 vol01 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - D66 vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - D66 vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - DBSSYMN Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - DBSSYMN Vol02 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - DEDWD vol01 v4.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - DEDWD vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Gascooker vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Gascooker vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - GAZ Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JBSimio vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JBSimio vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JBSimio vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol01 v4.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol04.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JENX Vol05.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Jen_P Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol04 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol05 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol06 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol07 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol08 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JES Vol09 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JMyers Common Props.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JMyersAgriculture01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JMyersAgriculture02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol04 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol05 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - JRJ Vol06 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - KevDan25 Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - KWK Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - KWK Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - KWK Vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - LiL Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MBEAR Vol01 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MBEAR Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MBEAR Vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MBEAR Vol04 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Mikeseith vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Mikeseith vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Misc Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Misc Vol02 v4.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - Misc Vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MJB vol01 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - MJB vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol01 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol04 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - NewmanInc Vol05.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - prepo Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT Vol01 v4.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT Vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT Vol04 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT WFK Vol01 - CdS v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - RT WFK Vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SG Vol01 v4.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SNM Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SNM Vol02 - Naval v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SWI21 vol01 v4.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - SWI21 Vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - T1 vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - T1 vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - T1 vol03.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - T1 vol04.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC MEGA Props - W2W Vol01 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Mega Props - YDR Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Prop Pack - Geoffhaw Flag Pack Compilation.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Prop Pack - JENX Tree Props Vol02  (SD).txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Prop Pack - JENX Tree Props Vol03 (HD).txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Textures Vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Textures Vol02.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC Textures vol03 v5.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC-VIP Girafe Carpack vol01-vol02 (Remastered).txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC-VIP Girafe Carpack vol01-vol02 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC-VIP Girafe Carpack vol03 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC-VIP Girafe Urbanpack (CarPack vol04) vol01.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC_Essentials v2024b.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_BSC_PropFamilyNames v4.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol01 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol02 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol03 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol04 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol05 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol06 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol07 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol08 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_CSX MEGA Props - Vol09 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_Grfe_Props_Pack_LE_Hedges.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_JRJ CPT Trees as props V2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Adult v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Agriculture v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Civic Rewards.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Civic Services.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Department Stores v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Education v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Entertainment v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Grocery Stores v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Hotels1 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Hotels2 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models I-Ht v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models I-M1 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models I-M2 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Large Stores v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Malls v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Medium Shops v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Motels v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Offices HiRise1 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Offices HiRise2 v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Offices Medium v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Residentials Vol01 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Residentials Vol02 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Residentials Vol03 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Residentials Vol04 v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Restaurants v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Sainsbury v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Small Shops v3.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Transportation v2.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models Utilities.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols/Cleanitol_SG Models W2W Commercials.txt
+      - ~Documents/BSC_Readmes/Xannepan/BSC Prop Pack - JENX Tree Props Vol01.jpg
+      - ~Documents/BSC_Readmes/Xannepan/BSC Prop Pack - JENX Tree Props Vol01_readme.txt
+      - ~Documents/BSC_Readmes/Xannepan/jenx megaprops v1.JPG
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC Common Dependencies Pack Version 9b.txt
+      - ~Documents/readme.css
+      - ~Documents/readme_bsc_common_dependencies.html
+      - BSC Essentials v2024b.dat
+      - BSC_Reward_essential.dat
+      - readme.css
+      - readme_bsc_common_dependencies.html
     images:
-      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sidebar0.png
-    lastModified: 2024-05-02T16:13:37-07:00
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BSC_Common_Dependencies_Pack_V9b.png
+    lastModified: 2024-08-21T15:51:45-07:00
     name: SC4D LEX Legacy - BSC Common Dependencies Pack
-    sha256: cd64e47f77df936f99f89807053841226c186755f75724ef331ac82711757ba0
-    size: 1805447535
-    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sidebar0.png
-    timestamp: 2024-07-01T10:39:10.701Z
-    uncompressed: 1816240324
+    sha256: aba943f91e880a9b3fda1a49e685b56217f7082b21e9ff57376d386ad9a3f834
+    size: 1798549996
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BSC_Common_Dependencies_Pack_V9b.png
+    timestamp: 2024-08-22T13:06:29.434Z
+    uncompressed: 1809063146
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack
-    version: 9a
+    version: 9b
   sc4evermore/58-gizmo-effect-props:
     authors:
       - Gizmo
     category: dependencies
-    downloads: 724
+    downloads: 730
     lastModified: 2023-08-17T11:34:17-07:00
     name: Gizmo - Effect Props
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/58-gizmo-effect-props
@@ -3582,7 +4049,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 804
+    downloads: 814
     filename: Gizmo - Vehicle Props v5.0.zip
     files:
       - ~Documents/Gizmo_Readmes/vehicles.jpg
@@ -3659,7 +4126,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 862
+    downloads: 872
     filename: Gizmo - Train Props Collection v1.zip
     files:
       - ~Documents/Gizmo_Readmes/Read Me_Gizmos Train Props Collection.htm
@@ -3743,7 +4210,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1210
+    downloads: 1222
     filename: MAS71 Mega Prop Pack vol01 - Misc.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Mas71 Mega Props vol01_index.jpg
@@ -3792,7 +4259,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1097
+    downloads: 1110
     filename: AoT.zip
     files:
       - MGB_AoT.dat
@@ -3846,7 +4313,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 717
+    downloads: 728
     filename: fae_v_1_3.zip
     files:
       - Fantozzi/Fz_AudioEssentials_1_3.pdf
@@ -3903,7 +4370,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1536
+    downloads: 1548
     filename: Porkissimo MEGA Props vol01 v2.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Porkissimo MEGA Props vol01 v2_index.jpg
@@ -3998,7 +4465,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 955
+    downloads: 962
     filename: MGB TexturePack_V1.zip
     files:
       - _MGB_TexturePack_Cleanitol.txt
@@ -4077,7 +4544,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 644
+    downloads: 651
     filename: MGB_RetailSignagePack RSP.zip
     files:
       - SAMPLE.jpg
@@ -4141,7 +4608,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1040
+    downloads: 1045
     filename: MGBs Rail Depot Pack 1.01 Setup.zip
     files:
       - zMGB_RDPTextureType_RoadUS.dat
@@ -4180,7 +4647,7 @@ assets:
     authors:
       - sc4evermore
     category: dependencies
-    downloads: 464
+    downloads: 467
     lastModified: 2023-11-11T08:08:51-08:00
     name: Ulisse Wolf - Fallout Prop Pack Vol1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/DayLotTestFalloutPropVol1.jpg
@@ -4215,7 +4682,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1641
+    downloads: 1662
     filename: Mattb325 Urban Civics Prop Pack_DN_Vol01.zip
     files:
       - BSC/BSCProps/Mattb325_UrbanCivics_DN_Vol01.dat
@@ -4258,7 +4725,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1626
+    downloads: 1642
     filename: Mattb325 Urban Civics Prop Pack_MN_Vol01.zip
     files:
       - BSC/BSCProps/Mattb325_UrbanCivics_MN_Vol01.dat
@@ -4274,4 +4741,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/97-mattb325-urban-civics-prop-pack-vol01-maxisnite
     version: 1-Maxis
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T10:33:57.224Z

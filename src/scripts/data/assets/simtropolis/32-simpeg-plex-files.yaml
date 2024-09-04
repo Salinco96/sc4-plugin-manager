@@ -726,10 +726,123 @@ assets:
     authors:
       - Pegasus
     category: mods
+    dependencies:
+      - simtropolis/21661-peg-ppond-kit
+      - simtropolis/22701-peg-ppond-terrain-props-pack-1
+      - simtropolis/20916-peg-mtp-mayor-mode-forest-scenes
+      - simtropolis/20915-peg-mtp-mayor-mode-flora-mod
+      - simtropolis/20895-peg-mtp-mayor-menu-logging-scenes
+      - simtropolis/20930-peg-mtp-mayor-menu-scrub-brush-mod
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	<strong><span style="color:#800000;">The <abbr title="Pegasus">PEG</abbr> Terrain Kit (7 n 1)</span></strong><br>
+      	<strong><span style="color:#800000;">By Pegasus</span></strong><br>
+      	<br>
+      	This package contains a number of separate files, mainly <em>Mayor Mode Ploppables </em>(MMP) that are widely used for terrain detailing.<br>
+      	<br>
+      	The number of available files has been continuously growing over the years - causing a steadily growing list of dependencies as well, tedious to keep track of, download one-by-one or having to list them again and again.<br>
+      	<br>
+      	To make things easier we decided to organize a selection of these files into one single pack, so for users it will be much easier to download, while producers can just list them as a single dependency. Since most of these files are very slim, we feel this is appropriate - it is not a huge pack to download and it's organized to leave you in full control which items to load into your plugins.<br>
+      	<br>
+      	<br>
+      	<strong>The 'Kit' bundles the following sets:</strong><br>
+      	<br>
+      	* <a href="https://community.simtropolis.com/files/file/21661-peg-ppond-kit/" rel=""><abbr title="Pegasus">PEG</abbr> PPond Kit</a><br>
+      	* <strong><abbr title="Pegasus">PEG</abbr> PP Lot Editor Terrain Props</strong> (Only available in this package)<br>
+      	* <a href="https://community.simtropolis.com/files/file/22701-peg-ppond-terrain-props-pack-1/" rel=""><abbr title="Pegasus">PEG</abbr> PPond Terrain Prop Pack 1</a><br>
+      	* <a href="https://community.simtropolis.com/files/file/20916-peg-mtp-mayor-mode-forest-scenes/" rel=""><abbr title="Pegasus">PEG</abbr> <abbr title="Mountain Theme Pack">MTP</abbr> Mayor Mode Forest Scenes</a><br>
+      	* <a href="https://community.simtropolis.com/files/file/20915-peg-mtp-mayor-mode-flora-mod/" rel=""><abbr title="Pegasus">PEG</abbr> <abbr title="Mountain Theme Pack">MTP</abbr> Mayor Mode Flora Mod</a><br>
+      	* <a href="https://community.simtropolis.com/files/file/20895-peg-mtp-mayor-menu-logging-scenes/" rel=""><abbr title="Pegasus">PEG</abbr> <abbr title="Mountain Theme Pack">MTP</abbr> Mayor Menu Logging Scenes</a><br>
+      	* <a href="https://community.simtropolis.com/files/file/20930-peg-mtp-mayor-menu-scrub-brush-mod/" rel=""><abbr title="Pegasus">PEG</abbr> <abbr title="Mountain Theme Pack">MTP</abbr> Mayor Menu Scrub Brush Mod</a><br>
+      	<br>
+      	<strong>NOTICE</strong><br>
+      	<br>
+      	There is <strong>NO NEW MATERIAL</strong> in this package. It is merely a compilation of previously published material. And of course every single component will stay available on the<strong> </strong><abbr title="Pegasus Lot Exchange">PLEX</abbr><strong> </strong>as well.<br>
+      	<br>
+      	So those of you that have been <abbr title="Mountain Theme Pack">MTP</abbr>'ing for some time will not need this pack as you most probably have downloaded all the individual sets long time ago... But all folks new to <abbr title="Mountain Theme Pack">MTP</abbr> or terrain detailing or even preparing a fresh install might find this useful.<br>
+      	<br>
+      	When you unpack this download you'll find a folder 'Documentation' including the following material -<br>
+      	<br>
+      	* complete set of the original ReadMe files with images<br>
+      	* complete listing of all included files, useful for version control<br>
+      	* <s>complete listing of URLs pointing to the (still available) individual downloads</s><br>
+      	  ^ Contains a URL_Individual.txt file which all point to the now lost SimPeg website.<br>
+      	* a few notes on this or that... ;-)<br>
+      	<br>
+      	Store the documentation anywhere outside your Plugins, for future reference...
+      </p>
+
+
+      <p>
+      	<strong style="font-family:Roboto, sans-serif;line-height:22px;"><span style="color:rgb(128,0,0);">All Pegasus files are now legacy content and are no longer officially supported - however support from the wider community can be requested</span> <u><a href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/" rel="" style="color:rgb(51,122,183);">here</a></u></strong>.<br>
+      	<br>
+      	<img alt="pdt_logo01.png" class="ipsImage" src="http://i211.photobucket.com/albums/bb210/abcvs/Pegasus%20Productions/pdt_logo01.png">
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong><span style="color:#2980b9;">-Cori Edit: </span></strong><span style="color:#2980b9;">Updated linkys to individual packs and mods.</span>
+      </p>
+
+      						</body>
+    filename: The_Terrain_Kit.zip
+    files:
+      - The_Terrain_Kit/PEGPROD/PPonds/LE Terrain Props/PEG-PP_Lot-Props_101.dat
+      - The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Kit_102.dat
+      - The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Props_102.dat
+      - The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Props_Tahoe_STYLE.dat
+      - The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Tahoe_STYLE.dat
+      - The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Flowers_101.dat
+      - The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Grass_101.dat
+      - The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Ground_101.dat
+      - The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Weeds_101.dat
+      - The_Terrain_Kit/PEGPROD/MTP/MTP MM2 Scrub Brush/PEG-MTP_MM2-ScrubBrush_MOD_100.dat
+      - The_Terrain_Kit/PEGPROD/MTP/MTP MM3 Forest Flora/PEG-MTP_MM3-ForestFlora_MOD_100.dat
+      - The_Terrain_Kit/PEGPROD/MTP/MTP MM7 Logging Scenes/PEG-MTP_MM7-ForestLogging_MOD_103.dat
+      - The_Terrain_Kit/PEGPROD/MTP/MTP MM8 Forest Scenes/PEG-MTP_MM5-ForestStuff_MOD_100.dat
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/Flora.htm
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/ForestScenes.htm
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/LoggingScenes.htm
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/LotEditorTerrainProps.htm
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/PPondKit.htm
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/product_image01.jpg
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/product_image02.jpg
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/product_image03.jpg
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/product_image04.jpg
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/product_image05.jpg
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/product_image06.jpg
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/product_image07.jpg
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/ScrubBrush.htm
+      - The_Terrain_Kit/Documentation/Original_ReadMe_Files/TerrainProps1.htm
+      - The_Terrain_Kit/Documentation/FileList.txt
+      - The_Terrain_Kit/Documentation/Note_on_Original_ReadMe_Files.txt
+      - The_Terrain_Kit/Documentation/URL_Individual.txt
+      - The_Terrain_Kit/ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_06_2012/c40a9ed17c56e4053b91c28d5522fe2b-.jpg
     lastModified: 2018-07-19T01:23:57Z
     name: The PEG Terrain Kit (7 n 1)
+    sha256: 2ff2f43e8bed9f779195cbbf650f4784a5ac2578a591e6e1bf7e78f7639cc247
+    size: 2308024
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2012/thumb-c40a9ed17c56e4053b91c28d5522fe2b-.jpg
+    timestamp: 2024-08-27T09:21:20.239Z
+    uncompressed: 3116291
     url: https://community.simtropolis.com/files/file/27712-the-peg-terrain-kit-7-n-1/
+    version: "1.0"
   simtropolis/30648-peg-cdk-tutorial:
     authors:
       - Pegasus
@@ -739,4 +852,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_07/image022.thumb.jpg.65b2a105dbe97884aec5b39974b27643.jpg
     url: https://community.simtropolis.com/files/file/30648-peg-cdk-tutorial/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z

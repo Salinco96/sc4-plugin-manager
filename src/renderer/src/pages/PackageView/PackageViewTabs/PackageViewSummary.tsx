@@ -3,16 +3,17 @@ import { useTranslation } from "react-i18next"
 
 import { getCategories, getCategoryLabel } from "@common/categories"
 import { getFeatureLabel } from "@common/i18n"
-import { Feature } from "@common/types"
+import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import { entries } from "@common/utils/objects"
-import { isEnum } from "@common/utils/types"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners"
 import { Text } from "@components/Text"
 import { useCurrentVariant } from "@utils/packages"
+import { useStore } from "@utils/store"
 
 export function PackageViewSummary({ packageId }: { packageId: string }): JSX.Element {
   const variantInfo = useCurrentVariant(packageId)
+  const globalOptions = useStore(store => store.globalOptions)
 
   const { t } = useTranslation("PackageViewSummary")
 
@@ -57,14 +58,17 @@ export function PackageViewSummary({ packageId }: { packageId: string }): JSX.El
         <Typography variant="body2">
           <b>{t("requirements")}:</b>
           <ul>
-            {entries(variantInfo.requirements).map(([feature, value]) => (
-              <li key={feature}>
-                {
-                  isEnum(feature, Feature)
-                    ? getFeatureLabel(t, feature)
-                    : feature /* TODO: Option label */
-                }
-                : {t(value ? "yes" : "no", { ns: "General" })}
+            {entries(variantInfo.requirements).map(([requirement, value]) => (
+              <li key={requirement}>
+                {getRequirementLabel(t, requirement, variantInfo.options, globalOptions)}
+                {": "}
+                {getRequirementValueLabel(
+                  t,
+                  requirement,
+                  value,
+                  variantInfo.options,
+                  globalOptions,
+                )}
               </li>
             ))}
           </ul>

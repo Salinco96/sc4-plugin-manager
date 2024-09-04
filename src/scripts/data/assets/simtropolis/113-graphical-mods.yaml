@@ -2525,10 +2525,34 @@ assets:
     authors:
       - _marsh_
     category: graphics
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      							<p>	This mod replaces all of the maxis trees in-game, oaks, pines &amp; palms. It makes your neighborhoods much more "full" as they should be in real life. And you no longer have to wait for saplings to grow over the years. A recommended mod is <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1196" rel="external nofollow">SFBTs' street tree mod</a> (used in the pictures) or similar.<br><br><strong>Dependencies:</strong><br><a href="https://www.simtropolis.com/forum/files/file/20411-simfox-chestnuts/" rel="external nofollow">Simfoxes Chestnuts</a><br><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props CP Vol01</a><br><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">BSCPropsMattb325_Vol02</a></p>
+      						</body>
+    filename: Maxis tree replacement mod.zip
+    files:
+      - Maxis tree replacement mod/M_tree replacement mod/Oak Replacement.dat
+      - Maxis tree replacement mod/M_tree replacement mod/Palm Replacement.dat
+      - Maxis tree replacement mod/M_tree replacement mod/Pine Replacement.dat
+      - Maxis tree replacement mod/banner.png
+      - Maxis tree replacement mod/img0090.jpg
+      - Maxis tree replacement mod/img0091.jpg
+      - Maxis tree replacement mod/readme.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_09_2011/3f2a290ed0ea7ec147d89171dd03d48c-banner.png
+      - https://www.simtropolis.com/objects/screens/monthly_09_2011/50dae41a55c91982f2870e3d7b367844-img0090.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2011/c6e91269ee02b156c3c75fe445f342dd-img0091.jpg
     lastModified: 2016-11-02T08:36:19Z
     name: Maxis Tree Replacement Mod
+    sha256: af77030486355f5ee5dc4482601c493abc7fa628bd73f41cf77094af80cad9f1
+    size: 773977
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2011/thumb-3f2a290ed0ea7ec147d89171dd03d48c-banner.png
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 781445
     url: https://community.simtropolis.com/files/file/26804-maxis-tree-replacement-mod/
+    version: "1.0"
   simtropolis/26806-vip-rural-pack-v2:
     authors:
       - VIP Team
@@ -2830,18 +2854,217 @@ assets:
     authors:
       - VIP Team
     category: graphics
+    dependencies:
+      - sc4evermore/36-lk33-seasonalflorapatch
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	Set of 6 Aesculus Trees Seasonal <abbr title="Mayor Mode Ploppable">MMP</abbr> or Evergreen <abbr title="Mayor Mode Ploppable">MMP</abbr>
+      </p>
+
+
+      <p>
+      	Aesculus hippocastanum is a large deciduous tree, commonly known as Horse-chestnut or Conker tree.
+      </p>
+
+
+      <p>
+      	Included in this download two new icons in your menu Mayor Plop. The first contains six Aesculus Seasonal, and a second containing six Aesculus version "summer" (Evergreen)
+      </p>
+
+
+      <p>
+      	For the Lotteries all its trees are in the menu "Flora" lines VIP_Or_FL
+      </p>
+
+
+      <ul>
+      	<li>
+      		Menu Position : Mayor Mod
+      	</li>
+      	<li>
+      		Plop Cost : 0$
+      	</li>
+      	<li>
+      		Bulldoze Cost : 0$
+      	</li>
+      	<li>
+      		Montly Cost 0$
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>DEPENDENCIES</strong>
+      </p>
+
+
+      <p>
+      	There is one dependency concerning the flora tuning parameters:
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/24-terrain-mods-and-tree-controllers/36-lk33-seasonalflorapatch" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Seasonal Flora Patch for All Terrain Mods</a>
+      </p>
+
+
+      <p>
+      	<strong>INSTALLATION </strong>
+      </p>
+
+
+      <table border="0" cellpadding="0" cellspacing="0">
+      	<tbody>
+      		<tr>
+      			<td>
+      				<strong>Installation</strong>: copy/extract the <strong>VIP </strong>parent folder into your plugins. If you extracted the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>
+      				<strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<strong>CREDIT AND FEEDBACK</strong>
+      </p>
+
+
+      <p>
+      	Models by Orange, thanks Girafe
+      </p>
+
+
+      <p>
+      	If you have questions or problems you can leave us a message <a href="https://www.sc4devotion.com/forums/index.php?topic=13956.0" rel="external nofollow">SC4devotion thread</a><img alt="111114122110846489046819.jpg" src="http://nsm06.casimages.com/img/2011/11/14/111114122110846489046819.jpg">
+      </p>
+
+      						</body>
+    filename: VIP Orange Aesculus.zip
+    files:
+      - ~Documents/VIP_Readmes/Orange_o/images/aesculus left.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/aesculus right.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Chapter.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Table.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Title.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Banner.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Separator.jpg
+      - VIP/Orange/Aesculus/VIP_Or_Aesculus_Props.dat
+      - VIP/Orange/Aesculus/VIP_Or_Aesculus_Seasonal.dat
+      - VIP/Orange/Aesculus/VIP_Or_Aesculus_Summer.dat
+      - ~Documents/VIP_Readmes/Orange_o/ReadMe VIPAesculus.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_11_2011/eb3b461388dfd3c4e51d378e47372a25-aesculussummerlexstex.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_11_2011/3ebc0e0ce3979688704a88b91a0a7156-aesculusseasonnal.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_11_2011/3844226808d36005c5094c2a19bc2ff5-aesculussummer.jpg
     lastModified: 2024-02-04T10:27:25Z
     name: VIP Orange Aesculus
+    sha256: 23309f32da892f05b60e616de8d7e9caf122017fbeb479526f8b2030ba8671b0
+    size: 4770345
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2011/thumb-eb3b461388dfd3c4e51d378e47372a25-aesculussummerlexstex.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 5612232
     url: https://community.simtropolis.com/files/file/27001-vip-orange-aesculus/
+    version: "1.0"
   simtropolis/27008-vip-orange-fagus:
     authors:
       - VIP Team
     category: graphics
+    dependencies:
+      - sc4evermore/36-lk33-seasonalflorapatch
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <p>
+      	Set of 5 Fagus Trees Seasonal <abbr title="Mayor Mode Ploppable">MMP</abbr> or Evergreen <abbr title="Mayor Mode Ploppable">MMP</abbr><br>
+      	<br>
+      	Beech (Fagus) is a genus of ten species of deciduous trees in the family Fagaceae, native to temperate Europe, Asia and North America.<br>
+      	Included in this download two new icons in your menu Mayor Plop. The first contains five Fagus Seasonal, and a second containing five Fagus version "summer" (Evergreen)<br>
+      	For the Lotteries all its trees are in the menu "Flora" lines VIP_Or_FL
+      </p>
+
+
+      <ul>
+      	<li>
+      		Menu Position : Mayor Mod
+      	</li>
+      	<li>
+      		Plop Cost : 0$
+      	</li>
+      	<li>
+      		Bulldoze Cost : 0$
+      	</li>
+      	<li>
+      		Montly Cost 0$
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>DEPENDENCIES</strong><br>
+      	<br>
+      	There is one dependency concerning the flora tuning parameters:<br>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/24-terrain-mods-and-tree-controllers/36-lk33-seasonalflorapatch" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Seasonal Flora Patch for All Terrain Mods</a><br>
+      	<br>
+      	<strong>INSTALLATION</strong><br>
+      	<br>
+      	<strong>Installation</strong>: copy/extract the <strong>VIP </strong>parent folder into your plugins. If you extracted the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>
+      	 <strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.<br>
+      	<br>
+      	<strong>CREDIT AND FEEDBACK</strong><br>
+      	<br>
+      	Models by Orange, thanks Girafe<br>
+      	If you have questions or problems you can leave us a message <a href="https://www.sc4devotion.com/forums/index.php?topic=13956.0" rel="external nofollow">SC4devotion thread</a><br>
+      	<img alt="111114122110846489046819.jpg" src="http://nsm06.casimages.com/img/2011/11/14/111114122110846489046819.jpg">
+      </p>
+
+      						</body>
+    filename: VIP Orange Fagus.zip
+    files:
+      - ~Documents/VIP_Readmes/Orange_o/images/fagus left.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/fagus right.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Chapter.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Table.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Title.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Banner.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Separator.jpg
+      - VIP/Orange/Fagus/VIP_Or_Fagus_Props.dat
+      - VIP/Orange/Fagus/VIP_Or_Fagus_Seasonal.dat
+      - VIP/Orange/Fagus/VIP_Or_Fagus_Summer.dat
+      - ~Documents/VIP_Readmes/Orange_o/ReadMe VIPFagus.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_12_2013/9b78b093671065ca80af4e03b04ddff6-fagussummerlexstex.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2013/fb34e6284da1f650c8f38fff919f2487-presentation1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2013/33a48d2d720f357410067589089c3113-presentation2.jpg
     lastModified: 2024-02-04T10:22:57Z
     name: VIP Orange Fagus
+    sha256: 683ea923830085b42c261522347f2a811111c35f6a41ff9219ded958d62498b8
+    size: 3517271
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2013/thumb-9b78b093671065ca80af4e03b04ddff6-fagussummerlexstex.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 4194112
     url: https://community.simtropolis.com/files/file/27008-vip-orange-fagus/
+    version: "1.0"
   simtropolis/27011-discontinued-vip-carpack-vol2-discontinued-see-below:
     authors:
       - VIP Team
@@ -2854,10 +3077,78 @@ assets:
     authors:
       - VIP Team
     category: graphics
+    dependencies:
+      - simtropolis/26806-vip-rural-pack-v2
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start"><span style="color:#e74c3c">DISCONTINUED</span></strong><span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">:</span>
+      </p>
+
+
+      <p>
+      	<strong>Updated on 04.02.2024</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">
+      	This upload has been merged with the <strong><a href="https://community.simtropolis.com/files/file/26806-vip-rural-pack-v2/" rel="" style="background-color:transparent; color:#1f5e8d">VIP Rural Pack v2</a></strong>
+      </p>
+
+
+      <p style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">
+      	<span style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">This page now will be redirecting to the above linked download when you hit the download button.</span>
+      </p>
+
+
+      <p>
+      	<strong>CREDIT AND FEEDBACK</strong>
+      </p>
+
+
+      <p>
+      	Models by Manchou and Vnaoned. Modding by Badsim.
+      </p>
+
+
+      <p>
+      	If you have questions or problems you can leave us a message <a href="https://www.sc4devotion.com/forums/index.php?PHPSESSID=8499f0cde067489d54df6a646325f95f&amp;topic=12695.msg406830;topicseen#new" rel="external nofollow">SC4devotion thread</a>
+      </p>
+
+
+      <p>
+      	<img alt="111114122110846489046819.jpg" src="http://nsm06.casimages.com/img/2011/11/14/111114122110846489046819.jpg">
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff; color:#2980b9; font-size:12px; text-align:start">Updated: 30.01.2024</strong><span style="background-color:#ffffff; color:#2980b9; font-size:12px; text-align:start"><span> </span>- updated for Project ZIP - Tyberius06</span>
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_12_2011/495e9f03a1f03ee88acc35739f9593ba-imagelexstex.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2011/96136b46c63af9d5d6de70423340ae0a-imagepresentationgrande01.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2011/dc48632c423eee02e930005f25e74808-imagepresentationgrande02.jpg
     lastModified: 2024-02-04T11:43:59Z
     name: DISCONTINUED - VIP Rural Pack Expansion01 - DISCONTINUED SEE below
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2011/thumb-495e9f03a1f03ee88acc35739f9593ba-imagelexstex.jpg
     url: https://community.simtropolis.com/files/file/27064-discontinued-vip-rural-pack-expansion01-discontinued-see-below/
+    version: "1.0"
   simtropolis/2708-armageddon-pack-tainted-waters:
     authors:
       - simtropolis
@@ -3848,10 +4139,116 @@ assets:
     authors:
       - nbvc
     category: graphics
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>The file contains stone paths as Lots and for mayor menu.</p>
+
+      <p> </p>
+
+      <p>The Lots can be used for easy and fast path plopping. With the mayor menu ploppable stone paths you can create your own custom paths.</p>
+
+      <p> </p>
+
+      <p>You can change the MMP stones with additional clicks on the same stone.</p>
+
+      <p> </p>
+
+      <p>The stones can also be used as props in the Lot-Editor for your custom lots.</p>
+
+      <p> </p>
+
+      <p>No dependencies.</p>
+
+      						</body>
+    filename: NBVC_StonePaths.zip
+    files:
+      - NBVC_StonePaths/NBVC_BlockRock10_101-0x5ad0e817_0x3cc80556_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock10_101-0x6534284a-0xfac95ee9-0x1ccaa86c.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock11_105-0x5ad0e817_0x3d549af6_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock11_105-0x6534284a-0xdd040c94-0x3d2fb37e.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock12_100-0x5ad0e817_0xbd549c5d_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock12_100-0x6534284a-0xdd040c94-0x5d2fb39c.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock13_100-0x5ad0e817_0x9d549d51_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock13_100-0x6534284a-0xdd040c94-0xfd2fb3a7.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock14_100-0x5ad0e817_0x1d54a1f8_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock14_100-0x6534284a-0xdd040c94-0xbd2fb820.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock15_100-0x5ad0e817_0x7d54aa74_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock15_100-0x6534284a-0xdd040c94-0x3d2fc09d.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock16_100-0x5ad0e817_0x7d54f4c1_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock16_100-0x6534284a-0xdd040c94-0xfd300bfb.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock17_101-0x5ad0e817_0xfd54fe58_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock17_101-0x6534284a-0xdd040c94-0xdd3014f1.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock18_100-0x5ad0e817_0x7d54fedb_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock18_100-0x6534284a-0xdd040c94-0x1d3014fc.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock19_100-0x5ad0e817_0x7d35060b_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock19_100-0x6534284a-0xdd040c94-0x5d37a93f.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock1_105-0x5ad0e817_0x5d549b5c_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock1_105-0x6534284a-0xdd040c94-0xfd2fb392.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock20_102-0x5ad0e817_0x3d350ec5_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock20_102-0x6534284a-0xdd040c94-0xbd37b26e.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock21_100-0x5ad0e817_0x5d35487a_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock21_100-0x6534284a-0xdd040c94-0xdd37ebb6.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock21_101-0x5ad0e817_0x1d354a30_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock21_101-0x6534284a-0xdd040c94-0xdd37ed61.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock22_100-0x5ad0e817_0xfd36cc87_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock22_100-0x6534284a-0xdd040c94-0xbd396fc9.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock23_100-0x5ad0e817_0x7d36ce08_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock23_100-0x6534284a-0xdd040c94-0x1d397120.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock24_100-0x5ad0e817_0xbd36ce87_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock24_100-0x6534284a-0xdd040c94-0x1d397199.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock2_101-0x5ad0e817_0x9c86d50c_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock2_101-0x6534284a-0xfac95ee9-0x7cafb4d1.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock3_101-0x5ad0e817_0xdc86d552_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock3_101-0x6534284a-0xfac95ee9-0xdcafb4ea.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock4_101-0x5ad0e817_0x9c86d61d_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock4_101-0x6534284a-0xfac95ee9-0x5cafb500.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock5_105-0x5ad0e817_0x1d54f5c0_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock5_105-0x6534284a-0xdd040c94-0x5d300bdf.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock6_100-0x5ad0e817_0xfcc6b82f_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock6_100-0x6534284a-0xfac95ee9-0xdcc95b4b.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock7_103-0x5ad0e817_0x3d54f517_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock7_103-0x6534284a-0xdd040c94-0xdd300bed.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock8_100-0x5ad0e817_0xfcc801de_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock8_100-0x6534284a-0xfac95ee9-0x1ccaa4fd.SC4Desc
+      - NBVC_StonePaths/NBVC_BlockRock9_100-0x5ad0e817_0xfcc80348_0x30000.SC4Model
+      - NBVC_StonePaths/NBVC_BlockRock9_100-0x6534284a-0xfac95ee9-0x1ccaa66a.SC4Desc
+      - NBVC_StonePaths/NBVC_StonePath1_fd415330.SC4Lot
+      - NBVC_StonePaths/NBVC_StonePath2_9d41540d.SC4Lot
+      - NBVC_StonePaths/NBVC_StonePath3_1d420d22.SC4Lot
+      - NBVC_StonePaths/NBVC_StonePathCorner_9d4154f2.SC4Lot
+      - NBVC_StonePaths/NBVC_StonePathDiag_3d420d60.SC4Lot
+      - NBVC_StonePaths/NBVC_StonePathsMMP_100.dat
+      - NBVC_StonePaths/NBVC_StonePathS_5d420d44.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_09_2012/5c9d58473db64043d5be1a57c4b8b8e3-stonepaths1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2012/f00178dd80612ea631507f31af2d6225-stonepaths2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2012/9267480898eec5d0d4671c1515d28719-stonepaths3.jpg
     lastModified: 2012-09-04T18:10:24Z
     name: Stone Paths
+    sha256: 192a32c445dcfd14152673f3059dd30daeb620ad5dbd863b25ef049f08b0d845
+    size: 409937
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2012/thumb-5c9d58473db64043d5be1a57c4b8b8e3-stonepaths1.jpg
+    timestamp: 2024-08-27T05:38:57.049Z
+    uncompressed: 586295
     url: https://community.simtropolis.com/files/file/27995-stone-paths/
+    version: "1.0"
   simtropolis/28049-turtles:
     authors:
       - nbvc
@@ -4120,10 +4517,93 @@ assets:
     authors:
       - VIP Team
     category: graphics
+    dependencies:
+      - sc4evermore/36-lk33-seasonalflorapatch
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <p>
+      	<strong>Pinus nigra</strong> is a large coniferous evergreen tree, growing to 20–55 metres (66–180 feet) high at maturity and spreading to 6 to 12 m (20 to 39 ft) wide. The bark is gray to yellow-brown, and is widely split by flaking fissures into scaly plates, becoming increasingly fissured with age. The leaves ('needles') are thinner and more flexible in western populations.<br>
+      	Included in this download one new icon in your menu Mayor Plop. It contains five Pinus Negra "summer" (Evergreen) version.<br>
+      	For the Lotteries all its trees are in the menu "Flora" lines VIP_Or_FL
+      </p>
+
+
+      <p>
+      	These trees are created by <strong>Orange</strong>, but it was originally uploaded by <strong>pierrebaptiste</strong> in the behalf of Orange.<br>
+      	<br>
+      	<strong>Change Log:</strong><br>
+      	<br>
+      	<strong>This is <span style="color:#c0392b;">Version 2.</span></strong><br>
+      	<br>
+      	The upload has undergone some structural organization and clean-up to nicely fit with the rest of Orange's and the VIP Teams creations. This readme is also a result of this revision.
+      </p>
+
+
+      <ul style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">
+      	<li>
+      		Menu Position : Mayor Mod
+      	</li>
+      	<li>
+      		Plop Cost : 0$
+      	</li>
+      	<li>
+      		Bulldoze Cost : 0$
+      	</li>
+      	<li>
+      		Montly Cost 0$
+      	</li>
+      </ul>
+
+
+      <p style="background-color:#ffffff; color:#353535; font-size:14px; text-align:start">
+      	<strong>DEPENDENCIES</strong><br>
+      	<br>
+      	There is one dependency concerning the flora tuning parameters:<br>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/24-terrain-mods-and-tree-controllers/36-lk33-seasonalflorapatch" rel="external nofollow" style="background-color:transparent; color:#1f5e8d" target="_blank"><abbr style="border-bottom:none" title="BATT Squad Certification">BSC</abbr><span> </span>Seasonal Flora Patch for All Terrain Mods</a><br>
+      	<br>
+      	<strong>INSTALLATION</strong><br>
+      	<br>
+      	<strong>Installation</strong>: copy/extract the <strong>VIP </strong>parent folder into your plugins. If you extracted the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>
+      	 <strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.<br>
+      	<br>
+      	<strong>CREDIT AND FEEDBACK</strong><br>
+      	<br>
+      	Models by Orange<br>
+      	Originally uploaded by pierrebaptiste <br>
+      	Revised and updated by Tyberius06
+      </p>
+
+      						</body>
+    filename: VIP Orange Pinus Nigra v2.zip
+    files:
+      - ~Documents/VIP_Readmes/Orange_o/images/Icon_pinus-nigra.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/Icon_pinus-nigra_ig.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Chapter.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Table.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Background_Title.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Banner.jpg
+      - ~Documents/VIP_Readmes/Orange_o/images/VIP_Separator.jpg
+      - VIP/Orange/Pinus Nigra/VIP_Or_PinusNegra_Props.dat
+      - VIP/Orange/Pinus Nigra/VIP_Or_PinusNigra_Evergreen_MMP.dat
+      - ~Documents/VIP_Readmes/Orange_o/ReadMe VIP_Or_Pinus_Nigra v2.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_VIP Orange Pinus Nigra v2.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2013/9e206cd1776fbab8a1583c91f28f96cf-pinus-nigra.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/Icon_pinus-nigra_ig.jpg.6c5052b2c528e868f85883f8f297bd3e.jpg
     lastModified: 2024-02-04T10:39:45Z
     name: VIP Orange Pinus Nigra v2
+    sha256: 9098452df336c42b60bdaa69a2383738238cea588969d387081d5609a26d49a4
+    size: 2159569
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2013/thumb-9e206cd1776fbab8a1583c91f28f96cf-pinus-nigra.png
+    timestamp: 2024-08-27T09:21:20.239Z
+    uncompressed: 2482051
     url: https://community.simtropolis.com/files/file/28847-vip-orange-pinus-nigra-v2/
+    version: "2.0"
   simtropolis/28848-vip-orange-cupressus-v2:
     authors:
       - VIP Team
@@ -4344,10 +4824,197 @@ assets:
     authors:
       - "11241036"
     category: graphics
+    dependencies:
+      - sc4evermore/36-lk33-seasonalflorapatch
+    description: >-
+      <body>
+                                  
+
+
+
+
+      							
+      <div>
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Short description:</strong></span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">This plugin contains 24 lots with seasonally changing woods, based on the seasonally changing trees by girafe. Like other lots, they can be found in the park menu. Plop and demolition cost are kept low, and they don’t charge monthly costs. They have a low park effect and slightly reduce air and water pollution. I’ve furthermore tried to create tree combinations corresponding to the most common forest combination in central Europe.</span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">Since I’m using prop families, there shouldn’t be any repetitive tree patterns in the trees. There are 3 lot sizes; 1x1 can be used in any small gap in your city, 4x1 can be used for long gaps (such as between farm fields) and with the 4x4 lot, you should be able to fill even a large space with trees pretty fast. All lots don’t have any base texture and can therefore be combined with any terrain mod. They don’t trigger the infamous transparent textures bug.</span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">For further information and more screenshots, please refer to the readme file in the download.</span>
+      	</p>
+      	 
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><span style="color:rgb(0,0,255);"><strong>Dependencies:</strong></span></span>
+      	</p>
+
+      	<div>
+      		<p>
+      			<span style="font-family:Arial, Helvetica, sans-serif;"><strong><abbr title="BATT Squad Certification">BSC</abbr> – VIP Girafe Trees:</strong> These links contain all of the trees required for these woods and introduce <abbr title="Mayor Mode Ploppable">MMP</abbr> trees for your mayor mode menu. You need to download every kind of tree separately; fortunately, installation is easy and you won’t end up with a game menu stuffed with buttons that you won’t need anymore.</span>
+      		</p>
+      		<a href="https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+
+      		<p>
+      			<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Note:</strong> To make the <abbr title="Mayor Mode Ploppable">MMP</abbr> trees being displayed properly, you need to download <strong>Seasonal Flora Patch</strong>. It is highly recommended, albeit not mandatory for the Seasonal Woods set.</span>
+      		</p>
+
+      		<p>
+      			<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/36-lk33-seasonalflorapatch" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/36-lk33-seasonalflorapatch</a>
+      		</p>
+
+      		<p>
+      			<span style="font-family:Arial, Helvetica, sans-serif;"><em>Note: You must be registered at sc4devotion.com to download the dependencies mentioned above.</em></span>
+      		</p>
+
+      		<p>
+      			<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Stonehenge:</strong> Made by Maxis. Required for the rocks in the woods. Adds the Celtic landmark to the game. Please download it manually from this part of the STEX (it is part of the </span> Maxis Landmark Buildings Bundle)<span style="font-family:Arial, Helvetica, sans-serif;">: <a href="https://community.simtropolis.com/sc4-maxis-files/" rel="">https://community.simtropolis.com/sc4-maxis-files/</a></span>
+      		</p>
+      	</div>
+
+      	<p>
+      		 
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Currently available languages:</strong></span>
+      	</p>
+
+      	<ul>
+      		<li>
+      			<span style="font-family:Arial, Helvetica, sans-serif;">English</span>
+      		</li>
+      		<li>
+      			<span style="font-family:Arial, Helvetica, sans-serif;">German</span>
+      		</li>
+      	</ul>
+
+      	<p>
+      		 
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Installation:</strong></span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">Download the archive corresponding to the language you want. Extract all files to a folder where you will find them. Move or copy this folder into your Plugins sub-folder of your edition of SimCity 4 (for instance: C:/Programs/Maxis/SimCity 4/Plugins). You can simply overwrite any previous version of this plugin with the new files.</span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">To uninstall, please delete all files from your plugin subfolder.</span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">If there are some lots that you won’t use, you may want to open the plugin folder and delete the corresponding files (every lot has its own file).</span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Note, if you have already been using Version 1:</strong> I've reduced the number of trees in the subsequently mentioned forests: Chestnut, Conifer Evergreen, and Conifer Seasonal. You don't need to bulldoze all of these forests before installing any version higher than 1. However, to reflect the changes in game, you need to bulldoze the forests and build them again.</span>
+      	</p>
+
+      	<div>
+      		<p>
+      			<span style="font-family:Arial, Helvetica, sans-serif;"><span style="color:rgb(0,0,205);"><strong>This plugin comes in several languages. Please look into the folder “Languages“ and manually delete all files except the one with the language you want to have displayed as game text (e.g. for English: GSW_Description_English).</strong></span></span>
+      		</p>
+      	</div>
+
+      	<p>
+      		 
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Compatibility:</strong></span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">This plugin should be compatible with all versions of SimCity 4. If not, please write me a comment so I can change this note.</span>
+      	</p>
+
+      	<p>
+      		 
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Credits:</strong></span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Girafe</strong> for the trees that are making this plugin possible in the first place, and for the permission to duplicate and regroup the props.</span>
+      	</p>
+
+      	<p>
+      		 
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Support:</strong></span>
+      	</p>
+
+      	<p>
+      		<span style="font-family:Arial, Helvetica, sans-serif;">Please feel free to post issues, bug reports, and suggestions in this thread:</span>
+      	</p>
+      	<iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2740235343" scrolling="no" src="https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed" style="height:208px;max-width:502px;"></iframe>
+      </div>
+
+      						</body>
+    filename: GSW Seasonal Woods Girafe Trees_v3.rar
+    files:
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Languages/0_GSW_Description_English.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Languages/GSW_Description_Deutsch.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/AshPropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/BeechPropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/BirchPropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/ChestnutPropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/CommonSprucePropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/ConiferPropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/LindenPropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/MaplePropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Prop Families/NorwayMaplePropFamilies.dat
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Ash & Maple 1x1_3fd1357d.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Ash & Maple 4x1_e2109473.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Ash & Maple 4x4_7fd255f1.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Beech 1x1_3fd135c2.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Beech 4x1_0210945f.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Beech 4x4_ffd256e4.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Birch 1x1_1fd0c207.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Birch 4x1_4210944d.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Birch 4x4_1fd257c7.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Chestnut 1x1_bfd5e470.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Chestnut 4x1_4210943d.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Chestnut 4x4_9fd5e513.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Conifer Evergreen 1x1_3fd136c4.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Conifer Evergreen 4x1_4210942a.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Conifer Evergreen 4x4_bfd25904.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Conifer Seasonal 1x1_dfd13744.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Conifer Seasonal 4x1_02109412.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Conifer Seasonal 4x4_7fd25a02.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Mixed 1x1_7fd137f9.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Mixed 4x1_c21093fe.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Mixed 4x4_5fd25af5.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Ravine 1x1_1fd13640.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Ravine 4x1_e21093dc.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/GSW Girafe Trees Seasonal Woods/Woods/GSW Ravine 4x4_9fd25c1e.SC4Lot
+      - GSW Seasonal Woods Girafe Trees/Readme Deutsch.pdf
+      - GSW Seasonal Woods Girafe Trees/Readme English.pdf
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_03_2015/7a51a43f8726e015a992c6bdf6b09f4f-main-mit-text.png
     lastModified: 2024-03-09T21:58:01Z
     name: Seasonal Wood Lots (Girafe's Trees)
+    sha256: eedc8f761bdd62659e9627338d47642f7d2d8ee709cbc1d90f5a2997c3571324
+    size: 1595239
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2015/thumb-7a51a43f8726e015a992c6bdf6b09f4f-main-mit-text.png
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 1713116
     url: https://community.simtropolis.com/files/file/29749-seasonal-wood-lots-girafes-trees/
+    version: "3"
   simtropolis/29772-mgb-zebra-crossings:
     authors:
       - rsc204
@@ -6979,10 +7646,233 @@ assets:
     authors:
       - "11241036"
     category: graphics
+    dependencies:
+      - simtropolis/29749-seasonal-wood-lots-girafes-trees
+      - simtropolis/26080-simpeg-agricultural-mod-spam
+      - simtropolis/26079-peg-spam-super-resource-pack
+      - simtropolis/33702-vip-trees-as-props
+      - simtropolis/27712-the-peg-terrain-kit-7-n-1
+      - sc4evermore/13-sfbt-essentials
+      - sc4evermore/13-sfbt-essentials
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Short description:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">This plugin contains a row of forest combinations on ploppable lots. These have been designed to fill a certain gap in the game: For filling large areas with trees, there are tree controllers, and for creating detailed scenes on a small scale, there are <abbr title="Mayor Mode Ploppable">MMP</abbr>’s – however, when trying to place forests on small lots, mostly gaps between buildings, lots, farm fields, or in parks, you can use neither nor, because tree controllers are not exact enough, and with <abbr title="Mayor Mode Ploppable">MMP</abbr>’s, it will take too long.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">This plugin is supposed to provide a solution: It contains seasonally changing woods that can be placed in such gaps. All lots have a slight park effect, reduce pollution and increase demand for residential areas. Furthermore, I’ve also placed other stuff on these lots that can be found in forests – weeds, ferns, rocks, tree stumps, leaves, berries, and moss. As for the design, I tried to find a solution between realism (design it after common forest mixes in central Europe), aesthetics, the trees that are available in the first place (uploaded by Girafe and Orange), and adaption to the game (especially to two already available tree controllers).</span>
+      </p>
+
+
+      <p>
+      	<span style="color:#16a085;"><span style="font-family:Arial, Helvetica, sans-serif;"><strong>Comment on the preceding iteration (last version: 3, from March 14th, 2015):</strong></span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><span>All lots from the second iteration, version 1, have got new <abbr title="Type, Group, Instance">TGI</abbr>’s, therefore, they can be used along with the preceding iteration of the Seasonal Woods. I developed a completely new iteration, because I didn’t like the old one anymore, and I also wanted to completely revamp the design of the forest floor. The preceding first iteration, version 3, will only be supported if you can find bugs, I won’t change its design anymore. It is still available on the STEX and can be downloaded and installed separately (and even kept in your Plugins folder, in case you still want to use it, or if you don’t feel like bulldozing hundreds of lots).</span> Link: <a href="https://community.simtropolis.com/files/file/29749-seasonal-wood-lots-girafes-trees/" rel="">https://community.simtropolis.com/files/file/29749-seasonal-wood-lots-girafes-trees/</a></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">For more information, please refer to the Readme in the download.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><u>Available languages</u>: English, German</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><span style="color:#f39c12;"><strong>Dependencies:</strong></span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Fora Pack</strong>: A long list of plants by Girafe is required for this plugin. All of them add some trees (and one type of berries) to your Mayor Mode menu.</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>SimPeg Agricultural Mod (<abbr title="SimPeg Agricultural Mod">SPAM</abbr>)</strong>: required for one base texture. This is a complex modification, altering SimCity 4’s agriculture experience completely. Alternatively, you can also just download the resource package; this won’t modify the game completely.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><u>Whole mod</u>: <a href="https://community.simtropolis.com/files/file/26080-simpeg-agricultural-mod-spam/" rel="">https://community.simtropolis.com/files/file/26080-simpeg-agricultural-mod-spam/</a></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><u>Only resource package</u>: <a href="https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/" rel="">https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/</a></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>ALN RRP Pasture Flora:</strong> contains some <abbr title="Mayor Mode Ploppable">MMP</abbr> plants for creating pasture and marsh scenes.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Link: <a href="https://sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/167-bsc-aln-rrp-pasture-flora" rel="external nofollow">https://sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/167-bsc-aln-rrp-pasture-flora</a></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Stonehenge:</strong> required for some of the rocks. Adds the Celtic landmark to the game. Please download it manually here (it comes with </span> Maxis Landmark Buildings Bundle)<span style="font-family:Arial, Helvetica, sans-serif;">:</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><a href="https://community.simtropolis.com/sc4-maxis-files/" rel="">https://community.simtropolis.com/sc4-maxis-files/</a></span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Various prop/texture packages:</strong> add some props and textures to your game and don’t modify it completely.</span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><u>VIP Trees as Props</u> and its subsequent dependencies: <a href="https://community.simtropolis.com/files/file/33702-vip-trees-as-props/" rel="">https://community.simtropolis.com/files/file/33702-vip-trees-as-props/</a></span>
+      	</li>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><u><abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack:</u> <a href="https://sc4evermore.com/index.php/downloads/download/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://sc4evermore.com/index.php/downloads/download/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a></span>
+      	</li>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><u>The <abbr title="Pegasus">PEG</abbr> Terrain Kit (7 n 1)</u>: <a href="https://community.simtropolis.com/files/file/27712-the-peg-terrain-kit-7-n-1/" rel="">https://community.simtropolis.com/files/file/27712-the-peg-terrain-kit-7-n-1/</a></span>
+      	</li>
+      	<li>
+      		<span style="font-family:Arial, Helvetica, sans-serif;"><u><abbr title="SimForum BAT Team">SFBT</abbr> Essentials</u>: <a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-<abbr title="SimForum BAT Team">sfbt</abbr>-essentials</a></span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Installation:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Please move or copy all existing files (except the Readme files) into the Plugins folder of your edition of SimCity 4.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><u>Evergreen version</u>: The archive <em>zGSW_Evergreen Woods Override.zip</em> contains a file overriding those forest lots that change with the seasons to make then evergreen. If you prefer that over the seasonal forests, unpack this archive into the folder where you copied the forest lots into. Keep the file name in order to make sure that this file loads last.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">To uninstall this plugin, please bulldoze all instances of these forest lots in your cities and then remove all files coming with this plugin from your Plugins folder.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Compatibility:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">This plugin should be compatible with all versions of SimCity 4. If not, please feel free to tell me.</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Support:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Please feel free to post issues, bug reports, and suggestions in this thread:</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed5928474284" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed" style="height:210px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: GSW_Seasonal Woods_2nd Iteration.zip
+    files:
+      - Documentation_English.pdf
+      - Dokumentation_Deutsch.pdf
+      - Forest Combinations.pdf
+      - GSW_Base Content.dat
+      - GSW_Dummy Props.dat
+      - GSW_Modified Props.dat
+      - zGSW_Evergreen Woods Override.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/5f8c16c6b21fc_OverviewGSW2.jpg.3e36b47c7ea1fa61bb47f4f3b59f5f19.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Embankment.jpg.d1bc8bc4d47d1131e734f34ccccca73c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Fields.jpg.b97aedb2b5444c15a7200d2c40c44507.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/5f8c16d18385f_ForestTransition.jpg.5a09d2a1c07c4342d42e0bd8e3a018a0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/5f8c16d34ae7c_UrbanForest.jpg.d96ccc9dd77233d2005e16627d446997.jpg
     lastModified: 2024-03-09T22:04:42Z
     name: Seasonal Woods (2nd Iteration)
+    sha256: 5d4fd57b9b81819d50b82a055d56ecc0e5e20853392c7391dc801e46f621204a
+    size: 1469364
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/5f8c1706582f0_OverviewGSW2.thumb.jpg.b3f53d733230068e362bccce49e6ed05.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 1621543
     url: https://community.simtropolis.com/files/file/33889-seasonal-woods-2nd-iteration/
+    version: "1"
   simtropolis/33892-concrete-sidewalk-mod:
     authors:
       - "11241036"
@@ -9872,4 +10762,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-43c2c618fac6b7de4fc16966c4966243-SW_Hydro%20Dam.jpg
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z

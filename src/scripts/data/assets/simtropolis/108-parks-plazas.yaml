@@ -16015,10 +16015,90 @@ assets:
     authors:
       - justforfun
     category: parks
+    dependencies:
+      - simtropolis/35494-victorian-row-shops-pack-02
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	Give some character to your one-way roundabouts with this set of 9 centrepieces in various designs. <br>
+      	They come in 1x1 lots, will be found in your park menu, and have minimal maintenance costs. <br>
+      	The models are set up so that <abbr title="Mayor Mode Ploppables">MMPs</abbr> can be plopped on top, as you can see in the pictures.<br>
+      	Two versions provided: one with the arrows pointing right (<abbr title="Right Hand Drive">RHD</abbr> traffic), and the other for Britain and countries with <abbr title="Left Hand Drive">LHD</abbr>.
+      </p>
+
+
+      <p>
+      	Dependencies (essential):
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/35494-victorian-row-shops-pack-02/" rel="">JFF Victorian Row Shops Pack 02</a>
+      </p>
+
+
+      <p>
+      	If you enjoy my creations stay tuned for more coming to the STEX!
+      </p>
+
+
+      <p>
+      	Justforfun
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_05/1.jpg.63d5fef4e03d6a16bd512fdb903eaebe.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_05/2.jpg.cec5f118a6b9b6c99050810272f081c0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_05/3.jpg.94c0f6bfef47819ce1895c8b3bf5815a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_05/4.jpg.7e510da87bb808fdf14a09b6e007164a.jpg
     lastModified: 2023-05-05T10:02:38Z
     name: OW Roundabout Set
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_05/1.thumb.jpg.f346f14d01c3e21e4439c15907396466.jpg
+    timestamp: 2024-08-21T10:51:21.894Z
     url: https://community.simtropolis.com/files/file/35519-ow-roundabout-set/
+    variants:
+      "197017":
+        filename: JFFRoundaboutsLHD.zip
+        files:
+          - JFFRoundaboutsLHD/JFFRoundabouts Images/1.jpg
+          - JFFRoundaboutsLHD/JFFRoundabouts Images/2.jpg
+          - JFFRoundaboutsLHD/JFFRoundabouts Images/3.jpg
+          - JFFRoundaboutsLHD/JFFRoundabouts Images/4.jpg
+          - JFFRoundaboutsLHD/JFF RoundaboutsLHD.dat
+          - JFFRoundaboutsLHD/JFFRoundabouts Readme.txt
+        sha256: 2dba6fce00f3ce3aa33e726ec60837ea4d0744e685480aaefdd1a08faa55b6df
+        size: 1303838
+        uncompressed: 1332923
+      "197018":
+        filename: JFFRoundaboutsRHD.zip
+        files:
+          - JFFRoundaboutsRHD/JFFRoundabouts Images/1.jpg
+          - JFFRoundaboutsRHD/JFFRoundabouts Images/2.jpg
+          - JFFRoundaboutsRHD/JFFRoundabouts Images/3.jpg
+          - JFFRoundaboutsRHD/JFFRoundabouts Images/4.jpg
+          - JFFRoundaboutsRHD/JFF RoundaboutsRHD.dat
+          - JFFRoundaboutsRHD/JFFRoundabouts Readme.txt
+        sha256: 293684b2de27a722b69c5c072ca992afd24e2c243bf14978d2b1b29f8730d7ca
+        size: 1303839
+        uncompressed: 1332923
+    version: 1.0.0
   simtropolis/35530-green-plaza-modular-set:
     authors:
       - Terring
@@ -18939,4 +19019,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-18bf807f2f09de4980b386687e38a613-Nice%20Park%20Day.jpg
     url: https://community.simtropolis.com/files/file/998-large-park/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z

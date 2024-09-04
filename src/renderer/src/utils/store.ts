@@ -2,19 +2,12 @@ import update, { Spec } from "immutability-helper"
 import { SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
 import { create } from "zustand"
 
+import { Categories, CategoryID } from "@common/categories"
 import { ModalData, ModalID } from "@common/modals"
+import { OptionInfo, OptionValue } from "@common/options"
 import { ProfileUpdate } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
-import {
-  CategoryInfo,
-  Feature,
-  OptionInfo,
-  OptionValue,
-  PackageInfo,
-  PackageState,
-  ProfileInfo,
-  Settings,
-} from "@common/types"
+import { Feature, PackageInfo, PackageState, ProfileInfo, Settings } from "@common/types"
 import { compact } from "@common/utils/objects"
 
 import { computePackageList, getPackageListItemSize } from "./packages"
@@ -28,7 +21,7 @@ export interface PackageUi {
 
 export interface PackageFilters {
   authors: string[]
-  categories: string[]
+  categories: CategoryID[]
   dependencies: boolean
   experimental: boolean
   incompatible: boolean
@@ -60,17 +53,10 @@ export interface StoreActions {
   openVariantURL(packageId: string, variantId: string): Promise<boolean>
   removePackage(packageId: string, variantId: string): Promise<boolean>
   resetState(): void
-  setPackageOption(
-    packageId: string,
-    optionId: string,
-    optionValue: OptionValue | ReadonlyArray<OptionValue>,
-  ): Promise<boolean>
+  setPackageOption(packageId: string, optionId: string, optionValue: OptionValue): Promise<boolean>
   setPackageVariant(packageId: string, variantId: string): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
-  setProfileOption(
-    optionId: string,
-    optionValue: OptionValue | ReadonlyArray<OptionValue>,
-  ): Promise<boolean>
+  setProfileOption(optionId: string, optionValue: OptionValue): Promise<boolean>
   showErrorToast(message: string): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
   showSuccessToast(message: string): void
@@ -85,14 +71,14 @@ export interface StoreActions {
 export interface Store {
   actions: StoreActions
   authors: string[]
-  categories: Partial<Record<string, CategoryInfo>>
+  categories: Categories
   features: Partial<Record<Feature, string[]>>
+  globalOptions?: OptionInfo[]
   modal?: {
     action: (result: boolean) => void
     data: ModalData<ModalID>
     id: ModalID
   }
-  options?: OptionInfo[]
   packageFilters: PackageFilters
   filteredPackages: string[]
   packageUi: {
@@ -256,7 +242,7 @@ export const useStore = create<Store>()((set, get): Store => {
             categories: {},
             features: {},
             filteredPackages: [],
-            options: undefined,
+            globalOptions: undefined,
             packageUi: {},
             packages: undefined,
             profiles: undefined,
@@ -414,8 +400,8 @@ export const useStore = create<Store>()((set, get): Store => {
             updateState({ features: { $set: data.features } })
           }
 
-          if (data.options) {
-            updateState({ options: { $set: data.options } })
+          if (data.globalOptions) {
+            updateState({ globalOptions: { $set: data.globalOptions } })
           }
 
           if (data.packages) {

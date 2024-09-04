@@ -12,21 +12,23 @@ import {
   TextField,
 } from "@mui/material"
 
-import { OptionInfo, OptionType, OptionValue } from "@common/types"
-import { isArray, isNumber, isString } from "@common/utils/types"
+import { OptionInfo, OptionType, OptionValue, Requirements } from "@common/options"
+import { isArray } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
 
 export function OptionsField({
+  checkCondition,
   disabled,
   onChange,
   option,
   value,
 }: {
+  checkCondition: (conditions: Requirements | undefined) => boolean
   disabled?: boolean
-  onChange: (value: OptionValue | ReadonlyArray<OptionValue>) => void
+  onChange: (value: OptionValue) => void
   option: OptionInfo
-  value: OptionValue | ReadonlyArray<OptionValue>
+  value: OptionValue
 }): JSX.Element | null {
   if (option.type === OptionType.BOOLEAN) {
     if (option.display === "switch") {
@@ -80,9 +82,7 @@ export function OptionsField({
     if (option.display === "checkbox") {
       if (option.multi) {
         const values = isArray(value) ? value : [value]
-        const allValues = option.choices.map(choice =>
-          typeof choice === "object" ? choice.value : choice,
-        )
+        const allValues = option.choices.map(choice => choice.value)
         const allChecked = allValues.every(value => values.includes(value))
 
         return (
@@ -102,27 +102,15 @@ export function OptionsField({
                 label="All"
               />
             )}
-            {option.choices.map(choice =>
-              isNumber(choice) || isString(choice) ? (
+            {option.choices.map(choice => {
+              const disabled = !checkCondition(choice.condition)
+
+              return (
                 <FormControlLabel
-                  checked={values.includes(choice)}
+                  checked={values.includes(choice.value) && !disabled}
                   control={<Checkbox />}
-                  key={choice}
-                  onChange={() => {
-                    if (values.includes(choice)) {
-                      onChange(values.filter(value => value !== choice))
-                    } else {
-                      onChange([...values, choice])
-                    }
-                  }}
-                  label={choice}
-                  value={choice}
-                />
-              ) : (
-                <FormControlLabel
-                  checked={values.includes(choice.value)}
-                  control={<Checkbox />}
-                  key={choice.value}
+                  disabled={disabled}
+                  key={String(choice.value)}
                   onChange={() => {
                     if (values.includes(choice.value)) {
                       onChange(values.filter(value => value !== choice.value))
@@ -134,8 +122,8 @@ export function OptionsField({
                   title={choice.description}
                   value={choice.value}
                 />
-              ),
-            )}
+              )
+            })}
           </FormControl>
         )
       }
@@ -154,19 +142,15 @@ export function OptionsField({
               }
             }}
           >
-            {option.choices.map(choice =>
-              isNumber(choice) || isString(choice) ? (
-                <FormControlLabel control={<Radio />} key={choice} label={choice} value={choice} />
-              ) : (
-                <FormControlLabel
-                  control={<Radio />}
-                  key={choice.value}
-                  label={choice.label ?? choice.value}
-                  title={choice.description}
-                  value={choice.value}
-                />
-              ),
-            )}
+            {option.choices.map(choice => (
+              <FormControlLabel
+                control={<Radio />}
+                key={String(choice.value)}
+                label={choice.label ?? choice.value}
+                title={choice.description}
+                value={choice.value}
+              />
+            ))}
           </RadioGroup>
         </FormControl>
       )
@@ -175,7 +159,7 @@ export function OptionsField({
     return (
       <FormControl fullWidth>
         {option.label && <InputLabel id={option.id + "-label"}>{option.label}</InputLabel>}
-        <Select<OptionValue | OptionValue[]>
+        <Select<OptionValue>
           disabled={disabled}
           fullWidth
           labelId={option.id + "-label"}
@@ -190,20 +174,14 @@ export function OptionsField({
           }}
           size="small"
           title={option.description}
-          value={option.multi && !isArray(value) ? [value] : (value as OptionValue)}
+          value={option.multi && !isArray(value) ? [value] : value}
           variant="outlined"
         >
-          {option.choices.map(choice =>
-            isNumber(choice) || isString(choice) ? (
-              <MenuItem key={choice} value={choice}>
-                {choice}
-              </MenuItem>
-            ) : (
-              <MenuItem key={choice.value} title={choice.description} value={choice.value}>
-                {choice.label ?? choice.value}
-              </MenuItem>
-            ),
-          )}
+          {option.choices.map(choice => (
+            <MenuItem key={String(choice.value)} title={choice.description} value={choice.value}>
+              {choice.label ?? choice.value}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
     )

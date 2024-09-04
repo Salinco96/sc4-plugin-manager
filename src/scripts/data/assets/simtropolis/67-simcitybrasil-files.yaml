@@ -275,18 +275,249 @@ assets:
     authors:
       - SUICO
     category: mods
-    lastModified: 2020-10-26T03:53:58Z
+    dependencies:
+      - simtropolis/3559-copacabana-beach-addon-1-sports
+      - simtropolis/36142-submenus-dll
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	A set of 11 lots to create your copacabana Beach.
+      </p>
+
+
+      <p>
+      	<strong><span><span>Take a look at it on 1st january you'll have a surprise! </span></span></strong><img alt="*:party:" data-emoticon="" height="30" src="https://community.simtropolis.com/assets/emoticons/default_39.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_39@2x.gif 2x" title="*:party:" width="20" >
+      </p>
+
+
+      <p>
+      	They all act as parks.
+      </p>
+
+
+      <p>
+      	1. A 7x1 Simple Beach (it changes towels and umbrellas colors all the times you use it)
+      </p>
+
+
+      <p>
+      	2. A 7x1 LifeGuard Beach just like the real "postos" in Rio
+      </p>
+
+
+      <p>
+      	3. A 7x1 refreshment stand
+      </p>
+
+
+      <p>
+      	4. Another 7x1 refreshment stand
+      </p>
+
+
+      <p>
+      	5. The world famous walkways of copacabana with their ciclovias - straight
+      </p>
+
+
+      <p>
+      	6. Inner Corner of the walkways
+      </p>
+
+
+      <p>
+      	7. Outer Corner of the walkways
+      </p>
+
+
+      <p>
+      	8. Sand 1x1
+      </p>
+
+
+      <p>
+      	9 Sand underwater 1x1
+      </p>
+
+
+      <p>
+      	10. Sand 3x1 for intermediate region
+      </p>
+
+
+      <p>
+      	11. A crowded tile with lots of umbrellas and towels
+      </p>
+
+
+      <p>
+      	This file only was possible to make thanks to kleston my co-admin on www.SimcityBrasil.com.br . He made all the tests and even found a compatibility problem with the files:
+      </p>
+
+
+      <p>
+      	RoadOverRailOverpass0_8_0.dat<br>
+      	RoadOverRailOverpass0_5_0.dat
+      </p>
+
+
+      <p>
+      	================================
+      </p>
+
+
+      <p>
+      	<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/55338-carlosmarcelo/?do=hovercard" data-mentionid="55338" href="https://community.simtropolis.com/profile/55338-carlosmarcelo/" rel="">@carlosmarcelo</a> update:
+      </p>
+
+
+      <p>
+      	To homenage suico, I created a submenu to all lots this mod and "<a href="https://community.simtropolis.com/files/file/3559-copacabana-beach-addon-1-sports/" rel="">Copacabana Beach Addon 1 Sports</a>", too. <img alt="*:yes:" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_19.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_19@2x.gif 2x" title="*:yes:" width="15" >
+      </p>
+
+
+      <p>
+      	If you want use it with submenu, you must download "<a href="https://community.simtropolis.com/files/file/36142-submenus-dll/" rel="">Submenus DLL</a>" by memo. In this link there are detailed informations and instructions about this amazing functionality. <img alt="*:)" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_1.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_1@2x.gif 2x" title="*:)" width="15" >
+      </p>
+
+
+      <p>
+      	If you wantn't use it with submenu, "Submenu DLL" is not necessary.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/0026/ebaabfe574d22d2ab8cbd9e4b38b0eea-copapropagandaprincipal.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e2d7cc817_praiacopacheia.jpg.c1311edd60163e7e9d517943721e4f99.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e2d9474cb_praiacopaesportes.jpg.d0e50733d367491e0463046698af4868.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e2f12bc67_praiacopanoite.jpg.04ee44c9df93bb197df9c12ac92d3a1f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e2f847858_praiacopaefeitoparque.jpg.02683d6d6a4a608c0b857f81e5ca5015.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e3025450c_praiacopafogosdia.jpg.efb6de790aaad46b3b0e368f4d788c40.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e3042c582_praiacopafogosnoite.jpg.4f8c592b58501bdbc2390510702f2b2e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e34f46bbd_submenucopasuico1.jpg.bda7f16f94927e802c81c1213429fc63.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e34fbbfd7_submenucopasuico2.jpg.b6d5cf3643dce07280ed6e299d15cabd.jpg
+    lastModified: 2024-08-23T01:18:37Z
     name: Copacabana Beach
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-ebaabfe574d22d2ab8cbd9e4b38b0eea-copapropagandaprincipal.jpg
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e36cdfd48_praiacopacheia.thumb.jpg.a9cb033f3c6f4458fd6b4cf38a159506.jpg
+    timestamp: 2024-08-27T05:38:57.049Z
     url: https://community.simtropolis.com/files/file/3519-copacabana-beach/
+    variants:
+      "202790":
+        filename: copacabana.zip
+        files:
+          - copacabana.dat
+        sha256: 2f0b9da7c5ed4c24a7570a8a058cd3ac84b9320af0921dad10899f3fa61f330c
+        size: 907577
+        uncompressed: 1036065
+      "202791":
+        filename: copacabana.zip
+        files:
+          - copacabana-beach-suico-submenu.dat
+          - copacabana.dat
+        sha256: f341c56850ea436d92d15e248e2297a8ddcae761a2599728220a1c6cb0b90c8a
+        size: 924018
+        uncompressed: 1052501
+    version: "1.1"
   simtropolis/3559-copacabana-beach-addon-1-sports:
     authors:
       - SUICO
     category: mods
-    lastModified: 2020-10-26T03:53:59Z
+    dependencies:
+      - simtropolis/3519-copacabana-beach
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <p>
+      	The first addon to the copacabana beach is dedicated to sports:
+      </p>
+
+
+      <p>
+      	1. Soccer on the Beach
+      </p>
+
+
+      <p>
+      	2. Beach Volley
+      </p>
+
+
+      <p>
+      	3. Gymnastics
+      </p>
+
+
+      <p>
+      	4. I did add a 3x2 underwater sand file as J.O. asked.
+      </p>
+
+
+      <p>
+      	Here is the link to the copacabana beach file (and your submenu):
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed59885689" scrolling="no"
+      src="https://community.simtropolis.com/files/file/3519-copacabana-beach/?do=embed" style="height:361px;max-width:502px;"></iframe>
+
+
+      <p>
+      	Or just click on my name to see all my bats creations you maybe find that some of them are nice.
+      </p>
+
+
+      <p>
+      	Put everything in your my documents/SimCity 4/plugins directory
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:12px;"><strong><span style="color:#3498db;">carlosmarcelo edit</span></strong>: Updated link to Copacabana Beach and changing category; added new images to reference submenu to this lot.</span>
+      </p>
+
+      						</body>
+    filename: copacabanaaddon1.zip
+    files:
+      - copacabanaaddon1.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0015/81038d99fa41da94ee9c8cd1be01cc82-copaaddoningles.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e42f205c1_praiacopaesportes.jpg.99bcf6d497b315788f3d841acfe96148.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e42f9539d_submenucopasuico1.jpg.04af4a640b110adbf0204fdc0fe899ee.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e4300e332_submenucopasuico2.jpg.65f509eb3e4d5ff90e5273c3a3f34b08.jpg
+    lastModified: 2024-08-23T01:23:50Z
     name: Copacabana Beach Addon 1 Sports
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-81038d99fa41da94ee9c8cd1be01cc82-copaaddoningles.jpg
+    sha256: b05626e2e64e57effe5f19720cf85320daf0a35d62a3ef550fae1d7a9977784c
+    size: 232702
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/66c7e4461a19f_praiacopaesportes.thumb.jpg.b1f3340c71cdfd5bc91ac9a82c71482b.jpg
+    timestamp: 2024-08-27T05:38:57.049Z
+    uncompressed: 257079
     url: https://community.simtropolis.com/files/file/3559-copacabana-beach-addon-1-sports/
+    version: "1.0"
   simtropolis/4585-farms-fences:
     authors:
       - SUICO
@@ -296,4 +527,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2004/thumb-283a03e42dfa59d5f755cf0f97f1841c-cercapromo1.jpg
     url: https://community.simtropolis.com/files/file/4585-farms-fences/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z

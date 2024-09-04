@@ -1,7 +1,6 @@
 import { FormControl, FormGroup } from "@mui/material"
 
-import { getOptionValue } from "@common/packages"
-import { OptionInfo, OptionValue, Options } from "@common/types"
+import { OptionInfo, OptionValue, Options, Requirements, getOptionValue } from "@common/options"
 
 import { OptionsField } from "./OptionsField"
 
@@ -11,8 +10,9 @@ export function OptionsFormSection({
   values,
   ...props
 }: {
+  checkCondition: (conditions: Requirements | undefined) => boolean
   disabled?: boolean
-  onChange: (option: OptionInfo, value: OptionValue | ReadonlyArray<OptionValue>) => void
+  onChange: (option: OptionInfo, value: OptionValue) => void
   options: OptionInfo[]
   values: Options
 }): JSX.Element {

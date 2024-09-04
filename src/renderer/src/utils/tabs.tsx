@@ -18,6 +18,7 @@ import {
   Update as UpdatesIcon,
 } from "@mui/icons-material"
 
+import { CategoryID } from "@common/categories"
 import { PackageState } from "@common/types"
 import { Location, Page } from "@utils/navigation"
 import { filterVariant } from "@utils/packages"
@@ -93,7 +94,7 @@ export const tabs: TabInfo[] = [
     label: "Dependencies",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["dependencies"],
+      categories: [CategoryID.DEPENDENCIES],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -112,7 +113,7 @@ export const tabs: TabInfo[] = [
     label: "Mods",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["mods"],
+      categories: [CategoryID.MODS],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -131,7 +132,7 @@ export const tabs: TabInfo[] = [
     label: "Residential",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["residential"],
+      categories: [CategoryID.RESIDENTIAL],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -150,7 +151,7 @@ export const tabs: TabInfo[] = [
     label: "Commercial",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["commercial"],
+      categories: [CategoryID.COMMERCIAL],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -169,7 +170,7 @@ export const tabs: TabInfo[] = [
     label: "Industry",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["industry"],
+      categories: [CategoryID.INDUSTRY],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -188,7 +189,7 @@ export const tabs: TabInfo[] = [
     label: "Agriculture",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["agriculture"],
+      categories: [CategoryID.AGRICULTURE],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -207,7 +208,7 @@ export const tabs: TabInfo[] = [
     label: "Civics",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["civics"],
+      categories: [CategoryID.CIVICS],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -226,7 +227,7 @@ export const tabs: TabInfo[] = [
     label: "Landmarks",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["landmarks"],
+      categories: [CategoryID.LANDMARKS],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -245,7 +246,7 @@ export const tabs: TabInfo[] = [
     label: "Parks",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["parks"],
+      categories: [CategoryID.PARKS],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -264,7 +265,7 @@ export const tabs: TabInfo[] = [
     label: "Utilities",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["utilities"],
+      categories: [CategoryID.UTILITIES],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,
@@ -283,7 +284,7 @@ export const tabs: TabInfo[] = [
     label: "Transport",
     location: { page: Page.Packages, data: {} },
     packageFilters: {
-      categories: ["transport"],
+      categories: [CategoryID.TRANSPORT],
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,

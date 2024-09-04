@@ -75,10 +75,47 @@ assets:
     authors:
       - Porkissimo
     category: dependencies
+    dependencies: []
+    description: "<body>
+
+      \                           \
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+
+      \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
+      style=\"\" width=\"34\" height=\"53\">
+
+      \t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t<p>4 trees which change with seasons. As they got a concrete base at the bottom, they are especially designed for street use. They're also night-enlighted, so don't place them
+      across the lot limit in the LotEditor (they would lose their nitelight in the game).</p>\r
+
+      <p>Don't worry: there will be no tree on your lot before the next season swap: it's normal.</p>\r
+
+      <p>In the <abbr title=\"Lot Editor\">LE</abbr>, stack together at the same place:</p>\r
+
+      <p>[PK-tree01-fall] + [PK-tree01-winter] + [PK-tree01-summer] + [Pk-leaves-street]</p>\r
+
+      <p>[PK-tree02-fall] + [PK-tree02-winter] + [PK-tree02-summer] + [Pk-leaves-street]</p>\r
+
+      <p>and so on...</p>\r
+
+      <p> </p>\r
+
+      <p>Enjoy!</p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/0008/4432e2a9541ea6e36c4c1a1002aee73d-street%20trees.jpg
+      - https://www.simtropolis.com/objects/screens/0008/4432e2a9541ea6e36c4c1a1002aee73d-MadeleineCompo.jpg
     lastModified: 2022-09-12T21:42:58Z
     name: Porkie Props Vol2 - Seasonal Street Trees
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2005/thumb-4432e2a9541ea6e36c4c1a1002aee73d-street%20trees.jpg
     url: https://community.simtropolis.com/files/file/11420-porkie-props-vol2-seasonal-street-trees/
+    version: obsolete
   simtropolis/11421-jenx-porkie-expanded-porkie-props:
     authors:
       - Porkissimo
@@ -3036,10 +3073,61 @@ assets:
     authors:
       - Orange_o_desespoir
     category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>Hummm <br><br>In first, how do you find my adorable French accent ?</p>
+
+      <p>My MégaProp contains:</p>
+
+      <p>- European cars in 3 orientations: 22.5,45 and 90°<br>- civil vehicles: La poste, Darty, the DDE,…<br>- and other vehicles<br>- billboards (45 and 90°) enlightened the night.Small, large and
+      doubles.<br>-a mini pack of sporting course<br>- some plants in particular of the trees of alignment (cut square….?? ) and a small collection of Hydrangeas (hortensias)<br>- urban accessories:
+      benches, mast of lighting, dustbins, “Sanisette”…<br>- and other small things</p>
+
+      <p>260 props on the whole classified like that:</p>
+
+      <p>“Or_xxxxxxx_90” “Or_xxxxxxxxx_45” for the small things with the angles.</p>
+
+      <p>“Or_ch_xxxxxx” for véhicles of building sites</p>
+
+      <p>“Or_dch_xxxxxx” for accessories of recycling</p>
+
+      <p>“Or_cpg_xxxxx” for the sporting course<br></p>
+
+      <p>“Or_p_xxxxx” for the plants</p>
+
+      <p>“Or_pub_xxxxx” for the billboards</p>
+
+      <p>and “Or_v_xxxxxx” for the cars<br><br><br><br>Amusez-vous bien <br><br></p>
+
+      						</body>
+    filename: Orange MegaProp V.01.zip
+    files:
+      - Orange M�gaProp V.01/Model01.dat
+      - Orange M�gaProp V.01/Model02.dat
+      - Orange M�gaProp V.01/Model03.dat
+      - Orange M�gaProp V.01/Model04.dat
+      - Orange M�gaProp V.01/Model05.dat
+      - Orange M�gaProp V.01/Model06.dat
+      - Orange M�gaProp V.01/Model07.dat
+      - Orange M�gaProp V.01/Model08.dat
+      - Orange M�gaProp V.01/Model09.dat
+      - Orange M�gaProp V.01/Orange MegaProp V.01.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0025/e34ce32e6889206cf26a90cded64a80f-logo-MegaProp-V.01.jpg
+      - https://www.simtropolis.com/objects/screens/0025/e34ce32e6889206cf26a90cded64a80f-presentation_megaprop.jpg
     lastModified: 2008-07-31T23:00:00Z
     name: Orange MegaProp V01
+    sha256: 212a8306b93679e9f29eee34a6bc8e6c4a746b964c1dcad01e7a79f5e441b2d9
+    size: 1877285
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2008/thumb-e34ce32e6889206cf26a90cded64a80f-logo-MegaProp-V.01.jpg
+    timestamp: 2024-08-28T10:33:57.224Z
+    uncompressed: 4497949
     url: https://community.simtropolis.com/files/file/19953-orange-megaprop-v01/
+    version: "1.0"
   simtropolis/19988-mass-pak-prop-signs:
     authors:
       - ja/att
@@ -3076,10 +3164,59 @@ assets:
     authors:
       - SimFox
     category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+      							
+      <p>A Prop set of chestnut trees (altogether 8 models) that will be used in my upcoming releases.</p>
+
+      <p>
+
+      All models are grouped into a family and as such may provide variety for the LOTs.</p>
+
+      <p>
+
+      These are day only ( no special night lighting) so they with some tweaking may be used for mass plantations.</p>
+
+      <p>
+
+      Enjoy</p>
+
+      						</body>
+    filename: SimFoxProps_8Chestnuts.zip
+    files:
+      - SimFoxProps_8Chestnuts.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0010/51eb6f02304cd0a123f4569ffb1be7eb-CN0.jpg
+      - https://www.simtropolis.com/objects/screens/0010/51eb6f02304cd0a123f4569ffb1be7eb-CN1.jpg
     lastModified: 2008-09-19T19:07:05Z
     name: SimFox Chestnuts
+    sha256: ffc64647427a0de1bfb41fcbdcf992207a1db4dc90d17b1c3d480cc04887816f
+    size: 750298
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2008/thumb-51eb6f02304cd0a123f4569ffb1be7eb-CN0.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 900831
     url: https://community.simtropolis.com/files/file/20411-simfox-chestnuts/
+    version: "1.0"
   simtropolis/20497-airbus-a380-gate-prop-pack-by-tabi:
     authors:
       - supercitybuilder4
@@ -3576,10 +3713,51 @@ assets:
     authors:
       - Gn_leugim
     category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <p>Gn_Leugim Essentials Jan 09</p>
+
+      <p> </p>
+
+      <p>
+
+      This is (and I hope it to be the only one) dependency pack from me. here you will find (most of them Portuguese) textures and props, and most of my next releases will need this one.</p>
+
+      <p> </p>
+
+      <p>
+
+      It includes a Cleanitol file, so when installing it, run it <img src="https://community.simtropolis.com/assets/emoticons/LlamaWink.gif" alt=";)"
+      srcset="https://community.simtropolis.com/assets/emoticons/LlamaWink@2x.gif 2x" width="30" height="30" ></p>
+
+      <p> </p>
+
+      <p>
+
+      Check for the updates, this will be only file.. you can see the version on the top.</p>
+
+      						</body>
+    filename: GnL_Essencials_jan09.zip
+    files:
+      - GnL_Essencials/cleanitol file.txt
+      - GnL_Essencials/GnL_Essencials.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0026/f248742a6263bbe004c4f53331f20d49-essentials.jpg
     lastModified: 2009-01-29T12:40:15Z
     name: GnLeugim Essentials
+    sha256: 18678a286ec1fa6835ff5c25ec2ce5743587272a4fdb096559d43c8c71a32785
+    size: 791302
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2009/thumb-f248742a6263bbe004c4f53331f20d49-essentials.jpg
+    timestamp: 2024-08-27T18:29:58.801Z
+    uncompressed: 1286593
     url: https://community.simtropolis.com/files/file/21060-gnleugim-essentials/
+    version: "1.0"
   simtropolis/21217-sami-props:
     authors:
       - Glenni
@@ -5420,10 +5598,27 @@ assets:
     authors:
       - Ceafus 88
     category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      							<p>	A Simple Dependency to use on a couple of my restaurants. <img alt="*:)" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_1.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_1@2x.gif 2x" title=":)" width="15" ><br><br>	C88 Textures 1<br>	C88 Textures 2</p>
+      						</body>
+    filename: C88 Textures.zip
+    files:
+      - C88 Textures 2.dat
+      - C88 Textures.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_03/orangegradientavatar.jpg.d51f0c87e3b3b1c1413e13e8fbdb148a.jpg
     lastModified: 2016-03-08T01:53:12Z
     name: C88-Ceafus 88 Texture Pack
+    sha256: f4bb4c84c1ffac119ee4cd3b4710a8e32d346eeae8913582404a478b0deb68eb
+    size: 72354
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_03/orangegradientavatar.thumb.jpg.10de94ae14a4ebb93f38ec963b57700e.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 112336
     url: https://community.simtropolis.com/files/file/26885-c88-ceafus-88-texture-pack/
+    version: "2.1"
   simtropolis/27047-prop-hedge-collection-3:
     authors:
       - I. Lostalim
@@ -6960,10 +7155,32 @@ assets:
     authors:
       - w_swietwoot
     category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<p>This is a Dutch themed prop pack. About 100 props, including colour variations and diagonals. You can give your lots or modds a Dutch theme with these. Various stuff like trash cans, paid-parking machines, glass recycle containers and phone booths. I guess the pictures speak for themselves.<br><br>I intended them to be used in shopping centres, parks, plaza's, parkings, highways, roads, street-modds, busstops, bicycle-paths, rest-area's or residential-lots. Maybe you will even find a different use for them.<br>All models are made by me, and all are in HD. Only a couple of decals are from the internet.<br><br>Dependencies:<br>None, this is a proppack and can be used as a dependency itself.<br><br>Installation:<br>Just copy the Was_NL_Props_Vol01.dat file to your plugins folder.<br><br>For uninstalling, just delete the file again. This file is dorment in your plugins folder unless you explicitly start using it, by modding or lotting. Feel free to make lots or modds with these and upload your work. But there is no need to actually include this file, just list it as a dependency.<br><br>Well, if anything is wrong with the files in the upload, just leave a comment here or PM me. For more info on my stuff you can also visit here: <a href="https://www.sc4devotion.com/forums/index.php?topic=14229.0" rel="external nofollow">http://sc4devotion.c...p?topic=14229.0</a><br><br>*** version 1.1 has zoom 3 errors fixed. These errors affected 7 props ***<br><br>Enjoy!</p>
+      						</body>
+    filename: Was_NL_Props_Vol01.zip
+    files:
+      - Readme.txt
+      - Was_NL_Props_Vol01.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_01_2014/d14d2d42603e857010262d492b1cf0ea-78.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_01_2014/188f9f42d46fe79aac3855a81c30315a-79.jpg
     lastModified: 2014-01-05T17:40:52Z
     name: Dutch Prop Pack
+    sha256: 8db40955f3f63effb0aa870b6d16c990af573d51c1deb96b1891c3bea670b56a
+    size: 1173108
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2014/thumb-d14d2d42603e857010262d492b1cf0ea-78.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 2060520
     url: https://community.simtropolis.com/files/file/28522-dutch-prop-pack/
+    version: "1.1"
   simtropolis/2858-northamerican-van-line-trailers:
     authors:
       - HillbillyTycoon
@@ -7294,10 +7511,74 @@ assets:
     authors:
       - Delecto
     category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+
+
+
+
+
+      							
+      <p>Hello, <span><span>here is</span> <span>a file, "<strong>Delecto Essentials Files</strong>", that is</span> <span>required for</span> <span>proper</span> <span>functionality</span> <span>of
+      my future</span> <span>creations</span></span>.</p>
+
+      <p> </p>
+
+      <p>================================================</p>
+
+      <p>V1.0 <span><span>/ January</span></span> 2014</p>
+
+      <p>================================================<br><br>Currently this file contains the following props:</p>
+
+      <p> </p>
+
+      <p><img src="http://imageshack.com/a/img198/1570/pqei.jpg" alt="pqei.jpg" ></p>
+
+      <p> </p>
+
+      <p>"<strong>Delecto FootPath Set1</strong>" which are located in the Lot Editor under the following
+      names:<br><br>Del_Path_3m_00<br>Del_Path_8m_00<br>Del_Path_16m_00<br>Del_Path_3m_45<br>Del_Path_8m_45<br>Del_Path_12m_45<br>Del_Path_Curve_A_00<br>Del_Path_Curve_B_00<br>Del_Path_Curve_C_00<br>Del_Path_Curve_A_45<br>Del_Path_Curve_B_45<br>Del_Path_Curve_C_45</p>
+
+      <p> </p>
+
+      <p>These Props will receive shadows from buldings and other props (such as trees) and can be joined to form very flexible footpaths.</p>
+
+      <p>Simply lift them by .1m in the Lot Editor to avoid graphical errors that can occur with flat props and enjoy.<br><br>===============================================<br><br>I'll update this
+      file frequently. so keep an eye on it. <img src="https://community.simtropolis.com/assets/emoticons/LlamaWink.gif" alt=";)"
+      srcset="https://community.simtropolis.com/assets/emoticons/LlamaWink@2x.gif 2x" width="30" height="30" ></p>
+
+      <p> </p>
+
+      <p>Readme included.</p>
+
+      <p> </p>
+
+      <p>For any question or comment, please have a look at my <abbr title="Building Architect Tool">BAT</abbr> Thread. <a
+      href="https://community.simtropolis.com/topic/29013-delecto-move-the-mouse-quickly/" rel="">https://community.simtropolis.com/topic/29013-delecto-move-the-mouse-quickly/</a><br><br>Delecto. <img
+      src="https://community.simtropolis.com/assets/emoticons/LlamaParty.gif" alt=":party:" srcset="https://community.simtropolis.com/assets/emoticons/LlamaParty@2x.gif 2x" width="35" height="41"
+      ></p>
+
+      						</body>
+    filename: Delecto Essentials Files.zip
+    files:
+      - Delecto Essentials Files.dat
+      - ReadMe Delecto Essentials.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_01_2014/d3ffff555e676d02b96344b8f7421315-delecto-essentials-picture.jpg
     lastModified: 2014-01-04T10:43:41Z
     name: Delecto Essentials Files
+    sha256: f347d25ea57e9a0b18a265cff094f759567a92aa5fe17f80650cc9ed00c75ecc
+    size: 293978
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2014/thumb-d3ffff555e676d02b96344b8f7421315-delecto-essentials-picture.jpg
+    timestamp: 2024-08-27T05:38:57.049Z
+    uncompressed: 369153
     url: https://community.simtropolis.com/files/file/29171-delecto-essentials-files/
+    version: "1.0"
   simtropolis/29211-native-american-shelter-props-v1:
     authors:
       - runamuck
@@ -20041,11 +20322,11 @@ assets:
       - "11241036"
     category: dependencies
     dependencies:
-      - simtropolis/28975-traffic-blocker-set
       - simtropolis/31351-modular-plaza-system-mps
+      - simtropolis/28975-traffic-blocker-set
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -20059,6 +20340,7 @@ assets:
 
 
 
+      							
 
 
 
@@ -20069,64 +20351,7 @@ assets:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      							
       <p style="text-align:justify;">
       	<strong>Short description:</strong>
       </p>
@@ -20258,32 +20483,178 @@ assets:
       						</body>
     filename: 11241036 Textures.zip
     files:
-      - 11241036 Textures/Table3.png
-      - 11241036 Textures/Table2.png
-      - 11241036 Textures/Table1.png
-      - 11241036 Textures/Readme.pdf
-      - 11241036 Textures/11241036 Textures.dat
+      - 11241036 Textures.dat
+      - Readme.pdf
+      - Table1.png
+      - Table2.png
+      - Table3.png
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2020_07/Table1.png.294c9a02a2559972a86b080dafc0bfe9.png
       - https://www.simtropolis.com/objects/screens/monthly_2020_07/Table2.png.a4248fa0552c5df23d90e55c0e6ba5e4.png
-      - https://www.simtropolis.com/objects/screens/monthly_2024_05/Feldtexturen_Tabelle.png.6ffafee6b2233aeacb555e68f65de393.png
-    lastModified: 2024-05-11T23:07:55Z
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/Table3.png.62618248dd7b0489b3d8133acd11ea6a.png
+    lastModified: 2024-08-20T21:56:23Z
     name: 11241036 Textures
-    sha256: 481e7d29a77d4a32b56b739949e646fb19306918367029fccc5c628c3a3e9d1b
-    size: 1834940
+    sha256: d81ed0dbd0c67c49b9eeffa7a405ef0dfc91c656178516292c28ccec1224f35e
+    size: 1955930
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_07/Table1.thumb.png.7ea0b4211bfe832221bcc4f84252afbf.png
-    timestamp: 2024-07-24T12:13:33.510Z
-    uncompressed: 5180343
+    timestamp: 2024-08-21T10:51:21.894Z
+    uncompressed: 5540693
     url: https://community.simtropolis.com/files/file/33651-11241036-textures/
-    version: "3"
+    version: "4"
   simtropolis/33702-vip-trees-as-props:
     authors:
       - "11241036"
     category: dependencies
+    dependencies:
+      - simtropolis/27001-vip-orange-aesculus
+      - simtropolis/27008-vip-orange-fagus
+      - simtropolis/27064-discontinued-vip-rural-pack-expansion01-discontinued-see-below
+      - simtropolis/28847-vip-orange-pinus-nigra-v2
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+      							
+      <p>
+      	<strong>Short Description:</strong><br>
+      	This cascading dependency package turns a few <abbr title="Mayor Mode Ploppable">MMP</abbr> trees released by the VIP team, mostly Orange, into props for your lot editing pleasure, since the original doesn't include prop exemplars. This will expand your lotting possibilities, as they can now be parts of the prop variation technique, and most of them are available as a seasonal variation.<br>
+      	This package only contains props, nothing else - to obtain the models, please download the dependencies listed below.
+      </p>
+
+
+      <p>
+      	<u>Names in the Lot Editor:</u>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Aesculus: Orange_Aesculus_... (letters ranking from A to F)
+      	</li>
+      	<li>
+      		Fagus: Orange_Fagus_... (letters ranking from A to E)
+      	</li>
+      	<li>
+      		Pinus Nigra: Or_TSC_FL_Pinus Nigra... (letters ranking from A to E)
+      	</li>
+      	<li>
+      		Cherry: VIP_Cherry... (only 1 version)
+      	</li>
+      	<li>
+      		All other: VIP_Tree1... (numbers ranking from 1 to 7)
+      	</li>
+      </ul>
+
+
+      <p>
+      	For further information, please refer to the Readme in the download.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Dependencies:</strong></span><br>
+      	This is a cascading dependency – it thus requires the subsequently mentioned dependencies to be installed, lest you will only see a lot of brown boxes in your cities and nothing at all in the Lot Editor. All of these dependencies are adding a few Mayor Mode ploppable trees to your menu.<br>
+      	<strong>Aesculus <abbr title="Mayor Mode Ploppable">MMP</abbr> Seasonal Flora:</strong> <a href="https://community.simtropolis.com/files/file/27001-aesculus-mmpseasonal-flora/" rel="">https://community.simtropolis.com/files/file/27001-aesculus-mmpseasonal-flora/</a><br>
+      	<strong>VIP orange Fagus <abbr title="Mayor Mode Ploppable">MMP</abbr> Seasonal Flora:</strong> <a href="https://community.simtropolis.com/files/file/27008-vip-orange-fagus-mmpseasonal-flora/" rel="">https://community.simtropolis.com/files/file/27008-vip-orange-fagus-mmpseasonal-flora/</a><br>
+      	<strong>VIP RuralPack Expansion 1: </strong><a href="https://community.simtropolis.com/files/file/27064-vip-ruralpack-expansion1/" rel="">https://community.simtropolis.com/files/file/27064-vip-ruralpack-expansion1/</a><br>
+      	<strong>Pinus Nigra:</strong> <a href="https://community.simtropolis.com/files/file/28847-pinus-nigra/" rel="">https://community.simtropolis.com/files/file/28847-pinus-nigra/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Installation:</strong><br>
+      	To install, please first make sure that you’ve downloaded and installed all dependencies (see above). Then move all files coming with this download into your Plugins folder.<br>
+      	To uninstall, remove all lots that have props from this download from your cities and then remove these files as well. (You can also remove these files beforehand, this will just give you a lot of brown boxes, which might even facilitate removing lots with these props on them.)
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Compatibility:</strong><br>
+      	This plugin should be compatible with all versions of SimCity 4. If not, please feel free to tell me.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>Credits:</strong><br>
+      	Credits go to the VIP people for making these wonderful trees in the first place, which, according to the upload threads, are: Orange, Girafe, Manchou, and Vnaoned.<br>
+      	The uploading has been kindly permitted by <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/319793-girafe/?do=hovercard" data-mentionid="319793" href="https://community.simtropolis.com/profile/319793-girafe/" rel="">@Girafe</a>.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;"><strong>Support:</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Arial, Helvetica, sans-serif;">Please feel free to post issues, bug reports, and suggestions in this thread:</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2740235343" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed" style="height:208px;max-width:502px;"></iframe>
+
+      						</body>
+    filename: VIP Trees as Props.zip
+    files:
+      - Orange_Aesculus.dat
+      - Orange_Fagus.dat
+      - Orange_PinusNigra.dat
+      - Readme.pdf
+      - Testlot VIP Orange Trees_ec1d2367.SC4Lot
+      - VIPTrees_Props.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_07/Screenshot.png.ea441c807b144946f7aca1252218ec3d.png
     lastModified: 2020-10-07T14:17:27Z
     name: VIP Trees as Props
+    sha256: 170fff5db97f896382ece46b4f499f3567c430e59c22ed353adbe012c2e5c8f4
+    size: 127322
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_07/Screenshot.thumb.png.69bf35c8a3f02f12421a105c433629ed.png
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 155575
     url: https://community.simtropolis.com/files/file/33702-vip-trees-as-props/
+    version: "1"
   simtropolis/33730-ct14-prop-pack-vol-2:
     authors:
       - CT14
@@ -40921,7 +41292,7 @@ assets:
     dependencies: []
     description: >-
       <body>
-
+                                  
       								<div style="position:absolute; top:0px; right:0px;">
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
@@ -40932,6 +41303,7 @@ assets:
 
 
 
+      							
 
 
 
@@ -40939,70 +41311,7 @@ assets:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      							
       <p>
       	The contained file(s) will receive additions from time to time.<br>
       	Textures (basetexture - overlay) of various natures, destinations, according to my desires, needs, ... and other requests!<br>
@@ -41010,20 +41319,21 @@ assets:
       </p>
 
       						</body>
-    filename: Scoty_Tex_Pack_1-0-1.zip
+    filename: Scoty_Tex_Pack_1-0-2.zip
     files:
+      - Scoty/scoty_textures/Scoty_Tex_NW_01.dat
       - Scoty/scoty_textures/Scoty_Tex_Pack_01.dat
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/img_tech_diff_2.jpg.7196c6232b1007a2c1717a04ade1e5aa.jpg
-    lastModified: 2024-07-10T18:25:59Z
+    lastModified: 2024-08-23T14:21:03Z
     name: Scoty Textures Packs
-    sha256: 4ffaacd793bb733c2e4e68520431d62967103beb544b1b8c23335b99f5c9e62a
-    size: 492217
+    sha256: fddc2604e003ebd98dd3721ab88e1251dbb023b08385bc48817d5e8b3679dbc8
+    size: 635327
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/img_tech_diff_2.thumb.jpg.e905ab00be9b239260bf0dc4563250b9.jpg
-    timestamp: 2024-07-24T12:13:33.510Z
-    uncompressed: 1003164
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 1283603
     url: https://community.simtropolis.com/files/file/36297-scoty-textures-packs/
-    version: 1.0.1
+    version: 1.0.2
   simtropolis/36312-historic-navy-pack-25-officers:
     authors:
       - AP
@@ -42199,6 +42509,106 @@ assets:
     uncompressed: 19043912
     url: https://community.simtropolis.com/files/file/36400-peg-cdk-legacy-resources/
     version: 1.0.0
+  simtropolis/36407-historic-navy-pack-30-provisions:
+    authors:
+      - AP
+    category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+      							
+      <p>
+      	<img alt="banner_Vol30.png.bc16cfccd3f0aa6a2c5c287" class="ipsImage ipsImage_thumbnailed" height="791" src="https://www.simtropolis.com/objects/screens/monthly_2024_08/banner_Vol30.png.bc16cfccd3f0aa6a2c5c287a3e932107.png" width="1120" >
+      </p>
+
+
+      <p>
+      	<b><span lang="en-gb" style="font-size:16pt;" xml:lang="en-gb">Provisions Pack</span></b>
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:115%;">
+      	<span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb"><span> </span></span><span style="font-size:10pt;line-height:115%;">In the days of Nelson’s ships-of-the-line, provisions and ship’s stores were crammed into every nook and cranny of the big three-deckers. The old sailing battleships might well be at sea for months on end and a crew of up to 900 men had to be fed and provided with water, beer, and rum. Unfortunately for the sailors, victualling a warship in those days was a truly primitive business. As far as food, almost everything was packed into wooden barrels and the lids sealed with tar. Pork and beef were salted and cured. The fresh water and spirits were simply sealed in barrels. And since baking bread was too hazardous on wooden sailing ships, a flour-based cracker was substituted – appropriately referred to as “Hardtack”. Eventually, improperly seasoned wooden barrels would open at the seams, the contents would begin to spoil, and the already bad food got even worse. Fresh vegetables, however, were never available for more than a week or two once the vessel had sailed, so lime juice was shipped to help prevent scurvy and other diseases caused by vitamin deficiency. Circumstances were much improved by the early 20<sup>th</sup> Century and dreadnought warships equipped with refrigeration systems made frequent port calls to replenish fresh food supplies. </span>
+      </p>
+
+
+      <p style="line-height:115%;">
+      	<span style="font-size:10pt;line-height:115%;">“AP” has provided us with a prop pack of finely detailed and textured provisions to be loaded aboard your ships from the docks. They come in a variety of cases, boxes, and crates in a wide range of colours that could represent apples, potatoes, beans, cheese, boxed meats, etc, etc. And he has thoughtfully provided a selection of sailors to help move them around. These could also be used around trucking terminals, for truck deliveries to supermarkets, or to unload from trains into your warehouses. </span>
+      </p>
+
+
+      <p>
+      	<img alt="overview.png.9357f2fd1dafb508a4c3b7de7a9" class="ipsImage ipsImage_thumbnailed" height="190" src="https://www.simtropolis.com/objects/screens/monthly_2024_08/overview.png.9357f2fd1dafb508a4c3b7de7a90e952.png" width="215" >
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p style="margin:0cm;line-height:115%;">
+      	<span style="font-size:18px;"><b><span lang="en-gb" xml:lang="en-gb">How to use</span></b></span>
+      </p>
+
+
+      <p style="margin-bottom:0cm;line-height:115%;">
+      	<span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">This pack contains .SC4model-files and props as .SC4desc-files. So, by installing this pack nothing will directly appear in your game. You can use the props on your own lots or convert the SC4models into buildings, as you please. Since most props are to be used on water lots and props naturally align with the surface level, they will sink to the sea floor, if you do not stick to the guidelines on how to use </span><a href="https://community.simtropolis.com/omnibus/simcity-4/bat-lot-editor-tutorials/tutorial-for-props-on-water-r852/" rel=""><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">props on water lots</span></a><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">. Finally you will need to follow the </span><a href="https://community.simtropolis.com/forums/topic/37597-sc4dot-sign-shop/?do=findComment&amp;comment=1030546" rel=""><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">instructions on how to make a lot transparent</span></a><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">.</span><span lang="en-gb" xml:lang="en-gb"> </span><span lang="en-gb" style="font-size:10pt;line-height:115%;" xml:lang="en-gb">You will find the props in any Lot-Editor under the prefix <b>A_1P_h_</b></span>
+      </p>
+
+
+      <p>
+      	<strong><span style="color:#c0392b;">As per request from the community, I have also included a version of the ship without historic flags and crew.</span></strong>
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px;"><strong><span style="color:#3498db;">Please visit <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/683435-dreadnought/?do=hovercard" data-mentionid="683435" href="https://community.simtropolis.com/profile/683435-dreadnought/" rel="">@Dreadnought</a>'s CJ to get detailed descriptions and the historical backgrounds to these prop packs. You will see a wonderful display of the results of our long collaboration there and can get a preview of what might be hidden in the coming prop packs or simply get some inspiration for your own harbour!</span></strong></span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed8738825777" scrolling="no"
+      src="https://community.simtropolis.com/journals/journal/6006-imperial-dockyards-cuxhaven/?do=embed" style="height:345px;max-width:502px;"></iframe>
+
+      						</body>
+    filename: A_1P_historic navy_Provisions.zip
+    files:
+      - A_1P_historic navy_Provisions.pdf
+      - A_1P_Provisions_models.dat
+      - A_1P_Provisions_props.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/banner_Vol30.png.bc16cfccd3f0aa6a2c5c287a3e932107.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/overview.png.9357f2fd1dafb508a4c3b7de7a90e952.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/ed3roOT.jpeg.a30d5ed3d793ced63872475c6361d8fa.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/KTm6D7Z.jpeg.60560e11eb48f90339a46ea4fe887d98.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/qmD8dPt.jpeg.96edbafd0823023168f2cff8c9867914.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/R3EFpkp.jpeg.c65ec0425bb9c28f50a4d13c3af8b473.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/ymnfIJg.jpeg.81d47212bb214f15da98ff7c459e8549.jpeg
+    lastModified: 2024-08-22T16:39:29Z
+    name: Historic Navy - pack 30 - Provisions
+    sha256: 3d1086208296986869be80524f4edd07c41f394be27c454eeb702cb8aa2b5dbe
+    size: 2064102
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/banner_Vol30.thumb.png.3c91dc745423c0eb5b563664fea0f62f.png
+    timestamp: 2024-08-27T09:21:20.239Z
+    uncompressed: 2288592
+    url: https://community.simtropolis.com/files/file/36407-historic-navy-pack-30-provisions/
+    version: 1.0.0
   simtropolis/3652-nexis-big-rock-props:
     authors:
       - mrbisonm
@@ -42360,4 +42770,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-68c8b5b9d329a151902f6e02398a5f12-texturepack.jpg
     url: https://community.simtropolis.com/files/file/948-texturepack/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T10:33:57.224Z

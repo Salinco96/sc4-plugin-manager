@@ -5,20 +5,6 @@ import { isString } from "./utils/types"
 /** Category ID */
 export type CategoryID = ID<CategoryInfo>
 
-export const CategoryID = {
-  AGRICULTURE: "agriculture" as CategoryID,
-  COMMERCIAL: "commercial" as CategoryID,
-  CIVICS: "civics" as CategoryID,
-  DEPENDENCIES: "dependencies" as CategoryID,
-  INDUSTRY: "industry" as CategoryID,
-  LANDMARKS: "landmarks" as CategoryID,
-  MODS: "mods" as CategoryID,
-  PARKS: "parks" as CategoryID,
-  RESIDENTIAL: "residential" as CategoryID,
-  TRANSPORT: "transport" as CategoryID,
-  UTILITIES: "utilities" as CategoryID,
-} as const
-
 /** Category info */
 export interface CategoryInfo {
   /** Parent category ID (if any) */

@@ -156,7 +156,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 635
+    downloads: 644
     filename: BSC CP MMPs for CP MEGA Prop Packs.zip
     files:
       - ~Documents/BSC_Readmes/CP/Readme_BSC CP MMPs for CP MEGA Prop Packs.htm
@@ -182,7 +182,7 @@ assets:
     authors:
       - sc4evermore
     category: mmps/flora
-    downloads: 449
+    downloads: 453
     lastModified: 2023-09-15T16:33:15-07:00
     name: SC4D LEX Legacy - JENX FAUNA
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/155-sc4d-lex-legacy-jenx-fauna
@@ -190,15 +190,78 @@ assets:
     authors:
       - sc4evermore
     category: mmps/flora
-    downloads: 359
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This pack contains a wide variety of mayor mode flora to enhance your terrains in rural and urban settings.</p>\r
+
+      <p>They can be found in the middle of the mayor mode menu.</p>\r
+
+      <p>Before installing the mod you must read the readme and run the cleanitol file found inside the <em><strong>_Documents</strong></em> folder. </p>\r
+
+      <p>Copy the BSC folder inside the Plugins folder (<em>Documents/SimCity 4/Plugins</em>). </p>\r
+
+      <p> </p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 362
+    filename: BSC ALN RRP Pasture Flora_1886.zip
+    files:
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_BlueBonnets-B_1020.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_BlueBonnets.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Cat Tails.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Grasses_1060.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Grass_green.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_HayBales_1080.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Johnson Grass_1030.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Lillypads.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Marsh.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Medium Scrub Brush.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Pink Wild Flowers-B_1010.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Reed Grass_1038.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Straws_1070.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Stumps.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_WeedsA_1050.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_WeedsB_1058.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_White Wild Flowers.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Yellow Wild Flowers-B_1018.dat
+      - BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Yellow Wild Flowers.dat
+      - _Documents/BSC_Readmes/ChrisAdams3997/images/flora1.jpg
+      - _Documents/BSC_Readmes/ChrisAdams3997/images/flora2.jpg
+      - _Documents/BSC_Readmes/ChrisAdams3997/images/flora3.jpg
+      - _Documents/BSC_Readmes/ChrisAdams3997/images/RRP Background2.jpg
+      - _Documents/BSC_Readmes/ChrisAdams3997/images/RRP Header.jpg
+      - _Documents/BSC_Readmes/ChrisAdams3997/images/RRP Readme Footer.jpg
+      - _Documents/BSC_Readmes/ChrisAdams3997/ALN Pasture Flora Readme.htm
+      - BSC/BSCProps/ALN_Pasture Flora.dat
+    images: []
     lastModified: 2023-11-11T07:36:40-08:00
     name: BSC ALN RRP Pasture Flora
+    sha256: faf85eb5e8ca40a8924a09b0d60978e153084685e06c47a29492f6f0ca562217
+    size: 1338687
+    timestamp: 2024-08-28T10:33:57.224Z
+    uncompressed: 1923799
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/167-bsc-aln-rrp-pasture-flora
+    version: "1.0"
   sc4evermore/190-vip-orange-aesculus:
     authors:
       - Orange_O
     category: mmps/flora
-    downloads: 330
+    downloads: 332
     lastModified: 2024-01-22T09:32:45-08:00
     name: VIP Orange Aesculus
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/aesculus left.jpg
@@ -207,7 +270,7 @@ assets:
     authors:
       - Orange_O
     category: mmps/flora
-    downloads: 316
+    downloads: 321
     lastModified: 2024-01-22T09:29:44-08:00
     name: VIP Orange Fagus
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/fagus left.jpg
@@ -425,7 +488,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 8249
+    downloads: 8326
     filename: SC4D LEX Legacy - BSC VIP Girafe Flora V3.zip
     files:
       - ~Documents/Cleanitol_SC4D LEX Legacy - BSC-VIP Girafe Flora Pack V3__master.txt
@@ -801,7 +864,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 45
+    downloads: 56
     filename: BSC jestarr Mayor Mode Ploppable Livestock.zip
     files:
       - ~Documents/BSC_Readmes/Jestarr/images/footer.gif
@@ -917,7 +980,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 41
+    downloads: 52
     filename: BSC jestarr Mayor Mode Ploppable Rocks.zip
     files:
       - ~Documents/BSC_Readmes/Jestarr/images/footer.gif
@@ -1058,7 +1121,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 2221
+    downloads: 2245
     filename: SC4D LEX Legacy - BSC LK33 Terrain Seasonal Flora Patch.zip
     files:
       - z___terrainmod#/CHOOSE_ONE!! READ README!!.txt
@@ -1100,7 +1163,7 @@ assets:
     authors:
       - gizmo28
     category: mmps/flora
-    downloads: 411
+    downloads: 415
     lastModified: 2023-07-27T11:58:15-07:00
     name: Gizmo - Water Flora
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/64-water-flora-by-gizmo28
@@ -1108,10 +1171,10 @@ assets:
     authors:
       - c
     category: mmps/flora
-    downloads: 525
+    downloads: 530
     lastModified: 2024-01-23T02:57:12-08:00
     name: BSC CP Ploppable Rocks - Complete Set v2
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GrayRocksAndBoulders.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/85-bsc-cp-ploppable-rocks-complete-set
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T10:33:57.224Z

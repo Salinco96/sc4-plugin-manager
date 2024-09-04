@@ -3118,6 +3118,78 @@ assets:
     uncompressed: 5060243
     url: https://community.simtropolis.com/files/file/36341-sc4ltextt-sc4-ltext-translator/
     version: "0.4"
+  simtropolis/36410-sc4-dictionary:
+    authors:
+      - simmering
+    category: mods
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<p>
+      	<span style="color:#2980b9;"><strong>Description</strong></span>
+      </p>
+
+
+      <p>
+      	This is a dictionary of the most common abbreviations, acronyms and technical terms around SimCity 4. It started as my personal notes and since I used the file format of a stand-alone wiki I am sharing it here. I hope it will be useful, particularly to new mayors who try to navigate the SC4 world. 
+      </p>
+
+
+      <p>
+      	<span style="color:#f39c12;"><strong>Installation</strong></span>
+      </p>
+
+
+      <p>
+      	The file is a zipped HTML file. Unzip it and open it with a browser, with JavaScript enabled.
+      </p>
+
+
+      <p>
+      	<span style="color:#27ae60;"><strong>Suggestions and Corrections</strong></span>
+      </p>
+
+
+      <p>
+      	I am sure there is more work to be done. There are aspects of the game that I haven't explored yet and there will likely be things I got wrong. Please share your suggestions and corrections with me in this topic:
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed7271512126" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/763372-sc4-dictionary-suggestions-and-corrections/?do=embed" style="height:325px;max-width:500px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Thanks to <em>Cori and Cyclone Boom</em> for your advice and input!<br>
+      	simmering
+      </p>
+
+      						</body>
+    filename: simmering's_sc4dict_1.0.0.zip
+    files:
+      - simmering's_sc4dict_1.0.0.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/sc4dict_screenshot_1.jpg.44deb34241896f6a43bf78ad91c2117c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/sc4dict_screenshot_2.jpg.91a0b98edb0737cb18a5650dca47855d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/sc4dict_screenshot_3.jpg.2f390c743d7d066c7bd7936e5a9ceb4b.jpg
+    lastModified: 2024-08-25T07:17:13Z
+    name: SC4 Dictionary
+    sha256: 7f50cb4cdf230ba4cdd3c6cced0d4cb520a6d0d2fe68f677895185d986055ba4
+    size: 2066626
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/sc4dict_screenshot_3.thumb.jpg.3b39cb50835c366af23ddb19ad538fdf.jpg
+    timestamp: 2024-08-27T09:21:20.239Z
+    uncompressed: 4697255
+    url: https://community.simtropolis.com/files/file/36410-sc4-dictionary/
+    version: 1.0.0
   simtropolis/3654-making-custom-building-families-with-datgen:
     authors:
       - DarkMatter
@@ -3167,4 +3239,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-cc76119e1615d738dc2f82f522af7ee3-sim-ruler.JPG
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z

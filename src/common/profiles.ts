@@ -1,4 +1,5 @@
-import { Features, Options, PackageConfig } from "./types"
+import { Options } from "./options"
+import { Features, PackageConfig } from "./types"
 import { normalizeString } from "./utils/types"
 
 export interface ProfileUpdate {

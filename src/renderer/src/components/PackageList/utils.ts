@@ -1,4 +1,4 @@
-import { getCategoryLabel, getStateLabel } from "@common/categories"
+import { CategoryID, getCategoryLabel, getStateLabel } from "@common/categories"
 import { t } from "@common/i18n"
 import { PackageState } from "@common/types"
 import { isEnum } from "@common/utils/types"
@@ -18,7 +18,7 @@ export enum TagType {
 
 export type TagValue<T extends TagType> = {
   [TagType.AUTHOR]: string
-  [TagType.CATEGORY]: string
+  [TagType.CATEGORY]: CategoryID
   [TagType.STATE]: PackageState
 }[T]
 

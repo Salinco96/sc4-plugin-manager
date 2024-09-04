@@ -27,3 +27,12 @@ export const env = {
 export function isDev(): boolean {
   return import.meta.env.DEV
 }
+
+/** Fail in development (log otherwise) so we can notice issues more easily */
+export function failInDev(message: string): undefined {
+  if (isDev()) {
+    throw Error(message)
+  } else {
+    console.warn(message)
+  }
+}

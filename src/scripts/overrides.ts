@@ -167,6 +167,9 @@ export const OVERRIDES: IndexerOverrides = {
     132: {
       packageId: "cycledogg/mega-props-mmps",
     },
+    136: {
+      packageId: "jbsimio/education-compilation",
+    },
     138: {
       packageId: "zero7/commercial-pack",
     },
@@ -175,6 +178,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     152: {
       packageId: "mas71/japanese-river-project",
+    },
+    153: {
+      packageId: "ks_jpn/dependencies",
     },
     160: {
       superseded: "simtropolis/35635-ulisse-wolf-five-nights-at-freddys",
@@ -188,6 +194,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     165: {
       packageId: "jeronij/ship-pack",
+    },
+    167: {
+      packageId: "chrisadams3997/rrp-pasture-flora",
     },
     168: {
       packageId: "vortext/textures-vol01",
@@ -222,6 +231,9 @@ export const OVERRIDES: IndexerOverrides = {
     229: {
       packageId: "mattb325/simcoug-historic-shops",
     },
+    234: {
+      superseded: "simtropolis/32149-s54-proppack-vol1",
+    },
     244: {
       packageId: "somy/danchi-apartments",
     },
@@ -255,16 +267,30 @@ export const OVERRIDES: IndexerOverrides = {
       packageId: "bsc/canals-collection",
     },
     278: null,
+    279: {
+      packageId: "rubik3/wtc-complex",
+    },
     281: {
       packageId: "jestarr/mmp-livestock",
     },
     282: {
       packageId: "jestarr/mmp-rocks",
     },
+    283: {
+      packageId: "bsc/parks-collection",
+    },
   },
   simtropolis: {
     3485: {
       packageId: "simgoober/7-eleven-stores",
+    },
+    3519: {
+      variants: {
+        202790: null,
+        202791: {
+          variantId: "default",
+        },
+      },
     },
     4049: {
       packageId: "vanderaap/langeraar-geerweg-31",
@@ -284,10 +310,16 @@ export const OVERRIDES: IndexerOverrides = {
     4526: {
       superseded: "simtropolis/4515-peg-seasonal-woods-v206b",
     },
+    4592: {
+      packageId: "pegasus/oasis-park",
+    },
     11001: {
       packageId: "pegasus/peg-trail-parks-3",
     },
     11083: null, // TODO: 11083-peg-stream-kit-ii-v205
+    11097: {
+      packageId: "pegasus/christmas-development-kit",
+    },
     11103: {
       superseded: "sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection",
     },
@@ -314,6 +346,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     11391: {
       superseded: "sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials",
+    },
+    11420: {
+      superseded: "simtropolis/11421-jenx-porkie-expanded-porkie-props",
     },
     11421: {
       packageId: "porkissimo/jenx-porkie-expanded-props",
@@ -388,6 +423,9 @@ export const OVERRIDES: IndexerOverrides = {
     13025: {
       superseded: "sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection",
     },
+    13096: {
+      packageId: "pegasus/lighthouse-of-alexandria",
+    },
     13119: {
       superseded: "sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection",
     },
@@ -411,6 +449,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     14189: {
       superseded: "sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials",
+    },
+    14212: {
+      superseded: "sc4evermore/13-sfbt-essentials",
     },
     14809: {
       packageId: "pegasus/mtp-scenic-views",
@@ -458,6 +499,9 @@ export const OVERRIDES: IndexerOverrides = {
     19338: {
       packageId: "pegasus/security-fencing-kit",
     },
+    19408: {
+      packageId: "dk1/dk1-convenience-stores",
+    },
     19458: {
       packageId: "kaos78414/rusty-generator",
     },
@@ -476,14 +520,59 @@ export const OVERRIDES: IndexerOverrides = {
     19881: {
       packageId: "pegasus/cdk3-sp-seaport-super-pack",
     },
+    19953: {
+      packageId: "orange/mega-props-vol01",
+    },
+    20278: {
+      packageId: "gn-leugim/nice-house",
+    },
+    20280: {
+      packageId: "gn-leugim/house-with-view",
+    },
+    20411: {
+      packageId: "simfox/chestnuts",
+    },
+    20469: {
+      packageId: "gn-leugim/pretty-house",
+    },
+    20470: {
+      packageId: "gn-leugim/arched-house",
+    },
+    20472: {
+      packageId: "gn-leugim/pleasant-block",
+    },
     20564: {
       packageId: "glenni/mega-props-vol02",
+    },
+    20895: {
+      superseded: "simtropolis/27712-the-peg-terrain-kit-7-n-1",
+    },
+    20915: {
+      superseded: "simtropolis/27712-the-peg-terrain-kit-7-n-1",
+    },
+    20916: {
+      superseded: "simtropolis/27712-the-peg-terrain-kit-7-n-1",
+    },
+    20930: {
+      superseded: "simtropolis/27712-the-peg-terrain-kit-7-n-1",
     },
     20966: {
       packageId: "pegasus/mtp-super-pack",
     },
+    21060: {
+      packageId: "gn-leugim/essentials",
+    },
+    21061: {
+      packageId: "gn-leugim/pharmacy",
+    },
+    21062: {
+      packageId: "gn-leugim/furniture-shop",
+    },
     21118: {
       packageId: "buggi/extra-cheats",
+    },
+    21661: {
+      superseded: "simtropolis/27712-the-peg-terrain-kit-7-n-1",
     },
     21770: {
       packageId: "lbt/mega-props-vol01",
@@ -509,6 +598,9 @@ export const OVERRIDES: IndexerOverrides = {
     22527: {
       packageId: "hoo47/modular-parking",
     },
+    22701: {
+      superseded: "simtropolis/27712-the-peg-terrain-kit-7-n-1",
+    },
     22771: {
       packageId: "heinbloed4711/ih-missing-jobs-fix",
     },
@@ -520,6 +612,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     23004: {
       packageId: "shadeslayer/scag-cargo-lots",
+    },
+    23092: {
+      packageId: "delecto/pearl-sunshine",
     },
     25057: {
       packageId: "itsmo/ancient-stone-walls",
@@ -584,6 +679,9 @@ export const OVERRIDES: IndexerOverrides = {
     26542: {
       packageId: "wmp/abtei-rowing-club-arc-by-docrorlach",
     },
+    26655: {
+      packageId: "ceafus-88/bojangles-chicken-biscuits",
+    },
     26684: {
       packageId: "wmp/road-ferry",
     },
@@ -600,6 +698,9 @@ export const OVERRIDES: IndexerOverrides = {
       packageId: "wmp/rail-ferries",
     },
     26793: null, // 26793-network-addon-mod-nam-cross-platform
+    26804: {
+      packageId: "marsh/maxis-tree-replacement-mod",
+    },
     26806: {
       packageId: "vip/rural-pack",
     },
@@ -612,6 +713,9 @@ export const OVERRIDES: IndexerOverrides = {
     26838: {
       packageId: "wmp/rural-docklands-optional-set-ii",
     },
+    26885: {
+      packageId: "ceafus-88/textures",
+    },
     26923: {
       packageId: "paeng/parks-revisited",
     },
@@ -620,6 +724,15 @@ export const OVERRIDES: IndexerOverrides = {
     },
     26965: {
       packageId: "wmp/art-deco-station",
+    },
+    27001: {
+      packageId: "orange/aesculus",
+    },
+    27008: {
+      packageId: "orange/fagus",
+    },
+    27064: {
+      superseded: "simtropolis/26806-vip-rural-pack-v2",
     },
     27200: {
       packageId: "mandelsoft/light-replacement-mod",
@@ -647,6 +760,7 @@ export const OVERRIDES: IndexerOverrides = {
     27711: {
       packageId: "pegasus/one-flag-many-nations",
     },
+    27712: null, // 27712-the-peg-terrain-kit-7-n-1
     27295: {
       packageId: "wmp/monorail-system-unfinished-by-docrorlach",
     },
@@ -662,14 +776,59 @@ export const OVERRIDES: IndexerOverrides = {
     27869: {
       packageId: "wmp/spam-distillery",
     },
+    27890: {
+      packageId: "ceafus-88/bring-the-razed-music-store",
+    },
     27990: {
       packageId: "wmp/rural-docklands-3",
     },
     28015: {
       packageId: "wmp/the-cougar-fruit-packing-ltd",
     },
+    28048: {
+      packageId: "gn-leugim/villa-de-vinho",
+    },
     28268: {
       packageId: "t-wrecks/industrial-revolution-mod",
+    },
+    28343: {
+      packageId: "gn-leugim/azuleijitos-apartment",
+    },
+    28528: {
+      packageId: "gn-leugim/high-fall-apartments",
+    },
+    28847: {
+      packageId: "orange/pinus-nigra",
+    },
+    28963: {
+      packageId: "moto-kloss/solaris-bus-automata",
+    },
+    28747: {
+      packageId: "ceafus-88/car-repairs-auto-parts",
+    },
+    29171: {
+      packageId: "delecto/essentials",
+    },
+    29175: {
+      packageId: "delecto/abelia-residence",
+    },
+    29178: {
+      packageId: "delecto/costa-obzor",
+    },
+    29270: {
+      packageId: "ceafus-88/pawn-and-gun",
+      variants: {
+        123761: {
+          variantId: "default",
+        },
+        123762: {
+          variantId: "darknite",
+        },
+      },
+    },
+    29749: {
+      packageId: "11241036/seasonal-woods",
+      variantId: "legacy",
     },
     29797: {
       packageId: "mgb204/diagonal-filler-set",
@@ -776,6 +935,17 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
+    30076: {
+      packageId: "nos-17/b62-remastered-target-supercenter",
+      variants: {
+        202831: {
+          variantId: "default",
+        },
+        202832: {
+          variantId: "default",
+        },
+      },
+    },
     30114: {
       packageId: "nos-17/essentials",
     },
@@ -814,6 +984,72 @@ export const OVERRIDES: IndexerOverrides = {
     },
     30159: null, // TODO: 30159-mgb-terrain-grass-nam-tgn-for-gobias-berner-oberland
     30162: null, // TODO: 30162-mgb-terrain-grass-nam-tgn-for-gobias-sudden-valley
+    30174: {
+      packageId: "nos-17/b62-remastered-red-roof-inn",
+      variants: {
+        202700: {
+          variantId: "default",
+        },
+        202701: {
+          variantId: "default",
+        },
+      },
+    },
+    30175: {
+      packageId: "nos-17/b62-remastered-safeway-70s",
+      variants: {
+        202713: {
+          variantId: "default",
+        },
+        202714: {
+          variantId: "default",
+        },
+      },
+    },
+    30590: {
+      packageId: "nos-17/b62-remastered-service-station-mega-pack",
+      variants: {
+        202740: {
+          variantId: "default",
+        },
+        202741: {
+          variantId: "default",
+        },
+      },
+    },
+    30591: {
+      packageId: "nos-17/b62-remastered-winn-dixie",
+      variants: {
+        202824: {
+          variantId: "default",
+        },
+        202825: {
+          variantId: "default",
+        },
+      },
+    },
+    30632: {
+      packageId: "nos-17/b62-remastered-verizon-substation",
+      variants: {
+        202775: {
+          variantId: "default",
+        },
+        202776: {
+          variantId: "default",
+        },
+      },
+    },
+    30633: {
+      packageId: "nos-17/b62-remastered-sams-club",
+      variants: {
+        202718: {
+          variantId: "default",
+        },
+        202719: {
+          variantId: "default",
+        },
+      },
+    },
     30648: {
       packageId: "pegasus/cdk-tutorial",
     },
@@ -822,6 +1058,20 @@ export const OVERRIDES: IndexerOverrides = {
     },
     30733: {
       packageId: "mushymushy/hd-north-american-40ft-semi-trailers-vol01",
+    },
+    30745: {
+      packageId: "nos-17/b62-remastered-sears-grand",
+      variants: {
+        202729: {
+          variantId: "default",
+        },
+        202730: {
+          variantId: "default",
+        },
+      },
+    },
+    30749: {
+      packageId: "nos-17/b62-remastered-wawa-car-show",
     },
     30773: {
       packageId: "mushymushy/hd-north-american-53ft-semi-trailers-vol01",
@@ -837,11 +1087,47 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
+    30835: {
+      packageId: "nos-17/b62-remastered-shopko-stores",
+      variants: {
+        202760: {
+          variantId: "default",
+        },
+        202761: {
+          variantId: "default",
+        },
+      },
+    },
+    30864: {
+      packageId: "ceafus-88/burger-king",
+    },
     30883: {
       packageId: "simmaster07/sc4fix",
     },
     30896: null, // TODO: 30896-mgb-terrain-grass-nam-tgn-for-lowkee-appalachian
     30897: null, // TODO: 30897-mgb-terrain-grass-nam-tgn-for-tsc-pyrenean
+    30900: {
+      packageId: "nos-17/b62-remastered-u-stor",
+      variants: {
+        202767: {
+          variantId: "default",
+        },
+        202768: {
+          variantId: "default",
+        },
+      },
+    },
+    30931: {
+      packageId: "nos-17/b62-remastered-walmart-supercenter",
+      variants: {
+        202782: {
+          variantId: "default",
+        },
+        202783: {
+          variantId: "default",
+        },
+      },
+    },
     30934: {
       superseded: "simtropolis/31006-supershk-mega-parking-textures",
     },
@@ -967,6 +1253,29 @@ export const OVERRIDES: IndexerOverrides = {
         170722: null, // TODO: "without-grass"
       },
     },
+    31351: {
+      packageId: "11241036/modular-plaza-system",
+    },
+    31400: {
+      variants: {
+        169755: {
+          variantId: "default",
+        },
+        169756: null,
+      },
+    },
+    31407: {
+      packageId: "aarsgevogelte/dutch-w2w-building",
+      variants: {
+        170005: {
+          variantId: "default",
+        },
+        170006: null,
+      },
+    },
+    32123: {
+      packageId: "aarsgevogelte/cafe-bauer-leipzig",
+    },
     31244: {
       packageId: "mgb204/convenience-stores",
     },
@@ -976,6 +1285,16 @@ export const OVERRIDES: IndexerOverrides = {
     },
     31369: {
       packageId: "simmer2/main-transformers",
+    },
+    31420: {
+      variants: {
+        202928: {
+          variantId: "default",
+        },
+        202929: {
+          variantId: "default",
+        },
+      },
     },
     31423: {
       packageId: "kingofsimcity/supershk-mega-parking-textures",
@@ -1054,9 +1373,85 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
+    31804: {
+      packageId: "nos-17/b62-remastered-safeway-60s",
+      variants: {
+        202707: {
+          variantId: "default",
+        },
+        202708: {
+          variantId: "default",
+        },
+      },
+    },
+    31805: {
+      packageId: "nos-17/b62-remastered-saverite-grocery-warehouse",
+      variants: {
+        202723: {
+          variantId: "default",
+        },
+        202724: {
+          variantId: "default",
+        },
+      },
+    },
+    31822: {
+      packageId: "nos-17/b62-remastered-walmart-style-2",
+      variants: {
+        202806: {
+          variantId: "default",
+        },
+        202807: {
+          variantId: "default",
+        },
+      },
+    },
+    31823: {
+      packageId: "nos-17/b62-remastered-walmart-style-3",
+    },
     31834: null, // deleted
     32047: null, // 32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac
+    32149: {
+      packageId: "sciurus/s54-props-vol01",
+    },
+    32167: {
+      packageId: "nos-17/b62-forsaken-files-vol02",
+      variants: {
+        202847: {
+          variantId: "default",
+        },
+        202848: {
+          variantId: "default",
+        },
+      },
+    },
+    32249: {
+      packageId: "nos-17/b62-forsaken-files-vol03",
+      variants: {
+        202839: {
+          variantId: "default",
+        },
+        202840: {
+          variantId: "default",
+        },
+      },
+    },
+    32250: {
+      packageId: "nos-17/creator-pack-02-dk1",
+      variants: {
+        202887: null, // cleanitol already in main download
+        202888: {
+          variantId: "default",
+        },
+      },
+    },
     32308: null, // TODO: 32308-rlm-modular-motel-system
+    32342: {
+      packageId: "nos-17/creator-pack-03-gn-leugim",
+    },
+    32426: {
+      packageId: "kingofsimcity/irm-diagonal-filler-set",
+    },
     32473: {
       packageId: "rretail/mega-props-vol02",
     },
@@ -1145,7 +1540,13 @@ export const OVERRIDES: IndexerOverrides = {
     33651: {
       packageId: "11241036/textures",
     },
+    33702: {
+      packageId: "vip/rural-pack", // vip-trees-as-props
+    },
     33753: null, // 33753-italian-collection-relots-direzione-compartimentale
+    33889: {
+      packageId: "11241036/seasonal-woods",
+    },
     34196: {
       packageId: "kloudkicker/wind-farm-maintenance-facility",
     },
@@ -1209,6 +1610,16 @@ export const OVERRIDES: IndexerOverrides = {
       },
     },
     35353: null, // TODO: 35353-pegasus-cdk3-collection
+    35519: {
+      variants: {
+        197017: {
+          variantId: "default",
+        },
+        197018: {
+          variantId: "rhd",
+        },
+      },
+    },
     35526: {
       packageId: "pclark06/mega-props-vol04",
     },
@@ -1473,10 +1884,12 @@ export const OVERRIDES: IndexerOverrides = {
     },
     36381: {
       variants: {
-        202344: {
+        202344: null,
+        202345: null,
+        202683: {
           variantId: "hd",
         },
-        202345: {
+        202684: {
           variantId: "default",
         },
       },
@@ -1492,6 +1905,7 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
+    36384: null, // { packageId: "null-45/auto-run-cheats-dll" }
     36389: {
       packageId: "effthegrid/fa3-928-s-broadway",
       variantId: "kel9509",
@@ -1505,5 +1919,24 @@ export const OVERRIDES: IndexerOverrides = {
       variantId: "kel9509",
     },
     36400: null, // TODO: 36400-peg-cdk-legacy-resources
+    36402: {
+      packageId: "girafe/train-corail-automata",
+    },
+    36409: {
+      packageId: "11241036/parking-lot-system",
+    },
+    36410: null, // 36410-sc4-dictionary
+    36411: {
+      packageId: "girafe/train-tgv-automata",
+    },
+    36412: {
+      packageId: "philforhockey51/irm-fillers-grass-angles",
+    },
+    36413: {
+      packageId: "philforhockey51/irm-fillers-full-concrete-angles",
+    },
+    36414: {
+      packageId: "philforhockey51/irm-fillers-mixed-concrete-angles",
+    },
   },
 }

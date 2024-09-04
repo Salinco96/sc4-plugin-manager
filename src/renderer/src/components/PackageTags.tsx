@@ -22,7 +22,7 @@ const tags: TagInfo<TagType.STATE>[] = [
     value: PackageState.ENABLED,
   },
   {
-    color: "info",
+    color: "success",
     type: TagType.STATE,
     value: PackageState.DEPENDENCY,
   },

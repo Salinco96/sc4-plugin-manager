@@ -1,10 +1,9 @@
-import { getOptionDefaultValue, hasIssues } from "@common/packages"
+import { OptionID, OptionInfo, Options, isOptionDefaultValue } from "@common/options"
+import { hasIssues } from "@common/packages"
 import {
   Feature,
   Features,
   Issue,
-  OptionInfo,
-  Options,
   PackageConfig,
   PackageInfo,
   PackageStatus,
@@ -20,7 +19,7 @@ export const EXTERNAL_PACKAGE_ID = "<external>"
 function getVariantIncompatibilities(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
   variantId: string,
-  options: ReadonlyDeep<Options>,
+  options: Readonly<Options>,
   features: ReadonlyDeep<Partial<Record<Feature, string[]>>>,
 ): VariantIssue[] {
   const variantInfo = packageInfo.variants[variantId]
@@ -48,7 +47,7 @@ function getVariantIncompatibilities(
       if (isEnum(requirement, Feature)) {
         const featurePackageIds = features[requirement]
         const isEnabled = !!featurePackageIds?.length
-        const isRequired = !!variantInfo.requirements[requirement]
+        const isRequired = !!variantInfo.requirements[requirement as OptionID] // TODO
 
         // Check feature requirements
         if (isRequired !== isEnabled) {
@@ -68,8 +67,8 @@ function getVariantIncompatibilities(
           }
         }
       } else {
-        const requiredValue = variantInfo.requirements[requirement]
-        const value = options[requirement] // TODO: Default value
+        const requiredValue = variantInfo.requirements[requirement as OptionID]
+        const value = options[requirement as OptionID] // TODO: Default value
         if (requiredValue !== value) {
           incompatibilities.push({
             id: Issue.INCOMPATIBLE_OPTION,
@@ -87,7 +86,7 @@ function getVariantIncompatibilities(
 function isVariantCompatible(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
   variantId: string,
-  options: ReadonlyDeep<Options>,
+  options: Readonly<Options>,
   features: ReadonlyDeep<Partial<Record<Feature, string[]>>>,
 ): boolean {
   return getVariantIncompatibilities(packageInfo, variantId, options, features).length === 0
@@ -95,7 +94,7 @@ function isVariantCompatible(
 
 function getCompatibleVariantIds(
   packageInfo: ReadonlyDeep<Omit<PackageInfo, "status">>,
-  options: ReadonlyDeep<Options>,
+  options: Readonly<Options>,
   features: ReadonlyDeep<Partial<Record<Feature, string[]>>>,
 ): string[] {
   const variantIds = Object.keys(packageInfo.variants)
@@ -136,10 +135,10 @@ export function getFeatures(
 }
 
 export function resolvePackages(
-  packages: ReadonlyDeep<Record<string, Omit<PackageInfo, "status">>>,
-  configs: ReadonlyDeep<Partial<Record<string, PackageConfig>>>,
-  options: ReadonlyDeep<Options>,
-  externals: ReadonlyDeep<Features>,
+  packages: Readonly<Record<string, Omit<PackageInfo, "status">>>,
+  configs: Readonly<Partial<Record<string, PackageConfig>>>,
+  options: Readonly<Options>,
+  externals: Readonly<Features>,
 ): {
   /** Resulting features */
   resultingFeatures: Partial<Record<Feature, string[]>>
@@ -335,12 +334,12 @@ export function resolvePackages(
 }
 
 export function resolvePackageUpdates(
-  packages: ReadonlyDeep<Record<string, PackageInfo>>,
-  profile: ReadonlyDeep<ProfileInfo>,
-  options: ReadonlyDeep<OptionInfo[]>,
-  configUpdates: ReadonlyDeep<Partial<Record<string, PackageConfig>>>,
-  optionUpdates: ReadonlyDeep<Options>,
-  externalUpdates: ReadonlyDeep<Features>,
+  packages: Readonly<Record<string, PackageInfo>>,
+  profile: Readonly<ProfileInfo>,
+  globalOptions: Readonly<OptionInfo[]>,
+  configUpdates: Readonly<Partial<Record<string, PackageConfig>>>,
+  optionUpdates: Readonly<Options>,
+  externalUpdates: Readonly<Features>,
 ): {
   /** Packages that will be disabled */
   disablingPackages: string[]
@@ -402,18 +401,18 @@ export function resolvePackageUpdates(
     shouldRecalculate ||= oldValue !== newValue
   }
 
-  // Calculate resulting options (do not mutate current options)
-  for (const optionId in optionUpdates) {
-    const option = options.find(option => option.id === optionId)
-    const oldValue = profile.options[optionId] ?? false // TODO: Default value
-    const newValue = optionUpdates[optionId] ?? oldValue
-    if (option && newValue === getOptionDefaultValue(option)) {
-      delete resultingOptions[optionId]
-    } else {
-      resultingOptions[optionId] = newValue
-    }
+  // Calculate resulting global options (do not mutate current options)
+  for (const optionId of keys(optionUpdates)) {
+    const globalOption = globalOptions.find(option => option.id === optionId)
+    if (globalOption) {
+      if (isOptionDefaultValue(globalOption, optionUpdates[optionId])) {
+        delete resultingOptions[optionId]
+      } else {
+        resultingOptions[optionId] = optionUpdates[optionId]
+      }
 
-    shouldRecalculate ||= oldValue !== newValue
+      shouldRecalculate = true
+    }
   }
 
   // Calculate resulting status
@@ -528,13 +527,10 @@ export function resolvePackageUpdates(
     }
 
     if (packageConfig?.options) {
-      for (const requirement in packageConfig.options) {
-        const option = variantInfo.options?.find(option => option.id === requirement)
-        if (option) {
-          const defaultValue = getOptionDefaultValue(option)
-          if (packageConfig.options?.[requirement] === defaultValue) {
-            delete packageConfig.options[requirement]
-          }
+      for (const optionId of keys(packageConfig.options)) {
+        const option = variantInfo.options?.find(option => option.id === optionId)
+        if (option && isOptionDefaultValue(option, packageConfig.options[optionId])) {
+          delete packageConfig.options[optionId]
         }
       }
 

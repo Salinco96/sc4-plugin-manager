@@ -1,7 +1,7 @@
 import { Button, List, ListItem } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { checkCondition } from "@common/packages"
+import { checkFile } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
@@ -9,7 +9,7 @@ export function PackageViewFiles({ packageId }: { packageId: string }): JSX.Elem
   const actions = useStoreActions()
   const features = useStore(store => store.features)
   const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.options)
+  const profileOptions = useStore(store => store.globalOptions)
   const variantInfo = useCurrentVariant(packageId)
 
   const { t } = useTranslation("PackageViewFiles")
@@ -23,14 +23,7 @@ export function PackageViewFiles({ packageId }: { packageId: string }): JSX.Elem
             <Button
               color="inherit"
               disabled={
-                !checkCondition(
-                  file.condition,
-                  packageId,
-                  variantInfo,
-                  profileInfo,
-                  profileOptions,
-                  features,
-                )
+                !checkFile(file, packageId, variantInfo, profileInfo, profileOptions, features)
               }
               onClick={async () => {
                 const path = file.path.replace(/[\\/]?[^\\/]+$/, "")

@@ -21,6 +21,7 @@ import { useTranslation } from "react-i18next"
 import { getCategoryLabel, getStateLabel } from "@common/categories"
 import { PackageState } from "@common/types"
 import { difference } from "@common/utils/arrays"
+import { keys } from "@common/utils/objects"
 import { getLastWord, getStartOfWordSearchRegex, removeLastWord } from "@common/utils/regex"
 import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
 
@@ -41,7 +42,7 @@ export function PackageListFilters(): JSX.Element {
 
   const { t } = useTranslation("PackageListFilters")
 
-  const categories = Object.keys(useStore(store => store.categories))
+  const categories = keys(useStore(store => store.categories))
   const states = useMemo(() => Object.values(PackageState).sort(), [])
 
   const options: string[] = useMemo(() => {

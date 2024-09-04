@@ -11761,10 +11761,43 @@ assets:
     authors:
       - TakemeThere
     category: civics
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+
+
+      							
+      <div> <p><strong>Info:</strong></p><p>The 3rd release of the <a href="https://community.simtropolis.com/journals/entry/26048-the-towers-of-steel-project/">Towers of Steel Project</a>. The Mount
+      Royal Candelabra Tower<span><em> </em>is a<em> </em></span>freestanding lattice tower located on Mount Royal in Montreal, Canada. Nearly all of Montreal's TV &amp; radio stations broadcast from
+      here hence the need for the candelabra(multi-platform) design. The tower is one of my shorter reproductions with an estimated height of 433ft/132m but it makes up for the lack of height by being
+      quite detailed. The lot can be found at the bottom of the Landmark menu, some industrial high tech cap relief is also provided.</p><p> </p><p><strong>Stats:</strong></p><p>Plop Cost:
+      $4,330</p><p><span style="color:#000000;">Demand Satisfied: HT 2750</span></p><p><span style="color:#000000;">Monthly Cost:
+      $0</span></p><p> </p><p><strong>Dependencies</strong>:</p><p>None!</p><p> </p><p>For more in game screenshots click <a
+      href="https://community.simtropolis.com/journal/5253/entry-26012-entry-no18-history-of-radio-broadcasting-in-pretoria-middle-east-area/">here</a></p></div><p> </p>
+
+      						</body>
+    filename: Mount Royal Candelabra Tower.zip
+    files:
+      - Mount Royal Candelabra Tower/Mount Royal Candelabra Tower resized 110%.SC4Model
+      - Mount Royal Candelabra Tower/Mount Royal Candelabra Tower, building as a prop - do not delete.SC4Desc
+      - Mount Royal Candelabra Tower/Mount Royal Candelabra Tower.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_06_2015/0fe9e5bffa161c407051280598f4f315-mertron-jan-25--001432779369.png
+      - https://www.simtropolis.com/objects/screens/monthly_06_2015/aa38829a9a4c1d6501645e5cd78397e5-top.png
+      - https://www.simtropolis.com/objects/screens/monthly_06_2015/4f525d587ddb1cc878b59f408f2dc3cb-mount-royal0.png
+      - https://www.simtropolis.com/objects/screens/monthly_06_2015/15934e50f85a553a7bd90a84c0d82d05-mont-mount-royal-candelabra.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_06_2015/6e095a6360b77506cb006ad24a2863e7-mr.png
     lastModified: 2015-06-21T20:05:47Z
     name: Mount Royal Candelabra Tower
+    sha256: 2fba16644363a204e065812d812262ca11eba0cc1eb1df897f02493b1d79b9ef
+    size: 123684
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2015/thumb-0fe9e5bffa161c407051280598f4f315-mertron-jan-25--001432779369.png
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 150651
     url: https://community.simtropolis.com/files/file/30562-mount-royal-candelabra-tower/
+    version: "1.0"
   simtropolis/3059-school-bus-stops:
     authors:
       - bluob
@@ -12009,10 +12042,73 @@ assets:
     authors:
       - TakemeThere
     category: civics
+    dependencies:
+      - simtropolis/30562-mount-royal-candelabra-tower
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	<strong>Info:</strong>
+      </p>
+
+
+      <p>
+      	This is the updated 3ds HD version of the <a href="https://community.simtropolis.com/files/file/30562-mount-royal-candelabra-tower/" rel="">3rd release</a> of the <a href="https://community.simtropolis.com/journals/entry/27107-towers-of-steel-revisited/#comments" rel="">Towers of Steel Project</a>. The Mount Royal Transmission Tower <span><em> </em>is a<em> </em></span>freestanding lattice tower located on "Mount Royal" in Montreal, Canada. Nearly all of Montreal's TV &amp; radio stations broadcast from here hence the need for a candelabra(multi-platform) design. The actual height of the tower in the real world is not publicized but I've estimated it at approximately 433ft/132m(including transmitters). It  is one of the shorter towers but imo it makes up for the lack of height by being very detailed. The lot can be found at the bottom of the Landmark menu. Some industrial high tech cap relief is also provided.<br><br>
+      	Three versions of the tower are available. This each versions has a different paint scheme. However, rather than having separate lots for each version I've instead used a prop family. Meaning, each time you plop the lot you have a 33% change of getting a particular  paint scheme. Additionally, the AWL(air craft warning lights) are low intensity night lights made in 3ds rather than the previously used maxis red blinking props. 
+      </p>
+
+
+      <p>
+      	<br><strong>Stats:</strong><br><br>
+      	Plop Cost: $4,330<br>
+      	Landmark Effect: 20 radius: 10<br><span style="color:#000000;">Demand Satisfied: HT 2750</span><br><br><br><strong>Dependencies</strong>:
+      </p>
+
+
+      <p>
+      	None!
+      </p>
+
+      						</body>
+    filename: Montreal - Mount Royal Tower.zip
+    files:
+      - Montreal - Mount Royal Tower/Montreal - Mount Royal Tower.dat
+      - Montreal - Mount Royal Tower/Montreal - Mount Royal Tower.SC4Lot
+      - Montreal - Mount Royal Tower/Montreal0 pink-beige.SC4Desc
+      - Montreal - Mount Royal Tower/Montreal0 pink-beige.SC4Model
+      - Montreal - Mount Royal Tower/Montreal1 red-white.SC4Desc
+      - Montreal - Mount Royal Tower/Montreal1 red-white.SC4Model
+      - Montreal - Mount Royal Tower/Montreal2 orange-grey.SC4Desc
+      - Montreal - Mount Royal Tower/Montreal2 orange-grey.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/572061fda877b_Mon3.jpg.de1f764b3073dd1c9f63f41d39a16076.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/details.jpg.df19911c2a20b3b942d329d7d65006b6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/57214f83e4e30_Montrealother2.jpg.e7248c2208e3f5b0a17b5fc66aabd28c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/57214f8f77635_Monred.jpg.238181047500dfe21ff4f0ea5a3b288b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/57214f925fc4e_Monnite.jpg.70c78d6e0f364084b12dd52087c0f337.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/57214fa751d5e_MountRoyalCandelabra.jpg.50b739ca219c969c9a95b755f950b5e3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/57214fa989466_montMountRoyalCandelabra.jpg.21afc9d0298dfe5bcc3f0dbcd1b6ab93.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_04/57214fae8fcab_MountRoyalCandelabra.jpg.2faac1b904793cb1ea385982d015382a.jpg
     lastModified: 2016-04-28T01:05:23Z
     name: Mount Royal Transmission Tower
+    sha256: b651caf6b89b2e554d177a6810be1159781bc7da9b13b771c1f40839d4affc76
+    size: 9116632
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_04/572161d1d2185_Mon3.thumb.jpg.539721145ab4833fbbcbce17f6993431.jpg
+    timestamp: 2024-08-27T05:49:08.398Z
+    uncompressed: 10492462
     url: https://community.simtropolis.com/files/file/31045-mount-royal-transmission-tower/
+    version: "1.0"
   simtropolis/31055-central-school-building:
     authors:
       - adambailey39
@@ -13038,10 +13134,181 @@ assets:
     authors:
       - nos.17
     category: civics
-    lastModified: 2021-02-11T14:00:34Z
+    dependencies:
+      - simtropolis/28963-ms-solaris-vacanza-12-interurbino-12-automata-props
+      - simtropolis/30733-hd-north-american-40ft-semi-trailers-vol1
+      - simtropolis/20411-simfox-chestnuts
+      - simtropolis/27563-shk-parking-pack
+      - sc4evermore/153-sc4d-lex-legacy-ks-jpn-dependencies
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	<span style="font-family:Georgia, serif;">Allianz Arena<br>
+      	Munich, Germany</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;">15x12 Landmark<br>
+      	Plop Cost</span>:  <span style="font-family:Georgia, serif;"><span style="color:rgb(84,84,84);font-size:small;font-style:normal;font-weight:normal;letter-spacing:normal;text-align:left;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">§</span> 450,000<br>
+      	Bulldoze Cost :   <span style="color:rgb(84,84,84);font-size:small;font-style:normal;font-weight:normal;letter-spacing:normal;text-align:left;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">§</span> 45,000<br>
+      	Monthly Cost :   <span style="color:rgb(84,84,84);font-size:small;font-style:normal;font-weight:normal;letter-spacing:normal;text-align:left;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">§</span> 100</span>
+      </p>
+
+
+      <p>
+      	<img alt="allianz-1.gif" class="ipsImage ipsImage_thumbnailed" data-fileid="105235" data-unique="aydg0nxja" src="https://www.simtropolis.com/objects/attachments/monthly_2024_08/allianz-1.gif.38b92bd19cf74dae763f667f0da67b55.gif">
+      </p>
+
+
+      <p>
+      	<img alt="allianz-2.gif" class="ipsImage ipsImage_thumbnailed" data-fileid="105236" data-unique="5a1u0c9zd" src="https://www.simtropolis.com/objects/attachments/monthly_2024_08/allianz-2.gif.72778974feadaa25d1bfbad3d1cdd22a.gif">
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;">----------------------<br>
+      	Installation &amp; Use:<br>
+      	----------------------<br>
+      	Simply drag the new lots into your plugins folder. With regards to </span><span style="font-family:Georgia, serif;">ks's</span><span style="font-family:Georgia, serif;"> files, the following files MUST BE KEPT:</span><br>
+      	<span style="font-family:'Trebuchet MS', Helvetica, sans-serif;">AllianzArena_a-0x5ad0e817_0x541a1f49_0x30000.SC4Model<br>
+      	AllianzArena_b-0x5ad0e817_0xd41a2936_0x30000.SC4Model</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;">All of the other files may </span><span style="font-family:Georgia, serif;">be</span><span style="font-family:Georgia, serif;"> excluded (recommended) or kept if you wish to have the original version as well.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;">The following files (included in this download) must also be included for the lot to function as intended:</span><br>
+      	<span style="font-family:'Trebuchet MS', Helvetica, sans-serif;">Allianz_Textures.dat<br>
+      	AllianzArena A-0x6534284a-0xd3a3e650-0x3732d875.SC4Desc<br>
+      	AllianzArena B-0x6534284a-0xd3a3e650-0x1732d8bd.SC4Desc<br>
+      	Family Allianz Arena-0x05342861-0x67bddf0c-0x6f85e12d.SC4Desc<br>
+      	PLOP_15x12_Allianz Arena_c732da62.SC4Lot</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia,serif;">------------------<br>
+      	Dependencies:<br>
+      	------------------<br>
+      	 Allianz_textures.dat (included in this file)<br>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/153-sc4d-lex-legacy-ks-jpn-dependencies" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - ks_JPN Dependencies Pack</a></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-family:Georgia,serif;">ks_jpn MEGA Props Vol12</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<span style="font-family:Georgia,serif;"><a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack</a></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><abbr title="BATT Squad Certification">BSC</abbr> Textures Vol 3</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><abbr title="BATT Squad Certification">BSC</abbr> TexturePack Cycledogg V01b</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Urbanpack Vol01</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><abbr title="BATT Squad Certification">BSC</abbr> BATProps Mattb325 Vol02</span>
+      	</li>
+      	<li>
+      		<span style="font-family:Georgia,serif;"><abbr title="BATT Squad Certification">BSC</abbr> BATProps Mattb325 Vol03</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;"><a href="https://community.simtropolis.com/files/file/28963-ms-solaris-vacanza-12-interurbino-12-automata-props/" rel="">MS_Solaris Busses</a><br>
+      	<a href="https://community.simtropolis.com/files/file/30733-hd-north-american-40ft-semi-trailers-vol1/" rel="">MM 40ft Trailers</a><br>
+      	<a href="https://community.simtropolis.com/files/file/20411-simfox-chestnuts/" rel="">Simfox Chestnuts</a><br>
+      	<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">SHK Parking Pack</a></span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-family:Georgia, serif;">Enjoy...</span>
+      </p>
+
+
+      <p>
+      	<span style="color:#95a5a6;"><span style="font-size:12px;"><em><span style="font-family:Georgia, serif;">(update Aug 2024: No need to redownload - updating photos and dependency links</span></em></span></span>
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/allianz-0.png.32d7311604978f815536963ab2cc01d9.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/allianz-3.png.071ccaa8c85d1e9ae1adca0e0e6d35a3.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/allianz-4.png.3a3cabc65e530b1bdbef6683796d0eb8.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/allianz-5.png.9a75d444e7125102444b3086496279f6.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/allianz-6.png.fcf5d4abdaef401a4343acdec1014aac.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/allianz-7.png.ac189b57f64d8d881406c6803c302bcf.png
+    lastModified: 2024-08-24T19:48:13Z
     name: Allianz Arena
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_01/Screenshot_9.thumb.png.5fa9199533ed97fa7254771a25c33257.png
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/allianz-0.thumb.png.3a7ae108e94365b67098530430361bf7.png
+    timestamp: 2024-08-27T05:49:08.398Z
     url: https://community.simtropolis.com/files/file/31420-allianz-arena/
+    variants:
+      "202928":
+        filename: S3-20-C Allianz Arena.zip
+        files:
+          - S3-20-C Allianz Arena/Allianz Arena Readme.txt
+          - S3-20-C Allianz Arena/AllianzArena A-0x6534284a-0xd3a3e650-0x3732d875.SC4Desc
+          - S3-20-C Allianz Arena/AllianzArena B-0x6534284a-0xd3a3e650-0x1732d8bd.SC4Desc
+          - S3-20-C Allianz Arena/Allianz_Textures.dat
+          - S3-20-C Allianz Arena/Family Allianz Arena-0x05342861-0x67bddf0c-0x6f85e12d.SC4Desc
+          - S3-20-C Allianz Arena/PLOP_15x12_Allianz Arena_c732da62.SC4Lot
+        sha256: c06ca47b44c62f2c98d8b083b332b13f0e3cb2cb26833e155400b81ad1bca101
+        size: 73366
+        uncompressed: 195569
+      "202929":
+        filename: RemoveList - Allianz Arena (nos17 relot).txt
+        files:
+          - RemoveList - Allianz Arena (nos17 relot).txt
+        sha256: 6d455966bba0ae902b674dd463712d05ebcce79093e1d9a52a6ee7d6d39fb44d
+        size: 357
+    version: 2.0.1
   simtropolis/31422-salt-lake-city-temple:
     authors:
       - LDSguy24
@@ -20785,4 +21052,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-33d8981f5deb63706c817395eb328784-Simjez-Feb.%207,%20001060541163.JPG
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z

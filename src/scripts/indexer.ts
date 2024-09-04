@@ -3,14 +3,8 @@ import path from "path"
 import { config } from "dotenv"
 import { glob } from "glob"
 
-import {
-  AssetData,
-  ConfigFormat,
-  LotData,
-  PackageAsset,
-  PackageData,
-  VariantData,
-} from "@common/types"
+import { AssetData, AssetID } from "@common/assets"
+import { ConfigFormat, LotData, PackageAsset, PackageData, VariantData } from "@common/types"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -56,7 +50,14 @@ runIndexer({
     return true
   },
   include(entry, entryId, source, category) {
-    return entry.lastModified >= "2024-05-01T00:00:00Z" && !category.id.includes("obsolete")
+    return (
+      (entry.lastModified >= "2024-05-01T00:00:00Z" && !category.id.includes("obsolete")) ||
+      [
+        "167-bsc-aln-rrp-pasture-flora",
+        "234-ksteam-s54-prop-pack-vol01",
+        "19953-orange-megaprop-v01",
+      ].some(id => entryId.includes(id))
+    )
   },
   overrides: OVERRIDES,
   sources: [SC4EVERMORE, SIMTROPOLIS],
@@ -90,6 +91,35 @@ async function loadPackagesFromDB(): Promise<{
     const fullPath = path.join(dbPackagesDir, filePath)
     const data = await readConfig<{ [packageId: string]: PackageData }>(fullPath)
     configs[authorId] = data
+
+    // for (const packageData of Object.values(data)) {
+    //   for (const variantData of [packageData, ...Object.values(packageData.variants ?? {})]) {
+    //     const filenames: string[] = []
+    //     if (variantData.assets) {
+    //       for (const asset of variantData.assets) {
+    //         const sc4lotFiles = await glob(asset.id + "@*/**/*.sc4lot", {
+    //           cwd: dataDownloadsDir,
+    //           nodir: true,
+    //         })
+
+    //         for (const sc4lotFile of sc4lotFiles) {
+    //           filenames.push(path.basename(sc4lotFile))
+    //         }
+    //       }
+    //     }
+
+    //     if (variantData.lots) {
+    //       for (const lot of variantData.lots) {
+    //         if (lot.id && !lot.filename) {
+    //           lot.filename = filenames.find(filename => filename.includes(lot.id!))
+    //           lot.id = lot.filename?.match(/_([a-f0-9]{8})\.sc4lot$/i)?.[1].toLowerCase()
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+
+    // await writeConfig(dbPackagesDir, authorId, data, ConfigFormat.YAML, ConfigFormat.YAML)
   }
 
   return configs
@@ -166,8 +196,8 @@ async function runIndexer(options: IndexerOptions) {
     return assetId.split("/")[0]
   }
 
-  function getVariantAssetID(assetId: string, variant?: string): string {
-    return variant ? `${assetId}#${variant}` : assetId
+  function getVariantAssetID(assetId: string, variant?: string): AssetID {
+    return (variant ? `${assetId}#${variant}` : assetId) as AssetID
   }
 
   function getVariantID(assetId: string, entry: IndexerEntry, variant?: string): string {
@@ -759,16 +789,14 @@ async function runIndexer(options: IndexerOptions) {
 
         const lots: { [lotId: string]: LotData } = {}
         for (const file of sc4Files) {
-          const filename = file.match(/([^\\/]+).sc4lot$/i)?.[1]
+          const filename = file.match(/([^\\/]+)\.sc4lot$/i)?.[1]
           if (filename) {
             const size = filename.match(/[-_ ](\d+x\d+)[-_ ]/i)?.[1]
-            const stage = filename.match(
-              /(R\$+|CO\$+|CS\$+|I-?Ag?\$*|I-?R\$*|I-?D\$*|I-?M\$*|I-?HT\$*)(\d+)[-_ ]/i,
-            )?.[2]
+            const stage = filename.match(/((?:R|CO|CS)\$+|\bI-?(?:D|M|HT)\$*)(\d+)[-_ ]/i)?.[2]
 
             const kind =
               filename
-                .match(/PLOP|R\$+|CO\$+|CS\$+|I-?A|I-?R|I-?D|I-?M|I-?HT/i)?.[0]
+                .match(/(PLOP|(?:R|CO|CS)\$+|\bI-?(?:D|M|HT))[^a-z]/i)?.[1]
                 .replace("-", "")
                 .toLowerCase() ?? ""
 
@@ -778,12 +806,10 @@ async function runIndexer(options: IndexerOptions) {
               cs$: "cs$",
               cs$$: "cs$$",
               cs$$$: "cs$$$",
-              ia: "agriculture",
               id: "i-d",
               iht: "i-ht",
               im: "i-m",
-              ir: "agriculture",
-              plop: "landmark",
+              plop: "landmarks",
               r$: "r$",
               r$$: "r$$",
               r$$$: "r$$$",
@@ -791,9 +817,10 @@ async function runIndexer(options: IndexerOptions) {
 
             lots[filename] = {
               category: category && category !== packageData.category ? category : undefined,
-              condition: file.match(/\bCAM\b/i) ? { cam: true } : undefined,
-              id: filename,
+              filename,
+              id: filename.match(/_([a-f0-9]{8})\.sc4lot$/i)?.[1].toLowerCase() ?? filename,
               label: filename,
+              requirements: file.match(/\bCAM\b/i) ? { cam: true } : undefined,
               size: size as `${number}x${number}`,
               stage: stage ? Number.parseInt(stage) : undefined,
             }
@@ -801,36 +828,10 @@ async function runIndexer(options: IndexerOptions) {
         }
 
         if (Object.values(lots).length) {
-          variantAsset.include = [
-            "{{lots}}.SC4Lot",
-            ...sc4Files.filter(file => !file.match(/([^\\/]+).sc4lot$/i)),
-          ]
-
           variantData.lots = Object.values(lots)
           packageData.warnings ??= [{ id: "bulldoze", on: "disable" }]
         } else {
           variantAsset.include = sc4Files
-        }
-
-        dbPackagesConfigs[authorId] ??= dbPackagesConfig
-        dbPackagesConfig[packageId] ??= packageData
-        dbAssetsConfigs[source.id] ??= dbAssetsConfig
-        dbAssetsConfig[variantAssetId] ??= assetData
-
-        await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
-        await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
-      } else {
-        const dbPackagesConfig = dbPackagesConfigs[authorId] ?? {}
-        const packageData = dbPackagesConfig[packageId] ?? {}
-
-        const dbAssetsConfig = dbAssetsConfigs[source.id] ?? {}
-        const assetData = dbAssetsConfig[variantAssetId] ?? {}
-        const variantData = packageData.variants?.[variantId] ?? {}
-
-        if (variantId === "default") {
-          packageData.release ??= now
-        } else if (packageData.release !== now) {
-          variantData.release ??= now
         }
 
         dbPackagesConfigs[authorId] ??= dbPackagesConfig

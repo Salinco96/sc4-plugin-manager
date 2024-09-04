@@ -1,3 +1,7 @@
+import { AssetData, AssetID } from "./assets"
+import { CategoryID } from "./categories"
+import { OptionInfo, OptionValue, Options, Requirements } from "./options"
+
 /** Supported configuration formats */
 export enum ConfigFormat {
   JSON = ".json",
@@ -5,24 +9,11 @@ export enum ConfigFormat {
   YML = ".yml",
 }
 
-export interface AssetData {
-  lastModified?: string
-  sha256?: string
-  size?: number
-  uncompressed?: number
-  url?: string
-  version?: string
-}
+export type Primitive = boolean | number | string | null | undefined
 
-export interface AssetInfo extends AssetData {
-  id: string
-  url: string
-}
+declare const ID: unique symbol
 
-export interface CategoryInfo {
-  parent?: string
-  priority?: number
-}
+export type ID<T> = string & { [ID]: T }
 
 export enum Feature {
   CAM = "cam",
@@ -44,7 +35,7 @@ export interface PackageAsset extends AssetData {
   docs?: Array<string | PackageFile>
   exclude?: Array<string | PackageFile>
   include?: Array<string | PackageFile>
-  id: string
+  id: AssetID
 }
 
 export interface PackageConfig {
@@ -82,63 +73,6 @@ export interface PackageInfo {
   }
 }
 
-export enum OptionType {
-  BOOLEAN = "boolean",
-  NUMBER = "number",
-  STRING = "string",
-}
-
-export interface OptionChoice<T> {
-  description?: string
-  label?: string
-  value: T
-}
-
-export type OptionInfo<T extends OptionType = OptionType> = {
-  condition?: Requirements
-  default?: OptionValue<T> | OptionValue<T>[]
-  description?: string
-  filename?: string
-  global?: boolean
-  id: string
-  label?: string
-  multi?: boolean
-  section?: string
-  type: T
-} & {
-  [OptionType.BOOLEAN]: {
-    default?: boolean
-    display?: "checkbox" | "switch"
-    multi?: false
-    type: OptionType.BOOLEAN
-  }
-  [OptionType.NUMBER]: {
-    choices?: Array<number | OptionChoice<number>>
-    default?: number | number[]
-    display?: "checkbox" | "select"
-    max?: number
-    min?: number
-    step?: number
-    type: OptionType.NUMBER
-  }
-  [OptionType.STRING]: {
-    choices: Array<string | OptionChoice<string>>
-    display?: "checkbox" | "select"
-    default?: string | string[]
-    type: OptionType.STRING
-  }
-}[T]
-
-export type OptionValue<T extends OptionType = OptionType> = {
-  [OptionType.BOOLEAN]: boolean
-  [OptionType.NUMBER]: number
-  [OptionType.STRING]: string
-}[T]
-
-export type Requirements = Partial<Record<string, OptionValue>>
-
-export type Options = Partial<Record<string, OptionValue | ReadonlyArray<OptionValue>>>
-
 export type Features = Partial<Record<Feature, boolean>>
 
 export interface PackageStatus {
@@ -156,18 +90,11 @@ export interface PackageWarning {
   on?: "enable" | "disable"
 }
 
-export interface ToolInfo {
-  assetId: string
-  exe: string
-}
-
 export interface LotData {
   /** Bulldoze cost */
   bulldoze?: number
   /** Category */
   category?: string
-  /** Requirements (e.g. CAM for stage 9+ growables) */
-  condition?: Requirements
   /** Plop cost */
   cost?: number
   /** Whether lot is enabled by default (this defaults to true) */
@@ -199,20 +126,30 @@ export interface LotData {
     /** High-Wealth Residential */
     r$$$?: number
   }
+  /** Lot description */
+  description?: string
+  /** Full name of the file containing the lot (if missing the lot cannot be disabled) */
+  filename?: string
   /** Flamability (number between 0 and 100) */
   flamability?: number
   /** Garbage produced */
   garbage?: number | `${number} over ${number} tiles`
-  /** Lot ID within the Manager (usually the SC4Lot filename) */
+  /** Lot ID (usually last part of TGI, but may be an arbitrary string) */
   id: string
+  /** Monthly income */
+  income?: number
   /** Lot name */
   label?: string
+  /** Monthly maintenance cost */
+  maintenance?: number
   /** Air pollution */
   pollution?: number | `${number} over ${number} tiles`
   /** Electricity consumed */
   power?: number
   /** Electricity produced */
   powerProduction?: number
+  /** Requirements (e.g. CAM for stage 9+ growables) */
+  requirements?: Requirements
   /** Lot size in AxB format (e.g. 2x3) */
   size?: `${number}x${number}`
   /** Growth stage */
@@ -223,10 +160,12 @@ export interface LotData {
   waterPollution?: number | `${number} over ${number} tiles`
   /** Water produced */
   waterProduction?: number
+  /** YIMBY effect (may be negative) */
+  yimby?: number | `${number} over ${number} tiles`
 }
 
 export interface LotInfo extends LotData {
-  categories?: string[]
+  categories?: CategoryID[]
 }
 
 export interface VariantData {
@@ -265,7 +204,7 @@ export interface VariantIssue {
 
 export interface BaseVariantInfo extends VariantData {
   authors: string[]
-  categories: string[]
+  categories: CategoryID[]
   id: string
   lots?: LotInfo[]
   name: string

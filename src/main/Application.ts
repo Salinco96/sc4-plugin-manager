@@ -17,24 +17,21 @@ import log, { LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
 
-import { getPriorityLabel } from "@common/categories"
+import { AssetID, AssetInfo, Assets } from "@common/assets"
+import { Categories } from "@common/categories"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
-import { checkCondition, getOptionValue } from "@common/packages"
+import { OptionInfo, Requirements, getOptionValue } from "@common/options"
 import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
 import { ApplicationState, ApplicationStatus } from "@common/state"
 import {
-  AssetInfo,
-  CategoryInfo,
   ConfigFormat,
   Feature,
-  OptionInfo,
   PackageConfig,
   PackageFile,
   PackageInfo,
   ProfileData,
   ProfileInfo,
   Settings,
-  ToolInfo,
   getDefaultVariant,
 } from "@common/types"
 import { mapDefined } from "@common/utils/arrays"
@@ -56,6 +53,10 @@ import {
 } from "@node/files"
 import { PEFlag, getPEFlag, getPEHeader, setPEFlag, setPEHeader } from "@node/pe"
 import { cmd } from "@node/processes"
+import { getPluginsFolderName } from "@utils/linker"
+import { ToolID, getToolInfo } from "@utils/tools"
+
+import { checkFile } from "../common/packages"
 
 import { getAssetKey } from "./data/assets"
 import {
@@ -94,7 +95,6 @@ import {
   simtropolisLogout,
 } from "./utils/sessions/simtropolis"
 import { TaskContext, TaskManager } from "./utils/tasks"
-import { TOOLS } from "./utils/tools"
 
 const defaultSettings: Settings = {
   useYaml: true,
@@ -105,11 +105,11 @@ export interface AppConfig {
 }
 
 export class Application {
-  public assets: { [assetId: string]: AssetInfo | undefined } = {}
-  public categories: { [categoryId: string]: CategoryInfo | undefined } = {}
+  public assets: Assets = {}
+  public categories: Categories = {}
   public features?: Partial<Record<Feature, string[]>>
+  public globalOptions?: OptionInfo[]
   public ignoredWarnings = new Set<string>()
-  public options?: OptionInfo[]
   public packages?: { [packageId: string]: PackageInfo }
   public profiles?: { [profileId: string]: ProfileInfo }
   public sessions: { simtropolis?: SimtropolisSession | null } = {}
@@ -601,7 +601,7 @@ export class Application {
   /**
    * Returns an asset's data by ID, if it exists.
    */
-  public getAssetInfo(assetId: string): AssetInfo | undefined {
+  public getAssetInfo(assetId: AssetID): AssetInfo | undefined {
     return this.assets[assetId]
   }
 
@@ -802,7 +802,7 @@ export class Application {
     return {
       categories: this.categories,
       features: this.features,
-      options: this.options,
+      globalOptions: this.globalOptions,
       packages: this.packages,
       profiles: this.profiles,
       sessions: {
@@ -840,10 +840,10 @@ export class Application {
   /**
    * Returns the path to the given tool's executable, downloading the tool as needed.
    */
-  public async getToolExePath(tool: string): Promise<string> {
-    const toolInfo = this.getToolInfo(tool)
+  public async getToolExePath(toolId: string): Promise<string> {
+    const toolInfo = getToolInfo(toolId as ToolID)
     if (!toolInfo) {
-      throw Error(`Unknown tool '${tool}'`)
+      throw Error(`Unknown tool '${toolId}'`)
     }
 
     if (toolInfo.assetId) {
@@ -860,13 +860,6 @@ export class Application {
     }
 
     return toolInfo.exe
-  }
-
-  /**
-   * Returns a tool's data, if it exists.
-   */
-  public getToolInfo(tool: string): ToolInfo | undefined {
-    return TOOLS[tool as keyof typeof TOOLS]
   }
 
   /**
@@ -1147,7 +1140,7 @@ export class Application {
               newPath: string,
               type: "cleanitol" | "docs" | "files",
               priority?: number,
-              condition?: { [feature in Feature]?: boolean },
+              condition?: Requirements,
             ) => {
               const extension = getExtension(oldPath)
 
@@ -1206,7 +1199,7 @@ export class Application {
               newPath: string,
               type: "cleanitol" | "docs" | "files",
               priority?: number,
-              condition?: { [feature in Feature]?: boolean },
+              condition?: Requirements,
             ) => {
               const filePaths = await glob(getChildrenPattern(toPosix(oldPath)), {
                 cwd: downloadPath,
@@ -1485,22 +1478,25 @@ export class Application {
                 if (variantInfo.files?.length) {
                   for (const file of variantInfo.files) {
                     if (
-                      checkCondition(
-                        file.condition,
+                      checkFile(
+                        file,
                         packageId,
                         variantInfo,
                         profileInfo,
-                        this.options,
+                        this.globalOptions,
                         this.features,
                       )
                     ) {
                       const fullPath = path.join(variantPath, file.path)
                       const priority = file.priority ?? variantInfo.priority
 
-                      // DLL files must be in Plugins root
-                      const targetPath = file.path.match(/\.(dll|ini)$/i)
-                        ? path.join(pluginsPath, path.basename(file.path))
-                        : path.join(pluginsPath, getPriorityLabel(priority), packageId, file.path)
+                      const targetPath = path.join(
+                        pluginsPath,
+                        // DLL/INI files must be in Plugins root
+                        file.path.match(/\.(dll|ini)$/i)
+                          ? path.basename(file.path)
+                          : path.join(getPluginsFolderName(priority), packageId, file.path),
+                      )
 
                       oldLinks.delete(targetPath)
 
@@ -1608,13 +1604,10 @@ export class Application {
     }
   }
 
-  protected async loadCategories(): Promise<{ [categoryId: string]: CategoryInfo | undefined }> {
+  protected async loadCategories(): Promise<Categories> {
     console.debug("Loading categories...")
 
-    const config = await loadConfig<{ [categoryId: string]: CategoryInfo | undefined }>(
-      this.getDatabasePath(),
-      FILENAMES.dbCategories,
-    )
+    const config = await loadConfig<Categories>(this.getDatabasePath(), FILENAMES.dbCategories)
 
     this.categories = config?.data ?? {}
 
@@ -1631,11 +1624,11 @@ export class Application {
       FILENAMES.dbOptions,
     )
 
-    this.options = config?.data.options ?? []
+    this.globalOptions = config?.data.options ?? []
 
-    console.info(`Loaded ${this.options.length} options`)
+    console.info(`Loaded ${this.globalOptions.length} options`)
 
-    return this.options
+    return this.globalOptions
   }
 
   protected async loadProfiles(): Promise<{ [id: string]: ProfileInfo }> {
@@ -2036,7 +2029,7 @@ export class Application {
   }
 
   protected sendOptions(): void {
-    this.sendStateUpdate({ options: this.options })
+    this.sendStateUpdate({ globalOptions: this.globalOptions })
   }
 
   protected sendPackage(packageId: string): void {
@@ -2268,7 +2261,7 @@ export class Application {
 
   public async updateProfile(profileId: string, update: ProfileUpdate): Promise<boolean> {
     const profile = this.getProfileInfo(profileId)
-    if (!this.options || !this.packages || !profile) {
+    if (!this.globalOptions || !this.packages || !profile) {
       return false
     }
 
@@ -2295,7 +2288,7 @@ export class Application {
       } = resolvePackageUpdates(
         this.packages,
         profile,
-        this.options,
+        this.globalOptions,
         update.packages,
         update.options,
         update.features,

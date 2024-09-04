@@ -10,7 +10,7 @@ import {
   useTheme,
 } from "@mui/material"
 
-import { OptionInfo, OptionValue, Options } from "@common/types"
+import { OptionInfo, OptionValue, Options, Requirements } from "@common/options"
 
 import { OptionsFormSection } from "./OptionsFormSection"
 import { NOSECTION, getSections } from "./utils"
@@ -19,8 +19,9 @@ export function OptionsForm({
   options,
   ...props
 }: {
+  checkCondition: (conditions: Requirements | undefined) => boolean
   disabled?: boolean
-  onChange: (option: OptionInfo, value: OptionValue | ReadonlyArray<OptionValue>) => void
+  onChange: (option: OptionInfo, value: OptionValue) => void
   options: OptionInfo[]
   values: Options
 }): JSX.Element {

@@ -200,7 +200,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1163
+    downloads: 1197
     filename: SC4D LEX Legacy - BSC Diggis Complete Ponds and Streams v2.zip
     files:
       - ~Documents/BSC_Readmes/Diggis/images/Diggis Addon CAN-AM.jpg
@@ -268,7 +268,7 @@ assets:
     authors:
       - Diggis
     category: parks
-    downloads: 373
+    downloads: 376
     lastModified: 2023-08-20T02:44:37-07:00
     name: BSC Diggis Streams - PEG Replacement Mod
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Peg Replacement Mod.jpg
@@ -505,7 +505,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 592
+    downloads: 596
     filename: SC4D LEX Legacy - MAS71 Japanese River Project V2.zip
     files:
       - SC4D LEX Legacy - MAS71 Japanese River Project V2/readme_mas71_japanese_river_project.html
@@ -609,7 +609,7 @@ assets:
     authors:
       - Girafe
     category: parks
-    downloads: 216
+    downloads: 224
     lastModified: 2024-01-20T07:36:37-08:00
     name: SC4D LEX Legacy - BSC-TSC Girafe Winterpack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/image_pack.jpg
@@ -618,7 +618,7 @@ assets:
     authors:
       - sc4evermore
     category: parks
-    downloads: 263
+    downloads: 268
     lastModified: 2024-02-12T13:12:11-08:00
     name: Ulisse Wolf - National Football League
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/maxresdefault.jpg.117506cbb498290ce0cd930f582fe09e.jpg
@@ -902,7 +902,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 405
+    downloads: 450
     filename: SC4D LEX Legacy - BSC Canals Collection V2.zip
     files:
       - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@1Base Sets/Calm Water/BSC Newman Inc RPK BaseSet.dat
@@ -1154,5 +1154,941 @@ assets:
     uncompressed: 67225502
     url: https://www.sc4evermore.com/index.php/downloads/download/14-park/277-sc4d-lex-legacy-bsc-canals-collection
     version: "2"
+  sc4evermore/283-sc4d-lex-legacy-bsc-parks-collection:
+    authors:
+      - BSC
+    category: parks
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/11097-peg-christmas-development-kit
+      - simtropolis/13096-peg-the-great-lighthouse-of-alexandria
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection
+      - sc4evermore/108-sc4d-lex-legacy-bsc-diggis-complete-ponds-and-streams
+      - sc4evermore/10-jenxporkie-expanded-porkie-props
+    description: "<body>\r
 
-timestamp: 2024-08-20T10:45:45.232Z
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the BSC Team and SC4D LEX Restoration Team-assembled Park and Recreation  uploads called BSC
+      Parks of multiple popular BSC BATers and their associates
+      like: <strong>SimGoober </strong>(SG), <strong>Deadwoods </strong>(DAE/DEDWD), <strong>BarbyW </strong>(BLS), <strong>RipTide</strong> (RT, or BRT in collaboration with
+      BarbyW), <strong>D66</strong>, <strong>Swi21</strong>, <strong>Debussyman</strong>, <strong>Yoder7652</strong> (YDR), <strong>CasperVG</strong>, <strong>Geoffhaw</strong>, <strong>SPA
+      </strong>and many others which had been available on the Lot Exchange (LEX) at SC4 Devotion (and in some cases on Simtropolis STEX too). It includes the contents of 40+ previously separate
+      downloads (including some contents that were only available on the SC4D LEX DVD or haven't been officially released previously).<br>After battling a number of technical issues, software
+      incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form,
+      allowing users to install them all in one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>Please note that this pack <strong><em>may</em></strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly
+      maintain, update, and provide technical support for the pack.</p>\r
+
+      <div class=\"bannerfull\">\r
+
+      <h4>Features</h4>\r
+
+      </div>\r
+
+      <ul>\r
+
+      <li>Dedicated Submenu support for the included parks sets - these parks are taking place in the BSC Parks Main submenu near to the top of the game's regular Park menu. </li>\r
+
+      <li>Fixed some minor bugs</li>\r
+
+      <li>All the Transit Enabled lots have been brought up to today's NAM/MTA standards.</li>\r
+
+      </ul>\r
+
+      <p><span style=\"font-size: 24px;\"><strong>Contents</strong></span>:<br>(listed only the main topics):</p>\r
+
+      <ul>\r
+
+      <li>BSC Parks DEDWD Base Set and addon Sets</li>\r
+
+      <li>BSC Parks DEDWD Raised Parks and its addons</li>\r
+
+      <li>BSC Parks BLS (Feature parks, 2x2 and 3x3, D66, SWI21 Parks)</li>\r
+
+      <li>BSC Parks BRT WFK Parks</li>\r
+
+      <li>BSC Parks SNM MAAM</li>\r
+
+      <li>BSC Parks SG Parks</li>\r
+
+      <li>BSC Parks DBSSYMN Parks</li>\r
+
+      <li>BSC Parks YDR Parks</li>\r
+
+      <li>BSC Parks CAS</li>\r
+
+      <li>BSC Parks Geoffhaw</li>\r
+
+      <li>BSC Parks SPA</li>\r
+
+      </ul>\r
+
+      <div class=\"bannerfull\"><a name=\"installation\"></a>\r
+
+      <h4> Installation</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r
+
+      <p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a
+      zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org/\">7-zip</a>, and for macOS, use <a
+      href=\"https://www.keka.io/en/\">Keka</a>.</p>\r
+
+      <p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything).
+      Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). After this, click over to the Install tab, and click
+      \"Start installation\" to begin the installation procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r
+
+      <p>It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.<br>Optionally in the ~Documents folder in the main ZIP you can find
+      a collective/master and separately all the individual cleanitol files and by using either the newer <strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\"
+      target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a></strong> or the older <strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\"
+      rel=\"noopener\">BSC Cleanitol</a></strong> tool you can search and remove old and outdated versions of these files.</p>\r
+
+      <p>Bear in mind that this Collection contains Prop packs only available with this upload. Those prop packs can be used and referenced by other contents may not part of this collection as
+      dependencies. If a 3rd party upload references one of the prop packs available in this Collection, you don't need to install everything, you can select and install only the referenced prop pack.
+      All prop packs (and the lot packs as well) have individual cleanitol files (besides the <em>Cleanitol_MASTER REMOVE LIST_BSC Parks Collection.txt</em>) and they have Prop Catalogue index images
+      as a help for lotters.</p>\r
+
+      <p><strong><span style=\"color: #e03e2d;\">Special Notes:</span></strong></p>\r
+
+      <ul>\r
+
+      <li><span style=\"color: #e03e2d;\">When you run the installer in the content selector (Files menu) you will see the \"BSC Parks\" folder twice, and within the second BSC Parks folder you will
+      also find the \"Feature Parks\" folder twice. This duplication was necessary due to how the installer functions are working regarding folder and file hierarchy. You will find selectable contents
+      in all of these folders, but in your Plugins folder only ONE copy of each will show up with the selected contents.</span></li>\r
+
+      <li>There are three files which are NOT selected by-defalut and will NOT get installed if you were not selected them manually upon installation:</li>\r
+
+      <ul>\r
+
+      <li><b>BLS TM Park</b> 3x3 (BSC_Park_3x3_TM_Park.dat)<br>- the infamous Typing Monkey park with a long list of dependencies.  Its dependencies won't be listed here and in the main Dependency
+      section in the readme, but will be listed separately at the bottom of the \"Contents\" section of the Readme. It is located in the second <i>BSC Parks</i> and the first <i>Feature
+      Parks</i> selection in the installer.<br>- It is located in the second <i>BSC Parks</i> and the first <i>Feature Parks</i> selection in the installer.</li>\r
+
+      <li><b>SimGoober Le Renard Rose</b> (BSC_Park_3x3_RenardRose_11e3c7d2.SC4Lot)<br>- this is an adult themed park. Its dependencies won't be listed here and in the main Dependency section in the
+      readme, but will be listed separately at the bottom of the \"Contents\" section of the Readme. It is located in the second <i>BSC Parks</i> and the second <i>Feature Parks</i> selection in the
+      installer. You need to open down the <i>BLS Feature Parks</i> and <i>BLS 3x3 Parks</i> sections.</li>\r
+
+      <li><b>BSC Xmas Present</b> 2x1 (BSC Wish You a Merry Xmas.dat)</li>\r
+
+      <li><b>BSC SPA Halifax Explosion Memorial Bell Tower</b> - it comes with two lots one is a BSC Park version the other a regular plaza version. The Regular Plaza Lot folder contains the non-BSC
+      Parks compliant version and it is NOT pre-selected.</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\"><a name=\"installation\"></a>\r
+
+      <h4> DLL Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):</p>\r
+
+      <ul>\r
+
+      <li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a> - You need it to get the
+      package submenu working.\r
+
+      <p>Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</p>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <div class=\"bannerfull\"><a name=\"installation\"></a>\r
+
+      <h4> Dependencies</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly (i.e., no \"brown boxes\" or missing textures) (the below listed dependencies are covering a
+      full install; for dependencies for individual collections see the <a href=\"#Contents\">list of contents</a> secion):</p>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li><strong>SC4D LEX Legacy - BSC Parks Compilation v1</strong> (and above)<span style=\"color: #e03e2d;\"><strong> - INCLUDED</strong></span><br>The below listed dependencies are all can be
+      found in the hereby linked dependency pack compilation.</li>\r
+
+      <ul>\r
+
+      <li>BSC BATProps BSC Parks</li>\r
+
+      <li>BSC BATProps DEDWD BSC Raised Parks</li>\r
+
+      <li>BSC Park Textures** </li>\r
+
+      <li>BSC DAE Road Textures</li>\r
+
+      </ul>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\"><strong>SC4D LEX Legacy -
+      BSC Common Dependencies Pack<span style=\"color: #e03e2d;\"> v9b</span></strong></a> (and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack
+      compilation.</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li>BSC Essentials<strong><span style=\"color: #e03e2d;\"> 2024b</span></strong></li>\r
+
+      <li>BSC MEGA Props - SG Vol01 v4</li>\r
+
+      <li>BSC MEGA Props - CP Vol01</li>\r
+
+      <li>BSC MEGA Props - DAE Vol01<strong><span style=\"color: #e03e2d;\"> v4</span></strong></li>\r
+
+      <li>BSC MEGA Props - SWI21 Vol01 v4</li>\r
+
+      <li>BSC MEGA Props - SWI21 Vol02 v2</li>\r
+
+      <li>BSC MEGA Props - MJB Vol01 v3</li>\r
+
+      <li>BSC MEGA Props - MJB Vol02 v2</li>\r
+
+      <li>BSC MEGA Props - D66 Vol01 v3</li>\r
+
+      <li>BSC MEGA Props - D66 Vol02 v2</li>\r
+
+      <li>BSC MEGA Props - D66 Vol03</li>\r
+
+      <li>BSC MEGA Props - DBSSYMN Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - DBSSYMN Vol02<strong><span style=\"color: #e03e2d;\"> v3</span></strong></li>\r
+
+      <li>BSC MEGA Props - MBEAR Vol01 v3</li>\r
+
+      <li>BSC MEGA Props - GasCooker Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - JES Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - JES Vol04 v2</li>\r
+
+      <li>BSC MEGA Props - RT Vol01 v4</li>\r
+
+      <li>BSC MEGA Props - RT Vol02 v2</li>\r
+
+      <li>BSC MEGA Props - RT WFK Vol01</li>\r
+
+      <li>BSC MEGA Props - CAL Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - JRJ Vol02 v2</li>\r
+
+      <li>BSC MEGA Props - JRJ Vol03 v2</li>\r
+
+      <li>BSC MEGA Props - CARCH Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - Caliban Vol01</li>\r
+
+      <li>BSC MEGA Props - YDR Vol01</li>\r
+
+      <li>BSC MEGA Props - SNM Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - MISC Vol01 v2</li>\r
+
+      <li>BSC MEGA Props - MISC Vol02 v4</li>\r
+
+      <li>BSC BATProps VDK Vol01 v2</li>\r
+
+      <li>BSC Prop Pack - JENX Tree Props Vol01</li>\r
+
+      <li>BSC Prop Pack - Geoffhaw Flag Pack Compilation</li>\r
+
+      <li>SG Models Agriculture v2</li>\r
+
+      <li>CSX MEGA Props - Vol01 v3</li>\r
+
+      <li>CSX MEGA Props - Vol03 v3</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <ul>\r
+
+      <li>BSC Textures Vol01</li>\r
+
+      <li>BSC Textures Vol02</li>\r
+
+      <li>BSC Textures Vol03<span style=\"color: #e03e2d;\"><strong> v5</strong></span></li>\r
+
+      <li>BSC TexturePack Cycledogg V01b</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/14-park/277-sc4d-lex-legacy-bsc-canals-collection\" target=\"_blank\" rel=\"noopener\"><strong>SC4D LEX Legacy - BSC Canals and Waterway Collection
+      V2</strong></a><br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props - Canals SimGoober Brick Style</li>\r
+
+      </ul>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props - Canals Newman Inc Rivers and Ponds</li>\r
+
+      <li>BSC BATProps SG Urban Canal</li>\r
+
+      </ul>\r
+
+      <li><strong><a href=\"/index.php/downloads/download/14-park/108-sc4d-lex-legacy-bsc-diggis-complete-ponds-and-streams\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Diggis Complete
+      Ponds and Streams V2</a></strong><br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props - Canals Diggis Streams and Ponds</li>\r
+
+      </ul>\r
+
+      <li><a title=\"Porkie Props\" href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\" target=\"_blank\" rel=\"noopener\"><strong>JENX-Porkie Expanded Porkie
+      Props</strong></a></li>\r
+
+      <li><a title=\"PEG-SUPER_TEXTURES.dat\" href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\" target=\"_blank\" rel=\"noopener\"><strong>PEG MTP SUPER PACK
+      v1.5</strong></a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/11097-peg-christmas-development-kit/\" target=\"_blank\" rel=\"noopener\"><strong>PEG Christmas Development Kit</strong></a></li>\r
+
+      <li><a title=\"PEG_ Offset-Peeps_PROP.dat\" href=\"https://community.simtropolis.com/files/file/13096-peg-the-great-lighthouse-of-alexandria/\" target=\"_blank\" rel=\"noopener\"><strong>PEG_
+      Offset-Peeps_PROP</strong></a></li>\r
+
+      </ul>\r
+
+      <p>** You can CHOOSE ONLY ONE texture style at a time, as the textures use the same ID's, the game will only use the last one loaded (i.e. last one alphabetically), so you should delete the
+      texture files you <b>don't</b> want. Note that the base set also includes a file BSC_Park_Textures_zDefault.dat that should also be removed as it will override all the other files. You can read
+      more about how the variable textures and how they look like in the <a href=\"/%7EDocuments/BSC_Readmes/BSC%20Parks/BSC_Parksv2_TextureSet_readme.html\" target=\"_blank\"
+      rel=\"noopener\">BSC_Parksv2_TextureSet_readme</a>.</p>\r
+
+      </div>\r
+
+      <div class=\"bannerfull\"><a name=\"credits\"></a>\r
+
+      <h4> Credits</h4>\r
+
+      </div>\r
+
+      <div class=\"regtext\">\r
+
+      <p>The following BSC members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>SimGoober (SG)</li>\r
+
+      <li>Deadwoods (DAE/DEDWD)</li>\r
+
+      <li>BarbyW (BLS)</li>\r
+
+      <li>RipTide (RT, or BRT in collaboration with BarbyW)</li>\r
+
+      <li>D66</li>\r
+
+      <li>Swi21</li>\r
+
+      <li>Debussyman</li>\r
+
+      <li>Yoder7652 (YDR)</li>\r
+
+      <li>CasperVG (CAS)</li>\r
+
+      <li>Geoffhaw</li>\r
+
+      <li>Cerulean (CARCH)</li>\r
+
+      <li>Caliban</li>\r
+
+      <li>GasCooker (GC)</li>\r
+
+      </ul>\r
+
+      <p>This package was updated and assembled by Tyberius06.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.<br><br>For memo for subsequent updates on the NAM/Java installer.</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      </div>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/BSC_Parksv2_BaseSet-stexpic1.jpg\" data-lightbox=\"lightbox283\"
+      data-alt=\"lightboxBSC_Parksv2_BaseSet-stexpic1.jpg|2x2parks1_s.jpg|wfk_red\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BSC_Parksv2_BaseSet-stexpic1.jpg\" alt=\"BSC_Parksv2_BaseSet-stexpic1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/2x2parks1_s.jpg\" data-lightbox=\"lightbox283\"
+      data-alt=\"lightboxBSC_Parksv2_BaseSet-stexpic1.jpg|2x2parks1_s.jpg|wfk_red\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/2x2parks1_s.jpg\" alt=\"2x2parks1_s2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/wfk_red.jpg\" data-lightbox=\"lightbox283\"
+      data-alt=\"lightboxBSC_Parksv2_BaseSet-stexpic1.jpg|2x2parks1_s.jpg|wfk_red\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/wfk_red.jpg\" alt=\"wfk_red3\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 68
+    filename: SC4D LEX Legacy - BSC Parks Collection V1.zip
+    files:
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/!SimGoober Le Renard Rose/BSC_Park_3x3_RenardRose_11e3c7d2.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/BLS Caliban's Park/BSC Park Caliban's Park v2_7242bc5d.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/BLS Cerulean's Park/BSC Park Cerulean's  Park v2_3242bf22.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/BLS Lossista Park/BSC Park Lossista Park v2_3242a225.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/BLS Orange Park/BSC Park Orange Park v2_3242a641.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/BLS Pine Park/BSC Park Pine Parkv2_5242bfcf.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/BLS Pink Park/BSC Park Pink Park v2_9242a432.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/BLS Small Park/BSC Park Small Park_12455960.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/BLS Sword Park/BSC Park Sword Park v2_f242a3dc.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/Cobb Obelisk Park/BSC_Park_3x3_Cobbelisk_9192176a.SC4Lot
+      - "BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/RipTide Barby's Nemesis #1/BSC_Park_3x3_Barbys_Nemesis_918c1cac.SC4Lot"
+      - "BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/RipTide Barby's Nemesis #2/BSC_Park_3x3_Barbys_Nemesisv2_918c1ee3.SC4Lot"
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/RipTide Cantina del Toros/BSC_Park_3x3_CantinaDelToros_91615905.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/RipTide Guardian Angel/BSC_Park_3x3_Guardian_Angel_b162170d.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/RipTide Heladeria Farggi/BSC_Park_3x3_HelderiaFarggi_11615ea3.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/BLS Floral Delight/BSC_Park_2x2_Floral_Delight_52270ea0.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/BLS Rose Walk/BSC_Park_2x2_Rose_Walk_f2311dd6.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/BLS Wildflower Stroll/BSC_Park_2x2_WildFlower_Stroll_5231223e.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/CSX Ethernal Flame/BSC_Park_2x2_Eternal_Flame_12ecb04d.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/D66 Lime Squash/BSC_Park_2x2_Lime_Squash_f2eca690.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/Gascooker Market Park/BSC_Park_2x2_GC_Market_Park_51a1d813.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/RipTide Charger Park/BSC_Park_2x2_RT_Charger_Park_31a1d16e.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/RipTide Christmas Carousel/BSC_Park_2x2_Christmas_Carousel_d2eca6ff.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/RipTide Drummer Boy/BSC_Park_2x2_RT_Drummer_Boy_Park_51a1d1a9.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/RipTide El Toro/BSC_Park_2x2_RT_ElToro_b1a1c478.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/RipTide Golden Wings Park/BSC_Park_2x2_RT_Golden_Wings_Park_11a1d10d.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/RipTide Santa's Sleigh/BSC_Park_2x2_Santa_Hidden_f2eca818.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/RipTide Spean Bridge Mermorial Park/BSC_Park_2x2_RT_SpeanBridge_11a1c3ba.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/SimGoober Pond Park/BSC_Park_2x2_SG_Pond_Park_51a1d584.SC4Lot
+      - "BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/swi21 Cypress Park Floral Statue #1/BSC_Park_2x2_Cypress_Park_f2eca415.SC4Lot"
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/swi21 Academic Park/BSC_Park_2x2_Academic_Park_b2ecaab5.SC4Lot
+      - "BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/swi21 Cypress Park Floral Statue #2/BSC_Park_2x2_Cypress_Park2_b2eca43e.SC4Lot"
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/swi21 Fountain of The Camellias/BSC_Park_2x2_Fountain_Of_The_Camellias_12ec9c8b.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@4CAS Parks#/CAS Albert I Memorial Park 8x8/with Diggis Streams/PLOP_8x8_Albert I Memorial Park_Diggis_290e6f03.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 2x2 Parks/swi21 Fountain Park/BSC_Park_2x2_swi21_Fountain_11a1c69a.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@4CAS Parks#/CAS Albert I Memorial Park 8x8/with JRJ Urban Canals/PLOP_8x8_Albert I Memorial Park_JRJ_a906bbbc.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@4CAS Parks#/CAS Albert I Memorial Park 8x8/with SG Urban Canals/PLOP_8x8_Albert I Memorial Park_SG_390e66a7.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Park Bridges/Avenue Bridge Brick 8x5/BSC Parks - swi21 Avenue Bridge Brick 8x5.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Park Bridges/Avenue Bridge Stone 6x3/BSC Parks - swi21 Avenue Bridge Stone 6x3.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Park Bridges/Avenue Bridge Stone 8x5/BSC Parks - swi21 Avenue Bridge Stone 8x5.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Park Bridges/Bridge over RPK 8x5/BSC Parks - swi21 Bridge over RPK 8x5.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Park Bridges/Bridge over SG Brick Canal 6x3/BSC Parks - swi21 Bridge over SG Brick Canal 6x3.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Park Bridges/Bridge over SG Brick Canal 8x5/BSC Parks - swi21 Bridge over SG Brick Canal 8x5.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Park Bridges/Bridge over SG Brick Canal Terrace 8x5/BSC Parks - swi21 Bridge over SG Brick Canal Terrace 8x5.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Park Bridges/Bridge over SG Brick Canal Terrace 6x3/BSC Parks - swi21 Bridge over SG Brick Canal Terrace 6x3.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Amphitheatres/BSC_Parks_Amphitheatres.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Brickworks Market/BSC_Parks_Brickworks_Market.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Caliban Mother Russia/BSC_Parks_Caliban_Mother_Russia.dat
+      - "BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Cerulean Tower Park #1/BSC_Parks_Cerulean_Tower_Park #1.dat"
+      - "BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Cerulean Tower Park #2/BSC_Parks_Cerulean_Tower_Park #2.dat"
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Gardeners Compound/BSC_Parks_Gardeners_Compound.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Chess Plaza/BSC_Parks_Chess_Plaza.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Hedge Maze/BSC_Parks_Hedge_Maze.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/RippTide Avalon Park/BSC_Parks_RippTide_Avalon_Park.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/RippTide Fuente Minerva/BSC_Parks_RippTide_Fuente_Minerva.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/SimGoober Azalea Garden Park/BSC_Parks_SimGoober_Azalea_Garden_Park.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/RippTide Greek Bath/BSC_Parks_RippTide_Greek_Bath.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/SimGoober Blooming Gardens/BSC_Parks_SimGoober_Blooming_Gardens.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/SimGoober Bridges/BSC_Parks_SimGoober_Bridges.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/SimGoober Crepe Myrtle Park/BSC_Parks_SimGoober_Crepe_Myrtle_Park.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/SimGoober Fountain Park/BSC_Parks_SimGoober_Fountain_Park.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Sunken Plazas/BSC_Parks_Sunken_Plazas.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@1DEDWD Feature Parks#/Sunken Plazas w Jobs/BSC_Parks_Sunken_Plazas_w_Jobs.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@4CAS Parks#/CAS Gazebo 1x1/gazebo3-0x5ad0e817_0xd40000f5_0x30000.SC4Model
+      - BSC/@5BSC Parks/@3Feature Parks/@4CAS Parks#/CAS Gazebo 1x1/PLOP_1x1_Gazebo_65cbe8cd.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS D66 Western Village Park 8x6/BSC_Park_8x6_D66WesternVillage_7168eaca.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS Le Jardin Villachinon 6x4/BSC_Park_6x4_LeJardinVillchinon_91693434.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS RipTide BB's Bed and Breakfast in the Park 6x4/BSC_Park_6x4_BB's_B&B_d16e5805.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS RipTide CdS Carousel 3x4/BSC_Park_3x4_Carousel_31641650.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS RipTide CdS Fountain Place 5x8/BSC_Park_5x8_Fountain_Place_115f6863.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS RipTide Galeria Artista in the Park 4x4/BSC_Park_4x4_RT_Galleria_Artista_d1628156.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS RipTide Murney Tower Park 5x4/BSC_Park_5x4_RT_Murney_Tower_7160f2ae.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS RipTide Theater in the Park 6x4/BSC_Park_6x4_TheatreInThePark_b1660da1.SC4Lot
+      - "BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS SG-RT St. Nicholas Park #1 3x5/BSC_3x5_StNicholasPark.sc4lot"
+      - "BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS SG-RT St. Nicholas Park #2 5x5/BSC_5x5_StNicholasPark.SC4Lot"
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS SimGoober Pagoda Park 6x4/BSC_Park_6x4_SGPagoda_f0e6bb28.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS swi21 Delphi Way Park 6x6/BSC_Park_6x6_Delphi_Way_f2296e67.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Gloriette Parks/BSC_Park_10x3_DBSSYMN_Gloriette_b27e0dad.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Gloriette Parks/BSC_Park_10x7_DBSSYMN_Gloriette_Gardens_127f64a8.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@4CAS Parks#/CAS ITC Canobie Memorial Park 4x5/PLOP_4x5_Canobie Memorial Park_7662c689.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BLS_DBSSYMN_PalaisCharlesleGrand_14c9897f.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BSC_Park_11x3_DBSSYMN_Orangery_949d01be.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BSC_Park_2x2_DBSSYMN_Artemis_349d3460.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BSC_Park_3x2_DBSSYMN_Hemicycle_d3f05b7e.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BSC_Park_3x3_DBSSYMN_Narcis_349cf6e9.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BSC_Park_3x3_DBSSYMN_Orion_749d03ac.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BSC_Park_4x4_DBSSYMN_NikeNem_949cf8eb.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BSC_Park_5x3_DBSSYMN_Palm House_949d1e53.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@3DBSSYMN Parks#/DBSSYMN Listerlund Set/BSC_Park_5x5_DBSSYMN_Aedes_Castorum_b51df09d.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@5SG Parks#/SG Stonewall Jackson Memorial 3x3/BSC_Park_3x3_StonewallJacksonMemorial_90e58e01.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@5SG Parks#/SG Temple of the STEX Goddess 3x3/BSC_Park_3x3_TempleoftheSTEXGoddess_90e59ca3.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@4CAS Parks#/CAS M. Mason Memorial Park 8x8/BSC_Park_8x8_Cas_M.Mason_Memorial_Park.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@5SG Parks#/SG TM Reward Park 1x1/SG_1x1_RewardPark01_4fee6702.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@6YDR Parks#/YDR BA London Eye/YDR_London_Eye_f26b165b.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@6YDR Parks#/YDR Millenium Dome/YDR_MillenniumDomeBSCPark_b2e34aac.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@6YDR Parks#/YDR Millenium Dome Large/YDR_MillenniumDomeBSCParkLarge_130ea9ea.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@8SPA Halifax Explosion Memorial Bell Tower#/@1BSC Parks Version/BSC_Park_Halifax_Explosion_Memorial_Bell_Tower_b6336465.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@8SPA Halifax Explosion Memorial Bell Tower#/@2!Regular Plaza Lot/PLOP_3x1_Halifax Explosion Memorial Bell Tower_a6a75b64.SC4Lot
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@0=BSC Park Textures zDefault/BSC_Park_Textures_zDefault.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@1-BSC Park Textures AngledBrick/BSC_Park_Textures_AngledBrick.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@2-BSC Park Textures BrownBrickLarge/BSC_Park_Textures_BrownBrickLarge.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@3-BSC Park Textures BrownDirt/BSC_Park_Textures_BrownDirt.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@4-BSC Park Textures GreyPavers/BSC_Park_Textures_GreyPavers.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@5-BSC Park Textures GreyRock/BSC_Park_Textures_GreyRock.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@6-BSC Park Textures RedBrickSmal/BSC_Park_Textures_RedBrickSmal.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@7-BSC Park Textures SandPavers/BSC_Park_Textures_SandPavers.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@8-BSC Park Textures Addon 00 Retrowave/BSC_Park_Textures_Add_0_Retrowave.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@9-BSC Park Textures Addon 01 Limestone/BSC_Park_Textures_Add_1_Limestone.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@a-BSC Park Textures Addon 02 BrownSandstone/BSC_Park_Textures_Add_2_BrownSandstone.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@b-BSC Park Textures Addon 03 CinderBrick/BSC_Park_Textures_Add_3_CinderBrick.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@c-BSC Park Textures Addon 04 StarMosaic/BSC_Park_Textures_Add_4_StarMosaic.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@d-BSC Park Textures Addon 05 RedMosaic/BSC_Park_Textures_Add_5_RedMosaic.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@e-BSC Park Textures Addon 06 GoldenMosaic/BSC_Park_Textures_Add_6_GoldenMosaic.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@f-BSC Park Textures Addon 07 BlueSlate/BSC_Park_Textures_Add_7_BlueSlate.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@g-BSC Park Textures Addon 08 GreenSlate/BSC_Park_Textures_Add_8_GreenSlate.dat
+      - BSC/@2BSCTextures#/@1BSC Park Textures__CHOOSE ONE/@h-BSC Park Textures Addon 09 BrownSlate/BSC_Park_Textures_Add_9_BrownSlate.dat
+      - BSC/@2BSCTextures#/@2BSC DAE Road Textures__CHOOSE ONE/-BSC_DAE_RoadEuro_textures/BSC_DAE_RoadEuro_textures.dat
+      - BSC/@2BSCTextures#/@2BSC DAE Road Textures__CHOOSE ONE/=BSC_DAE_RoadMaxis_textures/BSC_DAE_RoadMaxis_textures.dat
+      - BSC/@5BSC Parks/@1DEDWD Raised Parks#/BaseSet/BSC_Parks_DEDWD_Raised_Parks.dat
+      - BSC/@5BSC Parks/@1DEDWD Raised Parks#/City Gates/BSC_Parks_DEDWD_Raised_Parks_City_Gates.dat
+      - BSC/@5BSC Parks/@1DEDWD Raised Parks#/City Walls/BSC_Parks_DEDWD_Raised_Parks_City_Walls.dat
+      - BSC/@5BSC Parks/@1DEDWD Raised Parks#/Over Network Pieces/BSC_Parks_DEDWD_Raised_Parks_Over_Networks.dat
+      - BSC/@5BSC Parks/@1DEDWD Raised Parks#/PED Bridges/BSC_Parks_DEDWD_Raised_Parks_PED_Bridges.dat
+      - BSC/@5BSC Parks/@1DEDWD Raised Parks#/Plazas/BSC_Parks_DEDWD_Raised_Parks_Plazas.dat
+      - BSC/@5BSC Parks/@1DEDWD Raised Parks#/Transportation/BSC_Parks_DEDWD_Raised_Parks_Transportation.dat
+      - BSC/@5BSC Parks/@1DEDWD Raised Parks#/Under Network Pieces/BSC_Parks_DEDWD_Raised_Parks_Under_Networks.dat
+      - BSC/@5BSC Parks/@2Feature Parks#/!BLS TM Park 3x3/BSC_Park_3x3_TM_Park.dat
+      - BSC/@5BSC Parks/@2Feature Parks#/!BSC Xmas Present 2x1/BSC Wish You a Merry Xmas.dat
+      - BSC/@5BSC Parks/@2Feature Parks#/BLS SC4D Birthday Park 2x2/BSC_Park_2x2_SC4Devotion_Birthday_Park.dat
+      - BSC/@5BSC Parks/@2Feature Parks#/D66 Serenity Plaza 3x3/BSC_Park_3x3_D66_Serenity_Plaza.dat
+      - BSC/@5BSC Parks/@2Feature Parks#/Geoffhaw David Trainor Memorial Park 3x3/BSC_Park_3x3_Geoff_David_Trainor_Memorial_Park.dat
+      - BSC/@5BSC Parks/@3Feature Parks/@7BRT SNM Modular Army and Air Force Museum Parks/SNM_MAAM_Park_3x3_Corsair_b1ad2e8c.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@7BRT SNM Modular Army and Air Force Museum Parks/SNM_MAAM_Park_3x3_Dauntless_b1ad2ea5.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@7BRT SNM Modular Army and Air Force Museum Parks/SNM_MAAM_Park_3x3_Spitfire_11ad321b.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@7BRT SNM Modular Army and Air Force Museum Parks/SNM_MAAM_Park_4x4_B25_71ad2f30.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@7BRT SNM Modular Army and Air Force Museum Parks/SNM_MAAM_Park_5x5_Halifax_11ad2b56.SC4Lot
+      - BSC/@5BSC Parks/@3Feature Parks/@8SPA Halifax Explosion Memorial Bell Tower#/Halifax Explosion Memorial Bell Tower-0x5ad0e817_0xd62cba4d_0x30000.SC4Model
+      - BSC/@5BSC Parks/@4BRT Waterfront Parks#/BRT WFK Parks/BRT_WFK_BSC_Parks.dat
+      - BSC/@5BSC Parks/@4BRT Waterfront Parks#/BRT WFK Parks - Bus Stop/BSC Parks - BRT WFK Bus stop.dat
+      - BSC/@5BSC Parks/@4BRT Waterfront Parks#/BRT WFK Parks - Water Taxi/BSC Parks - BRT WFK Water Taxi.dat
+      - BSC/@5BSC Parks/@4BRT Waterfront Parks#/Santa Barbara Hotel/BLS_Santa_Barbara_Hotel_CAL_BSCPark_72f1a7da.SC4Lot
+      - ~Documents/BSC_Readmes/BSC Parks/images/2x2newparks_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/2x2newparks_sn.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/2x2parks1_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/2x2parks2_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/azalea_2x2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/birthday-invite_S.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/birthday-invite_SN.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/blooming.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/BLSParksPack2_d.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/BLSParksPack2_n.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_1.narrowunderelrail.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_1.narrowundermonorail.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_1.offsetgardenbedwithpath.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_2.widecnr.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_2.wideend.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_2.wideintersection1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_2.wideintersection2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_2.widestraightwshrubs.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_2.wideT.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_2.wideunderelrail.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_2.wideundermonorail.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_3.treeaveinsidecnr.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_3.treeavenarrowT.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_3.treeaveoutsidecnr.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_3.treeavestraightx1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_3.treeavestraightx3.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_3.treeavewideT.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_4.plazacnr.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_4.plazaedge.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_4.plazainsidecnr.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_4.plazanarrowent.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_4.plazatreeaveleft.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_4.plazatreeaveright.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_4.plazawideent.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.avebridge.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.canalbridge.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.carpark1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.carpark2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.fountain.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.offsetgardenbednopath.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.plaza1x1filler.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.railbridge.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.seaonalvalleyoak.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.seasonalelm.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_5.seasonaloak.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_6.maxis1x1plaza.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_6.maxis2x2plaza.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_6.maxis3x3plaza.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_6.maxisbusstop.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/bscpark_6.maxissubway.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/BSC_StNicholas01.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/BSC_StNicholas02.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/BSC_TempleOfSTEXGoddess_Day.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/BSC_TempleOfSTEXGoddess_Nite.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/cerulean1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/cerulean2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/corner.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/crepemyrtle.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/domeinthepark_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/domeinthepark_sn.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/end_circular.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/end_gazebo.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/end_square.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/flowerbeds.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/footer.gif
+      - ~Documents/BSC_Readmes/BSC Parks/images/gate_narrow.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/gate_wide.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/gloriette10x3readme_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/gloriette10x7readme_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/grass_1x1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/grass_2x2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/grass_3x3.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/Halifax Explosion Memorial Bell Tower Readme 1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/Halifax Explosion Memorial Bell Tower Readme 2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/header.gif
+      - ~Documents/BSC_Readmes/BSC Parks/images/img0002.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/img0003.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/intersection.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/lejardin_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/Londoneye_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/Londoneye_sn.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/palais_red.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/palais_ren.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/parkbridges_red.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/parkbridges_ren.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/parking.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/parks1_stex.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/parks2_stex.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/Parks_day.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/ParkWFK_ren.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/playground_1x1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/playground_2x1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/Serenity Park.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/sgfountain.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/SG_StonewallJacksonMemorial_01.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/SG_StonewallJacksonMemorial_02.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/straight_1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/straight_1_bench.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/straight_3.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/straight_3_blooms.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/T.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/villchinon_sn.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wall_corner.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wall_no_pillars.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wall_pillar_left.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wall_pillar_right.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wall_two_pillars.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wfk_red.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wide_intersection.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wide_straight.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wide_T_bottom.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/wide_T_side.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/xmastree_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/images/xmastree_sn.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-0.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-3.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-4.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-5.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-6.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-7.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-8.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Images of texture addons/BSC-Park-Base-Texture-9.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw01.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw02.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw03.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw04.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw05.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw06.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw07.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw08.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw09.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw10.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/cw11.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ex02.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ex03.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ex04.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ex05.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ex06.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ex07.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or01.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or02.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or03.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or04.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or05.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or06.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or07.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or08.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or09.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/or10.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp00.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp01.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp02.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp03.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp04.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp05.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp06.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp07.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp08.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp09.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp10.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp11.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp12.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp13.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp14.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp15.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp16.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp17.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp18.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp19.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp20.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp21.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp22.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp23.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp24.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp25.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp26.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp27.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp28.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp29.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp30.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp31.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp32.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/rp33.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur01.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur02.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur03.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur04.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur05.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur06.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur_place1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur_place2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur_place3.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/images/ur_place4.jpg
+      - BSC/@1BSCProps#/BSC BATProps BSC Parks/BSC BATProps BSC Parks.dat
+      - BSC/@1BSCProps#/BSC BATProps DEDWD BSC Raised Parks/BSC BATProps DEDWD BSC Raised Parks.dat
+      - BSC/@4BSC Parks#/@1Narrow Paths/BSC_Parks_Narrow_Paths.dat
+      - BSC/@4BSC Parks#/@2Wide Paths/BSC_Parks_Wide_Paths.dat
+      - BSC/@4BSC Parks#/@3Wall Set/BSC_Parks_Wall_Set.dat
+      - BSC/@4BSC Parks#/@4Tree Ave Pieces/BSC_Parks_Tree_Ave_Pieces.dat
+      - BSC/@4BSC Parks#/@5Plazas/BSC_Parks_Plaza_Pieces.dat
+      - BSC/@4BSC Parks#/@6Filler Lots/BSC_Parks_Filler_Lots.dat
+      - BSC/@4BSC Parks#/@7Transportation/BSC_Parks_Transportation.dat
+      - ~Documents/BSC_Readmes/BSC Parks/BLS D66 Serenity Plaza 3x3.htm
+      - ~Documents/BSC_Readmes/BSC Parks/BSC David Trainor Memorial Park.htm
+      - ~Documents/BSC_Readmes/BSC Parks/BSCParks_AddonSet_LEX1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSCParks_AddonSet_LEX2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_BaseSet-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_BaseSet-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_BaseSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_GardenersCompound-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_GardenersCompound-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_GardenersCompound_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_TextureSet-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_TextureSet-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_TextureSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_WallSet-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_WallSet-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parksv2_WallSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_Amphitheatres-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_Amphitheatres-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_Amphitheatres_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_BrickworksMarket-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_BrickworksMarket-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_BrickworksMarket_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_ChessPlaza-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_ChessPlaza-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_ChessPlaza_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_MotherRussia-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_MotherRussia-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_MotherRussia_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_RipptideParks-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_RipptideParks-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_RipptideParks_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_SimgooberBridges-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_SimgooberBridges-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_SimgooberBridges_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_SunkenPlazas-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_SunkenPlazas-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Parks_SunkenPlazas_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Park_AddonSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Park_BaseSet-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Park_BaseSet-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Park_BaseSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/BSC_Readme_StNicholasParks.htm
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_HedgeMaze-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_HedgeMaze-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_HedgeMaze_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_MallSet-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_MallSet-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_MallSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_MayanPlaza-readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_MayanPlaza-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_MayanPlaza-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_TreePlaza-readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_TreePlaza-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_TreePlaza-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_TreePlaza2-readme.html
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_TreePlaza2-stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DEDWD_SunkenPlaza_TreePlaza2-stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/DTMP day2.JPG
+      - ~Documents/BSC_Readmes/BSC Parks/DTMP night2.JPG
+      - ~Documents/BSC_Readmes/BSC Parks/gloriette10x3xmas_p.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/gloriette10x7xmas_p.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Halifax Explosion Memorial Bell Tower Readme.htm
+      - ~Documents/BSC_Readmes/BSC Parks/ll.gif
+      - ~Documents/BSC_Readmes/BSC Parks/Londoneyexmas_s.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/lr.gif
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_2x2_Parks.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_Birthday_Park.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_BLS Updated_Parks.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_BLS_Parks_Set03.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_BSCParks_WFK.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_BSCPark_Bridgesv2.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_BSC_New_2x2Parks.htm
+      - ~Documents/BSC_Readmes/BSC Parks/ReadMe_CasPark.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_DBSSYMN_Gloriette.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_DBSSYMN_Listerlund.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_DomeInThePark.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_London_Eye.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_MAAM_Parks.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_SG_TempleSTEXGoddess.htm
+      - ~Documents/BSC_Readmes/BSC Parks/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_VilleChinon.htm
+      - ~Documents/BSC_Readmes/BSC Parks/Readme_Xmas_Gifts.htm
+      - ~Documents/BSC_Readmes/BSC Parks/RemoveListBSCParksBLSSet3.txt
+      - ~Documents/BSC_Readmes/BSC Parks/SG_Readme_StonewallJacksonMemorial.htm
+      - ~Documents/BSC_Readmes/BSC Parks/ul.gif
+      - ~Documents/BSC_Readmes/BSC Parks/ur.gif
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_BaseSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_BaseSet_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_BaseSet_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_BridgeSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_BridgeSet_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_BridgeSet_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_CarparkSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_CarparkSet_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_CarparkSet_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_PlazaSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_PlazaSet_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_PlazaSet_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_Props_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_Props_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol01_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol01_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol01_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol02_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol02_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol02_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol03_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol03_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_RequestVol03_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_TheatreSet_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_TheatreSet_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RaisedPark_TheatreSet_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPCityWalls_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPCityWalls_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPCityWalls_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_ElRailStation_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_ElRailStation_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_ElRailStation_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_MonorailStation_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_MonorailStation_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_MonorailStation_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_Retextured_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_Retextured_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_SubwayStation_readme.html
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_SubwayStation_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RPTransit_SubwayStation_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RP_Retextured_stexpic1.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/DEDWD_RP_Retextured_stexpic2.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/ll.gif
+      - ~Documents/BSC_Readmes/BSC Raised Parks/lr.gif
+      - ~Documents/BSC_Readmes/BSC Raised Parks/readme_splash_blue.jpg
+      - ~Documents/BSC_Readmes/BSC Raised Parks/ul.gif
+      - ~Documents/BSC_Readmes/BSC Raised Parks/ur.gif
+      - ~Documents/BSC_Readmes/BSC Raised Parks/_readme_first.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_LOTSets/Cleanitol_SC4D LEX Legacy - BSC Parks Lot Collection V1.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC BATProps BSC Parks.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC BATProps DEDWD BSC Raised Parks.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitols_PropPacks/Cleanitol_BSC Parks DEDWD v2 - Texture Set v103.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps BSC Parks_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC BATProps DEDWD BSC Raised Parks_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-1.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-2.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-3.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-4.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-5.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-6.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-7.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-8.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC-Park-Base-Texture-9.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Indexes/BSC_Parksv2_TextureSet-stexpic2.jpg
+      - BSC/@3BSC Submenu/BSC_Parks_Submenu.dat
+      - ~Documents/BSC_Readmes/Parks Guide6.pdf
+      - ~Documents/Cleanitol_MASTER REMOVE LIST_BSC Parks Collection.txt
+      - readme.css
+      - readme_SC4D LEX Legacy - BSC Parks Collection V1.html
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BSC_Parksv2_BaseSet-stexpic1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/2x2parks1_s.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/wfk_red.jpg
+    lastModified: 2024-08-21T16:17:55-07:00
+    name: SC4D LEX Legacy - BSC Parks Collection
+    sha256: 789368d2e4a1fefc1b9b8c5b93deee3c34c169c305290a98eeab3c5cf79fe7e6
+    size: 25902685
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BSC_Parksv2_BaseSet-stexpic1.jpg
+    timestamp: 2024-08-22T13:06:29.434Z
+    uncompressed: 30405062
+    url: https://www.sc4evermore.com/index.php/downloads/download/14-park/283-sc4d-lex-legacy-bsc-parks-collection
+    version: "1"
+
+timestamp: 2024-08-28T07:56:44.780Z

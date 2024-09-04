@@ -1,28 +1,83 @@
 import {
   Feature,
-  OptionInfo,
-  OptionType,
-  OptionValue,
-  Options,
-  // PackageConfig,
+  PackageFile,
   PackageInfo,
   PackageStatus,
   ProfileInfo,
-  Requirements,
   VariantInfo,
   VariantIssue,
 } from "@common/types"
 
+import { OptionID, OptionInfo, Requirements, getOptionInfo, getOptionValue } from "./options"
 import { ReadonlyDeep } from "./utils/objects"
-import { isArray, isNumber, isString } from "./utils/types"
+import { isArray } from "./utils/types"
+
+export function checkFile(
+  file: PackageFile,
+  packageId: string,
+  variantInfo: VariantInfo,
+  profileInfo?: ProfileInfo,
+  profileOptions?: OptionInfo[],
+  features?: Partial<Record<Feature, string[]>>,
+): boolean {
+  const packageConfig = profileInfo?.packages[packageId]
+
+  const filename = file.path.split(/[\\/]/).at(-1)!
+
+  const lot = variantInfo?.lots?.find(lot => lot.filename === filename)
+
+  if (lot) {
+    // Never include lots unless explicitly enabled
+    if (!packageConfig?.enabled) {
+      return false
+    }
+
+    // Check if lot is enabled
+    const option = getOptionInfo("lots" as OptionID, variantInfo.options, profileOptions)
+
+    if (option) {
+      const enabledLots = getOptionValue(option, {
+        ...packageConfig.options,
+        ...profileInfo?.options,
+      }) as string[]
+
+      if (!enabledLots.includes(lot.id)) {
+        return false
+      }
+    }
+
+    // Check if lot is supported
+    const isSupported = checkCondition(
+      lot.requirements,
+      packageId,
+      variantInfo,
+      profileInfo,
+      profileOptions,
+      features,
+    )
+
+    if (!isSupported) {
+      return false
+    }
+  }
+
+  return checkCondition(
+    file.condition,
+    packageId,
+    variantInfo,
+    profileInfo,
+    profileOptions,
+    features,
+  )
+}
 
 export function checkCondition(
-  condition?: ReadonlyDeep<Requirements>,
+  condition?: Requirements,
   packageId?: string,
-  variantInfo?: ReadonlyDeep<VariantInfo>,
-  profileInfo?: ReadonlyDeep<ProfileInfo>,
-  profileOptions?: ReadonlyDeep<OptionInfo[]>,
-  features?: ReadonlyDeep<Partial<Record<Feature, string[]>>>,
+  variantInfo?: VariantInfo,
+  profileInfo?: ProfileInfo,
+  profileOptions?: OptionInfo[],
+  features?: Partial<Record<Feature, string[]>>,
 ): boolean {
   if (!condition) {
     return true
@@ -38,71 +93,40 @@ export function checkCondition(
       return true
     }
 
-    // Never include lots unless explicitly enabled
-    if (requirement === "lots" && !packageConfig?.enabled) {
-      return false
-    }
-
     const packageOption = variantInfo?.options?.find(option => option.id === requirement)
     if (packageOption && !packageOption.global) {
       const value = getOptionValue(packageOption, packageOptionValues)
-      return isArray(value) ? value.includes(requiredValue) : value === requiredValue
+      if (isArray(value) ? value.includes(requiredValue) : value === requiredValue) {
+        const choice = packageOption.choices?.find(choice => choice.value === requiredValue)
+        return checkCondition(
+          choice?.condition,
+          packageId,
+          variantInfo,
+          profileInfo,
+          profileOptions,
+          features,
+        )
+      }
     }
 
     const profileOption = profileOptions?.find(option => option.id === requirement)
     if (profileOption) {
       const value = getOptionValue(profileOption, profileOptionValues)
-      return isArray(value) ? value.includes(requiredValue) : value === requiredValue
+      if (isArray(value) ? value.includes(requiredValue) : value === requiredValue) {
+        const choice = profileOption.choices?.find(choice => choice.value === requiredValue)
+        return checkCondition(
+          choice?.condition,
+          undefined,
+          undefined,
+          profileInfo,
+          profileOptions,
+          features,
+        )
+      }
     }
 
     return requiredValue === !!features?.[requirement as Feature]?.length
   })
-}
-
-export function getOptionDefaultValue(
-  option: ReadonlyDeep<OptionInfo>,
-): OptionValue | ReadonlyArray<OptionValue> {
-  if (option.default !== undefined) {
-    if (option.multi && "choices" in option && option.default === "all") {
-      return option.choices!.map(choice => (typeof choice === "object" ? choice.value : choice))
-    }
-
-    return option.default
-  }
-
-  if (option.multi) {
-    return []
-  }
-
-  switch (option.type) {
-    case OptionType.BOOLEAN:
-      return false
-
-    case OptionType.NUMBER: {
-      const firstChoice = option.choices?.at(0)
-      if (firstChoice !== undefined) {
-        return isNumber(firstChoice) ? firstChoice : firstChoice.value
-      }
-
-      return option.min ?? 0
-    }
-
-    case OptionType.STRING: {
-      const firstChoice = option.choices.at(0)
-      if (firstChoice !== undefined) {
-        return isString(firstChoice) ? firstChoice : firstChoice.value
-      }
-
-      return "default"
-    }
-  }
-}
-
-export function getOptionValue(
-  option: ReadonlyDeep<OptionInfo>,
-  options?: ReadonlyDeep<Options>,
-): OptionValue | ReadonlyArray<OptionValue> {
-  return options?.[option.id] ?? getOptionDefaultValue(option)
 }
 
 export function getPackageStatus(

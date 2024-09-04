@@ -35,7 +35,7 @@ export const PackageListItem = memo(function PackageListItem({
 
   return (
     <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
-      <CardContent sx={{ flexGrow: 1 }}>
+      <CardContent sx={{ flexGrow: 1, overflow: "hidden" /* TODO: Overflowing tags */ }}>
         {!!variantInfo.images?.length && (
           <PackageImages
             images={variantInfo.images}

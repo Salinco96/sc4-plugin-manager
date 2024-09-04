@@ -5634,6 +5634,339 @@ assets:
     name: Yellow Cabs
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-67ec667131c6f05f8c1f44a303d6dbea-taxis%20a.JPG
     url: https://community.simtropolis.com/files/file/3624-yellow-cabs/
+  simtropolis/36402-bsc-vip-girafe-train-corail-hd-and-bb26000:
+    authors:
+      - Girafe
+    category: automata
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - sc4evermore/18-bsc-cleanitol
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+      							
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	This is a set of HD automatas for the passenger train.<br>
+      	<br>
+      	It includes:
+      </p>
+
+
+      <ul style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<li>
+      		5 passenger train engines, 1 replacement of the regular passenger engine (BB26000 orange) and 4 additional skins (BB 26000 en voyage, BB26000 grandest, BB26000 carmillon, BB26000 grey).
+      	</li>
+      	<li>
+      		3 passenger wagons, replacement and additional skins (1st class, 2nd class and 2nd class tagged)
+      	</li>
+      </ul>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	All the engines and wagons are available as props only in Darknite version.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<br>
+      	Special thanks to <strong>Anachron for the 3d models of the engine BB26000, VIP and <abbr title="BATT Squad Certification">BSC</abbr> members</strong>.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<strong>Thanks to Tibi for maintaining these files over the years. </strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	 
+      </p>
+
+
+      <h3 style="background-color:#ffffff;color:#22262a;">
+      	MOD Details and information
+      </h3>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<strong>Automata replacement and additional skins for passenger train engine and wagons.</strong><br>
+      	<br>
+      	The skins appear randomly for the automatas.<br>
+      	Nightlights are included.<br>
+      	Automata can be driven in free mod in automata panel.<br>
+      	<br>
+      	These engines and wagons are available in Lot Editor props section under the name:
+      </p>
+
+
+      <ul style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<li>
+      		Grfe_BB26000_...
+      	</li>
+      	<li>
+      		Grfe_Corail_...
+      	</li>
+      </ul>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<span lang="en-us" xml:lang="en-us">The <abbr title="Lot Editor">LE</abbr> props of this pack have been datpacked into two files: <strong>Grfe_Props_Pack_LE_Train BB26000.dat</strong> and <strong>Grfe_Props_Pack_LE_Train Corail.dat</strong>.<br>
+      	Please use the provided <em>Cleanitol_BSC-VIP Girafe Train Corail HD+BB26000.txt</em> </span><span lang="en-us" xml:lang="en-us">to remove the single sc4model+sc4desc file combos by one of the 3rd party cleanitol tools:</span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="">Nos.17 SC4 Cleanitol</a> (new tool)
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol</a> (old tool)
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<br>
+      	<span style="color:#e03e2d;">Note: The automata models are high poly which could affect negatively the performance of your game.</span>
+      </p>
+
+
+      <h3 style="background-color:#ffffff;color:#22262a;">
+      	Installation
+      </h3>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<b><span lang="en-us" xml:lang="en-us">Installation:</span></b><span lang="en-us" xml:lang="en-us"> copy/extract the <strong><abbr title="BATT Squad Certification">BSC</abbr></strong><span> </span>parent folder into your plugins. If you extracted the<span> </span><em>~Documents</em><span> </span>folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<b><span lang="en-us" xml:lang="en-us">Un-Installing: </span></b><span lang="en-us" xml:lang="en-us">To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</span>
+      </p>
+
+
+      <h3 style="background-color:#ffffff;color:#22262a;">
+      	<span lang="en-us" xml:lang="en-us">Dependencies</span>
+      </h3>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<span lang="en-us" xml:lang="en-us"><a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">SimFox Day and Nite Modd</a></span>
+      </p>
+
+      						</body>
+    filename: BSC-VIP Girafe Train Corail HD and BB26000.zip
+    files:
+      - BSC/girafe/Grfe_Automatas/Train BB26000/Grfe_BB26000_carmillon add.dat
+      - BSC/girafe/Grfe_Automatas/Train BB26000/Grfe_BB26000_en voyage add.dat
+      - BSC/girafe/Grfe_Automatas/Train BB26000/Grfe_BB26000_grandest add.dat
+      - BSC/girafe/Grfe_Automatas/Train BB26000/Grfe_BB26000_grey add.dat
+      - BSC/girafe/Grfe_Automatas/Train BB26000/Grfe_BB26000_orange rep.dat
+      - BSC/girafe/Grfe_Automatas/Train Corail HD/Grfe_Corail_1st_class.dat
+      - BSC/girafe/Grfe_Automatas/Train Corail HD/Grfe_Corail_2nd_class.dat
+      - BSC/girafe/Grfe_Automatas/Train Corail HD/Grfe_Corail_2nd_class_tagged.dat
+      - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Icon_Train_Corail HD + BB26000_1.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Icon_Train_Corail HD + BB26000_2.jpg
+      - BSC/BSCProps/Grfe_Props/Grfe_Props_Pack_LE_Train BB26000.dat
+      - BSC/BSCProps/Grfe_Props/Grfe_Props_Pack_LE_Train Corail.dat
+      - ~Documents/BSC_Readmes/girafe/readme_train_Corail_HD + BB26000.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC-VIP Girafe Train Corail HD+BB2600_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC-VIP Girafe Train Corail HD+BB26000.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c50a3c333e2_Icon_Train_CorailHDBB26000_1.jpg.a3cc5f400ab406d4ca190f66b398bad2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66c50a431514a_Icon_Train_CorailHDBB26000_2.jpg.2fa0d570798fd3d7615d0e477a3e7114.jpg
+    lastModified: 2024-08-20T21:32:16Z
+    name: BSC-VIP Girafe Train Corail HD and BB26000
+    sha256: 1e265af12c4570329bb92a31fb860a0a93d1d5417e37913f24f63cb008a5ea6c
+    size: 3936874
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/66c50b6066fb1_Icon_Train_CorailHDBB26000_2.thumb.jpg.dfd1fe55c8793a55418cd520f0c0943f.jpg
+    timestamp: 2024-08-21T10:51:21.894Z
+    uncompressed: 4655318
+    url: https://community.simtropolis.com/files/file/36402-bsc-vip-girafe-train-corail-hd-and-bb26000/
+    version: 1.0.0
+  simtropolis/36411-bsc-vip-girafe-train-tgv-duplex:
+    authors:
+      - Girafe
+    category: automata
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - sc4evermore/18-bsc-cleanitol
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	This is a set of HD automatas replacing the freight train.<br>
+      	<br>
+      	Note: reverse engine modding is only possible with freigth train replacement.<br>
+      	<br>
+      	It includes:
+      </p>
+
+
+      <ul style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<li>
+      		22 TGV train wagons with 3 different skins (1st class, 2nd class and restaurant) replacing all freight train wagons.
+      	</li>
+      	<li>
+      		2 TGV engines replacing the freight train engine and the freight steam engine.
+      	</li>
+      	<li>
+      		1 TGV reverse engine replacing the caboose.
+      	</li>
+      </ul>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	Special thanks to<strong> VIP and <abbr title="BATT Squad Certification">BSC</abbr> members</strong>.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	Thanks to <strong>Tibi</strong> for maintaining this file over the years. 
+      </p>
+
+
+      <h3 style="background-color:#ffffff;color:#22262a;">
+      	MOD Details and information
+      </h3>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<strong>Automata replacing skins for the freight train.</strong><br>
+      	<br>
+      	<span style="color:#ba372a;"><strong>Remove any previous skins affecting the freight train engine, steam engine and wagons for this mod to appear properly.</strong></span><br>
+      	<br>
+      	The skins appear randomly for the automatas.<br>
+      	Nightlights are included.<br>
+      	Automata can be driven in free mod in automata panel.<br>
+      	<br>
+      	All the wagons and engines are available as props (Darknite versions only) under the name:<br>
+      	<br>
+      	Grfe_TGV_...<br>
+      	<br>
+      	<span lang="en-us" xml:lang="en-us">The props of this pack have been datpacked into one file: <strong>Grfe_Props_Pack_LE_Train TGV Duplex.dat</strong>.<br>
+      	Please use the provided <em>Cleanitol_BSC-VIP Girafe Train TGV Duplex.txt</em> </span><span lang="en-us" xml:lang="en-us">to remove the single sc4model+sc4desc file combos by one of the 3rd party cleanitol tools:</span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="">Nos.17 SC4 Cleanitol</a> (new tool)
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol</a> (old tool)
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<span style="color:#e03e2d;">Note: The automata models are high poly which could affect negatively the performance of your game.</span>
+      </p>
+
+
+      <h3 style="background-color:#ffffff;color:#22262a;">
+      	INSTALLATION
+      </h3>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<b><span lang="en-us" xml:lang="en-us">Installation:</span></b><span lang="en-us" xml:lang="en-us"> copy/extract the <strong><abbr title="BATT Squad Certification">BSC</abbr> </strong>parent folder into your plugins. If you extracted the<em><span> </span>~Documents</em><span> </span>folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<b><span lang="en-us" xml:lang="en-us">Un-Installing: </span></b><span lang="en-us" xml:lang="en-us">To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</span>
+      </p>
+
+
+      <h3 style="background-color:#ffffff;color:#22262a;">
+      	<span lang="en-us" xml:lang="en-us">Dependencies</span>
+      </h3>
+
+
+      <p style="background-color:#ffffff;color:#22262a;font-size:16px;">
+      	<span lang="en-us" xml:lang="en-us"><a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">SimFox Day and Nite Modd</a></span>
+      </p>
+
+      						</body>
+    filename: BSC-VIP Girafe Train TGV Duplex_3997.zip
+    files:
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_TGV_Duplex_engine.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_TGV_Duplex_reverse_engine.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_TGV_Duplex_steam_engine.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_1 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_10 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_11 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_12 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_13 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_14 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_15 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_16 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_17 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_18 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_19 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_2 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_20 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_21 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_22 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_3 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_4 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_5 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_6 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_7 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_8 B.dat
+      - BSC/girafe/Grfe_Automatas/Train TGV Duplex/Grfe_wagon_9 B.dat
+      - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Icon_TGV_Duplex_1.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Icon_TGV_Duplex_2.jpg
+      - BSC/BSCProps/Grfe_Props/Grfe_Props_Pack_LE_Train TGV Duplex.dat
+      - ~Documents/BSC_Readmes/girafe/readme_TGV Duplex.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC-VIP Girafe Train TGV Duplex_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC-VIP Girafe Train TGV Duplex.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/Icon_TGV_Duplex_1.jpg.0713e4fbd3002a9f29927db12f3d26e1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/Icon_TGV_Duplex_2.jpg.17f7b5c9fa8a903f7abaedec7fb664e9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/66cb05ed6923d_TGVDuplex.jpg.1205c687c393d074b89c9a89c5c76268.jpg
+    lastModified: 2024-08-25T14:04:05Z
+    name: BSC-VIP Girafe Train TGV Duplex
+    sha256: a089f4fa3ed57861b4f8b645c956bc559bb70cfcdd6de7b4b759014c4f7748e8
+    size: 16324376
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/Icon_TGV_Duplex_1.thumb.jpg.bfe5dce79f37046048b42e8251a574ef.jpg
+    timestamp: 2024-08-27T09:21:20.239Z
+    uncompressed: 18978196
+    url: https://community.simtropolis.com/files/file/36411-bsc-vip-girafe-train-tgv-duplex/
+    version: 1.0.0
   simtropolis/3679-driveable-checker-taxis:
     authors:
       - mikeseith
@@ -5891,4 +6224,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-3df582124a36b37eaad9173cb060180b-Capital%20City-May.%2014,%20001058459981.JPG
     url: https://community.simtropolis.com/files/file/569-the-cow/
 
-timestamp: 2024-08-20T10:45:45.232Z
+timestamp: 2024-08-28T07:56:44.780Z
