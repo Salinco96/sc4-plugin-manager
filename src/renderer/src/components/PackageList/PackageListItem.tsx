@@ -2,6 +2,7 @@ import { memo, useCallback, useState } from "react"
 
 import { Card, CardActions, CardContent, Link } from "@mui/material"
 
+import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
 import { PackageBanners } from "@components/PackageBanners"
@@ -17,7 +18,7 @@ import { VirtualListItemProps } from "./VirtualList"
 
 export const PackageListItem = memo(function PackageListItem({
   item: packageId,
-}: VirtualListItemProps<string>): JSX.Element | null {
+}: VirtualListItemProps<PackageID>): JSX.Element | null {
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
   const history = useHistory()
@@ -105,7 +106,10 @@ export const PackageListItem = memo(function PackageListItem({
         <PackageBanners packageId={packageId} />
       </CardContent>
       <CardActions sx={{ padding: 2 }}>
-        <PackageActions packageId={packageId} />
+        <PackageActions
+          filtered={history.current.page !== Page.PackageView}
+          packageId={packageId}
+        />
       </CardActions>
     </Card>
   )

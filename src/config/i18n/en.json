@@ -90,12 +90,6 @@
     "ignore": "Ignore conflicts",
     "title": "$t(General:app)"
   },
-  "DisableWarningModal": {
-    "confirmation": "Disable package?",
-    "message": {
-      "bulldoze": "Before disabling {{packageName}}, you must bulldoze all corresponding lots from all relevant regions."
-    }
-  },
   "DownloadAssetsModal": {
     "confirmation": "Download new packages?",
     "descriptionAssets_one": "{{count}} asset{{totalSize, bytes, paren}} will be downloaded.",
@@ -110,11 +104,10 @@
     "confirmation": "Enable optional dependencies?",
     "description": "{{packageName}} specifies the following optional dependencies:\n{{dependencies, join(multiline: true)}}\n\nDo you want to enable them?"
   },
-  "EnableWarningModal": {
-    "confirmation": "Enable package?"
-  },
   "General": {
     "4gbpatch": "4GB Patch",
+    "andOthers_one": "{{label}} and {{count}} other",
+    "andOthers_other": "{{label}} and {{count}} others",
     "app": "SC4 Plugin Manager",
     "back": "Go back",
     "cam": "Colossus Addon Mod",
@@ -347,6 +340,7 @@
     "enabled": "Enabled",
     "error": "Error",
     "experimental": "Experimental",
+    "included": "Included",
     "incompatible": "Incompatible",
     "installed": "Installed",
     "local": "Local",
@@ -355,6 +349,7 @@
   },
   "PackageTag": {
     "actions": {
+      "expandAuthors": "View all authors",
       "select": "Add filter",
       "unselect": "Remove filter"
     },
@@ -389,11 +384,16 @@
     "requirements": "Requirements",
     "size": "Size",
     "stage": "Growth stage",
-    "tgi": "TGI",
     "water": "Water consumption",
     "waterPollution": "Water pollution",
     "waterProduction": "Water production",
     "yimby": "YIMBY"
+  },
+  "PackageViewMMPs": {
+    "category": "Category",
+    "excludeMMP": "Exclude MMP",
+    "includeMMP": "Include MMP",
+    "requirements": "Requirements"
   },
   "PackageViewSummary": {
     "authors": "Authors",
@@ -410,6 +410,8 @@
     "files_other": "{{count}} files",
     "lots_one": "{{count}} lot",
     "lots_other": "{{count}} lots",
+    "mmps_one": "{{count}} MMP",
+    "mmps_other": "{{count}} MMPs",
     "options": "Options",
     "optionalDependencies_one": "{{count}} optional dependency",
     "optionalDependencies_other": "{{count}} optional dependencies",
@@ -489,6 +491,14 @@
     "extracting": "Extracting {{key}}{{progress, percent, paren}}..."
   },
   "Warning": {
-    "bulldoze": "Before disabling {{packageName}}, you must bulldoze all corresponding lots from all relevant regions."
+    "bulldoze": "Before disabling the following packages, you must bulldoze all corresponding lots from all relevant regions:\n{{packageNames, join(multiline: true)}}"
+  },
+  "WarningModal": {
+    "confirmation": {
+      "disable": "Disable package?",
+      "enable": "Enable package?"
+    },
+    "title_other": "{{packageName}} and {{count}} others",
+    "title_zero": "{{packageName}}"
   }
 }

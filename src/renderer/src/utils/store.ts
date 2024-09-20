@@ -2,25 +2,29 @@ import update, { Spec } from "immutability-helper"
 import { SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
 import { create } from "zustand"
 
-import { Categories, CategoryID } from "@common/categories"
+import { AuthorID, Authors } from "@common/authors"
+import { CategoryID } from "@common/categories"
 import { ModalData, ModalID } from "@common/modals"
-import { OptionInfo, OptionValue } from "@common/options"
-import { ProfileUpdate } from "@common/profiles"
-import { ApplicationState, ApplicationStatus } from "@common/state"
-import { Feature, PackageInfo, PackageState, ProfileInfo, Settings } from "@common/types"
-import { compact } from "@common/utils/objects"
+import { OptionID, OptionInfo, OptionValue } from "@common/options"
+import { PackageID } from "@common/packages"
+import { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
+import { Settings } from "@common/settings"
+import { ApplicationState, ApplicationStateUpdate, getInitialState } from "@common/state"
+import { Features, PackageInfo, PackageState } from "@common/types"
+import { compact, keys } from "@common/utils/objects"
+import { VariantID } from "@common/variants"
 
 import { computePackageList, getPackageListItemSize } from "./packages"
 import { SnackbarProps, SnackbarType } from "./snackbar"
 
 export interface PackageUi {
   itemSize: number
-  variantId: string
-  variantIds: string[]
+  variantId: VariantID
+  variantIds: VariantID[]
 }
 
 export interface PackageFilters {
-  authors: string[]
+  authors: AuthorID[]
   categories: CategoryID[]
   dependencies: boolean
   experimental: boolean
@@ -34,74 +38,61 @@ export interface PackageFilters {
 }
 
 export interface StoreActions {
-  addPackage(packageId: string, variantId: string, data?: ProfileUpdate): Promise<boolean>
+  addPackage(packageId: PackageID, variantId: VariantID, data?: ProfileUpdate): Promise<boolean>
   check4GBPatch(): Promise<void>
-  cleanVariant(packageId: string, variantId: string): Promise<void>
+  cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   closeSnackbar(type: SnackbarType): void
-  createProfile(name: string, templateProfileId?: string): Promise<boolean>
-  disablePackage(packageId: string): Promise<boolean>
-  enablePackage(packageId: string): Promise<boolean>
-  getPackageReadme(packageId: string, variantId: string): Promise<{ html?: string; md?: string }>
-  installPackage(packageId: string, variantId: string): Promise<boolean>
+  createProfile(name: string, templateProfileId?: ProfileID): Promise<boolean>
+  disablePackage(packageId: PackageID): Promise<boolean>
+  enablePackage(packageId: PackageID): Promise<boolean>
+  getPackageReadme(
+    packageId: PackageID,
+    variantId: VariantID,
+  ): Promise<{ html?: string; md?: string }>
+  installPackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
   openExecutableDirectory(): Promise<boolean>
   openInstallationDirectory(): Promise<boolean>
-  openPackageConfig(packageId: string): Promise<boolean>
-  openPackageFile(packageId: string, variantId: string, filePath: string): Promise<boolean>
-  openProfileConfig(profileId: string): Promise<boolean>
+  openPackageConfig(packageId: PackageID): Promise<boolean>
+  openPackageFile(packageId: PackageID, variantId: VariantID, filePath: string): Promise<boolean>
+  openProfileConfig(profileId: ProfileID): Promise<boolean>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
-  openVariantRepository(packageId: string, variantId: string): Promise<boolean>
-  openVariantURL(packageId: string, variantId: string): Promise<boolean>
-  removePackage(packageId: string, variantId: string): Promise<boolean>
+  openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  openVariantURL(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  removePackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
   resetState(): void
-  setPackageOption(packageId: string, optionId: string, optionValue: OptionValue): Promise<boolean>
-  setPackageVariant(packageId: string, variantId: string): Promise<boolean>
+  setPackageOption(
+    packageId: PackageID,
+    optionId: OptionID,
+    optionValue: OptionValue,
+  ): Promise<boolean>
+  setPackageVariant(packageId: PackageID, variantId: VariantID): Promise<boolean>
   setPackageFilters(filters: Partial<PackageFilters>): void
-  setProfileOption(optionId: string, optionValue: OptionValue): Promise<boolean>
+  setProfileOption(optionId: OptionID, optionValue: OptionValue): Promise<boolean>
   showErrorToast(message: string): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
   showSuccessToast(message: string): void
   simtropolisLogin(): Promise<void>
   simtropolisLogout(): Promise<void>
-  switchProfile(profileId: string): Promise<boolean>
-  updatePackage(packageId: string, variantId: string): Promise<boolean>
-  updateProfile(profileId: string, data: ProfileUpdate): Promise<boolean>
-  updateState(update: Partial<ApplicationState>): void
+  switchProfile(profileId: ProfileID): Promise<boolean>
+  updatePackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean>
+  updateState(update: ApplicationStateUpdate): void
 }
 
-export interface Store {
+export interface Store extends ApplicationState {
   actions: StoreActions
-  authors: string[]
-  categories: Categories
-  features: Partial<Record<Feature, string[]>>
-  globalOptions?: OptionInfo[]
   modal?: {
     action: (result: boolean) => void
     data: ModalData<ModalID>
     id: ModalID
   }
   packageFilters: PackageFilters
-  filteredPackages: string[]
+  filteredPackages: PackageID[]
   packageUi: {
-    [packageId: string]: PackageUi
+    [packageId in PackageID]?: PackageUi
   }
-  packages?: {
-    [packageId: string]: PackageInfo
-  }
-  profiles?: {
-    [profileId: string]: ProfileInfo
-  }
-  sessions: {
-    simtropolis: {
-      userId?: string | null
-    }
-  }
-  settings?: Settings
   snackbars: {
     [type in SnackbarType]?: SnackbarKey
-  }
-  status: ApplicationStatus
-  templates?: {
-    [profileId: string]: ProfileInfo
   }
 }
 
@@ -111,19 +102,21 @@ export const useStore = create<Store>()((set, get): Store => {
   }
 
   return {
+    ...getInitialState(),
     actions: {
       async addPackage(packageId, variantId, data) {
-        const profileId = get().settings?.currentProfile
-        if (!profileId) {
+        const store = get()
+        const profileInfo = getCurrentProfile(store)
+        if (!profileInfo) {
           return false
         }
 
         try {
-          return await window.api.updateProfile(profileId, {
+          return await window.api.updateProfile(profileInfo.id, {
             ...data,
             packages: {
-              ...data?.packages,
               [packageId]: { enabled: true, variant: variantId },
+              ...data?.packages,
             },
           })
         } catch (error) {
@@ -150,13 +143,14 @@ export const useStore = create<Store>()((set, get): Store => {
         return window.api.createProfile(name, templateProfileId)
       },
       async disablePackage(packageId) {
-        const profileId = get().settings?.currentProfile
-        if (!profileId) {
+        const store = get()
+        const profileInfo = getCurrentProfile(store)
+        if (!profileInfo) {
           return false
         }
 
         try {
-          return await window.api.updateProfile(profileId, {
+          return await window.api.updateProfile(profileInfo.id, {
             packages: {
               [packageId]: { enabled: false },
             },
@@ -168,13 +162,14 @@ export const useStore = create<Store>()((set, get): Store => {
         }
       },
       async enablePackage(packageId) {
-        const profileId = get().settings?.currentProfile
-        if (!profileId) {
+        const store = get()
+        const profileInfo = getCurrentProfile(store)
+        if (!profileInfo) {
           return false
         }
 
         try {
-          return await window.api.updateProfile(profileId, {
+          return await window.api.updateProfile(profileInfo.id, {
             packages: {
               [packageId]: { enabled: true },
             },
@@ -238,24 +233,9 @@ export const useStore = create<Store>()((set, get): Store => {
 
         updateState({
           $merge: {
-            authors: [],
-            categories: {},
-            features: {},
+            ...getInitialState(),
             filteredPackages: [],
-            globalOptions: undefined,
             packageUi: {},
-            packages: undefined,
-            profiles: undefined,
-            sessions: {
-              simtropolis: {},
-            },
-            settings: undefined,
-            status: {
-              linker: null,
-              loader: null,
-              ongoingDownloads: [],
-              ongoingExtracts: [],
-            },
           },
         })
       },
@@ -357,11 +337,11 @@ export const useStore = create<Store>()((set, get): Store => {
         enqueueSnackbar(message, { variant: "success" })
       },
       async simtropolisLogin(): Promise<void> {
-        updateState({ sessions: { simtropolis: { $set: {} } } })
+        updateState({ simtropolis: { $set: null } })
         return window.api.simtropolisLogin()
       },
       async simtropolisLogout(): Promise<void> {
-        updateState({ sessions: { simtropolis: { $set: {} } } })
+        updateState({ simtropolis: { $set: null } })
         return window.api.simtropolisLogout()
       },
       async switchProfile(profileId) {
@@ -377,7 +357,7 @@ export const useStore = create<Store>()((set, get): Store => {
         }
       },
       async updateProfile(profileId, data) {
-        const profileInfo = get().profiles?.[profileId]
+        const profileInfo = getProfileInfo(get(), profileId)
         if (!profileInfo) {
           return false
         }
@@ -392,6 +372,19 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       updateState(data) {
         try {
+          if (data.status) {
+            updateState({ status: { $set: data.status } })
+            if (keys(data).length === 1) {
+              return
+            }
+          }
+
+          console.debug(data)
+
+          if (data.authors) {
+            updateState({ authors: { $set: data.authors } })
+          }
+
           if (data.categories) {
             updateState({ categories: { $set: data.categories } })
           }
@@ -400,8 +393,8 @@ export const useStore = create<Store>()((set, get): Store => {
             updateState({ features: { $set: data.features } })
           }
 
-          if (data.globalOptions) {
-            updateState({ globalOptions: { $set: data.globalOptions } })
+          if (data.options) {
+            updateState({ options: { $set: data.options } })
           }
 
           if (data.packages) {
@@ -415,29 +408,22 @@ export const useStore = create<Store>()((set, get): Store => {
             updateState({ profiles: profiles => compact({ ...profiles, ...data.profiles }) })
           }
 
-          if (data.sessions) {
-            updateState({ sessions: sessions => compact({ ...sessions, ...data.sessions }) })
-          }
-
           if (data.settings) {
             updateState({ settings: { $set: data.settings } })
           }
 
-          if (data.status) {
-            updateState({ status: { $set: data.status } })
+          if (data.simtropolis) {
+            updateState({ simtropolis: { $set: data.simtropolis } })
           }
 
           if (data.templates) {
-            updateState({ templates: templates => compact({ ...templates, ...data.templates }) })
+            updateState({ templates: { $set: data.templates } })
           }
         } catch (error) {
           console.error(error)
         }
       },
     },
-    authors: [],
-    categories: {},
-    features: {},
     filteredPackages: [],
     packageFilters: {
       authors: [],
@@ -453,45 +439,52 @@ export const useStore = create<Store>()((set, get): Store => {
       states: [],
     },
     packageUi: {},
-    sessions: {
-      simtropolis: {},
-    },
-    status: {
-      linker: null,
-      loader: null,
-      ongoingDownloads: [],
-      ongoingExtracts: [],
-    },
     snackbars: {},
   }
 })
 
-export function getAuthors(store: Store): string[] {
+export function getAuthors(store: Store): Authors {
   return store.authors
 }
 
 export function getCurrentProfile(store: Store): ProfileInfo | undefined {
-  const profileId = store.settings?.currentProfile
-  return profileId ? store.profiles?.[profileId] : undefined
+  const profileId = getSettings(store)?.currentProfile
+  return profileId ? getProfileInfo(store, profileId) : undefined
+}
+
+export function getFeatures(store: Store): Features {
+  return store.features
+}
+
+export function getGlobalOptions(store: Store): OptionInfo[] {
+  return store.options
 }
 
 export function getPackageFilters(store: Store): PackageFilters {
   return store.packageFilters
 }
 
-export function getPackageInfo(store: Store, packageId: string): PackageInfo | undefined {
+export function getPackageInfo(store: Store, packageId: PackageID): PackageInfo | undefined {
   return store.packages?.[packageId]
 }
 
-export function getProfileInfo(store: Store, profileId: string): ProfileInfo | undefined {
+export function getPackageName(store: Store, packageId: PackageID): string {
+  return store.packages?.[packageId]?.name ?? packageId
+}
+
+export function getProfileInfo(store: Store, profileId: ProfileID): ProfileInfo | undefined {
   return store.profiles?.[profileId]
+}
+
+export function getSettings(store: Store): Settings | undefined {
+  return store.settings
 }
 
 export function getStoreActions(store: Store): StoreActions {
   return store.actions
 }
 
-export function useAuthors(): string[] {
+export function useAuthors(): Authors {
   return useStore(getAuthors)
 }
 
@@ -499,8 +492,20 @@ export function useCurrentProfile(): ProfileInfo | undefined {
   return useStore(getCurrentProfile)
 }
 
+export function useFeatures(): Features {
+  return useStore(getFeatures)
+}
+
+export function useGlobalOptions(): OptionInfo[] {
+  return useStore(getGlobalOptions)
+}
+
 export function usePackageFilters(): PackageFilters {
   return useStore(getPackageFilters)
+}
+
+export function useSettings(): Settings | undefined {
+  return useStore(getSettings)
 }
 
 export function useStoreActions(): StoreActions {

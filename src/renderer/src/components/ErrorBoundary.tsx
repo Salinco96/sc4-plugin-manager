@@ -1,7 +1,23 @@
-import { Component, ErrorInfo, ReactNode } from "react"
+import { Component, ComponentType, ErrorInfo, ReactNode } from "react"
 
-export class ErrorBoundary extends Component<{ children: ReactNode }, { error?: Error }> {
-  constructor(props: { children: ReactNode }) {
+export type ErrorComponentProps = {
+  clearError: () => void
+  error: Error
+}
+
+export type ErrorComponent = ComponentType<ErrorComponentProps>
+
+export type ErrorBoundaryProps = {
+  children: ReactNode
+  ErrorComponent?: ErrorComponent
+}
+
+function DefaultErrorComponent({ error }: ErrorComponentProps) {
+  return <>{error.message}</>
+}
+
+export class ErrorBoundary extends Component<ErrorBoundaryProps, { error?: Error }> {
+  constructor(props: ErrorBoundaryProps) {
     super(props)
     this.state = {}
   }
@@ -15,8 +31,15 @@ export class ErrorBoundary extends Component<{ children: ReactNode }, { error?: 
   }
 
   override render() {
+    const { ErrorComponent = DefaultErrorComponent } = this.props
+
     if (this.state.error) {
-      return <div>{this.state.error.message}</div>
+      const props: ErrorComponentProps = {
+        clearError: () => this.setState({ error: undefined }),
+        error: this.state.error,
+      }
+
+      return <ErrorComponent {...props} />
     }
 
     return this.props.children

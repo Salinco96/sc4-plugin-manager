@@ -22,8 +22,8 @@ import {
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { createUniqueProfileId } from "@common/profiles"
-import { ProfileInfo } from "@common/types"
+import { ProfileID, createUniqueProfileId } from "@common/profiles"
+import { keys, values } from "@common/utils/objects"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 export interface CreateProfileModalProps {
@@ -40,20 +40,19 @@ export interface CreateProfileFormProps {
 export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Element {
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
-  const profiles = useStore(store => store.profiles) || {}
-  const templateProfiles = useStore(store => store.templates) || {}
-  const profileIds = Object.keys(profiles)
+  const profiles = useStore(store => store.profiles) ?? {}
+  const templates = useStore(store => store.templates) ?? {}
+
+  const profileIds = keys(profiles)
   const hasProfiles = profileIds.length !== 0
 
   const { t } = useTranslation("CreateProfileModal")
 
   const [name, setName] = useState<string>()
-  const [templateId, setTemplateId] = useState(
-    currentProfile?.id ?? Object.values(templateProfiles)[0].id,
-  )
+  const [templateId, setTemplateId] = useState(currentProfile?.id ?? keys(templates)[0])
 
-  const sourceProfile = profiles[templateId] as ProfileInfo | undefined
-  const sourceTemplate = templateProfiles[templateId] as ProfileInfo | undefined
+  const sourceProfile = profiles[templateId]
+  const sourceTemplate = templates[templateId]
   const defaultName = sourceProfile ? `${sourceProfile.name} (Copy)` : hasProfiles ? "" : "Default"
 
   const nameValue = name ?? defaultName
@@ -120,7 +119,7 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             labelId="template-label"
             MenuProps={{ sx: { maxHeight: 320 } }}
             name="template"
-            onChange={event => setTemplateId(event.target.value)}
+            onChange={event => setTemplateId(event.target.value as ProfileID)}
             required
             value={templateId}
             variant="standard"
@@ -128,16 +127,16 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             <MenuItem value={emptyValue}>{t("from.emptyValue")}</MenuItem>
             <Divider />
             <ListSubheader>{t("from.template")}</ListSubheader>
-            {Object.values(templateProfiles).map(template => (
+            {values(templates).map(template => (
               <MenuItem key={template.id} value={template.id}>
                 {template.name}
               </MenuItem>
             ))}
             {hasProfiles && <Divider />}
             {hasProfiles && <ListSubheader>{t("from.profile")}</ListSubheader>}
-            {profileIds.map(profileId => (
-              <MenuItem key={profileId} value={profileId}>
-                {profiles[profileId].name}
+            {values(profiles).map(profile => (
+              <MenuItem key={profile.id} value={profile.id}>
+                {profile.name}
               </MenuItem>
             ))}
           </Select>

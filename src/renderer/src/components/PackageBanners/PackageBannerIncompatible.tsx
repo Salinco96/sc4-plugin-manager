@@ -3,8 +3,10 @@ import { useMemo } from "react"
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 import { useTranslation } from "react-i18next"
 
+import { PackageID } from "@common/packages"
 import { Issue, VariantIssue } from "@common/types"
-import { getPackageInfo, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
+import { VariantID } from "@common/variants"
+import { getPackageName, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { PackageBanner } from "./PackageBanner"
 
@@ -14,13 +16,13 @@ export function PackageBannerIncompatible({
   variantId,
 }: {
   issue: VariantIssue
-  packageId: string
-  variantId: string
+  packageId: PackageID
+  variantId: VariantID
 }): JSX.Element {
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
 
-  const packageNames = useStore(store => issue.packages?.map(id => getPackageInfo(store, id)?.name))
+  const packageNames = useStore(store => issue.packages?.map(id => getPackageName(store, id)))
 
   const { t } = useTranslation("PackageBanner")
 

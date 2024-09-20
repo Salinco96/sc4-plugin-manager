@@ -115,10 +115,52 @@ assets:
     authors:
       - ardecila
     category: utilities
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+      							
+      <p><font size="2"><span style="font-family:verdana, arial, helvetica, sans-serif;">In1871, the Water Tower and its adjoining Water Works were the onlystructures to survive the Great Chicago
+      Fire.  Today, the areaaround the Water Tower is a major center of upscale shopping and livingknown as the "Magnificent Mile".</span><br style="font-family:verdana, arial, helvetica, sans-serif;"
+      ><br style="font-family:verdana, arial, helvetica, sans-serif;" ><span style="font-family:verdana, arial, helvetica, sans-serif;">Thisworks as a "vanilla" landmark, so no jobs or
+      transit-enablinghere.  What it will do is boost your desirability and mayorrating.  Hugely.</span><br style="font-family:verdana, arial, helvetica, sans-serif;" ><br style="font-family:verdana,
+      arial, helvetica, sans-serif;" ><span style="text-decoration:underline;font-family:verdana, arial, helvetica, sans-serif;">Stats</span></font></p>
+
+      <p><span style="font-family:verdana, arial, helvetica, sans-serif;">Type: Landmark</span></p>
+
+      <p>Size: 6x3</p>
+
+      <p>TE Plop: No</p>
+
+      <p>Landmark Effect: 65 over 45 tiles</p>
+
+      <p>Mayor Effect: 20 over 45 tiles</p>
+
+      <p>Dependencies: <abbr title="Pegasus">PEG</abbr> Subterranean Mall (christmas-enabled version)</p>
+
+      <p><span style="text-decoration:underline;font-family:verdana, arial, helvetica, sans-serif;"></span></p>
+
+      						</body>
+    filename: PDA_WaterTower.zip
+    files:
+      - PDA_6x3_ChicagoWaterTower_eee01f64.SC4Lot
+      - PDA_ChiWaterTower-0x6534284a-0xaede3bdc-0x8ee01c5f.SC4Desc
+      - PDA_ChiWaterTower.SC4Model
+      - PDA_WaterTower1.png
+      - PDA_WaterTower2.png
+    images:
+      - https://www.simtropolis.com/objects/screens/0005/26604450712594f3f6b741d4c8dfb4a5-PDA_WaterTower1.jpg
+      - https://www.simtropolis.com/objects/screens/0005/26604450712594f3f6b741d4c8dfb4a5-PDA_WaterTower2.jpg
     lastModified: 2004-12-30T14:42:55Z
     name: PDA Chicago Water Tower
+    sha256: 4ceccfc7ee11a2bbc22e10c928e6825db66b9e5a471275a4d5b2e8e84aa09a47
+    size: 720431
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2004/thumb-26604450712594f3f6b741d4c8dfb4a5-PDA_WaterTower1.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 764632
     url: https://community.simtropolis.com/files/file/11329-pda-chicago-water-tower/
+    version: "1.0"
   simtropolis/11393-hydrogen-powerplant-6x6:
     authors:
       - vinlabsc3k
@@ -603,10 +645,50 @@ assets:
     authors:
       - SimGoober
     category: utilities
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      							<table cellspacing="0" cellpadding="4" width="450" align="center" bgcolor="#ffffff" border="0"><tbody><tr><td colspan="2"><div align="justify"><p><span><span></span></span><font size="1">Mayor, the high wealth residents of your city have asked for a little nicer water tower, something to make them feel good about the prosperity of the city. This model is based off a real world one of this name, near Minneapolis, Minnesota.</font></p></div></td></tr><tr><td colspan="2"><table cellspacing="0" cellpadding="0" width="100%" border="0"><tbody><tr><td bgcolor="#4b4d91" height="20"><span><strong><font face="Arial" color="#ffffff" size="1"> Lot Details and Information</font></strong></span></td></tr></tbody></table></td></tr><tr><td colspan="2">
+      <p><strong><font size="1">Building: Utility (has reward requirements)</font></strong></p>
+
+      <table cellspacing="0" cellpadding="2" width="450" border="0"><tbody><tr bgcolor="#e9ebf0"><td width="150"><font size="1">Lot size:</font></td>
+
+      <td width="450"><font size="1">2 x 3 tiles</font></td>
+
+      </tr><tr><td><font size="1">Lot Wealth :</font></td>
+
+      <td><font size="1">Medium Wealth</font></td>
+
+      </tr><tr bgcolor="#e9ebf0"><td><font size="1">Water Produced: </font></td>
+
+      <td><font size="1">20,000 Gallons</font></td>
+
+      </tr><tr><td><font size="1">Plop cost :</font></td>
+
+      <td><font size="1"></font></td>
+
+      </tr></tbody></table></td></tr></tbody></table>
+      						</body>
+    filename: SG_Install_Washburn.zip
+    files:
+      - SG_2x2_WashburnWaterTower_906c22db.SC4Lot
+      - SG_Readme_WashburnWaterTower.htm
+      - SG_WashburnWaterTower.DAT
+      - SG_WashburnWaterTower_Day.jpg
+      - SG_WashburnWaterTower_Nite.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/0020/b7486e04c7b03b8e466ce8ddd82b5bef-SG_WashburnWaterTower_Day.jpg
+      - https://www.simtropolis.com/objects/screens/0020/b7486e04c7b03b8e466ce8ddd82b5bef-SG_WashburnWaterTower_Nite.jpg
     lastModified: 2006-01-17T16:45:46Z
     name: Washburn Water Tower
+    sha256: 1aa1152fdf26384cc0e6f14f8b1a2408638f8df3f9b44f037e32729bf603d7bb
+    size: 598735
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2006/thumb-b7486e04c7b03b8e466ce8ddd82b5bef-SG_WashburnWaterTower_Day.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 641819
     url: https://community.simtropolis.com/files/file/14716-washburn-water-tower/
+    version: "1.0"
   simtropolis/14929-lightning-power-plant-version2:
     authors:
       - Jah0822
@@ -1884,10 +1966,65 @@ assets:
     authors:
       - mrbisonm
     category: utilities
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>Left behind and forgotten by an ancient unknown civilization on our Simplanet way before today's Simkind arrived, Sims finally figured out how to make this power generating machine function
+      and make good use it. Inspired by the Ice Planet Basecamp-Generator from Star Wars' Empire Strikes Back, Nexis brings you another <u>unique, useful and simple <abbr title="Building Architect
+      Tool">BAT</abbr></u>. The <strong>Nexis Mega-Generator</strong> produces powerful electricity by melting <font color="#00ff00"><strong>Hydro-monoxide molecule leftovers</strong></font>
+      <u>without any pollution</u> at all and at a very low maintenance cost, therefore the need to connect it to your watersystems is very important and absolutely necessary. Unfortunetly it uses
+      quite a lot of water while functioning, but gives you back enormous amounts of very clean energy, some 30,000 MWts.</p>
+
+      <p><font color="#993300">Plop price is $8,500<br>Bulldozing will cost you $250<br>Power 30,000<br>Need of water 200<br>Lotsize 2x5<br>Ploppable only in places where approved by the
+      Governor.......<br></font><br>...and btw like some other *strange energy-producing uploads*, this one doesn't explode.... <font color="#999999">(used and molten molecules will be sold at the
+      Nexis Garden Center as a flowering fertilizer called *Miracle-Glow*....please do not swallow)</font></p>
+
+      <p>The unzipped Nexisfolder (incl the 2 game-files) should go into the <strong>MyDocuments/ Simcity4/ Plugins</strong> folder. Do not include the Readme and the pictures.<br>You will find this
+      <abbr title="Building Architect Tool">BAT</abbr> in the Powermenu.</p>
+
+      <p>Again, the need of dependencies <u><font color="#ff0000">except</font> </u>the basic »<strong>Maxis bldgprop 1+2 « </strong>, is eliminated with Nexis BATs/Lots. Keep your plugins free of
+      dependencies and your game will run faster and better, therefor more fun.</p>
+
+      <p>Please <u>DO NOT </u>redistribute these files without my permission and sell my inventions to strangers.</p>
+
+      <p><font color="#c0c0c0">Please don't ask me how exactly this hydro-monoxide molecule melting processus works in detail, all I know is what the Sims told me, thanks.</font></p>
+
+      <p><strong>Have Fun with Nexis.</strong></p>
+
+      <p>To see what's coming next and maybe throw in some of your ideas and always useful help <font color="#c0c0c0">(that doesn't mean I <abbr title="Building Architect Tool">BAT</abbr> on demand
+      though)</font>, come see and encourage me in<a href="https://www.simtropolis.com/forum/messageview.cfm?catid=37&amp;threadid=97994&amp;STARTPAGE=5" rel="external nofollow">THIS</a>thread for my
+      <strong>BATs</strong> and in<a href="https://www.simtropolis.com/forum/messageview.cfm?catid=42&amp;threadid=92611&amp;STARTPAGE=9" rel="external nofollow">THIS</a> thread for my
+      <strong>LOTs</strong>. </p>
+
+      <p>mrbisonm</p>
+
+      						</body>
+    filename: NexisMegaGenerator.zip
+    files:
+      - NexisMegaGenerator/Nexis Mega Generator/Nexis Mega-Generator_369c81ef.SC4Lot
+      - NexisMegaGenerator/Nexis Mega Generator/Nexis-MG_0x30000.SC4Model
+      - NexisMegaGenerator/NexisMegaGenInfo.JPG
+      - NexisMegaGenerator/NexisReadme.txt
+      - NexisMegaGenerator/PowGen1.JPG
+      - NexisMegaGenerator/PowGen2.JPG
+      - NexisMegaGenerator/Sandbox City MegGen1.jpg
+      - NexisMegaGenerator/Sandbox City MegGen2.jpg
+      - NexisMegaGenerator/Thumbs.db
+    images:
+      - https://www.simtropolis.com/objects/screens/0010/5514ca9c4371fbea9f090e4572516c97-Sandbox%20City%20MegGen1.jpg
+      - https://www.simtropolis.com/objects/screens/0010/5514ca9c4371fbea9f090e4572516c97-Sandbox%20City%20MegGen2.jpg
     lastModified: 2009-02-09T20:13:34Z
     name: Nexis Mega Generator I
+    sha256: 7271afd0f16066a20b958339324f8792f45004ee53aaf22e0d4b6342ca180ffe
+    size: 293329
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2009/thumb-5514ca9c4371fbea9f090e4572516c97-Sandbox%20City%20MegGen1.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 311685
     url: https://community.simtropolis.com/files/file/21092-nexis-mega-generator-i/
+    version: "1.0"
   simtropolis/2112-demon-power-machine:
     authors:
       - Daeley
@@ -1964,10 +2101,43 @@ assets:
     authors:
       - delija21
     category: utilities
+    dependencies:
+      - sc4evermore/131-walkingsnake-sc4jeeks-parking-textures-vol-01
+    description: >-
+      <body>
+                                  
+      							<p>
+      	Vukovar Water/Restaurant Tower<br><br><br>
+      	STATS:<br><br>
+      	Lot size: 2x2<br>
+      	Lot wealth: Medium wealth<br>
+      	Water produced: 20 000 Gallons<br>
+      	Plop cost: 1000<br>
+      	Monthly cost: 50<br><br><br><u><strong>DEPENDENCIES:</strong></u><br><br><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Mega Props CP Vol.01</a><br><br><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1886" rel="external nofollow">RRP Pasture Flora</a><br><br><a href="https://community.simtropolis.com/files/file/15354-shopping-center-parking-pack-4-and-more/" rel="">Sc4jeeks Parking Textures</a><br><br><abbr title="Building Architect Tool">BAT</abbr> made by Delija<br>
+      	LOT made by Delija<br><br>
+      	Enjoy<br><br>
+      	 
+      </p>
+      						</body>
+    filename: Vodotoranj.zip
+    files:
+      - Vodotoranj/Vodotoranj-day.jpg
+      - Vodotoranj/Vodotoranj-nite.jpg
+      - Vodotoranj/Vodotoranj2-0x5ad0e817_0x167b5616_0x520000.SC4Model
+      - Vodotoranj/Vodotoranj2-0x6534284a-0x167b5616-0x17023ee6.SC4Desc
+      - Vodotoranj/Vodotoranj_77024418.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/0018/a57abe2a62460fcd915bd1765afb3885-Vodotoranj-relday.jpg
+      - https://www.simtropolis.com/objects/screens/0018/a57abe2a62460fcd915bd1765afb3885-Vodotoranj-relnite.jpg
     lastModified: 2017-01-27T11:00:25Z
     name: RSP Vukovar Water Tower
+    sha256: 91cb3aaf1fe7be9773103c4336db099f7b0af1702488dc0ac93de5ad34182d77
+    size: 716018
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2009/thumb-a57abe2a62460fcd915bd1765afb3885-Vodotoranj-relday.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 799030
     url: https://community.simtropolis.com/files/file/21618-rsp-vukovar-water-tower/
+    version: "1.0"
   simtropolis/2166-small-reservoir:
     authors:
       - gshmails
@@ -4939,10 +5109,57 @@ assets:
     authors:
       - gshmails
     category: utilities
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>This is my first attempt at a SimMars building.  It is a martian version of the Black Hole Enterprises called the Red Hole Water Pump.  It is a pump and filtration system.</p>
+
+      <p> </p>
+
+      <p>
+
+      Plop - $750</p>
+
+      <p>
+
+      Doze - $500</p>
+
+      <p>
+
+      Monthly - $250</p>
+
+      <p>
+
+      Water produced and filtered - 100,000</p>
+
+      <p> </p>
+
+      <p>
+
+      As always, the red glow is back at night.  The textures may change to fit into the game better.  There are no dependencies.   Enjoy and please comment, I am making more and the feedback
+      helps.</p>
+
+      						</body>
+    filename: Shmails' Red Hole Small Water Pump.zip
+    files:
+      - Shmails' Red Hole Small Water Pump/redholewater2a-0x5ad0e817_0xcdb42458_0x6c0000.SC4Model
+      - Shmails' Red Hole Small Water Pump/redholewater2a-0x6534284a-0xcdb42458-0x0e0daa84.SC4Desc
+      - Shmails' Red Hole Small Water Pump/Shmails' Red Hole Small Water Pump_ce0dae7c.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/0011/6031f38a6f2224ae63667eeda3272e94-mwsp1b.JPG
+      - https://www.simtropolis.com/objects/screens/0011/6031f38a6f2224ae63667eeda3272e94-mwsp1.JPG
     lastModified: 2004-07-23T21:16:51Z
     name: Shmails Martian Small Water Pump
+    sha256: 200dee93c9301025b45af820b50fc569fd36b8bce176774e7571b01177b755f8
+    size: 160703
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2004/thumb-6031f38a6f2224ae63667eeda3272e94-mwsp1b.JPG
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 177255
     url: https://community.simtropolis.com/files/file/3878-shmails-martian-small-water-pump/
+    version: "1.0"
   simtropolis/3894-shmails-martian-large-pumping-facility:
     authors:
       - gshmails
@@ -5416,4 +5633,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-0dc48ffa24d273347ad085ec0439ad86-day.JPG
     url: https://community.simtropolis.com/files/file/983-hydro-electric-dam/
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:22:00.820Z

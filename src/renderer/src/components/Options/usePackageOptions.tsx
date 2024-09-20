@@ -1,13 +1,13 @@
 import { OptionInfo } from "@common/options"
-import { checkCondition } from "@common/packages"
+import { PackageID, checkCondition } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useStore } from "@utils/store"
 
-export function usePackageOptions(packageId: string): OptionInfo[] {
+export function usePackageOptions(packageId: PackageID): OptionInfo[] {
   const variantInfo = useCurrentVariant(packageId)
 
   const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.globalOptions)
+  const profileOptions = useStore(store => store.options)
   const features = useStore(store => store.features)
 
   return (

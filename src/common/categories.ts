@@ -1,5 +1,5 @@
 import { t } from "./i18n"
-import { ID, PackageState, VariantInfo } from "./types"
+import { ID, VariantInfo } from "./types"
 import { isString } from "./utils/types"
 
 /** Category ID */
@@ -28,12 +28,8 @@ export interface CategoryInfo {
 }
 
 /** Loaded categories */
-export interface Categories {
-  [categoryId: CategoryID]: CategoryInfo | undefined
-}
-
-export function getStateLabel(state: PackageState): string {
-  return t(state, { ns: "PackageState" })
+export type Categories = {
+  [categoryId in CategoryID]?: CategoryInfo
 }
 
 export function getCategories(variantInfo: VariantInfo): CategoryID[] {

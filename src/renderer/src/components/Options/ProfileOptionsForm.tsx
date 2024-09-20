@@ -8,7 +8,7 @@ export function ProfileOptionsForm(): JSX.Element {
   const actions = useStoreActions()
   const profileInfo = useCurrentProfile()
   const options = useProfileOptions()
-  const profileOptions = useStore(store => store.globalOptions)
+  const profileOptions = useStore(store => store.options)
   const features = useStore(store => store.features)
 
   return (

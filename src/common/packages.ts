@@ -1,30 +1,43 @@
 import {
   Feature,
+  Features,
+  ID,
+  Issue,
   PackageFile,
   PackageInfo,
   PackageStatus,
-  ProfileInfo,
   VariantInfo,
   VariantIssue,
 } from "@common/types"
 
 import { OptionID, OptionInfo, Requirements, getOptionInfo, getOptionValue } from "./options"
-import { ReadonlyDeep } from "./utils/objects"
+import { ProfileInfo } from "./profiles"
+import { matchFile } from "./utils/glob"
+import { entries } from "./utils/objects"
 import { isArray } from "./utils/types"
+
+export const LOTS_OPTION_ID = "lots" as OptionID
+export const MMPS_OPTION_ID = "mmps" as OptionID
+
+/** Package ID */
+export type PackageID = ID<PackageInfo>
 
 export function checkFile(
   file: PackageFile,
-  packageId: string,
+  packageId: PackageID,
   variantInfo: VariantInfo,
   profileInfo?: ProfileInfo,
   profileOptions?: OptionInfo[],
-  features?: Partial<Record<Feature, string[]>>,
+  features?: Features,
+  patterns?: RegExp[],
 ): boolean {
   const packageConfig = profileInfo?.packages[packageId]
 
-  const filename = file.path.split(/[\\/]/).at(-1)!
+  if (patterns && !patterns.some(pattern => pattern.test(file.path))) {
+    return false
+  }
 
-  const lot = variantInfo?.lots?.find(lot => lot.filename === filename)
+  const lot = variantInfo?.lots?.find(lot => lot.filename && matchFile(lot.filename, file.path))
 
   if (lot) {
     // Never include lots unless explicitly enabled
@@ -33,7 +46,7 @@ export function checkFile(
     }
 
     // Check if lot is enabled
-    const option = getOptionInfo("lots" as OptionID, variantInfo.options, profileOptions)
+    const option = getOptionInfo(LOTS_OPTION_ID, variantInfo.options, profileOptions)
 
     if (option) {
       const enabledLots = getOptionValue(option, {
@@ -61,6 +74,43 @@ export function checkFile(
     }
   }
 
+  const mmp = variantInfo?.mmps?.find(mmp => mmp.filename && matchFile(mmp.filename, file.path))
+
+  if (mmp) {
+    // Never include MMPs unless explicitly enabled
+    if (!packageConfig?.enabled) {
+      return false
+    }
+
+    // Check if MMP is enabled
+    const option = getOptionInfo(MMPS_OPTION_ID, variantInfo.options, profileOptions)
+
+    if (option) {
+      const enabledMMPs = getOptionValue(option, {
+        ...packageConfig.options,
+        ...profileInfo?.options,
+      }) as string[]
+
+      if (!enabledMMPs.includes(mmp.id)) {
+        return false
+      }
+    }
+
+    // Check if MMP is supported
+    const isSupported = checkCondition(
+      mmp.requirements,
+      packageId,
+      variantInfo,
+      profileInfo,
+      profileOptions,
+      features,
+    )
+
+    if (!isSupported) {
+      return false
+    }
+  }
+
   return checkCondition(
     file.condition,
     packageId,
@@ -73,11 +123,11 @@ export function checkFile(
 
 export function checkCondition(
   condition?: Requirements,
-  packageId?: string,
+  packageId?: PackageID,
   variantInfo?: VariantInfo,
   profileInfo?: ProfileInfo,
   profileOptions?: OptionInfo[],
-  features?: Partial<Record<Feature, string[]>>,
+  features?: Features,
 ): boolean {
   if (!condition) {
     return true
@@ -88,7 +138,7 @@ export function checkCondition(
   const profileOptionValues = profileInfo?.options ?? {}
   const packageOptionValues = { ...packageConfig?.options, ...profileOptionValues }
 
-  return Object.entries(condition).every(([requirement, requiredValue]) => {
+  return entries(condition).every(([requirement, requiredValue]) => {
     if (requiredValue === undefined) {
       return true
     }
@@ -136,38 +186,78 @@ export function getPackageStatus(
   return profileInfo && packageInfo.status[profileInfo.id]
 }
 
-export function getVariantIssues(variantId: string, packageStatus?: PackageStatus): VariantIssue[] {
-  return packageStatus?.issues?.[variantId] ?? []
+export function getVariantIssues(variantInfo: VariantInfo, status?: PackageStatus): VariantIssue[] {
+  return status?.issues?.[variantInfo.id] ?? []
 }
 
-export function hasIssues(variantId: string, packageStatus?: ReadonlyDeep<PackageStatus>): boolean {
-  return !!packageStatus?.issues?.[variantId]?.length
+export function isConflict(issue: VariantIssue, packageStatus?: PackageStatus): boolean {
+  if (!packageStatus?.included) {
+    return false
+  }
+
+  return packageStatus?.transitive || issue.id !== Issue.INCOMPATIBLE_DEPENDENCIES
+}
+
+export function isDependency(packageStatus?: PackageStatus): boolean {
+  return !!packageStatus?.included && !packageStatus.enabled
 }
 
 export function isDeprecated(variantInfo: VariantInfo): boolean {
   return !!variantInfo.deprecated
 }
 
-export function isEnabled(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
-  return !!packageStatus?.enabled && packageStatus.variantId === variantInfo.id
+export function isDisabled(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
+  return !!packageStatus && !packageStatus.enabled && !!variantInfo.installed
+}
+
+export function isEnabled(packageStatus?: PackageStatus): boolean {
+  return !!packageStatus?.enabled
 }
 
 export function isError(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
-  const issues = hasIssues(variantInfo.id, packageStatus)
-  return isEnabled(variantInfo, packageStatus) && (!!issues || !variantInfo.installed)
+  return isInvalid(variantInfo, packageStatus) || isMissing(variantInfo, packageStatus)
 }
 
 export function isExperimental(variantInfo: VariantInfo): boolean {
   return !!variantInfo.experimental
 }
 
+export function isIncluded(packageStatus?: PackageStatus): boolean {
+  return !!packageStatus?.included
+}
+
 export function isIncompatible(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
-  const issues = hasIssues(variantInfo.id, packageStatus)
-  return !isEnabled(variantInfo, packageStatus) && !!issues
+  if (packageStatus?.enabled) {
+    return false
+  }
+
+  const issues = getVariantIssues(variantInfo, packageStatus)
+
+  return !!issues?.length
+}
+
+export function isInstalled(variantInfo: VariantInfo): boolean {
+  return !!variantInfo.installed
+}
+
+export function isInvalid(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
+  if (!packageStatus?.included) {
+    return false
+  }
+
+  const issues = getVariantIssues(variantInfo, packageStatus)
+
+  return packageStatus?.transitive !== false
+    ? !!issues?.length
+    : !!issues?.some(issue => issue.id !== Issue.INCOMPATIBLE_DEPENDENCIES)
+}
+
+export function isLocal(variantInfo: VariantInfo): boolean {
+  return !!variantInfo.local
 }
 
 export function isMissing(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
-  return isEnabled(variantInfo, packageStatus) && !variantInfo.installed
+  return !!packageStatus?.included && !variantInfo.installed
 }
 
 export function isNew(variantInfo: VariantInfo): boolean {
@@ -177,5 +267,9 @@ export function isNew(variantInfo: VariantInfo): boolean {
 }
 
 export function isOutdated(variantInfo: VariantInfo): boolean {
-  return !!variantInfo.update
+  return !!variantInfo.installed && !!variantInfo.update
+}
+
+export function isRequired(packageStatus?: PackageStatus): boolean {
+  return !!packageStatus?.requiredBy?.length
 }

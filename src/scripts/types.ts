@@ -34,8 +34,8 @@ export interface IndexerOverride {
 }
 
 export type IndexerOverrides = {
-  [sourceId: string]: {
-    [entryId: number]: IndexerOverride | null | undefined
+  [sourceId in string]?: {
+    [entryId in number]?: IndexerOverride | null
   }
 }
 

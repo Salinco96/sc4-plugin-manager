@@ -18,23 +18,33 @@ import escapeHtml from "escape-html"
 import { glob } from "glob"
 
 import { AssetID, AssetInfo, Assets } from "@common/assets"
+import { Authors } from "@common/authors"
 import { Categories } from "@common/categories"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { OptionInfo, Requirements, getOptionValue } from "@common/options"
-import { ProfileUpdate, createUniqueProfileId } from "@common/profiles"
-import { ApplicationState, ApplicationStatus } from "@common/state"
+import {
+  ProfileData,
+  ProfileID,
+  ProfileInfo,
+  ProfileUpdate,
+  Profiles,
+  createUniqueProfileId,
+} from "@common/profiles"
+import { Settings } from "@common/settings"
+import { ApplicationState, ApplicationStateUpdate, getInitialState } from "@common/state"
 import {
   ConfigFormat,
-  Feature,
   PackageConfig,
   PackageFile,
   PackageInfo,
-  ProfileData,
-  ProfileInfo,
-  Settings,
-  getDefaultVariant,
+  PackageStatus,
+  PackageWarning,
+  VariantInfo,
 } from "@common/types"
-import { mapDefined } from "@common/utils/arrays"
+import { flatMap, mapDefined, sumBy, unique } from "@common/utils/arrays"
+import { globToRegex, matchConditions } from "@common/utils/glob"
+import { entries, forEach, keys, values } from "@common/utils/objects"
+import { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -56,17 +66,20 @@ import { cmd } from "@node/processes"
 import { getPluginsFolderName } from "@utils/linker"
 import { ToolID, getToolInfo } from "@utils/tools"
 
-import { checkFile } from "../common/packages"
+import { PackageID, checkFile, isDependency, isEnabled, isIncompatible } from "../common/packages"
 
 import { getAssetKey } from "./data/assets"
+import { AppConfig } from "./data/config"
 import {
+  loadDownloadedAssets,
   loadLocalPackages,
   loadRemotePackages,
   mergeLocalPackageInfo,
   writePackageConfig,
 } from "./data/packages"
-import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
+import { getDefaultVariant, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, fromProfileData, toProfileData } from "./data/profiles/configs"
+import { defaultSettings } from "./data/settings"
 import { MainWindow } from "./MainWindow"
 import {
   UpdateDatabaseProcessData,
@@ -88,7 +101,6 @@ import { createChildProcess } from "./utils/processes"
 import { handleDocsProtocol } from "./utils/protocols"
 import {
   SIMTROPOLIS_ORIGIN,
-  SimtropolisSession,
   getSimtropolisSession,
   getSimtropolisSessionCookies,
   simtropolisLogin,
@@ -96,37 +108,11 @@ import {
 } from "./utils/sessions/simtropolis"
 import { TaskContext, TaskManager } from "./utils/tasks"
 
-const defaultSettings: Settings = {
-  useYaml: true,
-}
-
-export interface AppConfig {
-  path?: string
-}
-
 export class Application {
-  public assets: Assets = {}
-  public categories: Categories = {}
-  public features?: Partial<Record<Feature, string[]>>
-  public globalOptions?: OptionInfo[]
-  public ignoredWarnings = new Set<string>()
-  public packages?: { [packageId: string]: PackageInfo }
-  public profiles?: { [profileId: string]: ProfileInfo }
-  public sessions: { simtropolis?: SimtropolisSession | null } = {}
-  public settings?: Settings
-  public status: ApplicationStatus = {
-    linker: null,
-    loader: null,
-    ongoingDownloads: [],
-    ongoingExtracts: [],
-  }
-  public templates?: { [profileId: string]: ProfileInfo }
+  public state: ApplicationState = getInitialState()
 
-  public dirty: {
-    packages?: { [packageId: string]: boolean } | boolean
-    profiles?: { [profileId: string]: boolean } | boolean
-    settings?: boolean
-  } = {}
+  public assets: Assets = {}
+  public ignoredWarnings = new Set<string>()
 
   public mainWindow?: MainWindow
   public splashScreen?: SplashScreen
@@ -134,7 +120,6 @@ export class Application {
   public readonly browserSession: Session = session.defaultSession
 
   public gamePath!: string
-  // public rootPath!: string
 
   public links: { [from: string]: string } = {}
   public externalFiles = new Set<string>()
@@ -149,14 +134,14 @@ export class Application {
   } = {
     download: new TaskManager("AssetFetcher", {
       onTaskUpdate: tasks => {
-        this.status.ongoingDownloads = tasks
+        this.state.status.ongoingDownloads = tasks
         this.sendStatus()
       },
       parallel: 6,
     }),
     extract: new TaskManager("AssetExtractor", {
       onTaskUpdate: tasks => {
-        this.status.ongoingExtracts = tasks
+        this.state.status.ongoingExtracts = tasks
         this.sendStatus()
       },
       parallel: 6,
@@ -171,13 +156,13 @@ export class Application {
       onTaskUpdate: tasks => {
         const task = tasks[0]
         if (task?.key === "init") {
-          this.status.linker = `Initializing...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
+          this.state.status.linker = `Initializing...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
         } else if (task?.key === "link") {
-          this.status.linker = `Linking packages...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
+          this.state.status.linker = `Linking packages...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
         } else if (task?.key === "clean:all") {
-          this.status.linker = `Checking for conflicts...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
+          this.state.status.linker = `Checking for conflicts...${task.progress ? ` (${task.progress.toFixed(0)}%)` : ""}`
         } else {
-          this.status.linker = null
+          this.state.status.linker = null
         }
 
         this.sendStatus()
@@ -240,8 +225,8 @@ export class Application {
 
     try {
       console.info("Checking 4GB Patch...")
-      if (this.settings?.install?.path) {
-        const filePath = path.join(this.settings.install.path, FILENAMES.sc4exe)
+      if (this.state.settings?.install?.path) {
+        const filePath = path.join(this.state.settings.install.path, FILENAMES.sc4exe)
         file = await fs.open(filePath, "r+") // read-write mode
 
         try {
@@ -249,14 +234,14 @@ export class Application {
           const patched = getPEFlag(header, PEFlag.LARGE_ADDRESS_AWARE)
           if (patched) {
             console.info("4GB Patch is already applied")
-            if (!this.settings.install.patched) {
-              this.settings.install.patched = true
+            if (!this.state.settings.install.patched) {
+              this.state.settings.install.patched = true
               this.writeSettings()
             }
-          } else if (isStartupCheck && this.settings.install.patched === false) {
+          } else if (isStartupCheck && this.state.settings.install.patched === false) {
             // Skip startup check if "Do not ask again" was previously checked
           } else {
-            delete this.settings.install.patched
+            delete this.state.settings.install.patched
 
             const [confirmed, doNotAskAgain] = await this.showConfirmation(
               t("Check4GBPatchModal:title"),
@@ -277,7 +262,7 @@ export class Application {
                   t("Check4GBPatchModal:title"),
                   t("Check4GBPatchModal:success"),
                 )
-                this.settings.install.patched = true
+                this.state.settings.install.patched = true
               } catch (error) {
                 console.error("Failed to apply the 4GB Patch", error)
                 await this.showError(
@@ -287,7 +272,7 @@ export class Application {
                 )
               }
             } else if (doNotAskAgain) {
-              this.settings.install.patched = false
+              this.state.settings.install.patched = false
             }
 
             this.writeSettings()
@@ -302,8 +287,8 @@ export class Application {
   }
 
   public async checkExeVersion(): Promise<void> {
-    if (this.settings?.install?.path) {
-      const exePath = path.join(this.settings.install.path, FILENAMES.sc4exe)
+    if (this.state.settings?.install?.path) {
+      const exePath = path.join(this.state.settings.install.path, FILENAMES.sc4exe)
 
       const stdout = await cmd(
         `wmic datafile where "name='${exePath.replace(/[\\'"]/g, "\\$&")}'" get version`,
@@ -315,16 +300,16 @@ export class Application {
       }
 
       const version = match[0]
-      if (this.settings.install.version !== version) {
+      if (this.state.settings.install.version !== version) {
         console.info(`Detected version ${version}`)
-        this.settings.install.version = version
+        this.state.settings.install.version = version
         this.writeSettings()
       }
     }
   }
 
   protected async checkGameInstall(): Promise<void> {
-    let installPath = this.settings?.install?.path
+    let installPath = this.state.settings?.install?.path
     let installPathExists = false
 
     if (installPath) {
@@ -353,8 +338,8 @@ export class Application {
       }
     }
 
-    if (this.settings && installPath !== this.settings.install?.path) {
-      this.settings.install = { path: installPath }
+    if (this.state.settings && installPath !== this.state.settings.install?.path) {
+      this.state.settings.install = { path: installPath }
       this.writeSettings()
     }
 
@@ -371,13 +356,13 @@ export class Application {
     await this.tasks.linker.queue("clean:all", async context => {
       const currentProfile = this.getCurrentProfile()
 
-      if (this.packages && currentProfile) {
+      if (this.state.packages && currentProfile) {
         let nPackages = 0
-        const nTotalPackages = Object.keys(this.packages).length
+        const nTotalPackages = Object.keys(this.state.packages).length
         const increment = Math.floor(nTotalPackages / 100)
-        for (const packageId in this.packages) {
-          const packageStatus = this.packages[packageId].status[currentProfile.id]
-          if (packageStatus?.enabled) {
+        for (const packageId of keys(this.state.packages)) {
+          const packageStatus = this.getPackageStatus(packageId)
+          if (packageStatus?.included) {
             await this.doCleanVariant(context, packageId, packageStatus.variantId)
           }
 
@@ -392,7 +377,7 @@ export class Application {
   /**
    * Runs Cleanitol for a single variant.
    */
-  public async cleanVariant(packageId: string, variantId: string): Promise<void> {
+  public async cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     await this.tasks.linker.queue(`clean:${packageId}#${variantId}`, async context => {
       await this.doCleanVariant(context, packageId, variantId)
     })
@@ -403,12 +388,12 @@ export class Application {
    * @param name Profile name
    * @param fromProfileId ID of the profile to copy (create an empty profile otherwise)
    */
-  public async createProfile(name: string, fromProfileId?: string): Promise<boolean> {
-    if (!this.profiles || !this.settings) {
+  public async createProfile(name: string, fromProfileId?: ProfileID): Promise<boolean> {
+    if (!this.state.profiles || !this.state.settings) {
       return false
     }
 
-    const profileId = createUniqueProfileId(name, Object.keys(this.profiles))
+    const profileId = createUniqueProfileId(name, keys(this.state.profiles))
 
     const templateProfile = fromProfileId
       ? fromProfileId.startsWith(TEMPLATE_PREFIX)
@@ -426,7 +411,7 @@ export class Application {
       name,
     }
 
-    this.profiles[profileId] = profile
+    this.state.profiles[profileId] = profile
     this.writeProfile(profileId)
 
     return this.switchProfile(profileId)
@@ -462,8 +447,8 @@ export class Application {
    */
   protected async doCleanVariant(
     context: TaskContext,
-    packageId: string,
-    variantId: string,
+    packageId: PackageID,
+    variantId: VariantID,
   ): Promise<void> {
     const packageInfo = this.getPackageInfo(packageId)
     const variantInfo = packageInfo?.variants[variantId]
@@ -540,14 +525,13 @@ export class Application {
     const key = this.getDownloadKey(assetInfo)
     const downloadPath = this.getDownloadPath(key)
     const downloadTempPath = this.getTempDownloadPath(key)
-    const downloaded = await exists(downloadPath)
-    if (!downloaded) {
+    if (!assetInfo.downloaded[assetInfo.version]) {
       await this.tasks.download.queue(key, async context => {
         const response = await get(assetInfo.url, {
           cookies: origin => {
             // Pass Simtropolis credentials as cookie at that origin
-            if (origin === SIMTROPOLIS_ORIGIN && this.sessions.simtropolis) {
-              return getSimtropolisSessionCookies(this.sessions.simtropolis)
+            if (origin === SIMTROPOLIS_ORIGIN && this.state.simtropolis) {
+              return getSimtropolisSessionCookies(this.state.simtropolis)
             }
           },
           fetch: net.fetch,
@@ -565,7 +549,10 @@ export class Application {
             const progress = Math.floor(100 * (current / total))
             context.setProgress(progress)
           },
+          url: assetInfo.url,
         })
+
+        assetInfo.downloaded[assetInfo.version] = true
       })
     }
   }
@@ -609,8 +596,8 @@ export class Application {
    * Returns the current profile's data, if any.
    */
   public getCurrentProfile(): ProfileInfo | undefined {
-    const profileId = this.settings?.currentProfile
-    return profileId ? this.profiles?.[profileId] : undefined
+    const profileId = this.state.settings?.currentProfile
+    return profileId ? this.state.profiles?.[profileId] : undefined
   }
 
   /**
@@ -636,7 +623,7 @@ export class Application {
    * Returns the default config format.
    */
   public getDefaultConfigFormat(): ConfigFormat {
-    return this.settings?.useYaml === false ? ConfigFormat.JSON : ConfigFormat.YAML
+    return this.state.settings?.useYaml === false ? ConfigFormat.JSON : ConfigFormat.YAML
   }
 
   /**
@@ -689,18 +676,10 @@ export class Application {
    * Returns the main README file for a given variant, as an HTML string.
    */
   public async getPackageReadme(
-    packageId: string,
-    variantId: string,
+    packageId: PackageID,
+    variantId: VariantID,
   ): Promise<{ html?: string; md?: string }> {
-    const packageInfo = this.getPackageInfo(packageId)
-    if (!packageInfo) {
-      throw Error(`Unknown package '${packageId}'`)
-    }
-
-    const variantInfo = packageInfo.variants[variantId]
-    if (!packageInfo) {
-      throw Error(`Unknown variant '${packageId}#${variantId}'`)
-    }
+    const variantInfo = this.requireVariantInfo(packageId, variantId)
 
     if (!variantInfo.readme) {
       throw Error(`Package '${packageId}#${variantId}' does not have documentation`)
@@ -742,15 +721,45 @@ export class Application {
   /**
    * Returns a package's data by ID, if it exists.
    */
-  public getPackageInfo(packageId: string): PackageInfo | undefined {
-    return this.packages?.[packageId]
+  public getPackageInfo(packageId: PackageID): PackageInfo | undefined {
+    return this.state.packages?.[packageId]
+  }
+
+  /**
+   * Returns a package's data by ID, or throws if it dos not exist.
+   */
+  public requirePackageInfo(packageId: PackageID): PackageInfo {
+    const packageInfo = this.getPackageInfo(packageId)
+
+    if (!packageInfo) {
+      throw Error(`Unknown package '${packageId}'`)
+    }
+
+    return packageInfo
+  }
+
+  /**
+   * Returns a package's name.
+   */
+  public getPackageName(packageId: PackageID): string {
+    return this.state.packages?.[packageId]?.name ?? packageId
   }
 
   /**
    * Returns the absolute package to an installed package, by ID.
    */
-  public getPackagePath(packageId: string): string {
+  public getPackagePath(packageId: PackageID): string {
     return path.join(this.getRootPath(), DIRNAMES.packages, packageId)
+  }
+
+  /**
+   * Returns a package's data by ID, if it exists.
+   */
+  public getPackageStatus(
+    packageId: PackageID,
+    profileId: ProfileID | undefined = this.state.settings?.currentProfile,
+  ): PackageStatus | undefined {
+    return profileId ? this.state.packages?.[packageId]?.status[profileId] : undefined
   }
 
   /**
@@ -770,8 +779,8 @@ export class Application {
   /**
    * Returns a profile's data by ID, if it exists.
    */
-  public getProfileInfo(profileId: string): ProfileInfo | undefined {
-    return this.profiles?.[profileId]
+  public getProfileInfo(profileId: ProfileID): ProfileInfo | undefined {
+    return this.state.profiles?.[profileId]
   }
 
   /**
@@ -784,8 +793,8 @@ export class Application {
   /**
    * Returns a profile template by ID, if it exists.
    */
-  public getProfileTemplate(profileId: string): ProfileInfo | undefined {
-    return this.templates?.[profileId]
+  public getProfileTemplate(profileId: ProfileID): ProfileInfo | undefined {
+    return this.state.templates?.[profileId]
   }
 
   /**
@@ -799,21 +808,7 @@ export class Application {
    * Returns the current state to synchronize with renderer.
    */
   public getState(): ApplicationState {
-    return {
-      categories: this.categories,
-      features: this.features,
-      globalOptions: this.globalOptions,
-      packages: this.packages,
-      profiles: this.profiles,
-      sessions: {
-        simtropolis: {
-          userId: this.sessions.simtropolis && this.sessions.simtropolis.userId,
-        },
-      },
-      settings: this.settings,
-      status: this.status,
-      templates: this.templates,
-    }
+    return this.state
   }
 
   /**
@@ -863,9 +858,46 @@ export class Application {
   }
 
   /**
+   * Returns a variant's data by ID, if it exists.
+   */
+  public getVariantInfo(packageId: PackageID, variantId: VariantID): VariantInfo | undefined {
+    return this.state.packages?.[packageId]?.variants[variantId]
+  }
+
+  /**
+   * Returns a variant's data by ID, or throws if it does not exist.
+   */
+  public requireVariantInfo(packageId: PackageID, variantId: VariantID): VariantInfo {
+    const variantInfo = this.requirePackageInfo(packageId).variants[variantId]
+
+    if (!variantInfo) {
+      throw Error(`Unknown variant '${packageId}#${variantId}'`)
+    }
+
+    return variantInfo
+  }
+
+  /**
+   * Returns a variant's data by ID, or throws if it does not exist.
+   */
+  public requireCurrentVariant(packageId: PackageID, packageStatus?: PackageStatus): VariantInfo {
+    if (packageStatus) {
+      return this.requireVariantInfo(packageId, packageStatus.variantId)
+    }
+
+    const profileInfo = this.getCurrentProfile()
+    const variantId = this.getPackageStatus(packageId, profileInfo?.id)?.variantId
+    if (variantId) {
+      return this.requireVariantInfo(packageId, variantId)
+    }
+
+    throw Error(`Missing status for package '${packageId}'`)
+  }
+
+  /**
    * Returns the absolute path to a variant's files.
    */
-  public getVariantPath(packageId: string, variantId: string): string {
+  public getVariantPath(packageId: PackageID, variantId: VariantID): string {
     return path.join(this.getPackagePath(packageId), variantId)
   }
 
@@ -882,30 +914,36 @@ export class Application {
     getSimtropolisSession(this.browserSession).then(session => {
       if (session) {
         console.info("Logged in to Simtropolis")
-        this.sessions.simtropolis = session
+        this.state.simtropolis = session
         this.sendSessions()
       } else {
-        this.sessions.simtropolis = null
+        this.state.simtropolis = null
       }
     })
 
     // Launch database update in child process
     const databaseUpdatePromise = this.tryUpdateDatabase()
 
+    // Load authors...
+    this.state.status.loader = "Loading authors..."
+    this.sendStatus()
+    await this.loadAuthors()
+    this.sendAuthors()
+
     // Load categories...
-    this.status.loader = "Loading categories..."
+    this.state.status.loader = "Loading categories..."
     this.sendStatus()
     await this.loadCategories()
     this.sendCategories()
 
     // Load profiles...
-    this.status.loader = "Loading profiles..."
+    this.state.status.loader = "Loading profiles..."
     this.sendStatus()
     await this.loadProfiles()
     this.sendProfiles()
 
     // Load settings...
-    this.status.loader = "Loading settings..."
+    this.state.status.loader = "Loading settings..."
     this.sendStatus()
     const settings = await this.loadSettings()
 
@@ -965,17 +1003,23 @@ export class Application {
 
     // Load local packages...
     await createIfMissing(this.getPackagesPath())
-    this.packages = await loadLocalPackages(this.getPackagesPath(), this.categories, (c, t) => {
-      if (c % 10 === 0) {
-        this.status.loader = `Loading local packages (${Math.floor(100 * (c / t))}%)...`
-        this.sendStatus()
-      }
-    })
+    this.state.packages = await loadLocalPackages(
+      this.getPackagesPath(),
+      this.state.categories,
+      (c, t) => {
+        if (c % 10 === 0) {
+          this.state.status.loader = `Loading local packages (${Math.floor(100 * (c / t))}%)...`
+          this.sendStatus()
+        }
+      },
+    )
 
     this.sendPackages()
 
+    const downloadedAssets = await loadDownloadedAssets(this.getDownloadsPath())
+
     // Wait for database update...
-    this.status.loader = "Updating database..."
+    this.state.status.loader = "Updating database..."
     this.sendStatus()
     await databaseUpdatePromise
 
@@ -984,23 +1028,30 @@ export class Application {
     this.sendOptions()
 
     // Load remote packages...
-    const remote = await loadRemotePackages(this.getDatabasePath(), this.categories, (c, t) => {
-      if (c % 10 === 0) {
-        this.status.loader = `Loading remote packages (${Math.floor(100 * (c / t))}%)...`
-        this.sendStatus()
-      }
-    })
+    const remote = await loadRemotePackages(
+      this.getDatabasePath(),
+      this.state.categories,
+      downloadedAssets,
+      (c, t) => {
+        if (c % 10 === 0) {
+          this.state.status.loader = `Loading remote packages (${Math.floor(100 * (c / t))}%)...`
+          this.sendStatus()
+        }
+      },
+    )
 
     this.assets = remote.assets
 
     // Merge local and remote package definitions...
-    for (const packageId in remote.packages) {
-      const remotePackageInfo = remote.packages[packageId]
-      const localPackageInfo = this.packages[packageId]
+    for (const remotePackageInfo of values(remote.packages)) {
+      const localPackageInfo = this.state.packages[remotePackageInfo.id]
       if (localPackageInfo) {
-        this.packages[packageId] = mergeLocalPackageInfo(localPackageInfo, remotePackageInfo)
+        this.state.packages[remotePackageInfo.id] = mergeLocalPackageInfo(
+          localPackageInfo,
+          remotePackageInfo,
+        )
       } else {
-        this.packages[packageId] = remotePackageInfo
+        this.state.packages[remotePackageInfo.id] = remotePackageInfo
       }
     }
 
@@ -1010,12 +1061,12 @@ export class Application {
     const loadTemplatesPromise = this.loadTemplates()
 
     // Wait for installation check...
-    this.status.loader = "Checking installation..."
+    this.state.status.loader = "Checking installation..."
     this.sendStatus()
     await checkGameInstallPromise
 
     // Done
-    this.status.loader = null
+    this.state.status.loader = null
     this.sendStatus()
 
     // Resolving packages if profile exists
@@ -1030,19 +1081,20 @@ export class Application {
     await loadTemplatesPromise
   }
 
-  public async installPackages(packages: { [packageId: string]: string }): Promise<boolean> {
-    const updatingPackages: { [packageId: string]: PackageConfig } = {}
+  public async installPackages(packages: {
+    [packageId in PackageID]?: VariantID
+  }): Promise<boolean> {
+    const updatingPackages: {
+      [packageId in PackageID]?: PackageConfig
+    } = {}
 
     // Check if we are updating already-enabled variants - in that case we need to recalculate
     const currentProfile = this.getCurrentProfile()
     if (currentProfile) {
-      for (const packageId in packages) {
-        const variantId = packages[packageId]
-        const packageInfo = this.getPackageInfo(packageId)
-        const packageStatus = packageInfo?.status[currentProfile.id]
-
-        if (packageStatus?.enabled && packageStatus?.variantId === variantId) {
-          const variantInfo = packageInfo?.variants[variantId]
+      for (const [packageId, variantId] of entries(packages)) {
+        const packageStatus = this.getPackageStatus(packageId)
+        if (packageStatus?.included && packageStatus?.variantId === variantId) {
+          const variantInfo = this.getVariantInfo(packageId, variantId)
           if (variantInfo?.update) {
             updatingPackages[packageId] = {
               variant: packages[packageId],
@@ -1062,7 +1114,7 @@ export class Application {
     }
 
     await Promise.all(
-      Object.entries(packages)
+      entries(packages)
         .filter(([packageId]) => !updatingPackages[packageId])
         .map(([packageId, variantId]) => this.installVariant(packageId, variantId)),
     )
@@ -1070,16 +1122,9 @@ export class Application {
     return true
   }
 
-  protected async installVariant(packageId: string, variantId: string): Promise<void> {
-    const packageInfo = this.getPackageInfo(packageId)
-    if (!packageInfo) {
-      throw Error(`Unknown package '${packageId}'`)
-    }
-
-    const variantInfo = packageInfo.variants[variantId]
-    if (!variantInfo) {
-      throw Error(`Unknown variant '${packageId}#${variantId}'`)
-    }
+  protected async installVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
+    const packageInfo = this.requirePackageInfo(packageId)
+    const variantInfo = this.requireVariantInfo(packageId, variantId)
 
     try {
       const variantKey = `${packageId}#${variantId}`
@@ -1243,26 +1288,9 @@ export class Application {
               for (const entry of entries) {
                 const oldPath = entry.relative()
 
-                let condition = include?.condition
-
-                if (pattern.match(conditionRegex)) {
-                  const regex = new RegExp(
-                    "^" +
-                      (pattern.includes("/") ? "" : "(?:.*[\\\\/])?") +
-                      pattern
-                        .replace(/[$()+.[\]^|]/g, "\\$&")
-                        .replaceAll("/", "[\\\\/]")
-                        .replaceAll("**", ".*")
-                        .replaceAll("*", "[^\\\\/]*")
-                        .replaceAll("?", "[^\\\\/]?")
-                        .replace(conditionRegex, "(?<$1>[^\\\\/]*)") +
-                      "$",
-                  )
-
-                  condition = {
-                    ...condition,
-                    ...regex.exec(oldPath)?.groups,
-                  }
+                const condition = {
+                  ...include?.condition,
+                  ...matchConditions(pattern, oldPath),
                 }
 
                 if (entry.isDirectory()) {
@@ -1298,12 +1326,7 @@ export class Application {
             // Include docs (everything if not specified)
             if (asset.docs) {
               for (const include of asset.docs) {
-                if (typeof include === "string") {
-                  const [path, as] = include.split(":", 2)
-                  await includePath(path, "docs", { as, path })
-                } else {
-                  await includePath(include.path, "docs", include)
-                }
+                await includePath(include.path, "docs", include)
               }
             } else {
               await includeDirectory("", "", "docs")
@@ -1312,25 +1335,15 @@ export class Application {
             // Exclude files
             if (asset.exclude) {
               for (const exclude of asset.exclude) {
-                if (typeof exclude === "string") {
-                  excludePath(exclude)
-                } else {
-                  excludePath(exclude.path)
-                }
+                excludePath(exclude)
               }
             }
 
             // Include files (everything if not specified)
             if (asset.include) {
               for (const include of asset.include) {
-                if (typeof include === "string") {
-                  const [path, as] = include.split(":", 2)
-                  await includePath(path, "files", { as, path })
-                  excludePath(path.replace(conditionRegex, "*"))
-                } else {
-                  await includePath(include.path, "files", include)
-                  excludePath(include.path.replace(conditionRegex, "*"))
-                }
+                await includePath(include.path, "files", include)
+                excludePath(include.path.replace(conditionRegex, "*"))
               }
             } else {
               await includeDirectory("", "", "files")
@@ -1446,6 +1459,10 @@ export class Application {
       await this.tasks.linker.queue(
         "link",
         async context => {
+          if (!this.state.packages) {
+            return
+          }
+
           context.debug("Linking packages...")
 
           await createIfMissing(pluginsPath)
@@ -1464,18 +1481,19 @@ export class Application {
           }
 
           let nPackages = 0
-          const nTotalPackages = Object.keys(this.packages!).length
+          const nTotalPackages = Object.keys(this.state.packages!).length
           const increment = Math.floor(nTotalPackages / 100)
 
-          for (const packageId in this.packages) {
-            const packageInfo = this.packages[packageId]
+          for (const [packageId, packageInfo] of entries(this.state.packages)) {
             const status = packageInfo.status[profileInfo.id]
-            if (status?.enabled) {
+            if (status?.included) {
               const variantId = status.variantId
               const variantInfo = packageInfo.variants[variantId]
               if (variantInfo) {
                 const variantPath = this.getVariantPath(packageId, variantId)
                 if (variantInfo.files?.length) {
+                  const patterns = status.files?.map(globToRegex)
+
                   for (const file of variantInfo.files) {
                     if (
                       checkFile(
@@ -1483,8 +1501,9 @@ export class Application {
                         packageId,
                         variantInfo,
                         profileInfo,
-                        this.globalOptions,
-                        this.features,
+                        this.state.options,
+                        this.state.features,
+                        patterns,
                       )
                     ) {
                       const fullPath = path.join(variantPath, file.path)
@@ -1604,16 +1623,28 @@ export class Application {
     }
   }
 
+  protected async loadAuthors(): Promise<Authors> {
+    console.debug("Loading authors...")
+
+    const config = await loadConfig<Authors>(this.getDatabasePath(), FILENAMES.dbAuthors)
+
+    this.state.authors = config?.data ?? {}
+
+    console.info(`Loaded ${Object.keys(this.state.authors).length} authors`)
+
+    return this.state.authors
+  }
+
   protected async loadCategories(): Promise<Categories> {
     console.debug("Loading categories...")
 
     const config = await loadConfig<Categories>(this.getDatabasePath(), FILENAMES.dbCategories)
 
-    this.categories = config?.data ?? {}
+    this.state.categories = config?.data ?? {}
 
-    console.info(`Loaded ${Object.keys(this.categories).length} categories`)
+    console.info(`Loaded ${Object.keys(this.state.categories).length} categories`)
 
-    return this.categories
+    return this.state.categories
   }
 
   protected async loadOptions(): Promise<OptionInfo[]> {
@@ -1624,18 +1655,18 @@ export class Application {
       FILENAMES.dbOptions,
     )
 
-    this.globalOptions = config?.data.options ?? []
+    this.state.options = config?.data.options ?? []
 
-    console.info(`Loaded ${this.globalOptions.length} options`)
+    console.info(`Loaded ${this.state.options.length} options`)
 
-    return this.globalOptions
+    return this.state.options
   }
 
-  protected async loadProfiles(): Promise<{ [id: string]: ProfileInfo }> {
+  protected async loadProfiles(): Promise<Profiles> {
     console.debug("Loading profiles")
 
     let nProfiles = 0
-    this.profiles = {}
+    this.state.profiles = {}
 
     const profilesPath = this.getProfilesPath()
     await createIfMissing(profilesPath)
@@ -1644,9 +1675,9 @@ export class Application {
     for (const entry of entries) {
       const format = path.extname(entry.name) as ConfigFormat
       if (entry.isFile() && Object.values(ConfigFormat).includes(format)) {
-        const profileId = path.basename(entry.name, format)
+        const profileId = path.basename(entry.name, format) as ProfileID
         const profilePath = path.join(profilesPath, entry.name)
-        if (this.profiles[profileId]) {
+        if (this.state.profiles[profileId]) {
           console.warn(`Duplicate profile configuration '${entry.name}'`)
           continue
         }
@@ -1655,7 +1686,7 @@ export class Application {
           const data = await readConfig<ProfileData>(profilePath)
           const profile = fromProfileData(profileId, data)
           profile.format = format
-          this.profiles[profileId] = profile
+          this.state.profiles[profileId] = profile
           nProfiles++
         } catch (error) {
           console.warn(`Invalid profile configuration '${entry.name}'`, error)
@@ -1665,7 +1696,7 @@ export class Application {
 
     console.debug(`Loaded ${nProfiles} profiles`)
 
-    return this.profiles
+    return this.state.profiles
   }
 
   protected async loadSettings(): Promise<Settings> {
@@ -1673,27 +1704,27 @@ export class Application {
 
     const config = await loadConfig<Settings>(this.getRootPath(), FILENAMES.settings)
 
-    this.settings = {
+    this.state.settings = {
       format: config?.format,
       ...defaultSettings,
       ...config?.data,
     }
 
     // Select first profile if currently-selected profile no longer exists
-    const profileIds = Object.keys(this.profiles ?? {})
-    const currentProfileId = this.settings.currentProfile
+    const profileIds = keys(this.state.profiles ?? {})
+    const currentProfileId = this.state.settings.currentProfile
     if (!currentProfileId || !profileIds.includes(currentProfileId)) {
-      this.settings.currentProfile = profileIds[0]
+      this.state.settings.currentProfile = profileIds[0]
     }
 
-    return this.settings
+    return this.state.settings
   }
 
-  protected async loadTemplates(): Promise<{ [id: string]: ProfileInfo }> {
+  protected async loadTemplates(): Promise<Profiles> {
     console.debug("Loading profile templates")
 
     let nTemplates = 0
-    this.templates = {}
+    this.state.templates = {}
 
     const templatesPath = this.getTemplatesPath()
     await createIfMissing(templatesPath)
@@ -1702,9 +1733,9 @@ export class Application {
     for (const entry of entries) {
       const format = path.extname(entry.name) as ConfigFormat
       if (entry.isFile() && Object.values(ConfigFormat).includes(format)) {
-        const profileId = TEMPLATE_PREFIX + path.basename(entry.name, format)
+        const profileId = `${TEMPLATE_PREFIX}${path.basename(entry.name, format)}` as ProfileID
         const profilePath = path.join(templatesPath, entry.name)
-        if (this.templates[profileId]) {
+        if (this.state.templates[profileId]) {
           console.warn(`Duplicate profile template '${entry.name}'`)
           continue
         }
@@ -1713,7 +1744,7 @@ export class Application {
           const data = await readConfig<ProfileData>(profilePath)
           const profile = fromProfileData(profileId, data)
           profile.format = format
-          this.templates[profileId] = profile
+          this.state.templates[profileId] = profile
           nTemplates++
         } catch (error) {
           console.warn(`Invalid profile template '${entry.name}'`, error)
@@ -1724,15 +1755,17 @@ export class Application {
     console.debug(`Loaded ${nTemplates} profile templates`)
     this.sendTemplates()
 
-    return this.templates
+    return this.state.templates
   }
 
   /**
    * Opens the game's executable directory in Explorer.
    */
   public async openExecutableDirectory(): Promise<boolean> {
-    if (this.settings?.install?.path) {
-      this.openInExplorer(path.dirname(path.join(this.settings.install.path, FILENAMES.sc4exe)))
+    if (this.state.settings?.install?.path) {
+      this.openInExplorer(
+        path.dirname(path.join(this.state.settings.install.path, FILENAMES.sc4exe)),
+      )
       return true
     }
 
@@ -1750,8 +1783,8 @@ export class Application {
    * Opens the game's installation directory in Explorer.
    */
   public async openInstallationDirectory(): Promise<boolean> {
-    if (this.settings?.install?.path) {
-      this.openInExplorer(this.settings.install.path)
+    if (this.state.settings?.install?.path) {
+      this.openInExplorer(this.state.settings.install.path)
       return true
     }
 
@@ -1761,7 +1794,7 @@ export class Application {
   /**
    * Opens a package's config file in the default text editor.
    */
-  public async openPackageConfig(packageId: string): Promise<boolean> {
+  public async openPackageConfig(packageId: PackageID): Promise<boolean> {
     const packageInfo = this.getPackageInfo(packageId)
     const packagePath = this.getPackagePath(packageId)
     if (packageInfo?.format) {
@@ -1776,8 +1809,8 @@ export class Application {
    * Opens a variant's file in the default text editor.
    */
   public async openPackageFile(
-    packageId: string,
-    variantId: string,
+    packageId: PackageID,
+    variantId: VariantID,
     filePath: string,
   ): Promise<boolean> {
     this.openInExplorer(path.join(this.getVariantPath(packageId, variantId), filePath))
@@ -1787,7 +1820,7 @@ export class Application {
   /**
    * Opens a profile's config file in the default text editor.
    */
-  public async openProfileConfig(profileId: string): Promise<boolean> {
+  public async openProfileConfig(profileId: ProfileID): Promise<boolean> {
     const profileInfo = this.getProfileInfo(profileId)
     if (profileInfo?.format) {
       this.openInExplorer(path.join(this.getProfilesPath(), profileId + profileInfo.format))
@@ -1800,7 +1833,7 @@ export class Application {
   /**
    * Opens a variant's repository in browser, if present.
    */
-  public async openVariantRepository(packageId: string, variantId: string): Promise<boolean> {
+  public async openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     const variantInfo = this.getPackageInfo(packageId)?.variants[variantId]
     if (variantInfo?.repository) {
       await this.openInExplorer(variantInfo.repository)
@@ -1813,7 +1846,7 @@ export class Application {
   /**
    * Opens a variant's homepage in browser, if present.
    */
-  public async openVariantURL(packageId: string, variantId: string): Promise<boolean> {
+  public async openVariantURL(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     const variantInfo = this.getPackageInfo(packageId)?.variants[variantId]
     if (variantInfo?.url) {
       await this.openInExplorer(variantInfo.url)
@@ -1830,22 +1863,17 @@ export class Application {
   /**
    * Recalculates package status/compatibility for the given profile.
    */
-  protected async recalculatePackages(profileId: string): Promise<void> {
+  protected async recalculatePackages(profileId: ProfileID): Promise<void> {
     const profile = this.getProfileInfo(profileId)
-    if (!this.packages || !profile) {
+    if (!this.state.packages || !profile) {
       return
     }
 
-    const { resultingFeatures, resultingStatus } = resolvePackages(
-      this.packages,
-      profile.packages,
-      profile.options,
-      profile.features,
-    )
+    const { resultingFeatures, resultingStatus } = resolvePackages(this.state.packages, profile)
 
-    this.features = resultingFeatures
-    for (const packageId in resultingStatus) {
-      this.packages[packageId].status[profileId] = resultingStatus[packageId]
+    this.state.features = resultingFeatures
+    for (const packageId of keys(resultingStatus)) {
+      this.state.packages[packageId]!.status[profileId] = resultingStatus[packageId] // TODO
     }
 
     this.sendPackages()
@@ -1861,16 +1889,7 @@ export class Application {
     this.assets = {}
     this.externalFiles = new Set()
     this.links = {}
-    this.packages = undefined
-    this.profiles = undefined
-    this.sessions = {}
-    this.settings = undefined
-    this.status = {
-      linker: null,
-      loader: null,
-      ongoingDownloads: [],
-      ongoingExtracts: [],
-    }
+    this.state = getInitialState()
 
     this.tasks.linker.invalidateCache("init")
 
@@ -1884,17 +1903,16 @@ export class Application {
    * @param packages map of package ID to variant ID
    * @returns whether action was successful (i.e. not cancelled by user)
    */
-  public async removePackages(packages: { [packageId: string]: string }): Promise<boolean> {
+  public async removePackages(packages: { [packageId: PackageID]: VariantID }): Promise<boolean> {
     // TODO: ATM this does not clean obsolete files from Downloads sub-folder!
 
     // TODO: ATM we only check the current profile - removing package may break other profiles
     const currentProfile = this.getCurrentProfile()
     if (currentProfile) {
-      const enabledPackageIds: string[] = []
-      for (const packageId in packages) {
+      const enabledPackageIds: PackageID[] = []
+      for (const packageId of keys(packages)) {
         if (currentProfile.packages[packageId]?.enabled) {
-          const packageInfo = this.getPackageInfo(packageId)
-          const packageStatus = packageInfo?.status[currentProfile.id]
+          const packageStatus = this.getPackageStatus(packageId, currentProfile.id)
           if (packageStatus?.variantId === packages[packageId]) {
             enabledPackageIds.push(packageId)
           }
@@ -1914,12 +1932,12 @@ export class Application {
       }
     }
 
-    const promises = Object.entries(packages).map(async ([packageId, variantId]) => {
-      if (!this.assets || !this.packages || !this.profiles) {
+    const promises = entries(packages).map(async ([packageId, variantId]) => {
+      if (!this.assets || !this.state.packages || !this.state.profiles) {
         return false
       }
 
-      const packageInfo = this.packages[packageId]
+      const packageInfo = this.state.packages[packageId]
       if (!packageInfo) {
         return false
       }
@@ -1971,13 +1989,14 @@ export class Application {
           // TODO: This assumes that package is disabled in other profiles
           if (variantInfo.local) {
             if (isOnlyInstalledVariant) {
-              delete this.packages[packageId]
+              delete this.state.packages[packageId]
             } else {
               delete packageInfo.variants[variantId]
-              for (const profileId in packageInfo.status) {
+              for (const profileId of keys(packageInfo.status)) {
                 const packageStatus = packageInfo.status[profileId]
-                if (packageStatus?.variantId === variantId) {
-                  const defaultVariant = getDefaultVariant(packageInfo, this.profiles[profileId])
+                const profileInfo = this.state.profiles[profileId]
+                if (profileInfo && packageStatus?.variantId === variantId) {
+                  const defaultVariant = getDefaultVariant(packageInfo, profileInfo)
                   packageStatus.variantId = defaultVariant.id
                 }
               }
@@ -2000,9 +2019,9 @@ export class Application {
   }
 
   protected setPackageVariantInConfig(
-    profileId: string,
-    packageId: string,
-    variantId: string,
+    profileId: ProfileID,
+    packageId: PackageID,
+    variantId: VariantID,
   ): void {
     const profileInfo = this.getProfileInfo(profileId)
     const packageInfo = this.getPackageInfo(packageId)
@@ -2024,53 +2043,84 @@ export class Application {
     }
   }
 
+  protected sendAuthors(): void {
+    this.sendStateUpdate({
+      authors: this.state.authors,
+    })
+  }
+
   protected sendCategories(): void {
-    this.sendStateUpdate({ categories: this.categories })
+    this.sendStateUpdate({
+      categories: this.state.categories,
+    })
   }
 
   protected sendOptions(): void {
-    this.sendStateUpdate({ globalOptions: this.globalOptions })
+    this.sendStateUpdate({
+      options: this.state.options,
+    })
   }
 
-  protected sendPackage(packageId: string): void {
-    this.sendStateUpdate({ packages: { [packageId]: this.getPackageInfo(packageId) ?? null } })
+  protected sendPackage(packageId: PackageID): void {
+    this.sendStateUpdate({
+      packages: {
+        [packageId]: this.getPackageInfo(packageId) ?? null,
+      },
+    })
   }
 
   protected sendPackages(): void {
-    this.sendStateUpdate({ features: this.features, packages: this.packages })
+    this.sendStateUpdate({
+      features: this.state.features,
+      packages: this.state.packages,
+    })
   }
 
-  protected sendProfile(profileId: string): void {
-    this.sendStateUpdate({ profiles: { [profileId]: this.getProfileInfo(profileId) ?? null } })
+  protected sendProfile(profileId: ProfileID): void {
+    this.sendStateUpdate({
+      profiles: {
+        [profileId]: this.getProfileInfo(profileId) ?? null,
+      },
+    })
   }
 
   protected sendProfiles(): void {
-    this.sendStateUpdate({ profiles: this.profiles })
+    this.sendStateUpdate({
+      profiles: this.state.profiles,
+    })
   }
 
   protected sendSessions(): void {
-    const simtropolisUserId = this.sessions.simtropolis && this.sessions.simtropolis.userId
-    this.sendStateUpdate({ sessions: { simtropolis: { userId: simtropolisUserId } } })
+    // Only send the UserID
+    this.sendStateUpdate({
+      simtropolis: this.state.simtropolis && { userId: this.state.simtropolis.userId },
+    })
   }
 
   protected sendSettings(): void {
-    this.sendStateUpdate({ settings: this.settings })
+    this.sendStateUpdate({
+      settings: this.state.settings,
+    })
   }
 
   protected sendStateReset(): void {
     this.mainWindow?.webContents.postMessage("resetState", this.getState())
   }
 
-  protected sendStateUpdate(data: Partial<ApplicationState>): void {
+  protected sendStateUpdate(data: ApplicationStateUpdate): void {
     this.mainWindow?.webContents.postMessage("updateState", data)
   }
 
   protected sendStatus(): void {
-    this.sendStateUpdate({ status: this.status })
+    this.sendStateUpdate({
+      status: this.state.status,
+    })
   }
 
   protected sendTemplates(): void {
-    this.sendStateUpdate({ templates: this.templates })
+    this.sendStateUpdate({
+      templates: this.state.templates,
+    })
   }
 
   protected setApplicationMenu(): void {
@@ -2183,7 +2233,7 @@ export class Application {
     const session = await simtropolisLogin(this.browserSession)
     if (session) {
       console.info("Logged in to Simtropolis")
-      this.sessions.simtropolis = session
+      this.state.simtropolis = session
       this.sendSessions()
     }
   }
@@ -2194,20 +2244,20 @@ export class Application {
   public async simtropolisLogout(): Promise<void> {
     await simtropolisLogout(this.browserSession)
     console.info("Logged out from Simtropolis")
-    this.sessions.simtropolis = null
+    this.state.simtropolis = null
     this.sendSessions()
   }
 
   /**
    * Checks out a profile by ID.
    */
-  public async switchProfile(profileId: string): Promise<boolean> {
+  public async switchProfile(profileId: ProfileID): Promise<boolean> {
     const profile = this.getProfileInfo(profileId)
-    if (!this.settings || !this.packages || !profile) {
+    if (!this.state.settings || !this.state.packages || !profile) {
       return false
     }
 
-    this.settings.currentProfile = profileId
+    this.state.settings.currentProfile = profileId
 
     this.writeSettings()
     this.recalculatePackages(profileId)
@@ -2259,9 +2309,10 @@ export class Application {
     return this.databaseUpdatePromise
   }
 
-  public async updateProfile(profileId: string, update: ProfileUpdate): Promise<boolean> {
-    const profile = this.getProfileInfo(profileId)
-    if (!this.globalOptions || !this.packages || !profile) {
+  public async updateProfile(profileId: ProfileID, update: ProfileUpdate): Promise<boolean> {
+    const profileInfo = this.getProfileInfo(profileId)
+
+    if (!this.state.options || !this.state.packages || !profileInfo) {
       return false
     }
 
@@ -2279,32 +2330,24 @@ export class Application {
         incompatibleExternals,
         incompatiblePackages,
         installingVariants,
-        resultingConfigs,
-        resultingExternals,
         resultingFeatures,
-        resultingOptions,
+        resultingProfile,
         resultingStatus,
         shouldRecalculate,
-      } = resolvePackageUpdates(
-        this.packages,
-        profile,
-        this.globalOptions,
-        update.packages,
-        update.options,
-        update.features,
-      )
+      } = resolvePackageUpdates(this.state.packages, profileInfo, this.state.options, update)
 
       try {
         if (shouldRecalculate) {
+          // Set enabling/disabling status
           for (const packageId of disablingPackages) {
-            const packageStatus = this.packages[packageId].status[profileId]
+            const packageStatus = this.getPackageStatus(packageId, profileId)
             if (packageStatus) {
               packageStatus.action = "disabling"
             }
           }
 
           for (const packageId of enablingPackages) {
-            const packageStatus = this.packages[packageId].status[profileId]
+            const packageStatus = this.getPackageStatus(packageId, profileId)
             if (packageStatus) {
               packageStatus.action = "enabling"
             }
@@ -2312,8 +2355,11 @@ export class Application {
 
           // Apply implicit variant changes automatically
           if (Object.keys(implicitVariantChanges).length) {
-            for (const packageId in implicitVariantChanges) {
-              update.packages[packageId] = { variant: implicitVariantChanges[packageId][1] }
+            for (const [packageId, variantIds] of entries(implicitVariantChanges)) {
+              update.packages[packageId] = {
+                ...update.packages[packageId],
+                variant: variantIds.new,
+              }
             }
 
             // Recalculate
@@ -2374,10 +2420,7 @@ export class Application {
 
           // Confirm fully-incompatible packages
           if (incompatiblePackages.length) {
-            const packageNames = mapDefined(
-              incompatiblePackages,
-              id => this.getPackageInfo(id)?.name,
-            )
+            const packageNames = incompatiblePackages.map(id => this.getPackageName(id))
 
             // TODO: Use our own modal rather than system one?
             const options: MessageBoxOptions = {
@@ -2412,14 +2455,20 @@ export class Application {
             // Ignore conflicted packages
             if (result.response === 1) {
               for (const packageId of incompatiblePackages) {
-                update.packages[packageId] = { enabled: true }
+                update.packages[packageId] = {
+                  ...update.packages[packageId],
+                  enabled: true,
+                }
               }
             }
 
             // Disable conflicted packages
             if (result.response === 0) {
               for (const packageId of incompatiblePackages) {
-                update.packages[packageId] = { enabled: false }
+                update.packages[packageId] = {
+                  ...update.packages[packageId],
+                  enabled: false,
+                }
               }
 
               // Recalculate
@@ -2429,18 +2478,16 @@ export class Application {
 
           // Confirm explicit variant changes
           if (Object.keys(explicitVariantChanges).length) {
-            const variants = Object.entries(explicitVariantChanges).map(
-              ([packageId, [oldVariantId, newVariantId]]) => {
-                const packageInfo = this.getPackageInfo(packageId)!
-                const oldVariant = packageInfo.variants[oldVariantId]
-                const newVariant = packageInfo.variants[newVariantId]
-                return t("InstallCompatibleVariantsModal:variant", {
-                  newVariantName: newVariant.name,
-                  oldVariantName: oldVariant.name,
-                  packageName: packageInfo.name,
-                })
-              },
-            )
+            const variants = entries(explicitVariantChanges).map(([packageId, variants]) => {
+              const packageInfo = this.getPackageInfo(packageId)! // TODO
+              const oldVariant = packageInfo.variants[variants.old]! // TODO
+              const newVariant = packageInfo.variants[variants.new]! // TODO
+              return t("InstallCompatibleVariantsModal:variant", {
+                newVariantName: newVariant.name,
+                oldVariantName: oldVariant.name,
+                packageName: packageInfo.name,
+              })
+            })
 
             // TODO: Use our own modal rather than system one?
             const options: MessageBoxOptions = {
@@ -2474,15 +2521,21 @@ export class Application {
 
             // Ignore conflicted variants
             if (result.response === 1) {
-              for (const packageId in explicitVariantChanges) {
-                update.packages[packageId] = { variant: explicitVariantChanges[packageId][0] }
+              for (const [packageId, variantIds] of entries(explicitVariantChanges)) {
+                update.packages[packageId] = {
+                  ...update.packages[packageId],
+                  variant: variantIds.old,
+                }
               }
             }
 
             // Switch to compatible variants
             if (result.response === 0) {
-              for (const packageId in explicitVariantChanges) {
-                update.packages[packageId] = { variant: explicitVariantChanges[packageId][1] }
+              for (const [packageId, variantIds] of entries(explicitVariantChanges)) {
+                update.packages[packageId] = {
+                  ...update.packages[packageId],
+                  variant: variantIds.new,
+                }
               }
 
               // Recalculate
@@ -2491,182 +2544,184 @@ export class Application {
           }
 
           // Confirm optional dependencies
-          const optionalDependencies: { [dependencyId: string]: boolean } = {}
+          const optionalDependencies = new Map<PackageID, boolean>()
           for (const packageId of enablingPackages) {
-            const packageInfo = this.getPackageInfo(packageId)
-            const variantInfo = packageInfo?.variants[resultingStatus[packageId].variantId]
-            const dependencyIds = variantInfo?.optional?.filter(
-              dependencyId =>
-                this.getPackageInfo(dependencyId) &&
-                !resultingStatus[dependencyId]?.enabled &&
-                !resultingStatus[dependencyId]?.issues?.length &&
-                optionalDependencies[dependencyId] === undefined,
-            )
+            const packageInfo = this.requirePackageInfo(packageId)
+            const variantInfo = this.requireCurrentVariant(packageId, resultingStatus[packageId])
+            const dependencyIds = variantInfo?.optional?.filter(dependencyId => {
+              const dependencyStatus = resultingStatus[dependencyId]
+              const dependencyVariantInfo = this.requireCurrentVariant(
+                dependencyId,
+                dependencyStatus,
+              )
+
+              return (
+                !isEnabled(dependencyStatus) &&
+                !isIncompatible(dependencyVariantInfo, dependencyStatus) &&
+                optionalDependencies.has(dependencyId)
+              )
+            })
 
             if (packageInfo && dependencyIds?.length) {
-              const dependencyNames = mapDefined(dependencyIds, id => this.getPackageInfo(id)?.name)
-
               // TODO: Use our own modal rather than system one?
               const [confirmed] = await this.showConfirmation(
                 packageInfo.name,
                 t("EnableOptionalDependencies:confirmation"),
                 t("EnableOptionalDependencies:description", {
-                  dependencies: dependencyNames.sort(),
+                  dependencies: dependencyIds.map(id => this.getPackageName(id)).sort(),
                   packageName: packageInfo.name,
                 }),
               )
 
               for (const dependencyId of dependencyIds) {
-                optionalDependencies[dependencyId] = confirmed
+                optionalDependencies.set(dependencyId, confirmed)
               }
             }
           }
 
-          if (Object.values(optionalDependencies).some(Boolean)) {
-            for (const packageId in optionalDependencies) {
-              if (optionalDependencies[packageId]) {
-                update.packages[packageId] = { enabled: true }
-              }
+          if (optionalDependencies.size) {
+            for (const [dependencyId, confirmed] of optionalDependencies) {
+              update.packages[dependencyId] ??= {}
+              update.packages[dependencyId].enabled = confirmed
             }
 
             // Recalculate
             return this.updateProfile(profileId, update)
           }
 
-          // Confirm on-enable warnings
+          // Collect warnings
+          const warnings = new Map<string, { packageIds: PackageID[]; warning: PackageWarning }>()
+
+          // On-enable warnings
           for (const packageId of enablingPackages) {
-            const packageInfo = this.getPackageInfo(packageId)
-            const variantInfo = packageInfo?.variants[resultingStatus[packageId].variantId]
-            if (packageInfo && variantInfo?.warnings) {
+            const variantInfo = this.requireCurrentVariant(packageId, resultingStatus[packageId])
+            if (variantInfo.warnings) {
               for (const warning of variantInfo.warnings) {
-                if (!warning.on || warning.on === "enable") {
-                  if (!warning.id || !this.ignoredWarnings.has(warning.id)) {
-                    const packageName = packageInfo.name
+                if (warning.id && this.ignoredWarnings.has(warning.id)) {
+                  continue
+                }
 
-                    // TODO: Use our own modal rather than system one?
-                    const [confirmed, doNotAskAgain] = await this.showConfirmation(
-                      packageInfo.name,
-                      t("EnableWarningModal:confirmation"),
-                      warning.message ?? t(warning.id!, { ns: "Warning", packageName }),
-                      !!warning.id,
-                      "warning",
-                    )
+                if (warning.on && warning.on !== "enable") {
+                  continue
+                }
 
-                    if (doNotAskAgain && warning.id) {
-                      this.ignoredWarnings.add(warning.id)
-                    }
+                const warningId = warning.id ?? warning.message
+                if (!warningId) {
+                  console.warn("Warning has neiher id nor message")
+                  continue
+                }
 
-                    if (!confirmed) {
-                      return false
-                    }
-                  }
+                const existing = warnings.get(warningId)
+                if (existing) {
+                  existing.packageIds.push(packageId)
+                } else {
+                  warnings.set(warningId, { packageIds: [packageId], warning })
                 }
               }
             }
           }
 
-          // Confirm on-disable warnings
+          // On-disable warnings
+          // TODO: Automatically detect disabling lots/mmps, including options?
           for (const packageId of disablingPackages) {
-            const packageInfo = this.getPackageInfo(packageId)
-            const variantInfo = packageInfo?.variants[resultingStatus[packageId].variantId]
-            if (packageInfo && variantInfo?.warnings) {
+            const variantInfo = this.requireCurrentVariant(packageId, resultingStatus[packageId])
+            if (variantInfo.warnings) {
               for (const warning of variantInfo.warnings) {
-                if (warning.on === "disable") {
-                  if (!warning.id || !this.ignoredWarnings.has(warning.id)) {
-                    const packageName = packageInfo.name
+                if (warning.id && this.ignoredWarnings.has(warning.id)) {
+                  continue
+                }
 
-                    // TODO: Use our own modal rather than system one?
-                    const [confirmed, doNotAskAgain] = await this.showConfirmation(
-                      packageInfo.name,
-                      t("DisableWarningModal:confirmation"),
-                      warning.message ?? t(warning.id!, { ns: "Warning", packageName }),
-                      !!warning.id,
-                      "warning",
-                    )
+                if (warning.on !== "disable") {
+                  continue
+                }
 
-                    if (doNotAskAgain && warning.id) {
-                      this.ignoredWarnings.add(warning.id)
-                    }
+                const warningId = warning.id ?? warning.message
+                if (!warningId) {
+                  console.warn("Warning has neiher id nor message")
+                  continue
+                }
 
-                    if (!confirmed) {
-                      return false
-                    }
-                  }
+                const existing = warnings.get(warningId)
+                if (existing) {
+                  existing.packageIds.push(packageId)
+                } else {
+                  warnings.set(warningId, { packageIds: [packageId], warning })
                 }
               }
             }
           }
 
-          if (Object.values(optionalDependencies).some(Boolean)) {
-            for (const packageId in optionalDependencies) {
-              if (optionalDependencies[packageId]) {
-                update.packages[packageId] = { enabled: true }
-              }
+          // TODO: Warnings upon variant switch (e.g. different TGI for MN/DN lots)
+
+          // Confirm warnings
+          for (const { packageIds, warning } of warnings.values()) {
+            const packageNames = packageIds.map(id => this.getPackageName(id)).sort()
+
+            // TODO: Use our own modal rather than system one?
+            const [confirmed, doNotAskAgain] = await this.showConfirmation(
+              t(`WarningModal:title`, {
+                count: packageNames.length - 1,
+                packageName: packageNames[0],
+              }),
+              t(`WarningModal:confirmation.${warning.on ?? "enable"}`),
+              warning.message ?? t(warning.id!, { ns: "Warning", packageNames }),
+              !!warning.id,
+              "warning",
+            )
+
+            if (doNotAskAgain && warning.id) {
+              this.ignoredWarnings.add(warning.id)
             }
 
-            // Recalculate
-            return this.updateProfile(profileId, update)
+            if (!confirmed) {
+              return false
+            }
           }
 
           // If there are packages to install...
           if (Object.keys(installingVariants).length) {
-            /** Assets that will be downloaded */
-            const missingAssets = new Map<string, AssetInfo>()
-
-            // Calculate list of missing assets
-            for (const packageId in installingVariants) {
-              const variantId = installingVariants[packageId]
-              const variantInfo = this.getPackageInfo(packageId)?.variants[variantId]
-              if (variantInfo?.assets) {
-                for (const asset of variantInfo.assets) {
-                  const assetInfo = this.getAssetInfo(asset.id)
-                  if (assetInfo && !missingAssets.has(asset.id)) {
-                    const key = this.getDownloadKey(assetInfo)
-                    const downloaded = await exists(this.getDownloadPath(key))
-                    if (!downloaded) {
-                      missingAssets.set(asset.id, assetInfo)
-                    }
-                  }
-                }
-              }
-            }
-
-            const installingDependencyIds = Object.keys(installingVariants).filter(
-              packageId => !resultingConfigs[packageId]?.enabled,
+            /** Assets required by newly-installed variants */
+            const installingAssets = unique(
+              flatMap(entries(installingVariants), ([packageId, variantId]) => {
+                const assets = this.getVariantInfo(packageId, variantId)?.assets ?? []
+                return mapDefined(assets, assetInfo => this.getAssetInfo(assetInfo.id))
+              }),
             )
 
+            /** Assets that will be downloaded */
+            const missingAssets = installingAssets.filter(assetInfo => {
+              return !assetInfo.downloaded[assetInfo.version]
+            })
+
             // Confirm installation of dependencies
-            if (missingAssets.size) {
-              const assets = Array.from(missingAssets.values())
-              const dependencyNames = mapDefined(
-                installingDependencyIds,
-                id => this.getPackageInfo(id)?.name,
+            if (missingAssets.length) {
+              const dependencyIds = keys(installingVariants).filter(id =>
+                isDependency(resultingStatus[id]),
               )
 
-              const totalSize = assets.reduce(
-                (total, asset) => (asset.size ? total + asset.size : NaN),
-                0,
-              )
+              const totalSize = missingAssets.every(asset => asset.size)
+                ? sumBy(missingAssets, asset => asset.size ?? 0)
+                : undefined
 
               // TODO: Use our own modal rather than system one?
               const [confirmed] = await this.showConfirmation(
                 t("DownloadAssetsModal:title"),
                 t("DownloadAssetsModal:confirmation"),
-                dependencyNames.length
+                dependencyIds.length
                   ? [
                       t("DownloadAssetsModal:descriptionDependencies", {
-                        dependencies: dependencyNames.sort(),
-                        count: dependencyNames.length,
+                        dependencies: dependencyIds.map(id => this.getPackageName(id)).sort(),
+                        count: dependencyIds.length,
                       }),
                       t("DownloadAssetsModal:descriptionAssetsWithDependencies", {
-                        assets: assets.map(asset => asset.id).sort(),
-                        count: assets.length,
+                        assets: missingAssets.map(asset => asset.id).sort(),
+                        count: missingAssets.length,
                         totalSize,
                       }),
                     ].join("\n\n")
                   : t("DownloadAssetsModal:descriptionAssets", {
-                      assets: assets.map(asset => asset.id).sort(),
-                      count: assets.length,
+                      assets: missingAssets.map(asset => asset.id).sort(),
+                      count: missingAssets.length,
                       totalSize,
                     }),
               )
@@ -2678,7 +2733,7 @@ export class Application {
 
             // Install all packages
             await Promise.all(
-              Object.entries(installingVariants).map(([packageId, variantId]) =>
+              entries(installingVariants).map(([packageId, variantId]) =>
                 this.installVariant(packageId, variantId),
               ),
             )
@@ -2689,36 +2744,36 @@ export class Application {
         }
 
         // Apply config changes
-        profile.features = resultingExternals
-        profile.options = resultingOptions
-        profile.packages = resultingConfigs
-        this.features = resultingFeatures
+        Object.assign(profileInfo, resultingProfile)
+        this.state.features = resultingFeatures
 
         // Apply status changes
-        for (const packageId in resultingStatus) {
-          this.packages[packageId].status[profileId] = resultingStatus[packageId]
-        }
+        forEach(this.state.packages, (packageInfo, packageId) => {
+          packageInfo.status[profileId] = resultingStatus[packageId]
+        })
 
         // Run cleaner and linker
         if (shouldRecalculate) {
           for (const packageId of enablingPackages) {
-            const { variantId } = resultingStatus[packageId]
-            await this.cleanVariant(packageId, variantId)
+            const variantInfo = this.requireCurrentVariant(packageId, resultingStatus[packageId])
+            await this.cleanVariant(packageId, variantInfo.id)
           }
 
           this.linkPackages()
         }
       } finally {
-        if (this.packages && shouldRecalculate) {
+        if (this.state.packages && shouldRecalculate) {
+          // Clear disabling status
           for (const packageId of disablingPackages) {
-            const packageStatus = this.packages[packageId].status[profileId]
+            const packageStatus = this.getPackageStatus(packageId, profileId)
             if (packageStatus?.action === "disabling") {
               delete packageStatus.action
             }
           }
 
+          // Clear enabling status
           for (const packageId of enablingPackages) {
-            const packageStatus = this.packages[packageId].status[profileId]
+            const packageStatus = this.getPackageStatus(packageId, profileId)
             if (packageStatus?.action === "enabling") {
               delete packageStatus.action
             }
@@ -2730,7 +2785,7 @@ export class Application {
     }
 
     // Other changes can be applied directly
-    profile.name = update.name || profile.name
+    profileInfo.name = update.name || profileInfo.name
 
     this.writeProfile(profileId)
     return true
@@ -2746,7 +2801,7 @@ export class Application {
     this.sendPackage(packageInfo.id)
   }
 
-  protected async writeProfile(profileId: string): Promise<void> {
+  protected async writeProfile(profileId: ProfileID): Promise<void> {
     return this.tasks.writer.queue(
       `profile:${profileId}`,
       async context => {
@@ -2781,7 +2836,7 @@ export class Application {
     return this.tasks.writer.queue(
       "settings",
       async context => {
-        const settings = this.settings
+        const settings = this.state.settings
         if (!settings) {
           return
         }

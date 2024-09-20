@@ -315,10 +315,294 @@ assets:
     authors:
       - mikeseith
     category: automata
+    dependencies: []
+    description: "<body>
+
+      \                           \
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+
+      \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
+      style=\"\" width=\"34\" height=\"53\">
+
+      \t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t<p>\r
+
+      \tThis mod replaces most of the game's default automata with 98 European cars.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \t<span style=\"font-size:16px;\"><strong>Low wealth automata:</strong></span>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tFiat Multipla----------------replaces----------the hatchback\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tCitroen C2-----------------replaces----------the cheap wagon\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tRenault Master/Kangoo----replaces----------old pickup/regular pickup\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tVolkswagen Fox-----------replaces----------quad pickup\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tRenault Clio----------------replaces----------cheap sedan\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t2 door and 4 door Smart cars\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<span style=\"font-size:16px;\"><strong>Medium wealth automata:</strong></span>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tFiat Ulysse----------------replaces----------mini van\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tRenault Megane coupe----replaces----------muscle car\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tRenault Scenic------------replaces----------sport coupe\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tRenault Megane sedan----replaces----------black-top coupe\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tVolkswagen Touran------replaces----------SUV\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tFiat Stilo wagon----------replaces----------squareback wagon\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tRenault Laguna-----------replaces----------large SUV\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tFiat Barchetta------------replaces----------commuter car\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tRenault Traffic van\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<span style=\"font-size:16px;\"><strong>High wealth automata:</strong></span>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tMercedes SLK---------replaces---------Coupe\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tPorsche 911------------replaces---------old Porsche\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tBMW 525i-------------replaces---------old Porsche\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tMercedes S Class-----replaces---------Luxury sedan\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tVolvo XC90 SUV\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t244 family props are included.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThere is a file that includes 3 German taxis.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \tAll 7 dat files go into your game's plugin folder.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThis is for all you European city builders out there...have fun.\r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: MS European car replacement mod.zip
+    files:
+      - MS EuroMod high wealth automata.dat
+      - MS EuroMod low wealth automata.dat
+      - MS EuroMod medium wealth automata.dat
+      - ms family high wealth eurocar props.dat
+      - ms family low wealth eurocar props.dat
+      - ms family medium wealth eurocar props.dat
+      - MS german taxis.dat
+      - readme.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0019/a803de341a2f9b600298b3bda3c27705-euro%201%20j.JPG
+      - https://www.simtropolis.com/objects/screens/0019/a803de341a2f9b600298b3bda3c27705-euro%202%20j.JPG
     lastModified: 2005-07-06T15:57:39Z
     name: European Car Replacement Mod
+    sha256: cb434bc6b02277040f49235146a8652065a6094fcdaf515d02a84c2668d1bad1
+    size: 2215668
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2005/thumb-a803de341a2f9b600298b3bda3c27705-euro%201%20j.JPG
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 5118348
     url: https://community.simtropolis.com/files/file/12973-european-car-replacement-mod/
+    version: "1.0"
   simtropolis/13217-cs-automata-order-107:
     authors:
       - S.A.C
@@ -595,10 +879,109 @@ assets:
     authors:
       - mikeseith
     category: automata
+    dependencies:
+      - simtropolis/16257-euro-traffic-generator
+      - simtropolis/12973-european-car-replacement-mod
+    description: "<body>
+
+      \                           \
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+
+      \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
+      style=\"\" width=\"34\" height=\"53\">
+
+      \t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t<p align=\"center\">\r
+
+      \t<span style=\"color:rgb(0,0,153);\">European car automata an family prop add-ons<br>\r
+
+      \t<br>\r
+
+      \t<span style=\"color:#993300;\"><strong>This file has been updated June 24, 2006 to be compatible with the<br>\r
+
+      \t<a href=\"https://community.simtropolis.com/files/file/16257-euro-traffic-generator/\" rel=\"\">Euro traffic generator</a></strong></span></span><br>\r
+
+      \t<br>\r
+
+      \tThese files include all the cars that were released in my<br>\r
+
+      \t<a href=\"https://community.simtropolis.com/files/file/12973-european-car-replacement-mod/\" rel=\"\"><strong>European car replacement mod</strong></a><br>\r
+
+      \t<br>\r
+
+      \t<span style=\"font-family:arial, helvetica, sans-serif;\">These cars have been modified to be new instances (they no longer replace any maxis cars) They run around your city in addition to all
+      the Maxis default cars.</span><br>\r
+
+      \t<br>\r
+
+      \t<span style=\"font-family:arial, helvetica, sans-serif;\">In addition to the cars in the European car replacement mod, there are now 2 new cars. Renault Twingos and Moduses. There are also new
+      family props that include the new renaults.</span><br>\r
+
+      \t<br>\r
+
+      \t<span style=\"font-family:arial, helvetica, sans-serif;\">Many of these cars will be able to spawn at my new Renault and Fiat Dealerships. Check the STEX for them very soon.</span><br>\r
+
+      \t<br>\r
+
+      \t<span style=\"font-weight:bold;font-family:arial, helvetica, sans-serif;\">NOTE:</span><br>\r
+
+      \t<span style=\"font-family:arial, helvetica, sans-serif;\">All of the files beginning with MS family... are family prop files<br>\r
+
+      \tAll of the files ending in...new instances... are the automata files </span><br style=\"\">\r
+
+      \t<span style=\"font-family:arial, helvetica, sans-serif;\">All files go into your game's plugin folder.</span>\r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: European car new instances1.zip
+    files:
+      - BMW 525is new instances.dat
+      - fiat stilos wagons new instances.dat
+      - fiat ulysses new instances.dat
+      - MB slks new instances.dat
+      - mercedes s classs new instances.dat
+      - MS citroen c2 new instances.dat
+      - ms family cheap singles modus and twingo.dat
+      - ms family multi euro mod ad-on high wealth.dat
+      - ms family multi euro mod ad-on low wealth.dat
+      - ms family multi euro mod ad-on medium wealth.dat
+      - MS fiat barchetta new instances.dat
+      - MS Fiat Multipla new instances.dat
+      - MS german taxis additional instance.dat
+      - MS Renault Clio new instances.dat
+      - MS renault kangoo new instances.dat
+      - MS renault megane coupes new instances.dat
+      - MS renault megane sedans new instances.dat
+      - MS Smart cars new instances.dat
+      - porsche 911s new instances.dat
+      - renault dealer truck.dat
+      - renault lagunas new instances.dat
+      - renault master vans new instances.dat
+      - renault moduses.dat
+      - renault scenics new instances.dat
+      - renault trafic vans new instances.dat
+      - renault twingos.dat
+      - volvo suvs new instances.dat
+      - VW foxes new instances.dat
+      - VW tourans new instances.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0007/329e3e24abd4b3016c4b321b51ad47d2-00euro%20adon%201.JPG
+      - https://www.simtropolis.com/objects/screens/0007/329e3e24abd4b3016c4b321b51ad47d2-00euro%20adon%202.JPG
     lastModified: 2006-06-24T20:07:51Z
     name: European cars Automata and family props new instances
+    sha256: def520f672a10c7ae62ff657834c65771e13c7577a6a10dd9bae7fe7a4902921
+    size: 1382200
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2006/thumb-329e3e24abd4b3016c4b321b51ad47d2-00euro%20adon%201.JPG
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 2876472
     url: https://community.simtropolis.com/files/file/14400-european-cars-automata-and-family-props-new-instances/
+    version: "1.0"
   simtropolis/14421-s12-light-rail-company-new-york-tram:
     authors:
       - screamingman12
@@ -5654,7 +6037,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5820,7 +6209,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -6224,4 +6619,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-3df582124a36b37eaad9173cb060180b-Capital%20City-May.%2014,%20001058459981.JPG
     url: https://community.simtropolis.com/files/file/569-the-cow/
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:22:00.820Z

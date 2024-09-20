@@ -21,13 +21,15 @@ export interface AssetData {
 
 /** Loaded asset data */
 export interface AssetInfo extends AssetData {
+  /** Downloaded versions */
+  downloaded: { [version in string]?: boolean }
   /** Asset ID */
   id: AssetID
   url: string
-  version?: string
+  version: string
 }
 
 /** Loaded assets */
-export interface Assets {
-  [assetId: AssetID]: AssetInfo | undefined
+export type Assets = {
+  [assetId in AssetID]?: AssetInfo
 }

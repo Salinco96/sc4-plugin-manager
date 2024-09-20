@@ -651,10 +651,55 @@ assets:
     authors:
       - LBT Team
     category: dependencies
+    dependencies:
+      - simtropolis/21771-lbt-mega-textures-vol01-v3
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>
+      	This file is now obsolete, only use if you have to follow dependencies; you can find the newer release here:
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed979427237" scrolling="no"
+      src="https://community.simtropolis.com/files/file/21771-lbt-mega-texture-pack-vol02/?do=embed" style="height:385px;max-width:502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	A texture dependecy pack for current and future <abbr title="Latin American BAT Team">LBT</abbr> creations.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:12px;">Updated 24th August 2017 - updated file obsolete message + fixed dependency link</span>
+      </p>
+
+      						</body>
+    filename: lbt_texture_pack_1.zip
+    files:
+      - LBT_Texture_Pack1.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0021/bcb1a2ea0184809569e69f40d46dd2b6-797_1.jpg
     lastModified: 2017-08-24T10:12:36Z
     name: LBT Texture Pack Vol 01
+    sha256: 142afce1a6f30a3c6a57d4e62fa0585be0eb5957380d1744a0fd4c200e13d12c
+    size: 1084904
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2009/thumb-bcb1a2ea0184809569e69f40d46dd2b6-797_1.jpg
+    timestamp: 2024-09-13T12:10:28.279Z
+    uncompressed: 1091482
     url: https://community.simtropolis.com/files/file/20034-lbt-texture-pack-vol-01/
+    version: "1.0"
   simtropolis/20165-bsc-spa-essentials-2:
     authors:
       - spa
@@ -1488,4 +1533,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2005/thumb-2ac8a76943603e922d27c9553c800ffa-product_image.jpg
     url: https://community.simtropolis.com/files/file/4526-peg-random-woods-v206/
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:10:28.279Z

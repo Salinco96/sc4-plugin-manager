@@ -2866,7 +2866,11 @@ assets:
 
 
 
+
+
       							
+
+
 
 
 
@@ -2994,6 +2998,8 @@ assets:
 
 
 
+
+
       							
       <p>
       	Set of 5 Fagus Trees Seasonal <abbr title="Mayor Mode Ploppable">MMP</abbr> or Evergreen <abbr title="Mayor Mode Ploppable">MMP</abbr><br>
@@ -3089,7 +3095,11 @@ assets:
 
 
 
+
+
       							
+
+
 
 
 
@@ -4151,7 +4161,11 @@ assets:
 
 
 
+
+
       							
+
+
 
 
 
@@ -4525,6 +4539,8 @@ assets:
 
 
 
+
+
       							
       <p>
       	<strong>Pinus nigra</strong> is a large coniferous evergreen tree, growing to 20–55 metres (66–180 feet) high at maturity and spreading to 6 to 12 m (20 to 39 ft) wide. The bark is gray to yellow-brown, and is widely split by flaking fissures into scaly plates, becoming increasingly fissured with age. The leaves ('needles') are thinner and more flexible in western populations.<br>
@@ -4829,6 +4845,8 @@ assets:
     description: >-
       <body>
                                   
+
+
 
 
 
@@ -7664,7 +7682,11 @@ assets:
 
 
 
+
+
       							
+
+
 
 
 
@@ -10557,6 +10579,251 @@ assets:
     uncompressed: 94044
     url: https://community.simtropolis.com/files/file/36396-region-thumbnail-fix-dll/
     version: 1.0.0
+  simtropolis/36421-bsc-vip-girafe-plane-trees:
+    authors:
+      - Girafe
+    category: graphics
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+      							
+
+
+      							
+      <table border="1" cellpadding="2" cellspacing="2" style="background-color:#ffffff;text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<big><font size="-1"><big><span style="color:#ffffff;">Plane trees by Girafe</span></big></font></big>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">This is a set of plane trees flora for the mayor menu. You can find these creations at the beginning of the list of this menu. This plane trees series includes evergreen &amp; seasonal versions.<br>
+      	<br>
+      	These trees are available in Lot Editor props section under the name:</span>
+      </p>
+
+
+      <ul style="color:#000000;font-size:medium;">
+      	<li>
+      		<span>Grfe_plane_tree...</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	<span lang="en-us" style="color:#000000;font-size:medium;" xml:lang="en-us">The <abbr title="Lot Editor">LE</abbr> and MM props have been datpacked into two files:<span> </span><span>Grfe_props_pack_LE_plane_trees.dat</span><span> </span>(for the Lot Editor files) and<span> </span><span>Grfe_props_pack_MM_plane_trees.dat</span><span> </span>(for the <abbr title="Mayor Mode Ploppables">MMPs</abbr>).</span><br style="color:#000000;font-size:medium;" >
+      	<br>
+      	<span style="color:#000000;font-size:medium;">Special thanks to<span> </span><span>Orange</span>,<span> </span><span>Simfox</span>,<span> </span><span>Badsim</span>,<span> </span><span>Carl</span><span> </span>and all<span> </span><span><abbr title="BATT Squad Certification">BSC</abbr> members</span>.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">MOD Details and information</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<span style="color:#000000;font-size:medium;">                          </span><br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">Mayor mode version / props</span><br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">  </span>
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td>
+      				Menu position
+      			</td>
+      			<td>
+      				UP mayor menu
+      			</td>
+      		</tr>
+      		<tr>
+      			<td style="background-color:#cccccc;">
+      				Plop cost
+      			</td>
+      			<td style="background-color:#cccccc;">
+      				$ 0
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Buldoze cost
+      			</td>
+      			<td>
+      				$ 0
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">Note: for fitting with other seasonal items, props need to be planted the<span> </span></span><span style="color:#000000;font-size:medium;">1st September.</span><br>
+      	<br>
+      	<span style="color:#000000;font-size:medium;">We do not recommand you to use seasonal trees on growable LOTs.</span><br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">We do not recommand you to use the props located in Flora's section under the <abbr title="Lot Editor">LE</abbr>.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">Compatibility</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">This download is only compatible with<span> </span></span><span style="color:#000000;font-size:medium;">SimCity 4 Rush Hour</span><span style="color:#000000;font-size:medium;"><span> </span>or<span> </span></span><span style="color:#000000;font-size:medium;">SimCity 4 Deluxe.</span><br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">    </span>
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">Installation</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<b style="color:#000000;font-size:medium;"><span lang="en-us" xml:lang="en-us">Installation:</span></b><span lang="en-us" style="color:#000000;font-size:medium;" xml:lang="en-us"><span> </span>copy/extract the<span> </span><span><abbr title="BATT Squad Certification">BSC</abbr></span><span> </span>parent folder into your plugins. If you extracted the<span> </span><span>_Documents</span><span> </span>folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</span>
+      </p>
+
+
+      <p style="color:#000000;font-size:medium;">
+      	<b><span lang="en-us" xml:lang="en-us">Un-Installing:<span> </span></span></b><span lang="en-us" xml:lang="en-us">To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</span>
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">Dependencies</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">There is one dependency concerning the<span> </span><span>flora tuning parameters:</span></span><br style="color:#000000;font-size:medium;" >
+      	<br style="color:#000000;font-size:medium;" >
+      	<a href="http://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2612" style="font-size:medium;" rel="external nofollow"><span><abbr title="BATT Squad Certification">BSC</abbr> Seasonal Flora Patch for All Terrain Mods</span></a><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="color:#ffffff;text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				Notes about Nightlighting Effects
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;"><span>Night light fix:</span><span> </span>you will not see any lighting effects on any custom buildings unless these two updates are installed. First, install the<span> </span><a href="http://sc4devotion.com/forums/index.php?page=7" rel="external nofollow"><span>EP1-Update 1 1.1.638</span></a><span> </span>for Rush Hour/SimCity 4 Deluxe to see nightlights. Then install the<span> </span><a href="http://sc4devotion.com/forums/index.php?page=14" rel="external nofollow"><span>SC4-Update 1.1.640.</span></a><span> </span>You may have to accept the End User Licence Agreement.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">Disclaimer</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">The usage of this download is on your own risk. I try to test my mod extensively, so they should work properly, but errors may still exist. Feel free to modify the mod for yourself and show them in your city journals, but please don't distribute them without asking first.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="color:#ffffff;text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span>Credits &amp; Feedback</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">Thank you all for having downloaded this mod, I hope it will give you satisfaction. For comments, questions and/or supports, please see<span> </span><a href="http://sc4devotion.com/forums/index.php?topic=8378.0" rel="external nofollow">my thread in SC4Devotion.</a></span><br style="color:#000000;font-size:medium;" >
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;"> </span>
+      </p>
+
+      						</body>
+    filename: BSC-VIP Girafe plane trees.zip
+    files:
+      - BSC/girafe/Plane trees/Grfe_Plane_trees_evergreen.dat
+      - BSC/girafe/Plane trees/Grfe_Plane_trees_seasonal.dat
+      - BSC/girafe/Plane trees/Grfe_props_pack_LE_plane_trees.dat
+      - BSC/girafe/Plane trees/Grfe_props_pack_MM_plane_trees.dat
+      - _Documents/Images/Banniere_VIP.jpg
+      - _Documents/Images/Icon_evergreen.jpg
+      - _Documents/Images/Icon_seasonal.jpg
+      - _Documents/readme_plane_trees.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/Icon_evergreen.jpg.89dda09e4ec28ab2f153cbca05fe5b9d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/Icon_seasonal.jpg.d7e6634fd83e59feb37021016d3e80be.jpg
+    lastModified: 2024-08-31T18:44:59Z
+    name: BSC-VIP Girafe Plane trees
+    sha256: c9d006ccaf52edb3e2f2d5b7690bcbdf9c46f0b24dcbf51ec6085cf77b992bb5
+    size: 7139698
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/Icon_evergreen.thumb.jpg.26c0b378e0b1111d411ba01923c2bcc2.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 8395606
+    url: https://community.simtropolis.com/files/file/36421-bsc-vip-girafe-plane-trees/
+    version: 1.0.0
   simtropolis/3651-navigation-buoys:
     authors:
       - Odd from Sweden
@@ -10762,4 +11029,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-43c2c618fac6b7de4fc16966c4966243-SW_Hydro%20Dam.jpg
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:10:28.279Z

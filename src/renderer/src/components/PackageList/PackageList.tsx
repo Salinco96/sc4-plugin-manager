@@ -1,5 +1,6 @@
 import { useRef } from "react"
 
+import { PackageID } from "@common/packages"
 import { Page, useHistory } from "@utils/navigation"
 import { PACKAGE_LIST_ITEM_BASE_SIZE, usePackageListItemSize } from "@utils/packages"
 
@@ -21,7 +22,7 @@ export function PackageList({ packageIds }: { packageIds: string[] }): JSX.Eleme
   }
 
   return (
-    <VirtualList<string>
+    <VirtualList<PackageID>
       baseSize={PACKAGE_LIST_ITEM_BASE_SIZE}
       items={packageIds}
       itemComponent={PackageListItem}

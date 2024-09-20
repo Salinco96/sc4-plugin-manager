@@ -4,7 +4,12 @@ import { config } from "dotenv"
 import { glob } from "glob"
 
 import { AssetData, AssetID } from "@common/assets"
-import { ConfigFormat, LotData, PackageAsset, PackageData, VariantData } from "@common/types"
+import { AuthorData, AuthorID } from "@common/authors"
+import { PackageID } from "@common/packages"
+import { ConfigFormat, LotData, PackageAssetData, PackageData, VariantData } from "@common/types"
+import { forEachAsync, keys } from "@common/utils/objects"
+import { isString } from "@common/utils/types"
+import { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -63,6 +68,12 @@ runIndexer({
   sources: [SC4EVERMORE, SIMTROPOLIS],
 })
 
+async function loadAuthorsFromDB(): Promise<{ [authorId: AuthorID]: AuthorData }> {
+  console.debug(`Loading authors...`)
+  const config = await loadConfig<{ [authorId: AuthorID]: AuthorData }>(dbDir, "authors")
+  return config?.data ?? {}
+}
+
 async function loadAssetsFromDB(): Promise<{
   [sourceId: string]: { [assetId: string]: AssetData }
 }> {
@@ -80,16 +91,16 @@ async function loadAssetsFromDB(): Promise<{
 }
 
 async function loadPackagesFromDB(): Promise<{
-  [authorId: string]: { [packageId: string]: PackageData }
+  [authorId: string]: { [packageId in PackageID]?: PackageData }
 }> {
-  const configs: { [authorId: string]: { [packageId: string]: PackageData } } = {}
+  const configs: { [authorId: string]: { [packageId in PackageID]?: PackageData } } = {}
 
   const filePaths = await glob("*.yaml", { cwd: dbPackagesDir, nodir: true })
   for (const filePath of filePaths) {
     const authorId = path.basename(filePath, path.extname(filePath))
     console.debug(`Loading packages from ${authorId}...`)
     const fullPath = path.join(dbPackagesDir, filePath)
-    const data = await readConfig<{ [packageId: string]: PackageData }>(fullPath)
+    const data = await readConfig<{ [packageId in PackageID]?: PackageData }>(fullPath)
     configs[authorId] = data
 
     // for (const packageData of Object.values(data)) {
@@ -145,8 +156,8 @@ async function runIndexer(options: IndexerOptions) {
     return getSource(assetId).getDownloadUrl(assetId, variant)
   }
 
-  function getDefaultPackageID(assetId: string, entry: IndexerBaseEntry): string {
-    return `${toID(entry.authors[0])}/${toID(assetId.split("/")[1].replace(/^\d+-/, ""))}`
+  function getDefaultPackageID(assetId: string, entry: IndexerBaseEntry): PackageID {
+    return `${toID(entry.authors[0])}/${toID(assetId.split("/")[1].replace(/^\d+-/, ""))}` as PackageID
   }
 
   function getDependencyAssetID(originalAssetId: string): string {
@@ -178,11 +189,11 @@ async function runIndexer(options: IndexerOptions) {
     return process.env[`INDEXER_EXE_PATH_${exe.toUpperCase()}`] || exe
   }
 
-  function getPackageID(assetId: string, entry: IndexerEntry, variant?: string): string {
+  function getPackageID(assetId: string, entry: IndexerEntry, variant?: string): PackageID {
     const overrides = getOverrides(assetId, variant)
 
     if (overrides?.packageId) {
-      return overrides.packageId
+      return overrides.packageId as PackageID
     }
 
     return getDefaultPackageID(assetId, entry)
@@ -200,37 +211,37 @@ async function runIndexer(options: IndexerOptions) {
     return (variant ? `${assetId}#${variant}` : assetId) as AssetID
   }
 
-  function getVariantID(assetId: string, entry: IndexerEntry, variant?: string): string {
+  function getVariantID(assetId: string, entry: IndexerEntry, variant?: string): VariantID {
     const overrides = getOverrides(assetId, variant)
 
     if (overrides?.variantId) {
-      return overrides.variantId
+      return overrides.variantId as VariantID
     }
 
     const variantEntry = variant ? entry.variants?.[variant] : entry
     if (variantEntry?.filename) {
       if (variantEntry.filename.match(/\b(dn|dark\s?nite)\b/i)) {
-        return "darknite"
+        return "darknite" as VariantID
       }
 
       if (variantEntry.filename.match(/\b(mn|maxis\s?nite)\b/i)) {
-        return "default"
+        return "default" as VariantID
       }
 
       if (variant && variantEntry.filename.match(/\b(rhd)\b/i)) {
-        return "rhd"
+        return "rhd" as VariantID
       }
 
       if (variant && variantEntry.filename.match(/\b(hd)\b/i)) {
-        return "hd"
+        return "hd" as VariantID
       }
 
       if (variant) {
-        return toID(variantEntry.filename.split(".").slice(0, -1).join("."))
+        return toID(variantEntry.filename.split(".").slice(0, -1).join(".")) as VariantID
       }
     }
 
-    return "default"
+    return "default" as VariantID
   }
 
   function getOverrides(assetId: string, variant?: string): IndexerOverride | null | undefined {
@@ -324,6 +335,7 @@ async function runIndexer(options: IndexerOptions) {
 
   const resolvingEntries = new Set<string>()
   const resolvingPackages = new Set<string>()
+  const dbAuthors = await loadAuthorsFromDB()
   const dbAssetsConfigs = await loadAssetsFromDB()
   const dbPackagesConfigs = await loadPackagesFromDB()
 
@@ -339,17 +351,41 @@ async function runIndexer(options: IndexerOptions) {
   }
 
   for (const authorId in dbPackagesConfigs) {
-    for (const packageId in dbPackagesConfigs[authorId]) {
-      const packageData = dbPackagesConfigs[authorId][packageId]
+    await forEachAsync(dbPackagesConfigs[authorId], async (packageData, packageId) => {
       await resolvePackage(packageId, packageData)
+    })
+  }
+
+  await writeConfig(dbDir, "authors", dbAuthors, ConfigFormat.YAML)
+
+  function getAuthorId(authorName: string): AuthorID {
+    const lowercased = authorName.toLowerCase()
+    const rawId = toID(authorName) as AuthorID
+
+    const existingId = keys(dbAuthors).find(authorId => {
+      return (
+        authorId === rawId ||
+        dbAuthors[authorId].name.toLowerCase() === lowercased ||
+        dbAuthors[authorId].alias?.some(alias => alias.toLowerCase() === lowercased)
+      )
+    })
+
+    if (existingId) {
+      return existingId
     }
+
+    dbAuthors[rawId] = {
+      name: authorName,
+    }
+
+    return rawId
   }
 
   async function resolvePackageAsset(
     packageId: string,
     variantId: string | undefined,
-    asset: PackageAsset,
-  ) {
+    asset: PackageAssetData,
+  ): Promise<void> {
     const sourceId = asset.id.split("/")[0]
     if (!dbAssetsConfigs[sourceId]?.[asset.id]) {
       const [entryId, variant] = asset.id.split("#")
@@ -371,12 +407,13 @@ async function runIndexer(options: IndexerOptions) {
   ) {
     if (variantData.assets) {
       for (const asset of variantData.assets) {
-        await resolvePackageAsset(packageId, variantId, asset)
+        await resolvePackageAsset(packageId, variantId, isString(asset) ? { id: asset } : asset)
       }
     }
 
     if (variantData.dependencies) {
-      for (const dependencyId of variantData.dependencies) {
+      for (const dependencyInfo of variantData.dependencies) {
+        const dependencyId = isString(dependencyInfo) ? dependencyInfo : dependencyInfo.id
         const authorId = dependencyId.split("/")[0]
         const dependencyData = dbPackagesConfigs[authorId]?.[dependencyId]
         if (dependencyData) {
@@ -403,10 +440,9 @@ async function runIndexer(options: IndexerOptions) {
     await resolvePackageVariant(packageId, undefined, packageData)
 
     if (packageData.variants) {
-      for (const variantId in packageData.variants) {
-        const variantData = packageData.variants[variantId]
+      await forEachAsync(packageData.variants, async (variantData, variantId) => {
         await resolvePackageVariant(packageId, variantId, variantData)
-      }
+      })
     }
   }
 
@@ -572,6 +608,7 @@ async function runIndexer(options: IndexerOptions) {
             async exePath(exe) {
               return getExePath(exe)
             },
+            url: downloadUrl,
           })
 
           variantEntry.filename = filename
@@ -613,7 +650,9 @@ async function runIndexer(options: IndexerOptions) {
       const dbPackagesConfig = dbPackagesConfigs[authorId] ?? {}
       const packageData = dbPackagesConfig[packageId] ?? {}
 
-      if (outdated || !packageData.variants?.[variantId]) {
+      const lastModified = packageData.variants?.[variantId]?.lastModified
+
+      if (!lastModified || lastModified < entry.lastModified) {
         const dbAssetsConfig = dbAssetsConfigs[source.id] ?? {}
         const assetData = dbAssetsConfig[variantAssetId] ?? {}
 
@@ -644,6 +683,8 @@ async function runIndexer(options: IndexerOptions) {
 
         const variantData = (packageData.variants[variantId] ??= {})
 
+        variantData.lastModified = entry.lastModified
+
         const dependencies = Array.from(
           new Set([
             ...(packageData.dependencies ?? []),
@@ -653,7 +694,7 @@ async function runIndexer(options: IndexerOptions) {
               if (dependencyEntry) {
                 return getPackageID(dependencyId, dependencyEntry)
               } else {
-                return dependencyId
+                return dependencyId as PackageID
               }
             }) ?? []),
           ]),
@@ -662,7 +703,7 @@ async function runIndexer(options: IndexerOptions) {
         const deprecated = getCategory(assetId).id.includes("obsolete")
 
         if (variantId === "default") {
-          packageData.authors ??= entry.authors
+          packageData.authors ??= entry.authors.map(getAuthorId)
 
           if (dependencies?.length) {
             packageData.dependencies = dependencies
@@ -686,7 +727,10 @@ async function runIndexer(options: IndexerOptions) {
 
           variantData.name = "Default"
         } else {
-          const authors = entry.authors.filter(author => !packageData.authors?.includes(author))
+          const authors = entry.authors
+            .map(getAuthorId)
+            .filter(author => !packageData.authors?.includes(author))
+
           if (authors.length) {
             variantData.authors ??= authors
           }
@@ -752,7 +796,7 @@ async function runIndexer(options: IndexerOptions) {
             hd: "HD",
             rhd: "Right-Hand Drive",
             sd: "SD",
-          }[variantId]
+          }[variantId as string] // TODO
 
           variantData.name ?? entry.name
         }
@@ -760,13 +804,19 @@ async function runIndexer(options: IndexerOptions) {
         variantData.assets ??= []
         variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
 
-        let variantAsset = variantData.assets.find(
-          variantAsset => variantAsset.id === variantAssetId,
+        let variantAsset = variantData.assets.find(variantAsset =>
+          isString(variantAsset)
+            ? variantAsset === variantAssetId
+            : variantAsset.id === variantAssetId,
         )
 
         if (!variantAsset) {
           variantAsset = { id: variantAssetId }
           variantData.assets.push(variantAsset)
+        } else if (isString(variantAsset)) {
+          const index = variantData.assets.indexOf(variantAsset)
+          variantAsset = { id: variantAssetId }
+          variantData.assets.splice(index, 1, variantAsset)
         }
 
         const sc4Extensions = [
@@ -789,7 +839,7 @@ async function runIndexer(options: IndexerOptions) {
 
         const lots: { [lotId: string]: LotData } = {}
         for (const file of sc4Files) {
-          const filename = file.match(/([^\\/]+)\.sc4lot$/i)?.[1]
+          const filename = file.match(/([^\\/]+\.sc4lot)$/i)?.[1]
           if (filename) {
             const size = filename.match(/[-_ ](\d+x\d+)[-_ ]/i)?.[1]
             const stage = filename.match(/((?:R|CO|CS)\$+|\bI-?(?:D|M|HT)\$*)(\d+)[-_ ]/i)?.[2]

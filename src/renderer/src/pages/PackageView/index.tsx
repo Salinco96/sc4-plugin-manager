@@ -2,13 +2,14 @@ import { ArrowBack as BackIcon } from "@mui/icons-material"
 import { IconButton, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
+import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageHeader } from "@components/PackageHeader"
 import { useHistory } from "@utils/navigation"
 
 import { PackageViewTabs } from "./PackageViewTabs/PackageViewTabs"
 
-function PackageView({ packageId }: { packageId: string }): JSX.Element | null {
+function PackageView({ packageId }: { packageId: PackageID }): JSX.Element | null {
   const history = useHistory()
 
   const { t } = useTranslation("General")

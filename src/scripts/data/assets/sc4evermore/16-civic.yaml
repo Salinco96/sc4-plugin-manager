@@ -3,7 +3,7 @@ assets:
     authors:
       - Mattb325
     category: civics
-    downloads: 990
+    downloads: 1006
     lastModified: 2023-08-20T02:40:33-07:00
     name: SC4D LEX Legacy - Mattb325 Civics and Rewards (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ModernLibrary_lg.jpg
@@ -12,7 +12,7 @@ assets:
     authors:
       - Mattb325
     category: civics
-    downloads: 905
+    downloads: 931
     lastModified: 2023-08-20T02:38:42-07:00
     name: SC4D LEX Legacy - Mattb325 Civics and Rewards (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ModernLibrary_lg0.jpg
@@ -244,8 +244,8 @@ assets:
       <p>Special thanks to Andreas Roth who has shown as much enthusiasm and dedication to this project as I have.  The custom menu icons and descriptions, installer, readme, and modding the multiple
       languages are all here because of his help.  Also thanks to the following people for providing translations:</p>\r
 
-      <p>    Andreas Roth (German)<br>    jeronij (Spanish)<br>    Kwakelaar (Norwegian)<br>    Marco Berzacola (Italian)<br>    Rayden (Portuguese)<br>    RippleJet (Finnish, Swedish)<br>
-      Serkanner (Dutch)<br>    vester_DK (Danish)<br>    wouanagaine (French)</p>\r
+      <p>    Andreas Roth (German)<br>    jeronij (Spanish)<br>    Kwakelaar (Norwegian)<br>    Marco Berzacola (Italian)<br>    Rayden (Portuguese)<br>    RippleJet (Finnish, Swedish)<br> Serkanner
+      (Dutch)<br>    vester_DK (Danish)<br>    wouanagaine (French)</p>\r
 
       <p>Thanks to the BSC and my regular followers for all their feedback and support.  I am happy, proud, and honored to work with such knowledgeable and friendly people. Thank you to the amazing
       people at SC4 Devotion for remembering what community is all about and providing a home for all those who love the game.</p>\r
@@ -273,7 +273,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1343
+    downloads: 1417
     filename: SC4D LEX Legacy - BSC JBSimio Education Compilation V2.zip
     files:
       - BSC/BSCTextures#/BSC Park Textures__CHOOSE ONE/@0=BSC Park Textures zDefault/BSC_Park_Textures_zDefault.dat
@@ -363,5 +363,223 @@ assets:
     uncompressed: 3817587
     url: https://www.sc4evermore.com/index.php/downloads/download/16-civic/136-sc4d-lex-legacy-jbsimio-education-compilation
     version: "2"
+  sc4evermore/288-art128-la-bruyere-sainte-isabelle-private-school:
+    authors:
+      - Art128
+    category: civics
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/87-mas71-mega-prop-pack-vol01-misc
+      - sc4evermore/122-sfbt-props-sam-johnson-playground-props
+    description: "<body>\r
 
-timestamp: 2024-08-28T07:56:44.780Z
+      \        <div class=\"jd_description_wrapper jd_clear\"><div>La Bruyere Sainte Isabelle is a private Catholic primary and middle school located in the 14th arrondissement of Paris.</div>\r
+
+      <div> </div>\r
+
+      <div>The building was recreated with some artistic liberty, based on how the school was when I was enrolled there for 9 years. Since then they've made some modification I decided not to
+      include.</div>\r
+
+      <div> </div>\r
+
+      <div>In game it acts as a school. (Not a private school) the lot is 11x7 tiles.</div>\r
+
+      <div> </div>\r
+
+      <h3>Installation:</h3>\r
+
+      <div>Copy/Extract the <strong>art128 </strong>parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe
+      location.</div>\r
+
+      <div> </div>\r
+
+      <div>All files have been updated so it is highly recommended to use any of the third party cleanitol tools and remove any previous versions from your plugins.<br>In the
+      ~<em>Documents </em>folder in the main ZIP you can find a Cleanitol_[...].txt script and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\"
+      target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a> or the older <a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external
+      nofollow noopener\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol</a> tool you can search and remove old and outdated versions of these files.</div>\r
+
+      <div> </div>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Common Dependencies v9</a>
+      (and above)\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props CP vol 1</li>\r
+
+      <li>BSC MEGA Props CP Vol 2 </li>\r
+
+      <li>BSC-VIP Girafe Carpack vol01 &amp; vol02</li>\r
+
+      <li>BSC-VIP Girafe Carpack vol03</li>\r
+
+      <li>BSC TexturePack Cycledogg V 01b</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/87-mas71-mega-prop-pack-vol01-misc\" target=\"_blank\" rel=\"noopener\">Mas71 Mega Props vol01</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/122-sfbt-props-sam-johnson-playground-props\" target=\"_blank\" rel=\"noopener\">SFBT Props Sam Johnson Playground Props</a></li>\r
+
+      <li><a href=\"http://hide-inoki.com/bbs/archives/sc4_0837.html\" target=\"_blank\" rel=\"noopener\">Neko Props (cherry, playgrounds)  vol 2 &amp; 3</a> (both on this page)<br>Direct Links*: <a
+      href=\"http://hide-inoki.com/bbs/archives/files/1392.zip\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/files/1392.zip</a><br><a
+      href=\"http://hide-inoki.com/bbs/archives/files/1391.zip\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/files/1391.zip</a></li>\r
+
+      </ul>\r
+
+      <p>*for the direct links, the best if you \"right click\"/copy link address and paste it into a new TAB, or \"right click\"/save link as...</p>\r
+
+      <div>----------------------------------</div>\r
+
+      <div>For support or just to get more news BATs coming, visit my threads on either <a href=\"https://sc4devotion.com/forums/index.php?topic=7031\">SC4Devotion</a> or <a title=\"Art128 BAT
+      Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\" rel=\"noopener\">Simtropolis</a>:</div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Art128 - La Bruyere Sainte Isabelle Private School.jpg\"
+      data-lightbox=\"lightbox288\" data-alt=\"lightboxArt128 - La Bruyere Sainte Isabelle Private School\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Art128 - La Bruyere Sainte Isabelle Private School.jpg\" alt=\"Art128 - La Bruyere Sainte Isabelle Private School\"
+      ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 48
+    filename: Art128 - La Bruyere Sainte Isabelle Private School.zip
+    files:
+      - art128/La Bruyere Sainte Isabelle Private School/LBSI_a9b52224.SC4Lot
+      - art128/_Resources/art128_LBSI_Props.dat
+      - ~Documents/art128_readmes/Art128 - La Bruyere Sainte Isabelle Private School.jpg
+      - ~Documents/art128_readmes/Art128 - La Bruyere Sainte Isabelle Private School_Readme.txt
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/art128_LBSI_Props_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_art128_LBSI_Props_RemoveList.txt
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Art128 - La Bruyere Sainte Isabelle Private School.jpg
+    lastModified: 2024-09-11T16:11:45-07:00
+    name: Art128 - La Bruyere Sainte Isabelle Private School
+    sha256: 524a0d7d76863f846ea704aad074bee0bc18e2decf2a5647e435373d1c2de70a
+    size: 9069157
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Art128 - La Bruyere Sainte Isabelle Private School.jpg
+    timestamp: 2024-09-13T12:10:28.279Z
+    uncompressed: 10347634
+    url: https://www.sc4evermore.com/index.php/downloads/download/16-civic/288-art128-la-bruyere-sainte-isabelle-private-school
+    version: "1"
+  sc4evermore/289-art128-pavilion-of-portugal:
+    authors:
+      - Art128
+    category: civics
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/87-mas71-mega-prop-pack-vol01-misc
+      - sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>The Pavillon of Portugal was an exposition hall built for the Expo98, the world's fair held in Lisbon in 1998.</p>\r
+
+      <div>An important piece of modern Portuguese Architecture, it now stands in the very modern area of Lisbon known as <a href=\"https://en.wikipedia.org/wiki/Parque_das_Na%C3%A7%C3%B5es\"
+      target=\"_blank\" rel=\"noopener\">Parque das Nações</a>. </div>\r
+
+      <div> </div>\r
+
+      <div>Nowadays it serves as a congress center and and exhibition center. </div>\r
+
+      <div> </div>\r
+
+      <div>I've made it a museum. It sits on a 11x6 lot.</div>\r
+
+      <div> </div>\r
+
+      <h3>Installation:</h3>\r
+
+      <div>Copy/Extract the <strong>art128 </strong>parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe
+      location.</div>\r
+
+      <div> </div>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Common Dependencies v9</a>
+      (and above)\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props CP vol01</li>\r
+
+      <li>BSC MEGA Props CP Vol02 </li>\r
+
+      <li>BSC TexturePack Cycledogg V001b</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/87-mas71-mega-prop-pack-vol01-misc\" target=\"_blank\" rel=\"noopener\">MAS71 MEGA Props Vol01</a> (Miscellaneous)(light poles,
+      bench)</li>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/14-maxis-buildings-as-props-and-dlc-props-v2-1\" target=\"_blank\" rel=\"noopener\">Maxis Buildings as Props
+      Vol01-Vol02 and Maxis DLC Props v2</a></li>\r
+
+      </ul>\r
+
+      <div>=========================</div>\r
+
+      <div> </div>\r
+
+      <div>For support or just to get more news BATs coming, visit my threads on either <a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\" rel=\"noopener\">SC4Devotion
+      </a>or <a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\" rel=\"noopener\">Simtropolis</a>:</div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Pavilion of Portugal.jpg\" data-lightbox=\"lightbox289\"
+      data-alt=\"lightboxart128 - Pavilion of Portugal\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Pavilion of
+      Portugal.jpg\" alt=\"art128 - Pavilion of Portugal\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 42
+    filename: Art128 - Pavilion of Portugal.zip
+    files:
+      - art128/Pavilion of Portugal/art128-PavilionofPortugal-0x5ad0e817_0xec838828_0x30000.SC4Model
+      - art128/Pavilion of Portugal/PLOP_11x6_Pavilion of Portugal_5d02260a.SC4Lot
+      - ~Documents/art128_readmes/art128 - Pavilion of Portugal.jpg
+      - ~Documents/art128_readmes/art128 - Pavilion of Portugal_readme.txt
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Pavilion of Portugal.jpg
+    lastModified: 2024-09-02T16:03:24-07:00
+    name: Art128 - Pavilion of Portugal
+    sha256: e1a9389f674430581fb8bcad53096d451e054fdda0f81168f728ccdcda53a429
+    size: 3880897
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Pavilion of Portugal.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 4491984
+    url: https://www.sc4evermore.com/index.php/downloads/download/16-civic/289-art128-pavilion-of-portugal
+    version: "1"
+
+timestamp: 2024-09-13T12:10:28.279Z

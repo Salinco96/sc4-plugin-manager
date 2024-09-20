@@ -2,6 +2,7 @@ import { useState } from "react"
 
 import { Box, Typography } from "@mui/material"
 
+import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
 import { PackageTags } from "@components/PackageTags"
@@ -11,7 +12,7 @@ import { PackageImages } from "./PackageImages"
 import { PackageTools } from "./PackageTools"
 import { Thumbnail } from "./Thumbnail"
 
-export function PackageHeader({ packageId }: { packageId: string }): JSX.Element {
+export function PackageHeader({ packageId }: { packageId: PackageID }): JSX.Element {
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
 

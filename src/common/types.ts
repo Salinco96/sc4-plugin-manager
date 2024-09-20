@@ -1,6 +1,23 @@
 import { AssetData, AssetID } from "./assets"
+import { AuthorID } from "./authors"
 import { CategoryID } from "./categories"
-import { OptionInfo, OptionValue, Options, Requirements } from "./options"
+import { OptionID, OptionInfo, OptionValue, Options, Requirements } from "./options"
+import {
+  PackageID,
+  isDependency,
+  isDeprecated,
+  isDisabled,
+  isEnabled,
+  isError,
+  isExperimental,
+  isIncluded,
+  isIncompatible,
+  isInstalled,
+  isLocal,
+  isOutdated,
+} from "./packages"
+import { ProfileID, ProfileInfo } from "./profiles"
+import { VariantID } from "./variants"
 
 /** Supported configuration formats */
 export enum ConfigFormat {
@@ -30,26 +47,54 @@ export enum Issue {
   MISSING_FEATURE = "missing-feature",
 }
 
-export interface PackageAsset extends AssetData {
-  cleanitol?: string
+export interface PackageAssetData extends AssetData {
+  cleanitol?: string[]
   docs?: Array<string | PackageFile>
-  exclude?: Array<string | PackageFile>
+  exclude?: string[]
   include?: Array<string | PackageFile>
   id: AssetID
+}
+
+export interface PackageAssetInfo extends PackageAssetData {
+  docs?: PackageFile[]
+  include?: PackageFile[]
+}
+
+export interface DependencyData {
+  id: PackageID
+  include?: string[]
+  transitive?: boolean
+}
+
+export interface DependencyInfo extends DependencyData {
+  transitive: boolean
 }
 
 export interface PackageConfig {
   enabled?: boolean
   options?: Options
-  variant?: string
+  variant?: VariantID
   version?: string
+}
+
+export type PackageConfigs = {
+  [packageId in PackageID]?: PackageConfig
+}
+
+export type Packages = {
+  [packageId in PackageID]?: PackageInfo
+}
+
+export type Variants = {
+  [variantId in VariantID]?: VariantInfo
 }
 
 export interface PackageData extends VariantData {
   disabled?: boolean
+  features?: Feature[]
   name?: string
   variants?: {
-    [variantId: string]: VariantData
+    [variantId in VariantID]?: VariantData
   }
 }
 
@@ -61,27 +106,46 @@ export interface PackageFile {
 }
 
 export interface PackageInfo {
+  features?: Feature[]
   format?: ConfigFormat
-  id: string
+  id: PackageID
   local?: boolean
   name: string
   status: {
-    [profileId: string]: PackageStatus | undefined
+    [profileId in ProfileID]?: PackageStatus
   }
-  variants: {
-    [variantId: string]: VariantInfo
-  }
+  variants: Variants
 }
 
-export type Features = Partial<Record<Feature, boolean>>
+export const EXTERNAL = "<external>"
+
+export type ExternalFeature = typeof EXTERNAL
+
+export type ExternalFeatures = {
+  [feature in Feature]?: boolean
+}
+
+export type Features = {
+  [feature in Feature]?: Array<PackageID | ExternalFeature>
+}
 
 export interface PackageStatus {
+  /** Current action relating to this package */
   action?: "disabling" | "enabling"
+  /** Whether package is explicitly enabled */
   enabled?: boolean
-  issues?: Partial<Record<string, VariantIssue[]>>
-  options?: Options
-  requiredBy?: string[]
-  variantId: string
+  /** Which files are included (glob patterns, only as dependency, defaults to all) */
+  files?: string[]
+  /** Whether package is included (as dependency or explicitly) */
+  included?: boolean
+  /** Incompatibility issues for each variant */
+  issues?: { [variantId in VariantID]?: VariantIssue[] }
+  /** IDs of included packages that required this one as dependency */
+  requiredBy?: PackageID[]
+  /** Whether dependencies are included */
+  transitive?: boolean
+  /** Selected variant ID */
+  variantId: VariantID
 }
 
 export interface PackageWarning {
@@ -136,6 +200,8 @@ export interface LotData {
   garbage?: number | `${number} over ${number} tiles`
   /** Lot ID (usually last part of TGI, but may be an arbitrary string) */
   id: string
+  /** URL or relative path within ~docs */
+  images?: string[]
   /** Monthly income */
   income?: number
   /** Lot name */
@@ -168,20 +234,44 @@ export interface LotInfo extends LotData {
   categories?: CategoryID[]
 }
 
-export interface VariantData {
-  assets?: PackageAsset[]
-  authors?: string[]
+export interface MMPData {
+  /** Category */
   category?: string
-  features?: Feature[]
-  dependencies?: string[]
-  deprecated?: boolean
+  /** Whether MMP is enabled by default (this defaults to true) */
+  default?: boolean
+  /** MMP description */
+  description?: string
+  /** Full name of the file containing the MMP (if missing the MMP cannot be disabled) */
+  filename?: string
+  /** MMP ID (usually last part of TGI, but may be an arbitrary string) */
+  id: string
+  /** URL or relative path within ~docs */
+  images?: string[]
+  /** MMP name */
+  label?: string
+  /** Requirements */
+  requirements?: Requirements
+}
+
+export interface MMPInfo extends MMPData {
+  categories?: CategoryID[]
+}
+
+export interface VariantData {
+  assets?: Array<AssetID | PackageAssetData>
+  authors?: AuthorID[]
+  category?: string
+  dependencies?: Array<PackageID | DependencyInfo>
+  deprecated?: boolean | PackageID
   description?: string
   experimental?: boolean
   files?: PackageFile[]
   images?: string[]
+  lastModified?: string
   lots?: LotData[]
+  mmps?: MMPData[]
   name?: string
-  optional?: string[]
+  optional?: PackageID[]
   options?: OptionInfo[]
   release?: string
   readme?: string
@@ -196,18 +286,22 @@ export interface VariantData {
 export interface VariantIssue {
   external?: boolean
   feature?: Feature
-  option?: string
+  option?: OptionID
   id: Issue
-  packages?: string[]
+  packages?: PackageID[]
   value?: OptionValue
 }
 
 export interface BaseVariantInfo extends VariantData {
-  authors: string[]
+  assets?: PackageAssetInfo[]
+  authors: AuthorID[]
   categories: CategoryID[]
-  id: string
+  dependencies?: DependencyInfo[]
+  id: VariantID
   lots?: LotInfo[]
+  mmps?: MMPInfo[]
   name: string
+  new?: boolean
   priority: number
   version: string
 }
@@ -218,7 +312,6 @@ export interface VariantInfo extends BaseVariantInfo {
   docs?: string
   installed?: boolean
   local?: boolean
-  new?: boolean
   update?: BaseVariantInfo
 }
 
@@ -229,6 +322,7 @@ export enum PackageState {
   ENABLED = "enabled",
   ERROR = "error",
   EXPERIMENTAL = "experimental",
+  INCLUDED = "included",
   INCOMPATIBLE = "incompatible",
   INSTALLED = "installed",
   LOCAL = "local",
@@ -236,97 +330,49 @@ export enum PackageState {
   OUTDATED = "outdated",
 }
 
-export interface ProfileData {
-  features?: Features
-  name?: string
-  options?: Options
-  packages?: Partial<Record<string, PackageConfig | boolean | string>>
-}
-
-export interface ProfileInfo extends ProfileData {
-  description?: string
-  features: Features
-  format?: ConfigFormat
-  id: string
-  name: string
-  options: Options
-  packages: Partial<Record<string, PackageConfig>>
-}
-
-export interface Settings {
-  currentProfile?: string
-  format?: ConfigFormat
-  install?: {
-    patched?: boolean
-    path?: string
-    version?: string
-  }
-  useYaml?: boolean
-}
-
-export function isCompatible(info: PackageInfo, variantId: string, profile: ProfileInfo): boolean {
-  return !info.status[profile.id]?.issues?.[variantId]?.length
-}
-
-export function getDefaultVariant(info: PackageInfo, profile?: ProfileInfo): VariantInfo {
-  const variants = Object.values(info.variants)
-
-  if (profile) {
-    const compatibleVariant = variants.find(variant => isCompatible(info, variant.id, profile))
-    if (compatibleVariant) {
-      return compatibleVariant
-    }
-  }
-
-  return variants[0]
-}
-
 export function getState(
   state: PackageState,
   packageInfo: PackageInfo,
-  variantId: string,
+  variantInfo: VariantInfo,
   profileInfo?: ProfileInfo,
 ): boolean {
-  const packageConfig = profileInfo?.packages[packageInfo.id]
   const packageStatus = profileInfo ? packageInfo.status[profileInfo.id] : undefined
-  const variantInfo = packageInfo.variants[variantId]
-
-  const enabled = !!packageStatus?.enabled
-  const explicit = !!packageConfig?.enabled
-  const incompatible = !!packageStatus?.issues?.[variantId]?.length
 
   switch (state) {
     case PackageState.DEPENDENCY:
-      return enabled && !explicit
+      return isDependency(packageStatus)
 
     case PackageState.DEPRECATED:
-      return !!variantInfo.deprecated
+      return isDeprecated(variantInfo)
 
     case PackageState.DISABLED:
-      return !!profileInfo && !!variantInfo.installed && !enabled
+      return isDisabled(variantInfo, packageStatus)
 
     case PackageState.ENABLED:
-      return enabled && explicit
+      return isEnabled(packageStatus)
 
     case PackageState.ERROR:
-      return enabled && (incompatible || !variantInfo.installed)
+      return isError(variantInfo, packageStatus)
 
     case PackageState.EXPERIMENTAL:
-      return !!variantInfo.experimental
+      return isExperimental(variantInfo)
+
+    case PackageState.INCLUDED:
+      return isIncluded(packageStatus)
 
     case PackageState.INCOMPATIBLE:
-      return incompatible && !enabled
+      return isIncompatible(variantInfo, packageStatus)
 
     case PackageState.INSTALLED:
-      return !!variantInfo.installed
+      return isInstalled(variantInfo)
 
     case PackageState.LOCAL:
-      return !!variantInfo.local
+      return isLocal(variantInfo)
 
     case PackageState.NEW:
       return !!variantInfo.new
 
     case PackageState.OUTDATED:
-      return !!variantInfo.installed && !!variantInfo.update
+      return isOutdated(variantInfo)
   }
 }

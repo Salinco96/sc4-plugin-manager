@@ -2,11 +2,12 @@ import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, Tab } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
+import { PackageID } from "@common/packages"
 import { useCurrentVariant, useDependentPackages } from "@utils/packages"
 
 import { packageViewTabs, usePackageViewTab } from "./tabs"
 
-export function PackageViewTabs({ packageId }: { packageId: string }): JSX.Element | null {
+export function PackageViewTabs({ packageId }: { packageId: PackageID }): JSX.Element | null {
   const { activeTab, setActiveTab } = usePackageViewTab()
   const { t } = useTranslation("PackageViewTabs")
 

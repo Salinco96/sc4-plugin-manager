@@ -111,7 +111,7 @@ export function loadRecord<T, Required extends boolean = false>(
   id: string,
   field: string,
   required?: Required,
-): Required extends true ? { [K in string]: T } : { [K in string]: T } | undefined {
+): Required extends true ? { [K in string]?: T } : { [K in string]?: T } | undefined {
   if (isObject(value)) {
     return mapValues(value, (optionValue, optionId) => {
       return loadValue(optionValue, expected, condition, id, field + "." + optionId, true)

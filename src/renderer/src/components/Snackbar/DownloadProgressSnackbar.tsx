@@ -17,23 +17,23 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
     // const [hover, setHover] = useState(false)
 
     const message = useStore(store => {
-      if (store.status?.ongoingDownloads.length) {
+      if (store.status.ongoingDownloads.length) {
         const { key, progress } = store.status.ongoingDownloads[0]
         return t("downloading", { key, progress })
       }
 
-      if (store.status?.ongoingExtracts.length) {
+      if (store.status.ongoingExtracts.length) {
         const { key, progress } = store.status.ongoingExtracts[0]
         return t("extracting", { key, progress })
       }
     })
 
     const progress = useStore(store => {
-      if (store.status?.ongoingDownloads.length) {
+      if (store.status.ongoingDownloads.length) {
         return store.status.ongoingDownloads[0].progress
       }
 
-      if (store.status?.ongoingExtracts.length) {
+      if (store.status.ongoingExtracts.length) {
         return store.status.ongoingExtracts[0].progress
       }
     })

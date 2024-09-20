@@ -555,10 +555,61 @@ assets:
     authors:
       - Porkissimo
     category: residential
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+      							
+      <p><font color="#ff6600"><strong>View 1280*960 pics of the bat <a href="http://paris3d.9online.fr/ecoleWP.html" rel="external nofollow"><font color="#ff6600">HERE</font></a></strong></font></p>
+
+      <p>This 3X4 Art Deco bat is based on an existing Parisian elementary school, built in 1929 and located at rue St-Martin. It can be used either in a <abbr title="Wall-to-Wall">W2W</abbr>
+      environment or not.</p>
+
+      <p><font>Dependencies: </font><font><strong><a href="https://www.simtropolis.com/stex/index.cfm?page=1&amp;keyword=PORKIE%20PROPS&amp;type=all" rel="external nofollow"><font
+      color="#ff6600">PORKIE PROPS VOL1</font></a></strong> and <strong><a href="https://www.simtropolis.com/stex/index.cfm?page=1&amp;keyword=PORKIE%20PROPS&amp;type=all" rel="external
+      nofollow"><font color="#ff6600">PORKIE PROPS VOL2</font></a></strong></font></p>
+
+      <ul><li>students capacity=1000 </li>    <li>
+
+      <font>plop cost=500</font>    </li>
+
+      <li>
+
+      <font>bulldoze cost=100</font> </li>    <li>
+
+      <font>catalog capacity=600, cata month cost=550</font> </li>    <li>
+
+      <font>coverage radius=450</font> </li>    <li>
+
+      <font>demand created: $=40, $$=10</font> </li>    <li>
+
+      <font>budget cost=500</font> </li>    <li>
+
+      <font>EQ boost=24</font> </li>    <li>
+
+      <font>water=10, power=3</font> </li>    <li>
+
+      <font>effectiveness &amp; popVSdistance are standart values.</font> </li>
+
+      </ul><p>Plop it, rate it and visit my <strong><a href="http://paris3d.9online.fr/" rel="external nofollow"><font color="#ff6600">PARIS 3D GALLERY</font></a></strong>. You're welcome!</p>
+
+      						</body>
+    filename: PK large school1.zip
+    files:
+      - PK large school.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0025/e06239ccc0441c924e414a7d0d80844f-bandeg.jpg
+      - https://www.simtropolis.com/objects/screens/0025/e06239ccc0441c924e414a7d0d80844f-banded.jpg
     lastModified: 2006-03-27T13:23:33Z
     name: PARIS large school Art Deco
+    sha256: 7d0fc085e3d14c43b3aa3b5a5ef000e75684741e60c3574abc5c30a463f43618
+    size: 1082607
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2006/thumb-e06239ccc0441c924e414a7d0d80844f-bandeg.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 1346959
     url: https://community.simtropolis.com/files/file/14230-paris-large-school-art-deco/
+    version: "1.0"
   simtropolis/14236-jenxparis-bd-alexander1-csplop:
     authors:
       - xannepan
@@ -4967,7 +5018,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5030,7 +5087,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5083,7 +5146,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5175,7 +5244,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5322,7 +5397,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5401,7 +5482,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5452,7 +5539,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5503,7 +5596,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -5551,7 +5650,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -6313,6 +6418,99 @@ assets:
     uncompressed: 278128
     url: https://community.simtropolis.com/files/file/36394-japanese-w2w-zakkyo-set-relots/
     version: 1.0.0
+  simtropolis/36445-fa2-high-rise-set:
+    authors:
+      - Kel9509
+    category: residential
+    dependencies:
+      - simtropolis/34705-fa2-high-rises-01
+      - simtropolis/36180-growify-plopped-buildings-cheat-dll-plugin
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>
+      	FA2 High Rise Set<br>
+      	By Kel9505<br>
+      	Based off of EffTheGrid's models: FA2 High Rises 01.
+      </p>
+
+
+      <p>
+      	Included are eight FA2 lots based off of EffTheGrid's original eyecandy lots and models.  There are 4 buildings and two lots per building (left and right side for FA2 roads).  The building stats are as follows:
+      </p>
+
+
+      <p>
+      	1. FA2 Cocoa Exchange: Ploppable R$$$ Residential growify lots with 291 residents. <br>
+      	2. FA2 Citysphere Growify: Ploppable R$$ Residential growify lots with 1275 residents.<br>
+      	3. FA2 Rhodes Haverty Residence Inn: Ploppable CS$$ lots with 440 workers.<br>
+      	4. FA2 TD Bank at Cadman Plaza: Ploppable CO$$ lots with 2064 workers.
+      </p>
+
+
+      <p>
+      	These are LOTS ONLY, and does not include the model.  They are a new lots and do not overwrite EffTheGrid's original landmark eyecandy lots. 
+      </p>
+
+
+      <p>
+      	Note: This mod requires DLL dependencies by Null45.  DLL Dependencies are ONLY available for version 1.1.641 of SimCity 4 (Windows Digital Copies).  All dependencies listed below are REQUIRED for this <abbr title="Residential, Commercial, Industrial">RCI</abbr> DLL Query Upgrade Mod to work.  For more information about compatible versions of Simcity4 and DLL mods, see here:<br>
+      	<a href="https://community.simtropolis.com/forums/topic/762980-the-future-of-sc4-modding-the-matter-of-digital-vs-disc-and-windows-vs-macos-in-the-dll-era/" rel="">https://community.simtropolis.com/forums/topic/762980-the-future-of-sc4-modding-the-matter-of-digital-vs-disc-and-windows-vs-macos-in-the-dll-era/</a>
+      </p>
+
+
+      <p>
+      	<br>
+      	REQUIRED DEPENDENCIES:<br>
+      	1. <a href="https://community.simtropolis.com/files/file/34705-fa2-high-rises-01/" rel="">FA2 High Rises 01</a>, by EffTheGrid:<br>
+      	2. <a href="https://community.simtropolis.com/files/file/36180-growify-plopped-buildings-cheat-dll-plugin/" rel="">Growify DLL Mod</a> by Null45:
+      </p>
+
+
+      <p>
+      	TO INSTALL: <br>
+      	Make sure Simcity4 is not running prior to installation.<br>
+      	Extract all files into your Simcity4 Plugins folder.  The archive can be extracted into a subfolder containing EffTheGrid's models and original lots.
+      </p>
+
+
+      <p>
+      	TO USE:<br>
+      	Pause the game, plop the respective lot along a FA2 street.  For the residential lots, use the Growify cheat code "Growify R M" or "Growify R H" to growify the lot as medium density or high density lots. The commercial lots do not need the growify cheat but can merely be plopped.  Make sure all lots have water and power or, like any other lot, it may abandon.  If you have the submenu DLL mod by memo, the lots will appear in the Residential Zone menu and Commercial Zones menus under the respective R$$, R$$$, CS$$ and CO$$ Ploppables submenu item.
+      </p>
+
+      						</body>
+    filename: FA2 High Rise Set.zip
+    files:
+      - FA2 High Rise Set/FA2 Citysphere (Residential).jpg
+      - FA2 High Rise Set/FA2 Cocoa Exchange (Residential).jpg
+      - FA2 High Rise Set/FA2 High Rise Set.txt
+      - FA2 High Rise Set/FA2 Rhodes Haverty.jpg
+      - FA2 High Rise Set/FA2 TD Bank.jpg
+      - FA2 High Rise Set/PLOP_1x1_FA2 Cocoa Exchange Growify (Left)_2464faae.SC4Lot
+      - FA2 High Rise Set/PLOP_1x1_FA2 Cocoa Exchange Growify (Right)_0464fc2a.SC4Lot
+      - FA2 High Rise Set/PLOP_1x2_FA2 Rhodes Haverty Residence Inn (Left)_e467a081.SC4Lot
+      - FA2 High Rise Set/PLOP_1x2_FA2 Rhodes Haverty Residence Inn (Right)_b4679fd3.SC4Lot
+      - FA2 High Rise Set/PLOP_3x2_FA2 Citysphere Growify (Left)_0463bde6.SC4Lot
+      - FA2 High Rise Set/PLOP_3x2_FA2 Citysphere Growify (Right)_1463b5b0.SC4Lot
+      - FA2 High Rise Set/PLOP_3x3_FA2 TD Bank at Cadman Plaza (Left)_2468e6be.SC4Lot
+      - FA2 High Rise Set/PLOP_3x3_FA2 TD Bank at Cadman Plaza (Right)_7468e78b.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66e3bf2ef1e20_FA2Citysphere(Residential).jpg.7113de1225dc96ce951e26ffdfbc486b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66e3bf321fc75_FA2CocoaExchange(Residential).jpg.1fba42550f1293d6dfdbb05ad9395c5b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66e3bf3641b21_FA2RhodesHaverty.jpg.25bade6ad27750d3191179c754ad49ba.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66e3bf39c166e_FA2TDBank.jpg.28927ac0b7bee672ac04e977a100de0a.jpg
+    lastModified: 2024-09-13T04:34:05Z
+    name: FA2 High Rise Set
+    sha256: 973dfe09bc27149955a63a646fd1862683221652fdf04b2de6ed84c3807f4391
+    size: 685314
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66e3c0bcce735_FA2Citysphere(Residential).thumb.jpg.b23f6f7d44e90916c4e05f4aa953a9da.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 704051
+    url: https://community.simtropolis.com/files/file/36445-fa2-high-rise-set/
+    version: 1.0.0
   simtropolis/3696-berlin-medical:
     authors:
       - Erdmoebel
@@ -6597,4 +6795,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-232789d5486669d92d9274d470ae880a-Kronenpalais%20Screen.jpg
     url: https://community.simtropolis.com/files/file/4572-berlin-set-v2-kronenstrasse-8/
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:22:00.820Z

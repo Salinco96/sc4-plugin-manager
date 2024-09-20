@@ -18,11 +18,12 @@ import {
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { getCategoryLabel, getStateLabel } from "@common/categories"
+import { getCategoryLabel } from "@common/categories"
 import { PackageState } from "@common/types"
 import { difference } from "@common/utils/arrays"
-import { keys } from "@common/utils/objects"
+import { keys, values } from "@common/utils/objects"
 import { getLastWord, getStartOfWordSearchRegex, removeLastWord } from "@common/utils/regex"
+import { getStateLabel } from "@common/variants"
 import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
 
 import {
@@ -55,9 +56,11 @@ export function PackageListFilters(): JSX.Element {
 
     return [
       ...difference(
-        authors.filter(author => pattern.test(author)),
+        values(authors)
+          .filter(author => pattern.test(author.search))
+          .map(author => author.id),
         packageFilters.authors,
-      ).map(author => serializeTag(TagType.AUTHOR, author)),
+      ).map(authorId => serializeTag(TagType.AUTHOR, authorId)),
       ...difference(
         categories.filter(category => pattern.test(getCategoryLabel(category))),
         packageFilters.categories,
@@ -152,7 +155,7 @@ export function PackageListFilters(): JSX.Element {
         // We do our own filtering
         filterOptions={options => options}
         freeSolo
-        getOptionLabel={option => getTagLabel(deserializeTag(option))}
+        getOptionLabel={option => getTagLabel(deserializeTag(option), authors)}
         inputValue={packageFilters.search}
         limitTags={4}
         multiple
@@ -202,7 +205,7 @@ export function PackageListFilters(): JSX.Element {
         renderInput={props => <TextField {...props} autoFocus label={t("search.label")} />}
         renderOption={(props, option) => (
           <li key={option} {...props}>
-            {getLongTagLabel(deserializeTag(option))}
+            {getLongTagLabel(deserializeTag(option), authors)}
           </li>
         )}
         value={tags}

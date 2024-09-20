@@ -3,7 +3,7 @@ import { failInDev } from "@utils/env"
 
 import { loadDate, loadInteger, loadString } from "./loader"
 
-export function getAssetKey(assetId: AssetID, version?: string): string {
+export function getAssetKey(assetId: AssetID, version: string): string {
   return version ? `${assetId}@${version}` : assetId
 }
 
@@ -51,12 +51,17 @@ function getAssetURL(
   }
 }
 
-export function loadAssetInfo(assetId: string, data: AssetData): AssetInfo | undefined {
+export function loadAssetInfo(
+  assetId: string,
+  data: AssetData,
+  downloaded?: string[],
+): AssetInfo | undefined {
   const rawUrl = loadString(data.url, assetId, "url")
-  const version = loadString(data.version, assetId, "version")
+  const version = loadString(data.version, assetId, "version") ?? "1.0"
   const url = getAssetURL(assetId, rawUrl, version)
   if (url) {
     return {
+      downloaded: Object.fromEntries(downloaded?.map(version => [version, true]) ?? []),
       id: assetId as AssetID,
       lastModified: loadDate(data.lastModified, assetId, "lastModified"),
       sha256: loadString(data.sha256, assetId, "sha256"),

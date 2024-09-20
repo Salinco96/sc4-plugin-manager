@@ -302,7 +302,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1085
+    downloads: 1113
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_DarkNite.zip
     files:
       - readme_mattb325_commercial.html
@@ -1020,7 +1020,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1184
+    downloads: 1206
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_MaxisNite.zip
     files:
       - readme_mattb325_commercial.html
@@ -1658,7 +1658,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 808
+    downloads: 827
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_W2W_DarkNite.zip
     files:
       - readme_mattb325_commercial_w2w.html
@@ -2047,7 +2047,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 729
+    downloads: 749
     filename: SC4D_LEX_LEGACY_Mattb325_Commercial_W2W_MaxisNite.zip
     files:
       - readme_mattb325_commercial_w2w.html
@@ -2445,7 +2445,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 896
+    downloads: 923
     filename: SC4D_LEX_Legacy_zero7_Commercial_Pack.zip
     files:
       - readme_zero7_commercial.html
@@ -2656,7 +2656,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 370
+    downloads: 381
     filename: Ulisse Wolf - Five Nights At Freddys.zip
     files:
       - Ulisse Wolf - Five Nights At Freddys/Main.txt
@@ -2876,7 +2876,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 209
+    downloads: 218
     filename: BSC-VIP Girafe Chalet Edelweiss_2817.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_Chalet_Edelweiss.html
@@ -3094,7 +3094,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 315
+    downloads: 326
     filename: BSC-VIP Girafe CB21 Tower_2725.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_CB21_Tower.html
@@ -3292,7 +3292,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 315
+    downloads: 323
     filename: BSC-VIP Girafe EDF Tower_2820.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_EDF_Tower.html
@@ -3388,7 +3388,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 330
+    downloads: 347
     filename: Mattb325-SimCoug Historic Shops.zip
     files:
       - BSC/BSCProps/Mattb325_Old_Shops_MN.dat
@@ -3421,7 +3421,7 @@ assets:
     authors:
       - Kelis
     category: commercial
-    downloads: 285
+    downloads: 295
     lastModified: 2024-01-23T07:39:12-08:00
     name: BNL Kelis Wilhelminatoren
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/BNL_KELIS_Wihelminatoren_DAY.jpg
@@ -3430,11 +3430,321 @@ assets:
     authors:
       - Kelis
     category: commercial
-    downloads: 243
+    downloads: 253
     lastModified: 2024-01-23T07:54:28-08:00
     name: BNL Kelis ABN AMRO Bank
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/ABNDAY.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/232-bnl-kelis-abn-amro-bank
+  sc4evermore/290-art128-hotel-novotel-front-de-seine:
+    authors:
+      - Art128
+    category: commercial
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/90-mgb204-texture-pack
+      - sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>This building is located in the <a href=\"https://en.wikipedia.org/wiki/Front_de_Seine\" target=\"_blank\" rel=\"noopener\">Front de
+      Seine</a> highrise area in the 15th Arrondissement of Paris. The area includes residential, offices and hotel highrise buildings that are built on a concrete slab with service roads and stuff
+      underneath.</p>\r
+
+      <div>This building was originally made for my personal use in an attempt to create an area inspired by the Front de Seine. I've decided to create it while keeping in mind how it can be used as a
+      stand alone building. As such the side of the slabs can be put on 7.5m high embankments. Or not if you don't want to. Be creative etc.</div>\r
+
+      <div> </div>\r
+
+      <div>Seeing as it's a Hotel, I've made it a growable CS$$$ in game, sitting on a 5x5 lot.</div>\r
+
+      <div> </div>\r
+
+      <h3>Installation:</h3>\r
+
+      <div>Copy/Extract <strong><span style=\"color: #e03e2d;\">EITHER </span></strong>the <strong>art128</strong> parent folder (non-cam version of the growable lot) OR the <strong>CAM
+      </strong>parent folder (CAM version of the lot) into your Plugins. <span style=\"color: #e03e2d;\"><strong>Do NOT use both of them at the same time!</strong></span> If you've extracted the
+      ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe location.</div>\r
+
+      <div>Again, choose and install only ONE of the folders from this upload. </div>\r
+
+      <div> </div>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <div> </div>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Common Dependencies v9</a>
+      (and above)\r
+
+      <ul>\r
+
+      <li>BSC TexturePack Cycledogg V 01b</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack\" target=\"_blank\" rel=\"noopener\">MGB texture Pack</a> (the street)</li>\r
+
+      <li><a href=\"http://hide-inoki.com/bbs/archives/sc4_0837.html\" target=\"_blank\" rel=\"noopener\">Neko Props Vol2</a> (the planters at the end of the slab)<br>Direct Link - <a
+      href=\"http://hide-inoki.com/bbs/archives/files/1392.zip\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/files/1392.zip</a></li>\r
+
+      <li><a href=\"http://hide-inoki.com/bbs/archives/sc4_0860.html\" target=\"_blank\" rel=\"noopener\">Jim - Car Prop Pack 1.2</a><br>Direct Link - <a
+      href=\"http://hide-inoki.com/bbs/archives/files/1598.zip\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/files/1598.zip</a></li>\r
+
+      <li><a href=\"/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem\" target=\"_blank\" rel=\"noopener\">Colossus Addon Mod 2.1.1</a> (only for
+      the CAM version)</li>\r
+
+      </ul>\r
+
+      <div>=========================</div>\r
+
+      <div>For support or just to get more news BATs coming, visit my threads on either <a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\"
+      rel=\"noopener\">SC4Devotion </a>or <a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\"
+      rel=\"noopener\">Simtropolis</a></div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Hotel Novotel_LEX_250px.jpg\" data-lightbox=\"lightbox290\"
+      data-alt=\"lightboxart128 - Hotel Novotel_LEX_250px.jpg|art128 - Hotel Novotel_LEX_250pxNight.jpg|art128 - Hotel Novotel01\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Hotel Novotel_LEX_250px.jpg\" alt=\"art128 - Hotel Novotel_LEX_250px\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Hotel Novotel_LEX_250pxNight.jpg\" data-lightbox=\"lightbox290\"
+      data-alt=\"lightboxart128 - Hotel Novotel_LEX_250px.jpg|art128 - Hotel Novotel_LEX_250pxNight.jpg|art128 - Hotel Novotel01\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Hotel Novotel_LEX_250pxNight.jpg\" alt=\"art128 - Hotel Novotel_LEX_250pxNight2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Hotel Novotel01.jpg\" data-lightbox=\"lightbox290\"
+      data-alt=\"lightboxart128 - Hotel Novotel_LEX_250px.jpg|art128 - Hotel Novotel_LEX_250pxNight.jpg|art128 - Hotel Novotel01\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Hotel Novotel01.jpg\" alt=\"art128 - Hotel Novotel013\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 42
+    filename: Art128 - Hotel Novotel Front de Seine CAM.zip
+    files:
+      - CAM/art128/Hotel Novotel Front de Seine/art128-FDS-Novotel-0x5ad0e817_0xc6570de_0x30000.SC4Model
+      - CAM/art128/Hotel Novotel Front de Seine/CS$$$10_5x5_art128-FDS-Novotel_8ce41eaf.SC4Lot
+      - art128/Hotel Novotel Front de Seine/art128-FDS-Novotel-0x5ad0e817_0xc6570de_0x30000.SC4Model
+      - art128/Hotel Novotel Front de Seine/CS$$$8_5x5_art128-FDS-Novotel_8ce41eaf.SC4Lot
+      - ~Documents/art128_readmes/art128 - Hotel Novotel01.jpg
+      - ~Documents/art128_readmes/art128 - Hotel Novotel_LEX_250px.jpg
+      - ~Documents/art128_readmes/art128 - Hotel Novotel_LEX_250pxNight.jpg
+      - ~Documents/art128_readmes/art128 - Hotel Novotel_Readme.txt
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Hotel Novotel_LEX_250px.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Hotel Novotel_LEX_250pxNight.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Hotel Novotel01.jpg
+    lastModified: 2024-09-02T16:39:32-07:00
+    name: Art128 - Hotel Novotel Front de Seine
+    sha256: 7f8f8aac2a637abeb5404ee32a2a13315fd5f40434bf1f71c1f1355251c37359
+    size: 6907663
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Hotel Novotel_LEX_250px.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 7791933
+    url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/290-art128-hotel-novotel-front-de-seine
+    version: "1"
+  sc4evermore/291-art128-japanese-buildings-compilation:
+    authors:
+      - Art128
+    category: commercial
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/35470-pre-2000-car-props-pack
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - simtropolis/11421-jenx-porkie-expanded-porkie-props
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A set of 11 buildings inspired by Japanese buildings in various cities. This upload contains both of Art128's Japanese/Tokyo Building
+      sets:</p>\r
+
+      <ul>\r
+
+      <li>Art128 Japanese (Tokyo) Buildings Volume 1</li>\r
+
+      <li>Art128 Japanese Buildings 2</li>\r
+
+      </ul>\r
+
+      <p>They come in growable and two different plop: Landmark and Commercials. They can be found at the top and bottom of landmark menu or if you use the Submenu DLL Mod, then the Ploppable with
+      Jobs lots can be found in the Commercial Zoning menu. </p>\r
+
+      <p>For detailed stats, please check out the attached readme file.</p>\r
+
+      <ul>\r
+
+      <li>Office Building 1 - Chuo, Tokyo    </li>\r
+
+      <li>Toraya Building - Ginza, Tokyo</li>\r
+
+      <li>Animate Building - Ikebukuro, Tokyo</li>\r
+
+      <li>Office Building 4 - Ikebukuro, Tokyo</li>\r
+
+      <li>Digital Art Building - Ikebukuro, Tokyo</li>\r
+
+      <li>Tokyo Building 6 - Tokyo, Japan</li>\r
+
+      <li>Kitayama - Kyoto, Japan</li>\r
+
+      <li>Murakami Office - Murakami, JapanNagaoka-Tottori Offices - Nagaoka, Tottori, Japan</li>\r
+
+      <li>Toyama Office - Toyama, Japan</li>\r
+
+      <li><strong>Dantes Tower Machiya</strong> - brand new, previously unreleased building. </li>\r
+
+      </ul>\r
+
+      <h3>Installation:</h3>\r
+
+      <div>Copy/Extract the <strong>art128 </strong>parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe
+      location.</div>\r
+
+      <div> </div>\r
+
+      <div>All files have been updated so <span style=\"color: #ba372a;\">it is highly recommended to use any of the third party cleanitol tools and remove any previous versions from your
+      plugins.</span><br>In the ~<em>Documents </em>folder in the main ZIP you can find a Cleanitol_[...].txt script and by using either the newer <a
+      href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a> or the older <a
+      href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad
+      Certification\">BSC</abbr> Cleanitol</a> tool you can search and remove old and outdated versions of these files.</div>\r
+
+      <div> </div>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Common Dependencies v9</a>
+      (and above)\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props CP Vol01</li>\r
+
+      <li>BSC MEGA Props JES Vol01 v2</li>\r
+
+      <li>BSC Textures Vol02</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\" target=\"_blank\" rel=\"noopener\">JENX-Porkie Expanded Porkie Props</a></li>\r
+
+      <li><a href=\"https://community.simtropolis.com/files/file/35470-pre-2000-car-props-pack/\" target=\"_blank\" rel=\"noopener\">Art128 - Pre 2000 Car Props Pack</a></li>\r
+
+      <li><a href=\"http://hide-inoki.com/bbs/archives/sc4_0860.html\" target=\"_blank\" rel=\"noopener\">Jim - Car Prop Pack 1.2</a><br>Direct Link - <a
+      href=\"http://hide-inoki.com/bbs/archives/files/1598.zip\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/files/1598.zip</a></li>\r
+
+      </ul>\r
+
+      <div> </div>\r
+
+      <div>All buildings are in HD and Darknight, therefore the use of <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" target=\"_blank\"
+      rel=\"noopener\">Simfox's Day N Night mod</a> is strongly suggested.</div>\r
+
+      <div> </div>\r
+
+      <div>All the models and the initial lotting were created by Art128. The revision of the lotting and modding and the compilation was assembled by Tyberius06</div>\r
+
+      <div>For support or just to get more news BATs coming, visit my threads on either <a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\"
+      rel=\"noopener\">SC4Devotion </a>or <a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\"
+      rel=\"noopener\">Simtropolis</a></div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Japanese Building pack 1.jpg\" data-lightbox=\"lightbox291\"
+      data-alt=\"lightboxart128 - Japanese Building pack 1.jpg|art128 - Japanese Building pack 2full.jpg|art128 - Dantes Tower and Tokyo Building 6\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Japanese Building pack 1.jpg\" alt=\"art128 - Japanese Building pack 1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Japanese Building pack 2full.jpg\" data-lightbox=\"lightbox291\"
+      data-alt=\"lightboxart128 - Japanese Building pack 1.jpg|art128 - Japanese Building pack 2full.jpg|art128 - Dantes Tower and Tokyo Building 6\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Japanese Building pack 2full.jpg\" alt=\"art128 - Japanese Building pack 2full2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Dantes Tower and Tokyo Building 6.jpg\" data-lightbox=\"lightbox291\"
+      data-alt=\"lightboxart128 - Japanese Building pack 1.jpg|art128 - Japanese Building pack 2full.jpg|art128 - Dantes Tower and Tokyo Building 6\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Dantes Tower and Tokyo Building 6.jpg\" alt=\"art128 - Dantes Tower and Tokyo Building 63\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 46
+    filename: Art128 - Japanese Buildings Compilation.zip
+    files:
+      - art128/Japanese Buildings Compilation/Animate Building - Ikebukuro, Tokyo/CO$$7_2x2_EBLT_Art128_TokyoBuilding3.SC4Lot
+      - art128/Japanese Buildings Compilation/Animate Building - Ikebukuro, Tokyo/EBLT_Art128_TokyoBuilding3-0x5ad0e817_0x9e759ac4_0x110000.SC4Model
+      - art128/Japanese Buildings Compilation/Animate Building - Ikebukuro, Tokyo/PLOP_2x2_EBLT_Art128_TokyoBuilding3_Co$$_PLOP.SC4Lot
+      - art128/Japanese Buildings Compilation/Animate Building - Ikebukuro, Tokyo/PLOP_2x2_EBLT_Art128_TokyoBuilding3_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Dantes Tower Machiya - Japan/art128-Dantes-Tower-machiya.dat
+      - art128/Japanese Buildings Compilation/Dantes Tower Machiya - Japan/PLOP_1x2_art128_Dantes-Tower-machiya_Cs$$$_plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Dantes Tower Machiya - Japan/R$$5_1x1_art128_Dantes-Tower-machiya_R$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Digital Art Building - Ikebukuro, Tokyo/CO$$$6_EBLT_Art128_TokyoBuilding5.SC4Lot
+      - art128/Japanese Buildings Compilation/Digital Art Building - Ikebukuro, Tokyo/EBLT_Art128_TokyoBuilding5-0x5ad0e817_0x9e759ac4_0xf0000.SC4Model
+      - art128/Japanese Buildings Compilation/Digital Art Building - Ikebukuro, Tokyo/PLOP_1x1_EBLT_Art128_TokyoBuilding5_Co$$$_Plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Digital Art Building - Ikebukuro, Tokyo/PLOP_1x1_EBLT_Art128_TokyoBuilding5_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Kitayama - Kyoto, Japan/art128-Kitayama-v2.SC4Model
+      - art128/Japanese Buildings Compilation/Kitayama - Kyoto, Japan/PLOP_1x2_Kitayama-N-Art128 LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Kitayama - Kyoto, Japan/PLOP_1x2_Kitayama-N-Art128-plopc$$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Kitayama - Kyoto, Japan/R$$$6_1x2_Kitayama-N-art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Nagaoka-Tottori Offices - Nagaoka, Tottori, Japan/art128-Nagaoka-Tottori.SC4Model
+      - art128/Japanese Buildings Compilation/Nagaoka-Tottori Offices - Nagaoka, Tottori, Japan/CO$$$5_2x2_Nagaoka-Tottori-N-art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Nagaoka-Tottori Offices - Nagaoka, Tottori, Japan/PLOP_2x2_art128-Nagaoka-Tottori-LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Nagaoka-Tottori Offices - Nagaoka, Tottori, Japan/PLOP_2x2_art128-Nagaoka-Tottori-LMCO$$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/art128-MurakamiOffice-v2_orig_off-cent_S3D.dat
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/art128-MurakamiOffice-v3.SC4Model
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/CO$$6_1x1_MurakamiOffice-N-art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/PLOP_1x1_art128-MurakamiOffice-v2-LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/PLOP_1x1_art128-MurakamiOffice-v2-LMCO$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 1 - Chuo, Tokyo/CO$$$7_2x2_EBLT_Art128_TokyoBuilding1.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 1 - Chuo, Tokyo/EBLT_Art128_TokyoBuilding1-0x5ad0e817_0x9e759ac4_0xb0000.SC4Model
+      - art128/Japanese Buildings Compilation/Office Building 1 - Chuo, Tokyo/PLOP_2x2_EBLT_Art128_TokyoBuilding1_Co$$$_Plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 1 - Chuo, Tokyo/PLOP_2x2_EBLT_Art128_TokyoBuilding1_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 4 - Ikebukuro, Tokyo/CO$$$7_EBLT_Art128_TokyoBuilding4.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 4 - Ikebukuro, Tokyo/EBLT_Art128_TokyoBuilding4-0x5ad0e817_0x9e759ac4_0xd0000.SC4Model
+      - art128/Japanese Buildings Compilation/Office Building 4 - Ikebukuro, Tokyo/PLOP_1x2_EBLT_Art128_TokyoBuilding4_Co$$$_Plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 4 - Ikebukuro, Tokyo/PLOP_1x2_EBLT_Art128_TokyoBuilding4_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Tokyo Building 6 - Tokyo, Japan/CO$$$6_2x1_TokyoBuilding6-N-Art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Tokyo Building 6 - Tokyo, Japan/EBLT_Art128_TokyoBuilding6.SC4Model
+      - art128/Japanese Buildings Compilation/Tokyo Building 6 - Tokyo, Japan/PLOP_2x1_EBLT_Art128_TokyoBuilding6_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Tokyo Building 6 - Tokyo, Japan/PLOP_2x1_EBLT_Art128_TokyoBuilding6_LMCO$$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Toraya Building - Ginza, Tokyo/CO$$$6_EBLT_Art128_TokyoBuilding2.SC4Lot
+      - art128/Japanese Buildings Compilation/Toraya Building - Ginza, Tokyo/EBLT_Art128_TokyoBuilding2-0x5ad0e817_0x9e759ac4_0xa0000.SC4Model
+      - art128/Japanese Buildings Compilation/Toraya Building - Ginza, Tokyo/PLOP_1x2_EBLT_Art128_TokyoBuilding2_Co$$$_Plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Toraya Building - Ginza, Tokyo/PLOP_1x2_EBLT_Art128_TokyoBuilding2_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Toyama Office - Toyama, Japan/art128-ToyamaOffice.SC4Model
+      - art128/Japanese Buildings Compilation/Toyama Office - Toyama, Japan/CS$$$5_1x1_ToyamaOffice-N-art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Toyama Office - Toyama, Japan/PLOP_1x1_art128-ToyamaOffice-LM-C$$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Toyama Office - Toyama, Japan/PLOP_1x1_art128-ToyamaOffice-v2-LM.SC4Lot
+      - ~Documents/art128_readmes/art128 - Dantes Tower and Tokyo Building 6.jpg
+      - ~Documents/art128_readmes/art128 - Japanese Building pack 1.jpg
+      - ~Documents/art128_readmes/art128 - Japanese Building pack 2full.jpg
+      - ~Documents/art128_readmes/Art128 - Japanese Buildings Compilation_readme.txt
+      - ~Documents/art128_readmes/Tokyo1Fix.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Art128 - Japanese Buildings Compilation.txt
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Japanese Building pack 1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Japanese Building pack 2full.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Dantes Tower and Tokyo Building 6.jpg
+    lastModified: 2024-09-11T16:11:07-07:00
+    name: Art128 - Japanese Buildings Compilation
+    sha256: dcfde6efafb59a045215a97e332a7b8b4ad4772dfde227103472b31af8872ca6
+    size: 17382605
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Japanese Building pack 1.jpg
+    timestamp: 2024-09-13T12:10:28.279Z
+    uncompressed: 19557794
+    url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/291-art128-japanese-buildings-compilation
+    version: "1"
   sc4evermore/54-bsc-kevdan25-restaurants:
     authors:
       - kevdan25
@@ -3532,7 +3842,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 862
+    downloads: 891
     filename: BSC kevdan25 Restaurant Lots.zip
     files:
       - _Documents/kevdan25lots - Replace Cleanitol - RUN ONCE BEFORE installing.txt
@@ -3579,4 +3889,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/12-commercial/54-bsc-kevdan25-restaurants
     version: "2"
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:10:28.279Z

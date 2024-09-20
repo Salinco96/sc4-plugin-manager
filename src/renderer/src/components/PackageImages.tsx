@@ -1,6 +1,7 @@
 import { Close as CloseIcon } from "@mui/icons-material"
 import { Box, IconButton, Modal } from "@mui/material"
 import Carousel from "react-material-ui-carousel"
+
 export function PackageImages({
   images,
   open,

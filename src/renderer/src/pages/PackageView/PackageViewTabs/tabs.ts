@@ -3,26 +3,28 @@ import { ComponentType } from "react"
 import { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
+import { PackageID } from "@common/packages"
 import { VariantInfo } from "@common/types"
 import { PackageOptionsForm } from "@components/Options"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewFiles } from "./PackageViewFiles"
 import { PackageViewLots } from "./PackageViewLots"
+import { PackageViewMMPs } from "./PackageViewMMPs"
 import { PackageViewOptionalDependencies } from "./PackageViewOptionalDependencies"
 import { PackageViewReadme } from "./PackageViewReadme"
 import { PackageViewRequiredBy } from "./PackageViewRequiredBy"
 import { PackageViewSummary } from "./PackageViewSummary"
 
 export type PackageViewTabInfo = {
-  component: ComponentType<{ packageId: string }>
+  component: ComponentType<{ packageId: PackageID }>
   id: string
   label: (
     t: TFunction<"PackageViewTabs">,
     variantInfo: VariantInfo,
-    dependentPackages: string[],
+    dependentPackages: PackageID[],
   ) => string
-  condition: (variantInfo: VariantInfo, dependentPackages: string[]) => boolean
+  condition: (variantInfo: VariantInfo, dependentPackages: PackageID[]) => boolean
   fullsize?: boolean
 }
 
@@ -45,6 +47,16 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     },
     label(t, variantInfo) {
       return t("lots", { count: variantInfo.lots?.length })
+    },
+  },
+  {
+    id: "mmps",
+    component: PackageViewMMPs,
+    condition(variantInfo) {
+      return !!variantInfo.mmps?.length
+    },
+    label(t, variantInfo) {
+      return t("mmps", { count: variantInfo.mmps?.length })
     },
   },
   {

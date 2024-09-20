@@ -3,7 +3,7 @@ assets:
     authors:
       - Mattb325
     category: industry
-    downloads: 782
+    downloads: 807
     lastModified: 2023-08-21T04:21:24-07:00
     name: SC4D LEX Legacy - Mattb325 Industrial Pack (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GSK_s0.jpg
@@ -12,7 +12,7 @@ assets:
     authors:
       - Mattb325
     category: industry
-    downloads: 743
+    downloads: 763
     lastModified: 2023-08-20T02:40:24-07:00
     name: SC4D LEX Legacy - Mattb325 Industrial Pack (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GSK_s.jpg
@@ -21,7 +21,7 @@ assets:
     authors:
       - Mattb325
     category: industry
-    downloads: 882
+    downloads: 904
     lastModified: 2023-11-11T08:15:13-08:00
     name: SC4D LEX Legacy - Mattb325 IRM Industrial Pack (Dark Nite)
     url: https://www.sc4evermore.com/index.php/downloads/download/13-industrial/129-sc4d-lex-legacy-mattb325-irm-industrial-pack-dark-nite
@@ -29,7 +29,7 @@ assets:
     authors:
       - Mattb325
     category: industry
-    downloads: 748
+    downloads: 762
     lastModified: 2023-08-20T03:50:05-07:00
     name: SC4D LEX Legacy - Mattb325 IRM Industrial Pack (Maxis Nite)
     url: https://www.sc4evermore.com/index.php/downloads/download/13-industrial/130-sc4d-lex-legacy-mattb325-irm-industrial-pack-maxis-nite
@@ -37,7 +37,7 @@ assets:
     authors:
       - zero7
     category: industry
-    downloads: 618
+    downloads: 637
     lastModified: 2023-08-26T23:54:05-07:00
     name: SC4D LEX Legacy - zero7 Industrial Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_K2Distribution_Day.jpg
@@ -46,7 +46,7 @@ assets:
     authors:
       - zero7
     category: industry
-    downloads: 681
+    downloads: 702
     lastModified: 2023-11-11T08:02:18-08:00
     name: SC4D LEX Legacy - zero7 Industrial Pack - IRM Edition
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_K2Distribution_Day0.jpg
@@ -55,7 +55,7 @@ assets:
     authors:
       - Marcszar
     category: industry
-    downloads: 427
+    downloads: 445
     lastModified: 2023-11-11T08:08:19-08:00
     name: SC4D LEX Legacy - BSC Marcszar Industrial Compilation
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Colemans_LEX_Screenshot1.jpg
@@ -64,10 +64,462 @@ assets:
     authors:
       - sc4evermore
     category: industry
-    downloads: 488
+    downloads: 506
     lastModified: 2023-11-11T08:09:51-08:00
     name: SC4D LEX Legacy - BSC Marcszar Industrial Compilation (IRM Version)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Colemans_LEX_Screenshot10.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/13-industrial/170-sc4d-lex-legacy-bsc-marcszar-industrial-compilation-irm-version
+  sc4evermore/295-art128-oeiras-steel-warehouse:
+    authors:
+      - Art128
+    category: industry
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: "<body>\r
 
-timestamp: 2024-08-28T07:56:44.780Z
+      \        <div class=\"jd_description_wrapper jd_clear\"><p style=\"text-align: left;\">This small warehouse is inspired by a warehouse located in Lisbon's suburbs, Oeiras. Created to fit in
+      European industrial areas, it looks like the warehouse can goes well in American and Asian industrial sectors too.</p>\r
+
+      <table border=\"0\" width=\"750\" cellspacing=\"0\" cellpadding=\"4\" align=\"center\" bgcolor=\"#ffffff\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td colspan=\"2\">\r
+
+      <table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td bgcolor=\"#990000\" height=\"20\"><span style=\"color: #ecf0f1;\"><strong><span class=\"text_titel\">Lot Details and Information</span></strong></span></td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td class=\"text_normal\" colspan=\"2\">\r
+
+      <p><b>Ploppable Version:</b></p>\r
+
+      <table class=\"text_normal\" style=\"width: 694px;\" border=\"0\" width=\"452\" cellspacing=\"0\" cellpadding=\"2\">\r
+
+      <tbody>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 247.297px;\" bgcolor=\"#993300\" width=\"150\">Lot size:</td>\r
+
+      <td style=\"width: 435.703px;\" bgcolor=\"#993333\" width=\"450\">4 x 3 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.297px;\">Menu position:</td>\r
+
+      <td style=\"width: 435.703px;\">Building: Landmark,Building: IM,Industry: Anchor</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#993300\">\r
+
+      <td style=\"width: 247.297px;\">Jobs:</td>\r
+
+      <td style=\"width: 435.703px;\">81 I-M$$</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.297px;\">Plop cost:</td>\r
+
+      <td style=\"width: 435.703px;\">§ 2364</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#993300\">\r
+
+      <td style=\"width: 247.297px;\">Bulldoze cost:</td>\r
+
+      <td style=\"width: 435.703px;\">§ 155</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.297px;\">Monthly cost:</td>\r
+
+      <td style=\"width: 435.703px;\">§</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#993300\">\r
+
+      <td style=\"width: 247.297px;\">Park effect:</td>\r
+
+      <td style=\"width: 435.703px;\">over tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.297px;\">Landmark effect:</td>\r
+
+      <td style=\"width: 435.703px;\">over tiles</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#993300\">\r
+
+      <td style=\"width: 247.297px;\">Max. Fire Stage:</td>\r
+
+      <td style=\"width: 435.703px;\">70</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.297px;\">Power consumption:</td>\r
+
+      <td style=\"width: 435.703px;\">5 MWh/month</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#993300\">\r
+
+      <td style=\"width: 247.297px;\">Water consumption:</td>\r
+
+      <td style=\"width: 435.703px;\">72 Gallons/month</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.297px;\">Air pollution:</td>\r
+
+      <td style=\"width: 435.703px;\">4 over 9 tiles</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#993300\">\r
+
+      <td style=\"width: 247.297px;\">Water pollution:</td>\r
+
+      <td style=\"width: 435.703px;\">3 over 13 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.297px;\" height=\"19\">Garbage pollution:</td>\r
+
+      <td style=\"width: 435.703px;\">4 over 0 tiles</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p><b>Growable Version:</b></p>\r
+
+      <table class=\"text_normal\" style=\"width: 694px;\" border=\"0\" width=\"453\" cellspacing=\"0\" cellpadding=\"2\">\r
+
+      <tbody>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 247.328px;\" width=\"150\">Lot size:</td>\r
+
+      <td style=\"width: 435.672px;\" width=\"450\">4 x 3 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.328px;\">Building style(s):</td>\r
+
+      <td style=\"width: 435.672px;\">Building: Industrial,Building: IM,Industry: Mechanical</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 247.328px;\">Growth stage:</td>\r
+
+      <td style=\"width: 435.672px;\">1</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.328px;\">Occupants:</td>\r
+
+      <td style=\"width: 435.672px;\">I-M : 41 IM $$</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 247.328px;\">Bulldoze cost:</td>\r
+
+      <td style=\"width: 435.672px;\">§ 155</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.328px;\">Worth:</td>\r
+
+      <td style=\"width: 435.672px;\">§ 312</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 247.328px;\">Construction Time:</td>\r
+
+      <td style=\"width: 435.672px;\">15 days</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.328px;\">Max. Fire Stage:</td>\r
+
+      <td style=\"width: 435.672px;\">70</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 247.328px;\">Power consumption:</td>\r
+
+      <td style=\"width: 435.672px;\">3 MWh/month</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.328px;\">Water consumption:</td>\r
+
+      <td style=\"width: 435.672px;\">36 Gallons/month</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 247.328px;\">Air pollution:</td>\r
+
+      <td style=\"width: 435.672px;\">2 over 9 tiles</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td style=\"width: 247.328px;\">Water pollution:</td>\r
+
+      <td style=\"width: 435.672px;\">1 over 13 tiles</td>\r
+
+      </tr>\r
+
+      <tr bgcolor=\"#e9ebf0\">\r
+
+      <td style=\"width: 247.328px;\">Garbage pollution:</td>\r
+
+      <td style=\"width: 435.672px;\">4 over 0 tiles</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      </td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <table border=\"0\" width=\"750\" cellspacing=\"0\" cellpadding=\"4\" align=\"center\" bgcolor=\"#ffffff\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td colspan=\"2\">\r
+
+      <table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td bgcolor=\"#990000\" height=\"20\"><span class=\"text_titel\"> <span style=\"color: #ecf0f1;\"><strong>Installation</strong></span></span></td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td colspan=\"2\">\r
+
+      <p class=\"text_normal\">Installation: Copy/Extract the <strong>art128 </strong>parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the
+      Plugins, but keep it in a safe location.</p>\r
+
+      <p class=\"text_normal\">All files have been updated so <span style=\"color: #e03e2d;\">it is highly recommended to use any of the third party cleanitol tools and remove any previous versions
+      from your plugins.</span><br>In the ~<em>Documents </em>folder in the main ZIP you can find a Cleanitol_[...].txt script and by using either the newer <a
+      href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a> or the older <a
+      href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad
+      Certification\">BSC</abbr> Cleanitol</a> tool you can search and remove old and outdated versions of these files.</p>\r
+
+      <p class=\"text_normal\"><b>Un-Installing: </b>To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r
+
+      </td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <table border=\"0\" width=\"750\" cellspacing=\"0\" cellpadding=\"4\" align=\"center\" bgcolor=\"#ffffff\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td colspan=\"2\">\r
+
+      <table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td bgcolor=\"#990000\" height=\"20\"><span class=\"text_titel\"> <span style=\"color: #ecf0f1;\"><strong>Dependencies</strong></span></span></td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td colspan=\"2\">\r
+
+      <div align=\"justify\">\r
+
+      <p class=\"text_normal\">To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r
+
+      <ul>\r
+
+      <li class=\"text_normal\"><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D
+      LEX Legacy - BSC Common Dependencies Pack v9b</a> (and above)</li>\r
+
+      <ul>\r
+
+      <li><span class=\"text_normal\">BSC MEGA Props CP Vol01</span></li>\r
+
+      <li><span class=\"text_normal\">BSC MEGA Props CP Vol02<br></span></li>\r
+
+      <li><span class=\"text_normal\">BSC MEGA Props JES Vol01 v2</span></li>\r
+
+      <li><span class=\"text_normal\">BSC MEGA Props JES Vol02 v2</span></li>\r
+
+      <li><span class=\"text_normal\">BSC MEGA Props Misc Vol02 v4</span></li>\r
+
+      <li><span class=\"text_normal\">BSC Textures Vol03 v5</span></li>\r
+
+      <li><span class=\"text_normal\">BSC TexturePack Cycledogg V01b</span>.</li>\r
+
+      </ul>\r
+
+      </ul>\r
+
+      </div>\r
+
+      </td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p>For support or just to get more news BATs coming, visit my threads on either <a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\"
+      rel=\"noopener\">SC4Devotion </a>or <a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\"
+      rel=\"noopener\">Simtropolis</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/oeiras_steel_image1.jpg\" data-lightbox=\"lightbox295\"
+      data-alt=\"lightboxoeiras_steel_image1.jpg|oeiras_steel_image2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/oeiras_steel_image1.jpg\" alt=\"oeiras_steel_image1\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/oeiras_steel_image2.jpg\" data-lightbox=\"lightbox295\"
+      data-alt=\"lightboxoeiras_steel_image1.jpg|oeiras_steel_image2\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/oeiras_steel_image2.jpg\" alt=\"oeiras_steel_image22\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 45
+    filename: Art128 - Oeiras Steel Warehouse.zip
+    files:
+      - ~Documents/art128_readmes/Images/oeiras_steel_image1.jpg
+      - ~Documents/art128_readmes/Images/oeiras_steel_image2.jpg
+      - ~Documents/art128_readmes/Images/oeiras_steel_img0012tj.jpg
+      - Art128/Oeiras Steel Warehouse/EBLT_Art128_OeirasWarehouse-0x5ad0e817_0x1858bf67_0x30000.SC4Model
+      - Art128/Oeiras Steel Warehouse/IM$$1_4x3_Oeiras Warehouse_GROW.SC4Lot
+      - Art128/Oeiras Steel Warehouse/PLOP_4x3_Oeiras Warehouse_IM-PLOP.SC4Lot
+      - Art128/Oeiras Steel Warehouse/PLOP_4x3_Oeiras Warehouse_LM.SC4Lot
+      - ~Documents/art128_readmes/art128 - oeiras_steel_Readme or die !.htm
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Art128 - Oeiras Steel Warehouse v2.txt
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/oeiras_steel_image1.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/oeiras_steel_image2.jpg
+    lastModified: 2024-09-11T16:12:46-07:00
+    name: Art128 - Oeiras Steel Warehouse
+    sha256: aad154d0089f74d904d8309bd613577913253d4e419b587255892a81a4035d0e
+    size: 1261375
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/oeiras_steel_image1.jpg
+    timestamp: 2024-09-13T12:10:28.279Z
+    uncompressed: 1434421
+    url: https://www.sc4evermore.com/index.php/downloads/download/13-industrial/295-art128-oeiras-steel-warehouse
+    version: "2"
+
+timestamp: 2024-09-13T12:10:28.279Z

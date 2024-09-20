@@ -195,10 +195,47 @@ assets:
     authors:
       - SimGoober
     category: waterfront
+    dependencies: []
+    description: |-
+      <body>
+                                  
+      							
+      <p></p>
+      <p>
+      </p>
+      <p>
+      </p>
+      <p>
+      </p>
+      <p>
+      </p>
+      <div align="justify">
+      <p>
+      </p>
+      <p><span><span></span></span><font size="1">Blackbeard</font></p>
+      </div>
+
+      						</body>
+    filename: SG_Install_BlackbeardsDen.zip
+    files:
+      - bsc_Essentials_OG.dat
+      - Readme_SG_BlackBeardsDen.htm
+      - SG_3x4_BlackbeardsDen_6f672fb6.SC4Lot
+      - SG_BlackbeardsDen.dat
+      - SG_BlackbeardsDen_Day.jpg
+      - SG_BlackbeardsDen_Nite.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/0017/9bc6bed99d086ae4dd3f1df46a2104e5-SG_BlackbeardsDen_Day.jpg
+      - https://www.simtropolis.com/objects/screens/0017/9bc6bed99d086ae4dd3f1df46a2104e5-SG_BlackbeardsDen_Nite.jpg
     lastModified: 2005-05-04T19:53:35Z
     name: Blackbeards Den
+    sha256: 8943d28eb59fa7e3b552e3ac36f491b1da4f29b2ca27d2e84516ce5676fb61dc
+    size: 1069835
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2005/thumb-9bc6bed99d086ae4dd3f1df46a2104e5-SG_BlackbeardsDen_Day.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 1076218
     url: https://community.simtropolis.com/files/file/12392-blackbeards-den/
+    version: "1.0"
   simtropolis/12569-floating-airport-full-pack:
     authors:
       - simzebu
@@ -1590,10 +1627,151 @@ assets:
     authors:
       - jijdlswns
     category: waterfront
-    lastModified: 2009-06-14T04:43:02Z
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+    description: "<body>
+
+      \                           \
+
+      \t\t\t\t\t\t\t<p>\r
+
+      \tThis is my first set of canals I have made that are inspired by European canals. In total there are 3 pieces \r
+
+      </p>\r
+
+      \r
+
+      <h3>\r
+
+      \tINSTALLATION:\r
+
+      </h3>\r
+
+      \r
+
+      <p>\r
+
+      \tThis package is a simple .zip file. Just extract the jijdlswns folder to your My Documents/SimCity 4/Plugins directory (or equivalent, if you have a custom Plugins folder location).\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<span style=\"color:#e03e2d\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</span><br>\r
+
+      \tOptionally in the ~Documents folder in the main ZIP you can find a collective/master and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\"
+      rel=\"\" target=\"_blank\">nos.17's SC4 Cleanitol</a> or the older <a href=\"index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" rel=\"\" target=\"_blank\"><abbr title=\"BATT
+      Squad Certification\">BSC</abbr> Cleanitol</a> tool you can search and remove old and outdated versions of these files.\r
+
+      </p>\r
+
+      \r
+
+      <h3>\r
+
+      \tDLL DEPENDENCIES:\r
+
+      </h3>\r
+
+      \r
+
+      <p>\r
+
+      \tIn order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):\r
+
+      </p>\r
+
+      \r
+
+      <ul>\r
+
+      \t<li>\r
+
+      \t\t<a href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" rel=\"\" target=\"Submenus DLL\" title=\"memo.submenus.dll\"><strong>Submenus DLL</strong></a> - You need it to
+      get the package submenu working.\r
+
+      \r
+
+      \t\t<p>\r
+
+      \t\t\t<span style=\"color:#e03e2d\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span>\r
+
+      \t\t</p>\r
+
+      \t</li>\r
+
+      </ul>\r
+
+      \r
+
+      <h3>\r
+
+      \t<strong>CREDITS:</strong>\r
+
+      </h3>\r
+
+      \r
+
+      <p style=\"background-color:#ffffff; color:#353535; font-size:14px; text-align:start\">\r
+
+      \tThe following members contributed models, textures, and modding support to this collection:\r
+
+      </p>\r
+
+      \r
+
+      <ul>\r
+
+      \t<li>\r
+
+      \t\tjijdlswns\r
+
+      \t</li>\r
+
+      </ul>\r
+
+      \r
+
+      <p>\r
+
+      \tThis package has been made possible by the Project ZIP efforts of Tyberius06 and Ulisse Wolf.\r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: jijdlswns Resvi's canal.zip
+    files:
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/-0x5ad0e817_0xd6fefd9c_0x1b0000.SC4Model
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/-0x5ad0e817_0xd6fefd9c_0x1c0000.SC4Model
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/-0x5ad0e817_0xd6fefd9c_0x200000.SC4Model
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/-0x5ad0e817_0xd6fefd9c_0x210000.SC4Model
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/Resvi's canal-0x6534284a-0xd6fefd9c-0x17413d44.SC4Desc
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/Resvi'scanal str_17413688.SC4Lot
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/Resvi'scanalbri_17413df6.SC4Lot
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/Resvi'scanalbri_f7413714.SC4Lot
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/resvis canal-0x6534284a-0xd6fefd9c-0x574001cd.SC4Desc
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/RESVIS-0x6534284a-0xd6fefd9c-0x5721e908.SC4Desc
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/RESVIS-0x6534284a-0xd6fefd9c-0x9721e917.SC4Desc
+      - jijdlswns Resvi's canal/jijdlswns/Submenu/resvi_canal_submenu.dat
+      - jijdlswns Resvi's canal/~Documents/Cleanitol_jijdlswns Resvi's canal.txt
+      - jijdlswns Resvi's canal/~Documents/Readme_jijdlswns Resvi's canal.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0025/e0c60123182edd7dfda92489ee2adb37-1_dlswns20021.jpg
+      - https://www.simtropolis.com/objects/screens/0025/e0c60123182edd7dfda92489ee2adb37-11.jpg
+    lastModified: 2024-09-02T12:51:12Z
     name: Resvi's canal
+    sha256: 04e633c9e9558553aea376bef137a64683cb00d416f977206b8364390af14bda
+    size: 367678
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2009/thumb-e0c60123182edd7dfda92489ee2adb37-1_dlswns20021.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 426826
     url: https://community.simtropolis.com/files/file/21861-resvis-canal/
+    version: "2.0"
   simtropolis/21941-csk2-ppond-wharfs-and-bobs-house:
     authors:
       - Tamorr
@@ -4664,6 +4842,346 @@ assets:
     name: Harbor Village by Cobb
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2004/thumb-2926eca58e1eac401a773e36ac5a56a0-Cobb32118_Harbor_Village_JPG01.JPG
     url: https://community.simtropolis.com/files/file/3640-harbor-village-by-cobb/
+  simtropolis/36420-stex-sc4d-lex-legacy-ks_jpn-arabian-canal:
+    authors:
+      - ks_JPN
+    category: waterfront
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <h4 style="text-align:center">
+      	<strong><span style="font-size:24px">STEX &amp; SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - KS_JPN Arabian Canal</span></strong>
+      </h4>
+
+
+      <p>
+      	This SC4 Devotion <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy Pack features the complete set of the Arabain Canal by KS_JPN, including Props and Lots, which had been available on the Lot Exchange (<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>) at SC4 Devotion. After battling a number of technical issues, software incompatibility ultimately shuttered the <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to install.
+      </p>
+
+
+      <p>
+      	Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly maintain, update, and provide technical support for the pack.
+      </p>
+
+
+      <h3>
+      	INSTALLATION:
+      </h3>
+
+
+      <p>
+      	This package is a simple .zip file. Just extract the ks_jpn folder to your My Documents/SimCity 4/Plugins directory (or equivalent, if you have a custom Plugins folder location).
+      </p>
+
+
+      <p>
+      	<span style="color:#e03e2d">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</span><br>
+      	Optionally in the ~Documents folder in the main ZIP you can find a collective/master and by using either the newer <a href="https://community.simtropolis.com/files/file/35790-sc4-cleanitol/" rel="" target="_blank">nos.17's SC4 Cleanitol</a> or the older <a href="index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol" rel="" target="_blank"><abbr title="BATT Squad Certification">BSC</abbr> Cleanitol</a> tool you can search and remove old and outdated versions of these files.
+      </p>
+
+
+      <h3>
+      	DLL DEPENDENCIES:
+      </h3>
+
+
+      <p>
+      	In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed dependencies are covering a full install):
+      </p>
+
+
+      <ul>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/36142-submenus-dll/" rel="" target="Submenus DLL" title="memo.submenus.dll"><strong>Submenus DLL</strong></a> - You need it to get the package submenu working.
+
+      		<p>
+      			<span style="color:#e03e2d">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span>
+      		</p>
+      	</li>
+      </ul>
+
+
+      <h3>
+      	DEPENDENCIES:
+      </h3>
+
+
+      <p>
+      	The following files are required in order for the contents of this package to appear correctly and they work correctly (i.e., no "brown boxes" or missing textures) (Bear in mind that the original readmes are also available in the<em> ~Documents/Boston BigDig_Readmes</em> folder, but they have <strong>not </strong>been updated):
+      </p>
+
+
+      <ul>
+      	<li>
+      		<a href="index.php/downloads/download/22-dependencies/153-sc4d-lex-legacy-ks-jpn-dependencies" rel="" target="_blank">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - ks_JPN Dependencies Pack V2</a> (and above)<br>
+      		The below listed dependencies are all can be found in the hereby linked dependency pack compilation.
+      	</li>
+      </ul>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <ul>
+      	<li>
+      		ks_jpn MEGA Props Vol16
+      	</li>
+      </ul>
+
+
+      <h3>
+      	<strong>CREDITS:</strong>
+      </h3>
+
+
+      <p>
+      	The following members contributed models, textures, and modding support to this collection:
+      </p>
+
+
+      <ul>
+      	<li>
+      		KS_JPN
+      	</li>
+      </ul>
+
+
+      <p>
+      	This package has been made possible by the Project ZIP efforts of Tyberius06 and Ulisse Wolf.
+      </p>
+
+
+      <h5>
+      	Special Thanks
+      </h5>
+
+
+      <p>
+      	Webmaster &amp; administration staff at SC4 Devotion &amp; Simtropolis
+      </p>
+
+
+      <p>
+      	And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone that may of helped somewhere along the lines.
+      </p>
+
+
+      <p>
+      	And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!
+      </p>
+
+
+      <p>
+      	And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)
+      </p>
+
+      						</body>
+    filename: STEX & SC4D LEX Legacy - KS_JPN Arabian Canal.zip
+    files:
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 1_70cab1f0.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 2_10cab21e.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 3_10cab233.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 4_90cab240.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 5_d0cab24c.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 6_f0cab26f.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 7_70cab2b8.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 8_70cab37f.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 9_b0cab65e.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Submenu/Arabian_Canal_Submenu.dat
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/~Documents/Cleanitol_MASTER REMOVE LIST_ks_jpn Arabian Canal.txt
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/~Documents/readme.css
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/~Documents/readme_KS_jpn_arabian_canal.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_08/c2.jpg.20a078cba60fc9534c42e44607ae5f5a.jpg
+    lastModified: 2024-09-02T12:50:35Z
+    name: STEX & SC4D LEX Legacy - KS_JPN Arabian Canal
+    sha256: 508b5d9fa7d5a1707803f85c9c71412f87aa13733699186ccd8594466a2234e6
+    size: 88438
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/c2.thumb.jpg.96a5485ce57bbf35e328c0ded8b76058.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 91867
+    url: https://community.simtropolis.com/files/file/36420-stex-sc4d-lex-legacy-ks_jpn-arabian-canal/
+    version: 1.0.0
+  simtropolis/36423-rlm-productions-la-river-project:
+    authors:
+      - RebaLynnTS
+    category: waterfront
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+    description: "<body>
+
+      \                           \
+
+      \t\t\t\t\t\t\t<h3 style=\"text-align: center;\">\r
+
+      \t<span style=\"font-size:28px;\"><strong>LA River Project</strong></span>\r
+
+      </h3>\r
+
+      \r
+
+      <p>\r
+
+      \tThis is the complete LA River Project set that includes the channels and ditches developed by me\r
+
+      </p>\r
+
+      \r
+
+      <h3>\r
+
+      \tINSTALLATION:\r
+
+      </h3>\r
+
+      \r
+
+      <p>\r
+
+      \tThis package is a simple .zip file. Just extract the RLM Productions folder to your My Documents/SimCity 4/Plugins directory (or equivalent, if you have a custom Plugins folder location).\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<span style=\"color:#e03e2d\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</span><br>\r
+
+      \tOptionally in the ~Documents folder in the main ZIP you can find a collective/master and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\"
+      rel=\"\" target=\"_blank\">nos.17's SC4 Cleanitol</a> or the older <a href=\"index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" rel=\"\" target=\"_blank\"><abbr title=\"BATT
+      Squad Certification\">BSC</abbr> Cleanitol</a> tool you can search and remove old and outdated versions of these files.\r
+
+      </p>\r
+
+      \r
+
+      <h3>\r
+
+      \tDLL DEPENDENCIES:\r
+
+      </h3>\r
+
+      \r
+
+      <p>\r
+
+      \tIn order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):\r
+
+      </p>\r
+
+      \r
+
+      <ul>\r
+
+      \t<li>\r
+
+      \t\t<a href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" rel=\"\" target=\"Submenus DLL\" title=\"memo.submenus.dll\"><strong>Submenus DLL</strong></a> - You need it to
+      get the package submenu working.\r
+
+      \r
+
+      \t\t<p>\r
+
+      \t\t\t<span style=\"color:#e03e2d\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span>\r
+
+      \t\t</p>\r
+
+      \t</li>\r
+
+      </ul>\r
+
+      \r
+
+      <h3>\r
+
+      \t<strong>CREDITS:</strong>\r
+
+      </h3>\r
+
+      \r
+
+      <p>\r
+
+      \tThe following members contributed models, textures, and modding support to this collection:\r
+
+      </p>\r
+
+      \r
+
+      <ul>\r
+
+      \t<li>\r
+
+      \t\tRebaLynnTS\r
+
+      \t</li>\r
+
+      </ul>\r
+
+      \r
+
+      <p>\r
+
+      \tThis package has been made possible by the Project ZIP efforts of Tyberius06 and Ulisse Wolf.\r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: RLM Productions - LA River Project.zip
+    files:
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_FenceProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_FootBridgeProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_InvisibleGraffitiProps1.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_InvisibleGraffitiProps2.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_InvisibleProps1.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_InvisibleProps2.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_LandJunkProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_MixJunkProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_PlantProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_SlopeGraffitiProps1.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_SlopeGraffitiProps2.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_WaterJunkProps.dat
+      - RLM Productions - LA River Project/RLM Productions/Submenu/LA_River_Project_Submenu.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/LAR_DWD_Resource.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/LAR_DWR_Resource.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/LAR_Essentials.dat
+      - RLM Productions - LA River Project/~Documents/Cleanitol_MASTER REMOVE LIST_LA River Project.txt
+      - RLM Productions - LA River Project/~Documents/readme.css
+      - RLM Productions - LA River Project/~Documents/readme_LA_river_project.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66d4690764286_c99b08301545565dfc74193204283ff7-LAR-R02.jpg.820580b19c35b98b760354f962f1c1df.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/5d9c9591b027b2e37adfc0cdb1ece930-ditch01.jpg.f7c8215879e2c94c4941edfbb5cdd606.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66d4690819498_5d9c9591b027b2e37adfc0cdb1ece930-LAR-DUpload02.jpg.9aabb7b2197bd1d3fb8bda1d32ca1403.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66d46908c22fc_c99b08301545565dfc74193204283ff7-LAR-R01.jpg.cef25fef8bd198e8f99e41494720483f.jpg
+    lastModified: 2024-09-02T12:52:13Z
+    name: RLM Productions - LA River Project
+    sha256: e04fcb198d26b0c6d74d982348a3a1c7602e60a897957ba2fe5469317644391c
+    size: 4622851
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66d469ec1e073_c99b08301545565dfc74193204283ff7-LAR-R02.thumb.jpg.b0e37e197220c5befabfc8ce62c14eb7.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 5981905
+    url: https://community.simtropolis.com/files/file/36423-rlm-productions-la-river-project/
+    version: 1.0.0
   simtropolis/3704-fishing-docks:
     authors:
       - JohnB
@@ -4825,4 +5343,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-95551d0236de2d4a115733d90bd60c29-vabeachboardwalk.JPG
     url: https://community.simtropolis.com/files/file/944-virginia-beach-boardwalk/
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:22:00.820Z

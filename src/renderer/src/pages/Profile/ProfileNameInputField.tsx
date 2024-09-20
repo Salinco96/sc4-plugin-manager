@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { SxProps, TextField } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { ProfileInfo } from "@common/types"
+import { ProfileInfo } from "@common/profiles"
 import { useStoreActions } from "@utils/store"
 
 export function ProfileNameInputField({

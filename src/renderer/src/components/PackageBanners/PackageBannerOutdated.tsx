@@ -1,5 +1,7 @@
 import { Update as UpdateIcon } from "@mui/icons-material"
 
+import { PackageID } from "@common/packages"
+import { VariantID } from "@common/variants"
 import { usePackageInfo, useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
@@ -9,8 +11,8 @@ export function PackageBannerOutdated({
   packageId,
   variantId,
 }: {
-  packageId: string
-  variantId: string
+  packageId: PackageID
+  variantId: VariantID
 }): JSX.Element {
   const actions = useStoreActions()
 

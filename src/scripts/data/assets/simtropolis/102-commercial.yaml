@@ -9013,6 +9013,10 @@ assets:
 
 
 
+
+
+
+
       							
       <p>
       	<span style="font-size:12px;"><span style="font-family:Verdana;"><span style="color:rgb(87,86,71);"><span style="font-family:Verdana;"><strong>Updated July 28, 2007! </strong>All my old files are being updated and re-released to fix a host of minor issues and mistakes I made when I was still learning. The lot and desc files are the same the original meaning that the new version will replace the old one in your cities without any brown boxes as long as you delete the previous version. A <abbr title="BATT Squad Certification">BSC</abbr> Cleanitol file will be available on <a href="http://www.sc4devotion.com/" rel="external nofollow">SC4Devotion</a>'s <abbr title="BATT Squad Certification">BSC</abbr> exchange as soon as I have all the updated files released, which will make the job of deleting the old versions easy.</span></span><br>
@@ -10294,7 +10298,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -16906,10 +16918,62 @@ assets:
     authors:
       - SimGoober
     category: commercial
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+      							
+      <p>I was sent a picture of this Real World restaurant a while back, and thought to myself, now I really MUST do that one! The real version is located in Nova Scotia, Canada. With a name like
+      this, they really must have the best chicken around!<br><br>In game this one seems to grow very easily, but then upgrades to something else rather quickly. I'd suggest marking one or two
+      historical, then let the rest disappear.</p>
+
+      <p> </p>
+
+      <p>Growable CS$<br><br><strong>Dependencies:</strong></p>
+
+      <p><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=443" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Essentials</a></p>
+
+      <p><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Textures Vol 01</a></p>
+
+      <p><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=638" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Textures Vol 02</a></p>
+
+      <p><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Mega Props CP Vol 01</a></p>
+
+      <p><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Mega Props SG Vol 01</a><br><a
+      href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1829" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props_JBSimio_Vol01</a></p>
+
+      <p> </p>
+
+      <p> </p>
+
+      <p><span><span style="font-size:11px;font-family:Arial;color:rgb(0,0,0);background-color:transparent;">2014-12-17 - Prens: Added up-to-date links + tags.</span></span></p>
+
+      						</body>
+    filename: SG_Install_LickAChick.zip
+    files:
+      - images/footer.gif
+      - images/header.gif
+      - images/SG_Lick-A-Chick_01.jpg
+      - images/SG_Lick-A-Chick_02.jpg
+      - CS$2_3x2_SG_LickAChick.SC4Lot
+      - CS$2_3x3_SG_LickAChick.SC4Lot
+      - CS$2_3x4_SG_LickAChick.SC4Lot
+      - SG_LickAChick.dat
+      - SG_PLOP_3x3_LickAChick.SC4Lot
+      - SG_Readme_LickAChick.htm
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_12_2014/a0422e1bebe637e0d5e4faab832c6d8a-sg_lick-a-chick_01.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2014/cf502d4507c5b07c3fb4eee27a257a23-sg_lick-a-chick_02.jpg
     lastModified: 2014-12-17T03:21:26Z
     name: Lick A Chick Restaurant
+    sha256: 6a7b8a4cc0ea501ee0a73903b8581cd10bfca83c3a38a3f5a9a63da93a54e599
+    size: 728644
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2014/thumb-a0422e1bebe637e0d5e4faab832c6d8a-sg_lick-a-chick_01.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 735631
     url: https://community.simtropolis.com/files/file/20992-lick-a-chick-restaurant/
+    version: "1.0"
   simtropolis/20993-restaurant-pack-01:
     authors:
       - SimGoober
@@ -17583,7 +17647,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -17667,12 +17739,28 @@ assets:
       - dk1
     category: commercial
     dependencies: []
-    description: |-
+    description: >-
       <body>
                                   
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
       							
-      <p>Retro Burger King and Dairy Queen. CS$2x2, jobs: 17, growth stage: 2, zone density: low, medium, high. LM2x2, jobs: 17 CS$, build: 1000. No dependencies.</p>
-      <p> </p>
+
+
+
+      							
+      <p>
+      	Retro Burger King and Dairy Queen. CS$2x2, jobs: 17, growth stage: 2, zone density: low, medium, high. LM2x2, jobs: 17 CS$, build: 1000. No dependencies.
+      </p>
+
+
+      <p>
+      	<span style="color:#3498db;"><span style="font-size:10px;"><span style="font-family:Arial, Helvetica, sans-serif;">Staff Edit: Added File Descriptor. -CF, 09/11/2024.</span></span></span>
+      </p>
 
       						</body>
     filename: KingQueen.zip
@@ -17687,12 +17775,12 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0019/afb352d507885f4edaf6b4b425add3c3-BKDQDay.JPG
       - https://www.simtropolis.com/objects/screens/0019/afb352d507885f4edaf6b4b425add3c3-BKDQnight.JPG
-    lastModified: 2009-04-25T06:30:07Z
+    lastModified: 2024-09-11T19:08:47Z
     name: DK1 King and Queen
     sha256: da5109c802b59fbef21a3e29600452d5b667c1211c142f3047ac27d4d0520188
     size: 306832
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2009/thumb-afb352d507885f4edaf6b4b425add3c3-BKDQDay.JPG
-    timestamp: 2024-08-27T05:49:08.398Z
+    timestamp: 2024-09-13T12:10:28.279Z
     uncompressed: 345707
     url: https://community.simtropolis.com/files/file/21609-dk1-king-and-queen/
     version: "1.0"
@@ -21572,10 +21660,52 @@ assets:
     authors:
       - dk1
     category: commercial
-    lastModified: 2010-12-29T12:26:48Z
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	Taco Bell, Popeye's, KFC. CS$2x2, jobs: 17. No dependencies.
+      </p>
+
+
+      <p>
+      	<span style="color:#3498db;"><span style="font-size:10px;">Staff Edit: Added File Descriptor. -CF, 09/11/2024.</span></span>
+      </p>
+
+      						</body>
+    filename: DK1FastFood.zip
+    files:
+      - DK1FastFood/CS2x2_DK1FastFood_5a25bc1d.SC4Lot
+      - DK1FastFood/KFC-0x5ad0e817_0x73156766_0x5de0000.SC4Model
+      - DK1FastFood/KFC-0x6534284a-0x73156766-0x7954198f.SC4Desc
+      - DK1FastFood/Popeye's-0x6534284a-0x73156766-0x995419c8.SC4Desc
+      - DK1FastFood/Popeyes-0x5ad0e817_0x73156766_0x5df0000.SC4Model
+      - DK1FastFood/Taco Bell-0x5ad0e817_0x73156766_0x5d40000.SC4Model
+      - DK1FastFood/Taco Bell-0x6534284a-0x73156766-0xb9541948.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/0016/8f2f55a8bb98004b8bf56639be5d72f2-FastFood01.JPG
+      - https://www.simtropolis.com/objects/screens/0016/8f2f55a8bb98004b8bf56639be5d72f2-FastFood02.JPG
+    lastModified: 2024-09-11T19:05:40Z
     name: DK1 Fast Food
+    sha256: ea1d1c68ceff8e8632575859ffbc02a07472b98666968ef29d5611ad26b6ff2b
+    size: 305376
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2010/thumb-8f2f55a8bb98004b8bf56639be5d72f2-FastFood01.JPG
+    timestamp: 2024-09-13T12:10:28.279Z
+    uncompressed: 366075
     url: https://community.simtropolis.com/files/file/25597-dk1-fast-food/
+    version: "1.0"
   simtropolis/25611-peninsula-hk-hotel:
     authors:
       - Amthaak
@@ -22339,6 +22469,10 @@ assets:
 
 
 
+
+
+
+
       							
       <p>Hey guys I'm here to present my newest upload Church's Chicken. This is a 3x4 lot, and has drive thru, made with textures custom made by me, they are included into the file. It is CS$$.</p>
 
@@ -22497,7 +22631,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -22664,6 +22806,10 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
 
 
 
@@ -23270,10 +23416,47 @@ assets:
     authors:
       - jijdlswns
     category: commercial
+    dependencies: []
+    description: |-
+      <body>
+                                  
+      							
+      <p>this building is kring it locates gangnam area in seoul </p>
+      <p>and it is one of seoul's cultural complex of conglomerate </p>
+      <p>it built by kumho and they named this building K ring!! it mean is kumho's k and building's main exterior of ring!! </p>
+      <p>and it building almost used exhibit hall,</p>
+      <p>so that 's why i have put in education tab,,</p>
+      <p>i have make it for museum and cs$$$, and all of this files size are 4x4 </p>
+      <p>and that zip files have cs$$$ and museum files and some of essential file,.,.</p>
+      <p>add cs$$$'s capacity is 3000 ..</p>
+      <p> </p>
+      <p> </p>
+      <p> </p>
+      <p>here is my blog adress. </p>
+      <p><a href="http://blog.naver.com/dlswns2002" rel="external nofollow">My link</a></p>
+      <p>if it file make any problem contact this blog, thank you,</p>
+
+      						</body>
+    filename: KLING SEOUL-jijdlswns.zip
+    files:
+      - KLING SEOUL-jijdlswns/CS$$$kling_4x4_9c4c237a.SC4Lot
+      - KLING SEOUL-jijdlswns/CV4x4_Kling SEOUL_3c4c2648.SC4Lot
+      - KLING SEOUL-jijdlswns/Kling Seoul-jijdlswn-0x6534284a-0x98216c3a-0xbc4c2159.SC4Desc
+      - KLING SEOUL-jijdlswns/Kling Seoul-jijdlswn-0x6534284a-0x98216c3a-0xdc4c209f.SC4Desc
+      - KLING SEOUL-jijdlswns/Kling Seoul-jijdlswns0x98216c3a_0x70000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_02_2012/ca2773327a9d071db79ce9cc5f52c0cb-62006.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_02_2012/180028e044c991d832c86827595da8d1-561991.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_02_2012/7678ff2a1d8a079a40cd21f5f0fa4baa-gdsfrg.jpg
     lastModified: 2012-02-18T11:55:27Z
     name: Kring seoul
+    sha256: 19fc32aa5025a954c4abb7e11b3c8a4718f9d623ff6e59ebf319d2d8b104eb67
+    size: 1008262
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2012/thumb-ca2773327a9d071db79ce9cc5f52c0cb-62006.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 1162035
     url: https://community.simtropolis.com/files/file/27289-kring-seoul/
+    version: 1v
   simtropolis/27294-seoul-central-postofficeposttower:
     authors:
       - jijdlswns
@@ -25805,6 +25988,10 @@ assets:
 
 
 
+
+
+
+
       							
       <p>Hello Simtropolis! <img src="https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif" alt=":)" srcset="https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x"
       width="30" height="30" ></p>
@@ -25925,6 +26112,237 @@ assets:
     name: The Warehouse (New Zealand)
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2013/thumb-23a3b1cfd5e93196d87554cf02bbd245-new-city-3-jan--001387218305.png
     url: https://community.simtropolis.com/files/file/29124-the-warehouse-new-zealand/
+  simtropolis/29128-art128-japanese-buildings-compilation:
+    authors:
+      - art128
+    category: commercial
+    dependencies:
+      - simtropolis/35470-pre-2000-car-props-pack
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/10-jenxporkie-expanded-porkie-props
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	A set of 11 buildings inspired by Japanese buildings in various cities. This upload contains both of Art128's Japanese/Tokyo Building sets:
+      </p>
+
+
+      <ul>
+      	<li>
+      		Art128 Japanese (Tokyo) Buildings Volume 1
+      	</li>
+      	<li>
+      		Art128 Japanese Buildings 2
+      	</li>
+      </ul>
+
+
+      <p>
+      	They come in growable and two different plop: Landmark and Commercials. They can be found at the top and bottom of landmark menu or if you use the Submenu DLL Mod, then the Ploppable with Jobs lots can be found in the Commercial Zoning menu. 
+      </p>
+
+
+      <p>
+      	For detailed stats, please check out the attached readme file.
+      </p>
+
+
+      <ul>
+      	<li>
+      		Office Building 1 - Chuo, Tokyo    
+      	</li>
+      	<li>
+      		<a href="https://en.wikipedia.org/wiki/Toraya_Confectionery" rel="external nofollow">Toraya</a> Building - Ginza, Tokyo
+      	</li>
+      	<li>
+      		<a href="https://en.wikipedia.org/wiki/Animate_(retailer)" rel="external nofollow">Animate</a> Building - Ikebukuro, Tokyo
+      	</li>
+      	<li>
+      		Office Building 4 - Ikebukuro, Tokyo
+      	</li>
+      	<li>
+      		Digital Art Building - Ikebukuro, Tokyo
+      	</li>
+      	<li>
+      		Tokyo Building 6 - Tokyo, Japan
+      	</li>
+      	<li>
+      		Kitayama - Kyoto, Japan
+      	</li>
+      	<li>
+      		Murakami Office - Murakami, JapanNagaoka-Tottori Offices - Nagaoka, Tottori, Japan
+      	</li>
+      	<li>
+      		Toyama Office - Toyama, Japan
+      	</li>
+      	<li>
+      		<strong>Dantes Tower Machiya</strong> - brand new, previously unreleased building. 
+      	</li>
+      </ul>
+
+
+      <h3>
+      	Installation:
+      </h3>
+
+
+      <div>
+      	Copy/Extract the <strong>art128 </strong>parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe location.
+      </div>
+
+
+      <h3>
+      	Dependencies:
+      </h3>
+
+
+      <ul>
+      	<li>
+      		<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow" target="_blank">SC4D <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> Legacy - <abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies v9</a> (and above)
+
+      		<ul>
+      			<li>
+      				<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props CP Vol01
+      			</li>
+      			<li>
+      				<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props JES Vol01 v2
+      			</li>
+      			<li>
+      				<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol02
+      			</li>
+      		</ul>
+      	</li>
+      	<li>
+      		<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props" rel="external nofollow" target="_blank">JENX-Porkie Expanded Porkie Props</a>
+      	</li>
+      	<li>
+      		<a href="https://community.simtropolis.com/files/file/35470-pre-2000-car-props-pack/" rel="" target="_blank">Art128 - Pre 2000 Car Props Pack</a>
+      	</li>
+      	<li>
+      		<a href="http://hide-inoki.com/bbs/archives/sc4_0860.html" rel="external nofollow" target="_blank">Jim - Car Prop Pack 1.2</a><br>
+      		Direct Link* - <a href="http://hide-inoki.com/bbs/archives/files/1598.zip" rel="external nofollow" target="_blank">http://hide-inoki.com/bbs/archives/files/1598.zip</a><br>
+      		*for the direct links, the best is if you "right click"/copy link address and paste it into a new TAB, or "right click"/save link as...
+      	</li>
+      </ul>
+
+
+      <div>
+      	 
+      </div>
+
+
+      <div>
+      	All buildings are in HD and Darknight, therefore the use of <a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="" target="_blank">Simfox's Day N Night mod</a> is strongly suggested.
+      </div>
+
+
+      <div>
+      	 
+      </div>
+
+
+      <div>
+      	All the models and the initial lotting were created by Art128 and the modding by noahclem. The revision of the lotting and modding and the compilation was assembled by Tyberius06.
+      </div>
+
+
+      <div>
+      	For support or just to get more news BATs coming, visit my threads on either <a href="https://sc4devotion.com/forums/index.php?topic=7031" rel="external nofollow" target="_blank">SC4Devotion</a> or <a href="https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/" rel="" target="_blank" title="Art128 BAT Manufacture">Simtropolis</a><br>
+      	<br>
+      	Thanks:<br>
+      	<br>
+      	A big thanks goes to my team mates, my friends who have supported me during the creation process of these buildings, and the readers on the forums who have given their thoughts about the buildings.<br>
+      	A special thanks goes to noahclem who did the whole modding phase of these buildings. Without his great help there would be no upload of the highest quality possible.<br>
+      	<br>
+      	I hope you'll like these buildings!<br>
+      	<br>
+      	-art128
+      </div>
+
+      						</body>
+    filename: Art128 - Japanese Buildings Compilation.zip
+    files:
+      - art128/Japanese Buildings Compilation/Animate Building - Ikebukuro, Tokyo/CO$$7_2x2_EBLT_Art128_TokyoBuilding3.SC4Lot
+      - art128/Japanese Buildings Compilation/Animate Building - Ikebukuro, Tokyo/EBLT_Art128_TokyoBuilding3-0x5ad0e817_0x9e759ac4_0x110000.SC4Model
+      - art128/Japanese Buildings Compilation/Animate Building - Ikebukuro, Tokyo/PLOP_2x2_EBLT_Art128_TokyoBuilding3_Co$$_PLOP.SC4Lot
+      - art128/Japanese Buildings Compilation/Animate Building - Ikebukuro, Tokyo/PLOP_2x2_EBLT_Art128_TokyoBuilding3_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Dantes Tower Machiya - Japan/art128-Dantes-Tower-machiya.dat
+      - art128/Japanese Buildings Compilation/Dantes Tower Machiya - Japan/PLOP_1x2_art128_Dantes-Tower-machiya_Cs$$$_plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Dantes Tower Machiya - Japan/R$$5_1x1_art128_Dantes-Tower-machiya_R$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Digital Art Building - Ikebukuro, Tokyo/CO$$$6_EBLT_Art128_TokyoBuilding5.SC4Lot
+      - art128/Japanese Buildings Compilation/Digital Art Building - Ikebukuro, Tokyo/EBLT_Art128_TokyoBuilding5-0x5ad0e817_0x9e759ac4_0xf0000.SC4Model
+      - art128/Japanese Buildings Compilation/Digital Art Building - Ikebukuro, Tokyo/PLOP_1x1_EBLT_Art128_TokyoBuilding5_Co$$$_Plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Digital Art Building - Ikebukuro, Tokyo/PLOP_1x1_EBLT_Art128_TokyoBuilding5_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Kitayama - Kyoto, Japan/art128-Kitayama-v2.SC4Model
+      - art128/Japanese Buildings Compilation/Kitayama - Kyoto, Japan/PLOP_1x2_Kitayama-N-Art128 LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Kitayama - Kyoto, Japan/PLOP_1x2_Kitayama-N-Art128-plopc$$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Kitayama - Kyoto, Japan/R$$$6_1x2_Kitayama-N-art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/art128-MurakamiOffice-v2_orig_off-cent_S3D.dat
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/art128-MurakamiOffice-v3.SC4Model
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/CO$$6_1x1_MurakamiOffice-N-art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/PLOP_1x1_art128-MurakamiOffice-v2-LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Murakami Office - Murakami, Japan/PLOP_1x1_art128-MurakamiOffice-v2-LMCO$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Nagaoka-Tottori Offices - Nagaoka, Tottori, Japan/art128-Nagaoka-Tottori.SC4Model
+      - art128/Japanese Buildings Compilation/Nagaoka-Tottori Offices - Nagaoka, Tottori, Japan/CO$$$5_2x2_Nagaoka-Tottori-N-art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Nagaoka-Tottori Offices - Nagaoka, Tottori, Japan/PLOP_2x2_art128-Nagaoka-Tottori-LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Nagaoka-Tottori Offices - Nagaoka, Tottori, Japan/PLOP_2x2_art128-Nagaoka-Tottori-LMCO$$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 1 - Chuo, Tokyo/CO$$$7_2x2_EBLT_Art128_TokyoBuilding1.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 1 - Chuo, Tokyo/EBLT_Art128_TokyoBuilding1-0x5ad0e817_0x9e759ac4_0xb0000.SC4Model
+      - art128/Japanese Buildings Compilation/Office Building 1 - Chuo, Tokyo/PLOP_2x2_EBLT_Art128_TokyoBuilding1_Co$$$_Plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 1 - Chuo, Tokyo/PLOP_2x2_EBLT_Art128_TokyoBuilding1_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 4 - Ikebukuro, Tokyo/CO$$$7_EBLT_Art128_TokyoBuilding4.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 4 - Ikebukuro, Tokyo/EBLT_Art128_TokyoBuilding4-0x5ad0e817_0x9e759ac4_0xd0000.SC4Model
+      - art128/Japanese Buildings Compilation/Office Building 4 - Ikebukuro, Tokyo/PLOP_1x2_EBLT_Art128_TokyoBuilding4_Co$$$_Plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Office Building 4 - Ikebukuro, Tokyo/PLOP_1x2_EBLT_Art128_TokyoBuilding4_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Tokyo Building 6 - Tokyo, Japan/CO$$$6_2x1_TokyoBuilding6-N-Art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Tokyo Building 6 - Tokyo, Japan/EBLT_Art128_TokyoBuilding6.SC4Model
+      - art128/Japanese Buildings Compilation/Tokyo Building 6 - Tokyo, Japan/PLOP_2x1_EBLT_Art128_TokyoBuilding6_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Tokyo Building 6 - Tokyo, Japan/PLOP_2x1_EBLT_Art128_TokyoBuilding6_LMCO$$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Toraya Building - Ginza, Tokyo/CO$$$6_EBLT_Art128_TokyoBuilding2.SC4Lot
+      - art128/Japanese Buildings Compilation/Toraya Building - Ginza, Tokyo/EBLT_Art128_TokyoBuilding2-0x5ad0e817_0x9e759ac4_0xa0000.SC4Model
+      - art128/Japanese Buildings Compilation/Toraya Building - Ginza, Tokyo/PLOP_1x2_EBLT_Art128_TokyoBuilding2_Co$$$_Plop.SC4Lot
+      - art128/Japanese Buildings Compilation/Toraya Building - Ginza, Tokyo/PLOP_1x2_EBLT_Art128_TokyoBuilding2_LM.SC4Lot
+      - art128/Japanese Buildings Compilation/Toyama Office - Toyama, Japan/art128-ToyamaOffice.SC4Model
+      - art128/Japanese Buildings Compilation/Toyama Office - Toyama, Japan/CS$$$5_1x1_ToyamaOffice-N-art128.SC4Lot
+      - art128/Japanese Buildings Compilation/Toyama Office - Toyama, Japan/PLOP_1x1_art128-ToyamaOffice-LM-C$$$.SC4Lot
+      - art128/Japanese Buildings Compilation/Toyama Office - Toyama, Japan/PLOP_1x1_art128-ToyamaOffice-v2-LM.SC4Lot
+      - ~Documents/art128_readmes/art128 - Dantes Tower and Tokyo Building 6.jpg
+      - ~Documents/art128_readmes/art128 - Japanese Building pack 1.jpg
+      - ~Documents/art128_readmes/art128 - Japanese Building pack 2full.jpg
+      - ~Documents/art128_readmes/Art128 - Japanese Buildings Compilation_readme.txt
+      - ~Documents/art128_readmes/Tokyo1Fix.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Art128 - Japanese Buildings Compilation.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_12_2013/6068b4cb155f543b3713ece86b761ba8-buildingsp1d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2013/7d14f13ee01c21138a304d1b071e102f-buildingsp1n.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2013/54f9384d28f45438eb4f76cd60473331-buildingsp2d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_12_2013/f18b1cba985fe644a67a1919ec7f811c-buildingsp2n.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66d6cc208abbb_art128-DantesTowerandTokyoBuilding6.jpg.0c86078458930399a721c9b2e3c65cbd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66d6cc279fb4c_art128-JapaneseBuildingpack2full.jpg.ff1fd6508feb046fc9241de70fa998b6.jpg
+    lastModified: 2024-09-03T09:01:59Z
+    name: Art128 - Japanese Buildings Compilation
+    sha256: dcfde6efafb59a045215a97e332a7b8b4ad4772dfde227103472b31af8872ca6
+    size: 17382605
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2013/thumb-6068b4cb155f543b3713ece86b761ba8-buildingsp1d.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 19557794
+    url: https://community.simtropolis.com/files/file/29128-art128-japanese-buildings-compilation/
+    version: "1.0"
   simtropolis/29128-tokyo-building-volume-1:
     authors:
       - art128
@@ -26117,6 +26535,10 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
 
 
 
@@ -28059,7 +28481,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -28672,7 +29102,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -28878,6 +29316,10 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
 
 
 
@@ -29307,7 +29749,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -29615,7 +30065,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -29722,7 +30180,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -29929,7 +30395,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -30111,7 +30585,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -30422,6 +30904,10 @@ assets:
 
 
 
+
+
+
+
       							
       <p style="line-height:22.4px;font-family:Roboto, sans-serif;">
       	<span style="font-family:georgia, serif;line-height:22.4px;">Shopko was founded in 1962 by James Ruben, and its first store opened in Green Bay.</span><br style="font-family:georgia, serif;line-height:22.4px;">
@@ -30564,7 +31050,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -30753,6 +31247,10 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
 
 
 
@@ -30964,6 +31462,10 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
 
 
 
@@ -33927,7 +34429,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -34117,6 +34627,10 @@ assets:
 
 
 
+
+
+
+
       							
       <p>
       	<span style="font-family:Georgia, serif;">Winn-Dixie created the Save-Rite brand as an experiment to increase its revenues and opened 11 stores throughout its distribution area. In November 2001, Winn-Dixie announced plans to convert nearly all of its 40-some Winn-Dixie and Winn-Dixie Marketplace brand stores in the metro Atlanta area into Save-Rites as a last-ditch effort to keep a hold on its market share, which was rapidly declining due to stiff competition from Wal-Mart, Publix, Kroger, Ingles, Food Lion, and other similar stores.</span>
@@ -34230,7 +34744,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -34369,6 +34891,10 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
 
 
 
@@ -34676,7 +35202,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -35058,7 +35592,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -35391,6 +35933,10 @@ assets:
 
 
 
+
+
+
+
       							
       <p style="background-color:#ffffff;color:#353535;font-size:14px;">
       	<span style="font-family:Georgia, serif;"><em>Just because I don't like them, doesn't mean yall won't.</em></span>
@@ -35574,7 +36120,15 @@ assets:
 
 
 
+
+
+
+
       							
+
+
+
+
 
 
 
@@ -39886,10 +40440,157 @@ assets:
     authors:
       - 20huskies
     category: commercial
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	<strong>Description</strong>: Stadium Village is expanding and the Llamas are on a winning streak.  Stadium neighborhoods take on a character all their own, centered around a facility which can balloon in population for a few hours and bring a boost to local business.
+      </p>
+
+
+      <p>
+      	This pack contains four BATs, all of which have a ploppable version and three of which have a growable version (I figured no one would want a random building with rooftop stands popping up facing a residential high rise for example).
+      </p>
+
+
+      <p>
+      	     - <em>Quentin's Casa de Nachos (fictional)</em>: Nachos are a stadium staple, at least in America.
+      </p>
+
+
+      <p>
+      	     - <em>Yellowcard Diner (fictional)</em>: A soccer-themed retro American diner for only the most loyal Llamas fans.
+      </p>
+
+
+      <p>
+      	     - <em>Infield Fry Rule (fictional)</em>:  A baseball-themed burger and fries type standard American restaurant.
+      </p>
+
+
+      <p>
+      	     - <em>Infusion Coffee and Tea (based on a real company)</em>:  Infusion fills the role of Starbucks on the island of Guam, where there are no Starbucks, believe it or not.  For this building they occupy the ground floor of a small collection of apartments.  On the rooftop, there are bleachers inspired by the buildings across the street from Wrigley Field in Chicago.  They would be strategically situated to allow more fans to catch a view of your game - adding more seats to a place in your city where there may be limitations on stadium expansion.
+      </p>
+
+
+      <p>
+      	<strong>Stats</strong>:
+      </p>
+
+
+      <p>
+      	Plop Cost: 4400
+      </p>
+
+
+      <p>
+      	Bulldoze Cost: 440
+      </p>
+
+
+      <p>
+      	Jobs: 21+ CS$$ jobs each
+      </p>
+
+
+      <p>
+      	Wealth: Medium
+      </p>
+
+
+      <p>
+      	Growth Stage: 2 (where applicable)
+      </p>
+
+
+      <p>
+      	Lot Size: 1x2
+      </p>
+
+
+      <p>
+      	Power Consumed: 4
+      </p>
+
+
+      <p>
+      	Water Consumed: 8
+      </p>
+
+
+      <p>
+      	Pollution: varies
+      </p>
+
+
+      <p>
+      	Landmark Effect: 79 over 19 (where applicable)
+      </p>
+
+
+      <p>
+      	Mayor Rating Effect: 10 over 256 (where applicable)
+      </p>
+
+
+      <p>
+      	<strong>Dependencies</strong>: None, the only props necessary I created and have included in the file and the fans are Maxis sims.
+      </p>
+
+      						</body>
+    filename: 20huskies W2W Stadium Village Pack 02.zip
+    files:
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/20H_InfusionStadiumVillage_bannerprop-0x6534284a-0x6c96cee8-0x8d382fa4.SC4Desc
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/20H_roofaccessprop-0x6534284a-0x6c96cee8-0xcd389f29.SC4Desc
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/InfusionStadiumVillage_bannerprop-0x5ad0e817_0x6c96cee8_0x670000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/InfusionStadiumVillage_bleacherprop_rev2-0x5ad0e817_0x6c96cee8_0x630000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/InfusionStadiumVillage_bleacherprop_rev2-0x6534284a-0x6c96cee8-0x4d37faf2.SC4Desc
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/InfusionStadiumVillage_rev7-0x5ad0e817_0x6c96cee8_0x6b0000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/InfusionStadiumVillage_rev7-0x6534284a-0x6c96cee8-0xcd38a260.SC4Desc
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/InfusionStadiumVillage_roofaccessprop-0x5ad0e817_0x6c96cee8_0x680000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/InfusionStadiumVillage_roofwallprop_rev2-0x5ad0e817_0x6c96cee8_0x660000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/InfusionStadiumVillage_roofwallprop_rev2-0x6534284a-0x6c96cee8-0xad382b28.SC4Desc
+      - 20huskies W2W Stadium Village Pack 02/a - STADIUM VILLAGE Infusion/Landmark/LM1x2_InfusionStadVill_rev7_cd38a599.SC4Lot
+      - 20huskies W2W Stadium Village Pack 02/b - STADIUM VILLAGE Quentin's Casa de Nachos/Growable/20H_CS$$_QuentinsCasadeNachos-0x6534284a-0x6c96cee8-0x8d34b042.SC4Desc
+      - 20huskies W2W Stadium Village Pack 02/b - STADIUM VILLAGE Quentin's Casa de Nachos/Growable/CS$$2_1x2_20H_QuentinsCasaDeNachos_CS$$_4d3a61e7.SC4Lot
+      - 20huskies W2W Stadium Village Pack 02/b - STADIUM VILLAGE Quentin's Casa de Nachos/Growable/quentinscasadenachos_texlite-0x5ad0e817_0x6c96cee8_0x560000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/b - STADIUM VILLAGE Quentin's Casa de Nachos/Ploppable/LM1x2_20H_QuentinCasadeNachos_cd34b48e.SC4Lot
+      - 20huskies W2W Stadium Village Pack 02/b - STADIUM VILLAGE Quentin's Casa de Nachos/Ploppable/quentinscasadenachos_texlite-0x5ad0e817_0x6c96cee8_0x560000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/c - STADIUM VILLAGE Infield Fry Rule Burgers and Fries/Growable/20H_CS$$_infieldfryrule-0x6534284a-0x6c96cee8-0x0d358f8e.SC4Desc
+      - 20huskies W2W Stadium Village Pack 02/c - STADIUM VILLAGE Infield Fry Rule Burgers and Fries/Growable/CS$$2_1x2_20H_InfieldFryRule_0d35682a.SC4Lot
+      - 20huskies W2W Stadium Village Pack 02/c - STADIUM VILLAGE Infield Fry Rule Burgers and Fries/Growable/infieldfryrule-0x5ad0e817_0x6c96cee8_0x580000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/c - STADIUM VILLAGE Infield Fry Rule Burgers and Fries/Ploppable/desktop.ini
+      - 20huskies W2W Stadium Village Pack 02/c - STADIUM VILLAGE Infield Fry Rule Burgers and Fries/Ploppable/infieldfryrule-0x5ad0e817_0x6c96cee8_0x580000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/c - STADIUM VILLAGE Infield Fry Rule Burgers and Fries/Ploppable/LM1x2_20H_InfieldFryRule_PLOP_0d356cfc.SC4Lot
+      - 20huskies W2W Stadium Village Pack 02/d - STADIUM VILLAGE Yellowcard Diner/Growable/20H_YellowcardDiner_rev1_CS$$-0x6534284a-0x6c96cee8-0xad3a30bd.SC4Desc
+      - 20huskies W2W Stadium Village Pack 02/d - STADIUM VILLAGE Yellowcard Diner/Growable/CS$$2_1x2_20H_YellowcardDiner_4d3a3281.SC4Lot
+      - 20huskies W2W Stadium Village Pack 02/d - STADIUM VILLAGE Yellowcard Diner/Growable/YellowcardDiner_rev1-0x5ad0e817_0x6c96cee8_0x6d0000.SC4Model
+      - 20huskies W2W Stadium Village Pack 02/d - STADIUM VILLAGE Yellowcard Diner/Ploppable/LM1x2_20H_YellowcardDiner_PLOP_4d3a39a0.SC4Lot
+      - 20huskies W2W Stadium Village Pack 02/d - STADIUM VILLAGE Yellowcard Diner/Ploppable/YellowcardDiner_rev1-0x5ad0e817_0x6c96cee8_0x6d0000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/stadvill2_day.jpg.8febf0600735ce8fc7c6b841ae7b41b6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/stadvill2_night.jpg.a150b87e03afd4c31f92fdf94c26c015.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/stadville_front.jpg.58cfb4d61cf55b2fb92c42da2bf164cb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/stadville_side1.jpg.56c384ecc0dee36290758cd87c3d8c36.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/stadville_side2.jpg.2492f9e699d9b765a3f22dac7ce72975.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/stadville_back.jpg.3cfe39eccb41b7dc85090dddbb06fd8b.jpg
     lastModified: 2021-02-18T18:43:33Z
     name: W2W Stadium Village Pack 02
+    sha256: c452fbe4e36a1368115e019a4f95f657ab47b6becee9a5d2ce160323c8d8c58b
+    size: 1412658
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_02/stadvill2_day.thumb.jpg.a057d9e348555132ada63690a7574526.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 1680039
     url: https://community.simtropolis.com/files/file/34148-w2w-stadium-village-pack-02/
+    version: 1.0.0
   simtropolis/34149-hans-hanelore-sc3k:
     authors:
       - mattb325
@@ -41949,10 +42650,101 @@ assets:
     authors:
       - EffTheGrid
     category: commercial
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	Break the grid! There are no rules!
+      </p>
+
+
+      <p>
+      	These are <u><em><strong>as-is</strong></em></u> models. They're good enough for me so they will have to be good enough for you <img alt=";)" data-emoticon="" height="30" src="https://community.simtropolis.com/assets/emoticons/LlamaWink.gif" srcset="https://community.simtropolis.com/assets/emoticons/LlamaWink@2x.gif 2x" title=";)" width="30" >
+      </p>
+
+
+      <p>
+      	I've been busy with <abbr title="In Real Life">IRL</abbr> stuff lately so I haven't had time to complete these in any sort of "final" manner with proper detailing, nightlights etc, but anyway here are some high rise structures for FA2 angled roadways.
+      </p>
+
+
+      <p>
+      	Download includes both mirrored versions of the following lots w/overhanging prop:
+      </p>
+
+
+      <p>
+      	<strong>FA2 Citysphere</strong> (<em>801 King St, Toronto, ON</em>) //<u> LM 2x2</u>
+      </p>
+
+
+      <p>
+      	<strong>FA2 Cocoa Exchange</strong> (<em>1 Wall Street, New York, NY</em>) // <u>LM 1x2</u>
+      </p>
+
+
+      <p>
+      	<strong>FA2 Rhodes Haverty</strong> (<em>127 Peachtree St, Atlanta, GA</em>) // <u>LM 1x2</u>
+      </p>
+
+
+      <p>
+      	<strong>FA2 TD Bank</strong> (<em>Cadman Plaza, Brooklyn, NY</em>) // <u>LM 3x3</u>
+      </p>
+
+
+      <p>
+      	No dependencies, no refunds or exchanges. No shoes, no shirt, <u>NO</u> service. No pets (service animals allowed)
+      </p>
+
+      						</body>
+    filename: FTG FA2 High Rises.zip
+    files:
+      - FA2 Citysphere/FA2 Citysphere L-0x5ad0e817_0x50dea8e7_0x30000.SC4Model
+      - FA2 Citysphere/FA2 Citysphere L-0x6534284a-0x9c986979-0x5ec8c81c.SC4Desc
+      - FA2 Citysphere/FA2 Citysphere L_dec8c8b5.SC4Lot
+      - FA2 Citysphere/FA2 Citysphere R-0x5ad0e817_0x70deacdc_0x30000.SC4Model
+      - FA2 Citysphere/FA2 Citysphere R-0x6534284a-0x9c986979-0x1ec8c823.SC4Desc
+      - FA2 Citysphere/FA2 Citysphere R_9ec8c8d2.SC4Lot
+      - FA2 Cocoa Exchange/FA2 Cocoa Exchange L-0x5ad0e817_0x30dea15e_0x30000.SC4Model
+      - FA2 Cocoa Exchange/FA2 Cocoa Exchange L-0x6534284a-0x9c986979-0xdec8c82d.SC4Desc
+      - FA2 Cocoa Exchange/FA2 Cocoa Exchange L_cec8c8fa.SC4Lot
+      - FA2 Cocoa Exchange/FA2 Cocoa Exchange R 1 Wall St_2ec8c91f.SC4Lot
+      - FA2 Cocoa Exchange/FA2 Cocoa Exchange R-0x5ad0e817_0x70dea53e_0x30000.SC4Model
+      - FA2 Cocoa Exchange/FA2 Cocoa Exchange R-0x6534284a-0x9c986979-0xbec8c834.SC4Desc
+      - FA2 Rhodes Haverty/FA2 Rhodes Haverty L-0x5ad0e817_0xd0c180bc_0x30000.SC4Model
+      - FA2 Rhodes Haverty/FA2 Rhodes Haverty L-0x6534284a-0x9c986979-0xbeab9742.SC4Desc
+      - FA2 Rhodes Haverty/FA2 Rhodes Haverty L_aeab9b0f.SC4Lot
+      - FA2 Rhodes Haverty/FA2 Rhodes Haverty R-0x5ad0e817_0x10c18051_0x30000.SC4Model
+      - FA2 Rhodes Haverty/FA2 Rhodes Haverty R-0x6534284a-0x9c986979-0x3eab9747.SC4Desc
+      - FA2 Rhodes Haverty/FA2 Rhodes Haverty R_0eab9aff.SC4Lot
+      - FA2 TD Bank/FA2 TD Bank L-0x5ad0e817_0x30c18366_0x30000.SC4Model
+      - FA2 TD Bank/FA2 TD Bank L-0x6534284a-0x9c986979-0xbeab969c.SC4Desc
+      - FA2 TD Bank/FA2 TD Bank L_2eab9712.SC4Lot
+      - FA2 TD Bank/FA2 TD Bank R-0x5ad0e817_0xf0c18453_0x30000.SC4Model
+      - FA2 TD Bank/FA2 TD Bank R-0x6534284a-0x9c986979-0xbeab96a1.SC4Desc
+      - FA2 TD Bank/FA2 TD Bank R_beab9722.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/cocoa-citysphere1.jpg.113d5385c7931bbb79aa7819f4001fee.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/td1.jpg.b4da9850b4a25c78888b90655682e369.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/rhodeshaverty2.jpg.53744ff11e9dfafcfb3b16b888a1bc79.jpg
     lastModified: 2021-10-07T14:26:56Z
     name: FA2 High Rises 01
+    sha256: acb1b9af003d65edd1ac18a8d92c916eadb482804ba5460e7357cf7f1e1ad352
+    size: 6579030
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_10/cocoa-citysphere1.thumb.jpg.43fb14816876f73b56c7f230269f1cb1.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 7828206
     url: https://community.simtropolis.com/files/file/34705-fa2-high-rises-01/
+    version: 1.0.0
   simtropolis/34712-nyc-low-rise-fa-pack:
     authors:
       - EffTheGrid
@@ -42029,10 +42821,433 @@ assets:
     authors:
       - TheTimvh1
     category: commercial
-    lastModified: 2021-11-09T23:28:21Z
+    dependencies:
+      - simtropolis/31625-rretail-gas-station-relots-version-20
+      - simtropolis/17996-blam-blank
+      - simtropolis/20034-lbt-texture-pack-vol-01
+      - simtropolis/26726-lbt-gas-station-prop-pack-1-2
+      - simtropolis/3485-7eleven-stores-bsc
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/31423-supershk-fa3-parking-textures
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/176-lbt-mega-prop-pack
+      - sc4evermore/176-lbt-mega-prop-pack
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/36-lk33-seasonalflorapatch
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	<span style="font-size:16px;"><span style="color:#353535;">   My first upload to the STEX, this is intended to be an addon to RRetail's excellent relots of Heblem's old collection of Gas Stations.</span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><span style="color:#353535;">   Unfortunately, Heblem took said gas station lots down from distribution years ago, and though both RRetail and Paeng made relots for said gas stations using his props (which still are available, thankfully), they never actually included all of them in their respective sets. Thus, I have decided to do so myself, with RRetail's kind permission, of course.</span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><span style="color:#353535;">   I claim no credit for the lots themselves, I have only taken some of the lots and swapped out some props (I also moved and/or deleted some props to prevent unnecessary clutter). Best of all, they do not replace the originals. They can be used alongside them with no problem whatsoever. All credit belongs to RRetail for the base lots, Paeng, for the generic gas station name and layout, and of course, Heblem, for the amazing Gas Station props he created. To install, simply drop the folder into the main RR Gas Station Relots - Version 2.0 folder within your plugins.</span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">The following lots are used as a base for the new Gas Stations:</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">Citgo (2x3)</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">   Conoco</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">   Esso</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">Hess (3x3)</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">   PetroCanada</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">Shell (3x3)</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">   BP Connect</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">   Texaco</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">Sunoco (3x3)</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">   LukOil</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">Union 76 (1x3)</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">   Cheapo (generic gas station; name and layout “borrowed” from Paeng’s Gas Station Pack)</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">The following Dependencies are required in order to ensure proper functionality):</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">RRetail's Gas Station Relots - Version 2.0</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed7631235892" scrolling="no"
+      src="https://community.simtropolis.com/files/file/31625-rretail-gas-station-relots-version-20/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATers, LOTers and MODders">BLaM</abbr> Blank </span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed8411444462" scrolling="no"
+      src="https://community.simtropolis.com/files/file/17996-blam-blank/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props JES Vol01</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props SG Vol01</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> TexturePack Cycledogg V01b</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> Textures Vol03</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="Latin American BAT Team">LBT</abbr> MEGA Prop Pack 1</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/176-lbt-mega-prop-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/176-<abbr title="Latin American BAT Team">lbt</abbr>-mega-prop-pack</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="Latin American BAT Team">LBT</abbr> MEGA Texture Pack Vol01</span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed6705444751" scrolling="no"
+      src="https://community.simtropolis.com/files/file/20034-lbt-texture-pack-vol-01/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="Latin American BAT Team">LBT</abbr> Gas Station Prop Pack 1 &amp; 2</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed8858247540" scrolling="no"
+      src="https://community.simtropolis.com/files/file/26726-lbt-gas-station-prop-pack-1-2/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;">7Eleven Stores <abbr title="BATT Squad Certification">BSC</abbr></span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed1165897049" scrolling="no"
+      src="https://community.simtropolis.com/files/file/3485-7eleven-stores-bsc/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;">SHK Parking Pack</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed4541577750" scrolling="no"
+      src="https://community.simtropolis.com/files/file/27563-shk-parking-pack/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;">SuperSHK MEGA Parking Textures</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed4532679457" scrolling="no"
+      src="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;">SuperSHK+ FA3 Parking Textures</span>
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed9783880683" scrolling="no"
+      src="https://community.simtropolis.com/files/file/31423-supershk-fa3-parking-textures/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Ashes</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Beeches</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Berries</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Birches</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Elms</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Feather Grass</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Hedges</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Lindens</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Maples</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Narcissus</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Poplars</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Rowan Trees</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">BSC</abbr> VIP Girafe Sparaxis</span>
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">Lowkee33 Seasonal Flora Patch</abbr></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification"><a href="https://www.sc4evermore.com/index.php/downloads/download/24-terrain-mods-and-tree-controllers/36-lk33-seasonalflorapatch" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/24-terrain-mods-and-tree-controllers/36-lk33-seasonalflorapatch</a></abbr></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><abbr title="BATT Squad Certification">SimFox Day and Nite Modd</abbr></span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed8724666019" scrolling="no"
+      src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<span style="font-size:16px;">Note that I am not responsible for the Nightlighting. That comes with the props themselves. Anyways thank you for downloading. Please feel free to leave a comment or review.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">Enjoy.</span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;">TheTimvh1</span>
+      </p>
+
+      						</body>
+    filename: Addon for RRetail's Gas Station Relots.rar
+    files:
+      - Addon for RRetail's Gas Station Relots/Day.JPG
+      - Addon for RRetail's Gas Station Relots/Night.JPG
+      - Addon for RRetail's Gas Station Relots/Readme.odt
+      - Addon for RRetail's Gas Station Relots/RR_gas_HBS_LBT_BPConnect_8e2c7425.SC4Lot
+      - Addon for RRetail's Gas Station Relots/RR_gas_HBS_LBT_Cheapo_2e2c874a.SC4Lot
+      - Addon for RRetail's Gas Station Relots/RR_gas_HBS_LBT_Conoco_8e2c793c.SC4Lot
+      - Addon for RRetail's Gas Station Relots/RR_gas_HBS_LBT_Esso_2e2c849a.SC4Lot
+      - Addon for RRetail's Gas Station Relots/RR_gas_HBS_LBT_LukOil_ae2c85d3.SC4Lot
+      - Addon for RRetail's Gas Station Relots/RR_gas_HBS_LBT_PetroCanada_8e2c8377.SC4Lot
+      - Addon for RRetail's Gas Station Relots/RR_gas_HBS_LBT_Texaco_ae2c7abd.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/Day.JPG.751770990e8ff1c16a5edfa920463cf6.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/Night.JPG.e4482b0dd7c7e876030b405afeaf0ca9.JPG
+    lastModified: 2024-09-11T20:17:45Z
     name: Addon for RRetail's Gas Station Relots
+    sha256: dba0fc4a8b795681b46059d50cdcc8e6e336b1d07e28d313df4f6b14350f5023
+    size: 1336863
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_11/Day.thumb.JPG.b169cf85c067cdfdbd191233f9bdeb9a.JPG
+    timestamp: 2024-09-13T12:10:28.279Z
+    uncompressed: 1343969
     url: https://community.simtropolis.com/files/file/34735-addon-for-rretails-gas-station-relots/
+    version: V2
   simtropolis/34737-djohaal-building:
     authors:
       - davide1983it
@@ -43438,18 +44653,316 @@ assets:
     authors:
       - TheTimvh1
     category: commercial
-    lastModified: 2022-04-04T23:13:38Z
+    dependencies:
+      - simtropolis/17996-blam-blank
+      - simtropolis/26726-lbt-gas-station-prop-pack-1-2
+      - simtropolis/32781-rr-mega-prop-pack-vol-1
+      - simtropolis/32473-rr-mega-prop-pack-vol-2
+      - simtropolis/34747-rr-mega-prop-pack-vol-3
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - sc4evermore/176-lbt-mega-prop-pack
+      - sc4evermore/176-lbt-mega-prop-pack
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	<strong>Additional Gas Stations</strong>
+      </p>
+
+
+      <p>
+      	For my second upload, I present to you a quartet of additional gas station lots to use in your cities using RRetail and Heblem's props. This pack includes Amoco Standard Oil, Phillips 66, Arco AM/PM and Sinclair. All are 1x3 lots made with the Lot Editor that can add additional options for your Sims' car service needs.
+      </p>
+
+
+      <p>
+      	This package requires the following dependencies:
+      </p>
+
+
+      <p>
+      	<abbr title="BATers, LOTers and MODders">BLaM</abbr> Blank
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed9330980884" scrolling="no"
+      src="https://community.simtropolis.com/files/file/17996-blam-blank/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<abbr title="Latin American BAT Team">LBT</abbr> Gas Station Prop Pack 1 &amp; 2
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed4447117524" scrolling="no"
+      src="https://community.simtropolis.com/files/file/26726-lbt-gas-station-prop-pack-1-2/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<abbr title="Latin American BAT Team">LBT</abbr> MEGA Prop Pack Vol 01
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/176-lbt-mega-prop-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/176-<abbr title="Latin American BAT Team">lbt</abbr>-mega-prop-pack</a>
+      </p>
+
+
+      <p>
+      	RR MEGA Prop Pack Vol01
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed7676668571" scrolling="no"
+      src="https://community.simtropolis.com/files/file/32781-rr-mega-prop-pack-vol-1/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	RR MEGA Prop Pack Vol02
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2501844553" scrolling="no"
+      src="https://community.simtropolis.com/files/file/32473-rr-mega-prop-pack-vol-2/?do=embed" style="height:322px;max-width:502px;"></iframe>
+
+
+      <p>
+      	RR MEGA Prop Pack Vol03
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed4689413605" scrolling="no"
+      src="https://community.simtropolis.com/files/file/34747-rr-mega-prop-pack-vol-3/?do=embed" style="height:322px;max-width:502px;"></iframe>
+
+
+      <p>
+      	SHK Parking Pack
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed7315308623" scrolling="no"
+      src="https://community.simtropolis.com/files/file/27563-shk-parking-pack/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	SuperSHK MEGA Parking Textures
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed6039443237" scrolling="no"
+      src="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	SimFox Day and Nite Modd
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed9640483167" scrolling="no"
+      src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	Enjoy,<br>
+      	TheTimvh1
+      </p>
+
+      						</body>
+    filename: Additional Gas Stations.zip
+    files:
+      - Additional Gas Stations/Images/Additional Gas Stations 1.JPG
+      - Additional Gas Stations/Images/Additional Gas Stations 2.JPG
+      - Additional Gas Stations/Images/Additional Gas Stations 3.JPG
+      - Additional Gas Stations/Images/Additional Gas Stations 4.JPG
+      - Additional Gas Stations/Additional Gas Stations.txt
+      - Additional Gas Stations/Amoco Standard Oil_2f52e08c.SC4Lot
+      - Additional Gas Stations/Arco AM PM_2f52e7df.SC4Lot
+      - Additional Gas Stations/Phillips 66_2f52e527.SC4Lot
+      - Additional Gas Stations/Sinclair Gas Station_2f52f644.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/62472d1faac2d_AdditionalGasStations1.JPG.f03404b71703c3f1a28b7161edd12e42.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/62472d21a9992_AdditionalGasStations2.JPG.82fc4067e499d86a9bd80a23131de013.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/62472d236f06e_AdditionalGasStations3.JPG.55f76cd60ee8ececee44205b764e5c04.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/62472d2510617_AdditionalGasStations4.JPG.b22006d0b76a20bb7f455cd34acb351b.JPG
+    lastModified: 2024-09-11T20:18:56Z
     name: Additional Gas Stations
+    sha256: 4e3e9f5cc478dd85a98cf92dbbc2b0aba87a7d5600bc1a511984aac458537bd0
+    size: 3231962
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_04/62472da0a1ce6_AdditionalGasStations1.thumb.JPG.baa8667dc43bb6151625619f1b1ba30d.JPG
+    timestamp: 2024-09-13T12:10:28.279Z
+    uncompressed: 3258563
     url: https://community.simtropolis.com/files/file/35032-additional-gas-stations/
+    version: V2
   simtropolis/35033-long-john-silvers:
     authors:
       - TheTimvh1
     category: commercial
-    lastModified: 2022-04-04T23:10:56Z
+    dependencies:
+      - simtropolis/17996-blam-blank
+      - simtropolis/34747-rr-mega-prop-pack-vol-3
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/176-lbt-mega-prop-pack
+      - sc4evermore/176-lbt-mega-prop-pack
+      - sc4evermore/36-lk33-seasonalflorapatch
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	Long John Silver's
+      </p>
+
+
+      <p>
+      	My third upload is a stand-alone classic Long John Silver's restaurant using RRetail's excellent props. Nothing too exciting, but hey, I'm sure even a few of your own Sims don't mind dangerously greasy yet somehow still delicious fish and chips, shrimp, cole slaw and hush puppies, never quite being able to figure out which one of the deep fried fillets is the "fish" and which one is the "chicken", even after eating it; all the while hoping to stave off their next inevitable visit with their local physician.
+      </p>
+
+
+      <p>
+      	The lot is 3x3 tiles in size, and is made with Lot Editor. The following dependencies are required to avoid brown boxes (or colored smudges, if using Pegasus' OPPS/OOPS mod):
+      </p>
+
+
+      <p>
+      	<abbr title="BATers, LOTers and MODders">BLaM</abbr> Blank
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed3349153749" scrolling="no"
+      src="https://community.simtropolis.com/files/file/17996-blam-blank/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	<abbr title="BATT Squad Certification">BSC</abbr> VIP girafe Birches
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<abbr title="BATT Squad Certification">BSC</abbr> VIP girafe Elms
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a><br>
+      	 
+      </p>
+
+
+      <p>
+      	<abbr title="BATT Squad Certification">BSC</abbr> VIP girafe Lindens
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<br>
+      	<abbr title="BATT Squad Certification">BSC</abbr> VIP girafe Poplars
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-<abbr title="Lot EXchange (SC4Devotion)">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>
+      </p>
+
+
+      <p>
+      	<abbr title="Latin American BAT Team">LBT</abbr> MEGA Prop Pack Vol01
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/176-lbt-mega-prop-pack" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/176-<abbr title="Latin American BAT Team">lbt</abbr>-mega-prop-pack</a>
+      </p>
+
+
+      <p>
+      	RR MEGA Prop Pack Vol03
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed8612921095" scrolling="no"
+      src="https://community.simtropolis.com/files/file/34747-rr-mega-prop-pack-vol-3/?do=embed" style="height:322px;max-width:502px;"></iframe>
+
+
+      <p>
+      	SuperSHK MEGA Parking Textures
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed6528215232" scrolling="no"
+      src="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	Lowkee33 Seasonal Flora Patch
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/24-terrain-mods-and-tree-controllers/36-lk33-seasonalflorapatch" rel="external nofollow">https://www.sc4evermore.com/index.php/downloads/download/24-terrain-mods-and-tree-controllers/36-lk33-seasonalflorapatch</a>
+      </p>
+
+
+      <p>
+      	SimFox Day and Nite Modd
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2564945742" scrolling="no"
+      src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p>
+      	Enjoy,<br>
+      	TheTimvh1
+      </p>
+
+      						</body>
+    filename: Long John Silver's.zip
+    files:
+      - Long John Silver's/Images/Long John Silvers 1.JPG
+      - Long John Silver's/Images/Long John Silvers 2.JPG
+      - Long John Silver's/Images/Long John Silvers 3.JPG
+      - Long John Silver's/Images/Long John Silvers 4.JPG
+      - Long John Silver's/Long John Silver's_cf52e319.SC4Lot
+      - Long John Silver's/Long John Silvers.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/62472df1a57e8_LongJohnSilvers1.JPG.3bd57358f25adb4ab17bdd030e90c6b3.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/62472df2f0a4f_LongJohnSilvers2.JPG.af61ed7b5a1edbff832d8bf4457e8045.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/62472df447fda_LongJohnSilvers3.JPG.6f07c599d0db0c15f2972c7a7aa89471.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2022_04/62472df59e318_LongJohnSilvers4.JPG.2201271d73e7cb77f3dd2a60ddfeac50.JPG
+    lastModified: 2024-09-11T20:24:31Z
     name: Long John Silvers
+    sha256: 0f3234e524625b773325662a7dec8eac764b32735cf621150c458fa39c15bd70
+    size: 1254138
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_04/62472e6d4db5a_LongJohnSilvers1.thumb.JPG.da99b3992d5e8d8db50ffa7d573f28e3.JPG
+    timestamp: 2024-09-13T12:10:28.279Z
+    uncompressed: 1263662
     url: https://community.simtropolis.com/files/file/35033-long-john-silvers/
+    version: V2
   simtropolis/35034-wenshanbuilding:
     authors:
       - Ct1999
@@ -51924,6 +53437,96 @@ assets:
     name: SimpCity KwikEMart
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-4385823fd488eb5170c6bfca056e1005-kwikemart.JPG
     url: https://community.simtropolis.com/files/file/3642-simpcity-kwikemart/
+  simtropolis/36424-doubletree-hotel:
+    authors:
+      - IDS2
+    category: commercial
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	Based on one that I stayed at a couple years back in Milwaukee, Wisconsin, this is a fairly nondescript mid-70s hotel and conference center, akin to what you would see in any sizeable American city. 
+      </p>
+
+
+      <p>
+      	This building sits on a 7x3 lot and comes in growable and ploppable CS$$ varieties, both of which provide 728 jobs. Both Darknite and Maxisnite versions are provided, of which only one should be used at a time. The Darknite version requires <a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">Simfox's Day and Nite Modd</a>.
+      </p>
+
+
+      <p>
+      	Dependencies:
+      </p>
+
+
+      <p>
+      	<a href="https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> Common Dependencies Pack</a> (for those of you unfamiliar with project ZIP, I specifically only used the <abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01 component)
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Special thanks to <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/138427-bobelboy/?do=hovercard" data-mentionid="138427" href="https://community.simtropolis.com/profile/138427-bobelboy/" rel="">@Bobelboy</a> for reminding me that I still had this sitting around and had forgotten to upload it. <img alt="*;)" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_2.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_2@2x.gif 2x" title="*;)" width="15" >
+      </p>
+
+
+      <p>
+      	Happy Labor Day, everybody. More to come soon!
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/icon.png.8866aebed56954640e3827fc90ebc380.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/icon_large.jpg.d147a08a695a651a563c0848820e3112.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/day.jpg.f6459acf4d36c78b5016eeb4d42e58d7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/night.jpg.e7f09205078556a7e4c585917f0eccf5.jpg
+    lastModified: 2024-09-03T00:53:45Z
+    name: DoubleTree Hotel
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/icon_large.thumb.jpg.db0c8ce45fbcf8dcd9a97435119a62a6.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    url: https://community.simtropolis.com/files/file/36424-doubletree-hotel/
+    variants:
+      "203083":
+        filename: IDS2 DoubleTree Hotel - Darknite.zip
+        files:
+          - CS$$6_7x3_Doubletree Hotel_120b5d63.SC4Lot
+          - Doubletree Hotel-0x6534284a-0xd9f5946a-0x120b5d63.SC4Desc
+          - DoubletreeHotel-0x5ad0e817_0x318930b4_0x30000.SC4Model
+          - PLOP_7x3_Doubletree Hotel_420a68d5.SC4Lot
+        sha256: 77ad511f2cae18500c71e1063b7e7fd7479286a8ae4e93810307fef6bb1f7879
+        size: 1266581
+        uncompressed: 1519625
+      "203084":
+        filename: IDS2 DoubleTree Hotel - Maxisnite.zip
+        files:
+          - CS$$6_7x3_Doubletree Hotel_120b5d63.SC4Lot
+          - Doubletree Hotel-0x6534284a-0xd9f5946a-0x120b5d63.SC4Desc
+          - DoubletreeHotel-0x5ad0e817_0x318930b4_0x30000.SC4Model
+          - PLOP_7x3_Doubletree Hotel_420a68d5.SC4Lot
+        sha256: 2817c466d0b59feea387274f9c4ef8352913e5d10d5baad1ca4db8c53c803c51
+        size: 1321490
+        uncompressed: 1582349
+    version: 1.0.0
   simtropolis/3643-anb-bank-plaza-one:
     authors:
       - jeeper
@@ -51932,6 +53535,118 @@ assets:
     name: ANB Bank Plaza One
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-594374356e93b8f548c9a0001ec6089a-ANB1.jpg
     url: https://community.simtropolis.com/files/file/3643-anb-bank-plaza-one/
+  simtropolis/36439-murray-beer-co:
+    authors:
+      - gutterclub
+    category: commercial
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	the Murray Beer Co is a little craft brewery based on one in Wellington, New Zealand. This little CS$$ stage 4 lot sells odd flavoured IPAs to 30 year olds with big beards for twice the price of the normal beer. No nitelites with this one I'm afraid, their license only runs till 9pm
+      </p>
+
+      						</body>
+    filename: JPS - MurrayBeerCo.zip
+    files:
+      - CS$4_1x2MurrayBeer_73ec5f80.SC4Lot
+      - MurrayBeerCo-0x5ad0e817_0x8d5d2e0b_0x30000.SC4Model
+      - MurrayBeerCo-0x6534284a-0x8d5d2e0b-0xf3ec5bb4.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66df923422c6a_CentralMurraytown-May.164071725927754.png.3d83647ba485b089f80877f44781517f.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66df92374e487_CentralMurraytown-May.164071725927769.png.b863f29d2e1fa9fd1989ff5b1783e5d5.png
+    lastModified: 2024-09-10T00:30:08Z
+    name: Murray Beer Co
+    sha256: 2aac3decd8368b48686dd72e67b5218e753d5ceeb3e2f6f3ee66a735f0fd21ad
+    size: 166608
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66df93103a5a0_CentralMurraytown-May.164071725927754.thumb.png.22417c7a1f15b2f7db76810c630d14b6.png
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 193323
+    url: https://community.simtropolis.com/files/file/36439-murray-beer-co/
+    version: 1.0.0
+  simtropolis/36442-model-discount-furniture:
+    authors:
+      - Jasoncw
+    category: commercial
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <div class="sc-1kelcyo-0 dBqRum">
+      	<div id=":r6a:">
+      		<div>
+      			<div class="sc-jrQzAO ifbETk">
+      				<div class="sc-1cq1psq-0 kWkNqn sc-pn81yk-0 dBfLIG">
+      					<div class="sc-cfnzm4-0 daxSFj">
+      						<p>
+      							Model Discount Furniture is based on a furniture store of the same name, in Chicago, USA. It grows in the Chicago 1890 and NYC 1940 tilesets. 
+      						</p>
+
+      						<ul>
+      							<li>
+      								1x2 growable CS§ lot.
+      							</li>
+      							<li>
+      								MaxisNite and DarkNite versions included.
+      							</li>
+      							<li>
+      								DarkNite requires the <a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">Day and Nite Modd</a>.
+      							</li>
+      						</ul>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66e1ef4968356_ModelDiscountFurniture00.jpg.52b938b35a41fdd3485a49d0f90c5415.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66e1ef589ef9f_ModelDiscountFurniture01.jpg.ff85a30cf54d57dddb518bc322c0bb9c.jpg
+    lastModified: 2024-09-11T19:29:33Z
+    name: Model Discount Furniture
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66e1ef9ce9157_ModelDiscountFurniture00.thumb.jpg.68772e7d239f2a551e8f3cf594c61c78.jpg
+    timestamp: 2024-09-13T12:10:28.279Z
+    url: https://community.simtropolis.com/files/file/36442-model-discount-furniture/
+    variants:
+      "203385":
+        filename: Jasoncw - Model Discount Furniture (MN).zip
+        files:
+          - Jasoncw - Model Discount Furniture (MN)/Jasoncw - Model Discount Furniture (MN).SC4Model
+          - Jasoncw - Model Discount Furniture (MN)/Jasoncw - Model Discount Furniture - Grow (CS$2_1x2).SC4Lot
+        sha256: 0de0dd0ec3659292f41f84f0c466fb8f1ae2116f5210b4b5461bd99c39b3b251
+        size: 143128
+        uncompressed: 185959
+      "203386":
+        filename: Jasoncw - Model Discount Furniture (DN).zip
+        files:
+          - Jasoncw - Model Discount Furniture (DN)/Jasoncw - Model Discount Furniture (DN).SC4Model
+          - Jasoncw - Model Discount Furniture (DN)/Jasoncw - Model Discount Furniture - Grow (CS$2_1x2).SC4Lot
+        sha256: 3739dafd842e65a2542105e7f2a6b417471e343b916461c6b6d64a47e1791824
+        size: 137159
+        uncompressed: 180549
+    version: 1.0.0
   simtropolis/3645-tesco-grocery-store:
     authors:
       - SimGoober
@@ -52504,10 +54219,40 @@ assets:
     authors:
       - Bandito
     category: commercial
+    dependencies: []
+    description: |-
+      <body>
+                                  
+      							
+      <p>A multiplex cinema with bars and restaurants.</p>
+      <p>
+      The Cinedom is a part of the mediapark in cologne.</p>
+      <p> </p>
+      <p>
+      Growable and plopable version!</p>
+      <p> </p>
+      <p> </p>
+
+      						</body>
+    filename: LM6x4_Cinedom_0e12c7f1.zip
+    files:
+      - Cinedom Multiplex Cinema-0x6534284a-0xcd34d9c6-0x6e158564.SC4Desc
+      - Cinedom_final-0x5ad0e817_0xcd34d9c6_0xab1000.SC4Model
+      - Cinedom_final-0x6534284a-0xcd34d9c6-0xee15851b.SC4Desc
+      - CS$$3_6x4_Cinedom_4e13c956.SC4Lot
+      - LM6x4_Cinedom_0e12c7f1.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/0025/e3f8ce3b5c63ee5feb12759958adadcf-Cinedom1.JPG
+      - https://www.simtropolis.com/objects/screens/0025/e3f8ce3b5c63ee5feb12759958adadcf-Cinedom2.JPG
     lastModified: 2004-08-03T03:16:10Z
     name: Cinedom
+    sha256: c9f5da777cac9ba7606e60b8114eaed38fa8ef54e4cb4dd900b76c2643999a26
+    size: 897221
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2004/thumb-e3f8ce3b5c63ee5feb12759958adadcf-Cinedom1.JPG
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 1057567
     url: https://community.simtropolis.com/files/file/3991-cinedom/
+    version: "1.0"
   simtropolis/3994-trump-international-hotel-tower-toronto:
     authors:
       - PDA
@@ -53677,4 +55422,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-c5e8b238b44aacefde9225fafa008033-drive-day.JPG
     url: https://community.simtropolis.com/files/file/991-community-drivein-with-indoor-theater/
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:22:00.820Z

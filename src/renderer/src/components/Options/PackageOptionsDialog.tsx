@@ -1,5 +1,6 @@
 import { Dialog, DialogContent, DialogTitle } from "@mui/material"
 
+import { PackageID } from "@common/packages"
 import { usePackageInfo } from "@utils/packages"
 
 import { PackageOptionsForm } from "./PackageOptionsForm"
@@ -11,7 +12,7 @@ export function PackageOptionsDialog({
 }: {
   onClose: () => void
   open: boolean
-  packageId: string
+  packageId: PackageID
 }): JSX.Element {
   const packageInfo = usePackageInfo(packageId)
 

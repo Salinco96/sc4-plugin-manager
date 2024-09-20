@@ -10,10 +10,10 @@ import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
-import { useStore, useStoreActions } from "@utils/store"
+import { useSettings, useStoreActions } from "@utils/store"
 
 function Settings(): JSX.Element {
-  const settings = useStore(store => store.settings)
+  const settings = useSettings()
   const actions = useStoreActions()
 
   const { t } = useTranslation("Settings")

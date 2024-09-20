@@ -78,9 +78,7 @@ assets:
     dependencies: []
     description: "<body>
 
-      \                           \
-
-      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+      \                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
       \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
       style=\"\" width=\"34\" height=\"53\">
@@ -3078,6 +3076,9 @@ assets:
       <body>
                                   
 
+
+
+
       							
       <p>Hummm <br><br>In first, how do you find my adorable French accent ?</p>
 
@@ -3178,7 +3179,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -3717,6 +3724,9 @@ assets:
     description: >-
       <body>
                                   
+
+
+
 
 
 
@@ -6267,10 +6277,78 @@ assets:
     authors:
       - Krio
     category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+
+      							
+      <p><strong>Prop pack, duh.</strong> Three kiosks, several lamp posts, few Finnish-style mailboxes and garbage collector. You're going to need this pack in my upcoming uploads.</p>
+
+      <p> </p>
+
+      <p>Check my current progress in <a href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/forum/index.php?topic=6097.msg210539;topicseen#new" rel="external
+      nofollow">Krioworks</a>.</p>
+
+      						</body>
+    filename: Krio_SmallProps.zip
+    files:
+      - Krio_SmallProps/tgprop_lamp1-0x5ad0e817_0x9659f2a8_0x3f0000.SC4Model
+      - Krio_SmallProps/tgprop_lamp1-0x6534284a-0x546817ab-0xfd5e8310.SC4Desc
+      - Krio_SmallProps/tgprop_lamp101-0x5ad0e817_0x9659f2a8_0x470000.SC4Model
+      - Krio_SmallProps/tgprop_lamp101-0x6534284a-0x546817ab-0x1d5e82cf.SC4Desc
+      - Krio_SmallProps/tgprop_lamp2-0x5ad0e817_0x9659f2a8_0x420000.SC4Model
+      - Krio_SmallProps/tgprop_lamp2-0x6534284a-0x546817ab-0x3d5e82f5.SC4Desc
+      - Krio_SmallProps/tgprop_lamp201-0x5ad0e817_0x9659f2a8_0x490000.SC4Model
+      - Krio_SmallProps/tgprop_lamp201-0x6534284a-0x546817ab-0x7d5e82ba.SC4Desc
+      - Krio_SmallProps/tgprop_lamp2b01-0x5ad0e817_0x9659f2a8_0x4a0000.SC4Model
+      - Krio_SmallProps/tgprop_lamp2b01-0x6534284a-0x546817ab-0xbd5e82b2.SC4Desc
+      - Krio_SmallProps/tgprop_lamp2b1-0x5ad0e817_0x9659f2a8_0x410000.SC4Model
+      - Krio_SmallProps/tgprop_lamp2b1-0x6534284a-0x546817ab-0x3d5e82fd.SC4Desc
+      - Krio_SmallProps/tgprop_lamp3-0x5ad0e817_0x9659f2a8_0x430000.SC4Model
+      - Krio_SmallProps/tgprop_lamp3-0x6534284a-0x546817ab-0x7d5e82eb.SC4Desc
+      - Krio_SmallProps/tgprop_lamp301-0x5ad0e817_0x9659f2a8_0x4b0000.SC4Model
+      - Krio_SmallProps/tgprop_lamp301-0x6534284a-0x546817ab-0x9d5e82a7.SC4Desc
+      - Krio_SmallProps/tgprop_lamp3a-0x5ad0e817_0x9659f2a8_0x440000.SC4Model
+      - Krio_SmallProps/tgprop_lamp3a-0x6534284a-0x546817ab-0x5d5e82e3.SC4Desc
+      - Krio_SmallProps/tgprop_lamp3a01-0x5ad0e817_0x9659f2a8_0x4c0000.SC4Model
+      - Krio_SmallProps/tgprop_lamp3a01-0x6534284a-0x546817ab-0xdd5e829d.SC4Desc
+      - Krio_SmallProps/tgprop_lamp_b101-0x5ad0e817_0x9659f2a8_0x400000.SC4Model
+      - Krio_SmallProps/tgprop_lamp_b101-0x5ad0e817_0x9659f2a8_0x480000.SC4Model
+      - Krio_SmallProps/tgprop_lamp_b101-0x6534284a-0x546817ab-0xdd5e82c3.SC4Desc
+      - Krio_SmallProps/tg_prop_finnishmailbox-0x5ad0e817_0x9659f2a8_0x3d0000.SC4Model
+      - Krio_SmallProps/tg_prop_finnishmailboxBIG-0x5ad0e817_0x9659f2a8_0x450000.SC4Model
+      - Krio_SmallProps/tg_prop_finnishmailboxBIG-0x6534284a-0x546817ab-0x9d5e82db.SC4Desc
+      - Krio_SmallProps/tg_prop_garbage_collectorman-0x5ad0e817_0xf9524c31_0x30000.SC4Model
+      - Krio_SmallProps/tg_prop_garbage_collectorman-0x6534284a-0x546817ab-0x9d5e8275.SC4Desc
+      - Krio_SmallProps/tg_prop_garbage_collectorman_dia-0x5ad0e817_0x79524c74_0x30000.SC4Model
+      - Krio_SmallProps/tg_prop_garbage_collectorman_dia-0x6534284a-0x546817ab-0x5d5e8334.SC4Desc
+      - Krio_SmallProps/tg_prop_lippakioski-0x5ad0e817_0xd951dec6_0x30000.SC4Model
+      - Krio_SmallProps/tg_prop_lippakioski-0x6534284a-0x546817ab-0x9d5e8295.SC4Desc
+      - Krio_SmallProps/tg_prop_mailbox-0x5ad0e817_0x9659f2a8_0x3c0000.SC4Model
+      - Krio_SmallProps/tg_prop_mailbox-0x6534284a-0x546817ab-0x1d5e8322.SC4Desc
+      - Krio_SmallProps/tg_prop_mailbox-0x6534284a-0x546817ab-0xbd5e832a.SC4Desc
+      - Krio_SmallProps/tg_prop_mailbox01-0x5ad0e817_0xf9296ca4_0x30000.SC4Model
+      - Krio_SmallProps/tg_prop_mailbox01-0x6534284a-0x546817ab-0x5d5e828b.SC4Desc
+      - Krio_SmallProps/tg_prop_mailbox_blue-0x5ad0e817_0x3951dabf_0x30000.SC4Model
+      - Krio_SmallProps/tg_prop_mailbox_blue-0x6534284a-0x546817ab-0xbd5e8350.SC4Desc
+      - Krio_SmallProps/tg_prop_mailbox_yellow-0x5ad0e817_0x3951dad5_0x30000.SC4Model
+      - Krio_SmallProps/tg_prop_mailbox_yellow-0x6534284a-0x546817ab-0x1d5e8348.SC4Desc
+      - Krio_SmallProps/tg_prop_nightsausagekiosk-0x5ad0e817_0x7951ddcd_0x30000.SC4Model
+      - Krio_SmallProps/tg_prop_nightsausagekiosk-0x6534284a-0x546817ab-0xfd5e833e.SC4Desc
+      - Krio_SmallProps/tg_prop_valioicecreamkiosk-0x5ad0e817_0x9659f2a8_0x3e0000.SC4Model
+      - Krio_SmallProps/tg_prop_valioicecreamkiosk-0x6534284a-0x546817ab-0xdd5e831b.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_09_2012/35d36b96f8d9f5373b4458c22ee893b9-1prop.png
     lastModified: 2012-09-13T19:44:14Z
     name: Krio Small Prop pack
+    sha256: 37e479c0d704187425cceba36eb4078320d0f96466c1cfd79b896087c2ef2b9f
+    size: 168712
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2012/thumb-35d36b96f8d9f5373b4458c22ee893b9-1prop.png
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 322665
     url: https://community.simtropolis.com/files/file/28016-krio-small-prop-pack/
+    version: "1.0"
   simtropolis/2804-vehicle-props-vol-2:
     authors:
       - aceracer
@@ -7395,10 +7473,44 @@ assets:
     authors:
       - Aquazona883
     category: dependencies
+    dependencies: []
+    description: |-
+      <body>
+                                  
+      							
+      <p>- Parking textures : designed for cars from the SHK Parking Pack or Vip Cars or other larger cars.</p>
+      <p> </p>
+      <p>
+      - grass and grey overlay textures: they are really simple but you can make a lot with them.</p>
+      <p> </p>
+      <p>
+      - some maxis-style textures I often missed as a basetexture, especially the dark and grey parking texture.</p>
+
+      						</body>
+    filename: Aqua_textures_01.rar
+    files:
+      - Aqua_textures_01/Aqua01_Basetext.dat
+      - Aqua_textures_01/Aqua01_grass.dat
+      - Aqua_textures_01/Aqua01_grey.dat
+      - Aqua_textures_01/Aqua01_Parking.dat
+      - Aqua_textures_01/base.png
+      - Aqua_textures_01/grass_ov.png
+      - Aqua_textures_01/grey_ov.png
+      - Aqua_textures_01/parking.png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_05_2013/310223dcf662807fbb4d2f2c64256094-parking.png
+      - https://www.simtropolis.com/objects/screens/monthly_05_2013/364fcb2f0d9d62f5dccbfe64b8d2886c-grass_ov.png
+      - https://www.simtropolis.com/objects/screens/monthly_05_2013/d1a9b128d3f48667b9f3f635fd9fcc4b-grey_ov.png
+      - https://www.simtropolis.com/objects/screens/monthly_05_2013/1e5e39afbd9adbd9606fff8d045722aa-base.png
     lastModified: 2013-05-06T01:41:22Z
     name: Aqua_textures_01
+    sha256: f95ecdcc6bef27fdaa1cfbc2b062406db8730b30643d703ba4f429e9729815d5
+    size: 1252392
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2013/thumb-310223dcf662807fbb4d2f2c64256094-parking.png
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 1826326
     url: https://community.simtropolis.com/files/file/28675-aqua_textures_01/
+    version: "01"
   simtropolis/2879-foss-construction-tower-crane:
     authors:
       - Lord_Quillian2
@@ -7515,6 +7627,9 @@ assets:
     description: >-
       <body>
                                   
+
+
+
 
 
 
@@ -20340,7 +20455,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -20523,7 +20644,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -24144,10 +24271,311 @@ assets:
     authors:
       - Barroco Hispano
     category: dependencies
+    dependencies:
+      - simtropolis/34200-agc-challenger-2-tank
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	This prop pack will contain all types of tanks ranging from WW1 to WW3? <img alt="*:D" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_9.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_9@2x.gif 2x" title="*:D" width="15" >
+      </p>
+
+
+      <p>
+      	Version 1.0 contains the following tanks:
+      </p>
+
+
+      <p>
+      	-T-72B                 - M4 Sherman            - M4A3E8 Sherman         - T-90A
+      </p>
+
+
+      <p>
+      	- IS-2                   - M1A1 Abrams         - Churchill VII                    - T-72A   
+      </p>
+
+
+      <p>
+      	- Leclerc S1       - KV-1 ZiS 5                 - Challenger 2                   - ISU-152 
+      </p>
+
+
+      <p>
+      	- Tiger I               - Sturmtiger               - Char B1 bis                      - KV-2
+      </p>
+
+
+      <p>
+      	You can find images of what this prop pack contains here:
+      </p>
+
+
+      <p>
+      	(Soon)
+      </p>
+
+
+      <p>
+      	in the lot editor:
+      </p>
+
+
+      <p>
+      	AGC_Army_Medium-Tanks_
+      </p>
+
+
+      <p>
+      	AGC_Army_Heavy-Tanks_
+      </p>
+
+
+      <p>
+      	AGC_Army_Tank-Destroyers_ 
+      </p>
+
+
+      <p>
+      	------------------------------------------------------------------------------------------------------------------------------------------------------------
+      </p>
+
+
+      <p>
+      	<span style="color:#27ae60;"><strong>I will update this prop pack constantly so you must be on the lookout.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong style="background-color:#ffffff;color:#353535;font-size:14px;">Scale of the model:</strong><span style="background-color:#ffffff;color:#353535;font-size:14px;"><span> </span></span><span style="background-color:#ffffff;color:#2980b9;font-size:14px;"><strong>133% on all axes.</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>Installation:</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong><span style="color:#e74c3c;">- Unzip the "Barroco Hispano DLCs" in your Plugins Folder (I highly recommend respecting my folder system because I plan to export or update thousands of BATs).</span></strong>
+      </p>
+
+
+      <p style="background-color:rgb(255,255,255);font-size:14px;">
+      	<font color="#e74c3c"><b>- If you downloaded this tank, please remove it.</b></font>
+      </p>
+
+
+      <p style="background-color:rgb(255,255,255);font-size:14px;">
+      	 
+      </p>
+
+      <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2971133967" scrolling="no"
+      src="https://community.simtropolis.com/files/file/34200-agc-challenger-2-tank/?do=embed" style="height:363px;max-width:502px;"></iframe>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="color:#006600;"><strong>You can make voluntary contributions to support me in continuing to create more content for SimCity 4 (I decided to use Paypal instead of Patreon because I want everyone to have access to my content). <img alt="*:thumb:" data-emoticon="" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" style="border:0px none;vertical-align:middle;" title="*:thumb:" width="33" ></strong></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:20px;"><a href="https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU" rel="external nofollow" style="background-color:transparent;color:#1f5e8d;">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	 
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Thanks to all people who have donated to me!</strong>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: AGC Tanks DLC.7z
+    files:
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Heavy-Tank Churchill VII/AGC_Army_Heavy-Tanks_UK_Churchill_VII_V01_S1_22.5-0x5ad0e817_0x51505d3d_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Heavy-Tank Churchill VII/AGC_Army_Heavy-Tanks_UK_Churchill_VII_V01_S1_22.5-0x6534284a-0xdd573712-0x2e9ae8b5.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Heavy-Tank Churchill VII/AGC_Army_Heavy-Tanks_UK_Churchill_VII_V01_S1_45-0x5ad0e817_0x91506321_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Heavy-Tank Churchill VII/AGC_Army_Heavy-Tanks_UK_Churchill_VII_V01_S1_45-0x6534284a-0xdd573712-0x2e9aee9e.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Heavy-Tank Churchill VII/AGC_Army_Heavy-Tanks_UK_Churchill_VII_V01_S1_67.5-0x5ad0e817_0x51506765_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Heavy-Tank Churchill VII/AGC_Army_Heavy-Tanks_UK_Churchill_VII_V01_S1_67.5-0x6534284a-0xdd573712-0x4e9af2ee.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Heavy-Tank Churchill VII/AGC_Army_Heavy-Tanks_UK_Churchill_VII_V01_S1_90-0x5ad0e817_0x91505162_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Heavy-Tank Churchill VII/AGC_Army_Heavy-Tanks_UK_Churchill_VII_V01_S1_90-0x6534284a-0xdd573712-0xae9add6f.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank IS-2 1944/AGC_Army_Heavy-Tanks_RU_IS-2_1944_V01_S2_22.5-0x5ad0e817_0x4fdde57f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank IS-2 1944/AGC_Army_Heavy-Tanks_RU_IS-2_1944_V01_S2_22.5-0x6534284a-0xdd573712-0x0d9d251f.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank IS-2 1944/AGC_Army_Heavy-Tanks_RU_IS-2_1944_V01_S2_45-0x5ad0e817_0xb00624ea_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank IS-2 1944/AGC_Army_Heavy-Tanks_RU_IS-2_1944_V01_S2_45-0x6534284a-0xdd573712-0x8d9d2812.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank IS-2 1944/AGC_Army_Heavy-Tanks_RU_IS-2_1944_V01_S2_67.5-0x5ad0e817_0x500627f4_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank IS-2 1944/AGC_Army_Heavy-Tanks_RU_IS-2_1944_V01_S2_67.5-0x6534284a-0xdd573712-0x2d9d2a83.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank IS-2 1944/AGC_Army_Heavy-Tanks_RU_IS-2_1944_V01_S2_90-0x5ad0e817_0x2f900f5a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank IS-2 1944/AGC_Army_Heavy-Tanks_RU_IS-2_1944_V01_S2_90-0x6534284a-0xdd573712-0x0d99c466.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-1 ZiS-5/AGC_Army_Heavy-Tanks_RU_KV-1_ZiS-5_V01_S1_22.5-0x5ad0e817_0x9038ad2f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-1 ZiS-5/AGC_Army_Heavy-Tanks_RU_KV-1_ZiS-5_V01_S1_22.5-0x6534284a-0xdd573712-0x2da97432.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-1 ZiS-5/AGC_Army_Heavy-Tanks_RU_KV-1_ZiS-5_V01_S1_45-0x5ad0e817_0x5038af5b_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-1 ZiS-5/AGC_Army_Heavy-Tanks_RU_KV-1_ZiS-5_V01_S1_45-0x6534284a-0xdd573712-0xeda97668.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-1 ZiS-5/AGC_Army_Heavy-Tanks_RU_KV-1_ZiS-5_V01_S1_67.5-0x5ad0e817_0x7038b770_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-1 ZiS-5/AGC_Army_Heavy-Tanks_RU_KV-1_ZiS-5_V01_S1_67.5-0x6534284a-0xdd573712-0xada97f0c.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-1 ZiS-5/AGC_Army_Heavy-Tanks_RU_KV-1_ZiS-5_V01_S1_90-0x5ad0e817_0x9038a96f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-1 ZiS-5/AGC_Army_Heavy-Tanks_RU_KV-1_ZiS-5_V01_S1_90-0x6534284a-0xdd573712-0xada970cb.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-2 1940/AGC_Army_Heavy-Tanks_RU_KV-2_1940_V01_S1_22.5-0x5ad0e817_0xf027313f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-2 1940/AGC_Army_Heavy-Tanks_RU_KV-2_1940_V01_S1_22.5-0x6534284a-0xdd573712-0x0d97f845.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-2 1940/AGC_Army_Heavy-Tanks_RU_KV-2_1940_V01_S1_45-0x5ad0e817_0x302734a7_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-2 1940/AGC_Army_Heavy-Tanks_RU_KV-2_1940_V01_S1_45-0x6534284a-0xdd573712-0x6d97fbb8.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-2 1940/AGC_Army_Heavy-Tanks_RU_KV-2_1940_V01_S1_67.5-0x5ad0e817_0x102737bb_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-2 1940/AGC_Army_Heavy-Tanks_RU_KV-2_1940_V01_S1_67.5-0x6534284a-0xdd573712-0xcd97feed.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-2 1940/AGC_Army_Heavy-Tanks_RU_KV-2_1940_V01_S1_90-0x5ad0e817_0xd02717e8_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Heavy-Tank KV-2 1940/AGC_Army_Heavy-Tanks_RU_KV-2_1940_V01_S1_90-0x6534284a-0xdd573712-0x4d97deed.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72A/AGC_Army_Medium-Tanks_RU_T-72A_V01_S1_22.5-0x5ad0e817_0x101d095c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72A/AGC_Army_Medium-Tanks_RU_T-72A_V01_S1_22.5-0x6534284a-0xdd573712-0x4d8dd3d3.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72A/AGC_Army_Medium-Tanks_RU_T-72A_V01_S1_45-0x5ad0e817_0x901cff4d_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72A/AGC_Army_Medium-Tanks_RU_T-72A_V01_S1_45-0x6534284a-0xdd573712-0xcd8dc6da.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72A/AGC_Army_Medium-Tanks_RU_T-72A_V01_S1_67.5-0x5ad0e817_0xb01d0434_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72A/AGC_Army_Medium-Tanks_RU_T-72A_V01_S1_67.5-0x6534284a-0xdd573712-0x8d8dcbc4.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72A/AGC_Army_Medium-Tanks_RU_T-72A_V01_S1_90-0x5ad0e817_0xb01cf9e3_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72A/AGC_Army_Medium-Tanks_RU_T-72A_V01_S1_90-0x6534284a-0xdd573712-0x8d8dc147.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72B/AGC_Army_Medium-Tanks_RU_T-72B_V01_S1_22.5-0x5ad0e817_0xb0276239_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72B/AGC_Army_Medium-Tanks_RU_T-72B_V01_S1_22.5-0x6534284a-0xdd573712-0x0d982990.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72B/AGC_Army_Medium-Tanks_RU_T-72B_V01_S1_45-0x5ad0e817_0x902768ca_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72B/AGC_Army_Medium-Tanks_RU_T-72B_V01_S1_45-0x6534284a-0xdd573712-0x8d98307e.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72B/AGC_Army_Medium-Tanks_RU_T-72B_V01_S1_67.5-0x5ad0e817_0x902774ab_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72B/AGC_Army_Medium-Tanks_RU_T-72B_V01_S1_67.5-0x6534284a-0xdd573712-0x8d984015.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72B/AGC_Army_Medium-Tanks_RU_T-72B_V01_S1_90-0x5ad0e817_0x90275497_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-72B/AGC_Army_Medium-Tanks_RU_T-72B_V01_S1_90-0x6534284a-0xdd573712-0x0d981c55.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S1_22.5-0x5ad0e817_0x50261cad_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S1_22.5-0x6534284a-0xdd573712-0x0d96e3ed.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S1_45-0x5ad0e817_0xd0260fff_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S1_45-0x6534284a-0xdd573712-0xad96d743.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S1_67.5-0x5ad0e817_0xb0261556_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S1_67.5-0x6534284a-0xdd573712-0x4d96dd11.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S1_90-0x5ad0e817_0x1025bb3f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S1_90-0x6534284a-0xdd573712-0xad968292.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S2_22.5-0x5ad0e817_0xb026539c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S2_22.5-0x6534284a-0xdd573712-0x8d971b26.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S2_45-0x5ad0e817_0x1026589a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S2_45-0x6534284a-0xdd573712-0xed971fdc.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S2_67.5-0x5ad0e817_0x70265d78_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S2_67.5-0x6534284a-0xdd573712-0x8d9724d5.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S2_90-0x5ad0e817_0xf0264d63_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Medium-Tank T-90A/AGC_Army_Medium-Tanks_RU_T-90A_V01_S2_90-0x6534284a-0xdd573712-0xcd9716ee.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Tank-Destroyer ISU-152/AGC_Army_Tank-Destroyers_RU_ISU-152_V01_S1_22.5-0x5ad0e817_0xb03ecb94_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Tank-Destroyer ISU-152/AGC_Army_Tank-Destroyers_RU_ISU-152_V01_S1_22.5-0x6534284a-0xdd573712-0xedaf92a9.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Tank-Destroyer ISU-152/AGC_Army_Tank-Destroyers_RU_ISU-152_V01_S1_45-0x5ad0e817_0x703ecd6c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Tank-Destroyer ISU-152/AGC_Army_Tank-Destroyers_RU_ISU-152_V01_S1_45-0x6534284a-0xdd573712-0xedaf9469.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Tank-Destroyer ISU-152/AGC_Army_Tank-Destroyers_RU_ISU-152_V01_S1_67.5-0x5ad0e817_0x303ed5eb_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Tank-Destroyer ISU-152/AGC_Army_Tank-Destroyers_RU_ISU-152_V01_S1_67.5-0x6534284a-0xdd573712-0xedaf9e5b.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Tank-Destroyer ISU-152/AGC_Army_Tank-Destroyers_RU_ISU-152_V01_S1_90-0x5ad0e817_0x903ec91a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Russia/Tank-Destroyer ISU-152/AGC_Army_Tank-Destroyers_RU_ISU-152_V01_S1_90-0x6534284a-0xdd573712-0x6daf901c.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Heavy-Tank Char B1 bis/AGC_Army_Heavy-Tanks_FR_Char_B1_bis_V01_S1_22.5-0x5ad0e817_0x112dd346_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Heavy-Tank Char B1 bis/AGC_Army_Heavy-Tanks_FR_Char_B1_bis_V01_S1_22.5-0x6534284a-0xdd573712-0xae9e9a34.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Heavy-Tank Char B1 bis/AGC_Army_Heavy-Tanks_FR_Char_B1_bis_V01_S1_45-0x5ad0e817_0x912dd7ab_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Heavy-Tank Char B1 bis/AGC_Army_Heavy-Tanks_FR_Char_B1_bis_V01_S1_45-0x6534284a-0xdd573712-0x4e9e9eac.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Heavy-Tank Char B1 bis/AGC_Army_Heavy-Tanks_FR_Char_B1_bis_V01_S1_67.5-0x5ad0e817_0xf12ddadd_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Heavy-Tank Char B1 bis/AGC_Army_Heavy-Tanks_FR_Char_B1_bis_V01_S1_67.5-0x6534284a-0xdd573712-0xce9ea1e2.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Heavy-Tank Char B1 bis/AGC_Army_Heavy-Tanks_FR_Char_B1_bis_V01_S1_90-0x5ad0e817_0xf12d86a9_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Heavy-Tank Char B1 bis/AGC_Army_Heavy-Tanks_FR_Char_B1_bis_V01_S1_90-0x6534284a-0xdd573712-0xae9e4da9.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Medium-Tank Leclerc S1/AGC_Army_Medium-Tanks_FR_Leclerc-S1_V01_S1_22.5-0x5ad0e817_0x30434bf9_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Medium-Tank Leclerc S1/AGC_Army_Medium-Tanks_FR_Leclerc-S1_V01_S1_22.5-0x6534284a-0xdd573712-0x2db41323.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Medium-Tank Leclerc S1/AGC_Army_Medium-Tanks_FR_Leclerc-S1_V01_S1_45-0x5ad0e817_0xf0434e23_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Medium-Tank Leclerc S1/AGC_Army_Medium-Tanks_FR_Leclerc-S1_V01_S1_45-0x6534284a-0xdd573712-0x8db41549.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Medium-Tank Leclerc S1/AGC_Army_Medium-Tanks_FR_Leclerc-S1_V01_S1_67.5-0x5ad0e817_0xd0435098_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Medium-Tank Leclerc S1/AGC_Army_Medium-Tanks_FR_Leclerc-S1_V01_S1_67.5-0x6534284a-0xdd573712-0x4db417b4.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Medium-Tank Leclerc S1/AGC_Army_Medium-Tanks_FR_Leclerc-S1_V01_S1_90-0x5ad0e817_0xd04339ca_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/France/Medium-Tank Leclerc S1/AGC_Army_Medium-Tanks_FR_Leclerc-S1_V01_S1_90-0x6534284a-0xdd573712-0x8db4016d.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Heavy-Tank Tiger I/AGC_Army_Heavy-Tanks_GM_Tiger-I_V01_S1_22.5-0x5ad0e817_0x312efd90_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Heavy-Tank Tiger I/AGC_Army_Heavy-Tanks_GM_Tiger-I_V01_S1_22.5-0x6534284a-0xdd573712-0x2e9fc4a8.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Heavy-Tank Tiger I/AGC_Army_Heavy-Tanks_GM_Tiger-I_V01_S1_45-0x5ad0e817_0x312f783e_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Heavy-Tank Tiger I/AGC_Army_Heavy-Tanks_GM_Tiger-I_V01_S1_45-0x6534284a-0xdd573712-0xcea0400e.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Heavy-Tank Tiger I/AGC_Army_Heavy-Tanks_GM_Tiger-I_V01_S1_67.5-0x5ad0e817_0xf12f7b1a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Heavy-Tank Tiger I/AGC_Army_Heavy-Tanks_GM_Tiger-I_V01_S1_67.5-0x6534284a-0xdd573712-0x2ea04297.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Heavy-Tank Tiger I/AGC_Army_Heavy-Tanks_GM_Tiger-I_V01_S1_90-0x5ad0e817_0xf12ed82d_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Heavy-Tank Tiger I/AGC_Army_Heavy-Tanks_GM_Tiger-I_V01_S1_90-0x6534284a-0xdd573712-0x0e9f9f4c.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Tank-Destroyer Sturmtiger/AGC_Army_Tank-Destroyers_GM_Sturmtiger_V01_S1_22.5-0x5ad0e817_0xf13021a8_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Tank-Destroyer Sturmtiger/AGC_Army_Tank-Destroyers_GM_Sturmtiger_V01_S1_22.5-0x6534284a-0xdd573712-0xcea0e889.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Tank-Destroyer Sturmtiger/AGC_Army_Tank-Destroyers_GM_Sturmtiger_V01_S1_45-0x5ad0e817_0x51317b5b_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Tank-Destroyer Sturmtiger/AGC_Army_Tank-Destroyers_GM_Sturmtiger_V01_S1_45-0x6534284a-0xdd573712-0x4ea2424f.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Tank-Destroyer Sturmtiger/AGC_Army_Tank-Destroyers_GM_Sturmtiger_V01_S1_67.5-0x5ad0e817_0x9131a3ba_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Tank-Destroyer Sturmtiger/AGC_Army_Tank-Destroyers_GM_Sturmtiger_V01_S1_67.5-0x6534284a-0xdd573712-0xeea26b2e.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Tank-Destroyer Sturmtiger/AGC_Army_Tank-Destroyers_GM_Sturmtiger_V01_S1_90-0x5ad0e817_0xb1301c0c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/Germany/Tank-Destroyer Sturmtiger/AGC_Army_Tank-Destroyers_GM_Sturmtiger_V01_S1_90-0x6534284a-0xdd573712-0xeea0e2f4.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S1_22.5-0x5ad0e817_0x30a6fe4c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S1_22.5-0x6534284a-0xdd573712-0x4da2703e.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S1_45-0x5ad0e817_0xb0a6fc0a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S1_45-0x6534284a-0xdd573712-0x4da26dc3.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S1_67.5-0x5ad0e817_0x10a70124_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S1_67.5-0x6534284a-0xdd573712-0x6da272d3.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S1_90-0x5ad0e817_0xafb90e88_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S1_90-0x6534284a-0xdd573712-0xcd9b3795.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S2_22.5-0x5ad0e817_0x904f2cce_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S2_22.5-0x6534284a-0xdd573712-0xadbff3f7.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S2_45-0x5ad0e817_0x904f2fb5_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S2_45-0x6534284a-0xdd573712-0x8dbff72d.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S2_67.5-0x5ad0e817_0x904f31e2_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S2_67.5-0x6534284a-0xdd573712-0x8dbff916.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S2_90-0x5ad0e817_0xd04f2549_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M1A1 Abrams/AGC_Army_Medium-Tanks_US_M1A1_V01_S2_90-0x6534284a-0xdd573712-0xadbfec78.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4A3E8 Sherman/AGC_Army_Medium-Tanks_US_M4A3E8_Sherman_V01_S1_22.5-0x5ad0e817_0xd128bf2f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4A3E8 Sherman/AGC_Army_Medium-Tanks_US_M4A3E8_Sherman_V01_S1_22.5-0x6534284a-0xdd573712-0x6e99862e.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4A3E8 Sherman/AGC_Army_Medium-Tanks_US_M4A3E8_Sherman_V01_S1_45-0x5ad0e817_0xd128cad5_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4A3E8 Sherman/AGC_Army_Medium-Tanks_US_M4A3E8_Sherman_V01_S1_45-0x6534284a-0xdd573712-0x8e9991f5.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4A3E8 Sherman/AGC_Army_Medium-Tanks_US_M4A3E8_Sherman_V01_S1_67.5-0x5ad0e817_0xb128ce9a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4A3E8 Sherman/AGC_Army_Medium-Tanks_US_M4A3E8_Sherman_V01_S1_67.5-0x6534284a-0xdd573712-0xee9995eb.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4A3E8 Sherman/AGC_Army_Medium-Tanks_US_M4A3E8_Sherman_V01_S1_90-0x5ad0e817_0xd128bcae_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4A3E8 Sherman/AGC_Army_Medium-Tanks_US_M4A3E8_Sherman_V01_S1_90-0x6534284a-0xdd573712-0x4e9983bf.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4 Sherman/AGC_Army_Medium-Tanks_US_M4-Sherman_V01_S1_22.5-0x5ad0e817_0xf12882b4_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4 Sherman/AGC_Army_Medium-Tanks_US_M4-Sherman_V01_S1_22.5-0x6534284a-0xdd573712-0xee9949b3.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4 Sherman/AGC_Army_Medium-Tanks_US_M4-Sherman_V01_S1_45-0x5ad0e817_0xf12884a0_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4 Sherman/AGC_Army_Medium-Tanks_US_M4-Sherman_V01_S1_45-0x6534284a-0xdd573712-0x8e994ba6.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4 Sherman/AGC_Army_Medium-Tanks_US_M4-Sherman_V01_S1_67.5-0x5ad0e817_0x51288670_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4 Sherman/AGC_Army_Medium-Tanks_US_M4-Sherman_V01_S1_67.5-0x6534284a-0xdd573712-0x4e994d8d.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4 Sherman/AGC_Army_Medium-Tanks_US_M4-Sherman_V01_S1_90-0x5ad0e817_0x11287d31_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/USA/Medium-Tank M4 Sherman/AGC_Army_Medium-Tanks_US_M4-Sherman_V01_S1_90-0x6534284a-0xdd573712-0x8e994470.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S1_22.5-0x5ad0e817_0xfd4a7da_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S1_22.5-0x6534284a-0xdd573712-0xcd456f6f.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S1_45-0x5ad0e817_0xcfd36d0c_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S1_45-0x6534284a-0xdd573712-0x2d44344c.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S1_67.5-0x5ad0e817_0x2fd4a5ea_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S1_67.5-0x6534284a-0xdd573712-0x0d456f4e.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S1_90-0x5ad0e817_0x8fd31713_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S1_90-0x6534284a-0xdd573712-0x8d43de48.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S2_22.5-0x5ad0e817_0xefd60c2a_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S2_22.5-0x6534284a-0xdd573712-0x4d46d375.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S2_45-0x5ad0e817_0xfd61086_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S2_45-0x6534284a-0xdd573712-0x4d46d7ca.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S2_67.5-0x5ad0e817_0xcfd61258_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S2_67.5-0x6534284a-0xdd573712-0x4d46d9a4.SC4Desc
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S2_90-0x5ad0e817_0xcfd60e5f_0x30000.SC4Model
+      - Barroco Hispano DLCs/Vehicles DLC/Tanks/United Kingdom/Medium-Tank Challernger 2/AGC_Army_Medium-Tanks_UK_Challenger-2_V01_S2_90-0x6534284a-0xdd573712-0x2d46d5f2.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/TANKS_DLC_ICON.png.2d728e647981aff4d9303c3cd9264c69.png
     lastModified: 2021-11-22T01:05:04Z
     name: AGC - Tanks DLC
+    sha256: cb75331e983f6a488b03379f49a60f0fa04ac0f43b2efecf63c08699d67ec651
+    size: 7219949
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_11/TANKS_DLC_ICON.thumb.png.cc85eae372d278685488a390f3c097e9.png
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 10367280
     url: https://community.simtropolis.com/files/file/34757-agc-tanks-dlc/
+    version: 1.0.0
   simtropolis/34777-esa-rail-prop-pack:
     authors:
       - Oidaas
@@ -41303,7 +41731,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -42526,7 +42960,13 @@ assets:
 
 
 
+
+
+
       							
+
+
+
 
 
 
@@ -42608,6 +43048,287 @@ assets:
     timestamp: 2024-08-27T09:21:20.239Z
     uncompressed: 2288592
     url: https://community.simtropolis.com/files/file/36407-historic-navy-pack-30-provisions/
+    version: 1.0.0
+  simtropolis/36441-bsc-vip-girafe-carpack-vol-3-remastered:
+    authors:
+      - Girafe
+    category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+                                  
+      								<div style="position:absolute; top:0px; right:0px;">
+                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <table border="1" cellpadding="2" cellspacing="2" style="background-color:#ffffff;text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<big><font size="-1"><big><span style="color:#ffffff;">Carpack vol. 3 remastered by Girafe</span></big></font></big>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	 
+      </p>
+
+
+
+
+      <p style="color:#000000;font-size:medium;">
+      	<span lang="en-us" xml:lang="en-us">This is a props pack that regroups car models in 45° &amp; 90° degree version (Carpack vol. 3). Car models are similar to the Carpack vol.3 but their size have been adjusted to 120% to real size. Colors are now matching real model too. This remastered pack matches Carpack vol. 1&amp;2 remastered. </span>
+      </p>
+
+
+      <p style="color:#000000;font-size:medium;">
+      	<span lang="en-us" xml:lang="en-us">For LOTters, these props are available in Lot Editor Props Section's, under the name:</span>
+      </p>
+
+
+      <ul style="color:#000000;font-size:medium;">
+      	<li>
+      		<span lang="en-us" xml:lang="en-us"><b>Grfe_(name of constructor)_(name of model)</b></span>
+      	</li>
+      </ul>
+
+
+      <p style="color:#000000;font-size:medium;">
+      	<span lang="en-us" xml:lang="en-us">Special thanks to<span> </span><b><abbr title="BATT Squad Certification">BSC</abbr></b><span> </span><b>/ VIP Members</b>.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">LOT Details and information</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<span style="color:#000000;font-size:medium;">                          </span><br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">Carpack vol.3 remastered:</span><br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">  </span>
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td>
+      				Constructor:
+      			</td>
+      			<td>
+      				Model:
+      			</td>
+      		</tr>
+      		<tr>
+      			<td style="background-color:#cccccc;">
+      				Audi
+      			</td>
+      			<td style="background-color:#cccccc;">
+      				Q7
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Citroen
+      			</td>
+      			<td>
+      				DS3
+      			</td>
+      		</tr>
+      		<tr>
+      			<td style="background-color:#cccccc;">
+      				Mercedes
+      			</td>
+      			<td style="background-color:#cccccc;">
+      				ClassA
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Mercedes
+      			</td>
+      			<td>
+      				SLK
+      			</td>
+      		</tr>
+      		<tr>
+      			<td style="background-color:#cccccc;">
+      				Ford
+      			</td>
+      			<td style="background-color:#cccccc;">
+      				Focus
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Renault
+      			</td>
+      			<td>
+      				Twingo RS2
+      			</td>
+      		</tr>
+      		<tr>
+      			<td style="background-color:#cccccc;">
+      				Opel
+      			</td>
+      			<td style="background-color:#cccccc;">
+      				Corsa
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Seat
+      			</td>
+      			<td>
+      				Ibiza
+      			</td>
+      		</tr>
+      		<tr>
+      			<td style="background-color:#cccccc;">
+      				Renault
+      			</td>
+      			<td style="background-color:#cccccc;">
+      				Laguna
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Lamborghini
+      			</td>
+      			<td>
+      				Reventon
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">Compatibility</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">This download is only compatible with<span> </span></span><span style="color:#000000;font-size:medium;">SimCity 4 Rush Hour</span><span style="color:#000000;font-size:medium;"><span> </span>or<span> </span></span><span style="color:#000000;font-size:medium;">SimCity 4 Deluxe.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">Dependencies</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">No dependency.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="color:#ffffff;text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				Notes about Nightlighting Effects
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;"><span>Night light fix:</span><span> </span>you will not see any lighting effects on any custom buildings unless these two updates are installed. First, install the<span> </span><a href="http://sc4devotion.com/forums/index.php?page=7" rel="external nofollow"><span>EP1-Update 1 1.1.638</span></a><span> </span>for Rush Hour/SimCity 4 Deluxe to see nightlights. Then install the<span> </span><a href="http://sc4devotion.com/forums/index.php?page=14" rel="external nofollow"><span>SC4-Update 1.1.640.</span></a><span> </span>You may have to accept the End User Licence Agreement.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span style="color:#ffffff;">Disclaimer</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">The usage of this download is on your own risk. I try to test my mod extensively, so they should work properly, but errors may still exist. Feel free to modify the mod for yourself and show them in your city journals, but please don't distribute them without asking first.</span><br style="color:#000000;font-size:medium;" >
+      	 
+      </p>
+
+
+      <table border="1" cellpadding="2" cellspacing="2" style="color:#ffffff;text-align:left;">
+      	<tbody>
+      		<tr>
+      			<td style="background-color:#376687;">
+      				<span>Credits &amp; Feedback</span>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;">Thank you all for having downloaded this mod, I hope it will give you satisfaction. For comments, questions and/or support, please see<span> </span><a href="https://community.simtropolis.com/forums/topic/37955-bsc-vip-girafes-skills-on-the-bat/" rel="">my thread in Simtropolis.</a></span><br style="color:#000000;font-size:medium;" >
+      	<br style="color:#000000;font-size:medium;" >
+      	<span style="color:#000000;font-size:medium;"> </span>
+      </p>
+
+      						</body>
+    filename: BSC-VIP Carpack vol. 3 remastered.zip
+    files:
+      - _Documents/Images/Banniere_VIP.jpg
+      - _Documents/Images/Icon_carpack vol. 3 remastered.jpg
+      - BSC/girafe/Carprops Vol. 3 remastered.dat
+      - _Documents/readme_carpack vol. 3 remastered.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/66e1c09aa2d70_Image_carpackvol.3remastered.jpg.26f0d1952945ca3ea9b8eb0824c57bc6.jpg
+    lastModified: 2024-09-11T16:12:17Z
+    name: BSC-VIP Girafe Carpack vol. 3 remastered
+    sha256: 9238bd89cc76ce5942d645cbe86ccd84d9d8b2677db2aee2210c2a6702606d0b
+    size: 1584058
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66e1c161aaa42_Image_carpackvol.3remastered.thumb.jpg.5da05aa2c2ad846027e3ad277a889157.jpg
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 2412039
+    url: https://community.simtropolis.com/files/file/36441-bsc-vip-girafe-carpack-vol-3-remastered/
     version: 1.0.0
   simtropolis/3652-nexis-big-rock-props:
     authors:
@@ -42770,4 +43491,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-68c8b5b9d329a151902f6e02398a5f12-texturepack.jpg
     url: https://community.simtropolis.com/files/file/948-texturepack/
 
-timestamp: 2024-08-28T10:33:57.224Z
+timestamp: 2024-09-13T12:22:00.820Z

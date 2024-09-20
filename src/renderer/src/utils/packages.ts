@@ -2,26 +2,29 @@ import { useCallback, useMemo } from "react"
 
 import { CategoryID, isCategory } from "@common/categories"
 import {
+  PackageID,
   getVariantIssues,
   isDeprecated,
-  isEnabled,
-  isError,
   isExperimental,
+  isIncluded,
   isIncompatible,
+  isInvalid,
   isMissing,
   isOutdated,
 } from "@common/packages"
+import { ProfileInfo } from "@common/profiles"
 import {
   PackageInfo,
   PackageState,
   PackageStatus,
-  ProfileInfo,
+  Packages,
   VariantInfo,
   getState,
 } from "@common/types"
 import { hasAny } from "@common/utils/arrays"
-import { mapValues } from "@common/utils/objects"
+import { keys, mapValues, values } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
+import { VariantID } from "@common/variants"
 import { PACKAGE_BANNER_HEIGHT, PACKAGE_BANNER_SPACING } from "@components/PackageBanners"
 
 import {
@@ -45,7 +48,7 @@ export function getPackageListItemSize(
   variantInfo: VariantInfo,
   packageStatus?: PackageStatus,
 ): number {
-  const issues = getVariantIssues(variantInfo.id, packageStatus)
+  const issues = getVariantIssues(variantInfo, packageStatus)
 
   let nBanners = 0
   let size = PACKAGE_LIST_ITEM_BASE_SIZE
@@ -87,63 +90,93 @@ function getPackageStatus(
   return profileInfo && packageInfo.status[profileInfo.id]
 }
 
-export function getCurrentVariant(store: Store, packageId: string): VariantInfo {
-  const packageInfo = getPackageInfo(store, packageId)!
-  return packageInfo.variants[store.packageUi[packageId].variantId]
+export function getCurrentVariant(store: Store, packageId: PackageID): VariantInfo {
+  const packageInfo = getPackageInfo(store, packageId)
+  const packageUi = store.packageUi[packageId]
+  if (!packageInfo || !packageUi) {
+    throw Error(`Unknown package '${packageId}'`)
+  }
+
+  const variantInfo = packageInfo.variants[packageUi.variantId]
+  if (!variantInfo) {
+    throw Error(`Unknown variant '${packageId}#${packageUi.variantId}'`)
+  }
+
+  return variantInfo
 }
 
-export function useCurrentVariant(packageId: string): VariantInfo {
+export function useCurrentVariant(packageId: PackageID): VariantInfo {
   return useStore(useCallback(store => getCurrentVariant(store, packageId), [packageId]))
 }
 
-export function getDependentPackages(
-  packages: { [packageId: string]: PackageInfo },
-  dependencyId: string,
-): string[] {
-  return Object.keys(packages).filter(packageId => {
-    return Object.values(packages[packageId].variants).some(variantInfo => {
-      return !!variantInfo.dependencies?.includes(dependencyId)
+export function getDependentPackages(packages: Packages, dependencyId: PackageID): PackageID[] {
+  return values(packages)
+    .filter(packageInfo => {
+      return values(packageInfo.variants).some(variantInfo => {
+        return !!variantInfo.dependencies?.some(dependency => dependency.id === dependencyId)
+      })
     })
-  })
+    .map(packageInfo => packageInfo.id)
 }
 
-export function useDependentPackages(dependencyId: string): string[] {
+export function useDependentPackages(dependencyId: PackageID): PackageID[] {
   const packages = useStore(store => store.packages)
 
-  return useMemo(() => getDependentPackages(packages ?? {}, dependencyId), [dependencyId, packages])
+  return useMemo(() => {
+    return packages ? getDependentPackages(packages, dependencyId) : []
+  }, [dependencyId, packages])
 }
 
 export function useFilteredPackages(): string[] {
   return useStore(getFilteredPackages)
 }
 
-export function useFilteredVariants(packageId: string): string[] {
+export function useFilteredVariants(packageId: PackageID): VariantID[] {
   return useStore(
     useCallback(
       store => {
-        const packageInfo = getPackageInfo(store, packageId)!
         const packageUi = store.packageUi[packageId]
-        return packageUi?.variantIds ?? Object.keys(packageInfo.variants)
+        if (!packageUi) {
+          throw Error(`Unknown package '${packageId}'`)
+        }
+
+        return packageUi.variantIds
       },
       [packageId],
     ),
   )
 }
 
-export function usePackageInfo(packageId: string): PackageInfo {
-  return useStore(useCallback(store => getPackageInfo(store, packageId)!, [packageId]))
-}
-
-export function usePackageListItemSize(): (packageId: string) => number {
-  const packageUi = useStore(store => store.packageUi)
-  return (packageId: string) => packageUi[packageId]?.itemSize ?? PACKAGE_LIST_ITEM_BASE_SIZE
-}
-
-export function usePackageStatus(packageId: string): PackageStatus | undefined {
+export function usePackageInfo(packageId: PackageID): PackageInfo {
   return useStore(
     useCallback(
       store => {
-        const packageInfo = getPackageInfo(store, packageId)!
+        const packageInfo = getPackageInfo(store, packageId)
+        if (!packageInfo) {
+          throw Error(`Unknown package '${packageId}'`)
+        }
+
+        return packageInfo
+      },
+      [packageId],
+    ),
+  )
+}
+
+export function usePackageListItemSize(): (packageId: PackageID) => number {
+  const packageUi = useStore(store => store.packageUi)
+  return packageId => packageUi[packageId]?.itemSize ?? PACKAGE_LIST_ITEM_BASE_SIZE
+}
+
+export function usePackageStatus(packageId: PackageID): PackageStatus | undefined {
+  return useStore(
+    useCallback(
+      store => {
+        const packageInfo = getPackageInfo(store, packageId)
+        if (!packageInfo) {
+          throw Error(`Unknown package '${packageId}'`)
+        }
+
         const profileInfo = getCurrentProfile(store)
         return getPackageStatus(packageInfo, profileInfo)
       },
@@ -152,12 +185,21 @@ export function usePackageStatus(packageId: string): PackageStatus | undefined {
   )
 }
 
-export function useVariantInfo(packageId: string, variantId: string): VariantInfo {
+export function useVariantInfo(packageId: PackageID, variantId: VariantID): VariantInfo {
   return useStore(
     useCallback(
       store => {
-        const packageInfo = getPackageInfo(store, packageId)!
-        return packageInfo.variants[variantId]
+        const packageInfo = getPackageInfo(store, packageId)
+        if (!packageInfo) {
+          throw Error(`Unknown package '${packageId}'`)
+        }
+
+        const variantInfo = packageInfo.variants[variantId]
+        if (!variantInfo) {
+          throw Error(`Unknown variant '${packageId}#${variantId}'`)
+        }
+
+        return variantInfo
       },
       [packageId, variantId],
     ),
@@ -184,7 +226,7 @@ export function filterVariant(
     }
   }
 
-  if (filters.onlyErrors && !isError(variantInfo, packageStatus)) {
+  if (filters.onlyErrors && !isInvalid(variantInfo, packageStatus)) {
     return false
   }
 
@@ -198,16 +240,16 @@ export function filterVariant(
 
   if (filters.state) {
     if (filters.state === PackageState.ENABLED && filters.dependencies) {
-      if (!isEnabled(variantInfo, packageStatus)) {
+      if (!isIncluded(packageStatus)) {
         return false
       }
-    } else if (!getState(filters.state, packageInfo, variantInfo.id, profileInfo)) {
+    } else if (!getState(filters.state, packageInfo, variantInfo, profileInfo)) {
       return false
     }
   }
 
   if (filters.states.length) {
-    if (!filters.states.some(state => getState(state, packageInfo, variantInfo.id, profileInfo))) {
+    if (!filters.states.some(state => getState(state, packageInfo, variantInfo, profileInfo))) {
       return false
     }
   }
@@ -236,21 +278,19 @@ export function filterVariant(
 export function computePackageList(
   store: Store,
   triggeredByFilters: boolean,
-): Pick<Store, "authors" | "filteredPackages" | "packageUi"> {
+): Pick<Store, "filteredPackages" | "packageUi"> {
   const profileInfo = getCurrentProfile(store)
   const packageFilters = store.packageFilters
   const packages = store.packages
   if (!packages) {
     return {
-      authors: [],
       filteredPackages: [],
       packageUi: {},
     }
   }
 
-  const authors = new Set<string>()
-  const packageUi: { [packageId: string]: PackageUi } = {}
-  const variantChanges: { [packageId: string]: string } = {}
+  const packageUi: { [packageId in PackageID]?: PackageUi } = {}
+  const variantChanges: { [packageId in PackageID]?: VariantID } = {}
 
   // Match search query from start of words only, ignoring leading/trailing spaces
   const search = packageFilters.search.trim()
@@ -267,54 +307,54 @@ export function computePackageList(
     pattern,
   }
 
-  const allPackages = Object.keys(packages).sort()
+  const allPackages = keys(packages).sort()
   const filteredPackages = allPackages.filter(packageId => {
     const packageConfig = profileInfo?.packages[packageId]
-    const packageInfo = packages[packageId]
+    const packageInfo = packages[packageId]! // TODO
     const packageStatus = getPackageStatus(packageInfo, profileInfo)
 
-    const allVariantIds = Object.keys(packageInfo.variants)
+    const allVariants = values(packageInfo.variants)
 
-    const filteredVariantIds = allVariantIds.filter(variantId => {
-      const variantInfo = packageInfo.variants[variantId]
-      variantInfo.authors.forEach(author => authors.add(author))
+    const filteredVariants = allVariants.filter(variantInfo => {
       return filterVariant(packageInfo, variantInfo, profileInfo, filters)
     })
 
     let selectedVariantId =
       packageStatus?.variantId ??
       store.packageUi[packageId]?.variantId ??
-      filteredVariantIds[0] ??
-      allVariantIds[0]
+      (filteredVariants[0] ?? allVariants[0]).id
+
+    const selectedVariant = packageInfo.variants[selectedVariantId]
+    if (!selectedVariant) {
+      return false
+    }
 
     // Adjust selected variant upon changing filters
     if (!packageConfig?.enabled && triggeredByFilters) {
-      const compatibleVariantIds = filteredVariantIds.filter(
-        variantId => !isIncompatible(packageInfo.variants[variantId], packageStatus),
+      const compatibleVariants = filteredVariants.filter(
+        variantInfo => !isIncompatible(variantInfo, packageStatus),
       )
 
-      if (compatibleVariantIds.length && !compatibleVariantIds.includes(selectedVariantId)) {
-        variantChanges[packageId] = selectedVariantId = compatibleVariantIds[0]
-      } else if (filteredVariantIds.length && !filteredVariantIds.includes(selectedVariantId)) {
-        variantChanges[packageId] = selectedVariantId = filteredVariantIds[0]
+      if (compatibleVariants.length && !compatibleVariants.includes(selectedVariant)) {
+        variantChanges[packageId] = selectedVariantId = compatibleVariants[0].id
+      } else if (filteredVariants.length && !filteredVariants.includes(selectedVariant)) {
+        variantChanges[packageId] = selectedVariantId = filteredVariants[0].id
       }
     }
 
-    const selectedVariantInfo = packageInfo.variants[selectedVariantId]
-
     packageUi[packageId] = {
-      itemSize: getPackageListItemSize(selectedVariantInfo, packageStatus),
+      itemSize: getPackageListItemSize(selectedVariant, packageStatus),
       variantId: selectedVariantId,
-      variantIds: filteredVariantIds,
+      variantIds: filteredVariants.map(variantInfo => variantInfo.id),
     }
 
     // Only check errors for the selected variant
-    if (packageFilters.onlyErrors && !isError(selectedVariantInfo, packageStatus)) {
+    if (packageFilters.onlyErrors && !isInvalid(selectedVariant, packageStatus)) {
       return false
     }
 
     // Package is visible if we managed to select a visible variant
-    return filteredVariantIds.includes(selectedVariantId)
+    return filteredVariants.includes(selectedVariant)
   })
 
   // Send adjusted variants back to main process
@@ -326,7 +366,6 @@ export function computePackageList(
   }
 
   return {
-    authors: Array.from(authors).sort(),
     filteredPackages,
     packageUi,
   }

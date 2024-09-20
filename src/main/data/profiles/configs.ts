@@ -1,8 +1,8 @@
-import { ProfileData, ProfileInfo } from "@common/types"
+import { ProfileData, ProfileID, ProfileInfo } from "@common/profiles"
 import { keys } from "@common/utils/objects"
 
 export function compactProfileConfig(profile: ProfileInfo): void {
-  for (const packageId in profile.packages) {
+  for (const packageId of keys(profile.packages)) {
     const config = profile.packages[packageId]
     if (config?.options && !Object.keys(config.options).length) {
       delete config.options
@@ -46,7 +46,7 @@ export function toProfileData(profile: Readonly<ProfileInfo>): ProfileData {
   return data
 }
 
-export function fromProfileData(profileId: string, data: Readonly<ProfileData>): ProfileInfo {
+export function fromProfileData(profileId: ProfileID, data: Readonly<ProfileData>): ProfileInfo {
   return {
     features: data.features ?? {},
     id: profileId,

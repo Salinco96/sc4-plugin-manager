@@ -27,7 +27,7 @@ export const OVERRIDES: IndexerOverrides = {
       packageId: "porkissimo/mega-props-vol01",
     },
     10: {
-      packageId: "porkissimo/jenx-porkie-expanded-props",
+      superseded: "simtropolis/11421-jenx-porkie-expanded-porkie-props",
     },
     11: {
       packageId: "nob/mega-props-collection",
@@ -278,6 +278,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     283: {
       packageId: "bsc/parks-collection",
+    },
+    286: {
+      superseded: "simtropolis/36423-rlm-productions-la-river-project",
     },
   },
   simtropolis: {
@@ -1819,6 +1822,9 @@ export const OVERRIDES: IndexerOverrides = {
       },
     },
     36341: null, // 36341-sc4ltextt-sc4-ltext-translator
+    36342: {
+      packageId: "creador2003/mediterranean-buildings-pack-1",
+    },
     36353: {
       variants: {
         202140: null,
@@ -1937,6 +1943,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     36414: {
       packageId: "philforhockey51/irm-fillers-mixed-concrete-angles",
+    },
+    36423: {
+      packageId: "rebalynnts/la-river-project",
     },
   },
 }

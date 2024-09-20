@@ -1,17 +1,17 @@
-import { checkCondition } from "@common/packages"
+import { PackageID, checkCondition } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { OptionsForm } from "./OptionsForm"
 import { usePackageOptions } from "./usePackageOptions"
 
-export function PackageOptionsForm({ packageId }: { packageId: string }): JSX.Element {
+export function PackageOptionsForm({ packageId }: { packageId: PackageID }): JSX.Element {
   const actions = useStoreActions()
   const profileInfo = useCurrentProfile()
   const options = usePackageOptions(packageId)
 
   const variantInfo = useCurrentVariant(packageId)
-  const profileOptions = useStore(store => store.globalOptions)
+  const profileOptions = useStore(store => store.options)
   const features = useStore(store => store.features)
 
   return (

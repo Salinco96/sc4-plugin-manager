@@ -1,11 +1,20 @@
-import { ComponentType, Suspense } from "react"
+import { ComponentType, Suspense, useEffect } from "react"
 
-import { ErrorBoundary } from "@components/ErrorBoundary"
+import { ErrorBoundary, ErrorComponentProps } from "@components/ErrorBoundary"
 
 import { Loader } from "./components/Loader"
 import { Modal } from "./components/Modal"
 import { PageComponents } from "./pages"
-import { Page, PageData, useLocation } from "./utils/navigation"
+import { Page, PageData, useHistory, useLocation } from "./utils/navigation"
+
+function ContentErrorComponent({ clearError, error }: ErrorComponentProps) {
+  const { subscribe } = useHistory()
+
+  // Clear error when changing location
+  useEffect(() => subscribe(clearError), [subscribe])
+
+  return <>{error.message}</>
+}
 
 /**
  * Main page content.
@@ -17,7 +26,7 @@ export function Content<T extends Page>(): JSX.Element {
 
   return (
     <Suspense fallback={<Loader />}>
-      <ErrorBoundary>
+      <ErrorBoundary ErrorComponent={ContentErrorComponent}>
         <PageComponent {...data} />
         <Modal />
       </ErrorBoundary>

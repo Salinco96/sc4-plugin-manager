@@ -291,10 +291,133 @@ assets:
     authors:
       - mikeseith
     category: gameplay
+    dependencies:
+      - simtropolis/14400-european-cars-automata-and-family-props-new-instances
+    description: "<body>
+
+      \                           \
+
+      \t\t\t\t\t\t\t<p>\r
+
+      \tThese lots spawn automata from the <a href=\"https://community.simtropolis.com/files/file/14400-european-cars-automata-and-family-props-new-instances/\" rel=\"\"><strong>European auto new
+      instance mod</strong></a>.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<span style=\"color:#800000\"><strong>They </strong></span><strong><span style=\"color:#800000\">must </span></strong>be installed with this lot. Otherwise, these lots will not spawn anything.
+      When plopped, these lots spawn many European cars onto your city's streets. These lots are intended to be a help for people creating C.J.s and people who want to create a little gridlock and
+      spectacular crashes. These lots will also spawn Citroens from my newest Citroen dealer when it comes out in the next few weeks.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tAttempted to minimize the \"flashing\" effect of the lots.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \t<strong>Please note: If you already have the European auto new instance mod you will have to redownload it and have it overwrite the older version.</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThese lots can be found in the parks menu and are labelled as Euro traffic generator.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tAs always, place these files and the European auto new instance mod in the game's plugin folder.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \t<span style=\"color:#800000\">Updated June 27, 2006 to include:</span>\r
+
+      </p>\r
+
+      \r
+
+      <ul>\r
+
+      \t<li>\r
+
+      \t\t<span style=\"color:#800000\">1 plaza lot generating moderate traffic.</span>\r
+
+      \t</li>\r
+
+      \t<li>\r
+
+      \t\t<span style=\"color:#800000\">1 grassy lot generating moderate traffic.</span>\r
+
+      \t</li>\r
+
+      \t<li>\r
+
+      \t\t<span style=\"color:#800000\">1 plaza lot generating heavy traffic.</span>\r
+
+      \t</li>\r
+
+      \t<li>\r
+
+      \t\t<span style=\"color:#800000\">1 grassy lot generating heavy traffic.</span>\r
+
+      \t</li>\r
+
+      </ul>\r
+
+      \r
+
+      <p>\r
+
+      \t \r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: Euro traffic generators.zip
+    files:
+      - euro traffic generator grass toned down_f1ac5f4d.SC4Lot
+      - euro traffic generator lot 2_11a941a9.SC4Lot
+      - euro traffic generator lot grass_d1ac6053.SC4Lot
+      - euro traffic generator lot toned down_31ac60c0.SC4Lot
+      - euro traffic generator props moderate.dat
+      - Euro traffic generator props.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0014/7c0be67bb5f8e5b7623de71533ad4ecd-euro%20traffic%204.JPG
+      - https://www.simtropolis.com/objects/screens/0014/7c0be67bb5f8e5b7623de71533ad4ecd-euro%20traffic%203.JPG
     lastModified: 2006-06-27T20:27:31Z
     name: Euro traffic generator
+    sha256: 298971ddcfe14e9b4830eabf3d4b249b9c90cfd664244f2116dd6a9643344895
+    size: 188291
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2006/thumb-7c0be67bb5f8e5b7623de71533ad4ecd-euro%20traffic%204.JPG
+    timestamp: 2024-09-13T12:22:00.820Z
+    uncompressed: 232853
     url: https://community.simtropolis.com/files/file/16257-euro-traffic-generator/
+    version: "1.1"
   simtropolis/16393-block-all-maxis-buildings-by-dusktrooper:
     authors:
       - DuskTrooper
@@ -5115,7 +5238,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acacd7014f_04-MySimtropolis_ModePreview.jpg.7704eb9c24d830866605bf9af3ffd419.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acad53d642_05-MySimtropolis_ResidentPreview.jpg.d306179e2bb65415c48c4e1224c5f73a.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a84526cdc6d_02-MySimtropolis_SelectionPanelAvatars_v1_207.png.77028e0b5871e8c09267f7f84382c1d2.png
-    lastModified: 2024-07-30T01:44:21Z
+    lastModified: 2024-09-05T22:33:12Z
     name: "MySimtropolis: Members Immortalized in SC4"
     sha256: b194c6be0d7635210d2b3b779029a46d7c2812f44365ad99ca69ba46ae72088d
     size: 1346297
@@ -6665,4 +6788,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-f497f4f8de9cd628f6c1ad0c9caf9305-Fun%20query%20Water%20pur.%20plant.jpg
     url: https://community.simtropolis.com/files/file/4536-daeleys-present/
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:22:00.820Z

@@ -51,6 +51,7 @@ export async function download(
     expectedSize?: number
     logger?: Logger
     onProgress?(current: number, total: number): void
+    url: string
   },
 ): Promise<{ filename: string; sha256: string; size: number; uncompressedSize?: number }> {
   const {
@@ -100,12 +101,24 @@ export async function download(
     // Otherwise, try to infer the extension from Content-Type
     if (!filename) {
       const extension = contentType && inferExtensionFromContentType(contentType)
-      if (!extension) {
-        const message = `Unexpected Content-Disposition "${contentDisposition}" and Content-Type "${contentType}"`
-        throw Error(message)
-      }
 
-      filename = options.downloadPath + extension
+      if (extension) {
+        filename = options.downloadPath + extension
+      }
+    }
+
+    // Otherwise, try to infer the filename from the URL
+    if (!filename) {
+      const lastPath = options.url.split("?").at(0)?.split("/").at(-1)
+      if (lastPath?.includes(".")) {
+        filename = lastPath
+      }
+    }
+
+    // Otherwise, fail
+    if (!filename) {
+      const message = `Unexpected Content-Disposition "${contentDisposition}" and Content-Type "${contentType}"`
+      throw Error(message)
     }
 
     const stream = Readable.fromWeb(response.body as ReadableStream)

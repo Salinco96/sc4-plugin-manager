@@ -4,16 +4,20 @@ import { useTranslation } from "react-i18next"
 import { getCategories, getCategoryLabel } from "@common/categories"
 import { getFeatureLabel } from "@common/i18n"
 import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
+import { PackageID } from "@common/packages"
 import { entries } from "@common/utils/objects"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners"
+import { getAuthorName } from "@components/PackageList/utils"
 import { Text } from "@components/Text"
-import { useCurrentVariant } from "@utils/packages"
-import { useStore } from "@utils/store"
+import { useCurrentVariant, usePackageInfo } from "@utils/packages"
+import { useAuthors, useGlobalOptions } from "@utils/store"
 
-export function PackageViewSummary({ packageId }: { packageId: string }): JSX.Element {
+export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX.Element {
+  const authors = useAuthors()
+  const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
-  const globalOptions = useStore(store => store.globalOptions)
+  const globalOptions = useGlobalOptions()
 
   const { t } = useTranslation("PackageViewSummary")
 
@@ -22,7 +26,8 @@ export function PackageViewSummary({ packageId }: { packageId: string }): JSX.El
       {variantInfo.description && <MarkdownView md={variantInfo.description} />}
       {/* TODO: Better formatting (with Simtropolis user links?) */}
       <Typography variant="body2">
-        <b>{t("authors")}:</b> {variantInfo.authors.join(", ")}
+        <b>{t("authors")}:</b>{" "}
+        {variantInfo.authors.map(authorId => getAuthorName(authorId, authors)).join(", ")}
       </Typography>
       {/* TODO: Better formatting */}
       <Typography variant="body2">
@@ -38,19 +43,10 @@ export function PackageViewSummary({ packageId }: { packageId: string }): JSX.El
         </Text>
       )}
       {/* TODO: Better formatting */}
-      {variantInfo.url && (
-        <Text maxLines={1} variant="body2">
-          <b>{t("url")}:</b>{" "}
-          <a href={variantInfo.url} target="_blank" rel="noreferrer">
-            {variantInfo.url}
-          </a>
-        </Text>
-      )}
-      {/* TODO: Better formatting */}
-      {variantInfo.features && (
+      {packageInfo.features && (
         <Typography variant="body2">
           <b>{t("features")}:</b>{" "}
-          {variantInfo.features.map(feature => getFeatureLabel(t, feature)).join(", ")}
+          {packageInfo.features.map(feature => getFeatureLabel(t, feature)).join(", ")}
         </Typography>
       )}
       {/* TODO: Better formatting */}

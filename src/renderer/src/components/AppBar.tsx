@@ -17,8 +17,10 @@ import {
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { ProfileInfo } from "@common/types"
+import { ProfileID, ProfileInfo } from "@common/profiles"
+import { values } from "@common/utils/objects"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
+import { spacing } from "@utils/styles"
 
 import { CreateProfileModal } from "./CreateProfileModal"
 
@@ -43,7 +45,7 @@ const ProfileSelect = styled(Select<string>)`
   letter-spacing: 0.0075em;
   line-height: 1.6;
   margin: 0;
-  margin-right: ${({ theme }): string => theme.spacing(4)};
+  margin-right: ${spacing(4)};
 
   & .MuiSelect-select {
     padding: 0;
@@ -54,9 +56,9 @@ export function AppBar(): JSX.Element {
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
   const profiles = useStore(store => store.profiles)
-  const userId = useStore(store => store.sessions.simtropolis.userId)
+  const simtropolis = useStore(store => store.simtropolis)
 
-  const isLoadingProfiles = profiles === undefined
+  const isLoadingProfiles = !profiles
   const hasProfiles = profiles && Object.keys(profiles).length !== 0
 
   const [isCreating, setCreating] = useState(false)
@@ -95,7 +97,7 @@ export function AppBar(): JSX.Element {
             </IconButton>
           </Tooltip>
 
-          {isSelecting ? (
+          {isSelecting && profiles ? (
             <ProfileSelect
               MenuProps={{ sx: { marginLeft: -2 } }}
               defaultOpen
@@ -106,7 +108,7 @@ export function AppBar(): JSX.Element {
                 IconComponent: () => null,
               }}
               onChange={event => {
-                const value = event.target.value
+                const value = event.target.value as ProfileID
 
                 setSelecting(false)
 
@@ -121,7 +123,7 @@ export function AppBar(): JSX.Element {
               onClose={() => setSelecting(false)}
               variant="standard"
             >
-              {Object.values(profiles ?? {}).map(profile => (
+              {values(profiles).map(profile => (
                 <MenuItem key={profile.id} value={profile.id}>
                   {profile.name}
                 </MenuItem>
@@ -175,9 +177,9 @@ export function AppBar(): JSX.Element {
           )}
         </Box>
 
-        {userId === undefined && <CircularProgress color="inherit" size={24} />}
+        {simtropolis === undefined && <CircularProgress color="inherit" size={24} />}
 
-        {userId === null && (
+        {simtropolis === null && (
           <Tooltip title={t("actions.signIn.description")}>
             <Button color="inherit" onClick={actions.simtropolisLogin} variant="outlined">
               {t("actions.signIn.label")}
@@ -185,11 +187,11 @@ export function AppBar(): JSX.Element {
           </Tooltip>
         )}
 
-        {userId && (
+        {simtropolis && (
           <>
             <Tooltip title={t("userId.description")}>
               <Typography variant="body1" color="inherit" noWrap sx={{ marginRight: 2 }}>
-                {t("userId.label")}: {userId}
+                {t("userId.label")}: {simtropolis.userId}
               </Typography>
             </Tooltip>
             <Tooltip title={t("actions.signOut.description")}>

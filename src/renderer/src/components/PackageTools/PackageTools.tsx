@@ -11,6 +11,7 @@ import {
 } from "@mui/icons-material"
 import { useTranslation } from "react-i18next"
 
+import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageOptionsDialog } from "@components/Options"
 import { useCurrentVariant } from "@utils/packages"
@@ -18,7 +19,7 @@ import { useStoreActions } from "@utils/store"
 
 import { PackageToolButton } from "./PackageToolButton"
 
-export function PackageTools({ packageId }: { packageId: string }): JSX.Element {
+export function PackageTools({ packageId }: { packageId: PackageID }): JSX.Element {
   const actions = useStoreActions()
   const variantInfo = useCurrentVariant(packageId)
   const variantId = variantInfo.id

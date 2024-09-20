@@ -4,7 +4,20 @@ import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
 import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { isIncompatible } from "@common/packages"
+import {
+  PackageID,
+  isDisabled,
+  isEnabled,
+  isIncluded,
+  isIncompatible,
+  isInstalled,
+  isInvalid,
+  isMissing,
+  isOutdated,
+  isRequired,
+} from "@common/packages"
+import { keys } from "@common/utils/objects"
+import { VariantID } from "@common/variants"
 import {
   useCurrentVariant,
   useFilteredVariants,
@@ -24,7 +37,13 @@ interface PackageAction {
   onClick: () => void
 }
 
-export function PackageActions({ packageId }: { packageId: string }): JSX.Element | null {
+export function PackageActions({
+  filtered,
+  packageId,
+}: {
+  filtered?: boolean
+  packageId: PackageID
+}): JSX.Element | null {
   const anchorRef = useRef<HTMLButtonElement>(null)
   const [isMenuOpen, setMenuOpen] = useState(false)
 
@@ -36,95 +55,97 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
   const packageInfo = usePackageInfo(packageId)
   const packageStatus = usePackageStatus(packageId)
   const variantInfo = useCurrentVariant(packageId)
-  const variantIds = useFilteredVariants(packageId)
   const variantId = variantInfo.id
 
-  const selectableVariantIds = packageStatus?.enabled
-    ? variantIds.filter(
-        variantId => !isIncompatible(packageInfo.variants[variantId], packageStatus),
-      )
-    : variantIds
+  const filteredVariantIds = useFilteredVariants(packageId)
+
+  const variantIds = useMemo(() => {
+    const variantIds = keys(packageInfo.variants)
+
+    if (filtered) {
+      return variantIds.filter(id => id === variantId || filteredVariantIds.includes(id))
+    }
+
+    return variantIds
+  }, [filtered, filteredVariantIds, packageInfo, variantId])
+
+  const selectableVariantIds = useMemo(() => {
+    return variantIds.filter(id => {
+      const variantInfo = packageInfo.variants[id]
+      return variantInfo && !isInvalid(variantInfo, packageStatus)
+    })
+  }, [packageInfo, packageStatus])
 
   const packageActions = useMemo(() => {
     const packageActions: PackageAction[] = []
 
-    const isEnabled = !!packageStatus?.enabled
-    const isExplicitlyEnabled = isEnabled && packageConfig?.enabled
-    const isImplicitlyEnabled = isEnabled && !packageConfig?.enabled
-    const isIncompatible = !!packageStatus?.issues?.[variantId]?.length
-    const isInstalled = !!variantInfo.installed
-    const isRequired = !!packageStatus?.requiredBy?.length
+    const incompatible = isIncompatible(variantInfo, packageStatus)
+    const required = isRequired(packageStatus)
 
-    if (currentProfile && isEnabled && !isInstalled) {
+    if (isMissing(variantInfo)) {
       packageActions.push({
         color: "warning",
-        description: isIncompatible ? t("install.reason.incompatible") : t("install.description"),
-        disabled: isIncompatible,
+        description: t("install.description"),
         id: "install",
         label: t("install.label"),
         onClick: () => actions.addPackage(packageId, variantId),
       })
-    } else if (variantInfo.update) {
+    } else if (isOutdated(variantInfo)) {
       packageActions.push({
         color: "warning",
-        description: isIncompatible
-          ? t("update.reason.incompatible")
-          : t("update.description", { version: variantInfo.update.version }),
-        disabled: isIncompatible,
+        description: t("update.description", { version: variantInfo.update?.version }),
         id: "update",
         label: t("update.label"),
         onClick: () => actions.updatePackage(packageId, variantId),
       })
     }
 
-    if (currentProfile && isExplicitlyEnabled) {
+    if (isEnabled(packageStatus)) {
       packageActions.push({
         color: "error",
-        description: isRequired
+        description: required
           ? t("disable.reason.required", { count: packageStatus?.requiredBy?.length })
           : t("disable.description"),
         id: "disable",
         label: t("disable.label"),
         onClick: () => actions.disablePackage(packageId),
       })
-    }
-
-    if (currentProfile && isInstalled && !isExplicitlyEnabled) {
+    } else if (isDisabled(variantInfo, packageStatus)) {
       packageActions.push({
         color: "success",
-        description: isIncompatible ? t("enable.reason.incompatible") : t("enable.description"),
-        disabled: isIncompatible,
+        description: incompatible ? t("enable.reason.incompatible") : t("enable.description"),
+        disabled: incompatible,
         id: "enable",
         label: t("enable.label"),
         onClick: () => actions.enablePackage(packageId),
       })
     }
 
-    if (isInstalled && !isImplicitlyEnabled) {
-      // TODO: Only allows removing if not used by any profile
+    if (isInstalled(variantInfo) && !isRequired(packageStatus)) {
+      // TODO: Only allow removing if not used by ANY profile
       packageActions.push({
         color: "error",
-        description: isRequired
+        description: required
           ? t("remove.reason.required", { count: packageStatus?.requiredBy?.length })
           : t("remove.description"),
-        disabled: isRequired,
+        disabled: required,
         id: "remove",
         label: t("remove.label"),
         onClick: () => actions.removePackage(packageId, variantId),
       })
     }
 
-    if (currentProfile && !isInstalled && !isEnabled) {
-      packageActions.push({
-        description: isIncompatible ? t("add.reason.incompatible") : t("add.description"),
-        disabled: isIncompatible,
-        id: "add",
-        label: t("add.label"),
-        onClick: () => actions.addPackage(packageId, variantId),
-      })
-    }
+    if (!isInstalled(variantInfo) && !isIncluded(packageStatus)) {
+      if (currentProfile) {
+        packageActions.push({
+          description: incompatible ? t("add.reason.incompatible") : t("add.description"),
+          disabled: incompatible,
+          id: "add",
+          label: t("add.label"),
+          onClick: () => actions.addPackage(packageId, variantId),
+        })
+      }
 
-    if (!isInstalled && !isEnabled) {
       packageActions.push({
         description: t("download.description"),
         id: "download",
@@ -210,7 +231,8 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
           </FlexBox>
         )}
       </Box>
-      {(Object.keys(packageInfo.variants).length > 1 || !packageInfo.variants.default) && (
+      {(Object.keys(packageInfo.variants).length > 1 ||
+        !packageInfo.variants["default" as VariantID]) && (
         <Select
           disabled={
             selectableVariantIds.length === 0 ||
@@ -219,7 +241,9 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
           fullWidth
           MenuProps={{ onClose: () => setMenuOpen(false), sx: { maxHeight: 320 } }}
           name="variant"
-          onChange={event => actions.setPackageVariant(packageInfo.id, event.target.value)}
+          onChange={event =>
+            actions.setPackageVariant(packageInfo.id, event.target.value as VariantID)
+          }
           required
           size="small"
           value={variantId}
@@ -227,7 +251,7 @@ export function PackageActions({ packageId }: { packageId: string }): JSX.Elemen
         >
           {variantIds.map(id => (
             <MenuItem key={id} value={id} disabled={!selectableVariantIds.includes(id)}>
-              {packageInfo.variants[id].name}
+              {packageInfo.variants[id]!.name /* TODO */}
             </MenuItem>
           ))}
         </Select>

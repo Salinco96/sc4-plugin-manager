@@ -3,7 +3,7 @@ assets:
     authors:
       - Mattb325
     category: residential
-    downloads: 940
+    downloads: 964
     lastModified: 2023-08-20T03:02:51-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Houses (Dark Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Alpha237_lg0.jpg
@@ -12,7 +12,7 @@ assets:
     authors:
       - Mattb325
     category: residential
-    downloads: 928
+    downloads: 957
     lastModified: 2023-08-20T02:53:24-07:00
     name: SC4D LEX Legacy - Mattb325 Residential Houses (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Alpha237_lg.jpg
@@ -83,7 +83,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 726
+    downloads: 744
     filename: Homefryes - American Four Square Homes v2_920.zip
     files:
       - _Documents/Homefryes_Readmes/Readme_The_American_Four_Square.htm
@@ -444,7 +444,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 826
+    downloads: 841
     filename: Homefryes - Cambridge Townhomes_2189.zip
     files:
       - _Documents/Homefryes_Readmes/Readme_Cambridge_Townhomes.htm
@@ -478,7 +478,7 @@ assets:
     authors:
       - zero7
     category: residential
-    downloads: 850
+    downloads: 878
     lastModified: 2023-08-26T23:57:53-07:00
     name: SC4D LEX Legacy - zero7 Residential Pack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JP_KitagataApts_Day.jpg
@@ -575,7 +575,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 585
+    downloads: 603
     filename: SC4D_LEX_Legacy_NYBT_Residentials_DarkNite_V1.zip
     files:
       - _Documents/readme_SC4D LEX Legacy - NYBT Residentials.html
@@ -741,7 +741,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 548
+    downloads: 560
     filename: SC4D_LEX_Legacy_NYBT_Residentials_MaxisNite_V1.zip
     files:
       - _Documents/readme_SC4D LEX Legacy - NYBT Residentials.html
@@ -1044,7 +1044,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 211
+    downloads: 220
     filename: BSC-VIP Girafe 4 Rue Des Lilas v2_2978.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_4_rue_des_Lilas.html
@@ -1308,7 +1308,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 283
+    downloads: 296
     filename: BSC-VIP Girafe Villa Libeskind v2_3071.zip
     files:
       - ~Documents/BSC_Readmes/girafe/readme_villa_Libeskind.html
@@ -1623,7 +1623,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 309
+    downloads: 326
     filename: SOMY Danchi Apartments LEX.zip
     files:
       - ~Documents/SOMY_Readmes/Readme_SOMY_Danchi_Apartments.htm
@@ -1827,7 +1827,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 265
+    downloads: 277
     filename: SOMY Modern Japanese House Set LEX.zip
     files:
       - ~Documents/SOMY_Readmes/somy-jpn-house1x4.jpg
@@ -1974,7 +1974,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 134
+    downloads: 146
     filename: Romualdillo - Spanish R Residental Lots.zip
     files:
       - ~Documents/Romualdillo_Readmes/Spanish R$ Residental Lots.ReadMe.txt
@@ -2453,7 +2453,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 371
+    downloads: 400
     filename: SC4D LEX Legacy - BSC SimGoober Residentials V1.zip
     files:
       - readme_BSC_SG_Residential_Collection.html
@@ -2948,7 +2948,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 264
+    downloads: 281
     filename: BSC SG JENX Parisian Corner Residential.zip
     files:
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC SG JENX Residentials.txt
@@ -2980,6 +2980,108 @@ assets:
     uncompressed: 207496
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/275-bsc-sg-jenx-parisian-corner-residential
     version: "1"
+  sc4evermore/287-art128-2-rue-de-chatillon:
+    authors:
+      - Art128
+    category: residential
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/87-mas71-mega-prop-pack-vol01-misc
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><div>This building is modeled after a residential building located at 2 Rue de Chatillon in Paris 14th Arrondissement.</div>\r
+
+      <div> </div>\r
+
+      <div>It sits on a 4x4 lot with a diagonal overhang on the right to allow diagonal W2W connection.</div>\r
+
+      <div>It houses 1286 R$$ Residents and is a Stage 7 Lot.</div>\r
+
+      <div> </div>\r
+
+      <div>Since this building was created to fit a purpose in my city, it may not adapt very well to very user, this is a slight inconvenience but I am not going to render different versions of
+      it.</div>\r
+
+      <div> </div>\r
+
+      <h3>Installation:</h3>\r
+
+      <div>Copy/Extract the <strong>art128 </strong>parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe
+      location.</div>\r
+
+      <div> </div>\r
+
+      <h3>Dependencies:</h3>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Common Dependencies v9</a>
+      (and above)\r
+
+      <ul>\r
+
+      <li>BSC MEGA Props CP Vol01</li>\r
+
+      <li>BSC MEGA Props CP Vol02</li>\r
+
+      <li>BSC TexturePack Cycledogg V01b</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/87-mas71-mega-prop-pack-vol01-misc\" target=\"_blank\" rel=\"noopener\">MAS71 MEGA Props Vol 01 (Miscellaneous)</a></li>\r
+
+      <li><a href=\"http://hide-inoki.com/bbs/archives/sc4_0837.html\" target=\"_blank\" rel=\"noopener\">Neko Props Vol 2</a><br>Direct Link to the file - <a
+      href=\"http://hide-inoki.com/bbs/archives/files/1392.zip\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/files/1392.zip</a></li>\r
+
+      </ul>\r
+
+      <div> </div>\r
+
+      <div>For support and news about future BATs, visit my threads on either SC4Devotion or <a title=\"Art128 BAT Manufacture\"
+      href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-manufacture/\" target=\"_blank\" rel=\"noopener\">Simtropolis</a>.</div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/2 Rue de Chatillon_01.jpg\" data-lightbox=\"lightbox287\" data-alt=\"lightbox2 Rue
+      de Chatillon_01.jpg|art128 - 2 Rue de Chatillon.\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/2 Rue de
+      Chatillon_01.jpg\" alt=\"2 Rue de Chatillon_01\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - 2 Rue de Chatillon.jpeg\" data-lightbox=\"lightbox287\"
+      data-alt=\"lightbox2 Rue de Chatillon_01.jpg|art128 - 2 Rue de Chatillon.\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - 2 Rue de Chatillon.jpeg\" alt=\"art128 - 2 Rue de Chatillon.2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 42
+    filename: Art128 - 2 Rue de Chatillon.zip
+    files:
+      - art128/2 Rue de Chatillon/art128-2Rue-de-Chatillon-0x5ad0e817_0xd0000539_0x30000.SC4Model
+      - art128/2 Rue de Chatillon/R$$7_4x4_art128-2Rue-de-Chatillon_50823fd1.SC4Lot
+      - ~Documents/art128_readmes/2 Rue de Chatillon_01.jpg
+      - ~Documents/art128_readmes/2 Rue de Chatillon_04.jpg
+      - ~Documents/art128_readmes/2 Rue de Chatillon_05.jpg
+      - ~Documents/art128_readmes/art128 - 2 Rue de Chatillon_readme.txt
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/2 Rue de Chatillon_01.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - 2 Rue de Chatillon.jpeg
+    lastModified: 2024-09-02T09:02:57-07:00
+    name: Art128 - 2 Rue de Chatillon
+    sha256: 6d22aec11230eb025ce7c2e04538569c46201a6af171e4afc55e639e1bb563e0
+    size: 4496762
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/2 Rue de Chatillon_01.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 5135333
+    url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/287-art128-2-rue-de-chatillon
+    version: "1"
   sc4evermore/4-sc4d-lex-legacy-jmyers-homes-pack:
     authors:
       - sc4evermore
@@ -3006,7 +3108,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1290
+    downloads: 1320
     filename: SC4D_LEX_LEGACY_JMyers_Homes_Pack_V1.zip
     files:
       - ~Documents/JMyers Homes Vol 1.html
@@ -3094,7 +3196,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1005
+    downloads: 1026
     filename: SC4D_LEX_LEGACY_CP_Early19thCenturyResidentials_Pack_V1.zip
     files:
       - ~Documents/LEX_TenementsMain.jpg
@@ -3358,7 +3460,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1138
+    downloads: 1157
     filename: SC4D_LEX_LEGACY_Mattb325_Residential_Multi-Unit_DarkNite.zip
     files:
       - readme_mattb325_residential_multi-unit.html
@@ -3990,7 +4092,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 985
+    downloads: 1010
     filename: SC4D_LEX_LEGACY_Mattb325_Residential_Multi-Unit_MaxisNite.zip
     files:
       - readme_mattb325_residential_multi-unit.html
@@ -4382,4 +4484,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/11-residential/99-sc4d-lex-legacy-mattb325-residential-multi-unit-pack-maxisnite
     version: "1"
 
-timestamp: 2024-08-28T07:56:44.780Z
+timestamp: 2024-09-13T12:10:28.279Z

@@ -20,6 +20,7 @@ import {
 
 import { CategoryID } from "@common/categories"
 import { PackageState } from "@common/types"
+import { values } from "@common/utils/objects"
 import { Location, Page } from "@utils/navigation"
 import { filterVariant } from "@utils/packages"
 import { PackageFilters, Store, getCurrentProfile } from "@utils/store"
@@ -37,6 +38,10 @@ export interface TabInfo {
 }
 
 function countPackages(store: Store, overrideFilters?: Partial<PackageFilters>): number {
+  if (!store.packages) {
+    return 0
+  }
+
   const profileInfo = getCurrentProfile(store)
 
   const filters = {
@@ -44,13 +49,11 @@ function countPackages(store: Store, overrideFilters?: Partial<PackageFilters>):
     ...overrideFilters,
   }
 
-  return store.packages
-    ? Object.values(store.packages).filter(packageInfo =>
-        Object.values(packageInfo.variants).some(variantInfo =>
-          filterVariant(packageInfo, variantInfo, profileInfo, filters),
-        ),
-      ).length
-    : 0
+  return values(store.packages).filter(packageInfo =>
+    values(packageInfo.variants).some(variantInfo =>
+      filterVariant(packageInfo, variantInfo, profileInfo, filters),
+    ),
+  ).length
 }
 
 export const tabs: TabInfo[] = [

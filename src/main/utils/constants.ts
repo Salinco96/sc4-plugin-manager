@@ -18,6 +18,7 @@ export const DIRNAMES = {
 }
 
 export const FILENAMES = {
+  dbAuthors: "authors",
   dbCategories: "categories",
   appConfig: "config",
   logs: "main.log",

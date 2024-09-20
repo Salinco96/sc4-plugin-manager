@@ -10,7 +10,7 @@ import { CustomSnackbar } from "./CustomSnackbar"
 export const ProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>((props, ref) => {
   const actions = useStoreActions()
 
-  const message = useStore(store => store.status?.loader ?? store.status?.linker)
+  const message = useStore(store => store.status.loader ?? store.status.linker)
 
   const lastMessageRef = useRef(message)
 

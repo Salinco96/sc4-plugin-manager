@@ -200,7 +200,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 1197
+    downloads: 1249
     filename: SC4D LEX Legacy - BSC Diggis Complete Ponds and Streams v2.zip
     files:
       - ~Documents/BSC_Readmes/Diggis/images/Diggis Addon CAN-AM.jpg
@@ -268,7 +268,7 @@ assets:
     authors:
       - Diggis
     category: parks
-    downloads: 376
+    downloads: 387
     lastModified: 2023-08-20T02:44:37-07:00
     name: BSC Diggis Streams - PEG Replacement Mod
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Diggis LEX image Peg Replacement Mod.jpg
@@ -505,7 +505,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 596
+    downloads: 614
     filename: SC4D LEX Legacy - MAS71 Japanese River Project V2.zip
     files:
       - SC4D LEX Legacy - MAS71 Japanese River Project V2/readme_mas71_japanese_river_project.html
@@ -609,7 +609,7 @@ assets:
     authors:
       - Girafe
     category: parks
-    downloads: 224
+    downloads: 234
     lastModified: 2024-01-20T07:36:37-08:00
     name: SC4D LEX Legacy - BSC-TSC Girafe Winterpack
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/image_pack.jpg
@@ -618,7 +618,7 @@ assets:
     authors:
       - sc4evermore
     category: parks
-    downloads: 268
+    downloads: 275
     lastModified: 2024-02-12T13:12:11-08:00
     name: Ulisse Wolf - National Football League
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/maxresdefault.jpg.117506cbb498290ce0cd930f582fe09e.jpg
@@ -902,7 +902,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 450
+    downloads: 550
     filename: SC4D LEX Legacy - BSC Canals Collection V2.zip
     files:
       - BSC/@3Canals/Newman INC Sets/BSC River and Pond Kit (RPK)#/@1Base Sets/Calm Water/BSC Newman Inc RPK BaseSet.dat
@@ -1574,7 +1574,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 68
+    downloads: 121
     filename: SC4D LEX Legacy - BSC Parks Collection V1.zip
     files:
       - BSC/@5BSC Parks/@3Feature Parks/@2BLS Feature Parks#/BLS 3x3 Parks/!SimGoober Le Renard Rose/BSC_Park_3x3_RenardRose_11e3c7d2.SC4Lot
@@ -2090,5 +2090,377 @@ assets:
     uncompressed: 30405062
     url: https://www.sc4evermore.com/index.php/downloads/download/14-park/283-sc4d-lex-legacy-bsc-parks-collection
     version: "1"
+  sc4evermore/284-stex-sc4d-lex-legacy-ks-jpn-arabian-canal:
+    authors:
+      - ks_jpn
+    category: parks
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+      - sc4evermore/18-bsc-cleanitol
+      - sc4evermore/153-sc4d-lex-legacy-ks-jpn-dependencies
+    description: "<body>\r
 
-timestamp: 2024-08-28T07:56:44.780Z
+      \        <div class=\"jd_description_wrapper jd_clear\"><h4 style=\"text-align: center;\"><strong><span style=\"font-size: 24px;\">STEX &amp; SC4D LEX Legacy - KS_JPN Arabian
+      Canal</span></strong></h4>\r
+
+      <p>This SC4 Devotion LEX Legacy Pack features the complete set of the Arabain Canal by KS_JPN, including Props and Lots, which had been available on the Lot Exchange (LEX) at SC4 Devotion. After
+      battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to
+      collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to
+      properly maintain, update, and provide technical support for the pack.</p>\r
+
+      <h3>INSTALLATION:</h3>\r
+
+      <p>This package is a simple .zip file. Just extract the ks_jpn folder to your My DocumentsSimCity 4Plugins directory (or equivalent, if you have a custom Plugins folder location).</p>\r
+
+      <p><span style=\"color: #e03e2d;\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</span><br>Optionally in
+      the ~Documents folder in the main ZIP you can find a collective/master and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\"
+      target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a> or the older <a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC
+      Cleanitol</a> tool you can search and remove old and outdated versions of these files.</p>\r
+
+      <h3>DLL DEPENDENCIES:</h3>\r
+
+      <p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):</p>\r
+
+      <ul>\r
+
+      <li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a> - You need it to get the
+      package submenu working.\r
+
+      <p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span></p>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <h3>DEPENDENCIES:</h3>\r
+
+      <p>The following files are required in order for the contents of this package to appear correctly and they work correctly (i.e., no \"brown boxes\" or missing textures) (Bear in mind that the
+      original readmes are also available in the<em> ~Documents/Boston BigDig_Readmes</em> folder, but they have <strong>not </strong>been updated):</p>\r
+
+      <ul>\r
+
+      <li><a href=\"/index.php/downloads/download/22-dependencies/153-sc4d-lex-legacy-ks-jpn-dependencies\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - ks_JPN Dependencies Pack V2</a> (and
+      above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r
+
+      </ul>\r
+
+      <p> </p>\r
+
+      <ul style=\"list-style-type: circle;\">\r
+
+      <li>ks_jpn MEGA Props Vol16</li>\r
+
+      </ul>\r
+
+      <h3><strong>CREDITS:</strong></h3>\r
+
+      <p>The following members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>KS_JPN</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06 and Ulisse Wolf.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4 Devotion &amp; Simtropolis (STEX)</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r
+
+      <p> </p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/c2.jpg\" data-lightbox=\"lightbox284\" data-alt=\"lightboxc2\"
+      target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/c2.jpg\" alt=\"c2\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 30
+    filename: STEX SC4D LEX Legacy - KS_JPN Arabian Canal.zip
+    files:
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 1_70cab1f0.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 2_10cab21e.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 3_10cab233.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 4_90cab240.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 5_d0cab24c.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 6_f0cab26f.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 7_70cab2b8.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 8_70cab37f.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Arabian Canal/Arabian Canal 9_b0cab65e.SC4Lot
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/ks_jpn/Submenu/Arabian_Canal_Submenu.dat
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/~Documents/Cleanitol_MASTER REMOVE LIST_ks_jpn Arabian Canal.txt
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/~Documents/readme.css
+      - STEX & SC4D LEX Legacy - KS_JPN Arabian Canal/~Documents/readme_KS_jpn_arabian_canal.html
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/c2.jpg
+    lastModified: 2024-09-02T05:52:59-07:00
+    name: STEX & SC4D LEX Legacy - KS_JPN Arabian Canal
+    sha256: 508b5d9fa7d5a1707803f85c9c71412f87aa13733699186ccd8594466a2234e6
+    size: 88438
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/c2.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 91867
+    url: https://www.sc4evermore.com/index.php/downloads/download/14-park/284-stex-sc4d-lex-legacy-ks-jpn-arabian-canal
+    version: "1.0"
+  sc4evermore/285-jijdlswns-resvis-canal:
+    authors:
+      - jijdlswns
+    category: parks
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+      - sc4evermore/18-bsc-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p style=\"text-align: center;\"><span style=\"font-size: 24px;\"><strong>jijdlswns - Resvi's canal</strong></span></p>\r
+
+      <p>This is my first set of canals I have made that are inspired by European canals. In total there are 3 pieces </p>\r
+
+      <h3>INSTALLATION:</h3>\r
+
+      <p>This package is a simple .zip file. Just extract the ks_jpn folder to your My DocumentsSimCity 4Plugins directory (or equivalent, if you have a custom Plugins folder location).</p>\r
+
+      <p><span style=\"color: #e03e2d;\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</span><br>Optionally in
+      the ~Documents folder in the main ZIP you can find a collective/master and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\"
+      target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a> or the older <a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC
+      Cleanitol</a> tool you can search and remove old and outdated versions of these files.</p>\r
+
+      <h3>DLL DEPENDENCIES:</h3>\r
+
+      <p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):</p>\r
+
+      <ul>\r
+
+      <li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a> - You need it to get the
+      package submenu working.\r
+
+      <p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span></p>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <h3><strong>CREDITS:</strong></h3>\r
+
+      <p>The following members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>jijdlswns</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06 and Ulisse Wolf.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4 Devotion &amp; Simtropolis (STEX)</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/e0c60123182edd7dfda92489ee2adb37-1_dlswns20021.jpg\" data-lightbox=\"lightbox285\"
+      data-alt=\"lightboxe0c60123182edd7dfda92489ee2adb37-1_dlswns20021.jpg|e0c60123182edd7dfda92489ee2adb37-11\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/e0c60123182edd7dfda92489ee2adb37-1_dlswns20021.jpg\" alt=\"e0c60123182edd7dfda92489ee2adb37-1_dlswns20021\" ></a>
+      </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/e0c60123182edd7dfda92489ee2adb37-11.jpg\" data-lightbox=\"lightbox285\"
+      data-alt=\"lightboxe0c60123182edd7dfda92489ee2adb37-1_dlswns20021.jpg|e0c60123182edd7dfda92489ee2adb37-11\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/e0c60123182edd7dfda92489ee2adb37-11.jpg\" alt=\"e0c60123182edd7dfda92489ee2adb37-112\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 19
+    filename: jijdlswns Resvi s canal.zip
+    files:
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/-0x5ad0e817_0xd6fefd9c_0x1b0000.SC4Model
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/-0x5ad0e817_0xd6fefd9c_0x1c0000.SC4Model
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/-0x5ad0e817_0xd6fefd9c_0x200000.SC4Model
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/-0x5ad0e817_0xd6fefd9c_0x210000.SC4Model
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/Resvi's canal-0x6534284a-0xd6fefd9c-0x17413d44.SC4Desc
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/Resvi'scanal str_17413688.SC4Lot
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/Resvi'scanalbri_17413df6.SC4Lot
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/Resvi'scanalbri_f7413714.SC4Lot
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/resvis canal-0x6534284a-0xd6fefd9c-0x574001cd.SC4Desc
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/RESVIS-0x6534284a-0xd6fefd9c-0x5721e908.SC4Desc
+      - jijdlswns Resvi's canal/jijdlswns/Resvi's canal/RESVIS-0x6534284a-0xd6fefd9c-0x9721e917.SC4Desc
+      - jijdlswns Resvi's canal/jijdlswns/Submenu/resvi_canal_submenu.dat
+      - jijdlswns Resvi's canal/~Documents/Cleanitol_jijdlswns Resvi's canal.txt
+      - jijdlswns Resvi's canal/~Documents/Readme_jijdlswns Resvi's canal.txt
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/e0c60123182edd7dfda92489ee2adb37-1_dlswns20021.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/e0c60123182edd7dfda92489ee2adb37-11.jpg
+    lastModified: 2024-09-02T05:45:34-07:00
+    name: jijdlswns - Resvi's canal
+    sha256: 04e633c9e9558553aea376bef137a64683cb00d416f977206b8364390af14bda
+    size: 367678
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/e0c60123182edd7dfda92489ee2adb37-1_dlswns20021.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 426826
+    url: https://www.sc4evermore.com/index.php/downloads/download/14-park/285-jijdlswns-resvis-canal
+    version: "1.0"
+  sc4evermore/286-stex-sc4d-lex-legacy-rlm-productions-la-river-project:
+    authors:
+      - RebaLynnTS
+    category: parks
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/36142-submenus-dll
+      - sc4evermore/18-bsc-cleanitol
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><h3 style=\"text-align: center;\">STEX &amp; SC4D LEX Legacy - RLM Productions - LA River Project</h3>\r
+
+      <p>This SC4 Devotion LEX Legacy Pack features the complete set of the LA River Project by RLM Productions, including Props and Lots, which had been available on the Lot Exchange (LEX) at SC4
+      Devotion. After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is
+      designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to install.</p>\r
+
+      <p>Please note that this pack <strong>is</strong> expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to
+      properly maintain, update, and provide technical support for the pack.</p>\r
+
+      <h3>INSTALLATION:</h3>\r
+
+      <p>This package is a simple .zip file. Just extract the ks_jpn folder to your My DocumentsSimCity 4Plugins directory (or equivalent, if you have a custom Plugins folder location).</p>\r
+
+      <p><span style=\"color: #e03e2d;\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.</span><br>Optionally in
+      the ~Documents folder in the main ZIP you can find a collective/master and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\"
+      target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a> or the older <a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC
+      Cleanitol</a> tool you can search and remove old and outdated versions of these files.</p>\r
+
+      <h3>DLL DEPENDENCIES:</h3>\r
+
+      <p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed
+      dependencies are covering a full install):</p>\r
+
+      <ul>\r
+
+      <li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a> - You need it to get the
+      package submenu working.\r
+
+      <p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span></p>\r
+
+      </li>\r
+
+      </ul>\r
+
+      <h3><strong>CREDITS:</strong></h3>\r
+
+      <p>The following members contributed models, textures, and modding support to this collection:</p>\r
+
+      <ul>\r
+
+      <li>RebaLynnTS</li>\r
+
+      </ul>\r
+
+      <p>This package has been made possible by the Project ZIP efforts of Tyberius06 and Ulisse Wolf.</p>\r
+
+      <h5 class=\"leftheading\">Special Thanks</h5>\r
+
+      <p>Webmaster &amp; administration staff at SC4 Devotion &amp; Simtropolis (STEX)</p>\r
+
+      <p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone
+      that may of helped somewhere along the lines.</p>\r
+
+      <p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r
+
+      <p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/5d9c9591b027b2e37adfc0cdb1ece930-ditch01.jpg\" data-lightbox=\"lightbox286\"
+      data-alt=\"lightbox5d9c9591b027b2e37adfc0cdb1ece930-ditch01.jpg|5d9c9591b027b2e37adfc0cdb1ece930-LAR-D Upload02.jpg|c99b08301545565dfc74193204283ff7-LAR-R
+      01.jpg|c99b08301545565dfc74193204283ff7-LAR-R 02\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/5d9c9591b027b2e37adfc0cdb1ece930-ditch01.jpg\" alt=\"5d9c9591b027b2e37adfc0cdb1ece930-ditch01\" ></a> </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/5d9c9591b027b2e37adfc0cdb1ece930-LAR-D Upload02.jpg\" data-lightbox=\"lightbox286\"
+      data-alt=\"lightbox5d9c9591b027b2e37adfc0cdb1ece930-ditch01.jpg|5d9c9591b027b2e37adfc0cdb1ece930-LAR-D Upload02.jpg|c99b08301545565dfc74193204283ff7-LAR-R
+      01.jpg|c99b08301545565dfc74193204283ff7-LAR-R 02\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/5d9c9591b027b2e37adfc0cdb1ece930-LAR-D Upload02.jpg\" alt=\"5d9c9591b027b2e37adfc0cdb1ece930-LAR-D Upload022\" ></a>
+      </span>\r
+
+      \            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/c99b08301545565dfc74193204283ff7-LAR-R 01.jpg\" data-lightbox=\"lightbox286\"
+      data-alt=\"lightbox5d9c9591b027b2e37adfc0cdb1ece930-ditch01.jpg|5d9c9591b027b2e37adfc0cdb1ece930-LAR-D Upload02.jpg|c99b08301545565dfc74193204283ff7-LAR-R
+      01.jpg|c99b08301545565dfc74193204283ff7-LAR-R 02\" target=\"_blank\"><img class=\"jd_image-left\"
+      src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/c99b08301545565dfc74193204283ff7-LAR-R 01.jpg\" alt=\"c99b08301545565dfc74193204283ff7-LAR-R 013\" ></a> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 31
+    filename: RLM Productions - LA River Project.zip
+    files:
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_FenceProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_FootBridgeProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_InvisibleGraffitiProps1.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_InvisibleGraffitiProps2.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_InvisibleProps1.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_InvisibleProps2.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_LandJunkProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_MixJunkProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_PlantProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_SlopeGraffitiProps1.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_SlopeGraffitiProps2.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/Props/LAR_WaterJunkProps.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/LAR_DWD_Resource.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/LAR_DWR_Resource.dat
+      - RLM Productions - LA River Project/RLM Productions/LA River Project/LAR_Essentials.dat
+      - RLM Productions - LA River Project/RLM Productions/Submenu/LA_River_Project_Submenu.dat
+      - RLM Productions - LA River Project/~Documents/Cleanitol_MASTER REMOVE LIST_LA River Project.txt
+      - RLM Productions - LA River Project/~Documents/readme.css
+      - RLM Productions - LA River Project/~Documents/readme_LA_river_project.html
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/5d9c9591b027b2e37adfc0cdb1ece930-ditch01.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/5d9c9591b027b2e37adfc0cdb1ece930-LAR-D Upload02.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/c99b08301545565dfc74193204283ff7-LAR-R 01.jpg
+    lastModified: 2024-09-02T05:43:26-07:00
+    name: STEX & SC4D LEX Legacy - RLM Productions - LA River Project
+    sha256: e04fcb198d26b0c6d74d982348a3a1c7602e60a897957ba2fe5469317644391c
+    size: 4622851
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/5d9c9591b027b2e37adfc0cdb1ece930-ditch01.jpg
+    timestamp: 2024-09-04T07:42:42.393Z
+    uncompressed: 5981905
+    url: https://www.sc4evermore.com/index.php/downloads/download/14-park/286-stex-sc4d-lex-legacy-rlm-productions-la-river-project
+    version: "1.0"
+
+timestamp: 2024-09-13T12:10:28.279Z

@@ -1,5 +1,8 @@
 import { create } from "zustand"
 
+import { PackageID } from "@common/packages"
+import { removeElement } from "@common/utils/arrays"
+
 export enum Page {
   Packages = "Packages",
   PackageView = "PackageView",
@@ -9,7 +12,7 @@ export enum Page {
 
 export type PageData<T extends Page> = {
   Packages: {}
-  PackageView: { packageId: string }
+  PackageView: { packageId: PackageID }
   Profile: {}
   Settings: {}
 }[T]
@@ -25,9 +28,11 @@ export interface History {
   back(): void
   current: Location<Page>
   entries: Location<Page>[]
+  listeners: Array<(location: Location<Page>) => void>
   previous?: Location<Page>
   push<T extends Page>(location: Location<T>): void
   replace<T extends Page>(location: Location<T>): void
+  subscribe(listener: (location: Location<Page>) => void): () => void
 }
 
 const initialLocation: Location = {
@@ -37,29 +42,52 @@ const initialLocation: Location = {
 
 export const useHistory = create<History>()((set, get) => ({
   back() {
-    const { current, entries } = get()
+    const { current, entries, listeners } = get()
     if (entries.length) {
+      const location = entries.at(-1)
       set({
-        current: entries.at(-1),
+        current: location,
         entries: entries.slice(0, -1),
         previous: current,
+      })
+      listeners.forEach(listener => {
+        listener(location as Location<Page>)
       })
     }
   },
   current: initialLocation,
   entries: [],
+  listeners: [],
   push(location) {
-    const { current, entries } = get()
+    const { current, entries, listeners } = get()
     set({
       current: location as Location<Page>,
       entries: [...entries, current],
       previous: current,
     })
+    listeners.forEach(listener => {
+      listener(location as Location<Page>)
+    })
   },
   replace(location) {
+    const { listeners } = get()
     set({
       current: location as Location<Page>,
     })
+    listeners.forEach(listener => {
+      listener(location as Location<Page>)
+    })
+  },
+  subscribe(listener) {
+    set(state => ({
+      listeners: [...state.listeners, listener],
+    }))
+
+    return () => {
+      set(state => ({
+        listeners: removeElement(state.listeners, listener),
+      }))
+    }
   },
 }))
 

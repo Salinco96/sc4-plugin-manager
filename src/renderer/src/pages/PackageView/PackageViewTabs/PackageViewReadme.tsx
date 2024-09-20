@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react"
 
+import { PackageID } from "@common/packages"
 import { Loader } from "@components/Loader"
 import { MarkdownView } from "@components/MarkdownView"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
-export function PackageViewReadme({ packageId }: { packageId: string }): JSX.Element | null {
+export function PackageViewReadme({ packageId }: { packageId: PackageID }): JSX.Element | null {
   const actions = useStoreActions()
-  const variantId = useCurrentVariant(packageId).id
+  const variantInfo = useCurrentVariant(packageId)
+  const variantId = variantInfo.id
 
   const [readme, setReadme] = useState<{ html?: string; md?: string }>()
 
