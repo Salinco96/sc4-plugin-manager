@@ -40,7 +40,7 @@ export const PACKAGE_LIST_ITEM_BASE_SIZE = 180
 export const PACKAGE_LIST_ITEM_BANNER_SIZE = PACKAGE_BANNER_HEIGHT + PACKAGE_BANNER_SPACING
 export const PACKAGE_LIST_ITEM_DESCRIPTION_SIZE = 56
 
-function getFilteredPackages(store: Store): string[] {
+function getFilteredPackages(store: Store): PackageID[] {
   return store.filteredPackages
 }
 
@@ -127,7 +127,7 @@ export function useDependentPackages(dependencyId: PackageID): PackageID[] {
   }, [dependencyId, packages])
 }
 
-export function useFilteredPackages(): string[] {
+export function useFilteredPackages(): PackageID[] {
   return useStore(getFilteredPackages)
 }
 

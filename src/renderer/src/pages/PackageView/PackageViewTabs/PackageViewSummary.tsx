@@ -1,15 +1,20 @@
-import { Box, Typography } from "@mui/material"
+import { useCallback } from "react"
+
+import { Box, Link, Typography } from "@mui/material"
+import { Fragment } from "react/jsx-runtime"
 import { useTranslation } from "react-i18next"
 
+import { AuthorID } from "@common/authors"
 import { getCategories, getCategoryLabel } from "@common/categories"
 import { getFeatureLabel } from "@common/i18n"
 import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import { PackageID } from "@common/packages"
-import { entries } from "@common/utils/objects"
+import { entries, keys } from "@common/utils/objects"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners"
 import { getAuthorName } from "@components/PackageList/utils"
 import { Text } from "@components/Text"
+import { Page, useHistory } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 import { useAuthors, useGlobalOptions } from "@utils/store"
 
@@ -19,7 +24,16 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
   const variantInfo = useCurrentVariant(packageId)
   const globalOptions = useGlobalOptions()
 
+  const history = useHistory()
+
   const { t } = useTranslation("PackageViewSummary")
+
+  const openAuthorView = useCallback(
+    (authorId: AuthorID) => {
+      history.push({ page: Page.AuthorView, data: { authorId } })
+    },
+    [history],
+  )
 
   return (
     <Box>
@@ -27,7 +41,17 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
       {/* TODO: Better formatting (with Simtropolis user links?) */}
       <Typography variant="body2">
         <b>{t("authors")}:</b>{" "}
-        {variantInfo.authors.map(authorId => getAuthorName(authorId, authors)).join(", ")}
+        {variantInfo.authors.map((authorId, index) => {
+          const authorName = getAuthorName(authorId, authors)
+          return (
+            <Fragment key={authorId}>
+              {index > 0 && ", "}
+              <Link onClick={() => openAuthorView(authorId)} sx={{ cursor: "pointer" }}>
+                {authorName}
+              </Link>
+            </Fragment>
+          )
+        })}
       </Typography>
       {/* TODO: Better formatting */}
       <Typography variant="body2">
@@ -50,7 +74,7 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
         </Typography>
       )}
       {/* TODO: Better formatting */}
-      {variantInfo.requirements && (
+      {variantInfo.requirements && !!keys(variantInfo.requirements).length && (
         <Typography variant="body2">
           <b>{t("requirements")}:</b>
           <ul>

@@ -11,7 +11,7 @@ import { VirtualList } from "./VirtualList"
 const PACKAGE_LIST_ITEM_SPACING = 16
 const PACKAGE_LIST_PADDING = 16
 
-export function PackageList({ packageIds }: { packageIds: string[] }): JSX.Element {
+export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.Element {
   const getItemSize = usePackageListItemSize()
   const history = useHistory()
 

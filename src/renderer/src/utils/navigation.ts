@@ -1,9 +1,12 @@
 import { create } from "zustand"
 
+import { AuthorID } from "@common/authors"
 import { PackageID } from "@common/packages"
 import { removeElement } from "@common/utils/arrays"
 
 export enum Page {
+  Authors = "Authors",
+  AuthorView = "AuthorView",
   Packages = "Packages",
   PackageView = "PackageView",
   Profile = "Profile",
@@ -11,6 +14,8 @@ export enum Page {
 }
 
 export type PageData<T extends Page> = {
+  Authors: {}
+  AuthorView: { authorId: AuthorID }
   Packages: {}
   PackageView: { packageId: PackageID }
   Profile: {}

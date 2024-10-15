@@ -24,6 +24,11 @@
       "label": "User ID"
     }
   },
+  "AuthorView": {
+    "openUrl": "Open website",
+    "packages_one": "{{count}} package",
+    "packages_other": "{{count}} packages"
+  },
   "BackupPluginsModal": {
     "confirmation": "Do you want to back up your {{plugins}} folder?",
     "description": "Your {{plugins}} folder is not currently empty. The $t(General:app) is still experimental, so we recommend backing up your current {{plugins}} folder, then copying files back as needed.",

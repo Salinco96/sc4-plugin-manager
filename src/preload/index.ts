@@ -1,28 +1,34 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
+import { AuthorID } from "@common/authors"
 import { ModalData, ModalID } from "@common/modals"
-import { ProfileUpdate } from "@common/profiles"
+import { PackageID } from "@common/packages"
+import { ProfileID, ProfileUpdate } from "@common/profiles"
 import { ApplicationState } from "@common/state"
+import { VariantID } from "@common/variants"
 
 // Custom APIs for renderer
 export const api = {
   async check4GBPatch(): Promise<void> {
     return ipcRenderer.invoke("check4GBPatch")
   },
-  async cleanVariant(packageId: string, variantId: string): Promise<void> {
+  async cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("cleanVariant", packageId, variantId)
   },
-  async createProfile(name: string, templateProfileId?: string): Promise<boolean> {
+  async createProfile(name: string, templateProfileId?: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
   async getPackageReadme(
-    packageId: string,
-    variantId: string,
+    packageId: PackageID,
+    variantId: VariantID,
   ): Promise<{ html?: string; md?: string }> {
     return ipcRenderer.invoke("getPackageReadme", packageId, variantId)
   },
-  async installPackages(packages: { [packageId: string]: string }): Promise<boolean> {
+  async installPackages(packages: { [packageId: PackageID]: VariantID }): Promise<boolean> {
     return ipcRenderer.invoke("installPackages", packages)
+  },
+  async openAuthorURL(authorId: AuthorID): Promise<boolean> {
+    return ipcRenderer.invoke("openAuthorURL", authorId)
   },
   async openExecutableDirectory(): Promise<boolean> {
     return ipcRenderer.invoke("openExecutableDirectory")
@@ -30,22 +36,26 @@ export const api = {
   async openInstallationDirectory(): Promise<boolean> {
     return ipcRenderer.invoke("openInstallationDirectory")
   },
-  async openPackageConfig(packageId: string): Promise<boolean> {
+  async openPackageConfig(packageId: PackageID): Promise<boolean> {
     return ipcRenderer.invoke("openPackageConfig", packageId)
   },
-  async openPackageFile(packageId: string, variantId: string, filePath: string): Promise<boolean> {
+  async openPackageFile(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+  ): Promise<boolean> {
     return ipcRenderer.invoke("openPackageFile", packageId, variantId, filePath)
   },
-  async openProfileConfig(profileId: string): Promise<boolean> {
+  async openProfileConfig(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
   },
-  async openVariantRepository(packageId: string, variantId: string): Promise<boolean> {
+  async openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("openVariantRepository", packageId, variantId)
   },
-  async openVariantURL(packageId: string, variantId: string): Promise<boolean> {
+  async openVariantURL(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("openVariantURL", packageId, variantId)
   },
-  async removePackages(packages: { [packageId: string]: string }): Promise<boolean> {
+  async removePackages(packages: { [packageId: PackageID]: VariantID }): Promise<boolean> {
     return ipcRenderer.invoke("removePackages", packages)
   },
   async simtropolisLogin(): Promise<void> {
@@ -83,10 +93,10 @@ export const api = {
       ipcRenderer.off("updateState", updateState)
     }
   },
-  async switchProfile(profileId: string): Promise<boolean> {
+  async switchProfile(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("switchProfile", profileId)
   },
-  async updateProfile(profileId: string, data: ProfileUpdate): Promise<boolean> {
+  async updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean> {
     return ipcRenderer.invoke("updateProfile", profileId, data)
   },
 }

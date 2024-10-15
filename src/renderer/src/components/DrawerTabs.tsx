@@ -1,8 +1,10 @@
-import { Fragment, useCallback, useMemo } from "react"
+import { Fragment, useCallback, useMemo, useState } from "react"
 
+import { ExpandLess as CollapseIcon, ExpandMore as ExpandIcon } from "@mui/icons-material"
 import {
   Badge,
   Divider,
+  IconButton,
   List,
   ListItem,
   ListItemButton,
@@ -12,6 +14,7 @@ import {
   Tooltip,
 } from "@mui/material"
 
+import { entries, keys } from "@common/utils/objects"
 import { Page, useHistory, useLocation } from "@utils/navigation"
 import { useStore, useStoreActions } from "@utils/store"
 import { TabInfo, tabs } from "@utils/tabs"
@@ -52,12 +55,28 @@ export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX
   return button
 }
 
+const groupedTabs = tabs.reduce(
+  (result, tab) => {
+    const groupTabs = (result[tab.group ?? ""] ??= [])
+    groupTabs.push(tab)
+    return result
+  },
+  {} as { [group in string]?: TabInfo[] },
+)
+
 export function DrawerTabs(): JSX.Element {
   const packageFilters = useStore(store => store.packageFilters)
   const { page } = useLocation()
 
+  const [expandedGroups, setExpandedGroups] = useState<{ [group in string]?: boolean }>({
+    Packages: true,
+  })
+
   const activeTabId = useMemo(() => {
     switch (page) {
+      case Page.Authors:
+        return "authors"
+
       case Page.Packages: {
         if (packageFilters.onlyErrors) {
           return "packages:errors"
@@ -90,18 +109,55 @@ export function DrawerTabs(): JSX.Element {
 
   return (
     <List component="nav" sx={{ overflowY: "auto" }}>
-      {tabs.map((tab, index) => {
-        const previousTab = tabs[index - 1]
-        const isActive = tab.id === activeTabId
-        const isNewGroup = previousTab?.group !== tab.group
+      {entries(groupedTabs).map(([group, tabs], index) => {
+        const collapsable = tabs.some(tab => tab.collapse)
+        const collapsed = !!group && !expandedGroups[group]
+
+        const visibleTabs = tabs.filter(tab => !tab.collapse || !collapsed)
+        const isEmpty = !visibleTabs.length
+        const isLast = index === keys(groupedTabs).length - 1
 
         return (
-          <Fragment key={tab.id}>
-            {isNewGroup && previousTab && <Divider sx={{ marginTop: 2 }} />}
-            {isNewGroup && <ListSubheader>{tab.group}</ListSubheader>}
-            <ListItem dense disablePadding>
-              <Tab isActive={isActive} tab={tab} />
-            </ListItem>
+          <Fragment key={group}>
+            {!!group && (
+              <ListSubheader
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  paddingRight: 1,
+                }}
+              >
+                {group}
+                {collapsable && (
+                  <IconButton
+                    onClick={() => {
+                      setExpandedGroups({
+                        ...expandedGroups,
+                        [group]: collapsed,
+                      })
+                    }}
+                    size="small"
+                  >
+                    {collapsed ? (
+                      <ExpandIcon fontSize="small" />
+                    ) : (
+                      <CollapseIcon fontSize="small" />
+                    )}
+                  </IconButton>
+                )}
+              </ListSubheader>
+            )}
+            {visibleTabs.map(tab => {
+              const isActive = tab.id === activeTabId
+
+              return (
+                <ListItem dense disablePadding key={tab.id}>
+                  <Tab isActive={isActive} tab={tab} />
+                </ListItem>
+              )
+            })}
+            {!isLast && <Divider sx={{ marginTop: isEmpty ? 0 : 2 }} />}
           </Fragment>
         )
       })}

@@ -18,7 +18,7 @@ import escapeHtml from "escape-html"
 import { glob } from "glob"
 
 import { AssetID, AssetInfo, Assets } from "@common/assets"
-import { Authors } from "@common/authors"
+import { AuthorID, AuthorInfo, Authors } from "@common/authors"
 import { Categories } from "@common/categories"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { OptionInfo, Requirements, getOptionValue } from "@common/options"
@@ -184,6 +184,7 @@ export class Application {
     this.handle("getPackageReadme")
     this.handle("getState")
     this.handle("installPackages")
+    this.handle("openAuthorURL")
     this.handle("openExecutableDirectory")
     this.handle("openInstallationDirectory")
     this.handle("openPackageConfig")
@@ -590,6 +591,13 @@ export class Application {
    */
   public getAssetInfo(assetId: AssetID): AssetInfo | undefined {
     return this.assets[assetId]
+  }
+
+  /**
+   * Returns an author's data by ID, if it exists.
+   */
+  public getAuthorInfo(authorId: AuthorID): AuthorInfo | undefined {
+    return this.state.authors?.[authorId]
   }
 
   /**
@@ -1756,6 +1764,19 @@ export class Application {
     this.sendTemplates()
 
     return this.state.templates
+  }
+
+  /**
+   * Opens an author's homepage in browser, if present.
+   */
+  public async openAuthorURL(authorId: AuthorID): Promise<boolean> {
+    const authorInfo = this.getAuthorInfo(authorId)
+    if (authorInfo?.url) {
+      await this.openInExplorer(authorInfo.url)
+      return true
+    }
+
+    return false
   }
 
   /**

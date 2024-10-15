@@ -9,6 +9,8 @@ export interface AuthorData {
   alias?: string[]
   /** Author most-used pseudo (e.g. on Simtropolis) */
   name: string
+  /** Avatar thumbnail URL (e.g. on Simtropolis) */
+  thumbnail?: string
   /** Author URL (e.g. on Simtropolis) */
   url?: string
 }

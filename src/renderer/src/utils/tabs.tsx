@@ -1,9 +1,10 @@
 import {
   Agriculture as AgricultureIcon,
   WidgetsOutlined as AllPackagesIcon,
+  Person as AuthorsIcon,
   AccountBalance as CivicsIcon,
   CorporateFare as CommercialIcon,
-  ViewInAr as DependenciesIcon,
+  // ViewInAr as DependenciesIcon,
   Bolt as EnergyIcon,
   Factory as IndustrialIcon,
   Church as LandmarksIcon,
@@ -28,6 +29,7 @@ import { PackageFilters, Store, getCurrentProfile } from "@utils/store"
 export interface TabInfo {
   badgeColor?: "error" | "info"
   badgeCount?: (store: Store) => number | undefined
+  collapse?: boolean
   group?: string
   icon?: JSX.Element
   id: string
@@ -70,6 +72,12 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Settings, data: {} },
   },
   {
+    icon: <AuthorsIcon />,
+    id: "authors",
+    label: "Authors",
+    location: { page: Page.Authors, data: {} },
+  },
+  {
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
@@ -87,29 +95,31 @@ export const tabs: TabInfo[] = [
       states: [],
     },
   },
+  // {
+  //   badgeCount(store) {
+  //     return countPackages(store, this.packageFilters)
+  //   },
+  //   collapse: true,
+  //   group: "Packages",
+  //   icon: <DependenciesIcon />,
+  //   id: "packages:dependencies",
+  //   label: "Dependencies",
+  //   location: { page: Page.Packages, data: {} },
+  //   packageFilters: {
+  //     categories: [CategoryID.DEPENDENCIES],
+  //     onlyErrors: false,
+  //     onlyNew: false,
+  //     onlyUpdates: false,
+  //     search: "",
+  //     states: [],
+  //   },
+  //   tooltip: "Textures, props",
+  // },
   {
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
-    group: "Packages",
-    icon: <DependenciesIcon />,
-    id: "packages:dependencies",
-    label: "Dependencies",
-    location: { page: Page.Packages, data: {} },
-    packageFilters: {
-      categories: [CategoryID.DEPENDENCIES],
-      onlyErrors: false,
-      onlyNew: false,
-      onlyUpdates: false,
-      search: "",
-      states: [],
-    },
-    tooltip: "Textures, props",
-  },
-  {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
-    },
+    collapse: true,
     group: "Packages",
     icon: <ModsIcon />,
     id: "packages:mods",
@@ -129,6 +139,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <ResidentialIcon />,
     id: "packages:residential",
@@ -148,6 +159,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <CommercialIcon />,
     id: "packages:commercial",
@@ -167,6 +179,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <IndustrialIcon />,
     id: "packages:industry",
@@ -186,6 +199,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <AgricultureIcon />,
     id: "packages:agriculture",
@@ -205,6 +219,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <CivicsIcon />,
     id: "packages:civics",
@@ -224,6 +239,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <LandmarksIcon />,
     id: "packages:landmarks",
@@ -243,6 +259,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <ParksIcon />,
     id: "packages:parks",
@@ -262,6 +279,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <EnergyIcon />,
     id: "packages:utilities",
@@ -281,6 +299,7 @@ export const tabs: TabInfo[] = [
     badgeCount(store) {
       return countPackages(store, this.packageFilters)
     },
+    collapse: true,
     group: "Packages",
     icon: <TransportIcon />,
     id: "packages:transport",
