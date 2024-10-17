@@ -4,6 +4,7 @@ import { create } from "zustand"
 
 import { AuthorID, Authors } from "@common/authors"
 import { CategoryID } from "@common/categories"
+import { DBPFFile } from "@common/files"
 import { ModalData, ModalID } from "@common/modals"
 import { OptionID, OptionInfo, OptionValue } from "@common/options"
 import { PackageID } from "@common/packages"
@@ -50,6 +51,7 @@ export interface StoreActions {
     variantId: VariantID,
   ): Promise<{ html?: string; md?: string }>
   installPackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  listFileContents(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile>
   openAuthorURL(authorId: AuthorID): Promise<boolean>
   openExecutableDirectory(): Promise<boolean>
   openInstallationDirectory(): Promise<boolean>
@@ -192,6 +194,9 @@ export const useStore = create<Store>()((set, get): Store => {
           this.showErrorToast(`Failed to install ${packageId}`)
           return false
         }
+      },
+      async listFileContents(packageId, variantId, filePath) {
+        return window.api.listFileContents(packageId, variantId, filePath)
       },
       async openAuthorURL(authorId) {
         return window.api.openAuthorURL(authorId)
