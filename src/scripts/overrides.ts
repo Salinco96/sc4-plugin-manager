@@ -243,6 +243,54 @@ export const OVERRIDES: IndexerOverrides = {
     246: {
       packageId: "ncd/railyard-textures-vol01",
     },
+    251: {
+      superseded: "simtropolis/35759-sc4-disable-cheats",
+    },
+    252: {
+      superseded: "simtropolis/35793-humane-society-ordinance",
+    },
+    253: {
+      superseded: "simtropolis/35889-legalize-gambling-ordinance-upgrade",
+    },
+    254: {
+      superseded: "simtropolis/35782-sc4-city-date-sync",
+    },
+    255: {
+      superseded: "simtropolis/35978-sc4-more-demand-info",
+    },
+    256: {
+      superseded: "simtropolis/35761-sc4-auto-save",
+    },
+    257: {
+      superseded: "simtropolis/36055-sc4-disable-demolition-animation",
+    },
+    258: {
+      superseded: "simtropolis/36091-sc4-graphics-options",
+    },
+    259: {
+      superseded: "simtropolis/36091-sc4-graphics-options",
+    },
+    260: {
+      superseded: "simtropolis/36112-allow-more-building-styles-dll-plugin",
+    },
+    261: {
+      superseded: "simtropolis/36120-sc4-cpu-options",
+    },
+    262: {
+      superseded: "simtropolis/36126-sc4-disable-lot-plop-smoke",
+    },
+    263: {
+      superseded: "simtropolis/36132-sc4-disable-network-construction-sounds",
+    },
+    264: {
+      superseded: "simtropolis/36145-region-view-census-ui-dll-plugin",
+    },
+    265: {
+      superseded: "simtropolis/36146-no-kickout-lower-wealth-dll-plugin",
+    },
+    266: {
+      superseded: "simtropolis/36180-growify-plopped-buildings-cheat-dll-plugin",
+    },
     268: {
       superseded: "simtropolis/36142-submenus-dll",
     },
@@ -284,8 +332,15 @@ export const OVERRIDES: IndexerOverrides = {
     },
   },
   simtropolis: {
+    72: null, // 72-the-smogger
+    313: {
+      packageId: "buggi/mark-x-windblaster",
+    },
     3485: {
       packageId: "simgoober/7-eleven-stores",
+    },
+    2781: {
+      packageId: "toroca/5x5-and-6x6-malls",
     },
     3519: {
       variants: {
@@ -337,6 +392,9 @@ export const OVERRIDES: IndexerOverrides = {
     },
     11125: {
       superseded: "sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials",
+    },
+    11154: {
+      superseded: "simtropolis/31339-real-upgradeable-city-halls",
     },
     11180: {
       superseded: "sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials",
@@ -435,6 +493,9 @@ export const OVERRIDES: IndexerOverrides = {
     13153: {
       superseded: "sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack",
     },
+    13318: {
+      packageId: "bones1/more-riots",
+    },
     13572: {
       superseded: "sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection",
     },
@@ -444,6 +505,7 @@ export const OVERRIDES: IndexerOverrides = {
     13769: {
       superseded: "sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials",
     },
+    14076: null,
     14108: {
       superseded: "sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials",
     },
@@ -574,6 +636,17 @@ export const OVERRIDES: IndexerOverrides = {
     21118: {
       packageId: "buggi/extra-cheats",
     },
+    21295: null, // 21295-game-coding-errors-fix-v21
+    21300: null, // 21300-u-drive-it-vehicles
+    21335: {
+      packageId: "toroca/toll-booth-booster",
+    },
+    21338: {
+      packageId: "toroca/no-radiation-rewards",
+    },
+    21340: {
+      packageId: "toroca/functional-landmarks",
+    },
     21661: {
       superseded: "simtropolis/27712-the-peg-terrain-kit-7-n-1",
     },
@@ -607,18 +680,24 @@ export const OVERRIDES: IndexerOverrides = {
     22771: {
       packageId: "heinbloed4711/ih-missing-jobs-fix",
     },
+    22787: null, // 22787-fsh-file-thumbnails-for-windows-xp-vista-7-and-8
     22823: {
       packageId: "paeng/textures",
     },
+    22887: null, // 22887-batch-png-to-fsh-tool
     22916: {
       packageId: "nybt/essentials",
     },
     23004: {
       packageId: "shadeslayer/scag-cargo-lots",
     },
+    23089: {
+      packageId: "simfox/day-and-nite",
+    },
     23092: {
       packageId: "delecto/pearl-sunshine",
     },
+    23820: null, // 23820-multi-fsh-tool
     25057: {
       packageId: "itsmo/ancient-stone-walls",
     },
@@ -652,6 +731,7 @@ export const OVERRIDES: IndexerOverrides = {
     26171: {
       packageId: "wmp/the-bridges-of-shoreline-county",
     },
+    26174: null, // 26174-fsh-format-plugin-for-adobe%C2%AE-photoshop%C2%AE
     26192: {
       packageId: "wmp/covered-rail-bridges",
     },
@@ -755,6 +835,9 @@ export const OVERRIDES: IndexerOverrides = {
           variantId: "default",
         },
       },
+    },
+    27340: {
+      packageId: "cougar2004/space-port-fix",
     },
     27675: null, // 27675-sc4datanode
     27698: {
@@ -1009,6 +1092,12 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
+    30381: {
+      superseded: "simtropolis/36188-3d-camera-dll-for-simcity-4",
+    },
+    30836: {
+      packageId: "hippotank/ht-demand-fix",
+    },
     30590: {
       packageId: "nos-17/b62-remastered-service-station-mega-pack",
       variants: {
@@ -1256,6 +1345,15 @@ export const OVERRIDES: IndexerOverrides = {
         170722: null, // TODO: "without-grass"
       },
     },
+    31339: {
+      packageId: "simmaster07/upgradeable-city-halls",
+      variants: {
+        169470: {
+          variantId: "default",
+        },
+        169471: null, // Mac version
+      },
+    },
     31351: {
       packageId: "11241036/modular-plaza-system",
     },
@@ -1414,6 +1512,7 @@ export const OVERRIDES: IndexerOverrides = {
     },
     31834: null, // deleted
     32047: null, // 32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac
+    32048: null, // 32048-broken-buggis-extra-cheats-for-mac
     32149: {
       packageId: "sciurus/s54-props-vol01",
     },
@@ -1550,6 +1649,9 @@ export const OVERRIDES: IndexerOverrides = {
     33889: {
       packageId: "11241036/seasonal-woods",
     },
+    34027: {
+      packageId: "corinamarie/no-kickout-lower-wealth",
+    },
     34196: {
       packageId: "kloudkicker/wind-farm-maintenance-facility",
     },
@@ -1598,6 +1700,7 @@ export const OVERRIDES: IndexerOverrides = {
     35036: {
       superseded: "sc4evermore/95-ulisse-wolf-hybrid-railway-hrw-subway-converter",
     },
+    35053: null, // 35053-fshwrite-for-bat4max
     35341: null, // TODO: 35341-jenx-dulles-and-jfk-airport-patch-and-transit-route-mod
     35373: null, // TODO: 35373-new-menus-and-sounds-for-rretail-gas-station-relots-version-20
     35406: {
@@ -1649,8 +1752,17 @@ export const OVERRIDES: IndexerOverrides = {
     35753: {
       packageId: "jestarr/resourcepack-vol27",
     },
+    35759: {
+      packageId: "null-45/disable-cheats",
+    },
+    35761: {
+      packageId: "null-45/auto-save",
+    },
     35763: {
       packageId: "justforfun/tenement-01",
+    },
+    35782: {
+      packageId: "null-45/city-date-sync",
     },
     35790: null, // 35790-sc4-cleanitol
     35797: {
@@ -1669,9 +1781,13 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
-    35978: {
-      packageId: "null-45/more-demand-info-dll",
+    35889: {
+      packageId: "null-45/legalize-gambling-ordinance",
     },
+    35978: {
+      packageId: "null-45/more-demand-info",
+    },
+    36016: null, // TODO: 36016-census-repository-patch-for-moredemandinfo
     36034: {
       variants: {
         199378: {
@@ -1684,16 +1800,49 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
+    36048: {
+      superseded: "simtropolis/36120-sc4-cpu-options",
+    },
+    36053: {
+      superseded: "simtropolis/36120-sc4-cpu-options",
+    },
+    36055: {
+      packageId: "null-45/disable-demolition-animation",
+    },
+    36091: {
+      packageId: "null-45/graphics-options",
+    },
+    36095: {
+      superseded: "simtropolis/36091-sc4-graphics-options",
+    },
+    36120: {
+      packageId: "null-45/cpu-options",
+    },
+    36126: {
+      packageId: "null-45/disable-lot-plop-smoke",
+    },
+    36132: {
+      packageId: "null-45/disable-network-construction-sounds",
+    },
+    36145: {
+      packageId: "null-45/region-view-census",
+    },
+    36146: {
+      packageId: "null-45/no-kickout-lower-wealth",
+    },
     36202: {
-      packageId: "null-45/query-tool-ui-extensions-dll",
+      packageId: "null-45/query-tool-ui-extensions",
     },
     36204: null, // TODO: 36204-plopable-rretail-ta-truckstop-with-new-menus-and-sound
     36207: null, // TODO: 36207-plopable-rretail-flying-j-truckstop-with-new-menus-and-sound
     36112: {
-      packageId: "null-45/more-building-styles-dll",
+      packageId: "null-45/more-building-styles",
     },
     36180: {
-      packageId: "null-45/growify-plops-dll",
+      packageId: "null-45/growify-plops",
+    },
+    36188: {
+      packageId: "memo/3d-camera",
     },
     36221: null, // TODO: 36221-plopable-rretail-loves-truckstop-with-new-menus-and-sound
     36226: null, // TODO: 36226-colossus-addon-mod-v-25-legacy-controller
@@ -1722,10 +1871,10 @@ export const OVERRIDES: IndexerOverrides = {
       packageId: "robertame/amps",
     },
     36242: {
-      packageId: "null-45/resource-loading-hooks-dll",
+      packageId: "null-45/resource-loading-hooks",
     },
     36244: {
-      packageId: "null-45/startup-performance-optimization-dll",
+      packageId: "null-45/startup-performance-optimization",
     },
     36245: {
       packageId: "ripplejet/census-repository-building",
@@ -1888,6 +2037,9 @@ export const OVERRIDES: IndexerOverrides = {
       packageId: "effthegrid/fa2-the-bradhurst",
       variantId: "kel9509",
     },
+    36379: {
+      packageId: "memo/transparent-texture-fix",
+    },
     36381: {
       variants: {
         202344: null,
@@ -1911,7 +2063,7 @@ export const OVERRIDES: IndexerOverrides = {
         },
       },
     },
-    36384: null, // { packageId: "null-45/auto-run-cheats-dll" }
+    36384: null, // { packageId: "null-45/auto-run-cheats" }
     36389: {
       packageId: "effthegrid/fa3-928-s-broadway",
       variantId: "kel9509",
@@ -1919,6 +2071,9 @@ export const OVERRIDES: IndexerOverrides = {
     36395: {
       packageId: "debussyman/dresden-frauenkirche",
       variantId: "pre-war-version",
+    },
+    36396: {
+      packageId: "memo/region-thumbnail-fix",
     },
     36399: {
       packageId: "effthegrid/fa3-559-anderson-ave",
@@ -1946,6 +2101,12 @@ export const OVERRIDES: IndexerOverrides = {
     },
     36423: {
       packageId: "rebalynnts/la-river-project",
+    },
+    36437: {
+      packageId: "null-45/remove-phantom-budget-items",
+    },
+    36481: {
+      packageId: "null-45/custom-budget-departments",
     },
   },
 }

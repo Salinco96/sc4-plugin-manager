@@ -44,6 +44,7 @@ export enum Issue {
   INCOMPATIBLE_DEPENDENCIES = "incompatible-dependencies",
   INCOMPATIBLE_FEATURE = "incompatible-feature",
   INCOMPATIBLE_OPTION = "incompatible-option",
+  INCOMPATIBLE_VERSION = "incompatible-version",
   MISSING_FEATURE = "missing-feature",
 }
 
@@ -288,6 +289,7 @@ export interface VariantIssue {
   feature?: Feature
   option?: OptionID
   id: Issue
+  minVersion?: string
   packages?: PackageID[]
   value?: OptionValue
 }

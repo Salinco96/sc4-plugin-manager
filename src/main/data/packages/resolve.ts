@@ -1,5 +1,12 @@
-import { OptionInfo, Options, isOptionDefaultValue } from "@common/options"
 import {
+  OptionInfo,
+  Options,
+  getOptionInfo,
+  getOptionValue,
+  isOptionDefaultValue,
+} from "@common/options"
+import {
+  MIN_VERSION_OPTION_ID,
   PackageID,
   getPackageStatus,
   isEnabled,
@@ -8,6 +15,7 @@ import {
   isInvalid,
 } from "@common/packages"
 import { ProfileInfo, ProfileUpdate } from "@common/profiles"
+import { Settings } from "@common/settings"
 import {
   DependencyInfo,
   EXTERNAL,
@@ -28,8 +36,10 @@ import { VariantID } from "@common/variants"
 function getVariantIncompatibilities(
   packageInfo: Readonly<Omit<PackageInfo, "status">>,
   variantInfo: Readonly<VariantInfo>,
-  globalOptions: Readonly<Options>,
+  profileOptions: Readonly<Options>,
+  globalOptions: ReadonlyArray<OptionInfo>,
   features: Readonly<Features>,
+  settings: Readonly<Settings>,
 ): VariantIssue[] {
   const incompatibilities: VariantIssue[] = []
 
@@ -50,11 +60,20 @@ function getVariantIncompatibilities(
 
   // Check requirements
   if (variantInfo.requirements) {
-    for (const requirement of keys(variantInfo.requirements)) {
-      if (isEnum(requirement, Feature)) {
+    forEach(variantInfo.requirements, (requiredValue, requirement) => {
+      if (requirement === MIN_VERSION_OPTION_ID) {
+        const minVersion = Number(requiredValue)
+        const patchVersion = settings.install?.version?.split(".")[2]
+        if (patchVersion && Number(patchVersion) < minVersion) {
+          incompatibilities.push({
+            id: Issue.INCOMPATIBLE_VERSION,
+            minVersion: `1.1.${minVersion}.0`,
+          })
+        }
+      } else if (isEnum(requirement, Feature)) {
         const featurePackageIds = features[requirement]
         const isEnabled = !!featurePackageIds?.length
-        const isRequired = !!variantInfo.requirements[requirement]
+        const isRequired = !!requiredValue
 
         // Check feature requirements
         if (isRequired !== isEnabled) {
@@ -74,17 +93,21 @@ function getVariantIncompatibilities(
           }
         }
       } else {
-        const requiredValue = variantInfo.requirements[requirement]
-        const value = globalOptions[requirement] // TODO: Default value
-        if (requiredValue !== value) {
-          incompatibilities.push({
-            id: Issue.INCOMPATIBLE_OPTION,
-            option: requirement,
-            value: requiredValue,
-          })
+        const option = getOptionInfo(requirement, undefined, globalOptions)
+        if (option) {
+          const value = getOptionValue(option, profileOptions)
+          if (requiredValue !== value) {
+            incompatibilities.push({
+              id: Issue.INCOMPATIBLE_OPTION,
+              option: requirement,
+              value: requiredValue,
+            })
+          }
+        } else {
+          console.warn(`Unknown requirement: ${requirement} = ${requiredValue}`)
         }
       }
-    }
+    })
   }
 
   return incompatibilities
@@ -141,6 +164,8 @@ export function getFeatures(
 export function resolvePackages(
   packages: Readonly<Packages>,
   profileInfo: Readonly<ProfileInfo>,
+  globalOptions: ReadonlyArray<OptionInfo>,
+  settings: Readonly<Settings>,
 ): {
   /** Resulting features */
   resultingFeatures: Features
@@ -190,7 +215,9 @@ export function resolvePackages(
           packageInfo,
           variantInfo,
           profileInfo.options,
+          globalOptions,
           resultingFeatures,
+          settings,
         )
 
         // Calculate incompatibilities of dependencies
@@ -312,7 +339,8 @@ export function resolvePackages(
 export function resolvePackageUpdates(
   packages: Readonly<Packages>,
   profileInfo: Readonly<ProfileInfo>,
-  globalOptions: ReadonlyArray<Readonly<OptionInfo>>,
+  globalOptions: ReadonlyArray<OptionInfo>,
+  settings: Readonly<Settings>,
   updates: ProfileUpdate,
 ): {
   /** Packages that will be disabled */
@@ -417,7 +445,12 @@ export function resolvePackageUpdates(
   }
 
   // Calculate resulting status
-  const { resultingFeatures, resultingStatus } = resolvePackages(packages, resultingProfile)
+  const { resultingFeatures, resultingStatus } = resolvePackages(
+    packages,
+    resultingProfile,
+    globalOptions,
+    settings,
+  )
 
   const disablingPackages: PackageID[] = []
   const enablingPackages: PackageID[] = []
@@ -556,25 +589,25 @@ export function resolvePackageUpdates(
     }
   })
 
-  console.debug("Updating profile", updates)
+  // console.debug("Updating profile", updates)
 
-  console.debug("Resulting profile", resultingProfile)
+  // console.debug("Resulting profile", resultingProfile)
 
-  console.debug("Resulting changes", {
-    disablingPackages,
-    enablingPackages,
-    excludingPackages,
-    includingPackages,
-    installingVariants,
-    selectingVariants,
-  })
+  // console.debug("Resulting changes", {
+  //   disablingPackages,
+  //   enablingPackages,
+  //   excludingPackages,
+  //   includingPackages,
+  //   installingVariants,
+  //   selectingVariants,
+  // })
 
-  console.debug("Resulting conflicts", {
-    explicitVariantChanges,
-    implicitVariantChanges,
-    incompatibleExternals,
-    incompatiblePackages,
-  })
+  // console.debug("Resulting conflicts", {
+  //   explicitVariantChanges,
+  //   implicitVariantChanges,
+  //   incompatibleExternals,
+  //   incompatiblePackages,
+  // })
 
   return {
     disablingPackages,

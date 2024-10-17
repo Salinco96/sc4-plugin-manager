@@ -54,15 +54,23 @@ runIndexer({
 
     return true
   },
-  include(entry, entryId, source, category) {
+  include(entry, entryId /*, source, category */) {
     return (
-      (entry.lastModified >= "2024-05-01T00:00:00Z" && !category.id.includes("obsolete")) ||
-      [
-        "167-bsc-aln-rrp-pasture-flora",
-        "234-ksteam-s54-prop-pack-vol01",
-        "19953-orange-megaprop-v01",
-      ].some(id => entryId.includes(id))
+      [/buggi/i, /cococity/i, /null/i, /memo/i, /simmaster07/i, /toroca/i].some(
+        id => !!entry.authors.some(a => a.match(id)),
+      ) ||
+      [/13318/i, /15758/i, /21339/i, /22771/i, /23089/i, /27340/i, /30836/i].some(
+        id => !!entryId.match(id),
+      )
     )
+    // return (
+    //   (entry.lastModified >= "2024-05-01T00:00:00Z" && !category.id.includes("obsolete")) ||
+    //   [
+    //     "167-bsc-aln-rrp-pasture-flora",
+    //     "234-ksteam-s54-prop-pack-vol01",
+    //     "19953-orange-megaprop-v01",
+    //   ].some(id => entryId.includes(id))
+    // )
   },
   overrides: OVERRIDES,
   sources: [SC4EVERMORE, SIMTROPOLIS],
@@ -838,50 +846,57 @@ async function runIndexer(options: IndexerOptions) {
         )
 
         const lots: { [lotId: string]: LotData } = {}
-        for (const file of sc4Files) {
+
+        const nonLotFiles = sc4Files.filter(file => {
           const filename = file.match(/([^\\/]+\.sc4lot)$/i)?.[1]
-          if (filename) {
-            const size = filename.match(/[-_ ](\d+x\d+)[-_ ]/i)?.[1]
-            const stage = filename.match(/((?:R|CO|CS)\$+|\bI-?(?:D|M|HT)\$*)(\d+)[-_ ]/i)?.[2]
-
-            const kind =
-              filename
-                .match(/(PLOP|(?:R|CO|CS)\$+|\bI-?(?:D|M|HT))[^a-z]/i)?.[1]
-                .replace("-", "")
-                .toLowerCase() ?? ""
-
-            const category: string | undefined = {
-              co$$: "co$$",
-              co$$$: "co$$$",
-              cs$: "cs$",
-              cs$$: "cs$$",
-              cs$$$: "cs$$$",
-              id: "i-d",
-              iht: "i-ht",
-              im: "i-m",
-              plop: "landmarks",
-              r$: "r$",
-              r$$: "r$$",
-              r$$$: "r$$$",
-            }[kind]
-
-            lots[filename] = {
-              category: category && category !== packageData.category ? category : undefined,
-              filename,
-              id: filename.match(/_([a-f0-9]{8})\.sc4lot$/i)?.[1].toLowerCase() ?? filename,
-              label: filename,
-              requirements: file.match(/\bCAM\b/i) ? { cam: true } : undefined,
-              size: size as `${number}x${number}`,
-              stage: stage ? Number.parseInt(stage) : undefined,
-            }
+          if (!filename) {
+            return true
           }
-        }
+
+          const size = filename.match(/[-_ ](\d+x\d+)[-_ ]/i)?.[1]
+          const stage = filename.match(/((?:R|CO|CS)\$+|\bI-?(?:D|M|HT)\$*)(\d+)[-_ ]/i)?.[2]
+
+          const kind =
+            filename
+              .match(/(PLOP|(?:R|CO|CS)\$+|\bI-?(?:D|M|HT))[^a-z]/i)?.[1]
+              .replace("-", "")
+              .toLowerCase() ?? ""
+
+          const category: string | undefined = {
+            co$$: "co$$",
+            co$$$: "co$$$",
+            cs$: "cs$",
+            cs$$: "cs$$",
+            cs$$$: "cs$$$",
+            id: "i-d",
+            iht: "i-ht",
+            im: "i-m",
+            plop: "landmarks",
+            r$: "r$",
+            r$$: "r$$",
+            r$$$: "r$$$",
+          }[kind]
+
+          lots[filename] = {
+            category: category && category !== packageData.category ? category : undefined,
+            filename,
+            id: filename.match(/_([a-f0-9]{8})\.sc4lot$/i)?.[1].toLowerCase() ?? filename,
+            label: filename,
+            requirements: file.match(/\bCAM\b/i) ? { cam: true } : undefined,
+            size: size as `${number}x${number}`,
+            stage: stage ? Number.parseInt(stage) : undefined,
+          }
+
+          return false
+        })
 
         if (Object.values(lots).length) {
           variantData.lots = Object.values(lots)
           packageData.warnings ??= [{ id: "bulldoze", on: "disable" }]
-        } else {
-          variantAsset.include = sc4Files
+        }
+
+        if (nonLotFiles.length) {
+          variantAsset.include = nonLotFiles
         }
 
         dbPackagesConfigs[authorId] ??= dbPackagesConfig

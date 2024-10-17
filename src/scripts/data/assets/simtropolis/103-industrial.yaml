@@ -2535,7 +2535,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -3561,7 +3573,19 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
       							
       <p>
@@ -3736,10 +3760,101 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/19338-peg-security-fencing-kit
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p><strong><span style="text-decoration:underline;">Old Timber Warehouses, by Mattb325.</span></strong></p>
+
+      <p> </p>
+
+      <p>At the request of a fellow SC4 player, I present two old timber warehouses, similar to those that used to line wharves and waterfronts in the 18th, 19th and early 20th century.</p>
+
+      <p> </p>
+
+      <p>There are two variations in a building family (so they will apear at random). Both the blue and mustard coloured buildings share the same stats.</p>
+
+      <p> </p>
+
+      <p>They are presented as I-M $$ on a 3x3 and 4x4 lot. Use the CTRL key while zoning to assist growth.</p>
+
+      <p> </p>
+
+      <p><span style="color:#000080;"><span style="text-decoration:underline;"><strong>STATS:</strong></span></span></p>
+
+      <p> </p>
+
+      <p><span style="color:#000080;">Bulldoze Cost:				 $317</span></p>
+
+      <p><span style="color:#000080;">Capacity Satisfied:		   IM$$ 136</span></p>
+
+      <p><span style="color:#000080;">Pollution:						 8 (air) / 5 (water) / 4 (garbage)</span></p>
+
+      <p><span style="color:#000080;">Radius:						    9 / 13 / 0</span></p>
+
+      <p><span style="color:#000080;">Power Consumed:		    9 MwH</span></p>
+
+      <p><span style="color:#000080;">Water Consumed:		    122 Gallons</span></p>
+
+      <p> </p>
+
+      <p><span style="text-decoration:underline;"><strong>DEPENDENCIES</strong></span> <em>(note you must be registered and logged in at the SC4 Devotion </em><abbr title="Lot EXchange
+      (SC4Devotion)"><em>LEX</em></abbr><em> to download):</em></p>
+
+      <p> </p>
+
+      <p><abbr title="BATT Squad Certification">BSC</abbr> <abbr title="Building Architect Tool">BAT</abbr> Props Mattb325 Vol03 (<a
+      href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768</a>)</p>
+
+      <p><abbr title="Pegasus">PEG</abbr> Security Fences (<a href="https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/"
+      rel="">https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/</a>)</p>
+
+      <p> </p>
+
+      <p>Thanks and enjoy</p>
+
+      						</body>
+    filename: Mattb325 Timber Warehouses.zip
+    files:
+      - Mattb325 Timber Warehouses/IM$$2_4x4_Mattb325_Baldersons_1e354f21.SC4Lot
+      - Mattb325 Timber Warehouses/IM$$3_3x3_Mattb325_Baldersons_ee354f10.SC4Lot
+      - Mattb325 Timber Warehouses/Mattb325 Timber Warehouses - readme.txt
+      - Mattb325 Timber Warehouses/Mattb325_Baldersons-0x5ad0e817_0x9db95e14_0x30000.SC4Model
+      - Mattb325 Timber Warehouses/Mattb325_Baldersons-0x6534284a-0x13a0bd51-0x1e354ec7.SC4Desc
+      - Mattb325 Timber Warehouses/Mattb325_Metalsmiths_sterling-0x5ad0e817_0xfdb9f9c9_0x30000.SC4Model
+      - Mattb325 Timber Warehouses/Mattb325_Metalsmiths_sterling-0x6534284a-0x13a0bd51-0x1e35e9c4.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_11_2012/b52aa8d7fc3c2f88bd310706514a0394-warehouse.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_11_2012/61be9309a3fd8b57aef40d6903f4ad67-warehouse1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_11_2012/ec0a916b85d2bdae3ccc4fd644bfcbe5-warehouse2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_11_2012/5a18ca48febb456d7e448e2dfbf81aea-warehouse3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_11_2012/e595093365baf77e3245a2c63a32b83f-warehouse3a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_11_2012/327ad5f4169e8c67368981055648bb88-warehouse4.jpg
     lastModified: 2012-11-24T00:40:22Z
     name: Old Timber Warehouses
+    sha256: 6f73b244aedbb1fecde097674028d0ac1a3a4865236be9e35fc246224584b729
+    size: 1421349
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2012/thumb-b52aa8d7fc3c2f88bd310706514a0394-warehouse.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 1647977
     url: https://community.simtropolis.com/files/file/28240-old-timber-warehouses/
+    version: "1.0"
   simtropolis/28271-nybt-525-west-48th-street:
     authors:
       - Vlasky
@@ -3969,10 +4084,222 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p><strong>SPAR Distribution, by Mattb325</strong></p>
+
+      <p> </p>
+
+      <p>Though the buildings in this <abbr title="Building Architect Tool">BAT</abbr> are purely fictional, SPAR food retailers are not; with over 12,000 stores in 35 countries, the logistics
+      required to ship so many products (fresh and packaged) requires serious space and dedicated infrastructure.</p>
+
+      <p> </p>
+
+      <p>To that end, I have created a series of BATs to fulfill both CS and IHT demand. The main office building has a mix of differently tinted glass and balconies, and, as is so common in
+      industrial parks, the large warehousing area is high-clearance and pre-fabricated concrete and steel.</p>
+
+      <p> </p>
+
+      <p>The lot-work gives you four distinct options for your cities and focuses on the high-wealth. All grow at stage 3 (making them suited to both <abbr title="Colossus Addon Mod">CAM</abbr> and
+      non-<abbr title="Colossus Addon Mod">CAM</abbr> cities).</p>
+
+      <p> </p>
+
+      <p>In order to assist growth, hold down the CTRL key while zoning.</p>
+
+      <p> </p>
+
+      <p>This is critical when zoning the 6x6 and 8x8 industrial lots.</p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(165,42,42);">Included in this download are:</span></p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(165,42,42);">4x4 CS$$$ providing 184 jobs</span></p>
+
+      <p><span style="color:rgb(165,42,42);">4x4 IHT$$$ providing 447 jobs</span></p>
+
+      <p><span style="color:rgb(165,42,42);">6x6 IHT$$$ providing 988 jobs</span></p>
+
+      <p><span style="color:rgb(165,42,42);">8x8 IHT$$$ providing 1,830 jobs</span></p>
+
+      <p> </p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"><strong>STATS 4x4 CS$$$:</strong></span></span></p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(0,0,128);">Growth Stage: 3</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Bulldoze Cost: $455</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Capacity Satisfied: CS$$$184 (CS$$ 449, CS$ 1,786 when dilapidated)</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Pollution at Centre: 12 (air) / 8 (water) / 16 (garbage)</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Pollution Radius: 6/7/0</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Power Consumed: 51 Mwh</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Water Consumed: 45 Gallons</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Construction Time: 45 days</span></p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(0,0,128);"><strong>STATS 4x4 IHT$$$:</strong></span></p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(0,0,128);">Growth Stage: 3</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Bulldoze Cost: $548</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Capacity Satisfied: IHT 447</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Pollution at Centre: 11 (air) / 4 (water) / 4 (garbage)</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Pollution Radius: 6/7/0</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Power Consumed: 81 Mwh</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Water Consumed: 75 Gallons</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Construction Time: 54 days</span></p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(0,0,128);"><strong>STATS 6x6 IHT$$$:</strong></span></p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(0,0,128);">Growth Stage: 3</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Bulldoze Cost: $244</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Capacity Satisfied: IHT 988</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Pollution at Centre: 17 (air) / 7 (water) / 5 (garbage)</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Pollution Radius: 6/7/0</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Power Consumed: 127 Mwh</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Water Consumed: 119 Gallons</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Construction Time: 24 days</span></p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(0,0,128);"><strong>STATS 8x8 IHT$$$:</strong></span></p>
+
+      <p> </p>
+
+      <p><span style="color:rgb(0,0,128);">Growth Stage: 3</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Bulldoze Cost: $1,092</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Capacity Satisfied: IHT 1,830</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Pollution at Centre: 23 (air) / 9 (water) / 7 (garbage)</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Pollution Radius: 6/7/0</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Power Consumed: 173 Mwh</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Water Consumed: 162 Gallons</span></p>
+
+      <p><span style="color:rgb(0,0,128);">Construction Time: 109 days</span></p>
+
+      <p> </p>
+
+      <p><strong>DEPENDENCIES:</strong></p>
+
+      <p> </p>
+
+      <p>Because of the variety and specialty of lots presented, there are a few more dependencies than what I normally use, however these are VERY COMMON <em>(note you must be registered and logged
+      in at the SC4 Devotion </em><abbr title="Lot EXchange (SC4Devotion)"><em>LEX</em></abbr><em> to download)</em>:</p>
+
+      <p> </p>
+
+      <p><abbr title="BATT Squad Certification">BSC</abbr> <abbr title="Building Architect Tool">BAT</abbr> Props Mattb325 Vol03 (<a
+      href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768</a>)*****</p>
+
+      <p><abbr title="BATT Squad Certification">BSC</abbr> <abbr title="Building Architect Tool">BAT</abbr> Props Mattb325 Vol02 (<a
+      href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383</a>)</p>
+
+      <p><abbr title="BATT Squad Certification">BSC</abbr> Mega Props - JES Vol01 (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=342" rel="external
+      nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=342</a>)</p>
+
+      <p><abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol 01 (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external
+      nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a>)</p>
+
+      <p><abbr title="BATT Squad Certification">BSC</abbr> Props Jeronij Vol 02 Trees (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=167" rel="external
+      nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=167</a>)</p>
+
+      <p><abbr title="BATT Squad Certification">BSC</abbr> TexturePack Cycledogg V 01b (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external
+      nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>)</p>
+
+      <p><abbr title="BATT Squad Certification">BSC</abbr> Essentials (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=443" rel="external
+      nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=443</a>)</p>
+
+      <p> </p>
+
+      <p><em>***** Absolutely essential or you will get a big brown box</em></p>
+
+      <p> </p>
+
+      <p>I hope you enjoy this file</p>
+
+      						</body>
+    filename: SPAR Distribution.zip
+    files:
+      - SPAR Distribution/CS$$$3_4x4_Mattb325_SPAR_Distribution(Com Svc)_ec26d2ad.SC4Lot
+      - SPAR Distribution/IHT$$$3_4x4_Mattb325_SPAR_Distribution_2c26d272.SC4Lot
+      - SPAR Distribution/IHT$$$3_6x6_Mattb325_Distribution_Warehouse_ac26d20e.SC4Lot
+      - SPAR Distribution/IHT$$$3_8x8_Mattb325_SPAR_Distribution (MEGA lot)_1c26d1c8.SC4Lot
+      - SPAR Distribution/Mattb325_Distribution_Warehouse-0x6534284a-0x13a0bd51-0x1c26d1f1.SC4Desc
+      - SPAR Distribution/Mattb325_SPAR_Distribution (MEGA lot)-0x6534284a-0x13a0bd51-0x3c26d12a.SC4Desc
+      - SPAR Distribution/Mattb325_SPAR_Distribution(Com Svc)-0x6534284a-0x13a0bd51-0x9c26d291.SC4Desc
+      - SPAR Distribution/Mattb325_SPAR_Distribution-0x6534284a-0x13a0bd51-0x1c26d257.SC4Desc
+      - SPAR Distribution/SPAR Distribution ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_02_2013/0fd2cc746303cb8e7759014ea63c51e8-spar.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_02_2013/eeab01788719ce327a08e7a13234cf1f-spar-4x4-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_02_2013/cfa011f3c6c8b36b6f59fe9448bb7085-spar-4x4-1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_02_2013/fe174b712353ef5187c9991c0e81bf8f-spar-6x6-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_02_2013/0c3497576b48e8e5320266cf19b65ece-spar-8x8-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_02_2013/e60480388b9120027aad3ccfd62510a9-spar-nite-.jpg
     lastModified: 2013-02-08T00:44:04Z
     name: SPAR Distribution
+    sha256: 14990b551038e3a989153027cd95c02311af5cf67380e4cde3f80e556971df84
+    size: 120408
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2013/thumb-0fd2cc746303cb8e7759014ea63c51e8-spar.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 126140
     url: https://community.simtropolis.com/files/file/28451-spar-distribution/
+    version: "1.0"
   simtropolis/28492-sims-construction-site:
     authors:
       - B.C builder
@@ -4326,6 +4653,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p>	<span style="font-family:Georgia, serif;">Lately</span><span style="font-family:Georgia, serif;"> your sims have been complaining about the crappy cell service in your city. Luckily, you
       decided to commission this new Verizon Substation in your city to boost service before the sims riot. </span></p>
@@ -4626,10 +4959,154 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Selby Shoe Factory, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	So ...... given my 3yr license on 3DS Max 2013 will expire next week,  I spent the morning installing 3DS Max 2014 and troubleshooting to get it to work with Bat4Max (there's half a day out of my life I'll never get back, but it is either that or no more BATs!).
+      </p>
+
+
+      <p>
+      	This is a quick test building to ensure that 3DSMax 2014 works as far as getting content into game: it was too nice to simply leave as a test, and as it's been quite a while since I made any I-M content, I thought I'd share it.
+      </p>
+
+
+      <p>
+      	This <abbr title="Building Architect Tool">BAT</abbr> is an early 20th Century shoe factory inspired by the Selby Shoe Company in Ironton, Ohio.
+      </p>
+
+
+      <p>
+      	It is your typical mid-size, brick manufacturing building that can be found in so many towns and cities all around the world.
+      </p>
+
+
+      <p>
+      	Today, like so many other manufacturing buildings, this one stands empty.
+      </p>
+
+
+      <p>
+      	This is presented as an IM anchor building on a 4x4 lot. Use the CTRL key while zoning to assist growth.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------<br>
+      	STATS (IM§§):</strong>
+      </p>
+
+
+      <p>
+      	Growth Stage:           3 (high density industrial zone only)<br>
+      	Bulldoze Cost:          §452<br>
+      	Capacity Satisfied:  IM§§ 329<br>
+      	Pollution:                  19 (Air)/ 13 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:     9/13/0<br>
+      	Power Consumed:  20 Mwh<br>
+      	Water Consumed:   296 Gal/Month<br>
+      	Building Style:          N/A<br>
+      	Occupant Group:     Industrial / IM / Anchor
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite.<br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot or Desc files!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. Either: (<a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>) OR (<a href="http://gizmo.aplaceforwebsite.com/index.php" rel="external nofollow">http://gizmo.aplaceforwebsite.com/index.php</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	This file requires no external dependencies.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thankyou and enjoy.
+      </p>
+
+      						</body>
+    filename: Mattb325 Shelby Shoes.zip
+    files:
+      - Mattb325 Shelby Shoes/Model Files KEEP ONLY ONE/SelbyShoesMAXISNITE/Mattb325_Selby_Shoes-0x5ad0e817_0xa3c88742_0x30000.SC4Model
+      - Mattb325 Shelby Shoes/Model Files KEEP ONLY ONE/SelbyShoesDARKNITE/Mattb325_Selby_Shoes-0x5ad0e817_0xa3c88742_0x30000.SC4Model
+      - Mattb325 Shelby Shoes/Lot Files DO NOT DELETE/IM$$3_4x4_Mattb325_Selby_Shoes_9445ca27.SC4Lot
+      - Mattb325 Shelby Shoes/Lot Files DO NOT DELETE/Mattb325_Selby_Shoes-0x6534284a-0x3ec1db6a-0x9445ca05.SC4Desc
+      - Mattb325 Shelby Shoes/Mattb325_Selby_Shoe_Factory_ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_02/Selby.jpg.9f16711e6971d1b6cfebfff02f8da982.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_02/Selby1.jpg.9db793d7e31308ef861136fc8787c9ee.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_02/Selby2.jpg.6daeea6ab870ff006e282bd282770dce.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_02/Selby3.jpg.23db47400cc766a7421db0b9723c8d6c.jpg
     lastModified: 2016-02-16T07:45:23Z
     name: Selby Shoe Factory
+    sha256: 83e4fab87ba71b2e9e836e69d4f9c2f961b71014d757886f1309d2089fd562a4
+    size: 1726898
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_02/Selby.thumb.jpg.11b33901018f9484aa6bfb9d9b1b5803.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 2009655
     url: https://community.simtropolis.com/files/file/30951-selby-shoe-factory/
+    version: "1.0"
   simtropolis/30954-irm-distribution-center-freight-yard:
     authors:
       - nos.17
@@ -4898,50 +5375,1047 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Max's Microchips, by Mattb325.</strong><br><strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	As part of providing some much needed, long overdue upgrades to some of the Maxis I-HT stalwarts, I decided that Max's Microchips deserved a new 're-imaging' for the 21st Century. Please note that this doesn't interfere with the original Maxis files and will also work for those who have a Maxis blocker installed.
+      </p>
+
+
+      <p>
+      	This I-HT Anchor lot comes in two flavours: 6x6 and 8x8 (<em>use the CTRL Key while zoning to ensure that you get the correct lot size</em>).
+      </p>
+
+
+      <p>
+      	It is growable only on medium and high density Industrial zones and provides 1,184 jobs.
+      </p>
+
+
+      <p>
+      	The building itself is strictly fictional; although I drew inspiration from the some of the Industrial developments that are springing up in SE Asia where large areas of the building activity and function are contained underground. This is one such building as evidenced by the sloping driveway and reflective pond covered roof punctuated by air intake vents.
+      </p>
+
+
+      <p>
+      	The two floors visible from street level are for office and reception space.
+      </p>
+
+
+      <p>
+      	Stats, links and dependencies are listed below.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------<br>
+      	STATS (IHT):</strong>
+      </p>
+
+
+      <p>
+      	Growth Stage:           2 &amp; 3 (medium and high density zones)<br>
+      	Bulldoze Cost:          §264<br>
+      	Capacity Satisfied:  IH-T 1,184<br>
+      	Pollution:                  19 (Air)/ 7 (Water)/ 6 (Garbage )<br>
+      	Pollution Radius:     6/7/0<br>
+      	Power Consumed:   139 Mwh<br>
+      	Water Consumed:    130 Gal/Month<br>
+      	Building Style:           Chicago/NY/Houston/Euro<br>
+      	Occupant Group:      Industrial Hi-Tech
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite.<br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot or Desc files!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. Either:
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed"></iframe>
+
+
+      <p>
+      	<s>Or: <a href="http://gizmo.aplaceforwebsite.com/index.php" rel="external nofollow">http://gizmo.aplaceforwebsite.com/index.php</a> </s><em>(please note Gizmo's site is no longer operational)</em>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol01:                      <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	To install, simply unzip the file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thankyou and enjoy.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: Mattb325 Maxs Microchips.zip
+    files:
+      - Mattb325 Maxs Microchips/Model Files - KEEP ONLY ONE/Maxs Microchips DarkNite/Mattb325_Maxs_Microchips-0x5ad0e817_0x63f486c1_0x30000.SC4Model
+      - Mattb325 Maxs Microchips/Model Files - KEEP ONLY ONE/Maxs Microchips MaxisNite/Mattb325_Maxs_Microchips-0x5ad0e817_0x63f486c1_0x30000.SC4Model
+      - Mattb325 Maxs Microchips/Model Files - KEEP ONLY ONE/Maxs Microchips MaxisNite/Thumbs.db
+      - Mattb325 Maxs Microchips/Lot Files - DO NOT DELETE/IHT$$$2_8x8_Mattb325_Maxs_Microchips_b471d509.SC4Lot
+      - Mattb325 Maxs Microchips/Lot Files - DO NOT DELETE/IHT$$$3_6x6_Mattb325_Maxs_Microchips_63f88b76.SC4Lot
+      - Mattb325 Maxs Microchips/Lot Files - DO NOT DELETE/Mattb325_Maxs_Microchips-0x6534284a-0x3ec1db6a-0x9471d4de.SC4Desc
+      - Mattb325 Maxs Microchips/Maxs_Microchips_ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Max1.jpg.9768448f42dc149825cf5349c4a946e9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Max2.jpg.dac810009f8554abb5478a776e55c568.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Max3.jpg.bc9f2889a131f9c1554bdfd0482590c0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Max4.jpg.7c72a00ef1bc7a4562891b595a2995e1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/MaxMain.jpg.c13975b058e97f33be3799eff2c3af10.jpg
     lastModified: 2017-05-12T01:26:55Z
     name: Max's Microchips
+    sha256: f6a9ee3153d4ff1bee8e9f5375e6f81db4ffd4c9a1dfbe553b95fd753d4f45ba
+    size: 3720656
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/MaxMain.thumb.jpg.983750a0460608c2bf5c039af064867a.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 4337613
     url: https://community.simtropolis.com/files/file/31608-maxs-microchips/
+    version: "1.0"
   simtropolis/31611-stratton-biotech:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/19338-peg-security-fencing-kit
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Stratton Biotech, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	As part of providing some much needed, long overdue upgrades to some of the Maxis I-HT stalwarts, I decided that Stratton Biotech deserved a new 're-imaging' for the 21st Century. After all, it has been filling up any I-HT zone for almost 15 years, so it is probably due for some extra space. Please note that this new file doesn't interfere with the original Maxis files and will work for those who have a Maxis blocker installed.
+      </p>
+
+
+      <p>
+      	This I-HT Anchor lot comes in two flavours: 4x4 and 8x8 (use the CTRL Key while zoning to ensure that you get the correct lot size).
+      </p>
+
+
+      <p>
+      	It is growable only on medium and high density Industrial zones and provides between 204 and 1,122 jobs (depending on the lot size).
+      </p>
+
+
+      <p>
+      	The building itself is strictly fictional: I have used exposed steel girders, a false wall and false window panelling to shelter a central courtyard. This lends a more substantial air to the front façade.
+      </p>
+
+
+      <p>
+      	<br>
+      	Stats, links and dependencies are listed below.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------<br>
+      	STATS (IHT):</strong>
+      </p>
+
+
+      <p>
+      	<u>4x4 LOT</u>
+      </p>
+
+
+      <p>
+      	Growth Stage:        3 (medium and high density zones)<br>
+      	Bulldoze Cost:       §289<br>
+      	Capacity Satisfied:  IH-T 204<br>
+      	Pollution:           5 (Air)/ 2 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    6/7/0<br>
+      	Power Consumed:      38 Mwh<br>
+      	Water Consumed:      35 Gal/Month<br>
+      	Building Style:      Chicago/NY/Houston/Euro<br>
+      	Occupant Group:      IHT Anchor Building
+      </p>
+
+
+      <p>
+      	<br><u>8x8 LOT</u>
+      </p>
+
+
+      <p>
+      	Growth Stage:        3 (medium and high density zones)<br>
+      	Bulldoze Cost:       §1,066<br>
+      	Capacity Satisfied:  IH-T 1,112<br>
+      	Pollution:           18 (Air)/ 7 (Water)/ 5 (Garbage )<br>
+      	Pollution Radius:    6/7/0<br>
+      	Power Consumed:      135 Mwh<br>
+      	Water Consumed:      126 Gal/Month<br>
+      	Building Style:      Chicago/NY/Houston/Euro<br>
+      	Occupant Group:      IHT Anchor Building
+      </p>
+
+
+      <p>
+      	---------------------------------------
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite.<br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot or Desc files!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. Either:
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed"></iframe>
+
+
+      <p>
+      	<s>Or: <a href="http://gizmo.aplaceforwebsite.com/index.php" rel="external nofollow">http://gizmo.aplaceforwebsite.com/index.php</a> </s><em>(please note Gizmo's site is no longer operational)</em>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props Mattb325 - Vol03.dat <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack Vol01 - <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="Pegasus">PEG</abbr> CHAINLINK RESOURCE -
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/?do=embed"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	To install, simply unzip the file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thankyou and enjoy.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: Mattb325 Stratton Biotech.zip
+    files:
+      - Mattb325 Stratton Biotech/Model Files KEEP ONLY ONE/Stratton Biotech Dark_Nite/Mattb325_Stratton_Biotech-0x5ad0e817_0x63ae559a_0x30000.SC4Model
+      - Mattb325 Stratton Biotech/Model Files KEEP ONLY ONE/Stratton Biotech Maxis_Nite/Mattb325_Stratton_Biotech-0x5ad0e817_0x63ae559a_0x30000.SC4Model
+      - Mattb325 Stratton Biotech/Lot Files DO NOT DELETE/IHT$$$2_4x4_Mattb325_Stratton_Biotech_642b97c6.SC4Lot
+      - Mattb325 Stratton Biotech/Lot Files DO NOT DELETE/IHT$$$3_8x8_Mattb325_Stratton_Biotech(8x8)_442b981c.SC4Lot
+      - Mattb325 Stratton Biotech/Lot Files DO NOT DELETE/Mattb325_Stratton_Biotech(8x8)-0x6534284a-0x3ec1db6a-0xb42b9800.SC4Desc
+      - Mattb325 Stratton Biotech/Lot Files DO NOT DELETE/Mattb325_Stratton_Biotech-0x6534284a-0x3ec1db6a-0x742b9799.SC4Desc
+      - Mattb325 Stratton Biotech/Stratton_Biotech_ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Stratton4x4.jpg.253f55f23419e0ff51b1565a895ac41c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Stratton4x4_s.jpg.dc2bb7859b4d75814a07c623a5af36ad.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Stratton8x8.jpg.3c422949f9d09e6c4c3c9789f10dfed3.jpg
     lastModified: 2017-05-24T07:55:18Z
     name: Stratton Biotech
+    sha256: 34aad5f1c2d988b9ac4cd099b72209f5e274a44d500fafe6ce1422c34114bb73
+    size: 1209422
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/Stratton4x4_s.thumb.jpg.cda6081263653e6d4d3510ebccab2eae.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 1400744
     url: https://community.simtropolis.com/files/file/31611-stratton-biotech/
+    version: "1.0"
   simtropolis/31612-kane-tiberium:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/19338-peg-security-fencing-kit
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Kane Tiberium, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	As part of providing some much needed, long overdue upgrades to some of the Maxis I-HT stalwarts, I decided that Kane Tiberium deserved a new 're-imaging' for the 21st Century. After all, the in-game dumpy little structure has been filling up any I-HT zone for almost 15 years, so it is probably due for some extra space.<br>
+      	Given the initial rather pointless reference to an external game with the naming of this building, I doubt that such an industry could survive all this time in the real world. So in my version, Kane Tiberium makes Nutrilite<sup>TM</sup> vitamins, minerals &amp; dietary supplements products to turn a buck.
+      </p>
+
+
+      <p>
+      	Please note that this new file doesn't interfere with the original Maxis files and will work for those who have a Maxis blocker installed.
+      </p>
+
+
+      <p>
+      	This I-HT Anchor lot comes in two flavours: 4x3 and 4x4 (use the CTRL Key while zoning to ensure that you get the correct lot size).
+      </p>
+
+
+      <p>
+      	It is growable only on medium and high density Industrial zones and provides between 300 jobs.
+      </p>
+
+
+      <p>
+      	The building itself is based on a boxy mid-century modern design and brings a retro flair to your industrial zones.
+      </p>
+
+
+      <p>
+      	<br>
+      	Stats, links and dependencies are listed below.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------<br>
+      	STATS (IHT):</strong>
+      </p>
+
+
+      <p>
+      	Growth Stage:         3 (medium and high density zones)<br>
+      	Bulldoze Cost:         §264<br>
+      	Capacity Satisfied:  IH-T 300<br>
+      	Pollution:                   7 (Air)/ 3 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:     6/7/0<br>
+      	Power Consumed:   55 Mwh<br>
+      	Water Consumed:    51 Gal/Month<br>
+      	Building Style:          Chicago/NY/Houston/Euro<br>
+      	Occupant Group:      IHT Anchor Building
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite.<br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot or Desc files!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod.
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed"></iframe>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - Mattb325 Vol03.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="Pegasus">PEG</abbr> CHAINLINK RESOURCE -
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/?do=embed"></iframe>
+
+
+      <p>
+      	To install, simply unzip the file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thankyou and enjoy.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: Mattb325 Kane Tiberium.zip
+    files:
+      - Mattb325 Kane Tiberium/Model Files KEEP ONLY ONE/Kane Tiberium DarkNite/Mattb325_Nutrilite-0x5ad0e817_0x83a6ccc0_0x30000.SC4Model
+      - Mattb325 Kane Tiberium/Model Files KEEP ONLY ONE/Kane Tiberium MaxisNite/Mattb325_Nutrilite-0x5ad0e817_0x83a6ccc0_0x30000.SC4Model
+      - Mattb325 Kane Tiberium/Lot Files DO NOT DELETE/IHT$$$3_4x3_Mattb325_Nutrilite_43ab5e9a.SC4Lot
+      - Mattb325 Kane Tiberium/Lot Files DO NOT DELETE/IHT$$$3_4x4_Mattb325_Nutrilite_54240d4d.SC4Lot
+      - Mattb325 Kane Tiberium/Lot Files DO NOT DELETE/Mattb325_Nutrilite-0x6534284a-0x3ec1db6a-0x14240d32.SC4Desc
+      - Mattb325 Kane Tiberium/Kane_Tiberium_ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Kane.jpg.d0c355881d8e7172a0fcddb9c3e8b47f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Kane1.jpg.4ea440b22b392674a12292dcdb0d28d0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Kane2.jpg.77cfe815b7490a0723a87a3602643e37.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Kane3.jpg.cf09cefefa31a1c2dcfce94433b740ca.jpg
     lastModified: 2017-05-12T03:42:54Z
     name: Kane Tiberium
+    sha256: b799524ace187fa38a42fc58b9121aa40e93c7462901f34533a3144e2a26d2dd
+    size: 1727553
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/Kane.thumb.jpg.d376493c158975596de81921d0c0645b.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 2018669
     url: https://community.simtropolis.com/files/file/31612-kane-tiberium/
+    version: "1.0"
   simtropolis/31613-havoc-bioenhancements:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/19338-peg-security-fencing-kit
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Havoc Bioenhancements, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	As part of providing some much needed, long overdue upgrades to some of the Maxis I-HT stalwarts, I decided that Havoc Bioenhancements deserved a new 're-imaging' for the 21st Century. After all, the in-game structure that has been filling up any I-HT zone for almost 15 years does not reflect its grandiose name, so it is probably overdue for a facelift and some rebranding.
+      </p>
+
+
+      <p>
+      	Please note that this new file doesn't interfere with the original Maxis files and will work for those who have a Maxis blocker installed.
+      </p>
+
+
+      <p>
+      	This I-HT Anchor lot comes in two flavours: 5x5 and 8x8 (use the CTRL Key while zoning to ensure that you get the correct lot size).
+      </p>
+
+
+      <p>
+      	It is growable only on medium and high density Industrial zones and provides between 468 and 1,120 jobs (depending on the lot size).
+      </p>
+
+
+      <p>
+      	The building itself is fictional, but draws inspiration from the typically cheap, prefabricated modern aesthetic.
+      </p>
+
+
+      <p>
+      	<br>
+      	Stats, links and dependencies are listed below.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------<br>
+      	STATS (IHT):</strong><br><u>LOT SIZE 5x5</u>
+      </p>
+
+
+      <p>
+      	Growth Stage:          3 (medium and high density zones)<br>
+      	Bulldoze Cost:         §270<br>
+      	Capacity Satisfied:  IH-T 468<br>
+      	Pollution:                  11 (Air)/ 4 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:     6/7/0<br>
+      	Power Consumed:   85 Mwh<br>
+      	Water Consumed:    79 Gal/Month<br>
+      	Building Style:          Chicago/NY/Houston/Euro<br>
+      	Occupant Group:      IHT Anchor Building
+      </p>
+
+
+      <p>
+      	<u>LOT SIZE 8x8</u>
+      </p>
+
+
+      <p>
+      	Growth Stage:          2 (medium and high density zones)<br>
+      	Bulldoze Cost:         §318<br>
+      	Capacity Satisfied:  IH-T 1,120<br>
+      	Pollution:                  18 (Air)/ 7 (Water)/ 5 (Garbage )<br>
+      	Pollution Radius:     6/7/0<br>
+      	Power Consumed:  135 Mwh<br>
+      	Water Consumed:   127 Gal/Month<br>
+      	Building Style:          Chicago/NY/Houston/Euro<br>
+      	Occupant Group:      IHT Anchor Building
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite.<br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot or Desc files!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. 
+      </p>
+
+
+      <p>
+      	<a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="Pegasus">PEG</abbr> CHAINLINK RESOURCE: <a href="https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/" rel="">https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	To install, simply unzip the file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thankyou and enjoy.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: Mattb325 Havoc Bioenhancements.zip
+    files:
+      - Mattb325 Havoc Bioenhancements/Model files DELETE ONE/Havoc_Bio_DarkNite/Mattb325_HavocBio-0x5ad0e817_0x842e6b41_0x30000.SC4Model
+      - Mattb325 Havoc Bioenhancements/Model files DELETE ONE/Havoc_Bio_MaxisNite/Mattb325_HavocBio-0x5ad0e817_0x842e6b41_0x30000.SC4Model
+      - Mattb325 Havoc Bioenhancements/Lot Files DO NOT DELETE/IHT$$$2_8x8_Mattb325_HavocBio(8x8)_5412b61d.SC4Lot
+      - Mattb325 Havoc Bioenhancements/Lot Files DO NOT DELETE/IHT$$$3_5x5_Mattb325_HavocBio_c3982ba3.SC4Lot
+      - Mattb325 Havoc Bioenhancements/Lot Files DO NOT DELETE/Mattb325_HavocBio(8x8)-0x6534284a-0x3ec1db6a-0x7412b5fc.SC4Desc
+      - Mattb325 Havoc Bioenhancements/Lot Files DO NOT DELETE/Mattb325_HavocBio(prop)-0x6534284a-0x3ec1db6a-0x9412b660.SC4Desc
+      - Mattb325 Havoc Bioenhancements/Lot Files DO NOT DELETE/Mattb325_HavocBio-0x6534284a-0x3ec1db6a-0xd4116d30.SC4Desc
+      - Mattb325 Havoc Bioenhancements/Havoc_Bioenhancements_ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Havoc.jpg.0e2b5a35e38797daa57c2fda1c05e359.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Havoc1.jpg.7142c8a1175929b14bb49c7a70548c1e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Havoc2.jpg.e0aab81fa6f124a664033e64595c2eb4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Havoc3.jpg.5dd16e14fabe77fbaa54bc56b3904ee2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Havoc4.jpg.36532d0730ea149953367dc9d869584c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Havoc5.jpg.72eddf028cd5c75267d687c7ceed69ba.jpg
     lastModified: 2017-05-12T04:32:50Z
     name: Havoc Bioenhancements
+    sha256: d747ea52cf525fd6ebc812ee7842f7957e21ec11d896043d0611a25dcda61508
+    size: 2410053
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/Havoc4.thumb.jpg.76e928cbce277b2b1a9ab432aa115f5c.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 2824256
     url: https://community.simtropolis.com/files/file/31613-havoc-bioenhancements/
+    version: "1.0"
   simtropolis/31614-pedriana-pharmaceuticals:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/19338-peg-security-fencing-kit
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Pedriana Pharmaceuticals, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	As part of providing some much needed, long overdue upgrades to some of the Maxis I-HT stalwarts, I decided that Pedriana Pharmaceuticals deserved a new 're-imaging' for the 21st Century. After all, the in-game structure that has been filling up any I-HT zone for almost 15 years does not reflect the grandiose commercial buildings which bear its name, so it is probably overdue for a facelift and some rebranding.
+      </p>
+
+
+      <p>
+      	Please note that this new file doesn't interfere with the original Maxis files and will work for those who have a Maxis blocker installed.
+      </p>
+
+
+      <p>
+      	This I-HT Anchor building is substantial and only comes as an 8x8 lot (use the CTRL Key while zoning to ensure that you get the correct lot size).
+      </p>
+
+
+      <p>
+      	It is growable only on high density Industrial zones and provides 1,079 jobs.
+      </p>
+
+
+      <p>
+      	The building itself is fictional, but draws inspiration from the <em>Voestalpine Stahl Service Center </em>in Austria.
+      </p>
+
+
+      <p>
+      	<br>
+      	Stats, links and dependencies are listed below.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------<br>
+      	STATS (IHT):</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Growth Stage:         3 (high density zones)<br>
+      	Bulldoze Cost:         §266<br>
+      	Capacity Satisfied:  IH-T 1,079<br>
+      	Pollution:                  18 (Air)/ 7 (Water)/ 5 (Garbage)<br>
+      	Pollution Radius:     6/7/0<br>
+      	Power Consumed:  133 Mwh<br>
+      	Water Consumed:   124 Gal/Month<br>
+      	Building Style:          Chicago/NY/Houston/Euro<br>
+      	Occupant Group:     IHT Anchor Building
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite.<br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot or Desc files!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. 
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed"></iframe>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Textures CP Vol01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - Mattb325 Vol02.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="Pegasus">PEG</abbr> CHAINLINK RESOURCE:
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/?do=embed"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	To install, simply unzip the file into your plugins folder....
+      </p>
+
+
+      <p>
+      	Thankyou and enjoy.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: Mattb325 Pedrianna Pharmaceuticals.zip
+    files:
+      - Mattb325 Pedrianna Pharmaceuticals/Model Files DELETE ONE/Pedriana_MaxisNite/Mattb325_Pedriana_Pharm-0x5ad0e817_0x24d08fe5_0x30000.SC4Model
+      - Mattb325 Pedrianna Pharmaceuticals/Model Files DELETE ONE/Pedriana_DarkNite/Mattb325_Pedriana_Pharm-0x5ad0e817_0x24d08fe5_0x30000.SC4Model
+      - Mattb325 Pedrianna Pharmaceuticals/Lot Files DO NOT DELETE/IHT$$$3_8x8_Mattb325_Pedriana_Pharm_5416b39e.SC4Lot
+      - Mattb325 Pedrianna Pharmaceuticals/Lot Files DO NOT DELETE/Mattb325_Pedriana_Pharm-0x6534284a-0x3ec1db6a-0x7416b36d.SC4Desc
+      - Mattb325 Pedrianna Pharmaceuticals/Pedriana_Pharmaceuticals_ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Pedriana.jpg.e9c40376174ea4657c2a31cd8dc4c344.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Pedriana1.jpg.70cd7d2e99b0ed302be42142e0d0e0c2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Pedriana2.jpg.0298cac7ca2dc42f911a20da319fe769.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Pedriana3.jpg.79891d6e6c5935d92adcea76f04ed244.jpg
     lastModified: 2017-07-11T02:19:20Z
     name: Pedriana Pharmaceuticals
+    sha256: 451c78e2d48afd84254daad128353f38ffca20337a227768e975adaac18b2090
+    size: 4882124
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/Pedriana.thumb.jpg.d0ec49237efa9baab727df77eeaadbfb.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 5715599
     url: https://community.simtropolis.com/files/file/31614-pedriana-pharmaceuticals/
+    version: "1.0"
   simtropolis/31619-city-data-center:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>	<strong>City Data Center, by Mattb325.<br>	---------------------------------------</strong></p>
+
+      <p>	This is a fictional building, the idea for which was inspired by a <abbr title="Building Architect Tool">BAT</abbr> by Heblem "<em><abbr title="Latin American BAT Team">LBT</abbr> Torre de
+      Comunicaciones Telmex"</em> available on CapitalSimCity.</p>
+
+      <p>	In real life data centers are used for many companies who either <strong>a)</strong> outsource their IT infrastructure or <strong>b)</strong> wish to house their IT infrastructure in a
+      seperate location from their main offices due to either lack of space or for business continuity and disaster recovery purposes. </p>
+
+      <p>	I made this little building for myself and have decided to share it. </p>
+
+      <p>	It is representative of data centres that are often dotted within denser urban locations: its boxy, heavy set design with raise entry is meant to ensure it can withstand ram-raids and bomb
+      attacks. This data centre will fit into a <abbr title="Wall-to-Wall">W2W</abbr> environment, but also as a stand alone building.</p>
+
+      <p>	It is designed for a 2x2 PLOPPABLE ONLY lot - it really isn't something that you want springing up multiple times in a city - and provides relief from demand caps for <u>Res </u>and
+      <u>I-HT</u> (in real life Hi-tech industry rarely houses its IT infrastructure within the factory walls that it occupies). </p>
+
+      <p>	It is in the Landmarks menu and functions as ploppable IH-T industry.</p>
+
+      <p>	It provides 325 Hi Tech Jobs.</p>
+
+      <p>	<br><strong>---------------------------------------</strong></p>
+
+      <p>	<strong>STATS:</strong></p>
+
+      <p>	Lot size :                 2x2<br>	Plop Cost:               §12,810<br>	Occupant Groups: Hi Tech Industry<br>	Wealth:                    High Wealth<br>	Demand Created:  Jobs§§§:
+      325.<br>	Pollution:                 Air 8 over 6 tiles, Water 3 over 7 tiles, Garbage 4 over 0 tiles<br>	Power consumed:  59 MwH<br>	Water consumed:   55 Gallons/Month<br>	Bulldoze Cost:      
+       §815</p>
+
+      <p>	<strong>---------------------------------------</strong></p>
+
+      <p>	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong></p>
+
+      <p>	<br>	This download contains TWO file types in two seperate folders; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis
+      nite. <br>	You must choose only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. </p>
+
+      <p>	If you use the dark nite version, you will need a dark nite mod. (<a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/"
+      rel="">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>) </p>
+
+      <p>	<strong>---------------------------------------</strong></p>
+
+      <p>	<strong>DEPENDENCIES:</strong></p>
+
+      <p>	This file does not require external dependencies.</p>
+
+      <p>	---------------------------------------</p>
+
+      <p>	To install, simply unzip the contents of this file into your plugins folder.</p>
+
+      <p>	Thanks, and enjoy!</p>
+
+      						</body>
+    filename: Mattb325 Data Centre.zip
+    files:
+      - Mattb325 Data Centre/Model Files DELETE ONE/Data Centre MAXIS NITE/Mattb325_City_Data_Centre-0x5ad0e817_0x241bb9e0_0x30000.SC4Model
+      - Mattb325 Data Centre/Model Files DELETE ONE/Data Centre DARK NITE/Mattb325_City_Data_Centre-0x5ad0e817_0x241bb9e0_0x30000.SC4Model
+      - Mattb325 Data Centre/Lot File DO NOT DELETE/PLOP_2x2_Mattb325_City_Data_Centre_b498fab7.SC4Lot
+      - Mattb325 Data Centre/Mattb325_City_Data_Centre_README.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/DataCentre.jpg.7b6667326a3a75d14e5de79d6b351105.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/DataCentre1.jpg.4be8775532f4a9cc926ed8afe29dfd71.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/DataCentre2.jpg.a4eab9c222d5e368df14aeccd262a5e4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/DataCentre3.jpg.b63f2b766babfca68199fbe7494faca1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/DataCentre4.jpg.1ae2ddb4dec308e9cb3f1fbedc0204f0.jpg
     lastModified: 2017-05-14T03:51:25Z
     name: City Data Center
+    sha256: 7ddc2f4a98251b82e82de14572a5d212d8884c6e4a7e257de6363fe4562a2409
+    size: 1159385
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/DataCentre.thumb.jpg.93afe670e2b2c7ab6cc85d6c14a9d63d.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 1349864
     url: https://community.simtropolis.com/files/file/31619-city-data-center/
+    version: "1.0"
   simtropolis/31630-idm-bobbo662s-dell-plant:
     authors:
       - kingofsimcity
@@ -4954,18 +6428,367 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Tsvirkunov Electronics, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	Another Maxis Hi-tech stalwart gets a 21st Century facelift.
+      </p>
+
+
+      <p>
+      	Tsvirkunov Electronics goes from that small angled blue building with the red decorative pillars to a shiny, new and much larger facility. Just like the previous building which had outdoor employee space, this new IHT factory provides a lovely, sunny sunken courtyard for employees to take lunch.
+      </p>
+
+
+      <p>
+      	This version is a Hi-Tech growable anchor 6x6 lot (use the CTRL key when zoning to ensure the correct lot size) and will not interfere with any Maxis blockers or re-lots of the original Tsvirkunov Electronics.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS IHT§§§:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                  6x6 (Use the CTRL key when zoning)<br>
+      	Growth Stage:         3 (Medium and High Density Zoning)<br>
+      	Bulldoze Cost:         §307<br>
+      	Capacity Satisfied:  IHT§§§716<br>
+      	Pollution:                  14 (Air)/ 5 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    6/7/0<br>
+      	Power Consumed: 108 Mwh<br>
+      	Water Consumed:  101 Gal/Month<br>
+      	Building Style:         Chicago/NY/Houston/Euro<br>
+      	Occupant Group:     Hi Tech Industrial Anchor Building
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite.<br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot File!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod.
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed"></iframe>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat - <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat - <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol01.dat - <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack - Cycledogg V01.dat - <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack Vol01 - <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90</a>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------<br>
+      	A NOTE ABOUT PARKING TEXTURES:</strong>
+      </p>
+
+
+      <p>
+      	Sadly, if there appears to be any parking used in the content picture as either part of, or adjacent to the custom content in question, it has now come to the ridiculous scenario of having to write a blurb about parking textures given a number of comments received form only one or two users (<em>comments which incidentally are only made on my lots - I note that other active Batters use Maxis parking lots all the time and receive no negative comments, such is the double-standard</em>). <u>Please note that I will use whatever parking textures I feel like on my lots. If you want something else, then use the lot editor.</u>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    filename: Mattb325 Tsvirkunov Electronics.zip
+    files:
+      - Mattb325 Tsvirkunov Electronics/Model Files KEEP ONLY ONE/Tsvirkunov DARKNITE/Mattb325_Tsvirkunov_Electronics-0x5ad0e817_0x88bd57e9_0x30000.SC4Model
+      - Mattb325 Tsvirkunov Electronics/Model Files KEEP ONLY ONE/Tsvirkunov MAXISNITE/Mattb325_Tsvirkunov_Electronics-0x5ad0e817_0x88bd57e9_0x30000.SC4Model
+      - Mattb325 Tsvirkunov Electronics/Lot Files DO NOT DELETE/IHT$$$3_6x6_Mattb325_Tsvirkunov_Electronics_96a76b7f.SC4Lot
+      - Mattb325 Tsvirkunov Electronics/Lot Files DO NOT DELETE/Mattb325_Tsvirkunov_Electronics-0x6534284a-0x3ec1db6a-0x36a76b4c.SC4Desc
+      - Mattb325 Tsvirkunov Electronics/Mattb325_Tsvirkunov_Electronis_README.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Tsvirkunov.jpg.4b7e5455d48473356df282d7c9686fd5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Tsvirkunov_nite.jpg.ce3aafdf7f87a557cc9f26edd17f7f34.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Tsvirkunov1.jpg.8d8fbf8a503d4b805195bb195af95b6c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Tsvirkunov2.jpg.9275dff001d851e55f2f07c0f41d0aa7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Tsvirkunov3.jpg.75fbe493bfef573d88dd315f5b28645f.jpg
     lastModified: 2017-05-21T22:05:06Z
     name: Tsvirkunov Electronics
+    sha256: 57b291bdb934660daf7bfa18313922d6e862e9b3fc920e6c213e2d919b9bef83
+    size: 2158879
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/Tsvirkunov.thumb.jpg.50430ae97e23f7b34a4aa9d5a10d9426.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 2516210
     url: https://community.simtropolis.com/files/file/31650-tsvirkunov-electronics/
+    version: "1.0"
   simtropolis/31655-jenquai-alchemy:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Jenquai Alchemy, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	Another Maxis Hi-tech ( stalwart gets a 21st Century facelift.
+      </p>
+
+
+      <p>
+      	Jenquai goes from that small half underground building which steps back from the lot (and is accessed via a sort of draw-bridge) to a shiny, new and much larger facility. Just like the previous building which had sunken areas and elevated walkways, this new IHT factory provides a lovely, leafy sunken courtyard for employees to take lunch as well as a raised walkway connecting the two buildings.
+      </p>
+
+
+      <p>
+      	This version is a Hi-Tech growable anchor 6x6 lot (use the CTRL key when zoning to ensure the correct lot size) and will not interfere with any Maxis blockers or re-lots of the original Jenquai Alchemy.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS IH-T§§§:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                   6x6 (Use the CTRL key when zoning)<br>
+      	Growth Stage:          3 (Medium and High Density Zoning)<br>
+      	Bulldoze Cost:          § 391<br>
+      	Capacity Satisfied:   IHT§§§ 838<br>
+      	Pollution:                  16 (Air)/ 6 (Water)/ 5 (Garbage )<br>
+      	Pollution Radius:      6/7/0<br>
+      	Power Consumed:   117 Mwh<br>
+      	Water Consumed:    109 Gal/Month<br>
+      	Building Style:           Chicago/NY/Houston/Euro<br>
+      	Occupant Group:      Hi Tech Industrial Anchor Building
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite.<br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot or Desc files!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod.
+      </p>
+
+      <iframe data-embedcontent="" frameborder="0" src="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/?do=embed"></iframe>
+
+
+      <p>
+      	<strong>---------------------------------------<br>
+      	A NOTE ABOUT PARKING TEXTURES:</strong>
+      </p>
+
+
+      <p>
+      	Sadly, if there appears to be any parking used in the content picture as either part of, or adjacent to the custom content in question, it has now come to the ridiculous scenario of having to write a blurb about parking textures given yet more comments received form only one or two users (<em>comments which incidentally are only made on my lots - I note that other active Batters use Maxis parking lots all the time and receive no negative comments, such is the double-standard</em>). <u>Please note that I will use whatever parking textures I feel like on my lots. If you want something else, then use the lot editor.</u>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - SG Vol01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack - Cycledogg V01.dat: <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack Vol01 - <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	To install, simply unzip the file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thankyou
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: Mattb325 Jenquai Alchemy.zip
+    files:
+      - Mattb325 Jenquai Alchemy/Model Files KEEP ONLY ONE/Jenquai Dark Nite/Mattb325_Jenquai_Alchemy-0x5ad0e817_0xc8c0da0f_0x30000.SC4Model
+      - Mattb325 Jenquai Alchemy/Model Files KEEP ONLY ONE/Jenquai Maxis Nite/Mattb325_Jenquai_Alchemy-0x5ad0e817_0xc8c0da0f_0x30000.SC4Model
+      - Mattb325 Jenquai Alchemy/Lot Files DO NOT DELETE/IHT$$$3_6x6_Mattb325_Jenquai_Alchemy_16aaf1ed.SC4Lot
+      - Mattb325 Jenquai Alchemy/Lot Files DO NOT DELETE/Mattb325_Jenquai_Alchemy-0x6534284a-0x3ec1db6a-0xd6aaf1c1.SC4Desc
+      - Mattb325 Jenquai Alchemy/Mattb325_Jenquai_Alchemy_README.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Jenquai.jpg.f6a010014cc3e44b2d8e3c95cf507550.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Jenquai_4nite.jpg.ebcefbaefe730fb830da8d045c83b81f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Jenquai1.jpg.0394312bf7335bd0092fe301dc2143b0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Jenquai2.jpg.0e36809872c4c8ce96064862fbeca875.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_05/Jenquai3.jpg.20e9551006e27ef363d11c6f0348c28a.jpg
     lastModified: 2017-05-24T08:04:27Z
     name: Jenquai Alchemy
+    sha256: 47dc777a1bdeeec35ef8e30e218ff3ceed9230763662a2b6026cb7542cf0db80
+    size: 2030522
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/Jenquai.thumb.jpg.e58f812bd969ca4b7a4053e77afbf9f3.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 2331049
     url: https://community.simtropolis.com/files/file/31655-jenquai-alchemy/
+    version: "1.0"
   simtropolis/31668-idm-simgoobers-costco-distribution-center:
     authors:
       - kingofsimcity
@@ -5753,7 +7576,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -6060,26 +7895,505 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Peerless JAL Manufacturing, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A typical, smaller manufacturing 'unit' that you find in all light industrial areas around the world.
+      </p>
+
+
+      <p>
+      	This particular company was founded in 1947 and is most famous for making Rust-Off; an industrial strength rust remover. The building is based on the real version in an industrial suburb near Perth, Western Australia. 
+      </p>
+
+
+      <p>
+      	This sort of building is particularly useful for when you want to zone industrial near residential areas, but don't want it to look too toxic.....just like in the real world.
+      </p>
+
+
+      <p>
+      	It is presented as a 3x4 growable I-M anchor lot.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS IM§§:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 3x4 (Use the CTRL key when zoning)<br>
+      	Growth Stage:        3 (High Density Zoning)<br>
+      	Bulldoze Cost:        § 232<br>
+      	Capacity Satisfied: IM§§ 252<br>
+      	Pollution:                 15 (Air)/ 10 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    9/13/0<br>
+      	Power Consumed: 16 Mwh<br>
+      	Water Consumed:  226 Gal/Month<br>
+      	Occupant Group:    IM Industrial Anchor Building
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (<a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol04: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.<br>
+      	 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Peerless.jpg.0ffe25bdabf574ec199ca17d1d0b40ed.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Peerless1.jpg.f9338f2210ce67eec6bd8ab4605dacd6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Peerless2.jpg.1d1c81d118e3ba4f9f64140c9d0d5d65.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Peerless3.jpg.237711700d7590a799263f778685401f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Peerless4.jpg.a53e50c721c5844cf138d125b6a048c9.jpg
     lastModified: 2019-07-25T22:58:47Z
     name: Peerless JAL Manufacturing
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_07/Peerless.thumb.jpg.228204cd3eec0773e411bf6d1a0d871f.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33042-peerless-jal-manufacturing/
+    variants:
+      "176848":
+        filename: Mattb325_Peerless_JAL_DN.zip
+        files:
+          - Mattb325_Peerless_JAL_DN/IM$$3_3x4_Mattb325_Peerless_JAL_8943b9eb.SC4Lot
+          - Mattb325_Peerless_JAL_DN/Mattb325_Peerless_JAL-0x5ad0e817_0xe8c3d538_0x30000.SC4Model
+          - Mattb325_Peerless_JAL_DN/Mattb325_Peerless_JAL-0x6534284a-0x3ec1db6a-0x3943b9cf.SC4Desc
+          - Mattb325_Peerless_JAL_DN/Mattb325_Peerless_JAL_Mfg_README.txt
+        sha256: d868250749c9a0c3658197ecba07155b8d6a9d505c58c808dedfb5f708132d58
+        size: 847836
+        uncompressed: 997169
+      "176849":
+        filename: Mattb325_Peerless_JAL_MN.zip
+        files:
+          - Mattb325_Peerless_JAL_MN/IM$$3_3x4_Mattb325_Peerless_JAL_8943b9eb.SC4Lot
+          - Mattb325_Peerless_JAL_MN/Mattb325_Peerless_JAL-0x5ad0e817_0xe8c3d538_0x30000.SC4Model
+          - Mattb325_Peerless_JAL_MN/Mattb325_Peerless_JAL-0x6534284a-0x3ec1db6a-0x3943b9cf.SC4Desc
+          - Mattb325_Peerless_JAL_MN/Mattb325_Peerless_JAL_Mfg_README.txt
+        sha256: 4b038c8cb0a27d25073abbb43ec0e693cb756572cc27715e5be89f08ae654d7b
+        size: 879368
+        uncompressed: 1028694
+    version: "1.0"
   simtropolis/33043-watco-manufacturing:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Watco Manufacturing, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A typical manufacturing 'unit' that you find in all light industrial areas around the world. 
+      </p>
+
+
+      <p>
+      	Watco is most famous for making a product called Bitu-mend; a product that is super-quick and easy to fill all sizes of road pot-holes straight out of the tin.
+      </p>
+
+
+      <p>
+      	Most manufacturing Bats available are large grungy looking buildings: I made this as a building suitable for areas near residential development. This building is in fact a scaled-down version of the real Watco in Independence, MO.
+      </p>
+
+
+      <p>
+      	It is presented as a simple, no-frills 3x3 growable I-M anchor lot. 
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS IM§§:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 3x3 (Use the CTRL key when zoning)<br>
+      	Growth Stage:        2 (Medium &amp; High Density Zoning)<br>
+      	Bulldoze Cost:        § 142<br>
+      	Capacity Satisfied:IM§§ 97<br>
+      	Pollution:                5 (Air)/ 3 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:   9/13/0<br>
+      	Power Consumed:6 Mwh<br>
+      	Water Consumed: 87 Gal/Month<br>
+      	Occupant Group:   IM Industrial Anchor Building
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (<a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	No Dependencies are required for this lot
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Watco.jpg.f552e9e2393c14465250b8bbdbea5faf.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Watco1.jpg.d0bfc812a8badcad3619735a5ca2f742.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Watco2.jpg.75c15b97774f2608fca113d3c9a23454.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Watco3.jpg.1fa418d90d5f8c3228301d87beef5ffd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/Watco4.jpg.2f6c06985fb06b097570201f49e09c9a.jpg
     lastModified: 2019-07-25T23:02:06Z
     name: Watco Manufacturing
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_07/Watco.thumb.jpg.0ee4e67f03f78baf2dc2593610ca9a0f.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33043-watco-manufacturing/
+    variants:
+      "176855":
+        filename: Mattb325_Watco_DN.zip
+        files:
+          - Mattb325_Watco_DN/IM$$2_3x3_Mattb325_Watco_Mfg_2944be5b.SC4Lot
+          - Mattb325_Watco_DN/Mattb325_Watco_Mfg-0x5ad0e817_0xe8ec64d8_0x30000.SC4Model
+          - Mattb325_Watco_DN/Mattb325_Watco_Mfg-0x6534284a-0x3ec1db6a-0x5944be3a.SC4Desc
+          - Mattb325_Watco_DN/Mattb325_Watco_Mfg_README.txt
+        sha256: fde3b529e9be320d8e93cae6b32016959a391ef150f2cf7bec52b19d9a9b1a63
+        size: 672210
+        uncompressed: 789589
+      "176856":
+        filename: Mattb325_Watco_MN.zip
+        files:
+          - Mattb325_Watco_MN/IM$$2_3x3_Mattb325_Watco_Mfg_2944be5b.SC4Lot
+          - Mattb325_Watco_MN/Mattb325_Watco_Mfg-0x5ad0e817_0xe8ec64d8_0x30000.SC4Model
+          - Mattb325_Watco_MN/Mattb325_Watco_Mfg-0x6534284a-0x3ec1db6a-0x5944be3a.SC4Desc
+          - Mattb325_Watco_MN/Mattb325_Watco_Mfg_README.txt
+        sha256: 52325718ac31e7ec286c8d638e497677dc3e42ef142b4312699a72aa76413220
+        size: 659465
+        uncompressed: 772201
+    version: "1.0"
   simtropolis/33044-whoop-ass-factory:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/19338-peg-security-fencing-kit
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Whoop Ass Factory, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	While the product, "Whoop Ass" Hot Steak Sauces are real, this Factory <abbr title="Building Architect Tool">BAT</abbr> is purely fictional. 
+      </p>
+
+
+      <p>
+      	Even though the building draws inspiration from real life food manufacturing factories and with its attached office/showroom is completely plausible, the building is not meant to be a 'serious' creation, but a bit of fun....more along the lines of, and in the same vein as, Simgoober's Fukitol Factory.
+      </p>
+
+
+      <p>
+      	SC4 is a game, after all. <img alt="*:ohyes:" data-emoticon="" src="https://community.simtropolis.com/assets/emoticons/default_29.gif" title="*:ohyes:" >
+      </p>
+
+
+      <p>
+      	This is an I-M Anchor for an 8x8 lot. To help get it (and other MEGA industrial lots) to grow, use the CTRL key while zoning, or just make it ploppable by downloading Buggis extra cheats. 
+      </p>
+
+
+      <p>
+      	It is suitable for <abbr title="Colossus Addon Mod">CAM</abbr> and non-<abbr title="Colossus Addon Mod">CAM</abbr> players alike. 
+      </p>
+
+
+      <p>
+      	I have modded it so that it shouldn't grow like a weed...however that depends on what else you have in your plugins to compete with these large I-M lots. 
+      </p>
+
+
+      <p>
+      	Some folks might consider a good song to accompany this bat would be Johnny Cash: "The Ring of Fire".
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS I-M:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                   8x8 (Use the CTRL key when zoning)<br>
+      	Growth Stage:          3 (High Density Zoning)<br>
+      	Bulldoze Cost:          §274<br>
+      	Capacity Satisfied:  IM§§ 1,134<br>
+      	Pollution:                  45 (Air)/ 30 (Water)/ 7 (Garbage )<br>
+      	Pollution Radius:     9/12/0<br>
+      	Power Consumed:  46 Mwh<br>
+      	Water Consumed:   677 Gal/Month<br>
+      	Occupant Group:     Industrial Manufacturing Anchor Building
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (<a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack - Cycledogg V01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack Vol01 (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90</a>)<br>
+      	*<abbr title="Pegasus">PEG</abbr> Security Fencing Kit (<a href="https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit" rel="">https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit</a>/)<br>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol04: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.<br>
+      	 
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/WhoopAss.jpg.b20f7b07ffa88fe311467b27e17b7572.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/WhoopAss1.jpg.2750f1f55fce1a4d6d22256dde4d9880.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/WhoopAss2.jpg.7f02c0c576c4dd471b0c29c26d4ff112.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/WhoopAss3.jpg.c1bd525e110949eb353bb86a5f95778a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_07/WhoopAss4.jpg.a0f1ad892828fbf4ce69cf16a19073ff.jpg
     lastModified: 2019-07-25T23:09:26Z
     name: Whoop Ass Factory
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_07/WhoopAss.thumb.jpg.924e2083e0b52455f9207bb795a2c56e.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33044-whoop-ass-factory/
+    variants:
+      "176862":
+        filename: Mattb325WhoopAssFactory_DN.zip
+        files:
+          - Mattb325WhoopAssFactory_DN/IM$$3_8x8_Mattb325_WhoopAss_Factory_9997dab2.SC4Lot
+          - Mattb325WhoopAssFactory_DN/Mattb325_WhoopAssFactory_README.txt
+          - Mattb325WhoopAssFactory_DN/Mattb325_WhoopAss_Factory-0x5ad0e817_0xa917f298_0x30000.SC4Model
+          - Mattb325WhoopAssFactory_DN/Mattb325_WhoopAss_Factory-0x6534284a-0x3ec1db6a-0xb997da89.SC4Desc
+        sha256: e1abd37e8329dbc250df4ff17eaf63e01f7127fc594287d485fac1f96a26e62e
+        size: 2415957
+        uncompressed: 2834120
+      "176863":
+        filename: Mattb325WhoopAssFactory_MN.zip
+        files:
+          - Mattb325WhoopAssFactory_MN/IM$$3_8x8_Mattb325_WhoopAss_Factory_9997dab2.SC4Lot
+          - Mattb325WhoopAssFactory_MN/Mattb325_WhoopAssFactory_README.txt
+          - Mattb325WhoopAssFactory_MN/Mattb325_WhoopAss_Factory-0x5ad0e817_0xa917f298_0x30000.SC4Model
+          - Mattb325WhoopAssFactory_MN/Mattb325_WhoopAss_Factory-0x6534284a-0x3ec1db6a-0xb997da89.SC4Desc
+        sha256: deb50ad5ab826090a95d79c9bdc4021036caf29727578f50a99d17f7eb9afaf5
+        size: 2493835
+        uncompressed: 2910542
+    version: "1.0"
   simtropolis/33066-sm2-oil-pipeline-a-vol1:
     authors:
       - Simmer2
@@ -6196,10 +8510,209 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Canadian Bitters Factory by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	When your mouth-hole behaves more like your a-hole and forces your friends and associates to run the other way, then it is high time to consider a dose of Canadian Bitters.
+      </p>
+
+
+      <p>
+      	According to the product blurbs, this herb-derived tonic is for individuals who suffer from '<em>flatulent dyspepsia, gas and bloating</em>'.
+      </p>
+
+
+      <p>
+      	The product is real, but the factory is just fictional; however it draws on real life structures which would typically be involved with the manufacture of such products.<br>
+      	 <br>
+      	At the front of the building is a small reception area which leads to the main factory and delivery/dispatch area where vats simmer the bitter herbs for bottling and transport. <br>
+      	The top floor is for offices and the remaining floors are generally storage/staff amenities.
+      </p>
+
+
+      <p>
+      	The building is offered as an I-M growable Anchor and as a CS§§ growable (imagine that the factory has been converted to a cafe and other mixed uses) which is suitable for <abbr title="Wall-to-Wall">W2W</abbr> environments. The neon sign ensures this building really shines at night and adds a nice counter-point to the bats of other industry giants such as Jestarr, Gascooker, CP, Simhottody, Tag One, Fukuda and Simgoober.
+      </p>
+
+
+      <p>
+      	Both lots are 2x2.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>STATS CS§§:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                  2x2<br>
+      	Growth Stage:         4 (Medium &amp; High Density Zoning)<br>
+      	Bulldoze Cost:         § 415<br>
+      	Capacity Satisfied: CS§ 399, CS§§ 102<br>
+      	Pollution:                 3 (Air)/ 2 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    5/6/0<br>
+      	Power Consumed: 8 Mwh<br>
+      	Water Consumed:  99 Gal/Month<br>
+      	Building Style:         Euro/Chicago/New York/Houston<br>
+      	Occupant Group:    Medium Wealth Commercial Services Building
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>STATS I-M:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                  2x2<br>
+      	Growth Stage:         3 (High Density Zoning)<br>
+      	Bulldoze Cost:         § 477<br>
+      	Capacity Satisfied:  I-M 76<br>
+      	Pollution:                  4 (Air)/ 3 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:     9/13/0<br>
+      	Power Consumed:  5 Mwh<br>
+      	Water Consumed:   68 Gal/Month<br>
+      	Occupant Group:     Industrial Manufacturing Anchor Building
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (<a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>) 
+      </p>
+
+
+      <p>
+      	---------------------------------------
+      </p>
+
+
+      <p>
+      	DEPENDENCIES:
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)
+      </p>
+
+
+      <p>
+      	---------------------------------------
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters.jpg.8e8d57a34188e70f5a3444f216007e0a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters1.jpg.ba93638c92a6714fe0347d3a9d922dda.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters2.jpg.a8a158cfe4f4183306a6cd620d47c507.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters3.jpg.1531fc9b5e48cdbd452cdc81746cb46d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters4.jpg.faf12d0ef81a2cbe439843c8955c967e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters5.jpg.a35731160b366bcefc6edd917c709642.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters6.jpg.0fa53c07345541dc965f030bb26becb6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters7.jpg.aefbe9258b4351caa0795bc293896c68.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters8.jpg.f057c00d8e6c512aa8edee96ca1cc11f.jpg
     lastModified: 2019-09-17T03:23:59Z
     name: Canadian Bitters Factory
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_09/CanadianBitters.thumb.jpg.88ef24df4b40acd656090609aeead2c7.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33177-canadian-bitters-factory/
+    variants:
+      "177831":
+        filename: Mattb325_CanadianBitters_DN.zip
+        files:
+          - Mattb325_CanadianBitters_DN/CS$$4_2x2_Mattb325 Canadian Bitters(CS$$)_1b0293b8.SC4Lot
+          - Mattb325_CanadianBitters_DN/IM$$3_2x2_Mattb325 Canadian Bitters_3b0262fe.SC4Lot
+          - Mattb325_CanadianBitters_DN/Mattb325 Canadian Bitters(CS$$)-0x6534284a-0x3ec1db6a-0x7b02939f.SC4Desc
+          - Mattb325_CanadianBitters_DN/Mattb325 Canadian Bitters-0x6534284a-0x3ec1db6a-0x5b0262e0.SC4Desc
+          - Mattb325_CanadianBitters_DN/Mattb325_CanadianBitters-0x5ad0e817_0x4a827f6e_0x30000.SC4Model
+          - Mattb325_CanadianBitters_DN/Mattb325_CanadianBitters_README.txt
+        sha256: a569ff61509e97641d30d7cbbd339f9fc0937bc9fed35012eda989c1f90c7c66
+        size: 429972
+        uncompressed: 500372
+      "177832":
+        filename: Mattb325_CanadianBitters_MN.zip
+        files:
+          - Mattb325_CanadianBitters_MN/CS$$4_2x2_Mattb325 Canadian Bitters(CS$$)_1b0293b8.SC4Lot
+          - Mattb325_CanadianBitters_MN/IM$$3_2x2_Mattb325 Canadian Bitters_3b0262fe.SC4Lot
+          - Mattb325_CanadianBitters_MN/Mattb325 Canadian Bitters(CS$$)-0x6534284a-0x3ec1db6a-0x7b02939f.SC4Desc
+          - Mattb325_CanadianBitters_MN/Mattb325 Canadian Bitters-0x6534284a-0x3ec1db6a-0x5b0262e0.SC4Desc
+          - Mattb325_CanadianBitters_MN/Mattb325_CanadianBitters-0x5ad0e817_0x4a827f6e_0x30000.SC4Model
+          - Mattb325_CanadianBitters_MN/Mattb325_CanadianBitters_README.txt
+        sha256: 6ecd8d9c04c182dc11ce4d881296d9c0bd54162f8b0255382635d3320a4c0b70
+        size: 420099
+        uncompressed: 488038
+    version: 1.0.0
   simtropolis/33221-sm2-co2-scrubber:
     authors:
       - Simmer2
@@ -6324,10 +8837,165 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>The Like Factory, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	I recently saw some ads for companies offering to provide social media users (facebook/bloggers, etc) 'likes' for their posts or product placements for money.
+      </p>
+
+
+      <p>
+      	What has the world come to when a 'like' can carry currency and be used to skew data, user preferences, and so on? <img alt="*:P" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_3.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_3@2x.gif 2x" title="*:P" width="15" >
+      </p>
+
+
+      <p>
+      	In reality these companies would use platforms like airtasker/taskrabbit/service seeking etc to farm out piece-meal work in the gig economy to under-employed people willing to work for peanuts (or worse, people who actually think that such actions make a real difference), but my twisted sense of humor rather prefers the notion of a bland industrial unit full of folks slaving away clicking 'like' on old inane posts, old files etc, all day long.
+      </p>
+
+
+      <p>
+      	At any rate, it is not intended to be a 'serious' building but was rather an excuse to make another little IH-T building to compete with Maxis' stuff...there are still so few IH-T lots available. This is a growable building; it has been modded to not not become too weedy.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS IH-T§§§:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                    4x4 (Use the CTRL key when zoning)<br>
+      	Growth Stage:         2 (Medium and High Density Zoning)<br>
+      	Bulldoze Cost:          § 326<br>
+      	Capacity Satisfied:  IHT§§§ 272<br>
+      	Pollution:                    6 (Air)/ 2 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    6/7/0<br>
+      	Power Consumed:  49 Mwh<br>
+      	Water Consumed:   46 Gal/Month<br>
+      	Occupant Group:    Hi Tech Industrial Anchor Building
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite. <br>
+      	You must keep only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. Regardless of which file you choose to keep, make sure you DO NOT delete the Lot File!
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol04: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thanks, and enjoy!
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_11/Like.jpg.16c8bad88adef50ef385b9107b5fbea0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_11/Like1.jpg.9e840fe71e48b9733a2312cc790b4e2f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_11/Like2.jpg.c742798004228405a9ea13f1a58f5e66.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_11/Like3.jpg.daac35089365624d4c826d2aba0ccd79.jpg
     lastModified: 2020-11-09T19:24:02Z
     name: The Like Factory
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_11/Like.thumb.jpg.249433a81a313355d35fc08a125bbf40.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33946-the-like-factory/
+    variants:
+      "183661":
+        filename: Mattb325_TheLikeFactory_DN.zip
+        files:
+          - Mattb325_TheLikeFactory_DN/IHT$$$2_4x4_Mattb325 The Like Factory_0941f84c.SC4Lot
+          - Mattb325_TheLikeFactory_DN/Mattb325 The Like Factory-0x6534284a-0x3ec1db6a-0x3941f8b4.SC4Desc
+          - Mattb325_TheLikeFactory_DN/Mattb325 The Like Factory-0x6534284a-0x3ec1db6a-0x5941f834.SC4Desc
+          - Mattb325_TheLikeFactory_DN/Mattb325_The_Like_Factory-0x5ad0e817_0x89bb90b_0x30000.SC4Model
+          - Mattb325_TheLikeFactory_DN/Mattb325_The_Like_Factory_README.txt
+        sha256: b999bc811d5cd65fcee43b1797e47142c4550ef1d72fc10cc3287dad413a0221
+        size: 654155
+        uncompressed: 773294
+      "183662":
+        filename: Mattb325_TheLikeFactory_MN.zip
+        files:
+          - Mattb325_TheLikeFactory_MN/IHT$$$2_4x4_Mattb325 The Like Factory_0941f84c.SC4Lot
+          - Mattb325_TheLikeFactory_MN/Mattb325 The Like Factory-0x6534284a-0x3ec1db6a-0x3941f8b4.SC4Desc
+          - Mattb325_TheLikeFactory_MN/Mattb325 The Like Factory-0x6534284a-0x3ec1db6a-0x5941f834.SC4Desc
+          - Mattb325_TheLikeFactory_MN/Mattb325_The_Like_Factory-0x5ad0e817_0x89bb90b_0x30000.SC4Model
+          - Mattb325_TheLikeFactory_MN/Mattb325_The_Like_Factory_README.txt
+        sha256: 8f3a82d9ecd49690387b5b71f8e1be7b5811e2e2e66f70cae9bc1387ffe3ead5
+        size: 675887
+        uncompressed: 794426
+    version: 1.0.0
   simtropolis/33972-sm2-glycerol-distiller-facility:
     authors:
       - Simmer2
@@ -6372,18 +9040,355 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Astra Zeneca Laboratory by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	As the world waits for the roll-outs of vaccines to combat the effects of the pandemic and enjoy a return to a semblance of normal life, I thought I would make a <abbr title="Building Architect Tool">BAT</abbr> of one of the companies responsible.
+      </p>
+
+
+      <p>
+      	There are many companies making vaccines around the globe: Astra Zeneca is one of them.
+      </p>
+
+
+      <p>
+      	This is one of their many laboratories in the UK.
+      </p>
+
+
+      <p>
+      	I don't know if this one is making the vaccine or something far more benign like antacid, but for the purposes of SC4, let's assume it is...<br>
+      	 <br>
+      	I liked the decidedly domestic scale of this industrial building which will blend into a suburban location of high-tech industry.
+      </p>
+
+
+      <p>
+      	The building is offered as an I-HT growable Anchor on a 4x4 lot (use the CTRL key while zoning dense industrial to assist in growth).
+      </p>
+
+
+      <p>
+      	It is suited to both <abbr title="Colossus Addon Mod">CAM</abbr> and non-<abbr title="Colossus Addon Mod">CAM</abbr> cities and provides 292 Hi Tech jobs.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>STATS I-HT:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 4x4<br>
+      	Growth Stage:        3 (High Density Zoning)<br>
+      	Bulldoze Cost:        $ 274<br>
+      	Capacity Satisfied: I-HT 292<br>
+      	Pollution:                 7 (Air)/ 2 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    6/7/0<br>
+      	Power Consumed: 53 Mwh<br>
+      	Water Consumed:  49 Gal/Month<br>
+      	Occupant Group:    Industrial Hi-Tech Anchor Building
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies required.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+
+      <p>
+      	<em>Lastly, if you believe that the COVID-19 virus is a hoax, is engineered, or is part of a broader QAnon etc, conspiracy, that's fine: don't rate or download the model and please keep such comments to yourself. <img alt="*;)" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_2.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_2@2x.gif 2x" title="*;)" width="15" > This is just a little IH-T building that I'm sure many people will enjoy as there isn't much IH-T industrial stock to choose from on the exchanges. </em>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/AstraZeneca.jpg.477cb167f8cc5240c774a9401dacb963.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/AstraZeneca1.jpg.3fd828ee877d64868f1d5585a098caee.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/AstraZeneca2.jpg.e790e43c2b02114b62f902fcdc7cd67e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/AstraZeneca3.jpg.1f3750184da4706c3ae39f4794cd7a72.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/AstraZeneca4.jpg.63bd80172820db0bd1b0ebbe1d280c48.jpg
     lastModified: 2021-01-11T19:27:47Z
     name: Astra Zeneca Laboratory
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_01/AstraZeneca.thumb.jpg.871c2db2be7c61ee12332853ac105e2c.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34044-astra-zeneca-laboratory/
+    variants:
+      "184489":
+        filename: Mattb325_AstraZeneca_DN.zip
+        files:
+          - Mattb325_AstraZeneca_DN/IHT$$$3_4x4_Mattb325 Astra Zeneca_3d5e601c.SC4Lot
+          - Mattb325_AstraZeneca_DN/Mattb325 Astra Zeneca-0x6534284a-0x3ec1db6a-0x3d5e6009.SC4Desc
+          - Mattb325_AstraZeneca_DN/Mattb325_AstraZeneca-0x5ad0e817_0xecdfcb55_0x30000.SC4Model
+          - Mattb325_AstraZeneca_DN/Mattb325_AstraZeneca_README.txt
+        sha256: c24867bc39227bce6d3484caaa107df35848b5cc842111976bd1a65aee00f0b3
+        size: 1200563
+        uncompressed: 1402693
+      "184490":
+        filename: Mattb325_AstraZeneca_MN.zip
+        files:
+          - Mattb325_AstraZeneca_MN/IHT$$$3_4x4_Mattb325 Astra Zeneca_3d5e601c.SC4Lot
+          - Mattb325_AstraZeneca_MN/Mattb325 Astra Zeneca-0x6534284a-0x3ec1db6a-0x3d5e6009.SC4Desc
+          - Mattb325_AstraZeneca_MN/Mattb325_AstraZeneca-0x5ad0e817_0xecdfcb55_0x30000.SC4Model
+          - Mattb325_AstraZeneca_MN/Mattb325_AstraZeneca_README.txt
+        sha256: 02a4ea373426490bb5bff903c01e590485fb5d696e9a42175ebd74d2e66bfee6
+        size: 1252276
+        uncompressed: 1454529
+    version: 1.0.0
   simtropolis/34048-bonfolk-hosiery:
     authors:
       - mattb325
     category: industry
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Bonfolk Hosiery Factory by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	This building is inspired by one in Troy, NY.
+      </p>
+
+
+      <p>
+      	These sorts of monumental and solidly constructed brick factories were common-place in the early 20th Century. While most were torn down from about 1970, some still remain either as abandoned relics or as converted commercial/residential spaces. 
+      </p>
+
+
+      <p>
+      	In SC4, I have made this building house a hosiery factory, which among other things, makes socks. A large neon sign lends a retro vibe to the building.
+      </p>
+
+
+      <p>
+      	The factory is offered as an I-M growable Anchor and comes in two lot sizes: 5x5 and 3x4 (use the CTRL key when zoning).
+      </p>
+
+
+      <p>
+      	<br>
+      	It is suited to <abbr title="Colossus Addon Mod">CAM</abbr> and non-<abbr title="Colossus Addon Mod">CAM</abbr> cities alike and provides 354 jobs. Use Buggis extra cheats to make this growable building (and indeed all other growable buildings) available to plop from a drop-down menu.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>STATS I-M:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 5x5 &amp; 3x4<br>
+      	Growth Stage:        3 (High Density Zoning)<br>
+      	Bulldoze Cost:        $ 515<br>
+      	Capacity Satisfied: I-M 354<br>
+      	Pollution:                 21 (Air)/ 14 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    9/13/0<br>
+      	Power Consumed: 22 Mwh<br>
+      	Water Consumed:  318 Gal/Month<br>
+      	Occupant Group:    Industrial Manufacturing Anchor Building
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack - Cycledogg V01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>)
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/Bonfolk.jpg.69b42f6b6741b4d07e6097504bd88f2a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/Bonfolk1.jpg.a36b16e6b1beb071769b0c1306ed83bb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/Bonfolk2.jpg.98c4ca0dba0a90c8d48be815697ec363.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/Bonfolk3.jpg.9d52ff290be5713d41df832ebefb0b6c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/Bonfolk4.jpg.ece3d0897a97b763cb39c09ecb0452d4.jpg
     lastModified: 2021-01-14T20:42:48Z
     name: Bonfolk Hosiery
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_01/Bonfolk.thumb.jpg.148952caaaa916adb3fb4bbc73a2bd11.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34048-bonfolk-hosiery/
+    variants:
+      "184524":
+        filename: Mattb325_BonfolkHosiery_DN.zip
+        files:
+          - Mattb325_BonfolkHosiery_DN/IM$$3_3x4_Mattb325 Bonfolk Hosiery_6ce725f9.SC4Lot
+          - Mattb325_BonfolkHosiery_DN/IM$$3_5x5_Mattb325 Bonfolk Hosiery_8ce69082.SC4Lot
+          - Mattb325_BonfolkHosiery_DN/Mattb325 Bonfolk Hosiery-0x6534284a-0x3ec1db6a-0x5d5fd9df.SC4Desc
+          - Mattb325_BonfolkHosiery_DN/Mattb325_BonfolkHosiery_README.txt
+          - Mattb325_BonfolkHosiery_DN/Mattb325_Bonfolk_Hosiery-0x5ad0e817_0x8ce14674_0x30000.SC4Model
+        sha256: f24c93f29cc12fa118dd3cf1277002a276d2d34c0d96eefaa6b5af5301a96bbc
+        size: 1066590
+        uncompressed: 1227313
+      "184525":
+        filename: Mattb325_BonfolkHosiery_MN.zip
+        files:
+          - Mattb325_BonfolkHosiery_MN/IM$$3_3x4_Mattb325 Bonfolk Hosiery_6ce725f9.SC4Lot
+          - Mattb325_BonfolkHosiery_MN/IM$$3_5x5_Mattb325 Bonfolk Hosiery_8ce69082.SC4Lot
+          - Mattb325_BonfolkHosiery_MN/Mattb325 Bonfolk Hosiery-0x6534284a-0x3ec1db6a-0x5d5fd9df.SC4Desc
+          - Mattb325_BonfolkHosiery_MN/Mattb325_BonfolkHosiery_README.txt
+          - Mattb325_BonfolkHosiery_MN/Mattb325_Bonfolk_Hosiery-0x5ad0e817_0x8ce14674_0x30000.SC4Model
+        sha256: 79f1a8c7badd5ca940d3c3a6184a8b073b3db46ed62a92a793da028a25071b49
+        size: 1046056
+        uncompressed: 1204560
+    version: 1.0.0
   simtropolis/34054-sm2-brass-stamping-co-grow:
     authors:
       - Simmer2
@@ -6420,10 +9425,180 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies:
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/27563-shk-parking-pack
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Pfizer Laboratory by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	As the world waits for the roll-outs of vaccines to combat the effects of the pandemic and enjoy a return to a semblance of normal life, I thought I would make a <abbr title="Building Architect Tool">BAT</abbr> of one of the companies responsible.
+      </p>
+
+
+      <p>
+      	There are many companies making vaccines around the globe: Pfizer is one of them.
+      </p>
+
+
+      <p>
+      	This is based on one of the massive facilities in Andover MA (it is not a recreation, as that would take about 40 tiles)...<br>
+      	 <br>
+      	Despite being scaled back considerably, this is still a massive IHT Bat by SC4 standards, and the complex angles help break the grid.
+      </p>
+
+
+      <p>
+      	The building is offered as an I-HT growable Anchor on an 8x8 lot (use the CTRL key while zoning dense industrial to assist in growth) or download Buggis extra cheats to make this ploppable from a drop down menu.
+      </p>
+
+
+      <p>
+      	It is suited to both <abbr title="Colossus Addon Mod">CAM</abbr> and non-<abbr title="Colossus Addon Mod">CAM</abbr> cities and provides 292 Hi Tech jobs.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>STATS I-HT:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                   8x8<br>
+      	Growth Stage:         3 (High Density Zoning)<br>
+      	Bulldoze Cost:         $ 417<br>
+      	Capacity Satisfied:  I-HT 1,508<br>
+      	Pollution:                  21 (Air)/ 8 (Water)/ 6 (Garbage )<br>
+      	Pollution Radius:     6/7/0<br>
+      	Power Consumed:  157 Mwh<br>
+      	Water Consumed:   147 Gal/Month<br>
+      	Occupant Group:     Industrial Hi-Tech Anchor Building
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol04: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672</a>)
+      </p>
+
+
+      <p>
+      	Super SHK MEGA Parking Textures: (<a href="https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/" rel="">https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/</a>)
+      </p>
+
+
+      <p>
+      	SHK Parking Pack: (<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">https://community.simtropolis.com/files/file/27563-shk-parking-pack/</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Pfizer.jpg.54eb03c8792dbcc84d7a4a441fc390da.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Pfizer1.jpg.a772c34b484f3ea2860d7187007e9d5e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Pfizer2.jpg.33b166a8d83c629ffd120c80feb9b278.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Pfizer3.jpg.83318d01ce1f2820465f15f938106d96.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Pfizer4.jpg.b8dec9a929a1dc86b39aabecae93b87f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Pfizer4a.jpg.488f9bd1a9b3b389b7c9dec2c5586a42.jpg
     lastModified: 2021-02-05T18:51:44Z
     name: Pfizer Laboratory
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_02/Pfizer.thumb.jpg.72ca8fafe947ddd11d33f7067e78beef.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34095-pfizer-laboratory/
+    variants:
+      "184923":
+        filename: Mattb325_PfizerLabs_DN.zip
+        files:
+          - Mattb325_PfizerLabs_DN/IHT$$$3_8x8_Mattb325 Pfizer Laboratories_8d88beaa.SC4Lot
+          - Mattb325_PfizerLabs_DN/Mattb325 Pfizer Laboratories-0x6534284a-0x3ec1db6a-0x3d88be87.SC4Desc
+          - Mattb325_PfizerLabs_DN/Mattb325_PfizerLabs_README.txt
+          - Mattb325_PfizerLabs_DN/Mattb325_Pfizer_Laboratories-0x5ad0e817_0xaf9e9ecf_0x30000.SC4Model
+        sha256: fbd433d1d5adcb09b02276fc6cb49336b1ae185bde932e865aaa6679e1def4ca
+        size: 3371501
+        uncompressed: 3954687
+      "184924":
+        filename: Mattb325_PfizerLabs_MN.zip
+        files:
+          - Mattb325_PfizerLabs_MN/IHT$$$3_8x8_Mattb325 Pfizer Laboratories_8d88beaa.SC4Lot
+          - Mattb325_PfizerLabs_MN/Mattb325 Pfizer Laboratories-0x6534284a-0x3ec1db6a-0x3d88be87.SC4Desc
+          - Mattb325_PfizerLabs_MN/Mattb325_PfizerLabs_README.txt
+          - Mattb325_PfizerLabs_MN/Mattb325_Pfizer_Laboratories-0x5ad0e817_0xaf9e9ecf_0x30000.SC4Model
+        sha256: 59d07326793bc7f9187bab693ea1e39af133c91971e4869c7d312c3ef36d683c
+        size: 3233311
+        uncompressed: 3799218
+    version: 1.0.0
   simtropolis/34097-apple-hq-beta-version:
     authors:
       - kellydale2003
@@ -6901,10 +10076,200 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Charles St Foundry by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	Made as a request, this building draws its inspiration from a river-side foundry on Charles/Mill St, Providence, Rhode Island.
+      </p>
+
+
+      <p>
+      	These sorts of solidly constructed brick factories were common-place in the early 20th Century. While most were torn down, some still remain either as abandoned relics or as converted commercial/residential spaces. 
+      </p>
+
+
+      <p>
+      	<br>
+      	The building is offered as a functional I-M ploppable which has custom foundation walls and is modded so that it can be placed along the sloping areas of a river bank (thus leaving the retaining wall exposed to the water) and an I-M 3x2 growable Anchor lot.
+      </p>
+
+
+      <p>
+      	If using the building to act as a retaining wall along in-game water, just stabilise the land using the single street tile method as I have shown in the pictures. It can also be used with ploppable water or just plopped on flat ground.
+      </p>
+
+
+      <p>
+      	It is suited to <abbr title="Colossus Addon Mod">CAM</abbr> and non-<abbr title="Colossus Addon Mod">CAM</abbr> cities alike and provides 15 jobs. 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>STATS I-M:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 3x2<br>
+      	Growth Stage:        2 (Medium &amp; High Density Zoning)<br>
+      	Bulldoze Cost:        $ 234<br>
+      	Capacity Satisfied: I-M 15<br>
+      	Pollution:                 1 (Air)/ 1 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    16/20/0<br>
+      	Power Consumed: 12 Mwh<br>
+      	Water Consumed:  5 Gal/Month<br>
+      	Occupant Group:    Industrial Manufacturing Anchor Building
+      </p>
+
+
+      <p>
+      	<strong>STATS I-M Ploppable:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 1x3<br>
+      	Plop Cost:               $ 624<br>
+      	Bulldoze Cost:        $ 234<br>
+      	Capacity Satisfied: I-M 15<br>
+      	Pollution:                 1 (Air)/ 1 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:    16/20/0<br>
+      	Power Consumed: 12 Mwh<br>
+      	Water Consumed:  5 Gal/Month<br>
+      	Occupant Group:    Industrial Manufacturing Anchor Building<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)
+      </p>
+
+
+      <p>
+      	---------------------------------------
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry.jpg.391f9b258d952e4f9d33de9b00e575ae.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry1.jpg.00e26c4077f60a4469dfb73d8381603b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry1a.jpg.dbabe15cacedf973773b230b134ccc4d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry2.jpg.7a6446f33decfc7e37412ebca97e76a5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry2a.jpg.1eeb99bf73337398f2d4f35ce4ee22af.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry3.jpg.55a03117b7e3bee37c977edd3c117122.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry4.jpg.64846fc2d964cfb73b59e04bd387addb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry5.jpg.fccd7d8af4218aad798b58fc981a1b9b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry6.jpg.5ac1557b9d7ea9d49daa8a2dbfa1ecd8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry7.jpg.a598d86369f44f63c4f5d8d3f7bddef9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry8.jpg.c11c29f666b30e3901d666e8aeb54748.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry9.jpg.18840be2112578929271a02c95f94f43.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry9a.jpg.04095f94b36fe8c4ad52378d05362fb8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry9b.jpg.609787945c4695b06b6f2fa471630d5f.jpg
     lastModified: 2021-08-15T05:03:05Z
     name: Charles St Foundry
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_08/CharlesStFoundry.thumb.jpg.9f7cae2f71225142dd9896998d1e1693.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34650-charles-st-foundry/
+    variants:
+      "189717":
+        filename: Mattb325_CharlesStFoundry_DN.zip
+        files:
+          - Mattb325_CharlesStFoundry_DN/ID$$2_3x2_Mattb325 Charles St Foundry_adf45ec0.SC4Lot
+          - Mattb325_CharlesStFoundry_DN/Mattb325 Charles St Foundry(prop)-0x6534284a-0x3ec1db6a-0x9e6da6eb.SC4Desc
+          - Mattb325_CharlesStFoundry_DN/Mattb325 Charles St Foundry-0x6534284a-0x3ec1db6a-0x5e6da74a.SC4Desc
+          - Mattb325_CharlesStFoundry_DN/Mattb325_CharlesStFoundry-0x5ad0e817_0x50d2aedc_0x30000.SC4Model
+          - Mattb325_CharlesStFoundry_DN/Mattb325_CharlesStFoundryRetainingWall-0x5ad0e817_0xf0d2b73e_0x30000.SC4Model
+          - Mattb325_CharlesStFoundry_DN/Mattb325_CharlesStFoundryRetainingWall-0x6534284a-0x3ec1db6a-0xde6dae28.SC4Desc
+          - Mattb325_CharlesStFoundry_DN/Mattb325_CharlesStFoundry_README.txt
+          - Mattb325_CharlesStFoundry_DN/PLOP_1x3_Mattb325 Charles St Foundry Riverside_edf45ea1.SC4Lot
+        sha256: aa621e12ee78c53f8d76f8b9a66fa795e55cc696a57524e8932d494775d9d7fa
+        size: 460136
+        uncompressed: 536045
+      "189718":
+        filename: Mattb325_CharlesStFoundry_MN.zip
+        files:
+          - Mattb325_CharlesStFoundry_MN/ID$$2_3x2_Mattb325 Charles St Foundry_adf45ec0.SC4Lot
+          - Mattb325_CharlesStFoundry_MN/Mattb325 Charles St Foundry(prop)-0x6534284a-0x3ec1db6a-0x9e6da6eb.SC4Desc
+          - Mattb325_CharlesStFoundry_MN/Mattb325 Charles St Foundry-0x6534284a-0x3ec1db6a-0x5e6da74a.SC4Desc
+          - Mattb325_CharlesStFoundry_MN/Mattb325_CharlesStFoundry-0x5ad0e817_0x50d2aedc_0x30000.SC4Model
+          - Mattb325_CharlesStFoundry_MN/Mattb325_CharlesStFoundryRetainingWall-0x5ad0e817_0xf0d2b73e_0x30000.SC4Model
+          - Mattb325_CharlesStFoundry_MN/Mattb325_CharlesStFoundryRetainingWall-0x6534284a-0x3ec1db6a-0xde6dae28.SC4Desc
+          - Mattb325_CharlesStFoundry_MN/Mattb325_CharlesStFoundry_README.txt
+          - Mattb325_CharlesStFoundry_MN/PLOP_1x3_Mattb325 Charles St Foundry Riverside_edf45ea1.SC4Lot
+        sha256: 6c887640a4a28be12af121873afa8683edf46c6c0154e18fb4ee206b3596a914
+        size: 474964
+        uncompressed: 550596
+    version: 1.0.0
   simtropolis/34652-queens-industrial-warehouses:
     authors:
       - EffTheGrid
@@ -6917,18 +10282,405 @@ assets:
     authors:
       - mattb325
     category: industry
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Pigs Ass Porter Brewing Co. by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	This Brewery building is fictional, but the beer - "Pigs Ass Porter" is <em>real</em>: an award winning London-style dark ale. 
+      </p>
+
+
+      <p>
+      	Even though the building is fictional, these sorts of solidly constructed brick factories were common-place in the early 20th Century.  This I-M building is highly detailed and, unlike many I-M buildings, does not wear the pastiche of run-down rusty griminess, so will look just as good in an industrial wasteland as it would in at the edge of an urban core.
+      </p>
+
+
+      <p>
+      	<br>
+      	The building is offered as an I-M 4x4 and 5x5 growable Anchor lot. If you wish to make this building ploppable, I would suggest downloading Buggis Extra Cheats.
+      </p>
+
+
+      <p>
+      	It is suited to <abbr title="Colossus Addon Mod">CAM</abbr> and non-<abbr title="Colossus Addon Mod">CAM</abbr> cities alike and provides 639 jobs. 
+      </p>
+
+
+      <p>
+      	Additionally, the little beer truck is provided as a separate prop.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>STATS I-M:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 4x4 &amp; 5x5<br>
+      	Growth Stage:        3 (High Density Zoning)<br>
+      	Bulldoze Cost:        $ 541<br>
+      	Capacity Satisfied: I-M 639<br>
+      	Pollution:                 33 (Air)/ 22 (Water)/ 5 (Garbage )<br>
+      	Pollution Radius:    9/13/0<br>
+      	Power Consumed: 34 Mwh<br>
+      	Water Consumed:  508 Gal/Month<br>
+      	Occupant Group:    Industrial Manufacturing Anchor Building
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack - Cycledogg V01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/PigsAss.jpg.addc6356f3d086c19197685f0dfd2e0e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/PigsAss1.jpg.73247536b9f24f662798c5116d4daa40.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/PigsAss2.jpg.3909508b145f56bbc32cfebc82cc5102.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/PigsAss3.jpg.0d0afbe55fafcae4b6906418bc8cc863.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/PigsAss4.jpg.3e770b70c99ae9049649f394905e2944.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/PigsAss4a.jpg.78d52798cfadeccbe4ce0a47a003899e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/PigsAss5.jpg.63eb045031217a66ae379925d4c0eec7.jpg
     lastModified: 2021-10-03T22:28:34Z
     name: Pigs Ass Porter Brewing Co
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_10/PigsAss.thumb.jpg.dfdae66d6492aed31353ee4b23d2e2a7.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34700-pigs-ass-porter-brewing-co/
+    variants:
+      "190100":
+        filename: Mattb325_PigsAssBrewery_DN.zip
+        files:
+          - Mattb325_PigsAssBrewery_DN/IM$$3_4x4_Mattb325 Pigs Ass Brewery_ae09475b.SC4Lot
+          - Mattb325_PigsAssBrewery_DN/IM$$3_5x5_Mattb325 Pigs Ass Brewery_4e094741.SC4Lot
+          - Mattb325_PigsAssBrewery_DN/Mattb325 Beer Truck-0x6534284a-0x3ec1db6a-0x3e82a4a4.SC4Desc
+          - Mattb325_PigsAssBrewery_DN/Mattb325 Pigs Ass Brewery-0x6534284a-0x3ec1db6a-0xde8290b4.SC4Desc
+          - Mattb325_PigsAssBrewery_DN/Mattb325_BeerTruck-0x5ad0e817_0x50989393_0x30000.SC4Model
+          - Mattb325_PigsAssBrewery_DN/Mattb325_PigsAssBrewery-0x5ad0e817_0xb097cfd4_0x30000.SC4Model
+          - Mattb325_PigsAssBrewery_DN/Mattb325_PigsAssBrewery_README.txt
+        sha256: d63415d3cc9b9b9de4a19a737a4533ca98d249470f3fc0d573167648094cc7d9
+        size: 1463159
+        uncompressed: 1731127
+      "190101":
+        filename: Mattb325_PigsAssBrewery_MN.zip
+        files:
+          - Mattb325_PigsAssBrewery_MN/IM$$3_4x4_Mattb325 Pigs Ass Brewery_ae09475b.SC4Lot
+          - Mattb325_PigsAssBrewery_MN/IM$$3_5x5_Mattb325 Pigs Ass Brewery_4e094741.SC4Lot
+          - Mattb325_PigsAssBrewery_MN/Mattb325 Beer Truck-0x6534284a-0x3ec1db6a-0x3e82a4a4.SC4Desc
+          - Mattb325_PigsAssBrewery_MN/Mattb325 Pigs Ass Brewery-0x6534284a-0x3ec1db6a-0xde8290b4.SC4Desc
+          - Mattb325_PigsAssBrewery_MN/Mattb325_BeerTruck-0x5ad0e817_0x50989393_0x30000.SC4Model
+          - Mattb325_PigsAssBrewery_MN/Mattb325_PigsAssBrewery-0x5ad0e817_0xb097cfd4_0x30000.SC4Model
+          - Mattb325_PigsAssBrewery_MN/Mattb325_PigsAssBrewery_README.txt
+        sha256: 3bb1b2c6f25bc843165a4e943c64caf643af52e5f10c9c9fb94d7f42d7a8ff3d
+        size: 1412955
+        uncompressed: 1672629
+    version: 1.0.0
   simtropolis/34722-asn-co-sydney:
     authors:
       - mattb325
     category: industry
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>ASN Co Building, Sydney, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	The ASN Co building was completed in 1885 in a building style known as 'Pre-Federation Anglo Dutch'. The building served as the main offices and warehouse for the Australasian Steam Navigation Co until 1889. Between 1889 and 1989 it was used as government administration offices. <br>
+      	This prominent landmark on Sydney Cove has been used as an art gallery since 1989. It is heritage listed.
+      </p>
+
+
+      <p>
+      	This historic building is a stylish addition to any industrial/waterfront area: it is provided with 3 options to allow maximum flexibility.
+      </p>
+
+
+      <p>
+      	The first option is a 2x4 ploppable IM with overhanging wharves. This option allows you to use any suitable seawalls and ploppable ships of your choice (as in the pictures) and ties in with the building's historic function.
+      </p>
+
+
+      <p>
+      	The second option is a 3x4 Reward which functions as a tourist trap and provides jobs, boosts desirability and lifts demand caps, etc, etc. It does not require any pre-existing conditions to be met before placing the lot, nor does it over-write any existing rewards and it can be plopped as often as you like.
+      </p>
+
+
+      <p>
+      	The third option is a 4x4 IM growable anchor lot.
+      </p>
+
+
+      <p>
+      	Stats for each option are listed below.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS I-M Ploppable:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                   2x4<br>
+      	Bulldoze Cost:         $694<br>
+      	Plop Cost:                $10,590<br>
+      	Jobs:                         IM 334<br>
+      	Pollution:                  20 (Air)/ 13 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:     9/13/0<br>
+      	Power Consumed:  21 Mwh<br>
+      	Water Consumed:   300 Gal/Month<br>
+      	Occupant Group:     Landmark; IM; Anchor
+      </p>
+
+
+      <p>
+      	<strong>STATS Reward:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 3x4<br>
+      	Bulldoze Cost:       $30,460<br>
+      	Plop Cost:               $0<br>
+      	Demand Satisfied: R$ 160,000, R$$ 160,000, R$$$ 20,000. CO$$ 160,000, CO$$$ 20,000. ID 10,000, IM 600,000 IHT 2,000<br>
+      	Demand Created:  Jobs$ 50; Jobs $$ 90; Jobs $$$ 10.<br>
+      	Landmark Effect:  +60 over 38 tiles<br>
+      	Park Effect:            +35 over 19 tiles<br>
+      	Pollution:                1 (Air)/ 1 (Water)/ 51 (Garbage )<br>
+      	Pollution Radius:   2/2/0<br>
+      	Power Consumed: 37 Mwh<br>
+      	Water Consumed: 60 Gal/Month<br>
+      	Monthly Cost:        $50<br>
+      	Occupant Group:   Landmark Ogle; Reward; Tourist; YIMBY
+      </p>
+
+
+      <p>
+      	<strong>STATS I-M Growable:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                4x4<br>
+      	Growth Stage:       3 (High Density)<br>
+      	Bulldoze Cost:       $694<br>
+      	Jobs:                       IM 334<br>
+      	Pollution:                20 (Air)/ 13 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:   9/13/0<br>
+      	Power Consumed: 21 Mwh<br>
+      	Water Consumed:  300 Gal/Month<br>
+      	Occupant Group:    IM; Anchor
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version.
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - JES Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=342" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=342</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack - Cycledogg V01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co.jpg.3bbef3fdb2b3418f1fad2c219823acad.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co1.jpg.345c2a75861052ed4e4022eaf7071e6b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co2.jpg.6014e0d6dabe912695f7b333c1a4d59a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co3.jpg.c22cb3bbc269b384f317a4ce1d2b1518.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co3a.jpg.7c9518c5c66f4e78adfd58a43aac687a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co3b.jpg.fb14c4f5ed9b8405babf55910dcd5c8a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co3c.jpg.611dc462ef0152cf12e763689049d790.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co3d.jpg.54cc21e580e5ffd493aa4422dff66c12.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co4.jpg.23706ab157ac4d0cb683fa45d9949920.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co5.jpg.d433b8d6648360610e9aac67e22dd1b5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co6.jpg.8409a3cc750da59799dda9423d56b89b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co7.jpg.d1b349f063d3fb09088d7a81b3abb73d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co8.jpg.0b0866fa959fc9e34d54a135afa97131.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co9.jpg.a3ee7d3ad8568df6bafb3fe0d9e89621.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co9a.jpg.d9e9648e1c23662e07aeec759380c170.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co9b.jpg.0057c5a8de088268af9c8197908a23b5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co9c.jpg.16d7c50730de9842d2c6d448500c7463.jpg
     lastModified: 2021-10-23T05:30:45Z
     name: ASN Co Sydney
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_10/ASN_Co.thumb.jpg.28539b48086a81d0e51c543e124006f3.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34722-asn-co-sydney/
+    variants:
+      "190263":
+        filename: Mattb325_ASN_Co_DN.zip
+        files:
+          - Mattb325_ASN_Co_DN/IM$$3_4x4_Mattb325 ASN Co (IM)_9e951232.SC4Lot
+          - Mattb325_ASN_Co_DN/Mattb325 ASN Co (IM)-0x6534284a-0x3ec1db6a-0x3e9511f1.SC4Desc
+          - Mattb325_ASN_Co_DN/Mattb325_ASN_Co-0x5ad0e817_0xf08292aa_0x30000.SC4Model
+          - Mattb325_ASN_Co_DN/Mattb325_ASN_Co_Sydney_README.txt
+          - Mattb325_ASN_Co_DN/PLOP_2x4_Mattb325 ASN Co (IM Plop)_2e9512b0.SC4Lot
+          - Mattb325_ASN_Co_DN/PLOP_3x4_Mattb325 ASN Co (Reward)_4e951339.SC4Lot
+        sha256: af1286c67eefb83048f3daadbeedd9e510a3dbeda532cfdc67db57fa6296bd5c
+        size: 1119444
+        uncompressed: 1299990
+      "190264":
+        filename: Mattb325_ASN_Co_MN.zip
+        files:
+          - Mattb325_ASN_Co_MN/IM$$3_4x4_Mattb325 ASN Co (IM)_9e951232.SC4Lot
+          - Mattb325_ASN_Co_MN/Mattb325 ASN Co (IM)-0x6534284a-0x3ec1db6a-0x3e9511f1.SC4Desc
+          - Mattb325_ASN_Co_MN/Mattb325_ASN_Co-0x5ad0e817_0xf08292aa_0x30000.SC4Model
+          - Mattb325_ASN_Co_MN/Mattb325_ASN_Co_Sydney_README.txt
+          - Mattb325_ASN_Co_MN/PLOP_2x4_Mattb325 ASN Co (IM Plop)_2e9512b0.SC4Lot
+          - Mattb325_ASN_Co_MN/PLOP_3x4_Mattb325 ASN Co (Reward)_4e951339.SC4Lot
+        sha256: 68bc4ef6b8da005fc628a4d99103cd52b95ce382f3f26383e8ab571c0fadf36a
+        size: 1084395
+        uncompressed: 1260244
+    version: 1.0.0
   simtropolis/3476-gm-tech-center:
     authors:
       - bluob
@@ -9924,7 +13676,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -10164,6 +13928,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p>
       	PHIL <abbr title="Industrial Revolution Mod">IRM</abbr> Grass Angles Filler Lots
@@ -10333,6 +14103,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
 
 
@@ -10510,6 +14286,12 @@ assets:
 
 
 
+
+
+
+
+
+
       							
       <p>
       	PHIL <abbr title="Industrial Revolution Mod">IRM</abbr> Mixed Concrete Angles Filler Lots
@@ -10675,6 +14457,70 @@ assets:
     uncompressed: 2717629
     url: https://community.simtropolis.com/files/file/36414-phil-irm-fillers-mixed-concrete-angles/
     version: 1.0.0
+  simtropolis/36468-plopable-pclark06-dhl-logistics-center-with-new-menus-and-sound:
+    authors:
+      - atsf189
+    category: industry
+    lastModified: 2024-09-27T02:28:03Z
+    name: Plopable pclark06 DHL Logistics Center with New Menus and Sound
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66f618333cd50_DHLMenuQuery.thumb.jpg.d4657a4d64e77ae23f3dacbe4d0881ba.jpg
+    url: https://community.simtropolis.com/files/file/36468-plopable-pclark06-dhl-logistics-center-with-new-menus-and-sound/
+  simtropolis/36469-plopable-pclark06-fedex-logistics-center-with-new-menus-and-sound:
+    authors:
+      - atsf189
+    category: industry
+    lastModified: 2024-09-27T02:33:12Z
+    name: Plopable pclark06 Fedex Logistics Center with New Menus and Sound
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66f61967cd93b_FedexMenu.thumb.jpg.e43fb89c5190436bb849f77705f50c91.jpg
+    url: https://community.simtropolis.com/files/file/36469-plopable-pclark06-fedex-logistics-center-with-new-menus-and-sound/
+  simtropolis/36470-plopable-pclark06-ups-logistics-center-with-new-menus-and-sound:
+    authors:
+      - atsf189
+    category: industry
+    lastModified: 2024-09-27T02:38:22Z
+    name: Plopable pclark06 UPS Logistics Center with New Menus and Sound
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/UPS.thumb.jpg.c071e6c88c8147255c190c68ac103444.jpg
+    url: https://community.simtropolis.com/files/file/36470-plopable-pclark06-ups-logistics-center-with-new-menus-and-sound/
+  simtropolis/36471-plopable-pclark06-us-postal-logistics-center-with-new-menus-and-sound:
+    authors:
+      - atsf189
+    category: industry
+    lastModified: 2024-09-27T02:43:15Z
+    name: Plopable pclark06 US Postal Logistics Center with New Menus and Sound
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66f61bc31f855_USPostal.thumb.jpg.1fe3c2754d29f285204b3dc2b8b2f7c8.jpg
+    url: https://community.simtropolis.com/files/file/36471-plopable-pclark06-us-postal-logistics-center-with-new-menus-and-sound/
+  simtropolis/36496-innovation-center:
+    authors:
+      - Jasoncw
+    category: industry
+    lastModified: 2024-10-10T03:05:13Z
+    name: Innovation Center
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/67074468d21d6_InnovationCenter00.thumb.jpg.29699e3b8c7a35bf1d8f69c6bbb8bbc1.jpg
+    url: https://community.simtropolis.com/files/file/36496-innovation-center/
+  simtropolis/36501-plopable-atsf189-fedex-air-logistics-center:
+    authors:
+      - atsf189
+    category: industry
+    lastModified: 2024-10-14T17:20:03Z
+    name: Plopable atsf189 Fedex Air Logistics Center
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/670d52c308ed5_FedExlAirLogisticsCenterMenu.thumb.jpg.5674ec2ef7e1e1eca214088e2b585719.jpg
+    url: https://community.simtropolis.com/files/file/36501-plopable-atsf189-fedex-air-logistics-center/
+  simtropolis/36502-plopable-atsf189-ups-air-logistics-center:
+    authors:
+      - atsf189
+    category: industry
+    lastModified: 2024-10-14T17:29:59Z
+    name: Plopable atsf189 UPS Air Logistics Center
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/670d551719861_UPSAirLogisticsCenterMenu.thumb.jpg.ccded2bfcec89f08374181483cb45f9d.jpg
+    url: https://community.simtropolis.com/files/file/36502-plopable-atsf189-ups-air-logistics-center/
+  simtropolis/36503-plopable-atsf189-us-postal-air-logistics-center:
+    authors:
+      - atsf189
+    category: industry
+    lastModified: 2024-10-14T17:38:00Z
+    name: Plopable atsf189 US Postal Air Logistics Center
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/670d56f864858_USPostalAirLogisticsCenterMenu.thumb.jpg.eb3fce4ce5252e9736011d3ebc482abc.jpg
+    url: https://community.simtropolis.com/files/file/36503-plopable-atsf189-us-postal-air-logistics-center/
   simtropolis/3746-simworld-auto-truck-engine-plant-ver-12:
     authors:
       - ak72
@@ -11034,10 +14880,39 @@ assets:
     authors:
       - Buggi
     category: industry
+    dependencies: []
+    description: |-
+      <body>
+      							
+      							
+      <p>Enough cutsy parks and pretty flower gardens!!  Time for some down and DIRTY park making!</p>
+      <p> </p>
+      <p>
+      New and improved! Requires newest all building prop plugin from Maxis to work (uses Industrial building props).</p>
+      <p> </p>
+      <p>
+      Enjoy!</p>
+      <p>
+      *update*</p>
+      <p>
+      Naturally nothing in this lot is incompatible with RushHour</p>
+
+      						</body>
+    filename: Smogger2.zip
+    files:
+      - Pz4x4_Smogger_8c076735.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/0018/9c99e5de527570b77d05ab502bf52f1a-smoggerv2.jpg
+      - https://www.simtropolis.com/objects/screens/0018/9c99e5de527570b77d05ab502bf52f1a-smogger2.jpg
     lastModified: 2003-10-08T21:12:51Z
     name: The Smogger
+    sha256: b520b3d3c385a65b386f54f8b44c761d3cf81ec76cae0ae09a7f3b852bf11e59
+    size: 50862
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-9c99e5de527570b77d05ab502bf52f1a-smoggerv2.jpg
+    timestamp: 2024-10-16T05:34:04.255Z
+    uncompressed: 55691
     url: https://community.simtropolis.com/files/file/72-the-smogger/
+    version: "1.0"
   simtropolis/768-duff-beer-brewery-springfield-usa:
     authors:
       - themallard12
@@ -11111,4 +14986,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-7595867db4de7599ada3df6de405bad4-umbrella.jpg
     url: https://community.simtropolis.com/files/file/976-umbrella-inc-research-facility/
 
-timestamp: 2024-09-13T12:22:00.820Z
+timestamp: 2024-10-17T06:14:27.427Z

@@ -432,9 +432,9 @@ export const useStore = create<Store>()((set, get): Store => {
     packageFilters: {
       authors: [],
       categories: [],
-      dependencies: false,
-      experimental: false,
-      incompatible: false,
+      dependencies: true,
+      experimental: true,
+      incompatible: true,
       onlyErrors: false,
       onlyNew: false,
       onlyUpdates: false,

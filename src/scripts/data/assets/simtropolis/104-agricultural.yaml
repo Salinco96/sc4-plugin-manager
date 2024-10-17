@@ -2209,10 +2209,244 @@ assets:
     authors:
       - mattb325
     category: agriculture
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Monticello Farm, by Mattb325.</strong>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	This is the central building of Monticello farm in Virginia. Monticello was built in 1772 and was the primary plantation of Thomas Jefferson. This farm is representative of the wealthy country houses that you find in Australia, the UK and the antebellum houses of the US. They are of course working farms, but the architecture is grand, staid and elegant. 
+      </p>
+
+
+      <p>
+      	This farm is a designated National Historic Landmark and also on the UNESCO World Heritage list. The farm building is even depicted on the reverse side of the current nickel and at one time on the $2 note.
+      </p>
+
+
+      <p>
+      	The building style is Palladian: its most notable feature is the octagonal dome. This area of the house was designed to draw hot summer air up and out of the house....an important feature in an area which frequently suffers prolonged temperatures above 38C (100F) with high humidity.
+      </p>
+
+
+      <p>
+      	<br>
+      	The lot is a 8x8 growable and just uses the default Maxis Farm fields, which I find quite versatile particularly for use with MMP decorations and placing surrounding fence/hedge lots. It is a stage 1 farm, so will grow reasonably early in your city development provided you have zoned a large enough area as farmland.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS I-AG:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                  8x8
+      </p>
+
+
+      <p>
+      	Growth Stage:         2 (Agricultural zoning)
+      </p>
+
+
+      <p>
+      	Bulldoze Cost:        § 203
+      </p>
+
+
+      <p>
+      	Capacity Satisfied: I-Ag 47
+      </p>
+
+
+      <p>
+      	Pollution:                 5 (Air)/ 11 (Water)/ 9 (Garbage )
+      </p>
+
+
+      <p>
+      	Pollution Radius:    5/6/0
+      </p>
+
+
+      <p>
+      	Power Consumed: 19 Mwh
+      </p>
+
+
+      <p>
+      	Water Consumed:  235 Gal/Month
+      </p>
+
+
+      <p>
+      	Farm Fields:            Furrows with Sprinkler(x2); Dirt with Sprinkler; Orange &amp; Apple Tree Orchards; Dirt Patch; Green Patch
+      </p>
+
+
+      <p>
+      	Occupant Group:    Agriculture
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (<a href="https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/" rel="">http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a>) 
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT ANTEBELLUM HOUSES:</strong>
+      </p>
+
+
+      <p>
+      	Antebellum (<em>literally, 'pre-war'</em>) is a term denoted to those houses of the confederate states of the pre-civil war period. <br>
+      	Despite making more residential buildings than any other member of the community, I have always eschewed antebellum houses given my <u>utter abhorrence</u> for the human misery that led to the existence of such houses. <br>
+      	In that regard, Monticello is not greatly different from other such houses of the era: while Thomas Jefferson may have been a benevolent enslaver, voicing his opposition to slavery while as president working towards its abolition in both Virginia and the North, the fact remains that he still owned hundreds of men, women and children and freed but a handful. <br>
+      	Indeed this is quite a quandary; but Monticello holds a special place in US history (<u>this <abbr title="Building Architect Tool">BAT</abbr> was actually a request from a US player</u>) and precipitated the subsequent abolition of the practice in Britain and the US. That said, I have removed the two side wings from this <abbr title="Building Architect Tool">BAT</abbr> which were the exclusive domain of the men, women and children forced to work at Monticello in order to maintain the house for Jefferson and his family.<br>
+      	Lastly, lest the charming amongst you seek to make inaccurate assumptions about me (<em>I have been called everything by the community over the years</em>), <u>remember this</u>: Buildings do not enslave people, men enslave people and it still occurs to this day in every country across the globe. 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*SG MEGA Props Vol01: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a>)
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Bat Props - Mattb325 Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383</a>)
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack - Cycledogg V01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_08/MonticelloFarm.jpg.8e0b047451bfe0089160745407cc4a57.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_08/MonticelloFarm0.jpg.3f38584fd16ce10f8918f19728a33e32.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_08/MonticelloFarm1.jpg.900d17828c864ae893bb3e69e17f6a5e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_08/MonticelloFarm2.jpg.2aa54888582066ad69c021d1accf6cea.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_08/MonticelloFarm3.jpg.faef7ac3c217df08ea6b8e9af871fb51.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_08/MonticelloFarm4.jpg.e3d30e8eb5f79675c1a232095c91ee00.jpg
     lastModified: 2019-08-30T02:22:17Z
     name: Monticello Farm
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_08/MonticelloFarm.thumb.jpg.35a9f0266e5efdd593f038e031716ff5.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33124-monticello-farm/
+    variants:
+      "177416":
+        filename: Mattb325_Monticello_Farm_DN.zip
+        files:
+          - Mattb325_Monticello_Farm_DN/IR$2_8x8_Mattb325 Monticello Farm_391a5294.SC4Lot
+          - Mattb325_Monticello_Farm_DN/Mattb325 Monticello Farm-0x6534284a-0x3ec1db6a-0x791a5255.SC4Desc
+          - Mattb325_Monticello_Farm_DN/Mattb325_Monticello-0x5ad0e817_0x889a6570_0x30000.SC4Model
+          - Mattb325_Monticello_Farm_DN/Mattb325_MonticelloFarm_README.txt
+        sha256: b6e8208fc6c5aa2b1dd98523713fe777d3821f8fb040592f1537576aed61d506
+        size: 752376
+        uncompressed: 884449
+      "177417":
+        filename: Mattb325_Monticello_Farm_MN.zip
+        files:
+          - Mattb325_Monticello_Farm_MN/IR$2_8x8_Mattb325 Monticello Farm_391a5294.SC4Lot
+          - Mattb325_Monticello_Farm_MN/Mattb325 Monticello Farm-0x6534284a-0x3ec1db6a-0x791a5255.SC4Desc
+          - Mattb325_Monticello_Farm_MN/Mattb325_Monticello-0x5ad0e817_0x889a6570_0x30000.SC4Model
+          - Mattb325_Monticello_Farm_MN/Mattb325_MonticelloFarm_README.txt
+        sha256: a28ce53b133e37e4d77c62fa93e09e88cc02580c9c1525152799667341bbdb13
+        size: 774211
+        uncompressed: 907715
+    version: 1.0.0
   simtropolis/3335-bls-ga-farm-jenx-tree-nursery:
     authors:
       - GrampaAl
@@ -2329,10 +2563,197 @@ assets:
     authors:
       - mattb325
     category: agriculture
+    dependencies:
+      - simtropolis/33176-craftsman-style-house
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Tree Farm, by Mattb325.</strong>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	These are two Eucalyptus tree farms. 
+      </p>
+
+
+      <p>
+      	From Australia to Europe and Britain, Guangdong to California, Brazil to Pretoria, Eucalyptus trees are often farmed for the express purpose of making wood pulp. These trees are quick growing and despite their propensity to drop branches and topple in storms, their timber is durable. 
+      </p>
+
+
+      <p>
+      	Loved and hated in both Australia and abroad, Eucalyptus trees trace their lineage back to the Gondwanaland super-continent with all the fossil evidence (dating back about 60 million years) showing that Eucalyptus evolved somewhere around present day Argentina/Uruguay and spread eastwards some 180-50 million years ago. This was when South America was joined to South Australia via Antarctica.
+      </p>
+
+
+      <p>
+      	Ironically, in their ancestral home, Eucalyptus trees are now considered a monumental pest in South America and many other parts of the world. Just like Australian actors, they are everywhere.
+      </p>
+
+
+      <p>
+      	Theses farm lots are arranged with a cute, but modest house and the house and outbuildings are set well back from the road via a long driveway. One of the things that bugs me about farms in SC4 is that the farm buildings are right on the roadside: something rarely seen in real life.
+      </p>
+
+
+      <p>
+      	These are not designed to grow too frequently (assuming you have other custom farms in your plugins). It also comes with a brand new type of farm field for the Eucalyptus tree prop family.
+      </p>
+
+
+      <p>
+      	<span style="color:#c0392b;"><em>Mattb325 Edit April 6 2021: It has been reported where if you de-zone or zone over the top of the grown fields (eg to make residential areas for instance), the trees remain in place: simply bulldoze them after dezoning. Similarly, you need to <u>dezone</u> the entire area first prior to bulldozing the fields.</em></span><br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS I-AG:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                  3x8 &amp; 4x6
+      </p>
+
+
+      <p>
+      	Growth Stage:        1 (Agricultural zoning)
+      </p>
+
+
+      <p>
+      	Bulldoze Cost:         $ 121
+      </p>
+
+
+      <p>
+      	Capacity Satisfied:  I-Ag 8
+      </p>
+
+
+      <p>
+      	Pollution:                  1 (Air)/ 1 (Water)/ 4 (Garbage )
+      </p>
+
+
+      <p>
+      	Pollution Radius:     5/6/0
+      </p>
+
+
+      <p>
+      	Power Consumed:   2 Mwh
+      </p>
+
+
+      <p>
+      	Water Consumed:    15 Gal/Month
+      </p>
+
+
+      <p>
+      	Occupant Group:      Low Wealth Agriculture
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download is a lot and contains no models. However, the dependency will require you to choose between a Maxis nite model and a Darknite model. If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/)  
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*Craftsman Style House: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3671" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3671</a> or <a href="https://community.simtropolis.com/files/file/33176-craftsman-style-house/" rel="">https://community.simtropolis.com/files/file/33176-craftsman-style-house/</a>)
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Bat Props - Mattb325 Vol04.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672</a>)
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Texture Pack - Cycledogg V01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=101</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    filename: Mattb325_TreeFarm.zip
+    files:
+      - Mattb325_TreeFarm/IR$1_1x1_Mattb325_Tree_Farm_39fa81d2.SC4Lot
+      - Mattb325_TreeFarm/IR$1_3x8_Mattb325_15028R(1)_79fa80ff.SC4Lot
+      - Mattb325_TreeFarm/IR$1_4x6_Mattb325_15028R_d9fa8146.SC4Lot
+      - Mattb325_TreeFarm/Mattb325_15028R(1)-0x6534284a-0x3ec1db6a-0x19fa808f.SC4Desc
+      - Mattb325_TreeFarm/Mattb325_15028R-0x6534284a-0x3ec1db6a-0x99fa8130.SC4Desc
+      - Mattb325_TreeFarm/Mattb325_TreeFarm_README.txt
+      - Mattb325_TreeFarm/Mattb325_Tree_Farm-0x6534284a-0x3ec1db6a-0x19fa8170.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/TreeFarm.jpg.edc0ddc0dc7ebe7d38c6611e4dffeb57.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/TreeFarm1.jpg.94a856df01e955537aae62e72e82e104.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/TreeFarm2.jpg.1c6389508489b60c511e6d076b82ca81.jpg
     lastModified: 2021-04-05T23:39:04Z
     name: Tree Farm
+    sha256: a70b06c46824e308b4321f007632272b2830c5bfdbc987a59b1ca3eef9683717
+    size: 97673
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/TreeFarm.thumb.jpg.f96fc0957d7b250163fff10d44c5bb11.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 101051
     url: https://community.simtropolis.com/files/file/34207-tree-farm/
+    version: 1.0.0
   simtropolis/3423-miller-hydroponics:
     authors:
       - Mary Maurine Mayo
@@ -2453,6 +2874,22 @@ assets:
     name: SFBT IGC and FrankyFour Vineyards
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_03/Weinberge_01.thumb.jpg.f3a59be7068db12ffdb4bc2743a5e0ce.jpg
     url: https://community.simtropolis.com/files/file/36174-sfbt-igc-and-frankyfour-vineyards/
+  simtropolis/36485-phil-farm-fences:
+    authors:
+      - philforhockey51
+    category: agriculture
+    lastModified: 2024-10-05T09:39:02Z
+    name: PHIL Farm Fences
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/67010935e2f7e_ExampleLayoutFall.thumb.jpeg.28f04d9628788ee7a2eec9675315a274.jpeg
+    url: https://community.simtropolis.com/files/file/36485-phil-farm-fences/
+  simtropolis/36499-phil-bocage:
+    authors:
+      - philforhockey51
+    category: agriculture
+    lastModified: 2024-10-13T07:44:09Z
+    name: PHIL Bocage
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/670b7a47e520e_BocageFall.thumb.jpg.2255b9c0778edea68accd9d8a69148be.jpg
+    url: https://community.simtropolis.com/files/file/36499-phil-bocage/
   simtropolis/3659-bls-ga-farm-grampas-feed-seed:
     authors:
       - GrampaAl
@@ -2806,4 +3243,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-72c64c05c6bd3deddb1f3b260797d16f-SC4%20Vineyards.JPG
     url: https://community.simtropolis.com/files/file/973-imperial-vineyard-estate/
 
-timestamp: 2024-09-13T12:22:00.820Z
+timestamp: 2024-10-17T06:14:27.427Z

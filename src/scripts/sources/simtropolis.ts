@@ -109,6 +109,10 @@ const categories: IndexerCategory[] = [
     category: "dependencies",
     id: "120-obsolete-legacy",
   },
+  {
+    category: "dll",
+    id: "122-dll-mods",
+  },
 ]
 
 export const SIMTROPOLIS: IndexerSource = {

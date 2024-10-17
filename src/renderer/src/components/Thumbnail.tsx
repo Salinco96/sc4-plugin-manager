@@ -3,11 +3,19 @@ import { Box, BoxProps, Button } from "@mui/material"
 export interface ThumbnailProps extends Omit<BoxProps, "height" | "width"> {
   disabled?: boolean
   onClick?: () => void
+  round?: boolean
   size: number
   src: string
 }
 
-export function Thumbnail({ disabled, onClick, size, src, ...props }: ThumbnailProps): JSX.Element {
+export function Thumbnail({
+  disabled,
+  onClick,
+  round,
+  size,
+  src,
+  ...props
+}: ThumbnailProps): JSX.Element {
   if (disabled || !onClick) {
     return (
       <Box
@@ -15,6 +23,7 @@ export function Thumbnail({ disabled, onClick, size, src, ...props }: ThumbnailP
           backgroundImage: `url("${src}")`,
           backgroundPosition: "50%",
           backgroundSize: "cover",
+          borderRadius: round ? "100%" : undefined,
           flex: "0 0 auto",
           height: size,
           width: size,

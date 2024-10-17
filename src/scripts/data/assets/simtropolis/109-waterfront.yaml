@@ -1632,9 +1632,7 @@ assets:
       - simtropolis/36142-submenus-dll
     description: "<body>
 
-      \                           \
-
-      \t\t\t\t\t\t\t<p>\r
+      \                            \t\t\t\t\t\t\t<p>\r
 
       \tThis is my first set of canals I have made that are inspired by European canals. In total there are 3 pieces \r
 
@@ -2440,10 +2438,53 @@ assets:
     authors:
       - mattb325
     category: waterfront
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<p><u><strong>Cruise Ship Terminal Building, by Mattb325.</strong></u><br><br>The in game cruise ship building has always been a disappointment, and while a few folk have attempted to re-lot the original, I am unaware of anything that has ever been released that complements (rather than over-writes) the function of the cruise ship building.<br><br>Using the cruise ship terminal helps to break through demand caps, increase mayor and landmark ratings, and provides jobs; all of these enable you to get a thriving high end commercial services sector and enable a higher populations of R$$ and R$$$ sims. This is crucial to helping build large cities.<br><br>In real life, most cruise ship terminals are fairly swank affairs as, just like airports, they are often the first impression a visitor has of a city. This cruise ship building that I have made is modded similarly to the in-game version and I have also made custom seawalls for the lot.<br><br>Like the ingame version, it is found in the rewards menu and provides jobs once plopped. It therefore needs road access.<br><br>Unlike the ingame version, it does not require certain thresholds to be met before being unlocked, and it can also be placed more than once in the same city.<br>It does NOT replace the Maxis version and you can have both co-exist in the same city if you wish.<br><br>The lot size is a more realistic and substantial 7 tiles wide by 5 tiles deep.<br><br><u><strong>Stats:</strong></u><br><br><span style="color:rgb(128,0,0);">Plop cost: $28,000<br>Maintenance Cost: $180<br>Bulldoze Cost: $269<br>R$$ Jobs: 45<br>Demand created: 45<br>Pollution: 1 (air) 1 (water) 11 (garbage)<br>Radii: 2/4/1 tiles<br>Landmark Effect: 60 over 24 tiles<br>Mayor Rating: 10 over 256 tiles<br>Water consumed: 75 Gallons<br>Power Consumed: 50MwH</span><br><br><u><strong>Dependencies</strong></u> <em>(you must be registered on the <abbr title="SimCity 4">SC4</abbr> Devotion <abbr title="Lot EXchange (SC4Devotion)">LEX</abbr> to download these):</em><br>
+      [*]<abbr title="BATT Squad Certification">BSC</abbr> Textures Vol01 (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90%5B/url%5D)" rel="external nofollow"></a><a
+      href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90</a>)
+
+      [*]<abbr title="BATT Squad Certification">BSC</abbr> <abbr title="Building Architect Tool">BAT</abbr> Props Mattb325 Vol02 (<a
+      href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383%5B/url%5D)" rel="external nofollow"></a><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383"
+      rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383</a>)
+
+      [*]<abbr title="BATT Squad Certification">BSC</abbr> <abbr title="Building Architect Tool">BAT</abbr> Props Mattb325 Vol03 (<a
+      href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768%5B/url%5D)" rel="external nofollow"></a><a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768"
+      rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2768</a>)<br><br><br>To install this file, simply unzip the downloaded contents to your plugins folder. I would
+      recommend maintaining the folder structure for simplicity.<br><br>Please report any issues to my thread: <a href="https://www.sc4devotion.com/forums/index.php?topic=327.0%5B/url%5D"
+      rel="external nofollow"></a><a href="https://www.sc4devotion.com/forums/index.php?topic=327.0" rel="external nofollow">https://www.sc4devotion.com/forums/index.php?topic=327.0</a><br><br>Thanks,
+      and enjoy</p>
+      						</body>
+    filename: Mattb325 Cruise Ship Terminal.zip
+    files:
+      - Mattb325 Cruise Ship Terminal/Mattb325_Broadway_Cruise_Ship_Terminal-0x5ad0e817_0x7d7c6c4f_0x30000.SC4Model
+      - Mattb325 Cruise Ship Terminal/Mattb325_Gangway-0x5ad0e817_0x3d7c9255_0x30000.SC4Model
+      - Mattb325 Cruise Ship Terminal/Mattb325_Gangway-0x6534284a-0x13a0bd51-0xbdaab9b7.SC4Desc
+      - Mattb325 Cruise Ship Terminal/Mattb325_RetainingWall-0x5ad0e817_0x9d7c94d6_0x30000.SC4Model
+      - Mattb325 Cruise Ship Terminal/Mattb325_RetainingWall-0x6534284a-0x13a0bd51-0xbdaab9ca.SC4Desc
+      - Mattb325 Cruise Ship Terminal/PLOP_7x5_Mattb325_Broadway_Cruise_Ship_Terminal_5d323373.SC4Lot
+      - Mattb325 Cruise Ship Terminal/ReadMe-Cruise Ship Terminal by Mattb325.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_08_2012/ef81c31525c02bac746104b344acc350-cruiseship.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2012/ff1d3fcb4201cbe8b9bcec2828f47b93-cruiseship1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2012/694fa4cea47b9e078ade3ced6439af19-cruiseship2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2012/21bea22f862a5d46726e1c9a67b7bd68-cruiseship3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_08_2012/9d37fcd8013ed7b59518a19da4f251cf-cruiseship4.jpg
     lastModified: 2015-07-28T23:06:41Z
     name: Cruise Ship Terminal
+    sha256: 72004ec9623463fb0285af7e833bb8848ba52b326cf4cccd6bc1556911338579
+    size: 778966
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2012/thumb-ef81c31525c02bac746104b344acc350-cruiseship.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 989349
     url: https://community.simtropolis.com/files/file/27915-cruise-ship-terminal/
+    version: "1.0"
   simtropolis/27985-sbt-assateague-lighthouse:
     authors:
       - Ceafus 88
@@ -3982,10 +4023,204 @@ assets:
     authors:
       - mattb325
     category: waterfront
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/27915-cruise-ship-terminal
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Car Ferry Terminal, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	While I quite like the look of the Maxis Car Ferry Terminal, after almost 15 years of seeing the same ferry building in game, it's time for an upgrade. 
+      </p>
+
+
+      <p>
+      	This is a fictional building which I made for that purpose.
+      </p>
+
+
+      <p>
+      	While the lot conforms to the existing Maxis Car Ferry Terminal, it does not replace the in-game building. 
+      </p>
+
+
+      <p>
+      	<br>
+      	It is also slightly easier to place along the shore line - if you have ever placed the in-game version, you will have no problems using this lot as the principles are identical. 
+      </p>
+
+
+      <p>
+      	<br>
+      	Additionally, it uses standard maxis pavement textures (rather than a batted base like the in game version) so the lot will blend in with any sidewalk mods that you have. <br>
+      	Just like the ingame lot, this lot is transit enabled for road, and as long as you draw the road into the lot, cars will drive through the building.
+      </p>
+
+
+      <p>
+      	Car Ferry buildings are a great alternative/supplement to bridges, and I use them to ease congestion on the road network.
+      </p>
+
+
+      <p>
+      	<em><u>Please note the Car Ferry Terminal is a separate network from the Passenger Ferry Terminal. </u></em>
+      </p>
+
+
+      <p>
+      	Ferries that leave from a passenger ferry terminal do not use a car ferry terminal and vice versa. Now, this is no different from the function in the vanilla rush-hour game, but as there are so few custom ferry terminals available for download, it is important to point out. Therefore, I recommend placing this at least twice in any city tile (on opposite shorelines) to get use.
+      </p>
+
+
+      <p>
+      	The ferry terminal is a modern building with a bar and restaurant on the upper levels. 
+      </p>
+
+
+      <p>
+      	It has similar stats in terms of capacity and monthly cost to the Maxis Car Passenger Ferry Terminal, but provides a few more jobs.
+      </p>
+
+
+      <p>
+      	It is also limited to a maximum of 16 terminals per city tile and both this building and the in-game car ferry terminal count towards the 16 terminal number.
+      </p>
+
+
+      <p>
+      	Obviously it is found in the water transit section of the transportation menu and obviously it can only be placed in a city where in-game water is present; it does not work on canals or ploppable water. It has been tested to work in Vanilla (Rush Hour) and various <abbr title="Network Addon Mod">NAM</abbr> releases, up to <abbr title="Network Addon Mod">NAM</abbr> 35.
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                  3x5<br>
+      	Plop Cost:               §150<br>
+      	Bulldoze Cost:        §10<br>
+      	Occupant Groups: Transportation, Strikable Transit, Ferry, Car Ferry, Water Transit<br>
+      	Catalog Capacity:  1,000<br>
+      	Wealth:                    Medium Wealth<br>
+      	Demand Created:  Jobs§§§: 1, Jobs§§: 8, Jobs§: 18.<br>
+      	Pollution:                 Air 1 over 1 tiles, Water 1 over 1 tiles, Garbage 1 over 0 tiles<br>
+      	Power consumed:  10 MwH<br>
+      	Water consumed:   38 Gallons/Month
+      </p>
+
+
+      <p>
+      	<br><strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	This download contains TWO file types in two seperate folders; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite. <br>
+      	You must choose only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	This file requires the following dependency:
+      </p>
+
+
+      <p>
+      	<strong><a href="https://community.simtropolis.com/files/file/27915-cruise-ship-terminal/" rel="">https://community.simtropolis.com/files/file/27915-cruise-ship-terminal/</a></strong>
+      </p>
+
+
+      <p>
+      	You can delete the main model and lot files if you wish not to use the cruise ship terminal, but be absoluetly sure to keep the two files marked<strong> 'Mattb325_RetainingWall-xxxxxxxx' </strong>If you do not download these, the ferry building will appear to float above the water. 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thanks.
+      </p>
+
+      						</body>
+    filename: Mattb325 Ferry Terminal.zip
+    files:
+      - Mattb325 Ferry Terminal/Model Files KEEP ONLY ONE/Ferry Terminal DARK NITE/Mattb325_FerryTerminal2-0x5ad0e817_0x485b2955_0x30000.SC4Model
+      - Mattb325 Ferry Terminal/Model Files KEEP ONLY ONE/Ferry Terminal MAXIS NITE/Mattb325_FerryTerminal2-0x5ad0e817_0x485b2955_0x30000.SC4Model
+      - Mattb325 Ferry Terminal/Lot Files DO NOT DELETE/Mattb325_Ferry_Terminal(FND1)-0x5ad0e817_0xe91ac12f_0x30000.SC4Model
+      - Mattb325 Ferry Terminal/Lot Files DO NOT DELETE/Mattb325_Ferry_Terminal(FND1)-0x6534284a-0x3ec1db6a-0xd704d203.SC4Desc
+      - Mattb325 Ferry Terminal/Lot Files DO NOT DELETE/PLOP_3x5_Mattb325_Ferry_Terminal_87039d56.SC4Lot
+      - Mattb325 Ferry Terminal/Mattb325_Car_Ferry_Terminal_README.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/CarFerry.jpg.ce6f21d3b7636e5da4221ab8e0e40490.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/CarFerry1.jpg.c071f25d910644ea36ceb73d6691c228.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/CarFerry2.jpg.24d31f9300d812706e6dbb1f9dc4ddd3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/CarFerry3.jpg.535f9d9d9f4e340eb66668a9dc381bfe.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/CarFerry4.jpg.b5df4c727f96d1a00527a047876085fa.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/CarFerry5.jpg.c88735b09ed6414c6e42b6461bed5e49.jpg
     lastModified: 2017-08-05T01:53:09Z
     name: Car Ferry Terminal
+    sha256: d53159e5b3ef0fb5bb7d98e86be407785b5994d3c3548122c5aed99f848eec9f
+    size: 2603822
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_08/CarFerry.thumb.jpg.bce98b6cb9309e4349b37aa266f57b30.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 3042056
     url: https://community.simtropolis.com/files/file/31893-car-ferry-terminal/
+    version: "1.0"
   simtropolis/31918-don-miguels-csx-pier-mall:
     authors:
       - Don Miguel
@@ -4078,34 +4313,821 @@ assets:
     authors:
       - mattb325
     category: waterfront
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Passenger Ferry Terminal, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	While I quite like the look of the Maxis Passenger Ferry Terminal, and I also like the fact that both passenger ferries and car/passenger ferries are far and away the cheapest and most efficient form of public transit that never suffers from congestion...but after 15 years of seeing the same ferry buildings in game, it's time for an upgrade. 
+      </p>
+
+
+      <p>
+      	This is the first of 3 fictional buildings which I made for just that purpose.
+      </p>
+
+
+      <p>
+      	This passenger ferry building is a new lot and it does not replace or interfere with the in-game building. It can be used in conjunction with the Maxis passenger ferry terminal or any other similarly modded passenger ferries available.<br>
+      	This ferry also easier to place along the shore line - if you have ever placed the in-game version, you will have no problems using this lot as the principles are identical. <br>
+      	Additionally, it uses standard maxis pavement textures (rather than a batted base like the in game version) so the lot will blend in with any sidewalk mods that you have. 
+      </p>
+
+
+      <p>
+      	Just like the in-game lot, this lot must be placed adjacent to a street/road and it also must be placed across both land and water.
+      </p>
+
+
+      <p>
+      	Ferry buildings are a great alternative/supplement to bridges, and I use them to ease congestion on the road network.
+      </p>
+
+
+      <p>
+      	As stated previously, it is crucial to note the Passenger Ferry Terminal is a separate network from the Car Ferry Terminal. 
+      </p>
+
+
+      <p>
+      	Ferries that leave from a passenger ferry terminal do not use a car ferry terminal and vice versa. <br>
+      	Now, this is no different from the function in the vanilla rush-hour game, but as there are so few custom ferry terminals available for download, it is important to point out. 
+      </p>
+
+
+      <p>
+      	Therefore, I recommend placing this at least twice in any city tile (on opposite shorelines) and in a neighbouring city connected by water to get the most use. It is also important to note that ferries do not work if the water is too shallow, bridges too low, or if the edges of your cities and waterways are at wildly differing elevations.
+      </p>
+
+
+      <p>
+      	It has similar stats in terms of capacity and monthly cost to the Maxis Passenger Ferry Terminal, but provides a few more jobs. 
+      </p>
+
+
+      <p>
+      	The other thing about this series of passenger ferries is that they will conform to 90%, if not all of, the available seawall sets: as long as the seawall set has left/right overhanging lots (which are typically used as under-bridge lots) and are not too wide or deep, then they will function perfectly so you can keep a uniform look to your seawalls and not be forced to pick one that I choose.
+      </p>
+
+
+      <p>
+      	Obviously the passenger ferry building is found in the water transit section of the transportation menu and crucially it can only be placed in a city where in-game water is present; it does not work on canals or ploppable water.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 2x3 (must be placed on land and water)<br>
+      	Plop Cost:              §100<br>
+      	Bulldoze Cost:       §20<br>
+      	Occupant Groups: Transportation, Strikable Transit, Ferry, Passenger Ferry, Water Transit<br>
+      	Catalog Capacity:  800 <br>
+      	Wealth:                    Medium Wealth<br>
+      	Demand Created:  Jobs§§§: 0, Jobs§§: 2, Jobs§: 2.<br>
+      	Pollution:                Air 1 over 1 tiles, Water 1 over 1 tiles, Garbage 1 over 0 tiles<br>
+      	Power consumed: 5 MwH<br>
+      	Water consumed:  18 Gallons/Month<br>
+      	Monthly cost:         §25
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	This download contains TWO file types in two separate folders; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite. <br>
+      	You must choose only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	<strong><u>There are no dependencies for this lot.</u></strong> <br>
+      	However, if you are new to using passenger ferries, I would recommend Vester's (do a search over at SC4devotion) mods which will give you lots of different ferry options and make your water ways quite lively.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+
+      <p>
+      	<strong>NB:</strong> <em>please note I will not be providing a link to all of the seawall kits shown in the pictures. There are simply too many options available; please also don't be offended if I haven't shown your favourite seawall kit. Chances are I tested it, and it works just fine.</em>
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry.jpg.caac6b4c72e353f2b3e44a748556afb3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry1.jpg.aeceeaa59f3d541fe772d416260d1d75.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry2.jpg.7d863032588d482c35cf5f5a1fb9cd12.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry3.jpg.a9ad64ef01112859f6c07c6b200d4420.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry4.jpg.baab4446c946cb3c5a3609dbb1f30651.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry5.jpg.9233413337c6a75cd5cd6b001e8aac3e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry6.jpg.aff406e7d8b33c8cf8f58ae7081caff0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry6a.jpg.c68ac2b9f548ce45e01e0191ceb89f1c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry7.jpg.259449afd768b5fdf7238cc40fa7b5f6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry8.jpg.e9921a8bd83a98a71c900df512464c6b.jpg
     lastModified: 2019-11-29T23:02:45Z
     name: Passenger Ferry Terminal
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_11/Ferry.thumb.jpg.3a95c55a33f4e8990b3e004a4c4fb696.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33300-passenger-ferry-terminal/
+    variants:
+      "178756":
+        filename: Mattb325_PassengerFerry_DN.zip
+        files:
+          - Mattb325_PassengerFerry_DN/Mattb325 Passenger Ferry-0x6534284a-0x3ec1db6a-0x7b3ae495.SC4Desc
+          - Mattb325_PassengerFerry_DN/Mattb325_PassengerFerry-0x5ad0e817_0xabaf63c_0x30000.SC4Model
+          - Mattb325_PassengerFerry_DN/Mattb325_PassengerFerryBase-0x5ad0e817_0xabb1ec7_0x30000.SC4Model
+          - Mattb325_PassengerFerry_DN/Mattb325_PassengerFerry_Terminal_README.txt
+          - Mattb325_PassengerFerry_DN/PLOP_2x3_Mattb325 Passenger Ferry._6b3b018b.SC4Lot
+        sha256: 0a705801f3a6e2a7983eb01ee2dc505a9ac54d7bf8043504b596c5b7438bcc80
+        size: 852266
+        uncompressed: 1006796
+      "178757":
+        filename: Mattb325_PassengerFerry_MN.zip
+        files:
+          - Mattb325_PassengerFerry_MN/Mattb325 Passenger Ferry-0x6534284a-0x3ec1db6a-0x7b3ae495.SC4Desc
+          - Mattb325_PassengerFerry_MN/Mattb325_PassengerFerry-0x5ad0e817_0xabaf63c_0x30000.SC4Model
+          - Mattb325_PassengerFerry_MN/Mattb325_PassengerFerryBase-0x5ad0e817_0xabb1ec7_0x30000.SC4Model
+          - Mattb325_PassengerFerry_MN/Mattb325_PassengerFerry_Terminal_README.txt
+          - Mattb325_PassengerFerry_MN/PLOP_2x3_Mattb325 Passenger Ferry._6b3b018b.SC4Lot
+        sha256: 683cec810d7f584c0ab0d179df7b5c5f13410927de768b6da50c46a3c528c704
+        size: 820572
+        uncompressed: 969945
+    version: 1.0.0
   simtropolis/33301-passenger-ferry-terminal-v1:
     authors:
       - mattb325
     category: waterfront
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Passenger Ferry Terminal V1, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	While I quite like the look of the Maxis Passenger Ferry Terminal, and I also like the fact that both passenger ferries and car/passenger ferries are far and away the cheapest and most efficient form of public transit that never suffers from congestion...but after 15 years of seeing the same ferry buildings in game, it's time for an upgrade. 
+      </p>
+
+
+      <p>
+      	This is the second of three fictional buildings which I made for just that purpose.
+      </p>
+
+
+      <p>
+      	This unimaginatively named passenger ferry building is a new lot and it does not replace or interfere with the in-game building (or any of my other ferry lots). It can be used in conjunction with the Maxis passenger ferry terminal or any other similarly modded passenger ferries available.<br>
+      	This ferry is also easier to place along the shore line - if you have ever placed the in-game version, you will have no problems using this lot as the principles are identical. <br>
+      	Additionally, it uses standard maxis pavement textures (rather than a batted base like the in game version) so the lot will blend in with any sidewalk mods that you have. 
+      </p>
+
+
+      <p>
+      	Just like the in-game lot, this lot must be placed adjacent to a street/road and it also must be placed across both land and water.
+      </p>
+
+
+      <p>
+      	Ferry buildings are a great alternative/supplement to bridges, and I use them to ease congestion on the road network.
+      </p>
+
+
+      <p>
+      	It is crucial to note the Passenger Ferry Terminal is a separate network from the Car Ferry Terminal. 
+      </p>
+
+
+      <p>
+      	Ferries that leave from a passenger ferry terminal do not use a car ferry terminal and vice versa. <br>
+      	Now, this is no different from the function in the vanilla rush-hour game, but as there are so few custom ferry terminals available for download, it is important to point out. 
+      </p>
+
+
+      <p>
+      	Therefore, I recommend placing this at least twice in any city tile (on opposite shorelines) and in a neighbouring city connected by water to get the most use. It is also important to note that ferries do not work if the water is too shallow, bridges too low, or if the edges of your cities and waterways are at wildly differing elevations.
+      </p>
+
+
+      <p>
+      	It has similar stats in terms of capacity and monthly cost to the Maxis Passenger Ferry Terminal, but provides a few more jobs. 
+      </p>
+
+
+      <p>
+      	The other thing about this series of passenger ferries is that they will conform to 90%, if not all of, the available seawall sets: as long as the seawall set has left/right overhanging lots (which are typically used as under-bridge lots) and are not too wide or deep, then they will function perfectly so you can keep a uniform look to your seawalls and not be forced to pick one that I choose.
+      </p>
+
+
+      <p>
+      	Obviously the passenger ferry building is found in the water transit section of the transportation menu and crucially it can only be placed in a city where in-game water is present; it does not work on canals or ploppable water.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 2x3 (to be placed on land and water)<br>
+      	Plop Cost:               §100<br>
+      	Bulldoze Cost:        §20<br>
+      	Occupant Groups: Transportation, Strikable Transit, Ferry, Passenger Ferry, Water Transit<br>
+      	Catalog Capacity:  800 <br>
+      	Wealth:                    Medium Wealth<br>
+      	Demand Created:  Jobs§§§: 0, Jobs§§: 1, Jobs§: 4.<br>
+      	Pollution:                 Air 1 over 1 tiles, Water 1 over 1 tiles, Garbage 1 over 0 tiles<br>
+      	Power consumed:  4 MwH<br>
+      	Water consumed:  12 Gallons/Month<br>
+      	Monthly cost:         §20
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	This download contains TWO file types in two seperate folders; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite. <br>
+      	You must choose only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies for this lot. 
+      </p>
+
+
+      <p>
+      	However, if you are new to using passenger ferries, I would recommend Vester's (do a search at SC4devotion) mods which will give you lots of different ferry automata options and make your water ways quite lively.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern.jpg.1b64f1502d1ad257c3d9e36545324d2c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern1.jpg.638cd1baf8d9559fbc953a836853f6ba.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern2.jpg.d3f6e2e82d115920358dbc8be989112b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern3.jpg.ed0bd57561c1eadfa2c4c02261825300.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern4.jpg.35bcd2714fca08777a10bb293a6e51b4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern5.jpg.3888a8db1d6dff96d812e8bfa718e4e6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern6.jpg.1b8c972b9adf43b088c6d4314b5b8223.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern6a.jpg.15a687ef3ed3da081afc03027a3943c7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern7.jpg.8b1c16fd02d3009de8a7964c7d624ebd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern8.jpg.29b5e5137d428222a721f8b9c2879030.jpg
     lastModified: 2019-11-30T21:13:19Z
     name: Passenger Ferry Terminal V1
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_11/FerryModern.thumb.jpg.3fb42ac358fcf1a0e80afd03d6923072.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33301-passenger-ferry-terminal-v1/
+    variants:
+      "178768":
+        filename: Mattb325_PassengerFerry1_DN.zip
+        files:
+          - Mattb325_PassengerFerry1_DN/Mattb325 Passenger Ferry1-0x6534284a-0x3ec1db6a-0x3b403ef9.SC4Desc
+          - Mattb325_PassengerFerry1_DN/Mattb325_PassengerFerry1-0x5ad0e817_0xaac050c5_0x30000.SC4Model
+          - Mattb325_PassengerFerry1_DN/Mattb325_PassengerFerry1Base-0x5ad0e817_0xaac0673a_0x30000.SC4Model
+          - Mattb325_PassengerFerry1_DN/Mattb325_PassengerFerry_TerminalV1_README.txt
+          - Mattb325_PassengerFerry1_DN/PLOP_2x3_Mattb325 Passenger Ferry1_3b404b00.SC4Lot
+        sha256: b3316e5e8b24be827d6e607eff16b1bb4d5814342fab64a3beebfec5de034d8b
+        size: 769805
+        uncompressed: 953258
+      "178769":
+        filename: Mattb325_PassengerFerry1_MN.zip
+        files:
+          - Mattb325_PassengerFerry1_MN/Mattb325 Passenger Ferry1-0x6534284a-0x3ec1db6a-0x3b403ef9.SC4Desc
+          - Mattb325_PassengerFerry1_MN/Mattb325_PassengerFerry1-0x5ad0e817_0xaac050c5_0x30000.SC4Model
+          - Mattb325_PassengerFerry1_MN/Mattb325_PassengerFerry1Base-0x5ad0e817_0xaac0673a_0x30000.SC4Model
+          - Mattb325_PassengerFerry1_MN/Mattb325_PassengerFerry_TerminalV1_README.txt
+          - Mattb325_PassengerFerry1_MN/PLOP_2x3_Mattb325 Passenger Ferry1_3b404b00.SC4Lot
+        sha256: 297668e521bd4967033a25115a87507f8a217141d9d026ea2b770dc6027b85bd
+        size: 744046
+        uncompressed: 922770
+    version: 1.0.0
   simtropolis/33303-passenger-ferry-terminal-v2:
     authors:
       - mattb325
     category: waterfront
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Passenger Ferry Terminal V2, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	While I quite like the look of the Maxis Passenger Ferry Terminal, and I also like the fact that both passenger ferries and car/passenger ferries are far and away the cheapest and most efficient form of public transit that never suffers from congestion...but after 15 years of seeing the same ferry buildings in game, it's time for an upgrade. 
+      </p>
+
+
+      <p>
+      	This is the third of four fictional buildings which I made for just that purpose - <em>it was initially only three buildings, but I got carried away and made a fourth</em>(!) <img alt=":P" data-emoticon="" height="30" src="https://community.simtropolis.com/assets/emoticons/LlamaTounge.gif" srcset="https://community.simtropolis.com/assets/emoticons/LlamaTounge@2x.gif 2x" title=":P" width="30" >
+      </p>
+
+
+      <p>
+      	This passenger ferry building is a new lot and it does not replace or interfere with the in-game building (or any of my other ferry lots). It can be used in conjunction with the Maxis passenger ferry terminal or any other similarly modded passenger ferries available.<br>
+      	This ferry is also easier to place along the shore line - if you have ever placed the in-game version, you will have no problems using this lot as the principles are identical. <br>
+      	Additionally, it uses standard maxis pavement textures (rather than a batted base like the in game version) so the lot will blend in with any sidewalk mods that you have. 
+      </p>
+
+
+      <p>
+      	Just like the in-game lot, this lot must be placed adjacent to a street/road and it also must be placed across both land and water.
+      </p>
+
+
+      <p>
+      	<em>Ferry buildings are a great alternative/supplement to bridges, and I use them to ease congestion on the road network and a ferry terminal helps stop the 'no job' zot that often plagues residential areas by providing a super fast mode of travel.</em>
+      </p>
+
+
+      <p>
+      	It is crucial to note the Passenger Ferry Terminal is a separate network from the Car Ferry Terminal. 
+      </p>
+
+
+      <p>
+      	Ferries that leave from a passenger ferry terminal do not use a car ferry terminal and vice versa. <br>
+      	Now, this is no different from the function in the vanilla rush-hour game, but as there are so few custom ferry terminals available for download, it is important to point out. 
+      </p>
+
+
+      <p>
+      	Therefore, I recommend placing this at least twice in any city tile (on opposite shorelines) and in a neighbouring city connected by water to get the most use. It is also important to note that ferries do not work if the water is too shallow, bridges too low, or if the edges of your cities and waterways are at wildly differing elevations.
+      </p>
+
+
+      <p>
+      	It has similar stats in terms of capacity and monthly cost to the Maxis Passenger Ferry Terminal, but provides more jobs. This modern, zinc clad terminal building is slightly larger than the other two ferry buildings I have released and visually looks more suited to denser environments. 
+      </p>
+
+
+      <p>
+      	<br>
+      	I say visually, because ferry terminals don't suffer from congestion unlike other modes of transport.
+      </p>
+
+
+      <p>
+      	The other thing about this series of passenger ferries is that they will conform to 90%, if not all of, the available seawall sets: as long as the seawall set has left/right overhanging lots (which are typically used as under-bridge lots) and are not too wide or deep, then they will function perfectly so you can keep a uniform look to your seawalls and not be forced to pick one that I choose.
+      </p>
+
+
+      <p>
+      	Obviously the passenger ferry building is found in the water transit section of the transportation menu and crucially it can only be placed in a city where in-game water is present; it does not work on canals or ploppable water.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 2x4 (to be placed on land and water)<br>
+      	Plop Cost:               §150<br>
+      	Bulldoze Cost:        §30<br>
+      	Occupant Groups: Transportation, Strikable Transit, Ferry, Passenger Ferry, Water Transit<br>
+      	Catalog Capacity:  900 <br>
+      	Wealth:                    Medium Wealth<br>
+      	Demand Created:  Jobs§§§: 0, Jobs§§: 2, Jobs§: 7.<br>
+      	Pollution:                 Air 1 over 1 tiles, Water 1 over 1 tiles, Garbage 1 over 0 tiles<br>
+      	Power consumed:  6 MwH<br>
+      	Water consumed:  21 Gallons/Month<br>
+      	Monthly cost:         §30
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	This download contains TWO file types in two separate folders; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite. <br>
+      	You must choose only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies for this lot. <u>Please note that this will form a dependency of the next-to-be-released ferry lot.</u>
+      </p>
+
+
+      <p>
+      	If you are new to using passenger ferries, I would recommend Vester's (do a search at SC4devotion) mods which will give you lots of different ferry automata options and make your water ways quite lively.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/ModernFerry.jpg.992623f2896e21ae6821c45a72c759bf.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/ModernFerry1.jpg.114f7d5d658d6c0254b14d707f50bd28.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/ModernFerry2.jpg.1423cfbea25b724698a600410e4f00cc.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/ModernFerry3.jpg.cbc318c74e00f2ee4ccfadfb78415d56.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/ModernFerry4.jpg.1ebd924f72fcc3f016fe63c9b2259320.jpg
     lastModified: 2019-12-01T19:56:24Z
     name: Passenger Ferry Terminal V2
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_12/ModernFerry.thumb.jpg.83617881efb4bcaa325ddb977936af11.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33303-passenger-ferry-terminal-v2/
+    variants:
+      "178789":
+        filename: Mattb325_PassengerFerry2_DN.zip
+        files:
+          - Mattb325_PassengerFerry2_DN/Mattb325 Passenger Ferry2-0x6534284a-0x3ec1db6a-0x5b446cb5.SC4Desc
+          - Mattb325_PassengerFerry2_DN/Mattb325_PassengerFerry2-0x5ad0e817_0xc98c10c0_0x30000.SC4Model
+          - Mattb325_PassengerFerry2_DN/Mattb325_PassengerFerry2Base-0x5ad0e817_0x98c2aac_0x30000.SC4Model
+          - Mattb325_PassengerFerry2_DN/Mattb325_PassengerFerry_TerminalV2_README.txt
+          - Mattb325_PassengerFerry2_DN/PLOP_2x4_Mattb325 Passenger Ferry2 Base_7b448051.SC4Lot
+        sha256: eecf4a76707ffd362cc205da049e8c4f8d436261719970307931e0d932d5d095
+        size: 1166021
+        uncompressed: 1408978
+      "178790":
+        filename: Mattb325_PassengerFerry2_MN.zip
+        files:
+          - Mattb325_PassengerFerry2_MN/Mattb325 Passenger Ferry2-0x6534284a-0x3ec1db6a-0x5b446cb5.SC4Desc
+          - Mattb325_PassengerFerry2_MN/Mattb325_PassengerFerry2-0x5ad0e817_0xc98c10c0_0x30000.SC4Model
+          - Mattb325_PassengerFerry2_MN/Mattb325_PassengerFerry2Base-0x5ad0e817_0x98c2aac_0x30000.SC4Model
+          - Mattb325_PassengerFerry2_MN/Mattb325_PassengerFerry_TerminalV2_README.txt
+          - Mattb325_PassengerFerry2_MN/PLOP_2x4_Mattb325 Passenger Ferry2 Base_7b448051.SC4Lot
+        sha256: 6ce8dda7927586592f4676c94242cc63bec735536006ff1fd7d42b5aecd9dfe7
+        size: 1194143
+        uncompressed: 1434907
+    version: 1.0.0
   simtropolis/33306-passenger-ferry-terminal-v3:
     authors:
       - mattb325
     category: waterfront
+    dependencies:
+      - simtropolis/33303-passenger-ferry-terminal-v2
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Passenger Ferry Terminal V3, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A "<span style="font-family:Georgia, serif;"><em>ye olde worlde</em></span>" style ferry terminal for your cities.
+      </p>
+
+
+      <p>
+      	While I quite like the look of the Maxis Passenger Ferry Terminal, and I also like the fact that both passenger ferries and car/passenger ferries are far and away the cheapest and most efficient form of public transit that never suffers from congestion...but after 15 years of seeing the same ferry buildings in game, it's time for an upgrade. 
+      </p>
+
+
+      <p>
+      	This is the last of four fictional buildings which I made for just that purpose.
+      </p>
+
+
+      <p>
+      	This passenger ferry building is a new lot and it does not replace or interfere with the in-game building (or any of my other ferry lots). It can be used in conjunction with the Maxis passenger ferry terminal or any other similarly modded passenger ferries available.<br>
+      	This ferry is also easy to place along the shore line - if you have ever placed the in game version, you will have no problems using this lot as the principles are identical. <br>
+      	Additionally, it uses standard maxis pavement textures (rather than a batted base like the in game version) so the lot will blend in with any sidewalk mods that you have. 
+      </p>
+
+
+      <p>
+      	Just like the in-game lot, this lot must be placed adjacent to a street/road and it also must be placed across both land and water.
+      </p>
+
+
+      <p>
+      	Ferry buildings are a great alternative/supplement to bridges, and I use them to ease congestion on the road network and a ferry terminal helps stop the 'no job' zot that often plagues residential areas by providing a super fast mode of travel.
+      </p>
+
+
+      <p>
+      	It is crucial to note the Passenger Ferry Terminal is a separate network from the Car Ferry Terminal. 
+      </p>
+
+
+      <p>
+      	Ferries that leave from a passenger ferry terminal do not use a car ferry terminal and vice versa. <br>
+      	Now, this is no different from the function in the vanilla rush-hour game, but as there are so few custom ferry terminals available for download, it is important to point out. 
+      </p>
+
+
+      <p>
+      	Therefore, I recommend placing this at least twice in any city tile (on opposite shorelines) and in a neighbouring city connected by water to get the most use. It is also important to note that ferries do not work if the water is too shallow, bridges too low, or if the edges of your cities and waterways are at wildly differing elevations.
+      </p>
+
+
+      <p>
+      	It has similar stats in terms of capacity and monthly cost to the Maxis Passenger Ferry Terminal, but provides more jobs. This old-world, brick and stone terminal building is slightly larger than the other ferry buildings I have released and visually looks more suited to denser older-style environments. <br>
+      	I say visually, because ferry terminals don't suffer from congestion unlike other modes of transport.
+      </p>
+
+
+      <p>
+      	The other thing about this series of passenger ferries is that they will conform to 90%, if not all of, the available seawall sets: as long as the seawall set has left/right overhanging lots (which are typically used as under-bridge lots) and are not too wide or deep, then they will function perfectly so you can keep a uniform look to your seawalls and not be forced to pick one that I choose.
+      </p>
+
+
+      <p>
+      	Obviously the passenger ferry building is found in the water transit section of the transportation menu and crucially it can only be placed in a city where in-game water is present; it does not work on canals or ploppable water.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 2x4 (to be placed on land and water)<br>
+      	Plop Cost:               §200<br>
+      	Bulldoze Cost:        §30<br>
+      	Occupant Groups: Transportation, Strikable Transit, Ferry, Passenger Ferry, Water Transit<br>
+      	Catalog Capacity:  900 <br>
+      	Wealth:                    Medium Wealth<br>
+      	Demand Created:  Jobs§§§: 1, Jobs§§: 12, Jobs§: 17.<br>
+      	Pollution:                 Air 1 over 1 tiles, Water 1 over 1 tiles, Garbage 2 over 0 tiles<br>
+      	Power consumed: 10 MwH<br>
+      	Water consumed:  25 Gallons/Month<br>
+      	Monthly cost:         §35
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	This download contains TWO file types in two separate folders; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite. <br>
+      	You must choose only one file - depending on which version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There is one dependency, crucial to avoid a brown box: <a href="https://community.simtropolis.com/files/file/33303-passenger-ferry-terminal-v2/" rel="">https://community.simtropolis.com/files/file/33303-passenger-ferry-terminal-v2/</a>. 
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/Olde_Ferry.jpg.0716f391adc6e1b56a7fa0e9c6ca15c5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/Olde_Ferry1.jpg.9ddfacea256cf7fb0cb6f49edd719951.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/Olde_Ferry2.jpg.5b2ab7cb5ec446426c3131412cccc6c8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/Olde_Ferry3.jpg.5de62313e7cfbd905c290f17b1fc56f7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/Olde_Ferry4.jpg.4cfb682bdcecba88954bc54bd6d141c1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/Olde_Ferry5.jpg.ff59ce5de8a4601624fab41228bb3ac7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_12/Olde_Ferry6.jpg.d3dd47de54d783eb1c6f899f3ee019a4.jpg
     lastModified: 2019-12-02T07:48:13Z
     name: Passenger Ferry Terminal V3
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_12/Olde_Ferry.thumb.jpg.17f1269467fdb482b1bc3c08c75a9235.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33306-passenger-ferry-terminal-v3/
+    variants:
+      "179028":
+        filename: Mattb325_PassengerFerry3_DN.zip
+        files:
+          - Mattb325_PassengerFerry3_DN/Mattb325 Passenger Ferry3-0x6534284a-0x3ec1db6a-0x1b6974f7.SC4Desc
+          - Mattb325_PassengerFerry3_DN/Mattb325_PassengerFerry3-0x5ad0e817_0x293fbb79_0x30000.SC4Model
+          - Mattb325_PassengerFerry3_DN/Mattb325_PassengerFerry_TerminalV3_README.txt
+          - Mattb325_PassengerFerry3_DN/PLOP_2x4_Mattb325 Passenger Ferry3 Base_6af02c09.SC4Lot
+        sha256: 27ecf2b4c1f74dd586519f4d1c797140fd22930753ce9681f118dd2d600ef2bd
+        size: 1152663
+        uncompressed: 1344461
+      "179029":
+        filename: Mattb325_PassengerFerry3_MN.zip
+        files:
+          - Mattb325_PassengerFerry3_MN/Mattb325 Passenger Ferry3-0x6534284a-0x3ec1db6a-0x1b6974f7.SC4Desc
+          - Mattb325_PassengerFerry3_MN/Mattb325_PassengerFerry3-0x5ad0e817_0x293fbb79_0x30000.SC4Model
+          - Mattb325_PassengerFerry3_MN/Mattb325_PassengerFerry_TerminalV3_README.txt
+          - Mattb325_PassengerFerry3_MN/PLOP_2x4_Mattb325 Passenger Ferry3 Base_6af02c09.SC4Lot
+        sha256: c7b8a7c4dc95e79cac898c87883327aecb75eac44e54fe8a9736600d3fed95e9
+        size: 1087560
+        uncompressed: 1272516
+    version: 1.0.0
   simtropolis/33323-gurrys-sea-walls-v1:
     authors:
       - STEX Custodian
@@ -4182,18 +5204,280 @@ assets:
     authors:
       - mattb325
     category: waterfront
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Offshore Pontoon, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	Made as a request for a fellow SC4 player, this offshore pontoon is used for boats to moor in open water. Typically used by tourist boats, offshore pontoons can also be used to moor much larger craft.
+      </p>
+
+
+      <p>
+      	The design is loosely based on the pontoons that surround the <em>Arizona Memorial</em> in Pearl Harbor.
+      </p>
+
+
+      <p>
+      	This 3x2 water lot is found in the water transit menu.
+      </p>
+
+
+      <p>
+      	In order to light up at night, there is a small power output of 1kwh per month, but otherwise the lot produces no garbage/water, etc.
+      </p>
+
+
+      <p>
+      	The lot has a completely transparent base texture and the model has custom LODs to enable you to <abbr title="Mayor Mode Ploppable">MMP</abbr> under the pontoon (as I have done in the screenshots)
+      </p>
+
+
+      <p>
+      	<em>Boats sold separately.</em>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies required for this lot.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Bertha.jpg.383209d9082f38afeeed28c2e4898036.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Bertha1.jpg.962823910444acb4204b0684f42706f9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Bertha2.jpg.a06dfd03caaeb89a5a42f3927246b386.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Bertha3.jpg.94f9fccc0c801a9a2c352f58c60cd688.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Bertha4.jpg.9fe63c0cd91954915f0b80b007a642a2.jpg
     lastModified: 2020-10-25T20:56:27Z
     name: Offshore Pontoon
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/Bertha.thumb.jpg.03049a82c9dcb69e976ee75dbd206870.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33909-offshore-pontoon/
+    variants:
+      "183275":
+        filename: Mattb325_Bertha_DN.zip
+        files:
+          - Mattb325_Bertha_DN/Mattb325_Bertha-0x5ad0e817_0x2c9c040d_0x30000.SC4Model
+          - Mattb325_Bertha_DN/PLOP_3x2_Mattb325 Bertha_9d1a94d4.SC4Lot
+        sha256: 67a4b695cab21af5463f14f1020ecdc6a72f591fe25e6bc163e907d5cc25eb98
+        size: 529825
+        uncompressed: 703426
+      "183276":
+        filename: Mattb325_Bertha_MN.zip
+        files:
+          - Mattb325_Bertha_MN/Mattb325_Bertha-0x5ad0e817_0x2c9c040d_0x30000.SC4Model
+          - Mattb325_Bertha_MN/PLOP_3x2_Mattb325 Bertha_9d1a94d4.SC4Lot
+        sha256: 61758d6f672516e60449699a8baf37cabbcf5c1220c89985eaf753518864072a
+        size: 507101
+        uncompressed: 677468
+    version: 1.0.0
   simtropolis/33928-boats-for-cal-canals-2007-baseset:
     authors:
       - mattb325
     category: waterfront
+    dependencies:
+      - simtropolis/33886-sailing-boat
+      - simtropolis/33885-luxury-yacht
+      - simtropolis/33884-super-yacht
+      - simtropolis/33875-boaty-mcboatface
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Boats for CAL Canals (2007 Baseset), by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	By request, I have made available the four recently released boats as an add-on for the CAL_Goobers Canals 2007 Baseset.
+      </p>
+
+
+      <p>
+      	It is important to note that CAL made <strong><u>TWO</u></strong> types of canals and <u>each looks slightly different</u>. 
+      </p>
+
+
+      <p>
+      	As extra clarification, this download is for the set of canal pieces that use the <strong>white-edging</strong> originally made by Simgoober. They are not interchangeable with the later-released Stone Canal Base set (which has a <strong>brown</strong> edging).
+      </p>
+
+
+      <p>
+      	Apart from plop-costs and a slight pollution reduction, these boats are in-game neutral lots which use the same stats as the water-tile piece.
+      </p>
+
+
+      <p>
+      	Each lot has a unique icon to identify it in the Parks Menu; they are found adjacent to the lots of the original canal set.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                  2x2<br>
+      	Plop Cost:               $ 140<br>
+      	Bulldoze Cost:        $ 10<br>
+      	Demand Satisfied: R$ 0, R$$ 0, R$$$ 0<br>
+      	Pollution:                 0 (Air)/ -2 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    0/0/0<br>
+      	Park Effect:             0 over 0 tiles<br>
+      	Landmark Effect:   0 over 0 tiles<br>
+      	Monthly cost:         $ 0<br>
+      	Power Consumed: 0 Mwh<br>
+      	Water Consumed:  0 Gal/Month<br>
+      	Occupant Group:    Building: Civic; Building: Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This model has no nightlights: therefore there is no need to select the appropriate file from the download.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong><br>
+      	CAL Goobers Canals 2007 Baseset <abbr title="BATT Squad Certification">BSC</abbr>.dat - (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=979" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=979</a>)<br>
+      	Sailing Boat - (<a href="https://community.simtropolis.com/files/file/33886-sailing-boat/" rel="">https://community.simtropolis.com/files/file/33886-sailing-boat/</a>)<br>
+      	Luxury Yacht - (<a href="https://community.simtropolis.com/files/file/33885-luxury-yacht/" rel="">https://community.simtropolis.com/files/file/33885-luxury-yacht/</a>)<br>
+      	Super Yacht - (<a href="https://community.simtropolis.com/files/file/33884-super-yacht/" rel="">https://community.simtropolis.com/files/file/33884-super-yacht/</a>)<br>
+      	Boaty McBoatFace - (<a href="https://community.simtropolis.com/files/file/33875-boaty-mcboatface/" rel="">https://community.simtropolis.com/files/file/33875-boaty-mcboatface/</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    filename: Mattb325_CAL_Canal_Boats.zip
+    files:
+      - Mattb325_CAL_Canal_Boats/Mattb325 BoatyMcBoatFace(prop)-0x6534284a-0x3ec1db6a-0xbd12afd1.SC4Desc
+      - Mattb325_CAL_Canal_Boats/Mattb325 LuxuryYacht(prop)-0x6534284a-0x3ec1db6a-0x7d12afe7.SC4Desc
+      - Mattb325_CAL_Canal_Boats/Mattb325 Sailing Boat(prop)-0x6534284a-0x3ec1db6a-0x1d12ab5c.SC4Desc
+      - Mattb325_CAL_Canal_Boats/Mattb325 SuperYacht(prop)-0x6534284a-0x3ec1db6a-0xdd12affe.SC4Desc
+      - Mattb325_CAL_Canal_Boats/Mattb325_BoatsForCALCanals_README.txt
+      - Mattb325_CAL_Canal_Boats/SG_CAL_Canal_2x2_WaterTile(BoatyMcBoatFace)_ac99668b.SC4Lot
+      - Mattb325_CAL_Canal_Boats/SG_CAL_Canal_2x2_WaterTile(LuxuryYacht)_cc996727.SC4Lot
+      - Mattb325_CAL_Canal_Boats/SG_CAL_Canal_2x2_WaterTile(SailBoat)_ac996202.SC4Lot
+      - Mattb325_CAL_Canal_Boats/SG_CAL_Canal_2x2_WaterTile(SuperYacht)_0c996775.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Canals_boats.jpg.41871e29082c872b19a8000f32500f7a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Canals_boats1.jpg.6f1d0df376b967d0f6c610154e126788.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Canals_boats2.jpg.a4db258c82c97667917852ea1f51ecf6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Canals_boats3.jpg.3d395e8e79eaa7ed0167bf04380b5db8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Canals_boats4.jpg.f4d21d25b917c13602e8d670b1d3e237.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/Canals_boats5.jpg.e3c8bb2032606919178d6f0a84302f6d.jpg
     lastModified: 2020-10-31T20:11:25Z
     name: Boats for CAL Canals (2007 Baseset)
+    sha256: 21ea44c22adffce9ce8ba99aa995608a83ae694d1feb26bf5c755e93f1cf25a6
+    size: 111788
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/Canals_boats.thumb.jpg.2c24666abfb2b2fc5564a681e151d778.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 112962
     url: https://community.simtropolis.com/files/file/33928-boats-for-cal-canals-2007-baseset/
+    version: 1.0.0
   simtropolis/34011-sm2-longstone-lighthouse:
     authors:
       - Simmer2
@@ -4206,10 +5490,168 @@ assets:
     authors:
       - mattb325
     category: waterfront
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	<strong>Bergen Fish Market &amp; Tourist Information Center, by Mattb325.<br>
+      	-----------------------------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	While the combination of a fish market and tourist information center might seem a little peculiar, it is indeed, a real thing. 
+      </p>
+
+
+      <p>
+      	Inspired by the Bergen Fish market, this building acts as a reward. Almost shaped like a wedge of sushi, it is clad in dark timber that is punctuated by brightly colored fins that light up at night. 
+      </p>
+
+
+      <p>
+      	I have this building an overhanging prop: when placed, the cantilevered section can overhang the water, piers, seawalls/marinas, roads, streets, etc, for a more dramatic effect.
+      </p>
+
+
+      <p>
+      	This building is offered as a non-conditional reward that has a somewhat similar base function to the farmer's market (but is altered substantially). It provides 31 very desirable civic jobs, boosts commercial and residential demand and lifts caps for R$ and R$$ residents so is a great option to help when residential demand drops.
+      </p>
+
+
+      <p>
+      	This building is:<br>
+      	* Offered as a reward without needing to meet pre-existing conditions.<br>
+      	* Located in the REWARD Menu <br>
+      	* Can be placed more than once in a city. <br>
+      	* It DOES NOT over-write any ingame or custom rewards.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 4x2<br>
+      	Plop Cost:              $4,500<br>
+      	Monthly Cost:        $20<br>
+      	Budget Item:          Government Buildings<br>
+      	Occupant Groups: Reward, Park, Health Other<br>
+      	Jobs:                       Jobs$: 20, Jobs$$: 10, Jobs$$$: 1.<br>
+      	CAP Busting:          R$: 20,000, R$$: 140,000<br>
+      	Landmark Effect:   +50 over 22 tiles<br>
+      	Park Effect:             +75 over 27 tiles<br>
+      	Pollution:                 Air 1 over 2 tiles, Water 1 over 3 tiles, Garbage 9 over 0 tiles<br>
+      	Power consumed:  3 MwH<br>
+      	Water consumed:  3 Gallons/Month<br>
+      	Bulldoze Cost:        $400
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	The main dependency pack for all of these Civic Bats are split into two dependency files; one is for dark nite users (and other night-time darkening mods, such as Gizmos or Mashty's night-mod) and one for the standard Maxis nite. <br>
+      	You must select and install only one file - depending on which night version you use. If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies required
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/FishMarket.jpg.9d7902b5c81dbcad056a5f315eb74776.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/FishMarket1.jpg.7dfc266ec7f6fe4bd355fe5a791b5b4e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/FishMarket2.jpg.9de24709d2f60a50cd33366c47e51139.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/FishMarket3.jpg.597fd630ac94c9b2b4d33f640028a99c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/FishMarket4.jpg.3044d60f90d9b3a5e05bc7eb1b4c961e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/FishMarket5.jpg.167624e71d8d515389567de3563e6b03.jpg
     lastModified: 2021-02-26T08:36:26Z
     name: Bergen Fish Market
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_02/FishMarket.thumb.jpg.79fa82219ef3f18861d8745f370f7c5a.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34182-bergen-fish-market/
+    variants:
+      "185647":
+        filename: Mattb325_FishMarket_DN.zip
+        files:
+          - Mattb325_FishMarket_DN/Mattb325 Fish Market(prop)-0x6534284a-0x3ec1db6a-0x7d777925.SC4Desc
+          - Mattb325_FishMarket_DN/Mattb325_BergenFishMarket_README.txt
+          - Mattb325_FishMarket_DN/Mattb325_FishMarket-0x5ad0e817_0x6fd8895d_0x30000.SC4Model
+          - Mattb325_FishMarket_DN/PLOP_2x4_Mattb325 Bergen Fish Market_0d777904.SC4Lot
+        sha256: f4a6119e327630d2695690ca135bf75e8f27d7bc8149b226e8282798f03bbe3b
+        size: 655402
+        uncompressed: 767391
+      "185648":
+        filename: Mattb325_FishMarket_MN.zip
+        files:
+          - Mattb325_FishMarket_MN/Mattb325 Fish Market(prop)-0x6534284a-0x3ec1db6a-0x7d777925.SC4Desc
+          - Mattb325_FishMarket_MN/Mattb325_BergenFishMarket_README.txt
+          - Mattb325_FishMarket_MN/Mattb325_FishMarket-0x5ad0e817_0x6fd8895d_0x30000.SC4Model
+          - Mattb325_FishMarket_MN/PLOP_2x4_Mattb325 Bergen Fish Market_0d777904.SC4Lot
+        sha256: 98133023efcee46181adda8c759921a1981369cf2ddab7887939aba9c0224f99
+        size: 660962
+        uncompressed: 771366
+    version: 1.0.0
   simtropolis/3438-nexis-bls-ga-historical-lighthouse:
     authors:
       - mrbisonm
@@ -4858,7 +6300,17 @@ assets:
 
 
 
+
+
+
+
+
       							
+
+
+
+
+
 
 
 
@@ -5027,9 +6479,7 @@ assets:
       - simtropolis/36142-submenus-dll
     description: "<body>
 
-      \                           \
-
-      \t\t\t\t\t\t\t<h3 style=\"text-align: center;\">\r
+      \                            \t\t\t\t\t\t\t<h3 style=\"text-align: center;\">\r
 
       \t<span style=\"font-size:28px;\"><strong>LA River Project</strong></span>\r
 
@@ -5343,4 +6793,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-95551d0236de2d4a115733d90bd60c29-vabeachboardwalk.JPG
     url: https://community.simtropolis.com/files/file/944-virginia-beach-boardwalk/
 
-timestamp: 2024-09-13T12:22:00.820Z
+timestamp: 2024-10-17T06:14:27.427Z

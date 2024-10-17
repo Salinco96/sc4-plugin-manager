@@ -1235,10 +1235,75 @@ assets:
     authors:
       - SimtropiaProductions
     category: graphics
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+
+
+      							
+      <p>
+      	This Mod will replace the default sidewalk textures in SimCity4 with the sandstone texture (Also used in the <abbr title="Network Addon Mod">NAM</abbr> pedestrian streets).
+      </p>
+
+
+      <p>
+      	This modd will work with jeronij's street side modd. (found <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=115" rel="external nofollow">here</a>) make sure you load this mod AFTER the street side mod
+      </p>
+
+
+      <p>
+      	If you have a sidewalk texture that you would like to see replace the standard maxis sidewalk textures please PM mjig_dudy or post in my development thread at simcities.com.
+      </p>
+
+
+      <p>
+      	To install simply extract the contents into your My Documents/SimCity4/Plugins folder. We also suggest you create a folder called SMP PROD in your plugins to keep all of our work together.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Modding - mjig_dudy
+      </p>
+
+
+      <p>
+      	Special thanks to those members of simcities.com who offerd support and suggestions
+      </p>
+
+
+      <p>
+      	<span style="font-size:11px;"><span style="color:rgb(230,126,34);">Staff Edit: Fixed dependency link.</span></span>
+      </p>
+
+      						</body>
+    filename: SMP Sidewalk replacement mod.zip
+    files:
+      - SMP Sidewalk replacement mod/pic1.jpg
+      - SMP Sidewalk replacement mod/pic2.jpg
+      - SMP Sidewalk replacement mod/sandstane texturereplacement.dat
+      - SMP Sidewalk replacement mod/sandstone.JPG
+      - SMP Sidewalk replacement mod/Thumbs.db
+    images:
+      - https://www.simtropolis.com/objects/screens/0025/e33050d94821c98fb004577aa151d171-pic1.jpg
+      - https://www.simtropolis.com/objects/screens/0025/e33050d94821c98fb004577aa151d171-pic2.jpg
     lastModified: 2022-08-28T14:08:27Z
     name: SMP Sidewalk Replacement MOD
+    sha256: 11b0760fb27ee365772f227b7cac2037d11028839d27a725a31c661d713e293f
+    size: 116259
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2006/thumb-e33050d94821c98fb004577aa151d171-pic1.jpg
+    timestamp: 2024-10-15T15:37:00.411Z
+    uncompressed: 205760
     url: https://community.simtropolis.com/files/file/17323-smp-sidewalk-replacement-mod/
+    version: "1.0"
   simtropolis/17780-af1-and-af12-fighters:
     authors:
       - Lyhoko Leaci
@@ -1603,10 +1668,84 @@ assets:
     authors:
       - RustyXL
     category: graphics
+    dependencies:
+      - simtropolis/15604-rmip-2-small-airport-edition-vol-1
+      - simtropolis/26571-rmip-2-small-airport-edition-vol-2
+    description: "<body>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t<p>\r
+
+      \tAre your rich Sims tired of flying on commercial flights? Then this pack of Learjet 45s is just what they need. Includes 9 different paint schemes and 2 different models, open and closed door.
+      There are also 2 styles of lots included, 1x3 gate lots for your VIP Sims, and 1x2 apron lots for regular general aviation parking.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \t<strong>Dependencies</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<a href=\"https://community.simtropolis.com/files/file/15604-rmip-2-small-airport-edition-vol-1/\" rel=\"\">RMIP 2 Small Airport Edition Vol 1</a>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<a href=\"https://community.simtropolis.com/files/file/26571-rmip-2-small-airport-edition-vol-2/\" rel=\"\">RMIP 2 Small Airport Edition Vol 2</a>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \tFor support either PM me here, or post in the <abbr title=\"SimCity Airport Group\">SCAG</abbr> support thread at SC4D:\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<a href=\"https://www.sc4devotion.com/forums/index.php?topic=5756.0\" rel=\"external nofollow\">https://www.sc4devotion.com/forums/index.php?topic=5756.0</a>\r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: SCAG Learjet 45 Pack 1.zip
+    files:
+      - SimCity Aviation Group/Readme.txt
+      - SimCity Aviation Group/RXL Learjet 45 Gate Lots.dat
+      - SimCity Aviation Group/RXL Learjet 45 Parking Lots.dat
+      - SimCity Aviation Group/RXL Learjet 45 props.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0016/903ea431faec73cb6f8992801152e6f5-Learjet45ST1.jpg
+      - https://www.simtropolis.com/objects/screens/0016/903ea431faec73cb6f8992801152e6f5-Learjet45ST2.jpg
     lastModified: 2009-04-04T15:36:30Z
     name: SCAG Learjet 45 Pack 1
+    sha256: fdb3fdb16ec6a6a89b845b63a5a372d7c9bf6b785f95723ec9dff6c98bd686dd
+    size: 182976
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2009/thumb-903ea431faec73cb6f8992801152e6f5-Learjet45ST1.jpg
+    timestamp: 2024-10-15T15:37:00.411Z
+    uncompressed: 457731
     url: https://community.simtropolis.com/files/file/21507-scag-learjet-45-pack-1/
+    version: "1.0"
   simtropolis/21627-troll-bridge:
     authors:
       - Glenni
@@ -2101,10 +2240,148 @@ assets:
     authors:
       - rivit
     category: graphics
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+      							
+      <p>
+      	This set is designed to completely replace MAXIS styled streets - everywhere. It is a complete redesign and new implementation of the streets I first made in 2005. Since then <abbr title="Network Addon Mod">NAM</abbr>/<abbr title="Street Addon Mod">SAM</abbr>/Euro and a lot of other street tiles have appeared. This version is compatible with NAMv32
+      </p>
+
+
+      <p>
+      	Applying these files will completely suppress the MAXIS street look (everywhere, instantly). Its intended that way. Try it, fly it - if you don't like it remove it.
+      </p>
+
+
+      <p>
+      	Put the entire zip contents into Plugins in a directory alphabetically after Z___NAM, preferably so it becomes Plugins\Z___RVT Modds\RVT Streets\*
+      </p>
+
+
+      <p>
+      	Remove what you don't need - see readme.txt for instructions.
+      </p>
+
+
+      <p>
+      	Revert by removing the .dats  However some tiles used in a saved game may need to be relaid in order to guarantee their removal. (thats the way the game works)
+      </p>
+
+
+      <p>
+      	These are designed to work seamlessly with my SAM4 - NZ Gravel, and SAM5 - Rural Tarsealed Streets.
+      </p>
+
+
+      <p>
+      	NOTES:<br>
+      	Please bring oddities/omissions to my attention, ideally with a tileid or image, preferably on the Forum support page.
+      </p>
+
+
+      <p>
+      	Techs/Modders - the straight, 90 curve, diagonal and T,X intersections as BMPs are included in the archive in Dev/MAXIS. Dev/<abbr title="Network Addon Mod">NAM</abbr> has the modified <abbr title="Network Addon Mod">NAM</abbr> colours. I've included these for you to be able to make lot textures and even adapt your own specials should you desire.<br><br>
+      	Thanks to rsc04 who prodded me to revisit my streets and contributed fixes and feedback. Thanks to you all for your patience - it took me a while to update this set.
+      </p>
+
+
+      <p>
+      	rivit Apr 2015
+      </p>
+
+
+      <p>
+      	Oct2017 - Brought Up-to-date with NAM36 - added WRC content and improved some color matching. 
+      </p>
+
+      						</body>
+    filename: RVT Tarsealed Streets v4.42.zip
+    files:
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-05000F04-C0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-05000F04-D0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-05004B04-C0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-05004B04-D0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-05005704-C0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-05005704-D0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-05020704-C0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-05020704-D0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-5F500204-C0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-5F500204-D0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-5F500404-C0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-5F500404-D0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-5F500504-C0.bmp
+      - RVT Streets/DEV/MAXIS/7AB50E44-1ABE787D-5F500504-D0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-05000F04-C0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-05000F04-D0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-05004B04-C0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-05004B04-D0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-05005704-C0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-05005704-D0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-05020704-C0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-05020704-D0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-5F500204-C0.bmp
+      - RVT Streets/DEV/NAM MODELS/7AB50E44-1ABE787D-5F500204-D0.bmp
+      - RVT Streets/RVT Tarsealed Street Lots/RVT 6x1_road works_eb7e25d7.SC4Lot
+      - RVT Streets/RVT Tarsealed Street Lots/RVT Tarsealed Streets - Lot Support.dat
+      - RVT Streets/RVT Tarsealed Street Lots/RVT TSS SpeedHump High Density_e229bf47.SC4Lot
+      - RVT Streets/RVT Tarsealed Street Lots/RVT TSS SpeedHump Low Density_4229bf03.SC4Lot
+      - RVT Streets/RVT Tarsealed Street Lots/RVT TSS SpeedHump Paths LHD.dat
+      - RVT Streets/RVT Tarsealed Street Lots/RVT TSS SpeedHump Paths RHD.dat
+      - RVT Streets/RVT Tarsealed Street Lots/RVT TSS Taxi_Rank_LHD_c3bc171c.SC4Lot
+      - RVT Streets/RVT Tarsealed Street Lots/RVT TSS Taxi_Rank_RHD_a3bc1712.SC4Lot
+      - RVT Streets/RVT Tarsealed Streets - Common.dat
+      - RVT Streets/RVT Tarsealed Streets - Common_Paths.dat
+      - RVT Streets/RVT Tarsealed Streets - EU.dat
+      - RVT Streets/RVT Tarsealed Streets - JRJ Side Parking bays.dat
+      - RVT Streets/RVT Tarsealed Streets - Lots SCILT CULDESAC.dat
+      - RVT Streets/RVT Tarsealed Streets - NAM FLUPs.dat
+      - RVT Streets/RVT Tarsealed Streets - NAM_Paths.dat
+      - RVT Streets/RVT Tarsealed Streets - RRWx LHD.dat
+      - RVT Streets/RVT Tarsealed Streets - RRWx RHD.dat
+      - RVT Streets/RVT Tarsealed Streets - US.dat
+      - RVT Streets/RVT Tarsealed Streets - zOptional Cul de sac.dat
+      - RVT Streets/RVT Tarsealed Streets - zOptional GLR TIS EU.dat
+      - RVT Streets/RVT Tarsealed Streets - zOptional GLR TIS US.dat
+      - RVT Streets/RVT Tarsealed Streets - zOptional GLR.dat
+      - RVT Streets/RVT Tarsealed Streets - zOptional Rural Unkerbed.dat
+      - RVT Streets/RVT Tarsealed Streets - zOptional TX Round16Kerbs.dat
+      - RVT Streets/RVT Tarsealed Streets - zOptional TX Round46Islands.dat
+      - Readme.txt
+      - TSS Part A.jpg
+      - TSS Part B.jpg
+      - TSS Part C LHS.jpg
+      - TSS Part C RHS.jpg
+      - TSS Part D.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_04_2015/867c3c23a667f415bd7c9f0144399ff7-tss-part-a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_04_2015/aedbbe714fa1028d68f921eddb912db7-tss-part-c-rhs.jpg
     lastModified: 2021-11-18T23:52:20Z
     name: Urban Tarsealed Street Modd
+    sha256: bc6dd957aa49abbb09f6abd73f6c2324bdb5d3ef3893a2f7cf0bf92f99f86549
+    size: 12495989
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2015/thumb-867c3c23a667f415bd7c9f0144399ff7-tss-part-a.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 24507748
     url: https://community.simtropolis.com/files/file/25404-urban-tarsealed-street-modd/
+    version: "4.42"
   simtropolis/25414-scag-c-130h-mmp-and-prop-pack:
     authors:
       - adroman_66
@@ -2173,10 +2450,279 @@ assets:
     authors:
       - Kodlovag
     category: graphics
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+      							
+      <p>	<strong>Uniform Street Lighting Mod</strong><br>	Release 1.0 by kodlovag</p>
+
+      <p>	<br>	PLEASE READ THE README CAREFULLY! THIS PACK MAY CAUSE CONFLICT WHEN IT'S WRONGFULLY INSTALLED!<br><br>	This mod is replacing the lamp posts and cones on road based networks. The goal is
+      to create uniformly lit roads and therefore a much more realistic night scene.<br><br>	USL adds new and replaces existing in-game and <abbr title="Network Addon Mod">NAM</abbr> <abbr title="Type
+      21 Exemplar">T21</abbr> network lots responsible for appearance of street and roadsides, avenue medians, roadside light poles etc. Also adds new light pole props and overwrites in-game ones. USL
+      does not add or modify any textures, and therefore compatible to any<br>	sidewalk or road texture replacement mod.<br><br><em><strong>Supported networks</strong></em><br>	All supported networks
+      receive their corresponding light props. The following networks are supported:<br><br>	- <strong>Maxis Highway (<abbr title="Maxis Highway">MHW</abbr>)</strong>: all in-game and many <abbr
+      title="Network Addon Mod">NAM</abbr> pieces including elevated-ground transition pieces, wide radius curves, on slope pieces, road under elevated highway (EHW) and similar pieces.<br>	-
+      <strong>Avenues</strong><br>	- <strong>Road</strong><br>	- <strong>One-way</strong><br>	-<strong> Road and avenue turning lanes</strong><br>	- <strong>Turning Lanes Expansion Pack (<abbr
+      title="Turning Lane Extension Piece(s)">TuLEP</abbr>)</strong><br>	- <strong>Network Widening Mod (<abbr title="Network Widening Mod">NWM</abbr>)</strong><br>	-
+      <strong>Roundabouts</strong><br>	- <strong>Street</strong>: streets get the original Maxis light pole props to keep USL compatible to great streetside mods. That means street lamp post props are
+      applied on every lots including T21s, which use the game default lamp post props, and don’t have direct support in USL.<br>	- <strong>Bridges</strong>: Maxis highway (both elevated and ground),
+      avenue, road, oneway road, street bridges. All in-game and <abbr title="Network Addon Mod">NAM</abbr> bridges. Additional bridges are not supported, but can receive the modded USL lights if the
+      game default streetlight props are applied on them.<br><br><em><strong>Unsupported networks</strong></em><br>	The following networks are not supported by the USL and therefore don't receive USL
+      lamp post props:<br><br>	-<strong> <abbr title="Maxis Highway">MHW</abbr> interchanges</strong>: ramps, cloverleaf, etc.<br>	- <strong>Intersections</strong>: street, road and avenue
+      intersections. Any intersections with rail, elevated rail, monorail.<br>	- <strong>Real Highway (<abbr title="RealHighway">RHW</abbr>)</strong><br>	- <strong>Tram on road</strong>: will be
+      supported in a later release<br>	- <strong>Tram on avenue</strong>: will be supported in a later release. Several tram on avenue pieces have T21s in <abbr title="Network Addon Mod">NAM</abbr>,
+      they get the modded USL street lights.<br>	- <strong>Street Addon Mod (<abbr title="Street Addon Mod">SAM</abbr>)</strong>: Several <abbr title="Street Addon Mod">SAM</abbr> pieces have T21s,
+      they get the modded USL street lights.<br>	- <strong>Wide Radius Curves</strong>: sithlrd98 made <abbr title="Type 21 Exemplar">T21</abbr> mod for the wide radius curves. It uses the default
+      street lights, so it will receive the modded USL street lights.<br><br><em><strong>Compatibility</strong></em><br>	USL basically can conflict with any other <abbr title="Type 21
+      Exemplar">T21</abbr> based mod, which applies T21s on networks supported by USL. The goal is to keep these other mods usable by replacing their T21s and lamp post props. There is additional
+      support for several mods, which would otherwise be incompatible. Therefore it’s important that USL must load after all of these mods.<br>	There is a list in the pdf readme containing several
+      <abbr title="Type 21 Exemplar">T21</abbr> mods which apply on the supported networks and their current compatibility state. Please read the readme! One important point is included here:<br>	-
+      <strong>Light Replacement Mod, <abbr title="Light Replacement Mod">LRM</abbr> V3.0: Not compatible</strong>. USL directly replaces <abbr title="Light Replacement Mod">LRM</abbr>. If you have
+      <abbr title="Light Replacement Mod">LRM</abbr> V3.0 installed, please remove it. You can keep using LOTLight and Generic light replacements. Maarten works on a USL compatible version of <abbr
+      title="Light Replacement Mod">LRM</abbr>. Thanks for Maarten allowing me to use his T21s in my mod.<br><br><em><strong>Installation instructions</strong></em><br>	It's very important, please
+      read the included pdf readme for detailed install instructions!<br>	- Copy the mod into your Plugin directory. Be sure it loads last.<br>	- Copy only one color version!<br>	- Copy T21s for <abbr
+      title="Network Widening Mod">NWM</abbr> and <abbr title="Turning Lane Extension Piece(s)">TuLEP</abbr> only, if you have those mods!<br>	- Copy files from directory T21_Mods_Addons only if you
+      have that specific mod! Otherwise they will conflict!<br><br><em><strong>How to use it in game – Tips &amp; Tricks</strong></em><br>	After installing this mod, you will find that several lights
+      are automatically replaced, but other lights on supported networks are not. In order to replace the street lights on these networks, click on them with the road tool, and new lights will be
+      applied on a few tiles radius range. This is the process, when the new and modified T21s are applied. Bridges must be rebuilt to get the new T21s. You need to do this process only once. If you
+      want to change light pole sets or colors later, effect will be immediate.<br>	Any newly built network will get the USL lights immediately.<br>	A pole will only have light, when
+      powered.<br>	Please save your game in daytime! Otherwise you will see that the light cones<br>	paint your roads in the region view.<br>	You will see many times, when you intersect an avenue with
+      a road, that the intersection is dark, because light poles are two tiles away in both directions. You can use TuLEPs to light up the intersection. Diagonal intersections are still causing
+      problem.<br>	Feel free to datpack the mod if you want to decrease loading time of the game, but take into account, that you might have hard time when you want to change pole sets or updating to
+      a new release of USL.<br><br><em><strong>Uninstalling</strong></em><br>	This is a great mod, you won’t want to uninstall it… But if you really want, delete the T21s first. Then click on all the
+      networks with the road tool, where T21s were applied to replace them by the game default T21s. Just like after the installing process. Then you can remove the light pole sets too. If you see
+      brown boxes after this process, you didn’t refresh that piece of the road. Click on it with the road tool to remove the brown box.<br><br><em><strong>Dependencies</strong></em><br>	Network Addon
+      Mod (<abbr title="Network Addon Mod">NAM</abbr>) Version 29<br><br><em><strong>Optional downloads</strong></em><br>	Network Widening Mod (<abbr title="Network Widening
+      Mod">NWM</abbr>)<br>	Turning Lanes Plugin (<abbr title="Turning Lane Extension Piece(s)">TuLEP</abbr>)<br>	This mod was designed to use together with a dark night mod. Day and night mod by
+      Simfox or similar mod is recommended. But it works with standard Maxis night too.<br><br><em><strong>Support thread</strong></em><br><a
+      href="https://www.sc4devotion.com/forums/index.php?topic=12674.0" rel="external nofollow">https://www.sc4devotion.com/forums/index.php?topic=12674.0</a><br><br><em><strong>Thanks
+      to</strong></em><br>	Maarten (mrtnrln) for allowing using files from his great <abbr title="Light Replacement Mod">LRM</abbr> mod and for revising this readme.<br>	Xannepan for the name of the
+      mod.<br>	NorbyToG for helping in beta testing.</p>
+
+      <p>	 </p>
+
+      <p>	<span style="font-size:12px;">Mod edit 3rd May 2017 - Fixed formatting</span></p>
+
+      						</body>
+    filename: Uniform_Street_Lighting_Mod_v1.1.zip
+    files:
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/AddonLights_JRJ_Street_Side_Mod_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/AddonLights_NAM_Overpass_Facelift_MOD_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/AddonLights_PEG_UtopianAve_RCIAS_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_AVE-2_$$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_AVE-2_$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_AVE-2_$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_AVE-4_$$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_AVE-4_$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_AVE-4_$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_Bridges_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_MHW_Median_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_NWM_$$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_NWM_$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_NWM_$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_RD_$$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_RD_$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_RD_$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_Roundabouts_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_STR_$$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_STR_$$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Blue/Lights_STR_$_Maxis_Blue.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/AddonLights_JRJ_Street_Side_Mod_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/AddonLights_NAM_Overpass_Facelift_MOD_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/AddonLights_PEG_UtopianAve_RCIAS_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_AVE-2_$$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_AVE-2_$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_AVE-2_$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_AVE-4_$$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_AVE-4_$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_AVE-4_$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_Bridges_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_MHW_Median_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_NWM_$$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_NWM_$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_NWM_$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_RD_$$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_RD_$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_RD_$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_Roundabouts_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_STR_$$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_STR_$$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Green/Lights_STR_$_Maxis_Green.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/AddonLights_JRJ_Street_Side_Mod_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/AddonLights_NAM_Overpass_Facelift_MOD_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/AddonLights_PEG_UtopianAve_RCIAS_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_AVE-2_$$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_AVE-2_$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_AVE-2_$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_AVE-4_$$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_AVE-4_$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_AVE-4_$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_Bridges_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_MHW_Median_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_NWM_$$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_NWM_$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_NWM_$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_RD_$$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_RD_$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_RD_$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_Roundabouts_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_STR_$$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_STR_$$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Orange/Lights_STR_$_Maxis_Orange.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/AddonLights_JRJ_Street_Side_Mod_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/AddonLights_NAM_Overpass_Facelift_MOD_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/AddonLights_PEG_UtopianAve_RCIAS_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_AVE-2_$$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_AVE-2_$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_AVE-2_$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_AVE-4_$$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_AVE-4_$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_AVE-4_$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_Bridges_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_MHW_Median_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_NWM_$$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_NWM_$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_NWM_$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_RD_$$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_RD_$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_RD_$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_Roundabouts_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_STR_$$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_STR_$$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Red/Lights_STR_$_Maxis_Red.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/AddonLights_JRJ_Street_Side_Mod_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/AddonLights_NAM_Overpass_Facelift_MOD_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/AddonLights_PEG_UtopianAve_RCIAS_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_AVE-2_$$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_AVE-2_$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_AVE-2_$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_AVE-4_$$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_AVE-4_$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_AVE-4_$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_Bridges_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_MHW_Median_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_NWM_$$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_NWM_$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_NWM_$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_RD_$$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_RD_$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_RD_$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_Roundabouts_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_STR_$$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_STR_$$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/White/Lights_STR_$_Maxis_White.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/AddonLights_JRJ_Street_Side_Mod_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/AddonLights_NAM_Overpass_Facelift_MOD_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/AddonLights_PEG_UtopianAve_RCIAS_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_AVE-2_$$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_AVE-2_$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_AVE-2_$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_AVE-4_$$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_AVE-4_$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_AVE-4_$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_Bridges_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_MHW_Median_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_NWM_$$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_NWM_$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_NWM_$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_RD_$$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_RD_$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_RD_$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_Roundabouts_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_STR_$$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_STR_$$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL Prop Sets/KOD Maxis Set/Yellow/Lights_STR_$_Maxis_Yellow.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_CableStayed.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_CantileverTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_LargeSteelArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_LongSuspension.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_MediumSuspension.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_OverdeckTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_SmallSteelArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_StoneArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_AVE_UnderTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_CableStayed.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_CantileverTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_GoldenGate.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_LargeSteelArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_LongSuspension.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_MediumSuspension.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_OverdeckTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_SmallSteelArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_StoneArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_EHW_UnderTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_CableStayed.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_CantileverTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_GoldenGate.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_LargeSteelArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_LongSuspension.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_MediumSuspension.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_OverdeckTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_SmallSteelArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_StoneArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_GHW_UnderTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_MHW_LevelBridge.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_OW_LevelBridge.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_OW_Lights.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_OW_MediumSuspension.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_OW_OverdeckTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_OW_Plain.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_OW_StoneArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_OW_UnderTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_RD_CantileverTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_RD_LevelBridge.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_RD_MediumSuspension.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_RD_OverdeckTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_RD_SmallSteelArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_RD_StoneArch.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_RD_UnderTruss.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Bridge_Lights/T21_Bridge_STR_Plain.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Avenue_Lights.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_MHW_MedianLights.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_NWM_Lights.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_OneWayDiag_Lights_3.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_OneWay_Lights.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_RoadDiag_Lights_3.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Road_Lights.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_Roundabouts.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_TL_Roads.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods/T21_TuLEP_Lights.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/T21 Mods Addons/T21_PEG_UtopianAve_Lights.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/Lights_LightCones.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/ReadMe - USL.pdf
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL_1.JPG
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL_3.JPG
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL_Lights_LightCones_Bright.dat
+      - Uniform_Street_Lighting_Mod_v1.1/ZZZ_USL_v1.1/USL_Lights_LightCones_Uniform.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0024/dedea6072d28843ec21c3827f22abe22-usl_1.jpg
+      - https://www.simtropolis.com/objects/screens/0019/a719bdffbf1059935a050a94587e4955-usl_3.jpg
     lastModified: 2023-10-29T21:12:13Z
     name: Uniform Street Lighting Mod
+    sha256: 5a5d3787135e3064b129c1ffeee32daeb232047f4ac082cfcac61254c5026cb2
+    size: 583831
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2011/thumb-dedea6072d28843ec21c3827f22abe22-usl_1.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 1063282
     url: https://community.simtropolis.com/files/file/25925-uniform-street-lighting-mod/
+    version: "1.1"
   simtropolis/26034-hd-sandy-beach-mod:
     authors:
       - _marsh_
@@ -2509,10 +3055,64 @@ assets:
     authors:
       - joelyboy911
     category: graphics
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+
+
+
+      							
+      <p>This set is dedicated to <abbr title="SimCity Airport Group">SCAG</abbr> Team member Adrian Smith, a.k.a Adroman_66, who passed away on the 12th of July 2011. </p>
+
+      <p> </p>
+
+      <p>This package contains rendered models of Airbus A340-200 and A340-300 (the smaller A340s) without jetways. They have been modded as props, and also as Mayor-Mode ploppables which appear near
+      the bottom of the Flora menu. There are 5 A340-200 and 9 A340-300.</p>
+
+      <p> </p>
+
+      <p>There are no dependencies. Yay!</p>
+
+      <p> </p>
+
+      <p>Please run the install program, and read the readme at its completion for further information.</p>
+
+      <p> </p>
+
+      <p>Thanks for downloading, and happy airport building!</p>
+
+      <p> </p>
+
+      <p>If you experience an issue, or want to post feedback, you can PM me, or post in <a href="https://community.simtropolis.com/forums/topic/45224-joelyboys-bat-hangar/" rel="">my </a><abbr
+      title="Building Architect Tool"><a href="https://community.simtropolis.com/forums/topic/45224-joelyboys-bat-hangar/" rel="">BAT</a></abbr><a
+      href="https://community.simtropolis.com/forums/topic/45224-joelyboys-bat-hangar/" rel=""> thread</a>.</p>
+
+      						</body>
+    filename: SCAG A342 & A343 MMP.zip
+    files:
+      - A340MMPPicleft.jpg
+      - A340MMPPicRight.jpg
+      - A342 A343 Taxiway Props.dat
+      - Footer.jpg
+      - Ploppable A342.dat
+      - Ploppable A343.dat
+      - SCAG A340 MMP1 Readme.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_09_2011/bbe20092115e16a9b14763f00b4df406-a342_pic_1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_09_2011/af651e80ea30da81244828e390ae70f9-a342_pic_2.jpg
     lastModified: 2011-09-20T08:51:44Z
     name: SCAG A340-200 & A340-300 MMP & Taxiway Props
+    sha256: 53a6eaf10139ae4bcb489b6f8968eb9044105174f113979c3aa4125a497b7938
+    size: 6646718
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2011/thumb-bbe20092115e16a9b14763f00b4df406-a342_pic_1.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 6654045
     url: https://community.simtropolis.com/files/file/26779-scag-a340-200-a340-300-mmp-taxiway-props/
+    version: "1.0"
   simtropolis/26780-scag-a340-500-a340-600-mmp-taxiway-props:
     authors:
       - joelyboy911
@@ -2868,7 +3468,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -3000,6 +3614,13 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
       <p>
       	Set of 5 Fagus Trees Seasonal <abbr title="Mayor Mode Ploppable">MMP</abbr> or Evergreen <abbr title="Mayor Mode Ploppable">MMP</abbr><br>
@@ -3097,7 +3718,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -4163,7 +4798,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -4541,6 +5190,13 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
       <p>
       	<strong>Pinus nigra</strong> is a large coniferous evergreen tree, growing to 20–55 metres (66–180 feet) high at maturity and spreading to 6 to 12 m (20 to 39 ft) wide. The bark is gray to yellow-brown, and is widely split by flaking fissures into scaly plates, becoming increasingly fissured with age. The leaves ('needles') are thinner and more flexible in western populations.<br>
@@ -4845,6 +5501,13 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
+
 
 
 
@@ -7464,10 +8127,570 @@ assets:
     authors:
       - T Wrecks
     category: graphics
+    dependencies:
+      - simtropolis/21068-wideradius-curves-t21-mod
+      - simtropolis/20433-sithlrd98-avenuecurves-white-sidewalk-redone
+      - simtropolis/21014-sithlrd98-road-curves-white-v2
+      - simtropolis/17323-smp-sidewalk-replacement-mod
+      - simtropolis/20434-sithlrd98-avenuecurves-sandstone-sidewalk
+      - simtropolis/21013-sithlrd98-road-curves-sandstone-v2
+      - simtropolis/17351-euro-asphalt-sidewalk
+      - simtropolis/20489-sithlrd98-avenue-cuves-sap-euro-asphalt-sidewalk-texture
+      - simtropolis/21010-sithlrd98-road-curves-sap-v2
+      - simtropolis/20156-portuguese-texture-set
+      - simtropolis/20491-sithlrd98-avenue-curves-gn-leugim-portuguese-texture
+      - simtropolis/21009-sithlrd98-road-curves-gn-leugim-v2
+      - simtropolis/21747-sithlrd98-wrc-sidewalk-texture-mod-jeronij-texture
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<div>
+      	<div>
+      		<div>
+      			<div>
+      				<div>
+      					<div>
+      						<div>
+      							<div>
+      								<div>
+      									<div>
+      										<div>
+      											<div>
+      												<div>
+      													<div>
+      														<div>
+      															<div>
+      																<div>
+      																	<div>
+      																		<div>
+      																			<div>
+      																				<div>
+      																					<div>
+      																						<div>
+      																							<div>
+      																								<div>
+      																									<div>
+      																										<div>
+      																											<div>
+      																												<div>
+      																													<div>
+      																														<div>
+      																															<div>
+      																																<div>
+      																																	<div>
+      																																		<div>
+      																																			<div>
+      																																				<div>
+      																																					<div>
+      																																						<div>
+      																																							<div>
+      																																								<div>
+      																																									<div>
+      																																										<div>
+      																																											<div>
+      																																												<div>
+      																																													<div>
+      																																														<div>
+      																																															<div>
+      																																																<div>
+      																																																	<div>
+      																																																		<div>
+      																																																			<div>
+      																																																				<div>
+      																																																					<div>
+      																																																						<div>
+      																																																							<p>
+      																																																								<span style="font-size:18px;">MAXIS TREE HD REPLACEMENT MOD</span><br>
+      																																																								 <br><span style="color:#0000ff;"><strong>1 - INTRODUCTION/OVERVIEW</strong></span><br>
+      																																																								 <br>
+      																																																								Hey folks, you might not be aware of this, but this file actually marks my <strong>100<sup>th</sup> STEX upload</strong>!! I think this justifies a little interruption of the usual <abbr title="Industrial Revolution Mod">IRM</abbr> fare.
+      																																																							</p>
+
+      																																																							<p>
+      																																																								I've been tinkering with such a mod for at least 2 years, but up until recently I had always run into a brick wall because there were simply not enough suitable tree models available. This is really harder than you might think because a tree must have the following characteristics to replace its Maxis counterpart:
+      																																																							</p>
+
+      																																																							<div>
+      																																																								<div>
+      																																																									<div>
+      																																																										<div>
+      																																																											<div>
+      																																																												<div>
+      																																																													<div>
+      																																																														<div>
+      																																																															<div>
+      																																																																<div>
+      																																																																	<div>
+      																																																																		<div>
+      																																																																			<div>
+      																																																																				<div>
+      																																																																					<div>
+      																																																																						<div>
+      																																																																							<div>
+      																																																																								<div>
+      																																																																									<div>
+      																																																																										<div>
+      																																																																											<div>
+      																																																																												<div>
+      																																																																													<div>
+      																																																																														<div>
+      																																																																															<div>
+      																																																																																<div>
+      																																																																																	<div>
+      																																																																																		<div>
+      																																																																																			<div>
+      																																																																																				<div>
+      																																																																																					<div>
+      																																																																																						<div>
+      																																																																																							<div>
+      																																																																																								<div>
+      																																																																																									<div>
+      																																																																																										<div>
+      																																																																																											<div>
+      																																																																																												<div>
+      																																																																																													<div>
+      																																																																																														<div>
+      																																																																																															<div>
+      																																																																																																<div>
+      																																																																																																	<div>
+      																																																																																																		<div>
+      																																																																																																			<div>
+      																																																																																																				<div>
+      																																																																																																					<div>
+      																																																																																																						<div>
+      																																																																																																							<div>
+      																																																																																																								<div>
+      																																																																																																									<div>
+      																																																																																																										<ul><li>
+      																																																																																																												similar height (so it covers about as much as a Maxis tree would, but doesn't interfere with anything)
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												similar diameter (so it doesn't cut into adjacent structures and will fit wherever the corresponding Maxis tree fits)
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												LOD centered on the trunk and not the crown (so the trunk isn't off center and ends up <em>next to</em> a planter, bed, or dirt circle instead of right inside)
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												lack of branches near the ground (so it won't cover entrances, benches and other stuff that's supposed to be under the tree crowns and not buried under twigs and leaves)
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											Finding trees that fit the bill is really hard, but I'm positive that I finally did it. While this choice may not be perfect, I'm confident it's one of the best options available while I'm writing this. To my knowledge, while there have been noteworthy and admirable mods in the past, this is the first one that <strong>replaces all Maxis trees on lots and along streetsides/roadsides with 100% HD flora</strong> made by <strong>girafe</strong> and <strong>Orange_o_</strong>, two <abbr title="Building Architect Tool">BAT</abbr> masters whose flora props raised the bar considerably and set the standard these days IMO. It bugged me that so many Maxis trees - SD at 2003 quality level - were still to be seen everywhere when we already had modern, crisply rendered, high-definition flora for pretty much everything else. Well, not any more!
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											This upload consists of three components - the base pack and two optional bonus packs. Here's a breakdown of these three components and what they'll do:<br>
+      																																																																																																											--------------------<br><strong>THE BASE PACK</strong> - this is the actual mod. The bonus packs work as extensions of this mod, i.e. they require this base pack as a dependency. It does the following:
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												It will replace all Maxis <strong>trees on lots</strong> with beautiful HD trees. Lots already existing in your city will automatically switch to the new trees. Whatever grows or is plopped subsequently will show the new trees in place of the old Maxis ones.
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Besides, it will replace <strong>roadside trees</strong> that occasionally show up at the sides of streets and roads (<abbr title="Type 21 Exemplar">T21</abbr>'s for the tech-savvy among you).
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												All <strong>Mayor Mode and God Mode flora</strong> in the city map will remain unaffected.
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												However, <strong>the Mayor Mode tools (menu icons) for setting Maxis trees are removed</strong>. Why? Well, if you use this mod, the tools will actually plant the new HD replacements for the Maxis trees. This is superfluous because you need the corresponding tree packages as dependencies anyway, and these come with far superior and more flexible Mayor Mode tools, which will show up in your menu instead.
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												For those of you who don't like palm trees, the pack contains an <strong>optional palm tree override</strong>. If you decide to use it, all Maxis palms will not revert to better HD palms, but to cypress trees instead. They are similar in terms of dimension, and I think they also offer a nice flair that conveys the same feeling as the palms did - a wealthier area, warm climate... If you still don't like that, I'm afraid you'll have to pretend those tall and slender trees are actually poplars. I won't tell anyone, and I don't judge you.^^
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												The <strong>growing lot flora</strong> will also be replaced, but with full-grown trees. It would have been possible to recreate the effect of flora growing taller over time (just like the Maxis flora does), but unfortunately, the game will only display the shadow for the first, smallest version. Hence, as the tree grows to full size, the shadow of the sapling will remain. Apparently this is a game limitation.
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											______________<br><strong>BONUS PACK 1, A PLUGIN FOR THE <abbr title="SimForum BAT Team">SFBT</abbr> STREET TREE MOD</strong> - this is the first bonus pack intended for those of you who use <abbr title="SimForum BAT Team">SFBT</abbr>'s Street Tree Mod. For those of you who are unfamiliar with that mod, it adds streetside parking and streetside trees, and it is highly modular and versatile. Several tree sets come with the mod (e.g. for Maxis and for Cycledogg trees), and depending on which of these tree sets you keep, the corresponding trees will appear. You can mix and match freely, use either set, any combination, or even all of them at the same time.<br>
+      																																																																																																											This is what the bonus pack included in this upload will do:
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												When used in conjunction with the <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod, the contained files should replace the original files that made Maxis trees appear.
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<strong>Maxis_Street_Deciduous_Trees_HD_Replacement.dat</strong> - replaces the file "SFBT_Maxis_Street_Deciduous_Trees.dat" and ensures that HD trees will grow instead of Maxis deciduous trees.
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<strong>Maxis_Street_Pine_Trees_HD_Replacement.dat</strong> - replaces the file "SFBT_Maxis_Street_Pine_Trees.dat" and ensures that HD trees will grow instead of Maxis pine trees.
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<strong>Maxis_Street_Palm_Trees_HD_Replacement.dat</strong> - replaces the file "SFBT_Maxis_Street_Palm_Trees.dat" and ensures that HD palms will grow instead of Maxis palm trees.
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Like the originals they are based on, these files can be mixed and matched freely. For example, if you select pine trees and palm trees, you'll get a mix of pines (well, their replacements) and palms. If you only use the files for deciduous trees and pine trees, you'll get all kinds of trees, but no palms. (This is independent from your selection for the main mod!)
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											___________<br><strong>BONUS PACK 2, AN OVERRIDE FOR SITHLRD98's <abbr title="Type 21 Exemplar">T21</abbr> MOD</strong> - this second bonus pack is intended for those of you who may use the <a href="https://community.simtropolis.com/files/file/21068-wideradius-curves-t21-mod/" rel="">WideRadius Curves <abbr title="Type 21 Exemplar">T21</abbr> Mod</a> by <em>Sithlrd98</em>. These add sidewalk pavement, streetlights and trees alonside many smooth road &amp; avenue curves as well as FA (fractional angle) road sections.<br>
+      																																																																																																											This is what the bonus pack will do:
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												All trees will be replaced with HD versions from this mod
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Instead of the single tree that was used repetitively, randomised trees will now appear for a more varied appearance
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											___________
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											Each of the three packs is in a separate download because most of you probably won't use all of the stuff mentioned here.
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											<br><span style="color:#0000ff;"><strong>2 - USE</strong></span><br>
+      																																																																																																											 <br><strong>2.1 - BASE PACK</strong><br>
+      																																																																																																											2.1.1 - Installation
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											Simply drop the files into your plugins folder. By default, they will unzip into a sub-folder called <strong>\Maxis Tree HD Replacement\</strong>. However, you can change this to pretty much anything you like. (It's a simple override of the default files, and anything anywhere in your plugins folder will override the game files because plugins load after the game itself).
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											By default, you will also get the file <strong>Maxis Tree HD Replacement_PalmsToCypresses.dat</strong>. This file is the one that will override palm trees with cypresses. If you want to see palm trees, simply remove that file. As with the other files, you can also copy it out of and back into your plugins folder as you like, switching back and forth between palms and cypresses.
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											2.1.2 - Deinstallation
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											Simply remove the file again. All affected trees will revert back to Maxis trees again, and the corresponding menu icons will no longer be blocked from your menu. No need to bulldoze anything.
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											<strong>2.2 - BONUS PACK 1</strong> (for <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod)<br>
+      																																																																																																											2.2.1 - Installation
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											First of all, you need to have the <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod installed (see "Dependencies" section for link). Then, I suggest you locate the tree props folder of that mod (by default <strong>\<abbr title="SimForum BAT Team">SFBT</abbr>\Street Tree Mod\Tree Props</strong>). This folder will contain .dat files for all the tree types that you select while installing the <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod. Simply delete the following files from that folder if present:
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												SFBT_Maxis_Street_Deciduous_Trees.dat
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												SFBT_Maxis_Street_Palm_Trees.dat
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												SFBT_Maxis_Street_Pine_Trees.dat
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											Then copy any one, two or all of the following files from Bonus Pack 1 into the aforementioned folder:
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												Maxis_Street_Deciduous_Trees_HD_Replacement.dat (for HD deciduous tree replacements)
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Maxis_Street_Palm_Trees_HD_Replacement.dat (for HD palm tree replacements)
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Maxis_Street_Pine_Trees_HD_Replacement.dat (for HD pine tree replacements)
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											You can leave the non-Maxis tree packs in there if you want. In this case, you may get a mixture of SD trees by Pegasus and/or Cycledogg and these HD trees, depending on what combination of packs you left in there.
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											2.2.2 - Deinstallation
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											Simply remove the file again, and replace it with any tree packs for the <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod that you want to use instead. If you delete the files from this download and fail to replace them with any of the original files again, no trees will show at all. For deinstallation of the entire <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree mod, see the documentation included in that download.
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											<strong>2.3 - BONUS PACK 2</strong> (for Sithlrd98's <abbr title="Type 21 Exemplar">T21</abbr> mod)<br>
+      																																																																																																											2.3.1 - Installation
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											Place the included file anywhere in your plugins folder where it will load AFTER the original file. By default, the original file <strong>zzzSithlrd98 Wide Radius Curves Curves <abbr title="Type 21 Exemplar">T21</abbr> Data .dat</strong> should be in a sub-folder named <strong>\Sithlrd98 WideRadius Curves T-21 Mod\</strong>. If you place the file from this bonus pack, <strong>zzzSithlrd98 Wide Radius Curves Curves <abbr title="Type 21 Exemplar">T21</abbr> Data HD.dat</strong>, in the same sub-folder or in any folder that loads afterwards, the trees will change to the HD replacements.
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											2.3.2 - Deinstallation
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											Simply delete the file <strong>zzzSithlrd98 Wide Radius Curves Curves <abbr title="Type 21 Exemplar">T21</abbr> Data HD.dat</strong> from this download again. It will no longer override the original trees, and these should revert to default Maxis trees again. Once again, there's no need to bulldoze anything.<br>
+      																																																																																																											 <br>
+      																																																																																																											 <br><span style="color:#0000ff;"><strong>3 - DEPENDENCIES</strong></span>
+      																																																																																																										</p>
+      																																																																																																										<strong>3.1 - BASIC DEPENDENCIES</strong> (required in any case)
+
+      																																																																																																										<p>
+      																																																																																																											Obviously, this mod relies on the tree models made by <strong>girafe</strong> and <strong>Orange_o_</strong>. In total, Maxis uses 42 tree props plus 8 flora objects that rely on 15 different individual models. The following packs were required to replace them all:
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2854" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP girafe ashes (v. 1.0) by girafe</a>
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2995" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP girafe beeches (v. 1.0) by girafe</a>
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3451" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP girafe Canary date palms (v. 1.0) by girafe</a>
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2983" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP girafe cypresses (v. 1.0) by girafe</a>
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2869" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP girafe lindens (v. 1.0) by girafe</a>
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3244" rel="external nofollow"><abbr title="BATT Squad Certification">BSC</abbr> - VIP girafe rowan trees (v. 1.0) by girafe</a>
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2733" rel="external nofollow">VIP orange fagus seasonal flora (v. 1.0) by Orange_o_</a>
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											<strong>3.2 - DEPENDENCIES FOR BONUS PACK 1</strong> - required for use with the <abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1196" rel="external nofollow"><abbr title="SimForum BAT Team">SFBT</abbr> Street Tree Mod (v. 1.0) by Andreas</a>
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											<strong>3.3 - DEPENDENCIES FOR BONUS PACK 2</strong> - required for use with Sithlrd98's <abbr title="Type 21 Exemplar">T21</abbr> mod
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												<a href="https://community.simtropolis.com/files/file/21068-wideradius-curves-t21-mod/" rel="">WideRadius Curves <abbr title="Type 21 Exemplar">T21</abbr> Mod 1</a> - this makes trees and streetlights appear; it is the actual mod.
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											If you want to see sidewalk along these smooth curves, you have the following options (only one is required):
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												White Maxis pavement:<br><a href="https://community.simtropolis.com/files/file/20433-sithlrd98-avenuecurves-white-sidewalk-redone/" rel="">Sithlrd98 AvenueCurves White Sidewalk Redone</a> (avenue curves)<br><a href="https://community.simtropolis.com/files/file/21014-sithlrd98-road-curves-white-v2/" rel="">Sithlrd98 Road Curves White v2</a> (road curves / FA road sections)
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Brown sandstone pavement (matching the <a href="https://community.simtropolis.com/files/file/17323-smp-sidewalk-reaplcement-mod/" rel="">SMP Sidewalk Reaplcement MOD 1</a>):<br><a href="https://community.simtropolis.com/files/file/20434-sithlrd98-avenuecurves-sandstone-sidewalk/" rel="">Sithlrd98 AvenueCurves Sandstone Sidewalk</a> (avenue curves)<br><a href="https://community.simtropolis.com/files/file/21013-sithlrd98-road-curves-sandstone-v2/" rel="">Sithlrd98 Road Curves Sandstone v2</a> (road curves / FA road sections)
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												SAP Euro Asphalt (matching the <a href="https://community.simtropolis.com/files/file/17351-euro-asphalt-sidewalk/" rel="">Euro asphalt sidewalk</a> mod by SAP23):<br><a href="https://community.simtropolis.com/files/file/20489-sithlrd98-avenue-cuves-sap-euro-asphalt-sidewalk-texture/" rel="">Sithlrd98 Avenue Cuves SAP Euro Asphalt Sidewalk texture</a> (avenue curves)<br><a href="https://community.simtropolis.com/files/file/21010-sithlrd98-road-curves-sap-v2/" rel="">Sithlrd98 Road Curves SAP v2 2</a> (road curves / FA road sections
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Portuguese textures (matching the <a href="https://community.simtropolis.com/files/file/20156-portuguese-texture-set/" rel="">Portuguese texture set 1</a> by gn_leugim):<br><a href="https://community.simtropolis.com/files/file/20491-sithlrd98-avenue-curves-gn-leugim-portuguese-texture/" rel="">Sithlrd98 Avenue Curves Gn leugim Portuguese Texture</a> (avenue curves)<br><a href="https://community.simtropolis.com/files/file/21009-sithlrd98-road-curves-gn-leugim-v2/" rel="">Sithlrd98 Road Curves Gn leugim v2</a> (road curves / FA road sections
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												JRJ sidewalk textures (matching the <a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=36" rel="external nofollow">JRJ Sidewalks Mod (v1.0)</a> by jeronij):<br><a href="https://community.simtropolis.com/files/file/21747-sithlrd98-wrc-sidewalk-texture-mod-jeronij-texture/" rel="">Sithlrd98 WRC Sidewalk Texture Mod Jeronij Texture 1</a> (avenue as well as road curves / FA road sections)
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											<strong>NOTE:</strong> For any dependency hosted at <a href="http://www.sc4devotion.com" rel="external nofollow">SC4Devotion</a> (SC4D in short), you must be registered on that site and logged into the site's download area, the <abbr title="BATT Squad Certification">BSC</abbr> File Exchange, in order to see the download button. Please bear in mind that there are separate logins for the forums and for the file exchange. For those of you who may still be unfamiliar with the site: SC4D is another major SimCity community with lots of unique content, so you will not regret making an account there.
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											 <br><strong>RECOMMENDED DOWNLOADS</strong>
+      																																																																																																										</p>
+      																																																																																																										That's simple this time: If you like those HD trees that you see and you are not familiar with girafe's and Orange's entire portfolio, just go over to www.sc4devotion.com, access the <abbr title="BATT Squad Certification">BSC</abbr> File Exchange, and use the power search feature to display all of their stuff. Voila, tons of great flora mods - from small flowers to towering trees - right at your fingertips!
+
+      																																																																																																										<p>
+      																																																																																																											 <br><span style="color:#0000ff;"><strong>4 - FINAL WORDS</strong></span><br>
+      																																																																																																											 <br>
+      																																																																																																											I'd like to dedicate this upload to the SimCity community as a whole. We all have been learning from one another, inspiring each other, and helping each other out for almost 15 years now. Whatever we do now benefits from stuff other people have done before us. We are really standing on the shoulders of giants these days, and I'm no exception in this respect. Just look at this upload:
+      																																																																																																										</p>
+
+      																																																																																																										<ul><li>
+      																																																																																																												<strong>Maxis</strong> gave us the game we all love, and tools like the Lot Editor and the <abbr title="Building Architect Tool">BAT</abbr>,
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Sites like <strong>Simtropolis</strong> and their respective admin teams give us the place to come together and share,
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												People like <strong>CowKilla</strong> and <strong>SimFox</strong> have been instrumental in making the use of 3dsmax viable for <abbr title="Building Architect Tool">BAT</abbr>,
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<abbr title="Building Architect Tool">BAT</abbr> artists like <strong>Girafe</strong> and <strong>Orange_o_</strong> used this to great effect to model the wonderful trees I have been using,
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<strong>iLive </strong>and <strong>cogeo</strong> provided the additional tools that I have used to get these models to do what I had in mind,
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												People like <strong>Andreas Roth</strong> and <strong>Equinox</strong> helped me take the first steps in those tools, getting me on the road to where I am now,
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												<strong>rsc204</strong> (a.k.a. <strong>MGB</strong>) taught me a method of making resizing overrides for existing props that I used to tweak the dimensions of some props,
+      																																																																																																											</li>
+      																																																																																																											<li>
+      																																																																																																												Due to all this, <strong>I</strong> merely had to put these foundations to good use and contribute my little part.
+      																																																																																																											</li>
+      																																																																																																										</ul><p>
+      																																																																																																											So at a first glance, one might say this is "my mod". But it really is 95% community effort, made possible by a community whose spirit has always been characterised by non-profit sharing. It is a pleasure to be part of such a community, and here's to hoping that it will remain strong for years to come.<br>
+      																																																																																																											That being said, extra kudos to flora masters <strong>girafe </strong>and <strong>Orange_o_</strong> as well as <abbr title="Type 21 Exemplar">T21</abbr> mod authors <strong>Andreas Roth</strong> and <strong>Sithlrd98</strong> once again. You guys are awesome!
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											 <br>
+      																																																																																																											T Wrecks, August 8, 2017
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											_________________________<br><span style="color:#e74c3c;"><strong>NOTE FOR DOWNLOADERS WHO USE THE CASCADIA TREE CONTROLLER</strong></span>: <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/286789-paulsawyer/?do=hovercard" data-mentionid="286789" href="https://community.simtropolis.com/profile/286789-paulsawyer/" rel="">@PaulSawyer</a> kindly reported that he had problems with Maxis palms on roadsides not being replaced as they should by this mod. Apparently this problem could be fixed by changing the loading order. So if you use both the Cascadia Tree Controller and this Maxis HD Tree Replacement Mod and run into the same problem, try changing the order in which both mods load.
+      																																																																																																										</p>
+
+      																																																																																																										<p>
+      																																																																																																											If you don't know in which order the game loads plugins and/or need help changing the load order, you will find information on that with a little forum search. If you don't find anything, don't hesitate to ask on the forums or send a PM my way. <img alt="*:)" data-emoticon="" height="15" src="https://community.simtropolis.com/assets/emoticons/default_1.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_1@2x.gif 2x" title="*:)" width="15" ></p>
+      																																																																																																									</div>
+      																																																																																																								</div>
+      																																																																																																							</div>
+      																																																																																																						</div>
+      																																																																																																					</div>
+      																																																																																																				</div>
+      																																																																																																			</div>
+      																																																																																																		</div>
+      																																																																																																	</div>
+      																																																																																																</div>
+      																																																																																															</div>
+      																																																																																														</div>
+      																																																																																													</div>
+      																																																																																												</div>
+      																																																																																											</div>
+      																																																																																										</div>
+      																																																																																									</div>
+      																																																																																								</div>
+      																																																																																							</div>
+      																																																																																						</div>
+      																																																																																					</div>
+      																																																																																				</div>
+      																																																																																			</div>
+      																																																																																		</div>
+      																																																																																	</div>
+      																																																																																</div>
+      																																																																															</div>
+      																																																																														</div>
+      																																																																													</div>
+      																																																																												</div>
+      																																																																											</div>
+      																																																																										</div>
+      																																																																									</div>
+      																																																																								</div>
+      																																																																							</div>
+      																																																																						</div>
+      																																																																					</div>
+      																																																																				</div>
+      																																																																			</div>
+      																																																																		</div>
+      																																																																	</div>
+      																																																																</div>
+      																																																															</div>
+      																																																														</div>
+      																																																													</div>
+      																																																												</div>
+      																																																											</div>
+      																																																										</div>
+      																																																									</div>
+      																																																								</div>
+      																																																							</div>
+      																																																						</div>
+      																																																					</div>
+      																																																				</div>
+      																																																			</div>
+      																																																		</div>
+      																																																	</div>
+      																																																</div>
+      																																															</div>
+      																																														</div>
+      																																													</div>
+      																																												</div>
+      																																											</div>
+      																																										</div>
+      																																									</div>
+      																																								</div>
+      																																							</div>
+      																																						</div>
+      																																					</div>
+      																																				</div>
+      																																			</div>
+      																																		</div>
+      																																	</div>
+      																																</div>
+      																															</div>
+      																														</div>
+      																													</div>
+      																												</div>
+      																											</div>
+      																										</div>
+      																									</div>
+      																								</div>
+      																							</div>
+      																						</div>
+      																					</div>
+      																				</div>
+      																			</div>
+      																		</div>
+      																	</div>
+      																</div>
+      															</div>
+      														</div>
+      													</div>
+      												</div>
+      											</div>
+      										</div>
+      									</div>
+      								</div>
+      							</div>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/Maxis_Tree_HD_Replacement_BasePack_01.jpg.b19259cfb54042a24fc68614f592f9dc.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/Maxis_Tree_HD_Replacement_Full_01_before.jpg.bdbd3beb1fd4d2b40a6d55d3eee26cc0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/Maxis_Tree_HD_Replacement_Full_02_after.jpg.75c3693373ea616e86ec5e40ac794dec.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/Maxis_Tree_HD_Replacement_BonusPack02_01_before.jpg.04584704289a61964e888eef0cef3537.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_08/Maxis_Tree_HD_Replacement_BonusPack02_02_after.jpg.052721d36621da1de327f2e73957ef32.jpg
     lastModified: 2017-11-23T10:52:51Z
     name: Maxis Tree HD Replacement Mod
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_08/Maxis_Tree_HD_Replacement_BasePack_01.thumb.jpg.0be9ae3432418b96a552c9f384fa1a7b.jpg
+    timestamp: 2024-10-15T15:37:00.411Z
     url: https://community.simtropolis.com/files/file/31898-maxis-tree-hd-replacement-mod/
+    variants:
+      "167945":
+        filename: Maxis_Tree_HD_Replacement_BonusPack_01.zip
+        files:
+          - Maxis_Street_Deciduous_Trees_HD_Replacement.dat
+          - Maxis_Street_Palm_Trees_HD_Replacement.dat
+          - Maxis_Street_Pine_Trees_HD_Replacement.dat
+        sha256: e9281d87d62af4ca214a1e66c5178b1cb0a090e50c3f64a454170b890a5165dc
+        size: 2017
+        uncompressed: 4577
+      "167946":
+        filename: Maxis_Tree_HD_Replacement_BonusPack_02.zip
+        files:
+          - zzzSithlrd98 Wide Radius Curves Curves T21 Data HD_Override.dat
+        sha256: ade3009b01665143d0f959c409c5a6c4245c34412cb9d5971b9cdb4e23dea911
+        size: 7982
+        uncompressed: 26275
+      "167947":
+        filename: Maxis_Tree_HD_Replacement_BASE_PACK.zip
+        files:
+          - Maxis Tree HD Replacement/Maxis Tree HD Replacement - Readme & Screens/Maxis Tree HD Replacement.html
+          - Maxis Tree HD Replacement/Maxis Tree HD Replacement - Readme & Screens/Maxis_Tree_HD_Replacement_BasePack_01.jpg
+          - Maxis Tree HD Replacement/Maxis Tree HD Replacement - Readme & Screens/Maxis_Tree_HD_Replacement_BonusPack02_01_before.jpg
+          - Maxis Tree HD Replacement/Maxis Tree HD Replacement - Readme & Screens/Maxis_Tree_HD_Replacement_BonusPack02_02_after.jpg
+          - Maxis Tree HD Replacement/Maxis Tree HD Replacement - Readme & Screens/Maxis_Tree_HD_Replacement_Full_01_before.jpg
+          - Maxis Tree HD Replacement/Maxis Tree HD Replacement - Readme & Screens/Maxis_Tree_HD_Replacement_Full_02_after.jpg
+          - Maxis Tree HD Replacement/Maxis Tree HD Replacement.dat
+          - Maxis Tree HD Replacement/Maxis Tree HD Replacement_PalmsToCypresses.dat
+        sha256: 94f70075f8e85a67d85bcba33063eaec741cae1bcf9d19d4a93d6170a4c58134
+        size: 1022507
+        uncompressed: 1091588
+    version: 1.0.1
   simtropolis/31977-sam2-override-grey-herringbonebrick:
     authors:
       - rivit
@@ -7632,34 +8855,291 @@ assets:
     authors:
       - mattb325
     category: graphics
+    dependencies: []
+    description: |-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							
+      <p>
+      	<strong>Boaty McBoatFace, by Mattb325</strong>
+      </p>
+
+      <p>
+      	<strong>-------------------------------------------------------------------------------------</strong>
+      </p>
+
+      <p>
+      	A simple, older-style passenger boat to decorate your waterways.
+      </p>
+
+      <p>
+      	It is found in the water transit menu.
+      </p>
+
+      <p>
+      	It has a transparent base texture to allow the sea-floor to show through (useful when you want to plop the model near the shore-line).
+      </p>
+
+      <p>
+      	It requires no power, water, etc and has no monthly cost.
+      </p>
+
+      <p>
+      	To install, simply unzip the file into your plugins.
+      </p>
+
+      <p>
+      	<strong>-------------------------------------------------------------------------------------</strong>
+      </p>
+
+      <p>
+      	<span style="font-size:10px;">All credit to the model maker - link provided in the file information section (I merely textured the file and made a few tweaks to make it game ready).</span>
+      </p>
+
+      						</body>
+    filename: Mattb325_BoatyMcBoatface.zip
+    files:
+      - Mattb325_BoatyMcBoatface/Mattb325_BoatyMcBoatFace-0x5ad0e817_0x8c9186b5_0x30000.SC4Model
+      - Mattb325_BoatyMcBoatface/PLOP_1x2_Mattb325 Boaty McBoatFace_0d101810.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/BoatyMcBoatFace.jpg.b3ebda6098c0315e155f8c6be430c459.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/BoatyMcBoatFace1.jpg.ef9a62743baf058d658a81872dc68ba9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/BoatyMcBoatFace2.jpg.dc2c1c3cddcee53161a86aba9aceb98d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/BoatyMcBoatFace3.jpg.5c4964ee5c2067052e9d440962a3ee20.jpg
     lastModified: 2020-10-16T22:25:33Z
     name: Boaty McBoatFace
+    sha256: af4ddc681f556eb99cb846c53fe8be362f401ea1bf073d48a9cee21655397eb6
+    size: 268532
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/BoatyMcBoatFace.thumb.jpg.c53efc647032fc0044b47abf2a69781a.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 312495
     url: https://community.simtropolis.com/files/file/33875-boaty-mcboatface/
+    version: 1.0.0
   simtropolis/33884-super-yacht:
     authors:
       - mattb325
     category: graphics
+    dependencies: []
+    description: |-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Super Yacht, by Mattb325</strong>
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>-------------------------------------------------------------------------------------</strong>
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	A high-end, luxurious ultra modern yacht to decorate your waterways. 
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It is found in the water transit menu.
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It has a transparent base texture to allow the sea-floor to show through (useful when you want to plop the model near the shore-line).
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It requires no power, water, etc and has no monthly cost.
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	To install, simply unzip the file into your plugins.
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>-------------------------------------------------------------------------------------</strong>
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:10px;">All credit to the model maker - link provided in the file information section (I merely textured the file and made a few tweaks to make it game ready).</span>
+      </p>
+
+      						</body>
+    filename: Mattb325_SuperYacht (2).zip
+    files:
+      - Mattb325_SuperYacht/Mattb325_SuperYacht-0x5ad0e817_0x6c92c27d_0x30000.SC4Model
+      - Mattb325_SuperYacht/PLOP_2x3_Mattb325 Super Yacht_2d1153c6.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/SuperYacht.jpg.33fefd243b53b913f712369a85877427.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/SuperYacht1.jpg.c06cbc773831fabd5202ef386c95d185.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/SuperYacht2.jpg.5e9343acbc7a05983591c43166255083.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/SuperYacht3.jpg.cfc072708924a2b10e859d0eb380e39b.jpg
     lastModified: 2020-10-17T20:27:46Z
     name: Super Yacht
+    sha256: 85b34f4ec976fd4c4f724fc0a10839d2aa29578cbcdbf0320e0b63131a0bbb0a
+    size: 312045
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/SuperYacht.thumb.jpg.5440593c11c1ca5564d5fc8ad94125cf.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 363453
     url: https://community.simtropolis.com/files/file/33884-super-yacht/
+    version: 1.0.0
   simtropolis/33885-luxury-yacht:
     authors:
       - mattb325
     category: graphics
+    dependencies: []
+    description: |-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Luxury Yacht, by Mattb325</strong>
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>-------------------------------------------------------------------------------------</strong>
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	A very large, luxurious, high-end yacht to decorate your waterways.
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It is found in the water transit menu.
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It has a transparent base texture to allow the sea-floor to show through (useful when you want to plop the model near the shore-line).
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It requires no power, water, etc and has no monthly cost.
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	To install, simply unzip the file into your plugins.
+      </p>
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>-------------------------------------------------------------------------------------</strong>
+      </p>
+
+      						</body>
+    filename: Mattb325_LuxuryYacht.zip
+    files:
+      - Mattb325_LuxuryYacht/Mattb325_LuxuryYacht-0x5ad0e817_0x2c930e82_0x30000.SC4Model
+      - Mattb325_LuxuryYacht/PLOP_2x5_Mattb325 Luxury Yacht_ad11a439.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/LuxuryYacht.jpg.f2e05199442eb6478976b05c9ccb3a21.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/LuxuryYacht1.jpg.044e1c7abff14e2b58982416c4c0d05a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/LuxuryYacht2.jpg.6a9cf160cf4cd9aae76270a2083947d0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/LuxuryYacht3.jpg.a409a2277cb3299585f53a59e4e6d931.jpg
     lastModified: 2020-10-18T02:11:36Z
     name: Luxury Yacht
+    sha256: cf2f5653c661a0a4faf3ec26132c2f7add9b4355721cde13c313446c1a3c22fb
+    size: 757158
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/LuxuryYacht.thumb.jpg.f4012ffa95ced7326017d13671e0c706.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 877572
     url: https://community.simtropolis.com/files/file/33885-luxury-yacht/
+    version: 1.0.0
   simtropolis/33886-sailing-boat:
     authors:
       - mattb325
     category: graphics
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+      							
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>Sailing Boat, by Mattb325</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>-------------------------------------------------------------------------------------</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	A newer, high-end sailing boat to decorate your waterways.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It is found in the water transit menu.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It has a transparent base texture to allow the sea-floor to show through (useful when you want to plop the model near the shore-line).
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	It requires no power, water, etc and has no monthly cost.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	To install, simply unzip the file into your plugins.
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<strong>-------------------------------------------------------------------------------------</strong>
+      </p>
+
+
+      <p style="background-color:#ffffff;color:#353535;font-size:14px;">
+      	<span style="font-size:10px;">While I did have to make a lot of alterations to this model to get it to render and display correctly, full credit to the original model maker: link details in the file description</span>
+      </p>
+
+      						</body>
+    filename: Mattb325_SailingBoat.zip
+    files:
+      - Mattb325_SailingBoat/Mattb325_SailingBoat-0x5ad0e817_0xac934996_0x30000.SC4Model
+      - Mattb325_SailingBoat/PLOP_1x2_Mattb325 Sailing Boat_1d11dabb.SC4Lot
+      - Mattb325_SailingBoat/SailingBoat.png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/SailBoat.jpg.12d3b8ff19b9349a6f2858f2cdca648e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/SailBoat1.jpg.5248fdcc3f562f9e9c47f395386b6ceb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/SailBoat2.jpg.e56bc943ae9b907d0558585d4d1619e5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/SailBoat3.jpg.42094bff0c91781122d47712f91c547a.jpg
     lastModified: 2020-10-18T05:49:24Z
     name: Sailing Boat
+    sha256: cd2226c82f2893ae477e6d3373de81ab8febb88d11553b474a99d2edeccea199
+    size: 279876
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/SailBoat.thumb.jpg.d63d9381e465a02509fc1e5d9f4c72c3.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 331562
     url: https://community.simtropolis.com/files/file/33886-sailing-boat/
+    version: 1.0.0
   simtropolis/33889-seasonal-woods-2nd-iteration:
     authors:
       - "11241036"
@@ -7684,7 +9164,21 @@ assets:
 
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
 
@@ -8209,10 +9703,136 @@ assets:
     authors:
       - mattb325
     category: graphics
+    dependencies:
+      - simtropolis/13824-sfbt-park-set-by-andreas
+      - simtropolis/13824-sfbt-park-set-by-andreas
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Ploppable Conifer Woodlands, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	In most of my images, you will see a lot of green space. Much of this green space is made from a few small lots that I created for myself years ago based on, and expanding, one of my favourite Park sets, the '<abbr title="SimForum BAT Team">SFBT</abbr> park set by Andreas' which was released about 15 years ago, but still holds up to this day for making large, unique and non-showy parkland spaces.
+      </p>
+
+
+      <p>
+      	I made these for myself years and years ago, as one of the things I often find with large parks is that have slightly 'wilder' areas and this simple 1x1 lot with a ton of prop families will give the wild look without repetition. If you rotate the lot while placing, you should really never see much repetition at all and could theoretically cover and entire map with it .
+      </p>
+
+
+      <p>
+      	While it fits in with the <abbr title="SimForum BAT Team">SFBT</abbr> park series, being highly slope tolerant, it can also be used to fill tricky spots and elevation changes. I use it often and I have been asked for it on a number of occasions, so I thought I would package it up and release it. Thus, it is a bit of a take-it-or-leave-it lot.
+      </p>
+
+
+      <p>
+      	It is found in the park menu adjacent to the other <abbr title="SimForum BAT Team">SFBT</abbr> park lots. 
+      </p>
+
+
+      <p>
+      	While it will 'work' without the <abbr title="SimForum BAT Team">SFBT</abbr> park set, you won't be able to query it without the <abbr title="SimForum BAT Team">SFBT</abbr> essentials file as an absolute minimum.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :           1x1  <br>
+      	Plop Cost:           $ 23<br>
+      	Bulldoze Cost:       $ 5<br>
+      	Pollution:           -5 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    0/0/0<br>
+      	Park Effect:         30 over 15 tiles<br>
+      	Landmark Effect:     20 over 10 tiles<br>
+      	Monthly cost:         $ 1<br>
+      	Power Consumed:         0 Mwh<br>
+      	Water Consumed:      0 Gal/Month<br>
+      	Occupant Group:         Building: Civic; Park
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*<abbr title="SimForum BAT Team">SFBT</abbr> Park Set - <a href="https://community.simtropolis.com/files/file/13824-sfbt-park-set-by-andreas/" rel="">https://community.simtropolis.com/files/file/13824-<abbr title="SimForum BAT Team">sfbt</abbr>-park-set-by-andreas/</a>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	To install, simply unzip the contents of this file into your plugins folder.<br>
+      	 
+      </p>
+
+      						</body>
+    filename: Mattb325_PloppableConiferWoods.zip
+    files:
+      - Mattb325_PloppableConiferWoods/Mattb325_PloppableConiferWoodlands_README.txt
+      - Mattb325_PloppableConiferWoods/SFBT_Park-Set$$_1x1_Baeume_09_79f12ae6.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Plop_Woodlands.jpg.89ac94c3769ef80652ecc2c21f8ffbd8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Plop_Woodlands1.jpg.51402357c7c310d46028a3c786c8621f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Plop_Woodlands2.jpg.a917ceabdae750c1f3373e2d38bb8404.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Ploppable_Woodlands3.jpg.3863de86769240026dd9c7c83c35f567.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/Ploppable_Woodlands4.jpg.8c07df8734efbb672f64c52626e9088a.jpg
     lastModified: 2021-02-14T21:15:53Z
     name: Ploppable Conifer Woodlands
+    sha256: 594d5bf9816ff070bad50de0899ca50c6aba7853dd73978d9c10d4e9cbed64d6
+    size: 34167
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_02/Plop_Woodlands.thumb.jpg.ad3022922082923866b86470afd93a67.jpg
+    timestamp: 2024-10-15T15:37:00.411Z
+    uncompressed: 35297
     url: https://community.simtropolis.com/files/file/34139-ploppable-conifer-woodlands/
+    version: 1.0.0
   simtropolis/34345-a_1p-sar-cruiser-28m-class-dgzrs:
     authors:
       - AP
@@ -9420,7 +11040,7 @@ assets:
     authors:
       - Ryuu Tenno
     category: graphics
-    lastModified: 2023-07-28T05:42:07Z
+    lastModified: 2024-10-11T06:17:33Z
     name: Air Quality Index
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_07/64c3552dd11c2_AirQualityIndex-cityview.thumb.jpg.40424bee8a4e7d93f6d99437e3dec2c9.jpg
     url: https://community.simtropolis.com/files/file/35580-air-quality-index/
@@ -9752,64 +11372,22 @@ assets:
       - simtropolis/35660-sfbt-street-tree-mod-revised
     description: >-
       <body>
-
+      							
       								<div style="position:absolute; top:0px; right:0px;">
-                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
 
 
 
 
+      							
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      							
       <p style="margin-bottom:0cm;line-height:normal;">
       	The WestWind Streets (WWS) is a texture replacement mod for Maxis Streets. It covers all intersections with the various networks present in the <abbr title="Network Addon Mod">NAM</abbr> (47,48,...). Such as RealRailWay (<abbr title="RealRailway">RRW</abbr>), Tram (<abbr title="Ground Light Rail">GLR</abbr>) or the various <abbr title="Network Widening Mod">NWM</abbr> roads with 3, 4, ... lanes.
       </p>
@@ -9947,44 +11525,44 @@ assets:
       </p>
 
       						</body>
-    filename: WestWindStreets_maxis_1-5-48.zip
+    filename: WestWindStreets_maxis_1-6-48.zip
     files:
-      - z____scoty_mods/ReadMe_WWStreet_1-5-48_240707.pdf
-      - z____scoty_mods/WWS - zOptional Cul-de-Sac/scoty-WWStreets - Optional Cul-de-sac - Tex.dat
-      - z____scoty_mods/WWS - zOptional Cul-de-Sac/scoty-WWStreets - Optional Cul-de-sac - Paths&Props.dat
-      - z____scoty_mods/WWS - T21s RHD/scoty-WWStreets - NAM T21s RHD.dat
-      - z____scoty_mods/WWS - T21s RHD/scoty-WWStreets - MAXIS T21s RHD.dat
-      - z____scoty_mods/WWS - T21s LHD/scoty-WWStreets - NAM T21s LHD.dat
-      - z____scoty_mods/WWS - T21s LHD/scoty-WWStreets - MAXIS T21s LHD.dat
-      - z____scoty_mods/WWS - Paths/scoty-WWStreets - NAM_Paths.dat
-      - z____scoty_mods/WWS - Paths/scoty-WWStreets - Common_Paths.dat
-      - z____scoty_mods/WWS - NAM_Supp/scoty-WWStreets FLUP tunnel-ramp.dat
-      - z____scoty_mods/WWS - NAM_Supp/scoty-WWStreets - NAM Street tunnel.dat
-      - z____scoty_mods/WWS - JRJ Side Parking bays/scoty-WWStreets - JRJ Side Parking bays.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM7 MGB bikepaths.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM6 darkned MGB.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM5 RVT TSR Rural.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM4 RVT NZ Gravel.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM2 RVT Grey H-Brick.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM1 Parking Magneto.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - WWS-SAM11 EU.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - US.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Street-SAM bases.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rural Unkerbed.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rural Gravel sides.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - RRWx RHD.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - RRWx LHD.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rivit Lot Support.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Lots SCILT CULDESAC.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR TIS US.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR TIS EU.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU RHD.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU LHD.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common.dat
-      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common RHD.dat
       - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common LHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common RHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Common.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU LHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU RHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - EU.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR TIS EU.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR TIS US.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - GLR.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Lots SCILT CULDESAC.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rivit Lot Support.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - RRWx LHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - RRWx RHD.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rural Gravel sides.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Rural Unkerbed.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - Street-SAM bases.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - US.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - WWS-SAM11 EU.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM1 Parking Magneto.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM2 RVT Grey H-Brick.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM4 RVT NZ Gravel.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM5 RVT TSR Rural.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM6 darkned MGB.dat
+      - z____scoty_mods/Scoty-WWStreets/scoty-WWStreets - z_opt WWS-SAM7 MGB bikepaths.dat
+      - z____scoty_mods/WWS - JRJ Side Parking bays/scoty-WWStreets - JRJ Side Parking bays.dat
+      - z____scoty_mods/WWS - NAM_Supp/scoty-WWStreets - NAM Street tunnel.dat
+      - z____scoty_mods/WWS - NAM_Supp/scoty-WWStreets FLUP tunnel-ramp.dat
+      - z____scoty_mods/WWS - Paths/scoty-WWStreets - Common_Paths.dat
+      - z____scoty_mods/WWS - Paths/scoty-WWStreets - NAM_Paths.dat
+      - z____scoty_mods/WWS - T21s LHD/scoty-WWStreets - MAXIS T21s LHD.dat
+      - z____scoty_mods/WWS - T21s LHD/scoty-WWStreets - NAM T21s LHD.dat
+      - z____scoty_mods/WWS - T21s RHD/scoty-WWStreets - MAXIS T21s RHD.dat
+      - z____scoty_mods/WWS - T21s RHD/scoty-WWStreets - NAM T21s RHD.dat
+      - z____scoty_mods/WWS - zOptional Cul-de-Sac/scoty-WWStreets - Optional Cul-de-sac - Paths&Props.dat
+      - z____scoty_mods/WWS - zOptional Cul-de-Sac/scoty-WWStreets - Optional Cul-de-sac - Tex.dat
+      - z____scoty_mods/ReadMe_WWStreet_1-6-48_241001.pdf
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/668a9533a5f78_Capturedcran2024-07-07131254.jpg.a79f4f5fd5bd7196e749f5eba1b37a8c.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_various-intersections-1.jpg.73d1e96bc8a727906a9438881ac79e0a.jpg
@@ -9992,15 +11570,15 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_rural_unkerbed_option.jpg.56807bcc2585ff61fe5362a5b52481e9.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_SAMs_NAM.jpg.4953d66c8b49ee237645e61c0139bcc0.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/wws_NWM.jpg.1aa8f5b02cd587a89f1141ef0c36b419.jpg
-    lastModified: 2024-07-07T14:03:45Z
+    lastModified: 2024-10-02T19:13:05Z
     name: WestWind Streets
-    sha256: bdcd88dde734c2f5ebdc5b5b471ff38c3da6abb4a755a72003b9cdd7a84fc075
-    size: 16076288
+    sha256: 76b9f186a0aa1d7eb80065c2a49f6025909940bc24107260cda24ed40dddab76
+    size: 15992759
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/668aa03dca016_Capturedcran2024-07-07131254.thumb.jpg.abf38ff1a307797cd63719b9a114336b.jpg
-    timestamp: 2024-07-24T12:13:33.510Z
-    uncompressed: 30024429
+    timestamp: 2024-10-15T15:37:00.411Z
+    uncompressed: 30016054
     url: https://community.simtropolis.com/files/file/36330-westwind-streets/
-    version: 1.5.48
+    version: 1.6.48
   simtropolis/36339-cp-floral-mmp-collection:
     authors:
       - "11241036"
@@ -10592,7 +12170,21 @@ assets:
       								</div>
 
 
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
 
 
       							
@@ -10824,6 +12416,14 @@ assets:
     uncompressed: 8395606
     url: https://community.simtropolis.com/files/file/36421-bsc-vip-girafe-plane-trees/
     version: 1.0.0
+  simtropolis/36461-agc-rock-cliff-01:
+    authors:
+      - Barroco Hispano
+    category: graphics
+    lastModified: 2024-09-22T23:45:47Z
+    name: AGC - Rock Cliff 01
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66f0ac2a5a64b_image(45).thumb.png.07f683cf8aa5153acd02d27efb019322.png
+    url: https://community.simtropolis.com/files/file/36461-agc-rock-cliff-01/
   simtropolis/3651-navigation-buoys:
     authors:
       - Odd from Sweden
@@ -11029,4 +12629,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-43c2c618fac6b7de4fc16966c4966243-SW_Hydro%20Dam.jpg
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
-timestamp: 2024-09-13T12:10:28.279Z
+timestamp: 2024-10-17T06:14:27.427Z

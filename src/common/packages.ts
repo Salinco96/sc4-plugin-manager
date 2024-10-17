@@ -12,9 +12,12 @@ import {
 
 import { OptionID, OptionInfo, Requirements, getOptionInfo, getOptionValue } from "./options"
 import { ProfileInfo } from "./profiles"
+import { Settings } from "./settings"
 import { matchFile } from "./utils/glob"
 import { entries } from "./utils/objects"
 import { isArray } from "./utils/types"
+
+export const MIN_VERSION_OPTION_ID = "minVersion" as OptionID
 
 export const LOTS_OPTION_ID = "lots" as OptionID
 export const MMPS_OPTION_ID = "mmps" as OptionID
@@ -26,10 +29,11 @@ export function checkFile(
   file: PackageFile,
   packageId: PackageID,
   variantInfo: VariantInfo,
-  profileInfo?: ProfileInfo,
-  profileOptions?: OptionInfo[],
-  features?: Features,
-  patterns?: RegExp[],
+  profileInfo: ProfileInfo | undefined,
+  profileOptions: OptionInfo[],
+  features: Features,
+  settings: Settings | undefined,
+  patterns: RegExp[] | undefined,
 ): boolean {
   const packageConfig = profileInfo?.packages[packageId]
 
@@ -67,6 +71,7 @@ export function checkFile(
       profileInfo,
       profileOptions,
       features,
+      settings,
     )
 
     if (!isSupported) {
@@ -104,6 +109,7 @@ export function checkFile(
       profileInfo,
       profileOptions,
       features,
+      settings,
     )
 
     if (!isSupported) {
@@ -118,16 +124,18 @@ export function checkFile(
     profileInfo,
     profileOptions,
     features,
+    settings,
   )
 }
 
 export function checkCondition(
-  condition?: Requirements,
-  packageId?: PackageID,
-  variantInfo?: VariantInfo,
-  profileInfo?: ProfileInfo,
-  profileOptions?: OptionInfo[],
-  features?: Features,
+  condition: Requirements | undefined,
+  packageId: PackageID | undefined,
+  variantInfo: VariantInfo | undefined,
+  profileInfo: ProfileInfo | undefined,
+  profileOptions: OptionInfo[],
+  features: Features,
+  settings: Settings | undefined,
 ): boolean {
   if (!condition) {
     return true
@@ -143,6 +151,15 @@ export function checkCondition(
       return true
     }
 
+    if (requirement === MIN_VERSION_OPTION_ID) {
+      const patchVersion = settings?.install?.version?.split(".")[2]
+      if (!patchVersion) {
+        return true
+      }
+
+      return Number(patchVersion) >= Number(requiredValue)
+    }
+
     const packageOption = variantInfo?.options?.find(option => option.id === requirement)
     if (packageOption && !packageOption.global) {
       const value = getOptionValue(packageOption, packageOptionValues)
@@ -155,8 +172,11 @@ export function checkCondition(
           profileInfo,
           profileOptions,
           features,
+          settings,
         )
       }
+
+      return false
     }
 
     const profileOption = profileOptions?.find(option => option.id === requirement)
@@ -171,8 +191,11 @@ export function checkCondition(
           profileInfo,
           profileOptions,
           features,
+          settings,
         )
       }
+
+      return false
     }
 
     return requiredValue === !!features?.[requirement as Feature]?.length

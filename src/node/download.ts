@@ -103,7 +103,7 @@ export async function download(
       const extension = contentType && inferExtensionFromContentType(contentType)
 
       if (extension) {
-        filename = options.downloadPath + extension
+        filename = path.basename(options.downloadPath) + extension
       }
     }
 

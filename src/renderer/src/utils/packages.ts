@@ -5,10 +5,10 @@ import {
   PackageID,
   getVariantIssues,
   isDeprecated,
+  isError,
   isExperimental,
   isIncluded,
   isIncompatible,
-  isInvalid,
   isMissing,
   isOutdated,
 } from "@common/packages"
@@ -226,7 +226,7 @@ export function filterVariant(
     }
   }
 
-  if (filters.onlyErrors && !isInvalid(variantInfo, packageStatus)) {
+  if (filters.onlyErrors && !isError(variantInfo, packageStatus)) {
     return false
   }
 
@@ -349,7 +349,7 @@ export function computePackageList(
     }
 
     // Only check errors for the selected variant
-    if (packageFilters.onlyErrors && !isInvalid(selectedVariant, packageStatus)) {
+    if (packageFilters.onlyErrors && !isError(selectedVariant, packageStatus)) {
       return false
     }
 

@@ -657,6 +657,11 @@ assets:
       <body>
                                   
 
+
+
+
+
+
       							
       <p>
       	This file is now obsolete, only use if you have to follow dependencies; you can find the newer release here:
@@ -1072,10 +1077,193 @@ assets:
     authors:
       - pcwhiz24
     category: dependencies
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+      							
+      <p>	<span style="font-size:18px;"><strong>Version 1.0 Finally Released!!!! Scroll down to see change log for Version 1.0</strong></span></p>
+
+      <p>	 </p>
+
+      <p>	This is the real, legit SimCity 4 3D Camera Mod; It allows you to finally run SimCity 4 in Full 3D.(the other one is a fools joke, this one's real!) I found that in the DAT file editor,
+      after hours there was a way to make the game full 3D, and I was able to write a code for a special engine to actually render this game in 3D! Obviously, this game wasn't designed to run in full
+      3D, so there are a few limitations.</p>
+
+      <p>	 </p>
+
+      <p>	So first, there are a few minor Bugs/Limits, nothing too bad <strong>(Most of these are fixed in the first version!)</strong></p>
+
+      <p>	 </p>
+
+      <p>	- Sims appear over 9 feet tall; I don't know how to fix that.</p>
+
+      <p>	- Zones tend to clip into the ground sometimes</p>
+
+      <p>	- No 3D Region view</p>
+
+      <p>	- Large maps run extremely slow, even in my system (GTX 980 SLI) around 2-3 fps</p>
+
+      <p>	- There is no sky above (obviously since it's not meant for 3D), and there's no way of adding a skybox. This mod is best for screen shots for <abbr title="SimCity 4">SC4</abbr> journals, and
+      that's it.</p>
+
+      <p>	- Crashes every 2-3 minutes</p>
+
+      <p>	- Is not playable after around 1000 Sims</p>
+
+      <p>	- May cause permanent map corruption (BACK UP YOUR REGION BEFORE INSTALLING THIS MOD!)</p>
+
+      <p>	- Clouds don't work</p>
+
+      <p>	- Shadows only work in Software mode</p>
+
+      <p>	- U-Drive it mode is unplayable 9/10 times</p>
+
+      <p>	- Night Lights don't work</p>
+
+      <p>	- Back of building models missing</p>
+
+      <p>	- Crashes during start-up about 90% of the time</p>
+
+      <p>	- God mode doesn't work</p>
+
+      <p>	- Saving crashes the game</p>
+
+      <p>	- Exiting to region crashes the game</p>
+
+      <p>	- Exiting game crashes the game</p>
+
+      <p>	- Taking screenshots crashes the game</p>
+
+      <p>	- Taking Print-Screen screenshots crashes the game (It took me hours just to get the screenshot you see above)</p>
+
+      <p>	- Taking a pic of the monitor with your iPhone/camera crashes the camera and game.</p>
+
+      <p>	- <abbr title="Network Addon Mod">NAM</abbr>/<abbr title="Real Highway Mod"><abbr title="RealHighway">RHW</abbr></abbr>/<abbr title="Network Widening Mod">NWM</abbr> crashes the game, but
+      does work sometimes</p>
+
+      <p>	- All tree mods crash the game</p>
+
+      <p>	- Some buildings are missing textures and may appear as perfect 3D brown boxes. If you see one, back slowly away and don't make any sudden movements.</p>
+
+      <p>	- Animals in God mode crashes the game</p>
+
+      <p>	- Mayor mode doesn't work (Crashes if you click on anything)</p>
+
+      <p>	- Some LODs look like Nintendo and PS1 graphics in a blender and thrown up</p>
+
+      <p>	- Mountains don't work</p>
+
+      <p>	- Hills and valley have several glitches</p>
+
+      <p>	- Water may not be wet enough</p>
+
+      <p>	- Grids crash the game</p>
+
+      <p>	- Opening an existing city crashes the game</p>
+
+      <p>	- Boats look like they're floating in the air</p>
+
+      <p>	- Airplanes don't work</p>
+
+      <p>	- Particles don't work</p>
+
+      <p>	- Bull dozer crashes the game and doesn't work</p>
+
+      <p>	- May cause minor frustration</p>
+
+      <p>	- Sim-Mode crashes at selection screen, if it does work, it'll crash at the panel</p>
+
+      <p>	- Region-view crashes even in 2D for no reason</p>
+
+      <p>	- The introduction still work</p>
+
+      <p>	- Disasters work but game crashes when clicking the disaster button about 99% of the time</p>
+
+      <p>	- Obliterate City Crashes the game</p>
+
+      <p>	- Reconcile button crashes the game (Even staring at it will crash the game)</p>
+
+      <p>	- Mayor panel and taxes may crash the game</p>
+
+      <p>	- Music doesn't work, turning it on crashes the game</p>
+
+      <p>	- Sound does work but may sound like in a blender, and causes CTD</p>
+
+      <p>	- Street signs labels doesn't work</p>
+
+      <p>	- May do nothing a few times</p>
+
+      <p>	- Uses only one-core of a CPU</p>
+
+      <p>	- If you crash a plane into a building like 9/11 in the 3D U-Drive it (Which doesn't even work) your PC may explode</p>
+
+      <p>	- May cause depression</p>
+
+      <p>	 </p>
+
+      <p>	<u><strong>Warning! </strong></u></p>
+
+      <p>	May cause thousands of tiny sims to colonize and build cities in your living room or bedroom. Keep an eye out for little zones around your house every hour or so. This is a side effect of
+      the hyper-simulation of the game to allow it to run in full 3D. It is currently unknown why this is happening, but I am working on a solution.</p>
+
+      <p>	 </p>
+
+      <p>	This mod is a work in progress so I'll try to get past some of those little bugs. Some of these unfortunately are hard-coded into the .exe file, I'll try to make less bugs next time.</p>
+
+      <p>	 </p>
+
+      <p>	If you can get past these limitations, you'll find it's a very good mod! No dependencies</p>
+
+      <p>	 </p>
+
+      <p>	<img alt="QmKUs7P.jpg" src="http://i.imgur.com/QmKUs7P.jpg" ></p>
+
+      <p>	 </p>
+
+      <p>	To install:</p>
+
+      <p>	Unzip the .dat file and install into Plugins. It's that easy! Make sure to remove every other mod you have first and backup your region!</p>
+
+      <p>	To adjust settings, right click on the .dat file, click on open with- choose notepad and there you'll see some settings to change.</p>
+
+      <p>	 </p>
+
+      <p>	If you have any problems or questions, please comment below!</p>
+
+      <p>	 </p>
+
+      <p>	 </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_04_2015/044b853f26173a7edc03ce1e2ea336ef-trick11.jpg
     lastModified: 2016-05-06T04:50:33Z
     name: 3D Camera Mod for SimCity 4
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_04/Trick11.thumb.jpg.20635ce0163bd0c2ed236b3ad07b1807.jpg
+    timestamp: 2024-10-16T08:41:46.968Z
     url: https://community.simtropolis.com/files/file/30381-3d-camera-mod-for-simcity-4/
+    variants:
+      "161233":
+        filename: 3D_Mod.zip
+        files:
+          - 3D_Mod/SimCity 4/Almost There!/Getting Closer!/Here it is!/ZZZZZZZ_3D_Cam_Mod_1.dat
+        sha256: 03840b208696263b3785176c613cfee6ad0dbb4fc47e2ea9302e2c505e562388
+        size: 381392
+        uncompressed: 564789
+      "161234":
+        filename: 3D_Mod_Version1.zip
+        files:
+          - README FIRST.TXT
+          - ZZZZZZZ_3D_Cam_Mod_1.dat
+          - ZZZZZZZ_Stabilizer.dat
+        sha256: 450e480999de7693559f03c0b4cdc4146ff0cd487842becdb00b7fed970fdabc
+        size: 698333
+        uncompressed: 856374
+    version: "1.0"
   simtropolis/30840-dutch-prop-pack-mmp:
     authors:
       - Ernestmaxis
@@ -1533,4 +1721,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2005/thumb-2ac8a76943603e922d27c9553c800ffa-product_image.jpg
     url: https://community.simtropolis.com/files/file/4526-peg-random-woods-v206/
 
-timestamp: 2024-09-13T12:10:28.279Z
+timestamp: 2024-10-17T06:14:27.427Z

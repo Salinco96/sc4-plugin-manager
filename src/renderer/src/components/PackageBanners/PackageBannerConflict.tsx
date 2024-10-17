@@ -1,8 +1,10 @@
 import { useMemo } from "react"
 
-import { useTranslation } from "react-i18next"
+import { Link } from "@mui/material"
+import { Trans, useTranslation } from "react-i18next"
 
 import { Issue, VariantIssue } from "@common/types"
+import { useNavigation } from "@utils/navigation"
 import { getPackageInfo, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { PackageBanner } from "./PackageBanner"
@@ -12,11 +14,13 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
   const currentProfile = useCurrentProfile()
 
   const packageNames = useStore(store => issue.packages?.map(id => getPackageInfo(store, id)?.name))
+  const incompatiblePackageId = issue.packages?.at(0)
 
   const { t } = useTranslation("PackageBanner")
+  const { openPackageView } = useNavigation()
 
   const action = useMemo(() => {
-    const { id, feature, option, packages, value } = issue
+    const { id, feature, option, value } = issue
     if (!currentProfile) {
       return
     }
@@ -24,14 +28,13 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
     switch (id) {
       case Issue.CONFLICTING_FEATURE:
       case Issue.INCOMPATIBLE_FEATURE: {
-        if (packages?.length) {
-          const conflictPackageId = packages[0]
+        if (incompatiblePackageId) {
           return {
             description: t("conflict.actions.disablePackages.description", {
               packages: packageNames?.at(0),
             }),
             label: t("conflict.actions.disablePackages.label"),
-            onClick: () => actions.disablePackage(conflictPackageId),
+            onClick: () => actions.disablePackage(incompatiblePackageId),
           }
         }
 
@@ -64,18 +67,35 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
         }
       }
     }
-  }, [actions, currentProfile, issue, packageNames])
+  }, [actions, currentProfile, incompatiblePackageId, issue, packageNames])
 
   return (
     <PackageBanner action={action} header={t("conflict.title")}>
-      {t(issue.id, {
-        ns: "Issue",
-        ...issue,
-        count: packageNames?.length,
-        option: issue.option,
-        packages: packageNames,
-        value: issue.value,
-      })}
+      <Trans
+        components={{
+          a: (
+            <Link
+              color="inherit"
+              onClick={() => {
+                if (incompatiblePackageId) {
+                  openPackageView(incompatiblePackageId)
+                }
+              }}
+              sx={{
+                ":hover": { textDecoration: "underline" },
+                cursor: "pointer",
+                fontWeight: "bold",
+                textDecoration: "none",
+              }}
+              title={t("deprecated.actions.openPackage.description")}
+            />
+          ),
+          b: <strong />,
+        }}
+        i18nKey={issue.id}
+        ns="Issue"
+        values={{ ...issue, count: packageNames?.length, packages: packageNames }}
+      />
     </PackageBanner>
   )
 }

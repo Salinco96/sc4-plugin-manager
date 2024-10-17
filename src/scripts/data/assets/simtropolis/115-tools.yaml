@@ -679,10 +679,23 @@ assets:
     authors:
       - Null 45
     category: mods,dll
+    dependencies: []
+    description: >-
+      <body>
+      							
+      							<p>This is a plug-in that I wrote that allows Windows Explorer to display thumbnails of Fsh files.<br><br>The installer will automatically decide if you have a 32-bit or 64-bit OS and install the correct version.<br><br>The support thread is: <a href="https://www.simtropolis.com/forum/messageview.cfm?catid=41&amp;threadid=111116&amp;enterthread=y" rel="external nofollow">Fsh file Thumbnails for Windows XP, 7 and Vista</a>.</p>
+      						</body>
+    filename: FshThumbnailhandler.zip
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2013/b4ba7f95df67c920ace3df829aa6386c-xpvistathumb69.jpg
     lastModified: 2013-07-11T01:20:02Z
     name: Fsh file Thumbnails for Windows XP, Vista, 7 and 8
+    sha256: 3df042fd08b7a376af0bf36139a2d0f43ca99fce7b7eb58867f52df9744d7348
+    size: 3007350
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2013/thumb-b4ba7f95df67c920ace3df829aa6386c-xpvistathumb69.jpg
+    uncompressed: 3036493
     url: https://community.simtropolis.com/files/file/22787-fsh-file-thumbnails-for-windows-xp-vista-7-and-8/
+    version: 1.2.5.0
   simtropolis/22887-batch-png-to-fsh-tool:
     authors:
       - Null 45
@@ -2031,7 +2044,7 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/1.png.ba916b8415ef7e3fa1e0896da2d59191.png
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/2.jpg.6dab61482f0bb11ca31067607482b882.jpg
-    lastModified: 2024-09-06T19:37:31Z
+    lastModified: 2024-10-12T23:45:37Z
     name: SimCity 4 Multiplayer Project Launcher
     repository: https://github.com/andreRBarata/sc4mp-server-docker
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_07/1.thumb.png.9eca9704100ac31a7c9aad17ebd4a5cf.png
@@ -2068,18 +2081,291 @@ assets:
     authors:
       - Null 45
     category: mods,dll
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that automatically saves a city at user-specified intervals.
+      </p>
+
+
+      <p>
+      	This auto-save plugin does not require any launcher and will work with any digital Windows version of the game, Steam, GOG, etc. The disc-based versions should also work if fully patched.
+      </p>
+
+
+      <p>
+      	If you use a 3rd-party launcher that has its own auto-save setting you will need to disable that option when installing this plugin.
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px;"><strong>System Requirements</strong></span>
+      </p>
+
+
+      <ul>
+      	<li>
+      		    Windows 10 or later.
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px;"><strong>Installation</strong></span>
+      </p>
+
+
+      <p>
+      	    Close SimCity 4.<br>
+      	    Copy <em>SC4AutoSave.dll</em> and <em>SC4AutoSave.ini</em> into the Plugins folder in the SimCity 4 installation directory.<br>
+      	    Configure the auto-save settings, see the <strong>Configuring the plugin</strong> section.
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px;"><strong>Configuring the plugin</strong></span>
+      </p>
+
+
+      <p>
+      	    Open <em>SC4AutoSave.ini</em> in a text editor (e.g. Notepad).<br>
+      	    Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with administrator permissions to be able to save the file.
+      </p>
+
+
+      <p>
+      	    Adjust the settings in the <em>[AutoSave]</em> section to your preferences.
+      </p>
+
+
+      <p>
+      	    Save the file and start the game.
+      </p>
+
+
+      <p>
+      	<span style="font-size:16px;"><strong>Settings overview:</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>IntervalInMinutes </strong>is the number of minutes that elapse between auto-save attempts, defaults to 15 minutes. Note that the save timing may not be exactly this value depending on what the game is doing. For example, auto-save is disabled when the game is paused.
+      </p>
+
+
+      <p>
+      	<strong>FastSave </strong>controls whether the game skips updating the region thumbnail when saving, defaults to <em>true</em>. With this option enabled the save operation is equivalent to the <em>Ctrl + Alt + S</em> keyboard shortcut, when disabled it is equivalent to the <em>Ctrl + S</em> keyboard shortcut.
+      </p>
+
+
+      <p>
+      	<strong>IgnoreTimePaused </strong>controls whether the time the game spends paused is ignored when counting towards the next auto-save point, defaults to <em>true</em>.
+      </p>
+
+
+      <p>
+      	<strong>LogSaveEvents </strong>controls whether the save events for the current session will be written to the log file, defaults to <em>true</em>.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong><span style="font-size:18px;">Troubleshooting</span></strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a SC4AutoSave.log file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px;"><strong>Support and Source Code</strong></span>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762722-sc4autosave/" rel="">https://community.simtropolis.com/forums/topic/762722-sc4autosave/</a>
+      </p>
+
+
+      <p>
+      	The source code and bug tracker is located on <a href="https://github.com/0xC0000054/sc4-auto-save" rel="external nofollow">GitHub</a>.
+      </p>
+
+      						</body>
+    filename: SC4AutoSave.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4AutoSave.dll
+      - SC4AutoSave.ini
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_11/SC4AutoSaveSTEXIcon.png.95779b2d8446d28e80fde99d53386a6a.png
     lastModified: 2024-01-21T04:05:44Z
     name: SC4 Auto Save
+    repository: https://github.com/0xC0000054/sc4-auto-save
+    sha256: 2873ca87bdd93b3f470b3f0e98ca52ec9180238550ffb791bf454dbd21bfeb55
+    size: 56097
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_11/SC4AutoSaveSTEXIcon.thumb.png.76798bc0a3f4162a440ff15d3830026d.png
+    timestamp: 2024-10-16T08:18:50.533Z
+    uncompressed: 127515
     url: https://community.simtropolis.com/files/file/35761-sc4-auto-save/
+    version: 1.2.0
   simtropolis/35782-sc4-city-date-sync:
     authors:
       - Null 45
     category: mods,dll
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that synchronizes the city dates in a region.
+      </p>
+
+
+      <p>
+      	The plugin saves the current in-game date when exiting an established city, and then applies it to the next established city if that city's in-game date is less then the stored value. The city date is applied by automatically executing the <em>SimDate</em> cheat when loading the city. The city date synchronization only occurs between cities located in the same region.
+      </p>
+
+
+      <p>
+      	<span style="color:#c0392b;"><strong>Disclaimer - </strong>I have not experienced any issues with using the SimDate command in this way, but it may have side effects that I missed.</span>
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <p>
+      	Windows 10 or later
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4CityDateSync.dll</em> and <em>SC4CityDateSync.ini</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4CityDateSync.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762766-sc4citydatesync-synchronize-the-city-dates-in-a-region/" rel="">https://community.simtropolis.com/forums/topic/762766-sc4citydatesync-synchronize-the-city-dates-in-a-region/</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-city-date-sync" rel="external nofollow">https://github.com/0xC0000054/sc4-city-date-sync</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SC4CityDateSync.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4CityDateSync.dll
+      - SC4CityDateSync.ini
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_11/STEXIcon.png.21975bb87a08e5db2a8857e4ec04ec80.png
     lastModified: 2024-01-08T11:05:33Z
     name: SC4 City Date Sync
+    repository: https://github.com/0xC0000054/sc4-city-date-sync
+    sha256: abfb3a0f44c0dd99f10d8e27c327c2b47757f11e03eca8ec6adabbe098834097
+    size: 35341
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_11/STEXIcon.thumb.png.965f05907fc98b577f19c398501165ed.png
+    timestamp: 2024-10-16T08:15:23.870Z
+    uncompressed: 76113
     url: https://community.simtropolis.com/files/file/35782-sc4-city-date-sync/
+    version: 1.0.3
   simtropolis/35790-sc4-cleanitol:
     authors:
       - nos.17
@@ -2448,26 +2734,735 @@ assets:
     authors:
       - Null 45
     category: mods,dll
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that sets the game's rendering mode and resolution options.
+      </p>
+
+
+      <p>
+      	<strong>Features</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Custom resolutions can be configured without command line arguments.
+      	</li>
+      	<li>
+      		Supports borderless full screen mode without requiring a launcher.
+      	</li>
+      	<li>
+      		Supports changing the game's rendering driver without a command line argument.
+      	</li>
+      	<li>
+      		Allow the DirectX full screen mode to use 32-bit color.
+      	</li>
+      	<li>
+      		Allows the game's intro to be disabled without a command line argument.
+      	</li>
+      	<li>
+      		Allows pausing on focus loss to be enabled without a command line argument.
+      	</li>
+      </ul>
+
+
+      <p>
+      	This DLL cannot change the game's full screen resolution, it will always match your monitor. If you want to run a full screen window at something other than your monitor's resolution you need to use an external window scaling program such as <a href="https://github.com/Blinue/Magpie" rel="external nofollow">Magpie</a>.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Game version 641
+      		<ul>
+      			<li>
+      				Only required for the DirectX full screen 32-bit color fix, all other features should work on older game versions.
+      			</li>
+      		</ul>
+      	</li>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4GraphicsOptions.dll</em> and <em>SC4GraphicsOptions.ini</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Configure the graphics options, see the <em>Configuring the plugin</em> section.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Configuring the plugin</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		<p>
+      			Open <em>SC4GraphicsOptions.ini</em> in a text editor (e.g. Notepad).<br>
+      			Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with administrator permissions to be able to save the file.
+      		</p>
+      	</li>
+      	<li>
+      		<p>
+      			Adjust the settings in the <em>[GraphicsOptions] </em>section to your preferences.
+      		</p>
+      	</li>
+      	<li>
+      		<p>
+      			Save the file and start the game.
+      		</p>
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Settings overview:</strong>
+      </p>
+
+
+      <p>
+      	<strong>EnableIntroVideo </strong>controls whether the game's intro video will be played on startup, defaults to true. Setting this to false is equivalent to the -Intro:off command line argument.
+      </p>
+
+
+      <p>
+      	<strong>PauseGameOnFocusLoss </strong>controls whether the game will be paused when it looses focus, defaults to false. Setting this to true is equivalent to the -gp command line argument.
+      </p>
+
+
+      <p>
+      	<strong>Driver</strong> the driver that SC4 uses for rendering, the supported values are listed in the following table:
+      </p>
+
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>
+      				Driver
+      			</th>
+      			<th>
+      				Notes
+      			</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>
+      				DirectX
+      			</td>
+      			<td>
+      				SC4's default hardware renderer. Because this renderer targets DirectX 7, a DirectX wrapper (e.g. <a href="https://github.com/dege-diosg/dgVoodoo2" rel="external nofollow">dgVoodo 2</a> or <a href="https://github.com/elishacloud/dxwrapper" rel="external nofollow">DxWrapper</a>) is required for resolutions above 2048x2048.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				OpenGL
+      			</td>
+      			<td>
+      				An unfinished hardware renderer. simmaster07's <a href="https://github.com/nsgomez/scgl" rel="external nofollow">SCGL</a> project aims to replace this renderer with a new one targeting OpenGL 3.0.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				SCGL         
+      			</td>
+      			<td>
+      				simmaster07's replacement for SC4's OpenGL renderer. This is an alias for the OpenGL entry above.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Software
+      			</td>
+      			<td>
+      				The renderer SC4 uses when no supported hardware renderer is available.
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<strong>WindowWidth</strong> the width of SC4's window when running in windowed mode. This is ignored for the full screen and borderless full screen modes. The minimum value is 800, values above 2048 with the DirectX driver require the use of a DirectX wrapper.
+      </p>
+
+
+      <p>
+      	<strong>WindowHeight</strong> the height of SC4's window when running in windowed mode. This is ignored for the full screen and borderless full screen modes. The minimum value is 600, values above 2048 with the DirectX driver require the use of a DirectX wrapper.
+      </p>
+
+
+      <p>
+      	<strong>ColorDepth</strong> the color depth that SC4 uses, in bits per pixel. The supported values are 16 and 32.
+      </p>
+
+
+      <p>
+      	<strong>WindowMode</strong> the window mode that SC4 uses, the possible values listed in the following table:
+      </p>
+
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>
+      				Window Mode
+      			</th>
+      			<th>
+      				Notes
+      			</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>
+      				Windowed                       
+      			</td>
+      			<td>
+      				Runs the game in windowed mode, the window size is set by the <em>WindowWidth </em>and <em>WindowHeight</em> values above. Equivalent to the -w command line parameter.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				FullScreen
+      			</td>
+      			<td>
+      				Runs the game in full screen mode. Equivalent to the -f command line parameter. Screen resolutions larger that 2048x2048 in DirectX mode require the use of a DirectX wrapper.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				BorderlessFullScreen
+      			</td>
+      			<td>
+      				Runs the game a window that covers the entire screen. Screen resolutions larger that 2048x2048 in DirectX mode require the use of a DirectX wrapper.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Borderless
+      			</td>
+      			<td>
+      				An alias for the <em>BorderlessFullScreen</em> option above.
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>
+      				 
+      			</th>
+      			<th>
+      				 
+      			</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>
+      				 
+      			</td>
+      			<td>
+      				<strong>Troubleshooting</strong>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 
+      			</td>
+      			<td>
+      				<p>
+      					The plugin should write a <em>SC4GraphicsOptions.log</em> file in the same folder as the plugin.<br>
+      					The log contains status information for the most recent run of the plugin.
+      				</p>
+
+      				<p>
+      					<strong>Source Code and Support</strong>
+      				</p>
+
+      				<p>
+      					Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762952-sc4graphicsoptions" rel="">https://community.simtropolis.com/forums/topic/762952-sc4graphicsoptions</a>
+      				</p>
+
+      				<p>
+      					The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-graphics-options" rel="external nofollow">https://github.com/0xC0000054/sc4-graphics-options</a>
+      				</p>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 
+      			</td>
+      			<td>
+      				If you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: <a href="https://paypal.me/0xC0000054" rel="external nofollow">https://paypal.me/0xC0000054</a>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 
+      			</td>
+      			<td>
+      				<p>
+      					Thanks to the few people who have donated to me.
+      				</p>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      						</body>
+    filename: SC4GraphicsOptions.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4GraphicsOptions.dll
+      - SC4GraphicsOptions.ini
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.png.87e0cc6f1f99a0ed7a91b4e31ea75f7b.png
     lastModified: 2024-02-11T00:42:54Z
     name: SC4 Graphics Options
+    repository: https://github.com/Blinue/Magpie
+    sha256: a75269f9975cc9674abf4c68cb52696eef40c1843b10bbe3a9ea3a48bc04cd8a
+    size: 79694
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.da4c65cf8db81ee630bb6cba8651e9d5.png
+    timestamp: 2024-10-16T08:24:06.657Z
+    uncompressed: 193007
     url: https://community.simtropolis.com/files/file/36091-sc4-graphics-options/
+    version: 1.2.0
   simtropolis/36120-sc4-cpu-options:
     authors:
       - Null 45
     category: mods,dll
+    dependencies:
+      - simtropolis/36053-sc4-single-cpu
+      - simtropolis/36048-sc4-cpu-priority
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that configures the CPU core count and priority.
+      </p>
+
+
+      <p>
+      	This plugin combines the functionality of the <a href="https://community.simtropolis.com/files/file/36053-sc4singlecpu/" rel="">SingleCPU</a> and <a href="https://community.simtropolis.com/files/file/36048-sc4cpupriority/" rel="">CPUPriority</a> plugins in a single DLL, and adds the ability to set the CPU priority without using a command line argument.
+      </p>
+
+
+      <p>
+      	If the <strong>-CPUCount</strong> and/or <strong>-CPUPriority</strong> command line arguments are present, those values will be used in place of the plugin's default options. When those command line arguments are not present, the plugin will configure SC4 to use 1 CPU core and the CPU priority specified in the configuration file.
+      </p>
+
+
+      <p>
+      	This plugin is incompatible with 3rd-party launchers that set a CPU priority, it will override the CPU priority setting they set when starting the game.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Remove <em>SC4SingleCPU.dll</em> and <em>SC4CPUPriority.dll</em> from the Plugins folder in the SimCity 4 installation directory, if present.
+      	</li>
+      	<li>
+      		Copy <em>SC4CPUOptions.dll</em> and<em> SC4CPUOptions.ini</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Configure the plugin settings, see the <em>Configuring the plugin</em> section.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Configuring the Plugin</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		<p>
+      			Open<em> SC4CPUOptions.ini </em>in a text editor (e.g. Notepad). Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with administrator permissions to be able to save the file.
+      		</p>
+      	</li>
+      	<li>
+      		<p>
+      			Adjust the settings in the <em>[CPUOptions]</em> section to your preferences.
+      		</p>
+      	</li>
+      	<li>
+      		<p>
+      			Save the file and start the game.
+      		</p>
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Settings Overview</strong>
+      </p>
+
+
+      <p>
+      	<strong>Priority</strong> is the CPU priority that the game will use, the default is <em>AboveNormal</em>. The supported values are listed in the following table:
+      </p>
+
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>
+      				Priority Value
+      			</th>
+      			<th>
+      				     Notes
+      			</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>
+      				High
+      			</td>
+      			<td>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				AboveNormal
+      			</td>
+      			<td>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Normal
+      			</td>
+      			<td>
+      				    The default value for a process, unless the parent process has a different value.
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				BelowNormal
+      			</td>
+      			<td>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Idle
+      			</td>
+      			<td>
+      				 
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Low
+      			</td>
+      			<td>
+      				    An alias for Idle.
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4CPUOptions.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762979-sc4cpuoptions" rel="">https://community.simtropolis.com/forums/topic/762979-sc4cpuoptions</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-cpu-options" rel="external nofollow">https://github.com/0xC0000054/sc4-cpu-options</a>
+      </p>
+
+
+      <table>
+      	<tbody>
+      		<tr>
+      			<td>
+      				 
+      			</td>
+      			<td>
+      				If you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: <a href="https://paypal.me/0xC0000054" rel="external nofollow">https://paypal.me/0xC0000054</a>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				 
+      			</td>
+      			<td>
+      				<p>
+      					Thanks to the few people who have donated to me.
+      				</p>
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      						</body>
+    filename: SC4CPUOptions.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4CPUOptions.dll
+      - SC4CPUOptions.ini
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.png.dcca5907ea5a1f0de8cf725491639281.png
     lastModified: 2024-02-14T14:43:30Z
     name: SC4 CPU Options
+    repository: https://github.com/0xC0000054/sc4-cpu-options
+    sha256: 1e649bfac44ba0d1d9c4b2105ee992614646180f966e5ec5094197e74b3db2a1
+    size: 52259
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.55cf8d37094679309e4c933ec6df6848.png
+    timestamp: 2024-10-16T08:33:50.060Z
+    uncompressed: 116019
     url: https://community.simtropolis.com/files/file/36120-sc4-cpu-options/
+    version: 1.0.1
   simtropolis/36145-region-view-census-ui-dll-plugin:
     authors:
       - Null 45
     category: mods,dll
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that adds a census UI that can be shown in the region view.
+      </p>
+
+
+      <p>
+      	The region census panel shows the totals for each <abbr title="Residential, Commercial, Industrial">RCI</abbr> group in the region. It also allows the player to export a <a href="https://en.wikipedia.org/wiki/Comma-separated_values" rel="external nofollow">CSV</a> file with statistics for the individual cities. The CSV file is written to <em>Documents/SimCity 4/Region_View/&lt;Region Name&gt;</em> using UTF-8 encoding. The region census UI can be activated from the region view using one of the following methods:
+      </p>
+
+
+      <ul>
+      	<li>
+      		Clicking the middle mouse button.
+      	</li>
+      	<li>
+      		Using the <em>RegionCensus</em> cheat.
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		SimCity 4 version 641
+      	</li>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		 Close SimCity 4.
+      	</li>
+      	<li>
+      		 Copy <em>SC4RegionCensus.dll</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		 Copy <em>RegionCensusUI.dat</em> into your SimCity 4 Plugins folder.
+      	</li>
+      	<li>
+      		 Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4RegionCensus.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/763013-region-view-census-ui-dll-plugin/" rel="">https://community.simtropolis.com/forums/topic/763013-region-view-census-ui-dll-plugin/</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-region-census" rel="external nofollow">https://github.com/0xC0000054/sc4-region-census</a>
+      </p>
+
+      						</body>
+    filename: SC4RegionCensus.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - RegionCensusUI.dat
+      - SC4RegionCensus.dll
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.png.f552a7cbbdf0c77029d72bf7e6eb8ac0.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/RegionViewCensusDialog.jpg.86be894c72ed55eb758eba3d70e76749.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/RegionCensusMaxislandCSVCrop.jpg.b0fba40167ab5f759b221fea6277c090.jpg
     lastModified: 2024-02-27T06:32:27Z
     name: Region View Census UI - DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-region-census
+    sha256: f3a6e06523241b9f6529c9dfb1c888cfdbbd13e582c5af67de76e8e436472e7a
+    size: 58573
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.5e3008427bf9a97266514d7df919179f.png
+    timestamp: 2024-10-16T08:39:34.952Z
+    uncompressed: 130757
     url: https://community.simtropolis.com/files/file/36145-region-view-census-ui-dll-plugin/
+    version: 1.0.1
   simtropolis/36244-startup-performance-optimization-dll-for-simcity-4:
     authors:
       - Null 45
@@ -3271,4 +4266,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-cc76119e1615d738dc2f82f522af7ee3-sim-ruler.JPG
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
-timestamp: 2024-09-13T12:22:00.820Z
+timestamp: 2024-10-17T06:14:27.427Z

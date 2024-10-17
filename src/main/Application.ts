@@ -526,6 +526,7 @@ export class Application {
     const key = this.getDownloadKey(assetInfo)
     const downloadPath = this.getDownloadPath(key)
     const downloadTempPath = this.getTempDownloadPath(key)
+
     if (!assetInfo.downloaded[assetInfo.version]) {
       await this.tasks.download.queue(key, async context => {
         const response = await get(assetInfo.url, {
@@ -1511,6 +1512,7 @@ export class Application {
                         profileInfo,
                         this.state.options,
                         this.state.features,
+                        this.state.settings,
                         patterns,
                       )
                     ) {
@@ -1885,12 +1887,17 @@ export class Application {
    * Recalculates package status/compatibility for the given profile.
    */
   protected async recalculatePackages(profileId: ProfileID): Promise<void> {
-    const profile = this.getProfileInfo(profileId)
-    if (!this.state.packages || !profile) {
+    const profileInfo = this.getProfileInfo(profileId)
+    if (!this.state.options || !this.state.packages || !this.state.settings || !profileInfo) {
       return
     }
 
-    const { resultingFeatures, resultingStatus } = resolvePackages(this.state.packages, profile)
+    const { resultingFeatures, resultingStatus } = resolvePackages(
+      this.state.packages,
+      profileInfo,
+      this.state.options,
+      this.state.settings,
+    )
 
     this.state.features = resultingFeatures
     for (const packageId of keys(resultingStatus)) {
@@ -2332,8 +2339,7 @@ export class Application {
 
   public async updateProfile(profileId: ProfileID, update: ProfileUpdate): Promise<boolean> {
     const profileInfo = this.getProfileInfo(profileId)
-
-    if (!this.state.options || !this.state.packages || !profileInfo) {
+    if (!this.state.options || !this.state.packages || !this.state.settings || !profileInfo) {
       return false
     }
 
@@ -2355,7 +2361,13 @@ export class Application {
         resultingProfile,
         resultingStatus,
         shouldRecalculate,
-      } = resolvePackageUpdates(this.state.packages, profileInfo, this.state.options, update)
+      } = resolvePackageUpdates(
+        this.state.packages,
+        profileInfo,
+        this.state.options,
+        this.state.settings,
+        update,
+      )
 
       try {
         if (shouldRecalculate) {

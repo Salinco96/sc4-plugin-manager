@@ -147,10 +147,64 @@ assets:
     authors:
       - Bones1
     category: cheats
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>The intent of this mod is to reduce the amount of abandonment and dilapidation of high-wealth buildings. It does this in a non-cheating natural way, to prevent high-wealth buildings from
+      growing in areas that will likely cause them to abandon in the near future. There are other mods to prevent dilapidation, but they do it by forcibly preventing dilapidation in buildings that
+      really should dilapidate. This mod stops those buildings from growing in the first place.</p>
+
+      <p>This mod changes the desirability building requirements for high-wealth construction. The default game setting is to allow buildings to grow in areas with as little as 20% desirability (or
+      greater). Unfortunately, dilapidation of buildings also begins to occur in areas with 20% desirability (or less). So what the game does is build a nice-looking R$$$ building (or CO$$$ or
+      whatever) in a bad area, and then it quickly abandons or dilapidates the building, creating an ugly blackened building.</p>
+
+      <p>Much of the current wisdom on Simtropolis seems to state that R$$$ abandonment is the result of too-few jobs for rich sims. While this is true in some cases, my tests have shown that most of
+      the abandonment occurs for desirability reasons. The R$$$ build houses in borderline areas, and then low desirability kills them off. Fewer R$$$ pushes up demand, and that causes more R$$$ homes
+      to be built in borderline areas, and the cycle repeats. This mod stops that cycle by preventing those homes from being built in borderline areas.</p>
+
+      <p>This mod changes the building desirability requirement to 40%-50%, instead of 20%. Thus, a high-wealth building will not grow in a borderline area.</p>
+
+      <p>The result is that less high-wealth buildings will grow in your city, but those that do grow will have a much greater chance of "sticking around" without abandoning or dilapidating. You'll
+      also notice that your cities will retain more CS$ and CS$$ buildings, rather than them all being replaced by CO$$ and CO$$$.</p>
+
+      						</body>
+    filename: LessAbandonment1.zip
+    files:
+      - LessCO$$$Abandonment.dat
+      - LessCO$$Abandonment.dat
+      - LessCS$$$Abandonment.dat
+      - LessCS$$Abandonment.dat
+      - LessHighTechAbandonment.dat
+      - LessR$$$Abandonment.dat
+      - LessR$$Abandonment.dat
+      - ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0011/5acaa06fcd3abacd8ec41a315a904da3-LessAbandonment.jpg
     lastModified: 2006-04-27T05:46:03Z
     name: Less Abandonment
+    sha256: 270515d68564f543c85fcccf1fbc7b580a95fc2a344cb3b63a829a1c62e34456
+    size: 11773
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2006/thumb-5acaa06fcd3abacd8ec41a315a904da3-LessAbandonment.jpg
+    timestamp: 2024-10-16T08:40:44.039Z
+    uncompressed: 16498
     url: https://community.simtropolis.com/files/file/14931-less-abandonment/
+    version: "1.0"
   simtropolis/14995-trigger-filtering-tunnels:
     authors:
       - Trigger_tre
@@ -171,10 +225,63 @@ assets:
     authors:
       - Bones1
     category: cheats
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+      							
+
+
+
+
+      							
+      <p>This mod doubles the number of jobs provided by the in-game industry buildings. There are 4 files you can optionally install; they double the jobs for each industry category (farming, dirty,
+      manufacturing, and high-tech). So, you don't have to double all the industry categories if you don't wish to do so; you can pick &amp; choose.</p>
+
+      <p>I made this mod after trying out the industry-quadrupler mod on this site. I found that mod to be unbalanced, and in the "cheat" category, so I made an alternative mod to be more balanced
+      with the rest of the game.</p>
+
+      <p>1. I only doubled the number of jobs, rather than quadrupled them. I found 4x was just too much.</p>
+
+      <p>2. I doubled the building tax values. This makes the income from industry to be the same as the default for the same number of jobs. This allows a "industry city" to be economically feasible,
+      just as with the default game values.</p>
+
+      <p>3. I doubled the power and water requirements for the buildings. This means you have to spend the same amount of money to support a similar number of jobs as you would with the game default.
+      (I found this balance to be lacking in the industry quadrupler.)</p>
+
+      <p>4. I doubled the pollution from each building. Again, this means that the same amount of jobs will produce the same amount of pollution as with the game's default. (Again, missing in the 4x
+      mod.)<br><br>See the readme for installation details.</p>
+
+      						</body>
+    filename: jobs-doubler1.zip
+    files:
+      - dirty-doubler.dat
+      - dirty-doubler_includingPollution.dat
+      - farm-doubler.dat
+      - farm-doubler_includingPollution.dat
+      - hitech-doubler.dat
+      - hitech-doubler_includingPollution.dat
+      - manufacturing-doubler.dat
+      - manufacturing-doubler_includingPollution.dat
+      - ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0009/49f694b46a99e7429e796b8226b57dd4-jobsdoubler.jpg
     lastModified: 2006-07-10T05:23:27Z
     name: Industry Doubler
+    sha256: 864317b54cca034a21b6392808732955938b0417651814ac142c8228fca5db53
+    size: 19180
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2006/thumb-49f694b46a99e7429e796b8226b57dd4-jobsdoubler.jpg
+    timestamp: 2024-10-16T13:48:34.742Z
+    uncompressed: 90945
     url: https://community.simtropolis.com/files/file/15758-industry-doubler/
+    version: "2"
   simtropolis/15915-mine:
     authors:
       - Majestic01
@@ -665,10 +772,50 @@ assets:
     authors:
       - Buggi
     category: cheats
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+      							
+      <p>No story with this mod. This is the first Radical mod I've done for mainstream release.<br>Please do not use this mod if you want your city to grow and develop as the original game<br>would
+      allow. This mod is designed to do one thing, and that's to allow your city to grow<br>at an exponential rate.</p>
+
+      <p>Modified all Comercial Service, Commercial Office and Industrial zone demand to skyrocket to 500% of what it was. Small income of </p>
+
+      						</body>
+    filename: Plugin_090_SuperDemand3.zip
+    files:
+      - Plugin_090_SuperDemand.dat
+      - Readme.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0015/829a84916b0699a01c12bfd01e21dd5b-default.jpg
     lastModified: 2003-09-03T23:00:00Z
     name: Super Demand Ordinance
+    sha256: 1bdbafc37154bcc33064dac84237bb9f03f40aa930e3d5d0daf75d5c0ba5cb88
+    size: 1810
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-829a84916b0699a01c12bfd01e21dd5b-default.jpg
+    timestamp: 2024-10-16T05:34:04.255Z
+    uncompressed: 2385
     url: https://community.simtropolis.com/files/file/21299-super-demand-ordinance/
+    version: "1.0"
   simtropolis/21312-simoleon-rh:
     authors:
       - RalphaelNinja
@@ -681,10 +828,41 @@ assets:
     authors:
       - RalphaelNinja
     category: cheats
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>This modd reduces crime to a level that is controllable and if required can almost eliminate crime entirely by placing a squadron of police station.</p>
+
+      <p>This is one of those easy modd that should have been done back in the first days of modding but no one got around to it. In our rush to do the impossible we overlook some of the simpler
+      modds. Although fairly simple, a day was spent in testing the various effects of the changes so as not to remove crime entirely. This modd should satisfy the purist and if not, it should satisfy
+      the not so pure. Enjoy...</p>
+
+      <p>Ralphael</p>
+
+      						</body>
+    filename: CrimeDoesntPay.zip
+    files:
+      - Plugin_Crimedoesntpay_modd.dat
+      - Readme.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0016/8fbdad1ffaca73ab6dfbfdae3c995940-default.jpg
     lastModified: 2003-11-04T00:00:00Z
     name: Crime Doesn't Pay
+    sha256: dd7bc13c0c4d5386d82efb409b7c11f20063b0d13699ff008598785cc96daffa
+    size: 1571
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2003/thumb-8fbdad1ffaca73ab6dfbfdae3c995940-default.jpg
+    timestamp: 2024-10-17T08:57:16.473Z
+    uncompressed: 2379
     url: https://community.simtropolis.com/files/file/21339-crime-doesnt-pay/
+    version: "1.0"
   simtropolis/21352-utilityradius-trafpollution-modd:
     authors:
       - RalphaelNinja
@@ -913,10 +1091,61 @@ assets:
     authors:
       - toroca
     category: cheats
+    dependencies:
+      - simtropolis/21293-industry-quadrupler
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	Many users of my <a href="https://community.simtropolis.com/files/file/21293-industry-quadrupler/" rel="">Industry Quadrupler</a> have requested a similar mod for Commercial Services. I originally created this mod almost seven years ago , but apparently never uploaded it here at Simtropolis, so I'm correcting that oversight now.
+      </p>
+
+
+      <p>
+      	This mod allows you to double the number of jobs in all commercial service buildings, and I've provided alternates that allow you to triple the jobs from the largest ones and quadruple the jobs in the malls. The service buildings in the game are a little closer to reality in jobs provided than the industrial buildings were, so I didn't see a need to quadruple them all. As always with my mods, see the included readme file for full details.
+      </p>
+
+
+      <p>
+      	I have no plans to do a similar mod for commercial office; there is no need since the capacities of the office buildings are much more in line with reality.
+      </p>
+
+
+      <p>
+      	This mod requires Rush Hour/Deluxe.
+      </p>
+
+      						</body>
+    filename: ServicesDoubler.zip
+    files:
+      - LargeServicesDoubler.dat
+      - LargeServicesTripler.dat
+      - MallsDoubler.dat
+      - MallsQuadrupler.dat
+      - readme.html
+      - ServicesDoubler.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0017/9b9dbdb73f0a70e23fa9688ae7f7e8d6-screenshot.jpg
     lastModified: 2011-01-07T19:58:30Z
     name: Commercial Services Doubler
+    sha256: d24d7721327b403dde563f96d4be9e3442df2268917b2cf85e06e991f3abb557
+    size: 10147
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2011/thumb-9b9dbdb73f0a70e23fa9688ae7f7e8d6-screenshot.jpg
+    timestamp: 2024-10-16T13:57:49.796Z
+    uncompressed: 38788
     url: https://community.simtropolis.com/files/file/25651-commercial-services-doubler/
+    version: "2.0"
   simtropolis/2576-ninja-tax-collectors:
     authors:
       - Daeley
@@ -1257,10 +1486,91 @@ assets:
     authors:
       - simmaster07
     category: cheats
+    dependencies:
+      - simtropolis/21118-simcity-4-extra-cheats-plugin
+      - simtropolis/32047-broken-sc4macinjector
+    description: >-
+      <body>
+      							
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	<span style="font-size:36px;"><strong>Due to Apple's app requirements for Catalina, this mod is irreparably broken. See <a href="https://community.simtropolis.com/forums/topic/74573-abandoned-sc4macinjector-support-thread/?do=findComment&amp;comment=1731867" rel="">this post</a> for more info.</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:26px;"><strong>The files for this mod have been removed to avoid breaking SC4 installations.</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:26px;"><strong>----------------------------------------------------------------------</strong></span>
+      </p>
+
+
+      <p>
+      	<strong>What does this do</strong><br>
+      	Enables <a href="https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/" rel="">Buggi's extra cheats</a> for SimCity 4 on Mac copies of the game.
+      </p>
+
+
+      <p>
+      	<strong>Dependencies</strong><br>
+      	You <strong>MUST</strong> have <a href="https://community.simtropolis.com/files/file/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac/" rel="">SC4MacInjector</a> installed or else nothing will happen. You must also have a Mac - if you're on Windows, use <a href="https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/" rel="">Buggi's extra cheats DLL</a>.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong><br>
+      	Copy ExtraCheatsMac.so to your plugins folder.
+      </p>
+
+
+      <ul>
+      	<li>
+      		On Steam and disc copies this is in ~/Documents/SimCity 4/Plugins
+      	</li>
+      	<li>
+      		On Mac App Store copies this is in ~/Library/Containers/com.aspyr.simcity4.appstore/Data/Documents/SimCity 4/Plugins
+      	</li>
+      </ul>
+
+
+      <p>
+      	Create these directories if they do not exist yet.
+      </p>
+
+
+      <p>
+      	<strong>Relevant resources</strong><br>
+      	<a href="https://community.simtropolis.com/forums/topic/70495-game-framework-compatible-dll-loading-and-other-modding-discoveries/" rel="">Development Thread</a><br>
+      	<a href="https://github.com/nsgomez/gzcom-dll" rel="external nofollow">Source Code</a>
+      </p>
+
+      						</body>
+    filename: removed.txt
+    files:
+      - removed.txt
+    images:
+      - https://i.imgur.com/spxQOI3.png
     lastModified: 2020-06-05T05:35:19Z
     name: "[BROKEN] Buggi's Extra Cheats for Mac"
+    repository: https://github.com/nsgomez/gzcom-dll
+    sha256: 18c1167eeb907865700b4dea1d857dd48e9977650578c4b6af8d358d19290357
+    size: 281
     thumbnail: https://i.imgur.com/spxQOI3.png
+    timestamp: 2024-10-15T15:37:00.411Z
     url: https://community.simtropolis.com/files/file/32048-broken-buggis-extra-cheats-for-mac/
+    version: "0.0"
   simtropolis/32565-sm2-easy-money:
     authors:
       - Simmer2
@@ -1305,10 +1615,103 @@ assets:
     authors:
       - Null 45
     category: cheats
+    dependencies: []
+    description: |-
+      <body>
+      							
+      							
+      <p>
+      	A DLL plugin that allows the player to choose which cheats are enabled in-game.
+      </p>
+
+      <p>
+      	<strong>System Requirements:</strong>
+      </p>
+
+      <p>
+      	Windows 10 or later.
+      </p>
+
+      <p>
+      	<strong>Installation:</strong>
+      </p>
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4DisableCheats.dll</em> and <em>DisabledCheats.txt </em>into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Configure the cheats you want to disable, see the <strong>Configuring the plugin</strong> section.
+      	</li>
+      </ol>
+
+      <p>
+      	<strong>Configuring the plugin:</strong>
+      </p>
+
+      <ol>
+      	<li>
+      		<p>
+      			Open <em>DisabledCheats.txt</em> in a text editor (e.g. Notepad).<br>
+      			Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with administrator permissions to be able to save the file.
+      		</p>
+      	</li>
+      	<li>
+      		<p>
+      			Add the cheat codes you wish to disable on individual lines.
+      		</p>
+      	</li>
+      	<li>
+      		<p>
+      			Save the file and start the game.
+      		</p>
+      	</li>
+      </ol>
+
+      <p>
+      	<strong>Troubleshooting</strong>:
+      </p>
+
+      <p>
+      	The plugin should write a <em>SC4DisableCheats.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+      <p>
+      	<strong>Support and Source Code</strong>
+      </p>
+
+      <p>
+      	The plugin thread is: <a href="https://community.simtropolis.com/forums/topic/762689-sc4disablecheats" rel="">https://community.simtropolis.com/forums/topic/762689-sc4disablecheats</a>
+      </p>
+
+      <p>
+      	The source code and bug tracker is located on <a href="https://github.com/0xC0000054/sc4-disable-cheats" rel="external nofollow">GitHub</a>.
+      </p>
+
+      						</body>
+    filename: SC4DisableCheats.zip
+    files:
+      - DisabledCheats.txt
+      - LICENSE.txt
+      - README.txt
+      - SC4DisableCheats.dll
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_11/SC4DisableCheatsSTEXIcon.png.d11fd73a43fe32db4415725633980f7d.png
     lastModified: 2023-11-12T02:45:14Z
     name: SC4 Disable Cheats
+    repository: https://github.com/0xC0000054/sc4-disable-cheats
+    sha256: 454b2f2c63b0857d11f2a87766b72fdb0423b80242648d0f10218d22f0d6f008
+    size: 36171
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_11/SC4DisableCheatsSTEXIcon.thumb.png.fc57d008dc7e97605c2b5632322dc3b1.png
+    timestamp: 2024-10-16T08:13:53.846Z
+    uncompressed: 78559
     url: https://community.simtropolis.com/files/file/35759-sc4-disable-cheats/
+    version: 1.0.0
   simtropolis/36180-growify-plopped-buildings-cheat-dll-plugin:
     authors:
       - Null 45
@@ -1525,7 +1928,27 @@ assets:
 
 
 
+
+
+
+
+
+
+
+
+
+
       							
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1812,4 +2235,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-62fc352a7264906d58dc8698b752fbf6-Banking%20City-Mar.jpg
     url: https://community.simtropolis.com/files/file/925-first-national-bank-of-simnation/
 
-timestamp: 2024-09-13T12:10:28.279Z
+timestamp: 2024-10-17T08:57:16.473Z

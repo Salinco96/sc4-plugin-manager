@@ -144,12 +144,15 @@
   },
   "Issue": {
     "conflicting-feature": "Conflicting with {{packages, join(max: 2)}}",
+    "conflicting-feature_one": "Conflicting with <a>{{packages, join(max: 1}}</a>",
     "conflicting-feature_zero": "Conflicting with $t(Features:{{feature}}.long)",
-    "incompatible-dependencies_one": "Dependency {{packages, join(max: 1)}} is not compatible",
+    "incompatible-dependencies_one": "Dependency <a>{{packages, join(max: 1)}}</a> is not compatible",
     "incompatible-dependencies_other": "Dependencies {{packages, join(max: 2)}} are not compatible",
     "incompatible-feature": "Incompatible with {{packages, join(max: 2)}}",
+    "incompatible-feature_one": "Incompatible with <a>{{packages, join(max: 1}}</a>",
     "incompatible-feature_zero": "Incompatible with $t(Features:{{feature}}.long)",
-    "incompatible-option": "Requires option {{option}} to be {{value}}",
+    "incompatible-option": "Requires option <b>{option}}</b> to be {{value}}",
+    "incompatible-version": "Requires version <b>{{minVersion}}</b> or greater",
     "missing-feature": "Requires $t(Features:{{feature}}.long)"
   },
   "PackageActions": {
@@ -227,6 +230,24 @@
       },
       "title": "Conflict"
     },
+    "deprecated": {
+      "actions": {
+        "openPackage": {
+          "description": "View package"
+        },
+        "replacePackage": {
+          "description": "Replace this package with {{packageName}}",
+          "label": "Replace"
+        }
+      },
+      "message": "This package is no longer maintained or recommended.",
+      "messageSuperseded": "This package has been superseded by <a>{{packageName}}</a>.",
+      "title": "Legacy"
+    },
+    "experimental": {
+      "message": "This package should be used for testing purposes only.",
+      "title": "Experimental"
+    },
     "incompatible": {
       "actions": {
         "replaceExternal": {
@@ -234,11 +255,32 @@
           "label": "Replace"
         },
         "replacePackages": {
-          "description": "Replace {{packageName}}",
+          "description": "Replace {{packageName}} with this package",
           "label": "Replace"
         }
       },
       "title": "Incompatible"
+    },
+    "missing": {
+      "actions": {
+        "install": {
+          "description": "Install selected variant",
+          "label": "Install"
+        }
+      },
+      "messagePackage": "This package is not installed.",
+      "messageVariant": "The selected variant is not installed.",
+      "title": "Missing"
+    },
+    "outdated": {
+      "actions": {
+        "update": {
+          "description": "Update to version {{version}}",
+          "label": "Update"
+        }
+      },
+      "message": "A new version of this package is available.",
+      "title": "Outdated"
     }
   },
   "PackageCategory": {

@@ -113,8 +113,8 @@ export function getOptionValue<$Type extends OptionType, $Multi extends boolean>
  */
 export function getOptionInfo(
   optionID: OptionID,
-  packageOptions: OptionInfo[] | undefined,
-  globalOptions: OptionInfo[] | undefined,
+  packageOptions: ReadonlyArray<OptionInfo> | undefined,
+  globalOptions: ReadonlyArray<OptionInfo> | undefined,
 ): OptionInfo | undefined {
   const packageOption = packageOptions?.find(option => option.id === optionID)
   if (packageOption && !packageOption.global) {

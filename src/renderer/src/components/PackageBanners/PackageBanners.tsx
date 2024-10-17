@@ -7,6 +7,7 @@ import {
   isMissing,
   isOutdated,
 } from "@common/packages"
+import { isString } from "@common/utils/types"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 
 import { PackageBannerConflict } from "./PackageBannerConflict"
@@ -31,7 +32,12 @@ export function PackageBanners({ packageId }: { packageId: PackageID }): JSX.Ele
       {isOutdated(variantInfo) && (
         <PackageBannerOutdated packageId={packageId} variantId={variantId} />
       )}
-      {isDeprecated(variantInfo) && <PackageBannerDeprecated />}
+      {isDeprecated(variantInfo) && (
+        <PackageBannerDeprecated
+          packageId={packageId}
+          superseded={isString(variantInfo.deprecated) ? variantInfo.deprecated : undefined}
+        />
+      )}
       {isExperimental(variantInfo) && <PackageBannerExperimental />}
       {issues?.map(issue =>
         isConflict(issue, packageStatus) ? (

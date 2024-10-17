@@ -4,11 +4,18 @@ import { useTranslation } from "react-i18next"
 import { PackageID, checkFile } from "@common/packages"
 import { globToRegex } from "@common/utils/glob"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
-import { useCurrentProfile, useFeatures, useGlobalOptions, useStoreActions } from "@utils/store"
+import {
+  useCurrentProfile,
+  useFeatures,
+  useGlobalOptions,
+  useSettings,
+  useStoreActions,
+} from "@utils/store"
 
 export function PackageViewFiles({ packageId }: { packageId: PackageID }): JSX.Element {
   const actions = useStoreActions()
   const features = useFeatures()
+  const settings = useSettings()
   const globalOptions = useGlobalOptions()
   const profileInfo = useCurrentProfile()
   const packageStatus = usePackageStatus(packageId)
@@ -29,6 +36,7 @@ export function PackageViewFiles({ packageId }: { packageId: PackageID }): JSX.E
             profileInfo,
             globalOptions,
             features,
+            settings,
             patterns,
           )
 

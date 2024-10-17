@@ -17,11 +17,18 @@ import { PackageTag, TagInfo } from "@components/PackageTags"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { useCurrentVariant } from "@utils/packages"
-import { useCurrentProfile, useFeatures, useGlobalOptions, useStoreActions } from "@utils/store"
+import {
+  useCurrentProfile,
+  useFeatures,
+  useGlobalOptions,
+  useSettings,
+  useStoreActions,
+} from "@utils/store"
 
 export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.Element {
   const actions = useStoreActions()
   const features = useFeatures()
+  const settings = useSettings()
   const globalOptions = useGlobalOptions()
   const profileInfo = useCurrentProfile()
   const packageConfig = profileInfo?.packages[packageId]
@@ -53,6 +60,7 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
           profileInfo,
           globalOptions,
           features,
+          settings,
         )
 
         const tags = (lot.categories ?? getCategories(variantInfo)).map(category => ({

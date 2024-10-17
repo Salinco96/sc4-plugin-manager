@@ -448,6 +448,12 @@ assets:
       <body>
                                   
 
+
+
+
+
+
+
       							
       <p>The Enterprise was perhaps the most ground-breaking ride ever for it's time, setting a standard for a whole generation of amusement rides on it's debut in 1972 - with an overall look, and
       engineering technology that was years ahead of any competition.<br>There are 23 "HUSS" Enterprise units in North America, and 4 in Australia, one of which is a travelling road model, the other
@@ -2722,10 +2728,100 @@ assets:
     authors:
       - Andreas Roth
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+
+      							
+      <p>This set of parks was made long time ago, shortly after the Lot Editor was released. They are rather simple, but have turned out quite well, and I still use them frequently. I never came
+      around to upload them to the STEX, so they are now part of the <abbr title="SimForum BAT Team">SFBT</abbr> series. The original values have been overhauled, and many improvements were made to
+      the icons, UI etc. The paths are using deadwood's alignment props that show up in the lot preview when you are plopping the lots. They will briefly appear on jan. 1st of the following year, then
+      disappear and never come back.<br><br>The current version of the download contains 20 different lots. Apart from the orthogonal paths, it also features new diagonal paths, as well as various
+      curves, a four-way intersection that was requested by a couple of users, and finally a new playground lot that fits in better than the in-game one by Maxis. All lots feature a new query window,
+      which shows the wealth of the park lots.</p>
+
+      <p><strong>Dependencies</strong></p>
+
+      <ul><li>
+
+      <u><font color="#000000"><a href="https://www.simtropolis.com/modding/index.cfm?mode=details&amp;show=81" rel="external nofollow">Plugin Landmark Props</a></font></u> by ralphaelninja
+      </li>    <li>BSC_DAE_ForestTracks_props.dat from the <u><font color="#000000"><a href="https://www.simtropolis.com/stex/details.cfm?id=11032" rel="external nofollow"><abbr title="BATT Squad
+      Certification">BSC</abbr> Forest Lot series</a></font></u>    </li>
+
+      <li>
+
+      <a href="https://www.simtropolis.com/stex/details.cfm?id=14212" rel="external nofollow"><abbr title="SimForum BAT Team">SFBT</abbr> Essentials</a> </li>
+
+      </ul><p><strong>Lot Statistics</strong></p>
+
+      <p></p>
+
+      <table cellspacing="0" cellpadding="2" border="0"><tbody><tr bgcolor="#e9ebf0"><td>Lot size:</td>            <td>1x1, 6x6, 6x8, 6x11 tiles</td>        </tr><tr><td>Menu
+      position:</td>            <td>            <p>Parks</p>            </td>        </tr><tr bgcolor="#e9ebf0"><td>Plop cost:</td>            <td>§ 20 to 26 (1x1), § 500 (6x6), § 800 (6x8), § 1500
+      (6x11)</td>        </tr><tr><td>Bulldoze cost:</td>            <td>§ 5 (1x1), § 60 (6x6), § 90 (6x8), § 150 (6x11)</td>        </tr><tr bgcolor="#e9ebf0"><td>Monthly cost:</td>            <td>§
+      1 (1x1), § 75 (6x6), § 100 (6x8), § 150 (6x11)</td>        </tr><tr><td>Flammability:</td>            <td>5</td>        </tr><tr bgcolor="#e9ebf0"><td>Park Effect:</td>            <td>30/15
+      tiles (1x1), 75/35 tiles (6x6), 85/45 tiles (6x8), 100/50 tiles (6x11)</td>        </tr><tr><td>Landmark Effect:</td>            <td>20/10 tiles (1x1), 30/15 tiles (6x6), 40/20 tiles (6x8),
+      50/25 tiles (6x11)</td>        </tr><tr bgcolor="#e9ebf0"><td>Power consumption:</td>            <td>0 MWh/month</td>        </tr><tr><td>Water consumption:</td>            <td>15 Gallons/month
+      (large parks)</td>        </tr><tr bgcolor="#e9ebf0"><td>Air pollution:</td>            <td>-2 to -5 over 2 to 4 tiles (1x1), -15 over 6 tiles (large parks)</td>        </tr><tr><td>Water
+      pollution:</td>            <td>0 over 0 tiles (1x1), 4 over 3 tiles (large parks)</td>        </tr><tr bgcolor="#e9ebf0"><td>Garbage pollution:</td>            <td>            <p>0 over 0
+      tiles</p>            </td>        </tr></tbody></table>
+      						</body>
+    filename: SFBT_park_set.zip
+    files:
+      - images/parkkit_1.jpg
+      - images/parkkit_2.jpg
+      - images/park_6x11_nacht.jpg
+      - images/park_6x11_tag.jpg
+      - images/park_6x6_tag.jpg
+      - images/park_6x8_tag.jpg
+      - images/sfbt_abhaengigkeiten.gif
+      - images/sfbt_danksagung.gif
+      - images/sfbt_deinstallation.gif
+      - images/sfbt_haftung.gif
+      - images/sfbt_installation.gif
+      - images/sfbt_installer.gif
+      - images/sfbt_kompatibilitaet.gif
+      - images/sfbt_logo_gruen.gif
+      - images/sfbt_nacht.gif
+      - images/sfbt_park.gif
+      - Park Set - curve large.SC4Lot
+      - Park Set - grass.SC4Lot
+      - Park Set - park 6x11.SC4Lot
+      - Park Set - park 6x6.SC4Lot
+      - Park Set - park 6x8.SC4Lot
+      - Park Set - path curve.SC4Lot
+      - Park Set - path end.SC4Lot
+      - Park Set - path intersection.SC4Lot
+      - Park Set - path straight.SC4Lot
+      - Park Set - path wave.SC4Lot
+      - Park Set - trees small 1.SC4Lot
+      - Park Set - trees small 2.SC4Lot
+      - Park Set - trees.SC4Lot
+      - Park-Set - path 4way intersection.SC4Lot
+      - Park-Set - path curve diagonal.SC4Lot
+      - Park-Set - path curve left.SC4Lot
+      - Park-Set - path curve right.SC4Lot
+      - Park-Set - path diagonal with intersection.SC4Lot
+      - Park-Set - path diagonal.SC4Lot
+      - Park-Set - playground.SC4Lot
+      - readme_park_set.htm
+      - SFBT_Park_Props.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0011/5dbbe6c6b48e4ee42f0aba6d0c0e82c2-SFBT_park_set1.jpg
+      - https://www.simtropolis.com/objects/screens/0011/5dbbe6c6b48e4ee42f0aba6d0c0e82c2-SFBT_parkset2.jpg
     lastModified: 2006-12-16T11:11:30Z
     name: SFBT Park Set by Andreas
+    sha256: f2600a8a223739c60968ad98167f1253fe7bffbb80e34ea8beaa7ae82e55c961
+    size: 1274109
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2006/thumb-5dbbe6c6b48e4ee42f0aba6d0c0e82c2-SFBT_park_set1.jpg
+    timestamp: 2024-10-15T15:37:00.411Z
+    uncompressed: 1280725
     url: https://community.simtropolis.com/files/file/13824-sfbt-park-set-by-andreas/
+    version: "3"
   simtropolis/1383-medieval-fort-park:
     authors:
       - M_Wells
@@ -5051,6 +5147,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
       							
       <p>This pack contains a series of sunken plaza lots. These subterranean malls  are found in many cities, often connecting subways.</p>
@@ -11675,6 +11777,12 @@ assets:
       <body>
                                   
 
+
+
+
+
+
+
       							
       <div style="text-align:center;">
       	<p>
@@ -12634,6 +12742,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
       							
       <p>(After "leeching" from Simtropolis for so long I thought it might be time to actually try and make something myself...so I thought this rather simple structure might be a good way of getting
@@ -15477,26 +15591,582 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Plaza with Hexagon Motif, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A series of 6x6 sunken plazas which are suitable for downtown environments. 
+      </p>
+
+
+      <p>
+      	I have made and modded these in such a way that the entire modelled plaza base behaves like in game ground textures, and it can receive shadows and light from other surrounding objects. 
+      </p>
+
+
+      <p>
+      	These plazas are made to emulate the typical, designed and considered space where stressed out office workers go to relax and eat lunch. 
+      </p>
+
+
+      <p>
+      	The design of each space is quite boldly geometric and draws heavily on repetition of elements as well as asymmetrically balanced visual weight to create a pleasingly simple impact.
+      </p>
+
+
+      <p>
+      	The elements of each of the plaza are simple enough - paving, a change in levels, grass/ground cover areas, sculptures, lights, benches and water - but are arranged in such a way as to draw the eye through, in and around the space.
+      </p>
+
+
+      <p>
+      	Each of the plazas comes with three lotted options which should cover the bulk of how many people play the game, while limiting the number of dependencies. 
+      </p>
+
+
+      <p>
+      	The three options are: <br>
+      	1) Temperate, with deciduous trees that change with the seasons;<br>
+      	2) Mediterranean, with drought tolerant trees and shrubs which remain evergreen; and,<br>
+      	3) Tropical, with palm trees.
+      </p>
+
+
+      <p>
+      	Each option is clearly labelled. You can keep one or all depending on your preferences, and you can use all three options at once. Each has a unique description and icon to easily identify it in the parks menu.
+      </p>
+
+
+      <p>
+      	These plazas were essentially designed as a stand-alone element, but each is readily modular, not only with itself, but also with the other plaza sets in the series as is seen by the screen shots.
+      </p>
+
+
+      <p>
+      	Placing these plazas has a strong YIMBY effect for High wealth Commercial Buildings (helping you build and maintain a skyscraper <abbr title="Central Business District">CBD</abbr>) plus they have a park effect, so Medium and High Wealth Residences will also want to grow nearby, and, they relieve Residential caps to the tune of 40,000 in each of the wealth categories to really help grow your city.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PLAZA:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 6x6  <br>
+      	Plop Cost:               § 500<br>
+      	Bulldoze Cost:        § 60<br>
+      	Demand Satisfied: R§ 40,000, R§§ 40,000, R§§§ 40,000<br>
+      	Pollution:                 0 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    0/0/0<br>
+      	Park Effect:             50 over 60 tiles<br>
+      	Landmark Effect:   180 over 20 tiles<br>
+      	Monthly cost:          § 40<br>
+      	Power Consumed:  0 Mwh<br>
+      	Water Consumed:  0 Gal/Month<br>
+      	Occupant Group:    Building: Civic; Building: Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	As these plazas are designed to emulate in game textures to receive shadows and light, the same model will work in either Maxis or Dark night situations.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following very commonly used files are in your plugins:
+      </p>
+
+
+      <p>
+      	<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol02: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383</a>)<br>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol04: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thanks.
+      </p>
+
+      						</body>
+    filename: Mattb325_HexagonPlaza.zip
+    files:
+      - Mattb325_HexagonPlaza/Mattb325 Hexagon Plaza-0x6534284a-0x3ec1db6a-0x5b092ee2.SC4Desc
+      - Mattb325_HexagonPlaza/Mattb325_HexagonPlaza-0x5ad0e817_0xca894435_0x30000.SC4Model
+      - Mattb325_HexagonPlaza/Mattb325_Hexagon_Plaza_README.txt
+      - Mattb325_HexagonPlaza/PLOP_6x6_Mattb325 Hexagon Plaza Evergreen_aa8ffb64.SC4Lot
+      - Mattb325_HexagonPlaza/PLOP_6x6_Mattb325 Hexagon Plaza Temperate_3b092f2c.SC4Lot
+      - Mattb325_HexagonPlaza/PLOP_6x6_Mattb325 Hexagon Plaza Tropical_ca8ff3cc.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_day.jpg.03dc078f01306ac8bc8e6dc820942474.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_day1.jpg.88a51fa6f3eb9aedb091ed93587d45a9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_day2.jpg.957d58fee55583288683ac40abaa4069.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_day3.jpg.9d0a04ca7d6121fad68804110997bb56.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_day4.jpg.47b00bab6d8a919137a98fad31d891ce.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_day5.jpg.f84bca8df88098ba92857bd3131f52b9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_nite.jpg.f988b34e020005a2a75702f2e6edf527.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_scene.jpg.2884fb15cb801ba982055f98ab65f2cc.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Z_Modular_all.jpg.a6ae1132c3ff3c67bfb0942dff0dfa69.jpg
     lastModified: 2019-09-22T02:20:27Z
     name: Hexagon Plaza
+    sha256: a9a0c893551849dd63ba8b1bea2cdedbdc7f114c230f13192b88acd1a2457039
+    size: 1317373
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_09/Hex_scene.thumb.jpg.d896bfb83679a7033b31b8b998d16949.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 1511042
     url: https://community.simtropolis.com/files/file/33189-hexagon-plaza/
+    version: 1.0.0
   simtropolis/33190-spline-plaza:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Plaza with Spline Motif, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A series of 6x6 sunken plazas which are suitable for downtown environments. 
+      </p>
+
+
+      <p>
+      	I have made and modded these in such a way that the entire modelled plaza base behaves like in game ground textures, and it can receive shadows and light from other surrounding objects. 
+      </p>
+
+
+      <p>
+      	These plazas are made to emulate the typical, designed and considered space where stressed out office workers go to relax and eat lunch. 
+      </p>
+
+
+      <p>
+      	The design of each space is quite boldly geometric and draws heavily on repetition of elements as well as asymmetrically balanced visual weight to create a pleasingly simple impact.
+      </p>
+
+
+      <p>
+      	The elements of each of the plaza are simple enough - paving, a change in levels, grass/ground cover areas, sculptures, lights, benches and water - but are arranged in such a way as to draw the eye through, in and around the space.
+      </p>
+
+
+      <p>
+      	Each of the plazas comes with three lotted options which should cover the bulk of how many people play the game, while limiting the number of dependencies. 
+      </p>
+
+
+      <p>
+      	The three options are: <br>
+      	1) Temperate, with deciduous trees that change with the seasons;<br>
+      	2) Mediterranean, with drought tolerant trees and shrubs which remain evergreen; and,<br>
+      	3) Tropical, with palm trees.
+      </p>
+
+
+      <p>
+      	Each option is clearly labelled. You can keep one or all depending on your preferences, and you can use all three options at once. Each has a unique description and icon to easily identify it in the parks menu.
+      </p>
+
+
+      <p>
+      	These plazas were essentially designed as a stand-alone element, but each is readily modular, not only with itself, but also with the other plaza sets in the series as is seen by the screen shots.
+      </p>
+
+
+      <p>
+      	Placing these plazas has a strong YIMBY effect for High wealth Commercial Buildings (helping you build and maintain a skyscraper <abbr title="Central Business District">CBD</abbr>) plus they have a park effect, so Medium and High Wealth Residences will also want to grow nearby, and, they relieve Residential caps to the tune of 40,000 in each of the wealth categories to really help grow your city.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PLAZA:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 6x6  <br>
+      	Plop Cost:               § 500<br>
+      	Bulldoze Cost:        § 60<br>
+      	Demand Satisfied: R§ 40,000, R§§ 40,000, R§§§ 40,000<br>
+      	Pollution:                 0 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    0/0/0<br>
+      	Park Effect:             50 over 60 tiles<br>
+      	Landmark Effect:   180 over 20 tiles<br>
+      	Monthly cost:          § 40<br>
+      	Power Consumed:  0 Mwh<br>
+      	Water Consumed:   0 Gal/Month<br>
+      	Occupant Group:     Building: Civic; Building: Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	As these plazas are designed to emulate in game textures to receive shadows and light, the same model will work in either Maxis or Dark night situations.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following very commonly used files are in your plugins:
+      </p>
+
+
+      <p>
+      	<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol02: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383</a>)<br>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol04: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thanks.
+      </p>
+
+      						</body>
+    filename: Mattb325 SplinePlaza.zip
+    files:
+      - Mattb325 SplinePlaza/Mattb325 Spline Plaza-0x6534284a-0x3ec1db6a-0x7b0a44f6.SC4Desc
+      - Mattb325 SplinePlaza/Mattb325_SplinePlaza-0x5ad0e817_0x4a8a5968_0x30000.SC4Model
+      - Mattb325 SplinePlaza/Mattb325_Spline_Plaza_README.txt
+      - Mattb325 SplinePlaza/PLOP_6x6_Mattb325 Spline Plaza Evergreen_0a91007c.SC4Lot
+      - Mattb325 SplinePlaza/PLOP_6x6_Mattb325 Spline Plaza Temperate_0a910448.SC4Lot
+      - Mattb325 SplinePlaza/PLOP_6x6_Mattb325 Spline Plaza Tropical_0a910a77.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline.jpg.0066a4b2026da7130c318f2d6a57b721.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline_Modular.jpg.a4a41342f930506b42e82412969c7301.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline_nite.jpg.31e0d10ae47aa9bb21861827bfce69ec.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline_Scene.jpg.87231700f60656e793d65dc129f9eada.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline_Scene1.jpg.8fbc6a6cea02b47f9837abe507ece06a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline1.jpg.f7cf3f5cce5a4e6054ab7c5fd910134c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline2.jpg.ad7ff5ff05bd41bb815ef5df0df53bb6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline3.jpg.cd66d3455914b4676acf1d60a6b10ddf.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline4.jpg.4fa3fa064ccbea13b07f150c0c328135.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline5.jpg.4da2715388882366d201bade9beae900.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline6.jpg.21373828cd52bee7d7b47804290c45dd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Z_Modular_all.jpg.d92594b79afd88cd2b0abaa7fdd4e6d4.jpg
     lastModified: 2019-09-22T02:25:43Z
     name: Spline Plaza
+    sha256: 25e926f8a2f80f6d2c90b93e4ea02237bb251c39e0e1ecff41e59e4e922d6059
+    size: 1294658
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_09/Spline_Scene1.thumb.jpg.1eebf88d796a1577e146e3ad79ef18dc.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 1486069
     url: https://community.simtropolis.com/files/file/33190-spline-plaza/
+    version: 1.0.0
   simtropolis/33191-circle-plaza:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Plaza with Circular Motif, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A series of 6x6 sunken plazas which are suitable for downtown environments. 
+      </p>
+
+
+      <p>
+      	I have made and modded these in such a way that the entire modelled plaza base behaves like in game ground textures, and it can receive shadows and light from other surrounding objects. 
+      </p>
+
+
+      <p>
+      	These plazas are made to emulate the typical, designed and considered space where stressed out office workers go to relax and eat lunch. 
+      </p>
+
+
+      <p>
+      	The design of each space is quite boldly geometric and draws heavily on repetition of elements as well as asymmetrically balanced visual weight to create a pleasingly simple impact.
+      </p>
+
+
+      <p>
+      	The elements of each of the plaza are simple enough - paving, a change in levels, grass/ground cover areas, sculptures, lights, benches and water - but are arranged in such a way as to draw the eye through, in and around the space.
+      </p>
+
+
+      <p>
+      	Each of the plazas comes with three lotted options which should cover the bulk of how many people play the game, while limiting the number of dependencies. 
+      </p>
+
+
+      <p>
+      	The three options are: <br>
+      	1) Temperate, with deciduous trees that change with the seasons;<br>
+      	2) Mediterranean, with drought tolerant trees and shrubs which remain evergreen; and,<br>
+      	3) Tropical, with palm trees.
+      </p>
+
+
+      <p>
+      	Each option is clearly labelled. You can keep one or all depending on your preferences, and you can use all three options at once. Each has a unique description and icon to easily identify it in the parks menu.
+      </p>
+
+
+      <p>
+      	These plazas were essentially designed as a stand-alone element, but each is readily modular, not only with itself, but also with the other plaza sets in the series as is seen by the screen shots.
+      </p>
+
+
+      <p>
+      	Placing these plazas has a strong YIMBY effect for High wealth Commercial Buildings (helping you build and maintain a skyscraper <abbr title="Central Business District">CBD</abbr>) plus they have a park effect, so Medium and High Wealth Residences will also want to grow nearby, and, they relieve Residential caps to the tune of 40,000 in each of the wealth categories to really help grow your city.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PLAZA:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                 6x6  <br>
+      	Plop Cost:               § 500<br>
+      	Bulldoze Cost:        § 60<br>
+      	Demand Satisfied: R§ 40,000, R§§ 40,000, R§§§ 40,000<br>
+      	Pollution:                 0 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    0/0/0<br>
+      	Park Effect:             50 over 60 tiles<br>
+      	Landmark Effect:   180 over 20 tiles<br>
+      	Monthly cost:          § 40<br>
+      	Power Consumed:  0 Mwh<br>
+      	Water Consumed:  0 Gal/Month<br>
+      	Occupant Group:    Building: Civic; Building: Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	As these plazas are designed to emulate in game textures to receive shadows and light, the same model will work in either Maxis or Dark night situations.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following very commonly used files are in your plugins:
+      </p>
+
+
+      <p>
+      	<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol02: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383</a>)<br>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol04: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3672</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thanks.
+      </p>
+
+      						</body>
+    filename: Mattb325 CirclePlaza.zip
+    files:
+      - Mattb325 CirclePlaza/Mattb325 Circle Plaza-0x6534284a-0x3ec1db6a-0x5b0beba4.SC4Desc
+      - Mattb325 CirclePlaza/Mattb325_CirclePlaza-0x5ad0e817_0x4a8bff9c_0x30000.SC4Model
+      - Mattb325 CirclePlaza/Mattb325_Circular_Plaza_README.txt
+      - Mattb325 CirclePlaza/PLOP_6x6_Mattb325 Circle Plaza Evergreen_2b0becc7.SC4Lot
+      - Mattb325 CirclePlaza/PLOP_6x6_Mattb325 Circle Plaza Temperate_6a92a6d6.SC4Lot
+      - Mattb325 CirclePlaza/PLOP_6x6_Mattb325 Circle Plaza Tropical_ca92a96d.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle.jpg.b66320f0735015b50cd18b6e5411094f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle_nite.jpg.0667f709a6a0f9b28050429399a17bce.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle_scene.jpg.f20c96342ac24050808c32faf5357505.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle1.jpg.2c22e5171c9e5e89a59d2f703bbe2e8b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle2.jpg.5fcd81a3d78fff90d739c8b6a4125b46.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle3.jpg.036caaa2aadaca216cf4deb64074b7a7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle4.jpg.784db9f47f679d928dbd94cec7f39927.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle5.jpg.155f14d3312c8aa88c13ac3514a9efee.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle6.jpg.e324b310e81b3182ccdd089179295eff.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle7.jpg.0d993c6d8f6562f820ad3a0f2a0ba832.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle8.jpg.8cf262565b678595d61bbcc2a239b49c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Z_Modular.jpg.dbe1f6508a9051997a994632082ce523.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/Z_Modular_all.jpg.3e935b3baf7ba8555c0451043c49e39d.jpg
     lastModified: 2019-09-22T02:30:24Z
     name: Circle Plaza
+    sha256: 862fffb5121944267de5fdfbf7e38fdf1bf896d166049a8372dd966d7c07a94e
+    size: 1269764
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_09/Circle_scene.thumb.jpg.035417a89fbba4f6c36b10e8caf65f5d.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 1460357
     url: https://community.simtropolis.com/files/file/33191-circle-plaza/
+    version: 1.0.0
   simtropolis/33210-tl-nts-park-pathsv2-addons:
     authors:
       - tariely
@@ -15525,10 +16195,169 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Street Planters, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A series of differently rotated street planters and benches which will be a dependency for future lots. 
+      </p>
+
+
+      <p>
+      	There isn't a huge number of larger urban street accessory pieces available, so I made this for my own use and it has actually turned out to be a very nifty filler set to decorate around the many diagonal and <abbr title="Fractional Angle Road">FAR</abbr>-3 overhanging buildings that I (and others) have made. To that end I have also made four very simple lots  - found in the park menu - for everyone to use. 
+      </p>
+
+
+      <p>
+      	The base texture of the lots will automatically conform to any texture over-ride you may have.
+      </p>
+
+
+      <p>
+      	Each of the lots is 1x1. If you enjoy using the lot editor, these can all be added together in many different shapes to create quite complex planter and bench sets similar to the real life versions that see you see in most cities.
+      </p>
+
+
+      <p>
+      	All of the lots have unique in-game descriptions and icons to enable you to easily select them from the Park menu.
+      </p>
+
+
+      <p>
+      	Placing these plazas provides residential cap relief to the value of 1,000 per lot per R-wealth category and raises commercial and residential desirability in the immediate vicinity.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PLAZA:</strong>
+      </p>
+
+
+      <p>
+      	One lot each for Ortho, Diagonal and twp <abbr title="Fractional Angle Road">FAR</abbr>-3 rotations.
+      </p>
+
+
+      <p>
+      	Lot size :                1x1  <br>
+      	Plop Cost:              § 90<br>
+      	Bulldoze Cost:       § 10<br>
+      	Demand Satisfied:R§ 1,000, R§§ 1,000, R§§§ 1,000<br>
+      	Pollution:                0 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:   0/0/0<br>
+      	Park Effect:            5 over 10 tiles<br>
+      	Landmark Effect:  40 over 10 tiles<br>
+      	Monthly cost:         § 5<br>
+      	Power Consumed: 0 Mwh<br>
+      	Water Consumed:  0 Gal/Month<br>
+      	Occupant Group:    Building: Civic; Building: Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This download is compatible with both Maxis and Dark nite.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	This file will form a future dependency. As such it requires no dependencies.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+
+      <p>
+      	Thanks.
+      </p>
+
+      						</body>
+    filename: Mattb325_StreetPlanters.zip
+    files:
+      - Mattb325_StreetPlanters/Lots/PLOP_1x1_Mattb325 Planter (-18.4)_7b559745.SC4Lot
+      - Mattb325_StreetPlanters/Lots/PLOP_1x1_Mattb325 Planter (18.4)_cb559705.SC4Lot
+      - Mattb325_StreetPlanters/Lots/PLOP_1x1_Mattb325 Planter (Diagonal)_4b5596a1.SC4Lot
+      - Mattb325_StreetPlanters/Lots/PLOP_1x1_Mattb325 Planter (Ortho)_eb559672.SC4Lot
+      - Mattb325_StreetPlanters/Models/Mattb325 Planter Diagonal-0x6534284a-0x3ec1db6a-0xdb43f980.SC4Desc
+      - Mattb325_StreetPlanters/Models/Mattb325 Planter FAR3 (REV)-0x6534284a-0x3ec1db6a-0x3b558dff.SC4Desc
+      - Mattb325_StreetPlanters/Models/Mattb325 Planter FAR3-0x6534284a-0x3ec1db6a-0x3b558c7a.SC4Desc
+      - Mattb325_StreetPlanters/Models/Mattb325 Planter Otho-0x6534284a-0x3ec1db6a-0x7b43f7d8.SC4Desc
+      - Mattb325_StreetPlanters/Models/Mattb325_PlanterDiagonal-0x5ad0e817_0xe98ba41a_0x30000.SC4Model
+      - Mattb325_StreetPlanters/Models/Mattb325_PlanterFAR3-0x5ad0e817_0xead5aa2b_0x30000.SC4Model
+      - Mattb325_StreetPlanters/Models/Mattb325_PlanterFAR3_REV-0x5ad0e817_0x2ad5ab9a_0x30000.SC4Model
+      - Mattb325_StreetPlanters/Models/Mattb325_PlanterOtho-0x5ad0e817_0x898ba23c_0x30000.SC4Model
+      - Mattb325_StreetPlanters/Mattb325_Street_Planters_README.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/StreetPlanters.jpg.5f6dbeffa315f33385d0a6716d178c15.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/StreetPlanters0.jpg.dee6b5b01fad456293ac6c777b8e91b3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/StreetPlanters1.jpg.7afa92e5ca16f35aa2b72a125d143e70.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/StreetPlanters2.jpg.99b9df8f8dc377142bf35f09c1697294.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_11/StreetPlanters3.jpg.71d4adb9b1d1bbc83adf62a41803ca1f.jpg
     lastModified: 2019-11-16T07:23:08Z
     name: Street Planters and Benches
+    sha256: 631039492353ece67778fdae67e0e65375345d0645159f42a604d39da71c5f50
+    size: 277857
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_11/StreetPlanters3.thumb.jpg.e862a386bf446e9a4541faee02127e32.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 318372
     url: https://community.simtropolis.com/files/file/33284-street-planters-and-benches/
+    version: 1.0.0
   simtropolis/3334-lafayette-square-fountain:
     authors:
       - Artaxis
@@ -15541,10 +16370,269 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies:
+      - simtropolis/33284-street-planters-and-benches
+      - simtropolis/33020-london-w2w-pack-vol02
+      - simtropolis/33020-london-w2w-pack-vol02
+      - simtropolis/33078-new-york-w2w-pack-vol01-darknite-version
+      - simtropolis/33078-new-york-w2w-pack-vol01-darknite-version
+      - simtropolis/33079-new-york-w2w-pack-vol01-maxis-nite-version
+      - simtropolis/33079-new-york-w2w-pack-vol01-maxis-nite-version
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Narrow Functional Pedestrian Laneways and Plaza pack, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	Firstly, although pedestrian enabled lots are uncommon in SC4, the idea for such lots is not new. <br>
+      	However, most pedestrian enabled lots are simply park pieces and often don't function as well as they could.
+      </p>
+
+
+      <p>
+      	With some additional modding, this set ensures much greater use and preference by SIMs to walk through the lots from their homes to work or other mass transit options.
+      </p>
+
+
+      <p>
+      	Secondly, narrow, bustling laneways are an absolute mainstay of most large cities. Before the automobile, many cities had narrow thoroughfares that could only be traversed on foot or by horse. Such areas, packed densely with buildings cheek-by-jowl are rich in character, history, charm and liveability, are often the most beloved and treasured spots of any city.
+      </p>
+
+
+      <p>
+      	While I have made a couple of other such buildings with narrow laneways at their core (the Ivy Nightclub and the Sun Moon Mall), there is almost nothing available for pedestrians that functions and offers thoroughfares of less than 16m wide. That is why I made this set.
+      </p>
+
+
+      <p>
+      	The set consists of a number of pieces, which, if you connect them using the ped-mall piece from the <abbr title="Network Addon Mod">NAM</abbr> can give you a lot of functional modularity that enables pedestrians to turn corners as well as cutting across lots in the search for work. The set also functions without the <abbr title="Network Addon Mod">NAM</abbr> installed, but means that pieces have to be connected with a street or road.
+      </p>
+
+
+      <p>
+      	The eight pieces (especially when combined with the <abbr title="Network Addon Mod">NAM</abbr> ped malls) should cover a huge range of playability options.
+      </p>
+
+
+      <p>
+      	I have created two broad sets. <br>
+      	* The first is the set with buildings and narrow laneways with seasonal trees: these lots are 2x4, 4x4, 4x6 and 4x8. The larger of these lots contain different pathways that the sims can take, so for instance, on the 4x8 there are four entry and exit points which give you a number of possibilities for modularity.<br>
+      	* The second set contains  standard 16m wide laneways in 1x2, 1x3, 1x4 and 1x6, but have a very pared-back architectural style of planters, seasonal trees and sculptures that would work quite nicely to connect large commercial buildings or residential areas with commercial buildings.
+      </p>
+
+
+      <p>
+      	All of these pieces provide jobs, and MUST be connected to a road/street/ped-mall/other network or they will abandon. All of the lots need power and water.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<span style="color:#e74c3c;"><u><strong>IT IS IMPORTANT TO TAKE NOTE OF THE FOLLOWING POINTS:</strong></u></span>
+      </p>
+
+
+      <p>
+      	* These pieces are NOT ped-malls; they are pedestrian enabled lots. If you connect two of these lots directly together, SIMs will be unlikely to cross them (that is why a ped-mall piece is used to connect lots).<br>
+      	* These are not a substitute for the ingame street or road network. While commercial and industrial buildings will actually grow alongside these lots and not abandon, they will not function correctly (eg no freight will leave). Additionally, any residential that is zoned facing only these lots (rather than facing/touching a street like in my images) will not function.<br>
+      	* If you force sims to use these lots as the only means to find work, you will find that your residential zones will suffer from periods of no jobs or 'long' commute times. Your cities will still function, but less efficiently, so it is best to use these lots as a supplement to the road network rather than a replacement.<br>
+      	* As the models re-purposed here were all initially designed for the 16m2 grid of SC4, many have had to be pushed together to enable narrow laneways. You will see some clipping in some of the models. The clipping is fairly minimal, but if the idea of a happy jumble of buildings put together in the lot editor offends you, then don't download this.<br>
+      	* Some buildings at the very edge of the lot will take longer to light up at night, or may not light up until zoning, or something else is plopped next it. This is because the buildings were converted to props and this is a known game bug. 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	These lots are all found in the Landmark menu. Each has its own unique hover description to enable easy selection from the menu. Depending on what else is in your plugins, the lots will be close together in the menu, but may not be sequentially listed. <br>
+      	<span style="color:#3498db;">Please note that the buildings used in this upload are from Mattb325 Prop Pack Vol02, New York <abbr title="Wall-to-Wall">W2W</abbr> Pack Vol01 (either Maxis Nite or Dark Nite) and London Prop Pack Vol02. You must therefore, have all three of these packs to avoid boxes.</span>
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS CS§§:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                   1x2, 1x3, 1x4 and 1x6<br>
+      	Bulldoze Cost:          § 40<br>
+      	Plop Cost:                 § 100<br>
+      	Capacity Satisfied:  CS§ 4, CS§§ 3<br>
+      	Pollution:                  1 (Air)/ 1 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:     5/6/0<br>
+      	Power Consumed:  1 Mwh<br>
+      	Water Consumed:   4 Gal/Month<br>
+      	Occupant Group:     Medium Wealth CS; Landmark
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------<br>
+      	STATS CS§§:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                   2x4, 4x4, 4x6 and 4x8<br>
+      	Bulldoze Cost:          § 40<br>
+      	Plop Cost:                 § 250 - § 680<br>
+      	Capacity Satisfied:  CS§ 100-400, CS§§ 90-300<br>
+      	Pollution:                  1 (Air)/ 1 (Water)/ 4 (Garbage )<br>
+      	Pollution Radius:     5/6/0<br>
+      	Power Consumed:   1 Mwh<br>
+      	Water Consumed:    4 Gal/Month   <br>
+      	Occupant Group:     Medium Wealth CS; Landmark
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	To ensure proper functionality, make sure the following files are in your plugins:
+      </p>
+
+
+      <p>
+      	*Street Planters and Benches (<a href="https://community.simtropolis.com/files/file/33284-street-planters-and-benches/" rel="">https://community.simtropolis.com/files/file/33284-street-planters-and-benches/</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*Mattb325 <abbr title="Building Architect Tool">BAT</abbr> Props Vol02: (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2383</a>)
+      </p>
+
+
+      <p>
+      	*London <abbr title="Wall-to-Wall">W2W</abbr> Pack Vol02: (<a href="https://community.simtropolis.com/files/file/33020-london-w2w-pack-vol02/)" rel="">https://community.simtropolis.com/files/file/33020-london-<abbr title="Wall-to-Wall">w2w</abbr>-pack-vol02/)</a><br>
+      	*New York <abbr title="Wall-to-Wall">W2W</abbr> Pack Vol01 DARKNITE: (<a href="https://community.simtropolis.com/files/file/33078-new-york-w2w-pack-vol01-darknite-version/" rel="">https://community.simtropolis.com/files/file/33078-new-york-<abbr title="Wall-to-Wall">w2w</abbr>-pack-vol01-darknite-version/</a>) <br>
+      	<span style="color:#c0392b;"><strong>OR</strong></span><br>
+      	*New York <abbr title="Wall-to-Wall">W2W</abbr> Pack Vol02 MAXISNITE: (<a href="https://community.simtropolis.com/files/file/33079-new-york-w2w-pack-vol01-maxis-nite-version/" rel="">https://community.simtropolis.com/files/file/33079-new-york-<abbr title="Wall-to-Wall">w2w</abbr>-pack-vol01-maxis-nite-version/</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    filename: Mattb325_PedestrianLanes.zip
+    files:
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 481 Washington St (prop)-0x6534284a-0x3ec1db6a-0x9b76b597.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 482 Greenwich (prop)-0x6534284a-0x3ec1db6a-0x9b76b5d7.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 482 Greenwich NY (prop)-0x6534284a-0x3ec1db6a-0x5b76b5b6.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 79 Charterhouse St (prop)-0x6534284a-0x3ec1db6a-0x7b76b438.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Barsmith (prop)-0x6534284a-0x3ec1db6a-0xdb76b44d.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Bond St NY (prop)-0x6534284a-0x3ec1db6a-0xbb76b5f8.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Broome St NY (prop)-0x6534284a-0x3ec1db6a-0x9b76b610.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 City McDonalds (prop)-0x6534284a-0x3ec1db6a-0x1b76b471.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Fabric Night Club (prop)-0x6534284a-0x3ec1db6a-0x1b76b493.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Fleming Smith Mirror (prop)-0x6534284a-0x3ec1db6a-0x7b76b64d.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Fleming Smith NY (prop)-0x6534284a-0x3ec1db6a-0x1b76b631.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Fox and Anchor (prop)-0x6534284a-0x3ec1db6a-0x7b76b4ca.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Honeybrains (prop)-0x6534284a-0x3ec1db6a-0x5b76b66f.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Hope Gin Bar-0x6534284a-0x3ec1db6a-0xdb76b4ea.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Laight St (prop)-0x6534284a-0x3ec1db6a-0x1b76b68b.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Pret A Manger (prop)-0x6534284a-0x3ec1db6a-0x1b76b505.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Smiths (prop)-0x6534284a-0x3ec1db6a-0xdb76b51f.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Spring St NY (prop)-0x6534284a-0x3ec1db6a-0x7b76b6ad.SC4Desc
+      - Mattb325_PedestrianLanes/Exemplars/Mattb325 Whitmoor Davis (prop)-0x6534284a-0x3ec1db6a-0x7b76b565.SC4Desc
+      - Mattb325_PedestrianLanes/Mattb325_NarrowPedestrianLanesPlazaPack_README.txt
+      - Mattb325_PedestrianLanes/PLOP_1x2_Mattb325 Pedestrian Lane 1x2_8b15d572.SC4Lot
+      - Mattb325_PedestrianLanes/PLOP_1x3_Mattb325 Pedestrian Lane 1x3_2b15d400.SC4Lot
+      - Mattb325_PedestrianLanes/PLOP_1x4_Mattb325 Pedestrian Lane 1x4_1b8f1243.SC4Lot
+      - Mattb325_PedestrianLanes/PLOP_1x6_Mattb325 Pedestrian Lane 1x6_2b409733.SC4Lot
+      - Mattb325_PedestrianLanes/PLOP_2x4_Mattb325 Pedestrian Lane 2x4_ab8f3301.SC4Lot
+      - Mattb325_PedestrianLanes/PLOP_4x4_Mattb325 Pedestrian Lane 4x4_6b8f3348.SC4Lot
+      - Mattb325_PedestrianLanes/PLOP_4x6_Mattb325 Pedestrian Lane 4x6_ab409d3a.SC4Lot
+      - Mattb325_PedestrianLanes/PLOP_4x8_Mattb325 Pedestrian Lane 4x8_eafd8003.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes.jpg.e62858326f55443fff15d91daac05997.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes1.jpg.eb5e16da9a60cbfd4bf40c7413695af2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes1a.jpg.93f2d29dfe7090a43d617da6f7acc618.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes2.jpg.dfe2338068c0d8ec5be08e6ce6fa37c7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes2a.jpg.7f03945c2337f8b37073660aa7227456.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes2b.jpg.06c3c7e44d9501bb62c97042e7dace90.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes2c.jpg.6fed903f42b11d57d40a7fba00ac5f4c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes2d.jpg.8d17dc861c327d4681ed13f1f0d13018.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes3.jpg.6ceefc56e40422ff1e349845c7115ea5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes3a.jpg.7e2b31009043e95946c66bc5ba2fcbb7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes3b.jpg.97e4d212a4c76c3a23c269ccd4874f22.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes3c.jpg.92a37d9ec3894fd9891ea3f369d3ae3b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes3d.jpg.6d4130345ca3aa3b7305c4ff42e5c432.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes4.jpg.2fc50dca6092a3bc433a0cfc0f68423a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes4a.jpg.70760c8db2e4a34ca6a57983c09faec2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes4b.jpg.f7250ffe83b8ec290f2feeb82fc2bc71.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes4c.jpg.d20efa63a5cc4f34d515eb4e234c2fda.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes4d.jpg.f79559c4bbe7090c84ab1583dfe06bb7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes5.jpg.bc7758bfe350eb843a7f0b56eca2022b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes5a.jpg.4adc258d645153ca4c3f6ace7aec48c0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes5b.jpg.be5f60a6b35469181504bf59c7afc7c8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes5c.jpg.7f85843ab2875e513098eefadc2c88f0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes5d.jpg.b7a2cff394b5b1227a7525284241a378.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes6.jpg.1d9127e088ff303df0b46babace9791f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes6a.jpg.58dfb966195855c3a02ff20dd5733a15.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes6b.jpg.90ac196313ff44279ec323cc76c68af6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes6c.jpg.c13ecb76bff4050d3d0afb8502776e50.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes7.jpg.7885e65d65ed6a29ed929f079792ad1f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes7a.jpg.7578b43a973333c31d4be4f27407a169.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes7b.jpg.c9ef3ad343946a8c4bfbde41d75b9d22.jpg
     lastModified: 2020-06-04T20:41:13Z
     name: Narrow Functional Pedestrian Laneways and Plazas
+    sha256: ffc951c24d50284a045c5ad90c890a5aa85fb487d6dbed2a5cb21fe95cad8120
+    size: 391397
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_02/PedestrianLanes.thumb.jpg.188dca1cec6cf61e5b332c399b918ca7.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 393891
     url: https://community.simtropolis.com/files/file/33414-narrow-functional-pedestrian-laneways-and-plazas/
+    version: 1.0.1
   simtropolis/33415-avenue-roundabout-megapack:
     authors:
       - AndisArt
@@ -15589,10 +16677,231 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: "<body>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+
+      \t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\"
+      width=\"34\" height=\"53\">
+
+      \t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t<p>\r
+
+      \t<strong>Trump Balloon, by Mattb325.<br>\r
+
+      \t---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tMade famous by a protest in 2018 during an official visit to the UK, the Trump Balloon depicts the US President as an angry orange baby holding a smartphone.<br>\r
+
+      \tThe Balloon has also been flown in France, Argentina, Ireland, Denmark and some US States.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThis was made as a request by a fellow SC4 player. \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tIt is not intended to be a serious Bat, so if it offends you, just don't download it. <br>\r
+
+      \tIt isn't something that I have use for in my cities, but it's a funny concept that made world headlines, and the whole thing literally took 10 minutes to make for the individual who requested
+      it, so why not....\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tIt is a 1x1 lot that is found in the parks menu. \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tIt is completely neutral: no monthly costs and no benefits.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>STATS PARK:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tLot size :           1x1<br>\r
+
+      \tPlop Cost:           § 0<br>\r
+
+      \tBulldoze Cost:       § 0<br>\r
+
+      \tDemand Satisfied:    R§ 0, R§§ 0, R§§§ 0<br>\r
+
+      \tPollution:           0 (Air)/ 0 (Water)/ 0 (Garbage )<br>\r
+
+      \tPollution Radius:    0/0/0<br>\r
+
+      \tPark Effect:         0 over 0 tiles<br>\r
+
+      \tLandmark Effect:     0 over 0 tiles<br>\r
+
+      \tMonthly cost:         § 0<br>\r
+
+      \tPower Consumed:         0 Mwh<br>\r
+
+      \tWater Consumed:      0 Gal/Month<br>\r
+
+      \tOccupant Group:         Building: Civic; Building: Park\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThis model has no nightlights: therefore there is no need to select the appropriate file from the download.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>DEPENDENCIES:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThere are no dependencies required for this lot.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>OPTIONAL DEPENDENCIES:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tA sense of humour is always advisable.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tTo install, simply unzip the contents of this file into your plugins folder.\r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: Mattb325_TrumpBalloon.zip
+    files:
+      - Mattb325_TrumpBalloon/Mattb325 Trump Balloon-0x6534284a-0x3ec1db6a-0x3c2d6da1.SC4Desc
+      - Mattb325_TrumpBalloon/Mattb325TrumpBalloon_README.txt
+      - Mattb325_TrumpBalloon/Mattb325_TrumpBalloon-0x5ad0e817_0xbaedd39_0x30000.SC4Model
+      - Mattb325_TrumpBalloon/PLOP_1x1_Mattb325 Trump Balloon_ec2d6e09.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_04/Trump.jpg.318e402ea0c6e8d859bcdaa24397cbae.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_04/Trump1.jpg.66da4f648a4e7ae2e15e826a5e987cd6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_04/Trump2.jpg.ea182f49ab8b313ed99443a958847ffb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_04/Trump3.jpg.0b0bdcef8faf21a010577e7d76aea795.jpg
     lastModified: 2020-04-28T01:37:21Z
     name: Trump Balloon
+    sha256: 38abfdd0198ed496dfec9520f059d958207e423244fdd078caac0c2b7f2893ed
+    size: 55779
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_04/Trump.thumb.jpg.6377592188ff95d3b34b187fe01c1300.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 66312
     url: https://community.simtropolis.com/files/file/33576-trump-balloon/
+    version: 1.0.0
   simtropolis/33577-sports-courts-pack:
     authors:
       - JP Schriefer
@@ -15677,10 +16986,254 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: "<body>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+
+      \t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\"
+      width=\"34\" height=\"53\">
+
+      \t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t<p>\r
+
+      \t<strong>Gaia Beirut Plaza, by Mattb325.<br>\r
+
+      \t---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThis <abbr title=\"Building Architect Tool\">BAT</abbr> is a replica of a simple memorial which stood in Beirut.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tIn 2018, the director of the Letitia Gallery in Beirut, Gaia Foudolian, commissioned British artist Nathaniel Rackowe to make a metal sculpture (called simply LP46) to stand in the city's
+      <em>Martyr Square</em> as part of 'The Shape of a City' project.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThe sculpture was removed a year and half later amid controversy which left both Nathaniel and Gaia dumbfounded: I will not elaborate on that controversy, but in the words of the artist, the
+      piece represented the architecture of the city: \"...the bones of new buildings...I used light to transform the hard material of steel, as a means to reveal beauty in the city.\"\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tIt is crucial to recognise the value of arts and culture to our society: art can influence by uniting, by dividing, by changing opinions, challenging values and providing a visual medium that
+      translates experiences fundamental to the sense of self and place that transcend space and time.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThe blast which shattered Beirut shortly after 6pm on August 4, 2020, destroyed the Letitia Gallery (which, like most of Beirut's galleries and museums, is close to the port district) and
+      killed its director Gaia Foudolian.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tMost of us will live our lives with little fanfare and influence only those in our immediate sphere: our stories will not be recorded in verse, nor will our likeness be portrayed by great
+      artists to adorn the walls of galleries. Cities will not rise or fall before us, and in our passing, with time, we too will be forgotten just as all of those since the beginning of time who have
+      gone before us are forgotten.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThis piece of art originally commissioned by Gaia, is returned for her memory, and for all of those ordinary citizens of Beirut whose lives have been taken and altered by this inconceivable
+      tragedy. \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tIt is offered as a 2x2 plaza lot (found in the parks menu). Placing it will boost the desirability of nearby residential and commercial areas, as well as alleviating residential demand CAPs
+      which can inhibit city growth.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>STATS PLAZA:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tLot size :                2x2  <br>\r
+
+      \tPlop Cost:              $ 90<br>\r
+
+      \tBulldoze Cost:       $ 141<br>\r
+
+      \tDemand Satisfied:R$ 16,000, R$$ 16,000, R$$$ 16,000<br>\r
+
+      \tPollution:                0 (Air)/ 0 (Water)/ 0 (Garbage )<br>\r
+
+      \tPollution Radius:   0/0/0<br>\r
+
+      \tPark Effect:            20 over 40 tiles<br>\r
+
+      \tLandmark Effect:  100 over 10 tiles<br>\r
+
+      \tMonthly cost:        $ 45<br>\r
+
+      \tPower Consumed:0 Mwh<br>\r
+
+      \tWater Consumed: 0 Gal/Month<br>\r
+
+      \tOccupant Group:   Building: Civic; Park\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThis download contains TWO model files; one for dark nite users (and other night-time darkening mods, such as Gizmos night-mod) and one for the standard Maxis nite. If you are unsure whether
+      you have a night-darkening mod installed, then choose the Maxis night version. <br>\r
+
+      \tIf you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) \r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>DEPENDENCIES:</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThere are no dependencies required for this lot.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<strong>---------------------------------------</strong>\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \tTo install, simply unzip the contents of this file into your plugins folder.<br>\r
+
+      \t \r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_08/Gaia.jpg.7c01e3830fd8474246e9e4286e065903.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_08/Gaia1.jpg.8690ba7dd57ebc9a29701c3de4b8f585.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_08/Gaia2.jpg.29263b81e018c48b85d86698ecd2ac7f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_08/Gaia3.jpg.098c942ded890d234f8404cdd7ef0aa0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_08/Gaia4.jpg.9b650ca51f1b30cb3fadf4b63c12879f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_08/Gaia5.jpg.9e817995e68935be662ed5f2ee5aff2b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_08/Gaia6.jpg.ee3802b5ab5775cebc45f33290684ce2.jpg
     lastModified: 2020-08-08T02:25:23Z
     name: LP46, Beirut
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_08/Gaia.thumb.jpg.c6ea02e1f325a2274a1e1796f23bfd34.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/33751-lp46-beirut/
+    variants:
+      "182318":
+        filename: Mattb325_GaiaBeirut_DN.zip
+        files:
+          - Mattb325_GaiaBeirut_DN/Mattb325_GaiaBeirut-0x5ad0e817_0xc355cb9_0x30000.SC4Model
+          - Mattb325_GaiaBeirut_DN/Mattb325_GaiaBeirut_README.txt
+          - Mattb325_GaiaBeirut_DN/PLOP_2x2_Mattb325 Gaia Beirut_6c3aa4ab.SC4Lot
+        sha256: a1eebe8e66d3503f52b02521323258d85114ca8175a810d686c89de22e206dbe
+        size: 89278
+        uncompressed: 106491
+      "182319":
+        filename: Mattb325_GaiaBeirut_MN.zip
+        files:
+          - Mattb325_GaiaBeirut_MN/Mattb325_GaiaBeirut-0x5ad0e817_0xc355cb9_0x30000.SC4Model
+          - Mattb325_GaiaBeirut_MN/Mattb325_GaiaBeirut_README.txt
+          - Mattb325_GaiaBeirut_MN/PLOP_2x2_Mattb325 Gaia Beirut_6c3aa4ab.SC4Lot
+        sha256: 9894da9af391c9ac1eabe1af95ab240b9f1c18e17c7e3a609cca73cd26d807c9
+        size: 91569
+        uncompressed: 108641
+    version: 1.0.0
   simtropolis/33761-dutch-bicyclepaths:
     authors:
       - Dead_End
@@ -15704,9 +17257,7 @@ assets:
     dependencies: []
     description: "<body>
 
-      \                           \
-
-      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+      \                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
 
       \                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\"
       style=\"\" width=\"34\" height=\"53\">
@@ -15903,10 +17454,139 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Coastal Gun Battery, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	Coastal Gun Battery fortifications can be found along many coatlines of the world. Left overs from WWII, these were used to fire anti-ship artillery from high ground.
+      </p>
+
+
+      <p>
+      	This was made as a request by a fellow SC4 player. 
+      </p>
+
+
+      <p>
+      	It is a 1x1 lot that is found in the parks menu. 
+      </p>
+
+
+      <p>
+      	The lot is completely neutral: no monthly costs and no benefits. It is on a transparent base so your terrain mod will show through. Use <abbr title="Mayor Mode Ploppables">MMPs</abbr>, like I have done in the images, if you want to dress up the area. There is some slope tolerance with the lot, but as in real life, these are primarily designed for flat ground.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	Lot size :                  1x1<br>
+      	Plop Cost:               $ 0<br>
+      	Bulldoze Cost:        $ 0<br>
+      	Demand Satisfied: R$ 0, R$$ 0, R$$$ 0<br>
+      	Pollution:                 0 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    0/0/0<br>
+      	Park Effect:             0 over 0 tiles<br>
+      	Landmark Effect:   0 over 0 tiles<br>
+      	Monthly cost:         $ 0<br>
+      	Power Consumed: 0 Mwh<br>
+      	Water Consumed:  0 Gal/Month<br>
+      	Occupant Group:    Building: Civic; Building: Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	This model has no nightlights: therefore there is no need to select the appropriate file from the download.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies required for this lot.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    filename: Mattb325_GunTurret.zip
+    files:
+      - Mattb325_GunTurret/Mattb325 Gun Turret-0x6534284a-0x3ec1db6a-0x3c454229.SC4Desc
+      - Mattb325_GunTurret/Mattb325GunTurret_README.txt
+      - Mattb325_GunTurret/Mattb325_GunTurret-0x5ad0e817_0x4bc6b114_0x30000.SC4Model
+      - Mattb325_GunTurret/PLOP_1x1_Mattb325 Gun Turret_2c4542d1.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/GunTurret.jpg.cfac080d112fe6e548b05de5fd21c030.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/GunTurret1.jpg.226622400605a48a98c549319d43ce52.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/GunTurret2.jpg.b4b217ca270d10eb4e6f436e30e19263.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/GunTurret3.jpg.3a3c5eaca9486a118aacd0bbafea5d18.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_10/GunTurret4.jpg.5c51fe27e90d3022b15a4234196cb377.jpg
     lastModified: 2020-10-19T19:17:02Z
     name: Coastal Gun Battery
+    sha256: 492fe017927f19ab64a7947630d0291deeea9714ea606780d6a68e26f31e6bca
+    size: 120473
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_10/GunTurret.thumb.jpg.c35a1e4df638bf4ec757e3b3d20b1049.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 142158
     url: https://community.simtropolis.com/files/file/33896-coastal-gun-battery/
+    version: 1.0.0
   simtropolis/33898-latte-stone-park:
     authors:
       - 20huskies
@@ -16351,7 +18031,19 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
       							
       <p>
@@ -16873,7 +18565,19 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
       							
       <p>
@@ -17428,7 +19132,19 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
       							
       <p>
@@ -17905,7 +19621,19 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
       							
       <p>
@@ -18683,7 +20411,19 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
       							
       <p>
@@ -19051,7 +20791,19 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
       							
       <p>
@@ -19410,10 +21162,187 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong><em>Yininmadyemi</em>, Thou didst let fall, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A simple park from Sydney, '<em>Yininmadyemi</em>' is the Gadigal language for 'Thou didst let fall'. This park acknowledges the service of first nations people to the Australian Defence Force during times of international conflict.
+      </p>
+
+
+      <p>
+      	The park is composed of four 7m tall bullets standing beside 3 fallen shell casings. These are arranged on red paving that is in the shape of a boomerang. <br>
+      	During the first and second world wars, some families gave boomerangs to departing soldiers to symbolise hope that the soldiers would return home safely.
+      </p>
+
+
+      <p>
+      	There are two lots included in the download: one a plaza (which will give commercial a boost) and one a park (which will give residential a boost). Both the plaza and park have various cap-busting (demand satisfied) properties.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                 2x2<br>
+      	Bulldoze Cost:       § 20<br>
+      	Plop Cost:               § 160<br>
+      	Demand Satisfied: R§ 25,000, R§§ 25,000, R§§§ 25,000<br>
+      	Landmark Effect:  +30 over 10 tiles<br>
+      	Park Effect:            +80 over 60 tiles<br>
+      	Pollution:                 - 8 (Air)/ 2 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    5/6/0<br>
+      	Power Consumed:  0 Mwh<br>
+      	Water Consumed:   10 Gal/Month<br>
+      	Monthly Cost:           § 20<br>
+      	Occupant Group:     Civic; Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------<br>
+      	STATS PLAZA:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :           2x2<br>
+      	Bulldoze Cost:       § 20<br>
+      	Plop Cost:         § 210<br>
+      	Demand Satisfied:    R§ 4,000, R§§ 4,000, R§§§ 4,000, CO§§ 25,000, CO§§§ 25,000<br>
+      	Landmark Effect:     +90 over 60 tiles<br>
+      	Park Effect:         +10 over 20 tiles<br>
+      	Pollution:           -2 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    5/6/0<br>
+      	Power Consumed:         0 Mwh<br>
+      	Water Consumed:      10 Gal/Month<br>
+      	Monthly Cost:        § 20<br>
+      	Occupant Group:         Civic; Park
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies required for this lot.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_park.jpg.845060528ea1f562eb573de8b7bce2e0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_park1.jpg.b5b8299df55fe6be33f9faa74baa6f7f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_park2.jpg.24c46d0ac1c5343bb6759c429d6d23e1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_park3.jpg.bcfbd96dc47e6f7c23f8cbe9d54e9b32.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_park4.jpg.9c8780bfff9f49d8d797501b75392c63.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_plaza.jpg.b62103e740befd4d4e08e751c2b5befc.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_plaza1.jpg.b58cfe73704f5363e293ac94a50d2181.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_plaza2.jpg.7582f893cf17617c8385f52a6959ee64.jpg
     lastModified: 2021-03-13T05:18:56Z
     name: Yininmadyemi, Thou didst let fall
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/Yininmadyemi_park.thumb.jpg.672ff2a971678c1d8112ebe18ad58dc8.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34274-yininmadyemi-thou-didst-let-fall/
+    variants:
+      "186288":
+        filename: Mattb325_Yininmadyemi_DN.zip
+        files:
+          - Mattb325_Yininmadyemi_DN/Mattb325 Yininmadyemi Memorial-0x6534284a-0x3ec1db6a-0x7dd23798.SC4Desc
+          - Mattb325_Yininmadyemi_DN/Mattb325_Yininmadyemi-0x5ad0e817_0xafe823b8_0x30000.SC4Model
+          - Mattb325_Yininmadyemi_DN/Mattb325_Yininmadyemi_README.txt
+          - Mattb325_Yininmadyemi_DN/PLOP_2x2_Mattb325 Yininmadyemi Park_bdd23839.SC4Lot
+          - Mattb325_Yininmadyemi_DN/PLOP_2x2_Mattb325 Yininmadyemi Plaza_bdd239fd.SC4Lot
+        sha256: c9921ecca7ae967bc9ca2b17deb33779ac9246798d58f2534d5b03748c218cbf
+        size: 647631
+        uncompressed: 761743
+      "186289":
+        filename: Mattb325_Yininmadyemi_MN.zip
+        files:
+          - Mattb325_Yininmadyemi_MN/Mattb325 Yininmadyemi Memorial-0x6534284a-0x3ec1db6a-0x7dd23798.SC4Desc
+          - Mattb325_Yininmadyemi_MN/Mattb325_Yininmadyemi-0x5ad0e817_0xafe823b8_0x30000.SC4Model
+          - Mattb325_Yininmadyemi_MN/Mattb325_Yininmadyemi_README.txt
+          - Mattb325_Yininmadyemi_MN/PLOP_2x2_Mattb325 Yininmadyemi Park_bdd23839.SC4Lot
+          - Mattb325_Yininmadyemi_MN/PLOP_2x2_Mattb325 Yininmadyemi Plaza_bdd239fd.SC4Lot
+        sha256: 30d4a0fe72ec2102a60bb401aa411ae4bd2e5c362bd9ae9b32680563d396f19f
+        size: 669548
+        uncompressed: 781318
+    version: 1.0.0
   simtropolis/34282-the-thing-park-sidings-by-pgx:
     authors:
       - pgxpgx
@@ -19426,26 +21355,528 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Vietnam Veterans Memorial, Washington DC, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	The strikingly simple and poignant Vietnam Veterans Memorial in Washington DC honours those who fought in the Vietnam War.
+      </p>
+
+
+      <p>
+      	The park is dominated by a black granite wall with the names of those who lost their lives during this terrible conflict. The memorial was completed in 1982. The design was very controversial in its day: people stated the black granite was nihilistic and they complained about the lack of ornamentation - but it is this absolute simplicity which (to me) makes it worthy of being included in SC4.
+      </p>
+
+
+      <p>
+      	This is a 10x6 heavily wooded, seasonal park lot. The triangular granite wall cuts through and under the ground and a path follows the slope to the base and back again: the engraved granite panels act as a retaining wall for the ground behind it.
+      </p>
+
+
+      <p>
+      	The park will blend in with the <abbr title="SimForum BAT Team">SFBT</abbr> medium wealth set (as well as the basic Maxis parks) and so can be enlarged and made modular (as I have done in the pictures).
+      </p>
+
+
+      <p>
+      	The actual wall has been modelled and modded especially to receive shadows from the objects around it which enhances the <em>trompe l'oeil</em> effect that this model imparts. The panel also includes the text of names (and outline of which is just visible in the tiny SC4 scale). While it is not an exact replica (SC4 doesn't take kindly to models that both above and below the ground), it is reasonably close, and it certainly imparts the feeling of the real-world structure.
+      </p>
+
+
+      <p>
+      	Placing this park will significantly improve commercial and residential desirability, reduce pollution and provide significant residential and commercial cap relief.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                 10x6<br>
+      	Bulldoze Cost:        § 80<br>
+      	Plop Cost:               § 2,400<br>
+      	Demand Satisfied: R§ 65,000, R§§ 95,000, R§§§ 65,000, CO§§ 25,000 CO§§§ 25,000<br>
+      	Landmark Effect: +110 over 40 tiles<br>
+      	Park Effect:           +140 over 120 tiles<br>
+      	Pollution:               -40 (Air)/ 8 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:  16/8/0<br>
+      	Power Consumed: 0 Mwh<br>
+      	Water Consumed: 40 Gal/Month<br>
+      	Monthly Cost:         § 100<br>
+      	Occupant Group:    Civic; Park; YIMBY
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/VietnamVets.jpg.932dd0a28b15e6755317d623004ed2c6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/VietnamVets1.jpg.43a9f8f8fd5eb2832f95d94db2c4e5fd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/VietnamVets2.jpg.b816b3ba15a2990ea03dd8628cba964e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/VietnamVets3.jpg.73c87608bbeee665ce0a449102ba1f1d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/VietnamVets4.jpg.d838f96c04281a1d2fedfbc106614011.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/VietnamVets5.jpg.8428cbdb501b85f7e23b0e11c3f423e5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/VietnamVets6.jpg.e6e9030d2ae535016c338c2e55033abf.jpg
     lastModified: 2021-03-14T00:25:30Z
     name: Vietnam Veterans Memorial, Washington DC.
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/VietnamVets.thumb.jpg.c8e94e42227abc01f2bb2b5659cfeee6.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34283-vietnam-veterans-memorial-washington-dc/
+    variants:
+      "186344":
+        filename: Mattb325_VietnamVetsMemorial_DN.zip
+        files:
+          - Mattb325_VietnamVetsMemorial_DN/Mattb325 Vietnam Veterans Memorial-0x6534284a-0x3ec1db6a-0x1dd33461.SC4Desc
+          - Mattb325_VietnamVetsMemorial_DN/Mattb325_VietnamVetsMemorial-0x5ad0e817_0xfe922a8_0x30000.SC4Model
+          - Mattb325_VietnamVetsMemorial_DN/Mattb325_VietnamVetsMemorial_README.txt
+          - Mattb325_VietnamVetsMemorial_DN/PLOP_10x6_Mattb325 Vietnam Veterans Memorial_8dd334c7.SC4Lot
+        sha256: dcdeba2c549605a8b4a4a407d46b84f1f1ddabe9c506950be434268e8c96eaca
+        size: 899261
+        uncompressed: 1128042
+      "186345":
+        filename: Mattb325_VietnamVetsMemorial_MN.zip
+        files:
+          - Mattb325_VietnamVetsMemorial_MN/Mattb325 Vietnam Veterans Memorial-0x6534284a-0x3ec1db6a-0x1dd33461.SC4Desc
+          - Mattb325_VietnamVetsMemorial_MN/Mattb325_VietnamVetsMemorial-0x5ad0e817_0xfe922a8_0x30000.SC4Model
+          - Mattb325_VietnamVetsMemorial_MN/Mattb325_VietnamVetsMemorial_README.txt
+          - Mattb325_VietnamVetsMemorial_MN/PLOP_10x6_Mattb325 Vietnam Veterans Memorial_8dd334c7.SC4Lot
+        sha256: bb97a9c46d89221d7089a6bb774e1dc2d4b8cb37dca40c7e1eb30f29b9a06b1b
+        size: 908273
+        uncompressed: 1133997
+    version: 1.0.0
   simtropolis/34290-diagonal-filler-parks:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Diagonal Filler Parks, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A set of five diagonal filler parks to place along diagonal roads/avenues, etc. Essentially these can help fill those awkward gaps when using diagonally overhanging buildings.
+      </p>
+
+
+      <p>
+      	These are all in a family, so you will get a different version each time you plop. There are various arrangements and types of trees/flowers/shrubs and sculptures.
+      </p>
+
+
+      <p>
+      	These parks are made as overhanging props. The lot size is 1x1 and the overhang allows you to cover diagonal/ortho transitions. These parks should not be used on sloping ground. They use the standard Maxis white pavement and will deliver park effects + small amounts of cap relief.
+      </p>
+
+
+      <p>
+      	Please  note, that like all of these sorts of overhanging/filler pieces (not just mine, but everyone's where LODs need to be tight to ensure that details on the road are not completely cut-off), there are various visual glitches where they meet the ground, or network pieces or even other lots.
+      </p>
+
+
+      <p>
+      	These glitches can be minor or major depending on your video card, shadow settings, placement on the map, etc, etc. Unfortunately I can't do anything about it: I made my peace with the various visual glitches of this old game years ago.<br>
+      	 <br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                  1x1<br>
+      	Bulldoze Cost:        § 10<br>
+      	Plop Cost:                § 40<br>
+      	Demand Satisfied: R§ 250, R§§ 250, R§§§ 250<br>
+      	Landmark Effect:   +20 over 10 tiles<br>
+      	Park Effect:            +15 over 15 tiles<br>
+      	Pollution:                -2 (Air)/ 1 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    2/1/0<br>
+      	Power Consumed: 0 Mwh<br>
+      	Water Consumed:  5 Gal/Month<br>
+      	Monthly Cost:         § 5<br>
+      	Occupant Group:    Civic; Park
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies required for this lot.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark.jpg.ff32f15293c81b65f506eb75b6ee9bfc.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark1.jpg.ac688d03798d0e1d40f6b181316c8d2f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark1a.jpg.a65a41b4bd8b3e6a74b711e2b322cef9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark2.jpg.b547966e9e0e200e2072250300e74233.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark3.jpg.58f56f7e87411b69e0cadf353f1b0f68.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark4.jpg.6b83eaf293988ee02004ec953786172a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark5.jpg.b5e653cbdcf3ea888e3c9f98dcd729a2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark6.jpg.246ccc8565c83ae5eb0a285fe30606ca.jpg
     lastModified: 2021-03-17T06:48:16Z
     name: Diagonal Filler Parks
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagonalPark.thumb.jpg.e0a75f7419f9ff92e1e85752fb745d05.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34290-diagonal-filler-parks/
+    variants:
+      "186395":
+        filename: Mattb325_DiagonalPark_DN.zip
+        files:
+          - Mattb325_DiagonalPark_DN/Mattb325 Diagonal Park 1-0x6534284a-0x3ec1db6a-0x7dd7426c.SC4Desc
+          - Mattb325_DiagonalPark_DN/Mattb325 Diagonal Park 2-0x6534284a-0x3ec1db6a-0x1dd74aa2.SC4Desc
+          - Mattb325_DiagonalPark_DN/Mattb325 Diagonal Park 3-0x6534284a-0x3ec1db6a-0x5dd74f18.SC4Desc
+          - Mattb325_DiagonalPark_DN/Mattb325 Diagonal Park 4-0x6534284a-0x3ec1db6a-0x3dd753ca.SC4Desc
+          - Mattb325_DiagonalPark_DN/Mattb325 Diagonal Park-0x6534284a-0x3ec1db6a-0x1dd72d9b.SC4Desc
+          - Mattb325_DiagonalPark_DN/Mattb325_DiagonalFillerParks_README.txt
+          - Mattb325_DiagonalPark_DN/Mattb325_DiagonalPark-0x5ad0e817_0xfed1a1b_0x30000.SC4Model
+          - Mattb325_DiagonalPark_DN/Mattb325_DiagonalPark1-0x5ad0e817_0x6fed2df9_0x30000.SC4Model
+          - Mattb325_DiagonalPark_DN/Mattb325_DiagonalPark2-0x5ad0e817_0x4fed38aa_0x30000.SC4Model
+          - Mattb325_DiagonalPark_DN/Mattb325_DiagonalPark3-0x5ad0e817_0x8fed3d50_0x30000.SC4Model
+          - Mattb325_DiagonalPark_DN/Mattb325_DiagonalPark4-0x5ad0e817_0xafed41ce_0x30000.SC4Model
+          - Mattb325_DiagonalPark_DN/PLOP_1x1_Mattb325 Diagonal Park_bdd4cabf.SC4Lot
+        sha256: 6f844c7737a2f35817dabaeb417f5d7119e8a43ab0b51ec2c59edb25b168f7e8
+        size: 2019764
+        uncompressed: 2418892
+      "186396":
+        filename: Mattb325_DiagonalPark_MN.zip
+        files:
+          - Mattb325_DiagonalPark_MN/Mattb325 Diagonal Park 1-0x6534284a-0x3ec1db6a-0x7dd7426c.SC4Desc
+          - Mattb325_DiagonalPark_MN/Mattb325 Diagonal Park 2-0x6534284a-0x3ec1db6a-0x1dd74aa2.SC4Desc
+          - Mattb325_DiagonalPark_MN/Mattb325 Diagonal Park 3-0x6534284a-0x3ec1db6a-0x5dd74f18.SC4Desc
+          - Mattb325_DiagonalPark_MN/Mattb325 Diagonal Park 4-0x6534284a-0x3ec1db6a-0x3dd753ca.SC4Desc
+          - Mattb325_DiagonalPark_MN/Mattb325 Diagonal Park-0x6534284a-0x3ec1db6a-0x1dd72d9b.SC4Desc
+          - Mattb325_DiagonalPark_MN/Mattb325_DiagonalFillerParks_README.txt
+          - Mattb325_DiagonalPark_MN/Mattb325_DiagonalPark-0x5ad0e817_0xfed1a1b_0x30000.SC4Model
+          - Mattb325_DiagonalPark_MN/Mattb325_DiagonalPark1-0x5ad0e817_0x6fed2df9_0x30000.SC4Model
+          - Mattb325_DiagonalPark_MN/Mattb325_DiagonalPark2-0x5ad0e817_0x4fed38aa_0x30000.SC4Model
+          - Mattb325_DiagonalPark_MN/Mattb325_DiagonalPark3-0x5ad0e817_0x8fed3d50_0x30000.SC4Model
+          - Mattb325_DiagonalPark_MN/Mattb325_DiagonalPark4-0x5ad0e817_0xafed41ce_0x30000.SC4Model
+          - Mattb325_DiagonalPark_MN/PLOP_1x1_Mattb325 Diagonal Park_bdd4cabf.SC4Lot
+        sha256: 6eb2cdba168a24c5c614a525db40c301af7fe88546f56c4b138896f6a6bcd9d6
+        size: 1937681
+        uncompressed: 2319475
+    version: 1.0.0
   simtropolis/34302-diagonal-toilets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Diagonal Amenities, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	After releasing the diagonal filler parks, I was sent some images of the 'Tokyo Toilet Project' and a request to incorporate these into SC4.
+      </p>
+
+
+      <p>
+      	Since public toilets are quite rare in SC4 (but common in the real world) and the ones from the Tokyo Toilet Project are anything thing but your basic cinder-block sh*thouse, I thought I'd bring them into game.
+      </p>
+
+
+      <p>
+      	There are three toilets in a prop family, so you will get something different each time you plop (<s>no </s>pun intended).
+      </p>
+
+
+      <p>
+      	These parks are made as over-hanging props. The lot size is 1x1 and the overhang allows you to cover diagonal/ortho transitions. These parks should not be used on sloping ground. They use the standard Maxis white pavement and have a basic park effect.
+      </p>
+
+
+      <p>
+      	Please  note, that like all of these sorts of overhanging/filler pieces (not just mine, but everyone's), there are various visual glitches where they meet the ground, or network pieces or even other lots. These glitches can be minor or major depending on your video card, shadow settings, placement on the map, etc, etc. Unfortunately I can't do anything about it: I made my peace with the various visual glitches of this old game years ago.<br>
+      	 <br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :           1x1<br>
+      	Bulldoze Cost:       § 10<br>
+      	Plop Cost:         § 40<br>
+      	Demand Satisfied:    R§ 250, R§§ 250, R§§§ 250<br>
+      	Landmark Effect:     +10 over 10 tiles<br>
+      	Park Effect:         +5 over 15 tiles<br>
+      	Pollution:           0 (Air)/ 1 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:    2/1/0<br>
+      	Power Consumed:         0 Mwh<br>
+      	Water Consumed:      5 Gal/Month<br>
+      	Monthly Cost:        § 5<br>
+      	Occupant Group:         Civic; Park
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version. 
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/) 
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	There are no dependencies required for this lot.
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagToilet.jpg.44f6c421613b0fdfb8a3403ce8ceaf17.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagToilet0.jpg.962ee33e949f574834fbe786a46b72f2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagToilet1.jpg.14ec746212170fa9f66d07691c5b100e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagToilet1a.jpg.531cb7fc9b6f079482939caf6ae6a4b6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagToilet2.jpg.8aa693013c3c23cf6677f316ff2fe10d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagToilet3.jpg.83e9207ea8c662eaef53372f4df6a8d8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagToilet4.jpg.cbc67f034f273b33effa09127dee74b4.jpg
     lastModified: 2021-03-21T02:07:01Z
     name: Diagonal Toilets
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/DiagToilet0.thumb.jpg.a5829863f475c1a0968f682ea4dd77d4.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34302-diagonal-toilets/
+    variants:
+      "186474":
+        filename: Mattb325_DiagAmenities_DN.zip
+        files:
+          - Mattb325_DiagAmenities_DN/Mattb325 Diag Amenities 1-0x6534284a-0x3ec1db6a-0xbdda2ff4.SC4Desc
+          - Mattb325_DiagAmenities_DN/Mattb325 Diag Amenities 2-0x6534284a-0x3ec1db6a-0x7ddca5e7.SC4Desc
+          - Mattb325_DiagAmenities_DN/Mattb325 Diagonal Amenities Block-0x6534284a-0x3ec1db6a-0x7dda177f.SC4Desc
+          - Mattb325_DiagAmenities_DN/Mattb325_DiagAmenities-0x5ad0e817_0x8ff004f7_0x30000.SC4Model
+          - Mattb325_DiagAmenities_DN/Mattb325_DiagAmenities1-0x5ad0e817_0x2ff01d47_0x30000.SC4Model
+          - Mattb325_DiagAmenities_DN/Mattb325_DiagAmenities2-0x5ad0e817_0xff29340_0x30000.SC4Model
+          - Mattb325_DiagAmenities_DN/Mattb325_DiagonalAmenities_README.txt
+          - Mattb325_DiagAmenities_DN/PLOP_1x1_Mattb325 Diagonal Amenities Block_edda1abf.SC4Lot
+        sha256: 33601352d3a4d12e3ab0a526a39ad489251d1a83d3009ed5d3bb335e680a3ec7
+        size: 1147891
+        uncompressed: 1380952
+      "186475":
+        filename: Mattb325_DiagAmenities_MN.zip
+        files:
+          - Mattb325_DiagAmenities_MN/Mattb325 Diag Amenities 1-0x6534284a-0x3ec1db6a-0xbdda2ff4.SC4Desc
+          - Mattb325_DiagAmenities_MN/Mattb325 Diag Amenities 2-0x6534284a-0x3ec1db6a-0x7ddca5e7.SC4Desc
+          - Mattb325_DiagAmenities_MN/Mattb325 Diagonal Amenities Block-0x6534284a-0x3ec1db6a-0x7dda177f.SC4Desc
+          - Mattb325_DiagAmenities_MN/Mattb325_DiagAmenities-0x5ad0e817_0x8ff004f7_0x30000.SC4Model
+          - Mattb325_DiagAmenities_MN/Mattb325_DiagAmenities1-0x5ad0e817_0x2ff01d47_0x30000.SC4Model
+          - Mattb325_DiagAmenities_MN/Mattb325_DiagAmenities2-0x5ad0e817_0xff29340_0x30000.SC4Model
+          - Mattb325_DiagAmenities_MN/Mattb325_DiagonalAmenities_README.txt
+          - Mattb325_DiagAmenities_MN/PLOP_1x1_Mattb325 Diagonal Amenities Block_edda1abf.SC4Lot
+        sha256: 3e5b3779f511fc21f750205e6285c61926a5470c0275110b9b44e8a75a80bc7e
+        size: 1088058
+        uncompressed: 1313210
+    version: 1.0.0
   simtropolis/34344-mt-jumullong-manglo-stations-of-the-cross-guam:
     authors:
       - 20huskies
@@ -19530,18 +21961,326 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>ANZAC Memorial Hyde Park, Sydney, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	The striking art-deco war memorial to the ANZACs (Australian &amp; New Zealand Army Corps) was built in Sydney's Hyde Park between 1932 and 1934. It is heritage listed.
+      </p>
+
+
+      <p>
+      	The memorial is the focus of commemoration ceremonies on Anzac Day and Remembrance Day. The building design was part of a competition commissioned in 1929 with a brief that the building cost no more than 75,000 pounds.
+      </p>
+
+
+      <p>
+      	The building is clad in pink granite with a large arched stained glass window on each elevation and there are bronze friezes above the lower doorways as well as the large sculptures atop columns representing military personnel. The interior features a small museum and halls of silence and halls of memory. To the north of the memorial is a reflection pool lined with poplars.
+      </p>
+
+
+      <p>
+      	Placing this park lot - as well as blending in with many other modular/maxis parks available, will also greatly assist city growth, clean the air over a wide radius, improve desirability with residential and commercial areas and help bust demand caps across all wealth levels.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                 6x12<br>
+      	Bulldoze Cost:       $90<br>
+      	Plop Cost:              $2,880<br>
+      	Demand Satisfied:R$ 18,000, R$$ 18,000, R$$$ 18,000<br>
+      	Landmark Effect:  +100 over 10 tiles<br>
+      	Park Effect:            +135 over 135 tiles<br>
+      	Pollution:               -144 (Air)/ 9 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:  18/9/0<br>
+      	Power Consumed: 0 Mwh<br>
+      	Water Consumed: 45 Gal/Month<br>
+      	Monthly Cost:        $90<br>
+      	Occupant Group:   Civic; Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	There are two model files in this download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version.
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*Girafe Poplars - (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3579" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3579</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac.jpg.57d386bbfcf8dcf167cae1222579a7fd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac1.jpg.a0a8357fa29bc9e338c64da87015e16b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac2.jpg.83e8e78e7ef6308c4504573083755ed6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac3.jpg.febe8fa60d5de0897534ecb944be5caf.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac4.jpg.e0c294b76bb1cd6cca27ac4c6f8e7cb0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac5.jpg.31a9c9bced622817eda74db976a9addf.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac6.jpg.61a0511ce9812f52cbe4c403d69caeb2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac7.jpg.da94e0d570b7ef8e8f3eb4b82dd096eb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac8.jpg.e1d872903467798c6e453acb79d64487.jpg
     lastModified: 2021-06-05T21:10:12Z
     name: Anzac Memorial, Hyde Park, Sydney
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_06/Anzac.thumb.jpg.63e3637ffd1199b3b03319213a19b116.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
     url: https://community.simtropolis.com/files/file/34506-anzac-memorial-hyde-park-sydney/
+    variants:
+      "188627":
+        filename: Mattb325_AnzacMemorial_DN.zip
+        files:
+          - Mattb325_AnzacMemorial_DN/Mattb325 Anzac Memorial (Prop)-0x6534284a-0x3ec1db6a-0x7e09eb4e.SC4Desc
+          - Mattb325_AnzacMemorial_DN/Mattb325 Reflection Pool-0x6534284a-0x3ec1db6a-0x1e0a9c35.SC4Desc
+          - Mattb325_AnzacMemorial_DN/Mattb325_AnzacMemorial-0x5ad0e817_0xd01fd722_0x30000.SC4Model
+          - Mattb325_AnzacMemorial_DN/Mattb325_ANZACMemorialSydney_README.txt
+          - Mattb325_AnzacMemorial_DN/Mattb325_ReflectionPool-0x5ad0e817_0x50208763_0x30000.SC4Model
+          - Mattb325_AnzacMemorial_DN/PLOP_6x12_Mattb325 Anzac Memorial_5e09ebd9.SC4Lot
+        sha256: 656ac40ba3f34acd0ca320c799f6a80ddd3d23c4a5712ad7d454372ebaf4210e
+        size: 1036613
+        uncompressed: 1217985
+      "188628":
+        filename: Mattb325_AnzacMemorial_MN.zip
+        files:
+          - Mattb325_AnzacMemorial_MN/Mattb325 Anzac Memorial (Prop)-0x6534284a-0x3ec1db6a-0x7e09eb4e.SC4Desc
+          - Mattb325_AnzacMemorial_MN/Mattb325 Reflection Pool-0x6534284a-0x3ec1db6a-0x1e0a9c35.SC4Desc
+          - Mattb325_AnzacMemorial_MN/Mattb325_AnzacMemorial-0x5ad0e817_0xd01fd722_0x30000.SC4Model
+          - Mattb325_AnzacMemorial_MN/Mattb325_ANZACMemorialSydney_README.txt
+          - Mattb325_AnzacMemorial_MN/Mattb325_ReflectionPool-0x5ad0e817_0x50208763_0x30000.SC4Model
+          - Mattb325_AnzacMemorial_MN/PLOP_6x12_Mattb325 Anzac Memorial_5e09ebd9.SC4Lot
+        sha256: 681b7770d3a41ee98a1a1bb0f2f05a4c304d6bc05846aced56a619a364839407
+        size: 1063988
+        uncompressed: 1243603
+    version: 1.0.0
   simtropolis/34514-reflection-pool:
     authors:
       - mattb325
     category: parks
+    dependencies:
+      - simtropolis/34506-anzac-memorial-hyde-park-sydney
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Reflection Pool, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	Almost every city has a downtown area with a reflection pool: a simple plaza with water and trees that perfectly complements the austere surroundings of skyscrapers. 
+      </p>
+
+
+      <p>
+      	There are not too many available in SimCity, so I have re-purposed the reflection pool from the anzac memorial to fill this gap. (I also realise many folks don't want to place a war memorial or a park that takes up many hectares of real-estate on a city tile.
+      </p>
+
+
+      <p>
+      	I made the reflection pool in such a way as to give a generic reflection of trees and a building on one side: meaning that it will 'appear' to reflect an adjacent building: in game reflections are not available in SC4 due to its age. The reflection pool also accepts shadows from surrounding objects which further enhances the illusion.
+      </p>
+
+
+      <p>
+      	The base tiles will also blend in with any texture/sidewalk over-rides that you may have.
+      </p>
+
+
+      <p>
+      	Placing this plaza will boost surrounding desirability for Residential and Commercial zones, as well as helping to bust demand caps in each category by 8,000 places.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                 2x4<br>
+      	Bulldoze Cost:       $30<br>
+      	Plop Cost:              $370<br>
+      	Demand Satisfied:R$ 8,000, R$$ 8,000, R$$$ 8,000, CO$$ 8,000, CO$$$ 8,000<br>
+      	Landmark Effect:  +80 over 10 tiles<br>
+      	Park Effect:            +15 over 30 tiles<br>
+      	Pollution:                0 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:   0/0/0<br>
+      	Power Consumed: 0 Mwh<br>
+      	Water Consumed: 0 Gal/Month<br>
+      	Monthly Cost:        $40<br>
+      	Occupant Group:   Civic; Park
+      </p>
+
+
+      <p>
+      	<br>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>NOTE ABOUT DARK NITE vs MAXIS NITE:</strong>
+      </p>
+
+
+      <p>
+      	The main dependency has two model files in the download. You must select the appropriate file from the download. The file suffixed with 'DN' is for those users with a night-time darkening mod installed. The file suffixed with 'MN' is for users who do not have any such mods installed.
+      </p>
+
+
+      <p>
+      	If you are unsure whether you have a night-darkening mod installed, then choose the Maxis night version.
+      </p>
+
+
+      <p>
+      	If you use the dark nite version, you will need a dark nite mod. (http://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*Anzac Memorial (<a href="https://community.simtropolis.com/files/file/34506-anzac-memorial-hyde-park-sydney/" rel="">https://community.simtropolis.com/files/file/34506-anzac-memorial-hyde-park-sydney/</a>) You only need the reflection pool model+.desc file<br>
+      	*Girafe Poplars - (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3579" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3579</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    filename: Mattb325_ReflectionPool.zip
+    files:
+      - Mattb325_ReflectionPool/Mattb325_ReflectionPool_README.txt
+      - Mattb325_ReflectionPool/PLOP_2x4_Mattb325 Anzac Reflection Pool_5e30b1c1.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/ReflectionPool.jpg.1a089546557710c1ef23e084d8d7da45.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/ReflectionPool1.jpg.8af36f70392d6f1a6bcfb014966a7d25.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/ReflectionPool2.jpg.9001436b3b0836c281bff8843ae62517.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/ReflectionPool3.jpg.611e3eea92c5859aa0c3b959297e645e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/ReflectionPool4.jpg.476350554fa0904fae6a1748435708a6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/ReflectionPool5.jpg.db18997b80cba219700c19c51ec821ef.jpg
     lastModified: 2021-06-09T00:16:18Z
     name: Reflection Pool
+    sha256: 4a58cd18203bd8344745566183546617662820a628b56b4f381859ee1abf5076
+    size: 54528
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_06/ReflectionPool.thumb.jpg.359f82a339bccae9df920e1354f3aff8.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 55769
     url: https://community.simtropolis.com/files/file/34514-reflection-pool/
+    version: 1.0.0
   simtropolis/34526-simtropolis-living-sign-grand-fir-park-set:
     authors:
       - Kloudkicker
@@ -19554,18 +22293,273 @@ assets:
     authors:
       - mattb325
     category: parks
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Palm Plazas, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	A post in the "Can't find it, ask here" thread for plazas with palm trees turned up a fruitless search, so I made a small set for those who wish to give a more tropical look to their cities using some of the amazing custom palm trees available.
+      </p>
+
+
+      <p>
+      	There are three very simple 1x1 lots found in the park menu: <br>
+      	 *a lot that uses a prop family of CP's Date palm trees<br>
+      	 *a lot that uses a single fan palm also by CP, and<br>
+      	 *a lot that uses a single HD Date palm by Girafe
+      </p>
+
+
+      <p>
+      	The base tiles will also blend in with any texture/sidewalk over-rides that you may have.
+      </p>
+
+
+      <p>
+      	Placing this plaza will boost surrounding desirability for Residential and Commercial zones, as well as helping to bust demand caps in each category by 1,000 places.
+      </p>
+
+
+      <p>
+      	These are very simple lots, but I was quite surprised that there isn't really anything similar already available, so I whipped these up.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                    1x1<br>
+      	Bulldoze Cost:           $10<br>
+      	Plop Cost:                  $90<br>
+      	Demand Satisfied:    R$ 1,000, R$$ 1,000, R$$$ 1,000<br>
+      	Landmark Effect:     +40 over 10 tiles<br>
+      	Park Effect:               +5 over 10 tiles<br>
+      	Pollution:                   0 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:      0/0/0<br>
+      	Power Consumed:   0 Mwh<br>
+      	Water Consumed:    0 Gal/Month<br>
+      	Monthly Cost:           $5<br>
+      	Occupant Group:     Civic; Park
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> MEGA Props - CP Vol01.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a>)<br>
+      	*<abbr title="BATT Squad Certification">BSC</abbr> Mega Props - CP Vol02.dat (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2790</a>)<br>
+      	*Girafe Palms - (<a href="https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3451" rel="external nofollow">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3451</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    filename: Mattb325_PalmPlazas.zip
+    files:
+      - Mattb325_PalmPlazas/Mattb325_PalmPlazas_README.txt
+      - Mattb325_PalmPlazas/PLOP_1x1_Palm Plaza CP1_0dddb42a.SC4Lot
+      - Mattb325_PalmPlazas/PLOP_1x1_Palm Plaza CP_3e56fb18.SC4Lot
+      - Mattb325_PalmPlazas/PLOP_1x1_Palm Plaza Girafe_ce56fb69.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/PalmPlaza1.jpg.b54ffed63992a223bfe5bd5d224fd39b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/PalmPlaza2.jpg.8467dc69a83e38836cc73603e0cd7312.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/PalmPlaza3.jpg.3b4f23e797365bbb03b2e6018d2a1080.jpg
     lastModified: 2021-06-21T22:01:45Z
     name: Palm Plazas
+    sha256: 275fd857aa6b876efa838c372a3c1db1482c454c9b47c6d544d7b4c41f4ba732
+    size: 106008
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_06/PalmPlaza1.thumb.jpg.7b1212e8ff6b1e279716b4a32ef2c5f2.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 107035
     url: https://community.simtropolis.com/files/file/34545-palm-plazas/
+    version: 1.0.0
   simtropolis/34546-free-light:
     authors:
       - mattb325
     category: parks
+    dependencies:
+      - simtropolis/27563-shk-parking-pack
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+      							
+
+
+
+
+
+      							
+      <p>
+      	<strong>Free Light, by Mattb325.<br>
+      	---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	The idea for this upload came from a post in the "Can't find it, ask here" thread which asked for functional lights that can be freely placed to provide a lit path through fields, forests, highways etc.
+      </p>
+
+
+      <p>
+      	While there are a couple of similar mods, they tend to use very bright lights and aren't that suited to pedestrian areas. 
+      </p>
+
+
+      <p>
+      	To that end, I have made two 1x1 lots: one with the standard Maxis $$ lamppost (which will change depending on whether you have a light replacement mod) and a HD lamppost with a nifty in-built solar panel from the SHK parking pack.
+      </p>
+
+
+      <p>
+      	There is no base texture on these lots and they are modded in such a way as to allow <abbr title="Mayor Mode Ploppables">MMPs</abbr> to be placed right up against the lamppost. They are slope tolerant. They are found in the park menu.
+      </p>
+
+
+      <p>
+      	The lots themselves are completely neutral: $0 to place/maintain and zero effects. 
+      </p>
+
+
+      <p>
+      	However, because both of these lights use the maxis light-cone as part of the illumination, you do need to ensure that there is a power source in your city (note the cheat: "fight the power" won't work with these effects) in order for them to illuminate in night mode.
+      </p>
+
+
+      <p>
+      	These lights can be placed a maximum of four (4) tiles apart from each other/another powered lot and still illuminate.
+      </p>
+
+
+      <p>
+      	These are very simple lots, but I was quite surprised that there isn't really anything similar already available, so I whipped these up.
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>STATS PARK:</strong>
+      </p>
+
+
+      <p>
+      	<br>
+      	Lot size :                1x1<br>
+      	Bulldoze Cost:      $0<br>
+      	Plop Cost:             $0<br>
+      	Pollution:               0 (Air)/ 0 (Water)/ 0 (Garbage )<br>
+      	Pollution Radius:  0/0/0<br>
+      	Power Consumed:0 Mwh<br>
+      	Water Consumed: 0 Gal/Month<br>
+      	Monthly Cost:        $0<br>
+      	Occupant Group:   Civic; Park
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	<strong>DEPENDENCIES:</strong>
+      </p>
+
+
+      <p>
+      	*SHK Parking Pack - (<a href="https://community.simtropolis.com/files/file/27563-shk-parking-pack/" rel="">https://community.simtropolis.com/files/file/27563-shk-parking-pack/</a>)
+      </p>
+
+
+      <p>
+      	<strong>---------------------------------------</strong>
+      </p>
+
+
+      <p>
+      	To install, simply unzip the contents of this file into your plugins folder.
+      </p>
+
+      						</body>
+    filename: Mattb325 Free Light.zip
+    files:
+      - Mattb325 Free Light/Mattb325_FreeLight_README.txt
+      - Mattb325 Free Light/PLOP_1x1_Mattb325 Free Light1_0ddddbe2.SC4Lot
+      - Mattb325 Free Light/PLOP_1x1_Mattb325 Free Light_1e57254c.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Freelight.jpg.6ef6216e80604c3b3d7da9b53d3ab21a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Freelight1.jpg.b12a073d760a03f2cf6e6b5e6ef93223.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Freelight2.jpg.54aa3a405ac058e88dc8961f42b6f1f0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Freelight3.jpg.9eb6c6e18d593b1c66c66968b82388ff.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Freelight4.jpg.ddd52dc38c14b47d04a606a3eda88d6d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Freelight5.jpg.ee1bdce0973283b2797909ed5f4e8bb6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_06/Freelight6.jpg.be1f042db65ee48d07030554573b17a5.jpg
     lastModified: 2021-06-22T01:27:20Z
     name: Free Light
+    sha256: 910fa85d080202b29c00532609a533f8389d9d15b377ae5d89bf5cd3855a8511
+    size: 86624
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_06/Freelight.thumb.jpg.f2756ec09a0e81a3d92caaeb9dda2da3.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 88123
     url: https://community.simtropolis.com/files/file/34546-free-light/
+    version: 1.0.0
   simtropolis/34592-corner-plaza:
     authors:
       - Terring
@@ -19714,7 +22708,19 @@ assets:
                                         <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
       							
       <p>
@@ -19842,6 +22848,12 @@ assets:
     description: >-
       <body>
                                   
+
+
+
+
+
+
 
       							
       <p>
@@ -20036,7 +23048,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -20963,7 +23987,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -21042,7 +24078,19 @@ assets:
 
 
 
+
+
+
+
+
+
       							
+
+
+
+
+
+
 
 
 
@@ -21131,6 +24179,14 @@ assets:
     uncompressed: 919613
     url: https://community.simtropolis.com/files/file/36422-jabot-gardens/
     version: 1.0.1
+  simtropolis/36467-c88-billboard-set-1:
+    authors:
+      - Ceafus 88
+    category: parks
+    lastModified: 2024-09-27T03:06:18Z
+    name: C88- Billboard Set 1
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/BB1.thumb.jpg.afc9e1190a4154fc79666e19a3b2dd52.jpg
+    url: https://community.simtropolis.com/files/file/36467-c88-billboard-set-1/
   simtropolis/3648-tragicomicus-town-square:
     authors:
       - tragicomicus1
@@ -21139,6 +24195,14 @@ assets:
     name: Tragicomicus Town Square
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-ef77defd6adbbe76e1549963260a821a-town_square_2%20copy.jpg
     url: https://community.simtropolis.com/files/file/3648-tragicomicus-town-square/
+  simtropolis/36497-webb-chapel-park-pavilion:
+    authors:
+      - Jasoncw
+    category: parks
+    lastModified: 2024-10-10T03:08:05Z
+    name: Webb Chapel Park Pavilion
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/6707451535395_WebbChapelParkPavilion00.thumb.jpg.1c392bbfc8fbc0a882909ffa3769839d.jpg
+    url: https://community.simtropolis.com/files/file/36497-webb-chapel-park-pavilion/
   simtropolis/3662-rcc-traditional-latin-american-fountain-gazebo-tower-clock-and-plaza-v-10:
     authors:
       - RobledoRessainance
@@ -23212,4 +26276,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2003/thumb-18bf807f2f09de4980b386687e38a613-Nice%20Park%20Day.jpg
     url: https://community.simtropolis.com/files/file/998-large-park/
 
-timestamp: 2024-09-13T12:22:00.820Z
+timestamp: 2024-10-17T06:14:27.427Z

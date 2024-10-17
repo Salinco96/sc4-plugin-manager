@@ -1,11 +1,13 @@
 import { useMemo } from "react"
 
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
-import { useTranslation } from "react-i18next"
+import { Link } from "@mui/material"
+import { Trans, useTranslation } from "react-i18next"
 
 import { PackageID } from "@common/packages"
 import { Issue, VariantIssue } from "@common/types"
 import { VariantID } from "@common/variants"
+import { useNavigation } from "@utils/navigation"
 import { getPackageName, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { PackageBanner } from "./PackageBanner"
@@ -23,11 +25,13 @@ export function PackageBannerIncompatible({
   const currentProfile = useCurrentProfile()
 
   const packageNames = useStore(store => issue.packages?.map(id => getPackageName(store, id)))
+  const incompatiblePackageId = issue.packages?.at(0)
 
   const { t } = useTranslation("PackageBanner")
+  const { openPackageView } = useNavigation()
 
   const action = useMemo(() => {
-    const { id, feature, option, packages, value } = issue
+    const { id, feature, option, value } = issue
     if (!currentProfile) {
       return
     }
@@ -35,8 +39,7 @@ export function PackageBannerIncompatible({
     switch (id) {
       case Issue.CONFLICTING_FEATURE:
       case Issue.INCOMPATIBLE_FEATURE: {
-        if (packages?.length) {
-          const conflictPackageId = packages[0]
+        if (incompatiblePackageId) {
           return {
             description: t("incompatible.actions.replacePackages.description", {
               packageName: packageNames?.at(0),
@@ -44,7 +47,7 @@ export function PackageBannerIncompatible({
             label: t("incompatible.actions.replacePackages.label"),
             onClick: async () => {
               await actions.addPackage(packageId, variantId, {
-                packages: { [conflictPackageId]: { enabled: false } },
+                packages: { [incompatiblePackageId]: { enabled: false } },
               })
             },
           }
@@ -79,7 +82,7 @@ export function PackageBannerIncompatible({
         }
       }
     }
-  }, [actions, currentProfile, issue, packageNames])
+  }, [actions, currentProfile, incompatiblePackageId, issue, packageNames])
 
   return (
     <PackageBanner
@@ -88,7 +91,31 @@ export function PackageBannerIncompatible({
       header={t("incompatible.title")}
       icon={<IncompatibleIcon />}
     >
-      {t(issue.id, { ns: "Issue", ...issue, count: packageNames?.length, packages: packageNames })}
+      <Trans
+        components={{
+          a: (
+            <Link
+              color="inherit"
+              onClick={() => {
+                if (incompatiblePackageId) {
+                  openPackageView(incompatiblePackageId)
+                }
+              }}
+              sx={{
+                ":hover": { textDecoration: "underline" },
+                cursor: "pointer",
+                fontWeight: "bold",
+                textDecoration: "none",
+              }}
+              title={t("deprecated.actions.openPackage.description")}
+            />
+          ),
+          b: <strong />,
+        }}
+        i18nKey={issue.id}
+        ns="Issue"
+        values={{ ...issue, count: packageNames?.length, packages: packageNames }}
+      />
     </PackageBanner>
   )
 }

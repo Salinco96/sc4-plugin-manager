@@ -3,130 +3,1642 @@ assets:
     authors:
       - null45
     category: mods/dll
-    downloads: 109
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL plugin that allows the player to choose which cheats are enabled in-game.</p>\r
+
+      <p><strong>System Requirements:</strong></p>\r
+
+      <p>Windows 10 or later.</p>\r
+
+      <p><strong>Installation:</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Copy <em>SC4DisableCheats.dll</em> and <em>DisabledCheats.txt </em>into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Configure the cheats you want to disable, see the <strong>Configuring the plugin</strong> section.</li>\r
+
+      </ol>\r
+
+      <p><strong>Configuring the plugin:</strong></p>\r
+
+      <ol>\r
+
+      <li>\r
+
+      <p>Open <em>DisabledCheats.txt</em> in a text editor (e.g. Notepad).<br>Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with
+      administrator permissions to be able to save the file.</p>\r
+
+      </li>\r
+
+      <li>\r
+
+      <p>Add the cheat codes you wish to disable on individual lines.</p>\r
+
+      </li>\r
+
+      <li>\r
+
+      <p>Save the file and start the game.</p>\r
+
+      </li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong>:</p>\r
+
+      <p>The plugin should write a <em>SC4DisableCheats.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Support and Source Code</strong></p>\r
+
+      <p>The plugin thread is: <a href=\"https://community.simtropolis.com/forums/topic/762689-sc4disablecheats\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762689-sc4disablecheats</a></p>\r
+
+      <p>The source code and bug tracker is located on <a href=\"https://github.com/0xC0000054/sc4-disable-cheats\" target=\"_blank\" rel=\"external nofollow noopener\">GitHub</a>.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 133
+    images: []
     lastModified: 2024-03-22T02:11:41-07:00
     name: SC4 Disable Cheats DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-disable-cheats
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/251-sc4-disable-cheats-dll-plugin
+    version: 1.0.0
   sc4evermore/252-humane-society-ordinance-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 112
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that adds a Humane Society ordinance to the game.</p>\r
+
+      <p>This ordinance is based on the Humane Society ordinance suggestion in <a
+      href=\"https://community.simtropolis.com/forums/topic/26215-ordinances-complete-list/?do=findComment&amp;comment=703433\" rel=\"\">this</a> post, and has the following properties:</p>\r
+
+      <p><strong>Availability Requirements:</strong> At least 1 hospital or clinic. The original suggestion did not include this, but I think it makes sense given the per hospital/clinic
+      cost.<br><strong>Expense:</strong> Base cost of $-50/month plus $-5 per hospital/clinic.<br><strong>Effects:</strong></p>\r
+
+      <ul>\r
+
+      <li>Increases mayor rating by 5 points.</li>\r
+
+      <li>Reduces crime by 5%.</li>\r
+
+      </ul>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <p>    Windows 10 or later</p>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have to ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <p>    1. Close SimCity 4.<br>    2. Copy <em>SC4HumaneSocietyOrdinance.dll</em> and <em>SC4HumaneSocietyOrdinance.ini</em> into the Plugins folder in the SimCity 4 installation
+      directory.<br>    3. Start SimCity 4.</p>\r
+
+      <p><strong>Changing the plugin text</strong></p>\r
+
+      <p>Because plugin DLLs don't have access to the game's code for handling LTEXT files, translation is handled by adjusting the Name and Description values
+      in <em>SC4HumaneSocietyOrdinance.ini</em>.<br>Note that the text is expected to use UTF-8 encoding.</p>\r
+
+      <p>    1. Open SC4HumaneSocietyOrdinance.ini in a text editor (e.g. Notepad).<br>    Note that depending on the permissions of your SimCity 4 installation directory you may need to start the
+      text editor with administrator permissions to be able to save the file.</p>\r
+
+      <p>    2. Adjust the <em>Name</em> and <em>Description</em> values in the <em>[Ordinance] </em>section.</p>\r
+
+      <p>    3. Save the file and start the game.</p>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4HumaneSocietyOrdinance.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762796-humane-society-ordinance-dll-plugin/\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762796-humane-society-ordinance-dll-plugin/</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-humane-society-ordinance\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-humane-society-ordinance</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 140
+    images: []
     lastModified: 2024-03-22T02:23:30-07:00
     name: Humane Society Ordinance DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-humane-society-ordinance
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/252-humane-society-ordinance-dll-plugin
+    version: 1.0.0
   sc4evermore/253-legalize-gambling-ordinance-upgrade-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 122
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that updates the built-in Legalize Gambling ordinance to have its income based on the city's residential
+      population.</p>\r
+
+      <p><strong>Availability Requirements:</strong> None.<br><strong>Income:</strong> Base income of §250/month, plus additional income based on the residential wealth group
+      populations.<br><strong>Effects:</strong></p>\r
+
+      <p>Crime Effect: +20%.</p>\r
+
+      <p>This ordinance replaces the game's built-in Legalize Gambling ordinance, it is incompatible with any mod that alters the built-in ordinance. This mod ignores the ordinance Exemplar and only
+      uses the LTEXT files from the built-in ordinance.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>    Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the Microsoft Visual C++ 2022 x86 Redistribute installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Copy <em>SC4LegalizeGamblingUpgrade.dll</em> and <em>SC4LegalizeGamblingUpgrade.ini</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Configure the plugin settings, see the Configuring the plugin section.</li>\r
+
+      </ol>\r
+
+      <p><strong>Configuring the plugin</strong></p>\r
+
+      <p>    1. Open <em>SC4LegalizeGamblingUpgrade.ini</em> in a text editor (e.g. Notepad).<br>    Note that depending on the permissions of your SimCity 4 installation directory you may need to
+      start the text editor with administrator permissions to be able to save the file.</p>\r
+
+      <p>    2. Adjust the settings in the <em>[GamblingOrdinance]</em> section to your preferences.</p>\r
+
+      <p>    3. Save the file and start the game.</p>\r
+
+      <p><strong>Settings overview:</strong></p>\r
+
+      <p><strong>BaseMonthlyIncome </strong>is the base monthly income provided by the ordinance, defaults to §250.</p>\r
+
+      <p><strong>Wealth Group Income Factors</strong></p>\r
+
+      <p>The following values represent the factors (multipliers) that control how much each wealth group contributes to the monthly income based on the group's population. A value of 0.0 excludes the
+      specified wealth group from contributing to the monthly income. For example, if the city's R§ population is 1000 and the R§ income factor is 0.05 the R§ group would contribute an additional §50
+      to the monthly income total.</p>\r
+
+      <p><strong>R$IncomeFactor</strong> income factor for the R§ population, defaults to 0.02.</p>\r
+
+      <p><strong>R$$IncomeFactor</strong> income factor for the R§§ population, defaults to 0.03.</p>\r
+
+      <p><strong>R$$$IncomeFactor</strong> income factor for the R§§§ population, defaults to 0.05.</p>\r
+
+      <p><strong>Ordinance Effects</strong></p>\r
+
+      <p><strong>CrimeEffectMultiplier </strong>the effect that the ordinance has on global city crime. Defaults to 1.20, a +20% increase. The value uses a range of [0.01, 2.0] inclusive, a value of
+      1.0 has no effect. Values below 1.0 reduce crime, and values above 1.0 increase crime.</p>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4LegalizeGamblingUpgrade.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762856-legalize-gambling-ordinance-upgrade-dll-plugin/\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762856-legalize-gambling-ordinance-upgrade-dll-plugin/</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 142
+    images: []
     lastModified: 2024-03-22T02:26:02-07:00
     name: Legalize Gambling Ordinance Upgrade DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/253-legalize-gambling-ordinance-upgrade-dll-plugin
+    version: 1.0.0
   sc4evermore/254-sc4citydatesync-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 106
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that synchronizes the city dates in a region.</p>\r
+
+      <p>The plugin saves the current in-game date when exiting an established city, and then applies it to the next established city if that city's in-game date is less then the stored value. The
+      city date is applied by automatically executing the <em>SimDate</em> cheat when loading the city. The city date synchronization only occurs between cities located in the same region.</p>\r
+
+      <p><span style=\"color: #e03e2d;\"><strong>Disclaimer - </strong>I have not experienced any issues with using the SimDate command in this way, but it may have side effects that I
+      missed.</span></p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <p>Windows 10 or later</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Copy <em>SC4CityDateSync.dll</em> and <em>SC4CityDateSync.ini</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4CityDateSync.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762766-sc4citydatesync-synchronize-the-city-dates-in-a-region/\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762766-sc4citydatesync-synchronize-the-city-dates-in-a-region/</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-city-date-sync\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-city-date-sync</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 127
+    images: []
     lastModified: 2024-03-22T02:29:25-07:00
     name: SC4CityDateSync DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-city-date-sync
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/254-sc4citydatesync-dll-plugin
+    version: 1.0.3
   sc4evermore/255-sc4moredemandinfo-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 127
+    dependencies:
+      - sc4evermore/39-bsc-census-repository-building-by-ripplejet
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL plugin for SimCity 4 that provides modders with more <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> demand
+      info.</p>\r
+
+      <p>With this plugin installed there will be the following new variables that can be used from LUA scripts and UI files:</p>\r
+
+      <table>\r
+
+      <thead>\r
+
+      <tr>\r
+
+      <th>Variable name</th>\r
+
+      <th>  Description</th>\r
+
+      </tr>\r
+
+      </thead>\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td>g_cs1_active_demand<code> </code></td>\r
+
+      <td>  Cs§ active demand</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>g_cs2_active_demand</td>\r
+
+      <td>  Cs§§ active demand</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>g_cs3_active_demand</td>\r
+
+      <td>  Cs§§§ active demand</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>g_ir_active_demand</td>\r
+
+      <td>  IR (I-Ag) active demand</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>g_current_ir_cap</td>\r
+
+      <td>  Current IR (I-Ag) cap</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p>The values can be accessed using <em>game.&lt;value name&gt;</em> in LUA scripts and UI placeholder text.</p>\r
+
+      <p>The download includes a patch for RippleJet's Census Repository v3.5 that shows the new data, you will need to have the <a
+      href=\"https://sc4evermore.com/index.php/downloads/download/21-other/39-bsc-census-repository-building-by-ripplejet\" target=\"_blank\" rel=\"external nofollow noopener\">original
+      mod</a> installed.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Copy <em>SC4MoreDemandInfo.dll</em> from the <strong>Dll</strong><strong> </strong>folder into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Replace the original <em>RJ - Census_Repository_Model_and_Query_3.1.dat</em> with the one in the <strong>Census Repository v3.5 Patch</strong> folder.</li>\r
+
+      <li>Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4MoreDemandInfo.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762906-sc4moredemandinfo\" rel=\"\">https://community.simtropolis.com/forums/topic/762906-sc4moredemandinfo</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-more-demand-info\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-more-demand-info</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 144
+    images: []
     lastModified: 2024-03-22T02:33:20-07:00
     name: SC4MoreDemandInfo DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-more-demand-info
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/255-sc4moredemandinfo-dll-plugin
+    version: 1.1.0
   sc4evermore/256-sc4autosave-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 122
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that automatically saves a city at user-specified intervals.</p>\r
+
+      <p>This auto-save plugin does not require any launcher and will work with any digital Windows version of the game, Steam, GOG, etc. The disc-based versions should also work if fully
+      patched.</p>\r
+
+      <p>If you use a 3rd-party launcher that has its own auto-save setting you will need to disable that option when installing this plugin.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>    Windows 10 or later.</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <p>    Close SimCity 4.<br>    Copy <em>SC4AutoSave.dll</em> and <em>SC4AutoSave.ini</em> into the Plugins folder in the SimCity 4 installation directory.<br>    Configure the auto-save
+      settings, see the <strong>Configuring the plugin</strong> section.</p>\r
+
+      <p><strong>Configuring the plugin</strong></p>\r
+
+      <p>    Open <em>SC4AutoSave.ini</em> in a text editor (e.g. Notepad).<br>    Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor
+      with administrator permissions to be able to save the file.</p>\r
+
+      <p>    Adjust the settings in the <em>[AutoSave]</em> section to your preferences.</p>\r
+
+      <p>    Save the file and start the game.</p>\r
+
+      <p><strong>Settings overview:</strong></p>\r
+
+      <p><strong>IntervalInMinutes </strong>is the number of minutes that elapse between auto-save attempts, defaults to 15 minutes. Note that the save timing may not be exactly this value depending
+      on what the game is doing. For example, auto-save is disabled when the game is paused.</p>\r
+
+      <p><strong>FastSave </strong>controls whether the game skips updating the region thumbnail when saving, defaults to <em>true</em>. With this option enabled the save operation is equivalent to
+      the <em>Ctrl + Alt + S</em> keyboard shortcut, when disabled it is equivalent to the <em>Ctrl + S</em> keyboard shortcut.</p>\r
+
+      <p><strong>IgnoreTimePaused </strong>controls whether the time the game spends paused is ignored when counting towards the next auto-save point, defaults to <em>true</em>.</p>\r
+
+      <p><strong>LogSaveEvents </strong>controls whether the save events for the current session will be written to the log file, defaults to <em>true</em>.</p>\r
+
+      <p><br><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a SC4AutoSave.log file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Support and Source Code</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762722-sc4autosave/\" rel=\"\">https://community.simtropolis.com/forums/topic/762722-sc4autosave/</a></p>\r
+
+      <p>The source code and bug tracker is located on <a href=\"https://github.com/0xC0000054/sc4-auto-save\" target=\"_blank\" rel=\"external nofollow noopener\">GitHub</a>.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 148
+    images: []
     lastModified: 2024-03-22T02:37:05-07:00
     name: SC4AutoSave DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-auto-save
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/256-sc4autosave-dll-plugin
+    version: 1.2.0
   sc4evermore/257-sc4disabledemolitionanimation-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 95
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that disables the demolition animation.</p>\r
+
+      <p>Before SC4 picks the demolition animation to use for an occupant, it calls a function to determine if the occupant is too small for a demolition animation. This DLL Plugin patches the game's
+      memory to redirect that function call to its own version of the function, which always reports that the occupant is too small for a demolition animation. This has the effect of disabling the
+      demolition animations for all occupants.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>SimCity 4 version 641</li>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li> Close SimCity 4.</li>\r
+
+      <li> Copy <em>SC4DisableDemolitionAnimation.dll</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li> Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4DisableDemolitionAnimation.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762938-sc4disabledemolitionanimation\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762938-sc4disabledemolitionanimation</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-disable-demolition-animation\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-disable-demolition-animation</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 118
+    images: []
     lastModified: 2024-03-22T02:58:58-07:00
     name: SC4DisableDemolitionAnimation DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-disable-demolition-animation
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/257-sc4disabledemolitionanimation-dll-plugin
+    version: 1.0.0
   sc4evermore/258-sc4-full-screen-32-bit-color-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 131
+    dependencies:
+      - sc4evermore/259-sc4graphicsoptions-dll-plugin
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that makes the DirectX full screen mode use 32-bit color.</p>\r
+
+      <p>This is an alternative version of my DirectX full screen mode 32-bit color fix for people who are already using an external launcher or a shortcut with command line arguments to configure the
+      game's graphics settings.</p>\r
+
+      <p>If you are using my <a href=\"/index.php/downloads/download/42-dll-mods/259-sc4graphicsoptions-dll-plugin\">GraphicsOptions DLL Plugin</a> you do not need to install this mod.<br>The two mods
+      will conflict, but the worst thing that could happen is that the fix is applied more than once.</p>\r
+
+      <p><strong>Technical Details</strong></p>\r
+
+      <p>For some reason Maxis hard-coded the DirectX full screen mode to use 16-bit color. There were existing fixes for this issue, but those required replacing or modifying SimCity 4.exe. This mod
+      patches the affected code in the game's memory and does not modify the original executable.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>SimCity 4 version 641</li>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <p>    Close SimCity 4.<br>    Copy <em>SC4FullScreen32Bit.dll</em> into the Plugins folder in the SimCity 4 installation directory.<br>    Start SimCity 4.</p>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4FullScreen32Bit.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762957-sc4-full-screen-32-bit-color-dll-plugin/\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762957-sc4-full-screen-32-bit-color-dll-plugin/</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-full-screen-32-bit\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-full-screen-32-bit</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 156
+    images: []
     lastModified: 2024-03-22T03:04:18-07:00
     name: SC4 Full Screen 32-bit Color DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-full-screen-32-bit
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/258-sc4-full-screen-32-bit-color-dll-plugin
+    version: 1.0.0
   sc4evermore/259-sc4graphicsoptions-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 182
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that sets the game's rendering mode and resolution options.</p>\r
+
+      <p><strong>Features</strong></p>\r
+
+      <ul>\r
+
+      <li>Custom resolutions can be configured without command line arguments.</li>\r
+
+      <li>Supports borderless full screen mode without requiring a launcher.</li>\r
+
+      <li>Supports changing the game's rendering driver without a command line argument.</li>\r
+
+      <li>Allow the DirectX full screen mode to use 32-bit color.</li>\r
+
+      <li>Allows the game's intro to be disabled without a command line argument.</li>\r
+
+      <li>Allows pausing on focus loss to be enabled without a command line argument.</li>\r
+
+      </ul>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>Game version 641\r
+
+      <ul>\r
+
+      <li>Only required for the DirectX full screen 32-bit color fix, all other features should work on older game versions.</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Copy <em>SC4GraphicsOptions.dll</em> and <em>SC4GraphicsOptions.ini</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Configure the graphics options, see the <em>Configuring the plugin</em> section.</li>\r
+
+      </ol>\r
+
+      <p><strong>Configuring the plugin</strong></p>\r
+
+      <ol>\r
+
+      <li>\r
+
+      <p>Open <em>SC4GraphicsOptions.ini</em> in a text editor (e.g. Notepad).<br>Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor
+      with administrator permissions to be able to save the file.</p>\r
+
+      </li>\r
+
+      <li>\r
+
+      <p>Adjust the settings in the <em>[GraphicsOptions] </em>section to your preferences.</p>\r
+
+      </li>\r
+
+      <li>\r
+
+      <p>Save the file and start the game.</p>\r
+
+      </li>\r
+
+      </ol>\r
+
+      <p><strong>Settings overview:</strong></p>\r
+
+      <p><strong>EnableIntroVideo </strong>controls whether the game's intro video will be played on startup, defaults to true. Setting this to false is equivalent to the -Intro:off command line
+      argument.</p>\r
+
+      <p><strong>PauseGameOnFocusLoss </strong>controls whether the game will be paused when it looses focus, defaults to false. Setting this to true is equivalent to the -gp command line
+      argument.</p>\r
+
+      <p><strong>Driver</strong> the driver that SC4 uses for rendering, the supported values are listed in the following table:</p>\r
+
+      <table>\r
+
+      <thead>\r
+
+      <tr>\r
+
+      <th>Driver</th>\r
+
+      <th>Notes</th>\r
+
+      </tr>\r
+
+      </thead>\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td>DirectX</td>\r
+
+      <td>SC4's default hardware renderer. Because this renderer targets DirectX 7, a DirectX wrapper (e.g. <a href=\"https://github.com/dege-diosg/dgVoodoo2\" target=\"_blank\" rel=\"external
+      nofollow noopener\">dgVoodo 2</a> or <a href=\"https://github.com/elishacloud/dxwrapper\" target=\"_blank\" rel=\"external nofollow noopener\">DxWrapper</a>) is required for resolutions above
+      2048x2048.</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>OpenGL</td>\r
+
+      <td>An unfinished hardware renderer. simmaster07's <a href=\"https://github.com/nsgomez/scgl\" target=\"_blank\" rel=\"external nofollow noopener\">SCGL</a> project aims to replace this renderer
+      with a new one targeting OpenGL 3.0.</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>SCGL         </td>\r
+
+      <td>simmaster07's replacement for SC4's OpenGL renderer. This is an alias for the OpenGL entry above.</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Software</td>\r
+
+      <td>The renderer SC4 uses when no supported hardware renderer is available.</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p><strong>WindowWidth</strong> the width of SC4's window when running in windowed mode. This is ignored for the full screen and borderless full screen modes. The minimum value is 800, values
+      above 2048 with the DirectX driver require the use of a DirectX wrapper.</p>\r
+
+      <p><strong>WindowHeight</strong> the height of SC4's window when running in windowed mode. This is ignored for the full screen and borderless full screen modes. The minimum value is 600, values
+      above 2048 with the DirectX driver require the use of a DirectX wrapper.</p>\r
+
+      <p><strong>ColorDepth</strong> the color depth that SC4 uses, in bits per pixel. The supported values are 16 and 32.</p>\r
+
+      <p><strong>WindowMode</strong> the window mode that SC4 uses, the possible values listed in the following table:</p>\r
+
+      <table>\r
+
+      <thead>\r
+
+      <tr>\r
+
+      <th>Window Mode</th>\r
+
+      <th>Notes</th>\r
+
+      </tr>\r
+
+      </thead>\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td>Windowed                       </td>\r
+
+      <td>Runs the game in windowed mode, the window size is set by the <em>WindowWidth </em>and <em>WindowHeight</em> values above. Equivalent to the -w command line parameter.</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>FullScreen</td>\r
+
+      <td>Runs the game in full screen mode. Equivalent to the -f command line parameter. Screen resolutions larger that 2048x2048 in DirectX mode require the use of a DirectX wrapper.</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>BorderlessFullScreen</td>\r
+
+      <td>Runs the game a window that covers the entire screen. Screen resolutions larger that 2048x2048 in DirectX mode require the use of a DirectX wrapper.</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Borderless</td>\r
+
+      <td>An alias for the <em>BorderlessFullScreen</em> option above.</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p> </p>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4GraphicsOptions.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762952-sc4graphicsoptions\" rel=\"\">https://community.simtropolis.com/forums/topic/762952-sc4graphicsoptions</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-graphics-options\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-graphics-options</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 211
+    images: []
     lastModified: 2024-03-22T03:03:31-07:00
     name: SC4GraphicsOptions DLL Plugin
+    repository: https://github.com/dege-diosg/dgVoodoo2
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/259-sc4graphicsoptions-dll-plugin
+    version: 1.2.0
   sc4evermore/260-allow-more-building-styles-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 122
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p><span style=\"color: #e03e2d;\">WARNING: THIS MOD IS<em> HIGHLY EXPERIMENTAL</em>. YOU MAY DOWNLOAD IT FOR <em><strong>TESTING PURPOSES
+      ONLY</strong></em>. FOR EFFECTIVE USE IN GAMEPLAY, YOU MUST WAIT FOR AN <strong>OFFICIAL STATEMENT</strong>. </span></p>\r
+
+      <p><span style=\"color: #e03e2d;\">UNTIL WE SOLVE THIS PROBLEM, <strong>IT IS ABSOLUTELY FORBIDDEN TO RELEASE CUSTOM UIs WITH CUSTOM IDs</strong>.</span></p>\r
+
+      <p><span style=\"color: #e03e2d;\">THE MOD IS INCOMPATIBLE WITH <abbr title=\"Colossus Addon Mod\">CAM</abbr> 1.0 AND <abbr title=\"Colossus Addon Mod\">CAM</abbr> 2.1.1.</span></p>\r
+
+      <hr>\r
+
+      <p>A DLL Plugin for SimCity 4 that allows the game to use more than 4 building styles.</p>\r
+
+      <p>This DLL mod is intended as a dependency for other mods that add new building styles beyond the 4 that Maxis included, it does not add any building styles to the game by itself.</p>\r
+
+      <p>Maxis programmed the Building Style Control UI to only recognize the check boxes of the 4 built-in styles, no matter how may check boxes are actually present. This mod patches the game's
+      memory to remove that restriction.</p>\r
+
+      <p><strong>Cheat Codes</strong></p>\r
+
+      <p>The DLL provides the following cheat codes:</p>\r
+
+      <p><em>ActiveStyle</em> shows an in-game message box with the ID of the currently active style when <em>Change building style every N years</em> is selected. When <em>Build all styles at
+      once</em> is selected, using this cheat will display a message saying that mode is active.</p>\r
+
+      <p><em>DebugActiveStyles</em> writes the IDs of all the active/checked styles to the plugin's log file.</p>\r
+
+      <p><strong>Adding More Building Styles into SC4</strong></p>\r
+
+      <p>This is a brief overview of the process required to add new building styles into the game.</p>\r
+
+      <ol>\r
+
+      <li>Create a patch that overrides the default Building Style Control UI, <abbr title=\"Type, Group, Instance\">TGI</abbr> 0x00000000,0x96a006b0,0x6bc61f19 in<em> SimCity_1.dat</em>.</li>\r
+
+      <li>Edit the building style UI in the patch to add a check box for your new style(s).\r
+
+      <ul>\r
+
+      <li>The check box ID (e.g. 0x2003) identifies the building style to the game, these IDs should be in the range of 0x2000 to 0x2fff.</li>\r
+
+      </ul>\r
+
+      </li>\r
+
+      <li>Update the building <abbr title=\"OccupantGroups\">OG</abbr> values to use the new style.</li>\r
+
+      </ol>\r
+
+      <p><a contenteditable=\"false\" href=\"https://community.simtropolis.com/profile/737259-corinamarie/\" rel=\"\" data-ipshover=\"\"
+      data-ipshover-target=\"https://community.simtropolis.com/profile/737259-corinamarie/?do=hovercard\" data-mentionid=\"737259\">@CorinaMarie</a> has a <a
+      href=\"https://community.simtropolis.com/forums/topic/758810-partial-mythbusting-building-style-tilesets-not-locked-down-in-the-exe/?do=findComment&amp;comment=1765958\" rel=\"\">post</a> with
+      more details on how to update a building to a new style. <span style=\"color: #e03e2d;\">Note that you only need to follow the steps in that post up to step 8</span>. The additional steps in
+      that post are not required with this mod. It is not necessary to edit the Building Development Simulator when using the edited Building Style Control UI.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>SimCity 4 version 641</li>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Copy <em>SC4MoreBuildingStyles.dll</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4MoreBuildingStyles.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762969-allow-more-building-styles-dll-plugin/\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762969-allow-more-building-styles-dll-plugin/</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-more-building-styles\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-more-building-styles</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 138
+    images: []
     lastModified: 2024-03-22T03:37:07-07:00
     name: Allow More Building Styles DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-more-building-styles
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/260-allow-more-building-styles-dll-plugin
+    version: 1.1.0
   sc4evermore/261-sc4cpuoptions-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 132
+    dependencies:
+      - simtropolis/36053-sc4-single-cpu
+      - simtropolis/36048-sc4-cpu-priority
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that configures the CPU core count and priority.</p>\r
+
+      <p>This plugin combines the functionality of the <a href=\"https://community.simtropolis.com/files/file/36053-sc4singlecpu/\" rel=\"\">SingleCPU</a> and <a
+      href=\"https://community.simtropolis.com/files/file/36048-sc4cpupriority/\" rel=\"\">CPUPriority</a> plugins in a single DLL, and adds the ability to set the CPU priority without using a command
+      line argument.</p>\r
+
+      <p>If the <strong>-CPUCount</strong> and/or <strong>-CPUPriority</strong> command line arguments are present, those values will be used in place of the plugin's default options. When those
+      command line arguments are not present, the plugin will configure SC4 to use 1 CPU core and the CPU priority specified in the configuration file.</p>\r
+
+      <p>This plugin is incompatible with 3rd-party launchers that set a CPU priority, it will override the CPU priority setting they set when starting the game.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Remove <em>SC4SingleCPU.dll</em> and <em>SC4CPUPriority.dll</em> from the Plugins folder in the SimCity 4 installation directory, if present.</li>\r
+
+      <li>Copy <em>SC4CPUOptions.dll</em> and<em> SC4CPUOptions.ini</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Configure the plugin settings, see the <em>Configuring the plugin</em> section.</li>\r
+
+      </ol>\r
+
+      <p><strong>Configuring the Plugin</strong></p>\r
+
+      <ol>\r
+
+      <li>\r
+
+      <p>Open<em> SC4CPUOptions.ini </em>in a text editor (e.g. Notepad). Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with
+      administrator permissions to be able to save the file.</p>\r
+
+      </li>\r
+
+      <li>\r
+
+      <p>Adjust the settings in the <em>[CPUOptions]</em> section to your preferences.</p>\r
+
+      </li>\r
+
+      <li>\r
+
+      <p>Save the file and start the game.</p>\r
+
+      </li>\r
+
+      </ol>\r
+
+      <p><strong>Settings Overview</strong></p>\r
+
+      <p><strong>Priority</strong> is the CPU priority that the game will use, the default is <em>AboveNormal</em>. The supported values are listed in the following table:</p>\r
+
+      <table>\r
+
+      <thead>\r
+
+      <tr>\r
+
+      <th>Priority Value</th>\r
+
+      <th>     Notes</th>\r
+
+      </tr>\r
+
+      </thead>\r
+
+      <tbody>\r
+
+      <tr>\r
+
+      <td>High</td>\r
+
+      <td> </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>AboveNormal</td>\r
+
+      <td> </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Normal</td>\r
+
+      <td>    The default value for a process, unless the parent process has a different value.</td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>BelowNormal</td>\r
+
+      <td> </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Idle</td>\r
+
+      <td> </td>\r
+
+      </tr>\r
+
+      <tr>\r
+
+      <td>Low</td>\r
+
+      <td>    An alias for Idle.</td>\r
+
+      </tr>\r
+
+      </tbody>\r
+
+      </table>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4CPUOptions.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762979-sc4cpuoptions\" rel=\"\">https://community.simtropolis.com/forums/topic/762979-sc4cpuoptions</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-cpu-options\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-cpu-options</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 160
+    images: []
     lastModified: 2024-03-22T03:41:54-07:00
     name: SC4CPUOptions DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-cpu-options
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/261-sc4cpuoptions-dll-plugin
+    version: 1.0.1
   sc4evermore/262-sc4disablelotplopsmoke-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 114
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that disables the smoke that is shown after plopping a lot.</p>\r
+
+      <p>The method that the game uses to place a lot takes a Boolean parameter that controls whether the smoke effect is shown.<br>When that method is called by the lot placement UI tool it
+      hard-codes that parameter to true, the plugin patches the game's memory to change it to false.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>SimCity 4 version 641</li>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Copy <em>SC4DisableLotPlopSmoke.dll</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4DisableLotPlopSmoke.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762984-sc4disablelotplopsmoke\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762984-sc4disablelotplopsmoke</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-disable-lot-plop-smoke\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-disable-lot-plop-smoke</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 136
+    images: []
     lastModified: 2024-03-22T03:49:58-07:00
     name: SC4DisableLotPlopSmoke DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/262-sc4disablelotplopsmoke-dll-plugin
+    version: 1.0.0
   sc4evermore/263-sc4disablenetworkconstructionsounds:
     authors:
       - null45
     category: mods/dll
-    downloads: 88
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><div class=\"ipsType_richText ipsContained ipsType_break\" data-controller=\"core.front.core.lightboxedImages\">\r
+
+      <p>A DLL Plugin for SimCity 4 that disables the sounds that are played during the network construction animation.</p>\r
+
+      <p>The plugin patches the game's memory to make it skip playing the jackhammer sound track that is normally used during the animation.</p>\r
+
+      <p>Note that this will also disable 2 in-game messages that are sent at the start and end of the animation sequence. The messages are:<br>kSC4MsgConstructionRoadCrewStart (0x89F10866) and
+      kSC4MsgConstructionRoadCrewEnd (0xA9F10E45).</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>SimCity 4 version 641</li>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li> Close SimCity 4.</li>\r
+
+      <li> Copy <em>SC4DisableNetworkConstructionSounds.dll </em>into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li> Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4DisableNetworkConstructionSounds.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the
+      plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762987-sc4disablenetworkconstructionsounds\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/762987-sc4disablenetworkconstructionsounds</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-disable-network-construction-sounds\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-disable-network-construction-sounds</a></p>\r
+
+      </div> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 114
+    images: []
     lastModified: 2024-03-22T03:47:13-07:00
     name: SC4DisableNetworkConstructionSounds
+    repository: https://github.com/0xC0000054/sc4-disable-network-construction-sounds
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/263-sc4disablenetworkconstructionsounds
+    version: 1.0.0
   sc4evermore/264-region-view-census-ui-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 147
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that adds a census UI that can be shown in the region view.</p>\r
+
+      <p>The region census panel shows the totals for each <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> group in the region. It also allows the player to export a <a
+      href=\"https://en.wikipedia.org/wiki/Comma-separated_values\" target=\"_blank\" rel=\"external nofollow noopener\">CSV</a> file with statistics for the individual cities. The CSV file is written
+      to <em>Documents/SimCity 4/Region_View/&lt;Region Name&gt;</em> using UTF-8 encoding. The region census UI can be activated from the region view using one of the following methods:</p>\r
+
+      <ul>\r
+
+      <li>Clicking the middle mouse button.</li>\r
+
+      <li>Using the <em>RegionCensus</em> cheat.</li>\r
+
+      </ul>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>SimCity 4 version 641</li>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li> Close SimCity 4.</li>\r
+
+      <li> Copy <em>SC4RegionCensus.dll</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li> Copy <em>RegionCensusUI.dat</em> into your SimCity 4 Plugins folder.</li>\r
+
+      <li> Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4RegionCensus.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/763013-region-view-census-ui-dll-plugin/\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/763013-region-view-census-ui-dll-plugin/</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-region-census\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-region-census</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 176
+    images: []
     lastModified: 2024-03-22T03:48:55-07:00
     name: Region View Census UI DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-region-census
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/264-region-view-census-ui-dll-plugin
+    version: 1.0.1
   sc4evermore/265-no-kickout-lower-wealth-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 373
+    dependencies:
+      - simtropolis/34027-coris-no-kickout-lower-wealth-mod
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL version of <a href=\"https://community.simtropolis.com/files/file/34027-coris-no-kickout-lower-wealth-mod/\" rel=\"\">Cori's No
+      Kickout Lower Wealth Mod (<abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr>)</a> mod.</p>\r
+
+      <p>Unlike Cori's mod the DLL does not override the Building Development Simulator exemplar, so it should be compatible with <abbr title=\"Colossus Addon Mod\">CAM</abbr> or any other mod that
+      alters that file. The DLL sets the Building Development Simulator <em>Tract Developer Kick Out Lower Wealth</em> property to false when a city is loaded.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li> Close SimCity 4.</li>\r
+
+      <li> Copy <em>SC4NoKickOut.dll</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li> Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4NoKickOut.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/763015-no-kickout-lower-wealth-dll-plugin/\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/763015-no-kickout-lower-wealth-dll-plugin/</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-no-kick-out\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-no-kick-out</a></p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 476
+    images: []
     lastModified: 2024-03-22T03:57:09-07:00
     name: No Kickout Lower Wealth DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-no-kick-out
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/265-no-kickout-lower-wealth-dll-plugin
+    version: 1.0.0
   sc4evermore/266-growify-plopped-buildings-cheat-dll-plugin:
     authors:
       - null45
     category: mods/dll
-    downloads: 146
+    dependencies: []
+    description: "<body>\r
+
+      \        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL Plugin for SimCity 4 that adds a cheat code to convert plopped buildings to a growable <abbr title=\"Residential, Commercial,
+      Industrial\">RCI</abbr> zone type.</p>\r
+
+      <p>This mod is an in-game equivalent to the <a href=\"https://github.com/sebamarynissen/sc4\" target=\"_blank\" rel=\"external nofollow noopener\">SC4</a> command line
+      tool's <em>growify</em> command for editing save games (and the <a href=\"https://community.simtropolis.com/forums/topic/760843-growifiercom-ploppable-residentials/\" rel=\"\">website
+      version</a>).</p>\r
+
+      <p>One of the differences between the two tools is the building exemplar property that is used to detect the <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> building type.<br>The
+      SC4 command line tool uses the <em>Capacity Satisfied</em> property from the savegame's lot subfile.<br>This plugin uses the <em>Purpose</em> property from the building's exemplar.</p>\r
+
+      <p><strong>System Requirements</strong></p>\r
+
+      <ul>\r
+
+      <li>SimCity 4 version 641</li>\r
+
+      <li>Windows 10 or later</li>\r
+
+      </ul>\r
+
+      <p>The plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022
+      x86 Redistribute</a> installed, but I do not have the ability to test that.</p>\r
+
+      <p><strong>Installation</strong></p>\r
+
+      <ol>\r
+
+      <li>Close SimCity 4.</li>\r
+
+      <li>Copy <em>SC4Growify.dll</em> into the Plugins folder in the SimCity 4 installation directory.</li>\r
+
+      <li>Start SimCity 4.</li>\r
+
+      </ol>\r
+
+      <p><strong>Using The Plugin</strong></p>\r
+
+      <p>The plugin adds a <em>Growify </em>cheat code with the following syntax:</p>\r
+
+      <p><em>Growify &lt;zone type&gt; &lt;zone density&gt; [make historical]</em></p>\r
+
+      <p>The <strong>&lt;zone type&gt;</strong> parameter is one of: Residential, Commercial, Agriculture or Industrial.<br>The<strong> &lt;zone density&gt;</strong> parameter is one of: Low, Medium
+      or High.<br>The <strong>[make historical] </strong>parameter is optional, when not present it will default to<em> true</em>. This behavior is intended to prevent the game from replacing the
+      plopped building as part of its normal zone redevelopment process. Setting the value to <em>false</em> will preserve the game's existing historical option for that lot.</p>\r
+
+      <p>All commands are case-insensitive.</p>\r
+
+      <p><strong>Example Commands</strong></p>\r
+
+      <p>The following command converts all commercial plopped buildings to the Commercial Medium-density zone: <em>Growify Commercial Medium</em> To save typing, you could also use: <em>Growify Com
+      Med</em><strong> </strong>or <em>Growify C M</em>. This works with any zone or density value.</p>\r
+
+      <p>Because the Agriculture zone only has 1 density, it can be used with just the zone name: <em>Growify Agriculture</em>.</p>\r
+
+      <p><strong>Troubleshooting</strong></p>\r
+
+      <p>The plugin should write a <em>SC4Growify.log</em> file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r
+
+      <p><strong>Source Code and Support</strong></p>\r
+
+      <p>Plugin thread: <a href=\"https://community.simtropolis.com/forums/topic/763046-growify-plopped-buildings-cheat-dll-plugin/\"
+      rel=\"\">https://community.simtropolis.com/forums/topic/763046-growify-plopped-buildings-cheat-dll-plugin/</a></p>\r
+
+      <p>The plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-growify\" target=\"_blank\" rel=\"external nofollow
+      noopener\">https://github.com/0xC0000054/sc4-growify</a></p>\r
+
+      <p>If you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: <a href=\"https://paypal.me/0xC0000054\"
+      target=\"_blank\" rel=\"external nofollow noopener\">https://paypal.me/0xC0000054</a></p>\r
+
+      <p>Thanks to the few people who have donated to me.</p> </div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_preview\" style=\"\"></div>\r
+
+      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \            <span class=\"jd_screenshot\"> </span>\r
+
+      \        </div> \r
+
+      </body>"
+    downloads: 177
+    images: []
     lastModified: 2024-03-22T03:58:56-07:00
     name: Growify Plopped Buildings Cheat DLL Plugin
+    repository: https://github.com/sebamarynissen/sc4
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/266-growify-plopped-buildings-cheat-dll-plugin
+    version: 1.0.0
   sc4evermore/268-submenus-dll-plugin:
     authors:
       - memo
@@ -226,7 +1738,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 290
+    downloads: 317
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/glr-submenu.jpeg
     lastModified: 2024-05-12T10:59:16-07:00
@@ -294,7 +1806,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 230
+    downloads: 245
     filename: DgVoodoo 2 SC4 Version.zip
     files:
       - DgVoodoo 2 SC4 Version/3c - NVIDIA GPU Fix.txt
@@ -390,7 +1902,7 @@ assets:
       \        </div> \r
 
       </body>"
-    downloads: 417
+    downloads: 458
     images: []
     lastModified: 2024-06-19T03:57:16-07:00
     name: SC4Fix
@@ -398,4 +1910,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/42-dll-mods/278-sc4fix
     version: "8"
 
-timestamp: 2024-09-13T12:10:28.279Z
+timestamp: 2024-10-17T06:14:27.427Z

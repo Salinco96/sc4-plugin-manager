@@ -1,3 +1,5 @@
+import { useMemo } from "react"
+
 import { create } from "zustand"
 
 import { AuthorID } from "@common/authors"
@@ -98,4 +100,20 @@ export const useHistory = create<History>()((set, get) => ({
 
 export const useLocation = (() => useHistory(history => history.current)) as {
   <T extends Page>(): Location<T>
+}
+
+export interface Navigation {
+  openPackageView(packageId: PackageID): void
+}
+
+export function useNavigation(): Navigation {
+  const history = useHistory()
+
+  return useMemo<Navigation>(() => {
+    return {
+      openPackageView(packageId: PackageID) {
+        history.push({ page: Page.PackageView, data: { packageId } })
+      },
+    }
+  }, [history])
 }

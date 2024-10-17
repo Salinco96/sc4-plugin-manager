@@ -1,4 +1,5 @@
 import { Update as UpdateIcon } from "@mui/icons-material"
+import { useTranslation } from "react-i18next"
 
 import { PackageID } from "@common/packages"
 import { VariantID } from "@common/variants"
@@ -18,18 +19,21 @@ export function PackageBannerOutdated({
 
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useVariantInfo(packageId, variantId)
+  const newVersion = variantInfo.update?.version
+
+  const { t } = useTranslation("PackageBanner")
 
   return (
     <PackageBanner
       action={{
-        description: `Update to version ${variantInfo.update?.version}`,
-        label: "Update",
+        description: t("outdated.actions.update.description", { version: newVersion }),
+        label: t("outdated.actions.update.label"),
         onClick: () => actions.updatePackage(packageInfo.id, variantInfo.id),
       }}
-      header="Outdated"
+      header={t("outdated.title")}
       icon={<UpdateIcon />}
     >
-      A new version of this package is available.
+      {t("outdated.message")}
     </PackageBanner>
   )
 }

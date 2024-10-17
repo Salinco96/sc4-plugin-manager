@@ -11,10 +11,99 @@ assets:
     authors:
       - MrTruesage
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>This modd fix now allows all CityHalls to appear in the game at separate intervals (conditions apply - see below) as rewards.  Includes updated LUA script + a maxis LUA script fix.</p>
+
+      <p></p>
+
+      <hr><p><strong><font size="2">Small CityHall conditions:</font></strong></p>
+
+      <p><font size="2">Pop = 15500 or higher<br>Mayor Rating = 40 or higher</font></p>
+
+      <p><br><strong><font size="2">Medium CityHall conditions:</font></strong></p>
+
+      <p><font size="2">Pop = 31000 or higher<br>Mayor Rating = 45 or higher</font></p>
+
+      <p><br><strong><font size="2">Large CityHall conditions:</font></strong></p>
+
+      <p><font size="2">Pop = 62000 or higher<br>Mayor Rating = 50 or higher</font></p>
+
+      <p></p>
+
+      <hr><br><strong><font color="#330099">Other parameter changes:</font><br></strong><font size="2">All Cityhalls now build once plopped (eye candy).</font><p><font size="2"><strong>Small
+      CityHall:</strong><br>Jobs created - 1$, 10$$ and 3$$$<br>CAP increase - CO$$ 1500, CO$$$ 1500, ID 500 and IM 500<br>NIMBY effect - 50,20</font></p>
+
+      <p><font size="2"><strong>Medium CityHall:<br></strong>Jobs created - 3$, 18$$ and 6$$$<br>CAP increase - CO$$ 2500, CO$$$ 2500, ID 500 ,IM 500 and IHT 1000<br>NIMBY effect - 70,32</font></p>
+
+      <p><font size="2"><strong>Large CityHall:<br></strong>Jobs created - 8$, 29$$ and 18$$$<br>CAP increase - CO$$ 5000, CO$$$ 5000, ID 500 ,IM 1000 and IHT 2000<br>NIMBY effect - 90,52</font></p>
+
+      <p><strong><font color="#330099">UI Changes:</font></strong><br><font size="2">Additional information include the following - Tax revenue (<abbr title="Residential, Commercial,
+      Industrial">RCI</abbr> only), Workforce, population, education coverage, health coverage, police coverage and fire coverage.</font></p>
+
+      <p>Cheers!</p>
+
+      						</body>
+    filename: Fixed_CityHalls.zip
+    files:
+      - CityHall Package/CityHall.dat
+      - CityHall Package/CityHall_LText.dat
+      - CityHall Package/ConstantsLUA.dat
+      - CityHall Package/NewsItemsLUA.dat
+      - CityHall Package/Readme.txt
+      - CityHall Package/RewardLUA.dat
+      - CityHall Package/UI.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0011/63b7212c3b9fae0258535998530097c8-CityHall.jpg
+      - https://www.simtropolis.com/objects/screens/0011/63b7212c3b9fae0258535998530097c8-CityHall_Query.jpg
     lastModified: 2004-12-09T04:00:44Z
     name: All 3 CityHalls Modd Reward fix
+    sha256: 876a614eef1b4f08f5df41644740da894a8e290a91e454b805d19714ae69ef2e
+    size: 78322
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2004/thumb-63b7212c3b9fae0258535998530097c8-CityHall.jpg
+    timestamp: 2024-10-15T15:37:00.411Z
+    uncompressed: 86194
     url: https://community.simtropolis.com/files/file/11154-all-3-cityhalls-modd-reward-fix/
+    version: "1.0"
   simtropolis/11222-realistic-resident-mod:
     authors:
       - rustawilliams
@@ -115,10 +204,38 @@ assets:
     authors:
       - Bones1
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+
+
+      							
+      <p>Some people have played SimCity 4 for quite awhile, and never seen a riot. That's not surprising, since you normally have to have a very unhappy city to create a riot.</p>
+
+      <p>This mod makes riots much more common, so that everyone can experience the chaos of anarchy. It forces you to keep your mayor rating significantly above +50 if you want to prevent riots. If
+      sims in parts of your city drop their rating of you below +50, watch out!</p>
+
+      <p>To install, just unzip and drop into your plugin file. To remove, just delete it from your plugin file. It won't have any impact on your cities once it is removed.</p>
+
+      						</body>
+    filename: LotsOfRiots_v2.zip
+    files:
+      - LotsOfRiots_v2.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0019/abe2e5a54dcff7b66106059a0a972de5-LotsOfRiots.jpg
     lastModified: 2005-08-09T20:08:21Z
     name: Lots of Riots Mod
+    sha256: 0162227c2b1ecf61967f900c6ab4fa10b8f5178e4d07173528741f3a15955f44
+    size: 577
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2005/thumb-abe2e5a54dcff7b66106059a0a972de5-LotsOfRiots.jpg
+    timestamp: 2024-10-16T13:46:20.618Z
+    uncompressed: 539
     url: https://community.simtropolis.com/files/file/13318-lots-of-riots-mod/
+    version: "1.0"
   simtropolis/13443-uk-localisation-mod:
     authors:
       - ILL Tonkso
@@ -171,10 +288,56 @@ assets:
     authors:
       - Swamper77
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p><em><strong>This download is obsolete and no longer supported</strong></em></p>
+
+      <p>This file is similar to my Seaport Support File, but it allows various Airports to function without conflicts. This file supports the following airports/airport packs:<br><br>- The game's
+      default airports<br>- Joerg's/Thalassicus' Airport Packs<br>- SimWings Airport Pack (Thalassicus' files are contained in this one)<br>- CdS Seaplane Base (<abbr title="BATT Squad
+      Certification">BSC</abbr>)<br>- SimTropolis Heliport (<abbr title="BATT Squad Certification">BSC</abbr>)<br>- Moganite's Heliports Pack<br><br>For this file to work completely you need to delete
+      the following files from your computer:<br>- "z_SW77-AirportSupport.dat" (Previous version of this file)<br>-"Airport_Terminals_AirportDeveloperType.dat"<br>-
+      "Airport_Terminals_AirportDeveloperTypes.dat"<br>These last two came with the SimWings Airport Pack in the Thalassicus folder of that download.<br><br>Once those three files removed, create the
+      following folder in your MyDocs\SimCity 4\Plugins folder: <strong>ZZZZ_ZSwamper Support Files</strong>. Then copy the "A_SW77-Airport_Terminals_Support.dat" file to this new folder. The removal
+      of the listed files and the installation of the new file should not affect your existing cities. If in doubt, create a back up your cities first.<br><br>NOTES: <br>- No installer this time, as I
+      lack the ability to make them. BarbyW made it for me last time.<br>- For unknown reasons, the SimWings Aiport Pack (SWAP) has to be installed in order to use the 2 <abbr title="BATT Squad
+      Certification">BSC</abbr> airports listed above. The SWAP download is about 5 MB. Sorry about this <img src="https://community.simtropolis.com/assets/emoticons/Sad.gif" alt=":("
+      srcset="https://community.simtropolis.com/assets/emoticons/Sad@2x.gif 2x" width="30" height="30" ></p>
+
+      						</body>
+    filename: SW77-AirportSupportFile.zip
+    files:
+      - A_SW77-Airport_Terminals_Support.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0002/072bedc47c3832a7ad5b7f7c03fdad40-AirportSupport.jpg
     lastModified: 2009-03-06T00:00:00Z
     name: Airport Support File
+    sha256: 46ff7901d5dcb4b9bd723c828849e981d22ffb2e6250fd3dd344d51ab4ed35ad
+    size: 342
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2009/thumb-072bedc47c3832a7ad5b7f7c03fdad40-AirportSupport.jpg
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 280
     url: https://community.simtropolis.com/files/file/14633-airport-support-file/
+    version: "1.0"
   simtropolis/14799-traffic-control-addon:
     authors:
       - Frolius666
@@ -187,10 +350,51 @@ assets:
     authors:
       - Buggi
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p><font face="Arial, Helvetica, sans-serif">I have wanted to update the crime simulation in SC4 to reflect that of a more realistic model for awhile. There was simply TO MUCH crime in a city.
+      The following mod address both the sim and the other desire to elimiate the problem all together.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">This file contains two separate options. NoCrime.dat updates the crime simulator to eliminate crime. This doesn't eliminate the need for your sims to
+      feel "safe". So police stations are still useful.</font></p>
+
+      <p><font face="Arial, Helvetica, sans-serif">The other file is LowCrime.dat which dramatically reduces the amount of crime in your city as well as increasing the overall effectiveness of police
+      stations in reducing crime.</font></p>
+
+      						</body>
+    filename: CrimeMod.zip
+    files:
+      - CrimeReadme.txt
+      - LowCrime.dat
+      - NoCrime.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0024/d75068af38da6649ecd9b61a7196afa7-NickMonkey.jpg
     lastModified: 2006-02-04T19:50:04Z
     name: Crime Simulator Mod
+    sha256: 26b034ae150f0c75d366c0ad160a98fca0ef3e1ee1d6c95c04cbccc6ad4d9fa4
+    size: 2090
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2006/thumb-d75068af38da6649ecd9b61a7196afa7-NickMonkey.jpg
+    timestamp: 2024-10-16T05:34:04.255Z
+    uncompressed: 2447
     url: https://community.simtropolis.com/files/file/14926-crime-simulator-mod/
+    version: "1.0"
   simtropolis/15048-diagonal-jagged-edges-mod:
     authors:
       - pjot
@@ -295,9 +499,7 @@ assets:
       - simtropolis/14400-european-cars-automata-and-family-props-new-instances
     description: "<body>
 
-      \                           \
-
-      \t\t\t\t\t\t\t<p>\r
+      \                            \t\t\t\t\t\t\t<p>\r
 
       \tThese lots spawn automata from the <a href=\"https://community.simtropolis.com/files/file/14400-european-cars-automata-and-family-props-new-instances/\" rel=\"\"><strong>European auto new
       instance mod</strong></a>.\r
@@ -422,7 +624,7 @@ assets:
     authors:
       - DuskTrooper
     category: gameplay
-    lastModified: 2006-07-16T18:02:19Z
+    lastModified: 2024-09-24T01:13:24Z
     name: Block ALL Maxis Buildings by DuskTrooper
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2006/thumb-7a42c164cfbd14c2f1f619de49e8e68e-nomaxis_001.JPG
     url: https://community.simtropolis.com/files/file/16393-block-all-maxis-buildings-by-dusktrooper/
@@ -878,10 +1080,85 @@ assets:
     authors:
       - toroca
     category: gameplay
+    dependencies: []
+    description: "<body>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">
+
+      \t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\"
+      width=\"34\" height=\"53\">
+
+      \t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t\t\t
+
+      \t\t\t\t\t\t\t<p>\r
+
+      \tThis mod was created to make the industrial buildings more realistic in the game. As everyone knows, factories in fact employ hundreds or thousands of people, but in SimCity 4 there is hardly
+      a single operation that offers more than 100 jobs. The number of jobs is quadrupled with the installation of this mod.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tAll heavy, manufacturing and high-tech industries now offer four times the number of jobs. This means that the largest industrial building in the game now provides over 600 instead of just
+      over 150 jobs. Filler buildings (burners, small warehouses, etc.) still have the old values, and I have only modified the larger industrial (anchor) buildings. In addition, I have doubled the
+      amount of revenue of the modified buildings. Otherwise, with the increased number of jobs, industrial demand can be met more quickly, making it difficult to keep industrial cities afloat.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tIn order to make this mod effective, you have to load all the cities of your region(s) after the installation and save them once, otherwise the changes in the job number will not take effect.
+      After opening a city, the demand for industry will most likely fall sharply and many industrial buildings will be abandoned. On the other hand, the demand for residential areas will sooner or
+      later increase sharply due to the increased number of jobs. It is therefore advisable to remove a large part of the industrial zones after loading the cities, so as not to overbalance the
+      game.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \tThis download is compatible with all versions of SimCity 4.\r
+
+      </p>\r
+
+      \r
+
+      <p>\r
+
+      \t<br>\r
+
+      \t<span style=\"font-size:12px;\"><strong>Staff Note:</strong> For technical reasons beyond the author's control, the original file entry was no longer available hosted on the STEX. This
+      re-upload restores it on the grounds of good faith for the benefit of the community.</span>\r
+
+      </p>\r
+
+
+      \t\t\t\t\t\t</body>"
+    filename: industry_quadrupler.zip
+    files:
+      - industry-quadrupler-2.dat
+      - readme_industry_quadrupler.htm
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2017_11/01-industry-quadrupler-main.jpg.c091cbdcd6b393f52323f9d07a0f1619.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2017_11/02-industry-quadrupler-query.jpg.95e76586770c9fe98b3285d551a734e4.jpg
     lastModified: 2017-11-27T03:07:27Z
     name: Industry Quadrupler
+    sha256: c637879c529a1e66a04987e877a5180e8de07372777fcf81a74b487df59f188c
+    size: 8270
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_11/01-industry-quadrupler-main.thumb.jpg.3a858f3c0a4f900cf2f806fcee87441f.jpg
+    timestamp: 2024-10-16T13:57:49.796Z
+    uncompressed: 39867
     url: https://community.simtropolis.com/files/file/21293-industry-quadrupler/
+    version: "2.1"
   simtropolis/21295-game-coding-errors-fix-v21:
     authors:
       - toroca
@@ -918,10 +1195,55 @@ assets:
     authors:
       - Buggi
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>Here is a zip file with all three vehicle types (Land, Air, and Sea) for your editing pleasure. Unzip the DAT files into your plugin's directory and load the game.</p>
+
+      <p>I've edited the Vehicles and Aircraft LUA files in order to show the potential of these files. The Police Car should go very fast for its maxspeed and the Stunt Plane should be able to turn
+      VERY sharply compared to what it could do (which wasn't all that stunt-plane-ish). Feel free to tweak with the settings and get something you're comfortable with.</p>
+
+      <p>A word of caution. Do not set the vehicle speeds to high. Trust me. <img src="https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif" alt=":)"
+      srcset="https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x" width="30" height="30" > Setting them too high will cause you to crash almost constantly. Unless you tweak with
+      the other settings, like accel and turn rate (which also effects slow speeds) very high speeds are not advised. But hey, you can find that out on your own. <img
+      src="https://community.simtropolis.com/assets/emoticons/LlamaWink.gif" alt=";)" srcset="https://community.simtropolis.com/assets/emoticons/LlamaWink@2x.gif 2x" width="30" height="30" > Feel free
+      to post suggested improvements on the Modds forum.</p>
+
+      <p>-Buggi</p>
+
+      						</body>
+    filename: Vehicles.zip
+    files:
+      - UDI_aircraft.dat
+      - UDI_vehicles.dat
+      - UDI_watercraft.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0017/948bd0951a2f9ad55f0639296cdbcc57-default.jpg
     lastModified: 2003-10-03T23:00:00Z
     name: U-Drive-It Vehicles
+    sha256: c797aecb1682df4fc2220adcb2a4bbd4469f726235a68cf6ab5d55d1bfe7bc4f
+    size: 10065
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-948bd0951a2f9ad55f0639296cdbcc57-default.jpg
+    timestamp: 2024-10-16T05:34:04.255Z
+    uncompressed: 10604
     url: https://community.simtropolis.com/files/file/21300-u-drive-it-vehicles/
+    version: "1.0"
   simtropolis/21301-trolcas-train-set:
     authors:
       - Trolca
@@ -1174,10 +1496,42 @@ assets:
     authors:
       - toroca
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+      							
+      <p>Updated Version 2.0 Oct 21/2003</p>
+
+      <p>This mod increases the capacity of toll booths, and there are several versions to choose from to allow users to have higher toll charges if they wish. See the included Readme for further
+      details on version selection.</p>
+
+      <p><br>Compatibility: Rush Hour/Deluxe ONLY</p>
+
+      						</body>
+    filename: TollBoothBoost.zip
+    files:
+      - readme.html
+      - tollboothboost-alternate-faresx1-v2.dat
+      - tollboothboost-alternate-faresx2-v2.dat
+      - tollboothboost-alternate-faresx5-v2.dat
+      - tollboothboost-standard-faresx1-v2.dat
+      - tollboothboost-standard-faresx2-v2.dat
+      - tollboothboost-standard-faresx5-v2.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0011/6115f56dc2b5545471315af5a10c193c-default.jpg
     lastModified: 2003-10-20T23:00:00Z
     name: Toll Booth Booster V2.0
+    sha256: 95ed1f2f036116c69cde91cb34882cb6a521b090f49b9f6700670b819724fc5a
+    size: 9116
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-6115f56dc2b5545471315af5a10c193c-default.jpg
+    timestamp: 2024-10-16T14:10:56.881Z
+    uncompressed: 21672
     url: https://community.simtropolis.com/files/file/21335-toll-booth-booster-v20/
+    version: "1.0"
   simtropolis/21337-landmark-subway-stops:
     authors:
       - DarkMatter
@@ -1190,26 +1544,191 @@ assets:
     authors:
       - toroca
     category: gameplay
+    dependencies: []
+    description: |-
+      <body>
+      							
+      							
+      <p>Updated Version 1.1 Oct 21/2003</p>
+      <p>This mod allows the user to remove radiation pollution from any of the five rewards that produce it. See the included Readme for further details.<br></p>
+      <p>Compatibility: Rush Hour/Deluxe ONLY </p>
+
+      						</body>
+    filename: NoRadiationRewards.zip
+    files:
+      - noradiation-advancedresearchcenter.dat
+      - noradiation-area51.dat
+      - noradiation-armybase.dat
+      - noradiation-diseaseresearchcenter.dat
+      - noradiation-toxicwastedump.dat
+      - readme.html
+    images:
+      - https://www.simtropolis.com/objects/screens/0010/5543b82ffe2764420e400f3e33ddcbbb-default.jpg
     lastModified: 2003-10-20T23:00:00Z
     name: No Radiation Reward v1.1
+    sha256: db2dfe000acdb6e686f5767ad7d6c8b1a3b8333bd4ee50d6b51263e3e2c29e2d
+    size: 6220
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-5543b82ffe2764420e400f3e33ddcbbb-default.jpg
+    timestamp: 2024-10-16T14:10:56.881Z
+    uncompressed: 10075
     url: https://community.simtropolis.com/files/file/21338-no-radiation-reward-v11/
+    version: "1.0"
   simtropolis/21340-functional-landmarks-complete-set-v10:
     authors:
       - toroca
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>
+      	This mod allows you to add jobs to any or all of the Maxis-Made Landmarks, at your own discretion. Your sims can now work in buildings like the Empire State Building, Living Mall, or US Capitol. The buildings still function just like they used to, the only change is the addition of jobs.
+      </p>
+
+
+      <p>
+      	<span style="color:#8e44ad;"><strong>Please see the included readme for full details, as there are some very important compatibility issues. Information is presented that must be adhered to for the game to function correctly.   </strong></span><img alt="*:read:" data-emoticon="1" src="https://community.simtropolis.com/assets/emoticons/default_49.gif" title="*:read:">
+      </p>
+
+
+      <p>
+      	This is the first complete set of Landmarks with Jobs to be released. Questions should be directed to the Modding - Open Modding forum.
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="color:#2980b9;"><strong>Cori Edit:</strong> Keep the original Maxis Landmarks because they are needed for the models. Then ensure the ones in this mod load after the Maxis ones. (Thanks <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/790226-kloudkicker/?do=hovercard" data-mentionid="790226" href="https://community.simtropolis.com/profile/790226-kloudkicker/" rel="">@Kloudkicker</a> and <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard" data-mentionid="651629" href="https://community.simtropolis.com/profile/651629-rsc204/" rel="">@rsc204</a> for posts starting </span><a href="https://community.simtropolis.com/forums/topic/760010-locale-dat-maxis-and-functional-landmarks-conflict/?do=findComment&amp;comment=1742235" rel=""><span style="color:#2980b9;">here</span></a><span style="color:#2980b9;">.) </span>
+      </p>
+
+      						</body>
+    filename: FunctionalLandmarks.zip
+    files:
+      - 63Building.dat
+      - AdlerPlanetarium.dat
+      - Alcatraz.dat
+      - AllInOne.dat
+      - Amalienborg.dat
+      - AmericanMuseumOfNaturalHistory.dat
+      - ArcDeTriomphe.dat
+      - BankOfAmerica.dat
+      - BankOfChinaTower.dat
+      - BigBen.dat
+      - BrandenburgGate.dat
+      - CaliforniaPlaza.dat
+      - CapitolRecordsBuilding.dat
+      - ChryslerBuilding.dat
+      - CNTower.dat
+      - CoitTower.dat
+      - ColumbiaSeafirstCenter.dat
+      - FaneuilHall.dat
+      - Fernsehturm.dat
+      - GatewayArch.dat
+      - GlobeArena.dat
+      - GrandCentralStation.dat
+      - HagiaSophia.dat
+      - HollywoodSign.dat
+      - IndependenceHall.dat
+      - JeffersonMemorial.dat
+      - JohnHancockCenter.dat
+      - Kunjungjon.dat
+      - LincolnCenter.dat
+      - LincolnMemorial.dat
+      - PalaceOfFineArts.dat
+      - PalacioReal.dat
+      - Parthenon.dat
+      - readme.html
+      - RockefellerCenter.dat
+      - RotesRathaus.dat
+      - SanFranciscoCityHall.dat
+      - SchlossNeuschwanstein.dat
+      - SchlossSchoenbrun.dat
+      - SeoulCityHall.dat
+      - SeoulWorldCupStadium.dat
+      - SmithTower.dat
+      - StatueOfLiberty.dat
+      - StBasilsCathedral.dat
+      - Stonehenge.dat
+      - Sungrye-mun.dat
+      - TaipeiFineArtMuseum.dat
+      - TajMahal.dat
+      - TempleExpiatioriDeLaSagradaFamilia.dat
+      - TheAlamo.dat
+      - TheEmpireStateBuilding.dat
+      - TheGreatPyramid.dat
+      - TheGuggenheimMuseum.dat
+      - TheLivingMall.dat
+      - TheSphinx.dat
+      - TheWashingtonMonument.dat
+      - TheWhiteHouse.dat
+      - TokyoTower.dat
+      - TowerOfLondon.dat
+      - USCapitolBuilding.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/0025/e675466ad854f442bf5fefda2d41975a-default.jpg
     lastModified: 2023-12-19T19:57:09Z
     name: Functional Landmarks Complete Set v1.0
+    sha256: d68bdde93ef7afd62dd9f90b3956c6e92f397616a2bec192ad3262fb9bb72d92
+    size: 47890
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2004/thumb-e675466ad854f442bf5fefda2d41975a-default.jpg
+    timestamp: 2024-10-16T14:10:56.881Z
+    uncompressed: 71188
     url: https://community.simtropolis.com/files/file/21340-functional-landmarks-complete-set-v10/
+    version: "1.0"
   simtropolis/21342-opera-house-fix:
     authors:
       - toroca
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+      							
+
+
+
+      							
+      <p>This mod fixes the Opera House, which has a capacity MUCH too lowfor large cities in SimCity 4.  Currently, the Opera House can go overcapacity and inhibit city growth, and you'd never even
+      know it because the Opera House doesn't report its usage statistics.  This mod changes that. Please see the readme for full details, including installation instructions.</p>
+
+      <p>Most of the discussion about this mod has taken place in the following thread, so it may be best to post questions or comments there:</p>
+
+      <p><a href="https://www.simtropolis.com/idealbb/view.asp?mode=viewtopic&amp;topicID=48119" rel="external
+      nofollow">https://www.simtropolis.com/idealbb/view.asp?mode=viewtopic&amp;topicID=48119</a></p>
+
+      						</body>
+    filename: OperaHouse.zip
+    files:
+      - OperaHouse.dat
+      - readme.html
+    images:
+      - https://www.simtropolis.com/objects/screens/0021/c007950f6430d08d70636a9dbad3a37c-default.jpg
     lastModified: 2004-03-31T00:00:00Z
     name: Opera House Fix
+    sha256: 8417c8cf7d8f87641202e05df3fbc028db20d3c7b5ae261777eb9c20a15770a2
+    size: 5465
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2004/thumb-c007950f6430d08d70636a9dbad3a37c-default.jpg
+    timestamp: 2024-10-16T14:10:56.881Z
+    uncompressed: 10431
     url: https://community.simtropolis.com/files/file/21342-opera-house-fix/
+    version: "1.0"
   simtropolis/21344-prevent-ir-lots:
     authors:
       - GrampaAl
@@ -1334,12 +1853,13 @@ assets:
     authors:
       - T Wrecks
     category: gameplay
-    dependencies: []
+    dependencies:
+      - sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1
     description: >-
       <body>
-
+      							
       								<div style="position:absolute; top:0px; right:0px;">
-                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
       								</div>
 
 
@@ -1358,6 +1878,7 @@ assets:
 
 
 
+      							
 
 
 
@@ -1375,28 +1896,7 @@ assets:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      							
       <p>
       	<strong><big>Prop Names and Query Fix</big></strong>
       </p>
@@ -1451,7 +1951,7 @@ assets:
 
 
       <p>
-      	This fix can actually be used as a <strong>replacement </strong>of the following files (i.e. you no longer need them):
+      	This fix can actually be used as a <strong>replacement </strong>of the following files (i.e. you no longer need them**):
       </p>
 
 
@@ -1459,6 +1959,11 @@ assets:
       	- <strong>bldgprop_vol1.dat </strong>(sometimes called "<strong>SimCity Buildings as Props.dat</strong>" or similar)<br>
       	- <strong>bldgprop_vol2.dat </strong>(sometimes called "<strong>Rush Hour Buildings as Props.dat</strong>" or similar)<br>
       	- <strong>Plugin_landmarks_and_other_missing_Props.dat </strong>(an assortment of building props Maxis had forgotten, found <a href="https://www.simtropolis.com/stex/details.cfm?id=21286" rel="external">here</a>)
+      </p>
+
+
+      <p>
+      	** Bear in mind you still need to keep the <strong>Maxis DLC Props.dat (</strong>from the<strong> </strong><a href="https://www.sc4evermore.com/index.php/downloads/download/40-maxis/14-maxis-buildings-as-props-and-dlc-props-v2-1" rel="external nofollow">Maxis Buildings As Props and DLC Props v2.1</a> upload) as that is a relatively new 3rd party creation and isn't covered by this upload.
       </p>
 
 
@@ -1507,24 +2012,30 @@ assets:
       	Should you be concerned that this download might violate any rights held by Maxis, rest assured that I checked with dirk prior to uploading, and obtained his official permission to upload this file. Let me use this occasion to thank dirk for his prompt reply and his kind consideration!
       </p>
 
+
+      <p>
+      	<span style="color:#2980b9;"><span style="font-size:11px;">14.10.2024 - updated by Tyberius06 (see changelog)</span></span>
+      </p>
+
       						</body>
-    filename: MaxisPropNamesAndQueryFix.zip
+    filename: T Wrecks - Maxis Prop Names And Query Fix.zip
     files:
-      - PropFix_2_AFTER.jpg
-      - PropFix_1_BEFORE.jpg
-      - All Maxis building props with proper names.dat
+      - ~Documents/T Wrecks_Readmes/PropFix_1_BEFORE.jpg
+      - ~Documents/T Wrecks_Readmes/PropFix_2_AFTER.jpg
+      - ~Documents/T Wrecks_Readmes/T Wrecks - Maxis Prop Names And Query Fix_readme.txt
+      - z_Maxis Prop Names And Query Fix/z_All Maxis building props with proper names.dat
     images:
       - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_1_BEFORE.jpg
       - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_2_AFTER.jpg
-    lastModified: 2023-07-21T10:03:18Z
+    lastModified: 2024-10-14T12:05:00Z
     name: Maxis Prop Names and Query Fix
-    sha256: 505c30cf671ad4f75cde50f2e44bb854b8b0863e5649b568813096b141c726cd
-    size: 97969
+    sha256: e11b61f0e20857d46f7f015641f023e28f3967b84e21d2ca763b71ca799d5ba8
+    size: 102683
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2009/thumb-0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_1_BEFORE.jpg
-    timestamp: 2024-07-24T12:13:33.510Z
-    uncompressed: 463635
+    timestamp: 2024-10-15T15:05:51.656Z
+    uncompressed: 467403
     url: https://community.simtropolis.com/files/file/22400-maxis-prop-names-and-query-fix/
-    version: "1.0"
+    version: "1.01"
   simtropolis/22497-bigger-news-window:
     authors:
       - z1
@@ -2732,10 +3243,89 @@ assets:
     authors:
       - Cougar2004
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p><strong>Purpose</strong></p>
+
+      <p>This mod fixes a problem with the default Maxis Space Port, which claims it "Provides a boost to high-tech industry" however, it does not. Maxis forgot to include this boost, therefore it
+      boosts nothing but costs and some slight commercial desirability.   </p>
+
+      <p> </p>
+
+      <p>This mod fixes that. A significant yet realistic (non-radical) boost to High Tech Industry is now provided. Placing the Space Port now provides 150,000 High-Tech Industry Cap Relief. This is
+      well within the range of other similar buildings such as the Advanced Research Center, University, and Marina. </p>
+
+      <p> </p>
+
+      <p><strong>Alternate Version</strong></p>
+
+      <p>For those who feel the default Maxis Space Port uses far too much power for its size and function, a second Mod file is provided in this download. In addition to fixing the High-Tech Boost,
+      this ALT Mod version lowers power requirements from the default 700 to 219. This should allow most cities to stay safely under the power abilities of a single power plant with the Space Port
+      placed.</p>
+
+      <p> </p>
+
+      <p>Additionally, the included ALT Mod version also increases the Space Port from 100 R$ Jobs to a more realistic spread of 8 R$, 104 R$$, and 16 R$$$, to cover the range of employees from
+      Astronauts down to Janitorial staff. Water consumed is decreased slightly from 360 to 248. Monthly Cost is lowered from $400/mo to $300/mo. And Bulldoze Cost of $4200 is now $3900. No other
+      changes have been made to how the Space Port looks or functions.</p>
+
+      <p> </p>
+
+      <p><strong>Files Included - ( *** USE ONLY </strong><strong><span style="color:#ff0000;">ONE </span></strong><strong>of these *** )</strong></p>
+
+      <p>- 'SpacePort Fix Mod.dat' (Fix only)</p>
+
+      <p>- 'SpacePort Fix Alt Mod.dat' (Fix + some additional changes)</p>
+
+      <p><strong>Compatibility</strong></p>
+
+      <p>SimCity 4 Deluxe or Rush Hour <span style="color:#ff0000;"><span style="text-decoration:underline;">Required</span></span><span style="color:#ff0000;"> </span>for this Mod. </p>
+
+      <p>This mod is safe to use with all other known Mods released as of this date on the STEX.<em> (The AC Functional Airports Mod found at SC4Devotion.com modds this building in a large pack, so
+      you may only use this Mod or that one.)</em></p>
+
+      <p> <strong>Dependencies </strong></p>
+
+      <p>None.</p>
+
+      <p> </p>
+
+      <p><strong>Additional Notes:</strong></p>
+
+      <p>See included <em>ReadMe.txt</em> for Installation, Uninstall, and further details.</p>
+
+      <p>Impact of this Mod will only be seen when you have met all SC4 requirements for High-Tech Industry and have placed the Space Port<em> (from Rewards Menu)</em> in your city, with this Mod
+      installed.</p>
+
+      						</body>
+    filename: SpacePort Fix Mod.zip
+    files:
+      - SpacePort Fix Mod (use only one of these)/Spaceport Fix Alt Mod.dat
+      - SpacePort Fix Mod (use only one of these)/Spaceport Fix Mod.dat
+      - Readme.txt
+      - SpacePort-Fix-Mod-2.png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_03_2012/a1b429c947a080f7bafab598698c4908-spaceport-fix-mod-1.png
+      - https://www.simtropolis.com/objects/screens/monthly_03_2012/ad9286472eebc4b3dca26e63b9078dec-spaceport-fix-mod-2.png
+      - https://www.simtropolis.com/objects/screens/monthly_03_2012/07d264be08a30305f6943efd92a984e1-spaceport-fix-mod-a.png
     lastModified: 2012-03-05T22:34:01Z
     name: Space Port Fix Mod
+    sha256: da535d39a03150400545bf9b563fdf91a1f4f8fd82722bf7175ee7da3b3f2772
+    size: 32189
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2012/thumb-a1b429c947a080f7bafab598698c4908-spaceport-fix-mod-1.png
+    timestamp: 2024-10-17T08:57:16.473Z
+    uncompressed: 35767
     url: https://community.simtropolis.com/files/file/27340-space-port-fix-mod/
+    version: "1.0"
   simtropolis/27521-hbs-peach-style-region-legend-mod:
     authors:
       - Heblem
@@ -3545,10 +4135,87 @@ assets:
     authors:
       - HippoTank
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+      							
+
+      							
+      <p>
+      	HippoTank Demand Fix
+      </p>
+
+
+      <p>
+      	This is just the fix for the demand values for the Medical Clinic, Solar Power Plant, Nuclear Power Plant.
+      </p>
+
+
+      <p>
+      	<br>
+      	What is actually happening<br>
+      	----------------------------------------------
+      </p>
+
+
+      <p>
+      	&gt; the game creates demand for a particular bracket of job but does not actually employ them.
+      </p>
+
+
+      <p>
+      	&gt; The reason for this is because of a bug. In SimCity 4 the buildings that create demand (available jobs) does so by separating them by wealth bracket. There will be a certain about of jobs available for $ sims, $$ sims, and $$$ sims. This is displayed in a ratio. E.g. crude example- 20:50:30 means there are 20 jobs avialable for $ sims, 50 jobs for $$ sims and 30 jobs for $$$ sims.
+      </p>
+
+
+      <p>
+      	&gt; The bug occurs when the data in game has two ratios with the same value. It causes the game to ignore one of the values. High Tech Industry has the ratio 10:80:10, and as a result of this bug it causes the $$$ part of the ratio to be ignored resulting in no $$$ sims being employed.
+      </p>
+
+
+      <p>
+      	&gt; The other ratios with duplicate values are the Solar Power Plant, Nuclear Power Plant and the Medical Clinic. 
+      </p>
+
+
+      <p>
+      	&gt; THIS ONLY FIXES THOSE THREE AND NOT HIGH TECH DEMAND. I have a download bundle for those fixes included.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	Medical Clinic, Solar Power Plant, Nuclear Power Plant all missing jobs<br>
+      	----------------------------------------------<br>
+      	Instructions: Put HT_DemandFix.dat plugin in game (Program Files) plugins folder
+      </p>
+
+      						</body>
+    filename: HippoTank_Demand_Fix.zip
+    files:
+      - HippoTank Demand Fix/Plugins/HT_DemandFix.dat
+      - HippoTank Demand Fix/readme.txt
+      - HippoTank Demand Fix/screenshot.png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2015_11/screenshot.png.2af44fb2639cc175dbf54b582ea81dbe.png
     lastModified: 2021-02-05T09:38:22Z
     name: HippoTank Demand Fix
+    sha256: 5193d824a2e7359099431f959b0f88876d5a04cdaebb41c388f7f40c66da845d
+    size: 281121
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_11/screenshot.thumb.png.4c63d5b9cb065aae208b306490b28ae0.png
+    timestamp: 2024-10-17T08:57:16.473Z
+    uncompressed: 283673
     url: https://community.simtropolis.com/files/file/30836-hippotank-demand-fix/
+    version: "1.0"
   simtropolis/30883-sc4fix-third-party-patches-for-sc4:
     authors:
       - simmaster07
@@ -3771,10 +4438,129 @@ assets:
     authors:
       - simmaster07
     category: gameplay
+    dependencies:
+      - simtropolis/11154-all-3-cityhalls-modd-reward-fix
+      - simtropolis/32047-broken-sc4macinjector
+      - simtropolis/30883-sc4fix-third-party-patches-for-sc4
+      - simtropolis/21118-simcity-4-extra-cheats-plugin
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	<strong>This mod may not be compatible with the "<a href="https://community.simtropolis.com/files/file/11154-all-3-cityhalls-modd-reward-fix/" rel="">All 3 CityHalls Modd Reward fix</a>". This plugin is intended to supersede that file's behavior.</strong>
+      </p>
+
+
+      <p>
+      	This is a DLL for SimCity 4 that makes the City Hall reward upgradeable. Instead of implementing the three City Hall stages as separate reward lots, this mod implements Maxis' originally intended behavior of actually replacing the City Hall lot as new stages are unlocked. It also prompts the user with advisor messages asking if they want to upgrade the reward, just like the airport upgrade behavior.
+      </p>
+
+
+      <p>
+      	This mod is part of my effort to deconstruct the internal game interfaces. The development thread can be found at <a href="https://community.simtropolis.com/forums/topic/70495-game-framework-compatible-dll-loading-and-other-modding-discoveries/" rel="">this link</a>. Source code is <a href="https://github.com/nsgomez/gzcom-dll/blob/f30177d86f56a901e9662c1e63942a9f3a4e2dee/gzcom-dll/src/cGZCityHallUpgradeDllDirector.cpp" rel="external nofollow">over here</a>.
+      </p>
+
+
+      <p>
+      	<b>Behavior</b><br>
+      	The user is prompted monthly to upgrade to stage 2 when the city's population reaches 45,000, and to upgrade to stage 3 at 95,000. The mod also adds a cheat code, "UpgradeCityHall," that forces the upgrade prompt to appear regardless of population.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong><br>
+      	Unzip to your plugins folder.
+      </p>
+
+
+      <ul><li>
+      		On Windows and Mac versions <em>other than the App Store</em>, this is in Documents\SimCity 4\Plugins.
+      	</li>
+      	<li>
+      		On the Mac App Store version, this is in ~/Library/Containers/com.aspyr.simcity4.appstore/Data/Documents/SimCity 4/Plugins.
+      	</li>
+      </ul><p>
+      	Create these directories if they do not exist yet.
+      </p>
+
+
+      <p>
+      	<strong>Mac users</strong><br>
+      	You must install <a href="https://community.simtropolis.com/files/file/32047-sc4macinjector-a-dynamic-code-plugin-loader-for-mac/" rel="">SC4MacInjector</a> before using this mod or else nothing will happen.
+      </p>
+
+
+      <p>
+      	<strong>Compatibility</strong><br>
+      	Tested and working on 1.1.641.0 (Steam/GOG/Origin) on Windows and the Steam version of SC4 for Mac. Also works in combination with <a href="https://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/" rel="">SC4Fix</a> and the <a href="https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/" rel="">Extra Cheats DLL</a>. Untested but should work with any version of SimCity 4 Deluxe or SimCity 4 w/ Rush Hour.
+      </p>
+
+      						</body>
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_10/cityhall2.png.4e8c754a248bf1b52b5dc684a0c59b5a.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_10/cityhall3.png.8b8fd43297237fa33ead9f816a88e66d.png
+      - https://www.simtropolis.com/objects/screens/monthly_2016_10/cityhall1.png.e28e6d30e2b13e4b1fc3a59f640c3007.png
     lastModified: 2017-12-27T03:47:03Z
     name: Real Upgradeable City Halls
+    repository: https://github.com/nsgomez/gzcom-dll
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_10/cityhall2.thumb.png.7689a415d866be1a196e8157b941e9a5.png
+    timestamp: 2024-10-15T15:37:00.411Z
     url: https://community.simtropolis.com/files/file/31339-real-upgradeable-city-halls/
+    variants:
+      "169470":
+        filename: UpgradeableCityHalls.zip
+        files:
+          - UpgradeableCityHalls.dat
+          - UpgradeableCityHalls.dll
+        sha256: f64d4fbc33c93941b37ab55ece4a820cd6f70eb10606a8bc1fcb4dee20366dcb
+        size: 41510
+        uncompressed: 167572
+      "169471":
+        filename: UpgradeableCityHalls - Mac Only.zip
+        files:
+          - UpgradeableCityHalls.dat
+          - UpgradeableCityHalls.so
+        sha256: 67e54df4628a22311ea41e5f13dd6934c0bbc58936b6283e73b29ebeae9eb91a
+        size: 45861
+        uncompressed: 192777
+    version: 1.1.0
   simtropolis/31365-city-quotes-text-loading-mod:
     authors:
       - Ducio
@@ -5347,18 +6133,367 @@ assets:
     authors:
       - Jidan
     category: gameplay
-    lastModified: 2020-12-18T01:44:51Z
+    lastModified: 2024-10-12T13:57:31Z
     name: Cap Lifter
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_12/5fd21398225e0_chfzdn_CapLifter-Preview01.thumb.jpg.6132440461dd71cc731a45c8e5a7c862.jpg
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/Banner.thumb.png.7c691172e287531931a9c2ff74f25d16.png
     url: https://community.simtropolis.com/files/file/33986-cap-lifter/
   simtropolis/34027-coris-no-kickout-lower-wealth-mod:
     authors:
       - Cyclone Boom
     category: gameplay
+    dependencies:
+      - simtropolis/14931-less-abandonment
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+      							
+      							<div style="float:left; width:280px; padding:10px; cursor:default;">
+      	<span style="display:none;">CoriBoom™ Productions </span>
+      	<div>
+      		<a href="https://community.simtropolis.com/tags/CoriBoom/" rel=""><img alt="CoriBoom_Productions_Logo.png" class="ipsImage" src="https://www.simtropolis.com/library/misc/CoriBoom_Productions_Logo.png" style="width:225px; height:auto; border:none;"></a>
+      	</div>
+
+      	<div>
+      		<span style="margin-left:2px; font-size:13px; color:#909CB0; text-shadow:1px 1px 1px #DBFBFE;"><em>Proudly Presents...</em></span><span style="display:none;"> </span>
+      	</div>
+
+      	<div style="margin-bottom:10px;">
+      		<span style="display:block; font-weight:800; margin-top:0px;"><span style="font-family:Verdana,Geneva,sans-serif; font-size:22px; color:#0D2794;"><em><span style="color:#FF00FF;">Cori's</span> No Kickout</em></span></span><span style="display:none;">. </span>
+      	</div>
+      </div>
+
+
+      <p>
+      	<span style="font-size:18px; color:#FF00FF;"><strong>Give yourself <span style="color:#0D2794;"><em>much more</em></span> mayoral control.</strong></span><span style="display:none;"> </span>
+      </p>
+
+
+      <p>
+      	In our 5th official <em><span style="color:#FF00FF;">Cori</span><span style="color:#1F4EAC;">Boom</span></em>™ release to the STEX, <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/737259-corinamarie/?do=hovercard" data-mentionid="737259" href="https://community.simtropolis.com/profile/737259-corinamarie/" rel="">@CorinaMarie</a> and I are proud to finally present a mini (yet magnificent) mod which allows much finer control of city simulation growth:
+      </p>
+
+
+      <p>
+      	<span style="font-size:42px; font-family:Georgia,serif; color:#3B242B; text-shadow:1px 1px 1px #FF00FF, 1px 1px 42px #FF00FF; cursor:help;"><strong><abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr></strong></span>
+      </p>
+
+
+      <p>
+      	This mod grants the flexibility to have all 3 wealth levels (low, medium, high) coexist in any given location, without the higher wealths gobbling up the lower ones. This is a vast improvement over the default game setting, where the two lowest wealths can upgrade to a higher wealth. While this behaviour is desirable in certain situations, it forces you (the mayor) to mark lots as historical as a preventative measure. This can be a tedious process which soon becomes a boring chore. <span style="font-size:12px;">(Like washing dishes.)</span>
+      </p>
+
+
+      <p>
+      	The default automatic upgrades are a common cause of population instability and a major factor causing the dreaded <em>no job zots</em>. In regular gameplay, a higher wealth and stage often takes over before the conditions are suitable. <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> fixes the method which the SC4 simulation uses. By doing so, the control is now at your fingertips to decide when a wealth level should be allowed to upgrade and replace a lower wealth.
+      </p>
+
+
+      <p>
+      	For example with houses, it means R$ can coexist within an area containing R$$ homes, and even R$$$ mansions too! There's no need to mark each as historical for preventing them from being destroyed and replaced with higher wealth. This finer control means there's <em>significantly</em> less micro management involved to ensure <abbr title="Residential, Commercial, Industrial">RCI</abbr> growth sustainability.
+      </p>
+
+
+      <p>
+      	Then if one wishes, the bulldozing tool is useful for giving the green light for a higher wealth to take its place. At this point, certain zones will reassess and grow what the simulation deems as appropriate (based on the <abbr title="Residential, Commercial, Industrial">RCI</abbr> demand and local desirability factors).
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px; color:#0D2794;"><strong>What does "</strong></span><span style="color:#FF00FF;"><span style="font-size: 20px;"><strong>Kickout</strong></span></span><span style="font-size:20px; color:#0D2794;"><strong>" mean?</strong></span>
+      </p>
+
+
+      <p>
+      	The standard SC4 growth simulation automatically allows lower wealths to be replaced by higher wealth levels. This means they can be taken over and redeveloped by a higher wealth at any time the game decides. When this happens, the process of such is described as "kicking out" the lower wealth level.
+      </p>
+
+
+      <p>
+      	What <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> does is prevent this from happening by setting a Boolean<span style="font-family:Courier New,Courier,monospace;"> <strong>False</strong> </span>toggle.
+      </p>
+
+
+      <p>
+      	In the <a href="https://www.wiki.sc4devotion.com/index.php?title=Exemplar_properties#Building_Development_Simulator" rel="external nofollow" target="_blank">exemplar</a> property:<br>
+      	<strong>Tract Developer Kick Out Lower Wealth</strong>
+      </p>
+
+
+      <p>
+      	Name Value:<br>
+      	<span style="font-family:Courier New,Courier,monospace;"><strong>0x47E2C540</strong></span>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px; color:#0D2794;"><strong>Does </strong></span><span style="color:#FF00FF;"><span style="font-size: 20px;"><strong><abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr></strong></span></span><span style="font-size:20px; color:#0D2794;"><strong> prevent higher wealth ever growing?</strong></span>
+      </p>
+
+
+      <p>
+      	No, not at all. Any new zone will develop just as before based on economic conditions in your city. And you now have the choice of when any given grown lot should be allowed to redevelop.
+      </p>
+
+
+      <p>
+      	Tax rates can be adjusted accordingly to encourage the development of certain <abbr title="Residential, Commercial, Industrial">RCI</abbr> types. This is related to the methods explained in Cori's <a href="https://community.simtropolis.com/forums/topic/757812-selective-residential-revamping/" rel="">Residential Revamping</a> tutorial. Then should one later wish to upgrade an area, it's possible to selectively bulldoze. At that point, it provides higher wealths an opportunity to reconsider and grow in place when they're able.
+      </p>
+
+
+      <p>
+      	As a result, it gives you (as mayor) the ability to decide if you wish to grow something else instead.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="color:#FF00FF;"><span style="font-size: 20px;"><strong>Power</strong></span></span><span style="font-size:20px; color:#0D2794;"><strong> of the Bulldozer</strong></span>
+      </p>
+
+
+      <p>
+      	Via the bulldozer tool, it gives us an <strong><em>expansive freedom</em></strong> to develop <abbr title="Residential, Commercial, Industrial">RCI</abbr> how we wish to. <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> isn't a restrictive mod, but a revision of the simulation and this puts the city design decisions in our own hands.
+      </p>
+
+
+      <p>
+      	The bulldozer is our friend for this very reason. It means how if wanting to redevelop areas to higher capacity, then using the tool makes way to allow R$$ or even R$$$ buildings too, because then the demand and desirability decides. This applies to residential, commercial and industrial inclusive.
+      </p>
+
+
+      <p>
+      	For residential and if wanting R$ to stay, then they will do. This could be useful for maintaining a lower wealth area of housing. However, once bulldozing to bare zoning and it's a free for all again. <img alt="*;)" data-emoticon="1" height="15" src="https://community.simtropolis.com/assets/emoticons/default_2.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_2@2x.gif 2x" title="*;)" width="15">
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px; color:#0D2794;"><strong>Completely </strong></span><span style="color:#FF00FF;"><span style="font-size: 20px;"><strong><abbr title="Colossus Addon Mod">CAM</abbr></strong></span></span><span style="font-size:20px; color:#0D2794;"><strong>patible</strong></span>
+      </p>
+
+
+      <p>
+      	<abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> is fully compatible with the <abbr title="Colossus Addon Mod">CAM</abbr> too.
+      </p>
+
+
+      <p>
+      	By comparing the properties in the exemplar which <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> uses too, we've made sure that the same properties are added along with the setting toggled to prevent lower wealths being kicked out. Just makes sure <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> loads after <abbr title="Colossus Addon Mod">CAM</abbr> does, so that way it'll be applied.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px; color:#0D2794;"><strong>A Couple of </strong></span><span style="color:#FF00FF;"><span style="font-size: 20px;"><strong>Things</strong></span></span>
+      </p>
+
+
+      <p>
+      	<span style="font-size:18px; color:#A70E5D;">Thing <strong>#1</strong></span>
+      </p>
+
+
+      <p>
+      	<abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> works very well combined alongside <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/48348-bones1/?do=hovercard" data-mentionid="48348" href="https://community.simtropolis.com/profile/48348-bones1/" rel="">@Bones1</a>'s <a href="https://community.simtropolis.com/files/file/14931-less-abandonment/" rel="">Less Abandonment</a> mod.
+      </p>
+
+
+      <p>
+      	This is recommended when <abbr title="Colossus Addon Mod">CAM</abbr> is not installed. (Which has its own version of Less Abandonment built in.)
+      </p>
+
+
+      <p>
+      	What the "Less Abandonment" mod does is make sure the city is ready for <abbr title="Residential, Commercial, Industrial">RCI</abbr> development when the demand for growth is much more likely to be sustainable.
+      </p>
+
+
+      <p>
+      	As such it fits along well in harmony with what <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> does. It sets the threshold higher for when buildings will grow, which means they're more likely to stick around once they do sprout.
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="font-size:18px; color:#A70E5D;">Thing <strong>#2</strong></span>
+      </p>
+
+
+      <p>
+      	A caveat you should be aware of:
+      </p>
+
+
+      <p>
+      	<abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> does <span style="color:#E74C3C;"><strong>not</strong></span> prevent buildings from upgrading <strong>within their own wealth class</strong>.
+      </p>
+
+
+      <p>
+      	This means if you have some lower capacity building you want to keep for aesthetic reasons, you'll still need to click the historical option for it. <img alt="*;)" data-emoticon="1" height="15" src="https://community.simtropolis.com/assets/emoticons/default_2.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_2@2x.gif 2x" title="*;)" width="15">
+      </p>
+
+
+      <p>
+      	It is rarer for this to happen in a stable city, but it does occur and well worth being mindful of.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px; color:#0D2794;"><strong>Complete </strong></span><span style="color:#FF00FF;"><span style="font-size: 20px;"><strong><abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr></strong></span></span><span style="font-size:20px; color:#0D2794;"><strong> Overview</strong></span>
+      </p>
+
+
+      <p>
+      	To learn more of the advantages to using <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr>, see the following thread we made:<br>
+      	 
+      </p>
+
+      <iframe allowfullscreen="" class="ipsEmbed_finishedLoading" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed430305266" scrolling="no"
+      src="https://community.simtropolis.com/forums/topic/759530-coris-no-kickout-lower-wealth-mod-now-campatible/?do=embed" style="overflow: hidden; height: 330px; max-width: 502px;"></iframe>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	It contains picture previews to show the real benefits of what <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> provides. Also this doubles up as the official <em>Support Thread</em> if you've any comments or questions we can answer.
+      </p>
+
+
+      <p>
+      	Replying to the Comments section here on the file entry is fine too if you'd prefer.
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+
+      <p>
+      	<span style="font-size:20px; color:#0D2794;"><strong>Installation</strong></span>
+      </p>
+
+
+      <p>
+      	<span style="display:inline-block; padding:12px; background:#E9FFDE; border:1px solid #53D450; border-radius:5px; color:#2C3E50;"><i class="fa fa-check-circle fa-lg" style="color:#53D550; cursor:default;"> </i> <em>This mod uses the standard process of installing SC4 content.</em></span>
+      </p>
+
+
+      <p>
+      	<br>
+      	Copy the <strong>Cori's_No_Kickout_Lower_Wealth_CAMpatible.dat</strong> file into your Plugins folder.
+      </p>
+
+
+      <p>
+      	If using the <abbr title="Colossus Addon Mod">CAM</abbr>, make sure <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> loads after it since the exemplar is the same. To make sure, a good idea is to place <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> directly inside the same folder <abbr title="Colossus Addon Mod">CAM</abbr> is installed to.
+      </p>
+
+
+      <p>
+      	One way is to place our file in this folder:<br>
+      	<span style="font-family:Courier New,Courier,monospace; font-size:16px;">Documents\SimCity 4\Plugins\a_CAM\<strong>a_Core</strong></span>
+      </p>
+
+
+      <p>
+      	<br>
+      	Or as one of the resident experts <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.simtropolis.com/profile/686092-twalsh102/?do=hovercard" data-mentionid="686092" href="https://community.simtropolis.com/profile/686092-twalsh102/" rel="">@twalsh102</a> posted in our thread:
+      </p>
+
+
+      <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="1736169"
+      data-ipsquote-contentid="759530" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1598594382" data-ipsquote-userid="686092" data-ipsquote-username="twalsh102">
+      	<div class="ipsQuote_citation">
+      		On 8/28/2020 at 6:59 AM, twalsh102 said:
+      	</div>
+
+      	<div class="ipsQuote_contents">
+      		<p>
+      			By default, all <abbr title="Colossus Addon Mod">CAM</abbr> files are installed in a folder titled a__CAM. As long as you put Cori's mod in a folder that comes alphabetically after the <abbr title="Colossus Addon Mod">CAM</abbr> folder, it will load after <abbr title="Colossus Addon Mod">CAM</abbr>.
+      		</p>
+
+      		<p>
+      			So I would just create a folder with the same name as Cori's mod, and place the .dat file in that folder. If you just took that dat file and placed it as is at the root of your Plugins folder (not inside any other folder), it would install before <abbr title="Colossus Addon Mod">CAM</abbr>.
+      		</p>
+      	</div>
+      </blockquote>
+
+
+      <p>
+      	<br>
+      	That way it'll make certain the loading order is correct.
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="color:#FF00FF;">We hope you enjoy using <abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr> in your cities!</span>
+      </p>
+
+
+      <p>
+      	<img alt="*:thumb:" data-emoticon="1" height="20" src="https://community.simtropolis.com/assets/emoticons/default_44.gif" srcset="https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x" title="*:thumb:" width="33">
+      </p>
+
+
+      <p>
+      	<br>
+      	<span style="display:block; padding:5px; background:#F7F7F7; border:1px solid #FF00FF; border-radius:5px; font-family:Courier New,Courier,monospace; font-size:12px; color:#0D2794; text-align:center;">// CoriBoom™ Productions Release \\<br>
+      	<strong>Cori's No Kickout Lower Wealth Mod v1.0</strong> — (02 Jan 2021)</span>
+      </p>
+
+      						</body>
+    filename: Cori's No Kickout Lower Wealth Mod_v1.0.zip
+    files:
+      - Cori's_No_Kickout_Lower_Wealth_CAMpatible.dat
+      - ReadMe - Cori's No Kickout Lower Wealth Mod v1.0.txt
+      - _NKO_Logo.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/_NKO_Logo.jpg.d31e759344b27ccfec680868dfb9a7d7.jpg
     lastModified: 2021-01-02T14:05:00Z
     name: Cori's No Kickout Lower Wealth Mod
+    sha256: 626e8648537c08d97ae05da88b3413952aafaa631e47cc01f38708f17b2315fb
+    size: 307676
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_01/_NKO_Logo.thumb.jpg.8d83f148688d10b6eabdb5d25c609a25.jpg
+    timestamp: 2024-10-16T08:40:44.039Z
+    uncompressed: 312452
     url: https://community.simtropolis.com/files/file/34027-coris-no-kickout-lower-wealth-mod/
+    version: "1.0"
   simtropolis/34687-rezonepluspluscost:
     authors:
       - Leo --
@@ -5435,7 +6570,7 @@ assets:
     authors:
       - Ryuu Tenno
     category: gameplay
-    lastModified: 2023-07-29T05:32:28Z
+    lastModified: 2024-10-11T06:25:18Z
     name: Water Pollution Index
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_07/64c4a46c19fbf_WaterPollutionIndex-cityview.thumb.jpg.881f40dd007cda177f128b45ac1597b4.jpg
     url: https://community.simtropolis.com/files/file/35581-water-pollution-index/
@@ -5451,26 +6586,613 @@ assets:
     authors:
       - Null 45
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that adds a Humane Society ordinance to the game.
+      </p>
+
+
+      <p>
+      	This ordinance is based on the Humane Society ordinance suggestion in <a href="https://community.simtropolis.com/forums/topic/26215-ordinances-complete-list/?do=findComment&amp;comment=703433" rel="">this</a> post, and has the following properties:
+      </p>
+
+
+      <p>
+      	<strong>Availability Requirements:</strong> At least 1 hospital or clinic. The original suggestion did not include this, but I think it makes sense given the per hospital/clinic cost.<br>
+      	<strong>Expense:</strong> Base cost of $-50/month plus $-5 per hospital/clinic.<br>
+      	<strong>Effects:</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Increases mayor rating by 5 points.
+      	</li>
+      	<li>
+      		Reduces crime by 5%.
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <p>
+      	    Windows 10 or later
+      </p>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have to ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <p>
+      	    1. Close SimCity 4.<br>
+      	    2. Copy <em>SC4HumaneSocietyOrdinance.dll</em> and <em>SC4HumaneSocietyOrdinance.ini</em> into the Plugins folder in the SimCity 4 installation directory.<br>
+      	    3. Start SimCity 4.
+      </p>
+
+
+      <p>
+      	<strong>Changing the plugin text</strong>
+      </p>
+
+
+      <p>
+      	Because plugin DLLs don't have access to the game's code for handling LTEXT files, translation is handled by adjusting the Name and Description values in <em>SC4HumaneSocietyOrdinance.ini</em>.<br>
+      	Note that the text is expected to use UTF-8 encoding.
+      </p>
+
+
+      <p>
+      	    1. Open SC4HumaneSocietyOrdinance.ini in a text editor (e.g. Notepad).<br>
+      	    Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with administrator permissions to be able to save the file.
+      </p>
+
+
+      <p>
+      	    2. Adjust the <em>Name</em> and <em>Description</em> values in the <em>[Ordinance] </em>section.
+      </p>
+
+
+      <p>
+      	    3. Save the file and start the game.
+      </p>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4HumaneSocietyOrdinance.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762796-humane-society-ordinance-dll-plugin/" rel="">https://community.simtropolis.com/forums/topic/762796-humane-society-ordinance-dll-plugin/</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-humane-society-ordinance" rel="external nofollow">https://github.com/0xC0000054/sc4-humane-society-ordinance</a>
+      </p>
+
+      						</body>
+    filename: SC4HumaneSocietyOrdinance.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4HumaneSocietyOrdinance.dll
+      - SC4HumaneSocietyOrdinance.ini
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.png.a427b72155ea30f6af7887ab0b9b8292.png
     lastModified: 2024-03-24T20:40:27Z
     name: Humane Society Ordinance
+    repository: https://github.com/0xC0000054/sc4-humane-society-ordinance
+    sha256: 5e54a69ca40bc77deb499b78e9013e27451b569716b6a4b01e618e4a9f7250af
+    size: 63168
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.thumb.png.c8adf8463164699bd97ba8cda829adae.png
+    timestamp: 2024-10-16T08:13:53.846Z
+    uncompressed: 143626
     url: https://community.simtropolis.com/files/file/35793-humane-society-ordinance/
+    version: 1.0.1
   simtropolis/35871-city-lottery-ordinance:
     authors:
       - Null 45
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that adds a city lottery to the game.
+      </p>
+
+
+      <p>
+      	<strong>Availability Requirements:</strong> None.<br>
+      	<strong>Income:</strong> Base income of §500/month, plus additional income based on the residential wealth group populations.<br>
+      	<strong>Effects:</strong>
+      </p>
+
+
+      <p>
+      	<strong>Positive:</strong>
+      </p>
+
+
+      <p>
+      	Cs§ Demand Effect: +1%.
+      </p>
+
+
+      <p>
+      	School EQ Boost Effect: +2%. This mimics the fact that some jurisdictions use money gained from lotteries for education funding.
+      </p>
+
+
+      <p>
+      	<strong>Negative:</strong>
+      </p>
+
+
+      <p>
+      	Crime Effect:<strong> </strong>+10%.
+      </p>
+
+
+      <h2>
+      	System Requirements
+      </h2>
+
+
+      <ul>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <h2>
+      	Installation
+      </h2>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4CityLotteryOrdinance.dll</em> and <em>SC4CityLotteryOrdinance.ini</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Copy <em>CityLotteryOrdinanceText_English.dat</em> into your SimCity 4 Plugins folder.
+      	</li>
+      	<li>
+      		Configure the plugin settings, see the <strong>Configuring the plugin </strong>section.
+      	</li>
+      </ol>
+
+
+      <h2>
+      	Configuring the plugin
+      </h2>
+
+
+      <ol>
+      	<li>
+      		<p>
+      			Open <em>SC4CityLotteryOrdinance.ini </em>in a text editor (e.g. Notepad).<br>
+      			Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with administrator permissions to be able to save the file.
+      		</p>
+      	</li>
+      	<li>
+      		<p>
+      			Adjust the settings in the <em>[CityLotteryOrdinance] </em>section to your preferences.
+      		</p>
+      	</li>
+      	<li>
+      		<p>
+      			Save the file and start the game.
+      		</p>
+      	</li>
+      </ol>
+
+
+      <h3>
+      	Settings overview:
+      </h3>
+
+
+      <p>
+      	<strong>MonthlyConstantIncome </strong>is the base monthly income provided by the ordinance, defaults to §500.
+      </p>
+
+
+      <p>
+      	<strong>Wealth Group Income Factors</strong>
+      </p>
+
+
+      <p>
+      	The following values represent the factors (multipliers) that control how much each wealth group contributes to the city lottery's monthly income based on the group's population. A value of 0.0 excludes the specified wealth group from the city lottery. For example, if the city's R§ population is 1000 and the R$ income factor is 0.05 the R$ group would contribute an additional §50 to the monthly income total.
+      </p>
+
+
+      <ul dir="ltr">
+      	<li>
+      		<strong>R$IncomeFactor</strong> income factor for the R§ population, defaults to 0.05.
+      	</li>
+      	<li>
+      		<strong>R$$IncomeFactor</strong> income factor for the R§§ population, defaults to 0.03.
+      	</li>
+      	<li>
+      		<strong>R$$$IncomeFactor</strong> income factor for the R§§§ population, defaults to 0.01.
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Ordinance Effects</strong>
+      </p>
+
+
+      <p>
+      	The following options control the effects that the ordinance has on crime, Cs§ demand and school EQ.
+      </p>
+
+
+      <p>
+      	<strong>CrimeEffectMultiplier </strong>the effect that the ordinance has on global city crime. Defaults to 1.10, a +10% increase. The value uses a range of [0.01, 2.0] inclusive, a value of 1.0 has no effect. Values below 1.0 reduce crime, and values above 1.0 increase crime.
+      </p>
+
+
+      <p>
+      	<strong>Cs$DemandEffect</strong> the effect that the ordinance has on Cs§ demand. Defaults to 1.01, a +1% increase. The value uses a range of [0.01, 2.0] inclusive, a value of 1.0 has no effect. Values below 1.0 reduce Cs§ demand, and values above 1.0 increase Cs§ demand.
+      </p>
+
+
+      <p>
+      	<strong>SchoolEQBoostEffect</strong> the effect that the ordinance has on the global EQ level. Defaults to 102, a +2% boost in EQ. The value uses a range of [0, 200] inclusive, a value of 100 has no effect. Values below 100 reduce school EQ, and values above 100 increase school EQ.
+      </p>
+
+
+      <h2>
+      	Troubleshooting
+      </h2>
+
+
+      <p>
+      	The plugin should write a <em>SC4CityLotteryOrdinance.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <span><a href="https://community.simtropolis.com/forums/topic/762835-city-lottery-ordinance-dll-plugin/" rel="">https://community.simtropolis.com/forums/topic/762835-city-lottery-ordinance-dll-plugin/</a></span>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-city-lottery-ordinance" rel="external nofollow">https://github.com/0xC0000054/sc4-city-lottery-ordinance</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SC4CityLotteryOrdinance.zip
+    files:
+      - CityLotteryOrdinanceText_English.dat
+      - License.txt
+      - Readme.txt
+      - SC4CityLotteryOrdinance.dll
+      - SC4CityLotteryOrdinance.ini
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.png.cebe7794b646d80d3edd46b8fdbf9e29.png
     lastModified: 2023-12-21T04:43:57Z
     name: City Lottery Ordinance
+    repository: https://github.com/0xC0000054/sc4-city-lottery-ordinance
+    sha256: 34875d97108cf4ce5d2c43c7966e51b3d5620feea6f3bbbbbd55577d201ab370
+    size: 67406
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.thumb.png.b0a453a8049745f600cfaf9f6e12fb20.png
+    timestamp: 2024-10-16T08:41:46.968Z
+    uncompressed: 157514
     url: https://community.simtropolis.com/files/file/35871-city-lottery-ordinance/
+    version: 1.0.0
   simtropolis/35889-legalize-gambling-ordinance-upgrade:
     authors:
       - Null 45
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that updates the built-in Legalize Gambling ordinance to have its income based on the city's residential population.
+      </p>
+
+
+      <p>
+      	<strong>Availability Requirements:</strong> None.<br>
+      	<strong>Income:</strong> Base income of §250/month, plus additional income based on the residential wealth group populations.<br>
+      	<strong>Effects:</strong>
+      </p>
+
+
+      <p>
+      	Crime Effect: +20%.
+      </p>
+
+
+      <p>
+      	This ordinance replaces the game's built-in Legalize Gambling ordinance, it is incompatible with any mod that alters the built-in ordinance. This mod ignores the ordinance Exemplar and only uses the LTEXT files from the built-in ordinance.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		    Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the Microsoft Visual C++ 2022 x86 Redistribute installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4LegalizeGamblingUpgrade.dll</em> and <em>SC4LegalizeGamblingUpgrade.ini</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Configure the plugin settings, see the Configuring the plugin section.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Configuring the plugin</strong>
+      </p>
+
+
+      <p>
+      	    1. Open <em>SC4LegalizeGamblingUpgrade.ini</em> in a text editor (e.g. Notepad).<br>
+      	    Note that depending on the permissions of your SimCity 4 installation directory you may need to start the text editor with administrator permissions to be able to save the file.
+      </p>
+
+
+      <p>
+      	    2. Adjust the settings in the <em>[GamblingOrdinance]</em> section to your preferences.
+      </p>
+
+
+      <p>
+      	    3. Save the file and start the game.
+      </p>
+
+
+      <p>
+      	<strong>Settings overview:</strong>
+      </p>
+
+
+      <p>
+      	<strong>BaseMonthlyIncome </strong>is the base monthly income provided by the ordinance, defaults to §250.
+      </p>
+
+
+      <p>
+      	<strong>Wealth Group Income Factors</strong>
+      </p>
+
+
+      <p>
+      	The following values represent the factors (multipliers) that control how much each wealth group contributes to the monthly income based on the group's population. A value of 0.0 excludes the specified wealth group from contributing to the monthly income. For example, if the city's R§ population is 1000 and the R§ income factor is 0.05 the R§ group would contribute an additional §50 to the monthly income total.
+      </p>
+
+
+      <p>
+      	<strong>R$IncomeFactor</strong> income factor for the R§ population, defaults to 0.02.
+      </p>
+
+
+      <p>
+      	<strong>R$$IncomeFactor</strong> income factor for the R§§ population, defaults to 0.03.
+      </p>
+
+
+      <p>
+      	<strong>R$$$IncomeFactor</strong> income factor for the R§§§ population, defaults to 0.05.
+      </p>
+
+
+      <p>
+      	<strong>Ordinance Effects</strong>
+      </p>
+
+
+      <p>
+      	<strong>CrimeEffectMultiplier </strong>the effect that the ordinance has on global city crime. Defaults to 1.20, a +20% increase. The value uses a range of [0.01, 2.0] inclusive, a value of 1.0 has no effect. Values below 1.0 reduce crime, and values above 1.0 increase crime.
+      </p>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4LegalizeGamblingUpgrade.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762856-legalize-gambling-ordinance-upgrade-dll-plugin/" rel="">https://community.simtropolis.com/forums/topic/762856-legalize-gambling-ordinance-upgrade-dll-plugin/</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade" rel="external nofollow">https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade</a>
+      </p>
+
+
+      <p>
+      	 
+      </p>
+
+      						</body>
+    filename: SC4LegalizeGamblingUpgrade.zip
+    files:
+      - LICENSE.txt
+      - Readme.txt
+      - SC4LegalizeGamblingUpgrade.dll
+      - SC4LegalizeGamblingUpgrade.ini
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.png.b5ae659ed8fdf7fe87e55242dc781d48.png
     lastModified: 2023-12-25T03:14:55Z
     name: Legalize Gambling Ordinance Upgrade
+    repository: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade
+    sha256: 0d39a73488079de8c80626ba25aa580da9205ec9879df291112db65566effb2a
+    size: 67503
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.thumb.png.41bb8647cbbc4cc2203ab7342943060d.png
+    timestamp: 2024-10-16T08:14:39.466Z
+    uncompressed: 157311
     url: https://community.simtropolis.com/files/file/35889-legalize-gambling-ordinance-upgrade/
+    version: 1.0.0
   simtropolis/3599-hole-digging-lots:
     authors:
       - smoncrie
@@ -5483,26 +7205,371 @@ assets:
     authors:
       - Null 45
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that disables the demolition animation.
+      </p>
+
+
+      <p>
+      	Before SC4 picks the demolition animation to use for an occupant, it calls a function to determine if the occupant is too small for a demolition animation. This DLL Plugin patches the game's memory to redirect that function call to its own version of the function, which always reports that the occupant is too small for a demolition animation. This has the effect of disabling the demolition animations for all occupants.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		SimCity 4 version 641
+      	</li>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		 Close SimCity 4.
+      	</li>
+      	<li>
+      		 Copy <em>SC4DisableDemolitionAnimation.dll</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		 Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4DisableDemolitionAnimation.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762938-sc4disabledemolitionanimation" rel="">https://community.simtropolis.com/forums/topic/762938-sc4disabledemolitionanimation</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-disable-demolition-animation" rel="external nofollow">https://github.com/0xC0000054/sc4-disable-demolition-animation</a>
+      </p>
+
+      						</body>
+    filename: SC4DisableDemolitionAnimation.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4DisableDemolitionAnimation.dll
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.png.cdb90d3802bafd7e526db47a222aaaf3.png
     lastModified: 2024-01-24T23:08:09Z
     name: SC4 Disable Demolition Animation
+    repository: https://github.com/0xC0000054/sc4-disable-demolition-animation
+    sha256: a39f1b28ca37dd8c126755eab25c924cd64b2d7bae9e31d4e2a8a3927b80e7bc
+    size: 36113
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.thumb.png.5af5020e767b1b1ebcc4d7da840c77cc.png
+    timestamp: 2024-10-16T08:23:24.365Z
+    uncompressed: 81574
     url: https://community.simtropolis.com/files/file/36055-sc4-disable-demolition-animation/
+    version: 1.0.0
   simtropolis/36126-sc4-disable-lot-plop-smoke:
     authors:
       - Null 45
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that disables the smoke that is shown after plopping a lot.
+      </p>
+
+
+      <p>
+      	The method that the game uses to place a lot takes a Boolean parameter that controls whether the smoke effect is shown.<br>
+      	When that method is called by the lot placement UI tool it hard-codes that parameter to true, the plugin patches the game's memory to change it to false.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		SimCity 4 version 641
+      	</li>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		Close SimCity 4.
+      	</li>
+      	<li>
+      		Copy <em>SC4DisableLotPlopSmoke.dll</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4DisableLotPlopSmoke.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762984-sc4disablelotplopsmoke" rel="">https://community.simtropolis.com/forums/topic/762984-sc4disablelotplopsmoke</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-disable-lot-plop-smoke" rel="external nofollow">https://github.com/0xC0000054/sc4-disable-lot-plop-smoke</a>
+      </p>
+
+      						</body>
+    filename: SC4DisableLotPlopSmoke.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4DisableLotPlopSmoke.dll
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.png.3600baf4e3611f3981184f305cd4eaf9.png
     lastModified: 2024-02-17T01:38:15Z
     name: SC4 Disable Lot Plop Smoke
+    repository: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke
+    sha256: a4c4a3a447a15de6788024f38bac013ba0e8253df0f451fd66ade7cb68dc344e
+    size: 36096
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.935bafd81124b7994b64e58da304dacc.png
+    timestamp: 2024-10-16T08:36:23.816Z
+    uncompressed: 81426
     url: https://community.simtropolis.com/files/file/36126-sc4-disable-lot-plop-smoke/
+    version: 1.0.0
   simtropolis/36132-sc4-disable-network-construction-sounds:
     authors:
       - Null 45
     category: gameplay
+    dependencies: []
+    description: >-
+      <body>
+      							
+
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL Plugin for SimCity 4 that disables the sounds that are played during the network construction animation.
+      </p>
+
+
+      <p>
+      	The plugin patches the game's memory to make it skip playing the jackhammer sound track that is normally used during the animation.
+      </p>
+
+
+      <p>
+      	Note that this will also disable 2 in-game messages that are sent at the start and end of the animation sequence. The messages are:<br>
+      	kSC4MsgConstructionRoadCrewStart (0x89F10866) and kSC4MsgConstructionRoadCrewEnd (0xA9F10E45).
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		SimCity 4 version 641
+      	</li>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		 Close SimCity 4.
+      	</li>
+      	<li>
+      		 Copy <em>SC4DisableNetworkConstructionSounds.dll </em>into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		 Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4DisableNetworkConstructionSounds.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/762987-sc4disablenetworkconstructionsounds" rel="">https://community.simtropolis.com/forums/topic/762987-sc4disablenetworkconstructionsounds</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-disable-network-construction-sounds" rel="external nofollow">https://github.com/0xC0000054/sc4-disable-network-construction-sounds</a>
+      </p>
+
+      						</body>
+    filename: SC4DisableNetworkConstructionSounds.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4DisableNetworkConstructionSounds.dll
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.png.adffb7373eb267290f607ef1d2fe3677.png
     lastModified: 2024-02-18T12:45:33Z
     name: SC4 Disable Network Construction Sounds
+    repository: https://github.com/0xC0000054/sc4-disable-network-construction-sounds
+    sha256: 0ec5e559afbfc24effa8f1c76f2521034a284d7a776e3fa1e6fd1a29d3cbd19d
+    size: 36595
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.0d06d1f4074ac06897c5139c6b70fcdc.png
+    timestamp: 2024-10-16T08:38:30.561Z
+    uncompressed: 81614
     url: https://community.simtropolis.com/files/file/36132-sc4-disable-network-construction-sounds/
+    version: 1.0.0
   simtropolis/36142-submenus-dll:
     authors:
       - memo
@@ -5713,10 +7780,121 @@ assets:
     authors:
       - Null 45
     category: gameplay
+    dependencies:
+      - simtropolis/34027-coris-no-kickout-lower-wealth-mod
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+
+      							
+      <p>
+      	A DLL version of <a href="https://community.simtropolis.com/files/file/34027-coris-no-kickout-lower-wealth-mod/" rel="">Cori's No Kickout Lower Wealth Mod (<abbr title="(Cori's) No Kickout (Lower Wealth) Mod">NKO</abbr>)</a> mod.
+      </p>
+
+
+      <p>
+      	Unlike Cori's mod the DLL does not override the Building Development Simulator exemplar, so it should be compatible with <abbr title="Colossus Addon Mod">CAM</abbr> or any other mod that alters that file. The DLL sets the Building Development Simulator <em>Tract Developer Kick Out Lower Wealth</em> property to false when a city is loaded.
+      </p>
+
+
+      <p>
+      	<strong>System Requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Windows 10 or later
+      	</li>
+      </ul>
+
+
+      <p>
+      	The plugin may work on Windows 7 or later with the <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="external nofollow">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.
+      </p>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ol>
+      	<li>
+      		 Close SimCity 4.
+      	</li>
+      	<li>
+      		 Copy <em>SC4NoKickOut.dll</em> into the Plugins folder in the SimCity 4 installation directory.
+      	</li>
+      	<li>
+      		 Start SimCity 4.
+      	</li>
+      </ol>
+
+
+      <p>
+      	<strong>Troubleshooting</strong>
+      </p>
+
+
+      <p>
+      	The plugin should write a <em>SC4NoKickOut.log</em> file in the same folder as the plugin.<br>
+      	The log contains status information for the most recent run of the plugin.
+      </p>
+
+
+      <p>
+      	<strong>Source Code and Support</strong>
+      </p>
+
+
+      <p>
+      	Plugin thread: <a href="https://community.simtropolis.com/forums/topic/763015-no-kickout-lower-wealth-dll-plugin/" rel="">https://community.simtropolis.com/forums/topic/763015-no-kickout-lower-wealth-dll-plugin/</a>
+      </p>
+
+
+      <p>
+      	The plugin's source code and issue tracker are located on GitHub: <a href="https://github.com/0xC0000054/sc4-no-kick-out" rel="external nofollow">https://github.com/0xC0000054/sc4-no-kick-out</a>
+      </p>
+
+      						</body>
+    filename: SC4NoKickOut.zip
+    files:
+      - LICENSE.txt
+      - README.txt
+      - SC4NoKickOut.dll
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.png.1086423bb6cba67c6be9c1d14148db74.png
     lastModified: 2024-02-27T13:51:05Z
     name: No Kickout Lower Wealth - DLL Plugin
+    repository: https://github.com/0xC0000054/sc4-no-kick-out
+    sha256: cbe23b9c4d79e3b7496653558c580fe0e50fa622b90ab6ff5f417e4e10040034
+    size: 37433
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.53028b1cc19d0094465392380ce70a7f.png
+    timestamp: 2024-10-16T08:40:44.039Z
+    uncompressed: 82784
     url: https://community.simtropolis.com/files/file/36146-no-kickout-lower-wealth-dll-plugin/
+    version: 1.0.0
   simtropolis/36149-scoty-ui-carbon-skin:
     authors:
       - hugues aroux
@@ -5729,10 +7907,164 @@ assets:
     authors:
       - memo
     category: gameplay
+    dependencies:
+      - simtropolis/30381-3d-camera-mod-for-simcity-4
+    description: >-
+      <body>
+      							
+      								<div style="position:absolute; top:0px; right:0px;">
+      								  <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
+      								</div>
+
+
+
+
+
+
+
+      							
+
+
+
+
+
+
+
+      							
+      <p>
+      	This DLL plugin activates two cheat codes that allow you to freely change the camera angles of the game. This allows you to use SimCity 4's 3D engine to its full potential and experience your cities from completely new angles. Just for fun.
+      </p>
+
+
+      <p>
+      	It solves many of the issues of the original (now deprecated) <a href="https://community.simtropolis.com/files/file/30381-3d-camera-mod-for-simcity-4/" rel="">3D Camera Mod</a> by <em>pcwhiz24</em>.
+      </p>
+
+
+      <p>
+      	<strong>System requirements</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		SimCity 4, version 1.1.641 (the digital release) (<a href="https://community.simtropolis.com/forums/topic/762980-the-future-of-sc4-modding-the-matter-of-digital-vs-disc-and-windows-vs-macos-in-the-dll-era/" rel="">more info</a>)
+      	</li>
+      	<li>
+      		Windows 10+ or Linux
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Installation</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		Copy the DLL into the top-level directory of either Plugins folder (place it directly in <span style="background-color:#dddddd;">&lt;Documents&gt;\SimCity 4\Plugins</span> or <span style="background-color:#dddddd;">&lt;SC4 install folder&gt;\Plugins</span>, not in a subfolder).
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Usage</strong>
+      </p>
+
+
+      <p>
+      	Open the cheat console with <span style="background-color:#dddddd;">CTRL + x</span> and enter the <span style="background-color:#dddddd;">CameraYaw</span> or <span style="background-color:#dddddd;">CameraPitch</span> cheats:
+      </p>
+
+
+      <ul>
+      	<li>
+      		<span style="background-color:#dddddd;">CameraYaw <strong>&lt;angle&gt;</strong></span> - set the azimuth angle (counter-clockwise)
+      	</li>
+      	<li>
+      		<span style="background-color:#dddddd;">CameraYaw</span> - reset the angle to the default of 22.5 degree
+      	</li>
+      	<li>
+      		<span style="background-color:#dddddd;">CameraPitch <strong>&lt;angle&gt;</strong></span> - set the altitude angle for all zoom levels (range: 0.0 to 90.0 degree)
+      	</li>
+      	<li>
+      		<span style="background-color:#dddddd;">CameraPitch <strong>&lt;angle 1&gt;</strong> .. <strong>&lt;angle 5&gt;</strong></span> - set the altitude angle for zoom levels 1 to 5 individually
+      	</li>
+      	<li>
+      		<span style="background-color:#dddddd;">CameraPitch</span> - reset the angles to the default for each zoom: 30°, 35°, 40°, 45°, 45°
+      	</li>
+      </ul>
+
+
+      <p>
+      	<strong>Examples</strong>
+      </p>
+
+
+      <ul>
+      	<li>
+      		top down view: <span style="background-color:#dddddd;">CameraPitch 85</span> and <span style="background-color:#dddddd;">CameraYaw 0</span>
+      	</li>
+      	<li>
+      		isometric <abbr title="SimCity 3000">SC3k</abbr>-style view: <span style="background-color:#dddddd;">CameraYaw 45</span>
+      	</li>
+      </ul>
+
+
+      <p>
+      	Sometimes the effect only fully applies after changing zoom level or rotating the map, particularly on zooms 5 and 6.
+      </p>
+
+
+      <p>
+      	Graphical glitches may occur, especially with the more extreme angles.
+      </p>
+
+
+      <p>
+      	To avoid rendering the region view of a city from a non-standard angle, use Fast-Save (hold ALT + press Save button) or reset the angles to the default values before saving.
+      </p>
+
+
+      <p>
+      	<strong>Source code</strong>
+      </p>
+
+
+      <p>
+      	Available on <a href="https://github.com/memo33/sc4-3d-camera-dll" rel="external nofollow">GitHub</a>.
+      </p>
+
+      						</body>
+    filename: 3d-camera-dll-1.0.0.zip
+    files:
+      - LICENSE.txt
+      - memo.3dcamera.dll
+      - README.md
+      - Third Party Notices.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/01-park-avenue.jpeg.8c1cd0d00364d4687de9ed26a7705c9a.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/10-intersection.jpeg.003c00845a0371c6c62d8ba151d04c51.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/20-bird-houses-jmyer1.jpeg.d37985824beeb39c608cb3b60671fcab.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/21-bird-houses-jmyer2.jpeg.bd1b6dd5cec8654847db06e6cd7c5e05.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/30-low-angle-apartments.jpeg.ec2361788b0c84d864cd58efc2b31f09.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/40-angle-45.jpeg.bea4a5805d740c3a92fc4d34cc39d95c.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/41-bird-houses.jpeg.2d6414bff675f79fb485905c6251e0fc.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/50-low-angle-palms.jpeg.892136eb8201b0ec2ebd6a1cd15af4e1.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/60-angle-45-dense.jpeg.2116ef64ca24649a3ad4752d0f21429b.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/70-top-down.jpeg.ef34e4c0ae4d0168fa705cd8a1ae4ab0.jpeg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/71-zones.jpeg.524d61e163c0fd0f73745e28317015f5.jpeg
     lastModified: 2024-04-01T08:26:25Z
     name: 3D Camera DLL for SimCity 4
+    repository: https://github.com/memo33/sc4-3d-camera-dll
+    sha256: f23e0531c4186c9374e8971f0373541a754d8130579886a35c3f46404438e333
+    size: 46989
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/01-park-avenue.thumb.jpeg.ef82cb201732d8035c16c22e3e2915e6.jpeg
+    timestamp: 2024-10-16T08:41:46.968Z
+    uncompressed: 104998
     url: https://community.simtropolis.com/files/file/36188-3d-camera-dll-for-simcity-4/
+    version: 1.0.0
   simtropolis/36218-sc4webinterface:
     authors:
       - DennisSz
@@ -6771,6 +9103,30 @@ assets:
     uncompressed: 2899665
     url: https://community.simtropolis.com/files/file/36245-census-repository-building-dll-upgrade-patch/
     version: 1.0.0
+  simtropolis/36472-submenus-for-the-atsf189-pc-logistics-centers:
+    authors:
+      - atsf189
+    category: gameplay
+    lastModified: 2024-09-27T03:00:55Z
+    name: Submenus For The atsf189 PC Logistics Centers
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/66f61fe747968_LogisticsCentersSubmenu.thumb.jpg.821f7b45a723a5e574f94c0db41cd502.jpg
+    url: https://community.simtropolis.com/files/file/36472-submenus-for-the-atsf189-pc-logistics-centers/
+  simtropolis/36498-garbage-pollution-index:
+    authors:
+      - Ryuu Tenno
+    category: gameplay
+    lastModified: 2024-10-11T06:04:26Z
+    name: Garbage Pollution Index
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/6708bfea20603_GarbagePollutionIndex-cityview.thumb.jpg.281fa93acc952f696851731875b5334f.jpg
+    url: https://community.simtropolis.com/files/file/36498-garbage-pollution-index/
+  simtropolis/36504-submenus-for-the-atsf189-air-logistics-centers:
+    authors:
+      - atsf189
+    category: gameplay
+    lastModified: 2024-10-14T17:48:52Z
+    name: Submenus For The atsf189 Air Logistics Centers
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/670d5983ee612_AirLogisticsCentersSubmenu.thumb.jpg.519a5ebb734e1d78da63ba740323c544.jpg
+    url: https://community.simtropolis.com/files/file/36504-submenus-for-the-atsf189-air-logistics-centers/
   simtropolis/4243-rci-query-upgrade-mod:
     authors:
       - Equinox
@@ -6788,4 +9144,4 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-f497f4f8de9cd628f6c1ad0c9caf9305-Fun%20query%20Water%20pur.%20plant.jpg
     url: https://community.simtropolis.com/files/file/4536-daeleys-present/
 
-timestamp: 2024-09-13T12:22:00.820Z
+timestamp: 2024-10-17T08:57:16.473Z
