@@ -19,7 +19,7 @@ import {
   VariantData,
   VariantInfo,
 } from "@common/types"
-import { potentialUnion, potentialUnionBy } from "@common/utils/arrays"
+import { mapDefined, potentialUnion, potentialUnionBy, unionBy } from "@common/utils/arrays"
 import { entries, forEach, keys, values } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
 import { VariantID } from "@common/variants"
@@ -29,6 +29,7 @@ import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { isDev } from "@utils/env"
 
 import { loadAssetInfo } from "./assets"
+import { loadOptionInfo } from "./options"
 
 /**
  * Loads all downloaded assets.
@@ -386,7 +387,10 @@ export function loadVariantInfo(
     ),
     name: variantData.name ?? variantId,
     optional: potentialUnion(variantData.optional, packageData.optional),
-    options: potentialUnionBy(variantData.options, packageData.options, option => option.id),
+    options: mapDefined(
+      unionBy(variantData.options ?? [], packageData.options ?? [], option => option.id),
+      loadOptionInfo,
+    ),
     priority,
     readme: variantData.readme ?? packageData.readme,
     release: variantData.release ?? packageData.release,

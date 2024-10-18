@@ -68,6 +68,7 @@ export interface StoreActions {
   openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<boolean>
   openVariantURL(packageId: PackageID, variantId: VariantID): Promise<boolean>
   removePackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  resetPackageOptions(packageId: PackageID): Promise<boolean>
   resetState(): void
   setPackageOption(
     packageId: PackageID,
@@ -244,6 +245,25 @@ export const useStore = create<Store>()((set, get): Store => {
         } catch (error) {
           console.error(`Failed to remove ${packageId}`, error)
           this.showErrorToast(`Failed to remove ${packageId}`)
+          return false
+        }
+      },
+      async resetPackageOptions(packageId) {
+        const store = get()
+        const profileInfo = getCurrentProfile(store)
+        if (!profileInfo) {
+          return false
+        }
+
+        try {
+          return await window.api.updateProfile(profileInfo.id, {
+            packages: {
+              [packageId]: { options: null },
+            },
+          })
+        } catch (error) {
+          console.error(`Failed to reset options`, error)
+          this.showErrorToast(`Failed to reset options`)
           return false
         }
       },

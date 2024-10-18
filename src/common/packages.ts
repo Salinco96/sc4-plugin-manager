@@ -6,6 +6,7 @@ import {
   PackageFile,
   PackageInfo,
   PackageStatus,
+  PackageWarning,
   VariantInfo,
   VariantIssue,
 } from "@common/types"
@@ -34,6 +35,7 @@ export function checkFile(
   features: Features,
   settings: Settings | undefined,
   patterns: RegExp[] | undefined,
+  alwaysIncludeLots: boolean,
 ): boolean {
   const packageConfig = profileInfo?.packages[packageId]
 
@@ -45,7 +47,7 @@ export function checkFile(
 
   if (lot) {
     // Never include lots unless explicitly enabled
-    if (!packageConfig?.enabled) {
+    if (!packageConfig?.enabled && !alwaysIncludeLots) {
       return false
     }
 
@@ -54,7 +56,7 @@ export function checkFile(
 
     if (option) {
       const enabledLots = getOptionValue(option, {
-        ...packageConfig.options,
+        ...packageConfig?.options,
         ...profileInfo?.options,
       }) as string[]
 
@@ -291,6 +293,23 @@ export function isNew(variantInfo: VariantInfo): boolean {
 
 export function isOutdated(variantInfo: VariantInfo): boolean {
   return !!variantInfo.installed && !!variantInfo.update
+}
+
+export function isRelevant(
+  warning: PackageWarning,
+  packageStatus: PackageStatus | undefined,
+  showBanner: boolean,
+): boolean {
+  switch (warning.on) {
+    case "enable":
+      return !isEnabled(packageStatus)
+    case "disable":
+      return isEnabled(packageStatus) && !showBanner
+    case "variantChange":
+      return isEnabled(packageStatus)
+    default:
+      return !warning.on
+  }
 }
 
 export function isRequired(packageStatus?: PackageStatus): boolean {

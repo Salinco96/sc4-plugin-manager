@@ -1,5 +1,6 @@
 import { useMemo } from "react"
 
+import { DifferenceOutlined as ConflictIcon } from "@mui/icons-material"
 import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
@@ -70,7 +71,7 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
   }, [actions, currentProfile, incompatiblePackageId, issue, packageNames])
 
   return (
-    <PackageBanner action={action} header={t("conflict.title")}>
+    <PackageBanner action={action} header={t("conflict.title")} icon={<ConflictIcon />}>
       <Trans
         components={{
           a: (

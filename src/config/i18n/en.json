@@ -281,6 +281,9 @@
       },
       "message": "A new version of this package is available.",
       "title": "Outdated"
+    },
+    "warning": {
+      "title": "Warning"
     }
   },
   "PackageCategory": {
@@ -545,13 +548,29 @@
     "extracting": "Extracting {{key}}{{progress, percent, paren}}..."
   },
   "Warning": {
-    "bulldoze": "Before disabling the following packages, you must bulldoze all corresponding lots from all relevant regions:\n{{packageNames, join(multiline: true)}}"
+    "disable": {
+      "bulldoze": "Before disabling this package, you must bulldoze ALL corresponding lots from your regions.",
+      "bulldoze_one": "Before disabling \"{{packageNames, join(max: 1)}}\", you must bulldoze ALL corresponding lots from your regions.",
+      "bulldoze_other": "Before disabling the following packages, you must bulldoze ALL corresponding lots from your regions:\n{{packageNames, join(multiline: true)}}"
+    },
+    "enable": {
+      "bulldoze": "This package overwrites existing Maxis lots. Before enabling it, you must bulldoze ALL corresponding lots from your regions.",
+      "bulldoze_one": "\"{{packageNames, join(max: 1)}}\" overwrites existing Maxis lots. Before enabling it, you must bulldoze ALL corresponding lots from your regions.",
+      "bulldoze_other": "The following packages overwrite existing Maxis lots. Before enabling them, you must bulldoze ALL corresponding lots from your regions:\n{{packageNames, join(multiline: true)}}"
+    },
+    "variantChange": {
+      "bulldoze": "The lots included in this package are not compatible across variants. Before selecting a new variant, you must bulldoze ALL corresponding lots from your regions.",
+      "bulldoze_one": "The lots included in \"{{packageNames, join(max: 1)}}\" are not compatible across variants. Before selecting a new variant, you must bulldoze ALL corresponding lots from your regions.",
+      "bulldoze_other": "The lots included in the following packages are not compatible across variants. Before selecting new variants, you must bulldoze ALL corresponding lots from your regions:\n{{packageNames, join(multiline: true)}}"
+    }
   },
   "WarningModal": {
     "confirmation": {
       "disable": "Disable package?",
-      "enable": "Enable package?"
+      "enable": "Enable package?",
+      "variantChange": "Change variant?"
     },
+    "title_one": "{{packageName}} and {{count}} other",
     "title_other": "{{packageName}} and {{count}} others",
     "title_zero": "{{packageName}}"
   }

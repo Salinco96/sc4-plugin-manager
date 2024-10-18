@@ -1,10 +1,11 @@
 import {
-  FormControl,
   FormControlLabel,
   FormGroup,
+  Paper,
   Switch,
   Tooltip,
   Typography,
+  useTheme,
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
@@ -15,12 +16,17 @@ import { useSettings, useStoreActions } from "@utils/store"
 function Settings(): JSX.Element {
   const settings = useSettings()
   const actions = useStoreActions()
+  const theme = useTheme()
 
   const { t } = useTranslation("Settings")
 
   return (
     <FlexBox direction="column" height="100%" gap={2} p={2}>
-      <FormControl component="fieldset">
+      <Paper
+        component="fieldset"
+        elevation={0}
+        sx={{ border: `1px solid ${theme.palette.divider}` }}
+      >
         <FormGroup>
           <FlexBox alignItems="center" height={38} gap={2}>
             <Typography sx={{ flex: 1 }}>{t("install.path.label")}</Typography>
@@ -73,7 +79,7 @@ function Settings(): JSX.Element {
             title={settings?.install?.patched ? t("install.patched.reason.applied") : undefined}
           />
         </FormGroup>
-      </FormControl>
+      </Paper>
     </FlexBox>
   )
 }

@@ -1,7 +1,7 @@
 import { AssetData, AssetID } from "./assets"
 import { AuthorID } from "./authors"
 import { CategoryID } from "./categories"
-import { OptionID, OptionInfo, OptionValue, Options, Requirements } from "./options"
+import { OptionData, OptionID, OptionInfo, OptionValue, Options, Requirements } from "./options"
 import {
   PackageID,
   isDependency,
@@ -152,7 +152,7 @@ export interface PackageStatus {
 export interface PackageWarning {
   id?: "bulldoze"
   message?: string
-  on?: "enable" | "disable"
+  on?: "enable" | "disable" | "variantChange"
 }
 
 export interface LotData {
@@ -273,7 +273,7 @@ export interface VariantData {
   mmps?: MMPData[]
   name?: string
   optional?: PackageID[]
-  options?: OptionInfo[]
+  options?: OptionData[]
   release?: string
   readme?: string
   repository?: string
@@ -304,6 +304,7 @@ export interface BaseVariantInfo extends VariantData {
   mmps?: MMPInfo[]
   name: string
   new?: boolean
+  options: OptionInfo[]
   priority: number
   version: string
 }

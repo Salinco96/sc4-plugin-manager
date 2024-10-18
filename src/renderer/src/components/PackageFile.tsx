@@ -10,7 +10,6 @@ import { Card, Typography, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { DBPFDataType, DBPFEntryData, DBPFFile, TGI, getFileTypeLabel, isDBPF } from "@common/dbpf"
-import { ExemplarValueType } from "@common/exemplars"
 import { PackageID, checkFile } from "@common/packages"
 import { type PackageFile } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
@@ -25,13 +24,19 @@ import {
 
 import { FlexBox } from "./FlexBox"
 import { ToolButton } from "./ToolButton"
-import { ImageViewer } from "./Viewer/ImageViewer"
-import { TextViewer } from "./Viewer/TextViewer"
+import { DataViewer } from "./Viewer/DataViewer"
 
 // TODO: FSH, S3D, audio files...
-const IMAGETYPES = [DBPFDataType.BMP, DBPFDataType.JFIF, DBPFDataType.PNG] as const
-const TEXTTYPES = [DBPFDataType.XML] as const
-const VIEWABLETYPES: DBPFDataType[] = [...IMAGETYPES, ...TEXTTYPES, DBPFDataType.EXMP]
+const VIEWABLETYPES = [
+  // Images
+  DBPFDataType.BMP,
+  DBPFDataType.JFIF,
+  DBPFDataType.PNG,
+  // Text
+  DBPFDataType.XML,
+  // Others
+  DBPFDataType.EXMP,
+]
 
 export function PackageFile({
   file,
@@ -68,6 +73,7 @@ export function PackageFile({
     features,
     settings,
     patterns,
+    !packageStatus?.included,
   )
 
   return (
@@ -146,28 +152,8 @@ export function PackageFile({
                       }}
                     />
                   )}
-                  {expandedEntry === entry.id && data && "base64" in data && (
-                    <ImageViewer
-                      images={[`data:image/${data.type};base64, ${data.base64}`]}
-                      onClose={() => setExpandedEntry(undefined)}
-                      open
-                    />
-                  )}
-                  {expandedEntry === entry.id && data && "text" in data && (
-                    <TextViewer onClose={() => setExpandedEntry(undefined)} open text={data.text} />
-                  )}
-                  {expandedEntry === entry.id && data && "properties" in data && (
-                    <TextViewer
-                      onClose={() => setExpandedEntry(undefined)}
-                      open
-                      text={`- Parent Cohort ID: ${data.parentCohortId}
-${data.properties.map(property =>
-  property.info
-    ? `- ${property.info.name} (0x${property.id.toString(16).padStart(8, "0")}): (${ExemplarValueType[property.type]}) ${JSON.stringify(property.value)}`
-    : `- 0x${property.id.toString(16).padStart(8, "0")}: (${ExemplarValueType[property.type]}) ${JSON.stringify(property.value)}`,
-).join(`
-`)}`}
-                    />
+                  {expandedEntry === entry.id && data && (
+                    <DataViewer data={data} onClose={() => setExpandedEntry(undefined)} open />
                   )}
                 </li>
               )

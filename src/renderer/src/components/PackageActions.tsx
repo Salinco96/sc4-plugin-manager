@@ -14,6 +14,7 @@ import {
   isInvalid,
   isMissing,
   isOutdated,
+  isRelevant,
   isRequired,
 } from "@common/packages"
 import { keys } from "@common/utils/objects"
@@ -82,6 +83,8 @@ export function PackageActions({
     const incompatible = isIncompatible(variantInfo, packageStatus)
     const required = isRequired(packageStatus)
 
+    const warning = variantInfo.warnings?.find(warning => isRelevant(warning, packageStatus, false))
+
     if (isMissing(variantInfo)) {
       packageActions.push({
         color: "warning",
@@ -105,7 +108,9 @@ export function PackageActions({
         color: "error",
         description: required
           ? t("disable.reason.required", { count: packageStatus?.requiredBy?.length })
-          : t("disable.description"),
+          : warning
+            ? t(`${warning.on ?? "enable"}.${warning.id ?? "bulldoze"}`, { ns: "Warning" }) // TODO: util
+            : t("disable.description"),
         id: "disable",
         label: t("disable.label"),
         onClick: () => actions.disablePackage(packageId),
@@ -239,7 +244,8 @@ export function PackageActions({
             (selectableVariantIds.length === 1 && variantId === selectableVariantIds[0])
           }
           fullWidth
-          MenuProps={{ onClose: () => setMenuOpen(false), sx: { maxHeight: 320 } }}
+          onClose={() => setMenuOpen(false)}
+          MenuProps={{ sx: { maxHeight: 320 } }}
           name="variant"
           onChange={event =>
             actions.setPackageVariant(packageInfo.id, event.target.value as VariantID)

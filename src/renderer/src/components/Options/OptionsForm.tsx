@@ -5,6 +5,8 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Button,
+  ButtonGroup,
   FormControl,
   capitalize,
   useTheme,
@@ -16,12 +18,14 @@ import { OptionsFormSection } from "./OptionsFormSection"
 import { NOSECTION, getSections } from "./utils"
 
 export function OptionsForm({
+  onReset,
   options,
   ...props
 }: {
   checkCondition: (conditions: Requirements | undefined) => boolean
   disabled?: boolean
   onChange: (option: OptionInfo, value: OptionValue) => void
+  onReset?: () => void
   options: OptionInfo[]
   values: Options
 }): JSX.Element {
@@ -58,6 +62,19 @@ export function OptionsForm({
           </Accordion>
         ))}
       </FormControl>
+      {onReset && (
+        <ButtonGroup>
+          <Button
+            color="error"
+            disabled={!Object.keys(props.values).length}
+            onClick={onReset}
+            title="Reset all options to their default value"
+            variant="outlined"
+          >
+            Reset
+          </Button>
+        </ButtonGroup>
+      )}
     </FormControl>
   )
 }

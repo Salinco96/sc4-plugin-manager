@@ -11,6 +11,7 @@ import {
   isIncompatible,
   isMissing,
   isOutdated,
+  isRelevant,
 } from "@common/packages"
 import { ProfileInfo } from "@common/profiles"
 import {
@@ -71,6 +72,12 @@ export function getPackageListItemSize(
 
   if (issues) {
     nBanners += issues.length
+  }
+
+  if (variantInfo.warnings) {
+    nBanners += variantInfo.warnings.filter(warning =>
+      isRelevant(warning, packageStatus, true),
+    ).length
   }
 
   size += nBanners * PACKAGE_LIST_ITEM_BANNER_SIZE

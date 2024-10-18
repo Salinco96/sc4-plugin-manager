@@ -6,6 +6,7 @@ import {
   isExperimental,
   isMissing,
   isOutdated,
+  isRelevant,
 } from "@common/packages"
 import { isString } from "@common/utils/types"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
@@ -16,6 +17,7 @@ import { PackageBannerExperimental } from "./PackageBannerExperimental"
 import { PackageBannerIncompatible } from "./PackageBannerIncompatible"
 import { PackageBannerMissing } from "./PackageBannerMissing"
 import { PackageBannerOutdated } from "./PackageBannerOutdated"
+import { PackageBannerWarning } from "./PackageBannerWarning"
 
 export function PackageBanners({ packageId }: { packageId: PackageID }): JSX.Element {
   const packageStatus = usePackageStatus(packageId)
@@ -50,6 +52,12 @@ export function PackageBanners({ packageId }: { packageId: PackageID }): JSX.Ele
             variantId={variantId}
           />
         ),
+      )}
+      {variantInfo.warnings?.map(
+        (warning, index) =>
+          isRelevant(warning, packageStatus, true) && (
+            <PackageBannerWarning key={warning.id ?? index} warning={warning} />
+          ),
       )}
     </>
   )

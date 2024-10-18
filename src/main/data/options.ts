@@ -1,6 +1,5 @@
-import { ALL } from "dns"
-
 import {
+  ALL,
   OptionData,
   OptionID,
   OptionInfo,
@@ -87,7 +86,7 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
     }
 
     case OptionType.STRING: {
-      const choices = loadArray(data.choices, id, "choices", true).map(choice => {
+      const choices = loadArray(data.choices, id, "choices")?.map(choice => {
         if (typeof choice === "object") {
           return {
             condition: loadRequirements(choice.condition, id, "condition"),
@@ -102,19 +101,26 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
         }
       })
 
-      const multi = loadBoolean(data.multi, id, "multi")
-      const values = choices.map(choice => choice.value)
+      if (choices) {
+        const multi = loadBoolean(data.multi, id, "multi")
+        const values = choices.map(choice => choice.value)
 
-      return {
-        ...common,
-        choices,
-        default: multi
-          ? data.default === ALL
-            ? values
-            : loadEnumArray(data.default, values, id, "default")
-          : loadEnum(data.default, values, id, "default"),
-        display: loadEnum(data.display, ["checkbox", "select"] as const, id, "display"),
-        multi,
+        return {
+          ...common,
+          choices,
+          default: multi
+            ? data.default === ALL
+              ? values
+              : loadEnumArray(data.default, values, id, "default")
+            : loadEnum(data.default, values, id, "default"),
+          display: loadEnum(data.display, ["checkbox", "select"] as const, id, "display"),
+          multi,
+        }
+      } else {
+        return {
+          ...common,
+          default: loadString(data.default, id, "default"),
+        }
       }
     }
   }

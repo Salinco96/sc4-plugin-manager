@@ -21,6 +21,11 @@ export function PackageOptionsForm({ packageId }: { packageId: PackageID }): JSX
   const features = useFeatures()
   const settings = useSettings()
 
+  const values = {
+    ...profileInfo?.packages[packageId]?.options,
+    ...profileInfo?.options,
+  }
+
   return (
     <OptionsForm
       checkCondition={condition =>
@@ -42,8 +47,11 @@ export function PackageOptionsForm({ packageId }: { packageId: PackageID }): JSX
           actions.setPackageOption(packageId, option.id, newValue)
         }
       }}
+      onReset={() => {
+        actions.resetPackageOptions(packageId)
+      }}
       options={options}
-      values={{ ...profileInfo?.packages[packageId]?.options, ...profileInfo?.options }}
+      values={values}
     />
   )
 }

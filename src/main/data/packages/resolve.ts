@@ -432,10 +432,13 @@ export function resolvePackageUpdates(
         result[packageId] = {
           ...oldConfig,
           ...newConfig,
-          options: {
-            ...oldConfig?.options,
-            ...newConfig?.options,
-          },
+          options:
+            newConfig.options === null
+              ? undefined
+              : {
+                  ...oldConfig?.options,
+                  ...newConfig?.options,
+                },
         }
 
         return result
@@ -589,25 +592,25 @@ export function resolvePackageUpdates(
     }
   })
 
-  // console.debug("Updating profile", updates)
+  console.debug("Updating profile", updates)
 
-  // console.debug("Resulting profile", resultingProfile)
+  console.debug("Resulting profile", resultingProfile)
 
-  // console.debug("Resulting changes", {
-  //   disablingPackages,
-  //   enablingPackages,
-  //   excludingPackages,
-  //   includingPackages,
-  //   installingVariants,
-  //   selectingVariants,
-  // })
+  console.debug("Resulting changes", {
+    disablingPackages,
+    enablingPackages,
+    excludingPackages,
+    includingPackages,
+    installingVariants,
+    selectingVariants,
+  })
 
-  // console.debug("Resulting conflicts", {
-  //   explicitVariantChanges,
-  //   implicitVariantChanges,
-  //   incompatibleExternals,
-  //   incompatiblePackages,
-  // })
+  console.debug("Resulting conflicts", {
+    explicitVariantChanges,
+    implicitVariantChanges,
+    incompatibleExternals,
+    incompatiblePackages,
+  })
 
   return {
     disablingPackages,

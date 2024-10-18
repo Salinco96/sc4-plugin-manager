@@ -1518,6 +1518,7 @@ export class Application {
                         this.state.features,
                         this.state.settings,
                         patterns,
+                        false,
                       )
                     ) {
                       const fullPath = path.join(variantPath, file.path)
@@ -2395,6 +2396,7 @@ export class Application {
         resultingFeatures,
         resultingProfile,
         resultingStatus,
+        selectingVariants,
         shouldRecalculate,
       } = resolvePackageUpdates(
         this.state.packages,
@@ -2669,13 +2671,13 @@ export class Application {
                   continue
                 }
 
-                if (warning.on && warning.on !== "enable") {
+                if (warning.on !== "enable") {
                   continue
                 }
 
                 const warningId = warning.id ?? warning.message
                 if (!warningId) {
-                  console.warn("Warning has neiher id nor message")
+                  console.warn("Warning has neither id nor message")
                   continue
                 }
 
@@ -2683,7 +2685,7 @@ export class Application {
                 if (existing) {
                   existing.packageIds.push(packageId)
                 } else {
-                  warnings.set(warningId, { packageIds: [packageId], warning })
+                  warnings.set(warning.on + ":" + warningId, { packageIds: [packageId], warning })
                 }
               }
             }
@@ -2705,7 +2707,7 @@ export class Application {
 
                 const warningId = warning.id ?? warning.message
                 if (!warningId) {
-                  console.warn("Warning has neiher id nor message")
+                  console.warn("Warning has neither id nor message")
                   continue
                 }
 
@@ -2713,17 +2715,46 @@ export class Application {
                 if (existing) {
                   existing.packageIds.push(packageId)
                 } else {
-                  warnings.set(warningId, { packageIds: [packageId], warning })
+                  warnings.set(warning.on + ":" + warningId, { packageIds: [packageId], warning })
                 }
               }
             }
           }
 
-          // TODO: Warnings upon variant switch (e.g. different TGI for MN/DN lots)
+          // On-variant-change warnings
+          // TODO: Automatically detect disabling lots/mmps, including options?
+          for (const packageId of keys(selectingVariants)) {
+            const variantInfo = this.requireCurrentVariant(packageId, resultingStatus[packageId])
+            if (variantInfo.warnings) {
+              for (const warning of variantInfo.warnings) {
+                if (warning.id && this.ignoredWarnings.has(warning.id)) {
+                  continue
+                }
+
+                if (warning.on !== "variantChange") {
+                  continue
+                }
+
+                const warningId = warning.id ?? warning.message
+                if (!warningId) {
+                  console.warn("Warning has neither id nor message")
+                  continue
+                }
+
+                const existing = warnings.get(warningId)
+                if (existing) {
+                  existing.packageIds.push(packageId)
+                } else {
+                  warnings.set(warning.on + ":" + warningId, { packageIds: [packageId], warning })
+                }
+              }
+            }
+          }
 
           // Confirm warnings
           for (const { packageIds, warning } of warnings.values()) {
             const packageNames = packageIds.map(id => this.getPackageName(id)).sort()
+            const { id = "bulldoze", on = "enable" } = warning
 
             // TODO: Use our own modal rather than system one?
             const [confirmed, doNotAskAgain] = await this.showConfirmation(
@@ -2731,8 +2762,14 @@ export class Application {
                 count: packageNames.length - 1,
                 packageName: packageNames[0],
               }),
-              t(`WarningModal:confirmation.${warning.on ?? "enable"}`),
-              warning.message ?? t(warning.id!, { ns: "Warning", packageNames }),
+              t(`WarningModal:confirmation.${on}`),
+              warning.message ??
+                t(`${on}.${id}`, {
+                  count: packageNames.length,
+                  defaultValue: id,
+                  ns: "Warning",
+                  packageNames,
+                }),
               !!warning.id,
               "warning",
             )

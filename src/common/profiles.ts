@@ -2,6 +2,7 @@ import { Options } from "./options"
 import { PackageID } from "./packages"
 import { ConfigFormat, ExternalFeatures, ID, PackageConfig, PackageConfigs } from "./types"
 import { normalizeString } from "./utils/types"
+import { VariantID } from "./variants"
 
 /** Profile ID */
 export type ProfileID = ID<ProfileInfo>
@@ -46,7 +47,15 @@ export interface ProfileUpdate {
   features?: ExternalFeatures
   name?: string
   options?: Options
-  packages?: PackageConfigs
+  packages?: {
+    [packageId in PackageID]?: {
+      enabled?: boolean
+      /** null to reset options */
+      options?: Options | null
+      variant?: VariantID
+      version?: string
+    }
+  }
 }
 
 export function createUniqueProfileId(name: string, existingIds: ProfileID[]): ProfileID {
