@@ -4,7 +4,8 @@
     "src/common/**/*",
     "src/config/**/*.json",
     "src/preload/*.d.ts",
-    "src/renderer/src/**/*"
+    "src/renderer/src/**/*",
+    "types/*.d.ts"
   ],
   "compilerOptions": {
     "baseUrl": ".",

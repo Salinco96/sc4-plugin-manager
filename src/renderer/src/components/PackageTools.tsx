@@ -17,7 +17,7 @@ import { PackageOptionsDialog } from "@components/Options"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
-import { PackageToolButton } from "./PackageToolButton"
+import { ToolButton } from "./ToolButton"
 
 export function PackageTools({ packageId }: { packageId: PackageID }): JSX.Element {
   const actions = useStoreActions()
@@ -39,49 +39,49 @@ export function PackageTools({ packageId }: { packageId: PackageID }): JSX.Eleme
         packageId={packageId}
       />
       {!!variantInfo.options?.length && (
-        <PackageToolButton
+        <ToolButton
           description={t("options")}
           icon={OptionsIcon}
           onClick={() => setOpenOptions(true)}
         />
       )}
       {variantInfo.url && (
-        <PackageToolButton
+        <ToolButton
           description={t("openUrl")}
           icon={WebIcon}
           onClick={() => actions.openVariantURL(packageId, variantId)}
         />
       )}
       {variantInfo.repository && (
-        <PackageToolButton
+        <ToolButton
           description={t("openRepository")}
           icon={GitHubIcon}
           onClick={() => actions.openVariantRepository(packageId, variantId)}
         />
       )}
       {variantInfo.installed && (
-        <PackageToolButton
+        <ToolButton
           description={t("openConfig")}
           icon={ConfigIcon}
           onClick={() => actions.openPackageConfig(packageId)}
         />
       )}
       {variantInfo.installed && (
-        <PackageToolButton
+        <ToolButton
           description={t("openFiles")}
           icon={FilesIcon}
           onClick={() => actions.openPackageFile(packageId, variantId, "")}
         />
       )}
       {variantInfo.installed && docsPath && (
-        <PackageToolButton
+        <ToolButton
           description={t("openDocs")}
           icon={DocsIcon}
           onClick={() => actions.openPackageFile(packageId, variantId, docsPath)}
         />
       )}
       {variantInfo.installed && readmePath && (
-        <PackageToolButton
+        <ToolButton
           description={t("openReadme")}
           icon={ReadmeIcon}
           onClick={() => actions.openPackageFile(packageId, variantId, readmePath)}

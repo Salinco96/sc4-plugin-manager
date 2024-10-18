@@ -1,4 +1,4 @@
-import fs from "fs/promises"
+import fs, { FileHandle } from "fs/promises"
 import path from "path"
 
 export async function copyTo(fullPath: string, targetPath: string): Promise<void> {
@@ -52,6 +52,16 @@ export function isChild(filePath: string, parentPath: string): boolean {
 
 export function isURL(filePath: string): boolean {
   return /^[a-z]+:[/][/]/.test(filePath)
+}
+
+export async function readBytes(file: FileHandle, size: number, offset?: number): Promise<Buffer> {
+  const buffer = Buffer.alloc(size)
+  await file.read(buffer, 0, size, offset)
+  return buffer
+}
+
+export async function writeBytes(file: FileHandle, buffer: Buffer, offset?: number): Promise<void> {
+  await file.write(buffer, 0, buffer.length, offset)
 }
 
 export async function readFile(fullPath: string): Promise<string> {

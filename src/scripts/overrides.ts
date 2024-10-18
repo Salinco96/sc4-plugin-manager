@@ -2108,5 +2108,16 @@ export const OVERRIDES: IndexerOverrides = {
     36481: {
       packageId: "null-45/custom-budget-departments",
     },
+    36495: {
+      packageId: "null-45/custom-budget-departments",
+      variants: {
+        203881: {
+          variantId: "default",
+        },
+        203882: {
+          variantId: "darknite",
+        },
+      },
+    },
   },
 }

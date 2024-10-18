@@ -414,6 +414,11 @@
     "options": "Open options"
   },
   "PackageViewFiles": {
+    "entry": {
+      "labelCompressed": "{{type}} ({{t}} - {{g}} - {{i}}) ({{size}} bytes, {{compression, percent}} compression)",
+      "label": "{{type}} ({{t}} - {{g}} - {{i}}) ({{size}} bytes)",
+      "view": "View"
+    },
     "hideContents": "Hide contents",
     "openFileLocation": "Open file location",
     "showContents": "Show contents"

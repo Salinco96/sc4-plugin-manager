@@ -2,6 +2,8 @@ import { FileHandle } from "fs/promises"
 
 import { assert } from "@common/utils/types"
 
+import { readBytes, writeBytes } from "./files"
+
 /** PE flags */
 export enum PEFlag {
   LARGE_ADDRESS_AWARE = 0x0020,
@@ -31,16 +33,6 @@ export function getFlag(bits: number, flag: number): boolean {
 
 export function setFlag(bits: number, flag: number, enabled: boolean): number {
   return enabled ? bits | flag : bits ^ (bits & flag)
-}
-
-export async function readBytes(file: FileHandle, size: number, offset?: number): Promise<Buffer> {
-  const buffer = Buffer.alloc(size)
-  await file.read(buffer, 0, size, offset)
-  return buffer
-}
-
-export async function writeBytes(file: FileHandle, buffer: Buffer, offset?: number): Promise<void> {
-  await file.write(buffer, 0, buffer.length, offset)
 }
 
 export async function getPEHeaderOffset(file: FileHandle): Promise<number> {

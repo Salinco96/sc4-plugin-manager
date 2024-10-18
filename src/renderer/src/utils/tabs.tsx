@@ -20,10 +20,11 @@ import {
 } from "@mui/icons-material"
 
 import { CategoryID } from "@common/categories"
+import { getPackageStatus, isError } from "@common/packages"
 import { PackageState } from "@common/types"
 import { values } from "@common/utils/objects"
 import { Location, Page } from "@utils/navigation"
-import { filterVariant } from "@utils/packages"
+import { filterVariant, getCurrentVariant } from "@utils/packages"
 import { PackageFilters, Store, getCurrentProfile } from "@utils/store"
 
 export interface TabInfo {
@@ -51,11 +52,20 @@ function countPackages(store: Store, overrideFilters?: Partial<PackageFilters>):
     ...overrideFilters,
   }
 
-  return values(store.packages).filter(packageInfo =>
-    values(packageInfo.variants).some(variantInfo =>
+  return values(store.packages).filter(packageInfo => {
+    if (filters.onlyErrors) {
+      // Only check errors for the selected variant
+      const packageStatus = getPackageStatus(packageInfo, profileInfo)
+      const selectedVariant = getCurrentVariant(store, packageInfo.id)
+      if (filters.onlyErrors && !isError(selectedVariant, packageStatus)) {
+        return false
+      }
+    }
+
+    return values(packageInfo.variants).some(variantInfo =>
       filterVariant(packageInfo, variantInfo, profileInfo, filters),
-    ),
-  ).length
+    )
+  }).length
 }
 
 export const tabs: TabInfo[] = [

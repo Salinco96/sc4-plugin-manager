@@ -5,7 +5,7 @@ import { AuthorID } from "@common/authors"
 import { FlexBox } from "@components/FlexBox"
 import { useAuthors, useStoreActions } from "@utils/store"
 
-import { PackageToolButton } from "./PackageTools/PackageToolButton"
+import { ToolButton } from "./ToolButton"
 
 export function AuthorTools({ authorId }: { authorId: AuthorID }): JSX.Element {
   const actions = useStoreActions()
@@ -18,7 +18,7 @@ export function AuthorTools({ authorId }: { authorId: AuthorID }): JSX.Element {
   return (
     <FlexBox alignItems="center" gap={0.5} mx={0.5}>
       {authorInfo?.url && (
-        <PackageToolButton
+        <ToolButton
           description={t("openUrl")}
           icon={WebIcon}
           onClick={() => actions.openAuthorURL(authorId)}

@@ -226,10 +226,6 @@ export function filterVariant(
     }
   }
 
-  if (filters.onlyErrors && !isError(variantInfo, packageStatus)) {
-    return false
-  }
-
   if (filters.onlyNew && !variantInfo.new) {
     return false
   }
@@ -301,9 +297,6 @@ export function computePackageList(
     dependencies: packageFilters.dependencies || packageFilters.onlyErrors,
     experimental: packageFilters.experimental || packageFilters.onlyErrors,
     incompatible: packageFilters.incompatible || packageFilters.onlyErrors,
-    // When showing errors, we do not want to exclude non-error variants
-    // Instead we will check this for the selected variant only
-    onlyErrors: false,
     pattern,
   }
 

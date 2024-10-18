@@ -6,11 +6,11 @@ import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
 import { PackageBanners } from "@components/PackageBanners"
-import { PackageImages } from "@components/PackageImages"
 import { PackageTags } from "@components/PackageTags"
 import { PackageTools } from "@components/PackageTools"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
+import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { Page, useHistory } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 
@@ -38,7 +38,7 @@ export const PackageListItem = memo(function PackageListItem({
     <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
       <CardContent sx={{ flexGrow: 1, overflow: "hidden" /* TODO: Overflowing tags */ }}>
         {!!variantInfo.images?.length && (
-          <PackageImages
+          <ImageViewer
             images={variantInfo.images}
             onClose={() => setOpenImages(false)}
             open={openImages}

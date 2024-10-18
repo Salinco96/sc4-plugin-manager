@@ -4,7 +4,7 @@ import { create } from "zustand"
 
 import { AuthorID, Authors } from "@common/authors"
 import { CategoryID } from "@common/categories"
-import { DBPFFile } from "@common/files"
+import { DBPFEntry, DBPFEntryData, DBPFFile } from "@common/dbpf"
 import { ModalData, ModalID } from "@common/modals"
 import { OptionID, OptionInfo, OptionValue } from "@common/options"
 import { PackageID } from "@common/packages"
@@ -52,6 +52,12 @@ export interface StoreActions {
   ): Promise<{ html?: string; md?: string }>
   installPackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
   listFileContents(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile>
+  loadDBPFEntry(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    entry: DBPFEntry,
+  ): Promise<DBPFEntryData>
   openAuthorURL(authorId: AuthorID): Promise<boolean>
   openExecutableDirectory(): Promise<boolean>
   openInstallationDirectory(): Promise<boolean>
@@ -102,6 +108,7 @@ export interface Store extends ApplicationState {
 export const useStore = create<Store>()((set, get): Store => {
   function updateState(data: Spec<Store>): void {
     set(store => update(store, data))
+    console.debug(get())
   }
 
   return {
@@ -197,6 +204,9 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async listFileContents(packageId, variantId, filePath) {
         return window.api.listFileContents(packageId, variantId, filePath)
+      },
+      async loadDBPFEntry(packageId, variantId, filePath, entry) {
+        return window.api.loadDBPFEntry(packageId, variantId, filePath, entry)
       },
       async openAuthorURL(authorId) {
         return window.api.openAuthorURL(authorId)

@@ -20,7 +20,7 @@ import { glob } from "glob"
 import { AssetID, AssetInfo, Assets } from "@common/assets"
 import { AuthorID, AuthorInfo, Authors } from "@common/authors"
 import { Categories } from "@common/categories"
-import { DBPFFile } from "@common/files"
+import { DBPFEntry, DBPFEntryData, DBPFFile } from "@common/dbpf"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { OptionInfo, Requirements, getOptionValue } from "@common/options"
 import {
@@ -47,6 +47,7 @@ import { globToRegex, matchConditions } from "@common/utils/glob"
 import { entries, forEach, keys, values } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
+import { loadDBPF, loadDBPFEntry } from "@node/dbpf"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
@@ -62,7 +63,7 @@ import {
   removeIfPresent,
   toPosix,
 } from "@node/files"
-import { PEFlag, getPEFlag, getPEHeader, readBytes, setPEFlag, setPEHeader } from "@node/pe"
+import { PEFlag, getPEFlag, getPEHeader, setPEFlag, setPEHeader } from "@node/pe"
 import { cmd } from "@node/processes"
 import { getPluginsFolderName } from "@utils/linker"
 import { ToolID, getToolInfo } from "@utils/tools"
@@ -186,6 +187,7 @@ export class Application {
     this.handle("getState")
     this.handle("installPackages")
     this.handle("listFileContents")
+    this.handle("loadDBPFEntry")
     this.handle("openAuthorURL")
     this.handle("openExecutableDirectory")
     this.handle("openInstallationDirectory")
@@ -1614,76 +1616,24 @@ export class Application {
     const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
     const file = await fs.open(fullPath, "r")
     try {
-      const header = await readBytes(file, 96, 0)
-      const magic = header.readUInt32BE(0)
-      if (magic !== 0x44425046) {
-        throw Error("Not a DBPF file - " + magic.toString(16))
-      }
-
-      const majorVersion = header.readUInt32LE(4)
-      const minorVersion = header.readUInt32LE(8)
-      const version = `${majorVersion}.${minorVersion}`
-      if (version !== "1.0") {
-        throw Error(`Unsupported version - ${version}`)
-      }
-
-      const indexMajorVersion = header.readUInt32LE(32)
-      const indexMinorVersion = header.readUInt32LE(60)
-      const indexVersion = `${indexMajorVersion}.${indexMinorVersion}`
-      if (indexVersion !== "7.0") {
-        throw Error(`Unsupported index version - ${indexVersion}`)
-      }
-
-      const contents: DBPFFile = {
-        createdAt: new Date(header.readUInt32LE(24) * 1000).toISOString(),
-        entries: {},
-        indexVersion,
-        modifiedAt: new Date(header.readUInt32LE(24) * 1000).toISOString(),
-        version,
-      }
-
-      const indexOffset = header.readUInt32LE(40)
-      const indexSize = header.readUInt32LE(44)
-
-      const entryCount = header.readUInt32LE(36)
-      const entrySize = indexSize / entryCount
-
-      for (let n = 0; n < entryCount; n++) {
-        const entryOffset = indexOffset + entrySize * n
-        const entry = await readBytes(file, entrySize, entryOffset)
-        const t = entry.readUInt32LE(0).toString(16).padStart(8, "0")
-        const g = entry.readUInt32LE(4).toString(16).padStart(8, "0")
-        const i = entry.readUInt32LE(8).toString(16).padStart(8, "0")
-        const id = `${t}-${g}-${i}`
-        const offset = entry.readUInt32LE(12)
-        const size = entry.readUInt32LE(16)
-
-        contents.entries[id] = {
-          id,
-          offset,
-          size,
-        }
-      }
-
-      const dir = contents.entries["e86b1eef-e86b1eef-286b1f03"]
-
-      if (dir) {
-        const dirCount = dir.size / 16
-
-        for (let n = 0; n < dirCount; n++) {
-          const data = await readBytes(file, 16, dir.offset + 16 * n)
-          const t = data.readUInt32LE(0).toString(16).padStart(8, "0")
-          const g = data.readUInt32LE(4).toString(16).padStart(8, "0")
-          const i = data.readUInt32LE(8).toString(16).padStart(8, "0")
-          const id = `${t}-${g}-${i}`
-          const uncompressed = data.readUInt32LE(12)
-
-          const entry = contents.entries[id]
-          entry.uncompressed = uncompressed
-        }
-      }
-
+      const contents = await loadDBPF(file)
       return contents
+    } finally {
+      await file.close()
+    }
+  }
+
+  public async loadDBPFEntry(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    entry: DBPFEntry,
+  ): Promise<DBPFEntryData> {
+    const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
+    const file = await fs.open(fullPath, "r")
+    try {
+      const data = await loadDBPFEntry(file, entry)
+      return data
     } finally {
       await file.close()
     }

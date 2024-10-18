@@ -7343,6 +7343,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"qfs-compression@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "qfs-compression@npm:0.2.1"
+  checksum: 10c0/2f2f74b1b6f53cdda1cdd9637c27ed33b37aa45490979a24795202a7b3b8bbd2d2b0afabff06fbdfb6a7f84bc5b088a2ae4f25ee81a97d3d95cb98c9e9d9d86f
+  languageName: node
+  linkType: hard
+
 "querystringify@npm:^2.1.1":
   version: 2.2.0
   resolution: "querystringify@npm:2.2.0"
@@ -7985,6 +7992,7 @@ __metadata:
     node-html-parser: "npm:^6.1.13"
     notistack: "npm:^3.0.1"
     prettier: "npm:^3.2.4"
+    qfs-compression: "npm:^0.2.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-i18next: "npm:^14.1.2"

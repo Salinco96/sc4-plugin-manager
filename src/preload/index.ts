@@ -1,7 +1,7 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import { AuthorID } from "@common/authors"
-import { DBPFFile } from "@common/files"
+import { DBPFEntry, DBPFEntryData, DBPFFile } from "@common/dbpf"
 import { ModalData, ModalID } from "@common/modals"
 import { PackageID } from "@common/packages"
 import { ProfileID, ProfileUpdate } from "@common/profiles"
@@ -34,6 +34,14 @@ export const api = {
     filePath: string,
   ): Promise<DBPFFile> {
     return ipcRenderer.invoke("listFileContents", packageId, variantId, filePath)
+  },
+  async loadDBPFEntry(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    entry: DBPFEntry,
+  ): Promise<DBPFEntryData> {
+    return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entry)
   },
   async openAuthorURL(authorId: AuthorID): Promise<boolean> {
     return ipcRenderer.invoke("openAuthorURL", authorId)

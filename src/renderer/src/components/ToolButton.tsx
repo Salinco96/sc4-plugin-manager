@@ -2,15 +2,17 @@ import { ComponentType } from "react"
 
 import { IconButton } from "@mui/material"
 
-export function PackageToolButton({
-  description,
-  icon: IconComponent,
-  onClick,
-}: {
+export interface ToolButtonProps {
   description: string
   icon: ComponentType<{ fontSize: "inherit" }>
   onClick: () => void
-}): JSX.Element {
+}
+
+export function ToolButton({
+  description,
+  icon: IconComponent,
+  onClick,
+}: ToolButtonProps): JSX.Element {
   return (
     <IconButton
       aria-label={description}

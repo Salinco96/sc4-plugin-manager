@@ -8,9 +8,9 @@ import { PackageActions } from "@components/PackageActions"
 import { PackageTags } from "@components/PackageTags"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 
-import { PackageImages } from "./PackageImages"
 import { PackageTools } from "./PackageTools"
 import { Thumbnail } from "./Thumbnail"
+import { ImageViewer } from "./Viewer/ImageViewer"
 
 export function PackageHeader({ packageId }: { packageId: PackageID }): JSX.Element {
   const packageInfo = usePackageInfo(packageId)
@@ -21,7 +21,7 @@ export function PackageHeader({ packageId }: { packageId: PackageID }): JSX.Elem
   return (
     <FlexBox alignItems="center" pb={2} px={2}>
       {!!variantInfo.images?.length && (
-        <PackageImages
+        <ImageViewer
           images={variantInfo.images}
           onClose={() => setOpenImages(false)}
           open={openImages}

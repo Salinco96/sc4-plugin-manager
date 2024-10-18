@@ -11,11 +11,11 @@ import { toggleElement } from "@common/utils/arrays"
 import { entries } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
 import { MarkdownView } from "@components/MarkdownView"
-import { PackageImages } from "@components/PackageImages"
 import { TagType, serializeTag } from "@components/PackageList/utils"
 import { PackageTag, TagInfo } from "@components/PackageTags"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
+import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { useCurrentVariant } from "@utils/packages"
 import {
   useCurrentProfile,
@@ -85,7 +85,7 @@ export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.El
                   <FlexBox alignItems="center">
                     {!!mmp.images?.length && (
                       <>
-                        <PackageImages
+                        <ImageViewer
                           images={mmp.images}
                           onClose={() => setOpenImages(undefined)}
                           open={openImages === mmp.id}
