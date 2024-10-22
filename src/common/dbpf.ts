@@ -1,24 +1,30 @@
-import { ExemplarProperty } from "./exemplars"
+import { ExemplarData } from "./exemplars"
+import { toHex } from "./utils/hex"
 
 export type TGI = `${string}-${string}-${string}`
 
 export function TGI(t: number, g: number, i: number): TGI {
-  return `${t.toString(16).padStart(8, "0")}-${g.toString(16).padStart(8, "0")}-${i.toString(16).padStart(8, "0")}`
+  return `${toHex(t, 8)}-${toHex(g, 8)}-${toHex(i, 8)}`
 }
 
-export interface DBPFEntry {
-  dataType: DBPFDataType
-  id: TGI
-  offset: number
-  size: number
-  type: string
-  /** Only defined if compressed */
-  uncompressed?: number
-}
+export type DBPFEntry<T extends DBPFDataType = DBPFDataType> = {
+  [S in DBPFDataType]: {
+    data?: DBPFEntryData<S>
+    id: TGI
+    offset: number
+    original?: DBPFEntryData<S>
+    size: number
+    type: S
+    /** Only defined if compressed */
+    uncompressed?: number
+  }
+}[T]
 
 export interface DBPFFile {
   createdAt: string
-  entries: { [id: TGI]: DBPFEntry }
+  entries: {
+    [entryId in TGI]?: DBPFEntry
+  }
   modifiedAt: string
 }
 
@@ -67,20 +73,16 @@ export enum DBPFDataType {
   UNKNOWN = "unknown",
 }
 
-export type DBPFEntryData =
-  | {
-      type: Exclude<DBPFDataType, DBPFDataType.EXMP | DBPFDataType.XML>
-      base64: string
-    }
-  | {
-      type: DBPFDataType.EXMP
-      parentCohortId: TGI
-      properties: ExemplarProperty[]
-    }
-  | {
-      type: DBPFDataType.XML
-      text: string
-    }
+export type DBPFEntryData<T extends DBPFDataType = DBPFDataType> = {
+  [DBPFDataType.BMP]: { base64: string }
+  [DBPFDataType.EXMP]: ExemplarData
+  [DBPFDataType.FSH]: never // TODO
+  [DBPFDataType.JFIF]: { base64: string }
+  [DBPFDataType.PNG]: { base64: string }
+  [DBPFDataType.S3D]: never // TODO
+  [DBPFDataType.XML]: { text: string }
+  [DBPFDataType.UNKNOWN]: never // TODO
+}[T]
 
 const types = Object.values(DBPFFileType).reverse()
 export function getFileType(id: TGI): DBPFFileType | undefined {

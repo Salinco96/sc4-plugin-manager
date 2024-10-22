@@ -4,7 +4,7 @@ import { DifferenceOutlined as ConflictIcon } from "@mui/icons-material"
 import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
-import { Issue, VariantIssue } from "@common/types"
+import { Issue, VariantIssue } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
 import { getPackageInfo, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 

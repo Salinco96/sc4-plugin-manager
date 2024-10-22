@@ -1,45 +1,50 @@
-import { DBPFEntryData } from "@common/dbpf"
-import { ExemplarValueType } from "@common/exemplars"
+import { DBPFDataType, DBPFEntry } from "@common/dbpf"
+import { ExemplarDataPatch } from "@common/exemplars"
 
+import { ExemplarViewer } from "./ExemplarViewer"
 import { ImageViewer } from "./ImageViewer"
 import { TextViewer } from "./TextViewer"
 
-export interface DataViewerProps {
-  data: DBPFEntryData
+export type DataViewerProps = {
+  entry: DBPFEntry
   onClose: () => void
+  onPatch: (data: ExemplarDataPatch | null) => void
   open: boolean
+  readonly?: boolean
 }
 
-export function DataViewer({ data, open, onClose }: DataViewerProps): JSX.Element | null {
-  if ("base64" in data) {
-    return (
-      <ImageViewer
-        images={[`data:image/${data.type};base64, ${data.base64}`]}
-        onClose={onClose}
-        open={open}
-      />
-    )
+export function DataViewer({
+  entry,
+  onClose,
+  onPatch,
+  open,
+  readonly,
+}: DataViewerProps): JSX.Element | null {
+  if (!entry.data) {
+    return null
   }
 
-  if ("text" in data) {
-    return <TextViewer onClose={onClose} open={open} text={data.text} />
-  }
+  switch (entry.type) {
+    case DBPFDataType.EXMP: {
+      return (
+        <ExemplarViewer
+          data={entry.data}
+          onClose={onClose}
+          onPatch={onPatch}
+          open={open}
+          original={entry.original}
+          readonly={readonly}
+        />
+      )
+    }
 
-  if ("properties" in data) {
-    return (
-      <TextViewer
-        onClose={onClose}
-        open={open}
-        text={`- Parent Cohort ID: ${data.parentCohortId}
-${data.properties.map(property =>
-  property.info
-    ? `- ${property.info.name} (0x${property.id.toString(16).padStart(8, "0")}): (${ExemplarValueType[property.type]}) ${JSON.stringify(property.value)}`
-    : `- 0x${property.id.toString(16).padStart(8, "0")}: (${ExemplarValueType[property.type]}) ${JSON.stringify(property.value)}`,
-).join(`
-`)}`}
-      />
-    )
-  }
+    case DBPFDataType.XML: {
+      return <TextViewer onClose={onClose} open={open} text={entry.data.text} />
+    }
 
-  return null
+    default: {
+      const src = `data:image/${entry.type};base64, ${entry.data.base64}`
+      return <ImageViewer images={[src]} onClose={onClose} open={open} />
+    }
+  }
 }

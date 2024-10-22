@@ -1,3 +1,20 @@
+import { TGI } from "./dbpf"
+
+export interface ExemplarData {
+  isCohort: boolean
+  parentCohortId: TGI
+  properties: {
+    [propertyId in number]?: ExemplarProperty
+  }
+}
+
+export interface ExemplarDataPatch {
+  parentCohortId?: TGI
+  properties?: {
+    [propertyId in string]?: ExemplarPropertyValue | null
+  }
+}
+
 export interface ExemplarPropertyInfo {
   desc?: string
   id: number
@@ -14,15 +31,18 @@ export type ExemplarProperty<T extends ExemplarValueType = ExemplarValueType> = 
   }
 }[T]
 
-export type ExemplarPropertyValue<T extends ExemplarValueType = ExemplarValueType> = {
-  [ExemplarValueType.UInt8]: number[]
-  [ExemplarValueType.UInt16]: number[]
-  [ExemplarValueType.UInt32]: number[]
-  [ExemplarValueType.SInt32]: number[]
-  [ExemplarValueType.SInt64]: number[]
-  [ExemplarValueType.Float32]: number[]
-  [ExemplarValueType.Bool]: boolean[]
-  [ExemplarValueType.String]: string
+export type ExemplarPropertyValue<
+  T extends ExemplarValueType = ExemplarValueType,
+  Multi extends boolean = boolean,
+> = {
+  [ExemplarValueType.UInt8]: Multi extends true ? number[] : number
+  [ExemplarValueType.UInt16]: Multi extends true ? number[] : number
+  [ExemplarValueType.UInt32]: Multi extends true ? number[] : number
+  [ExemplarValueType.SInt32]: Multi extends true ? number[] : number
+  [ExemplarValueType.SInt64]: Multi extends true ? number[] : number
+  [ExemplarValueType.Float32]: Multi extends true ? number[] : number
+  [ExemplarValueType.Bool]: Multi extends true ? boolean[] : boolean
+  [ExemplarValueType.String]: Multi extends true ? string : never
 }[T]
 
 export enum ExemplarValueType {
@@ -34,6 +54,11 @@ export enum ExemplarValueType {
   Float32 = 0x900,
   Bool = 0xb00,
   String = 0xc00,
+}
+
+export enum PropertyKeyType {
+  Single = 0x00,
+  Multi = 0x80,
 }
 
 export const ExemplarProperties: {

@@ -1,3 +1,5 @@
+import { isArray } from "./types"
+
 export function entries<K extends string, T>(object: Readonly<Partial<Record<K, T>>>): [K, T][] {
   return Object.entries(object) as [K, T][]
 }
@@ -82,6 +84,18 @@ export function findKeys<K extends string, T>(
 
 export function keys<K extends string>(object: Readonly<Partial<Record<K, unknown>>>): K[] {
   return Object.keys(object) as K[]
+}
+
+export function size(
+  object: ReadonlyArray<unknown> | Readonly<Partial<Record<string, unknown>>>,
+): number {
+  return (isArray(object) ? object : Object.keys(object)).length
+}
+
+export function isEmpty(
+  object: ReadonlyArray<unknown> | Readonly<Partial<Record<string, unknown>>>,
+): boolean {
+  return size(object) === 0
 }
 
 export function mapValues<K extends string, T, R = T>(

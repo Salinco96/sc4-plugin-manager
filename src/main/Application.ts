@@ -20,7 +20,8 @@ import { glob } from "glob"
 import { AssetID, AssetInfo, Assets } from "@common/assets"
 import { AuthorID, AuthorInfo, Authors } from "@common/authors"
 import { Categories } from "@common/categories"
-import { DBPFEntry, DBPFEntryData, DBPFFile } from "@common/dbpf"
+import { DBPFDataType, DBPFEntry, DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
+import { ExemplarData, ExemplarDataPatch } from "@common/exemplars"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { OptionInfo, Requirements, getOptionValue } from "@common/options"
 import {
@@ -40,14 +41,13 @@ import {
   PackageInfo,
   PackageStatus,
   PackageWarning,
-  VariantInfo,
 } from "@common/types"
 import { flatMap, mapDefined, sumBy, unique } from "@common/utils/arrays"
 import { globToRegex, matchConditions } from "@common/utils/glob"
-import { entries, forEach, keys, values } from "@common/utils/objects"
-import { VariantID } from "@common/variants"
+import { entries, forEach, forEachAsync, isEmpty, keys, size, values } from "@common/utils/objects"
+import { VariantID, VariantInfo } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
-import { loadDBPF, loadDBPFEntry } from "@node/dbpf"
+import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
@@ -58,6 +58,7 @@ import {
   getExtension,
   isURL,
   moveTo,
+  openFile,
   readFile,
   removeIfEmptyRecursive,
   removeIfPresent,
@@ -186,7 +187,7 @@ export class Application {
     this.handle("getPackageReadme")
     this.handle("getState")
     this.handle("installPackages")
-    this.handle("listFileContents")
+    this.handle("loadDBPFEntries")
     this.handle("loadDBPFEntry")
     this.handle("openAuthorURL")
     this.handle("openExecutableDirectory")
@@ -196,6 +197,7 @@ export class Application {
     this.handle("openProfileConfig")
     this.handle("openVariantRepository")
     this.handle("openVariantURL")
+    this.handle("patchDBPFEntries")
     this.handle("removePackages")
     this.handle("simtropolisLogin")
     this.handle("simtropolisLogout")
@@ -914,6 +916,14 @@ export class Application {
     return path.join(this.getPackagePath(packageId), variantId)
   }
 
+  public getVariantFilePath(packageId: PackageID, variantId: VariantID, filePath: string): string {
+    return path.join(this.getVariantPath(packageId, variantId), filePath)
+  }
+
+  public getVariantPatchPath(packageId: PackageID, variantId: VariantID, filePath: string): string {
+    return path.join(this.getVariantPath(packageId, variantId), DIRNAMES.patches, filePath)
+  }
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected handle<Event extends keyof this & string, Args extends any[]>(
     this: { [key in Event]: (...args: Args) => unknown },
@@ -1197,8 +1207,8 @@ export class Application {
               oldPath: string,
               newPath: string,
               type: "cleanitol" | "docs" | "files",
-              priority?: number,
               condition?: Requirements,
+              include?: PackageFile,
             ) => {
               const extension = getExtension(oldPath)
 
@@ -1243,8 +1253,9 @@ export class Application {
                       await fs.symlink(path.join(downloadPath, oldPath), targetPath)
                       files.set(newPath, {
                         condition,
+                        patches: include?.patches,
                         path: newPath,
-                        priority: priority !== variantInfo.priority ? priority : undefined,
+                        priority: include?.priority,
                       })
                     }
                   }
@@ -1256,8 +1267,8 @@ export class Application {
               oldPath: string,
               newPath: string,
               type: "cleanitol" | "docs" | "files",
-              priority?: number,
               condition?: Requirements,
+              include?: PackageFile,
             ) => {
               const filePaths = await glob(getChildrenPattern(toPosix(oldPath)), {
                 cwd: downloadPath,
@@ -1274,8 +1285,8 @@ export class Application {
                     ? path.basename(filePath)
                     : path.join(newPath, path.relative(oldPath, filePath)),
                   type,
-                  priority,
                   condition,
+                  include,
                 )
               }
             }
@@ -1307,21 +1318,15 @@ export class Application {
                 }
 
                 if (entry.isDirectory()) {
-                  await includeDirectory(
-                    oldPath,
-                    include?.as ?? "",
-                    type,
-                    include?.priority,
-                    condition,
-                  )
+                  await includeDirectory(oldPath, include?.as ?? "", type, condition, include)
                 } else {
                   const filename = path.basename(entry.name)
                   await includeFile(
                     oldPath,
                     include?.as?.replace("*", filename) ?? filename,
                     type,
-                    include?.priority,
                     condition,
+                    include,
                   )
                 }
               }
@@ -1398,6 +1403,15 @@ export class Application {
           delete variantInfo.installed
           throw error
         }
+
+        // Apply patches
+        if (variantInfo.files) {
+          for (const file of variantInfo.files) {
+            if (file.patches) {
+              await this.calculatePatch(packageId, variantId, file.path)
+            }
+          }
+        }
       })
     } finally {
       delete variantInfo.action
@@ -1426,7 +1440,7 @@ export class Application {
     await this.initialize()
   }
 
-  protected async linkPackages(): Promise<void> {
+  protected async linkPackages(packageIds?: PackageID[]): Promise<void> {
     const pluginsPath = this.getPluginsPath()
 
     await this.tasks.linker.queue(
@@ -1494,10 +1508,10 @@ export class Application {
           }
 
           let nPackages = 0
-          const nTotalPackages = Object.keys(this.state.packages!).length
+          const nTotalPackages = packageIds?.length ?? size(this.state.packages)
           const increment = Math.floor(nTotalPackages / 100)
 
-          for (const [packageId, packageInfo] of entries(this.state.packages)) {
+          await forEachAsync(this.state.packages, async (packageInfo, packageId) => {
             const status = packageInfo.status[profileInfo.id]
             if (status?.included) {
               const variantId = status.variantId
@@ -1521,8 +1535,11 @@ export class Application {
                         false,
                       )
                     ) {
-                      const fullPath = path.join(variantPath, file.path)
                       const priority = file.priority ?? variantInfo.priority
+
+                      const fullPath = file.patches
+                        ? path.join(variantPath, DIRNAMES.patches, file.path)
+                        : path.join(variantPath, file.path)
 
                       const targetPath = path.join(
                         pluginsPath,
@@ -1593,13 +1610,15 @@ export class Application {
             if (nPackages++ % increment === 0) {
               context.setProgress(100 * (nPackages / nTotalPackages))
             }
-          }
+          })
 
-          for (const linkPath of oldLinks) {
-            nRemoved++
-            await removeIfPresent(linkPath)
-            await removeIfEmptyRecursive(path.dirname(linkPath), pluginsPath)
-            delete this.links[linkPath]
+          if (!packageIds) {
+            for (const linkPath of oldLinks) {
+              nRemoved++
+              await removeIfPresent(linkPath)
+              await removeIfEmptyRecursive(path.dirname(linkPath), pluginsPath)
+              delete this.links[linkPath]
+            }
           }
 
           context.debug(`Done (added ${nCreated}, removed ${nRemoved}, updated ${nUpdated})`)
@@ -1609,13 +1628,18 @@ export class Application {
     }
   }
 
-  public async listFileContents(
+  public async loadDBPFEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
   ): Promise<DBPFFile> {
-    const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
+    const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
+    const patchedFullPath = this.getVariantPatchPath(packageId, variantId, filePath)
+
+    const hasPatch = await exists(patchedFullPath)
+    const fullPath = hasPatch ? patchedFullPath : originalFullPath
     const file = await fs.open(fullPath, "r")
+
     try {
       const contents = await loadDBPF(file)
       return contents
@@ -1629,15 +1653,136 @@ export class Application {
     variantId: VariantID,
     filePath: string,
     entry: DBPFEntry,
-  ): Promise<DBPFEntryData> {
-    const fullPath = path.join(this.getVariantPath(packageId, variantId), filePath)
-    const file = await fs.open(fullPath, "r")
-    try {
-      const data = await loadDBPFEntry(file, entry)
-      return data
-    } finally {
-      await file.close()
+  ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }> {
+    const variantInfo = this.requireVariantInfo(packageId, variantId)
+    const fileInfo = variantInfo.files?.find(file => file.path === filePath)
+
+    if (!fileInfo) {
+      throw Error(`Missing file ${filePath} in '${packageId}#${variantId}'`)
     }
+
+    const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
+    const patchedFullPath = this.getVariantPatchPath(packageId, variantId, filePath)
+    const isPatched = !!fileInfo.patches
+
+    const originalData = await openFile(originalFullPath, "r", async originalFile => {
+      const originalContents = await loadDBPF(originalFile)
+      const originalEntry = originalContents.entries[entry.id]
+
+      if (!originalEntry) {
+        throw Error(`Missing entry ${entry.id} in ${originalFullPath}`)
+      }
+
+      return loadDBPFEntry(originalFile, originalEntry)
+    })
+
+    if (!isPatched) {
+      return { data: originalData }
+    }
+
+    const patchedData = await openFile(patchedFullPath, "r", async patchedFile => {
+      const patchedContents = await loadDBPF(patchedFile)
+      const patchedEntry = patchedContents.entries[entry.id]
+
+      if (!patchedEntry) {
+        throw Error(`Missing entry ${entry.id} in ${patchedFullPath}`)
+      }
+
+      return loadDBPFEntry(patchedFile, patchedEntry)
+    })
+
+    return { data: patchedData, original: originalData }
+  }
+
+  public async patchDBPFEntries(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    patches: {
+      [entryId in TGI]?: ExemplarDataPatch | null
+    },
+  ): Promise<DBPFFile> {
+    const packageInfo = this.requirePackageInfo(packageId)
+    const variantInfo = this.requireVariantInfo(packageId, variantId)
+    const fileInfo = variantInfo.files?.find(file => file.path === filePath)
+
+    if (!fileInfo) {
+      throw Error(`Missing file ${filePath} in '${packageId}#${variantId}'`)
+    }
+
+    // Override patches in config
+    forEach(patches, (patch, entryId) => {
+      fileInfo.patches ??= {}
+      if (patch?.parentCohortId || patch?.properties) {
+        fileInfo.patches[entryId] = patch
+      } else {
+        delete fileInfo.patches[entryId]
+      }
+    })
+
+    // Unset patches if all were removed
+    if (fileInfo.patches && isEmpty(fileInfo.patches)) {
+      delete fileInfo.patches
+    }
+
+    // Send updates to renderer
+    this.sendPackage(packageId)
+
+    // Persist config changes
+    this.writePackageConfig(packageInfo)
+
+    // Calculate patched file
+    const file = await this.calculatePatch(packageId, variantId, filePath)
+
+    // Relink this package only
+    this.linkPackages([packageId])
+
+    return file
+  }
+
+  protected async calculatePatch(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+  ): Promise<DBPFFile> {
+    const variantInfo = this.requireVariantInfo(packageId, variantId)
+    const fileInfo = variantInfo.files?.find(file => file.path === filePath)
+
+    if (!fileInfo) {
+      throw Error(`Missing file ${filePath} in '${packageId}#${variantId}'`)
+    }
+
+    const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
+    const patchedFullPath = this.getVariantPatchPath(packageId, variantId, filePath)
+    const patches = fileInfo.patches
+
+    let file: DBPFFile
+
+    if (patches) {
+      // Create or update the patched file
+      await createIfMissing(path.dirname(patchedFullPath))
+      file = await openFile(originalFullPath, "r", async originalFile => {
+        return openFile(patchedFullPath, "w", async patchedFile => {
+          return patchDBPFEntries(originalFile, patchedFile, patches)
+        })
+      })
+    } else {
+      // Delete the patched file
+      const variantPath = this.getVariantPath(packageId, variantId)
+      await removeIfPresent(patchedFullPath)
+      await removeIfEmptyRecursive(patchedFullPath, variantPath)
+
+      // Reload the original exemplars
+      file = await this.loadDBPFEntries(packageId, variantId, filePath)
+      await forEachAsync(file.entries, async entry => {
+        if (entry.type === DBPFDataType.EXMP) {
+          const { data } = await this.loadDBPFEntry(packageId, variantId, filePath, entry)
+          entry.data = data as ExemplarData
+        }
+      })
+    }
+
+    return file
   }
 
   protected async loadAppConfig(): Promise<void> {

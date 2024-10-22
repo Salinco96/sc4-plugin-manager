@@ -14,18 +14,11 @@ import {
   isRelevant,
 } from "@common/packages"
 import { ProfileInfo } from "@common/profiles"
-import {
-  PackageInfo,
-  PackageState,
-  PackageStatus,
-  Packages,
-  VariantInfo,
-  getState,
-} from "@common/types"
+import { PackageInfo, PackageState, PackageStatus, Packages, getState } from "@common/types"
 import { hasAny } from "@common/utils/arrays"
 import { keys, mapValues, values } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
-import { VariantID } from "@common/variants"
+import { VariantID, VariantInfo } from "@common/variants"
 import { PACKAGE_BANNER_HEIGHT, PACKAGE_BANNER_SPACING } from "@components/PackageBanners"
 
 import {

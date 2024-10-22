@@ -1,4 +1,6 @@
-import { isDefined } from "./types"
+import { Primitive } from "@common/types"
+
+import { isArray, isDefined } from "./types"
 
 export function difference<T>(array: ReadonlyArray<T>, values: ReadonlyArray<T>): T[] {
   return array.filter(v => !values.includes(v))
@@ -143,4 +145,16 @@ export function uniqueBy<T, S extends number | string>(
       {} as Record<S, T>,
     ),
   )
+}
+
+export function isEqual(a: Primitive | Primitive[], b: Primitive | Primitive[]): boolean {
+  return isArray(a) ? isArray(b) && a.length === b.length && a.every((v, i) => v === b[i]) : a === b
+}
+
+export function replaceAt<T>(array: ReadonlyArray<T>, index: number, value: T): T[] {
+  return [...array.slice(0, index), value, ...array.slice(index + 1)]
+}
+
+export function removeAt<T>(array: ReadonlyArray<T>, index: number): T[] {
+  return [...array.slice(0, index), ...array.slice(index + 1)]
 }

@@ -16,22 +16,11 @@ import {
 } from "@common/packages"
 import { ProfileInfo, ProfileUpdate } from "@common/profiles"
 import { Settings } from "@common/settings"
-import {
-  DependencyInfo,
-  EXTERNAL,
-  Feature,
-  Features,
-  Issue,
-  PackageInfo,
-  PackageStatus,
-  Packages,
-  VariantInfo,
-  VariantIssue,
-} from "@common/types"
+import { EXTERNAL, Feature, Features, PackageInfo, PackageStatus, Packages } from "@common/types"
 import { containsWhere, removeElement, union } from "@common/utils/arrays"
 import { filterValues, forEach, keys, mapValues, reduce, values } from "@common/utils/objects"
 import { isEnum } from "@common/utils/types"
-import { VariantID } from "@common/variants"
+import { DependencyInfo, Issue, VariantID, VariantInfo, VariantIssue } from "@common/variants"
 
 function getVariantIncompatibilities(
   packageInfo: Readonly<Omit<PackageInfo, "status">>,

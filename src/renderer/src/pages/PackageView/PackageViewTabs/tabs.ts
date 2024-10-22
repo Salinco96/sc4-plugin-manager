@@ -4,7 +4,7 @@ import { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
 import { PackageID } from "@common/packages"
-import { VariantInfo } from "@common/types"
+import { VariantInfo } from "@common/variants"
 import { PackageOptionsForm } from "@components/Options"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"

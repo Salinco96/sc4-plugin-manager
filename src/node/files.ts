@@ -138,3 +138,17 @@ export function toPosix(filePath: string): string {
 export async function writeFile(fullPath: string, data: string): Promise<void> {
   await fs.writeFile(fullPath, data, "utf8")
 }
+
+export async function openFile<T>(
+  fullPath: string,
+  mode: "r" | "w",
+  handler: (file: FileHandle) => Promise<T>,
+): Promise<T> {
+  const file = await fs.open(fullPath, mode)
+
+  try {
+    return await handler(file)
+  } finally {
+    await file.close()
+  }
+}

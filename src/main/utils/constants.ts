@@ -8,6 +8,7 @@ export const DIRNAMES = {
   downloads: "Downloads",
   logs: "Logs",
   packages: "Packages",
+  patches: "~patches",
   plugins: "Plugins",
   pluginsBackup: "Plugins (Backup)",
   profiles: "Profiles",

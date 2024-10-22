@@ -2,13 +2,10 @@ import {
   Feature,
   Features,
   ID,
-  Issue,
   PackageFile,
   PackageInfo,
   PackageStatus,
   PackageWarning,
-  VariantInfo,
-  VariantIssue,
 } from "@common/types"
 
 import { OptionID, OptionInfo, Requirements, getOptionInfo, getOptionValue } from "./options"
@@ -17,6 +14,7 @@ import { Settings } from "./settings"
 import { matchFile } from "./utils/glob"
 import { entries } from "./utils/objects"
 import { isArray } from "./utils/types"
+import { Issue, VariantInfo, VariantIssue } from "./variants"
 
 export const MIN_VERSION_OPTION_ID = "minVersion" as OptionID
 

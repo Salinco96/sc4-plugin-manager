@@ -420,10 +420,13 @@
     "entry": {
       "labelCompressed": "{{type}} ({{t}} - {{g}} - {{i}}) ({{size}} bytes, {{compression, percent}} compression)",
       "label": "{{type}} ({{t}} - {{g}} - {{i}}) ({{size}} bytes)",
+      "patch": "Patch this entry",
+      "patched": "This entry has been patched locally",
       "view": "View"
     },
     "hideContents": "Hide contents",
     "openFileLocation": "Open file location",
+    "patched": "This file has been patched locally",
     "showContents": "Show contents"
   },
   "PackageViewLots": {

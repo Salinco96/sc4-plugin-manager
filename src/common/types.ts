@@ -1,7 +1,7 @@
-import { AssetData, AssetID } from "./assets"
-import { AuthorID } from "./authors"
 import { CategoryID } from "./categories"
-import { OptionData, OptionID, OptionInfo, OptionValue, Options, Requirements } from "./options"
+import { TGI } from "./dbpf"
+import { ExemplarDataPatch } from "./exemplars"
+import { Options, Requirements } from "./options"
 import {
   PackageID,
   isDependency,
@@ -17,7 +17,7 @@ import {
   isOutdated,
 } from "./packages"
 import { ProfileID, ProfileInfo } from "./profiles"
-import { VariantID } from "./variants"
+import { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
 
 /** Supported configuration formats */
 export enum ConfigFormat {
@@ -37,38 +37,6 @@ export enum Feature {
   DARKNITE = "darknite",
   IRM = "irm",
   NAM = "nam",
-}
-
-export enum Issue {
-  CONFLICTING_FEATURE = "conflicting-feature",
-  INCOMPATIBLE_DEPENDENCIES = "incompatible-dependencies",
-  INCOMPATIBLE_FEATURE = "incompatible-feature",
-  INCOMPATIBLE_OPTION = "incompatible-option",
-  INCOMPATIBLE_VERSION = "incompatible-version",
-  MISSING_FEATURE = "missing-feature",
-}
-
-export interface PackageAssetData extends AssetData {
-  cleanitol?: string[]
-  docs?: Array<string | PackageFile>
-  exclude?: string[]
-  include?: Array<string | PackageFile>
-  id: AssetID
-}
-
-export interface PackageAssetInfo extends PackageAssetData {
-  docs?: PackageFile[]
-  include?: PackageFile[]
-}
-
-export interface DependencyData {
-  id: PackageID
-  include?: string[]
-  transitive?: boolean
-}
-
-export interface DependencyInfo extends DependencyData {
-  transitive: boolean
 }
 
 export interface PackageConfig {
@@ -102,6 +70,9 @@ export interface PackageData extends VariantData {
 export interface PackageFile {
   as?: string
   condition?: Requirements
+  patches?: {
+    [entryId in TGI]?: ExemplarDataPatch
+  }
   path: string
   priority?: number
 }
@@ -256,66 +227,6 @@ export interface MMPData {
 
 export interface MMPInfo extends MMPData {
   categories?: CategoryID[]
-}
-
-export interface VariantData {
-  assets?: Array<AssetID | PackageAssetData>
-  authors?: AuthorID[]
-  category?: string
-  dependencies?: Array<PackageID | DependencyInfo>
-  deprecated?: boolean | PackageID
-  description?: string
-  experimental?: boolean
-  files?: PackageFile[]
-  images?: string[]
-  lastModified?: string
-  lots?: LotData[]
-  mmps?: MMPData[]
-  name?: string
-  optional?: PackageID[]
-  options?: OptionData[]
-  release?: string
-  readme?: string
-  repository?: string
-  requirements?: Requirements
-  thumbnail?: string
-  url?: string
-  version?: string
-  warnings?: PackageWarning[]
-}
-
-export interface VariantIssue {
-  external?: boolean
-  feature?: Feature
-  option?: OptionID
-  id: Issue
-  minVersion?: string
-  packages?: PackageID[]
-  value?: OptionValue
-}
-
-export interface BaseVariantInfo extends VariantData {
-  assets?: PackageAssetInfo[]
-  authors: AuthorID[]
-  categories: CategoryID[]
-  dependencies?: DependencyInfo[]
-  id: VariantID
-  lots?: LotInfo[]
-  mmps?: MMPInfo[]
-  name: string
-  new?: boolean
-  options: OptionInfo[]
-  priority: number
-  version: string
-}
-
-export interface VariantInfo extends BaseVariantInfo {
-  action?: "installing" | "updating" | "removing"
-  cleanitol?: string
-  docs?: string
-  installed?: boolean
-  local?: boolean
-  update?: BaseVariantInfo
 }
 
 export enum PackageState {

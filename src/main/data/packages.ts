@@ -8,21 +8,19 @@ import { AuthorID } from "@common/authors"
 import { Categories, CategoryID, CategoryInfo } from "@common/categories"
 import { OptionType } from "@common/options"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, PackageID, isNew } from "@common/packages"
-import {
-  ConfigFormat,
-  DependencyData,
-  DependencyInfo,
-  PackageAssetData,
-  PackageAssetInfo,
-  PackageData,
-  PackageInfo,
-  VariantData,
-  VariantInfo,
-} from "@common/types"
+import { ConfigFormat, PackageData, PackageInfo } from "@common/types"
 import { mapDefined, potentialUnion, potentialUnionBy, unionBy } from "@common/utils/arrays"
 import { entries, forEach, keys, values } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
-import { VariantID } from "@common/variants"
+import {
+  DependencyData,
+  DependencyInfo,
+  VariantAssetData,
+  VariantAssetInfo,
+  VariantData,
+  VariantID,
+  VariantInfo,
+} from "@common/variants"
 import { readConfig, writeConfig } from "@node/configs"
 import { exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
@@ -300,7 +298,7 @@ export function parseCategory(category: string, categories: Categories): Categor
   return subcategories
 }
 
-export function loadPackageAssetInfo(data: PackageAssetData | AssetID): PackageAssetInfo {
+export function loadPackageAssetInfo(data: VariantAssetData | AssetID): VariantAssetInfo {
   if (isString(data)) {
     return { id: data }
   }

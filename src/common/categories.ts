@@ -1,6 +1,7 @@
 import { t } from "./i18n"
-import { ID, VariantInfo } from "./types"
+import { ID } from "./types"
 import { isString } from "./utils/types"
+import { VariantInfo } from "./variants"
 
 /** Category ID */
 export type CategoryID = ID<CategoryInfo>

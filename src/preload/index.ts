@@ -1,7 +1,8 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import { AuthorID } from "@common/authors"
-import { DBPFEntry, DBPFEntryData, DBPFFile } from "@common/dbpf"
+import { DBPFEntry, DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
+import { ExemplarDataPatch } from "@common/exemplars"
 import { ModalData, ModalID } from "@common/modals"
 import { PackageID } from "@common/packages"
 import { ProfileID, ProfileUpdate } from "@common/profiles"
@@ -28,19 +29,19 @@ export const api = {
   async installPackages(packages: { [packageId: PackageID]: VariantID }): Promise<boolean> {
     return ipcRenderer.invoke("installPackages", packages)
   },
-  async listFileContents(
+  async loadDBPFEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
   ): Promise<DBPFFile> {
-    return ipcRenderer.invoke("listFileContents", packageId, variantId, filePath)
+    return ipcRenderer.invoke("loadDBPFEntries", packageId, variantId, filePath)
   },
   async loadDBPFEntry(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
     entry: DBPFEntry,
-  ): Promise<DBPFEntryData> {
+  ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }> {
     return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entry)
   },
   async openAuthorURL(authorId: AuthorID): Promise<boolean> {
@@ -70,6 +71,16 @@ export const api = {
   },
   async openVariantURL(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("openVariantURL", packageId, variantId)
+  },
+  async patchDBPFEntries(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    patches: {
+      [entryId in TGI]?: ExemplarDataPatch | null
+    },
+  ): Promise<DBPFFile> {
+    return ipcRenderer.invoke("patchDBPFEntries", packageId, variantId, filePath, patches)
   },
   async removePackages(packages: { [packageId: PackageID]: VariantID }): Promise<boolean> {
     return ipcRenderer.invoke("removePackages", packages)

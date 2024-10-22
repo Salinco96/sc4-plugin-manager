@@ -5,8 +5,7 @@ import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
 import { PackageID } from "@common/packages"
-import { Issue, VariantIssue } from "@common/types"
-import { VariantID } from "@common/variants"
+import { Issue, VariantID, VariantIssue } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
 import { getPackageName, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 

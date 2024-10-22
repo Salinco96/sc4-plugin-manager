@@ -4,7 +4,8 @@ import { create } from "zustand"
 
 import { AuthorID, Authors } from "@common/authors"
 import { CategoryID } from "@common/categories"
-import { DBPFEntry, DBPFEntryData, DBPFFile } from "@common/dbpf"
+import { DBPFEntry, DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
+import { ExemplarDataPatch } from "@common/exemplars"
 import { ModalData, ModalID } from "@common/modals"
 import { OptionID, OptionInfo, OptionValue } from "@common/options"
 import { PackageID } from "@common/packages"
@@ -51,13 +52,13 @@ export interface StoreActions {
     variantId: VariantID,
   ): Promise<{ html?: string; md?: string }>
   installPackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
-  listFileContents(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile>
+  loadDBPFEntries(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile>
   loadDBPFEntry(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
     entry: DBPFEntry,
-  ): Promise<DBPFEntryData>
+  ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }>
   openAuthorURL(authorId: AuthorID): Promise<boolean>
   openExecutableDirectory(): Promise<boolean>
   openInstallationDirectory(): Promise<boolean>
@@ -67,6 +68,14 @@ export interface StoreActions {
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
   openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<boolean>
   openVariantURL(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  patchDBPFEntries(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    patches: {
+      [entryId in TGI]?: ExemplarDataPatch | null
+    },
+  ): Promise<DBPFFile>
   removePackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
   resetPackageOptions(packageId: PackageID): Promise<boolean>
   resetState(): void
@@ -203,8 +212,8 @@ export const useStore = create<Store>()((set, get): Store => {
           return false
         }
       },
-      async listFileContents(packageId, variantId, filePath) {
-        return window.api.listFileContents(packageId, variantId, filePath)
+      async loadDBPFEntries(packageId, variantId, filePath) {
+        return window.api.loadDBPFEntries(packageId, variantId, filePath)
       },
       async loadDBPFEntry(packageId, variantId, filePath, entry) {
         return window.api.loadDBPFEntry(packageId, variantId, filePath, entry)
@@ -238,6 +247,9 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async openVariantURL(packageId, variantId) {
         return window.api.openVariantURL(packageId, variantId)
+      },
+      async patchDBPFEntries(packageId, variantId, filePath, patches) {
+        return window.api.patchDBPFEntries(packageId, variantId, filePath, patches)
       },
       async removePackage(packageId, variantId) {
         try {

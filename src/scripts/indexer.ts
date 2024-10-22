@@ -6,10 +6,10 @@ import { glob } from "glob"
 import { AssetData, AssetID } from "@common/assets"
 import { AuthorData, AuthorID } from "@common/authors"
 import { PackageID } from "@common/packages"
-import { ConfigFormat, LotData, PackageAssetData, PackageData, VariantData } from "@common/types"
+import { ConfigFormat, LotData, PackageData } from "@common/types"
 import { forEachAsync, keys } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
-import { VariantID } from "@common/variants"
+import { VariantAssetData, VariantData, VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -392,7 +392,7 @@ async function runIndexer(options: IndexerOptions) {
   async function resolvePackageAsset(
     packageId: string,
     variantId: string | undefined,
-    asset: PackageAssetData,
+    asset: VariantAssetData,
   ): Promise<void> {
     const sourceId = asset.id.split("/")[0]
     if (!dbAssetsConfigs[sourceId]?.[asset.id]) {
