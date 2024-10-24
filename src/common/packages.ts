@@ -293,6 +293,10 @@ export function isOutdated(variantInfo: VariantInfo): boolean {
   return !!variantInfo.installed && !!variantInfo.update
 }
 
+export function isPatched(variantInfo: VariantInfo): boolean {
+  return !!variantInfo.files?.some(file => !!file.patches)
+}
+
 export function isRelevant(
   warning: PackageWarning,
   packageStatus: PackageStatus | undefined,

@@ -4,16 +4,17 @@ import {
   ExpandLess as CollapseIcon,
   ExpandMore as ExpandIcon,
   Folder as OpenLocationIcon,
-  ManageAccountsOutlined as PatchedIcon,
 } from "@mui/icons-material"
 import { Card, List, Typography, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { DBPFFile, isDBPF } from "@common/dbpf"
 import { PackageID, checkFile } from "@common/packages"
-import { type PackageFile } from "@common/types"
+import { type PackageFile, PackageState } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { values } from "@common/utils/objects"
+import { TagType } from "@components/PackageList/utils"
+import { PackageTag } from "@components/PackageTags"
 import { ToolButton } from "@components/ToolButton"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import {
@@ -82,7 +83,7 @@ export function PackageFile({
         <Typography color="inherit" flex={1} textTransform="unset" variant="button">
           <FlexBox alignItems="center" gap={0.5}>
             {file.path.replaceAll(/[\\/]/g, " / ")}
-            {isPatched && <ToolButton description={t("patched")} icon={PatchedIcon} />}
+            {isPatched && <PackageTag dense type={TagType.STATE} value={PackageState.PATCHED} />}
           </FlexBox>
         </Typography>
         <FlexBox alignItems="center" gap={0.5} mx={0.5}>

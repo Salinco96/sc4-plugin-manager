@@ -1,11 +1,12 @@
 import { useState } from "react"
 
-import { Chip, Tooltip } from "@mui/material"
+import { Chip, ChipProps, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { PackageID } from "@common/packages"
 import { PackageState, getState } from "@common/types"
 import { removeElement, removeElement$ } from "@common/utils/arrays"
+import { keys } from "@common/utils/objects"
 import { Page, useLocation } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 import {
@@ -27,54 +28,22 @@ import {
   serializeTag,
 } from "./PackageList/utils"
 
-export type TagInfo<T extends TagType = TagType> = Tag<T> & {
-  color?: "error" | "info" | "success" | "warning"
+const stateTagColors: {
+  [state in PackageState]?: "error" | "info" | "success" | "warning"
+} = {
+  [PackageState.ENABLED]: "success",
+  [PackageState.DEPENDENCY]: "success",
+  [PackageState.DEPRECATED]: "warning",
+  [PackageState.DISABLED]: "error",
+  [PackageState.ERROR]: "error",
+  [PackageState.EXPERIMENTAL]: "warning",
+  [PackageState.LOCAL]: "warning",
+  [PackageState.NEW]: "info",
+  [PackageState.OUTDATED]: "warning",
+  [PackageState.PATCHED]: "warning",
 }
 
-const tags: TagInfo<TagType.STATE>[] = [
-  {
-    color: "success",
-    type: TagType.STATE,
-    value: PackageState.ENABLED,
-  },
-  {
-    color: "success",
-    type: TagType.STATE,
-    value: PackageState.DEPENDENCY,
-  },
-  {
-    color: "error",
-    type: TagType.STATE,
-    value: PackageState.DISABLED,
-  },
-  {
-    color: "error",
-    type: TagType.STATE,
-    value: PackageState.ERROR,
-  },
-  {
-    color: "info",
-    type: TagType.STATE,
-    value: PackageState.NEW,
-  },
-  {
-    color: "warning",
-    type: TagType.STATE,
-    value: PackageState.OUTDATED,
-  },
-  {
-    color: "warning",
-    type: TagType.STATE,
-    value: PackageState.LOCAL,
-  },
-  {
-    color: "warning",
-    type: TagType.STATE,
-    value: PackageState.EXPERIMENTAL,
-  },
-]
-
-export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
+export function PackageTag({ dense, ...tag }: Tag & { dense?: boolean }): JSX.Element {
   const actions = useStoreActions()
   const authors = useAuthors()
   const categories = useStore(store => store.categories)
@@ -94,11 +63,19 @@ export function PackageTag({ tag }: { tag: TagInfo }): JSX.Element {
   const isSelectable = location.page === Page.Packages
   const isSelected = values.includes(tag.value)
 
-  const sharedProps = {
-    color: tag.color,
+  const sharedProps: ChipProps = {
+    color: tag.type === TagType.STATE ? stateTagColors[tag.value] : undefined,
     label: getTagLabel(tag, authors),
-    size: "medium" as const,
-    sx: { borderRadius: 2 },
+    size: dense ? "small" : "medium",
+    sx: {
+      borderRadius: dense ? 1 : 2,
+      fontSize: dense ? 10 : undefined,
+      fontWeight: 400,
+      height: dense ? 16 : undefined,
+      letterSpacing: dense ? "normal" : undefined,
+      lineHeight: dense ? "normal" : undefined,
+      textTransform: "none",
+    },
   }
 
   return isSelectable ? (
@@ -144,7 +121,9 @@ export function PackageTags({ packageId }: { packageId: PackageID }): JSX.Elemen
   const packageTags = [
     ...(authorsExpanded ? authorTags : []),
     ...variantInfo.categories.map(category => createTag(TagType.CATEGORY, category)),
-    ...tags.filter(tag => getState(tag.value, packageInfo, variantInfo, currentProfile)),
+    ...keys(stateTagColors)
+      .filter(state => getState(state, packageInfo, variantInfo, currentProfile))
+      .map(state => createTag(TagType.STATE, state)),
   ]
 
   if (packageTags.length === 0) {
@@ -169,7 +148,7 @@ export function PackageTags({ packageId }: { packageId: PackageID }): JSX.Elemen
         </Tooltip>
       )}
       {packageTags.map(tag => (
-        <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
+        <PackageTag key={serializeTag(tag.type, tag.value)} {...tag} />
       ))}
     </FlexBox>
   )

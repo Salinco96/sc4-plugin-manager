@@ -395,7 +395,8 @@
     "installed": "Installed",
     "local": "Local",
     "new": "New",
-    "outdated": "Outdated"
+    "outdated": "Outdated",
+    "patched": "Patched"
   },
   "PackageTag": {
     "actions": {
@@ -418,11 +419,11 @@
   },
   "PackageViewFiles": {
     "entry": {
-      "labelCompressed": "{{type}} ({{t}} - {{g}} - {{i}}) ({{size}} bytes, {{compression, percent}} compression)",
-      "label": "{{type}} ({{t}} - {{g}} - {{i}}) ({{size}} bytes)",
-      "patch": "Patch this entry",
+      "labelCompressed": "{{type}} ({{id}}) ({{size}} bytes, {{compression, percent}} compression)",
+      "label": "{{type}} ({{id}}) ({{size}} bytes)",
+      "patch": "Open editor",
       "patched": "This entry has been patched locally",
-      "view": "View"
+      "view": "Open preview"
     },
     "hideContents": "Hide contents",
     "openFileLocation": "Open file location",

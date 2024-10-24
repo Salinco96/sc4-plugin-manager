@@ -11,8 +11,8 @@ import { toggleElement } from "@common/utils/arrays"
 import { entries } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
 import { MarkdownView } from "@components/MarkdownView"
-import { TagType, serializeTag } from "@components/PackageList/utils"
-import { PackageTag, TagInfo } from "@components/PackageTags"
+import { TagType, createTag, serializeTag } from "@components/PackageList/utils"
+import { PackageTag } from "@components/PackageTags"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
@@ -63,12 +63,10 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
           settings,
         )
 
-        const tags = (lot.categories ?? getCategories(variantInfo)).map(category => ({
-          type: TagType.CATEGORY,
-          value: category,
-        })) as TagInfo[]
+        const categories = lot.categories ?? getCategories(variantInfo)
+        const tags = categories.map(category => createTag(TagType.CATEGORY, category))
 
-        const tgi = lot.id.match(/^[a-f0-9]{8}$/) ? `6534284a - a8fbd372 - ${lot.id}` : undefined
+        const tgi = lot.id.match(/^[a-f0-9]{8}$/) ? `6534284a-a8fbd372-${lot.id}` : undefined
 
         return (
           <ListItem key={lot.id} sx={{ padding: 0 }}>
@@ -115,7 +113,7 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                       {!!tags.length && (
                         <FlexBox direction="row" gap={1} mt={1}>
                           {tags.map(tag => (
-                            <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
+                            <PackageTag key={serializeTag(tag.type, tag.value)} {...tag} />
                           ))}
                         </FlexBox>
                       )}

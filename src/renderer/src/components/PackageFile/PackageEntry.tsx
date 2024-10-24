@@ -1,16 +1,14 @@
 import { useState } from "react"
 
-import {
-  DesignServices as PatchIcon,
-  ManageAccountsOutlined as PatchedIcon,
-  Preview as PreviewIcon,
-} from "@mui/icons-material"
+import { DesignServices as PatchIcon, Preview as PreviewIcon } from "@mui/icons-material"
 import { ListItem } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { DBPFDataType, DBPFEntry, DBPFFile, getFileTypeLabel } from "@common/dbpf"
 import { PackageID } from "@common/packages"
-import { type PackageFile } from "@common/types"
+import { type PackageFile, PackageState } from "@common/types"
+import { TagType } from "@components/PackageList/utils"
+import { PackageTag } from "@components/PackageTags"
 import { ToolButton } from "@components/ToolButton"
 import { DataViewer } from "@components/Viewer/DataViewer"
 import { useCurrentVariant } from "@utils/packages"
@@ -49,24 +47,17 @@ export function PackageEntry({
   const actions = useStoreActions()
   const variantInfo = useCurrentVariant(packageId)
 
-  const [isEditing, setEditing] = useState(false)
   const [isViewing, setViewing] = useState(false)
 
   const { t } = useTranslation("PackageViewFiles")
 
-  const tgi = entry.id.split("-")
   const isPatched = !!file.patches?.[entry.id]
   const isEditable = EDITABLETYPES.includes(entry.type)
   const isViewable = VIEWABLETYPES.includes(entry.type)
   const compression = entry.uncompressed ? 1 - entry.size / entry.uncompressed : 0
 
   async function loadEntry() {
-    const { data, original } = await actions.loadDBPFEntry(
-      packageId,
-      variantInfo.id,
-      file.path,
-      entry,
-    )
+    const data = await actions.loadDBPFEntry(packageId, variantInfo.id, file.path, entry.id)
 
     setFileData({
       ...fileData,
@@ -74,8 +65,7 @@ export function PackageEntry({
         ...fileData.entries,
         [entry.id]: {
           ...fileData.entries[entry.id],
-          data,
-          original,
+          ...data,
         },
       },
     })
@@ -84,36 +74,22 @@ export function PackageEntry({
   return (
     <ListItem disablePadding sx={{ alignItems: "center", display: "flex", gap: 0.5 }}>
       {t(entry.uncompressed !== undefined ? "entry.labelCompressed" : "entry.label", {
-        t: tgi[0],
-        g: tgi[1],
-        i: tgi[2],
         compression: 100 * compression,
+        id: entry.id,
         size: entry.size,
         type: getFileTypeLabel(entry.id),
       })}
       {isViewable && (
         <ToolButton
-          description={t("entry.view")}
-          icon={PreviewIcon}
+          description={isEditable ? t("entry.patch") : t("entry.view")}
+          icon={isEditable ? PatchIcon : PreviewIcon}
           onClick={async () => {
             await loadEntry()
-            setEditing(false)
             setViewing(true)
           }}
         />
       )}
-      {isEditable && (
-        <ToolButton
-          description={t("entry.patch")}
-          icon={PatchIcon}
-          onClick={async () => {
-            await loadEntry()
-            setEditing(true)
-            setViewing(true)
-          }}
-        />
-      )}
-      {isPatched && <ToolButton description={t("entry.patched")} icon={PatchedIcon} />}
+      {isPatched && <PackageTag dense type={TagType.STATE} value={PackageState.PATCHED} />}
       {isViewing && (
         <DataViewer
           entry={entry}
@@ -126,7 +102,6 @@ export function PackageEntry({
             )
           }}
           open
-          readonly={!isEditing}
         />
       )}
     </ListItem>

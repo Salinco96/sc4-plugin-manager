@@ -4,7 +4,7 @@ import { create } from "zustand"
 
 import { AuthorID, Authors } from "@common/authors"
 import { CategoryID } from "@common/categories"
-import { DBPFEntry, DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
+import { DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarDataPatch } from "@common/exemplars"
 import { ModalData, ModalID } from "@common/modals"
 import { OptionID, OptionInfo, OptionValue } from "@common/options"
@@ -57,7 +57,7 @@ export interface StoreActions {
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-    entry: DBPFEntry,
+    entryId: TGI,
   ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }>
   openAuthorURL(authorId: AuthorID): Promise<boolean>
   openExecutableDirectory(): Promise<boolean>
@@ -215,8 +215,8 @@ export const useStore = create<Store>()((set, get): Store => {
       async loadDBPFEntries(packageId, variantId, filePath) {
         return window.api.loadDBPFEntries(packageId, variantId, filePath)
       },
-      async loadDBPFEntry(packageId, variantId, filePath, entry) {
-        return window.api.loadDBPFEntry(packageId, variantId, filePath, entry)
+      async loadDBPFEntry(packageId, variantId, filePath, entryId) {
+        return window.api.loadDBPFEntry(packageId, variantId, filePath, entryId)
       },
       async openAuthorURL(authorId) {
         return window.api.openAuthorURL(authorId)

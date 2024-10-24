@@ -213,7 +213,7 @@ export async function patchDBPFEntries(
               info,
               type,
               value,
-            }
+            } as ExemplarProperty
           }
         })
       }

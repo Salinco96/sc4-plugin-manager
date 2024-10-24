@@ -3,9 +3,11 @@ import { ComponentType } from "react"
 import { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
-import { PackageID } from "@common/packages"
+import { PackageID, isPatched } from "@common/packages"
+import { PackageState } from "@common/types"
 import { VariantInfo } from "@common/variants"
 import { PackageOptionsForm } from "@components/Options"
+import { Tag, TagType, createTag } from "@components/PackageList/utils"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewFiles } from "./PackageViewFiles"
@@ -24,6 +26,7 @@ export type PackageViewTabInfo = {
     variantInfo: VariantInfo,
     dependentPackages: PackageID[],
   ) => string
+  labelTag?: (variantInfo: VariantInfo) => Tag | undefined
   condition: (variantInfo: VariantInfo, dependentPackages: PackageID[]) => boolean
   fullsize?: boolean
 }
@@ -98,6 +101,11 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     },
     label(t, variantInfo) {
       return t("files", { count: variantInfo.files?.length })
+    },
+    labelTag(variantInfo) {
+      if (isPatched(variantInfo)) {
+        return createTag(TagType.STATE, PackageState.PATCHED)
+      }
     },
   },
   {

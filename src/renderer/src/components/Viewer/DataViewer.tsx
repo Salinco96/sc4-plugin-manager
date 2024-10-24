@@ -1,7 +1,7 @@
 import { DBPFDataType, DBPFEntry } from "@common/dbpf"
 import { ExemplarDataPatch } from "@common/exemplars"
 
-import { ExemplarViewer } from "./ExemplarViewer"
+import { ExemplarViewer } from "./ExemplarViewer/ExemplarViewer"
 import { ImageViewer } from "./ImageViewer"
 import { TextViewer } from "./TextViewer"
 
@@ -29,6 +29,7 @@ export function DataViewer({
       return (
         <ExemplarViewer
           data={entry.data}
+          id={entry.id}
           onClose={onClose}
           onPatch={onPatch}
           open={open}

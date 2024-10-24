@@ -15,6 +15,7 @@ import {
   isInstalled,
   isLocal,
   isOutdated,
+  isPatched,
 } from "./packages"
 import { ProfileID, ProfileInfo } from "./profiles"
 import { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
@@ -242,6 +243,7 @@ export enum PackageState {
   LOCAL = "local",
   NEW = "new",
   OUTDATED = "outdated",
+  PATCHED = "patched",
 }
 
 export function getState(
@@ -288,5 +290,8 @@ export function getState(
 
     case PackageState.OUTDATED:
       return isOutdated(variantInfo)
+
+    case PackageState.PATCHED:
+      return isPatched(variantInfo)
   }
 }

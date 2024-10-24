@@ -20,8 +20,8 @@ import { glob } from "glob"
 import { AssetID, AssetInfo, Assets } from "@common/assets"
 import { AuthorID, AuthorInfo, Authors } from "@common/authors"
 import { Categories } from "@common/categories"
-import { DBPFDataType, DBPFEntry, DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
-import { ExemplarData, ExemplarDataPatch } from "@common/exemplars"
+import { DBPFDataType, DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
+import { ExemplarDataPatch } from "@common/exemplars"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { OptionInfo, Requirements, getOptionValue } from "@common/options"
 import {
@@ -1652,7 +1652,7 @@ export class Application {
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-    entry: DBPFEntry,
+    entryId: TGI,
   ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }> {
     const variantInfo = this.requireVariantInfo(packageId, variantId)
     const fileInfo = variantInfo.files?.find(file => file.path === filePath)
@@ -1663,14 +1663,14 @@ export class Application {
 
     const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
     const patchedFullPath = this.getVariantPatchPath(packageId, variantId, filePath)
-    const isPatched = !!fileInfo.patches
+    const isPatched = !!fileInfo.patches?.[entryId]
 
     const originalData = await openFile(originalFullPath, "r", async originalFile => {
       const originalContents = await loadDBPF(originalFile)
-      const originalEntry = originalContents.entries[entry.id]
+      const originalEntry = originalContents.entries[entryId]
 
       if (!originalEntry) {
-        throw Error(`Missing entry ${entry.id} in ${originalFullPath}`)
+        throw Error(`Missing entry ${entryId} in ${originalFullPath}`)
       }
 
       return loadDBPFEntry(originalFile, originalEntry)
@@ -1682,10 +1682,10 @@ export class Application {
 
     const patchedData = await openFile(patchedFullPath, "r", async patchedFile => {
       const patchedContents = await loadDBPF(patchedFile)
-      const patchedEntry = patchedContents.entries[entry.id]
+      const patchedEntry = patchedContents.entries[entryId]
 
       if (!patchedEntry) {
-        throw Error(`Missing entry ${entry.id} in ${patchedFullPath}`)
+        throw Error(`Missing entry ${entryId} in ${patchedFullPath}`)
       }
 
       return loadDBPFEntry(patchedFile, patchedEntry)
@@ -1773,12 +1773,16 @@ export class Application {
       await removeIfEmptyRecursive(patchedFullPath, variantPath)
 
       // Reload the original exemplars
-      file = await this.loadDBPFEntries(packageId, variantId, filePath)
-      await forEachAsync(file.entries, async entry => {
-        if (entry.type === DBPFDataType.EXMP) {
-          const { data } = await this.loadDBPFEntry(packageId, variantId, filePath, entry)
-          entry.data = data as ExemplarData
+      file = await openFile(originalFullPath, "r", async originalFile => {
+        const file = await loadDBPF(originalFile)
+
+        for (const entry of values(file.entries)) {
+          if (entry.type === DBPFDataType.EXMP) {
+            entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(originalFile, entry)
+          }
         }
+
+        return file
       })
     }
 

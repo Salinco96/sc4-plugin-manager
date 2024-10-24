@@ -1,7 +1,7 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import { AuthorID } from "@common/authors"
-import { DBPFEntry, DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
+import { DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarDataPatch } from "@common/exemplars"
 import { ModalData, ModalID } from "@common/modals"
 import { PackageID } from "@common/packages"
@@ -40,9 +40,9 @@ export const api = {
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-    entry: DBPFEntry,
+    entryId: TGI,
   ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }> {
-    return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entry)
+    return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entryId)
   },
   async openAuthorURL(authorId: AuthorID): Promise<boolean> {
     return ipcRenderer.invoke("openAuthorURL", authorId)
