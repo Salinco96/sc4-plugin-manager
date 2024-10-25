@@ -435,15 +435,18 @@ function writeExemplar(data: ExemplarData, allocSize: number): Binary {
     exemplar.writeUInt32(property.id)
     exemplar.writeUInt16(property.type)
 
-    if (isArray(property.value) || isString(property.value)) {
+    // Prefer encoding 1-rep values as single values
+    // See https://wiki.sc4devotion.com/index.php?title=Exemplar - Encoding Issue in the Aspyr Port
+    if ((isArray(property.value) && property.value.length !== 1) || isString(property.value)) {
       exemplar.writeUInt16(PropertyKeyType.Multi)
       exemplar.writeUInt8(0)
       exemplar.writeUInt32(property.value.length)
       exemplar.writeValues(property.value, property.type)
     } else {
+      const value = isArray(property.value) ? property.value[0] : property.value
       exemplar.writeUInt16(PropertyKeyType.Single)
       exemplar.writeUInt8(0)
-      exemplar.writeValue(property.value, property.type)
+      exemplar.writeValue(value, property.type)
     }
   }
 

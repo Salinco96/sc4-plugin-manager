@@ -2,14 +2,15 @@ import {
   ExemplarData,
   ExemplarDataPatch,
   ExemplarProperty,
+  ExemplarPropertyChoiceInfo,
+  ExemplarPropertyItemInfo,
+  ExemplarPropertyValue,
   ExemplarValueType,
 } from "@common/exemplars"
 import { isEqual } from "@common/utils/arrays"
 import { toHex } from "@common/utils/hex"
 import { forEach } from "@common/utils/objects"
 import { isArray, isBoolean, isNumber, isString } from "@common/utils/types"
-
-import { InputProps } from "./ExemplarPropertyInput"
 
 export function getDiff(
   currentData: ExemplarData,
@@ -48,6 +49,15 @@ export interface ExemplarErrors {
   }
 }
 
+export function getItemInfo(
+  property: ExemplarProperty,
+  index: number,
+): ExemplarPropertyItemInfo | undefined {
+  const { info } = property
+
+  return info?.items?.at(info?.size && info.repeat ? index % info.size : index)
+}
+
 export function getErrors(data: ExemplarData): ExemplarErrors | undefined {
   let errors: ExemplarErrors | undefined
 
@@ -65,8 +75,9 @@ export function getErrors(data: ExemplarData): ExemplarErrors | undefined {
 
 function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefined {
   const { info, type, value } = property
+
   const maxLength = info?.maxLength ?? 64
-  const minLength = info?.minLength ?? 1
+  const minLength = info?.minLength ?? 0
 
   if (type === ExemplarValueType.String) {
     if (!isString(value)) {
@@ -88,14 +99,16 @@ function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefin
     return undefined
   }
 
-  if (info?.size === 0 && isArray(value)) {
-    return "Mismatching type"
-  }
-
   const values = isArray(value) ? value : [value]
 
-  if (info?.size && values.length !== info.size) {
-    return `Must contain ${minLength} item(s)`
+  if (info?.size) {
+    if (info.repeat) {
+      if (values.length % info.size !== 0) {
+        return `Must contain a multiple of ${minLength} items`
+      }
+    } else if (values.length !== info.size) {
+      return `Must contain ${minLength} item(s)`
+    }
   }
 
   if (values.length < minLength) {
@@ -119,20 +132,19 @@ function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefin
       return "Mismatching type"
     }
 
-    const itemInfo = info?.items?.at(index)
-    const max = itemInfo?.max ?? info?.max ?? InputProps[type].max
-    const min = itemInfo?.min ?? info?.min ?? InputProps[type].min
+    const max = getMax(property, index)
+    const min = getMin(property, index)
 
     if (info?.strict && info.choices && !info.choices.some(choice => choice.value === item)) {
       return "Unsupported value"
     }
 
     if (min !== undefined && item < min) {
-      return `Min ${min}`
+      return `Min ${formatSingleValue(min, property, index)}`
     }
 
     if (max !== undefined && item > max) {
-      return `Max ${max}`
+      return `Max ${formatSingleValue(max, property, index)}`
     }
 
     return undefined
@@ -154,40 +166,71 @@ export function getHexSize(type: ExemplarValueType): number {
   }
 }
 
-export function getMax(type: ExemplarValueType): number | undefined {
+export function getMax(property: ExemplarProperty, index: number): number | undefined {
+  const { info, type } = property
+
   switch (type) {
     case ExemplarValueType.UInt8:
-      return 0xff
+      return getItemInfo(property, index)?.max ?? info?.max ?? 0xff
     case ExemplarValueType.UInt16:
-      return 0xffff
+      return getItemInfo(property, index)?.max ?? info?.max ?? 0xffff
+    default:
+      return getItemInfo(property, index)?.max ?? info?.max
   }
 }
 
-export function getMin(type: ExemplarValueType): number | undefined {
+export function getMin(property: ExemplarProperty, index: number): number | undefined {
+  const { info, type } = property
+
   switch (type) {
     case ExemplarValueType.UInt8:
     case ExemplarValueType.UInt16:
     case ExemplarValueType.UInt32:
-      return 0
+      return getItemInfo(property, index)?.min ?? info?.min ?? 0
+    default:
+      return getItemInfo(property, index)?.min ?? info?.min
   }
 }
 
-export function getStep(type: ExemplarValueType): number | undefined {
+export function getStep(property: ExemplarProperty, index: number): number | undefined {
+  const { info, type } = property
+
   switch (type) {
     case ExemplarValueType.UInt8:
     case ExemplarValueType.UInt16:
     case ExemplarValueType.UInt32:
     case ExemplarValueType.SInt32:
     case ExemplarValueType.SInt64:
-      return 1
+      return getItemInfo(property, index)?.step ?? info?.step ?? 1
+    case ExemplarValueType.Float32:
+      return getItemInfo(property, index)?.step ?? info?.step
   }
 }
 
+export function getChoices(
+  property: ExemplarProperty,
+  index: number,
+): ExemplarPropertyChoiceInfo[] | undefined {
+  const { info } = property
+
+  return getItemInfo(property, index)?.choices ?? info?.choices
+}
+
+export function getUnit(property: ExemplarProperty, index: number): string | undefined {
+  const { info } = property
+
+  return getItemInfo(property, index)?.unit ?? info?.unit
+}
+
 export function formatInputValue(
-  value: number | string | boolean,
+  value: number | string | boolean | null,
   type: ExemplarValueType,
   isHex: boolean,
 ): string {
+  if (value === null) {
+    return ""
+  }
+
   if (isString(value)) {
     return value
   }
@@ -241,6 +284,10 @@ export function parseInputValue(
     return [newValue, Number.parseInt(newValue, 16)]
   }
 
+  if (value === "-") {
+    return [value, 0]
+  }
+
   if (type === ExemplarValueType.Float32) {
     const match = value.match(/^-?[0-9]+[.]?[0-9]{0,8}([e][0-9]{0,2})?/)
     return match ? [match[0], Number.parseFloat(match[0])] : ["", null]
@@ -248,4 +295,64 @@ export function parseInputValue(
 
   const match = value.match(/^-?[0-9]+([e][0-9]{0,2})?/)
   return match ? [match[0], Number.parseInt(match[0], 10)] : ["", null]
+}
+
+function formatSingleValue(
+  value: boolean | number,
+  property: ExemplarProperty,
+  index: number,
+): string {
+  const { info, type } = property
+
+  if (isBoolean(value)) {
+    return value ? "Yes" : "No"
+  }
+
+  const choices = getChoices(property, index)
+  const choice = choices?.find(choice => choice.value === value)
+  if (choice) {
+    return choice.label
+  }
+
+  if (info?.display === "hex") {
+    return toHex(value, getHexSize(type), true, true)
+  }
+
+  if (info?.display === "tgi") {
+    return toHex(value, 8)
+  }
+
+  const formatted = formatInputValue(value, type, false)
+  const unit = getUnit(property, index)
+
+  if (unit) {
+    return `${formatted}${unit === "%" ? "" : " "}${unit}`
+  }
+
+  return formatted
+}
+
+export function formatValue(
+  value: ExemplarPropertyValue | null,
+  property: ExemplarProperty,
+): string {
+  const { info } = property
+
+  if (value === null) {
+    return "-"
+  }
+
+  if (isString(value)) {
+    return `"${value}"`
+  }
+
+  const values = isArray(value) ? value : [value]
+
+  if (!values.length) {
+    return "-"
+  }
+
+  return values
+    .map((item, index) => formatSingleValue(item, property, index))
+    .join(info?.display === "tgi" ? "-" : ", ")
 }

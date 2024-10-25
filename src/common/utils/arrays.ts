@@ -155,6 +155,6 @@ export function replaceAt<T>(array: ReadonlyArray<T>, index: number, value: T): 
   return [...array.slice(0, index), value, ...array.slice(index + 1)]
 }
 
-export function removeAt<T>(array: ReadonlyArray<T>, index: number): T[] {
-  return [...array.slice(0, index), ...array.slice(index + 1)]
+export function removeAt<T>(array: ReadonlyArray<T>, index: number, count: number = 1): T[] {
+  return [...array.slice(0, index), ...array.slice(index + count)]
 }

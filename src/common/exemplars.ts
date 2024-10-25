@@ -15,35 +15,42 @@ export interface ExemplarDataPatch {
   }
 }
 
-export type ExemplarPropertyItemInfo<T extends ExemplarValueType = ExemplarValueType> = {
-  default?: ExemplarPropertyValue<T, false>
+export interface ExemplarPropertyChoiceInfo {
+  desc?: string
+  label: string
+  value: number
+}
+
+export interface ExemplarPropertyItemInfo {
+  choices?: ExemplarPropertyChoiceInfo[]
+  default?: boolean | number | string
   desc?: string
   max?: number
   min?: number
   name: string
+  step?: number
+  unit?: string
 }
 
-export type ExemplarPropertyInfo<T extends ExemplarValueType = ExemplarValueType> = {
-  [S in T]: {
-    choices?: {
-      label: string
-      value: ExemplarPropertyValue<S, false> & number
-    }[]
-    default?: ExemplarPropertyValue<S>
-    desc?: string
-    display?: "hex" | "tgi"
-    id: number
-    items?: ExemplarPropertyItemInfo<T>[]
-    max?: number
-    maxLength?: number
-    min?: number
-    minLength?: number
-    name: string
-    size?: number
-    strict?: boolean
-    type?: S
-  }
-}[T]
+export interface ExemplarPropertyInfo {
+  choices?: ExemplarPropertyChoiceInfo[]
+  default?: boolean | number | string
+  desc?: string
+  display?: "hex" | "tgi"
+  id: number
+  items?: ExemplarPropertyItemInfo[]
+  max?: number
+  maxLength?: number
+  min?: number
+  minLength?: number
+  name: string
+  repeat?: boolean
+  size?: number
+  step?: number
+  strict?: boolean
+  type?: ExemplarValueType
+  unit?: string
+}
 
 export type ExemplarProperty<T extends ExemplarValueType = ExemplarValueType> = {
   [S in T]: {
@@ -85,27 +92,181 @@ export enum PropertyKeyType {
 }
 
 export const ExemplarProperties: {
-  [id in number]?: ExemplarPropertyInfo
+  [propertyId in number]?: ExemplarPropertyInfo
 } = {
   0x00000010: {
+    choices: [
+      {
+        label: "Unknown",
+        value: 0x00,
+      },
+      {
+        desc: "Controls various game properties such as transit network slopes",
+        label: "Tuning",
+        value: 0x01,
+      },
+      {
+        desc: "Contains properties related to buildings",
+        label: "Building",
+        value: 0x02,
+      },
+      {
+        label: "RCI",
+        value: 0x03,
+      },
+      {
+        label: "Developer",
+        value: 0x04,
+      },
+      {
+        label: "Simulator",
+        value: 0x05,
+      },
+      {
+        desc: "Generally used for tunnel entrance models",
+        label: "Road",
+        value: 0x06,
+      },
+      {
+        desc: "Contains properties related to bridges",
+        label: "Bridge",
+        value: 0x07,
+      },
+      {
+        label: "Network",
+        value: 0x08,
+      },
+      {
+        label: "Unknown",
+        value: 0x09,
+      },
+      {
+        label: "Rail",
+        value: 0x0a,
+      },
+      {
+        desc: "Used to reference transit models",
+        label: "Highway",
+        value: 0x0b,
+      },
+      {
+        label: "Power line",
+        value: 0x0c,
+      },
+      {
+        label: "Terrain",
+        value: 0x0d,
+      },
+      {
+        label: "Ordinance",
+        value: 0x0e,
+      },
+      {
+        label: "Flora & Fauna",
+        value: 0x0f,
+      },
+      {
+        desc: "Used to specify the location of props, textures and buildings on lots, along with other properties",
+        label: "Lot Configuration",
+        value: 0x10,
+      },
+      {
+        label: "Foundation",
+        value: 0x11,
+      },
+      {
+        label: "Lighting",
+        value: 0x13,
+      },
+      {
+        label: "Retaining Wall",
+        value: 0x15,
+      },
+      {
+        desc: "Used to reference automata",
+        label: "Vehicle",
+        value: 0x16,
+      },
+      {
+        desc: "Used to reference pedestrian automata",
+        label: "Pedestrian",
+        value: 0x17,
+      },
+      {
+        label: "Aircraft",
+        value: 0x18,
+      },
+      {
+        label: "Prop",
+        value: 0x1e,
+      },
+      {
+        label: "Construction",
+        value: 0x1f,
+      },
+      {
+        label: "Automata tuning",
+        value: 0x20,
+      },
+      {
+        label: "Network Lots (T21)",
+        value: 0x21,
+      },
+      {
+        label: "Disaster",
+        value: 0x22,
+      },
+      {
+        label: "DataView",
+        value: 0x23,
+      },
+      {
+        label: "Crime",
+        value: 0x24,
+      },
+      {
+        label: "Audio",
+        value: 0x25,
+      },
+      {
+        label: "God Mode",
+        value: 0x27,
+      },
+      {
+        label: "Mayor Mode",
+        value: 0x28,
+      },
+      {
+        label: "Trend Bar",
+        value: 0x2a,
+      },
+      {
+        label: "Graph Control",
+        value: 0x2b,
+      },
+    ],
     desc: "Used by property editors to group exemplars and filter properties",
-    display: "hex",
     id: 0x00000010,
     name: "Exemplar Type",
-    size: 0,
+    size: 1,
+    strict: true,
     type: ExemplarValueType.UInt32,
   },
   0x00000011: {
+    desc: "A GZGUID that identifies a class interface",
+    display: "hex",
     id: 0x00000011,
     name: "Exemplar Interface ID",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "A GZGUID that identifies a class interface",
   },
   0x00000012: {
+    desc: "A GZCLSID that identifies a class implementation",
+    display: "hex",
     id: 0x00000012,
     name: "Exemplar Class ID",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "A GZCLSID that identifies a class implementation",
   },
   0x00000020: {
     desc: "Identifies this exemplar in property editors",
@@ -116,10 +277,12 @@ export const ExemplarProperties: {
     type: ExemplarValueType.String,
   },
   0x00000021: {
+    desc: "Identifies this exemplar so that C++ code and other exemplars can refer to it",
+    display: "hex",
     id: 0x00000021,
     name: "Exemplar ID",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "Identifies this exemplar so that C++ code and other exemplars can refer to it",
   },
   0x00004005: {
     id: 0x00004005,
@@ -338,10 +501,12 @@ export const ExemplarProperties: {
     desc: "Efficiency of utility buildings will drop to this % during a strike",
   },
   0x09132de8: {
+    desc: "Cost of maintaining this power pole, in §",
     id: 0x09132de8,
+    min: 0,
     name: "Power pole monthly upkeep",
+    size: 1,
     type: ExemplarValueType.SInt64,
-    desc: "Cost of maintaining this power pole",
   },
   0x09134be2: {
     id: 0x09134be2,
@@ -374,10 +539,12 @@ export const ExemplarProperties: {
     desc: "Scaling factor to convert simulator garbage units to whatever units the UI displays (tons, Kgs)",
   },
   0x091b42a2: {
-    id: 0x091b42a2,
-    name: "Hospital Coverage Radius",
-    type: ExemplarValueType.Float32,
     desc: "Radius of this hospital's coverage, in meters",
+    id: 0x091b42a2,
+    min: 0,
+    name: "Hospital coverage radius",
+    size: 1,
+    type: ExemplarValueType.Float32,
   },
   0x0929c439: {
     id: 0x0929c439,
@@ -440,11 +607,10 @@ export const ExemplarProperties: {
   },
   0x099afacd: {
     default: 100,
-    desc: "Bulldoze cost to delete the building.",
+    desc: "Cost to delete the building, in §",
     id: 0x099afacd,
-    max: 10000000,
-    name: "Bulldoze Cost",
-    size: 0,
+    name: "Bulldoze cost",
+    size: 1,
     type: ExemplarValueType.SInt64,
   },
   0x09b00b2b: {
@@ -817,10 +983,12 @@ export const ExemplarProperties: {
     desc: "Property is a key that controls what particular kind of Prop should appear. Some UDIProp Keys are tied in directly with UDI missions",
   },
   0x0bfc0a4c: {
+    desc: "Charge per traveller to enter the switch, in §",
     id: 0x0bfc0a4c,
-    name: "Transit Switch Fare",
+    min: 0,
+    name: "Transit switch fare",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Simoleon charge per traveller to enter the switch",
   },
   0x0c032488: {
     id: 0x0c032488,
@@ -860,41 +1028,52 @@ export const ExemplarProperties: {
     type: ExemplarValueType.Float32,
   },
   0x27812820: {
+    desc: "Specifies 1 model key for all Z/R",
+    display: "tgi",
     id: 0x27812820,
-    name: "ResourceKeyType0",
+    name: "Resource Key Type 0",
+    size: 3,
     type: ExemplarValueType.UInt32,
   },
   0x27812821: {
     desc: "Specifies 1 model key for each Z/R",
     display: "tgi",
     id: 0x27812821,
-    name: "ResourceKeyType1",
+    name: "Resource Key Type 1",
     size: 3,
     type: ExemplarValueType.UInt32,
   },
   0x27812822: {
+    desc: "A unique instance ID for each zoom and rotation",
+    display: "hex",
     id: 0x27812822,
-    name: "ResourceKeyType2",
+    name: "Resource Key Type 2",
+    size: 20,
     type: ExemplarValueType.UInt32,
-    desc: "A unique instance ID for each zoom and rotation.",
   },
   0x27812823: {
-    id: 0x27812823,
-    name: "ResourceKeyType3",
-    type: ExemplarValueType.UInt32,
     desc: "A unique instance ID for each zoom",
+    display: "hex",
+    id: 0x27812823,
+    name: "Resource Key Type 3",
+    size: 7,
+    type: ExemplarValueType.UInt32,
   },
   0x27812824: {
-    id: 0x27812824,
-    name: "ResourceKeyType4",
-    type: ExemplarValueType.UInt32,
     desc: "Multi-model, multi state",
+    display: "hex",
+    id: 0x27812824,
+    name: "Resource Key Type 4",
+    size: 8, // todo
+    type: ExemplarValueType.UInt32,
   },
   0x27812825: {
-    id: 0x27812825,
-    name: "ResourceKeyType5",
-    type: ExemplarValueType.UInt32,
     desc: "Specifies 1 model key for each Z/R/state",
+    display: "tgi",
+    id: 0x27812825,
+    name: "Resource Key Type 5",
+    size: 3,
+    type: ExemplarValueType.UInt32,
   },
   0x27812832: {
     choices: [
@@ -918,15 +1097,50 @@ export const ExemplarProperties: {
     desc: "Wealth represented by the building",
     id: 0x27812832,
     name: "Wealth",
-    size: 0,
+    size: 1,
     strict: true,
     type: ExemplarValueType.UInt8,
   },
   0x27812833: {
+    choices: [
+      {
+        label: "None",
+        value: 0x00,
+      },
+      {
+        label: "Residential",
+        value: 0x01,
+      },
+      {
+        label: "Commercial Service",
+        value: 0x02,
+      },
+      {
+        label: "Commercial Office",
+        value: 0x03,
+      },
+      {
+        label: "Agriculture",
+        value: 0x05,
+      },
+      {
+        label: "Dirty Industry",
+        value: 0x06,
+      },
+      {
+        label: "Manufacturing",
+        value: 0x07,
+      },
+      {
+        label: "High Tech",
+        value: 0x08,
+      },
+    ],
     id: 0x27812833,
     name: "Purpose",
+    size: 1,
+    strict: true,
     type: ExemplarValueType.UInt8,
-    desc: "1=R. 2=CS.3=CO.5=IR.6=ID.7=IM.8=IHT.",
   },
   0x27812834: {
     id: 0x27812834,
@@ -935,24 +1149,26 @@ export const ExemplarProperties: {
     desc: "Paired values: First value is the Developer ID. 2nd value is how much capacity this building offers to that Developer. R$:1010.R$$:1020.R$$$:1030.CS$:3110.CS$$:3120.CS$$$:3130.CO$$:3320.CO$$$:3330.IResource:4100.ID:4200.IM:4300.IHT:4400. May be others",
   },
   0x27812836: {
-    id: 0x27812836,
-    name: "Allow Joint Occupancy",
-    type: ExemplarValueType.Bool,
     desc: "if true, different types can occupy the building simultaneously",
+    id: 0x27812836,
+    name: "Allow joint occupancy?",
+    size: 1,
+    type: ExemplarValueType.Bool,
   },
   0x27812837: {
     id: 0x27812837,
     max: 16,
     min: 0,
     name: "Growth Stage",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt8,
   },
   0x2781283f: {
+    desc: "If set, this building is for debug and tuning use only",
     id: 0x2781283f,
-    name: "Monopoly Piece",
+    name: "Debug only?",
+    size: 1,
     type: ExemplarValueType.Bool,
-    desc: "If true, this building is for debug and tuning use only",
   },
   0x27812840: {
     id: 0x27812840,
@@ -979,38 +1195,63 @@ export const ExemplarProperties: {
     desc: "IDs from Demand Created are associated to these values instead of the Uint32 values",
   },
   0x27812844: {
+    desc: "if set, the demand simulator ignores demand created and demand satisfied until instructed",
     id: 0x27812844,
-    name: "Demand Is Variable",
+    name: "Demand is variable?",
+    size: 1,
     type: ExemplarValueType.Bool,
-    desc: "if true, the demand simulator ignores demand created and demand satisfied until instructed",
   },
   0x2781284f: {
     id: 0x2781284f,
-    name: "Landmark Effect",
+    items: [
+      {
+        desc: "-100 to +100",
+        max: 100,
+        min: -100,
+        name: "Magnitude",
+      },
+      {
+        desc: "Radius in cells",
+        min: 0,
+        name: "Radius",
+      },
+    ],
+    name: "Landmark effect",
+    size: 2,
     type: ExemplarValueType.SInt32,
-    desc: "magnitude, radius",
   },
   0x27812850: {
     id: 0x27812850,
-    name: "Park Effect",
+    items: [
+      {
+        desc: "-100 to +100",
+        max: 100,
+        min: -100,
+        name: "Magnitude",
+      },
+      {
+        desc: "Radius in cells",
+        min: 0,
+        name: "Radius",
+      },
+    ],
+    name: "Park effect",
+    size: 2,
     type: ExemplarValueType.SInt32,
-    desc: "magnitude, radius",
   },
   0x27812851: {
-    desc: "Pollution generated: air, water, garbage, radiation (at centre of the area of effect)",
+    desc: "Pollution generated at the center of the area of effect",
     id: 0x27812851,
     items: [{ name: "Air" }, { name: "Water" }, { name: "Garbage" }, { name: "Radiation" }],
-    max: 10000000,
-    min: -10000000,
     name: "Pollution at centre",
     size: 4,
     type: ExemplarValueType.SInt32,
   },
   0x27812852: {
     id: 0x27812852,
-    name: "Power Generated",
+    name: "Power generated",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "Amount of power generated",
   },
   0x27812853: {
     id: 0x27812853,
@@ -1019,18 +1260,18 @@ export const ExemplarProperties: {
     desc: "Type of power plant",
   },
   0x27812854: {
-    desc: "Amount of power consumed",
     id: 0x27812854,
-    max: 10000000,
-    name: "Power Consumed",
-    size: 0,
+    name: "Power consumed",
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0x27812870: {
-    id: 0x27812870,
-    name: "Building/prop Family",
-    type: ExemplarValueType.UInt32,
     desc: "The family that this building or prop is a member of",
+    display: "hex",
+    id: 0x27812870,
+    name: "Building/prop family",
+    size: 1, // todo: check
+    type: ExemplarValueType.UInt32,
   },
   0x27812920: {
     id: 0x27812920,
@@ -1039,34 +1280,41 @@ export const ExemplarProperties: {
     desc: "References ATV/AVP file(s)",
   },
   0x27812921: {
-    id: 0x27812921,
-    name: "ResourceKeyType1xm",
-    type: ExemplarValueType.UInt32,
     desc: "Specifies 1 model key for each Z/R",
+    display: "tgi",
+    id: 0x27812921,
+    name: "Resource Key Type 1xm",
+    size: 3,
+    type: ExemplarValueType.UInt32,
   },
   0x27812922: {
+    desc: "A unique instance ID for each zoom and rotation",
     id: 0x27812922,
-    name: "ResourceKeyType2xm",
+    name: "Resource Key Type 2xm",
+    size: 20,
     type: ExemplarValueType.UInt32,
-    desc: "A unique instance ID for each zoom and rotation.",
   },
   0x27812923: {
-    id: 0x27812923,
-    name: "ResourceKeyType3xm",
-    type: ExemplarValueType.UInt32,
     desc: "A unique instance ID for each zoom",
+    id: 0x27812923,
+    name: "Resource Key Type 3xm",
+    size: 7,
+    type: ExemplarValueType.UInt32,
   },
   0x27812924: {
-    id: 0x27812924,
-    name: "ResourceKeyType4xm",
-    type: ExemplarValueType.UInt32,
     desc: "Multi-model, multi state (see tuning docs)",
+    id: 0x27812924,
+    name: "Resource Key Type 4xm",
+    size: 8, // todo
+    type: ExemplarValueType.UInt32,
   },
   0x27812925: {
-    id: 0x27812925,
-    name: "ResourceKeyType5xm",
-    type: ExemplarValueType.UInt32,
     desc: "Specifies 1 model key for each Z/R/state",
+    display: "tgi",
+    id: 0x27812925,
+    name: "Resource Key Type 5xm",
+    size: 3,
+    type: ExemplarValueType.UInt32,
   },
   0x279d1707: {
     id: 0x279d1707,
@@ -1324,7 +1572,7 @@ export const ExemplarProperties: {
     desc: "Flammability rating of this occupant",
     id: 0x29244db5,
     name: "Flammability",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt8,
   },
   0x2929cc6b: {
@@ -1528,7 +1776,7 @@ export const ExemplarProperties: {
     display: "hex",
     id: 0x2a499f85,
     name: "Query exemplar GUID",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0x2a49d7ca: {
@@ -1705,7 +1953,7 @@ export const ExemplarProperties: {
     id: 0x2c8f8746,
     name: "Exemplar Category",
     type: ExemplarValueType.UInt32,
-    size: 0,
+    size: 1,
   },
   0x47bb3f10: {
     id: 0x47bb3f10,
@@ -2499,16 +2747,18 @@ export const ExemplarProperties: {
     desc: "Monthly cost, per convict, for every prisoner over regular (100%) capacity",
   },
   0x48ebd0b1: {
+    desc: "Amount of trash converted to energy per month",
     id: 0x48ebd0b1,
     name: "Waste to energy monthly Capacity",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "Amount of trash converted to energy per month",
   },
   0x48ee7a44: {
-    id: 0x48ee7a44,
-    name: "Garbage Capacity",
-    type: ExemplarValueType.UInt32,
     desc: "Amount of garbage the building can store in a month",
+    id: 0x48ee7a44,
+    name: "Garbage capacity",
+    size: 1,
+    type: ExemplarValueType.UInt32,
   },
   0x48f23a7e: {
     id: 0x48f23a7e,
@@ -2979,10 +3229,11 @@ export const ExemplarProperties: {
     desc: "How many cells around a road tile the system will check population for occupant trips",
   },
   0x499afa38: {
+    desc: "In Sim-days",
     id: 0x499afa38,
-    name: "Construction Time",
+    name: "Construction time",
+    size: 1,
     type: ExemplarValueType.UInt8,
-    desc: "Construction time in Sim-days",
   },
   0x49a195c0: {
     id: 0x49a195c0,
@@ -3025,6 +3276,7 @@ export const ExemplarProperties: {
     id: 0x49beda31,
     max: 5,
     name: "MaxFireStage",
+    size: 1,
     type: ExemplarValueType.UInt8,
   },
   0x49c9c93c: {
@@ -3034,12 +3286,11 @@ export const ExemplarProperties: {
     desc: "How this prop reacts to night",
   },
   0x49cac341: {
-    desc: "Cost to plop this building",
+    desc: "Cost to plop this building, in §",
     default: 100,
     id: 0x49cac341,
-    max: 10000000,
     min: 0,
-    name: "Plop Cost",
+    name: "Plop cost",
     type: ExemplarValueType.SInt64,
   },
   0x49d55951: {
@@ -3475,13 +3726,26 @@ export const ExemplarProperties: {
     desc: "Cost to create a tile of network using this tool",
   },
   0x4a4a88f0: {
-    // todo
-    desc: "0C: Right Corner. 09: Left Corner. 08: Normal",
-    default: 8,
+    choices: [
+      {
+        label: "Normal",
+        value: 0x08,
+      },
+      {
+        label: "Left Corner",
+        value: 0x09,
+      },
+      {
+        label: "Right Corner",
+        value: 0x0c,
+      },
+    ],
+    default: 0x08,
     id: 0x4a4a88f0,
     name: "Road Corner Indicator",
+    size: 1,
+    strict: true,
     type: ExemplarValueType.UInt8,
-    size: 0,
   },
   0x4a4bc714: {
     id: 0x4a4bc714,
@@ -3736,10 +4000,11 @@ export const ExemplarProperties: {
     desc: "Period (in seconds) that the traffic sim tests for accidents",
   },
   0x4bfc47b0: {
+    desc: "If set, this building radiates capacity reduction like intersections do",
     id: 0x4bfc47b0,
-    name: "Transit Switch Capacity Effect",
+    name: "Transit switch capacity effect",
+    size: 1,
     type: ExemplarValueType.Bool,
-    desc: "If true, this building radiates capacity reduction like intersections do",
   },
   0x4bfdd955: {
     id: 0x4bfdd955,
@@ -3967,7 +4232,6 @@ export const ExemplarProperties: {
     desc: "Radius for pollution generated (in cells)",
     id: 0x68ee9764,
     items: [{ name: "Air" }, { name: "Water" }, { name: "Garbage" }, { name: "Radiation" }],
-    max: 255,
     min: 0,
     name: "Pollution Radius",
     size: 4,
@@ -4046,16 +4310,19 @@ export const ExemplarProperties: {
     desc: "Maps difference between actual % funding and % ideal funding to % of Education output",
   },
   0x691b42b3: {
-    id: 0x691b42b3,
-    name: "School Coverage Radius",
-    type: ExemplarValueType.Float32,
     desc: "Radius of a school's coverage, in meters",
+    id: 0x691b42b3,
+    min: 0,
+    name: "School coverage radius",
+    size: 1,
+    type: ExemplarValueType.Float32,
   },
   0x69220415: {
-    id: 0x69220415,
-    name: "Hospital Patient Capacity",
-    type: ExemplarValueType.UInt32,
     desc: "Maximum number of patients served by this hospital",
+    id: 0x69220415,
+    name: "Hospital patient capacity",
+    size: 1,
+    type: ExemplarValueType.UInt32,
   },
   0x6929cc92: {
     id: 0x6929cc92,
@@ -4321,7 +4588,7 @@ export const ExemplarProperties: {
     max: 100,
     min: 0,
     name: "Minimum Slope",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.Float32,
   },
   0x69a36e40: {
@@ -4415,10 +4682,12 @@ export const ExemplarProperties: {
     desc: "Maps time of day on 24-hour clock to a percentage of crime props genera ed (0.0 - 1.0)",
   },
   0x6a19f6b5: {
+    desc: "Radius of generic health effect of this building", // todo: unit
     id: 0x6a19f6b5,
-    name: "Health Effect Radius",
+    min: 0,
+    name: "Health effect radius",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Radius of generic health effect of this building",
   },
   0x6a2d49f4: {
     id: 0x6a2d49f4,
@@ -4653,7 +4922,7 @@ export const ExemplarProperties: {
     display: "hex",
     id: 0x6a871b82,
     name: "PluginPackID",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0x6a946a50: {
@@ -5056,8 +5325,7 @@ export const ExemplarProperties: {
         name: "Magnitude",
       },
       {
-        desc: "Radius in cells (0-256)",
-        max: 256,
+        desc: "Radius in cells",
         min: 0,
         name: "Radius",
       },
@@ -5073,22 +5341,25 @@ export const ExemplarProperties: {
     desc: "Pairs of occupant group IDs and percentages showing how often they should be used",
   },
   0x88ed1059: {
-    id: 0x88ed1059,
-    name: "Recycling centre percent reduction",
-    type: ExemplarValueType.UInt32,
     desc: "Percentage by which recycling centre reduces trash",
+    id: 0x88ed1059,
+    max: 100,
+    name: "Recycling centre percent reduction",
+    size: 1,
+    type: ExemplarValueType.UInt32,
   },
   0x88ed3303: {
+    desc: "Amount of water produced per month",
     id: 0x88ed3303,
-    name: "Water Produced",
+    name: "Water produced",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "Amount of water produced",
   },
   0x88edc789: {
     default: 1,
     id: 0x88edc789,
     name: "Lot version",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt8,
   },
   0x88edc790: {
@@ -5182,9 +5453,7 @@ export const ExemplarProperties: {
         value: 0x0f,
       },
     ],
-    display: "hex",
     id: 0x88edc793,
-    minLength: 1,
     name: "Zone types",
     strict: true,
     type: ExemplarValueType.UInt8,
@@ -5193,40 +5462,70 @@ export const ExemplarProperties: {
     choices: [
       {
         label: "None",
-        value: 0,
+        value: 0x00,
       },
       {
         label: "$",
-        value: 1,
+        value: 0x01,
       },
       {
         label: "$$",
-        value: 2,
+        value: 0x02,
       },
       {
         label: "$$$",
-        value: 3,
+        value: 0x03,
       },
     ],
     id: 0x88edc795,
-    minLength: 0,
     name: "Wealth types",
     strict: true,
     type: ExemplarValueType.UInt8,
   },
   0x88edc796: {
-    choices: [], // todo
-    display: "hex",
+    choices: [
+      {
+        label: "None",
+        value: 0x00,
+      },
+      {
+        label: "Residential",
+        value: 0x01,
+      },
+      {
+        label: "Commercial Service",
+        value: 0x02,
+      },
+      {
+        label: "Commercial Office",
+        value: 0x03,
+      },
+      {
+        label: "Agriculture",
+        value: 0x05,
+      },
+      {
+        label: "Dirty Industry",
+        value: 0x06,
+      },
+      {
+        label: "Manufacturing",
+        value: 0x07,
+      },
+      {
+        label: "High Tech",
+        value: 0x08,
+      },
+    ],
     id: 0x88edc796,
-    minLength: 0,
     name: "Purpose types",
+    strict: true,
     type: ExemplarValueType.UInt8,
   },
   0x88edc797: {
     id: 0x88edc797,
-    name: "LotConfigPropertyFenceDefinition",
+    name: "Fence definition",
     type: ExemplarValueType.UInt32,
-    desc: "LotConfigPropertyFenceDefinition",
   },
   0x88edc798: {
     display: "hex",
@@ -5236,10 +5535,143 @@ export const ExemplarProperties: {
     type: ExemplarValueType.UInt32,
   },
   0x88edc900: {
+    display: "hex",
     id: 0x88edc900,
+    items: [
+      {
+        choices: [
+          {
+            desc: "Defines position and IID reference of a building exemplar",
+            label: "Building",
+            value: 0x0,
+          },
+          {
+            desc: "Defines position and IID reference of a prop exemplar",
+            label: "Prop",
+            value: 0x1,
+          },
+          {
+            desc: "Defines position and IID reference of a base or overlay texture",
+            label: "Texture",
+            value: 0x2,
+          },
+          {
+            label: "Fence",
+            value: 0x3,
+          },
+          {
+            desc: "Defines position and IID reference of a flora/growable tree exemplar",
+            label: "Flora",
+            value: 0x4,
+          },
+          {
+            label: "Water Constraint Tile",
+            value: 0x5,
+          },
+          {
+            label: "Land Constraint Tile",
+            value: 0x6,
+          },
+          {
+            desc: "Defines transit connections and automata paths",
+            label: "Network Node",
+            value: 0x7,
+          },
+        ],
+        name: "Type",
+      },
+      {
+        choices: [
+          {
+            label: "All Levels",
+            value: 0x00,
+          },
+          {
+            label: "All Levels (Prop requester enabled)",
+            value: 0x01,
+          },
+          {
+            label: "Medium/High Only",
+            value: 0x10,
+          },
+          {
+            label: "Medium/High Only (Prop requester enabled)",
+            value: 0x11,
+          },
+          {
+            label: "High Only",
+            value: 0x20,
+          },
+          {
+            label: "High Only (Prop requester enabled)",
+            value: 0x21,
+          },
+        ],
+        name: "Detail",
+      },
+      {
+        choices: [
+          {
+            label: "South",
+            value: 0x00,
+          },
+          {
+            label: "West",
+            value: 0x01,
+          },
+          {
+            label: "North",
+            value: 0x02,
+          },
+          {
+            label: "East",
+            value: 0x03,
+          },
+        ],
+        name: "Orientation",
+      },
+      {
+        name: "X Location Position",
+      },
+      {
+        name: "Y Location Position",
+      },
+      {
+        name: "Z Location Position",
+      },
+      {
+        name: "X1 Size Position",
+      },
+      {
+        name: "Y2 Size Position",
+      },
+      {
+        name: "X1 Size Position",
+      },
+      {
+        name: "Y2 Size Position",
+      },
+      {
+        choices: [
+          {
+            label: "Unused",
+            value: 0x00,
+          },
+        ],
+        name: "Usage Flag",
+      },
+      {
+        name: "ObjectID",
+      },
+      {
+        desc: "For Ploppable buildings, this is the IID of an exemplar/S3D pair. For Special Buildings (tollbooth, etc.) IID of exemplar for data. For Growables, the ID of the lots compatible building family.",
+        name: "IID/ID",
+      },
+    ],
     name: "LotConfigPropertyLotObject",
+    size: 13,
+    strict: true,
     type: ExemplarValueType.UInt32,
-    desc: "LotConfigPropertyLotObject",
   },
   0x88edc901: {
     id: 0x88edc901,
@@ -5264,7 +5696,7 @@ export const ExemplarProperties: {
     display: "hex",
     id: 0x88fcd877,
     name: "Building foundation",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0x890e0a99: {
@@ -5280,28 +5712,33 @@ export const ExemplarProperties: {
     desc: "The maximum amount of outstanding loan debt that is allowed",
   },
   0x89135044: {
+    desc: "Maximum radiation pollution value reported to the UI",
     id: 0x89135044,
+    max: 32766,
     name: "Max radiation pollution value for UI",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "Maximum radiation pollution value reported to the UI, must be less than 32767",
   },
   0x89136440: {
     id: 0x89136440,
-    name: "LotConfigPropertyWaterCompatibility",
+    name: "Water compatibility",
     type: ExemplarValueType.UInt8,
-    desc: "LotConfigPropertyWaterCompatibility",
   },
   0x89189482: {
-    id: 0x89189482,
-    name: "Health Strike Efficiency",
-    type: ExemplarValueType.Float32,
     desc: "Efficiency of Health buildings will drop to this % during a strike",
+    id: 0x89189482,
+    max: 100,
+    min: 0,
+    name: "Health strike efficiency",
+    size: 1,
+    type: ExemplarValueType.Float32,
   },
   0x8918948b: {
-    id: 0x8918948b,
-    name: "Health Strike Duration",
-    type: ExemplarValueType.UInt32,
     desc: "Maximum duration of a Health strike, in months",
+    id: 0x8918948b,
+    name: "Health strike duration",
+    size: 1,
+    type: ExemplarValueType.UInt32,
   },
   0x89189495: {
     id: 0x89189495,
@@ -5334,16 +5771,20 @@ export const ExemplarProperties: {
     desc: "Maps % of coverage distance from a hospital to HQ boost %",
   },
   0x8922041b: {
-    id: 0x8922041b,
-    name: "School Student Capacity",
-    type: ExemplarValueType.UInt32,
     desc: "Maximum number of students served by this school",
+    id: 0x8922041b,
+    name: "School student capacity",
+    size: 1,
+    type: ExemplarValueType.UInt32,
   },
   0x892d9d02: {
-    id: 0x892d9d02,
-    name: "School Capacity Effect",
-    type: ExemplarValueType.Float32,
     desc: "Percentage (from 0 to 200%) by which this ordinance affects the capacity of schools",
+    id: 0x892d9d02,
+    max: 200,
+    min: 0,
+    name: "School capacity effect",
+    size: 1,
+    type: ExemplarValueType.Float32,
   },
   0x89590e6d: {
     id: 0x89590e6d,
@@ -5830,10 +6271,12 @@ export const ExemplarProperties: {
     desc: "Fraction (0 to 1.0) of unjailed criminals that will commit crimes next month",
   },
   0x8a1c3e72: {
-    id: 0x8a1c3e72,
-    name: "Worth",
-    type: ExemplarValueType.SInt64,
     desc: "If e.g., the occupant gets destroyed by a disaster, this is the reported damage amount",
+    id: 0x8a1c3e72,
+    min: 0,
+    name: "Worth",
+    size: 1,
+    type: ExemplarValueType.SInt64,
   },
   0x8a1e07ee: {
     id: 0x8a1e07ee,
@@ -5859,14 +6302,14 @@ export const ExemplarProperties: {
     display: "tgi",
     id: 0x8a2602b8,
     name: "Item Icon",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0x8a2602b9: {
     desc: "Controls position in menu",
     id: 0x8a2602b9,
     name: "Item Order",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0x8a2602ba: {
@@ -5948,10 +6391,12 @@ export const ExemplarProperties: {
     desc: "Maximum amount of water pollution that can be added to/subtracted from each cell per month.",
   },
   0x8a416a99: {
+    desc: "Resource key of the name of what this exemplar represents",
+    display: "tgi",
     id: 0x8a416a99,
     name: "User Visible Name Key",
+    size: 3,
     type: ExemplarValueType.UInt32,
-    desc: "Resource key of the name of what this exemplar represents",
   },
   0x8a416b2e: {
     id: 0x8a416b2e,
@@ -6289,10 +6734,11 @@ export const ExemplarProperties: {
     desc: "Angular window for periodic variation of ambient wind direction (0-90 degrees)",
   },
   0xa8ebcf0c: {
+    desc: "Amount of trash burned per month",
     id: 0xa8ebcf0c,
     name: "Incinerator monthly capacity",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "Amount of trash burned per month",
   },
   0xa8f149c5: {
     id: 0xa8f149c5,
@@ -6319,10 +6765,12 @@ export const ExemplarProperties: {
     desc: "Number of cells surrounding buildings and zones that will also be powered",
   },
   0xa9132ef9: {
+    desc: "Cost of maintaining each cell of wire connected to this power pole, in §",
     id: 0xa9132ef9,
+    min: 0,
     name: "Power line monthly upkeep",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Cost of maintaining each cell of wire connected to this power pole",
   },
   0xa91351a6: {
     id: 0xa91351a6,
@@ -6493,10 +6941,11 @@ export const ExemplarProperties: {
     desc: "Maps Average age of a tract to the % HQ boost the hospital gives the tract",
   },
   0xa92ae446: {
+    desc: "EQ boost this school gives at its origin",
     id: 0xa92ae446,
     name: "School EQ boost",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "The EQ boost the school gives at its origin",
   },
   0xa92d8e40: {
     id: 0xa92d8e40,
@@ -6708,10 +7157,11 @@ export const ExemplarProperties: {
     desc: "Water pumps will not function if water pollution higher than this level",
   },
   0xaa19f6ea: {
+    desc: "Strength of generic health effect of this building (positive or negative)",
     id: 0xaa19f6ea,
     name: "Health effect strength",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Strength of generic health effect of this building (positive or negative)",
   },
   0xaa1dd396: {
     choices: [], // todo
@@ -6727,7 +7177,7 @@ export const ExemplarProperties: {
     display: "hex",
     id: 0xaa1dd397,
     name: "SFX:Query Sound",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0xaa1f8ab7: {
@@ -6809,10 +7259,12 @@ export const ExemplarProperties: {
     desc: "Type of the graph to be shown (line, bar, etc.)",
   },
   0xaa5832f3: {
+    desc: "Pollution generated at the outer edge of the area of effect",
     id: 0xaa5832f3,
-    name: "Pollution at outer edge of circle",
+    items: [{ name: "Air" }, { name: "Water" }, { name: "Garbage" }, { name: "Radiation" }],
+    name: "Pollution at outer edge",
+    size: 4,
     type: ExemplarValueType.SInt32,
-    desc: "Pollution generated: air, water, garbage, radiation (at outer radius of area of effect)",
   },
   0xaa5a9633: {
     id: 0xaa5a9633,
@@ -6827,16 +7279,20 @@ export const ExemplarProperties: {
     desc: "This value get added globally to mayor rating",
   },
   0xaa5c04c5: {
-    id: 0xaa5c04c5,
-    name: "Radiation Spew Intensity",
-    type: ExemplarValueType.Float32,
     desc: "Intensity of radiation spew when power plant blows up",
+    id: 0xaa5c04c5,
+    min: 0,
+    name: "Radiation spew intensity",
+    size: 1,
+    type: ExemplarValueType.Float32,
   },
   0xaa5c04c8: {
+    desc: "Radius of radiation spew when power plant blows up", // todo: unit
     id: 0xaa5c04c8,
-    name: "Radiation Spew Radius",
+    min: 0,
+    name: "Radiation spew radius",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Radius of radiation spew when power plant blows up",
   },
   0xaa5c23fa: {
     id: 0xaa5c23fa,
@@ -7045,24 +7501,24 @@ export const ExemplarProperties: {
   0xc8ebd131: {
     desc: "Amount of water treated per month",
     id: 0xc8ebd131,
-    max: 10000000,
-    name: "Water Treatment monthly capacity",
-    size: 0,
+    name: "Water treatment monthly capacity",
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0xc8ed2d84: {
-    desc: "Amount of water consumed",
+    desc: "Amount of water consumed per month",
     id: 0xc8ed2d84,
-    max: 10000000,
-    name: "Water Consumed",
-    size: 0,
+    name: "Water consumed",
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0xc910b4ce: {
+    desc: "Cost to produce one unit of electricity, in §, not including infrastructure maintenance",
     id: 0xc910b4ce,
+    min: 0,
     name: "Power plant energy conversion cost",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Cost to produce one unit of electricity, not including infrastructure maintenance",
   },
   0xc911eda0: {
     id: 0xc911eda0,
@@ -7095,10 +7551,11 @@ export const ExemplarProperties: {
     desc: "Maps average age to EQ boost %",
   },
   0xc9299659: {
+    desc: "Inherent HQ boost of this hospital",
     id: 0xc9299659,
     name: "Hospital HQ boost",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Inherent HQ boost of this hospital",
   },
   0xc9299662: {
     id: 0xc9299662,
@@ -7181,7 +7638,7 @@ export const ExemplarProperties: {
     display: "hex",
     id: 0xc9b93a56,
     name: "SFX:Default Plop Sound",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0xc9c18eae: {
@@ -7500,13 +7957,12 @@ export const ExemplarProperties: {
         name: "Magnitude",
       },
       {
-        desc: "Radius in cells (0-256)",
-        max: 256,
+        desc: "Radius in cells",
         min: 0,
         name: "Radius",
       },
     ],
-    name: "Mayor Rating Effect",
+    name: "Mayor rating effect",
     size: 2,
     type: ExemplarValueType.SInt32,
   },
@@ -7553,10 +8009,11 @@ export const ExemplarProperties: {
     desc: "Specifies the GO TO Camera Zoom level to use for this disaster",
   },
   0xcaa9ab92: {
+    desc: "If present, the occupant will respond to hover queries but not to click-queries",
     id: 0xcaa9ab92,
     name: "Hover Query Only",
+    size: 1,
     type: ExemplarValueType.Bool,
-    desc: "If present, the occupant will respond to hover queries but not to click-queries",
   },
   0xcab1ce3a: {
     id: 0xcab1ce3a,
@@ -7787,16 +8244,20 @@ export const ExemplarProperties: {
     desc: "Paired entries indicating this building allows a travelling Sim to switch between transit types",
   },
   0xe90e25a2: {
-    id: 0xe90e25a2,
-    name: "Transit Switch Entry Cost",
-    type: ExemplarValueType.Float32,
     desc: "Step cost to enter this transit switch",
+    id: 0xe90e25a2,
+    min: 0,
+    name: "Transit switch entry cost",
+    size: 1,
+    type: ExemplarValueType.Float32,
   },
   0xe90e25a3: {
-    id: 0xe90e25a3,
-    name: "Transit Switch Traffic Capacity",
-    type: ExemplarValueType.Float32,
     desc: "Amount of traffic the switch can handle without increasing travel time",
+    id: 0xe90e25a3,
+    min: 0,
+    name: "Transit switch traffic capacity",
+    size: 1,
+    type: ExemplarValueType.Float32,
   },
   0xe90f5de4: {
     id: 0xe90f5de4,
@@ -7835,10 +8296,11 @@ export const ExemplarProperties: {
     desc: "Multiplier to tweak the relative weighting of the R$$ occupant type's taxes",
   },
   0xe91a0b5f: {
+    desc: "Base value of this building, in §",
     id: 0xe91a0b5f,
     name: "Building value",
+    size: 1,
     type: ExemplarValueType.SInt64,
-    desc: "Base value in Simoleons of this building",
   },
   0xe91b3aee: {
     id: 0xe91b3aee,
@@ -7970,10 +8432,22 @@ export const ExemplarProperties: {
     type: ExemplarValueType.Float32,
   },
   0xe99b068d: {
+    choices: [
+      {
+        label: "Yes",
+        value: 0x01,
+      },
+      {
+        label: "No",
+        value: 0x00,
+      },
+    ],
+    desc: "Whether buildings on the lot will construct. If disabled, they will be fully constructed when plopped.",
     id: 0xe99b068d,
-    name: "LotConfigPropertyDoConstruction",
+    name: "Do construction?",
+    size: 1,
+    strict: true,
     type: ExemplarValueType.UInt8,
-    desc: "If non-zero, buildings on the lot will construct, otherwise they will be fully constructed when plopped",
   },
   0xe9a18d3f: {
     id: 0xe9a18d3f,
@@ -8024,10 +8498,11 @@ export const ExemplarProperties: {
     desc: "How many of each type (in Response Pedestrian Type property) will be created when building is constructed or plopped.",
   },
   0xe9d117c3: {
+    desc: "If set, occupant is never chosen based on user action or normal simulation.",
     id: 0xe9d117c3,
     name: "Special case only",
+    size: 1,
     type: ExemplarValueType.Bool,
-    desc: "If set, occupant is never chosen based on user action or normal simulation.",
   },
   0xe9f0fa86: {
     id: 0xe9f0fa86,
@@ -8036,142 +8511,471 @@ export const ExemplarProperties: {
     desc: "If set to true, specifies that the prop should be treated as self-lit",
   },
   0xea023270: {
-    id: 0xea023270,
-    name: "Aura:Park Effect",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023270,
+    items: [
+      {
+        // todo: what is this exactly?
+        name: "Parks",
+        max: 255,
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Park Effect",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023271: {
-    id: 0xea023271,
-    name: "Aura:Pollution Effect:Air",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023271,
+    items: [
+      {
+        name: "Air Pollution",
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Pollution Effect - Air Pollution",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023272: {
-    id: 0xea023272,
-    name: "Aura:Pollution Effect:Water",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023272,
+    items: [
+      {
+        name: "Water Pollution",
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Pollution Effect - Water Pollution",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023273: {
-    id: 0xea023273,
-    name: "Aura:Pollution Effect:Garbage",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023273,
+    items: [
+      {
+        name: "Garbage",
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Pollution Effect: - Garbage",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023274: {
-    id: 0xea023274,
-    name: "Aura:Pollution Effect:Radiation",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023274,
+    items: [
+      {
+        name: "Radiation",
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Pollution Effect - Radiation",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023275: {
-    id: 0xea023275,
-    name: "Aura:School Effect",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023275,
+    items: [
+      {
+        // todo: what is this exactly?
+        name: "Schools",
+        max: 255,
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: School Effect",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023276: {
-    id: 0xea023276,
-    name: "Aura:Hospital Effect",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023276,
+    items: [
+      {
+        // todo: what is this exactly?
+        name: "Hospitals",
+        max: 255,
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Hospital Effect",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023277: {
-    id: 0xea023277,
-    name: "Aura:Crime Effect",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023277,
+    items: [
+      {
+        // todo: what is this exactly?
+        name: "Crime",
+        max: 255,
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Crime Effect",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023278: {
-    id: 0xea023278,
-    name: "Aura:Trip Length",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023278,
+    items: [
+      {
+        // todo: what is this exactly?
+        name: "Trip Length",
+        max: 255,
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Trip Length",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea023279: {
-    id: 0xea023279,
-    name: "Aura:Traffic",
-    type: ExemplarValueType.Float32,
     desc: "Maps grid data to aura effect",
+    id: 0xea023279,
+    items: [
+      {
+        // todo: what is this exactly?
+        name: "Traffic",
+        max: 255,
+        min: 0,
+        step: 1,
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Traffic",
+    repeat: true,
+    size: 2,
+    type: ExemplarValueType.Float32,
   },
   0xea02327a: {
+    desc: "1.0 means no decay, 0.0 means full decay (no smoothing)",
     id: 0xea02327a,
-    name: "Aura:Long Term Decay Factor",
+    max: 1,
+    min: 0,
+    name: "Aura: Long-Term Decay Factor",
+    size: 0,
     type: ExemplarValueType.Float32,
-    desc: "(1.0 means no decay, 0.0 means full decay (no smoothing)",
   },
   0xea02327b: {
+    desc: "1.0 means no decay, 0.0 means full decay (no smoothing)",
     id: 0xea02327b,
-    name: "Aura:Short Term Decay Factor",
+    max: 1,
+    min: 0,
+    name: "Aura: Short-Term Decay Factor",
+    size: 0,
     type: ExemplarValueType.Float32,
-    desc: "(1.0 means no decay, 0.0 means full decay (no smoothing)",
   },
   0xea02327c: {
+    desc: "Base aura for $ occupancy",
     id: 0xea02327c,
-    name: "Aura:Base Aura (Low)",
+    max: 100,
+    min: -100,
+    name: "Aura: Base Aura ($)",
+    size: 1,
     type: ExemplarValueType.SInt32,
-    desc: "Base aura for R$,Cs$,Id occupancy",
   },
   0xea02327d: {
+    desc: "Base aura for $$ occupancy",
     id: 0xea02327d,
-    name: "Aura:Base Aura (Med)",
+    max: 100,
+    min: -100,
+    name: "Aura: Base Aura ($$)",
+    size: 1,
     type: ExemplarValueType.SInt32,
-    desc: "Base aura for R$$,Cs$$,Co$$,Ir,Im occupancy",
   },
   0xea02327e: {
+    desc: "Base aura for $$$ occupancy",
     id: 0xea02327e,
-    name: "Aura:Base Aura (High)",
+    max: 100,
+    min: -100,
+    name: "Aura: Base Aura ($$$)",
+    size: 1,
     type: ExemplarValueType.SInt32,
-    desc: "Base aura for R$$$,Cs$$$,Co$$$ occupancy",
   },
   0xea02327f: {
+    desc: "Maps tax rate change (in %) to aura effect (-100 to 100)",
     id: 0xea02327f,
-    name: "Aura:Tax Rate Change Effect",
+    items: [
+      {
+        name: "Tax rate change",
+        max: 100,
+        min: -100,
+        step: 1,
+        unit: "%",
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    name: "Aura: Tax Rate Change Effect",
+    repeat: true,
+    size: 2,
     type: ExemplarValueType.Float32,
-    desc: "Maps tax rate change (in percent) to aura effect",
   },
   0xea023280: {
+    desc: "Maps wealth difference to aura effect (-100 to 100)",
     id: 0xea023280,
-    name: "Aura:Value/Wealth Effect",
+    items: [
+      {
+        choices: [
+          {
+            label: "Value = Wealth - 2",
+            value: -2,
+          },
+          {
+            label: "Value = Wealth - 1",
+            value: -1,
+          },
+          {
+            label: "Value = Wealth",
+            value: 0,
+          },
+          {
+            label: "Value = Wealth + 1",
+            value: 1,
+          },
+          {
+            label: "Value = Wealth + 2",
+            value: 2,
+          },
+        ],
+        name: "Wealth difference",
+        max: 100,
+        min: -100,
+        unit: "%",
+      },
+      {
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+    ],
+    maxLength: 10,
+    name: "Aura: Value/Wealth Effect",
+    repeat: true,
+    size: 2,
+    strict: true,
     type: ExemplarValueType.Float32,
-    desc: "Maps (value_type-wealth_type) to aura effect",
   },
   0xea023290: {
     id: 0xea023290,
-    name: "Aura:Transient Effect:Fire",
+    items: [
+      {
+        desc: "-100 to 100",
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+      {
+        name: "Radius",
+        min: 0,
+        step: 16,
+        unit: "m",
+      },
+    ],
+    name: "Aura: Transient Effect - Fire",
+    size: 2,
     type: ExemplarValueType.Float32,
-    desc: "magnitude and radius in meters of transient aura effect",
   },
   0xea023291: {
     id: 0xea023291,
-    name: "Aura:Transient Effect:Flora",
+    items: [
+      {
+        desc: "-100 to 100",
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+      {
+        name: "Radius",
+        min: 0,
+        step: 16,
+        unit: "m",
+      },
+    ],
+    name: "Aura: Transient Effect - Flora",
+    size: 2,
     type: ExemplarValueType.Float32,
-    desc: "magnitude and radius in meters of transient aura effect",
   },
   0xea023292: {
     id: 0xea023292,
-    name: "Aura:Transient Effect:Civic Plop",
+    items: [
+      {
+        desc: "-100 to 100",
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+      {
+        name: "Radius",
+        min: 0,
+        step: 16,
+        unit: "m",
+      },
+    ],
+    name: "Aura: Transient Effect - Civic Plop",
+    size: 2,
     type: ExemplarValueType.Float32,
-    desc: "magnitude and radius in meters of transient aura effect",
   },
   0xea023293: {
     id: 0xea023293,
-    name: "Aura:Transient Effect:Network Plop",
+    items: [
+      {
+        desc: "-100 to 100",
+        name: "Magnitude",
+        max: 100,
+        min: -100,
+        step: 1,
+      },
+      {
+        name: "Radius",
+        min: 0,
+        step: 16,
+        unit: "m",
+      },
+    ],
+    name: "Aura: Transient Effect - Network Plop",
+    size: 2,
     type: ExemplarValueType.Float32,
-    desc: "magnitude and radius in meters of transient aura effect",
   },
   0xea0232a0: {
     id: 0xea0232a0,
-    name: "Aura:Hotspot Settings",
+    items: [
+      {
+        desc: "0 to 255",
+        name: "Threshold value",
+        max: 255,
+        min: 0,
+      },
+      {
+        name: "Hotspot radius",
+        min: 0,
+        unit: "tracts",
+      },
+      {
+        name: "Minimum weight",
+        min: 0,
+      },
+    ],
+    name: "Aura: Hotspot Settings",
+    size: 3,
     type: ExemplarValueType.SInt32,
-    desc: "hotspot settings: threshold value (0-255), radius (in tracts), minimum weight",
   },
   0xea0232a1: {
+    desc: "Maps hotspot weight (number of cells above threshold) to monthly fire probability (in %)",
     id: 0xea0232a1,
-    name: "Aura:Hotspot Riot Probability",
+    items: [
+      {
+        desc: "Number of cells above threshold",
+        name: "Hotspot weight",
+        min: 0,
+        step: 1,
+        unit: "cells",
+      },
+      {
+        desc: "Monthly fire probability, in %",
+        name: "Fire probability",
+        max: 100,
+        min: 0,
+        unit: "%",
+      },
+    ],
+    name: "Aura: Hotspot Riot Probability",
+    repeat: true,
+    size: 2,
     type: ExemplarValueType.Float32,
-    desc: "maps hotspot weight (# of cells above threshold) to month y fire probability (in percent 0-100)",
   },
   0xea123cef: {
     id: 0xea123cef,
@@ -8180,35 +8984,40 @@ export const ExemplarProperties: {
     desc: "If present, specifies a GZCLSID (class ID) for the model class to use. Otherwise, just use the default GZCLSID_S3DModelInstance.",
   },
   0xea1cf220: {
+    desc: "How fast this plant degrades over time",
     id: 0xea1cf220,
     name: "Age degradation rate",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "How fast this plant degrades over time",
   },
   0xea1cf221: {
+    desc: "Degradation threshold at which soft failure occurs",
     id: 0xea1cf221,
     name: "Soft failure threshold",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Threshold at which soft failure occurs",
   },
   0xea1cf222: {
+    desc: "Degradation threshold at which hard failure occurs",
     id: 0xea1cf222,
     name: "Hard failure threshold",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Threshold at which hard failure occurs",
   },
   0xea1e3c53: {
+    desc: "Cost to produce one unit of water, in §, not including infrastructure maintenance",
     id: 0xea1e3c53,
+    min: 0,
     name: "Water building pumping cost",
+    size: 1,
     type: ExemplarValueType.Float32,
-    desc: "Cost to produce one unit of water, not including infrastructure maintenance",
   },
   0xea260589: {
-    desc: "For ploppable buildings: Resource instance ID of lot exemplar for this building",
+    desc: "Resource instance ID of lot exemplar for this building (for ploppable buildings only)",
     display: "tgi",
     id: 0xea260589,
     name: "Lot Resource Key",
-    size: 0,
+    size: 1,
     type: ExemplarValueType.UInt32,
   },
   0xea296f8d: {
@@ -8236,22 +9045,34 @@ export const ExemplarProperties: {
     desc: "Specifies the gender of the My Sim (true=male, false=female)",
   },
   0xea2e078b: {
+    desc: "No more than one building within the specified group can be built in a single city (for ploppable buildings only)",
+    display: "hex",
     id: 0xea2e078b,
-    name: "City Exclusion Group",
+    name: "City exclusion group",
+    size: 1,
     type: ExemplarValueType.UInt32,
-    desc: "For ploppable buildings: No more than one building within the specified group can be built in a single city.",
+  },
+  0xea2e078c: {
+    desc: "No more than one building within the specified group can be built in a single region (for ploppable buildings only)",
+    display: "hex",
+    id: 0xea2e078c,
+    name: "Regional exclusion group",
+    size: 1,
+    type: ExemplarValueType.UInt32,
   },
   0xea3209f8: {
+    desc: "If set, building will appear ghosted in the menu until triggered by a script condition",
     id: 0xea3209f8,
-    name: "Conditional Building",
+    name: "Conditional building?",
+    size: 1,
     type: ExemplarValueType.Bool,
-    desc: "If true, building will appear ghosted in the menu until triggered by a script condition",
   },
   0xea3209f9: {
+    desc: "If set, building will not draw shadows",
     id: 0xea3209f9,
-    name: "No Shadows",
+    name: "No shadows?",
+    size: 1,
     type: ExemplarValueType.Bool,
-    desc: "If true, building will not draw shadows",
   },
   0xea33d694: {
     id: 0xea33d694,
@@ -8374,10 +9195,11 @@ export const ExemplarProperties: {
     desc: "Max number of freight trains to cross a tile per second",
   },
   0xea5393ed: {
-    id: 0xea5393ed,
-    name: "Requires power to animate",
-    type: ExemplarValueType.Bool,
     desc: "Set this to true if the occupant requires power to animate",
+    id: 0xea5393ed,
+    name: "Requires power to animate?",
+    size: 1,
+    type: ExemplarValueType.Bool,
   },
   0xea53b30f: {
     id: 0xea53b30f,

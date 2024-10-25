@@ -2,33 +2,41 @@ import { useEffect, useState } from "react"
 
 import { InputAdornment, TextField } from "@mui/material"
 
-import { ExemplarProperty, ExemplarPropertyItemInfo, ExemplarValueType } from "@common/exemplars"
+import { ExemplarProperty, ExemplarValueType } from "@common/exemplars"
 import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
-import { formatInputValue, getHexSize, getMax, getMin, getStep, parseInputValue } from "./utils"
+import {
+  formatInputValue,
+  getHexSize,
+  getMax,
+  getMin,
+  getStep,
+  getUnit,
+  parseInputValue,
+} from "./utils"
 
 export interface ExemplarPropertyTextInputProps {
   description?: string
   error?: boolean
+  index: number
   isFirst: boolean
   isLast: boolean
-  itemInfo?: ExemplarPropertyItemInfo
   itemLabel?: string
   label: string
   name: string
-  onChange: (newValue: number | string) => void
+  onChange: (newValue: number | string | null) => void
   property: ExemplarProperty
   readonly?: boolean
-  value: number | string
+  value: number | string | null
 }
 
 export function ExemplarPropertyTextInput({
   description,
   error,
+  index,
   isFirst,
   isLast,
-  itemInfo,
   itemLabel,
   label,
   name,
@@ -41,6 +49,7 @@ export function ExemplarPropertyTextInput({
 
   const isHex = info?.display === "tgi" || info?.display === "hex"
   const isString = type === ExemplarValueType.String
+  const unit = getUnit(property, index)
 
   const formattedValue = formatInputValue(value, type, isHex)
 
@@ -55,23 +64,24 @@ export function ExemplarPropertyTextInput({
   return (
     <TextField
       InputProps={{
-        endAdornment: isCopyable && (
-          <InputAdornment position="start" sx={{ marginRight: 0 }}>
-            <CopyButton text={inputValue} />
+        endAdornment: (isCopyable || unit) && (
+          <InputAdornment position="start" sx={{ marginLeft: 1, marginRight: 0 }}>
+            {unit}
+            {isCopyable && <CopyButton text={inputValue} />}
           </InputAdornment>
         ),
         inputProps: {
-          max: itemInfo?.max ?? info?.max ?? getMax(type),
+          max: getMax(property, index),
           maxLength: isString ? info?.maxLength : undefined,
-          min: itemInfo?.min ?? info?.min ?? getMin(type),
+          min: getMin(property, index),
           minLength: isString ? info?.minLength : undefined,
-          step: getStep(type),
-          type: getStep(type) === 1 && !isHex ? "number" : "text",
+          step: getStep(property, index),
+          type: getStep(property, index) && !isHex ? "number" : "text",
         },
         startAdornment: (!!itemLabel || isHex) && (
           <InputAdornment position="start">
             {itemLabel && (
-              <FlexBox marginRight={isHex ? 1 : undefined} minWidth={120}>
+              <FlexBox marginRight={isHex ? 1 : undefined} minWidth={160}>
                 <span style={{ flex: 1 }}>{itemLabel}</span>
                 <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
               </FlexBox>

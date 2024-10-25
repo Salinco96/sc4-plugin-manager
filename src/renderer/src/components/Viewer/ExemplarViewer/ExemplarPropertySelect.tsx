@@ -1,20 +1,19 @@
 import { useMemo, useState } from "react"
 
-import { Autocomplete, InputAdornment, TextField, createFilterOptions } from "@mui/material"
+import { Autocomplete, Box, InputAdornment, TextField, createFilterOptions } from "@mui/material"
 
-import { ExemplarProperty, ExemplarValueType } from "@common/exemplars"
+import { ExemplarProperty, ExemplarPropertyChoiceInfo, ExemplarValueType } from "@common/exemplars"
 import { toHex } from "@common/utils/hex"
 import { isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
-import { formatInputValue, getHexSize, parseInputValue } from "./utils"
-
-const filterOptions = createFilterOptions<{ label: string; value: number }>()
+import { formatInputValue, getChoices, getHexSize, parseInputValue } from "./utils"
 
 export interface ExemplarPropertySelectProps {
   description?: string
   error?: boolean
+  index: number
   isFirst: boolean
   isLast: boolean
   itemLabel?: string
@@ -24,12 +23,13 @@ export interface ExemplarPropertySelectProps {
   original?: number
   property: ExemplarProperty
   readonly?: boolean
-  value: number
+  value: number | null
 }
 
 export function ExemplarPropertySelect({
   description,
   error,
+  index,
   isFirst,
   isLast,
   itemLabel,
@@ -43,18 +43,34 @@ export function ExemplarPropertySelect({
 }: ExemplarPropertySelectProps): JSX.Element {
   const { info, type } = property
 
-  const formattedValue = formatInputValue(value, type, true)
+  const choices = getChoices(property, index)
+
+  const isHex = [
+    ExemplarValueType.UInt8,
+    ExemplarValueType.UInt16,
+    ExemplarValueType.UInt32,
+  ].includes(type)
+
+  const filterOptions = useMemo(() => {
+    return createFilterOptions<ExemplarPropertyChoiceInfo>({
+      stringify(option) {
+        return `${formatInputValue(option.value, type, isHex)} | ${option.label}`
+      },
+    })
+  }, [isHex, type])
+
+  const formattedValue = formatInputValue(value, type, isHex)
 
   const [inputValue, setInputValue] = useState(formattedValue)
   const [isSearching, setSearching] = useState(false)
 
-  const isCopyable = getHexSize(type) >= 8
+  const isCopyable = isHex && getHexSize(type) >= 8
   const isStrict = !!info?.strict
 
   const options = useMemo(() => {
-    const options = info?.choices?.slice() ?? []
+    const options = choices?.slice() ?? []
 
-    if (!options.some(option => option.value === value)) {
+    if (value !== null && !options.some(option => option.value === value)) {
       options.push({ label: "Custom value", value })
     }
 
@@ -63,12 +79,13 @@ export function ExemplarPropertySelect({
     }
 
     return options
-  }, [info, original, value])
+  }, [choices, original, value])
 
   const selectedOption = options.find(choice => choice.value === value)
 
   return (
     <Autocomplete
+      autoHighlight
       blurOnSelect
       clearOnBlur
       disableClearable
@@ -79,9 +96,15 @@ export function ExemplarPropertySelect({
         }
 
         const filtered = filterOptions(options, params)
-        const parsedValue = Number.parseInt(params.inputValue, 16)
-        if (!isStrict && !options.some(choice => choice.value === parsedValue)) {
-          filtered.push({ label: "Custom value", value: parsedValue })
+
+        const parsedValue = isHex
+          ? Number.parseInt(params.inputValue, 16)
+          : Number.parseFloat(params.inputValue)
+
+        if (Number.isFinite(parsedValue)) {
+          if (!isStrict && !options.some(choice => choice.value === parsedValue)) {
+            filtered.push({ label: "Custom value", value: parsedValue })
+          }
         }
 
         return filtered
@@ -92,14 +115,12 @@ export function ExemplarPropertySelect({
         if (isString(option)) {
           return option
         } else {
-          return getOptionLabel(option, type)
+          return option.label
         }
       }}
       handleHomeEndKeys
       id={name}
-      inputValue={
-        isSearching ? inputValue : selectedOption ? getOptionLabel(selectedOption, type) : ""
-      }
+      inputValue={isSearching ? inputValue : selectedOption?.label ?? ""}
       onChange={(event, newValue) => {
         if (!isString(newValue)) {
           onChange(newValue.value)
@@ -107,9 +128,10 @@ export function ExemplarPropertySelect({
         }
       }}
       onInputChange={(event, newValue) => {
-        const [, parsedValue] = parseInputValue(newValue, type, true, inputValue)
-        setInputValue(formatInputValue(parsedValue as number, type, true))
+        const [newInputValue, parsedValue] = parseInputValue(newValue, type, isHex, inputValue)
+        setInputValue(isHex ? formatInputValue(parsedValue as number, type, isHex) : newInputValue)
       }}
+      openOnFocus
       options={options}
       renderInput={inputProps => (
         <TextField
@@ -129,15 +151,23 @@ export function ExemplarPropertySelect({
             startAdornment: (
               <>
                 {inputProps.InputProps.startAdornment}
-                {(isSearching || itemLabel) && (
-                  <InputAdornment position="start" sx={{ marginLeft: 1 }}>
+                {(itemLabel || isHex || (!isSearching && value !== null)) && (
+                  <InputAdornment position="start" sx={{ marginLeft: 1, marginRight: 0 }}>
                     {itemLabel && (
-                      <FlexBox marginRight={1} minWidth={120}>
+                      <FlexBox marginRight={1} minWidth={160}>
                         <span style={{ flex: 1 }}>{itemLabel}</span>
                         <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
                       </FlexBox>
                     )}
-                    {isSearching && "0x"}
+                    {isHex && isSearching && "0x"}
+                    {!isSearching && value !== null && (
+                      <FlexBox minWidth={160}>
+                        <span style={{ flex: 1 }}>
+                          {isHex ? toHex(value, getHexSize(type), true, true) : value}
+                        </span>
+                        <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
+                      </FlexBox>
+                    )}
                   </InputAdornment>
                 )}
               </>
@@ -158,12 +188,23 @@ export function ExemplarPropertySelect({
             setInputValue("")
             setSearching(false)
           }}
-          onChange={undefined}
           onFocus={() => {
             setInputValue(formattedValue)
             setSearching(true)
           }}
+          placeholder={isSearching ? undefined : "-"}
         />
+      )}
+      renderOption={(optionProps, option) => (
+        <Box component="li" {...optionProps} style={{ paddingLeft: 14 }} key={option.value}>
+          <InputAdornment position="start" sx={{ marginLeft: 0, marginRight: 0 }}>
+            <FlexBox marginRight={isSearching ? 1 : undefined} minWidth={160}>
+              <span style={{ flex: 1 }}>{toHex(option.value, getHexSize(type), true, true)}</span>
+              <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
+            </FlexBox>
+          </InputAdornment>
+          {option.label}
+        </Box>
       )}
       selectOnFocus
       size="small"
@@ -171,8 +212,4 @@ export function ExemplarPropertySelect({
       value={selectedOption}
     />
   )
-}
-
-function getOptionLabel(option: { label: string; value: number }, type: ExemplarValueType): string {
-  return `${toHex(option.value, getHexSize(type), true, true)} | ${option.label}`
 }

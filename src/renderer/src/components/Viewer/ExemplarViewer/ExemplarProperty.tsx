@@ -1,19 +1,14 @@
 import { AddCircleOutline as AddIcon, RemoveCircleOutline as RemoveIcon } from "@mui/icons-material"
-import { FormHelperText, IconButton, Link } from "@mui/material"
+import { ButtonGroup, FormHelperText, IconButton, Link } from "@mui/material"
 
-import {
-  type ExemplarProperty,
-  ExemplarPropertyInfo,
-  ExemplarPropertyValue,
-  ExemplarValueType,
-} from "@common/exemplars"
+import { type ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
 import { removeAt, replaceAt } from "@common/utils/arrays"
 import { toHex } from "@common/utils/hex"
-import { isArray, isBoolean, isString } from "@common/utils/types"
+import { isArray, isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { ExemplarPropertyInput } from "./ExemplarPropertyInput"
-import { PropertyErrors, formatInputValue, getHexSize } from "./utils"
+import { PropertyErrors, formatValue, getItemInfo } from "./utils"
 
 export interface ExemplarPropertyProps {
   errors?: PropertyErrors
@@ -29,41 +24,51 @@ export function ExemplarProperty({
   original,
   property,
   readonly,
-}: ExemplarPropertyProps): JSX.Element {
-  const { id, info, type, value } = property
+}: ExemplarPropertyProps): JSX.Element | null {
+  const { id, info, value } = property
 
   const idHex = toHex(id, 8, true)
 
-  const maxLength = info?.size ?? info?.maxLength ?? 64
-  const minLength = info?.size ?? info?.minLength ?? 1
+  const groupSize = info?.size && info.repeat ? info.size : 1
+  const maxLength = info?.size && !info.repeat ? info.size : info?.maxLength ?? groupSize * 16
+  const minLength = info?.size && !info.repeat ? info.size : info?.minLength ?? 0
 
-  const canAdd = isArray(value) && value.length < maxLength && !readonly
+  const canAdd = isArray(value) && value.length > 0 && value.length < maxLength && !readonly
   const canRemove = isArray(value) && value.length > minLength && !readonly
-  const isSingleLine = !isArray(value) || value.length <= 1
 
   const error = isArray(errors) ? errors.find(isString) : errors
 
   // todo: too many large fields!
-  if (isArray(value) && value.length > 8) {
-    return (
-      <p>
-        {idHex}: {showValue(value, type, info)}
-      </p>
-    )
+  if (id >= 0x88edc901 && id <= 0x88edcdff) {
+    return null
+    // return (
+    //   <p>
+    //     {idHex}: {formatValue(value, property)}
+    //   </p>
+    // )
   }
 
   function addItem() {
     if (canAdd) {
-      const itemInfo = info?.items?.at(value.length)
-      const defaultValue = itemInfo?.default ?? info?.default ?? 0
-      onChange([...value, defaultValue as number])
+      const defaultValues = Array.from({ length: groupSize }, (unused, index) => {
+        const itemInfo = getItemInfo(property, value.length + index)
+        return Number(itemInfo?.default ?? info?.default ?? 0)
+      })
+
+      onChange(value.concat(defaultValues))
+    }
+  }
+
+  function removeItem(index: number) {
+    if (canRemove) {
+      onChange(removeAt(value, index, groupSize))
     }
   }
 
   return (
     <FlexBox direction="column" marginTop={2}>
       {isArray(value) ? (
-        value.map((item, index) => (
+        (value.length ? value : Array(groupSize).fill(null)).map((item, index) => (
           <FlexBox key={index} alignItems="center" gap={1} width="100%">
             <ExemplarPropertyInput
               error={isString(errors) || !!errors?.at(index)}
@@ -75,19 +80,19 @@ export function ExemplarProperty({
               readonly={readonly}
               value={item}
             />
-            {canRemove && (
-              <IconButton
-                onClick={() => onChange(removeAt(value, index))}
-                size="small"
-                title="Remove value"
-              >
-                <RemoveIcon fontSize="inherit" />
-              </IconButton>
-            )}
-            {canAdd && isSingleLine && (
-              <IconButton onClick={addItem} size="small" title="Add value">
-                <AddIcon fontSize="inherit" />
-              </IconButton>
+            {(canAdd || canRemove) && (
+              <ButtonGroup component={FlexBox} width={29}>
+                {canRemove && index % groupSize === 0 && (
+                  <IconButton onClick={() => removeItem(index)} size="small" title="Remove value">
+                    <RemoveIcon fontSize="inherit" />
+                  </IconButton>
+                )}
+                {canAdd && !canRemove && index % groupSize === 0 && (
+                  <IconButton onClick={addItem} size="small" title="Add value">
+                    <AddIcon fontSize="inherit" />
+                  </IconButton>
+                )}
+              </ButtonGroup>
             )}
           </FlexBox>
         ))
@@ -108,7 +113,7 @@ export function ExemplarProperty({
             {error}
             {original !== undefined && !error && (
               <>
-                Original: {showValue(original, type, info)}
+                Original: {formatValue(original, property)}
                 {!readonly && (
                   <Link
                     component="button"
@@ -123,7 +128,7 @@ export function ExemplarProperty({
             )}
           </FormHelperText>
         </FlexBox>
-        {canAdd && !isSingleLine && (
+        {canAdd && canRemove && (
           <FlexBox alignItems="center" height={40} marginBottom={2}>
             <IconButton onClick={addItem} size="small" title="Add value">
               <AddIcon fontSize="inherit" />
@@ -133,43 +138,4 @@ export function ExemplarProperty({
       </FlexBox>
     </FlexBox>
   )
-}
-
-function showValue(
-  value: ExemplarPropertyValue | null,
-  type: ExemplarValueType,
-  info?: ExemplarPropertyInfo,
-): string {
-  if (value === null) {
-    return "-"
-  }
-
-  if (isString(value)) {
-    return `"${value}"`
-  }
-
-  const values = isArray(value) ? value : [value]
-
-  return values
-    .map(item => {
-      if (isBoolean(item)) {
-        return item ? "Yes" : "No"
-      }
-
-      const choice = info?.choices?.find(choice => choice.value === item)
-      if (choice) {
-        return choice.label
-      }
-
-      if (info?.display === "hex") {
-        return toHex(item, getHexSize(type), true, true)
-      }
-
-      if (info?.display === "tgi") {
-        return toHex(item, 8)
-      }
-
-      return formatInputValue(item, type, false)
-    })
-    .join(info?.display === "tgi" ? "-" : ", ")
 }
