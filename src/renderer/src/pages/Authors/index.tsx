@@ -6,9 +6,9 @@ import { AuthorID } from "@common/authors"
 import { keys } from "@common/utils/objects"
 import { AuthorTools } from "@components/AuthorTools"
 import { FlexBox } from "@components/FlexBox"
-import { EmptyPackageList } from "@components/PackageList/EmptyPackageList"
-import { getAuthorName } from "@components/PackageList/utils"
-import { VirtualList } from "@components/PackageList/VirtualList"
+import { EmptyPackageList } from "@components/PackageList/EmptyPackageList" // TODO
+import { VirtualList } from "@components/PackageList/VirtualList" // TODO
+import { getAuthorName } from "@components/Tags" // TODO
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { Page, useHistory } from "@utils/navigation"

@@ -24,18 +24,21 @@ import { difference } from "@common/utils/arrays"
 import { keys, values } from "@common/utils/objects"
 import { getLastWord, getStartOfWordSearchRegex, removeLastWord } from "@common/utils/regex"
 import { getStateLabel } from "@common/variants"
-import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
+import { useAuthors, useConfigs, usePackageFilters, useStoreActions } from "@utils/store"
 
 import {
+  SerializedTag,
   TagType,
   deserializeTag,
-  getLongTagLabel,
   getTagLabel,
+  getTagLongLabel,
   isValidTag,
   serializeTag,
-} from "./utils"
+} from "../Tags/utils"
 
 export function PackageListFilters(): JSX.Element {
+  const { categories } = useConfigs()
+
   const actions = useStoreActions()
 
   const authors = useAuthors()
@@ -43,10 +46,10 @@ export function PackageListFilters(): JSX.Element {
 
   const { t } = useTranslation("PackageListFilters")
 
-  const categories = keys(useStore(store => store.categories))
+  const categoryIds = keys(categories)
   const states = useMemo(() => Object.values(PackageState).sort(), [])
 
-  const options: string[] = useMemo(() => {
+  const options: SerializedTag[] = useMemo(() => {
     const lastWord = getLastWord(packageFilters.search)
     if (!lastWord) {
       return []
@@ -62,17 +65,17 @@ export function PackageListFilters(): JSX.Element {
         packageFilters.authors,
       ).map(authorId => serializeTag(TagType.AUTHOR, authorId)),
       ...difference(
-        categories.filter(category => pattern.test(getCategoryLabel(category))),
+        categoryIds.filter(categoryId => pattern.test(getCategoryLabel(categoryId, categories))),
         packageFilters.categories,
       ).map(category => serializeTag(TagType.CATEGORY, category)),
       ...difference(
-        states.filter(state => pattern.test(getStateLabel(state))),
+        states.filter(state => pattern.test(getStateLabel(t, state))),
         packageFilters.states,
       ).map(state => serializeTag(TagType.STATE, state)),
     ]
-  }, [authors, categories, packageFilters, states])
+  }, [authors, categories, packageFilters, states, t])
 
-  const tags: string[] = useMemo(() => {
+  const tags: SerializedTag[] = useMemo(() => {
     return [
       ...packageFilters.authors.map(author => serializeTag(TagType.AUTHOR, author)),
       ...packageFilters.categories.map(category => serializeTag(TagType.CATEGORY, category)),
@@ -149,13 +152,19 @@ export function PackageListFilters(): JSX.Element {
           </ToggleButton>
         </Tooltip>
       </ToggleButtonGroup>
-      <Autocomplete<string, true, false, true>
+      <Autocomplete<SerializedTag, true, false, true>
         disableCloseOnSelect
         disablePortal
         // We do our own filtering
         filterOptions={options => options}
         freeSolo
-        getOptionLabel={option => getTagLabel(deserializeTag(option), authors)}
+        getOptionLabel={option => {
+          if (isValidTag(option)) {
+            return getTagLabel(t, deserializeTag(option), authors, categories)
+          } else {
+            return option
+          }
+        }}
         inputValue={packageFilters.search}
         limitTags={4}
         multiple
@@ -165,14 +174,17 @@ export function PackageListFilters(): JSX.Element {
           filters.authors = []
           filters.categories = []
           filters.states = []
+
           for (const value of values) {
-            const tag = deserializeTag(value)
-            if (tag.type === TagType.AUTHOR) {
-              filters.authors.push(tag.value)
-            } else if (tag.type === TagType.CATEGORY) {
-              filters.categories.push(tag.value)
-            } else if (tag.type === TagType.STATE) {
-              filters.states.push(tag.value)
+            if (isValidTag(value)) {
+              const tag = deserializeTag(value)
+              if (tag.type === TagType.AUTHOR) {
+                filters.authors.push(tag.value)
+              } else if (tag.type === TagType.CATEGORY) {
+                filters.categories.push(tag.value)
+              } else if (tag.type === TagType.STATE) {
+                filters.states.push(tag.value)
+              }
             }
           }
 
@@ -188,7 +200,7 @@ export function PackageListFilters(): JSX.Element {
             filters.onlyUpdates = false
           }
 
-          if (reason === "selectOption" && tags.every(isValidTag)) {
+          if (reason === "selectOption") {
             filters.search = removeLastWord(filters.search)
           }
 
@@ -204,8 +216,8 @@ export function PackageListFilters(): JSX.Element {
         sx={{ flex: 1 }}
         renderInput={props => <TextField {...props} autoFocus label={t("search.label")} />}
         renderOption={(props, option) => (
-          <li key={option} {...props}>
-            {getLongTagLabel(deserializeTag(option), authors)}
+          <li {...props} key={option}>
+            {getTagLongLabel(t, deserializeTag(option), authors, categories)}
           </li>
         )}
         value={tags}

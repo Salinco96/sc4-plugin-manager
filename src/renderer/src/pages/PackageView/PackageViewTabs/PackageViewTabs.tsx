@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
-import { PackageTag } from "@components/PackageTags"
+import { PackageTag } from "@components/Tags"
 import { useCurrentVariant, useDependentPackages } from "@utils/packages"
 
 import { packageViewTabs, usePackageViewTab } from "./tabs"

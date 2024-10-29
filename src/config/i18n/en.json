@@ -70,23 +70,6 @@
     "title": "Create profile",
     "titleFirst": "Create your first profile"
   },
-  "Features": {
-    "cam": {
-      "full": "the Colossus Addon Mod",
-      "long": "Colossus Addon Mod",
-      "short": "CAM"
-    },
-    "darknite": {
-      "full": "a DarkNite mod",
-      "long": "Dark Nite",
-      "short": "DarkNite"
-    },
-    "nam": {
-      "full": "the Network Addon Mod",
-      "long": "Network Addon Mod",
-      "short": "NAM"
-    }
-  },
   "DisableIncompatiblePackagesModal": {
     "cancel": "$t(General:cancel)",
     "confirm": "Disable incompatible packages",
@@ -108,6 +91,20 @@
   "EnableOptionalDependencies": {
     "confirmation": "Enable optional dependencies?",
     "description": "{{packageName}} specifies the following optional dependencies:\n{{dependencies, join(multiline: true)}}\n\nDo you want to enable them?"
+  },
+  "Features": {
+    "cam": {
+      "short": "CAM",
+      "long": "Colossus Addon Mod"
+    },
+    "darknite": {
+      "short": "DN",
+      "long": "Dark Nite"
+    },
+    "nam": {
+      "short": "NAM",
+      "long": "Network Addon Mod"
+    }
   },
   "General": {
     "4gbpatch": "4GB Patch",
@@ -144,16 +141,16 @@
   },
   "Issue": {
     "conflicting-feature": "Conflicting with {{packages, join(max: 2)}}",
-    "conflicting-feature_one": "Conflicting with <a>{{packages, join(max: 1}}</a>",
-    "conflicting-feature_zero": "Conflicting with $t(Features:{{feature}}.long)",
-    "incompatible-dependencies_one": "Dependency <a>{{packages, join(max: 1)}}</a> is not compatible",
+    "conflicting-feature_one": "Conflicting with <a>{{packages, join}}</a>",
+    "conflicting-feature_zero": "Conflicting with <b>{{feature}}</b>",
+    "incompatible-dependencies_one": "Dependency <a>{{packages, join}}</a> is not compatible",
     "incompatible-dependencies_other": "Dependencies {{packages, join(max: 2)}} are not compatible",
     "incompatible-feature": "Incompatible with {{packages, join(max: 2)}}",
-    "incompatible-feature_one": "Incompatible with <a>{{packages, join(max: 1}}</a>",
-    "incompatible-feature_zero": "Incompatible with $t(Features:{{feature}}.long)",
-    "incompatible-option": "Requires option <b>{option}}</b> to be {{value}}",
+    "incompatible-feature_one": "Incompatible with <a>{{packages, join}}</a>",
+    "incompatible-feature_zero": "Incompatible with <b>{{feature}}</b>",
+    "incompatible-option": "Requires option <b>{{option}}</b> to be {{value}}",
     "incompatible-version": "Requires version <b>{{minVersion}}</b> or greater",
-    "missing-feature": "Requires $t(Features:{{feature}}.long)"
+    "missing-feature": "Requires <b>{{feature}}</b>"
   },
   "PackageActions": {
     "actions": {
@@ -286,84 +283,6 @@
       "title": "Warning"
     }
   },
-  "PackageCategory": {
-    "agriculture": "Agriculture",
-    "airplanes": "Airplanes",
-    "airports": "Airports",
-    "automata": "Automata",
-    "bikes": "Bikes",
-    "blockers": "Blockers",
-    "bridges": "Bridges",
-    "bugfixes": "Bugfixes",
-    "bus": "Bus",
-    "cam": "CAM",
-    "canals": "Canals",
-    "cheats": "Cheats",
-    "civics": "Civics",
-    "commercial": "Commercial",
-    "co$$": "CO$$",
-    "co$$$": "CO$$$",
-    "cs$": "CS$",
-    "cs$$": "CS$$",
-    "cs$$$": "CS$$$",
-    "dependencies": "Dependencies",
-    "diagonal": "Diagonal",
-    "dll": "DLLs",
-    "education": "Education",
-    "ferry": "Ferry",
-    "fillers": "Fillers",
-    "flora": "Flora",
-    "freight": "Freight stations",
-    "gameplay": "Gameplay",
-    "government": "Government",
-    "graphics": "Graphics",
-    "health": "Healthcare",
-    "industry": "Industry",
-    "irm": "IRM",
-    "i-d": "I-D",
-    "i-ht": "I-HT",
-    "i-m": "I-M",
-    "landmarks": "Landmarks",
-    "marina": "Marina",
-    "mmps": "MMPs",
-    "mods": "Mods",
-    "monorail": "Monorail",
-    "nam": "NAM",
-    "ordinances": "Ordinances",
-    "overrides": "Overrides",
-    "parkings": "Parkings",
-    "parks": "Parks",
-    "passengers": "Passenger stations",
-    "pedestrians": "Pedestrians",
-    "police": "Police",
-    "power": "Energy",
-    "props": "Props",
-    "rail": "Railway",
-    "religion": "Religion",
-    "residential": "Residential",
-    "rewards": "Rewards",
-    "roundabouts": "Roundabouts",
-    "r$": "R$",
-    "r$$": "R$$",
-    "r$$$": "R$$$",
-    "seaports": "Seaports",
-    "ships": "Ships",
-    "sidewalks": "Sidewalks",
-    "sims": "Sims",
-    "sounds": "Audio",
-    "spam": "SPAM",
-    "streetlights": "Streetlights",
-    "subway": "Subway",
-    "terminals": "Terminals",
-    "textures": "Textures",
-    "tram": "Tramway",
-    "transport": "Transport",
-    "tunnels": "Tunnels",
-    "utilities": "Utilities",
-    "waste": "Waste",
-    "water": "Water",
-    "waterfront": "Waterfront"
-  },
   "PackageList": {
     "emptyList": "No packages found for these filters"
   },
@@ -485,7 +404,9 @@
       "open": "Open configuration file"
     },
     "externals": {
-      "label": "Have you installed {{name}} outside of the Manager?"
+      "cam": "Have you installed CAM (Colossus Addon Mod) outside of the Manager?",
+      "darknite": "Have you installed a DarkNite mod outside of the Manager?",
+      "nam": "Have you installed NAM (Network Addon Mod) outside of the Manager?"
     },
     "id": {
       "label": "Profile ID"

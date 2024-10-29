@@ -7,11 +7,16 @@ import { CategoryID } from "@common/categories"
 import { DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarDataPatch } from "@common/exemplars"
 import { ModalData, ModalID } from "@common/modals"
-import { OptionID, OptionInfo, OptionValue } from "@common/options"
+import { OptionID, OptionValue } from "@common/options"
 import { PackageID } from "@common/packages"
 import { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
 import { Settings } from "@common/settings"
-import { ApplicationState, ApplicationStateUpdate, getInitialState } from "@common/state"
+import {
+  ApplicationConfig,
+  ApplicationState,
+  ApplicationStateUpdate,
+  getInitialState,
+} from "@common/state"
 import { Features, PackageInfo, PackageState } from "@common/types"
 import { compact, keys } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
@@ -436,16 +441,12 @@ export const useStore = create<Store>()((set, get): Store => {
             updateState({ authors: { $set: data.authors } })
           }
 
-          if (data.categories) {
-            updateState({ categories: { $set: data.categories } })
+          if (data.configs) {
+            updateState({ configs: { $set: data.configs } })
           }
 
           if (data.features) {
             updateState({ features: { $set: data.features } })
-          }
-
-          if (data.options) {
-            updateState({ options: { $set: data.options } })
           }
 
           if (data.packages) {
@@ -494,7 +495,7 @@ export const useStore = create<Store>()((set, get): Store => {
   }
 })
 
-export function getAuthors(store: Store): Authors {
+function getAuthors(store: Store): Authors {
   return store.authors
 }
 
@@ -503,15 +504,15 @@ export function getCurrentProfile(store: Store): ProfileInfo | undefined {
   return profileId ? getProfileInfo(store, profileId) : undefined
 }
 
-export function getFeatures(store: Store): Features {
+function getFeatures(store: Store): Features {
   return store.features
 }
 
-export function getGlobalOptions(store: Store): OptionInfo[] {
-  return store.options
+function getConfigs(store: Store): ApplicationConfig {
+  return store.configs
 }
 
-export function getPackageFilters(store: Store): PackageFilters {
+function getPackageFilters(store: Store): PackageFilters {
   return store.packageFilters
 }
 
@@ -527,11 +528,11 @@ export function getProfileInfo(store: Store, profileId: ProfileID): ProfileInfo 
   return store.profiles?.[profileId]
 }
 
-export function getSettings(store: Store): Settings | undefined {
+function getSettings(store: Store): Settings | undefined {
   return store.settings
 }
 
-export function getStoreActions(store: Store): StoreActions {
+function getStoreActions(store: Store): StoreActions {
   return store.actions
 }
 
@@ -547,8 +548,8 @@ export function useFeatures(): Features {
   return useStore(getFeatures)
 }
 
-export function useGlobalOptions(): OptionInfo[] {
-  return useStore(getGlobalOptions)
+export function useConfigs(): ApplicationConfig {
+  return useStore(getConfigs)
 }
 
 export function usePackageFilters(): PackageFilters {

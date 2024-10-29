@@ -12,17 +12,18 @@ import { PackageID } from "@common/packages"
 import { entries, keys } from "@common/utils/objects"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners"
-import { getAuthorName } from "@components/PackageList/utils"
+import { getAuthorName } from "@components/Tags" // TODO
 import { Text } from "@components/Text"
 import { Page, useHistory } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
-import { useAuthors, useGlobalOptions } from "@utils/store"
+import { useAuthors, useConfigs } from "@utils/store"
 
 export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX.Element {
+  const { categories, profileOptions } = useConfigs()
+
   const authors = useAuthors()
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
-  const globalOptions = useGlobalOptions()
 
   const history = useHistory()
 
@@ -55,7 +56,10 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
       </Typography>
       {/* TODO: Better formatting */}
       <Typography variant="body2">
-        <b>{t("category")}:</b> {getCategories(variantInfo).map(getCategoryLabel).join(", ")}
+        <b>{t("category")}:</b>{" "}
+        {getCategories(variantInfo)
+          .map(categoryId => getCategoryLabel(categoryId, categories))
+          .join(", ")}
       </Typography>
       {/* TODO: Better formatting */}
       {variantInfo.repository && (
@@ -80,14 +84,14 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
           <ul>
             {entries(variantInfo.requirements).map(([requirement, value]) => (
               <li key={requirement}>
-                {getRequirementLabel(t, requirement, variantInfo.options, globalOptions)}
+                {getRequirementLabel(t, requirement, variantInfo.options, profileOptions)}
                 {": "}
                 {getRequirementValueLabel(
                   t,
                   requirement,
                   value,
                   variantInfo.options,
-                  globalOptions,
+                  profileOptions,
                 )}
               </li>
             ))}

@@ -11,25 +11,25 @@ import { toggleElement } from "@common/utils/arrays"
 import { entries } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
 import { MarkdownView } from "@components/MarkdownView"
-import { TagType, createTag, serializeTag } from "@components/PackageList/utils"
-import { PackageTag } from "@components/PackageTags"
+import { PackageTag, TagType, createTag, serializeTag } from "@components/Tags"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { useCurrentVariant } from "@utils/packages"
 import {
+  useConfigs,
   useCurrentProfile,
   useFeatures,
-  useGlobalOptions,
   useSettings,
   useStoreActions,
 } from "@utils/store"
 
 export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.Element {
+  const { profileOptions } = useConfigs()
+
   const actions = useStoreActions()
   const features = useFeatures()
   const settings = useSettings()
-  const globalOptions = useGlobalOptions()
   const profileInfo = useCurrentProfile()
   const packageConfig = profileInfo?.packages[packageId]
   const variantInfo = useCurrentVariant(packageId)
@@ -58,7 +58,7 @@ export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.El
           packageId,
           variantInfo,
           profileInfo,
-          globalOptions,
+          profileOptions,
           features,
           settings,
         )
@@ -158,7 +158,7 @@ export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.El
                               t,
                               requirement,
                               variantInfo.options,
-                              globalOptions,
+                              profileOptions,
                             )}
                             {": "}
                             {getRequirementValueLabel(
@@ -166,7 +166,7 @@ export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.El
                               requirement,
                               value,
                               variantInfo.options,
-                              globalOptions,
+                              profileOptions,
                             )}
                           </li>
                         ))}

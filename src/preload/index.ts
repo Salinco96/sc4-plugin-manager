@@ -3,6 +3,7 @@ import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 import { AuthorID } from "@common/authors"
 import { DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarDataPatch } from "@common/exemplars"
+import { Translations } from "@common/i18n"
 import { ModalData, ModalID } from "@common/modals"
 import { PackageID } from "@common/packages"
 import { ProfileID, ProfileUpdate } from "@common/profiles"
@@ -43,6 +44,9 @@ export const api = {
     entryId: TGI,
   ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }> {
     return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entryId)
+  },
+  async loadTranslations(lng: string): Promise<Translations> {
+    return ipcRenderer.invoke("loadTranslations", lng)
   },
   async openAuthorURL(authorId: AuthorID): Promise<boolean> {
     return ipcRenderer.invoke("openAuthorURL", authorId)

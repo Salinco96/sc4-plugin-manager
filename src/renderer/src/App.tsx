@@ -15,20 +15,20 @@ import { ThemeProvider } from "./providers/ThemeProvider"
  */
 function App(): JSX.Element {
   return (
-    <I18nProvider>
-      <ThemeProvider>
+    <ThemeProvider>
+      <I18nProvider>
         <ErrorBoundary>
           <SnackbarProvider>
-            <CssBaseline />
             <DataProvider>
+              <CssBaseline />
               <Layout>
                 <Content />
               </Layout>
             </DataProvider>
           </SnackbarProvider>
         </ErrorBoundary>
-      </ThemeProvider>
-    </I18nProvider>
+      </I18nProvider>
+    </ThemeProvider>
   )
 }
 

@@ -20,10 +20,11 @@ export const DIRNAMES = {
 
 export const FILENAMES = {
   dbAuthors: "authors",
-  dbCategories: "categories",
+  dbCategories: "configs/categories",
+  dbExemplarProperties: "configs/exemplar-properties",
+  dbProfileOptions: "configs/profile-options",
   appConfig: "config",
   logs: "main.log",
-  dbOptions: "options",
   packageConfig: "package",
   sc4exe: "Apps/SimCity 4.exe",
   settings: "settings",

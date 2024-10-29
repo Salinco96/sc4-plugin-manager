@@ -13,14 +13,13 @@ import { PackageID, checkFile } from "@common/packages"
 import { type PackageFile, PackageState } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { values } from "@common/utils/objects"
-import { TagType } from "@components/PackageList/utils"
-import { PackageTag } from "@components/PackageTags"
+import { PackageTag, TagType } from "@components/Tags"
 import { ToolButton } from "@components/ToolButton"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import {
+  useConfigs,
   useCurrentProfile,
   useFeatures,
-  useGlobalOptions,
   useSettings,
   useStoreActions,
 } from "@utils/store"
@@ -36,10 +35,11 @@ export function PackageFile({
   file: PackageFile
   packageId: PackageID
 }): JSX.Element {
+  const { profileOptions } = useConfigs()
+
   const actions = useStoreActions()
   const features = useFeatures()
   const settings = useSettings()
-  const globalOptions = useGlobalOptions()
   const profileInfo = useCurrentProfile()
   const packageStatus = usePackageStatus(packageId)
   const variantInfo = useCurrentVariant(packageId)
@@ -60,7 +60,7 @@ export function PackageFile({
     packageId,
     variantInfo,
     profileInfo,
-    globalOptions,
+    profileOptions,
     features,
     settings,
     patterns,

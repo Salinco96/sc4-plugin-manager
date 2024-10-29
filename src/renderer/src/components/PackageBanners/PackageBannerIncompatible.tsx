@@ -4,6 +4,7 @@ import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
+import { getFeatureLabel } from "@common/i18n"
 import { PackageID } from "@common/packages"
 import { Issue, VariantID, VariantIssue } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
@@ -113,7 +114,12 @@ export function PackageBannerIncompatible({
         }}
         i18nKey={issue.id}
         ns="Issue"
-        values={{ ...issue, count: packageNames?.length, packages: packageNames }}
+        values={{
+          ...issue,
+          count: packageNames?.length,
+          feature: issue.feature && getFeatureLabel(t, issue.feature),
+          packages: packageNames,
+        }}
       />
     </PackageBanner>
   )

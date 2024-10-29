@@ -153,21 +153,23 @@ export function ExemplarPropertySelect({
                 {inputProps.InputProps.startAdornment}
                 {(itemLabel || isHex || (!isSearching && value !== null)) && (
                   <InputAdornment position="start" sx={{ marginLeft: 1, marginRight: 0 }}>
-                    {itemLabel && (
-                      <FlexBox marginRight={1} minWidth={160}>
-                        <span style={{ flex: 1 }}>{itemLabel}</span>
-                        <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
-                      </FlexBox>
-                    )}
-                    {isHex && isSearching && "0x"}
-                    {!isSearching && value !== null && (
-                      <FlexBox minWidth={160}>
-                        <span style={{ flex: 1 }}>
-                          {isHex ? toHex(value, getHexSize(type), true, true) : value}
-                        </span>
-                        <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
-                      </FlexBox>
-                    )}
+                    <FlexBox gap={1}>
+                      {itemLabel && (
+                        <FlexBox minWidth={160}>
+                          <span style={{ flex: 1 }}>{itemLabel}</span>
+                          <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
+                        </FlexBox>
+                      )}
+                      {isHex && isSearching && "0x"}
+                      {!isSearching && value !== null && (
+                        <FlexBox minWidth={160}>
+                          <span style={{ flex: 1 }}>
+                            {isHex ? toHex(value, getHexSize(type), true, true) : value}
+                          </span>
+                          <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
+                        </FlexBox>
+                      )}
+                    </FlexBox>
                   </InputAdornment>
                 )}
               </>
@@ -199,7 +201,9 @@ export function ExemplarPropertySelect({
         <Box component="li" {...optionProps} style={{ paddingLeft: 14 }} key={option.value}>
           <InputAdornment position="start" sx={{ marginLeft: 0, marginRight: 0 }}>
             <FlexBox marginRight={isSearching ? 1 : undefined} minWidth={160}>
-              <span style={{ flex: 1 }}>{toHex(option.value, getHexSize(type), true, true)}</span>
+              <span style={{ flex: 1 }}>
+                {isHex ? toHex(option.value, getHexSize(type), true, true) : option.value}
+              </span>
               <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
             </FlexBox>
           </InputAdornment>

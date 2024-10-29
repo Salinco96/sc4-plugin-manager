@@ -98,6 +98,15 @@ export function isEmpty(
   return size(object) === 0
 }
 
+export function mapKeys<K extends string, T, R extends number | string = K>(
+  object: Readonly<Partial<Record<K, T>>>,
+  fn: (key: K, value: T) => R,
+): Partial<Record<R, T>> {
+  return Object.fromEntries(
+    entries(object).map(([key, value]) => [fn(key, value), value]),
+  ) as Partial<Record<R, T>>
+}
+
 export function mapValues<K extends string, T, R = T>(
   object: Readonly<Partial<Record<K, T>>>,
   fn: (value: T, key: K) => R,

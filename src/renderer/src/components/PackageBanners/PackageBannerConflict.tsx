@@ -4,6 +4,7 @@ import { DifferenceOutlined as ConflictIcon } from "@mui/icons-material"
 import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
+import { getFeatureLabel } from "@common/i18n"
 import { Issue, VariantIssue } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
 import { getPackageInfo, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
@@ -95,7 +96,12 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
         }}
         i18nKey={issue.id}
         ns="Issue"
-        values={{ ...issue, count: packageNames?.length, packages: packageNames }}
+        values={{
+          ...issue,
+          count: packageNames?.length,
+          feature: issue.feature && getFeatureLabel(t, issue.feature),
+          packages: packageNames,
+        }}
       />
     </PackageBanner>
   )

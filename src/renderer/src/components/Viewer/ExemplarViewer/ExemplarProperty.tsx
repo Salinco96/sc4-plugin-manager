@@ -40,12 +40,11 @@ export function ExemplarProperty({
 
   // todo: too many large fields!
   if (id >= 0x88edc901 && id <= 0x88edcdff) {
-    return null
-    // return (
-    //   <p>
-    //     {idHex}: {formatValue(value, property)}
-    //   </p>
-    // )
+    return (
+      <p>
+        {info?.name} - {idHex}: {formatValue(value, property)}
+      </p>
+    )
   }
 
   function addItem() {

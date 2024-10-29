@@ -1,7 +1,8 @@
+import { Namespace, TFunction } from "i18next"
+
 import { AssetData, AssetID } from "./assets"
 import { AuthorID } from "./authors"
 import { CategoryID } from "./categories"
-import { t } from "./i18n"
 import { OptionData, OptionID, OptionInfo, OptionValue, Requirements } from "./options"
 import { PackageID } from "./packages"
 import {
@@ -111,6 +112,6 @@ export interface DependencyInfo extends DependencyData {
   transitive: boolean
 }
 
-export function getStateLabel(state: PackageState): string {
+export function getStateLabel(t: TFunction<Namespace>, state: PackageState): string {
   return t(state, { ns: "PackageState" })
 }

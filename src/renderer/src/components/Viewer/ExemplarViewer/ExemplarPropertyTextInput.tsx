@@ -80,13 +80,15 @@ export function ExemplarPropertyTextInput({
         },
         startAdornment: (!!itemLabel || isHex) && (
           <InputAdornment position="start">
-            {itemLabel && (
-              <FlexBox marginRight={isHex ? 1 : undefined} minWidth={160}>
-                <span style={{ flex: 1 }}>{itemLabel}</span>
-                <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
-              </FlexBox>
-            )}
-            {isHex && "0x"}
+            <FlexBox gap={1}>
+              {itemLabel && (
+                <FlexBox minWidth={160}>
+                  <span style={{ flex: 1 }}>{itemLabel}</span>
+                  <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
+                </FlexBox>
+              )}
+              {isHex && "0x"}
+            </FlexBox>
           </InputAdornment>
         ),
         sx: {

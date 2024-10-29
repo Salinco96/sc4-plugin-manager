@@ -5,10 +5,12 @@ import en from "@config/i18n/en.json"
 import { Feature } from "./types"
 import { isNumber, isString } from "./utils/types"
 
+export type Translations = typeof en
+
 declare module "i18next" {
   interface CustomTypeOptions {
     defaultNS: "General"
-    resources: typeof en
+    resources: Translations
   }
 }
 
@@ -22,9 +24,11 @@ export function initI18n(i18n: typeof i18next): void {
       skipOnVariables: false,
     },
     lng: "en",
+    partialBundledLanguages: true,
     resources: { en },
     returnEmptyString: true,
     returnObjects: true,
+    supportedLngs: ["en"],
   })
 
   i18n.services.formatter?.addCached("bytes", lng => {
@@ -108,7 +112,7 @@ export const t = i18n.t
 export function getFeatureLabel(
   t: TFunction<Namespace>,
   feature: Feature,
-  style: "full" | "short" | "long" = "long",
+  style: "short" | "long" = "long",
 ): string {
   return t(`${feature}.${style}`, { defaultValue: feature, ns: "Features" })
 }

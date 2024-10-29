@@ -5,10 +5,10 @@ import { Box, Typography } from "@mui/material"
 import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
-import { PackageTags } from "@components/PackageTags"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 
 import { PackageTools } from "./PackageTools"
+import { PackageTags } from "./Tags/PackageTags"
 import { Thumbnail } from "./Thumbnail"
 import { ImageViewer } from "./Viewer/ImageViewer"
 

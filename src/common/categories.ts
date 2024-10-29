@@ -1,6 +1,4 @@
-import { t } from "./i18n"
 import { ID } from "./types"
-import { isString } from "./utils/types"
 import { VariantInfo } from "./variants"
 
 /** Category ID */
@@ -22,6 +20,7 @@ export const CategoryID = {
 
 /** Category info */
 export interface CategoryInfo {
+  label: string
   /** Parent category ID (if any) */
   parent?: CategoryID
   /** Priority (between 0 and 999) */
@@ -37,12 +36,12 @@ export function getCategories(variantInfo: VariantInfo): CategoryID[] {
   return variantInfo.categories
 }
 
-export function getCategoryLabel(categoryId: CategoryID): string {
-  const label = t(categoryId, { defaultValue: "", ns: "PackageCategory" })
-  if (isString(label)) {
-    return label
+export function getCategoryLabel(categoryId: CategoryID, categories: Categories): string {
+  const info = categories[categoryId]
+  if (info) {
+    return info.label
   } else {
-    console.error(`Missing label for category ${categoryId}`)
+    console.error(`Unknown category '${categoryId}'`)
     return categoryId
   }
 }

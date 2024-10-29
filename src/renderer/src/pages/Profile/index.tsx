@@ -47,17 +47,17 @@ function Profile(): JSX.Element {
         <FormGroup>
           <ProfileSettingFeatureSwitchField
             feature={Feature.DARKNITE}
-            label={t("externals.label", { name: t("darknite.full", { ns: "Features" }) })}
+            label={t("externals.darknite")}
             profileInfo={profileInfo}
           />
           <ProfileSettingFeatureSwitchField
             feature={Feature.CAM}
-            label={t("externals.label", { name: t("cam.full", { ns: "Features" }) })}
+            label={t("externals.cam")}
             profileInfo={profileInfo}
           />
           <ProfileSettingFeatureSwitchField
             feature={Feature.NAM}
-            label={t("externals.label", { name: t("nam.full", { ns: "Features" }) })}
+            label={t("externals.nam")}
             profileInfo={profileInfo}
           />
         </FormGroup>

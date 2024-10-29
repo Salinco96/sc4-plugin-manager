@@ -21,8 +21,13 @@ import { AssetID, AssetInfo, Assets } from "@common/assets"
 import { AuthorID, AuthorInfo, Authors } from "@common/authors"
 import { Categories } from "@common/categories"
 import { DBPFDataType, DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
-import { ExemplarDataPatch } from "@common/exemplars"
-import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
+import {
+  ExemplarDataPatch,
+  ExemplarPropertyData,
+  ExemplarPropertyInfo,
+  ExemplarValueType,
+} from "@common/exemplars"
+import { Translations, getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { OptionInfo, Requirements, getOptionValue } from "@common/options"
 import {
   ProfileData,
@@ -44,6 +49,7 @@ import {
 } from "@common/types"
 import { flatMap, mapDefined, sumBy, unique } from "@common/utils/arrays"
 import { globToRegex, matchConditions } from "@common/utils/glob"
+import { readHex } from "@common/utils/hex"
 import { entries, forEach, forEachAsync, isEmpty, keys, size, values } from "@common/utils/objects"
 import { VariantID, VariantInfo } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
@@ -121,6 +127,7 @@ export class Application {
   public splashScreen?: SplashScreen
 
   public readonly browserSession: Session = session.defaultSession
+  public readonly translations: { [lng: string]: Translations } = {}
 
   public gamePath!: string
 
@@ -177,9 +184,6 @@ export class Application {
   protected databaseUpdatePromise?: Promise<boolean>
 
   public constructor() {
-    // Initialize translations
-    initI18n(i18n)
-
     // Register message handlers
     this.handle("check4GBPatch")
     this.handle("cleanVariant")
@@ -203,6 +207,9 @@ export class Application {
     this.handle("simtropolisLogout")
     this.handle("switchProfile")
     this.handle("updateProfile")
+
+    // Initialize translations
+    initI18n(i18n)
   }
 
   /**
@@ -933,6 +940,8 @@ export class Application {
   }
 
   protected async initialize(): Promise<void> {
+    await i18n.init
+
     // Initialize session
     getSimtropolisSession(this.browserSession).then(session => {
       if (session) {
@@ -954,10 +963,10 @@ export class Application {
     this.sendAuthors()
 
     // Load categories...
-    this.state.status.loader = "Loading categories..."
+    this.state.status.loader = "Loading configurations..."
     this.sendStatus()
-    await this.loadCategories()
-    this.sendCategories()
+    await this.loadConfigs()
+    this.sendConfigs()
 
     // Load profiles...
     this.state.status.loader = "Loading profiles..."
@@ -1028,7 +1037,7 @@ export class Application {
     await createIfMissing(this.getPackagesPath())
     this.state.packages = await loadLocalPackages(
       this.getPackagesPath(),
-      this.state.categories,
+      this.state.configs.categories,
       (c, t) => {
         if (c % 10 === 0) {
           this.state.status.loader = `Loading local packages (${Math.floor(100 * (c / t))}%)...`
@@ -1046,14 +1055,10 @@ export class Application {
     this.sendStatus()
     await databaseUpdatePromise
 
-    // Load profile options...
-    await this.loadOptions()
-    this.sendOptions()
-
     // Load remote packages...
     const remote = await loadRemotePackages(
       this.getDatabasePath(),
-      this.state.categories,
+      this.state.configs.categories,
       downloadedAssets,
       (c, t) => {
         if (c % 10 === 0) {
@@ -1528,7 +1533,7 @@ export class Application {
                         packageId,
                         variantInfo,
                         profileInfo,
-                        this.state.options,
+                        this.state.configs.profileOptions,
                         this.state.features,
                         this.state.settings,
                         patterns,
@@ -1654,6 +1659,8 @@ export class Application {
     filePath: string,
     entryId: TGI,
   ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }> {
+    const { exemplarProperties } = this.state.configs
+
     const variantInfo = this.requireVariantInfo(packageId, variantId)
     const fileInfo = variantInfo.files?.find(file => file.path === filePath)
 
@@ -1673,7 +1680,7 @@ export class Application {
         throw Error(`Missing entry ${entryId} in ${originalFullPath}`)
       }
 
-      return loadDBPFEntry(originalFile, originalEntry)
+      return loadDBPFEntry(originalFile, originalEntry, exemplarProperties)
     })
 
     if (!isPatched) {
@@ -1688,7 +1695,7 @@ export class Application {
         throw Error(`Missing entry ${entryId} in ${patchedFullPath}`)
       }
 
-      return loadDBPFEntry(patchedFile, patchedEntry)
+      return loadDBPFEntry(patchedFile, patchedEntry, exemplarProperties)
     })
 
     return { data: patchedData, original: originalData }
@@ -1745,6 +1752,8 @@ export class Application {
     variantId: VariantID,
     filePath: string,
   ): Promise<DBPFFile> {
+    const { exemplarProperties } = this.state.configs
+
     const variantInfo = this.requireVariantInfo(packageId, variantId)
     const fileInfo = variantInfo.files?.find(file => file.path === filePath)
 
@@ -1763,7 +1772,7 @@ export class Application {
       await createIfMissing(path.dirname(patchedFullPath))
       file = await openFile(originalFullPath, "r", async originalFile => {
         return openFile(patchedFullPath, "w", async patchedFile => {
-          return patchDBPFEntries(originalFile, patchedFile, patches)
+          return patchDBPFEntries(originalFile, patchedFile, patches, exemplarProperties)
         })
       })
     } else {
@@ -1778,7 +1787,11 @@ export class Application {
 
         for (const entry of values(file.entries)) {
           if (entry.type === DBPFDataType.EXMP) {
-            entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(originalFile, entry)
+            entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(
+              originalFile,
+              entry,
+              exemplarProperties,
+            )
           }
         }
 
@@ -1830,31 +1843,82 @@ export class Application {
     return this.state.authors
   }
 
-  protected async loadCategories(): Promise<Categories> {
-    console.debug("Loading categories...")
+  protected async loadConfigs(): Promise<void> {
+    try {
+      console.debug("Loading categories...")
 
-    const config = await loadConfig<Categories>(this.getDatabasePath(), FILENAMES.dbCategories)
+      const config = await loadConfig<Categories>(this.getDatabasePath(), FILENAMES.dbCategories)
 
-    this.state.categories = config?.data ?? {}
+      if (!config) {
+        throw Error("Missing config")
+      }
 
-    console.info(`Loaded ${Object.keys(this.state.categories).length} categories`)
+      const categories = config.data
 
-    return this.state.categories
-  }
+      this.state.configs.categories = categories
 
-  protected async loadOptions(): Promise<OptionInfo[]> {
-    console.debug("Loading options...")
+      console.debug(`Loaded ${size(categories)} categories`)
+    } catch (error) {
+      console.error("Failed to load categories", error)
+    }
 
-    const config = await loadConfig<{ options: OptionInfo[] }>(
-      this.getDatabasePath(),
-      FILENAMES.dbOptions,
-    )
+    try {
+      console.debug("Loading profile options...")
 
-    this.state.options = config?.data.options ?? []
+      const config = await loadConfig<{ options: OptionInfo[] }>(
+        this.getDatabasePath(),
+        FILENAMES.dbProfileOptions,
+      )
 
-    console.info(`Loaded ${this.state.options.length} options`)
+      if (!config) {
+        throw Error("Missing config")
+      }
 
-    return this.state.options
+      const options = config.data.options
+
+      this.state.configs.profileOptions = options
+
+      console.debug(`Loaded ${options.length} profile options`)
+    } catch (error) {
+      console.error("Failed to load profile options", error)
+    }
+
+    try {
+      console.debug("Loading exemplar properties...")
+
+      const config = await loadConfig<{
+        [propertyIdHex in string]?: ExemplarPropertyData
+      }>(this.getDatabasePath(), FILENAMES.dbExemplarProperties)
+
+      if (!config) {
+        throw Error("Missing config")
+      }
+
+      const properties: { [propertyId in number]?: ExemplarPropertyInfo } = {}
+
+      forEach(config.data, (data, propertyIdHex) => {
+        const propertyInfo: ExemplarPropertyInfo = {
+          ...data,
+          type: data.type && ExemplarValueType[data.type],
+        }
+
+        if (propertyIdHex.includes("-")) {
+          const [firstId, lastId] = propertyIdHex.split("-").map(readHex)
+          for (let propertyId = firstId; propertyId <= lastId; propertyId++) {
+            properties[propertyId] = propertyInfo
+          }
+        } else {
+          const propertyId = readHex(propertyIdHex)
+          properties[propertyId] = propertyInfo
+        }
+      })
+
+      this.state.configs.exemplarProperties = properties
+
+      console.debug(`Loaded ${size(properties)} exemplar properties`)
+    } catch (error) {
+      console.error("Failed to load exemplar properties", error)
+    }
   }
 
   protected async loadProfiles(): Promise<Profiles> {
@@ -2073,14 +2137,14 @@ export class Application {
    */
   protected async recalculatePackages(profileId: ProfileID): Promise<void> {
     const profileInfo = this.getProfileInfo(profileId)
-    if (!this.state.options || !this.state.packages || !this.state.settings || !profileInfo) {
+    if (!this.state.packages || !this.state.settings || !profileInfo) {
       return
     }
 
     const { resultingFeatures, resultingStatus } = resolvePackages(
       this.state.packages,
       profileInfo,
-      this.state.options,
+      this.state.configs.profileOptions,
       this.state.settings,
     )
 
@@ -2262,15 +2326,9 @@ export class Application {
     })
   }
 
-  protected sendCategories(): void {
+  protected sendConfigs(): void {
     this.sendStateUpdate({
-      categories: this.state.categories,
-    })
-  }
-
-  protected sendOptions(): void {
-    this.sendStateUpdate({
-      options: this.state.options,
+      configs: this.state.configs,
     })
   }
 
@@ -2508,6 +2566,7 @@ export class Application {
             onMessage({ success, error }) {
               if (success) {
                 console.info("Updated database")
+                i18n.reloadResources()
                 resolve(true)
               } else {
                 console.warn("Failed updating database:", error)
@@ -2524,7 +2583,7 @@ export class Application {
 
   public async updateProfile(profileId: ProfileID, update: ProfileUpdate): Promise<boolean> {
     const profileInfo = this.getProfileInfo(profileId)
-    if (!this.state.options || !this.state.packages || !this.state.settings || !profileInfo) {
+    if (!this.state.packages || !this.state.settings || !profileInfo) {
       return false
     }
 
@@ -2550,7 +2609,7 @@ export class Application {
       } = resolvePackageUpdates(
         this.state.packages,
         profileInfo,
-        this.state.options,
+        this.state.configs.profileOptions,
         this.state.settings,
         update,
       )

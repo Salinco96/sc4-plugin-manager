@@ -5,7 +5,7 @@ import { FlexBox } from "@components/FlexBox"
 import { useAuthors } from "@utils/store"
 
 import { AuthorTools } from "./AuthorTools"
-import { getAuthorName } from "./PackageList/utils"
+import { getAuthorName } from "./Tags/utils"
 import { Thumbnail } from "./Thumbnail"
 
 export function AuthorHeader({ authorId }: { authorId: AuthorID }): JSX.Element {

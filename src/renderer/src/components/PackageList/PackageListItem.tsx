@@ -6,13 +6,14 @@ import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
 import { PackageBanners } from "@components/PackageBanners"
-import { PackageTags } from "@components/PackageTags"
 import { PackageTools } from "@components/PackageTools"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { Page, useHistory } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
+
+import { PackageTags } from "../Tags/PackageTags"
 
 import { VirtualListItemProps } from "./VirtualList"
 

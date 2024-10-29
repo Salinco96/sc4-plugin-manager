@@ -1,10 +1,19 @@
 import { Authors } from "./authors"
 import { Categories } from "./categories"
+import { ExemplarPropertyInfo } from "./exemplars"
 import { OptionInfo } from "./options"
 import { PackageID } from "./packages"
 import { ProfileID, ProfileInfo, Profiles } from "./profiles"
 import { Settings } from "./settings"
 import { Features, PackageInfo, Packages } from "./types"
+
+export interface ApplicationConfig {
+  categories: Categories
+  exemplarProperties: {
+    [propertyId in number]?: ExemplarPropertyInfo
+  }
+  profileOptions: OptionInfo[]
+}
 
 export interface ApplicationStatus {
   linker: string | null
@@ -15,9 +24,8 @@ export interface ApplicationStatus {
 
 export interface ApplicationState {
   authors: Authors
-  categories: Categories
+  configs: ApplicationConfig
   features: Features
-  options: OptionInfo[]
   packages: Packages | undefined
   profiles: Profiles | undefined
   settings: Settings | undefined
@@ -39,9 +47,12 @@ export interface ApplicationStateUpdate
 export function getInitialState(): ApplicationState {
   return {
     authors: {},
-    categories: {},
+    configs: {
+      categories: {},
+      exemplarProperties: {},
+      profileOptions: [],
+    },
     features: {},
-    options: [],
     packages: undefined,
     profiles: undefined,
     settings: undefined,

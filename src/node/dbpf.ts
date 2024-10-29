@@ -14,8 +14,8 @@ import {
 import {
   ExemplarData,
   ExemplarDataPatch,
-  ExemplarProperties,
   ExemplarProperty,
+  ExemplarPropertyInfo,
   ExemplarPropertyValue,
   ExemplarValueType,
   PropertyKeyType,
@@ -109,6 +109,9 @@ export async function loadDBPF(file: FileHandle): Promise<DBPFFile> {
 export async function loadDBPFEntry<T extends DBPFDataType>(
   file: FileHandle,
   entry: DBPFEntry<T>,
+  exemplarProperties: {
+    [propertyId in number]?: ExemplarPropertyInfo
+  },
 ): Promise<DBPFEntryData<T>> {
   const type = getDataType(entry.id)
 
@@ -120,7 +123,7 @@ export async function loadDBPFEntry<T extends DBPFDataType>(
 
   switch (type) {
     case DBPFDataType.EXMP: {
-      return loadExemplar(entry.id, bytes) as DBPFEntryData<T>
+      return loadExemplar(entry.id, bytes, exemplarProperties) as DBPFEntryData<T>
     }
 
     case DBPFDataType.XML: {
@@ -143,6 +146,9 @@ export async function patchDBPFEntries(
   outFile: FileHandle,
   patches: {
     [entryId in TGI]?: ExemplarDataPatch
+  },
+  exemplarProperties: {
+    [propertyId in number]?: ExemplarPropertyInfo
   },
 ): Promise<DBPFFile> {
   const data = await loadDBPF(inFile)
@@ -181,7 +187,7 @@ export async function patchDBPFEntries(
         throw Error("Not an exemplar entry: " + entry.id)
       }
 
-      const exemplarData = await loadDBPFEntry<DBPFDataType.EXMP>(inFile, entry)
+      const exemplarData = await loadDBPFEntry<DBPFDataType.EXMP>(inFile, entry, exemplarProperties)
 
       // Store shallow copy of original
       entry.original = {
@@ -202,7 +208,7 @@ export async function patchDBPFEntries(
             delete exemplarData.properties[propertyId]
           } else {
             const property = exemplarData.properties[propertyId]
-            const info = property?.info ?? ExemplarProperties[propertyId]
+            const info = property?.info ?? exemplarProperties[propertyId]
             const type = property?.type ?? info?.type
             if (!type) {
               throw Error("Unknown property: " + toHex(propertyId, 8, true))
@@ -243,7 +249,7 @@ export async function patchDBPFEntries(
           bytes.decompress()
         }
 
-        entry.data = loadExemplar(entry.id, bytes)
+        entry.data = loadExemplar(entry.id, bytes, exemplarProperties)
       }
     }
 
@@ -292,7 +298,13 @@ export async function patchDBPFEntries(
   return data
 }
 
-function loadExemplar(entryId: TGI, bytes: Binary): ExemplarData {
+function loadExemplar(
+  entryId: TGI,
+  bytes: Binary,
+  exemplarProperties: {
+    [propertyId in number]?: ExemplarPropertyInfo
+  },
+): ExemplarData {
   let parentCohortId = TGI(0, 0, 0)
 
   const properties: { [propertyId in number]?: ExemplarProperty } = {}
@@ -320,7 +332,7 @@ function loadExemplar(entryId: TGI, bytes: Binary): ExemplarData {
 
             properties[propertyId] = {
               id: propertyId,
-              info: ExemplarProperties[propertyId],
+              info: exemplarProperties[propertyId],
               type: valueType,
               value: bytes.readValue(valueType),
             } as ExemplarProperty
@@ -333,7 +345,7 @@ function loadExemplar(entryId: TGI, bytes: Binary): ExemplarData {
 
             properties[propertyId] = {
               id: propertyId,
-              info: ExemplarProperties[propertyId],
+              info: exemplarProperties[propertyId],
               type: valueType,
               value: bytes.readValues(valueType, reps),
             } as ExemplarProperty
@@ -394,7 +406,7 @@ function loadExemplar(entryId: TGI, bytes: Binary): ExemplarData {
 
             properties[propertyId] = {
               id: propertyId,
-              info: ExemplarProperties[propertyId] ?? {
+              info: exemplarProperties[propertyId] ?? {
                 id: propertyId,
                 name,
                 type: valueType,
