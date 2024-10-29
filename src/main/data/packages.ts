@@ -367,6 +367,7 @@ export function loadVariantInfo(
     files: potentialUnionBy(variantData.files, packageData.files, file => file.path),
     id: variantId,
     images: variantData.images ?? packageData.images,
+    logs: variantData.logs ?? packageData.logs,
     lots: potentialUnionBy(variantData.lots, packageData.lots, lot => lot.id)?.map(lot =>
       lot.category
         ? {
@@ -511,6 +512,7 @@ export async function writePackageConfig(
               description: variant.description,
               experimental: variant.experimental,
               files: variant.files,
+              logs: variant.logs,
               lots: variant.lots?.map(({ categories, ...lot }) => ({
                 category: categories?.join(","),
                 ...lot,

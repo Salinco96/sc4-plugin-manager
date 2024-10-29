@@ -18,8 +18,17 @@ export const api = {
   async cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("cleanVariant", packageId, variantId)
   },
+  async clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
+    return ipcRenderer.invoke("clearPackageLogs", packageId, variantId)
+  },
   async createProfile(name: string, templateProfileId?: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
+  },
+  async getPackageLogs(
+    packageId: PackageID,
+    variantId: VariantID,
+  ): Promise<{ size: number; text: string } | null> {
+    return ipcRenderer.invoke("getPackageLogs", packageId, variantId)
   },
   async getPackageReadme(
     packageId: PackageID,

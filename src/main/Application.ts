@@ -187,7 +187,9 @@ export class Application {
     // Register message handlers
     this.handle("check4GBPatch")
     this.handle("cleanVariant")
+    this.handle("clearPackageLogs")
     this.handle("createProfile")
+    this.handle("getPackageLogs")
     this.handle("getPackageReadme")
     this.handle("getState")
     this.handle("installPackages")
@@ -692,6 +694,48 @@ export class Application {
    */
   public getLogsPath(): string {
     return path.join(this.getRootPath(), DIRNAMES.logs)
+  }
+
+  /**
+   * Deletes a TXT log file.
+   */
+  public async clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
+    const variantInfo = this.requireVariantInfo(packageId, variantId)
+
+    if (!variantInfo.logs) {
+      throw Error(`Package '${packageId}#${variantId}' does not have logs`)
+    }
+
+    const logsPath = path.join(this.getPluginsPath(), variantInfo.logs)
+    await removeIfPresent(logsPath)
+  }
+
+  /**
+   * Returns the content of a TXT log file.
+   */
+  public async getPackageLogs(
+    packageId: PackageID,
+    variantId: VariantID,
+  ): Promise<{ size: number; text: string } | null> {
+    const variantInfo = this.requireVariantInfo(packageId, variantId)
+
+    if (!variantInfo.logs) {
+      throw Error(`Package '${packageId}#${variantId}' does not have logs`)
+    }
+
+    const logsPath = path.join(this.getPluginsPath(), variantInfo.logs)
+
+    try {
+      const { size } = await fs.stat(logsPath)
+      const text = await fs.readFile(logsPath, "utf8")
+      return { size, text }
+    } catch (error) {
+      if (error instanceof Error && error.message.match(/no such file or directory/i)) {
+        return null
+      } else {
+        throw error
+      }
+    }
   }
 
   /**

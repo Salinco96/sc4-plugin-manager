@@ -31,6 +31,7 @@ export interface VariantData {
   files?: PackageFile[]
   images?: string[]
   lastModified?: string
+  logs?: string
   lots?: LotData[]
   mmps?: MMPData[]
   name?: string

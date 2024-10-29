@@ -11,6 +11,7 @@ import { Tag, TagType, createTag } from "@components/Tags"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewFiles } from "./PackageViewFiles"
+import { PackageViewLogs } from "./PackageViewLogs"
 import { PackageViewLots } from "./PackageViewLots"
 import { PackageViewMMPs } from "./PackageViewMMPs"
 import { PackageViewOptionalDependencies } from "./PackageViewOptionalDependencies"
@@ -127,6 +128,16 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     },
     label(t) {
       return t("options")
+    },
+  },
+  {
+    id: "logs",
+    component: PackageViewLogs,
+    condition(variantInfo) {
+      return !!variantInfo.installed && !!variantInfo.logs
+    },
+    label(t) {
+      return t("logs")
     },
   },
 ]

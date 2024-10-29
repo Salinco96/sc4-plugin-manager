@@ -7,7 +7,7 @@ import { FlexBox } from "@components/FlexBox"
 import { PackageHeader } from "@components/PackageHeader"
 import { useHistory } from "@utils/navigation"
 
-import { PackageViewTabs } from "./PackageViewTabs/PackageViewTabs"
+import { PackageViewTabs } from "../../components/PackageViewTabs/PackageViewTabs"
 
 function PackageView({ packageId }: { packageId: PackageID }): JSX.Element | null {
   const history = useHistory()

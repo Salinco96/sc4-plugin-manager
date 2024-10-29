@@ -48,10 +48,15 @@ export interface StoreActions {
   addPackage(packageId: PackageID, variantId: VariantID, data?: ProfileUpdate): Promise<boolean>
   check4GBPatch(): Promise<void>
   cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void>
+  clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void>
   closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: ProfileID): Promise<boolean>
   disablePackage(packageId: PackageID): Promise<boolean>
   enablePackage(packageId: PackageID): Promise<boolean>
+  getPackageLogs(
+    packageId: PackageID,
+    variantId: VariantID,
+  ): Promise<{ size: number; text: string } | null>
   getPackageReadme(
     packageId: PackageID,
     variantId: VariantID,
@@ -164,6 +169,9 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ snackbars: { $unset: [type] } })
         }
       },
+      async clearPackageLogs(packageId, variantId) {
+        return window.api.clearPackageLogs(packageId, variantId)
+      },
       async createProfile(name, templateProfileId) {
         return window.api.createProfile(name, templateProfileId)
       },
@@ -204,6 +212,9 @@ export const useStore = create<Store>()((set, get): Store => {
           this.showErrorToast(`Failed to enable ${packageId}`)
           return false
         }
+      },
+      async getPackageLogs(packageId, variantId) {
+        return window.api.getPackageLogs(packageId, variantId)
       },
       async getPackageReadme(packageId, variantId) {
         return window.api.getPackageReadme(packageId, variantId)
