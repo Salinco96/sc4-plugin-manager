@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
 
 import {
+  Box,
   Button,
   ButtonGroup,
   FormControl,
@@ -8,11 +9,13 @@ import {
   Switch,
   Typography,
 } from "@mui/material"
+import { Virtuoso } from "react-virtuoso"
 
 import { TGI } from "@common/dbpf"
 import {
   ExemplarData,
   ExemplarDataPatch,
+  ExemplarDisplayType,
   ExemplarPropertyValue,
   ExemplarValueType,
 } from "@common/exemplars"
@@ -23,7 +26,7 @@ import { FlexBox } from "@components/FlexBox"
 
 import { Viewer } from "../Viewer"
 
-import { ExemplarProperty } from "./ExemplarProperty"
+import { ExemplarProperty, ExemplarPropertyProps } from "./ExemplarProperty"
 import { getDiff, getErrors } from "./utils"
 
 export interface ExemplarViewerProps {
@@ -70,6 +73,68 @@ export function ExemplarViewer({
     }
   }
 
+  const fields: ExemplarPropertyProps[] = useMemo(() => {
+    const fields = values(currentData.properties).map<ExemplarPropertyProps>(property => ({
+      errors: errors?.properties?.[property.id],
+      onChange(value) {
+        if (value === null) {
+          const { [property.id]: deleted, ...properties } = currentData.properties
+          setCurrentData({ ...currentData, properties })
+        } else {
+          setCurrentData({
+            ...currentData,
+            properties: {
+              ...currentData.properties,
+              [property.id]: { ...property, value } as typeof property,
+            },
+          })
+        }
+      },
+      property,
+      original: getOriginalValue(property.id),
+      readonly,
+    }))
+
+    fields.unshift({
+      errors: errors?.parentCohortId,
+      onChange(value) {
+        if (isArray(value) && value.length === 3) {
+          setCurrentData({
+            ...currentData,
+            parentCohortId: TGI(value[0], value[1], value[2]),
+          })
+        } else {
+          setCurrentData({
+            ...currentData,
+            parentCohortId: TGI(0, 0, 0),
+          })
+        }
+      },
+      property: {
+        id: 0,
+        info: {
+          display: ExemplarDisplayType.TGI,
+          id: 0,
+          name: "Parent Cohort ID",
+          size: 3,
+          type: ExemplarValueType.UInt32,
+        },
+        type: ExemplarValueType.UInt32,
+        value: currentData?.parentCohortId.split("-").map(readHex),
+      },
+      original: diff?.parentCohortId
+        ? originalData?.parentCohortId.split("-").map(readHex)
+        : undefined,
+      readonly,
+    })
+
+    if (showDiffOnly && isPatched && original === undefined) {
+      return fields.filter(field => field.original !== undefined)
+    }
+
+    return fields
+  }, [currentData, diff, errors, isPatched, originalData, readonly, showDiffOnly])
+
   return (
     <Viewer background="light" open={open} onClose={onClose}>
       <FlexBox direction="column" height="100%" width="100%">
@@ -77,81 +142,15 @@ export function ExemplarViewer({
           <Typography variant="h6">{id}</Typography>
         </FlexBox>
         <FlexBox direction="column" flex={1} overflow="auto">
-          <FlexBox direction="column" paddingX={8}>
-            {(!showDiffOnly || !isPatched || diff?.parentCohortId) && (
-              <ExemplarProperty
-                errors={errors?.parentCohortId}
-                onChange={newValue => {
-                  if (isArray(newValue) && newValue.length === 3) {
-                    setCurrentData({
-                      ...currentData,
-                      parentCohortId: TGI(newValue[0], newValue[1], newValue[2]),
-                    })
-                  } else {
-                    setCurrentData({
-                      ...currentData,
-                      parentCohortId: TGI(0, 0, 0),
-                    })
-                  }
-                }}
-                property={{
-                  id: 0,
-                  info: {
-                    display: "tgi",
-                    id: 0,
-                    name: "Parent Cohort ID",
-                    size: 3,
-                    type: ExemplarValueType.UInt32,
-                  },
-                  type: ExemplarValueType.UInt32,
-                  value: currentData?.parentCohortId.split("-").map(readHex),
-                }}
-                original={
-                  diff?.parentCohortId
-                    ? originalData?.parentCohortId.split("-").map(readHex)
-                    : undefined
-                }
-                readonly={readonly}
-              />
+          <Virtuoso
+            data={fields}
+            itemContent={(index, field) => (
+              <Box paddingLeft={8} paddingRight={6} width="100%">
+                <ExemplarProperty {...field} />
+              </Box>
             )}
-            {values(currentData.properties).map(property => {
-              const original = getOriginalValue(property.id)
-
-              if (showDiffOnly && isPatched && original === undefined) {
-                return null
-              }
-
-              return (
-                <ExemplarProperty
-                  errors={errors?.properties?.[property.id]}
-                  key={property.id}
-                  onChange={newValue => {
-                    if (newValue === null) {
-                      const { [property.id]: deleted, ...properties } = currentData.properties
-                      setCurrentData({
-                        ...currentData,
-                        properties,
-                      })
-                    } else {
-                      setCurrentData({
-                        ...currentData,
-                        properties: {
-                          ...currentData.properties,
-                          [property.id]: {
-                            ...property,
-                            value: newValue,
-                          } as typeof property,
-                        },
-                      })
-                    }
-                  }}
-                  property={property}
-                  original={original}
-                  readonly={readonly}
-                />
-              )
-            })}
-          </FlexBox>
+            style={{ scrollbarGutter: "stable" }}
+          />
         </FlexBox>
         <FlexBox paddingX={8} paddingY={2}>
           <FlexBox alignItems="center" flex={1}>

@@ -3,15 +3,11 @@ import { useCallback, useMemo } from "react"
 import { CategoryID, isCategory } from "@common/categories"
 import {
   PackageID,
-  getVariantIssues,
-  isDeprecated,
   isError,
   isExperimental,
   isIncluded,
   isIncompatible,
-  isMissing,
   isOutdated,
-  isRelevant,
 } from "@common/packages"
 import { ProfileInfo } from "@common/profiles"
 import { PackageInfo, PackageStatus, Packages, VariantState, getState } from "@common/types"
@@ -36,51 +32,6 @@ export const PACKAGE_LIST_ITEM_DESCRIPTION_SIZE = 56
 
 function getFilteredPackages(store: Store): PackageID[] {
   return store.filteredPackages
-}
-
-export function getPackageListItemSize(
-  variantInfo: VariantInfo,
-  packageStatus?: PackageStatus,
-): number {
-  const issues = getVariantIssues(variantInfo, packageStatus)
-
-  let nBanners = 0
-  let size = PACKAGE_LIST_ITEM_BASE_SIZE
-
-  if (isDeprecated(variantInfo)) {
-    nBanners++
-  }
-
-  if (isExperimental(variantInfo)) {
-    nBanners++
-  }
-
-  if (isMissing(variantInfo, packageStatus)) {
-    nBanners++
-  }
-
-  if (isOutdated(variantInfo)) {
-    nBanners++
-  }
-
-  if (issues) {
-    nBanners += issues.length
-  }
-
-  if (variantInfo.warnings) {
-    nBanners += variantInfo.warnings.filter(warning =>
-      isRelevant(warning, variantInfo, packageStatus, true),
-    ).length
-  }
-
-  size += nBanners * PACKAGE_LIST_ITEM_BANNER_SIZE
-
-  // We expect most packages to have a description so that is pre-included in base size
-  if (!variantInfo.description) {
-    size -= PACKAGE_LIST_ITEM_DESCRIPTION_SIZE
-  }
-
-  return size
 }
 
 function getPackageStatus(
@@ -161,11 +112,6 @@ export function usePackageInfo(packageId: PackageID): PackageInfo {
       [packageId],
     ),
   )
-}
-
-export function usePackageListItemSize(): (packageId: PackageID) => number {
-  const packageUi = useStore(store => store.packageUi)
-  return packageId => packageUi[packageId]?.itemSize ?? PACKAGE_LIST_ITEM_BASE_SIZE
 }
 
 export function usePackageStatus(packageId: PackageID): PackageStatus | undefined {
@@ -340,7 +286,6 @@ export function computePackageList(
     }
 
     packageUi[packageId] = {
-      itemSize: getPackageListItemSize(selectedVariant, packageStatus),
       variantId: selectedVariantId,
       variantIds: filteredVariants.map(variantInfo => variantInfo.id),
     }

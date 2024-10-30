@@ -6,13 +6,14 @@ import { ExemplarProperty, ExemplarValueType } from "@common/exemplars"
 import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
+import { ExpandButton } from "./ExpandButton"
 import {
   formatInputValue,
   getHexSize,
+  getItemInfo,
   getMax,
   getMin,
   getStep,
-  getUnit,
   parseInputValue,
 } from "./utils"
 
@@ -20,6 +21,8 @@ export interface ExemplarPropertyTextInputProps {
   description?: string
   error?: boolean
   index: number
+  isExpandable?: boolean
+  isExpanded?: boolean
   isFirst: boolean
   isLast: boolean
   itemLabel?: string
@@ -28,6 +31,7 @@ export interface ExemplarPropertyTextInputProps {
   onChange: (newValue: number | string | null) => void
   property: ExemplarProperty
   readonly?: boolean
+  setExpanded: (isExpanded: boolean) => void
   value: number | string | null
 }
 
@@ -35,6 +39,8 @@ export function ExemplarPropertyTextInput({
   description,
   error,
   index,
+  isExpandable,
+  isExpanded,
   isFirst,
   isLast,
   itemLabel,
@@ -43,13 +49,19 @@ export function ExemplarPropertyTextInput({
   onChange,
   property,
   readonly,
+  setExpanded,
   value,
 }: ExemplarPropertyTextInputProps): JSX.Element {
   const { info, type } = property
 
-  const isHex = info?.display === "tgi" || info?.display === "hex"
+  const itemInfo = getItemInfo(property, index)
   const isString = type === ExemplarValueType.String
-  const unit = getUnit(property, index)
+  const isHex = itemInfo?.display !== undefined
+
+  const max = itemInfo?.max ?? getMax(type)
+  const min = itemInfo?.min ?? getMin(type)
+  const step = itemInfo?.step ?? getStep(type, max)
+  const unit = itemInfo?.unit
 
   const formattedValue = formatInputValue(value, type, isHex)
 
@@ -71,12 +83,12 @@ export function ExemplarPropertyTextInput({
           </InputAdornment>
         ),
         inputProps: {
-          max: getMax(property, index),
+          max,
           maxLength: isString ? info?.maxLength : undefined,
-          min: getMin(property, index),
+          min,
           minLength: isString ? info?.minLength : undefined,
-          step: getStep(property, index),
-          type: getStep(property, index) && !isHex ? "number" : "text",
+          step,
+          type: step && !isHex ? "number" : "text",
         },
         startAdornment: (!!itemLabel || isHex) && (
           <InputAdornment position="start">
@@ -104,7 +116,14 @@ export function ExemplarPropertyTextInput({
       error={error}
       fullWidth
       id={name}
-      label={isFirst ? label : undefined}
+      label={
+        isFirst ? (
+          <>
+            {isExpandable && <ExpandButton isExpanded={!!isExpanded} setExpanded={setExpanded} />}
+            {label}
+          </>
+        ) : undefined
+      }
       name={name}
       onBlur={() => {
         setInputValue(formattedValue)
@@ -121,6 +140,9 @@ export function ExemplarPropertyTextInput({
         if (parsedValue !== null && parsedValue !== value) {
           onChange(parsedValue as number | string)
         }
+      }}
+      onFocus={() => {
+        setExpanded(true)
       }}
       size="small"
       title={description}

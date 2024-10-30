@@ -25,50 +25,34 @@ export interface ExemplarPropertyItemInfo {
   choices?: ExemplarPropertyChoiceInfo[]
   default?: boolean | number | string
   desc?: string
+  display?: ExemplarDisplayType
   max?: number
   min?: number
   name: string
-  step?: number
-  unit?: string
-}
-
-export interface ExemplarPropertyData {
-  choices?: ExemplarPropertyChoiceInfo[]
-  default?: boolean | number | string
-  desc?: string
-  display?: "hex" | "tgi"
-  items?: ExemplarPropertyItemInfo[]
-  max?: number
-  maxLength?: number
-  min?: number
-  minLength?: number
-  name: string
-  repeat?: boolean
-  size?: number
   step?: number
   strict?: boolean
-  type?: keyof typeof ExemplarValueType
+  unique?: boolean
   unit?: string
 }
 
-export interface ExemplarPropertyInfo {
+export interface ExemplarPropertyData extends ExemplarPropertyItemInfo {
+  items?: ExemplarPropertyItemInfo[]
+  maxLength?: number
+  minLength?: number
+  repeat?: boolean
+  size?: number
+  type?: keyof typeof ExemplarValueType
+}
+
+export interface ExemplarPropertyInfo extends ExemplarPropertyItemInfo {
   choices?: ExemplarPropertyChoiceInfo[]
-  default?: boolean | number | string
-  desc?: string
-  display?: "hex" | "tgi"
   id?: number
   items?: ExemplarPropertyItemInfo[]
-  max?: number
   maxLength?: number
-  min?: number
   minLength?: number
-  name: string
   repeat?: boolean
   size?: number
-  step?: number
-  strict?: boolean
   type?: ExemplarValueType
-  unit?: string
 }
 
 export type ExemplarProperty<T extends ExemplarValueType = ExemplarValueType> = {
@@ -93,6 +77,12 @@ export type ExemplarPropertyValue<
   [ExemplarValueType.Bool]: Multi extends true ? never : boolean // todo: is multi bool allowed?
   [ExemplarValueType.String]: Multi extends true ? string : never
 }[T]
+
+export enum ExemplarDisplayType {
+  HEX = "hex",
+  RGB = "rgb",
+  TGI = "tgi",
+}
 
 export enum ExemplarValueType {
   UInt8 = 0x100,

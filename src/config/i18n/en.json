@@ -24,6 +24,9 @@
       "label": "User ID"
     }
   },
+  "AuthorList": {
+    "emptyList": "No authors found for these filters"
+  },
   "AuthorView": {
     "openUrl": "Open website",
     "packages_one": "{{count}} package",
@@ -330,23 +333,6 @@
       "label": "Search"
     }
   },
-  "VariantState": {
-    "default": "Default",
-    "dependency": "Dependency",
-    "deprecated": "Deprecated",
-    "disabled": "Disabled",
-    "enabled": "Enabled",
-    "error": "Error",
-    "experimental": "Experimental",
-    "included": "Included",
-    "incompatible": "Incompatible",
-    "installed": "Installed",
-    "local": "Local",
-    "new": "New",
-    "outdated": "Outdated",
-    "patched": "Patched",
-    "selected": "Selected"
-  },
   "PackageTag": {
     "actions": {
       "expandAuthors": "View all authors",
@@ -538,6 +524,23 @@
       },
       "label": "Variant Name"
     }
+  },
+  "VariantState": {
+    "default": "Default",
+    "dependency": "Dependency",
+    "deprecated": "Deprecated",
+    "disabled": "Disabled",
+    "enabled": "Enabled",
+    "error": "Error",
+    "experimental": "Experimental",
+    "included": "Included",
+    "incompatible": "Incompatible",
+    "installed": "Installed",
+    "local": "Local",
+    "new": "New",
+    "outdated": "Outdated",
+    "patched": "Patched",
+    "selected": "Selected"
   },
   "Warning": {
     "disable": {

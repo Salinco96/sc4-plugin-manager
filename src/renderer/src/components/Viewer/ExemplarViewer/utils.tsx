@@ -1,8 +1,8 @@
 import {
   ExemplarData,
   ExemplarDataPatch,
+  ExemplarDisplayType,
   ExemplarProperty,
-  ExemplarPropertyChoiceInfo,
   ExemplarPropertyItemInfo,
   ExemplarPropertyValue,
   ExemplarValueType,
@@ -54,8 +54,8 @@ export function getItemInfo(
   index: number,
 ): ExemplarPropertyItemInfo | undefined {
   const { info } = property
-
-  return info?.items?.at(info?.size && info.repeat ? index % info.size : index)
+  const itemInfo = info?.items?.at(info?.size && info.repeat ? index % info.size : index)
+  return itemInfo ? { ...info, ...itemInfo } : info
 }
 
 export function getErrors(data: ExemplarData): ExemplarErrors | undefined {
@@ -85,7 +85,7 @@ function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefin
     }
 
     if (info?.size && value.length !== info.size) {
-      return `Must contain ${minLength} character(s)`
+      return `Must contain ${info.size} character(s)`
     }
 
     if (value.length < minLength) {
@@ -104,10 +104,10 @@ function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefin
   if (info?.size) {
     if (info.repeat) {
       if (values.length % info.size !== 0) {
-        return `Must contain a multiple of ${minLength} items`
+        return `Must contain a multiple of ${info.size} items`
       }
     } else if (values.length !== info.size) {
-      return `Must contain ${minLength} item(s)`
+      return `Must contain ${info.size} item(s)`
     }
   }
 
@@ -132,12 +132,17 @@ function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefin
       return "Mismatching type"
     }
 
-    const max = getMax(property, index)
-    const min = getMin(property, index)
+    const itemInfo = getItemInfo(property, index)
 
-    if (info?.strict && info.choices && !info.choices.some(choice => choice.value === item)) {
+    const choices = itemInfo?.choices
+    const isStrict = !!itemInfo?.strict
+
+    if (isStrict && choices && !choices.some(choice => choice.value === item)) {
       return "Unsupported value"
     }
+
+    const max = itemInfo?.max ?? getMax(property.type)
+    const min = itemInfo?.min ?? getMin(property.type)
 
     if (min !== undefined && item < min) {
       return `Min ${formatSingleValue(min, property, index)}`
@@ -166,60 +171,35 @@ export function getHexSize(type: ExemplarValueType): number {
   }
 }
 
-export function getMax(property: ExemplarProperty, index: number): number | undefined {
-  const { info, type } = property
-
+export function getMax(type: ExemplarValueType): number | undefined {
   switch (type) {
     case ExemplarValueType.UInt8:
-      return getItemInfo(property, index)?.max ?? info?.max ?? 0xff
+      return 0xff
     case ExemplarValueType.UInt16:
-      return getItemInfo(property, index)?.max ?? info?.max ?? 0xffff
-    default:
-      return getItemInfo(property, index)?.max ?? info?.max
+      return 0xffff
   }
 }
 
-export function getMin(property: ExemplarProperty, index: number): number | undefined {
-  const { info, type } = property
-
+export function getMin(type: ExemplarValueType): number | undefined {
   switch (type) {
     case ExemplarValueType.UInt8:
     case ExemplarValueType.UInt16:
     case ExemplarValueType.UInt32:
-      return getItemInfo(property, index)?.min ?? info?.min ?? 0
-    default:
-      return getItemInfo(property, index)?.min ?? info?.min
+      return 0
   }
 }
 
-export function getStep(property: ExemplarProperty, index: number): number | undefined {
-  const { info, type } = property
-
+export function getStep(type: ExemplarValueType, max: number | undefined): number | undefined {
   switch (type) {
+    case ExemplarValueType.Float32:
+      return max === 1 ? 0.01 : 1
     case ExemplarValueType.UInt8:
     case ExemplarValueType.UInt16:
     case ExemplarValueType.UInt32:
     case ExemplarValueType.SInt32:
     case ExemplarValueType.SInt64:
-      return getItemInfo(property, index)?.step ?? info?.step ?? 1
-    case ExemplarValueType.Float32:
-      return getItemInfo(property, index)?.step ?? info?.step
+      return 1
   }
-}
-
-export function getChoices(
-  property: ExemplarProperty,
-  index: number,
-): ExemplarPropertyChoiceInfo[] | undefined {
-  const { info } = property
-
-  return getItemInfo(property, index)?.choices ?? info?.choices
-}
-
-export function getUnit(property: ExemplarProperty, index: number): string | undefined {
-  const { info } = property
-
-  return getItemInfo(property, index)?.unit ?? info?.unit
 }
 
 export function formatInputValue(
@@ -302,28 +282,28 @@ function formatSingleValue(
   property: ExemplarProperty,
   index: number,
 ): string {
-  const { info, type } = property
+  const { type } = property
 
   if (isBoolean(value)) {
     return value ? "Yes" : "No"
   }
 
-  const choices = getChoices(property, index)
-  const choice = choices?.find(choice => choice.value === value)
+  const itemInfo = getItemInfo(property, index)
+  const choice = itemInfo?.choices?.find(choice => choice.value === value)
   if (choice) {
     return choice.label
   }
 
-  if (info?.display === "hex") {
-    return toHex(value, getHexSize(type), true, true)
-  }
-
-  if (info?.display === "tgi") {
-    return toHex(value, 8)
+  switch (itemInfo?.display) {
+    case ExemplarDisplayType.HEX:
+    case ExemplarDisplayType.RGB:
+      return toHex(value, getHexSize(type), true, true)
+    case ExemplarDisplayType.TGI:
+      return toHex(value, getHexSize(type))
   }
 
   const formatted = formatInputValue(value, type, false)
-  const unit = getUnit(property, index)
+  const unit = itemInfo?.unit
 
   if (unit) {
     return `${formatted}${unit === "%" ? "" : " "}${unit}`

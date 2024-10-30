@@ -255,7 +255,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.23.9, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.23.9, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
   version: 7.24.5
   resolution: "@babel/runtime@npm:7.24.5"
   dependencies:
@@ -1883,15 +1883,6 @@ __metadata:
   dependencies:
     "@types/react": "npm:*"
   checksum: 10c0/3eb9bca143abc21eb781aa5cb1bded0c9335689d515bf0513fb8e63217b7a8122c6a323ecd5644a06938727e1f467ee061d8df1c93b68825a80ff1b47ab777a2
-  languageName: node
-  linkType: hard
-
-"@types/react-window@npm:^1.8.8":
-  version: 1.8.8
-  resolution: "@types/react-window@npm:1.8.8"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10c0/2170a3957752603e8b994840c5d31b72ddf94c427c0f42b0175b343cc54f50fe66161d8871e11786ec7a59906bd33861945579a3a8f745455a3744268ec1069f
   languageName: node
   linkType: hard
 
@@ -6185,13 +6176,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memoize-one@npm:>=3.1.1 <6":
-  version: 5.2.1
-  resolution: "memoize-one@npm:5.2.1"
-  checksum: 10c0/fd22dbe9a978a2b4f30d6a491fc02fb90792432ad0dab840dc96c1734d2bd7c9cdeb6a26130ec60507eb43230559523615873168bcbe8fafab221c30b11d54c1
-  languageName: node
-  linkType: hard
-
 "merge-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "merge-stream@npm:2.0.0"
@@ -7487,26 +7471,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-virtualized-auto-sizer@npm:^1.0.24":
-  version: 1.0.24
-  resolution: "react-virtualized-auto-sizer@npm:1.0.24"
+"react-virtuoso@npm:^4.12.0":
+  version: 4.12.0
+  resolution: "react-virtuoso@npm:4.12.0"
   peerDependencies:
-    react: ^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0
-    react-dom: ^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0
-  checksum: 10c0/d400489e5005a2ad0635228958379aa26b66fdae62a5b9fbf4dcb5fecd4e99454990b1cd59fe55ff277419b37bdf098c26e7185e0ef1b6ca775a477f913bb763
-  languageName: node
-  linkType: hard
-
-"react-window@npm:^1.8.10":
-  version: 1.8.10
-  resolution: "react-window@npm:1.8.10"
-  dependencies:
-    "@babel/runtime": "npm:^7.0.0"
-    memoize-one: "npm:>=3.1.1 <6"
-  peerDependencies:
-    react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/eda9afb667d9784513dcc2755b65edf3a1412e7877975322993c1382908aaef0c0b948b7e3b2d705e353306556274d90f7ab19ac40aef2184fa39d4c1e2232ea
+    react: ">=16 || >=17 || >= 18"
+    react-dom: ">=16 || >=17 || >= 18"
+  checksum: 10c0/96af7b8e49e4a5b50a2b762c0133076dbec9df3207aa13889ab8586f54fea9e37e712295b96bfd68ecb68ab368a945f2c451e8a4a2ee21d74ea9f2ec346e21f5
   languageName: node
   linkType: hard
 
@@ -7972,7 +7943,6 @@ __metadata:
     "@types/node": "npm:^18.19.9"
     "@types/react": "npm:^18.2.48"
     "@types/react-dom": "npm:^18.2.18"
-    "@types/react-window": "npm:^1.8.8"
     "@types/turndown": "npm:^5.0.4"
     "@types/unzipper": "npm:^0.10.9"
     "@typescript-eslint/eslint-plugin": "npm:^7.9.0"
@@ -8007,8 +7977,7 @@ __metadata:
     react-i18next: "npm:^14.1.2"
     react-markdown: "npm:^9.0.1"
     react-material-ui-carousel: "npm:^3.4.2"
-    react-virtualized-auto-sizer: "npm:^1.0.24"
-    react-window: "npm:^1.8.10"
+    react-virtuoso: "npm:^4.12.0"
     remark-gfm: "npm:^4.0.0"
     ts-node: "npm:^10.9.2"
     tsconfig-paths: "npm:^4.2.0"

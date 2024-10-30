@@ -13,8 +13,8 @@ export function PackageViewOptionalDependencies({
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {variantInfo.optional?.map((dependencyId, index) => (
-        <PackageListItem key={dependencyId} index={index} item={dependencyId} />
+      {variantInfo.optional?.map(dependencyId => (
+        <PackageListItem key={dependencyId} packageId={dependencyId} />
       ))}
     </List>
   )

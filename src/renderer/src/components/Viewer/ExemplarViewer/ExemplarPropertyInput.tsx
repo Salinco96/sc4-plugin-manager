@@ -1,91 +1,85 @@
 import { useMemo } from "react"
 
-import { type ExemplarProperty, ExemplarValueType } from "@common/exemplars"
+import { ExemplarDisplayType, type ExemplarProperty, ExemplarValueType } from "@common/exemplars"
 import { toHex } from "@common/utils/hex"
 import { isArray, isBoolean, isNumber, isString } from "@common/utils/types"
 
 import { ExemplarPropertySelect } from "./ExemplarPropertySelect"
 import { ExemplarPropertySwitch } from "./ExemplarPropertySwitch"
 import { ExemplarPropertyTextInput } from "./ExemplarPropertyTextInput"
-import { getChoices, getItemInfo } from "./utils"
+import { getItemInfo } from "./utils"
 
 export interface ExemplarPropertyInputProps<T extends boolean | number | string> {
   error?: boolean
   index?: number
+  isExpandable: boolean
+  isExpanded: boolean
+  isFirst: boolean
+  isLast: boolean
   name: string
   onChange: (newValue: T) => void
   original?: T | null
   property: ExemplarProperty
   readonly?: boolean
+  setExpanded: (isExpanded: boolean) => void
   value: T | null
 }
 
 export function ExemplarPropertyInput<T extends boolean | number | string>({
-  error,
   index = 0,
-  name,
   onChange,
   original,
   property,
-  readonly,
   value,
+  ...others
 }: ExemplarPropertyInputProps<T>): JSX.Element {
   const { id, info, type } = property
 
-  const isTGI = info?.display === "tgi"
-
   const itemInfo = getItemInfo(property, index)
-  const choices = getChoices(property, index)
+
+  const isTGI = itemInfo?.display === ExemplarDisplayType.TGI
 
   const idLabel = toHex(id, 8, true)
   const typeLabel = isTGI ? "TGI" : ExemplarValueType[type]
-
   const label = `${info && id ? `${info.name} (${idLabel})` : info?.name ?? idLabel} - ${typeLabel}`
 
   const description = itemInfo?.desc ?? info?.desc
 
   const totalCount = isArray(property.value) ? property.value.length : 1
-  const isFirst = index === 0
-  const isLast = index >= totalCount - 1
 
   const itemLabel = useMemo(() => {
-    if (itemInfo?.name) {
+    if (itemInfo?.name && itemInfo !== info) {
       return itemInfo.name
     }
 
     if (isTGI) {
       return ["Type", "Group", "Instance"][3 - totalCount + index]
     }
-  }, [index, isTGI, itemInfo, totalCount])
+  }, [index, info, isTGI, itemInfo, totalCount])
 
   if (isBoolean(value) || type === ExemplarValueType.Bool) {
     return (
       <ExemplarPropertySwitch
+        {...others}
         description={description}
         label={label}
-        name={name}
         onChange={newValue => onChange(newValue as T)}
-        readonly={readonly}
         value={Boolean(value)}
       />
     )
   }
 
-  if (choices && !isString(value)) {
+  if (itemInfo?.choices && !isString(value)) {
     return (
       <ExemplarPropertySelect
+        {...others}
         description={description}
-        error={error}
         index={index}
-        isFirst={isFirst}
-        isLast={isLast}
         itemLabel={itemLabel}
         label={label}
-        name={name}
         onChange={newValue => onChange(newValue as T)}
         original={isNumber(original) ? original : undefined}
         property={property}
-        readonly={readonly}
         value={value}
       />
     )
@@ -93,17 +87,13 @@ export function ExemplarPropertyInput<T extends boolean | number | string>({
 
   return (
     <ExemplarPropertyTextInput
+      {...others}
       description={description}
-      error={error}
       index={index}
-      isFirst={isFirst}
-      isLast={isLast}
       itemLabel={itemLabel}
       label={label}
-      name={name}
       onChange={newValue => onChange(newValue as T)}
       property={property}
-      readonly={readonly}
       value={value}
     />
   )

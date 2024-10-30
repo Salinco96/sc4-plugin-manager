@@ -9,8 +9,8 @@ export function PackageViewDependencies({ packageId }: { packageId: PackageID })
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {variantInfo.dependencies?.map((dependency, index) => (
-        <PackageListItem key={dependency.id} index={index} item={dependency.id} />
+      {variantInfo.dependencies?.map(dependency => (
+        <PackageListItem key={dependency.id} packageId={dependency.id} />
       ))}
     </List>
   )

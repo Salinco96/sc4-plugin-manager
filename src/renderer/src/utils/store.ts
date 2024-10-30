@@ -21,11 +21,10 @@ import { Features, PackageInfo, VariantState } from "@common/types"
 import { compact, keys } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
 
-import { computePackageList, getPackageListItemSize } from "./packages"
+import { computePackageList } from "./packages"
 import { SnackbarProps, SnackbarType } from "./snackbar"
 
 export interface PackageUi {
-  itemSize: number
   variantId: VariantID
   variantIds: VariantID[]
 }
@@ -349,7 +348,6 @@ export const useStore = create<Store>()((set, get): Store => {
             packageUi: {
               [packageId]: {
                 $merge: {
-                  itemSize: getPackageListItemSize(variantInfo),
                   variantId,
                 },
               },

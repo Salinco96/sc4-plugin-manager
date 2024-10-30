@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import { AddCircleOutline as AddIcon, RemoveCircleOutline as RemoveIcon } from "@mui/icons-material"
 import { ButtonGroup, FormHelperText, IconButton, Link } from "@mui/material"
 
@@ -38,14 +40,9 @@ export function ExemplarProperty({
 
   const error = isArray(errors) ? errors.find(isString) : errors
 
-  // todo: too many large fields!
-  if (id >= 0x88edc901 && id <= 0x88edcdff) {
-    return (
-      <p>
-        {info?.name} - {idHex}: {formatValue(value, property)}
-      </p>
-    )
-  }
+  const isExpandable = isArray(value) && value.length > 5
+
+  const [isExpanded, setExpanded] = useState(!isExpandable)
 
   function addItem() {
     if (canAdd) {
@@ -67,42 +64,56 @@ export function ExemplarProperty({
   return (
     <FlexBox direction="column" marginTop={2}>
       {isArray(value) ? (
-        (value.length ? value : Array(groupSize).fill(null)).map((item, index) => (
-          <FlexBox key={index} alignItems="center" gap={1} width="100%">
-            <ExemplarPropertyInput
-              error={isString(errors) || !!errors?.at(index)}
-              index={index}
-              name={`${idHex}-${index}`}
-              onChange={newValue => onChange(replaceAt(value, index, newValue))}
-              original={isArray(original) ? original.at(index) : undefined}
-              property={property}
-              readonly={readonly}
-              value={item}
-            />
-            {(canAdd || canRemove) && (
-              <ButtonGroup component={FlexBox} width={29}>
-                {canRemove && index % groupSize === 0 && (
-                  <IconButton onClick={() => removeItem(index)} size="small" title="Remove value">
-                    <RemoveIcon fontSize="inherit" />
-                  </IconButton>
-                )}
-                {canAdd && !canRemove && index % groupSize === 0 && (
-                  <IconButton onClick={addItem} size="small" title="Add value">
-                    <AddIcon fontSize="inherit" />
-                  </IconButton>
-                )}
-              </ButtonGroup>
-            )}
-          </FlexBox>
-        ))
+        (value.length ? value : Array(groupSize).fill(null))
+          .slice(0, isExpanded || !isExpandable ? undefined : groupSize)
+          .map((item, index, rows) => (
+            <FlexBox key={index} alignItems="center" gap={1} width="100%">
+              <ExemplarPropertyInput
+                error={isString(errors) || !!errors?.at(index)}
+                index={index}
+                isExpandable={isExpandable}
+                isExpanded={isExpanded}
+                isFirst={index === 0}
+                isLast={index === rows.length - 1}
+                name={`${idHex}-${index}`}
+                onChange={newValue => onChange(replaceAt(value, index, newValue))}
+                original={isArray(original) ? original.at(index) : undefined}
+                property={property}
+                readonly={readonly}
+                setExpanded={setExpanded}
+                value={item}
+              />
+              {(canAdd || canRemove) && isExpanded && (
+                <ButtonGroup component={FlexBox} width={29}>
+                  {canRemove &&
+                    (info?.repeat
+                      ? index % groupSize === 0
+                      : index >= Math.min(info?.items?.length ?? 0, minLength)) && (
+                      <IconButton
+                        onClick={() => removeItem(index)}
+                        size="small"
+                        title="Remove value"
+                      >
+                        <RemoveIcon fontSize="inherit" />
+                      </IconButton>
+                    )}
+                </ButtonGroup>
+              )}
+            </FlexBox>
+          ))
       ) : (
         <ExemplarPropertyInput
           error={!!error}
+          isExpandable={isExpandable}
+          isExpanded={isExpanded}
+          isFirst
+          isLast
           name={idHex}
           onChange={onChange}
           original={isArray(original) ? undefined : original}
           property={property}
           readonly={readonly}
+          setExpanded={setExpanded}
           value={value}
         />
       )}
@@ -127,7 +138,7 @@ export function ExemplarProperty({
             )}
           </FormHelperText>
         </FlexBox>
-        {canAdd && canRemove && (
+        {canAdd && isExpanded && (
           <FlexBox alignItems="center" height={40} marginBottom={2}>
             <IconButton onClick={addItem} size="small" title="Add value">
               <AddIcon fontSize="inherit" />

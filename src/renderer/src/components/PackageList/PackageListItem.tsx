@@ -15,11 +15,11 @@ import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 
 import { PackageTags } from "../Tags/PackageTags"
 
-import { VirtualListItemProps } from "./VirtualList"
-
 export const PackageListItem = memo(function PackageListItem({
-  item: packageId,
-}: VirtualListItemProps<PackageID>): JSX.Element | null {
+  packageId,
+}: {
+  packageId: PackageID
+}): JSX.Element {
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
   const history = useHistory()

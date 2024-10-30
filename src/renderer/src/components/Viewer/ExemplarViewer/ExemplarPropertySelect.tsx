@@ -3,17 +3,21 @@ import { useMemo, useState } from "react"
 import { Autocomplete, Box, InputAdornment, TextField, createFilterOptions } from "@mui/material"
 
 import { ExemplarProperty, ExemplarPropertyChoiceInfo, ExemplarValueType } from "@common/exemplars"
+import { removeAt } from "@common/utils/arrays"
 import { toHex } from "@common/utils/hex"
-import { isString } from "@common/utils/types"
+import { isArray, isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
-import { formatInputValue, getChoices, getHexSize, parseInputValue } from "./utils"
+import { ExpandButton } from "./ExpandButton"
+import { formatInputValue, getHexSize, getItemInfo, parseInputValue } from "./utils"
 
 export interface ExemplarPropertySelectProps {
   description?: string
   error?: boolean
   index: number
+  isExpandable?: boolean
+  isExpanded?: boolean
   isFirst: boolean
   isLast: boolean
   itemLabel?: string
@@ -23,6 +27,7 @@ export interface ExemplarPropertySelectProps {
   original?: number
   property: ExemplarProperty
   readonly?: boolean
+  setExpanded: (isExpanded: boolean) => void
   value: number | null
 }
 
@@ -30,6 +35,8 @@ export function ExemplarPropertySelect({
   description,
   error,
   index,
+  isExpandable,
+  isExpanded,
   isFirst,
   isLast,
   itemLabel,
@@ -39,11 +46,13 @@ export function ExemplarPropertySelect({
   original,
   property,
   readonly,
+  setExpanded,
   value,
 }: ExemplarPropertySelectProps): JSX.Element {
-  const { info, type } = property
+  const { type } = property
 
-  const choices = getChoices(property, index)
+  const itemInfo = getItemInfo(property, index)
+  const choices = itemInfo?.choices
 
   const isHex = [
     ExemplarValueType.UInt8,
@@ -65,7 +74,16 @@ export function ExemplarPropertySelect({
   const [isSearching, setSearching] = useState(false)
 
   const isCopyable = isHex && getHexSize(type) >= 8
-  const isStrict = !!info?.strict
+  const isStrict = !!itemInfo?.strict
+  const isUnique = !!itemInfo?.unique
+
+  const uniqueValues = useMemo(() => {
+    if (isUnique && isArray(property.value)) {
+      return removeAt(property.value, index)
+    }
+
+    return []
+  }, [isUnique, property.value])
 
   const options = useMemo(() => {
     const options = choices?.slice() ?? []
@@ -78,8 +96,8 @@ export function ExemplarPropertySelect({
       options.push({ label: "Original value", value: original })
     }
 
-    return options
-  }, [choices, original, value])
+    return options.filter(option => option.value === value || !uniqueValues.includes(option.value))
+  }, [choices, original, uniqueValues, value])
 
   const selectedOption = options.find(choice => choice.value === value)
 
@@ -101,10 +119,13 @@ export function ExemplarPropertySelect({
           ? Number.parseInt(params.inputValue, 16)
           : Number.parseFloat(params.inputValue)
 
-        if (Number.isFinite(parsedValue)) {
-          if (!isStrict && !options.some(choice => choice.value === parsedValue)) {
-            filtered.push({ label: "Custom value", value: parsedValue })
-          }
+        if (
+          Number.isFinite(parsedValue) &&
+          !isStrict &&
+          !options.some(choice => choice.value === parsedValue) &&
+          !uniqueValues.includes(parsedValue)
+        ) {
+          filtered.push({ label: "Custom value", value: parsedValue })
         }
 
         return filtered
@@ -184,13 +205,23 @@ export function ExemplarPropertySelect({
             },
           }}
           error={error}
-          label={isFirst ? label : undefined}
+          label={
+            isFirst ? (
+              <>
+                {isExpandable && (
+                  <ExpandButton isExpanded={!!isExpanded} setExpanded={setExpanded} />
+                )}
+                {label}
+              </>
+            ) : undefined
+          }
           name={name}
           onBlur={() => {
             setInputValue("")
             setSearching(false)
           }}
           onFocus={() => {
+            setExpanded(true)
             setInputValue(formattedValue)
             setSearching(true)
           }}
