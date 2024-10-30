@@ -145,7 +145,7 @@ export async function patchDBPFEntries(
   inFile: FileHandle,
   outFile: FileHandle,
   patches: {
-    [entryId in TGI]?: ExemplarDataPatch
+    [entryId in TGI]?: ExemplarDataPatch | null
   },
   exemplarProperties: {
     [propertyId in number]?: ExemplarPropertyInfo

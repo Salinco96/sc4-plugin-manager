@@ -5,7 +5,7 @@ import { removeElement, removeElement$ } from "@common/utils/arrays"
 import { Page, useLocation } from "@utils/navigation"
 import { useAuthors, useConfigs, usePackageFilters, useStoreActions } from "@utils/store"
 
-import { STATE_TAGS, type Tag, TagType, TagValue, getTagLabel } from "./utils"
+import { STATE_TAGS, Tag, TagType, TagValue, getTagLabel } from "./utils"
 
 export type PackageTagProps = Tag & { dense?: boolean }
 

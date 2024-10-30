@@ -22,7 +22,7 @@ import {
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { ProfileID, createUniqueProfileId } from "@common/profiles"
+import { ProfileID, createUniqueId } from "@common/profiles"
 import { keys, values } from "@common/utils/objects"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
@@ -58,7 +58,7 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
   const nameValue = name ?? defaultName
   const nameError = nameValue.trim() ? undefined : t("name.errors.required", { ns: "Profile" })
 
-  const id = createUniqueProfileId(nameValue, profileIds)
+  const id = createUniqueId(nameValue, profileIds)
 
   return (
     <>

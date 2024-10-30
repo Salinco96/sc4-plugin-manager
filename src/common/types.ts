@@ -18,6 +18,7 @@ import {
   isPatched,
 } from "./packages"
 import { ProfileID, ProfileInfo } from "./profiles"
+import { keys } from "./utils/objects"
 import { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
 
 /** Supported configuration formats */
@@ -230,7 +231,8 @@ export interface MMPInfo extends MMPData {
   categories?: CategoryID[]
 }
 
-export enum PackageState {
+export enum VariantState {
+  DEFAULT = "default",
   DEPENDENCY = "dependency",
   DEPRECATED = "deprecated",
   DISABLED = "disabled",
@@ -244,10 +246,11 @@ export enum PackageState {
   NEW = "new",
   OUTDATED = "outdated",
   PATCHED = "patched",
+  SELECTED = "selected",
 }
 
 export function getState(
-  state: PackageState,
+  state: VariantState,
   packageInfo: PackageInfo,
   variantInfo: VariantInfo,
   profileInfo?: ProfileInfo,
@@ -255,43 +258,49 @@ export function getState(
   const packageStatus = profileInfo ? packageInfo.status[profileInfo.id] : undefined
 
   switch (state) {
-    case PackageState.DEPENDENCY:
+    case VariantState.DEFAULT:
+      return variantInfo.id === keys(packageInfo.variants)[0] // TODO
+
+    case VariantState.DEPENDENCY:
       return isDependency(packageStatus)
 
-    case PackageState.DEPRECATED:
+    case VariantState.DEPRECATED:
       return isDeprecated(variantInfo)
 
-    case PackageState.DISABLED:
+    case VariantState.DISABLED:
       return isDisabled(variantInfo, packageStatus)
 
-    case PackageState.ENABLED:
-      return isEnabled(packageStatus)
+    case VariantState.ENABLED:
+      return isEnabled(variantInfo, packageStatus)
 
-    case PackageState.ERROR:
+    case VariantState.ERROR:
       return isError(variantInfo, packageStatus)
 
-    case PackageState.EXPERIMENTAL:
+    case VariantState.EXPERIMENTAL:
       return isExperimental(variantInfo)
 
-    case PackageState.INCLUDED:
-      return isIncluded(packageStatus)
+    case VariantState.INCLUDED:
+      return isIncluded(variantInfo, packageStatus)
 
-    case PackageState.INCOMPATIBLE:
+    case VariantState.INCOMPATIBLE:
       return isIncompatible(variantInfo, packageStatus)
 
-    case PackageState.INSTALLED:
+    case VariantState.INSTALLED:
       return isInstalled(variantInfo)
 
-    case PackageState.LOCAL:
+    case VariantState.LOCAL:
       return isLocal(variantInfo)
 
-    case PackageState.NEW:
+    case VariantState.NEW:
       return !!variantInfo.new
 
-    case PackageState.OUTDATED:
+    case VariantState.OUTDATED:
       return isOutdated(variantInfo)
 
-    case PackageState.PATCHED:
+    case VariantState.PATCHED:
       return isPatched(variantInfo)
+
+    case VariantState.SELECTED:
+      return variantInfo.id === packageStatus?.variantId
   }
 }

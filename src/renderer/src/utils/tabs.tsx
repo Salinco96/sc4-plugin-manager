@@ -21,7 +21,7 @@ import {
 
 import { CategoryID } from "@common/categories"
 import { getPackageStatus, isError } from "@common/packages"
-import { PackageState } from "@common/types"
+import { VariantState } from "@common/types"
 import { values } from "@common/utils/objects"
 import { Location, Page } from "@utils/navigation"
 import { filterVariant, getCurrentVariant } from "@utils/packages"
@@ -341,7 +341,7 @@ export const tabs: TabInfo[] = [
       onlyNew: true,
       onlyUpdates: false,
       search: "",
-      states: [PackageState.NEW],
+      states: [VariantState.NEW],
     },
     tooltip: "Newly-released packages",
   },
@@ -361,7 +361,7 @@ export const tabs: TabInfo[] = [
       onlyNew: false,
       onlyUpdates: false,
       search: "",
-      states: [PackageState.ERROR],
+      states: [VariantState.ERROR],
     },
     tooltip: "Packages with issues",
   },
@@ -381,7 +381,7 @@ export const tabs: TabInfo[] = [
       onlyNew: false,
       onlyUpdates: true,
       search: "",
-      states: [PackageState.OUTDATED],
+      states: [VariantState.OUTDATED],
     },
     tooltip: "Packages with updates available",
   },

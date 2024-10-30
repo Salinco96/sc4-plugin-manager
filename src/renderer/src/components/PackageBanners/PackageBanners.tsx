@@ -9,7 +9,8 @@ import {
   isRelevant,
 } from "@common/packages"
 import { isString } from "@common/utils/types"
-import { useCurrentVariant, usePackageStatus } from "@utils/packages"
+import { VariantID } from "@common/variants"
+import { usePackageStatus, useVariantInfo } from "@utils/packages"
 
 import { PackageBannerConflict } from "./PackageBannerConflict"
 import { PackageBannerDeprecated } from "./PackageBannerDeprecated"
@@ -19,20 +20,25 @@ import { PackageBannerMissing } from "./PackageBannerMissing"
 import { PackageBannerOutdated } from "./PackageBannerOutdated"
 import { PackageBannerWarning } from "./PackageBannerWarning"
 
-export function PackageBanners({ packageId }: { packageId: PackageID }): JSX.Element {
+export function PackageBanners({
+  packageId,
+  variantId,
+}: {
+  packageId: PackageID
+  variantId?: VariantID
+}): JSX.Element {
   const packageStatus = usePackageStatus(packageId)
-  const variantInfo = useCurrentVariant(packageId)
-  const variantId = variantInfo.id
+  const variantInfo = useVariantInfo(packageId, variantId)
 
   const issues = getVariantIssues(variantInfo, packageStatus)
 
   return (
     <>
       {isMissing(variantInfo, packageStatus) && (
-        <PackageBannerMissing packageId={packageId} variantId={variantId} />
+        <PackageBannerMissing packageId={packageId} variantId={variantInfo.id} />
       )}
       {isOutdated(variantInfo) && (
-        <PackageBannerOutdated packageId={packageId} variantId={variantId} />
+        <PackageBannerOutdated packageId={packageId} variantId={variantInfo.id} />
       )}
       {isDeprecated(variantInfo) && (
         <PackageBannerDeprecated
@@ -42,20 +48,20 @@ export function PackageBanners({ packageId }: { packageId: PackageID }): JSX.Ele
       )}
       {isExperimental(variantInfo) && <PackageBannerExperimental />}
       {issues?.map(issue =>
-        isConflict(issue, packageStatus) ? (
+        isConflict(issue, variantInfo, packageStatus) ? (
           <PackageBannerConflict key={issue.id} issue={issue} />
         ) : (
           <PackageBannerIncompatible
             key={issue.id}
             issue={issue}
             packageId={packageId}
-            variantId={variantId}
+            variantId={variantInfo.id}
           />
         ),
       )}
       {variantInfo.warnings?.map(
         (warning, index) =>
-          isRelevant(warning, packageStatus, true) && (
+          isRelevant(warning, variantInfo, packageStatus, true) && (
             <PackageBannerWarning key={warning.id ?? index} warning={warning} />
           ),
       )}

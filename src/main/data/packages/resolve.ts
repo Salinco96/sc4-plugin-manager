@@ -487,16 +487,16 @@ export function resolvePackageUpdates(
 
     const defaultVariant = getDefaultVariant(packageInfo, resultingProfile)
 
-    if (isEnabled(newStatus)) {
-      if (!isEnabled(oldStatus)) {
+    if (isEnabled(variantInfo, newStatus)) {
+      if (!isEnabled(variantInfo, oldStatus)) {
         enablingPackages.push(packageId)
       }
-    } else if (isEnabled(oldStatus)) {
+    } else if (isEnabled(variantInfo, oldStatus)) {
       disablingPackages.push(packageId)
     }
 
-    if (isIncluded(newStatus)) {
-      if (!isIncluded(oldStatus)) {
+    if (isIncluded(variantInfo, newStatus)) {
+      if (!isIncluded(variantInfo, oldStatus)) {
         includingPackages.push(packageId)
       }
 

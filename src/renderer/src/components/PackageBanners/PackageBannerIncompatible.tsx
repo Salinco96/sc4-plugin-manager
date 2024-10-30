@@ -8,6 +8,7 @@ import { getFeatureLabel } from "@common/i18n"
 import { PackageID } from "@common/packages"
 import { Issue, VariantID, VariantIssue } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
+import { useCurrentVariant } from "@utils/packages"
 import { getPackageName, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { PackageBanner } from "./PackageBanner"
@@ -23,6 +24,7 @@ export function PackageBannerIncompatible({
 }): JSX.Element {
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
+  const variantInfo = useCurrentVariant(packageId)
 
   const packageNames = useStore(store => issue.packages?.map(id => getPackageName(store, id)))
   const incompatiblePackageId = issue.packages?.at(0)
@@ -39,29 +41,31 @@ export function PackageBannerIncompatible({
     switch (id) {
       case Issue.CONFLICTING_FEATURE:
       case Issue.INCOMPATIBLE_FEATURE: {
-        if (incompatiblePackageId) {
-          return {
-            description: t("incompatible.actions.replacePackages.description", {
-              packageName: packageNames?.at(0),
-            }),
-            label: t("incompatible.actions.replacePackages.label"),
-            onClick: async () => {
-              await actions.addPackage(packageId, variantId, {
-                packages: { [incompatiblePackageId]: { enabled: false } },
-              })
-            },
+        if (variantId !== variantInfo.id) {
+          if (incompatiblePackageId) {
+            return {
+              description: t("incompatible.actions.replacePackages.description", {
+                packageName: packageNames?.at(0),
+              }),
+              label: t("incompatible.actions.replacePackages.label"),
+              onClick: async () => {
+                await actions.addPackage(packageId, variantId, {
+                  packages: { [incompatiblePackageId]: { enabled: false } },
+                })
+              },
+            }
           }
-        }
 
-        if (feature) {
-          return {
-            description: t("incompatible.actions.replaceExternal.description"),
-            label: t("incompatible.actions.replaceExternal.label"),
-            onClick: async () => {
-              await actions.addPackage(packageId, variantId, {
-                features: { [feature]: false },
-              })
-            },
+          if (feature) {
+            return {
+              description: t("incompatible.actions.replaceExternal.description"),
+              label: t("incompatible.actions.replaceExternal.label"),
+              onClick: async () => {
+                await actions.addPackage(packageId, variantId, {
+                  features: { [feature]: false },
+                })
+              },
+            }
           }
         }
 

@@ -213,8 +213,12 @@ export function getVariantIssues(variantInfo: VariantInfo, status?: PackageStatu
   return status?.issues?.[variantInfo.id] ?? []
 }
 
-export function isConflict(issue: VariantIssue, packageStatus?: PackageStatus): boolean {
-  if (!packageStatus?.included) {
+export function isConflict(
+  issue: VariantIssue,
+  variantInfo: VariantInfo,
+  packageStatus?: PackageStatus,
+): boolean {
+  if (!isIncluded(variantInfo, packageStatus)) {
     return false
   }
 
@@ -233,8 +237,8 @@ export function isDisabled(variantInfo: VariantInfo, packageStatus?: PackageStat
   return !!packageStatus && !packageStatus.enabled && !!variantInfo.installed
 }
 
-export function isEnabled(packageStatus?: PackageStatus): boolean {
-  return !!packageStatus?.enabled
+export function isEnabled(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
+  return !!packageStatus?.enabled && packageStatus.variantId === variantInfo.id
 }
 
 export function isError(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
@@ -245,12 +249,12 @@ export function isExperimental(variantInfo: VariantInfo): boolean {
   return !!variantInfo.experimental
 }
 
-export function isIncluded(packageStatus?: PackageStatus): boolean {
-  return !!packageStatus?.included
+export function isIncluded(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
+  return packageStatus?.variantId === variantInfo.id && !!packageStatus?.included
 }
 
 export function isIncompatible(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
-  if (packageStatus?.enabled) {
+  if (isEnabled(variantInfo, packageStatus)) {
     return false
   }
 
@@ -280,7 +284,7 @@ export function isLocal(variantInfo: VariantInfo): boolean {
 }
 
 export function isMissing(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
-  return !!packageStatus?.included && !variantInfo.installed
+  return isIncluded(variantInfo, packageStatus) && !isInstalled(variantInfo)
 }
 
 export function isNew(variantInfo: VariantInfo): boolean {
@@ -299,21 +303,22 @@ export function isPatched(variantInfo: VariantInfo): boolean {
 
 export function isRelevant(
   warning: PackageWarning,
+  variantInfo: VariantInfo,
   packageStatus: PackageStatus | undefined,
   showBanner: boolean,
 ): boolean {
   switch (warning.on) {
     case "enable":
-      return !isEnabled(packageStatus)
+      return !isEnabled(variantInfo, packageStatus)
     case "disable":
-      return isEnabled(packageStatus) && !showBanner
+      return isEnabled(variantInfo, packageStatus) && !showBanner
     case "variantChange":
-      return isEnabled(packageStatus)
+      return isEnabled(variantInfo, packageStatus)
     default:
       return !warning.on
   }
 }
 
-export function isRequired(packageStatus?: PackageStatus): boolean {
-  return !!packageStatus?.requiredBy?.length
+export function isRequired(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
+  return isIncluded(variantInfo, packageStatus) && !!packageStatus?.requiredBy?.length
 }

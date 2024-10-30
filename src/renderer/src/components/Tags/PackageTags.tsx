@@ -4,20 +4,27 @@ import { Chip, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { PackageID } from "@common/packages"
-import { getState } from "@common/types"
+import { VariantState, getState } from "@common/types"
 import { keys } from "@common/utils/objects"
+import { VariantID } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
-import { useCurrentVariant, usePackageInfo } from "@utils/packages"
+import { usePackageInfo, useVariantInfo } from "@utils/packages"
 import { useAuthors, useCurrentProfile } from "@utils/store"
 
 import { PackageTag } from "./PackageTag"
 import { STATE_TAGS, TagType, createTag, getAuthorName, serializeTag } from "./utils"
 
-export function PackageTags({ packageId }: { packageId: PackageID }): JSX.Element | null {
+export function PackageTags({
+  packageId,
+  variantId,
+}: {
+  packageId: PackageID
+  variantId?: VariantID
+}): JSX.Element | null {
   const authors = useAuthors()
   const currentProfile = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
-  const variantInfo = useCurrentVariant(packageId)
+  const variantInfo = useVariantInfo(packageId, variantId)
 
   const { t } = useTranslation("PackageTag")
 
@@ -27,9 +34,24 @@ export function PackageTags({ packageId }: { packageId: PackageID }): JSX.Elemen
 
   const packageTags = [
     ...(authorsExpanded ? authorTags : []),
-    ...variantInfo.categories.map(category => createTag(TagType.CATEGORY, category)),
+    ...(variantId
+      ? []
+      : variantInfo.categories.map(category => createTag(TagType.CATEGORY, category))),
     ...keys(STATE_TAGS)
       .filter(state => STATE_TAGS[state])
+      .filter(
+        state =>
+          !(
+            variantId
+              ? [
+                  VariantState.DEPENDENCY,
+                  VariantState.DISABLED,
+                  VariantState.ENABLED,
+                  VariantState.ERROR,
+                ]
+              : [VariantState.DEFAULT, VariantState.SELECTED]
+          ).includes(state),
+      )
       .filter(state => getState(state, packageInfo, variantInfo, currentProfile))
       .map(state => createTag(TagType.STATE, state)),
   ]

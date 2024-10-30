@@ -5,21 +5,23 @@ import { ExemplarViewer } from "./ExemplarViewer/ExemplarViewer"
 import { ImageViewer } from "./ImageViewer"
 import { TextViewer } from "./TextViewer"
 
-export type DataViewerProps = {
+export type EntryViewerProps = {
   entry: DBPFEntry
+  isLocal: boolean
   onClose: () => void
   onPatch: (data: ExemplarDataPatch | null) => void
   open: boolean
   readonly?: boolean
 }
 
-export function DataViewer({
+export function EntryViewer({
   entry,
+  isLocal,
   onClose,
   onPatch,
   open,
   readonly,
-}: DataViewerProps): JSX.Element | null {
+}: EntryViewerProps): JSX.Element | null {
   if (!entry.data) {
     return null
   }
@@ -30,6 +32,7 @@ export function DataViewer({
         <ExemplarViewer
           data={entry.data}
           id={entry.id}
+          isLocal={isLocal}
           onClose={onClose}
           onPatch={onPatch}
           open={open}

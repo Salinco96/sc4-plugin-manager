@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next"
 
 import { DBPFFile, isDBPF } from "@common/dbpf"
 import { PackageID, checkFile } from "@common/packages"
-import { type PackageFile, PackageState } from "@common/types"
+import { type PackageFile, VariantState } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { values } from "@common/utils/objects"
 import { PackageTag, TagType } from "@components/Tags"
@@ -83,7 +83,7 @@ export function PackageFile({
         <Typography color="inherit" flex={1} textTransform="unset" variant="button">
           <FlexBox alignItems="center" gap={0.5}>
             {file.path.replaceAll(/[\\/]/g, " / ")}
-            {isPatched && <PackageTag dense type={TagType.STATE} value={PackageState.PATCHED} />}
+            {isPatched && <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />}
           </FlexBox>
         </Typography>
         <FlexBox alignItems="center" gap={0.5} mx={0.5}>

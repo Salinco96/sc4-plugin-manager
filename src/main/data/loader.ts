@@ -52,6 +52,10 @@ export function loadDate<Required extends boolean = false>(
   field: string,
   required?: Required,
 ): Required extends true ? string : string | undefined {
+  if (value instanceof Date) {
+    return value.toISOString()
+  }
+
   if (isNumber(value) || isString(value)) {
     return new Date(value).toISOString()
   }

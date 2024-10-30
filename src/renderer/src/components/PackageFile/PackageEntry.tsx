@@ -6,12 +6,13 @@ import { useTranslation } from "react-i18next"
 
 import { DBPFDataType, DBPFEntry, DBPFFile, getFileTypeLabel } from "@common/dbpf"
 import { PackageID } from "@common/packages"
-import { type PackageFile, PackageState } from "@common/types"
+import { type PackageFile, VariantState } from "@common/types"
 import { PackageTag, TagType } from "@components/Tags"
 import { ToolButton } from "@components/ToolButton"
-import { DataViewer } from "@components/Viewer/DataViewer"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
+
+import { EntryViewer } from "../Viewer/EntryViewer"
 
 const EDITABLETYPES = [
   // Exemplars
@@ -50,6 +51,7 @@ export function PackageEntry({
 
   const { t } = useTranslation("PackageViewFiles")
 
+  const isLocal = !!variantInfo.local
   const isPatched = !!file.patches?.[entry.id]
   const isEditable = EDITABLETYPES.includes(entry.type)
   const isViewable = VIEWABLETYPES.includes(entry.type)
@@ -88,10 +90,11 @@ export function PackageEntry({
           }}
         />
       )}
-      {isPatched && <PackageTag dense type={TagType.STATE} value={PackageState.PATCHED} />}
+      {isPatched && <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />}
       {isViewing && (
-        <DataViewer
+        <EntryViewer
           entry={entry}
+          isLocal={isLocal}
           onClose={() => setViewing(false)}
           onPatch={async patch => {
             setFileData(

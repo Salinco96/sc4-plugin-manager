@@ -1,30 +1,21 @@
 import { useMemo, useRef, useState } from "react"
 
 import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
-import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
+import { Box, Button, Divider, Menu, MenuItem, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import {
   PackageID,
-  isDisabled,
   isEnabled,
   isIncluded,
   isIncompatible,
   isInstalled,
-  isInvalid,
   isMissing,
   isOutdated,
-  isRelevant,
   isRequired,
 } from "@common/packages"
-import { keys } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
-import {
-  useCurrentVariant,
-  useFilteredVariants,
-  usePackageInfo,
-  usePackageStatus,
-} from "@utils/packages"
+import { usePackageStatus, useVariantInfo } from "@utils/packages"
 import { useCurrentProfile, useStoreActions } from "@utils/store"
 
 import { FlexBox } from "./FlexBox"
@@ -38,12 +29,12 @@ interface PackageAction {
   onClick: () => void
 }
 
-export function PackageActions({
-  filtered,
+export function VariantActions({
   packageId,
+  variantId,
 }: {
-  filtered?: boolean
   packageId: PackageID
+  variantId: VariantID
 }): JSX.Element | null {
   const anchorRef = useRef<HTMLButtonElement>(null)
   const [isMenuOpen, setMenuOpen] = useState(false)
@@ -53,39 +44,15 @@ export function PackageActions({
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
   const packageConfig = currentProfile?.packages[packageId]
-  const packageInfo = usePackageInfo(packageId)
   const packageStatus = usePackageStatus(packageId)
-  const variantInfo = useCurrentVariant(packageId)
-  const variantId = variantInfo.id
-
-  const filteredVariantIds = useFilteredVariants(packageId)
-
-  const variantIds = useMemo(() => {
-    const variantIds = keys(packageInfo.variants)
-
-    if (filtered) {
-      return variantIds.filter(id => id === variantId || filteredVariantIds.includes(id))
-    }
-
-    return variantIds
-  }, [filtered, filteredVariantIds, packageInfo, variantId])
-
-  const selectableVariantIds = useMemo(() => {
-    return variantIds.filter(id => {
-      const variantInfo = packageInfo.variants[id]
-      return variantInfo && !isInvalid(variantInfo, packageStatus)
-    })
-  }, [packageInfo, packageStatus])
+  const variantInfo = useVariantInfo(packageId, variantId)
 
   const packageActions = useMemo(() => {
     const packageActions: PackageAction[] = []
 
+    const isSelected = variantId === packageStatus?.variantId
     const incompatible = isIncompatible(variantInfo, packageStatus)
     const required = isRequired(variantInfo, packageStatus)
-
-    const warning = variantInfo.warnings?.find(warning =>
-      isRelevant(warning, variantInfo, packageStatus, false),
-    )
 
     if (isMissing(variantInfo)) {
       packageActions.push({
@@ -105,26 +72,14 @@ export function PackageActions({
       })
     }
 
-    if (isEnabled(variantInfo, packageStatus)) {
-      packageActions.push({
-        color: "error",
-        description: required
-          ? t("disable.reason.required", { count: packageStatus?.requiredBy?.length })
-          : warning
-            ? t(`${warning.on ?? "enable"}.${warning.id ?? "bulldoze"}`, { ns: "Warning" }) // TODO: util
-            : t("disable.description"),
-        id: "disable",
-        label: t("disable.label"),
-        onClick: () => actions.disablePackage(packageId),
-      })
-    } else if (isDisabled(variantInfo, packageStatus)) {
+    if (!isSelected) {
       packageActions.push({
         color: "success",
-        description: incompatible ? t("enable.reason.incompatible") : t("enable.description"),
-        disabled: incompatible,
-        id: "enable",
-        label: t("enable.label"),
-        onClick: () => actions.enablePackage(packageId),
+        description: incompatible ? t("select.reason.incompatible") : t("select.description"),
+        disabled: !!packageStatus?.included && incompatible,
+        id: "select",
+        label: t("select.label"),
+        onClick: () => actions.setPackageVariant(packageId, variantId),
       })
     }
 
@@ -135,7 +90,7 @@ export function PackageActions({
         description: required
           ? t("remove.reason.required", { count: packageStatus?.requiredBy?.length })
           : t("remove.description"),
-        disabled: required,
+        disabled: isEnabled(variantInfo, packageStatus) || required,
         id: "remove",
         label: t("remove.label"),
         onClick: () => actions.removePackage(packageId, variantId),
@@ -143,16 +98,6 @@ export function PackageActions({
     }
 
     if (!isInstalled(variantInfo) && !isIncluded(variantInfo, packageStatus)) {
-      if (currentProfile) {
-        packageActions.push({
-          description: incompatible ? t("add.reason.incompatible") : t("add.description"),
-          disabled: incompatible,
-          id: "add",
-          label: t("add.label"),
-          onClick: () => actions.addPackage(packageId, variantId),
-        })
-      }
-
       packageActions.push({
         description: t("download.description"),
         id: "download",
@@ -238,32 +183,6 @@ export function PackageActions({
           </FlexBox>
         )}
       </Box>
-      {(Object.keys(packageInfo.variants).length > 1 ||
-        !packageInfo.variants["default" as VariantID]) && (
-        <Select
-          disabled={
-            selectableVariantIds.length === 0 ||
-            (selectableVariantIds.length === 1 && variantId === selectableVariantIds[0])
-          }
-          fullWidth
-          onClose={() => setMenuOpen(false)}
-          MenuProps={{ sx: { maxHeight: 320 } }}
-          name="variant"
-          onChange={event =>
-            actions.setPackageVariant(packageInfo.id, event.target.value as VariantID)
-          }
-          required
-          size="small"
-          value={variantId}
-          variant="outlined"
-        >
-          {variantIds.map(id => (
-            <MenuItem key={id} value={id} disabled={!selectableVariantIds.includes(id)}>
-              {packageInfo.variants[id]!.name /* TODO */}
-            </MenuItem>
-          ))}
-        </Select>
-      )}
     </Box>
   )
 }

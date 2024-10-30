@@ -29,6 +29,7 @@ import { getDiff, getErrors } from "./utils"
 export interface ExemplarViewerProps {
   data: ExemplarData
   id: TGI
+  isLocal: boolean
   onClose: () => void
   onPatch: (data: ExemplarDataPatch | null) => void
   open: boolean
@@ -39,6 +40,7 @@ export interface ExemplarViewerProps {
 export function ExemplarViewer({
   data,
   id,
+  isLocal,
   open,
   onClose,
   onPatch,
@@ -60,7 +62,7 @@ export function ExemplarViewer({
   const dirty = useMemo(() => !!getDiff(currentData, patchedData), [currentData, patchedData])
   const errors = useMemo(() => getErrors(currentData), [currentData])
 
-  const isPatched = original !== undefined && !!diff
+  const isPatched = original !== undefined && !!diff && !isLocal
 
   function getOriginalValue(propertyId: number): ExemplarPropertyValue | null | undefined {
     if (diff?.properties?.[toHex(propertyId, 8)] !== undefined) {
@@ -177,19 +179,21 @@ export function ExemplarViewer({
               >
                 Apply
               </Button>
-              <Button
-                color="error"
-                disabled={!diff}
-                onClick={() => {
-                  setCurrentData(originalData)
-                  setPatchedData(originalData)
-                  onPatch(null)
-                }}
-                title="Reset all properties to their initial value"
-                variant="outlined"
-              >
-                Reset
-              </Button>
+              {!isLocal && (
+                <Button
+                  color="error"
+                  disabled={!diff}
+                  onClick={() => {
+                    setCurrentData(originalData)
+                    setPatchedData(originalData)
+                    onPatch(null)
+                  }}
+                  title="Reset all properties to their initial value"
+                  variant="outlined"
+                >
+                  Reset
+                </Button>
+              )}
             </ButtonGroup>
           )}
         </FlexBox>

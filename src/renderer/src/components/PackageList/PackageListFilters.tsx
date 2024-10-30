@@ -19,7 +19,7 @@ import {
 import { useTranslation } from "react-i18next"
 
 import { getCategoryLabel } from "@common/categories"
-import { PackageState } from "@common/types"
+import { VariantState } from "@common/types"
 import { difference } from "@common/utils/arrays"
 import { keys, values } from "@common/utils/objects"
 import { getLastWord, getStartOfWordSearchRegex, removeLastWord } from "@common/utils/regex"
@@ -47,7 +47,7 @@ export function PackageListFilters(): JSX.Element {
   const { t } = useTranslation("PackageListFilters")
 
   const categoryIds = keys(categories)
-  const states = useMemo(() => Object.values(PackageState).sort(), [])
+  const states = useMemo(() => Object.values(VariantState).sort(), [])
 
   const options: SerializedTag[] = useMemo(() => {
     const lastWord = getLastWord(packageFilters.search)
@@ -92,17 +92,17 @@ export function PackageListFilters(): JSX.Element {
         size="small"
       >
         <Tooltip placement="bottom" title={t("actions.showOnlyEnabled")}>
-          <ToggleButton value={PackageState.ENABLED}>
+          <ToggleButton value={VariantState.ENABLED}>
             <EnabledIcon />
           </ToggleButton>
         </Tooltip>
         <Tooltip placement="bottom" title={t("actions.showOnlyInstalled")}>
-          <ToggleButton value={PackageState.INSTALLED}>
+          <ToggleButton value={VariantState.INSTALLED}>
             <DownloadedIcon />
           </ToggleButton>
         </Tooltip>
         <Tooltip placement="bottom" title={t("actions.showOnlyLocal")}>
-          <ToggleButton value={PackageState.LOCAL}>
+          <ToggleButton value={VariantState.LOCAL}>
             <LocalIcon />
           </ToggleButton>
         </Tooltip>
@@ -188,15 +188,15 @@ export function PackageListFilters(): JSX.Element {
             }
           }
 
-          if (!filters.states.includes(PackageState.ERROR)) {
+          if (!filters.states.includes(VariantState.ERROR)) {
             filters.onlyErrors = false
           }
 
-          if (!filters.states.includes(PackageState.NEW)) {
+          if (!filters.states.includes(VariantState.NEW)) {
             filters.onlyNew = false
           }
 
-          if (!filters.states.includes(PackageState.OUTDATED)) {
+          if (!filters.states.includes(VariantState.OUTDATED)) {
             filters.onlyUpdates = false
           }
 

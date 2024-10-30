@@ -2,7 +2,7 @@ import { Namespace, TFunction } from "i18next"
 
 import { AuthorID, Authors } from "@common/authors"
 import { Categories, CategoryID, getCategoryLabel } from "@common/categories"
-import { PackageState } from "@common/types"
+import { VariantState } from "@common/types"
 import { isEnum } from "@common/utils/types"
 import { getStateLabel } from "@common/variants"
 
@@ -26,7 +26,7 @@ export enum TagType {
 export type TagValue<T extends TagType> = {
   [TagType.AUTHOR]: AuthorID
   [TagType.CATEGORY]: CategoryID
-  [TagType.STATE]: PackageState
+  [TagType.STATE]: VariantState
 }[T]
 
 export function getAuthorName(authorId: AuthorID, authors: Authors): string {
@@ -80,19 +80,21 @@ export function serializeTag<T extends TagType>(type: T, value: TagValue<T>): Se
 }
 
 export const STATE_TAGS: {
-  [state in PackageState]: "error" | "info" | "success" | "warning" | null
+  [state in VariantState]: "default" | "error" | "info" | "success" | "warning" | null
 } = {
-  [PackageState.ENABLED]: "success",
-  [PackageState.DEPENDENCY]: "success",
-  [PackageState.DEPRECATED]: "warning",
-  [PackageState.DISABLED]: "error",
-  [PackageState.ERROR]: "error",
-  [PackageState.EXPERIMENTAL]: "warning",
-  [PackageState.INCOMPATIBLE]: null,
-  [PackageState.INCLUDED]: null,
-  [PackageState.INSTALLED]: null,
-  [PackageState.LOCAL]: "warning",
-  [PackageState.NEW]: "info",
-  [PackageState.OUTDATED]: "warning",
-  [PackageState.PATCHED]: "warning",
+  [VariantState.DEFAULT]: null,
+  [VariantState.ENABLED]: "success",
+  [VariantState.DEPENDENCY]: "success",
+  [VariantState.DEPRECATED]: "warning",
+  [VariantState.DISABLED]: "error",
+  [VariantState.ERROR]: "error",
+  [VariantState.EXPERIMENTAL]: "warning",
+  [VariantState.INCOMPATIBLE]: null,
+  [VariantState.INCLUDED]: null,
+  [VariantState.INSTALLED]: null,
+  [VariantState.LOCAL]: "warning",
+  [VariantState.NEW]: "info",
+  [VariantState.OUTDATED]: "warning",
+  [VariantState.PATCHED]: "warning",
+  [VariantState.SELECTED]: "success",
 }

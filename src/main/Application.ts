@@ -35,7 +35,7 @@ import {
   ProfileInfo,
   ProfileUpdate,
   Profiles,
-  createUniqueProfileId,
+  createUniqueId,
 } from "@common/profiles"
 import { Settings } from "@common/settings"
 import { ApplicationState, ApplicationStateUpdate, getInitialState } from "@common/state"
@@ -50,7 +50,16 @@ import {
 import { flatMap, mapDefined, sumBy, unique } from "@common/utils/arrays"
 import { globToRegex, matchConditions } from "@common/utils/glob"
 import { readHex } from "@common/utils/hex"
-import { entries, forEach, forEachAsync, isEmpty, keys, size, values } from "@common/utils/objects"
+import {
+  entries,
+  forEach,
+  forEachAsync,
+  isEmpty,
+  keys,
+  mapValues,
+  size,
+  values,
+} from "@common/utils/objects"
 import { VariantID, VariantInfo } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
@@ -189,6 +198,7 @@ export class Application {
     this.handle("cleanVariant")
     this.handle("clearPackageLogs")
     this.handle("createProfile")
+    this.handle("createVariant")
     this.handle("getPackageLogs")
     this.handle("getPackageReadme")
     this.handle("getState")
@@ -409,7 +419,7 @@ export class Application {
       return false
     }
 
-    const profileId = createUniqueProfileId(name, keys(this.state.profiles))
+    const profileId = createUniqueId(name, keys(this.state.profiles))
 
     const templateProfile = fromProfileId
       ? fromProfileId.startsWith(TEMPLATE_PREFIX)
@@ -431,6 +441,75 @@ export class Application {
     this.writeProfile(profileId)
 
     return this.switchProfile(profileId)
+  }
+
+  /**
+   * Creates a new variant.
+   * @param packageId Package ID
+   * @param name Variant name
+   * @param fromVariantId ID of the variant to copy
+   */
+  public async createVariant(
+    packageId: PackageID,
+    name: string,
+    fromVariantId: VariantID,
+  ): Promise<boolean> {
+    const packageInfo = this.requirePackageInfo(packageId)
+
+    const variantId = createUniqueId(name, keys(packageInfo.variants))
+
+    let fromVariantInfo = this.requireVariantInfo(packageId, fromVariantId)
+
+    if (!fromVariantInfo.installed) {
+      await this.installVariant(packageId, fromVariantId)
+    }
+
+    fromVariantInfo = this.requireVariantInfo(packageId, fromVariantId)
+
+    const fromFiles = await glob("**", {
+      cwd: this.getVariantPath(packageId, fromVariantId),
+      dot: true,
+      ignore: `${DIRNAMES.patches}/**`,
+      nodir: true,
+    })
+
+    try {
+      for (const filePath of fromFiles) {
+        const fromPath = this.getVariantFilePath(packageId, fromVariantId, filePath)
+        const fromPatch = this.getVariantPatchPath(packageId, fromVariantId, filePath)
+        const toPath = this.getVariantFilePath(packageId, variantId, filePath)
+        await createIfMissing(path.dirname(toPath))
+        if (await exists(fromPatch)) {
+          await fs.copyFile(fromPatch, toPath)
+        } else {
+          const realPath = await fs.realpath(fromPath)
+          await fs.copyFile(realPath, toPath)
+        }
+      }
+
+      const variantInfo: VariantInfo = {
+        ...structuredClone(fromVariantInfo),
+        assets: undefined,
+        files: fromVariantInfo.files?.map(({ patches, ...file }) => file),
+        id: variantId,
+        installed: true,
+        local: true,
+        name,
+        new: false,
+        release: undefined,
+        update: undefined,
+      }
+
+      packageInfo.variants[variantId] = variantInfo
+      await this.writePackageConfig(packageInfo)
+      this.sendPackage(packageId)
+    } catch (error) {
+      delete packageInfo.variants[variantId]
+      await fs.rm(this.getVariantPath(packageId, variantId), { force: true, recursive: true })
+      throw error
+    }
+
+    return true
   }
 
   /**
@@ -1753,6 +1832,8 @@ export class Application {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
   ): Promise<DBPFFile> {
+    const { exemplarProperties } = this.state.configs
+
     const packageInfo = this.requirePackageInfo(packageId)
     const variantInfo = this.requireVariantInfo(packageId, variantId)
     const fileInfo = variantInfo.files?.find(file => file.path === filePath)
@@ -1761,34 +1842,59 @@ export class Application {
       throw Error(`Missing file ${filePath} in '${packageId}#${variantId}'`)
     }
 
-    // Override patches in config
-    forEach(patches, (patch, entryId) => {
-      fileInfo.patches ??= {}
-      if (patch?.parentCohortId || patch?.properties) {
-        fileInfo.patches[entryId] = patch
-      } else {
-        delete fileInfo.patches[entryId]
+    if (variantInfo.local) {
+      const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
+      const tempFullPath = path.join(
+        this.getTempPath(),
+        DIRNAMES.packages,
+        packageId,
+        variantId,
+        filePath,
+      )
+
+      await createIfMissing(path.dirname(tempFullPath))
+      const file = await openFile(originalFullPath, "r", async originalFile => {
+        return openFile(tempFullPath, "w", async patchedFile => {
+          return patchDBPFEntries(originalFile, patchedFile, patches, exemplarProperties)
+        })
+      })
+
+      await moveTo(tempFullPath, originalFullPath)
+
+      return {
+        ...file,
+        entries: mapValues(file.entries, ({ original, ...entry }) => entry),
       }
-    })
+    } else {
+      // Override patches in config
+      forEach(patches, (patch, entryId) => {
+        fileInfo.patches ??= {}
+        if (patch?.parentCohortId || patch?.properties) {
+          fileInfo.patches[entryId] = patch
+        } else {
+          delete fileInfo.patches[entryId]
+        }
+      })
 
-    // Unset patches if all were removed
-    if (fileInfo.patches && isEmpty(fileInfo.patches)) {
-      delete fileInfo.patches
+      // Unset patches if all were removed
+      if (fileInfo.patches && isEmpty(fileInfo.patches)) {
+        delete fileInfo.patches
+      }
+
+      // Send updates to renderer
+      this.sendPackage(packageId)
+
+      // Persist config changes
+      this.writePackageConfig(packageInfo)
+
+      // Calculate patched file
+      const file = await this.calculatePatch(packageId, variantId, filePath)
+
+      // Relink this package only
+      this.linkPackages([packageId])
+
+      return file
     }
-
-    // Send updates to renderer
-    this.sendPackage(packageId)
-
-    // Persist config changes
-    this.writePackageConfig(packageInfo)
-
-    // Calculate patched file
-    const file = await this.calculatePatch(packageId, variantId, filePath)
-
-    // Relink this package only
-    this.linkPackages([packageId])
-
-    return file
   }
 
   protected async calculatePatch(
@@ -2878,7 +2984,7 @@ export class Application {
               )
 
               return (
-                !isEnabled(dependencyStatus) &&
+                !isEnabled(dependencyVariantInfo, dependencyStatus) &&
                 !isIncompatible(dependencyVariantInfo, dependencyStatus) &&
                 optionalDependencies.has(dependencyId)
               )

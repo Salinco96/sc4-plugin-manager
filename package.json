@@ -44,6 +44,7 @@
     "i18next": "^23.11.5",
     "immutability-helper": "^3.1.1",
     "isomorphic-git": "^1.25.10",
+    "js-yaml": "^4.1.0",
     "notistack": "^3.0.1",
     "qfs-compression": "^0.2.1",
     "react-i18next": "^14.1.2",
@@ -53,7 +54,6 @@
     "react-window": "^1.8.10",
     "remark-gfm": "^4.0.0",
     "unzipper": "^0.11.6",
-    "yaml": "^2.4.2",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
@@ -61,6 +61,7 @@
     "@joplin/turndown-plugin-gfm": "^1.0.55",
     "@types/content-disposition": "^0.5.8",
     "@types/escape-html": "^1",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^18.19.9",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",

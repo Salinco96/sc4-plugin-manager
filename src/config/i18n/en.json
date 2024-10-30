@@ -70,6 +70,27 @@
     "title": "Create profile",
     "titleFirst": "Create your first profile"
   },
+  "CreateVariantModal": {
+    "actions": {
+      "cancel": {
+        "label": "$t(General:cancel)"
+      },
+      "create": {
+        "label": "Create"
+      }
+    },
+    "description": "Local variants allow you to freely customize and overwrite all files from a package, while still benefitting from the functionalities of the Manager. You can create different versions to be used in different profiles.",
+    "from": {
+      "description": "Variant",
+      "label": "Create from",
+      "manyFiles": "This package is very large. Each local variant will use additional disk space.",
+      "notInstalled": "The source variant will be installed before copying."
+    },
+    "id": {
+      "description": "Unique ID for the new variant. Cannot be modified later."
+    },
+    "title": "Create local variant"
+  },
   "DisableIncompatiblePackagesModal": {
     "cancel": "$t(General:cancel)",
     "confirm": "Disable incompatible packages",
@@ -175,7 +196,7 @@
       }
     },
     "download": {
-      "description": "Install this package without enabling it",
+      "description": "Install this variant without enabling it",
       "label": "Download"
     },
     "enable": {
@@ -186,7 +207,7 @@
       }
     },
     "install": {
-      "description": "Install this package",
+      "description": "Install this variant",
       "label": "Install",
       "reason": {
         "incompatible": "This variant is not compatible with your profile"
@@ -194,11 +215,18 @@
     },
     "more": "More options",
     "remove": {
-      "description": "Remove this package\nWARNING: This package may be required by another profile!",
+      "description": "Remove this variant\nWARNING: This package may be required by another profile!",
       "label": "Remove",
       "reason": {
         "required_one": "This package cannot be disabled because it is required by another package",
         "required_other": "This package cannot be disabled because it is required by {{count}} other packages"
+      }
+    },
+    "select": {
+      "description": "Select this variant",
+      "label": "Select",
+      "reason": {
+        "incompatible": "This variant is not compatible with your profile"
       }
     },
     "update": {
@@ -302,7 +330,8 @@
       "label": "Search"
     }
   },
-  "PackageState": {
+  "VariantState": {
+    "default": "Default",
     "dependency": "Dependency",
     "deprecated": "Deprecated",
     "disabled": "Disabled",
@@ -315,7 +344,8 @@
     "local": "Local",
     "new": "New",
     "outdated": "Outdated",
-    "patched": "Patched"
+    "patched": "Patched",
+    "selected": "Selected"
   },
   "PackageTag": {
     "actions": {
@@ -413,7 +443,17 @@
     "optionalDependencies_other": "{{count}} optional dependencies",
     "readme": "Readme",
     "requiredBy": "{{count}} dependent packages",
-    "summary": "Summary"
+    "summary": "Summary",
+    "variants_one": "{{count}} variant",
+    "variants_other": "{{count}} variants"
+  },
+  "PackageViewVariants": {
+    "actions": {
+      "create": {
+        "description": "Create local variant",
+        "label": "Create"
+      }
+    }
   },
   "Profile": {
     "actions": {
@@ -487,6 +527,17 @@
   "Snackbar": {
     "downloading": "Downloading {{key}}{{progress, percent, paren}}...",
     "extracting": "Extracting {{key}}{{progress, percent, paren}}..."
+  },
+  "Variant": {
+    "id": {
+      "label": "Variant ID"
+    },
+    "name": {
+      "errors": {
+        "required": "$t(General:required)"
+      },
+      "label": "Variant Name"
+    }
   },
   "Warning": {
     "disable": {

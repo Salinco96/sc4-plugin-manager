@@ -17,7 +17,7 @@ import {
   ApplicationStateUpdate,
   getInitialState,
 } from "@common/state"
-import { Features, PackageInfo, PackageState } from "@common/types"
+import { Features, PackageInfo, VariantState } from "@common/types"
 import { compact, keys } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
 
@@ -40,8 +40,8 @@ export interface PackageFilters {
   onlyNew: boolean
   onlyUpdates: boolean
   search: string
-  state: PackageState | null
-  states: PackageState[]
+  state: VariantState | null
+  states: VariantState[]
 }
 
 export interface StoreActions {
@@ -51,6 +51,7 @@ export interface StoreActions {
   clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void>
   closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: ProfileID): Promise<boolean>
+  createVariant(packageId: PackageID, name: string, templateVariantId: VariantID): Promise<boolean>
   disablePackage(packageId: PackageID): Promise<boolean>
   enablePackage(packageId: PackageID): Promise<boolean>
   getPackageLogs(
@@ -174,6 +175,9 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async createProfile(name, templateProfileId) {
         return window.api.createProfile(name, templateProfileId)
+      },
+      async createVariant(packageId, name, templateVariantId) {
+        return window.api.createVariant(packageId, name, templateVariantId)
       },
       async disablePackage(packageId) {
         const store = get()

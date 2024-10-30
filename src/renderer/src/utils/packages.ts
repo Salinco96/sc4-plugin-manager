@@ -14,7 +14,7 @@ import {
   isRelevant,
 } from "@common/packages"
 import { ProfileInfo } from "@common/profiles"
-import { PackageInfo, PackageState, PackageStatus, Packages, getState } from "@common/types"
+import { PackageInfo, PackageStatus, Packages, VariantState, getState } from "@common/types"
 import { hasAny } from "@common/utils/arrays"
 import { keys, mapValues, values } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
@@ -69,7 +69,7 @@ export function getPackageListItemSize(
 
   if (variantInfo.warnings) {
     nBanners += variantInfo.warnings.filter(warning =>
-      isRelevant(warning, packageStatus, true),
+      isRelevant(warning, variantInfo, packageStatus, true),
     ).length
   }
 
@@ -185,18 +185,22 @@ export function usePackageStatus(packageId: PackageID): PackageStatus | undefine
   )
 }
 
-export function useVariantInfo(packageId: PackageID, variantId: VariantID): VariantInfo {
+export function useVariantInfo(
+  packageId: PackageID,
+  variantId: VariantID | undefined,
+): VariantInfo {
   return useStore(
     useCallback(
       store => {
         const packageInfo = getPackageInfo(store, packageId)
-        if (!packageInfo) {
+        const packageUi = store.packageUi[packageId]
+        if (!packageInfo || !packageUi) {
           throw Error(`Unknown package '${packageId}'`)
         }
 
-        const variantInfo = packageInfo.variants[variantId]
+        const variantInfo = packageInfo.variants[variantId ?? packageUi.variantId]
         if (!variantInfo) {
-          throw Error(`Unknown variant '${packageId}#${variantId}'`)
+          throw Error(`Unknown variant '${packageId}#${variantId ?? packageUi.variantId}'`)
         }
 
         return variantInfo
@@ -235,8 +239,8 @@ export function filterVariant(
   }
 
   if (filters.state) {
-    if (filters.state === PackageState.ENABLED && filters.dependencies) {
-      if (!isIncluded(packageStatus)) {
+    if (filters.state === VariantState.ENABLED && filters.dependencies) {
+      if (!isIncluded(variantInfo, packageStatus)) {
         return false
       }
     } else if (!getState(filters.state, packageInfo, variantInfo, profileInfo)) {

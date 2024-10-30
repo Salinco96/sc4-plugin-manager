@@ -13,8 +13,8 @@ import {
   MMPData,
   MMPInfo,
   PackageFile,
-  PackageState,
   PackageWarning,
+  VariantState,
 } from "./types"
 
 /** Variant ID */
@@ -113,6 +113,9 @@ export interface DependencyInfo extends DependencyData {
   transitive: boolean
 }
 
-export function getStateLabel(t: TFunction<Namespace>, state: PackageState): string {
-  return t(state, { ns: "PackageState" })
+export function getStateLabel(
+  t: TFunction<Namespace>,
+  state: VariantState | "default" | "selected",
+): string {
+  return t(state, { ns: "VariantState" })
 }

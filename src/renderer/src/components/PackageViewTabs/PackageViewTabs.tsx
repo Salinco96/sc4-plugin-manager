@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageTag } from "@components/Tags"
-import { useCurrentVariant, useDependentPackages } from "@utils/packages"
+import { useCurrentVariant, useDependentPackages, usePackageInfo } from "@utils/packages"
 
 import { packageViewTabs, usePackageViewTab } from "./tabs"
 
@@ -14,10 +14,11 @@ export function PackageViewTabs({ packageId }: { packageId: PackageID }): JSX.El
   const { t } = useTranslation("PackageViewTabs")
 
   const dependentPackages = useDependentPackages(packageId)
+  const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
 
   const tabs = packageViewTabs.filter(tab => tab.condition(variantInfo, dependentPackages))
-  const labels = tabs.map(tab => tab.label(t, variantInfo, dependentPackages))
+  const labels = tabs.map(tab => tab.label(t, variantInfo, packageInfo, dependentPackages))
   const labelTags = tabs.map(tab => tab.labelTag?.(variantInfo))
 
   if (tabs.length === 0) {
@@ -46,7 +47,7 @@ export function PackageViewTabs({ packageId }: { packageId: PackageID }): JSX.El
       </Box>
       {tabs.map(({ component: Component, fullsize, id }) => (
         <TabPanel
-          key={id}
+          key={`${variantInfo.id}/${id}`}
           sx={{
             height: "100%",
             overflowY: fullsize ? "hidden" : "auto",

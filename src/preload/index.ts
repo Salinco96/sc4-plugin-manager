@@ -24,6 +24,13 @@ export const api = {
   async createProfile(name: string, templateProfileId?: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
+  async createVariant(
+    packageId: PackageID,
+    name: string,
+    templateVariantId: VariantID,
+  ): Promise<boolean> {
+    return ipcRenderer.invoke("createVariant", packageId, name, templateVariantId)
+  },
   async getPackageLogs(
     packageId: PackageID,
     variantId: VariantID,

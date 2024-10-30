@@ -58,37 +58,31 @@ export interface ProfileUpdate {
   }
 }
 
-export function createUniqueProfileId(name: string, existingIds: ProfileID[]): ProfileID {
+export function createUniqueId<T extends ID<object>>(name: string, existingIds: T[]): T {
   const baseId = normalizeString(name.trim())
     .split(/[^a-z0-9]+/g)
     .filter(Boolean)
-    .join("-") as ProfileID
+    .join("-") as T
 
   if (baseId) {
     if (!existingIds.includes(baseId)) {
       return baseId
     }
 
-    let index = 2
-    // eslint-disable-next-line no-constant-condition
-    while (true) {
-      const id = `${baseId}-${index}` as ProfileID
+    for (let index = 2; index < 100; index++) {
+      const id = `${baseId}-${index}` as T
       if (!existingIds.includes(id)) {
         return id
       }
-
-      index++
     }
   }
 
-  let index = 1
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    const id = `${index}` as ProfileID
+  for (let index = 1; index < 100; index++) {
+    const id = `${index}` as T
     if (!existingIds.includes(id)) {
       return id
     }
-
-    index++
   }
+
+  throw Error(`Failed to generate unique ID from '${name}'`)
 }

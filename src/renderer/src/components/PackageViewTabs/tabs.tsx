@@ -3,8 +3,9 @@ import { ComponentType } from "react"
 import { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
-import { PackageID, isPatched } from "@common/packages"
-import { PackageState } from "@common/types"
+import { PackageID, isLocal, isPatched } from "@common/packages"
+import { PackageInfo, VariantState } from "@common/types"
+import { size } from "@common/utils/objects"
 import { VariantInfo } from "@common/variants"
 import { PackageOptionsForm } from "@components/Options"
 import { Tag, TagType, createTag } from "@components/Tags"
@@ -18,6 +19,7 @@ import { PackageViewOptionalDependencies } from "./PackageViewOptionalDependenci
 import { PackageViewReadme } from "./PackageViewReadme"
 import { PackageViewRequiredBy } from "./PackageViewRequiredBy"
 import { PackageViewSummary } from "./PackageViewSummary"
+import { PackageViewVariants } from "./PackageViewVariants"
 
 export type PackageViewTabInfo = {
   component: ComponentType<{ packageId: PackageID }>
@@ -25,6 +27,7 @@ export type PackageViewTabInfo = {
   label: (
     t: TFunction<"PackageViewTabs">,
     variantInfo: VariantInfo,
+    packageInfo: PackageInfo,
     dependentPackages: PackageID[],
   ) => string
   labelTag?: (variantInfo: VariantInfo) => Tag | undefined
@@ -90,7 +93,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     condition(variantInfo, dependentPackages) {
       return !!dependentPackages.length
     },
-    label(t, variantInfo, dependentPackages) {
+    label(t, variantInfo, packageInfo, dependentPackages) {
       return t("requiredBy", { count: dependentPackages.length })
     },
   },
@@ -104,8 +107,12 @@ export const packageViewTabs: PackageViewTabInfo[] = [
       return t("files", { count: variantInfo.files?.length })
     },
     labelTag(variantInfo) {
+      if (isLocal(variantInfo)) {
+        return createTag(TagType.STATE, VariantState.LOCAL)
+      }
+
       if (isPatched(variantInfo)) {
-        return createTag(TagType.STATE, PackageState.PATCHED)
+        return createTag(TagType.STATE, VariantState.PATCHED)
       }
     },
   },
@@ -138,6 +145,16 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     },
     label(t) {
       return t("logs")
+    },
+  },
+  {
+    id: "variants",
+    component: PackageViewVariants,
+    condition() {
+      return true
+    },
+    label(t, variantInfo, packageInfo) {
+      return t("variants", { count: size(packageInfo.variants) })
     },
   },
 ]
