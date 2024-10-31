@@ -49,7 +49,7 @@ import {
 } from "@common/types"
 import { flatMap, mapDefined, sumBy, unique } from "@common/utils/arrays"
 import { globToRegex, matchConditions } from "@common/utils/glob"
-import { readHex } from "@common/utils/hex"
+import { readHex, toHex } from "@common/utils/hex"
 import {
   entries,
   forEach,
@@ -79,6 +79,7 @@ import {
   removeIfPresent,
   toPosix,
 } from "@node/files"
+import { hashCode } from "@node/hash"
 import { PEFlag, getPEFlag, getPEHeader, setPEFlag, setPEHeader } from "@node/pe"
 import { cmd } from "@node/processes"
 import { getPluginsFolderName } from "@utils/linker"
@@ -475,16 +476,13 @@ export class Application {
 
     try {
       for (const filePath of fromFiles) {
-        const fromPath = this.getVariantFilePath(packageId, fromVariantId, filePath)
-        const fromPatch = this.getVariantPatchPath(packageId, fromVariantId, filePath)
         const toPath = this.getVariantFilePath(packageId, variantId, filePath)
+
+        const fromPath = await this.getPatchedFile(packageId, fromVariantId, filePath)
+        const realPath = await fs.realpath(fromPath)
+
         await createIfMissing(path.dirname(toPath))
-        if (await exists(fromPatch)) {
-          await fs.copyFile(fromPatch, toPath)
-        } else {
-          const realPath = await fs.realpath(fromPath)
-          await fs.copyFile(realPath, toPath)
-        }
+        await fs.copyFile(realPath, toPath)
       }
 
       const variantInfo: VariantInfo = {
@@ -1050,8 +1048,18 @@ export class Application {
     return path.join(this.getVariantPath(packageId, variantId), filePath)
   }
 
-  public getVariantPatchPath(packageId: PackageID, variantId: VariantID, filePath: string): string {
-    return path.join(this.getVariantPath(packageId, variantId), DIRNAMES.patches, filePath)
+  public getVariantPatchPath(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    hex: string,
+  ): string {
+    const extension = path.extname(filePath)
+    return path.join(
+      this.getVariantPath(packageId, variantId),
+      DIRNAMES.patches,
+      filePath.replace(new RegExp(`\\${extension}$`), `.${hex}${extension}`),
+    )
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -1535,9 +1543,7 @@ export class Application {
         // Apply patches
         if (variantInfo.files) {
           for (const file of variantInfo.files) {
-            if (file.patches) {
-              await this.calculatePatch(packageId, variantId, file.path)
-            }
+            await this.getPatchedFile(packageId, variantId, file.path)
           }
         }
       })
@@ -1645,7 +1651,6 @@ export class Application {
               const variantId = status.variantId
               const variantInfo = packageInfo.variants[variantId]
               if (variantInfo) {
-                const variantPath = this.getVariantPath(packageId, variantId)
                 if (variantInfo.files?.length) {
                   const patterns = status.files?.map(globToRegex)
 
@@ -1665,9 +1670,7 @@ export class Application {
                     ) {
                       const priority = file.priority ?? variantInfo.priority
 
-                      const fullPath = file.patches
-                        ? path.join(variantPath, DIRNAMES.patches, file.path)
-                        : path.join(variantPath, file.path)
+                      const fullPath = await this.getPatchedFile(packageId, variantId, file.path)
 
                       const targetPath = path.join(
                         pluginsPath,
@@ -1761,19 +1764,8 @@ export class Application {
     variantId: VariantID,
     filePath: string,
   ): Promise<DBPFFile> {
-    const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
-    const patchedFullPath = this.getVariantPatchPath(packageId, variantId, filePath)
-
-    const hasPatch = await exists(patchedFullPath)
-    const fullPath = hasPatch ? patchedFullPath : originalFullPath
-    const file = await fs.open(fullPath, "r")
-
-    try {
-      const contents = await loadDBPF(file)
-      return contents
-    } finally {
-      await file.close()
-    }
+    const fullPath = await this.getPatchedFile(packageId, variantId, filePath)
+    return openFile(fullPath, "r", loadDBPF)
   }
 
   public async loadDBPFEntry(
@@ -1792,8 +1784,8 @@ export class Application {
     }
 
     const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
-    const patchedFullPath = this.getVariantPatchPath(packageId, variantId, filePath)
-    const isPatched = !!fileInfo.patches?.[entryId]
+    const patchedFullPath = await this.getPatchedFile(packageId, variantId, filePath)
+    const isPatched = originalFullPath !== patchedFullPath
 
     const originalData = await openFile(originalFullPath, "r", async originalFile => {
       const originalContents = await loadDBPF(originalFile)
@@ -1888,57 +1880,17 @@ export class Application {
       this.writePackageConfig(packageInfo)
 
       // Calculate patched file
-      const file = await this.calculatePatch(packageId, variantId, filePath)
+      const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
+      const patchedFullPath = await this.getPatchedFile(packageId, variantId, filePath)
 
-      // Relink this package only
-      this.linkPackages([packageId])
-
-      return file
-    }
-  }
-
-  protected async calculatePatch(
-    packageId: PackageID,
-    variantId: VariantID,
-    filePath: string,
-  ): Promise<DBPFFile> {
-    const { exemplarProperties } = this.state.configs
-
-    const variantInfo = this.requireVariantInfo(packageId, variantId)
-    const fileInfo = variantInfo.files?.find(file => file.path === filePath)
-
-    if (!fileInfo) {
-      throw Error(`Missing file ${filePath} in '${packageId}#${variantId}'`)
-    }
-
-    const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
-    const patchedFullPath = this.getVariantPatchPath(packageId, variantId, filePath)
-    const patches = fileInfo.patches
-
-    let file: DBPFFile
-
-    if (patches) {
-      // Create or update the patched file
-      await createIfMissing(path.dirname(patchedFullPath))
-      file = await openFile(originalFullPath, "r", async originalFile => {
-        return openFile(patchedFullPath, "w", async patchedFile => {
-          return patchDBPFEntries(originalFile, patchedFile, patches, exemplarProperties)
-        })
-      })
-    } else {
-      // Delete the patched file
-      const variantPath = this.getVariantPath(packageId, variantId)
-      await removeIfPresent(patchedFullPath)
-      await removeIfEmptyRecursive(patchedFullPath, variantPath)
-
-      // Reload the original exemplars
-      file = await openFile(originalFullPath, "r", async originalFile => {
-        const file = await loadDBPF(originalFile)
+      // Reload patched data
+      const file = await openFile(patchedFullPath, "r", async patchedFile => {
+        const file = await loadDBPF(patchedFile)
 
         for (const entry of values(file.entries)) {
           if (entry.type === DBPFDataType.EXMP) {
             entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(
-              originalFile,
+              patchedFile,
               entry,
               exemplarProperties,
             )
@@ -1947,9 +1899,93 @@ export class Application {
 
         return file
       })
+
+      // Reload original data
+      if (patchedFullPath !== originalFullPath) {
+        await openFile(originalFullPath, "r", async originalFile => {
+          const { entries } = await loadDBPF(originalFile)
+
+          for (const patchedEntry of values(file.entries)) {
+            const entry = entries[patchedEntry.id]
+            if (entry?.type === DBPFDataType.EXMP) {
+              patchedEntry.original = await loadDBPFEntry<DBPFDataType.EXMP>(
+                originalFile,
+                entry,
+                exemplarProperties,
+              )
+            }
+          }
+
+          return file
+        })
+      }
+
+      // Relink this package only
+      await this.linkPackages([packageId])
+
+      // Remove old patches
+      await this.removeObsoletePatches(packageId, variantId, filePath, patchedFullPath)
+
+      return file
+    }
+  }
+
+  protected async getPatchedFile(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+  ): Promise<string> {
+    const { exemplarProperties } = this.state.configs
+
+    const variantInfo = this.requireVariantInfo(packageId, variantId)
+    const patches = variantInfo.files?.find(file => file.path === filePath)?.patches
+
+    const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
+
+    if (patches) {
+      const hex = toHex(hashCode(JSON.stringify(patches)), 8)
+      const patchedFullPath = this.getVariantPatchPath(packageId, variantId, filePath, hex)
+
+      // Patched file already exists
+      if (await exists(patchedFullPath)) {
+        return patchedFullPath
+      }
+
+      // Create or update the patched file
+      await createIfMissing(path.dirname(patchedFullPath))
+      await openFile(originalFullPath, "r", async originalFile => {
+        await openFile(patchedFullPath, "w", async patchedFile => {
+          await patchDBPFEntries(originalFile, patchedFile, patches, exemplarProperties)
+        })
+      })
+
+      return patchedFullPath
     }
 
-    return file
+    return originalFullPath
+  }
+
+  protected async removeObsoletePatches(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    patchedFullPath: string,
+  ): Promise<void> {
+    const basePath = this.getVariantPath(packageId, variantId)
+    const patchedPaths = this.getVariantPatchPath(packageId, variantId, filePath, "*")
+
+    const files = await glob(path.relative(basePath, patchedPaths).replaceAll("\\", "/"), {
+      cwd: basePath,
+      ignore: path.relative(basePath, patchedFullPath).replaceAll("\\", "/"),
+      nodir: true,
+    })
+
+    for (const file of files) {
+      const fullPath = path.join(basePath, file)
+      if (await removeIfPresent(fullPath)) {
+        await removeIfEmptyRecursive(path.dirname(fullPath), basePath)
+      }
+    }
   }
 
   protected async loadAppConfig(): Promise<void> {

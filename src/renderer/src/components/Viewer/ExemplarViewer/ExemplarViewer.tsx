@@ -128,7 +128,7 @@ export function ExemplarViewer({
       readonly,
     })
 
-    if (showDiffOnly && isPatched && original === undefined) {
+    if (showDiffOnly && isPatched) {
       return fields.filter(field => field.original !== undefined)
     }
 
@@ -181,7 +181,7 @@ export function ExemplarViewer({
               {!isLocal && (
                 <Button
                   color="error"
-                  disabled={!diff}
+                  disabled={!diff && !dirty}
                   onClick={() => {
                     setCurrentData(originalData)
                     setPatchedData(originalData)
