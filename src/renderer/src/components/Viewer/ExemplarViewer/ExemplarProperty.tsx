@@ -9,6 +9,7 @@ import { toHex } from "@common/utils/hex"
 import { isArray, isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
+import { CurveEditor } from "./CurveEditor"
 import { ExemplarPropertyInput } from "./ExemplarPropertyInput"
 import { PropertyErrors, formatValue, getItemInfo } from "./utils"
 
@@ -26,7 +27,7 @@ export function ExemplarProperty({
   original,
   property,
   readonly,
-}: ExemplarPropertyProps): JSX.Element | null {
+}: ExemplarPropertyProps): JSX.Element {
   const { id, info, value } = property
 
   const idHex = toHex(id, 8, true)
@@ -146,6 +147,14 @@ export function ExemplarProperty({
           </FlexBox>
         )}
       </FlexBox>
+      {isArray(value) && info?.size === 2 && info.repeat && (
+        <CurveEditor
+          onChange={onChange}
+          original={isArray(original) ? original : undefined}
+          property={property}
+          value={value}
+        />
+      )}
     </FlexBox>
   )
 }

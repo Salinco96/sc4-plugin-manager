@@ -1619,6 +1619,50 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@svgdotjs/svg.draggable.js@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@svgdotjs/svg.draggable.js@npm:3.0.4"
+  peerDependencies:
+    "@svgdotjs/svg.js": ^3.2.4
+  checksum: 10c0/0c3237a6f6998f04862fde916d5dddb7d2c00e79c1606551be6abf2d2993b9d21abe86576c9e0374c094af22155b78e86f57ba959f8c9098db32ad31ecd82503
+  languageName: node
+  linkType: hard
+
+"@svgdotjs/svg.filter.js@npm:^3.0.8":
+  version: 3.0.8
+  resolution: "@svgdotjs/svg.filter.js@npm:3.0.8"
+  dependencies:
+    "@svgdotjs/svg.js": "npm:^3.1.1"
+  checksum: 10c0/cc0f737316aa4b71b3b6f32f0944d99c1a8d1b709a674f2a4a99c797c31838389fd4ed330485597be6f11a975327ae9a1e1283234bf43b103b2c7176e8e69db2
+  languageName: node
+  linkType: hard
+
+"@svgdotjs/svg.js@npm:^3.1.1, @svgdotjs/svg.js@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "@svgdotjs/svg.js@npm:3.2.4"
+  checksum: 10c0/35563560998def7fd9b35c434214428f122d1fc11a5d6975fbc9b3c92b3e86700daba74f9106d7abd5dc979eb26c6e6429be71236dd226bc0f2d92e880e8fe2c
+  languageName: node
+  linkType: hard
+
+"@svgdotjs/svg.resize.js@npm:^2.0.2":
+  version: 2.0.4
+  resolution: "@svgdotjs/svg.resize.js@npm:2.0.4"
+  peerDependencies:
+    "@svgdotjs/svg.js": ^3.2.4
+    "@svgdotjs/svg.select.js": ^4.0.1
+  checksum: 10c0/a57de7fd99156b19e9b50b82b8b4c29097baf4cb85489e7368a7b182fa99787ab1eca3aeed0f845504595cda38dd477c658f2912a51b9341eb91d2656bc8b91c
+  languageName: node
+  linkType: hard
+
+"@svgdotjs/svg.select.js@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@svgdotjs/svg.select.js@npm:4.0.1"
+  peerDependencies:
+    "@svgdotjs/svg.js": ^3.2.4
+  checksum: 10c0/8e619995889d330661762050c3825f34568b48fa68da7943ebaec26fb298fc8c4175b25864ca2cafb5cee05f5aa9f0d7e375fa2c03b82aacb4adfb02d7ff6625
+  languageName: node
+  linkType: hard
+
 "@szmarczak/http-timer@npm:^4.0.5":
   version: 4.0.6
   resolution: "@szmarczak/http-timer@npm:4.0.6"
@@ -2098,6 +2142,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yr/monotone-cubic-spline@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@yr/monotone-cubic-spline@npm:1.0.3"
+  checksum: 10c0/6098d2138dcf8b722c80f2e9167d24a064184c37fb5b3276e34c717351b496735777b71f7e69c3fa6b94f8a81eba309c4a1e37349a26b8541113b1afa84d7bf8
+  languageName: node
+  linkType: hard
+
 "abab@npm:^2.0.6":
   version: 2.0.6
   resolution: "abab@npm:2.0.6"
@@ -2240,6 +2291,20 @@ __metadata:
   version: 6.2.1
   resolution: "ansi-styles@npm:6.2.1"
   checksum: 10c0/5d1ec38c123984bcedd996eac680d548f31828bd679a66db2bdf11844634dde55fec3efa9c6bb1d89056a5e79c1ac540c4c784d592ea1d25028a92227d2f2d5c
+  languageName: node
+  linkType: hard
+
+"apexcharts@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "apexcharts@npm:4.0.0"
+  dependencies:
+    "@svgdotjs/svg.draggable.js": "npm:^3.0.4"
+    "@svgdotjs/svg.filter.js": "npm:^3.0.8"
+    "@svgdotjs/svg.js": "npm:^3.2.4"
+    "@svgdotjs/svg.resize.js": "npm:^2.0.2"
+    "@svgdotjs/svg.select.js": "npm:^4.0.1"
+    "@yr/monotone-cubic-spline": "npm:^1.0.3"
+  checksum: 10c0/723a8b2ceb2b1166588c5821aefb27ea105ca1ee08aaf415234edcd5cc1c279e21f40241622d2e909934b6d6f6b9cda6fee15c16226739b7a3d8b9d7ecf04908
   languageName: node
   linkType: hard
 
@@ -7362,6 +7427,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-apexcharts@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "react-apexcharts@npm:1.5.0"
+  dependencies:
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    apexcharts: ^3.41.0
+    react: ">=0.13"
+  checksum: 10c0/91aef93cfd999053b0fad03b31b32b18dccfe5f08676b07e251cef214ffcc20e8e9cf92821c5ced090521ec5a02c0ca668f0139bf0f76a338cceeab0345889e9
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^18.2.0":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
@@ -7948,6 +8025,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.9.0"
     "@typescript-eslint/parser": "npm:^7.9.0"
     "@vitejs/plugin-react": "npm:^4.2.1"
+    apexcharts: "npm:^4.0.0"
     content-disposition: "npm:^0.5.4"
     dotenv: "npm:^16.4.5"
     electron: "npm:^28.2.0"
@@ -7973,6 +8051,7 @@ __metadata:
     prettier: "npm:^3.2.4"
     qfs-compression: "npm:^0.2.1"
     react: "npm:^18.2.0"
+    react-apexcharts: "npm:^1.5.0"
     react-dom: "npm:^18.2.0"
     react-i18next: "npm:^14.1.2"
     react-markdown: "npm:^9.0.1"
