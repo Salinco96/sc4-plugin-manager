@@ -2062,9 +2062,9 @@ export class Application {
 
         settings.currentProfile = profileId
 
-        this.recalculatePackages(packages, profileInfo, profileOptions, settings)
-
         await this.writeSettings(context, settings)
+
+        this.recalculatePackages(packages, profileInfo, profileOptions, settings)
       },
       pool: "main",
     })
