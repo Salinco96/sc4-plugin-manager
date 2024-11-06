@@ -406,7 +406,8 @@ function loadExemplar(
               }
 
               case ExemplarValueType.Bool: {
-                throw Error("Unsupported boolean property in text exemplar: " + rawValue) // TODO
+                value = rawValue === "True"
+                break
               }
 
               default: {
