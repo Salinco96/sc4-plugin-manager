@@ -1,12 +1,12 @@
 import { ReactNode, useEffect } from "react"
 
+import { isEmpty } from "@common/utils/objects"
 import { useStore, useStoreActions } from "@utils/store"
 
 export function DataProvider({ children }: { children: ReactNode }): JSX.Element {
-  const isDownloading = useStore(store => !!store.status.ongoingDownloads.length)
-  const isExtracting = useStore(store => !!store.status.ongoingExtracts.length)
-  const isLinking = useStore(store => !!store.status.linker)
-  const isLoading = useStore(store => !!store.status.loader)
+  const isDownloading = useStore(store => !isEmpty(store.downloads))
+  const isLinking = useStore(store => !!store.linker)
+  const isLoading = useStore(store => !!store.loader)
 
   const actions = useStoreActions()
 
@@ -19,10 +19,10 @@ export function DataProvider({ children }: { children: ReactNode }): JSX.Element
   }, [isLinking, isLoading])
 
   useEffect(() => {
-    if (isDownloading || isExtracting) {
+    if (isDownloading) {
       actions.openSnackbar("download-progress", {})
     }
-  }, [isDownloading, isExtracting])
+  }, [isDownloading])
 
   return <>{children}</>
 }

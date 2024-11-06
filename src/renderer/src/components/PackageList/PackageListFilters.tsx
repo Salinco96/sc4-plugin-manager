@@ -24,7 +24,7 @@ import { difference } from "@common/utils/arrays"
 import { keys, values } from "@common/utils/objects"
 import { getLastWord, getStartOfWordSearchRegex, removeLastWord } from "@common/utils/regex"
 import { getStateLabel } from "@common/variants"
-import { useAuthors, useConfigs, usePackageFilters, useStoreActions } from "@utils/store"
+import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
 
 import {
   SerializedTag,
@@ -37,11 +37,10 @@ import {
 } from "../Tags/utils"
 
 export function PackageListFilters(): JSX.Element {
-  const { categories } = useConfigs()
-
   const actions = useStoreActions()
 
   const authors = useAuthors()
+  const categories = useStore(store => store.categories)
   const packageFilters = usePackageFilters()
 
   const { t } = useTranslation("PackageListFilters")

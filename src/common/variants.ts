@@ -64,8 +64,6 @@ export interface BaseVariantInfo extends VariantData {
 
 export interface VariantInfo extends BaseVariantInfo {
   action?: "installing" | "updating" | "removing"
-  cleanitol?: string
-  docs?: string
   installed?: boolean
   local?: boolean
   update?: BaseVariantInfo

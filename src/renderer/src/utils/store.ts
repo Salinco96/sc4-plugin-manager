@@ -4,21 +4,16 @@ import { create } from "zustand"
 
 import { AuthorID, Authors } from "@common/authors"
 import { CategoryID } from "@common/categories"
-import { DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
+import { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarDataPatch } from "@common/exemplars"
 import { ModalData, ModalID } from "@common/modals"
 import { OptionID, OptionValue } from "@common/options"
 import { PackageID } from "@common/packages"
 import { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
 import { Settings } from "@common/settings"
-import {
-  ApplicationConfig,
-  ApplicationState,
-  ApplicationStateUpdate,
-  getInitialState,
-} from "@common/state"
+import { ApplicationState, ApplicationStateUpdate, getInitialState } from "@common/state"
 import { Features, PackageInfo, VariantState } from "@common/types"
-import { compact, keys } from "@common/utils/objects"
+import { compact } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
 
 import { computePackageList } from "./packages"
@@ -46,11 +41,10 @@ export interface PackageFilters {
 export interface StoreActions {
   addPackage(packageId: PackageID, variantId: VariantID, data?: ProfileUpdate): Promise<boolean>
   check4GBPatch(): Promise<void>
-  cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void>
   closeSnackbar(type: SnackbarType): void
-  createProfile(name: string, templateProfileId?: ProfileID): Promise<boolean>
-  createVariant(packageId: PackageID, name: string, templateVariantId: VariantID): Promise<boolean>
+  createProfile(name: string, templateProfileId?: ProfileID): Promise<void>
+  createVariant(packageId: PackageID, name: string, templateVariantId: VariantID): Promise<void>
   disablePackage(packageId: PackageID): Promise<boolean>
   enablePackage(packageId: PackageID): Promise<boolean>
   getPackageLogs(
@@ -61,23 +55,23 @@ export interface StoreActions {
     packageId: PackageID,
     variantId: VariantID,
   ): Promise<{ html?: string; md?: string }>
-  installPackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  installVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   loadDBPFEntries(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile>
   loadDBPFEntry(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
     entryId: TGI,
-  ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }>
-  openAuthorURL(authorId: AuthorID): Promise<boolean>
-  openExecutableDirectory(): Promise<boolean>
-  openInstallationDirectory(): Promise<boolean>
-  openPackageConfig(packageId: PackageID): Promise<boolean>
-  openPackageFile(packageId: PackageID, variantId: VariantID, filePath: string): Promise<boolean>
-  openProfileConfig(profileId: ProfileID): Promise<boolean>
+  ): Promise<DBPFEntry>
+  openAuthorURL(authorId: AuthorID): Promise<void>
+  openExecutableDirectory(): Promise<void>
+  openInstallationDirectory(): Promise<void>
+  openPackageConfig(packageId: PackageID): Promise<void>
+  openPackageFile(packageId: PackageID, variantId: VariantID, filePath: string): Promise<void>
+  openProfileConfig(profileId: ProfileID): Promise<void>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
-  openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<boolean>
-  openVariantURL(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<void>
+  openVariantURL(packageId: PackageID, variantId: VariantID): Promise<void>
   patchDBPFEntries(
     packageId: PackageID,
     variantId: VariantID,
@@ -86,9 +80,8 @@ export interface StoreActions {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
   ): Promise<DBPFFile>
-  removePackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
-  resetPackageOptions(packageId: PackageID): Promise<boolean>
-  resetState(): void
+  removeVariant(packageId: PackageID, variantId: VariantID): Promise<void>
+  resetPackageOptions(packageId: PackageID): Promise<void>
   setPackageOption(
     packageId: PackageID,
     optionId: OptionID,
@@ -102,8 +95,8 @@ export interface StoreActions {
   showSuccessToast(message: string): void
   simtropolisLogin(): Promise<void>
   simtropolisLogout(): Promise<void>
-  switchProfile(profileId: ProfileID): Promise<boolean>
-  updatePackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  switchProfile(profileId: ProfileID): Promise<void>
+  updatePackage(packageId: PackageID, variantId: VariantID): Promise<void>
   updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean>
   updateState(update: ApplicationStateUpdate): void
 }
@@ -157,10 +150,6 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async check4GBPatch() {
         return window.api.check4GBPatch()
-      },
-      async cleanVariant(packageId, variantId) {
-        await window.api.cleanVariant(packageId, variantId)
-        this.showSuccessToast("No conflicting files detected")
       },
       closeSnackbar(type) {
         const id = get().snackbars[type]
@@ -222,13 +211,12 @@ export const useStore = create<Store>()((set, get): Store => {
       async getPackageReadme(packageId, variantId) {
         return window.api.getPackageReadme(packageId, variantId)
       },
-      async installPackage(packageId, variantId) {
+      async installVariant(packageId, variantId) {
         try {
-          return await window.api.installPackages({ [packageId]: variantId })
+          await window.api.installVariant(packageId, variantId)
         } catch (error) {
           console.error(`Failed to install ${packageId}`, error)
           this.showErrorToast(`Failed to install ${packageId}`)
-          return false
         }
       },
       async loadDBPFEntries(packageId, variantId, filePath) {
@@ -270,24 +258,23 @@ export const useStore = create<Store>()((set, get): Store => {
       async patchDBPFEntries(packageId, variantId, filePath, patches) {
         return window.api.patchDBPFEntries(packageId, variantId, filePath, patches)
       },
-      async removePackage(packageId, variantId) {
+      async removeVariant(packageId, variantId) {
         try {
-          return await window.api.removePackages({ [packageId]: variantId })
+          await window.api.removeVariant(packageId, variantId)
         } catch (error) {
           console.error(`Failed to remove ${packageId}`, error)
           this.showErrorToast(`Failed to remove ${packageId}`)
-          return false
         }
       },
       async resetPackageOptions(packageId) {
         const store = get()
         const profileInfo = getCurrentProfile(store)
         if (!profileInfo) {
-          return false
+          return
         }
 
         try {
-          return await window.api.updateProfile(profileInfo.id, {
+          await window.api.updateProfile(profileInfo.id, {
             packages: {
               [packageId]: { options: null },
             },
@@ -295,19 +282,7 @@ export const useStore = create<Store>()((set, get): Store => {
         } catch (error) {
           console.error(`Failed to reset options`, error)
           this.showErrorToast(`Failed to reset options`)
-          return false
         }
-      },
-      resetState() {
-        console.debug("Reset state")
-
-        updateState({
-          $merge: {
-            ...getInitialState(),
-            filteredPackages: [],
-            packageUi: {},
-          },
-        })
       },
       setPackageFilters(filters) {
         set(store => {
@@ -414,15 +389,19 @@ export const useStore = create<Store>()((set, get): Store => {
         return window.api.simtropolisLogout()
       },
       async switchProfile(profileId) {
-        return window.api.switchProfile(profileId)
+        try {
+          await window.api.switchProfile(profileId)
+        } catch (error) {
+          console.error("Failed to change profile", error)
+          this.showErrorToast("Failed to change profile")
+        }
       },
       async updatePackage(packageId, variantId) {
         try {
-          return await window.api.installPackages({ [packageId]: variantId })
+          await window.api.installVariant(packageId, variantId)
         } catch (error) {
           console.error(`Failed to update ${packageId}`, error)
           this.showErrorToast(`Failed to update ${packageId}`)
-          return false
         }
       },
       async updateProfile(profileId, data) {
@@ -440,53 +419,31 @@ export const useStore = create<Store>()((set, get): Store => {
         }
       },
       updateState(data) {
-        try {
-          if (data.status) {
-            updateState({ status: { $set: data.status } })
-            if (keys(data).length === 1) {
-              return
-            }
+        console.debug(data)
+
+        set(store => {
+          const { downloads, packages, profiles, ...others } = data
+
+          const updates: Partial<Store> = others
+
+          if (downloads) {
+            updates.downloads = compact({ ...store.downloads, ...downloads })
           }
 
-          console.debug(data)
-
-          if (data.authors) {
-            updateState({ authors: { $set: data.authors } })
+          if (packages) {
+            updates.packages = compact({ ...store.packages, ...packages })
           }
 
-          if (data.configs) {
-            updateState({ configs: { $set: data.configs } })
+          if (profiles) {
+            updates.profiles = compact({ ...store.profiles, ...profiles })
           }
 
-          if (data.features) {
-            updateState({ features: { $set: data.features } })
+          if (packages) {
+            Object.assign(updates, computePackageList({ ...store, ...updates }, false))
           }
 
-          if (data.packages) {
-            set(store => {
-              const packages = compact({ ...store.packages, ...data.packages })
-              return { packages, ...computePackageList({ ...store, packages }, false) }
-            })
-          }
-
-          if (data.profiles) {
-            updateState({ profiles: profiles => compact({ ...profiles, ...data.profiles }) })
-          }
-
-          if (data.settings) {
-            updateState({ settings: { $set: data.settings } })
-          }
-
-          if (data.simtropolis) {
-            updateState({ simtropolis: { $set: data.simtropolis } })
-          }
-
-          if (data.templates) {
-            updateState({ templates: { $set: data.templates } })
-          }
-        } catch (error) {
-          console.error(error)
-        }
+          return updates
+        })
       },
     },
     filteredPackages: [],
@@ -519,10 +476,6 @@ export function getCurrentProfile(store: Store): ProfileInfo | undefined {
 
 function getFeatures(store: Store): Features {
   return store.features
-}
-
-function getConfigs(store: Store): ApplicationConfig {
-  return store.configs
 }
 
 function getPackageFilters(store: Store): PackageFilters {
@@ -559,10 +512,6 @@ export function useCurrentProfile(): ProfileInfo | undefined {
 
 export function useFeatures(): Features {
   return useStore(getFeatures)
-}
-
-export function useConfigs(): ApplicationConfig {
-  return useStore(getConfigs)
 }
 
 export function usePackageFilters(): PackageFilters {

@@ -67,7 +67,7 @@ export function values<T>(object: Readonly<Partial<Record<string, T>>>): T[] {
 }
 
 export function filterValues<K extends string, T>(
-  object: Readonly<Record<K, T>>,
+  object: Readonly<Partial<Record<K, T>>>,
   fn: (value: T, key: K) => boolean,
 ): Partial<Record<K, T>> {
   return Object.fromEntries(

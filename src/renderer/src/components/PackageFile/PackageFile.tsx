@@ -17,10 +17,10 @@ import { PackageTag, TagType } from "@components/Tags"
 import { ToolButton } from "@components/ToolButton"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import {
-  useConfigs,
   useCurrentProfile,
   useFeatures,
   useSettings,
+  useStore,
   useStoreActions,
 } from "@utils/store"
 
@@ -35,12 +35,11 @@ export function PackageFile({
   file: PackageFile
   packageId: PackageID
 }): JSX.Element {
-  const { profileOptions } = useConfigs()
-
   const actions = useStoreActions()
   const features = useFeatures()
   const settings = useSettings()
   const profileInfo = useCurrentProfile()
+  const profileOptions = useStore(store => store.profileOptions)
   const packageStatus = usePackageStatus(packageId)
   const variantInfo = useCurrentVariant(packageId)
   const patterns = packageStatus?.files?.map(globToRegex)

@@ -4,6 +4,7 @@ export const DIRNAMES = {
   dbAssets: "assets",
   dbMemo: "src/yaml",
   dbPackages: "packages",
+  dbTemplates: "Templates",
   docs: "~docs",
   downloads: "Downloads",
   logs: "Logs",
@@ -14,7 +15,6 @@ export const DIRNAMES = {
   profiles: "Profiles",
   root: "Manager",
   temp: "~temp",
-  templates: "Templates",
   tools: "Tools",
 }
 

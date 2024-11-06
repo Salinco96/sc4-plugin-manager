@@ -3,10 +3,10 @@ import {
   getVariantIssues,
   isConflict,
   isDeprecated,
+  isEnabled,
   isExperimental,
   isMissing,
   isOutdated,
-  isRelevant,
 } from "@common/packages"
 import { isString } from "@common/utils/types"
 import { VariantID } from "@common/variants"
@@ -61,8 +61,8 @@ export function PackageBanners({
       )}
       {variantInfo.warnings?.map(
         (warning, index) =>
-          isRelevant(warning, variantInfo, packageStatus, true) && (
-            <PackageBannerWarning key={warning.id ?? index} warning={warning} />
+          warning.on !== (isEnabled(variantInfo, packageStatus) ? "enable" : "disable") && (
+            <PackageBannerWarning key={index} warning={warning} />
           ),
       )}
     </>

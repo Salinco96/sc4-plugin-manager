@@ -4,6 +4,7 @@ import { Box, CardActions, LinearProgress, Typography } from "@mui/material"
 import { CustomContentProps } from "notistack"
 import { useTranslation } from "react-i18next"
 
+import { keys, values } from "@common/utils/objects"
 import { useStore, useStoreActions } from "@utils/store"
 
 import { CustomSnackbar } from "./CustomSnackbar"
@@ -14,30 +15,10 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
 
     const { t } = useTranslation("Snackbar")
 
-    // const [hover, setHover] = useState(false)
+    const key = useStore(store => keys(store.downloads)[0])
+    const progress = useStore(store => values(store.downloads)[0]?.progress)
 
-    const message = useStore(store => {
-      if (store.status.ongoingDownloads.length) {
-        const { key, progress } = store.status.ongoingDownloads[0]
-        return t("downloading", { key, progress })
-      }
-
-      if (store.status.ongoingExtracts.length) {
-        const { key, progress } = store.status.ongoingExtracts[0]
-        return t("extracting", { key, progress })
-      }
-    })
-
-    const progress = useStore(store => {
-      if (store.status.ongoingDownloads.length) {
-        return store.status.ongoingDownloads[0].progress
-      }
-
-      if (store.status.ongoingExtracts.length) {
-        return store.status.ongoingExtracts[0].progress
-      }
-    })
-
+    const message = key ? t("downloading", { key, progress }) : undefined
     const lastMessageRef = useRef(message)
 
     useEffect(() => {
@@ -66,11 +47,7 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
           transition: "max-width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
         }}
       >
-        <Box
-          // onMouseEnter={() => setHover(true)}
-          // onMouseLeave={() => setHover(false)}
-          sx={{ paddingBottom: 0.75, paddingLeft: 1, paddingRight: 1, paddingTop: 0.5 }}
-        >
+        <Box sx={{ paddingBottom: 0.75, paddingLeft: 1, paddingRight: 1, paddingTop: 0.5 }}>
           <CardActions sx={{ padding: 0, marginBottom: 0.5 }}>
             <Typography
               sx={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}

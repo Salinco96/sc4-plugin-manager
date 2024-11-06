@@ -17,20 +17,19 @@ import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { useCurrentVariant } from "@utils/packages"
 import {
-  useConfigs,
   useCurrentProfile,
   useFeatures,
   useSettings,
+  useStore,
   useStoreActions,
 } from "@utils/store"
 
 export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.Element {
-  const { profileOptions } = useConfigs()
-
   const actions = useStoreActions()
   const features = useFeatures()
   const settings = useSettings()
   const profileInfo = useCurrentProfile()
+  const profileOptions = useStore(store => store.profileOptions)
   const packageConfig = profileInfo?.packages[packageId]
   const variantInfo = useCurrentVariant(packageId)
 

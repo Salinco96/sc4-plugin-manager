@@ -1,12 +1,4 @@
-import {
-  Feature,
-  Features,
-  ID,
-  PackageFile,
-  PackageInfo,
-  PackageStatus,
-  PackageWarning,
-} from "@common/types"
+import { Feature, Features, ID, PackageFile, PackageInfo, PackageStatus } from "@common/types"
 
 import { OptionID, OptionInfo, Requirements, getOptionInfo, getOptionValue } from "./options"
 import { ProfileInfo } from "./profiles"
@@ -29,7 +21,7 @@ export function checkFile(
   packageId: PackageID,
   variantInfo: VariantInfo,
   profileInfo: ProfileInfo | undefined,
-  profileOptions: OptionInfo[],
+  profileOptions: ReadonlyArray<OptionInfo>,
   features: Features,
   settings: Settings | undefined,
   patterns: RegExp[] | undefined,
@@ -133,7 +125,7 @@ export function checkCondition(
   packageId: PackageID | undefined,
   variantInfo: VariantInfo | undefined,
   profileInfo: ProfileInfo | undefined,
-  profileOptions: OptionInfo[],
+  profileOptions: ReadonlyArray<OptionInfo>,
   features: Features,
   settings: Settings | undefined,
 ): boolean {
@@ -299,24 +291,6 @@ export function isOutdated(variantInfo: VariantInfo): boolean {
 
 export function isPatched(variantInfo: VariantInfo): boolean {
   return !!variantInfo.files?.some(file => !!file.patches)
-}
-
-export function isRelevant(
-  warning: PackageWarning,
-  variantInfo: VariantInfo,
-  packageStatus: PackageStatus | undefined,
-  showBanner: boolean,
-): boolean {
-  switch (warning.on) {
-    case "enable":
-      return !isEnabled(variantInfo, packageStatus)
-    case "disable":
-      return isEnabled(variantInfo, packageStatus) && !showBanner
-    case "variantChange":
-      return isEnabled(variantInfo, packageStatus)
-    default:
-      return !warning.on
-  }
 }
 
 export function isRequired(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {

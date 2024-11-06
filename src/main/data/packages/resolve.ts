@@ -6,21 +6,39 @@ import {
   isOptionDefaultValue,
 } from "@common/options"
 import {
+  LOTS_OPTION_ID,
   MIN_VERSION_OPTION_ID,
   PackageID,
+  checkCondition,
   getPackageStatus,
-  isEnabled,
   isIncluded,
   isIncompatible,
   isInvalid,
 } from "@common/packages"
 import { ProfileInfo, ProfileUpdate } from "@common/profiles"
 import { Settings } from "@common/settings"
-import { EXTERNAL, Feature, Features, PackageInfo, PackageStatus, Packages } from "@common/types"
-import { containsWhere, removeElement, union } from "@common/utils/arrays"
-import { filterValues, forEach, keys, mapValues, reduce, values } from "@common/utils/objects"
+import {
+  EXTERNAL,
+  Feature,
+  Features,
+  LotInfo,
+  PackageInfo,
+  PackageStatus,
+  Packages,
+} from "@common/types"
+import { containsWhere, removeElement, union, unique } from "@common/utils/arrays"
+import {
+  filterValues,
+  forEach,
+  isEmpty,
+  keys,
+  mapValues,
+  reduce,
+  values,
+} from "@common/utils/objects"
 import { isEnum } from "@common/utils/types"
 import { DependencyInfo, Issue, VariantID, VariantInfo, VariantIssue } from "@common/variants"
+import { TaskContext } from "@utils/tasks"
 
 function getVariantIncompatibilities(
   packageInfo: Readonly<Omit<PackageInfo, "status">>,
@@ -326,9 +344,11 @@ export function resolvePackages(
 }
 
 export function resolvePackageUpdates(
+  context: TaskContext,
   packages: Readonly<Packages>,
   profileInfo: Readonly<ProfileInfo>,
-  globalOptions: ReadonlyArray<OptionInfo>,
+  profileOptions: ReadonlyArray<OptionInfo>,
+  features: Readonly<Features>,
   settings: Readonly<Settings>,
   updates: ProfileUpdate,
 ): {
@@ -360,6 +380,13 @@ export function resolvePackageUpdates(
   selectingVariants: { [packageId in PackageID]?: VariantID }
   /** Whether to trigger side-effects such as linking */
   shouldRecalculate: boolean
+  /** Warnings to show */
+  warnings: {
+    id?: "bulldozeLots"
+    message: string
+    packageIds: PackageID[]
+    title: string
+  }[]
 } {
   const resultingProfile = { ...profileInfo }
 
@@ -370,9 +397,11 @@ export function resolvePackageUpdates(
     resultingProfile.features = reduce(
       updates.features,
       (result, newEnabled, feature) => {
-        // Must recalculate if external is changed
-        shouldRecalculate ||= result[feature] !== newEnabled
-        result[feature] = newEnabled
+        if (result[feature] !== newEnabled) {
+          result[feature] = newEnabled
+          shouldRecalculate = true
+        }
+
         return result
       },
       { ...profileInfo.features },
@@ -384,19 +413,19 @@ export function resolvePackageUpdates(
     resultingProfile.options = reduce(
       updates.options,
       (result, newValue, optionId) => {
-        const globalOption = globalOptions.find(option => option.id === optionId)
+        const globalOption = profileOptions.find(option => option.id === optionId)
         if (!globalOption) {
           throw Error(`Unknown global option '${optionId}'`)
         }
 
         if (isOptionDefaultValue(globalOption, newValue)) {
-          // Must recalculate if global option is changed
-          shouldRecalculate ||= result[optionId] !== undefined
-          delete result[optionId]
-        } else {
-          // Must recalculate if global option is changed
-          shouldRecalculate ||= result[optionId] !== newValue
+          if (result[optionId] !== undefined) {
+            delete result[optionId]
+            shouldRecalculate = true
+          }
+        } else if (result[optionId] !== newValue) {
           result[optionId] = newValue
+          shouldRecalculate = true
         }
 
         return result
@@ -412,22 +441,24 @@ export function resolvePackageUpdates(
       (result, newConfig, packageId) => {
         const oldConfig = profileInfo.packages[packageId]
 
-        // Must recalculate if package is enabled or disabled
-        shouldRecalculate ||= oldConfig?.enabled !== newConfig.enabled
+        // Must recalculate if package is newly enabled or disabled
+        if (!!oldConfig?.enabled !== newConfig.enabled) {
+          shouldRecalculate = true
+        }
 
         // Must recalculate if included package is changed
-        shouldRecalculate ||= !!packages[packageId]?.status[resultingProfile.id]?.included
+        if (packages[packageId]?.status[resultingProfile.id]?.included) {
+          shouldRecalculate = true
+        }
 
         result[packageId] = {
           ...oldConfig,
           ...newConfig,
-          options:
-            newConfig.options === null
+          options: newConfig.options
+            ? { ...oldConfig?.options, ...newConfig.options }
+            : newConfig.options === null
               ? undefined
-              : {
-                  ...oldConfig?.options,
-                  ...newConfig?.options,
-                },
+              : oldConfig?.options,
         }
 
         return result
@@ -440,7 +471,7 @@ export function resolvePackageUpdates(
   const { resultingFeatures, resultingStatus } = resolvePackages(
     packages,
     resultingProfile,
-    globalOptions,
+    profileOptions,
     settings,
   )
 
@@ -464,142 +495,294 @@ export function resolvePackageUpdates(
   const installingVariants: { [packageId in PackageID]?: VariantID } = {}
   const selectingVariants: { [packageId in PackageID]?: VariantID } = {}
 
-  forEach(resultingStatus, (newStatus, packageId) => {
-    const packageConfig = resultingProfile.packages[packageId]
-    const packageInfo = packages[packageId]
-    if (!packageInfo) {
-      throw Error(`Unknown package '${packageId}'`)
-    }
+  const warnings: {
+    id?: "bulldozeLots"
+    message: string
+    packageIds: PackageID[]
+    title: string
+  }[] = []
 
-    const variantInfo = packageInfo.variants[newStatus.variantId]
-    if (!variantInfo) {
-      throw Error(`Unknown variant '${packageId}#${newStatus.variantId}'`)
-    }
-
-    const oldStatus = getPackageStatus(packageInfo, profileInfo)
-    if (!oldStatus) {
-      throw Error(`Unknown package '${packageId}'`)
-    }
-
-    if (oldStatus.variantId !== newStatus.variantId) {
-      selectingVariants[packageId] = newStatus.variantId
-    }
-
-    const defaultVariant = getDefaultVariant(packageInfo, resultingProfile)
-
-    if (isEnabled(variantInfo, newStatus)) {
-      if (!isEnabled(variantInfo, oldStatus)) {
-        enablingPackages.push(packageId)
-      }
-    } else if (isEnabled(variantInfo, oldStatus)) {
-      disablingPackages.push(packageId)
-    }
-
-    if (isIncluded(variantInfo, newStatus)) {
-      if (!isIncluded(variantInfo, oldStatus)) {
-        includingPackages.push(packageId)
+  if (shouldRecalculate) {
+    forEach(resultingStatus, (newStatus, packageId) => {
+      const packageConfig = resultingProfile.packages[packageId]
+      const packageInfo = packages[packageId]
+      if (!packageInfo) {
+        throw Error(`Unknown package '${packageId}'`)
       }
 
-      const compatibleVariants = values(packageInfo.variants).filter(
-        variantInfo => !isInvalid(variantInfo, newStatus),
-      )
+      const variantInfo = packageInfo.variants[newStatus.variantId]
+      if (!variantInfo) {
+        throw Error(`Unknown variant '${packageId}#${newStatus.variantId}'`)
+      }
 
-      const packageUpdate = updates.packages?.[packageId]
+      const oldStatus = getPackageStatus(packageInfo, profileInfo)
+      if (!oldStatus) {
+        throw Error(`Unknown package '${packageId}'`)
+      }
 
-      const isChanged = !oldStatus.included || oldStatus.variantId !== newStatus.variantId
-      const isConflicted = !containsWhere(compatibleVariants, { id: newStatus.variantId })
-      const isFullyIncompatible = !compatibleVariants.length
-      const isInstalled = !!variantInfo.installed
-      const isUpdated = !!packageUpdate?.enabled || !!packageUpdate?.variant
+      if (oldStatus.variantId !== newStatus.variantId) {
+        selectingVariants[packageId] = newStatus.variantId
 
-      const wasFullyIncompatible = !values(packageInfo.variants).some(
-        variantInfo => !isInvalid(variantInfo, oldStatus),
-      )
-
-      // If selected variant is not compatible, mark as conflict
-      // Ignore conflicts from packages that were already incompatible or that are explicitly changed by this action
-      if (isConflicted && !wasFullyIncompatible && !isUpdated) {
-        if (isFullyIncompatible) {
-          incompatiblePackages.push(packageId)
-        } else {
-          // If compatible variant is already installed and current variant is not explicitly selected, switch implicitly
-          if (defaultVariant.installed && !packageConfig?.variant) {
-            implicitVariantChanges[packageId] = {
-              old: oldStatus.variantId,
-              new: defaultVariant.id,
-            }
-          } else {
-            explicitVariantChanges[packageId] = {
-              old: oldStatus.variantId,
-              new: defaultVariant.id,
+        if (newStatus.enabled && oldStatus.enabled) {
+          if (variantInfo.warnings) {
+            for (const warning of variantInfo.warnings) {
+              if (warning.on === "variant") {
+                warnings.push({
+                  message: warning.message,
+                  packageIds: [packageId],
+                  title: "Selecting new variant",
+                })
+              }
             }
           }
         }
       }
 
-      // If selected variant is not installed, mark it for installation
-      if (!isInstalled && (isChanged || isUpdated)) {
-        installingVariants[packageId] = newStatus.variantId
+      const defaultVariant = getDefaultVariant(packageInfo, resultingProfile)
+
+      if (newStatus.enabled) {
+        if (!oldStatus.enabled) {
+          enablingPackages.push(packageId)
+
+          if (variantInfo.warnings) {
+            for (const warning of variantInfo.warnings) {
+              if (warning.on === "enable") {
+                warnings.push({
+                  message: warning.message,
+                  packageIds: [packageId],
+                  title: "Enabling package",
+                })
+              }
+            }
+          }
+        }
+      } else if (oldStatus.enabled) {
+        disablingPackages.push(packageId)
+
+        if (variantInfo.warnings) {
+          for (const warning of variantInfo.warnings) {
+            if (warning.on === "disable") {
+              warnings.push({
+                message: warning.message,
+                packageIds: [packageId],
+                title: "Disabling package",
+              })
+            }
+          }
+        }
       }
 
-      // If selected variant is being updated, mark it for installation
-      if (packageConfig?.version && packageConfig.version === variantInfo.update?.version) {
-        installingVariants[packageId] = newStatus.variantId
+      if (isIncluded(variantInfo, newStatus)) {
+        if (!isIncluded(variantInfo, oldStatus)) {
+          includingPackages.push(packageId)
+        }
+
+        const compatibleVariants = values(packageInfo.variants).filter(
+          variantInfo => !isInvalid(variantInfo, newStatus),
+        )
+
+        const packageUpdate = updates.packages?.[packageId]
+
+        const isChanged = !oldStatus.included || oldStatus.variantId !== newStatus.variantId
+        const isConflicted = !containsWhere(compatibleVariants, { id: newStatus.variantId })
+        const isFullyIncompatible = !compatibleVariants.length
+        const isInstalled = !!variantInfo.installed
+        const isUpdated = !!packageUpdate?.enabled || !!packageUpdate?.variant
+
+        const wasFullyIncompatible = !values(packageInfo.variants).some(
+          variantInfo => !isInvalid(variantInfo, oldStatus),
+        )
+
+        // If selected variant is not compatible, mark as conflict
+        // Ignore conflicts from packages that were already incompatible or that are explicitly changed by this action
+        if (isConflicted && !wasFullyIncompatible && !isUpdated) {
+          if (isFullyIncompatible) {
+            incompatiblePackages.push(packageId)
+          } else {
+            // If compatible variant is already installed and current variant is not explicitly selected, switch implicitly
+            if (defaultVariant.installed && !packageConfig?.variant) {
+              implicitVariantChanges[packageId] = {
+                old: oldStatus.variantId,
+                new: defaultVariant.id,
+              }
+            } else {
+              explicitVariantChanges[packageId] = {
+                old: oldStatus.variantId,
+                new: defaultVariant.id,
+              }
+            }
+          }
+        }
+
+        // If selected variant is not installed, mark it for installation
+        if (!isInstalled && (isChanged || isUpdated)) {
+          installingVariants[packageId] = newStatus.variantId
+        }
+
+        // If selected variant is being updated, mark it for installation
+        if (packageConfig?.version && packageConfig.version === variantInfo.update?.version) {
+          installingVariants[packageId] = newStatus.variantId
+        }
+      } else if (oldStatus.included) {
+        excludingPackages.push(packageId)
       }
-    } else if (oldStatus.included) {
-      excludingPackages.push(packageId)
-    }
 
-    // Remove explicit variant if it is the default
-    if (packageConfig?.variant === defaultVariant.id) {
-      delete packageConfig.variant
-    }
-
-    // Remove explicit default options
-    if (packageConfig?.options) {
-      packageConfig.options = filterValues(packageConfig.options, (optionValue, optionId) => {
-        const option = variantInfo.options?.find(option => option.id === optionId)
-        return !!option && !isOptionDefaultValue(option, optionValue)
-      })
-
-      if (Object.keys(packageConfig.options).length === 0) {
-        delete packageConfig.options
+      // Remove explicit variant if it is the default
+      if (packageConfig?.variant === defaultVariant.id) {
+        delete packageConfig.variant
       }
-    }
-  })
 
-  // Check incompatible externals
-  forEach(resultingProfile.features, (enabled, feature) => {
-    if (enabled) {
-      const isConflicted = !!resultingFeatures[feature]?.some(id => id !== EXTERNAL)
-      const isUpdated = !!updates.features?.[feature]
+      // Remove explicit default options
+      if (packageConfig?.options) {
+        packageConfig.options = filterValues(packageConfig.options, (optionValue, optionId) => {
+          const option = variantInfo.options?.find(option => option.id === optionId)
+          return !!option && !isOptionDefaultValue(option, optionValue)
+        })
 
-      // Ignore conflicts from externals that are explicitly enabled by this action
-      if (isConflicted && !isUpdated) {
-        incompatibleExternals.push(feature)
+        if (isEmpty(packageConfig.options)) {
+          delete packageConfig.options
+        }
       }
-    }
-  })
+    })
+
+    // Check incompatible externals
+    forEach(resultingProfile.features, (enabled, feature) => {
+      if (enabled) {
+        const isConflicted = !!resultingFeatures[feature]?.some(id => id !== EXTERNAL)
+        const isUpdated = !!updates.features?.[feature]
+
+        // Ignore conflicts from externals that are explicitly enabled by this action
+        if (isConflicted && !isUpdated) {
+          incompatibleExternals.push(feature)
+        }
+      }
+    })
+  }
 
   console.debug("Updating profile", updates)
 
   console.debug("Resulting profile", resultingProfile)
 
-  console.debug("Resulting changes", {
-    disablingPackages,
-    enablingPackages,
-    excludingPackages,
-    includingPackages,
-    installingVariants,
-    selectingVariants,
-  })
+  if (shouldRecalculate) {
+    const oldLots = getEnabledLots(
+      context,
+      packages,
+      undefined,
+      profileInfo,
+      profileOptions,
+      features,
+      settings,
+    )
 
-  console.debug("Resulting conflicts", {
-    explicitVariantChanges,
-    implicitVariantChanges,
-    incompatibleExternals,
-    incompatiblePackages,
-  })
+    const newLots = getEnabledLots(
+      context,
+      packages,
+      resultingStatus,
+      resultingProfile,
+      profileOptions,
+      resultingFeatures,
+      settings,
+    )
+
+    const replacingLots: {
+      [lotId: string]: { newInfo: LotInfo; oldInfo: LotInfo; packageId: PackageID }
+    } = {}
+
+    const replacingMaxisLots: {
+      [lotId: string]: { lotInfo: LotInfo; packageId: PackageID }
+    } = {}
+
+    for (const lotId in newLots) {
+      const { lotInfo, packageId } = newLots[lotId]
+
+      if (oldLots[lotId]) {
+        delete oldLots[lotId]
+        delete newLots[lotId]
+      } else if (lotInfo.replace && oldLots[lotInfo.replace]) {
+        replacingLots[lotId] = {
+          newInfo: lotInfo,
+          oldInfo: oldLots[lotInfo.replace].lotInfo,
+          packageId,
+        }
+
+        delete oldLots[lotInfo.replace]
+        delete newLots[lotId]
+      } else if (lotInfo.replaceMaxis) {
+        replacingMaxisLots[lotId] = {
+          lotInfo,
+          packageId,
+        }
+
+        delete newLots[lotId]
+      }
+    }
+
+    if (!isEmpty(replacingMaxisLots)) {
+      const lotNames = unique(
+        values(replacingMaxisLots).map(({ lotInfo, packageId }) => {
+          return lotInfo.label ?? packages[packageId]?.name ?? packageId
+        }),
+      ).sort()
+
+      warnings.push({
+        id: "bulldozeLots",
+        message: `The following lots are overrides of Maxis lots. To avoid issues such as the 'Phantom Slider' bug, you must bulldoze all Maxis instances from your regions before enabling these overrides:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
+        packageIds: unique(values(replacingMaxisLots).map(({ packageId }) => packageId)),
+        title: "Replacing Maxis lots",
+      })
+    }
+
+    if (!isEmpty(oldLots)) {
+      const lotNames = unique(
+        values(oldLots).map(({ lotInfo, packageId }) => {
+          return lotInfo.label ?? packages[packageId]?.name ?? packageId
+        }),
+      ).sort()
+
+      warnings.push({
+        id: "bulldozeLots",
+        message: `Before disabling the following lots, you must bulldoze all instances from your regions:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
+        packageIds: unique(values(oldLots).map(({ packageId }) => packageId)),
+        title: "Disabling lots",
+      })
+    }
+
+    if (!isEmpty(replacingLots)) {
+      const lotNames = unique(
+        values(replacingLots).map(({ oldInfo, packageId }) => {
+          return oldInfo.label ?? packages[packageId]?.name ?? packageId
+        }),
+      ).sort()
+
+      warnings.push({
+        id: "bulldozeLots",
+        message: `The following lots are not compatible across variants. Before selecting a new variant, you must bulldoze all instances from your regions:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
+        packageIds: unique(values(replacingLots).map(({ packageId }) => packageId)),
+        title: "Replacing lots",
+      })
+    }
+
+    console.debug("Resulting changes", {
+      disablingLots: oldLots,
+      disablingPackages,
+      enablingLots: newLots,
+      enablingPackages,
+      excludingPackages,
+      includingPackages,
+      installingVariants,
+      replacingLots,
+      selectingVariants,
+      shouldRecalculate,
+    })
+
+    console.debug("Resulting conflicts", {
+      explicitVariantChanges,
+      implicitVariantChanges,
+      incompatibleExternals,
+      incompatiblePackages,
+      warnings,
+    })
+  }
 
   return {
     disablingPackages,
@@ -616,5 +799,79 @@ export function resolvePackageUpdates(
     resultingProfile,
     selectingVariants,
     shouldRecalculate,
+    warnings,
   }
+}
+
+function getEnabledLots(
+  context: TaskContext,
+  packages: Readonly<Packages>,
+  packageStatus: { [packageId in PackageID]?: PackageStatus } | undefined,
+  profileInfo: ProfileInfo,
+  profileOptions: ReadonlyArray<OptionInfo>,
+  features: Readonly<Features>,
+  settings: Readonly<Settings>,
+): { [lotId: string]: { lotInfo: LotInfo; packageId: PackageID } } {
+  const lots: { [lotId: string]: { lotInfo: LotInfo; packageId: PackageID } } = {}
+
+  forEach(profileInfo.packages, (packageConfig, packageId) => {
+    if (packageConfig.enabled) {
+      const packageInfo = packages[packageId]
+      const variantId = packageStatus
+        ? packageStatus[packageId]?.variantId
+        : packageInfo?.status[profileInfo.id]?.variantId
+      if (!packageInfo || !variantId) {
+        return context.raiseInDev(`Unknown package '${packageId}'`)
+      }
+
+      const variantInfo = packageInfo.variants[variantId]
+      if (!variantInfo) {
+        return context.raiseInDev(`Unknown variant '${packageId}#${variantId}'`)
+      }
+
+      if (!variantInfo.lots) {
+        return
+      }
+
+      for (const lotInfo of variantInfo.lots) {
+        // TODO: ID should always be a TGI
+        if (!lotInfo.id.match(/^[0-9a-f]{8}$/i)) {
+          continue
+        }
+
+        // Check if lot is enabled
+        const option = getOptionInfo(LOTS_OPTION_ID, variantInfo.options, profileOptions)
+
+        if (option) {
+          const enabledLots = getOptionValue(option, {
+            ...packageConfig?.options,
+            ...profileInfo?.options,
+          }) as string[]
+
+          if (!enabledLots.includes(lotInfo.id)) {
+            continue
+          }
+        }
+
+        // Check if lot is supported
+        const isSupported = checkCondition(
+          lotInfo.requirements,
+          packageId,
+          variantInfo,
+          profileInfo,
+          profileOptions,
+          features,
+          settings,
+        )
+
+        if (!isSupported) {
+          continue
+        }
+
+        lots[lotInfo.id] = { lotInfo, packageId }
+      }
+    }
+  })
+
+  return lots
 }

@@ -9,27 +9,18 @@ if (!app.requestSingleInstanceLock()) {
 } else {
   registerDocsProtocol()
 
-  let instance: Application
-
   app.on("second-instance", () => {
-    if (instance?.mainWindow) {
-      if (instance.mainWindow.isMinimized()) {
-        instance.mainWindow.restore()
-      }
-
-      instance.mainWindow.focus()
-    }
+    Application.focus()
   })
 
   app.on("window-all-closed", async () => {
-    await instance?.quit()
+    await Application.quit()
     app.quit()
   })
 
   app.whenReady().then(async () => {
     try {
-      instance = new Application()
-      await instance.launch()
+      await Application.launch()
     } catch (error) {
       console.error(error)
       app.quit()

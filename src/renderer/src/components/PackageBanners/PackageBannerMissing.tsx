@@ -32,7 +32,7 @@ export function PackageBannerMissing({
       action={{
         description: t("missing.actions.install.description"),
         label: t("missing.actions.install.label"),
-        onClick: () => actions.installPackage(packageInfo.id, variantInfo.id),
+        onClick: () => actions.installVariant(packageInfo.id, variantInfo.id),
       }}
       header={t("missing.title")}
       icon={<MissingIcon />}

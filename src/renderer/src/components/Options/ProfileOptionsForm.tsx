@@ -1,9 +1,9 @@
 import { checkCondition } from "@common/packages"
 import {
-  useConfigs,
   useCurrentProfile,
   useFeatures,
   useSettings,
+  useStore,
   useStoreActions,
 } from "@utils/store"
 
@@ -11,10 +11,9 @@ import { OptionsForm } from "./OptionsForm"
 import { useProfileOptions } from "./useProfileOptions"
 
 export function ProfileOptionsForm(): JSX.Element {
-  const { profileOptions } = useConfigs()
-
   const actions = useStoreActions()
   const profileInfo = useCurrentProfile()
+  const profileOptions = useStore(store => store.profileOptions)
   const options = useProfileOptions()
   const features = useFeatures()
   const settings = useSettings()

@@ -123,9 +123,8 @@ export interface PackageStatus {
 }
 
 export interface PackageWarning {
-  id?: "bulldoze"
-  message?: string
-  on?: "enable" | "disable" | "variantChange"
+  message: string
+  on?: "enable" | "disable" | "variant"
 }
 
 export interface LotData {
@@ -172,7 +171,7 @@ export interface LotData {
   flamability?: number
   /** Garbage produced */
   garbage?: number | `${number} over ${number} tiles`
-  /** Lot ID (usually last part of TGI, but may be an arbitrary string) */
+  /** Lot Instance ID */
   id: string
   /** URL or relative path within ~docs */
   images?: string[]
@@ -188,6 +187,10 @@ export interface LotData {
   power?: number
   /** Electricity produced */
   powerProduction?: number
+  /** Lot Instance ID to replace with this one (e.g. different ID for DN/MN) */
+  replace?: string
+  /** Whether this lot replaces a Maxis lot that may suffer from phantom slider bug */
+  replaceMaxis?: boolean
   /** Requirements (e.g. CAM for stage 9+ growables) */
   requirements?: Requirements
   /** Lot size in AxB format (e.g. 2x3) */

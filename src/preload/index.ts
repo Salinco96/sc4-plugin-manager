@@ -1,13 +1,12 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import { AuthorID } from "@common/authors"
-import { DBPFEntryData, DBPFFile, TGI } from "@common/dbpf"
+import { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarDataPatch } from "@common/exemplars"
-import { Translations } from "@common/i18n"
 import { ModalData, ModalID } from "@common/modals"
 import { PackageID } from "@common/packages"
 import { ProfileID, ProfileUpdate } from "@common/profiles"
-import { ApplicationState } from "@common/state"
+import { ApplicationStateUpdate } from "@common/state"
 import { VariantID } from "@common/variants"
 
 // Custom APIs for renderer
@@ -21,14 +20,14 @@ export const api = {
   async clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("clearPackageLogs", packageId, variantId)
   },
-  async createProfile(name: string, templateProfileId?: ProfileID): Promise<boolean> {
+  async createProfile(name: string, templateProfileId?: ProfileID): Promise<void> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
   async createVariant(
     packageId: PackageID,
     name: string,
     templateVariantId: VariantID,
-  ): Promise<boolean> {
+  ): Promise<void> {
     return ipcRenderer.invoke("createVariant", packageId, name, templateVariantId)
   },
   async getPackageLogs(
@@ -43,8 +42,8 @@ export const api = {
   ): Promise<{ html?: string; md?: string }> {
     return ipcRenderer.invoke("getPackageReadme", packageId, variantId)
   },
-  async installPackages(packages: { [packageId: PackageID]: VariantID }): Promise<boolean> {
-    return ipcRenderer.invoke("installPackages", packages)
+  async installVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
+    return ipcRenderer.invoke("installVariant", packageId, variantId)
   },
   async loadDBPFEntries(
     packageId: PackageID,
@@ -58,38 +57,35 @@ export const api = {
     variantId: VariantID,
     filePath: string,
     entryId: TGI,
-  ): Promise<{ data: DBPFEntryData; original?: DBPFEntryData }> {
+  ): Promise<DBPFEntry> {
     return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entryId)
   },
-  async loadTranslations(lng: string): Promise<Translations> {
-    return ipcRenderer.invoke("loadTranslations", lng)
-  },
-  async openAuthorURL(authorId: AuthorID): Promise<boolean> {
+  async openAuthorURL(authorId: AuthorID): Promise<void> {
     return ipcRenderer.invoke("openAuthorURL", authorId)
   },
-  async openExecutableDirectory(): Promise<boolean> {
+  async openExecutableDirectory(): Promise<void> {
     return ipcRenderer.invoke("openExecutableDirectory")
   },
-  async openInstallationDirectory(): Promise<boolean> {
+  async openInstallationDirectory(): Promise<void> {
     return ipcRenderer.invoke("openInstallationDirectory")
   },
-  async openPackageConfig(packageId: PackageID): Promise<boolean> {
+  async openPackageConfig(packageId: PackageID): Promise<void> {
     return ipcRenderer.invoke("openPackageConfig", packageId)
   },
   async openPackageFile(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-  ): Promise<boolean> {
+  ): Promise<void> {
     return ipcRenderer.invoke("openPackageFile", packageId, variantId, filePath)
   },
-  async openProfileConfig(profileId: ProfileID): Promise<boolean> {
+  async openProfileConfig(profileId: ProfileID): Promise<void> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
   },
-  async openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<boolean> {
+  async openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("openVariantRepository", packageId, variantId)
   },
-  async openVariantURL(packageId: PackageID, variantId: VariantID): Promise<boolean> {
+  async openVariantURL(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("openVariantURL", packageId, variantId)
   },
   async patchDBPFEntries(
@@ -102,8 +98,8 @@ export const api = {
   ): Promise<DBPFFile> {
     return ipcRenderer.invoke("patchDBPFEntries", packageId, variantId, filePath, patches)
   },
-  async removePackages(packages: { [packageId: PackageID]: VariantID }): Promise<boolean> {
-    return ipcRenderer.invoke("removePackages", packages)
+  async removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
+    return ipcRenderer.invoke("removeVariant", packageId, variantId)
   },
   async simtropolisLogin(): Promise<void> {
     return ipcRenderer.invoke("simtropolisLogin")
@@ -112,30 +108,23 @@ export const api = {
     return ipcRenderer.invoke("simtropolisLogout")
   },
   subscribe(handlers: {
-    resetState(): void
     showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
-    updateState(data: Partial<ApplicationState>): void
+    updateState(data: ApplicationStateUpdate): void
   }): () => void {
     const showModal = async <T extends ModalID>(_: IpcRendererEvent, id: T, data: ModalData<T>) => {
       const result = await handlers.showModal(id, data)
       ipcRenderer.send("showModalResult", result)
     }
 
-    const resetState = () => {
-      handlers.resetState()
-    }
-
-    const updateState = (_: IpcRendererEvent, data: Partial<ApplicationState>) => {
+    const updateState = (_: IpcRendererEvent, data: ApplicationStateUpdate) => {
       handlers.updateState(data)
     }
 
-    ipcRenderer.on("resetState", resetState)
     ipcRenderer.on("showModal", showModal)
     ipcRenderer.on("updateState", updateState)
     ipcRenderer.invoke("getState").then(handlers.updateState)
 
     return () => {
-      ipcRenderer.off("resetState", resetState)
       ipcRenderer.off("showModal", showModal)
       ipcRenderer.off("updateState", updateState)
     }

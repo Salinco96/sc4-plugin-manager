@@ -34,7 +34,15 @@ const INDEX_VERSION = "7.0"
 const INDEX_ENTRY_SIZE = 20
 const DIR_ENTRY_SIZE = 16
 
-export async function loadDBPF(file: FileHandle): Promise<DBPFFile> {
+export async function loadDBPF(
+  file: FileHandle,
+  options: {
+    exemplarProperties: {
+      [propertyId in number]?: ExemplarPropertyInfo
+    }
+    loadExemplars?: boolean
+  },
+): Promise<DBPFFile> {
   const header = await Binary.fromFile(file, HEADER_SIZE)
   const magic = header.readString(HEADER_MAGIC.length)
   if (magic !== HEADER_MAGIC) {
@@ -103,14 +111,24 @@ export async function loadDBPF(file: FileHandle): Promise<DBPFFile> {
     }
   }
 
+  if (options.loadExemplars) {
+    for (const entry of values(contents.entries)) {
+      if (entry.type === DBPFDataType.EXMP) {
+        entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(file, entry, options)
+      }
+    }
+  }
+
   return contents
 }
 
 export async function loadDBPFEntry<T extends DBPFDataType>(
   file: FileHandle,
   entry: DBPFEntry<T>,
-  exemplarProperties: {
-    [propertyId in number]?: ExemplarPropertyInfo
+  options: {
+    exemplarProperties: {
+      [propertyId in number]?: ExemplarPropertyInfo
+    }
   },
 ): Promise<DBPFEntryData<T>> {
   const type = getDataType(entry.id)
@@ -123,7 +141,7 @@ export async function loadDBPFEntry<T extends DBPFDataType>(
 
   switch (type) {
     case DBPFDataType.EXMP: {
-      return loadExemplar(entry.id, bytes, exemplarProperties) as DBPFEntryData<T>
+      return loadExemplar(entry.id, bytes, options.exemplarProperties) as DBPFEntryData<T>
     }
 
     case DBPFDataType.XML: {
@@ -147,22 +165,24 @@ export async function patchDBPFEntries(
   patches: {
     [entryId in TGI]?: ExemplarDataPatch | null
   },
-  exemplarProperties: {
-    [propertyId in number]?: ExemplarPropertyInfo
+  options: {
+    exemplarProperties: {
+      [propertyId in number]?: ExemplarPropertyInfo
+    }
   },
 ): Promise<DBPFFile> {
-  const data = await loadDBPF(inFile)
+  const contents = await loadDBPF(inFile, { ...options, loadExemplars: true })
 
   // Check that all TGIs exist
   keys(patches).forEach(entryId => {
-    if (!data.entries[entryId]) {
+    if (!contents.entries[entryId]) {
       throw Error("Missing entry: " + entryId)
     }
   })
 
   let offset = 0
 
-  const entryCount = Object.keys(data.entries).length
+  const entryCount = Object.keys(contents.entries).length
 
   const header = new Binary(HEADER_SIZE, { writable: true })
   offset += await header.writeTofile(outFile)
@@ -171,10 +191,10 @@ export async function patchDBPFEntries(
   const index = new Binary(entryCount * INDEX_ENTRY_SIZE, { writable: true })
   offset += await index.writeTofile(outFile)
 
-  const dirEntry = data.entries[DBPFFileType.DIR]
+  const dirEntry = contents.entries[DBPFFileType.DIR]
   const dir = dirEntry && new Binary(dirEntry.size, { writable: true })
 
-  await forEachAsync(data.entries, async (entry, entryId) => {
+  await forEachAsync(contents.entries, async (entry, entryId) => {
     // Skip DIR for now - we will write it last
     if (entryId === DBPFFileType.DIR) {
       return
@@ -187,14 +207,12 @@ export async function patchDBPFEntries(
         throw Error("Not an exemplar entry: " + entry.id)
       }
 
-      const exemplarData = await loadDBPFEntry<DBPFDataType.EXMP>(inFile, entry, exemplarProperties)
+      const originalData =
+        entry.data ?? (await loadDBPFEntry<DBPFDataType.EXMP>(inFile, entry, options))
 
-      // Store shallow copy of original
-      entry.original = {
-        ...exemplarData,
-        properties: {
-          ...exemplarData.properties,
-        },
+      const exemplarData = {
+        ...originalData,
+        properties: { ...originalData.properties },
       }
 
       if (patch.parentCohortId) {
@@ -208,7 +226,7 @@ export async function patchDBPFEntries(
             delete exemplarData.properties[propertyId]
           } else {
             const property = exemplarData.properties[propertyId]
-            const info = property?.info ?? exemplarProperties[propertyId]
+            const info = property?.info ?? options.exemplarProperties[propertyId]
             const type = property?.type ?? info?.type
             if (!type) {
               throw Error("Unknown property: " + toHex(propertyId, 8, true))
@@ -224,33 +242,25 @@ export async function patchDBPFEntries(
         })
       }
 
-      entry.data = exemplarData
-
-      const exemplar = writeExemplar(exemplarData, entry.size)
+      const bytes = writeExemplar(exemplarData, entry.size)
 
       if (entry.uncompressed !== undefined) {
-        entry.uncompressed = exemplar.length
-        exemplar.compress()
+        entry.uncompressed = bytes.length
+        bytes.compress()
       }
 
+      entry.data = exemplarData
       entry.offset = offset
-      entry.size = exemplar.length
+      entry.original = originalData
+      entry.size = bytes.length
 
-      offset += await exemplar.writeTofile(outFile)
+      offset += await bytes.writeTofile(outFile)
     } else {
       const bytes = await Binary.fromFile(inFile, entry.size, entry.offset)
 
       entry.offset = offset
 
       offset += await bytes.writeTofile(outFile)
-
-      if (entry.type === DBPFDataType.EXMP) {
-        if (entry.uncompressed !== undefined) {
-          bytes.decompress()
-        }
-
-        entry.data = loadExemplar(entry.id, bytes, exemplarProperties)
-      }
     }
 
     index.writeTGI(entryId)
@@ -273,7 +283,7 @@ export async function patchDBPFEntries(
     offset += await dir.writeTofile(outFile)
   }
 
-  data.modifiedAt = new Date().toISOString()
+  contents.modifiedAt = new Date().toISOString()
 
   header.writeString(HEADER_MAGIC, 0)
 
@@ -281,8 +291,8 @@ export async function patchDBPFEntries(
   header.writeUInt32(majorVersion, 4)
   header.writeUInt32(minorVersion, 8)
 
-  header.writeUInt32(Math.floor(new Date(data.createdAt).valueOf() / 1000), 24)
-  header.writeUInt32(Math.floor(new Date(data.modifiedAt).valueOf() / 1000), 28)
+  header.writeUInt32(Math.floor(new Date(contents.createdAt).valueOf() / 1000), 24)
+  header.writeUInt32(Math.floor(new Date(contents.modifiedAt).valueOf() / 1000), 28)
 
   const [indexMajorVersion, indexMinorVersion] = INDEX_VERSION.split(".").map(Number)
   header.writeUInt32(indexMajorVersion, 32)
@@ -295,7 +305,7 @@ export async function patchDBPFEntries(
   await header.writeTofile(outFile, 0)
   await index.writeTofile(outFile, indexOffset)
 
-  return data
+  return contents
 }
 
 function loadExemplar(

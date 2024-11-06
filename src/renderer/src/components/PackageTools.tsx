@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import {
   Settings as ConfigIcon,
-  Topic as DocsIcon,
+  // Topic as DocsIcon,
   Folder as FilesIcon,
   GitHub as GitHubIcon,
   Tune as OptionsIcon,
@@ -30,7 +30,7 @@ export function PackageTools({
   const actions = useStoreActions()
   const variantInfo = useVariantInfo(packageId, variantId)
 
-  const docsPath = variantInfo.docs
+  // const docsPath = variantInfo.docs
   const readmePath = variantInfo.readme
 
   const [openOptions, setOpenOptions] = useState(false)
@@ -79,13 +79,13 @@ export function PackageTools({
           onClick={() => actions.openPackageFile(packageId, variantInfo.id, "")}
         />
       )}
-      {variantInfo.installed && docsPath && (
+      {/* {variantInfo.installed && docsPath && (
         <ToolButton
           description={t("openDocs")}
           icon={DocsIcon}
           onClick={() => actions.openPackageFile(packageId, variantInfo.id, docsPath)}
         />
-      )}
+      )} */}
       {variantInfo.installed && readmePath && (
         <ToolButton
           description={t("openReadme")}

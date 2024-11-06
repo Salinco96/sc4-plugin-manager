@@ -892,7 +892,6 @@ async function runIndexer(options: IndexerOptions) {
 
         if (Object.values(lots).length) {
           variantData.lots = Object.values(lots)
-          packageData.warnings ??= [{ id: "bulldoze", on: "disable" }]
         }
 
         if (nonLotFiles.length) {

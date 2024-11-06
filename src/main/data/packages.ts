@@ -3,28 +3,35 @@ import path from "path"
 
 import { glob } from "glob"
 
-import { AssetData, AssetID, AssetInfo } from "@common/assets"
+import { AssetData, AssetID, Assets } from "@common/assets"
 import { AuthorID } from "@common/authors"
 import { Categories, CategoryID, CategoryInfo } from "@common/categories"
 import { OptionType } from "@common/options"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, PackageID, isNew } from "@common/packages"
-import { ConfigFormat, PackageData, PackageInfo } from "@common/types"
+import { ConfigFormat, PackageData, PackageInfo, Packages } from "@common/types"
 import { mapDefined, potentialUnion, potentialUnionBy, unionBy } from "@common/utils/arrays"
-import { entries, forEach, keys, values } from "@common/utils/objects"
+import {
+  filterValues,
+  forEach,
+  isEmpty,
+  keys,
+  mapValues,
+  size,
+  values,
+} from "@common/utils/objects"
 import { isString } from "@common/utils/types"
 import {
   DependencyData,
   DependencyInfo,
   VariantAssetData,
   VariantAssetInfo,
-  VariantData,
   VariantID,
   VariantInfo,
 } from "@common/variants"
-import { readConfig, writeConfig } from "@node/configs"
-import { exists } from "@node/files"
+import { readConfig } from "@node/configs"
+import { createIfMissing } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
-import { isDev } from "@utils/env"
+import { TaskContext } from "@utils/tasks"
 
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
@@ -33,10 +40,9 @@ import { loadOptionInfo } from "./options"
  * Loads all downloaded assets.
  */
 export async function loadDownloadedAssets(
+  context: TaskContext,
   basePath: string,
 ): Promise<{ [assetId in AssetID]?: string[] }> {
-  console.info("Loading local assets...")
-
   const assets: { [assetId in AssetID]?: string[] } = {}
 
   const downloadKeys = await glob("*/*@*/", { cwd: basePath, posix: true })
@@ -47,7 +53,7 @@ export async function loadDownloadedAssets(
     assets[assetId].push(version)
   }
 
-  console.info(`Loaded ${keys(assets).length} local assets`)
+  context.info(`Loaded ${size(assets)} local assets`)
 
   return assets
 }
@@ -56,29 +62,27 @@ export async function loadDownloadedAssets(
  * Loads all local packages.
  */
 export async function loadLocalPackages(
-  basePath: string,
+  context: TaskContext,
+  packagesPath: string,
   categories: Categories,
-  onProgress: (current: number, total: number) => void,
-): Promise<{ [packageId: PackageID]: PackageInfo }> {
-  console.info("Loading local packages...")
+): Promise<Packages> {
+  await createIfMissing(packagesPath)
 
-  const packages: { [packageId: PackageID]: PackageInfo } = {}
+  const packages: Packages = {}
 
-  const packageIds = await glob("*/*/", { cwd: basePath, posix: true })
+  const packageIds = await glob("*/*/", { cwd: packagesPath, posix: true })
 
   let nConfigs = 0
-  let nPackages = 0
   for (const packageId of packageIds as PackageID[]) {
-    onProgress(nConfigs++, packageIds.length)
-    const packagePath = path.join(basePath, packageId)
+    context.setProgress(nConfigs++, packageIds.length)
+    const packagePath = path.join(packagesPath, packageId)
     const packageInfo = await loadLocalPackageInfo(packageId, packagePath, categories)
     if (packageInfo) {
       packages[packageId] = packageInfo
-      nPackages++
     }
   }
 
-  console.info(`Loaded ${nPackages} local packages`)
+  context.info(`Loaded ${size(packages)} local packages`)
 
   return packages
 }
@@ -86,7 +90,7 @@ export async function loadLocalPackages(
 /**
  * Loads a local package from its local installation folder.
  */
-export async function loadLocalPackageInfo(
+async function loadLocalPackageInfo(
   packageId: PackageID,
   packagePath: string,
   categories: Categories,
@@ -110,7 +114,6 @@ export async function loadLocalPackageInfo(
     features: packageData.features,
     format: configFormat,
     id: packageId,
-    local: true,
     name: packageData.name ?? packageId,
     status: {},
     variants: {},
@@ -123,15 +126,6 @@ export async function loadLocalPackageInfo(
       const variantInfo = loadVariantInfo(variantId, packageData, categories)
       packageInfo.variants[variantId] = variantInfo
       variantInfo.installed = true
-      variantInfo.local = true
-
-      if (await exists(path.join(packagePath, variantId, DIRNAMES.cleanitol))) {
-        variantInfo.cleanitol = DIRNAMES.cleanitol
-      }
-
-      if (await exists(path.join(packagePath, variantId, DIRNAMES.docs))) {
-        variantInfo.docs = DIRNAMES.docs
-      }
 
       if (!variantInfo.authors.length) {
         const author = packageId.split("/")[0] as AuthorID
@@ -141,7 +135,7 @@ export async function loadLocalPackageInfo(
   }
 
   // Return the package only if some variants have been successfully loaded
-  if (Object.keys(packageInfo.variants).length) {
+  if (!isEmpty(packageInfo.variants)) {
     return packageInfo
   }
 }
@@ -150,18 +144,14 @@ export async function loadLocalPackageInfo(
  * Loads all remote packages.
  */
 export async function loadRemotePackages(
+  context: TaskContext,
   basePath: string,
   categories: Categories,
+  localPackages: Packages,
   downloadedAssets: { [assetId in AssetID]?: string[] },
-  onProgress: (current: number, total: number) => void,
-): Promise<{
-  assets: { [assetId in AssetID]?: AssetInfo }
-  packages: { [packageId in PackageID]?: PackageInfo }
-}> {
-  console.info("Loading remote packages...")
-
-  const assets: { [assetId in AssetID]?: AssetInfo } = {}
-  const packages: { [packageId in PackageID]?: PackageInfo } = {}
+): Promise<{ assets: Assets; packages: Packages }> {
+  const assets: Assets = {}
+  const packages: Packages = {}
 
   let nAssets = 0
   let nConfigs = 0
@@ -173,7 +163,7 @@ export async function loadRemotePackages(
   const packagesEntries = await glob("**/*.{yaml,yml}", { cwd: packagesPath })
 
   for (const assetsEntry of assetsEntries) {
-    onProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
+    context.setProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
     const configPath = path.join(assetsPath, assetsEntry)
 
     // TODO: This assumes that configs are correctly formatted
@@ -188,7 +178,7 @@ export async function loadRemotePackages(
   }
 
   for (const packagesEntry of packagesEntries) {
-    onProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
+    context.setProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
     const configPath = path.join(packagesPath, packagesEntry)
 
     // TODO: This assumes that configs are correctly formatted
@@ -212,11 +202,7 @@ export async function loadRemotePackages(
               if (asset.sha256 || asset.size || asset.url || asset.version) {
                 if (assets[asset.id]) {
                   // Do not allow redefining an existing asset
-                  if (isDev()) {
-                    throw Error(`Redefining asset ID ${asset.id}`)
-                  } else {
-                    console.warn(`Redefining asset ID ${asset.id}`)
-                  }
+                  context.raiseInDev(`Redefining asset ID ${asset.id}`)
                 } else {
                   // Load inline asset
                   const assetInfo = loadAssetInfo(asset.id, asset, downloadedAssets[asset.id])
@@ -227,11 +213,7 @@ export async function loadRemotePackages(
                 }
               } else if (!assets[asset.id]) {
                 // Otherwise require asset to already exist
-                if (isDev()) {
-                  throw Error(`Asset ${asset.id} does not exist`)
-                } else {
-                  console.warn(`Asset ${asset.id} does not exist`)
-                }
+                context.raiseInDev(`Asset ${asset.id} does not exist`)
               }
             }
           }
@@ -240,8 +222,13 @@ export async function loadRemotePackages(
     }
   }
 
-  console.info(`Loaded ${nAssets} assets`)
-  console.info(`Loaded ${nPackages} remote packages`)
+  // Merge local and remote package definitions...
+  forEach(localPackages, (localPackageInfo, packageId) => {
+    packages[packageId] = mergeLocalPackageInfo(localPackageInfo, packages[packageId])
+  })
+
+  context.info(`Loaded ${nAssets} remote assets`)
+  context.info(`Loaded ${nPackages} remote packages`)
 
   return { assets, packages }
 }
@@ -249,7 +236,7 @@ export async function loadRemotePackages(
 /**
  * Loads a remote package configuration.
  */
-export function loadRemotePackageInfo(
+function loadRemotePackageInfo(
   packageId: PackageID,
   packageData: PackageData,
   categories: Categories,
@@ -274,12 +261,12 @@ export function loadRemotePackageInfo(
   }
 
   // Return the package only if some variants have been successfully loaded
-  if (Object.keys(packageInfo.variants).length) {
+  if (!isEmpty(packageInfo.variants)) {
     return packageInfo
   }
 }
 
-export function parseCategory(category: string, categories: Categories): CategoryID[] {
+function parseCategory(category: string, categories: Categories): CategoryID[] {
   const subcategories = category.split(/\s*,\s*/) as CategoryID[]
 
   let subcategory: CategoryID | undefined
@@ -298,7 +285,7 @@ export function parseCategory(category: string, categories: Categories): Categor
   return subcategories
 }
 
-export function loadPackageAssetInfo(data: VariantAssetData | AssetID): VariantAssetInfo {
+function loadPackageAssetInfo(data: VariantAssetData | AssetID): VariantAssetInfo {
   if (isString(data)) {
     return { id: data }
   }
@@ -322,7 +309,7 @@ export function loadPackageAssetInfo(data: VariantAssetData | AssetID): VariantA
   }
 }
 
-export function loadDependencyInfo(data: DependencyData | PackageID): DependencyInfo {
+function loadDependencyInfo(data: DependencyData | PackageID): DependencyInfo {
   if (isString(data)) {
     return { id: data, transitive: true }
   }
@@ -336,7 +323,7 @@ export function loadDependencyInfo(data: DependencyData | PackageID): Dependency
 /**
  * Loads a variant from a package configuration.
  */
-export function loadVariantInfo(
+function loadVariantInfo(
   variantId: VariantID,
   packageData: PackageData,
   categories: Categories,
@@ -449,98 +436,85 @@ export function loadVariantInfo(
 /**
  * Merges a local package definition with a remote one.
  */
-export function mergeLocalPackageInfo(
+function mergeLocalPackageInfo(
   localPackageInfo: PackageInfo,
-  remotePackageInfo: PackageInfo,
+  remotePackageInfo: PackageInfo | undefined,
 ): PackageInfo {
-  delete localPackageInfo.local
+  if (remotePackageInfo) {
+    // TODO: Improve this function
+    localPackageInfo.features = remotePackageInfo.features
 
-  // TODO: Improve this function
-  localPackageInfo.features = remotePackageInfo.features
-
-  forEach(localPackageInfo.variants, (localVariantInfo, variantId) => {
-    const remoteVariantInfo = remotePackageInfo.variants[variantId]
-    if (remoteVariantInfo) {
-      delete localVariantInfo.local
-
-      // If remote and local have same version, prefer data from remote (this allows
-      // pushing updates to a package without forcing users to reinstall, although
-      // this should only be used for minor changes). If versions are different, store
-      // the remote version separately, as a potential update instead.
-      if (remoteVariantInfo.version === localVariantInfo.version) {
-        // Keep local installation paths calculated during install
-        remoteVariantInfo.readme ??= localVariantInfo.readme
-        remoteVariantInfo.files ??= localVariantInfo.files
-        Object.assign(localVariantInfo, remoteVariantInfo)
-        localVariantInfo.installed = true
+    forEach(localPackageInfo.variants, (localVariantInfo, variantId) => {
+      const remoteVariantInfo = remotePackageInfo.variants[variantId]
+      if (remoteVariantInfo) {
+        // If remote and local have same version, prefer data from remote (this allows
+        // pushing updates to a package without forcing users to reinstall, although
+        // this should only be used for minor changes). If versions are different, store
+        // the remote version separately, as a potential update instead.
+        if (remoteVariantInfo.version === localVariantInfo.version) {
+          // Keep local installation paths calculated during install
+          remoteVariantInfo.readme ??= localVariantInfo.readme
+          remoteVariantInfo.files ??= localVariantInfo.files
+          Object.assign(localVariantInfo, remoteVariantInfo)
+          localVariantInfo.installed = true
+        } else {
+          localVariantInfo.update = remoteVariantInfo
+        }
       } else {
-        localVariantInfo.update = remoteVariantInfo
+        localVariantInfo.local = true
       }
-    }
-  })
+    })
 
-  forEach(remotePackageInfo.variants, (remoteVariantInfo, variantId) => {
-    localPackageInfo.variants[variantId] ??= remoteVariantInfo
-  })
+    forEach(remotePackageInfo.variants, (remoteVariantInfo, variantId) => {
+      localPackageInfo.variants[variantId] ??= remoteVariantInfo
+    })
+  } else {
+    localPackageInfo.local = true
+
+    forEach(localPackageInfo.variants, localVariantInfo => {
+      localVariantInfo.local = true
+    })
+  }
 
   return localPackageInfo
 }
 
-/**
- * Writes the current package definition into a configuration file.
- */
-export async function writePackageConfig(
-  packagePath: string,
-  packageInfo: PackageInfo,
-  newFormat: ConfigFormat,
-): Promise<void> {
-  await writeConfig<PackageData>(
-    packagePath,
-    FILENAMES.packageConfig,
-    {
-      features: packageInfo.features,
-      name: packageInfo.name,
-      variants: Object.fromEntries(
-        entries(packageInfo.variants)
-          .filter(([_, variant]) => !!variant.installed)
-          .map<[VariantID, VariantData]>(([id, variant]) => [
-            id,
-            {
-              authors: variant.authors,
-              category: variant.categories.join(","),
-              dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
-              deprecated: variant.deprecated,
-              description: variant.description,
-              experimental: variant.experimental,
-              files: variant.files,
-              images: variant.images,
-              lastModified: variant.lastModified,
-              logs: variant.logs,
-              lots: variant.lots?.map(({ categories, ...lot }) => ({
-                category: categories?.join(","),
-                ...lot,
-              })),
-              mmps: variant.mmps?.map(({ categories, ...mmp }) => ({
-                category: categories?.join(","),
-                ...mmp,
-              })),
-              name: variant.name,
-              optional: variant.optional,
-              options: variant.options,
-              readme: variant.readme,
-              repository: variant.repository,
-              requirements: variant.requirements,
-              thumbnail: variant.thumbnail,
-              url: variant.url,
-              version: variant.version,
-              warnings: variant.warnings,
-            },
-          ]),
-      ),
-    },
-    newFormat,
-    packageInfo.format,
-  )
-
-  packageInfo.format = newFormat
+export function toPackageData(packageInfo: PackageInfo): PackageData {
+  return {
+    features: packageInfo.features?.length ? packageInfo.features : undefined,
+    name: packageInfo.name,
+    variants: mapValues(
+      filterValues(packageInfo.variants, variant => !!variant.installed),
+      variant => ({
+        authors: variant.authors,
+        category: variant.categories.join(","),
+        dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
+        deprecated: variant.deprecated,
+        description: variant.description,
+        experimental: variant.experimental,
+        files: variant.files,
+        images: variant.images,
+        lastModified: variant.lastModified,
+        logs: variant.logs,
+        lots: variant.lots?.map(({ categories, ...lot }) => ({
+          category: categories?.join(","),
+          ...lot,
+        })),
+        mmps: variant.mmps?.map(({ categories, ...mmp }) => ({
+          category: categories?.join(","),
+          ...mmp,
+        })),
+        name: variant.name,
+        optional: variant.optional,
+        options: variant.options,
+        readme: variant.readme,
+        repository: variant.repository,
+        requirements: variant.requirements,
+        thumbnail: variant.thumbnail,
+        url: variant.url,
+        version: variant.version,
+        warnings: variant.warnings,
+      }),
+    ),
+  }
 }

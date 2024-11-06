@@ -9,65 +9,54 @@ import { Features, PackageInfo, Packages } from "./types"
 
 export interface ApplicationConfig {
   categories: Categories
-  exemplarProperties: {
-    [propertyId in number]?: ExemplarPropertyInfo
-  }
+  exemplarProperties: Record<number, ExemplarPropertyInfo>
   profileOptions: OptionInfo[]
-}
-
-export interface ApplicationStatus {
-  linker: string | null
-  loader: string | null
-  ongoingDownloads: TaskInfo[]
-  ongoingExtracts: TaskInfo[]
 }
 
 export interface ApplicationState {
   authors: Authors
-  configs: ApplicationConfig
+  categories: Categories
+  downloads: Record<string, TaskInfo>
   features: Features
+  linker: TaskInfo | null
+  loader: TaskInfo | null
   packages: Packages | undefined
   profiles: Profiles | undefined
+  profileOptions: OptionInfo[]
   settings: Settings | undefined
   simtropolis: { userId: string } | null | undefined
-  status: ApplicationStatus
   templates: Profiles | undefined
 }
 
-export interface ApplicationStateUpdate
-  extends Omit<Partial<ApplicationState>, "packages" | "profiles"> {
-  packages?: {
-    [packageId in PackageID]?: PackageInfo | null
+export type Replace<T, R> = Omit<T, keyof R> & R
+
+export type ApplicationStateUpdate = Replace<
+  Partial<ApplicationState>,
+  {
+    downloads?: Record<string, TaskInfo | null | undefined>
+    packages?: Record<PackageID, PackageInfo | null | undefined>
+    profiles?: Record<ProfileID, ProfileInfo | null | undefined>
   }
-  profiles?: {
-    [profileId in ProfileID]?: ProfileInfo | null
-  }
-}
+>
 
 export function getInitialState(): ApplicationState {
   return {
     authors: {},
-    configs: {
-      categories: {},
-      exemplarProperties: {},
-      profileOptions: [],
-    },
+    categories: {},
+    downloads: {},
     features: {},
+    linker: null,
+    loader: null,
     packages: undefined,
     profiles: undefined,
+    profileOptions: [],
     settings: undefined,
     simtropolis: undefined,
-    status: {
-      linker: null,
-      loader: null,
-      ongoingDownloads: [],
-      ongoingExtracts: [],
-    },
     templates: undefined,
   }
 }
 
 export interface TaskInfo {
-  readonly key: string
-  readonly progress?: number
+  progress?: number
+  step: string
 }

@@ -3,17 +3,16 @@ import { useTranslation } from "react-i18next"
 
 import { removeElement, removeElement$ } from "@common/utils/arrays"
 import { Page, useLocation } from "@utils/navigation"
-import { useAuthors, useConfigs, usePackageFilters, useStoreActions } from "@utils/store"
+import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
 
 import { STATE_TAGS, Tag, TagType, TagValue, getTagLabel } from "./utils"
 
 export type PackageTagProps = Tag & { dense?: boolean }
 
 export function PackageTag({ dense, ...tag }: PackageTagProps): JSX.Element {
-  const { categories } = useConfigs()
-
   const actions = useStoreActions()
   const authors = useAuthors()
+  const categories = useStore(store => store.categories)
   const filters = usePackageFilters()
   const location = useLocation()
 

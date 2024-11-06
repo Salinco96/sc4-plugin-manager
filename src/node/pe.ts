@@ -36,7 +36,7 @@ export function setFlag(bits: number, flag: number, enabled: boolean): number {
 }
 
 export async function getPEHeaderOffset(file: FileHandle): Promise<number> {
-  const header = await readBytes(file, MZ_HEADER_SIZE)
+  const header = await readBytes(file, MZ_HEADER_SIZE, 0)
   assert(header.readUInt16LE(0) === MZ_SIGNATURE, "Invalid MZ header signature")
   return header.readInt32LE(MZ_HEADER_PE_OFFSET)
 }

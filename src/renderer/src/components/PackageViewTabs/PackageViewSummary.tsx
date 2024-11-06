@@ -16,12 +16,12 @@ import { getAuthorName } from "@components/Tags" // TODO
 import { Text } from "@components/Text"
 import { Page, useHistory } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
-import { useAuthors, useConfigs } from "@utils/store"
+import { useAuthors, useStore } from "@utils/store"
 
 export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX.Element {
-  const { categories, profileOptions } = useConfigs()
-
   const authors = useAuthors()
+  const categories = useStore(store => store.categories)
+  const profileOptions = useStore(store => store.profileOptions)
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
 

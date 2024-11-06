@@ -93,7 +93,7 @@ export function VariantActions({
         disabled: isEnabled(variantInfo, packageStatus) || required,
         id: "remove",
         label: t("remove.label"),
-        onClick: () => actions.removePackage(packageId, variantId),
+        onClick: () => actions.removeVariant(packageId, variantId),
       })
     }
 
@@ -102,7 +102,7 @@ export function VariantActions({
         description: t("download.description"),
         id: "download",
         label: t("download.label"),
-        onClick: () => actions.installPackage(packageId, variantId),
+        onClick: () => actions.installVariant(packageId, variantId),
       })
     }
 

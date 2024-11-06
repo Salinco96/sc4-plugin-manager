@@ -14,7 +14,6 @@ import {
   isInvalid,
   isMissing,
   isOutdated,
-  isRelevant,
   isRequired,
 } from "@common/packages"
 import { keys } from "@common/utils/objects"
@@ -83,9 +82,8 @@ export function PackageActions({
     const incompatible = isIncompatible(variantInfo, packageStatus)
     const required = isRequired(variantInfo, packageStatus)
 
-    const warning = variantInfo.warnings?.find(warning =>
-      isRelevant(warning, variantInfo, packageStatus, false),
-    )
+    const enableWarning = variantInfo.warnings?.find(warning => warning.on === "enable")
+    const disableWarning = variantInfo.warnings?.find(warning => warning.on === "disable")
 
     if (isMissing(variantInfo)) {
       packageActions.push({
@@ -110,9 +108,7 @@ export function PackageActions({
         color: "error",
         description: required
           ? t("disable.reason.required", { count: packageStatus?.requiredBy?.length })
-          : warning
-            ? t(`${warning.on ?? "enable"}.${warning.id ?? "bulldoze"}`, { ns: "Warning" }) // TODO: util
-            : t("disable.description"),
+          : disableWarning?.message ?? t("disable.description"),
         id: "disable",
         label: t("disable.label"),
         onClick: () => actions.disablePackage(packageId),
@@ -120,7 +116,9 @@ export function PackageActions({
     } else if (isDisabled(variantInfo, packageStatus)) {
       packageActions.push({
         color: "success",
-        description: incompatible ? t("enable.reason.incompatible") : t("enable.description"),
+        description: incompatible
+          ? t("enable.reason.incompatible")
+          : enableWarning?.message ?? t("enable.description"),
         disabled: incompatible,
         id: "enable",
         label: t("enable.label"),
@@ -134,18 +132,24 @@ export function PackageActions({
         color: "error",
         description: required
           ? t("remove.reason.required", { count: packageStatus?.requiredBy?.length })
-          : t("remove.description"),
+          : disableWarning?.message ?? t("remove.description"),
         disabled: required,
         id: "remove",
         label: t("remove.label"),
-        onClick: () => actions.removePackage(packageId, variantId),
+        onClick: async () => {
+          if (!isEnabled(variantInfo, packageStatus) || (await actions.disablePackage(packageId))) {
+            await actions.removeVariant(packageId, variantId)
+          }
+        },
       })
     }
 
     if (!isInstalled(variantInfo) && !isIncluded(variantInfo, packageStatus)) {
       if (currentProfile) {
         packageActions.push({
-          description: incompatible ? t("add.reason.incompatible") : t("add.description"),
+          description: incompatible
+            ? t("add.reason.incompatible")
+            : enableWarning?.message ?? t("add.description"),
           disabled: incompatible,
           id: "add",
           label: t("add.label"),
@@ -157,7 +161,7 @@ export function PackageActions({
         description: t("download.description"),
         id: "download",
         label: t("download.label"),
-        onClick: () => actions.installPackage(packageId, variantId),
+        onClick: () => actions.installVariant(packageId, variantId),
       })
     }
 

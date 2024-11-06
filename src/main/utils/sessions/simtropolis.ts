@@ -40,7 +40,7 @@ const Cookies: {
 
 export async function getSimtropolisSession(
   browserSession: Session,
-): Promise<SimtropolisSession | undefined> {
+): Promise<SimtropolisSession | null> {
   const cookies = await browserSession.cookies.get({ domain: SIMTROPOLIS_DOMAIN })
 
   const deviceKey = cookies.find(cookie => cookie.name === Cookies.deviceKey)?.value
@@ -59,6 +59,8 @@ export async function getSimtropolisSession(
       return simtropolisSession
     }
   }
+
+  return null
 }
 
 export function getSimtropolisSessionCookies(session: SimtropolisSession): {
@@ -84,7 +86,7 @@ export function getSimtropolisSessionHeaders(session: SimtropolisSession): {
 
 export async function simtropolisLogin(
   browserSession: Session,
-): Promise<SimtropolisSession | undefined> {
+): Promise<SimtropolisSession | null> {
   return new Promise(resolve => {
     const window = new BaseWindow({
       height: 600,

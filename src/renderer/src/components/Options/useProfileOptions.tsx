@@ -1,11 +1,10 @@
 import { OptionInfo } from "@common/options"
 import { checkCondition } from "@common/packages"
-import { useConfigs, useCurrentProfile, useFeatures, useSettings } from "@utils/store"
+import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 
 export function useProfileOptions(): OptionInfo[] {
-  const { profileOptions } = useConfigs()
-
   const profileInfo = useCurrentProfile()
+  const profileOptions = useStore(store => store.profileOptions)
   const features = useFeatures()
   const settings = useSettings()
 
