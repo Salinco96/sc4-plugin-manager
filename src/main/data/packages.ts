@@ -29,7 +29,7 @@ import {
   VariantInfo,
 } from "@common/variants"
 import { readConfig } from "@node/configs"
-import { createIfMissing } from "@node/files"
+import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { TaskContext } from "@utils/tasks"
 
@@ -126,6 +126,11 @@ async function loadLocalPackageInfo(
       const variantInfo = loadVariantInfo(variantId, packageData, categories)
       packageInfo.variants[variantId] = variantInfo
       variantInfo.installed = true
+
+      const docsPath = DIRNAMES.docs
+      if (await exists(path.join(packagePath, entry.name, docsPath))) {
+        variantInfo.docs = docsPath
+      }
 
       if (!variantInfo.authors.length) {
         const author = packageId.split("/")[0] as AuthorID
