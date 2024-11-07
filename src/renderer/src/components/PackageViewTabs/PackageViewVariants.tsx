@@ -54,7 +54,7 @@ export function PackageViewVariants({ packageId }: { packageId: PackageID }): JS
                 </Text>
                 <FlexBox alignItems="center">
                   <Text maxLines={1} variant="body2">
-                    {variantInfo.id}
+                    {packageId}#{variantInfo.id}
                   </Text>
                   <PackageTools packageId={packageId} variantId={variantInfo.id} />
                 </FlexBox>

@@ -123,8 +123,10 @@ export interface PackageStatus {
 }
 
 export interface PackageWarning {
-  message: string
+  id?: string
+  message?: string
   on?: "enable" | "disable" | "variant"
+  title?: string
 }
 
 export interface LotData {

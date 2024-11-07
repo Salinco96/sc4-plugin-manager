@@ -13,7 +13,7 @@ import { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
 import { Settings } from "@common/settings"
 import { ApplicationState, ApplicationStateUpdate, getInitialState } from "@common/state"
 import { Features, PackageInfo, VariantState } from "@common/types"
-import { compact } from "@common/utils/objects"
+import { compact, isEmpty } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
 
 import { computePackageList } from "./packages"
@@ -441,7 +441,11 @@ export const useStore = create<Store>()((set, get): Store => {
         }
       },
       updateState(data) {
-        console.debug(data)
+        const { downloads, linker, loader, ...dataToLog } = data
+
+        if (!isEmpty(dataToLog)) {
+          console.debug(dataToLog)
+        }
 
         set(store => {
           const { downloads, packages, profiles, ...others } = data

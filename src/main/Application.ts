@@ -80,7 +80,12 @@ import {
   loadRemotePackages,
   toPackageData,
 } from "./data/packages"
-import { getDefaultVariant, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
+import {
+  Warning,
+  getDefaultVariant,
+  resolvePackageUpdates,
+  resolvePackages,
+} from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { loadSettings } from "./data/settings"
 import { MainWindow } from "./MainWindow"
@@ -172,7 +177,10 @@ export class Application {
    */
   public readonly gamePath: string
 
-  // public ignoredWarnings = new Set<string>()
+  /**
+   * IDs of warnings that should be ignored for the whole session.
+   */
+  public readonly ignoredWarnings = new Set<string>()
 
   /**
    * Main application window.
@@ -1903,6 +1911,7 @@ export class Application {
    * Reloads data from files.
    */
   protected async reload() {
+    this.ignoredWarnings.clear()
     this.tasks.invalidateCache()
     await this.load(true)
   }
@@ -2125,6 +2134,8 @@ export class Application {
 
   public async updateProfile(profileId: ProfileID, update: ProfileUpdate): Promise<boolean> {
     const key = `update:${profileId}#${toHex(Date.now(), 8)}`
+
+    const confirmedWarnings: { [id: string]: Warning } = {}
 
     let result: boolean | undefined
 
@@ -2378,31 +2389,49 @@ export class Application {
                 }
 
                 // Confirm warnings
-                for (const warning of warnings) {
-                  const packageNames = warning.packageIds.map(packageId => {
+                for (const warning of values(warnings)) {
+                  if (this.ignoredWarnings.has(warning.id)) {
+                    continue
+                  }
+
+                  const packageIds = warning.packageIds.filter(packageId => {
+                    return !confirmedWarnings[warning.id]?.packageIds.includes(packageId)
+                  })
+
+                  if (!packageIds.length) {
+                    continue
+                  }
+
+                  const packageNames = packageIds.map(packageId => {
                     const packageInfo = packages[packageId]
                     return packageInfo?.name ?? packageId
                   })
 
-                  const { confirmed /*, doNotAskAgain */ } = await showConfirmation(
+                  const { confirmed, doNotAskAgain } = await showConfirmation(
                     i18n.t(`WarningModal:title`, {
                       count: packageNames.length - 1,
                       packageName: packageNames[0],
                     }),
                     warning.title,
                     warning.message,
-                    !!warning.id,
+                    !warning.id.includes(":"),
                     "warning",
                     i18n.t("continue"),
                     i18n.t("cancel"),
                   )
 
-                  // if (doNotAskAgain && warning.id) {
-                  //   this.ignoredWarnings.add(warning.id)
-                  // }
+                  if (doNotAskAgain && warning.id) {
+                    this.ignoredWarnings.add(warning.id)
+                  }
 
                   if (!confirmed) {
                     return false
+                  }
+
+                  if (confirmedWarnings[warning.id]) {
+                    confirmedWarnings[warning.id].packageIds.push(...packageIds)
+                  } else {
+                    confirmedWarnings[warning.id] = warning
                   }
                 }
 

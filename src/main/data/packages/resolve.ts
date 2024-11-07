@@ -1,3 +1,4 @@
+import { i18n } from "@common/i18n"
 import {
   OptionInfo,
   Options,
@@ -24,6 +25,7 @@ import {
   LotInfo,
   PackageInfo,
   PackageStatus,
+  PackageWarning,
   Packages,
 } from "@common/types"
 import { containsWhere, removeElement, union, unique } from "@common/utils/arrays"
@@ -381,12 +383,7 @@ export function resolvePackageUpdates(
   /** Whether to trigger side-effects such as linking */
   shouldRecalculate: boolean
   /** Warnings to show */
-  warnings: {
-    id?: "bulldozeLots"
-    message: string
-    packageIds: PackageID[]
-    title: string
-  }[]
+  warnings: { [id: string]: Warning }
 } {
   const resultingProfile = { ...profileInfo }
 
@@ -495,12 +492,7 @@ export function resolvePackageUpdates(
   const installingVariants: { [packageId in PackageID]?: VariantID } = {}
   const selectingVariants: { [packageId in PackageID]?: VariantID } = {}
 
-  const warnings: {
-    id?: "bulldozeLots"
-    message: string
-    packageIds: PackageID[]
-    title: string
-  }[] = []
+  const warnings: { [id: string]: Warning } = {}
 
   if (shouldRecalculate) {
     forEach(resultingStatus, (newStatus, packageId) => {
@@ -527,11 +519,16 @@ export function resolvePackageUpdates(
           if (variantInfo.warnings) {
             for (const warning of variantInfo.warnings) {
               if (warning.on === "variant") {
-                warnings.push({
-                  message: warning.message,
-                  packageIds: [packageId],
-                  title: "Selecting new variant",
-                })
+                const id = getWarningId(warning, packageId)
+
+                warnings[id] ??= {
+                  id,
+                  message: getWarningMessage(warning),
+                  packageIds: [],
+                  title: getWarningTitle(warning),
+                }
+
+                warnings[id].packageIds.push(packageId)
               }
             }
           }
@@ -547,11 +544,16 @@ export function resolvePackageUpdates(
           if (variantInfo.warnings) {
             for (const warning of variantInfo.warnings) {
               if (warning.on === "enable") {
-                warnings.push({
-                  message: warning.message,
-                  packageIds: [packageId],
-                  title: "Enabling package",
-                })
+                const id = getWarningId(warning, packageId)
+
+                warnings[id] ??= {
+                  id,
+                  message: getWarningMessage(warning),
+                  packageIds: [],
+                  title: getWarningTitle(warning),
+                }
+
+                warnings[id].packageIds.push(packageId)
               }
             }
           }
@@ -562,11 +564,16 @@ export function resolvePackageUpdates(
         if (variantInfo.warnings) {
           for (const warning of variantInfo.warnings) {
             if (warning.on === "disable") {
-              warnings.push({
-                message: warning.message,
-                packageIds: [packageId],
-                title: "Disabling package",
-              })
+              const id = getWarningId(warning, packageId)
+
+              warnings[id] ??= {
+                id,
+                message: getWarningMessage(warning),
+                packageIds: [],
+                title: getWarningTitle(warning),
+              }
+
+              warnings[id].packageIds.push(packageId)
             }
           }
         }
@@ -724,12 +731,12 @@ export function resolvePackageUpdates(
         }),
       ).sort()
 
-      warnings.push({
-        id: "bulldozeLots",
+      warnings.replacingMaxisLots = {
+        id: "replacingMaxisLots",
         message: `The following lots are overrides of Maxis lots. To avoid issues such as the 'Phantom Slider' bug, you must bulldoze all Maxis instances from your regions before enabling these overrides:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
         packageIds: unique(values(replacingMaxisLots).map(({ packageId }) => packageId)),
         title: "Replacing Maxis lots",
-      })
+      }
     }
 
     if (!isEmpty(oldLots)) {
@@ -739,12 +746,12 @@ export function resolvePackageUpdates(
         }),
       ).sort()
 
-      warnings.push({
-        id: "bulldozeLots",
+      warnings.disablingLots = {
+        id: "disablingLots",
         message: `Before disabling the following lots, you must bulldoze all instances from your regions:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
         packageIds: unique(values(oldLots).map(({ packageId }) => packageId)),
         title: "Disabling lots",
-      })
+      }
     }
 
     if (!isEmpty(replacingLots)) {
@@ -754,12 +761,12 @@ export function resolvePackageUpdates(
         }),
       ).sort()
 
-      warnings.push({
-        id: "bulldozeLots",
+      warnings.replacingLots = {
+        id: "replacingLots",
         message: `The following lots are not compatible across variants. Before selecting a new variant, you must bulldoze all instances from your regions:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
         packageIds: unique(values(replacingLots).map(({ packageId }) => packageId)),
         title: "Replacing lots",
-      })
+      }
     }
 
     console.debug("Resulting changes", {
@@ -874,4 +881,27 @@ function getEnabledLots(
   })
 
   return lots
+}
+
+export interface Warning {
+  id: string
+  message: string
+  packageIds: PackageID[]
+  title: string
+}
+
+function getWarningId(warning: PackageWarning, packageId: PackageID): string {
+  return warning.id ?? warning.on ? `${packageId}:${warning.on}` : packageId
+}
+
+function getWarningTitle(warning: PackageWarning): string {
+  return warning.title ?? i18n.t(warning.on ?? "default", { ns: "WarningTitle" })
+}
+
+function getWarningMessage(warning: PackageWarning): string {
+  if (warning.id && !warning.message) {
+    return i18n.t(warning.id, { defaultValue: warning.id, ns: "WarningMessage" })
+  } else {
+    return warning.message ?? ""
+  }
 }

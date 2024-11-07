@@ -545,14 +545,18 @@
     "patched": "Patched",
     "selected": "Selected"
   },
+  "WarningMessage": {
+    "inconsistentVariantLotIds": "This package uses different lot IDs across variants. Before selecting a different variant, you must bulldoze all corresponding lots from your regions."
+  },
   "WarningModal": {
-    "continue": {
-      "disable": "Disable package?",
-      "enable": "Enable package?",
-      "variantChange": "Change variant?"
-    },
     "title_one": "{{packageName}} and {{count}} other",
     "title_other": "{{packageName}} and {{count}} others",
     "title_zero": "{{packageName}}"
+  },
+  "WarningTitle": {
+    "default": "Warning",
+    "disable": "Disabling package",
+    "enable": "Enabling package",
+    "variant": "Selecting new variant"
   }
 }
