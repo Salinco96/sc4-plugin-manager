@@ -42,7 +42,7 @@ export const api = {
   ): Promise<{ html?: string; md?: string }> {
     return ipcRenderer.invoke("getPackageReadme", packageId, variantId)
   },
-  async installVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
+  async installVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("installVariant", packageId, variantId)
   },
   async loadDBPFEntries(

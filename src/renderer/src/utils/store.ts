@@ -8,7 +8,7 @@ import { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarDataPatch } from "@common/exemplars"
 import { ModalData, ModalID } from "@common/modals"
 import { OptionID, OptionValue } from "@common/options"
-import { PackageID } from "@common/packages"
+import { PackageID, getPackageStatus, isIncluded } from "@common/packages"
 import { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
 import { Settings } from "@common/settings"
 import { ApplicationState, ApplicationStateUpdate, getInitialState } from "@common/state"
@@ -96,7 +96,7 @@ export interface StoreActions {
   simtropolisLogin(): Promise<void>
   simtropolisLogout(): Promise<void>
   switchProfile(profileId: ProfileID): Promise<void>
-  updatePackage(packageId: PackageID, variantId: VariantID): Promise<void>
+  updatePackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
   updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean>
   updateState(update: ApplicationStateUpdate): void
 }
@@ -397,11 +397,33 @@ export const useStore = create<Store>()((set, get): Store => {
         }
       },
       async updatePackage(packageId, variantId) {
+        const store = get()
+        const packageInfo = getPackageInfo(store, packageId)
+        const profileInfo = getCurrentProfile(store)
+        const variantInfo = packageInfo?.variants[variantId]
+        if (!packageInfo || !variantInfo?.update) {
+          return false
+        }
+
         try {
-          await window.api.installVariant(packageId, variantId)
+          // If the variant to update is included in the current profile, then the update may cause
+          // changes in files/conflicts/dependencies. Thus we need to trigger package resolution as
+          // if the profile was changed.
+          if (profileInfo && isIncluded(variantInfo, getPackageStatus(packageInfo, profileInfo))) {
+            return await window.api.updateProfile(profileInfo.id, {
+              packages: {
+                [packageId]: {
+                  version: variantInfo.update.version,
+                },
+              },
+            })
+          }
+
+          return await window.api.installVariant(packageId, variantId)
         } catch (error) {
           console.error(`Failed to update ${packageId}`, error)
           this.showErrorToast(`Failed to update ${packageId}`)
+          return false
         }
       },
       async updateProfile(profileId, data) {

@@ -73,9 +73,13 @@ export function VariantActions({
     }
 
     if (!isSelected) {
+      const selectWarning = variantInfo.warnings?.find(warning => warning.on === "variant")
+
       packageActions.push({
         color: "success",
-        description: incompatible ? t("select.reason.incompatible") : t("select.description"),
+        description: incompatible
+          ? t("select.reason.incompatible")
+          : selectWarning?.message ?? t("select.description"),
         disabled: !!packageStatus?.included && incompatible,
         id: "select",
         label: t("select.label"),
