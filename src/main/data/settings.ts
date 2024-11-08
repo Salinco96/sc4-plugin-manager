@@ -78,7 +78,7 @@ export async function loadSettings(
   // settings.install.path
   // Determine game installation path
   try {
-    const installPath = await checkInstallPath(settings.install?.path)
+    const installPath = await checkInstallPath(context, settings.install?.path)
 
     if (installPath) {
       settings.install ??= { path: installPath }
@@ -99,9 +99,9 @@ export async function loadSettings(
       // false      : patch not applied, do not ask on startup
       // undefined  : patch not applied, ask on startup
 
-      const { applied, doNotAskAgain } = await check4GBPatch(settings.install.path, {
-        doNotAskAgain: settings.install.patched === false,
+      const { applied, doNotAskAgain } = await check4GBPatch(context, settings.install.path, {
         isStartupCheck: true,
+        skipSuggestion: settings.install.patched === false,
       })
 
       settings.install.patched = applied || (doNotAskAgain ? false : undefined)

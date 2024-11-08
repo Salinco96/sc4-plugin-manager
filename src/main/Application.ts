@@ -99,6 +99,7 @@ import {
   TEMPLATE_PREFIX,
 } from "./utils/constants"
 import { env, isDev } from "./utils/env"
+import { check4GBPatch } from "./utils/exe"
 import { createChildProcess } from "./utils/processes"
 import { handleDocsProtocol } from "./utils/protocols"
 import {
@@ -230,6 +231,37 @@ export class Application {
 
     // Clean up empty folders
     await removeIfEmptyRecursive(path.dirname(targetFullPath), pluginsPath)
+  }
+
+  /**
+   * Checks the 4GB Patch and suggests applying it.
+   */
+  public async check4GBPatch(): Promise<boolean> {
+    const { settings } = await this.load()
+
+    return this.tasks.queue("4gb:check", {
+      handler: async context => {
+        if (!settings.install?.path) {
+          throw Error("Game installation path is not set")
+        }
+
+        const { applied } = await check4GBPatch(context, settings.install.path, {
+          isStartupCheck: false,
+          skipSuggestion: false,
+        })
+
+        if (applied) {
+          settings.install.patched = true
+        } else if (settings.install.patched) {
+          delete settings.install.patched
+        }
+
+        await this.writeSettings(context, settings)
+
+        return applied
+      },
+      pool: "main",
+    })
   }
 
   /**
@@ -776,8 +808,7 @@ export class Application {
 
   protected init(): void {
     // Register message handlers
-    // TODO: this.handle("check4GBPatch")
-    // TODO: this.handle("cleanVariant")
+    this.handle("check4GBPatch")
     this.handle("clearPackageLogs")
     this.handle("createProfile")
     this.handle("createVariant")
@@ -2552,134 +2583,6 @@ export class Application {
     }
 
     return result
-
-    //     // Collect warnings
-    //     const warnings = new Map<string, { packageIds: PackageID[]; warning: PackageWarning }>()
-
-    //     // On-enable warnings
-    //     for (const packageId of enablingPackages) {
-    //       const variantInfo = packages[packageId]!.variants[resultingStatus[packageId]!.variantId]
-    //       if (variantInfo?.warnings) {
-    //         for (const warning of variantInfo.warnings) {
-    //           if (warning.id && this.ignoredWarnings.has(warning.id)) {
-    //             continue
-    //           }
-
-    //           if (warning.on !== "enable") {
-    //             continue
-    //           }
-
-    //           const warningId = warning.id ?? warning.message
-    //           if (!warningId) {
-    //             console.warn("Warning has neither id nor message")
-    //             continue
-    //           }
-
-    //           const existing = warnings.get(warningId)
-    //           if (existing) {
-    //             existing.packageIds.push(packageId)
-    //           } else {
-    //             warnings.set(warning.on + ":" + warningId, { packageIds: [packageId], warning })
-    //           }
-    //         }
-    //       }
-    //     }
-
-    //     // On-disable warnings
-    //     // TODO: Automatically detect disabling lots/mmps, including options?
-    //     for (const packageId of disablingPackages) {
-    //       const variantInfo = packages[packageId]!.variants[resultingStatus[packageId]!.variantId]
-    //       if (variantInfo?.warnings) {
-    //         for (const warning of variantInfo.warnings) {
-    //           if (warning.id && this.ignoredWarnings.has(warning.id)) {
-    //             continue
-    //           }
-
-    //           if (warning.on !== "disable") {
-    //             continue
-    //           }
-
-    //           const warningId = warning.id ?? warning.message
-    //           if (!warningId) {
-    //             console.warn("Warning has neither id nor message")
-    //             continue
-    //           }
-
-    //           const existing = warnings.get(warningId)
-    //           if (existing) {
-    //             existing.packageIds.push(packageId)
-    //           } else {
-    //             warnings.set(warning.on + ":" + warningId, { packageIds: [packageId], warning })
-    //           }
-    //         }
-    //       }
-    //     }
-
-    //     // On-variant-change warnings
-    //     // TODO: Automatically detect disabling lots/mmps, including options?
-    //     for (const packageId of keys(selectingVariants)) {
-    //       const variantInfo = packages[packageId]!.variants[resultingStatus[packageId]!.variantId]
-    //       if (variantInfo?.warnings) {
-    //         for (const warning of variantInfo.warnings) {
-    //           if (warning.id && this.ignoredWarnings.has(warning.id)) {
-    //             continue
-    //           }
-
-    //           if (warning.on !== "variantChange") {
-    //             continue
-    //           }
-
-    //           const warningId = warning.id ?? warning.message
-    //           if (!warningId) {
-    //             console.warn("Warning has neither id nor message")
-    //             continue
-    //           }
-
-    //           const existing = warnings.get(warningId)
-    //           if (existing) {
-    //             existing.packageIds.push(packageId)
-    //           } else {
-    //             warnings.set(warning.on + ":" + warningId, { packageIds: [packageId], warning })
-    //           }
-    //         }
-    //       }
-    //     }
-
-    //     // Confirm warnings
-    //     for (const { packageIds, warning } of warnings.values()) {
-    //       const { id = "bulldoze", on = "enable" } = warning
-
-    //       const packageNames = packageIds.map(packageId => {
-    //         const packageInfo = packages[packageId]
-    //         return packageInfo?.name ?? packageId
-    //       })
-
-    //       // TODO: Use our own modal rather than system one?
-    //       const { confirmed, doNotAskAgain } = await showConfirmation(
-    //         t(`WarningModal:title`, {
-    //           count: packageNames.length - 1,
-    //           packageName: packageNames[0],
-    //         }),
-    //         t(`WarningModal:confirmation.${on}`),
-    //         warning.message ??
-    //           t(`${on}.${id}`, {
-    //             count: packageNames.length,
-    //             defaultValue: id,
-    //             ns: "Warning",
-    //             packageNames: packageNames.sort(),
-    //           }),
-    //         !!warning.id,
-    //         "warning",
-    //       )
-
-    //       if (doNotAskAgain && warning.id) {
-    //         this.ignoredWarnings.add(warning.id)
-    //       }
-
-    //       if (!confirmed) {
-    //         return false
-    //       }
-    //     }
   }
 
   protected async writePackageConfig(

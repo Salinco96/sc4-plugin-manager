@@ -7,8 +7,10 @@ import { cmd } from "@node/processes"
 
 import { FILENAMES, SC4_INSTALL_PATHS } from "./constants"
 import { showConfirmation, showError, showFolderSelector, showSuccess } from "./dialog"
+import { TaskContext } from "./tasks"
 
 export async function checkInstallPath(
+  context: TaskContext,
   installPath: string | undefined,
 ): Promise<string | undefined> {
   if (installPath) {
@@ -19,7 +21,7 @@ export async function checkInstallPath(
 
   for (const suggestedPath of SC4_INSTALL_PATHS) {
     if (await exists(getExePath(suggestedPath))) {
-      console.info(`Detected installation path ${suggestedPath}`)
+      context.info(`Detected installation path ${suggestedPath}`)
       return suggestedPath
     }
   }
@@ -42,13 +44,14 @@ export async function checkInstallPath(
 }
 
 export async function check4GBPatch(
+  context: TaskContext,
   installPath: string,
   options: {
-    doNotAskAgain?: boolean
     isStartupCheck?: boolean
+    skipSuggestion?: boolean
   } = {},
 ): Promise<{ applied: boolean; doNotAskAgain: boolean }> {
-  console.info("Checking 4GB Patch...")
+  context.info("Checking 4GB Patch...")
 
   const exePath = getExePath(installPath)
 
@@ -57,11 +60,11 @@ export async function check4GBPatch(
     const patched = getPEFlag(header, PEFlag.LARGE_ADDRESS_AWARE)
 
     if (patched) {
-      console.info("4GB Patch is already applied")
+      context.info("4GB Patch is already applied")
       return { applied: true, doNotAskAgain: false }
     }
 
-    if (options.doNotAskAgain) {
+    if (options.skipSuggestion) {
       return { applied: false, doNotAskAgain: true }
     }
 
@@ -84,7 +87,7 @@ export async function check4GBPatch(
 
         return { applied: true, doNotAskAgain }
       } catch (error) {
-        console.error("Failed to apply the 4GB Patch", error)
+        context.error("Failed to apply the 4GB Patch", error)
         await showError(
           i18n.t("Check4GBPatchModal:title"),
           i18n.t("Check4GBPatchModal:failure"),

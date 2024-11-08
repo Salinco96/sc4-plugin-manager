@@ -1,12 +1,5 @@
-import {
-  FormControlLabel,
-  FormGroup,
-  Paper,
-  Switch,
-  Tooltip,
-  Typography,
-  useTheme,
-} from "@mui/material"
+import { CheckCircle as AppliedIcon, Cancel as NotAppliedIcon } from "@mui/icons-material"
+import { FormGroup, Paper, Tooltip, Typography, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
@@ -62,22 +55,50 @@ function Settings(): JSX.Element {
               t("install.version.emptyValue")
             )}
           </FlexBox>
-          <FormControlLabel
-            checked={!!settings?.install?.patched}
-            control={<Switch color="primary" />}
-            disabled={!settings?.install || !!settings?.install?.patched}
-            label={t("install.patched.label")}
-            labelPlacement="start"
-            onChange={async event => {
-              const value = (event.target as HTMLInputElement).checked
-              if (value) {
-                await actions.check4GBPatch()
-              }
-            }}
-            slotProps={{ typography: { sx: { flex: 1 } } }}
-            sx={{ marginLeft: 0 }}
-            title={settings?.install?.patched ? t("install.patched.reason.applied") : undefined}
-          />
+          <FlexBox alignItems="center" height={38} gap={2}>
+            <Typography sx={{ flex: 1 }}>{t("install.patched.label")}</Typography>
+            {!settings?.install?.patched ? (
+              <FlexBox
+                alignItems="center"
+                sx={{
+                  "& span": {
+                    overflow: "hidden",
+                    textWrap: "nowrap",
+                    transition: "width 0.3s",
+                    width: 0,
+                  },
+                  "&:hover span": {
+                    marginLeft: 1,
+                    width: 56,
+                  },
+                }}
+              >
+                <AppliedIcon color="success" />
+                <span>{t("install.patched.applied")}</span>
+              </FlexBox>
+            ) : (
+              <FlexBox
+                alignItems="center"
+                onClick={() => actions.check4GBPatch()}
+                sx={{
+                  cursor: "pointer",
+                  "& span": {
+                    overflow: "hidden",
+                    textWrap: "nowrap",
+                    transition: "width 0.3s",
+                    width: 0,
+                  },
+                  "&:hover span": {
+                    marginLeft: 1,
+                    width: 100,
+                  },
+                }}
+              >
+                <NotAppliedIcon color="error" />
+                <span>{t("install.patched.apply")}</span>
+              </FlexBox>
+            )}
+          </FlexBox>
         </FormGroup>
       </Paper>
     </FlexBox>

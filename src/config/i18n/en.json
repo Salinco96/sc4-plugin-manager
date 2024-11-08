@@ -492,10 +492,9 @@
   "Settings": {
     "install": {
       "patched": {
-        "label": "$t(General:4gbpatch)",
-        "reason": {
-          "applied": "The $t(General:4gbpatch) has been applied."
-        }
+        "applied": "Applied",
+        "apply": "Click to apply",
+        "label": "$t(General:4gbpatch)"
       },
       "path": {
         "emptyValue": "$t(General:emptyValue)",
