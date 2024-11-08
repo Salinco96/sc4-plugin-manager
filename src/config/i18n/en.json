@@ -465,7 +465,7 @@
   },
   "RemoveConflictingFilesModal": {
     "confirmation": "Remove conflicting files?",
-    "description": "The following external files are conflicting with this plugin:\n{{files, join(multiline: true)}}\n\nDo you want to remove these files? Backeups will be created in {{pluginsBackup}}."
+    "description": "The following external files are conflicting with this plugin:\n{{files, join(multiline: true)}}\n\nDo you want to remove these files? Backups will be created in {{pluginsBackup}}."
   },
   "RemovePackageModal": {
     "confirmation": "Remove local package?",

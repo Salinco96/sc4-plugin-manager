@@ -51,6 +51,7 @@ import {
   isURL,
   moveTo,
   openFile,
+  readFile,
   removeIfEmptyRecursive,
   removeIfPresent,
   toPosix,
@@ -230,7 +231,7 @@ export class Application {
     await moveTo(originFullPath, targetFullPath)
 
     // Clean up empty folders
-    await removeIfEmptyRecursive(path.dirname(targetFullPath), pluginsPath)
+    await removeIfEmptyRecursive(path.dirname(originFullPath), pluginsPath)
   }
 
   /**
@@ -261,6 +262,117 @@ export class Application {
         return applied
       },
       pool: "main",
+    })
+  }
+
+  /**
+   * Runs cleaner for all enabled packages.
+   */
+  public async cleanPackages(options: { packageIds?: PackageID[] } = {}): Promise<void> {
+    const { packages, profiles, settings } = await this.load()
+
+    if (!settings.currentProfile) {
+      return
+    }
+
+    const profileInfo = profiles[settings.currentProfile]
+    if (!profileInfo) {
+      return
+    }
+
+    const { externals } = await this.initLinks()
+
+    await this.tasks.queue(options.packageIds ? `clean:${options.packageIds.join(",")}` : "clean", {
+      handler: async context => {
+        context.debug("Cleaning plugins...")
+        context.setStep("Cleaning plugins...")
+
+        let nPackages = 0
+        const packageIds = options.packageIds ? options.packageIds : keys(packages)
+
+        for (const packageId of packageIds) {
+          context.setProgress(nPackages++, packageIds.length)
+
+          const packageInfo = packages[packageId]
+          if (!packageInfo) {
+            throw Error(`Unknown package '${packageId}'`)
+          }
+
+          const packageStatus = packageInfo?.status[profileInfo.id]
+          if (!packageStatus?.included) {
+            continue
+          }
+
+          const variantId = packageStatus.variantId
+          const variantInfo = packageInfo?.variants[variantId]
+          if (!variantInfo?.files) {
+            context.warn(`Variant '${packageId}#${variantId}' is not installed`)
+            continue
+          }
+
+          const conflictingFiles = new Set<string>()
+
+          const filenames = new Set(variantInfo.files?.map(file => path.basename(file.path)))
+
+          const variantPath = this.getVariantPath(packageId, variantId)
+          const cleanitolPath = path.join(variantPath, DIRNAMES.cleanitol)
+
+          const cleanitolFiles = await glob("*.txt", {
+            cwd: cleanitolPath,
+            dot: true,
+            matchBase: true,
+            nodir: true,
+          })
+
+          for (const cleanitolFile of cleanitolFiles) {
+            const contents = await readFile(path.join(cleanitolPath, cleanitolFile))
+            for (const line of contents.split("\n")) {
+              const filename = line.split(";")[0].trim()
+
+              if (filename) {
+                filenames.add(filename)
+              }
+            }
+          }
+
+          for (const filename of filenames) {
+            for (const externalFile of externals) {
+              if (path.basename(externalFile) === filename) {
+                conflictingFiles.add(externalFile)
+              }
+            }
+          }
+
+          if (conflictingFiles.size) {
+            const fileNames = Array.from(conflictingFiles)
+
+            const { confirmed } = await showConfirmation(
+              packageInfo.name,
+              t("RemoveConflictingFilesModal:confirmation"),
+              t("RemoveConflictingFilesModal:description", {
+                files: fileNames.sort(),
+                pluginsBackup: DIRNAMES.pluginsBackup,
+              }),
+            )
+
+            if (confirmed) {
+              for (const conflictingFile of conflictingFiles) {
+                await this.backUpFile(context, conflictingFile)
+                externals.delete(conflictingFile)
+              }
+
+              context.debug(`Resolved ${conflictingFiles.size} conflicts`)
+            } else {
+              context.debug(`Ignored ${conflictingFiles.size} conflicts`)
+            }
+          }
+        }
+      },
+      invalidate: true,
+      onStatusUpdate: info => {
+        this.sendStateUpdate({ linker: info })
+      },
+      pool: "link",
     })
   }
 
@@ -1272,7 +1384,8 @@ export class Application {
           const variantId = packageStatus.variantId
           const variantInfo = packageInfo?.variants[variantId]
           if (!variantInfo?.files) {
-            throw Error(`Variant '${packageId}#${variantId}' is not installed`)
+            context.warn(`Variant '${packageId}#${variantId}' is not installed`)
+            continue
           }
 
           const makeLink = async (fromFullPath: string, toRelativePath: string) => {
@@ -1482,7 +1595,7 @@ export class Application {
           this.sendStateUpdate({ features, packages })
 
           // Run cleaner for all enabled packages
-          // await this.cleanAll()
+          this.cleanPackages()
         }
 
         context.setStep(null)
@@ -2532,19 +2645,9 @@ export class Application {
               })
 
               // Run cleaner and linker
-              if (shouldRecalculate) {
-                // for (const packageId of enablingPackages) {
-                //   const variantInfo = this.requireCurrentVariant(
-                //     packageId,
-                //     resultingStatus[packageId],
-                //   )
-                //   await this.cleanVariant(packageId, variantInfo.id)
-                // }
-
-                if (settings.currentProfile === profileId) {
-                  this.sendStateUpdate({ features: resultingFeatures })
-                }
-
+              if (shouldRecalculate && settings.currentProfile === profileId) {
+                this.sendStateUpdate({ features: resultingFeatures })
+                this.cleanPackages({ packageIds: enablingPackages })
                 this.linkPackages()
               }
             } finally {
@@ -2641,169 +2744,4 @@ export class Application {
     settings.format = ConfigFormat.YAML
     this.sendStateUpdate({ settings })
   }
-
-  /** TODO: ALL BELOW */
-
-  // /**
-  //  * Runs Cleanitol for all enabled packages.
-  //  */
-  // public async cleanAll(): Promise<void> {
-  //   await this.tasks.queue("clean:all", {
-  //     handler: async context => {
-  //       const { packages } = this.state
-
-  //       const profileInfo = this.getCurrentProfile()
-
-  //       context.setStep("Checking for conflicts...")
-
-  //       if (packages && profileInfo) {
-  //         let nPackages = 0
-  //         const nTotalPackages = size(packages)
-  //         for (const packageId of keys(packages)) {
-  //           context.setProgress(nPackages++, nTotalPackages)
-
-  //           const packageStatus = this.getPackageStatus(packageId)
-  //           if (packageStatus?.included) {
-  //             await this.doCleanVariant(context, packageId, packageStatus.variantId)
-  //           }
-  //         }
-  //       }
-  //     },
-  //     onStatusUpdate: info => {
-  //       this.state.status.linker = info
-  //       this.sendStatus()
-  //     },
-  //     pool: "link",
-  //   })
-  // }
-
-  // /**
-  //  * Runs Cleanitol for a single variant.
-  //  */
-  // public async cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
-  //   await this.tasks.queue(`clean:${packageId}#${variantId}`, {
-  //     handler: async context => {
-  //       await this.doCleanVariant(context, packageId, variantId)
-  //     },
-  //     invalidate: true,
-  //     pool: `${packageId}#${variantId}`,
-  //   })
-  // }
-
-  // /**
-  //  * Runs Cleanitol for a single variant (internal).
-  //  */
-  // protected async doCleanVariant(
-  //   context: TaskContext,
-  //   packageId: PackageID,
-  //   variantId: VariantID,
-  // ): Promise<void> {
-  //   const packageInfo = this.getPackageInfo(packageId)
-  //   const variantInfo = packageInfo?.variants[variantId]
-  //   if (packageInfo && variantInfo) {
-  //     context.debug(`Cleaning for package ${packageId}#${variantId}...`)
-
-  //     const pluginsPath = this.getPluginsPath()
-  //     const conflictingFiles = new Set<string>()
-
-  //     const filenames = new Set(variantInfo.files?.map(file => path.basename(file.path)))
-
-  //     if (variantInfo.cleanitol) {
-  //       const variantPath = this.getVariantPath(packageId, variantId)
-  //       const cleanitolPath = path.join(variantPath, variantInfo.cleanitol)
-
-  //       const cleanitolFiles = await glob("*.txt", {
-  //         cwd: cleanitolPath,
-  //         dot: true,
-  //         matchBase: true,
-  //         nodir: true,
-  //       })
-
-  //       for (const cleanitolFile of cleanitolFiles) {
-  //         const contents = await readFile(path.join(cleanitolPath, cleanitolFile))
-  //         for (const line of contents.split("\n")) {
-  //           const filename = line.split(";")[0].trim()
-
-  //           if (filename) {
-  //             filenames.add(filename)
-  //           }
-  //         }
-  //       }
-  //     }
-
-  //     for (const filename of filenames) {
-  //       for (const externalFile of this.externalFiles) {
-  //         if (path.basename(externalFile) === filename) {
-  //           conflictingFiles.add(externalFile)
-  //         }
-  //       }
-  //     }
-
-  //     if (conflictingFiles.size) {
-  //       const fileNames = mapDefined(Array.from(conflictingFiles), file =>
-  //         path.relative(pluginsPath, file),
-  //       )
-
-  //       const { confirmed } = await showConfirmation(
-  //         packageInfo.name,
-  //         t("RemoveConflictingFilesModal:confirmation"),
-  //         t("RemoveConflictingFilesModal:description", {
-  //           files: fileNames.sort(),
-  //           pluginsBackup: DIRNAMES.pluginsBackup,
-  //         }),
-  //       )
-
-  //       if (confirmed) {
-  //         for (const conflictingFile of conflictingFiles) {
-  //           await this.backUpFile(context, conflictingFile)
-  //         }
-
-  //         context.debug(`Resolved ${conflictingFiles.size} conflicts`)
-  //       } else {
-  //         context.debug(`Ignored ${conflictingFiles.size} conflicts`)
-  //       }
-  //     }
-  //   }
-  // }
-
-  // public async installPackages(packages: {
-  //   [packageId in PackageID]?: VariantID
-  // }): Promise<boolean> {
-  //   const updatingPackages: {
-  //     [packageId in PackageID]?: PackageConfig
-  //   } = {}
-
-  //   // Check if we are updating already-enabled variants - in that case we need to recalculate
-  //   const currentProfile = this.getCurrentProfile()
-  //   if (currentProfile) {
-  //     for (const [packageId, variantId] of entries(packages)) {
-  //       const packageStatus = this.getPackageStatus(packageId)
-  //       if (packageStatus?.included && packageStatus?.variantId === variantId) {
-  //         const variantInfo = this.getVariantInfo(packageId, variantId)
-  //         if (variantInfo?.update) {
-  //           updatingPackages[packageId] = {
-  //             variant: packages[packageId],
-  //             version: variantInfo.update.version,
-  //           }
-  //         }
-  //       }
-  //     }
-
-  //     if (Object.keys(updatingPackages).length) {
-  //       const result = await this.updateProfile(currentProfile.id, { packages: updatingPackages })
-
-  //       if (!result) {
-  //         return false
-  //       }
-  //     }
-  //   }
-
-  //   await Promise.all(
-  //     entries(packages)
-  //       .filter(([packageId]) => !updatingPackages[packageId])
-  //       .map(([packageId, variantId]) => this.installVariant(packageId, variantId)),
-  //   )
-
-  //   return true
-  // }
 }
