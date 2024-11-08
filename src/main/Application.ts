@@ -80,12 +80,7 @@ import {
   loadRemotePackages,
   toPackageData,
 } from "./data/packages"
-import {
-  Warning,
-  getDefaultVariant,
-  resolvePackageUpdates,
-  resolvePackages,
-} from "./data/packages/resolve"
+import { getDefaultVariant, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { loadSettings } from "./data/settings"
 import { MainWindow } from "./MainWindow"
@@ -2135,7 +2130,7 @@ export class Application {
   public async updateProfile(profileId: ProfileID, update: ProfileUpdate): Promise<boolean> {
     const key = `update:${profileId}#${toHex(Date.now(), 8)}`
 
-    const confirmedWarnings: { [id: string]: Warning } = {}
+    const confirmedWarnings: { [id: string]: PackageID[] } = {}
 
     let result: boolean | undefined
 
@@ -2166,7 +2161,6 @@ export class Application {
               resultingFeatures,
               resultingProfile,
               resultingStatus,
-              // selectingVariants,
               shouldRecalculate,
               warnings,
             } = resolvePackageUpdates(
@@ -2395,7 +2389,7 @@ export class Application {
                   }
 
                   const packageIds = warning.packageIds.filter(packageId => {
-                    return !confirmedWarnings[warning.id]?.packageIds.includes(packageId)
+                    return !confirmedWarnings[warning.id]?.includes(packageId)
                   })
 
                   if (!packageIds.length) {
@@ -2428,11 +2422,8 @@ export class Application {
                     return false
                   }
 
-                  if (confirmedWarnings[warning.id]) {
-                    confirmedWarnings[warning.id].packageIds.push(...packageIds)
-                  } else {
-                    confirmedWarnings[warning.id] = warning
-                  }
+                  confirmedWarnings[warning.id] ??= []
+                  confirmedWarnings[warning.id].push(...packageIds)
                 }
 
                 // Confirm download of new assets

@@ -1,4 +1,3 @@
-import { i18n } from "@common/i18n"
 import {
   OptionInfo,
   Options,
@@ -25,7 +24,6 @@ import {
   LotInfo,
   PackageInfo,
   PackageStatus,
-  PackageWarning,
   Packages,
 } from "@common/types"
 import { containsWhere, removeElement, union, unique } from "@common/utils/arrays"
@@ -40,6 +38,7 @@ import {
 } from "@common/utils/objects"
 import { isEnum } from "@common/utils/types"
 import { DependencyInfo, Issue, VariantID, VariantInfo, VariantIssue } from "@common/variants"
+import { Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
 import { TaskContext } from "@utils/tasks"
 
 function getVariantIncompatibilities(
@@ -881,27 +880,4 @@ function getEnabledLots(
   })
 
   return lots
-}
-
-export interface Warning {
-  id: string
-  message: string
-  packageIds: PackageID[]
-  title: string
-}
-
-function getWarningId(warning: PackageWarning, packageId: PackageID): string {
-  return warning.id ?? warning.on ? `${packageId}:${warning.on}` : packageId
-}
-
-function getWarningTitle(warning: PackageWarning): string {
-  return warning.title ?? i18n.t(warning.on ?? "default", { ns: "WarningTitle" })
-}
-
-function getWarningMessage(warning: PackageWarning): string {
-  if (warning.id && !warning.message) {
-    return i18n.t(warning.id, { defaultValue: warning.id, ns: "WarningMessage" })
-  } else {
-    return warning.message ?? ""
-  }
 }

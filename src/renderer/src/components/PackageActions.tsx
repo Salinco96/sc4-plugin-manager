@@ -18,6 +18,7 @@ import {
 } from "@common/packages"
 import { keys } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
+import { getWarningMessage } from "@common/warnings"
 import {
   useCurrentVariant,
   useFilteredVariants,
@@ -108,7 +109,9 @@ export function PackageActions({
         color: "error",
         description: required
           ? t("disable.reason.required", { count: packageStatus?.requiredBy?.length })
-          : disableWarning?.message ?? t("disable.description"),
+          : disableWarning
+            ? getWarningMessage(disableWarning)
+            : t("disable.description"),
         id: "disable",
         label: t("disable.label"),
         onClick: () => actions.disablePackage(packageId),
@@ -118,7 +121,9 @@ export function PackageActions({
         color: "success",
         description: incompatible
           ? t("enable.reason.incompatible")
-          : enableWarning?.message ?? t("enable.description"),
+          : enableWarning
+            ? getWarningMessage(enableWarning)
+            : t("enable.description"),
         disabled: incompatible,
         id: "enable",
         label: t("enable.label"),
@@ -132,7 +137,9 @@ export function PackageActions({
         color: "error",
         description: required
           ? t("remove.reason.required", { count: packageStatus?.requiredBy?.length })
-          : disableWarning?.message ?? t("remove.description"),
+          : disableWarning
+            ? getWarningMessage(disableWarning)
+            : t("remove.description"),
         disabled: required,
         id: "remove",
         label: t("remove.label"),
@@ -149,7 +156,9 @@ export function PackageActions({
         packageActions.push({
           description: incompatible
             ? t("add.reason.incompatible")
-            : enableWarning?.message ?? t("add.description"),
+            : enableWarning
+              ? getWarningMessage(enableWarning)
+              : t("add.description"),
           disabled: incompatible,
           id: "add",
           label: t("add.label"),

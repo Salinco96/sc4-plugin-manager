@@ -1,7 +1,8 @@
 import { PackageWarning } from "@common/types"
+import { getWarningMessage } from "@common/warnings"
 
 import { PackageBanner } from "./PackageBanner"
 
 export function PackageBannerWarning({ warning }: { warning: PackageWarning }): JSX.Element {
-  return <PackageBanner>{warning.message}</PackageBanner>
+  return <PackageBanner header={warning.title}>{getWarningMessage(warning)}</PackageBanner>
 }

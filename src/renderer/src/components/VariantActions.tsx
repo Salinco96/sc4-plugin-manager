@@ -15,6 +15,7 @@ import {
   isRequired,
 } from "@common/packages"
 import { VariantID } from "@common/variants"
+import { getWarningMessage } from "@common/warnings"
 import { usePackageStatus, useVariantInfo } from "@utils/packages"
 import { useCurrentProfile, useStoreActions } from "@utils/store"
 
@@ -79,7 +80,9 @@ export function VariantActions({
         color: "success",
         description: incompatible
           ? t("select.reason.incompatible")
-          : selectWarning?.message ?? t("select.description"),
+          : selectWarning
+            ? getWarningMessage(selectWarning)
+            : t("select.description"),
         disabled: !!packageStatus?.included && incompatible,
         id: "select",
         label: t("select.label"),
