@@ -20,6 +20,9 @@ export const api = {
   async clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("clearPackageLogs", packageId, variantId)
   },
+  async clearUnusedPackages(): Promise<void> {
+    return ipcRenderer.invoke("clearUnusedPackages")
+  },
   async createProfile(name: string, templateProfileId?: ProfileID): Promise<void> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },

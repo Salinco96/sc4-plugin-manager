@@ -13,7 +13,15 @@ import { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarDataPatch, ExemplarPropertyInfo } from "@common/exemplars"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { OptionInfo, Requirements, getOptionValue } from "@common/options"
-import { PackageID, checkFile, isDependency, isIncluded } from "@common/packages"
+import {
+  PackageID,
+  checkFile,
+  isDependency,
+  isIncluded,
+  isInstalled,
+  isLocal,
+  isPatched,
+} from "@common/packages"
 import {
   ProfileData,
   ProfileID,
@@ -62,6 +70,7 @@ import {
   ConflictConfirmationResponse,
   showConfirmation,
   showConflictConfirmation,
+  showSuccess,
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 import { ToolID, getToolInfo } from "@utils/tools"
@@ -390,6 +399,84 @@ export class Application {
     const logsPath = path.join(this.getPluginsPath(), variantInfo.logs)
 
     await removeIfPresent(logsPath)
+  }
+
+  /**
+   * Removes all non-local variants not used by any profile.
+   */
+  public async clearUnusedPackages(): Promise<void> {
+    const { packages, profiles, profileOptions, settings } = await this.load()
+
+    await this.tasks.queue("clear:packages", {
+      handler: async context => {
+        context.debug("Removing unused packages...")
+        context.setStep("Removing unused packages...")
+
+        const packageStatus = values(profiles).map(profileInfo => {
+          const { resultingStatus } = resolvePackages(
+            packages,
+            profileInfo,
+            profileOptions,
+            settings,
+          )
+
+          return resultingStatus
+        })
+
+        const unusedVariants = values(packages).flatMap(packageInfo => {
+          return values(packageInfo.variants)
+            .filter(
+              variantInfo =>
+                isInstalled(variantInfo) &&
+                !isLocal(variantInfo) &&
+                !packageStatus.some(status => isIncluded(variantInfo, status[packageInfo.id])),
+            )
+            .map(variantInfo => ({
+              packageId: packageInfo.id,
+              variantId: variantInfo.id,
+              patched: isPatched(variantInfo),
+            }))
+        })
+
+        if (unusedVariants.length) {
+          const { confirmed } = await showConfirmation(
+            i18n.t("ClearUnusedPackagesModal:title"),
+            i18n.t("ClearUnusedPackagesModal:confirmation"),
+            i18n.t("ClearUnusedPackagesModal:description", {
+              count: unusedVariants.length,
+              variants: unusedVariants
+                .map(
+                  ({ packageId, variantId, patched }) =>
+                    `${packageId}#${variantId}${patched ? " (patched)" : ""}`,
+                )
+                .sort(),
+            }),
+          )
+
+          if (confirmed) {
+            let nVariants = 0
+            for (const { packageId, variantId } of unusedVariants) {
+              context.setProgress(nVariants++, unusedVariants.length)
+              await this.removeVariant(packageId, variantId)
+            }
+          }
+
+          await showSuccess(
+            i18n.t("ClearUnusedPackagesModal:title"),
+            i18n.t("ClearUnusedPackagesModal:success"),
+          )
+        } else {
+          await showSuccess(
+            i18n.t("ClearUnusedPackagesModal:title"),
+            i18n.t("ClearUnusedPackagesModal:description", { count: 0 }),
+          )
+        }
+      },
+      onStatusUpdate: info => {
+        this.sendStateUpdate({ loader: info })
+      },
+      pool: "main",
+    })
   }
 
   /**
@@ -922,6 +1009,7 @@ export class Application {
     // Register message handlers
     this.handle("check4GBPatch")
     this.handle("clearPackageLogs")
+    this.handle("clearUnusedPackages")
     this.handle("createProfile")
     this.handle("createVariant")
     this.handle("getPackageLogs")
@@ -2546,7 +2634,7 @@ export class Application {
                   })
 
                   const { confirmed, doNotAskAgain } = await showConfirmation(
-                    i18n.t(`WarningModal:title`, {
+                    i18n.t("WarningModal:title", {
                       count: packageNames.length - 1,
                       packageName: packageNames[0],
                     }),

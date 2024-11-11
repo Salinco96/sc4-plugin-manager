@@ -42,6 +42,7 @@ export interface StoreActions {
   addPackage(packageId: PackageID, variantId: VariantID, data?: ProfileUpdate): Promise<boolean>
   check4GBPatch(): Promise<void>
   clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void>
+  clearUnusedPackages(): Promise<void>
   closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: ProfileID): Promise<void>
   createVariant(packageId: PackageID, name: string, templateVariantId: VariantID): Promise<void>
@@ -151,15 +152,18 @@ export const useStore = create<Store>()((set, get): Store => {
       async check4GBPatch() {
         return window.api.check4GBPatch()
       },
+      async clearPackageLogs(packageId, variantId) {
+        return window.api.clearPackageLogs(packageId, variantId)
+      },
+      async clearUnusedPackages() {
+        return window.api.clearUnusedPackages()
+      },
       closeSnackbar(type) {
         const id = get().snackbars[type]
         if (id !== undefined) {
           closeSnackbar(id)
           updateState({ snackbars: { $unset: [type] } })
         }
-      },
-      async clearPackageLogs(packageId, variantId) {
-        return window.api.clearPackageLogs(packageId, variantId)
       },
       async createProfile(name, templateProfileId) {
         return window.api.createProfile(name, templateProfileId)

@@ -1,5 +1,5 @@
 import { CheckCircle as AppliedIcon, Cancel as NotAppliedIcon } from "@mui/icons-material"
-import { FormGroup, Paper, Tooltip, Typography, useTheme } from "@mui/material"
+import { Button, FormGroup, Paper, Tooltip, Typography, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
@@ -101,6 +101,14 @@ function Settings(): JSX.Element {
           </FlexBox>
         </FormGroup>
       </Paper>
+      <Button
+        color="error"
+        onClick={() => actions.clearUnusedPackages()}
+        title={t("actions.clearUnusedPackages.description")}
+        variant="outlined"
+      >
+        {t("actions.clearUnusedPackages.label")}
+      </Button>
     </FlexBox>
   )
 }

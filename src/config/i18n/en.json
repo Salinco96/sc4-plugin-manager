@@ -46,6 +46,14 @@
     "success": "The $t(General:4gbpatch) was applied successfully!",
     "title": "$t(General:4gbpatch)"
   },
+  "ClearUnusedPackagesModal": {
+    "confirmation": "Remove unused packages?",
+    "description_one": "Found {{count}} unused variant:\n{{variants, join(multiline: true)}}\n\nAll patches will be definitely lost.",
+    "description_other": "Found {{count}} unused variants:\n{{variants, join(multiline: true)}}\n\nAll patches will be definitely lost.",
+    "description_zero": "Found no unused packages.",
+    "success": "All unused variants have been removed!",
+    "title": "Remove unused packages"
+  },
   "CreateProfileModal": {
     "actions": {
       "cancel": {
@@ -490,6 +498,12 @@
     "title": "Select your $t(General:game) installation folder (containing SimCity_1.dat)"
   },
   "Settings": {
+    "actions": {
+      "clearUnusedPackages": {
+        "description": "Remove all non-local variants that are not used in any profile",
+        "label": "Remove unused packages"
+      }
+    },
     "install": {
       "patched": {
         "applied": "Applied",
