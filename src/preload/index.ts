@@ -101,6 +101,9 @@ export const api = {
   ): Promise<DBPFFile> {
     return ipcRenderer.invoke("patchDBPFEntries", packageId, variantId, filePath, patches)
   },
+  async removeProfile(profileId: ProfileID): Promise<boolean> {
+    return ipcRenderer.invoke("removeProfile", profileId)
+  },
   async removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("removeVariant", packageId, variantId)
   },

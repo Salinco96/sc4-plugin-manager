@@ -45,7 +45,7 @@ import { globToRegex, matchConditions } from "@common/utils/glob"
 import { toHex } from "@common/utils/hex"
 import { compact, entries, forEach, isEmpty, keys, values } from "@common/utils/objects"
 import { VariantID } from "@common/variants"
-import { writeConfig } from "@node/configs"
+import { removeConfig, writeConfig } from "@node/configs"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -451,6 +451,8 @@ export class Application {
                 )
                 .sort(),
             }),
+            false,
+            unusedVariants.some(({ patched }) => patched) ? "warning" : "question",
           )
 
           if (confirmed) {
@@ -1027,6 +1029,7 @@ export class Application {
     this.handle("openVariantRepository")
     this.handle("openVariantURL")
     this.handle("patchDBPFEntries")
+    this.handle("removeProfile")
     this.handle("removeVariant")
     this.handle("simtropolisLogin")
     this.handle("simtropolisLogout")
@@ -2146,6 +2149,61 @@ export class Application {
   /**
    * Remove an installed variant.
    */
+  public async removeProfile(profileId: ProfileID): Promise<boolean> {
+    const { packages, profiles, profileOptions, settings } = await this.load()
+
+    return this.tasks.queue(`remove:${profileId}`, {
+      handler: async context => {
+        const profileInfo = profiles[profileId]
+        if (!profileInfo?.format) {
+          throw Error(`Profile '${profileId}' does not exist`)
+        }
+
+        const newCurrentProfileId = keys(profiles).find(id => id !== profileId)
+        if (!newCurrentProfileId) {
+          throw Error("Cannot remove last profile")
+        }
+
+        const { confirmed } = await showConfirmation(
+          i18n.t("RemoveProfileModal:title"),
+          i18n.t("RemoveProfileModal:confirmation", { profileName: profileInfo.name }),
+          i18n.t("RemoveProfileModal:description"),
+          false,
+          "warning",
+        )
+
+        if (!confirmed) {
+          return false
+        }
+
+        // Change selected profile
+        if (settings.currentProfile === profileId) {
+          context.debug(`Selecting profile '${newCurrentProfileId}'...`)
+          settings.currentProfile = newCurrentProfileId
+          await this.writeSettings(context, settings)
+          this.recalculatePackages(packages, profileInfo, profileOptions, settings)
+        }
+
+        context.debug(`Removing profile '${profileId}'...`)
+
+        // Remove config file
+        await removeConfig(this.getProfilesPath(), profileId, profileInfo.format)
+        delete profileInfo.format
+
+        // Send update to renderer
+        this.sendStateUpdate({ profiles: { [profileId]: null } })
+
+        await showSuccess(i18n.t("RemoveProfileModal:title"), i18n.t("RemoveProfileModal:success"))
+
+        return true
+      },
+      pool: "main",
+    })
+  }
+
+  /**
+   * Remove an installed variant.
+   */
   public async removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     // TODO: ATM this does not clean obsolete files from Downloads sub-folder!
     const { packages, profiles } = await this.load()
@@ -2295,6 +2353,8 @@ export class Application {
         if (settings.currentProfile === profileId) {
           return
         }
+
+        context.debug(`Selecting profile '${profileId}'...`)
 
         settings.currentProfile = profileId
 

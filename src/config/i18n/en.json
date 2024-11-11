@@ -454,7 +454,10 @@
   },
   "Profile": {
     "actions": {
-      "open": "Open configuration file"
+      "open": "Open configuration file",
+      "remove": {
+        "label": "Delete profile"
+      }
     },
     "externals": {
       "cam": "Have you installed CAM (Colossus Addon Mod) outside of the Manager?",
@@ -478,6 +481,12 @@
   "RemovePackageModal": {
     "confirmation": "Remove local package?",
     "description": "By removing package {{packageName}}, all local files will be lost forever."
+  },
+  "RemoveProfileModal": {
+    "confirmation": "Delete profile {{profileName}}?",
+    "description": "This action cannot be undone. Before deleting, make sure that this profile is not needed to load any of your cities or regions, as it may be difficult to rebuild the same Plugins folder later.",
+    "success": "The profile was deleted successfully!",
+    "title": "Delete profile"
   },
   "RemoveVariantModal": {
     "confirmation": "Remove local variant?",

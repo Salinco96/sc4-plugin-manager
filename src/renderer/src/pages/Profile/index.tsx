@@ -1,16 +1,18 @@
 import { Settings as ConfigIcon } from "@mui/icons-material"
-import { FormControl, FormGroup, IconButton, TextField, Tooltip } from "@mui/material"
+import { Button, FormControl, FormGroup, IconButton, TextField, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { Feature } from "@common/types"
+import { size } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
 import { ProfileOptionsForm } from "@components/Options"
-import { useCurrentProfile, useStoreActions } from "@utils/store"
+import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { ProfileNameInputField } from "./ProfileNameInputField"
 import { ProfileSettingFeatureSwitchField } from "./ProfileSettingSwitchField"
 
 function Profile(): JSX.Element {
+  const profileCount = useStore(store => size(store.profiles ?? {}))
   const profileInfo = useCurrentProfile()
   const actions = useStoreActions()
 
@@ -63,6 +65,14 @@ function Profile(): JSX.Element {
         </FormGroup>
       </FormControl>
       <ProfileOptionsForm />
+      <Button
+        color="error"
+        disabled={profileCount === 1}
+        onClick={() => actions.removeProfile(profileInfo.id)}
+        variant="outlined"
+      >
+        {t("actions.remove.label")}
+      </Button>
     </FlexBox>
   )
 }

@@ -81,6 +81,7 @@ export interface StoreActions {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
   ): Promise<DBPFFile>
+  removeProfile(profileId: ProfileID): Promise<boolean>
   removeVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   resetPackageOptions(packageId: PackageID): Promise<void>
   setPackageOption(
@@ -261,6 +262,15 @@ export const useStore = create<Store>()((set, get): Store => {
       },
       async patchDBPFEntries(packageId, variantId, filePath, patches) {
         return window.api.patchDBPFEntries(packageId, variantId, filePath, patches)
+      },
+      async removeProfile(profileId) {
+        try {
+          return await window.api.removeProfile(profileId)
+        } catch (error) {
+          console.error(`Failed to remove ${profileId}`, error)
+          this.showErrorToast(`Failed to remove ${profileId}`)
+          return false
+        }
       },
       async removeVariant(packageId, variantId) {
         try {

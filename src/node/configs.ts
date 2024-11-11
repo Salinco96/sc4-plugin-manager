@@ -60,3 +60,11 @@ export async function writeConfig<T>(
     await removeIfPresent(oldPath)
   }
 }
+
+export async function removeConfig(
+  basePath: string,
+  filename: string,
+  format: ConfigFormat,
+): Promise<void> {
+  await removeIfPresent(path.join(basePath, filename + format))
+}
