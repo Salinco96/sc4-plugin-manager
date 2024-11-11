@@ -417,7 +417,23 @@ function getAxisOptions(
   const maxValue = Math.max(...values)
 
   if (min === 0 && max === 255) {
-    return { decimalsInFloat: 0, max: 255, min: 0, tickAmount: 255 / 15 }
+    return { decimalsInFloat: 0, max, min, tickAmount: 17 }
+  }
+
+  if (min === 0 && max === 256) {
+    return { decimalsInFloat: 0, max, min, tickAmount: 16 }
+  }
+
+  if (min === -127 && max === 127) {
+    return { decimalsInFloat: 0, max, min, tickAmount: 16 }
+  }
+
+  if (minValue === 0 && maxValue === 0) {
+    if (step === 1) {
+      return { decimalsInFloat: 0, max: 100, min: min === 0 ? 0 : -100, tickAmount: 10 }
+    } else {
+      return { decimalsInFloat: 2, max: 1, min: min === 0 ? 0 : -1, tickAmount: 10 }
+    }
   }
 
   const largest = Math.max(Math.abs(minValue), Math.abs(maxValue))
@@ -427,7 +443,7 @@ function getAxisOptions(
 
   const width = min === 0 ? 1 + Math.floor(largest / scale) : Math.ceil(largest / scale)
 
-  const axisMin = Math.max(minValue >= 0 ? 0 : scale * -width, min ?? Number.MIN_VALUE)
+  const axisMin = Math.max(minValue >= 0 ? 0 : scale * -width, min ?? -Number.MAX_VALUE)
   const axisMax = Math.min(maxValue <= 0 ? 0 : scale * width, max ?? Number.MAX_VALUE)
 
   const range = axisMax - axisMin
