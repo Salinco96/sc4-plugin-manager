@@ -147,7 +147,7 @@ export function ExemplarProperty({
           </FlexBox>
         )}
       </FlexBox>
-      {isArray(value) && info?.size === 2 && info.repeat && (
+      {isArray(value) && info?.size === 2 && !info.items?.at(0)?.choices && info.repeat && (
         <CurveEditor
           onChange={onChange}
           original={isArray(original) ? original : undefined}
