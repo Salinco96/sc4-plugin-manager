@@ -10,8 +10,9 @@ import { getItemInfo, getMax, getMin, getStep } from "./utils"
 
 export interface CurveEditorProps {
   onChange: (value: number[]) => void
-  original?: number[]
+  original: number[] | null | undefined
   property: ExemplarProperty
+  readonly: boolean
   value: number[]
 }
 
@@ -19,6 +20,7 @@ export function CurveEditor({
   onChange,
   original,
   property,
+  readonly,
   value,
 }: CurveEditorProps): JSX.Element {
   const theme = useTheme()
@@ -35,7 +37,7 @@ export function CurveEditor({
 
   const { series, xAxis, yAxis } = useMemo(() => {
     const currentValues = toSeries(value)
-    const originalValues = original && toSeries(original)
+    const originalValues = original ? toSeries(original) : undefined
 
     const allValues = originalValues ? currentValues.concat(originalValues) : currentValues
 
@@ -68,14 +70,14 @@ export function CurveEditor({
       10,
     )
 
-    const currentLastValue = currentValues[currentValues.length - 1]
-    if (currentLastValue[0] !== xAxis.max) {
+    const currentLastValue = currentValues.at(-1)
+    if (currentLastValue && currentLastValue[0] !== xAxis.max) {
       currentValues.push([xAxis.max, currentLastValue[1]])
     }
 
     if (originalValues) {
-      const originalLastValue = originalValues[originalValues.length - 1]
-      if (originalLastValue[0] !== xAxis.max) {
+      const originalLastValue = originalValues.at(-1)
+      if (originalLastValue && originalLastValue[0] !== xAxis.max) {
         originalValues.push([xAxis.max, originalLastValue[1]])
       }
     }
@@ -164,13 +166,14 @@ export function CurveEditor({
   }, [selected, series, xMax, xMin, xStep, value, yMax, yMin, yStep])
   const drag = () => dragFnRef.current()
 
-  const selectedX = selected !== undefined ? series[0].data[selected][0] : undefined
-  const selectedY = selected !== undefined ? series[0].data[selected][1] : undefined
+  const isSelected = selected !== undefined
+  const selectedX = isSelected ? series[0].data[selected][0] : undefined
+  const selectedY = isSelected ? series[0].data[selected][1] : undefined
 
   return (
     <Box
       onMouseDown={() => {
-        if (selected !== undefined && !isDragging) {
+        if (isSelected && !isDragging && !readonly) {
           drag()
         }
       }}
@@ -182,8 +185,7 @@ export function CurveEditor({
         setDragging(false)
       }}
       sx={{
-        cursor:
-          selected !== undefined ? (isDragging !== undefined ? "grabbing" : "grab") : undefined,
+        cursor: isSelected && !readonly ? (isDragging ? "grabbing" : "grab") : undefined,
         "& .apexcharts-tooltip": {
           left: "60px !important",
           top: "40px !important",
@@ -218,7 +220,7 @@ export function CurveEditor({
               },
             ].filter(v => !!v),
             points: [
-              selected !== undefined && {
+              isSelected && {
                 x: selectedX,
                 y: selectedY,
                 label: {

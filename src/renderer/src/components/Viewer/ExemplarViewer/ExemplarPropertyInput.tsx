@@ -18,6 +18,7 @@ export interface ExemplarPropertyInputProps<T extends boolean | number | string>
   isLast: boolean
   name: string
   onChange: (newValue: T) => void
+  openColorPicker: () => void
   original?: T | null
   property: ExemplarProperty
   readonly?: boolean
@@ -28,6 +29,7 @@ export interface ExemplarPropertyInputProps<T extends boolean | number | string>
 export function ExemplarPropertyInput<T extends boolean | number | string>({
   index = 0,
   onChange,
+  openColorPicker,
   original,
   property,
   value,
@@ -93,6 +95,7 @@ export function ExemplarPropertyInput<T extends boolean | number | string>({
       itemLabel={itemLabel}
       label={label}
       onChange={newValue => onChange(newValue as T)}
+      openColorPicker={openColorPicker}
       property={property}
       value={value}
     />

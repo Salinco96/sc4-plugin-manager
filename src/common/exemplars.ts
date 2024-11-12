@@ -81,6 +81,7 @@ export type ExemplarPropertyValue<
 export enum ExemplarDisplayType {
   HEX = "hex",
   RGB = "rgb",
+  RGBA = "rgba",
   TGI = "tgi",
 }
 

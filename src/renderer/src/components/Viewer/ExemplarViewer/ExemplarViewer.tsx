@@ -48,7 +48,7 @@ export function ExemplarViewer({
   onClose,
   onPatch,
   original,
-  readonly,
+  readonly = false,
 }: ExemplarViewerProps): JSX.Element {
   const [currentData, setCurrentData] = useState(data)
   const [originalData, setOriginalData] = useState(original ?? data)

@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 
-import { InputAdornment, TextField } from "@mui/material"
+import { Box, InputAdornment, TextField } from "@mui/material"
 
-import { ExemplarProperty, ExemplarValueType } from "@common/exemplars"
+import { ExemplarDisplayType, ExemplarProperty, ExemplarValueType } from "@common/exemplars"
+import { toHex } from "@common/utils/hex"
+import { isNumber } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
@@ -29,6 +31,7 @@ export interface ExemplarPropertyTextInputProps {
   label: string
   name: string
   onChange: (newValue: number | string | null) => void
+  openColorPicker: () => void
   property: ExemplarProperty
   readonly?: boolean
   setExpanded: (isExpanded: boolean) => void
@@ -47,6 +50,7 @@ export function ExemplarPropertyTextInput({
   label,
   name,
   onChange,
+  openColorPicker,
   property,
   readonly,
   setExpanded,
@@ -63,11 +67,24 @@ export function ExemplarPropertyTextInput({
   const step = itemInfo?.step ?? getStep(type, max)
   const unit = itemInfo?.unit
 
+  const ref = useRef<HTMLInputElement | null>(null)
+
   const formattedValue = formatInputValue(value, type, isHex)
 
   const [inputValue, setInputValue] = useState(formattedValue)
 
   const isCopyable = isHex && getHexSize(type) >= 8
+
+  const color = useMemo(() => {
+    if (isNumber(value) && type === ExemplarValueType.UInt32) {
+      switch (info?.display) {
+        case ExemplarDisplayType.RGB:
+          return "#" + toHex(value, 8).slice(-6)
+        case ExemplarDisplayType.RGBA:
+          return "#" + toHex(value, 8)
+      }
+    }
+  }, [itemInfo, type, value])
 
   useEffect(() => {
     setInputValue(formattedValue)
@@ -76,9 +93,20 @@ export function ExemplarPropertyTextInput({
   return (
     <TextField
       InputProps={{
-        endAdornment: (isCopyable || unit) && (
-          <InputAdornment position="start" sx={{ marginLeft: 1, marginRight: 0 }}>
+        endAdornment: (isCopyable || unit || color) && (
+          <InputAdornment position="start" sx={{ gap: 1, marginLeft: 1, marginRight: 0 }}>
             {unit}
+            {color && (
+              <Box
+                bgcolor={color}
+                border="1px solid #888"
+                height={20}
+                onClick={readonly ? undefined : openColorPicker}
+                title={readonly ? undefined : "Open color picker"}
+                sx={{ cursor: readonly ? undefined : "pointer" }}
+                width={40}
+              />
+            )}
             {isCopyable && <CopyButton text={inputValue} />}
           </InputAdornment>
         ),
@@ -90,6 +118,7 @@ export function ExemplarPropertyTextInput({
           step,
           type: step && !isHex ? "number" : "text",
         },
+        ref,
         startAdornment: (!!itemLabel || isHex) && (
           <InputAdornment position="start">
             <FlexBox gap={1}>
@@ -99,7 +128,7 @@ export function ExemplarPropertyTextInput({
                   <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
                 </FlexBox>
               )}
-              {isHex && "0x"}
+              {isHex && (color ? "#" : "0x")}
             </FlexBox>
           </InputAdornment>
         ),

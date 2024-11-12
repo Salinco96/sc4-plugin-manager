@@ -158,3 +158,24 @@ export function replaceAt<T>(array: ReadonlyArray<T>, index: number, value: T): 
 export function removeAt<T>(array: ReadonlyArray<T>, index: number, count: number = 1): T[] {
   return [...array.slice(0, index), ...array.slice(index + count)]
 }
+
+export function splice<T>(
+  array: ReadonlyArray<T>,
+  index: number,
+  deleteCount: number,
+  ...values: T[]
+): T[] {
+  return [...array.slice(0, index), ...values, ...array.slice(index + deleteCount)]
+}
+
+export function fill<T>(length: number, fn: (index: number) => T): T[] {
+  return Array.from({ length }, (unused, index) => fn(index))
+}
+
+export function pad<T>(array: T[], length: number, value: T): T[] {
+  if (array.length < length) {
+    return Array.from({ length }, (unused, index) => array.at(index) ?? value)
+  } else {
+    return array
+  }
+}
