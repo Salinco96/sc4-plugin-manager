@@ -4,8 +4,10 @@ assets:
     authors:
       - "0xC0000054"
     download: https://github.com/0xC0000054/sc4-auto-run-cheats/releases/download/v{version}/SC4AutoRunCheats.zip
-    lastModified: 2024-11-18T09:48:18.355Z
-    version: 1.1.0
+    filename: SC4AutoRunCheats.zip
+    lastModified: 2024-08-26T21:53:25.000Z
+    repository: https://github.com/0xC0000054/sc4-auto-run-cheats
+    version: 1.2.1
   github/0xC0000054/sc4-auto-save:
     assetId: github/0xC0000054/sc4-auto-save
     authors:
@@ -28,6 +30,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-auto-save
     sha256: 2873ca87bdd93b3f470b3f0e98ca52ec9180238550ffb791bf454dbd21bfeb55
     size: 56097
     textures: []
@@ -55,6 +58,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-city-date-sync
     sha256: abfb3a0f44c0dd99f10d8e27c327c2b47757f11e03eca8ec6adabbe098834097
     size: 35341
     textures: []
@@ -83,6 +87,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-city-lottery-ordinance
     sha256: 34875d97108cf4ce5d2c43c7966e51b3d5620feea6f3bbbbbd55577d201ab370
     size: 67406
     textures: []
@@ -110,6 +115,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-cpu-options
     sha256: 1e649bfac44ba0d1d9c4b2105ee992614646180f966e5ec5094197e74b3db2a1
     size: 52259
     textures: []
@@ -136,6 +142,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-custom-budget-departments
     sha256: 6107dcb38b9def74dc293aa7fcdc86cf32f48873e84dec0931d9a03f98a93215
     size: 51876
     textures: []
@@ -162,6 +169,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-dbpf-loading
     sha256: 95d1ff963c3a56daff58f6ba90a6744436603c0f2ffdf21cb99b36534bc9b62b
     size: 59973
     textures: []
@@ -173,6 +181,7 @@ assets:
       - "0xC0000054"
     download: https://github.com/0xC0000054/sc4-disable-cheats/releases/download/v{version}/SC4DisableCheats.zip
     lastModified: 2024-11-18T09:48:18.355Z
+    repository: https://github.com/0xC0000054/sc4-disable-cheats
     version: 1.0.0
   github/0xC0000054/sc4-disable-demolition-animation:
     assetId: github/0xC0000054/sc4-disable-demolition-animation
@@ -195,6 +204,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-disable-demolition-animation
     sha256: a39f1b28ca37dd8c126755eab25c924cd64b2d7bae9e31d4e2a8a3927b80e7bc
     size: 36113
     textures: []
@@ -221,6 +231,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke
     sha256: a4c4a3a447a15de6788024f38bac013ba0e8253df0f451fd66ade7cb68dc344e
     size: 36096
     textures: []
@@ -247,6 +258,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-disable-network-construction-sounds
     sha256: 0ec5e559afbfc24effa8f1c76f2521034a284d7a776e3fa1e6fd1a29d3cbd19d
     size: 36595
     textures: []
@@ -274,6 +286,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-graphics-options
     sha256: a75269f9975cc9674abf4c68cb52696eef40c1843b10bbe3a9ea3a48bc04cd8a
     size: 79694
     textures: []
@@ -300,6 +313,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-growify
     sha256: 02dae5d6cacfb8091b9fe5db4eb4948519d01fde48a08d59f53a52c7ed062ad3
     size: 41414
     textures: []
@@ -326,6 +340,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-humane-society-ordinance
     sha256: d2931e1b8135183a9bb2a1f683fda3384e8484e91873b45a0b8bd18511499a95
     size: 62653
     textures: []
@@ -353,6 +368,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade
     sha256: 0d39a73488079de8c80626ba25aa580da9205ec9879df291112db65566effb2a
     size: 67503
     textures: []
@@ -362,10 +378,8 @@ assets:
     assetId: github/0xC0000054/sc4-more-building-styles
     authors:
       - "0xC0000054"
-    buildings: []
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-building-styles/releases/download/v{version}/SC4MoreBuildingStyles.zip
-    features: []
     filename: SC4MoreBuildingStyles.zip
     files:
       - BuildingStyles.ini
@@ -374,18 +388,15 @@ assets:
       - SC4MoreBuildingStyles.dll
       - SC4MoreBuildingStyles.ini
       - Third Party Notices.txt
-    lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
+    lastModified: 2024-11-15T01:04:35.000Z
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-18T10:46:40.738Z
       version: 1
-    models: []
-    props: []
-    sha256: dad436341ae7f0a4ce8c6c3fd96af467efe885e8159de40f12a8aed5cdd76209
-    size: 84660
-    textures: []
-    uncompressed: 198503
-    version: 3.1.0
+    repository: https://github.com/0xC0000054/sc4-more-building-styles
+    sha256: 88c8bfa6adf55a765b100b06ef557c070d6e6e498ededf496965873a28b98acd
+    size: 165224
+    uncompressed: 391016
+    version: 3.2.0
   github/0xC0000054/sc4-more-demand-info:
     assetId: github/0xC0000054/sc4-more-demand-info
     authors:
@@ -456,6 +467,7 @@ assets:
       - 6534284a-3224a93f-1689d23a
       - 6534284a-3224a93f-1689d35d
       - 6534284a-c977c536-8956a699
+    repository: https://github.com/0xC0000054/sc4-more-demand-info
     sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
     size: 1699084
     textures: []
@@ -482,6 +494,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-no-kick-out
     sha256: cbe23b9c4d79e3b7496653558c580fe0e50fa622b90ab6ff5f417e4e10040034
     size: 37433
     textures: []
@@ -509,6 +522,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-query-ui-hooks
     sha256: 395294454ad4040cf3756051aa19b0369794c4baee2dca972466c946cad24b48
     size: 177435
     textures: []
@@ -536,6 +550,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-region-census
     sha256: f3a6e06523241b9f6529c9dfb1c888cfdbbd13e582c5af67de76e8e436472e7a
     size: 58573
     textures: []
@@ -562,6 +577,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-remove-phantom-budget-items
     sha256: 7e365830ee40403e71b9a07b1fc5fd310e9791546895ed499d994661ccc9616c
     size: 43257
     textures: []
@@ -588,6 +604,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/0xC0000054/sc4-resource-loading-hooks
     sha256: 6ec120c44afe263087dd7fd80591ea5e7368c6ab335b8f22d379974b21799203
     size: 48838
     textures: []
@@ -599,20 +616,24 @@ assets:
       - bioruebe
     download: https://github.com/bioruebe/cicdec/releases/download/{version}/cicdec.zip
     lastModified: 2024-11-18T09:48:18.355Z
+    repository: https://github.com/bioruebe/cicdec
     version: 3.0.1
   github/ip7z/7zip:
     assetId: github/ip7z/7zip
     authors:
       - ip7z
-    download: https://github.com/ip7z/7zip/releases/download/{version}/7z2406.msi
-    lastModified: 2024-11-18T09:48:18.355Z
-    version: "24.06"
+    download: https://github.com/ip7z/7zip/releases/download/{version}/7z2408-arm.exe
+    filename: 7z2408-arm.exe
+    lastModified: 2024-08-12T11:56:47.000Z
+    repository: https://github.com/ip7z/7zip
+    version: "24.08"
   github/memo33/cam-exemplar-patch:
     assetId: github/memo33/cam-exemplar-patch
     authors:
       - memo33
     download: https://github.com/memo33/submenus-dll/releases/download/{version}/CAM_2.1.0_Stand_Permanent.memo-exemplar-patch.zip
     lastModified: 2024-11-18T09:48:18.355Z
+    repository: https://github.com/memo33/cam-exemplar-patch
     version: 1.1.0
   github/memo33/sc4-3d-camera-dll:
     assetId: github/memo33/sc4-3d-camera-dll
@@ -635,6 +656,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/memo33/sc4-3d-camera-dll
     sha256: f23e0531c4186c9374e8971f0373541a754d8130579886a35c3f46404438e333
     size: 46989
     textures: []
@@ -661,6 +683,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/memo33/sc4-thumbnail-fix-dll
     sha256: 0c9958c005b90ad2f6660727f8b8e3751577cee1b1e4d22f48b303b7222be05c
     size: 43395
     textures: []
@@ -739,6 +762,7 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/memo33/submenus-dll
     sha256: f7ce49f941b04f6438678ea9e6a1649a010ab96f5feeed9f9b8d495a8a93a464
     size: 716556
     textures: []
@@ -765,10 +789,12 @@ assets:
       version: 1
     models: []
     props: []
+    repository: https://github.com/memo33/transparent-texture-fix-dll
     sha256: f24275e69667e5afbfb3795d78d59ee4b45fce06ec72b2d09e6f3c4b2c852979
     size: 43314
     textures: []
     uncompressed: 93946
     version: 1.0.0
 
-meta: {}
+meta:
+  timestamp: 2024-11-18T10:30:47.575Z

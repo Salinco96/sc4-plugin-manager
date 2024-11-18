@@ -6,21 +6,12 @@ import { BuildingData, Feature, ID, LotData } from "@common/types"
 import { VariantID } from "@common/variants"
 
 export interface IndexerOptions {
-  /** Whether to fetch new entries for a category */
-  fetchNewEntries(
-    data: IndexerEntryList | undefined,
-    source: IndexerSource,
-    category: IndexerSourceCategory,
-  ): boolean
-  /** Whether to fetch this entrys details and resolve it into a package */
-  includeEntry(
-    entry: IndexerBaseEntry,
-    source: IndexerSource | undefined,
-    category: IndexerSourceCategory | undefined,
-  ): boolean
-  /** Sources to index */
+  include: {
+    authors: string[]
+    entries: string[]
+  }
+  refetchIntervalHours: number
   sources: IndexerSource[]
-  /** Metadata version */
   version: number
 }
 
@@ -120,16 +111,21 @@ export type IndexerSourceCategoryID = ID<IndexerSourceCategory>
 
 export type IndexerCategoryID = `${IndexerSourceID}/${IndexerSourceCategoryID}`
 
-export interface IndexerOverride {
+export interface IndexerPathOverride {
   packageId?: PackageID
-  superseded?: AssetID
   variantId?: VariantID
+}
+
+export interface IndexerVariantOverride extends IndexerPathOverride {
+  paths?: {
+    [path in string]?: IndexerPathOverride | null
+  }
+}
+
+export interface IndexerOverride extends IndexerVariantOverride {
+  superseded?: AssetID
   variants?: {
-    [variant in string]?: null | {
-      downloadUrl?: string
-      packageId?: PackageID
-      variantId?: VariantID
-    }
+    [variant in string]?: IndexerVariantOverride | null
   }
 }
 

@@ -32,7 +32,6 @@ import {
   IndexerOptions,
   IndexerOverride,
   IndexerSource,
-  IndexerSourceCategory,
   IndexerSourceCategoryID,
   IndexerSourceID,
 } from "./types"
@@ -54,26 +53,19 @@ const dbAssetsDir = path.join(dbDir, "assets")
 const dbPackagesDir = path.join(dbDir, "packages")
 
 runIndexer({
-  fetchNewEntries(data) {
-    // Refetch new entries at most once every 6 hours
-    if (data?.meta?.timestamp) {
-      const hour = 60 * 60 * 1000
-      return now.getTime() >= data.meta.timestamp.getTime() + 6 * hour
-    }
-
-    return true
+  include: {
+    authors: ["buggi", "cococity", "memo", "null-45", "simmaster07", "toroca"],
+    entries: [
+      "simtropolis/13318",
+      "simtropolis/15758",
+      "simtropolis/21339",
+      "simtropolis/22771",
+      "simtropolis/23089",
+      "simtropolis/27340",
+      "simtropolis/30836",
+    ],
   },
-  includeEntry(entry, source) {
-    return (
-      !source ||
-      [/buggi/i, /cococity/i, /null/i, /memo/i, /simmaster07/i, /toroca/i].some(
-        id => !!entry.authors.some(a => a.match(id)),
-      ) ||
-      [/13318/i, /15758/i, /21339/i, /22771/i, /23089/i, /27340/i, /30836/i].some(
-        id => !!entry.assetId.match(id),
-      )
-    )
-  },
+  refetchIntervalHours: 20,
   sources: [SC4EVERMORE, SIMTROPOLIS],
   version: 1,
 })
@@ -94,12 +86,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   function getAssetID(entryId: EntryID, hint?: string): AssetID {
     return (assetIds[entryId] ??= (hint ?? entryId) as AssetID)
-  }
-
-  function getCategory(entryId: EntryID): IndexerSourceCategory | undefined {
-    const source = getSource(entryId)
-    const categoryId = getEntry(entryId).category
-    return source && categoryId ? source.categories[categoryId] : undefined
   }
 
   function getEntry(entryId: EntryID): IndexerEntry {
@@ -179,54 +165,58 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     if (!isEmpty(data.assets)) {
       data.meta ??= {}
 
-      const outdated = false
-      // todo: !data.meta.timestamp || now.getTime() >= data.meta.timestamp.getTime() + 6 * 60 * 60 * 1000
+      if (shouldRefreshEntryList(data)) {
+        if (sourceId === "github") {
+          await forEachAsync(data.assets, async (entry, entryId) => {
+            const repository = entryId.match(/^github[/]([^/]+[/][^/]+)$/)?.[1]
 
-      if (sourceId === "github" && outdated) {
-        await forEachAsync(data.assets, async (entry, entryId) => {
-          const repository = entryId.match(/^github[/]([^/]+[/][^/]+)$/)?.[1]
+            if (repository) {
+              entry.repository = `https://github.com/${repository}`
 
-          if (repository) {
-            entry.repository = `https://github.com/${repository}`
+              const url = `https://api.github.com/repos/${repository}/releases/latest`
 
-            const url = `https://api.github.com/repos/${repository}/releases/latest`
+              try {
+                errors.add(`Fetching ${url}...`)
 
-            try {
-              const res = await get(url, {})
-              const latest = (await res.json()) as {
-                assets: {
-                  browser_download_url: string
+                const res = await get(url, {})
+                const latest = (await res.json()) as {
+                  assets: {
+                    browser_download_url: string
+                    created_at: string
+                    name: string
+                    size: number
+                    updated_at: string
+                  }[]
                   created_at: string
                   name: string
-                  size: number
-                  updated_at: string
-                }[]
-                created_at: string
-                name: string
-                published_at: string
-                tag_name: string
+                  published_at: string
+                  tag_name: string
+                }
+
+                const version = latest.tag_name.replace(/^v/i, "") // remove leading v
+                const assetName = entry.download?.split("/").at(-1)?.replace("{version}", version)
+                const asset =
+                  latest.assets.find(asset => asset.name === assetName) ?? latest.assets[0]
+
+                if (!entry.download || entry.version !== version) {
+                  entry.download = asset.browser_download_url.replaceAll(version, "{version}")
+                  entry.filename = asset.name
+                  entry.files = undefined
+                  entry.lastModified = new Date(asset.updated_at)
+                  entry.sha256 = undefined
+                  entry.size = undefined
+                  entry.uncompressed = undefined
+                  entry.version = version
+                }
+
+                await wait(3000)
+              } catch (error) {
+                console.error(`Failed to fetch ${url}`, error)
+                errors.add(`Failed to fetch ${url}`)
               }
-
-              const version = latest.tag_name.replace(/^v/i, "") // remove leading v
-              const assetName = entry.download?.split("/").at(-1)?.replace("{version}", version)
-              const asset =
-                latest.assets.find(asset => asset.name === assetName) ?? latest.assets[0]
-
-              if (!entry.download || entry.version !== version) {
-                entry.download = asset.browser_download_url.replaceAll(version, "{version}")
-                entry.filename = asset.name
-                entry.lastModified = new Date(asset.updated_at)
-                entry.version = version
-                delete entry.meta
-              }
-
-              await wait(3000)
-            } catch (error) {
-              console.error(error)
-              errors.add(`Failed to fetch latest release for repository ${repository} - ${url}`)
             }
-          }
-        })
+          })
+        }
 
         data.meta.timestamp = now
       }
@@ -242,7 +232,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       const timestamp = data.meta?.timestamp
 
       // Check whether to refetch asset listing for this category
-      if (options.fetchNewEntries(data, source, category)) {
+      if (shouldRefreshEntryList(data)) {
         console.debug(`Fetching entries from ${source.id}/${category.id}...`)
 
         let nPages: number | undefined
@@ -302,11 +292,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   // Step 3 - Resolve entries
   const resolvingEntries = new Set<AssetID>()
-  for (const entryId of keys(entries)) {
-    if (includeEntry(entryId)) {
+  await forEachAsync(entries, async (entry, entryId) => {
+    if (includeEntry(entry, entryId)) {
       await resolveEntry(entryId)
     }
-  }
+  })
 
   const dbAssets = values(dbAssetsConfigs).reduce(
     (result, assets) => Object.assign(result, assets),
@@ -335,6 +325,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       console.error(error)
       console.error("---")
     }
+  }
+
+  function shouldRefreshEntryList(data: IndexerEntryList): boolean {
+    const interval = options.refetchIntervalHours * 60 * 60 * 1000
+    return !data.meta?.timestamp || now.getTime() >= data.meta.timestamp.getTime() + interval
   }
 
   function checkPackage(packageData: PackageData, packageId: PackageID): void {
@@ -395,22 +390,38 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
   }
 
-  function includeEntry(entryId: EntryID): boolean {
+  function includeEntry(entry: IndexerEntry, entryId: EntryID): boolean {
     if (overrides[entryId] === null) {
       return false
     }
 
-    return options.includeEntry(getEntry(entryId), getSource(entryId), getCategory(entryId))
+    if (options.include.entries.includes(entryId)) {
+      return true
+    }
+
+    const sourceId = getSourceId(entryId)
+
+    if (dbAssetsConfigs[sourceId]?.[entry.assetId]) {
+      return true
+    }
+
+    const authorId = getAuthorId(entry.authors[0])
+
+    if (authorId && options.include.authors.includes(authorId)) {
+      return true
+    }
+
+    return false
   }
 
-  async function getDefaultPackageId(entry: IndexerEntry): Promise<string> {
-    const authorId = await getAuthorId(entry.authors[0])
+  function getDefaultPackageId(entry: IndexerEntry): string {
+    const authorId = getAuthorId(entry.authors[0])
     return `${authorId}/${entry.assetId.split("/").at(-1)?.replace(/^\d+-/, "")}`
   }
 
   async function getPackageId(entry: IndexerEntry, hint?: string): Promise<PackageID> {
     const packageId = await input({
-      default: hint ?? (await getDefaultPackageId(entry)),
+      default: hint ?? getDefaultPackageId(entry),
       message: "Package ID:",
       validate: value => {
         if (!/^[a-z0-9-]+[/][a-z0-9-]+$/.test(value)) {
@@ -851,12 +862,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       exemplarProperties,
     )
 
-    variantEntry.buildings = buildings
-    variantEntry.features = features
-    variantEntry.lots = lots
-    variantEntry.models = models
-    variantEntry.props = props
-    variantEntry.textures = textures
+    variantEntry.buildings = buildings.length ? buildings : undefined
+    variantEntry.features = features.length ? features : undefined
+    variantEntry.lots = lots.length ? lots : undefined
+    variantEntry.models = models.length ? models : undefined
+    variantEntry.props = props.length ? props : undefined
+    variantEntry.textures = textures.length ? textures : undefined
 
     // Resolve dependencies recursively
     const dependencies = new Set<AssetID>()
@@ -950,19 +961,17 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     const variantData = packageData?.variants?.[variantId]
 
     // Create or update asset data
-    if (assetData?.version !== entry.version) {
-      assetData.lastModified = entry.lastModified
-      assetData.sha256 = variantEntry.sha256
-      assetData.size = variantEntry.size
-      assetData.uncompressed = variantEntry.uncompressed
-      assetData.url = variantEntry.download
-      assetData.version = entry.version
+    assetData.lastModified = entry.lastModified
+    assetData.sha256 = variantEntry.sha256
+    assetData.size = variantEntry.size
+    assetData.uncompressed = variantEntry.uncompressed
+    assetData.url = variantEntry.download
+    assetData.version = entry.version
 
-      dbAssetsConfigs[sourceId] ??= {}
-      dbAssetsConfigs[sourceId][variantAssetId] = assetData
+    dbAssetsConfigs[sourceId] ??= {}
+    dbAssetsConfigs[sourceId][variantAssetId] = assetData
 
-      await writeConfig(dbAssetsDir, sourceId, dbAssetsConfigs[sourceId], ConfigFormat.YAML)
-    }
+    await writeConfig(dbAssetsDir, sourceId, dbAssetsConfigs[sourceId], ConfigFormat.YAML)
 
     // Create or update package/variant data
     if (!variantData?.release || variantData.release < entry.meta.timestamp) {
@@ -1047,7 +1056,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }>(dataAssetsDir, "overrides", data, ConfigFormat.YAML)
   }
 
-  async function getAuthorId(authorName: string): Promise<AuthorID | undefined> {
+  function getAuthorId(authorName: string): AuthorID | undefined {
     const lowercased = authorName.toLowerCase()
     const rawId = toID(authorName) as AuthorID
 

@@ -3,30 +3,280 @@ assets:
     assetId: sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1
     authors:
       - Maxis
+    buildings: []
     category: 40-maxis
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>This upload contains the official \"SimCity 4 Buildings as Props Vol 1\" and \"SimCity 4 Buildings as Props Vol 2\" files provided by EA/Maxis.</p>\r\n<p>These files provide all buildings available in the base SimCity 4 game and the ones which were added to SimCity 4 in the Rush Hour Expansion in prop form, for use in lot creation. A third file can be found in the pack called <strong>Maxis DLC Props.dat</strong>, which contains the generic/common props from three of the official Maxis Landmark DLCs (Castleset.dat, Parthenon and Stonehange) and the props from the very ancient Plugin Landmark Props (from version 2.1). The main castle model and prop, the castle wall props, the main Parthenon building and prop and the main Stonehange building and prop are <span style=\"color: #e03e2d;\"><strong>NOT </strong></span>part of this file. This file was compiled to address the commonly listed props as dependencies.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/sc4buildingsaspropsvol1.jpg\" data-lightbox=\"lightbox14\" data-alt=\"lightboxsc4buildingsaspropsvol1.jpg|sc4buildingsaspropsvol2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol1.jpg\" alt=\"sc4buildingsaspropsvol1\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/sc4buildingsaspropsvol2.jpg\" data-lightbox=\"lightbox14\" data-alt=\"lightboxsc4buildingsaspropsvol1.jpg|sc4buildingsaspropsvol2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol2.jpg\" alt=\"sc4buildingsaspropsvol22\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
     downloads: 2629
+    features: []
     filename: Maxis_Building_As_Props_and_DLC_Props_v2.1_3560.zip
     files:
-      - _Documents/sc4buildingsaspropsvol2.jpg
-      - _Documents/sc4buildingsaspropsvol1.jpg
-      - _Documents/readme_Maxis Building As Props vol.1-vol.2.txt
-      - _Documents/Maxis DLC Props-index.jpg
-      - _Documents/Maxis Building as Props-pt04_index.jpg
-      - _Documents/Maxis Building as Props-pt03_index.jpg
-      - _Documents/Maxis Building as Props-pt02_index.jpg
-      - _Documents/Maxis Building as Props-pt01_index.jpg
-      - Maxis Original/Maxis DLC Props/Maxis DLC Props.dat
-      - Maxis Original/Building As Props/bldgprop_vol2.dat
       - Maxis Original/Building As Props/bldgprop_vol1.dat
+      - Maxis Original/Building As Props/bldgprop_vol2.dat
+      - Maxis Original/Maxis DLC Props/Maxis DLC Props.dat
+      - _Documents/Maxis Building as Props-pt01_index.jpg
+      - _Documents/Maxis Building as Props-pt02_index.jpg
+      - _Documents/Maxis Building as Props-pt03_index.jpg
+      - _Documents/Maxis Building as Props-pt04_index.jpg
+      - _Documents/Maxis DLC Props-index.jpg
+      - _Documents/readme_Maxis Building As Props vol.1-vol.2.txt
+      - _Documents/sc4buildingsaspropsvol1.jpg
+      - _Documents/sc4buildingsaspropsvol2.jpg
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol1.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol2.jpg
     lastModified: 2023-12-06T15:41:39.000Z
+    lots: []
+    meta:
+      timestamp: 2024-11-18T10:30:47.575Z
+      version: 1
+    models:
+      - 5ad0e817-badb57f1-2b9d0000
+      - 5ad0e817-badb57f1-2ba00000
+      - 5ad0e817-badb57f1-2ba20000
+      - 5ad0e817-badb57f1-2ba50000
+      - 5ad0e817-badb57f1-2ba80000
+      - 5ad0e817-badb57f1-2bab0000
+      - 5ad0e817-badb57f1-2bad0000
+      - 5ad0e817-badb57f1-2d3c0000
+      - 5ad0e817-badb57f1-2b9e0000
+      - 5ad0e817-badb57f1-2b9f0000
+      - 5ad0e817-badb57f1-2ba10000
+      - 5ad0e817-badb57f1-2ba30000
+      - 5ad0e817-badb57f1-2ba40000
+      - 5ad0e817-badb57f1-2ba60000
+      - 5ad0e817-badb57f1-2ba70000
+      - 5ad0e817-badb57f1-2ba90000
+      - 5ad0e817-badb57f1-2baa0000
+      - 5ad0e817-badb57f1-2bac0000
+      - 5ad0e817-badb57f1-2bae0000
+      - 5ad0e817-6cd8b254-002f0000
+      - 5ad0e817-badb57f1-2d510000
+      - 5ad0e817-badb57f1-2d520000
+      - 5ad0e817-badb57f1-2d530000
+      - 5ad0e817-badb57f1-2d540000
+      - 5ad0e817-badb57f1-2d550000
+      - 5ad0e817-badb57f1-2d560000
+      - 5ad0e817-badb57f1-2d570000
+      - 5ad0e817-badb57f1-2d590000
+      - 5ad0e817-badb57f1-2d4e0000
+      - 5ad0e817-badb57f1-2d4f0000
+      - 5ad0e817-badb57f1-2d410000
+      - 5ad0e817-badb57f1-2d420000
+      - 5ad0e817-badb57f1-2d430000
+      - 5ad0e817-badb57f1-2d440000
+      - 5ad0e817-badb57f1-2d450000
+      - 5ad0e817-badb57f1-2d460000
+      - 5ad0e817-badb57f1-2d470000
+      - 5ad0e817-badb57f1-2d480000
+      - 5ad0e817-badb57f1-2d490000
+      - 5ad0e817-badb57f1-2d4a0000
+      - 5ad0e817-badb57f1-2d050000
+      - 5ad0e817-badb57f1-2d060000
+      - 5ad0e817-badb57f1-2d070000
+      - 5ad0e817-badb57f1-2d080000
+      - 5ad0e817-badb57f1-2d090000
+      - 5ad0e817-badb57f1-2d0a0000
+      - 5ad0e817-badb57f1-2d0b0000
+      - 5ad0e817-badb57f1-2d0c0000
     name: Maxis Buildings As Props and DLC Props
+    props:
+      - 6534284a-c977c536-cc0746dd
+      - 6534284a-c977c536-cc0746de
+      - 6534284a-c977c536-cc0746e0
+      - 6534284a-c977c536-cc0746e1
+      - 6534284a-c977c536-cc0746e2
+      - 6534284a-c977c536-cc0746e3
+      - 6534284a-c977c536-cc0746e4
+      - 6534284a-c977c536-cc0746e5
+      - 6534284a-c977c536-cc0746e6
+      - 6534284a-c977c536-cc0746e7
+      - 6534284a-c977c536-cc0746e8
+      - 6534284a-c977c536-cc0746e9
+      - 6534284a-c977c536-cc0746ea
+      - 6534284a-c977c536-cc0746eb
+      - 6534284a-c977c536-cc0746ec
+      - 6534284a-c977c536-cc0746ed
+      - 6534284a-c977c536-cc0746ee
+      - 6534284a-c977c536-cc0746ef
+      - 6534284a-c977c536-cc0746f0
+      - 6534284a-c977c536-cc0746f1
+      - 6534284a-c977c536-cc0746f3
+      - 6534284a-c977c536-cc0746f4
+      - 6534284a-c977c536-cc0746f5
+      - 6534284a-c977c536-cc0746f6
+      - 6534284a-c977c536-cc0746f8
+      - 6534284a-c977c536-cc0746f9
+      - 6534284a-c977c536-cc0746fa
+      - 6534284a-c977c536-cc0746fb
+      - 6534284a-c977c536-cc0746fc
+      - 6534284a-c977c536-cc0746fd
+      - 6534284a-c977c536-cc0746fe
+      - 6534284a-c977c536-cc0746ff
+      - 6534284a-c977c536-cc074700
+      - 6534284a-c977c536-cc074701
+      - 6534284a-c977c536-cc074702
+      - 6534284a-c977c536-cc074703
+      - 6534284a-c977c536-cc074704
+      - 6534284a-c977c536-cc074705
+      - 6534284a-c977c536-cc074706
+      - 6534284a-c977c536-0c0743e9
+      - 6534284a-c977c536-0c0743ea
+      - 6534284a-c977c536-0c0743eb
+      - 6534284a-c977c536-0c0743ec
+      - 6534284a-c977c536-0c0743ed
+      - 6534284a-c977c536-0c0743ee
+      - 6534284a-c977c536-0c0743ef
+      - 6534284a-c977c536-0c0743f0
+      - 6534284a-c977c536-0c0743f1
+      - 6534284a-c977c536-0c0743f2
+      - 6534284a-c977c536-0c0743f3
+      - 6534284a-c977c536-0c0743f4
+      - 6534284a-c977c536-0c0743f5
+      - 6534284a-c977c536-0c0743f6
+      - 6534284a-c977c536-0c0743f7
+      - 6534284a-c977c536-0c0743f8
+      - 6534284a-c977c536-0c0743f9
+      - 6534284a-c977c536-0c0743fa
+      - 6534284a-c977c536-0c0743fb
+      - 6534284a-c977c536-0c0743fc
+      - 6534284a-c977c536-0c0743fd
+      - 6534284a-c977c536-0c0743fe
+      - 6534284a-c977c536-0c0743ff
+      - 6534284a-c977c536-0c074400
+      - 6534284a-c977c536-0c074401
+      - 6534284a-c977c536-0c074402
+      - 6534284a-c977c536-0c074403
+      - 6534284a-c977c536-0c074404
+      - 6534284a-c977c536-0c074405
+      - 6534284a-c977c536-0c074406
+      - 6534284a-c977c536-0c074407
+      - 6534284a-c977c536-0c074408
+      - 6534284a-c977c536-0c074409
+      - 6534284a-c977c536-0c07440a
+      - 6534284a-c977c536-0c07440b
+      - 6534284a-c977c536-ac07349e
+      - 6534284a-c977c536-ac07349f
+      - 6534284a-c977c536-ac0734a0
+      - 6534284a-c977c536-ac0734a8
+      - 6534284a-c977c536-ac0734a9
+      - 6534284a-c977c536-ac0734aa
+      - 6534284a-c977c536-ac0734ab
+      - 6534284a-c977c536-ac0734ac
+      - 6534284a-c977c536-ac0734ad
+      - 6534284a-c977c536-ac0734af
+      - 6534284a-c977c536-ac0734b0
+      - 6534284a-c977c536-ac0734b2
+      - 6534284a-c977c536-ac0734b5
+      - 6534284a-c977c536-ac0734b6
+      - 6534284a-c977c536-ac0734b7
+      - 6534284a-c977c536-ac0734ca
+      - 6534284a-c977c536-ac0734cb
+      - 6534284a-c977c536-ac0734cd
+      - 6534284a-c977c536-8c0749c2
+      - 6534284a-c977c536-8c0749c3
+      - 6534284a-c977c536-8c0749c4
+      - 6534284a-c977c536-8c0749c5
+      - 6534284a-c977c536-8c0749c6
+      - 6534284a-c977c536-8c0749c7
+      - 6534284a-c977c536-8c0749c8
+      - 6534284a-c977c536-8c0749c9
+      - 6534284a-c977c536-8c0749ca
+      - 6534284a-c977c536-8c0749cb
+      - 6534284a-c977c536-8c0749cc
+      - 6534284a-c977c536-8c0749d0
+      - 6534284a-c977c536-8c0749d1
+      - 6534284a-c977c536-8c0749d2
+      - 6534284a-c977c536-8c0749d5
+      - 6534284a-c977c536-8c0749d6
+      - 6534284a-c977c536-8c0749d7
+      - 6534284a-c977c536-8c0749d8
+      - 6534284a-c977c536-8c0749da
+      - 6534284a-c977c536-8c0749db
+      - 6534284a-c977c536-8c0749dc
+      - 6534284a-c977c536-8c0749dd
+      - 6534284a-c977c536-8c0749e1
+      - 6534284a-c977c536-8c0749e2
+      - 6534284a-c977c536-8c0749e3
+      - 6534284a-c977c536-8c0749e4
+      - 6534284a-c977c536-8c0749e5
+      - 6534284a-c977c536-8c0749e8
+      - 6534284a-c977c536-ac8423f4
+      - 6534284a-c977c536-ac8423f5
+      - 6534284a-c977c536-ac8423f6
+      - 6534284a-c977c536-ac8423f7
+      - 6534284a-c977c536-ac8423f8
+      - 6534284a-c977c536-ec8423ee
+      - 6534284a-c977c536-ec8423ef
+      - 6534284a-c977c536-ec8423f0
+      - 6534284a-c977c536-ec8423f1
+      - 6534284a-c977c536-ec8423f2
+      - 6534284a-c977c536-ec8423f3
+      - 6534284a-c977c536-ec8423f4
+      - 6534284a-c977c536-ec8423f5
+      - 6534284a-c977c536-ec8423f6
+      - 6534284a-c977c536-ec8423f7
+      - 6534284a-c977c536-ec8423f8
+      - 6534284a-c977c536-ec8423f9
+      - 6534284a-c977c536-ec8423fa
+      - 6534284a-c977c536-ec8423fb
+      - 6534284a-c977c536-ec8423fc
+      - 6534284a-c977c536-8c8423e3
+      - 6534284a-c977c536-8c8423e4
+      - 6534284a-c977c536-8c8423e5
+      - 6534284a-c977c536-8c8423e6
+      - 6534284a-c977c536-8c8423e7
+      - 6534284a-c977c536-2b9d0000
+      - 6534284a-c977c536-2ba00000
+      - 6534284a-c977c536-2ba20000
+      - 6534284a-c977c536-2ba50000
+      - 6534284a-c977c536-2ba80000
+      - 6534284a-c977c536-2bab0000
+      - 6534284a-c977c536-2bad0000
+      - 6534284a-c977c536-2d3c0000
+      - 6534284a-c977c536-2b9e0000
+      - 6534284a-c977c536-2b9f0000
+      - 6534284a-c977c536-2ba10000
+      - 6534284a-c977c536-2ba30000
+      - 6534284a-c977c536-2ba40000
+      - 6534284a-c977c536-2ba60000
+      - 6534284a-c977c536-2ba70000
+      - 6534284a-c977c536-2ba90000
+      - 6534284a-c977c536-2baa0000
+      - 6534284a-c977c536-2bac0000
+      - 6534284a-c977c536-2bae0000
+      - 6534284a-9b9d22a8-d07feab1
+      - 6534284a-c977c536-2d510000
+      - 6534284a-c977c536-2d520000
+      - 6534284a-c977c536-2d530000
+      - 6534284a-c977c536-2d540000
+      - 6534284a-c977c536-2d550000
+      - 6534284a-c977c536-2d560000
+      - 6534284a-c977c536-2d570000
+      - 6534284a-c977c536-2d590000
+      - 6534284a-c977c536-2d4e0000
+      - 6534284a-c977c536-2d4f0000
+      - 6534284a-c977c536-2d410000
+      - 6534284a-c977c536-2d420000
+      - 6534284a-c977c536-2d430000
+      - 6534284a-c977c536-2d440000
+      - 6534284a-c977c536-2d450000
+      - 6534284a-c977c536-2d460000
+      - 6534284a-c977c536-2d470000
+      - 6534284a-c977c536-2d480000
+      - 6534284a-c977c536-2d490000
+      - 6534284a-c977c536-2d4a0000
+      - 6534284a-c977c536-2d050000
+      - 6534284a-c977c536-2d060000
+      - 6534284a-c977c536-2d070000
+      - 6534284a-c977c536-2d080000
+      - 6534284a-c977c536-2d090000
+      - 6534284a-c977c536-2d0a0000
+      - 6534284a-c977c536-2d0b0000
+      - 6534284a-c977c536-2d0c0000
     sha256: 59d4c4faa6f388e3b94bf066c447e8966f8e9b1aec10fe95db1cdb069a0c2955
     size: 4507791
+    textures: []
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol1.jpg
     timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 5958945

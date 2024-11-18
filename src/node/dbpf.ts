@@ -340,10 +340,10 @@ function loadExemplar(
   const properties: { [propertyId in number]?: ExemplarProperty } = {}
   const mode = bytes.readString(8)
 
-  switch (mode) {
+  switch (mode.slice(0, 4)) {
     // "B" = binary
-    case "CQZB1###":
-    case "EQZB1###": {
+    case "CQZB":
+    case "EQZB": {
       parentCohortId = bytes.readTGI()
 
       const propertyCount = bytes.readUInt32()
@@ -393,8 +393,8 @@ function loadExemplar(
     }
 
     // "T" = text
-    case "CQZT1###":
-    case "EQZT1###": {
+    case "CQZT":
+    case "EQZT": {
       const parentCohortRegex =
         /^ParentCohort=Key:\{0x([0-9a-f]{8}),0x([0-9a-f]{8}),0x([0-9a-f]{8})\}$/
       const propertyRegex = /^0x([0-9a-f]{8}):\{"(.+)"\}=(\w+):(\d+):\{(.+)\}$/
