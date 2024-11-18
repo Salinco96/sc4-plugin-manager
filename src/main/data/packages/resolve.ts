@@ -1,4 +1,5 @@
 import {
+  OptionID,
   OptionInfo,
   Options,
   getOptionInfo,
@@ -43,7 +44,7 @@ import {
   reduce,
   values,
 } from "@common/utils/objects"
-import { isArray, isEnum } from "@common/utils/types"
+import { isArray } from "@common/utils/types"
 import { DependencyInfo, Issue, VariantID, VariantInfo, VariantIssue } from "@common/variants"
 import { Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
 import { TaskContext } from "@utils/tasks"
@@ -85,41 +86,39 @@ function getVariantIncompatibilities(
             minVersion: `1.1.${minVersion}.0`,
           })
         }
-      } else if (isEnum(requirement, Feature)) {
-        const featurePackageIds = features[requirement]
-        const isEnabled = !!featurePackageIds?.length
-        const isRequired = !!requiredValue
-
-        // Check feature requirements
-        if (isRequired !== isEnabled) {
-          if (isEnabled) {
-            incompatibilities.push({
-              id: Issue.INCOMPATIBLE_FEATURE,
-              external: featurePackageIds.includes(EXTERNAL),
-              feature: requirement,
-              packages: removeElement(featurePackageIds, EXTERNAL) as PackageID[],
-            })
-          } else {
-            incompatibilities.push({
-              id: Issue.MISSING_FEATURE,
-              feature: requirement,
-              // TODO: List of packages including the feature
-            })
-          }
-        }
       } else {
-        const option = getOptionInfo(requirement, undefined, globalOptions)
+        const option = getOptionInfo(requirement as OptionID, undefined, globalOptions)
         if (option) {
           const value = getOptionValue(option, profileOptions)
           if (requiredValue !== value) {
             incompatibilities.push({
               id: Issue.INCOMPATIBLE_OPTION,
-              option: requirement,
+              option: option.id,
               value: requiredValue,
             })
           }
         } else {
-          console.warn(`Unknown requirement: ${requirement} = ${requiredValue}`)
+          const featurePackageIds = features[requirement as Feature]
+          const isEnabled = !!featurePackageIds?.length
+          const isRequired = !!requiredValue
+
+          // Check feature requirements
+          if (isRequired !== isEnabled) {
+            if (isEnabled) {
+              incompatibilities.push({
+                id: Issue.INCOMPATIBLE_FEATURE,
+                external: featurePackageIds.includes(EXTERNAL),
+                feature: requirement as Feature,
+                packages: removeElement(featurePackageIds, EXTERNAL) as PackageID[],
+              })
+            } else {
+              incompatibilities.push({
+                id: Issue.MISSING_FEATURE,
+                feature: requirement as Feature,
+                // TODO: List of packages including the feature
+              })
+            }
+          }
         }
       }
     })
@@ -729,17 +728,19 @@ export function resolvePackageUpdates(
     for (const lotId in newLots) {
       const { lotInfo, packageId } = newLots[lotId]
 
-      if (oldLots[lotId]) {
-        delete oldLots[lotId]
-        delete newLots[lotId]
-      } else if (lotInfo.replace && oldLots[lotInfo.replace]) {
-        replacingLots[lotId] = {
-          newInfo: lotInfo,
-          oldInfo: oldLots[lotInfo.replace].lotInfo,
-          packageId,
+      if (lotInfo.replace && oldLots[lotInfo.replace]) {
+        if (oldLots[lotId].lotInfo !== lotInfo) {
+          replacingLots[lotId] = {
+            newInfo: lotInfo,
+            oldInfo: oldLots[lotInfo.replace].lotInfo,
+            packageId,
+          }
         }
 
         delete oldLots[lotInfo.replace]
+        delete newLots[lotId]
+      } else if (oldLots[lotId]) {
+        delete oldLots[lotId]
         delete newLots[lotId]
       } else if (lotInfo.replaceMaxis) {
         replacingMaxisLots[lotId] = {

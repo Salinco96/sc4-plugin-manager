@@ -10,7 +10,8 @@ import { AuthorData, AuthorID } from "@common/authors"
 import { ExemplarPropertyData, ExemplarPropertyInfo, ExemplarValueType } from "@common/exemplars"
 import { PackageID } from "@common/packages"
 import { ConfigFormat, ID, PackageData } from "@common/types"
-import { indexBy, mapDefined } from "@common/utils/arrays"
+import { difference, indexBy, mapDefined } from "@common/utils/arrays"
+import { globToRegex } from "@common/utils/glob"
 import { readHex } from "@common/utils/hex"
 import { forEach, forEachAsync, isEmpty, keys, mapValues, values } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
@@ -628,7 +629,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       // Resolve "default" first
       if (entry.variants.default) {
         try {
-          await generatePackage(entryId, "default")
+          await generatePackages(entryId, "default")
         } catch (error) {
           console.error(error)
           errors.add((error as Error).message)
@@ -639,7 +640,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       for (const variant of keys(entry.variants)) {
         if (variant !== "default") {
           try {
-            await generatePackage(entryId, variant)
+            await generatePackages(entryId, variant)
           } catch (error) {
             console.error(error)
             errors.add((error as Error).message)
@@ -648,7 +649,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
     } else {
       try {
-        await generatePackage(entryId)
+        await generatePackages(entryId)
       } catch (error) {
         console.error(error)
         errors.add((error as Error).message)
@@ -889,7 +890,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return true
   }
 
-  async function generatePackage(entryId: EntryID, variant?: string): Promise<boolean> {
+  async function generatePackages(entryId: EntryID, variant?: string): Promise<boolean> {
     const assetId = getAssetID(entryId)
     const entry = getEntry(entryId)
     const source = getSource(entryId)
@@ -899,7 +900,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     const variantOverride = getOverride(entryId, variant)
     const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
     const variantEntry = variant ? entry.variants?.[variant] : entry
-    let packageId = variantOverride?.packageId ?? entryOverride?.packageId
+    let basePackageId = variantOverride?.packageId ?? entryOverride?.packageId
 
     if (entryOverride === null || variantOverride === null || !entry.meta?.timestamp) {
       return false
@@ -909,15 +910,27 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       throw Error(`Expected override to exist for ${variantAssetId}`)
     }
 
-    if (packageId === undefined) {
-      packageId = await getPackageId(entry)
-      variantOverride.packageId = packageId
+    // Create or update asset data
+    const assetData = dbAssetsConfigs[sourceId]?.[variantAssetId] ?? {}
+    assetData.lastModified = entry.lastModified
+    assetData.sha256 = variantEntry.sha256
+    assetData.size = variantEntry.size
+    assetData.uncompressed = variantEntry.uncompressed
+    assetData.url = variantEntry.download
+    assetData.version = entry.version
+    dbAssetsConfigs[sourceId] ??= {}
+    dbAssetsConfigs[sourceId][variantAssetId] = assetData
+    await writeConfig(dbAssetsDir, sourceId, dbAssetsConfigs[sourceId], ConfigFormat.YAML)
+
+    if (basePackageId === undefined) {
+      basePackageId = await getPackageId(entry)
+      variantOverride.packageId = basePackageId
     }
 
-    let variantId = variantOverride.variantId
+    let baseVariantId = variantOverride.variantId
 
-    if (!variantId) {
-      console.debug(`Generating package for ${variantAssetId} -> ${packageId}`)
+    if (!baseVariantId) {
+      console.debug(`Generating package for ${variantAssetId} -> ${basePackageId}`)
 
       // Try to infer DarkNite variants from filename
       const defaultVariantId = variantEntry.filename?.match(/\b(dn|dark\W?nite)\b/i)
@@ -936,66 +949,107 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         },
       })
 
-      variantId = variantOverride.variantId = overrideVariantId as VariantID
+      baseVariantId = variantOverride.variantId = overrideVariantId as VariantID
     }
 
-    const dependencies = mapDefined(
-      entry.dependencies ?? [],
-      dependency => getOverride(getEntryID(dependency))?.packageId,
-    )
+    await generateVariant(basePackageId, baseVariantId)
 
-    const authorId = packageId.split("/")[0] as AuthorID
-    const authors = [authorId]
-
-    if (entry.authors) {
-      for (const authorName of entry.authors) {
-        const authorId = await getAuthorId(authorName)
-        if (authorId) {
-          authors.push(authorId)
+    if (variantOverride.paths) {
+      const outputs = new Set<string>()
+      outputs.add(`${basePackageId}#${baseVariantId}`)
+      for (const pathOverride of values(variantOverride.paths)) {
+        const packageId = pathOverride?.packageId ?? basePackageId
+        const variantId = pathOverride?.variantId ?? baseVariantId
+        if (!outputs.has(`${packageId}#${variantId}`)) {
+          await generateVariant(packageId, variantId)
+          outputs.add(`${packageId}#${variantId}`)
         }
       }
     }
 
-    const assetData = dbAssetsConfigs[sourceId]?.[variantAssetId] ?? {}
-    const packageData = dbPackagesConfigs[authorId]?.[packageId]
-    const variantData = packageData?.variants?.[variantId]
+    async function generateVariant(packageId: PackageID, variantId: VariantID) {
+      const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
+      const variantEntry = variant ? entry.variants?.[variant] : entry
+      const variantOverride = getOverride(entryId, variant)
 
-    // Create or update asset data
-    assetData.lastModified = entry.lastModified
-    assetData.sha256 = variantEntry.sha256
-    assetData.size = variantEntry.size
-    assetData.uncompressed = variantEntry.uncompressed
-    assetData.url = variantEntry.download
-    assetData.version = entry.version
-
-    dbAssetsConfigs[sourceId] ??= {}
-    dbAssetsConfigs[sourceId][variantAssetId] = assetData
-
-    await writeConfig(dbAssetsDir, sourceId, dbAssetsConfigs[sourceId], ConfigFormat.YAML)
-
-    // Create or update package/variant data
-    if (!variantData?.release || variantData.release < entry.meta.timestamp) {
-      if (variantData) {
-        console.debug(`Updating variant ${packageId}#${variantId}...`)
-      } else {
-        console.debug(`Creating variant ${packageId}#${variantId}...`)
+      if (variantOverride === null || !entry.meta?.timestamp) {
+        return false
       }
 
-      dbPackagesConfigs[authorId] ??= {}
-      dbPackagesConfigs[authorId][packageId] = writePackageData(
-        packageData,
-        assetId,
-        source,
-        entry,
-        variant,
-        variantId,
-        authors,
-        dependencies,
-        now,
+      if (!variantEntry?.files || !entry.version || !variantOverride) {
+        throw Error(`Expected override to exist for ${variantAssetId}`)
+      }
+
+      const dependencies = mapDefined(
+        entry.dependencies ?? [],
+        dependency => getOverride(getEntryID(dependency))?.packageId,
       )
 
-      // Save changes
-      await writeConfig(dbPackagesDir, authorId, dbPackagesConfigs[authorId], ConfigFormat.YAML)
+      const authorId = packageId.split("/")[0] as AuthorID
+      const authors = [authorId, ...mapDefined(entry.authors, getAuthorId)]
+
+      const packageData = dbPackagesConfigs[authorId]?.[packageId]
+      const variantData = packageData?.variants?.[variantId]
+
+      // Create or update package/variant data
+      if (!variantData?.release || variantData.release < entry.meta.timestamp) {
+        if (variantData) {
+          console.debug(`Updating variant ${packageId}#${variantId}...`)
+        } else {
+          console.debug(`Creating variant ${packageId}#${variantId}...`)
+        }
+
+        let includedFiles = variantEntry.files
+        let excludedFiles: string[] = []
+        if (variantOverride.paths) {
+          const matchedFiles = new Set<string>()
+          const unmatchedFiles = new Set(variantEntry.files)
+          for (const path in variantOverride.paths) {
+            const pathOverride = variantOverride.paths[path]
+
+            const isMatching =
+              (pathOverride?.packageId ?? basePackageId) === packageId &&
+              (pathOverride?.variantId ?? baseVariantId) === variantId
+
+            const pattern = globToRegex(path)
+            for (const file of variantEntry.files) {
+              if (pattern.test(file)) {
+                unmatchedFiles.delete(file)
+                if (isMatching) {
+                  matchedFiles.add(file)
+                }
+              }
+            }
+          }
+
+          if (basePackageId === packageId && baseVariantId === variantId) {
+            for (const file of unmatchedFiles) {
+              matchedFiles.add(file)
+            }
+          }
+
+          includedFiles = Array.from(matchedFiles)
+          excludedFiles = difference(variantEntry.files, includedFiles)
+        }
+
+        dbPackagesConfigs[authorId] ??= {}
+        dbPackagesConfigs[authorId][packageId] = writePackageData(
+          packageData,
+          assetId,
+          source,
+          entry,
+          variant,
+          variantId,
+          includedFiles,
+          excludedFiles,
+          authors,
+          dependencies,
+          now,
+        )
+
+        // Save changes
+        await writeConfig(dbPackagesDir, authorId, dbPackagesConfigs[authorId], ConfigFormat.YAML)
+      }
     }
 
     return true

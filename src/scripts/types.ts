@@ -118,7 +118,7 @@ export interface IndexerPathOverride {
 
 export interface IndexerVariantOverride extends IndexerPathOverride {
   paths?: {
-    [path in string]?: IndexerPathOverride | null
+    [path in string]: IndexerPathOverride | null
   }
 }
 

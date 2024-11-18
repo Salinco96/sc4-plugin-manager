@@ -16,9 +16,7 @@ import { get, getArray, getBaseTextureId, getString } from "./utils"
 export function getLotData(exemplar: Exemplar): LotData {
   const lotId = exemplar.id.split("-")[2]
 
-  const data: LotData = { id: lotId }
-
-  data.filename = exemplar.file
+  const data: LotData = { id: lotId, filename: exemplar.file }
 
   if (exemplar.file.match(/\bCAM\b/i)) {
     data.requirements ??= {}

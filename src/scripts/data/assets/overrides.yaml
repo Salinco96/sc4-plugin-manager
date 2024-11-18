@@ -761,6 +761,64 @@ simtropolis/21339-crime-doesnt-pay:
 
 simtropolis/21340-functional-landmarks-complete-set-v10:
   packageId: toroca/functional-landmarks
+  paths:
+    63Building.dat:
+      packageId: maxis/63-building
+      variantId: functional
+    AdlerPlanetarium.dat:
+      packageId: maxis/adler-planetarium
+      variantId: functional
+    ArcDeTriomphe.dat:
+      packageId: maxis/arc-de-triomphe
+      variantId: functional
+    BrandenburgGate.dat:
+      packageId: maxis/brandenburg-gate
+      variantId: functional
+    CapitolRecordsBuilding.dat:
+      packageId: maxis/capitol-records
+      variantId: functional
+    GlobeArena.dat:
+      packageId: maxis/globe-arena
+      variantId: functional
+    GrandCentralStation.dat:
+      packageId: maxis/grand-central-station
+      variantId: functional
+    Kunjungjon.dat:
+      packageId: maxis/kunjungjon
+      variantId: functional
+    Parthenon.dat:
+      packageId: maxis/parthenon
+      variantId: functional
+    RockefellerCenter.dat:
+      packageId: maxis/rockefeller-center
+      variantId: functional
+    SanFranciscoCityHall.dat:
+      packageId: maxis/san-francisco-city-hall
+      variantId: functional
+    SchlossSchoenbrun.dat:
+      packageId: maxis/schloss-schoenbrun
+      variantId: functional
+    SeoulCityHall.dat:
+      packageId: maxis/seoul-city-hall
+      variantId: functional
+    SeoulWorldCupStadium.dat:
+      packageId: maxis/seoul-soccer-stadium
+      variantId: functional
+    Stonehenge.dat:
+      packageId: maxis/stonehenge
+      variantId: functional
+    Sungrye-mun.dat:
+      packageId: maxis/namdaemun
+      variantId: functional
+    TaipeiFineArtMuseum.dat:
+      packageId: maxis/taipei-art-museum
+      variantId: functional
+    TempleExpiatioriDeLaSagradaFamilia.dat:
+      packageId: maxis/sagrada-familia
+      variantId: functional
+    TheLivingMall.dat:
+      packageId: maxis/the-living-mall
+      variantId: functional
   variantId: default
 
 simtropolis/21342-opera-house-fix:
@@ -1804,6 +1862,10 @@ simtropolis/35889-legalize-gambling-ordinance-upgrade:
 
 simtropolis/35978-sc4-more-demand-info:
   packageId: null-45/more-demand-info
+  paths:
+    Census Repository v3.5 Patch:
+      packageId: ripplejet/census-repository-building
+      variantId: more-demand-info
   variantId: default
 
 simtropolis/36016-census-repository-patch-for-moredemandinfo: null

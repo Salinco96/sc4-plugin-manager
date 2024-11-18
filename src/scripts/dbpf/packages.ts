@@ -43,13 +43,15 @@ export function writePackageData(
   entry: IndexerEntry,
   variant: string | undefined,
   variantId: VariantID,
+  includedFiles: string[],
+  excludedFiles: string[],
   authors: AuthorID[],
   dependencies: PackageID[],
   timestamp: Date,
 ): PackageData {
   const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
   const variantEntry = variant ? entry.variants?.[variant] : entry
-  if (!variantEntry?.files || !entry.version) {
+  if (!variantEntry || !entry.version) {
     throw Error(`Expected override to exist for ${variantAssetId}`)
   }
 
@@ -159,7 +161,7 @@ export function writePackageData(
 
   const sc4Extensions = [".dat", ".dll", ".ini", "._loosedesc", ".sc4desc", ".sc4lot", ".sc4model"]
 
-  const [sc4Files, docFiles] = splitBy(variantEntry.files, file =>
+  const [sc4Files, docFiles] = splitBy(includedFiles, file =>
     sc4Extensions.includes(getExtension(file)),
   )
 
@@ -171,14 +173,20 @@ export function writePackageData(
     variantAsset.include = sc4Files
   }
 
-  if (variantEntry.lots?.length) {
+  if (excludedFiles.length) {
+    variantAsset.exclude = excludedFiles
+  }
+
+  const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.filename))
+
+  if (lots?.length) {
     variantData.lots ??= []
 
-    for (const lot of variantEntry.lots) {
+    for (const lot of lots) {
       let existingLot = variantData.lots.find(({ id }) => id === lot.id)
 
       if (!existingLot) {
-        existingLot = { id: lot.id }
+        existingLot = { id: lot.id, filename: lot.filename }
         variantData.lots.push(existingLot)
       }
 

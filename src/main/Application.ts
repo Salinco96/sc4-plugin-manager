@@ -1310,14 +1310,24 @@ export class Application {
                 type: "cleanitol" | "docs" | "files",
                 include?: PackageFile,
               ) => {
-                const entries = await glob(pattern.replace(conditionRegex, "*"), {
-                  cwd: downloadPath,
-                  dot: true,
-                  ignore: excludes,
-                  includeChildMatches: false,
-                  matchBase: true,
-                  withFileTypes: true,
-                })
+                const entries = await glob(
+                  pattern.replace(conditionRegex, (match, condition) => {
+                    const option = variantInfo.options.find(option => option.id === condition)
+                    if (option?.choices) {
+                      return `{${option.choices.map(choice => choice.value).join(",")}}`
+                    }
+
+                    return "*"
+                  }),
+                  {
+                    cwd: downloadPath,
+                    dot: true,
+                    ignore: excludes,
+                    includeChildMatches: false,
+                    matchBase: true,
+                    withFileTypes: true,
+                  },
+                )
 
                 if (entries.length === 0 && pattern !== "*cleanitol*.txt") {
                   context.raiseInDev(`Pattern ${pattern} did not match any file`)

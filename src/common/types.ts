@@ -240,7 +240,7 @@ export interface LotData extends BuildingData {
   /** Whether lot is enabled by default (this defaults to true) */
   default?: boolean
   /** Path to the file containing the lot exemplar */
-  filename?: string
+  filename: string
   /** URL or relative path within ~docs */
   images?: string[]
   /** Internal lot name */

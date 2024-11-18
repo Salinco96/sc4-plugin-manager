@@ -2,7 +2,7 @@ import { Namespace, TFunction } from "i18next"
 
 import { getFeatureLabel } from "./i18n"
 import { Feature, ID } from "./types"
-import { isArrayOf, isBoolean, isEnum, isNumber, isString } from "./utils/types"
+import { isArrayOf, isBoolean, isNumber, isString } from "./utils/types"
 
 export const ALL = "all"
 
@@ -136,12 +136,8 @@ export function getRequirementLabel(
   packageOptions: OptionInfo[] | undefined,
   globalOptions: OptionInfo[] | undefined,
 ): string {
-  if (isEnum(requirement, Feature)) {
-    return getFeatureLabel(t, requirement)
-  }
-
-  const option = getOptionInfo(requirement, packageOptions, globalOptions)
-  return option?.label ?? requirement
+  const option = getOptionInfo(requirement as OptionID, packageOptions, globalOptions)
+  return option?.label ?? getFeatureLabel(t, requirement as Feature)
 }
 
 /**
@@ -154,11 +150,11 @@ export function getRequirementValueLabel(
   packageOptions: OptionInfo[] | undefined,
   globalOptions: OptionInfo[] | undefined,
 ): string {
-  if (isEnum(requirement, Feature) || isBoolean(value)) {
+  if (isBoolean(value)) {
     return t(value ? "yes" : "no", { ns: "General" })
   }
 
-  const option = getOptionInfo(requirement, packageOptions, globalOptions)
+  const option = getOptionInfo(requirement as OptionID, packageOptions, globalOptions)
   return option?.choices?.find(choice => choice.value === value)?.label ?? String(value)
 }
 
