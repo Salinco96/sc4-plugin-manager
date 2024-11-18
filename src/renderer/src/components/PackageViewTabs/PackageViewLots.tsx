@@ -10,7 +10,6 @@ import { LOTS_OPTION_ID, PackageID, checkCondition } from "@common/packages"
 import { toggleElement } from "@common/utils/arrays"
 import { entries } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
-import { MarkdownView } from "@components/MarkdownView"
 import { PackageTag, TagType, createTag, serializeTag } from "@components/Tags"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
@@ -98,7 +97,7 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     )}
                     <FlexBox direction="column" width="100%">
                       <Text maxLines={1} sx={{ flex: 1 }} variant="h6">
-                        {lot.label}
+                        {lot.label ?? lot.name}
                       </Text>
 
                       {(lot.filename || tgi) && (
@@ -123,8 +122,8 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                         icon={incompatible ? <IncompatibleIcon /> : undefined}
                         checked={enabled && !incompatible}
                         color="primary"
-                        disabled={!lot.filename || incompatible}
-                        // name={option.id}
+                        disabled={!lot.filename?.endsWith(".SC4Lot") || incompatible}
+                        name={lot.name}
                         onClick={async event => {
                           const { checked } = event.target as HTMLInputElement
                           if (lot.filename && checked !== enabled) {
@@ -141,139 +140,186 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                   </FlexBox>
 
                   {lot.description && (
-                    <Typography component="div" variant="body2">
-                      <MarkdownView md={lot.description} />
+                    <Typography sx={{ fontStyle: "italic", whiteSpace: "pre" }} variant="body2">
+                      {lot.description}
                     </Typography>
                   )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.stage && (
-                    <Typography variant="body2">
-                      <b>{t("stage")}:</b> {lot.stage}
-                    </Typography>
-                  )}
+                  <FlexBox direction="column" gap={1}>
+                    {/* TODO: Better formatting */}
+                    {lot.stage && (
+                      <Typography variant="body2">
+                        <b>{t("stage")}:</b> {lot.stage}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.cost !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("cost")}:</b> {lot.cost} §
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.cost !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("cost")}:</b> {lot.cost} §
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.bulldoze !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("bulldoze")}:</b> {lot.bulldoze} §
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.maintenance !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("maintenance")}:</b> {lot.maintenance} § / month
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.size && (
-                    <Typography variant="body2">
-                      <b>{t("size")}:</b> {lot.size}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.bulldoze !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("bulldoze")}:</b> {lot.bulldoze} §
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.demand && (
-                    <Typography variant="body2">
-                      <b>{t("demand")}:</b>{" "}
-                      {Object.entries(lot.demand)
-                        .reverse()
-                        .map(([type, capacity]) => `${capacity} ${type.toUpperCase()}`)
-                        .join("; ")}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.size && (
+                      <Typography variant="body2">
+                        <b>{t("size")}:</b> {lot.size}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.yimby !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("yimby")}:</b> {lot.yimby}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.capacity && (
+                      <Typography variant="body2">
+                        <b>{t("demand")}:</b>{" "}
+                        {Object.entries(lot.capacity)
+                          .reverse()
+                          .map(([type, capacity]) => `${capacity} ${type.toUpperCase()}`)
+                          .join("; ")}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.powerProduction !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("powerProduction")}:</b> {lot.powerProduction}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.landmark !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("landmark")}:</b>{" "}
+                        {t("overTiles", {
+                          amount: lot.landmark,
+                          count: lot.landmarkRadius ?? 0,
+                        })}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.power !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("power")}:</b> {lot.power}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.rating !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("rating")}:</b>{" "}
+                        {t("overTiles", {
+                          amount: lot.rating,
+                          count: lot.ratingRadius ?? 0,
+                        })}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.waterProduction !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("waterProduction")}:</b> {lot.waterProduction}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.powerProduction !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("powerProduction")}:</b> {lot.powerProduction}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.water !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("water")}:</b> {lot.water}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.power !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("power")}:</b> {lot.power}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.pollution !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("pollution")}:</b> {lot.pollution}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.waterProduction !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("waterProduction")}:</b> {lot.waterProduction}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.waterPollution !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("waterPollution")}:</b> {lot.waterPollution}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.water !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("water")}:</b> {lot.water}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.garbage !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("garbage")}:</b> {lot.garbage}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.pollution !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("pollution")}:</b>{" "}
+                        {t("overTiles", {
+                          amount: lot.pollution,
+                          count: lot.pollutionRadius ?? 0,
+                        })}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.flamability !== undefined && (
-                    <Typography variant="body2">
-                      <b>{t("flamability")}:</b> {lot.flamability}
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.waterPollution !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("waterPollution")}:</b>{" "}
+                        {t("overTiles", {
+                          amount: lot.waterPollution,
+                          count: lot.waterPollutionRadius ?? 0,
+                        })}
+                      </Typography>
+                    )}
 
-                  {/* TODO: Better formatting */}
-                  {lot.requirements && (
-                    <Typography variant="body2">
-                      <b>{t("requirements")}:</b>
-                      <ul>
-                        {entries(lot.requirements).map(([requirement, value]) => (
-                          <li key={requirement}>
-                            {getRequirementLabel(
-                              t,
-                              requirement,
-                              variantInfo.options,
-                              profileOptions,
-                            )}
-                            {": "}
-                            {getRequirementValueLabel(
-                              t,
-                              requirement,
-                              value,
-                              variantInfo.options,
-                              profileOptions,
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </Typography>
-                  )}
+                    {/* TODO: Better formatting */}
+                    {lot.garbage !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("garbage")}:</b>{" "}
+                        {t("overTiles", {
+                          amount: lot.garbage,
+                          count: lot.garbageRadius ?? 0,
+                        })}
+                      </Typography>
+                    )}
+
+                    {/* TODO: Better formatting */}
+                    {lot.radiation !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("radiation")}:</b>{" "}
+                        {t("overTiles", {
+                          amount: lot.radiation,
+                          count: lot.radiationRadius ?? 0,
+                        })}
+                      </Typography>
+                    )}
+
+                    {/* TODO: Better formatting */}
+                    {lot.flamability !== undefined && (
+                      <Typography variant="body2">
+                        <b>{t("flamability")}:</b> {lot.flamability}
+                      </Typography>
+                    )}
+
+                    {/* TODO: Better formatting */}
+                    {lot.requirements && (
+                      <Typography variant="body2">
+                        <b>{t("requirements")}:</b>
+                        <ul>
+                          {entries(lot.requirements).map(([requirement, value]) => (
+                            <li key={requirement}>
+                              {getRequirementLabel(
+                                t,
+                                requirement,
+                                variantInfo.options,
+                                profileOptions,
+                              )}
+                              {": "}
+                              {getRequirementValueLabel(
+                                t,
+                                requirement,
+                                value,
+                                variantInfo.options,
+                                profileOptions,
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </Typography>
+                    )}
+                  </FlexBox>
                 </FlexBox>
               </CardContent>
             </Card>

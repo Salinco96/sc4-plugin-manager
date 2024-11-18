@@ -1,122 +1,126 @@
-import { IndexerCategory, IndexerSource } from "../types"
+import { ID } from "@common/types"
+import { indexBy } from "@common/utils/arrays"
+import { isDefined } from "@common/utils/types"
 
-const sourceId = "simtropolis"
+import { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
+
+const sourceId: IndexerSourceID = ID("simtropolis")
 
 const origin = "https://community.simtropolis.com"
 
-const categories: IndexerCategory[] = [
+const categories: IndexerSourceCategory[] = [
   {
     category: "dependencies",
-    id: "32-simpeg-plex-files",
+    id: ID("32-simpeg-plex-files"),
   },
   {
     category: "civics",
-    id: "33-plex-custom-lots-mods",
+    id: ID("33-plex-custom-lots-mods"),
   },
   {
     category: "waterfront",
-    id: "34-cdk-coastal-development-kit",
+    id: ID("34-cdk-coastal-development-kit"),
   },
   {
     category: "dependencies",
-    id: "35-mtp-mountain-theme-pack",
+    id: ID("35-mtp-mountain-theme-pack"),
   },
   {
-    category: "mods/spam",
-    id: "36-spam-simpeg-agricultural-mods",
-  },
-  {
-    category: "mods",
-    id: "37-peg-utopian-series",
+    category: "mods,spam",
+    id: ID("36-spam-simpeg-agricultural-mods"),
   },
   {
     category: "mods",
-    id: "64-simcitypolska-files",
+    id: ID("37-peg-utopian-series"),
   },
   {
     category: "mods",
-    id: "67-simcitybrasil-files",
+    id: ID("64-simcitypolska-files"),
   },
   {
     category: "mods",
-    id: "73-workingman-productions-wmp",
+    id: ID("67-simcitybrasil-files"),
+  },
+  {
+    category: "mods",
+    id: ID("73-workingman-productions-wmp"),
   },
   {
     category: "residential",
-    id: "101-residential",
+    id: ID("101-residential"),
   },
   {
     category: "commercial",
-    id: "102-commercial",
+    id: ID("102-commercial"),
   },
   {
     category: "industry",
-    id: "103-industrial",
+    id: ID("103-industrial"),
   },
   {
     category: "agriculture",
-    id: "104-agricultural",
+    id: ID("104-agricultural"),
   },
   {
     category: "residential",
-    id: "105-building-sets",
+    id: ID("105-building-sets"),
   },
   {
     category: "civics",
-    id: "106-civic-non-rci",
+    id: ID("106-civic-non-rci"),
   },
   {
     category: "utilities",
-    id: "107-utilities",
+    id: ID("107-utilities"),
   },
   {
     category: "parks",
-    id: "108-parks-plazas",
+    id: ID("108-parks-plazas"),
   },
   {
     category: "waterfront",
-    id: "109-waterfront",
+    id: ID("109-waterfront"),
   },
   {
     category: "transport",
-    id: "110-transportation",
+    id: ID("110-transportation"),
   },
   {
     category: "automata",
-    id: "111-automata",
+    id: ID("111-automata"),
   },
   {
     category: "gameplay",
-    id: "112-gameplay-mods",
+    id: ID("112-gameplay-mods"),
   },
   {
     category: "graphics",
-    id: "113-graphical-mods",
+    id: ID("113-graphical-mods"),
   },
   {
     category: "cheats",
-    id: "114-cheats",
+    id: ID("114-cheats"),
   },
   {
     category: "mods",
-    id: "115-tools",
+    id: ID("115-tools"),
   },
   {
     category: "dependencies",
-    id: "118-dependencies",
+    id: ID("118-dependencies"),
   },
   {
     category: "dependencies",
-    id: "120-obsolete-legacy",
+    id: ID("120-obsolete-legacy"),
   },
   {
     category: "dll",
-    id: "122-dll-mods",
+    id: ID("122-dll-mods"),
   },
 ]
 
 export const SIMTROPOLIS: IndexerSource = {
-  categories,
+  categories: indexBy(categories, category => category.id),
   getCategoryPageCount(html) {
     const pageJump = html.querySelector("li.ipsPagination_pageJump a")
     const match = pageJump?.textContent.match(/page (\d+) of (\d+)/i)
@@ -138,10 +142,10 @@ export const SIMTROPOLIS: IndexerSource = {
       ips4_member_id,
     }
   },
-  getDownloadUrl(entryId, variant) {
-    const itemId = entryId.split("/")[1]
+  getDownloadUrl(assetId, variant) {
+    const itemId = assetId.split("/")[1]
     const baseUrl = `${origin}/files/file/${itemId}/?do=download`
-    return variant ? `${baseUrl}&r=${variant}` : baseUrl
+    return variant !== undefined ? `${baseUrl}&r=${variant}` : baseUrl
   },
   getEntries(html) {
     const items = html.querySelectorAll("div.cDownloadsCategoryTable li.ipsDataItem")
@@ -149,12 +153,16 @@ export const SIMTROPOLIS: IndexerSource = {
     return items.map(item => {
       const thumbnail = item.querySelector("[data-bg]")?.attributes["data-bg"]
       const title = item.querySelector(".ipsDataItem_title > span:last-of-type a")
-      const itemName = title?.textContent.trim()
+
       const itemUrl = title?.attributes.href
       const itemId = itemUrl?.match(/[/]file[/]([%\w-]+)[/]?$/)?.[1]
+      const itemName = title?.textContent.trim()
+
       const author = item.querySelector(".ipsDataItem_main > p:first-of-type a")
       const authorName = author?.textContent.trim()
+
       const lastModified = item.querySelector("[datetime]")?.attributes.datetime
+
       const downloads = item
         .querySelector(".ipsDataItem_main > p:nth-of-type(2)")
         ?.textContent.match(/([\d,]+) downloads/)
@@ -177,17 +185,15 @@ export const SIMTROPOLIS: IndexerSource = {
         throw Error(`Failed to extract ID for ${itemName}`)
       }
 
-      return [
-        `${sourceId}/${itemId}`,
-        {
-          authors: [authorName ?? sourceId],
-          downloads: Number.parseInt(downloads || "0", 10) || undefined,
-          lastModified,
-          name: itemName,
-          thumbnail,
-          url: itemUrl.startsWith(origin) ? itemUrl : `${origin}${itemUrl}`,
-        },
-      ]
+      return {
+        assetId: ID(`${sourceId}/${itemId}`),
+        authors: [authorName ?? sourceId],
+        downloads: Number.parseInt(downloads || "0", 10) || undefined,
+        lastModified: new Date(lastModified),
+        name: itemName,
+        thumbnail,
+        url: itemUrl.startsWith(origin) ? itemUrl : `${origin}${itemUrl}`,
+      }
     })
   },
   getEntryDetails(assetId, html) {
@@ -196,21 +202,22 @@ export const SIMTROPOLIS: IndexerSource = {
     const dependencies = Array.from(
       new Set([
         ...Array.from(
-          description?.matchAll(/https:\/\/community.simtropolis.com\/files\/file\/([\w-]+)\/?/g) ??
-            [],
-        ).map(match => `simtropolis/${match[1]}`),
+          description?.matchAll(
+            /(https:[/][/]community.simtropolis.com)?[/]files[/]file[/]([\w-]+)[/]?/g,
+          ) ?? [],
+        ).map(match => `simtropolis/${match[2]}`),
         ...Array.from(
           description?.matchAll(
-            /https:\/\/www.sc4evermore.com\/index.php\/downloads\/download\/([\w-]+)\/([\w-]+)\/?/g,
+            /(https:[/][/]www.sc4evermore.com)?[/]index.php[/]downloads[/]download[/]([\w-]+)[/]([\w-]+)[/]?/g,
           ) ?? [],
-        ).map(match => `sc4evermore/${match[2]}`),
+        ).map(match => `sc4evermore/${match[3]}`),
       ]),
     ).filter(dependencyId => dependencyId !== assetId)
 
     const images = html
       .querySelectorAll(".cDownloadsCarousel .ipsCarousel_item span")
       .map(e => e.attributes["data-fullURL"] || e.querySelector("img")?.attributes.src)
-      .filter(Boolean) as string[]
+      .filter(isDefined)
 
     return {
       dependencies,
@@ -226,13 +233,13 @@ export const SIMTROPOLIS: IndexerSource = {
       throw Error("Missing variants")
     }
 
-    const variants: { [variant: string]: string } = {}
+    const variants: { [variant: number]: string } = {}
 
     for (const item of items.querySelectorAll(".ipsDataItem")) {
       const filename = item.querySelector(".ipsDataItem_title")?.textContent
-      const variant = item.querySelector("a")?.attributes.href.match(/&r=(\w+)/)?.[1]
+      const variant = item.querySelector("a")?.attributes.href.match(/&r=(\d+)/)?.[1]
       if (variant && filename) {
-        variants[variant] = filename
+        variants[Number(variant)] = filename
       }
     }
 

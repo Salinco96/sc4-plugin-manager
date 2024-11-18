@@ -1,98 +1,101 @@
-import { IndexerCategory, IndexerSource } from "../types"
+import { ID } from "@common/types"
+import { indexBy } from "@common/utils/arrays"
 
-const sourceId = "sc4evermore"
+import { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
+
+const sourceId: IndexerSourceID = ID("sc4evermore")
 
 const origin = "https://www.sc4evermore.com"
 
-const categories: IndexerCategory[] = [
+const categories: IndexerSourceCategory[] = [
   {
-    category: "mods/nam",
-    id: "6-network-addon-mod-nam",
+    category: "mods,nam",
+    id: ID("6-network-addon-mod-nam"),
   },
   {
     category: "residential",
-    id: "11-residential",
+    id: ID("11-residential"),
   },
   {
     category: "commercial",
-    id: "12-commercial",
+    id: ID("12-commercial"),
   },
   {
     category: "industry",
-    id: "13-industrial",
+    id: ID("13-industrial"),
   },
   {
     category: "parks",
-    id: "14-parks",
+    id: ID("14-parks"),
   },
   {
     category: "utilities",
-    id: "15-utility",
+    id: ID("15-utility"),
   },
   {
     category: "civics",
-    id: "16-civic",
+    id: ID("16-civic"),
   },
   {
     category: "rewards",
-    id: "18-reward",
+    id: ID("18-reward"),
   },
   {
     category: "transport",
-    id: "19-transportation",
+    id: ID("19-transportation"),
   },
   {
     category: "landmarks",
-    id: "20-ploppable",
+    id: ID("20-ploppable"),
   },
   {
     category: "landmarks",
-    id: "21-other",
+    id: ID("21-other"),
   },
   {
     category: "dependencies",
-    id: "22-dependencies",
+    id: ID("22-dependencies"),
   },
   {
-    category: "transport/mods",
-    id: "23-transportation-mods",
+    category: "mods,transport",
+    id: ID("23-transportation-mods"),
   },
   {
-    category: "mmps/flora",
-    id: "25-flora-fauna-and-mayor-mode-ploppables",
+    category: "mmps,flora",
+    id: ID("25-flora-fauna-and-mayor-mode-ploppables"),
   },
   {
     category: "gameplay",
-    id: "26-gameplay-mods",
+    id: ID("26-gameplay-mods"),
   },
   {
     category: "terrains",
-    id: "37-terrain-mods-and-tree-controllers",
+    id: ID("37-terrain-mods-and-tree-controllers"),
   },
   {
     category: "mods",
-    id: "38-other-mods",
+    id: ID("38-other-mods"),
   },
   {
     category: "mods",
-    id: "40-maxis",
+    id: ID("40-maxis"),
   },
   {
     category: "automata",
-    id: "41-automata-mods",
+    id: ID("41-automata-mods"),
   },
   {
-    category: "mods/dll",
-    id: "42-dll-mods",
+    category: "mods,dll",
+    id: ID("42-dll-mods"),
   },
   {
     category: "agriculture",
-    id: "43-agriculture",
+    id: ID("43-agriculture"),
   },
 ]
 
 export const SC4EVERMORE: IndexerSource = {
-  categories,
+  categories: indexBy(categories, category => category.id),
   getCategoryPageCount(html) {
     const pageJump = html.querySelector(".jd_cats_subheader")
     const match = pageJump?.textContent.match(/page (\d+) of (\d+)/i)
@@ -104,12 +107,12 @@ export const SC4EVERMORE: IndexerSource = {
   getCookies() {
     return {}
   },
-  getDownloadUrl(entryId, variant) {
-    if (variant) {
+  getDownloadUrl(assetId, variant) {
+    if (variant !== undefined) {
       throw Error(`${sourceId} does not have variants!`)
     }
 
-    const itemId = entryId.split("/")[1]
+    const itemId = assetId.split("/")[1]
     return `${origin}/index.php/downloads?task=download.send&id=${itemId.replace("-", ":")}`
   },
   getEntries(html) {
@@ -118,17 +121,21 @@ export const SC4EVERMORE: IndexerSource = {
     return items.map(item => {
       const thumbnail = item.parentNode.nextElementSibling?.querySelector("img")?.attributes.src
       const title = item.previousElementSibling?.querySelector("b a")
-      const itemName = title?.textContent.trim()
+
       const itemUrl = title?.attributes.href
       const itemId = itemUrl?.split("/").at(-1)
+      const itemName = title?.textContent.trim()
+
       const authorName =
         item.parentNode.previousElementSibling?.textContent.match(
-          /original author:\s*(\w+)/i,
+          /original author:\s*(\S+)/i,
         )?.[1] ??
         item.parentNode.previousElementSibling?.previousElementSibling?.textContent.match(
-          /original author:\s*(\w+)/i,
+          /original author:\s*(\S+)/i,
         )?.[1]
+
       const fields = item.parentNode.nextElementSibling?.querySelectorAll(".jd_field_row_compact")
+
       const lastModified = fields
         ?.find(field => field.querySelector(".jd_field_title")?.textContent.match(/changed/i))
         ?.querySelector(".jd_field_value_compact")?.textContent
@@ -154,17 +161,15 @@ export const SC4EVERMORE: IndexerSource = {
         throw Error(`Failed to extract ID for ${itemName}`)
       }
 
-      return [
-        `${sourceId}/${itemId}`,
-        {
-          authors: [authorName ?? sourceId],
-          downloads: Number.parseInt(downloads || "0", 10) || undefined,
-          lastModified,
-          name: itemName,
-          thumbnail,
-          url: itemUrl.startsWith(origin) ? itemUrl : `${origin}${itemUrl}`,
-        },
-      ]
+      return {
+        assetId: ID(`${sourceId}/${itemId}`),
+        authors: [authorName ?? sourceId],
+        downloads: Number.parseInt(downloads || "0", 10) || undefined,
+        lastModified: new Date(lastModified),
+        name: itemName,
+        thumbnail,
+        url: itemUrl.startsWith(origin) ? itemUrl : `${origin}${itemUrl}`,
+      }
     })
   },
   getEntryDetails(assetId, html) {
@@ -173,12 +178,13 @@ export const SC4EVERMORE: IndexerSource = {
     const dependencies = Array.from(
       new Set([
         ...Array.from(
-          description?.matchAll(/https:\/\/community.simtropolis.com\/files\/file\/([\w-]+)\/?/g) ??
-            [],
-        ).map(match => `simtropolis/${match[1]}`),
+          description?.matchAll(
+            /(https:[/][/]community.simtropolis.com)?[/]files[/]file[/]([\w-]+)[/]?/g,
+          ) ?? [],
+        ).map(match => `simtropolis/${match[2]}`),
         ...Array.from(
           description?.matchAll(
-            /(https:\/\/www.sc4evermore.com)?\/index.php\/downloads\/download\/([\w-]+)\/([\w-]+)\/?/g,
+            /(https:[/][/]www.sc4evermore.com)?[/]index.php[/]downloads[/]download[/]([\w-]+)[/]([\w-]+)[/]?/g,
           ) ?? [],
         ).map(match => `sc4evermore/${match[3]}`),
       ]),

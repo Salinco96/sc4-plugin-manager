@@ -30,14 +30,14 @@ export interface VariantData {
   experimental?: boolean
   files?: PackageFile[]
   images?: string[]
-  lastModified?: string
+  lastModified?: Date
   logs?: string
   lots?: LotData[]
   mmps?: MMPData[]
   name?: string
   optional?: PackageID[]
   options?: OptionData[]
-  release?: string
+  release?: Date
   readme?: string
   repository?: string
   requirements?: Requirements
@@ -47,19 +47,34 @@ export interface VariantData {
   warnings?: PackageWarning[]
 }
 
-export interface BaseVariantInfo extends VariantData {
+export interface BaseVariantInfo {
   assets?: VariantAssetInfo[]
   authors: AuthorID[]
   categories: CategoryID[]
   dependencies?: DependencyInfo[]
+  deprecated?: boolean | PackageID
+  description?: string
+  experimental?: boolean
+  files?: PackageFile[]
   id: VariantID
+  images?: string[]
+  lastModified?: string
+  logs?: string
   lots?: LotInfo[]
   mmps?: MMPInfo[]
   name: string
   new?: boolean
+  optional?: PackageID[]
   options: OptionInfo[]
   priority: number
+  release?: string
+  readme?: string
+  repository?: string
+  requirements?: Requirements
+  thumbnail?: string
+  url?: string
   version: string
+  warnings?: PackageWarning[]
 }
 
 export interface VariantInfo extends BaseVariantInfo {

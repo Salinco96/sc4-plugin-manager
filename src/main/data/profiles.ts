@@ -3,8 +3,8 @@ import path from "path"
 
 import { ProfileData, ProfileID, ProfileInfo, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
-import { isEmpty, keys, mapValues, size } from "@common/utils/objects"
-import { isEnum } from "@common/utils/types"
+import { isEmpty, keys, mapValues, size, values } from "@common/utils/objects"
+import { isEnum, isObject } from "@common/utils/types"
 import { VariantID } from "@common/variants"
 import { readConfig } from "@node/configs"
 import { createIfMissing } from "@node/files"
@@ -102,6 +102,11 @@ export function toProfileData(profile: Readonly<ProfileInfo>): ProfileData {
 
   if (!isEmpty(profile.packages)) {
     data.packages = profile.packages
+    for (const config of values(data.packages)) {
+      if (isObject(config)) {
+        delete config.version
+      }
+    }
   }
 
   return data

@@ -26,7 +26,14 @@ import {
   PackageStatus,
   Packages,
 } from "@common/types"
-import { containsWhere, removeElement, union, unique } from "@common/utils/arrays"
+import {
+  containsWhere,
+  isEqual,
+  mapDefined,
+  removeElement,
+  union,
+  unique,
+} from "@common/utils/arrays"
 import {
   filterValues,
   forEach,
@@ -36,7 +43,7 @@ import {
   reduce,
   values,
 } from "@common/utils/objects"
-import { isEnum } from "@common/utils/types"
+import { isArray, isEnum } from "@common/utils/types"
 import { DependencyInfo, Issue, VariantID, VariantInfo, VariantIssue } from "@common/variants"
 import { Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
 import { TaskContext } from "@utils/tasks"
@@ -361,6 +368,8 @@ export function resolvePackageUpdates(
   excludingPackages: PackageID[]
   /** Incompatible packages with an available compatible variant (not installed) */
   explicitVariantChanges: { [packageId in PackageID]?: { old: VariantID; new: VariantID } }
+  /** Implicit option changes (e.g. different lot IDs across variants) */
+  implicitOptionChanges: { [packageId in PackageID]?: { old: Options; new: Options } }
   /** Incompatible packages with an available compatible variant (installed) */
   implicitVariantChanges: { [packageId in PackageID]?: { old: VariantID; new: VariantID } }
   /** Packages that will be included */
@@ -485,6 +494,10 @@ export function resolvePackageUpdates(
     [packageId in PackageID]?: { old: VariantID; new: VariantID }
   } = {}
 
+  const implicitOptionChanges: {
+    [packageId in PackageID]?: { old: Options; new: Options }
+  } = {}
+
   const incompatibleExternals: Feature[] = []
   const incompatiblePackages: PackageID[] = []
 
@@ -513,6 +526,21 @@ export function resolvePackageUpdates(
 
       if (oldStatus.variantId !== newStatus.variantId) {
         selectingVariants[packageId] = newStatus.variantId
+
+        const enabledLots = packageConfig?.options?.[LOTS_OPTION_ID]
+        if (isArray(enabledLots)) {
+          const replacedLots = mapDefined(enabledLots, id =>
+            variantInfo.lots?.find(lot => lot.id === id)
+              ? id
+              : variantInfo.lots?.find(lot => lot.replace === id)?.id,
+          )
+
+          if (!isEqual(enabledLots, replacedLots)) {
+            implicitOptionChanges[packageId] ??= { new: {}, old: {} }
+            implicitOptionChanges[packageId].old[LOTS_OPTION_ID] = enabledLots
+            implicitOptionChanges[packageId].new[LOTS_OPTION_ID] = replacedLots
+          }
+        }
 
         if (newStatus.enabled && oldStatus.enabled) {
           if (variantInfo.warnings) {
@@ -726,7 +754,11 @@ export function resolvePackageUpdates(
     if (!isEmpty(replacingMaxisLots)) {
       const lotNames = unique(
         values(replacingMaxisLots).map(({ lotInfo, packageId }) => {
-          return lotInfo.label ?? packages[packageId]?.name ?? packageId
+          const lotName = lotInfo.label ?? lotInfo.name
+          const packageName = packages[packageId]?.name ?? packageId
+          return lotName
+            ? `${packageName} - ${lotName} (0x${lotInfo.id})`
+            : `${packageName} (0x${lotInfo.id})`
         }),
       ).sort()
 
@@ -741,7 +773,11 @@ export function resolvePackageUpdates(
     if (!isEmpty(oldLots)) {
       const lotNames = unique(
         values(oldLots).map(({ lotInfo, packageId }) => {
-          return lotInfo.label ?? packages[packageId]?.name ?? packageId
+          const lotName = lotInfo.label ?? lotInfo.name
+          const packageName = packages[packageId]?.name ?? packageId
+          return lotName
+            ? `${packageName} - ${lotName} (0x${lotInfo.id})`
+            : `${packageName} (0x${lotInfo.id})`
         }),
       ).sort()
 
@@ -756,7 +792,11 @@ export function resolvePackageUpdates(
     if (!isEmpty(replacingLots)) {
       const lotNames = unique(
         values(replacingLots).map(({ oldInfo, packageId }) => {
-          return oldInfo.label ?? packages[packageId]?.name ?? packageId
+          const lotName = oldInfo.label ?? oldInfo.name
+          const packageName = packages[packageId]?.name ?? packageId
+          return lotName
+            ? `${packageName} - ${lotName} (0x${oldInfo.id})`
+            : `${packageName} (0x${oldInfo.id})`
         }),
       ).sort()
 
@@ -783,6 +823,7 @@ export function resolvePackageUpdates(
 
     console.debug("Resulting conflicts", {
       explicitVariantChanges,
+      implicitOptionChanges,
       implicitVariantChanges,
       incompatibleExternals,
       incompatiblePackages,
@@ -795,6 +836,7 @@ export function resolvePackageUpdates(
     enablingPackages,
     excludingPackages,
     explicitVariantChanges,
+    implicitOptionChanges,
     implicitVariantChanges,
     includingPackages,
     incompatibleExternals,

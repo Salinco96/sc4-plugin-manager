@@ -114,7 +114,23 @@ export async function loadDBPF(
   if (options.loadExemplars) {
     for (const entry of values(contents.entries)) {
       if (entry.type === DBPFDataType.EXMP) {
-        entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(file, entry, options)
+        try {
+          entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(file, entry, options)
+        } catch (error) {
+          // Entry is actually compressed even though not in DIR...
+          // e.g. Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+          if (!isCompressed(entry)) {
+            entry.uncompressed = 0
+            try {
+              entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(file, entry, options)
+              continue
+            } catch (error) {
+              // Ignore
+            }
+          }
+
+          console.error(`Failed to load entry ${entry.id}`, error)
+        }
       }
     }
   }
@@ -137,6 +153,10 @@ export async function loadDBPFEntry<T extends DBPFDataType>(
 
   if (isCompressed(entry)) {
     bytes.decompress()
+
+    if (entry.uncompressed === 0) {
+      entry.uncompressed = bytes.length
+    }
   }
 
   switch (type) {

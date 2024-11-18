@@ -1,10 +1,14 @@
 import { ExemplarData } from "./exemplars"
-import { toHex } from "./utils/hex"
+import { readHex, toHex } from "./utils/hex"
 
 export type TGI = `${string}-${string}-${string}`
 
 export function TGI(t: number, g: number, i: number): TGI {
   return `${toHex(t, 8)}-${toHex(g, 8)}-${toHex(i, 8)}`
+}
+
+export function parseTGI(tgi: TGI): [t: number, g: number, i: number] {
+  return tgi.split("-").map(readHex) as [t: number, g: number, i: number]
 }
 
 export type DBPFEntry<T extends DBPFDataType = DBPFDataType> = {
@@ -45,8 +49,9 @@ export enum DBPFFileType {
   COHORT = "05342861",
   DIR = "e86b1eef-e86b1eef-286b1f03",
   EXEMPLAR = "6534284a",
-  EXEMPLAR_LOT_BUILDING = "6534284a-a8fbd372",
+  EXEMPLAR_LOT_CONFIG = "6534284a-a8fbd372",
   FSH = "7ab50e44",
+  FSH_TEXTURE = "7ab50e44-0986135e",
   JFIF = "7480710.",
   LD = "6be74c60",
   PNG = "856ddbac",
@@ -133,8 +138,9 @@ export function getFileTypeLabel(id: TGI): string {
     [DBPFFileType.COHORT]: "Cohort",
     [DBPFFileType.DIR]: "DIR",
     [DBPFFileType.EXEMPLAR]: "Exemplar",
-    [DBPFFileType.EXEMPLAR_LOT_BUILDING]: "Exemplar - Lot Building",
-    [DBPFFileType.FSH]: "FSH - Texture",
+    [DBPFFileType.EXEMPLAR_LOT_CONFIG]: "Exemplar - Lot Config",
+    [DBPFFileType.FSH]: "FSH",
+    [DBPFFileType.FSH_TEXTURE]: "FSH - Texture",
     [DBPFFileType.JFIF]: "JFIF",
     [DBPFFileType.LD]: "Lot Data",
     [DBPFFileType.PNG]: "PNG",

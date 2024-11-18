@@ -1,80 +1,961 @@
 import path from "path"
 
+import { input, select } from "@inquirer/prompts"
 import { config } from "dotenv"
 import { glob } from "glob"
 
 import { AssetData, AssetID } from "@common/assets"
 import { AuthorData, AuthorID } from "@common/authors"
+import { ExemplarPropertyData, ExemplarPropertyInfo, ExemplarValueType } from "@common/exemplars"
 import { PackageID } from "@common/packages"
-import { ConfigFormat, LotData, PackageData } from "@common/types"
-import { forEachAsync, keys } from "@common/utils/objects"
+import { ConfigFormat, PackageData } from "@common/types"
+import { indexBy, mapDefined } from "@common/utils/arrays"
+import { readHex } from "@common/utils/hex"
+import { forEach, keys, mapValues, values } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
-import { VariantAssetData, VariantData, VariantID } from "@common/variants"
+import { VariantData, VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
-import { exists, getExtension, removeIfPresent } from "@node/files"
+import { exists, removeIfPresent } from "@node/files"
 
-import { OVERRIDES } from "./overrides"
+import { analyzeSC4Files } from "./dbpf/dbpf"
+import { writePackageData } from "./dbpf/packages"
 import { SC4EVERMORE } from "./sources/sc4evermore"
 import { SIMTROPOLIS } from "./sources/simtropolis"
 import {
-  IndexerBaseEntry,
-  IndexerCategory,
+  EntryID,
   IndexerEntry,
   IndexerEntryList,
   IndexerOptions,
   IndexerOverride,
   IndexerSource,
+  IndexerSourceCategory,
+  IndexerSourceCategoryID,
+  IndexerSourceID,
 } from "./types"
-import { htmlToMd, readHTML, toID, wait } from "./utils"
+import { readHTML, toID, wait } from "./utils"
 
 config({ path: ".env.local" })
 
-const now = new Date().toISOString()
+const now = new Date()
 
 const dataDir = path.join(__dirname, "data")
 const dataAssetsDir = path.join(dataDir, "assets")
 const dataDownloadsDir = process.env.INDEXER_DOWNLOADS_PATH!
+const dataDownloadsTempDir = process.env.INDEXER_DOWNLOADS_TEMP_PATH!
 
 const dbDir = path.join(__dirname, "../../sc4-plugin-manager-data")
 const dbAssetsDir = path.join(dbDir, "assets")
 const dbPackagesDir = path.join(dbDir, "packages")
 
 runIndexer({
-  fetchEntryDetails() {
-    return false
-  },
   fetchNewEntries(data) {
-    if (data?.timestamp) {
+    // Refetch new entries at most once every 6 hours
+    if (data?.meta?.timestamp) {
       const hour = 60 * 60 * 1000
-      return Date.now() >= new Date(data.timestamp).getTime() + 6 * hour
+      return now.getTime() >= data.meta.timestamp.getTime() + 6 * hour
     }
 
     return true
   },
-  include(entry, entryId /*, source, category */) {
+  includeEntry(entry) {
     return (
       [/buggi/i, /cococity/i, /null/i, /memo/i, /simmaster07/i, /toroca/i].some(
         id => !!entry.authors.some(a => a.match(id)),
       ) ||
       [/13318/i, /15758/i, /21339/i, /22771/i, /23089/i, /27340/i, /30836/i].some(
-        id => !!entryId.match(id),
+        id => !!entry.assetId.match(id),
       )
     )
-    // return (
-    //   (entry.lastModified >= "2024-05-01T00:00:00Z" && !category.id.includes("obsolete")) ||
-    //   [
-    //     "167-bsc-aln-rrp-pasture-flora",
-    //     "234-ksteam-s54-prop-pack-vol01",
-    //     "19953-orange-megaprop-v01",
-    //   ].some(id => entryId.includes(id))
-    // )
   },
-  overrides: OVERRIDES,
   sources: [SC4EVERMORE, SIMTROPOLIS],
+  version: 1,
 })
+
+async function runIndexer(options: IndexerOptions): Promise<void> {
+  const sources = indexBy(options.sources, source => source.id)
+
+  const errors = new Set<string>()
+
+  const assetIds: { [entryId in EntryID]?: AssetID } = {}
+  const entries: { [entryId in EntryID]?: IndexerEntry } = {}
+
+  const categories: {
+    [sourceId in IndexerSourceID]: {
+      [categoryId in IndexerSourceCategoryID]: IndexerEntryList
+    }
+  } = {}
+
+  function getAssetID(entryId: EntryID, hint?: string): AssetID {
+    return (assetIds[entryId] ??= (hint ?? entryId) as AssetID)
+  }
+
+  function getCategory(entryId: EntryID): IndexerSourceCategory {
+    return getSource(entryId).categories[getEntry(entryId).category]
+  }
+
+  function getEntry(entryId: EntryID): IndexerEntry {
+    return entries[entryId]! // todo
+  }
+
+  function getEntryID(assetId: string): EntryID {
+    return assetId.match(/^.+[/]\d+/)![0] as EntryID
+  }
+
+  function getOverride(entryId: EntryID, variant?: string): IndexerOverride | null | undefined {
+    const override = overrides[entryId]
+    return variant ? override?.variants?.[variant] : override
+  }
+
+  function getSource(entryId: EntryID): IndexerSource {
+    return sources[entryId.split("/")[0] as IndexerSourceID]
+  }
+
+  const skipped = new Set<EntryID>()
+  const overrides = await loadOverrides()
+
+  const dbAuthors = await loadAuthorsFromDB()
+  const dbAssetsConfigs = await loadAssetsFromDB()
+  const dbPackagesConfigs = await loadPackagesFromDB()
+  const exemplarProperties = await loadExemplarProperties()
+
+  // Step 1 - Load existing entries
+  for (const source of options.sources) {
+    for (const category of values(source.categories)) {
+      console.debug(`Loading entries from ${source.id}/${category.id}...`)
+
+      const data = await loadSourceCategory(source.id, category.id)
+
+      forEach(data.assets, (entry, entryId) => {
+        assetIds[entryId] = entry.assetId
+        entries[entryId] = entry
+      })
+    }
+  }
+
+  // Step 2 - Fetch new entries
+  for (const source of options.sources) {
+    for (const category of values(source.categories)) {
+      const data = categories[source.id][category.id]
+      const timestamp = data.meta?.timestamp
+
+      // Check whether to refetch asset listing for this category
+      if (options.fetchNewEntries(data, source, category)) {
+        console.debug(`Fetching entries from ${source.id}/${category.id}...`)
+
+        let nPages: number | undefined
+        let page = 1
+
+        do {
+          const url = source.getCategoryUrl(category.id, page)
+          console.debug(`Page ${page} of ${nPages ?? "?"}: ${url}`)
+
+          const html = await readHTML(await get(url, { cookies: () => source.getCookies() }))
+
+          nPages ??= source.getCategoryPageCount(html)
+
+          const baseEntries = source.getEntries(html)
+
+          for (const baseEntry of baseEntries) {
+            // Results are sorted by last-modified-time (most recent first)
+            // If we encounter any item last modified before our last cache time, we are thus done with new items
+            if (source === SIMTROPOLIS && timestamp && baseEntry.lastModified < timestamp) {
+              page = nPages
+              continue
+            }
+
+            const entryId = getEntryID(baseEntry.assetId)
+
+            const entry: IndexerEntry = {
+              ...entries[entryId],
+              ...baseEntry,
+              // Preserve existing assetId not to break references
+              assetId: getAssetID(entryId, baseEntry.assetId),
+              category: category.id,
+            }
+
+            // Category has changed!
+            const oldCategoryId = entries[entryId]?.category
+            if (oldCategoryId && oldCategoryId !== category.id) {
+              delete categories[source.id][oldCategoryId].assets[entryId]
+              await writeSourceCategory(source.id, oldCategoryId)
+            }
+
+            entries[entryId] = entry
+            data.assets[entryId] = entry
+          }
+
+          // Go easy on the server
+          await wait(3000)
+        } while (page++ < nPages)
+
+        data.meta ??= {}
+        data.meta.timestamp = now
+
+        // Save changes
+        await writeSourceCategory(source.id, category.id)
+      }
+    }
+  }
+
+  // Step 3 - Resolve entries
+  const resolvingEntries = new Set<AssetID>()
+  for (const entryId of keys(entries)) {
+    if (includeEntry(entryId)) {
+      await resolveEntry(entryId)
+    }
+  }
+
+  const dbAssets = values(dbAssetsConfigs).reduce(
+    (result, assets) => Object.assign(result, assets),
+    {},
+  )
+
+  const dbPackages = values(dbPackagesConfigs).reduce(
+    (result, packages) => Object.assign(result, packages),
+    {},
+  )
+
+  // Step 4 - Write changes
+  await writeConfig(dbDir, "authors", dbAuthors, ConfigFormat.YAML)
+  await writeOverrides(overrides)
+
+  // Step 5 - Check configs
+  forEach(dbPackages, checkPackage)
+
+  // Step 6 - Show errors
+  if (errors.size) {
+    const n = 100
+    console.error("".padEnd(n, "*"))
+    console.error(`* ${"ERRORS".padStart((n + 6 - 4) / 2, " ").padEnd(n - 4, " ")} *`)
+    console.error("".padEnd(n, "*"))
+    for (const error of errors) {
+      console.error(error)
+      console.error("---")
+    }
+  }
+
+  function checkPackage(packageData: PackageData, packageId: PackageID): void {
+    checkVariant(packageData, packageId)
+
+    if (packageData.variants) {
+      forEach(packageData.variants, (variantData, variantId) => {
+        checkVariant(variantData, packageId, variantId)
+      })
+    }
+  }
+
+  function checkVariant(
+    variantData: VariantData,
+    packageId: PackageID,
+    variantId?: VariantID,
+  ): void {
+    const prefix = variantId ? `In variant ${packageId}#${variantId}` : `In package ${packageId}`
+
+    if (variantData.assets) {
+      for (const asset of variantData.assets) {
+        const assetId = isString(asset) ? asset : asset.id
+        if (!dbAssets[assetId]) {
+          errors.add(`${prefix} - Asset ${assetId} does not exist`)
+        }
+      }
+    }
+
+    if (variantData.authors) {
+      for (const authorId of variantData.authors) {
+        if (!dbAuthors[authorId]) {
+          errors.add(`${prefix} - Author ${authorId} does not exist`)
+        }
+      }
+    }
+
+    if (variantData.dependencies) {
+      for (const dependency of variantData.dependencies) {
+        const dependencyId = isString(dependency) ? dependency : dependency.id
+        if (!dbPackages[dependencyId]) {
+          errors.add(`${prefix} - Dependency ${dependencyId} does not exist`)
+        }
+      }
+    }
+
+    if (isString(variantData.deprecated)) {
+      if (!dbPackages[variantData.deprecated]) {
+        errors.add(`${prefix} - Optional dependency ${variantData.deprecated} does not exist`)
+      }
+    }
+
+    if (variantData.optional) {
+      for (const dependencyId of variantData.optional) {
+        if (!dbPackages[dependencyId]) {
+          errors.add(`${prefix} - Optional dependency ${dependencyId} does not exist`)
+        }
+      }
+    }
+  }
+
+  function includeEntry(entryId: EntryID): boolean {
+    if (overrides[entryId] === null) {
+      return false
+    }
+
+    return options.includeEntry(getEntry(entryId), getSource(entryId), getCategory(entryId))
+  }
+
+  function getDefaultPackageId(entry: IndexerEntry): string {
+    const authorId = getAuthorId(entry.authors[0])
+    return `${authorId}/${entry.assetId.split("/")[1].replace(/^\d+-/, "")}`
+  }
+
+  async function getPackageId(entry: IndexerEntry, hint?: string): Promise<PackageID> {
+    const packageId = await input({
+      default: hint ?? getDefaultPackageId(entry),
+      message: "Package ID:",
+      validate: value => {
+        if (!/^[a-z0-9-]+[/][a-z0-9-]+$/.test(value)) {
+          return "Invalid package ID"
+        }
+
+        return true
+      },
+    })
+
+    const authorId = packageId.split("/")[0] as AuthorID
+
+    if (!dbAuthors[authorId]) {
+      const confirmed = await select({
+        choices: [
+          { name: "Yes", value: true },
+          { name: "No", value: false },
+        ],
+        default: true,
+        message: `Create author ${authorId}?`,
+      })
+
+      if (!confirmed) {
+        return getPackageId(entry, hint)
+      }
+
+      dbAuthors[authorId] = {
+        name: await input({
+          default: entry.authors[0],
+          message: "Author name:", // TODO: Simtropolis ID?
+        }),
+      }
+    }
+
+    return packageId as PackageID
+  }
+
+  async function resolveEntry(entryId: EntryID): Promise<IndexerEntry | undefined> {
+    const assetId = getAssetID(entryId)
+    const entry = getEntry(entryId)
+    const source = getSource(entryId)
+
+    let override = getOverride(entryId)
+
+    // Skip ignored entry
+    if (override === null || skipped.has(entryId)) {
+      console.warn(`Skipping ${assetId}...`)
+      return
+    }
+
+    // Handle dependency loop
+    if (resolvingEntries.has(assetId)) {
+      return entry
+    }
+
+    resolvingEntries.add(assetId)
+
+    if (override === undefined) {
+      const answer = await select<"include" | "exclude" | "skip" | "redirect">({
+        choices: [
+          { name: "Yes", value: "include" },
+          { name: "No", value: "exclude" },
+          { name: "Skip this time only", value: "skip" },
+          { name: "Redirect to another asset ID", value: "redirect" },
+        ],
+        default: "include",
+        message: `Include ${assetId}?`,
+      })
+
+      switch (answer) {
+        // Include
+        case "include": {
+          override = overrides[entryId] ??= {}
+          override.packageId = await getPackageId(entry)
+          break
+        }
+
+        // Always skip
+        case "exclude": {
+          override = overrides[entryId] = null
+          console.warn(`Skipping ${assetId}...`)
+          return
+        }
+
+        // Skip this time only
+        case "skip": {
+          skipped.add(entryId)
+          console.warn(`Skipping ${assetId}...`)
+          return
+        }
+
+        // Include another asset instead
+        case "redirect": {
+          const superseded = await input({
+            message: "Redirect to asset ID:",
+            validate: value => {
+              if (!/^[a-z0-9-]+[/][\d-]+(-[\w%]+)*$/.test(value)) {
+                return "Invalid asset ID"
+              }
+
+              if (!entries[getEntryID(value)]) {
+                return "Unknown asset"
+              }
+
+              if (getEntryID(value) === entryId) {
+                return "Cannot redirect to itself"
+              }
+
+              return true
+            },
+          })
+
+          override = overrides[entryId] ??= {}
+          override.superseded = getAssetID(getEntryID(superseded))
+          break
+        }
+      }
+    }
+
+    // Superseded asset, resolve the newer one instead
+    if (override?.superseded) {
+      return resolveEntry(getEntryID(override.superseded))
+    }
+
+    console.debug(`Resolving ${assetId}...`)
+
+    // Fetch details if entry was never fetched, or was modified since last fetch
+    if (!entry.version || !entry.meta?.timestamp || entry.meta.timestamp < entry.lastModified) {
+      console.debug(`Fetching ${entry.url}...`)
+      const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
+      const details = source.getEntryDetails(assetId, html)
+      if (!details.version) {
+        errors.add(`Missing version for entry ${assetId}`)
+        return
+      }
+
+      entry.meta ??= {}
+      entry.meta.timestamp = now
+
+      // If a new version is available, force to extract files again
+      if (entry.version !== details.version) {
+        delete entry.meta.version
+      }
+
+      // Set details
+      entry.dependencies = details.dependencies?.map(getEntryID)
+      entry.description = details.description
+      entry.images = details.images
+      entry.repository = details.repository
+      entry.version = details.version
+
+      // Save changes
+      await writeSourceCategory(source.id, entry.category)
+    }
+
+    // Download and analyze contents if outdated
+    if (!entry.meta?.version || entry.meta.version < options.version) {
+      let hasErrors = false
+
+      try {
+        await resolveVariant(entryId)
+      } catch (error) {
+        console.error(error)
+        errors.add((error as Error).message)
+        hasErrors = true
+      }
+
+      // Resolve variants
+      if (entry.variants) {
+        for (const variant of keys(entry.variants)) {
+          try {
+            await resolveVariant(entryId, variant)
+          } catch (error) {
+            console.error(error)
+            errors.add((error as Error).message)
+            hasErrors = true
+          }
+        }
+      }
+
+      if (!hasErrors) {
+        entry.meta.timestamp = now
+        entry.meta.version = options.version
+      }
+
+      // Save changes
+      await writeSourceCategory(source.id, entry.category)
+    }
+
+    // Generate packages if outdated
+    if (entry.variants) {
+      // Resolve "default" first
+      if (entry.variants.default) {
+        try {
+          await generatePackage(entryId, "default")
+        } catch (error) {
+          console.error(error)
+          errors.add((error as Error).message)
+        }
+      }
+
+      // Resolve others
+      for (const variant of keys(entry.variants)) {
+        if (variant !== "default") {
+          try {
+            await generatePackage(entryId, variant)
+          } catch (error) {
+            console.error(error)
+            errors.add((error as Error).message)
+          }
+        }
+      }
+    } else {
+      try {
+        await generatePackage(entryId)
+      } catch (error) {
+        console.error(error)
+        errors.add((error as Error).message)
+      }
+    }
+
+    return entry
+  }
+
+  async function resolveVariant(entryId: EntryID, variant?: string): Promise<boolean> {
+    const assetId = getAssetID(entryId)
+    const entry = getEntry(entryId)
+    const source = getSource(entryId)
+
+    const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
+    const variantEntry = variant ? entry.variants?.[variant] : entry
+    if (!variantEntry) {
+      throw Error(`Unknown variant ${variantAssetId}`)
+    }
+
+    if (!entry.version) {
+      throw Error(`Entry ${assetId} does not have a version`)
+    }
+
+    let variantOverride = getOverride(entryId, variant)
+
+    if (variant && variantOverride === undefined) {
+      const answer = await select({
+        choices: [
+          { name: "Yes", value: true },
+          { name: "No", value: false },
+        ],
+        default: true,
+        message: `Include ${variantAssetId}? ${variantEntry.filename}`,
+      })
+
+      overrides[entryId] ??= {}
+      overrides[entryId].variants ??= {}
+
+      if (answer) {
+        variantOverride = overrides[entryId].variants[variant] ??= {}
+        variantOverride.packageId = await getPackageId(entry, overrides[entryId].packageId)
+      } else {
+        variantOverride = overrides[entryId].variants[variant] = null
+      }
+    }
+
+    if (variantOverride === null) {
+      console.warn(`Skipping ${variantAssetId}...`)
+      return false
+    }
+
+    if (!variant && entry.variants && entry.meta?.version) {
+      // Nothing else to do here - we will resolve each variant individually later
+      return false
+    }
+
+    const downloadKey = `${variantAssetId}@${entry.version}`
+    const downloadPath = path.join(dataDownloadsDir, downloadKey)
+    const downloadTempPath = path.join(dataDownloadsTempDir, downloadKey)
+
+    const defaultDownloadUrl = source.getDownloadUrl(assetId, variant)
+    let downloadUrl = variantOverride?.downloadUrl ?? defaultDownloadUrl
+    let downloaded = await exists(downloadPath)
+
+    // Download files (or extract variants)
+    if (!downloaded || !variantEntry.sha256 || !variantEntry.size) {
+      await removeIfPresent(downloadPath)
+      downloaded = false
+
+      console.debug(`Downloading ${downloadUrl}...`)
+
+      while (!downloaded) {
+        try {
+          const response = await get(downloadUrl, { cookies: () => source.getCookies() })
+
+          const contentType = response.headers.get("Content-Type")
+
+          // HTML response - Simtropolis variant listing
+          if (contentType?.startsWith("text/html")) {
+            if (variant) {
+              throw Error("Unexpected HTML")
+            }
+
+            // Extract variants
+            const html = await readHTML(response)
+            const variants = source.getVariants(html)
+
+            // Clear previous data
+            entry.filename = undefined
+            entry.files = undefined
+            entry.sha256 = undefined
+            entry.size = undefined
+            entry.uncompressed = undefined
+            entry.variants = mapValues(variants, (filename, variant) => ({
+              ...entry.variants?.[variant],
+              filename,
+            }))
+
+            // Nothing else to do here - we will resolve each variant individually later
+            return false
+          }
+
+          const { filename, sha256, size, uncompressedSize } = await download(response, {
+            downloadPath,
+            downloadTempPath,
+            async exePath(exe) {
+              return getExePath(exe)
+            },
+            url: downloadUrl,
+          })
+
+          variantEntry.filename = filename
+          variantEntry.files = undefined
+          variantEntry.sha256 = sha256
+          variantEntry.size = size
+          variantEntry.uncompressed = uncompressedSize
+
+          if (!variant) {
+            entry.variants = undefined
+          }
+
+          downloaded = true
+        } catch (error) {
+          console.error(error)
+
+          // Suggest to retry with different URL
+          const answer = await select({
+            choices: [
+              { name: "Yes", value: true },
+              { name: "No", value: false },
+            ],
+            default: false,
+            message: "Override download URL?",
+          })
+
+          if (answer) {
+            downloadUrl = await input({
+              default: downloadUrl,
+              message: "Download URL:",
+              validate: value => {
+                if (!/^https:[/][/][-.\w]+[.][a-z]+[/][-.\w/%]+$/.test(value)) {
+                  return "Invalid URL"
+                }
+
+                return true
+              },
+            })
+
+            overrides[entryId] ??= {}
+            if (variant) {
+              overrides[entryId].variants ??= {}
+              variantOverride = overrides[entryId].variants[variant] ??= {}
+            } else {
+              variantOverride = overrides[entryId]
+            }
+
+            variantOverride.downloadUrl = downloadUrl
+          } else {
+            throw Error(`Failed to download ${variantAssetId}`)
+          }
+        }
+      }
+    }
+
+    // Extract files
+    if (!variantEntry.files || variantEntry.files) {
+      console.debug(`Extracting ${downloadKey}...`)
+
+      try {
+        await extractRecursively(downloadPath, {
+          async exePath(exe) {
+            return getExePath(exe)
+          },
+        })
+
+        const files = await glob("**", {
+          cwd: downloadPath,
+          nodir: true,
+        })
+
+        variantEntry.files = files.map(file => file.replaceAll(path.sep, "/")).reverse()
+      } catch (error) {
+        console.error(error)
+        throw Error(`Failed to extract ${variantAssetId}`)
+      }
+    }
+
+    // Analyze DBPF contents
+    const { buildings, features, lots, models, props, textures } = await analyzeSC4Files(
+      downloadPath,
+      variantEntry.files,
+      exemplarProperties,
+    )
+
+    variantEntry.buildings = buildings
+    variantEntry.features = features
+    variantEntry.lots = lots
+    variantEntry.models = models
+    variantEntry.props = props
+    variantEntry.textures = textures
+
+    // Resolve dependencies recursively
+    const dependencies = new Set<AssetID>()
+
+    if (entry.dependencies) {
+      for (const dependency of entry.dependencies) {
+        const dependencyEntryId = getEntryID(dependency)
+        const resolvedDependency = await resolveEntry(dependencyEntryId)
+        if (resolvedDependency) {
+          dependencies.add(resolvedDependency.assetId)
+        } else {
+          dependencies.add(getAssetID(dependencyEntryId, dependency))
+        }
+      }
+    }
+
+    entry.dependencies = Array.from(dependencies)
+
+    return true
+  }
+
+  async function generatePackage(entryId: EntryID, variant?: string): Promise<boolean> {
+    const assetId = getAssetID(entryId)
+    const entry = getEntry(entryId)
+    const source = getSource(entryId)
+
+    const entryOverride = getOverride(entryId)
+    const variantOverride = getOverride(entryId, variant)
+    const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
+    const variantEntry = variant ? entry.variants?.[variant] : entry
+    const packageId = variantOverride?.packageId ?? entryOverride?.packageId
+
+    if (entryOverride === null || variantOverride === null || !entry.meta?.timestamp) {
+      return false
+    }
+
+    if (!variantEntry?.files || !entry.version || !variantOverride || !packageId) {
+      throw Error(`Expected override to exist for ${variantAssetId}`)
+    }
+
+    let variantId = variantOverride.variantId
+
+    if (!variantId) {
+      console.debug(`Generating package for ${variantAssetId} -> ${packageId}`)
+
+      // Try to infer DarkNite variants from filename
+      const defaultVariantId = variantEntry.filename?.match(/\b(dn|dark\W?nite)\b/i)
+        ? "darknite"
+        : "default"
+
+      const overrideVariantId = await input({
+        default: defaultVariantId,
+        message: `Variant ID (${variantEntry.filename}):`,
+        validate: value => {
+          if (!/^[a-z0-9-]+$/.test(value)) {
+            return "Invalid variant ID"
+          }
+
+          return true
+        },
+      })
+
+      variantId = variantOverride.variantId = overrideVariantId as VariantID
+    }
+
+    const dependencies = mapDefined(
+      entry.dependencies ?? [],
+      dependency => getOverride(getEntryID(dependency))?.packageId,
+    )
+
+    const authorId = packageId.split("/")[0] as AuthorID
+    const authors = [authorId]
+
+    if (entry.authors) {
+      for (const authorName of entry.authors) {
+        const authorId = await getAuthorId(authorName)
+        if (authorId) {
+          authors.push(authorId)
+        }
+      }
+    }
+
+    const assetData = dbAssetsConfigs[source.id]?.[variantAssetId] ?? {}
+    const packageData = dbPackagesConfigs[authorId]?.[packageId]
+    const variantData = packageData?.variants?.[variantId]
+
+    // Create or update asset data
+    if (assetData?.version !== entry.version) {
+      assetData.lastModified = entry.lastModified
+      assetData.sha256 = variantEntry.sha256
+      assetData.size = variantEntry.size
+      assetData.uncompressed = variantEntry.uncompressed
+      assetData.url = variantOverride.downloadUrl
+      assetData.version = entry.version
+
+      dbAssetsConfigs[source.id] ??= {}
+      dbAssetsConfigs[source.id][variantAssetId] = assetData
+
+      await writeConfig(dbAssetsDir, source.id, dbAssetsConfigs[source.id], ConfigFormat.YAML)
+    }
+
+    // Create or update package/variant data
+    if (!variantData?.release || variantData.release < entry.meta.timestamp) {
+      if (variantData) {
+        console.debug(`Updating variant ${packageId}#${variantId}...`)
+      } else {
+        console.debug(`Creating variant ${packageId}#${variantId}...`)
+      }
+
+      dbPackagesConfigs[authorId] ??= {}
+      dbPackagesConfigs[authorId][packageId] = writePackageData(
+        packageData,
+        assetId,
+        source,
+        entry,
+        variant,
+        variantId,
+        authors,
+        dependencies,
+        now,
+      )
+
+      // Save changes
+      await writeConfig(dbPackagesDir, authorId, dbPackagesConfigs[authorId], ConfigFormat.YAML)
+    }
+
+    return true
+  }
+
+  async function loadSourceCategory(
+    sourceId: IndexerSourceID,
+    categoryId: IndexerSourceCategoryID,
+  ): Promise<IndexerEntryList> {
+    const config = await loadConfig<IndexerEntryList>(dataAssetsDir, `${sourceId}/${categoryId}`)
+    const data = config?.data ?? { assets: {} }
+    categories[sourceId] ??= {}
+    categories[sourceId][categoryId] = data
+    return data
+  }
+
+  async function writeSourceCategory(
+    sourceId: IndexerSourceID,
+    categoryId: IndexerSourceCategoryID,
+  ): Promise<void> {
+    const data = categories[sourceId][categoryId]
+    await writeConfig(dataAssetsDir, `${sourceId}/${categoryId}`, data, ConfigFormat.YAML)
+  }
+
+  async function loadOverrides(): Promise<{
+    [entryId in EntryID]?: IndexerOverride | null
+  }> {
+    const config = await loadConfig<{
+      [assetId in AssetID]?: IndexerOverride | null
+    }>(dataAssetsDir, "overrides")
+
+    const data: {
+      [entryId in EntryID]?: IndexerOverride | null
+    } = {}
+
+    if (config) {
+      forEach(config.data, (override, assetId) => {
+        data[getEntryID(assetId)] = override
+      })
+    }
+
+    return data
+  }
+
+  async function writeOverrides(overrides: {
+    [entryId in EntryID]?: IndexerOverride | null
+  }): Promise<void> {
+    const data: {
+      [assetId in AssetID]?: IndexerOverride | null
+    } = {}
+
+    forEach(overrides, (override, entryId) => {
+      data[getAssetID(entryId)] = override
+    })
+
+    await writeConfig<{
+      [entryId in EntryID]?: IndexerOverride | null
+    }>(dataAssetsDir, "overrides", data, ConfigFormat.YAML)
+  }
+
+  async function getAuthorId(authorName: string): Promise<AuthorID | undefined> {
+    const lowercased = authorName.toLowerCase()
+    const rawId = toID(authorName) as AuthorID
+
+    return keys(dbAuthors).find(
+      authorId =>
+        authorId === rawId ||
+        dbAuthors[authorId].name.toLowerCase() === lowercased ||
+        dbAuthors[authorId].alias?.some(alias => alias.toLowerCase() === lowercased),
+    )
+  }
+}
+
+function getExePath(exe: string): string {
+  return process.env[`INDEXER_EXE_PATH_${exe.toUpperCase()}`] || exe
+}
+
+async function loadExemplarProperties(): Promise<{ [id: number]: ExemplarPropertyInfo }> {
+  console.debug(`Loading authors...`)
+  const config = await loadConfig<{ [id: string]: ExemplarPropertyData }>(
+    dbDir,
+    "configs/exemplar-properties",
+  )
+
+  const properties: Record<string, ExemplarPropertyInfo> = {}
+
+  forEach(config?.data ?? {}, (data, propertyIdHex) => {
+    const propertyInfo: ExemplarPropertyInfo = {
+      ...data,
+      type: data.type && ExemplarValueType[data.type],
+    }
+
+    if (propertyIdHex.includes("-")) {
+      const [firstId, lastId] = propertyIdHex.split("-").map(readHex)
+      for (let propertyId = firstId; propertyId <= lastId; propertyId++) {
+        properties[propertyId] = propertyInfo
+      }
+    } else {
+      const propertyId = readHex(propertyIdHex)
+      properties[propertyId] = propertyInfo
+    }
+  })
+
+  return properties
+}
 
 async function loadAuthorsFromDB(): Promise<{ [authorId: AuthorID]: AuthorData }> {
   console.debug(`Loading authors...`)
@@ -83,15 +964,15 @@ async function loadAuthorsFromDB(): Promise<{ [authorId: AuthorID]: AuthorData }
 }
 
 async function loadAssetsFromDB(): Promise<{
-  [sourceId: string]: { [assetId: string]: AssetData }
+  [sourceId: IndexerSourceID]: { [assetId in AssetID]?: AssetData }
 }> {
-  const configs: { [sourceId: string]: { [assetId: string]: AssetData } } = {}
+  const configs: { [sourceId: IndexerSourceID]: { [assetId in AssetID]?: AssetData } } = {}
 
   const filePaths = await glob("*.yaml", { cwd: dbAssetsDir })
   for (const filePath of filePaths) {
-    const sourceId = path.basename(filePath, path.extname(filePath))
+    const sourceId = path.basename(filePath, path.extname(filePath)) as IndexerSourceID
     console.debug(`Loading assets from ${sourceId}...`)
-    const config = await loadConfig<{ [assetId: string]: AssetData }>(dbAssetsDir, sourceId)
+    const config = await loadConfig<{ [assetId in AssetID]?: AssetData }>(dbAssetsDir, sourceId)
     configs[sourceId] = config?.data ?? {}
   }
 
@@ -110,816 +991,7 @@ async function loadPackagesFromDB(): Promise<{
     const fullPath = path.join(dbPackagesDir, filePath)
     const data = await readConfig<{ [packageId in PackageID]?: PackageData }>(fullPath)
     configs[authorId] = data
-
-    // for (const packageData of Object.values(data)) {
-    //   for (const variantData of [packageData, ...Object.values(packageData.variants ?? {})]) {
-    //     const filenames: string[] = []
-    //     if (variantData.assets) {
-    //       for (const asset of variantData.assets) {
-    //         const sc4lotFiles = await glob(asset.id + "@*/**/*.sc4lot", {
-    //           cwd: dataDownloadsDir,
-    //           nodir: true,
-    //         })
-
-    //         for (const sc4lotFile of sc4lotFiles) {
-    //           filenames.push(path.basename(sc4lotFile))
-    //         }
-    //       }
-    //     }
-
-    //     if (variantData.lots) {
-    //       for (const lot of variantData.lots) {
-    //         if (lot.id && !lot.filename) {
-    //           lot.filename = filenames.find(filename => filename.includes(lot.id!))
-    //           lot.id = lot.filename?.match(/_([a-f0-9]{8})\.sc4lot$/i)?.[1].toLowerCase()
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-
-    // await writeConfig(dbPackagesDir, authorId, data, ConfigFormat.YAML, ConfigFormat.YAML)
   }
 
   return configs
-}
-
-async function runIndexer(options: IndexerOptions) {
-  const assetIds: { [sourceId: string]: { [entryId: number]: string } } = {}
-  const assets: { [assetId: string]: IndexerEntry } = {}
-  const sourceFiles: { [sourceName: string]: IndexerEntryList } = {}
-  const sourceNames: { [assetId: string]: string } = {}
-
-  const sources: { [sourceId: string]: IndexerSource } = {}
-  for (const source of options.sources) {
-    sources[source.id] = source
-  }
-
-  function getCategory(assetId: string): IndexerCategory {
-    const [sourceId, categoryId] = sourceNames[assetId].split("/")
-    return sources[sourceId].categories.find(category => category.id === categoryId)!
-  }
-
-  function getDefaultDownloadUrl(assetId: string, variant?: string): string {
-    return getSource(assetId).getDownloadUrl(assetId, variant)
-  }
-
-  function getDefaultPackageID(assetId: string, entry: IndexerBaseEntry): PackageID {
-    return `${toID(entry.authors[0])}/${toID(assetId.split("/")[1].replace(/^\d+-/, ""))}` as PackageID
-  }
-
-  function getDependencyAssetID(originalAssetId: string): string {
-    const sourceId = getSourceID(originalAssetId)
-    const entryId = getEntryID(originalAssetId)
-    const assetId = assetIds[sourceId][entryId] ?? originalAssetId
-    return getOverrides(assetId)?.superseded ?? assetId
-  }
-
-  function getDownloadUrl(assetId: string, variant?: string): string {
-    const overrides = getOverrides(assetId, variant)
-
-    if (overrides?.downloadUrl) {
-      return overrides.downloadUrl
-    }
-
-    return getDefaultDownloadUrl(assetId, variant)
-  }
-
-  function getEntry(assetId: string): IndexerEntry | undefined {
-    return assets[assetId]
-  }
-
-  function getEntryID(assetId: string): number {
-    return Number(assetId.split("/")[1].split("-")[0])
-  }
-
-  function getExePath(exe: string): string {
-    return process.env[`INDEXER_EXE_PATH_${exe.toUpperCase()}`] || exe
-  }
-
-  function getPackageID(assetId: string, entry: IndexerEntry, variant?: string): PackageID {
-    const overrides = getOverrides(assetId, variant)
-
-    if (overrides?.packageId) {
-      return overrides.packageId as PackageID
-    }
-
-    return getDefaultPackageID(assetId, entry)
-  }
-
-  function getSource(assetId: string): IndexerSource {
-    return sources[getSourceID(assetId)]
-  }
-
-  function getSourceID(assetId: string): string {
-    return assetId.split("/")[0]
-  }
-
-  function getVariantAssetID(assetId: string, variant?: string): AssetID {
-    return (variant ? `${assetId}#${variant}` : assetId) as AssetID
-  }
-
-  function getVariantID(assetId: string, entry: IndexerEntry, variant?: string): VariantID {
-    const overrides = getOverrides(assetId, variant)
-
-    if (overrides?.variantId) {
-      return overrides.variantId as VariantID
-    }
-
-    const variantEntry = variant ? entry.variants?.[variant] : entry
-    if (variantEntry?.filename) {
-      if (variantEntry.filename.match(/\b(dn|dark\s?nite)\b/i)) {
-        return "darknite" as VariantID
-      }
-
-      if (variantEntry.filename.match(/\b(mn|maxis\s?nite)\b/i)) {
-        return "default" as VariantID
-      }
-
-      if (variant && variantEntry.filename.match(/\b(rhd)\b/i)) {
-        return "rhd" as VariantID
-      }
-
-      if (variant && variantEntry.filename.match(/\b(hd)\b/i)) {
-        return "hd" as VariantID
-      }
-
-      if (variant) {
-        return toID(variantEntry.filename.split(".").slice(0, -1).join(".")) as VariantID
-      }
-    }
-
-    return "default" as VariantID
-  }
-
-  function getOverrides(assetId: string, variant?: string): IndexerOverride | null | undefined {
-    const overrides = options.overrides?.[getSourceID(assetId)]?.[getEntryID(assetId)]
-
-    if (variant && overrides?.variants) {
-      const variantOverrides = overrides.variants[variant]
-      if (variantOverrides === null) {
-        return null
-      }
-
-      if (variantOverrides !== undefined) {
-        return { ...overrides, ...variantOverrides }
-      }
-    }
-
-    return overrides
-  }
-
-  const errors = new Set<string>()
-
-  // Fetch asset lists
-  for (const source of options.sources) {
-    const sourceId = source.id
-    assetIds[sourceId] = {}
-
-    for (const category of source.categories) {
-      const sourceName = `${sourceId}/${category.id}`
-
-      console.debug(`Loading entries from ${sourceName}...`)
-
-      const config = await loadConfig<IndexerEntryList>(dataAssetsDir, sourceName)
-      const data = { assets: config?.data.assets ?? {}, timestamp: now }
-      const timestamp = config?.data.timestamp
-      sourceFiles[sourceName] = data
-
-      for (const assetId in data.assets) {
-        const entryId = getEntryID(assetId)
-        assetIds[sourceId][entryId] = assetId
-      }
-
-      if (options.fetchNewEntries?.(config?.data, source, category)) {
-        console.debug(`Fetching entries from ${sourceName}...`)
-
-        let nPages: number | undefined
-        let page = 1
-
-        do {
-          const url = source.getCategoryUrl(category.id, page)
-          console.debug(`Page ${page} of ${nPages ?? "?"}: ${url}`)
-
-          const html = await readHTML(await get(url, { cookies: () => source.getCookies() }))
-          if (!nPages) {
-            nPages = source.getCategoryPageCount(html)
-          }
-
-          const entries = source.getEntries(html)
-
-          for (const [assetId, baseEntry] of entries) {
-            // Results are sorted by last-modified-time (most recent first)
-            // If we encounter any item last modified before our last cache time, we are thus done with new items
-            if (source === SIMTROPOLIS && timestamp && baseEntry.lastModified < timestamp) {
-              page = nPages
-              continue
-            }
-
-            const entryId = getEntryID(assetId)
-
-            assetIds[sourceId][entryId] = assetId
-
-            data.assets[assetId] = {
-              ...data.assets[assetId],
-              ...baseEntry,
-              category: category.category,
-            }
-          }
-
-          // Go easy on the server
-          await wait(3000)
-        } while (page++ < nPages)
-
-        await writeConfig(dataAssetsDir, sourceName, data, ConfigFormat.YAML, config?.format)
-      }
-
-      for (const assetId in data.assets) {
-        assets[assetId] = data.assets[assetId]
-        sourceNames[assetId] = sourceName
-      }
-    }
-  }
-
-  const resolvingEntries = new Set<string>()
-  const resolvingPackages = new Set<string>()
-  const dbAuthors = await loadAuthorsFromDB()
-  const dbAssetsConfigs = await loadAssetsFromDB()
-  const dbPackagesConfigs = await loadPackagesFromDB()
-
-  for (const assetId in assets) {
-    const entry = assets[assetId]
-    const sourceId = getSourceID(assetId)
-    if (
-      dbAssetsConfigs[sourceId]?.[assetId] ||
-      options.include(entry, assetId, getSource(assetId), getCategory(assetId))
-    ) {
-      await resolveEntry(assetId)
-    }
-  }
-
-  for (const authorId in dbPackagesConfigs) {
-    await forEachAsync(dbPackagesConfigs[authorId], async (packageData, packageId) => {
-      await resolvePackage(packageId, packageData)
-    })
-  }
-
-  await writeConfig(dbDir, "authors", dbAuthors, ConfigFormat.YAML)
-
-  function getAuthorId(authorName: string): AuthorID {
-    const lowercased = authorName.toLowerCase()
-    const rawId = toID(authorName) as AuthorID
-
-    const existingId = keys(dbAuthors).find(authorId => {
-      return (
-        authorId === rawId ||
-        dbAuthors[authorId].name.toLowerCase() === lowercased ||
-        dbAuthors[authorId].alias?.some(alias => alias.toLowerCase() === lowercased)
-      )
-    })
-
-    if (existingId) {
-      return existingId
-    }
-
-    dbAuthors[rawId] = {
-      name: authorName,
-    }
-
-    return rawId
-  }
-
-  async function resolvePackageAsset(
-    packageId: string,
-    variantId: string | undefined,
-    asset: VariantAssetData,
-  ): Promise<void> {
-    const sourceId = asset.id.split("/")[0]
-    if (!dbAssetsConfigs[sourceId]?.[asset.id]) {
-      const [entryId, variant] = asset.id.split("#")
-      const entry = await resolveEntry(entryId)
-      if (!entry || (variant && !entry.variants?.[variant])) {
-        errors.add(
-          variantId
-            ? `In variant ${packageId}#${variantId} - Entry ${entryId} does not exist`
-            : `In package ${packageId} - Entry ${entryId} does not exist`,
-        )
-      }
-    }
-  }
-
-  async function resolvePackageVariant(
-    packageId: string,
-    variantId: string | undefined,
-    variantData: VariantData,
-  ) {
-    if (variantData.assets) {
-      for (const asset of variantData.assets) {
-        await resolvePackageAsset(packageId, variantId, isString(asset) ? { id: asset } : asset)
-      }
-    }
-
-    if (variantData.dependencies) {
-      for (const dependencyInfo of variantData.dependencies) {
-        const dependencyId = isString(dependencyInfo) ? dependencyInfo : dependencyInfo.id
-        const authorId = dependencyId.split("/")[0]
-        const dependencyData = dbPackagesConfigs[authorId]?.[dependencyId]
-        if (dependencyData) {
-          await resolvePackage(dependencyId, dependencyData)
-        } else {
-          errors.add(
-            variantId
-              ? `In variant ${packageId}#${variantId} - Package ${dependencyId} does not exist`
-              : `In package ${packageId} - Package ${dependencyId} does not exist`,
-          )
-        }
-      }
-    }
-  }
-
-  async function resolvePackage(packageId: string, packageData: PackageData) {
-    // Handle dependency loop
-    if (resolvingPackages.has(packageId)) {
-      return
-    }
-
-    resolvingPackages.add(packageId)
-
-    await resolvePackageVariant(packageId, undefined, packageData)
-
-    if (packageData.variants) {
-      await forEachAsync(packageData.variants, async (variantData, variantId) => {
-        await resolvePackageVariant(packageId, variantId, variantData)
-      })
-    }
-  }
-
-  // Show errors
-  if (errors.size) {
-    const n = 100
-    console.error("".padEnd(n, "*"))
-    console.error(`* ${"ERRORS".padStart((n + 6 - 4) / 2, " ").padEnd(n - 4, " ")} *`)
-    console.error("".padEnd(n, "*"))
-    for (const error of errors) {
-      console.error(error)
-      console.error("---")
-    }
-  }
-
-  async function resolveEntry(entryId: string): Promise<IndexerEntry | undefined> {
-    const entry = getEntry(entryId)
-
-    // Handle dependency loop
-    if (resolvingEntries.has(entryId)) {
-      return entry
-    }
-
-    resolvingEntries.add(entryId)
-
-    const overrides = getOverrides(entryId)
-
-    if (overrides === null) {
-      console.warn(`Skipping ${entryId}...`)
-      return entry
-    }
-
-    if (overrides?.superseded) {
-      return resolveEntry(overrides.superseded)
-    }
-
-    if (!entry) {
-      errors.add(`Entry ${entryId} does not exist!`)
-      return entry
-    }
-
-    console.debug(`Resolving ${entryId}...`)
-
-    const sourceName = sourceNames[entryId]
-    const sourceData = sourceFiles[sourceName]
-    const source = getSource(entryId)
-
-    const outdated = !entry.timestamp || entry.lastModified > entry.timestamp
-
-    try {
-      let wasUpdated = false
-
-      if (outdated || !entry.version || options.fetchEntryDetails?.(entry, entryId)) {
-        console.debug(`Fetching ${entry.url}...`)
-        const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
-        const details = source.getEntryDetails(entryId, html)
-        if (!details.version) {
-          errors.add(`Missing version for entry ${entryId}`)
-          return entry
-        }
-
-        entry.description = details.description
-        entry.images = details.images
-        entry.repository = details.repository
-        entry.version = details.version
-
-        entry.dependencies = details.dependencies
-          ?.map(getDependencyAssetID)
-          ?.filter(dependencyId => dependencyId !== entryId)
-
-        wasUpdated = true
-      }
-
-      if (await resolveVariant(entryId)) {
-        wasUpdated = true
-      }
-
-      if (wasUpdated) {
-        entry.timestamp = now
-        await writeConfig(dataAssetsDir, sourceName, sourceData, ConfigFormat.YAML)
-      }
-    } catch (error) {
-      // Write any progress even in case of error
-      await writeConfig(dataAssetsDir, sourceName, sourceData, ConfigFormat.YAML)
-      throw error
-    }
-
-    if (entry.dependencies) {
-      for (const dependencyId of entry.dependencies) {
-        await resolveEntry(dependencyId)
-      }
-    }
-
-    return entry
-  }
-
-  async function resolveVariant(assetId: string, variant?: string): Promise<boolean> {
-    const entry = getEntry(assetId)
-    if (!entry) {
-      errors.add(`Entry ${assetId} does not exist!`)
-      return false
-    }
-
-    const variantAssetId = getVariantAssetID(assetId, variant)
-    const downloadKey = `${variantAssetId}@${entry.version}`
-    const downloadPath = path.join(dataDownloadsDir, downloadKey)
-    const downloadTempPath = path.join(dataDownloadsDir, downloadKey.replace("/", "/~"))
-    const downloadUrl = getDownloadUrl(assetId, variant)
-    const source = getSource(assetId)
-
-    const variantEntry = variant ? entry.variants?.[variant] : entry
-    if (!variantEntry) {
-      errors.add(`Variant ${variantAssetId} does not exist!`)
-      return false
-    }
-
-    if (getOverrides(assetId, variant) === null) {
-      console.warn(`Skipping ${variantAssetId}...`)
-      return false
-    }
-
-    const outdated = !entry.timestamp || entry.lastModified > entry.timestamp
-    const hasVariants = !variant && !!entry.variants
-    const missingSize = !variantEntry.size && !hasVariants
-    const missingFiles = !variantEntry.files && !hasVariants
-
-    let wasUpdated = false
-
-    if (outdated || missingSize || missingFiles) {
-      let downloaded = await exists(downloadPath)
-
-      if (missingSize || (outdated && !missingFiles) || (missingFiles && !downloaded)) {
-        await removeIfPresent(downloadPath)
-
-        console.debug(`Downloading ${downloadUrl}...`)
-
-        const response = await get(downloadUrl, { cookies: () => source.getCookies() })
-
-        const contentType = response.headers.get("Content-Type")
-
-        if (contentType?.startsWith("text/html")) {
-          if (variant) {
-            throw Error("Variant should not have variants")
-          }
-
-          const html = await readHTML(response)
-          const variants = source.getVariants(html)
-
-          delete entry.filename
-          delete entry.files
-          delete entry.sha256
-          delete entry.size
-          delete entry.uncompressed
-          entry.variants ??= {}
-          for (const variant in variants) {
-            const variantEntry = (entry.variants[variant] ??= {})
-            variantEntry.filename = variants[variant]
-          }
-        } else {
-          const { filename, sha256, size, uncompressedSize } = await download(response, {
-            downloadPath,
-            downloadTempPath,
-            async exePath(exe) {
-              return getExePath(exe)
-            },
-            url: downloadUrl,
-          })
-
-          variantEntry.filename = filename
-          variantEntry.sha256 = sha256
-          variantEntry.size = size
-          variantEntry.uncompressed = uncompressedSize
-          wasUpdated = true
-          downloaded = true
-
-          if (!variant) {
-            delete entry.variants
-          }
-        }
-      }
-
-      if ((outdated || missingFiles) && downloaded) {
-        console.debug(`Extracting ${downloadKey}...`)
-        await extractRecursively(downloadPath, {
-          async exePath(exe) {
-            return getExePath(exe)
-          },
-        })
-
-        const files = await glob("**", {
-          cwd: downloadPath,
-          nodir: true,
-        })
-
-        variantEntry.files = files.map(file => file.replaceAll(path.sep, "/")).reverse()
-        wasUpdated = true
-      }
-    }
-
-    if (entry.version && variantEntry.files) {
-      const packageId = getPackageID(assetId, entry, variant)
-      const variantId = getVariantID(assetId, entry, variant)
-      const authorId = packageId.split("/")[0]
-
-      const dbPackagesConfig = dbPackagesConfigs[authorId] ?? {}
-      const packageData = dbPackagesConfig[packageId] ?? {}
-
-      const lastModified = packageData.variants?.[variantId]?.lastModified
-
-      if (!lastModified || lastModified < entry.lastModified) {
-        const dbAssetsConfig = dbAssetsConfigs[source.id] ?? {}
-        const assetData = dbAssetsConfig[variantAssetId] ?? {}
-
-        if (packageData.variants?.[variantId]) {
-          console.debug(`Updating variant ${packageId}#${variantId}...`)
-        } else {
-          console.debug(`Creating variant ${packageId}#${variantId}...`)
-        }
-
-        const [, major, minor, patch] = entry.version.match(/(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)!
-
-        assetData.lastModified = entry.lastModified
-        assetData.sha256 = variantEntry.sha256
-        assetData.size = variantEntry.size
-        assetData.uncompressed = variantEntry.uncompressed
-        assetData.version = entry.version
-
-        if (downloadUrl !== getDefaultDownloadUrl(assetId, variant)) {
-          assetData.url = downloadUrl
-        } else {
-          delete assetData.url
-        }
-
-        packageData.category ??= entry.category
-        packageData.name ??= entry.name
-        packageData.release ??= now
-        packageData.variants ??= {}
-
-        const variantData = (packageData.variants[variantId] ??= {})
-
-        variantData.lastModified = entry.lastModified
-
-        const dependencies = Array.from(
-          new Set([
-            ...(packageData.dependencies ?? []),
-            ...(variantData.dependencies ?? []),
-            ...(entry.dependencies?.map(dependencyId => {
-              const dependencyEntry = getEntry(dependencyId)
-              if (dependencyEntry) {
-                return getPackageID(dependencyId, dependencyEntry)
-              } else {
-                return dependencyId as PackageID
-              }
-            }) ?? []),
-          ]),
-        ).sort()
-
-        const deprecated = getCategory(assetId).id.includes("obsolete")
-
-        if (variantId === "default") {
-          packageData.authors ??= entry.authors.map(getAuthorId)
-
-          if (dependencies?.length) {
-            packageData.dependencies = dependencies
-          }
-
-          if (deprecated) {
-            packageData.deprecated = true
-          }
-
-          if (entry.description) {
-            packageData.description = htmlToMd(entry.description)
-          }
-
-          if (entry.images?.length) {
-            packageData.images = entry.images
-          }
-
-          packageData.repository = entry.repository
-          packageData.thumbnail = entry.thumbnail
-          packageData.url = entry.url
-
-          variantData.name = "Default"
-        } else {
-          const authors = entry.authors
-            .map(getAuthorId)
-            .filter(author => !packageData.authors?.includes(author))
-
-          if (authors.length) {
-            variantData.authors ??= authors
-          }
-
-          if (deprecated) {
-            variantData.deprecated = true
-          }
-
-          if (packageData.release !== now) {
-            variantData.release = now
-          }
-
-          if (entry.repository) {
-            packageData.repository ??= entry.repository
-            if (packageData.repository !== entry.repository) {
-              variantData.repository = entry.repository
-            }
-          }
-
-          if (entry.thumbnail) {
-            packageData.thumbnail ??= entry.thumbnail
-            if (packageData.thumbnail !== entry.thumbnail) {
-              variantData.thumbnail = entry.thumbnail
-            }
-          }
-
-          if (entry.url) {
-            packageData.url ??= entry.url
-            if (packageData.url !== entry.url) {
-              variantData.url = entry.url
-
-              if (dependencies.length) {
-                variantData.dependencies = dependencies.filter(
-                  id => !packageData.dependencies?.includes(id),
-                )
-              }
-
-              if (entry.description) {
-                variantData.description = htmlToMd(entry.description)
-              }
-
-              if (entry.images?.length) {
-                variantData.images = entry.images
-              }
-            } else {
-              if (dependencies?.length) {
-                packageData.dependencies = dependencies
-              }
-
-              if (entry.description) {
-                packageData.description = htmlToMd(entry.description)
-              }
-
-              if (entry.images?.length) {
-                packageData.images = entry.images
-              }
-            }
-          }
-
-          variantData.name = {
-            darknite: "Dark Nite",
-            lhd: "Left-Hand Drive",
-            hd: "HD",
-            rhd: "Right-Hand Drive",
-            sd: "SD",
-          }[variantId as string] // TODO
-
-          variantData.name ?? entry.name
-        }
-
-        variantData.assets ??= []
-        variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
-
-        let variantAsset = variantData.assets.find(variantAsset =>
-          isString(variantAsset)
-            ? variantAsset === variantAssetId
-            : variantAsset.id === variantAssetId,
-        )
-
-        if (!variantAsset) {
-          variantAsset = { id: variantAssetId }
-          variantData.assets.push(variantAsset)
-        } else if (isString(variantAsset)) {
-          const index = variantData.assets.indexOf(variantAsset)
-          variantAsset = { id: variantAssetId }
-          variantData.assets.splice(index, 1, variantAsset)
-        }
-
-        const sc4Extensions = [
-          ".dat",
-          ".dll",
-          ".ini",
-          "._loosedesc",
-          ".sc4desc",
-          ".sc4lot",
-          ".sc4model",
-        ]
-
-        variantAsset.docs = variantEntry.files.filter(
-          file => !sc4Extensions.includes(getExtension(file)),
-        )
-
-        const sc4Files = variantEntry.files.filter(file =>
-          sc4Extensions.includes(getExtension(file)),
-        )
-
-        const lots: { [lotId: string]: LotData } = {}
-
-        const nonLotFiles = sc4Files.filter(file => {
-          const filename = file.match(/([^\\/]+\.sc4lot)$/i)?.[1]
-          if (!filename) {
-            return true
-          }
-
-          const size = filename.match(/[-_ ](\d+x\d+)[-_ ]/i)?.[1]
-          const stage = filename.match(/((?:R|CO|CS)\$+|\bI-?(?:D|M|HT)\$*)(\d+)[-_ ]/i)?.[2]
-
-          const kind =
-            filename
-              .match(/(PLOP|(?:R|CO|CS)\$+|\bI-?(?:D|M|HT))[^a-z]/i)?.[1]
-              .replace("-", "")
-              .toLowerCase() ?? ""
-
-          const category: string | undefined = {
-            co$$: "co$$",
-            co$$$: "co$$$",
-            cs$: "cs$",
-            cs$$: "cs$$",
-            cs$$$: "cs$$$",
-            id: "i-d",
-            iht: "i-ht",
-            im: "i-m",
-            plop: "landmarks",
-            r$: "r$",
-            r$$: "r$$",
-            r$$$: "r$$$",
-          }[kind]
-
-          lots[filename] = {
-            category: category && category !== packageData.category ? category : undefined,
-            filename,
-            id: filename.match(/_([a-f0-9]{8})\.sc4lot$/i)?.[1].toLowerCase() ?? filename,
-            label: filename,
-            requirements: file.match(/\bCAM\b/i) ? { cam: true } : undefined,
-            size: size as `${number}x${number}`,
-            stage: stage ? Number.parseInt(stage) : undefined,
-          }
-
-          return false
-        })
-
-        if (Object.values(lots).length) {
-          variantData.lots = Object.values(lots)
-        }
-
-        if (nonLotFiles.length) {
-          variantAsset.include = nonLotFiles
-        }
-
-        dbPackagesConfigs[authorId] ??= dbPackagesConfig
-        dbPackagesConfig[packageId] ??= packageData
-        dbAssetsConfigs[source.id] ??= dbAssetsConfig
-        dbAssetsConfig[variantAssetId] ??= assetData
-
-        await writeConfig(dbAssetsDir, source.id, dbAssetsConfig, ConfigFormat.YAML)
-        await writeConfig(dbPackagesDir, authorId, dbPackagesConfig, ConfigFormat.YAML)
-      }
-    } else if (!hasVariants) {
-      if (entry.version) {
-        errors.add(`Missing files for entry ${assetId}`)
-      } else {
-        errors.add(`Missing version for entry ${assetId}`)
-      }
-    }
-
-    if (entry.variants && !variant) {
-      for (const variant in entry.variants) {
-        await resolveVariant(assetId, variant)
-      }
-    }
-
-    return wasUpdated
-  }
 }

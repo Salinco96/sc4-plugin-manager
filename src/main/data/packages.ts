@@ -384,7 +384,7 @@ function loadVariantInfo(
     ),
     priority,
     readme: variantData.readme ?? packageData.readme,
-    release: variantData.release ?? packageData.release,
+    release: variantData.release?.toISOString() ?? packageData.release?.toISOString(),
     repository: variantData.repository ?? packageData.repository,
     requirements: { ...packageData.requirements, ...variantData.requirements },
     thumbnail: variantData.thumbnail ?? packageData.thumbnail,
@@ -499,7 +499,7 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         experimental: variant.experimental,
         files: variant.files,
         images: variant.images,
-        lastModified: variant.lastModified,
+        lastModified: variant.lastModified ? new Date(variant.lastModified) : undefined,
         logs: variant.logs,
         lots: variant.lots?.map(({ categories, ...lot }) => ({
           category: categories?.join(","),

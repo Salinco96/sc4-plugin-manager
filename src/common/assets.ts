@@ -6,7 +6,7 @@ export type AssetID = ID<AssetInfo>
 /** Raw asset data */
 export interface AssetData {
   /** ISO string date */
-  lastModified?: string
+  lastModified?: Date
   /** SHA-256 of downloaded archive */
   sha256?: string
   /** Size of downloaded archive in bytes */
@@ -20,12 +20,22 @@ export interface AssetData {
 }
 
 /** Loaded asset data */
-export interface AssetInfo extends AssetData {
+export interface AssetInfo {
   /** Downloaded versions */
   downloaded: { [version in string]?: boolean }
+  /** ISO string date */
+  lastModified?: string
+  /** SHA-256 of downloaded archive */
+  sha256?: string
+  /** Size of downloaded archive in bytes */
+  size?: number
+  /** Size of extracted files in bytes */
+  uncompressed?: number
   /** Asset ID */
   id: AssetID
+  /** Download URL */
   url: string
+  /** File version as specified by the source */
   version: string
 }
 

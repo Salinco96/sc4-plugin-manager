@@ -179,3 +179,46 @@ export function pad<T>(array: T[], length: number, value: T): T[] {
     return array
   }
 }
+
+export function groupBy<T, K extends number | string>(
+  items: T[],
+  fn: (value: T, index: number) => K,
+): Record<K, T[]> {
+  return items.reduce(
+    (result, value, index) => {
+      const key = fn(value, index)
+      result[key] ??= []
+      result[key].push(value)
+      return result
+    },
+    {} as Record<K, T[]>,
+  )
+}
+
+export function indexBy<T, K extends number | string>(
+  items: T[],
+  fn: (value: T, index: number) => K,
+): Record<K, T> {
+  return items.reduce(
+    (result, value, index) => {
+      const key = fn(value, index)
+      result[key] = value
+      return result
+    },
+    {} as Record<K, T>,
+  )
+}
+
+export function splitBy<T>(items: T[], fn: (value: T, index: number) => boolean): [T[], T[]] {
+  const others: T[] = []
+  return [
+    items.filter((value, index) => {
+      if (fn(value, index)) {
+        return true
+      }
+
+      others.push(value)
+    }),
+    others,
+  ]
+}

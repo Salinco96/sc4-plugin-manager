@@ -2446,6 +2446,7 @@ export class Application {
               disablingPackages,
               enablingPackages,
               explicitVariantChanges,
+              implicitOptionChanges,
               implicitVariantChanges,
               incompatibleExternals,
               incompatiblePackages,
@@ -2672,6 +2673,20 @@ export class Application {
                       return
                     }
                   }
+                }
+
+                // Apply implicit option changes automatically
+                if (!isEmpty(implicitOptionChanges)) {
+                  for (const [packageId, options] of entries(implicitOptionChanges)) {
+                    update.packages[packageId] ??= {}
+                    update.packages[packageId].options = {
+                      ...update.packages[packageId].options,
+                      ...options.new,
+                    }
+                  }
+
+                  // Recalculate
+                  return
                 }
 
                 // Confirm warnings

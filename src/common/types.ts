@@ -25,20 +25,37 @@ import { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
 export enum ConfigFormat {
   JSON = ".json",
   YAML = ".yaml",
-  YML = ".yml",
 }
 
 export type Primitive = boolean | number | string | null | undefined
 
-declare const ID: unique symbol
+declare const IDType: unique symbol
 
-export type ID<T> = string & { [ID]: T }
+export type ID<T> = string & { [IDType]: T }
+
+export function ID<T>(id: string): ID<T> {
+  return id as ID<T>
+}
 
 export enum Feature {
   CAM = "cam",
   DARKNITE = "darknite",
+  DEVELOPER_CO$$ = "developer-co$$",
+  DEVELOPER_CO$$$ = "developer-co$$$",
+  DEVELOPER_CS$ = "developer-cs$",
+  DEVELOPER_CS$$ = "developer-cs$$",
+  DEVELOPER_CS$$$ = "developer-cs$$$",
+  DEVELOPER_ID = "developer-id",
+  DEVELOPER_IHT = "developer-iht",
+  DEVELOPER_IM = "developer-im",
+  DEVELOPER_IR = "developer-ir",
+  DEVELOPER_R$ = "developer-r$",
+  DEVELOPER_R$$ = "developer-r$$",
+  DEVELOPER_R$$$ = "developer-r$$$",
   IRM = "irm",
   NAM = "nam",
+  SIMULATOR_AURA = "simulator-aura",
+  SIMULATOR_CRIME = "simulator-crime",
 }
 
 export interface PackageConfig {
@@ -129,17 +146,11 @@ export interface PackageWarning {
   title?: string
 }
 
-export interface LotData {
+export interface BuildingData {
   /** Bulldoze cost */
   bulldoze?: number
-  /** Category */
-  category?: string
-  /** Plop cost */
-  cost?: number
-  /** Whether lot is enabled by default (this defaults to true) */
-  default?: boolean
   /** Number of jobs or residential capacity */
-  demand?: {
+  capacity?: {
     /** Medium-Wealth Offices */
     co$$?: number
     /** High-Wealth Offices */
@@ -165,30 +176,77 @@ export interface LotData {
     /** High-Wealth Residential */
     r$$$?: number
   }
+  /** Category */
+  category?: string
+  /** Plop cost */
+  cost?: number
+  /** Zone density where this lot may grow - comma-separated: "low", "medium", "high" */
+  density?: string
   /** Lot description */
   description?: string
-  /** Full name of the file containing the lot (if missing the lot cannot be disabled) */
+  /** Path to the file containing the building exemplar */
   filename?: string
   /** Flamability (number between 0 and 100) */
   flamability?: number
-  /** Garbage produced */
-  garbage?: number | `${number} over ${number} tiles`
+  /** Garbage generated */
+  garbage?: number
+  /** Garbage radius in tiles */
+  garbageRadius?: number
   /** Lot Instance ID */
   id: string
-  /** URL or relative path within ~docs */
-  images?: string[]
   /** Monthly income */
   income?: number
   /** Lot name */
   label?: string
+  /** Landmark effect */
+  landmark?: number
+  /** Landmark effect radius in tiles */
+  landmarkRadius?: number
   /** Monthly maintenance cost */
   maintenance?: number
-  /** Air pollution */
-  pollution?: number | `${number} over ${number} tiles`
+  /** TGI of building model */
+  model?: TGI
+  /** Radiation generated */
+  radiation?: number
+  /** Radiation radius in tiles */
+  radiationRadius?: number
+  /** Air pollution generated */
+  pollution?: number
+  /** Air pollution radius in tiles */
+  pollutionRadius?: number
   /** Electricity consumed */
   power?: number
   /** Electricity produced */
   powerProduction?: number
+  /** Mayor rating effect */
+  rating?: number
+  /** Mayor rating effect radius in tiles */
+  ratingRadius?: number
+  /** Water consumed */
+  water?: number
+  /** Water pollution generated */
+  waterPollution?: number
+  /** Water pollution radius in tiles */
+  waterPollutionRadius?: number
+  /** Water produced */
+  waterProduction?: number
+  /** Building value */
+  worth?: number
+}
+
+export interface LotData extends BuildingData {
+  /** Building exemplar instance ID */
+  building?: string
+  /** Whether lot is enabled by default (this defaults to true) */
+  default?: boolean
+  /** Path to the file containing the lot exemplar */
+  filename?: string
+  /** URL or relative path within ~docs */
+  images?: string[]
+  /** Internal lot name */
+  name?: string
+  /** Instance IDs of all props used by this lot */
+  props?: string[]
   /** Lot Instance ID to replace with this one (e.g. different ID for DN/MN) */
   replace?: string
   /** Whether this lot replaces a Maxis lot that may suffer from phantom slider bug */
@@ -199,14 +257,8 @@ export interface LotData {
   size?: `${number}x${number}`
   /** Growth stage */
   stage?: number
-  /** Water consumed */
-  water?: number
-  /** Water pollution */
-  waterPollution?: number | `${number} over ${number} tiles`
-  /** Water produced */
-  waterProduction?: number
-  /** YIMBY effect (may be negative) */
-  yimby?: number | `${number} over ${number} tiles`
+  /** Instance IDs of all textures used by this lot */
+  textures?: string[]
 }
 
 export interface LotInfo extends LotData {

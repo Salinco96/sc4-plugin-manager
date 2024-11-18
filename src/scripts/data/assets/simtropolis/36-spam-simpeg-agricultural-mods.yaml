@@ -1,69 +1,47 @@
 assets:
-  simtropolis/11603-beets-plants-by-gshmails:
+  simtropolis/11603:
+    assetId: simtropolis/11603-beets-plants-by-gshmails
     authors:
       - Mary Maurine Mayo
-    category: spam
-    lastModified: 2005-02-04T08:50:48Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2005-02-04T08:50:48.000Z
     name: Beets Plants By GSHMAILS
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2005/thumb-f446fbb583d1692b1e710150800cfa1a-beets_GSHMAILS.jpg
     url: https://community.simtropolis.com/files/file/11603-beets-plants-by-gshmails/
-  simtropolis/11915-bsc-farms-sg-vol-01:
+  simtropolis/11915:
+    assetId: simtropolis/11915-bsc-farms-sg-vol-01
     authors:
       - SimGoober
-    category: spam
-    lastModified: 2005-03-11T07:50:18Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2005-03-11T07:50:18.000Z
     name: BSC Farms SG Vol 01
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2005/thumb-b2f373b4c67f239c804321f6bc1a3d9b-SG_FarmPack1_01.jpg
     url: https://community.simtropolis.com/files/file/11915-bsc-farms-sg-vol-01/
-  simtropolis/11916-bsc-farm-fields-sg-vol-01:
+  simtropolis/11916:
+    assetId: simtropolis/11916-bsc-farm-fields-sg-vol-01
     authors:
       - SimGoober
-    category: spam
-    lastModified: 2005-03-11T07:53:04Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2005-03-11T07:53:04.000Z
     name: BSC Farm Fields SG Vol 01
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2005/thumb-56d47ff2940dea231780e3ce61271d7a-SG_SeasonalFields_Vol01.jpg
     url: https://community.simtropolis.com/files/file/11916-bsc-farm-fields-sg-vol-01/
-  simtropolis/11917-bsc-farm-rewards-sg-vol-01:
+  simtropolis/11917:
+    assetId: simtropolis/11917-bsc-farm-rewards-sg-vol-01
     authors:
       - SimGoober
-    category: spam
-    lastModified: 2005-03-11T07:57:42Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2005-03-11T07:57:42.000Z
     name: BSC Farm Rewards SG Vol 01
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2005/thumb-e377ea9cfefb5e654f5e6dfb09aa011f-BSC%20Farm%20Rewards%20SG%20Vol01_01.jpg
     url: https://community.simtropolis.com/files/file/11917-bsc-farm-rewards-sg-vol-01/
-  simtropolis/11935-bsc-farm-fields-sg-vol-02:
+  simtropolis/11935:
+    assetId: simtropolis/11935-bsc-farm-fields-sg-vol-02
     authors:
       - SimGoober
-    category: spam
+    category: 36-spam-simpeg-agricultural-mods
     dependencies: []
-    description: >-
-      <body>
-
-      								<div style="position:absolute; top:0px; right:0px;">
-                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
-      								</div>
-
-
-
-
-
-
-
-
-
-
-      <p></p>
-
-      <p><span><span></span></span>This is a second set of prop based farm fields, to offer more variations to the Sim farmers out there. These lots designed for use with a related farm. They will not
-      appear without a farm lot that has them assigned to it.</p>
-
-      <p>
-
-      </p>
-
-      <p>Full details are in the readme file.</p>
-
-      						</body>
+    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n<p></p>\n<p><span><span></span></span>This is a second set of prop based farm fields, to offer more variations to the Sim farmers out there. These lots designed for use with a related farm. They will not appear without a farm lot that has them assigned to it.</p>\n<p>\n</p>\n<p>Full details are in the readme file.</p>\n\n\t\t\t\t\t\t</body>"
     filename: SG_Install_BSC FarmFields SG Vol02.zip
     files:
       - SG_FarmFields.Dat
@@ -87,7 +65,7 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0022/c9c713768e7f0f620c1ca2835e596d42-BSC%20Farm%20Fields%20SG%20Vol%2002_01.jpg
       - https://www.simtropolis.com/objects/screens/0022/c9c713768e7f0f620c1ca2835e596d42-BSC%20Farm%20Fields%20SG%20Vol%2002_02.jpg
-    lastModified: 2005-03-12T23:21:46Z
+    lastModified: 2005-03-12T23:21:46.000Z
     name: BSC Farm Fields SG Vol 02
     sha256: 3eafe8bbb72b32d2554e8351b0c34acb55e30ad53e1a37dd6115d6679e398c84
     size: 1190082
@@ -96,112 +74,49 @@ assets:
     uncompressed: 1196889
     url: https://community.simtropolis.com/files/file/11935-bsc-farm-fields-sg-vol-02/
     version: "1.0"
-  simtropolis/11936-melonys-melon-farms:
+  simtropolis/11936:
+    assetId: simtropolis/11936-melonys-melon-farms
     authors:
       - SimGoober
-    category: spam
-    lastModified: 2005-03-12T23:28:58Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2005-03-12T23:28:58.000Z
     name: Melonys Melon Farms
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2005/thumb-d64aa828e3f2bd3a0b8f0bf0b8f5840a-SG_Farm_Melonys01.jpg
     url: https://community.simtropolis.com/files/file/11936-melonys-melon-farms/
-  simtropolis/15358-schiffenberg-growable-farms:
+  simtropolis/15358:
+    assetId: simtropolis/15358-schiffenberg-growable-farms
     authors:
       - Kwakelaar
-    category: spam
-    lastModified: 2006-03-24T05:48:12Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2006-03-24T05:17:10.000Z
     name: Schiffenberg growable farms
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2006/thumb-8def0b7d7c1bf6641dcde6ddc5818ffb-STEX%20Schiffenberg%20farm%2011.jpg
     url: https://community.simtropolis.com/files/file/15358-schiffenberg-growable-farms/
-  simtropolis/18515-the-potato-farm:
+  simtropolis/18515:
+    assetId: simtropolis/18515-the-potato-farm
     authors:
       - dada222
-    category: spam
-    lastModified: 2007-08-08T03:33:22Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2007-08-07T12:45:22.000Z
     name: The Potato Farm
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2007/thumb-50bbb566471f361365d4ef647c43c3b7-farmstexup.JPG
     url: https://community.simtropolis.com/files/file/18515-the-potato-farm/
-  simtropolis/26078-peg-spam-traffic-mod-addon:
+  simtropolis/26078:
+    assetId: simtropolis/26078-peg-spam-traffic-mod-addon
     authors:
       - Pegasus
-    category: spam
-    lastModified: 2022-02-05T14:17:53Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-04-13T08:38:43.000Z
     name: PEG SPAM Traffic MOD (AddOn)
     thumbnail: https://www.simtropolis.com/objects/screens/0031/thumb-9861c9663695dd8019b132525cbcd225-spam-tm_plex_480.jpg
     url: https://community.simtropolis.com/files/file/26078-peg-spam-traffic-mod-addon/
-  simtropolis/26079-peg-spam-super-resource-pack:
+  simtropolis/26079:
+    assetId: simtropolis/26079-peg-spam-super-resource-pack
     authors:
       - Pegasus
-    category: spam
+    category: 36-spam-simpeg-agricultural-mods
     dependencies: []
-    description: >-
-      <body>
-
-      								<div style="position:absolute; top:0px; right:0px;">
-                                        <img _title="This is a Popular File" alt="" class="ipsImage" data-ipstooltip="" src="https://www.simtropolis.com/library/misc/big-heart-icon.png" style="" width="34" height="53">
-      								</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p> </p><div style="text-align:center;"><p><span style="color:#FF0000;"><strong>NOTE: You do not need this pack if you</strong><strong>already downloaded / plan to download the
-      full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span><br><br>This package is the main dependency for all things SPAM - from the main mod to most of the current or future
-      additional sets. This standalone version is meant for all players who do not want to use the full mod but still wish to play with lots and items that utilize these props and
-      textures.<br><br><br>The SPAM SUPER PACK combines all SPAM props and textures into a single download. However, it will install props and textures as separate files to make any uture updates
-      easier and faster.<br><br><strong><span>INCLUDED</span></strong><br><br>* SPAM_Resource<br>All models and props used for the agricultural mod<br><br>* SPAM_Crops_Resource<br>All models and props
-      for the seasonal crop varieties<br><br>* SPAM_Textures<br>All textures used in the agricultural mod</p><div style="text-align:center;"><p><span style="color:#FF0000;"><strong>NOTE: This pack
-      includes no lots!</strong><br><strong>AGAIN: You do not need this pack if you</strong><br><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD
-      (SPAM)!</strong></span></p><p><br>You can use all the material for your own lotting projects. However, you may not include any of these items with your uploads - please point to this pack as a
-      dependency!<br><br><strong><span>DEPENDENCIES</span></strong><br><br>This dependency has no dependencies :-)<br><br>* The entire PEG SPAM collection is available on the <abbr title="Pegasus Lot
-      Exchange">PLEX</abbr> (on the) <abbr title="Simtropolis Exchange">STEX</abbr>.<br><br><img class="ipsImage" alt="pdt_logo01.png"
-      src="http://i211.photobucket.com/albums/bb210/abcvs/Pegasus%20Productions/pdt_logo01.png"></p></div></div><p style="line-height:22px;text-align:center;"><strong><span
-      style="color:rgb(128,0,0);">All Pegasus files are now legacy content and are no longer officially supported - however support from the wider community can be requested</span> <u><a
-      href="https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/">here.</a></u></strong></p>
-
-      						</body>
+    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>\_</p><div style=\"text-align:center;\"><p><span style=\"color:#FF0000;\"><strong>NOTE: You do not need this pack if you</strong><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span><br><br>This package is the main dependency for all things SPAM - from the main mod to most of the current or future additional sets. This standalone version is meant for all players who do not want to use the full mod but still wish to play with lots and items that utilize these props and textures.<br><br><br>The SPAM SUPER PACK combines all SPAM props and textures into a single download. However, it will install props and textures as separate files to make any uture updates easier and faster.<br><br><strong><span>INCLUDED</span></strong><br><br>* SPAM_Resource<br>All models and props used for the agricultural mod<br><br>* SPAM_Crops_Resource<br>All models and props for the seasonal crop varieties<br><br>* SPAM_Textures<br>All textures used in the agricultural mod</p><div style=\"text-align:center;\"><p><span style=\"color:#FF0000;\"><strong>NOTE: This pack includes no lots!</strong><br><strong>AGAIN: You do not need this pack if you</strong><br><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span></p><p><br>You can use all the material for your own lotting projects. However, you may not include any of these items with your uploads - please point to this pack as a dependency!<br><br><strong><span>DEPENDENCIES</span></strong><br><br>This dependency has no dependencies :-)<br><br>* The entire PEG SPAM collection is available on the <abbr title=\"Pegasus Lot Exchange\">PLEX</abbr> (on the) <abbr title=\"Simtropolis Exchange\">STEX</abbr>.<br><br><img class=\"ipsImage\" alt=\"pdt_logo01.png\" src=\"http://i211.photobucket.com/albums/bb210/abcvs/Pegasus%20Productions/pdt_logo01.png\"></p></div></div><p style=\"line-height:22px;text-align:center;\"><strong><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\">here.</a></u></strong></p>\n\n\t\t\t\t\t\t</body>"
     filename: PEG_SPAM_SUPER_RESOURCE.zip
     files:
       - spam-sp_plex_480.jpg
@@ -212,7 +127,7 @@ assets:
       - PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat
     images:
       - https://www.simtropolis.com/objects/screens/0029/23bc5f3dd415ad28a0a2bffdf3ca46ca-spam-sp_plex_480.jpg
-    lastModified: 2015-07-07T00:04:20Z
+    lastModified: 2011-04-13T08:46:39.000Z
     name: PEG SPAM Super Resource Pack
     sha256: b4c078abb0be4f7863955ff2e7409cb5d255ac1fafb17ce32bee912a425d7b34
     size: 5001446
@@ -221,245 +136,276 @@ assets:
     uncompressed: 7283571
     url: https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/
     version: "1.0"
-  simtropolis/26084-spam-access-roads-spar:
+  simtropolis/26084:
+    assetId: simtropolis/26084-spam-access-roads-spar
     authors:
       - paeng
-    category: spam
-    lastModified: 2011-04-14T12:23:21Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-04-14T12:17:47.000Z
     name: SPAM Access Roads (SPAR)
     thumbnail: https://www.simtropolis.com/objects/screens/0030/thumb-47e499a7269580ffca3a83bd6a1a0972-spar01.jpg
     url: https://community.simtropolis.com/files/file/26084-spam-access-roads-spar/
-  simtropolis/26094-spam-abcvs-growable-addon:
+  simtropolis/26094:
+    assetId: simtropolis/26094-spam-abcvs-growable-addon
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T10:48:00Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-04-15T11:14:41.000Z
     name: SPAM abcvs Growable AddOn
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-8d2f057bb735c55c25d088b2aa765dd8-pic03.jpg
     url: https://community.simtropolis.com/files/file/26094-spam-abcvs-growable-addon/
-  simtropolis/26098-spam-fire-landing-strip:
+  simtropolis/26098:
+    assetId: simtropolis/26098-spam-fire-landing-strip
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T10:44:47Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-04-17T23:26:46.000Z
     name: SPAM Fire Landing Strip
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-076ef5dc7d24cdfe0309408ec6a6163c-spam_firelanding.jpg
     url: https://community.simtropolis.com/files/file/26098-spam-fire-landing-strip/
-  simtropolis/26124-paengs-spam-addon-pack-vol01:
+  simtropolis/26124:
+    assetId: simtropolis/26124-paengs-spam-addon-pack-vol01
     authors:
       - paeng
-    category: spam
-    lastModified: 2019-12-10T20:25:16Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-04-24T11:07:10.000Z
     name: Paeng's SPAM Addon Pack Vol01
     thumbnail: https://www.simtropolis.com/objects/screens/0031/thumb-afa88c53bab6e0652f233251ae54c0a0-stex01.jpg
     url: https://community.simtropolis.com/files/file/26124-paengs-spam-addon-pack-vol01/
-  simtropolis/26135-spam-farm-factory-abcvs-rural-module:
+  simtropolis/26135:
+    assetId: simtropolis/26135-spam-farm-factory-abcvs-rural-module
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T10:03:55Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-04-26T09:39:51.000Z
     name: SPAM - F.A.R.M (Factory abcvs Rural Module)
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-586b01f26fd5b34f18b2fa38e2081cbc-spam-farm.jpg
     url: https://community.simtropolis.com/files/file/26135-spam-farm-factory-abcvs-rural-module/
-  simtropolis/26145-spam-bus-stop:
+  simtropolis/26145:
+    assetId: simtropolis/26145-spam-bus-stop
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T10:01:10Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-04-29T03:22:39.000Z
     name: SPAM Bus Stop
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-78eca239791905c043b8bd245e7a4afc-spambus1.jpg
     url: https://community.simtropolis.com/files/file/26145-spam-bus-stop/
-  simtropolis/26158-spam-rump-rural-udderground-moo-vement-provider:
+  simtropolis/26158:
+    assetId: simtropolis/26158-spam-rump-rural-udderground-moo-vement-provider
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T09:56:21Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-05-04T22:38:49.000Z
     name: SPAM - R.U.M.P. (Rural Udderground Moo-vement Provider)
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-3bc5cdcf270819df1da4428d2e740105-spam_rump.jpg
     url: https://community.simtropolis.com/files/file/26158-spam-rump-rural-udderground-moo-vement-provider/
-  simtropolis/26178-paengs-spam-addon-pack-vol02:
+  simtropolis/26178:
+    assetId: simtropolis/26178-paengs-spam-addon-pack-vol02
     authors:
       - paeng
-    category: spam
-    lastModified: 2019-12-10T20:24:38Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-05-08T14:47:41.000Z
     name: Paeng's SPAM Addon Pack Vol02
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2011/thumb-e4f58c460e31ae99e3511b699c9b107a-spam-ao02_480.jpg
     url: https://community.simtropolis.com/files/file/26178-paengs-spam-addon-pack-vol02/
-  simtropolis/26187-spam-rave-rural-ancillary-veterinary-extension:
+  simtropolis/26187:
+    assetId: simtropolis/26187-spam-rave-rural-ancillary-veterinary-extension
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T09:52:51Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-05-11T09:09:56.000Z
     name: SPAM - R.A.V.E. (Rural Ancillary Veterinary Extension)
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-a4200bed0e2aa462153ca3b260904f19-vet-rave800.jpg
     url: https://community.simtropolis.com/files/file/26187-spam-rave-rural-ancillary-veterinary-extension/
-  simtropolis/26190-murimk-farm-addons-for-spam-vol1-barns:
+  simtropolis/26190:
+    assetId: simtropolis/26190-murimk-farm-addons-for-spam-vol1-barns
     authors:
       - murimk
-    category: spam
-    lastModified: 2019-12-10T20:45:31Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-05-11T17:54:57.000Z
     name: "Murimk Farm Addons for SPAM Vol1: Barns"
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2011/thumb-7db76ee5280d4fe7f4208255f535f9ba-stable_10.jpg
     url: https://community.simtropolis.com/files/file/26190-murimk-farm-addons-for-spam-vol1-barns/
-  simtropolis/26191-paengs-spam-riding-school-and-stables:
+  simtropolis/26191:
+    assetId: simtropolis/26191-paengs-spam-riding-school-and-stables
     authors:
       - paeng
-    category: spam
-    lastModified: 2019-12-10T20:44:00Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-05-11T19:00:27.000Z
     name: Paeng's SPAM Riding School and Stables
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2011/thumb-20fc682303a0be1afb320c8448611c8f-riding-school02.jpg
     url: https://community.simtropolis.com/files/file/26191-paengs-spam-riding-school-and-stables/
-  simtropolis/26257-spam-farmers-market:
+  simtropolis/26257:
+    assetId: simtropolis/26257-spam-farmers-market
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T09:46:34Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-05-23T04:48:08.000Z
     name: SPAM - Farmer's Market
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-c0ac57c8f4ac367363105d39bd280bb4-farmers_market-800.jpg
     url: https://community.simtropolis.com/files/file/26257-spam-farmers-market/
-  simtropolis/26326-spam-chicken-ranch:
+  simtropolis/26326:
+    assetId: simtropolis/26326-spam-chicken-ranch
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T09:43:53Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-06-05T11:02:21.000Z
     name: SPAM - Chicken Ranch
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-0885a8d2f2b670e0cd84ffeb70d7d9aa-spam_chicken_ranch.jpg
     url: https://community.simtropolis.com/files/file/26326-spam-chicken-ranch/
-  simtropolis/26374-spam-single-diagonal-fields:
+  simtropolis/26374:
+    assetId: simtropolis/26374-spam-single-diagonal-fields
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T09:41:44Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-06-20T08:45:42.000Z
     name: SPAM - Single & Diagonal Fields
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-f4f3a3d09ceaa1d7993aa522c7fee508-spam_ploppable_crops_800.jpg
     url: https://community.simtropolis.com/files/file/26374-spam-single-diagonal-fields/
-  simtropolis/26474-murimk-farm-addons-for-spam-vol02-farmhouses:
+  simtropolis/26474:
+    assetId: simtropolis/26474-murimk-farm-addons-for-spam-vol02-farmhouses
     authors:
       - murimk
-    category: spam
-    lastModified: 2011-07-09T14:41:05Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-07-09T14:12:07.000Z
     name: "Murimk Farm Addons for SPAM Vol02: Farmhouses"
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2011/thumb-b3d4b1b0ebdee28fcff29242556c7e51-murimk_farm_addons_for_spam_vol2.jpg
     url: https://community.simtropolis.com/files/file/26474-murimk-farm-addons-for-spam-vol02-farmhouses/
-  simtropolis/26477-paengs-spam-addon-pack-vol03-residentials:
+  simtropolis/26477:
+    assetId: simtropolis/26477-paengs-spam-addon-pack-vol03-residentials
     authors:
       - paeng
-    category: spam
-    lastModified: 2011-07-09T15:57:36Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2011-07-09T15:48:32.000Z
     name: "Paeng's SPAM Addon Pack Vol03: Residentials"
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2011/thumb-e7fcc299c32cf76ba6363dda446aeb58-growables.jpg
     url: https://community.simtropolis.com/files/file/26477-paengs-spam-addon-pack-vol03-residentials/
-  simtropolis/27415-spam-mtp-growable-cabins:
+  simtropolis/27415:
+    assetId: simtropolis/27415-spam-mtp-growable-cabins
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T08:53:46Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2012-03-28T08:17:29.000Z
     name: SPAM-MTP Growable Cabins
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-5e22b083f380bf57908a227ddad44b16-spam-mtp_growable_cabins640.jpg
     url: https://community.simtropolis.com/files/file/27415-spam-mtp-growable-cabins/
-  simtropolis/27683-spam-mtp-growable-a-frames:
+  simtropolis/27683:
+    assetId: simtropolis/27683-spam-mtp-growable-a-frames
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T08:51:33Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2012-06-04T02:47:12.000Z
     name: SPAM-MTP Growable A-Frames
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-b583ffb6c123c671371dbdaf4dcb44ba-mtp-spamgrowablea-frames_logo.jpg
     url: https://community.simtropolis.com/files/file/27683-spam-mtp-growable-a-frames/
-  simtropolis/27964-wmp-spam-add-on-barns-vol01:
+  simtropolis/27964:
+    assetId: simtropolis/27964-wmp-spam-add-on-barns-vol01
     authors:
       - paeng
-    category: spam
-    lastModified: 2015-12-21T15:57:39Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2012-08-23T11:44:33.000Z
     name: WMP SPAM Add-On Barns Vol01
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2012/thumb-6b31664cc32338d39e396a556e6012c9-wmp-spam-800.jpg
     url: https://community.simtropolis.com/files/file/27964-wmp-spam-add-on-barns-vol01/
-  simtropolis/29992-spam-mtp-growable-lodges:
+  simtropolis/29992:
+    assetId: simtropolis/29992-spam-mtp-growable-lodges
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-07-11T08:52:39Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2014-11-13T00:03:49.000Z
     name: SPAM-MTP Growable Lodges
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2014/thumb-646fecc1b01fea7e835e8e5e41b56f00-r5x5-2.jpg
     url: https://community.simtropolis.com/files/file/29992-spam-mtp-growable-lodges/
-  simtropolis/30676-spam-irrigation-canals:
+  simtropolis/30676:
+    assetId: simtropolis/30676-spam-irrigation-canals
     authors:
       - RebaLynnTS
-    category: spam
-    lastModified: 2015-07-15T05:21:13Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2015-07-15T04:58:35.000Z
     name: SPAM Irrigation Canals
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_07/SPAM-IC_Screen01_800-1.thumb.jpg.6f599b633b0efc49cb44123af2177803.jpg
     url: https://community.simtropolis.com/files/file/30676-spam-irrigation-canals/
-  simtropolis/30713-spammar-spam-municipal-airport:
+  simtropolis/30713:
+    assetId: simtropolis/30713-spammar-spam-municipal-airport
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-08-05T05:18:34Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2015-08-05T05:18:34.000Z
     name: SPAMMAr - SPAM Municipal Airport
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_08/SPAMMAr_1.thumb.JPG.d5a4f7c0ca3af061731be3b3da5dc94f.JPG
     url: https://community.simtropolis.com/files/file/30713-spammar-spam-municipal-airport/
-  simtropolis/30714-spam-rural-passenger-station:
+  simtropolis/30714:
+    assetId: simtropolis/30714-spam-rural-passenger-station
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2018-07-19T02:33:13Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2015-08-05T05:36:43.000Z
     name: SPAM Rural Passenger Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_08/rural_rail_1.thumb.JPG.9e13344daa267fec1a53b3265d855054.JPG
     url: https://community.simtropolis.com/files/file/30714-spam-rural-passenger-station/
-  simtropolis/30715-spam-rural-rail-halt:
+  simtropolis/30715:
+    assetId: simtropolis/30715-spam-rural-rail-halt
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-08-05T05:52:27Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2015-08-05T05:51:08.000Z
     name: SPAM Rural Rail Halt
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_08/rural_train_2.thumb.JPG.3c20cf1b47e004beedcc8bf43180c84b.JPG
     url: https://community.simtropolis.com/files/file/30715-spam-rural-rail-halt/
-  simtropolis/30722-spam-small-landing-strip:
+  simtropolis/30722:
+    assetId: simtropolis/30722-spam-small-landing-strip
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-08-07T09:46:52Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2015-08-07T09:43:39.000Z
     name: SPAM Small Landing Strip
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_08/small_landing_1.thumb.JPG.daf0eb4f66746b80fd85999b72ec5791.JPG
     url: https://community.simtropolis.com/files/file/30722-spam-small-landing-strip/
-  simtropolis/30755-te-driveways-and-parking:
+  simtropolis/30755:
+    assetId: simtropolis/30755-te-driveways-and-parking
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2019-10-10T03:54:46Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2019-10-10T03:54:44.000Z
     name: TE Driveways and Parking
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_08/dirt_driveway.thumb.JPG.5c4ad0dfb4f2e7903fddda0f17d10fdc.JPG
     url: https://community.simtropolis.com/files/file/30755-te-driveways-and-parking/
-  simtropolis/30756-spam-high-school:
+  simtropolis/30756:
+    assetId: simtropolis/30756-spam-high-school
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-08-27T03:22:48Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2015-08-27T03:19:46.000Z
     name: SPAM High School
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_08/spam_highschool.thumb.JPG.b48d523f4b3254533fa2dcce00e8367b.JPG
     url: https://community.simtropolis.com/files/file/30756-spam-high-school/
-  simtropolis/30767-spam-school-bus-garage:
+  simtropolis/30767:
+    assetId: simtropolis/30767-spam-school-bus-garage
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-09-03T08:36:18Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2015-09-03T08:36:18.000Z
     name: SPAM School Bus Garage
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_09/schoolbus_garage.thumb.JPG.72cf7464cdba04b92d1760460d968d52.JPG
     url: https://community.simtropolis.com/files/file/30767-spam-school-bus-garage/
-  simtropolis/30778-spam-univaasity:
+  simtropolis/30778:
+    assetId: simtropolis/30778-spam-univaasity
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2015-09-09T20:36:31Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2015-09-09T10:05:41.000Z
     name: SPAM - Univaasity
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_09/university_2.thumb.JPG.86b86bcd72ac524afb81660786a51aa7.JPG
     url: https://community.simtropolis.com/files/file/30778-spam-univaasity/
-  simtropolis/33196-spam-commercial-growable-cs:
+  simtropolis/33196:
+    assetId: simtropolis/33196-spam-commercial-growable-cs
     authors:
       - Craig-Abcvs
-    category: spam
-    lastModified: 2020-02-07T16:25:09Z
+    category: 36-spam-simpeg-agricultural-mods
+    lastModified: 2019-09-27T05:29:46.000Z
     name: SPAM Commercial Growable - CS$
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_09/spam_commercial.thumb.png.ad594eb722442ef25838eece82b49e88.png
     url: https://community.simtropolis.com/files/file/33196-spam-commercial-growable-cs/
 
-timestamp: 2024-10-17T06:14:27.427Z
+meta:
+  timestamp: 2024-11-18T07:06:25.278Z

@@ -47,7 +47,7 @@ export function loadBoolean<Required extends boolean = false>(
 }
 
 export function loadDate<Required extends boolean = false>(
-  value: Primitive | unknown[],
+  value: Date | Primitive | unknown[],
   id: string,
   field: string,
   required?: Required,

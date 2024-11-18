@@ -1,87 +1,188 @@
 assets:
-  sc4evermore/205-sc4d-lex-legacy-reddonquixote-compilation:
+  sc4evermore/205:
+    assetId: sc4evermore/205-sc4d-lex-legacy-reddonquixote-compilation
     authors:
       - Reddonquixote
-    category: landmarks
-    downloads: 565
-    lastModified: 2024-10-06T03:24:21-07:00
+    category: 21-other
+    downloads: 606
+    lastModified: 2024-10-06T10:24:21.000Z
     name: SC4D LEX Legacy - Reddonquixote Compilation (Dark Night)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/RDQ_HD_PropPack_Banner_Day.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/205-sc4d-lex-legacy-reddonquixote-compilation
-  sc4evermore/206-sc4d-lex-legacy-reddonquixote-compilation-maxis-night:
+  sc4evermore/206:
+    assetId: sc4evermore/206-sc4d-lex-legacy-reddonquixote-compilation-maxis-night
     authors:
       - Reddonquixote
-    category: landmarks
-    downloads: 494
-    lastModified: 2024-10-06T03:25:01-07:00
+    category: 21-other
+    downloads: 550
+    lastModified: 2024-10-06T10:25:01.000Z
     name: SC4D LEX Legacy - Reddonquixote Compilation (Maxis Night)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/RDQ_Rialto_Towers_Night_Banner.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/206-sc4d-lex-legacy-reddonquixote-compilation-maxis-night
-  sc4evermore/38-immortality-killer-by-ripplejet:
+  sc4evermore/38:
+    assetId: sc4evermore/38-immortality-killer-by-ripplejet
     authors:
       - sc4evermore
-    category: landmarks
-    downloads: 417
-    lastModified: 2023-07-25T03:32:54-07:00
+    category: 21-other
+    downloads: 450
+    lastModified: 2023-07-25T10:32:54.000Z
     name: Immortality Killer by RippleJet
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/38-immortality-killer-by-ripplejet
-  sc4evermore/39-bsc-census-repository-building-by-ripplejet:
+  sc4evermore/39:
+    assetId: sc4evermore/39-bsc-census-repository-building-by-ripplejet
     authors:
       - sc4evermore
-    category: landmarks
+    buildings:
+      - bulldoze: 9000
+        cost: 15000
+        filename: BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+        flamability: 38
+        garbage: 47
+        id: 6471f58b
+        landmark: 40
+        landmarkRadius: 20
+        maintenance: 400
+        model: 5ad0e817-5465811a-00030000
+        pollution: 3
+        pollutionRadius: 3
+        power: 84
+        rating: 10
+        ratingRadius: 256
+        water: 84
+        waterPollution: 3
+        waterPollutionRadius: 4
+      - bulldoze: 100
+        cost: 15000
+        filename: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        flamability: 45
+        garbage: 23
+        garbageRadius: 2
+        id: 0dd41d65
+        landmark: 20
+        landmarkRadius: 5
+        maintenance: 250
+        model: 5ad0e817-6dd414f2-00030000
+        pollution: 3
+        pollutionRadius: 3
+        power: 125
+        rating: 8
+        ratingRadius: 256
+        water: 150
+        waterPollution: 2
+        waterPollutionRadius: 2
+      - bulldoze: 1500
+        cost: 2000
+        filename: BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
+        flamability: 38
+        garbage: 5
+        id: 645e467b
+        maintenance: 50
+        model: 5ad0e817-d17c864e-00030000
+        pollution: 1
+        pollutionRadius: 3
+        power: 8
+        water: 8
+        waterPollution: 1
+        waterPollutionRadius: 4
+    category: 21-other
     dependencies: []
-    description: "<body>\r
-
-      \        <div class=\"jd_description_wrapper jd_clear\"><p>BSC Census Repository Building by RippleJet.</p> </div>\r
-
-      \        <div class=\"jd_preview\" style=\"\"></div>\r
-
-      \        <div class=\"jd_preview\" style=\"\"></div>\r
-
-      \        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r
-
-      \            <span class=\"jd_screenshot\"> </span>\r
-
-      \            <span class=\"jd_screenshot\"> </span>\r
-
-      \            <span class=\"jd_screenshot\"> </span>\r
-
-      \        </div> \r
-
-      </body>"
-    downloads: 1009
+    description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>BSC Census Repository Building by RippleJet.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
+    downloads: 1099
+    features: []
     filename: BSC RJ Census Repository Facility v3.5_1831.zip
     files:
-      - _Documents/BSC_Readmes/RippleJet/Readme_Census_Repository_Facility_v3.5.htm
-      - _Documents/BSC_Readmes/RippleJet/Cleanitol_RJ_Census_Repository_Facility_v3.5.txt
-      - BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
-      - BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
-      - BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
-      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot
-      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
-      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot
-      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot
-      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot
-      - _Documents/BSC_Readmes/RippleJet/images/header.gif
-      - _Documents/BSC_Readmes/RippleJet/images/footer.gif
-      - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Night.jpg
       - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Day.jpg
+      - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Night.jpg
+      - _Documents/BSC_Readmes/RippleJet/images/footer.gif
+      - _Documents/BSC_Readmes/RippleJet/images/header.gif
+      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot
+      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot
+      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot
+      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+      - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot
+      - BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+      - BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
+      - BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+      - _Documents/BSC_Readmes/RippleJet/Cleanitol_RJ_Census_Repository_Facility_v3.5.txt
+      - _Documents/BSC_Readmes/RippleJet/Readme_Census_Repository_Facility_v3.5.htm
     images: []
-    lastModified: 2023-07-20T03:48:28-07:00
+    lastModified: 2023-07-20T10:48:28.000Z
+    lots:
+      - building: 6471f58b
+        category: landmarks
+        filename: BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+        id: 6471f58b
+        name: RW_3x1_Census Repository Facility_ZP_ULTRA
+        props:
+          - a000007f
+          - 1689d35d
+          - 1689d23a
+        size: 3x1
+        textures:
+          - 258f0000
+          - "26370000"
+      - building: 0dd41d65
+        category: landmarks
+        filename: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 0dd41d65
+        name: CensusRepository
+        props:
+          - 2aa40000
+          - 2aa70000
+          - 2aa90000
+          - 2ae80000
+          - 2aaa0000
+          - 2aab0000
+          - 2aac0000
+          - 2aad0000
+          - 2aae0000
+          - 2a590000
+          - 8956a699
+        size: 1x1
+        textures:
+          - "258e0000"
+          - 258d0000
+      - building: 645e467b
+        category: landmarks
+        filename: BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
+        id: 645e467b
+        name: RW_2x2_Census Repository Vault
+        props:
+          - a0000069
+          - a000005f
+          - 1dfe0000
+        size: 2x2
+        textures:
+          - 262c0000
+    meta:
+      timestamp: 2024-11-17T16:00:57.230Z
+      version: 1
+    models:
+      - 5ad0e817-5465811a-00030000
+      - 5ad0e817-d17c864e-00030000
     name: BSC Census Repository Building by RippleJet
+    props:
+      - 6534284a-3224a93f-16888cf8
+      - 6534284a-3224a93f-b6888d35
+      - 6534284a-3224a93f-1689d23a
+      - 6534284a-3224a93f-1689d35d
+      - 6534284a-c977c536-8956a699
     sha256: 7b58f1e39ef3c5a3f72f8a4de11ebd75761c63c3c6003db7dd34a7343dbbff31
     size: 2060961
+    textures: []
     timestamp: 2024-08-15T14:29:31.994Z
     uncompressed: 2382510
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/39-bsc-census-repository-building-by-ripplejet
     version: "3.5"
-  sc4evermore/50-camelot-counter-by-ripplejet:
+  sc4evermore/50:
+    assetId: sc4evermore/50-camelot-counter-by-ripplejet
     authors:
       - sc4evermore
-    category: landmarks
-    downloads: 394
-    lastModified: 2023-07-25T05:09:39-07:00
+    category: 21-other
+    downloads: 431
+    lastModified: 2023-07-25T12:09:39.000Z
     name: CAMeLot Counter by RippleJet
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/50-camelot-counter-by-ripplejet
 
-timestamp: 2024-10-17T06:14:27.427Z
+meta:
+  timestamp: 2024-11-18T07:06:25.278Z

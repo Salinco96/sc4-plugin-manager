@@ -1,19 +1,21 @@
 assets:
-  sc4evermore/134-nam-park-and-ride-traffic-simulator-plugins:
+  sc4evermore/134:
+    assetId: sc4evermore/134-nam-park-and-ride-traffic-simulator-plugins
     authors:
       - NAM
-    category: mods/nam
-    downloads: 515
-    lastModified: 2023-08-30T02:18:07-07:00
+    category: 6-network-addon-mod-nam
+    downloads: 544
+    lastModified: 2023-08-30T09:18:07.000Z
     name: NAM Park And Ride Traffic Simulator Plugins
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/nam-park-and-ride-promo.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/6-network-addon-mod-nam/134-nam-park-and-ride-traffic-simulator-plugins
-  sc4evermore/2-network-addon-mod:
+  sc4evermore/2:
+    assetId: sc4evermore/2-network-addon-mod
     authors:
       - NAM
-    category: mods/nam
+    category: 6-network-addon-mod-nam
     dependencies: []
-    downloads: 9716
+    downloads: 9964
     filename: NetworkAddonMod_Setup_Version48.zip
     files:
       - sc4nam.com - NAM Documentation.url
@@ -985,7 +987,7 @@ assets:
       - "@52 Network Features/Road, One-Way Road, and Avenue#/RealExpressway/RealExpressway_FLEX_Piece/1_Paths/RealExpressway_Ramps-Paths.dat"
       - "@52 Network Features/Road, One-Way Road, and Avenue#/RealExpressway/RealExpressway_FLEX_Piece/Z_Rotation_Ring_Files/RealExpressway_Rotation_Rings.dat"
       - "@52 Network Features/Road, One-Way Road, and Avenue#/RealExpressway/RealExpressway_FLEX_Piece/Z_Rotation_Ring_Files/RealExpressway_Previews.dat"
-    lastModified: 2024-01-16T22:14:25-08:00
+    lastModified: 2024-01-17T06:14:25.000Z
     name: Network Addon Mod
     sha256: d8a51c70b29af9698225d714c08a2ba919bb8d7e56c5610473c1aa4e17b15cd1
     size: 821313195
@@ -994,12 +996,13 @@ assets:
     uncompressed: 854209508
     url: https://www.sc4evermore.com/index.php/downloads/download/6-network-addon-mod-nam/2-network-addon-mod
     version: "48"
-  sc4evermore/40-nam-lite:
+  sc4evermore/40:
+    assetId: sc4evermore/40-nam-lite
     authors:
       - NAM
-    category: mods/nam
+    category: 6-network-addon-mod-nam
     dependencies: []
-    downloads: 1395
+    downloads: 1434
     filename: NetworkAddonMod_Lite_Setup_Version3.zip
     files:
       - sc4nam.com - NAM Documentation.url
@@ -1112,7 +1115,7 @@ assets:
       - "@44 Texture Options/=US/z_Cul-De-Sacs/Cul-De-Sacs.txt"
       - "@44 Texture Options/-EU/z_Cul-De-Sacs/zEU_Common_Culdesac_Mod_Superhands.dat"
       - "@44 Texture Options/-EU/z_Cul-De-Sacs/Cul-De-Sacs.txt"
-    lastModified: 2023-08-30T02:17:39-07:00
+    lastModified: 2023-08-30T09:17:39.000Z
     name: NAM Lite
     sha256: aa4a15ccad6564149752b6f6408ae0935f40836cc902d867792c12ac8c826c2e
     size: 28810208
@@ -1122,4 +1125,5 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/6-network-addon-mod-nam/40-nam-lite
     version: "3"
 
-timestamp: 2024-10-17T06:14:27.427Z
+meta:
+  timestamp: 2024-11-18T07:06:25.278Z
