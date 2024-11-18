@@ -256,11 +256,14 @@ function loadRemotePackageInfo(
 
   if (packageData.variants) {
     for (const variantId of keys(packageData.variants)) {
-      const variantInfo = loadVariantInfo(variantId, packageData, categories)
-      packageInfo.variants[variantId] = variantInfo
-      if (!variantInfo.authors.length) {
-        const author = packageId.split("/")[0] as AuthorID
-        variantInfo.authors.push(author)
+      // Skip disabled variants
+      if (!packageData.variants[variantId]?.disabled) {
+        const variantInfo = loadVariantInfo(variantId, packageData, categories)
+        packageInfo.variants[variantId] = variantInfo
+        if (!variantInfo.authors.length) {
+          const author = packageId.split("/")[0] as AuthorID
+          variantInfo.authors.push(author)
+        }
       }
     }
   }

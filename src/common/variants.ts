@@ -27,6 +27,7 @@ export interface VariantData {
   dependencies?: Array<PackageID | DependencyInfo>
   deprecated?: boolean | PackageID
   description?: string
+  disabled?: boolean
   experimental?: boolean
   files?: PackageFile[]
   images?: string[]

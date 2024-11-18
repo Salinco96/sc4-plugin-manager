@@ -78,7 +78,6 @@ export type Variants = {
 }
 
 export interface PackageData extends VariantData {
-  disabled?: boolean
   features?: Feature[]
   name?: string
   variants?: {
