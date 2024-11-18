@@ -15,8 +15,8 @@ export interface IndexerOptions {
   /** Whether to fetch this entrys details and resolve it into a package */
   includeEntry(
     entry: IndexerBaseEntry,
-    source: IndexerSource,
-    category: IndexerSourceCategory,
+    source: IndexerSource | undefined,
+    category: IndexerSourceCategory | undefined,
   ): boolean
   /** Sources to index */
   sources: IndexerSource[]
@@ -33,9 +33,9 @@ export interface IndexerBaseEntry {
   authors: string[]
   downloads?: number
   lastModified: Date
-  name: string
+  name?: string
   thumbnail?: string
-  url: string
+  url?: string
 }
 
 /**
@@ -51,6 +51,7 @@ export interface IndexerEntryDetails {
 
 export interface IndexerVariantEntry {
   buildings?: BuildingData[]
+  download?: string
   features?: Feature[]
   filename?: string
   files?: string[]
@@ -68,7 +69,7 @@ export interface IndexerVariantEntry {
 
 export interface IndexerEntry extends IndexerBaseEntry, IndexerEntryDetails, IndexerVariantEntry {
   /** Category ID within the source (e.g. "101-residential" in Simtropolis) */
-  category: IndexerSourceCategoryID
+  category?: IndexerSourceCategoryID
   /** Indexer metadata */
   meta?: {
     /** When were this entry's details last extracted */
@@ -81,6 +82,7 @@ export interface IndexerEntry extends IndexerBaseEntry, IndexerEntryDetails, Ind
     [variant in string]?: IndexerVariantEntry
   }
 }
+
 export type EntryID = `${IndexerSourceID}/${number}`
 
 export interface IndexerEntryList {
@@ -119,7 +121,6 @@ export type IndexerSourceCategoryID = ID<IndexerSourceCategory>
 export type IndexerCategoryID = `${IndexerSourceID}/${IndexerSourceCategoryID}`
 
 export interface IndexerOverride {
-  downloadUrl?: string
   packageId?: PackageID
   superseded?: AssetID
   variantId?: VariantID

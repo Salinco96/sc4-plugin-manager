@@ -69,6 +69,6 @@ export function getString(exemplar: Exemplar, id: ExemplarPropertyID): string | 
 
 export function getBaseTextureId(instanceId: number): string {
   return (instanceId & 0x0000f000) > 0x00003000 // Ignore wealth/rotation
-    ? toHex(instanceId & 0xfffff000, 8)
-    : toHex(instanceId & 0xffff0000, 8)
+    ? toHex(instanceId, 8).slice(0, -3) + "000"
+    : toHex(instanceId, 8).slice(0, -4) + "0000"
 }

@@ -39,7 +39,7 @@ export function extractRepository(html: string): string | undefined {
 export function writePackageData(
   packageData: PackageData = {},
   assetId: AssetID,
-  source: IndexerSource,
+  source: IndexerSource | undefined,
   entry: IndexerEntry,
   variant: string | undefined,
   variantId: VariantID,
@@ -59,7 +59,9 @@ export function writePackageData(
 
   const [, major, minor, patch] = entry.version.match(/(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)!
 
-  packageData.category ??= source.categories[entry.category].category
+  packageData.category ??=
+    source && entry.category ? source.categories[entry.category].category : "mods"
+
   packageData.name ??= entry.name
 
   variantData.assets ??= []
@@ -68,7 +70,7 @@ export function writePackageData(
   variantData.release = timestamp
   variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
 
-  if (!packageData.url || packageData.url === entry.url) {
+  if (variantId === "default" || !packageData.url || packageData.url === entry.url) {
     const packageAuthors = union(authors, packageData.authors ?? [])
 
     const packageDependencies = union(dependencies, packageData.dependencies ?? [])
@@ -81,7 +83,7 @@ export function writePackageData(
 
     const packageImages = union(entry.images ?? [], packageData.images ?? [])
 
-    packageData.authors = packageAuthors.sort()
+    packageData.authors = packageAuthors.length ? packageAuthors.sort() : undefined
     packageData.dependencies = packageDependencies.length ? packageDependencies.sort() : undefined
     packageData.description = packageDescription
     packageData.features = packageFeatures.length ? packageFeatures.sort() : undefined
@@ -116,7 +118,7 @@ export function writePackageData(
       image => !packageData.images?.includes(image),
     )
 
-    variantData.authors = variantAuthors.sort()
+    variantData.authors = variantAuthors.length ? variantAuthors.sort() : undefined
     variantData.dependencies = variantDependencies.length ? variantDependencies.sort() : undefined
     variantData.description = variantDescription
     variantData.images = variantImages.length ? variantImages : undefined
@@ -125,7 +127,7 @@ export function writePackageData(
     variantData.url = entry.url
   }
 
-  if (entry.category.includes("obsolete")) {
+  if (entry.category?.includes("obsolete")) {
     variantData.deprecated = true
   }
 

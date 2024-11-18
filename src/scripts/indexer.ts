@@ -1,3 +1,4 @@
+import { readdir } from "fs/promises"
 import path from "path"
 
 import { input, select } from "@inquirer/prompts"
@@ -8,10 +9,10 @@ import { AssetData, AssetID } from "@common/assets"
 import { AuthorData, AuthorID } from "@common/authors"
 import { ExemplarPropertyData, ExemplarPropertyInfo, ExemplarValueType } from "@common/exemplars"
 import { PackageID } from "@common/packages"
-import { ConfigFormat, PackageData } from "@common/types"
+import { ConfigFormat, ID, PackageData } from "@common/types"
 import { indexBy, mapDefined } from "@common/utils/arrays"
 import { readHex } from "@common/utils/hex"
-import { forEach, keys, mapValues, values } from "@common/utils/objects"
+import { forEach, forEachAsync, isEmpty, keys, mapValues, values } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
 import { VariantData, VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
@@ -39,6 +40,8 @@ import { readHTML, toID, wait } from "./utils"
 
 config({ path: ".env.local" })
 
+const UNCATEGORIZED: IndexerSourceCategoryID = ID("uncategorized")
+
 const now = new Date()
 
 const dataDir = path.join(__dirname, "data")
@@ -60,8 +63,9 @@ runIndexer({
 
     return true
   },
-  includeEntry(entry) {
+  includeEntry(entry, source) {
     return (
+      !source ||
       [/buggi/i, /cococity/i, /null/i, /memo/i, /simmaster07/i, /toroca/i].some(
         id => !!entry.authors.some(a => a.match(id)),
       ) ||
@@ -92,8 +96,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return (assetIds[entryId] ??= (hint ?? entryId) as AssetID)
   }
 
-  function getCategory(entryId: EntryID): IndexerSourceCategory {
-    return getSource(entryId).categories[getEntry(entryId).category]
+  function getCategory(entryId: EntryID): IndexerSourceCategory | undefined {
+    const source = getSource(entryId)
+    const categoryId = getEntry(entryId).category
+    return source && categoryId ? source.categories[categoryId] : undefined
   }
 
   function getEntry(entryId: EntryID): IndexerEntry {
@@ -101,7 +107,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   }
 
   function getEntryID(assetId: string): EntryID {
-    return assetId.match(/^.+[/]\d+/)![0] as EntryID
+    return (assetId.match(/^([a-z0-9-]+[/]\d+)(-[^/]+)?$/)?.[1] ?? assetId) as EntryID
   }
 
   function getOverride(entryId: EntryID, variant?: string): IndexerOverride | null | undefined {
@@ -109,8 +115,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return variant ? override?.variants?.[variant] : override
   }
 
-  function getSource(entryId: EntryID): IndexerSource {
-    return sources[entryId.split("/")[0] as IndexerSourceID]
+  function getSource(entryId: EntryID): IndexerSource | undefined {
+    return sources[getSourceId(entryId)]
+  }
+
+  function getSourceId(entryId: EntryID): IndexerSourceID {
+    return entryId.split("/")[0] as IndexerSourceID
   }
 
   const skipped = new Set<EntryID>()
@@ -126,14 +136,104 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     for (const category of values(source.categories)) {
       console.debug(`Loading entries from ${source.id}/${category.id}...`)
 
-      const data = await loadSourceCategory(source.id, category.id)
-
+      const data = await loadEntries(source.id, category.id)
       forEach(data.assets, (entry, entryId) => {
         assetIds[entryId] = entry.assetId
         entries[entryId] = entry
       })
     }
   }
+
+  for (const sourceId of await readdir(dataAssetsDir)) {
+    console.debug(`Loading entries from ${sourceId}...`)
+    const data = await loadEntries(sourceId as IndexerSourceID)
+    forEach(data.assets, (entry, entryId) => {
+      assetIds[entryId] = entry.assetId
+      entries[entryId] = entry
+    })
+  }
+
+  await forEachAsync(dbAssetsConfigs, async (assets, sourceId) => {
+    categories[sourceId] ??= {}
+    categories[sourceId][UNCATEGORIZED] ??= { assets: {} }
+    const data = categories[sourceId][UNCATEGORIZED]
+
+    forEach(assets, (asset, assetId) => {
+      if (asset.url && asset.version && !entries[getEntryID(assetId)]) {
+        const entryId = getEntryID(assetId)
+
+        assetIds[entryId] = assetId
+
+        entries[entryId] = {
+          assetId,
+          authors: assetId.split("/").slice(-2, -1), // TODO
+          download: asset.url.replace("{path}", assetId.split("/").slice(1).join("/")),
+          lastModified: asset.lastModified ?? now, // TODO
+          version: String(asset.version),
+        }
+
+        data.assets[entryId] = entries[entryId]
+      }
+    })
+
+    if (!isEmpty(data.assets)) {
+      data.meta ??= {}
+
+      const outdated = false
+      // todo: !data.meta.timestamp || now.getTime() >= data.meta.timestamp.getTime() + 6 * 60 * 60 * 1000
+
+      if (sourceId === "github" && outdated) {
+        await forEachAsync(data.assets, async (entry, entryId) => {
+          const repository = entryId.match(/^github[/]([^/]+[/][^/]+)$/)?.[1]
+
+          if (repository) {
+            entry.repository = `https://github.com/${repository}`
+
+            const url = `https://api.github.com/repos/${repository}/releases/latest`
+
+            try {
+              const res = await get(url, {})
+              const latest = (await res.json()) as {
+                assets: {
+                  browser_download_url: string
+                  created_at: string
+                  name: string
+                  size: number
+                  updated_at: string
+                }[]
+                created_at: string
+                name: string
+                published_at: string
+                tag_name: string
+              }
+
+              const version = latest.tag_name.replace(/^v/i, "") // remove leading v
+              const assetName = entry.download?.split("/").at(-1)?.replace("{version}", version)
+              const asset =
+                latest.assets.find(asset => asset.name === assetName) ?? latest.assets[0]
+
+              if (!entry.download || entry.version !== version) {
+                entry.download = asset.browser_download_url.replaceAll(version, "{version}")
+                entry.filename = asset.name
+                entry.lastModified = new Date(asset.updated_at)
+                entry.version = version
+                delete entry.meta
+              }
+
+              await wait(3000)
+            } catch (error) {
+              console.error(error)
+              errors.add(`Failed to fetch latest release for repository ${repository} - ${url}`)
+            }
+          }
+        })
+
+        data.meta.timestamp = now
+      }
+
+      await writeEntries(sourceId)
+    }
+  })
 
   // Step 2 - Fetch new entries
   for (const source of options.sources) {
@@ -180,7 +280,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
             const oldCategoryId = entries[entryId]?.category
             if (oldCategoryId && oldCategoryId !== category.id) {
               delete categories[source.id][oldCategoryId].assets[entryId]
-              await writeSourceCategory(source.id, oldCategoryId)
+              await writeEntries(source.id, oldCategoryId)
             }
 
             entries[entryId] = entry
@@ -195,7 +295,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         data.meta.timestamp = now
 
         // Save changes
-        await writeSourceCategory(source.id, category.id)
+        await writeEntries(source.id, category.id)
       }
     }
   }
@@ -303,14 +403,14 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return options.includeEntry(getEntry(entryId), getSource(entryId), getCategory(entryId))
   }
 
-  function getDefaultPackageId(entry: IndexerEntry): string {
-    const authorId = getAuthorId(entry.authors[0])
-    return `${authorId}/${entry.assetId.split("/")[1].replace(/^\d+-/, "")}`
+  async function getDefaultPackageId(entry: IndexerEntry): Promise<string> {
+    const authorId = await getAuthorId(entry.authors[0])
+    return `${authorId}/${entry.assetId.split("/").at(-1)?.replace(/^\d+-/, "")}`
   }
 
   async function getPackageId(entry: IndexerEntry, hint?: string): Promise<PackageID> {
     const packageId = await input({
-      default: hint ?? getDefaultPackageId(entry),
+      default: hint ?? (await getDefaultPackageId(entry)),
       message: "Package ID:",
       validate: value => {
         if (!/^[a-z0-9-]+[/][a-z0-9-]+$/.test(value)) {
@@ -352,6 +452,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     const assetId = getAssetID(entryId)
     const entry = getEntry(entryId)
     const source = getSource(entryId)
+    const sourceId = getSourceId(entryId)
 
     let override = getOverride(entryId)
 
@@ -439,31 +540,42 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     // Fetch details if entry was never fetched, or was modified since last fetch
     if (!entry.version || !entry.meta?.timestamp || entry.meta.timestamp < entry.lastModified) {
-      console.debug(`Fetching ${entry.url}...`)
-      const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
-      const details = source.getEntryDetails(assetId, html)
-      if (!details.version) {
+      if (source && entry.url) {
+        console.debug(`Fetching ${entry.url}...`)
+        const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
+        const details = source.getEntryDetails(assetId, html)
+        if (!details.version) {
+          errors.add(`Missing version for entry ${assetId}`)
+          return
+        }
+
+        entry.meta ??= {}
+        entry.meta.timestamp = now
+
+        // If a new version is available, force to extract files again
+        if (entry.version !== details.version) {
+          delete entry.meta.version
+        }
+
+        // Set details
+        entry.dependencies = details.dependencies?.map(getEntryID)
+        entry.description = details.description
+        entry.images = details.images
+        entry.repository = details.repository
+        entry.version = details.version
+
+        // Save changes
+        await writeEntries(source.id, entry.category)
+      } else if (!entry.version) {
         errors.add(`Missing version for entry ${assetId}`)
         return
+      } else {
+        entry.meta ??= {}
+        entry.meta.timestamp ??= now
+
+        // Save changes
+        await writeEntries(getSourceId(entryId))
       }
-
-      entry.meta ??= {}
-      entry.meta.timestamp = now
-
-      // If a new version is available, force to extract files again
-      if (entry.version !== details.version) {
-        delete entry.meta.version
-      }
-
-      // Set details
-      entry.dependencies = details.dependencies?.map(getEntryID)
-      entry.description = details.description
-      entry.images = details.images
-      entry.repository = details.repository
-      entry.version = details.version
-
-      // Save changes
-      await writeSourceCategory(source.id, entry.category)
     }
 
     // Download and analyze contents if outdated
@@ -497,7 +609,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
 
       // Save changes
-      await writeSourceCategory(source.id, entry.category)
+      await writeEntries(sourceId, entry.category)
     }
 
     // Generate packages if outdated
@@ -546,13 +658,19 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       throw Error(`Unknown variant ${variantAssetId}`)
     }
 
-    if (!entry.version) {
+    const version = entry.version
+
+    if (!version) {
       throw Error(`Entry ${assetId} does not have a version`)
     }
 
     let variantOverride = getOverride(entryId, variant)
 
-    if (variant && variantOverride === undefined) {
+    if (variantOverride === undefined) {
+      if (!variant) {
+        throw Error(`Expected override to exist for ${assetId}`)
+      }
+
       const answer = await select({
         choices: [
           { name: "Yes", value: true },
@@ -587,26 +705,46 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     const downloadPath = path.join(dataDownloadsDir, downloadKey)
     const downloadTempPath = path.join(dataDownloadsTempDir, downloadKey)
 
-    const defaultDownloadUrl = source.getDownloadUrl(assetId, variant)
-    let downloadUrl = variantOverride?.downloadUrl ?? defaultDownloadUrl
+    const defaultDownloadUrl = source?.getDownloadUrl(assetId, variant)
+    let downloadUrl = variantEntry.download ?? defaultDownloadUrl
     let downloaded = await exists(downloadPath)
+
+    if (!downloadUrl) {
+      downloadUrl = await input({
+        default: downloadUrl,
+        message: "Download URL:",
+        validate: value => {
+          if (!/^https:[/][/][-.\w]+[.][a-z]+[/][-.\w/%]+$/.test(value)) {
+            return "Invalid URL"
+          }
+
+          return true
+        },
+      })
+
+      variantEntry.download = downloadUrl
+    }
 
     // Download files (or extract variants)
     if (!downloaded || !variantEntry.sha256 || !variantEntry.size) {
       await removeIfPresent(downloadPath)
       downloaded = false
 
-      console.debug(`Downloading ${downloadUrl}...`)
-
       while (!downloaded) {
+        const finalDownloadUrl = downloadUrl.replaceAll("{version}", version)
+
+        console.debug(`Downloading ${finalDownloadUrl}...`)
+
         try {
-          const response = await get(downloadUrl, { cookies: () => source.getCookies() })
+          const response = await get(finalDownloadUrl, {
+            cookies: () => source?.getCookies(),
+          })
 
           const contentType = response.headers.get("Content-Type")
 
           // HTML response - Simtropolis variant listing
           if (contentType?.startsWith("text/html")) {
-            if (variant) {
+            if (variant || !source) {
               throw Error("Unexpected HTML")
             }
 
@@ -675,15 +813,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               },
             })
 
-            overrides[entryId] ??= {}
-            if (variant) {
-              overrides[entryId].variants ??= {}
-              variantOverride = overrides[entryId].variants[variant] ??= {}
-            } else {
-              variantOverride = overrides[entryId]
-            }
-
-            variantOverride.downloadUrl = downloadUrl
+            variantEntry.download = downloadUrl
           } else {
             throw Error(`Failed to download ${variantAssetId}`)
           }
@@ -752,19 +882,25 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     const assetId = getAssetID(entryId)
     const entry = getEntry(entryId)
     const source = getSource(entryId)
+    const sourceId = getSourceId(entryId)
 
     const entryOverride = getOverride(entryId)
     const variantOverride = getOverride(entryId, variant)
     const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
     const variantEntry = variant ? entry.variants?.[variant] : entry
-    const packageId = variantOverride?.packageId ?? entryOverride?.packageId
+    let packageId = variantOverride?.packageId ?? entryOverride?.packageId
 
     if (entryOverride === null || variantOverride === null || !entry.meta?.timestamp) {
       return false
     }
 
-    if (!variantEntry?.files || !entry.version || !variantOverride || !packageId) {
+    if (!variantEntry?.files || !entry.version || !variantOverride) {
       throw Error(`Expected override to exist for ${variantAssetId}`)
+    }
+
+    if (packageId === undefined) {
+      packageId = await getPackageId(entry)
+      variantOverride.packageId = packageId
     }
 
     let variantId = variantOverride.variantId
@@ -809,7 +945,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
     }
 
-    const assetData = dbAssetsConfigs[source.id]?.[variantAssetId] ?? {}
+    const assetData = dbAssetsConfigs[sourceId]?.[variantAssetId] ?? {}
     const packageData = dbPackagesConfigs[authorId]?.[packageId]
     const variantData = packageData?.variants?.[variantId]
 
@@ -819,13 +955,13 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       assetData.sha256 = variantEntry.sha256
       assetData.size = variantEntry.size
       assetData.uncompressed = variantEntry.uncompressed
-      assetData.url = variantOverride.downloadUrl
+      assetData.url = variantEntry.download
       assetData.version = entry.version
 
-      dbAssetsConfigs[source.id] ??= {}
-      dbAssetsConfigs[source.id][variantAssetId] = assetData
+      dbAssetsConfigs[sourceId] ??= {}
+      dbAssetsConfigs[sourceId][variantAssetId] = assetData
 
-      await writeConfig(dbAssetsDir, source.id, dbAssetsConfigs[source.id], ConfigFormat.YAML)
+      await writeConfig(dbAssetsDir, sourceId, dbAssetsConfigs[sourceId], ConfigFormat.YAML)
     }
 
     // Create or update package/variant data
@@ -856,9 +992,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return true
   }
 
-  async function loadSourceCategory(
+  async function loadEntries(
     sourceId: IndexerSourceID,
-    categoryId: IndexerSourceCategoryID,
+    categoryId: IndexerSourceCategoryID = UNCATEGORIZED,
   ): Promise<IndexerEntryList> {
     const config = await loadConfig<IndexerEntryList>(dataAssetsDir, `${sourceId}/${categoryId}`)
     const data = config?.data ?? { assets: {} }
@@ -867,9 +1003,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return data
   }
 
-  async function writeSourceCategory(
+  async function writeEntries(
     sourceId: IndexerSourceID,
-    categoryId: IndexerSourceCategoryID,
+    categoryId: IndexerSourceCategoryID = UNCATEGORIZED,
   ): Promise<void> {
     const data = categories[sourceId][categoryId]
     await writeConfig(dataAssetsDir, `${sourceId}/${categoryId}`, data, ConfigFormat.YAML)
