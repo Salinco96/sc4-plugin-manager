@@ -10,6 +10,32 @@ import { getExtension } from "@node/files"
 import { IndexerEntry, IndexerSource } from "../types"
 import { htmlToMd } from "../utils"
 
+export function extractDependencies(html: string): string[] {
+  const dependencies = new Set<string>()
+
+  // Simtropolis file page URL
+  for (const match of html.matchAll(
+    /(https:[/][/]community.simtropolis.com)?[/]files[/]file[/]([\w-]+)[/]?/g,
+  )) {
+    dependencies.add(`simtropolis/${match[2]}`)
+  }
+
+  // SC4Evermore file page URL
+  for (const match of html.matchAll(
+    /(https:[/][/]www.sc4evermore.com)?[/]index.php[/]downloads[/]download[/][\w-]+[/]([\w-]+)[/]?/g,
+  )) {
+    dependencies.add(`sc4evermore/${match[2]}`)
+  }
+
+  return Array.from(dependencies)
+}
+
+export function extractRepository(html: string): string | undefined {
+  // We hardcode a few known GitHub users not to pick up random repositories
+  const match = html.match(/https:\/\/github.com\/(0xC0000054|memo33|nsgomez)\/([\w-]+)?/g)
+  return match?.[0]
+}
+
 export function writePackageData(
   packageData: PackageData = {},
   assetId: AssetID,

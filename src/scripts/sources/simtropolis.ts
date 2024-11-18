@@ -2,6 +2,7 @@ import { ID } from "@common/types"
 import { indexBy } from "@common/utils/arrays"
 import { isDefined } from "@common/utils/types"
 
+import { extractDependencies, extractRepository } from "../dbpf/packages"
 import { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
 
 const sourceId: IndexerSourceID = ID("simtropolis")
@@ -199,31 +200,16 @@ export const SIMTROPOLIS: IndexerSource = {
   getEntryDetails(assetId, html) {
     const description = html.querySelector("article section .ipsType_richText")?.innerHTML
 
-    const dependencies = Array.from(
-      new Set([
-        ...Array.from(
-          description?.matchAll(
-            /(https:[/][/]community.simtropolis.com)?[/]files[/]file[/]([\w-]+)[/]?/g,
-          ) ?? [],
-        ).map(match => `simtropolis/${match[2]}`),
-        ...Array.from(
-          description?.matchAll(
-            /(https:[/][/]www.sc4evermore.com)?[/]index.php[/]downloads[/]download[/]([\w-]+)[/]([\w-]+)[/]?/g,
-          ) ?? [],
-        ).map(match => `sc4evermore/${match[3]}`),
-      ]),
-    ).filter(dependencyId => dependencyId !== assetId)
-
     const images = html
       .querySelectorAll(".cDownloadsCarousel .ipsCarousel_item span")
       .map(e => e.attributes["data-fullURL"] || e.querySelector("img")?.attributes.src)
       .filter(isDefined)
 
     return {
-      dependencies,
+      dependencies: description ? extractDependencies(description) : undefined,
       description: description ? `<body>${description}</body>` : undefined,
       images,
-      repository: description?.match(/https:\/\/github.com\/([\w-]+)\/([\w-]+)?/g)?.[0],
+      repository: description ? extractRepository(description) : undefined,
       version: html.querySelector(".stex-title-version")?.textContent,
     }
   },
