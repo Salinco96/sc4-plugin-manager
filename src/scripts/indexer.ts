@@ -10,7 +10,7 @@ import { AuthorData, AuthorID } from "@common/authors"
 import { ExemplarPropertyData, ExemplarPropertyInfo, ExemplarValueType } from "@common/exemplars"
 import { PackageID } from "@common/packages"
 import { ConfigFormat, ID, PackageData } from "@common/types"
-import { difference, indexBy, isEqual, mapDefined } from "@common/utils/arrays"
+import { difference, indexBy, isEqual, mapDefined, removeElement } from "@common/utils/arrays"
 import { globToRegex } from "@common/utils/glob"
 import { readHex } from "@common/utils/hex"
 import { forEach, forEachAsync, isEmpty, keys, mapValues, values } from "@common/utils/objects"
@@ -348,6 +348,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     packageId: PackageID,
     variantId?: VariantID,
   ): Promise<void> {
+    const mainAuthorId = packageId.split("/")[0]
     const prefix = variantId ? `In variant ${packageId}#${variantId}` : `In package ${packageId}`
 
     if (variantData.assets) {
@@ -360,7 +361,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     if (variantData.authors) {
+      const newAuthors: AuthorID[] = []
       for (const authorId of variantData.authors) {
+        if (authorId !== mainAuthorId) {
+          newAuthors.push(authorId)
+        }
+
         if (!dbAuthors[authorId]) {
           const confirmed = await select({
             choices: [
@@ -382,6 +388,16 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
             errors.add(`${prefix} - Author ${authorId} does not exist`)
           }
         }
+      }
+
+      if (!isEqual(variantData.authors, newAuthors)) {
+        variantData.authors = newAuthors.length ? newAuthors : undefined
+        await writeConfig(
+          dbPackagesDir,
+          mainAuthorId,
+          dbPackagesConfigs[mainAuthorId],
+          ConfigFormat.YAML,
+        )
       }
     }
 
@@ -1017,7 +1033,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       })
 
       const authorId = packageId.split("/")[0] as AuthorID
-      const authors = [authorId, ...mapDefined(entry.authors, getAuthorId)]
+      const authors = removeElement(mapDefined(entry.authors, getAuthorId), authorId)
 
       const packageData = dbPackagesConfigs[authorId]?.[packageId]
       const variantData = packageData?.variants?.[variantId]

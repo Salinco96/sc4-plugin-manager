@@ -9,7 +9,7 @@ import { Categories, CategoryID, CategoryInfo } from "@common/categories"
 import { OptionType } from "@common/options"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, PackageID, isNew } from "@common/packages"
 import { ConfigFormat, PackageData, PackageInfo, Packages } from "@common/types"
-import { mapDefined, potentialUnion, potentialUnionBy, unionBy } from "@common/utils/arrays"
+import { mapDefined, potentialUnion, potentialUnionBy, unionBy, unique } from "@common/utils/arrays"
 import {
   filterValues,
   forEach,
@@ -123,7 +123,7 @@ async function loadLocalPackageInfo(
     // ~ is reserved for special folders, e.g. ~docs
     if (entry.isDirectory() && !entry.name.startsWith("~")) {
       const variantId = entry.name as VariantID
-      const variantInfo = loadVariantInfo(variantId, packageData, categories)
+      const variantInfo = loadVariantInfo(packageId, variantId, packageData, categories)
       packageInfo.variants[variantId] = variantInfo
       variantInfo.installed = true
 
@@ -258,7 +258,7 @@ function loadRemotePackageInfo(
     for (const variantId of keys(packageData.variants)) {
       // Skip disabled variants
       if (!packageData.variants[variantId]?.disabled) {
-        const variantInfo = loadVariantInfo(variantId, packageData, categories)
+        const variantInfo = loadVariantInfo(packageId, variantId, packageData, categories)
         packageInfo.variants[variantId] = variantInfo
         if (!variantInfo.authors.length) {
           const author = packageId.split("/")[0] as AuthorID
@@ -332,12 +332,14 @@ function loadDependencyInfo(data: DependencyData | PackageID): DependencyInfo {
  * Loads a variant from a package configuration.
  */
 function loadVariantInfo(
+  packageId: PackageID,
   variantId: VariantID,
   packageData: PackageData,
   categories: Categories,
 ): VariantInfo {
   const variantData = packageData.variants?.[variantId] ?? {}
 
+  const authorId = packageId.split("/")[0] as AuthorID
   const category = variantData.category ?? packageData.category ?? "mods"
   const subcategories = parseCategory(category, categories)
   const priorities = subcategories.map(categoryId => categories[categoryId]?.priority ?? 0)
@@ -349,7 +351,7 @@ function loadVariantInfo(
       packageData.assets?.map(loadPackageAssetInfo),
       asset => asset.id,
     ),
-    authors: potentialUnion(variantData.authors, packageData.authors) ?? [],
+    authors: unique([authorId, ...(variantData.authors ?? []), ...(packageData.authors ?? [])]),
     categories: subcategories,
     dependencies: potentialUnionBy(
       variantData.dependencies?.map(loadDependencyInfo),
