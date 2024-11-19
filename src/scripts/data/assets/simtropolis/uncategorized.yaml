@@ -5,7 +5,7 @@ assets:
       - simtropolis
     download: https://community.simtropolis.com/applications/core/interface/file/attachment.php?id=97158
     lastModified: 2024-11-18T09:48:18.355Z
-    version: "1.0"
+    version: '1.0'
   simtropolis/maxis-day-of-peace:
     assetId: simtropolis/maxis-day-of-peace
     authors:
@@ -27,21 +27,21 @@ assets:
     sha256: 1d573ffa52a37376f2be724afd0881c0f47abb06c05e0b31f7bf74a93088ce2b
     size: 3307086
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-flags-ca:
     assetId: simtropolis/maxis-flags-ca
     authors:
       - simtropolis
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Canada_Flag.dat
     lastModified: 2024-11-18T09:48:18.355Z
-    version: "1"
+    version: '1'
   simtropolis/maxis-flags-us:
     assetId: simtropolis/maxis-flags-us
     authors:
       - simtropolis
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/AmericanFlag.dat
     lastModified: 2024-11-18T09:48:18.355Z
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-002-the-living-mall:
     assetId: simtropolis/maxis-plugin-002-the-living-mall
     authors:
@@ -87,7 +87,7 @@ assets:
         size: 6x6
         textures:
           - 258f0000
-          - "26210000"
+          - '26210000'
           - 25c40000
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
@@ -98,7 +98,7 @@ assets:
     sha256: b6d652e485249493877bc0c6b3201bf8031b70fd935847df42798d10cb0578d5
     size: 2467729
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-003-arc-de-triomphe:
     assetId: simtropolis/maxis-plugin-003-arc-de-triomphe
     authors:
@@ -139,7 +139,7 @@ assets:
           - 25fb0000
           - 259d0000
           - 257c0000
-          - "26060000"
+          - '26060000'
           - 257d0000
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
@@ -150,7 +150,7 @@ assets:
     sha256: 22e5cc20e0a363f76aa722d81fa9802e3f837c8cef17d6501d73c36054b6a9aa
     size: 410267
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-004-seoul-city-hall:
     assetId: simtropolis/maxis-plugin-004-seoul-city-hall
     authors:
@@ -195,12 +195,12 @@ assets:
           - 04bd0000
         size: 6x5
         textures:
-          - "26210000"
-          - "25900000"
+          - '26210000'
+          - '25900000'
           - 258f0000
           - 25b40000
           - 25f10000
-          - "26270000"
+          - '26270000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -212,7 +212,7 @@ assets:
     sha256: ecbec2ef700c6a78ee234a277a4b2184bb7aae3393c68b475ec43506705c54c1
     size: 1953118
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-005-seoul-soccer-stadium:
     assetId: simtropolis/maxis-plugin-005-seoul-soccer-stadium
     authors:
@@ -271,7 +271,7 @@ assets:
     sha256: 31b1770cfc23aa6692a1e0293ba0a6e505ae2a803ac637ebd338b51f72277750
     size: 7761878
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-006-globe-arena:
     assetId: simtropolis/maxis-plugin-006-globe-arena
     authors:
@@ -311,8 +311,8 @@ assets:
           - aa836b49
           - aa836b48
           - 296f0000
-          - "29720000"
-          - "29710000"
+          - '29720000'
+          - '29710000'
           - a0000078
           - 2a5a0000
           - 2a5b0000
@@ -339,7 +339,7 @@ assets:
     sha256: 501cc4e4f66c402747e8efa3d97a7cf993cd37487e50e3a7b285005512337b5d
     size: 4000537
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-007-air-force-base:
     assetId: simtropolis/maxis-plugin-007-air-force-base
     authors:
@@ -362,58 +362,58 @@ assets:
           - 4ae643c2
           - 4ae643c3
           - 4ae643c1
-          - "29860000"
+          - '29860000'
           - 6ab6ec78
           - 6ab6ec79
           - a000004b
           - 1e4f0000
           - 1d4b0000
-          - "29500000"
+          - '29500000'
           - ae1d0000
           - ca3d9723
           - ca3d9724
           - 1ccd0000
           - 29aa0000
-          - "28350000"
-          - "29510000"
-          - "294e0000"
+          - '28350000'
+          - '29510000'
+          - '294e0000'
           - 29a90000
           - 294d0000
           - 1f520000
           - 29c20000
           - aa836b46
-          - "00590000"
+          - '00590000'
           - 1d4a0000
           - 2a470000
           - 1ed70000
           - 1ed90000
           - 1eda0000
-          - "29230000"
+          - '29230000'
           - 292a0000
-          - "29280000"
-          - "29260000"
+          - '29280000'
+          - '29260000'
           - 2a94b0d9
-          - "28270000"
+          - '28270000'
         size: 10x29
         textures:
           - 25d60000
           - 25fb0000
           - 256d0000
-          - "25700000"
-          - "25710000"
+          - '25700000'
+          - '25710000'
           - 256f0000
-          - "25730000"
-          - "256e0000"
+          - '25730000'
+          - '256e0000'
           - 256a0000
-          - "25620000"
+          - '25620000'
           - 25d70000
-          - "25680000"
-          - "25650000"
-          - "25640000"
-          - "25630000"
-          - "25660000"
-          - "25670000"
-          - "25610000"
+          - '25680000'
+          - '25650000'
+          - '25640000'
+          - '25630000'
+          - '25660000'
+          - '25670000'
+          - '25610000'
           - 25c60000
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
@@ -440,7 +440,7 @@ assets:
     sha256: 2f7eb1e40067ce23056bf91ce3296235ea5242b826c8ced9cbdb1b870e944e45
     size: 1279664
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-008-kunjungjon:
     assetId: simtropolis/maxis-plugin-008-kunjungjon
     authors:
@@ -477,7 +477,7 @@ assets:
         props:
           - aa836b49
           - 1e9a0000
-          - "1e980000"
+          - '1e980000'
           - 2ab60000
           - 1e9b0000
           - 2b970000
@@ -509,7 +509,7 @@ assets:
       - 262a0000
       - 262b0000
       - 262c0000
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-009-namdaemun:
     assetId: simtropolis/maxis-plugin-009-namdaemun
     authors:
@@ -553,7 +553,7 @@ assets:
     sha256: 4fee240b69e68935a10c42cff8ca16a55fcdfc47aa2fb6ca695e5a97e448cb7a
     size: 894884
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-00A-63-building:
     assetId: simtropolis/maxis-plugin-00A-63-building
     authors:
@@ -591,7 +591,7 @@ assets:
           - a0000077
         size: 4x5
         textures:
-          - "26060000"
+          - '26060000'
           - 258f0000
           - 252b0000
     meta:
@@ -603,7 +603,7 @@ assets:
     sha256: 9e266e047bbef4a85418386f8298f03d842976d6cba6e8709374e064d97a66b9
     size: 4228912
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-00C-brandenburg-gate:
     assetId: simtropolis/maxis-plugin-00C-brandenburg-gate
     authors:
@@ -640,17 +640,17 @@ assets:
         name: LM5x7_BrandenburgGate
         props:
           - aa836b49
-          - "1e110000"
+          - '1e110000'
           - 2a590000
           - a000004e
           - 1edd0000
           - 1edf0000
           - 2a7ccda1
           - 1dff0000
-          - "29840000"
+          - '29840000'
         size: 5x7
         textures:
-          - "26060000"
+          - '26060000'
           - 25f40000
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
@@ -661,8 +661,8 @@ assets:
     sha256: 7935ab006d37e748185aaafdcbcae83eb50aead1f044ae9810b7718f823c5812
     size: 707610
     textures:
-      - "262e0000"
-    version: "1"
+      - '262e0000'
+    version: '1'
   simtropolis/maxis-plugin-00D-parthenon:
     assetId: simtropolis/maxis-plugin-00D-parthenon
     authors:
@@ -762,7 +762,7 @@ assets:
     sha256: e93eeccb23fe7327644e093e5aac353c0d104a4c3d35257beb23e74d15e0b638
     size: 983954
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-00E-schloss-schoenbrun:
     assetId: simtropolis/maxis-plugin-00E-schloss-schoenbrun
     authors:
@@ -813,15 +813,15 @@ assets:
           - a000004b
         size: 11x6
         textures:
-          - "25800000"
+          - '25800000'
           - 257c0000
           - 258c0000
-          - "26210000"
+          - '26210000'
           - 258f0000
           - 25f60000
           - 25f40000
           - 25ea0000
-          - "26060000"
+          - '26060000'
           - 257a0000
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
@@ -836,7 +836,7 @@ assets:
     sha256: eb60d181007bd4873912c13321a0aa9dc868f5893f0c4dd4d045c25481f5ed37
     size: 2161191
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-00F-temple-expiatiori:
     assetId: simtropolis/maxis-plugin-00F-temple-expiatiori
     authors:
@@ -871,7 +871,7 @@ assets:
         name: LM12x12_sagradafamilia
         size: 5x5
         textures:
-          - "258e0000"
+          - '258e0000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -881,7 +881,7 @@ assets:
     sha256: 1665a66c5b8964dafeb940a994bd0b4e8a1f48b10322dff175ad1436cf159da3
     size: 1829272
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-010-grand-central-station:
     assetId: simtropolis/maxis-plugin-010-grand-central-station
     authors:
@@ -927,7 +927,7 @@ assets:
     sha256: d325bbbb9b40e06e6abdda6e10ab017f1b2a3be30b41c35eb7dadb237e051cbf
     size: 3762157
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-012-capitol-records:
     assetId: simtropolis/maxis-plugin-012-capitol-records
     authors:
@@ -969,11 +969,11 @@ assets:
           - a000007f
         size: 5x5
         textures:
-          - "25920000"
+          - '25920000'
           - 258b0000
-          - "258e0000"
-          - "25950000"
-          - "25960000"
+          - '258e0000'
+          - '25950000'
+          - '25960000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -983,7 +983,7 @@ assets:
     sha256: e10de451f9e003bc96ab0546f75ca8fb19511931deb720c0230dc60020081f02
     size: 1278139
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-016-stonehenge:
     assetId: simtropolis/maxis-plugin-016-stonehenge
     authors:
@@ -1024,7 +1024,7 @@ assets:
         size: 6x6
         textures:
           - 25f40000
-          - "25e90000"
+          - '25e90000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -1048,7 +1048,7 @@ assets:
     sha256: ba08e290ea9e0e0f89e9f863a7fb0b1e30aca963cc8ead9397960455d8319da6
     size: 291703
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-017-san-francisco-city-hall:
     assetId: simtropolis/maxis-plugin-017-san-francisco-city-hall
     authors:
@@ -1094,7 +1094,7 @@ assets:
     sha256: 507f9b4ec81d36ec66a6568e6a81a94ad6e4bb2dcdebffdd39f8c592882a2dcc
     size: 5485429
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-030-taipei-art-museum:
     assetId: simtropolis/maxis-plugin-030-taipei-art-museum
     authors:
@@ -1105,7 +1105,7 @@ assets:
         filename: Plugin_030_TaipeiArtMuseum.dat
         flamability: 27
         garbage: 20
-        id: "04900000"
+        id: '04900000'
         maintenance: 180
         model: 5ad0e817-badb57f1-04900000
         pollution: 5
@@ -1124,7 +1124,7 @@ assets:
       - Plugin_030_TaipeiArtMuseum.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      - building: "04900000"
+      - building: '04900000'
         category: landmarks
         filename: Plugin_030_TaipeiArtMuseum.dat
         id: 4c9fcb9f
@@ -1141,7 +1141,7 @@ assets:
     sha256: 076a5f80de0a06d89fcc0d53ceabb3adf18e2e303c16859e170f5595f9e39afc
     size: 2215915
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-031-adler-planetarium:
     assetId: simtropolis/maxis-plugin-031-adler-planetarium
     authors:
@@ -1152,7 +1152,7 @@ assets:
         filename: Plugin_031_AdlerPlanetarium.dat
         flamability: 18
         garbage: 6
-        id: "04890000"
+        id: '04890000'
         maintenance: 180
         model: 5ad0e817-badb57f1-04890000
         pollution: 1
@@ -1171,13 +1171,13 @@ assets:
       - Plugin_031_AdlerPlanetarium.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      - building: "04890000"
+      - building: '04890000'
         filename: Plugin_031_AdlerPlanetarium.dat
         id: 8c9fb724
         name: LM6x6_adlerp
         size: 6x6
         textures:
-          - "26060000"
+          - '26060000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -1187,7 +1187,7 @@ assets:
     sha256: f69926ee3a2e10d60b2755976db65cef532f766668bcdde6f17cff8bea926806
     size: 1960912
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-032-mayflower-port:
     assetId: simtropolis/maxis-plugin-032-mayflower-port
     authors:
@@ -1198,7 +1198,7 @@ assets:
         filename: Plugin_032_MayflowerPort.dat
         flamability: 21
         garbage: 9
-        id: "04880000"
+        id: '04880000'
         maintenance: 130
         model: 5ad0e817-badb57f1-04880000
         pollution: 2
@@ -1217,7 +1217,7 @@ assets:
       - Plugin_032_MayflowerPort.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      - building: "04880000"
+      - building: '04880000'
         filename: Plugin_032_MayflowerPort.dat
         id: acae3f0c
         name: Lm4x3_Mayflower
@@ -1237,7 +1237,7 @@ assets:
     sha256: 943f645e18c6087559d50b6d9ac0417aabf55cb74e1614fc59edff4e7292473e
     size: 1610057
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-033-rockefeller-center:
     assetId: simtropolis/maxis-plugin-033-rockefeller-center
     authors:
@@ -1248,7 +1248,7 @@ assets:
         filename: Plugin_033_RockefellerCenter.dat
         flamability: 39
         garbage: 3
-        id: "04870000"
+        id: '04870000'
         maintenance: 180
         model: 5ad0e817-badb57f1-04870000
         pollution: 1
@@ -1267,7 +1267,7 @@ assets:
       - Plugin_033_RockefellerCenter.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      - building: "04870000"
+      - building: '04870000'
         category: landmarks
         filename: Plugin_033_RockefellerCenter.dat
         id: 8ccf053d
@@ -1277,14 +1277,14 @@ assets:
           - 2d3c0000
           - 2d3a0000
           - a0000055
-          - "1e040000"
-          - "1e050000"
+          - '1e040000'
+          - '1e050000'
           - 1e0d0000
           - 2d3d0000
         size: 4x13
         textures:
-          - "26370000"
-          - "26350000"
+          - '26370000'
+          - '26350000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -1301,7 +1301,7 @@ assets:
     sha256: ac9bedb0a8117a2db65772790822a5e9136ac59278f0e1ad10f5d30de8e2a76c
     size: 6359228
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-034-sobchak-lanes:
     assetId: simtropolis/maxis-plugin-034-sobchak-lanes
     authors:
@@ -1312,7 +1312,7 @@ assets:
         filename: Plugin_034_SobchakLanes.dat
         flamability: 39
         garbage: 3
-        id: "04860000"
+        id: '04860000'
         maintenance: 180
         model: 5ad0e817-badb57f1-04860000
         pollution: 1
@@ -1331,19 +1331,19 @@ assets:
       - Plugin_034_SobchakLanes.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      - building: "04860000"
+      - building: '04860000'
         category: landmarks
         filename: Plugin_034_SobchakLanes.dat
         id: ae52bebe
         name: Lm3x3_SobchakLanes
         props:
-          - "1e900000"
+          - '1e900000'
           - 28ac0000
         size: 3x3
         textures:
-          - "25920000"
-          - "25960000"
-          - "26350000"
+          - '25920000'
+          - '25960000'
+          - '26350000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -1353,7 +1353,7 @@ assets:
     sha256: 7165c125c7a5a1b6b6adad57e5353d21250f48d68413bb3cfedad04fc4152546
     size: 2550910
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-035-shorty-burger:
     assetId: simtropolis/maxis-plugin-035-shorty-burger
     authors:
@@ -1364,7 +1364,7 @@ assets:
         filename: Plugin_035_ShortyBurger.dat
         flamability: 39
         garbage: 3
-        id: "04850000"
+        id: '04850000'
         maintenance: 180
         model: 5ad0e817-badb57f1-04850000
         pollution: 1
@@ -1383,13 +1383,13 @@ assets:
       - Plugin_035_ShortyBurger.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      - building: "04850000"
+      - building: '04850000'
         filename: Plugin_035_ShortyBurger.dat
         id: 2e891faa
         name: LM3x3_ShortyBurger_2e891faa
         props:
-          - "1e270000"
-          - "1e680000"
+          - '1e270000'
+          - '1e680000'
           - 1f000000
           - 1dfe0000
         size: 2x3
@@ -1405,7 +1405,7 @@ assets:
     sha256: d5e38d0dbfefd9c96f0d29e32305201a4219a5889441d63f14d28e3141d3ba33
     size: 2275101
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-036-luckys-hang-ten:
     assetId: simtropolis/maxis-plugin-036-luckys-hang-ten
     authors:
@@ -1416,7 +1416,7 @@ assets:
         filename: Plugin_036_LuckysHangTen.dat
         flamability: 39
         garbage: 3
-        id: "04840000"
+        id: '04840000'
         maintenance: 180
         model: 5ad0e817-badb57f1-04840000
         pollution: 1
@@ -1435,19 +1435,19 @@ assets:
       - Plugin_036_LuckysHangTen.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      - building: "04840000"
+      - building: '04840000'
         filename: Plugin_036_LuckysHangTen.dat
         id: cea1e6b4
         name: LM3x2_LuckysHangTen
         props:
           - 28d70000
-          - "1e540000"
+          - '1e540000'
           - 29b20000
           - 2a180000
         size: 3x2
         textures:
-          - "26110000"
-          - "26140000"
+          - '26110000'
+          - '26140000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -1457,7 +1457,7 @@ assets:
     sha256: 68be522cda645047ea275e0577d19d29203277319f923885a5a534f86fd2ebd8
     size: 1819329
     textures: []
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-grutze-industries:
     assetId: simtropolis/maxis-plugin-grutze-industries
     authors:
@@ -1527,10 +1527,10 @@ assets:
         size: 4x5
         textures:
           - 258d0000
-          - "25960000"
-          - "25930000"
-          - "25920000"
-          - "25950000"
+          - '25960000'
+          - '25930000'
+          - '25920000'
+          - '25950000'
           - 256c0000
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
@@ -1542,7 +1542,7 @@ assets:
     size: 768274
     textures: []
     uncompressed: 1003759
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-grutzehaus:
     assetId: simtropolis/maxis-plugin-grutzehaus
     authors:
@@ -1611,11 +1611,11 @@ assets:
           - 1d8f0000
           - 1cce0000
           - 1f0b0000
-          - "29320000"
-          - "29300000"
+          - '29320000'
+          - '29300000'
         size: 2x3
         textures:
-          - "1e810000"
+          - '1e810000'
           - 1e7e0000
           - 25f80000
           - 25b00000
@@ -1629,7 +1629,7 @@ assets:
     size: 173755
     textures: []
     uncompressed: 244025
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-longfellow-castle:
     assetId: simtropolis/maxis-plugin-longfellow-castle
     authors:
@@ -1637,7 +1637,7 @@ assets:
     buildings:
       - bulldoze: 100
         cost: 110000
-        description: "Location: Long ago and far away"
+        description: 'Location: Long ago and far away'
         filename: Longfellow Castle/CastleSet.dat
         flamability: 10
         garbage: 15
@@ -1655,7 +1655,7 @@ assets:
         waterPollutionRadius: 2
       - bulldoze: 100
         cost: 110000
-        description: "Location: Long ago and far away"
+        description: 'Location: Long ago and far away'
         filename: Longfellow Castle/CastleSet.dat
         flamability: 10
         garbage: 15
@@ -1673,7 +1673,7 @@ assets:
         waterPollutionRadius: 2
       - bulldoze: 100
         cost: 110000
-        description: "Location: Long ago and far away"
+        description: 'Location: Long ago and far away'
         filename: Longfellow Castle/CastleSet.dat
         flamability: 10
         garbage: 15
@@ -1691,7 +1691,7 @@ assets:
         waterPollutionRadius: 2
       - bulldoze: 100
         cost: 110000
-        description: "Location: Long ago and far away"
+        description: 'Location: Long ago and far away'
         filename: Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
         flamability: 10
         garbage: 15
@@ -1763,11 +1763,11 @@ assets:
           - 29bd0000
           - 29be0000
           - 2d510000
-          - "16550000"
+          - '16550000'
           - 1cf70000
-          - "29760000"
-          - "29770000"
-          - "29740000"
+          - '29760000'
+          - '29770000'
+          - '29740000'
           - 2a110000
           - 1de50000
           - 2d460000
@@ -1779,7 +1779,7 @@ assets:
           - 2d5f0000
           - 2d600000
           - 2d610000
-          - "25e00000"
+          - '25e00000'
           - 2d5d0000
           - 2d5a0000
           - 25d80000
@@ -1787,7 +1787,7 @@ assets:
           - 258b0000
           - 257a0000
           - 257c0000
-          - "25800000"
+          - '25800000'
       - building: 4d50ba18
         category: landmarks
         filename: Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
@@ -1835,11 +1835,11 @@ assets:
           - 29bd0000
           - 29be0000
           - 2d510000
-          - "16550000"
+          - '16550000'
           - 1cf70000
-          - "29760000"
-          - "29770000"
-          - "29740000"
+          - '29760000'
+          - '29770000'
+          - '29740000'
           - 2a110000
           - 1de50000
           - 2d460000
@@ -1851,7 +1851,7 @@ assets:
           - 2d5f0000
           - 2d600000
           - 2d610000
-          - "25e00000"
+          - '25e00000'
           - 2d5d0000
           - 2d5a0000
           - 25d80000
@@ -1859,7 +1859,7 @@ assets:
           - 258b0000
           - 257a0000
           - 257c0000
-          - "25800000"
+          - '25800000'
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
       version: 1
@@ -1960,7 +1960,7 @@ assets:
       - 2d610000
       - 2d5a0000
     uncompressed: 4553219
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-stone-house:
     assetId: simtropolis/maxis-plugin-stone-house
     authors:
@@ -2022,13 +2022,13 @@ assets:
         props:
           - a0000050
           - a000004d
-          - "00580000"
+          - '00580000'
           - 2ba10000
-          - "29010000"
+          - '29010000'
         size: 3x3
         textures:
-          - "262e0000"
-          - "1e810000"
+          - '262e0000'
+          - '1e810000'
           - 1e7e0000
     meta:
       timestamp: 2024-11-18T10:30:47.575Z
@@ -2040,7 +2040,7 @@ assets:
     size: 672804
     textures: []
     uncompressed: 775096
-    version: "1"
+    version: '1'
   simtropolis/maxis-plugin-temple-of-grutz:
     assetId: simtropolis/maxis-plugin-temple-of-grutz
     authors:
@@ -2097,7 +2097,7 @@ assets:
         name: LM6x6_TempleOfGrutz
         props:
           - 1ece0000
-          - "28340000"
+          - '28340000'
         size: 6x6
         textures:
           - 25ba0000
@@ -2112,7 +2112,7 @@ assets:
     size: 399011
     textures: []
     uncompressed: 559621
-    version: "1"
+    version: '1'
 
 meta:
   timestamp: 2024-11-19T07:10:21.912Z

@@ -643,16 +643,21 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     // Resolve dependencies recursively
-    const dependencies = new Set<AssetID>()
+    const dependencies = new Set<AssetID | PackageID>()
 
     if (entry.dependencies) {
       for (const dependency of entry.dependencies) {
-        const dependencyEntryId = getEntryID(dependency)
-        const resolvedDependency = await resolveEntry(dependencyEntryId)
-        if (resolvedDependency) {
-          dependencies.add(resolvedDependency.assetId)
+        const sourceId = getSourceId(dependency as EntryID)
+        if (dbPackagesConfigs[sourceId]?.[dependency as PackageID]) {
+          dependencies.add(dependency as PackageID)
         } else {
-          dependencies.add(getAssetID(dependencyEntryId, dependency))
+          const dependencyEntryId = getEntryID(dependency)
+          const resolvedDependency = await resolveEntry(dependencyEntryId)
+          if (resolvedDependency) {
+            dependencies.add(resolvedDependency.assetId)
+          } else {
+            dependencies.add(getAssetID(dependencyEntryId, dependency))
+          }
         }
       }
     }
@@ -1004,10 +1009,14 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         throw Error(`Expected override to exist for ${variantAssetId}`)
       }
 
-      const dependencies = mapDefined(
-        entry.dependencies ?? [],
-        dependency => getOverride(getEntryID(dependency))?.packageId,
-      )
+      const dependencies = mapDefined(entry.dependencies ?? [], dependency => {
+        const sourceId = getSourceId(dependency as EntryID)
+        if (dbPackagesConfigs[sourceId]?.[dependency as PackageID]) {
+          return dependency as PackageID
+        } else {
+          return getOverride(getEntryID(dependency))?.packageId
+        }
+      })
 
       const authorId = packageId.split("/")[0] as AuthorID
       const authors = [authorId, ...mapDefined(entry.authors, getAuthorId)]

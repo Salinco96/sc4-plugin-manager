@@ -13,6 +13,39 @@ import { getExtension } from "@node/files"
 import { IndexerEntry, IndexerSource } from "../types"
 import { htmlToMd } from "../utils"
 
+// Common dependencies for which URL detection will not be accurate (e.g. BSC Common Dependencies Pack)
+const commonDependencies: {
+  [packageId in string]: RegExp
+} = {
+  "bsc/essentials": /bsc essentials/i,
+  "bsc/textures-vol01": /bsc textures vol ?0?1/i,
+  "bsc/textures-vol02": /bsc textures vol ?0?2/i,
+  "bsc/textures-vol03": /bsc textures vol ?0?3/i,
+  "cycledogg/mega-props-vol01": /mega props (- )?cp vol ?0?1/i,
+  "cycledogg/mega-props-vol02": /mega props (- )?cp vol ?0?2/i,
+  "deadwoods/mega-props-vol01": /mega props (- )?(dae|dedwd) vol ?0?1/i,
+  "deadwoods/mega-props-vol02": /mega props (- )?(dae|dedwd) vol ?0?2/i,
+  "dolphin66/mega-props-vol01": /mega props (- )?d66 vol ?0?1/i,
+  "dolphin66/mega-props-vol02": /mega props (- )?d66 vol ?0?2/i,
+  "dolphin66/mega-props-vol03": /mega props (- )?d66 vol ?0?3/i,
+  "gascooker/mega-props-vol01": /mega props (- )?gascooker vol ?0?1/i,
+  "gascooker/mega-props-vol02": /mega props (- )?gascooker vol ?0?2/i,
+  "girafe/carpack": /gi?ra?fe(-vnaoned)? (car|urban)pack/i,
+  "girafe/hedges": /gi?ra?fe (le )?hedges/i,
+  "jestarr/mega-props-vol01": /mega props (- )?jes vol ?0?1/i,
+  "jestarr/mega-props-vol02": /mega props (- )?jes vol ?0?2/i,
+  "jestarr/mega-props-vol03": /mega props (- )?jes vol ?0?3/i,
+  "jestarr/mega-props-vol04": /mega props (- )?jes vol ?0?4/i,
+  "jestarr/mega-props-vol05": /mega props (- )?jes vol ?0?5/i,
+  "jestarr/mega-props-vol06": /mega props (- )?jes vol ?0?6/i,
+  "jestarr/mega-props-vol07": /mega props (- )?jes vol ?0?7/i,
+  "jestarr/mega-props-vol08": /mega props (- )?jes vol ?0?8/i,
+  "jestarr/mega-props-vol09": /mega props (- )?jes vol ?0?9/i,
+  "simgoober/mega-props-vol01": /mega props (- )?sg vol ?0?1/i,
+  "swi21/mega-props-vol01": /mega props (- )?swi21 vol ?0?1/i,
+  "swi21/mega-props-vol02": /mega props (- )?swi21 vol ?0?2/i,
+}
+
 export function extractDependencies(html: string): string[] {
   const dependencies = new Set<string>()
 
@@ -28,6 +61,12 @@ export function extractDependencies(html: string): string[] {
     /(https:[/][/]www.sc4evermore.com)?[/]index.php[/]downloads[/]download[/][\w-]+[/]([\w-]+)[/]?/g,
   )) {
     dependencies.add(`sc4evermore/${match[2]}`)
+  }
+
+  for (const packageId in commonDependencies) {
+    if (commonDependencies[packageId].test(html)) {
+      dependencies.add(packageId)
+    }
   }
 
   return Array.from(dependencies)
