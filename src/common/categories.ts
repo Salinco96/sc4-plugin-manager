@@ -5,18 +5,22 @@ import { VariantInfo } from "./variants"
 export type CategoryID = ID<CategoryInfo>
 
 export const CategoryID = {
-  AGRICULTURE: "agriculture" as CategoryID,
-  COMMERCIAL: "commercial" as CategoryID,
-  CIVICS: "civics" as CategoryID,
-  DEPENDENCIES: "dependencies" as CategoryID,
-  INDUSTRY: "industry" as CategoryID,
-  LANDMARKS: "landmarks" as CategoryID,
-  MODS: "mods" as CategoryID,
-  PARKS: "parks" as CategoryID,
-  RESIDENTIAL: "residential" as CategoryID,
-  TRANSPORT: "transport" as CategoryID,
-  UTILITIES: "utilities" as CategoryID,
-} as const
+  AGRICULTURE: ID("agriculture"),
+  COMMERCIAL: ID("commercial"),
+  CIVICS: ID("civics"),
+  DEPENDENCIES: ID("dependencies"),
+  INDUSTRY: ID("industry"),
+  LANDMARKS: ID("landmarks"),
+  MODS: ID("mods"),
+  PARKS: ID("parks"),
+  PROPS: ID("props"),
+  RESIDENTIAL: ID("residential"),
+  TEXTURES: ID("textures"),
+  TRANSPORT: ID("transport"),
+  UTILITIES: ID("utilities"),
+} as const satisfies {
+  [category: string]: CategoryID
+}
 
 /** Category info */
 export interface CategoryInfo {

@@ -4,7 +4,7 @@ assets:
     authors:
       - sc4evermore
     category: 19-transportation
-    downloads: 281
+    downloads: 282
     lastModified: 2023-11-21T23:27:18.000Z
     name: Swamper77's Raised Rail Conversions
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/180-swamper77s-raised-rail-conversions
@@ -12,48 +12,907 @@ assets:
     assetId: sc4evermore/204-sc4d-lex-legacy-mikeseith-multi-level-modular-garages
     authors:
       - Mikeseith
+    buildings:
+      - bulldoze: 100
+        cost: 100
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        flamability: 50
+        garbage: 4
+        id: dd0ef80b
+        maintenance: 20
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 3
+        water: 2
+        waterPollution: 3
+        waterPollutionRadius: 1
+      - bulldoze: 100
+        cost: 100
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        flamability: 38
+        garbage: 4
+        id: 3d184784
+        maintenance: 5
+        model: 5ad0e817-3d15a045-00030000
+        pollution: 1
+        pollutionRadius: 1
+        power: 3
+        water: 2
+        waterPollution: 3
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 50
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        flamability: 38
+        garbage: 1
+        id: 3962e3b9
+        maintenance: 5
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 51
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 9960bf4b
+        model: 5ad0e817-badb57f1-0e110000
+      - bulldoze: 10
+        cost: 52
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: b960bedd
+        model: 5ad0e817-badb57f1-0e110000
+      - bulldoze: 10
+        cost: 53
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 7960c078
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        power: 1
+        water: 1
+      - bulldoze: 10
+        cost: 54
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 5960c034
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        power: 1
+        water: 1
+      - bulldoze: 10
+        cost: 55
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 5960c0eb
+        model: 5ad0e817-badb57f1-0e110000
+      - bulldoze: 10
+        cost: 56
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 1960bfda
+        model: 5ad0e817-badb57f1-0e110000
+      - bulldoze: 10
+        cost: 57
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 7960bf97
+        model: 5ad0e817-badb57f1-0e110000
+      - bulldoze: 100
+        cost: 50
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        flamability: 50
+        garbage: 4
+        id: 1cf8e57f
+        landmark: 36
+        landmarkRadius: 14
+        maintenance: 20
+        model: 5ad0e817-3d15a045-00030000
+        pollution: 1
+        pollutionRadius: 1
+        power: 3
+        water: 2
+        waterPollution: 3
+        waterPollutionRadius: 1
+      - bulldoze: 100
+        cost: 51
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        garbage: 1
+        id: dcf36951
+        maintenance: 20
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 52
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        garbage: 1
+        id: fcf36d53
+        maintenance: 20
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 53
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf37444
+        maintenance: 10
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 54
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        garbage: 1
+        id: 5cf36e24
+        maintenance: 20
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 55
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: bcf36894
+        maintenance: 10
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 56
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: bcf36100
+        maintenance: 10
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 57
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        flamability: 50
+        garbage: 1
+        id: 5cf36ce3
+        maintenance: 20
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 64
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dcf36a78
+        maintenance: 20
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 65
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 3cf369e5
+        maintenance: 20
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+      - bulldoze: 100
+        cost: 66
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        garbage: 2
+        id: bcf36f3c
+        maintenance: 25
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 2
+        pollutionRadius: 1
+        power: 2
+        water: 2
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 100
+        cost: 67
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        garbage: 2
+        id: dcf36fc8
+        maintenance: 25
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 2
+        pollutionRadius: 1
+        power: 2
+        water: 2
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 100
+        cost: 68
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        garbage: 2
+        id: 5cf37074
+        maintenance: 25
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 2
+        pollutionRadius: 1
+        power: 2
+        water: 2
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 100
+        cost: 69
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        garbage: 2
+        id: 1cf37210
+        maintenance: 25
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 2
+        pollutionRadius: 1
+        power: 2
+        water: 2
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 100
+        cost: 70
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        garbage: 2
+        id: 3d205411
+        maintenance: 25
+        model: 5ad0e817-badb57f1-0e110000
+        pollution: 2
+        pollutionRadius: 1
+        power: 2
+        water: 2
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 80
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        flamability: 36
+        id: dd16f12b
+        maintenance: 40
+        model: 5ad0e817-5d144bc4-00030000
+        power: 1
+        powerProduction: 1
+        water: 1
     category: 19-transportation
     dependencies:
       - simtropolis/35790-sc4-cleanitol
+      - sc4evermore/18
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>The <strong>SC4D LEX Legacy - Mikeseith Multi-level Modular Garages</strong> contains the popular 2-level and 8-level Modular Parking Garages by MikeSeith, including the Airport Shuttle automatas. The 2-level garages have 8 modular pieces, including entrances (in prop family), several wall pieces and ramp piece. The 8-level garages have 18 modular pieces, including an entrance, two different types of ramps, several wall pieces, overhanging bride pieces over other networks, a\_police kiosk/parking security,\_but stop\_and an\_airport shuttle spawner bus stop. The original lots were created by MikeSeith, however they underwent some necessary revision and updates mostly performed by\_rsc204/mgb204.\_<strong><span style=\"color: #e03e2d;\"><a style=\"color: #e03e2d;\" href=\"https://community.simtropolis.com/forums/topic/761517-mgbs-lil-bits/?tab=comments#comment-1767404\">Most of the changes that he made are detailed in this post</a></span></strong>. A final revision and update was made by Tyberius06 for this legacy compilation.</p>\r\n<p class=\"text_normal\" align=\"justify\"><span style=\"text-decoration: underline;\"><strong><big>The highlights:</big></strong></span></p>\r\n<ul>\r\n<li class=\"text_normal\">Only the\_<strong>Entrance\_lot(s)</strong> and the\_<strong>Airport Shuttle Busstop</strong> have TE (transti enabled) parking garage function.</li>\r\n<li class=\"text_normal\">All the lots (except the former Police Kiosk, now Parking Security which can be found in the Civic - Police menu) have been moved to the Misc Transportation menu from the Park menu.</li>\r\n<li class=\"text_normal\">The former Police Kiosk is now called as\_<strong>Parking Security</strong>\_and after some tweaks it sits somewhere between the Maxis Kiosk and Small Police Station in terms of it's effectiveness, with a larger radius to keep it in line with the intended function around Airports.<br><strong><span style=\"color: #e03e2d;\">!!! VERY IMPORTANT !!!</span></strong> -\_As with the Police Station Fix above, you can NOT use this override, until all prior instances of the original Police Station from this pack are removed from your cities. But given the overall modifications here, that's a good idea more generally too if using this update.</li>\r\n<li class=\"text_normal\">The\_<strong>Bus Stop</strong>, mainly just modded to conform to more modern TE standards.</li>\r\n<li class=\"text_normal\">The\_<strong>Airport Shuttle</strong> now acts as a BusStop with parking function and optionally spawning airport shuttle automatas if the\_airport shuttles.dat\_is installed.<br><span style=\"text-decoration: underline;\">Optionally</span>, both the Bus Stop and the Airport Shuttle lot recevied RTMT replacement versions, which alternately use the Bus Shelter and Bus Sign Props from your RTMT setup, (v3.6 or later compatible), instead of the default prop.</li>\r\n<li class=\"text_normal\">Some pieces, like the entrance and the corner pieces are offering commercial service jobs.</li>\r\n<li class=\"text_normal\"> This legacy compilation meant to replace any previous versions of these parking garages. The formerly available <em>BSC MEGA Props Mikeseith vol02</em> (which exclusively contains models and props only for these sets and which was formerly released as an individual upload on the SC4D LEX file exchange, then released as part of the SC4D LEX Legacy - BSC Common Dependencies V6 and prior) has been included with this compilation (you will find it in the BSC/BSCProps folder) and will be removed with later updates from the BSC Common Dependnecies (from version 7). So <span style=\"color: #e03e2d;\"><strong>LOTters using these models and props need to reference this upload (SC4D LEX Legacy - Mikeseith Multi-level Modular Garages)</strong></span>, instead of the former SC4Devotion LEX link or the BSC Common Dependencies compilation.\_</li>\r\n<li class=\"text_normal\">For more details check out the readme file in the <em>~Documents</em> folder. You will find a cleanitol file and prop catalogue index image of the contents of the included dependency pack.</li>\r\n</ul>\r\n<p><span style=\"text-decoration: underline;\"><strong>Installation:</strong></span></p>\r\n<p class=\"text_normal\"><strong>Installation</strong>: Run the Java installer (.jar extension), which will guide you through the installation process, or open it using 7-zip or Keka for manual install. If doing a manual install, go into the \"installation\" folder, then copy/extract the\_BSC and Mikeseith\_parent folders into your plugins. If you extracted the\_<em>~Documents</em>\_folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r\n<p class=\"text_normal\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins. It might be necessary to bulldoze any existing lots from the previous versions of these sets before you install this new version.<br>Optionally in the\_~Documents\_folder in the main ZIP you can find the\_<em>Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt</em>\_file and by using either the newer\_<strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17's SC4 Cleanitol</a></strong>\_or the older\_<strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\">BSC Cleanitol</a></strong>\_tool you can search and remove old and outdated versions of these files.</p>\r\n<p class=\"text_normal\"><strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r\n<p class=\"text_normal\"><span style=\"text-decoration: underline;\"><strong>Dependencies:</strong></span></p>\r\n<p class=\"text_normal\">To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r\n<ul>\r\n<li>BSC MEGA Props Mikeseith Vol02 v2 -\_<strong><span style=\"color: #e03e2d;\">INCLUDED</span></strong><br>The formerly released version, that was available in the BSC Common Dependencies V6 (and prior), have been updated and have been removed from the BSC Common Dependencies compilation and have been made available exclusively with this SC4D LEX Legacy - Mikeseith Multi-Level Modular Garages.</li>\r\n</ul>\r\n<p><strong><span style=\"text-decoration: underline;\">Credits:</span></strong></p>\r\n<p> These modular parking garages pieces were modelled and originally lotted by Mikeseith. MGB204/RSC204 made significant facelift on the functionality of the lots, see details above. Final update, packing the assembly of the prop pack, that is\_containing these models were originally created for Project ZIP then SC4D Legacy Restoration by Tyberius06. \_</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MikeSeiths 2 garages front.jpg\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg\" alt=\"MikeSeiths 2 garages front\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/mikeseith 8 level garages1.JPG\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mikeseith 8 level garages1.JPG\" alt=\"mikeseith 8 level garages12\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MikeSeith - airport shuttle.jpg\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeith - airport shuttle.jpg\" alt=\"MikeSeith - airport shuttle3\" ></a> </span>\r\n        </div> \r\n</body>"
-    downloads: 814
+    downloads: 815
     filename: SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.zip
     files:
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - Mikeseith vol02_index.jpg
-      - ~Documents/MikeSeith_Readmes/readme_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.html
-      - ~Documents/MikeSeith_Readmes/images/MikeSeiths 2 garages front.jpg
-      - ~Documents/MikeSeith_Readmes/images/MikeSeiths 2 garages back.jpg
-      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages3.jpg
-      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages2.JPG
-      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages1.JPG
-      - ~Documents/MikeSeith_Readmes/images/MikeSeith - airport shuttle.jpg
-      - ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat
-      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/RTMT Replacement_disclaimer.txt
-      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-      - mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-      - mikeseith/Automatas/Airport Shuttles#/Automatas_desclaimer.txt
-      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat
-      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat
-      - mikeseith/Automatas/Airport Shuttles#/Airport Shuttles All-in-One/airport shuttles.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter white/Airport sprinter white.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter thrifty/Airport sprinter thrifty.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter dollar/Airport sprinter dollar.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter budget/Airport sprinter budget.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter black/Airport sprinter black.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Thrifty/Airport shuttle Thrifty.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Sheraton/Airport shuttle Sheraton.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Park N Go/Airport shuttle Park N Go.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Master park/Airport shuttle Master park.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle laquinta/Airport shuttle laquinta.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Enterprise/Airport shuttle Enterprise.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Dollar/Airport shuttle Dollar.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Enterprise/Airport shuttle Enterprise.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle laquinta/Airport shuttle laquinta.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Master park/Airport shuttle Master park.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Park N Go/Airport shuttle Park N Go.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Sheraton/Airport shuttle Sheraton.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Thrifty/Airport shuttle Thrifty.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter black/Airport sprinter black.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter budget/Airport sprinter budget.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter dollar/Airport sprinter dollar.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter thrifty/Airport sprinter thrifty.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter white/Airport sprinter white.dat
+      - mikeseith/Automatas/Airport Shuttles#/Airport Shuttles All-in-One/airport shuttles.dat
+      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat
+      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat
+      - mikeseith/Automatas/Airport Shuttles#/Automatas_desclaimer.txt
+      - mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/RTMT Replacement_disclaimer.txt
+      - ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat
+      - ~Documents/MikeSeith_Readmes/images/MikeSeith - airport shuttle.jpg
+      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages1.JPG
+      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages2.JPG
+      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages3.jpg
+      - ~Documents/MikeSeith_Readmes/images/MikeSeiths 2 garages back.jpg
+      - ~Documents/MikeSeith_Readmes/images/MikeSeiths 2 garages front.jpg
+      - ~Documents/MikeSeith_Readmes/readme_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - Mikeseith vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mikeseith 8 level garages1.JPG
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeith - airport shuttle.jpg
     lastModified: 2023-12-06T10:26:15.000Z
+    lots:
+      - building: dd0ef80b
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dd0ef80b
+        name: 8 lvl airport shuttle spawner
+        props:
+          - bd0ef682
+          - 1961ee50
+          - 1eda0000
+          - 2a170000
+          - 29dd0000
+          - 7df5cdae
+          - a000005c
+        size: 1x1
+        textures:
+          - 251c0000
+          - 25ae0000
+      - building: 3d184784
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 3d184784
+        name: 8 lvl garage bus stop
+        props:
+          - a000004a
+          - a000004b
+          - a0000078
+          - 29dd0000
+          - 29dc0000
+          - 1d2c0000
+          - 1961ee50
+        size: 1x1
+        textures:
+          - 251c0000
+          - 25ae0000
+      - building: 3962e3b9
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 3962e3b9
+        name: 2 lvl garage - entrance
+        props:
+          - 1961ee43
+          - b96308e8
+        size: 1x1
+        textures:
+          - 258d0000
+      - building: 9960bf4b
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 9960bf4b
+        name: 2 lvl garage - wall 1 row
+        props:
+          - d9506e18
+          - 1961ee41
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: b960bedd
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: b960bedd
+        name: 2 lvl garage - wall 2 rows
+        props:
+          - 1961ee40
+          - d9506e20
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 7960c078
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 7960c078
+        name: 2 lvl garage - corner
+        props:
+          - 1961ee44
+          - b9506dde
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 5960c034
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 5960c034
+        name: 2 lvl garage - corner with stairs
+        props:
+          - 1961ee45
+          - 99506de6
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 5960c0eb
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 5960c0eb
+        name: 2 lvl garage - ramp
+        props:
+          - 1961ee42
+          - 1958c786
+        size: 2x1
+        textures:
+          - 251c0000
+          - 258d0000
+      - building: 1960bfda
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 1960bfda
+        name: 2 lvl garage - inside 1 row
+        props:
+          - 1961ee47
+          - b9506e03
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 7960bf97
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 7960bf97
+        name: 2 lvl garage - inside 2 rows
+        props:
+          - 19506dfa
+          - 1961ee46
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 1cf8e57f
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 1cf8e57f
+        name: 8 lvl new entrance
+        props:
+          - 5d19d1de
+        size: 1x1
+        textures:
+          - 258c0000
+      - building: dcf36951
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dcf36951
+        name: 8 lvl new wall
+        props:
+          - a000004a
+          - a000004d
+          - a0000050
+          - 1961ee50
+          - b988598d
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: fcf36d53
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: fcf36d53
+        name: 8 lvl new inside coner
+        props:
+          - "28330000"
+          - 1961ee57
+          - f99a5099
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 5cf37444
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf37444
+        name: 8 lvl new outside corner stairs
+        props:
+          - "28330000"
+          - a0000051
+          - 9998e34b
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: 5cf36e24
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf36e24
+        name: 8 lvl new straight ramp
+        props:
+          - 1961ee56
+          - 1961ee50
+        size: 2x2
+        textures:
+          - 251c0000
+      - building: bcf36894
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: bcf36894
+        name: 8 lvl new round ramp up
+        props:
+          - a000004a
+          - a000004d
+          - a0000050
+          - d97843a1
+        size: 1x2
+        textures:
+          - "258e0000"
+          - 251c0000
+      - building: bcf36100
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: bcf36100
+        name: 8 lvl new round ramp down
+        props:
+          - f97843b0
+        size: 1x2
+        textures:
+          - 251c0000
+      - building: 5cf36ce3
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf36ce3
+        name: 8 lvl new elevator
+        props:
+          - 1961ee53
+          - 1ed60000
+          - "28330000"
+          - "79885953"
+        size: 1x1
+        textures:
+          - 251c0000
+          - 25ae0000
+      - building: dcf36a78
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dcf36a78
+        name: 8 lvl new center edge
+        props:
+          - 1961ee52
+          - 9988597f
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 3cf369e5
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 3cf369e5
+        name: 8 lvl new center rows
+        props:
+          - 1961ee51
+          - d9885967
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: bcf36f3c
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: bcf36f3c
+        name: 8 lvl new bridge edge A
+        props:
+          - "28330000"
+          - 1961ee58
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: dcf36fc8
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dcf36fc8
+        name: 8 lvl new bridge edge B
+        props:
+          - "28330000"
+          - a0000050
+          - 1961ee59
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: 5cf37074
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf37074
+        name: 8 lvl new bridge center
+        props:
+          - 1961ee5c
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 1cf37210
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 1cf37210
+        name: 8 lvl new bridge corner A
+        props:
+          - "28330000"
+          - f9a1407f
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: 3d205411
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 3d205411
+        name: 8 lvl new bridge corner BB
+        props:
+          - "28330000"
+          - bd1defae
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: dd16f12b
+        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dd16f12b
+        name: 8 lvl garage police
+        props:
+          - dd16efe2
+          - a000004a
+          - a0000050
+        size: 1x1
+        textures:
+          - 251c0000
+    meta:
+      timestamp: 2024-11-18T14:36:08.234Z
+      version: 1
+    models:
+      - 5ad0e817-badb57f1-19610000
+      - 5ad0e817-badb57f1--15160000
+      - 5ad0e817-3d15a045-00030000
+      - 5ad0e817-1cf0aaeb-00030000
+      - 5ad0e817-199e3b14-00030000
+      - 5ad0e817-b99f8042-00030000
+      - 5ad0e817-399f84fc-00030000
+      - 5ad0e817-799f8876-00030000
+      - 5ad0e817-79a136ef-00030000
+      - 5ad0e817-3d0238ad-00030000
+      - 5ad0e817-9d023cc8-00030000
+      - 5ad0e817-1cfb89e7-00030000
+      - 5ad0e817-fd1b3344-00030000
+      - 5ad0e817-f99d42c0-00030000
+      - 5ad0e817-199e749a-00030000
+      - 5ad0e817-999f71a3-00030000
+      - 5ad0e817-d99ebc13-00030000
+      - 5ad0e817-b99f8eb0-00030000
+      - 5ad0e817-f99fe1cc-00030000
+      - 5ad0e817-d983eea7-00030000
+      - 5ad0e817-3962215d-00030000
+      - 5ad0e817-f983f16a-00030000
+      - 5ad0e817-d983f4b4-00030000
+      - 5ad0e817-d9840cd1-00030000
+      - 5ad0e817-3962258a-00030000
+      - 5ad0e817-9962287c-00030000
+      - 5ad0e817-b9745067-00030000
+      - 5ad0e817-39819e29-00030000
+      - 5ad0e817-9981a0e1-00030000
+      - 5ad0e817-3983f9f5-00030000
+      - 5ad0e817-f983fd8f-00030000
+      - 5ad0e817-f9840123-00030000
+      - 5ad0e817-f9840443-00030000
+      - 5ad0e817-d98406fc-00030000
+      - 5ad0e817-19840a28-00030000
+      - 5ad0e817-9984271a-00030000
+      - 5ad0e817-7cf8dee2-00030000
+      - 5ad0e817-79817f98-00030000
+      - 5ad0e817-5cf8e517-00030000
+      - 5ad0e817-7cf8e860-00030000
+      - 5ad0e817-7cf8eba8-00030000
+      - 5ad0e817-7d219aa5-00030000
+      - 5ad0e817-f9842160-00030000
+      - 5ad0e817-59842422-00030000
+      - 5ad0e817-39844fdd-00030000
+      - 5ad0e817-9cf8f5a4-00030000
+      - 5ad0e817-3cf8f896-00030000
+      - 5ad0e817-7cf9b03f-00030000
+      - 5ad0e817-fcf9b6b4-00030000
+      - 5ad0e817-bcf9b957-00030000
+      - 5ad0e817-997a9016-00030000
+      - 5ad0e817-fcf9bbf9-00030000
+      - 5ad0e817-9cf9bef2-00030000
+      - 5ad0e817-bcf9d13b-00030000
+      - 5ad0e817-bcf9d37b-00030000
+      - 5ad0e817-dd171827-00030000
+      - 5ad0e817-b9963508-00030000
+      - 5ad0e817-59963b81-00030000
+      - 5ad0e817-19965279-00030000
+      - 5ad0e817-39965a84-00030000
+      - 5ad0e817-bd037751-00030000
+      - 5ad0e817-59943183-00030000
+      - 5ad0e817-1961cafe-00030000
+      - 5ad0e817-b961cf07-00030000
+      - 5ad0e817-19953232-00030000
+      - 5ad0e817-7995779f-00030000
+      - 5ad0e817-5d021efb-00030000
+      - 5ad0e817-f961b21f-00030000
+      - 5ad0e817-7961b88a-00030000
+      - 5ad0e817-9961bea9-00030000
+      - 5ad0e817-7969b087-00030000
+      - 5ad0e817-b969b835-00030000
+      - 5ad0e817-7961e506-00030000
+      - 5ad0e817-79620151-00030000
+      - 5ad0e817-797a7bc5-00030000
+      - 5ad0e817-1969bdef-00030000
+      - 5ad0e817-1969d3a3-00030000
+      - 5ad0e817-3969dabb-00030000
+      - 5ad0e817-3cef3fc4-00030000
+      - 5ad0e817-fcf9cd59-00030000
+      - 5ad0e817-7cf9d868-00030000
+      - 5ad0e817-fcf9ea1b-00030000
+      - 5ad0e817-bcf9fc90-00030000
+      - 5ad0e817-397a83b0-00030000
+      - 5ad0e817-5cfa03c9-00030000
+      - 5ad0e817-3cfa35ba-00030000
+      - 5ad0e817-3cfb8347-00030000
+      - 5ad0e817-bd144455-00030000
+      - 5ad0e817-5d144bc4-00030000
+      - 5ad0e817-dd0c533c-00030000
+      - 5ad0e817-394b65bd-00030000
+      - 5ad0e817-595b569f-00030000
+      - 5ad0e817-195ef290-00030000
+      - 5ad0e817-d94ba841-00030000
+      - 5ad0e817-395dec3e-00030000
+      - 5ad0e817-594b5ff3-00030000
+      - 5ad0e817-994ca681-00030000
+      - 5ad0e817-394bab29-00030000
+      - 5ad0e817-194b83f6-00030000
+      - 5ad0e817-d94ca2e5-00030000
+      - 5ad0e817-395c2c59-00030000
+      - 5ad0e817-b95eefb6-00030000
+      - 5ad0e817-d95b9784-00030000
+      - 5ad0e817-794c92ff-00030000
+      - 5ad0e817-b94c93ff-00030000
+      - 5ad0e817-b94c9513-00030000
+      - 5ad0e817-b95f05c5-00030000
+      - 5ad0e817-195f06df-00030000
+      - 5ad0e817-b95f1a8f-00030000
+      - 5ad0e817-595f1cee-00030000
+      - 5ad0e817-195f1ecf-00030000
+      - 5ad0e817-f94bb227-00030000
+      - 5ad0e817-595e264b-00030000
+      - 5ad0e817-f95e2789-00030000
+      - 5ad0e817-f95efe7d-00030000
+      - 5ad0e817-f94bb111-00030000
+      - 5ad0e817-d95dd3cb-00030000
+      - 5ad0e817-f95ddf09-00030000
+      - 5ad0e817-395dba0b-00030000
+      - 5ad0e817-995dc433-00030000
+      - 5ad0e817-b954d050-00030000
+      - 5ad0e817-f94b1b7c-00030000
+      - 5ad0e817-d94b44fa-00030000
+      - 5ad0e817-194b4954-00030000
+      - 5ad0e817-f958d7e9-00030000
+      - 5ad0e817-9958dc04-00030000
+      - 5ad0e817-b958deed-00030000
+      - 5ad0e817-b958e2a7-00030000
+      - 5ad0e817-b95b43f2-00030000
+      - 5ad0e817-394bb98d-00030000
+      - 5ad0e817-795c39d0-00030000
+      - 5ad0e817-d94a13b7-00030000
+      - 5ad0e817-394a4462-00030000
+      - 5ad0e817-b9573c22-00030000
+      - 5ad0e817-b958d314-00030000
+      - 5ad0e817-19578234-00030000
+      - 5ad0e817-b957581d-00030000
+      - 5ad0e817-f9575448-00030000
+      - 5ad0e817-394bbb86-00030000
+      - 5ad0e817-394a0d42-00030000
     name: SC4D LEX LEGACY - Mikeseith Multi-level Modular Garages
+    props:
+      - 6534284a-9b9d22a8-7df5cdae
+      - 6534284a-36ab2c8e-b9a2393a
+      - 6534284a-36ab2c8e-79a3f2be
+      - 6534284a-36ab2c8e-b9a3f2cd
+      - 6534284a-36ab2c8e-f9a3f2dd
+      - 6534284a-36ab2c8e-19a53c64
+      - 6534284a-36ab2c8e-dcff91e3
+      - 6534284a-36ab2c8e-bd1defae
+      - 6534284a-36ab2c8e-f9a1407f
+      - 6534284a-36ab2c8e-19a2a904
+      - 6534284a-36ab2c8e-d9a3f2a5
+      - 6534284a-36ab2c8e-d9a2be1f
+      - 6534284a-36ab2c8e-39a3f282
+      - 6534284a-36ab2c8e-59a3f293
+      - 6534284a-36ab2c8e-9987ec4c
+      - 6534284a-36ab2c8e-f97ae0d4
+      - 6534284a-36ab2c8e-f987ec3c
+      - 6534284a-36ab2c8e-d987ec29
+      - 6534284a-36ab2c8e-79885240
+      - 6534284a-36ab2c8e-f97ae114
+      - 6534284a-36ab2c8e-197ae106
+      - 6534284a-36ab2c8e-597ae0fb
+      - 6534284a-36ab2c8e-f98850c4
+      - 6534284a-36ab2c8e-7988505a
+      - 6534284a-36ab2c8e-7988506a
+      - 6534284a-36ab2c8e-19885079
+      - 6534284a-36ab2c8e-39885085
+      - 6534284a-36ab2c8e-d9885091
+      - 6534284a-36ab2c8e-f98850a6
+      - 6534284a-36ab2c8e-798850f1
+      - 6534284a-36ab2c8e-b98850fc
+      - 6534284a-36ab2c8e-bcff8cfe
+      - 6534284a-36ab2c8e-9988597f
+      - 6534284a-36ab2c8e-1cff8d0e
+      - 6534284a-36ab2c8e-fcff8d1b
+      - 6534284a-36ab2c8e-bcff8d28
+      - 6534284a-36ab2c8e-1d2983d7
+      - 6534284a-36ab2c8e-99885173
+      - 6534284a-36ab2c8e-19885186
+      - 6534284a-36ab2c8e-39885191
+      - 6534284a-36ab2c8e-9cff8c2e
+      - 6534284a-36ab2c8e-1cff8c4f
+      - 6534284a-36ab2c8e-1cff8c5e
+      - 6534284a-36ab2c8e-3cff8c6d
+      - 6534284a-36ab2c8e-3cff8c7a
+      - 6534284a-36ab2c8e-d9885967
+      - 6534284a-36ab2c8e-bcff8cae
+      - 6534284a-36ab2c8e-fcff8cc1
+      - 6534284a-36ab2c8e-dcff8cd4
+      - 6534284a-36ab2c8e-fcff8ce0
+      - 6534284a-36ab2c8e-5d19d1de
+      - 6534284a-36ab2c8e-799a4b5e
+      - 6534284a-36ab2c8e-399a4b51
+      - 6534284a-36ab2c8e-f99a4b3f
+      - 6534284a-36ab2c8e-f99a5099
+      - 6534284a-36ab2c8e-9998e34b
+      - 6534284a-36ab2c8e-f97843b0
+      - 6534284a-36ab2c8e-d97843a1
+      - 6534284a-36ab2c8e-399971ed
+      - 6534284a-36ab2c8e-39997156
+      - 6534284a-36ab2c8e-7d04c784
+      - 6534284a-36ab2c8e-7978435d
+      - 6534284a-36ab2c8e-1978434e
+      - 6534284a-36ab2c8e-d9784334
+      - 6534284a-36ab2c8e-3978431b
+      - 6534284a-36ab2c8e-3978430d
+      - 6534284a-36ab2c8e-39784387
+      - 6534284a-36ab2c8e-7978437a
+      - 6534284a-36ab2c8e-79885953
+      - 6534284a-36ab2c8e-597842f4
+      - 6534284a-36ab2c8e-997842df
+      - 6534284a-36ab2c8e-797842ce
+      - 6534284a-36ab2c8e-7cf31fa9
+      - 6534284a-36ab2c8e-9cff8b83
+      - 6534284a-36ab2c8e-9cff8b97
+      - 6534284a-36ab2c8e-5cff8ba7
+      - 6534284a-36ab2c8e-fcff8bb7
+      - 6534284a-36ab2c8e-b988598d
+      - 6534284a-36ab2c8e-3cff8bc4
+      - 6534284a-36ab2c8e-dcff8bd1
+      - 6534284a-36ab2c8e-bcff8bdf
+      - 6534284a-36ab2c8e-dd16efe2
+      - 6534284a-36ab2c8e-bd0ef682
+      - 6534284a-36ab2c8e-194f8bd1
+      - 6534284a-36ab2c8e-99602bf2
+      - 6534284a-36ab2c8e-b962fcc4
+      - 6534284a-36ab2c8e-b9506dde
+      - 6534284a-36ab2c8e-19620de6
+      - 6534284a-36ab2c8e-b94f8be1
+      - 6534284a-36ab2c8e-99602c08
+      - 6534284a-36ab2c8e-99506de6
+      - 6534284a-36ab2c8e-594f8bef
+      - 6534284a-36ab2c8e-59602c23
+      - 6534284a-36ab2c8e-d9602c2f
+      - 6534284a-36ab2c8e-b96308e8
+      - 6534284a-36ab2c8e-f9602c67
+      - 6534284a-36ab2c8e-b9508df1
+      - 6534284a-36ab2c8e-39508e03
+      - 6534284a-36ab2c8e-19508e13
+      - 6534284a-36ab2c8e-f962fcef
+      - 6534284a-36ab2c8e-1962fcfb
+      - 6534284a-36ab2c8e-d96345c1
+      - 6534284a-36ab2c8e-396345cd
+      - 6534284a-36ab2c8e-796345d9
+      - 6534284a-36ab2c8e-19506dfa
+      - 6534284a-36ab2c8e-19621d1c
+      - 6534284a-36ab2c8e-b9621d29
+      - 6534284a-36ab2c8e-d962fcdf
+      - 6534284a-36ab2c8e-b9506e03
+      - 6534284a-36ab2c8e-d961de3e
+      - 6534284a-36ab2c8e-7961de2f
+      - 6534284a-36ab2c8e-b961c796
+      - 6534284a-36ab2c8e-f961c7a5
+      - 6534284a-36ab2c8e-1958c786
+      - 6534284a-36ab2c8e-594f8c48
+      - 6534284a-36ab2c8e-194f8c54
+      - 6534284a-36ab2c8e-394f8c60
+      - 6534284a-36ab2c8e-59602ca6
+      - 6534284a-36ab2c8e-19602cbd
+      - 6534284a-36ab2c8e-19602ccd
+      - 6534284a-36ab2c8e-59602cdb
+      - 6534284a-36ab2c8e-19602ce6
+      - 6534284a-36ab2c8e-d9506e18
+      - 6534284a-36ab2c8e-996036d6
+      - 6534284a-36ab2c8e-d94f8c7b
+      - 6534284a-36ab2c8e-99603a9c
+      - 6534284a-36ab2c8e-7960373f
+      - 6534284a-36ab2c8e-f960374d
+      - 6534284a-36ab2c8e-d960375c
+      - 6534284a-36ab2c8e-9960376a
+      - 6534284a-36ab2c8e-19603776
+      - 6534284a-36ab2c8e-d9506e20
+      - 6534284a-36ab2c8e-594f8c6e
     sha256: beb5a4c113046109b25f9130832962bc699d3c59bf9efd9f0a4b0ed9a137964e
     size: 23338074
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg
@@ -204,7 +1063,7 @@ assets:
       - sc4evermore/294-art128-tampere-station
       - sc4evermore/18-bsc-cleanitol
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><div>This station is modeled after the central station in Eindhoven, The Netherlands.</div>\r\n<div>\_</div>\r\n<div>There are two versions of the lot with this upload. All the transportation lots have been updated to follow the most up to date\_<strong>NAM/MTA</strong>\_modding practices and standards.</div>\r\n<div>\_</div>\r\n<div>1) Eindhoven Centraal Station_v2.SC4Lot</div>\r\n<div>\_</div>\r\n<div>The updated original release:</div>\r\n<div>It sits on a 5 x 2 lot and overhangs on the sides. It doesn't have dedicated platfroms (just like the default maxis rail station), but it is supporting the below listed travel types.\_</div>\r\n<div>\_</div>\r\n<div>Due to the layout of the station, the lot needs to be sitting on a 0m-7.5m embankment slope and upon placement it needs to cut into the slope, otherwise it may not function properly as a train station, please test it accordingly. Upon plopping the lot/building arrow needs to face to a road on the lower end of the Slope. Please take a few moments and check out the attached placement tutorial, which will apply for both this Eindhoven Central Station and the <a href=\"/index.php/downloads/download/19-transportation/294-art128-tampere-station\" target=\"_blank\" rel=\"noopener\">Tampere Station</a> too.</div>\r\n<div>\_</div>\r\n<div>It is modded that way to support most of the currently available travel types:</div>\r\n<ul>\r\n<li>L0 Ground High Speed Rail (GHSR), if it's on an embankment.</li>\r\n<li>L0 and L1 Hybrid Railway (HRW)*</li>\r\n<li>L0 and L1 RealRailway (RRW)*</li>\r\n<li>L0 GLR (Ground Light Rail) or tram</li>\r\n<li>L0 and L1 Bus Rapid Transit (BRT)</li>\r\n<li>Bus Stop - on the frontage road</li>\r\n<li>Subway</li>\r\n</ul>\r\n<div>\_</div>\r\n<div>* If you choose to use L1 networks, you don't need the embankment, but that might not be visually appealing as the station was designed to sit at the bottom of a 7.5 meters high embankment.</div>\r\n<div>** There is limited functionality for dual-GLR networks (TIA, TIR, TOR) on the frontage road part of the lot, but they might not be fully functional transit/traffic-wise due to game limitations.</div>\r\n<div>\_</div>\r\n<div>STATS:</div>\r\n<div>\_</div>\r\n<div>Lot size :\_ \_ \_ \_5 x 2</div>\r\n<div>Plop Cost:\_ \_ \_ \_§3500</div>\r\n<div>Monthly Cost:\_ \_ §65</div>\r\n<div>Budget Item:\_ \_ \_Mass Transit</div>\r\n<div>Menu: Rail Transport (or Multi-Modal Stations Submenu)</div>\r\n<div>Capacity: 110000</div>\r\n<div>Demand Created:\_ Jobs§: 40, Jobs§§: 17, Jobs§§§: 2.</div>\r\n<div>Pollution: Air 7 over 1 tiles, Water 4 over 2 tiles, Garbage 13 over 0 tiles</div>\r\n<div>Power consumed:\_ 8 MwH</div>\r\n<div>Water consumed:\_ 30 Gallons/Month</div>\r\n<div>Bulldoze Cost:\_ \_§110</div>\r\n<div>\_</div>\r\n<div>****************************************************************************************************</div>\r\n<div>\_</div>\r\n<div>2) Tyb06-Art128 Eindhoven Centraal Station (split-pltfrm-rrw).dat</div>\r\n<div>\_</div>\r\n<div>Additional lot were created by Tyberius06 which was designed to use a special NAM feature (DTR Transition to Expanded Median)</div>\r\n<div>It sits on a 5 x 2 lot and overhangs on the sides. The lot has a platform which placed in a way to be used with the RRW island type track split set-up (DTR Transition to Expanded Median - see attached GUIDE image). It useses an off-set platform derived from the platform model of the Tampere Station (by Model Tweaker). The <strong>art128-RailStation-Platforms.dat </strong>also contains a centered version and an other off-set version of this platform for lotting purposes.</div>\r\n<div>It only supports the following travel types:</div>\r\n<ul>\r\n<li>L0 RealRailWay (RRW) with the island-type split track set-up available from the Rail Menu</li>\r\n<li>Bus Stop - on the frontage road</li>\r\n<li>Subway\_</li>\r\n</ul>\r\n<div>\_</div>\r\n<div>STATS:</div>\r\n<div>\_</div>\r\n<div>Lot size :\_ \_ \_ \_5 x 2</div>\r\n<div>Plop Cost:\_ \_ \_ \_§5000</div>\r\n<div>Monthly Cost:\_ \_ §75</div>\r\n<div>Budget Item:\_ \_ \_Mass Transit</div>\r\n<div>Menu: Rail Transport (Passenger Stations Submenu)</div>\r\n<div>Capacity: 125000</div>\r\n<div>Demand Created:\_ Jobs§: 40, Jobs§§: 17, Jobs§§§: 2.</div>\r\n<div>Pollution: Air 8 over 1 tiles, Water 4 over 2 tiles, Garbage 15 over 0 tiles</div>\r\n<div>Power consumed:\_ 8 MwH</div>\r\n<div>Water consumed:\_ 30 Gallons/Month</div>\r\n<div>Bulldoze Cost:\_ \_§130</div>\r\n<div>\_</div>\r\n<h3>Installation:</h3>\r\n<div>Copy/Extract the <strong>art128</strong> parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe location.</div>\r\n<div>\_</div>\r\n<div>All files have been updated\_so\_<span style=\"color: #e03e2d;\">it\_is highly recommended to use any of the third party cleanitol tools and remove any previous versions from your plugins.</span><br>In the ~<em>Documents\_</em>folder in the main ZIP you can find a Cleanitol_[...].txt script and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a>\_or the older\_<a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad Certification\">BSC</abbr>\_Cleanitol</a>\_tool you can search and remove old and outdated versions of these files.</div>\r\n<div>\_</div>\r\n<div>The both of the lots have Submenu Support<span style=\"color: #e03e2d;\"><strong>*</strong></span>, if you want to enjoy the advantage of the submenus, please download the\_</div>\r\n<div><a href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"_blank\" rel=\"noopener\">Submenus DLL</a> - You need it to get the package submenu working.</div>\r\n<div>Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</div>\r\n<div>\_</div>\r\n<div><strong><span style=\"color: #e03e2d;\">*</span></strong>Bear in mind, if you do not use the Submenu DLL mod, then you will find both lots in the Rail menu. If you use the Submenu DLL mod, then the station lot without the additional platform will be found in the Misc Transportation Menu/Multi-Modal Submenu and the version with the additional platform will be found in the Rail Menu/Passenger Rail Stations Submenu.</div>\r\n<div>\_</div>\r\n<div><strong>No Dependencies.</strong></div>\r\n<div>\_</div>\r\n<div>For support or just to get more news BATs coming, visit my threads on either\_<a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\" rel=\"noopener\">SC4Devotion\_</a>or\_<a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\" rel=\"noopener\">Simtropolis</a></div> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Eindhoven Centraal.jpg\" data-lightbox=\"lightbox293\" data-alt=\"lightboxart128 - Eindhoven Centraal.jpg|art128 - eindhoven central Tyb06 Relot\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Eindhoven Centraal.jpg\" alt=\"art128 - Eindhoven Centraal\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - eindhoven central Tyb06 Relot.jpg\" data-lightbox=\"lightbox293\" data-alt=\"lightboxart128 - Eindhoven Centraal.jpg|art128 - eindhoven central Tyb06 Relot\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - eindhoven central Tyb06 Relot.jpg\" alt=\"art128 - eindhoven central Tyb06 Relot2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 130
+    downloads: 131
     filename: Art128 - Eindhoven Centraal v2.zip
     files:
       - art128/Eindhoven Centraal/Eindhoven Centraal Station_v2.SC4Lot
@@ -269,7 +1128,7 @@ assets:
     authors:
       - Mattb325
     category: 19-transportation
-    downloads: 92
+    downloads: 96
     lastModified: 2024-10-27T11:25:27.000Z
     name: SC4D LEX Legacy - Mattb325 Transportation Collection DarkNite
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_NAO_lg.jpg
@@ -279,7 +1138,7 @@ assets:
     authors:
       - Mattb325
     category: 19-transportation
-    downloads: 87
+    downloads: 91
     lastModified: 2024-10-27T11:25:54.000Z
     name: SC4D LEX Legacy - Mattb325 Transportation Collection MaxisNight
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Galleria_lg.jpg
@@ -292,7 +1151,7 @@ assets:
     dependencies:
       - simtropolis/26079-peg-spam-super-resource-pack
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><ul>\r\n<li>Features content from the Aerospace Consortium (AC), the BSC, SimCity Airport Group (SCAG), xannepan, and tabi.</li>\r\n<li>Includes AC/BSC Functional Airports Version 2.2, RMIP 2, TMIP, and ARIP, plus numerous plane liveries, and the full collection of AC Team MEGA Props.</li>\r\n<li>Requires <a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">BSC Common Dependencies Pack (V3 minimum)</a>, <a href=\"/index.php/downloads/download/22-dependencies/14-maxis-buildings-as-props-and-dlc-props-v2-1\">Maxis Buildings as Props</a>, and <a href=\"https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/\">PEG SPAM Super Resource Pack</a></li>\r\n</ul> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 3540
+    downloads: 3542
     filename: SC4D_LEX_Legacy_Ultimate_Airport_Pack_V1.zip
     files:
       - readme_ultimate_airport_pack.html
@@ -1109,7 +1968,7 @@ assets:
     authors:
       - sc4evermore
     category: 19-transportation
-    downloads: 550
+    downloads: 552
     lastModified: 2023-11-11T16:10:56.000Z
     name: Ulisse Wolf - Mediterranean Transport Set Vol 1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Ulisse  MED Transport SET VOL 1  DAY.jpg
@@ -1167,4 +2026,4 @@ assets:
     version: "2.0"
 
 meta:
-  timestamp: 2024-11-18T07:06:25.278Z
+  timestamp: 2024-11-19T06:11:28.140Z

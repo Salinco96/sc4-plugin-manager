@@ -187,6 +187,10 @@ sc4evermore/162-sc4d-lex-legacy-nybt-residentials-pack-maxisnite-edition:
 
 sc4evermore/165-sc4d-lex-legacy-jeronij-ship-pack:
   packageId: jeronij/ship-pack
+  paths:
+    BSC MEGA Props*:
+      packageId: jeronij/mega-props-vol01
+  variantId: default
 
 sc4evermore/167-bsc-aln-rrp-pasture-flora:
   packageId: chrisadams3997/rrp-pasture-flora
@@ -204,6 +208,10 @@ sc4evermore/188-vip-vnaoned-props-pack-vol01:
 
 sc4evermore/204-sc4d-lex-legacy-mikeseith-multi-level-modular-garages:
   packageId: mikeseith/multi-level-modular-garages
+  paths:
+    BSC MEGA Props*:
+      packageId: mikeseith/mega-props-vol02
+  variantId: default
 
 sc4evermore/21: null
 
@@ -312,14 +320,12 @@ sc4evermore/276-colossus-addon-mod-2-5-release-candidate-1:
   packageId: cam/colossus-addon-mod
   variantId: experimental
 
-sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection:
-  packageId: bsc/canals-collection
+sc4evermore/277-sc4d-lex-legacy-bsc-canals-collection: null
 
 sc4evermore/278-sc4fix:
   superseded: simtropolis/30883-sc4fix-third-party-patches-for-sc4
 
-sc4evermore/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex:
-  packageId: rubik3/wtc-complex
+sc4evermore/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex: null
 
 sc4evermore/281-bsc-jestarr-mayor-mode-ploppable-livestock:
   packageId: jestarr/mmp-livestock
@@ -333,7 +339,354 @@ sc4evermore/283-sc4d-lex-legacy-bsc-parks-collection:
 sc4evermore/286-stex-sc4d-lex-legacy-rlm-productions-la-river-project:
   superseded: simtropolis/36423-rlm-productions-la-river-project
 
-sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack: null
+sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack:
+  packageId: bsc/common-dependencies
+  paths:
+    "*BSC BATProps Mattb325 Cottages Ornee Vol01*":
+      packageId: mattb325/batprops-cottages-ornee-vol01
+    "*BSC BATProps Mattb325 Cottages Ornee Vol02*":
+      packageId: mattb325/batprops-cottages-ornee-vol02
+    "*BSC BATProps Mattb325 London W2W Vol01*":
+      packageId: mattb325/batprops-london-w2w-vol01
+    "*BSC BATProps Mattb325 McMansion Vol01*":
+      packageId: mattb325/batprops-mc-mansion-vol01
+    "*BSC BATProps Mattb325 Shopping Mall Pack Vol01*":
+      packageId: mattb325/batprops-shopping-malls-vol01
+    "*BSC BATProps Mattb325 Small Modern House Pack*":
+      packageId: mattb325/batprops-small-modern-houses
+    "*BSC BATProps Mattb325 Vol01*":
+      packageId: mattb325/batprops-vol01
+    "*BSC BATProps Mattb325 Vol02*":
+      packageId: mattb325/batprops-vol02
+    "*BSC BATProps Mattb325 Vol03*":
+      packageId: mattb325/batprops-vol03
+    "*BSC BATProps Mattb325 Vol04*":
+      packageId: mattb325/batprops-vol04
+    "*BSC BATProps Mattb325 W2W Prop Pack Vol01*":
+      packageId: mattb325/batprops-w2w-vol01
+    "*BSC BATProps Newman Inc WFK Vol01*":
+      packageId: citynut/batprops-wfk-vol01
+    "*BSC MEGA Prop*CP Civics*":
+      packageId: cycledogg/mega-props-civics
+    "*BSC MEGA Prop*CP Houses*":
+      packageId: cycledogg/mega-props-houses
+    "*BSC MEGA Prop*CP Industrials*":
+      packageId: cycledogg/mega-props-industrials
+    "*BSC MEGA Prop*CP Vol*01*":
+      packageId: cycledogg/mega-props-vol01
+    "*BSC MEGA Prop*CP Vol*02*":
+      packageId: cycledogg/mega-props-vol02
+    "*BSC MEGA Props *D66 Vol01*":
+      packageId: dolphin66/mega-props-vol01
+    "*BSC MEGA Props *D66 Vol02*":
+      packageId: dolphin66/mega-props-vol02
+    "*BSC MEGA Props *D66 Vol03*":
+      packageId: dolphin66/mega-props-vol03
+    "*BSC MEGA Props *Misc Vol01*":
+      packageId: bsc/misc-props-vol01
+    "*BSC MEGA Props *Misc Vol02*":
+      packageId: bsc/misc-props-vol02
+    "*BSC MEGA Props *Misc Vol03*":
+      packageId: bsc/misc-props-vol03
+    "*BSC MEGA Props - ALN Vol01*":
+      packageId: chrisadams3997/mega-props-vol01
+    "*BSC MEGA Props - ALN Vol02*":
+      packageId: chrisadams3997/mega-props-vol02
+    "*BSC MEGA Props - ALN Vol03*":
+      packageId: chrisadams3997/mega-props-vol03
+    "*BSC MEGA Props - CAL Vol01*":
+      packageId: callagrafx/mega-props-vol01
+    "*BSC MEGA Props - CARCH Vol01*":
+      packageId: cerulean/mega-props-vol01
+    "*BSC MEGA Props - CARCH Vol02*":
+      packageId: cerulean/mega-props-vol02
+    "*BSC MEGA Props - CARCH Vol03*":
+      packageId: cerulean/mega-props-vol03
+    "*BSC MEGA Props - CARCH Vol04*":
+      packageId: cerulean/mega-props-vol04
+    "*BSC MEGA Props - CARCH Vol05*":
+      packageId: cerulean/mega-props-vol05
+    "*BSC MEGA Props - CARCH Vol06*":
+      packageId: cerulean/mega-props-vol06
+    "*BSC MEGA Props - CARCH Vol07*":
+      packageId: cerulean/mega-props-vol07
+    "*BSC MEGA Props - CARCH Vol08*":
+      packageId: cerulean/mega-props-vol08
+    "*BSC MEGA Props - COBB Vol01*":
+      packageId: cobb32118/mega-props-vol01
+    "*BSC MEGA Props - COBB Vol02*":
+      packageId: cobb32118/mega-props-vol02
+    "*BSC MEGA Props - COBB Vol03*":
+      packageId: cobb32118/mega-props-vol03
+    "*BSC MEGA Props - COBB Vol04*":
+      packageId: cobb32118/mega-props-vol04
+    "*BSC MEGA Props - COBB Vol05*":
+      packageId: cobb32118/mega-props-vol05
+    "*BSC MEGA Props - COBB Vol06*":
+      packageId: cobb32118/mega-props-vol06
+    "*BSC MEGA Props - Caliban Vol01*":
+      packageId: caliban/mega-props-vol01
+    "*BSC MEGA Props - DAE Vol01*":
+      packageId: deadwoods/mega-props-vol01
+    "*BSC MEGA Props - DAE Vol02*":
+      packageId: deadwoods/mega-props-vol02
+    "*BSC MEGA Props - DBSSYMN Vol01*":
+      packageId: debussyman/mega-props-vol01
+    "*BSC MEGA Props - DBSSYMN Vol02*":
+      packageId: debussyman/mega-props-vol02
+    "*BSC MEGA Props - DEDWD Vol01*":
+      packageId: deadwoods/mega-props-vol01
+    "*BSC MEGA Props - DEDWD Vol02*":
+      packageId: deadwoods/mega-props-vol02
+    "*BSC MEGA Props - GAZ Vol01*":
+      packageId: garyreggae/mega-props-vol01
+    "*BSC MEGA Props - Gascooker Vol01*":
+      packageId: gascooker/mega-props-vol01
+    "*BSC MEGA Props - Gascooker Vol02*":
+      packageId: gascooker/mega-props-vol02
+    "*BSC MEGA Props - JBSimio Vol01*":
+      packageId: jbsimio/mega-props-vol01
+    "*BSC MEGA Props - JBSimio Vol02*":
+      packageId: jbsimio/mega-props-vol02
+    "*BSC MEGA Props - JBSimio Vol03*":
+      packageId: jbsimio/mega-props-vol03
+    "*BSC MEGA Props - JENX Vol01*":
+      packageId: xannepan/mega-props-vol01
+    "*BSC MEGA Props - JENX Vol02*":
+      packageId: xannepan/mega-props-vol02
+    "*BSC MEGA Props - JENX Vol03*":
+      packageId: xannepan/mega-props-vol03
+    "*BSC MEGA Props - JENX Vol04*":
+      packageId: xannepan/mega-props-vol04
+    "*BSC MEGA Props - JENX Vol05*":
+      packageId: xannepan/mega-props-vol05
+    "*BSC MEGA Props - JMyers*Agriculture*01*":
+      packageId: jmyers2043/mega-props-agriculture-vol01
+    "*BSC MEGA Props - JMyers*Agriculture*02*":
+      packageId: jmyers2043/mega-props-agriculture-vol02
+    "*BSC MEGA Props - JMyers*Common*Props*":
+      packageId: jmyers2043/common-props
+    "*BSC MEGA Props - JRJ Vol02*":
+      packageId: jeronij/mega-props-vol02
+    "*BSC MEGA Props - JRJ Vol03*":
+      packageId: jeronij/mega-props-vol03
+    "*BSC MEGA Props - JRJ Vol04*":
+      packageId: jeronij/mega-props-vol04
+    "*BSC MEGA Props - JRJ Vol05*":
+      packageId: jeronij/mega-props-vol05
+    "*BSC MEGA Props - JRJ Vol06*":
+      packageId: jeronij/mega-props-vol06
+    "*BSC MEGA Props - Jen_P Vol01*":
+      packageId: jen-p/mega-props-vol01
+    "*BSC MEGA Props - KWK Vol01*":
+      packageId: kwakelaar/mega-props-vol01
+    "*BSC MEGA Props - KWK Vol02*":
+      packageId: kwakelaar/mega-props-vol02
+    "*BSC MEGA Props - KWK Vol03*":
+      packageId: kwakelaar/mega-props-vol03
+    "*BSC MEGA Props - KevDan25 *Vol01*":
+      packageId: kevdan25/mega-props-vol01
+    "*BSC MEGA Props - LiL Vol01*":
+      packageId: lilith/mega-props-vol01
+    "*BSC MEGA Props - MBEAR Vol01*":
+      packageId: mickebear/mega-props-vol01
+    "*BSC MEGA Props - MBEAR Vol02*":
+      packageId: mickebear/mega-props-vol02
+    "*BSC MEGA Props - MBEAR Vol03*":
+      packageId: mickebear/mega-props-vol03
+    "*BSC MEGA Props - MBEAR Vol04*":
+      packageId: mickebear/mega-props-vol04
+    "*BSC MEGA Props - MJB Vol01*":
+      packageId: couchpotato/mega-props-vol01
+    "*BSC MEGA Props - MJB Vol02*":
+      packageId: couchpotato/mega-props-vol02
+    "*BSC MEGA Props - Mikeseith Vol01*":
+      packageId: mikeseith/mega-props-vol01
+    "*BSC MEGA Props - Mikeseith Vol03*":
+      packageId: mikeseith/mega-props-vol03
+    "*BSC MEGA Props - NewmanInc Vol01*":
+      packageId: citynut/mega-props-vol01
+    "*BSC MEGA Props - NewmanInc Vol02*":
+      packageId: citynut/mega-props-vol02
+    "*BSC MEGA Props - NewmanInc Vol03*":
+      packageId: citynut/mega-props-vol03
+    "*BSC MEGA Props - NewmanInc Vol04*":
+      packageId: citynut/mega-props-vol04
+    "*BSC MEGA Props - NewmanInc Vol05*":
+      packageId: citynut/mega-props-vol05
+    "*BSC MEGA Props - RT Vol01*":
+      packageId: ripptide/mega-props-vol01
+    "*BSC MEGA Props - RT Vol02*":
+      packageId: ripptide/mega-props-vol02
+    "*BSC MEGA Props - RT Vol03*":
+      packageId: ripptide/mega-props-vol03
+    "*BSC MEGA Props - RT Vol04*":
+      packageId: ripptide/mega-props-vol04
+    "*BSC MEGA Props - RT WFK Vol01*":
+      packageId: ripptide/mega-props-wfk-vol01
+    "*BSC MEGA Props - RT WFK Vol02*":
+      packageId: ripptide/mega-props-wfk-vol02
+    "*BSC MEGA Props - SG Vol*01*":
+      packageId: simgoober/mega-props-vol01
+    "*BSC MEGA Props - SNM Vol01*":
+      packageId: bsc/snm-props-vol01
+    "*BSC MEGA Props - SNM Vol02*":
+      packageId: bsc/snm-props-vol02
+    "*BSC MEGA Props - SWI21 Vol01*":
+      packageId: swi21/mega-props-vol01
+    "*BSC MEGA Props - SWI21 Vol02*":
+      packageId: swi21/mega-props-vol02
+    "*BSC MEGA Props - T1 Vol01*":
+      packageId: tag-one/mega-props-vol01
+    "*BSC MEGA Props - T1 Vol02*":
+      packageId: tag-one/mega-props-vol02
+    "*BSC MEGA Props - T1 Vol03*":
+      packageId: tag-one/mega-props-vol03
+    "*BSC MEGA Props - T1 Vol04*":
+      packageId: tag-one/mega-props-vol04
+    "*BSC MEGA Props - W2W Vol01*":
+      packageId: bsc/w2w-props-vol01
+    "*BSC MEGA Props - YDR Vol01*":
+      packageId: yoder7652/mega-props-vol01
+    "*BSC MEGA Props - prepo Vol01*":
+      packageId: prepo/mega-props-vol01
+    "*BSC Prop Pack - CAL Ships Vol01*":
+      packageId: callagrafx/ships-vol01
+    "*BSC Prop Pack - CAL Small Boats Vol01*":
+      packageId: callagrafx/small-boats-vol01
+    "*BSC Prop Pack - Geoffhaw Flag Pack Compilation*":
+      packageId: geoffhaw/flags
+    "*BSC Prop Pack - JENX Tree Props Vol01*":
+      packageId: xannepan/tree-props-vol01
+    "*BSC Prop Pack - JENX Tree Props Vol02*":
+      packageId: xannepan/tree-props-vol02
+    "*BSC Prop Pack - JENX Tree Props Vol03*":
+      packageId: xannepan/tree-props-vol03
+    "*BSC*BATProps*VDK*Vol01*":
+      packageId: vester/batprops-vol01
+    "*BSC*BATProps*VDK*Vol02*":
+      packageId: vester/batprops-vol02
+    "*BSC*Essential*":
+      packageId: bsc/essentials
+    "*BSC*MEGA*Props*JES*Vol01*":
+      packageId: jestarr/mega-props-vol01
+    "*BSC*MEGA*Props*JES*Vol02*":
+      packageId: jestarr/mega-props-vol02
+    "*BSC*MEGA*Props*JES*Vol03*":
+      packageId: jestarr/mega-props-vol03
+    "*BSC*MEGA*Props*JES*Vol04*":
+      packageId: jestarr/mega-props-vol04
+    "*BSC*MEGA*Props*JES*Vol05*":
+      packageId: jestarr/mega-props-vol05
+    "*BSC*MEGA*Props*JES*Vol06*":
+      packageId: jestarr/mega-props-vol06
+    "*BSC*MEGA*Props*JES*Vol07*":
+      packageId: jestarr/mega-props-vol07
+    "*BSC*MEGA*Props*JES*Vol08*":
+      packageId: jestarr/mega-props-vol08
+    "*BSC*MEGA*Props*JES*Vol09*":
+      packageId: jestarr/mega-props-vol09
+    "*BSC*PropFamilyNames*":
+      packageId: bsc/essentials
+    "*BSC*Texture*Cycledogg*":
+      packageId: cycledogg/textures-vol01
+    "*BSC*Textures Vol01*":
+      packageId: bsc/textures-vol01
+    "*BSC*Textures Vol02*":
+      packageId: bsc/textures-vol02
+    "*BSC*Textures Vol03*":
+      packageId: bsc/textures-vol03
+    "*CPT*Trees*":
+      packageId: jeronij/cpt-tree-props
+    "*CSX MEGA Props - Vol01*":
+      packageId: csx/mega-props-vol01
+    "*CSX MEGA Props - Vol02*":
+      packageId: csx/mega-props-vol02
+    "*CSX MEGA Props - Vol03*":
+      packageId: csx/mega-props-vol03
+    "*CSX MEGA Props - Vol04*":
+      packageId: csx/mega-props-vol04
+    "*CSX MEGA Props - Vol05*":
+      packageId: csx/mega-props-vol05
+    "*CSX MEGA Props - Vol06*":
+      packageId: csx/mega-props-vol06
+    "*CSX MEGA Props - Vol07*":
+      packageId: csx/mega-props-vol07
+    "*CSX MEGA Props - Vol08*":
+      packageId: csx/mega-props-vol08
+    "*CSX MEGA Props - Vol09*":
+      packageId: csx/mega-props-vol09
+    "*Carpack*":
+      packageId: girafe/carpack
+    "*Hedges*":
+      packageId: girafe/hedges
+    "*Mattb325 PropPack Vol04*":
+      packageId: mattb325/batprops-vol04
+    "*SG*Models*Adult*":
+      packageId: simgoober/models-adults
+    "*SG*Models*Agriculture*":
+      packageId: simgoober/models-agriculture
+    "*SG*Models*Department*Stores*":
+      packageId: simgoober/models-department-stores
+    "*SG*Models*Education*":
+      packageId: simgoober/models-education
+    "*SG*Models*Entertainment*":
+      packageId: simgoober/models-entertainment
+    "*SG*Models*Grocery*Stores*":
+      packageId: simgoober/models-grocery-stores
+    "*SG*Models*Hotels1*":
+      packageId: simgoober/models-hotels-vol01
+    "*SG*Models*Hotels2*":
+      packageId: simgoober/models-hotels-vol02
+    "*SG*Models*I*M1*":
+      packageId: simgoober/models-manufacture-vol01
+    "*SG*Models*I*M2*":
+      packageId: simgoober/models-manufacture-vol02
+    "*SG*Models*I-HT*":
+      packageId: simgoober/models-high-tech
+    "*SG*Models*Large*Stores*":
+      packageId: simgoober/models-large-stores
+    "*SG*Models*Malls*":
+      packageId: simgoober/models-malls
+    "*SG*Models*Medium*Shops*":
+      packageId: simgoober/models-medium-shops
+    "*SG*Models*Motels*":
+      packageId: simgoober/models-motels
+    "*SG*Models*Offices*HiRise1*":
+      packageId: simgoober/models-offices-high-vol01
+    "*SG*Models*Offices*HiRise2*":
+      packageId: simgoober/models-offices-high-vol02
+    "*SG*Models*Offices*Medium*":
+      packageId: simgoober/models-offices-medium
+    "*SG*Models*Residentials*Vol01*":
+      packageId: simgoober/models-residentials-vol01
+    "*SG*Models*Residentials*Vol02*":
+      packageId: simgoober/models-residentials-vol02
+    "*SG*Models*Residentials*Vol03*":
+      packageId: simgoober/models-residentials-vol03
+    "*SG*Models*Residentials*Vol04*":
+      packageId: simgoober/models-residentials-vol04
+    "*SG*Models*Restaurants*":
+      packageId: simgoober/models-restaurants
+    "*SG*Models*Rewards*":
+      packageId: simgoober/models-rewards
+    "*SG*Models*Sainsbury*":
+      packageId: simgoober/models-sainsbury
+    "*SG*Models*Services*":
+      packageId: simgoober/models-services
+    "*SG*Models*Small*Shops*":
+      packageId: simgoober/models-small-shops
+    "*SG*Models*Transportation*":
+      packageId: simgoober/models-transport
+    "*SG*Models*Utilities*":
+      packageId: simgoober/models-utils
+    "*SG*Models*W2W*Commercials*":
+      packageId: simgoober/models-w2w-commercials
+    "*Urbanpack*":
+      packageId: girafe/carpack
+    "*jenx megaprops*":
+      packageId: xannepan/mega-props-vol01
+  variantId: default
 
 sc4evermore/32-cycledogg-tree-controllers:
   packageId: cycledogg/tree-controllers
@@ -376,8 +729,7 @@ sc4evermore/49-toilet-paper-free-toilet-paper-tree-mod-by-ripplejet:
 sc4evermore/5-sc4d-lex-legacy-cp-early19thcenturyresidentials-pack:
   packageId: cycledogg/early-19th-century-high-wealth-houses
 
-sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem:
-  packageId: cam/colossus-addon-mod
+sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem: null
 
 sc4evermore/54-bsc-kevdan25-restaurants:
   packageId: kevdan25/restaurants

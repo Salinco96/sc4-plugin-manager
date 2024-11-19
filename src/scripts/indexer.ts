@@ -10,7 +10,7 @@ import { AuthorData, AuthorID } from "@common/authors"
 import { ExemplarPropertyData, ExemplarPropertyInfo, ExemplarValueType } from "@common/exemplars"
 import { PackageID } from "@common/packages"
 import { ConfigFormat, ID, PackageData } from "@common/types"
-import { difference, indexBy, mapDefined } from "@common/utils/arrays"
+import { difference, indexBy, isEqual, mapDefined } from "@common/utils/arrays"
 import { globToRegex } from "@common/utils/glob"
 import { readHex } from "@common/utils/hex"
 import { forEach, forEachAsync, isEmpty, keys, mapValues, values } from "@common/utils/objects"
@@ -177,7 +177,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               const url = `https://api.github.com/repos/${repository}/releases/latest`
 
               try {
-                errors.add(`Fetching ${url}...`)
+                console.debug(`Fetching ${url}...`)
 
                 const res = await get(url, {})
                 const latest = (await res.json()) as {
@@ -309,12 +309,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     {},
   )
 
-  // Step 4 - Write changes
+  // Step 4 - Check configs
+  await forEachAsync(dbPackages, checkPackage)
+
+  // Step 5 - Write changes
   await writeConfig(dbDir, "authors", dbAuthors, ConfigFormat.YAML)
   await writeOverrides(overrides)
-
-  // Step 5 - Check configs
-  forEach(dbPackages, checkPackage)
 
   // Step 6 - Show errors
   if (errors.size) {
@@ -333,21 +333,21 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return !data.meta?.timestamp || now.getTime() >= data.meta.timestamp.getTime() + interval
   }
 
-  function checkPackage(packageData: PackageData, packageId: PackageID): void {
-    checkVariant(packageData, packageId)
+  async function checkPackage(packageData: PackageData, packageId: PackageID): Promise<void> {
+    await checkVariant(packageData, packageId)
 
     if (packageData.variants) {
-      forEach(packageData.variants, (variantData, variantId) => {
-        checkVariant(variantData, packageId, variantId)
+      await forEachAsync(packageData.variants, async (variantData, variantId) => {
+        await checkVariant(variantData, packageId, variantId)
       })
     }
   }
 
-  function checkVariant(
+  async function checkVariant(
     variantData: VariantData,
     packageId: PackageID,
     variantId?: VariantID,
-  ): void {
+  ): Promise<void> {
     const prefix = variantId ? `In variant ${packageId}#${variantId}` : `In package ${packageId}`
 
     if (variantData.assets) {
@@ -362,7 +362,25 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     if (variantData.authors) {
       for (const authorId of variantData.authors) {
         if (!dbAuthors[authorId]) {
-          errors.add(`${prefix} - Author ${authorId} does not exist`)
+          const confirmed = await select({
+            choices: [
+              { name: "Yes", value: true },
+              { name: "No", value: false },
+            ],
+            default: true,
+            message: `Create author ${authorId}?`,
+          })
+
+          if (confirmed) {
+            dbAuthors[authorId] = {
+              name: await input({
+                default: authorId,
+                message: "Author name:", // TODO: Simtropolis ID?
+              }),
+            }
+          } else {
+            errors.add(`${prefix} - Author ${authorId} does not exist`)
+          }
         }
       }
     }
@@ -624,6 +642,29 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       await writeEntries(sourceId, entry.category)
     }
 
+    // Resolve dependencies recursively
+    const dependencies = new Set<AssetID>()
+
+    if (entry.dependencies) {
+      for (const dependency of entry.dependencies) {
+        const dependencyEntryId = getEntryID(dependency)
+        const resolvedDependency = await resolveEntry(dependencyEntryId)
+        if (resolvedDependency) {
+          dependencies.add(resolvedDependency.assetId)
+        } else {
+          dependencies.add(getAssetID(dependencyEntryId, dependency))
+        }
+      }
+    }
+
+    if (!isEqual(entry.dependencies, Array.from(dependencies))) {
+      entry.dependencies = Array.from(dependencies)
+      entry.meta.timestamp = now
+
+      // Save changes
+      await writeEntries(sourceId, entry.category)
+    }
+
     // Generate packages if outdated
     if (entry.variants) {
       // Resolve "default" first
@@ -870,23 +911,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     variantEntry.props = props.length ? props : undefined
     variantEntry.textures = textures.length ? textures : undefined
 
-    // Resolve dependencies recursively
-    const dependencies = new Set<AssetID>()
-
-    if (entry.dependencies) {
-      for (const dependency of entry.dependencies) {
-        const dependencyEntryId = getEntryID(dependency)
-        const resolvedDependency = await resolveEntry(dependencyEntryId)
-        if (resolvedDependency) {
-          dependencies.add(resolvedDependency.assetId)
-        } else {
-          dependencies.add(getAssetID(dependencyEntryId, dependency))
-        }
-      }
-    }
-
-    entry.dependencies = Array.from(dependencies)
-
     return true
   }
 
@@ -1035,6 +1059,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         dbPackagesConfigs[authorId] ??= {}
         dbPackagesConfigs[authorId][packageId] = writePackageData(
           packageData,
+          packageId,
           assetId,
           source,
           entry,

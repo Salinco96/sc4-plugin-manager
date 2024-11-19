@@ -90,7 +90,7 @@ export interface IndexerEntryList {
 export type IndexerSourceID = ID<IndexerSource>
 
 export interface IndexerSource {
-  categories: { [id: IndexerSourceCategoryID]: IndexerSourceCategory }
+  categories: { [id in IndexerSourceCategoryID]?: IndexerSourceCategory }
   getCategoryPageCount(html: HTMLElement): number
   getCategoryUrl(categoryId: IndexerSourceCategoryID, page: number): string
   getCookies(): { [name: string]: string }

@@ -183,7 +183,7 @@ export function pad<T>(array: T[], length: number, value: T): T[] {
 export function groupBy<T, K extends number | string>(
   items: T[],
   fn: (value: T, index: number) => K,
-): Record<K, T[]> {
+): Partial<Record<K, T[]>> {
   return items.reduce(
     (result, value, index) => {
       const key = fn(value, index)
@@ -198,7 +198,7 @@ export function groupBy<T, K extends number | string>(
 export function indexBy<T, K extends number | string>(
   items: T[],
   fn: (value: T, index: number) => K,
-): Record<K, T> {
+): Partial<Record<K, T>> {
   return items.reduce(
     (result, value, index) => {
       const key = fn(value, index)

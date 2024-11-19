@@ -10,7 +10,10 @@ export function globToRegex(pattern: string): RegExp {
       .replaceAll(/[*]+/g, s => `${s.length === 1 ? NOT_SEPARATOR : "."}*`)
       .replaceAll("?", `${NOT_SEPARATOR}?`)
       .replaceAll(CONDITION_REGEX, "(?<$1>[^\\\\/]*)")
-      .replaceAll(/{([^}]+)}/g, s => `(?:${s.replaceAll(",", "|")})`)}$`,
+      .replaceAll(
+        /{([^}]+)}/g,
+        s => `(?:${s.replaceAll(",", "|")})`,
+      )}${pattern.includes("/") ? "$" : `(?:$|${SEPARATOR})`}`,
     "i",
   )
 }

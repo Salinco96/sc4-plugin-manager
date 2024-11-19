@@ -1,8 +1,11 @@
+import path from "path"
+
 import { AssetID } from "@common/assets"
 import { AuthorID } from "@common/authors"
+import { CategoryID } from "@common/categories"
 import { PackageID } from "@common/packages"
 import { PackageData } from "@common/types"
-import { splitBy, union } from "@common/utils/arrays"
+import { groupBy, union } from "@common/utils/arrays"
 import { isString } from "@common/utils/types"
 import { VariantID } from "@common/variants"
 import { getExtension } from "@node/files"
@@ -38,6 +41,7 @@ export function extractRepository(html: string): string | undefined {
 
 export function writePackageData(
   packageData: PackageData = {},
+  packageId: PackageID,
   assetId: AssetID,
   source: IndexerSource | undefined,
   entry: IndexerEntry,
@@ -61,8 +65,34 @@ export function writePackageData(
 
   const [, major, minor, patch] = entry.version.match(/(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)!
 
-  packageData.category ??=
-    source && entry.category ? source.categories[entry.category].category : "mods"
+  const categories = new Set(packageData.category?.split(","))
+
+  if (source && entry.category) {
+    const defaultCategories = source.categories[entry.category]?.category
+    if (defaultCategories) {
+      for (const category of defaultCategories.split(",")) {
+        categories.add(category)
+      }
+    }
+  }
+
+  if (categories.has(CategoryID.DEPENDENCIES)) {
+    if (packageId.includes("props")) {
+      categories.delete(CategoryID.DEPENDENCIES)
+      categories.add(CategoryID.PROPS)
+    }
+
+    if (packageId.includes("textures")) {
+      categories.delete(CategoryID.DEPENDENCIES)
+      categories.add(CategoryID.TEXTURES)
+    }
+  }
+
+  if (!categories.size) {
+    categories.add(CategoryID.MODS)
+  }
+
+  packageData.category ??= Array.from(categories).join(",")
 
   packageData.name ??= entry.name
 
@@ -159,22 +189,28 @@ export function writePackageData(
     variantData.assets.splice(index, 1, variantAsset)
   }
 
-  const sc4Extensions = [".dat", ".dll", ".ini", "._loosedesc", ".sc4desc", ".sc4lot", ".sc4model"]
+  const {
+    sc4: includedSC4Files,
+    cleanitol: includedCleanitolFiles,
+    docs: includedDocFiles,
+  } = categorizeFiles(includedFiles)
 
-  const [sc4Files, docFiles] = splitBy(includedFiles, file =>
-    sc4Extensions.includes(getExtension(file)),
-  )
+  const {
+    sc4: excludedSC4Files,
+    cleanitol: excludedCleanitolFiles,
+    docs: excludedDocFiles,
+  } = categorizeFiles(excludedFiles)
 
-  if (docFiles.length) {
-    variantAsset.docs = docFiles
+  if (includedCleanitolFiles?.length || excludedCleanitolFiles?.length) {
+    variantAsset.cleanitol = includedCleanitolFiles ?? []
   }
 
-  if (sc4Files.length) {
-    variantAsset.include = sc4Files
+  if (includedDocFiles?.length || excludedDocFiles?.length) {
+    variantAsset.docs = includedDocFiles ?? []
   }
 
-  if (excludedFiles.length) {
-    variantAsset.exclude = excludedFiles
+  if (includedSC4Files?.length || excludedSC4Files?.length) {
+    variantAsset.include = includedSC4Files ?? []
   }
 
   const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.filename))
@@ -228,4 +264,20 @@ export function writePackageData(
   }
 
   return packageData
+}
+
+const sc4Extensions = [".dat", ".dll", ".ini", "._loosedesc", ".sc4desc", ".sc4lot", ".sc4model"]
+
+function categorizeFiles(files: string[]) {
+  return groupBy(files, file => {
+    if (sc4Extensions.includes(getExtension(file))) {
+      return "sc4"
+    }
+
+    if (path.basename(file).match(/(cleanitol|remove).*[.]txt$/i)) {
+      return "cleanitol"
+    }
+
+    return "docs"
+  })
 }
