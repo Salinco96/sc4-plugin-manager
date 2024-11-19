@@ -2,7 +2,7 @@ import { ID } from "@common/types"
 import { indexBy } from "@common/utils/arrays"
 import { isDefined } from "@common/utils/types"
 
-import { extractDependencies, extractRepository } from "../dbpf/packages"
+import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
 import { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
 
 const sourceId: IndexerSourceID = ID("simtropolis")
@@ -209,7 +209,8 @@ export const SIMTROPOLIS: IndexerSource = {
       dependencies: description ? extractDependencies(description) : undefined,
       description: description ? `<body>${description}</body>` : undefined,
       images,
-      repository: description ? extractRepository(description) : undefined,
+      repository: description ? extractRepositoryUrl(description) : undefined,
+      support: description ? extractSupportUrl(description) : undefined,
       version: html.querySelector(".stex-title-version")?.textContent,
     }
   },

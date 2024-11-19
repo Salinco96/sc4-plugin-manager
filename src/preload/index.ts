@@ -85,11 +85,12 @@ export const api = {
   async openProfileConfig(profileId: ProfileID): Promise<void> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
   },
-  async openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<void> {
-    return ipcRenderer.invoke("openVariantRepository", packageId, variantId)
-  },
-  async openVariantURL(packageId: PackageID, variantId: VariantID): Promise<void> {
-    return ipcRenderer.invoke("openVariantURL", packageId, variantId)
+  async openVariantURL(
+    packageId: PackageID,
+    variantId: VariantID,
+    type: "repository" | "support" | "url",
+  ): Promise<void> {
+    return ipcRenderer.invoke("openVariantURL", packageId, variantId, type)
   },
   async patchDBPFEntries(
     packageId: PackageID,

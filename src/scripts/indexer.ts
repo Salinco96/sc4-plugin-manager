@@ -588,24 +588,22 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         }
 
         // Set details
-        entry.dependencies = details.dependencies?.map(getEntryID)
+        entry.dependencies = details.dependencies
         entry.description = details.description
         entry.images = details.images
         entry.repository = details.repository
+        entry.support = details.support
         entry.version = details.version
-
-        // Save changes
-        await writeEntries(source.id, entry.category)
       } else if (!entry.version) {
         errors.add(`Missing version for entry ${assetId}`)
         return
       } else {
         entry.meta ??= {}
         entry.meta.timestamp ??= now
-
-        // Save changes
-        await writeEntries(getSourceId(entryId))
       }
+
+      // Save changes
+      await writeEntries(getSourceId(entryId), entry.category)
     }
 
     // Download and analyze contents if outdated

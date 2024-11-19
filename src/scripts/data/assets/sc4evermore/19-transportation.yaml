@@ -478,7 +478,7 @@ assets:
         id: fcf36d53
         name: 8 lvl new inside coner
         props:
-          - "28330000"
+          - '28330000'
           - 1961ee57
           - f99a5099
         size: 1x1
@@ -490,7 +490,7 @@ assets:
         id: 5cf37444
         name: 8 lvl new outside corner stairs
         props:
-          - "28330000"
+          - '28330000'
           - a0000051
           - 9998e34b
         size: 2x1
@@ -519,7 +519,7 @@ assets:
           - d97843a1
         size: 1x2
         textures:
-          - "258e0000"
+          - '258e0000'
           - 251c0000
       - building: bcf36100
         category: landmarks
@@ -539,8 +539,8 @@ assets:
         props:
           - 1961ee53
           - 1ed60000
-          - "28330000"
-          - "79885953"
+          - '28330000'
+          - '79885953'
         size: 1x1
         textures:
           - 251c0000
@@ -573,7 +573,7 @@ assets:
         id: bcf36f3c
         name: 8 lvl new bridge edge A
         props:
-          - "28330000"
+          - '28330000'
           - 1961ee58
         size: 2x1
         textures:
@@ -584,7 +584,7 @@ assets:
         id: dcf36fc8
         name: 8 lvl new bridge edge B
         props:
-          - "28330000"
+          - '28330000'
           - a0000050
           - 1961ee59
         size: 2x1
@@ -606,7 +606,7 @@ assets:
         id: 1cf37210
         name: 8 lvl new bridge corner A
         props:
-          - "28330000"
+          - '28330000'
           - f9a1407f
         size: 2x1
         textures:
@@ -617,7 +617,7 @@ assets:
         id: 3d205411
         name: 8 lvl new bridge corner BB
         props:
-          - "28330000"
+          - '28330000'
           - bd1defae
         size: 2x1
         textures:
@@ -915,11 +915,12 @@ assets:
       - 6534284a-36ab2c8e-594f8c6e
     sha256: beb5a4c113046109b25f9130832962bc699d3c59bf9efd9f0a4b0ed9a137964e
     size: 23338074
+    support: https://community.simtropolis.com/forums/topic/761517-mgbs-lil-bits
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg
     timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 23453723
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/204-sc4d-lex-legacy-mikeseith-multi-level-modular-garages
-    version: "3"
+    version: '3'
   sc4evermore/211:
     assetId: sc4evermore/211-bsc-vip-girafe-parisian-transportation-vol01
     authors:
@@ -991,7 +992,7 @@ assets:
     timestamp: 2024-08-20T10:45:45.232Z
     uncompressed: 7565640
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/280-blp-ndex-boston-big-dig-project
-    version: "2.0"
+    version: '2.0'
   sc4evermore/292:
     assetId: sc4evermore/292-art128-japanese-transports-pack
     authors:
@@ -1051,7 +1052,7 @@ assets:
     timestamp: 2024-09-13T12:10:28.279Z
     uncompressed: 12082848
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/292-art128-japanese-transports-pack
-    version: "2"
+    version: '2'
   sc4evermore/293:
     assetId: sc4evermore/293-art128-eindhoven-centraal
     authors:
@@ -1088,7 +1089,7 @@ assets:
     timestamp: 2024-09-13T12:10:28.279Z
     uncompressed: 18613478
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/293-art128-eindhoven-centraal
-    version: "2"
+    version: '2'
   sc4evermore/294:
     assetId: sc4evermore/294-art128-tampere-station
     authors:
@@ -1122,7 +1123,7 @@ assets:
     timestamp: 2024-09-13T12:10:28.279Z
     uncompressed: 17575629
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/294-art128-tampere-station
-    version: "2"
+    version: '2'
   sc4evermore/315:
     assetId: sc4evermore/315-sc4d-lex-legacy-mattb325-transportation-collection-darknite
     authors:
@@ -1962,7 +1963,7 @@ assets:
     timestamp: 2024-07-01T10:39:10.701Z
     uncompressed: 385120644
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/7-sc4d-lex-legacy-ultimate-airport-pack
-    version: "1"
+    version: '1'
   sc4evermore/94:
     assetId: sc4evermore/94-ulisse-wolf-mediterranean-transport-set-vol-1
     authors:
@@ -2023,7 +2024,7 @@ assets:
     timestamp: 2024-08-15T09:27:03.207Z
     uncompressed: 5942463
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/95-ulisse-wolf-hybrid-railway-hrw-subway-converter
-    version: "2.0"
+    version: '2.0'
 
 meta:
   timestamp: 2024-11-19T06:11:28.140Z

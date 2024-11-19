@@ -71,8 +71,11 @@ export interface StoreActions {
   openPackageFile(packageId: PackageID, variantId: VariantID, filePath: string): Promise<void>
   openProfileConfig(profileId: ProfileID): Promise<void>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
-  openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<void>
-  openVariantURL(packageId: PackageID, variantId: VariantID): Promise<void>
+  openVariantURL(
+    packageId: PackageID,
+    variantId: VariantID,
+    type: "repository" | "support" | "url",
+  ): Promise<void>
   patchDBPFEntries(
     packageId: PackageID,
     variantId: VariantID,
@@ -254,11 +257,8 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ snackbars: { [type]: { $set: id } } })
         }
       },
-      async openVariantRepository(packageId, variantId) {
-        return window.api.openVariantRepository(packageId, variantId)
-      },
-      async openVariantURL(packageId, variantId) {
-        return window.api.openVariantURL(packageId, variantId)
+      async openVariantURL(packageId, variantId, type) {
+        return window.api.openVariantURL(packageId, variantId, type)
       },
       async patchDBPFEntries(packageId, variantId, filePath, patches) {
         return window.api.patchDBPFEntries(packageId, variantId, filePath, patches)

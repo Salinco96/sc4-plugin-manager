@@ -37,6 +37,7 @@ export interface IndexerEntryDetails {
   description?: string
   images?: string[]
   repository?: string
+  support?: string
   version?: string
 }
 

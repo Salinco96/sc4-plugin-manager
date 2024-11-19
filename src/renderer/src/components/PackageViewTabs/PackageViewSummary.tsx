@@ -71,6 +71,15 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
         </Text>
       )}
       {/* TODO: Better formatting */}
+      {variantInfo.support && (
+        <Text maxLines={1} variant="body2">
+          <b>{t("support")}:</b>{" "}
+          <a href={variantInfo.support} target="_blank" rel="noreferrer">
+            {variantInfo.support}
+          </a>
+        </Text>
+      )}
+      {/* TODO: Better formatting */}
       {packageInfo.features && (
         <Typography variant="body2">
           <b>{t("features")}:</b>{" "}

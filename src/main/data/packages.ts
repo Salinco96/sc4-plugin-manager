@@ -390,6 +390,7 @@ function loadVariantInfo(
     release: variantData.release?.toISOString() ?? packageData.release?.toISOString(),
     repository: variantData.repository ?? packageData.repository,
     requirements: { ...packageData.requirements, ...variantData.requirements },
+    support: variantData.support ?? packageData.support,
     thumbnail: variantData.thumbnail ?? packageData.thumbnail,
     url: variantData.url ?? packageData.url,
     version: variantData.version ?? packageData.version ?? "0.0.0",

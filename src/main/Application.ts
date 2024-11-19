@@ -1027,7 +1027,6 @@ export class Application {
     this.handle("openPackageConfig")
     this.handle("openPackageFile")
     this.handle("openProfileConfig")
-    this.handle("openVariantRepository")
     this.handle("openVariantURL")
     this.handle("patchDBPFEntries")
     this.handle("removeProfile")
@@ -1956,31 +1955,22 @@ export class Application {
   }
 
   /**
-   * Opens a variant's repository in browser, if present.
+   * Opens a variant's URL in browser.
    */
-  public async openVariantRepository(packageId: PackageID, variantId: VariantID): Promise<void> {
+  public async openVariantURL(
+    packageId: PackageID,
+    variantId: VariantID,
+    type: "repository" | "support" | "url",
+  ): Promise<void> {
     const { packages } = await this.load()
 
     const variantInfo = packages[packageId]?.variants[variantId]
-    if (!variantInfo?.repository) {
-      throw Error(`Variant '${packageId}#${variantId}' does not have a repository URL`)
+    if (!variantInfo?.[type]) {
+      const name = type === "url" ? "homepage" : type
+      throw Error(`Variant '${packageId}#${variantId}' does not have a ${name} URL`)
     }
 
-    await this.openInExplorer(variantInfo.repository)
-  }
-
-  /**
-   * Opens a variant's homepage in browser.
-   */
-  public async openVariantURL(packageId: PackageID, variantId: VariantID): Promise<void> {
-    const { packages } = await this.load()
-
-    const variantInfo = packages[packageId]?.variants[variantId]
-    if (!variantInfo?.url) {
-      throw Error(`Variant '${packageId}#${variantId}' does not have a homepage URL`)
-    }
-
-    await this.openInExplorer(variantInfo.url)
+    await this.openInExplorer(variantInfo[type])
   }
 
   public async patchDBPFEntries(

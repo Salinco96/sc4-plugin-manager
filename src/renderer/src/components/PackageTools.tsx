@@ -7,6 +7,7 @@ import {
   GitHub as GitHubIcon,
   Tune as OptionsIcon,
   Notes as ReadmeIcon,
+  LiveHelpOutlined as SupportIcon,
   Language as WebIcon,
 } from "@mui/icons-material"
 import { useTranslation } from "react-i18next"
@@ -53,16 +54,23 @@ export function PackageTools({
       )}
       {variantInfo.url && (
         <ToolButton
-          description={t("openUrl")}
+          description={t(variantInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl")}
           icon={WebIcon}
-          onClick={() => actions.openVariantURL(packageId, variantInfo.id)}
+          onClick={() => actions.openVariantURL(packageId, variantInfo.id, "url")}
         />
       )}
       {variantInfo.repository && (
         <ToolButton
           description={t("openRepository")}
           icon={GitHubIcon}
-          onClick={() => actions.openVariantRepository(packageId, variantInfo.id)}
+          onClick={() => actions.openVariantURL(packageId, variantInfo.id, "repository")}
+        />
+      )}
+      {variantInfo.support && (
+        <ToolButton
+          description={t("openSupport")}
+          icon={SupportIcon}
+          onClick={() => actions.openVariantURL(packageId, variantInfo.id, "support")}
         />
       )}
       {variantInfo.installed && !variantId && (

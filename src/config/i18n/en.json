@@ -359,8 +359,10 @@
     "openDocs": "Open installed documentation",
     "openFiles": "Open installed files",
     "openReadme": "Open README",
-    "openRepository": "Open repository",
-    "openUrl": "Open website",
+    "openRepository": "View source code on GitHub",
+    "openSimtropolis": "Open Simtropolis page",
+    "openSupport": "Open support thread",
+    "openUrl": "Open download page",
     "options": "Open options"
   },
   "PackageViewFiles": {
@@ -428,8 +430,9 @@
     "category": "Category",
     "features": "Features",
     "requirements": "Requirements",
-    "repository": "Repository",
-    "url": "Website"
+    "repository": "Source code",
+    "support": "Support thread",
+    "url": "Download page"
   },
   "PackageViewTabs": {
     "dependencies_one": "{{count}} dependency",

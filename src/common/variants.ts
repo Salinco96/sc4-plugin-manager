@@ -42,6 +42,7 @@ export interface VariantData {
   readme?: string
   repository?: string
   requirements?: Requirements
+  support?: string
   thumbnail?: string
   url?: string
   version?: string
@@ -72,6 +73,7 @@ export interface BaseVariantInfo {
   readme?: string
   repository?: string
   requirements?: Requirements
+  support?: string
   thumbnail?: string
   url?: string
   version: string

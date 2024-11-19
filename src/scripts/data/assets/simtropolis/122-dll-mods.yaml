@@ -28,11 +28,12 @@ assets:
       timestamp: 2024-11-17T16:00:57.230Z
       version: 1
     models: []
-    name: "SC4Fix: Third-party patches for SC4"
+    name: 'SC4Fix: Third-party patches for SC4'
     props: []
     repository: https://github.com/nsgomez/sc4fix
     sha256: ff30d3bf555fc987224fb88820fbb72e7b1fb73b7c689e1cc95c9a58722b4643
     size: 62876
+    support: https://community.simtropolis.com/forums/topic/74667-revisiting-prop-pox-and-prop-theory
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_12/sc4fix.thumb.png.ced8b7b12af0c352bbb50b295298a062.png
     uncompressed: 112128
@@ -66,6 +67,7 @@ assets:
     repository: https://github.com/nsgomez/gzcom-dll
     sha256: bc67b8ade3254258e9ee4410d3fb7474f2f1c5f47a9b0eefd03dd526962b759f
     size: 137216
+    support: https://community.simtropolis.com/forums/topic/70495-game-framework-compatible-dll-loading-and-other-modding-discoveries
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/spills.thumb.PNG.0943721225dea37e7bf774d50dd1e215.PNG
     url: https://community.simtropolis.com/files/file/31350-simmasters-extra-cheats-dll/
@@ -108,6 +110,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-disable-cheats
     sha256: 454b2f2c63b0857d11f2a87766b72fdb0423b80242648d0f10218d22f0d6f008
     size: 36171
+    support: https://community.simtropolis.com/forums/topic/762689-sc4disablecheats
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_11/SC4DisableCheatsSTEXIcon.thumb.png.fc57d008dc7e97605c2b5632322dc3b1.png
     uncompressed: 78559
@@ -142,6 +145,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-auto-save
     sha256: 2873ca87bdd93b3f470b3f0e98ca52ec9180238550ffb791bf454dbd21bfeb55
     size: 56097
+    support: https://community.simtropolis.com/forums/topic/762722-sc4autosave
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_11/SC4AutoSaveSTEXIcon.thumb.png.76798bc0a3f4162a440ff15d3830026d.png
     uncompressed: 127515
@@ -176,6 +180,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-city-date-sync
     sha256: abfb3a0f44c0dd99f10d8e27c327c2b47757f11e03eca8ec6adabbe098834097
     size: 35341
+    support: https://community.simtropolis.com/forums/topic/762766-sc4citydatesync-synchronize-the-city-dates-in-a-region
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_11/STEXIcon.thumb.png.965f05907fc98b577f19c398501165ed.png
     uncompressed: 76113
@@ -210,6 +215,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-humane-society-ordinance
     sha256: 5e54a69ca40bc77deb499b78e9013e27451b569716b6a4b01e618e4a9f7250af
     size: 63168
+    support: https://community.simtropolis.com/forums/topic/26215-ordinances-complete-list
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.thumb.png.c8adf8463164699bd97ba8cda829adae.png
     uncompressed: 143626
@@ -245,6 +251,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-city-lottery-ordinance
     sha256: 34875d97108cf4ce5d2c43c7966e51b3d5620feea6f3bbbbbd55577d201ab370
     size: 67406
+    support: https://community.simtropolis.com/forums/topic/762835-city-lottery-ordinance-dll-plugin
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.thumb.png.b0a453a8049745f600cfaf9f6e12fb20.png
     uncompressed: 157514
@@ -279,6 +286,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade
     sha256: 0d39a73488079de8c80626ba25aa580da9205ec9879df291112db65566effb2a
     size: 67503
+    support: https://community.simtropolis.com/forums/topic/762856-legalize-gambling-ordinance-upgrade-dll-plugin
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/STEXIcon.thumb.png.41bb8647cbbc4cc2203ab7342943060d.png
     uncompressed: 157311
@@ -345,7 +353,7 @@ assets:
           - 8956a699
         size: 1x1
         textures:
-          - "258e0000"
+          - '258e0000'
           - 258d0000
     meta:
       timestamp: 2024-11-17T16:00:58.230Z
@@ -363,6 +371,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-more-demand-info
     sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
     size: 1699084
+    support: https://community.simtropolis.com/forums/topic/762906-sc4moredemandinfo
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.thumb.png.4baf70a67eff4ba39d69bcbd17bfe144.png
     uncompressed: 2040510
@@ -414,6 +423,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-disable-demolition-animation
     sha256: a39f1b28ca37dd8c126755eab25c924cd64b2d7bae9e31d4e2a8a3927b80e7bc
     size: 36113
+    support: https://community.simtropolis.com/forums/topic/762938-sc4disabledemolitionanimation
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.thumb.png.5af5020e767b1b1ebcc4d7da840c77cc.png
     uncompressed: 81574
@@ -448,6 +458,7 @@ assets:
     repository: https://github.com/Blinue/Magpie
     sha256: a75269f9975cc9674abf4c68cb52696eef40c1843b10bbe3a9ea3a48bc04cd8a
     size: 79694
+    support: https://community.simtropolis.com/forums/topic/762952-sc4graphicsoptions
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.da4c65cf8db81ee630bb6cba8651e9d5.png
     uncompressed: 193007
@@ -483,6 +494,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-more-building-styles
     sha256: 38ba64d016337a66ae41af6bba38f57a6f87bd1bce32ab25ef48ba59f851283e
     size: 87116
+    support: https://community.simtropolis.com/forums/topic/758810-partial-mythbusting-building-style-tilesets-not-locked-down-in-the-exe
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.d0a231227c791acd31e13fe612986fb2.png
     uncompressed: 204161
@@ -518,6 +530,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-cpu-options
     sha256: 1e649bfac44ba0d1d9c4b2105ee992614646180f966e5ec5094197e74b3db2a1
     size: 52259
+    support: https://community.simtropolis.com/forums/topic/762979-sc4cpuoptions
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.55cf8d37094679309e4c933ec6df6848.png
     uncompressed: 116019
@@ -551,6 +564,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke
     sha256: a4c4a3a447a15de6788024f38bac013ba0e8253df0f451fd66ade7cb68dc344e
     size: 36096
+    support: https://community.simtropolis.com/forums/topic/762984-sc4disablelotplopsmoke
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.935bafd81124b7994b64e58da304dacc.png
     uncompressed: 81426
@@ -584,6 +598,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-disable-network-construction-sounds
     sha256: 0ec5e559afbfc24effa8f1c76f2521034a284d7a776e3fa1e6fd1a29d3cbd19d
     size: 36595
+    support: https://community.simtropolis.com/forums/topic/762987-sc4disablenetworkconstructionsounds
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.0d06d1f4074ac06897c5139c6b70fcdc.png
     uncompressed: 81614
@@ -672,6 +687,7 @@ assets:
     repository: https://github.com/memo33/submenus-dll
     sha256: f7ce49f941b04f6438678ea9e6a1649a010ab96f5feeed9f9b8d495a8a93a464
     size: 716556
+    support: https://community.simtropolis.com/forums/topic/763010-submenus-dll
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/glr-submenu.thumb.jpeg.b849d44b5fa1dc01e969a9deeff7a2dd.jpeg
     uncompressed: 797417
@@ -708,6 +724,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-region-census
     sha256: f3a6e06523241b9f6529c9dfb1c888cfdbbd13e582c5af67de76e8e436472e7a
     size: 58573
+    support: https://community.simtropolis.com/forums/topic/763013-region-view-census-ui-dll-plugin
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.5e3008427bf9a97266514d7df919179f.png
     uncompressed: 130757
@@ -742,6 +759,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-no-kick-out
     sha256: cbe23b9c4d79e3b7496653558c580fe0e50fa622b90ab6ff5f417e4e10040034
     size: 37433
+    support: https://community.simtropolis.com/forums/topic/763015-no-kickout-lower-wealth-dll-plugin
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/STEXIcon.thumb.png.53028b1cc19d0094465392380ce70a7f.png
     uncompressed: 82784
@@ -777,6 +795,7 @@ assets:
     repository: https://github.com/sebamarynissen/sc4
     sha256: 02dae5d6cacfb8091b9fe5db4eb4948519d01fde48a08d59f53a52c7ed062ad3
     size: 41414
+    support: https://community.simtropolis.com/forums/topic/760843-growifiercom-ploppable-residentials
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_03/STEXIcon.thumb.png.49fdef61e541247ae4aeaacdc0e6a4d5.png
     uncompressed: 92824
@@ -856,6 +875,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-query-ui-hooks
     sha256: 4d497e9546c4d855ff72e3907423f262dd900d82cbbbf33a4432b06eb93410bb
     size: 177776
+    support: https://community.simtropolis.com/forums/topic/763107-query-tool-ui-extensions-dll
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/STEXIcon.thumb.png.ff8b2dce5ef2d377f18e5401653e1c02.png
     uncompressed: 380507
@@ -898,6 +918,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-resource-loading-hooks
     sha256: 6ec120c44afe263087dd7fd80591ea5e7368c6ab335b8f22d379974b21799203
     size: 48838
+    support: https://community.simtropolis.com/forums/topic/763167-resource-loading-hooks-dll-for-simcity-4
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/STEXIcon.thumb.png.d6b99a97951fcfd4e8128d917e2ea7be.png
     uncompressed: 109187
@@ -931,6 +952,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-dbpf-loading
     sha256: cc608b1479dcc515e8055e23a6a64b9cb2a2e24db1759c2a60a2684993f473a8
     size: 58038
+    support: https://community.simtropolis.com/forums/topic/763113-sc4dbpfloading
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_05/STEXIcon.thumb.png.46691a9dc1db4b041b41d00b1180e880.png
     uncompressed: 131402
@@ -983,6 +1005,7 @@ assets:
     repository: https://github.com/memo33/transparent-texture-fix-dll
     sha256: f24275e69667e5afbfb3795d78d59ee4b45fce06ec72b2d09e6f3c4b2c852979
     size: 43314
+    support: https://community.simtropolis.com/forums/topic/760847-coris-partial-water-bug-fix-ready-for-testing
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_08/before-after.thumb.jpeg.dce7652797c99365f8945704768dd0b8.jpeg
     uncompressed: 93946
@@ -1068,6 +1091,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-remove-phantom-budget-items
     sha256: 7e365830ee40403e71b9a07b1fc5fd310e9791546895ed499d994661ccc9616c
     size: 43257
+    support: https://community.simtropolis.com/forums/topic/763391-remove-phantom-budget-items-dll-plugin
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/STEXIcon.thumb.png.24e975cc9a342b940ceada0948c0dba2.png
     uncompressed: 96193
@@ -1101,6 +1125,7 @@ assets:
     repository: https://github.com/0xC0000054/sc4-custom-budget-departments
     sha256: 6107dcb38b9def74dc293aa7fcdc86cf32f48873e84dec0931d9a03f98a93215
     size: 51876
+    support: https://community.simtropolis.com/forums/topic/763257-simcity-4-custom-budget-departments-dll
     textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/STEXIcon.thumb.png.fd89f39326fe8d7a013dba1eaa396322.png
     uncompressed: 121222

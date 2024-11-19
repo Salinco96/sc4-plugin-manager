@@ -51,14 +51,14 @@ export function extractDependencies(html: string): string[] {
 
   // Simtropolis file page URL
   for (const match of html.matchAll(
-    /(https:[/][/]community.simtropolis.com)?[/]files[/]file[/]([\w-]+)[/]?/g,
+    /(https:[/][/]community[.]simtropolis[.]com)?[/]files[/]file[/]([\w-]+)[/]?/g,
   )) {
     dependencies.add(`simtropolis/${match[2]}`)
   }
 
   // SC4Evermore file page URL
   for (const match of html.matchAll(
-    /(https:[/][/]www.sc4evermore.com)?[/]index.php[/]downloads[/]download[/][\w-]+[/]([\w-]+)[/]?/g,
+    /(https:[/][/]www[.]sc4evermore[.]com)?[/]index[.]php[/]downloads[/]download[/][\w-]+[/]([\w-]+)[/]?/g,
   )) {
     dependencies.add(`sc4evermore/${match[2]}`)
   }
@@ -72,9 +72,16 @@ export function extractDependencies(html: string): string[] {
   return Array.from(dependencies)
 }
 
-export function extractRepository(html: string): string | undefined {
+export function extractRepositoryUrl(html: string): string | undefined {
   // We hardcode a few known GitHub users not to pick up random repositories
-  const match = html.match(/https:\/\/github.com\/(0xC0000054|memo33|nsgomez)\/([\w-]+)?/g)
+  const match = html.match(/https:[/][/]github[.]com[/](0xC0000054|memo33|nsgomez)[/]([\w-]+)?/g)
+  return match?.[0]
+}
+
+export function extractSupportUrl(html: string): string | undefined {
+  const match = html.match(
+    /https:[/][/]community[.]simtropolis[.]com[/]forums[/]topic[/](?!762980)([\w-]+)?/g,
+  )
   return match?.[0]
 }
 
@@ -160,6 +167,7 @@ export function writePackageData(
     packageData.features = packageFeatures.length ? packageFeatures.sort() : undefined
     packageData.images = packageImages.length ? packageImages : undefined
     packageData.repository ??= entry.repository
+    packageData.support ??= entry.support
     packageData.thumbnail = entry.thumbnail ?? packageData.thumbnail
     packageData.url = entry.url
   } else {
@@ -194,6 +202,7 @@ export function writePackageData(
     variantData.description = variantDescription
     variantData.images = variantImages.length ? variantImages : undefined
     variantData.repository ??= entry.repository
+    variantData.support ??= entry.support
     variantData.thumbnail = entry.thumbnail ?? variantData.thumbnail
     variantData.url = entry.url
   }
