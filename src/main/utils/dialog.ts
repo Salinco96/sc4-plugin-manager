@@ -132,6 +132,27 @@ export async function showSuccess(title: string, message: string, detail?: strin
 }
 
 /**
+ * Shows a system warning dialog.
+ * @param title dialog title
+ * @param message dialog body
+ * @param detail extra body (optional)
+ */
+export async function showWarning(title: string, message: string, detail?: string): Promise<void> {
+  const options: MessageBoxOptions = {
+    detail,
+    message,
+    title,
+    type: "warning",
+  }
+
+  if (Application.mainWindow) {
+    await dialog.showMessageBox(Application.mainWindow, options)
+  } else {
+    await dialog.showMessageBox(options)
+  }
+}
+
+/**
  * Shows a system folder selector.
  * @param title dialog title
  * @param defaultPath default absolute path (optional)

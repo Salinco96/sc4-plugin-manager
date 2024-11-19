@@ -71,6 +71,7 @@ import {
   showConfirmation,
   showConflictConfirmation,
   showSuccess,
+  showWarning,
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 import { ToolID, getToolInfo } from "@utils/tools"
@@ -1180,6 +1181,8 @@ export class Application {
 
         const isUpdating = !!variantInfo.installed
 
+        const oldFiles = variantInfo.files
+
         try {
           if (isUpdating) {
             context.info(`Updating variant '${packageId}#${variantId}'...`)
@@ -1412,6 +1415,50 @@ export class Application {
             variantInfo.files = files
             variantInfo.installed = true
 
+            // Migrate existing patches
+            // After updating, filenames may have changed!
+            if (variantInfo.files && oldFiles) {
+              const notFoundFiles: string[] = []
+
+              for (const oldFile of oldFiles) {
+                if (oldFile.patches) {
+                  const normalize = (path: string) =>
+                    path
+                      .replace(/([v]|\d+[.])\d+([.]\d+)*[a-z]?/gi, "") // ignore patterns like 'v2' or '3.5.0'
+                      .replace(/[-_^#@! ]/g, "") // ignore spacing and weird characters
+                      .toLowerCase() // ignore case
+
+                  const normalized = normalize(oldFile.path)
+                  const newFile = variantInfo.files.find(
+                    file => normalize(file.path) === normalized,
+                  )
+
+                  if (newFile) {
+                    newFile.patches = oldFile.patches
+
+                    await this.getPatchedFile(
+                      context,
+                      packageId,
+                      variantId,
+                      newFile,
+                      exemplarProperties,
+                    )
+                  } else {
+                    notFoundFiles.push(oldFile.path)
+                  }
+                }
+              }
+
+              if (notFoundFiles.length) {
+                // TODO: Effectively old patches are lost/irrecoverable at this point - maybe give users a chance to redirect them manually or otherwise save the patch?
+                await showWarning(
+                  packageInfo.name,
+                  "Patch migration failed",
+                  `Failed to locate the following files after update. This usually means that the file structure of the package was changed by the author. The corresponding patches will not be applied.\n${notFoundFiles.map(file => `  - ${file}`).join("\n")}`,
+                )
+              }
+            }
+
             // Rewrite config
             await this.writePackageConfig(context, packageInfo)
           } catch (error) {
@@ -1420,13 +1467,6 @@ export class Application {
             delete variantInfo.files
             delete variantInfo.installed
             throw error
-          }
-
-          // Apply patches
-          if (variantInfo.files) {
-            for (const file of variantInfo.files) {
-              await this.getPatchedFile(context, packageId, variantId, file, exemplarProperties)
-            }
           }
         } finally {
           delete variantInfo.action
