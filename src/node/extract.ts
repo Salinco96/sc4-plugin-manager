@@ -1,14 +1,14 @@
-import console from "console"
-import { createWriteStream } from "fs"
-import { readdir } from "fs/promises"
-import path from "path"
-import { pipeline } from "stream"
-import { finished } from "stream/promises"
+import console from "node:console"
+import { createWriteStream } from "node:fs"
+import { readdir } from "node:fs/promises"
+import path from "node:path"
+import { pipeline } from "node:stream"
+import { finished } from "node:stream/promises"
 
 import { glob } from "glob"
 import { Open } from "unzipper"
 
-import { Logger } from "@common/logs"
+import type { Logger } from "@common/logs"
 
 import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
 import { cmd, run } from "./processes"
@@ -73,7 +73,7 @@ export async function extract(
       // Try to extract ClickTeam installer, then fallback to 7-zip
       try {
         await extractClickTeam(archivePath, extractPath, options)
-      } catch (error) {
+      } catch (_error) {
         await extract7z(archivePath, extractPath, options)
       }
       break
@@ -85,9 +85,9 @@ export async function extract(
         transform(filePath) {
           if (filePath.startsWith("installation/")) {
             return filePath.replace("installation/", "")
-          } else {
-            return null
           }
+
+          return null
         },
       })
       break

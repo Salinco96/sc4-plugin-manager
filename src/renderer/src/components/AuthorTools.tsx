@@ -1,7 +1,7 @@
 import { Language as WebIcon } from "@mui/icons-material"
 import { useTranslation } from "react-i18next"
 
-import { AuthorID } from "@common/authors"
+import type { AuthorID } from "@common/authors"
 import { FlexBox } from "@components/FlexBox"
 import { useAuthors, useStoreActions } from "@utils/store"
 

@@ -1,11 +1,11 @@
-import { Chip, ChipProps, Tooltip } from "@mui/material"
+import { Chip, type ChipProps, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { removeElement, removeElement$ } from "@common/utils/arrays"
 import { Page, useLocation } from "@utils/navigation"
 import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
 
-import { STATE_TAGS, Tag, TagType, TagValue, getTagLabel } from "./utils"
+import { STATE_TAGS, type Tag, TagType, type TagValue, getTagLabel } from "./utils"
 
 export type PackageTagProps = Tag & { dense?: boolean }
 
@@ -30,7 +30,7 @@ export function PackageTag({ dense, ...tag }: PackageTagProps): JSX.Element {
   const isSelected = values.includes(tag.value)
 
   const sharedProps: ChipProps = {
-    color: tag.type === TagType.STATE ? STATE_TAGS[tag.value] ?? undefined : undefined,
+    color: tag.type === TagType.STATE ? (STATE_TAGS[tag.value] ?? undefined) : undefined,
     label: getTagLabel(t, tag, authors, categories),
     size: dense ? "small" : "medium",
     sx: {

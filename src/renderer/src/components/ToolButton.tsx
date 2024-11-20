@@ -1,4 +1,4 @@
-import { ComponentType } from "react"
+import type { ComponentType } from "react"
 
 import { IconButton } from "@mui/material"
 

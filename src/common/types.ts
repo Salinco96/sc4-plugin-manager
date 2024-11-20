@@ -1,9 +1,9 @@
-import { CategoryID } from "./categories"
-import { TGI } from "./dbpf"
-import { ExemplarDataPatch } from "./exemplars"
-import { Options, Requirements } from "./options"
+import type { CategoryID } from "./categories"
+import type { TGI } from "./dbpf"
+import type { ExemplarDataPatch } from "./exemplars"
+import type { Options, Requirements } from "./options"
 import {
-  PackageID,
+  type PackageID,
   isDependency,
   isDeprecated,
   isDisabled,
@@ -17,9 +17,9 @@ import {
   isOutdated,
   isPatched,
 } from "./packages"
-import { ProfileID, ProfileInfo } from "./profiles"
+import type { ProfileID, ProfileInfo } from "./profiles"
 import { keys } from "./utils/objects"
-import { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
+import type { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
 
 /** Supported configuration formats */
 export enum ConfigFormat {

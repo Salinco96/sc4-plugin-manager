@@ -1,6 +1,6 @@
 import { i18n } from "./i18n"
-import { PackageID } from "./packages"
-import { PackageWarning } from "./types"
+import type { PackageID } from "./packages"
+import type { PackageWarning } from "./types"
 
 export interface Warning {
   id: string
@@ -20,7 +20,7 @@ export function getWarningTitle(warning: PackageWarning): string {
 export function getWarningMessage(warning: PackageWarning): string {
   if (warning.id && !warning.message) {
     return i18n.t(warning.id, { defaultValue: warning.id, ns: "WarningMessage" })
-  } else {
-    return warning.message ?? ""
   }
+
+  return warning.message ?? ""
 }

@@ -1,5 +1,5 @@
 import {
-  PackageID,
+  type PackageID,
   getVariantIssues,
   isConflict,
   isDeprecated,
@@ -9,7 +9,7 @@ import {
   isOutdated,
 } from "@common/packages"
 import { isString } from "@common/utils/types"
-import { VariantID } from "@common/variants"
+import type { VariantID } from "@common/variants"
 import { usePackageStatus, useVariantInfo } from "@utils/packages"
 
 import { PackageBannerConflict } from "./PackageBannerConflict"

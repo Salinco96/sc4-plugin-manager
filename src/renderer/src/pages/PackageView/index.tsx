@@ -2,7 +2,7 @@ import { ArrowBack as BackIcon, SearchOff as NoResultIcon } from "@mui/icons-mat
 import { IconButton, Tooltip, Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
 import { PackageHeader } from "@components/PackageHeader"

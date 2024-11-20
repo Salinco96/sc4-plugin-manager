@@ -1,15 +1,15 @@
-import path from "path"
+import path from "node:path"
 
 import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
-import { ExemplarPropertyInfo } from "@common/exemplars"
-import { BuildingData, Feature, LotData } from "@common/types"
+import type { ExemplarPropertyInfo } from "@common/exemplars"
+import { type BuildingData, Feature, type LotData } from "@common/types"
 import { values } from "@common/utils/objects"
 import { loadDBPF } from "@node/dbpf"
 import { FileOpenMode, openFile } from "@node/files"
 
 import { getBuildingData } from "./buildings"
 import { getLotData } from "./lots"
-import { DeveloperID, Exemplar, ExemplarPropertyID, ExemplarType, SimulatorID } from "./types"
+import { DeveloperID, type Exemplar, ExemplarPropertyID, ExemplarType, SimulatorID } from "./types"
 import { get, getBaseTextureId } from "./utils"
 
 export interface SC4FileData {

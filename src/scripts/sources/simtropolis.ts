@@ -3,7 +3,7 @@ import { indexBy } from "@common/utils/arrays"
 import { isDefined } from "@common/utils/types"
 
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
-import { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
+import type { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
 
 const sourceId: IndexerSourceID = ID("simtropolis")
 
@@ -197,7 +197,7 @@ export const SIMTROPOLIS: IndexerSource = {
       }
     })
   },
-  getEntryDetails(assetId, html) {
+  getEntryDetails(html) {
     const description = html.querySelector("article section .ipsType_richText")?.innerHTML
 
     const images = html

@@ -1,5 +1,5 @@
-import { Logger } from "@common/logs"
-import { TaskInfo } from "@common/state"
+import type { Logger } from "@common/logs"
+import type { TaskInfo } from "@common/state"
 
 import { isDev } from "./env"
 
@@ -212,9 +212,9 @@ export class TaskManager {
       raiseInDev(message) {
         if (isDev()) {
           throw Error(message)
-        } else {
-          console.warn(message)
         }
+
+        console.warn(message)
       },
       setProgress(current, total) {
         const progress = Math.floor(100 * (current / total))

@@ -1,9 +1,9 @@
-import { FileHandle } from "fs/promises"
+import type { FileHandle } from "node:fs/promises"
 
 import { compress, decompress } from "qfs-compression"
 
 import { TGI } from "@common/dbpf"
-import { ExemplarPropertyValue, ExemplarValueType } from "@common/exemplars"
+import { type ExemplarPropertyValue, ExemplarValueType } from "@common/exemplars"
 import { readHex, toHex } from "@common/utils/hex"
 import { isNumber } from "@common/utils/types"
 
@@ -83,7 +83,7 @@ export class Binary {
     }
 
     if (this.resizable) {
-      const resized = Buffer.alloc(Math.pow(2, Math.floor(Math.log2(this.$length) + 1)))
+      const resized = Buffer.alloc(2 ** Math.floor(Math.log2(this.$length) + 1))
       this.$bytes.copy(resized)
       this.$bytes = resized
       return
@@ -92,20 +92,16 @@ export class Binary {
     throw Error("Index out of range:")
   }
 
-  public static async fromFile(
-    file: FileHandle,
-    size: number,
-    offset: number = 0,
-  ): Promise<Binary> {
+  public static async fromFile(file: FileHandle, size: number, offset = 0): Promise<Binary> {
     return new Binary(await readBytes(file, size, offset))
   }
 
   public toBytes(): Buffer {
     if (this.$bytes.length === this.$length) {
       return this.$bytes
-    } else {
-      return this.$bytes.subarray(0, this.$length)
     }
+
+    return this.$bytes.subarray(0, this.$length)
   }
 
   public toBase64(): string {
@@ -223,7 +219,7 @@ export class Binary {
       }
 
       default: {
-        throw Error("Unexpected valueType: " + toHex(valueType, 4, true))
+        throw Error(`Unexpected valueType: ${toHex(valueType, 4, true)}`)
       }
     }
   }
@@ -316,35 +312,42 @@ export class Binary {
   ): void {
     switch (valueType) {
       case ExemplarValueType.UInt8: {
-        return this.writeUInt8(value as number, offset)
+        this.writeUInt8(value as number, offset)
+        break
       }
 
       case ExemplarValueType.UInt16: {
-        return this.writeUInt16(value as number, offset)
+        this.writeUInt16(value as number, offset)
+        break
       }
 
       case ExemplarValueType.UInt32: {
-        return this.writeUInt32(value as number, offset)
+        this.writeUInt32(value as number, offset)
+        break
       }
 
       case ExemplarValueType.SInt32: {
-        return this.writeSInt32(value as number, offset)
+        this.writeSInt32(value as number, offset)
+        break
       }
 
       case ExemplarValueType.SInt64: {
-        return this.writeSInt64(value as number, offset)
+        this.writeSInt64(value as number, offset)
+        break
       }
 
       case ExemplarValueType.Float32: {
-        return this.writeFloat32(value as number, offset)
+        this.writeFloat32(value as number, offset)
+        break
       }
 
       case ExemplarValueType.Bool: {
-        return this.writeBool(value as boolean, offset)
+        this.writeBool(value as boolean, offset)
+        break
       }
 
       default: {
-        throw Error("Unexpected valueType: " + toHex(valueType, 4, true))
+        throw Error(`Unexpected valueType: ${toHex(valueType, 4, true)}`)
       }
     }
   }
@@ -358,7 +361,8 @@ export class Binary {
 
     switch (valueType) {
       case ExemplarValueType.String: {
-        return this.writeString(values as string)
+        this.writeString(values as string)
+        break
       }
 
       default: {

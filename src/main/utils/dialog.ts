@@ -1,4 +1,4 @@
-import { MessageBoxOptions, OpenDialogOptions, dialog } from "electron/main"
+import { type MessageBoxOptions, type OpenDialogOptions, dialog } from "electron/main"
 
 import { i18n } from "@common/i18n"
 
@@ -17,7 +17,7 @@ export async function showConfirmation(
   title: string,
   message: string,
   detail?: string,
-  doNotAskAgain: boolean = false,
+  doNotAskAgain = false,
   type: "question" | "warning" = "question",
   yesLabel: string = i18n.t("yes"),
   noLabel: string = i18n.t("no"),

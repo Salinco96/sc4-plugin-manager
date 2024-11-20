@@ -1,5 +1,5 @@
+import path from "node:path"
 import { BrowserWindow } from "electron/main"
-import path from "path"
 
 import { isDev } from "@utils/env"
 

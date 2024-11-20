@@ -1,5 +1,5 @@
-import { OptionInfo } from "@common/options"
-import { PackageID, checkCondition } from "@common/packages"
+import type { OptionInfo } from "@common/options"
+import { type PackageID, checkCondition } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 

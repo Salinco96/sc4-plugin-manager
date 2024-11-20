@@ -1,8 +1,8 @@
-import { Options } from "./options"
-import { PackageID } from "./packages"
-import { ConfigFormat, ExternalFeatures, ID, PackageConfig, PackageConfigs } from "./types"
+import type { Options } from "./options"
+import type { PackageID } from "./packages"
+import type { ConfigFormat, ExternalFeatures, ID, PackageConfig, PackageConfigs } from "./types"
 import { normalizeString } from "./utils/types"
-import { VariantID } from "./variants"
+import type { VariantID } from "./variants"
 
 /** Profile ID */
 export type ProfileID = ID<ProfileInfo>

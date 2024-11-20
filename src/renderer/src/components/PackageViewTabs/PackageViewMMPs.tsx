@@ -6,12 +6,13 @@ import { useTranslation } from "react-i18next"
 
 import { getCategories } from "@common/categories"
 import { getOptionValue, getRequirementLabel, getRequirementValueLabel } from "@common/options"
-import { MMPS_OPTION_ID, PackageID, checkCondition } from "@common/packages"
+import { MMPS_OPTION_ID, type PackageID, checkCondition } from "@common/packages"
 import { toggleElement } from "@common/utils/arrays"
 import { entries } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
 import { MarkdownView } from "@components/MarkdownView"
-import { PackageTag, TagType, createTag, serializeTag } from "@components/Tags"
+import { PackageTag } from "@components/Tags/PackageTag"
+import { TagType, createTag, serializeTag } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
@@ -35,6 +36,8 @@ export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.El
 
   const [openImages, setOpenImages] = useState<string>()
 
+  const { t } = useTranslation("PackageViewMMPs")
+
   const option = variantInfo.options?.find(option => option.id === MMPS_OPTION_ID)
   if (!option) {
     return <></>
@@ -44,8 +47,6 @@ export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.El
     ...packageConfig?.options,
     ...profileInfo?.options,
   }) as string[]
-
-  const { t } = useTranslation("PackageViewMMPs")
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
@@ -149,24 +150,22 @@ export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.El
                   {/* TODO: Better formatting */}
                   {mmp.requirements && (
                     <Typography variant="body2">
-                      <b>{t("requirements")}:</b>
+                      <b>{`${t("requirements")}: `}</b>
                       <ul>
                         {entries(mmp.requirements).map(([requirement, value]) => (
                           <li key={requirement}>
-                            {getRequirementLabel(
+                            {`${getRequirementLabel(
                               t,
                               requirement,
                               variantInfo.options,
                               profileOptions,
-                            )}
-                            {": "}
-                            {getRequirementValueLabel(
+                            )}: ${getRequirementValueLabel(
                               t,
                               requirement,
                               value,
                               variantInfo.options,
                               profileOptions,
-                            )}
+                            )}`}
                           </li>
                         ))}
                       </ul>

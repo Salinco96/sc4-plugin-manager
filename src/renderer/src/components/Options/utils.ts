@@ -1,4 +1,4 @@
-import { OptionInfo } from "@common/options"
+import type { OptionInfo } from "@common/options"
 
 export const NOSECTION = ""
 

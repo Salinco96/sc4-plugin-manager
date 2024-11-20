@@ -1,4 +1,4 @@
-import { Cookie, Session } from "electron/main"
+import type { Cookie, Session } from "electron/main"
 
 import { compact } from "@common/utils/objects"
 import { getCookieHeader } from "@node/fetch"

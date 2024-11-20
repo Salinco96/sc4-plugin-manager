@@ -4,7 +4,7 @@ import { Box } from "@mui/material"
 
 import { keys } from "@common/utils/objects"
 import { AuthorList } from "@components/AuthorList"
-import { getAuthorName } from "@components/Tags" // TODO
+import { getAuthorName } from "@components/Tags/utils" // TODO
 import { useAuthors } from "@utils/store"
 
 function Authors(): JSX.Element {

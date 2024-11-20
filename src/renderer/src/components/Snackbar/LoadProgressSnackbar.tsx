@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useRef } from "react"
 
 import { CardActions, CircularProgress, Typography } from "@mui/material"
-import { CustomContentProps } from "notistack"
+import type { CustomContentProps } from "notistack"
 
 import { useStore, useStoreActions } from "@utils/store"
 
@@ -28,11 +28,11 @@ export const ProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>((
       const timeout = setTimeout(() => actions.closeSnackbar("load-progress"), 100)
       return () => clearTimeout(timeout)
     }
-  }, [message])
+  }, [actions, message])
 
   // Sometimes the action may be so fast that message will already be empty by the time we show the toast
   if (!message && !lastMessageRef.current) {
-    return <div ref={ref}></div>
+    return <div ref={ref} />
   }
 
   return (

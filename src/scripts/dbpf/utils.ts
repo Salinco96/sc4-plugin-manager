@@ -2,13 +2,9 @@ import { TGI } from "@common/dbpf"
 import { toHex } from "@common/utils/hex"
 import { isArray, isNumber, isString } from "@common/utils/types"
 
-import { Exemplar, ExemplarPropertyID } from "./types"
+import type { Exemplar, ExemplarPropertyID } from "./types"
 
-export function get(
-  exemplar: Exemplar,
-  id: ExemplarPropertyID,
-  index: number = 0,
-): number | undefined {
+export function get(exemplar: Exemplar, id: ExemplarPropertyID, index = 0): number | undefined {
   const value = exemplar.data?.properties[id]?.value
 
   if (isArray(value)) {
@@ -69,6 +65,6 @@ export function getString(exemplar: Exemplar, id: ExemplarPropertyID): string | 
 
 export function getBaseTextureId(instanceId: number): string {
   return (instanceId & 0x0000f000) > 0x00003000 // Ignore wealth/rotation
-    ? toHex(instanceId, 8).slice(0, -3) + "000"
-    : toHex(instanceId, 8).slice(0, -4) + "0000"
+    ? `${toHex(instanceId, 8).slice(0, -3)}000`
+    : `${toHex(instanceId, 8).slice(0, -4)}0000`
 }

@@ -1,5 +1,5 @@
-import { ProfileID } from "./profiles"
-import { ConfigFormat } from "./types"
+import type { ProfileID } from "./profiles"
+import type { ConfigFormat } from "./types"
 
 /** Global settings */
 export interface Settings {

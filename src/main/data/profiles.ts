@@ -1,14 +1,14 @@
-import fs from "fs/promises"
-import path from "path"
+import fs from "node:fs/promises"
+import path from "node:path"
 
-import { ProfileData, ProfileID, ProfileInfo, Profiles } from "@common/profiles"
+import type { ProfileData, ProfileID, ProfileInfo, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
 import { isEmpty, keys, mapValues, size, values } from "@common/utils/objects"
 import { isEnum, isObject } from "@common/utils/types"
-import { VariantID } from "@common/variants"
+import type { VariantID } from "@common/variants"
 import { readConfig } from "@node/configs"
 import { createIfMissing } from "@node/files"
-import { TaskContext } from "@utils/tasks"
+import type { TaskContext } from "@utils/tasks"
 
 export async function loadProfiles(context: TaskContext, profilesPath: string): Promise<Profiles> {
   const profiles: Profiles = {}
@@ -46,11 +46,11 @@ export function compactProfileConfig(profile: ProfileInfo): void {
   for (const packageId of keys(profile.packages)) {
     const config = profile.packages[packageId]
     if (config?.options && isEmpty(config.options)) {
-      delete config.options
+      config.options = undefined
     }
 
     if (config?.enabled === false) {
-      delete config.enabled
+      config.enabled = undefined
     }
 
     if (!config?.enabled && !config?.options && !config?.variant) {
@@ -104,7 +104,7 @@ export function toProfileData(profile: Readonly<ProfileInfo>): ProfileData {
     data.packages = profile.packages
     for (const config of values(data.packages)) {
       if (isObject(config)) {
-        delete config.version
+        config.version = undefined
       }
     }
   }

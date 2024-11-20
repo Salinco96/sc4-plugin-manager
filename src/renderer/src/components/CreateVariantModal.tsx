@@ -20,10 +20,10 @@ import {
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { createUniqueId } from "@common/profiles"
 import { keys, values } from "@common/utils/objects"
-import { VariantID } from "@common/variants"
+import type { VariantID } from "@common/variants"
 import { useCurrentVariant, usePackageInfo, useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 

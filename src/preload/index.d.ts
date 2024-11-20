@@ -1,4 +1,4 @@
-import { api } from "."
+import type { api } from "."
 
 declare global {
   interface Window {

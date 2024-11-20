@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { Loader } from "@components/Loader"
 import { MarkdownView } from "@components/MarkdownView"
 import { useCurrentVariant } from "@utils/packages"
@@ -22,6 +22,7 @@ export function PackageViewReadme({ packageId }: { packageId: PackageID }): JSX.
   }
 
   if (readme.html) {
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: Safe
     return <div dangerouslySetInnerHTML={{ __html: readme.html }} style={{ height: "100%" }} />
   }
 

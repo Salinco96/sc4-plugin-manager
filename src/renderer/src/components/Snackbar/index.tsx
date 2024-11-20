@@ -1,8 +1,8 @@
-import { ComponentType } from "react"
+import type { ComponentType } from "react"
 
-import { CustomContentProps } from "notistack"
+import type { CustomContentProps } from "notistack"
 
-import { SnackbarProps, SnackbarType } from "@utils/snackbar"
+import type { SnackbarProps, SnackbarType } from "@utils/snackbar"
 
 import { DownloadProgressSnackbar } from "./DownloadProgressSnackbar"
 import { ProgressSnackbar } from "./LoadProgressSnackbar"

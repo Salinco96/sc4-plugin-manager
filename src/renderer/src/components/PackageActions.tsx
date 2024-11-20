@@ -5,7 +5,7 @@ import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/mate
 import { useTranslation } from "react-i18next"
 
 import {
-  PackageID,
+  type PackageID,
   isDisabled,
   isEnabled,
   isIncluded,
@@ -17,7 +17,7 @@ import {
   isRequired,
 } from "@common/packages"
 import { keys } from "@common/utils/objects"
-import { VariantID } from "@common/variants"
+import type { VariantID } from "@common/variants"
 import { getWarningMessage } from "@common/warnings"
 import {
   useCurrentVariant,
@@ -52,7 +52,6 @@ export function PackageActions({
 
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
-  const packageConfig = currentProfile?.packages[packageId]
   const packageInfo = usePackageInfo(packageId)
   const packageStatus = usePackageStatus(packageId)
   const variantInfo = useCurrentVariant(packageId)
@@ -75,7 +74,7 @@ export function PackageActions({
       const variantInfo = packageInfo.variants[id]
       return variantInfo && !isInvalid(variantInfo, packageStatus)
     })
-  }, [packageInfo, packageStatus])
+  }, [packageInfo, packageStatus, variantIds])
 
   const packageActions = useMemo(() => {
     const packageActions: PackageAction[] = []
@@ -175,7 +174,7 @@ export function PackageActions({
     }
 
     return packageActions
-  }, [currentProfile, packageConfig, packageId, t, variantId, variantInfo])
+  }, [actions, currentProfile, packageId, packageStatus, t, variantId, variantInfo])
 
   if (!packageActions.length) {
     return null
@@ -272,7 +271,7 @@ export function PackageActions({
         >
           {variantIds.map(id => (
             <MenuItem key={id} value={id} disabled={!selectableVariantIds.includes(id)}>
-              {packageInfo.variants[id]!.name /* TODO */}
+              {packageInfo.variants[id]?.name /* TODO */}
             </MenuItem>
           ))}
         </Select>

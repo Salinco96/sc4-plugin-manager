@@ -1,4 +1,4 @@
-import { ID } from "./types"
+import type { ID } from "./types"
 
 /** Asset ID */
 export type AssetID = ID<AssetInfo>

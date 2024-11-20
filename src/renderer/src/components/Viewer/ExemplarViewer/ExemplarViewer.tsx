@@ -13,10 +13,10 @@ import { Virtuoso } from "react-virtuoso"
 
 import { TGI } from "@common/dbpf"
 import {
-  ExemplarData,
-  ExemplarDataPatch,
+  type ExemplarData,
+  type ExemplarDataPatch,
   ExemplarDisplayType,
-  ExemplarPropertyValue,
+  type ExemplarPropertyValue,
   ExemplarValueType,
 } from "@common/exemplars"
 import { readHex, toHex } from "@common/utils/hex"
@@ -26,7 +26,7 @@ import { FlexBox } from "@components/FlexBox"
 
 import { Viewer } from "../Viewer"
 
-import { ExemplarProperty, ExemplarPropertyProps } from "./ExemplarProperty"
+import { ExemplarProperty, type ExemplarPropertyProps } from "./ExemplarProperty"
 import { getDiff, getErrors } from "./utils"
 
 export interface ExemplarViewerProps {
@@ -58,7 +58,7 @@ export function ExemplarViewer({
   useEffect(() => {
     setCurrentData(data)
     setOriginalData(original ?? data)
-    setPatchedData(patchedData)
+    setPatchedData(data)
   }, [data, original])
 
   const diff = useMemo(() => getDiff(currentData, originalData), [currentData, originalData])
@@ -67,13 +67,13 @@ export function ExemplarViewer({
 
   const isPatched = original !== undefined && !!diff && !isLocal
 
-  function getOriginalValue(propertyId: number): ExemplarPropertyValue | null | undefined {
-    if (diff?.properties?.[toHex(propertyId, 8)] !== undefined) {
-      return originalData?.properties[propertyId]?.value ?? null
-    }
-  }
-
   const fields: ExemplarPropertyProps[] = useMemo(() => {
+    function getOriginalValue(propertyId: number): ExemplarPropertyValue | null | undefined {
+      if (diff?.properties?.[toHex(propertyId, 8)] !== undefined) {
+        return originalData?.properties[propertyId]?.value ?? null
+      }
+    }
+
     const fields = values(currentData.properties).map<ExemplarPropertyProps>(property => ({
       errors: errors?.properties?.[property.id],
       onChange(value) {

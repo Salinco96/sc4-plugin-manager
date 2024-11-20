@@ -57,7 +57,7 @@ function Settings(): JSX.Element {
           </FlexBox>
           <FlexBox alignItems="center" height={38} gap={2}>
             <Typography sx={{ flex: 1 }}>{t("install.patched.label")}</Typography>
-            {!settings?.install?.patched ? (
+            {settings?.install?.patched ? (
               <FlexBox
                 alignItems="center"
                 sx={{

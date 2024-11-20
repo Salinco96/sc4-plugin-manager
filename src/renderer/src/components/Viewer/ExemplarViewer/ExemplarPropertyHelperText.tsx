@@ -1,6 +1,6 @@
 import { FormHelperText, Link } from "@mui/material"
 
-import { type ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
+import type { ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
 
 import { formatValue } from "./utils"
 

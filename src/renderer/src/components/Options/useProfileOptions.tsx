@@ -1,4 +1,4 @@
-import { OptionInfo } from "@common/options"
+import type { OptionInfo } from "@common/options"
 import { checkCondition } from "@common/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 

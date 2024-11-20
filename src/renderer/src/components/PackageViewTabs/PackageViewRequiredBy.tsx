@@ -1,4 +1,4 @@
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { PackageList } from "@components/PackageList"
 import { useDependentPackages } from "@utils/packages"
 

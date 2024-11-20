@@ -1,10 +1,10 @@
 import { CategoryID } from "@common/categories"
-import { LotData } from "@common/types"
+import type { LotData } from "@common/types"
 import { toHex } from "@common/utils/hex"
 import { values } from "@common/utils/objects"
 
 import {
-  Exemplar,
+  type Exemplar,
   ExemplarPropertyID,
   LotConfigPropertyType,
   PurposeType,

@@ -1,4 +1,4 @@
-import { type ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
+import type { ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
 import { FlexBox } from "@components/FlexBox"
 
 import { ExemplarPropertyHelperText } from "./ExemplarPropertyHelperText"
@@ -41,7 +41,6 @@ export function ExemplarPropertySingle({
           original={original === null || original === undefined ? original : [original]}
           property={property}
           readonly={readonly}
-          setExpanded={() => {}}
           showRightMargin={false}
           value={[value]}
         />

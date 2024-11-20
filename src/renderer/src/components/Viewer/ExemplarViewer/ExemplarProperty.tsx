@@ -1,16 +1,19 @@
-import { type ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
+import type {
+  ExemplarProperty as ExemplarPropertyType,
+  ExemplarPropertyValue,
+} from "@common/exemplars"
 import { toHex } from "@common/utils/hex"
 import { isArray } from "@common/utils/types"
 
 import { ExemplarPropertyArray } from "./ExemplarPropertyArray"
 import { ExemplarPropertySingle } from "./ExemplarPropertySingle"
-import { PropertyErrors } from "./utils"
+import type { PropertyErrors } from "./utils"
 
 export interface ExemplarPropertyProps {
   errors: PropertyErrors | undefined
   onChange: (newValue: ExemplarPropertyValue | null) => void
   original: ExemplarPropertyValue | null | undefined
-  property: ExemplarProperty
+  property: ExemplarPropertyType
   readonly: boolean
 }
 

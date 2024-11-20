@@ -1,6 +1,6 @@
 import { Dialog, DialogContent, DialogTitle } from "@mui/material"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { usePackageInfo } from "@utils/packages"
 
 import { PackageOptionsForm } from "./PackageOptionsForm"

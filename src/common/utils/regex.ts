@@ -5,7 +5,7 @@ export function getLastWord(search: string): string {
 }
 
 export function getStartOfWordSearchRegex(search: string): RegExp {
-  return RegExp("\\b" + search.replace(/\W/g, "\\$&"), "i")
+  return RegExp(`\\b${search.replace(/\W/g, "\\$&")}`, "i")
 }
 
 export function removeLastWord(search: string): string {

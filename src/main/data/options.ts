@@ -1,13 +1,13 @@
 import {
   ALL,
-  OptionData,
-  OptionID,
-  OptionInfo,
+  type OptionData,
+  type OptionID,
+  type OptionInfo,
   OptionType,
-  Requirements,
+  type Requirements,
   isOptionSingleValue,
 } from "@common/options"
-import { Primitive } from "@common/types"
+import type { Primitive } from "@common/types"
 
 import {
   loadArray,
@@ -52,10 +52,10 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
             label: loadString(choice.label, id, "label"),
             value: loadInteger(choice.value, id, "value", true),
           }
-        } else {
-          return {
-            value: loadInteger(choice, id, "value", true),
-          }
+        }
+
+        return {
+          value: loadInteger(choice, id, "value", true),
         }
       })
 
@@ -74,14 +74,14 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
           display: loadEnum(data.display, ["checkbox", "select"] as const, id, "display"),
           multi,
         }
-      } else {
-        return {
-          ...common,
-          default: loadInteger(data.default, id, "default"),
-          min: loadInteger(data.min, id, "min"),
-          max: loadInteger(data.max, id, "max"),
-          step: loadInteger(data.step, id, "step"),
-        }
+      }
+
+      return {
+        ...common,
+        default: loadInteger(data.default, id, "default"),
+        min: loadInteger(data.min, id, "min"),
+        max: loadInteger(data.max, id, "max"),
+        step: loadInteger(data.step, id, "step"),
       }
     }
 
@@ -94,10 +94,10 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
             label: loadString(choice.label, id, "label"),
             value: loadString(choice.value, id, "value", true),
           }
-        } else {
-          return {
-            value: loadString(choice, id, "value", true),
-          }
+        }
+
+        return {
+          value: loadString(choice, id, "value", true),
         }
       })
 
@@ -116,11 +116,11 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
           display: loadEnum(data.display, ["checkbox", "select"] as const, id, "display"),
           multi,
         }
-      } else {
-        return {
-          ...common,
-          default: loadString(data.default, id, "default"),
-        }
+      }
+
+      return {
+        ...common,
+        default: loadString(data.default, id, "default"),
       }
     }
   }

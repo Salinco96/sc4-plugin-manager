@@ -5,7 +5,7 @@ import { Box, Button, Divider, Menu, MenuItem, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import {
-  PackageID,
+  type PackageID,
   isEnabled,
   isIncluded,
   isIncompatible,
@@ -14,10 +14,10 @@ import {
   isOutdated,
   isRequired,
 } from "@common/packages"
-import { VariantID } from "@common/variants"
+import type { VariantID } from "@common/variants"
 import { getWarningMessage } from "@common/warnings"
 import { usePackageStatus, useVariantInfo } from "@utils/packages"
-import { useCurrentProfile, useStoreActions } from "@utils/store"
+import { useStoreActions } from "@utils/store"
 
 import { FlexBox } from "./FlexBox"
 
@@ -43,8 +43,6 @@ export function VariantActions({
   const { t } = useTranslation("PackageActions")
 
   const actions = useStoreActions()
-  const currentProfile = useCurrentProfile()
-  const packageConfig = currentProfile?.packages[packageId]
   const packageStatus = usePackageStatus(packageId)
   const variantInfo = useVariantInfo(packageId, variantId)
 
@@ -114,7 +112,7 @@ export function VariantActions({
     }
 
     return packageActions
-  }, [currentProfile, packageConfig, packageId, t, variantId, variantInfo])
+  }, [actions, packageId, packageStatus, t, variantId, variantInfo])
 
   if (!packageActions.length) {
     return null

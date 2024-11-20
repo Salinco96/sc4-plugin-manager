@@ -23,9 +23,9 @@ import { CategoryID } from "@common/categories"
 import { getPackageStatus, isError } from "@common/packages"
 import { VariantState } from "@common/types"
 import { values } from "@common/utils/objects"
-import { Location, Page } from "@utils/navigation"
+import { type Location, Page } from "@utils/navigation"
 import { filterVariant, getCurrentVariant } from "@utils/packages"
-import { PackageFilters, Store, getCurrentProfile } from "@utils/store"
+import { type PackageFilters, type Store, getCurrentProfile } from "@utils/store"
 
 export interface TabInfo {
   badgeColor?: "error" | "info"

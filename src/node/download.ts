@@ -1,13 +1,13 @@
-import { Hash, createHash } from "crypto"
-import { createWriteStream } from "fs"
-import path from "path"
-import { Readable, Transform, TransformCallback } from "stream"
-import { finished } from "stream/promises"
-import { ReadableStream } from "stream/web"
+import { type Hash, createHash } from "node:crypto"
+import { createWriteStream } from "node:fs"
+import path from "node:path"
+import { Readable, Transform, type TransformCallback } from "node:stream"
+import { finished } from "node:stream/promises"
+import type { ReadableStream } from "node:stream/web"
 
 import { parse as parseContentDisposition } from "content-disposition"
 
-import { Logger } from "@common/logs"
+import type { Logger } from "@common/logs"
 
 import { extract7z, extractArchive, extractMSI } from "./extract"
 import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
@@ -16,7 +16,7 @@ import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
 export class DownloadTransformStream extends Transform {
   public readonly hash: Hash
   public readonly onProgress: (bytes: number) => void
-  public size: number = 0
+  public size = 0
 
   public constructor(onProgress: (bytes: number) => void) {
     super()

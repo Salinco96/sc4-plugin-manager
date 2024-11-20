@@ -1,4 +1,4 @@
-import { ExemplarData } from "./exemplars"
+import type { ExemplarData } from "./exemplars"
 import { readHex, toHex } from "./utils/hex"
 
 export type TGI = `${string}-${string}-${string}`
@@ -41,7 +41,7 @@ export function isCompressed(entry: DBPFEntry): boolean {
 }
 
 export function isType(id: TGI, type: DBPFFileType): boolean {
-  return new RegExp("^" + type, "i").test(id)
+  return new RegExp(`^${type}`, "i").test(id)
 }
 
 export enum DBPFFileType {

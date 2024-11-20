@@ -1,7 +1,7 @@
-import { Namespace, TFunction } from "i18next"
+import type { Namespace, TFunction } from "i18next"
 
 import { getFeatureLabel } from "./i18n"
-import { Feature, ID } from "./types"
+import type { Feature, ID } from "./types"
 import { isArrayOf, isBoolean, isNumber, isString } from "./utils/types"
 
 export const ALL = "all"

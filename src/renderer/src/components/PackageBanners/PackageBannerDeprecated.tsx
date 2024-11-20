@@ -2,7 +2,7 @@ import { BedtimeOutlined as DeprecatedIcon } from "@mui/icons-material"
 import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { useNavigation } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo, usePackageStatus } from "@utils/packages"
 import { useStoreActions } from "@utils/store"

@@ -2,12 +2,7 @@ export function readHex(value: string): number {
   return Number.parseInt(value.replace(/^0x/, ""), 16)
 }
 
-export function toHex(
-  value: number,
-  size?: number,
-  prefix: boolean = false,
-  uppercase: boolean = false,
-): string {
+export function toHex(value: number, size?: number, prefix = false, uppercase = false): string {
   let hex = value.toString(16)
 
   if (size !== undefined) {

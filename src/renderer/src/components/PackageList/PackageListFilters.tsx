@@ -27,7 +27,7 @@ import { getStateLabel } from "@common/variants"
 import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
 
 import {
-  SerializedTag,
+  type SerializedTag,
   TagType,
   deserializeTag,
   getTagLabel,
@@ -72,7 +72,7 @@ export function PackageListFilters(): JSX.Element {
         packageFilters.states,
       ).map(state => serializeTag(TagType.STATE, state)),
     ]
-  }, [authors, categories, packageFilters, states, t])
+  }, [authors, categories, categoryIds, packageFilters, states, t])
 
   const tags: SerializedTag[] = useMemo(() => {
     return [
@@ -87,7 +87,7 @@ export function PackageListFilters(): JSX.Element {
       <ToggleButtonGroup
         value={packageFilters.state}
         exclusive
-        onChange={(_, value) => actions.setPackageFilters({ state: value ?? null })}
+        onChange={(event, value) => actions.setPackageFilters({ state: value ?? null })}
         size="small"
       >
         <Tooltip placement="bottom" title={t("actions.showOnlyEnabled")}>
@@ -117,7 +117,7 @@ export function PackageListFilters(): JSX.Element {
                 packageFilters.incompatible && "incompatible",
               ].filter(Boolean)
         }
-        onChange={(_, values) => {
+        onChange={(event, values) => {
           actions.setPackageFilters({
             dependencies: values.includes("dependencies"),
             experimental: values.includes("experimental"),
@@ -160,14 +160,14 @@ export function PackageListFilters(): JSX.Element {
         getOptionLabel={option => {
           if (isValidTag(option)) {
             return getTagLabel(t, deserializeTag(option), authors, categories)
-          } else {
-            return option
           }
+
+          return option
         }}
         inputValue={packageFilters.search}
         limitTags={4}
         multiple
-        onChange={(_, values, reason) => {
+        onChange={(event, values, reason) => {
           const filters = { ...packageFilters }
 
           filters.authors = []
@@ -205,7 +205,7 @@ export function PackageListFilters(): JSX.Element {
 
           actions.setPackageFilters(filters)
         }}
-        onInputChange={(_, search, reason) => {
+        onInputChange={(event, search, reason) => {
           if (reason !== "reset") {
             actions.setPackageFilters({ search })
           }

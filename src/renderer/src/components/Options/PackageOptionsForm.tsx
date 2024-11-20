@@ -1,4 +1,4 @@
-import { PackageID, checkCondition } from "@common/packages"
+import { type PackageID, checkCondition } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
 import {
   useCurrentProfile,

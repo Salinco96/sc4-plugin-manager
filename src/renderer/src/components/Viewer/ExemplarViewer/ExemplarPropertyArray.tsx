@@ -3,7 +3,7 @@ import { useState } from "react"
 import { AddCircleOutline as AddIcon } from "@mui/icons-material"
 import { IconButton } from "@mui/material"
 
-import { type ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
+import type { ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
 import { fill, splice } from "@common/utils/arrays"
 import { isArray, isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
@@ -11,7 +11,7 @@ import { FlexBox } from "@components/FlexBox"
 import { CurveEditor } from "./CurveEditor"
 import { ExemplarPropertyHelperText } from "./ExemplarPropertyHelperText"
 import { ExemplarPropertyInputGroup } from "./ExemplarPropertyInputGroup"
-import { PropertyErrors, getItemInfo } from "./utils"
+import { type PropertyErrors, getItemInfo } from "./utils"
 
 export interface ExemplarPropertyArrayProps {
   errors: PropertyErrors | undefined
@@ -35,8 +35,8 @@ export function ExemplarPropertyArray({
   const { info } = property
 
   const groupSize = info?.size && info.repeat ? info.size : 1
-  const maxLength = info?.size && !info.repeat ? info.size : info?.maxLength ?? groupSize * 16
-  const minLength = info?.size && !info.repeat ? info.size : info?.minLength ?? 0
+  const maxLength = info?.size && !info.repeat ? info.size : (info?.maxLength ?? groupSize * 16)
+  const minLength = info?.size && !info.repeat ? info.size : (info?.minLength ?? 0)
   const groupCount = Math.max(Math.ceil(value.length / groupSize), 1)
 
   const canAdd = value.length > 0 && value.length + groupSize <= maxLength && !readonly
@@ -88,7 +88,8 @@ export function ExemplarPropertyArray({
           original={
             original === undefined
               ? undefined
-              : original?.slice(groupIndex * groupSize, groupIndex * groupSize + groupSize) ?? null
+              : (original?.slice(groupIndex * groupSize, groupIndex * groupSize + groupSize) ??
+                null)
           }
           property={property}
           readonly={readonly}

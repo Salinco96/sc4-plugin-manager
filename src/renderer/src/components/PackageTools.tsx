@@ -12,8 +12,8 @@ import {
 } from "@mui/icons-material"
 import { useTranslation } from "react-i18next"
 
-import { PackageID } from "@common/packages"
-import { VariantID } from "@common/variants"
+import type { PackageID } from "@common/packages"
+import type { VariantID } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
 import { PackageOptionsDialog } from "@components/Options"
 import { useVariantInfo } from "@utils/packages"

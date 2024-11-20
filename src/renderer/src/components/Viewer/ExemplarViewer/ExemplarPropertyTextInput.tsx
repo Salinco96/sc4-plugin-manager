@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react"
 
 import { Box, InputAdornment, TextField } from "@mui/material"
 
-import { ExemplarDisplayType, ExemplarProperty, ExemplarValueType } from "@common/exemplars"
+import { ExemplarDisplayType, type ExemplarProperty, ExemplarValueType } from "@common/exemplars"
 import { toHex } from "@common/utils/hex"
 import { isNumber } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
@@ -20,21 +20,21 @@ import {
 } from "./utils"
 
 export interface ExemplarPropertyTextInputProps {
-  description?: string
-  error?: boolean
+  description: string | undefined
+  error: boolean | undefined
   index: number
-  isExpandable?: boolean
-  isExpanded?: boolean
+  isExpandable: boolean
+  isExpanded: boolean
   isFirst: boolean
   isLast: boolean
-  itemLabel?: string
+  itemLabel: string | undefined
   label: string
   name: string
   onChange: (newValue: number | string | null) => void
   openColorPicker: () => void
   property: ExemplarProperty
-  readonly?: boolean
-  setExpanded: (isExpanded: boolean) => void
+  readonly: boolean
+  setExpanded?: (isExpanded: boolean) => void
   value: number | string | null
 }
 
@@ -77,11 +77,11 @@ export function ExemplarPropertyTextInput({
 
   const color = useMemo(() => {
     if (isNumber(value) && type === ExemplarValueType.UInt32) {
-      switch (info?.display) {
+      switch (itemInfo?.display) {
         case ExemplarDisplayType.RGB:
-          return "#" + toHex(value, 8).slice(-6)
+          return `#${toHex(value, 8).slice(-6)}`
         case ExemplarDisplayType.RGBA:
-          return "#" + toHex(value, 8)
+          return `#${toHex(value, 8)}`
       }
     }
   }, [itemInfo, type, value])
@@ -148,7 +148,9 @@ export function ExemplarPropertyTextInput({
       label={
         isFirst ? (
           <>
-            {isExpandable && <ExpandButton isExpanded={!!isExpanded} setExpanded={setExpanded} />}
+            {isExpandable && setExpanded && (
+              <ExpandButton isExpanded={!!isExpanded} setExpanded={setExpanded} />
+            )}
             {label}
           </>
         ) : undefined
@@ -171,7 +173,7 @@ export function ExemplarPropertyTextInput({
         }
       }}
       onFocus={() => {
-        setExpanded(true)
+        setExpanded?.(true)
       }}
       size="small"
       title={description}

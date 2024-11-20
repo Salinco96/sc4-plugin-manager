@@ -1,6 +1,6 @@
+import path from "node:path"
+import { pathToFileURL } from "node:url"
 import { net, protocol } from "electron/main"
-import path from "path"
-import { pathToFileURL } from "url"
 
 import { isChild } from "../../node/files"
 

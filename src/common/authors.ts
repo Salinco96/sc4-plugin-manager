@@ -1,4 +1,4 @@
-import { ID } from "./types"
+import type { ID } from "./types"
 
 /** Author ID */
 export type AuthorID = ID<AuthorInfo>

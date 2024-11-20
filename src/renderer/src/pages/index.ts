@@ -1,6 +1,6 @@
-import { ComponentType, lazy } from "react"
+import { type ComponentType, lazy } from "react"
 
-import { Page, PageData } from "@utils/navigation"
+import type { Page, PageData } from "@utils/navigation"
 
 export const PageComponents: {
   [T in Page]: ComponentType<PageData<T>>

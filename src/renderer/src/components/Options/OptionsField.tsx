@@ -12,7 +12,7 @@ import {
   TextField,
 } from "@mui/material"
 
-import { OptionInfo, OptionType, OptionValue, Requirements } from "@common/options"
+import { type OptionInfo, OptionType, type OptionValue, type Requirements } from "@common/options"
 import { isArray } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
@@ -30,6 +30,8 @@ export function OptionsField({
   option: OptionInfo
   value: OptionValue
 }): JSX.Element | null {
+  const labelId = `${option.id}-label`
+
   if (option.type === OptionType.BOOLEAN) {
     if (option.display === "switch") {
       return (
@@ -87,7 +89,7 @@ export function OptionsField({
 
         return (
           <FormControl fullWidth>
-            {option.label && <FormLabel id={option.id + "-label"}>{option.label}</FormLabel>}
+            {option.label && <FormLabel id={labelId}>{option.label}</FormLabel>}
             {option.choices.length > 2 && (
               <FormControlLabel
                 checked={allChecked}
@@ -130,9 +132,9 @@ export function OptionsField({
 
       return (
         <FormControl fullWidth>
-          {option.label && <FormLabel id={option.id + "-label"}>{option.label}</FormLabel>}
+          {option.label && <FormLabel id={labelId}>{option.label}</FormLabel>}
           <RadioGroup
-            aria-labelledby={option.id + "-label"}
+            aria-labelledby={labelId}
             name={option.id}
             value={value}
             onChange={event => {
@@ -158,11 +160,11 @@ export function OptionsField({
 
     return (
       <FormControl fullWidth>
-        {option.label && <InputLabel id={option.id + "-label"}>{option.label}</InputLabel>}
+        {option.label && <InputLabel id={labelId}>{option.label}</InputLabel>}
         <Select<OptionValue>
           disabled={disabled}
           fullWidth
-          labelId={option.id + "-label"}
+          labelId={labelId}
           label={option.label}
           multiple={option.multi}
           name={option.id}

@@ -1,6 +1,8 @@
+import type { EmptyRecord } from "@common/utils/types"
+
 interface CustomProps {
-  "download-progress": {}
-  "load-progress": {}
+  "download-progress": EmptyRecord
+  "load-progress": EmptyRecord
 }
 
 export type SnackbarType = keyof CustomProps

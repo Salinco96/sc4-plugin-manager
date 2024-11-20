@@ -1,16 +1,16 @@
-import fs from "fs/promises"
-import path from "path"
+import fs from "node:fs/promises"
+import path from "node:path"
 
 import { i18n } from "@common/i18n"
-import { Profiles } from "@common/profiles"
-import { Settings } from "@common/settings"
+import type { Profiles } from "@common/profiles"
+import type { Settings } from "@common/settings"
 import { keys } from "@common/utils/objects"
 import { loadConfig } from "@node/configs"
 import { createIfMissing, moveTo } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showConfirmation, showSuccess } from "@utils/dialog"
 import { check4GBPatch, checkInstallPath, getExeVersion } from "@utils/exe"
-import { TaskContext } from "@utils/tasks"
+import type { TaskContext } from "@utils/tasks"
 
 export async function loadSettings(
   context: TaskContext,
@@ -84,11 +84,11 @@ export async function loadSettings(
       settings.install ??= { path: installPath }
       settings.install.path = installPath
     } else {
-      delete settings.install
+      settings.install = undefined
     }
   } catch (error) {
     context.error("Failed to determine game installation path", error)
-    delete settings.install
+    settings.install = undefined
   }
 
   if (settings.install) {

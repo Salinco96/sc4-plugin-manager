@@ -1,4 +1,4 @@
-import { Component, ComponentType, ErrorInfo, ReactNode } from "react"
+import { Component, type ComponentType, type ErrorInfo, type ReactNode } from "react"
 
 export type ErrorComponentProps = {
   clearError: () => void

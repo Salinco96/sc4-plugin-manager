@@ -1,6 +1,6 @@
-import { exec } from "child_process"
+import { exec } from "node:child_process"
 
-import { Logger } from "@common/logs"
+import type { Logger } from "@common/logs"
 
 export async function cmd(cmd: string): Promise<string> {
   return new Promise((resolve, reject) => {

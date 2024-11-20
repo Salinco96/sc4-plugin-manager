@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { Alert, AlertTitle, Button } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
 import { useCurrentVariant } from "@utils/packages"

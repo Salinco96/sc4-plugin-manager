@@ -11,7 +11,7 @@ import { isArray, isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { ExemplarPropertyInput } from "./ExemplarPropertyInput"
-import { PropertyErrors } from "./utils"
+import type { PropertyErrors } from "./utils"
 
 export interface ColorProps {
   alpha: boolean
@@ -34,7 +34,7 @@ export interface ExemplarPropertyInputGroupProps<T extends number[] | string[] |
   original: T | null | undefined
   property: ExemplarProperty
   readonly: boolean
-  setExpanded: (isExpanded: boolean) => void
+  setExpanded?: (isExpanded: boolean) => void
   showRightMargin: boolean
   value: T
 }
@@ -73,14 +73,14 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
         case ExemplarDisplayType.RGB:
           return {
             alpha: false,
-            color: "#" + toHex(Number(value.at(0)) || 0, 8).slice(-6),
+            color: `#${toHex(Number(value.at(0)) || 0, 8).slice(-6)}`,
             parse: hex => [Number.parseInt(hex.replace("#", ""), 16)],
           }
 
         case ExemplarDisplayType.RGBA:
           return {
             alpha: true,
-            color: "#" + toHex(Number(value.at(0)) || 0, 8),
+            color: `#${toHex(Number(value.at(0)) || 0, 8)}`,
             parse: hex => [Number.parseInt(hex.replace("#", ""), 16)],
           }
       }
@@ -91,7 +91,7 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
         case ExemplarDisplayType.RGB:
           return {
             alpha: false,
-            color: "#" + values.map(h => toHex(Number(h) || 0, 2)).join(""),
+            color: `#${values.map(h => toHex(Number(h) || 0, 2)).join("")}`,
             parse: hex =>
               [
                 hex.replace("#", "").slice(0, 2),
@@ -103,7 +103,7 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
         case ExemplarDisplayType.RGBA:
           return {
             alpha: true,
-            color: "#" + values.map(h => toHex(Number(h) || 0, 2)).join(""),
+            color: `#${values.map(h => toHex(Number(h) || 0, 2)).join("")}`,
             parse: hex =>
               [
                 hex.replace("#", "").slice(0, 2),
@@ -114,7 +114,7 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
           }
       }
     }
-  }, [info, type, value])
+  }, [info, type, value, values])
 
   return (
     <>

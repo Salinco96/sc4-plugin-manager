@@ -1,4 +1,4 @@
-import { AssetData, AssetID, AssetInfo } from "@common/assets"
+import type { AssetData, AssetID, AssetInfo } from "@common/assets"
 import { failInDev } from "@utils/env"
 
 import { loadDate, loadInteger, loadString } from "./loader"
@@ -70,7 +70,7 @@ export function loadAssetInfo(
       url,
       version,
     }
-  } else {
-    failInDev(`Could not infer URL for asset ID ${assetId}`)
   }
+
+  failInDev(`Could not infer URL for asset ID ${assetId}`)
 }

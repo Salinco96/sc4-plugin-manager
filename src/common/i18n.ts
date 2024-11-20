@@ -1,8 +1,8 @@
-import i18next, { Namespace, TFunction } from "i18next"
+import i18next, { type Namespace, type TFunction } from "i18next"
 
 import en from "@config/i18n/en.json"
 
-import { Feature } from "./types"
+import type { Feature } from "./types"
 import { isNumber, isString } from "./utils/types"
 
 export type Translations = typeof en
@@ -45,7 +45,7 @@ export function initI18n(i18n: typeof i18next): void {
         return value
       }
 
-      if (isNumber(value) && isFinite(value)) {
+      if (isNumber(value) && Number.isFinite(value)) {
         return formatter.format(value)
       }
 
@@ -67,11 +67,13 @@ export function initI18n(i18n: typeof i18next): void {
 
     if (multiline) {
       return labels.map(label => i18n.t("li", { label, lng })).join("\n")
-    } else if (separator) {
-      return labels.join(separator)
-    } else {
-      return new Intl.ListFormat(lng).format(labels)
     }
+
+    if (separator) {
+      return labels.join(separator)
+    }
+
+    return new Intl.ListFormat(lng).format(labels)
   })
 
   i18n.services.formatter?.add("paren", value => {
@@ -79,7 +81,7 @@ export function initI18n(i18n: typeof i18next): void {
       return value && i18n.t("paren", { value })
     }
 
-    if (isNumber(value) && isFinite(value)) {
+    if (isNumber(value) && Number.isFinite(value)) {
       return i18n.t("paren", { value })
     }
 
@@ -98,7 +100,7 @@ export function initI18n(i18n: typeof i18next): void {
         return value
       }
 
-      if (isNumber(value) && isFinite(value)) {
+      if (isNumber(value) && Number.isFinite(value)) {
         return formatter.format(value / 100)
       }
 

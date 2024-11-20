@@ -12,7 +12,7 @@ import {
   useTheme,
 } from "@mui/material"
 
-import { OptionInfo, OptionValue, Options, Requirements } from "@common/options"
+import type { OptionInfo, OptionValue, Options, Requirements } from "@common/options"
 
 import { OptionsFormSection } from "./OptionsFormSection"
 import { NOSECTION, getSections } from "./utils"

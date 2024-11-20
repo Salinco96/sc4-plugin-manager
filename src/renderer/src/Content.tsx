@@ -1,17 +1,17 @@
-import { ComponentType, Suspense, useEffect } from "react"
+import { type ComponentType, Suspense, useEffect } from "react"
 
-import { ErrorBoundary, ErrorComponentProps } from "@components/ErrorBoundary"
+import { ErrorBoundary, type ErrorComponentProps } from "@components/ErrorBoundary"
 
 import { Loader } from "./components/Loader"
 import { Modal } from "./components/Modal"
 import { PageComponents } from "./pages"
-import { Page, PageData, useHistory, useLocation } from "./utils/navigation"
+import { type Page, type PageData, useHistory, useLocation } from "./utils/navigation"
 
 function ContentErrorComponent({ clearError, error }: ErrorComponentProps) {
   const { subscribe } = useHistory()
 
   // Clear error when changing location
-  useEffect(() => subscribe(clearError), [subscribe])
+  useEffect(() => subscribe(clearError), [clearError, subscribe])
 
   return <>{error.message}</>
 }

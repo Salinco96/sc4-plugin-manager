@@ -1,9 +1,9 @@
-import { HTMLElement } from "node-html-parser"
+import type { HTMLElement } from "node-html-parser"
 
-import { AssetID } from "@common/assets"
-import { PackageID } from "@common/packages"
-import { BuildingData, Feature, ID, LotData } from "@common/types"
-import { VariantID } from "@common/variants"
+import type { AssetID } from "@common/assets"
+import type { PackageID } from "@common/packages"
+import type { BuildingData, Feature, ID, LotData } from "@common/types"
+import type { VariantID } from "@common/variants"
 
 export interface IndexerOptions {
   include: {
@@ -97,7 +97,7 @@ export interface IndexerSource {
   getCookies(): { [name: string]: string }
   getDownloadUrl(assetId: AssetID, variant?: string): string
   getEntries(html: HTMLElement): IndexerBaseEntry[]
-  getEntryDetails(assetId: AssetID, html: HTMLElement): IndexerEntryDetails
+  getEntryDetails(html: HTMLElement): IndexerEntryDetails
   getVariants(html: HTMLElement): { [variant: string]: string }
   id: IndexerSourceID
 }

@@ -1,16 +1,16 @@
-import path from "path"
+import path from "node:path"
 
-import { AssetID } from "@common/assets"
-import { AuthorID } from "@common/authors"
+import type { AssetID } from "@common/assets"
+import type { AuthorID } from "@common/authors"
 import { CategoryID } from "@common/categories"
-import { PackageID } from "@common/packages"
-import { PackageData } from "@common/types"
+import type { PackageID } from "@common/packages"
+import type { PackageData } from "@common/types"
 import { groupBy, union } from "@common/utils/arrays"
 import { isString } from "@common/utils/types"
-import { VariantID } from "@common/variants"
+import type { VariantID } from "@common/variants"
 import { getExtension } from "@node/files"
 
-import { IndexerEntry, IndexerSource } from "../types"
+import type { IndexerEntry, IndexerSource } from "../types"
 import { htmlToMd } from "../utils"
 
 // Common dependencies for which URL detection will not be accurate (e.g. BSC Common Dependencies Pack)
@@ -86,7 +86,7 @@ export function extractSupportUrl(html: string): string | undefined {
 }
 
 export function writePackageData(
-  packageData: PackageData = {},
+  packageData: PackageData,
   packageId: PackageID,
   assetId: AssetID,
   source: IndexerSource | undefined,

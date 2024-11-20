@@ -1,10 +1,10 @@
-import { FileHandle } from "fs/promises"
+import type { FileHandle } from "node:fs/promises"
 
 import {
   DBPFDataType,
-  DBPFEntry,
-  DBPFEntryData,
-  DBPFFile,
+  type DBPFEntry,
+  type DBPFEntryData,
+  type DBPFFile,
   DBPFFileType,
   TGI,
   getDataType,
@@ -12,11 +12,11 @@ import {
   isType,
 } from "@common/dbpf"
 import {
-  ExemplarData,
-  ExemplarDataPatch,
-  ExemplarProperty,
-  ExemplarPropertyInfo,
-  ExemplarPropertyValue,
+  type ExemplarData,
+  type ExemplarDataPatch,
+  type ExemplarProperty,
+  type ExemplarPropertyInfo,
+  type ExemplarPropertyValue,
   ExemplarValueType,
   PropertyKeyType,
 } from "@common/exemplars"
@@ -124,7 +124,7 @@ export async function loadDBPF(
             try {
               entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(file, entry, options)
               continue
-            } catch (error) {
+            } catch (_error) {
               // Ignore
             }
           }
@@ -175,7 +175,7 @@ export async function loadDBPFEntry<T extends DBPFDataType>(
     }
 
     default:
-      throw Error("Unsupported entry type: " + type)
+      throw Error(`Unsupported entry type: ${type}`)
   }
 }
 
@@ -194,11 +194,11 @@ export async function patchDBPFEntries(
   const contents = await loadDBPF(inFile, { ...options, loadExemplars: true })
 
   // Check that all TGIs exist
-  keys(patches).forEach(entryId => {
+  for (const entryId of keys(patches)) {
     if (!contents.entries[entryId]) {
-      throw Error("Missing entry: " + entryId)
+      throw Error(`Missing entry: ${entryId}`)
     }
-  })
+  }
 
   let offset = 0
 
@@ -224,7 +224,7 @@ export async function patchDBPFEntries(
 
     if (patch) {
       if (entry.type !== DBPFDataType.EXMP) {
-        throw Error("Not an exemplar entry: " + entry.id)
+        throw Error(`Not an exemplar entry: ${entry.id}`)
       }
 
       const originalData =
@@ -249,7 +249,7 @@ export async function patchDBPFEntries(
             const info = property?.info ?? options.exemplarProperties[propertyId]
             const type = property?.type ?? info?.type
             if (!type) {
-              throw Error("Unknown property: " + toHex(propertyId, 8, true))
+              throw Error(`Unknown property: ${toHex(propertyId, 8, true)}`)
             }
 
             exemplarData.properties[propertyId] = {
@@ -357,7 +357,7 @@ function loadExemplar(
         switch (keyType) {
           case PropertyKeyType.Single: {
             if (unused !== 0) {
-              throw Error("Unexpected unused: " + toHex(unused, 2, true))
+              throw Error(`Unexpected unused: ${toHex(unused, 2, true)}`)
             }
 
             properties[propertyId] = {
@@ -384,7 +384,7 @@ function loadExemplar(
           }
 
           default: {
-            throw Error("Unexpected keyType: " + toHex(keyType, 4, true))
+            throw Error(`Unexpected keyType: ${toHex(keyType, 4, true)}`)
           }
         }
       }
@@ -417,11 +417,11 @@ function loadExemplar(
 
             const valueType = ExemplarValueType[rawType as keyof typeof ExemplarValueType]
 
-            let value: ExemplarPropertyValue
+            let value: ExemplarPropertyValue | undefined
 
             switch (valueType) {
               case ExemplarValueType.String: {
-                value = rawValue.match(/^"(.+)"$/)![1]
+                value = rawValue.match(/^"(.+)"$/)?.[1]
                 break
               }
 
@@ -453,7 +453,7 @@ function loadExemplar(
     }
 
     default: {
-      throw Error("Unexpected mode: " + mode)
+      throw Error(`Unexpected mode: ${mode}`)
     }
   }
 

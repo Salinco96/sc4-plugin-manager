@@ -1,8 +1,8 @@
 import { Update as UpdateIcon } from "@mui/icons-material"
 import { useTranslation } from "react-i18next"
 
-import { PackageID } from "@common/packages"
-import { VariantID } from "@common/variants"
+import type { PackageID } from "@common/packages"
+import type { VariantID } from "@common/variants"
 import { usePackageInfo, useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 

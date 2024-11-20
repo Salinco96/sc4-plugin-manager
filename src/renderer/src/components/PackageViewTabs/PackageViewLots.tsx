@@ -6,11 +6,12 @@ import { useTranslation } from "react-i18next"
 
 import { getCategories } from "@common/categories"
 import { getOptionValue, getRequirementLabel, getRequirementValueLabel } from "@common/options"
-import { LOTS_OPTION_ID, PackageID, checkCondition } from "@common/packages"
+import { LOTS_OPTION_ID, type PackageID, checkCondition } from "@common/packages"
 import { toggleElement } from "@common/utils/arrays"
 import { entries } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
-import { PackageTag, TagType, createTag, serializeTag } from "@components/Tags"
+import { PackageTag } from "@components/Tags/PackageTag"
+import { TagType, createTag, serializeTag } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
@@ -34,6 +35,8 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
 
   const [openImages, setOpenImages] = useState<string>()
 
+  const { t } = useTranslation("PackageViewLots")
+
   const option = variantInfo.options?.find(option => option.id === LOTS_OPTION_ID)
   if (!option) {
     return <></>
@@ -43,8 +46,6 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
     ...packageConfig?.options,
     ...profileInfo?.options,
   }) as string[]
-
-  const { t } = useTranslation("PackageViewLots")
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
@@ -149,42 +150,47 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     {/* TODO: Better formatting */}
                     {lot.stage && (
                       <Typography variant="body2">
-                        <b>{t("stage")}:</b> {lot.stage}
+                        <b>{`${t("stage")}: `}</b>
+                        {lot.stage}
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.cost !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("cost")}:</b> {lot.cost} §
+                        <b>{`${t("cost")}: `}</b>
+                        {lot.cost} §
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.maintenance !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("maintenance")}:</b> {lot.maintenance} § / month
+                        <b>{`${t("maintenance")}: `}</b>
+                        {lot.maintenance} § / month
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.bulldoze !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("bulldoze")}:</b> {lot.bulldoze} §
+                        <b>{`${t("bulldoze")}: `}</b>
+                        {lot.bulldoze} §
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.size && (
                       <Typography variant="body2">
-                        <b>{t("size")}:</b> {lot.size}
+                        <b>{`${t("size")}: `}</b>
+                        {lot.size}
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.capacity && (
                       <Typography variant="body2">
-                        <b>{t("demand")}:</b>{" "}
+                        <b>{`${t("demand")}: `}</b>
                         {Object.entries(lot.capacity)
                           .reverse()
                           .map(([type, capacity]) => `${capacity} ${type.toUpperCase()}`)
@@ -195,7 +201,7 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     {/* TODO: Better formatting */}
                     {lot.landmark !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("landmark")}:</b>{" "}
+                        <b>{`${t("landmark")}: `}</b>
                         {t("overTiles", {
                           amount: lot.landmark,
                           count: lot.landmarkRadius ?? 0,
@@ -206,7 +212,7 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     {/* TODO: Better formatting */}
                     {lot.rating !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("rating")}:</b>{" "}
+                        <b>{`${t("rating")}: `}</b>
                         {t("overTiles", {
                           amount: lot.rating,
                           count: lot.ratingRadius ?? 0,
@@ -217,35 +223,39 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     {/* TODO: Better formatting */}
                     {lot.powerProduction !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("powerProduction")}:</b> {lot.powerProduction}
+                        <b>{`${t("powerProduction")}: `}</b>
+                        {lot.powerProduction}
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.power !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("power")}:</b> {lot.power}
+                        <b>{`${t("power")}: `}</b>
+                        {lot.power}
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.waterProduction !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("waterProduction")}:</b> {lot.waterProduction}
+                        <b>{`${t("waterProduction")}: `}</b>
+                        {lot.waterProduction}
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.water !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("water")}:</b> {lot.water}
+                        <b>{`${t("water")}: `}</b>
+                        {lot.water}
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.pollution !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("pollution")}:</b>{" "}
+                        <b>{`${t("pollution")}: `}</b>
                         {t("overTiles", {
                           amount: lot.pollution,
                           count: lot.pollutionRadius ?? 0,
@@ -256,7 +266,7 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     {/* TODO: Better formatting */}
                     {lot.waterPollution !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("waterPollution")}:</b>{" "}
+                        <b>{`${t("waterPollution")}: `}</b>
                         {t("overTiles", {
                           amount: lot.waterPollution,
                           count: lot.waterPollutionRadius ?? 0,
@@ -267,7 +277,7 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     {/* TODO: Better formatting */}
                     {lot.garbage !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("garbage")}:</b>{" "}
+                        <b>{`${t("garbage")}: `}</b>
                         {t("overTiles", {
                           amount: lot.garbage,
                           count: lot.garbageRadius ?? 0,
@@ -278,7 +288,7 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     {/* TODO: Better formatting */}
                     {lot.radiation !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("radiation")}:</b>{" "}
+                        <b>{`${t("radiation")}: `}</b>
                         {t("overTiles", {
                           amount: lot.radiation,
                           count: lot.radiationRadius ?? 0,
@@ -289,31 +299,30 @@ export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.El
                     {/* TODO: Better formatting */}
                     {lot.flamability !== undefined && (
                       <Typography variant="body2">
-                        <b>{t("flamability")}:</b> {lot.flamability}
+                        <b>{`${t("flamability")}: `}</b>
+                        {lot.flamability}
                       </Typography>
                     )}
 
                     {/* TODO: Better formatting */}
                     {lot.requirements && (
                       <Typography variant="body2">
-                        <b>{t("requirements")}:</b>
+                        <b>{`${t("requirements")}: `}</b>
                         <ul>
                           {entries(lot.requirements).map(([requirement, value]) => (
                             <li key={requirement}>
-                              {getRequirementLabel(
+                              {`${getRequirementLabel(
                                 t,
                                 requirement,
                                 variantInfo.options,
                                 profileOptions,
-                              )}
-                              {": "}
-                              {getRequirementValueLabel(
+                              )}: ${getRequirementValueLabel(
                                 t,
                                 requirement,
                                 value,
                                 variantInfo.options,
                                 profileOptions,
-                              )}
+                              )}`}
                             </li>
                           ))}
                         </ul>

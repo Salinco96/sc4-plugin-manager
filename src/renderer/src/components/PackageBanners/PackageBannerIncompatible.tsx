@@ -5,8 +5,8 @@ import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
 import { getFeatureLabel } from "@common/i18n"
-import { PackageID } from "@common/packages"
-import { Issue, VariantID, VariantIssue } from "@common/variants"
+import type { PackageID } from "@common/packages"
+import { Issue, type VariantID, type VariantIssue } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
 import { useCurrentVariant } from "@utils/packages"
 import { getPackageName, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
@@ -24,7 +24,7 @@ export function PackageBannerIncompatible({
 }): JSX.Element {
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
-  const variantInfo = useCurrentVariant(packageId)
+  const currentVariantId = useCurrentVariant(packageId).id
 
   const packageNames = useStore(store => issue.packages?.map(id => getPackageName(store, id)))
   const incompatiblePackageId = issue.packages?.at(0)
@@ -41,7 +41,7 @@ export function PackageBannerIncompatible({
     switch (id) {
       case Issue.CONFLICTING_FEATURE:
       case Issue.INCOMPATIBLE_FEATURE: {
-        if (variantId !== variantInfo.id) {
+        if (variantId !== currentVariantId) {
           if (incompatiblePackageId) {
             return {
               description: t("incompatible.actions.replacePackages.description", {
@@ -86,7 +86,17 @@ export function PackageBannerIncompatible({
         }
       }
     }
-  }, [actions, currentProfile, incompatiblePackageId, issue, packageNames])
+  }, [
+    actions,
+    currentProfile,
+    currentVariantId,
+    incompatiblePackageId,
+    issue,
+    packageId,
+    packageNames,
+    t,
+    variantId,
+  ])
 
   return (
     <PackageBanner

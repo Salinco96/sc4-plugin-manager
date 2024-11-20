@@ -2,9 +2,10 @@ import { useMemo } from "react"
 
 import { create } from "zustand"
 
-import { AuthorID } from "@common/authors"
-import { PackageID } from "@common/packages"
+import type { AuthorID } from "@common/authors"
+import type { PackageID } from "@common/packages"
 import { removeElement } from "@common/utils/arrays"
+import type { EmptyRecord } from "@common/utils/types"
 
 export enum Page {
   Authors = "Authors",
@@ -16,12 +17,12 @@ export enum Page {
 }
 
 export type PageData<T extends Page> = {
-  Authors: {}
+  Authors: EmptyRecord
   AuthorView: { authorId: AuthorID }
-  Packages: {}
+  Packages: EmptyRecord
   PackageView: { packageId: PackageID }
-  Profile: {}
-  Settings: {}
+  Profile: EmptyRecord
+  Settings: EmptyRecord
 }[T]
 
 export type Location<T extends Page = Page> = {
@@ -52,14 +53,16 @@ export const useHistory = create<History>()((set, get) => ({
     const { current, entries, listeners } = get()
     if (entries.length) {
       const location = entries.at(-1)
+
       set({
         current: location,
         entries: entries.slice(0, -1),
         previous: current,
       })
-      listeners.forEach(listener => {
+
+      for (const listener of listeners) {
         listener(location as Location<Page>)
-      })
+      }
     }
   },
   current: initialLocation,
@@ -72,18 +75,20 @@ export const useHistory = create<History>()((set, get) => ({
       entries: [...entries, current],
       previous: current,
     })
-    listeners.forEach(listener => {
+
+    for (const listener of listeners) {
       listener(location as Location<Page>)
-    })
+    }
   },
   replace(location) {
     const { listeners } = get()
     set({
       current: location as Location<Page>,
     })
-    listeners.forEach(listener => {
+
+    for (const listener of listeners) {
       listener(location as Location<Page>)
-    })
+    }
   },
   subscribe(listener) {
     set(state => ({
@@ -98,9 +103,9 @@ export const useHistory = create<History>()((set, get) => ({
   },
 }))
 
-export const useLocation = (() => useHistory(history => history.current)) as {
-  <T extends Page>(): Location<T>
-}
+export const useLocation = (() => useHistory(history => history.current)) as <
+  T extends Page,
+>() => Location<T>
 
 export interface Navigation {
   openPackageView(packageId: PackageID): void

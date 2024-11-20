@@ -1,7 +1,7 @@
-import { ReactNode, forwardRef } from "react"
+import { type ReactNode, forwardRef } from "react"
 
 import { Card, styled } from "@mui/material"
-import { CustomContentProps, SnackbarContent } from "notistack"
+import { type CustomContentProps, SnackbarContent } from "notistack"
 
 const Snackbar = forwardRef<
   HTMLDivElement,

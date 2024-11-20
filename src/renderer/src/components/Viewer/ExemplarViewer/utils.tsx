@@ -1,10 +1,10 @@
 import {
-  ExemplarData,
-  ExemplarDataPatch,
+  type ExemplarData,
+  type ExemplarDataPatch,
   ExemplarDisplayType,
-  ExemplarProperty,
-  ExemplarPropertyItemInfo,
-  ExemplarPropertyValue,
+  type ExemplarProperty,
+  type ExemplarPropertyItemInfo,
+  type ExemplarPropertyValue,
   ExemplarValueType,
 } from "@common/exemplars"
 import { isEqual } from "@common/utils/arrays"

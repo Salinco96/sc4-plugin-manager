@@ -1,5 +1,5 @@
-import { DBPFDataType, DBPFEntry } from "@common/dbpf"
-import { ExemplarDataPatch } from "@common/exemplars"
+import { DBPFDataType, type DBPFEntry } from "@common/dbpf"
+import type { ExemplarDataPatch } from "@common/exemplars"
 
 import { ExemplarViewer } from "./ExemplarViewer/ExemplarViewer"
 import { ImageViewer } from "./ImageViewer"

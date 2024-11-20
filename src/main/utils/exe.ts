@@ -1,13 +1,14 @@
-import path from "path"
+import path from "node:path"
 
 import { i18n } from "@common/i18n"
 import { FileOpenMode, copyTo, exists, openFile } from "@node/files"
 import { PEFlag, getPEFlag, getPEHeader, setPEFlag, setPEHeader } from "@node/pe"
 import { cmd } from "@node/processes"
 
+import { app } from "electron/main"
 import { FILENAMES, SC4_INSTALL_PATHS } from "./constants"
 import { showConfirmation, showError, showFolderSelector, showSuccess } from "./dialog"
-import { TaskContext } from "./tasks"
+import type { TaskContext } from "./tasks"
 
 export async function checkInstallPath(
   context: TaskContext,
@@ -26,24 +27,25 @@ export async function checkInstallPath(
     }
   }
 
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    installPath = await showFolderSelector(
+  let currentPath: string | undefined = installPath || app.getPath("home")
+
+  while (currentPath) {
+    currentPath = await showFolderSelector(
       i18n.t("SelectGameInstallFolderModal:title"),
-      installPath,
+      currentPath,
     )
 
-    if (!installPath) {
+    if (!currentPath) {
       return
     }
 
-    if (await exists(getExePath(installPath))) {
-      return installPath
+    if (await exists(getExePath(currentPath))) {
+      return currentPath
     }
   }
 }
 
-export async function check4GBPatch(
+export function check4GBPatch(
   context: TaskContext,
   installPath: string,
   options: {

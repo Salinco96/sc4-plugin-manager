@@ -1,61 +1,53 @@
-import { IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
+import { type IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
-import { AuthorID } from "@common/authors"
-import { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
-import { ExemplarDataPatch } from "@common/exemplars"
-import { ModalData, ModalID } from "@common/modals"
-import { PackageID } from "@common/packages"
-import { ProfileID, ProfileUpdate } from "@common/profiles"
-import { ApplicationStateUpdate } from "@common/state"
-import { VariantID } from "@common/variants"
+import type { AuthorID } from "@common/authors"
+import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
+import type { ExemplarDataPatch } from "@common/exemplars"
+import type { ModalData, ModalID } from "@common/modals"
+import type { PackageID } from "@common/packages"
+import type { ProfileID, ProfileUpdate } from "@common/profiles"
+import type { ApplicationStateUpdate } from "@common/state"
+import type { VariantID } from "@common/variants"
 
 // Custom APIs for renderer
 export const api = {
-  async check4GBPatch(): Promise<void> {
+  check4GBPatch(): Promise<void> {
     return ipcRenderer.invoke("check4GBPatch")
   },
-  async cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
+  cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("cleanVariant", packageId, variantId)
   },
-  async clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
+  clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("clearPackageLogs", packageId, variantId)
   },
-  async clearUnusedPackages(): Promise<void> {
+  clearUnusedPackages(): Promise<void> {
     return ipcRenderer.invoke("clearUnusedPackages")
   },
-  async createProfile(name: string, templateProfileId?: ProfileID): Promise<void> {
+  createProfile(name: string, templateProfileId?: ProfileID): Promise<void> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
   },
-  async createVariant(
-    packageId: PackageID,
-    name: string,
-    templateVariantId: VariantID,
-  ): Promise<void> {
+  createVariant(packageId: PackageID, name: string, templateVariantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("createVariant", packageId, name, templateVariantId)
   },
-  async getPackageLogs(
+  getPackageLogs(
     packageId: PackageID,
     variantId: VariantID,
   ): Promise<{ size: number; text: string } | null> {
     return ipcRenderer.invoke("getPackageLogs", packageId, variantId)
   },
-  async getPackageReadme(
+  getPackageReadme(
     packageId: PackageID,
     variantId: VariantID,
   ): Promise<{ html?: string; md?: string }> {
     return ipcRenderer.invoke("getPackageReadme", packageId, variantId)
   },
-  async installVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
+  installVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("installVariant", packageId, variantId)
   },
-  async loadDBPFEntries(
-    packageId: PackageID,
-    variantId: VariantID,
-    filePath: string,
-  ): Promise<DBPFFile> {
+  loadDBPFEntries(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile> {
     return ipcRenderer.invoke("loadDBPFEntries", packageId, variantId, filePath)
   },
-  async loadDBPFEntry(
+  loadDBPFEntry(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
@@ -63,36 +55,32 @@ export const api = {
   ): Promise<DBPFEntry> {
     return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entryId)
   },
-  async openAuthorURL(authorId: AuthorID): Promise<void> {
+  openAuthorURL(authorId: AuthorID): Promise<void> {
     return ipcRenderer.invoke("openAuthorURL", authorId)
   },
-  async openExecutableDirectory(): Promise<void> {
+  openExecutableDirectory(): Promise<void> {
     return ipcRenderer.invoke("openExecutableDirectory")
   },
-  async openInstallationDirectory(): Promise<void> {
+  openInstallationDirectory(): Promise<void> {
     return ipcRenderer.invoke("openInstallationDirectory")
   },
-  async openPackageConfig(packageId: PackageID): Promise<void> {
+  openPackageConfig(packageId: PackageID): Promise<void> {
     return ipcRenderer.invoke("openPackageConfig", packageId)
   },
-  async openPackageFile(
-    packageId: PackageID,
-    variantId: VariantID,
-    filePath: string,
-  ): Promise<void> {
+  openPackageFile(packageId: PackageID, variantId: VariantID, filePath: string): Promise<void> {
     return ipcRenderer.invoke("openPackageFile", packageId, variantId, filePath)
   },
-  async openProfileConfig(profileId: ProfileID): Promise<void> {
+  openProfileConfig(profileId: ProfileID): Promise<void> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
   },
-  async openVariantURL(
+  openVariantURL(
     packageId: PackageID,
     variantId: VariantID,
     type: "repository" | "support" | "url",
   ): Promise<void> {
     return ipcRenderer.invoke("openVariantURL", packageId, variantId, type)
   },
-  async patchDBPFEntries(
+  patchDBPFEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
@@ -102,16 +90,16 @@ export const api = {
   ): Promise<DBPFFile> {
     return ipcRenderer.invoke("patchDBPFEntries", packageId, variantId, filePath, patches)
   },
-  async removeProfile(profileId: ProfileID): Promise<boolean> {
+  removeProfile(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("removeProfile", profileId)
   },
-  async removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
+  removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("removeVariant", packageId, variantId)
   },
-  async simtropolisLogin(): Promise<void> {
+  simtropolisLogin(): Promise<void> {
     return ipcRenderer.invoke("simtropolisLogin")
   },
-  async simtropolisLogout(): Promise<void> {
+  simtropolisLogout(): Promise<void> {
     return ipcRenderer.invoke("simtropolisLogout")
   },
   subscribe(handlers: {
@@ -136,10 +124,10 @@ export const api = {
       ipcRenderer.off("updateState", updateState)
     }
   },
-  async switchProfile(profileId: ProfileID): Promise<boolean> {
+  switchProfile(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("switchProfile", profileId)
   },
-  async updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean> {
+  updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean> {
     return ipcRenderer.invoke("updateProfile", profileId, data)
   },
 }

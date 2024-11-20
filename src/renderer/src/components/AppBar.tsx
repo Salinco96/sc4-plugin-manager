@@ -17,7 +17,7 @@ import {
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { ProfileID, ProfileInfo } from "@common/profiles"
+import type { ProfileID, ProfileInfo } from "@common/profiles"
 import { values } from "@common/utils/objects"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 import { spacing } from "@utils/styles"

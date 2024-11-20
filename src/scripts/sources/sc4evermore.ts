@@ -2,7 +2,7 @@ import { ID } from "@common/types"
 import { indexBy } from "@common/utils/arrays"
 
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
-import { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
+import type { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
 
 const sourceId: IndexerSourceID = ID("sc4evermore")
 
@@ -173,7 +173,7 @@ export const SC4EVERMORE: IndexerSource = {
       }
     })
   },
-  getEntryDetails(assetId, html) {
+  getEntryDetails(html) {
     const description = html.querySelector(".jd_main")?.innerHTML
 
     const images = html.querySelectorAll(".jd_main img").map(img => img.attributes.src)

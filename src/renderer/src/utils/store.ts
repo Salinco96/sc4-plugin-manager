@@ -1,23 +1,23 @@
-import update, { Spec } from "immutability-helper"
-import { SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
+import update, { type Spec } from "immutability-helper"
+import { type SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
 import { create } from "zustand"
 
-import { AuthorID, Authors } from "@common/authors"
-import { CategoryID } from "@common/categories"
-import { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
-import { ExemplarDataPatch } from "@common/exemplars"
-import { ModalData, ModalID } from "@common/modals"
-import { OptionID, OptionValue } from "@common/options"
-import { PackageID, getPackageStatus, isIncluded } from "@common/packages"
-import { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
-import { Settings } from "@common/settings"
-import { ApplicationState, ApplicationStateUpdate, getInitialState } from "@common/state"
-import { Features, PackageInfo, VariantState } from "@common/types"
+import type { AuthorID, Authors } from "@common/authors"
+import type { CategoryID } from "@common/categories"
+import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
+import type { ExemplarDataPatch } from "@common/exemplars"
+import type { ModalData, ModalID } from "@common/modals"
+import type { OptionID, OptionValue } from "@common/options"
+import { type PackageID, getPackageStatus, isIncluded } from "@common/packages"
+import type { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
+import type { Settings } from "@common/settings"
+import { type ApplicationState, type ApplicationStateUpdate, getInitialState } from "@common/state"
+import type { Features, PackageInfo, VariantState } from "@common/types"
 import { compact, isEmpty } from "@common/utils/objects"
-import { VariantID } from "@common/variants"
+import type { VariantID } from "@common/variants"
 
 import { computePackageList } from "./packages"
-import { SnackbarProps, SnackbarType } from "./snackbar"
+import type { SnackbarProps, SnackbarType } from "./snackbar"
 
 export interface PackageUi {
   variantId: VariantID
@@ -153,13 +153,13 @@ export const useStore = create<Store>()((set, get): Store => {
           return false
         }
       },
-      async check4GBPatch() {
+      check4GBPatch() {
         return window.api.check4GBPatch()
       },
-      async clearPackageLogs(packageId, variantId) {
+      clearPackageLogs(packageId, variantId) {
         return window.api.clearPackageLogs(packageId, variantId)
       },
-      async clearUnusedPackages() {
+      clearUnusedPackages() {
         return window.api.clearUnusedPackages()
       },
       closeSnackbar(type) {
@@ -169,10 +169,10 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ snackbars: { $unset: [type] } })
         }
       },
-      async createProfile(name, templateProfileId) {
+      createProfile(name, templateProfileId) {
         return window.api.createProfile(name, templateProfileId)
       },
-      async createVariant(packageId, name, templateVariantId) {
+      createVariant(packageId, name, templateVariantId) {
         return window.api.createVariant(packageId, name, templateVariantId)
       },
       async disablePackage(packageId) {
@@ -213,10 +213,10 @@ export const useStore = create<Store>()((set, get): Store => {
           return false
         }
       },
-      async getPackageLogs(packageId, variantId) {
+      getPackageLogs(packageId, variantId) {
         return window.api.getPackageLogs(packageId, variantId)
       },
-      async getPackageReadme(packageId, variantId) {
+      getPackageReadme(packageId, variantId) {
         return window.api.getPackageReadme(packageId, variantId)
       },
       async installVariant(packageId, variantId) {
@@ -227,28 +227,28 @@ export const useStore = create<Store>()((set, get): Store => {
           this.showErrorToast(`Failed to install ${packageId}`)
         }
       },
-      async loadDBPFEntries(packageId, variantId, filePath) {
+      loadDBPFEntries(packageId, variantId, filePath) {
         return window.api.loadDBPFEntries(packageId, variantId, filePath)
       },
-      async loadDBPFEntry(packageId, variantId, filePath, entryId) {
+      loadDBPFEntry(packageId, variantId, filePath, entryId) {
         return window.api.loadDBPFEntry(packageId, variantId, filePath, entryId)
       },
-      async openAuthorURL(authorId) {
+      openAuthorURL(authorId) {
         return window.api.openAuthorURL(authorId)
       },
-      async openInstallationDirectory() {
+      openInstallationDirectory() {
         return window.api.openInstallationDirectory()
       },
-      async openExecutableDirectory() {
+      openExecutableDirectory() {
         return window.api.openExecutableDirectory()
       },
-      async openPackageConfig(packageId) {
+      openPackageConfig(packageId) {
         return window.api.openPackageConfig(packageId)
       },
-      async openPackageFile(packageId, variantId, filePath) {
+      openPackageFile(packageId, variantId, filePath) {
         return window.api.openPackageFile(packageId, variantId, filePath)
       },
-      async openProfileConfig(profileId) {
+      openProfileConfig(profileId) {
         return window.api.openProfileConfig(profileId)
       },
       openSnackbar(type, props) {
@@ -257,10 +257,10 @@ export const useStore = create<Store>()((set, get): Store => {
           updateState({ snackbars: { [type]: { $set: id } } })
         }
       },
-      async openVariantURL(packageId, variantId, type) {
+      openVariantURL(packageId, variantId, type) {
         return window.api.openVariantURL(packageId, variantId, type)
       },
-      async patchDBPFEntries(packageId, variantId, filePath, patches) {
+      patchDBPFEntries(packageId, variantId, filePath, patches) {
         return window.api.patchDBPFEntries(packageId, variantId, filePath, patches)
       },
       async removeProfile(profileId) {
@@ -294,8 +294,8 @@ export const useStore = create<Store>()((set, get): Store => {
             },
           })
         } catch (error) {
-          console.error(`Failed to reset options`, error)
-          this.showErrorToast(`Failed to reset options`)
+          console.error("Failed to reset options", error)
+          this.showErrorToast("Failed to reset options")
         }
       },
       setPackageFilters(filters) {
@@ -394,11 +394,11 @@ export const useStore = create<Store>()((set, get): Store => {
       showSuccessToast(message) {
         enqueueSnackbar(message, { variant: "success" })
       },
-      async simtropolisLogin(): Promise<void> {
+      simtropolisLogin(): Promise<void> {
         updateState({ simtropolis: { $set: null } })
         return window.api.simtropolisLogin()
       },
-      async simtropolisLogout(): Promise<void> {
+      simtropolisLogout(): Promise<void> {
         updateState({ simtropolis: { $set: null } })
         return window.api.simtropolisLogout()
       },

@@ -1,5 +1,5 @@
 import { ID } from "./types"
-import { VariantInfo } from "./variants"
+import type { VariantInfo } from "./variants"
 
 /** Category ID */
 export type CategoryID = ID<CategoryInfo>
@@ -42,12 +42,13 @@ export function getCategories(variantInfo: VariantInfo): CategoryID[] {
 
 export function getCategoryLabel(categoryId: CategoryID, categories: Categories): string {
   const info = categories[categoryId]
+
   if (info) {
     return info.label
-  } else {
-    console.error(`Unknown category '${categoryId}'`)
-    return categoryId
   }
+
+  console.error(`Unknown category '${categoryId}'`)
+  return categoryId
 }
 
 export function isCategory(variantInfo: VariantInfo, categoryId: CategoryID): boolean {

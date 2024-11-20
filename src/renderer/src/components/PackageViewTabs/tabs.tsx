@@ -1,14 +1,14 @@
-import { ComponentType } from "react"
+import type { ComponentType } from "react"
 
-import { TFunction } from "i18next"
+import type { TFunction } from "i18next"
 import { create as createStore } from "zustand"
 
-import { PackageID, isLocal, isPatched } from "@common/packages"
-import { PackageInfo, VariantState } from "@common/types"
+import { type PackageID, isLocal, isPatched } from "@common/packages"
+import { type PackageInfo, VariantState } from "@common/types"
 import { size } from "@common/utils/objects"
-import { VariantInfo } from "@common/variants"
+import type { VariantInfo } from "@common/variants"
 import { PackageOptionsForm } from "@components/Options"
-import { Tag, TagType, createTag } from "@components/Tags"
+import { type Tag, TagType, createTag } from "@components/Tags/utils"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"
 import { PackageViewFiles } from "./PackageViewFiles"

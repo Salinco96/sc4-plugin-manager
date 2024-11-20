@@ -10,8 +10,8 @@ import { ExemplarPropertyTextInput } from "./ExemplarPropertyTextInput"
 import { getItemInfo } from "./utils"
 
 export interface ExemplarPropertyInputProps<T extends boolean | number | string> {
-  error?: boolean
-  index?: number
+  error: boolean | undefined
+  index: number | undefined
   isExpandable: boolean
   isExpanded: boolean
   isFirst: boolean
@@ -19,10 +19,10 @@ export interface ExemplarPropertyInputProps<T extends boolean | number | string>
   name: string
   onChange: (newValue: T) => void
   openColorPicker: () => void
-  original?: T | null
+  original: T | null | undefined
   property: ExemplarProperty
-  readonly?: boolean
-  setExpanded: (isExpanded: boolean) => void
+  readonly: boolean
+  setExpanded?: (isExpanded: boolean) => void
   value: T | null
 }
 
@@ -43,7 +43,7 @@ export function ExemplarPropertyInput<T extends boolean | number | string>({
 
   const idLabel = toHex(id, 8, true)
   const typeLabel = isTGI ? "TGI" : ExemplarValueType[type]
-  const label = `${info && id ? `${info.name} (${idLabel})` : info?.name ?? idLabel} - ${typeLabel}`
+  const label = `${info && id ? `${info.name} (${idLabel})` : (info?.name ?? idLabel)} - ${typeLabel}`
 
   const description = itemInfo?.desc ?? info?.desc
 

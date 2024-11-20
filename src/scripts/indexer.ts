@@ -1,21 +1,25 @@
-import { readdir } from "fs/promises"
-import path from "path"
+import { readdir } from "node:fs/promises"
+import path from "node:path"
 
 import { input, select } from "@inquirer/prompts"
 import { config } from "dotenv"
 import { glob } from "glob"
 
-import { AssetData, AssetID } from "@common/assets"
-import { AuthorData, AuthorID } from "@common/authors"
-import { ExemplarPropertyData, ExemplarPropertyInfo, ExemplarValueType } from "@common/exemplars"
-import { PackageID } from "@common/packages"
-import { ConfigFormat, ID, PackageData } from "@common/types"
+import type { AssetData, AssetID } from "@common/assets"
+import type { AuthorData, AuthorID } from "@common/authors"
+import {
+  type ExemplarPropertyData,
+  type ExemplarPropertyInfo,
+  ExemplarValueType,
+} from "@common/exemplars"
+import type { PackageID } from "@common/packages"
+import { ConfigFormat, ID, type PackageData } from "@common/types"
 import { difference, indexBy, isEqual, mapDefined, removeElement } from "@common/utils/arrays"
 import { globToRegex } from "@common/utils/glob"
 import { readHex } from "@common/utils/hex"
 import { forEach, forEachAsync, isEmpty, keys, mapValues, values } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
-import { VariantData, VariantID } from "@common/variants"
+import type { VariantData, VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -26,7 +30,7 @@ import { analyzeSC4Files } from "./dbpf/dbpf"
 import { writePackageData } from "./dbpf/packages"
 import { SC4EVERMORE } from "./sources/sc4evermore"
 import { SIMTROPOLIS } from "./sources/simtropolis"
-import {
+import type {
   EntryID,
   IndexerEntry,
   IndexerEntryList,
@@ -86,7 +90,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   } = {}
 
   function getAssetID(entryId: EntryID, hint?: string): AssetID {
-    return (assetIds[entryId] ??= (hint ?? entryId) as AssetID)
+    assetIds[entryId] ??= (hint ?? entryId) as AssetID
+    return assetIds[entryId]
   }
 
   function getEntry(entryId: EntryID): IndexerEntry {
@@ -589,7 +594,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       if (source && entry.url) {
         console.debug(`Fetching ${entry.url}...`)
         const html = await readHTML(await get(entry.url, { cookies: () => source.getCookies() }))
-        const details = source.getEntryDetails(assetId, html)
+        const details = source.getEntryDetails(html)
         if (!details.version) {
           errors.add(`Missing version for entry ${assetId}`)
           return
@@ -600,7 +605,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
         // If a new version is available, force to extract files again
         if (entry.version !== details.version) {
-          delete entry.meta.version
+          entry.meta.version = undefined
         }
 
         // Set details
@@ -1025,18 +1030,19 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
       const dependencies = mapDefined(entry.dependencies ?? [], dependency => {
         const sourceId = getSourceId(dependency as EntryID)
+
         if (dbPackagesConfigs[sourceId]?.[dependency as PackageID]) {
           return dependency as PackageID
-        } else {
-          return getOverride(getEntryID(dependency))?.packageId
         }
+
+        return getOverride(getEntryID(dependency))?.packageId
       })
 
       const authorId = packageId.split("/")[0] as AuthorID
       const authors = removeElement(mapDefined(entry.authors, getAuthorId), authorId)
 
-      const packageData = dbPackagesConfigs[authorId]?.[packageId]
-      const variantData = packageData?.variants?.[variantId]
+      const packageData = dbPackagesConfigs[authorId]?.[packageId] ?? {}
+      const variantData = packageData.variants?.[variantId]
 
       // Create or update package/variant data
       if (!variantData?.release || variantData.release < entry.meta.timestamp) {
@@ -1142,9 +1148,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return data
   }
 
-  async function writeOverrides(overrides: {
-    [entryId in EntryID]?: IndexerOverride | null
-  }): Promise<void> {
+  async function writeOverrides(
+    overrides: {
+      [entryId in EntryID]?: IndexerOverride | null
+    },
+  ): Promise<void> {
     const data: {
       [assetId in AssetID]?: IndexerOverride | null
     } = {}
@@ -1176,7 +1184,7 @@ function getExePath(exe: string): string {
 }
 
 async function loadExemplarProperties(): Promise<{ [id: number]: ExemplarPropertyInfo }> {
-  console.debug(`Loading authors...`)
+  console.debug("Loading authors...")
   const config = await loadConfig<{ [id: string]: ExemplarPropertyData }>(
     dbDir,
     "configs/exemplar-properties",
@@ -1205,7 +1213,7 @@ async function loadExemplarProperties(): Promise<{ [id: number]: ExemplarPropert
 }
 
 async function loadAuthorsFromDB(): Promise<{ [authorId: AuthorID]: AuthorData }> {
-  console.debug(`Loading authors...`)
+  console.debug("Loading authors...")
   const config = await loadConfig<{ [authorId: AuthorID]: AuthorData }>(dbDir, "authors")
   return config?.data ?? {}
 }

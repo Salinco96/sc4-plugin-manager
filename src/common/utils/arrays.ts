@@ -1,4 +1,4 @@
-import { Primitive } from "@common/types"
+import type { Primitive } from "@common/types"
 
 import { isArray, isDefined } from "./types"
 
@@ -89,12 +89,13 @@ export function toggleElement<T>(array: ReadonlyArray<T>, value: T): T[] {
 
 export function removeElement$<T>(array: T[], element: T): boolean {
   const index = array.indexOf(element)
+
   if (index >= 0) {
     array.splice(index, 1)
     return true
-  } else {
-    return false
   }
+
+  return false
 }
 
 export function concat<T>(array: ReadonlyArray<T>, other: ReadonlyArray<T>): T[] {
@@ -155,7 +156,7 @@ export function replaceAt<T>(array: ReadonlyArray<T>, index: number, value: T): 
   return [...array.slice(0, index), value, ...array.slice(index + 1)]
 }
 
-export function removeAt<T>(array: ReadonlyArray<T>, index: number, count: number = 1): T[] {
+export function removeAt<T>(array: ReadonlyArray<T>, index: number, count = 1): T[] {
   return [...array.slice(0, index), ...array.slice(index + count)]
 }
 
@@ -169,15 +170,15 @@ export function splice<T>(
 }
 
 export function fill<T>(length: number, fn: (index: number) => T): T[] {
-  return Array.from({ length }, (unused, index) => fn(index))
+  return Array.from({ length }, (value, index) => fn(index))
 }
 
 export function pad<T>(array: T[], length: number, value: T): T[] {
   if (array.length < length) {
-    return Array.from({ length }, (unused, index) => array.at(index) ?? value)
-  } else {
-    return array
+    return fill(length, index => array.at(index) ?? value)
   }
+
+  return array
 }
 
 export function groupBy<T, K extends number | string>(

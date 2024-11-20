@@ -2,25 +2,31 @@ import { useCallback, useMemo } from "react"
 
 import { CategoryID, isCategory } from "@common/categories"
 import {
-  PackageID,
+  type PackageID,
   isError,
   isExperimental,
   isIncluded,
   isIncompatible,
   isOutdated,
 } from "@common/packages"
-import { ProfileInfo } from "@common/profiles"
-import { PackageInfo, PackageStatus, Packages, VariantState, getState } from "@common/types"
+import type { ProfileInfo } from "@common/profiles"
+import {
+  type PackageInfo,
+  type PackageStatus,
+  type Packages,
+  VariantState,
+  getState,
+} from "@common/types"
 import { hasAny } from "@common/utils/arrays"
 import { keys, mapValues, values } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
-import { VariantID, VariantInfo } from "@common/variants"
+import type { VariantID, VariantInfo } from "@common/variants"
 import { PACKAGE_BANNER_HEIGHT, PACKAGE_BANNER_SPACING } from "@components/PackageBanners"
 
 import {
-  PackageFilters,
-  PackageUi,
-  Store,
+  type PackageFilters,
+  type PackageUi,
+  type Store,
   getCurrentProfile,
   getPackageInfo,
   useStore,
@@ -214,7 +220,7 @@ export function filterVariant(
     }
   }
 
-  if (filters.pattern && !filters.pattern?.test(packageInfo.id + "|" + packageInfo.name)) {
+  if (filters.pattern && !filters.pattern?.test(`${packageInfo.id}|${packageInfo.name}`)) {
     return false
   }
 

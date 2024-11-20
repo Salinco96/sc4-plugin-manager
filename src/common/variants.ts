@@ -1,11 +1,11 @@
-import { Namespace, TFunction } from "i18next"
+import type { Namespace, TFunction } from "i18next"
 
-import { AssetData, AssetID } from "./assets"
-import { AuthorID } from "./authors"
-import { CategoryID } from "./categories"
-import { OptionData, OptionID, OptionInfo, OptionValue, Requirements } from "./options"
-import { PackageID } from "./packages"
-import {
+import type { AssetData, AssetID } from "./assets"
+import type { AuthorID } from "./authors"
+import type { CategoryID } from "./categories"
+import type { OptionData, OptionID, OptionInfo, OptionValue, Requirements } from "./options"
+import type { PackageID } from "./packages"
+import type {
   Feature,
   ID,
   LotData,

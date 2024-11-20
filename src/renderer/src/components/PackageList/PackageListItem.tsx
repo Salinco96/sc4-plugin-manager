@@ -2,7 +2,7 @@ import { memo, useCallback, useState } from "react"
 
 import { Card, CardActions, CardContent, Link } from "@mui/material"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
 import { PackageBanners } from "@components/PackageBanners"

@@ -17,7 +17,7 @@ import {
 import { entries, keys } from "@common/utils/objects"
 import { Page, useHistory, useLocation } from "@utils/navigation"
 import { useStore, useStoreActions } from "@utils/store"
-import { TabInfo, tabs } from "@utils/tabs"
+import { type TabInfo, tabs } from "@utils/tabs"
 
 export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX.Element {
   const actions = useStoreActions()
@@ -57,7 +57,9 @@ export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX
 
 const groupedTabs = tabs.reduce(
   (result, tab) => {
-    const groupTabs = (result[tab.group ?? ""] ??= [])
+    const group = tab.group ?? ""
+    result[group] ??= []
+    const groupTabs = result[group]
     groupTabs.push(tab)
     return result
   },

@@ -1,7 +1,7 @@
 import { Switch } from "@mui/material"
 
-import { ProfileInfo } from "@common/profiles"
-import { Feature } from "@common/types"
+import type { ProfileInfo } from "@common/profiles"
+import type { Feature } from "@common/types"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
 import { useStoreActions } from "@utils/store"

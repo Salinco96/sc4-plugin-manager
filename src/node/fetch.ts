@@ -1,4 +1,4 @@
-import { Logger } from "@common/logs"
+import type { Logger } from "@common/logs"
 
 export async function get(
   url: string,

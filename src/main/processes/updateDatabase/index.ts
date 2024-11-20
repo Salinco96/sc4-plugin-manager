@@ -1,16 +1,17 @@
-import fs from "fs"
-import path from "path"
+import fs from "node:fs"
+import path from "node:path"
 
 import { clone, currentBranch, fastForward, getConfig } from "isomorphic-git"
 import http from "isomorphic-git/http/node"
 
 import { ChildProcess } from "../utils"
 
-import { UpdateDatabaseProcessData, UpdateDatabaseProcessResponse } from "./types"
+import type { EmptyRecord } from "@common/utils/types"
+import type { UpdateDatabaseProcessData, UpdateDatabaseProcessResponse } from "./types"
 
 export default class UpdateDatabaseProcess extends ChildProcess<
   UpdateDatabaseProcessData,
-  {},
+  EmptyRecord,
   UpdateDatabaseProcessResponse
 > {
   protected onMessage(data: unknown): void {

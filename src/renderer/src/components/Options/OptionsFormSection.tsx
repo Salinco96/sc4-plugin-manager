@@ -1,6 +1,12 @@
 import { FormControl, FormGroup } from "@mui/material"
 
-import { OptionInfo, OptionValue, Options, Requirements, getOptionValue } from "@common/options"
+import {
+  type OptionInfo,
+  type OptionValue,
+  type Options,
+  type Requirements,
+  getOptionValue,
+} from "@common/options"
 
 import { OptionsField } from "./OptionsField"
 

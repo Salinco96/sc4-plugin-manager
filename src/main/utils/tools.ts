@@ -1,4 +1,4 @@
-import { AssetID } from "@common/assets"
+import type { AssetID } from "@common/assets"
 
 /** Tool ID */
 export type ToolID = keyof typeof TOOLS

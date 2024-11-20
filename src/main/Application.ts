@@ -1,20 +1,20 @@
-import { Menu, Session, app, ipcMain, net, session } from "electron/main"
-import fs, { writeFile } from "fs/promises"
-import path from "path"
+import fs, { writeFile } from "node:fs/promises"
+import path from "node:path"
+import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
 
-import log, { LogLevel } from "electron-log"
+import log, { type LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
 
-import { AssetInfo, Assets } from "@common/assets"
-import { AuthorID, Authors } from "@common/authors"
-import { Categories } from "@common/categories"
-import { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
-import { ExemplarDataPatch, ExemplarPropertyInfo } from "@common/exemplars"
+import type { AssetInfo, Assets } from "@common/assets"
+import type { AuthorID, Authors } from "@common/authors"
+import type { Categories } from "@common/categories"
+import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
+import type { ExemplarDataPatch, ExemplarPropertyInfo } from "@common/exemplars"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
-import { OptionInfo, Requirements, getOptionValue } from "@common/options"
+import { type OptionInfo, type Requirements, getOptionValue } from "@common/options"
 import {
-  PackageID,
+  type PackageID,
   checkFile,
   isDependency,
   isIncluded,
@@ -23,28 +23,28 @@ import {
   isPatched,
 } from "@common/packages"
 import {
-  ProfileData,
-  ProfileID,
-  ProfileInfo,
-  ProfileUpdate,
-  Profiles,
+  type ProfileData,
+  type ProfileID,
+  type ProfileInfo,
+  type ProfileUpdate,
+  type Profiles,
   createUniqueId,
 } from "@common/profiles"
-import { Settings } from "@common/settings"
-import { ApplicationState, ApplicationStateUpdate } from "@common/state"
+import type { Settings } from "@common/settings"
+import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
 import {
   ConfigFormat,
-  Features,
-  PackageData,
-  PackageFile,
-  PackageInfo,
-  Packages,
+  type Features,
+  type PackageData,
+  type PackageFile,
+  type PackageInfo,
+  type Packages,
 } from "@common/types"
 import { flatMap, mapDefined, sumBy, unique } from "@common/utils/arrays"
 import { globToRegex, matchConditions } from "@common/utils/glob"
 import { toHex } from "@common/utils/hex"
 import { compact, entries, forEach, isEmpty, keys, values } from "@common/utils/objects"
-import { VariantID } from "@common/variants"
+import type { VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
 import { download } from "@node/download"
@@ -74,10 +74,13 @@ import {
   showWarning,
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
-import { ToolID, getToolInfo } from "@utils/tools"
+import { type ToolID, getToolInfo } from "@utils/tools"
 
+import type { EmptyRecord } from "@common/utils/types"
+import { MainWindow } from "./MainWindow"
+import { SplashScreen } from "./SplashScreen"
 import { getAssetKey } from "./data/assets"
-import { AppConfig, loadAppConfig } from "./data/config"
+import { type AppConfig, loadAppConfig } from "./data/config"
 import {
   loadAuthors,
   loadCategories,
@@ -94,13 +97,11 @@ import {
 import { getDefaultVariant, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { loadSettings } from "./data/settings"
-import { MainWindow } from "./MainWindow"
-import {
+import type {
   UpdateDatabaseProcessData,
   UpdateDatabaseProcessResponse,
 } from "./processes/updateDatabase/types"
 import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
-import { SplashScreen } from "./SplashScreen"
 import {
   CLEANITOL_EXTENSIONS,
   DIRNAMES,
@@ -115,13 +116,13 @@ import { createChildProcess } from "./utils/processes"
 import { handleDocsProtocol } from "./utils/protocols"
 import {
   SIMTROPOLIS_ORIGIN,
-  SimtropolisSession,
+  type SimtropolisSession,
   getSimtropolisSession,
   getSimtropolisSessionCookies,
   simtropolisLogin,
   simtropolisLogout,
 } from "./utils/sessions/simtropolis"
-import { TaskContext, TaskManager } from "./utils/tasks"
+import { type TaskContext, TaskManager } from "./utils/tasks"
 
 interface Loaded {
   assets: Assets
@@ -152,31 +153,31 @@ export class Application {
     // Load app config
     const appConfig = await loadAppConfig()
 
-    this.instance ??= new Application(appConfig)
+    Application.instance ??= new Application(appConfig)
 
-    return this.instance
+    return Application.instance
   }
 
   /**
    * Focuses the current instance.
    */
   public static focus(): void {
-    this.instance?.focus()
+    Application.instance?.focus()
   }
 
   /**
    * Returns the current application window.
    */
   public static get mainWindow(): MainWindow | undefined {
-    return this.instance?.mainWindow
+    return Application.instance?.mainWindow
   }
 
   /**
    * Quits the current instance.
    */
   public static async quit(): Promise<void> {
-    await this.instance?.quit()
-    this.instance = undefined
+    await Application.instance?.quit()
+    Application.instance = undefined
   }
 
   /**
@@ -264,7 +265,7 @@ export class Application {
         if (applied) {
           settings.install.patched = true
         } else if (settings.install.patched) {
-          delete settings.install.patched
+          settings.install.patched = undefined
         }
 
         await this.writeSettings(context, settings)
@@ -684,8 +685,8 @@ export class Application {
     context.info(`Patching ${path.basename(originalFullPath)}...`)
 
     await createIfMissing(path.dirname(patchedFullPath))
-    return openFile(originalFullPath, FileOpenMode.READ, async originalFile => {
-      return openFile(patchedFullPath, FileOpenMode.WRITE, async patchedFile => {
+    return openFile(originalFullPath, FileOpenMode.READ, originalFile => {
+      return openFile(patchedFullPath, FileOpenMode.WRITE, patchedFile => {
         return patchDBPFEntries(originalFile, patchedFile, patches, { exemplarProperties })
       })
     })
@@ -737,9 +738,9 @@ export class Application {
   public getLogLevel(): LogLevel {
     if (env.LOG_LEVEL && log.levels.includes(env.LOG_LEVEL)) {
       return env.LOG_LEVEL as LogLevel
-    } else {
-      return isDev() ? "debug" : "info"
     }
+
+    return isDev() ? "debug" : "info"
   }
 
   /**
@@ -779,9 +780,9 @@ export class Application {
     } catch (error) {
       if (error instanceof Error && error.message.match(/no such file or directory/i)) {
         return null
-      } else {
-        throw error
       }
+
+      throw error
     }
   }
 
@@ -944,9 +945,9 @@ export class Application {
     if (fullPath) {
       const relativePath = path.relative(this.getRootPath(), fullPath)
       return path.join(this.getRootPath(), DIRNAMES.temp, relativePath)
-    } else {
-      return path.join(this.getRootPath(), DIRNAMES.temp)
     }
+
+    return path.join(this.getRootPath(), DIRNAMES.temp)
   }
 
   /**
@@ -1000,7 +1001,7 @@ export class Application {
     return path.join(this.getVariantPath(packageId, variantId), filePath)
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // biome-ignore lint/suspicious/noExplicitAny: function params generic
   protected handle<Event extends keyof this & string, Args extends any[]>(
     this: { [key in Event]: (...args: Args) => unknown },
     event: Event,
@@ -1116,7 +1117,7 @@ export class Application {
           if (file.isSymbolicLink()) {
             const targetPath = await fs.readlink(file.fullpath())
             links.set(relativePath, targetPath)
-          } else {
+          } else if (![".ini", ".log"].includes(getExtension(relativePath))) {
             externals.add(relativePath)
           }
         }
@@ -1229,7 +1230,7 @@ export class Application {
                 return pattern.includes("/") ? `${pattern}/**` : `**/${pattern}/**`
               }
 
-              const excludePath = async (pattern: string) => {
+              const excludePath = (pattern: string) => {
                 excludes.push(pattern, getChildrenPattern(pattern))
               }
 
@@ -1396,7 +1397,7 @@ export class Application {
 
             if (variantInfo.update) {
               Object.assign(variantInfo, variantInfo.update)
-              delete variantInfo.update
+              variantInfo.update = undefined
             }
 
             // Automatically detect README if not specified
@@ -1463,12 +1464,12 @@ export class Application {
           } catch (error) {
             // If something goes wrong while installing, fully delete the new variant
             await removeIfPresent(this.getVariantPath(packageId, variantId))
-            delete variantInfo.files
-            delete variantInfo.installed
+            variantInfo.files = undefined
+            variantInfo.installed = undefined
             throw error
           }
         } finally {
-          delete variantInfo.action
+          variantInfo.action = undefined
           this.sendPackageUpdate(packageInfo)
         }
       },
@@ -1793,7 +1794,7 @@ export class Application {
           exemplarProperties,
         )
 
-        return openFile(patchedFullPath, FileOpenMode.READ, async patchedFile => {
+        return openFile(patchedFullPath, FileOpenMode.READ, patchedFile => {
           return loadDBPF(patchedFile, { exemplarProperties })
         })
       },
@@ -2020,7 +2021,7 @@ export class Application {
 
           // Unset original field (so renderer will not show a diff)
           forEach(file.entries, entry => {
-            delete entry.original
+            entry.original = undefined
           })
 
           return file
@@ -2038,7 +2039,7 @@ export class Application {
 
         // Unset patches if all were removed
         if (fileInfo.patches && isEmpty(fileInfo.patches)) {
-          delete fileInfo.patches
+          fileInfo.patches = undefined
         }
 
         // Persist config changes and send updates to renderer
@@ -2064,7 +2065,7 @@ export class Application {
           )
         } else {
           // Reload original contents
-          file = await openFile(originalFullPath, FileOpenMode.READ, async patchedFile => {
+          file = await openFile(originalFullPath, FileOpenMode.READ, patchedFile => {
             return loadDBPF(patchedFile, { exemplarProperties, loadExemplars: true })
           })
         }
@@ -2228,7 +2229,7 @@ export class Application {
 
         // Remove config file
         await removeConfig(this.getProfilesPath(), profileId, profileInfo.format)
-        delete profileInfo.format
+        profileInfo.format = undefined
 
         // Send update to renderer
         this.sendStateUpdate({ profiles: { [profileId]: null } })
@@ -2292,8 +2293,8 @@ export class Application {
           variantInfo.action = "removing"
           this.sendPackageUpdate(packageInfo)
 
-          delete variantInfo.files
-          delete variantInfo.installed
+          variantInfo.files = undefined
+          variantInfo.installed = undefined
 
           // Upon removing the only installed variant, remove the whole package directory
           if (isOnlyInstalledVariant) {
@@ -2321,7 +2322,7 @@ export class Application {
             }
           }
         } finally {
-          delete variantInfo.action
+          variantInfo.action = undefined
 
           if (packages[packageId]) {
             this.sendPackageUpdate(packageInfo)
@@ -2427,26 +2428,27 @@ export class Application {
 
         try {
           await new Promise<void>((resolve, reject) => {
-            createChildProcess<UpdateDatabaseProcessData, {}, UpdateDatabaseProcessResponse>(
-              updateDatabaseProcessPath,
-              {
-                cwd: databasePath,
-                data: {
-                  branch,
-                  origin,
-                },
-                onClose() {
-                  reject(Error("Closed"))
-                },
-                onMessage({ success, error }) {
-                  if (success) {
-                    resolve()
-                  } else {
-                    reject(error)
-                  }
-                },
+            createChildProcess<
+              UpdateDatabaseProcessData,
+              EmptyRecord,
+              UpdateDatabaseProcessResponse
+            >(updateDatabaseProcessPath, {
+              cwd: databasePath,
+              data: {
+                branch,
+                origin,
               },
-            )
+              onClose() {
+                reject(Error("Closed"))
+              },
+              onMessage({ success, error }) {
+                if (success) {
+                  resolve()
+                } else {
+                  reject(error)
+                }
+              },
+            })
           })
 
           context.info("Updated database")
@@ -2859,14 +2861,14 @@ export class Application {
                 for (const packageId of disablingPackages) {
                   const packageStatus = packages[packageId]?.status[profileId]
                   if (packageStatus?.action === "disabling") {
-                    delete packageStatus.action
+                    packageStatus.action = undefined
                   }
                 }
 
                 for (const packageId of enablingPackages) {
                   const packageStatus = packages[packageId]?.status[profileId]
                   if (packageStatus?.action === "enabling") {
-                    delete packageStatus.action
+                    packageStatus.action = undefined
                   }
                 }
 

@@ -1,4 +1,4 @@
-import { TGI } from "./dbpf"
+import type { TGI } from "./dbpf"
 
 export interface ExemplarData {
   isCohort: boolean

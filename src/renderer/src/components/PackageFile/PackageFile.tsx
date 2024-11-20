@@ -8,12 +8,11 @@ import {
 import { Card, List, Typography, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { DBPFFile, isDBPF } from "@common/dbpf"
-import { PackageID, checkFile } from "@common/packages"
-import { type PackageFile, VariantState } from "@common/types"
+import { type DBPFFile, isDBPF } from "@common/dbpf"
+import { type PackageID, checkFile } from "@common/packages"
+import { type PackageFile as PackageFileType, VariantState } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { values } from "@common/utils/objects"
-import { PackageTag, TagType } from "@components/Tags"
 import { ToolButton } from "@components/ToolButton"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import {
@@ -26,13 +25,15 @@ import {
 
 import { FlexBox } from "../FlexBox"
 
+import { PackageTag } from "@components/Tags/PackageTag"
+import { TagType } from "@components/Tags/utils"
 import { PackageEntry } from "./PackageEntry"
 
 export function PackageFile({
   file,
   packageId,
 }: {
-  file: PackageFile
+  file: PackageFileType
   packageId: PackageID
 }): JSX.Element {
   const actions = useStoreActions()

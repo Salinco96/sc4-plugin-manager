@@ -1,7 +1,7 @@
-import { BuildingData } from "@common/types"
+import type { BuildingData } from "@common/types"
 import { sum } from "@common/utils/arrays"
 
-import { DeveloperID, Exemplar, ExemplarPropertyID } from "./types"
+import { DeveloperID, type Exemplar, ExemplarPropertyID } from "./types"
 import { get, getArray, getMap, getString, getTGI } from "./utils"
 
 export function getBuildingData(exemplar: Exemplar): BuildingData {

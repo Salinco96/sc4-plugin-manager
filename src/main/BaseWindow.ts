@@ -1,5 +1,5 @@
-import { BrowserWindow, BrowserWindowConstructorOptions } from "electron/main"
-import path from "path"
+import path from "node:path"
+import { BrowserWindow, type BrowserWindowConstructorOptions } from "electron/main"
 
 import { shell } from "electron"
 

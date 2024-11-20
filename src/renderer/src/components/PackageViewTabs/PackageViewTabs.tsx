@@ -2,9 +2,9 @@ import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, Tab } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
-import { PackageTag } from "@components/Tags"
+import { PackageTag } from "@components/Tags/PackageTag"
 import { useCurrentVariant, useDependentPackages, usePackageInfo } from "@utils/packages"
 
 import { packageViewTabs, usePackageViewTab } from "./tabs"
@@ -30,7 +30,7 @@ export function PackageViewTabs({ packageId }: { packageId: PackageID }): JSX.El
   return (
     <TabContext value={currentTab.id}>
       <Box borderBottom={1} borderColor="divider">
-        <TabList onChange={(_, value) => setActiveTab(value)}>
+        <TabList onChange={(event, value) => setActiveTab(value)}>
           {tabs.map((tab, index) => (
             <Tab
               key={tab.id}

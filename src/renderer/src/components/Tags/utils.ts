@@ -1,7 +1,7 @@
-import { Namespace, TFunction } from "i18next"
+import type { Namespace, TFunction } from "i18next"
 
-import { AuthorID, Authors } from "@common/authors"
-import { Categories, CategoryID, getCategoryLabel } from "@common/categories"
+import type { AuthorID, Authors } from "@common/authors"
+import { type Categories, type CategoryID, getCategoryLabel } from "@common/categories"
 import { VariantState } from "@common/types"
 import { isEnum } from "@common/utils/types"
 import { getStateLabel } from "@common/variants"

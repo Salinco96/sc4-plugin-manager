@@ -1,11 +1,11 @@
-import { Authors } from "./authors"
-import { Categories } from "./categories"
-import { ExemplarPropertyInfo } from "./exemplars"
-import { OptionInfo } from "./options"
-import { PackageID } from "./packages"
-import { ProfileID, ProfileInfo, Profiles } from "./profiles"
-import { Settings } from "./settings"
-import { Features, PackageInfo, Packages } from "./types"
+import type { Authors } from "./authors"
+import type { Categories } from "./categories"
+import type { ExemplarPropertyInfo } from "./exemplars"
+import type { OptionInfo } from "./options"
+import type { PackageID } from "./packages"
+import type { ProfileID, ProfileInfo, Profiles } from "./profiles"
+import type { Settings } from "./settings"
+import type { Features, PackageInfo, Packages } from "./types"
 
 export interface ApplicationConfig {
   categories: Categories

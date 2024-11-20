@@ -41,11 +41,12 @@ turndown.addRule("resolve-full-href", {
   },
   replacement(content, node) {
     const href = node instanceof HTMLElement ? node.getAttribute("href") : undefined
+
     if (href && href !== content) {
       return `[${content}](https://www.sc4evermore.com${href})`
-    } else {
-      return content
     }
+
+    return content
   },
 })
 

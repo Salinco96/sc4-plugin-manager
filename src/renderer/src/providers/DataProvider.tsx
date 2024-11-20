@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react"
+import { type ReactNode, useEffect } from "react"
 
 import { isEmpty } from "@common/utils/objects"
 import { useStore, useStoreActions } from "@utils/store"
@@ -16,13 +16,13 @@ export function DataProvider({ children }: { children: ReactNode }): JSX.Element
     if (isLinking || isLoading) {
       actions.openSnackbar("load-progress", {})
     }
-  }, [isLinking, isLoading])
+  }, [actions, isLinking, isLoading])
 
   useEffect(() => {
     if (isDownloading) {
       actions.openSnackbar("download-progress", {})
     }
-  }, [isDownloading])
+  }, [actions, isDownloading])
 
   return <>{children}</>
 }

@@ -5,7 +5,7 @@ import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
 import { getFeatureLabel } from "@common/i18n"
-import { Issue, VariantIssue } from "@common/variants"
+import { Issue, type VariantIssue } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
 import { getPackageInfo, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
@@ -69,7 +69,7 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
         }
       }
     }
-  }, [actions, currentProfile, incompatiblePackageId, issue, packageNames])
+  }, [actions, currentProfile, incompatiblePackageId, issue, packageNames, t])
 
   return (
     <PackageBanner action={action} header={t("conflict.title")} icon={<ConflictIcon />}>

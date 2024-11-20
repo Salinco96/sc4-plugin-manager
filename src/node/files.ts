@@ -1,5 +1,5 @@
-import fs, { FileHandle } from "fs/promises"
-import path from "path"
+import fs, { type FileHandle } from "node:fs/promises"
+import path from "node:path"
 
 export async function copyTo(fullPath: string, targetPath: string): Promise<void> {
   await createIfMissing(path.dirname(targetPath))
@@ -10,7 +10,7 @@ export async function moveTo(fullPath: string, targetPath: string): Promise<void
   await createIfMissing(path.dirname(targetPath))
   try {
     await fs.rename(fullPath, targetPath)
-  } catch (error) {
+  } catch (_error) {
     await fs.cp(fullPath, targetPath, { recursive: true })
     await fs.rm(fullPath, { recursive: true })
   }
@@ -23,9 +23,9 @@ export async function createIfMissing(fullPath: string): Promise<boolean> {
   } catch (error) {
     if (error instanceof Error && error.message.match(/already exists/i)) {
       return false
-    } else {
-      throw error
     }
+
+    throw error
   }
 }
 
@@ -36,9 +36,9 @@ export async function exists(fullPath: string): Promise<boolean> {
   } catch (error) {
     if (error instanceof Error && error.message.match(/no such file or directory/i)) {
       return false
-    } else {
-      throw error
     }
+
+    throw error
   }
 }
 
@@ -64,7 +64,7 @@ export async function writeBytes(file: FileHandle, buffer: Buffer, offset?: numb
   await file.write(buffer, 0, buffer.length, offset)
 }
 
-export async function readFile(fullPath: string): Promise<string> {
+export function readFile(fullPath: string): Promise<string> {
   return fs.readFile(fullPath, "utf8")
 }
 
@@ -74,9 +74,9 @@ export async function readFileIfPresent(fullPath: string): Promise<string | unde
   } catch (error) {
     if (error instanceof Error && error.message.match(/no such file or directory/i)) {
       return undefined
-    } else {
-      throw error
     }
+
+    throw error
   }
 }
 
@@ -92,18 +92,22 @@ export async function removeIfEmpty(fullPath: string): Promise<boolean> {
   } catch (error) {
     if (error instanceof Error && error.message.match(/no such file or directory/i)) {
       return false
-    } else if (error instanceof Error && error.message.match(/not empty/i)) {
-      return false
-    } else {
-      throw error
     }
+
+    if (error instanceof Error && error.message.match(/not empty/i)) {
+      return false
+    }
+
+    throw error
   }
 }
 
 export async function removeIfEmptyRecursive(fullPath: string, rootPath: string): Promise<void> {
-  while (isChild(fullPath, rootPath)) {
+  let currentPath = fullPath
+
+  while (isChild(currentPath, rootPath)) {
     try {
-      await fs.rmdir(fullPath)
+      await fs.rmdir(currentPath)
     } catch (error) {
       if (error instanceof Error && error.message.match(/no such file or directory/i)) {
         // Continue
@@ -114,7 +118,7 @@ export async function removeIfEmptyRecursive(fullPath: string, rootPath: string)
       }
     }
 
-    fullPath = path.dirname(fullPath)
+    currentPath = path.dirname(currentPath)
   }
 }
 
@@ -125,9 +129,9 @@ export async function removeIfPresent(fullPath: string): Promise<boolean> {
   } catch (error) {
     if (error instanceof Error && error.message.match(/no such file or directory/i)) {
       return false
-    } else {
-      throw error
     }
+
+    throw error
   }
 }
 

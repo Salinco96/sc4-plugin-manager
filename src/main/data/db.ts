@@ -1,18 +1,22 @@
-import fs from "fs/promises"
-import path from "path"
+import fs from "node:fs/promises"
+import path from "node:path"
 
-import { Authors } from "@common/authors"
-import { Categories } from "@common/categories"
-import { ExemplarPropertyData, ExemplarPropertyInfo, ExemplarValueType } from "@common/exemplars"
-import { OptionInfo } from "@common/options"
-import { ProfileData, ProfileID, Profiles } from "@common/profiles"
+import type { Authors } from "@common/authors"
+import type { Categories } from "@common/categories"
+import {
+  type ExemplarPropertyData,
+  type ExemplarPropertyInfo,
+  ExemplarValueType,
+} from "@common/exemplars"
+import type { OptionInfo } from "@common/options"
+import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
 import { readHex } from "@common/utils/hex"
 import { forEach, size } from "@common/utils/objects"
 import { isEnum } from "@common/utils/types"
 import { loadConfig, readConfig } from "@node/configs"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
-import { TaskContext } from "@utils/tasks"
+import type { TaskContext } from "@utils/tasks"
 
 import { fromProfileData } from "./profiles"
 

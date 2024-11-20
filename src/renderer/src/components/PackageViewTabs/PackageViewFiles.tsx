@@ -1,6 +1,6 @@
 import { List, ListItem } from "@mui/material"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { PackageFile } from "@components/PackageFile"
 import { useCurrentVariant } from "@utils/packages"
 

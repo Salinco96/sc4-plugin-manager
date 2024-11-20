@@ -1,7 +1,7 @@
 import {
-  OptionID,
-  OptionInfo,
-  Options,
+  type OptionID,
+  type OptionInfo,
+  type Options,
   getOptionInfo,
   getOptionValue,
   isOptionDefaultValue,
@@ -9,23 +9,23 @@ import {
 import {
   LOTS_OPTION_ID,
   MIN_VERSION_OPTION_ID,
-  PackageID,
+  type PackageID,
   checkCondition,
   getPackageStatus,
   isIncluded,
   isIncompatible,
   isInvalid,
 } from "@common/packages"
-import { ProfileInfo, ProfileUpdate } from "@common/profiles"
-import { Settings } from "@common/settings"
+import type { ProfileInfo, ProfileUpdate } from "@common/profiles"
+import type { Settings } from "@common/settings"
 import {
   EXTERNAL,
-  Feature,
-  Features,
-  LotInfo,
-  PackageInfo,
-  PackageStatus,
-  Packages,
+  type Feature,
+  type Features,
+  type LotInfo,
+  type PackageInfo,
+  type PackageStatus,
+  type Packages,
 } from "@common/types"
 import {
   containsWhere,
@@ -45,9 +45,15 @@ import {
   values,
 } from "@common/utils/objects"
 import { isArray } from "@common/utils/types"
-import { DependencyInfo, Issue, VariantID, VariantInfo, VariantIssue } from "@common/variants"
-import { Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
-import { TaskContext } from "@utils/tasks"
+import {
+  type DependencyInfo,
+  Issue,
+  type VariantID,
+  type VariantInfo,
+  type VariantIssue,
+} from "@common/variants"
+import { type Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
+import type { TaskContext } from "@utils/tasks"
 
 function getVariantIncompatibilities(
   packageInfo: Readonly<Omit<PackageInfo, "status">>,
@@ -215,7 +221,9 @@ export function resolvePackages(
         variantId: selectedVariantId ?? keys(packageInfo.variants)[0],
       }
 
-      const issues = mapValues(packageInfo.variants, (variantInfo, variantId) => {
+      const issues = mapValues(packageInfo.variants, (originalVariantInfo, variantId) => {
+        let variantInfo = originalVariantInfo
+
         if (packageConfig?.variant === variantId && packageConfig.version) {
           if (packageConfig.version === variantInfo.update?.version) {
             variantInfo = variantInfo.update
@@ -272,9 +280,9 @@ export function resolvePackages(
     // Ignore incompatible dependencies if not transitive
     if (!dependencyInfo || dependencyInfo.transitive) {
       return !issues?.length
-    } else {
-      return !issues?.some(issue => issue.id !== Issue.INCOMPATIBLE_DEPENDENCIES)
     }
+
+    return !issues?.some(issue => issue.id !== Issue.INCOMPATIBLE_DEPENDENCIES)
   }
 
   // Resolve the compatible/selected variants of all packages
@@ -309,7 +317,7 @@ export function resolvePackages(
       } else if (!packageStatus.included) {
         packageStatus.files = dependencyInfo.include
       } else {
-        delete packageStatus.files
+        packageStatus.files = undefined
       }
     }
 
@@ -631,18 +639,17 @@ export function resolvePackageUpdates(
         if (isConflicted && !wasFullyIncompatible && !isUpdated) {
           if (isFullyIncompatible) {
             incompatiblePackages.push(packageId)
-          } else {
+          } else if (defaultVariant.installed && !packageConfig?.variant) {
             // If compatible variant is already installed and current variant is not explicitly selected, switch implicitly
-            if (defaultVariant.installed && !packageConfig?.variant) {
-              implicitVariantChanges[packageId] = {
-                old: oldStatus.variantId,
-                new: defaultVariant.id,
-              }
-            } else {
-              explicitVariantChanges[packageId] = {
-                old: oldStatus.variantId,
-                new: defaultVariant.id,
-              }
+            implicitVariantChanges[packageId] = {
+              old: oldStatus.variantId,
+              new: defaultVariant.id,
+            }
+          } else {
+            // Otherwise, require confirmation from user
+            explicitVariantChanges[packageId] = {
+              old: oldStatus.variantId,
+              new: defaultVariant.id,
             }
           }
         }
@@ -662,7 +669,7 @@ export function resolvePackageUpdates(
 
       // Remove explicit variant if it is the default
       if (packageConfig?.variant === defaultVariant.id) {
-        delete packageConfig.variant
+        packageConfig.variant = undefined
       }
 
       // Remove explicit default options
@@ -673,7 +680,7 @@ export function resolvePackageUpdates(
         })
 
         if (isEmpty(packageConfig.options)) {
-          delete packageConfig.options
+          packageConfig.options = undefined
         }
       }
     })

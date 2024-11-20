@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { Box, Typography } from "@mui/material"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"

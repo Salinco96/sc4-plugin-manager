@@ -1,4 +1,4 @@
-import { Primitive } from "@common/types"
+import type { Primitive } from "@common/types"
 import { mapValues } from "@common/utils/objects"
 import { isBoolean, isNumber, isObject, isString } from "@common/utils/types"
 import { failInDev } from "@utils/env"
@@ -74,7 +74,7 @@ export function loadEnumArray<E extends Primitive, Required extends boolean = fa
     return value as E[]
   }
 
-  return failLoading(value, "array of " + JSON.stringify(values), id, field, required)
+  return failLoading(value, `array of ${JSON.stringify(values)}`, id, field, required)
 }
 
 export function loadEnum<E extends Primitive, Required extends boolean = false>(
@@ -118,11 +118,11 @@ export function loadRecord<T, Required extends boolean = false>(
 ): Required extends true ? { [K in string]?: T } : { [K in string]?: T } | undefined {
   if (isObject(value)) {
     return mapValues(value, (optionValue, optionId) => {
-      return loadValue(optionValue, expected, condition, id, field + "." + optionId, true)
+      return loadValue(optionValue, expected, condition, id, `${field}.${optionId}`, true)
     })
   }
 
-  return failLoading(value, "record of " + expected, id, field, required)
+  return failLoading(value, `record of ${expected}`, id, field, required)
 }
 
 export function loadValue<T, Required extends boolean = false>(

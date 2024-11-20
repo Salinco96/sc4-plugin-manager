@@ -1,14 +1,14 @@
-import fs from "fs/promises"
-import path from "path"
+import fs from "node:fs/promises"
+import path from "node:path"
 
 import { glob } from "glob"
 
-import { AssetData, AssetID, Assets } from "@common/assets"
-import { AuthorID } from "@common/authors"
-import { Categories, CategoryID, CategoryInfo } from "@common/categories"
+import type { AssetData, AssetID, Assets } from "@common/assets"
+import type { AuthorID } from "@common/authors"
+import type { Categories, CategoryID, CategoryInfo } from "@common/categories"
 import { OptionType } from "@common/options"
-import { LOTS_OPTION_ID, MMPS_OPTION_ID, PackageID, isNew } from "@common/packages"
-import { ConfigFormat, PackageData, PackageInfo, Packages } from "@common/types"
+import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, isNew } from "@common/packages"
+import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
 import { mapDefined, potentialUnion, potentialUnionBy, unionBy, unique } from "@common/utils/arrays"
 import {
   filterValues,
@@ -20,7 +20,7 @@ import {
   values,
 } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
-import {
+import type {
   DependencyData,
   DependencyInfo,
   VariantAssetData,
@@ -31,7 +31,7 @@ import {
 import { readConfig } from "@node/configs"
 import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
-import { TaskContext } from "@utils/tasks"
+import type { TaskContext } from "@utils/tasks"
 
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
@@ -376,7 +376,7 @@ function loadVariantInfo(
     mmps: potentialUnionBy(variantData.mmps, packageData.mmps, mmp => mmp.id)?.map(mmp =>
       mmp.category
         ? {
-            categories: parseCategory("mmps," + mmp.category, categories),
+            categories: parseCategory(`mmps,${mmp.category}`, categories),
             ...mmp,
           }
         : mmp,

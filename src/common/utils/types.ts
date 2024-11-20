@@ -1,3 +1,5 @@
+export type EmptyRecord = Record<never, never>
+
 /**
  * Asserts that a condition is satisfied.
  * @param condition Condition
@@ -65,7 +67,7 @@ export function isBoolean(value: unknown): value is boolean {
  * @returns whether the value is a string representing a valid {@link Date}
  */
 export function isDateString(value: unknown): value is string {
-  return typeof value === "string" && !isNaN(new Date(value).getTime())
+  return typeof value === "string" && Number.isFinite(new Date(value).getTime())
 }
 
 /**
@@ -119,10 +121,13 @@ export function isString(value: unknown): value is string {
  * Removes common diacritics from a string and converts it to lower case.
  */
 export function normalizeString(value: string): string {
-  return value
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
+  return (
+    value
+      .toLowerCase()
+      .normalize("NFKD")
+      // biome-ignore lint/suspicious/noMisleadingCharacterClass: <explanation>
+      .replace(/[\u0300-\u036f]/g, "")
+  )
 }
 
 export function pick<T extends object, K extends keyof T>(object: T, keys: K[]): Pick<T, K>

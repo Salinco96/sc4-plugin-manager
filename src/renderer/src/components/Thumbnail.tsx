@@ -1,4 +1,4 @@
-import { Box, BoxProps, Button } from "@mui/material"
+import { Box, type BoxProps, Button } from "@mui/material"
 
 export interface ThumbnailProps extends Omit<BoxProps, "height" | "width"> {
   disabled?: boolean

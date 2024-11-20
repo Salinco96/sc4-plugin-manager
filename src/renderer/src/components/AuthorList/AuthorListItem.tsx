@@ -1,13 +1,12 @@
 import { memo, useCallback, useState } from "react"
 
-import { Card, CardContent, Link } from "@mui/material"
-
-import { AuthorID } from "@common/authors"
+import type { AuthorID } from "@common/authors"
 import { AuthorTools } from "@components/AuthorTools"
 import { FlexBox } from "@components/FlexBox"
-import { getAuthorName } from "@components/Tags"
+import { getAuthorName } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
+import { Card, CardContent, Link } from "@mui/material"
 import { Page, useHistory } from "@utils/navigation"
 import { useAuthors } from "@utils/store"
 

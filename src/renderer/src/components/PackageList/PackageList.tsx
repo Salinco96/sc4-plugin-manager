@@ -3,7 +3,7 @@ import { useMemo } from "react"
 import { Box } from "@mui/material"
 import { Virtuoso } from "react-virtuoso"
 
-import { PackageID } from "@common/packages"
+import type { PackageID } from "@common/packages"
 import { Page, useHistory } from "@utils/navigation"
 
 import { EmptyPackageList } from "./EmptyPackageList"
@@ -21,7 +21,7 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
     }
 
     return 0
-  }, [history])
+  }, [history, packageIds])
 
   if (packageIds.length === 0) {
     return <EmptyPackageList />

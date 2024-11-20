@@ -1,4 +1,4 @@
-import { Context, createContext as _createContext } from "react"
+import { type Context, createContext as _createContext } from "react"
 
 declare module "vite/types/hot" {
   interface ViteHotContext {

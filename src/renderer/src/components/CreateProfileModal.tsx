@@ -22,7 +22,7 @@ import {
 } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { ProfileID, createUniqueId } from "@common/profiles"
+import { type ProfileID, createUniqueId } from "@common/profiles"
 import { keys, values } from "@common/utils/objects"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 

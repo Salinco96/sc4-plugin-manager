@@ -27,7 +27,7 @@ export function ImageViewer({ images, open, onClose }: ImageViewerProps): JSX.El
           width: "100%",
         }}
       >
-        {images.map(image => (
+        {images.map((image, index) => (
           <Box
             key={image}
             sx={{
@@ -45,7 +45,7 @@ export function ImageViewer({ images, open, onClose }: ImageViewerProps): JSX.El
                 maxWidth: "100%",
               }}
             >
-              <img src={image} />
+              <img alt={`${index + 1} / ${images.length}`} src={image} />
             </Box>
           </Box>
         ))}

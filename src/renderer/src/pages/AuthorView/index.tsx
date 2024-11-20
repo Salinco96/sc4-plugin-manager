@@ -5,7 +5,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, IconButton, Tab, Tooltip, Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { AuthorID } from "@common/authors"
+import type { AuthorID } from "@common/authors"
 import { values } from "@common/utils/objects"
 import { AuthorHeader } from "@components/AuthorHeader"
 import { FlexBox } from "@components/FlexBox"

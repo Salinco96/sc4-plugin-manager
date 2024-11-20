@@ -32,7 +32,7 @@ export function isDev(): boolean {
 export function failInDev(message: string): undefined {
   if (isDev()) {
     throw Error(message)
-  } else {
-    console.warn(message)
   }
+
+  console.warn(message)
 }

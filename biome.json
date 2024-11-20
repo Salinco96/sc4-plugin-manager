@@ -1,0 +1,69 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "formatter": {
+    "ignore": ["src/scripts/data"],
+    "indentStyle": "space",
+    "lineWidth": 100,
+    "useEditorconfig": true
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "semicolons": "asNeeded"
+    }
+  },
+  "linter": {
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noThisInStatic": "off",
+        "noUselessStringConcat": "error",
+        "noUselessUndefinedInitialization": "error",
+        "noVoid": "error",
+        "useDateNow": "error"
+      },
+      "correctness": {
+        "noConstantMathMinMaxClamp": "error",
+        "noUnusedImports": "error",
+        "noUnusedPrivateClassMembers": "error",
+        "useArrayLiterals": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "nursery": {
+        "noIrregularWhitespace": "error",
+        "noOctalEscape": "error",
+        "noUselessEscapeInRegex": "error",
+        "useConsistentCurlyBraces": "error"
+      },
+      "performance": {
+        "noReExportAll": "error"
+      },
+      "style": {
+        "noNonNullAssertion": "warn",
+        "noYodaExpression": "error",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useForOf": "error",
+        "useThrowOnlyError": "error"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "warn",
+        "noConsole": {
+          "level": "warn",
+          "options": { "allow": ["debug", "error", "info", "warn"] }
+        },
+        "noEmptyBlockStatements": "error",
+        "noEvolvingTypes": "error",
+        "useErrorMessage": "error"
+      }
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  }
+}

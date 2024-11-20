@@ -17,7 +17,7 @@ export function buildPackageRef(
   version?: string,
   path?: string,
 ): string {
-  return `${packageId}${variant ? "#" + variant : ""}${version ? "@" + version : ""}${path ? "/" + path : ""}`
+  return `${packageId}${variant ? `#${variant}` : ""}${version ? `@${version}` : ""}${path ? `/${path}` : ""}`
 }
 
 /**

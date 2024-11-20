@@ -1,4 +1,4 @@
-import { PackageWarning } from "@common/types"
+import type { PackageWarning } from "@common/types"
 import { getWarningMessage } from "@common/warnings"
 
 import { PackageBanner } from "./PackageBanner"

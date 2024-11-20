@@ -1,11 +1,13 @@
-import { MouseEvent, useInsertionEffect, useMemo, useRef, useState } from "react"
+import { type MouseEvent, useMemo, useRef, useState } from "react"
 
 import { Box, useTheme } from "@mui/material"
 import { default as ReactApexChart } from "react-apexcharts"
 
-import { ExemplarProperty } from "@common/exemplars"
+import type { ExemplarProperty } from "@common/exemplars"
 import { isDefined } from "@common/utils/types"
 
+import { fill } from "@common/utils/arrays"
+import { useEffectEvent } from "@utils/useEffectEvent"
 import { getItemInfo, getMax, getMin, getStep } from "./utils"
 
 export interface CurveEditorProps {
@@ -91,80 +93,77 @@ export function CurveEditor({
   const [isDragging, setDragging] = useState(false)
 
   const dragTimeoutRef = useRef<ReturnType<typeof setTimeout>>()
-  const dragFnRef = useRef(() => {})
-  useInsertionEffect(() => {
-    dragFnRef.current = () => {
-      setDragging(true)
 
-      if (mousePos.current && selected !== undefined) {
-        const { xRate, yRate } = mousePos.current
+  const drag = useEffectEvent(() => {
+    setDragging(true)
 
-        let xCoord = xAxis.min + Math.min(Math.max(xRate, 0), 1) * (xAxis.max - xAxis.min)
-        let yCoord = yAxis.min + Math.min(Math.max(yRate, 0), 1) * (yAxis.max - yAxis.min)
+    if (mousePos.current && selected !== undefined) {
+      const { xRate, yRate } = mousePos.current
 
-        if (xStep) {
-          xCoord = xStep * Math.round(xCoord / xStep)
-        }
+      let xCoord = xAxis.min + Math.min(Math.max(xRate, 0), 1) * (xAxis.max - xAxis.min)
+      let yCoord = yAxis.min + Math.min(Math.max(yRate, 0), 1) * (yAxis.max - yAxis.min)
 
-        if (yStep) {
-          yCoord = yStep * Math.round(yCoord / yStep)
-        }
-
-        if (xRate >= 1.02) {
-          xCoord += xStep
-        } else if (xRate <= -0.02) {
-          xCoord -= xStep
-        }
-
-        if (yRate >= 1.02) {
-          yCoord += yStep
-        } else if (yRate <= -0.02) {
-          yCoord -= yStep
-        }
-
-        if (xMin !== undefined) {
-          xCoord = Math.max(xCoord, xMin)
-        }
-
-        if (xMax !== undefined) {
-          xCoord = Math.min(xCoord, xMax)
-        }
-
-        if (yMin !== undefined) {
-          yCoord = Math.max(yCoord, yMin)
-        }
-
-        if (yMax !== undefined) {
-          yCoord = Math.min(yCoord, yMax)
-        }
-
-        const current = series[0].data[selected]
-        const xPrevious = value[selected * 2 - 2]
-        const xNext = value[selected * 2 + 2]
-
-        if (xPrevious !== undefined) {
-          xCoord = Math.max(xCoord, xPrevious + xStep)
-        }
-
-        if (xNext !== undefined) {
-          xCoord = Math.min(xCoord, xNext - xStep)
-        }
-
-        if (xCoord !== current[0] || yCoord !== current[1]) {
-          const newValue = value.slice()
-          newValue.splice(selected * 2, 2, xCoord, yCoord)
-          onChange(newValue)
-        }
-
-        if (dragTimeoutRef.current !== undefined) {
-          clearTimeout(dragTimeoutRef.current)
-        }
-
-        dragTimeoutRef.current = setTimeout(drag, 300)
+      if (xStep) {
+        xCoord = xStep * Math.round(xCoord / xStep)
       }
+
+      if (yStep) {
+        yCoord = yStep * Math.round(yCoord / yStep)
+      }
+
+      if (xRate >= 1.02) {
+        xCoord += xStep
+      } else if (xRate <= -0.02) {
+        xCoord -= xStep
+      }
+
+      if (yRate >= 1.02) {
+        yCoord += yStep
+      } else if (yRate <= -0.02) {
+        yCoord -= yStep
+      }
+
+      if (xMin !== undefined) {
+        xCoord = Math.max(xCoord, xMin)
+      }
+
+      if (xMax !== undefined) {
+        xCoord = Math.min(xCoord, xMax)
+      }
+
+      if (yMin !== undefined) {
+        yCoord = Math.max(yCoord, yMin)
+      }
+
+      if (yMax !== undefined) {
+        yCoord = Math.min(yCoord, yMax)
+      }
+
+      const current = series[0].data[selected]
+      const xPrevious = value[selected * 2 - 2]
+      const xNext = value[selected * 2 + 2]
+
+      if (xPrevious !== undefined) {
+        xCoord = Math.max(xCoord, xPrevious + xStep)
+      }
+
+      if (xNext !== undefined) {
+        xCoord = Math.min(xCoord, xNext - xStep)
+      }
+
+      if (xCoord !== current[0] || yCoord !== current[1]) {
+        const newValue = value.slice()
+        newValue.splice(selected * 2, 2, xCoord, yCoord)
+        onChange(newValue)
+      }
+
+      if (dragTimeoutRef.current !== undefined) {
+        clearTimeout(dragTimeoutRef.current)
+      }
+
+      dragTimeoutRef.current = setTimeout(drag, 300)
     }
-  }, [selected, series, xMax, xMin, xStep, value, yMax, yMin, yStep])
-  const drag = () => dragFnRef.current()
+  })
 
   const isSelected = selected !== undefined
   const selectedX = isSelected ? series[0].data[selected][0] : undefined
@@ -317,7 +316,7 @@ export function CurveEditor({
             show: !!original,
           },
           markers: {
-            discrete: Array.from({ length: value.length / 2 }, (i, n) => ({
+            discrete: fill(value.length, n => ({
               dataPointIndex: n,
               fillColor: theme.palette.primary.main,
               seriesIndex: 0,
@@ -402,10 +401,7 @@ export function CurveEditor({
 }
 
 function toSeries(values: number[]): [number, number][] {
-  return Array.from(
-    { length: Math.floor(values.length / 2) },
-    (v, i) => [values[i * 2], values[i * 2 + 1]] as const,
-  )
+  return fill(Math.floor(values.length / 2), i => [values[i * 2], values[i * 2 + 1]] as const)
 }
 
 function getAxisOptions(
@@ -433,9 +429,9 @@ function getAxisOptions(
   if (minValue === 0 && maxValue === 0) {
     if (step === 1) {
       return { decimalsInFloat: 0, max: 100, min: min === 0 ? 0 : -100, tickAmount: 10 }
-    } else {
-      return { decimalsInFloat: 2, max: 1, min: min === 0 ? 0 : -1, tickAmount: 10 }
     }
+
+    return { decimalsInFloat: 2, max: 1, min: min === 0 ? 0 : -1, tickAmount: 10 }
   }
 
   const largest = Math.max(Math.abs(minValue), Math.abs(maxValue))

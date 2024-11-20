@@ -1,4 +1,4 @@
-import { Alert, AlertProps, Button, styled } from "@mui/material"
+import { Alert, type AlertProps, Button, styled } from "@mui/material"
 
 export const PACKAGE_BANNER_HEIGHT = 56
 export const PACKAGE_BANNER_SPACING = 16

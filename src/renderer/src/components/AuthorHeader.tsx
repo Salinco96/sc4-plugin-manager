@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material"
 
-import { AuthorID } from "@common/authors"
+import type { AuthorID } from "@common/authors"
 import { FlexBox } from "@components/FlexBox"
 import { useAuthors } from "@utils/store"
 

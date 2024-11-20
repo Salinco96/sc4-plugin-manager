@@ -3,7 +3,7 @@ import { useMemo } from "react"
 import { Box } from "@mui/material"
 import { Virtuoso } from "react-virtuoso"
 
-import { AuthorID } from "@common/authors"
+import type { AuthorID } from "@common/authors"
 import { Page, useHistory } from "@utils/navigation"
 
 import { AuthorListItem } from "./AuthorListItem"
@@ -21,7 +21,7 @@ export function AuthorList({ authorIds }: { authorIds: AuthorID[] }): JSX.Elemen
     }
 
     return 0
-  }, [history])
+  }, [authorIds, history])
 
   if (authorIds.length === 0) {
     return <EmptyAuthorList />

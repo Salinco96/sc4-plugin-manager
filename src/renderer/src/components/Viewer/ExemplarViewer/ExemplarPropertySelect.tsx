@@ -2,7 +2,11 @@ import { useMemo, useState } from "react"
 
 import { Autocomplete, Box, InputAdornment, TextField, createFilterOptions } from "@mui/material"
 
-import { ExemplarProperty, ExemplarPropertyChoiceInfo, ExemplarValueType } from "@common/exemplars"
+import {
+  type ExemplarProperty,
+  type ExemplarPropertyChoiceInfo,
+  ExemplarValueType,
+} from "@common/exemplars"
 import { removeAt } from "@common/utils/arrays"
 import { toHex } from "@common/utils/hex"
 import { isArray, isString } from "@common/utils/types"
@@ -16,18 +20,18 @@ export interface ExemplarPropertySelectProps {
   description?: string
   error?: boolean
   index: number
-  isExpandable?: boolean
-  isExpanded?: boolean
+  isExpandable: boolean
+  isExpanded: boolean
   isFirst: boolean
   isLast: boolean
-  itemLabel?: string
+  itemLabel: string | undefined
   label: string
   name: string
   onChange: (newValue: number) => void
-  original?: number
+  original: number | undefined
   property: ExemplarProperty
-  readonly?: boolean
-  setExpanded: (isExpanded: boolean) => void
+  readonly: boolean
+  setExpanded?: (isExpanded: boolean) => void
   value: number | null
 }
 
@@ -83,7 +87,7 @@ export function ExemplarPropertySelect({
     }
 
     return []
-  }, [isUnique, property.value])
+  }, [index, isUnique, property.value])
 
   const options = useMemo(() => {
     const options = choices?.slice() ?? []
@@ -135,13 +139,13 @@ export function ExemplarPropertySelect({
       getOptionLabel={option => {
         if (isString(option)) {
           return option
-        } else {
-          return option.label
         }
+
+        return option.label
       }}
       handleHomeEndKeys
       id={name}
-      inputValue={isSearching ? inputValue : selectedOption?.label ?? ""}
+      inputValue={isSearching ? inputValue : (selectedOption?.label ?? "")}
       onChange={(event, newValue) => {
         if (!isString(newValue)) {
           onChange(newValue.value)
@@ -208,7 +212,7 @@ export function ExemplarPropertySelect({
           label={
             isFirst ? (
               <>
-                {isExpandable && (
+                {isExpandable && setExpanded && (
                   <ExpandButton isExpanded={!!isExpanded} setExpanded={setExpanded} />
                 )}
                 {label}
@@ -221,7 +225,7 @@ export function ExemplarPropertySelect({
             setSearching(false)
           }}
           onFocus={() => {
-            setExpanded(true)
+            setExpanded?.(true)
             setInputValue(formattedValue)
             setSearching(true)
           }}

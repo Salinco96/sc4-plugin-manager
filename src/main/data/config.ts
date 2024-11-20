@@ -1,5 +1,5 @@
+import path from "node:path"
 import { app } from "electron/main"
-import path from "path"
 
 import { i18n } from "@common/i18n"
 import { ConfigFormat } from "@common/types"

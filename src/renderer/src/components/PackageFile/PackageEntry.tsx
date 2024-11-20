@@ -1,13 +1,13 @@
-import { useState } from "react"
-
 import { DesignServices as PatchIcon, Preview as PreviewIcon } from "@mui/icons-material"
 import { ListItem } from "@mui/material"
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { DBPFDataType, DBPFEntry, DBPFFile, getFileTypeLabel } from "@common/dbpf"
-import { PackageID } from "@common/packages"
+import { DBPFDataType, type DBPFEntry, type DBPFFile, getFileTypeLabel } from "@common/dbpf"
+import type { PackageID } from "@common/packages"
 import { type PackageFile, VariantState } from "@common/types"
-import { PackageTag, TagType } from "@components/Tags"
+import { PackageTag } from "@components/Tags/PackageTag"
+import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
