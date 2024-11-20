@@ -1,1 +1,0 @@
-export { AuthorList } from "./AuthorList"

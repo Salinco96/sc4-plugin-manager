@@ -36,6 +36,7 @@
         "useConsistentCurlyBraces": "error"
       },
       "performance": {
+        "noBarrelFile": "error",
         "noReExportAll": "error"
       },
       "style": {

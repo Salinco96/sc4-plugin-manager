@@ -1,7 +1,7 @@
 import { List } from "@mui/material"
 
 import type { PackageID } from "@common/packages"
-import { PackageListItem } from "@components/PackageList"
+import { PackageListItem } from "@components/PackageList/PackageListItem"
 import { useCurrentVariant } from "@utils/packages"
 
 export function PackageViewDependencies({ packageId }: { packageId: PackageID }): JSX.Element {

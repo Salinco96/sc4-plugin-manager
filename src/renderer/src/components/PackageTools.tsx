@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next"
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
-import { PackageOptionsDialog } from "@components/Options"
+import { PackageOptionsDialog } from "@components/Options/PackageOptionsDialog"
 import { useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 

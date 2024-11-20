@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import { Feature } from "@common/types"
 import { size } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
-import { ProfileOptionsForm } from "@components/Options"
+import { ProfileOptionsForm } from "@components/Options/ProfileOptionsForm"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { ProfileNameInputField } from "./ProfileNameInputField"

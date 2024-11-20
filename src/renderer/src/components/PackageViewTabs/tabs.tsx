@@ -7,7 +7,7 @@ import { type PackageID, isLocal, isPatched } from "@common/packages"
 import { type PackageInfo, VariantState } from "@common/types"
 import { size } from "@common/utils/objects"
 import type { VariantInfo } from "@common/variants"
-import { PackageOptionsForm } from "@components/Options"
+import { PackageOptionsForm } from "@components/Options/PackageOptionsForm"
 import { type Tag, TagType, createTag } from "@components/Tags/utils"
 
 import { PackageViewDependencies } from "./PackageViewDependencies"

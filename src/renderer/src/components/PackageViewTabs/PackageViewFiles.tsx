@@ -1,7 +1,7 @@
 import { List, ListItem } from "@mui/material"
 
 import type { PackageID } from "@common/packages"
-import { PackageFile } from "@components/PackageFile"
+import { PackageFile } from "@components/PackageFile/PackageFile"
 import { useCurrentVariant } from "@utils/packages"
 
 export function PackageViewFiles({ packageId }: { packageId: PackageID }): JSX.Element {

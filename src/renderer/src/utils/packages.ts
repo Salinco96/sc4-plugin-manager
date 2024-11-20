@@ -21,7 +21,10 @@ import { hasAny } from "@common/utils/arrays"
 import { keys, mapValues, values } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
-import { PACKAGE_BANNER_HEIGHT, PACKAGE_BANNER_SPACING } from "@components/PackageBanners"
+import {
+  PACKAGE_BANNER_HEIGHT,
+  PACKAGE_BANNER_SPACING,
+} from "@components/PackageBanners/PackageBanner"
 
 import {
   type PackageFilters,

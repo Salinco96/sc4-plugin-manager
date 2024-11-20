@@ -9,7 +9,7 @@ import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import type { PackageID } from "@common/packages"
 import { entries, keys } from "@common/utils/objects"
 import { MarkdownView } from "@components/MarkdownView"
-import { PackageBanners } from "@components/PackageBanners"
+import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { getAuthorName } from "@components/Tags/utils" // TODO: Move
 import { Text } from "@components/Text"
 import { Page, useHistory } from "@utils/navigation"

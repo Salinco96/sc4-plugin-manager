@@ -10,7 +10,7 @@ import { values } from "@common/utils/objects"
 import { AuthorHeader } from "@components/AuthorHeader"
 import { FlexBox } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
-import { PackageList } from "@components/PackageList"
+import { PackageList } from "@components/PackageList/PackageList"
 import { useHistory } from "@utils/navigation"
 import { useStore } from "@utils/store"
 
