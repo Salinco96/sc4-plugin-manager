@@ -5,7 +5,7 @@ import { app } from "electron/main"
 
 import { i18n } from "@common/i18n"
 import type { Profiles } from "@common/profiles"
-import type { Settings } from "@common/settings"
+import type { Settings, SettingsData } from "@common/settings"
 import { keys } from "@common/utils/objects"
 import { isString } from "@common/utils/types"
 import { loadConfig } from "@node/configs"
@@ -23,14 +23,13 @@ export async function loadSettings(
   pluginsPath: string,
   profiles: Profiles,
 ): Promise<Settings> {
-  const config = await loadConfig<Partial<Settings>>(rootPath, FILENAMES.settings)
+  const config = await loadConfig<SettingsData>(rootPath, FILENAMES.settings)
 
   const settings: Settings = {
     format: config?.format,
     ...config?.data,
+    version: app.getVersion(),
   }
-
-  settings.version = app.getVersion()
 
   try {
     const response = await fetch(`https://api.github.com/repos/${repository}/releases/latest`)
@@ -145,4 +144,13 @@ export async function loadSettings(
   }
 
   return settings
+}
+
+export function toSettingsData(settings: Readonly<Settings>): SettingsData {
+  const data: SettingsData = {
+    currentProfile: settings.currentProfile,
+    install: settings.install,
+  }
+
+  return data
 }

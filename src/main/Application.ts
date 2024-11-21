@@ -30,7 +30,7 @@ import {
   type Profiles,
   createUniqueId,
 } from "@common/profiles"
-import type { Settings } from "@common/settings"
+import type { Settings, SettingsData } from "@common/settings"
 import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
 import {
   ConfigFormat,
@@ -96,7 +96,7 @@ import {
 } from "./data/packages"
 import { getDefaultVariant, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
-import { loadSettings } from "./data/settings"
+import { loadSettings, toSettingsData } from "./data/settings"
 import type {
   UpdateDatabaseProcessData,
   UpdateDatabaseProcessResponse,
@@ -2944,15 +2944,12 @@ export class Application {
   protected async writeSettings(context: TaskContext, settings: Settings): Promise<void> {
     context.debug("Saving settings...")
 
-    // TODO
-    const { format: oldFormat, update, version, ...data } = settings
-
-    await writeConfig<Settings>(
+    await writeConfig<SettingsData>(
       this.getRootPath(),
       FILENAMES.settings,
-      data,
+      toSettingsData(settings),
       ConfigFormat.YAML,
-      oldFormat,
+      settings.format,
     )
 
     settings.format = ConfigFormat.YAML
