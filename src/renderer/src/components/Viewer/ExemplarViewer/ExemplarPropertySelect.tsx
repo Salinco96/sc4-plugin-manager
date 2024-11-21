@@ -14,7 +14,13 @@ import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
 import { ExpandButton } from "./ExpandButton"
-import { formatInputValue, getHexSize, getItemInfo, parseInputValue } from "./utils"
+import {
+  formatInputValue,
+  getHexSize,
+  getItemInfo,
+  parseInputValue,
+  useExemplarPropertyInfo,
+} from "./utils"
 
 export interface ExemplarPropertySelectProps {
   description?: string
@@ -55,7 +61,9 @@ export function ExemplarPropertySelect({
 }: ExemplarPropertySelectProps): JSX.Element {
   const { type } = property
 
-  const itemInfo = getItemInfo(property, index)
+  const info = useExemplarPropertyInfo(property.id)
+  const itemInfo = getItemInfo(info, index)
+
   const choices = itemInfo?.choices
 
   const isHex = [

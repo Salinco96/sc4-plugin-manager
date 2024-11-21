@@ -11,7 +11,7 @@ import { isArray, isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { ExemplarPropertyInput } from "./ExemplarPropertyInput"
-import type { PropertyErrors } from "./utils"
+import { type PropertyErrors, useExemplarPropertyInfo } from "./utils"
 
 export interface ColorProps {
   alpha: boolean
@@ -58,7 +58,9 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
   showRightMargin,
   value,
 }: ExemplarPropertyInputGroupProps<T>): JSX.Element {
-  const { info, type } = property
+  const { type } = property
+
+  const info = useExemplarPropertyInfo(property.id)
 
   const [colorPickerOpen, setColorPickerOpen] = useState(false)
   const [values, setValues] = useState(() => pad<T[number] | null>(value, groupSize, null))

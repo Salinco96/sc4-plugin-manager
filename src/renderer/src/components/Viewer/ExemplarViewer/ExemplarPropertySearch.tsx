@@ -39,7 +39,7 @@ export function ExemplarPropertySearch({
         return
       }
 
-      const info = property?.info ?? exemplarProperties[propertyId]
+      const info = exemplarProperties[propertyId]
       if (info?.type) {
         return {
           label: info.name,
@@ -72,15 +72,14 @@ export function ExemplarPropertySearch({
         if (!isString(newValue)) {
           const propertyId = newValue.value
           const property = data.properties[propertyId]
-          const info = property?.info ?? exemplarProperties[propertyId]
+          const propertyInfo = exemplarProperties[propertyId]
           if (property) {
             onSelect(property)
-          } else if (info?.type) {
+          } else if (propertyInfo?.type) {
             onSelect({
               id: newValue.value,
-              info,
-              type: info.type,
-              value: getDefaultValue(info),
+              type: propertyInfo.type,
+              value: getDefaultValue(propertyInfo),
             } as ExemplarProperty)
           }
         }

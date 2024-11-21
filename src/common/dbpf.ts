@@ -69,9 +69,11 @@ export enum DBPFFileType {
 
 export enum DBPFDataType {
   BMP = "bmp",
+  DIR = "dir",
   EXMP = "exmp",
   FSH = "fsh",
   JFIF = "jfif",
+  LD = "ld",
   PNG = "png",
   S3D = "s3d",
   XML = "xml",
@@ -80,23 +82,24 @@ export enum DBPFDataType {
 
 export type DBPFEntryData<T extends DBPFDataType = DBPFDataType> = {
   [DBPFDataType.BMP]: { base64: string }
+  [DBPFDataType.DIR]: never
   [DBPFDataType.EXMP]: ExemplarData
   [DBPFDataType.FSH]: never // TODO
   [DBPFDataType.JFIF]: { base64: string }
+  [DBPFDataType.LD]: never // TODO
   [DBPFDataType.PNG]: { base64: string }
   [DBPFDataType.S3D]: never // TODO
   [DBPFDataType.XML]: { text: string }
   [DBPFDataType.UNKNOWN]: never // TODO
 }[T]
 
-const types = Object.values(DBPFFileType).reverse()
-export function getFileType(id: TGI): DBPFFileType | undefined {
-  return types.find(type => isType(id, type))
-}
-
 export function getDataType(id: TGI): DBPFDataType {
   if (isType(id, DBPFFileType.BMP)) {
     return DBPFDataType.BMP
+  }
+
+  if (isType(id, DBPFFileType.DIR)) {
+    return DBPFDataType.DIR
   }
 
   if (isType(id, DBPFFileType.FSH)) {
@@ -105,6 +108,10 @@ export function getDataType(id: TGI): DBPFDataType {
 
   if (isType(id, DBPFFileType.JFIF)) {
     return DBPFDataType.JFIF
+  }
+
+  if (isType(id, DBPFFileType.LD)) {
+    return DBPFDataType.LD
   }
 
   if (isType(id, DBPFFileType.PNG)) {
@@ -124,35 +131,4 @@ export function getDataType(id: TGI): DBPFDataType {
   }
 
   return DBPFDataType.UNKNOWN
-}
-
-export function getFileTypeLabel(id: TGI): string {
-  const type = getFileType(id)
-
-  if (!type) {
-    return "Unknown"
-  }
-
-  return {
-    [DBPFFileType.BMP]: "BMP",
-    [DBPFFileType.COHORT]: "Cohort",
-    [DBPFFileType.DIR]: "DIR",
-    [DBPFFileType.EXEMPLAR]: "Exemplar",
-    [DBPFFileType.EXEMPLAR_LOT_CONFIG]: "Exemplar - Lot Config",
-    [DBPFFileType.FSH]: "FSH",
-    [DBPFFileType.FSH_TEXTURE]: "FSH - Texture",
-    [DBPFFileType.JFIF]: "JFIF",
-    [DBPFFileType.LD]: "Lot Data",
-    [DBPFFileType.PNG]: "PNG",
-    [DBPFFileType.PNG_BUTTONS]: "PNG - Button",
-    [DBPFFileType.PNG_LE_IMAGES]: "PNG - Lot Editor Image",
-    [DBPFFileType.PNG_LOT_PICTURES]: "PNG - Lot Picture",
-    [DBPFFileType.PNG_MENU_ICONS]: "PNG - Menu Icon",
-    [DBPFFileType.PNG_REGION_VIEW_TILES]: "PNG - Region View Tile",
-    [DBPFFileType.PNG_UDRIVEIT_ICONS]: "PNG - UDriveIt Icon",
-    [DBPFFileType.PNG_UI]: "PNG - UI",
-    [DBPFFileType.PNG_UI_IMAGES]: "PNG - UI Image",
-    [DBPFFileType.S3D]: "S3D",
-    [DBPFFileType.XML]: "XML",
-  }[type]
 }

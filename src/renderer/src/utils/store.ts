@@ -5,7 +5,7 @@ import { create } from "zustand"
 import type { AuthorID, Authors } from "@common/authors"
 import type { CategoryID } from "@common/categories"
 import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
-import type { ExemplarDataPatch } from "@common/exemplars"
+import type { ExemplarDataPatch, ExemplarPropertyInfo } from "@common/exemplars"
 import type { ModalData, ModalID } from "@common/modals"
 import type { OptionID, OptionValue } from "@common/options"
 import { type PackageID, getPackageStatus, isIncluded } from "@common/packages"
@@ -514,6 +514,10 @@ export function getCurrentProfile(store: Store): ProfileInfo | undefined {
   return profileId ? getProfileInfo(store, profileId) : undefined
 }
 
+function getExemplarProperties(store: Store): { [propertyId in number]?: ExemplarPropertyInfo } {
+  return store.exemplarProperties
+}
+
 function getFeatures(store: Store): Features {
   return store.features
 }
@@ -548,6 +552,10 @@ export function useAuthors(): Authors {
 
 export function useCurrentProfile(): ProfileInfo | undefined {
   return useStore(getCurrentProfile)
+}
+
+export function useExemplarProperties(): { [propertyId in number]?: ExemplarPropertyInfo } {
+  return useStore(getExemplarProperties)
 }
 
 export function useFeatures(): Features {

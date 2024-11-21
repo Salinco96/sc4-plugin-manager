@@ -246,7 +246,7 @@ export async function patchDBPFEntries(
             delete exemplarData.properties[propertyId]
           } else {
             const property = exemplarData.properties[propertyId]
-            const info = property?.info ?? options.exemplarProperties[propertyId]
+            const info = options.exemplarProperties[propertyId]
             const type = property?.type ?? info?.type
             if (!type) {
               throw Error(`Unknown property: ${toHex(propertyId, 8, true)}`)
@@ -254,7 +254,6 @@ export async function patchDBPFEntries(
 
             exemplarData.properties[propertyId] = {
               id: propertyId,
-              info,
               type,
               value,
             } as ExemplarProperty

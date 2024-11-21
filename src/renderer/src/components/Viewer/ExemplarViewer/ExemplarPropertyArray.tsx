@@ -11,7 +11,7 @@ import { FlexBox } from "@components/FlexBox"
 import { CurveEditor } from "./CurveEditor"
 import { ExemplarPropertyHelperText } from "./ExemplarPropertyHelperText"
 import { ExemplarPropertyInputGroup } from "./ExemplarPropertyInputGroup"
-import { type PropertyErrors, getItemInfo } from "./utils"
+import { type PropertyErrors, getItemInfo, useExemplarPropertyInfo } from "./utils"
 
 export interface ExemplarPropertyArrayProps {
   errors: PropertyErrors | undefined
@@ -32,7 +32,7 @@ export function ExemplarPropertyArray({
   readonly,
   value,
 }: ExemplarPropertyArrayProps): JSX.Element {
-  const { info } = property
+  const info = useExemplarPropertyInfo(property.id)
 
   const groupSize = info?.size && info.repeat ? info.size : info?.items ? value.length : 1
   const maxLength = info?.size && !info.repeat ? info.size : (info?.maxLength ?? groupSize * 16)
@@ -54,7 +54,7 @@ export function ExemplarPropertyArray({
   function addGroup() {
     if (canAdd) {
       const defaultValues = fill(groupSize, index => {
-        const itemInfo = getItemInfo(property, value.length + index)
+        const itemInfo = getItemInfo(info, value.length + index)
         return Number(itemInfo?.default ?? 0)
       })
 

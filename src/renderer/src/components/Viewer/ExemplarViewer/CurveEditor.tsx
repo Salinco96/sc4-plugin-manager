@@ -4,11 +4,11 @@ import { Box, useTheme } from "@mui/material"
 import { default as ReactApexChart } from "react-apexcharts"
 
 import type { ExemplarProperty } from "@common/exemplars"
-import { isDefined } from "@common/utils/types"
-
 import { fill } from "@common/utils/arrays"
+import { isDefined } from "@common/utils/types"
 import { useEffectEvent } from "@utils/useEffectEvent"
-import { getItemInfo, getMax, getMin, getStep } from "./utils"
+
+import { getItemInfo, getMax, getMin, getStep, useExemplarPropertyInfo } from "./utils"
 
 export interface CurveEditorProps {
   onChange: (value: number[]) => void
@@ -27,8 +27,9 @@ export function CurveEditor({
 }: CurveEditorProps): JSX.Element {
   const theme = useTheme()
 
-  const xItemInfo = getItemInfo(property, 0)
-  const yItemInfo = getItemInfo(property, 1)
+  const info = useExemplarPropertyInfo(property.id)
+  const xItemInfo = getItemInfo(info, 0)
+  const yItemInfo = getItemInfo(info, 1)
 
   const xMin = xItemInfo?.min ?? getMin(property.type)
   const xMax = xItemInfo?.max ?? getMax(property.type)

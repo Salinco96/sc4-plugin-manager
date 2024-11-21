@@ -3,16 +3,17 @@ import { ListItem } from "@mui/material"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { DBPFDataType, type DBPFEntry, type DBPFFile, getFileTypeLabel } from "@common/dbpf"
+import { DBPFDataType, type DBPFEntry, type DBPFFile } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
 import { type PackageFile, VariantState } from "@common/types"
 import { PackageTag } from "@components/Tags/PackageTag"
 import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
+import { EntryViewer } from "@components/Viewer/EntryViewer"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
-import { EntryViewer } from "../Viewer/EntryViewer"
+import { getDBPFEntryLabel } from "./utils"
 
 const EDITABLETYPES = [
   // Exemplars
@@ -31,19 +32,21 @@ const VIEWABLETYPES = [
   DBPFDataType.EXMP,
 ]
 
+export interface PackageEntryProps {
+  entry: DBPFEntry
+  file: PackageFile
+  fileData: DBPFFile
+  packageId: PackageID
+  setFileData: (fileData: DBPFFile) => void
+}
+
 export function PackageEntry({
   entry,
   file,
   fileData,
   packageId,
   setFileData,
-}: {
-  entry: DBPFEntry
-  file: PackageFile
-  fileData: DBPFFile
-  packageId: PackageID
-  setFileData: (fileData: DBPFFile) => void
-}): JSX.Element {
+}: PackageEntryProps): JSX.Element {
   const actions = useStoreActions()
   const variantInfo = useCurrentVariant(packageId)
 
@@ -78,7 +81,7 @@ export function PackageEntry({
         compression: 100 * compression,
         id: entry.id,
         size: entry.size,
-        type: getFileTypeLabel(entry.id),
+        type: getDBPFEntryLabel(t, entry),
       })}
       {isViewable && (
         <ToolButton

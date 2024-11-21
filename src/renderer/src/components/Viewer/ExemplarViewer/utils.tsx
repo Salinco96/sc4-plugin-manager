@@ -12,6 +12,7 @@ import { isEqual } from "@common/utils/arrays"
 import { toHex } from "@common/utils/hex"
 import { forEach } from "@common/utils/objects"
 import { isArray, isBoolean, isNumber, isString } from "@common/utils/types"
+import { useExemplarProperties } from "@utils/store"
 
 export function getDiff(
   currentData: ExemplarData,
@@ -84,19 +85,23 @@ export function getDefaultValue(info: ExemplarPropertyInfo): ExemplarPropertyVal
 }
 
 export function getItemInfo(
-  property: ExemplarProperty,
+  info: ExemplarPropertyInfo | undefined,
   index: number,
 ): ExemplarPropertyItemInfo | undefined {
-  const { info } = property
   const itemInfo = info?.items?.at(info?.size && info.repeat ? index % info.size : index)
   return itemInfo ? { ...info, ...itemInfo } : info
 }
 
-export function getErrors(data: ExemplarData): ExemplarErrors | undefined {
+export function getErrors(
+  data: ExemplarData,
+  exemplarProperties: {
+    [propertyId in number]?: ExemplarPropertyInfo
+  },
+): ExemplarErrors | undefined {
   let errors: ExemplarErrors | undefined
 
   forEach(data.properties, property => {
-    const propertyErrors = getPropertyErrors(property)
+    const propertyErrors = getPropertyErrors(property, exemplarProperties[property.id])
     if (propertyErrors) {
       errors ??= {}
       errors.properties ??= {}
@@ -107,8 +112,11 @@ export function getErrors(data: ExemplarData): ExemplarErrors | undefined {
   return errors
 }
 
-function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefined {
-  const { info, type, value } = property
+function getPropertyErrors(
+  property: ExemplarProperty,
+  info: ExemplarPropertyInfo | undefined,
+): PropertyErrors | undefined {
+  const { type, value } = property
 
   const maxLength = info?.maxLength ?? 64
   const minLength = info?.minLength ?? 0
@@ -166,7 +174,7 @@ function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefin
       return "Mismatching type"
     }
 
-    const itemInfo = getItemInfo(property, index)
+    const itemInfo = getItemInfo(info, index)
 
     const choices = itemInfo?.choices
     const isStrict = !!itemInfo?.strict
@@ -179,11 +187,11 @@ function getPropertyErrors(property: ExemplarProperty): PropertyErrors | undefin
     const min = itemInfo?.min ?? getMin(property.type)
 
     if (min !== undefined && item < min) {
-      return `Min ${formatSingleValue(min, property, index)}`
+      return `Min ${formatSingleValue(min, property, info, index)}`
     }
 
     if (max !== undefined && item > max) {
-      return `Max ${formatSingleValue(max, property, index)}`
+      return `Max ${formatSingleValue(max, property, info, index)}`
     }
 
     return undefined
@@ -314,15 +322,15 @@ export function parseInputValue(
 function formatSingleValue(
   value: boolean | number,
   property: ExemplarProperty,
+  info: ExemplarPropertyInfo | undefined,
   index: number,
 ): string {
   const { type } = property
-
   if (isBoolean(value)) {
     return value ? "Yes" : "No"
   }
 
-  const itemInfo = getItemInfo(property, index)
+  const itemInfo = getItemInfo(info, index)
   const choice = itemInfo?.choices?.find(choice => choice.value === value)
   if (choice) {
     return choice.label
@@ -349,9 +357,8 @@ function formatSingleValue(
 export function formatValue(
   value: ExemplarPropertyValue | null,
   property: ExemplarProperty,
+  info: ExemplarPropertyInfo | undefined,
 ): string {
-  const { info } = property
-
   if (value === null) {
     return "-"
   }
@@ -367,6 +374,25 @@ export function formatValue(
   }
 
   return values
-    .map((item, index) => formatSingleValue(item, property, index))
+    .map((item, index) => formatSingleValue(item, property, info, index))
     .join(info?.display === "tgi" ? "-" : ", ")
+}
+
+// Not a property, but we treat it as such internally, hardcoded to ID 0x00000000
+export const PARENT_COHORT_ID_INFO = {
+  display: ExemplarDisplayType.TGI,
+  id: 0,
+  name: "Parent Cohort ID",
+  size: 3,
+  type: ExemplarValueType.UInt32,
+} satisfies ExemplarPropertyInfo
+
+export function useExemplarPropertyInfo(propertyId: number): ExemplarPropertyInfo | undefined {
+  const exemplarProperties = useExemplarProperties()
+
+  if (propertyId === PARENT_COHORT_ID_INFO.id) {
+    return PARENT_COHORT_ID_INFO
+  }
+
+  return exemplarProperties[propertyId]
 }

@@ -7,7 +7,7 @@ import { isArray, isBoolean, isNumber, isString } from "@common/utils/types"
 import { ExemplarPropertySelect } from "./ExemplarPropertySelect"
 import { ExemplarPropertySwitch } from "./ExemplarPropertySwitch"
 import { ExemplarPropertyTextInput } from "./ExemplarPropertyTextInput"
-import { getItemInfo } from "./utils"
+import { getItemInfo, useExemplarPropertyInfo } from "./utils"
 
 export interface ExemplarPropertyInputProps<T extends boolean | number | string> {
   error: boolean | undefined
@@ -35,9 +35,10 @@ export function ExemplarPropertyInput<T extends boolean | number | string>({
   value,
   ...others
 }: ExemplarPropertyInputProps<T>): JSX.Element {
-  const { id, info, type } = property
+  const { id, type } = property
 
-  const itemInfo = getItemInfo(property, index)
+  const info = useExemplarPropertyInfo(property.id)
+  const itemInfo = getItemInfo(info, index)
 
   const isTGI = itemInfo?.display === ExemplarDisplayType.TGI
 

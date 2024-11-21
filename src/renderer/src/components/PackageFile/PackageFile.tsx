@@ -1,18 +1,19 @@
-import { useState } from "react"
-
 import {
   ExpandLess as CollapseIcon,
   ExpandMore as ExpandIcon,
   Folder as OpenLocationIcon,
 } from "@mui/icons-material"
-import { Card, List, Typography, useTheme } from "@mui/material"
+import { Card, Typography, useTheme } from "@mui/material"
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { type DBPFFile, isDBPF } from "@common/dbpf"
 import { type PackageID, checkFile } from "@common/packages"
 import { type PackageFile as PackageFileType, VariantState } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
-import { values } from "@common/utils/objects"
+import { FlexBox } from "@components/FlexBox"
+import { PackageTag } from "@components/Tags/PackageTag"
+import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import {
@@ -23,19 +24,14 @@ import {
   useStoreActions,
 } from "@utils/store"
 
-import { FlexBox } from "../FlexBox"
+import { PackageEntries } from "./PackageEntries"
 
-import { PackageTag } from "@components/Tags/PackageTag"
-import { TagType } from "@components/Tags/utils"
-import { PackageEntry } from "./PackageEntry"
-
-export function PackageFile({
-  file,
-  packageId,
-}: {
+export interface PackageFileProps {
   file: PackageFileType
   packageId: PackageID
-}): JSX.Element {
+}
+
+export function PackageFile({ file, packageId }: PackageFileProps): JSX.Element {
   const actions = useStoreActions()
   const features = useFeatures()
   const settings = useSettings()
@@ -110,18 +106,12 @@ export function PackageFile({
         </FlexBox>
       </FlexBox>
       {fileData && expanded && (
-        <List disablePadding>
-          {values(fileData.entries).map(entry => (
-            <PackageEntry
-              entry={entry}
-              file={file}
-              fileData={fileData}
-              key={entry.id}
-              packageId={packageId}
-              setFileData={setFileData}
-            />
-          ))}
-        </List>
+        <PackageEntries
+          file={file}
+          fileData={fileData}
+          packageId={packageId}
+          setFileData={setFileData}
+        />
       )}
     </Card>
   )

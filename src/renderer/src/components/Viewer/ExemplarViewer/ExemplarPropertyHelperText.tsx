@@ -2,7 +2,7 @@ import { FormHelperText, Link } from "@mui/material"
 
 import type { ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
 
-import { formatValue } from "./utils"
+import { formatValue, useExemplarPropertyInfo } from "./utils"
 
 export interface ExemplarPropertyHelperTextProps {
   error: string | undefined
@@ -19,12 +19,16 @@ export function ExemplarPropertyHelperText({
   property,
   readonly,
 }: ExemplarPropertyHelperTextProps): JSX.Element {
+  const info = useExemplarPropertyInfo(property.id)
+
   return (
     <FormHelperText sx={{ marginBottom: 2 }} error={!!error}>
       {error}
       {original !== undefined && !error && (
         <>
-          {original === null ? "New property" : `Original: ${formatValue(original, property)}`}
+          {original === null
+            ? "New property"
+            : `Original: ${formatValue(original, property, info)}`}
           {!readonly && (
             <Link
               component="button"

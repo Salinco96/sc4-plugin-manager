@@ -12,13 +12,7 @@ import {
 import { Virtuoso, type VirtuosoHandle } from "react-virtuoso"
 
 import { TGI } from "@common/dbpf"
-import {
-  type ExemplarData,
-  type ExemplarDataPatch,
-  ExemplarDisplayType,
-  type ExemplarPropertyValue,
-  ExemplarValueType,
-} from "@common/exemplars"
+import type { ExemplarData, ExemplarDataPatch, ExemplarPropertyValue } from "@common/exemplars"
 import { readHex, toHex } from "@common/utils/hex"
 import { values } from "@common/utils/objects"
 import { isArray } from "@common/utils/types"
@@ -26,9 +20,10 @@ import { FlexBox } from "@components/FlexBox"
 
 import { Viewer } from "../Viewer"
 
+import { useStore } from "@utils/store"
 import { ExemplarProperty, type ExemplarPropertyProps } from "./ExemplarProperty"
 import { ExemplarPropertySearch } from "./ExemplarPropertySearch"
-import { getDiff, getErrors } from "./utils"
+import { PARENT_COHORT_ID_INFO, getDiff, getErrors } from "./utils"
 
 export interface ExemplarViewerProps {
   data: ExemplarData
@@ -51,6 +46,8 @@ export function ExemplarViewer({
   original,
   readonly = false,
 }: ExemplarViewerProps): JSX.Element {
+  const exemplarProperties = useStore(store => store.exemplarProperties)
+
   const [currentData, setCurrentData] = useState(data)
   const [originalData, setOriginalData] = useState(original ?? data)
   const [patchedData, setPatchedData] = useState(data)
@@ -65,9 +62,17 @@ export function ExemplarViewer({
     setPatchedData(data)
   }, [data, original])
 
-  const diff = useMemo(() => getDiff(currentData, originalData), [currentData, originalData])
-  const dirty = useMemo(() => !!getDiff(currentData, patchedData), [currentData, patchedData])
-  const errors = useMemo(() => getErrors(currentData), [currentData])
+  const diff = useMemo(() => {
+    return getDiff(currentData, originalData)
+  }, [currentData, originalData])
+
+  const dirty = useMemo(() => {
+    return getDiff(currentData, patchedData) !== null
+  }, [currentData, patchedData])
+
+  const errors = useMemo(() => {
+    return getErrors(currentData, exemplarProperties)
+  }, [currentData, exemplarProperties])
 
   const isPatched = original !== undefined && !!diff && !isLocal
 
@@ -115,15 +120,8 @@ export function ExemplarViewer({
         }
       },
       property: {
-        id: 0,
-        info: {
-          display: ExemplarDisplayType.TGI,
-          id: 0,
-          name: "Parent Cohort ID",
-          size: 3,
-          type: ExemplarValueType.UInt32,
-        },
-        type: ExemplarValueType.UInt32,
+        id: PARENT_COHORT_ID_INFO.id,
+        type: PARENT_COHORT_ID_INFO.type,
         value: currentData?.parentCohortId.split("-").map(readHex),
       },
       original: diff?.parentCohortId

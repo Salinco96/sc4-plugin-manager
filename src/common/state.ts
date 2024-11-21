@@ -11,7 +11,7 @@ export interface ApplicationState {
   authors: Authors
   categories: Categories
   downloads: Record<string, TaskInfo>
-  exemplarProperties: Record<number, ExemplarPropertyInfo>
+  exemplarProperties: Partial<Record<number, ExemplarPropertyInfo>>
   features: Features
   linker: TaskInfo | null
   loader: TaskInfo | null

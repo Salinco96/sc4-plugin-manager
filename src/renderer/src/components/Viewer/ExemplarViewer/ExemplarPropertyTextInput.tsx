@@ -17,6 +17,7 @@ import {
   getMin,
   getStep,
   parseInputValue,
+  useExemplarPropertyInfo,
 } from "./utils"
 
 export interface ExemplarPropertyTextInputProps {
@@ -56,9 +57,11 @@ export function ExemplarPropertyTextInput({
   setExpanded,
   value,
 }: ExemplarPropertyTextInputProps): JSX.Element {
-  const { info, type } = property
+  const { type } = property
 
-  const itemInfo = getItemInfo(property, index)
+  const info = useExemplarPropertyInfo(property.id)
+  const itemInfo = getItemInfo(info, index)
+
   const isString = type === ExemplarValueType.String
   const isHex = itemInfo?.display !== undefined
 

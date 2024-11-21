@@ -1064,6 +1064,11 @@ export class Application {
           role: "fileMenu",
           submenu: [
             {
+              // Register Ctrl+Shift+I as Devtools command
+              accelerator: "CmdOrCtrl+Shift+I",
+              role: "toggleDevTools",
+            },
+            {
               // Register Ctrl+R as Reload command
               accelerator: "CmdOrCtrl+R",
               click: () => this.reload(),
@@ -1798,7 +1803,7 @@ export class Application {
         )
 
         return openFile(patchedFullPath, FileOpenMode.READ, patchedFile => {
-          return loadDBPF(patchedFile, { exemplarProperties })
+          return loadDBPF(patchedFile, { exemplarProperties, loadExemplars: true })
         })
       },
       pool: `${packageId}#${variantId}`,
