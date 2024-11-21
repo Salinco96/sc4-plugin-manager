@@ -24,15 +24,15 @@ export function ExemplarPropertyHelperText({
       {error}
       {original !== undefined && !error && (
         <>
-          Original: {formatValue(original, property)}
+          {original === null ? "New property" : `Original: ${formatValue(original, property)}`}
           {!readonly && (
             <Link
               component="button"
               onClick={() => onChange(original)}
               sx={{ paddingLeft: 0.5 }}
-              title="Reset to initial value"
+              title={original === null ? "Remove this property" : "Reset to initial value"}
             >
-              Reset
+              {original === null ? "Remove" : "Reset"}
             </Link>
           )}
         </>

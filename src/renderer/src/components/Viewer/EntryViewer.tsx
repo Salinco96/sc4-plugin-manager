@@ -37,7 +37,7 @@ export function EntryViewer({
           onPatch={onPatch}
           open={open}
           original={entry.original}
-          readonly={readonly}
+          readonly //={readonly}
         />
       )
     }

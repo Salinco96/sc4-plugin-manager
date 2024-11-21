@@ -3,6 +3,7 @@ import {
   type ExemplarDataPatch,
   ExemplarDisplayType,
   type ExemplarProperty,
+  type ExemplarPropertyInfo,
   type ExemplarPropertyItemInfo,
   type ExemplarPropertyValue,
   ExemplarValueType,
@@ -27,13 +28,22 @@ export function getDiff(
     diff.parentCohortId = currentData.parentCohortId
   }
 
-  for (const propertyId in originalData.properties) {
+  for (const propertyId in currentData.properties) {
     const currentValue = currentData.properties[propertyId]?.value ?? null
     const originalValue = originalData.properties[propertyId]?.value ?? null
     if (!isEqual(currentValue, originalValue)) {
       diff ??= {}
       diff.properties ??= {}
       diff.properties[toHex(Number(propertyId), 8)] = currentValue
+    }
+  }
+
+  for (const propertyId in originalData.properties) {
+    const currentValue = currentData.properties[propertyId]?.value ?? null
+    if (currentValue === null) {
+      diff ??= {}
+      diff.properties ??= {}
+      diff.properties[toHex(Number(propertyId), 8)] = null
     }
   }
 
@@ -47,6 +57,30 @@ export interface ExemplarErrors {
   properties?: {
     [propertyId in number]?: PropertyErrors
   }
+}
+
+export function getDefaultValue(info: ExemplarPropertyInfo): ExemplarPropertyValue {
+  if (info.default !== undefined) {
+    return info.default
+  }
+
+  if (info.choices?.length) {
+    return info.choices[0].value
+  }
+
+  if (info.type === ExemplarValueType.Bool) {
+    return false
+  }
+
+  if (info.type === ExemplarValueType.String) {
+    return ""
+  }
+
+  if (info.size === 1) {
+    return 0
+  }
+
+  return Array(info.size ?? info.minLength ?? 1).fill(0)
 }
 
 export function getItemInfo(

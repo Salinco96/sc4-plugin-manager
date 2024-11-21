@@ -913,6 +913,7 @@ export class Application {
     const {
       authors,
       categories,
+      exemplarProperties,
       features,
       packages,
       profiles,
@@ -925,6 +926,7 @@ export class Application {
       authors,
       categories,
       downloads: {}, // TODO
+      exemplarProperties,
       features,
       linker: null, // TODO
       loader: null, // TODO
@@ -1726,7 +1728,7 @@ export class Application {
           this.sendStateUpdate({ packages })
         }
 
-        let features: Features | undefined
+        let features: Features = {}
 
         // Resolving packages if profile exists
         if (profileInfo) {
@@ -1745,13 +1747,14 @@ export class Application {
         this.sendStateUpdate({ templates })
 
         const exemplarProperties = await loadExemplarProperties(context, this.getDatabasePath())
+        this.sendStateUpdate({ exemplarProperties })
 
         return {
           assets,
           authors,
           categories,
           exemplarProperties,
-          features: features ?? {},
+          features,
           packages,
           profiles,
           profileOptions,

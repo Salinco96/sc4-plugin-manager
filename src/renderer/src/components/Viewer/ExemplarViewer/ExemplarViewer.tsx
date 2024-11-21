@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 
 import {
   Box,
@@ -9,7 +9,7 @@ import {
   Switch,
   Typography,
 } from "@mui/material"
-import { Virtuoso } from "react-virtuoso"
+import { Virtuoso, type VirtuosoHandle } from "react-virtuoso"
 
 import { TGI } from "@common/dbpf"
 import {
@@ -27,6 +27,7 @@ import { FlexBox } from "@components/FlexBox"
 import { Viewer } from "../Viewer"
 
 import { ExemplarProperty, type ExemplarPropertyProps } from "./ExemplarProperty"
+import { ExemplarPropertySearch } from "./ExemplarPropertySearch"
 import { getDiff, getErrors } from "./utils"
 
 export interface ExemplarViewerProps {
@@ -54,6 +55,9 @@ export function ExemplarViewer({
   const [originalData, setOriginalData] = useState(original ?? data)
   const [patchedData, setPatchedData] = useState(data)
   const [showDiffOnly, setShowDiffOnly] = useState(false)
+
+  const selectedPropertyIdRef = useRef<number>()
+  const listRef = useRef<VirtuosoHandle | null>(null)
 
   useEffect(() => {
     setCurrentData(data)
@@ -135,6 +139,29 @@ export function ExemplarViewer({
     return fields
   }, [currentData, diff, errors, isPatched, originalData, readonly, showDiffOnly])
 
+  // After selecting or creating a new property, scroll to it and focus the first input
+  useEffect(() => {
+    const createdPropertyId = selectedPropertyIdRef.current
+    if (createdPropertyId !== undefined && listRef.current) {
+      selectedPropertyIdRef.current = undefined
+
+      const index = fields.findIndex(field => field.property.id === createdPropertyId)
+      if (index >= 0) {
+        listRef.current.scrollToIndex({ align: "center", index })
+      }
+
+      setTimeout(() => {
+        const input = document.getElementById(`${toHex(createdPropertyId, 8, true)}-0`)
+        if (input) {
+          input.focus()
+          if (input instanceof HTMLInputElement) {
+            input.select()
+          }
+        }
+      }, 100)
+    }
+  }, [fields])
+
   return (
     <Viewer background="light" open={open} onClose={onClose}>
       <FlexBox direction="column" height="100%" width="100%">
@@ -149,52 +176,78 @@ export function ExemplarViewer({
                 <ExemplarProperty {...field} />
               </Box>
             )}
+            ref={listRef}
             style={{ scrollbarGutter: "stable" }}
           />
         </FlexBox>
-        <FlexBox paddingX={8} paddingY={2}>
-          <FlexBox alignItems="center" flex={1}>
-            {isPatched && (
-              <FormControl>
-                <FormControlLabel
-                  checked={showDiffOnly}
-                  control={<Switch color="primary" />}
-                  label="Show only changed properties"
-                  onChange={() => setShowDiffOnly(!showDiffOnly)}
-                />
-              </FormControl>
-            )}
-          </FlexBox>
-          {!readonly && (
-            <ButtonGroup>
-              <Button
-                disabled={!dirty || !!errors}
-                onClick={() => {
-                  setPatchedData(currentData)
-                  onPatch(diff)
-                }}
-                title="Apply all changes"
-                variant="outlined"
-              >
-                Apply
-              </Button>
-              {!isLocal && (
+        <FlexBox direction="column" paddingX={8} paddingY={2} gap={2}>
+          <ExemplarPropertySearch
+            data={data}
+            onSelect={property => {
+              selectedPropertyIdRef.current = property.id
+
+              if (
+                showDiffOnly &&
+                currentData.properties[property.id] &&
+                diff?.properties?.[toHex(property.id, 8)] === undefined
+              ) {
+                setShowDiffOnly(false)
+              }
+
+              setCurrentData({
+                ...currentData,
+                properties: {
+                  ...currentData.properties,
+                  [property.id]: property,
+                },
+              })
+            }}
+            readonly={readonly}
+          />
+          <FlexBox>
+            <FlexBox alignItems="center" flex={1}>
+              {isPatched && (
+                <FormControl>
+                  <FormControlLabel
+                    checked={showDiffOnly}
+                    control={<Switch color="primary" />}
+                    label="Show only changed properties"
+                    onChange={() => setShowDiffOnly(!showDiffOnly)}
+                  />
+                </FormControl>
+              )}
+            </FlexBox>
+            {!readonly && (
+              <ButtonGroup>
                 <Button
-                  color="error"
-                  disabled={!diff && !dirty}
+                  disabled={!dirty || !!errors}
                   onClick={() => {
-                    setCurrentData(originalData)
-                    setPatchedData(originalData)
-                    onPatch(null)
+                    setPatchedData(currentData)
+                    onPatch(diff)
                   }}
-                  title="Reset all properties to their initial value"
+                  title="Apply all changes"
                   variant="outlined"
                 >
-                  Reset
+                  Apply
                 </Button>
-              )}
-            </ButtonGroup>
-          )}
+                {!isLocal && (
+                  <Button
+                    color="error"
+                    disabled={!diff && !dirty}
+                    onClick={() => {
+                      setCurrentData(originalData)
+                      setPatchedData(originalData)
+                      onPatch(null)
+                    }}
+                    title="Reset all properties to their initial value"
+                    variant="outlined"
+                  >
+                    Reset
+                  </Button>
+                )}
+              </ButtonGroup>
+            )}
+          </FlexBox>
         </FlexBox>
       </FlexBox>
     </Viewer>

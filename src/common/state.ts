@@ -7,16 +7,11 @@ import type { ProfileID, ProfileInfo, Profiles } from "./profiles"
 import type { Settings } from "./settings"
 import type { Features, PackageInfo, Packages } from "./types"
 
-export interface ApplicationConfig {
-  categories: Categories
-  exemplarProperties: Record<number, ExemplarPropertyInfo>
-  profileOptions: OptionInfo[]
-}
-
 export interface ApplicationState {
   authors: Authors
   categories: Categories
   downloads: Record<string, TaskInfo>
+  exemplarProperties: Record<number, ExemplarPropertyInfo>
   features: Features
   linker: TaskInfo | null
   loader: TaskInfo | null
@@ -44,6 +39,7 @@ export function getInitialState(): ApplicationState {
     authors: {},
     categories: {},
     downloads: {},
+    exemplarProperties: {},
     features: {},
     linker: null,
     loader: null,

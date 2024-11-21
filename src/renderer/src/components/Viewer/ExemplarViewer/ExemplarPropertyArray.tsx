@@ -34,7 +34,7 @@ export function ExemplarPropertyArray({
 }: ExemplarPropertyArrayProps): JSX.Element {
   const { info } = property
 
-  const groupSize = info?.size && info.repeat ? info.size : 1
+  const groupSize = info?.size && info.repeat ? info.size : info?.items ? value.length : 1
   const maxLength = info?.size && !info.repeat ? info.size : (info?.maxLength ?? groupSize * 16)
   const minLength = info?.size && !info.repeat ? info.size : (info?.minLength ?? 0)
   const groupCount = Math.max(Math.ceil(value.length / groupSize), 1)
@@ -78,6 +78,7 @@ export function ExemplarPropertyArray({
           isExpanded={isExpanded}
           isFirstGroup={groupIndex === 0}
           isLastGroup={groupIndex === visibleGroupCount - 1}
+          key={groupIndex}
           name={name}
           onChange={newValues => {
             onChange(splice(value, groupIndex * groupSize, groupSize, ...newValues))
