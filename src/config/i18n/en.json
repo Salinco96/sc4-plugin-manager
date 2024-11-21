@@ -611,6 +611,12 @@
           "explorer": "$t(General:explorer)"
         }
       }
+    },
+    "version": {
+      "emptyValue": "$t(General:emptyValue)",
+      "label": "Manager version",
+      "updateAvailable": "A new version is available",
+      "updated": "The manager is up-to-date"
     }
   },
   "Snackbar": {

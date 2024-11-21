@@ -1,4 +1,8 @@
-import { CheckCircle as AppliedIcon, Cancel as NotAppliedIcon } from "@mui/icons-material"
+import {
+  CheckCircle as AppliedIcon,
+  Cancel as NotAppliedIcon,
+  Update as UpdateIcon,
+} from "@mui/icons-material"
 import { Button, FormGroup, Paper, Tooltip, Typography, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
@@ -55,7 +59,7 @@ function Settings(): JSX.Element {
               t("install.version.emptyValue")
             )}
           </FlexBox>
-          <FlexBox alignItems="center" height={38} gap={2}>
+          <FlexBox alignItems="center" height={38} gap={1}>
             <Typography sx={{ flex: 1 }}>{t("install.patched.label")}</Typography>
             {settings?.install?.patched ? (
               <FlexBox
@@ -96,6 +100,52 @@ function Settings(): JSX.Element {
               >
                 <NotAppliedIcon color="error" />
                 <span>{t("install.patched.apply")}</span>
+              </FlexBox>
+            )}
+          </FlexBox>
+          <FlexBox alignItems="center" height={38} gap={1}>
+            <Typography sx={{ flex: 1 }}>{t("version.label")}</Typography>
+            {settings?.version ?? t("version.emptyValue")}
+            {settings?.version && !settings?.update && (
+              <FlexBox
+                alignItems="center"
+                sx={{
+                  "& span": {
+                    overflow: "hidden",
+                    textWrap: "nowrap",
+                    transition: "width 0.3s",
+                    width: 0,
+                  },
+                  "&:hover span": {
+                    marginLeft: 1,
+                    width: 192,
+                  },
+                }}
+              >
+                <AppliedIcon color="success" />
+                <span>{t("version.updated")}</span>
+              </FlexBox>
+            )}
+            {settings?.version && !!settings.update && (
+              <FlexBox
+                alignItems="center"
+                sx={{
+                  "& a": {
+                    overflow: "hidden",
+                    textWrap: "nowrap",
+                    transition: "width 0.3s",
+                    width: 0,
+                  },
+                  "&:hover a": {
+                    marginLeft: 1,
+                    width: 188,
+                  },
+                }}
+              >
+                <UpdateIcon color="warning" />
+                <a href={settings.update.url} target="_blank" rel="noreferrer">
+                  {t("version.updateAvailable", { version: settings.update.version })}
+                </a>
               </FlexBox>
             )}
           </FlexBox>

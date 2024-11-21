@@ -2944,7 +2944,8 @@ export class Application {
   protected async writeSettings(context: TaskContext, settings: Settings): Promise<void> {
     context.debug("Saving settings...")
 
-    const { format: oldFormat, ...data } = settings
+    // TODO
+    const { format: oldFormat, update, version, ...data } = settings
 
     await writeConfig<Settings>(
       this.getRootPath(),

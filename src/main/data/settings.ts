@@ -5,12 +5,16 @@ import { i18n } from "@common/i18n"
 import type { Profiles } from "@common/profiles"
 import type { Settings } from "@common/settings"
 import { keys } from "@common/utils/objects"
+import { isString } from "@common/utils/types"
 import { loadConfig } from "@node/configs"
 import { createIfMissing, moveTo } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showConfirmation, showSuccess } from "@utils/dialog"
 import { check4GBPatch, checkInstallPath, getExeVersion } from "@utils/exe"
 import type { TaskContext } from "@utils/tasks"
+import { app } from "electron/main"
+
+const repository = "Salinco96/sc4-plugin-manager"
 
 export async function loadSettings(
   context: TaskContext,
@@ -23,6 +27,26 @@ export async function loadSettings(
   const settings: Settings = {
     format: config?.format,
     ...config?.data,
+  }
+
+  settings.version = app.getVersion()
+
+  try {
+    const response = await fetch(`https://api.github.com/repos/${repository}/releases/latest`)
+
+    if (!response.ok) {
+      throw Error(response.statusText)
+    }
+
+    const json = await response.json()
+    const version = json.tag_name
+    if (isString(version) && version !== settings.version) {
+      const url = `https://github.com/${repository}/releases/latest`
+      settings.update = { url, version }
+    }
+  } catch (error) {
+    context.error("Failed to check for updates", error)
+    settings.update = undefined
   }
 
   // Config file does not exist

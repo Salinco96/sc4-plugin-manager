@@ -15,4 +15,11 @@ export interface Settings {
     /** Executable version */
     version?: string
   }
+  /** Manager available update */
+  update?: {
+    url: string
+    version: string
+  }
+  /** Manager version */
+  version?: string
 }
