@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import type { Authors } from "@common/authors"
+import { type AuthorData, type AuthorID, type Authors, loadAuthorInfo } from "@common/authors"
 import type { Categories } from "@common/categories"
 import {
   type ExemplarPropertyData,
@@ -12,7 +12,7 @@ import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
 import { readHex } from "@common/utils/hex"
-import { forEach, size } from "@common/utils/objects"
+import { forEach, mapValues, size } from "@common/utils/objects"
 import { isEnum } from "@common/utils/types"
 import { loadConfig, readConfig } from "@node/configs"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
@@ -22,13 +22,16 @@ import { fromProfileData } from "./profiles"
 
 export async function loadAuthors(context: TaskContext, basePath: string): Promise<Authors> {
   try {
-    const config = await loadConfig<Authors>(basePath, FILENAMES.dbAuthors)
+    const config = await loadConfig<{ [authorId in AuthorID]?: AuthorData }>(
+      basePath,
+      FILENAMES.dbAuthors,
+    )
 
     if (!config) {
       throw Error(`Missing config ${FILENAMES.dbAuthors}`)
     }
 
-    const authors = config.data
+    const authors = mapValues(config.data, (data, id) => loadAuthorInfo(id, data))
 
     context.debug(`Loaded ${size(authors)} authors`)
     return authors

@@ -17,7 +17,6 @@ import {
   VariantState,
   getState,
 } from "@common/types"
-import { hasAny } from "@common/utils/arrays"
 import { keys, mapValues, values } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
@@ -173,14 +172,16 @@ export function filterVariant(
 ): boolean {
   const packageStatus = getPackageStatus(packageInfo, profileInfo)
 
+  const fn = filters.combine === "and" ? "every" : "some"
+
   if (filters.authors.length) {
-    if (!hasAny(variantInfo.authors, filters.authors)) {
+    if (!filters.authors[fn](authorId => variantInfo.authors.includes(authorId))) {
       return false
     }
   }
 
   if (filters.categories.length) {
-    if (!filters.categories.some(category => isCategory(variantInfo, category))) {
+    if (!filters.categories[fn](category => isCategory(variantInfo, category))) {
       return false
     }
   }
@@ -204,7 +205,7 @@ export function filterVariant(
   }
 
   if (filters.states.length) {
-    if (!filters.states.some(state => getState(state, packageInfo, variantInfo, profileInfo))) {
+    if (!filters.states[fn](state => getState(state, packageInfo, variantInfo, profileInfo))) {
       return false
     }
   }

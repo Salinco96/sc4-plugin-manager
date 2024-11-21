@@ -1,6 +1,8 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
+import { app } from "electron/main"
+
 import { i18n } from "@common/i18n"
 import type { Profiles } from "@common/profiles"
 import type { Settings } from "@common/settings"
@@ -12,7 +14,6 @@ import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showConfirmation, showSuccess } from "@utils/dialog"
 import { check4GBPatch, checkInstallPath, getExeVersion } from "@utils/exe"
 import type { TaskContext } from "@utils/tasks"
-import { app } from "electron/main"
 
 const repository = "Salinco96/sc4-plugin-manager"
 

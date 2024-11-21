@@ -399,6 +399,8 @@
   },
   "PackageListFilters": {
     "actions": {
+      "combineAnd": "Match all filters",
+      "combineOr": "Match any filters",
       "hideDependencies": "Hide dependencies",
       "hideExperimental": "Hide experimental packages",
       "hideIncompatible": "Hide incompatible packages",

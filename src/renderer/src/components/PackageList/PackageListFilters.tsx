@@ -1,6 +1,8 @@
 import { useMemo } from "react"
 
 import {
+  JoinInner as CombineAndIcon,
+  JoinFull as CombineOrIcon,
   ViewInAr as DependenciesIcon,
   Download as DownloadedIcon,
   FileDownloadDone as EnabledIcon,
@@ -148,6 +150,24 @@ export function PackageListFilters(): JSX.Element {
         >
           <ToggleButton value="dependencies">
             <DependenciesIcon />
+          </ToggleButton>
+        </Tooltip>
+      </ToggleButtonGroup>
+      <ToggleButtonGroup
+        value={packageFilters.combine === "and" ? [] : ["combine"]}
+        onChange={(event, values) => {
+          actions.setPackageFilters({
+            combine: values.includes("combine") ? "or" : "and",
+          })
+        }}
+        size="small"
+      >
+        <Tooltip
+          placement="bottom"
+          title={t(`actions.combine${packageFilters.combine === "and" ? "Or" : "And"}`)}
+        >
+          <ToggleButton value="combine">
+            {packageFilters.combine === "and" ? <CombineAndIcon /> : <CombineOrIcon />}
           </ToggleButton>
         </Tooltip>
       </ToggleButtonGroup>

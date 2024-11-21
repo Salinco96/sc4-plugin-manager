@@ -27,6 +27,7 @@ export interface PackageUi {
 export interface PackageFilters {
   authors: AuthorID[]
   categories: CategoryID[]
+  combine: "and" | "or"
   dependencies: boolean
   experimental: boolean
   incompatible: boolean
@@ -490,6 +491,7 @@ export const useStore = create<Store>()((set, get): Store => {
     packageFilters: {
       authors: [],
       categories: [],
+      combine: "or",
       dependencies: true,
       experimental: true,
       incompatible: true,

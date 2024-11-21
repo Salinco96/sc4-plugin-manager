@@ -6,6 +6,10 @@ export function difference<T>(array: ReadonlyArray<T>, values: ReadonlyArray<T>)
   return array.filter(v => !values.includes(v))
 }
 
+export function hasAll<T>(array: ReadonlyArray<T>, values: ReadonlyArray<T>): boolean {
+  return array.every(v => values.includes(v))
+}
+
 export function hasAny<T>(array: ReadonlyArray<T>, values: ReadonlyArray<T>): boolean {
   return array.some(v => values.includes(v))
 }
