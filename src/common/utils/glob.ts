@@ -1,6 +1,6 @@
 const CONDITION_REGEX = /{{([^}]+)}}/g
 const SEPARATOR = "[\\\\\\/]"
-const NOT_SEPARATOR = SEPARATOR.replace("[", "[^")
+const NOT_SEPARATOR = SEPARATOR.replaceAll("[", "[^")
 
 export function globToRegex(pattern: string): RegExp {
   return new RegExp(

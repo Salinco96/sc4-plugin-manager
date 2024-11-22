@@ -169,7 +169,7 @@ export const SC4EVERMORE: IndexerSource = {
         lastModified: new Date(lastModified),
         name: itemName,
         thumbnail,
-        url: itemUrl.startsWith(origin) ? itemUrl : `${origin}${itemUrl}`,
+        url: new URL(itemUrl, origin).toString(),
       }
     })
   },

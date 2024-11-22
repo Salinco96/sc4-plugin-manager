@@ -1357,7 +1357,7 @@ export class Application {
                     const filename = path.basename(entry.name)
                     await includeFile(
                       oldPath,
-                      include?.as?.replace("*", filename) ?? entry.name,
+                      include?.as?.replaceAll("*", filename) ?? entry.name,
                       type,
                       condition,
                       include,
