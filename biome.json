@@ -1,8 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "formatter": {
+    "formatWithErrors": true,
     "ignore": ["src/scripts/data"],
-    "indentStyle": "space",
     "lineWidth": 100,
     "useEditorconfig": true
   },
@@ -10,6 +10,11 @@
     "formatter": {
       "arrowParentheses": "asNeeded",
       "semicolons": "asNeeded"
+    }
+  },
+  "json": {
+    "parser": {
+      "allowTrailingCommas": true
     }
   },
   "linter": {
