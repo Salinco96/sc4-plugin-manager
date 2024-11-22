@@ -2,6 +2,7 @@ import { readdir } from "node:fs/promises"
 import path from "node:path"
 
 import { input, select } from "@inquirer/prompts"
+import { ID, isEmpty, isString, keys, mapDefined, parseHex, values } from "@salinco/nice-utils"
 import { config } from "dotenv"
 import { glob } from "glob"
 
@@ -13,12 +14,10 @@ import {
   ExemplarValueType,
 } from "@common/exemplars"
 import type { PackageID } from "@common/packages"
-import { ConfigFormat, ID, type PackageData } from "@common/types"
-import { difference, indexBy, isEqual, mapDefined, removeElement } from "@common/utils/arrays"
+import { ConfigFormat, type PackageData } from "@common/types"
+import { difference, indexBy, isEqual, removeElement } from "@common/utils/arrays"
 import { globToRegex } from "@common/utils/glob"
-import { readHex } from "@common/utils/hex"
-import { forEach, forEachAsync, isEmpty, keys, mapValues, values } from "@common/utils/objects"
-import { isString } from "@common/utils/types"
+import { forEach, forEachAsync, mapValues } from "@common/utils/objects"
 import type { VariantData, VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
@@ -1199,12 +1198,12 @@ async function loadExemplarProperties(): Promise<{ [id: number]: ExemplarPropert
     }
 
     if (propertyIdHex.includes("-")) {
-      const [firstId, lastId] = propertyIdHex.split("-").map(readHex)
+      const [firstId, lastId] = propertyIdHex.split("-").map(parseHex)
       for (let propertyId = firstId; propertyId <= lastId; propertyId++) {
         properties[propertyId] = propertyInfo
       }
     } else {
-      const propertyId = readHex(propertyIdHex)
+      const propertyId = parseHex(propertyIdHex)
       properties[propertyId] = propertyInfo
     }
   })

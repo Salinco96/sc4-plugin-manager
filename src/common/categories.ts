@@ -1,8 +1,8 @@
-import { ID } from "./types"
+import { ID } from "@salinco/nice-utils"
 import type { VariantInfo } from "./variants"
 
 /** Category ID */
-export type CategoryID = ID<CategoryInfo>
+export type CategoryID = ID<string, CategoryInfo>
 
 export const CategoryID = {
   AGRICULTURE: ID("agriculture"),

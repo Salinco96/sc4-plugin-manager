@@ -1,13 +1,12 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
+import { isString, keys } from "@salinco/nice-utils"
 import { app } from "electron/main"
 
 import { i18n } from "@common/i18n"
 import type { Profiles } from "@common/profiles"
 import type { Settings, SettingsData } from "@common/settings"
-import { keys } from "@common/utils/objects"
-import { isString } from "@common/utils/types"
 import { loadConfig } from "@node/configs"
 import { createIfMissing, moveTo } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"

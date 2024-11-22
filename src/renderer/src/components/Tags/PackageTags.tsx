@@ -1,11 +1,10 @@
-import { useState } from "react"
-
 import { Chip, Tooltip } from "@mui/material"
+import { keys } from "@salinco/nice-utils"
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
 import { VariantState, getState } from "@common/types"
-import { keys } from "@common/utils/objects"
 import type { VariantID } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
 import { usePackageInfo, useVariantInfo } from "@utils/packages"

@@ -1,3 +1,5 @@
+import { keys } from "@salinco/nice-utils"
+
 import type { CategoryID } from "./categories"
 import type { TGI } from "./dbpf"
 import type { ExemplarDataPatch } from "./exemplars"
@@ -18,23 +20,12 @@ import {
   isPatched,
 } from "./packages"
 import type { ProfileID, ProfileInfo } from "./profiles"
-import { keys } from "./utils/objects"
 import type { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
 
 /** Supported configuration formats */
 export enum ConfigFormat {
   JSON = ".json",
   YAML = ".yaml",
-}
-
-export type Primitive = boolean | number | string | null | undefined
-
-declare const IDType: unique symbol
-
-export type ID<T> = string & { [IDType]: T }
-
-export function ID<T>(id: string): ID<T> {
-  return id as ID<T>
 }
 
 export enum Feature {

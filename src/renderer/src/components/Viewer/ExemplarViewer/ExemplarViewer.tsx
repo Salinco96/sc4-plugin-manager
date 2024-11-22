@@ -9,13 +9,11 @@ import {
   Switch,
   Typography,
 } from "@mui/material"
+import { isArray, parseHex, toHex, values } from "@salinco/nice-utils"
 import { Virtuoso, type VirtuosoHandle } from "react-virtuoso"
 
 import { TGI } from "@common/dbpf"
 import type { ExemplarData, ExemplarDataPatch, ExemplarPropertyValue } from "@common/exemplars"
-import { readHex, toHex } from "@common/utils/hex"
-import { values } from "@common/utils/objects"
-import { isArray } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { Viewer } from "../Viewer"
@@ -122,10 +120,10 @@ export function ExemplarViewer({
       property: {
         id: PARENT_COHORT_ID_INFO.id,
         type: PARENT_COHORT_ID_INFO.type,
-        value: currentData?.parentCohortId.split("-").map(readHex),
+        value: currentData?.parentCohortId.split("-").map(parseHex),
       },
       original: diff?.parentCohortId
-        ? originalData?.parentCohortId.split("-").map(readHex)
+        ? originalData?.parentCohortId.split("-").map(parseHex)
         : undefined,
       readonly,
     })
@@ -149,7 +147,7 @@ export function ExemplarViewer({
       }
 
       setTimeout(() => {
-        const input = document.getElementById(`${toHex(createdPropertyId, 8, true)}-0`)
+        const input = document.getElementById(`${toHex(createdPropertyId, 8)}-0`)
         if (input) {
           input.focus()
           if (input instanceof HTMLInputElement) {

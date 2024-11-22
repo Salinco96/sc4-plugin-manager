@@ -1,7 +1,7 @@
-import type { ID } from "./types"
+import type { ID } from "@salinco/nice-utils"
 
 /** Asset ID */
-export type AssetID = ID<AssetInfo>
+export type AssetID = ID<string, AssetInfo>
 
 /** Raw asset data */
 export interface AssetData {

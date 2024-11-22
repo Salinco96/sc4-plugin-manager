@@ -1,3 +1,4 @@
+import type { ID } from "@salinco/nice-utils"
 import type { Namespace, TFunction } from "i18next"
 
 import type { AssetData, AssetID } from "./assets"
@@ -7,7 +8,6 @@ import type { OptionData, OptionID, OptionInfo, OptionValue, Requirements } from
 import type { PackageID } from "./packages"
 import type {
   Feature,
-  ID,
   LotData,
   LotInfo,
   MMPData,
@@ -18,7 +18,7 @@ import type {
 } from "./types"
 
 /** Variant ID */
-export type VariantID = ID<VariantInfo>
+export type VariantID = ID<string, VariantInfo>
 
 export interface VariantData {
   assets?: Array<AssetID | VariantAssetData>

@@ -1,10 +1,8 @@
+import { Box, InputAdornment, TextField } from "@mui/material"
+import { isNumber, toHex } from "@salinco/nice-utils"
 import { useEffect, useMemo, useRef, useState } from "react"
 
-import { Box, InputAdornment, TextField } from "@mui/material"
-
 import { ExemplarDisplayType, type ExemplarProperty, ExemplarValueType } from "@common/exemplars"
-import { toHex } from "@common/utils/hex"
-import { isNumber } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"

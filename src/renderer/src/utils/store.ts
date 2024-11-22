@@ -1,3 +1,4 @@
+import { isEmpty } from "@salinco/nice-utils"
 import update, { type Spec } from "immutability-helper"
 import { type SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
 import { create } from "zustand"
@@ -13,7 +14,7 @@ import type { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
 import type { Settings } from "@common/settings"
 import { type ApplicationState, type ApplicationStateUpdate, getInitialState } from "@common/state"
 import type { Features, PackageInfo, VariantState } from "@common/types"
-import { compact, isEmpty } from "@common/utils/objects"
+import { compact } from "@common/utils/objects"
 import type { VariantID } from "@common/variants"
 
 import { computePackageList } from "./packages"

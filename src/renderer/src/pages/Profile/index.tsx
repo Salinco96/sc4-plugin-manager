@@ -1,9 +1,9 @@
 import { Settings as ConfigIcon } from "@mui/icons-material"
 import { Button, FormControl, FormGroup, IconButton, TextField, Tooltip } from "@mui/material"
+import { size } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
 
 import { Feature } from "@common/types"
-import { size } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
 import { ProfileOptionsForm } from "@components/Options/ProfileOptionsForm"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"

@@ -1,12 +1,8 @@
+import { Autocomplete, Box, InputAdornment, TextField, createFilterOptions } from "@mui/material"
+import { isString, keys, mapDefined, toHex } from "@salinco/nice-utils"
 import { useMemo, useState } from "react"
 
-import { Autocomplete, Box, InputAdornment, TextField, createFilterOptions } from "@mui/material"
-
 import type { ExemplarData, ExemplarProperty } from "@common/exemplars"
-import { mapDefined } from "@common/utils/arrays"
-import { toHex } from "@common/utils/hex"
-import { keys } from "@common/utils/objects"
-import { isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 import { useStore } from "@utils/store"
 import { getDefaultValue } from "./utils"
@@ -27,7 +23,7 @@ export function ExemplarPropertySearch({
   const filterOptions = useMemo(() => {
     return createFilterOptions<{ label: string; value: number }>({
       stringify(option) {
-        return `${toHex(option.value, 8, true)} | ${option.label}`
+        return `0x${toHex(option.value, 8).toUpperCase()} | ${option.label}`
       },
     })
   }, [])
@@ -99,7 +95,7 @@ export function ExemplarPropertySearch({
         <Box component="li" {...optionProps} style={{ paddingLeft: 14 }} key={option.value}>
           <InputAdornment position="start" sx={{ marginLeft: 0, marginRight: 0 }}>
             <FlexBox marginRight={isSearching ? 1 : undefined} minWidth={160}>
-              <span style={{ flex: 1 }}>{toHex(option.value, 8, true, true)}</span>
+              <span style={{ flex: 1 }}>0x{toHex(option.value, 8).toUpperCase()}</span>
               <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
             </FlexBox>
           </InputAdornment>

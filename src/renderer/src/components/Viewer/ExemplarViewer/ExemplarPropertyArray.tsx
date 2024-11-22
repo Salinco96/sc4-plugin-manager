@@ -1,11 +1,10 @@
-import { useState } from "react"
-
 import { AddCircleOutline as AddIcon } from "@mui/icons-material"
 import { IconButton } from "@mui/material"
+import { isArray, isString } from "@salinco/nice-utils"
+import { useState } from "react"
 
 import type { ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
 import { fill, splice } from "@common/utils/arrays"
-import { isArray, isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { CurveEditor } from "./CurveEditor"

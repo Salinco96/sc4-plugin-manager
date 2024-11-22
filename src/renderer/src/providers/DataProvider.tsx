@@ -1,6 +1,6 @@
+import { isEmpty } from "@salinco/nice-utils"
 import { type ReactNode, useEffect } from "react"
 
-import { isEmpty } from "@common/utils/objects"
 import { useStore, useStoreActions } from "@utils/store"
 
 export function DataProvider({ children }: { children: ReactNode }): JSX.Element {

@@ -1,4 +1,5 @@
-import { ID } from "@common/types"
+import { ID } from "@salinco/nice-utils"
+
 import { indexBy } from "@common/utils/arrays"
 
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"

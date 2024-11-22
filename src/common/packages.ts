@@ -1,4 +1,4 @@
-import type { Feature, Features, ID, PackageFile, PackageInfo, PackageStatus } from "@common/types"
+import { type ID, entries, isArray } from "@salinco/nice-utils"
 
 import {
   type OptionID,
@@ -9,9 +9,8 @@ import {
 } from "./options"
 import type { ProfileInfo } from "./profiles"
 import type { Settings } from "./settings"
+import type { Feature, Features, PackageFile, PackageInfo, PackageStatus } from "./types"
 import { matchFile } from "./utils/glob"
-import { entries } from "./utils/objects"
-import { isArray } from "./utils/types"
 import { Issue, type VariantInfo, type VariantIssue } from "./variants"
 
 export const MIN_VERSION_OPTION_ID = "minVersion" as OptionID
@@ -20,7 +19,7 @@ export const LOTS_OPTION_ID = "lots" as OptionID
 export const MMPS_OPTION_ID = "mmps" as OptionID
 
 /** Package ID */
-export type PackageID = ID<PackageInfo>
+export type PackageID = ID<string, PackageInfo>
 
 export function checkFile(
   file: PackageFile,

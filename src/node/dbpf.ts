@@ -1,5 +1,7 @@
 import type { FileHandle } from "node:fs/promises"
 
+import { isArray, isString, keys, parseHex, toHex, values } from "@salinco/nice-utils"
+
 import {
   DBPFDataType,
   type DBPFEntry,
@@ -20,9 +22,7 @@ import {
   ExemplarValueType,
   PropertyKeyType,
 } from "@common/exemplars"
-import { readHex, toHex } from "@common/utils/hex"
-import { forEach, forEachAsync, keys, values } from "@common/utils/objects"
-import { isArray, isString } from "@common/utils/types"
+import { forEach, forEachAsync } from "@common/utils/objects"
 
 import { Binary } from "./bin"
 
@@ -249,7 +249,7 @@ export async function patchDBPFEntries(
             const info = options.exemplarProperties[propertyId]
             const type = property?.type ?? info?.type
             if (!type) {
-              throw Error(`Unknown property: ${toHex(propertyId, 8, true)}`)
+              throw Error(`Unknown property: 0x${toHex(propertyId, 8)}`)
             }
 
             exemplarData.properties[propertyId] = {
@@ -356,7 +356,7 @@ function loadExemplar(
         switch (keyType) {
           case PropertyKeyType.Single: {
             if (unused !== 0) {
-              throw Error(`Unexpected unused: ${toHex(unused, 2, true)}`)
+              throw Error(`Unexpected unused: 0x${toHex(unused, 2)}`)
             }
 
             properties[propertyId] = {
@@ -383,7 +383,7 @@ function loadExemplar(
           }
 
           default: {
-            throw Error(`Unexpected keyType: ${toHex(keyType, 4, true)}`)
+            throw Error(`Unexpected keyType: 0x${toHex(keyType, 4)}`)
           }
         }
       }
@@ -402,14 +402,14 @@ function loadExemplar(
         const parentCohortMatch = row.trim().match(parentCohortRegex)
         if (parentCohortMatch) {
           parentCohortId = TGI(
-            readHex(parentCohortMatch[1]),
-            readHex(parentCohortMatch[2]),
-            readHex(parentCohortMatch[3]),
+            parseHex(parentCohortMatch[1]),
+            parseHex(parentCohortMatch[2]),
+            parseHex(parentCohortMatch[3]),
           )
         } else {
           const propertyMatch = row.trim().match(propertyRegex)
           if (propertyMatch) {
-            const propertyId = readHex(propertyMatch[1])
+            const propertyId = parseHex(propertyMatch[1])
             const name = propertyMatch[2]
             const rawType = propertyMatch[3].replace("int", "Int")
             const rawValue = propertyMatch[5]

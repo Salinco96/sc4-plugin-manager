@@ -11,9 +11,9 @@ import {
   Switch,
   TextField,
 } from "@mui/material"
+import { isArray } from "@salinco/nice-utils"
 
 import { type OptionInfo, OptionType, type OptionValue, type Requirements } from "@common/options"
-import { isArray } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
 

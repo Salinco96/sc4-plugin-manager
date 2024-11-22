@@ -1,8 +1,8 @@
 import { useMemo } from "react"
 
 import { Box } from "@mui/material"
+import { keys } from "@salinco/nice-utils"
 
-import { keys } from "@common/utils/objects"
 import { AuthorList } from "@components/AuthorList/AuthorList"
 import { getAuthorName } from "@components/Tags/utils" // TODO
 import { useAuthors } from "@utils/store"

@@ -1,13 +1,14 @@
 import { UnfoldLess as CollapseIcon, UnfoldMore as ExpandIcon } from "@mui/icons-material"
 import { List, Typography } from "@mui/material"
+import { mapDefined, size, values } from "@salinco/nice-utils"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { DBPFFile } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
 import type { PackageFile } from "@common/types"
-import { groupBy, mapDefined } from "@common/utils/arrays"
-import { mapValues, size, values } from "@common/utils/objects"
+import { groupBy } from "@common/utils/arrays"
+import { mapValues } from "@common/utils/objects"
 import { FlexBox } from "@components/FlexBox"
 import { ToolButton } from "@components/ToolButton"
 

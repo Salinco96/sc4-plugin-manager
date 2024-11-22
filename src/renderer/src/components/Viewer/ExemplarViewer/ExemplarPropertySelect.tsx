@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react"
-
 import { Autocomplete, Box, InputAdornment, TextField, createFilterOptions } from "@mui/material"
+import { isArray, isString, toHex } from "@salinco/nice-utils"
+import { useMemo, useState } from "react"
 
 import {
   type ExemplarProperty,
@@ -8,8 +8,6 @@ import {
   ExemplarValueType,
 } from "@common/exemplars"
 import { removeAt } from "@common/utils/arrays"
-import { toHex } from "@common/utils/hex"
-import { isArray, isString } from "@common/utils/types"
 import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
@@ -197,7 +195,7 @@ export function ExemplarPropertySelect({
                       {!isSearching && value !== null && (
                         <FlexBox minWidth={160}>
                           <span style={{ flex: 1 }}>
-                            {isHex ? toHex(value, getHexSize(type), true, true) : value}
+                            {isHex ? `0x${toHex(value, getHexSize(type)).toUpperCase()}` : value}
                           </span>
                           <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
                         </FlexBox>
@@ -245,7 +243,7 @@ export function ExemplarPropertySelect({
           <InputAdornment position="start" sx={{ marginLeft: 0, marginRight: 0 }}>
             <FlexBox marginRight={isSearching ? 1 : undefined} minWidth={160}>
               <span style={{ flex: 1 }}>
-                {isHex ? toHex(option.value, getHexSize(type), true, true) : option.value}
+                {isHex ? `0x${toHex(option.value, getHexSize(type)).toUpperCase()}` : option.value}
               </span>
               <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
             </FlexBox>

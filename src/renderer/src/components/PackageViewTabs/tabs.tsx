@@ -1,11 +1,10 @@
-import type { ComponentType } from "react"
-
+import { size } from "@salinco/nice-utils"
 import type { TFunction } from "i18next"
+import type { ComponentType } from "react"
 import { create as createStore } from "zustand"
 
 import { type PackageID, isLocal, isPatched } from "@common/packages"
 import { type PackageInfo, VariantState } from "@common/types"
-import { size } from "@common/utils/objects"
 import type { VariantInfo } from "@common/variants"
 import { PackageOptionsForm } from "@components/Options/PackageOptionsForm"
 import { type Tag, TagType, createTag } from "@components/Tags/utils"

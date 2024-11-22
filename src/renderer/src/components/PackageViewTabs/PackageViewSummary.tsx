@@ -1,4 +1,5 @@
 import { Box, Link, Typography } from "@mui/material"
+import { entries, keys } from "@salinco/nice-utils"
 import { Fragment, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -7,7 +8,6 @@ import { getCategories, getCategoryLabel } from "@common/categories"
 import { getFeatureLabel } from "@common/i18n"
 import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import type { PackageID } from "@common/packages"
-import { entries, keys } from "@common/utils/objects"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { getAuthorName } from "@components/Tags/utils" // TODO: Move

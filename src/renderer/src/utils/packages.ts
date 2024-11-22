@@ -1,3 +1,4 @@
+import { keys, values } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
 import { CategoryID, isCategory } from "@common/categories"
@@ -17,7 +18,7 @@ import {
   VariantState,
   getState,
 } from "@common/types"
-import { keys, mapValues, values } from "@common/utils/objects"
+import { mapValues } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 import {

@@ -1,12 +1,13 @@
 import path from "node:path"
 
+import { isString } from "@salinco/nice-utils"
+
 import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { CategoryID } from "@common/categories"
 import type { PackageID } from "@common/packages"
 import type { PackageData } from "@common/types"
 import { groupBy, union } from "@common/utils/arrays"
-import { isString } from "@common/utils/types"
 import type { VariantID } from "@common/variants"
 import { getExtension } from "@node/files"
 

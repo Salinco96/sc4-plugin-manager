@@ -1,11 +1,13 @@
+import type { ID } from "@salinco/nice-utils"
+
 import type { Options } from "./options"
 import type { PackageID } from "./packages"
-import type { ConfigFormat, ExternalFeatures, ID, PackageConfig, PackageConfigs } from "./types"
+import type { ConfigFormat, ExternalFeatures, PackageConfig, PackageConfigs } from "./types"
 import { normalizeString } from "./utils/types"
 import type { VariantID } from "./variants"
 
 /** Profile ID */
-export type ProfileID = ID<ProfileInfo>
+export type ProfileID = ID<string, ProfileInfo>
 
 /** Raw profile data */
 export interface ProfileData {
@@ -58,7 +60,7 @@ export interface ProfileUpdate {
   }
 }
 
-export function createUniqueId<T extends ID<object>>(name: string, existingIds: T[]): T {
+export function createUniqueId<T extends ID<string, object>>(name: string, existingIds: T[]): T {
   const baseId = normalizeString(name.trim())
     .split(/[^a-z0-9]+/g)
     .filter(Boolean)

@@ -1,14 +1,14 @@
+import { parseHex, toHex } from "@salinco/nice-utils"
 import type { ExemplarData } from "./exemplars"
-import { readHex, toHex } from "./utils/hex"
 
 export type TGI = `${string}-${string}-${string}`
 
 export function TGI(t: number, g: number, i: number): TGI {
-  return `${toHex(t, 8)}-${toHex(g, 8)}-${toHex(i, 8)}`
+  return [t, g, i].map(id => toHex(id, 8)).join("-") as TGI
 }
 
 export function parseTGI(tgi: TGI): [t: number, g: number, i: number] {
-  return tgi.split("-").map(readHex) as [t: number, g: number, i: number]
+  return tgi.split("-").map(parseHex) as [t: number, g: number, i: number]
 }
 
 export type DBPFEntry<T extends DBPFDataType = DBPFDataType> = {

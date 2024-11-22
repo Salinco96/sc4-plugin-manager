@@ -1,9 +1,11 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
+import { isEmpty, keys, size, values } from "@salinco/nice-utils"
+
 import type { ProfileData, ProfileID, ProfileInfo, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
-import { isEmpty, keys, mapValues, size, values } from "@common/utils/objects"
+import { mapValues } from "@common/utils/objects"
 import { isEnum, isObject } from "@common/utils/types"
 import type { VariantID } from "@common/variants"
 import { readConfig } from "@node/configs"

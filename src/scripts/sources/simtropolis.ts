@@ -1,6 +1,6 @@
-import { ID } from "@common/types"
+import { ID, isDefined } from "@salinco/nice-utils"
+
 import { indexBy } from "@common/utils/arrays"
-import { isDefined } from "@common/utils/types"
 
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
 import type { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"

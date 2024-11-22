@@ -1,11 +1,10 @@
 import type { FileHandle } from "node:fs/promises"
 
+import { isNumber, parseHex, toHex } from "@salinco/nice-utils"
 import { compress, decompress } from "qfs-compression"
 
 import { TGI } from "@common/dbpf"
 import { type ExemplarPropertyValue, ExemplarValueType } from "@common/exemplars"
-import { readHex, toHex } from "@common/utils/hex"
-import { isNumber } from "@common/utils/types"
 
 import { readBytes } from "./files"
 
@@ -219,7 +218,7 @@ export class Binary {
       }
 
       default: {
-        throw Error(`Unexpected valueType: ${toHex(valueType, 4, true)}`)
+        throw Error(`Unexpected valueType: 0x${toHex(valueType, 4)}`)
       }
     }
   }
@@ -281,7 +280,7 @@ export class Binary {
   }
 
   public writeTGI(value: TGI, offset: number = this.offset): void {
-    const [t, g, i] = value.split("-").map(readHex)
+    const [t, g, i] = value.split("-").map(parseHex)
     this.writeUInt32(t, offset)
     this.writeUInt32(g)
     this.writeUInt32(i)
@@ -347,7 +346,7 @@ export class Binary {
       }
 
       default: {
-        throw Error(`Unexpected valueType: ${toHex(valueType, 4, true)}`)
+        throw Error(`Unexpected valueType: 0x${toHex(valueType, 4)}`)
       }
     }
   }

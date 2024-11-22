@@ -1,4 +1,4 @@
-import type { EmptyRecord } from "@common/utils/types"
+import type { EmptyRecord } from "@salinco/nice-utils"
 
 interface CustomProps {
   "download-progress": EmptyRecord

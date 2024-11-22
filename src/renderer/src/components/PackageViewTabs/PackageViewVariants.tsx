@@ -1,9 +1,9 @@
 import { Button, Card, CardActions, CardContent, List } from "@mui/material"
+import { values } from "@salinco/nice-utils"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
-import { values } from "@common/utils/objects"
 import type { VariantID } from "@common/variants"
 import { CreateVariantModal } from "@components/CreateVariantModal"
 import { FlexBox } from "@components/FlexBox"

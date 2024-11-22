@@ -1,9 +1,9 @@
+import { isArray, toHex } from "@salinco/nice-utils"
+
 import type {
   ExemplarProperty as ExemplarPropertyType,
   ExemplarPropertyValue,
 } from "@common/exemplars"
-import { toHex } from "@common/utils/hex"
-import { isArray } from "@common/utils/types"
 
 import { ExemplarPropertyArray } from "./ExemplarPropertyArray"
 import { ExemplarPropertySingle } from "./ExemplarPropertySingle"
@@ -26,7 +26,7 @@ export function ExemplarProperty({
 }: ExemplarPropertyProps): JSX.Element {
   const { id, value } = property
 
-  const name = toHex(id, 8, true)
+  const name = `0x${toHex(id, 8)}`
 
   if (isArray(value)) {
     return (

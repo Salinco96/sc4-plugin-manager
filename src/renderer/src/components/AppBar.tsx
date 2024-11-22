@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react"
-
 import { SwitchAccount as SwitchProfileIcon } from "@mui/icons-material"
 import {
   Box,
@@ -15,10 +13,11 @@ import {
   Typography,
   styled,
 } from "@mui/material"
+import { values } from "@salinco/nice-utils"
+import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { ProfileID, ProfileInfo } from "@common/profiles"
-import { values } from "@common/utils/objects"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 import { spacing } from "@utils/styles"
 

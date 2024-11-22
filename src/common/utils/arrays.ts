@@ -1,6 +1,4 @@
-import type { Primitive } from "@common/types"
-
-import { isArray, isDefined } from "./types"
+import { type Primitive, isArray, toArray } from "@salinco/nice-utils"
 
 export function difference<T>(array: ReadonlyArray<T>, values: ReadonlyArray<T>): T[] {
   return array.filter(v => !values.includes(v))
@@ -12,10 +10,6 @@ export function hasAll<T>(array: ReadonlyArray<T>, values: ReadonlyArray<T>): bo
 
 export function hasAny<T>(array: ReadonlyArray<T>, values: ReadonlyArray<T>): boolean {
   return array.some(v => values.includes(v))
-}
-
-export function toArray<T>(iterable: Iterable<T>): T[] {
-  return Array.isArray(iterable) ? iterable : Array.from(iterable)
 }
 
 export function where<T extends Partial<S>, S extends Partial<T> = Partial<T>>(
@@ -74,13 +68,6 @@ export function flatMap<T, R = T>(
   fn: (value: T, index: number, array: ReadonlyArray<T>) => R[],
 ): R[] {
   return toArray(iterable).flatMap(fn)
-}
-
-export function mapDefined<T, R = T>(
-  iterable: Iterable<T>,
-  fn: (value: T, index: number, array: ReadonlyArray<T>) => R | undefined,
-): R[] {
-  return toArray(iterable).map(fn).filter(isDefined)
 }
 
 export function removeElement<T>(array: ReadonlyArray<T>, value: T): T[] {

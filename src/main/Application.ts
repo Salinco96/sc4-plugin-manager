@@ -2,6 +2,7 @@ import fs, { writeFile } from "node:fs/promises"
 import path from "node:path"
 import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
 
+import type { EmptyRecord } from "@salinco/nice-utils"
 import log, { type LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
@@ -40,10 +41,9 @@ import {
   type PackageInfo,
   type Packages,
 } from "@common/types"
-import { flatMap, mapDefined, sumBy, unique } from "@common/utils/arrays"
+import { flatMap, sumBy, unique } from "@common/utils/arrays"
 import { globToRegex, matchConditions } from "@common/utils/glob"
-import { toHex } from "@common/utils/hex"
-import { compact, entries, forEach, isEmpty, keys, values } from "@common/utils/objects"
+import { compact, forEach } from "@common/utils/objects"
 import type { VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
@@ -76,7 +76,7 @@ import {
 import { getPluginsFolderName } from "@utils/linker"
 import { type ToolID, getToolInfo } from "@utils/tools"
 
-import type { EmptyRecord } from "@common/utils/types"
+import { entries, isEmpty, keys, mapDefined, toHex, values } from "@salinco/nice-utils"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { getAssetKey } from "./data/assets"

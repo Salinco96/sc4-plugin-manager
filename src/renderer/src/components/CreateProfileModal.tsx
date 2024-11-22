@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 import { HelpOutline as HelpIcon } from "@mui/icons-material"
 import {
   Button,
@@ -20,10 +18,11 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material"
+import { keys, values } from "@salinco/nice-utils"
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { type ProfileID, createUniqueId } from "@common/profiles"
-import { keys, values } from "@common/utils/objects"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 export interface CreateProfileModalProps {

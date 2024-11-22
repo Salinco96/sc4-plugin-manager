@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 import { HelpOutline as HelpIcon } from "@mui/icons-material"
 import {
   Alert,
@@ -18,11 +16,12 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material"
+import { keys, values } from "@salinco/nice-utils"
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
 import { createUniqueId } from "@common/profiles"
-import { keys, values } from "@common/utils/objects"
 import type { VariantID } from "@common/variants"
 import { useCurrentVariant, usePackageInfo, useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"

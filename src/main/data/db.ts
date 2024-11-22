@@ -1,6 +1,8 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
+import { parseHex, size } from "@salinco/nice-utils"
+
 import { type AuthorData, type AuthorID, type Authors, loadAuthorInfo } from "@common/authors"
 import type { Categories } from "@common/categories"
 import {
@@ -11,8 +13,7 @@ import {
 import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
-import { readHex } from "@common/utils/hex"
-import { forEach, mapValues, size } from "@common/utils/objects"
+import { forEach, mapValues } from "@common/utils/objects"
 import { isEnum } from "@common/utils/types"
 import { loadConfig, readConfig } from "@node/configs"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
@@ -82,12 +83,12 @@ export async function loadExemplarProperties(
       }
 
       if (propertyIdHex.includes("-")) {
-        const [firstId, lastId] = propertyIdHex.split("-").map(readHex)
+        const [firstId, lastId] = propertyIdHex.split("-").map(parseHex)
         for (let propertyId = firstId; propertyId <= lastId; propertyId++) {
           properties[propertyId] = propertyInfo
         }
       } else {
-        const propertyId = readHex(propertyIdHex)
+        const propertyId = parseHex(propertyIdHex)
         properties[propertyId] = propertyInfo
       }
     })

@@ -1,6 +1,6 @@
+import { isArray, isNumber, isString, toHex } from "@salinco/nice-utils"
+
 import { TGI } from "@common/dbpf"
-import { toHex } from "@common/utils/hex"
-import { isArray, isNumber, isString } from "@common/utils/types"
 
 import type { Exemplar, ExemplarPropertyID } from "./types"
 

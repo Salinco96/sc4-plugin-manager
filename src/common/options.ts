@@ -1,12 +1,13 @@
+import { type ID, isBoolean, isNumber, isString } from "@salinco/nice-utils"
 import type { Namespace, TFunction } from "i18next"
 
 import { getFeatureLabel } from "./i18n"
-import type { Feature, ID } from "./types"
-import { isArrayOf, isBoolean, isNumber, isString } from "./utils/types"
+import type { Feature } from "./types"
+import { isArrayOf } from "./utils/types"
 
 export const ALL = "all"
 
-export type OptionID = ID<OptionInfo>
+export type OptionID = ID<string, OptionInfo>
 
 export enum OptionType {
   BOOLEAN = "boolean",

@@ -1,3 +1,5 @@
+import { isArray, isBoolean, isNumber, isString, toHex } from "@salinco/nice-utils"
+
 import {
   type ExemplarData,
   type ExemplarDataPatch,
@@ -9,9 +11,7 @@ import {
   ExemplarValueType,
 } from "@common/exemplars"
 import { isEqual } from "@common/utils/arrays"
-import { toHex } from "@common/utils/hex"
 import { forEach } from "@common/utils/objects"
-import { isArray, isBoolean, isNumber, isString } from "@common/utils/types"
 import { useExemplarProperties } from "@utils/store"
 
 export function getDiff(
@@ -262,7 +262,7 @@ export function formatInputValue(
   }
 
   if (isHex) {
-    return toHex(value, getHexSize(type), false, true)
+    return `0x${toHex(value, getHexSize(type)).toUpperCase()}`
   }
 
   if (type === ExemplarValueType.Float32) {
@@ -339,7 +339,7 @@ function formatSingleValue(
   switch (itemInfo?.display) {
     case ExemplarDisplayType.HEX:
     case ExemplarDisplayType.RGB:
-      return toHex(value, getHexSize(type), true, true)
+      return `0x${toHex(value, getHexSize(type)).toUpperCase()}`
     case ExemplarDisplayType.TGI:
       return toHex(value, getHexSize(type))
   }

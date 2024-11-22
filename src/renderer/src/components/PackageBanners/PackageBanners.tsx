@@ -1,3 +1,5 @@
+import { isString } from "@salinco/nice-utils"
+
 import {
   type PackageID,
   getVariantIssues,
@@ -8,7 +10,6 @@ import {
   isMissing,
   isOutdated,
 } from "@common/packages"
-import { isString } from "@common/utils/types"
 import type { VariantID } from "@common/variants"
 import { usePackageStatus, useVariantInfo } from "@utils/packages"
 

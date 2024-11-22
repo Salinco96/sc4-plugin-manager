@@ -1,11 +1,10 @@
+import type { EmptyRecord } from "@salinco/nice-utils"
 import { useMemo } from "react"
-
 import { create } from "zustand"
 
 import type { AuthorID } from "@common/authors"
 import type { PackageID } from "@common/packages"
 import { removeElement } from "@common/utils/arrays"
-import type { EmptyRecord } from "@common/utils/types"
 
 export enum Page {
   Authors = "Authors",

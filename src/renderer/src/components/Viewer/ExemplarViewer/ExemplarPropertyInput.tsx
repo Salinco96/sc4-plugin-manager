@@ -1,8 +1,7 @@
+import { isArray, isBoolean, isNumber, isString, toHex } from "@salinco/nice-utils"
 import { useMemo } from "react"
 
 import { ExemplarDisplayType, type ExemplarProperty, ExemplarValueType } from "@common/exemplars"
-import { toHex } from "@common/utils/hex"
-import { isArray, isBoolean, isNumber, isString } from "@common/utils/types"
 
 import { ExemplarPropertySelect } from "./ExemplarPropertySelect"
 import { ExemplarPropertySwitch } from "./ExemplarPropertySwitch"
@@ -42,7 +41,7 @@ export function ExemplarPropertyInput<T extends boolean | number | string>({
 
   const isTGI = itemInfo?.display === ExemplarDisplayType.TGI
 
-  const idLabel = toHex(id, 8, true)
+  const idLabel = `0x${toHex(id, 8)}`
   const typeLabel = isTGI ? "TGI" : ExemplarValueType[type]
   const label = `${info && id ? `${info.name} (${idLabel})` : (info?.name ?? idLabel)} - ${typeLabel}`
 

@@ -2080,6 +2080,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@salinco/nice-utils@npm:1.0.0-alpha.6":
+  version: 1.0.0-alpha.6
+  resolution: "@salinco/nice-utils@npm:1.0.0-alpha.6"
+  checksum: 10c0/b7bcd1439f3a91770dd9e0d0cc20584bb2f0d8ddc2954120636f2c5fa3959fd4b5622efb96410734eb3c344d9a4c51361e508fae4b43c5af3258322c75ceb55f
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/is@npm:^4.0.0":
   version: 4.6.0
   resolution: "@sindresorhus/is@npm:4.6.0"
@@ -7710,6 +7717,7 @@ __metadata:
     "@mui/icons-material": "npm:5.15.18"
     "@mui/lab": "npm:5.0.0-alpha.170"
     "@mui/material": "npm:5.15.18"
+    "@salinco/nice-utils": "npm:1.0.0-alpha.6"
     "@types/content-disposition": "npm:0.5.8"
     "@types/escape-html": "npm:1.0.4"
     "@types/js-yaml": "npm:4.0.9"

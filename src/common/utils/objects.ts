@@ -1,8 +1,4 @@
-import { isArray } from "./types"
-
-export function entries<K extends string, T>(object: Readonly<Partial<Record<K, T>>>): [K, T][] {
-  return Object.entries(object) as [K, T][]
-}
+import { entries, keys } from "@salinco/nice-utils"
 
 export function forEach<K extends string, T>(
   object: Readonly<Partial<Record<K, T>>>,
@@ -62,10 +58,6 @@ export async function forEachAsync<K extends string, T>(
   }
 }
 
-export function values<T>(object: Readonly<Partial<Record<string, T>>>): T[] {
-  return Object.values(object) as T[]
-}
-
 export function filterValues<K extends string, T>(
   object: Readonly<Partial<Record<K, T>>>,
   fn: (value: T, key: K) => boolean,
@@ -80,22 +72,6 @@ export function findKeys<K extends string, T>(
   fn: (value: T, key: K) => boolean,
 ): K[] {
   return keys(object).filter(key => fn(object[key], key))
-}
-
-export function keys<K extends string>(object: Readonly<Partial<Record<K, unknown>>>): K[] {
-  return Object.keys(object) as K[]
-}
-
-export function size(
-  object: ReadonlyArray<unknown> | Readonly<Partial<Record<string, unknown>>>,
-): number {
-  return (isArray(object) ? object : Object.keys(object)).length
-}
-
-export function isEmpty(
-  object: ReadonlyArray<unknown> | Readonly<Partial<Record<string, unknown>>>,
-): boolean {
-  return size(object) === 0
 }
 
 export function mapKeys<K extends string, T, R extends number | string = K>(

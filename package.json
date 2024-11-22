@@ -1,6 +1,6 @@
 {
   "name": "sc4-plugin-manager",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "SC4 Plugin Manager interface using Electron",
   "homepage": "https://github.com/Salinco96/sc4-plugin-manager#readme",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "packageManager": "yarn@4.3.0",
   "main": "./out/main/index.js",
-  "author": "Salinco96",
+  "author": "Salinco96 <loicnico96b@gmail.com>",
   "license": "GPL-3.0",
   "scripts": {
     "build": "electron-vite build",
@@ -40,6 +40,7 @@
     "@mui/icons-material": "5.15.18",
     "@mui/lab": "5.0.0-alpha.170",
     "@mui/material": "5.15.18",
+    "@salinco/nice-utils": "1.0.0-alpha.6",
     "@uiw/react-color-sketch": "2.3.2",
     "apexcharts": "3.54.1",
     "content-disposition": "0.5.4",

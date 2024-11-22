@@ -1,7 +1,7 @@
-import type { ID } from "./types"
+import type { ID } from "@salinco/nice-utils"
 
 /** Author ID */
-export type AuthorID = ID<AuthorInfo>
+export type AuthorID = ID<string, AuthorInfo>
 
 /** Raw author data */
 export interface AuthorData {

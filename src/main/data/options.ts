@@ -1,3 +1,5 @@
+import type { Primitive } from "@salinco/nice-utils"
+
 import {
   ALL,
   type OptionData,
@@ -7,7 +9,6 @@ import {
   type Requirements,
   isOptionSingleValue,
 } from "@common/options"
-import type { Primitive } from "@common/types"
 
 import {
   loadArray,

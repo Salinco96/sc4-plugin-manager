@@ -1,8 +1,9 @@
+import type { ID } from "@salinco/nice-utils"
 import type { HTMLElement } from "node-html-parser"
 
 import type { AssetID } from "@common/assets"
 import type { PackageID } from "@common/packages"
-import type { BuildingData, Feature, ID, LotData } from "@common/types"
+import type { BuildingData, Feature, LotData } from "@common/types"
 import type { VariantID } from "@common/variants"
 
 export interface IndexerOptions {
@@ -88,7 +89,7 @@ export interface IndexerEntryList {
   }
 }
 
-export type IndexerSourceID = ID<IndexerSource>
+export type IndexerSourceID = ID<string, IndexerSource>
 
 export interface IndexerSource {
   categories: { [id in IndexerSourceCategoryID]?: IndexerSourceCategory }
@@ -108,7 +109,7 @@ export interface IndexerSourceCategory {
   id: IndexerSourceCategoryID
 }
 
-export type IndexerSourceCategoryID = ID<IndexerSourceCategory>
+export type IndexerSourceCategoryID = ID<string, IndexerSourceCategory>
 
 export type IndexerCategoryID = `${IndexerSourceID}/${IndexerSourceCategoryID}`
 

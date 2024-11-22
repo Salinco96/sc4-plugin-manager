@@ -1,9 +1,9 @@
+import { isNumber, isString } from "@salinco/nice-utils"
 import i18next, { type Namespace, type TFunction } from "i18next"
 
 import en from "@config/i18n/en.json"
 
 import type { Feature } from "./types"
-import { isNumber, isString } from "./utils/types"
 
 export type Translations = typeof en
 
