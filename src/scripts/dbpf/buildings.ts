@@ -1,5 +1,6 @@
+import { sum } from "@salinco/nice-utils"
+
 import type { BuildingData } from "@common/types"
-import { sum } from "@common/utils/arrays"
 
 import { DeveloperID, type Exemplar, ExemplarPropertyID } from "./types"
 import { get, getArray, getMap, getString, getTGI } from "./utils"

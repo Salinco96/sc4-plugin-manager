@@ -16,13 +16,12 @@ import {
   ToggleButtonGroup,
   Tooltip,
 } from "@mui/material"
-import { keys, values } from "@salinco/nice-utils"
+import { difference, keys, values } from "@salinco/nice-utils"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
 import { getCategoryLabel } from "@common/categories"
 import { VariantState } from "@common/types"
-import { difference } from "@common/utils/arrays"
 import { getLastWord, getStartOfWordSearchRegex, removeLastWord } from "@common/utils/regex"
 import { getStateLabel } from "@common/variants"
 import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"

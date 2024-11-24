@@ -1,4 +1,4 @@
-import { entries, keys } from "@salinco/nice-utils"
+import { entries } from "@salinco/nice-utils"
 
 export function forEach<K extends string, T>(
   object: Readonly<Partial<Record<K, T>>>,
@@ -29,23 +29,6 @@ export function reduce<K extends string, T, R>(
   return result
 }
 
-export async function reduceAsync<K extends string, T, R>(
-  object: Readonly<Partial<Record<K, T>>>,
-  fn: (result: R, value: T, key: K) => Promise<R>,
-  initialValue: R,
-): Promise<R> {
-  let result = initialValue
-
-  for (const key in object) {
-    const value = object[key]
-    if (value !== undefined) {
-      result = await fn(result, value, key)
-    }
-  }
-
-  return result
-}
-
 export async function forEachAsync<K extends string, T>(
   object: Readonly<Partial<Record<K, T>>>,
   fn: (value: T, key: K) => Promise<void>,
@@ -65,22 +48,6 @@ export function filterValues<K extends string, T>(
   return Object.fromEntries(
     Object.entries(object).filter(([key, value]) => fn(value as T, key as K)),
   ) as Partial<Record<K, T>>
-}
-
-export function findKeys<K extends string, T>(
-  object: Readonly<Record<K, T>>,
-  fn: (value: T, key: K) => boolean,
-): K[] {
-  return keys(object).filter(key => fn(object[key], key))
-}
-
-export function mapKeys<K extends string, T, R extends number | string = K>(
-  object: Readonly<Partial<Record<K, T>>>,
-  fn: (key: K, value: T) => R,
-): Partial<Record<R, T>> {
-  return Object.fromEntries(
-    entries(object).map(([key, value]) => [fn(key, value), value]),
-  ) as Partial<Record<R, T>>
 }
 
 export function mapValues<K extends string, T, R = T>(

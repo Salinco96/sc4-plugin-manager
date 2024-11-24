@@ -41,7 +41,6 @@ import {
   type PackageInfo,
   type Packages,
 } from "@common/types"
-import { flatMap, sumBy, unique } from "@common/utils/arrays"
 import { globToRegex, matchConditions } from "@common/utils/glob"
 import { compact, forEach } from "@common/utils/objects"
 import type { VariantID } from "@common/variants"
@@ -76,7 +75,16 @@ import {
 import { getPluginsFolderName } from "@utils/linker"
 import { type ToolID, getToolInfo } from "@utils/tools"
 
-import { entries, isEmpty, keys, mapDefined, toHex, values } from "@salinco/nice-utils"
+import {
+  entries,
+  isEmpty,
+  keys,
+  mapDefined,
+  sumBy,
+  toHex,
+  uniqueBy,
+  values,
+} from "@salinco/nice-utils"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { getAssetKey } from "./data/assets"
@@ -1322,7 +1330,7 @@ export class Application {
               ) => {
                 const entries = await glob(
                   pattern.replace(conditionRegex, (match, condition) => {
-                    const option = variantInfo.options.find(option => option.id === condition)
+                    const option = variantInfo.options?.find(option => option.id === condition)
                     if (option?.choices) {
                       return `{${option.choices.map(choice => choice.value).join(",")}}`
                     }
@@ -2786,13 +2794,14 @@ export class Application {
                 // Confirm download of new assets
                 if (!isEmpty(installingVariants)) {
                   /** Assets that will be downloaded */
-                  const missingAssets = unique(
-                    flatMap(entries(installingVariants), ([packageId, variantId]) =>
+                  const missingAssets = uniqueBy(
+                    entries(installingVariants).flatMap(([packageId, variantId]) =>
                       mapDefined(
                         packages[packageId]?.variants[variantId]?.assets ?? [],
                         asset => assets[asset.id],
                       ).filter(assetInfo => !assetInfo.downloaded[assetInfo.version]),
                     ),
+                    assetInfo => assetInfo.id,
                   )
 
                   /** Dependencies that will be installed */

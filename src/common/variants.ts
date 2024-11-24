@@ -67,7 +67,7 @@ export interface BaseVariantInfo {
   name: string
   new?: boolean
   optional?: PackageID[]
-  options: OptionInfo[]
+  options?: OptionInfo[]
   priority: number
   release?: string
   readme?: string

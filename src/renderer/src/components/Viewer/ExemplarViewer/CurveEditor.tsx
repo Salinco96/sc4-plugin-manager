@@ -1,10 +1,9 @@
 import { Box, useTheme } from "@mui/material"
-import { isDefined } from "@salinco/nice-utils"
+import { fill, isDefined } from "@salinco/nice-utils"
 import { type MouseEvent, useMemo, useRef, useState } from "react"
 import { default as ReactApexChart } from "react-apexcharts"
 
 import type { ExemplarProperty } from "@common/exemplars"
-import { fill } from "@common/utils/arrays"
 import { useEffectEvent } from "@utils/useEffectEvent"
 
 import { getItemInfo, getMax, getMin, getStep, useExemplarPropertyInfo } from "./utils"

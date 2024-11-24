@@ -27,7 +27,7 @@ import {
   type PackageStatus,
   type Packages,
 } from "@common/types"
-import { containsWhere, isEqual, removeElement, union, unique } from "@common/utils/arrays"
+import { isEqual } from "@common/utils/arrays"
 import { filterValues, forEach, mapValues, reduce } from "@common/utils/objects"
 import {
   type DependencyInfo,
@@ -37,7 +37,16 @@ import {
   type VariantIssue,
 } from "@common/variants"
 import { type Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
-import { isArray, isEmpty, keys, mapDefined, values } from "@salinco/nice-utils"
+import {
+  isArray,
+  isEmpty,
+  keys,
+  mapDefined,
+  remove,
+  union,
+  unique,
+  values,
+} from "@salinco/nice-utils"
 import type { TaskContext } from "@utils/tasks"
 
 function getVariantIncompatibilities(
@@ -59,7 +68,7 @@ function getVariantIncompatibilities(
           id: Issue.CONFLICTING_FEATURE,
           external: conflictPackageIds.includes(EXTERNAL),
           feature,
-          packages: removeElement(conflictPackageIds, EXTERNAL) as PackageID[],
+          packages: remove(conflictPackageIds, EXTERNAL) as PackageID[],
         })
       }
     }
@@ -100,7 +109,7 @@ function getVariantIncompatibilities(
                 id: Issue.INCOMPATIBLE_FEATURE,
                 external: featurePackageIds.includes(EXTERNAL),
                 feature: requirement as Feature,
-                packages: removeElement(featurePackageIds, EXTERNAL) as PackageID[],
+                packages: remove(featurePackageIds, EXTERNAL) as PackageID[],
               })
             } else {
               incompatibilities.push({
@@ -610,7 +619,7 @@ export function resolvePackageUpdates(
         const packageUpdate = updates.packages?.[packageId]
 
         const isChanged = !oldStatus.included || oldStatus.variantId !== newStatus.variantId
-        const isConflicted = !containsWhere(compatibleVariants, { id: newStatus.variantId })
+        const isConflicted = !compatibleVariants.some(variant => variant.id === newStatus.variantId)
         const isFullyIncompatible = !compatibleVariants.length
         const isInstalled = !!variantInfo.installed
         const isUpdated = !!packageUpdate?.enabled || !!packageUpdate?.variant

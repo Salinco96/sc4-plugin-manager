@@ -3,8 +3,8 @@ import type { Namespace, TFunction } from "i18next"
 import type { AuthorID, Authors } from "@common/authors"
 import { type Categories, type CategoryID, getCategoryLabel } from "@common/categories"
 import { VariantState } from "@common/types"
-import { isEnum } from "@common/utils/types"
 import { getStateLabel } from "@common/variants"
+import { isEnum } from "@salinco/nice-utils"
 
 export type Tag<T extends TagType = TagType> = {
   [K in T]: {

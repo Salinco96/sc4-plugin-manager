@@ -1,5 +1,5 @@
 import { Autocomplete, Box, InputAdornment, TextField, createFilterOptions } from "@mui/material"
-import { isArray, isString, toHex } from "@salinco/nice-utils"
+import { isArray, isString, removeAt, toHex } from "@salinco/nice-utils"
 import { useMemo, useState } from "react"
 
 import {
@@ -7,7 +7,6 @@ import {
   type ExemplarPropertyChoiceInfo,
   ExemplarValueType,
 } from "@common/exemplars"
-import { removeAt } from "@common/utils/arrays"
 import { FlexBox } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"

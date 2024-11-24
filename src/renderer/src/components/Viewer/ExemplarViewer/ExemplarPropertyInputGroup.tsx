@@ -1,11 +1,10 @@
 import { RemoveCircleOutline as RemoveIcon } from "@mui/icons-material"
 import { Box, ButtonGroup, IconButton, Modal } from "@mui/material"
-import { isArray, isString, toHex } from "@salinco/nice-utils"
+import { fill, isArray, isString, replaceAt, toHex } from "@salinco/nice-utils"
 import ColorPicker from "@uiw/react-color-sketch"
 import { useEffect, useMemo, useState } from "react"
 
 import { ExemplarDisplayType, type ExemplarProperty, ExemplarValueType } from "@common/exemplars"
-import { pad, replaceAt } from "@common/utils/arrays"
 import { FlexBox } from "@components/FlexBox"
 
 import { ExemplarPropertyInput } from "./ExemplarPropertyInput"
@@ -60,12 +59,17 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
 
   const info = useExemplarPropertyInfo(property.id)
 
+  const paddedValues = useMemo(
+    () => fill(groupSize, index => value.at(index) ?? null),
+    [groupSize, value],
+  )
+
   const [colorPickerOpen, setColorPickerOpen] = useState(false)
-  const [values, setValues] = useState(() => pad<T[number] | null>(value, groupSize, null))
+  const [values, setValues] = useState(paddedValues)
 
   useEffect(() => {
-    setValues(pad<T[number] | null>(value, groupSize, null))
-  }, [groupSize, value])
+    setValues(paddedValues)
+  }, [paddedValues])
 
   const colorProps = useMemo<ColorProps | undefined>(() => {
     if (type === ExemplarValueType.UInt32) {

@@ -1,10 +1,9 @@
-import type { EmptyRecord } from "@salinco/nice-utils"
+import { type EmptyRecord, remove } from "@salinco/nice-utils"
 import { useMemo } from "react"
 import { create } from "zustand"
 
 import type { AuthorID } from "@common/authors"
 import type { PackageID } from "@common/packages"
-import { removeElement } from "@common/utils/arrays"
 
 export enum Page {
   Authors = "Authors",
@@ -96,7 +95,7 @@ export const useHistory = create<History>()((set, get) => ({
 
     return () => {
       set(state => ({
-        listeners: removeElement(state.listeners, listener),
+        listeners: remove(state.listeners, listener),
       }))
     }
   },

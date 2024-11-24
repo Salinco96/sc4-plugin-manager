@@ -1,4 +1,4 @@
-import { parseHex, toHex } from "@salinco/nice-utils"
+import { type integer, parseHex, toHex } from "@salinco/nice-utils"
 import type { ExemplarData } from "./exemplars"
 
 export type TGI = `${string}-${string}-${string}`
@@ -7,8 +7,8 @@ export function TGI(t: number, g: number, i: number): TGI {
   return [t, g, i].map(id => toHex(id, 8)).join("-") as TGI
 }
 
-export function parseTGI(tgi: TGI): [t: number, g: number, i: number] {
-  return tgi.split("-").map(parseHex) as [t: number, g: number, i: number]
+export function parseTGI(tgi: TGI): [t: integer, g: integer, i: integer] {
+  return tgi.split("-").map(parseHex) as [t: integer, g: integer, i: integer]
 }
 
 export type DBPFEntry<T extends DBPFDataType = DBPFDataType> = {

@@ -1,10 +1,10 @@
 import { Chip, type ChipProps, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { removeElement, removeElement$ } from "@common/utils/arrays"
 import { Page, useLocation } from "@utils/navigation"
 import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
 
+import { $removeFirst, remove } from "@salinco/nice-utils"
 import { STATE_TAGS, type Tag, TagType, type TagValue, getTagLabel } from "./utils"
 
 export type PackageTagProps = Tag & { dense?: boolean }
@@ -50,13 +50,14 @@ export function PackageTag({ dense, ...tag }: PackageTagProps): JSX.Element {
         {...sharedProps}
         onClick={() => {
           if (values.includes(tag.value)) {
-            actions.setPackageFilters({ [key]: removeElement(values, tag.value) })
+            actions.setPackageFilters({ [key]: remove(values, tag.value) })
           } else {
+            // TODO: Awkward logic
             const newValues = [...values, tag.value]
             if (tag.type === TagType.CATEGORY) {
               let category = categories[tag.value]?.parent
               while (category) {
-                removeElement$(newValues, category)
+                $removeFirst(newValues, category)
                 category = categories[category]?.parent
               }
             }

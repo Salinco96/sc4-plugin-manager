@@ -2,7 +2,18 @@ import { readdir } from "node:fs/promises"
 import path from "node:path"
 
 import { input, select } from "@inquirer/prompts"
-import { ID, isEmpty, isString, keys, mapDefined, parseHex, values } from "@salinco/nice-utils"
+import {
+  ID,
+  difference,
+  indexBy,
+  isEmpty,
+  isString,
+  keys,
+  mapDefined,
+  parseHex,
+  remove,
+  values,
+} from "@salinco/nice-utils"
 import { config } from "dotenv"
 import { glob } from "glob"
 
@@ -15,7 +26,7 @@ import {
 } from "@common/exemplars"
 import type { PackageID } from "@common/packages"
 import { ConfigFormat, type PackageData } from "@common/types"
-import { difference, indexBy, isEqual, removeElement } from "@common/utils/arrays"
+import { isEqual } from "@common/utils/arrays"
 import { globToRegex } from "@common/utils/glob"
 import { forEach, forEachAsync, mapValues } from "@common/utils/objects"
 import type { VariantData, VariantID } from "@common/variants"
@@ -1038,7 +1049,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       })
 
       const authorId = packageId.split("/")[0] as AuthorID
-      const authors = removeElement(mapDefined(entry.authors, getAuthorId), authorId)
+      const authors = remove(mapDefined(entry.authors, getAuthorId), authorId)
 
       const packageData = dbPackagesConfigs[authorId]?.[packageId] ?? {}
       const variantData = packageData.variants?.[variantId]

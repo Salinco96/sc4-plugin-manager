@@ -1,16 +1,24 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { isEmpty, isString, keys, mapDefined, size, values } from "@salinco/nice-utils"
+import {
+  isEmpty,
+  isString,
+  keys,
+  mapDefined,
+  size,
+  union,
+  unionBy,
+  values,
+} from "@salinco/nice-utils"
 import { glob } from "glob"
 
 import type { AssetData, AssetID, Assets } from "@common/assets"
 import type { AuthorID } from "@common/authors"
-import type { Categories, CategoryID, CategoryInfo } from "@common/categories"
+import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
 import { OptionType } from "@common/options"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, isNew } from "@common/packages"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
-import { potentialUnion, potentialUnionBy, unionBy, unique } from "@common/utils/arrays"
 import { filterValues, forEach, mapValues } from "@common/utils/objects"
 import type {
   DependencyData,
@@ -332,68 +340,167 @@ function loadVariantInfo(
   const variantData = packageData.variants?.[variantId] ?? {}
 
   const authorId = packageId.split("/")[0] as AuthorID
-  const category = variantData.category ?? packageData.category ?? "mods"
+  const category = variantData.category ?? packageData.category ?? CategoryID.MODS
   const subcategories = parseCategory(category, categories)
   const priorities = subcategories.map(categoryId => categories[categoryId]?.priority ?? 0)
   const priority = Math.max(...priorities)
 
   const variantInfo: VariantInfo = {
-    assets: potentialUnionBy(
-      variantData.assets?.map(loadPackageAssetInfo),
-      packageData.assets?.map(loadPackageAssetInfo),
-      asset => asset.id,
-    ),
-    authors: unique([authorId, ...(variantData.authors ?? []), ...(packageData.authors ?? [])]),
+    authors: [authorId],
     categories: subcategories,
-    dependencies: potentialUnionBy(
-      variantData.dependencies?.map(loadDependencyInfo),
-      packageData.dependencies?.map(loadDependencyInfo),
-      dependency => dependency.id,
-    ),
-    deprecated: variantData.deprecated ?? packageData.deprecated,
-    description: variantData.description ?? packageData.description,
-    experimental: variantData.experimental ?? packageData.experimental,
-    files: potentialUnionBy(variantData.files, packageData.files, file => file.path),
     id: variantId,
-    images: variantData.images ?? packageData.images,
-    logs: variantData.logs ?? packageData.logs,
-    lots: potentialUnionBy(variantData.lots, packageData.lots, lot => lot.id)?.map(lot =>
-      lot.category
-        ? {
-            categories: parseCategory(lot.category, categories),
-            ...lot,
-          }
-        : lot,
-    ),
-    mmps: potentialUnionBy(variantData.mmps, packageData.mmps, mmp => mmp.id)?.map(mmp =>
-      mmp.category
-        ? {
-            categories: parseCategory(`mmps,${mmp.category}`, categories),
-            ...mmp,
-          }
-        : mmp,
-    ),
     name: variantData.name ?? variantId,
-    optional: potentialUnion(variantData.optional, packageData.optional),
-    options: mapDefined(
-      unionBy(variantData.options ?? [], packageData.options ?? [], option => option.id),
-      loadOptionInfo,
-    ),
     priority,
-    readme: variantData.readme ?? packageData.readme,
-    release: variantData.release?.toISOString() ?? packageData.release?.toISOString(),
-    repository: variantData.repository ?? packageData.repository,
-    requirements: { ...packageData.requirements, ...variantData.requirements },
-    support: variantData.support ?? packageData.support,
-    thumbnail: variantData.thumbnail ?? packageData.thumbnail,
-    url: variantData.url ?? packageData.url,
     version: variantData.version ?? packageData.version ?? "0.0.0",
-    warnings: potentialUnion(variantData.warnings, packageData.warnings),
+  }
+
+  const assets = unionBy(
+    variantData.assets?.map(loadPackageAssetInfo) ?? [],
+    packageData.assets?.map(loadPackageAssetInfo) ?? [],
+    asset => asset.id,
+  )
+
+  if (assets.length) {
+    variantInfo.assets = assets
+  }
+
+  const authors = union(variantData.authors ?? [], packageData.authors ?? [])
+
+  if (authors.length) {
+    variantInfo.authors = union(variantInfo.authors, authors)
+  }
+
+  const dependencies = unionBy(
+    variantData.dependencies?.map(loadDependencyInfo) ?? [],
+    packageData.dependencies?.map(loadDependencyInfo) ?? [],
+    dependency => dependency.id,
+  )
+
+  if (dependencies.length) {
+    variantInfo.dependencies = dependencies
+  }
+
+  const deprecated = variantData.deprecated ?? packageData.deprecated
+
+  if (deprecated) {
+    variantInfo.deprecated = deprecated
+  }
+
+  const description = variantData.description ?? packageData.description
+
+  if (description) {
+    variantInfo.description = description
+  }
+
+  const experimental = variantData.experimental ?? packageData.experimental
+
+  if (experimental) {
+    variantInfo.experimental = experimental
+  }
+
+  const files = unionBy(variantData.files ?? [], packageData.files ?? [], file => file.path)
+
+  if (files.length) {
+    variantInfo.files = files
+  }
+
+  const images = union(variantData.images ?? [], packageData.images ?? [])
+
+  if (images.length) {
+    variantInfo.images = images
+  }
+
+  const logs = variantData.logs ?? packageData.logs
+
+  if (logs) {
+    variantInfo.logs = logs
+  }
+
+  const lots = unionBy(variantData.lots ?? [], packageData.lots ?? [], lot => lot.id)
+
+  if (lots.length) {
+    variantInfo.lots = lots.map(lot =>
+      lot.category ? { categories: parseCategory(lot.category, categories), ...lot } : lot,
+    )
+  }
+
+  const mmps = unionBy(variantData.mmps ?? [], packageData.mmps ?? [], mmp => mmp.id)
+
+  if (mmps.length) {
+    variantInfo.mmps = mmps.map(mmp =>
+      mmp.category ? { categories: parseCategory(mmp.category, categories), ...mmp } : mmp,
+    )
+  }
+
+  const optionalDependencies = union(variantData.optional ?? [], packageData.optional ?? [])
+
+  if (optionalDependencies.length) {
+    variantInfo.optional = optionalDependencies
+  }
+
+  const options = unionBy(
+    mapDefined(variantData.options ?? [], loadOptionInfo),
+    mapDefined(packageData.options ?? [], loadOptionInfo),
+    option => option.id,
+  )
+
+  if (options.length) {
+    variantInfo.options = options
+  }
+
+  const readme = variantData.readme ?? packageData.readme
+
+  if (readme) {
+    variantInfo.readme = readme
+  }
+
+  const release = variantData.release ?? packageData.release
+
+  if (release) {
+    variantInfo.release = release.toISOString()
   }
 
   if (isNew(variantInfo)) {
     variantInfo.new = true
   }
+
+  const repository = variantData.repository ?? packageData.repository
+
+  if (repository) {
+    variantInfo.repository = repository
+  }
+
+  const requirements = { ...packageData.requirements, ...variantData.requirements }
+
+  if (!isEmpty(requirements)) {
+    variantInfo.requirements = requirements
+  }
+
+  const support = variantData.support ?? packageData.support
+
+  if (support) {
+    variantInfo.support = support
+  }
+
+  const thumbnail = variantData.thumbnail ?? packageData.thumbnail
+
+  if (thumbnail) {
+    variantInfo.thumbnail = thumbnail
+  }
+
+  const url = variantData.url ?? packageData.url
+
+  if (url) {
+    variantInfo.url = url
+  }
+
+  const warnings = union(variantData.warnings ?? [], packageData.warnings ?? [])
+
+  if (warnings.length) {
+    variantInfo.warnings = warnings
+  }
+
+  // TODO: Do not write this into options explicitly!
 
   if (variantInfo.lots && !variantInfo.options?.some(option => option.id === LOTS_OPTION_ID)) {
     variantInfo.options ??= []

@@ -1,7 +1,6 @@
 import type { FileHandle } from "node:fs/promises"
 
-import { assert } from "@common/utils/types"
-
+import { assert } from "@salinco/nice-utils"
 import { readBytes, writeBytes } from "./files"
 
 /** PE flags */

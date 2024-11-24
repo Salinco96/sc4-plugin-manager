@@ -1,9 +1,8 @@
-import { type ID, isBoolean, isNumber, isString } from "@salinco/nice-utils"
+import { type ID, isArray, isBoolean, isNumber, isString } from "@salinco/nice-utils"
 import type { Namespace, TFunction } from "i18next"
 
 import { getFeatureLabel } from "./i18n"
 import type { Feature } from "./types"
-import { isArrayOf } from "./utils/types"
 
 export const ALL = "all"
 
@@ -170,8 +169,8 @@ export function isOptionDefaultValue(option: OptionInfo, value: OptionValue | un
 
   const defaultValue = getOptionDefaultValue(option)
 
-  return Array.isArray(defaultValue)
-    ? Array.isArray(value) &&
+  return isArray(defaultValue)
+    ? isArray(value) &&
         defaultValue.length === value.length &&
         defaultValue.every(item => value.includes(item))
     : defaultValue === value
@@ -188,5 +187,5 @@ export function isOptionSingleValue(value: unknown): value is OptionSingleValue 
  * Checks whether the given value is a valid option value or array of values
  */
 export function isOptionValue(value: unknown): value is OptionValue {
-  return isOptionSingleValue(value) || isArrayOf(value, isOptionSingleValue)
+  return isOptionSingleValue(value) || (isArray(value) && value.every(isOptionSingleValue))
 }
