@@ -5,13 +5,17 @@ import {
   filterValues,
   forEach,
   isEmpty,
+  isNumber,
   isString,
   keys,
   mapDefined,
   mapValues,
+  parseHex,
   size,
+  toHex,
   union,
   unionBy,
+  unique,
   values,
 } from "@salinco/nice-utils"
 import { glob } from "glob"
@@ -22,13 +26,15 @@ import { type Categories, CategoryID, type CategoryInfo } from "@common/categori
 import { OptionType } from "@common/options"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, isNew } from "@common/packages"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
-import type {
-  DependencyData,
-  DependencyInfo,
-  VariantAssetData,
-  VariantAssetInfo,
-  VariantID,
-  VariantInfo,
+import {
+  type DependencyData,
+  type DependencyInfo,
+  Menu,
+  Submenu,
+  type VariantAssetData,
+  type VariantAssetInfo,
+  type VariantID,
+  type VariantInfo,
 } from "@common/variants"
 import { readConfig } from "@node/configs"
 import { createIfMissing, exists } from "@node/files"
@@ -421,9 +427,12 @@ function loadVariantInfo(
   const lots = unionBy(variantData.lots ?? [], packageData.lots ?? [], lot => lot.id)
 
   if (lots.length) {
-    variantInfo.lots = lots.map(lot =>
-      lot.category ? { categories: parseCategory(lot.category, categories), ...lot } : lot,
-    )
+    variantInfo.lots = lots.map(({ category, menu, submenu, ...lot }) => ({
+      categories: category ? parseCategory(category, categories) : undefined,
+      menu: menu ? parseMenu(menu) : undefined,
+      submenus: submenu ? parseMenus(submenu) : undefined,
+      ...lot,
+    }))
   }
 
   const mmps = unionBy(variantData.mmps ?? [], packageData.mmps ?? [], mmp => mmp.id)
@@ -614,8 +623,10 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         images: variant.images,
         lastModified: variant.lastModified ? new Date(variant.lastModified) : undefined,
         logs: variant.logs,
-        lots: variant.lots?.map(({ categories, ...lot }) => ({
+        lots: variant.lots?.map(({ categories, menu, submenus, ...lot }) => ({
           category: categories?.join(","),
+          menu: menu ? writeMenu(menu) : undefined,
+          submenu: submenus?.length ? writeMenus(submenus) : undefined,
           ...lot,
         })),
         mmps: variant.mmps?.map(({ categories, ...mmp }) => ({
@@ -638,4 +649,28 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
       }),
     ),
   }
+}
+
+export function parseMenu(menu: number | string): number {
+  if (isNumber(menu)) {
+    return menu
+  }
+
+  return Menu[menu as keyof typeof Menu] ?? Submenu[menu as keyof typeof Submenu] ?? parseHex(menu)
+}
+
+export function parseMenus(menus: number | string): number[] {
+  if (isNumber(menus)) {
+    return [menus]
+  }
+
+  return unique(menus.split(",").map(parseMenu))
+}
+
+export function writeMenu(menu: number): string {
+  return Menu[menu] ?? Submenu[menu] ?? `0x${toHex(menu, 8)}`
+}
+
+export function writeMenus(menus: number[]): string {
+  return menus.map(writeMenu).join(",")
 }

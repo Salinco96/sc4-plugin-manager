@@ -47,6 +47,7 @@ export enum Feature {
   NAM = "nam",
   SIMULATOR_AURA = "simulator-aura",
   SIMULATOR_CRIME = "simulator-crime",
+  SUBMENUS = "submenus",
 }
 
 export interface PackageConfig {
@@ -233,6 +234,8 @@ export interface LotData extends BuildingData {
   filename: string
   /** URL or relative path within ~docs */
   images?: string[]
+  /** Menu */
+  menu?: number | string
   /** Internal lot name */
   name?: string
   /** Instance IDs of all props used by this lot */
@@ -247,12 +250,16 @@ export interface LotData extends BuildingData {
   size?: `${number}x${number}`
   /** Growth stage */
   stage?: number
+  /** Submenus, comma-separated */
+  submenu?: number | string
   /** Instance IDs of all textures used by this lot */
   textures?: string[]
 }
 
-export interface LotInfo extends LotData {
+export interface LotInfo extends Omit<LotData, "category" | "menu" | "submenu"> {
   categories?: CategoryID[]
+  menu?: number
+  submenus?: number[]
 }
 
 export interface MMPData {

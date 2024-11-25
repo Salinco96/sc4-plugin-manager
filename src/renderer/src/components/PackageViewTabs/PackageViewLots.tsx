@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next"
 import { getCategories } from "@common/categories"
 import { getOptionValue, getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import { LOTS_OPTION_ID, checkCondition } from "@common/packages"
+import { getMenuLabel } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
 import { PackageTag } from "@components/Tags/PackageTag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
@@ -65,6 +66,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
         const tags = categories.map(category => createTag(TagType.CATEGORY, category))
 
         const tgi = lot.id.match(/^[a-f0-9]{8}$/) ? `6534284a-a8fbd372-${lot.id}` : undefined
+        const menus = (features.submenus && lot.submenus) || (lot.menu ? [lot.menu] : undefined)
 
         return (
           <ListItem key={lot.id} sx={{ padding: 0 }}>
@@ -151,6 +153,14 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                       <Typography variant="body2">
                         <b>{`${t("stage")}: `}</b>
                         {lot.stage}
+                      </Typography>
+                    )}
+
+                    {/* TODO: Better formatting */}
+                    {menus?.length && (
+                      <Typography variant="body2">
+                        <b>{`${t("menu")}: `}</b>
+                        {menus.map(getMenuLabel).join(", ")}
                       </Typography>
                     )}
 
