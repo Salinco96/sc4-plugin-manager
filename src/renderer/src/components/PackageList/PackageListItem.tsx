@@ -35,8 +35,6 @@ export const PackageListItem = memo(function PackageListItem({
 
   const [openImages, setOpenImages] = useState(false)
 
-  const description = variantInfo.summary ?? variantInfo.description
-
   return (
     <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
       <CardContent sx={{ flexGrow: 1, overflow: "hidden" /* TODO: Overflowing tags */ }}>
@@ -96,14 +94,14 @@ export const PackageListItem = memo(function PackageListItem({
             <PackageTags packageId={packageId} />
           </FlexBox>
         </FlexBox>
-        {description && (
+        {(variantInfo.summary ?? variantInfo.description) && (
           <Text
-            maxLines={2}
-            sx={{ height: 40, marginTop: 2 }}
+            maxLines={variantInfo.summary ? undefined : 2}
+            sx={{ fontStyle: variantInfo.summary ? "italic" : undefined, marginTop: 2 }}
             title={variantInfo.description}
             variant="body2"
           >
-            {description}
+            {variantInfo.summary ?? variantInfo.description}
           </Text>
         )}
         <PackageBanners packageId={packageId} />

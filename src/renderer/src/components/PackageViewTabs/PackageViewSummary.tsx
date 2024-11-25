@@ -36,6 +36,11 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
 
   return (
     <Box>
+      {variantInfo.summary && (
+        <Text sx={{ fontStyle: "italic", marginBottom: 2 }} variant="body2">
+          {variantInfo.summary}
+        </Text>
+      )}
       {variantInfo.description && <MarkdownView md={variantInfo.description} />}
       {/* TODO: Better formatting (with Simtropolis user links?) */}
       <Typography variant="body2">
