@@ -478,6 +478,12 @@ function loadVariantInfo(
     variantInfo.requirements = requirements
   }
 
+  const summary = variantData.summary ?? packageData.summary
+
+  if (summary) {
+    variantInfo.summary = summary
+  }
+
   const support = variantData.support ?? packageData.support
 
   if (support) {
@@ -620,8 +626,11 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         optional: variant.optional,
         options: variant.options,
         readme: variant.readme,
+        release: variant.release ? new Date(variant.release) : undefined,
         repository: variant.repository,
         requirements: variant.requirements,
+        summary: variant.summary,
+        support: variant.support,
         thumbnail: variant.thumbnail,
         url: variant.url,
         version: variant.version,
