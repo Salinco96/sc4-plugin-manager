@@ -3,7 +3,7 @@ import type { Logger } from "@common/logs"
 export async function get(
   url: string,
   options: {
-    cookies?(origin: string): { [name: string]: string } | undefined
+    cookies?(origin: string): { [name in string]?: string } | undefined
     fetch?(url: string, options?: RequestInit): Promise<Response>
     headers?: { [name: string]: string }
     logger?: Logger
@@ -40,7 +40,11 @@ export async function get(
   return response
 }
 
-export function getCookieHeader(cookies: { [name: string]: string }): string {
+export function getCookieHeader(
+  cookies: {
+    [name in string]?: string
+  },
+): string {
   return Object.entries(cookies)
     .filter(([, value]) => !!value)
     .map(([name, value]) => `${name}=${value}`)

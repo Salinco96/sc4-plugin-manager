@@ -5,11 +5,16 @@ import { input, select } from "@inquirer/prompts"
 import {
   ID,
   difference,
+  forEach,
+  forEachAsync,
+  getRequired,
   indexBy,
   isEmpty,
+  isEqual,
   isString,
   keys,
   mapDefined,
+  mapValues,
   parseHex,
   remove,
   values,
@@ -26,9 +31,7 @@ import {
 } from "@common/exemplars"
 import type { PackageID } from "@common/packages"
 import { ConfigFormat, type PackageData } from "@common/types"
-import { isEqual } from "@common/utils/arrays"
 import { globToRegex } from "@common/utils/glob"
-import { forEach, forEachAsync, mapValues } from "@common/utils/objects"
 import type { VariantData, VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
@@ -50,7 +53,7 @@ import type {
   IndexerSourceCategoryID,
   IndexerSourceID,
 } from "./types"
-import { readHTML, toID, wait } from "./utils"
+import { getEnvRequired, readHTML, toID, wait } from "./utils"
 
 config({ path: ".env.local" })
 
@@ -60,8 +63,8 @@ const now = new Date()
 
 const dataDir = path.join(__dirname, "data")
 const dataAssetsDir = path.join(dataDir, "assets")
-const dataDownloadsDir = process.env.INDEXER_DOWNLOADS_PATH!
-const dataDownloadsTempDir = process.env.INDEXER_DOWNLOADS_TEMP_PATH!
+const dataDownloadsDir = getEnvRequired("INDEXER_DOWNLOADS_PATH")
+const dataDownloadsTempDir = getEnvRequired("INDEXER_DOWNLOADS_TEMP_PATH")
 
 const dbDir = path.join(__dirname, "../../sc4-plugin-manager-data")
 const dbAssetsDir = path.join(dbDir, "assets")
@@ -105,7 +108,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   }
 
   function getEntry(entryId: EntryID): IndexerEntry {
-    return entries[entryId]! // todo
+    return getRequired(entries, entryId)
   }
 
   function getEntryID(assetId: string): EntryID {

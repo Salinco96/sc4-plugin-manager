@@ -1,6 +1,6 @@
+import { compact } from "@salinco/nice-utils"
 import type { Cookie, Session } from "electron/main"
 
-import { compact } from "@common/utils/objects"
 import { getCookieHeader } from "@node/fetch"
 
 import { BaseWindow } from "../../BaseWindow"
@@ -64,7 +64,7 @@ export async function getSimtropolisSession(
 }
 
 export function getSimtropolisSessionCookies(session: SimtropolisSession): {
-  [name: string]: string
+  [name in string]?: string
 } {
   return compact(
     Object.fromEntries(
@@ -77,7 +77,7 @@ export function getSimtropolisSessionCookies(session: SimtropolisSession): {
 }
 
 export function getSimtropolisSessionHeaders(session: SimtropolisSession): {
-  [name: string]: string
+  Cookie: string
 } {
   return {
     Cookie: getCookieHeader(getSimtropolisSessionCookies(session)),

@@ -1,6 +1,6 @@
 import type { FileHandle } from "node:fs/promises"
 
-import { isArray, isString, keys, parseHex, toHex, values } from "@salinco/nice-utils"
+import { forEach, isArray, isString, keys, parseHex, toHex, values } from "@salinco/nice-utils"
 
 import {
   DBPFDataType,
@@ -22,7 +22,6 @@ import {
   ExemplarValueType,
   PropertyKeyType,
 } from "@common/exemplars"
-import { forEach, forEachAsync } from "@common/utils/objects"
 
 import { Binary } from "./bin"
 
@@ -214,13 +213,13 @@ export async function patchDBPFEntries(
   const dirEntry = contents.entries[DBPFFileType.DIR]
   const dir = dirEntry && new Binary(dirEntry.size, { writable: true })
 
-  await forEachAsync(contents.entries, async (entry, entryId) => {
+  for (const entry of values(contents.entries)) {
     // Skip DIR for now - we will write it last
-    if (entryId === DBPFFileType.DIR) {
-      return
+    if (entry.id === DBPFFileType.DIR) {
+      continue
     }
 
-    const patch = patches[entryId]
+    const patch = patches[entry.id]
 
     if (patch) {
       if (entry.type !== DBPFDataType.EXMP) {
@@ -282,15 +281,15 @@ export async function patchDBPFEntries(
       offset += await bytes.writeTofile(outFile)
     }
 
-    index.writeTGI(entryId)
+    index.writeTGI(entry.id)
     index.writeUInt32(entry.offset)
     index.writeUInt32(entry.size)
 
     if (dir && entry.uncompressed !== undefined) {
-      dir.writeTGI(entryId)
+      dir.writeTGI(entry.id)
       dir.writeUInt32(entry.uncompressed)
     }
-  })
+  }
 
   if (dir) {
     dirEntry.offset = offset

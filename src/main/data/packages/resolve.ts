@@ -1,4 +1,20 @@
 import {
+  filterValues,
+  forEach,
+  isArray,
+  isEmpty,
+  isEqual,
+  keys,
+  mapDefined,
+  mapValues,
+  reduce,
+  remove,
+  union,
+  unique,
+  values,
+} from "@salinco/nice-utils"
+
+import {
   type OptionID,
   type OptionInfo,
   type Options,
@@ -27,8 +43,6 @@ import {
   type PackageStatus,
   type Packages,
 } from "@common/types"
-import { isEqual } from "@common/utils/arrays"
-import { filterValues, forEach, mapValues, reduce } from "@common/utils/objects"
 import {
   type DependencyInfo,
   Issue,
@@ -37,16 +51,6 @@ import {
   type VariantIssue,
 } from "@common/variants"
 import { type Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
-import {
-  isArray,
-  isEmpty,
-  keys,
-  mapDefined,
-  remove,
-  union,
-  unique,
-  values,
-} from "@salinco/nice-utils"
 import type { TaskContext } from "@utils/tasks"
 
 function getVariantIncompatibilities(

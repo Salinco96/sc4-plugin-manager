@@ -1,6 +1,12 @@
-import { type Primitive, isBoolean, isNumber, isObject, isString } from "@salinco/nice-utils"
+import {
+  type Primitive,
+  isBoolean,
+  isNumber,
+  isObject,
+  isString,
+  mapValues,
+} from "@salinco/nice-utils"
 
-import { mapValues } from "@common/utils/objects"
 import { failInDev } from "@utils/env"
 
 function failLoading<T, Required extends boolean = false>(

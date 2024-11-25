@@ -1,10 +1,15 @@
 import TurndownService from "@joplin/turndown"
 import { gfm } from "@joplin/turndown-plugin-gfm"
+import { required } from "@salinco/nice-utils"
 import { HTMLElement, parse as parseHTML } from "node-html-parser"
 
 export async function readHTML(response: Response): Promise<HTMLElement> {
   const body = await response.text()
   return parseHTML(body)
+}
+
+export function getEnvRequired(name: string): string {
+  return required(process.env[name], `Missing ${name}`)
 }
 
 export function toID(name: string): string {

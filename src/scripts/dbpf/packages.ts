@@ -1,6 +1,6 @@
 import path from "node:path"
 
-import { groupBy, isString, union } from "@salinco/nice-utils"
+import { groupBy, isString, matchGroups, union } from "@salinco/nice-utils"
 
 import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
@@ -109,7 +109,7 @@ export function writePackageData(
   packageData.variants[variantId] ??= {}
   const variantData = packageData.variants[variantId]
 
-  const [, major, minor, patch] = entry.version.match(/(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)!
+  const [major, minor, patch] = matchGroups(entry.version, /(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)
 
   const categories = new Set(packageData.category?.split(","))
 
@@ -144,7 +144,7 @@ export function writePackageData(
 
   variantData.assets ??= []
   variantData.lastModified = entry.lastModified
-  variantData.logs ??= entry.description?.match(/\b[\w-]+[.]log\b/)?.[0]
+  variantData.logs ??= entry.description?.match(/\b[\w-]+[.]log\b/)?.at(0)
   variantData.release = timestamp
   variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
 

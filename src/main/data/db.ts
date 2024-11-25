@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { isEnum, parseHex, size } from "@salinco/nice-utils"
+import { forEach, isEnum, mapValues, parseHex, size } from "@salinco/nice-utils"
 
 import { type AuthorData, type AuthorID, type Authors, loadAuthorInfo } from "@common/authors"
 import type { Categories } from "@common/categories"
@@ -13,7 +13,6 @@ import {
 import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
-import { forEach, mapValues } from "@common/utils/objects"
 import { loadConfig, readConfig } from "@node/configs"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"

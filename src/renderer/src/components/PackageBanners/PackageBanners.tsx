@@ -63,6 +63,7 @@ export function PackageBanners({
       {variantInfo.warnings?.map(
         (warning, index) =>
           warning.on !== (isEnabled(variantInfo, packageStatus) ? "enable" : "disable") && (
+            // biome-ignore lint/suspicious/noArrayIndexKey: no better key...
             <PackageBannerWarning key={index} warning={warning} />
           ),
       )}

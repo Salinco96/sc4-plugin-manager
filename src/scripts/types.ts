@@ -80,7 +80,7 @@ export type EntryID = `${IndexerSourceID}/${number}`
 
 export interface IndexerEntryList {
   assets: {
-    [entryId in EntryID]?: IndexerEntry
+    [entryId in EntryID]: IndexerEntry
   }
   /** Indexer metadata */
   meta?: {

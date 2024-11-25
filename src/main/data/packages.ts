@@ -2,10 +2,13 @@ import fs from "node:fs/promises"
 import path from "node:path"
 
 import {
+  filterValues,
+  forEach,
   isEmpty,
   isString,
   keys,
   mapDefined,
+  mapValues,
   size,
   union,
   unionBy,
@@ -19,7 +22,6 @@ import { type Categories, CategoryID, type CategoryInfo } from "@common/categori
 import { OptionType } from "@common/options"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, isNew } from "@common/packages"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
-import { filterValues, forEach, mapValues } from "@common/utils/objects"
 import type {
   DependencyData,
   DependencyInfo,

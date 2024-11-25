@@ -1,4 +1,12 @@
-import { isArray, isBoolean, isNumber, isString, toHex } from "@salinco/nice-utils"
+import {
+  forEach,
+  isArray,
+  isBoolean,
+  isEqual,
+  isNumber,
+  isString,
+  toHex,
+} from "@salinco/nice-utils"
 
 import {
   type ExemplarData,
@@ -10,8 +18,6 @@ import {
   type ExemplarPropertyValue,
   ExemplarValueType,
 } from "@common/exemplars"
-import { isEqual } from "@common/utils/arrays"
-import { forEach } from "@common/utils/objects"
 import { useExemplarProperties } from "@utils/store"
 
 export function getDiff(

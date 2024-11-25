@@ -10,8 +10,12 @@ import type { Features, PackageInfo, Packages } from "./types"
 export interface ApplicationState {
   authors: Authors
   categories: Categories
-  downloads: Record<string, TaskInfo>
-  exemplarProperties: Partial<Record<number, ExemplarPropertyInfo>>
+  downloads: {
+    [downloadKey in string]?: TaskInfo
+  }
+  exemplarProperties: {
+    [propertyId in number]?: ExemplarPropertyInfo
+  }
   features: Features
   linker: TaskInfo | null
   loader: TaskInfo | null

@@ -1,4 +1,4 @@
-import { keys, values } from "@salinco/nice-utils"
+import { mapValues, values } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
 import { CategoryID, isCategory } from "@common/categories"
@@ -18,7 +18,6 @@ import {
   VariantState,
   getState,
 } from "@common/types"
-import { mapValues } from "@common/utils/objects"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 import {
@@ -261,54 +260,56 @@ export function computePackageList(
     pattern,
   }
 
-  const allPackages = keys(packages).sort()
-  const filteredPackages = allPackages.filter(packageId => {
-    const packageConfig = profileInfo?.packages[packageId]
-    const packageInfo = packages[packageId]! // TODO
-    const packageStatus = getPackageStatus(packageInfo, profileInfo)
+  const filteredPackages = values(packages)
+    .filter(packageInfo => {
+      const packageId = packageInfo.id
+      const packageConfig = profileInfo?.packages[packageId]
+      const packageStatus = getPackageStatus(packageInfo, profileInfo)
 
-    const allVariants = values(packageInfo.variants)
+      const allVariants = values(packageInfo.variants)
 
-    const filteredVariants = allVariants.filter(variantInfo => {
-      return filterVariant(packageInfo, variantInfo, profileInfo, filters)
-    })
+      const filteredVariants = allVariants.filter(variantInfo => {
+        return filterVariant(packageInfo, variantInfo, profileInfo, filters)
+      })
 
-    let selectedVariantId =
-      packageStatus?.variantId ??
-      store.packageUi[packageId]?.variantId ??
-      (filteredVariants[0] ?? allVariants[0]).id
+      let selectedVariantId =
+        packageStatus?.variantId ??
+        store.packageUi[packageId]?.variantId ??
+        (filteredVariants[0] ?? allVariants[0]).id
 
-    const selectedVariant = packageInfo.variants[selectedVariantId]
-    if (!selectedVariant) {
-      return false
-    }
-
-    // Adjust selected variant upon changing filters
-    if (!packageConfig?.enabled && triggeredByFilters) {
-      const compatibleVariants = filteredVariants.filter(
-        variantInfo => !isIncompatible(variantInfo, packageStatus),
-      )
-
-      if (compatibleVariants.length && !compatibleVariants.includes(selectedVariant)) {
-        variantChanges[packageId] = selectedVariantId = compatibleVariants[0].id
-      } else if (filteredVariants.length && !filteredVariants.includes(selectedVariant)) {
-        variantChanges[packageId] = selectedVariantId = filteredVariants[0].id
+      const selectedVariant = packageInfo.variants[selectedVariantId]
+      if (!selectedVariant) {
+        return false
       }
-    }
 
-    packageUi[packageId] = {
-      variantId: selectedVariantId,
-      variantIds: filteredVariants.map(variantInfo => variantInfo.id),
-    }
+      // Adjust selected variant upon changing filters
+      if (!packageConfig?.enabled && triggeredByFilters) {
+        const compatibleVariants = filteredVariants.filter(
+          variantInfo => !isIncompatible(variantInfo, packageStatus),
+        )
 
-    // Only check errors for the selected variant
-    if (packageFilters.onlyErrors && !isError(selectedVariant, packageStatus)) {
-      return false
-    }
+        if (compatibleVariants.length && !compatibleVariants.includes(selectedVariant)) {
+          variantChanges[packageId] = selectedVariantId = compatibleVariants[0].id
+        } else if (filteredVariants.length && !filteredVariants.includes(selectedVariant)) {
+          variantChanges[packageId] = selectedVariantId = filteredVariants[0].id
+        }
+      }
 
-    // Package is visible if we managed to select a visible variant
-    return filteredVariants.includes(selectedVariant)
-  })
+      packageUi[packageId] = {
+        variantId: selectedVariantId,
+        variantIds: filteredVariants.map(variantInfo => variantInfo.id),
+      }
+
+      // Only check errors for the selected variant
+      if (packageFilters.onlyErrors && !isError(selectedVariant, packageStatus)) {
+        return false
+      }
+
+      // Package is visible if we managed to select a visible variant
+      return filteredVariants.includes(selectedVariant)
+    })
+    .map(packageInfo => packageInfo.id)
+    .sort()
 
   // Send adjusted variants back to main process
   // Enabled packages do not get adjusted so this should not trigger expensive calculations
