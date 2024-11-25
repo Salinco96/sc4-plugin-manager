@@ -11,7 +11,7 @@ import {
 import { OptionsForm } from "./OptionsForm"
 import { usePackageOptions } from "./usePackageOptions"
 
-export function PackageOptionsForm({ packageId }: { packageId: PackageID }): JSX.Element {
+export default function PackageOptionsForm({ packageId }: { packageId: PackageID }): JSX.Element {
   const actions = useStoreActions()
   const profileInfo = useCurrentProfile()
   const profileOptions = useStore(store => store.profileOptions)

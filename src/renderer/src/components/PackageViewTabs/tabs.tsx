@@ -1,27 +1,20 @@
 import { size } from "@salinco/nice-utils"
 import type { TFunction } from "i18next"
-import type { ComponentType } from "react"
+import { type ComponentType, lazy } from "react"
 import { create as createStore } from "zustand"
 
 import { type PackageID, isLocal, isPatched } from "@common/packages"
 import { type PackageInfo, VariantState } from "@common/types"
 import type { VariantInfo } from "@common/variants"
-import { PackageOptionsForm } from "@components/Options/PackageOptionsForm"
 import { type Tag, TagType, createTag } from "@components/Tags/utils"
-
-import { PackageViewDependencies } from "./PackageViewDependencies"
-import { PackageViewFiles } from "./PackageViewFiles"
-import { PackageViewLogs } from "./PackageViewLogs"
-import { PackageViewLots } from "./PackageViewLots"
-import { PackageViewMMPs } from "./PackageViewMMPs"
-import { PackageViewOptionalDependencies } from "./PackageViewOptionalDependencies"
-import { PackageViewReadme } from "./PackageViewReadme"
-import { PackageViewRequiredBy } from "./PackageViewRequiredBy"
 import { PackageViewSummary } from "./PackageViewSummary"
-import { PackageViewVariants } from "./PackageViewVariants"
+
+export interface PackageViewTabInfoProps {
+  packageId: PackageID
+}
 
 export type PackageViewTabInfo = {
-  component: ComponentType<{ packageId: PackageID }>
+  component: ComponentType<PackageViewTabInfoProps>
   id: string
   label: (
     t: TFunction<"PackageViewTabs">,
@@ -47,7 +40,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "lots",
-    component: PackageViewLots,
+    component: lazy(() => import("./PackageViewLots")),
     condition(variantInfo) {
       return !!variantInfo.lots?.length
     },
@@ -57,7 +50,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "mmps",
-    component: PackageViewMMPs,
+    component: lazy(() => import("./PackageViewMMPs")),
     condition(variantInfo) {
       return !!variantInfo.mmps?.length
     },
@@ -67,7 +60,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "dependencies",
-    component: PackageViewDependencies,
+    component: lazy(() => import("./PackageViewDependencies")),
     condition(variantInfo) {
       return !!variantInfo.dependencies?.length
     },
@@ -77,7 +70,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "optionalDependencies",
-    component: PackageViewOptionalDependencies,
+    component: lazy(() => import("./PackageViewOptionalDependencies")),
     condition(variantInfo) {
       return !!variantInfo.optional?.length
     },
@@ -88,7 +81,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "requiredBy",
     fullsize: true,
-    component: PackageViewRequiredBy,
+    component: lazy(() => import("./PackageViewRequiredBy")),
     condition(variantInfo, dependentPackages) {
       return !!dependentPackages.length
     },
@@ -98,7 +91,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "files",
-    component: PackageViewFiles,
+    component: lazy(() => import("./PackageViewFiles")),
     condition(variantInfo) {
       return !!variantInfo.files?.length
     },
@@ -117,7 +110,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "readme",
-    component: PackageViewReadme,
+    component: lazy(() => import("./PackageViewReadme")),
     condition(variantInfo) {
       return !!variantInfo.readme
     },
@@ -128,7 +121,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "options",
-    component: PackageOptionsForm,
+    component: lazy(() => import("../Options/PackageOptionsForm")),
     condition(variantInfo) {
       return !!variantInfo.options?.length
     },
@@ -138,7 +131,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "logs",
-    component: PackageViewLogs,
+    component: lazy(() => import("./PackageViewLogs")),
     condition(variantInfo) {
       return !!variantInfo.installed && !!variantInfo.logs
     },
@@ -148,7 +141,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   },
   {
     id: "variants",
-    component: PackageViewVariants,
+    component: lazy(() => import("./PackageViewVariants")),
     condition() {
       return true
     },

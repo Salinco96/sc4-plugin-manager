@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 
 import { getCategories } from "@common/categories"
 import { getOptionValue, getRequirementLabel, getRequirementValueLabel } from "@common/options"
-import { LOTS_OPTION_ID, type PackageID, checkCondition } from "@common/packages"
+import { LOTS_OPTION_ID, checkCondition } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageTag } from "@components/Tags/PackageTag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
@@ -21,8 +21,9 @@ import {
   useStore,
   useStoreActions,
 } from "@utils/store"
+import type { PackageViewTabInfoProps } from "./tabs"
 
-export function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.Element {
+export default function PackageViewLots({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const actions = useStoreActions()
   const features = useFeatures()
   const settings = useSettings()

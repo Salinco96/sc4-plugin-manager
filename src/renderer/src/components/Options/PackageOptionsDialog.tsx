@@ -1,9 +1,10 @@
 import { Dialog, DialogContent, DialogTitle } from "@mui/material"
+import { Suspense, lazy } from "react"
 
 import type { PackageID } from "@common/packages"
 import { usePackageInfo } from "@utils/packages"
 
-import { PackageOptionsForm } from "./PackageOptionsForm"
+const PackageOptionsForm = lazy(() => import("./PackageOptionsForm"))
 
 export function PackageOptionsDialog({
   onClose,
@@ -20,7 +21,9 @@ export function PackageOptionsDialog({
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>{packageInfo.name}</DialogTitle>
       <DialogContent sx={{ pt: 2 }}>
-        <PackageOptionsForm packageId={packageId} />
+        <Suspense>
+          <PackageOptionsForm packageId={packageId} />
+        </Suspense>
       </DialogContent>
     </Dialog>
   )

@@ -7,7 +7,7 @@ import { Modal } from "./components/Modal"
 import { PageComponents } from "./pages"
 import { type Page, type PageData, useHistory, useLocation } from "./utils/navigation"
 
-function ContentErrorComponent({ clearError, error }: ErrorComponentProps) {
+export function ContentErrorComponent({ clearError, error }: ErrorComponentProps) {
   const { subscribe } = useHistory()
 
   // Clear error when changing location

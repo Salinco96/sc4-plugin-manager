@@ -1,9 +1,3 @@
-import { Button, Card, CardActions, CardContent, List } from "@mui/material"
-import { values } from "@salinco/nice-utils"
-import { useState } from "react"
-import { useTranslation } from "react-i18next"
-
-import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { CreateVariantModal } from "@components/CreateVariantModal"
 import { FlexBox } from "@components/FlexBox"
@@ -14,9 +8,14 @@ import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { VariantActions } from "@components/VariantActions"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
+import { Button, Card, CardActions, CardContent, List } from "@mui/material"
+import { values } from "@salinco/nice-utils"
 import { usePackageInfo } from "@utils/packages"
+import { useState } from "react"
+import { useTranslation } from "react-i18next"
+import type { PackageViewTabInfoProps } from "./tabs"
 
-export function PackageViewVariants({ packageId }: { packageId: PackageID }): JSX.Element {
+export default function PackageViewVariants({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const packageInfo = usePackageInfo(packageId)
 
   const [openImages, setOpenImages] = useState<VariantID>()

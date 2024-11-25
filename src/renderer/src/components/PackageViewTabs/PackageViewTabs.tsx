@@ -1,15 +1,17 @@
-import { TabContext, TabList, TabPanel } from "@mui/lab"
-import { Box, Tab } from "@mui/material"
-import { useTranslation } from "react-i18next"
-
-import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { PackageTag } from "@components/Tags/PackageTag"
+import { TabContext, TabList, TabPanel } from "@mui/lab"
+import { Box, Tab } from "@mui/material"
 import { useCurrentVariant, useDependentPackages, usePackageInfo } from "@utils/packages"
+import { useTranslation } from "react-i18next"
 
-import { packageViewTabs, usePackageViewTab } from "./tabs"
+import { ErrorBoundary } from "@components/ErrorBoundary"
+import { Loader } from "@components/Loader"
+import { Suspense } from "react"
+import { ContentErrorComponent } from "../../Content"
+import { type PackageViewTabInfoProps, packageViewTabs, usePackageViewTab } from "./tabs"
 
-export function PackageViewTabs({ packageId }: { packageId: PackageID }): JSX.Element | null {
+export function PackageViewTabs({ packageId }: PackageViewTabInfoProps): JSX.Element | null {
   const { activeTab, setActiveTab } = usePackageViewTab()
   const { t } = useTranslation("PackageViewTabs")
 
@@ -55,7 +57,11 @@ export function PackageViewTabs({ packageId }: { packageId: PackageID }): JSX.El
           }}
           value={id}
         >
-          <Component packageId={packageId} />
+          <Suspense fallback={<Loader />}>
+            <ErrorBoundary ErrorComponent={ContentErrorComponent}>
+              <Component packageId={packageId} />
+            </ErrorBoundary>
+          </Suspense>
         </TabPanel>
       ))}
     </TabContext>

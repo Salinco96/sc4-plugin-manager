@@ -1,10 +1,9 @@
-import { List, ListItem } from "@mui/material"
-
-import type { PackageID } from "@common/packages"
 import { PackageFile } from "@components/PackageFile/PackageFile"
+import { List, ListItem } from "@mui/material"
 import { useCurrentVariant } from "@utils/packages"
+import type { PackageViewTabInfoProps } from "./tabs"
 
-export function PackageViewFiles({ packageId }: { packageId: PackageID }): JSX.Element {
+export default function PackageViewFiles({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const variantInfo = useCurrentVariant(packageId)
 
   return (

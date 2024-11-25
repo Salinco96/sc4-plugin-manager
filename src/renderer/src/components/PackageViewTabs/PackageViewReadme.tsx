@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react"
-
-import type { PackageID } from "@common/packages"
 import { Loader } from "@components/Loader"
 import { MarkdownView } from "@components/MarkdownView"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
+import { useEffect, useState } from "react"
+import type { PackageViewTabInfoProps } from "./tabs"
 
-export function PackageViewReadme({ packageId }: { packageId: PackageID }): JSX.Element | null {
+export default function PackageViewReadme({
+  packageId,
+}: PackageViewTabInfoProps): JSX.Element | null {
   const actions = useStoreActions()
   const variantInfo = useCurrentVariant(packageId)
   const variantId = variantInfo.id

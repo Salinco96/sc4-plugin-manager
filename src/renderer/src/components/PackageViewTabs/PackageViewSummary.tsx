@@ -7,7 +7,6 @@ import type { AuthorID } from "@common/authors"
 import { getCategories, getCategoryLabel } from "@common/categories"
 import { getFeatureLabel } from "@common/i18n"
 import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
-import type { PackageID } from "@common/packages"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { getAuthorName } from "@components/Tags/utils" // TODO: Move
@@ -15,8 +14,9 @@ import { Text } from "@components/Text"
 import { Page, useHistory } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 import { useAuthors, useStore } from "@utils/store"
+import type { PackageViewTabInfoProps } from "./tabs"
 
-export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX.Element {
+export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const authors = useAuthors()
   const categories = useStore(store => store.categories)
   const profileOptions = useStore(store => store.profileOptions)

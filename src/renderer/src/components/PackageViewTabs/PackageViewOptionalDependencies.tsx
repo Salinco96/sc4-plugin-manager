@@ -1,14 +1,11 @@
-import { List } from "@mui/material"
-
-import type { PackageID } from "@common/packages"
 import { PackageListItem } from "@components/PackageList/PackageListItem"
+import { List } from "@mui/material"
 import { useCurrentVariant } from "@utils/packages"
+import type { PackageViewTabInfoProps } from "./tabs"
 
-export function PackageViewOptionalDependencies({
+export default function PackageViewOptionalDependencies({
   packageId,
-}: {
-  packageId: PackageID
-}): JSX.Element {
+}: PackageViewTabInfoProps): JSX.Element {
   const variantInfo = useCurrentVariant(packageId)
 
   return (

@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 
 import { getCategories } from "@common/categories"
 import { getOptionValue, getRequirementLabel, getRequirementValueLabel } from "@common/options"
-import { MMPS_OPTION_ID, type PackageID, checkCondition } from "@common/packages"
+import { MMPS_OPTION_ID, checkCondition } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageTag } from "@components/Tags/PackageTag"
@@ -22,8 +22,9 @@ import {
   useStore,
   useStoreActions,
 } from "@utils/store"
+import type { PackageViewTabInfoProps } from "./tabs"
 
-export function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.Element {
+export default function PackageViewMMPs({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const actions = useStoreActions()
   const features = useFeatures()
   const settings = useSettings()

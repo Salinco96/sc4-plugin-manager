@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react"
 
-import { Alert, AlertTitle, Button } from "@mui/material"
-import { useTranslation } from "react-i18next"
-
-import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
+import { Alert, AlertTitle, Button } from "@mui/material"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
+import { useTranslation } from "react-i18next"
+import type { PackageViewTabInfoProps } from "./tabs"
 
-export function PackageViewLogs({ packageId }: { packageId: PackageID }): JSX.Element | null {
+export default function PackageViewLogs({
+  packageId,
+}: PackageViewTabInfoProps): JSX.Element | null {
   const actions = useStoreActions()
   const variantInfo = useCurrentVariant(packageId)
   const variantId = variantInfo.id

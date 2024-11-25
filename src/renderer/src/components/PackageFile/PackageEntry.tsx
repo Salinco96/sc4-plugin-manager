@@ -22,14 +22,12 @@ const EDITABLETYPES = [
 
 // TODO: FSH, S3D, audio files...
 const VIEWABLETYPES = [
-  // Images
   DBPFDataType.BMP,
+  DBPFDataType.EXMP,
   DBPFDataType.JFIF,
   DBPFDataType.PNG,
-  // Text
-  DBPFDataType.XML,
-  // Others
-  DBPFDataType.EXMP,
+  // TODO: XML not viewable atm because it can be confusing if values are not matching exemplar
+  // DBPFDataType.XML,
 ]
 
 export interface PackageEntryProps {
