@@ -18,6 +18,7 @@ import {
 import {
   type OptionID,
   type OptionInfo,
+  type OptionValue,
   type Options,
   getOptionInfo,
   getOptionValue,
@@ -674,10 +675,14 @@ export function resolvePackageUpdates(
 
       // Remove explicit default options
       if (packageConfig?.options) {
-        packageConfig.options = filterValues(packageConfig.options, (optionValue, optionId) => {
-          const option = variantInfo.options?.find(option => option.id === optionId)
-          return !!option && !isOptionDefaultValue(option, optionValue)
-        })
+        packageConfig.options = filterValues(
+          packageConfig.options,
+          // TODO: Solve typing in nice-utils
+          (optionValue: OptionValue, optionId: OptionID) => {
+            const option = variantInfo.options?.find(option => option.id === optionId)
+            return !!option && !isOptionDefaultValue(option, optionValue)
+          },
+        )
 
         if (isEmpty(packageConfig.options)) {
           packageConfig.options = undefined

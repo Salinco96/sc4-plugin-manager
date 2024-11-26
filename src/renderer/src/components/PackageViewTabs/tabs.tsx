@@ -1,4 +1,4 @@
-import { size } from "@salinco/nice-utils"
+import { size, uniqueBy } from "@salinco/nice-utils"
 import type { TFunction } from "i18next"
 import { type ComponentType, lazy } from "react"
 import { create as createStore } from "zustand"
@@ -45,7 +45,9 @@ export const packageViewTabs: PackageViewTabInfo[] = [
       return !!variantInfo.lots?.length
     },
     label(t, variantInfo) {
-      return t("lots", { count: variantInfo.lots?.length })
+      return t("lots", {
+        count: variantInfo.lots ? uniqueBy(variantInfo.lots, lot => lot.id).length : undefined,
+      })
     },
   },
   {

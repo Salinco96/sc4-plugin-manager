@@ -10,23 +10,38 @@ assets:
     assetId: simtropolis/maxis-day-of-peace
     authors:
       - simtropolis
-    buildings: []
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/dayopeace.dat
-    features: []
     filename: dayopeace.dat
     files:
       - dayopeace.dat
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
+    props:
+      - 6534284a-c977c536-2cab0000
+      - 6534284a-c977c536-2cbb0000
+      - 6534284a-c977c536-2ccb0000
+      - 6534284a-c977c536-2cdb0000
+      - 6534284a-c977c536-2cad0000
+      - 6534284a-c977c536-2cbd0000
+      - 6534284a-c977c536-2ccd0000
+      - 6534284a-c977c536-2d220000
+      - 6534284a-c977c536-2cbf0000
+      - 6534284a-c977c536-2ccf0000
+      - 6534284a-c977c536-2cba0000
+      - 6534284a-c977c536-2cca0000
+      - 6534284a-c977c536-2cda0000
+      - 6534284a-c977c536-2cbc0000
+      - 6534284a-c977c536-2ccc0000
+      - 6534284a-c977c536-2d210000
+      - 6534284a-c977c536-2cdc0000
+      - 6534284a-c977c536-2cbe0000
+      - 6534284a-c977c536-2cce0000
+      - 6534284a-c977c536-2d230000
     sha256: 1d573ffa52a37376f2be724afd0881c0f47abb06c05e0b31f7bf74a93088ce2b
     size: 3307086
-    textures: []
     version: '1'
   simtropolis/maxis-flags-ca:
     assetId: simtropolis/maxis-flags-ca
@@ -55,6 +70,7 @@ assets:
         id: 04c00000
         maintenance: 110
         model: 5ad0e817-badb57f1-04c00000
+        name: Lm80x80_TheLivingMall_04C0
         pollution: 10
         pollutionRadius: 4
         power: 800
@@ -65,14 +81,12 @@ assets:
         waterPollutionRadius: 5
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_002_TheLivingMall.dat
-    features: []
     filename: Plugin_002_TheLivingMall.dat
     files:
       - Plugin_002_TheLivingMall.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04c00000
-        category: landmarks
         filename: Plugin_002_TheLivingMall.dat
         id: 6ac4085b
         name: LM6x6_TheLivingMall
@@ -90,14 +104,12 @@ assets:
           - '26210000'
           - 25c40000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04c00000
-    props: []
     sha256: b6d652e485249493877bc0c6b3201bf8031b70fd935847df42798d10cb0578d5
     size: 2467729
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-003-arc-de-triomphe:
     assetId: simtropolis/maxis-plugin-003-arc-de-triomphe
@@ -111,6 +123,7 @@ assets:
         id: 04c10000
         maintenance: 110
         model: 5ad0e817-badb57f1-04c10000
+        name: Lm38x22_ArcTriomphe_04C1
         pollution: 1
         pollutionRadius: 1
         power: 1
@@ -121,14 +134,12 @@ assets:
         waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_003_ArcTriomphe.dat
-    features: []
     filename: Plugin_003_ArcTriomphe.dat
     files:
       - Plugin_003_ArcTriomphe.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04c10000
-        category: landmarks
         filename: Plugin_003_ArcTriomphe.dat
         id: aac407c0
         name: LM3x3_ArcTriomphe
@@ -142,14 +153,12 @@ assets:
           - '26060000'
           - 257d0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04c10000
-    props: []
     sha256: 22e5cc20e0a363f76aa722d81fa9802e3f837c8cef17d6501d73c36054b6a9aa
     size: 410267
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-004-seoul-city-hall:
     assetId: simtropolis/maxis-plugin-004-seoul-city-hall
@@ -164,6 +173,7 @@ assets:
         id: 04c30000
         maintenance: 130
         model: 5ad0e817-badb57f1-04c30000
+        name: LM80x64_SeoulCityHallSquare_04C3
         pollution: 4
         pollutionRadius: 2
         power: 200
@@ -174,14 +184,12 @@ assets:
         waterPollutionRadius: 3
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_004_SeoulCityHall.dat
-    features: []
     filename: Plugin_004_SeoulCityHall.dat
     files:
       - Plugin_004_SeoulCityHall.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04c30000
-        category: landmarks
         filename: Plugin_004_SeoulCityHall.dat
         id: 2ac40624
         name: LM6x6_SeoulCityHallSquare
@@ -202,7 +210,7 @@ assets:
           - 25f10000
           - '26270000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04c30000
@@ -211,7 +219,6 @@ assets:
       - 6534284a-ca386e22-04bd0000
     sha256: ecbec2ef700c6a78ee234a277a4b2184bb7aae3393c68b475ec43506705c54c1
     size: 1953118
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-005-seoul-soccer-stadium:
     assetId: simtropolis/maxis-plugin-005-seoul-soccer-stadium
@@ -226,6 +233,7 @@ assets:
         id: 04c20000
         maintenance: 310
         model: 5ad0e817-badb57f1-04c20000
+        name: Lm239x215_WorldCupFootballStadium_04C2
         pollution: 4294967285
         pollutionRadius: 4
         power: 90
@@ -236,14 +244,12 @@ assets:
         waterPollutionRadius: 6
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_005_SeoulSoccerStad.dat
-    features: []
     filename: Plugin_005_SeoulSoccerStad.dat
     files:
       - Plugin_005_SeoulSoccerStad.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04c20000
-        category: landmarks
         filename: Plugin_005_SeoulSoccerStad.dat
         id: 4ac40971
         name: LM0x0_WorldCupFootballStadium
@@ -263,14 +269,12 @@ assets:
           - 25ed0000
           - 25aa0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04c20000
-    props: []
     sha256: 31b1770cfc23aa6692a1e0293ba0a6e505ae2a803ac637ebd338b51f72277750
     size: 7761878
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-006-globe-arena:
     assetId: simtropolis/maxis-plugin-006-globe-arena
@@ -285,6 +289,7 @@ assets:
         id: 04bc0000
         maintenance: 140
         model: 5ad0e817-badb57f1-04bc0000
+        name: Lm148x112_GlobeArena_04BC
         pollution: 2
         pollutionRadius: 2
         power: 40
@@ -295,14 +300,12 @@ assets:
         waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_006_GlobeArena.dat
-    features: []
     filename: Plugin_006_GlobeArena.dat
     files:
       - Plugin_006_GlobeArena.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04bc0000
-        category: landmarks
         filename: Plugin_006_GlobeArena.dat
         id: aae108a3
         name: LM11x8_GlobeArena
@@ -329,7 +332,7 @@ assets:
           - 258c0000
           - 25b20000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2b960000
@@ -338,16 +341,38 @@ assets:
       - 6534284a-c977c536-2b960000
     sha256: 501cc4e4f66c402747e8efa3d97a7cf993cd37487e50e3a7b285005512337b5d
     size: 4000537
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-007-air-force-base:
     assetId: simtropolis/maxis-plugin-007-air-force-base
     authors:
       - simtropolis
-    buildings: []
+    buildings:
+      - bulldoze: 1000
+        category: rewards
+        filename: Plugin_007_AirForceBase.dat
+        flamability: 40
+        garbage: 10
+        id: 036f0000
+        jobs:
+          $: 45
+        menu: Rewards
+        model: 5ad0e817-badb57f1-036f0000
+        name: RW36x14_AFB_Control_Tower_036F0000
+        pollution: 2
+        pollutionRadius: 3
+        power: 100
+        rating: 4294967289
+        ratingRadius: 440
+        relief:
+          im: 100000
+        submenu: Rewards
+        water: 150
+        waterPollution: 3
+        waterPollutionRadius: 4
+    categories:
+      - rewards
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_007_AirForceBase.dat
-    features: []
     filename: Plugin_007_AirForceBase.dat
     files:
       - Plugin_007_AirForceBase.dat
@@ -416,7 +441,7 @@ assets:
           - '25610000'
           - 25c60000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1--151c0000
@@ -436,10 +461,14 @@ assets:
       - 5ad0e817-badb57f1-11200000
       - 5ad0e817-badb57f1-111c0000
       - 5ad0e817-badb57f1-11250000
-    props: []
+    props:
+      - 6534284a-096e6739-2aee0fb3
+      - 6534284a-c977c536-4ae643c1
+      - 6534284a-c977c536-4ae643c2
+      - 6534284a-c977c536-4ae643c3
+      - 6534284a-c977c536-2af8bbd2
     sha256: 2f7eb1e40067ce23056bf91ce3296235ea5242b826c8ced9cbdb1b870e944e45
     size: 1279664
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-008-kunjungjon:
     assetId: simtropolis/maxis-plugin-008-kunjungjon
@@ -447,13 +476,16 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 5850
+        category: landmarks
         cost: 65000
         filename: Plugin_008_Kunjungjon.dat
         flamability: 33
         garbage: 9
         id: 04ba0000
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04ba0000
+        name: Lm55x43_KonjongjonHall_04BA
         pollution: 2
         pollutionRadius: 2
         power: 50
@@ -462,9 +494,10 @@ assets:
         water: 250
         waterPollution: 2
         waterPollutionRadius: 3
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_008_Kunjungjon.dat
-    features: []
     filename: Plugin_008_Kunjungjon.dat
     files:
       - Plugin_008_Kunjungjon.dat
@@ -490,7 +523,7 @@ assets:
           - 262c0000
           - 262b0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2b980000
@@ -523,6 +556,7 @@ assets:
         id: 04b90000
         maintenance: 130
         model: 5ad0e817-badb57f1-04b90000
+        name: Lm64x64_NamDaeMoon_04B9
         power: 10
         rating: 8
         ratingRadius: 256
@@ -531,7 +565,6 @@ assets:
         waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_009_NamDaeMoon.dat
-    features: []
     filename: Plugin_009_NamDaeMoon.dat
     files:
       - Plugin_009_NamDaeMoon.dat
@@ -545,14 +578,12 @@ assets:
         textures:
           - 258b0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04b90000
-    props: []
     sha256: 4fee240b69e68935a10c42cff8ca16a55fcdfc47aa2fb6ca695e5a97e448cb7a
     size: 894884
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-00A-63-building:
     assetId: simtropolis/maxis-plugin-00A-63-building
@@ -567,6 +598,7 @@ assets:
         id: 04b80000
         maintenance: 210
         model: 5ad0e817-badb57f1-04b80000
+        name: Lm64x72_KoreaLifeBldg_04B8
         pollution: 5
         pollutionRadius: 6
         power: 600
@@ -577,7 +609,6 @@ assets:
         waterPollutionRadius: 7
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00A_63Building.dat
-    features: []
     filename: Plugin_00A_63Building.dat
     files:
       - Plugin_00A_63Building.dat
@@ -595,14 +626,12 @@ assets:
           - 258f0000
           - 252b0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04b80000
-    props: []
     sha256: 9e266e047bbef4a85418386f8298f03d842976d6cba6e8709374e064d97a66b9
     size: 4228912
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-00C-brandenburg-gate:
     assetId: simtropolis/maxis-plugin-00C-brandenburg-gate
@@ -610,13 +639,16 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 5850
+        category: landmarks
         cost: 60000
         filename: Plugin_00C_BrandenburgGate.dat
         flamability: 34
         garbage: 5
         id: 04b70000
         maintenance: 120
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b70000
+        name: Lm72x34_BrandenburgGate_04B7
         pollution: 1
         pollutionRadius: 1
         power: 2
@@ -625,16 +657,16 @@ assets:
         water: 3
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00C_BrandenburgGate.dat
-    features: []
     filename: Plugin_00C_BrandenburgGate.dat
     files:
       - Plugin_00C_BrandenburgGate.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b70000
-        category: landmarks
         filename: Plugin_00C_BrandenburgGate.dat
         id: ab5e1192
         name: LM5x7_BrandenburgGate
@@ -653,11 +685,10 @@ assets:
           - '26060000'
           - 25f40000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04b70000
-    props: []
     sha256: 7935ab006d37e748185aaafdcbcae83eb50aead1f044ae9810b7718f823c5812
     size: 707610
     textures:
@@ -669,29 +700,32 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 6750
+        category: landmarks
         cost: 60000
         filename: Plugin_00D_Parthenon.dat
         flamability: 35
         garbage: 2
         id: 04b60000
         maintenance: 120
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b60000
+        name: Lm32x68_Parthenon_04B6
         power: 2
         rating: 7
         ratingRadius: 256
         water: 5
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00D_Parthenon.dat
-    features: []
     filename: Plugin_00D_Parthenon.dat
     files:
       - Plugin_00D_Parthenon.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b60000
-        category: landmarks
         filename: Plugin_00D_Parthenon.dat
         id: cb68c0df
         name: Lm4x7_Parthenon
@@ -718,7 +752,7 @@ assets:
         textures:
           - 25db0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2bac0000
@@ -761,7 +795,6 @@ assets:
       - 6534284a-c977c536-2ba50000
     sha256: e93eeccb23fe7327644e093e5aac353c0d104a4c3d35257beb23e74d15e0b638
     size: 983954
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-00E-schloss-schoenbrun:
     assetId: simtropolis/maxis-plugin-00E-schloss-schoenbrun
@@ -776,6 +809,7 @@ assets:
         id: 04b50000
         maintenance: 180
         model: 5ad0e817-badb57f1-04b50000
+        name: Lm61x48_SchlossSchoenbrun_04B5
         pollution: 1
         pollutionRadius: 2
         power: 25
@@ -786,7 +820,6 @@ assets:
         waterPollutionRadius: 3
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00E_SchlossSchoenbrun.dat
-    features: []
     filename: Plugin_00E_SchlossSchoenbrun.dat
     files:
       - Plugin_00E_SchlossSchoenbrun.dat
@@ -824,7 +857,7 @@ assets:
           - '26060000'
           - 257a0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2b9b0000
@@ -835,7 +868,6 @@ assets:
       - 6534284a-c977c536-2b9c0000
     sha256: eb60d181007bd4873912c13321a0aa9dc868f5893f0c4dd4d045c25481f5ed37
     size: 2161191
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-00F-temple-expiatiori:
     assetId: simtropolis/maxis-plugin-00F-temple-expiatiori
@@ -850,6 +882,7 @@ assets:
         id: 04b40000
         maintenance: 180
         model: 5ad0e817-badb57f1-04b40000
+        name: LM80x80_sagradafamilia_04B4
         pollution: 1
         pollutionRadius: 2
         rating: 5
@@ -858,14 +891,12 @@ assets:
         waterPollutionRadius: 3
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00F_TempleExpiatiori.dat
-    features: []
     filename: Plugin_00F_TempleExpiatiori.dat
     files:
       - Plugin_00F_TempleExpiatiori.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b40000
-        category: landmarks
         filename: Plugin_00F_TempleExpiatiori.dat
         id: 6bce41a2
         name: LM12x12_sagradafamilia
@@ -873,14 +904,12 @@ assets:
         textures:
           - '258e0000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04b40000
-    props: []
     sha256: 1665a66c5b8964dafeb940a994bd0b4e8a1f48b10322dff175ad1436cf159da3
     size: 1829272
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-010-grand-central-station:
     assetId: simtropolis/maxis-plugin-010-grand-central-station
@@ -888,13 +917,16 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 4500
+        category: landmarks
         cost: 110000
         filename: Plugin_010_GrandCentralStation.dat
         flamability: 30
         garbage: 11
         id: 04b30000
         maintenance: 220
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b30000
+        name: Lm100x125_grandcentral_04B3
         pollution: 3
         pollutionRadius: 4
         power: 200
@@ -903,9 +935,10 @@ assets:
         water: 200
         waterPollution: 4
         waterPollutionRadius: 5
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_010_GrandCentralStation.dat
-    features: []
     filename: Plugin_010_GrandCentralStation.dat
     files:
       - Plugin_010_GrandCentralStation.dat
@@ -919,14 +952,12 @@ assets:
         textures:
           - 25fb0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04b30000
-    props: []
     sha256: d325bbbb9b40e06e6abdda6e10ab017f1b2a3be30b41c35eb7dadb237e051cbf
     size: 3762157
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-012-capitol-records:
     assetId: simtropolis/maxis-plugin-012-capitol-records
@@ -941,6 +972,7 @@ assets:
         id: 04b10000
         maintenance: 100
         model: 5ad0e817-badb57f1-04b10000
+        name: Lm80x48_CapitolRecordsBuilding_04B1
         pollution: 3
         pollutionRadius: 4
         power: 215
@@ -951,14 +983,12 @@ assets:
         waterPollutionRadius: 5
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_012_CapitolRecords.dat
-    features: []
     filename: Plugin_012_CapitolRecords.dat
     files:
       - Plugin_012_CapitolRecords.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b10000
-        category: landmarks,co$$$
         filename: Plugin_012_CapitolRecords.dat
         id: cb549981
         name: Lm5x5_CapitolRecordsBuilding
@@ -975,14 +1005,12 @@ assets:
           - '25950000'
           - '25960000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04b10000
-    props: []
     sha256: e10de451f9e003bc96ab0546f75ca8fb19511931deb720c0230dc60020081f02
     size: 1278139
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-016-stonehenge:
     assetId: simtropolis/maxis-plugin-016-stonehenge
@@ -990,21 +1018,25 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 5850
+        category: landmarks
         cost: 60000
         filename: Plugin_016_Stonehenge.dat
         garbage: 5
         id: 04ad0000
         maintenance: 10
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04ad0000
+        name: Lm48x48_Stonehenge_04AD
         pollution: 1
         pollutionRadius: 1
         rating: 5
         ratingRadius: 256
         waterPollution: 1
         waterPollutionRadius: 1
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_016_Stonehenge.dat
-    features: []
     filename: Plugin_016_Stonehenge.dat
     files:
       - Plugin_016_Stonehenge.dat
@@ -1026,7 +1058,7 @@ assets:
           - 25f40000
           - '25e90000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2bad0000
@@ -1047,7 +1079,6 @@ assets:
       - 6534284a-c977c536-2bab0000
     sha256: ba08e290ea9e0e0f89e9f863a7fb0b1e30aca963cc8ead9397960455d8319da6
     size: 291703
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-017-san-francisco-city-hall:
     assetId: simtropolis/maxis-plugin-017-san-francisco-city-hall
@@ -1062,6 +1093,7 @@ assets:
         id: 04ac0000
         maintenance: 130
         model: 5ad0e817-badb57f1-04ac0000
+        name: LM166x112_SanFranCityHall_04AC
         pollution: 4
         pollutionRadius: 2
         power: 200
@@ -1072,7 +1104,6 @@ assets:
         waterPollutionRadius: 3
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_017_SanFranCityHall.dat
-    features: []
     filename: Plugin_017_SanFranCityHall.dat
     files:
       - Plugin_017_SanFranCityHall.dat
@@ -1086,14 +1117,12 @@ assets:
         textures:
           - 25d60000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04ac0000
-    props: []
     sha256: 507f9b4ec81d36ec66a6568e6a81a94ad6e4bb2dcdebffdd39f8c592882a2dcc
     size: 5485429
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-030-taipei-art-museum:
     assetId: simtropolis/maxis-plugin-030-taipei-art-museum
@@ -1108,6 +1137,7 @@ assets:
         id: '04900000'
         maintenance: 180
         model: 5ad0e817-badb57f1-04900000
+        name: Lm80x110_TaipeiArtMuseum_0490
         pollution: 5
         pollutionRadius: 1
         power: 90
@@ -1118,14 +1148,12 @@ assets:
         waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_030_TaipeiArtMuseum.dat
-    features: []
     filename: Plugin_030_TaipeiArtMuseum.dat
     files:
       - Plugin_030_TaipeiArtMuseum.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04900000'
-        category: landmarks
         filename: Plugin_030_TaipeiArtMuseum.dat
         id: 4c9fcb9f
         name: LM5x7_TaipeiArtMuseum
@@ -1133,14 +1161,12 @@ assets:
         textures:
           - 252b0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04900000
-    props: []
     sha256: 076a5f80de0a06d89fcc0d53ceabb3adf18e2e303c16859e170f5595f9e39afc
     size: 2215915
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-031-adler-planetarium:
     assetId: simtropolis/maxis-plugin-031-adler-planetarium
@@ -1148,13 +1174,16 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 8100
+        category: landmarks
         cost: 90000
         filename: Plugin_031_AdlerPlanetarium.dat
         flamability: 18
         garbage: 6
         id: '04890000'
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04890000
+        name: LM96x96_AdlerPlanetarium_0489
         pollution: 1
         pollutionRadius: 1
         power: 25
@@ -1163,9 +1192,10 @@ assets:
         water: 45
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_031_AdlerPlanetarium.dat
-    features: []
     filename: Plugin_031_AdlerPlanetarium.dat
     files:
       - Plugin_031_AdlerPlanetarium.dat
@@ -1179,14 +1209,12 @@ assets:
         textures:
           - '26060000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04890000
-    props: []
     sha256: f69926ee3a2e10d60b2755976db65cef532f766668bcdde6f17cff8bea926806
     size: 1960912
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-032-mayflower-port:
     assetId: simtropolis/maxis-plugin-032-mayflower-port
@@ -1194,13 +1222,16 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 5850
+        category: landmarks
         cost: 65000
         filename: Plugin_032_MayflowerPort.dat
         flamability: 21
         garbage: 9
         id: '04880000'
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04880000
+        name: Lm50x46_Mayflower_0488
         pollution: 2
         pollutionRadius: 2
         power: 50
@@ -1209,9 +1240,10 @@ assets:
         water: 250
         waterPollution: 2
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_032_MayflowerPort.dat
-    features: []
     filename: Plugin_032_MayflowerPort.dat
     files:
       - Plugin_032_MayflowerPort.dat
@@ -1226,17 +1258,17 @@ assets:
           - 2d370000
         size: 4x3
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04880000
       - 5ad0e817-badb57f1-2d380000
       - 5ad0e817-badb57f1-2d370000
     props:
+      - 6534284a-c977c536-2d390000
       - 6534284a-c977c536-2d370000
     sha256: 943f645e18c6087559d50b6d9ac0417aabf55cb74e1614fc59edff4e7292473e
     size: 1610057
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-033-rockefeller-center:
     assetId: simtropolis/maxis-plugin-033-rockefeller-center
@@ -1244,31 +1276,36 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 8100
+        category: landmarks,religion
         cost: 90000
         filename: Plugin_033_RockefellerCenter.dat
         flamability: 39
         garbage: 3
         id: '04870000'
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04870000
+        name: Lm58x75_RockefellerCtr_0487
         pollution: 1
         pollutionRadius: 1
         power: 10
         rating: 7
         ratingRadius: 256
+        submenu: Landmarks_Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
+      - religion
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_033_RockefellerCenter.dat
-    features: []
     filename: Plugin_033_RockefellerCenter.dat
     files:
       - Plugin_033_RockefellerCenter.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04870000'
-        category: landmarks
         filename: Plugin_033_RockefellerCenter.dat
         id: 8ccf053d
         name: LM4x4_RockefellerCtr
@@ -1286,7 +1323,7 @@ assets:
           - '26370000'
           - '26350000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2d3c0000
@@ -1297,10 +1334,10 @@ assets:
     props:
       - 6534284a-c977c536-2d3c0000
       - 6534284a-c977c536-2d3d0000
+      - 6534284a-c977c536-2d3e0000
       - 6534284a-c977c536-2d3a0000
     sha256: ac9bedb0a8117a2db65772790822a5e9136ac59278f0e1ad10f5d30de8e2a76c
     size: 6359228
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-034-sobchak-lanes:
     assetId: simtropolis/maxis-plugin-034-sobchak-lanes
@@ -1308,31 +1345,36 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 8100
+        category: landmarks,religion
         cost: 90000
         filename: Plugin_034_SobchakLanes.dat
         flamability: 39
         garbage: 3
         id: '04860000'
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04860000
+        name: Lm32x24_SobchakLanes_0486
         pollution: 1
         pollutionRadius: 1
         power: 10
         rating: 7
         ratingRadius: 256
+        submenu: Landmarks_Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
+      - religion
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_034_SobchakLanes.dat
-    features: []
     filename: Plugin_034_SobchakLanes.dat
     files:
       - Plugin_034_SobchakLanes.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04860000'
-        category: landmarks
         filename: Plugin_034_SobchakLanes.dat
         id: ae52bebe
         name: Lm3x3_SobchakLanes
@@ -1345,14 +1387,12 @@ assets:
           - '25960000'
           - '26350000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04860000
-    props: []
     sha256: 7165c125c7a5a1b6b6adad57e5353d21250f48d68413bb3cfedad04fc4152546
     size: 2550910
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-035-shorty-burger:
     assetId: simtropolis/maxis-plugin-035-shorty-burger
@@ -1360,24 +1400,30 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 8100
+        category: landmarks,religion
         cost: 90000
         filename: Plugin_035_ShortyBurger.dat
         flamability: 39
         garbage: 3
         id: '04850000'
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04850000
+        name: LM30x20_ShortyBurger_0485
         pollution: 1
         pollutionRadius: 1
         power: 10
         rating: 7
         ratingRadius: 256
+        submenu: Landmarks_Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
+      - religion
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_035_ShortyBurger.dat
-    features: []
     filename: Plugin_035_ShortyBurger.dat
     files:
       - Plugin_035_ShortyBurger.dat
@@ -1397,14 +1443,12 @@ assets:
           - 25fb0000
           - 25b40000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04850000
-    props: []
     sha256: d5e38d0dbfefd9c96f0d29e32305201a4219a5889441d63f14d28e3141d3ba33
     size: 2275101
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-036-luckys-hang-ten:
     assetId: simtropolis/maxis-plugin-036-luckys-hang-ten
@@ -1412,24 +1456,30 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 8100
+        category: landmarks,religion
         cost: 90000
         filename: Plugin_036_LuckysHangTen.dat
         flamability: 39
         garbage: 3
         id: '04840000'
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04840000
+        name: Lm26x22_LuckysHangTen_0484
         pollution: 1
         pollutionRadius: 1
         power: 10
         rating: 7
         ratingRadius: 256
+        submenu: Landmarks_Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
+      - religion
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_036_LuckysHangTen.dat
-    features: []
     filename: Plugin_036_LuckysHangTen.dat
     files:
       - Plugin_036_LuckysHangTen.dat
@@ -1449,14 +1499,12 @@ assets:
           - '26110000'
           - '26140000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04840000
-    props: []
     sha256: 68be522cda645047ea275e0577d19d29203277319f923885a5a534f86fd2ebd8
     size: 1819329
-    textures: []
     version: '1'
   simtropolis/maxis-plugin-grutze-industries:
     assetId: simtropolis/maxis-plugin-grutze-industries
@@ -1464,6 +1512,7 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 500
+        category: landmarks
         cost: 60000
         description: A plant the manufactures many Grutze products
         filename: Grutze Industries/IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc
@@ -1474,7 +1523,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 200
+        menu: Landmarks
         model: 5ad0e817-6cd8b254-002f0000
+        name: IndstryPipes
         pollution: 12
         pollutionRadius: 3
         power: 75
@@ -1484,6 +1535,7 @@ assets:
         waterPollution: 3
         waterPollutionRadius: 2
       - bulldoze: 500
+        category: landmarks
         cost: 60000
         description: A plant the manufactures many Grutze products
         filename: Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot
@@ -1494,7 +1546,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 200
+        menu: Landmarks
         model: 5ad0e817-6cd8b254-002f0000
+        name: IndstryPipes
         pollution: 12
         pollutionRadius: 3
         power: 75
@@ -1503,9 +1557,10 @@ assets:
         water: 10
         waterPollution: 3
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Grutze_Industries.zip
-    features: []
     filename: maxis-plugin-grutze-industries@1.zip
     files:
       - Grutze Industries/IndstryPipes-0x5ad0e817_0x6cd8b254_0x2f0000.SC4Model
@@ -1514,7 +1569,6 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 2d217719
-        category: landmarks
         filename: Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot
         id: 2d217719
         name: LM4x5_GrutzeInd
@@ -1533,14 +1587,12 @@ assets:
           - '25950000'
           - 256c0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-6cd8b254-002f0000
-    props: []
     sha256: ebbf4997c5d750636581cd57ba36f37a545c4f762b50aa047bc36cea325c019d
     size: 768274
-    textures: []
     uncompressed: 1003759
     version: '1'
   simtropolis/maxis-plugin-grutzehaus:
@@ -1549,6 +1601,7 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 125
+        category: landmarks
         cost: 22000
         description: The house of the Grutze family
         filename: Grutzehaus/DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc
@@ -1559,7 +1612,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-6cd8b254-002d0000
+        name: DstTxtr
         pollution: 1
         pollutionRadius: 1
         power: 20
@@ -1569,6 +1624,7 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 2
       - bulldoze: 125
+        category: landmarks
         cost: 22000
         description: The house of the Grutze family
         filename: Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot
@@ -1579,7 +1635,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-6cd8b254-002d0000
+        name: DstTxtr
         pollution: 1
         pollutionRadius: 1
         power: 20
@@ -1588,9 +1646,10 @@ assets:
         water: 5
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Grutzehaus.zip
-    features: []
     filename: maxis-plugin-grutzehaus@1.zip
     files:
       - Grutzehaus/DstTxtr-0x5ad0e817_0x6cd8b254_0x2d0000.SC4Model
@@ -1599,7 +1658,6 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: ed2174a0
-        category: landmarks
         filename: Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot
         id: ed2174a0
         name: LM2x3_Grutzehaus
@@ -1620,14 +1678,12 @@ assets:
           - 25f80000
           - 25b00000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-6cd8b254-002d0000
-    props: []
     sha256: ae723f0425a7dda14c4fd00204ffe8741eff3eb73f4a7c7621ec4e8bb73b6c30
     size: 173755
-    textures: []
     uncompressed: 244025
     version: '1'
   simtropolis/maxis-plugin-longfellow-castle:
@@ -1636,6 +1692,7 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 100
+        category: landmarks
         cost: 110000
         description: 'Location: Long ago and far away'
         filename: Longfellow Castle/CastleSet.dat
@@ -1646,7 +1703,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-badb57f1-2d3f0000
+        name: Longfellow Castle
         pollution: 1
         pollutionRadius: 1
         rating: 10
@@ -1654,6 +1713,7 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 2
       - bulldoze: 100
+        category: landmarks
         cost: 110000
         description: 'Location: Long ago and far away'
         filename: Longfellow Castle/CastleSet.dat
@@ -1664,7 +1724,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-badb57f1-2d4b0000
+        name: Longfellow Castle
         pollution: 1
         pollutionRadius: 1
         rating: 10
@@ -1672,6 +1734,7 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 2
       - bulldoze: 100
+        category: landmarks
         cost: 110000
         description: 'Location: Long ago and far away'
         filename: Longfellow Castle/CastleSet.dat
@@ -1682,7 +1745,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-badb57f1-2d3f0000
+        name: Longfellow Castle
         pollution: 1
         pollutionRadius: 1
         rating: 10
@@ -1690,6 +1755,7 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 2
       - bulldoze: 100
+        category: landmarks
         cost: 110000
         description: 'Location: Long ago and far away'
         filename: Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
@@ -1700,16 +1766,19 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-badb57f1-2d3f0000
+        name: Longfellow Castle
         pollution: 1
         pollutionRadius: 1
         rating: 10
         ratingRadius: 256
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Longfellow_Castle.zip
-    features: []
     filename: maxis-plugin-longfellow-castle@1.zip
     files:
       - Longfellow Castle/CastleSet.dat
@@ -1717,7 +1786,6 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 0d4fdea6
-        category: landmarks
         filename: Longfellow Castle/CastleSet.dat
         id: 0d4fdea6
         name: Longfellow Castle
@@ -1789,7 +1857,6 @@ assets:
           - 257c0000
           - '25800000'
       - building: 4d50ba18
-        category: landmarks
         filename: Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
         id: 4d50ba18
         name: Longfellow Castle
@@ -1861,7 +1928,7 @@ assets:
           - 257c0000
           - '25800000'
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2d100000
@@ -1967,6 +2034,7 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 500
+        category: landmarks
         cost: 75000
         description: A house made of stone and wood
         filename: Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
@@ -1977,7 +2045,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-6cd8b254-002e0000
+        name: StoneHouse
         pollution: 1
         pollutionRadius: 1
         rating: 10
@@ -1986,6 +2056,7 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 2
       - bulldoze: 500
+        category: landmarks
         cost: 75000
         description: A house made of stone and wood
         filename: Stone House/StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc
@@ -1996,7 +2067,9 @@ assets:
         landmark: 40
         landmarkRadius: 20
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-6cd8b254-002e0000
+        name: StoneHouse
         pollution: 1
         pollutionRadius: 1
         rating: 10
@@ -2004,9 +2077,10 @@ assets:
         water: 8
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Stone_House.zip
-    features: []
     filename: maxis-plugin-stone-house@1.zip
     files:
       - Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
@@ -2015,7 +2089,6 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 0d1d6acb
-        category: landmarks
         filename: Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
         id: 0d1d6acb
         name: LM3x3_StoneHouse
@@ -2031,14 +2104,12 @@ assets:
           - '1e810000'
           - 1e7e0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-6cd8b254-002e0000
-    props: []
     sha256: d4d51d83c8bd78574e1968627b7d0e0b631b02d3cf00c17eb97bb4c00cc0e493
     size: 672804
-    textures: []
     uncompressed: 775096
     version: '1'
   simtropolis/maxis-plugin-temple-of-grutz:
@@ -2047,6 +2118,7 @@ assets:
       - simtropolis
     buildings:
       - bulldoze: 500
+        category: landmarks
         cost: 100000
         description: An ancient structure made in the honor of the great Grutz
         filename: Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
@@ -2056,7 +2128,9 @@ assets:
         landmark: 75
         landmarkRadius: 33
         maintenance: 100
+        menu: Landmarks
         model: 5ad0e817-ad1d67dc-00030000
+        name: TempleOfGrutz
         pollution: 1
         pollutionRadius: 1
         rating: 50
@@ -2064,6 +2138,7 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 2
       - bulldoze: 500
+        category: landmarks
         cost: 100000
         description: An ancient structure made in the honor of the great Grutz
         filename: Temple of Grutz/TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc
@@ -2073,16 +2148,19 @@ assets:
         landmark: 75
         landmarkRadius: 33
         maintenance: 100
+        menu: Landmarks
         model: 5ad0e817-ad1d67dc-00030000
+        name: TempleOfGrutz
         pollution: 1
         pollutionRadius: 1
         rating: 50
         ratingRadius: 256
         waterPollution: 1
         waterPollutionRadius: 2
+    categories:
+      - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Temple_of_Grutz.zip
-    features: []
     filename: maxis-plugin-temple-of-grutz@1.zip
     files:
       - Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
@@ -2091,7 +2169,6 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 2d1e7a9e
-        category: landmarks
         filename: Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
         id: 2d1e7a9e
         name: LM6x6_TempleOfGrutz
@@ -2103,14 +2180,12 @@ assets:
           - 25ba0000
           - 251c0000
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-ad1d67dc-00030000
-    props: []
     sha256: 1db47c2d719e6a35b003ee976ea4bba08f9a069a4840d9838d8df419c85b6ba8
     size: 399011
-    textures: []
     uncompressed: 559621
     version: '1'
 

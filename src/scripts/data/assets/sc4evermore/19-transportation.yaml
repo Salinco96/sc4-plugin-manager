@@ -14,89 +14,47 @@ assets:
       - Mikeseith
     buildings:
       - bulldoze: 100
+        category: bus
         cost: 100
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat
         flamability: 50
         garbage: 4
         id: dd0ef80b
+        jobs:
+          $: 5
+          $$: 2
         maintenance: 20
-        model: 5ad0e817-badb57f1-0e110000
+        menu: MiscTransit
+        name: MS_8Lvl_AirportShuttleSpawn_RTMT
         pollution: 1
         pollutionRadius: 1
         power: 3
+        submenu: MiscTransit_Bus
         water: 2
         waterPollution: 3
         waterPollutionRadius: 1
       - bulldoze: 100
+        category: bus
         cost: 100
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat
         flamability: 38
         garbage: 4
         id: 3d184784
+        jobs:
+          $: 5
+          $$: 2
         maintenance: 5
-        model: 5ad0e817-3d15a045-00030000
+        menu: MiscTransit
+        name: MS_8Lvl_BusStop_RTMT
         pollution: 1
         pollutionRadius: 1
         power: 3
+        submenu: MiscTransit_Bus
         water: 2
         waterPollution: 3
         waterPollutionRadius: 1
-      - bulldoze: 10
-        cost: 50
-        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-        flamability: 38
-        garbage: 1
-        id: 3962e3b9
-        maintenance: 5
-        model: 5ad0e817-badb57f1-0e110000
-        pollution: 1
-        pollutionRadius: 1
-        power: 1
-        water: 1
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 10
-        cost: 51
-        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-        id: 9960bf4b
-        model: 5ad0e817-badb57f1-0e110000
-      - bulldoze: 10
-        cost: 52
-        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-        id: b960bedd
-        model: 5ad0e817-badb57f1-0e110000
-      - bulldoze: 10
-        cost: 53
-        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-        id: 7960c078
-        model: 5ad0e817-badb57f1-0e110000
-        pollution: 1
-        power: 1
-        water: 1
-      - bulldoze: 10
-        cost: 54
-        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-        id: 5960c034
-        model: 5ad0e817-badb57f1-0e110000
-        pollution: 1
-        power: 1
-        water: 1
-      - bulldoze: 10
-        cost: 55
-        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-        id: 5960c0eb
-        model: 5ad0e817-badb57f1-0e110000
-      - bulldoze: 10
-        cost: 56
-        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-        id: 1960bfda
-        model: 5ad0e817-badb57f1-0e110000
-      - bulldoze: 10
-        cost: 57
-        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
-        id: 7960bf97
-        model: 5ad0e817-badb57f1-0e110000
       - bulldoze: 100
+        category: transport
         cost: 50
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         flamability: 50
@@ -105,7 +63,9 @@ assets:
         landmark: 36
         landmarkRadius: 14
         maintenance: 20
+        menu: MiscTransit
         model: 5ad0e817-3d15a045-00030000
+        name: MS_8Lvl_Entrance
         pollution: 1
         pollutionRadius: 1
         power: 3
@@ -113,107 +73,137 @@ assets:
         waterPollution: 3
         waterPollutionRadius: 1
       - bulldoze: 100
+        category: transport
         cost: 51
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         garbage: 1
         id: dcf36951
         maintenance: 20
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Wall
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 52
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         garbage: 1
         id: fcf36d53
         maintenance: 20
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_InnerCorner
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 53
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         id: 5cf37444
         maintenance: 10
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_OuterCorner
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 54
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         garbage: 1
         id: 5cf36e24
         maintenance: 20
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Ramp
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 55
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         id: bcf36894
         maintenance: 10
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_RampUp
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 56
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         id: bcf36100
         maintenance: 10
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_RampDown
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 57
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         flamability: 50
         garbage: 1
         id: 5cf36ce3
         maintenance: 20
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Elevator
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 64
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         id: dcf36a78
         maintenance: 20
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Centre (4 Car Row)
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 65
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         id: 3cf369e5
         maintenance: 20
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Centre (5 Car Row)
         pollution: 1
         pollutionRadius: 1
         power: 1
         water: 1
       - bulldoze: 100
+        category: transport
         cost: 66
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         garbage: 2
         id: bcf36f3c
         maintenance: 25
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Bridge Edge A
         pollution: 2
         pollutionRadius: 1
         power: 2
@@ -221,12 +211,15 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 1
       - bulldoze: 100
+        category: transport
         cost: 67
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         garbage: 2
         id: dcf36fc8
         maintenance: 25
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Bridge Edge B
         pollution: 2
         pollutionRadius: 1
         power: 2
@@ -234,12 +227,15 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 1
       - bulldoze: 100
+        category: transport
         cost: 68
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         garbage: 2
         id: 5cf37074
         maintenance: 25
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Bridge Centre
         pollution: 2
         pollutionRadius: 1
         power: 2
@@ -247,12 +243,15 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 1
       - bulldoze: 100
+        category: transport
         cost: 69
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         garbage: 2
         id: 1cf37210
         maintenance: 25
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Bridge Corner A
         pollution: 2
         pollutionRadius: 1
         power: 2
@@ -260,28 +259,163 @@ assets:
         waterPollution: 1
         waterPollutionRadius: 1
       - bulldoze: 100
+        category: transport
         cost: 70
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         garbage: 2
         id: 3d205411
         maintenance: 25
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_Bridge Corner B
         pollution: 2
         pollutionRadius: 1
         power: 2
         water: 2
         waterPollution: 1
         waterPollutionRadius: 1
+      - bulldoze: 100
+        category: bus
+        cost: 100
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        flamability: 38
+        garbage: 4
+        id: 3d184784
+        jobs:
+          $: 5
+          $$: 2
+        maintenance: 5
+        menu: MiscTransit
+        model: 5ad0e817-3d15a045-00030000
+        name: MS_8Lvl_BusStop
+        pollution: 1
+        pollutionRadius: 1
+        power: 3
+        submenu: MiscTransit_Bus
+        water: 2
+        waterPollution: 3
+        waterPollutionRadius: 1
+      - bulldoze: 100
+        category: bus
+        cost: 100
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        flamability: 50
+        garbage: 4
+        id: dd0ef80b
+        jobs:
+          $: 5
+          $$: 2
+        maintenance: 20
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_8Lvl_AirportShuttleSpawn
+        pollution: 1
+        pollutionRadius: 1
+        power: 3
+        submenu: MiscTransit_Bus
+        water: 2
+        waterPollution: 3
+        waterPollutionRadius: 1
       - bulldoze: 10
+        category: police
         cost: 80
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         flamability: 36
         id: dd16f12b
+        jobs:
+          $: 6
+          $$: 2
         maintenance: 40
+        menu: Police
         model: 5ad0e817-5d144bc4-00030000
+        name: MS_8Lvl_ParkingSecurity(Police)
         power: 1
         powerProduction: 1
+        submenu: Police_Small
         water: 1
+      - bulldoze: 10
+        category: transport
+        cost: 50
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        flamability: 38
+        garbage: 1
+        id: 3962e3b9
+        maintenance: 5
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_2Lvl_Entrance
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        water: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        category: transport
+        cost: 51
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 9960bf4b
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_2Lvl_Wall (1 Row)
+      - bulldoze: 10
+        category: transport
+        cost: 52
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: b960bedd
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_2Lvl_Wall (2 Rows)
+      - bulldoze: 10
+        category: transport
+        cost: 53
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 7960c078
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_2Lvl_Corner
+        pollution: 1
+        power: 1
+        water: 1
+      - bulldoze: 10
+        category: transport
+        cost: 54
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 5960c034
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_2Lvl_Corner w/Stairs
+        pollution: 1
+        power: 1
+        water: 1
+      - bulldoze: 10
+        category: transport
+        cost: 55
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 5960c0eb
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_2Lvl_Ramp
+      - bulldoze: 10
+        category: transport
+        cost: 56
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 1960bfda
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_2Lvl_Inside (1 Row)
+      - bulldoze: 10
+        category: transport
+        cost: 57
+        filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+        id: 7960bf97
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-0e110000
+        name: MS_2Lvl_Inside (2 Rows)
+    categories:
+      - bus
+      - transport
+      - police
     category: 19-transportation
     dependencies:
       - simtropolis/35790-sc4-cleanitol
@@ -293,32 +427,32 @@ assets:
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Dollar/Airport shuttle Dollar.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Enterprise/Airport shuttle Enterprise.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle laquinta/Airport shuttle laquinta.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Master park/Airport shuttle Master park.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Park N Go/Airport shuttle Park N Go.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Master park/Airport shuttle Master park.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Sheraton/Airport shuttle Sheraton.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Thrifty/Airport shuttle Thrifty.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter black/Airport sprinter black.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Thrifty/Airport shuttle Thrifty.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter budget/Airport sprinter budget.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter dollar/Airport sprinter dollar.dat
-      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter thrifty/Airport sprinter thrifty.dat
       - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter white/Airport sprinter white.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter thrifty/Airport sprinter thrifty.dat
       - mikeseith/Automatas/Airport Shuttles#/Airport Shuttles All-in-One/airport shuttles.dat
       - mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat
       - mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat
       - mikeseith/Automatas/Airport Shuttles#/Automatas_desclaimer.txt
-      - mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+      - ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat
       - mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
       - mikeseith/Garages/Modular Parking Garage 8 Lvl#/RTMT Replacement_disclaimer.txt
-      - ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat
+      - mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
       - ~Documents/MikeSeith_Readmes/images/MikeSeith - airport shuttle.jpg
       - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages1.JPG
       - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages2.JPG
       - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages3.jpg
       - ~Documents/MikeSeith_Readmes/images/MikeSeiths 2 garages back.jpg
       - ~Documents/MikeSeith_Readmes/images/MikeSeiths 2 garages front.jpg
-      - ~Documents/MikeSeith_Readmes/readme_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.html
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - Mikeseith vol02_index.jpg
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt
+      - ~Documents/MikeSeith_Readmes/readme_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.html
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mikeseith 8 level garages1.JPG
@@ -326,24 +460,203 @@ assets:
     lastModified: 2023-12-06T10:26:15.000Z
     lots:
       - building: dd0ef80b
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat
         id: dd0ef80b
-        name: 8 lvl airport shuttle spawner
+        name: 8 lvl airport shuttle spawner_RTMT
         props:
-          - bd0ef682
-          - 1961ee50
-          - 1eda0000
-          - 2a170000
+          - a000004a
+          - a000004b
+          - a0000078
           - 29dd0000
-          - 7df5cdae
-          - a000005c
+          - 29dc0000
+          - 1d2c0000
+          - 1961ee50
+          - cb650011
+          - 0c9db009
+          - 0c9db00a
         size: 1x1
         textures:
           - 251c0000
           - 25ae0000
       - building: 3d184784
-        category: landmarks
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat
+        id: 3d184784
+        name: 8 lvl garage bus stop_RTMT
+        props:
+          - a000004a
+          - a000004b
+          - a0000078
+          - 29dd0000
+          - 29dc0000
+          - 1d2c0000
+          - 1961ee50
+          - cb650011
+          - 0c9db009
+          - 0c9db00a
+        size: 1x1
+        textures:
+          - 251c0000
+          - 25ae0000
+      - building: 1cf8e57f
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 1cf8e57f
+        name: 8 lvl new entrance
+        props:
+          - 5d19d1de
+        size: 1x1
+        textures:
+          - 258c0000
+      - building: dcf36951
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dcf36951
+        name: 8 lvl new wall
+        props:
+          - a000004a
+          - a000004d
+          - a0000050
+          - 1961ee50
+          - b988598d
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: fcf36d53
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: fcf36d53
+        name: 8 lvl new inside coner
+        props:
+          - '28330000'
+          - 1961ee57
+          - f99a5099
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 5cf37444
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf37444
+        name: 8 lvl new outside corner stairs
+        props:
+          - '28330000'
+          - a0000051
+          - 9998e34b
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: 5cf36e24
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf36e24
+        name: 8 lvl new straight ramp
+        props:
+          - 1961ee56
+          - 1961ee50
+        size: 2x2
+        textures:
+          - 251c0000
+      - building: bcf36894
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: bcf36894
+        name: 8 lvl new round ramp up
+        props:
+          - a000004a
+          - a000004d
+          - a0000050
+          - d97843a1
+        size: 1x2
+        textures:
+          - '258e0000'
+          - 251c0000
+      - building: bcf36100
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: bcf36100
+        name: 8 lvl new round ramp down
+        props:
+          - f97843b0
+        size: 1x2
+        textures:
+          - 251c0000
+      - building: 5cf36ce3
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf36ce3
+        name: 8 lvl new elevator
+        props:
+          - 1961ee53
+          - 1ed60000
+          - '28330000'
+          - '79885953'
+        size: 1x1
+        textures:
+          - 251c0000
+          - 25ae0000
+      - building: dcf36a78
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dcf36a78
+        name: 8 lvl new center edge
+        props:
+          - 1961ee52
+          - 9988597f
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 3cf369e5
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 3cf369e5
+        name: 8 lvl new center rows
+        props:
+          - 1961ee51
+          - d9885967
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: bcf36f3c
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: bcf36f3c
+        name: 8 lvl new bridge edge A
+        props:
+          - '28330000'
+          - 1961ee58
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: dcf36fc8
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dcf36fc8
+        name: 8 lvl new bridge edge B
+        props:
+          - '28330000'
+          - a0000050
+          - 1961ee59
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: 5cf37074
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 5cf37074
+        name: 8 lvl new bridge center
+        props:
+          - 1961ee5c
+        size: 1x1
+        textures:
+          - 251c0000
+      - building: 1cf37210
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 1cf37210
+        name: 8 lvl new bridge corner A
+        props:
+          - '28330000'
+          - f9a1407f
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: 3d205411
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: 3d205411
+        name: 8 lvl new bridge corner BB
+        props:
+          - '28330000'
+          - bd1defae
+        size: 2x1
+        textures:
+          - 251c0000
+      - building: 3d184784
         filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
         id: 3d184784
         name: 8 lvl garage bus stop
@@ -359,8 +672,34 @@ assets:
         textures:
           - 251c0000
           - 25ae0000
+      - building: dd0ef80b
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dd0ef80b
+        name: 8 lvl airport shuttle spawner
+        props:
+          - bd0ef682
+          - 1961ee50
+          - 1eda0000
+          - 2a170000
+          - 29dd0000
+          - 7df5cdae
+          - a000005c
+        size: 1x1
+        textures:
+          - 251c0000
+          - 25ae0000
+      - building: dd16f12b
+        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+        id: dd16f12b
+        name: 8 lvl garage police
+        props:
+          - dd16efe2
+          - a000004a
+          - a0000050
+        size: 1x1
+        textures:
+          - 251c0000
       - building: 3962e3b9
-        category: landmarks
         filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
         id: 3962e3b9
         name: 2 lvl garage - entrance
@@ -371,7 +710,6 @@ assets:
         textures:
           - 258d0000
       - building: 9960bf4b
-        category: landmarks
         filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
         id: 9960bf4b
         name: 2 lvl garage - wall 1 row
@@ -382,7 +720,6 @@ assets:
         textures:
           - 251c0000
       - building: b960bedd
-        category: landmarks
         filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
         id: b960bedd
         name: 2 lvl garage - wall 2 rows
@@ -393,7 +730,6 @@ assets:
         textures:
           - 251c0000
       - building: 7960c078
-        category: landmarks
         filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
         id: 7960c078
         name: 2 lvl garage - corner
@@ -404,7 +740,6 @@ assets:
         textures:
           - 251c0000
       - building: 5960c034
-        category: landmarks
         filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
         id: 5960c034
         name: 2 lvl garage - corner with stairs
@@ -415,7 +750,6 @@ assets:
         textures:
           - 251c0000
       - building: 5960c0eb
-        category: landmarks
         filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
         id: 5960c0eb
         name: 2 lvl garage - ramp
@@ -427,7 +761,6 @@ assets:
           - 251c0000
           - 258d0000
       - building: 1960bfda
-        category: landmarks
         filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
         id: 1960bfda
         name: 2 lvl garage - inside 1 row
@@ -438,7 +771,6 @@ assets:
         textures:
           - 251c0000
       - building: 7960bf97
-        category: landmarks
         filename: mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
         id: 7960bf97
         name: 2 lvl garage - inside 2 rows
@@ -448,194 +780,8 @@ assets:
         size: 1x1
         textures:
           - 251c0000
-      - building: 1cf8e57f
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: 1cf8e57f
-        name: 8 lvl new entrance
-        props:
-          - 5d19d1de
-        size: 1x1
-        textures:
-          - 258c0000
-      - building: dcf36951
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: dcf36951
-        name: 8 lvl new wall
-        props:
-          - a000004a
-          - a000004d
-          - a0000050
-          - 1961ee50
-          - b988598d
-        size: 1x1
-        textures:
-          - 251c0000
-      - building: fcf36d53
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: fcf36d53
-        name: 8 lvl new inside coner
-        props:
-          - '28330000'
-          - 1961ee57
-          - f99a5099
-        size: 1x1
-        textures:
-          - 251c0000
-      - building: 5cf37444
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: 5cf37444
-        name: 8 lvl new outside corner stairs
-        props:
-          - '28330000'
-          - a0000051
-          - 9998e34b
-        size: 2x1
-        textures:
-          - 251c0000
-      - building: 5cf36e24
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: 5cf36e24
-        name: 8 lvl new straight ramp
-        props:
-          - 1961ee56
-          - 1961ee50
-        size: 2x2
-        textures:
-          - 251c0000
-      - building: bcf36894
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: bcf36894
-        name: 8 lvl new round ramp up
-        props:
-          - a000004a
-          - a000004d
-          - a0000050
-          - d97843a1
-        size: 1x2
-        textures:
-          - '258e0000'
-          - 251c0000
-      - building: bcf36100
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: bcf36100
-        name: 8 lvl new round ramp down
-        props:
-          - f97843b0
-        size: 1x2
-        textures:
-          - 251c0000
-      - building: 5cf36ce3
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: 5cf36ce3
-        name: 8 lvl new elevator
-        props:
-          - 1961ee53
-          - 1ed60000
-          - '28330000'
-          - '79885953'
-        size: 1x1
-        textures:
-          - 251c0000
-          - 25ae0000
-      - building: dcf36a78
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: dcf36a78
-        name: 8 lvl new center edge
-        props:
-          - 1961ee52
-          - 9988597f
-        size: 1x1
-        textures:
-          - 251c0000
-      - building: 3cf369e5
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: 3cf369e5
-        name: 8 lvl new center rows
-        props:
-          - 1961ee51
-          - d9885967
-        size: 1x1
-        textures:
-          - 251c0000
-      - building: bcf36f3c
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: bcf36f3c
-        name: 8 lvl new bridge edge A
-        props:
-          - '28330000'
-          - 1961ee58
-        size: 2x1
-        textures:
-          - 251c0000
-      - building: dcf36fc8
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: dcf36fc8
-        name: 8 lvl new bridge edge B
-        props:
-          - '28330000'
-          - a0000050
-          - 1961ee59
-        size: 2x1
-        textures:
-          - 251c0000
-      - building: 5cf37074
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: 5cf37074
-        name: 8 lvl new bridge center
-        props:
-          - 1961ee5c
-        size: 1x1
-        textures:
-          - 251c0000
-      - building: 1cf37210
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: 1cf37210
-        name: 8 lvl new bridge corner A
-        props:
-          - '28330000'
-          - f9a1407f
-        size: 2x1
-        textures:
-          - 251c0000
-      - building: 3d205411
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: 3d205411
-        name: 8 lvl new bridge corner BB
-        props:
-          - '28330000'
-          - bd1defae
-        size: 2x1
-        textures:
-          - 251c0000
-      - building: dd16f12b
-        category: landmarks
-        filename: mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
-        id: dd16f12b
-        name: 8 lvl garage police
-        props:
-          - dd16efe2
-          - a000004a
-          - a0000050
-        size: 1x1
-        textures:
-          - 251c0000
     meta:
-      timestamp: 2024-11-18T14:36:08.234Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-19610000

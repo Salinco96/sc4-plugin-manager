@@ -12,10 +12,11 @@ assets:
     assetId: github/0xC0000054/sc4-auto-save
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-auto-save/releases/download/v{version}/SC4AutoSave.zip
-    features: []
     filename: SC4AutoSave.zip
     files:
       - LICENSE.txt
@@ -24,16 +25,12 @@ assets:
       - SC4AutoSave.ini
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-auto-save
     sha256: 2873ca87bdd93b3f470b3f0e98ca52ec9180238550ffb791bf454dbd21bfeb55
     size: 56097
-    textures: []
     uncompressed: 127515
     version: 1.2.0
   github/0xC0000054/sc4-bulldoze-extensions:
@@ -54,7 +51,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-26T16:35:44.974Z
     meta:
-      timestamp: 2024-11-26T17:29:40.784Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     sha256: 24794bb8ceb6634e1b43e496b8aef03c4f6edfbe58a43d74b22c1884031697a0
     size: 131867
@@ -64,10 +61,11 @@ assets:
     assetId: github/0xC0000054/sc4-city-date-sync
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-city-date-sync/releases/download/v{version}/SC4CityDateSync.zip
-    features: []
     filename: SC4CityDateSync.zip
     files:
       - LICENSE.txt
@@ -76,26 +74,23 @@ assets:
       - SC4CityDateSync.ini
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-city-date-sync
     sha256: abfb3a0f44c0dd99f10d8e27c327c2b47757f11e03eca8ec6adabbe098834097
     size: 35341
-    textures: []
     uncompressed: 76113
     version: 1.0.3
   github/0xC0000054/sc4-city-lottery-ordinance:
     assetId: github/0xC0000054/sc4-city-lottery-ordinance
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-city-lottery-ordinance/releases/download/v{version}/SC4CityLotteryOrdinance.zip
-    features: []
     filename: SC4CityLotteryOrdinance.zip
     files:
       - CityLotteryOrdinanceText_English.dat
@@ -105,26 +100,23 @@ assets:
       - SC4CityLotteryOrdinance.ini
       - Third Party Notices.txt
     lastModified: 2023-12-21T04:43:57.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-city-lottery-ordinance
     sha256: 34875d97108cf4ce5d2c43c7966e51b3d5620feea6f3bbbbbd55577d201ab370
     size: 67406
-    textures: []
     uncompressed: 157514
     version: '1.0'
   github/0xC0000054/sc4-cpu-options:
     assetId: github/0xC0000054/sc4-cpu-options
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-cpu-options/releases/download/v{version}/SC4CPUOptions.zip
-    features: []
     filename: SC4CPUOptions.zip
     files:
       - LICENSE.txt
@@ -133,26 +125,23 @@ assets:
       - SC4CPUOptions.ini
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-cpu-options
     sha256: 1e649bfac44ba0d1d9c4b2105ee992614646180f966e5ec5094197e74b3db2a1
     size: 52259
-    textures: []
     uncompressed: 116019
     version: 1.0.1
   github/0xC0000054/sc4-custom-budget-departments:
     assetId: github/0xC0000054/sc4-custom-budget-departments
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-custom-budget-departments/releases/download/v{version}/SC4CustomBudgetDepartments.zip
-    features: []
     filename: SC4CustomBudgetDepartments.zip
     files:
       - CustomBudgetDepartments.dll
@@ -160,26 +149,23 @@ assets:
       - README.htm
       - Third Party Notices.txt
     lastModified: 2024-10-04T22:22:34.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-custom-budget-departments
     sha256: 6107dcb38b9def74dc293aa7fcdc86cf32f48873e84dec0931d9a03f98a93215
     size: 51876
-    textures: []
     uncompressed: 121222
     version: 1.0.1
   github/0xC0000054/sc4-dbpf-loading:
     assetId: github/0xC0000054/sc4-dbpf-loading
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-dbpf-loading/releases/download/v{version}/SC4DBPFLoading.zip
-    features: []
     filename: SC4DBPFLoading.zip
     files:
       - LICENSE.txt
@@ -187,16 +173,12 @@ assets:
       - SC4DBPFLoading.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-dbpf-loading
     sha256: 95d1ff963c3a56daff58f6ba90a6744436603c0f2ffdf21cb99b36534bc9b62b
     size: 59973
-    textures: []
     uncompressed: 137752
     version: 1.0.4
   github/0xC0000054/sc4-disable-cheats:
@@ -211,10 +193,11 @@ assets:
     assetId: github/0xC0000054/sc4-disable-demolition-animation
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-demolition-animation/releases/download/v{version}/SC4DisableDemolitionAnimation.zip
-    features: []
     filename: SC4DisableDemolitionAnimation.zip
     files:
       - LICENSE.txt
@@ -222,26 +205,23 @@ assets:
       - SC4DisableDemolitionAnimation.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-disable-demolition-animation
     sha256: a39f1b28ca37dd8c126755eab25c924cd64b2d7bae9e31d4e2a8a3927b80e7bc
     size: 36113
-    textures: []
     uncompressed: 81574
     version: '1.0'
   github/0xC0000054/sc4-disable-lot-plop-smoke:
     assetId: github/0xC0000054/sc4-disable-lot-plop-smoke
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke/releases/download/v{version}/SC4DisableLotPlopSmoke.zip
-    features: []
     filename: SC4DisableLotPlopSmoke.zip
     files:
       - LICENSE.txt
@@ -249,26 +229,23 @@ assets:
       - SC4DisableLotPlopSmoke.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke
     sha256: a4c4a3a447a15de6788024f38bac013ba0e8253df0f451fd66ade7cb68dc344e
     size: 36096
-    textures: []
     uncompressed: 81426
     version: '1.0'
   github/0xC0000054/sc4-disable-network-construction-sounds:
     assetId: github/0xC0000054/sc4-disable-network-construction-sounds
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-network-construction-sounds/releases/download/v{version}/SC4DisableNetworkConstructionSounds.zip
-    features: []
     filename: SC4DisableNetworkConstructionSounds.zip
     files:
       - LICENSE.txt
@@ -276,26 +253,23 @@ assets:
       - SC4DisableNetworkConstructionSounds.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-disable-network-construction-sounds
     sha256: 0ec5e559afbfc24effa8f1c76f2521034a284d7a776e3fa1e6fd1a29d3cbd19d
     size: 36595
-    textures: []
     uncompressed: 81614
     version: '1.0'
   github/0xC0000054/sc4-graphics-options:
     assetId: github/0xC0000054/sc4-graphics-options
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-graphics-options/releases/download/v{version}/SC4GraphicsOptions.zip
-    features: []
     filename: SC4GraphicsOptions.zip
     files:
       - LICENSE.txt
@@ -304,26 +278,23 @@ assets:
       - SC4GraphicsOptions.ini
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-graphics-options
     sha256: a75269f9975cc9674abf4c68cb52696eef40c1843b10bbe3a9ea3a48bc04cd8a
     size: 79694
-    textures: []
     uncompressed: 193007
     version: 1.2.0
   github/0xC0000054/sc4-growify:
     assetId: github/0xC0000054/sc4-growify
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-growify/releases/download/v{version}/SC4Growify.zip
-    features: []
     filename: SC4Growify.zip
     files:
       - LICENSE.txt
@@ -331,26 +302,23 @@ assets:
       - SC4Growify.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-growify
     sha256: 02dae5d6cacfb8091b9fe5db4eb4948519d01fde48a08d59f53a52c7ed062ad3
     size: 41414
-    textures: []
     uncompressed: 92824
     version: 1.0.1
   github/0xC0000054/sc4-humane-society-ordinance:
     assetId: github/0xC0000054/sc4-humane-society-ordinance
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-humane-society-ordinance/releases/download/v{version}/SC4HumaneSocietyOrdinance.zip
-    features: []
     filename: SC4HumaneSocietyOrdinance.zip
     files:
       - LICENSE.txt
@@ -358,26 +326,23 @@ assets:
       - SC4HumaneSocietyOrdinance.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-humane-society-ordinance
     sha256: d2931e1b8135183a9bb2a1f683fda3384e8484e91873b45a0b8bd18511499a95
     size: 62653
-    textures: []
     uncompressed: 143068
     version: '1.0'
   github/0xC0000054/sc4-legalize-gambling-ordinance-upgrade:
     assetId: github/0xC0000054/sc4-legalize-gambling-ordinance-upgrade
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade/releases/download/v{version}/SC4LegalizeGamblingUpgrade.zip
-    features: []
     filename: SC4LegalizeGamblingUpgrade.zip
     files:
       - LICENSE.txt
@@ -386,22 +351,21 @@ assets:
       - SC4LegalizeGamblingUpgrade.ini
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade
     sha256: 0d39a73488079de8c80626ba25aa580da9205ec9879df291112db65566effb2a
     size: 67503
-    textures: []
     uncompressed: 157311
     version: 1.0.0
   github/0xC0000054/sc4-more-building-styles:
     assetId: github/0xC0000054/sc4-more-building-styles
     authors:
       - '0xC0000054'
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-building-styles/releases/download/v{version}/SC4MoreBuildingStyles.zip
     filename: SC4MoreBuildingStyles.zip
@@ -414,7 +378,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-15T01:04:35.000Z
     meta:
-      timestamp: 2024-11-18T10:46:40.738Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-more-building-styles
     sha256: 88c8bfa6adf55a765b100b06ef557c070d6e6e498ededf496965873a28b98acd
@@ -427,39 +391,55 @@ assets:
       - '0xC0000054'
     buildings:
       - bulldoze: 100
+        category: rewards
         cost: 15000
         filename: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
         flamability: 45
         garbage: 23
         garbageRadius: 2
         id: 0dd41d65
+        jobs:
+          $: 170
+          $$: 105
+          $$$: 45
         landmark: 20
         landmarkRadius: 5
         maintenance: 250
+        menu: Rewards
         model: 5ad0e817-6dd414f2-00030000
+        name: CensusRepository
         pollution: 3
         pollutionRadius: 3
         power: 125
         rating: 8
         ratingRadius: 256
+        relief:
+          co$$: 100000
+          co$$$: 100000
+          r$: 2500
+          r$$: 2500
+          r$$$: 2500
+        submenu: Landmarks_Government
         water: 150
         waterPollution: 2
         waterPollutionRadius: 2
+    categories:
+      - mods
+      - dll
+      - rewards
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-demand-info/releases/download/v{version}/SC4MoreDemandInfo.zip
-    features: []
     filename: SC4MoreDemandInfo.zip
     files:
-      - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
       - Dll/LICENSE.txt
       - Dll/README.txt
       - Dll/SC4MoreDemandInfo.dll
       - Dll/Third Party Notices.txt
+      - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
       - Readme.txt
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 0dd41d65
-        category: landmarks
         filename: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
         id: 0dd41d65
         name: CensusRepository
@@ -480,7 +460,7 @@ assets:
           - '258e0000'
           - 258d0000
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-5465811a-00030000
@@ -494,17 +474,17 @@ assets:
     repository: https://github.com/0xC0000054/sc4-more-demand-info
     sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
     size: 1699084
-    textures: []
     uncompressed: 2040510
     version: 1.2.0
   github/0xC0000054/sc4-no-kick-out:
     assetId: github/0xC0000054/sc4-no-kick-out
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-no-kick-out/releases/download/v{version}/SC4NoKickOut.zip
-    features: []
     filename: SC4NoKickOut.zip
     files:
       - LICENSE.txt
@@ -512,26 +492,23 @@ assets:
       - SC4NoKickOut.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-no-kick-out
     sha256: cbe23b9c4d79e3b7496653558c580fe0e50fa622b90ab6ff5f417e4e10040034
     size: 37433
-    textures: []
     uncompressed: 82784
     version: '1.0'
   github/0xC0000054/sc4-query-ui-hooks:
     assetId: github/0xC0000054/sc4-query-ui-hooks
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-query-ui-hooks/releases/download/v{version}/SC4QueryUIHooks.zip
-    features: []
     filename: SC4QueryUIHooks.zip
     files:
       - LICENSE.txt
@@ -540,26 +517,23 @@ assets:
       - SC4QueryUIHooks.ini
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-query-ui-hooks
     sha256: 395294454ad4040cf3756051aa19b0369794c4baee2dca972466c946cad24b48
     size: 177435
-    textures: []
     uncompressed: 383631
     version: 1.9.0
   github/0xC0000054/sc4-region-census:
     assetId: github/0xC0000054/sc4-region-census
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-region-census/releases/download/v{version}/SC4RegionCensus.zip
-    features: []
     filename: SC4RegionCensus.zip
     files:
       - LICENSE.txt
@@ -568,26 +542,23 @@ assets:
       - SC4RegionCensus.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-region-census
     sha256: f3a6e06523241b9f6529c9dfb1c888cfdbbd13e582c5af67de76e8e436472e7a
     size: 58573
-    textures: []
     uncompressed: 130757
     version: 1.0.1
   github/0xC0000054/sc4-remove-phantom-budget-items:
     assetId: github/0xC0000054/sc4-remove-phantom-budget-items
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-remove-phantom-budget-items/releases/download/v{version}/SC4RemovePhantomBudgetItems.zip
-    features: []
     filename: SC4RemovePhantomBudgetItems.zip
     files:
       - LICENSE.txt
@@ -595,26 +566,23 @@ assets:
       - SC4RemovePhantomBudgetItems.dll
       - Third Party Notices.txt
     lastModified: 2024-09-07T05:11:45.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-remove-phantom-budget-items
     sha256: 7e365830ee40403e71b9a07b1fc5fd310e9791546895ed499d994661ccc9616c
     size: 43257
-    textures: []
     uncompressed: 96193
     version: 1.0.0
   github/0xC0000054/sc4-resource-loading-hooks:
     assetId: github/0xC0000054/sc4-resource-loading-hooks
     authors:
       - '0xC0000054'
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-resource-loading-hooks/releases/download/v{version}/SC4ResourceLoadingHooks.zip
-    features: []
     filename: SC4ResourceLoadingHooks.zip
     files:
       - LICENSE.txt
@@ -622,16 +590,12 @@ assets:
       - SC4ResourceLoadingHooks.dll
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/0xC0000054/sc4-resource-loading-hooks
     sha256: 6ec120c44afe263087dd7fd80591ea5e7368c6ab335b8f22d379974b21799203
     size: 48838
-    textures: []
     uncompressed: 109187
     version: 1.0.1
   github/bioruebe/cicdec:
@@ -663,10 +627,11 @@ assets:
     assetId: github/memo33/sc4-3d-camera-dll
     authors:
       - memo33
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/memo33/sc4-3d-camera-dll/releases/download/{version}/3d-camera-dll-{version}.zip
-    features: []
     filename: 3d-camera-dll-1.0.0.zip
     files:
       - LICENSE.txt
@@ -674,26 +639,23 @@ assets:
       - README.md
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/memo33/sc4-3d-camera-dll
     sha256: f23e0531c4186c9374e8971f0373541a754d8130579886a35c3f46404438e333
     size: 46989
-    textures: []
     uncompressed: 104998
     version: 1.0.0
   github/memo33/sc4-thumbnail-fix-dll:
     assetId: github/memo33/sc4-thumbnail-fix-dll
     authors:
       - memo33
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/memo33/sc4-thumbnail-fix-dll/releases/download/{version}/thumbnail-fix-dll-{version}.zip
-    features: []
     filename: thumbnail-fix-dll-1.0.0.zip
     files:
       - LICENSE.txt
@@ -701,26 +663,42 @@ assets:
       - README.md
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/memo33/sc4-thumbnail-fix-dll
     sha256: 0c9958c005b90ad2f6660727f8b8e3751577cee1b1e4d22f48b303b7222be05c
     size: 43395
-    textures: []
     uncompressed: 94044
     version: 1.0.0
   github/memo33/submenus-dll:
     assetId: github/memo33/submenus-dll
     authors:
       - memo33
-    buildings: []
+    buildings:
+      - bulldoze: 20
+        cost: 170
+        filename: submenus/park/plaza-submenu.dat
+        id: ea8756cf
+        maintenance: 20
+        menu: Parks
+        model: 5ad0e817-badb57f1-0e110000
+        name: PZ1x1_ParkFlowerGarden2_2a635acf
+        pollution: -7
+        pollutionRadius: 4
+        relief:
+          r$: 3000
+          r$$: 3000
+          r$$$: 3000
+        submenu: Parks_Plazas
+        water: 10
+        waterPollution: 2
+        waterPollutionRadius: 2
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/memo33/submenus-dll/releases/download/{version}/submenus-dll-{version}.zip
-    features: []
     filename: submenus-dll-1.1.4.zip
     files:
       - submenus/commercial/ploppable-CO$$$-submenu.dat
@@ -735,33 +713,33 @@ assets:
       - submenus/health/health-large-submenu.dat
       - submenus/health/health-medium-submenu.dat
       - submenus/health/health-small-submenu.dat
-      - submenus/highway/signage-submenu.dat
       - submenus/industrial/ploppable-Ia-submenu.dat
       - submenus/industrial/ploppable-Id-submenu.dat
       - submenus/industrial/ploppable-Iht-submenu.dat
       - submenus/industrial/ploppable-Im-submenu.dat
+      - submenus/highway/signage-submenu.dat
       - submenus/landmark/entertainment-submenu.dat
       - submenus/landmark/government-submenu.dat
       - submenus/landmark/religion-submenu.dat
-      - submenus/misc-transit/bus-submenu.dat
-      - submenus/misc-transit/ElRail-submenu.dat
-      - submenus/misc-transit/GLR-submenu.dat
-      - submenus/misc-transit/multimodal-stations-submenu.dat
-      - submenus/misc-transit/parking-submenu.dat
-      - submenus/misc-transit/subway-submenu.dat
       - submenus/park/embankment-submenu.dat
       - submenus/park/fillers-submenu.dat
       - submenus/park/green-spaces-submenu.dat
       - submenus/park/modular-parks-submenu.dat
       - submenus/park/plaza-submenu.dat
       - submenus/park/sports-submenu.dat
-      - submenus/power/clean-energy-submenu.dat
-      - submenus/power/dirty-energy-submenu.dat
-      - submenus/power/misc-power-submenu.dat
+      - submenus/misc-transit/bus-submenu.dat
+      - submenus/misc-transit/ElRail-submenu.dat
+      - submenus/misc-transit/GLR-submenu.dat
+      - submenus/misc-transit/multimodal-stations-submenu.dat
+      - submenus/misc-transit/parking-submenu.dat
+      - submenus/misc-transit/subway-submenu.dat
       - submenus/police/military-submenu.dat
       - submenus/police/police-deluxe-submenu.dat
       - submenus/police/police-large-submenu.dat
       - submenus/police/police-small-submenu.dat
+      - submenus/power/clean-energy-submenu.dat
+      - submenus/power/dirty-energy-submenu.dat
+      - submenus/power/misc-power-submenu.dat
       - submenus/rail/freight-rail-submenu.dat
       - submenus/rail/hybrid-railway-submenu.dat
       - submenus/rail/monorail-submenu.dat
@@ -780,26 +758,23 @@ assets:
       - README.md
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/memo33/submenus-dll
     sha256: f7ce49f941b04f6438678ea9e6a1649a010ab96f5feeed9f9b8d495a8a93a464
     size: 716556
-    textures: []
     uncompressed: 797417
     version: 1.1.4
   github/memo33/transparent-texture-fix-dll:
     assetId: github/memo33/transparent-texture-fix-dll
     authors:
       - memo33
-    buildings: []
+    categories:
+      - mods
+      - dll
     dependencies: []
     download: https://github.com/memo33/transparent-texture-fix-dll/releases/download/{version}/transparent-texture-fix-dll-{version}.zip
-    features: []
     filename: transparent-texture-fix-dll-1.0.0.zip
     files:
       - LICENSE.txt
@@ -807,16 +782,12 @@ assets:
       - README.md
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T09:48:18.355Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
-    props: []
     repository: https://github.com/memo33/transparent-texture-fix-dll
     sha256: f24275e69667e5afbfb3795d78d59ee4b45fce06ec72b2d09e6f3c4b2c852979
     size: 43314
-    textures: []
     uncompressed: 93946
     version: 1.0.0
 

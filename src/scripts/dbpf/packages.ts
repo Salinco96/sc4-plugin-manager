@@ -267,8 +267,33 @@ export function writePackageData(
     variantAsset.include = includedSC4Files ?? []
   }
 
-  const buildings = variantEntry.buildings?.filter(building =>
-    includedFiles.includes(building.filename),
+  const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.filename))
+
+  if (lots?.length) {
+    variantData.lots ??= []
+
+    for (const lot of lots) {
+      let existingLot = variantData.lots.find(({ id }) => id === lot.id)
+
+      if (!existingLot) {
+        existingLot = { id: lot.id, filename: lot.filename }
+        variantData.lots.push(existingLot)
+      }
+
+      existingLot.building ??= lot.building
+      existingLot.density ??= lot.density
+      existingLot.filename ??= lot.filename
+      existingLot.images ??= lot.images
+      existingLot.name ??= lot.name
+      existingLot.size ??= lot.size
+      existingLot.stage ??= lot.stage
+    }
+  }
+
+  const buildings = variantEntry.buildings?.filter(
+    building =>
+      // Include only the buildings with matching lots
+      includedFiles.includes(building.filename) && lots?.some(lot => lot.building === building.id),
   )
 
   if (buildings?.length) {
@@ -292,10 +317,12 @@ export function writePackageData(
       existingBuilding.garbage ??= building?.garbage
       existingBuilding.garbageRadius ??= building?.garbageRadius
       existingBuilding.income ??= building?.income
+      existingBuilding.jobs ??= building?.jobs
       existingBuilding.label ??= building?.label
       existingBuilding.landmark ??= building?.landmark
       existingBuilding.landmarkRadius ??= building?.landmarkRadius
       existingBuilding.maintenance ??= building?.maintenance
+      existingBuilding.name ??= building?.name
       existingBuilding.pollution ??= building?.pollution
       existingBuilding.pollutionRadius ??= building?.pollutionRadius
       existingBuilding.power ??= building?.power
@@ -304,34 +331,12 @@ export function writePackageData(
       existingBuilding.radiationRadius ??= building?.radiationRadius
       existingBuilding.rating ??= building?.rating
       existingBuilding.ratingRadius ??= building?.ratingRadius
+      existingBuilding.relief ??= building?.relief
       existingBuilding.water ??= building?.water
       existingBuilding.waterPollution ??= building?.waterPollution
       existingBuilding.waterPollutionRadius ??= building?.waterPollutionRadius
       existingBuilding.waterProduction ??= building?.waterProduction
       existingBuilding.worth ??= building?.worth
-    }
-  }
-
-  const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.filename))
-
-  if (lots?.length) {
-    variantData.lots ??= []
-
-    for (const lot of lots) {
-      let existingLot = variantData.lots.find(({ id }) => id === lot.id)
-
-      if (!existingLot) {
-        existingLot = { id: lot.id, filename: lot.filename }
-        variantData.lots.push(existingLot)
-      }
-
-      existingLot.building ??= lot.building
-      existingLot.density ??= lot.density
-      existingLot.filename ??= lot.filename
-      existingLot.images ??= lot.images
-      existingLot.name ??= lot.name
-      existingLot.size ??= lot.size
-      existingLot.stage ??= lot.stage
     }
   }
 

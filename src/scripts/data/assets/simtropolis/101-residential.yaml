@@ -22741,7 +22741,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_10/670bcea712142_02.jpg.12fa24047c534aca074d34f7908dbb7e.jpg
     lastModified: 2024-10-13T13:44:11.000Z
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     name: Coco Samsung apartment
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/Day.thumb.jpg.b8e1c2ecf42c9d4bb60d7f1a66179195.jpg
@@ -22752,11 +22752,13 @@ assets:
           - bulldoze: 703
             capacity:
               r$: 3161
+            category: r$
             filename: Coco_SamsungApt_MN/Coco_SamsungAPT-0x6534284a-0xb21fc9d1-0x54184b56.SC4Desc
             flamability: 45
             garbage: 190
             id: 54184b56
             model: 5ad0e817-b21fc9d1-00070000
+            name: Coco_SamsungAPT
             pollution: 95
             pollutionRadius: 5
             power: 14
@@ -22765,6 +22767,7 @@ assets:
             waterPollutionRadius: 5
             worth: 42957
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_SamsungApt_MN/Coco_SamsungAPT-0x6534284a-0xb21fc9d1-0xd4184728.SC4Desc
@@ -22775,7 +22778,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-b21fc9d1-00070000
+            name: Coco_SamsungAPT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -22784,6 +22789,7 @@ assets:
             waterPollution: 1
             waterPollutionRadius: 2
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_SamsungApt_MN/Coco_SamsungApt_LM 7x3_d41847ed.SC4Lot
@@ -22794,7 +22800,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-b21fc9d1-00070000
+            name: Coco_SamsungAPT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -22802,7 +22810,9 @@ assets:
             ratingRadius: 256
             waterPollution: 1
             waterPollutionRadius: 2
-        features: []
+        categories:
+          - r$
+          - landmarks
         filename: Coco_SamsungApt_MN.zip
         files:
           - Coco_SamsungApt_MN/Coco_SamsungAPT-0x5ad0e817_0xb21fc9d1_0x70000.SC4Model
@@ -22814,7 +22824,6 @@ assets:
           - Coco_SamsungApt_MN/Nite.jpg
         lots:
           - building: d41847ed
-            category: landmarks
             filename: Coco_SamsungApt_MN/Coco_SamsungApt_LM 7x3_d41847ed.SC4Lot
             id: d41847ed
             name: Coco_SamsungApt_LM 7x3
@@ -22834,7 +22843,6 @@ assets:
               - 25b00000
               - 25ae0000
           - building: 54184b56
-            category: r$
             density: high
             filename: Coco_SamsungApt_MN/Coco_SamsungAPT_R$7x3_MN_d41866fd.SC4Lot
             id: d41866fd
@@ -22856,21 +22864,21 @@ assets:
               - 258f0000
         models:
           - 5ad0e817-b21fc9d1-00070000
-        props: []
         sha256: 29700ce7bce4a65890dc89785472bce1334a0d76a7b6a3399f3d3bba7416114a
         size: 4193174
-        textures: []
         uncompressed: 4746412
       '203882':
         buildings:
           - bulldoze: 703
             capacity:
               r$: 3161
+            category: r$
             filename: Coco_SamsungApt_DN/Coco_SamsungAPT_DN-0x6534284a-0xb21fc9d1-0xd418529b.SC4Desc
             flamability: 45
             garbage: 190
             id: d418529b
             model: 5ad0e817-b21fc9d1-00090000
+            name: Coco_SamsungAPT_DN
             pollution: 95
             pollutionRadius: 5
             power: 14
@@ -22879,6 +22887,7 @@ assets:
             waterPollutionRadius: 5
             worth: 42957
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_SamsungApt_DN/Coco_SamsungAPT_DN-0x6534284a-0xb21fc9d1-0xf4185278.SC4Desc
@@ -22889,7 +22898,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-b21fc9d1-00090000
+            name: Coco_SamsungAPT_DN
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -22898,6 +22909,7 @@ assets:
             waterPollution: 1
             waterPollutionRadius: 2
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_SamsungApt_DN/Coco_SamsungApt_DN_LM 7x3_d4185370.SC4Lot
@@ -22908,7 +22920,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-b21fc9d1-00090000
+            name: Coco_SamsungAPT_DN
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -22916,7 +22930,9 @@ assets:
             ratingRadius: 256
             waterPollution: 1
             waterPollutionRadius: 2
-        features: []
+        categories:
+          - r$
+          - landmarks
         filename: Coco_SamsungApt_DN.zip
         files:
           - Coco_SamsungApt_DN/Coco_SamsungAPT_DN-0x5ad0e817_0xb21fc9d1_0x90000.SC4Model
@@ -22928,7 +22944,6 @@ assets:
           - Coco_SamsungApt_DN/Nite.jpg
         lots:
           - building: d4185370
-            category: landmarks
             filename: Coco_SamsungApt_DN/Coco_SamsungApt_DN_LM 7x3_d4185370.SC4Lot
             id: d4185370
             name: Coco_SamsungApt_DN_LM 7x3
@@ -22949,7 +22964,6 @@ assets:
               - 25b00000
               - 25ae0000
           - building: d418529b
-            category: r$
             density: high
             filename: Coco_SamsungApt_DN/Coco_SamsungAPT_R$7x3_DN_d41861c2.SC4Lot
             id: d41861c2
@@ -22971,10 +22985,8 @@ assets:
               - 258f0000
         models:
           - 5ad0e817-b21fc9d1-00090000
-        props: []
         sha256: 2c73a882953f4ba01b7f37680f0a7d0f5e7cbdfafa2594d1ace0c8fe37cf0042
         size: 3037325
-        textures: []
         uncompressed: 3411094
     version: 1.1.0
   simtropolis/36505:
@@ -23055,7 +23067,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_10/671b24b4a0ef1_.jpg.14eab625ca0db7a7d364bc494f49beb6.jpg
     lastModified: 2024-10-25T05:08:04.000Z
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     name: Coco Hillstate apartment
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/671b255b5ef5e_01.thumb.jpg.bddc6d57b0e430364b6ec44b22e2c3eb.jpg
@@ -23064,6 +23076,7 @@ assets:
       '204092':
         buildings:
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_Hillstate_APT-0x6534284a-0x94136420-0xb426a240.SC4Desc
@@ -23074,7 +23087,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-94136420-00040000
+            name: Coco_Hillstate_APT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -23086,11 +23101,13 @@ assets:
             capacity:
               r$: 3076
               r$$: 1699
+            category: r$$
             filename: Coco_Hillstate_APT-0x6534284a-0xb21fc9d1-0x1426bca5.SC4Desc
             flamability: 40
             garbage: 239
             id: 1426bca5
             model: 5ad0e817-94136420-00040000
+            name: Coco_Hillstate_APT
             pollution: 48
             pollutionRadius: 5
             power: 24
@@ -23099,6 +23116,7 @@ assets:
             waterPollutionRadius: 6
             worth: 44390
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_Hillstate_APT_LM_MN_4x2_3426a2a4.SC4Lot
@@ -23109,7 +23127,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-94136420-00040000
+            name: Coco_Hillstate_APT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -23117,7 +23137,9 @@ assets:
             ratingRadius: 256
             waterPollution: 1
             waterPollutionRadius: 2
-        features: []
+        categories:
+          - r$$
+          - landmarks
         filename: Coco_Hillstate_APT_MN.zip
         files:
           - Coco_Hillstate_APT-0x5ad0e817_0x94136420_0x40000.SC4Model
@@ -23129,7 +23151,6 @@ assets:
           - Nite.png
         lots:
           - building: 3426a2a4
-            category: landmarks
             filename: Coco_Hillstate_APT_LM_MN_4x2_3426a2a4.SC4Lot
             id: 3426a2a4
             name: Coco_Hillstate_APT_LM_MN_4x2
@@ -23143,7 +23164,6 @@ assets:
               - '262e0000'
               - 259d0000
           - building: 1426bca5
-            category: r$$
             density: high
             filename: Coco_Hillstate_APT_R$$_4x2_7426bfa5.SC4Lot
             id: 7426bfa5
@@ -23159,14 +23179,13 @@ assets:
               - 259d0000
         models:
           - 5ad0e817-94136420-00040000
-        props: []
         sha256: 63c5681a9ac4935a5eaaba8039f78df72366c773adbdf50a6fa218ac820731d0
         size: 2307390
-        textures: []
         uncompressed: 2690714
       '204093':
         buildings:
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_Hillstate_APT-0x6534284a-0x94136420-0x7426a43d.SC4Desc
@@ -23177,7 +23196,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-94136420-00040000
+            name: Coco_Hillstate_APT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -23189,11 +23210,13 @@ assets:
             capacity:
               r$: 3076
               r$$: 1699
+            category: r$$
             filename: Coco_Hillstate_APT-0x6534284a-0xb21fc9d1-0x1426d33d.SC4Desc
             flamability: 40
             garbage: 239
             id: 1426d33d
             model: 5ad0e817-94136420-00040000
+            name: Coco_Hillstate_APT
             pollution: 48
             pollutionRadius: 5
             power: 24
@@ -23202,6 +23225,7 @@ assets:
             waterPollutionRadius: 6
             worth: 44390
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_Hillstate_APT_LM_DN_4x2_9426d3df.SC4Lot
@@ -23212,7 +23236,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-94136420-00040000
+            name: Coco_Hillstate_APT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -23220,7 +23246,9 @@ assets:
             ratingRadius: 256
             waterPollution: 1
             waterPollutionRadius: 2
-        features: []
+        categories:
+          - r$$
+          - landmarks
         filename: Coco_Hillstate_APt_DN.zip
         files:
           - Coco_Hillstate_APT-0x5ad0e817_0x94136420_0x40000.SC4Model
@@ -23232,7 +23260,6 @@ assets:
           - Nite.jpg
         lots:
           - building: 9426d3df
-            category: landmarks
             filename: Coco_Hillstate_APT_LM_DN_4x2_9426d3df.SC4Lot
             id: 9426d3df
             name: Coco_Hillstate_APT_LM_DN_4x2
@@ -23246,7 +23273,6 @@ assets:
               - '262e0000'
               - 259d0000
           - building: 1426d33d
-            category: r$$
             density: high
             filename: Coco_Hillstate_APT_R$$_4x2_DN_d426d49e.SC4Lot
             id: d426d49e
@@ -23262,10 +23288,8 @@ assets:
               - 259d0000
         models:
           - 5ad0e817-94136420-00040000
-        props: []
         sha256: b1e73440019c5cee1681df9eafcf2202e7167b52e95b7516cf08ebdf625ed193
         size: 1861203
-        textures: []
         uncompressed: 2195247
     version: 1.1.0
   simtropolis/36534:
@@ -23305,7 +23329,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_11/Add.png.02eca0f2ea8cf0069cfe3b5cddfdc646.png
     lastModified: 2024-11-15T17:29:13.000Z
     meta:
-      timestamp: 2024-11-19T11:51:30.689Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     name: Coco_e Pyeonhansesang_APT
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_11/673781b189dcb_01-15--131731685185.thumb.png.db754f5982b034ebdc67df0919389cd7.png
@@ -23314,6 +23338,7 @@ assets:
       '204395':
         buildings:
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_ePyeonhanAPT-0x6534284a-0x3442801b-0x7443f7d1.SC4Desc
@@ -23324,7 +23349,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-3442801b-00120000
+            name: Coco_ePyeonhanAPT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -23336,11 +23363,13 @@ assets:
             capacity:
               r$: 6186
               r$$: 3416
+            category: r$$
             filename: Coco_ePyeonhanAPT-0x6534284a-0x3442801b-0x944405cd.SC4Desc
             flamability: 40
             garbage: 480
             id: 944405cd
             model: 5ad0e817-3442801b-00120000
+            name: Coco_ePyeonhanAPT
             pollution: 96
             pollutionRadius: 5
             power: 47
@@ -23349,6 +23378,7 @@ assets:
             waterPollutionRadius: 6
             worth: 89267
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_ePyeonhanAPT_LM4x3_1443f7f3.SC4Lot
@@ -23359,7 +23389,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-3442801b-00120000
+            name: Coco_ePyeonhanAPT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -23367,6 +23399,9 @@ assets:
             ratingRadius: 256
             waterPollution: 1
             waterPollutionRadius: 2
+        categories:
+          - r$$
+          - landmarks
         filename: Coco_ePyeonhan_APT_MN.Zip
         files:
           - Coco_ePyeonhanAPT-0x5ad0e817_0x3442801b_0x120000.SC4Model
@@ -23378,7 +23413,6 @@ assets:
           - Night.png
         lots:
           - building: 1443f7f3
-            category: landmarks
             filename: Coco_ePyeonhanAPT_LM4x3_1443f7f3.SC4Lot
             id: 1443f7f3
             name: Coco_ePyeonhanAPT_LM4x3
@@ -23405,7 +23439,6 @@ assets:
               - 25b90000
               - 25bb0000
           - building: 944405cd
-            category: r$$
             density: high
             filename: Coco_ePyeonhan_APT_R$$_4x3_d4440620.SC4Lot
             id: d4440620
@@ -23442,6 +23475,7 @@ assets:
       '204396':
         buildings:
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_ePyeonhanAPT-0x6534284a-0x3442801b-0x5443fd4d.SC4Desc
@@ -23452,7 +23486,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-3442801b-00120000
+            name: Coco_ePyeonhanAPT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -23464,11 +23500,13 @@ assets:
             capacity:
               r$: 6186
               r$$: 3416
+            category: r$$
             filename: Coco_ePyeonhanAPT-0x6534284a-0x3442801b-0xd4441231.SC4Desc
             flamability: 40
             garbage: 480
             id: d4441231
             model: 5ad0e817-3442801b-00120000
+            name: Coco_ePyeonhanAPT
             pollution: 96
             pollutionRadius: 5
             power: 47
@@ -23477,6 +23515,7 @@ assets:
             waterPollutionRadius: 6
             worth: 89267
           - bulldoze: 100
+            category: landmarks
             cost: 110000
             description: Insert ploppable description here.
             filename: Coco_ePyeonhanAPT_LM4x3_DN_1443fd77.SC4Lot
@@ -23487,7 +23526,9 @@ assets:
             landmark: 40
             landmarkRadius: 20
             maintenance: 150
+            menu: Landmarks
             model: 5ad0e817-3442801b-00120000
+            name: Coco_ePyeonhanAPT
             pollution: 1
             pollutionRadius: 1
             power: 60
@@ -23495,6 +23536,9 @@ assets:
             ratingRadius: 256
             waterPollution: 1
             waterPollutionRadius: 2
+        categories:
+          - r$$
+          - landmarks
         filename: Coco_ePyeonhan_APT_DN.zip
         files:
           - Coco_ePyeonhanAPT-0x5ad0e817_0x3442801b_0x120000.SC4Model
@@ -23505,8 +23549,34 @@ assets:
           - Day.png
           - Night.png
         lots:
+          - building: 1443fd77
+            filename: Coco_ePyeonhanAPT_LM4x3_DN_1443fd77.SC4Lot
+            id: 1443fd77
+            name: Coco_ePyeonhanAPT_LM4x3_DN
+            props:
+              - 2a8a0000
+              - 2b1a0000
+              - f8fb3305
+              - b8690d6d
+              - 98f5eeb5
+              - 2cb00000
+              - 2a8b0000
+              - '1e120000'
+              - 2a8c0000
+              - 29b30000
+              - 788f5a8f
+              - 1a237cf6
+              - 995b7a8e
+              - 586f64f1
+              - 3a17fd00
+              - f86cc6d3
+              - 786cc686
+            size: 4x3
+            textures:
+              - '262e0000'
+              - 25b90000
+              - 25bb0000
           - building: d4441231
-            category: r$$
             density: high
             filename: Coco_ePyeonhan_APT_R$$_4x3_DN_14441268.SC4Lot
             id: '14441268'
@@ -23531,34 +23601,6 @@ assets:
               - ae0ab3b6
             size: 4x3
             stage: 8
-            textures:
-              - '262e0000'
-              - 25b90000
-              - 25bb0000
-          - building: 1443fd77
-            category: landmarks
-            filename: Coco_ePyeonhanAPT_LM4x3_DN_1443fd77.SC4Lot
-            id: 1443fd77
-            name: Coco_ePyeonhanAPT_LM4x3_DN
-            props:
-              - 2a8a0000
-              - 2b1a0000
-              - f8fb3305
-              - b8690d6d
-              - 98f5eeb5
-              - 2cb00000
-              - 2a8b0000
-              - '1e120000'
-              - 2a8c0000
-              - 29b30000
-              - 788f5a8f
-              - 1a237cf6
-              - 995b7a8e
-              - 586f64f1
-              - 3a17fd00
-              - f86cc6d3
-              - 786cc686
-            size: 4x3
             textures:
               - '262e0000'
               - 25b90000
@@ -24261,11 +24303,9 @@ assets:
     assetId: simtropolis/554-residential-6by-collection
     authors:
       - Buggi
-    buildings: []
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This set is similar to the Commercial 6BY Collection in that it gives a wider range of buildings to be built on many zoning styles.</p>\n<p>\_</p>\n<p>\nThis set edits all THREE wealth levels of Residental. It not only add function to those 4x4 buildings such as Ong Condos, but also a couple other buildings that were previously restricted to 2 or 3 squares.</p>\n<p>\_</p>\n<p>\nOverall gives the game a much broader range of buildings to use while developing your city.</p>\n<p>\_</p>\n<p>\nScreenshots are of Project Bootstrap and the Byall Tower.</p>\n<p>\_</p>\n<p>\n*Update*</p>\n<p>\nThese are compatible with RushHour and are used for the Euro tileset.</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: Residential.zip
     files:
       - R$$$7_4x6_0c2096ac.SC4Lot
@@ -24293,7 +24333,6 @@ assets:
     lastModified: 2003-07-16T21:43:15.000Z
     lots:
       - building: '10000035'
-        category: r$$$
         density: medium,high
         filename: R$$$7_4x6_0c2096ac.SC4Lot
         id: 0c2096ac
@@ -24308,7 +24347,6 @@ assets:
           - 259d0000
           - 252b0000
       - building: '10000035'
-        category: r$$$
         density: medium,high
         filename: R$$$7_4x6_cc20967a.SC4Lot
         id: cc20967a
@@ -24325,7 +24363,6 @@ assets:
           - '258e0000'
           - '26200000'
       - building: '10000035'
-        category: r$$$
         density: medium,high
         filename: R$$$7_4x6_ec2097ac.SC4Lot
         id: ec2097ac
@@ -24345,7 +24382,6 @@ assets:
           - '25920000'
           - '26200000'
       - building: '10000036'
-        category: r$$$
         density: high
         filename: R$$$8_4x4_6c209468.SC4Lot
         id: 6c209468
@@ -24362,7 +24398,6 @@ assets:
         textures:
           - '258e0000'
       - building: '10000036'
-        category: r$$$
         density: high
         filename: R$$$8_4x4_6c2094d9.SC4Lot
         id: 6c2094d9
@@ -24375,7 +24410,6 @@ assets:
         textures:
           - '258e0000'
       - building: '10000036'
-        category: r$$$
         density: high
         filename: R$$$8_4x4_8c209488.SC4Lot
         id: 8c209488
@@ -24392,7 +24426,6 @@ assets:
         textures:
           - '25270000'
       - building: '10000036'
-        category: r$$$
         density: high
         filename: R$$$8_4x4_ec209436.SC4Lot
         id: ec209436
@@ -24411,7 +24444,6 @@ assets:
           - 252b0000
           - 25ae0000
       - building: '10000033'
-        category: r$$$
         density: high
         filename: R$$$8_4x6_cc209338.SC4Lot
         id: cc209338
@@ -24429,7 +24461,6 @@ assets:
           - 251c0000
           - 25f40000
       - building: '10000033'
-        category: r$$$
         density: high
         filename: R$$$8_4x6_cc2093d6.SC4Lot
         id: cc2093d6
@@ -24442,7 +24473,6 @@ assets:
           - '258e0000'
           - 25f40000
       - building: '10000020'
-        category: r$$
         density: high
         filename: R$$8_4x6_4c21e77e.SC4Lot
         id: 4c21e77e
@@ -24461,7 +24491,6 @@ assets:
           - 25fb0000
           - 251c0000
       - building: '10000020'
-        category: r$$
         density: high
         filename: R$$8_4x6_cc21e746.SC4Lot
         id: cc21e746
@@ -24479,10 +24508,9 @@ assets:
         stage: 7
         textures:
           - 258f0000
-          - '-566f4000'
+          - a990c000
           - 251c0000
       - building: 1000000b
-        category: r$
         density: high
         filename: R$8_4x3_0c21e6db.SC4Lot
         id: 0c21e6db
@@ -24503,7 +24531,6 @@ assets:
           - 25c10000
           - '25900000'
       - building: 1000000b
-        category: r$
         density: high
         filename: R$8_4x3_2c21e683.SC4Lot
         id: 2c21e683
@@ -24518,7 +24545,6 @@ assets:
           - 251c0000
           - '25900000'
       - building: 1000000b
-        category: r$
         density: high
         filename: R$8_4x3_6c21e652.SC4Lot
         id: 6c21e652
@@ -24531,7 +24557,6 @@ assets:
           - '25270000'
           - '25900000'
       - building: 1000000b
-        category: r$
         density: high
         filename: R$8_4x3_ac21e6b8.SC4Lot
         id: ac21e6b8
@@ -24546,7 +24571,6 @@ assets:
           - 25c30000
           - '25900000'
       - building: 1000000c
-        category: r$
         density: high
         filename: R$8_4x6_6c21e545.SC4Lot
         id: 6c21e545
@@ -24558,7 +24582,6 @@ assets:
           - 251c0000
           - '25210000'
       - building: 1000000c
-        category: r$
         density: high
         filename: R$8_4x6_8c21e57d.SC4Lot
         id: 8c21e57d
@@ -24574,7 +24597,6 @@ assets:
           - '25900000'
           - 259d0000
       - building: 1000000c
-        category: r$
         density: high
         filename: R$8_4x6_ac21e5a2.SC4Lot
         id: ac21e5a2
@@ -24591,7 +24613,6 @@ assets:
           - 252b0000
           - 251c0000
       - building: 1000000c
-        category: r$
         density: high
         filename: R$8_4x6_ec21e5c0.SC4Lot
         id: ec21e5c0
@@ -24607,14 +24628,11 @@ assets:
           - '25900000'
           - 251c0000
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Residential 6BY Collection
-    props: []
     sha256: 2928addd4d37bdb6e40bfe30c167497ae6c66c26172aa5573270d50ab2314d09
     size: 560943
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-737b93092a74de374eb4fb5b88bdeb10-6byboot.jpg
     uncompressed: 564124
     url: https://community.simtropolis.com/files/file/554-residential-6by-collection/

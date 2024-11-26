@@ -50,9 +50,9 @@ export function getLotData(exemplar: Exemplar): LotData {
     data.density = densities.join(",")
   }
 
-  const lotName = getString(exemplar, ExemplarPropertyID.ExemplarName)
-  if (lotName?.length) {
-    data.name = lotName
+  const name = getString(exemplar, ExemplarPropertyID.ExemplarName)
+  if (name?.length) {
+    data.name = name
   }
 
   const sizeX = get(exemplar, ExemplarPropertyID.LotSize, 0)

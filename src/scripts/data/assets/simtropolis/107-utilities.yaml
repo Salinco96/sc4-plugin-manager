@@ -3978,17 +3978,22 @@ assets:
       - Buggi
     buildings:
       - bulldoze: 20
+        category: power
         cost: 500
         filename: Up2x2_WindBlaster_cc060d0d.SC4Lot
         flamability: 10
         id: cc060d0d
         maintenance: 50
+        menu: Power
         model: 5ad0e817-badb57f1-1f450000
+        name: Up26x8_WindPower_1F45
         powerProduction: 100000
+        submenu: Power_Clean
+    categories:
+      - power
     category: 107-utilities
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This is the windmill I use when I do not want to worry about power requirements in a city. Puts out 100,000 power.</p>\n<p>\_</p>\n<p>\nAll values can be edited, so feel free to balance it how you wish, you can also tweak the props, as they don't line up at every angle <img src=\"https://community.simtropolis.com/assets/emoticons/Sad.gif\" alt=\":(\" srcset=\"https://community.simtropolis.com/assets/emoticons/Sad@2x.gif 2x\" width=\"30\" height=\"30\" ></p>\n<p>\_</p>\n<p>\nUpdate: Just made sure it was marked as Rush Hour compatible.</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: WindBlaster.zip
     files:
       - Up2x2_WindBlaster_cc060d0d.SC4Lot
@@ -3997,7 +4002,6 @@ assets:
     lastModified: 2003-07-09T17:33:12.000Z
     lots:
       - building: cc060d0d
-        category: landmarks
         filename: Up2x2_WindBlaster_cc060d0d.SC4Lot
         id: cc060d0d
         name: Up2x2_WindBlaster
@@ -4008,14 +4012,11 @@ assets:
         textures:
           - 25d60000
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Buggi Mark X WindBlaster
-    props: []
     sha256: b5cbfcc2277248fcff2deee3e2423555e564a4079aaacd849f08b7b48e07399e
     size: 43638
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-b2559aeb2202743482e3bdc02510285b-BuggiMarkX.jpg
     uncompressed: 43673
     url: https://community.simtropolis.com/files/file/313-buggi-mark-x-windblaster/

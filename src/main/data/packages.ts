@@ -23,7 +23,7 @@ import { glob } from "glob"
 import type { AssetData, AssetID, Assets } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
-import { type PackageID, isNew } from "@common/packages"
+import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, isNew } from "@common/packages"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
 import {
   type DependencyData,
@@ -42,6 +42,7 @@ import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
+import { OptionType } from "@common/options"
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
 
@@ -534,43 +535,43 @@ function loadVariantInfo(
 
   // TODO: Do not write this into options explicitly!
 
-  // if (variantInfo.lots && !variantInfo.options?.some(option => option.id === LOTS_OPTION_ID)) {
-  //   variantInfo.options ??= []
+  if (variantInfo.lots && !variantInfo.options?.some(option => option.id === LOTS_OPTION_ID)) {
+    variantInfo.options ??= []
 
-  //   variantInfo.options.unshift({
-  //     choices: variantInfo.lots.map(lot => ({
-  //       condition: lot.requirements,
-  //       description: lot.description,
-  //       label: lot.label,
-  //       value: lot.id,
-  //     })),
-  //     default: variantInfo.lots.filter(lot => lot.default !== false).map(lot => lot.id),
-  //     display: "checkbox",
-  //     id: LOTS_OPTION_ID,
-  //     multi: true,
-  //     section: "Lots", // TODO: i18n?
-  //     type: OptionType.STRING,
-  //   })
-  // }
+    variantInfo.options.unshift({
+      choices: variantInfo.lots.map(lot => ({
+        condition: lot.requirements,
+        // description: lot.description,
+        label: lot.name ?? lot.id,
+        value: lot.id,
+      })),
+      default: variantInfo.lots.filter(lot => lot.default !== false).map(lot => lot.id),
+      display: "checkbox",
+      id: LOTS_OPTION_ID,
+      multi: true,
+      section: "Lots", // TODO: i18n?
+      type: OptionType.STRING,
+    })
+  }
 
-  // if (variantInfo.mmps && !variantInfo.options?.some(option => option.id === MMPS_OPTION_ID)) {
-  //   variantInfo.options ??= []
+  if (variantInfo.mmps && !variantInfo.options?.some(option => option.id === MMPS_OPTION_ID)) {
+    variantInfo.options ??= []
 
-  //   variantInfo.options.unshift({
-  //     choices: variantInfo.mmps.map(mmp => ({
-  //       condition: mmp.requirements,
-  //       description: mmp.description,
-  //       label: mmp.label,
-  //       value: mmp.id,
-  //     })),
-  //     default: variantInfo.mmps.filter(mmp => mmp.default !== false).map(mmp => mmp.id),
-  //     display: "checkbox",
-  //     id: MMPS_OPTION_ID,
-  //     multi: true,
-  //     section: "MMPs", // TODO: i18n?
-  //     type: OptionType.STRING,
-  //   })
-  // }
+    variantInfo.options.unshift({
+      choices: variantInfo.mmps.map(mmp => ({
+        condition: mmp.requirements,
+        description: mmp.description,
+        label: mmp.label,
+        value: mmp.id,
+      })),
+      default: variantInfo.mmps.filter(mmp => mmp.default !== false).map(mmp => mmp.id),
+      display: "checkbox",
+      id: MMPS_OPTION_ID,
+      multi: true,
+      section: "MMPs", // TODO: i18n?
+      type: OptionType.STRING,
+    })
+  }
 
   return variantInfo
 }

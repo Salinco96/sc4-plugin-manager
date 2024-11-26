@@ -1,4 +1,13 @@
-import { containsAny, generate, isNumber, sum, unique, values } from "@salinco/nice-utils"
+import {
+  containsAny,
+  filterValues,
+  generate,
+  isEmpty,
+  isNumber,
+  sum,
+  unique,
+  values,
+} from "@salinco/nice-utils"
 
 import type { BuildingData } from "@common/types"
 
@@ -6,6 +15,7 @@ import { CategoryID } from "@common/categories"
 import { Menu, Submenu, writeMenu, writeMenus } from "@common/variants"
 import {
   BudgetItemDepartment,
+  DemandID,
   DeveloperID,
   type Exemplar,
   ExemplarPropertyID,
@@ -50,6 +60,11 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
   const bulldozeCost = get(exemplar, ExemplarPropertyID.BulldozeCost)
   if (bulldozeCost) {
     data.bulldoze = bulldozeCost
+  }
+
+  const name = getString(exemplar, ExemplarPropertyID.ExemplarName)
+  if (name?.length) {
+    data.name = name
   }
 
   const label = getString(exemplar, ExemplarPropertyID.ItemLabel)
@@ -160,21 +175,66 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
     data.model = model
   }
 
-  const capacity = getMap<DeveloperID>(exemplar, ExemplarPropertyID.CapacitySatisfied)
-  if (capacity) {
-    data.capacity = {
-      r$: capacity[DeveloperID.R$],
-      r$$: capacity[DeveloperID.R$$],
-      r$$$: capacity[DeveloperID.R$$$],
-      cs$: capacity[DeveloperID.CS$],
-      cs$$: capacity[DeveloperID.CS$$],
-      cs$$$: capacity[DeveloperID.CS$$$],
-      co$$: capacity[DeveloperID.CO$$],
-      co$$$: capacity[DeveloperID.CO$$$],
-      ir: capacity[DeveloperID.IR],
-      id: capacity[DeveloperID.ID],
-      im: capacity[DeveloperID.IM],
-      iht: capacity[DeveloperID.IHT],
+  const capacitySatisfied = getMap<DeveloperID>(exemplar, ExemplarPropertyID.CapacitySatisfied)
+  if (capacitySatisfied) {
+    const capacity = filterValues(
+      {
+        r$: capacitySatisfied[DeveloperID.R$],
+        r$$: capacitySatisfied[DeveloperID.R$$],
+        r$$$: capacitySatisfied[DeveloperID.R$$$],
+        cs$: capacitySatisfied[DeveloperID.CS$],
+        cs$$: capacitySatisfied[DeveloperID.CS$$],
+        cs$$$: capacitySatisfied[DeveloperID.CS$$$],
+        co$$: capacitySatisfied[DeveloperID.CO$$],
+        co$$$: capacitySatisfied[DeveloperID.CO$$$],
+        ir: capacitySatisfied[DeveloperID.IR],
+        id: capacitySatisfied[DeveloperID.ID],
+        im: capacitySatisfied[DeveloperID.IM],
+        iht: capacitySatisfied[DeveloperID.IHT],
+      },
+      Boolean,
+    )
+
+    if (!isEmpty(capacity)) {
+      data.capacity = capacity
+    }
+  }
+
+  const demandCreated = getMap<DemandID>(exemplar, ExemplarPropertyID.DemandCreated)
+  if (demandCreated) {
+    const jobs = filterValues(
+      {
+        $: demandCreated[DemandID.Jobs$],
+        $$: demandCreated[DemandID.Jobs$$],
+        $$$: demandCreated[DemandID.Jobs$$$],
+      },
+      Boolean,
+    )
+
+    if (!isEmpty(jobs)) {
+      data.jobs = jobs
+    }
+  }
+
+  const demandSatisfied = getMap<DemandID>(exemplar, ExemplarPropertyID.DemandSatisfied)
+  if (demandSatisfied) {
+    const relief = filterValues(
+      {
+        r$: demandSatisfied[DemandID.R$],
+        r$$: demandSatisfied[DemandID.R$$],
+        r$$$: demandSatisfied[DemandID.R$$$],
+        co$$: demandSatisfied[DemandID.CO$$],
+        co$$$: demandSatisfied[DemandID.CO$$$],
+        ir: demandSatisfied[DemandID.IR],
+        id: demandSatisfied[DemandID.ID],
+        im: demandSatisfied[DemandID.IM],
+        iht: demandSatisfied[DemandID.IHT],
+      },
+      Boolean,
+    )
+
+    if (!isEmpty(relief)) {
+      data.relief = relief
     }
   }
 

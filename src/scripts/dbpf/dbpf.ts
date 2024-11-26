@@ -24,13 +24,23 @@ export interface SC4FileData {
   textures: string[]
 }
 
+const defaultTypes: {
+  [groupId in number]?: ExemplarType
+} = {
+  [0x07bddf1c]: ExemplarType.Building, // civics/parks
+  [0x47bddf12]: ExemplarType.Building, // commercial
+  [0x67bddf0c]: ExemplarType.Building, // residential
+  [0x8a3858d8]: ExemplarType.Building, // rewards
+  [0xa7bddf17]: ExemplarType.Building, // industrial
+  [0xc8dbccba]: ExemplarType.Building, // utilities
+  [0xca386e22]: ExemplarType.Building, // landmarks
+}
+
 export async function analyzeSC4Files(
   basePath: string,
   filePaths: string[],
   exemplarProperties: { [id in number]?: ExemplarPropertyInfo },
 ): Promise<SC4FileData> {
-  const exemplars: { [id in TGI]?: Exemplar } = {}
-
   const buildings: BuildingData[] = []
   const categories = new Set<CategoryID>()
   const features = new Set<Feature>()
@@ -53,7 +63,63 @@ export async function analyzeSC4Files(
       for (const entry of values(file.entries)) {
         switch (entry.type) {
           case DBPFDataType.EXMP: {
-            exemplars[entry.id] = { ...entry, file: filePath } as Exemplar
+            const [, groupId, instanceId] = parseTGI(entry.id)
+            const exemplar = { ...entry, file: filePath } as Exemplar
+
+            const type = get(exemplar, ExemplarPropertyID.ExemplarType) ?? defaultTypes[groupId]
+
+            switch (type) {
+              case ExemplarType.Building: {
+                buildings.push(getBuildingData(exemplar))
+                break
+              }
+
+              case ExemplarType.Developer: {
+                categories.add(CategoryID.GAMEPLAY)
+                const type = DeveloperID[instanceId] as keyof typeof DeveloperID
+
+                if (type) {
+                  const feature = Feature[`DEVELOPER_${type}`]
+                  features.add(feature)
+                }
+
+                break
+              }
+
+              case ExemplarType.Lighting: {
+                categories.add(CategoryID.GRAPHICS)
+                features.add(Feature.DARKNITE) // TODO: Anything else?
+                break
+              }
+
+              case ExemplarType.LotConfig: {
+                lots.push(getLotData(exemplar))
+                break
+              }
+
+              case ExemplarType.Ordinance: {
+                categories.add(CategoryID.ORDINANCES)
+                break
+              }
+
+              case ExemplarType.Prop: {
+                props.add(exemplar.id)
+                break
+              }
+
+              case ExemplarType.Simulator: {
+                categories.add(CategoryID.GAMEPLAY)
+                const type = SimulatorID[instanceId] as keyof typeof SimulatorID
+
+                if (type) {
+                  const feature = Feature[`SIMULATOR_${type}`]
+                  features.add(feature)
+                }
+
+                break
+              }
+            }
+
             break
           }
 
@@ -72,63 +138,6 @@ export async function analyzeSC4Files(
             break
           }
         }
-      }
-    }
-  }
-
-  for (const exemplar of values(exemplars)) {
-    const instanceId = parseTGI(exemplar.id)[2]
-
-    switch (get(exemplar, ExemplarPropertyID.ExemplarType)) {
-      case ExemplarType.Building: {
-        buildings.push(getBuildingData(exemplar))
-        break
-      }
-
-      case ExemplarType.Developer: {
-        categories.add(CategoryID.GAMEPLAY)
-        const type = DeveloperID[instanceId] as keyof typeof DeveloperID
-
-        if (type) {
-          const feature = Feature[`DEVELOPER_${type}`]
-          features.add(feature)
-        }
-
-        break
-      }
-
-      case ExemplarType.Lighting: {
-        categories.add(CategoryID.GRAPHICS)
-        features.add(Feature.DARKNITE) // TODO: Anything else?
-        break
-      }
-
-      case ExemplarType.LotConfig: {
-        lots.push(getLotData(exemplar))
-        break
-      }
-
-      case ExemplarType.Ordinance: {
-        categories.add(CategoryID.ORDINANCES)
-        lots.push(getLotData(exemplar))
-        break
-      }
-
-      case ExemplarType.Prop: {
-        props.add(exemplar.id)
-        break
-      }
-
-      case ExemplarType.Simulator: {
-        categories.add(CategoryID.GAMEPLAY)
-        const type = SimulatorID[instanceId] as keyof typeof SimulatorID
-
-        if (type) {
-          const feature = Feature[`SIMULATOR_${type}`]
-          features.add(feature)
-        }
-
-        break
       }
     }
   }

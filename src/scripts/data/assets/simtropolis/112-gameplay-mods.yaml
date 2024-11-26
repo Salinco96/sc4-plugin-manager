@@ -148,7 +148,8 @@ assets:
     assetId: simtropolis/13318-lots-of-riots-mod
     authors:
       - Bones1
-    buildings: []
+    categories:
+      - gameplay
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>Some people have played SimCity 4 for quite awhile, and never seen a riot. That's not surprising, since you normally have to have a very unhappy city to create a riot.</p>\n<p>This mod makes riots much more common, so that everyone can experience the chaos of anarchy. It forces you to keep your mayor rating significantly above +50 if you want to prevent riots. If sims in parts of your city drop their rating of you below +50, watch out!</p>\n<p>To install, just unzip and drop into your plugin file. To remove, just delete it from your plugin file. It won't have any impact on your cities once it is removed.</p>\n\n\t\t\t\t\t\t</body>"
@@ -160,16 +161,12 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0019/abe2e5a54dcff7b66106059a0a972de5-LotsOfRiots.jpg
     lastModified: 2005-08-09T20:08:21.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Lots of Riots Mod
-    props: []
     sha256: 0162227c2b1ecf61967f900c6ab4fa10b8f5178e4d07173528741f3a15955f44
     size: 577
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2005/thumb-abe2e5a54dcff7b66106059a0a972de5-LotsOfRiots.jpg
     uncompressed: 539
     url: https://community.simtropolis.com/files/file/13318-lots-of-riots-mod/
@@ -262,7 +259,8 @@ assets:
     assetId: simtropolis/14926-crime-simulator-mod
     authors:
       - Buggi
-    buildings: []
+    categories:
+      - gameplay
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><font face=\"Arial, Helvetica, sans-serif\">I have wanted to update the crime simulation in SC4 to reflect that of a more realistic model for awhile. There was simply TO MUCH crime in a city. The following mod address both the\_sim and the other desire to elimiate the problem all together.</font></p>\n<p><font face=\"Arial, Helvetica, sans-serif\">This file contains two separate options. NoCrime.dat updates the crime simulator to eliminate crime. This doesn't\_eliminate the need for your sims to feel \"safe\". So police stations are still useful.</font></p>\n<p><font face=\"Arial, Helvetica, sans-serif\">The\_other file is LowCrime.dat which dramatically reduces the amount of crime in your city as well as increasing the overall effectiveness of police stations in reducing crime.</font></p>\n\n\t\t\t\t\t\t</body>"
@@ -277,16 +275,12 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0024/d75068af38da6649ecd9b61a7196afa7-NickMonkey.jpg
     lastModified: 2006-02-04T19:50:04.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Crime Simulator Mod
-    props: []
     sha256: 26b034ae150f0c75d366c0ad160a98fca0ef3e1ee1d6c95c04cbccc6ad4d9fa4
     size: 2090
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2006/thumb-d75068af38da6649ecd9b61a7196afa7-NickMonkey.jpg
     uncompressed: 2447
     url: https://community.simtropolis.com/files/file/14926-crime-simulator-mod/
@@ -868,11 +862,1367 @@ assets:
     assetId: simtropolis/21293-industry-quadrupler
     authors:
       - toroca
-    buildings: []
+    buildings:
+      - bulldoze: 290
+        capacity:
+          iht: 268
+        filename: industry-quadrupler-2.dat
+        id: '08470000'
+        model: 5ad0e817-badb57f1-08470000
+        name: IH28x58_3HTOut10_0847
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: 8000004a
+        name: IH28x58_3_8000004A
+        pollution: 7
+        pollutionRadius: 7
+        power: 47
+        water: 47
+        waterPollution: 3
+        waterPollutionRadius: 8
+        worth: 2948
+      - bulldoze: 160
+        capacity:
+          iht: 120
+        filename: industry-quadrupler-2.dat
+        id: '08410000'
+        model: 5ad0e817-badb57f1-08410000
+        name: IH26x28_1HTOut4_0841
+      - filename: industry-quadrupler-2.dat
+        flamability: 40
+        garbage: 4
+        id: '80000045'
+        name: IH26x28_1_80000045
+        pollution: 3
+        pollutionRadius: 5
+        power: 18
+        water: 15
+        waterPollution: 2
+        waterPollutionRadius: 6
+        worth: 2820
+      - bulldoze: 100
+        capacity:
+          iht: 88
+        filename: industry-quadrupler-2.dat
+        id: '083e0000'
+        model: 5ad0e817-badb57f1-083e0000
+        name: IH14x28_1HTOut1_083E
+      - filename: industry-quadrupler-2.dat
+        flamability: 40
+        garbage: 4
+        id: '80000043'
+        name: IH14x28_1_80000043
+        pollution: 3
+        pollutionRadius: 5
+        power: 14
+        water: 11
+        waterPollution: 1
+        waterPollutionRadius: 6
+        worth: 2068
+      - bulldoze: 290
+        capacity:
+          iht: 284
+        filename: industry-quadrupler-2.dat
+        id: '08350000'
+        model: 5ad0e817-badb57f1-08350000
+        name: IH54x42_3HTAnchor11_0835
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: 8000003f
+        name: IH54x42_3_8000003F
+        pollution: 8
+        pollutionRadius: 7
+        power: 50
+        water: 50
+        waterPollution: 3
+        waterPollutionRadius: 8
+        worth: 3124
+      - bulldoze: 160
+        capacity:
+          iht: 292
+        filename: industry-quadrupler-2.dat
+        id: '08320000'
+        model: 5ad0e817-badb57f1-08320000
+        name: IH42x42_3HTAnchor8_0832
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: 8000003d
+        name: IH42x42_3_8000003D
+        pollution: 8
+        pollutionRadius: 7
+        power: 52
+        water: 52
+        waterPollution: 3
+        waterPollutionRadius: 8
+        worth: 3212
+      - bulldoze: 160
+        capacity:
+          iht: 80
+        filename: industry-quadrupler-2.dat
+        id: 082c0000
+        model: 5ad0e817-badb57f1-082c0000
+        name: IH14x28_1HTAnchor2_082C
+      - bulldoze: 290
+        capacity:
+          iht: 376
+        filename: industry-quadrupler-2.dat
+        id: 084b0000
+        model: 5ad0e817-badb57f1-084b0000
+        name: IH28x74_3HTOut14_084B
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: 8000004d
+        name: IH28x74_3_8000004D
+        pollution: 10
+        pollutionRadius: 7
+        power: 66
+        water: 66
+        waterPollution: 4
+        waterPollutionRadius: 8
+        worth: 4136
+      - bulldoze: 160
+        capacity:
+          iht: 272
+        filename: industry-quadrupler-2.dat
+        id: '08480000'
+        model: 5ad0e817-badb57f1-08480000
+        name: IH40x60_3HTOut11_0848
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: 8000004b
+        name: IH40x60_3_8000004B
+        pollution: 7
+        pollutionRadius: 7
+        power: 48
+        water: 48
+        waterPollution: 3
+        waterPollutionRadius: 8
+        worth: 2992
+      - bulldoze: 290
+        capacity:
+          iht: 176
+        filename: industry-quadrupler-2.dat
+        id: '08450000'
+        model: 5ad0e817-badb57f1-08450000
+        name: IH28x40_2HTOut8_0845
+      - filename: industry-quadrupler-2.dat
+        flamability: 45
+        garbage: 4
+        id: '80000048'
+        name: IH28x40_2_80000048
+        pollution: 5
+        pollutionRadius: 6
+        power: 29
+        water: 27
+        waterPollution: 2
+        waterPollutionRadius: 7
+        worth: 2200
+      - bulldoze: 290
+        capacity:
+          iht: 108
+        filename: industry-quadrupler-2.dat
+        id: '08420000'
+        model: 5ad0e817-badb57f1-08420000
+        name: IH26x26_1HTOut5_0842
+      - filename: industry-quadrupler-2.dat
+        flamability: 40
+        garbage: 4
+        id: '80000046'
+        name: IH26x26_1_80000046
+        pollution: 3
+        pollutionRadius: 5
+        power: 17
+        water: 14
+        waterPollution: 2
+        waterPollutionRadius: 6
+        worth: 2538
+      - bulldoze: 160
+        capacity:
+          iht: 72
+        filename: industry-quadrupler-2.dat
+        id: 083f0000
+        model: 5ad0e817-badb57f1-083f0000
+        name: IH14x24_1HTOut2_083F
+      - filename: industry-quadrupler-2.dat
+        flamability: 40
+        garbage: 4
+        id: '80000044'
+        name: IH14x24_1_80000044
+        pollution: 2
+        pollutionRadius: 5
+        power: 11
+        water: 9
+        waterPollution: 1
+        waterPollutionRadius: 6
+        worth: 1692
+      - bulldoze: 160
+        capacity:
+          iht: 196
+        filename: industry-quadrupler-2.dat
+        id: 083c0000
+        model: 5ad0e817-badb57f1-083c0000
+        name: IH28x28_3HTMech7_083C
+      - bulldoze: 160
+        capacity:
+          iht: 116
+        filename: industry-quadrupler-2.dat
+        id: '08390000'
+        model: 5ad0e817-badb57f1-08390000
+        name: IH14x28_2HTMech4_0839
+      - filename: industry-quadrupler-2.dat
+        flamability: 45
+        garbage: 4
+        id: '80000041'
+        name: IH14x28_2_80000041
+        pollution: 3
+        pollutionRadius: 6
+        power: 20
+        water: 18
+        waterPollution: 2
+        waterPollutionRadius: 7
+        worth: 1500
+      - bulldoze: 100
+        capacity:
+          iht: 84
+        filename: industry-quadrupler-2.dat
+        id: '08360000'
+        model: 5ad0e817-badb57f1-08360000
+        name: IH14x14_1HTMech1_0836
+      - filename: industry-quadrupler-2.dat
+        flamability: 40
+        garbage: 4
+        id: '80000040'
+        name: IH14x14_1_80000040
+        pollution: 3
+        pollutionRadius: 5
+        power: 13
+        water: 11
+        waterPollution: 1
+        waterPollutionRadius: 6
+        worth: 1974
+      - bulldoze: 290
+        capacity:
+          iht: 288
+        filename: industry-quadrupler-2.dat
+        id: '08330000'
+        model: 5ad0e817-badb57f1-08330000
+        name: IH40x44_3HTAnchor9_0833
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: 8000003e
+        name: IH40x44_3_8000003E
+        pollution: 8
+        pollutionRadius: 7
+        power: 51
+        water: 51
+        waterPollution: 3
+        waterPollutionRadius: 8
+        worth: 3168
+      - bulldoze: 100
+        capacity:
+          iht: 128
+        filename: industry-quadrupler-2.dat
+        id: 082d0000
+        model: 5ad0e817-badb57f1-082d0000
+        name: IH28x28_1HTAnchor3_082D
+      - filename: industry-quadrupler-2.dat
+        flamability: 40
+        garbage: 4
+        id: 8000003a
+        name: IH28x28_1_8000003A
+        pollution: 4
+        pollutionRadius: 5
+        power: 20
+        water: 16
+        waterPollution: 2
+        waterPollutionRadius: 6
+        worth: 3008
+      - bulldoze: 160
+        capacity:
+          iht: 156
+        filename: industry-quadrupler-2.dat
+        id: '08670000'
+        model: 5ad0e817-badb57f1-08670000
+        name: IH28x40_2HTAnchor6_0867
+      - filename: industry-quadrupler-2.dat
+        flamability: 45
+        garbage: 4
+        id: 8000003c
+        name: IH28x40_2_8000003C
+        pollution: 4
+        pollutionRadius: 6
+        power: 26
+        water: 24
+        waterPollution: 2
+        waterPollutionRadius: 7
+        worth: 1950
+      - bulldoze: 290
+        capacity:
+          iht: 388
+        filename: industry-quadrupler-2.dat
+        id: 084c0000
+        model: 5ad0e817-badb57f1-084c0000
+        name: IH38x88_3HTOut15_084C
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: 8000004e
+        name: IH38x88_3_8000004E
+        pollution: 10
+        pollutionRadius: 7
+        power: 68
+        water: 68
+        waterPollution: 4
+        waterPollutionRadius: 8
+        worth: 4268
+      - bulldoze: 290
+        capacity:
+          iht: 364
+        filename: industry-quadrupler-2.dat
+        id: '08490000'
+        model: 5ad0e817-badb57f1-08490000
+        name: IH42x58_3HTOut12_0849
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: 8000004c
+        name: IH42x58_3_8000004C
+        pollution: 10
+        pollutionRadius: 7
+        power: 64
+        water: 64
+        waterPollution: 4
+        waterPollutionRadius: 8
+        worth: 4004
+      - bulldoze: 160
+        capacity:
+          iht: 204
+        filename: industry-quadrupler-2.dat
+        id: '08460000'
+        model: 5ad0e817-badb57f1-08460000
+        name: IH24x60_2HTOut9_0846
+      - filename: industry-quadrupler-2.dat
+        flamability: 45
+        garbage: 4
+        id: '80000049'
+        name: IH24x60_2_80000049
+        pollution: 6
+        pollutionRadius: 6
+        power: 34
+        water: 31
+        waterPollution: 2
+        waterPollutionRadius: 7
+        worth: 2550
+      - bulldoze: 290
+        capacity:
+          iht: 220
+        filename: industry-quadrupler-2.dat
+        id: 083d0000
+        model: 5ad0e817-badb57f1-083d0000
+        name: IH28x28_3HTMech8_083D
+      - filename: industry-quadrupler-2.dat
+        flamability: 50
+        garbage: 4
+        id: '80000042'
+        name: IH28x28_3_80000042
+        pollution: 6
+        pollutionRadius: 7
+        power: 37
+        water: 37
+        waterPollution: 2
+        waterPollutionRadius: 8
+        worth: 2288
+      - bulldoze: 290
+        capacity:
+          iht: 124
+        filename: industry-quadrupler-2.dat
+        id: 083a0000
+        model: 5ad0e817-badb57f1-083a0000
+        name: IH14x28_2HTMech5_083A
+      - bulldoze: 160
+        capacity:
+          iht: 132
+        filename: industry-quadrupler-2.dat
+        id: '082e0000'
+        model: 5ad0e817-badb57f1-082e0000
+        name: IH24x28_2HTAnchor4_082E
+      - filename: industry-quadrupler-2.dat
+        flamability: 45
+        garbage: 4
+        id: 8000003b
+        name: IH24x28_2_8000003B
+        pollution: 4
+        pollutionRadius: 6
+        power: 22
+        water: 20
+        waterPollution: 2
+        waterPollutionRadius: 7
+        worth: 1650
+      - bulldoze: 100
+        capacity:
+          iht: 80
+        filename: industry-quadrupler-2.dat
+        id: 082b0000
+        model: 5ad0e817-badb57f1-082b0000
+        name: IH14x28_1HTAnchor1_082B
+      - filename: industry-quadrupler-2.dat
+        flamability: 40
+        garbage: 4
+        id: '80000039'
+        name: IH14x28_1_80000039
+        pollution: 2
+        pollutionRadius: 5
+        power: 12
+        water: 10
+        waterPollution: 1
+        waterPollutionRadius: 6
+        worth: 1880
+      - bulldoze: 150
+        capacity:
+          im: 128
+        filename: industry-quadrupler-2.dat
+        id: '08650000'
+        model: 5ad0e817-badb57f1-08650000
+        name: IM42x42_2ManuAnchor8_0865
+      - filename: industry-quadrupler-2.dat
+        flamability: 70
+        garbage: 4
+        id: '80000027'
+        name: IM42x42_2_80000027
+        pollution: 8
+        pollutionRadius: 9
+        power: 8
+        water: 84
+        waterPollution: 5
+        waterPollutionRadius: 13
+        worth: 1600
+      - bulldoze: 270
+        capacity:
+          im: 232
+        filename: industry-quadrupler-2.dat
+        id: '08290000'
+        model: 5ad0e817-badb57f1-08290000
+        name: IM28x74_3ManuOut14_0829
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000037'
+        name: IM28x74_3_80000037
+        pollution: 15
+        pollutionRadius: 11
+        power: 14
+        water: 215
+        waterPollution: 11
+        waterPollutionRadius: 17
+        worth: 2436
+      - bulldoze: 150
+        capacity:
+          im: 212
+        filename: industry-quadrupler-2.dat
+        id: '08260000'
+        model: 5ad0e817-badb57f1-08260000
+        name: IM40x60_3ManuOut11_0826
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000035'
+        name: IM40x60_3_80000035
+        pollution: 14
+        pollutionRadius: 11
+        power: 12
+        water: 197
+        waterPollution: 10
+        waterPollutionRadius: 17
+        worth: 2226
+      - bulldoze: 270
+        capacity:
+          im: 136
+        filename: industry-quadrupler-2.dat
+        id: '08230000'
+        model: 5ad0e817-badb57f1-08230000
+        name: IM28x40_2ManuOut8_0823
+      - filename: industry-quadrupler-2.dat
+        flamability: 70
+        garbage: 4
+        id: '80000032'
+        name: IM28x40_2_80000032
+        pollution: 8
+        pollutionRadius: 9
+        power: 8
+        water: 89
+        waterPollution: 6
+        waterPollutionRadius: 13
+        worth: 1700
+      - bulldoze: 150
+        capacity:
+          im: 84
+        filename: industry-quadrupler-2.dat
+        id: 081d0000
+        model: 5ad0e817-badb57f1-081d0000
+        name: IM14x24_1ManuOut2_081D
+      - filename: industry-quadrupler-2.dat
+        flamability: 65
+        garbage: 6
+        id: 8000002e
+        name: IM14x24_1_8000002E
+        pollution: 5
+        pollutionRadius: 7
+        power: 5
+        water: 32
+        waterPollution: 4
+        waterPollutionRadius: 9
+        worth: 1932
+      - bulldoze: 150
+        capacity:
+          im: 192
+        filename: industry-quadrupler-2.dat
+        id: 081a0000
+        model: 5ad0e817-badb57f1-081a0000
+        name: IM28x28_3ManuMech7_081A
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: 8000002c
+        name: IM28x28_3_8000002C
+        pollution: 12
+        pollutionRadius: 11
+        power: 11
+        water: 174
+        waterPollution: 9
+        waterPollutionRadius: 17
+        worth: 1974
+      - bulldoze: 150
+        capacity:
+          im: 96
+        filename: industry-quadrupler-2.dat
+        id: '08170000'
+        model: 5ad0e817-badb57f1-08170000
+        name: IM14x28_2ManuMech4_0817
+      - filename: industry-quadrupler-2.dat
+        flamability: 70
+        garbage: 4
+        id: 8000002b
+        name: IM14x28_2_8000002B
+        pollution: 6
+        pollutionRadius: 9
+        power: 6
+        water: 63
+        waterPollution: 4
+        waterPollutionRadius: 13
+        worth: 1200
+      - bulldoze: 90
+        capacity:
+          im: 96
+        filename: industry-quadrupler-2.dat
+        id: '08140000'
+        model: 5ad0e817-badb57f1-08140000
+        name: IM18x32_1ManuMech1_0814
+      - filename: industry-quadrupler-2.dat
+        flamability: 65
+        garbage: 4
+        id: 8000002a
+        name: IM18x32_1_8000002A
+        pollution: 5
+        pollutionRadius: 7
+        power: 6
+        water: 36
+        waterPollution: 4
+        waterPollutionRadius: 9
+        worth: 2208
+      - bulldoze: 270
+        capacity:
+          im: 172
+        filename: industry-quadrupler-2.dat
+        id: '08110000'
+        model: 5ad0e817-badb57f1-08110000
+        name: IM40x44_2ManuAnchor9_0811
+      - filename: industry-quadrupler-2.dat
+        flamability: 70
+        garbage: 4
+        id: '80000028'
+        name: IM40x44_2_80000028
+        pollution: 10
+        pollutionRadius: 9
+        power: 10
+        water: 112
+        waterPollution: 7
+        waterPollutionRadius: 13
+        worth: 2150
+      - bulldoze: 150
+        capacity:
+          im: 136
+        filename: industry-quadrupler-2.dat
+        id: '080e0000'
+        model: 5ad0e817-badb57f1-080e0000
+        name: IM28x40_2ManuAnchor6_080E
+      - filename: industry-quadrupler-2.dat
+        flamability: 70
+        garbage: 4
+        id: '80000026'
+        name: IM28x40_2_80000026
+        pollution: 8
+        pollutionRadius: 9
+        power: 8
+        water: 89
+        waterPollution: 6
+        waterPollutionRadius: 13
+        worth: 1700
+      - bulldoze: 90
+        capacity:
+          im: 92
+        filename: industry-quadrupler-2.dat
+        id: 080b0000
+        model: 5ad0e817-badb57f1-080b0000
+        name: IM28x28_1ManuAnchor3_080B
+      - filename: industry-quadrupler-2.dat
+        flamability: 65
+        garbage: 4
+        id: '80000024'
+        name: IM28x28_1_80000024
+        pollution: 5
+        pollutionRadius: 7
+        power: 6
+        water: 35
+        waterPollution: 4
+        waterPollutionRadius: 9
+        worth: 2116
+      - bulldoze: 270
+        capacity:
+          im: 108
+        filename: industry-quadrupler-2.dat
+        id: '08660000'
+        model: 5ad0e817-badb57f1-08660000
+        name: IM26x26_2ManuOut5_0866
+      - filename: industry-quadrupler-2.dat
+        flamability: 70
+        garbage: 4
+        id: '80000030'
+        name: IM26x26_2_80000030
+        pollution: 7
+        pollutionRadius: 9
+        power: 7
+        water: 71
+        waterPollution: 5
+        waterPollutionRadius: 13
+        worth: 1350
+      - bulldoze: 270
+        capacity:
+          im: 312
+        filename: industry-quadrupler-2.dat
+        id: 082a0000
+        model: 5ad0e817-badb57f1-082a0000
+        name: IM38x88_3ManuOut15_082A
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000038'
+        name: IM38x88_3_80000038
+        pollution: 20
+        pollutionRadius: 11
+        power: 18
+        water: 289
+        waterPollution: 14
+        waterPollutionRadius: 17
+        worth: 3276
+      - bulldoze: 270
+        capacity:
+          im: 288
+        filename: industry-quadrupler-2.dat
+        id: '08270000'
+        model: 5ad0e817-badb57f1-08270000
+        name: IM42x58_3ManuOut12_0827
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000036'
+        name: IM42x58_3_80000036
+        pollution: 18
+        pollutionRadius: 11
+        power: 17
+        water: 267
+        waterPollution: 13
+        waterPollutionRadius: 17
+        worth: 3024
+      - bulldoze: 150
+        capacity:
+          im: 184
+        filename: industry-quadrupler-2.dat
+        id: '08240000'
+        model: 5ad0e817-badb57f1-08240000
+        name: IM24x60_3ManuOut9_0824
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000033'
+        name: IM24x60_3_80000033
+        pollution: 12
+        pollutionRadius: 11
+        power: 11
+        water: 171
+        waterPollution: 9
+        waterPollutionRadius: 17
+        worth: 1932
+      - bulldoze: 90
+        capacity:
+          im: 100
+        filename: industry-quadrupler-2.dat
+        id: '08210000'
+        model: 5ad0e817-badb57f1-08210000
+        name: IM28x44_2ManuOut6_0821
+      - filename: industry-quadrupler-2.dat
+        flamability: 70
+        garbage: 4
+        id: '80000031'
+        name: IM28x44_2_80000031
+        pollution: 6
+        pollutionRadius: 9
+        power: 6
+        water: 65
+        waterPollution: 4
+        waterPollutionRadius: 13
+        worth: 1250
+      - bulldoze: 270
+        capacity:
+          im: 180
+        filename: industry-quadrupler-2.dat
+        id: 081b0000
+        model: 5ad0e817-badb57f1-081b0000
+        name: IM28x28_3ManuMech8_081B
+      - bulldoze: 270
+        capacity:
+          im: 96
+        filename: industry-quadrupler-2.dat
+        id: '08180000'
+        model: 5ad0e817-badb57f1-08180000
+        name: IM14x28_2ManuMech5_0818
+      - bulldoze: 150
+        capacity:
+          im: 100
+        filename: industry-quadrupler-2.dat
+        id: 080c0000
+        model: 5ad0e817-badb57f1-080c0000
+        name: IM24x28_1ManuAnchor4_080C
+      - filename: industry-quadrupler-2.dat
+        flamability: 65
+        garbage: 4
+        id: '80000025'
+        name: IM24x28_1_80000025
+        pollution: 5
+        pollutionRadius: 7
+        power: 6
+        water: 38
+        waterPollution: 4
+        waterPollutionRadius: 9
+        worth: 2300
+      - bulldoze: 90
+        capacity:
+          im: 76
+        filename: industry-quadrupler-2.dat
+        id: '08090000'
+        model: 5ad0e817-badb57f1-08090000
+        name: IM14x28_1ManuAnchor1_0809
+      - filename: industry-quadrupler-2.dat
+        flamability: 65
+        garbage: 6
+        id: '80000023'
+        name: IM14x28_1_80000023
+        pollution: 5
+        pollutionRadius: 7
+        power: 5
+        water: 32
+        waterPollution: 4
+        waterPollutionRadius: 9
+        worth: 1932
+      - bulldoze: 270
+        capacity:
+          im: 232
+        filename: industry-quadrupler-2.dat
+        id: '08250000'
+        model: 5ad0e817-badb57f1-08250000
+        name: IM28x58_3ManuOut10_0825
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000034'
+        name: IM28x58_3_80000034
+        pollution: 15
+        pollutionRadius: 11
+        power: 14
+        water: 215
+        waterPollution: 11
+        waterPollutionRadius: 17
+        worth: 2436
+      - bulldoze: 150
+        capacity:
+          im: 100
+        filename: industry-quadrupler-2.dat
+        id: 081f0000
+        model: 5ad0e817-badb57f1-081f0000
+        name: IM26x28_2ManuOut4_081F
+      - filename: industry-quadrupler-2.dat
+        flamability: 70
+        garbage: 4
+        id: 8000002f
+        name: IM26x28_2_8000002F
+        pollution: 6
+        pollutionRadius: 9
+        power: 6
+        water: 65
+        waterPollution: 4
+        waterPollutionRadius: 13
+        worth: 1250
+      - bulldoze: 90
+        capacity:
+          im: 72
+        filename: industry-quadrupler-2.dat
+        id: 081c0000
+        model: 5ad0e817-badb57f1-081c0000
+        name: IM14x28_1ManuOut1_081C
+      - filename: industry-quadrupler-2.dat
+        flamability: 65
+        garbage: 5
+        id: 8000002d
+        name: IM14x28_1_8000002D
+        pollution: 4
+        pollutionRadius: 7
+        power: 5
+        water: 27
+        waterPollution: 3
+        waterPollutionRadius: 9
+        worth: 1656
+      - bulldoze: 270
+        capacity:
+          im: 228
+        filename: industry-quadrupler-2.dat
+        id: '08130000'
+        model: 5ad0e817-badb57f1-08130000
+        name: IM42x54_3ManuAnchor11_0813
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000029'
+        name: IM42x54_3_80000029
+        pollution: 15
+        pollutionRadius: 11
+        power: 13
+        water: 211
+        waterPollution: 10
+        waterPollutionRadius: 17
+        worth: 2394
+      - bulldoze: 150
+        capacity:
+          im: 92
+        filename: industry-quadrupler-2.dat
+        id: 080a0000
+        model: 5ad0e817-badb57f1-080a0000
+        name: IM14x28_1ManuAnchor2_080A
+      - bulldoze: 310
+        capacity:
+          id: 308
+        filename: industry-quadrupler-2.dat
+        id: '08620000'
+        model: 5ad0e817-badb57f1-08620000
+        name: ID28x28_3DirtyMech13_0862
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: '80000015'
+        name: ID28x28_2_80000015
+        pollution: 18
+        pollutionRadius: 16
+        power: 46
+        water: 118
+        waterPollution: 14
+        waterPollutionRadius: 20
+        worth: 2832
+      - bulldoze: 250
+        capacity:
+          id: 232
+        filename: industry-quadrupler-2.dat
+        id: 07f90000
+        model: 5ad0e817-badb57f1-07f90000
+        name: ID30x14_3DirtyOut8_07F9
+      - filename: industry-quadrupler-2.dat
+        flamability: 85
+        garbage: 4
+        id: 8000001d
+        name: ID30x14_3_8000001D
+        pollution: 19
+        pollutionRadius: 20
+        power: 60
+        water: 174
+        waterPollution: 14
+        waterPollutionRadius: 25
+        worth: 2436
+      - bulldoze: 200
+        capacity:
+          id: 100
+        filename: industry-quadrupler-2.dat
+        id: 07f60000
+        model: 5ad0e817-badb57f1-07f60000
+        name: ID24x16_2DirtyOut5_07F6
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: 8000001a
+        name: ID24x16_2_8000001A
+        pollution: 8
+        pollutionRadius: 16
+        power: 20
+        water: 50
+        waterPollution: 6
+        waterPollutionRadius: 20
+        worth: 1200
+      - bulldoze: 200
+        capacity:
+          id: 112
+        filename: industry-quadrupler-2.dat
+        id: 07ed0000
+        model: 5ad0e817-badb57f1-07ed0000
+        name: ID28x16_2DirtyMech8_07ED
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: '80000011'
+        name: ID28x16_2_80000011
+        pollution: 9
+        pollutionRadius: 16
+        power: 22
+        water: 56
+        waterPollution: 7
+        waterPollutionRadius: 20
+        worth: 1344
+      - bulldoze: 200
+        capacity:
+          id: 84
+        filename: industry-quadrupler-2.dat
+        id: 07ea0000
+        model: 5ad0e817-badb57f1-07ea0000
+        name: ID14x14_2DirtyMech5_07EA
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: 8000000f
+        name: ID14x14_2_8000000F
+        pollution: 7
+        pollutionRadius: 16
+        power: 17
+        water: 42
+        waterPollution: 5
+        waterPollutionRadius: 20
+        worth: 1008
+      - bulldoze: 90
+        capacity:
+          id: 60
+        filename: industry-quadrupler-2.dat
+        id: '07e70000'
+        model: 5ad0e817-badb57f1-07e70000
+        name: ID24x24_1DirtyMech2_07E7
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: 8000000c
+        name: ID24x24_1_8000000C
+        pollution: 5
+        pollutionRadius: 13
+        power: 8
+        water: 15
+        waterPollution: 4
+        waterPollutionRadius: 16
+        worth: 1320
+      - bulldoze: 250
+        capacity:
+          id: 632
+        filename: industry-quadrupler-2.dat
+        id: '07e40000'
+        model: 5ad0e817-badb57f1-07e40000
+        name: ID64x46_3DirtyAnchor11_07E4
+      - filename: industry-quadrupler-2.dat
+        flamability: 85
+        garbage: 4
+        id: '80000009'
+        name: ID64x46_3_80000009
+        pollution: 52
+        pollutionRadius: 20
+        power: 162
+        water: 474
+        waterPollution: 36
+        waterPollutionRadius: 25
+        worth: 6636
+      - bulldoze: 200
+        capacity:
+          id: 264
+        filename: industry-quadrupler-2.dat
+        id: '07e10000'
+        model: 5ad0e817-badb57f1-07e10000
+        name: ID48x46_2DirtyAnchor8_07E1
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: '80000007'
+        name: ID48x46_2_80000007
+        pollution: 21
+        pollutionRadius: 16
+        power: 52
+        water: 134
+        waterPollution: 16
+        waterPollutionRadius: 20
+        worth: 3216
+      - bulldoze: 90
+        capacity:
+          id: 72
+        filename: industry-quadrupler-2.dat
+        id: 07de0000
+        model: 5ad0e817-badb57f1-07de0000
+        name: ID30x30_1DirtyAnchor5_07DE
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000004'
+        name: ID30x30_1_80000004
+        pollution: 5
+        pollutionRadius: 13
+        power: 10
+        water: 18
+        waterPollution: 5
+        waterPollutionRadius: 16
+        worth: 1584
+      - bulldoze: 250
+        capacity:
+          id: 68
+        filename: industry-quadrupler-2.dat
+        id: '08630000'
+        model: 5ad0e817-badb57f1-08630000
+        name: ID30x30_1DirtyAnchor55_0863
+      - bulldoze: 250
+        capacity:
+          id: 304
+        filename: industry-quadrupler-2.dat
+        id: 07fa0000
+        model: 5ad0e817-badb57f1-07fa0000
+        name: ID30x30_3DirtyOut9_07FA
+      - filename: industry-quadrupler-2.dat
+        flamability: 85
+        garbage: 4
+        id: 8000001e
+        name: ID30x30_3_8000001E
+        pollution: 25
+        pollutionRadius: 20
+        power: 78
+        water: 228
+        waterPollution: 18
+        waterPollutionRadius: 25
+        worth: 3192
+      - bulldoze: 200
+        capacity:
+          id: 116
+        filename: industry-quadrupler-2.dat
+        id: 07f70000
+        model: 5ad0e817-badb57f1-07f70000
+        name: ID28x16_2DirtyOut6_07F7
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: 8000001b
+        name: ID28x16_2_8000001B
+        pollution: 9
+        pollutionRadius: 16
+        power: 23
+        water: 58
+        waterPollution: 7
+        waterPollutionRadius: 20
+        worth: 1392
+      - bulldoze: 250
+        capacity:
+          id: 400
+        filename: industry-quadrupler-2.dat
+        id: 07f10000
+        model: 5ad0e817-badb57f1-07f10000
+        name: ID48x32_3DirtyMech12_07F1
+      - bulldoze: 250
+        capacity:
+          id: 368
+        filename: industry-quadrupler-2.dat
+        id: 07ee0000
+        model: 5ad0e817-badb57f1-07ee0000
+        name: ID32x32_3DirtyMech9_07EE
+      - filename: industry-quadrupler-2.dat
+        flamability: 85
+        garbage: 4
+        id: '80000012'
+        name: ID32x32_3_80000012
+        pollution: 30
+        pollutionRadius: 20
+        power: 95
+        water: 276
+        waterPollution: 21
+        waterPollutionRadius: 25
+        worth: 3864
+      - bulldoze: 200
+        capacity:
+          id: 164
+        filename: industry-quadrupler-2.dat
+        id: 07eb0000
+        model: 5ad0e817-badb57f1-07eb0000
+        name: ID28x28_2DirtyMech6_07EB
+      - bulldoze: 250
+        capacity:
+          id: 600
+        filename: industry-quadrupler-2.dat
+        id: '07e50000'
+        model: 5ad0e817-badb57f1-07e50000
+        name: ID64x62_3DirtyAnchor12_07E5
+      - filename: industry-quadrupler-2.dat
+        flamability: 85
+        garbage: 4
+        id: 8000000a
+        name: ID64x62_3_8000000A
+        pollution: 49
+        pollutionRadius: 20
+        power: 154
+        water: 450
+        waterPollution: 34
+        waterPollutionRadius: 25
+        worth: 6300
+      - bulldoze: 250
+        capacity:
+          id: 476
+        filename: industry-quadrupler-2.dat
+        id: '07e20000'
+        model: 5ad0e817-badb57f1-07e20000
+        name: ID48x32_3DirtyAnchor9_07E2
+      - filename: industry-quadrupler-2.dat
+        flamability: 85
+        garbage: 4
+        id: '80000008'
+        name: ID48x32_3_80000008
+        pollution: 39
+        pollutionRadius: 20
+        power: 122
+        water: 357
+        waterPollution: 27
+        waterPollutionRadius: 25
+        worth: 4998
+      - bulldoze: 200
+        capacity:
+          id: 112
+        filename: industry-quadrupler-2.dat
+        id: 07df0000
+        model: 5ad0e817-badb57f1-07df0000
+        name: ID22x14_2DirtyAnchor6_07DF
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: '80000005'
+        name: ID22x14_2_80000005
+        pollution: 9
+        pollutionRadius: 16
+        power: 22
+        water: 56
+        waterPollution: 7
+        waterPollutionRadius: 20
+        worth: 1344
+      - bulldoze: 90
+        capacity:
+          id: 92
+        filename: industry-quadrupler-2.dat
+        id: 07dc0000
+        model: 5ad0e817-badb57f1-07dc0000
+        name: ID45x30_1DirtyAnchor3_07DC
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000002'
+        name: ID45x30_1_80000002
+        pollution: 7
+        pollutionRadius: 13
+        power: 13
+        water: 23
+        waterPollution: 6
+        waterPollutionRadius: 16
+        worth: 2024
+      - bulldoze: 250
+        capacity:
+          id: 376
+        filename: industry-quadrupler-2.dat
+        id: 07fb0000
+        model: 5ad0e817-badb57f1-07fb0000
+        name: ID46x32_3DirtyOut10_07FB
+      - filename: industry-quadrupler-2.dat
+        flamability: 85
+        garbage: 4
+        id: 8000001f
+        name: ID46x32_3_8000001F
+        pollution: 31
+        pollutionRadius: 20
+        power: 97
+        water: 282
+        waterPollution: 22
+        waterPollutionRadius: 25
+        worth: 3948
+      - bulldoze: 250
+        capacity:
+          id: 228
+        filename: industry-quadrupler-2.dat
+        id: 07f80000
+        model: 5ad0e817-badb57f1-07f80000
+        name: ID32x16_3DirtyOut7_07F8
+      - filename: industry-quadrupler-2.dat
+        flamability: 85
+        garbage: 4
+        id: 8000001c
+        name: ID32x16_3_8000001C
+        pollution: 19
+        pollutionRadius: 20
+        power: 59
+        water: 171
+        waterPollution: 13
+        waterPollutionRadius: 25
+        worth: 2394
+      - bulldoze: 200
+        capacity:
+          id: 72
+        filename: industry-quadrupler-2.dat
+        id: 07f50000
+        model: 5ad0e817-badb57f1-07f50000
+        name: ID14x14_2DirtyOut4_07F5
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: '80000019'
+        name: ID14x14_2_80000019
+        pollution: 6
+        pollutionRadius: 16
+        power: 14
+        water: 36
+        waterPollution: 5
+        waterPollutionRadius: 20
+        worth: 864
+      - bulldoze: 250
+        capacity:
+          id: 296
+        filename: industry-quadrupler-2.dat
+        id: 07ef0000
+        model: 5ad0e817-badb57f1-07ef0000
+        name: ID32x16_3DirtyMech10_07EF
+      - bulldoze: 200
+        capacity:
+          id: 120
+        filename: industry-quadrupler-2.dat
+        id: 07ec0000
+        model: 5ad0e817-badb57f1-07ec0000
+        name: ID20x16_2DirtyMech7_07EC
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: '80000010'
+        name: ID20x16_2_80000010
+        pollution: 9
+        pollutionRadius: 16
+        power: 24
+        water: 60
+        waterPollution: 7
+        waterPollutionRadius: 20
+        worth: 1440
+      - bulldoze: 90
+        capacity:
+          id: 140
+        filename: industry-quadrupler-2.dat
+        id: '07e90000'
+        model: 5ad0e817-badb57f1-07e90000
+        name: ID28x28_2DirtyMech4_07E9
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: 8000000e
+        name: ID28x28_2_8000000E
+        pollution: 11
+        pollutionRadius: 16
+        power: 28
+        water: 70
+        waterPollution: 8
+        waterPollutionRadius: 20
+        worth: 1680
+      - bulldoze: 250
+        capacity:
+          id: 268
+        filename: industry-quadrupler-2.dat
+        id: '07e30000'
+        model: 5ad0e817-badb57f1-07e30000
+        name: ID48x46_2DirtyAnchor10_07E3
+      - bulldoze: 200
+        capacity:
+          id: 184
+        filename: industry-quadrupler-2.dat
+        id: '07e00000'
+        model: 5ad0e817-badb57f1-07e00000
+        name: ID48x30_2DirtyAnchor7_07E0
+      - filename: industry-quadrupler-2.dat
+        flamability: 80
+        garbage: 4
+        id: '80000006'
+        name: ID48x30_2_80000006
+        pollution: 14
+        pollutionRadius: 16
+        power: 36
+        water: 92
+        waterPollution: 11
+        waterPollutionRadius: 20
+        worth: 2208
+      - bulldoze: 90
+        capacity:
+          id: 72
+        filename: industry-quadrupler-2.dat
+        id: 07dd0000
+        model: 5ad0e817-badb57f1-07dd0000
+        name: ID30x24_1DirtyAnchor4_07DD
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000003'
+        name: ID30x24_1_80000003
+        pollution: 5
+        pollutionRadius: 13
+        power: 10
+        water: 18
+        waterPollution: 5
+        waterPollutionRadius: 16
+        worth: 1584
+      - bulldoze: 90
+        capacity:
+          id: 27
+        filename: industry-quadrupler-2.dat
+        id: 07da0000
+        model: 5ad0e817-badb57f1-07da0000
+        name: ID14x16_1DirtyAnchor1_07DA
+      - filename: industry-quadrupler-2.dat
+        flamability: 75
+        garbage: 4
+        id: '80000001'
+        name: ID14x16_1_80000001
+        pollution: 3
+        pollutionRadius: 13
+        power: 5
+        water: 9
+        waterPollution: 3
+        waterPollutionRadius: 16
+        worth: 792
+      - bulldoze: 101
+        capacity:
+          iht: 160
+        filename: industry-quadrupler-2.dat
+        id: '08430000'
+        model: 5ad0e817-badb57f1-08430000
+        name: IH28x44_2HTOut6_0843
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\r\n\tThis mod was created to make the industrial buildings more realistic in the game. As everyone knows, factories in fact employ hundreds or thousands of people, but in SimCity 4 there is hardly a single operation that offers more than 100 jobs. The number of jobs is quadrupled with the installation of this mod.\r\n</p>\r\n\r\n<p>\r\n\tAll heavy, manufacturing and high-tech industries now offer four times the number of jobs. This means that the largest industrial building in the game now provides over 600 instead of just over 150 jobs. Filler buildings (burners, small warehouses, etc.) still have the old values, and I have only modified the larger industrial (anchor) buildings. In addition, I have doubled the amount of revenue of the modified buildings. Otherwise, with the increased number of jobs, industrial demand can be met more quickly, making it difficult to keep industrial cities afloat.\r\n</p>\r\n\r\n<p>\r\n\tIn order to make this mod effective, you have to load all the cities of your region(s) after the installation and save them once, otherwise the changes in the job number will not take effect. After opening a city, the demand for industry will most likely fall sharply and many industrial buildings will be abandoned. On the other hand, the demand for residential areas will sooner or later increase sharply due to the increased number of jobs. It is therefore advisable to remove a large part of the industrial zones after loading the cities, so as not to overbalance the game.\r\n</p>\r\n\r\n<p>\r\n\tThis download is compatible with all versions of SimCity 4.\r\n</p>\r\n\r\n<p>\r\n\t<br>\r\n\t<span style=\"font-size:12px;\"><strong>Staff Note:</strong> For technical reasons beyond the author's control, the original file entry was no longer available hosted on the STEX. This re-upload restores it on the grounds of good faith for the benefit of the community.</span>\r\n</p>\r\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: industry_quadrupler.zip
     files:
       - industry-quadrupler-2.dat
@@ -881,16 +2231,12 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2017_11/01-industry-quadrupler-main.jpg.c091cbdcd6b393f52323f9d07a0f1619.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2017_11/02-industry-quadrupler-query.jpg.95e76586770c9fe98b3285d551a734e4.jpg
     lastModified: 2017-11-27T03:07:27.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Industry Quadrupler
-    props: []
     sha256: c637879c529a1e66a04987e877a5180e8de07372777fcf81a74b487df59f188c
     size: 8270
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_11/01-industry-quadrupler-main.thumb.jpg.3a858f3c0a4f900cf2f806fcee87441f.jpg
     uncompressed: 39867
     url: https://community.simtropolis.com/files/file/21293-industry-quadrupler/
@@ -1143,13 +2489,306 @@ assets:
       - toroca
     buildings:
       - bulldoze: 10
+        category: transport
+        cost: 200
+        filename: tollboothboost-alternate-faresx1-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 038f0000
+        maintenance: 12
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-1f5c0000
+        name: Ut12x32_TollBooth_road
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx1-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 2c990000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothGRHwy_2C99
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx1-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5e0000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-1f5e0000
+        name: Ut12X32_TollBoothAve_1F5E
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx1-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5d0000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothHwy_1F5D
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        category: transport
+        cost: 200
+        filename: tollboothboost-alternate-faresx2-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 038f0000
+        maintenance: 12
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-1f5c0000
+        name: Ut12x32_TollBooth_road
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx2-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 2c990000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothGRHwy_2C99
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx2-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5e0000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-1f5e0000
+        name: Ut12X32_TollBoothAve_1F5E
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx2-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5d0000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothHwy_1F5D
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        category: transport
+        cost: 200
+        filename: tollboothboost-alternate-faresx5-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 038f0000
+        maintenance: 12
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-1f5c0000
+        name: Ut12x32_TollBooth_road
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx5-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 2c990000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothGRHwy_2C99
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx5-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5e0000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-1f5e0000
+        name: Ut12X32_TollBoothAve_1F5E
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-alternate-faresx5-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5d0000
+        maintenance: 12
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothHwy_1F5D
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        category: transport
+        cost: 200
+        filename: tollboothboost-standard-faresx1-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 038f0000
+        maintenance: 10
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-1f5c0000
+        name: Ut12x32_TollBooth_road
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-standard-faresx1-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 2c990000
+        maintenance: 10
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothGRHwy_2C99
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-standard-faresx1-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5e0000
+        maintenance: 10
+        model: 5ad0e817-badb57f1-1f5e0000
+        name: Ut12X32_TollBoothAve_1F5E
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-standard-faresx1-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5d0000
+        maintenance: 10
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothHwy_1F5D
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        category: transport
+        cost: 200
+        filename: tollboothboost-standard-faresx2-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 038f0000
+        maintenance: 10
+        menu: MiscTransit
+        model: 5ad0e817-badb57f1-1f5c0000
+        name: Ut12x32_TollBooth_road
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-standard-faresx2-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 2c990000
+        maintenance: 10
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothGRHwy_2C99
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-standard-faresx2-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5e0000
+        maintenance: 10
+        model: 5ad0e817-badb57f1-1f5e0000
+        name: Ut12X32_TollBoothAve_1F5E
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        cost: 200
+        filename: tollboothboost-standard-faresx2-v2.dat
+        flamability: 38
+        garbage: 1
+        id: 1f5d0000
+        maintenance: 10
+        model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothHwy_1F5D
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 10
+        category: transport
         cost: 200
         filename: tollboothboost-standard-faresx5-v2.dat
         flamability: 38
         garbage: 1
         id: 038f0000
         maintenance: 10
+        menu: MiscTransit
         model: 5ad0e817-badb57f1-1f5c0000
+        name: Ut12x32_TollBooth_road
         pollution: 1
         pollutionRadius: 1
         power: 1
@@ -1163,6 +2802,7 @@ assets:
         id: 2c990000
         maintenance: 10
         model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothGRHwy_2C99
         pollution: 1
         pollutionRadius: 1
         power: 1
@@ -1176,6 +2816,7 @@ assets:
         id: 1f5e0000
         maintenance: 10
         model: 5ad0e817-badb57f1-1f5e0000
+        name: Ut12X32_TollBoothAve_1F5E
         pollution: 1
         pollutionRadius: 1
         power: 1
@@ -1189,6 +2830,7 @@ assets:
         id: 1f5d0000
         maintenance: 10
         model: 5ad0e817-badb57f1-00000000
+        name: Ut12X32_TollBoothHwy_1F5D
         pollution: 1
         pollutionRadius: 1
         power: 1
@@ -1197,7 +2839,6 @@ assets:
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>Updated Version 2.0 Oct 21/2003</p>\n<p>This mod increases the capacity of toll booths, and there are several versions to choose from to allow users to have higher toll charges if they wish. See the included Readme for further details on version selection.</p>\n<p><br>Compatibility: Rush Hour/Deluxe ONLY</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: TollBoothBoost.zip
     files:
       - readme.html
@@ -1210,16 +2851,12 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0011/6115f56dc2b5545471315af5a10c193c-default.jpg
     lastModified: 2003-10-20T23:00:00.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Toll Booth Booster V2.0
-    props: []
     sha256: 95ed1f2f036116c69cde91cb34882cb6a521b090f49b9f6700670b819724fc5a
     size: 9116
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-6115f56dc2b5545471315af5a10c193c-default.jpg
     uncompressed: 21672
     url: https://community.simtropolis.com/files/file/21335-toll-booth-booster-v20/
@@ -1238,25 +2875,125 @@ assets:
     authors:
       - toroca
     buildings:
+      - bulldoze: 6300
+        category: rewards
+        cost: 50000
+        filename: noradiation-advancedresearchcenter.dat
+        flamability: 36
+        garbage: 15
+        id: 032f0000
+        jobs:
+          $$: 92
+          $$$: 31
+        maintenance: 280
+        menu: Rewards
+        model: 5ad0e817-badb57f1-032f0000
+        name: RW21x21_AdvResearchCenter_032F
+        pollution: 3
+        pollutionRadius: 2
+        power: 65
+        rating: -3
+        ratingRadius: 220
+        relief:
+          iht: 150000
+        submenu: Rewards
+        water: 350
+        waterPollution: 4
+        waterPollutionRadius: 3
+      - bulldoze: 45000
+        category: rewards
+        filename: noradiation-area51.dat
+        flamability: 40
+        garbage: 10
+        id: '03960000'
+        jobs:
+          $: 45
+        maintenance: 380
+        menu: Rewards
+        model: 5ad0e817-badb57f1-03960000
+        name: RW18x14_AreaControlTower_03960000
+        pollution: 12
+        pollutionRadius: 3
+        power: 300
+        rating: -7
+        ratingRadius: 440
+        relief:
+          im: 100000
+        submenu: Rewards
+        water: 150
+        waterPollution: 18
+        waterPollutionRadius: 4
+      - bulldoze: 17500
+        category: rewards
+        filename: noradiation-armybase.dat
+        flamability: 45
+        garbage: 20
+        id: '03460000'
+        jobs:
+          $: 45
+        maintenance: 350
+        menu: Rewards
+        model: 5ad0e817-badb57f1-03460000
+        name: RW64x96_ArmyBase_0346
+        pollution: 4
+        pollutionRadius: 4
+        power: 335
+        rating: -7
+        ratingRadius: 440
+        relief:
+          im: 100000
+        submenu: Rewards
+        water: 250
+        waterPollution: 5
+        waterPollutionRadius: 5
+      - bulldoze: 3000
+        category: health,rewards
+        cost: 26000
+        filename: noradiation-diseaseresearchcenter.dat
+        flamability: 35
+        garbage: 10
+        id: 033f0000
+        jobs:
+          $$: 80
+          $$$: 32
+        maintenance: 180
+        menu: Health
+        model: 5ad0e817-badb57f1-033f0000
+        name: RW36x50_DiseaseCtr_033F
+        pollution: 3
+        pollutionRadius: 3
+        power: 55
+        rating: 2
+        ratingRadius: 440
+        relief:
+          r$$: 10000
+          r$$$: 10000
+        submenu: Rewards
+        water: 210
+        waterPollution: 2
+        waterPollutionRadius: 4
       - bulldoze: 20000
+        category: rewards
         filename: noradiation-toxicwastedump.dat
         flamability: 77
         garbage: 35
         id: '03410000'
         maintenance: 400
+        menu: Rewards
         model: 5ad0e817-badb57f1-03410000
+        name: RW40x40_ToxicDump_0341
         pollution: 44
         pollutionRadius: 8
         power: 20
         rating: -10
         ratingRadius: 440
+        submenu: Rewards
         water: 200
         waterPollution: 75
         waterPollutionRadius: 10
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>Updated Version 1.1 Oct 21/2003</p>\n<p>This mod allows the user to remove radiation pollution from any of the five rewards that produce it. See the included Readme for further details.<br></p>\n<p>Compatibility: Rush Hour/Deluxe ONLY </p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: NoRadiationRewards.zip
     files:
       - noradiation-advancedresearchcenter.dat
@@ -1268,16 +3005,12 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0010/5543b82ffe2764420e400f3e33ddcbbb-default.jpg
     lastModified: 2003-10-20T23:00:00.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: No Radiation Reward v1.1
-    props: []
     sha256: db2dfe000acdb6e686f5767ad7d6c8b1a3b8333bd4ee50d6b51263e3e2c29e2d
     size: 6220
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-5543b82ffe2764420e400f3e33ddcbbb-default.jpg
     uncompressed: 10075
     url: https://community.simtropolis.com/files/file/21338-no-radiation-reward-v11/
@@ -1287,72 +3020,19 @@ assets:
     authors:
       - toroca
     buildings:
-      - bulldoze: 4950
-        capacity:
-          cs$: 8
-          cs$$: 8
-          cs$$$: 8
-        cost: 55000
-        filename: CoitTower.dat
-        flamability: 10
-        garbage: 3
-        id: '10010000'
-        maintenance: 110
-        model: 5ad0e817-badb57f1-10010000
-        power: 1
-        rating: 5
-        ratingRadius: 256
-        water: 7
-        waterPollution: 1
-        waterPollutionRadius: 2
-      - bulldoze: 8100
-        capacity:
-          cs$: 22
-          cs$$: 22
-        cost: 90000
-        filename: PalaceOfFineArts.dat
-        flamability: 30
-        garbage: 4
-        id: '10020000'
-        maintenance: 180
-        model: 5ad0e817-badb57f1-10020000
-        pollution: 1
-        pollutionRadius: 1
-        power: 20
-        rating: 6
-        ratingRadius: 256
-        water: 150
-        waterPollution: 1
-        waterPollutionRadius: 2
-      - bulldoze: 9900
-        capacity:
-          co$$: 7102
-          co$$$: 3382
-        cost: 110000
-        filename: BankOfAmerica.dat
-        flamability: 40
-        garbage: 39
-        id: '10030000'
-        maintenance: 210
-        model: 5ad0e817-badb57f1-10030000
-        pollution: 5
-        pollutionRadius: 6
-        power: 600
-        rating: 6
-        ratingRadius: 256
-        water: 1300
-        waterPollution: 5
-        waterPollutionRadius: 7
       - bulldoze: 9900
         capacity:
           co$$: 2825
+        category: landmarks
         cost: 110000
-        filename: AllInOne.dat
+        filename: 63Building.dat
         flamability: 10
         garbage: 39
         id: 04b80000
         maintenance: 210
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b80000
+        name: Lm64x72_KoreaLifeBldg_04B8
         pollution: 5
         pollutionRadius: 6
         power: 600
@@ -1365,13 +3045,16 @@ assets:
         capacity:
           cs$: 15
           cs$$: 15
+        category: landmarks
         cost: 90000
-        filename: AllInOne.dat
+        filename: AdlerPlanetarium.dat
         flamability: 18
         garbage: 6
         id: '04890000'
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04890000
+        name: LM96x96_AdlerPlanetarium_0489
         pollution: 1
         pollutionRadius: 1
         power: 25
@@ -1384,13 +3067,16 @@ assets:
         capacity:
           cs$: 15
           cs$$: 15
+        category: landmarks
         cost: 50000
-        filename: AllInOne.dat
+        filename: Alcatraz.dat
         flamability: 36
         garbage: 2
         id: '03260000'
         maintenance: 100
+        menu: Landmarks
         model: 5ad0e817-badb57f1-03260000
+        name: Lm80x160_Alcatraz_0326
         pollution: 1
         pollutionRadius: 1
         power: 1
@@ -1403,13 +3089,16 @@ assets:
         capacity:
           co$$: 11945
           co$$$: 6925
+        category: landmarks
         cost: 180000
-        filename: BankOfChinaTower.dat
+        filename: AllInOne.dat
         flamability: 36
         garbage: 15
         id: 04c40000
         maintenance: 300
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c40000
+        name: Lm52x52_BankOfChinaTower_04C4
         pollution: 4
         pollutionRadius: 4
         power: 250
@@ -1421,13 +3110,16 @@ assets:
       - bulldoze: 15300
         capacity:
           co$$: 7692
+        category: landmarks
         cost: 170000
-        filename: ChryslerBuilding.dat
+        filename: AllInOne.dat
         flamability: 35
         garbage: 12
         id: 04d30000
         maintenance: 330
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d30000
+        name: Lm62x62_ChryslerBuilding_04D3
         pollution: 3
         pollutionRadius: 4
         power: 250
@@ -1441,13 +3133,16 @@ assets:
           cs$: 139
           cs$$: 139
           cs$$$: 139
+        category: landmarks
         cost: 225000
-        filename: CNTower.dat
+        filename: AllInOne.dat
         flamability: 15
         garbage: 4
         id: 04db0000
         maintenance: 440
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04db0000
+        name: Lm85x98_CNtower_04DB
         power: 20
         rating: 7
         ratingRadius: 256
@@ -1458,24 +3153,30 @@ assets:
         capacity:
           cs$: 2
           cs$$: 2
+        category: landmarks
         cost: 30000
-        filename: HollywoodSign.dat
+        filename: AllInOne.dat
         id: 04d20000
         maintenance: 60
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d20000
+        name: Lm104x6_Hollywoodsign_04D2
         power: 1
         rating: 2
         ratingRadius: 256
       - bulldoze: 14850
         capacity:
           co$$: 6387
+        category: landmarks
         cost: 165000
-        filename: JohnHancockCenter.dat
+        filename: AllInOne.dat
         flamability: 40
         garbage: 43
         id: 04d00000
         maintenance: 320
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d00000
+        name: Lm84x52_JohnHancockCenter_04D0
         pollution: 6
         pollutionRadius: 6
         power: 650
@@ -1484,17 +3185,42 @@ assets:
         water: 1500
         waterPollution: 5
         waterPollutionRadius: 7
+      - bulldoze: 8100
+        capacity:
+          cs$: 15
+          cs$$: 15
+        category: landmarks
+        cost: 90000
+        filename: AllInOne.dat
+        flamability: 18
+        garbage: 6
+        id: '04890000'
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04890000
+        name: LM96x96_AdlerPlanetarium_0489
+        pollution: 1
+        pollutionRadius: 1
+        power: 25
+        rating: 7
+        ratingRadius: 256
+        water: 45
+        waterPollution: 1
+        waterPollutionRadius: 2
       - bulldoze: 4950
         capacity:
           cs$: 272
           cs$$: 272
+        category: landmarks
         cost: 70000
-        filename: GlobeArena.dat
+        filename: AllInOne.dat
         flamability: 30
         garbage: 15
         id: 04bc0000
         maintenance: 140
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04bc0000
+        name: Lm148x112_GlobeArena_04BC
         pollution: 2
         pollutionRadius: 2
         power: 40
@@ -1507,12 +3233,15 @@ assets:
         capacity:
           cs$: 8
           cs$$: 8
+        category: landmarks
         cost: 55000
-        filename: ArcDeTriomphe.dat
+        filename: AllInOne.dat
         garbage: 5
         id: 04c10000
         maintenance: 110
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c10000
+        name: Lm38x22_ArcTriomphe_04C1
         pollution: 1
         pollutionRadius: 1
         power: 1
@@ -1525,13 +3254,16 @@ assets:
         capacity:
           cs$: 7
           cs$$: 7
+        category: landmarks
         cost: 60000
-        filename: BrandenburgGate.dat
+        filename: AllInOne.dat
         flamability: 34
         garbage: 5
         id: 04b70000
         maintenance: 120
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b70000
+        name: Lm72x34_BrandenburgGate_04B7
         pollution: 1
         pollutionRadius: 1
         power: 2
@@ -1543,13 +3275,16 @@ assets:
       - bulldoze: 4500
         capacity:
           co$$: 531
+        category: landmarks
         cost: 50000
-        filename: CapitolRecordsBuilding.dat
+        filename: AllInOne.dat
         flamability: 34
         garbage: 10
         id: 04b10000
         maintenance: 100
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b10000
+        name: Lm80x48_CapitolRecordsBuilding_04B1
         pollution: 2
         pollutionRadius: 2
         power: 125
@@ -1560,31 +3295,80 @@ assets:
         waterPollutionRadius: 3
       - bulldoze: 4500
         capacity:
-          co$$: 743
+          cs$: 15
+          cs$$: 15
+        category: landmarks
         cost: 50000
-        filename: CaliforniaPlaza.dat
+        filename: AllInOne.dat
+        flamability: 36
+        garbage: 2
+        id: '03260000'
+        maintenance: 100
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-03260000
+        name: Lm80x160_Alcatraz_0326
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        rating: -2
+        ratingRadius: 256
+        water: 5
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 4500
+        capacity:
+          co$$: 743
+        category: landmarks
+        cost: 50000
+        filename: AllInOne.dat
         flamability: 37
         garbage: 10
         id: 04dc0000
         maintenance: 100
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04dc0000
+        name: Lm88x124_CaliforniaPlaza_04DC
         pollution: 2
         pollutionRadius: 2
         power: 125
         water: 350
         waterPollution: 2
         waterPollutionRadius: 3
+      - bulldoze: 4950
+        capacity:
+          cs$: 8
+          cs$$: 8
+          cs$$$: 8
+        category: landmarks
+        cost: 55000
+        filename: AllInOne.dat
+        flamability: 10
+        garbage: 3
+        id: '10010000'
+        maintenance: 110
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-10010000
+        name: Lm60x60_CoitTower_1001
+        power: 1
+        rating: 5
+        ratingRadius: 256
+        water: 7
+        waterPollution: 1
+        waterPollutionRadius: 2
       - bulldoze: 4500
         capacity:
           cs$: 82
           cs$$: 37
+        category: landmarks
         cost: 50000
-        filename: FaneuilHall.dat
+        filename: AllInOne.dat
         flamability: 33
         garbage: 9
         id: 04cf0000
         maintenance: 100
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04cf0000
+        name: Lm24x30_BostonFaneuilHall_04CF
         pollution: 1
         pollutionRadius: 2
         power: 50
@@ -1596,13 +3380,16 @@ assets:
       - bulldoze: 4950
         capacity:
           co$$: 698
+        category: landmarks
         cost: 55000
-        filename: SmithTower.dat
+        filename: AllInOne.dat
         flamability: 34
         garbage: 11
         id: 04d80000
         maintenance: 110
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d80000
+        name: Lm45x35_SmithTower_04D8
         pollution: 3
         pollutionRadius: 4
         power: 215
@@ -1615,25 +3402,31 @@ assets:
         capacity:
           cs$: 5
           cs$$: 5
+        category: landmarks
         cost: 50000
-        filename: TheSphinx.dat
+        filename: AllInOne.dat
         garbage: 2
         id: 04d10000
         maintenance: 100
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d10000
+        name: Lm64x24_Sphynx_04D1
         rating: 7
         ratingRadius: 256
       - bulldoze: 4950
         capacity:
           cs$: 33
           cs$$: 33
+        category: landmarks
         cost: 55000
-        filename: TowerOfLondon.dat
+        filename: AllInOne.dat
         flamability: 30
         garbage: 5
         id: 04c50000
         maintenance: 90
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c50000
+        name: Lm33x36_TowerOfLondon _04C5
         pollution: 1
         pollutionRadius: 2
         power: 15
@@ -1646,13 +3439,16 @@ assets:
         capacity:
           cs$: 15
           cs$$: 15
+        category: landmarks
         cost: 60000
-        filename: IndependenceHall.dat
+        filename: AllInOne.dat
         flamability: 30
         garbage: 3
         id: 04d70000
         maintenance: 120
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d70000
+        name: Lm30x24_IndependenceHall_04D7
         pollution: 1
         pollutionRadius: 1
         power: 3
@@ -1665,13 +3461,16 @@ assets:
         capacity:
           cs$: 7
           cs$$: 7
+        category: landmarks
         cost: 65000
-        filename: Kunjungjon.dat
+        filename: AllInOne.dat
         flamability: 33
         garbage: 9
         id: 04ba0000
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04ba0000
+        name: Lm55x43_KonjongjonHall_04BA
         pollution: 2
         pollutionRadius: 2
         power: 50
@@ -1684,13 +3483,16 @@ assets:
         capacity:
           co$$: 77
           co$$$: 32
+        category: landmarks
         cost: 65000
-        filename: PalacioReal.dat
+        filename: AllInOne.dat
         flamability: 34
         garbage: 4
         id: 04c80000
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c80000
+        name: LM72x72_PalacioReal_04C8
         pollution: 1
         pollutionRadius: 2
         power: 25
@@ -1703,13 +3505,16 @@ assets:
         capacity:
           cs$: 7
           cs$$: 7
+        category: landmarks
         cost: 60000
-        filename: Parthenon.dat
+        filename: AllInOne.dat
         flamability: 35
         garbage: 2
         id: 04b60000
         maintenance: 120
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b60000
+        name: Lm32x68_Parthenon_04B6
         power: 2
         rating: 7
         ratingRadius: 256
@@ -1720,13 +3525,16 @@ assets:
         capacity:
           co$$: 93
           co$$$: 54
+        category: landmarks
         cost: 65000
-        filename: RotesRathaus.dat
+        filename: AllInOne.dat
         flamability: 33
         garbage: 9
         id: 04c70000
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c70000
+        name: Lm52x48_RotesRathaus_04C7
         pollution: 2
         pollutionRadius: 2
         power: 50
@@ -1739,13 +3547,16 @@ assets:
         capacity:
           co$$: 77
           co$$$: 32
+        category: landmarks
         cost: 65000
-        filename: SeoulCityHall.dat
+        filename: AllInOne.dat
         flamability: 30
         garbage: 9
         id: 04c30000
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c30000
+        name: LM80x64_SeoulCityHallSquare_04C3
         pollution: 4
         pollutionRadius: 2
         power: 200
@@ -1758,12 +3569,15 @@ assets:
         capacity:
           cs$: 5
           cs$$: 5
+        category: landmarks
         cost: 60000
-        filename: Stonehenge.dat
+        filename: AllInOne.dat
         garbage: 5
         id: 04ad0000
         maintenance: 10
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04ad0000
+        name: Lm48x48_Stonehenge_04AD
         pollution: 1
         pollutionRadius: 1
         rating: 5
@@ -1774,13 +3588,16 @@ assets:
         capacity:
           cs$: 5
           cs$$: 5
+        category: landmarks
         cost: 65000
-        filename: TheAlamo.dat
+        filename: AllInOne.dat
         flamability: 35
         garbage: 2
         id: 04da0000
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04da0000
+        name: Lm26x32_Alamo_04DA
         power: 2
         rating: 7
         ratingRadius: 256
@@ -1791,13 +3608,16 @@ assets:
         capacity:
           co$$: 289
           co$$$: 111
+        category: landmarks
         cost: 65000
-        filename: SanFranciscoCityHall.dat
+        filename: AllInOne.dat
         flamability: 30
         garbage: 9
         id: 04ac0000
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04ac0000
+        name: LM166x112_SanFranCityHall_04AC
         pollution: 4
         pollutionRadius: 2
         power: 200
@@ -1810,12 +3630,15 @@ assets:
         capacity:
           cs$: 13
           cs$$: 13
+        category: landmarks
         cost: 70000
-        filename: TheWashingtonMonument.dat
+        filename: AllInOne.dat
         garbage: 3
         id: '04e00000'
         maintenance: 140
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04e00000
+        name: Lm46x46_WashingtonMonument_04E0
         power: 1
         rating: 7
         ratingRadius: 256
@@ -1823,13 +3646,16 @@ assets:
         capacity:
           co$$: 80
           co$$$: 27
+        category: landmarks
         cost: 70000
-        filename: Amalienborg.dat
+        filename: AllInOne.dat
         flamability: 34
         garbage: 5
         id: 04bf0000
         maintenance: 120
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04bf0000
+        name: Lm88x88_Amalienborg_04BF
         pollution: 1
         pollutionRadius: 2
         power: 15
@@ -1842,13 +3668,16 @@ assets:
         capacity:
           co$$: 188
           co$$$: 64
+        category: landmarks
         cost: 70000
-        filename: TheWhiteHouse.dat
+        filename: AllInOne.dat
         flamability: 31
         garbage: 15
         id: '04e10000'
         maintenance: 140
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04e10000
+        name: Lm70x70_WhiteHouse_04E1
         pollution: 1
         pollutionRadius: 1
         power: 60
@@ -1861,13 +3690,16 @@ assets:
         capacity:
           cs$: 8
           cs$$: 8
+        category: landmarks
         cost: 75000
-        filename: BigBen.dat
+        filename: AllInOne.dat
         flamability: 40
         garbage: 2
         id: 04cd0000
         maintenance: 150
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04cd0000
+        name: Lm16x16_Big Ben_04CD
         pollution: 1
         pollutionRadius: 1
         power: 20
@@ -1880,13 +3712,16 @@ assets:
         capacity:
           cs$: 7
           cs$$: 7
+        category: landmarks
         cost: 80000
-        filename: JeffersonMemorial.dat
+        filename: AllInOne.dat
         flamability: 5
         garbage: 3
         id: 04dd0000
         maintenance: 160
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04dd0000
+        name: Lm76x84_JeffersonMemorial_04DD
         power: 1
         rating: 8
         ratingRadius: 256
@@ -1895,13 +3730,16 @@ assets:
           cs$: 31
           cs$$: 31
           cs$$$: 31
+        category: landmarks
         cost: 80000
-        filename: HagiaSophia.dat
+        filename: AllInOne.dat
         flamability: 25
         garbage: 3
         id: 04c90000
         maintenance: 160
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c90000
+        name: Lm76x60_HagiaSofia_04C9
         pollution: 1
         pollutionRadius: 1
         power: 8
@@ -1914,13 +3752,16 @@ assets:
         capacity:
           cs$: 25
           cs$$: 25
+        category: landmarks
         cost: 85000
-        filename: Fernsehturm.dat
+        filename: AllInOne.dat
         flamability: 20
         garbage: 5
         id: 04c60000
         maintenance: 170
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c60000
+        name: Lm48x48_Fernsehturm_04C6
         pollution: 1
         pollutionRadius: 1
         power: 15
@@ -1933,13 +3774,16 @@ assets:
         capacity:
           cs$: 15
           cs$$: 15
+        category: landmarks
         cost: 65000
-        filename: Sungrye-mun.dat
+        filename: AllInOne.dat
         flamability: 10
         garbage: 4
         id: 04b90000
         maintenance: 130
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b90000
+        name: Lm64x64_NamDaeMoon_04B9
         power: 10
         rating: 8
         ratingRadius: 256
@@ -1949,18 +3793,22 @@ assets:
       - bulldoze: 8100
         capacity:
           co$$: 4077
+        category: landmarks,religion
         cost: 90000
-        filename: RockefellerCenter.dat
+        filename: AllInOne.dat
         flamability: 39
         garbage: 3
         id: '04870000'
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04870000
+        name: Lm58x75_RockefellerCtr_0487
         pollution: 1
         pollutionRadius: 1
         power: 10
         rating: 7
         ratingRadius: 256
+        submenu: Landmarks_Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
@@ -1968,13 +3816,16 @@ assets:
         capacity:
           cs$: 23
           cs$$: 23
+        category: landmarks
         cost: 95000
-        filename: SchlossSchoenbrun.dat
+        filename: AllInOne.dat
         flamability: 34
         garbage: 4
         id: 04b50000
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b50000
+        name: Lm61x48_SchlossSchoenbrun_04B5
         pollution: 1
         pollutionRadius: 2
         power: 25
@@ -1983,17 +3834,42 @@ assets:
         water: 60
         waterPollution: 1
         waterPollutionRadius: 3
+      - bulldoze: 8100
+        capacity:
+          cs$: 22
+          cs$$: 22
+        category: landmarks
+        cost: 90000
+        filename: AllInOne.dat
+        flamability: 30
+        garbage: 4
+        id: '10020000'
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-10020000
+        name: Lm45x38_PalaceofFineArts_1002
+        pollution: 1
+        pollutionRadius: 1
+        power: 20
+        rating: 6
+        ratingRadius: 256
+        water: 150
+        waterPollution: 1
+        waterPollutionRadius: 2
       - bulldoze: 7650
         capacity:
           cs$: 9
           cs$$: 9
           cs$$$: 9
+        category: landmarks
         cost: 85000
-        filename: LincolnMemorial.dat
+        filename: AllInOne.dat
         garbage: 3
         id: 04de0000
         maintenance: 170
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04de0000
+        name: Lm72x55_LincolnMemorial_04DE
         power: 1
         rating: 8
         ratingRadius: 256
@@ -2002,13 +3878,16 @@ assets:
           cs$: 16
           cs$$: 16
           cs$$$: 16
+        category: landmarks
         cost: 85000
-        filename: StatueOfLiberty.dat
+        filename: AllInOne.dat
         flamability: 14
         garbage: 3
         id: 04d60000
         maintenance: 170
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d60000
+        name: Lm30x30_StatueofLiberty_04D6
         power: 5
         rating: 9
         ratingRadius: 256
@@ -2019,13 +3898,16 @@ assets:
         capacity:
           cs$: 32
           cs$$: 32
+        category: landmarks
         cost: 90000
-        filename: SchlossNeuschwanstein.dat
+        filename: AllInOne.dat
         flamability: 31
         garbage: 15
         id: 04a20000
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04a20000
+        name: LM140x175_schlossneu_04A2
         pollution: 1
         pollutionRadius: 1
         power: 22
@@ -2038,12 +3920,15 @@ assets:
         capacity:
           cs$: 8
           cs$$: 8
+        category: landmarks
         cost: 90000
-        filename: GatewayArch.dat
+        filename: AllInOne.dat
         garbage: 2
         id: 04d90000
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d90000
+        name: Lm160x16_GatewayArch_04D9
         power: 1
         rating: 8
         ratingRadius: 256
@@ -2051,18 +3936,22 @@ assets:
         capacity:
           cs$: 20
           cs$$: 20
+        category: landmarks,religion
         cost: 90000
-        filename: StBasilsCathedral.dat
+        filename: AllInOne.dat
         flamability: 39
         garbage: 3
         id: 04ce0000
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04ce0000
+        name: Lm54x64_StBasils_04CE
         pollution: 1
         pollutionRadius: 1
         power: 10
         rating: 7
         ratingRadius: 256
+        submenu: Landmarks_Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
@@ -2070,13 +3959,16 @@ assets:
         capacity:
           cs$: 32
           cs$$: 32
+        category: landmarks
         cost: 95000
-        filename: TheGuggenheimMuseum.dat
+        filename: AllInOne.dat
         flamability: 31
         garbage: 9
         id: 04d50000
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d50000
+        name: Lm77x48_Guggenhiem_04D5
         pollution: 1
         pollutionRadius: 1
         power: 90
@@ -2085,17 +3977,41 @@ assets:
         water: 450
         waterPollution: 1
         waterPollutionRadius: 2
+      - bulldoze: 9900
+        capacity:
+          co$$: 2825
+        category: landmarks
+        cost: 110000
+        filename: AllInOne.dat
+        flamability: 10
+        garbage: 39
+        id: 04b80000
+        maintenance: 210
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b80000
+        name: Lm64x72_KoreaLifeBldg_04B8
+        pollution: 5
+        pollutionRadius: 6
+        power: 600
+        rating: 8
+        ratingRadius: 256
+        water: 1300
+        waterPollution: 5
+        waterPollutionRadius: 7
       - bulldoze: 7900
         capacity:
           cs$: 153
           cs$$: 153
+        category: landmarks
         cost: 110000
-        filename: AmericanMuseumOfNaturalHistory.dat
+        filename: AllInOne.dat
         flamability: 31
         garbage: 15
         id: 04b20000
         maintenance: 220
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b20000
+        name: LM138x130_AmericanMuseumNatHistory_04B2
         pollution: 1
         pollutionRadius: 1
         power: 60
@@ -2104,17 +4020,42 @@ assets:
         water: 300
         waterPollution: 1
         waterPollutionRadius: 2
+      - bulldoze: 9900
+        capacity:
+          co$$: 7102
+          co$$$: 3382
+        category: landmarks
+        cost: 110000
+        filename: AllInOne.dat
+        flamability: 40
+        garbage: 39
+        id: '10030000'
+        maintenance: 210
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-10030000
+        name: Lm80x48_BankofAmerica_1003
+        pollution: 5
+        pollutionRadius: 6
+        power: 600
+        rating: 6
+        ratingRadius: 256
+        water: 1300
+        waterPollution: 5
+        waterPollutionRadius: 7
       - bulldoze: 6300
         capacity:
           co$$: 3672
           co$$$: 1749
+        category: landmarks
         cost: 110000
-        filename: ColumbiaSeafirstCenter.dat
+        filename: AllInOne.dat
         flamability: 31
         garbage: 15
         id: 04b00000
         maintenance: 210
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b00000
+        name: Lm60x70_SeafirstTower_04B0
         pollution: 1
         pollutionRadius: 1
         power: 60
@@ -2127,13 +4068,16 @@ assets:
         capacity:
           cs$: 303
           cs$$: 303
+        category: landmarks
         cost: 110000
-        filename: GrandCentralStation.dat
+        filename: AllInOne.dat
         flamability: 30
         garbage: 11
         id: 04b30000
         maintenance: 220
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b30000
+        name: Lm100x125_grandcentral_04B3
         pollution: 3
         pollutionRadius: 4
         power: 200
@@ -2147,13 +4091,16 @@ assets:
           cs$: 131
           cs$$: 131
           cs$$$: 131
+        category: landmarks
         cost: 125000
-        filename: LincolnCenter.dat
+        filename: AllInOne.dat
         flamability: 25
         garbage: 8
         id: 04ab0000
         maintenance: 275
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04ab0000
+        name: Lm98x87_LincolnCenter_04AB
         pollution: 1
         pollutionRadius: 1
         power: 45
@@ -2166,13 +4113,16 @@ assets:
         capacity:
           cs$: 97
           cs$$: 97
+        category: landmarks
         cost: 95000
-        filename: TaipeiFineArtMuseum.dat
+        filename: AllInOne.dat
         flamability: 27
         garbage: 20
         id: '04900000'
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04900000
+        name: Lm80x110_TaipeiArtMuseum_0490
         pollution: 5
         pollutionRadius: 1
         power: 90
@@ -2185,13 +4135,16 @@ assets:
         capacity:
           cs$: 61
           cs$$: 61
+        category: landmarks
         cost: 105000
-        filename: TajMahal.dat
+        filename: AllInOne.dat
         flamability: 10
         garbage: 4
         id: 04cc0000
         maintenance: 200
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04cc0000
+        name: Lm64x64_TajMahal_04CC
         power: 10
         rating: 8
         ratingRadius: 256
@@ -2202,13 +4155,16 @@ assets:
         capacity:
           cs$: 38
           cs$$: 38
+        category: landmarks
         cost: 95000
-        filename: TempleExpiatioriDeLaSagradaFamilia.dat
+        filename: AllInOne.dat
         flamability: 16
         garbage: 5
         id: 04b40000
         maintenance: 180
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04b40000
+        name: LM80x80_sagradafamilia_04B4
         pollution: 1
         pollutionRadius: 2
         rating: 5
@@ -2218,13 +4174,16 @@ assets:
       - bulldoze: 12150
         capacity:
           co$$: 839
+        category: landmarks
         cost: 135000
-        filename: USCapitolBuilding.dat
+        filename: AllInOne.dat
         flamability: 35
         garbage: 13
         id: 04df0000
         maintenance: 260
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04df0000
+        name: Lm98x75_USCapitol_04DF
         pollution: 1
         pollutionRadius: 2
         power: 90
@@ -2237,13 +4196,16 @@ assets:
         capacity:
           cs$: 640
           cs$$: 640
+        category: landmarks
         cost: 55000
-        filename: TheLivingMall.dat
+        filename: AllInOne.dat
         flamability: 35
         garbage: 11
         id: 04c00000
         maintenance: 110
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c00000
+        name: Lm80x80_TheLivingMall_04C0
         pollution: 10
         pollutionRadius: 4
         power: 800
@@ -2256,12 +4218,15 @@ assets:
         capacity:
           cs$: 263
           cs$$: 263
+        category: landmarks
         cost: 160000
-        filename: SeoulWorldCupStadium.dat
+        filename: AllInOne.dat
         garbage: 65
         id: 04c20000
         maintenance: 310
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04c20000
+        name: Lm239x215_WorldCupFootballStadium_04C2
         pollution: -11
         pollutionRadius: 4
         power: 90
@@ -2273,13 +4238,16 @@ assets:
       - bulldoze: 21600
         capacity:
           co$$: 9174
+        category: landmarks
         cost: 240000
-        filename: TheEmpireStateBuilding.dat
+        filename: AllInOne.dat
         flamability: 27
         garbage: 20
         id: 04d40000
         maintenance: 470
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04d40000
+        name: Lm128x60_EmpireStateBuilding_04D4
         pollution: 5
         pollutionRadius: 5
         power: 375
@@ -2292,12 +4260,15 @@ assets:
         capacity:
           cs$: 48
           cs$$: 48
+        category: landmarks
         cost: 160000
-        filename: TheGreatPyramid.dat
+        filename: AllInOne.dat
         garbage: 2
         id: 04cb0000
         maintenance: 310
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04cb0000
+        name: Lm126x126_GreatPyramid_04CB
         power: 1
         rating: 10
         ratingRadius: 256
@@ -2305,13 +4276,16 @@ assets:
         capacity:
           cs$: 67
           cs$$: 67
+        category: landmarks
         cost: 175000
-        filename: TokyoTower.dat
+        filename: AllInOne.dat
         flamability: 25
         garbage: 8
         id: 04ca0000
         maintenance: 340
+        menu: Landmarks
         model: 5ad0e817-badb57f1-04ca0000
+        name: Lm94x94_TokyoTower_04CA
         pollution: 1
         pollutionRadius: 1
         power: 25
@@ -2320,10 +4294,1153 @@ assets:
         water: 45
         waterPollution: 1
         waterPollutionRadius: 2
+      - bulldoze: 4950
+        capacity:
+          co$$: 80
+          co$$$: 27
+        category: landmarks
+        cost: 70000
+        filename: Amalienborg.dat
+        flamability: 34
+        garbage: 5
+        id: 04bf0000
+        maintenance: 120
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04bf0000
+        name: Lm88x88_Amalienborg_04BF
+        pollution: 1
+        pollutionRadius: 2
+        power: 15
+        rating: 5
+        ratingRadius: 256
+        water: 65
+        waterPollution: 1
+        waterPollutionRadius: 3
+      - bulldoze: 7900
+        capacity:
+          cs$: 153
+          cs$$: 153
+        category: landmarks
+        cost: 110000
+        filename: AmericanMuseumOfNaturalHistory.dat
+        flamability: 31
+        garbage: 15
+        id: 04b20000
+        maintenance: 220
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b20000
+        name: LM138x130_AmericanMuseumNatHistory_04B2
+        pollution: 1
+        pollutionRadius: 1
+        power: 60
+        rating: 6
+        ratingRadius: 256
+        water: 300
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 4950
+        capacity:
+          cs$: 8
+          cs$$: 8
+        category: landmarks
+        cost: 55000
+        filename: ArcDeTriomphe.dat
+        garbage: 5
+        id: 04c10000
+        maintenance: 110
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c10000
+        name: Lm38x22_ArcTriomphe_04C1
+        pollution: 1
+        pollutionRadius: 1
+        power: 1
+        rating: 15
+        ratingRadius: 256
+        water: 1
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 9900
+        capacity:
+          co$$: 7102
+          co$$$: 3382
+        category: landmarks
+        cost: 110000
+        filename: BankOfAmerica.dat
+        flamability: 40
+        garbage: 39
+        id: '10030000'
+        maintenance: 210
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-10030000
+        name: Lm80x48_BankofAmerica_1003
+        pollution: 5
+        pollutionRadius: 6
+        power: 600
+        rating: 6
+        ratingRadius: 256
+        water: 1300
+        waterPollution: 5
+        waterPollutionRadius: 7
+      - bulldoze: 4950
+        capacity:
+          co$$: 11945
+          co$$$: 6925
+        category: landmarks
+        cost: 180000
+        filename: BankOfChinaTower.dat
+        flamability: 36
+        garbage: 15
+        id: 04c40000
+        maintenance: 300
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c40000
+        name: Lm52x52_BankOfChinaTower_04C4
+        pollution: 4
+        pollutionRadius: 4
+        power: 250
+        rating: 5
+        ratingRadius: 256
+        water: 1350
+        waterPollution: 4
+        waterPollutionRadius: 5
+      - bulldoze: 6750
+        capacity:
+          cs$: 8
+          cs$$: 8
+        category: landmarks
+        cost: 75000
+        filename: BigBen.dat
+        flamability: 40
+        garbage: 2
+        id: 04cd0000
+        maintenance: 150
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04cd0000
+        name: Lm16x16_Big Ben_04CD
+        pollution: 1
+        pollutionRadius: 1
+        power: 20
+        rating: 7
+        ratingRadius: 256
+        water: 25
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 5850
+        capacity:
+          cs$: 7
+          cs$$: 7
+        category: landmarks
+        cost: 60000
+        filename: BrandenburgGate.dat
+        flamability: 34
+        garbage: 5
+        id: 04b70000
+        maintenance: 120
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b70000
+        name: Lm72x34_BrandenburgGate_04B7
+        pollution: 1
+        pollutionRadius: 1
+        power: 2
+        rating: 6
+        ratingRadius: 256
+        water: 3
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 4500
+        capacity:
+          co$$: 743
+        category: landmarks
+        cost: 50000
+        filename: CaliforniaPlaza.dat
+        flamability: 37
+        garbage: 10
+        id: 04dc0000
+        maintenance: 100
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04dc0000
+        name: Lm88x124_CaliforniaPlaza_04DC
+        pollution: 2
+        pollutionRadius: 2
+        power: 125
+        water: 350
+        waterPollution: 2
+        waterPollutionRadius: 3
+      - bulldoze: 4500
+        capacity:
+          co$$: 531
+        category: landmarks
+        cost: 50000
+        filename: CapitolRecordsBuilding.dat
+        flamability: 34
+        garbage: 10
+        id: 04b10000
+        maintenance: 100
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b10000
+        name: Lm80x48_CapitolRecordsBuilding_04B1
+        pollution: 2
+        pollutionRadius: 2
+        power: 125
+        rating: 3
+        ratingRadius: 256
+        water: 900
+        waterPollution: 2
+        waterPollutionRadius: 3
+      - bulldoze: 15300
+        capacity:
+          co$$: 7692
+        category: landmarks
+        cost: 170000
+        filename: ChryslerBuilding.dat
+        flamability: 35
+        garbage: 12
+        id: 04d30000
+        maintenance: 330
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d30000
+        name: Lm62x62_ChryslerBuilding_04D3
+        pollution: 3
+        pollutionRadius: 4
+        power: 250
+        rating: 9
+        ratingRadius: 256
+        water: 1300
+        waterPollution: 4
+        waterPollutionRadius: 5
+      - bulldoze: 20250
+        capacity:
+          cs$: 139
+          cs$$: 139
+          cs$$$: 139
+        category: landmarks
+        cost: 225000
+        filename: CNTower.dat
+        flamability: 15
+        garbage: 4
+        id: 04db0000
+        maintenance: 440
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04db0000
+        name: Lm85x98_CNtower_04DB
+        power: 20
+        rating: 7
+        ratingRadius: 256
+        water: 25
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 4950
+        capacity:
+          cs$: 8
+          cs$$: 8
+          cs$$$: 8
+        category: landmarks
+        cost: 55000
+        filename: CoitTower.dat
+        flamability: 10
+        garbage: 3
+        id: '10010000'
+        maintenance: 110
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-10010000
+        name: Lm60x60_CoitTower_1001
+        power: 1
+        rating: 5
+        ratingRadius: 256
+        water: 7
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 6300
+        capacity:
+          co$$: 3672
+          co$$$: 1749
+        category: landmarks
+        cost: 110000
+        filename: ColumbiaSeafirstCenter.dat
+        flamability: 31
+        garbage: 15
+        id: 04b00000
+        maintenance: 210
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b00000
+        name: Lm60x70_SeafirstTower_04B0
+        pollution: 1
+        pollutionRadius: 1
+        power: 60
+        rating: 6
+        ratingRadius: 256
+        water: 300
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 4500
+        capacity:
+          cs$: 82
+          cs$$: 37
+        category: landmarks
+        cost: 50000
+        filename: FaneuilHall.dat
+        flamability: 33
+        garbage: 9
+        id: 04cf0000
+        maintenance: 100
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04cf0000
+        name: Lm24x30_BostonFaneuilHall_04CF
+        pollution: 1
+        pollutionRadius: 2
+        power: 50
+        rating: 5
+        ratingRadius: 256
+        water: 200
+        waterPollution: 1
+        waterPollutionRadius: 3
+      - bulldoze: 7650
+        capacity:
+          cs$: 25
+          cs$$: 25
+        category: landmarks
+        cost: 85000
+        filename: Fernsehturm.dat
+        flamability: 20
+        garbage: 5
+        id: 04c60000
+        maintenance: 170
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c60000
+        name: Lm48x48_Fernsehturm_04C6
+        pollution: 1
+        pollutionRadius: 1
+        power: 15
+        rating: 5
+        ratingRadius: 256
+        water: 60
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 8100
+        capacity:
+          cs$: 8
+          cs$$: 8
+        category: landmarks
+        cost: 90000
+        filename: GatewayArch.dat
+        garbage: 2
+        id: 04d90000
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d90000
+        name: Lm160x16_GatewayArch_04D9
+        power: 1
+        rating: 8
+        ratingRadius: 256
+      - bulldoze: 4950
+        capacity:
+          cs$: 272
+          cs$$: 272
+        category: landmarks
+        cost: 70000
+        filename: GlobeArena.dat
+        flamability: 30
+        garbage: 15
+        id: 04bc0000
+        maintenance: 140
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04bc0000
+        name: Lm148x112_GlobeArena_04BC
+        pollution: 2
+        pollutionRadius: 2
+        power: 40
+        rating: 5
+        ratingRadius: 256
+        water: 100
+        waterPollution: 3
+        waterPollutionRadius: 2
+      - bulldoze: 4500
+        capacity:
+          cs$: 303
+          cs$$: 303
+        category: landmarks
+        cost: 110000
+        filename: GrandCentralStation.dat
+        flamability: 30
+        garbage: 11
+        id: 04b30000
+        maintenance: 220
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b30000
+        name: Lm100x125_grandcentral_04B3
+        pollution: 3
+        pollutionRadius: 4
+        power: 200
+        rating: 8
+        ratingRadius: 256
+        water: 200
+        waterPollution: 4
+        waterPollutionRadius: 5
+      - bulldoze: 7200
+        capacity:
+          cs$: 31
+          cs$$: 31
+          cs$$$: 31
+        category: landmarks
+        cost: 80000
+        filename: HagiaSophia.dat
+        flamability: 25
+        garbage: 3
+        id: 04c90000
+        maintenance: 160
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c90000
+        name: Lm76x60_HagiaSofia_04C9
+        pollution: 1
+        pollutionRadius: 1
+        power: 8
+        rating: 7
+        ratingRadius: 256
+        water: 20
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 2700
+        capacity:
+          cs$: 2
+          cs$$: 2
+        category: landmarks
+        cost: 30000
+        filename: HollywoodSign.dat
+        id: 04d20000
+        maintenance: 60
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d20000
+        name: Lm104x6_Hollywoodsign_04D2
+        power: 1
+        rating: 2
+        ratingRadius: 256
+      - bulldoze: 5400
+        capacity:
+          cs$: 15
+          cs$$: 15
+        category: landmarks
+        cost: 60000
+        filename: IndependenceHall.dat
+        flamability: 30
+        garbage: 3
+        id: 04d70000
+        maintenance: 120
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d70000
+        name: Lm30x24_IndependenceHall_04D7
+        pollution: 1
+        pollutionRadius: 1
+        power: 3
+        rating: 7
+        ratingRadius: 256
+        water: 7
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 7200
+        capacity:
+          cs$: 7
+          cs$$: 7
+        category: landmarks
+        cost: 80000
+        filename: JeffersonMemorial.dat
+        flamability: 5
+        garbage: 3
+        id: 04dd0000
+        maintenance: 160
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04dd0000
+        name: Lm76x84_JeffersonMemorial_04DD
+        power: 1
+        rating: 8
+        ratingRadius: 256
+      - bulldoze: 14850
+        capacity:
+          co$$: 6387
+        category: landmarks
+        cost: 165000
+        filename: JohnHancockCenter.dat
+        flamability: 40
+        garbage: 43
+        id: 04d00000
+        maintenance: 320
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d00000
+        name: Lm84x52_JohnHancockCenter_04D0
+        pollution: 6
+        pollutionRadius: 6
+        power: 650
+        rating: 8
+        ratingRadius: 256
+        water: 1500
+        waterPollution: 5
+        waterPollutionRadius: 7
+      - bulldoze: 5850
+        capacity:
+          cs$: 7
+          cs$$: 7
+        category: landmarks
+        cost: 65000
+        filename: Kunjungjon.dat
+        flamability: 33
+        garbage: 9
+        id: 04ba0000
+        maintenance: 130
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04ba0000
+        name: Lm55x43_KonjongjonHall_04BA
+        pollution: 2
+        pollutionRadius: 2
+        power: 50
+        rating: 5
+        ratingRadius: 256
+        water: 250
+        waterPollution: 2
+        waterPollutionRadius: 3
+      - bulldoze: 15750
+        capacity:
+          cs$: 131
+          cs$$: 131
+          cs$$$: 131
+        category: landmarks
+        cost: 125000
+        filename: LincolnCenter.dat
+        flamability: 25
+        garbage: 8
+        id: 04ab0000
+        maintenance: 275
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04ab0000
+        name: Lm98x87_LincolnCenter_04AB
+        pollution: 1
+        pollutionRadius: 1
+        power: 45
+        rating: 8
+        ratingRadius: 256
+        water: 45
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 7650
+        capacity:
+          cs$: 9
+          cs$$: 9
+          cs$$$: 9
+        category: landmarks
+        cost: 85000
+        filename: LincolnMemorial.dat
+        garbage: 3
+        id: 04de0000
+        maintenance: 170
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04de0000
+        name: Lm72x55_LincolnMemorial_04DE
+        power: 1
+        rating: 8
+        ratingRadius: 256
+      - bulldoze: 8100
+        capacity:
+          cs$: 22
+          cs$$: 22
+        category: landmarks
+        cost: 90000
+        filename: PalaceOfFineArts.dat
+        flamability: 30
+        garbage: 4
+        id: '10020000'
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-10020000
+        name: Lm45x38_PalaceofFineArts_1002
+        pollution: 1
+        pollutionRadius: 1
+        power: 20
+        rating: 6
+        ratingRadius: 256
+        water: 150
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 5850
+        capacity:
+          co$$: 77
+          co$$$: 32
+        category: landmarks
+        cost: 65000
+        filename: PalacioReal.dat
+        flamability: 34
+        garbage: 4
+        id: 04c80000
+        maintenance: 130
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c80000
+        name: LM72x72_PalacioReal_04C8
+        pollution: 1
+        pollutionRadius: 2
+        power: 25
+        rating: 6
+        ratingRadius: 256
+        water: 60
+        waterPollution: 1
+        waterPollutionRadius: 3
+      - bulldoze: 6750
+        capacity:
+          cs$: 7
+          cs$$: 7
+        category: landmarks
+        cost: 60000
+        filename: Parthenon.dat
+        flamability: 35
+        garbage: 2
+        id: 04b60000
+        maintenance: 120
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b60000
+        name: Lm32x68_Parthenon_04B6
+        power: 2
+        rating: 7
+        ratingRadius: 256
+        water: 5
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 8100
+        capacity:
+          co$$: 4077
+        category: landmarks,religion
+        cost: 90000
+        filename: RockefellerCenter.dat
+        flamability: 39
+        garbage: 3
+        id: '04870000'
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04870000
+        name: Lm58x75_RockefellerCtr_0487
+        pollution: 1
+        pollutionRadius: 1
+        power: 10
+        rating: 7
+        ratingRadius: 256
+        submenu: Landmarks_Religion
+        water: 9
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 5850
+        capacity:
+          co$$: 93
+          co$$$: 54
+        category: landmarks
+        cost: 65000
+        filename: RotesRathaus.dat
+        flamability: 33
+        garbage: 9
+        id: 04c70000
+        maintenance: 130
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c70000
+        name: Lm52x48_RotesRathaus_04C7
+        pollution: 2
+        pollutionRadius: 2
+        power: 50
+        rating: 5
+        ratingRadius: 256
+        water: 250
+        waterPollution: 2
+        waterPollutionRadius: 3
+      - bulldoze: 4950
+        capacity:
+          co$$: 289
+          co$$$: 111
+        category: landmarks
+        cost: 65000
+        filename: SanFranciscoCityHall.dat
+        flamability: 30
+        garbage: 9
+        id: 04ac0000
+        maintenance: 130
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04ac0000
+        name: LM166x112_SanFranCityHall_04AC
+        pollution: 4
+        pollutionRadius: 2
+        power: 200
+        rating: 5
+        ratingRadius: 256
+        water: 200
+        waterPollution: 3
+        waterPollutionRadius: 3
+      - bulldoze: 6300
+        capacity:
+          cs$: 32
+          cs$$: 32
+        category: landmarks
+        cost: 90000
+        filename: SchlossNeuschwanstein.dat
+        flamability: 31
+        garbage: 15
+        id: 04a20000
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04a20000
+        name: LM140x175_schlossneu_04A2
+        pollution: 1
+        pollutionRadius: 1
+        power: 22
+        rating: 6
+        ratingRadius: 256
+        water: 90
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 5850
+        capacity:
+          cs$: 23
+          cs$$: 23
+        category: landmarks
+        cost: 95000
+        filename: SchlossSchoenbrun.dat
+        flamability: 34
+        garbage: 4
+        id: 04b50000
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b50000
+        name: Lm61x48_SchlossSchoenbrun_04B5
+        pollution: 1
+        pollutionRadius: 2
+        power: 25
+        rating: 6
+        ratingRadius: 256
+        water: 60
+        waterPollution: 1
+        waterPollutionRadius: 3
+      - bulldoze: 4950
+        capacity:
+          co$$: 77
+          co$$$: 32
+        category: landmarks
+        cost: 65000
+        filename: SeoulCityHall.dat
+        flamability: 30
+        garbage: 9
+        id: 04c30000
+        maintenance: 130
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c30000
+        name: LM80x64_SeoulCityHallSquare_04C3
+        pollution: 4
+        pollutionRadius: 2
+        power: 200
+        rating: 5
+        ratingRadius: 256
+        water: 200
+        waterPollution: 3
+        waterPollutionRadius: 3
+      - bulldoze: 4950
+        capacity:
+          cs$: 263
+          cs$$: 263
+        category: landmarks
+        cost: 160000
+        filename: SeoulWorldCupStadium.dat
+        garbage: 65
+        id: 04c20000
+        maintenance: 310
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c20000
+        name: Lm239x215_WorldCupFootballStadium_04C2
+        pollution: -11
+        pollutionRadius: 4
+        power: 90
+        rating: 5
+        ratingRadius: 256
+        water: 100
+        waterPollution: 10
+        waterPollutionRadius: 6
+      - bulldoze: 4950
+        capacity:
+          co$$: 698
+        category: landmarks
+        cost: 55000
+        filename: SmithTower.dat
+        flamability: 34
+        garbage: 11
+        id: 04d80000
+        maintenance: 110
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d80000
+        name: Lm45x35_SmithTower_04D8
+        pollution: 3
+        pollutionRadius: 4
+        power: 215
+        rating: 5
+        ratingRadius: 256
+        water: 900
+        waterPollution: 4
+        waterPollutionRadius: 5
+      - bulldoze: 7650
+        capacity:
+          cs$: 16
+          cs$$: 16
+          cs$$$: 16
+        category: landmarks
+        cost: 85000
+        filename: StatueOfLiberty.dat
+        flamability: 14
+        garbage: 3
+        id: 04d60000
+        maintenance: 170
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d60000
+        name: Lm30x30_StatueofLiberty_04D6
+        power: 5
+        rating: 9
+        ratingRadius: 256
+        water: 5
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 8100
+        capacity:
+          cs$: 20
+          cs$$: 20
+        category: landmarks,religion
+        cost: 90000
+        filename: StBasilsCathedral.dat
+        flamability: 39
+        garbage: 3
+        id: 04ce0000
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04ce0000
+        name: Lm54x64_StBasils_04CE
+        pollution: 1
+        pollutionRadius: 1
+        power: 10
+        rating: 7
+        ratingRadius: 256
+        submenu: Landmarks_Religion
+        water: 9
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 5850
+        capacity:
+          cs$: 5
+          cs$$: 5
+        category: landmarks
+        cost: 60000
+        filename: Stonehenge.dat
+        garbage: 5
+        id: 04ad0000
+        maintenance: 10
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04ad0000
+        name: Lm48x48_Stonehenge_04AD
+        pollution: 1
+        pollutionRadius: 1
+        rating: 5
+        ratingRadius: 256
+        waterPollution: 1
+        waterPollutionRadius: 1
+      - bulldoze: 5850
+        capacity:
+          cs$: 15
+          cs$$: 15
+        category: landmarks
+        cost: 65000
+        filename: Sungrye-mun.dat
+        flamability: 10
+        garbage: 4
+        id: 04b90000
+        maintenance: 130
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b90000
+        name: Lm64x64_NamDaeMoon_04B9
+        power: 10
+        rating: 8
+        ratingRadius: 256
+        water: 10
+        waterPollution: 2
+        waterPollutionRadius: 2
+      - bulldoze: 8550
+        capacity:
+          cs$: 97
+          cs$$: 97
+        category: landmarks
+        cost: 95000
+        filename: TaipeiFineArtMuseum.dat
+        flamability: 27
+        garbage: 20
+        id: '04900000'
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04900000
+        name: Lm80x110_TaipeiArtMuseum_0490
+        pollution: 5
+        pollutionRadius: 1
+        power: 90
+        rating: 9
+        ratingRadius: 256
+        water: 450
+        waterPollution: 6
+        waterPollutionRadius: 2
+      - bulldoze: 9450
+        capacity:
+          cs$: 61
+          cs$$: 61
+        category: landmarks
+        cost: 105000
+        filename: TajMahal.dat
+        flamability: 10
+        garbage: 4
+        id: 04cc0000
+        maintenance: 200
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04cc0000
+        name: Lm64x64_TajMahal_04CC
+        power: 10
+        rating: 8
+        ratingRadius: 256
+        water: 10
+        waterPollution: 2
+        waterPollutionRadius: 2
+      - bulldoze: 8550
+        capacity:
+          cs$: 38
+          cs$$: 38
+        category: landmarks
+        cost: 95000
+        filename: TempleExpiatioriDeLaSagradaFamilia.dat
+        flamability: 16
+        garbage: 5
+        id: 04b40000
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04b40000
+        name: LM80x80_sagradafamilia_04B4
+        pollution: 1
+        pollutionRadius: 2
+        rating: 5
+        ratingRadius: 256
+        waterPollution: 1
+        waterPollutionRadius: 3
+      - bulldoze: 5850
+        capacity:
+          cs$: 5
+          cs$$: 5
+        category: landmarks
+        cost: 65000
+        filename: TheAlamo.dat
+        flamability: 35
+        garbage: 2
+        id: 04da0000
+        maintenance: 130
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04da0000
+        name: Lm26x32_Alamo_04DA
+        power: 2
+        rating: 7
+        ratingRadius: 256
+        water: 5
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 21600
+        capacity:
+          co$$: 9174
+        category: landmarks
+        cost: 240000
+        filename: TheEmpireStateBuilding.dat
+        flamability: 27
+        garbage: 20
+        id: 04d40000
+        maintenance: 470
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d40000
+        name: Lm128x60_EmpireStateBuilding_04D4
+        pollution: 5
+        pollutionRadius: 5
+        power: 375
+        rating: 9
+        ratingRadius: 256
+        water: 1100
+        waterPollution: 6
+        waterPollutionRadius: 6
+      - bulldoze: 14400
+        capacity:
+          cs$: 48
+          cs$$: 48
+        category: landmarks
+        cost: 160000
+        filename: TheGreatPyramid.dat
+        garbage: 2
+        id: 04cb0000
+        maintenance: 310
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04cb0000
+        name: Lm126x126_GreatPyramid_04CB
+        power: 1
+        rating: 10
+        ratingRadius: 256
+      - bulldoze: 8550
+        capacity:
+          cs$: 32
+          cs$$: 32
+        category: landmarks
+        cost: 95000
+        filename: TheGuggenheimMuseum.dat
+        flamability: 31
+        garbage: 9
+        id: 04d50000
+        maintenance: 180
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d50000
+        name: Lm77x48_Guggenhiem_04D5
+        pollution: 1
+        pollutionRadius: 1
+        power: 90
+        rating: 8
+        ratingRadius: 256
+        water: 450
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 4950
+        capacity:
+          cs$: 640
+          cs$$: 640
+        category: landmarks
+        cost: 55000
+        filename: TheLivingMall.dat
+        flamability: 35
+        garbage: 11
+        id: 04c00000
+        maintenance: 110
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c00000
+        name: Lm80x80_TheLivingMall_04C0
+        pollution: 10
+        pollutionRadius: 4
+        power: 800
+        rating: 5
+        ratingRadius: 256
+        water: 850
+        waterPollution: 12
+        waterPollutionRadius: 5
+      - bulldoze: 4500
+        capacity:
+          cs$: 5
+          cs$$: 5
+        category: landmarks
+        cost: 50000
+        filename: TheSphinx.dat
+        garbage: 2
+        id: 04d10000
+        maintenance: 100
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04d10000
+        name: Lm64x24_Sphynx_04D1
+        rating: 7
+        ratingRadius: 256
+      - bulldoze: 6300
+        capacity:
+          cs$: 13
+          cs$$: 13
+        category: landmarks
+        cost: 70000
+        filename: TheWashingtonMonument.dat
+        garbage: 3
+        id: '04e00000'
+        maintenance: 140
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04e00000
+        name: Lm46x46_WashingtonMonument_04E0
+        power: 1
+        rating: 7
+        ratingRadius: 256
+      - bulldoze: 6300
+        capacity:
+          co$$: 188
+          co$$$: 64
+        category: landmarks
+        cost: 70000
+        filename: TheWhiteHouse.dat
+        flamability: 31
+        garbage: 15
+        id: '04e10000'
+        maintenance: 140
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04e10000
+        name: Lm70x70_WhiteHouse_04E1
+        pollution: 1
+        pollutionRadius: 1
+        power: 60
+        rating: 6
+        ratingRadius: 256
+        water: 300
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 15750
+        capacity:
+          cs$: 67
+          cs$$: 67
+        category: landmarks
+        cost: 175000
+        filename: TokyoTower.dat
+        flamability: 25
+        garbage: 8
+        id: 04ca0000
+        maintenance: 340
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04ca0000
+        name: Lm94x94_TokyoTower_04CA
+        pollution: 1
+        pollutionRadius: 1
+        power: 25
+        rating: 7
+        ratingRadius: 256
+        water: 45
+        waterPollution: 1
+        waterPollutionRadius: 2
+      - bulldoze: 4950
+        capacity:
+          cs$: 33
+          cs$$: 33
+        category: landmarks
+        cost: 55000
+        filename: TowerOfLondon.dat
+        flamability: 30
+        garbage: 5
+        id: 04c50000
+        maintenance: 90
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04c50000
+        name: Lm33x36_TowerOfLondon _04C5
+        pollution: 1
+        pollutionRadius: 2
+        power: 15
+        rating: 6
+        ratingRadius: 256
+        water: 65
+        waterPollution: 2
+        waterPollutionRadius: 3
+      - bulldoze: 12150
+        capacity:
+          co$$: 839
+        category: landmarks
+        cost: 135000
+        filename: USCapitolBuilding.dat
+        flamability: 35
+        garbage: 13
+        id: 04df0000
+        maintenance: 260
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-04df0000
+        name: Lm98x75_USCapitol_04DF
+        pollution: 1
+        pollutionRadius: 2
+        power: 90
+        rating: 9
+        ratingRadius: 256
+        water: 450
+        waterPollution: 2
+        waterPollutionRadius: 3
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThis mod allows you to add jobs to any or all of the Maxis-Made Landmarks, at your own discretion. Your sims can now work in buildings like the Empire State Building, Living Mall, or US Capitol. The buildings still function just like they used to, the only change is the addition of jobs.\n</p>\n\n<p>\n\t<span style=\"color:#8e44ad;\"><strong>Please see the included readme for full details, as there\_are some very important compatibility issues. Information is presented that must be adhered to\_for the game to function correctly.\_ \_</strong></span><img alt=\"*:read:\" data-emoticon=\"1\" src=\"https://community.simtropolis.com/assets/emoticons/default_49.gif\" title=\"*:read:\">\n</p>\n\n<p>\n\tThis is the first complete set of Landmarks with Jobs to be released. Questions should be directed to the Modding - Open Modding forum.\n</p>\n\n<p>\n\t<br>\n\t<span style=\"color:#2980b9;\"><strong>Cori Edit:</strong> Keep the original Maxis Landmarks because they are needed for the models. Then ensure the ones in this mod load after the Maxis ones. (Thanks <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/790226-kloudkicker/?do=hovercard\" data-mentionid=\"790226\" href=\"https://community.simtropolis.com/profile/790226-kloudkicker/\" rel=\"\">@Kloudkicker</a> and <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard\" data-mentionid=\"651629\" href=\"https://community.simtropolis.com/profile/651629-rsc204/\" rel=\"\">@rsc204</a> for posts starting </span><a href=\"https://community.simtropolis.com/forums/topic/760010-locale-dat-maxis-and-functional-landmarks-conflict/?do=findComment&amp;comment=1742235\" rel=\"\"><span style=\"color:#2980b9;\">here</span></a><span style=\"color:#2980b9;\">.) </span>\n</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: FunctionalLandmarks.zip
     files:
       - 63Building.dat
@@ -2389,17 +5506,13 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0025/e675466ad854f442bf5fefda2d41975a-default.jpg
     lastModified: 2004-03-16T00:00:00.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Functional Landmarks Complete Set v1.0
-    props: []
     sha256: d68bdde93ef7afd62dd9f90b3956c6e92f397616a2bec192ad3262fb9bb72d92
     size: 47890
     support: https://community.simtropolis.com/forums/topic/760010-locale-dat-maxis-and-functional-landmarks-conflict
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2004/thumb-e675466ad854f442bf5fefda2d41975a-default.jpg
     uncompressed: 71188
     url: https://community.simtropolis.com/files/file/21340-functional-landmarks-complete-set-v10/
@@ -2408,11 +5521,30 @@ assets:
     assetId: simtropolis/21342-opera-house-fix
     authors:
       - toroca
-    buildings: []
+    buildings:
+      - bulldoze: 1520
+        category: rewards
+        cost: 68000
+        filename: OperaHouse.dat
+        flamability: 34
+        garbage: 10
+        id: 032b0000
+        maintenance: 6875
+        menu: Rewards
+        model: 5ad0e817-badb57f1-032b0000
+        name: RW44x50_OperaHouse_032B
+        pollution: 1
+        pollutionRadius: 2
+        power: 50
+        relief:
+          r$$$: 5000
+        submenu: Landmarks_Entertainment,Rewards
+        water: 60
+        waterPollution: 1
+        waterPollutionRadius: 3
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This mod fixes the Opera House, which has a capacity MUCH too lowfor large cities in SimCity 4.  Currently, the Opera House can go overcapacity and inhibit city growth, and you'd never even know it because the Opera House doesn't report its usage statistics.  This mod changes that. Please see the readme for full details, including installation instructions.</p>\n<p>Most of the discussion about this mod has taken place in the following thread, so it may be best to post questions or comments there:</p>\n<p><a href=\"https://www.simtropolis.com/idealbb/view.asp?mode=viewtopic&amp;topicID=48119\" rel=\"external nofollow\">https://www.simtropolis.com/idealbb/view.asp?mode=viewtopic&amp;topicID=48119</a></p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: OperaHouse.zip
     files:
       - OperaHouse.dat
@@ -2420,16 +5552,12 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0021/c007950f6430d08d70636a9dbad3a37c-default.jpg
     lastModified: 2004-03-31T00:00:00.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Opera House Fix
-    props: []
     sha256: 8417c8cf7d8f87641202e05df3fbc028db20d3c7b5ae261777eb9c20a15770a2
     size: 5465
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2004/thumb-c007950f6430d08d70636a9dbad3a37c-default.jpg
     uncompressed: 10431
     url: https://community.simtropolis.com/files/file/21342-opera-house-fix/
@@ -2582,12 +5710,10 @@ assets:
     assetId: simtropolis/22400-maxis-prop-names-and-query-fix
     authors:
       - T Wrecks
-    buildings: []
     category: 112-gameplay-mods
     dependencies:
       - sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<strong><big>Prop Names and Query Fix</big></strong>\n</p>\n\n<p>\n\t<strong>1) WHAT IS THIS? WHY SHOULD I USE IT?</strong>\n</p>\n\n<p>\n\tHas it ever bothered you that when using\_custom lots composed of Maxis building props, they were not really treated like an actual <abbr title=\"Building Architect Tool\">BAT</abbr>, but displayed the prop hover query instead, and always appeared under their original name instead of taking over the name of the custom lot? Then this download might be interesting for you.\n</p>\n\n<p>\n\t<strong>2) WELL, WHAT EXACTLY DOES IT DO?</strong>\n</p>\n\n<p>\n\tIf you are not sure what I mean, check the provided screenshots. The left one shows the situation \"as is\". (I used <strong>Don Miguel</strong>'s \"<strong>The Barnacle Seafood Restaurant</strong>\"). As you can see, the lighthouse behaves like an ordinary prop, and not like a part of the restaurant building as it's supposed to do.\n</p>\n\n<p>\n\tYou only see that little bubble instead of a building hover query, and you can read its original designation (\"Leuchtturm\" is German for \"lighthouse\") rather than the name of the building it belongs to.\n</p>\n\n<p>\n\tIn some cases, the prop in question will not even react properly to your mouse cursor. It will not light up and display a hover query at all. Instead, even when you have your mouse cursor positioned right over it, the mouse cursor will actually highlight whatever lies behind the building.\n</p>\n\n<p>\n\tThis little fix will make all props of Maxis buildings...<br>\n\t- react properly to the mouse cursor<br>\n\t- display the hover query of the building it belongs to<br>\n\t- adopt the name that was assigned to the newly assembled building\n</p>\n\n<p>\n\t<strong><em>In short, all the Maxis building props will behave virtually identical to any <abbr title=\"Building Architect Tool\">BAT</abbr> or original building!</em></strong>\n</p>\n\n<p>\n\t<strong>3) YEAH, BUT WHAT ABOUT THE OFFICIAL \"BUILDINGS AS PROPS\"? WILL I STILL NEED THEM?</strong>\n</p>\n\n<p>\n\tThis fix can actually be used as a <strong>replacement </strong>of the following files (i.e. you no longer need them**):\n</p>\n\n<p>\n\t- <strong>bldgprop_vol1.dat </strong>(sometimes called \"<strong>SimCity Buildings as Props.dat</strong>\" or similar)<br>\n\t- <strong>bldgprop_vol2.dat </strong>(sometimes called \"<strong>Rush Hour Buildings as Props.dat</strong>\" or similar)<br>\n\t- <strong>Plugin_landmarks_and_other_missing_Props.dat </strong>(an assortment of building props Maxis had forgotten, found <a href=\"https://www.simtropolis.com/stex/details.cfm?id=21286\" rel=\"external\">here</a>)\n</p>\n\n<p>\n\t** Bear in mind you still need to keep the <strong>Maxis DLC Props.dat (</strong>from the<strong>\_</strong><a href=\"https://www.sc4evermore.com/index.php/downloads/download/40-maxis/14-maxis-buildings-as-props-and-dlc-props-v2-1\" rel=\"external nofollow\">Maxis Buildings As Props and DLC Props v2.1</a> upload)\_as that is a relatively new 3rd party creation and isn't covered by this upload.\n</p>\n\n<p>\n\t<strong>4) HOW TO INSTALL</strong>\n</p>\n\n<p>\n\tSimply unzip the file contained in this archive (\"<strong>All Maxis building props with proper names.dat</strong>\") into your plugins folder. Afterwards, you can move the files mentioned under 3) to a backup folder where you store SimCity stuff (I generally don't recommend deleting anything too hastily). <img alt=\"2.gif\" src=\"https://www.simtropolis.com/fckEditor/editor/../../forum/i/expressions/2.gif\">\n</p>\n\n<p>\n\tIf you feel insecure and don't want to delete the files mentioned above, there is an easy alternative: Simply make sure that this download is loaded AFTER the original files. The original files should then be superseded by this download. You can ensure this by placing this download in a sub-folder that begins with a few <strong>z</strong>'s (e.g. \"zzz_Prop Query &amp; Name Fix\").\n</p>\n\n<p>\n\t<strong>5) CREDITS</strong>\n</p>\n\n<p>\n\tThe two official \"<strong>Buildings as props</strong>\" files are from <strong>Maxis.</strong><br>\n\tThe file \"<strong>Plugin_landmarks_and_other_missing_Props.dat</strong>\" was made by <strong>ralphaelninja</strong>.\n</p>\n\n<p>\n\tThe tool I used was made by <strong>iLive</strong> - I cannot thank him enough for the possibilities he gave the community.\n</p>\n\n<p>\n\tPlease thank these guys, as my contribution to this download was simple minion work. I was lucky enough to be standing on the shoulder of giants. All I did was add the required properties to make things work like I had in mind - a very simple trick, repeated a few hundred times.\n</p>\n\n<p>\n\t<strong>6) POSSIBLE COPYRIGHT/IP RIGHTS ISSUES</strong>\n</p>\n\n<p>\n\tShould you be concerned that this download might violate any rights held by Maxis, rest assured that I checked with dirk prior to uploading, and obtained his official permission to upload this file. Let me use this occasion\_to thank dirk for his prompt reply and his kind consideration!\n</p>\n\n<p>\n\t<span style=\"color:#2980b9;\"><span style=\"font-size:11px;\">14.10.2024 - updated by Tyberius06 (see changelog)</span></span>\n</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: T Wrecks - Maxis Prop Names And Query Fix.zip
     files:
       - ~Documents/T Wrecks_Readmes/PropFix_1_BEFORE.jpg
@@ -2598,11 +5724,9 @@ assets:
       - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_1_BEFORE.jpg
       - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_2_AFTER.jpg
     lastModified: 2024-10-14T12:05:00.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-18T10:30:47.575Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Maxis Prop Names and Query Fix
     props:
       - 05342861-67bddf0c-b0000001
@@ -3008,45 +6132,110 @@ assets:
       - 05342861-67bddf0c-61500005
       - 05342861-67bddf0c-61500006
       - 05342861-67bddf0c-61600003
+      - 6534284a-c977c536-0c074618
+      - 6534284a-c977c536-0c074619
+      - 6534284a-c977c536-0c07461a
+      - 6534284a-c977c536-0c07461b
+      - 6534284a-c977c536-0c07461d
+      - 6534284a-c977c536-0c07461e
+      - 6534284a-c977c536-0c07461f
+      - 6534284a-c977c536-0c074620
+      - 6534284a-c977c536-0c074621
+      - 6534284a-c977c536-0c074625
+      - 6534284a-c977c536-0c074626
+      - 6534284a-c977c536-0c074627
+      - 6534284a-c977c536-0c074628
+      - 6534284a-c977c536-0c074629
+      - 6534284a-c977c536-0c07462a
+      - 6534284a-c977c536-0c07462b
       - 6534284a-c977c536-cc0746dd
       - 6534284a-c977c536-cc0746de
+      - 6534284a-c977c536-0c07462d
+      - 6534284a-c977c536-0c07462e
       - 6534284a-c977c536-cc0746e0
+      - 6534284a-c977c536-0c07462f
       - 6534284a-c977c536-cc0746e1
+      - 6534284a-c977c536-0c074630
       - 6534284a-c977c536-cc0746e2
       - 6534284a-c977c536-cc0746e3
+      - 6534284a-c977c536-0c074632
       - 6534284a-c977c536-cc0746e4
+      - 6534284a-c977c536-0c074633
       - 6534284a-c977c536-cc0746e5
+      - 6534284a-c977c536-0c074634
       - 6534284a-c977c536-cc0746e6
+      - 6534284a-c977c536-0c074635
       - 6534284a-c977c536-cc0746e7
       - 6534284a-c977c536-cc0746e8
+      - 6534284a-c977c536-0c074637
       - 6534284a-c977c536-cc0746e9
+      - 6534284a-c977c536-0c074638
       - 6534284a-c977c536-cc0746ea
+      - 6534284a-c977c536-0c074639
       - 6534284a-c977c536-cc0746eb
+      - 6534284a-c977c536-0c07463a
       - 6534284a-c977c536-cc0746ec
+      - 6534284a-c977c536-0c07463b
       - 6534284a-c977c536-cc0746ed
+      - 6534284a-c977c536-0c07463c
       - 6534284a-c977c536-cc0746ee
       - 6534284a-c977c536-cc0746ef
+      - 6534284a-c977c536-0c07463e
       - 6534284a-c977c536-cc0746f0
+      - 6534284a-c977c536-0c07463f
       - 6534284a-c977c536-cc0746f1
+      - 6534284a-c977c536-0c074641
       - 6534284a-c977c536-cc0746f3
+      - 6534284a-c977c536-0c074642
       - 6534284a-c977c536-cc0746f4
+      - 6534284a-c977c536-0c074643
       - 6534284a-c977c536-cc0746f5
       - 6534284a-c977c536-cc0746f6
+      - 6534284a-c977c536-0c074645
+      - 6534284a-c977c536-0c074646
       - 6534284a-c977c536-cc0746f8
+      - 6534284a-c977c536-0c074647
       - 6534284a-c977c536-cc0746f9
+      - 6534284a-c977c536-0c074648
       - 6534284a-c977c536-cc0746fa
       - 6534284a-c977c536-cc0746fb
       - 6534284a-c977c536-cc0746fc
+      - 6534284a-c977c536-0c07464b
       - 6534284a-c977c536-cc0746fd
+      - 6534284a-c977c536-0c07464c
       - 6534284a-c977c536-cc0746fe
+      - 6534284a-c977c536-0c07464d
       - 6534284a-c977c536-cc0746ff
+      - 6534284a-c977c536-0c07464e
       - 6534284a-c977c536-cc074700
       - 6534284a-c977c536-cc074701
+      - 6534284a-c977c536-0c074650
       - 6534284a-c977c536-cc074702
+      - 6534284a-c977c536-0c074651
       - 6534284a-c977c536-cc074703
+      - 6534284a-c977c536-0c074652
       - 6534284a-c977c536-cc074704
+      - 6534284a-c977c536-0c074653
       - 6534284a-c977c536-cc074705
+      - 6534284a-c977c536-0c074654
       - 6534284a-c977c536-cc074706
+      - 6534284a-c977c536-0c074655
+      - 6534284a-c977c536-0c074658
+      - 6534284a-c977c536-0c074659
+      - 6534284a-c977c536-0c07465a
+      - 6534284a-c977c536-0c07465b
+      - 6534284a-c977c536-0c07465c
+      - 6534284a-c977c536-0c07465d
+      - 6534284a-c977c536-0c074661
+      - 6534284a-c977c536-0c074662
+      - 6534284a-c977c536-0c074663
+      - 6534284a-c977c536-0c074664
+      - 6534284a-c977c536-0c074665
+      - 6534284a-c977c536-0c074666
+      - 6534284a-c977c536-0c074669
+      - 6534284a-c977c536-0c07466a
+      - 6534284a-c977c536-0c07466b
+      - 6534284a-c977c536-0c07466c
       - 6534284a-c977c536-0c0743e9
       - 6534284a-c977c536-0c0743ea
       - 6534284a-c977c536-0c0743eb
@@ -3100,11 +6289,285 @@ assets:
       - 6534284a-c977c536-ac0734ca
       - 6534284a-c977c536-ac0734cb
       - 6534284a-c977c536-ac0734cd
+      - 6534284a-c977c536-0c07414f
+      - 6534284a-c977c536-0c074150
+      - 6534284a-c977c536-0c074152
+      - 6534284a-c977c536-0c074153
+      - 6534284a-c977c536-0c074154
+      - 6534284a-c977c536-0c074155
+      - 6534284a-c977c536-0c074156
+      - 6534284a-c977c536-0c074157
+      - 6534284a-c977c536-0c074158
+      - 6534284a-c977c536-0c074159
+      - 6534284a-c977c536-0c07415a
+      - 6534284a-c977c536-0c07415b
+      - 6534284a-c977c536-0c07415c
+      - 6534284a-c977c536-0c07415d
+      - 6534284a-c977c536-0c07415e
+      - 6534284a-c977c536-0c07415f
+      - 6534284a-c977c536-0c074160
+      - 6534284a-c977c536-0c074161
+      - 6534284a-c977c536-0c074162
+      - 6534284a-c977c536-0c074163
+      - 6534284a-c977c536-0c074164
+      - 6534284a-c977c536-0c074165
+      - 6534284a-c977c536-0c074166
+      - 6534284a-c977c536-0c074167
+      - 6534284a-c977c536-0c074168
+      - 6534284a-c977c536-0c074169
+      - 6534284a-c977c536-0c07416a
+      - 6534284a-c977c536-0c07416b
+      - 6534284a-c977c536-cc073f1c
+      - 6534284a-c977c536-0c07416c
+      - 6534284a-c977c536-0c07416d
+      - 6534284a-c977c536-cc073f1e
+      - 6534284a-c977c536-0c07416e
+      - 6534284a-c977c536-cc073f1f
+      - 6534284a-c977c536-0c07416f
+      - 6534284a-c977c536-cc073f20
+      - 6534284a-c977c536-0c074170
+      - 6534284a-c977c536-0c074171
+      - 6534284a-c977c536-cc073f22
+      - 6534284a-c977c536-0c074172
+      - 6534284a-c977c536-cc073f23
+      - 6534284a-c977c536-0c074173
+      - 6534284a-c977c536-cc073f25
+      - 6534284a-c977c536-0c074175
+      - 6534284a-c977c536-cc073f26
+      - 6534284a-c977c536-0c074176
+      - 6534284a-c977c536-cc073f27
+      - 6534284a-c977c536-0c074177
+      - 6534284a-c977c536-0c074178
+      - 6534284a-c977c536-cc073f29
+      - 6534284a-c977c536-0c074179
+      - 6534284a-c977c536-cc073f2a
+      - 6534284a-c977c536-0c07417a
+      - 6534284a-c977c536-cc073f2b
+      - 6534284a-c977c536-0c07417b
+      - 6534284a-c977c536-0c07417c
+      - 6534284a-c977c536-cc073f2d
+      - 6534284a-c977c536-0c07417d
+      - 6534284a-c977c536-cc073f2e
+      - 6534284a-c977c536-0c07417e
+      - 6534284a-c977c536-cc073f2f
+      - 6534284a-c977c536-0c07417f
+      - 6534284a-c977c536-cc073f30
+      - 6534284a-c977c536-0c074180
+      - 6534284a-c977c536-cc073f31
+      - 6534284a-c977c536-0c074181
+      - 6534284a-c977c536-0c074182
+      - 6534284a-c977c536-cc073f33
+      - 6534284a-c977c536-0c074183
+      - 6534284a-c977c536-cc073f34
+      - 6534284a-c977c536-0c074184
+      - 6534284a-c977c536-cc073f35
+      - 6534284a-c977c536-0c074185
+      - 6534284a-c977c536-0c074186
+      - 6534284a-c977c536-cc073f37
+      - 6534284a-c977c536-0c074187
+      - 6534284a-c977c536-cc073f38
+      - 6534284a-c977c536-0c074188
+      - 6534284a-c977c536-cc073f39
+      - 6534284a-c977c536-0c074189
+      - 6534284a-c977c536-cc073f3a
+      - 6534284a-c977c536-0c07418a
+      - 6534284a-c977c536-0c07418b
+      - 6534284a-c977c536-cc073f3c
+      - 6534284a-c977c536-0c07418c
+      - 6534284a-c977c536-cc073f3d
+      - 6534284a-c977c536-0c07418d
+      - 6534284a-c977c536-cc073f3e
+      - 6534284a-c977c536-0c07418e
+      - 6534284a-c977c536-cc073f3f
+      - 6534284a-c977c536-0c07418f
+      - 6534284a-c977c536-cc073f40
+      - 6534284a-c977c536-0c074190
+      - 6534284a-c977c536-cc073f41
+      - 6534284a-c977c536-0c074191
+      - 6534284a-c977c536-0c074192
+      - 6534284a-c977c536-cc073f43
+      - 6534284a-c977c536-0c074193
+      - 6534284a-c977c536-cc073f44
+      - 6534284a-c977c536-0c074194
+      - 6534284a-c977c536-cc073f45
+      - 6534284a-c977c536-0c074195
+      - 6534284a-c977c536-cc073f46
+      - 6534284a-c977c536-0c074196
+      - 6534284a-c977c536-0c074197
+      - 6534284a-c977c536-0c074198
+      - 6534284a-c977c536-cc073f49
+      - 6534284a-c977c536-0c074199
+      - 6534284a-c977c536-cc073f4a
+      - 6534284a-c977c536-0c07419a
+      - 6534284a-c977c536-cc073f4b
+      - 6534284a-c977c536-0c07419b
+      - 6534284a-c977c536-cc073f4c
+      - 6534284a-c977c536-0c07419c
+      - 6534284a-c977c536-0c07419d
+      - 6534284a-c977c536-0c07419e
+      - 6534284a-c977c536-cc073f4f
+      - 6534284a-c977c536-0c07419f
+      - 6534284a-c977c536-cc073f50
+      - 6534284a-c977c536-0c0741a0
+      - 6534284a-c977c536-cc073f51
+      - 6534284a-c977c536-0c0741a1
+      - 6534284a-c977c536-cc073f52
+      - 6534284a-c977c536-0c0741a2
+      - 6534284a-c977c536-0c0741a3
+      - 6534284a-c977c536-cc073f54
+      - 6534284a-c977c536-0c0741a4
+      - 6534284a-c977c536-cc073f55
+      - 6534284a-c977c536-0c0741a5
+      - 6534284a-c977c536-cc073f56
+      - 6534284a-c977c536-0c0741a6
+      - 6534284a-c977c536-0c0741a7
+      - 6534284a-c977c536-0c0741a8
+      - 6534284a-c977c536-cc073f59
+      - 6534284a-c977c536-0c0741a9
+      - 6534284a-c977c536-cc073f5a
+      - 6534284a-c977c536-0c0741aa
+      - 6534284a-c977c536-cc073f5b
+      - 6534284a-c977c536-0c0741ab
+      - 6534284a-c977c536-cc073f5c
+      - 6534284a-c977c536-0c0741ac
+      - 6534284a-c977c536-cc073f5d
+      - 6534284a-c977c536-cc073f5e
+      - 6534284a-c977c536-cc073f60
+      - 6534284a-c977c536-cc073f61
+      - 6534284a-c977c536-cc073f62
+      - 6534284a-c977c536-cc073f64
+      - 6534284a-c977c536-cc073f65
+      - 6534284a-c977c536-cc073f66
+      - 6534284a-c977c536-cc073f67
+      - 6534284a-c977c536-cc073f69
+      - 6534284a-c977c536-cc073f6a
+      - 6534284a-c977c536-cc073f6b
+      - 6534284a-c977c536-cc073f6c
+      - 6534284a-c977c536-cc073f6d
+      - 6534284a-c977c536-cc073f6f
+      - 6534284a-c977c536-cc073f70
+      - 6534284a-c977c536-cc073f71
+      - 6534284a-c977c536-cc073f72
+      - 6534284a-c977c536-cc073f74
+      - 6534284a-c977c536-cc073f75
+      - 6534284a-c977c536-cc073f76
+      - 6534284a-c977c536-cc073f78
+      - 6534284a-c977c536-cc073f79
+      - 6534284a-c977c536-cc073f7a
+      - 6534284a-c977c536-cc073f7b
+      - 6534284a-c977c536-cc073f7c
+      - 6534284a-c977c536-cc073f7e
+      - 6534284a-c977c536-cc073f7f
+      - 6534284a-c977c536-cc073f80
+      - 6534284a-c977c536-cc073f81
+      - 6534284a-c977c536-cc073f82
+      - 6534284a-c977c536-cc073f83
+      - 6534284a-c977c536-cc073f85
+      - 6534284a-c977c536-cc073f86
+      - 6534284a-c977c536-cc073f87
+      - 6534284a-c977c536-cc073f88
+      - 6534284a-c977c536-cc073f8a
+      - 6534284a-c977c536-cc073f8b
+      - 6534284a-c977c536-cc073f8c
+      - 6534284a-c977c536-cc073f8d
+      - 6534284a-c977c536-cc073f8f
+      - 6534284a-c977c536-cc073f90
+      - 6534284a-c977c536-cc073f92
+      - 6534284a-c977c536-cc073f93
+      - 6534284a-c977c536-cc073f94
+      - 6534284a-c977c536-cc073f96
+      - 6534284a-c977c536-cc073f97
+      - 6534284a-c977c536-cc073f98
+      - 6534284a-c977c536-cc073f99
+      - 6534284a-c977c536-cc073f9b
+      - 6534284a-c977c536-cc073f9c
+      - 6534284a-c977c536-cc073f9d
+      - 6534284a-c977c536-cc073f9f
+      - 6534284a-c977c536-cc073fa0
+      - 6534284a-c977c536-cc073fa1
+      - 6534284a-c977c536-cc073fa2
+      - 6534284a-c977c536-cc073fa3
+      - 6534284a-c977c536-cc073fa5
+      - 6534284a-c977c536-cc073fa6
+      - 6534284a-c977c536-cc073fa7
+      - 6534284a-c977c536-cc073fa8
+      - 6534284a-c977c536-cc073fa9
+      - 6534284a-c977c536-cc073faa
+      - 6534284a-c977c536-cc073fab
+      - 6534284a-c977c536-cc073fad
+      - 6534284a-c977c536-cc073fae
+      - 6534284a-c977c536-cc073faf
+      - 6534284a-c977c536-cc073fb0
+      - 6534284a-c977c536-cc073fb1
+      - 6534284a-c977c536-cc073fb3
+      - 6534284a-c977c536-cc073fb4
+      - 6534284a-c977c536-cc073fb5
+      - 6534284a-c977c536-cc073fb6
+      - 6534284a-c977c536-cc073fb8
+      - 6534284a-c977c536-cc073fb9
+      - 6534284a-c977c536-cc073fba
+      - 6534284a-c977c536-cc073fbb
+      - 6534284a-c977c536-cc073fbc
+      - 6534284a-c977c536-cc073fbd
+      - 6534284a-c977c536-cc073fbe
+      - 6534284a-c977c536-cc073fbf
+      - 6534284a-c977c536-cc073fc0
+      - 6534284a-c977c536-cc073fc2
+      - 6534284a-c977c536-cc073fc3
+      - 6534284a-c977c536-cc073fc4
+      - 6534284a-c977c536-cc073fc5
+      - 6534284a-c977c536-cc073fc7
+      - 6534284a-c977c536-cc073fc8
+      - 6534284a-c977c536-cc073fc9
+      - 6534284a-c977c536-cc073fcb
+      - 6534284a-c977c536-cc073fcc
+      - 6534284a-c977c536-cc073fcd
+      - 6534284a-c977c536-cc073fce
+      - 6534284a-c977c536-cc073fd0
+      - 6534284a-c977c536-cc073fd1
+      - 6534284a-c977c536-cc073fd2
+      - 6534284a-c977c536-cc073fd3
+      - 6534284a-c977c536-cc073fd4
+      - 6534284a-c977c536-cc073fd6
+      - 6534284a-c977c536-cc073fd7
+      - 6534284a-c977c536-cc073fd8
+      - 6534284a-c977c536-cc073fd9
+      - 6534284a-c977c536-cc073fda
+      - 6534284a-c977c536-cc073fdb
+      - 6534284a-c977c536-cc073fdd
+      - 6534284a-c977c536-cc073fde
+      - 6534284a-c977c536-cc073fdf
+      - 6534284a-c977c536-cc073fe1
+      - 6534284a-c977c536-cc073fe2
+      - 6534284a-c977c536-cc073fe3
+      - 6534284a-c977c536-cc073fe4
+      - 6534284a-c977c536-cc073fe5
+      - 6534284a-c977c536-cc073fe6
+      - 6534284a-c977c536-cc073fe7
+      - 6534284a-c977c536-cc073fe8
+      - 6534284a-c977c536-cc073fe9
+      - 6534284a-c977c536-cc073fea
+      - 6534284a-c977c536-cc073feb
+      - 6534284a-c977c536-cc073fed
+      - 6534284a-c977c536-cc073fee
+      - 6534284a-c977c536-cc073fef
+      - 6534284a-c977c536-cc073ff1
+      - 6534284a-c977c536-cc073ff2
+      - 6534284a-c977c536-cc073ff3
+      - 6534284a-c977c536-cc073ff5
+      - 6534284a-c977c536-cc073ff6
+      - 6534284a-c977c536-cc073ff7
+      - 6534284a-c977c536-cc073ff9
       - 6534284a-c977c536-8c0749c2
+      - 6534284a-c977c536-cc073ffa
+      - 6534284a-c977c536-cc073ffb
       - 6534284a-c977c536-8c0749c3
       - 6534284a-c977c536-8c0749c4
+      - 6534284a-c977c536-cc073ffc
+      - 6534284a-c977c536-cc073ffd
       - 6534284a-c977c536-8c0749c5
       - 6534284a-c977c536-8c0749c6
+      - 6534284a-c977c536-cc073ffe
       - 6534284a-c977c536-8c0749c7
       - 6534284a-c977c536-8c0749c8
       - 6534284a-c977c536-8c0749c9
@@ -3128,6 +6591,126 @@ assets:
       - 6534284a-c977c536-8c0749e4
       - 6534284a-c977c536-8c0749e5
       - 6534284a-c977c536-8c0749e8
+      - 6534284a-c977c536-0c074579
+      - 6534284a-c977c536-0c07457a
+      - 6534284a-c977c536-0c07457b
+      - 6534284a-c977c536-0c07457c
+      - 6534284a-c977c536-0c074581
+      - 6534284a-c977c536-0c074582
+      - 6534284a-c977c536-0c074583
+      - 6534284a-c977c536-0c074584
+      - 6534284a-c977c536-0c074585
+      - 6534284a-c977c536-0c074586
+      - 6534284a-c977c536-0c074587
+      - 6534284a-c977c536-0c074588
+      - 6534284a-c977c536-0c074589
+      - 6534284a-c977c536-0c07458a
+      - 6534284a-c977c536-0c07458b
+      - 6534284a-c977c536-0c07458c
+      - 6534284a-c977c536-0c074591
+      - 6534284a-c977c536-0c074592
+      - 6534284a-c977c536-0c074593
+      - 6534284a-c977c536-0c074594
+      - 6534284a-c977c536-0c074595
+      - 6534284a-c977c536-0c074596
+      - 6534284a-c977c536-0c074597
+      - 6534284a-c977c536-0c074598
+      - 6534284a-c977c536-0c07459a
+      - 6534284a-c977c536-0c07459b
+      - 6534284a-c977c536-0c07459c
+      - 6534284a-c977c536-0c07459d
+      - 6534284a-c977c536-0c07459e
+      - 6534284a-c977c536-0c07459f
+      - 6534284a-c977c536-0c0745a1
+      - 6534284a-c977c536-0c0745a2
+      - 6534284a-c977c536-0c0745a3
+      - 6534284a-c977c536-0c0745a4
+      - 6534284a-c977c536-0c0745a6
+      - 6534284a-c977c536-0c0745a7
+      - 6534284a-c977c536-0c0745a8
+      - 6534284a-c977c536-0c0745aa
+      - 6534284a-c977c536-0c0745ab
+      - 6534284a-c977c536-0c0745ad
+      - 6534284a-c977c536-0c0745ae
+      - 6534284a-c977c536-0c0745af
+      - 6534284a-c977c536-0c0745b1
+      - 6534284a-c977c536-0c0745b2
+      - 6534284a-c977c536-0c0745b3
+      - 6534284a-c977c536-0c0745b5
+      - 6534284a-c977c536-0c0745b6
+      - 6534284a-c977c536-0c0745b7
+      - 6534284a-c977c536-0c0745b8
+      - 6534284a-c977c536-0c0745ba
+      - 6534284a-c977c536-0c0745bb
+      - 6534284a-c977c536-0c0745bc
+      - 6534284a-c977c536-0c0745bd
+      - 6534284a-c977c536-0c0745be
+      - 6534284a-c977c536-0c0745c0
+      - 6534284a-c977c536-0c0745c1
+      - 6534284a-c977c536-0c0745c2
+      - 6534284a-c977c536-0c0745c4
+      - 6534284a-c977c536-0c0745c5
+      - 6534284a-c977c536-0c0745c7
+      - 6534284a-c977c536-0c0745c8
+      - 6534284a-c977c536-0c0745ca
+      - 6534284a-c977c536-0c0745cb
+      - 6534284a-c977c536-0c0745cc
+      - 6534284a-c977c536-0c0745ce
+      - 6534284a-c977c536-0c0745cf
+      - 6534284a-c977c536-0c0745d0
+      - 6534284a-c977c536-0c0745d1
+      - 6534284a-c977c536-0c0745d2
+      - 6534284a-c977c536-0c0745d6
+      - 6534284a-c977c536-0c0745d7
+      - 6534284a-c977c536-0c0745d8
+      - 6534284a-c977c536-0c0745d9
+      - 6534284a-c977c536-0c0745da
+      - 6534284a-c977c536-0c0745db
+      - 6534284a-c977c536-0c0745dc
+      - 6534284a-c977c536-0c0745de
+      - 6534284a-c977c536-0c0745df
+      - 6534284a-c977c536-0c0745e0
+      - 6534284a-c977c536-0c0745e1
+      - 6534284a-c977c536-0c0745e2
+      - 6534284a-c977c536-0c0745e6
+      - 6534284a-c977c536-0c0745e7
+      - 6534284a-c977c536-0c0745e8
+      - 6534284a-c977c536-0c0745e9
+      - 6534284a-c977c536-0c0745ea
+      - 6534284a-c977c536-0c0745eb
+      - 6534284a-c977c536-0c0745ec
+      - 6534284a-c977c536-0c0745ed
+      - 6534284a-c977c536-0c0745ef
+      - 6534284a-c977c536-0c0745f0
+      - 6534284a-c977c536-0c0745f1
+      - 6534284a-c977c536-0c0745f2
+      - 6534284a-c977c536-0c0745f3
+      - 6534284a-c977c536-0c0745f5
+      - 6534284a-c977c536-0c0745f7
+      - 6534284a-c977c536-0c0745f8
+      - 6534284a-c977c536-0c0745f9
+      - 6534284a-c977c536-0c0745fa
+      - 6534284a-c977c536-0c0745fc
+      - 6534284a-c977c536-0c0745fd
+      - 6534284a-c977c536-0c0745fe
+      - 6534284a-c977c536-0c0745ff
+      - 6534284a-c977c536-0c074601
+      - 6534284a-c977c536-0c074602
+      - 6534284a-c977c536-0c074603
+      - 6534284a-c977c536-0c074604
+      - 6534284a-c977c536-0c074606
+      - 6534284a-c977c536-0c074607
+      - 6534284a-c977c536-0c074608
+      - 6534284a-c977c536-0c074609
+      - 6534284a-c977c536-0c07460b
+      - 6534284a-c977c536-0c07460c
+      - 6534284a-c977c536-0c07460d
+      - 6534284a-c977c536-0c07460f
+      - 6534284a-c977c536-0c074610
+      - 6534284a-c977c536-0c074612
+      - 6534284a-c977c536-0c074613
+      - 6534284a-c977c536-0c074614
+      - 6534284a-c977c536-0c074615
       - 6534284a-c977c536-ac8423f4
       - 6534284a-c977c536-ac8423f5
       - 6534284a-c977c536-ac8423f6
@@ -3148,11 +6731,113 @@ assets:
       - 6534284a-c977c536-ec8423fa
       - 6534284a-c977c536-ec8423fb
       - 6534284a-c977c536-ec8423fc
+      - 6534284a-c977c536-0c842405
+      - 6534284a-c977c536-0c842406
+      - 6534284a-c977c536-0c842407
+      - 6534284a-c977c536-0c842408
+      - 6534284a-c977c536-0c842409
+      - 6534284a-c977c536-0c84240a
+      - 6534284a-c977c536-0c84240b
+      - 6534284a-c977c536-0c84240c
+      - 6534284a-c977c536-0c84240d
+      - 6534284a-c977c536-0c84240e
+      - 6534284a-c977c536-0c84240f
+      - 6534284a-c977c536-0c842410
+      - 6534284a-c977c536-0c842411
+      - 6534284a-c977c536-0c842412
+      - 6534284a-c977c536-0c842413
+      - 6534284a-c977c536-0c842414
+      - 6534284a-c977c536-0c842415
+      - 6534284a-c977c536-0c842416
+      - 6534284a-c977c536-0c842417
+      - 6534284a-c977c536-0c842418
+      - 6534284a-c977c536-0c842419
       - 6534284a-c977c536-8c8423e3
+      - 6534284a-c977c536-0c84241a
+      - 6534284a-c977c536-4c8423ff
       - 6534284a-c977c536-8c8423e4
       - 6534284a-c977c536-8c8423e5
+      - 6534284a-c977c536-4c842400
+      - 6534284a-c977c536-0c84241b
+      - 6534284a-c977c536-0c84241c
+      - 6534284a-c977c536-4c842401
       - 6534284a-c977c536-8c8423e6
       - 6534284a-c977c536-8c8423e7
+      - 6534284a-c977c536-4c842402
+      - 6534284a-c977c536-0c84241d
+      - 6534284a-c977c536-0c84241e
+      - 6534284a-c977c536-4c842403
+      - 6534284a-c977c536-4c842404
+      - 6534284a-c977c536-0c84241f
+      - 6534284a-c977c536-4c842405
+      - 6534284a-c977c536-0c842420
+      - 6534284a-c977c536-0c842421
+      - 6534284a-c977c536-4c842406
+      - 6534284a-c977c536-4c842407
+      - 6534284a-c977c536-0c842422
+      - 6534284a-c977c536-0c842423
+      - 6534284a-c977c536-4c842408
+      - 6534284a-c977c536-4c842409
+      - 6534284a-c977c536-0c842424
+      - 6534284a-c977c536-0c842425
+      - 6534284a-c977c536-4c84240a
+      - 6534284a-c977c536-0c842426
+      - 6534284a-c977c536-4c84240b
+      - 6534284a-c977c536-4c84240c
+      - 6534284a-c977c536-0c842427
+      - 6534284a-c977c536-0c842428
+      - 6534284a-c977c536-4c84240d
+      - 6534284a-c977c536-4c84240e
+      - 6534284a-c977c536-0c842429
+      - 6534284a-c977c536-0c84242a
+      - 6534284a-c977c536-4c84240f
+      - 6534284a-c977c536-4c842410
+      - 6534284a-c977c536-0c84242b
+      - 6534284a-c977c536-4c842411
+      - 6534284a-c977c536-0c84242c
+      - 6534284a-c977c536-0c84242d
+      - 6534284a-c977c536-4c842412
+      - 6534284a-c977c536-4c842413
+      - 6534284a-c977c536-0c84242e
+      - 6534284a-c977c536-0c84242f
+      - 6534284a-c977c536-4c842414
+      - 6534284a-c977c536-4c842415
+      - 6534284a-c977c536-0c842430
+      - 6534284a-c977c536-0c842431
+      - 6534284a-c977c536-4c842416
+      - 6534284a-c977c536-0c842432
+      - 6534284a-c977c536-4c842417
+      - 6534284a-c977c536-4c842418
+      - 6534284a-c977c536-0c842433
+      - 6534284a-c977c536-0c842434
+      - 6534284a-c977c536-4c842419
+      - 6534284a-c977c536-4c84241a
+      - 6534284a-c977c536-0c842435
+      - 6534284a-c977c536-0c842436
+      - 6534284a-c977c536-4c84241b
+      - 6534284a-c977c536-4c84241c
+      - 6534284a-c977c536-0c842437
+      - 6534284a-c977c536-4c84241d
+      - 6534284a-c977c536-0c842438
+      - 6534284a-c977c536-0c842439
+      - 6534284a-c977c536-4c84241e
+      - 6534284a-c977c536-4c84241f
+      - 6534284a-c977c536-0c84243a
+      - 6534284a-c977c536-0c84243b
+      - 6534284a-c977c536-4c842420
+      - 6534284a-c977c536-4c842421
+      - 6534284a-c977c536-0c84243c
+      - 6534284a-c977c536-0c84243d
+      - 6534284a-c977c536-4c842422
+      - 6534284a-c977c536-0c84243e
+      - 6534284a-c977c536-4c842423
+      - 6534284a-c977c536-4c842424
+      - 6534284a-c977c536-0c84243f
+      - 6534284a-c977c536-4c842425
+      - 6534284a-c977c536-4c842426
+      - 6534284a-c977c536-4c842427
+      - 6534284a-c977c536-4c842428
+      - 6534284a-c977c536-4c842429
       - 6534284a-c977c536-2b770000
       - 6534284a-c977c536-8f813787
       - 6534284a-c977c536-8f813788
@@ -3169,7 +6854,6 @@ assets:
       - 6534284a-c977c536-8f813791
     sha256: e11b61f0e20857d46f7f015641f023e28f3967b84e21d2ca763b71ca799d5ba8
     size: 102683
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2009/thumb-0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_1_BEFORE.jpg
     timestamp: 2024-10-15T15:05:51.656Z
     uncompressed: 467403
@@ -3206,11 +6890,9 @@ assets:
     assetId: simtropolis/22771-ih-missing-jobs-fix-update
     authors:
       - HeinBloed4711
-    buildings: []
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This is a preliminary workaround for a game bug that I\_recently found thanks to another discovery by sumwonyuno, all of which is documented over at <a href=\"https://www.sc4devotion.com/forums/index.php?topic=8870.msg284035#msg284035\" rel=\"external nofollow\">https://www.sc4devotion.com/forums/index.php?topic=8870.msg284035#msg284035</a>. You should have at least some basic understanding of the inner workings of the simulator to make a sense of it.</p>\n<p>\_</p>\n<p><strong>Short summary:</strong>\_due to a presumable rounding/arithmetic error, almost every IH lot in the game didn't offer any high wealth ($$$)\_jobs so far, while still creating demand for R$$$ residents though.</p>\n<p>\_</p>\n<p>This fix changes it so IH\_lots offer 12% $$$\_jobs instead of the originally designed but missing 10% $$$ jobs, reducing $$\_jobs by 2% to 78% at the same time so the sum remains 100%. 12% was the number that I\_found which is the closest to 10% and at which the error is gone.</p>\n<p>\_</p>\n<p>This also affects the demand for R$$ and R$$$ (through the industry census drive), only by the same small margin of +-2% of your IH\_population though. I\_don't think that effect would be noticed in any established city. What you should notice though with this fix is R$$$ sims finally working at IH\_lots.</p>\n<p>\_</p>\n<p>Apart from the IH, there are also three ploppable Maxis buildings affected by this bug;\_the Medical Clinic, the Solar Power Plant and the Nuclear Power Plant. I refer you to the SC4Devotion thread for those.</p>\n<p>\_</p>\n<p>I'd be glad to get your feedback. BATers and LOTers who design ploppable buildings should be aware of the fact that this game bug can potentially kill jobs at their creations, too. Please read the linked SC4Devotion thread till the end, you might have to test your buildings if they're affected.</p>\n<p>\_</p>\n<p>\_</p>\n<p><strong> Installation instructions</strong>: unzip this file and put the contained .dat file into your SC4 plugins folder. Existing IH\_lots will be fixed, too, so you don't need to bulldoze anything. It might take a little ingame time though before the change takes place.</p>\n<p>\_</p>\n<p><strong>Update:</strong> Credit where credit is due. I\_just found a STEX entry by <strong>niloluiz</strong>, here:\_<a href=\"https://www.simtropolis.com/stex/details.cfm?id=22255\" rel=\"external nofollow\">https://www.simtropolis.com/STEX/details.cfm?id=22255</a>, which does contain a fix for this, too (you need to read the description, it's a bit hidden). As I had posted in the thread on SC4D, I\_couldn't believe no one had noticed this bug yet - so I was right to doubt that. Unfortunately, I\_couldn't find information regarding that bug before though. There's still some reason to use my version though, because the ratio I\_used (10/78/12)\_is closer to the game design than niloluiz's (10/75/15) (and I\_didn't uncap demand). It seems niloluiz approached this ratio coming from 10/70/20, which he uses in the 3x jobs version. I'll notify him of this inconsistency and that he can set the ratio even closer to the original design.</p>\n<p>\_</p>\n<p><strong>Update 2:</strong> LunarMongoose brought a typing error to my attention that sadly slipped into my original IH\_census exemplar. Instead of 10/7<strong>8</strong>/12, I\_had used 10/7<strong>7</strong>/12, so 1% $$ jobs were missing. I'm sorry for this. Please re-download the updated file and overwrite my previous version with it.</p>\n<p>\_</p>\n<p><strong>Compatibility:</strong> This mod is fully compatible with <strong>toroca's Industry Quadrupler mod</strong> (<a href=\"https://www.simtropolis.com/stex/details.cfm?id=21293\" rel=\"external nofollow\">https://www.simtropolis.com/STEX/details.cfm?id=21293</a>) and  <strong>bones1's Industry Doubler</strong> (<a href=\"https://www.simtropolis.com/stex/details.cfm?id=15758\" rel=\"external nofollow\">https://www.simtropolis.com/STEX/details.cfm?id=15758</a>) since those two mods use different properties than mine. Their mods work directly on the building properties, whereas mine is on a higher level, controlling job distribution for the entire class of IH lots.</p>\n<p>\_</p>\n<p>If you use one of the jobs_xx files from <strong>niloluiz's RCImulti-MODpack</strong> (<a href=\"https://www.simtropolis.com/stex/details.cfm?id=22255\" rel=\"external nofollow\">https://www.simtropolis.com/STEX/details.cfm?id=22255</a>), you don't need my mod because it's already fixed.</p>\n<p>\_</p>\n<p>I'll add more compatibility information as I\_learn about it.</p>\n<p>\_</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: IH_census_10_78_12_fixed.zip
     files:
       - IH_census_10_78_12.dat
@@ -3218,16 +6900,12 @@ assets:
       - https://www.simtropolis.com/objects/screens/0008/3dfed99e5cbbdcdedaabc24d76571a26-before.jpg
       - https://www.simtropolis.com/objects/screens/0008/3dfed99e5cbbdcdedaabc24d76571a26-after.jpg
     lastModified: 2009-11-01T19:21:13.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: IH missing $$$ jobs fix (update!)
-    props: []
     sha256: b00b2a11e874487571b0fd4378eaf42756321c9a1ade5bf124436a54cd09abc5
     size: 305
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2009/thumb-3dfed99e5cbbdcdedaabc24d76571a26-before.jpg
     uncompressed: 249
     url: https://community.simtropolis.com/files/file/22771-ih-missing-jobs-fix-update/
@@ -3254,7 +6932,8 @@ assets:
     assetId: simtropolis/23089-simfox-day-and-nite-modd
     authors:
       - SimFox
-    buildings: []
+    categories:
+      - graphics
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\r\n\tThis modd alters the look of both Day (slightly) and Night (in far more drastic fashion) view of the game.<br><br>\r\n\tDays gain richer more natural looking shadows, greater overall contrast and better interaction of terrain and various models (in terms of shading).<br><br>\r\n\tNights are now much darker and less blue/purple. Yet unlike in some other similar modds they aren't completely black-hole, pitch black. The city, vegetation and terrain are all still visible in the night, albeit just so.<br><br>\r\n\tInstallation is very simple just unzip the content of the archive into your Plugins folder and start the game.<br><br><em>Special Note on TruNite buildings.<br><br>\r\n\tThis modd is tailor made to work with DarkNite TruNite buildings. Normal TruNite ones will look overly bright and blue. So look for special DarkNite releases!</em>\r\n</p>\r\n\r\n<p>\r\n\t<br>\r\n\tHave FUN! Questions and suggestions for a time being may be addressed to <a href=\"https://community.simtropolis.com/forums/topic/40623-bat4max-v5\" rel=\"\">BAT4Max thread</a>\r\n</p>\r\n\n\t\t\t\t\t\t</body>"
@@ -3266,9 +6945,8 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/monthly_08_2011/0d98a026f5b952e8a0fe90c15ae81ef6-daynnitestex.jpg
     lastModified: 2021-09-19T12:24:58.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2b8a0000
@@ -3394,11 +7072,9 @@ assets:
       - 5ad0e817-badb57f1-11570000
       - 5ad0e817-badb57f1-10700000
     name: SimFox Day and Nite Modd
-    props: []
     sha256: 805a3a8fc4f265b0f9b86ab0eb9fef29deb46db67f6d69a12cbdb50c65c08cee
     size: 299038
     support: https://community.simtropolis.com/forums/topic/40623-bat4max-v5
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_08_2011/thumb-0d98a026f5b952e8a0fe90c15ae81ef6-daynnitestex.jpg
     uncompressed: 495430
     url: https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/
@@ -3764,11 +7440,58 @@ assets:
     assetId: simtropolis/27340-space-port-fix-mod
     authors:
       - Cougar2004
-    buildings: []
+    buildings:
+      - bulldoze: 3900
+        category: rewards
+        cost: 96000
+        filename: SpacePort Fix Mod (use only one of these)/Spaceport Fix Alt Mod.dat
+        flamability: 38
+        garbage: 10
+        id: '03840000'
+        jobs:
+          $: 8
+          $$: 104
+          $$$: 16
+        maintenance: 300
+        menu: Rewards
+        model: 5ad0e817-badb57f1-03840000
+        name: RW80x60_launchpad_0384
+        pollution: 10
+        pollutionRadius: 3
+        power: 219
+        relief:
+          iht: 150000
+        submenu: Landmarks_Government,Rewards
+        water: 248
+        waterPollution: 5
+        waterPollutionRadius: 4
+      - bulldoze: 4200
+        category: rewards
+        cost: 96000
+        filename: SpacePort Fix Mod (use only one of these)/Spaceport Fix Mod.dat
+        flamability: 38
+        garbage: 10
+        id: '03840000'
+        jobs:
+          $$: 100
+        maintenance: 400
+        menu: Rewards
+        model: 5ad0e817-badb57f1-03840000
+        name: RW80x60_launchpad_0384
+        pollution: 10
+        pollutionRadius: 3
+        power: 700
+        relief:
+          iht: 150000
+        submenu: Landmarks_Government,Rewards
+        water: 360
+        waterPollution: 5
+        waterPollutionRadius: 4
+    categories:
+      - rewards
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><strong>Purpose</strong></p>\n<p>This mod fixes a problem with the default Maxis Space Port, which claims it \"Provides a boost to high-tech industry\" however, it does not. Maxis forgot to include this boost, therefore it boosts nothing but costs and some slight commercial desirability.   </p>\n<p>\_</p>\n<p>This mod fixes that. A significant yet realistic (non-radical) boost to High Tech Industry is now provided. Placing the Space Port now provides 150,000 High-Tech Industry Cap Relief. This is well within the range of other similar buildings such as the Advanced Research Center, University, and Marina. </p>\n<p>\_</p>\n<p><strong>Alternate Version</strong></p>\n<p>For those who feel the default Maxis Space Port uses far too much power for its size and function, a second Mod file is provided in this download. In addition to fixing the High-Tech Boost, this ALT Mod version lowers power requirements from the default 700 to 219. This should allow most cities to stay safely under the power abilities of a single power plant with the Space Port placed.</p>\n<p>\_</p>\n<p>Additionally, the included ALT Mod version also increases the Space Port from 100 R$ Jobs to a more realistic spread of 8 R$, 104 R$$, and 16 R$$$, to cover the range of employees from Astronauts down to Janitorial staff. Water consumed is decreased slightly from 360 to 248. Monthly Cost is lowered from $400/mo to $300/mo. And Bulldoze Cost of $4200 is now $3900. No other changes have been made to how the Space Port looks or functions.</p>\n<p>\_</p>\n<p><strong>Files Included - ( *** USE ONLY </strong><strong><span style=\"color:#ff0000;\">ONE </span></strong><strong>of these *** )</strong></p>\n<p>- 'SpacePort Fix Mod.dat' (Fix only)</p>\n<p>- 'SpacePort Fix Alt Mod.dat' (Fix + some additional changes)</p>\n<p><strong>Compatibility</strong></p>\n<p>SimCity 4 Deluxe or Rush Hour <span style=\"color:#ff0000;\"><span style=\"text-decoration:underline;\">Required</span></span><span style=\"color:#ff0000;\"> </span>for this Mod. </p>\n<p>This mod is safe to use with all other known Mods released as of this date on the STEX.<em> (The AC Functional Airports Mod found at SC4Devotion.com modds this building in a large pack, so you may only use this Mod or that one.)</em></p>\n<p> <strong>Dependencies </strong></p>\n<p>None.</p>\n<p>\_</p>\n<p><strong>Additional Notes:</strong></p>\n<p>See included <em>ReadMe.txt</em> for Installation, Uninstall, and further details.</p>\n<p>Impact of this Mod will only be seen when you have met all SC4 requirements for High-Tech Industry and have placed the Space Port<em> (from Rewards Menu)</em> in your city, with this Mod installed.</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: SpacePort Fix Mod.zip
     files:
       - SpacePort Fix Mod (use only one of these)/Spaceport Fix Alt Mod.dat
@@ -3782,7 +7505,19 @@ assets:
     lastModified: 2012-03-05T02:14:26.000Z
     lots:
       - building: '03840000'
-        category: landmarks
+        filename: SpacePort Fix Mod (use only one of these)/Spaceport Fix Alt Mod.dat
+        id: 4bb1058d
+        name: RW5x4_launchpad
+        props:
+          - '29860000'
+          - abb14aee
+        size: 7x6
+        textures:
+          - 25fb0000
+          - '25270000'
+          - 258f0000
+          - 257c0000
+      - building: '03840000'
         filename: SpacePort Fix Mod (use only one of these)/Spaceport Fix Mod.dat
         id: 4bb1058d
         name: RW5x4_launchpad
@@ -3796,14 +7531,11 @@ assets:
           - 258f0000
           - 257c0000
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Space Port Fix Mod
-    props: []
     sha256: da535d39a03150400545bf9b563fdf91a1f4f8fd82722bf7175ee7da3b3f2772
     size: 32189
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2012/thumb-a1b429c947a080f7bafab598698c4908-spaceport-fix-mod-1.png
     uncompressed: 35767
     url: https://community.simtropolis.com/files/file/27340-space-port-fix-mod/
@@ -4576,51 +8308,78 @@ assets:
       - HippoTank
     buildings:
       - bulldoze: 40
+        category: health
         cost: 400
         filename: HippoTank Demand Fix/Plugins/HT_DemandFix.dat
         flamability: 35
         garbage: 9
         id: '03110000'
+        jobs:
+          $: 2
+          $$: 5
+          $$$: 1
         maintenance: 400
+        menu: Health
         model: 5ad0e817-badb57f1-03110000
+        name: CV12x14_urgentcareclinic_0311
         pollution: 1
         pollutionRadius: 2
         power: 4
+        relief:
+          r$: 20
+          r$$: 20
+          r$$$: 20
+        submenu: Health_Small
         water: 10
         waterPollution: 1
         waterPollutionRadius: 3
       - bulldoze: 1800
+        category: power
         cost: 40000
         filename: HippoTank Demand Fix/Plugins/HT_DemandFix.dat
         flamability: 80
         garbage: 15
         id: 1f3f0000
+        jobs:
+          $: 22
+          $$: 18
+          $$$: 8
         maintenance: 3000
+        menu: Power
         model: 5ad0e817-badb57f1-1f3f0000
+        name: Up64x80_NuclearPowerPlant_1F3F
         pollution: 10
         pollutionRadius: 4
         powerProduction: 16000
+        submenu: Power_Clean
         water: 900
         waterPollution: 45
         waterPollutionRadius: 5
       - bulldoze: 1350
+        category: power
         cost: 30000
         filename: HippoTank Demand Fix/Plugins/HT_DemandFix.dat
         flamability: 50
         garbage: 11
         id: 1f440000
+        jobs:
+          $: 11
+          $$: 12
+          $$$: 9
         maintenance: 1000
+        menu: Power
         model: 5ad0e817-badb57f1-1f440000
+        name: Up94x94_SolarPowerPlant_1F44
         pollution: 5
         pollutionRadius: 3
         powerProduction: 5000
+        submenu: Power_Clean
         water: 5
         waterPollution: 5
         waterPollutionRadius: 3
     category: 112-gameplay-mods
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tHippoTank Demand Fix\n</p>\n\n<p>\n\tThis is just the fix for the demand values for the Medical Clinic, Solar Power Plant, Nuclear Power Plant.\n</p>\n\n<p>\n\t<br>\n\tWhat is actually happening<br>\n\t----------------------------------------------\n</p>\n\n<p>\n\t&gt; the game creates demand for a particular bracket of job but does not actually employ them.\n</p>\n\n<p>\n\t&gt; The reason for this is because of a bug. In SimCity 4 the buildings that create demand (available jobs) does so by separating them by wealth bracket. There will be a certain about of jobs available for $ sims, $$ sims, and $$$ sims. This is displayed in a ratio. E.g. crude example- 20:50:30 means there are 20 jobs avialable for $ sims, 50 jobs for $$ sims and 30 jobs for $$$ sims.\n</p>\n\n<p>\n\t&gt; The bug occurs when the data in game has two ratios with the same value. It causes the game to ignore one of the values. High Tech Industry has the ratio 10:80:10, and as a result of this bug it causes the $$$ part of the ratio to be ignored resulting in no $$$ sims being employed.\n</p>\n\n<p>\n\t&gt; The other ratios with duplicate values are the Solar Power Plant, Nuclear Power Plant and the Medical Clinic.\_\n</p>\n\n<p>\n\t&gt; THIS ONLY FIXES THOSE THREE AND NOT HIGH TECH DEMAND. I have a download bundle for those fixes included.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tMedical Clinic, Solar Power Plant, Nuclear Power Plant all missing jobs<br>\n\t----------------------------------------------<br>\n\tInstructions: Put HT_DemandFix.dat plugin in game (Program Files) plugins folder\n</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: HippoTank_Demand_Fix.zip
     files:
       - HippoTank Demand Fix/Plugins/HT_DemandFix.dat
@@ -4629,16 +8388,12 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2015_11/screenshot.png.2af44fb2639cc175dbf54b582ea81dbe.png
     lastModified: 2015-11-06T21:21:13.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: HippoTank Demand Fix
-    props: []
     sha256: 5193d824a2e7359099431f959b0f88876d5a04cdaebb41c388f7f40c66da845d
     size: 281121
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2015_11/screenshot.thumb.png.4c63d5b9cb065aae208b306490b28ae0.png
     uncompressed: 283673
     url: https://community.simtropolis.com/files/file/30836-hippotank-demand-fix/
@@ -4714,7 +8469,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2016_10/cityhall1.png.e28e6d30e2b13e4b1fc3a59f640c3007.png
     lastModified: 2017-12-27T03:47:02.000Z
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
     name: Real Upgradeable City Halls
     repository: https://github.com/nsgomez/gzcom-dll
@@ -4723,18 +8478,15 @@ assets:
     url: https://community.simtropolis.com/files/file/31339-real-upgradeable-city-halls/
     variants:
       '169470':
-        buildings: []
-        features: []
+        categories:
+          - mods
+          - dll
         filename: UpgradeableCityHalls.zip
         files:
           - UpgradeableCityHalls.dat
           - UpgradeableCityHalls.dll
-        lots: []
-        models: []
-        props: []
         sha256: f64d4fbc33c93941b37ab55ece4a820cd6f70eb10606a8bc1fcb4dee20366dcb
         size: 41510
-        textures: []
         uncompressed: 167572
       '169471':
         filename: UpgradeableCityHalls - Mac Only.zip
@@ -5150,12 +8902,12 @@ assets:
     assetId: simtropolis/34027-coris-no-kickout-lower-wealth-mod
     authors:
       - Cyclone Boom
-    buildings: []
+    categories:
+      - gameplay
     category: 112-gameplay-mods
     dependencies:
       - simtropolis/14931-less-abandonment
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div style=\"float:left; width:280px; padding:10px; cursor:default;\">\n\t<span style=\"display:none;\">CoriBoom™ Productions\_</span>\n\t<div>\n\t\t<a href=\"https://community.simtropolis.com/tags/CoriBoom/\" rel=\"\"><img alt=\"CoriBoom_Productions_Logo.png\" class=\"ipsImage\" src=\"https://www.simtropolis.com/library/misc/CoriBoom_Productions_Logo.png\" style=\"width:225px; height:auto; border:none;\"></a>\n\t</div>\n\n\t<div>\n\t\t<span style=\"margin-left:2px; font-size:13px; color:#909CB0; text-shadow:1px 1px 1px #DBFBFE;\"><em>Proudly Presents...</em></span><span style=\"display:none;\">\_</span>\n\t</div>\n\n\t<div style=\"margin-bottom:10px;\">\n\t\t<span style=\"display:block; font-weight:800; margin-top:0px;\"><span style=\"font-family:Verdana,Geneva,sans-serif; font-size:22px; color:#0D2794;\"><em><span style=\"color:#FF00FF;\">Cori's</span> No Kickout</em></span></span><span style=\"display:none;\">.\_</span>\n\t</div>\n</div>\n\n<p>\n\t<span style=\"font-size:18px; color:#FF00FF;\"><strong>Give yourself <span style=\"color:#0D2794;\"><em>much more</em></span> mayoral control.</strong></span><span style=\"display:none;\">\_</span>\n</p>\n\n<p>\n\tIn our 5th official <em><span style=\"color:#FF00FF;\">Cori</span><span style=\"color:#1F4EAC;\">Boom</span></em>™ release to the STEX, <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/737259-corinamarie/?do=hovercard\" data-mentionid=\"737259\" href=\"https://community.simtropolis.com/profile/737259-corinamarie/\" rel=\"\">@CorinaMarie</a> and I are proud to finally present a mini (yet\_magnificent) mod which allows much finer control of city simulation growth:\n</p>\n\n<p>\n\t<span style=\"font-size:42px; font-family:Georgia,serif; color:#3B242B; text-shadow:1px 1px 1px #FF00FF, 1px 1px 42px #FF00FF; cursor:help;\"><strong><abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr></strong></span>\n</p>\n\n<p>\n\tThis mod grants the flexibility to have all 3 wealth levels (low,\_medium,\_high) coexist in any given location, without the higher wealths gobbling up the lower ones. This is a vast improvement over the default game setting, where the two lowest wealths can upgrade to a higher wealth. While this behaviour is desirable in certain situations, it forces you (the mayor) to mark lots as historical as a preventative measure. This can be a tedious process which soon becomes a boring chore. <span style=\"font-size:12px;\">(Like\_washing\_dishes.)</span>\n</p>\n\n<p>\n\tThe default automatic upgrades are a common cause of population instability and a major factor causing the dreaded <em>no job zots</em>. In regular gameplay, a higher wealth and stage often takes over before the conditions are suitable. <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> fixes the method which the SC4 simulation uses. By doing so, the control is now at your fingertips to decide when a wealth level should be allowed to upgrade and replace a lower wealth.\n</p>\n\n<p>\n\tFor example with houses, it means R$ can coexist within an area containing R$$ homes, and even R$$$ mansions too! There's no need to mark each as historical for preventing them from being destroyed and replaced with higher wealth. This finer control means there's <em>significantly</em> less micro management involved to ensure <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> growth sustainability.\n</p>\n\n<p>\n\tThen if one wishes, the bulldozing tool is useful for giving the green light for a higher wealth to take its place. At this point, certain zones will reassess and grow what the simulation deems as appropriate (based on the <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> demand and local desirability factors).\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:20px; color:#0D2794;\"><strong>What does \"</strong></span><span style=\"color:#FF00FF;\"><span style=\"font-size: 20px;\"><strong>Kickout</strong></span></span><span style=\"font-size:20px; color:#0D2794;\"><strong>\" mean?</strong></span>\n</p>\n\n<p>\n\tThe standard SC4 growth simulation automatically allows lower wealths to be replaced by higher wealth levels. This means they can be taken over and redeveloped by a higher wealth at any time the game decides. When this happens, the process of such is described as \"kicking\_out\" the lower wealth level.\n</p>\n\n<p>\n\tWhat <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> does is prevent this from happening by setting a Boolean<span style=\"font-family:Courier New,Courier,monospace;\"> <strong>False</strong> </span>toggle.\n</p>\n\n<p>\n\tIn the <a href=\"https://www.wiki.sc4devotion.com/index.php?title=Exemplar_properties#Building_Development_Simulator\" rel=\"external nofollow\" target=\"_blank\">exemplar</a> property:<br>\n\t<strong>Tract Developer Kick Out Lower Wealth</strong>\n</p>\n\n<p>\n\tName Value:<br>\n\t<span style=\"font-family:Courier New,Courier,monospace;\"><strong>0x47E2C540</strong></span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:20px; color:#0D2794;\"><strong>Does </strong></span><span style=\"color:#FF00FF;\"><span style=\"font-size: 20px;\"><strong><abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr></strong></span></span><span style=\"font-size:20px; color:#0D2794;\"><strong> prevent higher wealth ever growing?</strong></span>\n</p>\n\n<p>\n\tNo, not at all. Any new zone will develop just as before based on economic conditions in your city. And you now have the choice of when any given grown lot should be allowed to redevelop.\n</p>\n\n<p>\n\tTax rates can be adjusted accordingly to encourage the development of certain <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> types. This is related to the methods explained in Cori's <a href=\"https://community.simtropolis.com/forums/topic/757812-selective-residential-revamping/\" rel=\"\">Residential\_Revamping</a> tutorial. Then should one later wish to upgrade an area, it's possible to selectively bulldoze. At that point, it provides higher wealths an opportunity to reconsider and grow in place when they're able.\n</p>\n\n<p>\n\tAs a result, it gives you (as mayor) the ability to decide if you wish to grow something else instead.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"color:#FF00FF;\"><span style=\"font-size: 20px;\"><strong>Power</strong></span></span><span style=\"font-size:20px; color:#0D2794;\"><strong> of the Bulldozer</strong></span>\n</p>\n\n<p>\n\tVia the bulldozer tool, it gives us an <strong><em>expansive freedom</em></strong> to develop <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> how we wish to. <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> isn't a restrictive mod, but a revision of the simulation and this puts the city design decisions in our own hands.\n</p>\n\n<p>\n\tThe bulldozer is our friend for this very reason. It means how if wanting to redevelop areas to higher capacity, then using the tool makes way to allow R$$ or even R$$$ buildings too, because then the demand and desirability decides. This applies to residential, commercial and industrial inclusive.\n</p>\n\n<p>\n\tFor residential and if wanting R$ to stay, then they will do. This could be useful for maintaining a lower wealth area of housing. However, once bulldozing to bare zoning and it's a free for all again. <img alt=\"*;)\" data-emoticon=\"1\" height=\"15\" src=\"https://community.simtropolis.com/assets/emoticons/default_2.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/default_2@2x.gif 2x\" title=\"*;)\" width=\"15\">\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:20px; color:#0D2794;\"><strong>Completely </strong></span><span style=\"color:#FF00FF;\"><span style=\"font-size: 20px;\"><strong><abbr title=\"Colossus Addon Mod\">CAM</abbr></strong></span></span><span style=\"font-size:20px; color:#0D2794;\"><strong>patible</strong></span>\n</p>\n\n<p>\n\t<abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> is fully compatible with the <abbr title=\"Colossus Addon Mod\">CAM</abbr> too.\n</p>\n\n<p>\n\tBy comparing the properties in the exemplar which <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> uses too, we've made sure that the same properties are added along with the setting toggled to prevent lower wealths being kicked out. Just makes sure <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> loads after <abbr title=\"Colossus Addon Mod\">CAM</abbr> does, so that way it'll be applied.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:20px; color:#0D2794;\"><strong>A Couple of </strong></span><span style=\"color:#FF00FF;\"><span style=\"font-size: 20px;\"><strong>Things</strong></span></span>\n</p>\n\n<p>\n\t<span style=\"font-size:18px; color:#A70E5D;\">Thing <strong>#1</strong></span>\n</p>\n\n<p>\n\t<abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> works very well combined alongside <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/48348-bones1/?do=hovercard\" data-mentionid=\"48348\" href=\"https://community.simtropolis.com/profile/48348-bones1/\" rel=\"\">@Bones1</a>'s <a href=\"https://community.simtropolis.com/files/file/14931-less-abandonment/\" rel=\"\">Less\_Abandonment</a> mod.\n</p>\n\n<p>\n\tThis is recommended when <abbr title=\"Colossus Addon Mod\">CAM</abbr> is not installed. (Which has its own version of Less Abandonment built in.)\n</p>\n\n<p>\n\tWhat the \"Less Abandonment\" mod does is make sure the city is ready for <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> development when the demand for growth is much more likely to be sustainable.\n</p>\n\n<p>\n\tAs such it fits along well in harmony with what <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> does. It sets the threshold higher for when buildings will grow, which means they're more likely to stick around once they do sprout.\n</p>\n\n<p>\n\t<br>\n\t<span style=\"font-size:18px; color:#A70E5D;\">Thing <strong>#2</strong></span>\n</p>\n\n<p>\n\tA caveat you should be aware of:\n</p>\n\n<p>\n\t<abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> does <span style=\"color:#E74C3C;\"><strong>not</strong></span> prevent buildings from upgrading <strong>within their own wealth class</strong>.\n</p>\n\n<p>\n\tThis means if you have some lower capacity building you want to keep for aesthetic reasons, you'll still need to click the historical option for it. <img alt=\"*;)\" data-emoticon=\"1\" height=\"15\" src=\"https://community.simtropolis.com/assets/emoticons/default_2.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/default_2@2x.gif 2x\" title=\"*;)\" width=\"15\">\n</p>\n\n<p>\n\tIt is rarer for this to happen in a stable city, but it does occur and well worth being mindful of.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:20px; color:#0D2794;\"><strong>Complete </strong></span><span style=\"color:#FF00FF;\"><span style=\"font-size: 20px;\"><strong><abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr></strong></span></span><span style=\"font-size:20px; color:#0D2794;\"><strong> Overview</strong></span>\n</p>\n\n<p>\n\tTo learn more of the advantages to using <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr>, see the following thread we made:<br>\n\t\_\n</p>\n<iframe allowfullscreen=\"\" class=\"ipsEmbed_finishedLoading\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed430305266\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759530-coris-no-kickout-lower-wealth-mod-now-campatible/?do=embed\" style=\"overflow: hidden; height: 330px; max-width: 502px;\"></iframe>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tIt contains picture previews to show the real benefits of what <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> provides. Also this doubles up as the official <em>Support\_Thread</em> if you've any comments or questions we can answer.\n</p>\n\n<p>\n\tReplying to the Comments section here on the file entry is fine too if you'd prefer.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:20px; color:#0D2794;\"><strong>Installation</strong></span>\n</p>\n\n<p>\n\t<span style=\"display:inline-block; padding:12px; background:#E9FFDE; border:1px solid #53D450; border-radius:5px; color:#2C3E50;\"><i class=\"fa fa-check-circle fa-lg\" style=\"color:#53D550; cursor:default;\">\_</i> <em>This mod uses the standard process of installing SC4 content.</em></span>\n</p>\n\n<p>\n\t<br>\n\tCopy the <strong>Cori's_No_Kickout_Lower_Wealth_CAMpatible.dat</strong> file into your Plugins folder.\n</p>\n\n<p>\n\tIf using the <abbr title=\"Colossus Addon Mod\">CAM</abbr>, make sure <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> loads after it since the exemplar is the same. To make sure, a good idea is to place <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> directly inside the same folder <abbr title=\"Colossus Addon Mod\">CAM</abbr> is installed to.\n</p>\n\n<p>\n\tOne way is to place our file in this folder:<br>\n\t<span style=\"font-family:Courier New,Courier,monospace; font-size:16px;\">Documents\\SimCity 4\\Plugins\\a_CAM\\<strong>a_Core</strong></span>\n</p>\n\n<p>\n\t<br>\n\tOr as one of the resident experts <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/686092-twalsh102/?do=hovercard\" data-mentionid=\"686092\" href=\"https://community.simtropolis.com/profile/686092-twalsh102/\" rel=\"\">@twalsh102</a> posted in our thread:\n</p>\n\n<blockquote class=\"ipsQuote\" data-ipsquote=\"\" data-ipsquote-contentapp=\"forums\" data-ipsquote-contentclass=\"forums_Topic\" data-ipsquote-contentcommentid=\"1736169\" data-ipsquote-contentid=\"759530\" data-ipsquote-contenttype=\"forums\" data-ipsquote-timestamp=\"1598594382\" data-ipsquote-userid=\"686092\" data-ipsquote-username=\"twalsh102\">\n\t<div class=\"ipsQuote_citation\">\n\t\tOn 8/28/2020 at 6:59 AM, twalsh102 said:\n\t</div>\n\n\t<div class=\"ipsQuote_contents\">\n\t\t<p>\n\t\t\tBy default, all <abbr title=\"Colossus Addon Mod\">CAM</abbr> files are installed in a folder titled a__CAM. As long as you put Cori's mod in a folder that comes alphabetically after the <abbr title=\"Colossus Addon Mod\">CAM</abbr> folder, it will load after <abbr title=\"Colossus Addon Mod\">CAM</abbr>.\n\t\t</p>\n\n\t\t<p>\n\t\t\tSo I would just create a folder with the same name as Cori's mod, and place the .dat file in that folder. If\_you just took that dat file and placed it as is at the root of your Plugins folder (not inside any other folder), it would install before <abbr title=\"Colossus Addon Mod\">CAM</abbr>.\n\t\t</p>\n\t</div>\n</blockquote>\n\n<p>\n\t<br>\n\tThat way it'll make certain the loading order is correct.\n</p>\n\n<p>\n\t<br>\n\t<span style=\"color:#FF00FF;\">We hope you enjoy using <abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr> in your cities!</span>\n</p>\n\n<p>\n\t<img alt=\"*:thumb:\" data-emoticon=\"1\" height=\"20\" src=\"https://community.simtropolis.com/assets/emoticons/default_44.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x\" title=\"*:thumb:\" width=\"33\">\n</p>\n\n<p>\n\t<br>\n\t<span style=\"display:block; padding:5px; background:#F7F7F7; border:1px solid #FF00FF; border-radius:5px; font-family:Courier New,Courier,monospace; font-size:12px; color:#0D2794; text-align:center;\">// CoriBoom™ Productions Release \\\\<br>\n\t<strong>Cori's No\_Kickout Lower Wealth Mod v1.0</strong> — (02 Jan 2021)</span>\n</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: Cori's No Kickout Lower Wealth Mod_v1.0.zip
     files:
       - Cori's_No_Kickout_Lower_Wealth_CAMpatible.dat
@@ -5164,17 +8916,13 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2021_01/_NKO_Logo.jpg.d31e759344b27ccfec680868dfb9a7d7.jpg
     lastModified: 2021-01-02T14:05:00.000Z
-    lots: []
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Cori's No Kickout Lower Wealth Mod
-    props: []
     sha256: 626e8648537c08d97ae05da88b3413952aafaa631e47cc01f38708f17b2315fb
     size: 307676
     support: https://community.simtropolis.com/forums/topic/757812-selective-residential-revamping
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_01/_NKO_Logo.thumb.jpg.8d83f148688d10b6eabdb5d25c609a25.jpg
     timestamp: 2024-10-16T08:40:44.039Z
     uncompressed: 312452

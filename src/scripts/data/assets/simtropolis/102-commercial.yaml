@@ -22794,11 +22794,9 @@ assets:
     assetId: simtropolis/2781-additional-5x5-and-6x6-mall-lots-v10
     authors:
       - toroca
-    buildings: []
     category: 102-commercial
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This collection of ten lots allows every shopping mall in the game to appear on 5x5 and 6x6 lots.  Previously, no mall in the game could appear on a 5x5 lot, and only Andrews Fashion Center and Lee Shopping Mall would appear on 6x6 lots.</p>\n<p>\_</p>\n<p>\nAll of the lots included are mainly altered versions of the lots some of the malls could already appear on, but they should be different enough not to be repetitive.</p>\n<p>\_</p>\n<p>\nUsing these lots, you should be able to control where any of the malls can appear with more precision than before.  Simply zone a 5x5 lot or 6x6 lot and you're guaranteed to get a mall on it.</p>\n<p>\_</p>\n<p>\nPlease be sure to check the Readme file contained in the zip for further information.</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: ExtraMallLots.zip
     files:
       - CS$$$1_5x5 Andrews Fashion Center_ed670794.SC4Lot
@@ -22817,7 +22815,6 @@ assets:
     lastModified: 2004-03-19T14:40:39.000Z
     lots:
       - building: 4000003f
-        category: cs$$$
         density: low,medium,high
         filename: CS$$$1_5x5 Andrews Fashion Center_ed670794.SC4Lot
         id: ed670794
@@ -22842,7 +22839,6 @@ assets:
           - '25920000'
           - '25910000'
       - building: 051d0000
-        category: cs$$$
         density: low,medium,high
         filename: CS$$$1_5x5 Bilyk Galleria_6d670a55.SC4Lot
         id: 6d670a55
@@ -22872,7 +22868,6 @@ assets:
           - '26260000'
           - '25960000'
       - building: 051d0000
-        category: cs$$$
         density: low,medium,high
         filename: CS$$$1_6x6 Bilyk Galleria_ed670b23.SC4Lot
         id: ed670b23
@@ -22899,7 +22894,6 @@ assets:
           - '25920000'
           - '25970000'
       - building: '05250000'
-        category: cs$$$
         density: low,medium,high
         filename: CS$$$1_6x6 Nanale Shopping Center_cd670826.SC4Lot
         id: cd670826
@@ -22935,7 +22929,6 @@ assets:
           - '26200000'
           - 25f40000
       - building: '05250000'
-        category: cs$$$
         density: low,medium,high
         filename: CS$$$2_5x5 Nanale Shopping Center_ad67091b.SC4Lot
         id: ad67091b
@@ -22961,7 +22954,6 @@ assets:
           - '25920000'
           - 258b0000
       - building: 051c0000
-        category: cs$$
         density: low,medium,high
         filename: CS$$1_5x5 Harris Galleria_4d670471.SC4Lot
         id: 4d670471
@@ -22987,7 +22979,6 @@ assets:
           - 25a90000
           - 258c0000
       - building: 4000003e
-        category: cs$$
         density: low,medium,high
         filename: CS$$1_5x5 Lee Shopping Mall_ed67020f.SC4Lot
         id: ed67020f
@@ -23008,7 +22999,6 @@ assets:
           - 258c0000
           - 25a30000
       - building: 051c0000
-        category: cs$$
         density: low,medium,high
         filename: CS$$1_6x6 Harris Galleria_2d6705a9.SC4Lot
         id: 2d6705a9
@@ -23034,7 +23024,6 @@ assets:
           - 258c0000
           - 25ab0000
       - building: 05f10000
-        category: cs$$
         density: low,medium,high
         filename: CS$$1_6x6 Hsu Mall_8d66fc4f.SC4Lot
         id: 8d66fc4f
@@ -23059,7 +23048,6 @@ assets:
           - '25960000'
           - '25970000'
       - building: 05f10000
-        category: cs$$
         density: low,medium,high
         filename: CS$$2_5x5 Hsu Mall_ad670004.SC4Lot
         id: ad670004
@@ -23077,14 +23065,11 @@ assets:
           - 262f0000
           - '25910000'
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Additional 5x5 and 6x6 Mall Lots v10
-    props: []
     sha256: fa684456e5d4f036d88c0e9857e39f9635407e58b0552e3387346b9b386b8938
     size: 352973
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2004/thumb-c6e4288fd2d4464b9b7030881594fd8c-hsumall.jpg
     uncompressed: 361007
     url: https://community.simtropolis.com/files/file/2781-additional-5x5-and-6x6-mall-lots-v10/
@@ -49407,11 +49392,9 @@ assets:
     assetId: simtropolis/486-commercial-6by-collection
     authors:
       - Buggi
-    buildings: []
     category: 102-commercial
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>These lots will allow the game to build some of the Stage 8 buildings on cities with a mostly 6 square wide grid. Usually the buildings were only available on 4 wide lots and hard to find in a 6-BY configuration.</p>\n<p>\_</p>\n<p>\nAlso added are some other commercial buildings that were somewhat restricted to the 6-BY grid and now available for a 4 wide configuration (Brock Furnishings for example)</p>\n<p>\_</p>\n<p>\nThis will allow for a more broad variety of buildings for your city. </p>\n<p>\nEnjoy :-)</p>\n<p>\_</p>\n<p>\n*UPDATE* </p>\n<p>\nIncludes Co</p>\n\n\t\t\t\t\t\t</body>"
-    features: []
     filename: Commercial.zip
     files:
       - CO$$$8_3x4_4c1f3777.SC4Lot
@@ -49436,7 +49419,6 @@ assets:
     lastModified: 2003-07-14T20:54:59.000Z
     lots:
       - building: 400000ab
-        category: co$$$
         density: high
         filename: CO$$$8_3x4_4c1f3777.SC4Lot
         id: 4c1f3777
@@ -49453,7 +49435,6 @@ assets:
           - '25980000'
           - 25f40000
       - building: 400000ab
-        category: co$$$
         density: high
         filename: CO$$$8_3x4_6c1f3798.SC4Lot
         id: 6c1f3798
@@ -49476,7 +49457,6 @@ assets:
           - 252b0000
           - 25f40000
       - building: 400000a4
-        category: co$$$
         density: high
         filename: CO$$$8_4x4_cc1f36d5.SC4Lot
         id: cc1f36d5
@@ -49506,7 +49486,6 @@ assets:
           - '26260000'
           - 25f40000
       - building: 400000a4
-        category: co$$$
         density: high
         filename: CO$$$8_4x4_ec1f36ee.SC4Lot
         id: ec1f36ee
@@ -49527,7 +49506,6 @@ assets:
           - 25c40000
           - 25f40000
       - building: 400000ad
-        category: co$$$
         density: high
         filename: CO$$$8_4x6_0c1f2731.SC4Lot
         id: 0c1f2731
@@ -49548,7 +49526,6 @@ assets:
           - 25a30000
           - 258c0000
       - building: 400000a9
-        category: co$$$
         density: high
         filename: CO$$$8_4x6_0c1f30d0.SC4Lot
         id: 0c1f30d0
@@ -49574,7 +49551,6 @@ assets:
           - 25f40000
           - 25ae0000
       - building: 400000a9
-        category: co$$$
         density: high
         filename: CO$$$8_4x6_4c1f339e.SC4Lot
         id: 4c1f339e
@@ -49604,7 +49580,6 @@ assets:
           - 25a80000
           - 25ae0000
       - building: 400000a5
-        category: co$$$
         density: high
         filename: CO$$$8_4x6_6c1f368a.SC4Lot
         id: 6c1f368a
@@ -49630,7 +49605,6 @@ assets:
           - 25af0000
           - 259d0000
       - building: 400000ad
-        category: co$$$
         density: high
         filename: CO$$$8_4x6_cc1f2b78.SC4Lot
         id: cc1f2b78
@@ -49658,7 +49632,6 @@ assets:
           - 25a70000
           - 25f40000
       - building: 400000a5
-        category: co$$$
         density: high
         filename: CO$$$8_4x6_ec1f35ef.SC4Lot
         id: ec1f35ef
@@ -49682,7 +49655,6 @@ assets:
           - 25ab0000
           - 25fb0000
       - building: '40000099'
-        category: co$$
         density: high
         filename: CO$$8_4x6_0c2088ac.SC4Lot
         id: 0c2088ac
@@ -49707,7 +49679,6 @@ assets:
           - 25af0000
           - '26210000'
       - building: 4000009d
-        category: co$$
         density: high
         filename: CO$$8_4x6_2c208b52.SC4Lot
         id: 2c208b52
@@ -49735,7 +49706,6 @@ assets:
           - '25960000'
           - '25970000'
       - building: 400000a1
-        category: co$$
         density: high
         filename: CO$$8_4x6_2c208d37.SC4Lot
         id: 2c208d37
@@ -49758,7 +49728,6 @@ assets:
           - 252b0000
           - 258c0000
       - building: 400000a1
-        category: co$$
         density: high
         filename: CO$$8_4x6_8c208ee6.SC4Lot
         id: 8c208ee6
@@ -49788,7 +49757,6 @@ assets:
           - 25a00000
           - '25950000'
       - building: 400000a0
-        category: co$$
         density: high
         filename: CO$$8_4x6_ec208f40.SC4Lot
         id: ec208f40
@@ -49813,7 +49781,6 @@ assets:
           - 258c0000
           - 25f40000
       - building: '40000099'
-        category: co$$
         density: high
         filename: CO$$8_4x6_ec208fcb.SC4Lot
         id: ec208fcb
@@ -49837,14 +49804,11 @@ assets:
           - '26210000'
           - 25f40000
     meta:
-      timestamp: 2024-11-17T16:00:57.230Z
+      timestamp: 2024-11-26T21:04:04.961Z
       version: 1
-    models: []
     name: Commercial 6BY Collection
-    props: []
     sha256: 0bfa3fead9dcdfef15bb777f825a16e7483050cf5c766def76c027c682fea7d4
     size: 288255
-    textures: []
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2003/thumb-2d1e56604dbddd4f63c343baf8d27ed2-6bybldg.jpg
     uncompressed: 292892
     url: https://community.simtropolis.com/files/file/486-commercial-6by-collection/

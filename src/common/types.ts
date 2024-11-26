@@ -140,7 +140,7 @@ export interface PackageWarning {
 export interface BuildingData {
   /** Bulldoze cost */
   bulldoze?: number
-  /** Number of jobs or residential capacity */
+  /** RCI capacity */
   capacity?: {
     /** Medium-Wealth Offices */
     co$$?: number
@@ -187,6 +187,15 @@ export interface BuildingData {
   images?: string[]
   /** Monthly income */
   income?: number
+  /** Non-RCI jobs */
+  jobs?: {
+    /** Low-Wealth */
+    $?: number
+    /** Medium-Wealth */
+    $$?: number
+    /** High-Wealth */
+    $$$?: number
+  }
   /** Lot name */
   label?: string
   /** Landmark effect */
@@ -199,10 +208,33 @@ export interface BuildingData {
   menu?: number | string
   /** TGI of building model */
   model?: TGI
+  /** Internal building name */
+  name?: string
   /** Radiation generated */
   radiation?: number
   /** Radiation radius in tiles */
   radiationRadius?: number
+  /** CAP relief */
+  relief?: {
+    /** Medium-Wealth Offices */
+    co$$?: number
+    /** High-Wealth Offices */
+    co$$$?: number
+    /** Dirty Industry */
+    id?: number
+    /** High-Tech Industry */
+    iht?: number
+    /** Manufacture */
+    im?: number
+    /** Agriculture */
+    ir?: number
+    /** Low-Wealth Residential */
+    r$?: number
+    /** Medium-Wealth Residential */
+    r$$?: number
+    /** High-Wealth Residential */
+    r$$$?: number
+  }
   /** Air pollution generated */
   pollution?: number
   /** Air pollution radius in tiles */

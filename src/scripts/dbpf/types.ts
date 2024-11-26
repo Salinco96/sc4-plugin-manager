@@ -13,6 +13,21 @@ export enum BudgetItemDepartment {
   Power = 0x8910bc8a,
 }
 
+export enum DemandID {
+  R$ = 0x1810,
+  R$$ = 0x1820,
+  R$$$ = 0x1830,
+  CO$$ = 0x3b20,
+  CO$$$ = 0x3b30,
+  IR = 0x4900,
+  ID = 0x4a00,
+  IM = 0x4b00,
+  IHT = 0x4c00,
+  Jobs$ = 0x2010,
+  Jobs$$ = 0x2020,
+  Jobs$$$ = 0x2030,
+}
+
 export enum DeveloperID {
   R$ = 0x1010,
   R$$ = 0x1020,
@@ -38,6 +53,8 @@ export enum ExemplarPropertyID {
   BuildingValue = 0xe91a0b5f,
   BulldozeCost = 0x099afacd,
   CapacitySatisfied = 0x27812834,
+  DemandCreated = 0x27812841,
+  DemandSatisfied = 0x27812840,
   ExemplarType = 0x00000010,
   ExemplarName = 0x00000020,
   Flamability = 0x29244db5,

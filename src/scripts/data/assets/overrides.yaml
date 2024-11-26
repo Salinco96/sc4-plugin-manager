@@ -1379,6 +1379,9 @@ simtropolis/27295-wmp-monorail-system-unfinished-by-docrorlach:
 
 simtropolis/27340-space-port-fix-mod:
   packageId: cougar2004/space-port-fix
+  paths:
+    Spaceport Fix Alt Mod.dat:
+      variantId: alternate
   variantId: default
 
 simtropolis/27675-sc4datanode: null
