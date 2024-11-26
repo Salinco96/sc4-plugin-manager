@@ -2,6 +2,7 @@ import type { ID } from "@salinco/nice-utils"
 import type { HTMLElement } from "node-html-parser"
 
 import type { AssetID } from "@common/assets"
+import type { CategoryID } from "@common/categories"
 import type { PackageID } from "@common/packages"
 import type { BuildingData, Feature, LotData } from "@common/types"
 import type { VariantID } from "@common/variants"
@@ -44,6 +45,7 @@ export interface IndexerEntryDetails {
 
 export interface IndexerVariantEntry {
   buildings?: BuildingData[]
+  categories?: CategoryID[]
   download?: string
   features?: Feature[]
   filename?: string
@@ -105,7 +107,7 @@ export interface IndexerSource {
 
 export interface IndexerSourceCategory {
   /** Default manager categories, comma-separated */
-  category: string
+  categories?: CategoryID[]
   id: IndexerSourceCategoryID
 }
 

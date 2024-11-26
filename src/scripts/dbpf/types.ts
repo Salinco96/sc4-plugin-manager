@@ -189,6 +189,7 @@ export enum OccupantGroup {
   StateFair = 0x1925,
   MayorHouse = 0x1938,
   Casino = 0x1940,
+  Marina = 0x1941,
   R$ = 0x11010,
   R$$ = 0x11020,
   R$$$ = 0x11030,

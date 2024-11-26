@@ -113,10 +113,16 @@ export function writePackageData(
 
   const categories = new Set(packageData.category?.split(","))
 
+  if (variantEntry.categories && variantId === "default") {
+    for (const category of variantEntry.categories) {
+      categories.add(category)
+    }
+  }
+
   if (source && entry.category) {
-    const defaultCategories = source.categories[entry.category]?.category
+    const defaultCategories = source.categories[entry.category]?.categories
     if (defaultCategories) {
-      for (const category of defaultCategories.split(",")) {
+      for (const category of defaultCategories) {
         categories.add(category)
       }
     }

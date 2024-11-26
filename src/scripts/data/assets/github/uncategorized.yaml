@@ -40,8 +40,11 @@ assets:
     assetId: github/0xC0000054/sc4-bulldoze-extensions
     authors:
       - '0xC0000054'
+    categories:
+      - mods
+      - dll
     dependencies: []
-    download: https://github.com/0xC0000054/sc4-bulldoze-extensions/releases/download/v1.0/SC4BulldozeExtensions.zip
+    download: https://github.com/0xC0000054/sc4-bulldoze-extensions/releases/download/v{version}/SC4BulldozeExtensions.zip
     filename: SC4BulldozeExtensions.zip
     files:
       - BulldozeExtensions.dat
@@ -51,7 +54,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-26T16:35:44.974Z
     meta:
-      timestamp: 2024-11-26T16:35:44.974Z
+      timestamp: 2024-11-26T17:29:40.784Z
       version: 1
     sha256: 24794bb8ceb6634e1b43e496b8aef03c4f6edfbe58a43d74b22c1884031697a0
     size: 131867

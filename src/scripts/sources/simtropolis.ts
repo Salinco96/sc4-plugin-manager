@@ -1,5 +1,6 @@
 import { ID, indexBy, isDefined } from "@salinco/nice-utils"
 
+import { CategoryID } from "@common/categories"
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
 import type { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
 
@@ -9,111 +10,103 @@ const origin = "https://community.simtropolis.com"
 
 const categories: IndexerSourceCategory[] = [
   {
-    category: "dependencies",
     id: ID("32-simpeg-plex-files"),
   },
   {
-    category: "civics",
+    categories: [CategoryID.CIVICS],
     id: ID("33-plex-custom-lots-mods"),
   },
   {
-    category: "waterfront",
+    categories: [CategoryID.WATERFRONT],
     id: ID("34-cdk-coastal-development-kit"),
   },
   {
-    category: "dependencies",
     id: ID("35-mtp-mountain-theme-pack"),
   },
   {
-    category: "mods,spam",
+    categories: [CategoryID.SPAM],
     id: ID("36-spam-simpeg-agricultural-mods"),
   },
   {
-    category: "mods",
     id: ID("37-peg-utopian-series"),
   },
   {
-    category: "mods",
     id: ID("64-simcitypolska-files"),
   },
   {
-    category: "mods",
     id: ID("67-simcitybrasil-files"),
   },
   {
-    category: "mods",
     id: ID("73-workingman-productions-wmp"),
   },
   {
-    category: "residential",
+    categories: [CategoryID.RESIDENTIAL],
     id: ID("101-residential"),
   },
   {
-    category: "commercial",
+    categories: [CategoryID.COMMERCIAL],
     id: ID("102-commercial"),
   },
   {
-    category: "industry",
+    categories: [CategoryID.INDUSTRY],
     id: ID("103-industrial"),
   },
   {
-    category: "agriculture",
+    categories: [CategoryID.AGRICULTURE],
     id: ID("104-agricultural"),
   },
   {
-    category: "residential",
     id: ID("105-building-sets"),
   },
   {
-    category: "civics",
+    categories: [],
     id: ID("106-civic-non-rci"),
   },
   {
-    category: "utilities",
+    categories: [CategoryID.UTILITIES],
     id: ID("107-utilities"),
   },
   {
-    category: "parks",
+    categories: [CategoryID.PARKS],
     id: ID("108-parks-plazas"),
   },
   {
-    category: "waterfront",
+    categories: [CategoryID.WATERFRONT],
     id: ID("109-waterfront"),
   },
   {
-    category: "transport",
+    categories: [CategoryID.TRANSPORT],
     id: ID("110-transportation"),
   },
   {
-    category: "automata",
+    categories: [CategoryID.AUTOMATA],
     id: ID("111-automata"),
   },
   {
-    category: "gameplay",
+    categories: [CategoryID.GAMEPLAY],
     id: ID("112-gameplay-mods"),
   },
   {
-    category: "graphics",
+    categories: [CategoryID.GRAPHICS],
     id: ID("113-graphical-mods"),
   },
   {
-    category: "cheats",
+    categories: [CategoryID.CHEATS],
     id: ID("114-cheats"),
   },
   {
-    category: "mods",
     id: ID("115-tools"),
   },
   {
-    category: "dependencies",
+    categories: [CategoryID.DEPENDENCIES],
     id: ID("118-dependencies"),
   },
   {
-    category: "dependencies",
+    categories: [CategoryID.DEPENDENCIES],
     id: ID("120-obsolete-legacy"),
   },
   {
-    category: "dll",
+    categories: [CategoryID.DLL],
     id: ID("122-dll-mods"),
   },
 ]

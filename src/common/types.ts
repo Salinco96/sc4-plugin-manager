@@ -183,6 +183,8 @@ export interface BuildingData {
   garbageRadius?: number
   /** Building Instance ID */
   id: string
+  /** URL or relative path within ~docs */
+  images?: string[]
   /** Monthly income */
   income?: number
   /** Lot name */

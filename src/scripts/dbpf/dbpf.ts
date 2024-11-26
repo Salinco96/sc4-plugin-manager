@@ -6,8 +6,9 @@ import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
 import type { ExemplarPropertyInfo } from "@common/exemplars"
 import { type BuildingData, Feature, type LotData } from "@common/types"
 import { loadDBPF } from "@node/dbpf"
-import { FileOpenMode, openFile } from "@node/files"
+import { FileOpenMode, getExtension, openFile } from "@node/files"
 
+import { CategoryID } from "@common/categories"
 import { getBuildingData } from "./buildings"
 import { getLotData } from "./lots"
 import { DeveloperID, type Exemplar, ExemplarPropertyID, ExemplarType, SimulatorID } from "./types"
@@ -15,6 +16,7 @@ import { get, getBaseTextureId } from "./utils"
 
 export interface SC4FileData {
   buildings: BuildingData[]
+  categories: CategoryID[]
   features: Feature[]
   lots: LotData[]
   models: string[]
@@ -29,14 +31,20 @@ export async function analyzeSC4Files(
 ): Promise<SC4FileData> {
   const exemplars: { [id in TGI]?: Exemplar } = {}
 
-  const buildings: { [id: string]: BuildingData } = {}
+  const buildings: BuildingData[] = []
+  const categories = new Set<CategoryID>()
   const features = new Set<Feature>()
-  const lots: { [id: string]: LotData } = {}
+  const lots: LotData[] = []
   const models = new Set<string>()
   const props = new Set<string>()
   const textures = new Set<string>()
 
   for (const filePath of filePaths) {
+    if (getExtension(filePath) === ".dll") {
+      categories.add(CategoryID.MODS)
+      categories.add(CategoryID.DLL)
+    }
+
     if (isDBPF(filePath)) {
       const file = await openFile(path.join(basePath, filePath), FileOpenMode.READ, file => {
         return loadDBPF(file, { exemplarProperties, loadExemplars: true })
@@ -73,20 +81,12 @@ export async function analyzeSC4Files(
 
     switch (get(exemplar, ExemplarPropertyID.ExemplarType)) {
       case ExemplarType.Building: {
-        const buildingData = getBuildingData(exemplar)
-
-        // TODO: Handle lot defined multiple times, e.g. DN and MN in same download
-        if (buildings[buildingData.id]) {
-          console.warn(
-            `Building ${buildingData.label} (${buildingData.id}) is also defined in ${buildings[buildingData.id].filename}`,
-          )
-        }
-
-        buildings[buildingData.id] = buildingData
+        buildings.push(getBuildingData(exemplar))
         break
       }
 
       case ExemplarType.Developer: {
+        categories.add(CategoryID.GAMEPLAY)
         const type = DeveloperID[instanceId] as keyof typeof DeveloperID
 
         if (type) {
@@ -98,21 +98,19 @@ export async function analyzeSC4Files(
       }
 
       case ExemplarType.Lighting: {
+        categories.add(CategoryID.GRAPHICS)
         features.add(Feature.DARKNITE) // TODO: Anything else?
         break
       }
 
       case ExemplarType.LotConfig: {
-        const lotData = getLotData(exemplar)
+        lots.push(getLotData(exemplar))
+        break
+      }
 
-        // TODO: Handle lot defined multiple times, e.g. DN and MN in same download
-        if (lots[lotData.id]) {
-          console.warn(
-            `Lot ${lotData.name} (${lotData.id}) is also defined in ${lots[lotData.id].filename}`,
-          )
-        }
-
-        lots[lotData.id] = lotData
+      case ExemplarType.Ordinance: {
+        categories.add(CategoryID.ORDINANCES)
+        lots.push(getLotData(exemplar))
         break
       }
 
@@ -122,6 +120,7 @@ export async function analyzeSC4Files(
       }
 
       case ExemplarType.Simulator: {
+        categories.add(CategoryID.GAMEPLAY)
         const type = SimulatorID[instanceId] as keyof typeof SimulatorID
 
         if (type) {
@@ -134,10 +133,25 @@ export async function analyzeSC4Files(
     }
   }
 
+  for (const building of buildings) {
+    if (building.category && lots.some(lot => lot.building === building.id)) {
+      for (const category of building.category.split(",")) {
+        categories.add(category as CategoryID)
+      }
+    }
+  }
+
+  for (const lot of lots) {
+    if (lot.requirements?.cam) {
+      categories.add(CategoryID.CAM)
+    }
+  }
+
   return {
-    buildings: values(buildings),
+    buildings,
+    categories: Array.from(categories),
     features: Array.from(features),
-    lots: values(lots),
+    lots,
     models: Array.from(models),
     props: Array.from(props),
     textures: Array.from(textures),

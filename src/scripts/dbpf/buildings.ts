@@ -1,7 +1,8 @@
-import { containsAny, generate, isNumber, sum, values } from "@salinco/nice-utils"
+import { containsAny, generate, isNumber, sum, unique, values } from "@salinco/nice-utils"
 
 import type { BuildingData } from "@common/types"
 
+import { CategoryID } from "@common/categories"
 import { Menu, Submenu, writeMenu, writeMenus } from "@common/variants"
 import {
   BudgetItemDepartment,
@@ -29,6 +30,11 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
   const submenus = getSubmenus(exemplar)
   if (submenus.length) {
     data.submenu = writeMenus(submenus)
+  }
+
+  const categories = getCategories(exemplar)
+  if (categories.length) {
+    data.category = categories.join(",")
   }
 
   const plopCost = get(exemplar, ExemplarPropertyID.PlopCost)
@@ -203,6 +209,155 @@ function getDefaultMenu(ogs: number[]): Menu | undefined {
   return values(Menu)
     .filter(menu => isNumber(menu))
     .find(menu => menuOgs[menu] && containsAny(ogs, menuOgs[menu]))
+}
+
+function getCategories(exemplar: Exemplar): CategoryID[] {
+  const categories: CategoryID[] = []
+
+  const groups = getArray(exemplar, ExemplarPropertyID.OccupantGroups) ?? []
+
+  // Mapping for more readability afterwards
+  const og = generate(
+    values(OccupantGroup).filter(group => isNumber(group)),
+    group => [`is${OccupantGroup[group] as keyof typeof OccupantGroup}`, groups.includes(group)],
+  )
+
+  if (og.isAirport) {
+    categories.push(CategoryID.AIRPORTS)
+  }
+
+  if (og.isSeaport) {
+    categories.push(CategoryID.SEAPORTS)
+  } else if (og.isPassengerFerry || og.isCarFerry) {
+    categories.push(CategoryID.FERRY)
+  } else if (og.isBteInlandWaterway || og.isSgWaterway) {
+    categories.push(CategoryID.CANALS)
+  } else if (og.isBteWaterfront) {
+    categories.push(CategoryID.WATERFRONT)
+  }
+
+  if (og.isMarina) {
+    categories.push(CategoryID.MARINA)
+  }
+
+  if (og.isLightRail) {
+    categories.push(CategoryID.TRAM)
+  }
+
+  if (og.isFreightRail) {
+    categories.push(CategoryID.FREIGHT)
+  }
+
+  if (og.isPassengerRail) {
+    categories.push(CategoryID.PASSENGERS)
+  }
+
+  if (og.isMonorail) {
+    categories.push(CategoryID.MONORAIL)
+  }
+
+  if (og.isRail && !og.isLightRail && !og.isFreightRail && !og.isPassengerRail && !og.isMonorail) {
+    categories.push(CategoryID.RAIL)
+    categories.push(CategoryID.FILLERS)
+  }
+
+  if (og.isBus) {
+    categories.push(CategoryID.BUS)
+  }
+
+  if (og.isSubway) {
+    categories.push(CategoryID.SUBWAY)
+  }
+
+  if (og.isMiscTransit && !og.isBus && !og.isLightRail && !og.isSubway) {
+    categories.push(CategoryID.TRANSPORT)
+  }
+
+  if (og.isSchool || og.isCollege || og.isLibrary || og.isMuseum) {
+    categories.push(CategoryID.EDUCATION)
+  }
+
+  if (og.isHealth) {
+    categories.push(CategoryID.HEALTH)
+  }
+
+  if (og.isLandmark) {
+    categories.push(CategoryID.LANDMARKS)
+  }
+
+  if (og.isPolice || og.isJail) {
+    categories.push(CategoryID.POLICE)
+  }
+
+  if (og.isPower) {
+    categories.push(CategoryID.POWER)
+  }
+
+  if (og.isWater) {
+    categories.push(CategoryID.WASTE)
+  }
+
+  if (og.isLandfill) {
+    categories.push(CategoryID.WASTE)
+  }
+
+  if (og.isWorship || og.isCemetery || og.isBteReligious) {
+    categories.push(CategoryID.RELIGION)
+  }
+
+  if (og.isReward) {
+    categories.push(CategoryID.REWARDS)
+  }
+
+  if (og.isR$) {
+    categories.push(CategoryID.R$)
+  }
+
+  if (og.isR$$) {
+    categories.push(CategoryID.R$$)
+  }
+
+  if (og.isR$$$) {
+    categories.push(CategoryID.R$$$)
+  }
+
+  if (og.isCS$) {
+    categories.push(CategoryID.CS$)
+  }
+
+  if (og.isCS$$) {
+    categories.push(CategoryID.CS$$)
+  }
+
+  if (og.isCS$$$) {
+    categories.push(CategoryID.CS$$$)
+  }
+
+  if (og.isCO$$) {
+    categories.push(CategoryID.CO$$)
+  }
+
+  if (og.isCO$$$) {
+    categories.push(CategoryID.CO$$$)
+  }
+
+  if (og.isAgriculture) {
+    categories.push(CategoryID.AGRICULTURE)
+  }
+
+  if (og.isIndustrialDirty) {
+    categories.push(CategoryID.ID)
+  }
+
+  if (og.isIndustrialManufacture) {
+    categories.push(CategoryID.IM)
+  }
+
+  if (og.isIndustrialHighTech) {
+    categories.push(CategoryID.IHT)
+  }
+
+  return unique(categories)
 }
 
 // Looking to match implementation from https://github.com/memo33/submenus-dll/blob/1.1.4/src/Categorization.cpp

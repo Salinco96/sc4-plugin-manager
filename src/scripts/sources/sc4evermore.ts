@@ -1,5 +1,6 @@
 import { ID, indexBy } from "@salinco/nice-utils"
 
+import { CategoryID } from "@common/categories"
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
 import type { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
 
@@ -9,87 +10,85 @@ const origin = "https://www.sc4evermore.com"
 
 const categories: IndexerSourceCategory[] = [
   {
-    category: "mods,nam",
+    categories: [CategoryID.MODS, CategoryID.NAM],
     id: ID("6-network-addon-mod-nam"),
   },
   {
-    category: "residential",
+    categories: [CategoryID.RESIDENTIAL],
     id: ID("11-residential"),
   },
   {
-    category: "commercial",
+    categories: [CategoryID.COMMERCIAL],
     id: ID("12-commercial"),
   },
   {
-    category: "industry",
+    categories: [CategoryID.INDUSTRY],
     id: ID("13-industrial"),
   },
   {
-    category: "parks",
+    categories: [CategoryID.PARKS],
     id: ID("14-parks"),
   },
   {
-    category: "utilities",
+    categories: [CategoryID.UTILITIES],
     id: ID("15-utility"),
   },
   {
-    category: "civics",
+    categories: [CategoryID.CIVICS],
     id: ID("16-civic"),
   },
   {
-    category: "rewards",
+    categories: [CategoryID.REWARDS],
     id: ID("18-reward"),
   },
   {
-    category: "transport",
+    categories: [CategoryID.TRAM],
     id: ID("19-transportation"),
   },
   {
-    category: "landmarks",
+    categories: [CategoryID.LANDMARKS],
     id: ID("20-ploppable"),
   },
   {
-    category: "landmarks",
     id: ID("21-other"),
   },
   {
-    category: "dependencies",
+    categories: [CategoryID.DEPENDENCIES],
     id: ID("22-dependencies"),
   },
   {
-    category: "mods,transport",
+    categories: [CategoryID.TRANSPORT],
     id: ID("23-transportation-mods"),
   },
   {
-    category: "mmps,flora",
+    categories: [CategoryID.MMPS, CategoryID.FLORA],
     id: ID("25-flora-fauna-and-mayor-mode-ploppables"),
   },
   {
-    category: "gameplay",
+    categories: [CategoryID.MODS, CategoryID.GAMEPLAY],
     id: ID("26-gameplay-mods"),
   },
   {
-    category: "terrains",
+    categories: [CategoryID.TERRAINS],
     id: ID("37-terrain-mods-and-tree-controllers"),
   },
   {
-    category: "mods",
+    categories: [CategoryID.MODS],
     id: ID("38-other-mods"),
   },
   {
-    category: "mods",
     id: ID("40-maxis"),
   },
   {
-    category: "automata",
+    categories: [CategoryID.AUTOMATA],
     id: ID("41-automata-mods"),
   },
   {
-    category: "mods,dll",
+    categories: [CategoryID.MODS, CategoryID.DLL],
     id: ID("42-dll-mods"),
   },
   {
-    category: "agriculture",
+    categories: [CategoryID.AGRICULTURE],
     id: ID("43-agriculture"),
   },
 ]

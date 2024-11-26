@@ -807,7 +807,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         default: downloadUrl,
         message: "Download URL:",
         validate: value => {
-          if (!/^https:[/][/][-.\w]+[.][a-z]+[/][-.\w/%]+$/.test(value)) {
+          if (!/^https:[/][/][-.\w]+[.][a-z]+[/][-.\w/%{}]+$/.test(value)) {
             return "Invalid URL"
           }
 
@@ -898,7 +898,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               default: downloadUrl,
               message: "Download URL:",
               validate: value => {
-                if (!/^https:[/][/][-.\w]+[.][a-z]+[/][-.\w/%]+$/.test(value)) {
+                if (!/^https:[/][/][-.\w]+[.][a-z]+[/][-.\w/%{}]+$/.test(value)) {
                   return "Invalid URL"
                 }
 
@@ -938,13 +938,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     // Analyze DBPF contents
-    const { buildings, features, lots, models, props, textures } = await analyzeSC4Files(
-      downloadPath,
-      variantEntry.files,
-      exemplarProperties,
-    )
+    const { buildings, categories, features, lots, models, props, textures } =
+      await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
 
     variantEntry.buildings = buildings.length ? buildings : undefined
+    variantEntry.categories = categories.length ? categories : undefined
     variantEntry.features = features.length ? features : undefined
     variantEntry.lots = lots.length ? lots : undefined
     variantEntry.models = models.length ? models : undefined
