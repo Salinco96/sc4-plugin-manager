@@ -767,7 +767,7 @@ assets:
     timestamp: 2024-09-13T12:10:28.279Z
     uncompressed: 1091482
     url: https://community.simtropolis.com/files/file/20034-lbt-texture-pack-vol-01/
-    version: "1.0"
+    version: '1.0'
   simtropolis/20165:
     assetId: simtropolis/20165-bsc-spa-essentials-2
     authors:
@@ -1116,7 +1116,7 @@ assets:
       - Bipin
     category: 120-obsolete-legacy
     lastModified: 2013-07-31T19:36:35.000Z
-    name: "Monument to The People's Dear Beloved Leader: The Magnamious Bipin"
+    name: 'Monument to The People''s Dear Beloved Leader: The Magnamious Bipin'
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2013/thumb-5c2ff84a76f91eb9cad416b422abefdb-belovedleader.png
     url: https://community.simtropolis.com/files/file/28902-monument-to-the-peoples-dear-beloved-leader-the-magnamious-bipin/
   simtropolis/2927:
@@ -1161,7 +1161,7 @@ assets:
       - nos.17
     category: 120-obsolete-legacy
     lastModified: 2017-05-31T02:06:35.000Z
-    name: "b62 Remastered: Target SuperMEGA Center"
+    name: 'b62 Remastered: Target SuperMEGA Center'
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2017_05/obsolete.thumb.png.eb59909bd31035dadbc04d8a7cb18137.png
     url: https://community.simtropolis.com/files/file/30099-b62-remastered-target-supermega-center/
   simtropolis/30144:
@@ -1188,7 +1188,7 @@ assets:
       - Terring
     category: 120-obsolete-legacy
     lastModified: 2015-03-31T21:16:34.000Z
-    name: "Hyperpack: The Ultimate Dependency Pack!"
+    name: 'Hyperpack: The Ultimate Dependency Pack!'
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2015/thumb-7f41e2737d80da5efdaae3420b24d448-hyperpack.jpg
     url: https://community.simtropolis.com/files/file/30371-hyperpack-the-ultimate-dependency-pack/
   simtropolis/30373:
@@ -1224,14 +1224,14 @@ assets:
     timestamp: 2024-10-16T08:41:46.968Z
     url: https://community.simtropolis.com/files/file/30381-3d-camera-mod-for-simcity-4/
     variants:
-      "161233":
+      '161233':
         filename: 3D_Mod.zip
         files:
           - 3D_Mod/SimCity 4/Almost There!/Getting Closer!/Here it is!/ZZZZZZZ_3D_Cam_Mod_1.dat
         sha256: 03840b208696263b3785176c613cfee6ad0dbb4fc47e2ea9302e2c505e562388
         size: 381392
         uncompressed: 564789
-      "161234":
+      '161234':
         filename: 3D_Mod_Version1.zip
         files:
           - README FIRST.TXT
@@ -1240,7 +1240,7 @@ assets:
         sha256: 450e480999de7693559f03c0b4cdc4146ff0cd487842becdb00b7fed970fdabc
         size: 698333
         uncompressed: 856374
-    version: "1.0"
+    version: '1.0'
   simtropolis/30840:
     assetId: simtropolis/30840-dutch-prop-pack-mmp
     authors:
@@ -1307,11 +1307,11 @@ assets:
     lastModified: 2020-06-05T05:35:43.000Z
     meta:
       timestamp: 2024-11-13T12:41:39.855Z
-    name: "[BROKEN] SC4MacInjector"
+    name: '[BROKEN] SC4MacInjector'
     repository: https://github.com/nsgomez/sc4macinjector
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_02/SC4MacInjector_Preview.thumb.jpg.2e21caa961ab6243697a2f9a36dca029.jpg
     url: https://community.simtropolis.com/files/file/32047-broken-sc4macinjector/
-    version: "0.0"
+    version: '0.0'
   simtropolis/32202:
     assetId: simtropolis/32202-regional-night-view-mod
     authors:
@@ -1407,7 +1407,7 @@ assets:
     timestamp: 2024-08-16T13:58:24.884Z
     uncompressed: 212812
     url: https://community.simtropolis.com/files/file/33600-very-old-building-props/
-    version: "1.0"
+    version: '1.0'
   simtropolis/34056:
     assetId: simtropolis/34056-pedestrians-as-customers-traffic
     authors:
@@ -1450,7 +1450,7 @@ assets:
       - pcwhiz24
     category: 120-obsolete-legacy
     lastModified: 2021-04-01T07:24:04.000Z
-    name: "Disaster Addon Mod: Epidemic, Hurricanes, Tsunamis and Wild-Fires"
+    name: 'Disaster Addon Mod: Epidemic, Hurricanes, Tsunamis and Wild-Fires'
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_04/Disasters_Cover.thumb.jpg.caa2069bba13d99f256d526734a897a7.jpg
     url: https://community.simtropolis.com/files/file/34340-disaster-addon-mod-epidemic-hurricanes-tsunamis-and-wild-fires/
   simtropolis/35265:
@@ -1653,4 +1653,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4526-peg-random-woods-v206/
 
 meta:
-  timestamp: 2024-11-19T06:11:28.140Z
+  timestamp: 2024-11-26T16:10:02.088Z

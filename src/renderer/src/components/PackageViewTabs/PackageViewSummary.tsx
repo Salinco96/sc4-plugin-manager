@@ -1,5 +1,5 @@
 import { Box, Link, Typography } from "@mui/material"
-import { entries, keys } from "@salinco/nice-utils"
+import { collect, keys } from "@salinco/nice-utils"
 import { Fragment, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -91,10 +91,12 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
       )}
       {/* TODO: Better formatting */}
       {variantInfo.requirements && !!keys(variantInfo.requirements).length && (
-        <Typography variant="body2">
-          <b>{`${t("requirements")}: `}</b>
-          <ul>
-            {entries(variantInfo.requirements).map(([requirement, value]) => (
+        <>
+          <Typography variant="body2">
+            <b>{`${t("requirements")}: `}</b>
+          </Typography>
+          <ul style={{ marginBlockStart: 0 }}>
+            {collect(variantInfo.requirements, (value, requirement) => (
               <li key={requirement}>
                 {`${getRequirementLabel(t, requirement, variantInfo.options, profileOptions)}: ${getRequirementValueLabel(
                   t,
@@ -106,7 +108,7 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
               </li>
             ))}
           </ul>
-        </Typography>
+        </>
       )}
       <PackageBanners packageId={packageId} />
     </Box>

@@ -16,7 +16,7 @@ export function get(exemplar: Exemplar, id: ExemplarPropertyID, index = 0): numb
   }
 }
 
-export function getArray(exemplar: Exemplar, id: ExemplarPropertyID): number[] {
+export function getArray(exemplar: Exemplar, id: ExemplarPropertyID): number[] | undefined {
   const value = exemplar.data?.properties[id]?.value
 
   if (isArray(value)) {
@@ -26,8 +26,18 @@ export function getArray(exemplar: Exemplar, id: ExemplarPropertyID): number[] {
   if (isNumber(value)) {
     return [value]
   }
+}
 
-  return []
+export function getBool(exemplar: Exemplar, id: ExemplarPropertyID): boolean | undefined {
+  const value = exemplar.data?.properties[id]?.value
+
+  if (isArray(value)) {
+    return !!value.at(0)
+  }
+
+  if (value !== undefined) {
+    return !!value
+  }
 }
 
 export function getMap<T extends number>(

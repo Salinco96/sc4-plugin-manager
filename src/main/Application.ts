@@ -2,7 +2,7 @@ import fs, { writeFile } from "node:fs/promises"
 import path from "node:path"
 import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
 
-import { type EmptyRecord, forEach } from "@salinco/nice-utils"
+import { type EmptyRecord, collect, forEach, mapValues } from "@salinco/nice-utils"
 import log, { type LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
@@ -75,7 +75,6 @@ import { getPluginsFolderName } from "@utils/linker"
 import { type ToolID, getToolInfo } from "@utils/tools"
 
 import {
-  compact,
   entries,
   isEmpty,
   keys,
@@ -422,7 +421,7 @@ export class Application {
         context.debug("Removing unused packages...")
         context.setStep("Removing unused packages...")
 
-        const packageStatus = values(profiles).map(profileInfo => {
+        const packageStatus = collect(profiles, profileInfo => {
           const { resultingStatus } = resolvePackages(
             packages,
             profileInfo,
@@ -2028,7 +2027,7 @@ export class Application {
             context,
             originalFullPath,
             tempFullPath,
-            compact(patches),
+            mapValues(patches, patch => patch ?? undefined),
             exemplarProperties,
           )
 
@@ -2635,7 +2634,7 @@ export class Application {
 
                 // Confirm explicit variant changes
                 if (!isEmpty(explicitVariantChanges)) {
-                  const variants = entries(explicitVariantChanges).map(([packageId, variants]) => {
+                  const variants = collect(explicitVariantChanges, (variants, packageId) => {
                     const packageInfo = packages[packageId]
                     const oldVariant = packageInfo?.variants[variants.old]
                     const newVariant = packageInfo?.variants[variants.new]
@@ -2848,7 +2847,7 @@ export class Application {
 
                   // Install all packages
                   await Promise.all(
-                    entries(installingVariants).map(async ([packageId, variantId]) => {
+                    collect(installingVariants, async (variantId, packageId) => {
                       await this.installVariant(packageId, variantId)
                     }),
                   )

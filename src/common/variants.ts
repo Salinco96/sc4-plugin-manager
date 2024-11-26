@@ -7,6 +7,8 @@ import type { CategoryID } from "./categories"
 import type { OptionData, OptionID, OptionInfo, OptionValue, Requirements } from "./options"
 import type { PackageID } from "./packages"
 import type {
+  BuildingData,
+  BuildingInfo,
   Feature,
   LotData,
   LotInfo,
@@ -66,7 +68,7 @@ export enum Submenu {
   MiscTransit_Tram = 0x26b51b28,
   MiscTransit_ElRail = 0x244f77e1,
   MiscTransit_Subway = 0x231a97d3,
-  MiscTransit_Misc = 0x322c7959,
+  MiscTransit_MultiModal = 0x322c7959,
   MiscTransit_Parkings = 0x217b6c35,
   WaterTransit_Seaports = 0x07047b22,
   WaterTransit_Canals = 0x03c6629c,
@@ -80,8 +82,8 @@ export enum Submenu {
   Police_Deluxe = 0x8157ca0e,
   Police_Military = 0x8ba49621,
   Education_Elementary = 0x9fe5c428,
-  Education_HighSchools = 0xa08063d0,
-  Education_Colleges = 0xac706063,
+  Education_HighSchool = 0xa08063d0,
+  Education_College = 0xac706063,
   Education_Libraries = 0xaedd9faa,
   Health_Small = 0xb1f7ac5b,
   Health_Medium = 0xb7b594d6,
@@ -100,6 +102,7 @@ export enum Submenu {
 export interface VariantData {
   assets?: Array<AssetID | VariantAssetData>
   authors?: AuthorID[]
+  buildings?: BuildingData[]
   category?: string
   dependencies?: Array<PackageID | DependencyInfo>
   deprecated?: boolean | PackageID
@@ -132,6 +135,7 @@ export interface VariantData {
 export interface BaseVariantInfo {
   assets?: VariantAssetInfo[]
   authors: AuthorID[]
+  buildings?: BuildingInfo[]
   categories: CategoryID[]
   dependencies?: DependencyInfo[]
   deprecated?: boolean | PackageID
@@ -221,4 +225,12 @@ export function getStateLabel(
   state: VariantState | "default" | "selected",
 ): string {
   return t(state, { ns: "VariantState" })
+}
+
+export function writeMenu(menu: number): string {
+  return Menu[menu] ?? Submenu[menu] ?? `0x${toHex(menu, 8)}`
+}
+
+export function writeMenus(menus: number[]): string {
+  return menus.map(writeMenu).join(",")
 }

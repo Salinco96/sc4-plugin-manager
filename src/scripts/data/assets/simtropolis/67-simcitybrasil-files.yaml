@@ -150,7 +150,7 @@ assets:
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 7521058
     url: https://community.simtropolis.com/files/file/31109-flunight-props-vol-01-flora/
-    version: "1.0"
+    version: '1.0'
   simtropolis/3181:
     assetId: simtropolis/3181-edificio-claude-debussy
     authors:
@@ -221,14 +221,14 @@ assets:
     timestamp: 2024-08-27T05:38:57.049Z
     url: https://community.simtropolis.com/files/file/3519-copacabana-beach/
     variants:
-      "202790":
+      '202790':
         filename: copacabana.zip
         files:
           - copacabana.dat
         sha256: 2f0b9da7c5ed4c24a7570a8a058cd3ac84b9320af0921dad10899f3fa61f330c
         size: 907577
         uncompressed: 1036065
-      "202791":
+      '202791':
         filename: copacabana.zip
         files:
           - copacabana-beach-suico-submenu.dat
@@ -236,7 +236,7 @@ assets:
         sha256: f341c56850ea436d92d15e248e2297a8ddcae761a2599728220a1c6cb0b90c8a
         size: 924018
         uncompressed: 1052501
-    version: "1.1"
+    version: '1.1'
   simtropolis/3559:
     assetId: simtropolis/3559-copacabana-beach-addon-1-sports
     authors:
@@ -261,7 +261,7 @@ assets:
     timestamp: 2024-08-27T05:38:57.049Z
     uncompressed: 257079
     url: https://community.simtropolis.com/files/file/3559-copacabana-beach-addon-1-sports/
-    version: "1.0"
+    version: '1.0'
   simtropolis/4585:
     assetId: simtropolis/4585-farms-fences
     authors:
@@ -273,4 +273,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4585-farms-fences/
 
 meta:
-  timestamp: 2024-11-19T06:11:28.140Z
+  timestamp: 2024-11-26T16:10:02.088Z

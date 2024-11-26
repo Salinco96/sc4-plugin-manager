@@ -9,7 +9,7 @@ import {
   Switch,
   Typography,
 } from "@mui/material"
-import { isArray, parseHex, toHex, values } from "@salinco/nice-utils"
+import { collect, isArray, parseHex, toHex } from "@salinco/nice-utils"
 import { Virtuoso, type VirtuosoHandle } from "react-virtuoso"
 
 import { TGI } from "@common/dbpf"
@@ -81,7 +81,7 @@ export function ExemplarViewer({
       }
     }
 
-    const fields = values(currentData.properties).map<ExemplarPropertyProps>(property => ({
+    const fields: ExemplarPropertyProps[] = collect(currentData.properties, property => ({
       errors: errors?.properties?.[property.id],
       onChange(value) {
         if (value === null) {

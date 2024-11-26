@@ -261,6 +261,51 @@ export function writePackageData(
     variantAsset.include = includedSC4Files ?? []
   }
 
+  const buildings = variantEntry.buildings?.filter(building =>
+    includedFiles.includes(building.filename),
+  )
+
+  if (buildings?.length) {
+    variantData.buildings ??= []
+
+    for (const building of buildings) {
+      let existingBuilding = variantData.buildings.find(({ id }) => id === building.id)
+
+      if (!existingBuilding) {
+        existingBuilding = { id: building.id, filename: building.filename }
+        variantData.buildings.push(existingBuilding)
+      }
+
+      existingBuilding.bulldoze ??= building?.bulldoze
+      existingBuilding.capacity ??= building?.capacity
+      existingBuilding.category ??= building.category
+      existingBuilding.cost ??= building?.cost
+      existingBuilding.description ??= building?.description
+      existingBuilding.filename ??= building.filename
+      existingBuilding.flamability ??= building?.flamability
+      existingBuilding.garbage ??= building?.garbage
+      existingBuilding.garbageRadius ??= building?.garbageRadius
+      existingBuilding.income ??= building?.income
+      existingBuilding.label ??= building?.label
+      existingBuilding.landmark ??= building?.landmark
+      existingBuilding.landmarkRadius ??= building?.landmarkRadius
+      existingBuilding.maintenance ??= building?.maintenance
+      existingBuilding.pollution ??= building?.pollution
+      existingBuilding.pollutionRadius ??= building?.pollutionRadius
+      existingBuilding.power ??= building?.power
+      existingBuilding.powerProduction ??= building?.powerProduction
+      existingBuilding.radiation ??= building?.radiation
+      existingBuilding.radiationRadius ??= building?.radiationRadius
+      existingBuilding.rating ??= building?.rating
+      existingBuilding.ratingRadius ??= building?.ratingRadius
+      existingBuilding.water ??= building?.water
+      existingBuilding.waterPollution ??= building?.waterPollution
+      existingBuilding.waterPollutionRadius ??= building?.waterPollutionRadius
+      existingBuilding.waterProduction ??= building?.waterProduction
+      existingBuilding.worth ??= building?.worth
+    }
+  }
+
   const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.filename))
 
   if (lots?.length) {
@@ -274,40 +319,13 @@ export function writePackageData(
         variantData.lots.push(existingLot)
       }
 
-      const building = variantEntry.buildings?.find(({ id }) => id === lot.building)
-
-      existingLot.bulldoze ??= building?.bulldoze
-      existingLot.capacity ??= building?.capacity
-      existingLot.category ??= lot.category
-      existingLot.cost ??= building?.cost
+      existingLot.building ??= lot.building
       existingLot.density ??= lot.density
-      existingLot.description ??= building?.description
       existingLot.filename ??= lot.filename
-      existingLot.flamability ??= building?.flamability
-      existingLot.garbage ??= building?.garbage
-      existingLot.garbageRadius ??= building?.garbageRadius
       existingLot.images ??= lot.images
-      existingLot.income ??= building?.income
-      existingLot.label ??= building?.label
-      existingLot.landmark ??= building?.landmark
-      existingLot.landmarkRadius ??= building?.landmarkRadius
-      existingLot.maintenance ??= building?.maintenance
       existingLot.name ??= lot.name
-      existingLot.pollution ??= building?.pollution
-      existingLot.pollutionRadius ??= building?.pollutionRadius
-      existingLot.power ??= building?.power
-      existingLot.powerProduction ??= building?.powerProduction
-      existingLot.radiation ??= building?.radiation
-      existingLot.radiationRadius ??= building?.radiationRadius
-      existingLot.rating ??= building?.rating
-      existingLot.ratingRadius ??= building?.ratingRadius
       existingLot.size ??= lot.size
       existingLot.stage ??= lot.stage
-      existingLot.water ??= building?.water
-      existingLot.waterPollution ??= building?.waterPollution
-      existingLot.waterPollutionRadius ??= building?.waterPollutionRadius
-      existingLot.waterProduction ??= building?.waterProduction
-      existingLot.worth ??= building?.worth
     }
   }
 

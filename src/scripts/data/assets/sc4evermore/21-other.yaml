@@ -4,7 +4,7 @@ assets:
     authors:
       - Reddonquixote
     category: 21-other
-    downloads: 607
+    downloads: 615
     lastModified: 2024-10-06T10:24:21.000Z
     name: SC4D LEX Legacy - Reddonquixote Compilation (Dark Night)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/RDQ_HD_PropPack_Banner_Day.jpg
@@ -14,7 +14,7 @@ assets:
     authors:
       - Reddonquixote
     category: 21-other
-    downloads: 551
+    downloads: 561
     lastModified: 2024-10-06T10:25:01.000Z
     name: SC4D LEX Legacy - Reddonquixote Compilation (Maxis Night)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/RDQ_Rialto_Towers_Night_Banner.jpg
@@ -24,7 +24,7 @@ assets:
     authors:
       - sc4evermore
     category: 21-other
-    downloads: 451
+    downloads: 459
     lastModified: 2023-07-25T10:32:54.000Z
     name: Immortality Killer by RippleJet
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/38-immortality-killer-by-ripplejet
@@ -87,7 +87,7 @@ assets:
     category: 21-other
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>BSC Census Repository Building by RippleJet.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 1101
+    downloads: 1119
     features: []
     filename: BSC RJ Census Repository Facility v3.5_1831.zip
     files:
@@ -120,7 +120,7 @@ assets:
         size: 3x1
         textures:
           - 258f0000
-          - "26370000"
+          - '26370000'
       - building: 0dd41d65
         category: landmarks
         filename: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
@@ -140,7 +140,7 @@ assets:
           - 8956a699
         size: 1x1
         textures:
-          - "258e0000"
+          - '258e0000'
           - 258d0000
       - building: 645e467b
         category: landmarks
@@ -173,16 +173,16 @@ assets:
     timestamp: 2024-08-15T14:29:31.994Z
     uncompressed: 2382510
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/39-bsc-census-repository-building-by-ripplejet
-    version: "3.5"
+    version: '3.5'
   sc4evermore/50:
     assetId: sc4evermore/50-camelot-counter-by-ripplejet
     authors:
       - sc4evermore
     category: 21-other
-    downloads: 431
+    downloads: 440
     lastModified: 2023-07-25T12:09:39.000Z
     name: CAMeLot Counter by RippleJet
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/50-camelot-counter-by-ripplejet
 
 meta:
-  timestamp: 2024-11-19T06:11:28.140Z
+  timestamp: 2024-11-26T16:10:02.088Z

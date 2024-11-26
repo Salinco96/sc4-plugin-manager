@@ -18,7 +18,7 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material"
-import { keys, values } from "@salinco/nice-utils"
+import { collect, keys } from "@salinco/nice-utils"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -126,16 +126,16 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
             <MenuItem value={emptyValue}>{t("from.emptyValue")}</MenuItem>
             <Divider />
             <ListSubheader>{t("from.template")}</ListSubheader>
-            {values(templates).map(template => (
-              <MenuItem key={template.id} value={template.id}>
-                {template.name}
+            {collect(templates, (templateInfo, id) => (
+              <MenuItem key={id} value={id}>
+                {templateInfo.name}
               </MenuItem>
             ))}
             {hasProfiles && <Divider />}
             {hasProfiles && <ListSubheader>{t("from.profile")}</ListSubheader>}
-            {values(profiles).map(profile => (
-              <MenuItem key={profile.id} value={profile.id}>
-                {profile.name}
+            {collect(profiles, (profileInfo, id) => (
+              <MenuItem key={id} value={id}>
+                {profileInfo.name}
               </MenuItem>
             ))}
           </Select>

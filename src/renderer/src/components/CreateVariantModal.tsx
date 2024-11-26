@@ -16,7 +16,7 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material"
-import { keys, values } from "@salinco/nice-utils"
+import { collect, keys } from "@salinco/nice-utils"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -124,9 +124,9 @@ export function CreateVariantForm({ onClose, packageId }: CreateVariantFormProps
             value={variantId}
             variant="standard"
           >
-            {values(packageInfo.variants).map(profile => (
-              <MenuItem key={profile.id} value={profile.id}>
-                {profile.name}
+            {collect(packageInfo.variants, (variantInfo, id) => (
+              <MenuItem key={id} value={id}>
+                {variantInfo.name}
               </MenuItem>
             ))}
           </Select>

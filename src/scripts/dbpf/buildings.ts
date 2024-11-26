@@ -1,23 +1,42 @@
-import { sum } from "@salinco/nice-utils"
+import { containsAny, generate, isNumber, sum, values } from "@salinco/nice-utils"
 
 import type { BuildingData } from "@common/types"
 
-import { DeveloperID, type Exemplar, ExemplarPropertyID } from "./types"
-import { get, getArray, getMap, getString, getTGI } from "./utils"
+import { Menu, Submenu, writeMenu, writeMenus } from "@common/variants"
+import {
+  BudgetItemDepartment,
+  DeveloperID,
+  type Exemplar,
+  ExemplarPropertyID,
+  OccupantGroup,
+  PowerPlantType,
+  QueryExemplarGUID,
+} from "./types"
+import { get, getArray, getBool, getMap, getString, getTGI } from "./utils"
 
 export function getBuildingData(exemplar: Exemplar): BuildingData {
   const buildingId = exemplar.id.split("-")[2]
 
-  const data: BuildingData = { id: buildingId }
+  const data: BuildingData = { id: buildingId, filename: exemplar.file }
 
-  data.filename = exemplar.file
+  const ogs = getArray(exemplar, ExemplarPropertyID.OccupantGroups) ?? []
+
+  const menu = getDefaultMenu(ogs)
+  if (menu) {
+    data.menu = writeMenu(menu)
+  }
+
+  const submenus = getSubmenus(exemplar)
+  if (submenus.length) {
+    data.submenu = writeMenus(submenus)
+  }
 
   const plopCost = get(exemplar, ExemplarPropertyID.PlopCost)
   if (plopCost) {
     data.cost = plopCost
   }
 
-  const maintenanceCost = sum(getArray(exemplar, ExemplarPropertyID.BudgetItemCost))
+  const maintenanceCost = sum(getArray(exemplar, ExemplarPropertyID.BudgetItemCost) ?? [])
   if (maintenanceCost) {
     data.maintenance = maintenanceCost
   }
@@ -127,6 +146,7 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
     }
   }
 
+  // TODO: Other possibilities?
   const model =
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
@@ -135,7 +155,6 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
   }
 
   const capacity = getMap<DeveloperID>(exemplar, ExemplarPropertyID.CapacitySatisfied)
-
   if (capacity) {
     data.capacity = {
       r$: capacity[DeveloperID.R$],
@@ -154,4 +173,262 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
   }
 
   return data
+}
+
+const menuOgs: {
+  [menu in Menu]?: OccupantGroup[]
+} = {
+  [Menu.Airports]: [OccupantGroup.Airport],
+  [Menu.Education]: [
+    OccupantGroup.School,
+    OccupantGroup.College,
+    OccupantGroup.Library,
+    OccupantGroup.Museum,
+  ],
+  [Menu.Fire]: [OccupantGroup.Fire],
+  [Menu.Garbage]: [OccupantGroup.Garbage],
+  [Menu.Health]: [OccupantGroup.Health],
+  [Menu.Landmarks]: [OccupantGroup.Landmark],
+  [Menu.MiscTransit]: [OccupantGroup.MiscTransit],
+  [Menu.Parks]: [OccupantGroup.Park],
+  [Menu.Police]: [OccupantGroup.Police, OccupantGroup.Jail],
+  [Menu.Power]: [OccupantGroup.Power],
+  [Menu.Rail]: [OccupantGroup.Rail],
+  [Menu.Rewards]: [OccupantGroup.Reward],
+  [Menu.Water]: [OccupantGroup.Water],
+  [Menu.WaterTransit]: [OccupantGroup.WaterTransit],
+}
+
+function getDefaultMenu(ogs: number[]): Menu | undefined {
+  return values(Menu)
+    .filter(menu => isNumber(menu))
+    .find(menu => menuOgs[menu] && containsAny(ogs, menuOgs[menu]))
+}
+
+// Looking to match implementation from https://github.com/memo33/submenus-dll/blob/1.1.4/src/Categorization.cpp
+function getSubmenus(exemplar: Exemplar): number[] {
+  const submenus = getArray(exemplar, ExemplarPropertyID.BuildingSubmenus) ?? []
+
+  // If any submenus are explicit set, return those directly
+  if (submenus.length) {
+    return submenus
+  }
+
+  // Otherwise, infer from group and other relevant building data
+  const capacity = getMap<DeveloperID>(exemplar, ExemplarPropertyID.CapacitySatisfied) ?? {}
+  const departments = getArray(exemplar, ExemplarPropertyID.BudgetItemDepartment) ?? []
+  const height = get(exemplar, ExemplarPropertyID.OccupantSize, 2) ?? 0
+  const isConditional = getBool(exemplar, ExemplarPropertyID.IsConditional) ?? false
+  const groups = getArray(exemplar, ExemplarPropertyID.OccupantGroups) ?? []
+  const query = get(exemplar, ExemplarPropertyID.QueryExemplarGUID)
+
+  // Mapping for more readability afterwards
+  const og = generate(
+    values(OccupantGroup).filter(group => isNumber(group)),
+    group => [`is${OccupantGroup[group] as keyof typeof OccupantGroup}`, groups.includes(group)],
+  )
+
+  if (og.isLandmark && capacity) {
+    if (og.isR$) {
+      submenus.push(Submenu.Residential_R$)
+    }
+
+    if (og.isR$$) {
+      submenus.push(Submenu.Residential_R$$)
+    }
+
+    if (og.isR$$$) {
+      submenus.push(Submenu.Residential_R$$$)
+    }
+
+    if (og.isCS$) {
+      submenus.push(Submenu.Commercial_CS$)
+    }
+
+    if (og.isCS$$) {
+      submenus.push(Submenu.Commercial_CS$$)
+    }
+
+    if (og.isCS$$$) {
+      submenus.push(Submenu.Commercial_CS$$$)
+    }
+
+    if (og.isCO$$) {
+      submenus.push(Submenu.Commercial_CO$$)
+    }
+
+    if (og.isCO$$$) {
+      submenus.push(Submenu.Commercial_CO$$$)
+    }
+
+    if (og.isAgriculture) {
+      submenus.push(Submenu.Industrial_Agriculture)
+    }
+
+    if (og.isIndustrialDirty) {
+      submenus.push(Submenu.Industrial_Dirty)
+    }
+
+    if (og.isIndustrialManufacture) {
+      submenus.push(Submenu.Industrial_Manufacture)
+    }
+
+    if (og.isIndustrialHighTech) {
+      submenus.push(Submenu.Industrial_HighTech)
+    }
+  }
+
+  if (og.isAirport) {
+    // No submenus
+  } else if (og.isWaterTransit) {
+    if (og.isSeaport || og.isPassengerFerry || og.isCarFerry) {
+      submenus.push(Submenu.WaterTransit_Seaports)
+    } else if (og.isBteInlandWaterway || og.isSgWaterway) {
+      submenus.push(Submenu.WaterTransit_Canals)
+    } else if (og.isBteWaterfront) {
+      submenus.push(Submenu.WaterTransit_Waterfront)
+    }
+  } else if (og.isRail) {
+    if (og.isLightRail) {
+      if (og.isPassengerRail || og.isMonorail) {
+        submenus.push(Submenu.MiscTransit_MultiModal)
+      }
+    } else if (og.isFreightRail) {
+      submenus.push(Submenu.Rail_Freight)
+    } else if (og.isPassengerRail) {
+      if (og.isMonorail) {
+        submenus.push(Submenu.Rail_Hybrid)
+      } else {
+        submenus.push(Submenu.Rail_Passengers)
+      }
+    } else if (og.isMonorail) {
+      submenus.push(Submenu.Rail_Monorail)
+    } else {
+      submenus.push(Submenu.Rail_Yards)
+    }
+  } else if (og.isMiscTransit) {
+    if (og.isLightRail || og.isPassengerRail || og.isMonorail) {
+      if (og.isLightRail) {
+        if (og.isPassengerRail || og.isMonorail) {
+          submenus.push(Submenu.MiscTransit_MultiModal)
+        } else if (height >= 15.5) {
+          submenus.push(Submenu.MiscTransit_ElRail)
+        } else {
+          submenus.push(Submenu.MiscTransit_Tram)
+        }
+      }
+    } else if (og.isSubway) {
+      // Not sure what this check is for
+      if (capacity) {
+        submenus.push(Submenu.MiscTransit_Subway)
+      }
+    } else if (og.isBus) {
+      submenus.push(Submenu.MiscTransit_Bus)
+    }
+  }
+
+  if (og.isPower) {
+    const type = get(exemplar, ExemplarPropertyID.PowerPlantType)
+
+    switch (type) {
+      case PowerPlantType.Hydrogen:
+      case PowerPlantType.Nuclear:
+      case PowerPlantType.Solar:
+      case PowerPlantType.Wind:
+        submenus.push(Submenu.Power_Clean)
+        break
+
+      case PowerPlantType.Coal:
+      case PowerPlantType.NaturalGas:
+      case PowerPlantType.Oil:
+      case PowerPlantType.Waste:
+        submenus.push(Submenu.Power_Dirty)
+        break
+
+      default:
+        submenus.push(Submenu.Power_Misc)
+    }
+  }
+
+  if (og.isPolice) {
+    if (og.isPoliceDeluxe) {
+      submenus.push(Submenu.Police_Deluxe)
+    } else if (og.isPoliceLarge) {
+      submenus.push(Submenu.Police_Large)
+    } else if (og.isPoliceSmall || og.isPoliceKiosk) {
+      submenus.push(Submenu.Police_Small)
+    }
+  }
+
+  if (og.isSchool) {
+    if (og.isSchoolElementary) {
+      submenus.push(Submenu.Education_Elementary)
+    } else if (og.isSchoolHigh || og.isSchoolPrivate) {
+      // Private schools are with high schools atm
+      submenus.push(Submenu.Education_HighSchool)
+    }
+  }
+
+  if (og.isCollege) {
+    submenus.push(Submenu.Education_College)
+  }
+
+  if (og.isLibrary || og.isMuseum) {
+    // Museums are with libraries atm
+    submenus.push(Submenu.Education_Libraries)
+  }
+
+  if (og.isHealth) {
+    if (og.isHealthOther) {
+      if (departments.includes(BudgetItemDepartment.HealthCoverage)) {
+        submenus.push(Submenu.Health_Large)
+      }
+    } else if (og.isHospital) {
+      const patients = get(exemplar, ExemplarPropertyID.HospitalPatientCapacity) ?? 0
+      if ((og.isClinic || !og.isHealthLarge) && !og.isAmbulanceMaker) {
+        submenus.push(Submenu.Health_Small)
+      } else if (patients > 20000) {
+        submenus.push(Submenu.Health_Large)
+      } else {
+        submenus.push(Submenu.Health_Medium)
+      }
+    }
+  }
+
+  if (
+    departments.includes(BudgetItemDepartment.Government) ||
+    og.isMayorHouse ||
+    og.isBureaucracy ||
+    og.isConventionCrowd ||
+    og.isStockExchange ||
+    (og.isCourthouse && !og.isLandmark) // to exclude US Capitol
+  ) {
+    submenus.push(Submenu.Landmarks_Government)
+  }
+
+  if (og.isWorship || og.isCemetery || og.isBteReligious) {
+    submenus.push(Submenu.Landmarks_Religion)
+  }
+
+  if (
+    og.isStadium ||
+    og.isOpera ||
+    og.isNightClub ||
+    og.isZoo ||
+    og.isStateFair ||
+    og.isCasino ||
+    og.isTvStation ||
+    og.isSgEntertainment ||
+    og.isBteEntertainment ||
+    query === QueryExemplarGUID.RadioStation
+  ) {
+    submenus.push(Submenu.Landmarks_Entertainment)
+  }
+
+  // Conditional rewards still also appear under Rewards to make them easy to find when unlocked
+  if (og.isReward && isConditional) {
+    submenus.push(Menu.Rewards)
+  }
+
+  return submenus
 }

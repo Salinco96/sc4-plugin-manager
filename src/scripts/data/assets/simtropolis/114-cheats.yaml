@@ -204,7 +204,7 @@ assets:
     timestamp: 2024-10-16T08:40:44.039Z
     uncompressed: 16498
     url: https://community.simtropolis.com/files/file/14931-less-abandonment/
-    version: "1.0"
+    version: '1.0'
   simtropolis/14995:
     assetId: simtropolis/14995-trigger-filtering-tunnels
     authors:
@@ -231,7 +231,7 @@ assets:
       - capacity:
           ir: 2
         filename: farm-doubler_includingPollution.dat
-        id: "00004100"
+        id: '00004100'
     category: 114-cheats
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This mod doubles the number of jobs provided by the in-game industry buildings. There are 4 files you can optionally install; they double the jobs for each industry category (farming, dirty, manufacturing, and high-tech). So, you don't have to double all the industry categories if you don't wish to do so; you can pick &amp; choose.</p>\n<p>I made this mod after trying out the industry-quadrupler mod on this site. I found that mod to be unbalanced, and in the \"cheat\" category, so I made an alternative mod to be more balanced with the rest of the game.</p>\n<p>1. I only doubled the number of jobs, rather than quadrupled them. I found 4x was just too much.</p>\n<p>2. I doubled the building tax values. This makes the income from industry to be the same as the default for the same number of jobs. This allows a \"industry city\" to be economically feasible, just as with the default game values.</p>\n<p>3. I doubled the power and water requirements for the buildings. This means you have to spend the same amount of money to support a similar number of jobs as you would with the game default. (I found this balance to be lacking in the industry quadrupler.)</p>\n<p>4. I doubled the pollution from each building. Again, this means that the same amount of jobs will produce the same amount of pollution as with the game's default. (Again, missing in the 4x mod.)<br><br>See the readme for installation details.</p>\n\n\t\t\t\t\t\t</body>"
@@ -263,7 +263,7 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2006/thumb-49f694b46a99e7429e796b8226b57dd4-jobsdoubler.jpg
     uncompressed: 90945
     url: https://community.simtropolis.com/files/file/15758-industry-doubler/
-    version: "2"
+    version: '2'
   simtropolis/15915:
     assetId: simtropolis/15915-mine
     authors:
@@ -429,7 +429,7 @@ assets:
   simtropolis/20790:
     assetId: simtropolis/20790-simtreasury
     authors:
-      - "****"
+      - '****'
     category: 114-cheats
     lastModified: 2008-12-06T09:36:23.000Z
     name: SimTreasury
@@ -492,7 +492,7 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2014/thumb-5d12c6891edb0468eecd951049c52248-extra_cheats_plugin_01.jpg
     uncompressed: 354582
     url: https://community.simtropolis.com/files/file/21118-simcity-4-extra-cheats-plugin/
-    version: "1.0"
+    version: '1.0'
   simtropolis/21266:
     assetId: simtropolis/21266-cheatradical-mods-set-1
     authors:
@@ -585,7 +585,7 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2003/thumb-829a84916b0699a01c12bfd01e21dd5b-default.jpg
     uncompressed: 2385
     url: https://community.simtropolis.com/files/file/21299-super-demand-ordinance/
-    version: "1.0"
+    version: '1.0'
   simtropolis/21312:
     assetId: simtropolis/21312-simoleon-rh
     authors:
@@ -625,7 +625,7 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2003/thumb-8fbdad1ffaca73ab6dfbfdae3c995940-default.jpg
     uncompressed: 2379
     url: https://community.simtropolis.com/files/file/21339-crime-doesnt-pay/
-    version: "1.0"
+    version: '1.0'
   simtropolis/21352:
     assetId: simtropolis/21352-utilityradius-trafpollution-modd
     authors:
@@ -638,7 +638,7 @@ assets:
   simtropolis/21435:
     assetId: simtropolis/21435-bombed-out-hiroshima-building
     authors:
-      - "****"
+      - '****'
     category: 114-cheats
     lastModified: 2009-03-28T09:01:03.000Z
     name: Bombed-Out Hiroshima Building
@@ -749,7 +749,7 @@ assets:
       - Droidika
     category: 114-cheats
     lastModified: 2010-02-17T15:40:22.000Z
-    name: "'Anti Mod Pollution Increasers' 4 Pack"
+    name: '''Anti Mod Pollution Increasers'' 4 Pack'
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2010/thumb-1c480dd4dd1f66a3e8c7940f8c3461b0-packcover.JPG
     url: https://community.simtropolis.com/files/file/23381-anti-mod-pollution-increasers-4-pack/
   simtropolis/23661:
@@ -912,7 +912,7 @@ assets:
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2011/thumb-9b9dbdb73f0a70e23fa9688ae7f7e8d6-screenshot.jpg
     uncompressed: 38788
     url: https://community.simtropolis.com/files/file/25651-commercial-services-doubler/
-    version: "2.0"
+    version: '2.0'
   simtropolis/2576:
     assetId: simtropolis/2576-ninja-tax-collectors
     authors:
@@ -1164,13 +1164,13 @@ assets:
     lastModified: 2020-06-05T05:35:19.000Z
     meta:
       timestamp: 2024-11-13T12:41:39.855Z
-    name: "[BROKEN] Buggi's Extra Cheats for Mac"
+    name: '[BROKEN] Buggi''s Extra Cheats for Mac'
     repository: https://github.com/nsgomez/gzcom-dll
     sha256: 18c1167eeb907865700b4dea1d857dd48e9977650578c4b6af8d358d19290357
     size: 281
     thumbnail: https://i.imgur.com/spxQOI3.png
     url: https://community.simtropolis.com/files/file/32048-broken-buggis-extra-cheats-for-mac/
-    version: "0.0"
+    version: '0.0'
   simtropolis/32565:
     assetId: simtropolis/32565-sm2-easy-money
     authors:
@@ -1290,4 +1290,4 @@ assets:
     url: https://community.simtropolis.com/files/file/925-first-national-bank-of-simnation/
 
 meta:
-  timestamp: 2024-11-19T06:11:28.140Z
+  timestamp: 2024-11-26T16:10:02.088Z

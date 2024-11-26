@@ -187,7 +187,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       if (shouldRefreshEntryList(data)) {
         if (sourceId === "github") {
           await forEachAsync(data.assets, async (entry, entryId) => {
-            const repository = entryId.match(/^github[/]([^/]+[/][^/]+)$/)?.[1]
+            const repository =
+              entry.download?.match(/^https:[/][/]github[.]com[/]([^/]+[/][^/]+)/)?.[1] ??
+              entry.repository?.match(/^https:[/][/]github[.]com[/]([^/]+[/][^/]+)/)?.[1] ??
+              entryId.match(/^github[/]([^/]+[/][^/]+)$/)?.[1]
 
             if (repository) {
               entry.repository = `https://github.com/${repository}`
@@ -214,10 +217,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
                 const version = latest.tag_name.replace(/^v/i, "") // remove leading v
                 const assetName = entry.download?.split("/").at(-1)?.replace("{version}", version)
-                const asset =
-                  latest.assets.find(asset => asset.name === assetName) ?? latest.assets[0]
+                const asset = latest.assets.find(asset => asset.name === assetName)
 
-                if (!entry.download || entry.version !== version) {
+                if (asset && (!entry.download || entry.version !== version)) {
                   entry.download = asset.browser_download_url.replaceAll(version, "{version}")
                   entry.filename = asset.name
                   entry.files = undefined
@@ -514,9 +516,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   async function resolveEntry(entryId: EntryID): Promise<IndexerEntry | undefined> {
     const assetId = getAssetID(entryId)
-    const entry = getEntry(entryId)
-    const source = getSource(entryId)
-    const sourceId = getSourceId(entryId)
 
     let override = getOverride(entryId)
 
@@ -525,6 +524,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       console.warn(`Skipping ${assetId}...`)
       return
     }
+
+    const entry = getEntry(entryId)
+    const source = getSource(entryId)
+    const sourceId = getSourceId(entryId)
 
     // Handle dependency loop
     if (resolvingEntries.has(assetId)) {
@@ -641,7 +644,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     // Download and analyze contents if outdated
-    if (!entry.meta?.version || entry.meta.version < options.version) {
+    if (!entry.meta?.version || entry.meta.version !== options.version) {
       let hasErrors = false
 
       try {
@@ -967,7 +970,15 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       return false
     }
 
-    if (!variantEntry?.files || !entry.version || !variantOverride) {
+    if (!variantEntry?.files) {
+      throw Error(`Expected files to exist for ${variantAssetId}`)
+    }
+
+    if (!entry.version) {
+      throw Error(`Expected version to exist for ${variantAssetId}`)
+    }
+
+    if (!variantOverride) {
       throw Error(`Expected override to exist for ${variantAssetId}`)
     }
 

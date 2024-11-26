@@ -171,19 +171,17 @@ export interface BuildingData {
   category?: string
   /** Plop cost */
   cost?: number
-  /** Zone density where this lot may grow - comma-separated: "low", "medium", "high" */
-  density?: string
   /** Lot description */
   description?: string
   /** Path to the file containing the building exemplar */
-  filename?: string
+  filename: string
   /** Flamability (number between 0 and 100) */
   flamability?: number
   /** Garbage generated */
   garbage?: number
   /** Garbage radius in tiles */
   garbageRadius?: number
-  /** Lot Instance ID */
+  /** Building Instance ID */
   id: string
   /** Monthly income */
   income?: number
@@ -195,6 +193,8 @@ export interface BuildingData {
   landmarkRadius?: number
   /** Monthly maintenance cost */
   maintenance?: number
+  /** Menu */
+  menu?: number | string
   /** TGI of building model */
   model?: TGI
   /** Radiation generated */
@@ -213,6 +213,8 @@ export interface BuildingData {
   rating?: number
   /** Mayor rating effect radius in tiles */
   ratingRadius?: number
+  /** Submenus, comma-separated */
+  submenu?: number | string
   /** Water consumed */
   water?: number
   /** Water pollution generated */
@@ -225,17 +227,25 @@ export interface BuildingData {
   worth?: number
 }
 
-export interface LotData extends BuildingData {
+export interface BuildingInfo extends Omit<BuildingData, "category" | "menu" | "submenu"> {
+  categories?: CategoryID[]
+  menu?: number
+  submenus?: number[]
+}
+
+export interface LotData {
   /** Building exemplar instance ID */
   building?: string
   /** Whether lot is enabled by default (this defaults to true) */
   default?: boolean
+  /** Zone density where this lot may grow - comma-separated: "low", "medium", "high" */
+  density?: string
   /** Path to the file containing the lot exemplar */
   filename: string
+  /** Lot Instance ID */
+  id: string
   /** URL or relative path within ~docs */
   images?: string[]
-  /** Menu */
-  menu?: number | string
   /** Internal lot name */
   name?: string
   /** Instance IDs of all props used by this lot */
@@ -250,17 +260,11 @@ export interface LotData extends BuildingData {
   size?: `${number}x${number}`
   /** Growth stage */
   stage?: number
-  /** Submenus, comma-separated */
-  submenu?: number | string
   /** Instance IDs of all textures used by this lot */
   textures?: string[]
 }
 
-export interface LotInfo extends Omit<LotData, "category" | "menu" | "submenu"> {
-  categories?: CategoryID[]
-  menu?: number
-  submenus?: number[]
-}
+export interface LotInfo extends LotData {}
 
 export interface MMPData {
   /** Category */

@@ -1,6 +1,6 @@
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 import { Card, CardContent, Checkbox, List, ListItem, Typography } from "@mui/material"
-import { entries, remove } from "@salinco/nice-utils"
+import { collect, remove } from "@salinco/nice-utils"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -151,7 +151,7 @@ export default function PackageViewMMPs({ packageId }: PackageViewTabInfoProps):
                     <Typography variant="body2">
                       <b>{`${t("requirements")}: `}</b>
                       <ul>
-                        {entries(mmp.requirements).map(([requirement, value]) => (
+                        {collect(mmp.requirements, (value, requirement) => (
                           <li key={requirement}>
                             {`${getRequirementLabel(
                               t,

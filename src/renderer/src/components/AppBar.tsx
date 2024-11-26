@@ -13,7 +13,7 @@ import {
   Typography,
   styled,
 } from "@mui/material"
-import { values } from "@salinco/nice-utils"
+import { collect } from "@salinco/nice-utils"
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -122,9 +122,9 @@ export function AppBar(): JSX.Element {
               onClose={() => setSelecting(false)}
               variant="standard"
             >
-              {values(profiles).map(profile => (
-                <MenuItem key={profile.id} value={profile.id}>
-                  {profile.name}
+              {collect(profiles, (profileInfo, id) => (
+                <MenuItem key={id} value={id}>
+                  {profileInfo.name}
                 </MenuItem>
               ))}
               <MenuItem value={newProfileId}>{t("actions.createProfile.label")}...</MenuItem>

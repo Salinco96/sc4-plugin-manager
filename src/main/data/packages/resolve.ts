@@ -1,4 +1,5 @@
 import {
+  collect,
   filterValues,
   forEach,
   isArray,
@@ -35,6 +36,7 @@ import {
 import type { ProfileInfo, ProfileUpdate } from "@common/profiles"
 import type { Settings } from "@common/settings"
 import {
+  type BuildingInfo,
   EXTERNAL,
   type Feature,
   type Features,
@@ -723,11 +725,20 @@ export function resolvePackageUpdates(
     )
 
     const replacingLots: {
-      [lotId: string]: { newInfo: LotInfo; oldInfo: LotInfo; packageId: PackageID }
+      [lotId: string]: {
+        buildingInfo?: BuildingInfo
+        newInfo: LotInfo
+        oldInfo: LotInfo
+        packageId: PackageID
+      }
     } = {}
 
     const replacingMaxisLots: {
-      [lotId: string]: { lotInfo: LotInfo; packageId: PackageID }
+      [lotId: string]: {
+        buildingInfo?: BuildingInfo
+        lotInfo: LotInfo
+        packageId: PackageID
+      }
     } = {}
 
     for (const lotId in newLots) {
@@ -736,6 +747,7 @@ export function resolvePackageUpdates(
       if (lotInfo.replace && oldLots[lotInfo.replace]) {
         if (oldLots[lotId].lotInfo !== lotInfo) {
           replacingLots[lotId] = {
+            buildingInfo: oldLots[lotInfo.replace].buildingInfo,
             newInfo: lotInfo,
             oldInfo: oldLots[lotInfo.replace].lotInfo,
             packageId,
@@ -759,8 +771,8 @@ export function resolvePackageUpdates(
 
     if (!isEmpty(replacingMaxisLots)) {
       const lotNames = unique(
-        values(replacingMaxisLots).map(({ lotInfo, packageId }) => {
-          const lotName = lotInfo.label ?? lotInfo.name
+        collect(replacingMaxisLots, ({ buildingInfo, lotInfo, packageId }) => {
+          const lotName = buildingInfo?.label ?? lotInfo.name
           const packageName = packages[packageId]?.name ?? packageId
           return lotName
             ? `${packageName} - ${lotName} (0x${lotInfo.id})`
@@ -771,15 +783,15 @@ export function resolvePackageUpdates(
       warnings.replacingMaxisLots = {
         id: "replacingMaxisLots",
         message: `The following lots are overrides of Maxis lots. To avoid issues such as the 'Phantom Slider' bug, you must bulldoze all Maxis instances from your regions before enabling these overrides:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
-        packageIds: unique(values(replacingMaxisLots).map(({ packageId }) => packageId)),
+        packageIds: unique(collect(replacingMaxisLots, ({ packageId }) => packageId)),
         title: "Replacing Maxis lots",
       }
     }
 
     if (!isEmpty(oldLots)) {
       const lotNames = unique(
-        values(oldLots).map(({ lotInfo, packageId }) => {
-          const lotName = lotInfo.label ?? lotInfo.name
+        collect(oldLots, ({ buildingInfo, lotInfo, packageId }) => {
+          const lotName = buildingInfo?.label ?? lotInfo.name
           const packageName = packages[packageId]?.name ?? packageId
           return lotName
             ? `${packageName} - ${lotName} (0x${lotInfo.id})`
@@ -790,15 +802,15 @@ export function resolvePackageUpdates(
       warnings.disablingLots = {
         id: "disablingLots",
         message: `Before disabling the following lots, you must bulldoze all instances from your regions:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
-        packageIds: unique(values(oldLots).map(({ packageId }) => packageId)),
+        packageIds: unique(collect(oldLots, ({ packageId }) => packageId)),
         title: "Disabling lots",
       }
     }
 
     if (!isEmpty(replacingLots)) {
       const lotNames = unique(
-        values(replacingLots).map(({ oldInfo, packageId }) => {
-          const lotName = oldInfo.label ?? oldInfo.name
+        collect(replacingLots, ({ buildingInfo, oldInfo, packageId }) => {
+          const lotName = buildingInfo?.label ?? oldInfo.name
           const packageName = packages[packageId]?.name ?? packageId
           return lotName
             ? `${packageName} - ${lotName} (0x${oldInfo.id})`
@@ -809,7 +821,7 @@ export function resolvePackageUpdates(
       warnings.replacingLots = {
         id: "replacingLots",
         message: `The following lots are not compatible across variants. Before selecting a new variant, you must bulldoze all instances from your regions:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
-        packageIds: unique(values(replacingLots).map(({ packageId }) => packageId)),
+        packageIds: unique(collect(replacingLots, ({ packageId }) => packageId)),
         title: "Replacing lots",
       }
     }
@@ -865,8 +877,20 @@ function getEnabledLots(
   profileOptions: ReadonlyArray<OptionInfo>,
   features: Readonly<Features>,
   settings: Readonly<Settings>,
-): { [lotId: string]: { lotInfo: LotInfo; packageId: PackageID } } {
-  const lots: { [lotId: string]: { lotInfo: LotInfo; packageId: PackageID } } = {}
+): {
+  [lotId: string]: {
+    buildingInfo?: BuildingInfo
+    lotInfo: LotInfo
+    packageId: PackageID
+  }
+} {
+  const lots: {
+    [lotId: string]: {
+      buildingInfo?: BuildingInfo
+      lotInfo: LotInfo
+      packageId: PackageID
+    }
+  } = {}
 
   forEach(profileInfo.packages, (packageConfig, packageId) => {
     if (packageConfig.enabled) {
@@ -922,7 +946,15 @@ function getEnabledLots(
           continue
         }
 
-        lots[lotInfo.id] = { lotInfo, packageId }
+        const buildingInfo = lotInfo.building
+          ? variantInfo.buildings?.find(building => building.id === lotInfo.building)
+          : undefined
+
+        lots[lotInfo.id] = {
+          buildingInfo,
+          lotInfo,
+          packageId,
+        }
       }
     }
   })

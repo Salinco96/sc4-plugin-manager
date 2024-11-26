@@ -9,7 +9,7 @@ import { Thumbnail } from "@components/Thumbnail"
 import { VariantActions } from "@components/VariantActions"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { Button, Card, CardActions, CardContent, List } from "@mui/material"
-import { values } from "@salinco/nice-utils"
+import { collect } from "@salinco/nice-utils"
 import { usePackageInfo } from "@utils/packages"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
@@ -25,14 +25,14 @@ export default function PackageViewVariants({ packageId }: PackageViewTabInfoPro
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {values(packageInfo.variants).map(variantInfo => (
-        <Card elevation={1} key={variantInfo.id} sx={{ display: "flex" }}>
+      {collect(packageInfo.variants, (variantInfo, variantId) => (
+        <Card elevation={1} key={variantId} sx={{ display: "flex" }}>
           <CardContent sx={{ flexGrow: 1, overflow: "hidden" /* TODO: Overflowing tags */ }}>
             {!!variantInfo.images?.length && (
               <ImageViewer
                 images={variantInfo.images}
                 onClose={() => setOpenImages(undefined)}
-                open={openImages === variantInfo.id}
+                open={openImages === variantId}
               />
             )}
             <FlexBox direction="row">
@@ -42,7 +42,7 @@ export default function PackageViewVariants({ packageId }: PackageViewTabInfoPro
                   mr={2}
                   mt={1}
                   size={84}
-                  onClick={() => setOpenImages(variantInfo.id)}
+                  onClick={() => setOpenImages(variantId)}
                   src={variantInfo.thumbnail}
                 />
               )}
@@ -52,11 +52,11 @@ export default function PackageViewVariants({ packageId }: PackageViewTabInfoPro
                 </Text>
                 <FlexBox alignItems="center">
                   <Text maxLines={1} variant="body2">
-                    {packageId}#{variantInfo.id}
+                    {packageId}#{variantId}
                   </Text>
-                  <PackageTools packageId={packageId} variantId={variantInfo.id} />
+                  <PackageTools packageId={packageId} variantId={variantId} />
                 </FlexBox>
-                <PackageTags packageId={packageId} variantId={variantInfo.id} />
+                <PackageTags packageId={packageId} variantId={variantId} />
               </FlexBox>
             </FlexBox>
             {variantInfo.description && (
@@ -69,10 +69,10 @@ export default function PackageViewVariants({ packageId }: PackageViewTabInfoPro
                 {variantInfo.description}
               </Text>
             )}
-            <PackageBanners packageId={packageId} variantId={variantInfo.id} />
+            <PackageBanners packageId={packageId} variantId={variantId} />
           </CardContent>
           <CardActions sx={{ padding: 2 }}>
-            <VariantActions packageId={packageId} variantId={variantInfo.id} />
+            <VariantActions packageId={packageId} variantId={variantId} />
           </CardActions>
         </Card>
       ))}

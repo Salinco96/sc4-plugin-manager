@@ -2,6 +2,7 @@ import fs from "node:fs/promises"
 import path from "node:path"
 
 import {
+  collect,
   filterValues,
   forEach,
   isEmpty,
@@ -12,7 +13,6 @@ import {
   mapValues,
   parseHex,
   size,
-  toHex,
   union,
   unionBy,
   unique,
@@ -23,8 +23,7 @@ import { glob } from "glob"
 import type { AssetData, AssetID, Assets } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
-import { OptionType } from "@common/options"
-import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, isNew } from "@common/packages"
+import { type PackageID, isNew } from "@common/packages"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
 import {
   type DependencyData,
@@ -35,6 +34,8 @@ import {
   type VariantAssetInfo,
   type VariantID,
   type VariantInfo,
+  writeMenu,
+  writeMenus,
 } from "@common/variants"
 import { readConfig } from "@node/configs"
 import { createIfMissing, exists } from "@node/files"
@@ -105,7 +106,7 @@ async function loadLocalPackageInfo(
 ): Promise<PackageInfo | undefined> {
   const entries = await fs.readdir(packagePath, { withFileTypes: true })
 
-  const configNames = Object.values(ConfigFormat).map(format => FILENAMES.packageConfig + format)
+  const configNames = collect(ConfigFormat, format => FILENAMES.packageConfig + format)
   const configEntry = entries.find(entry => entry.isFile() && configNames.includes(entry.name))
 
   let configFormat: ConfigFormat | undefined
@@ -378,6 +379,21 @@ function loadVariantInfo(
     variantInfo.authors = union(variantInfo.authors, authors)
   }
 
+  const buildings = unionBy(
+    variantData.buildings ?? [],
+    packageData.buildings ?? [],
+    building => `${building.id}#${building.filename}`,
+  )
+
+  if (buildings.length) {
+    variantInfo.buildings = buildings.map(({ category, menu, submenu, ...building }) => ({
+      categories: category ? parseCategory(category, categories) : undefined,
+      menu: menu ? parseMenu(menu) : undefined,
+      submenus: submenu ? parseMenus(submenu) : undefined,
+      ...building,
+    }))
+  }
+
   const dependencies = unionBy(
     variantData.dependencies?.map(loadDependencyInfo) ?? [],
     packageData.dependencies?.map(loadDependencyInfo) ?? [],
@@ -424,15 +440,14 @@ function loadVariantInfo(
     variantInfo.logs = logs
   }
 
-  const lots = unionBy(variantData.lots ?? [], packageData.lots ?? [], lot => lot.id)
+  const lots = unionBy(
+    variantData.lots ?? [],
+    packageData.lots ?? [],
+    lot => `${lot.id}#${lot.filename}`,
+  )
 
   if (lots.length) {
-    variantInfo.lots = lots.map(({ category, menu, submenu, ...lot }) => ({
-      categories: category ? parseCategory(category, categories) : undefined,
-      menu: menu ? parseMenu(menu) : undefined,
-      submenus: submenu ? parseMenus(submenu) : undefined,
-      ...lot,
-    }))
+    variantInfo.lots = lots
   }
 
   const mmps = unionBy(variantData.mmps ?? [], packageData.mmps ?? [], mmp => mmp.id)
@@ -519,43 +534,43 @@ function loadVariantInfo(
 
   // TODO: Do not write this into options explicitly!
 
-  if (variantInfo.lots && !variantInfo.options?.some(option => option.id === LOTS_OPTION_ID)) {
-    variantInfo.options ??= []
+  // if (variantInfo.lots && !variantInfo.options?.some(option => option.id === LOTS_OPTION_ID)) {
+  //   variantInfo.options ??= []
 
-    variantInfo.options.unshift({
-      choices: variantInfo.lots.map(lot => ({
-        condition: lot.requirements,
-        description: lot.description,
-        label: lot.label,
-        value: lot.id,
-      })),
-      default: variantInfo.lots.filter(lot => lot.default !== false).map(lot => lot.id),
-      display: "checkbox",
-      id: LOTS_OPTION_ID,
-      multi: true,
-      section: "Lots", // TODO: i18n?
-      type: OptionType.STRING,
-    })
-  }
+  //   variantInfo.options.unshift({
+  //     choices: variantInfo.lots.map(lot => ({
+  //       condition: lot.requirements,
+  //       description: lot.description,
+  //       label: lot.label,
+  //       value: lot.id,
+  //     })),
+  //     default: variantInfo.lots.filter(lot => lot.default !== false).map(lot => lot.id),
+  //     display: "checkbox",
+  //     id: LOTS_OPTION_ID,
+  //     multi: true,
+  //     section: "Lots", // TODO: i18n?
+  //     type: OptionType.STRING,
+  //   })
+  // }
 
-  if (variantInfo.mmps && !variantInfo.options?.some(option => option.id === MMPS_OPTION_ID)) {
-    variantInfo.options ??= []
+  // if (variantInfo.mmps && !variantInfo.options?.some(option => option.id === MMPS_OPTION_ID)) {
+  //   variantInfo.options ??= []
 
-    variantInfo.options.unshift({
-      choices: variantInfo.mmps.map(mmp => ({
-        condition: mmp.requirements,
-        description: mmp.description,
-        label: mmp.label,
-        value: mmp.id,
-      })),
-      default: variantInfo.mmps.filter(mmp => mmp.default !== false).map(mmp => mmp.id),
-      display: "checkbox",
-      id: MMPS_OPTION_ID,
-      multi: true,
-      section: "MMPs", // TODO: i18n?
-      type: OptionType.STRING,
-    })
-  }
+  //   variantInfo.options.unshift({
+  //     choices: variantInfo.mmps.map(mmp => ({
+  //       condition: mmp.requirements,
+  //       description: mmp.description,
+  //       label: mmp.label,
+  //       value: mmp.id,
+  //     })),
+  //     default: variantInfo.mmps.filter(mmp => mmp.default !== false).map(mmp => mmp.id),
+  //     display: "checkbox",
+  //     id: MMPS_OPTION_ID,
+  //     multi: true,
+  //     section: "MMPs", // TODO: i18n?
+  //     type: OptionType.STRING,
+  //   })
+  // }
 
   return variantInfo
 }
@@ -614,6 +629,12 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
       filterValues(packageInfo.variants, variant => !!variant.installed),
       variant => ({
         authors: variant.authors,
+        buildings: variant.buildings?.map(({ categories, menu, submenus, ...building }) => ({
+          category: categories?.join(","),
+          menu: menu ? writeMenu(menu) : undefined,
+          submenu: submenus?.length ? writeMenus(submenus) : undefined,
+          ...building,
+        })),
         category: variant.categories.join(","),
         dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
         deprecated: variant.deprecated,
@@ -623,12 +644,7 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         images: variant.images,
         lastModified: variant.lastModified ? new Date(variant.lastModified) : undefined,
         logs: variant.logs,
-        lots: variant.lots?.map(({ categories, menu, submenus, ...lot }) => ({
-          category: categories?.join(","),
-          menu: menu ? writeMenu(menu) : undefined,
-          submenu: submenus?.length ? writeMenus(submenus) : undefined,
-          ...lot,
-        })),
+        lots: variant.lots,
         mmps: variant.mmps?.map(({ categories, ...mmp }) => ({
           category: categories?.join(","),
           ...mmp,
@@ -665,12 +681,4 @@ export function parseMenus(menus: number | string): number[] {
   }
 
   return unique(menus.split(",").map(parseMenu))
-}
-
-export function writeMenu(menu: number): string {
-  return Menu[menu] ?? Submenu[menu] ?? `0x${toHex(menu, 8)}`
-}
-
-export function writeMenus(menus: number[]): string {
-  return menus.map(writeMenu).join(",")
 }
