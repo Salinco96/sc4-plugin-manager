@@ -20,6 +20,7 @@ import {
   union,
   values,
 } from "@salinco/nice-utils"
+import { formatNumber, formatSimoleans } from "@utils/format"
 import { useCurrentVariant } from "@utils/packages"
 import {
   useCurrentProfile,
@@ -97,6 +98,8 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
     ...packageConfig?.options,
     ...profileInfo?.options,
   }) as string[]
+
+  console.warn(1)
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
@@ -223,21 +226,21 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                     {building?.cost !== undefined && (
                       <Typography variant="body2">
                         <b>{`${t("cost")}: `}</b>
-                        {building.cost} §
+                        {formatSimoleans(building.cost)}
                       </Typography>
                     )}
 
                     {building?.maintenance !== undefined && (
                       <Typography variant="body2">
                         <b>{`${t("maintenance")}: `}</b>
-                        {building.maintenance} § / month
+                        {formatSimoleans(building.maintenance)} / month
                       </Typography>
                     )}
 
                     {building?.bulldoze !== undefined && (
                       <Typography variant="body2">
                         <b>{`${t("bulldoze")}: `}</b>
-                        {building.bulldoze} §
+                        {formatSimoleans(building.bulldoze)}
                       </Typography>
                     )}
 
@@ -246,7 +249,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                         <b>{`${t("capacity")}: `}</b>
                         {Object.entries(building.capacity)
                           .reverse()
-                          .map(([type, capacity]) => `${capacity} ${type.toUpperCase()}`)
+                          .map(([type, count]) => `${formatNumber(count)} ${type.toUpperCase()}`)
                           .join("; ")}
                       </Typography>
                     )}
@@ -256,7 +259,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                         <b>{`${t("jobs")}: `}</b>
                         {Object.entries(building.jobs)
                           .reverse()
-                          .map(([type, jobs]) => `${jobs} ${type.toUpperCase()}`)
+                          .map(([type, count]) => `${formatNumber(count)} ${type.toUpperCase()}`)
                           .join("; ")}
                       </Typography>
                     )}
@@ -266,7 +269,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                         <b>{`${t("relief")}: `}</b>
                         {Object.entries(building.relief)
                           .reverse()
-                          .map(([type, relief]) => `${relief} ${type.toUpperCase()}`)
+                          .map(([type, count]) => `${formatNumber(count)} ${type.toUpperCase()}`)
                           .join("; ")}
                       </Typography>
                     )}
@@ -275,7 +278,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                       <Typography variant="body2">
                         <b>{`${t("landmark")}: `}</b>
                         {t("overTiles", {
-                          amount: building.landmark,
+                          amount: formatNumber(building.landmark),
                           count: building.landmarkRadius ?? 0,
                         })}
                       </Typography>
@@ -285,7 +288,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                       <Typography variant="body2">
                         <b>{`${t("rating")}: `}</b>
                         {t("overTiles", {
-                          amount: building.rating,
+                          amount: formatNumber(building.rating),
                           count: building.ratingRadius ?? 0,
                         })}
                       </Typography>
@@ -294,28 +297,28 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                     {building?.powerProduction !== undefined && (
                       <Typography variant="body2">
                         <b>{`${t("powerProduction")}: `}</b>
-                        {building.powerProduction}
+                        {formatNumber(building.powerProduction)}
                       </Typography>
                     )}
 
                     {building?.power !== undefined && (
                       <Typography variant="body2">
                         <b>{`${t("power")}: `}</b>
-                        {building.power}
+                        {formatNumber(building.power)}
                       </Typography>
                     )}
 
                     {building?.waterProduction !== undefined && (
                       <Typography variant="body2">
                         <b>{`${t("waterProduction")}: `}</b>
-                        {building.waterProduction}
+                        {formatNumber(building.waterProduction)}
                       </Typography>
                     )}
 
                     {building?.water !== undefined && (
                       <Typography variant="body2">
                         <b>{`${t("water")}: `}</b>
-                        {building.water}
+                        {formatNumber(building.water)}
                       </Typography>
                     )}
 
@@ -323,7 +326,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                       <Typography variant="body2">
                         <b>{`${t("pollution")}: `}</b>
                         {t("overTiles", {
-                          amount: building.pollution,
+                          amount: formatNumber(building.pollution),
                           count: building.pollutionRadius ?? 0,
                         })}
                       </Typography>
@@ -333,7 +336,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                       <Typography variant="body2">
                         <b>{`${t("waterPollution")}: `}</b>
                         {t("overTiles", {
-                          amount: building.waterPollution,
+                          amount: formatNumber(building.waterPollution),
                           count: building.waterPollutionRadius ?? 0,
                         })}
                       </Typography>
@@ -343,7 +346,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                       <Typography variant="body2">
                         <b>{`${t("garbage")}: `}</b>
                         {t("overTiles", {
-                          amount: building.garbage,
+                          amount: formatNumber(building.garbage),
                           count: building.garbageRadius ?? 0,
                         })}
                       </Typography>
@@ -353,7 +356,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                       <Typography variant="body2">
                         <b>{`${t("radiation")}: `}</b>
                         {t("overTiles", {
-                          amount: building.radiation,
+                          amount: formatNumber(building.radiation),
                           count: building.radiationRadius ?? 0,
                         })}
                       </Typography>
@@ -362,7 +365,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                     {building?.flamability !== undefined && (
                       <Typography variant="body2">
                         <b>{`${t("flamability")}: `}</b>
-                        {building.flamability}
+                        {formatNumber(building.flamability)}
                       </Typography>
                     )}
                   </FlexBox>
@@ -441,7 +444,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                           {lot.stage && (
                             <Typography variant="body2">
                               <b>{`${t("stage")}: `}</b>
-                              {lot.stage}
+                              {formatNumber(lot.stage)}
                             </Typography>
                           )}
 
