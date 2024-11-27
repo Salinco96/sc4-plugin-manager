@@ -1,4 +1,4 @@
-import { filterValues, isEmpty, isNotNull } from "@salinco/nice-utils"
+import { compact, isEmpty } from "@salinco/nice-utils"
 import update, { type Spec } from "immutability-helper"
 import { type SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
 import { create } from "zustand"
@@ -468,15 +468,15 @@ export const useStore = create<Store>()((set, get): Store => {
           const updates: Partial<Store> = others
 
           if (downloads) {
-            updates.downloads = filterValues({ ...store.downloads, ...downloads }, isNotNull)
+            updates.downloads = compact({ ...store.downloads, ...downloads })
           }
 
           if (packages) {
-            updates.packages = filterValues({ ...store.packages, ...packages }, isNotNull)
+            updates.packages = compact({ ...store.packages, ...packages })
           }
 
           if (profiles) {
-            updates.profiles = filterValues({ ...store.profiles, ...profiles }, isNotNull)
+            updates.profiles = compact({ ...store.profiles, ...profiles })
           }
 
           if (packages) {
