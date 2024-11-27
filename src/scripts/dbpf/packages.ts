@@ -149,11 +149,17 @@ export function writePackageData(
 
   packageData.name ??= entry.name
 
+  const newVersion = `${major}.${minor ?? 0}.${patch ?? 0}`
+
   variantData.assets ??= []
+  variantData.lastGenerated = timestamp
   variantData.lastModified = entry.lastModified
   variantData.logs ??= entry.description?.match(/\b[\w-]+[.]log\b/)?.at(0)
-  variantData.release = timestamp
-  variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
+
+  if (variantData.version !== newVersion) {
+    variantData.release = timestamp
+    variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
+  }
 
   if (variantId === "default" || !packageData.url || packageData.url === entry.url) {
     const packageAuthors = union(authors, packageData.authors ?? [])

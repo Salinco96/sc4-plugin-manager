@@ -28,6 +28,7 @@ export interface VariantData {
   experimental?: boolean
   files?: PackageFile[]
   images?: string[]
+  lastGenerated?: Date
   lastModified?: Date
   logs?: string
   lots?: LotData[]

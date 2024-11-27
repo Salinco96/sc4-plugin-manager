@@ -1067,7 +1067,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       const variantData = packageData.variants?.[variantId]
 
       // Create or update package/variant data
-      if (!variantData?.release || variantData.release < entry.meta.timestamp) {
+      if (!variantData?.lastGenerated || variantData.lastGenerated < entry.meta.timestamp) {
         if (variantData) {
           console.debug(`Updating variant ${packageId}#${variantId}...`)
         } else {
