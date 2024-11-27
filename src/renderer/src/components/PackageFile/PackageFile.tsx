@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next"
 
 import { type DBPFFile, isDBPF } from "@common/dbpf"
 import { type PackageID, checkFile } from "@common/packages"
-import { type PackageFile as PackageFileType, VariantState } from "@common/types"
+import { type PackageFile as PackageFileType, VariantState, isOverride } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { FlexBox } from "@components/FlexBox"
 import { PackageTag } from "@components/Tags/PackageTag"
@@ -24,6 +24,7 @@ import {
   useStoreActions,
 } from "@utils/store"
 
+import { CategoryID } from "@common/categories"
 import { PackageEntries } from "./PackageEntries"
 
 export interface PackageFileProps {
@@ -80,6 +81,9 @@ export function PackageFile({ file, packageId }: PackageFileProps): JSX.Element 
           <FlexBox alignItems="center" gap={0.5}>
             {file.path.replaceAll(/[\\/]/g, " / ")}
             {isPatched && <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />}
+            {isOverride(file) && (
+              <PackageTag color="info" dense type={TagType.CATEGORY} value={CategoryID.OVERRIDES} />
+            )}
           </FlexBox>
         </Typography>
         <FlexBox alignItems="center" gap={0.5} mx={0.5}>

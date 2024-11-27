@@ -233,3 +233,7 @@ export function getState(
       return variantInfo.id === packageStatus?.variantId
   }
 }
+
+export function isOverride(file: PackageFile): boolean {
+  return !!file.priority && file.priority >= 900
+}

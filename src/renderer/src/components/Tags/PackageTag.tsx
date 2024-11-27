@@ -7,9 +7,12 @@ import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils
 import { $removeFirst, remove } from "@salinco/nice-utils"
 import { STATE_TAGS, type Tag, TagType, type TagValue, getTagLabel } from "./utils"
 
-export type PackageTagProps = Tag & { dense?: boolean }
+export type PackageTagProps = Tag & {
+  color?: "error" | "info" | "success" | "warning"
+  dense?: boolean
+}
 
-export function PackageTag({ dense, ...tag }: PackageTagProps): JSX.Element {
+export function PackageTag({ color, dense, ...tag }: PackageTagProps): JSX.Element {
   const actions = useStoreActions()
   const authors = useAuthors()
   const categories = useStore(store => store.categories)
@@ -30,7 +33,7 @@ export function PackageTag({ dense, ...tag }: PackageTagProps): JSX.Element {
   const isSelected = values.includes(tag.value)
 
   const sharedProps: ChipProps = {
-    color: tag.type === TagType.STATE ? (STATE_TAGS[tag.value] ?? undefined) : undefined,
+    color: color || (tag.type === TagType.STATE && STATE_TAGS[tag.value]) || undefined,
     label: getTagLabel(t, tag, authors, categories),
     size: dense ? "small" : "medium",
     sx: {

@@ -40,6 +40,7 @@ export const CategoryID = {
   MONORAIL: ID("monorail"),
   NAM: ID("nam"),
   ORDINANCES: ID("ordinances"),
+  OVERRIDES: ID("overrides"),
   PARKS: ID("parks"),
   PASSENGERS: ID("passengers"),
   POLICE: ID("police"),
