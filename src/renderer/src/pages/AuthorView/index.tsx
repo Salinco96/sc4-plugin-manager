@@ -14,12 +14,10 @@ import { PackageList } from "@components/PackageList/PackageList"
 import { useHistory } from "@utils/navigation"
 import { useStore } from "@utils/store"
 
-function AuthorView({ authorId }: { authorId: AuthorID }): JSX.Element {
+function AuthorViewInner({ authorId }: { authorId: AuthorID }): JSX.Element {
+  const isLoading = useStore(store => !store.authors)
+  const exists = useStore(store => !!store.authors?.[authorId])
   const packages = useStore(store => store.packages)
-
-  const exists = useStore(store => (store.authors ? !!store.authors[authorId] : undefined))
-
-  const history = useHistory()
 
   const packageIds = useMemo(() => {
     return values(packages ?? {})
@@ -28,6 +26,48 @@ function AuthorView({ authorId }: { authorId: AuthorID }): JSX.Element {
   }, [authorId, packages])
 
   const { t } = useTranslation("AuthorView")
+
+  if (isLoading) {
+    return <Loader />
+  }
+
+  if (exists) {
+    return (
+      <>
+        <AuthorHeader authorId={authorId} />
+        <TabContext value="packages">
+          <Box borderBottom={1} borderColor="divider">
+            <TabList>
+              <Tab label={t("packages", { count: packageIds.length })} value="packages" />
+            </TabList>
+          </Box>
+          <TabPanel sx={{ height: "100%", overflowY: "auto", padding: 0 }} value="packages">
+            <PackageList packageIds={packageIds} />
+          </TabPanel>
+        </TabContext>
+      </>
+    )
+  }
+
+  return (
+    <FlexBox
+      alignItems="center"
+      direction="column"
+      flex={1}
+      fontSize={40}
+      justifyContent="center"
+      height="100%"
+    >
+      <NoResultIcon fontSize="inherit" />
+      <Typography variant="subtitle1">{t("missing", { authorId })}</Typography>
+    </FlexBox>
+  )
+}
+
+function AuthorView({ authorId }: { authorId: AuthorID }): JSX.Element {
+  const history = useHistory()
+
+  const { t } = useTranslation("General")
 
   return (
     <FlexBox direction="column" height="100%" pt={1}>
@@ -42,35 +82,7 @@ function AuthorView({ authorId }: { authorId: AuthorID }): JSX.Element {
           <BackIcon />
         </IconButton>
       </Tooltip>
-      {exists ? (
-        <>
-          <AuthorHeader authorId={authorId} />
-          <TabContext value="packages">
-            <Box borderBottom={1} borderColor="divider">
-              <TabList>
-                <Tab label={t("packages", { count: packageIds.length })} value="packages" />
-              </TabList>
-            </Box>
-            <TabPanel sx={{ height: "100%", overflowY: "auto", padding: 0 }} value="packages">
-              <PackageList packageIds={packageIds} />
-            </TabPanel>
-          </TabContext>
-        </>
-      ) : exists === false ? (
-        <FlexBox
-          alignItems="center"
-          direction="column"
-          flex={1}
-          fontSize={40}
-          justifyContent="center"
-          height="100%"
-        >
-          <NoResultIcon fontSize="inherit" />
-          <Typography variant="subtitle1">Author {authorId} does not exist</Typography>
-        </FlexBox>
-      ) : (
-        <Loader />
-      )}
+      <AuthorViewInner authorId={authorId} />
     </FlexBox>
   )
 }

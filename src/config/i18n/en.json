@@ -28,6 +28,7 @@
     "emptyList": "No authors found for these filters"
   },
   "AuthorView": {
+    "missing": "Author {{authorId}} does not exist",
     "openUrl": "Open website",
     "packages_one": "{{count}} package",
     "packages_other": "{{count}} packages"
@@ -457,6 +458,9 @@
     "openSupport": "Open support thread",
     "openUrl": "Open download page",
     "options": "Open options"
+  },
+  "PackageView": {
+    "missing": "Package {{packageId}} does not exist"
   },
   "PackageViewFiles": {
     "entry": {

@@ -11,10 +11,42 @@ import { useStore } from "@utils/store"
 
 import { PackageViewTabs } from "../../components/PackageViewTabs/PackageViewTabs"
 
-function PackageView({ packageId }: { packageId: PackageID }): JSX.Element | null {
-  const history = useHistory()
+function PackageViewInner({ packageId }: { packageId: PackageID }): JSX.Element {
+  const isLoading = useStore(store => !store.packages)
+  const exists = useStore(store => !!store.packages?.[packageId])
 
-  const exists = useStore(store => (store.packages ? !!store.packages[packageId] : undefined))
+  const { t } = useTranslation("PackageView")
+
+  if (isLoading) {
+    return <Loader />
+  }
+
+  if (exists) {
+    return (
+      <>
+        <PackageHeader packageId={packageId} />
+        <PackageViewTabs packageId={packageId} />
+      </>
+    )
+  }
+
+  return (
+    <FlexBox
+      alignItems="center"
+      direction="column"
+      flex={1}
+      fontSize={40}
+      justifyContent="center"
+      height="100%"
+    >
+      <NoResultIcon fontSize="inherit" />
+      <Typography variant="subtitle1">{t("missing", { packageId })}</Typography>
+    </FlexBox>
+  )
+}
+
+function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
+  const history = useHistory()
 
   const { t } = useTranslation("General")
 
@@ -31,26 +63,7 @@ function PackageView({ packageId }: { packageId: PackageID }): JSX.Element | nul
           <BackIcon />
         </IconButton>
       </Tooltip>
-      {exists ? (
-        <>
-          <PackageHeader packageId={packageId} />
-          <PackageViewTabs packageId={packageId} />
-        </>
-      ) : exists === false ? (
-        <FlexBox
-          alignItems="center"
-          direction="column"
-          flex={1}
-          fontSize={40}
-          justifyContent="center"
-          height="100%"
-        >
-          <NoResultIcon fontSize="inherit" />
-          <Typography variant="subtitle1">Package {packageId} does not exist</Typography>
-        </FlexBox>
-      ) : (
-        <Loader />
-      )}
+      <PackageViewInner packageId={packageId} />
     </FlexBox>
   )
 }
