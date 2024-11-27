@@ -83,7 +83,7 @@ runIndexer({
       "simtropolis/30836",
     ],
   },
-  refetchIntervalHours: 20,
+  refetchIntervalHours: 300,
   sources: [SC4EVERMORE, SIMTROPOLIS],
   version: 1,
 })

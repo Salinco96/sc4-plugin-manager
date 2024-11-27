@@ -29,7 +29,7 @@ assets:
         pollution: 1
         pollutionRadius: 1
         power: 3
-        submenu: MiscTransit_Bus
+        submenu: MiscTransit/Bus
         water: 2
         waterPollution: 3
         waterPollutionRadius: 1
@@ -49,7 +49,7 @@ assets:
         pollution: 1
         pollutionRadius: 1
         power: 3
-        submenu: MiscTransit_Bus
+        submenu: MiscTransit/Bus
         water: 2
         waterPollution: 3
         waterPollutionRadius: 1
@@ -291,7 +291,7 @@ assets:
         pollution: 1
         pollutionRadius: 1
         power: 3
-        submenu: MiscTransit_Bus
+        submenu: MiscTransit/Bus
         water: 2
         waterPollution: 3
         waterPollutionRadius: 1
@@ -312,7 +312,7 @@ assets:
         pollution: 1
         pollutionRadius: 1
         power: 3
-        submenu: MiscTransit_Bus
+        submenu: MiscTransit/Bus
         water: 2
         waterPollution: 3
         waterPollutionRadius: 1
@@ -331,7 +331,7 @@ assets:
         name: MS_8Lvl_ParkingSecurity(Police)
         power: 1
         powerProduction: 1
-        submenu: Police_Small
+        submenu: Police/Small
         water: 1
       - bulldoze: 10
         category: transport
@@ -781,7 +781,7 @@ assets:
         textures:
           - 251c0000
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     models:
       - 5ad0e817-badb57f1-19610000

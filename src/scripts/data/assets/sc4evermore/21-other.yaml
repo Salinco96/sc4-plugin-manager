@@ -64,7 +64,7 @@ assets:
           r$: 10000
           r$$: 10000
           r$$$: 10000
-        submenu: Landmarks_Government,Rewards
+        submenu: Landmarks/Government,Rewards
         water: 84
         waterPollution: 3
         waterPollutionRadius: 4
@@ -99,7 +99,7 @@ assets:
           r$: 10000
           r$$: 10000
           r$$$: 10000
-        submenu: Landmarks_Government,Rewards
+        submenu: Landmarks/Government,Rewards
         water: 84
         waterPollution: 3
         waterPollutionRadius: 4
@@ -134,7 +134,7 @@ assets:
           r$: 10000
           r$$: 10000
           r$$$: 10000
-        submenu: Landmarks_Government,Rewards
+        submenu: Landmarks/Government,Rewards
         water: 84
         waterPollution: 3
         waterPollutionRadius: 4
@@ -169,7 +169,7 @@ assets:
           r$: 10000
           r$$: 10000
           r$$$: 10000
-        submenu: Landmarks_Government,Rewards
+        submenu: Landmarks/Government,Rewards
         water: 84
         waterPollution: 3
         waterPollutionRadius: 4
@@ -204,7 +204,7 @@ assets:
           r$: 10000
           r$$: 10000
           r$$$: 10000
-        submenu: Landmarks_Government,Rewards
+        submenu: Landmarks/Government,Rewards
         water: 84
         waterPollution: 3
         waterPollutionRadius: 4
@@ -237,7 +237,7 @@ assets:
           r$: 2500
           r$$: 2500
           r$$$: 2500
-        submenu: Landmarks_Government
+        submenu: Landmarks/Government
         water: 150
         waterPollution: 2
         waterPollutionRadius: 2
@@ -259,7 +259,7 @@ assets:
         power: 8
         relief:
           ir: 30000
-        submenu: Landmarks_Government
+        submenu: Landmarks/Government
         water: 8
         waterPollution: 1
         waterPollutionRadius: 4
@@ -294,7 +294,7 @@ assets:
           r$: 10000
           r$$: 10000
           r$$$: 10000
-        submenu: Landmarks_Government,Rewards
+        submenu: Landmarks/Government,Rewards
         water: 84
         waterPollution: 3
         waterPollutionRadius: 4
@@ -427,7 +427,7 @@ assets:
           - 258f0000
           - '26370000'
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     models:
       - 5ad0e817-5465811a-00030000

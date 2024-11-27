@@ -3,6 +3,7 @@ import {
   filterValues,
   generate,
   isEmpty,
+  isEqual,
   isNumber,
   sum,
   unique,
@@ -12,7 +13,7 @@ import {
 import type { BuildingData } from "@common/types"
 
 import { CategoryID } from "@common/categories"
-import { Menu, Submenu, writeMenu, writeMenus } from "@common/variants"
+import { Menu, Submenu, writeMenu, writeMenus } from "@common/submenus"
 import {
   BudgetItemDepartment,
   DemandID,
@@ -39,7 +40,10 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
 
   const submenus = getSubmenus(exemplar)
   if (submenus.length) {
-    data.submenu = writeMenus(submenus)
+    // Do not write submenu if same as menu
+    if (!menu || !isEqual(submenus, [menu])) {
+      data.submenu = writeMenus(submenus)
+    }
   }
 
   const categories = getCategories(exemplar)

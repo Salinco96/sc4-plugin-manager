@@ -6,16 +6,13 @@ import {
   filterValues,
   forEach,
   isEmpty,
-  isNumber,
   isString,
   keys,
   mapDefined,
   mapValues,
-  parseHex,
   size,
   union,
   unionBy,
-  unique,
   values,
 } from "@salinco/nice-utils"
 import { glob } from "glob"
@@ -25,17 +22,13 @@ import type { AuthorID } from "@common/authors"
 import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, isNew } from "@common/packages"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
-import {
-  type DependencyData,
-  type DependencyInfo,
-  Menu,
-  Submenu,
-  type VariantAssetData,
-  type VariantAssetInfo,
-  type VariantID,
-  type VariantInfo,
-  writeMenu,
-  writeMenus,
+import type {
+  DependencyData,
+  DependencyInfo,
+  VariantAssetData,
+  VariantAssetInfo,
+  VariantID,
+  VariantInfo,
 } from "@common/variants"
 import { readConfig } from "@node/configs"
 import { createIfMissing, exists } from "@node/files"
@@ -43,6 +36,7 @@ import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
 import { OptionType } from "@common/options"
+import { parseMenu, parseMenus, writeMenu, writeMenus } from "@common/submenus"
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
 
@@ -666,20 +660,4 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
       }),
     ),
   }
-}
-
-export function parseMenu(menu: number | string): number {
-  if (isNumber(menu)) {
-    return menu
-  }
-
-  return Menu[menu as keyof typeof Menu] ?? Submenu[menu as keyof typeof Submenu] ?? parseHex(menu)
-}
-
-export function parseMenus(menus: number | string): number[] {
-  if (isNumber(menus)) {
-    return [menus]
-  }
-
-  return unique(menus.split(",").map(parseMenu))
 }

@@ -20,6 +20,7 @@ import {
   isPatched,
 } from "./packages"
 import type { ProfileID, ProfileInfo } from "./profiles"
+import type { MaybeArray } from "./utils/types"
 import type { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
 
 /** Supported configuration formats */
@@ -247,8 +248,8 @@ export interface BuildingData {
   rating?: number
   /** Mayor rating effect radius in tiles */
   ratingRadius?: number
-  /** Submenus, comma-separated */
-  submenu?: number | string
+  /** Submenus */
+  submenu?: MaybeArray<number | string>
   /** Water consumed */
   water?: number
   /** Water pollution generated */

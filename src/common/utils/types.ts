@@ -1,3 +1,5 @@
+export type MaybeArray<T> = T | T[]
+
 /**
  * Removes common diacritics from a string and converts it to lower case.
  */

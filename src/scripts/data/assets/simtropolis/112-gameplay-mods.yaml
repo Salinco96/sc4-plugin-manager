@@ -2232,7 +2232,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2017_11/02-industry-quadrupler-query.jpg.95e76586770c9fe98b3285d551a734e4.jpg
     lastModified: 2017-11-27T03:07:27.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: Industry Quadrupler
     sha256: c637879c529a1e66a04987e877a5180e8de07372777fcf81a74b487df59f188c
@@ -2852,7 +2852,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0011/6115f56dc2b5545471315af5a10c193c-default.jpg
     lastModified: 2003-10-20T23:00:00.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: Toll Booth Booster V2.0
     sha256: 95ed1f2f036116c69cde91cb34882cb6a521b090f49b9f6700670b819724fc5a
@@ -2896,7 +2896,6 @@ assets:
         ratingRadius: 220
         relief:
           iht: 150000
-        submenu: Rewards
         water: 350
         waterPollution: 4
         waterPollutionRadius: 3
@@ -2919,7 +2918,6 @@ assets:
         ratingRadius: 440
         relief:
           im: 100000
-        submenu: Rewards
         water: 150
         waterPollution: 18
         waterPollutionRadius: 4
@@ -2942,7 +2940,6 @@ assets:
         ratingRadius: 440
         relief:
           im: 100000
-        submenu: Rewards
         water: 250
         waterPollution: 5
         waterPollutionRadius: 5
@@ -2968,7 +2965,6 @@ assets:
         relief:
           r$$: 10000
           r$$$: 10000
-        submenu: Rewards
         water: 210
         waterPollution: 2
         waterPollutionRadius: 4
@@ -2987,7 +2983,6 @@ assets:
         power: 20
         rating: -10
         ratingRadius: 440
-        submenu: Rewards
         water: 200
         waterPollution: 75
         waterPollutionRadius: 10
@@ -3006,7 +3001,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0010/5543b82ffe2764420e400f3e33ddcbbb-default.jpg
     lastModified: 2003-10-20T23:00:00.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: No Radiation Reward v1.1
     sha256: db2dfe000acdb6e686f5767ad7d6c8b1a3b8333bd4ee50d6b51263e3e2c29e2d
@@ -3808,7 +3803,7 @@ assets:
         power: 10
         rating: 7
         ratingRadius: 256
-        submenu: Landmarks_Religion
+        submenu: Landmarks/Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
@@ -3951,7 +3946,7 @@ assets:
         power: 10
         rating: 7
         ratingRadius: 256
-        submenu: Landmarks_Religion
+        submenu: Landmarks/Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
@@ -4918,7 +4913,7 @@ assets:
         power: 10
         rating: 7
         ratingRadius: 256
-        submenu: Landmarks_Religion
+        submenu: Landmarks/Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
@@ -5114,7 +5109,7 @@ assets:
         power: 10
         rating: 7
         ratingRadius: 256
-        submenu: Landmarks_Religion
+        submenu: Landmarks/Religion
         water: 9
         waterPollution: 1
         waterPollutionRadius: 2
@@ -5507,7 +5502,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0025/e675466ad854f442bf5fefda2d41975a-default.jpg
     lastModified: 2004-03-16T00:00:00.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: Functional Landmarks Complete Set v1.0
     sha256: d68bdde93ef7afd62dd9f90b3956c6e92f397616a2bec192ad3262fb9bb72d92
@@ -5538,7 +5533,7 @@ assets:
         power: 50
         relief:
           r$$$: 5000
-        submenu: Landmarks_Entertainment,Rewards
+        submenu: Landmarks/Entertainment,Rewards
         water: 60
         waterPollution: 1
         waterPollutionRadius: 3
@@ -5553,7 +5548,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0021/c007950f6430d08d70636a9dbad3a37c-default.jpg
     lastModified: 2004-03-31T00:00:00.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: Opera House Fix
     sha256: 8417c8cf7d8f87641202e05df3fbc028db20d3c7b5ae261777eb9c20a15770a2
@@ -7461,7 +7456,7 @@ assets:
         power: 219
         relief:
           iht: 150000
-        submenu: Landmarks_Government,Rewards
+        submenu: Landmarks/Government,Rewards
         water: 248
         waterPollution: 5
         waterPollutionRadius: 4
@@ -7483,7 +7478,7 @@ assets:
         power: 700
         relief:
           iht: 150000
-        submenu: Landmarks_Government,Rewards
+        submenu: Landmarks/Government,Rewards
         water: 360
         waterPollution: 5
         waterPollutionRadius: 4
@@ -7531,7 +7526,7 @@ assets:
           - 258f0000
           - 257c0000
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: Space Port Fix Mod
     sha256: da535d39a03150400545bf9b563fdf91a1f4f8fd82722bf7175ee7da3b3f2772
@@ -8329,7 +8324,7 @@ assets:
           r$: 20
           r$$: 20
           r$$$: 20
-        submenu: Health_Small
+        submenu: Health/Small
         water: 10
         waterPollution: 1
         waterPollutionRadius: 3
@@ -8351,7 +8346,7 @@ assets:
         pollution: 10
         pollutionRadius: 4
         powerProduction: 16000
-        submenu: Power_Clean
+        submenu: Power/Clean
         water: 900
         waterPollution: 45
         waterPollutionRadius: 5
@@ -8373,7 +8368,7 @@ assets:
         pollution: 5
         pollutionRadius: 3
         powerProduction: 5000
-        submenu: Power_Clean
+        submenu: Power/Clean
         water: 5
         waterPollution: 5
         waterPollutionRadius: 3
@@ -8389,7 +8384,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2015_11/screenshot.png.2af44fb2639cc175dbf54b582ea81dbe.png
     lastModified: 2015-11-06T21:21:13.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: HippoTank Demand Fix
     sha256: 5193d824a2e7359099431f959b0f88876d5a04cdaebb41c388f7f40c66da845d

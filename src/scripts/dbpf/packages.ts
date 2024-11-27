@@ -273,7 +273,10 @@ export function writePackageData(
     variantData.lots ??= []
 
     for (const lot of lots) {
-      let existingLot = variantData.lots.find(({ id }) => id === lot.id)
+      const existingLots = variantData.lots.filter(({ id }) => id === lot.id)
+
+      let existingLot =
+        existingLots.find(({ filename }) => filename === lot.filename) ?? existingLots.at(0)
 
       if (!existingLot) {
         existingLot = { id: lot.id, filename: lot.filename }
@@ -300,7 +303,11 @@ export function writePackageData(
     variantData.buildings ??= []
 
     for (const building of buildings) {
-      let existingBuilding = variantData.buildings.find(({ id }) => id === building.id)
+      const existingBuildings = variantData.buildings.filter(({ id }) => id === building.id)
+
+      let existingBuilding =
+        existingBuildings.find(({ filename }) => filename === building.filename) ??
+        existingBuildings.at(0)
 
       if (!existingBuilding) {
         existingBuilding = { id: building.id, filename: building.filename }
@@ -316,12 +323,14 @@ export function writePackageData(
       existingBuilding.flamability ??= building?.flamability
       existingBuilding.garbage ??= building?.garbage
       existingBuilding.garbageRadius ??= building?.garbageRadius
+      existingBuilding.images ??= building?.images
       existingBuilding.income ??= building?.income
       existingBuilding.jobs ??= building?.jobs
       existingBuilding.label ??= building?.label
       existingBuilding.landmark ??= building?.landmark
       existingBuilding.landmarkRadius ??= building?.landmarkRadius
       existingBuilding.maintenance ??= building?.maintenance
+      existingBuilding.menu ??= building?.menu
       existingBuilding.name ??= building?.name
       existingBuilding.pollution ??= building?.pollution
       existingBuilding.pollutionRadius ??= building?.pollutionRadius
@@ -332,6 +341,7 @@ export function writePackageData(
       existingBuilding.rating ??= building?.rating
       existingBuilding.ratingRadius ??= building?.ratingRadius
       existingBuilding.relief ??= building?.relief
+      existingBuilding.submenu ??= building?.submenu
       existingBuilding.water ??= building?.water
       existingBuilding.waterPollution ??= building?.waterPollution
       existingBuilding.waterPollutionRadius ??= building?.waterPollutionRadius

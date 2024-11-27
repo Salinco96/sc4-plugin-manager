@@ -3988,7 +3988,7 @@ assets:
         model: 5ad0e817-badb57f1-1f450000
         name: Up26x8_WindPower_1F45
         powerProduction: 100000
-        submenu: Power_Clean
+        submenu: Power/Clean
     categories:
       - power
     category: 107-utilities
@@ -4012,7 +4012,7 @@ assets:
         textures:
           - 25d60000
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: Buggi Mark X WindBlaster
     sha256: b5cbfcc2277248fcff2deee3e2423555e564a4079aaacd849f08b7b48e07399e

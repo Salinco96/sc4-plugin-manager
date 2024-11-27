@@ -302,7 +302,7 @@ assets:
           r$: 2500
           r$$: 2500
           r$$$: 2500
-        submenu: Landmarks_Government
+        submenu: Landmarks/Government
         water: 150
         waterPollution: 2
         waterPollutionRadius: 2
@@ -348,7 +348,7 @@ assets:
           - '258e0000'
           - 258d0000
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     models:
       - 5ad0e817-5465811a-00030000
@@ -596,7 +596,7 @@ assets:
           r$: 3000
           r$$: 3000
           r$$$: 3000
-        submenu: Parks_Plazas
+        submenu: Parks/Plazas
         water: 10
         waterPollution: 2
         waterPollutionRadius: 2
@@ -671,7 +671,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_05/commercial-submenus.jpeg.7fd15082d193a82259d3a0fff766ebf7.jpeg
     lastModified: 2024-08-09T07:49:03.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-11-27T09:00:58.547Z
       version: 1
     name: Submenus DLL
     repository: https://github.com/memo33/submenus-dll

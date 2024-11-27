@@ -1,6 +1,6 @@
 import { getOptionValue, getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import { LOTS_OPTION_ID, checkCondition } from "@common/packages"
-import { getMenuLabel } from "@common/variants"
+import { getMenuLabel } from "@common/submenus"
 import { FlexBox } from "@components/FlexBox"
 import { PackageTag } from "@components/Tags/PackageTag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
