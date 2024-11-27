@@ -657,81 +657,81 @@
   },
   "Submenu": {
     "Residential": {
-      "R$": "0x93dadfe9",
-      "R$$": "0x984e5034",
-      "R$$$": "0x9f83f133"
+      "R$": "$t(Menu:Residential) > R$",
+      "R$$": "$t(Menu:Residential) > R$$",
+      "R$$$": "$t(Menu:Residential) > R$$$"
     },
     "Commercial": {
-      "CS$": "0x11bf1ca9",
-      "CS$$": "0x24c43253",
-      "CS$$$": "0x9bdefe2b",
-      "CO$$": "0xa7ff7cf0",
-      "CO$$$": "0xe27b7ef6"
+      "CS$": "$t(Menu:Commercial) > CS$",
+      "CS$$": "$t(Menu:Commercial) > CS$$",
+      "CS$$$": "$t(Menu:Commercial) > CS$$$",
+      "CO$$": "$t(Menu:Commercial) > CO$$",
+      "CO$$$": "$t(Menu:Commercial) > CO$$$"
     },
     "Industrial": {
-      "Agriculture": "0xc220b7d8",
-      "Dirty": "0x62d82695",
-      "Manufacture": "0x68b3e5fd",
-      "HighTech": "0x954e20fe"
+      "Agriculture": "$t(Menu:Industrial) > Agriculture",
+      "Dirty": "$t(Menu:Industrial) > Dirty industry",
+      "Manufacture": "$t(Menu:Industrial) > Manufacture",
+      "HighTech": "$t(Menu:Industrial) > High-tech"
     },
     "Highway": {
-      "Signage": "0x83e040bb"
+      "Signage": "$t(Menu:Highway) > Signage"
     },
     "Rail": {
-      "Passengers": "0x35380c75",
-      "Freight": "0x3557f0a1",
-      "Yards": "0x39ba25c7",
-      "Hybrid": "0x2b294cc2",
-      "Monorail": "0x3a1d9854"
+      "Passengers": "$t(Menu:Rail) > Passenger stations",
+      "Freight": "$t(Menu:Rail) > Freight stations",
+      "Yards": "$t(Menu:Rail) > Yards",
+      "Hybrid": "$t(Menu:Rail) > Hybrid rail",
+      "Monorail": "$t(Menu:Rail) > Monorail"
     },
     "MiscTransit": {
-      "Bus": "0x1fdde184",
-      "Tram": "0x26b51b28",
-      "ElRail": "0x244f77e1",
-      "Subway": "0x231a97d3",
-      "MultiModal": "0x322c7959",
-      "Parkings": "0x217b6c35"
+      "Bus": "$t(Menu:MiscTransit) > Bus",
+      "Tram": "$t(Menu:MiscTransit) > Ground light rail",
+      "ElRail": "$t(Menu:MiscTransit) > Elevated rail",
+      "Subway": "$t(Menu:MiscTransit) > Subway",
+      "MultiModal": "$t(Menu:MiscTransit) > Multi-modal stations",
+      "Parkings": "$t(Menu:MiscTransit) > Parkings"
     },
     "WaterTransit": {
-      "Seaports": "0x07047b22",
-      "Canals": "0x03c6629c",
-      "Seawalls": "0x1cd18678",
-      "Waterfront": "0x84d42cd6"
+      "Seaports": "$t(Menu:WaterTransit) > Seaports & Ferry",
+      "Canals": "$t(Menu:WaterTransit) > Canals",
+      "Seawalls": "$t(Menu:WaterTransit) > Seawalls",
+      "Waterfront": "$t(Menu:WaterTransit) > Waterfront"
     },
     "Power": {
-      "Dirty": "0x4b465151",
-      "Clean": "0xcde0316b",
-      "Misc": "0xd013f32d"
+      "Dirty": "$t(Menu:Power) > Dirty energy",
+      "Clean": "$t(Menu:Power) > Clean energy",
+      "Misc": "$t(Menu:Power) > Misc"
     },
     "Police": {
-      "Small": "0x65d88585",
-      "Large": "0x7d6dc8bc",
-      "Deluxe": "0x8157ca0e",
-      "Military": "0x8ba49621"
+      "Small": "$t(Menu:Police) > Small",
+      "Large": "$t(Menu:Police) > Large",
+      "Deluxe": "$t(Menu:Police) > Deluxe",
+      "Military": "$t(Menu:Police) > Military"
     },
     "Education": {
-      "Elementary": "0x9fe5c428",
-      "HighSchool": "0xa08063d0",
-      "College": "0xac706063",
-      "Libraries": "0xaedd9faa"
+      "Elementary": "$t(Menu:Education) > Elementary schools",
+      "HighSchool": "$t(Menu:Education) > High schools & private schools",
+      "College": "$t(Menu:Education) > Colleges & Universities",
+      "Libraries": "$t(Menu:Education) > Libraries & Museums"
     },
     "Health": {
-      "Small": "0xb1f7ac5b",
-      "Medium": "0xb7b594d6",
-      "Large": "0xbc251b69"
+      "Small": "$t(Menu:Health) > Small",
+      "Medium": "$t(Menu:Health) > Medium",
+      "Large": "$t(Menu:Health) > Large"
     },
     "Landmarks": {
-      "Government": "0x9faf7a3b",
-      "Religion": "0x26eb3057",
-      "Entertainment": "0xbe9fda0c"
+      "Government": "$t(Menu:Landmarks) > Government",
+      "Religion": "$t(Menu:Landmarks) > Religion",
+      "Entertainment": "$t(Menu:Landmarks) > Entertainment"
     },
     "Parks": {
-      "GreenSpaces": "0xbf776d40",
-      "Plazas": "0xeb75882c",
-      "Sports": "0xce21dbeb",
-      "Modular": "0xdeffd960",
-      "Embankments": "0xbb531946",
-      "Fillers": "0xf034265c"
+      "GreenSpaces": "$t(Menu:Parks) > Green spaces",
+      "Plazas": "$t(Menu:Parks) > Plazas",
+      "Sports": "$t(Menu:Parks) > Sports grounds",
+      "Modular": "$t(Menu:Parks) > Paths & modular parks",
+      "Embankments": "$t(Menu:Parks) > Embankments",
+      "Fillers": "$t(Menu:Parks) > Fillers"
     }
   },
   "Variant": {
