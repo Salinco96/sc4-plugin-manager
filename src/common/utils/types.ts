@@ -1,3 +1,5 @@
+import { isArray } from "@salinco/nice-utils"
+
 export type MaybeArray<T> = T | T[]
 
 /**
@@ -11,4 +13,14 @@ export function normalizeString(value: string): string {
       // biome-ignore lint/suspicious/noMisleadingCharacterClass: <explanation>
       .replace(/[\u0300-\u036f]/g, "")
   )
+}
+
+// TODO: Move to nice-utils
+export function parseStringArray(value: MaybeArray<string>, separator = ","): string[] {
+  return isArray(value) ? value : value.split(separator).map(trim)
+}
+
+// TODO: Move to nice-utils
+export function trim(value: string): string {
+  return value.trim()
 }

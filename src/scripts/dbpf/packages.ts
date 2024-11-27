@@ -10,6 +10,7 @@ import type { PackageData } from "@common/types"
 import type { VariantID } from "@common/variants"
 import { getExtension } from "@node/files"
 
+import { parseStringArray } from "@common/utils/types"
 import type { IndexerEntry, IndexerSource } from "../types"
 import { htmlToMd } from "../utils"
 
@@ -111,7 +112,7 @@ export function writePackageData(
 
   const [major, minor, patch] = matchGroups(entry.version, /(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)
 
-  const categories = new Set(packageData.category?.split(","))
+  const categories = new Set(parseStringArray(packageData.category ?? []))
 
   if (variantEntry.categories && variantId === "default") {
     for (const category of variantEntry.categories) {

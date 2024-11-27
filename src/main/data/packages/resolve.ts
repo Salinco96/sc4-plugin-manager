@@ -15,6 +15,8 @@ import {
   values,
 } from "@salinco/nice-utils"
 
+import type { BuildingInfo } from "@common/buildings"
+import type { LotInfo } from "@common/lots"
 import {
   type OptionID,
   type OptionInfo,
@@ -36,11 +38,9 @@ import {
 import type { ProfileInfo, ProfileUpdate } from "@common/profiles"
 import type { Settings } from "@common/settings"
 import {
-  type BuildingInfo,
   EXTERNAL,
   type Feature,
   type Features,
-  type LotInfo,
   type PackageInfo,
   type PackageStatus,
   type Packages,

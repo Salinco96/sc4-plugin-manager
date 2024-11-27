@@ -2,9 +2,11 @@ import type { ID } from "@salinco/nice-utils"
 import type { HTMLElement } from "node-html-parser"
 
 import type { AssetID } from "@common/assets"
+import type { BuildingData } from "@common/buildings"
 import type { CategoryID } from "@common/categories"
+import type { LotData } from "@common/lots"
 import type { PackageID } from "@common/packages"
-import type { BuildingData, Feature, LotData } from "@common/types"
+import type { Feature } from "@common/types"
 import type { VariantID } from "@common/variants"
 
 export interface IndexerOptions {

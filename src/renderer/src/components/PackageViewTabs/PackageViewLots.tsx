@@ -99,8 +99,6 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
     ...profileInfo?.options,
   }) as string[]
 
-  console.warn(1)
-
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
       {groupedLots.map(({ building, lots }) => {
@@ -441,6 +439,15 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                         </FlexBox>
 
                         <FlexBox direction="column" gap={1}>
+                          {!!lot.density?.length && (
+                            <Typography variant="body2">
+                              <b>{`${t("density")}: `}</b>
+                              {lot.density
+                                .map(density => t(density, { ns: "ZoneDensity" }))
+                                .join(", ")}
+                            </Typography>
+                          )}
+
                           {lot.stage && (
                             <Typography variant="body2">
                               <b>{`${t("stage")}: `}</b>

@@ -2,10 +2,12 @@ import fs from "node:fs/promises"
 import path from "node:path"
 
 import {
+  type StringEnum,
   collect,
   filterValues,
   forEach,
   isEmpty,
+  isEnum,
   isString,
   keys,
   mapDefined,
@@ -35,8 +37,10 @@ import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
+import { ZoneDensity } from "@common/lots"
 import { OptionType } from "@common/options"
 import { parseMenu, parseMenus, writeMenu, writeMenus } from "@common/submenus"
+import { type MaybeArray, parseStringArray } from "@common/utils/types"
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
 
@@ -278,8 +282,16 @@ function loadRemotePackageInfo(
   }
 }
 
-function parseCategory(category: string, categories: Categories): CategoryID[] {
-  const subcategories = category.split(/\s*,\s*/) as CategoryID[]
+function parseEnumList<T extends string>(data: MaybeArray<string>, members: StringEnum<T>): T[] {
+  if (data === "all") {
+    return values(members)
+  }
+
+  return parseStringArray(data).filter(value => isEnum(value, members))
+}
+
+function parseCategory(data: MaybeArray<string>, categories: Categories): CategoryID[] {
+  const subcategories = parseStringArray(data) as CategoryID[]
 
   let subcategory: CategoryID | undefined
   for (subcategory of subcategories) {
@@ -442,7 +454,10 @@ function loadVariantInfo(
   )
 
   if (lots.length) {
-    variantInfo.lots = lots
+    variantInfo.lots = lots.map(({ density, ...lot }) => ({
+      density: density ? parseEnumList(density, ZoneDensity) : undefined,
+      ...lot,
+    }))
   }
 
   const mmps = unionBy(variantData.mmps ?? [], packageData.mmps ?? [], mmp => mmp.id)

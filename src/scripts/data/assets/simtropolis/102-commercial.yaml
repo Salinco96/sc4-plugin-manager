@@ -22815,7 +22815,7 @@ assets:
     lastModified: 2004-03-19T14:40:39.000Z
     lots:
       - building: 4000003f
-        density: low,medium,high
+        density: all
         filename: CS$$$1_5x5 Andrews Fashion Center_ed670794.SC4Lot
         id: ed670794
         name: CS$$$1_5x5 Andrews Fashion Center
@@ -22839,7 +22839,7 @@ assets:
           - '25920000'
           - '25910000'
       - building: 051d0000
-        density: low,medium,high
+        density: all
         filename: CS$$$1_5x5 Bilyk Galleria_6d670a55.SC4Lot
         id: 6d670a55
         name: CS$$$1_5x5 Bilyk Galleria
@@ -22868,7 +22868,7 @@ assets:
           - '26260000'
           - '25960000'
       - building: 051d0000
-        density: low,medium,high
+        density: all
         filename: CS$$$1_6x6 Bilyk Galleria_ed670b23.SC4Lot
         id: ed670b23
         name: CS$$$1_6x6 Bilyk Galleria
@@ -22894,7 +22894,7 @@ assets:
           - '25920000'
           - '25970000'
       - building: '05250000'
-        density: low,medium,high
+        density: all
         filename: CS$$$1_6x6 Nanale Shopping Center_cd670826.SC4Lot
         id: cd670826
         name: CS$$$1_6x6 Nanale Shopping Center
@@ -22929,7 +22929,7 @@ assets:
           - '26200000'
           - 25f40000
       - building: '05250000'
-        density: low,medium,high
+        density: all
         filename: CS$$$2_5x5 Nanale Shopping Center_ad67091b.SC4Lot
         id: ad67091b
         name: CS$$$2_5x5 Nanale Shopping Center
@@ -22954,7 +22954,7 @@ assets:
           - '25920000'
           - 258b0000
       - building: 051c0000
-        density: low,medium,high
+        density: all
         filename: CS$$1_5x5 Harris Galleria_4d670471.SC4Lot
         id: 4d670471
         name: CS$$1_5x5 Harris Galleria
@@ -22979,7 +22979,7 @@ assets:
           - 25a90000
           - 258c0000
       - building: 4000003e
-        density: low,medium,high
+        density: all
         filename: CS$$1_5x5 Lee Shopping Mall_ed67020f.SC4Lot
         id: ed67020f
         name: CS$$1_5x5 Lee Shopping Mall
@@ -22999,7 +22999,7 @@ assets:
           - 258c0000
           - 25a30000
       - building: 051c0000
-        density: low,medium,high
+        density: all
         filename: CS$$1_6x6 Harris Galleria_2d6705a9.SC4Lot
         id: 2d6705a9
         name: CS$$1_6x6 Harris Galleria
@@ -23024,7 +23024,7 @@ assets:
           - 258c0000
           - 25ab0000
       - building: 05f10000
-        density: low,medium,high
+        density: all
         filename: CS$$1_6x6 Hsu Mall_8d66fc4f.SC4Lot
         id: 8d66fc4f
         name: CS$$1_6x6 Hsu Mall
@@ -23048,7 +23048,7 @@ assets:
           - '25960000'
           - '25970000'
       - building: 05f10000
-        density: low,medium,high
+        density: all
         filename: CS$$2_5x5 Hsu Mall_ad670004.SC4Lot
         id: ad670004
         name: CS$$2_5x5 Hsu Mall

@@ -10,7 +10,7 @@ import {
   values,
 } from "@salinco/nice-utils"
 
-import type { BuildingData } from "@common/types"
+import type { BuildingData } from "@common/buildings"
 
 import { CategoryID } from "@common/categories"
 import { Menu, Submenu, writeMenu, writeMenus } from "@common/submenus"

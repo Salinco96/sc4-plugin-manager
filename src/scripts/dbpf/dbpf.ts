@@ -2,13 +2,16 @@ import path from "node:path"
 
 import { values } from "@salinco/nice-utils"
 
+import type { BuildingData } from "@common/buildings"
 import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
 import type { ExemplarPropertyInfo } from "@common/exemplars"
-import { type BuildingData, Feature, type LotData } from "@common/types"
+import type { LotData } from "@common/lots"
+import { Feature } from "@common/types"
 import { loadDBPF } from "@node/dbpf"
 import { FileOpenMode, getExtension, openFile } from "@node/files"
 
 import { CategoryID } from "@common/categories"
+import { parseStringArray } from "@common/utils/types"
 import { getBuildingData } from "./buildings"
 import { getLotData } from "./lots"
 import { DeveloperID, type Exemplar, ExemplarPropertyID, ExemplarType, SimulatorID } from "./types"
@@ -144,7 +147,7 @@ export async function analyzeSC4Files(
 
   for (const building of buildings) {
     if (building.category && lots.some(lot => lot.building === building.id)) {
-      for (const category of building.category.split(",")) {
+      for (const category of parseStringArray(building.category)) {
         categories.add(category as CategoryID)
       }
     }

@@ -278,85 +278,6 @@
     "Water": "Water",
     "WaterTransit": "WaterTransit"
   },
-  "Submenu": {
-    "Residential": {
-      "R$": "0x93dadfe9",
-      "R$$": "0x984e5034",
-      "R$$$": "0x9f83f133"
-    },
-    "Commercial": {
-      "CS$": "0x11bf1ca9",
-      "CS$$": "0x24c43253",
-      "CS$$$": "0x9bdefe2b",
-      "CO$$": "0xa7ff7cf0",
-      "CO$$$": "0xe27b7ef6"
-    },
-    "Industrial": {
-      "Agriculture": "0xc220b7d8",
-      "Dirty": "0x62d82695",
-      "Manufacture": "0x68b3e5fd",
-      "HighTech": "0x954e20fe"
-    },
-    "Highway": {
-      "Signage": "0x83e040bb"
-    },
-    "Rail": {
-      "Passengers": "0x35380c75",
-      "Freight": "0x3557f0a1",
-      "Yards": "0x39ba25c7",
-      "Hybrid": "0x2b294cc2",
-      "Monorail": "0x3a1d9854"
-    },
-    "MiscTransit": {
-      "Bus": "0x1fdde184",
-      "Tram": "0x26b51b28",
-      "ElRail": "0x244f77e1",
-      "Subway": "0x231a97d3",
-      "MultiModal": "0x322c7959",
-      "Parkings": "0x217b6c35"
-    },
-    "WaterTransit": {
-      "Seaports": "0x07047b22",
-      "Canals": "0x03c6629c",
-      "Seawalls": "0x1cd18678",
-      "Waterfront": "0x84d42cd6"
-    },
-    "Power": {
-      "Dirty": "0x4b465151",
-      "Clean": "0xcde0316b",
-      "Misc": "0xd013f32d"
-    },
-    "Police": {
-      "Small": "0x65d88585",
-      "Large": "0x7d6dc8bc",
-      "Deluxe": "0x8157ca0e",
-      "Military": "0x8ba49621"
-    },
-    "Education": {
-      "Elementary": "0x9fe5c428",
-      "HighSchool": "0xa08063d0",
-      "College": "0xac706063",
-      "Libraries": "0xaedd9faa"
-    },
-    "Health": {
-      "Small": "0xb1f7ac5b",
-      "Medium": "0xb7b594d6",
-      "Large": "0xbc251b69"
-    },
-    "Landmarks": {
-      "Government": "0x9faf7a3b",
-      "Religion": "0x26eb3057",
-      "Entertainment": "0xbe9fda0c"
-    },
-    "Parks": {
-      "GreenSpaces": "0xbf776d40",
-      "Plazas": "0xeb75882c",
-      "Sports": "0xce21dbeb",
-      "Modular": "0xdeffd960",
-      "Embankments": "0xbb531946",
-      "Fillers": "0xf034265c"
-    }
-  },
   "PackageActions": {
     "actions": {
       "disabling": "Disabling...",
@@ -570,6 +491,7 @@
     "capacity": "Capacity",
     "category": "Category",
     "cost": "Plop cost",
+    "density": "Growth density",
     "excludeLot": "Exclude lot",
     "flamability": "Flamability",
     "garbage": "Garbage production",
@@ -729,6 +651,85 @@
     "downloading": "Downloading {{key}}{{progress, percent, paren}}...",
     "extracting": "Extracting {{key}}{{progress, percent, paren}}..."
   },
+  "Submenu": {
+    "Residential": {
+      "R$": "0x93dadfe9",
+      "R$$": "0x984e5034",
+      "R$$$": "0x9f83f133"
+    },
+    "Commercial": {
+      "CS$": "0x11bf1ca9",
+      "CS$$": "0x24c43253",
+      "CS$$$": "0x9bdefe2b",
+      "CO$$": "0xa7ff7cf0",
+      "CO$$$": "0xe27b7ef6"
+    },
+    "Industrial": {
+      "Agriculture": "0xc220b7d8",
+      "Dirty": "0x62d82695",
+      "Manufacture": "0x68b3e5fd",
+      "HighTech": "0x954e20fe"
+    },
+    "Highway": {
+      "Signage": "0x83e040bb"
+    },
+    "Rail": {
+      "Passengers": "0x35380c75",
+      "Freight": "0x3557f0a1",
+      "Yards": "0x39ba25c7",
+      "Hybrid": "0x2b294cc2",
+      "Monorail": "0x3a1d9854"
+    },
+    "MiscTransit": {
+      "Bus": "0x1fdde184",
+      "Tram": "0x26b51b28",
+      "ElRail": "0x244f77e1",
+      "Subway": "0x231a97d3",
+      "MultiModal": "0x322c7959",
+      "Parkings": "0x217b6c35"
+    },
+    "WaterTransit": {
+      "Seaports": "0x07047b22",
+      "Canals": "0x03c6629c",
+      "Seawalls": "0x1cd18678",
+      "Waterfront": "0x84d42cd6"
+    },
+    "Power": {
+      "Dirty": "0x4b465151",
+      "Clean": "0xcde0316b",
+      "Misc": "0xd013f32d"
+    },
+    "Police": {
+      "Small": "0x65d88585",
+      "Large": "0x7d6dc8bc",
+      "Deluxe": "0x8157ca0e",
+      "Military": "0x8ba49621"
+    },
+    "Education": {
+      "Elementary": "0x9fe5c428",
+      "HighSchool": "0xa08063d0",
+      "College": "0xac706063",
+      "Libraries": "0xaedd9faa"
+    },
+    "Health": {
+      "Small": "0xb1f7ac5b",
+      "Medium": "0xb7b594d6",
+      "Large": "0xbc251b69"
+    },
+    "Landmarks": {
+      "Government": "0x9faf7a3b",
+      "Religion": "0x26eb3057",
+      "Entertainment": "0xbe9fda0c"
+    },
+    "Parks": {
+      "GreenSpaces": "0xbf776d40",
+      "Plazas": "0xeb75882c",
+      "Sports": "0xce21dbeb",
+      "Modular": "0xdeffd960",
+      "Embankments": "0xbb531946",
+      "Fillers": "0xf034265c"
+    }
+  },
   "Variant": {
     "id": {
       "label": "Variant ID"
@@ -770,5 +771,10 @@
     "disable": "Disabling package",
     "enable": "Enabling package",
     "variant": "Selecting new variant"
+  },
+  "ZoneDensity": {
+    "high": "High",
+    "low": "Low",
+    "medium": "Medium"
   }
 }

@@ -1,4 +1,4 @@
-import type { LotData } from "@common/types"
+import { type LotData, ZoneDensity } from "@common/lots"
 import { toHex, values } from "@salinco/nice-utils"
 
 import { type Exemplar, ExemplarPropertyID, LotConfigPropertyType, ZoneType } from "./types"
@@ -20,14 +20,14 @@ export function getLotData(exemplar: Exemplar): LotData {
     zone => zone >= ZoneType.ResidentialLow && zone <= ZoneType.IndustrialHigh,
   )
 
-  const densities: string[] = []
+  const densities: ZoneDensity[] = []
 
   if (
     zones.includes(ZoneType.ResidentialLow) ||
     zones.includes(ZoneType.CommercialLow) ||
     zones.includes(ZoneType.IndustrialLow)
   ) {
-    densities.push("low")
+    densities.push(ZoneDensity.LOW)
   }
 
   if (
@@ -35,7 +35,7 @@ export function getLotData(exemplar: Exemplar): LotData {
     zones.includes(ZoneType.CommercialMedium) ||
     zones.includes(ZoneType.IndustrialMedium)
   ) {
-    densities.push("medium")
+    densities.push(ZoneDensity.MEDIUM)
   }
 
   if (
@@ -43,11 +43,11 @@ export function getLotData(exemplar: Exemplar): LotData {
     zones.includes(ZoneType.CommercialHigh) ||
     zones.includes(ZoneType.IndustrialHigh)
   ) {
-    densities.push("high")
+    densities.push(ZoneDensity.HIGH)
   }
 
   if (densities.length) {
-    data.density = densities.join(",")
+    data.density = densities.length === 3 ? "all" : densities.join(",")
   }
 
   const name = getString(exemplar, ExemplarPropertyID.ExemplarName)

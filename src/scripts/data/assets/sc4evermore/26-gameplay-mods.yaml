@@ -605,7 +605,7 @@ assets:
     lots:
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000010'
         name: R$1_1x3
@@ -626,7 +626,7 @@ assets:
           - '25290000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000011'
         name: R$1_1x3
@@ -652,7 +652,7 @@ assets:
           - '25270000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000012'
         name: R$1_1x3
@@ -673,7 +673,7 @@ assets:
           - '25270000'
       - building: '10000001'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000020'
         name: R$1_1x3
@@ -700,7 +700,7 @@ assets:
           - '25370000'
       - building: '10000001'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000021'
         name: R$1_1x3
@@ -726,7 +726,7 @@ assets:
           - '25380000'
       - building: '10000001'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000022'
         name: R$1_1x3
@@ -748,7 +748,7 @@ assets:
           - '25380000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000030'
         name: R$1_1x2
@@ -772,7 +772,7 @@ assets:
           - '25270000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000031'
         name: R$1_1x2
@@ -796,7 +796,7 @@ assets:
           - '25370000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000032'
         name: R$1_1x2
@@ -823,7 +823,7 @@ assets:
           - 251c0000
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000033'
         name: R$1_1x2
@@ -850,7 +850,7 @@ assets:
           - '25270000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000040'
         name: R$1_1x3
@@ -872,7 +872,7 @@ assets:
           - 251c0000
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000041'
         name: R$1_1x3
@@ -893,7 +893,7 @@ assets:
           - '25270000'
       - building: '10000001'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000050'
         name: R$2_1x2
@@ -916,7 +916,7 @@ assets:
           - '25290000'
       - building: '10000001'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000051'
         name: R$2_1x2
@@ -933,7 +933,7 @@ assets:
           - '25290000'
       - building: '10000001'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000052'
         name: R$2_1x2
@@ -955,7 +955,7 @@ assets:
           - '25380000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000060'
         name: R$1_1x2
@@ -980,7 +980,7 @@ assets:
           - '25370000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000061'
         name: R$1_1x2
@@ -1004,7 +1004,7 @@ assets:
           - '25380000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000070'
         name: R$2_1x1
@@ -1025,7 +1025,7 @@ assets:
           - 252b0000
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000071'
         name: R$2_1x1
@@ -1044,7 +1044,7 @@ assets:
           - 252b0000
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000072'
         name: R$2_1x1
@@ -1914,7 +1914,7 @@ assets:
           - 258d0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000400'
         name: R$$1_3x2
@@ -1937,7 +1937,7 @@ assets:
           - 253d0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000401'
         name: R$$1_3x2
@@ -1958,7 +1958,7 @@ assets:
           - '261e0000'
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000402'
         name: R$$1_3x2
@@ -1985,7 +1985,7 @@ assets:
           - 252f0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000403'
         name: R$$1_3x2
@@ -2007,7 +2007,7 @@ assets:
           - '25260000'
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000410'
         name: R$$2_2x3
@@ -2035,7 +2035,7 @@ assets:
           - '25340000'
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000411'
         name: R$$2_2x3
@@ -2057,7 +2057,7 @@ assets:
           - '25240000'
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000420'
         name: R$$2_3x2
@@ -2077,7 +2077,7 @@ assets:
           - '251e0000'
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000421'
         name: R$$2_3x2
@@ -2101,7 +2101,7 @@ assets:
           - '25240000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000430'
         name: R$$2_2x2
@@ -2120,7 +2120,7 @@ assets:
           - 251c0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000431'
         name: R$$2_2x2
@@ -2143,7 +2143,7 @@ assets:
           - 251f0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000432'
         name: R$$2_2x2
@@ -2170,7 +2170,7 @@ assets:
           - 252f0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000433'
         name: R$$2_2x2
@@ -2194,7 +2194,7 @@ assets:
           - 251b0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000440'
         name: R$$2_2x2
@@ -2219,7 +2219,7 @@ assets:
           - 252f0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000441'
         name: R$$2_2x2
@@ -2242,7 +2242,7 @@ assets:
           - 253d0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000442'
         name: R$$2_2x2
@@ -2272,7 +2272,7 @@ assets:
           - '25260000'
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000443'
         name: R$$2_2x2
@@ -2298,7 +2298,7 @@ assets:
           - 252f0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000450'
         name: R$$3_1x3
@@ -2318,7 +2318,7 @@ assets:
           - '25340000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000451'
         name: R$$3_1x3
@@ -2337,7 +2337,7 @@ assets:
           - 252b0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000452'
         name: R$$3_1x3
@@ -2355,7 +2355,7 @@ assets:
           - 252a0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000453'
         name: R$$3_1x3
@@ -2378,7 +2378,7 @@ assets:
           - '25340000'
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000460'
         name: R$$3_2x2
@@ -2403,7 +2403,7 @@ assets:
           - '25340000'
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000461'
         name: R$$3_2x2
@@ -2426,7 +2426,7 @@ assets:
           - 253d0000
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000462'
         name: R$$3_2x2
@@ -2450,7 +2450,7 @@ assets:
           - 253a0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000470'
         name: R$$3_1x3
@@ -2474,7 +2474,7 @@ assets:
           - '25270000'
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000471'
         name: R$$3_1x3
@@ -2492,7 +2492,7 @@ assets:
           - 251b0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000472'
         name: R$$3_1x3
@@ -2511,7 +2511,7 @@ assets:
           - 252a0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000473'
         name: R$$3_1x3
@@ -2535,7 +2535,7 @@ assets:
           - 251c0000
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000480'
         name: R$$4_1x3
@@ -2558,7 +2558,7 @@ assets:
           - 251b0000
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000481'
         name: R$$4_1x3
@@ -2578,7 +2578,7 @@ assets:
           - '25340000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000490'
         name: R$$4_1x2
@@ -2595,7 +2595,7 @@ assets:
           - 251b0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000491'
         name: R$$4_1x2
@@ -2616,7 +2616,7 @@ assets:
           - '25240000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000492'
         name: R$$4_1x2
@@ -2637,7 +2637,7 @@ assets:
           - '25240000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000493'
         name: R$$4_1x2
@@ -3248,7 +3248,7 @@ assets:
           - 258f0000
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000710'
         name: R$$$1_4x6
@@ -3279,7 +3279,7 @@ assets:
           - '25280000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000711'
         name: R$$$1_4x6
@@ -3316,7 +3316,7 @@ assets:
           - '26320000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000720'
         name: R$$$1_4x6
@@ -3341,7 +3341,7 @@ assets:
           - '25280000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000721'
         name: R$$$1_4x6
@@ -3379,7 +3379,7 @@ assets:
           - 259d0000
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000730'
         name: R$$$1_4x5
@@ -3404,7 +3404,7 @@ assets:
           - '25270000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000731'
         name: R$$$1_4x5
@@ -3446,7 +3446,7 @@ assets:
           - '26310000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000740'
         name: R$$$1_4x6
@@ -3479,7 +3479,7 @@ assets:
           - 253b0000
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000741'
         name: R$$$1_4x6
@@ -3515,7 +3515,7 @@ assets:
           - 259d0000
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000750'
         name: R$$$1_4x5
@@ -3545,7 +3545,7 @@ assets:
           - '259e0000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000751'
         name: R$$$1_4x5
@@ -3575,7 +3575,7 @@ assets:
           - '26310000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000760'
         name: R$$$2_4x4
@@ -3603,7 +3603,7 @@ assets:
           - 253c0000
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000761'
         name: R$$$2_4x4
@@ -3640,7 +3640,7 @@ assets:
           - '26260000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000770'
         name: R$$$1_4x5
@@ -3668,7 +3668,7 @@ assets:
           - '25300000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000771'
         name: R$$$1_4x5
@@ -3698,7 +3698,7 @@ assets:
           - 259f0000
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000780'
         name: R$$$2_4x4
@@ -3723,7 +3723,7 @@ assets:
           - 253b0000
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000781'
         name: R$$$2_4x4
@@ -3761,7 +3761,7 @@ assets:
           - 251c0000
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000790'
         name: R$$$2_4x4
@@ -3788,7 +3788,7 @@ assets:
           - '26350000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000791'
         name: R$$$2_4x4
@@ -3821,7 +3821,7 @@ assets:
           - '25270000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000800'
         name: R$$$3_3x3
@@ -3844,7 +3844,7 @@ assets:
           - '26350000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000801'
         name: R$$$3_3x3
@@ -3868,7 +3868,7 @@ assets:
           - '25210000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000810'
         name: R$$$3_3x3
@@ -3894,7 +3894,7 @@ assets:
           - 251c0000
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000811'
         name: R$$$3_3x3
@@ -3923,7 +3923,7 @@ assets:
           - '25300000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000820'
         name: R$$$3_3x3
@@ -3947,7 +3947,7 @@ assets:
           - 253c0000
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000821'
         name: R$$$3_3x3
@@ -3977,7 +3977,7 @@ assets:
           - 251c0000
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000830'
         name: R$$$4_2x3
@@ -4010,7 +4010,7 @@ assets:
           - 262f0000
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000831'
         name: R$$$4_2x3
@@ -4036,7 +4036,7 @@ assets:
           - '26310000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000840'
         name: R$$$4_3x2
@@ -4063,7 +4063,7 @@ assets:
           - '26300000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000841'
         name: R$$$4_3x2
@@ -4086,7 +4086,7 @@ assets:
           - '26350000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000850'
         name: R$$$4_2x3
@@ -4109,7 +4109,7 @@ assets:
           - '26330000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000851'
         name: R$$$4_2x3
@@ -4134,7 +4134,7 @@ assets:
           - '25280000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000860'
         name: R$$$4_3x2
@@ -4161,7 +4161,7 @@ assets:
           - '25270000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000861'
         name: R$$$4_3x2
@@ -4184,7 +4184,7 @@ assets:
           - 262f0000
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000870'
         name: R$$$4_2x3
@@ -4210,7 +4210,7 @@ assets:
           - '26210000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000871'
         name: R$$$4_2x3
@@ -4232,7 +4232,7 @@ assets:
           - '26200000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000880'
         name: R$$$4_3x2
@@ -4256,7 +4256,7 @@ assets:
           - 259f0000
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000881'
         name: R$$$4_3x2
@@ -4281,7 +4281,7 @@ assets:
           - '25280000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000890'
         name: R$$$5_2x2
@@ -4303,7 +4303,7 @@ assets:
           - '262e0000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000891'
         name: R$$$5_2x2
@@ -7520,7 +7520,7 @@ assets:
           - 25ef0000
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300000a0
         name: R$2_1x1
@@ -7539,7 +7539,7 @@ assets:
           - '25290000'
       - building: '10000002'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300000a1
         name: R$2_1x1
@@ -7558,7 +7558,7 @@ assets:
           - 261a0000
       - building: '10000001'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300000c0
         name: R$3_1x1
@@ -7576,7 +7576,7 @@ assets:
           - '25270000'
       - building: '10000001'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300000c1
         name: R$3_1x1
@@ -7974,7 +7974,7 @@ assets:
           - '25900000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003d0
         name: R$$1_2x3
@@ -7998,7 +7998,7 @@ assets:
           - '25340000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003d1
         name: R$$1_2x3
@@ -8022,7 +8022,7 @@ assets:
           - '261e0000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003d2
         name: R$$1_2x3
@@ -8050,7 +8050,7 @@ assets:
           - 252f0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300003e0'
         name: R$$1_3x2
@@ -8074,7 +8074,7 @@ assets:
           - '261e0000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300003e1'
         name: R$$1_3x2
@@ -8103,7 +8103,7 @@ assets:
           - 252f0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300003e2'
         name: R$$1_3x2
@@ -8135,7 +8135,7 @@ assets:
           - 252f0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300003e3'
         name: R$$1_3x2
@@ -8165,7 +8165,7 @@ assets:
           - 253d0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003f0
         name: R$$1_2x3
@@ -8194,7 +8194,7 @@ assets:
           - '25260000'
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003f1
         name: R$$1_2x3
@@ -8219,7 +8219,7 @@ assets:
           - '261e0000'
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004a0
         name: R$$4_2x1
@@ -8237,7 +8237,7 @@ assets:
           - 253d0000
       - building: '10000010'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004a1
         name: R$$4_2x1
@@ -8258,7 +8258,7 @@ assets:
           - 252b0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004b0
         name: R$$4_1x2
@@ -8279,7 +8279,7 @@ assets:
           - '25260000'
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004b1
         name: R$$4_1x2
@@ -8299,7 +8299,7 @@ assets:
           - 252f0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004b2
         name: R$$4_1x2
@@ -8317,7 +8317,7 @@ assets:
           - '25260000'
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004b3
         name: R$$4_1x2
@@ -8336,7 +8336,7 @@ assets:
           - 252f0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004c0
         name: R$$4_2x1
@@ -8359,7 +8359,7 @@ assets:
           - 251f0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004c1
         name: R$$4_2x1
@@ -8379,7 +8379,7 @@ assets:
           - 251f0000
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004d0
         name: R$$5_1x2
@@ -8398,7 +8398,7 @@ assets:
           - 251b0000
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004d1
         name: R$$5_1x2
@@ -8420,7 +8420,7 @@ assets:
           - '25340000'
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300004e0'
         name: R$$5_2x1
@@ -8439,7 +8439,7 @@ assets:
           - 253d0000
       - building: '10000011'
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300004e1'
         name: R$$5_2x1
@@ -8461,7 +8461,7 @@ assets:
           - 251f0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004f0
         name: R$$5_1x1
@@ -8477,7 +8477,7 @@ assets:
           - 251c0000
       - building: 1000000f
         category: r$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004f1
         name: R$$5_1x1
@@ -8759,7 +8759,7 @@ assets:
           - a990c000
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007a0
         name: R$$$2_4x3
@@ -8783,7 +8783,7 @@ assets:
           - '25300000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007a1
         name: R$$$2_4x3
@@ -8809,7 +8809,7 @@ assets:
           - '26320000'
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007b0
         name: R$$$2_3x4
@@ -8834,7 +8834,7 @@ assets:
           - 251c0000
       - building: 1000002c
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007b1
         name: R$$$2_3x4
@@ -8866,7 +8866,7 @@ assets:
           - '26340000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007c0
         name: R$$$3_4x3
@@ -8899,7 +8899,7 @@ assets:
           - '25220000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007c1
         name: R$$$3_4x3
@@ -8933,7 +8933,7 @@ assets:
           - '26200000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007d0
         name: R$$$3_3x4
@@ -8961,7 +8961,7 @@ assets:
           - '25280000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007d1
         name: R$$$3_3x4
@@ -8989,7 +8989,7 @@ assets:
           - '26310000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300007e0'
         name: R$$$2_4x3
@@ -9016,7 +9016,7 @@ assets:
           - '25280000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300007e1'
         name: R$$$2_4x3
@@ -9038,7 +9038,7 @@ assets:
           - '26320000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007f0
         name: R$$$2_3x4
@@ -9066,7 +9066,7 @@ assets:
           - '25220000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007f1
         name: R$$$2_3x4
@@ -9092,7 +9092,7 @@ assets:
           - '25220000'
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008a0
         name: R$$$5_2x2
@@ -9113,7 +9113,7 @@ assets:
           - 253c0000
       - building: 1000002b
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008a1
         name: R$$$5_2x2
@@ -9132,7 +9132,7 @@ assets:
           - 252b0000
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008b0
         name: R$$$5_2x2
@@ -9153,7 +9153,7 @@ assets:
           - '25270000'
       - building: 1000002a
         category: r$$$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008b1
         name: R$$$5_2x2
@@ -9663,7 +9663,7 @@ assets:
           - '258e0000'
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b10
         name: R$4_1x1
@@ -9680,7 +9680,7 @@ assets:
           - '25290000'
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b11
         name: R$4_1x1
@@ -9698,7 +9698,7 @@ assets:
           - '25290000'
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b20
         name: R$3_2x1
@@ -9718,7 +9718,7 @@ assets:
           - '25270000'
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b21
         name: R$3_2x1
@@ -9739,7 +9739,7 @@ assets:
           - '25290000'
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b30
         name: R$3_1x2
@@ -9761,7 +9761,7 @@ assets:
           - 252b0000
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b31
         name: R$3_1x2
@@ -9780,7 +9780,7 @@ assets:
           - '25290000'
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b32
         name: R$3_1x2
@@ -9801,7 +9801,7 @@ assets:
           - 252b0000
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b40
         name: R$2_1x3
@@ -9821,7 +9821,7 @@ assets:
           - '25270000'
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b41
         name: R$2_1x3
@@ -9843,7 +9843,7 @@ assets:
           - '25370000'
       - building: '10000003'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b42
         name: R$2_1x3
@@ -9865,7 +9865,7 @@ assets:
           - '25370000'
       - building: '10000004'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b50
         name: R$4_1x1
@@ -9890,7 +9890,7 @@ assets:
           - '25230000'
       - building: '10000004'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b51
         name: R$4_1x1
@@ -9908,7 +9908,7 @@ assets:
           - '25230000'
       - building: '10000004'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b60
         name: R$3_1x2
@@ -9932,7 +9932,7 @@ assets:
           - '25270000'
       - building: '10000004'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b61
         name: R$3_1x2
@@ -9958,7 +9958,7 @@ assets:
           - '25230000'
       - building: '10000004'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b70
         name: R$3_1x3
@@ -9987,7 +9987,7 @@ assets:
           - '25330000'
       - building: '10000004'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b71
         name: R$3_1x3
@@ -10019,7 +10019,7 @@ assets:
           - '25330000'
       - building: '10000004'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b72
         name: R$3_1x3
@@ -10048,7 +10048,7 @@ assets:
           - '25330000'
       - building: '10000004'
         category: r$
-        density: low,medium,high
+        density: all
         filename: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b73
         name: R$3_1x3

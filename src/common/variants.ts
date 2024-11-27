@@ -3,21 +3,15 @@ import type { Namespace, TFunction } from "i18next"
 
 import type { AssetData, AssetID } from "./assets"
 import type { AuthorID } from "./authors"
+import type { BuildingInfo } from "./buildings"
+import type { BuildingData } from "./buildings"
 import type { CategoryID } from "./categories"
+import type { LotInfo } from "./lots"
+import type { LotData } from "./lots"
 import type { OptionData, OptionID, OptionInfo, OptionValue, Requirements } from "./options"
 import type { PackageID } from "./packages"
-import type {
-  BuildingData,
-  BuildingInfo,
-  Feature,
-  LotData,
-  LotInfo,
-  MMPData,
-  MMPInfo,
-  PackageFile,
-  PackageWarning,
-  VariantState,
-} from "./types"
+import type { Feature, MMPData, MMPInfo, PackageFile, PackageWarning, VariantState } from "./types"
+import type { MaybeArray } from "./utils/types"
 
 /** Variant ID */
 export type VariantID = ID<string, VariantInfo>
@@ -26,7 +20,7 @@ export interface VariantData {
   assets?: Array<AssetID | VariantAssetData>
   authors?: AuthorID[]
   buildings?: BuildingData[]
-  category?: string
+  category?: MaybeArray<string>
   dependencies?: Array<PackageID | DependencyInfo>
   deprecated?: boolean | PackageID
   description?: string
