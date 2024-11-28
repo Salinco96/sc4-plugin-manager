@@ -17,6 +17,7 @@ import {
   mapValues,
   parseHex,
   remove,
+  unique,
   values,
 } from "@salinco/nice-utils"
 import { config } from "dotenv"
@@ -29,7 +30,7 @@ import {
   type ExemplarPropertyInfo,
   ExemplarValueType,
 } from "@common/exemplars"
-import type { PackageID } from "@common/packages"
+import { type PackageID, getOwnerId } from "@common/packages"
 import { ConfigFormat, type PackageData } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import type { VariantData, VariantID } from "@common/variants"
@@ -41,6 +42,13 @@ import { exists, removeIfPresent } from "@node/files"
 
 import { analyzeSC4Files } from "./dbpf/dbpf"
 import { writePackageData } from "./dbpf/packages"
+import {
+  promptAuthorName,
+  promptPackageId,
+  promptUrl,
+  promptVariantId,
+  promptYesNo,
+} from "./prompt"
 import { SC4EVERMORE } from "./sources/sc4evermore"
 import { SIMTROPOLIS } from "./sources/simtropolis"
 import type {
@@ -52,6 +60,7 @@ import type {
   IndexerSource,
   IndexerSourceCategoryID,
   IndexerSourceID,
+  IndexerVariantEntry,
 } from "./types"
 import { getEnvRequired, readHTML, toID, wait } from "./utils"
 
@@ -83,6 +92,11 @@ runIndexer({
       "simtropolis/30836",
     ],
   },
+  migrate: {
+    entries(entry, entryId) {
+      return false
+    },
+  },
   refetchIntervalHours: 300,
   sources: [SC4EVERMORE, SIMTROPOLIS],
   version: 1,
@@ -111,10 +125,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return getRequired(entries, entryId)
   }
 
-  function getEntryID(assetId: string): EntryID {
-    return (assetId.match(/^([a-z0-9-]+[/]\d+)(-[^/]+)?$/)?.[1] ?? assetId) as EntryID
-  }
-
   function getOverride(entryId: EntryID, variant?: string): IndexerOverride | null | undefined {
     const override = overrides[entryId]
     return variant ? override?.variants?.[variant] : override
@@ -122,10 +132,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   function getSource(entryId: EntryID): IndexerSource | undefined {
     return sources[getSourceId(entryId)]
-  }
-
-  function getSourceId(entryId: EntryID): IndexerSourceID {
-    return entryId.split("/")[0] as IndexerSourceID
   }
 
   const skipped = new Set<EntryID>()
@@ -136,44 +142,67 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   const dbPackagesConfigs = await loadPackagesFromDB()
   const exemplarProperties = await loadExemplarProperties()
 
-  // Step 1 - Load existing entries
+  // Step 1a - Load existing categorized entries
   for (const source of options.sources) {
     for (const category of values(source.categories)) {
       console.debug(`Loading entries from ${source.id}/${category.id}...`)
 
       const data = await loadEntries(source.id, category.id)
+
+      let migrated = false
       forEach(data.assets, (entry, entryId) => {
+        migrated = options.migrate?.entries?.(entry, entryId) || migrated
         assetIds[entryId] = entry.assetId
         entries[entryId] = entry
       })
+
+      if (migrated) {
+        await writeEntries(source.id, category.id)
+      }
     }
   }
 
-  for (const sourceId of await readdir(dataAssetsDir)) {
-    console.debug(`Loading entries from ${sourceId}...`)
-    const data = await loadEntries(sourceId as IndexerSourceID)
-    forEach(data.assets, (entry, entryId) => {
-      assetIds[entryId] = entry.assetId
-      entries[entryId] = entry
-    })
+  // Step 1b - Load existing uncategorized entries
+  for (const child of await readdir(dataAssetsDir, { withFileTypes: true })) {
+    if (child.isDirectory()) {
+      const sourceId = child.name as IndexerSourceID
+      console.debug(`Loading entries from ${sourceId}...`)
+      const data = await loadEntries(sourceId)
+
+      let migrated = false
+      forEach(data.assets, (entry, entryId) => {
+        migrated = options.migrate?.entries?.(entry, entryId) || migrated
+        assetIds[entryId] = entry.assetId
+        entries[entryId] = entry
+      })
+
+      if (migrated) {
+        await writeEntries(sourceId)
+      }
+    }
   }
 
+  // Step 1d - Create entries
   await forEachAsync(dbAssetsConfigs, async (assets, sourceId) => {
     categories[sourceId] ??= {}
     categories[sourceId][UNCATEGORIZED] ??= { assets: {} }
     const data = categories[sourceId][UNCATEGORIZED]
 
     forEach(assets, (asset, assetId) => {
-      if (asset.url && asset.version && !entries[getEntryID(assetId)]) {
-        const entryId = getEntryID(assetId)
+      const entryId = getEntryId(assetId)
+      if (asset.url && asset.version && !entries[entryId]) {
+        console.debug(`Creating entry ${entryId} from asset ${assetId}...`)
+
+        // GitHub asset IDs with format github/[user]/[repo]
+        const githubUserId = entryId.match(/^github[/]([^/]+)[/][^/]+$/)?.[1]
 
         assetIds[entryId] = assetId
 
         entries[entryId] = {
           assetId,
-          authors: assetId.split("/").slice(-2, -1), // TODO
-          download: asset.url.replace("{path}", assetId.split("/").slice(1).join("/")),
-          lastModified: asset.lastModified ?? now, // TODO
+          authors: githubUserId ? [githubUserId] : undefined,
+          download: asset.url,
+          lastModified: asset.lastModified ?? now,
           version: String(asset.version),
         }
 
@@ -277,7 +306,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               continue
             }
 
-            const entryId = getEntryID(baseEntry.assetId)
+            const entryId = getEntryId(baseEntry.assetId)
 
             const entry: IndexerEntry = {
               ...entries[entryId],
@@ -368,7 +397,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     packageId: PackageID,
     variantId?: VariantID,
   ): Promise<void> {
-    const mainAuthorId = packageId.split("/")[0]
     const prefix = variantId ? `In variant ${packageId}#${variantId}` : `In package ${packageId}`
 
     if (variantData.assets) {
@@ -380,44 +408,21 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
     }
 
-    if (variantData.authors) {
-      const newAuthors: AuthorID[] = []
-      for (const authorId of variantData.authors) {
-        if (authorId !== mainAuthorId) {
-          newAuthors.push(authorId)
-        }
+    const authorIds = unique([
+      getOwnerId(packageId),
+      ...keys(variantData.credits ?? {}),
+      ...keys(variantData.thanks ?? {}),
+    ])
 
-        if (!dbAuthors[authorId]) {
-          const confirmed = await select({
-            choices: [
-              { name: "Yes", value: true },
-              { name: "No", value: false },
-            ],
-            default: true,
-            message: `Create author ${authorId}?`,
-          })
-
-          if (confirmed) {
-            dbAuthors[authorId] = {
-              name: await input({
-                default: authorId,
-                message: "Author name:", // TODO: Simtropolis ID?
-              }),
-            }
-          } else {
-            errors.add(`${prefix} - Author ${authorId} does not exist`)
+    for (const authorId of authorIds) {
+      if (!dbAuthors[authorId]) {
+        if (await promptYesNo(`Create author ${authorId}?`, true)) {
+          dbAuthors[authorId] = {
+            name: await promptAuthorName(authorId),
           }
+        } else {
+          errors.add(`${prefix} - Author ${authorId} does not exist`)
         }
-      }
-
-      if (!isEqual(variantData.authors, newAuthors)) {
-        variantData.authors = newAuthors.length ? newAuthors : undefined
-        await writeConfig(
-          dbPackagesDir,
-          mainAuthorId,
-          dbPackagesConfigs[mainAuthorId],
-          ConfigFormat.YAML,
-        )
       }
     }
 
@@ -455,63 +460,52 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     const sourceId = getSourceId(entryId)
-
     if (dbAssetsConfigs[sourceId]?.[entry.assetId]) {
       return true
     }
 
-    const authorId = getAuthorId(entry.authors[0])
-
-    if (authorId && options.include.authors.includes(authorId)) {
-      return true
+    if (entry.owner) {
+      const authorId = getAuthorId(entry.owner)
+      if (authorId && options.include.authors.includes(authorId)) {
+        return true
+      }
     }
 
     return false
   }
 
-  function getDefaultPackageId(entry: IndexerEntry): string {
-    const authorId = getAuthorId(entry.authors[0])
-    return `${authorId}/${entry.assetId.split("/").at(-1)?.replace(/^\d+-/, "")}`
+  function getDefaultPackageId(entry: IndexerEntry, entryId: EntryID): PackageID {
+    const authorId = getAuthorId(entry.authors?.at(0) ?? getSourceId(entryId))
+    return `${authorId}/${entry.assetId.split("/").at(-1)?.replace(/^\d+-/, "")}` as PackageID
   }
 
-  async function getPackageId(entry: IndexerEntry, hint?: string): Promise<PackageID> {
-    const packageId = await input({
-      default: hint ?? getDefaultPackageId(entry),
-      message: "Package ID:",
-      validate: value => {
-        if (!/^[a-z0-9-]+[/][a-z0-9-]+$/.test(value)) {
-          return "Invalid package ID"
-        }
+  function getDefaultVariantId(variantEntry: IndexerVariantEntry): VariantID {
+    return variantEntry.filename?.match(/\b(dn|dark\W?nite)\b/i)
+      ? ("darknite" as VariantID)
+      : ("default" as VariantID)
+  }
 
-        return true
-      },
-    })
+  async function getPackageId(
+    entry: IndexerEntry,
+    entryId: EntryID,
+    hint: PackageID = getDefaultPackageId(entry, entryId),
+  ): Promise<PackageID> {
+    const packageId = await promptPackageId(hint)
+    const ownerId = getOwnerId(packageId)
 
-    const authorId = packageId.split("/")[0] as AuthorID
-
-    if (!dbAuthors[authorId]) {
-      const confirmed = await select({
-        choices: [
-          { name: "Yes", value: true },
-          { name: "No", value: false },
-        ],
-        default: true,
-        message: `Create author ${authorId}?`,
-      })
+    if (!dbAuthors[ownerId]) {
+      const confirmed = await promptYesNo(`Create author ${ownerId}?`, true)
 
       if (!confirmed) {
-        return getPackageId(entry, hint)
+        return getPackageId(entry, entryId, hint)
       }
 
-      dbAuthors[authorId] = {
-        name: await input({
-          default: entry.authors[0],
-          message: "Author name:", // TODO: Simtropolis ID?
-        }),
+      dbAuthors[ownerId] = {
+        name: await promptAuthorName(entry.owner),
       }
     }
 
-    return packageId as PackageID
+    return packageId
   }
 
   async function resolveEntry(entryId: EntryID): Promise<IndexerEntry | undefined> {
@@ -552,7 +546,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         // Include
         case "include": {
           override = overrides[entryId] ??= {}
-          override.packageId = await getPackageId(entry)
+          override.packageId = await getPackageId(entry, entryId)
           break
         }
 
@@ -579,11 +573,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
                 return "Invalid asset ID"
               }
 
-              if (!entries[getEntryID(value)]) {
+              if (!entries[getEntryId(value)]) {
                 return "Unknown asset"
               }
 
-              if (getEntryID(value) === entryId) {
+              if (getEntryId(value) === entryId) {
                 return "Cannot redirect to itself"
               }
 
@@ -592,7 +586,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           })
 
           override = overrides[entryId] ??= {}
-          override.superseded = getAssetID(getEntryID(superseded))
+          override.superseded = getAssetID(getEntryId(superseded))
           break
         }
       }
@@ -600,7 +594,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     // Superseded asset, resolve the newer one instead
     if (override?.superseded) {
-      return resolveEntry(getEntryID(override.superseded))
+      return resolveEntry(getEntryId(override.superseded))
     }
 
     console.debug(`Resolving ${assetId}...`)
@@ -686,7 +680,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (dbPackagesConfigs[sourceId]?.[dependency as PackageID]) {
           dependencies.add(dependency as PackageID)
         } else {
-          const dependencyEntryId = getEntryID(dependency)
+          const dependencyEntryId = getEntryId(dependency)
           const resolvedDependency = await resolveEntry(dependencyEntryId)
           if (resolvedDependency) {
             dependencies.add(resolvedDependency.assetId)
@@ -764,21 +758,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         throw Error(`Expected override to exist for ${assetId}`)
       }
 
-      const answer = await select({
-        choices: [
-          { name: "Yes", value: true },
-          { name: "No", value: false },
-        ],
-        default: true,
-        message: `Include ${variantAssetId}? ${variantEntry.filename}`,
-      })
-
       overrides[entryId] ??= {}
       overrides[entryId].variants ??= {}
 
-      if (answer) {
+      if (await promptYesNo(`Include ${variantAssetId}? ${variantEntry.filename}`, true)) {
         variantOverride = overrides[entryId].variants[variant] ??= {}
-        variantOverride.packageId = await getPackageId(entry, overrides[entryId].packageId)
+        variantOverride.packageId = await getPackageId(entry, entryId, overrides[entryId].packageId)
       } else {
         variantOverride = overrides[entryId].variants[variant] = null
       }
@@ -803,18 +788,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     let downloaded = await exists(downloadPath)
 
     if (!downloadUrl) {
-      downloadUrl = await input({
-        default: downloadUrl,
-        message: "Download URL:",
-        validate: value => {
-          if (!/^https:[/][/][-.\w]+[.][a-z]+[/][-.\w/%{}]+$/.test(value)) {
-            return "Invalid URL"
-          }
-
-          return true
-        },
-      })
-
+      downloadUrl = await promptUrl("Download URL", downloadUrl)
       variantEntry.download = downloadUrl
     }
 
@@ -884,28 +858,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           console.error(error)
 
           // Suggest to retry with different URL
-          const answer = await select({
-            choices: [
-              { name: "Yes", value: true },
-              { name: "No", value: false },
-            ],
-            default: false,
-            message: "Override download URL?",
-          })
-
-          if (answer) {
-            downloadUrl = await input({
-              default: downloadUrl,
-              message: "Download URL:",
-              validate: value => {
-                if (!/^https:[/][/][-.\w]+[.][a-z]+[/][-.\w/%{}]+$/.test(value)) {
-                  return "Invalid URL"
-                }
-
-                return true
-              },
-            })
-
+          if (await promptYesNo("Override download URL?")) {
+            downloadUrl = await promptUrl("Download URL", downloadUrl)
             variantEntry.download = downloadUrl
           } else {
             throw Error(`Failed to download ${variantAssetId}`)
@@ -993,7 +947,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     await writeConfig(dbAssetsDir, sourceId, dbAssetsConfigs[sourceId], ConfigFormat.YAML)
 
     if (basePackageId === undefined) {
-      basePackageId = await getPackageId(entry)
+      basePackageId = await getPackageId(entry, entryId)
       variantOverride.packageId = basePackageId
     }
 
@@ -1001,25 +955,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     if (!baseVariantId) {
       console.debug(`Generating package for ${variantAssetId} -> ${basePackageId}`)
-
       // Try to infer DarkNite variants from filename
-      const defaultVariantId = variantEntry.filename?.match(/\b(dn|dark\W?nite)\b/i)
-        ? "darknite"
-        : "default"
-
-      const overrideVariantId = await input({
-        default: defaultVariantId,
-        message: `Variant ID (${variantEntry.filename}):`,
-        validate: value => {
-          if (!/^[a-z0-9-]+$/.test(value)) {
-            return "Invalid variant ID"
-          }
-
-          return true
-        },
-      })
-
-      baseVariantId = variantOverride.variantId = overrideVariantId as VariantID
+      const defaultVariantId = getDefaultVariantId(variantEntry)
+      const overrideVariantId = await promptVariantId(defaultVariantId, variantEntry.filename)
+      baseVariantId = variantOverride.variantId = overrideVariantId
     }
 
     await generateVariant(basePackageId, baseVariantId)
@@ -1057,13 +996,13 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           return dependency as PackageID
         }
 
-        return getOverride(getEntryID(dependency))?.packageId
+        return getOverride(getEntryId(dependency))?.packageId
       })
 
-      const authorId = packageId.split("/")[0] as AuthorID
-      const authors = remove(mapDefined(entry.authors, getAuthorId), authorId)
+      const ownerId = getOwnerId(packageId)
+      const authors = remove(mapDefined(entry.authors ?? [], getAuthorId), ownerId)
 
-      const packageData = dbPackagesConfigs[authorId]?.[packageId] ?? {}
+      const packageData = dbPackagesConfigs[ownerId]?.[packageId] ?? {}
       const variantData = packageData.variants?.[variantId]
 
       // Create or update package/variant data
@@ -1107,8 +1046,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           excludedFiles = difference(variantEntry.files, includedFiles)
         }
 
-        dbPackagesConfigs[authorId] ??= {}
-        dbPackagesConfigs[authorId][packageId] = writePackageData(
+        dbPackagesConfigs[ownerId] ??= {}
+        dbPackagesConfigs[ownerId][packageId] = writePackageData(
           packageData,
           packageId,
           assetId,
@@ -1124,7 +1063,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         )
 
         // Save changes
-        await writeConfig(dbPackagesDir, authorId, dbPackagesConfigs[authorId], ConfigFormat.YAML)
+        await writeConfig(dbPackagesDir, ownerId, dbPackagesConfigs[ownerId], ConfigFormat.YAML)
       }
     }
 
@@ -1163,7 +1102,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     if (config) {
       forEach(config.data, (override, assetId) => {
-        data[getEntryID(assetId)] = override
+        data[getEntryId(assetId)] = override
       })
     }
 
@@ -1271,4 +1210,12 @@ async function loadPackagesFromDB(): Promise<{
   }
 
   return configs
+}
+
+function getEntryId(assetId: string): EntryID {
+  return (assetId.match(/^([a-z0-9-]+[/]\d+)(-[^/]+)?$/)?.[1] ?? assetId) as EntryID
+}
+
+function getSourceId(entryId: EntryID): IndexerSourceID {
+  return entryId.split("/")[0] as IndexerSourceID
 }

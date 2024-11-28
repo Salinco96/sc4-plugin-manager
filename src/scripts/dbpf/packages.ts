@@ -1,11 +1,11 @@
 import path from "node:path"
 
-import { groupBy, isString, matchGroups, union } from "@salinco/nice-utils"
+import { generate, groupBy, isEmpty, isString, matchGroups, union } from "@salinco/nice-utils"
 
 import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { CategoryID } from "@common/categories"
-import type { PackageID } from "@common/packages"
+import { type PackageID, getOwnerId } from "@common/packages"
 import type { PackageData } from "@common/types"
 import type { VariantID } from "@common/variants"
 import { getExtension } from "@node/files"
@@ -109,6 +109,7 @@ export function writePackageData(
   packageData.variants ??= {}
   packageData.variants[variantId] ??= {}
   const variantData = packageData.variants[variantId]
+  const ownerId = getOwnerId(packageId)
 
   const [major, minor, patch] = matchGroups(entry.version, /(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)
 
@@ -162,7 +163,18 @@ export function writePackageData(
   }
 
   if (variantId === "default" || !packageData.url || packageData.url === entry.url) {
-    const packageAuthors = union(authors, packageData.authors ?? [])
+    const packageCredits = {
+      ...packageData.credits,
+      ...generate(
+        authors.filter(
+          authorId =>
+            authorId !== ownerId &&
+            packageData.credits?.[authorId] !== undefined &&
+            packageData.thanks?.[authorId] !== undefined,
+        ),
+        authorId => [authorId, null],
+      ),
+    }
 
     const packageDependencies = union(dependencies, packageData.dependencies ?? [])
 
@@ -174,7 +186,7 @@ export function writePackageData(
 
     const packageImages = union(entry.images ?? [], packageData.images ?? [])
 
-    packageData.authors = packageAuthors.length ? packageAuthors.sort() : undefined
+    packageData.credits = !isEmpty(packageCredits) ? packageCredits : undefined
     packageData.dependencies = packageDependencies.length ? packageDependencies.sort() : undefined
     packageData.description = packageDescription
     packageData.features = packageFeatures.length ? packageFeatures.sort() : undefined
@@ -194,9 +206,20 @@ export function writePackageData(
       )
     }
 
-    const variantAuthors = union(authors, variantData.authors ?? []).filter(
-      authorId => !packageData.authors?.includes(authorId),
-    )
+    const variantCredits = {
+      ...variantData.credits,
+      ...generate(
+        authors.filter(
+          authorId =>
+            authorId !== ownerId &&
+            packageData.credits?.[authorId] !== undefined &&
+            packageData.thanks?.[authorId] !== undefined &&
+            variantData.credits?.[authorId] !== undefined &&
+            variantData.thanks?.[authorId] !== undefined,
+        ),
+        authorId => [authorId, null],
+      ),
+    }
 
     const variantDependencies = union(dependencies, variantData.dependencies ?? []).filter(
       dependency => !packageData.dependencies?.includes(dependency),
@@ -210,7 +233,7 @@ export function writePackageData(
       image => !packageData.images?.includes(image),
     )
 
-    variantData.authors = variantAuthors.length ? variantAuthors.sort() : undefined
+    variantData.credits = !isEmpty(variantCredits) ? variantCredits : undefined
     variantData.dependencies = variantDependencies.length ? variantDependencies.sort() : undefined
     variantData.description = variantDescription
     variantData.images = variantImages.length ? variantImages : undefined

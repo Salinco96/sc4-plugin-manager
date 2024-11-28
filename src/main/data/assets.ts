@@ -19,7 +19,6 @@ function getAssetURL(
     let url = rawUrl
 
     if (match) {
-      url = url.replaceAll("{path}", match[2])
       url = url.replaceAll("{hash}", match[3])
     }
 

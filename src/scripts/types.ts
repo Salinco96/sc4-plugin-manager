@@ -14,6 +14,9 @@ export interface IndexerOptions {
     authors: string[]
     entries: string[]
   }
+  migrate?: {
+    entries?: (entry: IndexerEntry, entryId: EntryID) => boolean
+  }
   refetchIntervalHours: number
   sources: IndexerSource[]
   version: number
@@ -25,10 +28,11 @@ export interface IndexerOptions {
 export interface IndexerBaseEntry {
   /** Manager asset ID */
   assetId: AssetID
-  authors: string[]
+  authors?: string[]
   downloads?: number
   lastModified: Date
   name?: string
+  owner?: string
   thumbnail?: string
   url?: string
 }

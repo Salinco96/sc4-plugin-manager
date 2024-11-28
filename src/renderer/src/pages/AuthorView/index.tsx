@@ -21,8 +21,8 @@ function AuthorViewInner({ authorId }: { authorId: AuthorID }): JSX.Element {
 
   const packageIds = useMemo(() => {
     return values(packages ?? {})
-      .filter(info => values(info.variants).some(variant => variant.authors.includes(authorId)))
-      .map(info => info.id)
+      .filter(({ variants }) => values(variants).some(variantInfo => variantInfo.credits[authorId]))
+      .map(packageInfo => packageInfo.id)
   }, [authorId, packages])
 
   const { t } = useTranslation("AuthorView")

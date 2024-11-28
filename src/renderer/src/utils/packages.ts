@@ -175,7 +175,7 @@ export function filterVariant(
   const fn = filters.combine === "and" ? "every" : "some"
 
   if (filters.authors.length) {
-    if (!filters.authors[fn](authorId => variantInfo.authors.includes(authorId))) {
+    if (!filters.authors[fn](authorId => variantInfo.credits[authorId])) {
       return false
     }
   }

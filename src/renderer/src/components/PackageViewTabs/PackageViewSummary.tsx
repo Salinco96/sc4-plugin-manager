@@ -1,6 +1,6 @@
 import { Box, Link, Typography } from "@mui/material"
-import { collect, keys } from "@salinco/nice-utils"
-import { Fragment, useCallback } from "react"
+import { collect, isEmpty } from "@salinco/nice-utils"
+import { useCallback } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { AuthorID } from "@common/authors"
@@ -41,30 +41,50 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
           {variantInfo.summary}
         </Text>
       )}
+
       {variantInfo.description && <MarkdownView md={variantInfo.description} />}
-      {/* TODO: Better formatting (with Simtropolis user links?) */}
-      <Typography variant="body2">
-        <b>{`${t("authors")}: `}</b>
-        {variantInfo.authors.map((authorId, index) => {
-          const authorName = getAuthorName(authorId, authors)
-          return (
-            <Fragment key={authorId}>
-              {index > 0 && ", "}
+
+      <>
+        <Typography variant="body2">
+          <b>{`${t("credits")}: `}</b>
+        </Typography>
+        <ul style={{ marginBlockStart: 0 }}>
+          {collect(variantInfo.credits, (reason, authorId) => (
+            <li key={authorId}>
               <Link onClick={() => openAuthorView(authorId)} sx={{ cursor: "pointer" }}>
-                {authorName}
+                {getAuthorName(authorId, authors)}
               </Link>
-            </Fragment>
-          )
-        })}
-      </Typography>
-      {/* TODO: Better formatting */}
+              {reason && ` - ${reason}`}
+            </li>
+          ))}
+        </ul>
+      </>
+
+      {variantInfo.thanks && !isEmpty(variantInfo.thanks) && (
+        <>
+          <Typography variant="body2">
+            <b>{`${t("thanks")}: `}</b>
+          </Typography>
+          <ul style={{ marginBlockStart: 0 }}>
+            {collect(variantInfo.thanks, (reason, authorId) => (
+              <li key={authorId}>
+                <Link onClick={() => openAuthorView(authorId)} sx={{ cursor: "pointer" }}>
+                  {getAuthorName(authorId, authors)}
+                </Link>
+                {reason && ` - ${reason}`}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
       <Typography variant="body2">
         <b>{`${t("category")}: `}</b>
         {getCategories(variantInfo)
           .map(categoryId => getCategoryLabel(categoryId, categories))
           .join(", ")}
       </Typography>
-      {/* TODO: Better formatting */}
+
       {variantInfo.repository && (
         <Text maxLines={1} variant="body2">
           <b>{`${t("repository")}: `}</b>
@@ -73,7 +93,7 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
           </a>
         </Text>
       )}
-      {/* TODO: Better formatting */}
+
       {variantInfo.support && (
         <Text maxLines={1} variant="body2">
           <b>{`${t("support")}: `}</b>
@@ -82,15 +102,15 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
           </a>
         </Text>
       )}
-      {/* TODO: Better formatting */}
+
       {packageInfo.features && (
         <Typography variant="body2">
           <b>{`${t("features")}: `}</b>
           {packageInfo.features.map(feature => getFeatureLabel(t, feature)).join(", ")}
         </Typography>
       )}
-      {/* TODO: Better formatting */}
-      {variantInfo.requirements && !!keys(variantInfo.requirements).length && (
+
+      {variantInfo.requirements && !isEmpty(variantInfo.requirements) && (
         <>
           <Typography variant="body2">
             <b>{`${t("requirements")}: `}</b>

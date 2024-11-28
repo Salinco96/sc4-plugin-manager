@@ -179,10 +179,10 @@ export const SIMTROPOLIS: IndexerSource = {
 
       return {
         assetId: ID(`${sourceId}/${itemId}`),
-        authors: [authorName ?? sourceId],
         downloads: Number.parseInt(downloads || "0", 10) || undefined,
         lastModified: new Date(lastModified),
         name: itemName,
+        owner: authorName ?? sourceId,
         thumbnail,
         url: new URL(itemUrl, origin).toString(),
       }

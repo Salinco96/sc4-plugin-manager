@@ -18,9 +18,9 @@ export type VariantID = ID<string, VariantInfo>
 
 export interface VariantData {
   assets?: Array<AssetID | VariantAssetData>
-  authors?: AuthorID[]
   buildings?: BuildingData[]
   category?: MaybeArray<string>
+  credits?: { [authorId in AuthorID]?: string | null }
   dependencies?: Array<PackageID | DependencyInfo>
   deprecated?: boolean | PackageID
   description?: string
@@ -42,6 +42,7 @@ export interface VariantData {
   requirements?: Requirements
   summary?: string
   support?: string
+  thanks?: { [authorId in AuthorID]?: string | null }
   thumbnail?: string
   url?: string
   version?: string
@@ -50,9 +51,9 @@ export interface VariantData {
 
 export interface BaseVariantInfo {
   assets?: VariantAssetInfo[]
-  authors: AuthorID[]
   buildings?: BuildingInfo[]
   categories: CategoryID[]
+  credits: { [authorId in AuthorID]?: string | null }
   dependencies?: DependencyInfo[]
   deprecated?: boolean | PackageID
   description?: string
@@ -75,6 +76,7 @@ export interface BaseVariantInfo {
   requirements?: Requirements
   summary?: string
   support?: string
+  thanks?: { [authorId in AuthorID]?: string | null }
   thumbnail?: string
   url?: string
   version: string

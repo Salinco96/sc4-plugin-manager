@@ -1,5 +1,6 @@
 import { type ID, entries, isArray } from "@salinco/nice-utils"
 
+import type { AuthorID } from "./authors"
 import {
   type OptionID,
   type OptionInfo,
@@ -300,4 +301,8 @@ export function isPatched(variantInfo: VariantInfo): boolean {
 
 export function isRequired(variantInfo: VariantInfo, packageStatus?: PackageStatus): boolean {
   return isIncluded(variantInfo, packageStatus) && !!packageStatus?.requiredBy?.length
+}
+
+export function getOwnerId(packageId: PackageID): AuthorID {
+  return packageId.split("/")[0] as AuthorID
 }

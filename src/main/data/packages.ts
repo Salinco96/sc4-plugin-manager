@@ -15,14 +15,14 @@ import {
   size,
   union,
   unionBy,
+  unique,
   values,
 } from "@salinco/nice-utils"
 import { glob } from "glob"
 
 import type { AssetData, AssetID, Assets } from "@common/assets"
-import type { AuthorID } from "@common/authors"
 import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
-import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, isNew } from "@common/packages"
+import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, getOwnerId, isNew } from "@common/packages"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
 import type {
   DependencyData,
@@ -138,11 +138,6 @@ async function loadLocalPackageInfo(
       const docsPath = DIRNAMES.docs
       if (await exists(path.join(packagePath, entry.name, docsPath))) {
         variantInfo.docs = docsPath
-      }
-
-      if (!variantInfo.authors.length) {
-        const author = packageId.split("/")[0] as AuthorID
-        variantInfo.authors.push(author)
       }
     }
   }
@@ -268,10 +263,6 @@ function loadRemotePackageInfo(
       if (!packageData.variants[variantId]?.disabled) {
         const variantInfo = loadVariantInfo(packageId, variantId, packageData, categories)
         packageInfo.variants[variantId] = variantInfo
-        if (!variantInfo.authors.length) {
-          const author = packageId.split("/")[0] as AuthorID
-          variantInfo.authors.push(author)
-        }
       }
     }
   }
@@ -282,12 +273,16 @@ function loadRemotePackageInfo(
   }
 }
 
-function parseEnumList<T extends string>(data: MaybeArray<string>, members: StringEnum<T>): T[] {
-  if (data === "all") {
+function parseEnumList<T extends string>(
+  data: MaybeArray<string>,
+  members: StringEnum<T>,
+  allowAll?: boolean,
+): T[] {
+  if (data === "all" && allowAll) {
     return values(members)
   }
 
-  return parseStringArray(data).filter(value => isEnum(value, members))
+  return unique(parseStringArray(data).filter(value => isEnum(value, members)))
 }
 
 function parseCategory(data: MaybeArray<string>, categories: Categories): CategoryID[] {
@@ -355,15 +350,21 @@ function loadVariantInfo(
 ): VariantInfo {
   const variantData = packageData.variants?.[variantId] ?? {}
 
-  const authorId = packageId.split("/")[0] as AuthorID
+  const ownerId = getOwnerId(packageId)
   const category = variantData.category ?? packageData.category ?? CategoryID.MODS
   const subcategories = parseCategory(category, categories)
   const priorities = subcategories.map(categoryId => categories[categoryId]?.priority ?? 0)
   const priority = Math.max(...priorities)
 
+  const credits = {
+    [ownerId]: "Original author",
+    ...packageData.credits,
+    ...variantData.credits,
+  }
+
   const variantInfo: VariantInfo = {
-    authors: [authorId],
     categories: subcategories,
+    credits,
     id: variantId,
     name: variantData.name ?? variantId,
     priority,
@@ -378,12 +379,6 @@ function loadVariantInfo(
 
   if (assets.length) {
     variantInfo.assets = assets
-  }
-
-  const authors = union(variantData.authors ?? [], packageData.authors ?? [])
-
-  if (authors.length) {
-    variantInfo.authors = union(variantInfo.authors, authors)
   }
 
   const buildings = unionBy(
@@ -455,7 +450,7 @@ function loadVariantInfo(
 
   if (lots.length) {
     variantInfo.lots = lots.map(({ density, ...lot }) => ({
-      density: density ? parseEnumList(density, ZoneDensity) : undefined,
+      density: density ? parseEnumList(density, ZoneDensity, true) : undefined,
       ...lot,
     }))
   }
@@ -638,7 +633,6 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
     variants: mapValues(
       filterValues(packageInfo.variants, variant => !!variant.installed),
       variant => ({
-        authors: variant.authors,
         buildings: variant.buildings?.map(({ categories, menu, submenus, ...building }) => ({
           category: categories?.join(","),
           menu: menu ? writeMenu(menu) : undefined,
@@ -646,6 +640,7 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
           ...building,
         })),
         category: variant.categories.join(","),
+        credits: variant.credits,
         dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
         deprecated: variant.deprecated,
         description: variant.description,
@@ -668,6 +663,7 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         requirements: variant.requirements,
         summary: variant.summary,
         support: variant.support,
+        thanks: variant.thanks,
         thumbnail: variant.thumbnail,
         url: variant.url,
         version: variant.version,
