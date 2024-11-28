@@ -179,6 +179,7 @@ export function ExemplarViewer({
         <FlexBox direction="column" paddingX={8} paddingY={2} gap={2}>
           <ExemplarPropertySearch
             data={data}
+            id={id}
             onSelect={property => {
               selectedPropertyIdRef.current = property.id
 

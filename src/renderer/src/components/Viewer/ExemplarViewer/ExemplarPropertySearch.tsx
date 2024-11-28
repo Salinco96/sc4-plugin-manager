@@ -2,23 +2,27 @@ import { Autocomplete, Box, InputAdornment, TextField, createFilterOptions } fro
 import { isString, keys, mapDefined, toHex } from "@salinco/nice-utils"
 import { useMemo, useState } from "react"
 
-import type { ExemplarData, ExemplarProperty } from "@common/exemplars"
+import type { TGI } from "@common/dbpf"
+import { type ExemplarData, type ExemplarProperty, getExemplarType } from "@common/exemplars"
 import { FlexBox } from "@components/FlexBox"
 import { useStore } from "@utils/store"
 import { getDefaultValue } from "./utils"
 
 export interface ExemplarPropertyNewProps {
   data: ExemplarData
+  id: TGI
   onSelect: (property: ExemplarProperty) => void
   readonly: boolean
 }
 
 export function ExemplarPropertySearch({
   data,
+  id,
   onSelect,
   readonly,
 }: ExemplarPropertyNewProps): JSX.Element {
   const exemplarProperties = useStore(store => store.exemplarProperties)
+  const exemplarType = getExemplarType(id, data)
 
   const filterOptions = useMemo(() => {
     return createFilterOptions<{ label: string; value: number }>({
@@ -31,19 +35,30 @@ export function ExemplarPropertySearch({
   const options = useMemo(() => {
     return mapDefined(keys(exemplarProperties).map(Number), propertyId => {
       const property = data.properties[propertyId]
+
+      // Cannot add new property if readonly
       if (readonly && !property) {
         return
       }
 
       const info = exemplarProperties[propertyId]
-      if (info?.type) {
-        return {
-          label: info.name,
-          value: propertyId,
-        }
+
+      // Cannot add property that is reserved for another type
+      if (info?.usage !== undefined && info?.usage !== exemplarType && !property) {
+        return
+      }
+
+      // Cannot add property without known data type
+      if (!info?.type) {
+        return
+      }
+
+      return {
+        label: info.name,
+        value: propertyId,
       }
     })
-  }, [data, exemplarProperties, readonly])
+  }, [data, exemplarProperties, exemplarType, readonly])
 
   const [isSearching, setSearching] = useState(false)
 
