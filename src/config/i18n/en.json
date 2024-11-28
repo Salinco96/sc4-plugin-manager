@@ -466,6 +466,7 @@
     "entry": {
       "labelCompressed": "{{type}} ({{id}}) ({{size}} bytes, {{compression, percent}} compression)",
       "label": "{{type}} ({{id}}) ({{size}} bytes)",
+      "overridden": "Overridden",
       "patch": "Open editor",
       "patched": "This entry has been patched locally",
       "view": "Open preview"

@@ -4,7 +4,7 @@ import { groupBy, mapDefined, mapValues, size, values } from "@salinco/nice-util
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import type { DBPFFile } from "@common/dbpf"
+import type { DBPFFile, TGI } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
 import type { PackageFile } from "@common/types"
 import { FlexBox } from "@components/FlexBox"
@@ -16,6 +16,7 @@ import { DBPFEntryCategory, getDBPFEntryCategory, getDBPFEntryCategoryLabel } fr
 export interface PackageEntriesProps {
   file: PackageFile
   fileData: DBPFFile
+  overriddenEntries?: TGI[]
   packageId: PackageID
   setFileData: (fileData: DBPFFile) => void
 }
@@ -23,6 +24,7 @@ export interface PackageEntriesProps {
 export function PackageEntries({
   file,
   fileData,
+  overriddenEntries,
   packageId,
   setFileData,
 }: PackageEntriesProps): JSX.Element {
@@ -53,7 +55,7 @@ export function PackageEntries({
         const expanded = !!expandedCategories[category]
 
         return (
-          <FlexBox direction="column">
+          <FlexBox direction="column" key={category}>
             <FlexBox sx={{ alignItems: "center", gap: 0.5 }}>
               {expandable && (
                 <ToolButton
@@ -81,6 +83,7 @@ export function PackageEntries({
                     file={file}
                     fileData={fileData}
                     key={entry.id}
+                    overridden={overriddenEntries?.includes(entry.id)}
                     packageId={packageId}
                     setFileData={setFileData}
                   />

@@ -1,5 +1,5 @@
 import { DesignServices as PatchIcon, Preview as PreviewIcon } from "@mui/icons-material"
-import { ListItem } from "@mui/material"
+import { ListItem, Typography } from "@mui/material"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -34,6 +34,7 @@ export interface PackageEntryProps {
   entry: DBPFEntry
   file: PackageFile
   fileData: DBPFFile
+  overridden?: boolean
   packageId: PackageID
   setFileData: (fileData: DBPFFile) => void
 }
@@ -42,6 +43,7 @@ export function PackageEntry({
   entry,
   file,
   fileData,
+  overridden,
   packageId,
   setFileData,
 }: PackageEntryProps): JSX.Element {
@@ -74,13 +76,27 @@ export function PackageEntry({
   }
 
   return (
-    <ListItem disablePadding sx={{ alignItems: "center", display: "flex", gap: 0.5 }}>
-      {t(entry.uncompressed !== undefined ? "entry.labelCompressed" : "entry.label", {
-        compression: 100 * compression,
-        id: entry.id,
-        size: entry.size,
-        type: getDBPFEntryLabel(t, entry),
-      })}
+    <ListItem
+      disablePadding
+      sx={{
+        alignItems: "center",
+        display: "flex",
+        gap: 0.5,
+        opacity: overridden ? 0.5 : undefined,
+      }}
+    >
+      <Typography
+        sx={{ cursor: overridden ? "help" : undefined }}
+        title={overridden ? t("entry.overridden") : undefined}
+        variant="body1"
+      >
+        {t(entry.uncompressed !== undefined ? "entry.labelCompressed" : "entry.label", {
+          compression: 100 * compression,
+          id: entry.id,
+          size: entry.size,
+          type: getDBPFEntryLabel(t, entry),
+        })}
+      </Typography>
       {isViewable && (
         <ToolButton
           description={isEditable ? t("entry.patch") : t("entry.view")}

@@ -5,6 +5,7 @@ import { FlexBox, type FlexBoxProps } from "./FlexBox"
 
 export interface ToolButtonProps {
   description: string
+  disabled?: boolean
   icon: ComponentType<{ fontSize: "inherit" }>
   onClick?: () => void
   size?: FlexBoxProps["fontSize"]
@@ -12,6 +13,7 @@ export interface ToolButtonProps {
 
 export function ToolButton({
   description,
+  disabled,
   icon: IconComponent,
   onClick,
   size,
@@ -28,6 +30,7 @@ export function ToolButton({
     <IconButton
       aria-label={description}
       color="inherit"
+      disabled={disabled}
       onClick={onClick}
       size="small"
       sx={{ fontSize: size, padding: 0 }}
