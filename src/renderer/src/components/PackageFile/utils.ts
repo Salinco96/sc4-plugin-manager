@@ -2,7 +2,7 @@ import type { TFunction } from "i18next"
 import type { Namespace } from "i18next"
 
 import { DBPFDataType, type DBPFEntry, DBPFFileType, isType, parseTGI } from "@common/dbpf"
-import { ExemplarPropertyID, ExemplarType } from "@common/exemplars"
+import { ExemplarType, getExemplarType } from "@common/exemplars"
 
 // Keep in dispay order
 export enum DBPFEntryCategory {
@@ -45,10 +45,10 @@ export function getDBPFEntryLabel(t: TFunction<Namespace>, entry: DBPFEntry): st
   if (entry.type === DBPFDataType.EXMP) {
     const isCohort = isType(entry.id, DBPFFileType.COHORT)
     const label = t(isCohort ? "cohort" : "exemplar", { ns: "DBPFEntryType" })
-    const exemplarType = entry.data?.properties[ExemplarPropertyID.ExemplarType]?.value
+    const exemplarType = getExemplarType(entry.id, entry.data)
 
     if (exemplarType) {
-      const type = ExemplarType[exemplarType as ExemplarType] as keyof typeof ExemplarType
+      const type = ExemplarType[exemplarType] as keyof typeof ExemplarType
       return `${label} - ${t(type ?? "Unknown", { ns: "ExemplarType" })}`
     }
 

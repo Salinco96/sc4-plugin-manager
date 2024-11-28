@@ -4,7 +4,7 @@ import { values } from "@salinco/nice-utils"
 
 import type { BuildingData } from "@common/buildings"
 import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
-import type { ExemplarPropertyInfo } from "@common/exemplars"
+import { type ExemplarPropertyInfo, getExemplarType } from "@common/exemplars"
 import type { LotData } from "@common/lots"
 import { Feature } from "@common/types"
 import { loadDBPF } from "@node/dbpf"
@@ -14,8 +14,8 @@ import { CategoryID } from "@common/categories"
 import { parseStringArray } from "@common/utils/types"
 import { getBuildingData } from "./buildings"
 import { getLotData } from "./lots"
-import { DeveloperID, type Exemplar, ExemplarPropertyID, ExemplarType, SimulatorID } from "./types"
-import { get, getBaseTextureId } from "./utils"
+import { DeveloperID, type Exemplar, ExemplarType, SimulatorID } from "./types"
+import { getBaseTextureId } from "./utils"
 
 export interface SC4FileData {
   buildings: BuildingData[]
@@ -25,18 +25,6 @@ export interface SC4FileData {
   models: string[]
   props: string[]
   textures: string[]
-}
-
-const defaultTypes: {
-  [groupId in number]?: ExemplarType
-} = {
-  [0x07bddf1c]: ExemplarType.Building, // civics/parks
-  [0x47bddf12]: ExemplarType.Building, // commercial
-  [0x67bddf0c]: ExemplarType.Building, // residential
-  [0x8a3858d8]: ExemplarType.Building, // rewards
-  [0xa7bddf17]: ExemplarType.Building, // industrial
-  [0xc8dbccba]: ExemplarType.Building, // utilities
-  [0xca386e22]: ExemplarType.Building, // landmarks
 }
 
 export async function analyzeSC4Files(
@@ -66,10 +54,9 @@ export async function analyzeSC4Files(
       for (const entry of values(file.entries)) {
         switch (entry.type) {
           case DBPFDataType.EXMP: {
-            const [, groupId, instanceId] = parseTGI(entry.id)
+            const instanceId = parseTGI(entry.id)[2]
             const exemplar = { ...entry, file: filePath } as Exemplar
-
-            const type = get(exemplar, ExemplarPropertyID.ExemplarType) ?? defaultTypes[groupId]
+            const type = getExemplarType(entry.id, entry.data)
 
             switch (type) {
               case ExemplarType.Building: {

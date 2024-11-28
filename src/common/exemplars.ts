@@ -1,4 +1,5 @@
-import type { TGI } from "./dbpf"
+import { isArray, isNumber } from "@salinco/nice-utils"
+import { type TGI, parseTGI } from "./dbpf"
 
 export interface ExemplarData {
   isCohort: boolean
@@ -53,6 +54,7 @@ export interface ExemplarPropertyInfo extends ExemplarPropertyItemInfo {
   repeat?: boolean
   size?: number
   type?: ExemplarValueType
+  usage?: number
 }
 
 export type ExemplarProperty<T extends ExemplarValueType = ExemplarValueType> = {
@@ -171,4 +173,29 @@ export enum ExemplarValueType {
 export enum PropertyKeyType {
   Single = 0x00,
   Multi = 0x80,
+}
+
+const defaultTypes: {
+  [groupId in number]?: ExemplarType
+} = {
+  [0x07bddf1c]: ExemplarType.Building, // civics/parks
+  [0x47bddf12]: ExemplarType.Building, // commercial
+  [0x67bddf0c]: ExemplarType.Building, // residential
+  [0x8a3858d8]: ExemplarType.Building, // rewards
+  [0xa7bddf17]: ExemplarType.Building, // industrial
+  [0xc8dbccba]: ExemplarType.Building, // utilities
+  [0xca386e22]: ExemplarType.Building, // landmarks
+}
+
+export function getExemplarType(tgi: TGI, data?: ExemplarData): ExemplarType | null {
+  const type = data?.properties[ExemplarPropertyID.ExemplarType]?.value
+  if (isNumber(type) && ExemplarType[type]) {
+    return type as ExemplarType
+  }
+
+  if (isArray(type) && isNumber(type[0]) && ExemplarType[type[0]]) {
+    return type[0] as ExemplarType
+  }
+
+  return defaultTypes[parseTGI(tgi)[1]] ?? null
 }
