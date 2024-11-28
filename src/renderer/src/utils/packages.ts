@@ -1,4 +1,4 @@
-import { mapValues, values } from "@salinco/nice-utils"
+import { mapValues, parseHex, toHex, values } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
 import { CategoryID, isCategory } from "@common/categories"
@@ -168,7 +168,7 @@ export function filterVariant(
   packageInfo: PackageInfo,
   variantInfo: VariantInfo,
   profileInfo: ProfileInfo | undefined,
-  filters: Omit<PackageFilters, "search"> & { pattern?: RegExp },
+  filters: Omit<PackageFilters, "search"> & { hex?: string; pattern?: RegExp },
 ): boolean {
   const packageStatus = getPackageStatus(packageInfo, profileInfo)
 
@@ -228,6 +228,18 @@ export function filterVariant(
     return false
   }
 
+  if (filters.hex) {
+    if (variantInfo.buildings?.some(building => building.id === filters.hex)) {
+      return true
+    }
+
+    if (variantInfo.lots?.some(lot => lot.id === filters.hex)) {
+      return true
+    }
+
+    return false
+  }
+
   return true
 }
 
@@ -250,14 +262,15 @@ export function computePackageList(
 
   // Match search query from start of words only, ignoring leading/trailing spaces
   const search = packageFilters.search.trim()
-  const pattern = search ? getStartOfWordSearchRegex(search) : undefined
+  const isHexSearch = !!search.match(/^(0x)?[0-9a-fA-F]{8}$/)
 
-  const filters: Omit<PackageFilters, "search"> & { pattern?: RegExp } = {
+  const filters: Omit<PackageFilters, "search"> & { hex?: string; pattern?: RegExp } = {
     ...packageFilters,
     dependencies: packageFilters.dependencies || packageFilters.onlyErrors,
     experimental: packageFilters.experimental || packageFilters.onlyErrors,
     incompatible: packageFilters.incompatible || packageFilters.onlyErrors,
-    pattern,
+    hex: isHexSearch ? toHex(parseHex(search), 8) : undefined,
+    pattern: search && !isHexSearch ? getStartOfWordSearchRegex(search) : undefined,
   }
 
   const filteredPackages = values(packages)
