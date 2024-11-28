@@ -431,11 +431,11 @@ assets:
     download: https://github.com/0xC0000054/sc4-more-demand-info/releases/download/v{version}/SC4MoreDemandInfo.zip
     filename: SC4MoreDemandInfo.zip
     files:
+      - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
       - Dll/LICENSE.txt
       - Dll/README.txt
       - Dll/SC4MoreDemandInfo.dll
       - Dll/Third Party Notices.txt
-      - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
       - Readme.txt
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
@@ -713,26 +713,26 @@ assets:
       - submenus/health/health-large-submenu.dat
       - submenus/health/health-medium-submenu.dat
       - submenus/health/health-small-submenu.dat
+      - submenus/highway/signage-submenu.dat
       - submenus/industrial/ploppable-Ia-submenu.dat
       - submenus/industrial/ploppable-Id-submenu.dat
       - submenus/industrial/ploppable-Iht-submenu.dat
       - submenus/industrial/ploppable-Im-submenu.dat
-      - submenus/highway/signage-submenu.dat
       - submenus/landmark/entertainment-submenu.dat
       - submenus/landmark/government-submenu.dat
       - submenus/landmark/religion-submenu.dat
-      - submenus/park/embankment-submenu.dat
-      - submenus/park/fillers-submenu.dat
-      - submenus/park/green-spaces-submenu.dat
-      - submenus/park/modular-parks-submenu.dat
-      - submenus/park/plaza-submenu.dat
-      - submenus/park/sports-submenu.dat
       - submenus/misc-transit/bus-submenu.dat
       - submenus/misc-transit/ElRail-submenu.dat
       - submenus/misc-transit/GLR-submenu.dat
       - submenus/misc-transit/multimodal-stations-submenu.dat
       - submenus/misc-transit/parking-submenu.dat
       - submenus/misc-transit/subway-submenu.dat
+      - submenus/park/embankment-submenu.dat
+      - submenus/park/fillers-submenu.dat
+      - submenus/park/green-spaces-submenu.dat
+      - submenus/park/modular-parks-submenu.dat
+      - submenus/park/plaza-submenu.dat
+      - submenus/park/sports-submenu.dat
       - submenus/police/military-submenu.dat
       - submenus/police/police-deluxe-submenu.dat
       - submenus/police/police-large-submenu.dat

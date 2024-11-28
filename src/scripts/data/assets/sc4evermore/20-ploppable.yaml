@@ -187,26 +187,6 @@ assets:
       - bulldoze: 5
         category: landmarks
         cost: 7
-        filename: Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
-        id: 70b5cb20
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Titanic
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
         filename: Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd01_90c1db9e.SC4Lot
         id: 90c1db9e
         maintenance: 1
@@ -244,6 +224,26 @@ assets:
         water: 5
         waterPollution: 1
         waterPollutionRadius: 1
+      - bulldoze: 5
+        category: landmarks
+        cost: 7
+        filename: Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
+        id: 70b5cb20
+        maintenance: 1
+        menu: Landmarks
+        model: 5ad0e817-badb57f1-0e110000
+        name: JRJ Titanic
+        pollution: -5
+        pollutionRadius: 3
+        rating: 10
+        ratingRadius: 256
+        relief:
+          r$: 250
+          r$$: 250
+          r$$$: 250
+        water: 5
+        waterPollution: 1
+        waterPollutionRadius: 1
     categories:
       - landmarks
     category: 20-ploppable
@@ -261,9 +261,9 @@ assets:
       - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow Full_f0c045df.SC4Lot
       - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow_d0bf0413.SC4Lot
       - Jeronij/JRJ Ships Compilation/Juan J. Sister/JRJ Sister_90be0bd3.SC4Lot
-      - Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
       - Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd01_90c1db9e.SC4Lot
       - Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd02_90c204fd.SC4Lot
+      - Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
       - ~Documents/Jeronij_Readmes/images/JRJ_Ships_JJSister.jpg
       - ~Documents/Jeronij_Readmes/images/JRJ_Ships_NedLloyd.jpg
       - ~Documents/Jeronij_Readmes/images/JRJ_Ships_Titanic.jpg
@@ -363,13 +363,6 @@ assets:
         size: 3x1
         textures:
           - 25f40000
-      - building: 70b5cb20
-        filename: Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
-        id: 70b5cb20
-        name: JRJ Titanic
-        props:
-          - 70b5ca2f
-        size: 1x1
       - building: 90c1db9e
         filename: Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd01_90c1db9e.SC4Lot
         id: 90c1db9e
@@ -388,6 +381,13 @@ assets:
         size: 5x1
         textures:
           - 25f40000
+      - building: 70b5cb20
+        filename: Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
+        id: 70b5cb20
+        name: JRJ Titanic
+        props:
+          - 70b5ca2f
+        size: 1x1
     meta:
       timestamp: 2024-11-27T09:00:58.547Z
       version: 1

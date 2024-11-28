@@ -4,7 +4,7 @@ import { values } from "@salinco/nice-utils"
 
 import type { BuildingData } from "@common/buildings"
 import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
-import { type ExemplarPropertyInfo, getExemplarType } from "@common/exemplars"
+import { type ExemplarPropertyInfo, ExemplarType, getExemplarType } from "@common/exemplars"
 import type { LotData } from "@common/lots"
 import { Feature } from "@common/types"
 import { loadDBPF } from "@node/dbpf"
@@ -14,7 +14,7 @@ import { CategoryID } from "@common/categories"
 import { parseStringArray } from "@common/utils/types"
 import { getBuildingData } from "./buildings"
 import { getLotData } from "./lots"
-import { DeveloperID, type Exemplar, ExemplarType, SimulatorID } from "./types"
+import { DeveloperID, type Exemplar, SimulatorID } from "./types"
 import { getBaseTextureId } from "./utils"
 
 export interface SC4FileData {
@@ -56,9 +56,9 @@ export async function analyzeSC4Files(
           case DBPFDataType.EXMP: {
             const instanceId = parseTGI(entry.id)[2]
             const exemplar = { ...entry, file: filePath } as Exemplar
-            const type = getExemplarType(entry.id, entry.data)
+            const exemplarType = getExemplarType(entry.id, entry.data)
 
-            switch (type) {
+            switch (exemplarType) {
               case ExemplarType.Building: {
                 buildings.push(getBuildingData(exemplar))
                 break
