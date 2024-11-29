@@ -467,9 +467,9 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                               <Typography variant="body2">
                                 <b>{`${t("requirements")}: `}</b>
                               </Typography>
-                              <ul style={{ marginBlockStart: 0 }}>
+                              <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
                                 {collect(lot.requirements, (value, requirement) => (
-                                  <li key={requirement}>
+                                  <Typography component="li" key={requirement} variant="body2">
                                     {`${getRequirementLabel(
                                       t,
                                       requirement,
@@ -482,7 +482,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                                       variantInfo.options,
                                       profileOptions,
                                     )}`}
-                                  </li>
+                                  </Typography>
                                 ))}
                               </ul>
                             </>

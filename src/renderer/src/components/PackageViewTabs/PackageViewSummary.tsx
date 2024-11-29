@@ -1,10 +1,9 @@
 import { Box, Link, Typography } from "@mui/material"
-import { collect, isEmpty } from "@salinco/nice-utils"
+import { collect, isEmpty, values } from "@salinco/nice-utils"
 import { useCallback } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { AuthorID } from "@common/authors"
-import { getCategories, getCategoryLabel } from "@common/categories"
 import { getFeatureLabel } from "@common/i18n"
 import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import { MarkdownView } from "@components/MarkdownView"
@@ -18,7 +17,6 @@ import type { PackageViewTabInfoProps } from "./tabs"
 
 export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const authors = useAuthors()
-  const categories = useStore(store => store.categories)
   const profileOptions = useStore(store => store.profileOptions)
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
@@ -42,64 +40,46 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
         </Text>
       )}
 
-      {variantInfo.description && <MarkdownView md={variantInfo.description} />}
+      {variantInfo.description && (
+        <MarkdownView
+          md={variantInfo.description.replace(
+            /\[.+\]\((https:\/\/community.simtropolis.com\/profile\/[^)]+\/)\)/g,
+            (match, url) => {
+              const authorInfo = values(authors).find(authorInfo => authorInfo.url === url)
+              if (authorInfo) {
+                return `[${authorInfo.name}](${url})`
+              }
 
-      <>
-        <Typography variant="body2">
-          <b>{`${t("credits")}: `}</b>
-        </Typography>
-        <ul style={{ marginBlockStart: 0 }}>
-          {collect(variantInfo.credits, (reason, authorId) => (
-            <li key={authorId}>
-              <Link onClick={() => openAuthorView(authorId)} sx={{ cursor: "pointer" }}>
-                {getAuthorName(authorId, authors)}
-              </Link>
-              {reason && ` - ${reason}`}
-            </li>
-          ))}
-        </ul>
-      </>
-
-      {variantInfo.thanks && !isEmpty(variantInfo.thanks) && (
-        <>
-          <Typography variant="body2">
-            <b>{`${t("thanks")}: `}</b>
-          </Typography>
-          <ul style={{ marginBlockStart: 0 }}>
-            {collect(variantInfo.thanks, (reason, authorId) => (
-              <li key={authorId}>
-                <Link onClick={() => openAuthorView(authorId)} sx={{ cursor: "pointer" }}>
-                  {getAuthorName(authorId, authors)}
-                </Link>
-                {reason && ` - ${reason}`}
-              </li>
-            ))}
-          </ul>
-        </>
+              return match
+            },
+          )}
+        />
       )}
 
-      <Typography variant="body2">
-        <b>{`${t("category")}: `}</b>
-        {getCategories(variantInfo)
-          .map(categoryId => getCategoryLabel(categoryId, categories))
-          .join(", ")}
-      </Typography>
+      {variantInfo.url && (
+        <Text maxLines={1} variant="body2">
+          <b>{`${t("url")}: `}</b>
+          <Link href={variantInfo.url} target="_blank" rel="noreferrer">
+            {variantInfo.url}
+          </Link>
+        </Text>
+      )}
 
       {variantInfo.repository && (
         <Text maxLines={1} variant="body2">
           <b>{`${t("repository")}: `}</b>
-          <a href={variantInfo.repository} target="_blank" rel="noreferrer">
+          <Link href={variantInfo.repository} target="_blank" rel="noreferrer">
             {variantInfo.repository}
-          </a>
+          </Link>
         </Text>
       )}
 
       {variantInfo.support && (
         <Text maxLines={1} variant="body2">
           <b>{`${t("support")}: `}</b>
-          <a href={variantInfo.support} target="_blank" rel="noreferrer">
+          <Link href={variantInfo.support} target="_blank" rel="noreferrer">
             {variantInfo.support}
-          </a>
+          </Link>
         </Text>
       )}
 
@@ -110,14 +90,52 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
         </Typography>
       )}
 
+      <>
+        <Typography variant="body2">
+          <b>{`${t("credits")}: `}</b>
+        </Typography>
+        <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
+          {collect(variantInfo.credits, (reason, authorId) => (
+            <Typography component="li" key={authorId} variant="body2">
+              <Link
+                onClick={() => openAuthorView(authorId)}
+                sx={{ cursor: "pointer" }}
+                title="View author"
+              >
+                {getAuthorName(authorId, authors)}
+              </Link>
+              {reason && ` - ${reason}`}
+            </Typography>
+          ))}
+        </ul>
+      </>
+
+      {variantInfo.thanks && !isEmpty(variantInfo.thanks) && (
+        <>
+          <Typography variant="body2">
+            <b>{`${t("thanks")}: `}</b>
+          </Typography>
+          <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
+            {collect(variantInfo.thanks, (reason, authorId) => (
+              <Typography component="li" key={authorId} variant="body2">
+                <Link onClick={() => openAuthorView(authorId)} sx={{ cursor: "pointer" }}>
+                  {getAuthorName(authorId, authors)}
+                </Link>
+                {reason && ` - ${reason}`}
+              </Typography>
+            ))}
+          </ul>
+        </>
+      )}
+
       {variantInfo.requirements && !isEmpty(variantInfo.requirements) && (
         <>
           <Typography variant="body2">
             <b>{`${t("requirements")}: `}</b>
           </Typography>
-          <ul style={{ marginBlockStart: 0 }}>
+          <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
             {collect(variantInfo.requirements, (value, requirement) => (
-              <li key={requirement}>
+              <Typography component="li" key={requirement} variant="body2">
                 {`${getRequirementLabel(t, requirement, variantInfo.options, profileOptions)}: ${getRequirementValueLabel(
                   t,
                   requirement,
@@ -125,7 +143,7 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
                   variantInfo.options,
                   profileOptions,
                 )}`}
-              </li>
+              </Typography>
             ))}
           </ul>
         </>

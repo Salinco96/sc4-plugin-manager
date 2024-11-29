@@ -3,7 +3,7 @@ import {
   Cancel as NotAppliedIcon,
   Update as UpdateIcon,
 } from "@mui/icons-material"
-import { Button, FormGroup, Paper, Tooltip, Typography, useTheme } from "@mui/material"
+import { Button, FormGroup, Link, Paper, Tooltip, Typography, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
@@ -143,9 +143,9 @@ function Settings(): JSX.Element {
                 }}
               >
                 <UpdateIcon color="warning" />
-                <a href={settings.update.url} target="_blank" rel="noreferrer">
+                <Link href={settings.update.url} target="_blank" rel="noreferrer">
                   {t("version.updateAvailable", { version: settings.update.version })}
-                </a>
+                </Link>
               </FlexBox>
             )}
           </FlexBox>
