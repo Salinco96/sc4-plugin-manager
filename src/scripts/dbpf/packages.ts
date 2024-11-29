@@ -16,7 +16,7 @@ import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { CategoryID } from "@common/categories"
 import { type PackageID, getOwnerId } from "@common/packages"
-import type { PackageData } from "@common/types"
+import type { PackageData, PackageFile } from "@common/types"
 import type { VariantID } from "@common/variants"
 import { getExtension } from "@node/files"
 
@@ -106,6 +106,7 @@ export function writePackageData(
   variantId: VariantID,
   includedFiles: string[],
   excludedFiles: string[],
+  packageFiles: { [path in string]?: PackageFile },
   authors: AuthorID[],
   dependencies: PackageID[],
   timestamp: Date,
@@ -308,16 +309,22 @@ export function writePackageData(
     docs: excludedDocFiles,
   } = categorizeFiles(excludedFiles)
 
-  if (includedCleanitolFiles?.length || excludedCleanitolFiles?.length) {
-    variantAsset.cleanitol = includedCleanitolFiles ?? []
+  if (includedCleanitolFiles?.length) {
+    variantAsset.cleanitol = includedCleanitolFiles
+  } else if (excludedCleanitolFiles?.length) {
+    variantAsset.cleanitol = []
   }
 
-  if (includedDocFiles?.length || excludedDocFiles?.length) {
-    variantAsset.docs = includedDocFiles ?? []
+  if (includedDocFiles?.length) {
+    variantAsset.docs = includedDocFiles
+  } else if (excludedDocFiles?.length) {
+    variantAsset.docs = []
   }
 
-  if (includedSC4Files?.length || excludedSC4Files?.length) {
-    variantAsset.include = includedSC4Files ?? []
+  if (includedSC4Files?.length) {
+    variantAsset.include = includedSC4Files.map(file => packageFiles[file] ?? file)
+  } else if (excludedSC4Files?.length) {
+    variantAsset.include = []
   }
 
   const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.filename))
@@ -326,10 +333,9 @@ export function writePackageData(
     variantData.lots ??= []
 
     for (const lot of lots) {
-      const existingLots = variantData.lots.filter(({ id }) => id === lot.id)
-
-      let existingLot =
-        existingLots.find(({ filename }) => filename === lot.filename) ?? existingLots.at(0)
+      let existingLot = variantData.lots.find(
+        ({ filename, id }) => id === lot.id && filename === lot.filename,
+      )
 
       if (!existingLot) {
         existingLot = { id: lot.id, filename: lot.filename }
@@ -354,11 +360,9 @@ export function writePackageData(
     variantData.buildings ??= []
 
     for (const building of buildings) {
-      const existingBuildings = variantData.buildings.filter(({ id }) => id === building.id)
-
-      let existingBuilding =
-        existingBuildings.find(({ filename }) => filename === building.filename) ??
-        existingBuildings.at(0)
+      let existingBuilding = variantData.buildings.find(
+        ({ filename, id }) => id === building.id && filename === building.filename,
+      )
 
       if (!existingBuilding) {
         existingBuilding = { id: building.id, filename: building.filename }

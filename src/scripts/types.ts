@@ -7,7 +7,7 @@ import type { CategoryID } from "@common/categories"
 import type { LotData } from "@common/lots"
 import type { PackageID } from "@common/packages"
 import type { Feature } from "@common/types"
-import type { VariantID } from "@common/variants"
+import type { MaybeArray } from "@common/utils/types"
 
 export interface IndexerOptions {
   include: {
@@ -122,8 +122,9 @@ export type IndexerSourceCategoryID = ID<string, IndexerSourceCategory>
 export type IndexerCategoryID = `${IndexerSourceID}/${IndexerSourceCategoryID}`
 
 export interface IndexerPathOverride {
+  override?: boolean
   packageId?: PackageID
-  variantId?: VariantID
+  variantId?: MaybeArray<string>
 }
 
 export interface IndexerVariantOverride extends IndexerPathOverride {

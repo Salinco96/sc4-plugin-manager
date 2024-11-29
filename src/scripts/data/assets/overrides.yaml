@@ -1119,60 +1119,79 @@ simtropolis/21340-functional-landmarks-complete-set-v10:
   packageId: toroca/functional-landmarks
   paths:
     63Building.dat:
+      override: true
       packageId: maxis/63-building
       variantId: functional
     AdlerPlanetarium.dat:
+      override: true
       packageId: maxis/adler-planetarium
       variantId: functional
     ArcDeTriomphe.dat:
+      override: true
       packageId: maxis/arc-de-triomphe
       variantId: functional
     BrandenburgGate.dat:
+      override: true
       packageId: maxis/brandenburg-gate
       variantId: functional
     CapitolRecordsBuilding.dat:
+      override: true
       packageId: maxis/capitol-records
       variantId: functional
     GlobeArena.dat:
+      override: true
       packageId: maxis/globe-arena
       variantId: functional
     GrandCentralStation.dat:
+      override: true
       packageId: maxis/grand-central-station
       variantId: functional
     Kunjungjon.dat:
+      override: true
       packageId: maxis/kunjungjon
       variantId: functional
     Parthenon.dat:
+      override: true
       packageId: maxis/parthenon
       variantId: functional
     RockefellerCenter.dat:
+      override: true
       packageId: maxis/rockefeller-center
       variantId: functional
     SanFranciscoCityHall.dat:
+      override: true
       packageId: maxis/san-francisco-city-hall
       variantId: functional
     SchlossSchoenbrun.dat:
+      override: true
       packageId: maxis/schloss-schoenbrun
       variantId: functional
     SeoulCityHall.dat:
+      override: true
       packageId: maxis/seoul-city-hall
       variantId: functional
     SeoulWorldCupStadium.dat:
+      override: true
       packageId: maxis/seoul-soccer-stadium
       variantId: functional
     Stonehenge.dat:
+      override: true
       packageId: maxis/stonehenge
       variantId: functional
     Sungrye-mun.dat:
+      override: true
       packageId: maxis/namdaemun
       variantId: functional
     TaipeiFineArtMuseum.dat:
+      override: true
       packageId: maxis/taipei-art-museum
       variantId: functional
     TempleExpiatioriDeLaSagradaFamilia.dat:
+      override: true
       packageId: maxis/sagrada-familia
       variantId: functional
     TheLivingMall.dat:
+      override: true
       packageId: maxis/the-living-mall
       variantId: functional
   variantId: default
@@ -2618,23 +2637,23 @@ simtropolis/maxis-flags-us: null
 
 simtropolis/maxis-plugin-002-the-living-mall:
   packageId: maxis/the-living-mall
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-003-arc-de-triomphe:
   packageId: maxis/arc-de-triomphe
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-004-seoul-city-hall:
   packageId: maxis/seoul-city-hall
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-005-seoul-soccer-stadium:
   packageId: maxis/seoul-soccer-stadium
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-006-globe-arena:
   packageId: maxis/globe-arena
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-007-air-force-base:
   packageId: maxis/air-force-base
@@ -2642,55 +2661,55 @@ simtropolis/maxis-plugin-007-air-force-base:
 
 simtropolis/maxis-plugin-008-kunjungjon:
   packageId: maxis/kunjungjon
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-009-namdaemun:
   packageId: maxis/namdaemun
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-00A-63-building:
   packageId: maxis/63-building
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-00C-brandenburg-gate:
   packageId: maxis/brandenburg-gate
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-00D-parthenon:
   packageId: maxis/parthenon
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-00E-schloss-schoenbrun:
   packageId: maxis/schloss-schoenbrun
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-00F-temple-expiatiori:
   packageId: maxis/sagrada-familia
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-010-grand-central-station:
   packageId: maxis/grand-central-station
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-012-capitol-records:
   packageId: maxis/capitol-records
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-016-stonehenge:
   packageId: maxis/stonehenge
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-017-san-francisco-city-hall:
   packageId: maxis/san-francisco-city-hall
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-030-taipei-art-museum:
   packageId: maxis/taipei-art-museum
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-031-adler-planetarium:
   packageId: maxis/adler-planetarium
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-032-mayflower-port:
   packageId: maxis/mayflower-port
@@ -2698,7 +2717,7 @@ simtropolis/maxis-plugin-032-mayflower-port:
 
 simtropolis/maxis-plugin-033-rockefeller-center:
   packageId: maxis/rockefeller-center
-  variantId: default
+  variantId: default,functional
 
 simtropolis/maxis-plugin-034-sobchak-lanes:
   packageId: maxis/sobchak-lanes

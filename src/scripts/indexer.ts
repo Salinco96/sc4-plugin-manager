@@ -4,7 +4,6 @@ import path from "node:path"
 import { input, select } from "@inquirer/prompts"
 import {
   ID,
-  difference,
   forEach,
   forEachAsync,
   getRequired,
@@ -31,8 +30,9 @@ import {
   ExemplarValueType,
 } from "@common/exemplars"
 import { type PackageID, getOwnerId } from "@common/packages"
-import { ConfigFormat, type PackageData } from "@common/types"
+import { ConfigFormat, type PackageData, type PackageFile } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
+import { parseStringArray } from "@common/utils/types"
 import type { VariantData, VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
@@ -951,27 +951,36 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       variantOverride.packageId = basePackageId
     }
 
-    let baseVariantId = variantOverride.variantId
-
-    if (!baseVariantId) {
+    if (!variantOverride.variantId) {
       console.debug(`Generating package for ${variantAssetId} -> ${basePackageId}`)
       // Try to infer DarkNite variants from filename
       const defaultVariantId = getDefaultVariantId(variantEntry)
       const overrideVariantId = await promptVariantId(defaultVariantId, variantEntry.filename)
-      baseVariantId = variantOverride.variantId = overrideVariantId
+      variantOverride.variantId = overrideVariantId
     }
 
-    await generateVariant(basePackageId, baseVariantId)
+    const baseIsOverride = !!variantOverride.override
+    const baseVariantIds = parseStringArray(variantOverride.variantId) as VariantID[]
+
+    const outputs = new Set<string>()
+    for (const baseVariantId of baseVariantIds) {
+      if (!outputs.has(`${basePackageId}#${baseVariantId}`)) {
+        await generateVariant(basePackageId, baseVariantId)
+        outputs.add(`${basePackageId}#${baseVariantId}`)
+      }
+    }
 
     if (variantOverride.paths) {
-      const outputs = new Set<string>()
-      outputs.add(`${basePackageId}#${baseVariantId}`)
       for (const pathOverride of values(variantOverride.paths)) {
-        const packageId = pathOverride?.packageId ?? basePackageId
-        const variantId = pathOverride?.variantId ?? baseVariantId
-        if (!outputs.has(`${packageId}#${variantId}`)) {
-          await generateVariant(packageId, variantId)
-          outputs.add(`${packageId}#${variantId}`)
+        const pathPackageId = pathOverride?.packageId ?? basePackageId
+        const pathVariantIds = pathOverride?.variantId
+          ? (parseStringArray(pathOverride.variantId) as VariantID[])
+          : baseVariantIds
+        for (const pathVariantId of pathVariantIds) {
+          if (!outputs.has(`${pathPackageId}#${pathVariantId}`)) {
+            await generateVariant(pathPackageId, pathVariantId)
+            outputs.add(`${pathPackageId}#${pathVariantId}`)
+          }
         }
       }
     }
@@ -1013,6 +1022,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           console.debug(`Creating variant ${packageId}#${variantId}...`)
         }
 
+        const packageFiles: { [path in string]?: PackageFile } = {}
         let includedFiles = variantEntry.files
         let excludedFiles: string[] = []
         if (variantOverride.paths) {
@@ -1020,10 +1030,13 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           const unmatchedFiles = new Set(variantEntry.files)
           for (const path in variantOverride.paths) {
             const pathOverride = variantOverride.paths[path]
+            const pathIsOverride = pathOverride?.override ?? baseIsOverride
+            const pathPackageId = pathOverride?.packageId ?? basePackageId
+            const pathVariantIds = pathOverride?.variantId
+              ? (parseStringArray(pathOverride.variantId) as VariantID[])
+              : baseVariantIds
 
-            const isMatching =
-              (pathOverride?.packageId ?? basePackageId) === packageId &&
-              (pathOverride?.variantId ?? baseVariantId) === variantId
+            const isMatching = packageId === pathPackageId && pathVariantIds.includes(variantId)
 
             const pattern = globToRegex(path)
             for (const file of variantEntry.files) {
@@ -1031,19 +1044,27 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
                 unmatchedFiles.delete(file)
                 if (isMatching) {
                   matchedFiles.add(file)
+                  if (pathIsOverride) {
+                    packageFiles[file] ??= { path: file }
+                    packageFiles[file].priority ??= 900
+                  }
                 }
               }
             }
           }
 
-          if (basePackageId === packageId && baseVariantId === variantId) {
+          if (packageId === basePackageId && baseVariantIds.includes(variantId)) {
             for (const file of unmatchedFiles) {
               matchedFiles.add(file)
+              if (baseIsOverride) {
+                packageFiles[file] ??= { path: file }
+                packageFiles[file].priority ??= 900
+              }
             }
           }
 
-          includedFiles = Array.from(matchedFiles)
-          excludedFiles = difference(variantEntry.files, includedFiles)
+          includedFiles = Array.from(matchedFiles.values())
+          excludedFiles = variantEntry.files.filter(file => !matchedFiles.has(file))
         }
 
         dbPackagesConfigs[ownerId] ??= {}
@@ -1057,6 +1078,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           variantId,
           includedFiles,
           excludedFiles,
+          packageFiles,
           authors,
           dependencies,
           now,
