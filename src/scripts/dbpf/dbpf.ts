@@ -40,6 +40,8 @@ export async function analyzeSC4Files(
   const textures = new Set<string>()
 
   for (const filePath of filePaths) {
+    console.debug(`Analyzing ${filePath}...`)
+
     if (getExtension(filePath) === ".dll") {
       categories.add(CategoryID.MODS)
       categories.add(CategoryID.DLL)

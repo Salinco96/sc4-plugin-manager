@@ -17,6 +17,8 @@ import { loadConfig, readConfig } from "@node/configs"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
+import type { Exemplars } from "@common/state"
+import { loadBuildingInfo, loadLotInfo } from "./packages"
 import { fromProfileData } from "./profiles"
 
 export async function loadAuthors(context: TaskContext, basePath: string): Promise<Authors> {
@@ -96,6 +98,30 @@ export async function loadExemplarProperties(
   } catch (error) {
     context.error("Failed to load exemplar properties", error)
     return {}
+  }
+}
+
+export async function loadExemplars(
+  context: TaskContext,
+  basePath: string,
+  categories: Categories,
+): Promise<Exemplars> {
+  try {
+    const config = await loadConfig<Exemplars>(basePath, FILENAMES.dbExemplars)
+
+    if (!config) {
+      throw Error(`Missing config ${FILENAMES.dbExemplars}`)
+    }
+
+    return {
+      buildings: mapValues(config.data.buildings, building =>
+        loadBuildingInfo(building, categories),
+      ),
+      lots: mapValues(config.data.lots, loadLotInfo),
+    }
+  } catch (error) {
+    context.error("Failed to load exemplars", error)
+    return { buildings: {}, lots: {} }
   }
 }
 

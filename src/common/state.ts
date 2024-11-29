@@ -1,11 +1,18 @@
 import type { Authors } from "./authors"
+import type { BuildingInfo } from "./buildings"
 import type { Categories } from "./categories"
 import type { ExemplarPropertyInfo } from "./exemplars"
+import type { LotInfo } from "./lots"
 import type { OptionInfo } from "./options"
 import type { PackageID } from "./packages"
 import type { ProfileID, ProfileInfo, Profiles } from "./profiles"
 import type { Settings } from "./settings"
 import type { Features, PackageInfo, Packages } from "./types"
+
+export interface Exemplars {
+  buildings: { [id in string]?: BuildingInfo }
+  lots: { [id in string]?: LotInfo }
+}
 
 export interface ApplicationState {
   authors: Authors
@@ -16,6 +23,7 @@ export interface ApplicationState {
   exemplarProperties: {
     [propertyId in number]?: ExemplarPropertyInfo
   }
+  exemplars: Exemplars
   features: Features
   linker: TaskInfo | null
   loader: TaskInfo | null
@@ -44,6 +52,7 @@ export function getInitialState(): ApplicationState {
     categories: {},
     downloads: {},
     exemplarProperties: {},
+    exemplars: { buildings: {}, lots: {} },
     features: {},
     linker: null,
     loader: null,

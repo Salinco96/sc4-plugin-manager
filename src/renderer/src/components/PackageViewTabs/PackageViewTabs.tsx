@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next"
 
 import { ErrorBoundary } from "@components/ErrorBoundary"
 import { Loader } from "@components/Loader"
+import { useStore } from "@utils/store"
 import { Suspense } from "react"
 import { ContentErrorComponent } from "../../Content"
 import { type PackageViewTabInfoProps, packageViewTabs, usePackageViewTab } from "./tabs"
@@ -16,11 +17,16 @@ export function PackageViewTabs({ packageId }: PackageViewTabInfoProps): JSX.Ele
   const { t } = useTranslation("PackageViewTabs")
 
   const dependentPackages = useDependentPackages(packageId)
+  const exemplars = useStore(store => store.exemplars)
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
 
-  const tabs = packageViewTabs.filter(tab => tab.condition(variantInfo, dependentPackages))
-  const labels = tabs.map(tab => tab.label(t, variantInfo, packageInfo, dependentPackages))
+  const tabs = packageViewTabs.filter(tab =>
+    tab.condition(variantInfo, dependentPackages, exemplars),
+  )
+  const labels = tabs.map(tab =>
+    tab.label(t, variantInfo, packageInfo, dependentPackages, exemplars),
+  )
   const labelTags = tabs.map(tab => tab.labelTag?.(variantInfo))
 
   if (tabs.length === 0) {

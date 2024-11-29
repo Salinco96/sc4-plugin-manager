@@ -6,6 +6,7 @@ import {
   ID,
   forEach,
   forEachAsync,
+  generate,
   getRequired,
   indexBy,
   isEmpty,
@@ -40,7 +41,9 @@ import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 import { exists, removeIfPresent } from "@node/files"
 
-import { analyzeSC4Files } from "./dbpf/dbpf"
+import type { BuildingData } from "@common/buildings"
+import type { LotData } from "@common/lots"
+import { type SC4FileData, analyzeSC4Files } from "./dbpf/dbpf"
 import { writePackageData } from "./dbpf/packages"
 import {
   promptAuthorName,
@@ -74,7 +77,8 @@ const dataDir = path.join(__dirname, "data")
 const dataAssetsDir = path.join(dataDir, "assets")
 const dataDownloadsDir = getEnvRequired("INDEXER_DOWNLOADS_PATH")
 const dataDownloadsTempDir = getEnvRequired("INDEXER_DOWNLOADS_TEMP_PATH")
-
+const gameDir = getEnvRequired("INDEXER_GAME_PATH")
+;("D:\\Program Files (x86)\\Steam\\steamapps\\common\\SimCity 4 Deluxe")
 const dbDir = path.join(__dirname, "../../sc4-plugin-manager-data")
 const dbAssetsDir = path.join(dbDir, "assets")
 const dbPackagesDir = path.join(dbDir, "packages")
@@ -347,6 +351,32 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       await resolveEntry(entryId)
     }
   })
+
+  // Analyze base game configs
+  let gameConfig = await loadConfig<SC4FileData>(dataAssetsDir, "maxis")
+  if (!gameConfig?.data) {
+    const gameData = await analyzeSC4Files(gameDir, ["SimCity_1.dat"], exemplarProperties)
+    await writeConfig(dataAssetsDir, "maxis", gameData, ConfigFormat.YAML)
+    gameConfig = { data: gameData, format: ConfigFormat.YAML }
+  }
+
+  type ExemplarsData = {
+    buildings: { [id in string]?: BuildingData }
+    lots: { [id in string]?: LotData }
+  }
+
+  const dbGameConfig = await loadConfig<ExemplarsData>(dbDir, "configs/exemplars")
+  if (!dbGameConfig?.data) {
+    await writeConfig(
+      dbDir,
+      "configs/exemplars",
+      {
+        buildings: generate(gameConfig.data.buildings, ({ model, ...data }) => [data.id, data]),
+        lots: generate(gameConfig.data.lots, ({ props, textures, ...data }) => [data.id, data]),
+      },
+      ConfigFormat.YAML,
+    )
+  }
 
   const dbAssets = values(dbAssetsConfigs).reduce(
     (result, assets) => Object.assign(result, assets),
@@ -972,14 +1002,16 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     if (variantOverride.paths) {
       for (const pathOverride of values(variantOverride.paths)) {
-        const pathPackageId = pathOverride?.packageId ?? basePackageId
-        const pathVariantIds = pathOverride?.variantId
-          ? (parseStringArray(pathOverride.variantId) as VariantID[])
-          : baseVariantIds
-        for (const pathVariantId of pathVariantIds) {
-          if (!outputs.has(`${pathPackageId}#${pathVariantId}`)) {
-            await generateVariant(pathPackageId, pathVariantId)
-            outputs.add(`${pathPackageId}#${pathVariantId}`)
+        if (pathOverride) {
+          const pathPackageId = pathOverride.packageId ?? basePackageId
+          const pathVariantIds = pathOverride.variantId
+            ? (parseStringArray(pathOverride.variantId) as VariantID[])
+            : baseVariantIds
+          for (const pathVariantId of pathVariantIds) {
+            if (!outputs.has(`${pathPackageId}#${pathVariantId}`)) {
+              await generateVariant(pathPackageId, pathVariantId)
+              outputs.add(`${pathPackageId}#${pathVariantId}`)
+            }
           }
         }
       }
@@ -1015,7 +1047,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       const variantData = packageData.variants?.[variantId]
 
       // Create or update package/variant data
-      if (!variantData?.lastGenerated || variantData.lastGenerated < entry.meta.timestamp) {
+      if (
+        !variantData?.lastGenerated ||
+        variantData.lastGenerated < entry.meta.timestamp ||
+        packageId.match(/functional/)
+      ) {
         if (variantData) {
           console.debug(`Updating variant ${packageId}#${variantId}...`)
         } else {
@@ -1029,24 +1065,33 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           const matchedFiles = new Set<string>()
           const unmatchedFiles = new Set(variantEntry.files)
           for (const path in variantOverride.paths) {
-            const pathOverride = variantOverride.paths[path]
-            const pathIsOverride = pathOverride?.override ?? baseIsOverride
-            const pathPackageId = pathOverride?.packageId ?? basePackageId
-            const pathVariantIds = pathOverride?.variantId
-              ? (parseStringArray(pathOverride.variantId) as VariantID[])
-              : baseVariantIds
-
-            const isMatching = packageId === pathPackageId && pathVariantIds.includes(variantId)
-
             const pattern = globToRegex(path)
-            for (const file of variantEntry.files) {
-              if (pattern.test(file)) {
-                unmatchedFiles.delete(file)
-                if (isMatching) {
-                  matchedFiles.add(file)
-                  if (pathIsOverride) {
-                    packageFiles[file] ??= { path: file }
-                    packageFiles[file].priority ??= 900
+            const pathOverride = variantOverride.paths[path]
+
+            if (pathOverride === null) {
+              for (const file of variantEntry.files) {
+                if (pattern.test(file)) {
+                  unmatchedFiles.delete(file)
+                }
+              }
+            } else {
+              const pathIsOverride = pathOverride?.override ?? baseIsOverride
+              const pathPackageId = pathOverride?.packageId ?? basePackageId
+              const pathVariantIds = pathOverride?.variantId
+                ? (parseStringArray(pathOverride.variantId) as VariantID[])
+                : baseVariantIds
+
+              const isMatching = packageId === pathPackageId && pathVariantIds.includes(variantId)
+
+              for (const file of variantEntry.files) {
+                if (pattern.test(file)) {
+                  unmatchedFiles.delete(file)
+                  if (isMatching) {
+                    matchedFiles.add(file)
+                    if (pathIsOverride) {
+                      packageFiles[file] ??= { path: file }
+                      packageFiles[file].priority ??= 900
+                    }
                   }
                 }
               }

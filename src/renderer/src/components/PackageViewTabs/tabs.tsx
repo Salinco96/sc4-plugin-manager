@@ -1,9 +1,10 @@
-import { size, uniqueBy } from "@salinco/nice-utils"
+import { size, unionBy, values } from "@salinco/nice-utils"
 import type { TFunction } from "i18next"
 import { type ComponentType, lazy } from "react"
 import { create as createStore } from "zustand"
 
 import { type PackageID, isLocal, isPatched } from "@common/packages"
+import type { Exemplars } from "@common/state"
 import { type PackageInfo, VariantState } from "@common/types"
 import type { VariantInfo } from "@common/variants"
 import { type Tag, TagType, createTag } from "@components/Tags/utils"
@@ -21,9 +22,14 @@ export type PackageViewTabInfo = {
     variantInfo: VariantInfo,
     packageInfo: PackageInfo,
     dependentPackages: PackageID[],
+    exemplars: Exemplars,
   ) => string
   labelTag?: (variantInfo: VariantInfo) => Tag | undefined
-  condition: (variantInfo: VariantInfo, dependentPackages: PackageID[]) => boolean
+  condition: (
+    variantInfo: VariantInfo,
+    dependentPackages: PackageID[],
+    exemplars: Exemplars,
+  ) => boolean
   fullsize?: boolean
 }
 
@@ -41,13 +47,24 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "lots",
     component: lazy(() => import("./PackageViewLots")),
-    condition(variantInfo) {
-      return !!variantInfo.lots?.length
+    condition(variantInfo, dependentPackages, exemplars) {
+      return (
+        !!variantInfo.lots?.length ||
+        !!variantInfo.buildings?.filter(building =>
+          values(exemplars.lots).some(lot => lot.building === building.id),
+        ).length
+      )
     },
-    label(t, variantInfo) {
-      return t("lots", {
-        count: variantInfo.lots ? uniqueBy(variantInfo.lots, lot => lot.id).length : undefined,
-      })
+    label(t, variantInfo, packageInfo, dependentPackages, exemplars) {
+      const lots = unionBy(
+        variantInfo.lots ?? [],
+        variantInfo.buildings?.filter(building =>
+          values(exemplars.lots).some(lot => lot.building === building.id),
+        ) ?? [],
+        lot => lot.id,
+      )
+
+      return t("lots", { count: lots.length })
     },
   },
   {

@@ -1,6 +1,8 @@
+import { CategoryID } from "@common/categories"
 import { getOptionValue, getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import { LOTS_OPTION_ID, checkCondition } from "@common/packages"
 import { getMenuLabel } from "@common/submenus"
+import { VariantState } from "@common/types"
 import { FlexBox } from "@components/FlexBox"
 import { PackageTag } from "@components/Tags/PackageTag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
@@ -39,6 +41,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
   const settings = useSettings()
   const profileInfo = useCurrentProfile()
   const profileOptions = useStore(store => store.profileOptions)
+  const exemplars = useStore(store => store.exemplars)
   const packageConfig = profileInfo?.packages[packageId]
   const variantInfo = useCurrentVariant(packageId)
 
@@ -80,28 +83,39 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
     // Group lots by building
     return values(
       mapValues(
-        groupBy(values(lots), lot => lot.building ?? lot.id),
+        {
+          ...groupBy(
+            values(exemplars.lots).filter(lot => lot.building && buildings[lot.building]),
+            lot => lot.building ?? null,
+          ),
+          ...groupBy(values(lots), lot => lot.building ?? lot.id),
+        },
         (lots, buildingId) => ({
-          building: buildings[buildingId],
+          building: buildings[buildingId] ?? exemplars.buildings[buildingId],
           lots,
         }),
       ),
     )
-  }, [variantInfo])
+  }, [exemplars, variantInfo])
 
   const option = variantInfo.options?.find(option => option.id === LOTS_OPTION_ID)
-  if (!option) {
-    return <></>
-  }
 
-  const enabledLots = getOptionValue(option, {
-    ...packageConfig?.options,
-    ...profileInfo?.options,
-  }) as string[]
+  const enabledLots = (
+    option
+      ? getOptionValue(option, {
+          ...packageConfig?.options,
+          ...profileInfo?.options,
+        })
+      : []
+  ) as string[]
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
       {groupedLots.map(({ building, lots }) => {
+        const buildingTGI = building?.id.match(/^[a-f0-9]{8}$/)
+          ? `6534284a-a8fbd372-${building.id}` // TODO: incorrect group!
+          : undefined
+
         const tags = building?.categories?.map(category => createTag(TagType.CATEGORY, category))
 
         const menus =
@@ -127,6 +141,11 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
           .map(lot => lot.id)
 
         const enabled = intersection(compatible, enabledLots)
+
+        const buildingIsMaxisOverride =
+          !!building &&
+          !!exemplars.buildings[building.id] &&
+          exemplars.buildings[building.id] !== building
 
         return (
           <ListItem key={building?.id ?? lots[0].id} sx={{ padding: 0 }}>
@@ -160,16 +179,33 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                       )}
                       <FlexBox direction="column" width="100%">
                         {(building.label ?? building.name) && (
-                          <Text maxLines={1} sx={{ flex: 1 }} variant="h6">
-                            {building.label ?? building.name}
-                          </Text>
+                          <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+                            <Text maxLines={1} variant="h6">
+                              {building.label ?? building.name}
+                            </Text>
+                            {buildingIsMaxisOverride && (
+                              <PackageTag
+                                color="info"
+                                type={TagType.CATEGORY}
+                                value={CategoryID.OVERRIDES}
+                              />
+                            )}
+                            {!!variantInfo.files?.find(file => file.path === building.filename)
+                              ?.patches && (
+                              <PackageTag type={TagType.STATE} value={VariantState.PATCHED} />
+                            )}
+                          </FlexBox>
                         )}
 
-                        {building.filename && (
+                        {(building.filename || buildingTGI) && (
                           <FlexBox direction="row" gap={2}>
-                            {building?.filename && (
+                            {building.filename && (
                               <Typography variant="body2">{building.filename}</Typography>
                             )}
+                            {buildingTGI && building.filename && (
+                              <Typography variant="body2">|</Typography>
+                            )}
+                            {buildingTGI && <Typography variant="body2">{buildingTGI}</Typography>}
                           </FlexBox>
                         )}
 
@@ -182,28 +218,30 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                         )}
                       </FlexBox>
 
-                      <FlexBox alignSelf="start">
-                        <Checkbox
-                          icon={compatible.length ? undefined : <IncompatibleIcon />}
-                          checked={containsAll(enabled, compatible)}
-                          color="primary"
-                          disabled={!togglable.length}
-                          name={building?.id}
-                          onClick={async event => {
-                            const { checked } = event.target as HTMLInputElement
-                            if (checked !== containsAll(enabled, compatible)) {
-                              await actions.setPackageOption(
-                                packageId,
-                                option.id,
-                                containsAll(enabled, compatible)
-                                  ? difference(enabledLots, togglable)
-                                  : union(enabledLots, togglable),
-                              )
-                            }
-                          }}
-                          title={enabled ? t("excludeLot") : t("includeLot")}
-                        />
-                      </FlexBox>
+                      {variantInfo.buildings?.includes(building) && (
+                        <FlexBox alignSelf="start">
+                          <Checkbox
+                            icon={compatible.length ? undefined : <IncompatibleIcon />}
+                            checked={containsAll(enabled, compatible)}
+                            color="primary"
+                            disabled={!togglable.length}
+                            name={building.id}
+                            onClick={async event => {
+                              const { checked } = event.target as HTMLInputElement
+                              if (checked !== containsAll(enabled, compatible)) {
+                                await actions.setPackageOption(
+                                  packageId,
+                                  LOTS_OPTION_ID,
+                                  containsAll(enabled, compatible)
+                                    ? difference(enabledLots, togglable)
+                                    : union(enabledLots, togglable),
+                                )
+                              }
+                            }}
+                            title={enabled ? t("excludeLot") : t("includeLot")}
+                          />
+                        </FlexBox>
+                      )}
                     </FlexBox>
                   )}
 
@@ -369,9 +407,14 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                   </FlexBox>
                 </FlexBox>
                 {lots.map((lot, index) => {
-                  const tgi = lot.id.match(/^[a-f0-9]{8}$/)
+                  const lotTGI = lot.id.match(/^[a-f0-9]{8}$/)
                     ? `6534284a-a8fbd372-${lot.id}`
                     : undefined
+
+                  const lotIsMaxisOverride =
+                    !!building &&
+                    !!exemplars.buildings[building.id] &&
+                    exemplars.buildings[building.id] !== building
 
                   return (
                     <Fragment key={lot.id}>
@@ -394,20 +437,40 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                               />
                             </>
                           )}
-                          <FlexBox direction="column" width="100%">
-                            {lot?.name && (
-                              <Text maxLines={1} sx={{ flex: 1 }} variant="h6">
-                                {lot.name}
-                              </Text>
-                            )}
 
-                            {(lot.filename || tgi) && (
+                          <FlexBox direction="column" width="100%">
+                            <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+                              {lot?.name && (
+                                <Text maxLines={1} variant="h6">
+                                  {lot.name}
+                                </Text>
+                              )}
+                              {lotIsMaxisOverride && (
+                                <PackageTag
+                                  dense
+                                  color="info"
+                                  type={TagType.CATEGORY}
+                                  value={CategoryID.OVERRIDES}
+                                />
+                              )}
+                              {!!variantInfo.files?.find(file => file.path === lot.filename)
+                                ?.patches && (
+                                <PackageTag
+                                  dense
+                                  type={TagType.STATE}
+                                  value={VariantState.PATCHED}
+                                />
+                              )}
+                            </FlexBox>
+                            {(lot.filename || lotTGI) && (
                               <FlexBox direction="row" gap={2}>
                                 {lot.filename && (
                                   <Typography variant="body2">{lot.filename}</Typography>
                                 )}
-                                {tgi && lot.filename && <Typography variant="body2">|</Typography>}
-                                {tgi && <Typography variant="body2">{tgi}</Typography>}
+                                {lotTGI && lot.filename && (
+                                  <Typography variant="body2">|</Typography>
+                                )}
+                                {lotTGI && <Typography variant="body2">{lotTGI}</Typography>}
                               </FlexBox>
                             )}
                           </FlexBox>
@@ -427,7 +490,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                                   if (checked !== enabled.includes(lot.id)) {
                                     await actions.setPackageOption(
                                       packageId,
-                                      option.id,
+                                      LOTS_OPTION_ID,
                                       toggle(enabledLots, lot.id),
                                     )
                                   }

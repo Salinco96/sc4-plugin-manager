@@ -37,7 +37,7 @@ import {
   createUniqueId,
 } from "@common/profiles"
 import type { Settings, SettingsData } from "@common/settings"
-import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
+import type { ApplicationState, ApplicationStateUpdate, Exemplars } from "@common/state"
 import {
   ConfigFormat,
   type Features,
@@ -100,6 +100,7 @@ import {
   loadAuthors,
   loadCategories,
   loadExemplarProperties,
+  loadExemplars,
   loadProfileOptions,
   loadProfileTemplates,
 } from "./data/db"
@@ -146,6 +147,7 @@ interface Loaded {
   authors: Authors
   categories: Categories
   exemplarProperties: Record<string, ExemplarPropertyInfo>
+  exemplars: Exemplars
   features: Features
   packages: Packages
   profiles: Profiles
@@ -931,6 +933,7 @@ export class Application {
       authors,
       categories,
       exemplarProperties,
+      exemplars,
       features,
       packages,
       profiles,
@@ -944,6 +947,7 @@ export class Application {
       categories,
       downloads: {},
       exemplarProperties,
+      exemplars,
       features,
       linker: null,
       loader: null,
@@ -1771,11 +1775,15 @@ export class Application {
         const exemplarProperties = await loadExemplarProperties(context, this.getDatabasePath())
         this.sendStateUpdate({ exemplarProperties })
 
+        const exemplars = await loadExemplars(context, this.getDatabasePath(), categories)
+        this.sendStateUpdate({ exemplars })
+
         return {
           assets,
           authors,
           categories,
           exemplarProperties,
+          exemplars,
           features,
           packages,
           profiles,
