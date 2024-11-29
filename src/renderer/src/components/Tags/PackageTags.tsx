@@ -27,7 +27,7 @@ export function PackageTags({
 
   const { t } = useTranslation("PackageTag")
 
-  const authorTags = keys(variantInfo.credits).map(authorId => createTag(TagType.AUTHOR, authorId))
+  const authorTags = variantInfo.authors.map(authorId => createTag(TagType.AUTHOR, authorId))
 
   const [authorsExpanded, setAuthorsExpanded] = useState(authorTags.length <= 2)
 

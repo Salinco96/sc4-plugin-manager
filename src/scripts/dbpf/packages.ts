@@ -1,6 +1,16 @@
 import path from "node:path"
 
-import { generate, groupBy, isEmpty, isString, matchGroups, union } from "@salinco/nice-utils"
+import {
+  difference,
+  generate,
+  groupBy,
+  isEmpty,
+  isString,
+  matchGroups,
+  remove,
+  union,
+  unique,
+} from "@salinco/nice-utils"
 
 import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
@@ -163,6 +173,10 @@ export function writePackageData(
   }
 
   if (variantId === "default" || !packageData.url || packageData.url === entry.url) {
+    const packageAuthors = unique(
+      remove(parseStringArray(packageData.authors ?? []).concat(authors) as AuthorID[], ownerId),
+    )
+
     const packageCredits = {
       ...packageData.credits,
       ...generate(
@@ -186,6 +200,7 @@ export function writePackageData(
 
     const packageImages = union(entry.images ?? [], packageData.images ?? [])
 
+    packageData.authors = packageAuthors.length ? packageAuthors : undefined
     packageData.credits = !isEmpty(packageCredits) ? packageCredits : undefined
     packageData.dependencies = packageDependencies.length ? packageDependencies.sort() : undefined
     packageData.description = packageDescription
@@ -205,6 +220,13 @@ export function writePackageData(
         `Variant ${variantId} contains features ${extraFeatures.join(",")} which are not included in the default variant. All variants must include the same feature set.`,
       )
     }
+
+    const variantAuthors = difference(
+      unique(
+        remove(parseStringArray(variantData.authors ?? []).concat(authors) as AuthorID[], ownerId),
+      ),
+      parseStringArray(packageData.authors ?? []) as AuthorID[],
+    )
 
     const variantCredits = {
       ...variantData.credits,
@@ -233,6 +255,7 @@ export function writePackageData(
       image => !packageData.images?.includes(image),
     )
 
+    variantData.authors = variantAuthors.length ? variantAuthors : undefined
     variantData.credits = !isEmpty(variantCredits) ? variantCredits : undefined
     variantData.dependencies = variantDependencies.length ? variantDependencies.sort() : undefined
     variantData.description = variantDescription
@@ -323,10 +346,8 @@ export function writePackageData(
     }
   }
 
-  const buildings = variantEntry.buildings?.filter(
-    building =>
-      // Include only the buildings with matching lots
-      includedFiles.includes(building.filename) && lots?.some(lot => lot.building === building.id),
+  const buildings = variantEntry.buildings?.filter(building =>
+    includedFiles.includes(building.filename),
   )
 
   if (buildings?.length) {

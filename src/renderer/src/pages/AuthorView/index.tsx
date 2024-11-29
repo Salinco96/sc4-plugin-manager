@@ -21,7 +21,9 @@ function AuthorViewInner({ authorId }: { authorId: AuthorID }): JSX.Element {
 
   const packageIds = useMemo(() => {
     return values(packages ?? {})
-      .filter(({ variants }) => values(variants).some(variantInfo => variantInfo.credits[authorId]))
+      .filter(({ variants }) =>
+        values(variants).some(variantInfo => variantInfo.authors.includes(authorId)),
+      )
       .map(packageInfo => packageInfo.id)
   }, [authorId, packages])
 

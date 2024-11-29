@@ -6,6 +6,7 @@ import {
   collect,
   filterValues,
   forEach,
+  generate,
   isEmpty,
   isEnum,
   isString,
@@ -21,9 +22,14 @@ import {
 import { glob } from "glob"
 
 import type { AssetData, AssetID, Assets } from "@common/assets"
+import type { AuthorID } from "@common/authors"
 import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
+import { ZoneDensity } from "@common/lots"
+import { OptionType } from "@common/options"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, getOwnerId, isNew } from "@common/packages"
+import { parseMenu, parseMenus, writeMenu, writeMenus } from "@common/submenus"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
+import { type MaybeArray, parseStringArray } from "@common/utils/types"
 import type {
   DependencyData,
   DependencyInfo,
@@ -37,10 +43,6 @@ import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
-import { ZoneDensity } from "@common/lots"
-import { OptionType } from "@common/options"
-import { parseMenu, parseMenus, writeMenu, writeMenus } from "@common/submenus"
-import { type MaybeArray, parseStringArray } from "@common/utils/types"
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
 
@@ -356,13 +358,21 @@ function loadVariantInfo(
   const priorities = subcategories.map(categoryId => categories[categoryId]?.priority ?? 0)
   const priority = Math.max(...priorities)
 
-  const credits = {
+  const authors = unique([
+    ownerId,
+    ...parseStringArray(packageData.authors ?? []),
+    ...parseStringArray(variantData.authors ?? []),
+  ] as AuthorID[])
+
+  const credits: VariantInfo["credits"] = {
+    ...generate(authors, authorId => [authorId, null]),
     [ownerId]: "Original author",
     ...packageData.credits,
     ...variantData.credits,
   }
 
   const variantInfo: VariantInfo = {
+    authors,
     categories: subcategories,
     credits,
     id: variantId,
@@ -633,6 +643,7 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
     variants: mapValues(
       filterValues(packageInfo.variants, variant => !!variant.installed),
       variant => ({
+        authors: variant.authors,
         buildings: variant.buildings?.map(({ categories, menu, submenus, ...building }) => ({
           category: categories?.join(","),
           menu: menu ? writeMenu(menu) : undefined,

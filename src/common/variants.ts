@@ -18,6 +18,7 @@ export type VariantID = ID<string, VariantInfo>
 
 export interface VariantData {
   assets?: Array<AssetID | VariantAssetData>
+  authors?: MaybeArray<AuthorID>
   buildings?: BuildingData[]
   category?: MaybeArray<string>
   credits?: { [authorId in AuthorID]?: string | null }
@@ -51,6 +52,7 @@ export interface VariantData {
 
 export interface BaseVariantInfo {
   assets?: VariantAssetInfo[]
+  authors: AuthorID[]
   buildings?: BuildingInfo[]
   categories: CategoryID[]
   credits: { [authorId in AuthorID]?: string | null }
