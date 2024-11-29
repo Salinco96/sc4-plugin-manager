@@ -20,6 +20,21 @@ import {
 } from "@common/exemplars"
 import { useExemplarProperties } from "@utils/store"
 
+export function isEqualPropertyValue(
+  value: ExemplarPropertyValue | null,
+  other: ExemplarPropertyValue | null,
+): boolean {
+  if (isArray(value) && isNumber(other)) {
+    return value.length === 1 && value[0] === other
+  }
+
+  if (isArray(other) && isNumber(value)) {
+    return other.length === 1 && other[0] === value
+  }
+
+  return isEqual(value, other)
+}
+
 export function getDiff(
   currentData: ExemplarData,
   originalData: ExemplarData,
@@ -38,7 +53,7 @@ export function getDiff(
   for (const propertyId in currentData.properties) {
     const currentValue = currentData.properties[propertyId]?.value ?? null
     const originalValue = originalData.properties[propertyId]?.value ?? null
-    if (!isEqual(currentValue, originalValue)) {
+    if (!isEqualPropertyValue(currentValue, originalValue)) {
       diff ??= {}
       diff.properties ??= {}
       diff.properties[toHex(Number(propertyId), 8)] = currentValue

@@ -603,8 +603,10 @@ function mergeLocalPackageInfo(
         // the remote version separately, as a potential update instead.
         if (remoteVariantInfo.version === localVariantInfo.version) {
           // Keep local installation paths calculated during install
+          remoteVariantInfo.buildings = localVariantInfo.buildings
+          remoteVariantInfo.lots = localVariantInfo.lots
+          remoteVariantInfo.files = localVariantInfo.files
           remoteVariantInfo.readme ??= localVariantInfo.readme
-          remoteVariantInfo.files ??= localVariantInfo.files
           Object.assign(localVariantInfo, remoteVariantInfo)
           localVariantInfo.installed = true
         } else {
