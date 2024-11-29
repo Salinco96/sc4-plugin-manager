@@ -3,19 +3,18 @@ import path from "node:path"
 import { values } from "@salinco/nice-utils"
 
 import type { BuildingData } from "@common/buildings"
+import { CategoryID } from "@common/categories"
 import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
 import { type ExemplarPropertyInfo, ExemplarType, getExemplarType } from "@common/exemplars"
 import type { LotData } from "@common/lots"
 import { Feature } from "@common/types"
-import { loadDBPF } from "@node/dbpf"
-import { FileOpenMode, getExtension, openFile } from "@node/files"
-
-import { CategoryID } from "@common/categories"
 import { parseStringArray } from "@common/utils/types"
-import { getBuildingData } from "./buildings"
-import { getLotData } from "./lots"
-import { DeveloperID, type Exemplar, SimulatorID } from "./types"
-import { getBaseTextureId } from "./utils"
+import { loadDBPF } from "@node/dbpf"
+import { getBuildingData } from "@node/dbpf/buildings"
+import { getLotData } from "@node/dbpf/lots"
+import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
+import { getBaseTextureId } from "@node/dbpf/utils"
+import { FileOpenMode, getExtension, openFile } from "@node/files"
 
 export interface SC4FileData {
   buildings: BuildingData[]
@@ -54,6 +53,11 @@ export async function analyzeSC4Files(
       for (const entry of values(file.entries)) {
         switch (entry.type) {
           case DBPFDataType.EXMP: {
+            // TODO: What to do with cohorts?
+            if (entry.data?.isCohort) {
+              break
+            }
+
             const instanceId = parseTGI(entry.id)[2]
             const exemplar = { ...entry, file: filePath } as Exemplar
             const exemplarType = getExemplarType(entry.id, entry.data)

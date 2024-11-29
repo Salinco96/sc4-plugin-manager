@@ -24,7 +24,7 @@ import { glob } from "glob"
 import type { AssetData, AssetID, Assets } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
-import { ZoneDensity } from "@common/lots"
+import { type LotData, type LotInfo, ZoneDensity } from "@common/lots"
 import { OptionType } from "@common/options"
 import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, getOwnerId, isNew } from "@common/packages"
 import { parseMenu, parseMenus, writeMenu, writeMenus } from "@common/submenus"
@@ -43,6 +43,7 @@ import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
+import type { BuildingData, BuildingInfo } from "@common/buildings"
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
 
@@ -398,12 +399,7 @@ function loadVariantInfo(
   )
 
   if (buildings.length) {
-    variantInfo.buildings = buildings.map(({ category, menu, submenu, ...building }) => ({
-      categories: category ? parseCategory(category, categories) : undefined,
-      menu: menu ? parseMenu(menu) : undefined,
-      submenus: submenu ? parseMenus(submenu) : undefined,
-      ...building,
-    }))
+    variantInfo.buildings = buildings.map(data => loadBuildingInfo(data, categories))
   }
 
   const dependencies = unionBy(
@@ -459,10 +455,7 @@ function loadVariantInfo(
   )
 
   if (lots.length) {
-    variantInfo.lots = lots.map(({ density, ...lot }) => ({
-      density: density ? parseEnumList(density, ZoneDensity, true) : undefined,
-      ...lot,
-    }))
+    variantInfo.lots = lots.map(loadLotInfo)
   }
 
   const mmps = unionBy(variantData.mmps ?? [], packageData.mmps ?? [], mmp => mmp.id)
@@ -636,6 +629,42 @@ function mergeLocalPackageInfo(
   return localPackageInfo
 }
 
+export function loadBuildingInfo(data: BuildingData, categories: Categories): BuildingInfo {
+  const { category, menu, model, submenu, ...others } = data
+  return {
+    categories: category ? parseCategory(category, categories) : undefined,
+    menu: menu ? parseMenu(menu) : undefined,
+    submenus: submenu ? parseMenus(submenu) : undefined,
+    ...others,
+  }
+}
+
+export function loadLotInfo(data: LotData): LotInfo {
+  const { density, props, textures, ...others } = data
+  return {
+    density: density ? parseEnumList(density, ZoneDensity, true) : undefined,
+    ...others,
+  }
+}
+
+export function writeBuildingInfo(building: BuildingInfo): BuildingData {
+  const { categories, menu, submenus, ...others } = building
+  return {
+    category: categories?.join(","),
+    menu: menu ? writeMenu(menu) : undefined,
+    submenu: submenus?.length ? writeMenus(submenus) : undefined,
+    ...others,
+  }
+}
+
+export function writeLotInfo(lot: LotInfo): LotData {
+  const { density, ...others } = lot
+  return {
+    density: density?.length === 3 ? "all" : density?.join(","),
+    ...others,
+  }
+}
+
 export function toPackageData(packageInfo: PackageInfo): PackageData {
   return {
     features: packageInfo.features?.length ? packageInfo.features : undefined,
@@ -644,12 +673,7 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
       filterValues(packageInfo.variants, variant => !!variant.installed),
       variant => ({
         authors: variant.authors,
-        buildings: variant.buildings?.map(({ categories, menu, submenus, ...building }) => ({
-          category: categories?.join(","),
-          menu: menu ? writeMenu(menu) : undefined,
-          submenu: submenus?.length ? writeMenus(submenus) : undefined,
-          ...building,
-        })),
+        buildings: variant.buildings?.map(writeBuildingInfo),
         category: variant.categories.join(","),
         credits: variant.credits,
         dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
@@ -660,7 +684,7 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         images: variant.images,
         lastModified: variant.lastModified ? new Date(variant.lastModified) : undefined,
         logs: variant.logs,
-        lots: variant.lots,
+        lots: variant.lots?.map(writeLotInfo),
         mmps: variant.mmps?.map(({ categories, ...mmp }) => ({
           category: categories?.join(","),
           ...mmp,

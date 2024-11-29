@@ -17,10 +17,10 @@ import type { AuthorID } from "@common/authors"
 import { CategoryID } from "@common/categories"
 import { type PackageID, getOwnerId } from "@common/packages"
 import type { PackageData, PackageFile } from "@common/types"
+import { parseStringArray } from "@common/utils/types"
 import type { VariantID } from "@common/variants"
 import { getExtension } from "@node/files"
 
-import { parseStringArray } from "@common/utils/types"
 import type { IndexerEntry, IndexerSource } from "../types"
 import { htmlToMd } from "../utils"
 

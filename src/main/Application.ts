@@ -10,8 +10,13 @@ import { glob } from "glob"
 import type { AssetInfo, Assets } from "@common/assets"
 import type { AuthorID, Authors } from "@common/authors"
 import type { Categories } from "@common/categories"
-import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
-import type { ExemplarDataPatch, ExemplarPropertyInfo } from "@common/exemplars"
+import { DBPFDataType, type DBPFEntry, type DBPFFile, type TGI, parseTGI } from "@common/dbpf"
+import {
+  type ExemplarDataPatch,
+  type ExemplarPropertyInfo,
+  ExemplarType,
+  getExemplarType,
+} from "@common/exemplars"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import { type OptionInfo, type Requirements, getOptionValue } from "@common/options"
 import {
@@ -74,6 +79,9 @@ import {
 import { getPluginsFolderName } from "@utils/linker"
 import { type ToolID, getToolInfo } from "@utils/tools"
 
+import { getBuildingData } from "@node/dbpf/buildings"
+import { getLotData } from "@node/dbpf/lots"
+import type { Exemplar } from "@node/dbpf/types"
 import {
   entries,
   isEmpty,
@@ -96,8 +104,10 @@ import {
   loadProfileTemplates,
 } from "./data/db"
 import {
+  loadBuildingInfo,
   loadDownloadedAssets,
   loadLocalPackages,
+  loadLotInfo,
   loadRemotePackages,
   toPackageData,
 } from "./data/packages"
@@ -932,11 +942,11 @@ export class Application {
     return {
       authors,
       categories,
-      downloads: {}, // TODO
+      downloads: {},
       exemplarProperties,
       features,
-      linker: null, // TODO
-      loader: null, // TODO
+      linker: null,
+      loader: null,
       packages,
       profiles,
       profileOptions,
@@ -1997,7 +2007,7 @@ export class Application {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
   ): Promise<DBPFFile> {
-    const { exemplarProperties, packages, settings } = await this.load()
+    const { categories, exemplarProperties, packages, settings } = await this.load()
 
     return this.tasks.queue(`patch:${packageId}#${variantId}/${filePath}`, {
       handler: async context => {
@@ -2057,9 +2067,6 @@ export class Application {
           fileInfo.patches = undefined
         }
 
-        // Persist config changes and send updates to renderer
-        await this.writePackageConfig(context, packageInfo)
-
         let file: DBPFFile | undefined
 
         if (fileInfo.patches) {
@@ -2094,6 +2101,46 @@ export class Application {
             this.linkPackages({ packageId })
           }
         }
+
+        for (const entry of values(file.entries)) {
+          if (patches[entry.id] !== undefined && entry.type === DBPFDataType.EXMP && entry.data) {
+            const instanceId = toHex(parseTGI(entry.id)[2], 8)
+            switch (getExemplarType(entry.id, entry.data)) {
+              case ExemplarType.Building: {
+                if (variantInfo.buildings) {
+                  const index = variantInfo.buildings.findIndex(
+                    building => building.id === instanceId && building.filename === filePath,
+                  )
+
+                  if (index >= 0) {
+                    const exemplar = { ...entry, file: filePath } as Exemplar
+                    const newInfo = loadBuildingInfo(getBuildingData(exemplar), categories)
+                    variantInfo.buildings[index] = newInfo
+                  }
+                }
+                break
+              }
+
+              case ExemplarType.LotConfig: {
+                if (variantInfo.lots) {
+                  const index = variantInfo.lots.findIndex(
+                    lot => lot.id === instanceId && lot.filename === filePath,
+                  )
+
+                  if (index >= 0) {
+                    const exemplar = { ...entry, file: filePath } as Exemplar
+                    const newInfo = loadLotInfo(getLotData(exemplar))
+                    variantInfo.lots[index] = newInfo
+                  }
+                }
+                break
+              }
+            }
+          }
+        }
+
+        // Persist config changes and send updates to renderer
+        await this.writePackageConfig(context, packageInfo)
 
         return file
       },
