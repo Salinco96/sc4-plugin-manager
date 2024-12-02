@@ -38,8 +38,10 @@ export interface BuildingData {
   cost?: number
   /** Lot description */
   description?: string
+  /** Building family ID */
+  family?: string
   /** Path to the file containing the building exemplar */
-  filename: string
+  file: string
   /** Flamability (number between 0 and 100) */
   flamability?: number
   /** Garbage generated */
@@ -61,7 +63,7 @@ export interface BuildingData {
     /** High-Wealth */
     $$$?: number
   }
-  /** Lot name */
+  /** Building name */
   label?: string
   /** Landmark effect */
   landmark?: number
@@ -126,7 +128,8 @@ export interface BuildingData {
   worth?: number
 }
 
-export interface BuildingInfo extends Omit<BuildingData, "category" | "menu" | "submenu"> {
+export interface BuildingInfo
+  extends Omit<BuildingData, "category" | "model" | "menu" | "submenu"> {
   categories?: CategoryID[]
   menu?: number
   submenus?: number[]

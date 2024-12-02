@@ -132,7 +132,7 @@ assets:
     category: 67-simcitybrasil-files
     dependencies: []
     description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p style=\"margin-top:0px;color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);\">\n\tThis pack contains props and Mayor Mode\_<span style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;float:none;background-color:rgb(255,255,255);\">Ploppable (<abbr title=\"Mayor Mode Ploppable\">MMP</abbr>)</span>. The props are tropical plants, palms and trees.\n</p>\n\n<p style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);\">\n\t<span style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;float:none;background-color:rgb(255,255,255);\">This<span>\_</span></span><abbr style=\"border-bottom-width:1px;border-bottom-style:dotted;color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);\" title=\"Building Architect Tool\">pack</abbr><span style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;float:none;background-color:rgb(255,255,255);\"><span>\_</span>has been created for the<span>\_<a href=\"https://community.simtropolis.com/forums/topic/65595-rio-2016-project/\" rel=\"\">Rio 2016 Project.</a></span></span>\n</p>\n\n<p style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);\">\n\tInstallation Instructions:\n</p>\n\n<p style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);\">\n\tUnzip the file and move its contents to Documents/SimCity4/Plugins\n</p>\n\n<p style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);\">\n\tThere is no dependencies.\n</p>\n\n<p style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);\">\n\t\_\n</p>\n\n<p style=\"color:rgb(39,42,52);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:21px;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);\">\n\t<span style=\"background-color:#ffffff;color:#2980b9;font-size:14px;\"><strong>carlosmarcelo edit</strong></span><span style=\"background-color:#ffffff;color:#353535;font-size:14px;\">: changed\_category and revised description.</span>\n</p>\n\n\t\t\t\t\t\t</body>"
-    filename: Flunight Props Vol 01 - Flora.rar
+    file: Flunight Props Vol 01 - Flora.rar
     files:
       - Flunight Props Vol 01 - Flora.dat
       - Flunight Props Vol 01 - Flora MM.dat
@@ -222,14 +222,14 @@ assets:
     url: https://community.simtropolis.com/files/file/3519-copacabana-beach/
     variants:
       '202790':
-        filename: copacabana.zip
+        file: copacabana.zip
         files:
           - copacabana.dat
         sha256: 2f0b9da7c5ed4c24a7570a8a058cd3ac84b9320af0921dad10899f3fa61f330c
         size: 907577
         uncompressed: 1036065
       '202791':
-        filename: copacabana.zip
+        file: copacabana.zip
         files:
           - copacabana-beach-suico-submenu.dat
           - copacabana.dat
@@ -245,7 +245,7 @@ assets:
     dependencies:
       - simtropolis/3519-copacabana-beach
     description: "<body>\n                            \n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\n<p>\n\tThe first addon to the copacabana beach is dedicated to sports:\n</p>\n\n<p>\n\t1. Soccer on the Beach\n</p>\n\n<p>\n\t2. Beach Volley\n</p>\n\n<p>\n\t3. Gymnastics\n</p>\n\n<p>\n\t4. I did add a 3x2 underwater sand file as J.O. asked.\n</p>\n\n<p>\n\tHere is the link to the copacabana beach file (and your submenu):\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed59885689\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/3519-copacabana-beach/?do=embed\" style=\"height:361px;max-width:502px;\"></iframe>\n\n<p>\n\tOr just click on my name to see all my bats creations you maybe find that some of them are nice.\n</p>\n\n<p>\n\tPut everything in your my documents/SimCity 4/plugins directory\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:12px;\"><strong><span style=\"color:#3498db;\">carlosmarcelo edit</span></strong>: Updated link to Copacabana Beach and changing category; added new images to reference submenu to this lot.</span>\n</p>\n\n\t\t\t\t\t\t</body>"
-    filename: copacabanaaddon1.zip
+    file: copacabanaaddon1.zip
     files:
       - copacabanaaddon1.dat
     images:

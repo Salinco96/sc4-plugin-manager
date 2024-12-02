@@ -112,10 +112,6 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
       {groupedLots.map(({ building, lots }) => {
-        const buildingTGI = building?.id.match(/^[a-f0-9]{8}$/)
-          ? `6534284a-a8fbd372-${building.id}` // TODO: incorrect group!
-          : undefined
-
         const tags = building?.categories?.map(category => createTag(TagType.CATEGORY, category))
 
         const menus =
@@ -137,7 +133,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
           .map(lot => lot.id)
 
         const togglable = lots
-          .filter(lot => !!lot.filename?.endsWith(".SC4Lot") && compatible.includes(lot.id))
+          .filter(lot => !!lot.file?.endsWith(".SC4Lot") && compatible.includes(lot.id))
           .map(lot => lot.id)
 
         const enabled = intersection(compatible, enabledLots)
@@ -190,24 +186,20 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                                 value={CategoryID.OVERRIDES}
                               />
                             )}
-                            {!!variantInfo.files?.find(file => file.path === building.filename)
+                            {!!variantInfo.files?.find(file => file.path === building.file)
                               ?.patches && (
                               <PackageTag type={TagType.STATE} value={VariantState.PATCHED} />
                             )}
                           </FlexBox>
                         )}
 
-                        {(building.filename || buildingTGI) && (
-                          <FlexBox direction="row" gap={2}>
-                            {building.filename && (
-                              <Typography variant="body2">{building.filename}</Typography>
-                            )}
-                            {buildingTGI && building.filename && (
-                              <Typography variant="body2">|</Typography>
-                            )}
-                            {buildingTGI && <Typography variant="body2">{buildingTGI}</Typography>}
-                          </FlexBox>
-                        )}
+                        <FlexBox direction="row" gap={2}>
+                          {building.file && (
+                            <Typography variant="body2">{building.file}</Typography>
+                          )}
+                          {building.file && <Typography variant="body2">|</Typography>}
+                          <Typography variant="body2">{building.id}</Typography>
+                        </FlexBox>
 
                         {!!tags?.length && (
                           <FlexBox direction="row" gap={1} mt={1}>
@@ -407,10 +399,6 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                   </FlexBox>
                 </FlexBox>
                 {lots.map((lot, index) => {
-                  const lotTGI = lot.id.match(/^[a-f0-9]{8}$/)
-                    ? `6534284a-a8fbd372-${lot.id}`
-                    : undefined
-
                   const lotIsMaxisOverride =
                     !!building &&
                     !!exemplars.buildings[building.id] &&
@@ -453,7 +441,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                                   value={CategoryID.OVERRIDES}
                                 />
                               )}
-                              {!!variantInfo.files?.find(file => file.path === lot.filename)
+                              {!!variantInfo.files?.find(file => file.path === lot.file)
                                 ?.patches && (
                                 <PackageTag
                                   dense
@@ -462,17 +450,12 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
                                 />
                               )}
                             </FlexBox>
-                            {(lot.filename || lotTGI) && (
-                              <FlexBox direction="row" gap={2}>
-                                {lot.filename && (
-                                  <Typography variant="body2">{lot.filename}</Typography>
-                                )}
-                                {lotTGI && lot.filename && (
-                                  <Typography variant="body2">|</Typography>
-                                )}
-                                {lotTGI && <Typography variant="body2">{lotTGI}</Typography>}
-                              </FlexBox>
-                            )}
+
+                            <FlexBox direction="row" gap={2}>
+                              {lot.file && <Typography variant="body2">{lot.file}</Typography>}
+                              {lot.file && <Typography variant="body2">|</Typography>}
+                              <Typography variant="body2">{lot.id}</Typography>
+                            </FlexBox>
                           </FlexBox>
 
                           {(lots.length !== 1 || !building) && (

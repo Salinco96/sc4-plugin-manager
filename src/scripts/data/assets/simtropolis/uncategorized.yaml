@@ -12,7 +12,7 @@ assets:
       - simtropolis
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/dayopeace.dat
-    filename: dayopeace.dat
+    file: dayopeace.dat
     files:
       - dayopeace.dat
     lastModified: 2024-11-18T09:48:18.355Z
@@ -64,7 +64,7 @@ assets:
     buildings:
       - bulldoze: 4950
         cost: 55000
-        filename: Plugin_002_TheLivingMall.dat
+        file: Plugin_002_TheLivingMall.dat
         flamability: 35
         garbage: 11
         id: 04c00000
@@ -81,13 +81,13 @@ assets:
         waterPollutionRadius: 5
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_002_TheLivingMall.dat
-    filename: Plugin_002_TheLivingMall.dat
+    file: Plugin_002_TheLivingMall.dat
     files:
       - Plugin_002_TheLivingMall.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04c00000
-        filename: Plugin_002_TheLivingMall.dat
+        file: Plugin_002_TheLivingMall.dat
         id: 6ac4085b
         name: LM6x6_TheLivingMall
         props:
@@ -118,7 +118,7 @@ assets:
     buildings:
       - bulldoze: 4950
         cost: 55000
-        filename: Plugin_003_ArcTriomphe.dat
+        file: Plugin_003_ArcTriomphe.dat
         garbage: 5
         id: 04c10000
         maintenance: 110
@@ -134,13 +134,13 @@ assets:
         waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_003_ArcTriomphe.dat
-    filename: Plugin_003_ArcTriomphe.dat
+    file: Plugin_003_ArcTriomphe.dat
     files:
       - Plugin_003_ArcTriomphe.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04c10000
-        filename: Plugin_003_ArcTriomphe.dat
+        file: Plugin_003_ArcTriomphe.dat
         id: aac407c0
         name: LM3x3_ArcTriomphe
         props:
@@ -167,7 +167,7 @@ assets:
     buildings:
       - bulldoze: 4950
         cost: 65000
-        filename: Plugin_004_SeoulCityHall.dat
+        file: Plugin_004_SeoulCityHall.dat
         flamability: 30
         garbage: 9
         id: 04c30000
@@ -184,13 +184,13 @@ assets:
         waterPollutionRadius: 3
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_004_SeoulCityHall.dat
-    filename: Plugin_004_SeoulCityHall.dat
+    file: Plugin_004_SeoulCityHall.dat
     files:
       - Plugin_004_SeoulCityHall.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04c30000
-        filename: Plugin_004_SeoulCityHall.dat
+        file: Plugin_004_SeoulCityHall.dat
         id: 2ac40624
         name: LM6x6_SeoulCityHallSquare
         props:
@@ -227,7 +227,7 @@ assets:
     buildings:
       - bulldoze: 4950
         cost: 160000
-        filename: Plugin_005_SeoulSoccerStad.dat
+        file: Plugin_005_SeoulSoccerStad.dat
         flamability: 34
         garbage: 65
         id: 04c20000
@@ -244,13 +244,13 @@ assets:
         waterPollutionRadius: 6
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_005_SeoulSoccerStad.dat
-    filename: Plugin_005_SeoulSoccerStad.dat
+    file: Plugin_005_SeoulSoccerStad.dat
     files:
       - Plugin_005_SeoulSoccerStad.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04c20000
-        filename: Plugin_005_SeoulSoccerStad.dat
+        file: Plugin_005_SeoulSoccerStad.dat
         id: 4ac40971
         name: LM0x0_WorldCupFootballStadium
         props:
@@ -283,7 +283,7 @@ assets:
     buildings:
       - bulldoze: 4950
         cost: 70000
-        filename: Plugin_006_GlobeArena.dat
+        file: Plugin_006_GlobeArena.dat
         flamability: 30
         garbage: 15
         id: 04bc0000
@@ -300,13 +300,13 @@ assets:
         waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_006_GlobeArena.dat
-    filename: Plugin_006_GlobeArena.dat
+    file: Plugin_006_GlobeArena.dat
     files:
       - Plugin_006_GlobeArena.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04bc0000
-        filename: Plugin_006_GlobeArena.dat
+        file: Plugin_006_GlobeArena.dat
         id: aae108a3
         name: LM11x8_GlobeArena
         props:
@@ -349,7 +349,7 @@ assets:
     buildings:
       - bulldoze: 1000
         category: rewards
-        filename: Plugin_007_AirForceBase.dat
+        file: Plugin_007_AirForceBase.dat
         flamability: 40
         garbage: 10
         id: 036f0000
@@ -372,13 +372,13 @@ assets:
       - rewards
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_007_AirForceBase.dat
-    filename: Plugin_007_AirForceBase.dat
+    file: Plugin_007_AirForceBase.dat
     files:
       - Plugin_007_AirForceBase.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 036f0000
-        filename: Plugin_007_AirForceBase.dat
+        file: Plugin_007_AirForceBase.dat
         id: 0ade2f1b
         name: RW10x10_AirForceBase
         props:
@@ -477,7 +477,7 @@ assets:
       - bulldoze: 5850
         category: landmarks
         cost: 65000
-        filename: Plugin_008_Kunjungjon.dat
+        file: Plugin_008_Kunjungjon.dat
         flamability: 33
         garbage: 9
         id: 04ba0000
@@ -497,13 +497,13 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_008_Kunjungjon.dat
-    filename: Plugin_008_Kunjungjon.dat
+    file: Plugin_008_Kunjungjon.dat
     files:
       - Plugin_008_Kunjungjon.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04ba0000
-        filename: Plugin_008_Kunjungjon.dat
+        file: Plugin_008_Kunjungjon.dat
         id: 4afc8bd5
         name: Lm5x6_KonjongjonHall
         props:
@@ -549,7 +549,7 @@ assets:
     buildings:
       - bulldoze: 5850
         cost: 65000
-        filename: Plugin_009_NamDaeMoon.dat
+        file: Plugin_009_NamDaeMoon.dat
         flamability: 10
         garbage: 4
         id: 04b90000
@@ -564,13 +564,13 @@ assets:
         waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_009_NamDaeMoon.dat
-    filename: Plugin_009_NamDaeMoon.dat
+    file: Plugin_009_NamDaeMoon.dat
     files:
       - Plugin_009_NamDaeMoon.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b90000
-        filename: Plugin_009_NamDaeMoon.dat
+        file: Plugin_009_NamDaeMoon.dat
         id: 8af9d28c
         name: Lm4x4_NamDaeMoon
         size: 4x4
@@ -591,7 +591,7 @@ assets:
     buildings:
       - bulldoze: 9900
         cost: 110000
-        filename: Plugin_00A_63Building.dat
+        file: Plugin_00A_63Building.dat
         flamability: 10
         garbage: 39
         id: 04b80000
@@ -608,13 +608,13 @@ assets:
         waterPollutionRadius: 7
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00A_63Building.dat
-    filename: Plugin_00A_63Building.dat
+    file: Plugin_00A_63Building.dat
     files:
       - Plugin_00A_63Building.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b80000
-        filename: Plugin_00A_63Building.dat
+        file: Plugin_00A_63Building.dat
         id: 6afc49f8
         name: Lm4x5_KoreaLifeBldg
         props:
@@ -640,7 +640,7 @@ assets:
       - bulldoze: 5850
         category: landmarks
         cost: 60000
-        filename: Plugin_00C_BrandenburgGate.dat
+        file: Plugin_00C_BrandenburgGate.dat
         flamability: 34
         garbage: 5
         id: 04b70000
@@ -660,13 +660,13 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00C_BrandenburgGate.dat
-    filename: Plugin_00C_BrandenburgGate.dat
+    file: Plugin_00C_BrandenburgGate.dat
     files:
       - Plugin_00C_BrandenburgGate.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b70000
-        filename: Plugin_00C_BrandenburgGate.dat
+        file: Plugin_00C_BrandenburgGate.dat
         id: ab5e1192
         name: LM5x7_BrandenburgGate
         props:
@@ -701,7 +701,7 @@ assets:
       - bulldoze: 6750
         category: landmarks
         cost: 60000
-        filename: Plugin_00D_Parthenon.dat
+        file: Plugin_00D_Parthenon.dat
         flamability: 35
         garbage: 2
         id: 04b60000
@@ -719,13 +719,13 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00D_Parthenon.dat
-    filename: Plugin_00D_Parthenon.dat
+    file: Plugin_00D_Parthenon.dat
     files:
       - Plugin_00D_Parthenon.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b60000
-        filename: Plugin_00D_Parthenon.dat
+        file: Plugin_00D_Parthenon.dat
         id: cb68c0df
         name: Lm4x7_Parthenon
         props:
@@ -802,7 +802,7 @@ assets:
     buildings:
       - bulldoze: 5850
         cost: 95000
-        filename: Plugin_00E_SchlossSchoenbrun.dat
+        file: Plugin_00E_SchlossSchoenbrun.dat
         flamability: 34
         garbage: 4
         id: 04b50000
@@ -819,13 +819,13 @@ assets:
         waterPollutionRadius: 3
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00E_SchlossSchoenbrun.dat
-    filename: Plugin_00E_SchlossSchoenbrun.dat
+    file: Plugin_00E_SchlossSchoenbrun.dat
     files:
       - Plugin_00E_SchlossSchoenbrun.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b50000
-        filename: Plugin_00E_SchlossSchoenbrun.dat
+        file: Plugin_00E_SchlossSchoenbrun.dat
         id: eb4e47b4
         name: Lm11x6_SchlossSchoenbrun
         props:
@@ -875,7 +875,7 @@ assets:
     buildings:
       - bulldoze: 8550
         cost: 95000
-        filename: Plugin_00F_TempleExpiatiori.dat
+        file: Plugin_00F_TempleExpiatiori.dat
         flamability: 16
         garbage: 5
         id: 04b40000
@@ -890,13 +890,13 @@ assets:
         waterPollutionRadius: 3
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00F_TempleExpiatiori.dat
-    filename: Plugin_00F_TempleExpiatiori.dat
+    file: Plugin_00F_TempleExpiatiori.dat
     files:
       - Plugin_00F_TempleExpiatiori.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b40000
-        filename: Plugin_00F_TempleExpiatiori.dat
+        file: Plugin_00F_TempleExpiatiori.dat
         id: 6bce41a2
         name: LM12x12_sagradafamilia
         size: 5x5
@@ -918,7 +918,7 @@ assets:
       - bulldoze: 4500
         category: landmarks
         cost: 110000
-        filename: Plugin_010_GrandCentralStation.dat
+        file: Plugin_010_GrandCentralStation.dat
         flamability: 30
         garbage: 11
         id: 04b30000
@@ -938,13 +938,13 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_010_GrandCentralStation.dat
-    filename: Plugin_010_GrandCentralStation.dat
+    file: Plugin_010_GrandCentralStation.dat
     files:
       - Plugin_010_GrandCentralStation.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b30000
-        filename: Plugin_010_GrandCentralStation.dat
+        file: Plugin_010_GrandCentralStation.dat
         id: 2b589d69
         name: LM7x8_GrandCentral
         size: 7x8
@@ -965,7 +965,7 @@ assets:
     buildings:
       - bulldoze: 4500
         cost: 50000
-        filename: Plugin_012_CapitolRecords.dat
+        file: Plugin_012_CapitolRecords.dat
         flamability: 34
         garbage: 11
         id: 04b10000
@@ -982,13 +982,13 @@ assets:
         waterPollutionRadius: 5
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_012_CapitolRecords.dat
-    filename: Plugin_012_CapitolRecords.dat
+    file: Plugin_012_CapitolRecords.dat
     files:
       - Plugin_012_CapitolRecords.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04b10000
-        filename: Plugin_012_CapitolRecords.dat
+        file: Plugin_012_CapitolRecords.dat
         id: cb549981
         name: Lm5x5_CapitolRecordsBuilding
         props:
@@ -1019,7 +1019,7 @@ assets:
       - bulldoze: 5850
         category: landmarks
         cost: 60000
-        filename: Plugin_016_Stonehenge.dat
+        file: Plugin_016_Stonehenge.dat
         garbage: 5
         id: 04ad0000
         maintenance: 10
@@ -1036,13 +1036,13 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_016_Stonehenge.dat
-    filename: Plugin_016_Stonehenge.dat
+    file: Plugin_016_Stonehenge.dat
     files:
       - Plugin_016_Stonehenge.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04ad0000
-        filename: Plugin_016_Stonehenge.dat
+        file: Plugin_016_Stonehenge.dat
         id: 4b61d755
         name: LM6x6_Stonehenge
         props:
@@ -1086,7 +1086,7 @@ assets:
     buildings:
       - bulldoze: 4950
         cost: 65000
-        filename: Plugin_017_SanFranCityHall.dat
+        file: Plugin_017_SanFranCityHall.dat
         flamability: 30
         garbage: 9
         id: 04ac0000
@@ -1103,13 +1103,13 @@ assets:
         waterPollutionRadius: 3
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_017_SanFranCityHall.dat
-    filename: Plugin_017_SanFranCityHall.dat
+    file: Plugin_017_SanFranCityHall.dat
     files:
       - Plugin_017_SanFranCityHall.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 04ac0000
-        filename: Plugin_017_SanFranCityHall.dat
+        file: Plugin_017_SanFranCityHall.dat
         id: 0c83e29f
         name: LM11x7_SanFranciscoCityHall
         size: 11x7
@@ -1130,7 +1130,7 @@ assets:
     buildings:
       - bulldoze: 8550
         cost: 95000
-        filename: Plugin_030_TaipeiArtMuseum.dat
+        file: Plugin_030_TaipeiArtMuseum.dat
         flamability: 27
         garbage: 20
         id: '04900000'
@@ -1147,13 +1147,13 @@ assets:
         waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_030_TaipeiArtMuseum.dat
-    filename: Plugin_030_TaipeiArtMuseum.dat
+    file: Plugin_030_TaipeiArtMuseum.dat
     files:
       - Plugin_030_TaipeiArtMuseum.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04900000'
-        filename: Plugin_030_TaipeiArtMuseum.dat
+        file: Plugin_030_TaipeiArtMuseum.dat
         id: 4c9fcb9f
         name: LM5x7_TaipeiArtMuseum
         size: 5x7
@@ -1175,7 +1175,7 @@ assets:
       - bulldoze: 8100
         category: landmarks
         cost: 90000
-        filename: Plugin_031_AdlerPlanetarium.dat
+        file: Plugin_031_AdlerPlanetarium.dat
         flamability: 18
         garbage: 6
         id: '04890000'
@@ -1195,13 +1195,13 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_031_AdlerPlanetarium.dat
-    filename: Plugin_031_AdlerPlanetarium.dat
+    file: Plugin_031_AdlerPlanetarium.dat
     files:
       - Plugin_031_AdlerPlanetarium.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04890000'
-        filename: Plugin_031_AdlerPlanetarium.dat
+        file: Plugin_031_AdlerPlanetarium.dat
         id: 8c9fb724
         name: LM6x6_adlerp
         size: 6x6
@@ -1223,7 +1223,7 @@ assets:
       - bulldoze: 5850
         category: landmarks
         cost: 65000
-        filename: Plugin_032_MayflowerPort.dat
+        file: Plugin_032_MayflowerPort.dat
         flamability: 21
         garbage: 9
         id: '04880000'
@@ -1243,13 +1243,13 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_032_MayflowerPort.dat
-    filename: Plugin_032_MayflowerPort.dat
+    file: Plugin_032_MayflowerPort.dat
     files:
       - Plugin_032_MayflowerPort.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04880000'
-        filename: Plugin_032_MayflowerPort.dat
+        file: Plugin_032_MayflowerPort.dat
         id: acae3f0c
         name: Lm4x3_Mayflower
         props:
@@ -1277,7 +1277,7 @@ assets:
       - bulldoze: 8100
         category: landmarks,religion
         cost: 90000
-        filename: Plugin_033_RockefellerCenter.dat
+        file: Plugin_033_RockefellerCenter.dat
         flamability: 39
         garbage: 3
         id: '04870000'
@@ -1299,13 +1299,13 @@ assets:
       - religion
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_033_RockefellerCenter.dat
-    filename: Plugin_033_RockefellerCenter.dat
+    file: Plugin_033_RockefellerCenter.dat
     files:
       - Plugin_033_RockefellerCenter.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04870000'
-        filename: Plugin_033_RockefellerCenter.dat
+        file: Plugin_033_RockefellerCenter.dat
         id: 8ccf053d
         name: LM4x4_RockefellerCtr
         props:
@@ -1346,7 +1346,7 @@ assets:
       - bulldoze: 8100
         category: landmarks,religion
         cost: 90000
-        filename: Plugin_034_SobchakLanes.dat
+        file: Plugin_034_SobchakLanes.dat
         flamability: 39
         garbage: 3
         id: '04860000'
@@ -1368,13 +1368,13 @@ assets:
       - religion
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_034_SobchakLanes.dat
-    filename: Plugin_034_SobchakLanes.dat
+    file: Plugin_034_SobchakLanes.dat
     files:
       - Plugin_034_SobchakLanes.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04860000'
-        filename: Plugin_034_SobchakLanes.dat
+        file: Plugin_034_SobchakLanes.dat
         id: ae52bebe
         name: Lm3x3_SobchakLanes
         props:
@@ -1401,7 +1401,7 @@ assets:
       - bulldoze: 8100
         category: landmarks,religion
         cost: 90000
-        filename: Plugin_035_ShortyBurger.dat
+        file: Plugin_035_ShortyBurger.dat
         flamability: 39
         garbage: 3
         id: '04850000'
@@ -1423,13 +1423,13 @@ assets:
       - religion
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_035_ShortyBurger.dat
-    filename: Plugin_035_ShortyBurger.dat
+    file: Plugin_035_ShortyBurger.dat
     files:
       - Plugin_035_ShortyBurger.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04850000'
-        filename: Plugin_035_ShortyBurger.dat
+        file: Plugin_035_ShortyBurger.dat
         id: 2e891faa
         name: LM3x3_ShortyBurger_2e891faa
         props:
@@ -1457,7 +1457,7 @@ assets:
       - bulldoze: 8100
         category: landmarks,religion
         cost: 90000
-        filename: Plugin_036_LuckysHangTen.dat
+        file: Plugin_036_LuckysHangTen.dat
         flamability: 39
         garbage: 3
         id: '04840000'
@@ -1479,13 +1479,13 @@ assets:
       - religion
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_036_LuckysHangTen.dat
-    filename: Plugin_036_LuckysHangTen.dat
+    file: Plugin_036_LuckysHangTen.dat
     files:
       - Plugin_036_LuckysHangTen.dat
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: '04840000'
-        filename: Plugin_036_LuckysHangTen.dat
+        file: Plugin_036_LuckysHangTen.dat
         id: cea1e6b4
         name: LM3x2_LuckysHangTen
         props:
@@ -1514,7 +1514,7 @@ assets:
         category: landmarks
         cost: 60000
         description: A plant the manufactures many Grutze products
-        filename: Grutze Industries/IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc
+        file: Grutze Industries/IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc
         flamability: 10
         garbage: 25
         id: 8d21717e
@@ -1537,7 +1537,7 @@ assets:
         category: landmarks
         cost: 60000
         description: A plant the manufactures many Grutze products
-        filename: Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot
+        file: Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot
         flamability: 10
         garbage: 25
         id: 2d217719
@@ -1560,7 +1560,7 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Grutze_Industries.zip
-    filename: maxis-plugin-grutze-industries@1.zip
+    file: maxis-plugin-grutze-industries@1.zip
     files:
       - Grutze Industries/IndstryPipes-0x5ad0e817_0x6cd8b254_0x2f0000.SC4Model
       - Grutze Industries/IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc
@@ -1568,7 +1568,7 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 2d217719
-        filename: Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot
+        file: Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot
         id: 2d217719
         name: LM4x5_GrutzeInd
         props:
@@ -1603,7 +1603,7 @@ assets:
         category: landmarks
         cost: 22000
         description: The house of the Grutze family
-        filename: Grutzehaus/DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc
+        file: Grutzehaus/DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc
         flamability: 10
         garbage: 15
         id: 6d2170b6
@@ -1626,7 +1626,7 @@ assets:
         category: landmarks
         cost: 22000
         description: The house of the Grutze family
-        filename: Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot
+        file: Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot
         flamability: 10
         garbage: 15
         id: ed2174a0
@@ -1649,7 +1649,7 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Grutzehaus.zip
-    filename: maxis-plugin-grutzehaus@1.zip
+    file: maxis-plugin-grutzehaus@1.zip
     files:
       - Grutzehaus/DstTxtr-0x5ad0e817_0x6cd8b254_0x2d0000.SC4Model
       - Grutzehaus/DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc
@@ -1657,7 +1657,7 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: ed2174a0
-        filename: Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot
+        file: Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot
         id: ed2174a0
         name: LM2x3_Grutzehaus
         props:
@@ -1694,7 +1694,7 @@ assets:
         category: landmarks
         cost: 110000
         description: 'Location: Long ago and far away'
-        filename: Longfellow Castle/CastleSet.dat
+        file: Longfellow Castle/CastleSet.dat
         flamability: 10
         garbage: 15
         id: 2d3f0000
@@ -1715,7 +1715,7 @@ assets:
         category: landmarks
         cost: 110000
         description: 'Location: Long ago and far away'
-        filename: Longfellow Castle/CastleSet.dat
+        file: Longfellow Castle/CastleSet.dat
         flamability: 10
         garbage: 15
         id: 2d4b0000
@@ -1736,7 +1736,7 @@ assets:
         category: landmarks
         cost: 110000
         description: 'Location: Long ago and far away'
-        filename: Longfellow Castle/CastleSet.dat
+        file: Longfellow Castle/CastleSet.dat
         flamability: 10
         garbage: 15
         id: 0d4fdea6
@@ -1757,7 +1757,7 @@ assets:
         category: landmarks
         cost: 110000
         description: 'Location: Long ago and far away'
-        filename: Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
+        file: Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
         flamability: 10
         garbage: 15
         id: 4d50ba18
@@ -1778,14 +1778,14 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Longfellow_Castle.zip
-    filename: maxis-plugin-longfellow-castle@1.zip
+    file: maxis-plugin-longfellow-castle@1.zip
     files:
       - Longfellow Castle/CastleSet.dat
       - Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 0d4fdea6
-        filename: Longfellow Castle/CastleSet.dat
+        file: Longfellow Castle/CastleSet.dat
         id: 0d4fdea6
         name: Longfellow Castle
         props:
@@ -1856,7 +1856,7 @@ assets:
           - 257c0000
           - '25800000'
       - building: 4d50ba18
-        filename: Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
+        file: Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
         id: 4d50ba18
         name: Longfellow Castle
         props:
@@ -2036,7 +2036,7 @@ assets:
         category: landmarks
         cost: 75000
         description: A house made of stone and wood
-        filename: Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
+        file: Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
         flamability: 10
         garbage: 2
         id: 0d1d6acb
@@ -2058,7 +2058,7 @@ assets:
         category: landmarks
         cost: 75000
         description: A house made of stone and wood
-        filename: Stone House/StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc
+        file: Stone House/StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc
         flamability: 10
         garbage: 2
         id: 6d2172e0
@@ -2080,7 +2080,7 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Stone_House.zip
-    filename: maxis-plugin-stone-house@1.zip
+    file: maxis-plugin-stone-house@1.zip
     files:
       - Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
       - Stone House/StoneHouse-0x5ad0e817_0x6cd8b254_0x2e0000.SC4Model
@@ -2088,7 +2088,7 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 0d1d6acb
-        filename: Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
+        file: Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
         id: 0d1d6acb
         name: LM3x3_StoneHouse
         props:
@@ -2120,7 +2120,7 @@ assets:
         category: landmarks
         cost: 100000
         description: An ancient structure made in the honor of the great Grutz
-        filename: Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
+        file: Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
         flamability: 10
         id: 2d1e7a9e
         label: The Temple Of G
@@ -2140,7 +2140,7 @@ assets:
         category: landmarks
         cost: 100000
         description: An ancient structure made in the honor of the great Grutz
-        filename: Temple of Grutz/TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc
+        file: Temple of Grutz/TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc
         flamability: 10
         id: ed1e75d3
         label: The Temple Of G
@@ -2160,7 +2160,7 @@ assets:
       - landmarks
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Temple_of_Grutz.zip
-    filename: maxis-plugin-temple-of-grutz@1.zip
+    file: maxis-plugin-temple-of-grutz@1.zip
     files:
       - Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
       - Temple of Grutz/TempleOfGrutz-0x5ad0e817_0xad1d67dc_0x30000.SC4Model
@@ -2168,7 +2168,7 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 2d1e7a9e
-        filename: Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
+        file: Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
         id: 2d1e7a9e
         name: LM6x6_TempleOfGrutz
         props:

@@ -15,7 +15,7 @@ export interface LotData {
   /** Zone density where this lot may grow - comma-separated: "low", "medium", "high" */
   density?: MaybeArray<string>
   /** Path to the file containing the lot exemplar */
-  filename: string
+  file: string
   /** Lot Instance ID */
   id: string
   /** URL or relative path within ~docs */

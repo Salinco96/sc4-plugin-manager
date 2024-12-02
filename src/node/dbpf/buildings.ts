@@ -29,7 +29,7 @@ import { get, getArray, getBool, getMap, getString, getTGI } from "./utils"
 export function getBuildingData(exemplar: Exemplar): BuildingData {
   const buildingId = exemplar.id.split("-")[2]
 
-  const data: BuildingData = { id: buildingId, filename: exemplar.file }
+  const data: BuildingData = { id: buildingId, file: exemplar.file }
 
   const ogs = getArray(exemplar, ExemplarPropertyID.OccupantGroups) ?? []
 

@@ -20,13 +20,13 @@ export function globToRegex(pattern: string): RegExp {
 
 export function matchConditions(
   pattern: string,
-  filename: string,
+  filePath: string,
 ): { [key: string]: string } | undefined {
   if (CONDITION_REGEX.test(pattern)) {
-    return globToRegex(pattern).exec(filename)?.groups
+    return globToRegex(pattern).exec(filePath)?.groups
   }
 }
 
-export function matchFile(pattern: string, filename: string): boolean {
-  return globToRegex(pattern).test(filename)
+export function matchFile(pattern: string, filePath: string): boolean {
+  return globToRegex(pattern).test(filePath)
 }

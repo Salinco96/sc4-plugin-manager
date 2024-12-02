@@ -39,7 +39,7 @@ export function checkFile(
     return false
   }
 
-  const lot = variantInfo?.lots?.find(lot => lot.filename && matchFile(lot.filename, file.path))
+  const lot = variantInfo?.lots?.find(lot => lot.file && matchFile(lot.file, file.path))
 
   if (lot) {
     // Never include lots unless explicitly enabled
@@ -77,7 +77,7 @@ export function checkFile(
     }
   }
 
-  const mmp = variantInfo?.mmps?.find(mmp => mmp.filename && matchFile(mmp.filename, file.path))
+  const mmp = variantInfo?.mmps?.find(mmp => mmp.file && matchFile(mmp.file, file.path))
 
   if (mmp) {
     // Never include MMPs unless explicitly enabled

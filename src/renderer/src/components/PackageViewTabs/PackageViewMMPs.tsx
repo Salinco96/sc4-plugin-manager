@@ -50,7 +50,7 @@ export default function PackageViewMMPs({ packageId }: PackageViewTabInfoProps):
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
       {variantInfo.mmps?.map(mmp => {
-        const enabled = !mmp.filename || enabledMMPs.includes(mmp.id)
+        const enabled = !mmp.file || enabledMMPs.includes(mmp.id)
 
         const incompatible = !checkCondition(
           mmp.requirements,
@@ -101,10 +101,10 @@ export default function PackageViewMMPs({ packageId }: PackageViewTabInfoProps):
                         {mmp.label}
                       </Text>
 
-                      {(mmp.filename || tgi) && (
+                      {(mmp.file || tgi) && (
                         <FlexBox direction="row" gap={2}>
-                          {mmp.filename && <Typography variant="body2">{mmp.filename}</Typography>}
-                          {tgi && mmp.filename && <Typography variant="body2">|</Typography>}
+                          {mmp.file && <Typography variant="body2">{mmp.file}</Typography>}
+                          {tgi && mmp.file && <Typography variant="body2">|</Typography>}
                           {tgi && <Typography variant="body2">{tgi}</Typography>}
                         </FlexBox>
                       )}
@@ -123,11 +123,11 @@ export default function PackageViewMMPs({ packageId }: PackageViewTabInfoProps):
                         icon={incompatible ? <IncompatibleIcon /> : undefined}
                         checked={enabled && !incompatible}
                         color="primary"
-                        disabled={!mmp.filename || incompatible}
+                        disabled={!mmp.file || incompatible}
                         // name={option.id}
                         onClick={async event => {
                           const { checked } = event.target as HTMLInputElement
-                          if (mmp.filename && checked !== enabled) {
+                          if (mmp.file && checked !== enabled) {
                             await actions.setPackageOption(
                               packageId,
                               option.id,

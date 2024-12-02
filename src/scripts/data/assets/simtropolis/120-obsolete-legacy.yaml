@@ -754,7 +754,7 @@ assets:
     dependencies:
       - simtropolis/21771-lbt-mega-textures-vol01-v3
     description: "<body>\n                            \n\n\n\n\n\n\n\t\t\t\t\t\t\t\n<p>\n\tThis file is now obsolete, only use if you have to follow dependencies; you can find the newer release here:\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed979427237\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/21771-lbt-mega-texture-pack-vol02/?do=embed\" style=\"height:385px;max-width:502px;\"></iframe>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tA texture dependecy pack for current and future <abbr title=\"Latin American BAT Team\">LBT</abbr> creations.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:12px;\">Updated 24th August 2017 - updated file obsolete message + fixed dependency link</span>\n</p>\n\n\t\t\t\t\t\t</body>"
-    filename: lbt_texture_pack_1.zip
+    file: lbt_texture_pack_1.zip
     files:
       - LBT_Texture_Pack1.dat
     images:
@@ -1225,14 +1225,14 @@ assets:
     url: https://community.simtropolis.com/files/file/30381-3d-camera-mod-for-simcity-4/
     variants:
       '161233':
-        filename: 3D_Mod.zip
+        file: 3D_Mod.zip
         files:
           - 3D_Mod/SimCity 4/Almost There!/Getting Closer!/Here it is!/ZZZZZZZ_3D_Cam_Mod_1.dat
         sha256: 03840b208696263b3785176c613cfee6ad0dbb4fc47e2ea9302e2c505e562388
         size: 381392
         uncompressed: 564789
       '161234':
-        filename: 3D_Mod_Version1.zip
+        file: 3D_Mod_Version1.zip
         files:
           - README FIRST.TXT
           - ZZZZZZZ_3D_Cam_Mod_1.dat
@@ -1391,7 +1391,7 @@ assets:
     category: 120-obsolete-legacy
     dependencies: []
     description: "<body>\n                            \t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\r\n\tSome very old content will need one or more of these legacy files and will likely not even mention them as a dependency. (Long, long ago it was assumed peeps had them.)\r\n</p>\r\n\r\n<p>\r\n\tThis is a set of 3 very old style Building Props. They pre-date the:\r\n</p>\r\n\r\n<ul>\r\n\t<li>\r\n\t\t<a href=\"https://community.simtropolis.com/library/maxis/sc4/buildings/bldgprop_vol1.dat\" rel=\"\">bldgprop_vol1.dat</a>\r\n\t</li>\r\n\t<li>\r\n\t\t<a href=\"https://community.simtropolis.com/library/maxis/sc4/buildings/bldgprop_vol2.dat\" rel=\"\">bldgprop_vol2.dat</a>\r\n\t</li>\r\n</ul>\r\n\r\n<p>\r\n\t<span style=\"font-size:12px;\">(As found on the <a href=\"https://community.simtropolis.com/sc4-maxis-files/\" rel=\"\">Maxis Files</a> page.)</span>\r\n</p>\r\n\r\n<p>\r\n\t<br>\r\n\t<strong>Files included in the download are:</strong>\r\n</p>\r\n\r\n<ul>\r\n\t<li>\r\n\t\tPlugin_B90_ResidentialBuildings_Prop_Modd.dat\r\n\t</li>\r\n\t<li>\r\n\t\tPlugin_B91_CommercialBuildings_Prop_Modd.dat\r\n\t</li>\r\n\t<li>\r\n\t\tPlugin_RCI_Buildings_Prop_Modd.dat\r\n\t</li>\r\n</ul>\r\n\r\n<p>\r\n\t<br>\r\n\t<strong>Important:</strong> Do not use these for current lotting projects. They are provided only so very old content can be used in one's game.\r\n</p>\r\n\r\n<p>\r\n\tThe original creator is believed to be <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/3374-ralphaelninja/?do=hovercard\" data-mentionid=\"3374\" href=\"https://community.simtropolis.com/profile/3374-ralphaelninja/\" rel=\"\">@RalphaelNinja</a> and have been uploaded here in good faith.\r\n</p>\r\n\n\t\t\t\t\t\t</body>"
-    filename: Very Old Building Props.zip
+    file: Very Old Building Props.zip
     files:
       - Plugin_B90_ResidentialBuildings_Prop_Modd.dat
       - Plugin_B91_CommercialBuildings_Prop_Modd.dat

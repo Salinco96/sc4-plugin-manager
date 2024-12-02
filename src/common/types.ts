@@ -145,7 +145,7 @@ export interface MMPData {
   /** MMP description */
   description?: string
   /** Full name of the file containing the MMP (if missing the MMP cannot be disabled) */
-  filename?: string
+  file?: string
   /** MMP ID (usually last part of TGI, but may be an arbitrary string) */
   id: string
   /** URL or relative path within ~docs */

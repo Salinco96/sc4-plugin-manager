@@ -4,7 +4,7 @@ assets:
     authors:
       - '0xC0000054'
     download: https://github.com/0xC0000054/sc4-auto-run-cheats/releases/download/v{version}/SC4AutoRunCheats.zip
-    filename: SC4AutoRunCheats.zip
+    file: SC4AutoRunCheats.zip
     lastModified: 2024-08-26T21:53:25.000Z
     repository: https://github.com/0xC0000054/sc4-auto-run-cheats
     version: 1.2.1
@@ -17,7 +17,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-auto-save/releases/download/v{version}/SC4AutoSave.zip
-    filename: SC4AutoSave.zip
+    file: SC4AutoSave.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -42,7 +42,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-bulldoze-extensions/releases/download/v{version}/SC4BulldozeExtensions.zip
-    filename: SC4BulldozeExtensions.zip
+    file: SC4BulldozeExtensions.zip
     files:
       - BulldozeExtensions.dat
       - LICENSE.txt
@@ -66,7 +66,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-city-date-sync/releases/download/v{version}/SC4CityDateSync.zip
-    filename: SC4CityDateSync.zip
+    file: SC4CityDateSync.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -91,7 +91,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-city-lottery-ordinance/releases/download/v{version}/SC4CityLotteryOrdinance.zip
-    filename: SC4CityLotteryOrdinance.zip
+    file: SC4CityLotteryOrdinance.zip
     files:
       - CityLotteryOrdinanceText_English.dat
       - License.txt
@@ -117,7 +117,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-cpu-options/releases/download/v{version}/SC4CPUOptions.zip
-    filename: SC4CPUOptions.zip
+    file: SC4CPUOptions.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -142,7 +142,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-custom-budget-departments/releases/download/v{version}/SC4CustomBudgetDepartments.zip
-    filename: SC4CustomBudgetDepartments.zip
+    file: SC4CustomBudgetDepartments.zip
     files:
       - CustomBudgetDepartments.dll
       - LICENSE.txt
@@ -166,7 +166,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-dbpf-loading/releases/download/v{version}/SC4DBPFLoading.zip
-    filename: SC4DBPFLoading.zip
+    file: SC4DBPFLoading.zip
     files:
       - LICENSE.txt
       - README.htm
@@ -198,7 +198,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-demolition-animation/releases/download/v{version}/SC4DisableDemolitionAnimation.zip
-    filename: SC4DisableDemolitionAnimation.zip
+    file: SC4DisableDemolitionAnimation.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -222,7 +222,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke/releases/download/v{version}/SC4DisableLotPlopSmoke.zip
-    filename: SC4DisableLotPlopSmoke.zip
+    file: SC4DisableLotPlopSmoke.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -246,7 +246,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-network-construction-sounds/releases/download/v{version}/SC4DisableNetworkConstructionSounds.zip
-    filename: SC4DisableNetworkConstructionSounds.zip
+    file: SC4DisableNetworkConstructionSounds.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -270,7 +270,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-graphics-options/releases/download/v{version}/SC4GraphicsOptions.zip
-    filename: SC4GraphicsOptions.zip
+    file: SC4GraphicsOptions.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -295,7 +295,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-growify/releases/download/v{version}/SC4Growify.zip
-    filename: SC4Growify.zip
+    file: SC4Growify.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -319,7 +319,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-humane-society-ordinance/releases/download/v{version}/SC4HumaneSocietyOrdinance.zip
-    filename: SC4HumaneSocietyOrdinance.zip
+    file: SC4HumaneSocietyOrdinance.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -343,7 +343,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade/releases/download/v{version}/SC4LegalizeGamblingUpgrade.zip
-    filename: SC4LegalizeGamblingUpgrade.zip
+    file: SC4LegalizeGamblingUpgrade.zip
     files:
       - LICENSE.txt
       - Readme.txt
@@ -368,7 +368,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-building-styles/releases/download/v{version}/SC4MoreBuildingStyles.zip
-    filename: SC4MoreBuildingStyles.zip
+    file: SC4MoreBuildingStyles.zip
     files:
       - BuildingStyles.ini
       - LICENSE.txt
@@ -393,7 +393,7 @@ assets:
       - bulldoze: 100
         category: rewards
         cost: 15000
-        filename: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+        file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
         flamability: 45
         garbage: 23
         garbageRadius: 2
@@ -429,7 +429,7 @@ assets:
       - rewards
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-demand-info/releases/download/v{version}/SC4MoreDemandInfo.zip
-    filename: SC4MoreDemandInfo.zip
+    file: SC4MoreDemandInfo.zip
     files:
       - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
       - Dll/LICENSE.txt
@@ -440,7 +440,7 @@ assets:
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
       - building: 0dd41d65
-        filename: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+        file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
         id: 0dd41d65
         name: CensusRepository
         props:
@@ -485,7 +485,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-no-kick-out/releases/download/v{version}/SC4NoKickOut.zip
-    filename: SC4NoKickOut.zip
+    file: SC4NoKickOut.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -509,7 +509,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-query-ui-hooks/releases/download/v{version}/SC4QueryUIHooks.zip
-    filename: SC4QueryUIHooks.zip
+    file: SC4QueryUIHooks.zip
     files:
       - LICENSE.txt
       - README.htm
@@ -534,7 +534,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-region-census/releases/download/v{version}/SC4RegionCensus.zip
-    filename: SC4RegionCensus.zip
+    file: SC4RegionCensus.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -559,7 +559,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-remove-phantom-budget-items/releases/download/v{version}/SC4RemovePhantomBudgetItems.zip
-    filename: SC4RemovePhantomBudgetItems.zip
+    file: SC4RemovePhantomBudgetItems.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -583,7 +583,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/0xC0000054/sc4-resource-loading-hooks/releases/download/v{version}/SC4ResourceLoadingHooks.zip
-    filename: SC4ResourceLoadingHooks.zip
+    file: SC4ResourceLoadingHooks.zip
     files:
       - LICENSE.txt
       - README.txt
@@ -611,7 +611,7 @@ assets:
     authors:
       - ip7z
     download: https://github.com/ip7z/7zip/releases/download/{version}/7z2408-arm.exe
-    filename: 7z2408-arm.exe
+    file: 7z2408-arm.exe
     lastModified: 2024-08-12T11:56:47.000Z
     repository: https://github.com/ip7z/7zip
     version: '24.08'
@@ -632,7 +632,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/memo33/sc4-3d-camera-dll/releases/download/{version}/3d-camera-dll-{version}.zip
-    filename: 3d-camera-dll-1.0.0.zip
+    file: 3d-camera-dll-1.0.0.zip
     files:
       - LICENSE.txt
       - memo.3dcamera.dll
@@ -656,7 +656,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/memo33/sc4-thumbnail-fix-dll/releases/download/{version}/thumbnail-fix-dll-{version}.zip
-    filename: thumbnail-fix-dll-1.0.0.zip
+    file: thumbnail-fix-dll-1.0.0.zip
     files:
       - LICENSE.txt
       - memo.thumbnail-fix.dll
@@ -678,7 +678,7 @@ assets:
     buildings:
       - bulldoze: 20
         cost: 170
-        filename: submenus/park/plaza-submenu.dat
+        file: submenus/park/plaza-submenu.dat
         id: ea8756cf
         maintenance: 20
         menu: Parks
@@ -699,7 +699,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/memo33/submenus-dll/releases/download/{version}/submenus-dll-{version}.zip
-    filename: submenus-dll-1.1.4.zip
+    file: submenus-dll-1.1.4.zip
     files:
       - submenus/commercial/ploppable-CO$$$-submenu.dat
       - submenus/commercial/ploppable-CO$$-submenu.dat
@@ -775,7 +775,7 @@ assets:
       - dll
     dependencies: []
     download: https://github.com/memo33/transparent-texture-fix-dll/releases/download/{version}/transparent-texture-fix-dll-{version}.zip
-    filename: transparent-texture-fix-dll-1.0.0.zip
+    file: transparent-texture-fix-dll-1.0.0.zip
     files:
       - LICENSE.txt
       - memo.transparent-texture-fix.dll

@@ -395,7 +395,7 @@ function loadVariantInfo(
   const buildings = unionBy(
     variantData.buildings ?? [],
     packageData.buildings ?? [],
-    building => `${building.id}#${building.filename}`,
+    building => `${building.id}#${building.file}`,
   )
 
   if (buildings.length) {
@@ -451,7 +451,7 @@ function loadVariantInfo(
   const lots = unionBy(
     variantData.lots ?? [],
     packageData.lots ?? [],
-    lot => `${lot.id}#${lot.filename}`,
+    lot => `${lot.id}#${lot.file}`,
   )
 
   if (lots.length) {

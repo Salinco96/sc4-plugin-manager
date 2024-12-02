@@ -36,7 +36,7 @@ assets:
       - bulldoze: 9000
         category: rewards
         cost: 15000
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot
         flamability: 38
         garbage: 47
         id: 6471f58b
@@ -71,7 +71,7 @@ assets:
       - bulldoze: 9000
         category: rewards
         cost: 15000
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot
         flamability: 38
         garbage: 47
         id: 6471f58b
@@ -106,7 +106,7 @@ assets:
       - bulldoze: 9000
         category: rewards
         cost: 15000
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot
         flamability: 38
         garbage: 47
         id: 6471f58b
@@ -141,7 +141,7 @@ assets:
       - bulldoze: 9000
         category: rewards
         cost: 15000
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
         flamability: 38
         garbage: 47
         id: 6471f58b
@@ -176,7 +176,7 @@ assets:
       - bulldoze: 9000
         category: rewards
         cost: 15000
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot
         flamability: 38
         garbage: 47
         id: 6471f58b
@@ -211,7 +211,7 @@ assets:
       - bulldoze: 100
         category: rewards
         cost: 15000
-        filename: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        file: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
         flamability: 45
         garbage: 23
         garbageRadius: 2
@@ -244,7 +244,7 @@ assets:
       - bulldoze: 1500
         category: rewards
         cost: 2000
-        filename: BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
+        file: BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
         flamability: 38
         garbage: 5
         id: 645e467b
@@ -266,7 +266,7 @@ assets:
       - bulldoze: 9000
         category: rewards
         cost: 15000
-        filename: BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+        file: BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
         flamability: 38
         garbage: 47
         id: 6471f58b
@@ -304,7 +304,7 @@ assets:
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>BSC Census Repository Building by RippleJet.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
     downloads: 1119
-    filename: BSC RJ Census Repository Facility v3.5_1831.zip
+    file: BSC RJ Census Repository Facility v3.5_1831.zip
     files:
       - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Day.jpg
       - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Night.jpg
@@ -324,7 +324,7 @@ assets:
     lastModified: 2023-07-20T10:48:28.000Z
     lots:
       - building: 6471f58b
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot
         id: 6471f58b
         name: RW_3x1_Census Repository Facility_ZP_HIGH
         props:
@@ -336,7 +336,7 @@ assets:
           - 258f0000
           - '26370000'
       - building: 6471f58b
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot
         id: 6471f58b
         name: RW_3x1_Census Repository Facility_ZP_LOW
         props:
@@ -348,7 +348,7 @@ assets:
           - 258f0000
           - '26370000'
       - building: 6471f58b
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot
         id: 6471f58b
         name: RW_3x1_Census Repository Facility_ZP_MEDIUM
         props:
@@ -360,7 +360,7 @@ assets:
           - 258f0000
           - '26370000'
       - building: 6471f58b
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
         id: 6471f58b
         name: RW_3x1_Census Repository Facility_ZP_ULTRA
         props:
@@ -372,7 +372,7 @@ assets:
           - 258f0000
           - '26370000'
       - building: 6471f58b
-        filename: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot
+        file: _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot
         id: 6471f58b
         name: RW_3x1_Census Repository Facility_Z_CLASSIC
         props:
@@ -384,7 +384,7 @@ assets:
           - 258f0000
           - '26370000'
       - building: 0dd41d65
-        filename: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        file: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
         id: 0dd41d65
         name: CensusRepository
         props:
@@ -404,7 +404,7 @@ assets:
           - '258e0000'
           - 258d0000
       - building: 645e467b
-        filename: BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
+        file: BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
         id: 645e467b
         name: RW_2x2_Census Repository Vault
         props:
@@ -415,7 +415,7 @@ assets:
         textures:
           - 262c0000
       - building: 6471f58b
-        filename: BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+        file: BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
         id: 6471f58b
         name: RW_3x1_Census Repository Facility_ZP_ULTRA
         props:

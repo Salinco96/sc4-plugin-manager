@@ -106,6 +106,7 @@ export enum ExemplarPropertyID {
   PollutionRadius = 0x68ee9764,
   PowerConsumed = 0x27812854,
   PowerGenerated = 0x27812852,
+  PropFamily = 0x27812870,
   Purpose = 0x27812833,
   PurposeTypes = 0x88edc796,
   ResourceKeyType0 = 0x27812820,

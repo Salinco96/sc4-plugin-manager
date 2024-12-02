@@ -327,24 +327,22 @@ export function writePackageData(
     variantAsset.include = []
   }
 
-  const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.filename))
+  const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.file))
 
   if (lots?.length) {
     variantData.lots ??= []
 
     for (const lot of lots) {
-      let existingLot = variantData.lots.find(
-        ({ filename, id }) => id === lot.id && filename === lot.filename,
-      )
+      let existingLot = variantData.lots.find(({ file, id }) => id === lot.id && file === lot.file)
 
       if (!existingLot) {
-        existingLot = { id: lot.id, filename: lot.filename }
+        existingLot = { id: lot.id, file: lot.file }
         variantData.lots.push(existingLot)
       }
 
       existingLot.building ??= lot.building
       existingLot.density ??= lot.density
-      existingLot.filename ??= lot.filename
+      existingLot.file ??= lot.file
       existingLot.images ??= lot.images
       existingLot.name ??= lot.name
       existingLot.size ??= lot.size
@@ -353,7 +351,7 @@ export function writePackageData(
   }
 
   const buildings = variantEntry.buildings?.filter(building =>
-    includedFiles.includes(building.filename),
+    includedFiles.includes(building.file),
   )
 
   if (buildings?.length) {
@@ -361,11 +359,11 @@ export function writePackageData(
 
     for (const building of buildings) {
       let existingBuilding = variantData.buildings.find(
-        ({ filename, id }) => id === building.id && filename === building.filename,
+        ({ file, id }) => id === building.id && file === building.file,
       )
 
       if (!existingBuilding) {
-        existingBuilding = { id: building.id, filename: building.filename }
+        existingBuilding = { id: building.id, file: building.file }
         variantData.buildings.push(existingBuilding)
       }
 
@@ -374,7 +372,7 @@ export function writePackageData(
       existingBuilding.category ??= building.category
       existingBuilding.cost ??= building?.cost
       existingBuilding.description ??= building?.description
-      existingBuilding.filename ??= building.filename
+      existingBuilding.file ??= building.file
       existingBuilding.flamability ??= building?.flamability
       existingBuilding.garbage ??= building?.garbage
       existingBuilding.garbageRadius ??= building?.garbageRadius

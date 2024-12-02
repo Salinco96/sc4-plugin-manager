@@ -341,8 +341,7 @@ export class Application {
           }
 
           const conflictingFiles = new Set<string>()
-
-          const filenames = new Set(variantInfo.files?.map(file => path.basename(file.path)))
+          const filePaths = new Set(variantInfo.files?.map(file => path.basename(file.path)))
 
           const variantPath = this.getVariantPath(packageId, variantId)
           const cleanitolPath = path.join(variantPath, DIRNAMES.cleanitol)
@@ -357,17 +356,17 @@ export class Application {
           for (const cleanitolFile of cleanitolFiles) {
             const contents = await readFile(path.join(cleanitolPath, cleanitolFile))
             for (const line of contents.split("\n")) {
-              const filename = line.split(";")[0].trim()
+              const filePath = line.split(";")[0].trim()
 
-              if (filename) {
-                filenames.add(filename)
+              if (filePath) {
+                filePaths.add(filePath)
               }
             }
           }
 
-          for (const filename of filenames) {
+          for (const filePath of filePaths) {
             for (const externalFile of externals) {
-              if (path.basename(externalFile) === filename) {
+              if (path.basename(externalFile) === filePath) {
                 conflictingFiles.add(externalFile)
               }
             }
@@ -2117,7 +2116,7 @@ export class Application {
               case ExemplarType.Building: {
                 if (variantInfo.buildings) {
                   const index = variantInfo.buildings.findIndex(
-                    building => building.id === instanceId && building.filename === filePath,
+                    building => building.id === instanceId && building.file === filePath,
                   )
 
                   if (index >= 0) {
@@ -2132,7 +2131,7 @@ export class Application {
               case ExemplarType.LotConfig: {
                 if (variantInfo.lots) {
                   const index = variantInfo.lots.findIndex(
-                    lot => lot.id === instanceId && lot.filename === filePath,
+                    lot => lot.id === instanceId && lot.file === filePath,
                   )
 
                   if (index >= 0) {
