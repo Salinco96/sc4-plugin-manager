@@ -68,6 +68,16 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     },
   },
   {
+    id: "props",
+    component: lazy(() => import("./PackageViewProps")),
+    condition(variantInfo) {
+      return !!variantInfo.props?.length
+    },
+    label(t, variantInfo) {
+      return t("props", { count: variantInfo.props?.length })
+    },
+  },
+  {
     id: "mmps",
     component: lazy(() => import("./PackageViewMMPs")),
     condition(variantInfo) {

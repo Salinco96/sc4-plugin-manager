@@ -550,6 +550,8 @@
     "options": "Options",
     "optionalDependencies_one": "{{count}} optional dependency",
     "optionalDependencies_other": "{{count}} optional dependencies",
+    "props_one": "{{count}} prop",
+    "props_other": "{{count}} props",
     "readme": "Readme",
     "requiredBy": "{{count}} dependent packages",
     "summary": "Summary",
