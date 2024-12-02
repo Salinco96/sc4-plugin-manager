@@ -10,6 +10,7 @@ import type { LotInfo } from "./lots"
 import type { LotData } from "./lots"
 import type { OptionData, OptionID, OptionInfo, OptionValue, Requirements } from "./options"
 import type { PackageID } from "./packages"
+import type { PropData, PropInfo } from "./props"
 import type { Feature, MMPData, MMPInfo, PackageFile, PackageWarning, VariantState } from "./types"
 import type { MaybeArray } from "./utils/types"
 
@@ -37,6 +38,7 @@ export interface VariantData {
   name?: string
   optional?: PackageID[]
   options?: OptionData[]
+  props?: PropData[]
   release?: Date
   readme?: string
   repository?: string
@@ -72,6 +74,7 @@ export interface BaseVariantInfo {
   optional?: PackageID[]
   options?: OptionInfo[]
   priority: number
+  props?: PropInfo[]
   release?: string
   readme?: string
   repository?: string

@@ -81,6 +81,7 @@ import { type ToolID, getToolInfo } from "@utils/tools"
 
 import { getBuildingData } from "@node/dbpf/buildings"
 import { getLotData } from "@node/dbpf/lots"
+import { getPropData } from "@node/dbpf/props"
 import type { Exemplar } from "@node/dbpf/types"
 import {
   entries,
@@ -109,6 +110,7 @@ import {
   loadDownloadedAssets,
   loadLocalPackages,
   loadLotInfo,
+  loadPropInfo,
   loadRemotePackages,
   toPackageData,
 } from "./data/packages"
@@ -2138,6 +2140,21 @@ export class Application {
                     const exemplar = { ...entry, file: filePath } as Exemplar
                     const newInfo = loadLotInfo(getLotData(exemplar))
                     variantInfo.lots[index] = newInfo
+                  }
+                }
+                break
+              }
+
+              case ExemplarType.Prop: {
+                if (variantInfo.props) {
+                  const index = variantInfo.props.findIndex(
+                    prop => prop.id === instanceId && prop.file === filePath,
+                  )
+
+                  if (index >= 0) {
+                    const exemplar = { ...entry, file: filePath } as Exemplar
+                    const newInfo = loadPropInfo(getPropData(exemplar))
+                    variantInfo.props[index] = newInfo
                   }
                 }
                 break

@@ -273,9 +273,9 @@ assets:
       - ~Documents/Jeronij_Readmes/images/JRJ_Ships_Toyama_yellow.jpg
       - ~Documents/Jeronij_Readmes/images/Logo_eurobold_204x20.jpg
       - BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+      - ~Documents/Jeronij_Readmes/JRJ_Ships_Ned_Lloyd_readme.html
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - JRJ Vol01 v2-index.jpg
       - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_JRJ Ships Compilation.txt
-      - ~Documents/Jeronij_Readmes/JRJ_Ships_Ned_Lloyd_readme.html
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Titanic.jpg
@@ -389,7 +389,7 @@ assets:
           - 70b5ca2f
         size: 1x1
     meta:
-      timestamp: 2024-11-27T09:00:58.547Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-93510e0f-00030000
@@ -406,23 +406,69 @@ assets:
       - 5ad0e817-5344f7dc-00030000
     name: SC4D LEX LEGACY - Jeronij Ship Pack
     props:
-      - 6534284a-0f55ca9c-50c1db01
-      - 6534284a-b263c71d-d56999c1
-      - 6534284a-0f55ca9c-70c20440
-      - 6534284a-0f55ca9c-50be0b56
-      - 6534284a-b263c71d-d5699a2f
-      - 6534284a-0f55ca9c-90bf1390
-      - 6534284a-b263c71d-756999f9
-      - 6534284a-0f55ca9c-70c05af8
-      - 6534284a-0f55ca9c-90bf0d55
-      - 6534284a-b263c71d-b5699a0b
-      - 6534284a-0f55ca9c-70c0526a
-      - 6534284a-0f55ca9c-90bf09fe
-      - 6534284a-b263c71d-15699a1a
-      - 6534284a-0f55ca9c-50c05283
-      - 6534284a-0f55ca9c-90bf037b
-      - 6534284a-0f55ca9c-f0c044bc
-      - 6534284a-0f55ca9c-70b5ca2f
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 50c1db01
+        model: 5ad0e817-93510e0f-00030000
+        name: JRJ_V_Nedlloyd01
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: d56999c1
+        name: JRJ_V_Nedlloyd01Timed
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 70c20440
+        model: 5ad0e817-d351314d-00030000
+        name: JRJ_V_Nedlloydfull02
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 50be0b56
+        model: 5ad0e817-b34d42e5-00030000
+        name: JRJ_V_JJ_Sister2
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: d5699a2f
+        name: JRJ_V_Toyama_Ship_YellowTimed
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 90bf1390
+        model: 5ad0e817-534e4a5e-00030000
+        name: JRJ_V_Toyama_Ship_Blue
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 756999f9
+        name: JRJ_V_Toyama_Ship_BlueTimed
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 70c05af8
+        model: 5ad0e817-d34f8ced-00030000
+        name: JRJ_V_Toyama_Ship_Blue_full
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 90bf0d55
+        model: 5ad0e817-534e44f3-00030000
+        name: JRJ_V_Toyama_Ship_Green
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: b5699a0b
+        name: JRJ_V_Toyama_Ship_GreenTimed
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 70c0526a
+        model: 5ad0e817-d34f8584-00030000
+        name: JRJ_V_Toyama_Ship_Green_full
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 90bf09fe
+        model: 5ad0e817-734e40cf-00030000
+        name: JRJ_V_Toyama_Ship_Red
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 15699a1a
+        name: JRJ_V_Toyama_Ship_RedTimed
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 50c05283
+        model: 5ad0e817-b34f7bbc-00030000
+        name: JRJ_V_Toyama_Ship_Red_Full
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 90bf037b
+        model: 5ad0e817-f34e3aa0-00030000
+        name: JRJ_V_Toyama_Ship_Yellow
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: f0c044bc
+        model: 5ad0e817-334f74fb-00030000
+        name: JRJ_V_Toyama_Ship_Yellow_full
+      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
+        id: 70b5ca2f
+        model: 5ad0e817-5344f7dc-00030000
+        name: JRJ_V_RMS_Titanic
     sha256: 655d592ae43b5c95f143eee8ae3bb4d536b0941d606a012bb9be8bcdb7136bbc
     size: 11699133
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg

@@ -237,6 +237,10 @@ export function filterVariant(
       return true
     }
 
+    if (variantInfo.props?.some(prop => prop.id === filters.hex)) {
+      return true
+    }
+
     return false
   }
 

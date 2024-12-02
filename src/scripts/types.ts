@@ -2,12 +2,11 @@ import type { ID } from "@salinco/nice-utils"
 import type { HTMLElement } from "node-html-parser"
 
 import type { AssetID } from "@common/assets"
-import type { BuildingData } from "@common/buildings"
 import type { CategoryID } from "@common/categories"
-import type { LotData } from "@common/lots"
 import type { PackageID } from "@common/packages"
-import type { Feature } from "@common/types"
 import type { MaybeArray } from "@common/utils/types"
+
+import type { SC4FileData } from "./dbpf/dbpf"
 
 export interface IndexerOptions {
   include: {
@@ -49,21 +48,14 @@ export interface IndexerEntryDetails {
   version?: string
 }
 
-export interface IndexerVariantEntry {
-  buildings?: BuildingData[]
-  categories?: CategoryID[]
+export interface IndexerVariantEntry extends Partial<SC4FileData> {
   download?: string
-  features?: Feature[]
   filename?: string
   files?: string[]
-  lots?: LotData[]
-  models?: string[]
-  props?: string[]
   /** Download hash */
   sha256?: string
   /** Download size in bytes */
   size?: number
-  textures?: string[]
   /** Uncompressed size in bytes, if download is compressed */
   uncompressed?: number
 }

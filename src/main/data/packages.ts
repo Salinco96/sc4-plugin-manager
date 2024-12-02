@@ -44,6 +44,7 @@ import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
 import type { BuildingData, BuildingInfo } from "@common/buildings"
+import type { PropData, PropInfo } from "@common/props"
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
 
@@ -482,6 +483,16 @@ function loadVariantInfo(
     variantInfo.options = options
   }
 
+  const props = unionBy(
+    variantData.props ?? [],
+    packageData.props ?? [],
+    prop => `${prop.id}#${prop.file}`,
+  )
+
+  if (props.length) {
+    variantInfo.props = props.map(loadPropInfo)
+  }
+
   const readme = variantData.readme ?? packageData.readme
 
   if (readme) {
@@ -606,6 +617,7 @@ function mergeLocalPackageInfo(
           remoteVariantInfo.buildings = localVariantInfo.buildings
           remoteVariantInfo.lots = localVariantInfo.lots
           remoteVariantInfo.files = localVariantInfo.files
+          remoteVariantInfo.props = localVariantInfo.props
           remoteVariantInfo.readme ??= localVariantInfo.readme
           Object.assign(localVariantInfo, remoteVariantInfo)
           localVariantInfo.installed = true
@@ -649,6 +661,11 @@ export function loadLotInfo(data: LotData): LotInfo {
   }
 }
 
+export function loadPropInfo(data: PropData): PropInfo {
+  const { model, ...others } = data
+  return others
+}
+
 export function writeBuildingInfo(building: BuildingInfo): BuildingData {
   const { categories, menu, submenus, ...others } = building
   return {
@@ -665,6 +682,10 @@ export function writeLotInfo(lot: LotInfo): LotData {
     density: density?.length === 3 ? "all" : density?.join(","),
     ...others,
   }
+}
+
+export function writePropInfo(prop: PropInfo): PropData {
+  return prop
 }
 
 export function toPackageData(packageInfo: PackageInfo): PackageData {
@@ -694,6 +715,7 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         name: variant.name,
         optional: variant.optional,
         options: variant.options,
+        props: variant.props?.map(writePropInfo),
         readme: variant.readme,
         release: variant.release ? new Date(variant.release) : undefined,
         repository: variant.repository,

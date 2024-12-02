@@ -342,7 +342,6 @@ export function writePackageData(
 
       existingLot.building ??= lot.building
       existingLot.density ??= lot.density
-      existingLot.file ??= lot.file
       existingLot.images ??= lot.images
       existingLot.name ??= lot.name
       existingLot.size ??= lot.size
@@ -372,7 +371,7 @@ export function writePackageData(
       existingBuilding.category ??= building.category
       existingBuilding.cost ??= building?.cost
       existingBuilding.description ??= building?.description
-      existingBuilding.file ??= building.file
+      existingBuilding.family ??= building.family
       existingBuilding.flamability ??= building?.flamability
       existingBuilding.garbage ??= building?.garbage
       existingBuilding.garbageRadius ??= building?.garbageRadius
@@ -400,6 +399,27 @@ export function writePackageData(
       existingBuilding.waterPollutionRadius ??= building?.waterPollutionRadius
       existingBuilding.waterProduction ??= building?.waterProduction
       existingBuilding.worth ??= building?.worth
+    }
+  }
+
+  const props = variantEntry.props?.filter(prop => includedFiles.includes(prop.file))
+
+  if (props?.length) {
+    variantData.props ??= []
+
+    for (const prop of props) {
+      let existingProp = variantData.props.find(
+        ({ file, id }) => id === prop.id && file === prop.file,
+      )
+
+      if (!existingProp) {
+        existingProp = { id: prop.id, file: prop.file }
+        variantData.props.push(existingProp)
+      }
+
+      existingProp.family ??= prop?.family
+      existingProp.images ??= prop?.images
+      existingProp.name ??= prop?.name
     }
   }
 

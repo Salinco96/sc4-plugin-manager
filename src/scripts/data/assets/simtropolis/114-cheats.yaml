@@ -233,18 +233,6 @@ assets:
         id: '08630000'
         model: 5ad0e817-badb57f1-08630000
         name: ID30x30_1DirtyAnchor55_0863
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000004'
-        name: ID30x30_1_80000004
-        pollution: 5
-        pollutionRadius: 13
-        power: 20
-        water: 36
-        waterPollution: 5
-        waterPollutionRadius: 16
-        worth: 1584
       - bulldoze: 250
         capacity:
           id: 152
@@ -253,18 +241,6 @@ assets:
         id: 07fa0000
         model: 5ad0e817-badb57f1-07fa0000
         name: ID30x30_3DirtyOut9_07FA
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: 8000001e
-        name: ID30x30_3_8000001E
-        pollution: 25
-        pollutionRadius: 20
-        power: 156
-        water: 456
-        waterPollution: 18
-        waterPollutionRadius: 25
-        worth: 3192
       - bulldoze: 200
         capacity:
           id: 58
@@ -273,18 +249,6 @@ assets:
         id: 07f70000
         model: 5ad0e817-badb57f1-07f70000
         name: ID28x16_2DirtyOut6_07F7
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: 8000001b
-        name: ID28x16_2_8000001B
-        pollution: 9
-        pollutionRadius: 16
-        power: 46
-        water: 116
-        waterPollution: 7
-        waterPollutionRadius: 20
-        worth: 1392
       - bulldoze: 90
         capacity:
           id: 20
@@ -293,18 +257,6 @@ assets:
         id: 07f40000
         model: 5ad0e817-badb57f1-07f40000
         name: ID24x12_1DirtyOut3_07F4
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000018'
-        name: ID24x12_1_80000018
-        pollution: 3
-        pollutionRadius: 13
-        power: 12
-        water: 20
-        waterPollution: 3
-        waterPollutionRadius: 16
-        worth: 880
       - bulldoze: 250
         capacity:
           id: 200
@@ -313,18 +265,6 @@ assets:
         id: 07f10000
         model: 5ad0e817-badb57f1-07f10000
         name: ID48x32_3DirtyMech12_07F1
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: '80000014'
-        name: ID48x32_3_80000014
-        pollution: 33
-        pollutionRadius: 20
-        power: 206
-        water: 600
-        waterPollution: 23
-        waterPollutionRadius: 25
-        worth: 4200
       - bulldoze: 250
         capacity:
           id: 184
@@ -333,18 +273,6 @@ assets:
         id: 07ee0000
         model: 5ad0e817-badb57f1-07ee0000
         name: ID32x32_3DirtyMech9_07EE
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: '80000012'
-        name: ID32x32_3_80000012
-        pollution: 30
-        pollutionRadius: 20
-        power: 190
-        water: 552
-        waterPollution: 21
-        waterPollutionRadius: 25
-        worth: 3864
       - bulldoze: 200
         capacity:
           id: 82
@@ -353,18 +281,6 @@ assets:
         id: 07eb0000
         model: 5ad0e817-badb57f1-07eb0000
         name: ID28x28_2DirtyMech6_07EB
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: '80000015'
-        name: ID28x28_2_80000015
-        pollution: 18
-        pollutionRadius: 16
-        power: 92
-        water: 236
-        waterPollution: 14
-        waterPollutionRadius: 20
-        worth: 2832
       - bulldoze: 90
         capacity:
           id: 24
@@ -373,18 +289,6 @@ assets:
         id: '07e80000'
         model: 5ad0e817-badb57f1-07e80000
         name: ID20x12_1DirtyMech3_07E8
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: 8000000d
-        name: ID20x12_1_8000000D
-        pollution: 4
-        pollutionRadius: 13
-        power: 14
-        water: 24
-        waterPollution: 3
-        waterPollutionRadius: 16
-        worth: 1056
       - bulldoze: 250
         capacity:
           id: 300
@@ -393,18 +297,6 @@ assets:
         id: '07e50000'
         model: 5ad0e817-badb57f1-07e50000
         name: ID64x62_3DirtyAnchor12_07E5
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: 8000000a
-        name: ID64x62_3_8000000A
-        pollution: 49
-        pollutionRadius: 20
-        power: 308
-        water: 900
-        waterPollution: 34
-        waterPollutionRadius: 25
-        worth: 6300
       - bulldoze: 250
         capacity:
           id: 238
@@ -413,18 +305,6 @@ assets:
         id: '07e20000'
         model: 5ad0e817-badb57f1-07e20000
         name: ID48x32_3DirtyAnchor9_07E2
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: '80000008'
-        name: ID48x32_3_80000008
-        pollution: 39
-        pollutionRadius: 20
-        power: 244
-        water: 714
-        waterPollution: 27
-        waterPollutionRadius: 25
-        worth: 4998
       - bulldoze: 200
         capacity:
           id: 56
@@ -433,18 +313,6 @@ assets:
         id: 07df0000
         model: 5ad0e817-badb57f1-07df0000
         name: ID22x14_2DirtyAnchor6_07DF
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: '80000005'
-        name: ID22x14_2_80000005
-        pollution: 9
-        pollutionRadius: 16
-        power: 44
-        water: 112
-        waterPollution: 7
-        waterPollutionRadius: 20
-        worth: 1344
       - bulldoze: 90
         capacity:
           id: 46
@@ -453,18 +321,6 @@ assets:
         id: 07dc0000
         model: 5ad0e817-badb57f1-07dc0000
         name: ID45x30_1DirtyAnchor3_07DC
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000002'
-        name: ID45x30_1_80000002
-        pollution: 7
-        pollutionRadius: 13
-        power: 26
-        water: 46
-        waterPollution: 6
-        waterPollutionRadius: 16
-        worth: 2024
       - bulldoze: 310
         capacity:
           id: 154
@@ -481,18 +337,6 @@ assets:
         id: 07f90000
         model: 5ad0e817-badb57f1-07f90000
         name: ID30x14_3DirtyOut8_07F9
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: 8000001d
-        name: ID30x14_3_8000001D
-        pollution: 19
-        pollutionRadius: 20
-        power: 120
-        water: 348
-        waterPollution: 14
-        waterPollutionRadius: 25
-        worth: 2436
       - bulldoze: 200
         capacity:
           id: 50
@@ -501,18 +345,6 @@ assets:
         id: 07f60000
         model: 5ad0e817-badb57f1-07f60000
         name: ID24x16_2DirtyOut5_07F6
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: 8000001a
-        name: ID24x16_2_8000001A
-        pollution: 8
-        pollutionRadius: 16
-        power: 40
-        water: 100
-        waterPollution: 6
-        waterPollutionRadius: 20
-        worth: 1200
       - bulldoze: 90
         capacity:
           id: 22
@@ -521,18 +353,6 @@ assets:
         id: 07f30000
         model: 5ad0e817-badb57f1-07f30000
         name: ID12x20_1DirtyOut2_07F3
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000017'
-        name: ID12x20_1_80000017
-        pollution: 4
-        pollutionRadius: 13
-        power: 12
-        water: 22
-        waterPollution: 3
-        waterPollutionRadius: 16
-        worth: 968
       - bulldoze: 200
         capacity:
           id: 42
@@ -540,18 +360,6 @@ assets:
         id: 07f00000
         model: 5ad0e817-badb57f1-0e110000
         name: ID14x14_2DirtyMech5_07F0
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: '80000020'
-        name: ID14x14_2_80000020
-        pollution: 6
-        pollutionRadius: 16
-        power: 28
-        water: 72
-        waterPollution: 5
-        waterPollutionRadius: 20
-        worth: 864
       - bulldoze: 200
         capacity:
           id: 56
@@ -560,18 +368,6 @@ assets:
         id: 07ed0000
         model: 5ad0e817-badb57f1-07ed0000
         name: ID28x16_2DirtyMech8_07ED
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: '80000011'
-        name: ID28x16_2_80000011
-        pollution: 9
-        pollutionRadius: 16
-        power: 44
-        water: 112
-        waterPollution: 7
-        waterPollutionRadius: 20
-        worth: 1344
       - bulldoze: 200
         capacity:
           id: 42
@@ -580,18 +376,6 @@ assets:
         id: 07ea0000
         model: 5ad0e817-badb57f1-07ea0000
         name: ID14x14_2DirtyMech5_07EA
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: 8000000f
-        name: ID14x14_2_8000000F
-        pollution: 7
-        pollutionRadius: 16
-        power: 34
-        water: 84
-        waterPollution: 5
-        waterPollutionRadius: 20
-        worth: 1008
       - bulldoze: 90
         capacity:
           id: 30
@@ -600,18 +384,6 @@ assets:
         id: '07e70000'
         model: 5ad0e817-badb57f1-07e70000
         name: ID24x24_1DirtyMech2_07E7
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: 8000000c
-        name: ID24x24_1_8000000C
-        pollution: 5
-        pollutionRadius: 13
-        power: 16
-        water: 30
-        waterPollution: 4
-        waterPollutionRadius: 16
-        worth: 1320
       - bulldoze: 250
         capacity:
           id: 316
@@ -620,18 +392,6 @@ assets:
         id: '07e40000'
         model: 5ad0e817-badb57f1-07e40000
         name: ID64x46_3DirtyAnchor11_07E4
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: '80000009'
-        name: ID64x46_3_80000009
-        pollution: 52
-        pollutionRadius: 20
-        power: 324
-        water: 948
-        waterPollution: 36
-        waterPollutionRadius: 25
-        worth: 6636
       - bulldoze: 200
         capacity:
           id: 132
@@ -640,18 +400,6 @@ assets:
         id: '07e10000'
         model: 5ad0e817-badb57f1-07e10000
         name: ID48x46_2DirtyAnchor8_07E1
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: '80000007'
-        name: ID48x46_2_80000007
-        pollution: 21
-        pollutionRadius: 16
-        power: 104
-        water: 268
-        waterPollution: 16
-        waterPollutionRadius: 20
-        worth: 3216
       - bulldoze: 90
         capacity:
           id: 36
@@ -668,18 +416,6 @@ assets:
         id: 07fb0000
         model: 5ad0e817-badb57f1-07fb0000
         name: ID46x32_3DirtyOut10_07FB
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: 8000001f
-        name: ID46x32_3_8000001F
-        pollution: 31
-        pollutionRadius: 20
-        power: 194
-        water: 564
-        waterPollution: 22
-        waterPollutionRadius: 25
-        worth: 3948
       - bulldoze: 250
         capacity:
           id: 114
@@ -688,18 +424,6 @@ assets:
         id: 07f80000
         model: 5ad0e817-badb57f1-07f80000
         name: ID32x16_3DirtyOut7_07F8
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 4
-        id: 8000001c
-        name: ID32x16_3_8000001C
-        pollution: 19
-        pollutionRadius: 20
-        power: 118
-        water: 342
-        waterPollution: 13
-        waterPollutionRadius: 25
-        worth: 2394
       - bulldoze: 200
         capacity:
           id: 36
@@ -708,18 +432,6 @@ assets:
         id: 07f50000
         model: 5ad0e817-badb57f1-07f50000
         name: ID14x14_2DirtyOut4_07F5
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: '80000019'
-        name: ID14x14_2_80000019
-        pollution: 6
-        pollutionRadius: 16
-        power: 28
-        water: 72
-        waterPollution: 5
-        waterPollutionRadius: 20
-        worth: 864
       - bulldoze: 90
         capacity:
           id: 10
@@ -728,18 +440,6 @@ assets:
         id: 07f20000
         model: 5ad0e817-badb57f1-07f20000
         name: ID8x8_1DirtyOut1_07F2
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000016'
-        name: ID8x8_1_80000016
-        pollution: 2
-        pollutionRadius: 13
-        power: 6
-        water: 10
-        waterPollution: 2
-        waterPollutionRadius: 16
-        worth: 440
       - bulldoze: 250
         capacity:
           id: 148
@@ -748,18 +448,6 @@ assets:
         id: 07ef0000
         model: 5ad0e817-badb57f1-07ef0000
         name: ID32x16_3DirtyMech10_07EF
-      - file: dirty-doubler.dat
-        flamability: 85
-        garbage: 5
-        id: '80000013'
-        name: ID32x16_3_80000013
-        pollution: 25
-        pollutionRadius: 20
-        power: 152
-        water: 444
-        waterPollution: 17
-        waterPollutionRadius: 25
-        worth: 3108
       - bulldoze: 200
         capacity:
           id: 60
@@ -768,18 +456,6 @@ assets:
         id: 07ec0000
         model: 5ad0e817-badb57f1-07ec0000
         name: ID20x16_2DirtyMech7_07EC
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: '80000010'
-        name: ID20x16_2_80000010
-        pollution: 9
-        pollutionRadius: 16
-        power: 48
-        water: 120
-        waterPollution: 7
-        waterPollutionRadius: 20
-        worth: 1440
       - bulldoze: 90
         capacity:
           id: 68
@@ -788,18 +464,6 @@ assets:
         id: '07e90000'
         model: 5ad0e817-badb57f1-07e90000
         name: ID27x27_2DirtyMech4_07E9
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: 8000000e
-        name: ID28x28_2_8000000E
-        pollution: 11
-        pollutionRadius: 16
-        power: 56
-        water: 140
-        waterPollution: 8
-        waterPollutionRadius: 20
-        worth: 1680
       - bulldoze: 90
         capacity:
           id: 12
@@ -808,18 +472,6 @@ assets:
         id: '07e60000'
         model: 5ad0e817-badb57f1-07e60000
         name: ID4x6_1DirtyMech1_07E6
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: 8000000b
-        name: ID4x6_1_8000000B
-        pollution: 2
-        pollutionRadius: 13
-        power: 8
-        water: 12
-        waterPollution: 2
-        waterPollutionRadius: 16
-        worth: 528
       - bulldoze: 250
         capacity:
           id: 134
@@ -836,18 +488,6 @@ assets:
         id: '07e00000'
         model: 5ad0e817-badb57f1-07e00000
         name: ID48x30_2DirtyAnchor7_07E0
-      - file: dirty-doubler.dat
-        flamability: 80
-        garbage: 4
-        id: '80000006'
-        name: ID48x30_2_80000006
-        pollution: 14
-        pollutionRadius: 16
-        power: 72
-        water: 184
-        waterPollution: 11
-        waterPollutionRadius: 20
-        worth: 2208
       - bulldoze: 90
         capacity:
           id: 36
@@ -856,18 +496,6 @@ assets:
         id: 07dd0000
         model: 5ad0e817-badb57f1-07dd0000
         name: ID30x24_1DirtyAnchor4_07DD
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000003'
-        name: ID30x24_1_80000003
-        pollution: 5
-        pollutionRadius: 13
-        power: 20
-        water: 36
-        waterPollution: 5
-        waterPollutionRadius: 16
-        worth: 1584
       - bulldoze: 90
         capacity:
           id: 18
@@ -876,18 +504,6 @@ assets:
         id: 07da0000
         model: 5ad0e817-badb57f1-07da0000
         name: ID14x16_1DirtyAnchor1_07DA
-      - file: dirty-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000001'
-        name: ID14x16_1_80000001
-        pollution: 3
-        pollutionRadius: 13
-        power: 10
-        water: 18
-        waterPollution: 3
-        waterPollutionRadius: 16
-        worth: 792
       - bulldoze: 250
         capacity:
           id: 34
@@ -896,18 +512,6 @@ assets:
         id: '08630000'
         model: 5ad0e817-badb57f1-08630000
         name: ID30x30_1DirtyAnchor55_0863
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000004'
-        name: ID30x30_1_80000004
-        pollution: 10
-        pollutionRadius: 13
-        power: 20
-        water: 36
-        waterPollution: 10
-        waterPollutionRadius: 16
-        worth: 1584
       - bulldoze: 250
         capacity:
           id: 152
@@ -916,18 +520,6 @@ assets:
         id: 07fa0000
         model: 5ad0e817-badb57f1-07fa0000
         name: ID30x30_3DirtyOut9_07FA
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: 8000001e
-        name: ID30x30_3_8000001E
-        pollution: 50
-        pollutionRadius: 20
-        power: 156
-        water: 456
-        waterPollution: 36
-        waterPollutionRadius: 25
-        worth: 3192
       - bulldoze: 200
         capacity:
           id: 58
@@ -936,18 +528,6 @@ assets:
         id: 07f70000
         model: 5ad0e817-badb57f1-07f70000
         name: ID28x16_2DirtyOut6_07F7
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: 8000001b
-        name: ID28x16_2_8000001B
-        pollution: 18
-        pollutionRadius: 16
-        power: 46
-        water: 116
-        waterPollution: 14
-        waterPollutionRadius: 20
-        worth: 1392
       - bulldoze: 90
         capacity:
           id: 20
@@ -956,18 +536,6 @@ assets:
         id: 07f40000
         model: 5ad0e817-badb57f1-07f40000
         name: ID24x12_1DirtyOut3_07F4
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000018'
-        name: ID24x12_1_80000018
-        pollution: 6
-        pollutionRadius: 13
-        power: 12
-        water: 20
-        waterPollution: 6
-        waterPollutionRadius: 16
-        worth: 880
       - bulldoze: 250
         capacity:
           id: 200
@@ -976,18 +544,6 @@ assets:
         id: 07f10000
         model: 5ad0e817-badb57f1-07f10000
         name: ID48x32_3DirtyMech12_07F1
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: '80000014'
-        name: ID48x32_3_80000014
-        pollution: 66
-        pollutionRadius: 20
-        power: 206
-        water: 600
-        waterPollution: 46
-        waterPollutionRadius: 25
-        worth: 4200
       - bulldoze: 250
         capacity:
           id: 184
@@ -996,18 +552,6 @@ assets:
         id: 07ee0000
         model: 5ad0e817-badb57f1-07ee0000
         name: ID32x32_3DirtyMech9_07EE
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: '80000012'
-        name: ID32x32_3_80000012
-        pollution: 60
-        pollutionRadius: 20
-        power: 190
-        water: 552
-        waterPollution: 42
-        waterPollutionRadius: 25
-        worth: 3864
       - bulldoze: 200
         capacity:
           id: 82
@@ -1016,18 +560,6 @@ assets:
         id: 07eb0000
         model: 5ad0e817-badb57f1-07eb0000
         name: ID28x28_2DirtyMech6_07EB
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: '80000015'
-        name: ID28x28_2_80000015
-        pollution: 36
-        pollutionRadius: 16
-        power: 92
-        water: 236
-        waterPollution: 28
-        waterPollutionRadius: 20
-        worth: 2832
       - bulldoze: 90
         capacity:
           id: 24
@@ -1036,18 +568,6 @@ assets:
         id: '07e80000'
         model: 5ad0e817-badb57f1-07e80000
         name: ID20x12_1DirtyMech3_07E8
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: 8000000d
-        name: ID20x12_1_8000000D
-        pollution: 8
-        pollutionRadius: 13
-        power: 14
-        water: 24
-        waterPollution: 6
-        waterPollutionRadius: 16
-        worth: 1056
       - bulldoze: 250
         capacity:
           id: 300
@@ -1056,18 +576,6 @@ assets:
         id: '07e50000'
         model: 5ad0e817-badb57f1-07e50000
         name: ID64x62_3DirtyAnchor12_07E5
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: 8000000a
-        name: ID64x62_3_8000000A
-        pollution: 98
-        pollutionRadius: 20
-        power: 308
-        water: 900
-        waterPollution: 68
-        waterPollutionRadius: 25
-        worth: 6300
       - bulldoze: 250
         capacity:
           id: 238
@@ -1076,18 +584,6 @@ assets:
         id: '07e20000'
         model: 5ad0e817-badb57f1-07e20000
         name: ID48x32_3DirtyAnchor9_07E2
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: '80000008'
-        name: ID48x32_3_80000008
-        pollution: 78
-        pollutionRadius: 20
-        power: 244
-        water: 714
-        waterPollution: 54
-        waterPollutionRadius: 25
-        worth: 4998
       - bulldoze: 200
         capacity:
           id: 56
@@ -1096,18 +592,6 @@ assets:
         id: 07df0000
         model: 5ad0e817-badb57f1-07df0000
         name: ID22x14_2DirtyAnchor6_07DF
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: '80000005'
-        name: ID22x14_2_80000005
-        pollution: 18
-        pollutionRadius: 16
-        power: 44
-        water: 112
-        waterPollution: 14
-        waterPollutionRadius: 20
-        worth: 1344
       - bulldoze: 90
         capacity:
           id: 46
@@ -1116,18 +600,6 @@ assets:
         id: 07dc0000
         model: 5ad0e817-badb57f1-07dc0000
         name: ID45x30_1DirtyAnchor3_07DC
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000002'
-        name: ID45x30_1_80000002
-        pollution: 14
-        pollutionRadius: 13
-        power: 26
-        water: 46
-        waterPollution: 12
-        waterPollutionRadius: 16
-        worth: 2024
       - bulldoze: 310
         capacity:
           id: 154
@@ -1144,18 +616,6 @@ assets:
         id: 07f90000
         model: 5ad0e817-badb57f1-07f90000
         name: ID30x14_3DirtyOut8_07F9
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: 8000001d
-        name: ID30x14_3_8000001D
-        pollution: 38
-        pollutionRadius: 20
-        power: 120
-        water: 348
-        waterPollution: 28
-        waterPollutionRadius: 25
-        worth: 2436
       - bulldoze: 200
         capacity:
           id: 50
@@ -1164,18 +624,6 @@ assets:
         id: 07f60000
         model: 5ad0e817-badb57f1-07f60000
         name: ID24x16_2DirtyOut5_07F6
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: 8000001a
-        name: ID24x16_2_8000001A
-        pollution: 16
-        pollutionRadius: 16
-        power: 40
-        water: 100
-        waterPollution: 12
-        waterPollutionRadius: 20
-        worth: 1200
       - bulldoze: 90
         capacity:
           id: 22
@@ -1184,18 +632,6 @@ assets:
         id: 07f30000
         model: 5ad0e817-badb57f1-07f30000
         name: ID12x20_1DirtyOut2_07F3
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000017'
-        name: ID12x20_1_80000017
-        pollution: 8
-        pollutionRadius: 13
-        power: 12
-        water: 22
-        waterPollution: 6
-        waterPollutionRadius: 16
-        worth: 968
       - bulldoze: 200
         capacity:
           id: 42
@@ -1203,18 +639,6 @@ assets:
         id: 07f00000
         model: 5ad0e817-badb57f1-0e110000
         name: ID14x14_2DirtyMech5_07F0
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: '80000020'
-        name: ID14x14_2_80000020
-        pollution: 12
-        pollutionRadius: 16
-        power: 28
-        water: 72
-        waterPollution: 10
-        waterPollutionRadius: 20
-        worth: 864
       - bulldoze: 200
         capacity:
           id: 56
@@ -1223,18 +647,6 @@ assets:
         id: 07ed0000
         model: 5ad0e817-badb57f1-07ed0000
         name: ID28x16_2DirtyMech8_07ED
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: '80000011'
-        name: ID28x16_2_80000011
-        pollution: 18
-        pollutionRadius: 16
-        power: 44
-        water: 112
-        waterPollution: 14
-        waterPollutionRadius: 20
-        worth: 1344
       - bulldoze: 200
         capacity:
           id: 42
@@ -1243,18 +655,6 @@ assets:
         id: 07ea0000
         model: 5ad0e817-badb57f1-07ea0000
         name: ID14x14_2DirtyMech5_07EA
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: 8000000f
-        name: ID14x14_2_8000000F
-        pollution: 14
-        pollutionRadius: 16
-        power: 34
-        water: 84
-        waterPollution: 10
-        waterPollutionRadius: 20
-        worth: 1008
       - bulldoze: 90
         capacity:
           id: 30
@@ -1263,18 +663,6 @@ assets:
         id: '07e70000'
         model: 5ad0e817-badb57f1-07e70000
         name: ID24x24_1DirtyMech2_07E7
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: 8000000c
-        name: ID24x24_1_8000000C
-        pollution: 10
-        pollutionRadius: 13
-        power: 16
-        water: 30
-        waterPollution: 8
-        waterPollutionRadius: 16
-        worth: 1320
       - bulldoze: 250
         capacity:
           id: 316
@@ -1283,18 +671,6 @@ assets:
         id: '07e40000'
         model: 5ad0e817-badb57f1-07e40000
         name: ID64x46_3DirtyAnchor11_07E4
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: '80000009'
-        name: ID64x46_3_80000009
-        pollution: 104
-        pollutionRadius: 20
-        power: 324
-        water: 948
-        waterPollution: 72
-        waterPollutionRadius: 25
-        worth: 6636
       - bulldoze: 200
         capacity:
           id: 132
@@ -1303,18 +679,6 @@ assets:
         id: '07e10000'
         model: 5ad0e817-badb57f1-07e10000
         name: ID48x46_2DirtyAnchor8_07E1
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: '80000007'
-        name: ID48x46_2_80000007
-        pollution: 42
-        pollutionRadius: 16
-        power: 104
-        water: 268
-        waterPollution: 32
-        waterPollutionRadius: 20
-        worth: 3216
       - bulldoze: 90
         capacity:
           id: 36
@@ -1331,18 +695,6 @@ assets:
         id: 07fb0000
         model: 5ad0e817-badb57f1-07fb0000
         name: ID46x32_3DirtyOut10_07FB
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: 8000001f
-        name: ID46x32_3_8000001F
-        pollution: 62
-        pollutionRadius: 20
-        power: 194
-        water: 564
-        waterPollution: 44
-        waterPollutionRadius: 25
-        worth: 3948
       - bulldoze: 250
         capacity:
           id: 114
@@ -1351,18 +703,6 @@ assets:
         id: 07f80000
         model: 5ad0e817-badb57f1-07f80000
         name: ID32x16_3DirtyOut7_07F8
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 4
-        id: 8000001c
-        name: ID32x16_3_8000001C
-        pollution: 38
-        pollutionRadius: 20
-        power: 118
-        water: 342
-        waterPollution: 26
-        waterPollutionRadius: 25
-        worth: 2394
       - bulldoze: 200
         capacity:
           id: 36
@@ -1371,18 +711,6 @@ assets:
         id: 07f50000
         model: 5ad0e817-badb57f1-07f50000
         name: ID14x14_2DirtyOut4_07F5
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: '80000019'
-        name: ID14x14_2_80000019
-        pollution: 12
-        pollutionRadius: 16
-        power: 28
-        water: 72
-        waterPollution: 10
-        waterPollutionRadius: 20
-        worth: 864
       - bulldoze: 90
         capacity:
           id: 10
@@ -1391,18 +719,6 @@ assets:
         id: 07f20000
         model: 5ad0e817-badb57f1-07f20000
         name: ID8x8_1DirtyOut1_07F2
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000016'
-        name: ID8x8_1_80000016
-        pollution: 4
-        pollutionRadius: 13
-        power: 6
-        water: 10
-        waterPollution: 4
-        waterPollutionRadius: 16
-        worth: 440
       - bulldoze: 250
         capacity:
           id: 148
@@ -1411,18 +727,6 @@ assets:
         id: 07ef0000
         model: 5ad0e817-badb57f1-07ef0000
         name: ID32x16_3DirtyMech10_07EF
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 85
-        garbage: 5
-        id: '80000013'
-        name: ID32x16_3_80000013
-        pollution: 50
-        pollutionRadius: 20
-        power: 152
-        water: 444
-        waterPollution: 34
-        waterPollutionRadius: 25
-        worth: 3108
       - bulldoze: 200
         capacity:
           id: 60
@@ -1431,18 +735,6 @@ assets:
         id: 07ec0000
         model: 5ad0e817-badb57f1-07ec0000
         name: ID20x16_2DirtyMech7_07EC
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: '80000010'
-        name: ID20x16_2_80000010
-        pollution: 18
-        pollutionRadius: 16
-        power: 48
-        water: 120
-        waterPollution: 14
-        waterPollutionRadius: 20
-        worth: 1440
       - bulldoze: 90
         capacity:
           id: 68
@@ -1451,18 +743,6 @@ assets:
         id: '07e90000'
         model: 5ad0e817-badb57f1-07e90000
         name: ID27x27_2DirtyMech4_07E9
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: 8000000e
-        name: ID28x28_2_8000000E
-        pollution: 22
-        pollutionRadius: 16
-        power: 56
-        water: 140
-        waterPollution: 16
-        waterPollutionRadius: 20
-        worth: 1680
       - bulldoze: 90
         capacity:
           id: 12
@@ -1471,18 +751,6 @@ assets:
         id: '07e60000'
         model: 5ad0e817-badb57f1-07e60000
         name: ID4x6_1DirtyMech1_07E6
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: 8000000b
-        name: ID4x6_1_8000000B
-        pollution: 4
-        pollutionRadius: 13
-        power: 8
-        water: 12
-        waterPollution: 4
-        waterPollutionRadius: 16
-        worth: 528
       - bulldoze: 250
         capacity:
           id: 134
@@ -1499,18 +767,6 @@ assets:
         id: '07e00000'
         model: 5ad0e817-badb57f1-07e00000
         name: ID48x30_2DirtyAnchor7_07E0
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 80
-        garbage: 4
-        id: '80000006'
-        name: ID48x30_2_80000006
-        pollution: 28
-        pollutionRadius: 16
-        power: 72
-        water: 184
-        waterPollution: 22
-        waterPollutionRadius: 20
-        worth: 2208
       - bulldoze: 90
         capacity:
           id: 36
@@ -1519,18 +775,6 @@ assets:
         id: 07dd0000
         model: 5ad0e817-badb57f1-07dd0000
         name: ID30x24_1DirtyAnchor4_07DD
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000003'
-        name: ID30x24_1_80000003
-        pollution: 10
-        pollutionRadius: 13
-        power: 20
-        water: 36
-        waterPollution: 10
-        waterPollutionRadius: 16
-        worth: 1584
       - bulldoze: 90
         capacity:
           id: 18
@@ -1539,18 +783,6 @@ assets:
         id: 07da0000
         model: 5ad0e817-badb57f1-07da0000
         name: ID14x16_1DirtyAnchor1_07DA
-      - file: dirty-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000001'
-        name: ID14x16_1_80000001
-        pollution: 6
-        pollutionRadius: 13
-        power: 10
-        water: 18
-        waterPollution: 6
-        waterPollutionRadius: 16
-        worth: 792
       - bulldoze: 130
         capacity:
           ir: 20
@@ -1559,18 +791,6 @@ assets:
         id: '08510000'
         model: 5ad0e817-badb57f1-08510000
         name: IR32x32_2Farm5_0851
-      - file: farm-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: '80000053'
-        name: IR32x32_2_80000053
-        pollution: 3
-        pollutionRadius: 5
-        power: 8
-        water: 100
-        waterPollution: 5
-        waterPollutionRadius: 6
-        worth: 2480
       - bulldoze: 230
         capacity:
           ir: 26
@@ -1579,18 +799,6 @@ assets:
         id: '084e0000'
         model: 5ad0e817-badb57f1-084e0000
         name: IR60x50_3Farm2_084E
-      - file: farm-doubler.dat
-        flamability: 55
-        garbage: 4
-        id: '80000050'
-        name: IR60x50_3_80000050
-        pollution: 4
-        pollutionRadius: 6
-        power: 12
-        water: 156
-        waterPollution: 7
-        waterPollutionRadius: 7
-        worth: 2782
       - bulldoze: 5
         file: farm-doubler.dat
         id: ea6e4721
@@ -1598,11 +806,6 @@ assets:
         name: FarmField6_ea6e4721
         waterPollution: 2
         waterPollutionRadius: 2
-      - capacity:
-          ir: 2
-        file: farm-doubler.dat
-        id: '00004100'
-        name: Industrial Resource
       - bulldoze: 5
         file: farm-doubler.dat
         id: ea6e4722
@@ -1620,18 +823,6 @@ assets:
         id: '08530000'
         model: 5ad0e817-badb57f1-08530000
         name: IR24x24_1Farm7_0853
-      - file: farm-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: '80000055'
-        name: IR24x24_1_80000055
-        pollution: 2
-        pollutionRadius: 4
-        power: 6
-        water: 48
-        waterPollution: 3
-        waterPollutionRadius: 5
-        worth: 2796
       - bulldoze: 80
         capacity:
           ir: 4
@@ -1640,18 +831,6 @@ assets:
         id: '08500000'
         model: 5ad0e817-badb57f1-08500000
         name: IR15x7_1Farm4_0850
-      - file: farm-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: '80000052'
-        name: IR15x7_1_80000052
-        pollution: 1
-        pollutionRadius: 4
-        power: 2
-        water: 16
-        waterPollution: 1
-        waterPollutionRadius: 5
-        worth: 932
       - bulldoze: 180
         capacity:
           ir: 12
@@ -1660,18 +839,6 @@ assets:
         id: 084d0000
         model: 5ad0e817-badb57f1-084d0000
         name: IR30x24_1Farm1_084D
-      - file: farm-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: 8000004f
-        name: IR30x24_1_8000004F
-        pollution: 2
-        pollutionRadius: 4
-        power: 6
-        water: 48
-        waterPollution: 3
-        waterPollutionRadius: 5
-        worth: 2796
       - bulldoze: 5
         file: farm-doubler.dat
         id: 2a6e4309
@@ -1713,30 +880,6 @@ assets:
         id: 084f0000
         model: 5ad0e817-badb57f1-084f0000
         name: IR24x20_1Farm3_084F
-      - file: farm-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: '80000054'
-        name: IR16x30_2_80000054
-        pollution: 2
-        pollutionRadius: 5
-        power: 8
-        water: 80
-        waterPollution: 4
-        waterPollutionRadius: 6
-        worth: 1984
-      - file: farm-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: '80000051'
-        name: IR24x20_1_80000051
-        pollution: 1
-        pollutionRadius: 4
-        power: 4
-        water: 32
-        waterPollution: 2
-        waterPollutionRadius: 5
-        worth: 1864
       - bulldoze: 5
         file: farm-doubler.dat
         id: aa6e4328
@@ -1754,18 +897,6 @@ assets:
         id: '08510000'
         model: 5ad0e817-badb57f1-08510000
         name: IR32x32_2Farm5_0851
-      - file: farm-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: '80000053'
-        name: IR32x32_2_80000053
-        pollution: 6
-        pollutionRadius: 5
-        power: 8
-        water: 100
-        waterPollution: 10
-        waterPollutionRadius: 6
-        worth: 2480
       - bulldoze: 230
         capacity:
           ir: 26
@@ -1774,18 +905,6 @@ assets:
         id: '084e0000'
         model: 5ad0e817-badb57f1-084e0000
         name: IR60x50_3Farm2_084E
-      - file: farm-doubler_includingPollution.dat
-        flamability: 55
-        garbage: 4
-        id: '80000050'
-        name: IR60x50_3_80000050
-        pollution: 8
-        pollutionRadius: 6
-        power: 12
-        water: 156
-        waterPollution: 12
-        waterPollutionRadius: 7
-        worth: 2782
       - bulldoze: 5
         file: farm-doubler_includingPollution.dat
         id: ea6e4721
@@ -1793,11 +912,6 @@ assets:
         name: FarmField6_ea6e4721
         waterPollution: 4
         waterPollutionRadius: 2
-      - capacity:
-          ir: 2
-        file: farm-doubler_includingPollution.dat
-        id: '00004100'
-        name: Industrial Resource
       - bulldoze: 5
         file: farm-doubler_includingPollution.dat
         id: ea6e4722
@@ -1815,18 +929,6 @@ assets:
         id: '08530000'
         model: 5ad0e817-badb57f1-08530000
         name: IR24x24_1Farm7_0853
-      - file: farm-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: '80000055'
-        name: IR24x24_1_80000055
-        pollution: 4
-        pollutionRadius: 4
-        power: 6
-        water: 48
-        waterPollution: 6
-        waterPollutionRadius: 5
-        worth: 2796
       - bulldoze: 80
         capacity:
           ir: 4
@@ -1835,18 +937,6 @@ assets:
         id: '08500000'
         model: 5ad0e817-badb57f1-08500000
         name: IR15x7_1Farm4_0850
-      - file: farm-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: '80000052'
-        name: IR15x7_1_80000052
-        pollution: 2
-        pollutionRadius: 4
-        power: 2
-        water: 16
-        waterPollution: 2
-        waterPollutionRadius: 5
-        worth: 932
       - bulldoze: 180
         capacity:
           ir: 12
@@ -1855,18 +945,6 @@ assets:
         id: 084d0000
         model: 5ad0e817-badb57f1-084d0000
         name: IR30x24_1Farm1_084D
-      - file: farm-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: 8000004f
-        name: IR30x24_1_8000004F
-        pollution: 4
-        pollutionRadius: 4
-        power: 6
-        water: 48
-        waterPollution: 6
-        waterPollutionRadius: 5
-        worth: 2796
       - bulldoze: 5
         file: farm-doubler_includingPollution.dat
         id: 2a6e4309
@@ -1908,30 +986,6 @@ assets:
         id: 084f0000
         model: 5ad0e817-badb57f1-084f0000
         name: IR24x20_1Farm3_084F
-      - file: farm-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: '80000054'
-        name: IR16x30_2_80000054
-        pollution: 4
-        pollutionRadius: 5
-        power: 8
-        water: 80
-        waterPollution: 8
-        waterPollutionRadius: 6
-        worth: 1984
-      - file: farm-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: '80000051'
-        name: IR24x20_1_80000051
-        pollution: 2
-        pollutionRadius: 4
-        power: 4
-        water: 32
-        waterPollution: 4
-        waterPollutionRadius: 5
-        worth: 1864
       - bulldoze: 5
         file: farm-doubler_includingPollution.dat
         id: aa6e4328
@@ -1949,18 +1003,6 @@ assets:
         id: 084b0000
         model: 5ad0e817-badb57f1-084b0000
         name: IH28x74_3HTOut14_084B
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004d
-        name: IH28x74_3_8000004D
-        pollution: 10
-        pollutionRadius: 7
-        power: 132
-        water: 132
-        waterPollution: 4
-        waterPollutionRadius: 8
-        worth: 4136
       - bulldoze: 160
         capacity:
           iht: 136
@@ -1969,18 +1011,6 @@ assets:
         id: '08480000'
         model: 5ad0e817-badb57f1-08480000
         name: IH40x60_3HTOut11_0848
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004b
-        name: IH40x60_3_8000004B
-        pollution: 7
-        pollutionRadius: 7
-        power: 96
-        water: 96
-        waterPollution: 3
-        waterPollutionRadius: 8
-        worth: 2992
       - bulldoze: 290
         capacity:
           iht: 88
@@ -1989,18 +1019,6 @@ assets:
         id: '08450000'
         model: 5ad0e817-badb57f1-08450000
         name: IH28x40_2HTOut8_0845
-      - file: hitech-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: '80000048'
-        name: IH28x40_2_80000048
-        pollution: 5
-        pollutionRadius: 6
-        power: 58
-        water: 54
-        waterPollution: 2
-        waterPollutionRadius: 7
-        worth: 2200
       - bulldoze: 290
         capacity:
           iht: 54
@@ -2009,18 +1027,6 @@ assets:
         id: '08420000'
         model: 5ad0e817-badb57f1-08420000
         name: IH26x26_1HTOut5_0842
-      - file: hitech-doubler.dat
-        flamability: 40
-        garbage: 4
-        id: '80000046'
-        name: IH26x26_1_80000046
-        pollution: 3
-        pollutionRadius: 5
-        power: 34
-        water: 28
-        waterPollution: 2
-        waterPollutionRadius: 6
-        worth: 2538
       - bulldoze: 160
         capacity:
           iht: 36
@@ -2029,18 +1035,6 @@ assets:
         id: 083f0000
         model: 5ad0e817-badb57f1-083f0000
         name: IH14x24_1HTOut2_083F
-      - file: hitech-doubler.dat
-        flamability: 40
-        garbage: 4
-        id: '80000044'
-        name: IH14x24_1_80000044
-        pollution: 2
-        pollutionRadius: 5
-        power: 22
-        water: 18
-        waterPollution: 1
-        waterPollutionRadius: 6
-        worth: 1692
       - bulldoze: 160
         capacity:
           iht: 98
@@ -2049,18 +1043,6 @@ assets:
         id: 083c0000
         model: 5ad0e817-badb57f1-083c0000
         name: IH28x28_3HTMech7_083C
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: '80000042'
-        name: IH28x28_3_80000042
-        pollution: 6
-        pollutionRadius: 7
-        power: 74
-        water: 74
-        waterPollution: 2
-        waterPollutionRadius: 8
-        worth: 2288
       - bulldoze: 160
         capacity:
           iht: 58
@@ -2069,18 +1051,6 @@ assets:
         id: '08390000'
         model: 5ad0e817-badb57f1-08390000
         name: IH14x28_2HTMech4_0839
-      - file: hitech-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: '80000041'
-        name: IH14x28_2_80000041
-        pollution: 3
-        pollutionRadius: 6
-        power: 40
-        water: 36
-        waterPollution: 2
-        waterPollutionRadius: 7
-        worth: 1500
       - bulldoze: 100
         capacity:
           iht: 42
@@ -2089,18 +1059,6 @@ assets:
         id: '08360000'
         model: 5ad0e817-badb57f1-08360000
         name: IH14x14_1HTMech1_0836
-      - file: hitech-doubler.dat
-        flamability: 40
-        garbage: 4
-        id: '80000040'
-        name: IH14x14_1_80000040
-        pollution: 3
-        pollutionRadius: 5
-        power: 26
-        water: 22
-        waterPollution: 1
-        waterPollutionRadius: 6
-        worth: 1974
       - bulldoze: 290
         capacity:
           iht: 144
@@ -2109,18 +1067,6 @@ assets:
         id: '08330000'
         model: 5ad0e817-badb57f1-08330000
         name: IH40x44_3HTAnchor9_0833
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: 8000003e
-        name: IH40x44_3_8000003E
-        pollution: 8
-        pollutionRadius: 7
-        power: 102
-        water: 102
-        waterPollution: 3
-        waterPollutionRadius: 8
-        worth: 3168
       - bulldoze: 100
         capacity:
           iht: 64
@@ -2129,18 +1075,6 @@ assets:
         id: 082d0000
         model: 5ad0e817-badb57f1-082d0000
         name: IH28x28_1HTAnchor3_082D
-      - file: hitech-doubler.dat
-        flamability: 40
-        garbage: 4
-        id: 8000003a
-        name: IH28x28_1_8000003A
-        pollution: 4
-        pollutionRadius: 5
-        power: 40
-        water: 32
-        waterPollution: 2
-        waterPollutionRadius: 6
-        worth: 3008
       - bulldoze: 290
         capacity:
           iht: 134
@@ -2149,18 +1083,6 @@ assets:
         id: '08470000'
         model: 5ad0e817-badb57f1-08470000
         name: IH28x58_3HTOut10_0847
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004a
-        name: IH28x58_3_8000004A
-        pollution: 7
-        pollutionRadius: 7
-        power: 94
-        water: 94
-        waterPollution: 3
-        waterPollutionRadius: 8
-        worth: 2948
       - bulldoze: 160
         capacity:
           iht: 60
@@ -2169,18 +1091,6 @@ assets:
         id: '08410000'
         model: 5ad0e817-badb57f1-08410000
         name: IH26x28_1HTOut4_0841
-      - file: hitech-doubler.dat
-        flamability: 40
-        garbage: 4
-        id: '80000045'
-        name: IH26x28_1_80000045
-        pollution: 3
-        pollutionRadius: 5
-        power: 36
-        water: 30
-        waterPollution: 2
-        waterPollutionRadius: 6
-        worth: 2820
       - bulldoze: 100
         capacity:
           iht: 44
@@ -2189,18 +1099,6 @@ assets:
         id: '083e0000'
         model: 5ad0e817-badb57f1-083e0000
         name: IH14x28_1HTOut1_083E
-      - file: hitech-doubler.dat
-        flamability: 40
-        garbage: 4
-        id: '80000043'
-        name: IH14x28_1_80000043
-        pollution: 3
-        pollutionRadius: 5
-        power: 28
-        water: 22
-        waterPollution: 1
-        waterPollutionRadius: 6
-        worth: 2068
       - bulldoze: 290
         capacity:
           iht: 142
@@ -2209,18 +1107,6 @@ assets:
         id: '08350000'
         model: 5ad0e817-badb57f1-08350000
         name: IH54x42_3HTAnchor11_0835
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: 8000003f
-        name: IH54x42_3_8000003F
-        pollution: 8
-        pollutionRadius: 7
-        power: 100
-        water: 100
-        waterPollution: 3
-        waterPollutionRadius: 8
-        worth: 3124
       - bulldoze: 160
         capacity:
           iht: 146
@@ -2229,18 +1115,6 @@ assets:
         id: '08320000'
         model: 5ad0e817-badb57f1-08320000
         name: IH42x42_3HTAnchor8_0832
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: 8000003d
-        name: IH42x42_3_8000003D
-        pollution: 8
-        pollutionRadius: 7
-        power: 104
-        water: 104
-        waterPollution: 3
-        waterPollutionRadius: 8
-        worth: 3212
       - bulldoze: 160
         capacity:
           iht: 40
@@ -2249,18 +1123,6 @@ assets:
         id: 082c0000
         model: 5ad0e817-badb57f1-082c0000
         name: IH14x28_1HTAnchor2_082C
-      - file: hitech-doubler.dat
-        flamability: 40
-        garbage: 4
-        id: '80000039'
-        name: IH14x28_1_80000039
-        pollution: 2
-        pollutionRadius: 5
-        power: 24
-        water: 20
-        waterPollution: 1
-        waterPollutionRadius: 6
-        worth: 1880
       - bulldoze: 160
         capacity:
           iht: 78
@@ -2269,18 +1131,6 @@ assets:
         id: '08670000'
         model: 5ad0e817-badb57f1-08670000
         name: IH28x40_2HTAnchor6_0867
-      - file: hitech-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: 8000003c
-        name: IH28x40_2_8000003C
-        pollution: 4
-        pollutionRadius: 6
-        power: 52
-        water: 48
-        waterPollution: 2
-        waterPollutionRadius: 7
-        worth: 1950
       - bulldoze: 100
         capacity:
           iht: 14
@@ -2289,20 +1139,6 @@ assets:
         id: '08640000'
         model: 5ad0e817-badb57f1-0e110000
         name: IH14x14_1HTMech9_0864
-      - capacity:
-          iht: 7
-        file: hitech-doubler.dat
-        flamability: 40
-        garbage: 4
-        id: '80000056'
-        name: IH14x14_1_80000056
-        pollution: 1
-        pollutionRadius: 5
-        power: 10
-        water: 8
-        waterPollution: 1
-        waterPollutionRadius: 6
-        worth: 658
       - bulldoze: 290
         capacity:
           iht: 194
@@ -2311,18 +1147,6 @@ assets:
         id: 084c0000
         model: 5ad0e817-badb57f1-084c0000
         name: IH38x88_3HTOut15_084C
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004e
-        name: IH38x88_3_8000004E
-        pollution: 10
-        pollutionRadius: 7
-        power: 136
-        water: 136
-        waterPollution: 4
-        waterPollutionRadius: 8
-        worth: 4268
       - bulldoze: 290
         capacity:
           iht: 182
@@ -2331,18 +1155,6 @@ assets:
         id: '08490000'
         model: 5ad0e817-badb57f1-08490000
         name: IH42x58_3HTOut12_0849
-      - file: hitech-doubler.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004c
-        name: IH42x58_3_8000004C
-        pollution: 10
-        pollutionRadius: 7
-        power: 128
-        water: 128
-        waterPollution: 4
-        waterPollutionRadius: 8
-        worth: 4004
       - bulldoze: 160
         capacity:
           iht: 102
@@ -2351,18 +1163,6 @@ assets:
         id: '08460000'
         model: 5ad0e817-badb57f1-08460000
         name: IH24x60_2HTOut9_0846
-      - file: hitech-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: '80000049'
-        name: IH24x60_2_80000049
-        pollution: 6
-        pollutionRadius: 6
-        power: 68
-        water: 62
-        waterPollution: 2
-        waterPollutionRadius: 7
-        worth: 2550
       - bulldoze: 100
         capacity:
           iht: 80
@@ -2371,18 +1171,6 @@ assets:
         id: '08430000'
         model: 5ad0e817-badb57f1-08430000
         name: IH28x44_2HTOut6_0843
-      - file: hitech-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: '80000047'
-        name: IH28x44_2_80000047
-        pollution: 4
-        pollutionRadius: 6
-        power: 52
-        water: 48
-        waterPollution: 2
-        waterPollutionRadius: 7
-        worth: 2000
       - bulldoze: 290
         capacity:
           iht: 110
@@ -2407,18 +1195,6 @@ assets:
         id: '082e0000'
         model: 5ad0e817-badb57f1-082e0000
         name: IH24x28_2HTAnchor4_082E
-      - file: hitech-doubler.dat
-        flamability: 45
-        garbage: 4
-        id: 8000003b
-        name: IH24x28_2_8000003B
-        pollution: 4
-        pollutionRadius: 6
-        power: 44
-        water: 40
-        waterPollution: 2
-        waterPollutionRadius: 7
-        worth: 1650
       - bulldoze: 100
         capacity:
           iht: 40
@@ -2435,18 +1211,6 @@ assets:
         id: 084b0000
         model: 5ad0e817-badb57f1-084b0000
         name: IH28x74_3HTOut14_084B
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004d
-        name: IH28x74_3_8000004D
-        pollution: 20
-        pollutionRadius: 7
-        power: 132
-        water: 132
-        waterPollution: 8
-        waterPollutionRadius: 8
-        worth: 4136
       - bulldoze: 160
         capacity:
           iht: 136
@@ -2455,18 +1219,6 @@ assets:
         id: '08480000'
         model: 5ad0e817-badb57f1-08480000
         name: IH40x60_3HTOut11_0848
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004b
-        name: IH40x60_3_8000004B
-        pollution: 14
-        pollutionRadius: 7
-        power: 96
-        water: 96
-        waterPollution: 6
-        waterPollutionRadius: 8
-        worth: 2992
       - bulldoze: 290
         capacity:
           iht: 88
@@ -2475,18 +1227,6 @@ assets:
         id: '08450000'
         model: 5ad0e817-badb57f1-08450000
         name: IH28x40_2HTOut8_0845
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: '80000048'
-        name: IH28x40_2_80000048
-        pollution: 10
-        pollutionRadius: 6
-        power: 58
-        water: 54
-        waterPollution: 4
-        waterPollutionRadius: 7
-        worth: 2200
       - bulldoze: 290
         capacity:
           iht: 54
@@ -2495,18 +1235,6 @@ assets:
         id: '08420000'
         model: 5ad0e817-badb57f1-08420000
         name: IH26x26_1HTOut5_0842
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 40
-        garbage: 4
-        id: '80000046'
-        name: IH26x26_1_80000046
-        pollution: 6
-        pollutionRadius: 5
-        power: 34
-        water: 28
-        waterPollution: 4
-        waterPollutionRadius: 6
-        worth: 2538
       - bulldoze: 160
         capacity:
           iht: 36
@@ -2515,18 +1243,6 @@ assets:
         id: 083f0000
         model: 5ad0e817-badb57f1-083f0000
         name: IH14x24_1HTOut2_083F
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 40
-        garbage: 4
-        id: '80000044'
-        name: IH14x24_1_80000044
-        pollution: 4
-        pollutionRadius: 5
-        power: 22
-        water: 18
-        waterPollution: 2
-        waterPollutionRadius: 6
-        worth: 1692
       - bulldoze: 160
         capacity:
           iht: 98
@@ -2535,18 +1251,6 @@ assets:
         id: 083c0000
         model: 5ad0e817-badb57f1-083c0000
         name: IH28x28_3HTMech7_083C
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: '80000042'
-        name: IH28x28_3_80000042
-        pollution: 12
-        pollutionRadius: 7
-        power: 74
-        water: 74
-        waterPollution: 4
-        waterPollutionRadius: 8
-        worth: 2288
       - bulldoze: 160
         capacity:
           iht: 58
@@ -2555,18 +1259,6 @@ assets:
         id: '08390000'
         model: 5ad0e817-badb57f1-08390000
         name: IH14x28_2HTMech4_0839
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: '80000041'
-        name: IH14x28_2_80000041
-        pollution: 6
-        pollutionRadius: 6
-        power: 40
-        water: 36
-        waterPollution: 4
-        waterPollutionRadius: 7
-        worth: 1500
       - bulldoze: 100
         capacity:
           iht: 42
@@ -2575,18 +1267,6 @@ assets:
         id: '08360000'
         model: 5ad0e817-badb57f1-08360000
         name: IH14x14_1HTMech1_0836
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 40
-        garbage: 4
-        id: '80000040'
-        name: IH14x14_1_80000040
-        pollution: 6
-        pollutionRadius: 5
-        power: 26
-        water: 22
-        waterPollution: 2
-        waterPollutionRadius: 6
-        worth: 1974
       - bulldoze: 290
         capacity:
           iht: 144
@@ -2595,18 +1275,6 @@ assets:
         id: '08330000'
         model: 5ad0e817-badb57f1-08330000
         name: IH40x44_3HTAnchor9_0833
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: 8000003e
-        name: IH40x44_3_8000003E
-        pollution: 16
-        pollutionRadius: 7
-        power: 102
-        water: 102
-        waterPollution: 6
-        waterPollutionRadius: 8
-        worth: 3168
       - bulldoze: 100
         capacity:
           iht: 64
@@ -2615,18 +1283,6 @@ assets:
         id: 082d0000
         model: 5ad0e817-badb57f1-082d0000
         name: IH28x28_1HTAnchor3_082D
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 40
-        garbage: 4
-        id: 8000003a
-        name: IH28x28_1_8000003A
-        pollution: 8
-        pollutionRadius: 5
-        power: 40
-        water: 32
-        waterPollution: 4
-        waterPollutionRadius: 6
-        worth: 3008
       - bulldoze: 290
         capacity:
           iht: 134
@@ -2635,18 +1291,6 @@ assets:
         id: '08470000'
         model: 5ad0e817-badb57f1-08470000
         name: IH28x58_3HTOut10_0847
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004a
-        name: IH28x58_3_8000004A
-        pollution: 14
-        pollutionRadius: 7
-        power: 94
-        water: 94
-        waterPollution: 6
-        waterPollutionRadius: 8
-        worth: 2948
       - bulldoze: 160
         capacity:
           iht: 60
@@ -2655,18 +1299,6 @@ assets:
         id: '08410000'
         model: 5ad0e817-badb57f1-08410000
         name: IH26x28_1HTOut4_0841
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 40
-        garbage: 4
-        id: '80000045'
-        name: IH26x28_1_80000045
-        pollution: 6
-        pollutionRadius: 5
-        power: 36
-        water: 30
-        waterPollution: 4
-        waterPollutionRadius: 6
-        worth: 2820
       - bulldoze: 100
         capacity:
           iht: 44
@@ -2675,18 +1307,6 @@ assets:
         id: '083e0000'
         model: 5ad0e817-badb57f1-083e0000
         name: IH14x28_1HTOut1_083E
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 40
-        garbage: 4
-        id: '80000043'
-        name: IH14x28_1_80000043
-        pollution: 6
-        pollutionRadius: 5
-        power: 28
-        water: 22
-        waterPollution: 2
-        waterPollutionRadius: 6
-        worth: 2068
       - bulldoze: 290
         capacity:
           iht: 142
@@ -2695,18 +1315,6 @@ assets:
         id: '08350000'
         model: 5ad0e817-badb57f1-08350000
         name: IH54x42_3HTAnchor11_0835
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: 8000003f
-        name: IH54x42_3_8000003F
-        pollution: 16
-        pollutionRadius: 7
-        power: 100
-        water: 100
-        waterPollution: 6
-        waterPollutionRadius: 8
-        worth: 3124
       - bulldoze: 160
         capacity:
           iht: 146
@@ -2715,18 +1323,6 @@ assets:
         id: '08320000'
         model: 5ad0e817-badb57f1-08320000
         name: IH42x42_3HTAnchor8_0832
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: 8000003d
-        name: IH42x42_3_8000003D
-        pollution: 16
-        pollutionRadius: 7
-        power: 104
-        water: 104
-        waterPollution: 6
-        waterPollutionRadius: 8
-        worth: 3212
       - bulldoze: 160
         capacity:
           iht: 40
@@ -2735,18 +1331,6 @@ assets:
         id: 082c0000
         model: 5ad0e817-badb57f1-082c0000
         name: IH14x28_1HTAnchor2_082C
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 40
-        garbage: 4
-        id: '80000039'
-        name: IH14x28_1_80000039
-        pollution: 4
-        pollutionRadius: 5
-        power: 24
-        water: 20
-        waterPollution: 2
-        waterPollutionRadius: 6
-        worth: 1880
       - bulldoze: 160
         capacity:
           iht: 78
@@ -2755,18 +1339,6 @@ assets:
         id: '08670000'
         model: 5ad0e817-badb57f1-08670000
         name: IH28x40_2HTAnchor6_0867
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: 8000003c
-        name: IH28x40_2_8000003C
-        pollution: 8
-        pollutionRadius: 6
-        power: 52
-        water: 48
-        waterPollution: 4
-        waterPollutionRadius: 7
-        worth: 1950
       - bulldoze: 100
         capacity:
           iht: 14
@@ -2775,20 +1347,6 @@ assets:
         id: '08640000'
         model: 5ad0e817-badb57f1-0e110000
         name: IH14x14_1HTMech9_0864
-      - capacity:
-          iht: 7
-        file: hitech-doubler_includingPollution.dat
-        flamability: 40
-        garbage: 4
-        id: '80000056'
-        name: IH14x14_1_80000056
-        pollution: 2
-        pollutionRadius: 5
-        power: 10
-        water: 8
-        waterPollution: 2
-        waterPollutionRadius: 6
-        worth: 658
       - bulldoze: 290
         capacity:
           iht: 194
@@ -2797,18 +1355,6 @@ assets:
         id: 084c0000
         model: 5ad0e817-badb57f1-084c0000
         name: IH38x88_3HTOut15_084C
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004e
-        name: IH38x88_3_8000004E
-        pollution: 20
-        pollutionRadius: 7
-        power: 136
-        water: 136
-        waterPollution: 8
-        waterPollutionRadius: 8
-        worth: 4268
       - bulldoze: 290
         capacity:
           iht: 182
@@ -2817,18 +1363,6 @@ assets:
         id: '08490000'
         model: 5ad0e817-badb57f1-08490000
         name: IH42x58_3HTOut12_0849
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 50
-        garbage: 4
-        id: 8000004c
-        name: IH42x58_3_8000004C
-        pollution: 20
-        pollutionRadius: 7
-        power: 128
-        water: 128
-        waterPollution: 8
-        waterPollutionRadius: 8
-        worth: 4004
       - bulldoze: 160
         capacity:
           iht: 102
@@ -2837,18 +1371,6 @@ assets:
         id: '08460000'
         model: 5ad0e817-badb57f1-08460000
         name: IH24x60_2HTOut9_0846
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: '80000049'
-        name: IH24x60_2_80000049
-        pollution: 12
-        pollutionRadius: 6
-        power: 68
-        water: 62
-        waterPollution: 4
-        waterPollutionRadius: 7
-        worth: 2550
       - bulldoze: 100
         capacity:
           iht: 80
@@ -2857,18 +1379,6 @@ assets:
         id: '08430000'
         model: 5ad0e817-badb57f1-08430000
         name: IH28x44_2HTOut6_0843
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: '80000047'
-        name: IH28x44_2_80000047
-        pollution: 8
-        pollutionRadius: 6
-        power: 52
-        water: 48
-        waterPollution: 4
-        waterPollutionRadius: 7
-        worth: 2000
       - bulldoze: 290
         capacity:
           iht: 110
@@ -2893,18 +1403,6 @@ assets:
         id: '082e0000'
         model: 5ad0e817-badb57f1-082e0000
         name: IH24x28_2HTAnchor4_082E
-      - file: hitech-doubler_includingPollution.dat
-        flamability: 45
-        garbage: 4
-        id: 8000003b
-        name: IH24x28_2_8000003B
-        pollution: 8
-        pollutionRadius: 6
-        power: 44
-        water: 40
-        waterPollution: 4
-        waterPollutionRadius: 7
-        worth: 1650
       - bulldoze: 100
         capacity:
           iht: 40
@@ -2921,18 +1419,6 @@ assets:
         id: '08660000'
         model: 5ad0e817-badb57f1-08660000
         name: IM26x26_2ManuOut5_0866
-      - file: manufacturing-doubler.dat
-        flamability: 70
-        garbage: 4
-        id: '80000030'
-        name: IM26x26_2_80000030
-        pollution: 7
-        pollutionRadius: 9
-        power: 14
-        water: 142
-        waterPollution: 5
-        waterPollutionRadius: 13
-        worth: 1350
       - bulldoze: 270
         capacity:
           im: 156
@@ -2941,18 +1427,6 @@ assets:
         id: 082a0000
         model: 5ad0e817-badb57f1-082a0000
         name: IM38x88_3ManuOut15_082A
-      - file: manufacturing-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000038'
-        name: IM38x88_3_80000038
-        pollution: 20
-        pollutionRadius: 11
-        power: 36
-        water: 578
-        waterPollution: 14
-        waterPollutionRadius: 17
-        worth: 3276
       - bulldoze: 270
         capacity:
           im: 144
@@ -2961,18 +1435,6 @@ assets:
         id: '08270000'
         model: 5ad0e817-badb57f1-08270000
         name: IM42x58_3ManuOut12_0827
-      - file: manufacturing-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000036'
-        name: IM42x58_3_80000036
-        pollution: 18
-        pollutionRadius: 11
-        power: 34
-        water: 534
-        waterPollution: 13
-        waterPollutionRadius: 17
-        worth: 3024
       - bulldoze: 150
         capacity:
           im: 92
@@ -2981,18 +1443,6 @@ assets:
         id: '08240000'
         model: 5ad0e817-badb57f1-08240000
         name: IM24x60_3ManuOut9_0824
-      - file: manufacturing-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000033'
-        name: IM24x60_3_80000033
-        pollution: 12
-        pollutionRadius: 11
-        power: 22
-        water: 342
-        waterPollution: 9
-        waterPollutionRadius: 17
-        worth: 1932
       - bulldoze: 90
         capacity:
           im: 50
@@ -3001,18 +1451,6 @@ assets:
         id: '08210000'
         model: 5ad0e817-badb57f1-08210000
         name: IM28x44_2ManuOut6_0821
-      - file: manufacturing-doubler.dat
-        flamability: 70
-        garbage: 4
-        id: '80000031'
-        name: IM28x44_2_80000031
-        pollution: 6
-        pollutionRadius: 9
-        power: 12
-        water: 130
-        waterPollution: 4
-        waterPollutionRadius: 13
-        worth: 1250
       - bulldoze: 270
         capacity:
           im: 90
@@ -3021,18 +1459,6 @@ assets:
         id: 081b0000
         model: 5ad0e817-badb57f1-081b0000
         name: IM28x28_3ManuMech8_081B
-      - file: manufacturing-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: 8000002c
-        name: IM28x28_3_8000002C
-        pollution: 12
-        pollutionRadius: 11
-        power: 22
-        water: 348
-        waterPollution: 9
-        waterPollutionRadius: 17
-        worth: 1974
       - bulldoze: 270
         capacity:
           im: 48
@@ -3041,18 +1467,6 @@ assets:
         id: '08180000'
         model: 5ad0e817-badb57f1-08180000
         name: IM14x28_2ManuMech5_0818
-      - file: manufacturing-doubler.dat
-        flamability: 70
-        garbage: 4
-        id: 8000002b
-        name: IM14x28_2_8000002B
-        pollution: 6
-        pollutionRadius: 9
-        power: 12
-        water: 126
-        waterPollution: 4
-        waterPollutionRadius: 13
-        worth: 1200
       - bulldoze: 150
         capacity:
           im: 50
@@ -3061,18 +1475,6 @@ assets:
         id: 080c0000
         model: 5ad0e817-badb57f1-080c0000
         name: IM24x28_1ManuAnchor4_080C
-      - file: manufacturing-doubler.dat
-        flamability: 65
-        garbage: 4
-        id: '80000025'
-        name: IM24x28_1_80000025
-        pollution: 5
-        pollutionRadius: 7
-        power: 12
-        water: 76
-        waterPollution: 4
-        waterPollutionRadius: 9
-        worth: 2300
       - bulldoze: 90
         capacity:
           im: 38
@@ -3081,18 +1483,6 @@ assets:
         id: '08090000'
         model: 5ad0e817-badb57f1-08090000
         name: IM14x28_1ManuAnchor1_0809
-      - file: manufacturing-doubler.dat
-        flamability: 65
-        garbage: 6
-        id: '80000023'
-        name: IM14x28_1_80000023
-        pollution: 5
-        pollutionRadius: 7
-        power: 10
-        water: 64
-        waterPollution: 4
-        waterPollutionRadius: 9
-        worth: 1932
       - bulldoze: 150
         capacity:
           im: 64
@@ -3101,18 +1491,6 @@ assets:
         id: '08650000'
         model: 5ad0e817-badb57f1-08650000
         name: IM42x42_2ManuAnchor8_0865
-      - file: manufacturing-doubler.dat
-        flamability: 70
-        garbage: 4
-        id: '80000027'
-        name: IM42x42_2_80000027
-        pollution: 8
-        pollutionRadius: 9
-        power: 16
-        water: 168
-        waterPollution: 5
-        waterPollutionRadius: 13
-        worth: 1600
       - bulldoze: 270
         capacity:
           im: 116
@@ -3121,18 +1499,6 @@ assets:
         id: '08290000'
         model: 5ad0e817-badb57f1-08290000
         name: IM28x74_3ManuOut14_0829
-      - file: manufacturing-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000037'
-        name: IM28x74_3_80000037
-        pollution: 15
-        pollutionRadius: 11
-        power: 28
-        water: 430
-        waterPollution: 11
-        waterPollutionRadius: 17
-        worth: 2436
       - bulldoze: 150
         capacity:
           im: 106
@@ -3141,18 +1507,6 @@ assets:
         id: '08260000'
         model: 5ad0e817-badb57f1-08260000
         name: IM40x60_3ManuOut11_0826
-      - file: manufacturing-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000035'
-        name: IM40x60_3_80000035
-        pollution: 14
-        pollutionRadius: 11
-        power: 24
-        water: 394
-        waterPollution: 10
-        waterPollutionRadius: 17
-        worth: 2226
       - bulldoze: 270
         capacity:
           im: 68
@@ -3161,18 +1515,6 @@ assets:
         id: '08230000'
         model: 5ad0e817-badb57f1-08230000
         name: IM28x40_2ManuOut8_0823
-      - file: manufacturing-doubler.dat
-        flamability: 70
-        garbage: 4
-        id: '80000032'
-        name: IM28x40_2_80000032
-        pollution: 8
-        pollutionRadius: 9
-        power: 16
-        water: 178
-        waterPollution: 6
-        waterPollutionRadius: 13
-        worth: 1700
       - bulldoze: 150
         capacity:
           im: 42
@@ -3181,18 +1523,6 @@ assets:
         id: 081d0000
         model: 5ad0e817-badb57f1-081d0000
         name: IM14x24_1ManuOut2_081D
-      - file: manufacturing-doubler.dat
-        flamability: 65
-        garbage: 6
-        id: 8000002e
-        name: IM14x24_1_8000002E
-        pollution: 5
-        pollutionRadius: 7
-        power: 10
-        water: 64
-        waterPollution: 4
-        waterPollutionRadius: 9
-        worth: 1932
       - bulldoze: 150
         capacity:
           im: 96
@@ -3217,18 +1547,6 @@ assets:
         id: '08140000'
         model: 5ad0e817-badb57f1-08140000
         name: IM18x32_1ManuMech1_0814
-      - file: manufacturing-doubler.dat
-        flamability: 65
-        garbage: 4
-        id: 8000002a
-        name: IM18x32_1_8000002A
-        pollution: 5
-        pollutionRadius: 7
-        power: 12
-        water: 72
-        waterPollution: 4
-        waterPollutionRadius: 9
-        worth: 2208
       - bulldoze: 270
         capacity:
           im: 86
@@ -3237,18 +1555,6 @@ assets:
         id: '08110000'
         model: 5ad0e817-badb57f1-08110000
         name: IM40x44_2ManuAnchor9_0811
-      - file: manufacturing-doubler.dat
-        flamability: 70
-        garbage: 4
-        id: '80000028'
-        name: IM40x44_2_80000028
-        pollution: 10
-        pollutionRadius: 9
-        power: 20
-        water: 224
-        waterPollution: 7
-        waterPollutionRadius: 13
-        worth: 2150
       - bulldoze: 150
         capacity:
           im: 68
@@ -3257,18 +1563,6 @@ assets:
         id: '080e0000'
         model: 5ad0e817-badb57f1-080e0000
         name: IM28x40_2ManuAnchor6_080E
-      - file: manufacturing-doubler.dat
-        flamability: 70
-        garbage: 4
-        id: '80000026'
-        name: IM28x40_2_80000026
-        pollution: 8
-        pollutionRadius: 9
-        power: 16
-        water: 178
-        waterPollution: 6
-        waterPollutionRadius: 13
-        worth: 1700
       - bulldoze: 90
         capacity:
           im: 46
@@ -3277,18 +1571,6 @@ assets:
         id: 080b0000
         model: 5ad0e817-badb57f1-080b0000
         name: IM28x28_1ManuAnchor3_080B
-      - file: manufacturing-doubler.dat
-        flamability: 65
-        garbage: 4
-        id: '80000024'
-        name: IM28x28_1_80000024
-        pollution: 5
-        pollutionRadius: 7
-        power: 12
-        water: 70
-        waterPollution: 4
-        waterPollutionRadius: 9
-        worth: 2116
       - bulldoze: 270
         capacity:
           im: 116
@@ -3297,18 +1579,6 @@ assets:
         id: '08250000'
         model: 5ad0e817-badb57f1-08250000
         name: IM28x58_3ManuOut10_0825
-      - file: manufacturing-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000034'
-        name: IM28x58_3_80000034
-        pollution: 15
-        pollutionRadius: 11
-        power: 28
-        water: 430
-        waterPollution: 11
-        waterPollutionRadius: 17
-        worth: 2436
       - bulldoze: 150
         capacity:
           im: 50
@@ -3317,18 +1587,6 @@ assets:
         id: 081f0000
         model: 5ad0e817-badb57f1-081f0000
         name: IM26x28_2ManuOut4_081F
-      - file: manufacturing-doubler.dat
-        flamability: 70
-        garbage: 4
-        id: 8000002f
-        name: IM26x28_2_8000002F
-        pollution: 6
-        pollutionRadius: 9
-        power: 12
-        water: 130
-        waterPollution: 4
-        waterPollutionRadius: 13
-        worth: 1250
       - bulldoze: 90
         capacity:
           im: 36
@@ -3337,18 +1595,6 @@ assets:
         id: 081c0000
         model: 5ad0e817-badb57f1-081c0000
         name: IM14x28_1ManuOut1_081C
-      - file: manufacturing-doubler.dat
-        flamability: 65
-        garbage: 5
-        id: 8000002d
-        name: IM14x28_1_8000002D
-        pollution: 4
-        pollutionRadius: 7
-        power: 10
-        water: 54
-        waterPollution: 3
-        waterPollutionRadius: 9
-        worth: 1656
       - bulldoze: 270
         capacity:
           im: 114
@@ -3357,18 +1603,6 @@ assets:
         id: '08130000'
         model: 5ad0e817-badb57f1-08130000
         name: IM42x54_3ManuAnchor11_0813
-      - file: manufacturing-doubler.dat
-        flamability: 75
-        garbage: 4
-        id: '80000029'
-        name: IM42x54_3_80000029
-        pollution: 15
-        pollutionRadius: 11
-        power: 26
-        water: 422
-        waterPollution: 10
-        waterPollutionRadius: 17
-        worth: 2394
       - bulldoze: 150
         capacity:
           im: 46
@@ -3385,18 +1619,6 @@ assets:
         id: '08660000'
         model: 5ad0e817-badb57f1-08660000
         name: IM26x26_2ManuOut5_0866
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 70
-        garbage: 4
-        id: '80000030'
-        name: IM26x26_2_80000030
-        pollution: 14
-        pollutionRadius: 9
-        power: 14
-        water: 142
-        waterPollution: 10
-        waterPollutionRadius: 13
-        worth: 1350
       - bulldoze: 270
         capacity:
           im: 156
@@ -3405,18 +1627,6 @@ assets:
         id: 082a0000
         model: 5ad0e817-badb57f1-082a0000
         name: IM38x88_3ManuOut15_082A
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000038'
-        name: IM38x88_3_80000038
-        pollution: 40
-        pollutionRadius: 11
-        power: 36
-        water: 578
-        waterPollution: 28
-        waterPollutionRadius: 17
-        worth: 3276
       - bulldoze: 270
         capacity:
           im: 144
@@ -3425,18 +1635,6 @@ assets:
         id: '08270000'
         model: 5ad0e817-badb57f1-08270000
         name: IM42x58_3ManuOut12_0827
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000036'
-        name: IM42x58_3_80000036
-        pollution: 36
-        pollutionRadius: 11
-        power: 34
-        water: 534
-        waterPollution: 26
-        waterPollutionRadius: 17
-        worth: 3024
       - bulldoze: 150
         capacity:
           im: 92
@@ -3445,18 +1643,6 @@ assets:
         id: '08240000'
         model: 5ad0e817-badb57f1-08240000
         name: IM24x60_3ManuOut9_0824
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000033'
-        name: IM24x60_3_80000033
-        pollution: 24
-        pollutionRadius: 11
-        power: 22
-        water: 342
-        waterPollution: 18
-        waterPollutionRadius: 17
-        worth: 1932
       - bulldoze: 90
         capacity:
           im: 50
@@ -3465,18 +1651,6 @@ assets:
         id: '08210000'
         model: 5ad0e817-badb57f1-08210000
         name: IM28x44_2ManuOut6_0821
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 70
-        garbage: 4
-        id: '80000031'
-        name: IM28x44_2_80000031
-        pollution: 12
-        pollutionRadius: 9
-        power: 12
-        water: 130
-        waterPollution: 8
-        waterPollutionRadius: 13
-        worth: 1250
       - bulldoze: 270
         capacity:
           im: 90
@@ -3485,18 +1659,6 @@ assets:
         id: 081b0000
         model: 5ad0e817-badb57f1-081b0000
         name: IM28x28_3ManuMech8_081B
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: 8000002c
-        name: IM28x28_3_8000002C
-        pollution: 24
-        pollutionRadius: 11
-        power: 22
-        water: 348
-        waterPollution: 18
-        waterPollutionRadius: 17
-        worth: 1974
       - bulldoze: 270
         capacity:
           im: 48
@@ -3505,18 +1667,6 @@ assets:
         id: '08180000'
         model: 5ad0e817-badb57f1-08180000
         name: IM14x28_2ManuMech5_0818
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 70
-        garbage: 4
-        id: 8000002b
-        name: IM14x28_2_8000002B
-        pollution: 12
-        pollutionRadius: 9
-        power: 12
-        water: 126
-        waterPollution: 8
-        waterPollutionRadius: 13
-        worth: 1200
       - bulldoze: 150
         capacity:
           im: 50
@@ -3525,18 +1675,6 @@ assets:
         id: 080c0000
         model: 5ad0e817-badb57f1-080c0000
         name: IM24x28_1ManuAnchor4_080C
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 65
-        garbage: 4
-        id: '80000025'
-        name: IM24x28_1_80000025
-        pollution: 10
-        pollutionRadius: 7
-        power: 12
-        water: 76
-        waterPollution: 8
-        waterPollutionRadius: 9
-        worth: 2300
       - bulldoze: 90
         capacity:
           im: 38
@@ -3545,18 +1683,6 @@ assets:
         id: '08090000'
         model: 5ad0e817-badb57f1-08090000
         name: IM14x28_1ManuAnchor1_0809
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 65
-        garbage: 6
-        id: '80000023'
-        name: IM14x28_1_80000023
-        pollution: 10
-        pollutionRadius: 7
-        power: 10
-        water: 64
-        waterPollution: 8
-        waterPollutionRadius: 9
-        worth: 1932
       - bulldoze: 150
         capacity:
           im: 64
@@ -3565,18 +1691,6 @@ assets:
         id: '08650000'
         model: 5ad0e817-badb57f1-08650000
         name: IM42x42_2ManuAnchor8_0865
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 70
-        garbage: 4
-        id: '80000027'
-        name: IM42x42_2_80000027
-        pollution: 16
-        pollutionRadius: 9
-        power: 16
-        water: 168
-        waterPollution: 10
-        waterPollutionRadius: 13
-        worth: 1600
       - bulldoze: 270
         capacity:
           im: 116
@@ -3585,18 +1699,6 @@ assets:
         id: '08290000'
         model: 5ad0e817-badb57f1-08290000
         name: IM28x74_3ManuOut14_0829
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000037'
-        name: IM28x74_3_80000037
-        pollution: 30
-        pollutionRadius: 11
-        power: 28
-        water: 430
-        waterPollution: 22
-        waterPollutionRadius: 17
-        worth: 2436
       - bulldoze: 150
         capacity:
           im: 106
@@ -3605,18 +1707,6 @@ assets:
         id: '08260000'
         model: 5ad0e817-badb57f1-08260000
         name: IM40x60_3ManuOut11_0826
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000035'
-        name: IM40x60_3_80000035
-        pollution: 28
-        pollutionRadius: 11
-        power: 24
-        water: 394
-        waterPollution: 20
-        waterPollutionRadius: 17
-        worth: 2226
       - bulldoze: 270
         capacity:
           im: 68
@@ -3625,18 +1715,6 @@ assets:
         id: '08230000'
         model: 5ad0e817-badb57f1-08230000
         name: IM28x40_2ManuOut8_0823
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 70
-        garbage: 4
-        id: '80000032'
-        name: IM28x40_2_80000032
-        pollution: 16
-        pollutionRadius: 9
-        power: 16
-        water: 178
-        waterPollution: 12
-        waterPollutionRadius: 13
-        worth: 1700
       - bulldoze: 150
         capacity:
           im: 42
@@ -3645,18 +1723,6 @@ assets:
         id: 081d0000
         model: 5ad0e817-badb57f1-081d0000
         name: IM14x24_1ManuOut2_081D
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 65
-        garbage: 6
-        id: 8000002e
-        name: IM14x24_1_8000002E
-        pollution: 10
-        pollutionRadius: 7
-        power: 10
-        water: 64
-        waterPollution: 8
-        waterPollutionRadius: 9
-        worth: 1932
       - bulldoze: 150
         capacity:
           im: 96
@@ -3681,18 +1747,6 @@ assets:
         id: '08140000'
         model: 5ad0e817-badb57f1-08140000
         name: IM18x32_1ManuMech1_0814
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 65
-        garbage: 4
-        id: 8000002a
-        name: IM18x32_1_8000002A
-        pollution: 10
-        pollutionRadius: 7
-        power: 12
-        water: 72
-        waterPollution: 8
-        waterPollutionRadius: 9
-        worth: 2208
       - bulldoze: 270
         capacity:
           im: 86
@@ -3701,18 +1755,6 @@ assets:
         id: '08110000'
         model: 5ad0e817-badb57f1-08110000
         name: IM40x44_2ManuAnchor9_0811
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 70
-        garbage: 4
-        id: '80000028'
-        name: IM40x44_2_80000028
-        pollution: 20
-        pollutionRadius: 9
-        power: 20
-        water: 224
-        waterPollution: 14
-        waterPollutionRadius: 13
-        worth: 2150
       - bulldoze: 150
         capacity:
           im: 68
@@ -3721,18 +1763,6 @@ assets:
         id: '080e0000'
         model: 5ad0e817-badb57f1-080e0000
         name: IM28x40_2ManuAnchor6_080E
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 70
-        garbage: 4
-        id: '80000026'
-        name: IM28x40_2_80000026
-        pollution: 16
-        pollutionRadius: 9
-        power: 16
-        water: 178
-        waterPollution: 12
-        waterPollutionRadius: 13
-        worth: 1700
       - bulldoze: 90
         capacity:
           im: 46
@@ -3741,18 +1771,6 @@ assets:
         id: 080b0000
         model: 5ad0e817-badb57f1-080b0000
         name: IM28x28_1ManuAnchor3_080B
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 65
-        garbage: 4
-        id: '80000024'
-        name: IM28x28_1_80000024
-        pollution: 10
-        pollutionRadius: 7
-        power: 12
-        water: 70
-        waterPollution: 8
-        waterPollutionRadius: 9
-        worth: 2116
       - bulldoze: 270
         capacity:
           im: 116
@@ -3761,18 +1779,6 @@ assets:
         id: '08250000'
         model: 5ad0e817-badb57f1-08250000
         name: IM28x58_3ManuOut10_0825
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000034'
-        name: IM28x58_3_80000034
-        pollution: 30
-        pollutionRadius: 11
-        power: 28
-        water: 430
-        waterPollution: 22
-        waterPollutionRadius: 17
-        worth: 2436
       - bulldoze: 150
         capacity:
           im: 50
@@ -3781,18 +1787,6 @@ assets:
         id: 081f0000
         model: 5ad0e817-badb57f1-081f0000
         name: IM26x28_2ManuOut4_081F
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 70
-        garbage: 4
-        id: 8000002f
-        name: IM26x28_2_8000002F
-        pollution: 12
-        pollutionRadius: 9
-        power: 12
-        water: 130
-        waterPollution: 8
-        waterPollutionRadius: 13
-        worth: 1250
       - bulldoze: 90
         capacity:
           im: 36
@@ -3801,18 +1795,6 @@ assets:
         id: 081c0000
         model: 5ad0e817-badb57f1-081c0000
         name: IM14x28_1ManuOut1_081C
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 65
-        garbage: 5
-        id: 8000002d
-        name: IM14x28_1_8000002D
-        pollution: 8
-        pollutionRadius: 7
-        power: 10
-        water: 54
-        waterPollution: 6
-        waterPollutionRadius: 9
-        worth: 1656
       - bulldoze: 270
         capacity:
           im: 114
@@ -3821,18 +1803,6 @@ assets:
         id: '08130000'
         model: 5ad0e817-badb57f1-08130000
         name: IM42x54_3ManuAnchor11_0813
-      - file: manufacturing-doubler_includingPollution.dat
-        flamability: 75
-        garbage: 4
-        id: '80000029'
-        name: IM42x54_3_80000029
-        pollution: 30
-        pollutionRadius: 11
-        power: 26
-        water: 422
-        waterPollution: 16
-        waterPollutionRadius: 17
-        worth: 2394
       - bulldoze: 150
         capacity:
           im: 46

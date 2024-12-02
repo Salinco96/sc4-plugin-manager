@@ -922,14 +922,25 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     // Analyze DBPF contents
-    const { buildings, categories, features, lots, models, props, textures } =
-      await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
+    const {
+      buildingFamilies,
+      buildings,
+      categories,
+      features,
+      lots,
+      models,
+      propFamilies,
+      props,
+      textures,
+    } = await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
 
+    variantEntry.buildingFamilies = buildingFamilies.length ? buildingFamilies : undefined
     variantEntry.buildings = buildings.length ? buildings : undefined
     variantEntry.categories = categories.length ? categories : undefined
     variantEntry.features = features.length ? features : undefined
     variantEntry.lots = lots.length ? lots : undefined
     variantEntry.models = models.length ? models : undefined
+    variantEntry.propFamilies = propFamilies.length ? propFamilies : undefined
     variantEntry.props = props.length ? props : undefined
     variantEntry.textures = textures.length ? textures : undefined
 

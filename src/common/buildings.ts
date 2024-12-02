@@ -2,6 +2,15 @@ import type { CategoryID } from "./categories"
 import type { TGI } from "./dbpf"
 import type { MaybeArray } from "./utils/types"
 
+export interface BuildingFamilyData {
+  /** Path to the prop family file */
+  file: string
+  /** Prop family ID */
+  id: string
+  /** Prop family name */
+  name?: string
+}
+
 export interface BuildingData {
   /** Bulldoze cost */
   bulldoze?: number

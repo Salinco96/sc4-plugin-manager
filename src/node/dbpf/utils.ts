@@ -1,8 +1,9 @@
 import { isArray, isNumber, isString, toHex } from "@salinco/nice-utils"
 
 import { TGI } from "@common/dbpf"
+import type { ExemplarPropertyID } from "@common/exemplars"
 
-import type { Exemplar, ExemplarPropertyID } from "./types"
+import type { Exemplar } from "./types"
 
 export function get(exemplar: Exemplar, id: ExemplarPropertyID, index = 0): number | undefined {
   const value = exemplar.data?.properties[id]?.value

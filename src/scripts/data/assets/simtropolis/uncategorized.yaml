@@ -17,29 +17,89 @@ assets:
       - dayopeace.dat
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     props:
-      - 6534284a-c977c536-2cab0000
-      - 6534284a-c977c536-2cbb0000
-      - 6534284a-c977c536-2ccb0000
-      - 6534284a-c977c536-2cdb0000
-      - 6534284a-c977c536-2cad0000
-      - 6534284a-c977c536-2cbd0000
-      - 6534284a-c977c536-2ccd0000
-      - 6534284a-c977c536-2d220000
-      - 6534284a-c977c536-2cbf0000
-      - 6534284a-c977c536-2ccf0000
-      - 6534284a-c977c536-2cba0000
-      - 6534284a-c977c536-2cca0000
-      - 6534284a-c977c536-2cda0000
-      - 6534284a-c977c536-2cbc0000
-      - 6534284a-c977c536-2ccc0000
-      - 6534284a-c977c536-2d210000
-      - 6534284a-c977c536-2cdc0000
-      - 6534284a-c977c536-2cbe0000
-      - 6534284a-c977c536-2cce0000
-      - 6534284a-c977c536-2d230000
+      - file: dayopeace.dat
+        id: 2cab0000
+        model: 29a5d1ec-2a2458f9-2cab0000
+        name: LM1x1x18_AmericanFlag_2CAB
+      - file: dayopeace.dat
+        id: 2cbb0000
+        model: 29a5d1ec-2a2458f9-2cbb0000
+        name: LM1x1x18_SwedeFlag_2CBB
+      - file: dayopeace.dat
+        id: 2ccb0000
+        model: 29a5d1ec-2a2458f9-2ccb0000
+        name: LM1x1x18_NetherlandFlag_2CCB
+      - file: dayopeace.dat
+        id: 2cdb0000
+        model: 29a5d1ec-2a2458f9-2cdb0000
+        name: LM1x1x18_TaiwanFlag_2CDB
+      - file: dayopeace.dat
+        id: 2cad0000
+        model: 29a5d1ec-2a2458f9-2cad0000
+        name: LM1x1x18_BrazilFlag_2CAD
+      - file: dayopeace.dat
+        id: 2cbd0000
+        model: 29a5d1ec-2a2458f9-2cbd0000
+        name: LM1x1x18_UKFlag_2CBD
+      - file: dayopeace.dat
+        id: 2ccd0000
+        model: 29a5d1ec-2a2458f9-2ccd0000
+        name: LM1x1x18_PolishFlag_2CCD
+      - file: dayopeace.dat
+        id: 2d220000
+        model: 29a5d1ec-2a2458f9-2d220000
+        name: LM1x1x18_ChinaFlag_2D22
+      - file: dayopeace.dat
+        id: 2cbf0000
+        model: 29a5d1ec-2a2458f9-2cbf0000
+        name: LM1x1x18_ItalianFlag_2CBF
+      - file: dayopeace.dat
+        id: 2ccf0000
+        model: 29a5d1ec-2a2458f9-2ccf0000
+        name: LM1x1x18_SKoreanFlag_2CCF
+      - file: dayopeace.dat
+        id: 2cba0000
+        model: 29a5d1ec-2a2458f9-2cba0000
+        name: LM1x1x18_FrenchFlag_2CBA
+      - file: dayopeace.dat
+        id: 2cca0000
+        model: 29a5d1ec-2a2458f9-2cca0000
+        name: LM1x1x18_JapaneseFlag_2CCA
+      - file: dayopeace.dat
+        id: 2cda0000
+        model: 29a5d1ec-2a2458f9-2cda0000
+        name: LM1x1x18_SpanishFlag_2CDA
+      - file: dayopeace.dat
+        id: 2cbc0000
+        model: 29a5d1ec-2a2458f9-2cbc0000
+        name: LM1x1x18_FINLANDFlag_2CBC
+      - file: dayopeace.dat
+        id: 2ccc0000
+        model: 29a5d1ec-2a2458f9-2ccc0000
+        name: LM1x1x18_NorwayFlag_2CCC
+      - file: dayopeace.dat
+        id: 2d210000
+        model: 29a5d1ec-2a2458f9-2d210000
+        name: LM1x1x18_AussieFlag_2D21
+      - file: dayopeace.dat
+        id: 2cdc0000
+        model: 29a5d1ec-2a2458f9-2cdc0000
+        name: LM1x1x18_ThaiFlag_2CDC
+      - file: dayopeace.dat
+        id: 2cbe0000
+        model: 29a5d1ec-2a2458f9-2cbe0000
+        name: LM1x1x18_GermanFlag_2CBE
+      - file: dayopeace.dat
+        id: 2cce0000
+        model: 29a5d1ec-2a2458f9-2cce0000
+        name: LM1x1x18_PortugueseFlag_2CCE
+      - file: dayopeace.dat
+        id: 2d230000
+        model: 29a5d1ec-2a2458f9-2d230000
+        name: LM1x1x18_DanishFlag_2D23
     sha256: 1d573ffa52a37376f2be724afd0881c0f47abb06c05e0b31f7bf74a93088ce2b
     size: 3307086
     version: '1'
@@ -210,13 +270,16 @@ assets:
           - 25f10000
           - '26270000'
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04c30000
       - 5ad0e817-badb57f1-04bd0000
     props:
-      - 6534284a-ca386e22-04bd0000
+      - file: Plugin_004_SeoulCityHall.dat
+        id: 04bd0000
+        model: 5ad0e817-badb57f1-04bd0000
+        name: LM22x22_SeoulCityHallSoccerBall_04BD
     sha256: ecbec2ef700c6a78ee234a277a4b2184bb7aae3393c68b475ec43506705c54c1
     size: 1953118
     version: '1'
@@ -332,13 +395,16 @@ assets:
           - 258c0000
           - 25b20000
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2b960000
       - 5ad0e817-badb57f1-04bc0000
     props:
-      - 6534284a-c977c536-2b960000
+      - file: Plugin_006_GlobeArena.dat
+        id: 2b960000
+        model: 5ad0e817-badb57f1-2b960000
+        name: Lm4x16x45_GlobeArenaSign_2B96
     sha256: 501cc4e4f66c402747e8efa3d97a7cf993cd37487e50e3a7b285005512337b5d
     size: 4000537
     version: '1'
@@ -440,7 +506,7 @@ assets:
           - '25610000'
           - 25c60000
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1--151c0000
@@ -461,11 +527,21 @@ assets:
       - 5ad0e817-badb57f1-111c0000
       - 5ad0e817-badb57f1-11250000
     props:
-      - 6534284a-096e6739-2aee0fb3
-      - 6534284a-c977c536-4ae643c1
-      - 6534284a-c977c536-4ae643c2
-      - 6534284a-c977c536-4ae643c3
-      - 6534284a-c977c536-2af8bbd2
+      - file: Plugin_007_AirForceBase.dat
+        id: 2aee0fb3
+        name: Effect_steamboat
+      - file: Plugin_007_AirForceBase.dat
+        id: 4ae643c1
+        name: Effect_fighter_jet_airshow
+      - file: Plugin_007_AirForceBase.dat
+        id: 4ae643c2
+        name: Effect_parked_fighterjets
+      - file: Plugin_007_AirForceBase.dat
+        id: 4ae643c3
+        name: Effect_parked_transport_planes
+      - file: Plugin_007_AirForceBase.dat
+        id: 2af8bbd2
+        name: Effect_Effect_biplane
     sha256: 2f7eb1e40067ce23056bf91ce3296235ea5242b826c8ced9cbdb1b870e944e45
     size: 1279664
     version: '1'
@@ -522,7 +598,7 @@ assets:
           - 262c0000
           - 262b0000
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2b980000
@@ -531,10 +607,22 @@ assets:
       - 5ad0e817-badb57f1-04ba0000
       - 5ad0e817-badb57f1-2b990000
     props:
-      - 6534284a-c977c536-2b9a0000
-      - 6534284a-c977c536-2b970000
-      - 6534284a-c977c536-2b980000
-      - 6534284a-c977c536-2b990000
+      - file: Plugin_008_Kunjungjon.dat
+        id: 2b9a0000
+        model: 5ad0e817-badb57f1-2b9a0000
+        name: LM7x16x6_Shrine-wall_2B9A
+      - file: Plugin_008_Kunjungjon.dat
+        id: 2b970000
+        model: 5ad0e817-badb57f1-2b970000
+        name: LM1x1x2_Shrine-Deco_2B97
+      - file: Plugin_008_Kunjungjon.dat
+        id: 2b980000
+        model: 5ad0e817-badb57f1-2b980000
+        name: LM11x32x9_Shrine-gate_2B98
+      - file: Plugin_008_Kunjungjon.dat
+        id: 2b990000
+        model: 5ad0e817-badb57f1-2b990000
+        name: LM16x16x5_Shrine-corner_2B99
     sha256: 9e708fd02255c887ac5be79e9bfdbb61d32128c2609bf5db6801a96ef771ec30
     size: 503112
     textures:
@@ -751,7 +839,7 @@ assets:
         textures:
           - 25db0000
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2bac0000
@@ -774,24 +862,78 @@ assets:
       - 5ad0e817-badb57f1-2b9d0000
       - 5ad0e817-badb57f1-2bae0000
     props:
-      - 6534284a-c977c536-2ba30000
-      - 6534284a-c977c536-2ba10000
-      - 6534284a-c977c536-2b9f0000
-      - 6534284a-c977c536-2b9d0000
-      - 6534284a-c977c536-2bae0000
-      - 6534284a-c977c536-2bac0000
-      - 6534284a-c977c536-2baa0000
-      - 6534284a-c977c536-2ba80000
-      - 6534284a-c977c536-2ba60000
-      - 6534284a-c977c536-2ba40000
-      - 6534284a-c977c536-2ba20000
-      - 6534284a-c977c536-2ba00000
-      - 6534284a-c977c536-2b9e0000
-      - 6534284a-c977c536-2bad0000
-      - 6534284a-c977c536-2bab0000
-      - 6534284a-c977c536-2ba90000
-      - 6534284a-c977c536-2ba70000
-      - 6534284a-c977c536-2ba50000
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba30000
+        model: 5ad0e817-badb57f1-2ba30000
+        name: PZ3x2_DarkRock_2BA3
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba10000
+        model: 5ad0e817-badb57f1-2ba10000
+        name: PZ3x3_MedRock_2BA1
+      - file: Plugin_00D_Parthenon.dat
+        id: 2b9f0000
+        model: 5ad0e817-badb57f1-2b9f0000
+        name: PZ3x3_LightRock_2B9F
+      - file: Plugin_00D_Parthenon.dat
+        id: 2b9d0000
+        model: 5ad0e817-badb57f1-2b9d0000
+        name: PZ1x1_LightRock_2B9D
+      - file: Plugin_00D_Parthenon.dat
+        id: 2bae0000
+        model: 5ad0e817-badb57f1-2bae0000
+        name: PZ2x3_LightBlockRock_2BAE
+      - file: Plugin_00D_Parthenon.dat
+        id: 2bac0000
+        model: 5ad0e817-badb57f1-2bac0000
+        name: PZ2x3_DarkBlockRock_2BAC
+      - file: Plugin_00D_Parthenon.dat
+        id: 2baa0000
+        model: 5ad0e817-badb57f1-2baa0000
+        name: PZ3x3_LightBlockRock_2BAA
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba80000
+        model: 5ad0e817-badb57f1-2ba80000
+        name: PZ1x1_LightBlockRock_2BA8
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba60000
+        model: 5ad0e817-badb57f1-2ba60000
+        name: PZ2x2_DarkBlockRock_2BA6
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba40000
+        model: 5ad0e817-badb57f1-2ba40000
+        name: PZ4x3_DarkRock_2BA4
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba20000
+        model: 5ad0e817-badb57f1-2ba20000
+        name: PZ1x1_DarkRock_2BA2
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba00000
+        model: 5ad0e817-badb57f1-2ba00000
+        name: PZ1x1_MedRock_2BA0
+      - file: Plugin_00D_Parthenon.dat
+        id: 2b9e0000
+        model: 5ad0e817-badb57f1-2b9e0000
+        name: PZ2x2_LightRock_2B9E
+      - file: Plugin_00D_Parthenon.dat
+        id: 2bad0000
+        model: 5ad0e817-badb57f1-2bad0000
+        name: PZ1x2_LightBlockRock_2BAD
+      - file: Plugin_00D_Parthenon.dat
+        id: 2bab0000
+        model: 5ad0e817-badb57f1-2bab0000
+        name: PZ1x2_DarkBlockRock_2BAB
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba90000
+        model: 5ad0e817-badb57f1-2ba90000
+        name: PZ2x2_LightBlockRock_2BA9
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba70000
+        model: 5ad0e817-badb57f1-2ba70000
+        name: PZ3x3_DarkBlockRock_2BA7
+      - file: Plugin_00D_Parthenon.dat
+        id: 2ba50000
+        model: 5ad0e817-badb57f1-2ba50000
+        name: PZ1x1_DarkBlockRock_2BA5
     sha256: e93eeccb23fe7327644e093e5aac353c0d104a4c3d35257beb23e74d15e0b638
     size: 983954
     version: '1'
@@ -856,15 +998,21 @@ assets:
           - '26060000'
           - 257a0000
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2b9b0000
       - 5ad0e817-badb57f1-04b50000
       - 5ad0e817-badb57f1-2b9c0000
     props:
-      - 6534284a-c977c536-2b9b0000
-      - 6534284a-c977c536-2b9c0000
+      - file: Plugin_00E_SchlossSchoenbrun.dat
+        id: 2b9b0000
+        model: 5ad0e817-badb57f1-2b9b0000
+        name: Lm48x53_SchlossSchoenbrunWestwing_2B9B
+      - file: Plugin_00E_SchlossSchoenbrun.dat
+        id: 2b9c0000
+        model: 5ad0e817-badb57f1-2b9c0000
+        name: Lm48x53_SchlossSchoenbrunEastwing_2B9C
     sha256: eb60d181007bd4873912c13321a0aa9dc868f5893f0c4dd4d045c25481f5ed37
     size: 2161191
     version: '1'
@@ -1057,7 +1205,7 @@ assets:
           - 25f40000
           - '25e90000'
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2bad0000
@@ -1069,13 +1217,34 @@ assets:
       - 5ad0e817-badb57f1-2ba50000
       - 5ad0e817-badb57f1-04ad0000
     props:
-      - 6534284a-c977c536-2ba80000
-      - 6534284a-c977c536-2bad0000
-      - 6534284a-c977c536-2ba00000
-      - 6534284a-c977c536-2ba50000
-      - 6534284a-c977c536-2b9d0000
-      - 6534284a-c977c536-2ba20000
-      - 6534284a-c977c536-2bab0000
+      - file: Plugin_016_Stonehenge.dat
+        id: 2ba80000
+        model: 5ad0e817-badb57f1-2ba80000
+        name: PZ1x1_LightBlockRock_2BA8
+      - file: Plugin_016_Stonehenge.dat
+        id: 2bad0000
+        model: 5ad0e817-badb57f1-2bad0000
+        name: PZ1x2_LightBlockRock_2BAD
+      - file: Plugin_016_Stonehenge.dat
+        id: 2ba00000
+        model: 5ad0e817-badb57f1-2ba00000
+        name: PZ1x1_MedRock_2BA0
+      - file: Plugin_016_Stonehenge.dat
+        id: 2ba50000
+        model: 5ad0e817-badb57f1-2ba50000
+        name: PZ1x1_DarkBlockRock_2BA5
+      - file: Plugin_016_Stonehenge.dat
+        id: 2b9d0000
+        model: 5ad0e817-badb57f1-2b9d0000
+        name: PZ1x1_LightRock_2B9D
+      - file: Plugin_016_Stonehenge.dat
+        id: 2ba20000
+        model: 5ad0e817-badb57f1-2ba20000
+        name: PZ1x1_DarkRock_2BA2
+      - file: Plugin_016_Stonehenge.dat
+        id: 2bab0000
+        model: 5ad0e817-badb57f1-2bab0000
+        name: PZ1x2_DarkBlockRock_2BAB
     sha256: ba08e290ea9e0e0f89e9f863a7fb0b1e30aca963cc8ead9397960455d8319da6
     size: 291703
     version: '1'
@@ -1257,15 +1426,20 @@ assets:
           - 2d370000
         size: 4x3
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-04880000
       - 5ad0e817-badb57f1-2d380000
       - 5ad0e817-badb57f1-2d370000
     props:
-      - 6534284a-c977c536-2d390000
-      - 6534284a-c977c536-2d370000
+      - file: Plugin_032_MayflowerPort.dat
+        id: 2d390000
+        name: Effect_MayflowerShip
+      - file: Plugin_032_MayflowerPort.dat
+        id: 2d370000
+        model: 5ad0e817-badb57f1-2d370000
+        name: Lm43x10_MayflowerShip_2D37
     sha256: 943f645e18c6087559d50b6d9ac0417aabf55cb74e1614fc59edff4e7292473e
     size: 1610057
     version: '1'
@@ -1322,7 +1496,7 @@ assets:
           - '26370000'
           - '26350000'
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2d3c0000
@@ -1331,10 +1505,19 @@ assets:
       - 5ad0e817-badb57f1-2d3d0000
       - 5ad0e817-badb57f1-2d3a0000
     props:
-      - 6534284a-c977c536-2d3c0000
-      - 6534284a-c977c536-2d3d0000
-      - 6534284a-c977c536-2d3e0000
-      - 6534284a-c977c536-2d3a0000
+      - file: Plugin_033_RockefellerCenter.dat
+        id: 2d3c0000
+        name: LM7x7_ChristmasTree_2D3C
+      - file: Plugin_033_RockefellerCenter.dat
+        id: 2d3d0000
+        model: 5ad0e817-badb57f1-2d3d0000
+        name: Lm23x68_RockefellerCtr_2D3D
+      - file: Plugin_033_RockefellerCenter.dat
+        id: 2d3e0000
+        name: Effect_Christmas_white_blinking
+      - file: Plugin_033_RockefellerCenter.dat
+        id: 2d3a0000
+        name: Lm58x32_RockefellerRinkPlaza1_2D3A0000
     sha256: ac9bedb0a8117a2db65772790822a5e9136ac59278f0e1ad10f5d30de8e2a76c
     size: 6359228
     version: '1'
@@ -1927,7 +2110,7 @@ assets:
           - 257c0000
           - '25800000'
     meta:
-      timestamp: 2024-11-27T09:17:21.435Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-badb57f1-2d100000
@@ -1973,46 +2156,166 @@ assets:
       - 5ad0e817-badb57f1-2d4b0000
       - 5ad0e817-badb57f1-2d440000
     props:
-      - 6534284a-c977c536-2d570000
-      - 6534284a-c977c536-2d500000
-      - 6534284a-c977c536-2d490000
-      - 6534284a-c977c536-2d420000
-      - 6534284a-c977c536-2d0a0000
-      - 6534284a-c977c536-2d030000
-      - 6534284a-c977c536-2d540000
-      - 6534284a-c977c536-2d4d0000
-      - 6534284a-c977c536-2d460000
-      - 6534284a-c977c536-2d070000
-      - 6534284a-c977c536-2d510000
-      - 6534284a-c977c536-2d4a0000
-      - 6534284a-c977c536-2d430000
-      - 6534284a-c977c536-2d0b0000
-      - 6534284a-c977c536-2d040000
-      - 6534284a-c977c536-2d550000
-      - 6534284a-c977c536-2d4e0000
-      - 6534284a-c977c536-2d470000
-      - 6534284a-c977c536-2d400000
-      - 6534284a-c977c536-2d0f0000
-      - 6534284a-c977c536-2d080000
-      - 6534284a-c977c536-2d010000
-      - 6534284a-c977c536-2d590000
-      - 6534284a-c977c536-2d520000
-      - 6534284a-c977c536-2d440000
-      - 6534284a-c977c536-2d130000
-      - 6534284a-c977c536-2d0c0000
-      - 6534284a-c977c536-2d050000
-      - 6534284a-c977c536-2d560000
-      - 6534284a-c977c536-2d4f0000
-      - 6534284a-c977c536-2d480000
-      - 6534284a-c977c536-2d410000
-      - 6534284a-c977c536-2d100000
-      - 6534284a-c977c536-2d090000
-      - 6534284a-c977c536-2d020000
-      - 6534284a-c977c536-2d530000
-      - 6534284a-c977c536-2d4c0000
-      - 6534284a-c977c536-2d450000
-      - 6534284a-c977c536-2d0d0000
-      - 6534284a-c977c536-2d060000
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d570000
+        model: 5ad0e817-badb57f1-2d570000
+        name: Castle Moat - Right
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d500000
+        model: 5ad0e817-badb57f1-2d500000
+        name: Castle Walls - Bartizan w/roof Reversed
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d490000
+        model: 5ad0e817-badb57f1-2d490000
+        name: Castle Prop - Well
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d420000
+        model: 5ad0e817-badb57f1-2d420000
+        name: Castle Prop - Barrel Rack (Shadowed)
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d0a0000
+        model: 5ad0e817-badb57f1-2d0a0000
+        name: Castle Out - Short Lean-to
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d030000
+        model: 5ad0e817-badb57f1-2d030000
+        name: Castle Walls - 90deg Outward
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d540000
+        model: 5ad0e817-badb57f1-2d540000
+        name: Castle Prop - Guillotine
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d4d0000
+        model: 5ad0e817-badb57f1-2d4d0000
+        name: Castle Walls - Gate
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d460000
+        model: 5ad0e817-badb57f1-2d460000
+        name: Castle Prop - Wood Bin (Shadowed)
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d070000
+        model: 5ad0e817-badb57f1-2d070000
+        name: Castle Out - Small Hut w Shingle Roof
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d510000
+        model: 5ad0e817-badb57f1-2d510000
+        name: Castle Out - Grain Silo
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d4a0000
+        model: 5ad0e817-badb57f1-2d4a0000
+        name: Castle Prop - Wagon w/Barrels
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d430000
+        model: 5ad0e817-badb57f1-2d430000
+        name: Castle Prop - Barrels
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d0b0000
+        model: 5ad0e817-badb57f1-2d0b0000
+        name: Castle Out - Smithy
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d040000
+        model: 5ad0e817-badb57f1-2d040000
+        name: Castle Walls - T Out
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d550000
+        model: 5ad0e817-badb57f1-2d550000
+        name: Castle Prop - Stocks
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d4e0000
+        model: 5ad0e817-badb57f1-2d4e0000
+        name: Castle Props - Wooden Fence (long)
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d470000
+        model: 5ad0e817-badb57f1-2d470000
+        name: Castle Prop - Hay Bin
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d400000
+        model: 5ad0e817-badb57f1-2d400000
+        name: Castle Walls - Bartizan w/roof
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d0f0000
+        model: 5ad0e817-badb57f1-2d0f0000
+        name: Castle Walls - Bartizan w Crenel
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d080000
+        model: 5ad0e817-badb57f1-2d080000
+        name: Castle Out - Large 2 Story House
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d010000
+        model: 5ad0e817-badb57f1-2d010000
+        name: Castle Walls - Repeat
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d590000
+        model: 5ad0e817-badb57f1-2d590000
+        name: Castle Moat - Bridge
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d520000
+        model: 5ad0e817-badb57f1-2d520000
+        name: Castle Prop - The Pit
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d440000
+        model: 5ad0e817-badb57f1-2d440000
+        name: Castle Prop - Barrels (shadowed)
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d130000
+        model: 5ad0e817-badb57f1-2d100000
+        name: Castle Walls - Bastion w/roof
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d0c0000
+        model: 5ad0e817-badb57f1-2d0c0000
+        name: Castle Out - Stable
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d050000
+        model: 5ad0e817-badb57f1-2d050000
+        name: Castle Out - Small Hut w Straw Roof
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d560000
+        model: 5ad0e817-badb57f1-2d560000
+        name: Castle Moat - Repeat
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d4f0000
+        model: 5ad0e817-badb57f1-2d4f0000
+        name: Castle Props - Wooden Fence (short)
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d480000
+        model: 5ad0e817-badb57f1-2d480000
+        name: Castle Prop - Hay Bin (Shadowed)
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d410000
+        model: 5ad0e817-badb57f1-2d410000
+        name: Castle Prop - Barrel Rack
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d100000
+        model: 5ad0e817-badb57f1-2d100000
+        name: Castle Walls - Bastion
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d090000
+        model: 5ad0e817-badb57f1-2d090000
+        name: Castle Out - Long Lean-to
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d020000
+        model: 5ad0e817-badb57f1-2d020000
+        name: Castle Walls - 90deg Inward
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d530000
+        model: 5ad0e817-badb57f1-2d530000
+        name: Castle Prop - Gallows
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d4c0000
+        model: 5ad0e817-badb57f1-2d4c0000
+        name: Castle Walls - Stone Stairs (reversed)
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d450000
+        model: 5ad0e817-badb57f1-2d450000
+        name: Castle Prop - Wood Bin
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d0d0000
+        model: 5ad0e817-badb57f1-2d0d0000
+        name: Castle Walls - Stone Staircase
+      - file: Longfellow Castle/CastleSet.dat
+        id: 2d060000
+        model: 5ad0e817-badb57f1-2d060000
+        name: Castle Out - Long Hut w Straw Roof
     sha256: 6679a17385fc1faea0b965b4eeb8e219e70d16849b2620cd83271f2bfc807480
     size: 3793228
     textures:

@@ -306,15 +306,15 @@ assets:
     downloads: 1119
     file: BSC RJ Census Repository Facility v3.5_1831.zip
     files:
-      - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Day.jpg
-      - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Night.jpg
-      - _Documents/BSC_Readmes/RippleJet/images/footer.gif
-      - _Documents/BSC_Readmes/RippleJet/images/header.gif
       - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot
       - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot
       - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot
       - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
       - _Documents/BSC_Readmes/RippleJet/_Census Repository___CHOOSE ONE --- SEE README!!!/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot
+      - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Day.jpg
+      - _Documents/BSC_Readmes/RippleJet/images/Census Repository Facility Night.jpg
+      - _Documents/BSC_Readmes/RippleJet/images/footer.gif
+      - _Documents/BSC_Readmes/RippleJet/images/header.gif
       - BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
       - BSC/Ripplejet/Census Repository/RW_2x2_Census Repository Vault.SC4Lot
       - BSC/Ripplejet/Census Repository/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
@@ -427,18 +427,30 @@ assets:
           - 258f0000
           - '26370000'
     meta:
-      timestamp: 2024-11-27T09:00:58.547Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-5465811a-00030000
       - 5ad0e817-d17c864e-00030000
     name: BSC Census Repository Building by RippleJet
     props:
-      - 6534284a-3224a93f-16888cf8
-      - 6534284a-3224a93f-b6888d35
-      - 6534284a-3224a93f-1689d23a
-      - 6534284a-3224a93f-1689d35d
-      - 6534284a-c977c536-8956a699
+      - file: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 16888cf8
+        model: 5ad0e817-5465811a-00030000
+        name: Census Repository Facility
+      - file: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: b6888d35
+        model: 5ad0e817-d17c864e-00030000
+        name: Census Repository Vault
+      - file: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 1689d23a
+        name: RJ - Census Repository Phone Booth
+      - file: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 1689d35d
+        name: RJ - Census Repository Phone Booth Rear
+      - file: BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 8956a699
+        name: Gnome_CensusRepository
     sha256: 7b58f1e39ef3c5a3f72f8a4de11ebd75761c63c3c6003db7dd34a7343dbbff31
     size: 2060961
     timestamp: 2024-08-15T14:29:31.994Z

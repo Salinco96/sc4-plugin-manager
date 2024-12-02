@@ -1,28 +1,37 @@
 import path from "node:path"
 
-import { values } from "@salinco/nice-utils"
+import { toHex, values } from "@salinco/nice-utils"
 
-import type { BuildingData } from "@common/buildings"
+import type { BuildingData, BuildingFamilyData } from "@common/buildings"
 import { CategoryID } from "@common/categories"
 import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
-import { type ExemplarPropertyInfo, ExemplarType, getExemplarType } from "@common/exemplars"
+import {
+  ExemplarPropertyID,
+  type ExemplarPropertyInfo,
+  ExemplarType,
+  getExemplarType,
+} from "@common/exemplars"
 import type { LotData } from "@common/lots"
+import type { PropData, PropFamilyData } from "@common/props"
 import { Feature } from "@common/types"
 import { parseStringArray } from "@common/utils/types"
 import { loadDBPF } from "@node/dbpf"
 import { getBuildingData } from "@node/dbpf/buildings"
 import { getLotData } from "@node/dbpf/lots"
+import { getPropData } from "@node/dbpf/props"
 import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
-import { getBaseTextureId } from "@node/dbpf/utils"
+import { get, getBaseTextureId, getString } from "@node/dbpf/utils"
 import { FileOpenMode, getExtension, openFile } from "@node/files"
 
 export interface SC4FileData {
+  buildingFamilies: BuildingFamilyData[]
   buildings: BuildingData[]
   categories: CategoryID[]
   features: Feature[]
   lots: LotData[]
   models: string[]
-  props: string[]
+  propFamilies: PropFamilyData[]
+  props: PropData[]
   textures: string[]
 }
 
@@ -31,12 +40,14 @@ export async function analyzeSC4Files(
   filePaths: string[],
   exemplarProperties: { [id in number]?: ExemplarPropertyInfo },
 ): Promise<SC4FileData> {
+  const buildingFamilies: BuildingFamilyData[] = []
   const buildings: BuildingData[] = []
   const categories = new Set<CategoryID>()
   const features = new Set<Feature>()
   const lots: LotData[] = []
   const models = new Set<string>()
-  const props = new Set<string>()
+  const propFamilies: PropFamilyData[] = []
+  const props: PropData[] = []
   const textures = new Set<string>()
 
   for (const filePath of filePaths) {
@@ -55,28 +66,38 @@ export async function analyzeSC4Files(
       for (const entry of values(file.entries)) {
         switch (entry.type) {
           case DBPFDataType.EXMP: {
-            // TODO: What to do with cohorts?
-            if (entry.data?.isCohort) {
-              break
-            }
-
             const instanceId = parseTGI(entry.id)[2]
             const exemplar = { ...entry, file: filePath } as Exemplar
             const exemplarType = getExemplarType(entry.id, entry.data)
+            const isCohort = !!entry.data?.isCohort
 
             switch (exemplarType) {
               case ExemplarType.Building: {
-                buildings.push(getBuildingData(exemplar))
+                if (isCohort) {
+                  const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
+                  if (familyId !== undefined && instanceId === getPropFamilyInstanceId(familyId)) {
+                    buildingFamilies.push({
+                      file: filePath,
+                      id: toHex(familyId, 8),
+                      name: getString(exemplar, ExemplarPropertyID.ExemplarName),
+                    })
+                  }
+                } else {
+                  buildings.push(getBuildingData(exemplar))
+                }
+
                 break
               }
 
               case ExemplarType.Developer: {
                 categories.add(CategoryID.GAMEPLAY)
-                const type = DeveloperID[instanceId] as keyof typeof DeveloperID
 
-                if (type) {
-                  const feature = Feature[`DEVELOPER_${type}`]
-                  features.add(feature)
+                if (!isCohort) {
+                  const type = DeveloperID[instanceId] as keyof typeof DeveloperID
+                  if (type) {
+                    const feature = Feature[`DEVELOPER_${type}`]
+                    features.add(feature)
+                  }
                 }
 
                 break
@@ -84,12 +105,15 @@ export async function analyzeSC4Files(
 
               case ExemplarType.Lighting: {
                 categories.add(CategoryID.GRAPHICS)
-                features.add(Feature.DARKNITE) // TODO: Anything else?
+                features.add(Feature.DARKNITE)
                 break
               }
 
               case ExemplarType.LotConfig: {
-                lots.push(getLotData(exemplar))
+                if (!isCohort) {
+                  lots.push(getLotData(exemplar))
+                }
+
                 break
               }
 
@@ -99,17 +123,31 @@ export async function analyzeSC4Files(
               }
 
               case ExemplarType.Prop: {
-                props.add(exemplar.id)
+                if (isCohort) {
+                  const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
+                  if (familyId !== undefined && instanceId === getPropFamilyInstanceId(familyId)) {
+                    propFamilies.push({
+                      file: filePath,
+                      id: toHex(familyId, 8),
+                      name: getString(exemplar, ExemplarPropertyID.ExemplarName),
+                    })
+                  }
+                } else {
+                  props.push(getPropData(exemplar))
+                }
+
                 break
               }
 
               case ExemplarType.Simulator: {
                 categories.add(CategoryID.GAMEPLAY)
-                const type = SimulatorID[instanceId] as keyof typeof SimulatorID
 
-                if (type) {
-                  const feature = Feature[`SIMULATOR_${type}`]
-                  features.add(feature)
+                if (!isCohort) {
+                  const type = SimulatorID[instanceId] as keyof typeof SimulatorID
+                  if (type) {
+                    const feature = Feature[`SIMULATOR_${type}`]
+                    features.add(feature)
+                  }
                 }
 
                 break
@@ -153,12 +191,18 @@ export async function analyzeSC4Files(
   }
 
   return {
+    buildingFamilies,
     buildings,
     categories: Array.from(categories),
     features: Array.from(features),
     lots,
     models: Array.from(models),
-    props: Array.from(props),
+    propFamilies,
+    props,
     textures: Array.from(textures),
   }
+}
+
+export function getPropFamilyInstanceId(familyId: number): number {
+  return (familyId + 0x10000000) & 0xffffffff
 }

@@ -6,20 +6,21 @@ import {
   isEqual,
   isNumber,
   sum,
+  toHex,
   unique,
   values,
 } from "@salinco/nice-utils"
 
 import type { BuildingData } from "@common/buildings"
-
 import { CategoryID } from "@common/categories"
+import { ExemplarPropertyID } from "@common/exemplars"
 import { Menu, Submenu, writeMenu, writeMenus } from "@common/submenus"
+
 import {
   BudgetItemDepartment,
   DemandID,
   DeveloperID,
   type Exemplar,
-  ExemplarPropertyID,
   OccupantGroup,
   PowerPlantType,
   QueryExemplarGUID,
@@ -79,6 +80,11 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
   const description = getString(exemplar, ExemplarPropertyID.ItemDescription)
   if (description?.length) {
     data.description = description
+  }
+
+  const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
+  if (familyId !== undefined) {
+    data.family = toHex(familyId, 8)
   }
 
   const worth = get(exemplar, ExemplarPropertyID.BuildingValue)

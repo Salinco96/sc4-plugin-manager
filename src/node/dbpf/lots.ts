@@ -1,7 +1,9 @@
-import { type LotData, ZoneDensity } from "@common/lots"
 import { toHex, values } from "@salinco/nice-utils"
 
-import { type Exemplar, ExemplarPropertyID, LotConfigPropertyType, ZoneType } from "./types"
+import { ExemplarPropertyID } from "@common/exemplars"
+import { type LotData, ZoneDensity } from "@common/lots"
+
+import { type Exemplar, LotConfigPropertyType, ZoneType } from "./types"
 import { get, getArray, getBaseTextureId, getString } from "./utils"
 
 export function getLotData(exemplar: Exemplar): LotData {

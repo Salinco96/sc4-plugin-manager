@@ -348,18 +348,30 @@ assets:
           - '258e0000'
           - 258d0000
     meta:
-      timestamp: 2024-11-27T09:00:58.547Z
+      timestamp: 2024-12-02T08:30:17.389Z
       version: 1
     models:
       - 5ad0e817-5465811a-00030000
       - 5ad0e817-d17c864e-00030000
     name: SC4 More Demand Info
     props:
-      - 6534284a-3224a93f-16888cf8
-      - 6534284a-3224a93f-b6888d35
-      - 6534284a-3224a93f-1689d23a
-      - 6534284a-3224a93f-1689d35d
-      - 6534284a-c977c536-8956a699
+      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 16888cf8
+        model: 5ad0e817-5465811a-00030000
+        name: Census Repository Facility
+      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: b6888d35
+        model: 5ad0e817-d17c864e-00030000
+        name: Census Repository Vault
+      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 1689d23a
+        name: RJ - Census Repository Phone Booth
+      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 1689d35d
+        name: RJ - Census Repository Phone Booth Rear
+      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+        id: 8956a699
+        name: Gnome_CensusRepository
     repository: https://github.com/0xC0000054/sc4-more-demand-info
     sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
     size: 1699084
@@ -621,11 +633,11 @@ assets:
       - submenus/health/health-large-submenu.dat
       - submenus/health/health-medium-submenu.dat
       - submenus/health/health-small-submenu.dat
-      - submenus/highway/signage-submenu.dat
       - submenus/industrial/ploppable-Ia-submenu.dat
       - submenus/industrial/ploppable-Id-submenu.dat
       - submenus/industrial/ploppable-Iht-submenu.dat
       - submenus/industrial/ploppable-Im-submenu.dat
+      - submenus/highway/signage-submenu.dat
       - submenus/landmark/entertainment-submenu.dat
       - submenus/landmark/government-submenu.dat
       - submenus/landmark/religion-submenu.dat
@@ -648,14 +660,14 @@ assets:
       - submenus/power/clean-energy-submenu.dat
       - submenus/power/dirty-energy-submenu.dat
       - submenus/power/misc-power-submenu.dat
-      - submenus/residential/ploppable-R$$$-submenu.dat
-      - submenus/residential/ploppable-R$$-submenu.dat
-      - submenus/residential/ploppable-R$-submenu.dat
       - submenus/rail/freight-rail-submenu.dat
       - submenus/rail/hybrid-railway-submenu.dat
       - submenus/rail/monorail-submenu.dat
       - submenus/rail/passenger-rail-submenu.dat
       - submenus/rail/yards-submenu.dat
+      - submenus/residential/ploppable-R$$$-submenu.dat
+      - submenus/residential/ploppable-R$$-submenu.dat
+      - submenus/residential/ploppable-R$-submenu.dat
       - submenus/water-transit/canal-submenu.dat
       - submenus/water-transit/ports-ferries-submenu.dat
       - submenus/water-transit/seawall-submenu.dat
