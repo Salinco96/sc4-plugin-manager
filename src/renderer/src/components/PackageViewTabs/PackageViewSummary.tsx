@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 
 import type { AuthorID } from "@common/authors"
 import { getFeatureLabel } from "@common/i18n"
-import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
+import { getRequirementText } from "@common/options"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { getAuthorName } from "@components/Tags/utils" // TODO: Move
@@ -13,6 +13,7 @@ import { Text } from "@components/Text"
 import { Page, useHistory } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 import { useAuthors, useStore } from "@utils/store"
+
 import type { PackageViewTabInfoProps } from "./tabs"
 
 export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.Element {
@@ -136,13 +137,7 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
           <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
             {collect(variantInfo.requirements, (value, requirement) => (
               <Typography component="li" key={requirement} variant="body2">
-                {`${getRequirementLabel(t, requirement, variantInfo.options, profileOptions)}: ${getRequirementValueLabel(
-                  t,
-                  requirement,
-                  value,
-                  variantInfo.options,
-                  profileOptions,
-                )}`}
+                {getRequirementText(t, requirement, value, variantInfo.options, profileOptions)}
               </Typography>
             ))}
           </ul>

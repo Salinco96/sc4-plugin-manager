@@ -130,6 +130,25 @@ export function getOptionInfo(
 }
 
 /**
+ * Gets the label for a requirement and its value
+ */
+export function getRequirementText(
+  t: TFunction<Namespace>,
+  requirement: OptionID | Feature,
+  value: OptionSingleValue,
+  packageOptions: OptionInfo[] | undefined,
+  globalOptions: OptionInfo[] | undefined,
+): string {
+  return `${getRequirementLabel(t, requirement, packageOptions, globalOptions)}: ${getRequirementValueLabel(
+    t,
+    requirement,
+    value,
+    packageOptions,
+    globalOptions,
+  )}`
+}
+
+/**
  * Gets the label for a requirement
  */
 export function getRequirementLabel(
@@ -138,6 +157,10 @@ export function getRequirementLabel(
   packageOptions: OptionInfo[] | undefined,
   globalOptions: OptionInfo[] | undefined,
 ): string {
+  if (requirement === "minVersion") {
+    return "Min version"
+  }
+
   const option = getOptionInfo(requirement as OptionID, packageOptions, globalOptions)
   return option?.label ?? getFeatureLabel(t, requirement as Feature)
 }
@@ -152,6 +175,10 @@ export function getRequirementValueLabel(
   packageOptions: OptionInfo[] | undefined,
   globalOptions: OptionInfo[] | undefined,
 ): string {
+  if (requirement === "minVersion") {
+    return `1.1.${value}.0`
+  }
+
   if (isBoolean(value)) {
     return t(value ? "yes" : "no", { ns: "General" })
   }
