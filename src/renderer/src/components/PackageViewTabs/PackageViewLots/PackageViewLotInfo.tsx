@@ -1,10 +1,12 @@
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 import { Checkbox, Typography } from "@mui/material"
 import { collect } from "@salinco/nice-utils"
+import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { CategoryID } from "@common/categories"
-import type { LotInfo } from "@common/lots"
+import { DBPFFileType, type TGI } from "@common/dbpf"
+import { type LotInfo, isSC4LotFile } from "@common/lots"
 import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
@@ -15,7 +17,9 @@ import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
 import { formatNumber } from "@utils/format"
 import { useCurrentVariant } from "@utils/packages"
-import { useStore } from "@utils/store"
+import { useStore, useStoreActions } from "@utils/store"
+import { useEffectEvent } from "@utils/useEffectEvent"
+
 import { ExemplarRef } from "./ExemplarRef"
 
 export interface PackageViewLotInfoProps {
@@ -35,6 +39,7 @@ export function PackageViewLotInfo({
   packageId,
   setEnabled,
 }: PackageViewLotInfoProps): JSX.Element {
+  const actions = useStoreActions()
   const exemplars = useStore(store => store.exemplars)
   const profileOptions = useStore(store => store.profileOptions)
   const variantInfo = useCurrentVariant(packageId)
@@ -45,14 +50,42 @@ export function PackageViewLotInfo({
   const isMaxisOverride = maxisLot !== undefined && lot.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 
+  const [lotPicture, setLotPicture] = useState<string>()
+
   const { t } = useTranslation("PackageViewLots")
+
+  const loadLotPicture = useEffectEvent(async () => {
+    try {
+      const entryId: TGI = `${DBPFFileType.PNG_LOT_PICTURES}-${lot.id}`
+      const entry = await actions.loadDBPFEntry(packageId, variantInfo.id, lot.file, entryId)
+      if (entry.data && "base64" in entry.data) {
+        const src = `data:image/${entry.type};base64, ${entry.data.base64}`
+        setLotPicture(src)
+      } else {
+        setLotPicture(undefined)
+      }
+    } catch (error) {
+      if (error instanceof Error && error.message.match(/missing entry/i)) {
+        setLotPicture(undefined)
+      } else {
+        console.error(error)
+      }
+    }
+  })
+
+  useEffect(() => {
+    // Try to load the PNG picture sometimes included in SC4Lot files
+    if (fileInfo && isSC4LotFile(fileInfo.path)) {
+      loadLotPicture()
+    }
+  }, [fileInfo, loadLotPicture])
+
+  const images = lot.images?.length ? lot.images : lotPicture ? [lotPicture] : undefined
 
   return (
     <FlexBox id={`lot-${lot.id}`} direction="column" gap={2}>
       <FlexBox alignItems="center">
-        {!!lot.images?.length && (
-          <ImageViewerThumbnail images={lot.images} mr={2} mt={1} size={84} />
-        )}
+        {images && <ImageViewerThumbnail images={images} mr={2} mt={1} size={84} />}
 
         <FlexBox direction="column" width="100%">
           <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
