@@ -6,12 +6,26 @@ import type { LotInfo } from "./lots"
 import type { OptionInfo } from "./options"
 import type { PackageID } from "./packages"
 import type { ProfileID, ProfileInfo, Profiles } from "./profiles"
+import type { FamilyInfo, PropInfo } from "./props"
 import type { Settings } from "./settings"
 import type { Features, PackageInfo, Packages } from "./types"
 
 export interface Exemplars {
-  buildings: { [id in string]?: BuildingInfo }
-  lots: { [id in string]?: LotInfo }
+  buildingFamilies: {
+    [familyId in string]?: FamilyInfo
+  }
+  buildings: {
+    [instanceId in string]?: BuildingInfo
+  }
+  lots: {
+    [instanceId in string]?: LotInfo
+  }
+  propFamilies: {
+    [familyId in string]?: FamilyInfo
+  }
+  props: {
+    [instanceId in string]?: PropInfo
+  }
 }
 
 export interface ApplicationState {
@@ -52,7 +66,13 @@ export function getInitialState(): ApplicationState {
     categories: {},
     downloads: {},
     exemplarProperties: {},
-    exemplars: { buildings: {}, lots: {} },
+    exemplars: {
+      buildingFamilies: {},
+      buildings: {},
+      lots: {},
+      propFamilies: {},
+      props: {},
+    },
     features: {},
     linker: null,
     loader: null,

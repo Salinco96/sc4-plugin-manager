@@ -1,19 +1,20 @@
-import { FlexBox } from "@components/FlexBox"
-import { PackageTag } from "@components/Tags/PackageTag"
 import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, Tab } from "@mui/material"
-import { useCurrentVariant, useDependentPackages, usePackageInfo } from "@utils/packages"
+import { Suspense } from "react"
 import { useTranslation } from "react-i18next"
 
-import { ErrorBoundary } from "@components/ErrorBoundary"
+import { FlexBox } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
-import { useStore } from "@utils/store"
-import { Suspense } from "react"
-import { ContentErrorComponent } from "../../Content"
-import { type PackageViewTabInfoProps, packageViewTabs, usePackageViewTab } from "./tabs"
+import { PackageTag } from "@components/Tags/PackageTag"
+import { useCurrentVariant, useDependentPackages, usePackageInfo } from "@utils/packages"
+import { useStore, useStoreActions } from "@utils/store"
+
+import { type PackageViewTabInfoProps, packageViewTabs } from "./tabs"
 
 export function PackageViewTabs({ packageId }: PackageViewTabInfoProps): JSX.Element | null {
-  const { activeTab, setActiveTab } = usePackageViewTab()
+  const actions = useStoreActions()
+  const activeTab = useStore(store => store.packageView.activeTab)
+
   const { t } = useTranslation("PackageViewTabs")
 
   const dependentPackages = useDependentPackages(packageId)
@@ -24,9 +25,11 @@ export function PackageViewTabs({ packageId }: PackageViewTabInfoProps): JSX.Ele
   const tabs = packageViewTabs.filter(tab =>
     tab.condition(variantInfo, dependentPackages, exemplars),
   )
+
   const labels = tabs.map(tab =>
     tab.label(t, variantInfo, packageInfo, dependentPackages, exemplars),
   )
+
   const labelTags = tabs.map(tab => tab.labelTag?.(variantInfo))
 
   if (tabs.length === 0) {
@@ -38,7 +41,7 @@ export function PackageViewTabs({ packageId }: PackageViewTabInfoProps): JSX.Ele
   return (
     <TabContext value={currentTab.id}>
       <Box borderBottom={1} borderColor="divider">
-        <TabList onChange={(event, value) => setActiveTab(value)}>
+        <TabList onChange={(event, value) => actions.setPackageViewTab(value)}>
           {tabs.map((tab, index) => (
             <Tab
               key={tab.id}
@@ -64,9 +67,7 @@ export function PackageViewTabs({ packageId }: PackageViewTabInfoProps): JSX.Ele
           value={id}
         >
           <Suspense fallback={<Loader />}>
-            <ErrorBoundary ErrorComponent={ContentErrorComponent}>
-              <Component packageId={packageId} />
-            </ErrorBoundary>
+            <Component packageId={packageId} />
           </Suspense>
         </TabPanel>
       ))}

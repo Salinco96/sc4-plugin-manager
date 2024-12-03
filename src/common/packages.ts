@@ -1,6 +1,7 @@
-import { type ID, entries, isArray } from "@salinco/nice-utils"
+import { type ID, entries, isArray, values } from "@salinco/nice-utils"
 
 import type { AuthorID } from "./authors"
+import { isEnabledLot, isSC4LotFile, isTogglableLot } from "./lots"
 import {
   type OptionID,
   type OptionInfo,
@@ -10,20 +11,20 @@ import {
 } from "./options"
 import type { ProfileInfo } from "./profiles"
 import type { Settings } from "./settings"
-import type { Feature, Features, PackageFile, PackageInfo, PackageStatus } from "./types"
+import type { Feature, Features, PackageInfo, PackageStatus } from "./types"
 import { matchFile } from "./utils/glob"
+import type { FileInfo } from "./variants"
 import { Issue, type VariantInfo, type VariantIssue } from "./variants"
 
 export const MIN_VERSION_OPTION_ID = "minVersion" as OptionID
 
-export const LOTS_OPTION_ID = "lots" as OptionID
 export const MMPS_OPTION_ID = "mmps" as OptionID
 
 /** Package ID */
 export type PackageID = ID<string, PackageInfo>
 
 export function checkFile(
-  file: PackageFile,
+  file: FileInfo,
   packageId: PackageID,
   variantInfo: VariantInfo,
   profileInfo: ProfileInfo | undefined,
@@ -39,46 +40,40 @@ export function checkFile(
     return false
   }
 
-  const lot = variantInfo?.lots?.find(lot => lot.file && matchFile(lot.file, file.path))
+  if (isSC4LotFile(file.path)) {
+    // SC4Lot file should contain a single lot
+    const lots = variantInfo?.lots?.[file.path]
+    const lot = lots && values(lots)[0]
+    if (lot && isTogglableLot(lot)) {
+      // Do not include lots unless explicitly enabled
+      if (!packageConfig?.enabled && !alwaysIncludeLots) {
+        return false
+      }
 
-  if (lot) {
-    // Never include lots unless explicitly enabled
-    if (!packageConfig?.enabled && !alwaysIncludeLots) {
-      return false
-    }
+      // Do not include lots disabled via options
+      if (!isEnabledLot(lot, packageConfig)) {
+        return false
+      }
 
-    // Check if lot is enabled
-    const option = getOptionInfo(LOTS_OPTION_ID, variantInfo.options, profileOptions)
+      // Check if lot is supported
+      const isSupported = checkCondition(
+        lot.requirements,
+        packageId,
+        variantInfo,
+        profileInfo,
+        profileOptions,
+        features,
+        settings,
+      )
 
-    if (option) {
-      const enabledLots = getOptionValue(option, {
-        ...packageConfig?.options,
-        ...profileInfo?.options,
-      }) as string[]
-
-      if (!enabledLots.includes(lot.id)) {
+      if (!isSupported) {
         return false
       }
     }
-
-    // Check if lot is supported
-    const isSupported = checkCondition(
-      lot.requirements,
-      packageId,
-      variantInfo,
-      profileInfo,
-      profileOptions,
-      features,
-      settings,
-    )
-
-    if (!isSupported) {
-      return false
-    }
   }
 
+  // TODO: Refactor this
   const mmp = variantInfo?.mmps?.find(mmp => mmp.file && matchFile(mmp.file, file.path))
-
   if (mmp) {
     // Never include MMPs unless explicitly enabled
     if (!packageConfig?.enabled) {

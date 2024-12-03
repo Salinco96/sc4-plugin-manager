@@ -2,6 +2,7 @@ import path from "node:path"
 
 import {
   difference,
+  forEach,
   generate,
   groupBy,
   isEmpty,
@@ -16,8 +17,9 @@ import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { CategoryID } from "@common/categories"
 import { type PackageID, getOwnerId } from "@common/packages"
-import type { PackageData, PackageFile } from "@common/types"
+import type { PackageData } from "@common/types"
 import { parseStringArray } from "@common/utils/types"
+import type { FileData } from "@common/variants"
 import type { VariantID } from "@common/variants"
 import { getExtension } from "@node/files"
 
@@ -106,7 +108,7 @@ export function writePackageData(
   variantId: VariantID,
   includedFiles: string[],
   excludedFiles: string[],
-  packageFiles: { [path in string]?: PackageFile },
+  packageFiles: { [path in string]?: FileData },
   authors: AuthorID[],
   dependencies: PackageID[],
   timestamp: Date,
@@ -327,100 +329,79 @@ export function writePackageData(
     variantAsset.include = []
   }
 
-  const lots = variantEntry.lots?.filter(lot => includedFiles.includes(lot.file))
-
-  if (lots?.length) {
-    variantData.lots ??= []
-
-    for (const lot of lots) {
-      let existingLot = variantData.lots.find(({ file, id }) => id === lot.id && file === lot.file)
-
-      if (!existingLot) {
-        existingLot = { id: lot.id, file: lot.file }
-        variantData.lots.push(existingLot)
+  if (variantEntry.buildingFamilies) {
+    forEach(variantEntry.buildingFamilies, (families, file) => {
+      if (includedFiles.includes(file)) {
+        forEach(families, (data, id) => {
+          variantData.buildingFamilies ??= {}
+          variantData.buildingFamilies[file] ??= {}
+          variantData.buildingFamilies[file][id] = {
+            ...data,
+            ...variantData.buildingFamilies[file][id],
+          }
+        })
       }
-
-      existingLot.building ??= lot.building
-      existingLot.density ??= lot.density
-      existingLot.images ??= lot.images
-      existingLot.name ??= lot.name
-      existingLot.size ??= lot.size
-      existingLot.stage ??= lot.stage
-    }
+    })
   }
 
-  const buildings = variantEntry.buildings?.filter(building =>
-    includedFiles.includes(building.file),
-  )
-
-  if (buildings?.length) {
-    variantData.buildings ??= []
-
-    for (const building of buildings) {
-      let existingBuilding = variantData.buildings.find(
-        ({ file, id }) => id === building.id && file === building.file,
-      )
-
-      if (!existingBuilding) {
-        existingBuilding = { id: building.id, file: building.file }
-        variantData.buildings.push(existingBuilding)
+  if (variantEntry.buildings) {
+    forEach(variantEntry.buildings, (buildings, file) => {
+      if (includedFiles.includes(file)) {
+        forEach(buildings, ({ model, ...data }, id) => {
+          variantData.buildings ??= {}
+          variantData.buildings[file] ??= {}
+          variantData.buildings[file][id] = {
+            ...data,
+            ...variantData.buildings[file][id],
+          }
+        })
       }
-
-      existingBuilding.bulldoze ??= building?.bulldoze
-      existingBuilding.capacity ??= building?.capacity
-      existingBuilding.category ??= building.category
-      existingBuilding.cost ??= building?.cost
-      existingBuilding.description ??= building?.description
-      existingBuilding.family ??= building.family
-      existingBuilding.flamability ??= building?.flamability
-      existingBuilding.garbage ??= building?.garbage
-      existingBuilding.garbageRadius ??= building?.garbageRadius
-      existingBuilding.images ??= building?.images
-      existingBuilding.income ??= building?.income
-      existingBuilding.jobs ??= building?.jobs
-      existingBuilding.label ??= building?.label
-      existingBuilding.landmark ??= building?.landmark
-      existingBuilding.landmarkRadius ??= building?.landmarkRadius
-      existingBuilding.maintenance ??= building?.maintenance
-      existingBuilding.menu ??= building?.menu
-      existingBuilding.name ??= building?.name
-      existingBuilding.pollution ??= building?.pollution
-      existingBuilding.pollutionRadius ??= building?.pollutionRadius
-      existingBuilding.power ??= building?.power
-      existingBuilding.powerProduction ??= building?.powerProduction
-      existingBuilding.radiation ??= building?.radiation
-      existingBuilding.radiationRadius ??= building?.radiationRadius
-      existingBuilding.rating ??= building?.rating
-      existingBuilding.ratingRadius ??= building?.ratingRadius
-      existingBuilding.relief ??= building?.relief
-      existingBuilding.submenu ??= building?.submenu
-      existingBuilding.water ??= building?.water
-      existingBuilding.waterPollution ??= building?.waterPollution
-      existingBuilding.waterPollutionRadius ??= building?.waterPollutionRadius
-      existingBuilding.waterProduction ??= building?.waterProduction
-      existingBuilding.worth ??= building?.worth
-    }
+    })
   }
 
-  const props = variantEntry.props?.filter(prop => includedFiles.includes(prop.file))
-
-  if (props?.length) {
-    variantData.props ??= []
-
-    for (const prop of props) {
-      let existingProp = variantData.props.find(
-        ({ file, id }) => id === prop.id && file === prop.file,
-      )
-
-      if (!existingProp) {
-        existingProp = { id: prop.id, file: prop.file }
-        variantData.props.push(existingProp)
+  if (variantEntry.lots) {
+    forEach(variantEntry.lots, (lots, file) => {
+      if (includedFiles.includes(file)) {
+        forEach(lots, ({ props, textures, ...data }, id) => {
+          variantData.lots ??= {}
+          variantData.lots[file] ??= {}
+          variantData.lots[file][id] = {
+            ...data,
+            ...variantData.lots[file][id],
+          }
+        })
       }
+    })
+  }
 
-      existingProp.family ??= prop?.family
-      existingProp.images ??= prop?.images
-      existingProp.name ??= prop?.name
-    }
+  if (variantEntry.propFamilies) {
+    forEach(variantEntry.propFamilies, (families, file) => {
+      if (includedFiles.includes(file)) {
+        forEach(families, (data, id) => {
+          variantData.propFamilies ??= {}
+          variantData.propFamilies[file] ??= {}
+          variantData.propFamilies[file][id] = {
+            ...data,
+            ...variantData.propFamilies[file][id],
+          }
+        })
+      }
+    })
+  }
+
+  if (variantEntry.props) {
+    forEach(variantEntry.props, (props, file) => {
+      if (includedFiles.includes(file)) {
+        forEach(props, ({ model, ...data }, id) => {
+          variantData.props ??= {}
+          variantData.props[file] ??= {}
+          variantData.props[file][id] = {
+            ...data,
+            ...variantData.props[file][id],
+          }
+        })
+      }
+    })
   }
 
   return packageData

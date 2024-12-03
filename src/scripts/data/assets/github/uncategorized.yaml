@@ -15,6 +15,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-auto-save/releases/download/v{version}/SC4AutoSave.zip
     file: SC4AutoSave.zip
@@ -26,7 +27,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-auto-save
     sha256: 2873ca87bdd93b3f470b3f0e98ca52ec9180238550ffb791bf454dbd21bfeb55
@@ -40,6 +41,8 @@ assets:
     categories:
       - mods
       - dll
+    contents:
+      BulldozeExtensions.dat: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-bulldoze-extensions/releases/download/v{version}/SC4BulldozeExtensions.zip
     file: SC4BulldozeExtensions.zip
@@ -51,7 +54,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-26T16:35:44.974Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     sha256: 24794bb8ceb6634e1b43e496b8aef03c4f6edfbe58a43d74b22c1884031697a0
     size: 131867
@@ -64,6 +67,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-city-date-sync/releases/download/v{version}/SC4CityDateSync.zip
     file: SC4CityDateSync.zip
@@ -75,7 +79,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-city-date-sync
     sha256: abfb3a0f44c0dd99f10d8e27c327c2b47757f11e03eca8ec6adabbe098834097
@@ -89,6 +93,8 @@ assets:
     categories:
       - mods
       - dll
+    contents:
+      CityLotteryOrdinanceText_English.dat: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-city-lottery-ordinance/releases/download/v{version}/SC4CityLotteryOrdinance.zip
     file: SC4CityLotteryOrdinance.zip
@@ -101,7 +107,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2023-12-21T04:43:57.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-city-lottery-ordinance
     sha256: 34875d97108cf4ce5d2c43c7966e51b3d5620feea6f3bbbbbd55577d201ab370
@@ -115,6 +121,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-cpu-options/releases/download/v{version}/SC4CPUOptions.zip
     file: SC4CPUOptions.zip
@@ -126,7 +133,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-cpu-options
     sha256: 1e649bfac44ba0d1d9c4b2105ee992614646180f966e5ec5094197e74b3db2a1
@@ -140,6 +147,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-custom-budget-departments/releases/download/v{version}/SC4CustomBudgetDepartments.zip
     file: SC4CustomBudgetDepartments.zip
@@ -150,7 +158,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-10-04T22:22:34.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-custom-budget-departments
     sha256: 6107dcb38b9def74dc293aa7fcdc86cf32f48873e84dec0931d9a03f98a93215
@@ -164,6 +172,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-dbpf-loading/releases/download/v{version}/SC4DBPFLoading.zip
     file: SC4DBPFLoading.zip
@@ -174,7 +183,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-dbpf-loading
     sha256: 95d1ff963c3a56daff58f6ba90a6744436603c0f2ffdf21cb99b36534bc9b62b
@@ -196,6 +205,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-demolition-animation/releases/download/v{version}/SC4DisableDemolitionAnimation.zip
     file: SC4DisableDemolitionAnimation.zip
@@ -206,7 +216,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-disable-demolition-animation
     sha256: a39f1b28ca37dd8c126755eab25c924cd64b2d7bae9e31d4e2a8a3927b80e7bc
@@ -220,6 +230,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke/releases/download/v{version}/SC4DisableLotPlopSmoke.zip
     file: SC4DisableLotPlopSmoke.zip
@@ -230,7 +241,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke
     sha256: a4c4a3a447a15de6788024f38bac013ba0e8253df0f451fd66ade7cb68dc344e
@@ -244,6 +255,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-network-construction-sounds/releases/download/v{version}/SC4DisableNetworkConstructionSounds.zip
     file: SC4DisableNetworkConstructionSounds.zip
@@ -254,7 +266,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-disable-network-construction-sounds
     sha256: 0ec5e559afbfc24effa8f1c76f2521034a284d7a776e3fa1e6fd1a29d3cbd19d
@@ -268,6 +280,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-graphics-options/releases/download/v{version}/SC4GraphicsOptions.zip
     file: SC4GraphicsOptions.zip
@@ -279,7 +292,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-graphics-options
     sha256: a75269f9975cc9674abf4c68cb52696eef40c1843b10bbe3a9ea3a48bc04cd8a
@@ -293,6 +306,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-growify/releases/download/v{version}/SC4Growify.zip
     file: SC4Growify.zip
@@ -303,7 +317,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-growify
     sha256: 02dae5d6cacfb8091b9fe5db4eb4948519d01fde48a08d59f53a52c7ed062ad3
@@ -317,6 +331,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-humane-society-ordinance/releases/download/v{version}/SC4HumaneSocietyOrdinance.zip
     file: SC4HumaneSocietyOrdinance.zip
@@ -327,7 +342,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-humane-society-ordinance
     sha256: d2931e1b8135183a9bb2a1f683fda3384e8484e91873b45a0b8bd18511499a95
@@ -341,6 +356,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade/releases/download/v{version}/SC4LegalizeGamblingUpgrade.zip
     file: SC4LegalizeGamblingUpgrade.zip
@@ -352,7 +368,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade
     sha256: 0d39a73488079de8c80626ba25aa580da9205ec9879df291112db65566effb2a
@@ -366,6 +382,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-building-styles/releases/download/v{version}/SC4MoreBuildingStyles.zip
     file: SC4MoreBuildingStyles.zip
@@ -378,7 +395,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-15T01:04:35.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-more-building-styles
     sha256: 88c8bfa6adf55a765b100b06ef557c070d6e6e498ededf496965873a28b98acd
@@ -390,99 +407,163 @@ assets:
     authors:
       - '0xC0000054'
     buildings:
-      - bulldoze: 100
-        category: rewards
-        cost: 15000
-        file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-        flamability: 45
-        garbage: 23
-        garbageRadius: 2
-        id: 0dd41d65
-        jobs:
-          $: 170
-          $$: 105
-          $$$: 45
-        landmark: 20
-        landmarkRadius: 5
-        maintenance: 250
-        menu: Rewards
-        model: 5ad0e817-6dd414f2-00030000
-        name: CensusRepository
-        pollution: 3
-        pollutionRadius: 3
-        power: 125
-        rating: 8
-        ratingRadius: 256
-        relief:
-          co$$: 100000
-          co$$$: 100000
-          r$: 2500
-          r$$: 2500
-          r$$$: 2500
-        submenu: Landmarks/Government
-        water: 150
-        waterPollution: 2
-        waterPollutionRadius: 2
+      Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat:
+        0dd41d65:
+          bulldoze: 100
+          category: rewards
+          cost: 15000
+          flamability: 45
+          garbage: 23
+          garbageRadius: 2
+          jobs:
+            $: 170
+            $$: 105
+            $$$: 45
+          landmark: 20
+          landmarkRadius: 5
+          maintenance: 250
+          menu: Rewards
+          model: 5ad0e817-6dd414f2-00030000
+          name: CensusRepository
+          pollution: 3
+          pollutionRadius: 3
+          power: 125
+          rating: 8
+          ratingRadius: 256
+          relief:
+            co$$: 100000
+            co$$$: 100000
+            r$: 2500
+            r$$: 2500
+            r$$$: 2500
+          submenu: Landmarks/Government
+          water: 150
+          waterPollution: 2
+          waterPollutionRadius: 2
     categories:
       - mods
       - dll
       - rewards
+    contents:
+      Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat:
+        buildings:
+          0dd41d65:
+            bulldoze: 100
+            category: rewards
+            cost: 15000
+            flamability: 45
+            garbage: 23
+            garbageRadius: 2
+            jobs:
+              $: 170
+              $$: 105
+              $$$: 45
+            landmark: 20
+            landmarkRadius: 5
+            maintenance: 250
+            menu: Rewards
+            model: 5ad0e817-6dd414f2-00030000
+            name: CensusRepository
+            pollution: 3
+            pollutionRadius: 3
+            power: 125
+            rating: 8
+            ratingRadius: 256
+            relief:
+              co$$: 100000
+              co$$$: 100000
+              r$: 2500
+              r$$: 2500
+              r$$$: 2500
+            submenu: Landmarks/Government
+            water: 150
+            waterPollution: 2
+            waterPollutionRadius: 2
+        lots:
+          0dd41d65:
+            building: 0dd41d65
+            name: CensusRepository
+            props:
+              - 2aa40000
+              - 2aa70000
+              - 2aa90000
+              - 2ae80000
+              - 2aaa0000
+              - 2aab0000
+              - 2aac0000
+              - 2aad0000
+              - 2aae0000
+              - 2a590000
+              - 8956a699
+            size: 1x1
+            textures:
+              - '258e0000'
+              - 258d0000
+        models:
+          - 5ad0e817-5465811a-00030000
+          - 5ad0e817-d17c864e-00030000
+        props:
+          16888cf8:
+            model: 5ad0e817-5465811a-00030000
+            name: Census Repository Facility
+          1689d23a:
+            name: RJ - Census Repository Phone Booth
+          1689d35d:
+            name: RJ - Census Repository Phone Booth Rear
+          8956a699:
+            name: Gnome_CensusRepository
+          b6888d35:
+            model: 5ad0e817-d17c864e-00030000
+            name: Census Repository Vault
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-demand-info/releases/download/v{version}/SC4MoreDemandInfo.zip
     file: SC4MoreDemandInfo.zip
     files:
-      - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-      - Dll/LICENSE.txt
-      - Dll/README.txt
-      - Dll/SC4MoreDemandInfo.dll
-      - Dll/Third Party Notices.txt
+      - Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat
+      - Dll\LICENSE.txt
+      - Dll\README.txt
+      - Dll\SC4MoreDemandInfo.dll
+      - Dll\Third Party Notices.txt
       - Readme.txt
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      - building: 0dd41d65
-        file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-        id: 0dd41d65
-        name: CensusRepository
-        props:
-          - 2aa40000
-          - 2aa70000
-          - 2aa90000
-          - 2ae80000
-          - 2aaa0000
-          - 2aab0000
-          - 2aac0000
-          - 2aad0000
-          - 2aae0000
-          - 2a590000
-          - 8956a699
-        size: 1x1
-        textures:
-          - '258e0000'
-          - 258d0000
+      Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat:
+        0dd41d65:
+          building: 0dd41d65
+          name: CensusRepository
+          props:
+            - 2aa40000
+            - 2aa70000
+            - 2aa90000
+            - 2ae80000
+            - 2aaa0000
+            - 2aab0000
+            - 2aac0000
+            - 2aad0000
+            - 2aae0000
+            - 2a590000
+            - 8956a699
+          size: 1x1
+          textures:
+            - '258e0000'
+            - 258d0000
     meta:
-      timestamp: 2024-12-02T08:30:17.389Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
-    models:
-      - 5ad0e817-5465811a-00030000
-      - 5ad0e817-d17c864e-00030000
     props:
-      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-        id: 16888cf8
-        model: 5ad0e817-5465811a-00030000
-        name: Census Repository Facility
-      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-        id: b6888d35
-        model: 5ad0e817-d17c864e-00030000
-        name: Census Repository Vault
-      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-        id: 1689d23a
-        name: RJ - Census Repository Phone Booth
-      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-        id: 1689d35d
-        name: RJ - Census Repository Phone Booth Rear
-      - file: Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-        id: 8956a699
-        name: Gnome_CensusRepository
+      Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat:
+        16888cf8:
+          model: 5ad0e817-5465811a-00030000
+          name: Census Repository Facility
+        1689d23a:
+          name: RJ - Census Repository Phone Booth
+        1689d35d:
+          name: RJ - Census Repository Phone Booth Rear
+        8956a699:
+          name: Gnome_CensusRepository
+        b6888d35:
+          model: 5ad0e817-d17c864e-00030000
+          name: Census Repository Vault
     repository: https://github.com/0xC0000054/sc4-more-demand-info
     sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
     size: 1699084
@@ -495,6 +576,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-no-kick-out/releases/download/v{version}/SC4NoKickOut.zip
     file: SC4NoKickOut.zip
@@ -505,7 +587,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-no-kick-out
     sha256: cbe23b9c4d79e3b7496653558c580fe0e50fa622b90ab6ff5f417e4e10040034
@@ -519,6 +601,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-query-ui-hooks/releases/download/v{version}/SC4QueryUIHooks.zip
     file: SC4QueryUIHooks.zip
@@ -530,7 +613,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-query-ui-hooks
     sha256: 395294454ad4040cf3756051aa19b0369794c4baee2dca972466c946cad24b48
@@ -544,6 +627,8 @@ assets:
     categories:
       - mods
       - dll
+    contents:
+      RegionCensusUI.dat: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-region-census/releases/download/v{version}/SC4RegionCensus.zip
     file: SC4RegionCensus.zip
@@ -555,7 +640,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-region-census
     sha256: f3a6e06523241b9f6529c9dfb1c888cfdbbd13e582c5af67de76e8e436472e7a
@@ -569,6 +654,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-remove-phantom-budget-items/releases/download/v{version}/SC4RemovePhantomBudgetItems.zip
     file: SC4RemovePhantomBudgetItems.zip
@@ -579,7 +665,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-09-07T05:11:45.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-remove-phantom-budget-items
     sha256: 7e365830ee40403e71b9a07b1fc5fd310e9791546895ed499d994661ccc9616c
@@ -593,6 +679,7 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-resource-loading-hooks/releases/download/v{version}/SC4ResourceLoadingHooks.zip
     file: SC4ResourceLoadingHooks.zip
@@ -603,7 +690,7 @@ assets:
       - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-resource-loading-hooks
     sha256: 6ec120c44afe263087dd7fd80591ea5e7368c6ab335b8f22d379974b21799203
@@ -642,17 +729,18 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/memo33/sc4-3d-camera-dll/releases/download/{version}/3d-camera-dll-{version}.zip
     file: 3d-camera-dll-1.0.0.zip
     files:
       - LICENSE.txt
-      - memo.3dcamera.dll
       - README.md
       - Third Party Notices.txt
+      - memo.3dcamera.dll
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/memo33/sc4-3d-camera-dll
     sha256: f23e0531c4186c9374e8971f0373541a754d8130579886a35c3f46404438e333
@@ -666,17 +754,18 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/memo33/sc4-thumbnail-fix-dll/releases/download/{version}/thumbnail-fix-dll-{version}.zip
     file: thumbnail-fix-dll-1.0.0.zip
     files:
       - LICENSE.txt
-      - memo.thumbnail-fix.dll
       - README.md
       - Third Party Notices.txt
+      - memo.thumbnail-fix.dll
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/memo33/sc4-thumbnail-fix-dll
     sha256: 0c9958c005b90ad2f6660727f8b8e3751577cee1b1e4d22f48b303b7222be05c
@@ -688,90 +777,161 @@ assets:
     authors:
       - memo33
     buildings:
-      - bulldoze: 20
-        cost: 170
-        file: submenus/park/plaza-submenu.dat
-        id: ea8756cf
-        maintenance: 20
-        menu: Parks
-        model: 5ad0e817-badb57f1-0e110000
-        name: PZ1x1_ParkFlowerGarden2_2a635acf
-        pollution: -7
-        pollutionRadius: 4
-        relief:
-          r$: 3000
-          r$$: 3000
-          r$$$: 3000
-        submenu: Parks/Plazas
-        water: 10
-        waterPollution: 2
-        waterPollutionRadius: 2
+      submenus\park\plaza-submenu.dat:
+        ea8756cf:
+          bulldoze: 20
+          cost: 170
+          maintenance: 20
+          menu: Parks
+          model: 5ad0e817-badb57f1-0e110000
+          name: PZ1x1_ParkFlowerGarden2_2a635acf
+          pollution: -7
+          pollutionRadius: 4
+          relief:
+            r$: 3000
+            r$$: 3000
+            r$$$: 3000
+          submenu: Parks/Plazas
+          water: 10
+          waterPollution: 2
+          waterPollutionRadius: 2
     categories:
       - mods
       - dll
+    contents:
+      submenus\commercial\ploppable-CO$$$-submenu.dat: {}
+      submenus\commercial\ploppable-CO$$-submenu.dat: {}
+      submenus\commercial\ploppable-CS$$$-submenu.dat: {}
+      submenus\commercial\ploppable-CS$$-submenu.dat: {}
+      submenus\commercial\ploppable-CS$-submenu.dat: {}
+      submenus\education\college-submenu.dat: {}
+      submenus\education\elementary-school-submenu.dat: {}
+      submenus\education\high-school-submenu.dat: {}
+      submenus\education\library-museum-submenu.dat: {}
+      submenus\health\health-large-submenu.dat: {}
+      submenus\health\health-medium-submenu.dat: {}
+      submenus\health\health-small-submenu.dat: {}
+      submenus\highway\signage-submenu.dat: {}
+      submenus\industrial\ploppable-Ia-submenu.dat: {}
+      submenus\industrial\ploppable-Id-submenu.dat: {}
+      submenus\industrial\ploppable-Iht-submenu.dat: {}
+      submenus\industrial\ploppable-Im-submenu.dat: {}
+      submenus\landmark\entertainment-submenu.dat: {}
+      submenus\landmark\government-submenu.dat: {}
+      submenus\landmark\religion-submenu.dat: {}
+      submenus\misc-transit\ElRail-submenu.dat: {}
+      submenus\misc-transit\GLR-submenu.dat: {}
+      submenus\misc-transit\bus-submenu.dat: {}
+      submenus\misc-transit\multimodal-stations-submenu.dat: {}
+      submenus\misc-transit\parking-submenu.dat: {}
+      submenus\misc-transit\subway-submenu.dat: {}
+      submenus\park\embankment-submenu.dat: {}
+      submenus\park\fillers-submenu.dat: {}
+      submenus\park\green-spaces-submenu.dat: {}
+      submenus\park\modular-parks-submenu.dat: {}
+      submenus\park\plaza-submenu.dat:
+        buildings:
+          ea8756cf:
+            bulldoze: 20
+            cost: 170
+            maintenance: 20
+            menu: Parks
+            model: 5ad0e817-badb57f1-0e110000
+            name: PZ1x1_ParkFlowerGarden2_2a635acf
+            pollution: -7
+            pollutionRadius: 4
+            relief:
+              r$: 3000
+              r$$: 3000
+              r$$$: 3000
+            submenu: Parks/Plazas
+            water: 10
+            waterPollution: 2
+            waterPollutionRadius: 2
+      submenus\park\sports-submenu.dat: {}
+      submenus\police\military-submenu.dat: {}
+      submenus\police\police-deluxe-submenu.dat: {}
+      submenus\police\police-large-submenu.dat: {}
+      submenus\police\police-small-submenu.dat: {}
+      submenus\power\clean-energy-submenu.dat: {}
+      submenus\power\dirty-energy-submenu.dat: {}
+      submenus\power\misc-power-submenu.dat: {}
+      submenus\rail\freight-rail-submenu.dat: {}
+      submenus\rail\hybrid-railway-submenu.dat: {}
+      submenus\rail\monorail-submenu.dat: {}
+      submenus\rail\passenger-rail-submenu.dat: {}
+      submenus\rail\yards-submenu.dat: {}
+      submenus\residential\ploppable-R$$$-submenu.dat: {}
+      submenus\residential\ploppable-R$$-submenu.dat: {}
+      submenus\residential\ploppable-R$-submenu.dat: {}
+      submenus\submenu-essentials.dat: {}
+      submenus\water-transit\canal-submenu.dat: {}
+      submenus\water-transit\ports-ferries-submenu.dat: {}
+      submenus\water-transit\seawall-submenu.dat: {}
+      submenus\water-transit\waterfront-submenu.dat: {}
     dependencies: []
     download: https://github.com/memo33/submenus-dll/releases/download/{version}/submenus-dll-{version}.zip
     file: submenus-dll-1.1.4.zip
     files:
-      - submenus/commercial/ploppable-CO$$$-submenu.dat
-      - submenus/commercial/ploppable-CO$$-submenu.dat
-      - submenus/commercial/ploppable-CS$$$-submenu.dat
-      - submenus/commercial/ploppable-CS$$-submenu.dat
-      - submenus/commercial/ploppable-CS$-submenu.dat
-      - submenus/education/college-submenu.dat
-      - submenus/education/elementary-school-submenu.dat
-      - submenus/education/high-school-submenu.dat
-      - submenus/education/library-museum-submenu.dat
-      - submenus/health/health-large-submenu.dat
-      - submenus/health/health-medium-submenu.dat
-      - submenus/health/health-small-submenu.dat
-      - submenus/highway/signage-submenu.dat
-      - submenus/industrial/ploppable-Ia-submenu.dat
-      - submenus/industrial/ploppable-Id-submenu.dat
-      - submenus/industrial/ploppable-Iht-submenu.dat
-      - submenus/industrial/ploppable-Im-submenu.dat
-      - submenus/landmark/entertainment-submenu.dat
-      - submenus/landmark/government-submenu.dat
-      - submenus/landmark/religion-submenu.dat
-      - submenus/misc-transit/bus-submenu.dat
-      - submenus/misc-transit/ElRail-submenu.dat
-      - submenus/misc-transit/GLR-submenu.dat
-      - submenus/misc-transit/multimodal-stations-submenu.dat
-      - submenus/misc-transit/parking-submenu.dat
-      - submenus/misc-transit/subway-submenu.dat
-      - submenus/park/embankment-submenu.dat
-      - submenus/park/fillers-submenu.dat
-      - submenus/park/green-spaces-submenu.dat
-      - submenus/park/modular-parks-submenu.dat
-      - submenus/park/plaza-submenu.dat
-      - submenus/park/sports-submenu.dat
-      - submenus/police/military-submenu.dat
-      - submenus/police/police-deluxe-submenu.dat
-      - submenus/police/police-large-submenu.dat
-      - submenus/police/police-small-submenu.dat
-      - submenus/rail/freight-rail-submenu.dat
-      - submenus/rail/hybrid-railway-submenu.dat
-      - submenus/rail/monorail-submenu.dat
-      - submenus/rail/passenger-rail-submenu.dat
-      - submenus/rail/yards-submenu.dat
-      - submenus/power/clean-energy-submenu.dat
-      - submenus/power/dirty-energy-submenu.dat
-      - submenus/power/misc-power-submenu.dat
-      - submenus/residential/ploppable-R$$$-submenu.dat
-      - submenus/residential/ploppable-R$$-submenu.dat
-      - submenus/residential/ploppable-R$-submenu.dat
-      - submenus/water-transit/canal-submenu.dat
-      - submenus/water-transit/ports-ferries-submenu.dat
-      - submenus/water-transit/seawall-submenu.dat
-      - submenus/water-transit/waterfront-submenu.dat
-      - submenus/submenu-essentials.dat
       - LICENSE.txt
-      - memo.submenus.dll
       - README.md
       - Third Party Notices.txt
+      - memo.submenus.dll
+      - submenus\commercial\ploppable-CO$$$-submenu.dat
+      - submenus\commercial\ploppable-CO$$-submenu.dat
+      - submenus\commercial\ploppable-CS$$$-submenu.dat
+      - submenus\commercial\ploppable-CS$$-submenu.dat
+      - submenus\commercial\ploppable-CS$-submenu.dat
+      - submenus\education\college-submenu.dat
+      - submenus\education\elementary-school-submenu.dat
+      - submenus\education\high-school-submenu.dat
+      - submenus\education\library-museum-submenu.dat
+      - submenus\health\health-large-submenu.dat
+      - submenus\health\health-medium-submenu.dat
+      - submenus\health\health-small-submenu.dat
+      - submenus\highway\signage-submenu.dat
+      - submenus\industrial\ploppable-Ia-submenu.dat
+      - submenus\industrial\ploppable-Id-submenu.dat
+      - submenus\industrial\ploppable-Iht-submenu.dat
+      - submenus\industrial\ploppable-Im-submenu.dat
+      - submenus\landmark\entertainment-submenu.dat
+      - submenus\landmark\government-submenu.dat
+      - submenus\landmark\religion-submenu.dat
+      - submenus\misc-transit\ElRail-submenu.dat
+      - submenus\misc-transit\GLR-submenu.dat
+      - submenus\misc-transit\bus-submenu.dat
+      - submenus\misc-transit\multimodal-stations-submenu.dat
+      - submenus\misc-transit\parking-submenu.dat
+      - submenus\misc-transit\subway-submenu.dat
+      - submenus\park\embankment-submenu.dat
+      - submenus\park\fillers-submenu.dat
+      - submenus\park\green-spaces-submenu.dat
+      - submenus\park\modular-parks-submenu.dat
+      - submenus\park\plaza-submenu.dat
+      - submenus\park\sports-submenu.dat
+      - submenus\police\military-submenu.dat
+      - submenus\police\police-deluxe-submenu.dat
+      - submenus\police\police-large-submenu.dat
+      - submenus\police\police-small-submenu.dat
+      - submenus\power\clean-energy-submenu.dat
+      - submenus\power\dirty-energy-submenu.dat
+      - submenus\power\misc-power-submenu.dat
+      - submenus\rail\freight-rail-submenu.dat
+      - submenus\rail\hybrid-railway-submenu.dat
+      - submenus\rail\monorail-submenu.dat
+      - submenus\rail\passenger-rail-submenu.dat
+      - submenus\rail\yards-submenu.dat
+      - submenus\residential\ploppable-R$$$-submenu.dat
+      - submenus\residential\ploppable-R$$-submenu.dat
+      - submenus\residential\ploppable-R$-submenu.dat
+      - submenus\submenu-essentials.dat
+      - submenus\water-transit\canal-submenu.dat
+      - submenus\water-transit\ports-ferries-submenu.dat
+      - submenus\water-transit\seawall-submenu.dat
+      - submenus\water-transit\waterfront-submenu.dat
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/memo33/submenus-dll
     sha256: f7ce49f941b04f6438678ea9e6a1649a010ab96f5feeed9f9b8d495a8a93a464
@@ -785,17 +945,18 @@ assets:
     categories:
       - mods
       - dll
+    contents: {}
     dependencies: []
     download: https://github.com/memo33/transparent-texture-fix-dll/releases/download/{version}/transparent-texture-fix-dll-{version}.zip
     file: transparent-texture-fix-dll-1.0.0.zip
     files:
       - LICENSE.txt
-      - memo.transparent-texture-fix.dll
       - README.md
       - Third Party Notices.txt
+      - memo.transparent-texture-fix.dll
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     repository: https://github.com/memo33/transparent-texture-fix-dll
     sha256: f24275e69667e5afbfb3795d78d59ee4b45fce06ec72b2d09e6f3c4b2c852979

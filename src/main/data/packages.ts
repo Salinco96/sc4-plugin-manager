@@ -26,7 +26,7 @@ import type { AuthorID } from "@common/authors"
 import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
 import { type LotData, type LotInfo, ZoneDensity } from "@common/lots"
 import { OptionType } from "@common/options"
-import { LOTS_OPTION_ID, MMPS_OPTION_ID, type PackageID, getOwnerId, isNew } from "@common/packages"
+import { MMPS_OPTION_ID, type PackageID, getOwnerId, isNew } from "@common/packages"
 import { parseMenu, parseMenus, writeMenu, writeMenus } from "@common/submenus"
 import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
@@ -44,7 +44,7 @@ import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
 import type { BuildingData, BuildingInfo } from "@common/buildings"
-import type { PropData, PropInfo } from "@common/props"
+import type { FamilyData, FamilyInfo, PropData, PropInfo } from "@common/props"
 import { loadAssetInfo } from "./assets"
 import { loadOptionInfo } from "./options"
 
@@ -393,14 +393,35 @@ function loadVariantInfo(
     variantInfo.assets = assets
   }
 
-  const buildings = unionBy(
-    variantData.buildings ?? [],
-    packageData.buildings ?? [],
-    building => `${building.id}#${building.file}`,
+  const buildingFamilies = mapValues(
+    {
+      ...packageData.buildingFamilies,
+      ...mapValues(variantData.buildingFamilies ?? {}, (families, file) => ({
+        ...packageData.buildingFamilies?.[file],
+        ...families,
+      })),
+    },
+    (families, file) => mapValues(families, (data, id) => loadFamilyInfo(file, id, data)),
   )
 
-  if (buildings.length) {
-    variantInfo.buildings = buildings.map(data => loadBuildingInfo(data, categories))
+  if (!isEmpty(buildingFamilies)) {
+    variantInfo.buildingFamilies = buildingFamilies
+  }
+
+  const buildings = mapValues(
+    {
+      ...packageData.buildings,
+      ...mapValues(variantData.buildings ?? {}, (buildings, file) => ({
+        ...packageData.buildings?.[file],
+        ...buildings,
+      })),
+    },
+    (buildings, file) =>
+      mapValues(buildings, (data, id) => loadBuildingInfo(file, id, data, categories)),
+  )
+
+  if (!isEmpty(buildings)) {
+    variantInfo.buildings = buildings
   }
 
   const dependencies = unionBy(
@@ -449,14 +470,19 @@ function loadVariantInfo(
     variantInfo.logs = logs
   }
 
-  const lots = unionBy(
-    variantData.lots ?? [],
-    packageData.lots ?? [],
-    lot => `${lot.id}#${lot.file}`,
+  const lots = mapValues(
+    {
+      ...packageData.lots,
+      ...mapValues(variantData.lots ?? {}, (lots, file) => ({
+        ...packageData.lots?.[file],
+        ...lots,
+      })),
+    },
+    (lots, file) => mapValues(lots, (data, id) => loadLotInfo(file, id, data)),
   )
 
-  if (lots.length) {
-    variantInfo.lots = lots.map(loadLotInfo)
+  if (!isEmpty(lots)) {
+    variantInfo.lots = lots
   }
 
   const mmps = unionBy(variantData.mmps ?? [], packageData.mmps ?? [], mmp => mmp.id)
@@ -483,14 +509,34 @@ function loadVariantInfo(
     variantInfo.options = options
   }
 
-  const props = unionBy(
-    variantData.props ?? [],
-    packageData.props ?? [],
-    prop => `${prop.id}#${prop.file}`,
+  const propFamilies = mapValues(
+    {
+      ...packageData.propFamilies,
+      ...mapValues(variantData.propFamilies ?? {}, (families, file) => ({
+        ...packageData.propFamilies?.[file],
+        ...families,
+      })),
+    },
+    (families, file) => mapValues(families, (data, id) => loadFamilyInfo(file, id, data)),
   )
 
-  if (props.length) {
-    variantInfo.props = props.map(loadPropInfo)
+  if (!isEmpty(propFamilies)) {
+    variantInfo.propFamilies = propFamilies
+  }
+
+  const props = mapValues(
+    {
+      ...packageData.props,
+      ...mapValues(variantData.props ?? {}, (props, file) => ({
+        ...packageData.props?.[file],
+        ...props,
+      })),
+    },
+    (props, file) => mapValues(props, (data, id) => loadPropInfo(file, id, data)),
+  )
+
+  if (!isEmpty(props)) {
+    variantInfo.props = props
   }
 
   const readme = variantData.readme ?? packageData.readme
@@ -551,27 +597,6 @@ function loadVariantInfo(
     variantInfo.warnings = warnings
   }
 
-  // TODO: Do not write this into options explicitly!
-
-  if (variantInfo.lots && !variantInfo.options?.some(option => option.id === LOTS_OPTION_ID)) {
-    variantInfo.options ??= []
-
-    variantInfo.options.unshift({
-      choices: variantInfo.lots.map(lot => ({
-        condition: lot.requirements,
-        // description: lot.description,
-        label: lot.name ?? lot.id,
-        value: lot.id,
-      })),
-      default: variantInfo.lots.filter(lot => lot.default !== false).map(lot => lot.id),
-      display: "checkbox",
-      id: LOTS_OPTION_ID,
-      multi: true,
-      section: "Lots", // TODO: i18n?
-      type: OptionType.STRING,
-    })
-  }
-
   if (variantInfo.mmps && !variantInfo.options?.some(option => option.id === MMPS_OPTION_ID)) {
     variantInfo.options ??= []
 
@@ -614,9 +639,11 @@ function mergeLocalPackageInfo(
         // the remote version separately, as a potential update instead.
         if (remoteVariantInfo.version === localVariantInfo.version) {
           // Keep local installation paths calculated during install
+          remoteVariantInfo.buildingFamilies = localVariantInfo.buildingFamilies
           remoteVariantInfo.buildings = localVariantInfo.buildings
-          remoteVariantInfo.lots = localVariantInfo.lots
           remoteVariantInfo.files = localVariantInfo.files
+          remoteVariantInfo.lots = localVariantInfo.lots
+          remoteVariantInfo.propFamilies = localVariantInfo.propFamilies
           remoteVariantInfo.props = localVariantInfo.props
           remoteVariantInfo.readme ??= localVariantInfo.readme
           Object.assign(localVariantInfo, remoteVariantInfo)
@@ -643,31 +670,44 @@ function mergeLocalPackageInfo(
   return localPackageInfo
 }
 
-export function loadBuildingInfo(data: BuildingData, categories: Categories): BuildingInfo {
+export function loadBuildingInfo(
+  file: string,
+  id: string,
+  data: BuildingData,
+  categories: Categories,
+): BuildingInfo {
   const { category, menu, model, submenu, ...others } = data
   return {
     categories: category ? parseCategory(category, categories) : undefined,
+    file,
+    id,
     menu: menu ? parseMenu(menu) : undefined,
     submenus: submenu ? parseMenus(submenu) : undefined,
     ...others,
   }
 }
 
-export function loadLotInfo(data: LotData): LotInfo {
+export function loadFamilyInfo(file: string, id: string, data: FamilyData): FamilyInfo {
+  return { file, id, ...data }
+}
+
+export function loadLotInfo(file: string, id: string, data: LotData): LotInfo {
   const { density, props, textures, ...others } = data
   return {
     density: density ? parseEnumList(density, ZoneDensity, true) : undefined,
+    file,
+    id,
     ...others,
   }
 }
 
-export function loadPropInfo(data: PropData): PropInfo {
+export function loadPropInfo(file: string, id: string, data: PropData): PropInfo {
   const { model, ...others } = data
-  return others
+  return { file, id, ...others }
 }
 
 export function writeBuildingInfo(building: BuildingInfo): BuildingData {
-  const { categories, menu, submenus, ...others } = building
+  const { categories, file, id, menu, submenus, ...others } = building
   return {
     category: categories?.join(","),
     menu: menu ? writeMenu(menu) : undefined,
@@ -676,8 +716,13 @@ export function writeBuildingInfo(building: BuildingInfo): BuildingData {
   }
 }
 
+export function writeFamilyInfo(building: FamilyInfo): FamilyData {
+  const { file, id, ...others } = building
+  return others
+}
+
 export function writeLotInfo(lot: LotInfo): LotData {
-  const { density, ...others } = lot
+  const { density, file, id, ...others } = lot
   return {
     density: density?.length === 3 ? "all" : density?.join(","),
     ...others,
@@ -685,7 +730,8 @@ export function writeLotInfo(lot: LotInfo): LotData {
 }
 
 export function writePropInfo(prop: PropInfo): PropData {
-  return prop
+  const { file, id, ...others } = prop
+  return others
 }
 
 export function toPackageData(packageInfo: PackageInfo): PackageData {
@@ -696,7 +742,12 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
       filterValues(packageInfo.variants, variant => !!variant.installed),
       variant => ({
         authors: variant.authors,
-        buildings: variant.buildings?.map(writeBuildingInfo),
+        buildingFamilies: variant.buildingFamilies
+          ? mapValues(variant.buildingFamilies, families => mapValues(families, writeFamilyInfo))
+          : undefined,
+        buildings: variant.buildings
+          ? mapValues(variant.buildings, buildings => mapValues(buildings, writeBuildingInfo))
+          : undefined,
         category: variant.categories.join(","),
         credits: variant.credits,
         dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
@@ -707,7 +758,9 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         images: variant.images,
         lastModified: variant.lastModified ? new Date(variant.lastModified) : undefined,
         logs: variant.logs,
-        lots: variant.lots?.map(writeLotInfo),
+        lots: variant.lots
+          ? mapValues(variant.lots, lots => mapValues(lots, writeLotInfo))
+          : undefined,
         mmps: variant.mmps?.map(({ categories, ...mmp }) => ({
           category: categories?.join(","),
           ...mmp,
@@ -715,7 +768,12 @@ export function toPackageData(packageInfo: PackageInfo): PackageData {
         name: variant.name,
         optional: variant.optional,
         options: variant.options,
-        props: variant.props?.map(writePropInfo),
+        propFamilies: variant.propFamilies
+          ? mapValues(variant.propFamilies, families => mapValues(families, writeFamilyInfo))
+          : undefined,
+        props: variant.props
+          ? mapValues(variant.props, props => mapValues(props, writePropInfo))
+          : undefined,
         readme: variant.readme,
         release: variant.release ? new Date(variant.release) : undefined,
         repository: variant.repository,

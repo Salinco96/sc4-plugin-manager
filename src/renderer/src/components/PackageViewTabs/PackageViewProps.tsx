@@ -1,6 +1,6 @@
-import { Card, CardContent, Divider, List, ListItem, Typography } from "@mui/material"
+import { Card, CardContent, Divider, List, ListItem } from "@mui/material"
 import { groupBy, mapValues, sortBy, values } from "@salinco/nice-utils"
-import { Fragment, useMemo, useState } from "react"
+import { Fragment, useEffect, useMemo, useState } from "react"
 
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
@@ -8,17 +8,27 @@ import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { useCurrentVariant } from "@utils/packages"
 
+import { useStore } from "@utils/store"
+import { ExemplarRef } from "./PackageViewLots/ExemplarRef"
 import type { PackageViewTabInfoProps } from "./tabs"
 
 export default function PackageViewProps({ packageId }: PackageViewTabInfoProps): JSX.Element {
+  const elementId = useStore(store => store.packageView.elementId)
+
   const variantInfo = useCurrentVariant(packageId)
 
   const [openImages, setOpenImages] = useState<string>()
 
+  useEffect(() => {
+    if (elementId) {
+      document.getElementById(elementId)?.scrollIntoView({ block: "center", inline: "center" })
+    }
+  }, [elementId])
+
   const groupedProps = useMemo(() => {
     // Collect unique props by ID
     const props = mapValues(
-      groupBy(variantInfo.props ?? [], prop => prop.id),
+      groupBy(values(variantInfo.props ?? {}).flatMap(values), prop => prop.id),
       (props, instanceId) => {
         if (props.length === 1) {
           // TODO: Check filenames whether a single prop is currently enabled via options
@@ -51,11 +61,12 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
             <Card elevation={1} sx={{ display: "flex", width: "100%" }}>
               <CardContent sx={{ width: "100%" }}>
                 {familyId && (
-                  <FlexBox direction="column">
+                  <FlexBox direction="column" id={`propFamily-${familyId}`}>
                     <Text maxLines={1} variant="h6">
                       {familyName}
                     </Text>
-                    <Typography variant="body2">{familyId}</Typography>
+
+                    <ExemplarRef /* file={prop.file} */ id={familyId} />
                   </FlexBox>
                 )}
 
@@ -63,7 +74,7 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
                   return (
                     <Fragment key={prop.id}>
                       {(familyId || index > 0) && <Divider sx={{ marginY: 2 }} />}
-                      <FlexBox direction="column" gap={2}>
+                      <FlexBox id={`prop-${prop.id}`} direction="column" gap={2}>
                         <FlexBox alignItems="center">
                           {!!prop.images?.length && (
                             <>
@@ -84,18 +95,12 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
 
                           <FlexBox direction="column" width="100%">
                             <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
-                              {prop?.name && (
-                                <Text maxLines={1} variant="h6">
-                                  {prop.name}
-                                </Text>
-                              )}
+                              <Text maxLines={1} variant="h6">
+                                {prop.name ?? "Prop"}
+                              </Text>
                             </FlexBox>
 
-                            <FlexBox direction="row" gap={2}>
-                              {prop.file && <Typography variant="body2">{prop.file}</Typography>}
-                              {prop.file && <Typography variant="body2">|</Typography>}
-                              <Typography variant="body2">{prop.id}</Typography>
-                            </FlexBox>
+                            <ExemplarRef file={prop.file} id={prop.id} />
                           </FlexBox>
                         </FlexBox>
                       </FlexBox>

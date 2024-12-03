@@ -31,7 +31,6 @@ export interface IndexerBaseEntry {
   downloads?: number
   lastModified: Date
   name?: string
-  owner?: string
   thumbnail?: string
   url?: string
 }

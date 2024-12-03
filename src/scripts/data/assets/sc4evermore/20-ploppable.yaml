@@ -4,471 +4,862 @@ assets:
     authors:
       - Jeronij
     buildings:
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue Full_30c05b68.SC4Lot
-        id: 30c05b68
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Toyama3 Blue Full
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue_d0bf13e3.SC4Lot
-        id: d0bf13e3
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Toyama3 Blue
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green Full_30c052e8.SC4Lot
-        id: 30c052e8
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Toyama3 Green Full
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green_f0bf0dab.SC4Lot
-        id: f0bf0dab
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Toyama3 Green
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Red/JRJ Toyama3 red Full_d0c05314.SC4Lot
-        id: d0c05314
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Toyama3 Red Full
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Red/JRJ Toyama3 red_d0bf0a44.SC4Lot
-        id: d0bf0a44
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Toyama3 Red
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow Full_f0c045df.SC4Lot
-        id: f0c045df
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Toyama3 Yellow Full
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow_d0bf0413.SC4Lot
-        id: d0bf0413
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Toyama3 Yellow
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/Juan J. Sister/JRJ Sister_90be0bd3.SC4Lot
-        id: 90be0bd3
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Sister
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd01_90c1db9e.SC4Lot
-        id: 90c1db9e
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Ned Lloyd
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd02_90c204fd.SC4Lot
-        id: 90c204fd
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Ned Lloyd Full
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
-      - bulldoze: 5
-        category: landmarks
-        cost: 7
-        file: Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
-        id: 70b5cb20
-        maintenance: 1
-        menu: Landmarks
-        model: 5ad0e817-badb57f1-0e110000
-        name: JRJ Titanic
-        pollution: -5
-        pollutionRadius: 3
-        rating: 10
-        ratingRadius: 256
-        relief:
-          r$: 250
-          r$$: 250
-          r$$$: 250
-        water: 5
-        waterPollution: 1
-        waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue Full_30c05b68.SC4Lot:
+        30c05b68:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Toyama3 Blue Full
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue_d0bf13e3.SC4Lot:
+        d0bf13e3:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Toyama3 Blue
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green Full_30c052e8.SC4Lot:
+        30c052e8:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Toyama3 Green Full
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green_f0bf0dab.SC4Lot:
+        f0bf0dab:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Toyama3 Green
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red Full_d0c05314.SC4Lot:
+        d0c05314:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Toyama3 Red Full
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red_d0bf0a44.SC4Lot:
+        d0bf0a44:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Toyama3 Red
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow Full_f0c045df.SC4Lot:
+        f0c045df:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Toyama3 Yellow Full
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow_d0bf0413.SC4Lot:
+        d0bf0413:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Toyama3 Yellow
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\Juan J. Sister\JRJ Sister_90be0bd3.SC4Lot:
+        90be0bd3:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Sister
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd01_90c1db9e.SC4Lot:
+        90c1db9e:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Ned Lloyd
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd02_90c204fd.SC4Lot:
+        90c204fd:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Ned Lloyd Full
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Jeronij\JRJ Ships Compilation\RMS Titanic\JRJ Titanic_70b5cb20.SC4Lot:
+        70b5cb20:
+          bulldoze: 5
+          category: landmarks
+          cost: 7
+          maintenance: 1
+          menu: Landmarks
+          model: 5ad0e817-badb57f1-0e110000
+          name: JRJ Titanic
+          pollution: -5
+          pollutionRadius: 3
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 250
+            r$$: 250
+            r$$$: 250
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 1
     categories:
       - landmarks
     category: 20-ploppable
+    contents:
+      BSC\BSCProps\BSC MEGA Props - JRJ Vol01 v2.dat:
+        models:
+          - 5ad0e817-93510e0f-00030000
+          - 5ad0e817-d351314d-00030000
+          - 5ad0e817-b34d42e5-00030000
+          - 5ad0e817-534e4a5e-00030000
+          - 5ad0e817-d34f8ced-00030000
+          - 5ad0e817-534e44f3-00030000
+          - 5ad0e817-d34f8584-00030000
+          - 5ad0e817-734e40cf-00030000
+          - 5ad0e817-b34f7bbc-00030000
+          - 5ad0e817-f34e3aa0-00030000
+          - 5ad0e817-334f74fb-00030000
+          - 5ad0e817-5344f7dc-00030000
+        props:
+          15699a1a:
+            name: JRJ_V_Toyama_Ship_RedTimed
+          50be0b56:
+            model: 5ad0e817-b34d42e5-00030000
+            name: JRJ_V_JJ_Sister2
+          50c05283:
+            model: 5ad0e817-b34f7bbc-00030000
+            name: JRJ_V_Toyama_Ship_Red_Full
+          50c1db01:
+            model: 5ad0e817-93510e0f-00030000
+            name: JRJ_V_Nedlloyd01
+          70b5ca2f:
+            model: 5ad0e817-5344f7dc-00030000
+            name: JRJ_V_RMS_Titanic
+          70c0526a:
+            model: 5ad0e817-d34f8584-00030000
+            name: JRJ_V_Toyama_Ship_Green_full
+          70c05af8:
+            model: 5ad0e817-d34f8ced-00030000
+            name: JRJ_V_Toyama_Ship_Blue_full
+          70c20440:
+            model: 5ad0e817-d351314d-00030000
+            name: JRJ_V_Nedlloydfull02
+          756999f9:
+            name: JRJ_V_Toyama_Ship_BlueTimed
+          90bf037b:
+            model: 5ad0e817-f34e3aa0-00030000
+            name: JRJ_V_Toyama_Ship_Yellow
+          90bf09fe:
+            model: 5ad0e817-734e40cf-00030000
+            name: JRJ_V_Toyama_Ship_Red
+          90bf0d55:
+            model: 5ad0e817-534e44f3-00030000
+            name: JRJ_V_Toyama_Ship_Green
+          90bf1390:
+            model: 5ad0e817-534e4a5e-00030000
+            name: JRJ_V_Toyama_Ship_Blue
+          b5699a0b:
+            name: JRJ_V_Toyama_Ship_GreenTimed
+          d56999c1:
+            name: JRJ_V_Nedlloyd01Timed
+          d5699a2f:
+            name: JRJ_V_Toyama_Ship_YellowTimed
+          f0c044bc:
+            model: 5ad0e817-334f74fb-00030000
+            name: JRJ_V_Toyama_Ship_Yellow_full
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue Full_30c05b68.SC4Lot:
+        buildings:
+          30c05b68:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Toyama3 Blue Full
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          30c05b68:
+            building: 30c05b68
+            name: JRJ Toyama3 blue Full
+            props:
+              - 70c05af8
+            size: 10x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue_d0bf13e3.SC4Lot:
+        buildings:
+          d0bf13e3:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Toyama3 Blue
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          d0bf13e3:
+            building: d0bf13e3
+            name: JRJ Toyama3 blue
+            props:
+              - 90bf1390
+            size: 10x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green Full_30c052e8.SC4Lot:
+        buildings:
+          30c052e8:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Toyama3 Green Full
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          30c052e8:
+            building: 30c052e8
+            name: JRJ Toyama3 Green Full
+            props:
+              - 70c0526a
+            size: 10x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green_f0bf0dab.SC4Lot:
+        buildings:
+          f0bf0dab:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Toyama3 Green
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          f0bf0dab:
+            building: f0bf0dab
+            name: JRJ Toyama3 Green
+            props:
+              - 90bf0d55
+            size: 10x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red Full_d0c05314.SC4Lot:
+        buildings:
+          d0c05314:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Toyama3 Red Full
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          d0c05314:
+            building: d0c05314
+            name: JRJ Toyama3 red Full
+            props:
+              - 50c05283
+            size: 10x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red_d0bf0a44.SC4Lot:
+        buildings:
+          d0bf0a44:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Toyama3 Red
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          d0bf0a44:
+            building: d0bf0a44
+            name: JRJ Toyama3 red
+            props:
+              - 90bf09fe
+            size: 10x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow Full_f0c045df.SC4Lot:
+        buildings:
+          f0c045df:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Toyama3 Yellow Full
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          f0c045df:
+            building: f0c045df
+            name: JRJ Toyama3 yellow Full
+            props:
+              - f0c044bc
+            size: 10x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow_d0bf0413.SC4Lot:
+        buildings:
+          d0bf0413:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Toyama3 Yellow
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          d0bf0413:
+            building: d0bf0413
+            name: JRJ Toyama3 yellow
+            props:
+              - 90bf037b
+            size: 10x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\Juan J. Sister\JRJ Sister_90be0bd3.SC4Lot:
+        buildings:
+          90be0bd3:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Sister
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          90be0bd3:
+            building: 90be0bd3
+            name: JRJ Sister
+            props:
+              - 50be0b56
+            size: 3x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd01_90c1db9e.SC4Lot:
+        buildings:
+          90c1db9e:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Ned Lloyd
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          90c1db9e:
+            building: 90c1db9e
+            name: JRJ Nedlloyd01
+            props:
+              - 50c1db01
+            size: 5x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd02_90c204fd.SC4Lot:
+        buildings:
+          90c204fd:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Ned Lloyd Full
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          90c204fd:
+            building: 90c204fd
+            name: JRJ Nedlloyd02
+            props:
+              - 70c20440
+            size: 5x1
+            textures:
+              - 25f40000
+      Jeronij\JRJ Ships Compilation\RMS Titanic\JRJ Titanic_70b5cb20.SC4Lot:
+        buildings:
+          70b5cb20:
+            bulldoze: 5
+            category: landmarks
+            cost: 7
+            maintenance: 1
+            menu: Landmarks
+            model: 5ad0e817-badb57f1-0e110000
+            name: JRJ Titanic
+            pollution: -5
+            pollutionRadius: 3
+            rating: 10
+            ratingRadius: 256
+            relief:
+              r$: 250
+              r$$: 250
+              r$$$: 250
+            water: 5
+            waterPollution: 1
+            waterPollutionRadius: 1
+        lots:
+          70b5cb20:
+            building: 70b5cb20
+            name: JRJ Titanic
+            props:
+              - 70b5ca2f
+            size: 1x1
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><span style=\"font-family: Arial, Helvetica, sans-serif;\">These are all water plopable landmarks which include mostly two versions of cargo ships (loaded and unloaded) like the\_Ned Lloyd\_and the\_Maritime Toyoma\_cargo ships in different colour variation.\_</span><span style=\"font-family: Arial, Helvetica, sans-serif;\">Useful for industrial harbour areas.</span><span style=\"font-family: Arial, Helvetica, sans-serif;\">\_The compilation also contains the</span>\_Spanish\_passenger ferry ship\_Juan J. Sister\_and the\_Harland &amp; Wolff RMS Titanic.</p>\r\n<p>These models are based on real life ships, for the cargo ships there are two versions included, one with a full container cargo, and the other one empty. The ships are to scale. Be advised !!!</p>\r\n<p>Before installing the modpack read the readme contained in the <em><strong>~Documents</strong></em> folder and run the <strong>cleanitol</strong> file to have a clean installation of the mods.</p>\r\n<p><span style=\"text-decoration: underline;\">Installation</span>: Copy/extract the <strong>BSC </strong>and the <strong>Jeronij </strong>parent folders into your plugins. If you extracted the <em>_Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder<span style=\"font-family: Arial, Helvetica, sans-serif;\">.</span></p>\r\n<p><strong><span style=\"font-family: Arial, Helvetica, sans-serif;\">Dependencies:</span></strong></p>\r\n<p><span style=\"font-family: Arial, Helvetica, sans-serif;\">BSC MEGA Props - JRJ Vol01 v2.dat - INCLUDED (you can find it in the BSC/BSCProps folder).</span></p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_JJSister.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg\" alt=\"JRJ_Ships_JJSister\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_Titanic.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Titanic.jpg\" alt=\"JRJ_Ships_Titanic2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_Toyama_blue.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Toyama_blue.jpg\" alt=\"JRJ_Ships_Toyama_blue3\" ></a> </span>\r\n        </div> \r\n</body>"
     downloads: 693
     file: SC4D_LEX_LEGACY_Jeronij Ship Pack.zip
     files:
-      - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue Full_30c05b68.SC4Lot
-      - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue_d0bf13e3.SC4Lot
-      - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green Full_30c052e8.SC4Lot
-      - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green_f0bf0dab.SC4Lot
-      - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Red/JRJ Toyama3 red Full_d0c05314.SC4Lot
-      - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Red/JRJ Toyama3 red_d0bf0a44.SC4Lot
-      - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow Full_f0c045df.SC4Lot
-      - Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow_d0bf0413.SC4Lot
-      - Jeronij/JRJ Ships Compilation/Juan J. Sister/JRJ Sister_90be0bd3.SC4Lot
-      - Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd01_90c1db9e.SC4Lot
-      - Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd02_90c204fd.SC4Lot
-      - Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
-      - ~Documents/Jeronij_Readmes/images/JRJ_Ships_JJSister.jpg
-      - ~Documents/Jeronij_Readmes/images/JRJ_Ships_NedLloyd.jpg
-      - ~Documents/Jeronij_Readmes/images/JRJ_Ships_Titanic.jpg
-      - ~Documents/Jeronij_Readmes/images/JRJ_Ships_Toyama_blue.jpg
-      - ~Documents/Jeronij_Readmes/images/JRJ_Ships_Toyama_green.jpg
-      - ~Documents/Jeronij_Readmes/images/JRJ_Ships_Toyama_red.jpg
-      - ~Documents/Jeronij_Readmes/images/JRJ_Ships_Toyama_yellow.jpg
-      - ~Documents/Jeronij_Readmes/images/Logo_eurobold_204x20.jpg
-      - BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-      - ~Documents/Jeronij_Readmes/JRJ_Ships_Ned_Lloyd_readme.html
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - JRJ Vol01 v2-index.jpg
-      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_JRJ Ships Compilation.txt
+      - BSC\BSCProps\BSC MEGA Props - JRJ Vol01 v2.dat
+      - Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue Full_30c05b68.SC4Lot
+      - Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue_d0bf13e3.SC4Lot
+      - Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green Full_30c052e8.SC4Lot
+      - Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green_f0bf0dab.SC4Lot
+      - Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red Full_d0c05314.SC4Lot
+      - Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red_d0bf0a44.SC4Lot
+      - Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow Full_f0c045df.SC4Lot
+      - Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow_d0bf0413.SC4Lot
+      - Jeronij\JRJ Ships Compilation\Juan J. Sister\JRJ Sister_90be0bd3.SC4Lot
+      - Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd01_90c1db9e.SC4Lot
+      - Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd02_90c204fd.SC4Lot
+      - Jeronij\JRJ Ships Compilation\RMS Titanic\JRJ Titanic_70b5cb20.SC4Lot
+      - ~Documents\Jeronij_Readmes\JRJ_Ships_Ned_Lloyd_readme.html
+      - ~Documents\Jeronij_Readmes\images\JRJ_Ships_JJSister.jpg
+      - ~Documents\Jeronij_Readmes\images\JRJ_Ships_NedLloyd.jpg
+      - ~Documents\Jeronij_Readmes\images\JRJ_Ships_Titanic.jpg
+      - ~Documents\Jeronij_Readmes\images\JRJ_Ships_Toyama_blue.jpg
+      - ~Documents\Jeronij_Readmes\images\JRJ_Ships_Toyama_green.jpg
+      - ~Documents\Jeronij_Readmes\images\JRJ_Ships_Toyama_red.jpg
+      - ~Documents\Jeronij_Readmes\images\JRJ_Ships_Toyama_yellow.jpg
+      - ~Documents\Jeronij_Readmes\images\Logo_eurobold_204x20.jpg
+      - ~Documents\Prop-Texture Catalogue Index and Cleanitol\BSC MEGA Props - JRJ Vol01 v2-index.jpg
+      - ~Documents\Prop-Texture Catalogue Index and Cleanitol\Cleanitol_JRJ Ships Compilation.txt
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Titanic.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Toyama_blue.jpg
     lastModified: 2023-11-11T16:29:27.000Z
     lots:
-      - building: 30c05b68
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue Full_30c05b68.SC4Lot
-        id: 30c05b68
-        name: JRJ Toyama3 blue Full
-        props:
-          - 70c05af8
-        size: 10x1
-        textures:
-          - 25f40000
-      - building: d0bf13e3
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue_d0bf13e3.SC4Lot
-        id: d0bf13e3
-        name: JRJ Toyama3 blue
-        props:
-          - 90bf1390
-        size: 10x1
-        textures:
-          - 25f40000
-      - building: 30c052e8
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green Full_30c052e8.SC4Lot
-        id: 30c052e8
-        name: JRJ Toyama3 Green Full
-        props:
-          - 70c0526a
-        size: 10x1
-        textures:
-          - 25f40000
-      - building: f0bf0dab
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green_f0bf0dab.SC4Lot
-        id: f0bf0dab
-        name: JRJ Toyama3 Green
-        props:
-          - 90bf0d55
-        size: 10x1
-        textures:
-          - 25f40000
-      - building: d0c05314
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Red/JRJ Toyama3 red Full_d0c05314.SC4Lot
-        id: d0c05314
-        name: JRJ Toyama3 red Full
-        props:
-          - 50c05283
-        size: 10x1
-        textures:
-          - 25f40000
-      - building: d0bf0a44
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Red/JRJ Toyama3 red_d0bf0a44.SC4Lot
-        id: d0bf0a44
-        name: JRJ Toyama3 red
-        props:
-          - 90bf09fe
-        size: 10x1
-        textures:
-          - 25f40000
-      - building: f0c045df
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow Full_f0c045df.SC4Lot
-        id: f0c045df
-        name: JRJ Toyama3 yellow Full
-        props:
-          - f0c044bc
-        size: 10x1
-        textures:
-          - 25f40000
-      - building: d0bf0413
-        file: Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow_d0bf0413.SC4Lot
-        id: d0bf0413
-        name: JRJ Toyama3 yellow
-        props:
-          - 90bf037b
-        size: 10x1
-        textures:
-          - 25f40000
-      - building: 90be0bd3
-        file: Jeronij/JRJ Ships Compilation/Juan J. Sister/JRJ Sister_90be0bd3.SC4Lot
-        id: 90be0bd3
-        name: JRJ Sister
-        props:
-          - 50be0b56
-        size: 3x1
-        textures:
-          - 25f40000
-      - building: 90c1db9e
-        file: Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd01_90c1db9e.SC4Lot
-        id: 90c1db9e
-        name: JRJ Nedlloyd01
-        props:
-          - 50c1db01
-        size: 5x1
-        textures:
-          - 25f40000
-      - building: 90c204fd
-        file: Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd02_90c204fd.SC4Lot
-        id: 90c204fd
-        name: JRJ Nedlloyd02
-        props:
-          - 70c20440
-        size: 5x1
-        textures:
-          - 25f40000
-      - building: 70b5cb20
-        file: Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot
-        id: 70b5cb20
-        name: JRJ Titanic
-        props:
-          - 70b5ca2f
-        size: 1x1
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue Full_30c05b68.SC4Lot:
+        30c05b68:
+          building: 30c05b68
+          name: JRJ Toyama3 blue Full
+          props:
+            - 70c05af8
+          size: 10x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue_d0bf13e3.SC4Lot:
+        d0bf13e3:
+          building: d0bf13e3
+          name: JRJ Toyama3 blue
+          props:
+            - 90bf1390
+          size: 10x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green Full_30c052e8.SC4Lot:
+        30c052e8:
+          building: 30c052e8
+          name: JRJ Toyama3 Green Full
+          props:
+            - 70c0526a
+          size: 10x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green_f0bf0dab.SC4Lot:
+        f0bf0dab:
+          building: f0bf0dab
+          name: JRJ Toyama3 Green
+          props:
+            - 90bf0d55
+          size: 10x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red Full_d0c05314.SC4Lot:
+        d0c05314:
+          building: d0c05314
+          name: JRJ Toyama3 red Full
+          props:
+            - 50c05283
+          size: 10x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red_d0bf0a44.SC4Lot:
+        d0bf0a44:
+          building: d0bf0a44
+          name: JRJ Toyama3 red
+          props:
+            - 90bf09fe
+          size: 10x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow Full_f0c045df.SC4Lot:
+        f0c045df:
+          building: f0c045df
+          name: JRJ Toyama3 yellow Full
+          props:
+            - f0c044bc
+          size: 10x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow_d0bf0413.SC4Lot:
+        d0bf0413:
+          building: d0bf0413
+          name: JRJ Toyama3 yellow
+          props:
+            - 90bf037b
+          size: 10x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\Juan J. Sister\JRJ Sister_90be0bd3.SC4Lot:
+        90be0bd3:
+          building: 90be0bd3
+          name: JRJ Sister
+          props:
+            - 50be0b56
+          size: 3x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd01_90c1db9e.SC4Lot:
+        90c1db9e:
+          building: 90c1db9e
+          name: JRJ Nedlloyd01
+          props:
+            - 50c1db01
+          size: 5x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd02_90c204fd.SC4Lot:
+        90c204fd:
+          building: 90c204fd
+          name: JRJ Nedlloyd02
+          props:
+            - 70c20440
+          size: 5x1
+          textures:
+            - 25f40000
+      Jeronij\JRJ Ships Compilation\RMS Titanic\JRJ Titanic_70b5cb20.SC4Lot:
+        70b5cb20:
+          building: 70b5cb20
+          name: JRJ Titanic
+          props:
+            - 70b5ca2f
+          size: 1x1
     meta:
-      timestamp: 2024-12-02T08:30:17.389Z
+      timestamp: 2024-12-02T12:44:08.441Z
       version: 1
-    models:
-      - 5ad0e817-93510e0f-00030000
-      - 5ad0e817-d351314d-00030000
-      - 5ad0e817-b34d42e5-00030000
-      - 5ad0e817-534e4a5e-00030000
-      - 5ad0e817-d34f8ced-00030000
-      - 5ad0e817-534e44f3-00030000
-      - 5ad0e817-d34f8584-00030000
-      - 5ad0e817-734e40cf-00030000
-      - 5ad0e817-b34f7bbc-00030000
-      - 5ad0e817-f34e3aa0-00030000
-      - 5ad0e817-334f74fb-00030000
-      - 5ad0e817-5344f7dc-00030000
     name: SC4D LEX LEGACY - Jeronij Ship Pack
     props:
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 50c1db01
-        model: 5ad0e817-93510e0f-00030000
-        name: JRJ_V_Nedlloyd01
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: d56999c1
-        name: JRJ_V_Nedlloyd01Timed
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 70c20440
-        model: 5ad0e817-d351314d-00030000
-        name: JRJ_V_Nedlloydfull02
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 50be0b56
-        model: 5ad0e817-b34d42e5-00030000
-        name: JRJ_V_JJ_Sister2
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: d5699a2f
-        name: JRJ_V_Toyama_Ship_YellowTimed
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 90bf1390
-        model: 5ad0e817-534e4a5e-00030000
-        name: JRJ_V_Toyama_Ship_Blue
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 756999f9
-        name: JRJ_V_Toyama_Ship_BlueTimed
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 70c05af8
-        model: 5ad0e817-d34f8ced-00030000
-        name: JRJ_V_Toyama_Ship_Blue_full
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 90bf0d55
-        model: 5ad0e817-534e44f3-00030000
-        name: JRJ_V_Toyama_Ship_Green
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: b5699a0b
-        name: JRJ_V_Toyama_Ship_GreenTimed
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 70c0526a
-        model: 5ad0e817-d34f8584-00030000
-        name: JRJ_V_Toyama_Ship_Green_full
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 90bf09fe
-        model: 5ad0e817-734e40cf-00030000
-        name: JRJ_V_Toyama_Ship_Red
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 15699a1a
-        name: JRJ_V_Toyama_Ship_RedTimed
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 50c05283
-        model: 5ad0e817-b34f7bbc-00030000
-        name: JRJ_V_Toyama_Ship_Red_Full
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 90bf037b
-        model: 5ad0e817-f34e3aa0-00030000
-        name: JRJ_V_Toyama_Ship_Yellow
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: f0c044bc
-        model: 5ad0e817-334f74fb-00030000
-        name: JRJ_V_Toyama_Ship_Yellow_full
-      - file: BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
-        id: 70b5ca2f
-        model: 5ad0e817-5344f7dc-00030000
-        name: JRJ_V_RMS_Titanic
+      BSC\BSCProps\BSC MEGA Props - JRJ Vol01 v2.dat:
+        15699a1a:
+          name: JRJ_V_Toyama_Ship_RedTimed
+        50be0b56:
+          model: 5ad0e817-b34d42e5-00030000
+          name: JRJ_V_JJ_Sister2
+        50c05283:
+          model: 5ad0e817-b34f7bbc-00030000
+          name: JRJ_V_Toyama_Ship_Red_Full
+        50c1db01:
+          model: 5ad0e817-93510e0f-00030000
+          name: JRJ_V_Nedlloyd01
+        70b5ca2f:
+          model: 5ad0e817-5344f7dc-00030000
+          name: JRJ_V_RMS_Titanic
+        70c0526a:
+          model: 5ad0e817-d34f8584-00030000
+          name: JRJ_V_Toyama_Ship_Green_full
+        70c05af8:
+          model: 5ad0e817-d34f8ced-00030000
+          name: JRJ_V_Toyama_Ship_Blue_full
+        70c20440:
+          model: 5ad0e817-d351314d-00030000
+          name: JRJ_V_Nedlloydfull02
+        756999f9:
+          name: JRJ_V_Toyama_Ship_BlueTimed
+        90bf037b:
+          model: 5ad0e817-f34e3aa0-00030000
+          name: JRJ_V_Toyama_Ship_Yellow
+        90bf09fe:
+          model: 5ad0e817-734e40cf-00030000
+          name: JRJ_V_Toyama_Ship_Red
+        90bf0d55:
+          model: 5ad0e817-534e44f3-00030000
+          name: JRJ_V_Toyama_Ship_Green
+        90bf1390:
+          model: 5ad0e817-534e4a5e-00030000
+          name: JRJ_V_Toyama_Ship_Blue
+        b5699a0b:
+          name: JRJ_V_Toyama_Ship_GreenTimed
+        d56999c1:
+          name: JRJ_V_Nedlloyd01Timed
+        d5699a2f:
+          name: JRJ_V_Toyama_Ship_YellowTimed
+        f0c044bc:
+          model: 5ad0e817-334f74fb-00030000
+          name: JRJ_V_Toyama_Ship_Yellow_full
     sha256: 655d592ae43b5c95f143eee8ae3bb4d536b0941d606a012bb9be8bcdb7136bbc
     size: 11699133
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg

@@ -16,7 +16,7 @@ import {
 } from "@salinco/nice-utils"
 
 import type { BuildingInfo } from "@common/buildings"
-import type { LotInfo } from "@common/lots"
+import { type LotInfo, isDefaultEnabledLot, isEnabledLot, isTogglableLot } from "@common/lots"
 import {
   type OptionID,
   type OptionInfo,
@@ -26,7 +26,6 @@ import {
   isOptionDefaultValue,
 } from "@common/options"
 import {
-  LOTS_OPTION_ID,
   MIN_VERSION_OPTION_ID,
   type PackageID,
   checkCondition,
@@ -426,7 +425,7 @@ export function resolvePackageUpdates(
       updates.options,
       (result, newValue, optionId) => {
         const globalOption = profileOptions.find(option => option.id === optionId)
-        if (!globalOption) {
+        if (!globalOption || optionId === "lots") {
           throw Error(`Unknown global option '${optionId}'`)
         }
 
@@ -442,7 +441,7 @@ export function resolvePackageUpdates(
 
         return result
       },
-      { ...profileInfo.options },
+      { ...profileInfo.options } as Options,
     )
   }
 
@@ -534,18 +533,18 @@ export function resolvePackageUpdates(
       if (oldStatus.variantId !== newStatus.variantId) {
         selectingVariants[packageId] = newStatus.variantId
 
-        const enabledLots = packageConfig?.options?.[LOTS_OPTION_ID]
+        const enabledLots = packageConfig?.options?.lots
         if (isArray(enabledLots)) {
+          const lots = values(variantInfo.lots ?? {}).flatMap(values)
+
           const replacedLots = mapDefined(enabledLots, id =>
-            variantInfo.lots?.find(lot => lot.id === id)
-              ? id
-              : variantInfo.lots?.find(lot => lot.replace === id)?.id,
+            lots.find(lot => lot.id === id) ? id : lots.find(lot => lot.replace === id)?.id,
           )
 
           if (!isEqual(enabledLots, replacedLots)) {
             implicitOptionChanges[packageId] ??= { new: {}, old: {} }
-            implicitOptionChanges[packageId].old[LOTS_OPTION_ID] = enabledLots
-            implicitOptionChanges[packageId].new[LOTS_OPTION_ID] = replacedLots
+            implicitOptionChanges[packageId].old.lots = enabledLots
+            implicitOptionChanges[packageId].new.lots = replacedLots
           }
         }
 
@@ -675,9 +674,18 @@ export function resolvePackageUpdates(
       // Remove explicit default options
       if (packageConfig?.options) {
         packageConfig.options = filterValues(packageConfig.options, (optionValue, optionId) => {
+          if (optionId === "lots") {
+            const defaultValue = values(variantInfo.lots ?? {})
+              .flatMap(values)
+              .filter(lot => isTogglableLot(lot) && isDefaultEnabledLot(lot))
+              .map(lot => lot.id)
+
+            return !isEqual(optionValue, defaultValue)
+          }
+
           const option = variantInfo.options?.find(option => option.id === optionId)
-          return !!option && !isOptionDefaultValue(option, optionValue)
-        })
+          return !option || !isOptionDefaultValue(option, optionValue)
+        }) as Options
 
         if (isEmpty(packageConfig.options)) {
           packageConfig.options = undefined
@@ -704,7 +712,7 @@ export function resolvePackageUpdates(
   console.debug("Resulting profile", resultingProfile)
 
   if (shouldRecalculate) {
-    const oldLots = getEnabledLots(
+    const oldLots = getIncludedLots(
       context,
       packages,
       undefined,
@@ -714,7 +722,7 @@ export function resolvePackageUpdates(
       settings,
     )
 
-    const newLots = getEnabledLots(
+    const newLots = getIncludedLots(
       context,
       packages,
       resultingStatus,
@@ -869,7 +877,7 @@ export function resolvePackageUpdates(
   }
 }
 
-function getEnabledLots(
+function getIncludedLots(
   context: TaskContext,
   packages: Readonly<Packages>,
   packageStatus: { [packageId in PackageID]?: PackageStatus } | undefined,
@@ -884,7 +892,7 @@ function getEnabledLots(
     packageId: PackageID
   }
 } {
-  const lots: {
+  const result: {
     [lotId: string]: {
       buildingInfo?: BuildingInfo
       lotInfo: LotInfo
@@ -898,6 +906,7 @@ function getEnabledLots(
       const variantId = packageStatus
         ? packageStatus[packageId]?.variantId
         : packageInfo?.status[profileInfo.id]?.variantId
+
       if (!packageInfo || !variantId) {
         return context.raiseInDev(`Unknown package '${packageId}'`)
       }
@@ -907,33 +916,18 @@ function getEnabledLots(
         return context.raiseInDev(`Unknown variant '${packageId}#${variantId}'`)
       }
 
-      if (!variantInfo.lots) {
-        return
-      }
+      const buildings = values(variantInfo.buildings ?? {}).flatMap(values)
+      const lots = values(variantInfo.lots ?? {}).flatMap(values)
 
-      for (const lotInfo of variantInfo.lots) {
-        // TODO: ID should always be a TGI
-        if (!lotInfo.id.match(/^[0-9a-f]{8}$/i)) {
-          continue
-        }
-
+      for (const lot of lots) {
         // Check if lot is enabled
-        const option = getOptionInfo(LOTS_OPTION_ID, variantInfo.options, profileOptions)
-
-        if (option) {
-          const enabledLots = getOptionValue(option, {
-            ...packageConfig?.options,
-            ...profileInfo?.options,
-          }) as string[]
-
-          if (!enabledLots.includes(lotInfo.id)) {
-            continue
-          }
+        if (!isEnabledLot(lot, packageConfig)) {
+          continue
         }
 
         // Check if lot is supported
         const isSupported = checkCondition(
-          lotInfo.requirements,
+          lot.requirements,
           packageId,
           variantInfo,
           profileInfo,
@@ -946,18 +940,18 @@ function getEnabledLots(
           continue
         }
 
-        const buildingInfo = lotInfo.building
-          ? variantInfo.buildings?.find(building => building.id === lotInfo.building)
+        const buildingInfo = lot.building
+          ? buildings?.find(building => building.id === lot.building)
           : undefined
 
-        lots[lotInfo.id] = {
+        result[lot.id] = {
           buildingInfo,
-          lotInfo,
+          lotInfo: lot,
           packageId,
         }
       }
     }
   })
 
-  return lots
+  return result
 }

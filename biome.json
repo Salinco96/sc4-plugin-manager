@@ -30,6 +30,7 @@
       "correctness": {
         "noConstantMathMinMaxClamp": "error",
         "noUnusedImports": "error",
+        "noUnusedVariables": "warn",
         "noUnusedPrivateClassMembers": "error",
         "useArrayLiterals": "error",
         "useHookAtTopLevel": "error"

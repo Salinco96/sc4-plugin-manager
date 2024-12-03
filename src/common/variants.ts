@@ -3,24 +3,137 @@ import type { Namespace, TFunction } from "i18next"
 
 import type { AssetData, AssetID } from "./assets"
 import type { AuthorID } from "./authors"
-import type { BuildingInfo } from "./buildings"
-import type { BuildingData } from "./buildings"
+import type { BuildingData, BuildingInfo } from "./buildings"
 import type { CategoryID } from "./categories"
-import type { LotInfo } from "./lots"
-import type { LotData } from "./lots"
+import type { TGI } from "./dbpf"
+import type { ExemplarDataPatch } from "./exemplars"
+import type { LotData, LotInfo } from "./lots"
 import type { OptionData, OptionID, OptionInfo, OptionValue, Requirements } from "./options"
 import type { PackageID } from "./packages"
-import type { PropData, PropInfo } from "./props"
-import type { Feature, MMPData, MMPInfo, PackageFile, PackageWarning, VariantState } from "./types"
+import type { FamilyData, FamilyInfo, PropData, PropInfo } from "./props"
+import type { Feature, MMPData, MMPInfo, PackageWarning, VariantState } from "./types"
 import type { MaybeArray } from "./utils/types"
 
 /** Variant ID */
 export type VariantID = ID<string, VariantInfo>
 
-export interface VariantData {
+export interface ContentsData {
+  buildingFamilies?: {
+    [path in string]?: {
+      [familyId in string]?: FamilyData
+    }
+  }
+  buildings?: {
+    [path in string]?: {
+      [instanceId in string]?: BuildingData
+    }
+  }
+  lots?: {
+    [path in string]?: {
+      [instanceId in string]?: LotData
+    }
+  }
+  models?: {
+    [path in string]?: string[]
+  }
+  propFamilies?: {
+    [path in string]?: {
+      [familyId in string]?: FamilyData
+    }
+  }
+  props?: {
+    [path in string]?: {
+      [instanceId in string]?: PropData
+    }
+  }
+  textures?: {
+    [path in string]?: string[]
+  }
+}
+
+export interface ContentsInfo {
+  buildingFamilies?: {
+    [path in string]?: {
+      [familyId in string]?: FamilyInfo
+    }
+  }
+  buildings?: {
+    [path in string]?: {
+      [instanceId in string]?: BuildingInfo
+    }
+  }
+  lots?: {
+    [path in string]?: {
+      [instanceId in string]?: LotInfo
+    }
+  }
+  models?: {
+    [path in string]?: string[]
+  }
+  propFamilies?: {
+    [path in string]?: {
+      [familyId in string]?: FamilyInfo
+    }
+  }
+  props?: {
+    [path in string]?: {
+      [instanceId in string]?: PropInfo
+    }
+  }
+  textures?: {
+    [path in string]?: string[]
+  }
+}
+
+export interface ContentsInfo {
+  buildingFamilies?: {
+    [path in string]?: {
+      [familyId in string]?: FamilyInfo
+    }
+  }
+  buildings?: {
+    [path in string]?: {
+      [instanceId in string]?: BuildingInfo
+    }
+  }
+  lots?: {
+    [path in string]?: {
+      [instanceId in string]?: LotInfo
+    }
+  }
+  models?: {
+    [path in string]?: string[]
+  }
+  propFamilies?: {
+    [path in string]?: {
+      [familyId in string]?: FamilyInfo
+    }
+  }
+  props?: {
+    [path in string]?: {
+      [instanceId in string]?: PropInfo
+    }
+  }
+  textures?: {
+    [path in string]?: string[]
+  }
+}
+
+export interface FileData {
+  as?: string
+  condition?: Requirements
+  patches?: {
+    [entryId in TGI]?: ExemplarDataPatch
+  }
+  path: string
+  priority?: number
+}
+
+export interface FileInfo extends FileData {}
+
+export interface VariantData extends ContentsData {
   assets?: Array<AssetID | VariantAssetData>
   authors?: MaybeArray<AuthorID>
-  buildings?: BuildingData[]
   category?: MaybeArray<string>
   credits?: { [authorId in AuthorID]?: string | null }
   dependencies?: Array<PackageID | DependencyInfo>
@@ -28,19 +141,17 @@ export interface VariantData {
   description?: string
   disabled?: boolean
   experimental?: boolean
-  files?: PackageFile[]
+  files?: FileData[]
   images?: string[]
   lastGenerated?: Date
   lastModified?: Date
   logs?: string
-  lots?: LotData[]
   mmps?: MMPData[]
   name?: string
   optional?: PackageID[]
   options?: OptionData[]
-  props?: PropData[]
-  release?: Date
   readme?: string
+  release?: Date
   repository?: string
   requirements?: Requirements
   summary?: string
@@ -52,31 +163,29 @@ export interface VariantData {
   warnings?: PackageWarning[]
 }
 
-export interface BaseVariantInfo {
+export interface BaseVariantInfo extends ContentsInfo {
   assets?: VariantAssetInfo[]
   authors: AuthorID[]
-  buildings?: BuildingInfo[]
   categories: CategoryID[]
   credits: { [authorId in AuthorID]?: string | null }
   dependencies?: DependencyInfo[]
   deprecated?: boolean | PackageID
   description?: string
+  disabled?: boolean
   experimental?: boolean
-  files?: PackageFile[]
+  files?: FileInfo[]
   id: VariantID
   images?: string[]
   lastModified?: string
   logs?: string
-  lots?: LotInfo[]
   mmps?: MMPInfo[]
   name: string
   new?: boolean
   optional?: PackageID[]
   options?: OptionInfo[]
   priority: number
-  props?: PropInfo[]
-  release?: string
   readme?: string
+  release?: string
   repository?: string
   requirements?: Requirements
   summary?: string
@@ -117,15 +226,15 @@ export interface VariantIssue {
 
 export interface VariantAssetData extends AssetData {
   cleanitol?: string[]
-  docs?: Array<string | PackageFile>
+  docs?: Array<string | FileInfo>
   exclude?: string[]
-  include?: Array<string | PackageFile>
+  include?: Array<string | FileInfo>
   id: AssetID
 }
 
 export interface VariantAssetInfo extends VariantAssetData {
-  docs?: PackageFile[]
-  include?: PackageFile[]
+  docs?: FileInfo[]
+  include?: FileInfo[]
 }
 
 export interface DependencyData {

@@ -224,27 +224,69 @@ export function filterVariant(
     }
   }
 
+  if (filters.hex) {
+    if (variantInfo.buildingFamilies) {
+      for (const families of values(variantInfo.buildingFamilies)) {
+        if (families[filters.hex]) {
+          return true
+        }
+      }
+    }
+
+    if (variantInfo.buildings) {
+      for (const buildings of values(variantInfo.buildings)) {
+        if (buildings[filters.hex]) {
+          return true
+        }
+
+        if (values(buildings).some(building => building.family === filters.hex)) {
+          return true
+        }
+      }
+    }
+
+    if (variantInfo.lots) {
+      for (const lots of values(variantInfo.lots)) {
+        if (lots[filters.hex]) {
+          return true
+        }
+      }
+    }
+
+    if (variantInfo.propFamilies) {
+      for (const families of values(variantInfo.propFamilies)) {
+        if (families[filters.hex]) {
+          return true
+        }
+      }
+    }
+
+    if (variantInfo.props) {
+      for (const props of values(variantInfo.props)) {
+        if (props[filters.hex]) {
+          return true
+        }
+
+        if (values(props).some(prop => prop.family === filters.hex)) {
+          return true
+        }
+      }
+    }
+  }
+
   if (filters.pattern && !filters.pattern?.test(`${packageInfo.id}|${packageInfo.name}`)) {
     return false
   }
 
-  if (filters.hex) {
-    if (variantInfo.buildings?.some(building => building.id === filters.hex)) {
-      return true
-    }
-
-    if (variantInfo.lots?.some(lot => lot.id === filters.hex)) {
-      return true
-    }
-
-    if (variantInfo.props?.some(prop => prop.id === filters.hex)) {
-      return true
-    }
-
-    return false
-  }
-
   return true
+}
+
+export function isHexSearch(search: string): boolean {
+  return !!search.match(/^(0x)?[0-9a-fA-F]{8}$/)
+}
+
+export function toHexSearch(search: string): string {
+  return toHex(parseHex(search), 8)
 }
 
 export function computePackageList(
@@ -266,15 +308,14 @@ export function computePackageList(
 
   // Match search query from start of words only, ignoring leading/trailing spaces
   const search = packageFilters.search.trim()
-  const isHexSearch = !!search.match(/^(0x)?[0-9a-fA-F]{8}$/)
 
   const filters: Omit<PackageFilters, "search"> & { hex?: string; pattern?: RegExp } = {
     ...packageFilters,
     dependencies: packageFilters.dependencies || packageFilters.onlyErrors,
     experimental: packageFilters.experimental || packageFilters.onlyErrors,
     incompatible: packageFilters.incompatible || packageFilters.onlyErrors,
-    hex: isHexSearch ? toHex(parseHex(search), 8) : undefined,
-    pattern: search && !isHexSearch ? getStartOfWordSearchRegex(search) : undefined,
+    hex: isHexSearch(search) ? toHexSearch(search) : undefined,
+    pattern: search ? getStartOfWordSearchRegex(search) : undefined,
   }
 
   const filteredPackages = values(packages)

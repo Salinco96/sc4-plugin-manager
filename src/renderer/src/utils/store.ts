@@ -1,7 +1,6 @@
 import { compact, isEmpty } from "@salinco/nice-utils"
 import update, { type Spec } from "immutability-helper"
 import { type SnackbarKey, closeSnackbar, enqueueSnackbar } from "notistack"
-import { create } from "zustand"
 
 import type { AuthorID, Authors } from "@common/authors"
 import type { CategoryID } from "@common/categories"
@@ -15,7 +14,9 @@ import type { Settings } from "@common/settings"
 import { type ApplicationState, type ApplicationStateUpdate, getInitialState } from "@common/state"
 import type { Features, PackageInfo, VariantState } from "@common/types"
 import type { VariantID } from "@common/variants"
+import { packageViewTabs } from "@components/PackageViewTabs/tabs"
 
+import { getStore } from "./context"
 import { computePackageList } from "./packages"
 import type { SnackbarProps, SnackbarType } from "./snackbar"
 
@@ -88,12 +89,10 @@ export interface StoreActions {
   removeProfile(profileId: ProfileID): Promise<boolean>
   removeVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   resetPackageOptions(packageId: PackageID): Promise<void>
-  setPackageOption(
-    packageId: PackageID,
-    optionId: OptionID,
-    optionValue: OptionValue,
-  ): Promise<boolean>
+  setPackageOption(packageId: PackageID, optionId: "lots", value: string[]): Promise<boolean>
+  setPackageOption(packageId: PackageID, optionId: OptionID, value: OptionValue): Promise<boolean>
   setPackageVariant(packageId: PackageID, variantId: VariantID): Promise<boolean>
+  setPackageViewTab(tabId: string, elementId?: string): void
   setPackageFilters(filters: Partial<PackageFilters>): void
   setProfileOption(optionId: OptionID, optionValue: OptionValue): Promise<boolean>
   showErrorToast(message: string): void
@@ -115,6 +114,10 @@ export interface Store extends ApplicationState {
     id: ModalID
   }
   packageFilters: PackageFilters
+  packageView: {
+    activeTab: string
+    elementId?: string
+  }
   filteredPackages: PackageID[]
   packageUi: {
     [packageId in PackageID]?: PackageUi
@@ -124,14 +127,38 @@ export interface Store extends ApplicationState {
   }
 }
 
-export const useStore = create<Store>()((set, get): Store => {
+const initialState: Omit<Store, "actions"> = {
+  ...getInitialState(),
+  filteredPackages: [],
+  packageFilters: {
+    authors: [],
+    categories: [],
+    combine: "or",
+    dependencies: true,
+    experimental: true,
+    incompatible: true,
+    onlyErrors: false,
+    onlyNew: false,
+    onlyUpdates: false,
+    search: "",
+    state: null,
+    states: [],
+  },
+  packageUi: {},
+  packageView: {
+    activeTab: packageViewTabs[0].id,
+  },
+  snackbars: {},
+}
+
+export const useStore = getStore(initialState, initialState => (set, get): Store => {
   function updateState(data: Spec<Store>): void {
     set(store => update(store, data))
     console.debug(get())
   }
 
   return {
-    ...getInitialState(),
+    ...initialState,
     actions: {
       async addPackage(packageId, variantId, data) {
         const store = get()
@@ -305,7 +332,7 @@ export const useStore = create<Store>()((set, get): Store => {
           return { packageFilters, ...computePackageList({ ...store, packageFilters }, true) }
         })
       },
-      async setPackageOption(packageId, optionId, optionValue) {
+      async setPackageOption(packageId, optionId, value) {
         const store = get()
         const profileInfo = getCurrentProfile(store)
         if (!profileInfo) {
@@ -315,7 +342,7 @@ export const useStore = create<Store>()((set, get): Store => {
         try {
           return await window.api.updateProfile(profileInfo.id, {
             packages: {
-              [packageId]: { options: { [optionId]: optionValue } },
+              [packageId]: { options: { [optionId]: value } },
             },
           })
         } catch (error) {
@@ -358,6 +385,9 @@ export const useStore = create<Store>()((set, get): Store => {
           this.showErrorToast(`Failed to select variant ${packageId}#${variantId}`)
           return false
         }
+      },
+      setPackageViewTab(tabId, elementId) {
+        updateState({ packageView: { $set: { activeTab: tabId, elementId } } })
       },
       async setProfileOption(optionId, optionValue) {
         const store = get()
@@ -487,23 +517,6 @@ export const useStore = create<Store>()((set, get): Store => {
         })
       },
     },
-    filteredPackages: [],
-    packageFilters: {
-      authors: [],
-      categories: [],
-      combine: "or",
-      dependencies: true,
-      experimental: true,
-      incompatible: true,
-      onlyErrors: false,
-      onlyNew: false,
-      onlyUpdates: false,
-      search: "",
-      state: null,
-      states: [],
-    },
-    packageUi: {},
-    snackbars: {},
   }
 })
 

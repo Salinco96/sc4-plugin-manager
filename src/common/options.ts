@@ -59,6 +59,8 @@ export type OptionValue<
 
 export type Options = {
   [optionId in OptionID]?: OptionValue
+} & {
+  lots?: string[]
 }
 
 export type Requirements = {
@@ -169,10 +171,8 @@ export function isOptionDefaultValue(option: OptionInfo, value: OptionValue | un
 
   const defaultValue = getOptionDefaultValue(option)
 
-  return isArray(defaultValue)
-    ? isArray(value) &&
-        defaultValue.length === value.length &&
-        defaultValue.every(item => value.includes(item))
+  return isArray(defaultValue) && isArray(value)
+    ? defaultValue.length === value.length && defaultValue.every(item => value.includes(item))
     : defaultValue === value
 }
 

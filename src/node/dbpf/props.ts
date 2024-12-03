@@ -7,9 +7,7 @@ import type { Exemplar } from "./types"
 import { get, getString, getTGI } from "./utils"
 
 export function getPropData(exemplar: Exemplar): PropData {
-  const propId = exemplar.id.split("-")[2]
-
-  const data: PropData = { id: propId, file: exemplar.file }
+  const data: PropData = {}
 
   const name = getString(exemplar, ExemplarPropertyID.ExemplarName)
   if (name?.length) {

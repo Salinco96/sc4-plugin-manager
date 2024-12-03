@@ -2,15 +2,6 @@ import type { CategoryID } from "./categories"
 import type { TGI } from "./dbpf"
 import type { MaybeArray } from "./utils/types"
 
-export interface BuildingFamilyData {
-  /** Path to the prop family file */
-  file: string
-  /** Prop family ID */
-  id: string
-  /** Prop family name */
-  name?: string
-}
-
 export interface BuildingData {
   /** Bulldoze cost */
   bulldoze?: number
@@ -49,16 +40,12 @@ export interface BuildingData {
   description?: string
   /** Building family ID */
   family?: string
-  /** Path to the file containing the building exemplar */
-  file: string
   /** Flamability (number between 0 and 100) */
   flamability?: number
   /** Garbage generated */
   garbage?: number
   /** Garbage radius in tiles */
   garbageRadius?: number
-  /** Building Instance ID */
-  id: string
   /** URL or relative path within ~docs */
   images?: string[]
   /** Monthly income */
@@ -140,6 +127,8 @@ export interface BuildingData {
 export interface BuildingInfo
   extends Omit<BuildingData, "category" | "model" | "menu" | "submenu"> {
   categories?: CategoryID[]
+  file: string
+  id: string
   menu?: number
   submenus?: number[]
 }

@@ -42,12 +42,11 @@ import {
   ConfigFormat,
   type Features,
   type PackageData,
-  type PackageFile,
   type PackageInfo,
   type Packages,
 } from "@common/types"
 import { globToRegex, matchConditions } from "@common/utils/glob"
-import type { VariantID } from "@common/variants"
+import type { FileInfo, VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
 import { download } from "@node/download"
@@ -872,7 +871,7 @@ export class Application {
     context: TaskContext,
     packageId: PackageID,
     variantId: VariantID,
-    fileInfo: PackageFile,
+    fileInfo: FileInfo,
     exemplarProperties: Record<string, ExemplarPropertyInfo>,
   ): Promise<string> {
     const originalFullPath = this.getVariantFilePath(packageId, variantId, fileInfo.path)
@@ -1247,7 +1246,7 @@ export class Application {
 
           try {
             const includedPaths = new Set<string>()
-            const files: PackageFile[] = []
+            const files: FileInfo[] = []
 
             for (const { asset, downloadPath } of downloadedAssets) {
               // Blacklist desktop.ini
@@ -1282,7 +1281,7 @@ export class Application {
                 newPath: string,
                 type: "cleanitol" | "docs" | "files",
                 condition?: Requirements,
-                include?: PackageFile,
+                include?: FileInfo,
               ) => {
                 const extension = getExtension(oldPath)
 
@@ -1314,7 +1313,7 @@ export class Application {
                 newPath: string,
                 type: "cleanitol" | "docs" | "files",
                 condition?: Requirements,
-                include?: PackageFile,
+                include?: FileInfo,
               ) => {
                 const filePaths = await glob(getChildrenPattern(toPosix(oldPath)), {
                   cwd: downloadPath,
@@ -1340,7 +1339,7 @@ export class Application {
               const includePath = async (
                 pattern: string,
                 type: "cleanitol" | "docs" | "files",
-                include?: PackageFile,
+                include?: FileInfo,
               ) => {
                 const entries = await glob(
                   pattern.replace(conditionRegex, (match, condition) => {
@@ -2112,52 +2111,50 @@ export class Application {
         }
 
         for (const entry of values(file.entries)) {
-          if (patches[entry.id] !== undefined && entry.type === DBPFDataType.EXMP && entry.data) {
-            const instanceId = toHex(parseTGI(entry.id)[2], 8)
-            switch (getExemplarType(entry.id, entry.data)) {
-              case ExemplarType.Building: {
-                if (variantInfo.buildings) {
-                  const index = variantInfo.buildings.findIndex(
-                    building => building.id === instanceId && building.file === filePath,
-                  )
-
-                  if (index >= 0) {
+          if (patches[entry.id] !== undefined) {
+            if (entry.type === DBPFDataType.EXMP && entry.data && !entry.data.isCohort) {
+              const instanceId = toHex(parseTGI(entry.id)[2], 8)
+              switch (getExemplarType(entry.id, entry.data)) {
+                case ExemplarType.Building: {
+                  if (variantInfo.buildings?.[filePath]?.[instanceId]) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    const newInfo = loadBuildingInfo(getBuildingData(exemplar), categories)
-                    variantInfo.buildings[index] = newInfo
+                    variantInfo.buildings[filePath][instanceId] = {
+                      ...variantInfo.buildings?.[filePath]?.[instanceId],
+                      ...loadBuildingInfo(
+                        filePath,
+                        instanceId,
+                        getBuildingData(exemplar),
+                        categories,
+                      ),
+                    }
                   }
+
+                  break
                 }
-                break
-              }
 
-              case ExemplarType.LotConfig: {
-                if (variantInfo.lots) {
-                  const index = variantInfo.lots.findIndex(
-                    lot => lot.id === instanceId && lot.file === filePath,
-                  )
-
-                  if (index >= 0) {
+                case ExemplarType.LotConfig: {
+                  if (variantInfo.lots?.[filePath]?.[instanceId]) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    const newInfo = loadLotInfo(getLotData(exemplar))
-                    variantInfo.lots[index] = newInfo
+                    variantInfo.lots[filePath][instanceId] = {
+                      ...variantInfo.lots?.[filePath]?.[instanceId],
+                      ...loadLotInfo(filePath, instanceId, getLotData(exemplar)),
+                    }
                   }
+
+                  break
                 }
-                break
-              }
 
-              case ExemplarType.Prop: {
-                if (variantInfo.props) {
-                  const index = variantInfo.props.findIndex(
-                    prop => prop.id === instanceId && prop.file === filePath,
-                  )
-
-                  if (index >= 0) {
+                case ExemplarType.Prop: {
+                  if (variantInfo.props?.[filePath]?.[instanceId]) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    const newInfo = loadPropInfo(getPropData(exemplar))
-                    variantInfo.props[index] = newInfo
+                    variantInfo.props[filePath][instanceId] = {
+                      ...variantInfo.props?.[filePath]?.[instanceId],
+                      ...loadPropInfo(filePath, instanceId, getPropData(exemplar)),
+                    }
                   }
+
+                  break
                 }
-                break
               }
             }
           }

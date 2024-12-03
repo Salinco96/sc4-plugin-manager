@@ -7,9 +7,11 @@ import { Card, Typography, useTheme } from "@mui/material"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
+import { CategoryID } from "@common/categories"
 import { type DBPFFile, type TGI, isDBPF } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
-import { type PackageFile as PackageFileType, VariantState, isOverride } from "@common/types"
+import { VariantState, isOverride } from "@common/types"
+import type { FileInfo } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
 import { PackageTag } from "@components/Tags/PackageTag"
 import { TagType } from "@components/Tags/utils"
@@ -17,12 +19,11 @@ import { ToolButton } from "@components/ToolButton"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
-import { CategoryID } from "@common/categories"
 import { PackageEntries } from "./PackageEntries"
 
 export interface PackageFileProps {
   disabled: boolean
-  file: PackageFileType
+  file: FileInfo
   fileData?: DBPFFile
   overriddenEntries?: TGI[]
   packageId: PackageID

@@ -1,8 +1,6 @@
 import { keys } from "@salinco/nice-utils"
 
 import type { CategoryID } from "./categories"
-import type { TGI } from "./dbpf"
-import type { ExemplarDataPatch } from "./exemplars"
 import type { Options, Requirements } from "./options"
 import {
   type PackageID,
@@ -20,7 +18,7 @@ import {
   isPatched,
 } from "./packages"
 import type { ProfileID, ProfileInfo } from "./profiles"
-import type { VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
+import type { FileInfo, VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
 
 /** Supported configuration formats */
 export enum ConfigFormat {
@@ -75,16 +73,6 @@ export interface PackageData extends VariantData {
   variants?: {
     [variantId in VariantID]?: VariantData
   }
-}
-
-export interface PackageFile {
-  as?: string
-  condition?: Requirements
-  patches?: {
-    [entryId in TGI]?: ExemplarDataPatch
-  }
-  path: string
-  priority?: number
 }
 
 export interface PackageInfo {
@@ -234,6 +222,6 @@ export function getState(
   }
 }
 
-export function isOverride(file: PackageFile): boolean {
+export function isOverride(file: FileInfo): boolean {
   return !!file.priority && file.priority >= 900
 }

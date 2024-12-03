@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 
 import type { DBPFFile, TGI } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
-import type { PackageFile } from "@common/types"
+import type { FileInfo } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
 import { ToolButton } from "@components/ToolButton"
 
@@ -14,7 +14,7 @@ import { PackageEntry } from "./PackageEntry"
 import { DBPFEntryCategory, getDBPFEntryCategory, getDBPFEntryCategoryLabel } from "./utils"
 
 export interface PackageEntriesProps {
-  file: PackageFile
+  file: FileInfo
   fileData: DBPFFile
   overriddenEntries?: TGI[]
   packageId: PackageID

@@ -7,9 +7,7 @@ import { type Exemplar, LotConfigPropertyType, ZoneType } from "./types"
 import { get, getArray, getBaseTextureId, getString } from "./utils"
 
 export function getLotData(exemplar: Exemplar): LotData {
-  const lotId = exemplar.id.split("-")[2]
-
-  const data: LotData = { id: lotId, file: exemplar.file }
+  const data: LotData = {}
 
   if (exemplar.file.match(/\bCAM\b/i)) {
     data.requirements ??= {}

@@ -5,7 +5,8 @@ import { useTranslation } from "react-i18next"
 
 import { DBPFDataType, type DBPFEntry, type DBPFFile } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
-import { type PackageFile, VariantState } from "@common/types"
+import { VariantState } from "@common/types"
+import type { FileInfo } from "@common/variants"
 import { PackageTag } from "@components/Tags/PackageTag"
 import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
@@ -32,7 +33,7 @@ const VIEWABLETYPES = [
 
 export interface PackageEntryProps {
   entry: DBPFEntry
-  file: PackageFile
+  file: FileInfo
   fileData: DBPFFile
   overridden?: boolean
   packageId: PackageID

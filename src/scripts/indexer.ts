@@ -4,9 +4,9 @@ import path from "node:path"
 import { input, select } from "@inquirer/prompts"
 import {
   ID,
+  containsAny,
   forEach,
   forEachAsync,
-  generate,
   getRequired,
   indexBy,
   isEmpty,
@@ -31,19 +31,17 @@ import {
   ExemplarValueType,
 } from "@common/exemplars"
 import { type PackageID, getOwnerId } from "@common/packages"
-import { ConfigFormat, type PackageData, type PackageFile } from "@common/types"
+import { ConfigFormat, type PackageData } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
+import type { ContentsData, FileInfo } from "@common/variants"
 import type { VariantData, VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
-import { exists, removeIfPresent } from "@node/files"
-
-import type { BuildingData } from "@common/buildings"
-import type { LotData } from "@common/lots"
-import { type SC4FileData, analyzeSC4Files } from "./dbpf/dbpf"
+import { exists, removeIfPresent, toPosix } from "@node/files"
+import { analyzeSC4Files } from "./dbpf/dbpf"
 import { writePackageData } from "./dbpf/packages"
 import {
   promptAuthorName,
@@ -353,26 +351,36 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   })
 
   // Analyze base game configs
-  let gameConfig = await loadConfig<SC4FileData>(dataAssetsDir, "maxis")
+  let gameConfig = await loadConfig<ContentsData>(dataAssetsDir, "maxis")
   if (!gameConfig?.data) {
-    const gameData = await analyzeSC4Files(gameDir, ["SimCity_1.dat"], exemplarProperties)
-    await writeConfig(dataAssetsDir, "maxis", gameData, ConfigFormat.YAML)
-    gameConfig = { data: gameData, format: ConfigFormat.YAML }
+    const files = ["SimCity_1.dat"]
+    const { categories, features, ...data } = await analyzeSC4Files(
+      gameDir,
+      files,
+      exemplarProperties,
+    )
+    await writeConfig(dataAssetsDir, "maxis", data, ConfigFormat.YAML)
+    gameConfig = { data, format: ConfigFormat.YAML }
   }
 
-  type ExemplarsData = {
-    buildings: { [id in string]?: BuildingData }
-    lots: { [id in string]?: LotData }
-  }
-
-  const dbGameConfig = await loadConfig<ExemplarsData>(dbDir, "configs/exemplars")
+  const dbGameConfig = await loadConfig<ContentsData>(dbDir, "configs/exemplars")
   if (!dbGameConfig?.data) {
-    await writeConfig(
+    await writeConfig<ContentsData>(
       dbDir,
       "configs/exemplars",
+      // remove some unnecessary fields
       {
-        buildings: generate(gameConfig.data.buildings, ({ model, ...data }) => [data.id, data]),
-        lots: generate(gameConfig.data.lots, ({ props, textures, ...data }) => [data.id, data]),
+        buildingFamilies: gameConfig.data.buildingFamilies ?? {},
+        buildings: mapValues(gameConfig.data.buildings ?? {}, buildings =>
+          mapValues(buildings, ({ model, ...data }) => data),
+        ),
+        lots: mapValues(gameConfig.data.lots ?? {}, lots =>
+          mapValues(lots, ({ props, textures, ...data }) => data),
+        ),
+        propFamilies: gameConfig.data.propFamilies ?? {},
+        props: mapValues(gameConfig.data.props ?? {}, props =>
+          mapValues(props, ({ model, ...data }) => data),
+        ),
       },
       ConfigFormat.YAML,
     )
@@ -494,9 +502,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       return true
     }
 
-    if (entry.owner) {
-      const authorId = getAuthorId(entry.owner)
-      if (authorId && options.include.authors.includes(authorId)) {
+    if (entry.authors) {
+      if (containsAny(options.include.authors, mapDefined(entry.authors, getAuthorId))) {
         return true
       }
     }
@@ -531,7 +538,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
 
       dbAuthors[ownerId] = {
-        name: await promptAuthorName(entry.owner),
+        name: await promptAuthorName(entry.authors?.at(0) ?? ownerId),
       }
     }
 
@@ -914,7 +921,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           nodir: true,
         })
 
-        variantEntry.files = files.map(file => file.replaceAll(path.sep, "/")).reverse()
+        variantEntry.files = files.map(toPosix).sort()
       } catch (error) {
         console.error(error)
         throw Error(`Failed to extract ${variantAssetId}`)
@@ -922,27 +929,15 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     // Analyze DBPF contents
-    const {
-      buildingFamilies,
-      buildings,
-      categories,
-      features,
-      lots,
-      models,
-      propFamilies,
-      props,
-      textures,
-    } = await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
+    const data = await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
 
-    variantEntry.buildingFamilies = buildingFamilies.length ? buildingFamilies : undefined
-    variantEntry.buildings = buildings.length ? buildings : undefined
-    variantEntry.categories = categories.length ? categories : undefined
-    variantEntry.features = features.length ? features : undefined
-    variantEntry.lots = lots.length ? lots : undefined
-    variantEntry.models = models.length ? models : undefined
-    variantEntry.propFamilies = propFamilies.length ? propFamilies : undefined
-    variantEntry.props = props.length ? props : undefined
-    variantEntry.textures = textures.length ? textures : undefined
+    variantEntry.buildingFamilies = data.buildingFamilies
+    variantEntry.buildings = data.buildings
+    variantEntry.categories = data.categories.length ? data.categories : undefined
+    variantEntry.features = data.features.length ? data.features : undefined
+    variantEntry.lots = data.lots
+    variantEntry.propFamilies = data.propFamilies
+    variantEntry.props = data.props
 
     return true
   }
@@ -1058,18 +1053,14 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       const variantData = packageData.variants?.[variantId]
 
       // Create or update package/variant data
-      if (
-        !variantData?.lastGenerated ||
-        variantData.lastGenerated < entry.meta.timestamp ||
-        packageId.match(/functional/)
-      ) {
+      if (!variantData?.lastGenerated || variantData.lastGenerated < entry.meta.timestamp) {
         if (variantData) {
           console.debug(`Updating variant ${packageId}#${variantId}...`)
         } else {
           console.debug(`Creating variant ${packageId}#${variantId}...`)
         }
 
-        const packageFiles: { [path in string]?: PackageFile } = {}
+        const packageFiles: { [path in string]?: FileInfo } = {}
         let includedFiles = variantEntry.files
         let excludedFiles: string[] = []
         if (variantOverride.paths) {

@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { forEach, isEnum, mapValues, parseHex, size } from "@salinco/nice-utils"
+import { forEach, isEnum, mapValues, parseHex, reduce, size } from "@salinco/nice-utils"
 
 import { type AuthorData, type AuthorID, type Authors, loadAuthorInfo } from "@common/authors"
 import type { Categories } from "@common/categories"
@@ -12,13 +12,14 @@ import {
 } from "@common/exemplars"
 import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
+import type { Exemplars } from "@common/state"
 import { ConfigFormat } from "@common/types"
+import type { ContentsData } from "@common/variants"
 import { loadConfig, readConfig } from "@node/configs"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
-import type { Exemplars } from "@common/state"
-import { loadBuildingInfo, loadLotInfo } from "./packages"
+import { loadBuildingInfo, loadFamilyInfo, loadLotInfo, loadPropInfo } from "./packages"
 import { fromProfileData } from "./profiles"
 
 export async function loadAuthors(context: TaskContext, basePath: string): Promise<Authors> {
@@ -107,21 +108,63 @@ export async function loadExemplars(
   categories: Categories,
 ): Promise<Exemplars> {
   try {
-    const config = await loadConfig<Exemplars>(basePath, FILENAMES.dbExemplars)
+    const config = await loadConfig<ContentsData>(basePath, FILENAMES.dbExemplars)
 
     if (!config) {
       throw Error(`Missing config ${FILENAMES.dbExemplars}`)
     }
 
     return {
-      buildings: mapValues(config.data.buildings, building =>
-        loadBuildingInfo(building, categories),
+      buildingFamilies: reduce(
+        config.data.buildingFamilies ?? {},
+        (result, buildingFamilies, file) => ({
+          ...result,
+          ...mapValues(buildingFamilies, (data, id) => loadFamilyInfo(file, id, data)),
+        }),
+        {},
       ),
-      lots: mapValues(config.data.lots, loadLotInfo),
+      buildings: reduce(
+        config.data.buildings ?? {},
+        (result, buildings, file) => ({
+          ...result,
+          ...mapValues(buildings, (data, id) => loadBuildingInfo(file, id, data, categories)),
+        }),
+        {},
+      ),
+      lots: reduce(
+        config.data.lots ?? {},
+        (result, lots, file) => ({
+          ...result,
+          ...mapValues(lots, (data, id) => loadLotInfo(file, id, data)),
+        }),
+        {},
+      ),
+      propFamilies: reduce(
+        config.data.propFamilies ?? {},
+        (result, propFamilies, file) => ({
+          ...result,
+          ...mapValues(propFamilies, (data, id) => loadFamilyInfo(file, id, data)),
+        }),
+        {},
+      ),
+      props: reduce(
+        config.data.props ?? {},
+        (result, props, file) => ({
+          ...result,
+          ...mapValues(props, (data, id) => loadPropInfo(file, id, data)),
+        }),
+        {},
+      ),
     }
   } catch (error) {
     context.error("Failed to load exemplars", error)
-    return { buildings: {}, lots: {} }
+    return {
+      buildingFamilies: {},
+      buildings: {},
+      lots: {},
+      propFamilies: {},
+      props: {},
+    }
   }
 }
 
