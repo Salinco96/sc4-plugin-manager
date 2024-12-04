@@ -1,15 +1,15 @@
-import type { Primitive } from "@salinco/nice-utils"
-
 import {
   ALL,
-  type OptionData,
+  type OptionChoice,
   type OptionID,
   type OptionInfo,
+  type OptionSingleValue,
   OptionType,
+  type OptionValue,
   type Requirements,
   isOptionSingleValue,
 } from "@common/options"
-
+import type { Primitive } from "@salinco/nice-utils"
 import {
   loadArray,
   loadBoolean,
@@ -18,7 +18,25 @@ import {
   loadInteger,
   loadRecord,
   loadString,
-} from "./loader"
+} from "./utils"
+
+export interface OptionData {
+  condition?: Requirements
+  choices?: (OptionChoice | OptionSingleValue)[]
+  default?: OptionValue | "all"
+  description?: string
+  display?: "checkbox" | "select" | "switch"
+  filename?: string
+  global?: boolean
+  id: OptionID
+  label?: string
+  max?: number
+  min?: number
+  multi?: boolean
+  section?: string
+  step?: number
+  type: OptionType
+}
 
 export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
   const id = loadString(data.id, "option", "id", true) as OptionID

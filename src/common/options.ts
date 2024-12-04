@@ -21,10 +21,13 @@ export interface OptionChoice<$Type extends OptionType = OptionType> {
   value: OptionSingleValue<$Type>
 }
 
-export interface OptionData {
+export interface OptionInfo<
+  $Type extends OptionType = OptionType,
+  $Multi extends boolean = boolean,
+> {
   condition?: Requirements
-  choices?: (OptionChoice | OptionSingleValue)[]
-  default?: OptionValue | typeof ALL
+  choices?: OptionChoice<Exclude<$Type, OptionType.BOOLEAN>>[]
+  default?: OptionValue<$Type, $Multi>
   description?: string
   display?: "checkbox" | "select" | "switch"
   filename?: string
@@ -36,13 +39,6 @@ export interface OptionData {
   multi?: boolean
   section?: string
   step?: number
-  type: OptionType
-}
-
-export interface OptionInfo<$Type extends OptionType = OptionType, $Multi extends boolean = boolean>
-  extends OptionData {
-  choices?: OptionChoice<Exclude<$Type, OptionType.BOOLEAN>>[]
-  default?: OptionValue<$Type, $Multi>
   type: $Type
 }
 

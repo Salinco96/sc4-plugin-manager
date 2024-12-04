@@ -1,7 +1,8 @@
-import type { AssetData, AssetID, AssetInfo } from "@common/assets"
+import type { AssetID, AssetInfo } from "@common/assets"
 import { failInDev } from "@utils/env"
 
-import { loadDate, loadInteger, loadString } from "./loader"
+import type { AssetData } from "@node/data/assets"
+import { loadDate, loadInteger, loadString } from "../../node/data/utils"
 
 export function getAssetKey(assetId: AssetID, version: string): string {
   return version ? `${assetId}@${version}` : assetId

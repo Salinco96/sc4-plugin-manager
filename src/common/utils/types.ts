@@ -21,6 +21,11 @@ export function parseStringArray(value: MaybeArray<string>, separator = ","): st
 }
 
 // TODO: Move to nice-utils
+export function toLowerCase(value: string): string {
+  return value.toLowerCase()
+}
+
+// TODO: Move to nice-utils
 export function trim(value: string): string {
   return value.trim()
 }

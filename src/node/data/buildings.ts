@@ -1,12 +1,11 @@
-import type { ID } from "@salinco/nice-utils"
+import type { BuildingID, BuildingInfo } from "@common/buildings"
+import type { Categories } from "@common/categories"
+import type { FamilyID } from "@common/families"
+import type { MaybeArray } from "@common/utils/types"
+import { loadCategories } from "./categories"
+import { parseMenu, parseMenus, writeMenu, writeMenus } from "./submenus"
 
-import type { CategoryID } from "./categories"
-import type { FamilyID } from "./families"
-import type { MenuID } from "./submenus"
-
-export type BuildingID = ID<string, BuildingInfo>
-
-export interface BuildingInfo {
+export interface BuildingData {
   /**
    * Bulldoze cost
    */
@@ -33,7 +32,7 @@ export interface BuildingInfo {
   /**
    * Categories
    */
-  categories?: CategoryID[]
+  category?: MaybeArray<string>
 
   /**
    * Plop cost
@@ -51,11 +50,6 @@ export interface BuildingInfo {
   family?: FamilyID
 
   /**
-   * Path to exemplar file (POSIX)
-   */
-  file: string
-
-  /**
    * Flamability (number between 0 and 100)
    */
   flamability?: number
@@ -69,11 +63,6 @@ export interface BuildingInfo {
    * Garbage radius in tiles
    */
   garbageRadius?: number
-
-  /**
-   * Building instance ID
-   */
-  id: BuildingID
 
   /**
    * URL or relative path within ~docs
@@ -117,10 +106,15 @@ export interface BuildingInfo {
   /**
    * Menu
    */
-  menu?: MenuID
+  menu?: number | string
 
   /**
-   * Internal name
+   * Model ID
+   */
+  model?: string
+
+  /**
+   * Internal exemplar name
    */
   name?: string
 
@@ -182,7 +176,7 @@ export interface BuildingInfo {
   /**
    * Submenus
    */
-  submenus?: MenuID[]
+  submenu?: MaybeArray<number | string>
 
   /**
    * Water consumed
@@ -208,4 +202,33 @@ export interface BuildingInfo {
    * Building value
    */
   worth?: number
+}
+
+export function loadBuildingInfo(
+  file: string,
+  id: BuildingID,
+  data: BuildingData,
+  categories: Categories,
+): BuildingInfo {
+  const { category, menu, model, submenu, ...others } = data
+
+  return {
+    categories: category ? loadCategories(category, categories) : undefined,
+    file,
+    id,
+    menu: menu ? parseMenu(menu) : undefined,
+    submenus: submenu ? parseMenus(submenu) : undefined,
+    ...others,
+  }
+}
+
+export function writeBuildingInfo(building: BuildingInfo): BuildingData {
+  const { categories, file, id, menu, submenus, ...others } = building
+
+  return {
+    category: categories?.join(","),
+    menu: menu ? writeMenu(menu) : undefined,
+    submenu: submenus?.length ? writeMenus(submenus) : undefined,
+    ...others,
+  }
 }

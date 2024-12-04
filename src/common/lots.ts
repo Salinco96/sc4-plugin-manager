@@ -1,10 +1,10 @@
-import { unique } from "@salinco/nice-utils"
+import { type ID, unique } from "@salinco/nice-utils"
+import type { BuildingID } from "./buildings"
 import type { OptionInfo, Requirements } from "./options"
 import { type PackageID, checkCondition } from "./packages"
 import type { ProfileInfo } from "./profiles"
 import type { Settings } from "./settings"
 import type { Features, PackageConfig } from "./types"
-import type { MaybeArray } from "./utils/types"
 import type { VariantInfo } from "./variants"
 
 export enum ZoneDensity {
@@ -13,37 +13,70 @@ export enum ZoneDensity {
   HIGH = "high",
 }
 
-export interface LotData {
-  /** Building exemplar instance ID */
-  building?: string
-  /** Whether lot is enabled by default (this defaults to true) */
-  default?: boolean
-  /** Zone density where this lot may grow - comma-separated: "low", "medium", "high" */
-  density?: MaybeArray<string>
-  /** URL or relative path within ~docs */
-  images?: string[]
-  /** Internal lot name */
-  name?: string
-  /** Instance IDs of all props used by this lot */
-  props?: string[]
-  /** Lot Instance ID to replace with this one (e.g. different ID for DN/MN) */
-  replace?: string
-  /** Whether this lot replaces a Maxis lot that may suffer from phantom slider bug */
-  replaceMaxis?: boolean
-  /** Requirements (e.g. CAM for stage 9+ growables) */
-  requirements?: Requirements
-  /** Lot size in AxB format (e.g. 2x3) */
-  size?: `${number}x${number}`
-  /** Growth stage */
-  stage?: number
-  /** Instance IDs of all textures used by this lot */
-  textures?: string[]
-}
+export type LotID = ID<string, LotInfo>
 
-export interface LotInfo extends Omit<LotData, "density"> {
+export interface LotInfo {
+  /**
+   * Building instance ID
+   */
+  building?: BuildingID
+
+  /**
+   * Whether lot is enabled by default
+   *
+   * Defaults to `true`.
+   */
+  default?: boolean
+
+  /**
+   * Zone density where this lot may grow (array or comma-separated `"low"` / `"medium"` / `"high"`, or `"all"`)
+   */
   density?: ZoneDensity[]
+
+  /**
+   * Path to exemplar file (POSIX)
+   */
   file: string
-  id: string
+
+  /**
+   * Lot instance ID
+   */
+  id: LotID
+
+  /**
+   * URL or relative path within ~docs
+   */
+  images?: string[]
+
+  /**
+   * Internal lot name
+   */
+  name?: string
+
+  /**
+   * Lot instance ID to replace with this one (e.g. different ID for DN/MN)
+   */
+  replace?: LotID
+
+  /**
+   * Whether this lot replaces a Maxis lot that may suffer from phantom slider bug
+   */
+  replaceMaxis?: boolean
+
+  /**
+   * Requirements (e.g. CAM for stage 9+ growables)
+   */
+  requirements?: Requirements
+
+  /**
+   * Lot size in AxB format (e.g. 2x3)
+   */
+  size?: `${number}x${number}`
+
+  /**
+   * Growth stage
+   */
+  stage?: number
 }
 
 export function isSC4LotFile(filePath: string): boolean {

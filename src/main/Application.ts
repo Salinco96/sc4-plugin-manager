@@ -2,7 +2,21 @@ import fs, { writeFile } from "node:fs/promises"
 import path from "node:path"
 import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
 
-import { type EmptyRecord, collect, forEach, mapValues, sortBy } from "@salinco/nice-utils"
+import {
+  type EmptyRecord,
+  collect,
+  entries,
+  forEach,
+  isEmpty,
+  keys,
+  mapDefined,
+  mapValues,
+  sortBy,
+  sumBy,
+  toHex,
+  uniqueBy,
+  values,
+} from "@salinco/nice-utils"
 import log, { type LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
@@ -38,17 +52,16 @@ import {
 } from "@common/profiles"
 import type { Settings, SettingsData } from "@common/settings"
 import type { ApplicationState, ApplicationStateUpdate, Exemplars } from "@common/state"
-import {
-  ConfigFormat,
-  type Features,
-  type PackageData,
-  type PackageInfo,
-  type Packages,
-} from "@common/types"
+import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex, matchConditions } from "@common/utils/glob"
 import type { FileInfo, VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
+import type { PackageData } from "@node/data/packages"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
+import { getBuildingData } from "@node/dbpf/buildings"
+import { getLotData } from "@node/dbpf/lots"
+import { getPropData } from "@node/dbpf/props"
+import type { Exemplar } from "@node/dbpf/types"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
@@ -78,20 +91,12 @@ import {
 import { getPluginsFolderName } from "@utils/linker"
 import { type ToolID, getToolInfo } from "@utils/tools"
 
-import { getBuildingData } from "@node/dbpf/buildings"
-import { getLotData } from "@node/dbpf/lots"
-import { getPropData } from "@node/dbpf/props"
-import type { Exemplar } from "@node/dbpf/types"
-import {
-  entries,
-  isEmpty,
-  keys,
-  mapDefined,
-  sumBy,
-  toHex,
-  uniqueBy,
-  values,
-} from "@salinco/nice-utils"
+import type { BuildingID } from "@common/buildings"
+import type { LotID } from "@common/lots"
+import type { PropID } from "@common/props"
+import { loadBuildingInfo } from "@node/data/buildings"
+import { loadLotInfo } from "@node/data/lots"
+import { loadPropInfo } from "@node/data/props"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { getAssetKey } from "./data/assets"
@@ -105,11 +110,8 @@ import {
   loadProfileTemplates,
 } from "./data/db"
 import {
-  loadBuildingInfo,
   loadDownloadedAssets,
   loadLocalPackages,
-  loadLotInfo,
-  loadPropInfo,
   loadRemotePackages,
   toPackageData,
 } from "./data/packages"
@@ -2120,13 +2122,14 @@ export class Application {
               const instanceId = toHex(parseTGI(entry.id)[2], 8)
               switch (getExemplarType(entry.id, entry.data)) {
                 case ExemplarType.Building: {
-                  if (variantInfo.buildings?.[filePath]?.[instanceId]) {
+                  const buildingId = instanceId as BuildingID
+                  if (variantInfo.buildings?.[filePath]?.[buildingId]) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    variantInfo.buildings[filePath][instanceId] = {
-                      ...variantInfo.buildings?.[filePath]?.[instanceId],
+                    variantInfo.buildings[filePath][buildingId] = {
+                      ...variantInfo.buildings?.[filePath]?.[buildingId],
                       ...loadBuildingInfo(
                         filePath,
-                        instanceId,
+                        buildingId,
                         getBuildingData(exemplar),
                         categories,
                       ),
@@ -2137,11 +2140,12 @@ export class Application {
                 }
 
                 case ExemplarType.LotConfig: {
-                  if (variantInfo.lots?.[filePath]?.[instanceId]) {
+                  const lotId = instanceId as LotID
+                  if (variantInfo.lots?.[filePath]?.[lotId]) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    variantInfo.lots[filePath][instanceId] = {
-                      ...variantInfo.lots?.[filePath]?.[instanceId],
-                      ...loadLotInfo(filePath, instanceId, getLotData(exemplar)),
+                    variantInfo.lots[filePath][lotId] = {
+                      ...variantInfo.lots?.[filePath]?.[lotId],
+                      ...loadLotInfo(filePath, lotId, getLotData(exemplar)),
                     }
                   }
 
@@ -2149,11 +2153,12 @@ export class Application {
                 }
 
                 case ExemplarType.Prop: {
-                  if (variantInfo.props?.[filePath]?.[instanceId]) {
+                  const propId = instanceId as PropID
+                  if (variantInfo.props?.[filePath]?.[propId]) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    variantInfo.props[filePath][instanceId] = {
-                      ...variantInfo.props?.[filePath]?.[instanceId],
-                      ...loadPropInfo(filePath, instanceId, getPropData(exemplar)),
+                    variantInfo.props[filePath][propId] = {
+                      ...variantInfo.props?.[filePath]?.[propId],
+                      ...loadPropInfo(filePath, propId, getPropData(exemplar)),
                     }
                   }
 

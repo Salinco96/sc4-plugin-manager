@@ -7,8 +7,6 @@ import {
   mapValues,
 } from "@salinco/nice-utils"
 
-import { failInDev } from "@utils/env"
-
 function failLoading<T, Required extends boolean = false>(
   value: unknown,
   expected: string,
@@ -18,9 +16,9 @@ function failLoading<T, Required extends boolean = false>(
 ): Required extends true ? T : T | undefined {
   if (value !== undefined) {
     const received = JSON.stringify(value)
-    failInDev(`Error loading ${id} - invalid ${field}: ${expected} but got ${received}`)
+    console.error(`Error loading ${id} - invalid ${field}: ${expected} but got ${received}`)
   } else if (required) {
-    failInDev(`Error loading ${id} - missing ${field}`)
+    console.error(`Error loading ${id} - missing ${field}`)
   }
 
   return undefined as Required extends true ? T : T | undefined

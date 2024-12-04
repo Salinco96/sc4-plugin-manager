@@ -17,10 +17,10 @@ import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { CategoryID } from "@common/categories"
 import { type PackageID, getOwnerId } from "@common/packages"
-import type { PackageData } from "@common/types"
-import { parseStringArray } from "@common/utils/types"
-import type { FileData } from "@common/variants"
+import { parseStringArray, toLowerCase } from "@common/utils/types"
 import type { VariantID } from "@common/variants"
+import type { PackageData } from "@node/data/packages"
+import type { FileData } from "@node/data/variants"
 import { getExtension } from "@node/files"
 
 import type { IndexerEntry, IndexerSource } from "../types"
@@ -199,7 +199,10 @@ export function writePackageData(
       ? htmlToMd(entry.description)
       : packageData.description
 
-    const packageFeatures = union(variantEntry.features ?? [], packageData.features ?? [])
+    const packageFeatures = union(
+      variantEntry.features ?? [],
+      parseStringArray(packageData.features ?? []).map(toLowerCase),
+    )
 
     const packageImages = union(entry.images ?? [], packageData.images ?? [])
 

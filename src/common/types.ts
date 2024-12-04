@@ -18,7 +18,7 @@ import {
   isPatched,
 } from "./packages"
 import type { ProfileID, ProfileInfo } from "./profiles"
-import type { FileInfo, VariantData, VariantID, VariantInfo, VariantIssue } from "./variants"
+import type { FileInfo, VariantID, VariantInfo, VariantIssue } from "./variants"
 
 /** Supported configuration formats */
 export enum ConfigFormat {
@@ -65,14 +65,6 @@ export type Packages = {
 
 export type Variants = {
   [variantId in VariantID]?: VariantInfo
-}
-
-export interface PackageData extends VariantData {
-  features?: Feature[]
-  name?: string
-  variants?: {
-    [variantId in VariantID]?: VariantData
-  }
 }
 
 export interface PackageInfo {

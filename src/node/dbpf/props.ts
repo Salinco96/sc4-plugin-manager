@@ -1,8 +1,9 @@
 import { toHex } from "@salinco/nice-utils"
 
 import { ExemplarPropertyID } from "@common/exemplars"
-import type { PropData } from "@common/props"
+import type { PropData } from "@node/data/props"
 
+import type { FamilyID } from "@common/families"
 import type { Exemplar } from "./types"
 import { get, getString, getTGI } from "./utils"
 
@@ -16,7 +17,7 @@ export function getPropData(exemplar: Exemplar): PropData {
 
   const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
   if (familyId !== undefined) {
-    data.family = toHex(familyId, 8)
+    data.family = toHex(familyId, 8) as FamilyID
   }
 
   // TODO: Other possibilities?

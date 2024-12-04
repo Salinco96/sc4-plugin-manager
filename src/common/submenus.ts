@@ -1,6 +1,7 @@
-import { isArray, isNumber, parseHex, toHex, unique } from "@salinco/nice-utils"
+import { type ID, toHex } from "@salinco/nice-utils"
 import { i18n } from "./i18n"
-import type { MaybeArray } from "./utils/types"
+
+export type MenuID = ID<number, { type: "menu" }> | Menu | Submenu
 
 export enum Menu {
   Flora = 0x4a22ea06,
@@ -79,7 +80,7 @@ export enum Submenu {
   Parks_Fillers = 0xf034265c,
 }
 
-export function getMenuLabel(id: number): string {
+export function getMenuLabel(id: MenuID): string {
   const menu = Menu[id]
   if (menu) {
     return i18n.t(menu as keyof typeof Menu, {
@@ -96,33 +97,4 @@ export function getMenuLabel(id: number): string {
   }
 
   return `0x${toHex(id, 8)}`
-}
-
-export function parseMenu(value: number | string): number {
-  if (isNumber(value)) {
-    return value
-  }
-
-  return (
-    Menu[value as keyof typeof Menu] ??
-    Submenu[value.replaceAll("/", "_") as keyof typeof Submenu] ??
-    parseHex(value)
-  )
-}
-
-export function parseMenus(value: MaybeArray<number | string>): number[] {
-  if (isNumber(value)) {
-    return [value]
-  }
-
-  const values = isArray(value) ? value : value.split(",")
-  return unique(values.map(parseMenu))
-}
-
-export function writeMenu(menu: number): string {
-  return Menu[menu] ?? Submenu[menu]?.replaceAll("_", "/") ?? toHex(menu, 8)
-}
-
-export function writeMenus(menus: number[]): string {
-  return menus.map(writeMenu).join(",")
 }

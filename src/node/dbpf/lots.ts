@@ -1,8 +1,11 @@
 import { toHex, values } from "@salinco/nice-utils"
 
 import { ExemplarPropertyID } from "@common/exemplars"
-import { type LotData, ZoneDensity } from "@common/lots"
+import { ZoneDensity } from "@common/lots"
+import type { LotData } from "@node/data/lots"
 
+import type { BuildingID } from "@common/buildings"
+import type { PropID } from "@common/props"
 import { type Exemplar, LotConfigPropertyType, ZoneType } from "./types"
 import { get, getArray, getBaseTextureId, getString } from "./utils"
 
@@ -77,7 +80,7 @@ export function getLotData(exemplar: Exemplar): LotData {
       property.id <= ExemplarPropertyID.LotConfigPropertyLast,
   )
 
-  const props = new Set<string>()
+  const props = new Set<PropID>()
   const textures = new Set<string>()
 
   for (const lotConfigProperty of lotConfigProperties) {
@@ -88,13 +91,13 @@ export function getLotData(exemplar: Exemplar): LotData {
 
     switch (type) {
       case LotConfigPropertyType.Building: {
-        data.building = toHex(instanceIds[0], 8)
+        data.building = toHex(instanceIds[0], 8) as BuildingID
         break
       }
 
       case LotConfigPropertyType.Prop: {
         for (const instanceId of instanceIds) {
-          props.add(toHex(instanceId, 8))
+          props.add(toHex(instanceId, 8) as PropID)
         }
 
         break

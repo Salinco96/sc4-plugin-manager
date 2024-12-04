@@ -20,11 +20,11 @@ import {
 } from "@common/types"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
-import {
-  PACKAGE_BANNER_HEIGHT,
-  PACKAGE_BANNER_SPACING,
-} from "@components/PackageBanners/PackageBanner"
 
+import type { BuildingID } from "@common/buildings"
+import type { FamilyID } from "@common/families"
+import type { LotID } from "@common/lots"
+import type { PropID } from "@common/props"
 import {
   type PackageFilters,
   type PackageUi,
@@ -34,9 +34,7 @@ import {
   useStore,
 } from "./store"
 
-export const PACKAGE_LIST_ITEM_BASE_SIZE = 180
-export const PACKAGE_LIST_ITEM_BANNER_SIZE = PACKAGE_BANNER_HEIGHT + PACKAGE_BANNER_SPACING
-export const PACKAGE_LIST_ITEM_DESCRIPTION_SIZE = 56
+export type HexSearch = BuildingID & FamilyID & LotID & PropID
 
 function getFilteredPackages(store: Store): PackageID[] {
   return store.filteredPackages
@@ -168,7 +166,7 @@ export function filterVariant(
   packageInfo: PackageInfo,
   variantInfo: VariantInfo,
   profileInfo: ProfileInfo | undefined,
-  filters: Omit<PackageFilters, "search"> & { hex?: string; pattern?: RegExp },
+  filters: Omit<PackageFilters, "search"> & { hex?: HexSearch; pattern?: RegExp },
 ): boolean {
   const packageStatus = getPackageStatus(packageInfo, profileInfo)
 
@@ -285,8 +283,8 @@ export function isHexSearch(search: string): boolean {
   return !!search.match(/^(0x)?[0-9a-fA-F]{8}$/)
 }
 
-export function toHexSearch(search: string): string {
-  return toHex(parseHex(search), 8)
+export function toHexSearch(search: string): HexSearch {
+  return toHex(parseHex(search), 8) as HexSearch
 }
 
 export function computePackageList(
@@ -309,7 +307,7 @@ export function computePackageList(
   // Match search query from start of words only, ignoring leading/trailing spaces
   const search = packageFilters.search.trim()
 
-  const filters: Omit<PackageFilters, "search"> & { hex?: string; pattern?: RegExp } = {
+  const filters: Omit<PackageFilters, "search"> & { hex?: HexSearch; pattern?: RegExp } = {
     ...packageFilters,
     dependencies: packageFilters.dependencies || packageFilters.onlyErrors,
     experimental: packageFilters.experimental || packageFilters.onlyErrors,

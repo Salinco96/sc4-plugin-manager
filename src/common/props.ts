@@ -1,31 +1,31 @@
-import type { TGI } from "./dbpf"
+import type { ID } from "@salinco/nice-utils"
+import type { FamilyID } from "./families"
 
-export interface FamilyData {
-  /** Prop family name */
-  name?: string
-}
+export type PropID = ID<string, PropInfo>
 
-export interface FamilyInfo extends FamilyData {
-  /** Path to the prop family file */
+export interface PropInfo {
+  /**
+   * Prop family ID
+   */
+  family?: FamilyID
+
+  /**
+   * Path to exemplar file (POSIX)
+   */
   file: string
-  /** Prop family ID */
-  id: string
-}
 
-export interface PropData {
-  /** Prop family ID */
-  family?: string
-  /** URL or relative path within ~docs */
+  /**
+   * Prop instance ID
+   */
+  id: PropID
+
+  /**
+   * URL or relative path within ~docs
+   */
   images?: string[]
-  /** Prop model TGI */
-  model?: TGI
-  /** Internal prop name */
-  name?: string
-}
 
-export interface PropInfo extends Omit<PropData, "model"> {
-  /** Path to the file containing the prop exemplar */
-  file: string
-  /** Prop Instance ID */
-  id: string
+  /**
+   * Internal exemplar name
+   */
+  name?: string
 }

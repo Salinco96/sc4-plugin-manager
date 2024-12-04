@@ -14,12 +14,15 @@ import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import type { Exemplars } from "@common/state"
 import { ConfigFormat } from "@common/types"
-import type { ContentsData } from "@common/variants"
 import { loadConfig, readConfig } from "@node/configs"
+import type { ContentsData } from "@node/data/variants"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
-import { loadBuildingInfo, loadFamilyInfo, loadLotInfo, loadPropInfo } from "./packages"
+import { loadBuildingInfo } from "@node/data/buildings"
+import { loadFamilyInfo } from "@node/data/families"
+import { loadLotInfo } from "@node/data/lots"
+import { loadPropInfo } from "@node/data/props"
 import { fromProfileData } from "./profiles"
 
 export async function loadAuthors(context: TaskContext, basePath: string): Promise<Authors> {

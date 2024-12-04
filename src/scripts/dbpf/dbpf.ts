@@ -1,5 +1,6 @@
 import path from "node:path"
 
+import type { BuildingID } from "@common/buildings"
 import { CategoryID } from "@common/categories"
 import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
 import {
@@ -8,9 +9,12 @@ import {
   ExemplarType,
   getExemplarType,
 } from "@common/exemplars"
+import type { FamilyID } from "@common/families"
+import type { LotID } from "@common/lots"
+import type { PropID } from "@common/props"
 import { Feature } from "@common/types"
 import { parseStringArray } from "@common/utils/types"
-import type { ContentsData } from "@common/variants"
+import type { ContentsData } from "@node/data/variants"
 import { loadDBPF } from "@node/dbpf"
 import { getBuildingData } from "@node/dbpf/buildings"
 import { getLotData } from "@node/dbpf/lots"
@@ -62,14 +66,15 @@ export async function analyzeSC4Files(
                   if (familyId !== undefined && instanceId === getFamilyInstanceId(familyId)) {
                     contents.buildingFamilies ??= {}
                     contents.buildingFamilies[filePath] ??= {}
-                    contents.buildingFamilies[filePath][toHex(familyId, 8)] = {
+                    contents.buildingFamilies[filePath][toHex(familyId, 8) as FamilyID] = {
                       name: getString(exemplar, ExemplarPropertyID.ExemplarName),
                     }
                   }
                 } else {
+                  const buildingId = toHex(instanceId, 8) as BuildingID
                   contents.buildings ??= {}
                   contents.buildings[filePath] ??= {}
-                  contents.buildings[filePath][toHex(instanceId, 8)] = getBuildingData(exemplar)
+                  contents.buildings[filePath][buildingId] = getBuildingData(exemplar)
                 }
 
                 break
@@ -97,10 +102,11 @@ export async function analyzeSC4Files(
 
               case ExemplarType.LotConfig: {
                 if (!isCohort) {
+                  const lotId = toHex(instanceId, 8) as LotID
                   const lot = getLotData(exemplar)
                   contents.lots ??= {}
                   contents.lots[filePath] ??= {}
-                  contents.lots[filePath][toHex(instanceId, 8)] = lot
+                  contents.lots[filePath][lotId] = lot
 
                   if (lot.requirements?.cam) {
                     categories.add(CategoryID.CAM)
@@ -121,14 +127,15 @@ export async function analyzeSC4Files(
                   if (familyId !== undefined && instanceId === getFamilyInstanceId(familyId)) {
                     contents.propFamilies ??= {}
                     contents.propFamilies[filePath] ??= {}
-                    contents.propFamilies[filePath][toHex(familyId, 8)] = {
+                    contents.propFamilies[filePath][toHex(familyId, 8) as FamilyID] = {
                       name: getString(exemplar, ExemplarPropertyID.ExemplarName),
                     }
                   }
                 } else {
+                  const propId = toHex(instanceId, 8) as PropID
                   contents.props ??= {}
                   contents.props[filePath] ??= {}
-                  contents.props[filePath][toHex(instanceId, 8)] = getPropData(exemplar)
+                  contents.props[filePath][propId] = getPropData(exemplar)
                 }
 
                 break

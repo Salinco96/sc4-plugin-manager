@@ -2,51 +2,36 @@ import fs from "node:fs/promises"
 import path from "node:path"
 
 import {
-  type StringEnum,
   collect,
   filterValues,
   forEach,
-  generate,
   isEmpty,
-  isEnum,
-  isString,
   keys,
-  mapDefined,
   mapValues,
   size,
-  union,
-  unionBy,
-  unique,
   values,
 } from "@salinco/nice-utils"
 import { glob } from "glob"
 
-import type { AssetData, AssetID, Assets } from "@common/assets"
-import type { AuthorID } from "@common/authors"
-import { type Categories, CategoryID, type CategoryInfo } from "@common/categories"
-import { type LotData, type LotInfo, ZoneDensity } from "@common/lots"
-import { OptionType } from "@common/options"
-import { MMPS_OPTION_ID, type PackageID, getOwnerId, isNew } from "@common/packages"
-import { parseMenu, parseMenus, writeMenu, writeMenus } from "@common/submenus"
-import { ConfigFormat, type PackageData, type PackageInfo, type Packages } from "@common/types"
-import { type MaybeArray, parseStringArray } from "@common/utils/types"
-import type {
-  DependencyData,
-  DependencyInfo,
-  VariantAssetData,
-  VariantAssetInfo,
-  VariantID,
-  VariantInfo,
-} from "@common/variants"
+import type { AssetID, Assets } from "@common/assets"
+import type { Categories } from "@common/categories"
+import type { PackageID } from "@common/packages"
+import { ConfigFormat, type Feature, type PackageInfo, type Packages } from "@common/types"
+import { parseStringArray, toLowerCase } from "@common/utils/types"
+import type { VariantID } from "@common/variants"
 import { readConfig } from "@node/configs"
-import { createIfMissing, exists, toPosix } from "@node/files"
+import type { AssetData } from "@node/data/assets"
+import type { PackageData } from "@node/data/packages"
+import { loadVariantInfo } from "@node/data/variants"
+import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
-import type { BuildingData, BuildingInfo } from "@common/buildings"
-import type { FamilyData, FamilyInfo, PropData, PropInfo } from "@common/props"
+import { writeBuildingInfo } from "@node/data/buildings"
+import { writeFamilyInfo } from "@node/data/families"
+import { writeLotInfo } from "@node/data/lots"
+import { writePropInfo } from "@node/data/props"
 import { loadAssetInfo } from "./assets"
-import { loadOptionInfo } from "./options"
 
 /**
  * Loads all downloaded assets.
@@ -123,12 +108,15 @@ async function loadLocalPackageInfo(
   }
 
   const packageInfo: PackageInfo = {
-    features: packageData.features,
     format: configFormat,
     id: packageId,
     name: packageData.name ?? packageId,
     status: {},
     variants: {},
+  }
+
+  if (packageData.features?.length) {
+    packageInfo.features = parseStringArray(packageData.features).map(toLowerCase) as Feature[] // todo
   }
 
   for (const entry of entries) {
@@ -206,25 +194,11 @@ export async function loadRemotePackages(
         packages[packageId] = packageInfo
         nPackages++
 
-        // Check assets and add inlined ones
+        // Check assets
         for (const variantInfo of values(packageInfo.variants)) {
           if (variantInfo.assets) {
             for (const asset of variantInfo.assets) {
-              // Inline asset definition should have at least one of these
-              if (asset.sha256 || asset.size || asset.url || asset.version) {
-                if (assets[asset.id]) {
-                  // Do not allow redefining an existing asset
-                  context.raiseInDev(`Redefining asset ID ${asset.id}`)
-                } else {
-                  // Load inline asset
-                  const assetInfo = loadAssetInfo(asset.id, asset, downloadedAssets[asset.id])
-                  if (assetInfo) {
-                    assets[asset.id] = assetInfo
-                    nAssets++
-                  }
-                }
-              } else if (!assets[asset.id]) {
-                // Otherwise require asset to already exist
+              if (!assets[asset.id]) {
                 context.raiseInDev(`Asset ${asset.id} does not exist`)
               }
             }
@@ -254,11 +228,14 @@ function loadRemotePackageInfo(
   categories: Categories,
 ): PackageInfo | undefined {
   const packageInfo: PackageInfo = {
-    features: packageData.features,
     id: packageId,
     name: packageData.name ?? packageId,
     status: {},
     variants: {},
+  }
+
+  if (packageData.features?.length) {
+    packageInfo.features = parseStringArray(packageData.features).map(toLowerCase) as Feature[] // todo
   }
 
   if (packageData.variants) {
@@ -275,348 +252,6 @@ function loadRemotePackageInfo(
   if (!isEmpty(packageInfo.variants)) {
     return packageInfo
   }
-}
-
-function parseEnumList<T extends string>(
-  data: MaybeArray<string>,
-  members: StringEnum<T>,
-  allowAll?: boolean,
-): T[] {
-  if (data === "all" && allowAll) {
-    return values(members)
-  }
-
-  return unique(parseStringArray(data).filter(value => isEnum(value, members)))
-}
-
-function parseCategory(data: MaybeArray<string>, categories: Categories): CategoryID[] {
-  const subcategories = parseStringArray(data) as CategoryID[]
-
-  let subcategory: CategoryID | undefined
-  for (subcategory of subcategories) {
-    while (subcategory) {
-      const info: CategoryInfo | undefined = categories[subcategory]
-
-      if (!subcategories.includes(subcategory)) {
-        subcategories.unshift(subcategory)
-      }
-
-      subcategory = info?.parent
-    }
-  }
-
-  return subcategories
-}
-
-function loadPackageAssetInfo(data: VariantAssetData | AssetID): VariantAssetInfo {
-  if (isString(data)) {
-    return { id: data }
-  }
-
-  return {
-    ...data,
-    docs: data.docs?.map(file => {
-      if (isString(file)) {
-        return { path: toPosix(file) }
-      }
-
-      return { ...file, path: toPosix(file.path) }
-    }),
-    include: data.include?.map(file => {
-      if (isString(file)) {
-        return { path: toPosix(file) }
-      }
-
-      return { ...file, path: toPosix(file.path) }
-    }),
-  }
-}
-
-function loadDependencyInfo(data: DependencyData | PackageID): DependencyInfo {
-  if (isString(data)) {
-    return { id: data, transitive: true }
-  }
-
-  return {
-    transitive: !data.include,
-    ...data,
-  }
-}
-
-/**
- * Loads a variant from a package configuration.
- */
-function loadVariantInfo(
-  packageId: PackageID,
-  variantId: VariantID,
-  packageData: PackageData,
-  categories: Categories,
-): VariantInfo {
-  const variantData = packageData.variants?.[variantId] ?? {}
-
-  const ownerId = getOwnerId(packageId)
-  const category = variantData.category ?? packageData.category ?? CategoryID.MODS
-  const subcategories = parseCategory(category, categories)
-  const priorities = subcategories.map(categoryId => categories[categoryId]?.priority ?? 0)
-  const priority = Math.max(...priorities)
-
-  const authors = unique([
-    ownerId,
-    ...parseStringArray(packageData.authors ?? []),
-    ...parseStringArray(variantData.authors ?? []),
-  ] as AuthorID[])
-
-  const credits: VariantInfo["credits"] = {
-    ...generate(authors, authorId => [authorId, null]),
-    [ownerId]: "Original author",
-    ...packageData.credits,
-    ...variantData.credits,
-  }
-
-  const variantInfo: VariantInfo = {
-    authors,
-    categories: subcategories,
-    credits,
-    id: variantId,
-    name: variantData.name ?? variantId,
-    priority,
-    version: variantData.version ?? packageData.version ?? "0.0.0",
-  }
-
-  const assets = unionBy(
-    variantData.assets?.map(loadPackageAssetInfo) ?? [],
-    packageData.assets?.map(loadPackageAssetInfo) ?? [],
-    asset => asset.id,
-  )
-
-  if (assets.length) {
-    variantInfo.assets = assets
-  }
-
-  const buildingFamilies = mapValues(
-    {
-      ...packageData.buildingFamilies,
-      ...mapValues(variantData.buildingFamilies ?? {}, (families, file) => ({
-        ...packageData.buildingFamilies?.[file],
-        ...families,
-      })),
-    },
-    (families, file) => mapValues(families, (data, id) => loadFamilyInfo(file, id, data)),
-  )
-
-  if (!isEmpty(buildingFamilies)) {
-    variantInfo.buildingFamilies = buildingFamilies
-  }
-
-  const buildings = mapValues(
-    {
-      ...packageData.buildings,
-      ...mapValues(variantData.buildings ?? {}, (buildings, file) => ({
-        ...packageData.buildings?.[file],
-        ...buildings,
-      })),
-    },
-    (buildings, file) =>
-      mapValues(buildings, (data, id) => loadBuildingInfo(file, id, data, categories)),
-  )
-
-  if (!isEmpty(buildings)) {
-    variantInfo.buildings = buildings
-  }
-
-  const dependencies = unionBy(
-    variantData.dependencies?.map(loadDependencyInfo) ?? [],
-    packageData.dependencies?.map(loadDependencyInfo) ?? [],
-    dependency => dependency.id,
-  )
-
-  if (dependencies.length) {
-    variantInfo.dependencies = dependencies
-  }
-
-  const deprecated = variantData.deprecated ?? packageData.deprecated
-
-  if (deprecated) {
-    variantInfo.deprecated = deprecated
-  }
-
-  const description = variantData.description ?? packageData.description
-
-  if (description) {
-    variantInfo.description = description
-  }
-
-  const experimental = variantData.experimental ?? packageData.experimental
-
-  if (experimental) {
-    variantInfo.experimental = experimental
-  }
-
-  const files = unionBy(variantData.files ?? [], packageData.files ?? [], file => file.path)
-
-  if (files.length) {
-    variantInfo.files = files.map(file => ({ ...file, path: toPosix(file.path) }))
-  }
-
-  const images = union(variantData.images ?? [], packageData.images ?? [])
-
-  if (images.length) {
-    variantInfo.images = images
-  }
-
-  const logs = variantData.logs ?? packageData.logs
-
-  if (logs) {
-    variantInfo.logs = logs
-  }
-
-  const lots = mapValues(
-    {
-      ...packageData.lots,
-      ...mapValues(variantData.lots ?? {}, (lots, file) => ({
-        ...packageData.lots?.[file],
-        ...lots,
-      })),
-    },
-    (lots, file) => mapValues(lots, (data, id) => loadLotInfo(file, id, data)),
-  )
-
-  if (!isEmpty(lots)) {
-    variantInfo.lots = lots
-  }
-
-  const mmps = unionBy(variantData.mmps ?? [], packageData.mmps ?? [], mmp => mmp.id)
-
-  if (mmps.length) {
-    variantInfo.mmps = mmps.map(mmp =>
-      mmp.category ? { categories: parseCategory(mmp.category, categories), ...mmp } : mmp,
-    )
-  }
-
-  const optionalDependencies = union(variantData.optional ?? [], packageData.optional ?? [])
-
-  if (optionalDependencies.length) {
-    variantInfo.optional = optionalDependencies
-  }
-
-  const options = unionBy(
-    mapDefined(variantData.options ?? [], loadOptionInfo),
-    mapDefined(packageData.options ?? [], loadOptionInfo),
-    option => option.id,
-  )
-
-  if (options.length) {
-    variantInfo.options = options
-  }
-
-  const propFamilies = mapValues(
-    {
-      ...packageData.propFamilies,
-      ...mapValues(variantData.propFamilies ?? {}, (families, file) => ({
-        ...packageData.propFamilies?.[file],
-        ...families,
-      })),
-    },
-    (families, file) => mapValues(families, (data, id) => loadFamilyInfo(file, id, data)),
-  )
-
-  if (!isEmpty(propFamilies)) {
-    variantInfo.propFamilies = propFamilies
-  }
-
-  const props = mapValues(
-    {
-      ...packageData.props,
-      ...mapValues(variantData.props ?? {}, (props, file) => ({
-        ...packageData.props?.[file],
-        ...props,
-      })),
-    },
-    (props, file) => mapValues(props, (data, id) => loadPropInfo(file, id, data)),
-  )
-
-  if (!isEmpty(props)) {
-    variantInfo.props = props
-  }
-
-  const readme = variantData.readme ?? packageData.readme
-
-  if (readme) {
-    variantInfo.readme = readme
-  }
-
-  const release = variantData.release ?? packageData.release
-
-  if (release) {
-    variantInfo.release = release.toISOString()
-  }
-
-  if (isNew(variantInfo)) {
-    variantInfo.new = true
-  }
-
-  const repository = variantData.repository ?? packageData.repository
-
-  if (repository) {
-    variantInfo.repository = repository
-  }
-
-  const requirements = { ...packageData.requirements, ...variantData.requirements }
-
-  if (!isEmpty(requirements)) {
-    variantInfo.requirements = requirements
-  }
-
-  const summary = variantData.summary ?? packageData.summary
-
-  if (summary) {
-    variantInfo.summary = summary
-  }
-
-  const support = variantData.support ?? packageData.support
-
-  if (support) {
-    variantInfo.support = support
-  }
-
-  const thumbnail = variantData.thumbnail ?? packageData.thumbnail
-
-  if (thumbnail) {
-    variantInfo.thumbnail = thumbnail
-  }
-
-  const url = variantData.url ?? packageData.url
-
-  if (url) {
-    variantInfo.url = url
-  }
-
-  const warnings = union(variantData.warnings ?? [], packageData.warnings ?? [])
-
-  if (warnings.length) {
-    variantInfo.warnings = warnings
-  }
-
-  if (variantInfo.mmps && !variantInfo.options?.some(option => option.id === MMPS_OPTION_ID)) {
-    variantInfo.options ??= []
-
-    variantInfo.options.unshift({
-      choices: variantInfo.mmps.map(mmp => ({
-        condition: mmp.requirements,
-        description: mmp.description,
-        label: mmp.label,
-        value: mmp.id,
-      })),
-      default: variantInfo.mmps.filter(mmp => mmp.default !== false).map(mmp => mmp.id),
-      display: "checkbox",
-      id: MMPS_OPTION_ID,
-      multi: true,
-      section: "MMPs", // TODO: i18n?
-      type: OptionType.STRING,
-    })
-  }
-
-  return variantInfo
 }
 
 /**
@@ -668,70 +303,6 @@ function mergeLocalPackageInfo(
   }
 
   return localPackageInfo
-}
-
-export function loadBuildingInfo(
-  file: string,
-  id: string,
-  data: BuildingData,
-  categories: Categories,
-): BuildingInfo {
-  const { category, menu, model, submenu, ...others } = data
-  return {
-    categories: category ? parseCategory(category, categories) : undefined,
-    file,
-    id,
-    menu: menu ? parseMenu(menu) : undefined,
-    submenus: submenu ? parseMenus(submenu) : undefined,
-    ...others,
-  }
-}
-
-export function loadFamilyInfo(file: string, id: string, data: FamilyData): FamilyInfo {
-  return { file, id, ...data }
-}
-
-export function loadLotInfo(file: string, id: string, data: LotData): LotInfo {
-  const { density, props, textures, ...others } = data
-  return {
-    density: density ? parseEnumList(density, ZoneDensity, true) : undefined,
-    file,
-    id,
-    ...others,
-  }
-}
-
-export function loadPropInfo(file: string, id: string, data: PropData): PropInfo {
-  const { model, ...others } = data
-  return { file, id, ...others }
-}
-
-export function writeBuildingInfo(building: BuildingInfo): BuildingData {
-  const { categories, file, id, menu, submenus, ...others } = building
-  return {
-    category: categories?.join(","),
-    menu: menu ? writeMenu(menu) : undefined,
-    submenu: submenus?.length ? writeMenus(submenus) : undefined,
-    ...others,
-  }
-}
-
-export function writeFamilyInfo(building: FamilyInfo): FamilyData {
-  const { file, id, ...others } = building
-  return others
-}
-
-export function writeLotInfo(lot: LotInfo): LotData {
-  const { density, file, id, ...others } = lot
-  return {
-    density: density?.length === 3 ? "all" : density?.join(","),
-    ...others,
-  }
-}
-
-export function writePropInfo(prop: PropInfo): PropData {
-  const { file, id, ...others } = prop
-  return others
 }
 
 export function toPackageData(packageInfo: PackageInfo): PackageData {

@@ -11,11 +11,13 @@ import {
   values,
 } from "@salinco/nice-utils"
 
-import type { BuildingData } from "@common/buildings"
 import { CategoryID } from "@common/categories"
 import { ExemplarPropertyID } from "@common/exemplars"
-import { Menu, Submenu, writeMenu, writeMenus } from "@common/submenus"
+import { Menu, type MenuID, Submenu } from "@common/submenus"
+import type { BuildingData } from "@node/data/buildings"
+import { writeMenu, writeMenus } from "@node/data/submenus"
 
+import type { FamilyID } from "@common/families"
 import {
   BudgetItemDepartment,
   DemandID,
@@ -82,7 +84,7 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
 
   const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
   if (familyId !== undefined) {
-    data.family = toHex(familyId, 8)
+    data.family = toHex(familyId, 8) as FamilyID
   }
 
   const worth = get(exemplar, ExemplarPropertyID.BuildingValue)
@@ -429,12 +431,12 @@ function getCategories(exemplar: Exemplar): CategoryID[] {
 }
 
 // Looking to match implementation from https://github.com/memo33/submenus-dll/blob/1.1.4/src/Categorization.cpp
-function getSubmenus(exemplar: Exemplar): number[] {
+function getSubmenus(exemplar: Exemplar): MenuID[] {
   const submenus = getArray(exemplar, ExemplarPropertyID.BuildingSubmenus) ?? []
 
   // If any submenus are explicit set, return those directly
   if (submenus.length) {
-    return submenus
+    return submenus as MenuID[]
   }
 
   // Otherwise, infer from group and other relevant building data
@@ -653,5 +655,5 @@ function getSubmenus(exemplar: Exemplar): number[] {
     submenus.push(Menu.Rewards)
   }
 
-  return submenus
+  return submenus as MenuID[]
 }

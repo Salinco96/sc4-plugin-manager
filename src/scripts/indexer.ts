@@ -23,7 +23,7 @@ import {
 import { config } from "dotenv"
 import { glob } from "glob"
 
-import type { AssetData, AssetID } from "@common/assets"
+import type { AssetID } from "@common/assets"
 import type { AuthorData, AuthorID } from "@common/authors"
 import {
   type ExemplarPropertyData,
@@ -31,12 +31,16 @@ import {
   ExemplarValueType,
 } from "@common/exemplars"
 import { type PackageID, getOwnerId } from "@common/packages"
-import { ConfigFormat, type PackageData } from "@common/types"
+import { ConfigFormat } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
-import type { ContentsData, FileInfo } from "@common/variants"
-import type { VariantData, VariantID } from "@common/variants"
+import type { FileInfo } from "@common/variants"
+import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
+import type { AssetData } from "@node/data/assets"
+import type { PackageData } from "@node/data/packages"
+import type { ContentsData } from "@node/data/variants"
+import type { VariantData } from "@node/data/variants"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
@@ -207,7 +211,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           assetId,
           authors: githubUserId ? [githubUserId] : undefined,
           download: asset.url,
-          lastModified: asset.lastModified ?? now,
+          lastModified: new Date(asset.lastModified ?? now),
           version: String(asset.version),
         }
 
