@@ -84,45 +84,49 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
         </Text>
       )}
 
-      {packageInfo.features && (
+      {!!packageInfo.features?.length && (
         <Typography variant="body2">
           <b>{`${t("features")}: `}</b>
           {packageInfo.features.map(feature => getFeatureLabel(t, feature)).join(", ")}
         </Typography>
       )}
 
-      <>
-        <Typography variant="body2">
-          <b>{`${t("credits")}: `}</b>
-        </Typography>
-        <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
-          {collect(variantInfo.credits, (reason, authorId) => (
-            <Typography component="li" key={authorId} variant="body2">
-              <Link
-                onClick={() => openAuthorView(authorId)}
-                sx={{ cursor: "pointer" }}
-                title="View author"
-              >
-                {getAuthorName(authorId, authors)}
-              </Link>
-              {reason && ` - ${reason}`}
-            </Typography>
-          ))}
-        </ul>
-      </>
+      {!!variantInfo.credits?.length && (
+        <>
+          <Typography variant="body2">
+            <b>{`${t("credits")}: `}</b>
+          </Typography>
+          <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
+            {variantInfo.credits.map(({ id, text }) => (
+              <Typography component="li" key={id ?? text} variant="body2">
+                {id && (
+                  <Link onClick={() => openAuthorView(id)} sx={{ cursor: "pointer" }}>
+                    {getAuthorName(id, authors)}
+                  </Link>
+                )}
+                {id && text && " - "}
+                {text}
+              </Typography>
+            ))}
+          </ul>
+        </>
+      )}
 
-      {variantInfo.thanks && !isEmpty(variantInfo.thanks) && (
+      {!!variantInfo.thanks?.length && (
         <>
           <Typography variant="body2">
             <b>{`${t("thanks")}: `}</b>
           </Typography>
           <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
-            {collect(variantInfo.thanks, (reason, authorId) => (
-              <Typography component="li" key={authorId} variant="body2">
-                <Link onClick={() => openAuthorView(authorId)} sx={{ cursor: "pointer" }}>
-                  {getAuthorName(authorId, authors)}
-                </Link>
-                {reason && ` - ${reason}`}
+            {variantInfo.thanks.map(({ id, text }) => (
+              <Typography component="li" key={id ?? text} variant="body2">
+                {id && (
+                  <Link onClick={() => openAuthorView(id)} sx={{ cursor: "pointer" }}>
+                    {getAuthorName(id, authors)}
+                  </Link>
+                )}
+                {id && text && " - "}
+                {text}
               </Typography>
             ))}
           </ul>

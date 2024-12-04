@@ -1,16 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import {
-  collect,
-  filterValues,
-  forEach,
-  isEmpty,
-  keys,
-  mapValues,
-  size,
-  values,
-} from "@salinco/nice-utils"
+import { collect, forEach, isEmpty, keys, size, values } from "@salinco/nice-utils"
 import { glob } from "glob"
 
 import type { AssetID, Assets } from "@common/assets"
@@ -27,10 +18,6 @@ import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
-import { writeBuildingInfo } from "@node/data/buildings"
-import { writeFamilyInfo } from "@node/data/families"
-import { writeLotInfo } from "@node/data/lots"
-import { writePropInfo } from "@node/data/props"
 import { loadAssetInfo } from "./assets"
 
 /**
@@ -123,13 +110,18 @@ async function loadLocalPackageInfo(
     // ~ is reserved for special folders, e.g. ~docs
     if (entry.isDirectory() && !entry.name.startsWith("~")) {
       const variantId = entry.name as VariantID
-      const variantInfo = loadVariantInfo(packageId, variantId, packageData, categories)
-      packageInfo.variants[variantId] = variantInfo
-      variantInfo.installed = true
 
-      const docsPath = DIRNAMES.docs
-      if (await exists(path.join(packagePath, entry.name, docsPath))) {
-        variantInfo.docs = docsPath
+      try {
+        const variantInfo = loadVariantInfo(packageId, variantId, packageData, categories)
+        packageInfo.variants[variantId] = variantInfo
+        variantInfo.installed = true
+
+        const docsPath = DIRNAMES.docs
+        if (await exists(path.join(packagePath, entry.name, docsPath))) {
+          variantInfo.docs = docsPath
+        }
+      } catch (error) {
+        console.error(`Error loading variant '${packageId}#${variantId}'`, error)
       }
     }
   }
@@ -242,8 +234,12 @@ function loadRemotePackageInfo(
     for (const variantId of keys(packageData.variants)) {
       // Skip disabled variants
       if (!packageData.variants[variantId]?.disabled) {
-        const variantInfo = loadVariantInfo(packageId, variantId, packageData, categories)
-        packageInfo.variants[variantId] = variantInfo
+        try {
+          const variantInfo = loadVariantInfo(packageId, variantId, packageData, categories)
+          packageInfo.variants[variantId] = variantInfo
+        } catch (error) {
+          console.error(`Error loading variant '${packageId}#${variantId}'`, error)
+        }
       }
     }
   }
@@ -303,60 +299,4 @@ function mergeLocalPackageInfo(
   }
 
   return localPackageInfo
-}
-
-export function toPackageData(packageInfo: PackageInfo): PackageData {
-  return {
-    features: packageInfo.features?.length ? packageInfo.features : undefined,
-    name: packageInfo.name,
-    variants: mapValues(
-      filterValues(packageInfo.variants, variant => !!variant.installed),
-      variant => ({
-        authors: variant.authors,
-        buildingFamilies: variant.buildingFamilies
-          ? mapValues(variant.buildingFamilies, families => mapValues(families, writeFamilyInfo))
-          : undefined,
-        buildings: variant.buildings
-          ? mapValues(variant.buildings, buildings => mapValues(buildings, writeBuildingInfo))
-          : undefined,
-        category: variant.categories.join(","),
-        credits: variant.credits,
-        dependencies: variant.dependencies?.length ? variant.dependencies : undefined,
-        deprecated: variant.deprecated,
-        description: variant.description,
-        experimental: variant.experimental,
-        files: variant.files,
-        images: variant.images,
-        lastModified: variant.lastModified ? new Date(variant.lastModified) : undefined,
-        logs: variant.logs,
-        lots: variant.lots
-          ? mapValues(variant.lots, lots => mapValues(lots, writeLotInfo))
-          : undefined,
-        mmps: variant.mmps?.map(({ categories, ...mmp }) => ({
-          category: categories?.join(","),
-          ...mmp,
-        })),
-        name: variant.name,
-        optional: variant.optional,
-        options: variant.options,
-        propFamilies: variant.propFamilies
-          ? mapValues(variant.propFamilies, families => mapValues(families, writeFamilyInfo))
-          : undefined,
-        props: variant.props
-          ? mapValues(variant.props, props => mapValues(props, writePropInfo))
-          : undefined,
-        readme: variant.readme,
-        release: variant.release ? new Date(variant.release) : undefined,
-        repository: variant.repository,
-        requirements: variant.requirements,
-        summary: variant.summary,
-        support: variant.support,
-        thanks: variant.thanks,
-        thumbnail: variant.thumbnail,
-        url: variant.url,
-        version: variant.version,
-        warnings: variant.warnings,
-      }),
-    ),
-  }
 }

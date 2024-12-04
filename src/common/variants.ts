@@ -65,7 +65,7 @@ export interface BaseVariantInfo extends ContentsInfo {
   assets?: VariantAssetInfo[]
   authors: AuthorID[]
   categories: CategoryID[]
-  credits: { [authorId in AuthorID]?: string | null }
+  credits?: { id?: AuthorID; text?: string }[]
   dependencies?: DependencyInfo[]
   deprecated?: boolean | PackageID
   description?: string
@@ -88,7 +88,7 @@ export interface BaseVariantInfo extends ContentsInfo {
   requirements?: Requirements
   summary?: string
   support?: string
-  thanks?: { [authorId in AuthorID]?: string | null }
+  thanks?: { id?: AuthorID; text?: string }[]
   thumbnail?: string
   url?: string
   version: string

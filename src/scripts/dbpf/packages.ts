@@ -3,10 +3,9 @@ import path from "node:path"
 import {
   difference,
   forEach,
-  generate,
   groupBy,
-  isEmpty,
   isString,
+  mapDefined,
   matchGroups,
   remove,
   union,
@@ -20,7 +19,7 @@ import { type PackageID, getOwnerId } from "@common/packages"
 import { parseStringArray, toLowerCase } from "@common/utils/types"
 import type { VariantID } from "@common/variants"
 import type { PackageData } from "@node/data/packages"
-import type { FileData } from "@node/data/variants"
+import { type FileData, loadCredits } from "@node/data/variants"
 import { getExtension } from "@node/files"
 
 import type { IndexerEntry, IndexerSource } from "../types"
@@ -160,7 +159,6 @@ export function writePackageData(
   }
 
   packageData.category ??= Array.from(categories).join(",")
-
   packageData.name ??= entry.name
 
   const newVersion = `${major}.${minor ?? 0}.${patch ?? 0}`
@@ -182,14 +180,12 @@ export function writePackageData(
 
     const packageCredits = {
       ...packageData.credits,
-      ...generate(
-        authors.filter(
-          authorId =>
-            authorId !== ownerId &&
-            packageData.credits?.[authorId] !== undefined &&
-            packageData.thanks?.[authorId] !== undefined,
+      ...difference(
+        authors,
+        mapDefined(
+          [packageData.credits ?? [], packageData.thanks ?? []].flatMap(loadCredits),
+          credit => credit.id,
         ),
-        authorId => [authorId, null],
       ),
     }
 
@@ -207,7 +203,7 @@ export function writePackageData(
     const packageImages = union(entry.images ?? [], packageData.images ?? [])
 
     packageData.authors = packageAuthors.length ? packageAuthors : undefined
-    packageData.credits = !isEmpty(packageCredits) ? packageCredits : undefined
+    packageData.credits = packageCredits.length ? packageCredits : undefined
     packageData.dependencies = packageDependencies.length ? packageDependencies.sort() : undefined
     packageData.description = packageDescription
     packageData.features = packageFeatures.length ? packageFeatures.sort() : undefined
@@ -235,17 +231,18 @@ export function writePackageData(
     )
 
     const variantCredits = {
-      ...variantData.credits,
-      ...generate(
-        authors.filter(
-          authorId =>
-            authorId !== ownerId &&
-            packageData.credits?.[authorId] !== undefined &&
-            packageData.thanks?.[authorId] !== undefined &&
-            variantData.credits?.[authorId] !== undefined &&
-            variantData.thanks?.[authorId] !== undefined,
+      ...packageData.credits,
+      ...difference(
+        authors,
+        mapDefined(
+          [
+            packageData.credits ?? [],
+            packageData.thanks ?? [],
+            variantData.credits ?? [],
+            variantData.thanks ?? [],
+          ].flatMap(loadCredits),
+          credit => credit.id,
         ),
-        authorId => [authorId, null],
       ),
     }
 
@@ -262,7 +259,7 @@ export function writePackageData(
     )
 
     variantData.authors = variantAuthors.length ? variantAuthors : undefined
-    variantData.credits = !isEmpty(variantCredits) ? variantCredits : undefined
+    variantData.credits = variantCredits.length ? variantCredits : undefined
     variantData.dependencies = variantDependencies.length ? variantDependencies.sort() : undefined
     variantData.description = variantDescription
     variantData.images = variantImages.length ? variantImages : undefined

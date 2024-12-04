@@ -96,6 +96,7 @@ import type { LotID } from "@common/lots"
 import type { PropID } from "@common/props"
 import { loadBuildingInfo } from "@node/data/buildings"
 import { loadLotInfo } from "@node/data/lots"
+import { writePackageInfo } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
@@ -109,12 +110,7 @@ import {
   loadProfileOptions,
   loadProfileTemplates,
 } from "./data/db"
-import {
-  loadDownloadedAssets,
-  loadLocalPackages,
-  loadRemotePackages,
-  toPackageData,
-} from "./data/packages"
+import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./data/packages"
 import { getDefaultVariant, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { loadSettings, toSettingsData } from "./data/settings"
@@ -2995,7 +2991,7 @@ export class Application {
     await writeConfig<PackageData>(
       this.getPackagePath(packageInfo.id),
       FILENAMES.packageConfig,
-      toPackageData(packageInfo),
+      writePackageInfo(packageInfo),
       ConfigFormat.YAML,
       packageInfo.format,
     )

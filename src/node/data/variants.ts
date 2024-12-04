@@ -7,11 +7,11 @@ import { type PackageID, getOwnerId, isNew } from "@common/packages"
 import type { MMPData, PackageWarning } from "@common/types"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
 import type { DependencyInfo, VariantAssetInfo, VariantID, VariantInfo } from "@common/variants"
-import { type BuildingData, loadBuildingInfo } from "./buildings"
-import { type FamilyData, loadFamilyInfo } from "./families"
-import { type LotData, loadLotInfo } from "./lots"
+import { type BuildingData, loadBuildingInfo, writeBuildingInfo } from "./buildings"
+import { type FamilyData, loadFamilyInfo, writeFamilyInfo } from "./families"
+import { type LotData, loadLotInfo, writeLotInfo } from "./lots"
 import { type OptionData, loadOptionInfo } from "./options"
-import { type PropData, loadPropInfo } from "./props"
+import { type PropData, loadPropInfo, writePropInfo } from "./props"
 
 import type { BuildingID } from "@common/buildings"
 import { type Categories, CategoryID } from "@common/categories"
@@ -20,7 +20,6 @@ import type { LotID } from "@common/lots"
 import type { PropID } from "@common/props"
 import { toPosix } from "@node/files"
 import {
-  generate,
   isEmpty,
   isString,
   mapDefined,
@@ -50,9 +49,10 @@ export interface VariantData extends ContentsData {
 
   category?: MaybeArray<string>
 
-  credits?: {
-    [authorId in AuthorID]?: string | null
-  }
+  /**
+   * List of credits
+   */
+  credits?: Array<AuthorID | string | { [authorId in AuthorID]: string }>
 
   /**
    * List of required dependencies
@@ -168,9 +168,10 @@ export interface VariantData extends ContentsData {
    */
   support?: string
 
-  thanks?: {
-    [authorId in AuthorID]?: string | null
-  }
+  /**
+   * List of thanks, potentially with a reason for each user
+   */
+  thanks?: Array<AuthorID | string | { [authorId in AuthorID]: string }>
 
   /**
    * URL to a thumbnail
@@ -386,9 +387,6 @@ function loadDependencyInfo(data: DependencyData | PackageID): DependencyInfo {
   }
 }
 
-/**
- * Loads a variant from a package configuration.
- */
 export function loadVariantInfo(
   packageId: PackageID,
   variantId: VariantID,
@@ -409,17 +407,9 @@ export function loadVariantInfo(
     ...parseStringArray(variantData.authors ?? []),
   ] as AuthorID[])
 
-  const credits: VariantInfo["credits"] = {
-    ...generate(authors, authorId => [authorId, null]),
-    [ownerId]: "Original author",
-    ...packageData.credits,
-    ...variantData.credits,
-  }
-
   const variantInfo: VariantInfo = {
     authors,
     categories: subcategories,
-    credits,
     id: variantId,
     name: variantData.name ?? variantId,
     priority,
@@ -465,6 +455,16 @@ export function loadVariantInfo(
 
   if (!isEmpty(buildings)) {
     variantInfo.buildings = buildings
+  }
+
+  const credits = unionBy(
+    loadCredits(variantData.credits ?? []),
+    loadCredits(packageData.credits ?? []),
+    credit => credit.id ?? credit.text,
+  )
+
+  if (credits.length) {
+    variantInfo.credits = credits
   }
 
   const dependencies = unionBy(
@@ -622,6 +622,16 @@ export function loadVariantInfo(
     variantInfo.support = support
   }
 
+  const thanks = unionBy(
+    loadCredits(variantData.thanks ?? []),
+    loadCredits(packageData.thanks ?? []),
+    thank => thank.id ?? thank.text,
+  )
+
+  if (thanks.length) {
+    variantInfo.thanks = thanks
+  }
+
   const thumbnail = variantData.thumbnail ?? packageData.thumbnail
 
   if (thumbnail) {
@@ -641,4 +651,82 @@ export function loadVariantInfo(
   }
 
   return variantInfo
+}
+
+export function writeVariantInfo(variantInfo: VariantInfo): VariantData {
+  return {
+    authors: variantInfo.authors,
+    buildingFamilies: variantInfo.buildingFamilies
+      ? mapValues(variantInfo.buildingFamilies, families => mapValues(families, writeFamilyInfo))
+      : undefined,
+    buildings: variantInfo.buildings
+      ? mapValues(variantInfo.buildings, buildings => mapValues(buildings, writeBuildingInfo))
+      : undefined,
+    category: variantInfo.categories.join(","),
+    credits: variantInfo.credits?.length ? writeCredits(variantInfo.credits) : undefined,
+    dependencies: variantInfo.dependencies?.length ? variantInfo.dependencies : undefined,
+    deprecated: variantInfo.deprecated,
+    description: variantInfo.description,
+    experimental: variantInfo.experimental,
+    files: variantInfo.files,
+    images: variantInfo.images,
+    lastModified: variantInfo.lastModified ? new Date(variantInfo.lastModified) : undefined,
+    logs: variantInfo.logs,
+    lots: variantInfo.lots
+      ? mapValues(variantInfo.lots, lots => mapValues(lots, writeLotInfo))
+      : undefined,
+    mmps: variantInfo.mmps?.map(({ categories, ...mmp }) => ({
+      category: categories?.join(","),
+      ...mmp,
+    })),
+    name: variantInfo.name,
+    optional: variantInfo.optional,
+    options: variantInfo.options,
+    propFamilies: variantInfo.propFamilies
+      ? mapValues(variantInfo.propFamilies, families => mapValues(families, writeFamilyInfo))
+      : undefined,
+    props: variantInfo.props
+      ? mapValues(variantInfo.props, props => mapValues(props, writePropInfo))
+      : undefined,
+    readme: variantInfo.readme,
+    release: variantInfo.release ? new Date(variantInfo.release) : undefined,
+    repository: variantInfo.repository,
+    requirements: variantInfo.requirements,
+    summary: variantInfo.summary,
+    support: variantInfo.support,
+    thanks: variantInfo.thanks?.length ? writeCredits(variantInfo.thanks) : undefined,
+    thumbnail: variantInfo.thumbnail,
+    url: variantInfo.url,
+    version: variantInfo.version,
+    warnings: variantInfo.warnings,
+  }
+}
+
+export function loadCredits(
+  credits: Array<AuthorID | string | { [authorId in AuthorID]: string }>,
+): { id?: AuthorID; text?: string }[] {
+  return credits.map(credit => {
+    if (isString(credit)) {
+      if (credit.match(/^\S+$/)) {
+        return { id: credit.toLowerCase() as AuthorID }
+      }
+
+      return { text: credit }
+    }
+
+    const [id, text] = Object.entries(credit)[0]
+    return { id: id.toLowerCase() as AuthorID, text }
+  })
+}
+
+function writeCredits(
+  credits: { id?: AuthorID; text?: string }[],
+): Array<AuthorID | string | { [authorId in AuthorID]: string }> {
+  return mapDefined(credits, credit => {
+    if (credit.id && credit.text) {
+      return { [credit.id]: credit.text }
+    }
+
+    return credit.id ?? credit.text
+  })
 }

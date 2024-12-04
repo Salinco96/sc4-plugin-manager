@@ -39,7 +39,7 @@ import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import type { AssetData } from "@node/data/assets"
 import type { PackageData } from "@node/data/packages"
-import type { ContentsData } from "@node/data/variants"
+import { type ContentsData, loadCredits } from "@node/data/variants"
 import type { VariantData } from "@node/data/variants"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -80,7 +80,7 @@ const dataAssetsDir = path.join(dataDir, "assets")
 const dataDownloadsDir = getEnvRequired("INDEXER_DOWNLOADS_PATH")
 const dataDownloadsTempDir = getEnvRequired("INDEXER_DOWNLOADS_TEMP_PATH")
 const gameDir = getEnvRequired("INDEXER_GAME_PATH")
-;("D:\\Program Files (x86)\\Steam\\steamapps\\common\\SimCity 4 Deluxe")
+
 const dbDir = path.join(__dirname, "../../sc4-plugin-manager-data")
 const dbAssetsDir = path.join(dbDir, "assets")
 const dbPackagesDir = path.join(dbDir, "packages")
@@ -453,20 +453,20 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
     }
 
-    const authorIds = unique([
-      getOwnerId(packageId),
-      ...keys(variantData.credits ?? {}),
-      ...keys(variantData.thanks ?? {}),
+    const credits = unique([
+      { id: getOwnerId(packageId) },
+      ...loadCredits(variantData.credits ?? []),
+      ...loadCredits(variantData.thanks ?? []),
     ])
 
-    for (const authorId of authorIds) {
-      if (!dbAuthors[authorId]) {
-        if (await promptYesNo(`Create author ${authorId}?`, true)) {
-          dbAuthors[authorId] = {
-            name: await promptAuthorName(authorId),
+    for (const credit of credits) {
+      if (credit.id && !dbAuthors[credit.id]) {
+        if (await promptYesNo(`Create author ${credit.id}?`, true)) {
+          dbAuthors[credit.id] = {
+            name: await promptAuthorName(credit.id),
           }
         } else {
-          errors.add(`${prefix} - Author ${authorId} does not exist`)
+          errors.add(`${prefix} - Author ${credit.id} does not exist`)
         }
       }
     }
