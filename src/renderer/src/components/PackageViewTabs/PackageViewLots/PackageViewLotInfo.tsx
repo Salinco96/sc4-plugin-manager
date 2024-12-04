@@ -26,6 +26,7 @@ export interface PackageViewLotInfoProps {
   isCompatible: boolean
   isEnabled: boolean
   isTogglable: boolean
+  isToggleHidden: boolean
   lot: LotInfo
   packageId: PackageID
   setEnabled: (isEnabled: boolean) => void
@@ -35,6 +36,7 @@ export function PackageViewLotInfo({
   isCompatible,
   isEnabled,
   isTogglable,
+  isToggleHidden,
   lot,
   packageId,
   setEnabled,
@@ -45,9 +47,10 @@ export function PackageViewLotInfo({
   const variantInfo = useCurrentVariant(packageId)
 
   const fileInfo = variantInfo.files?.find(file => file.path === lot.file)
-  const maxisLot = exemplars.lots[lot.id]
 
-  const isMaxisOverride = maxisLot !== undefined && lot.file !== "SimCity_1.dat"
+  const isDisabled = (isTogglable && !isEnabled) || !isCompatible
+  const isMaxisLot = !!exemplars.lots[lot.id]
+  const isMaxisOverride = isMaxisLot && lot.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 
   const [lotPicture, setLotPicture] = useState<string>()
@@ -83,7 +86,12 @@ export function PackageViewLotInfo({
   const images = lot.images?.length ? lot.images : lotPicture ? [lotPicture] : undefined
 
   return (
-    <FlexBox id={`lot-${lot.id}`} direction="column" gap={2}>
+    <FlexBox
+      color={isDisabled ? "rgba(0, 0, 0, 0.38)" : undefined}
+      id={`lot-${lot.id}`}
+      direction="column"
+      gap={2}
+    >
       <FlexBox alignItems="center">
         {images && <ImageViewerThumbnail images={images} mr={2} mt={1} size={84} />}
 
@@ -101,7 +109,7 @@ export function PackageViewLotInfo({
           <ExemplarRef file={lot.file} id={lot.id} />
         </FlexBox>
 
-        {isTogglable && (
+        {isTogglable && !isToggleHidden && (
           <FlexBox alignSelf="start">
             <Checkbox
               icon={isCompatible ? undefined : <IncompatibleIcon />}

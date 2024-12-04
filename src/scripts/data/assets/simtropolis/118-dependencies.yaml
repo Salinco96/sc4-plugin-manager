@@ -13469,13 +13469,22 @@ assets:
     assetId: simtropolis/33702-vip-trees-as-props
     authors:
       - '11241036'
+    buildings:
+      Testlot VIP Orange Trees_ec1d2367.SC4Lot:
+        ec1d2367:
+          bulldoze: 1
+          cost: 1
+          flamability: 10
+          label: Testlot VIP Orange Trees
+          menu: Parks
+          name: Testlot VIP Orange Trees
     category: 118-dependencies
     dependencies:
       - simtropolis/27001-vip-orange-aesculus
       - simtropolis/27008-vip-orange-fagus
-      - simtropolis/27064-discontinued-vip-rural-pack-expansion01-discontinued-see-below
+      - simtropolis/26806-vip-rural-pack-v2
       - simtropolis/28847-vip-orange-pinus-nigra-v2
-    description: "<body>\n                            \n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\n<p>\n\t<strong>Short Description:</strong><br>\n\tThis cascading dependency package turns a few <abbr title=\"Mayor Mode Ploppable\">MMP</abbr> trees released by the VIP team, mostly Orange, into props for your lot editing pleasure, since the original doesn't include prop exemplars. This will expand your lotting possibilities, as they can now be parts of the prop variation technique, and most of them are available as a seasonal variation.<br>\n\tThis package only contains props, nothing else - to obtain the models, please download the dependencies listed below.\n</p>\n\n<p>\n\t<u>Names in the Lot Editor:</u>\n</p>\n\n<ul>\n\t<li>\n\t\tAesculus: Orange_Aesculus_... (letters ranking from A to F)\n\t</li>\n\t<li>\n\t\tFagus: Orange_Fagus_... (letters ranking from A to E)\n\t</li>\n\t<li>\n\t\tPinus Nigra: Or_TSC_FL_Pinus Nigra... (letters ranking from A to E)\n\t</li>\n\t<li>\n\t\tCherry: VIP_Cherry... (only 1 version)\n\t</li>\n\t<li>\n\t\tAll other: VIP_Tree1... (numbers ranking from 1 to 7)\n\t</li>\n</ul>\n\n<p>\n\tFor further information, please refer to the Readme in the download.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"color:#f39c12;\"><strong>Dependencies:</strong></span><br>\n\tThis is a cascading dependency – it thus requires the subsequently mentioned dependencies to be installed, lest you will only see a lot of brown boxes in your cities and nothing at all in the Lot Editor. All of these dependencies are adding a few Mayor Mode ploppable trees to your menu.<br>\n\t<strong>Aesculus <abbr title=\"Mayor Mode Ploppable\">MMP</abbr> Seasonal Flora:</strong> <a href=\"https://community.simtropolis.com/files/file/27001-aesculus-mmpseasonal-flora/\" rel=\"\">https://community.simtropolis.com/files/file/27001-aesculus-mmpseasonal-flora/</a><br>\n\t<strong>VIP orange Fagus <abbr title=\"Mayor Mode Ploppable\">MMP</abbr> Seasonal Flora:</strong> <a href=\"https://community.simtropolis.com/files/file/27008-vip-orange-fagus-mmpseasonal-flora/\" rel=\"\">https://community.simtropolis.com/files/file/27008-vip-orange-fagus-mmpseasonal-flora/</a><br>\n\t<strong>VIP RuralPack Expansion 1: </strong><a href=\"https://community.simtropolis.com/files/file/27064-vip-ruralpack-expansion1/\" rel=\"\">https://community.simtropolis.com/files/file/27064-vip-ruralpack-expansion1/</a><br>\n\t<strong>Pinus Nigra:</strong> <a href=\"https://community.simtropolis.com/files/file/28847-pinus-nigra/\" rel=\"\">https://community.simtropolis.com/files/file/28847-pinus-nigra/</a>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<strong>Installation:</strong><br>\n\tTo install, please first make sure that you’ve downloaded and installed all dependencies (see above). Then move all files coming with this download into your Plugins folder.<br>\n\tTo uninstall, remove all lots that have props from this download from your cities and then remove these files as well. (You can also remove these files beforehand, this will just give you a lot of brown boxes, which might even facilitate removing lots with these props on them.)\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<strong>Compatibility:</strong><br>\n\tThis plugin should be compatible with all versions of SimCity 4. If not, please feel free to tell me.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<strong>Credits:</strong><br>\n\tCredits go to the VIP people for making these wonderful trees in the first place, which, according to the upload threads, are: Orange, Girafe, Manchou, and Vnaoned.<br>\n\tThe uploading has been kindly permitted by <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/319793-girafe/?do=hovercard\" data-mentionid=\"319793\" href=\"https://community.simtropolis.com/profile/319793-girafe/\" rel=\"\">@Girafe</a>.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Support:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to post issues, bug reports, and suggestions in this thread:</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2740235343\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed\" style=\"height:208px;max-width:502px;\"></iframe>\n\n\t\t\t\t\t\t</body>"
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<strong>Short Description:</strong><br>\n\tThis cascading dependency package turns a few <abbr title=\"Mayor Mode Ploppable\">MMP</abbr> trees released by the VIP team, mostly Orange, into props for your lot editing pleasure, since the original doesn't include prop exemplars. This will expand your lotting possibilities, as they can now be parts of the prop variation technique, and most of them are available as a seasonal variation.<br>\n\tThis package only contains props, nothing else - to obtain the models, please download the dependencies listed below.\n</p>\n\n<p>\n\t<u>Names in the Lot Editor:</u>\n</p>\n\n<ul>\n\t<li>\n\t\tAesculus: Orange_Aesculus_... (letters ranking from A to F)\n\t</li>\n\t<li>\n\t\tFagus: Orange_Fagus_... (letters ranking from A to E)\n\t</li>\n\t<li>\n\t\tPinus Nigra: Or_TSC_FL_Pinus Nigra... (letters ranking from A to E)\n\t</li>\n\t<li>\n\t\tCherry: VIP_Cherry... (only 1 version)\n\t</li>\n\t<li>\n\t\tAll other: VIP_Tree1... (numbers ranking from 1 to 7)\n\t</li>\n</ul>\n\n<p>\n\tFor further information, please refer to the Readme in the download.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"color:#f39c12;\"><strong>Dependencies:</strong></span><br>\n\tThis is a cascading dependency – it thus requires the subsequently mentioned dependencies to be installed, lest you will only see a lot of brown boxes in your cities and nothing at all in the Lot Editor. All of these dependencies are adding a few Mayor Mode ploppable trees to your menu.<br>\n\t<strong>Aesculus <abbr title=\"Mayor Mode Ploppable\">MMP</abbr> Seasonal Flora:</strong> <a href=\"https://community.simtropolis.com/files/file/27001-aesculus-mmpseasonal-flora/\" rel=\"\">https://community.simtropolis.com/files/file/27001-aesculus-mmpseasonal-flora/</a><br>\n\t<strong>VIP orange Fagus <abbr title=\"Mayor Mode Ploppable\">MMP</abbr> Seasonal Flora:</strong> <a href=\"https://community.simtropolis.com/files/file/27008-vip-orange-fagus-mmpseasonal-flora/\" rel=\"\">https://community.simtropolis.com/files/file/27008-vip-orange-fagus-mmpseasonal-flora/</a><br>\n\t<strong>VIP RuralPack Expansion 1: </strong><a href=\"https://community.simtropolis.com/files/file/27064-vip-ruralpack-expansion1/\" rel=\"\">https://community.simtropolis.com/files/file/27064-vip-ruralpack-expansion1/</a><br>\n\t<strong>Pinus Nigra:</strong> <a href=\"https://community.simtropolis.com/files/file/28847-pinus-nigra/\" rel=\"\">https://community.simtropolis.com/files/file/28847-pinus-nigra/</a>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<strong>Installation:</strong><br>\n\tTo install, please first make sure that you’ve downloaded and installed all dependencies (see above). Then move all files coming with this download into your Plugins folder.<br>\n\tTo uninstall, remove all lots that have props from this download from your cities and then remove these files as well. (You can also remove these files beforehand, this will just give you a lot of brown boxes, which might even facilitate removing lots with these props on them.)\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<strong>Compatibility:</strong><br>\n\tThis plugin should be compatible with all versions of SimCity 4. If not, please feel free to tell me.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<strong>Credits:</strong><br>\n\tCredits go to the VIP people for making these wonderful trees in the first place, which, according to the upload threads, are: Orange, Girafe, Manchou, and Vnaoned.<br>\n\tThe uploading has been kindly permitted by <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/319793-girafe/?do=hovercard\" data-mentionid=\"319793\" href=\"https://community.simtropolis.com/profile/319793-girafe/\" rel=\"\">@Girafe</a>.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Support:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to post issues, bug reports, and suggestions in this thread:</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2740235343\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed\" style=\"height:208px;max-width:502px;\"></iframe>\n\n\t\t\t\t\t\t</body>"
     file: VIP Trees as Props.zip
     files:
       - Orange_Aesculus.dat
@@ -13487,9 +13496,294 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2020_07/Screenshot.png.ea441c807b144946f7aca1252218ec3d.png
     lastModified: 2020-07-17T05:25:00.000Z
+    lots:
+      Testlot VIP Orange Trees_ec1d2367.SC4Lot:
+        ec1d2367:
+          building: ec1d2367
+          name: Testlot VIP Orange Trees
+          props:
+            - a490f7e2
+            - d27caea8
+            - 847f682f
+            - 134d17fa
+            - 86fcc11a
+            - 32be80f4
+            - 1e150bbc
+            - 9dce103f
+            - 2676c11a
+            - e1b5e007
+            - 8cebeae7
+            - 3010fee6
+            - d7813195
+            - 8b0104bf
+            - ca8bdb74
+            - 839f3f5f
+            - ad915296
+            - 4bd91623
+            - '11478e51'
+            - 3419023c
+            - c06b8c7b
+            - dba7d312
+            - 61c976dc
+            - 96a707d5
+            - 2a67deae
+            - ae582c0a
+            - 9020633f
+            - c05bcebc
+            - 56b3847b
+            - d32a5a31
+            - 5eb92dee
+            - 4d36549a
+            - 7e89319a
+            - '9e580652'
+            - 31083bf0
+            - 42fd5a58
+            - 0b0b8e4a
+            - 989fbc98
+            - 78464ee5
+            - 4ad90df2
+            - d9ed36b2
+            - 688b78eb
+            - 5bf673ac
+            - '87570384'
+            - bac97696
+            - dac97670
+            - 7ac97662
+            - bac8ed81
+            - 1ac8e9ec
+            - 9291bc7c
+            - c8cb5586
+            - 7d9a283a
+            - 9f13e986
+            - 3541bffc
+            - 10cecf58
+            - d59813c7
+            - d3edfff3
+            - 228825b7
+            - '02516558'
+            - 856e1d94
+            - 5c99c2ad
+            - 82c06641
+            - 09fb8dbf
+            - 1e92ec84
+            - 55fc9759
+            - 87f25b8d
+            - 6e44eb24
+            - 757a84b7
+            - f8445f57
+            - 3b2ba4a3
+            - 0aa6e93b
+            - 1fcbbb64
+            - 901b317a
+            - '87713216'
+            - 26c9f2bd
+            - 3c3aef64
+            - '67176245'
+            - ff7cf43a
+            - 0b4acee9
+            - 946861d1
+            - 4627b061
+          size: 8x7
+          textures:
+            - 251c0000
+    meta:
+      timestamp: 2024-12-03T16:03:49.352Z
+      version: 1
     name: VIP Trees as Props
+    props:
+      Orange_Aesculus.dat:
+        0b0b8e4a:
+          name: Orange_Aesculus_B_Winter
+        2a67deae:
+          name: Orange_Aesculus_E_Winter
+        31083bf0:
+          name: Orange_Aesculus_C_Fall
+        42fd5a58:
+          model: 5ad0e817-fbd1643f-00030000
+          name: Orange_Aesculus_C_Evergreen
+        4ad90df2:
+          model: 5ad0e817-dbd15dd3-00030000
+          name: Orange_Aesculus_B_Evergreen
+        4d36549a:
+          model: 5ad0e817-fbd07936-00030000
+          name: Orange_Aesculus_D_Evergreen
+        56b3847b:
+          name: Orange_Aesculus_D_Winter
+        5bf673ac:
+          name: Orange_Aesculus_A_Fall
+        5eb92dee:
+          name: Orange_Aesculus_D_Fall
+        61c976dc:
+          name: Orange_Aesculus_F_Fall
+        688b78eb:
+          name: Orange_Aesculus_A_Summer
+        78464ee5:
+          name: Orange_Aesculus_B_Fall
+        7e89319a:
+          name: Orange_Aesculus_C_Winter
+        '87570384':
+          model: 5ad0e817-7bd15486-00030000
+          name: Orange_Aesculus_A_Evergreen
+        9020633f:
+          name: Orange_Aesculus_E_Fall
+        96a707d5:
+          model: 5ad0e817-bbd11d02-00030000
+          name: Orange_Aesculus_F_Evergreen
+        989fbc98:
+          name: Orange_Aesculus_B_Summer
+        '9e580652':
+          name: Orange_Aesculus_C_Summer
+        ae582c0a:
+          name: Orange_Aesculus_E_Summer
+        c05bcebc:
+          model: 5ad0e817-bbd0f803-00030000
+          name: Orange_Aesculus_E_Evergreen
+        c06b8c7b:
+          name: Orange_Aesculus_F_Winter
+        d32a5a31:
+          name: Orange_Aesculus_D_Summer
+        d9ed36b2:
+          name: Orange_Aesculus_A_Winter
+        dba7d312:
+          name: Orange_Aesculus_F_Summer
+      Orange_Fagus.dat:
+        '11478e51':
+          name: Orange_Fagus_A_Fall
+        134d17fa:
+          name: Orange_Fagus_D_Fall
+        1e150bbc:
+          name: Orange_Fagus_E_Summer
+        2676c11a:
+          name: Orange_Fagus_C_Winter
+        3010fee6:
+          model: 5ad0e817-1bd914e7-00030000
+          name: Orange_Fagus_C_Evergreen
+        32be80f4:
+          name: Orange_Fagus_E_Winter
+        3419023c:
+          model: 5ad0e817-5bd95aea-00030000
+          name: Orange_Fagus_A_Evergreen
+        4bd91623:
+          name: Orange_Fagus_A_Summer
+        839f3f5f:
+          model: 5ad0e817-fbd9521d-00030000
+          name: Orange_Fagus_B_Evergreen
+        847f682f:
+          name: Orange_Fagus_D_Summer
+        86fcc11a:
+          model: 5ad0e817-7bd85213-00030000
+          name: Orange_Fagus_E_Evergreen
+        8b0104bf:
+          name: Orange_Fagus_B_Summer
+        8cebeae7:
+          name: Orange_Fagus_C_Fall
+        9dce103f:
+          name: Orange_Fagus_E_Fall
+        a490f7e2:
+          model: 5ad0e817-1bd8643a-00030000
+          name: Orange_Fagus_D_Evergreen
+        ad915296:
+          name: Orange_Fagus_A_Winter
+        ca8bdb74:
+          name: Orange_Fagus_B_Fall
+        d27caea8:
+          name: Orange_Fagus_D_Winter
+        d7813195:
+          name: Orange_Fagus_B_Winter
+        e1b5e007:
+          name: Orange_Fagus_C_Summer
+      Orange_PinusNigra.dat:
+        1ac8e9ec:
+          model: 5ad0e817-1a4ba992-00030000
+          name: Or_TSC_FL_PinusNigra01
+        7ac97662:
+          model: 5ad0e817-3a4c2724-00030000
+          name: Or_TSC_FL_PinusNigra03
+        bac8ed81:
+          model: 5ad0e817-ba4bacc6-00030000
+          name: Or_TSC_FL_PinusNigra02
+        bac97696:
+          model: 5ad0e817-1a4c355d-00030000
+          name: Or_TSC_FL_PinusNigra05
+        dac97670:
+          model: 5ad0e817-9a4c327e-00030000
+          name: Or_TSC_FL_PinusNigra04
+      VIPTrees_Props.dat:
+        '02516558':
+          name: VIP_Tree6 Summer
+        09fb8dbf:
+          name: VIP_Tree5 Summer
+        0aa6e93b:
+          name: VIP_Tree3 Summer
+        0b4acee9:
+          name: VIP_Tree1 Summer
+        10cecf58:
+          name: VIP_Tree7 Summer
+        1e92ec84:
+          name: VIP_Tree5 Fall
+        1fcbbb64:
+          name: VIP_Tree3 Fall
+        228825b7:
+          name: VIP_Tree6 Winter
+        26c9f2bd:
+          name: VIP_Tree2 Summer
+        3541bffc:
+          name: VIP_Tree7 Winter
+        3b2ba4a3:
+          name: VIP_Tree3 Winter
+        3c3aef64:
+          name: VIP_Tree2 Fall
+        4627b061:
+          model: 5ad0e817-f8c74a82-00030000
+          name: VIP_Tree1 Evergreen
+        55fc9759:
+          model: 5ad0e817-59734b07-00030000
+          name: VIP_Tree5 Evergreen
+        5c99c2ad:
+          model: 5ad0e817-79787d84-00030000
+          name: VIP_Tree6 Evergreen
+        '67176245':
+          model: 5ad0e817-5978136f-00030000
+          name: VIP_Tree2 Evergreen
+        6e44eb24:
+          name: VIP_Tree4 Summer
+        757a84b7:
+          name: VIP_Tree4 Fall
+        7d9a283a:
+          name: VIP_Cherry Summer
+        82c06641:
+          name: VIP_Tree5 Winter
+        856e1d94:
+          name: VIP_Tree6 Fall
+        '87713216':
+          name: VIP_Tree2 Winter
+        87f25b8d:
+          name: VIP_Tree4 Winter
+        901b317a:
+          model: 5ad0e817-99794909-00030000
+          name: VIP_Tree3 Evergreen
+        9291bc7c:
+          model: 5ad0e817-5978136f-00030000
+          name: VIP_Cherry Evergreen
+        946861d1:
+          name: VIP_Tree1 Fall
+        9f13e986:
+          name: VIP_Cherry Spring
+        c8cb5586:
+          name: VIP_Cherry Winter
+        d3edfff3:
+          model: 5ad0e817-f975baa0-00030000
+          name: VIP_Tree7 Evergreen
+        d59813c7:
+          name: VIP_Tree7 Fall
+        f8445f57:
+          model: 5ad0e817-fa1be3be-00030000
+          name: VIP_Tree4 Evergreen
+        ff7cf43a:
+          name: VIP_Tree1 Winter
     sha256: 170fff5db97f896382ece46b4f499f3567c430e59c22ed353adbe012c2e5c8f4
     size: 127322
+    support: https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_07/Screenshot.thumb.png.69bf35c8a3f02f12421a105c433629ed.png
     timestamp: 2024-08-27T05:49:08.398Z
     uncompressed: 155575

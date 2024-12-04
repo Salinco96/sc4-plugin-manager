@@ -394,8 +394,8 @@ function loadExemplar(
     case "CQZT":
     case "EQZT": {
       const parentCohortRegex =
-        /^ParentCohort=Key:\{0x([0-9a-f]{8}),0x([0-9a-f]{8}),0x([0-9a-f]{8})\}$/
-      const propertyRegex = /^0x([0-9a-f]{8}):\{"(.+)"\}=(\w+):(\d+):\{(.+)\}$/
+        /^ParentCohort=Key:\{0x([0-9a-f]{8}),0x([0-9a-f]{8}),0x([0-9a-f]{8})\}$/i
+      const propertyRegex = /^0x([0-9a-f]{8}):\{"(.+)"\}=(\w+):(\d+):\{(.+)\}$/i
 
       for (const row of bytes.toString().split("\n")) {
         const parentCohortMatch = row.trim().match(parentCohortRegex)

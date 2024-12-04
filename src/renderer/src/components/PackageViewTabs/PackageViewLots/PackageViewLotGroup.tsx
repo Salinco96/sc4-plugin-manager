@@ -47,6 +47,10 @@ export function PackageViewLotGroup({
 
   const togglableLots = lots.filter(isTogglableLot).map(lot => lot.id)
 
+  const isDisabled = !compatibleLots.some(
+    id => !togglableLots.includes(id) || enabledLots.includes(id),
+  )
+
   return (
     <ListItem sx={{ padding: 0 }}>
       <Card
@@ -63,7 +67,8 @@ export function PackageViewLotGroup({
               <PackageViewBuildingInfo
                 building={building}
                 isCompatible={!!compatibleLots.length}
-                isEnabled={containsAll(enabledLots, compatibleLots)}
+                isDisabled={isDisabled}
+                isEnabled={containsAll(enabledLots, togglableLots)}
                 isTogglable={!!togglableLots.length}
                 packageId={packageId}
                 setEnabled={enabled => {
@@ -82,6 +87,7 @@ export function PackageViewLotGroup({
                 familyBuildings={familyBuildings}
                 familyId={familyId}
                 isCompatible={!!compatibleLots.length}
+                isDisabled={isDisabled}
                 isEnabled={containsAll(enabledLots, togglableLots)}
                 isTogglable={!!togglableLots.length}
                 packageId={packageId}
@@ -98,11 +104,12 @@ export function PackageViewLotGroup({
 
           {lots.map((lot, index) => (
             <Fragment key={lot.id}>
-              {(building || buildingFamily || index > 0) && <Divider sx={{ marginY: 2 }} />}
+              {(building || familyId || index > 0) && <Divider sx={{ marginY: 2 }} />}
               <PackageViewLotInfo
                 isCompatible={compatibleLots.includes(lot.id)}
                 isEnabled={enabledLots.includes(lot.id) && compatibleLots.includes(lot.id)}
                 isTogglable={togglableLots.includes(lot.id)}
+                isToggleHidden={lot.file === building?.file}
                 lot={lot}
                 packageId={packageId}
                 setEnabled={enabled => {

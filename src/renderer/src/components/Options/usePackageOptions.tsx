@@ -14,15 +14,21 @@ export function usePackageOptions(packageId: PackageID): OptionInfo[] {
 
   const options =
     variantInfo.options
-      ?.map(option =>
-        option.global
-          ? {
-              ...profileOptions.find(profileOption => profileOption.id === option.id),
-              section: "",
-              ...option,
+      ?.map<OptionInfo>(option => {
+        if (option.global) {
+          const globalOption = profileOptions.find(profileOption => profileOption.id === option.id)
+          if (globalOption) {
+            return {
+              ...globalOption,
+              global: true,
+              label: option.label ?? globalOption?.label,
+              section: option.section,
             }
-          : option,
-      )
+          }
+        }
+
+        return option
+      })
       .filter(option =>
         checkCondition(
           option.condition,

@@ -114,23 +114,872 @@ assets:
     assetId: simtropolis/26079-peg-spam-super-resource-pack
     authors:
       - Pegasus
+    buildings:
+      PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
+        073dc000:
+          bulldoze: 5
+          capacity:
+            ir: 1
+          category: agriculture
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Tilled
+          water: 1
+        073dc001:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Pasture
+          pollution: -1
+          pollutionRadius: 4
+        073dc002:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Agava
+          pollution: -1
+          pollutionRadius: 4
+        073dc003:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Tomatoes
+          pollution: -1
+          pollutionRadius: 4
+        073dc004:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Hops
+          pollution: -1
+          pollutionRadius: 4
+        073dc005:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Grapes
+          pollution: -1
+          pollutionRadius: 4
+        073dc006:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Corn
+          pollution: -1
+          pollutionRadius: 4
+        073dc007:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Wheat
+          pollution: -1
+          pollutionRadius: 4
+        073dc008:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Barley
+          pollution: -1
+          pollutionRadius: 4
+        073dc009:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Rye
+          pollution: -1
+          pollutionRadius: 4
+        073dc00a:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Switchgrass
+          pollution: -1
+          pollutionRadius: 4
+        073dc00b:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Orangetree
+          pollution: -1
+          pollutionRadius: 4
+        073dc00c:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Appletree
+          pollution: -1
+          pollutionRadius: 4
+        073dc00d:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Lemontree
+          pollution: -1
+          pollutionRadius: 4
+        073dc00e:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Peachtree
+          pollution: -1
+          pollutionRadius: 4
+        073dc00f:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_Rubbarb
+        073dc010:
+          bulldoze: 5
+          model: 5ad0e817-badb57f1-0e110000
+          name: SPAM_FarmField_LettuceMature
+    categories:
+      - agriculture
     category: 36-spam-simpeg-agricultural-mods
     dependencies: []
-    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>\_</p><div style=\"text-align:center;\"><p><span style=\"color:#FF0000;\"><strong>NOTE: You do not need this pack if you</strong><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span><br><br>This package is the main dependency for all things SPAM - from the main mod to most of the current or future additional sets. This standalone version is meant for all players who do not want to use the full mod but still wish to play with lots and items that utilize these props and textures.<br><br><br>The SPAM SUPER PACK combines all SPAM props and textures into a single download. However, it will install props and textures as separate files to make any uture updates easier and faster.<br><br><strong><span>INCLUDED</span></strong><br><br>* SPAM_Resource<br>All models and props used for the agricultural mod<br><br>* SPAM_Crops_Resource<br>All models and props for the seasonal crop varieties<br><br>* SPAM_Textures<br>All textures used in the agricultural mod</p><div style=\"text-align:center;\"><p><span style=\"color:#FF0000;\"><strong>NOTE: This pack includes no lots!</strong><br><strong>AGAIN: You do not need this pack if you</strong><br><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span></p><p><br>You can use all the material for your own lotting projects. However, you may not include any of these items with your uploads - please point to this pack as a dependency!<br><br><strong><span>DEPENDENCIES</span></strong><br><br>This dependency has no dependencies :-)<br><br>* The entire PEG SPAM collection is available on the <abbr title=\"Pegasus Lot Exchange\">PLEX</abbr> (on the) <abbr title=\"Simtropolis Exchange\">STEX</abbr>.<br><br><img class=\"ipsImage\" alt=\"pdt_logo01.png\" src=\"http://i211.photobucket.com/albums/bb210/abcvs/Pegasus%20Productions/pdt_logo01.png\"></p></div></div><p style=\"line-height:22px;text-align:center;\"><strong><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\">here.</a></u></strong></p>\n\n\t\t\t\t\t\t</body>"
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\_</p><div style=\"text-align:center;\"><p><span style=\"color:#FF0000;\"><strong>NOTE: You do not need this pack if you</strong><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span><br><br>This package is the main dependency for all things SPAM - from the main mod to most of the current or future additional sets. This standalone version is meant for all players who do not want to use the full mod but still wish to play with lots and items that utilize these props and textures.<br><br><br>The SPAM SUPER PACK combines all SPAM props and textures into a single download. However, it will install props and textures as separate files to make any uture updates easier and faster.<br><br><strong><span>INCLUDED</span></strong><br><br>* SPAM_Resource<br>All models and props used for the agricultural mod<br><br>* SPAM_Crops_Resource<br>All models and props for the seasonal crop varieties<br><br>* SPAM_Textures<br>All textures used in the agricultural mod</p><div style=\"text-align:center;\"><p><span style=\"color:#FF0000;\"><strong>NOTE: This pack includes no lots!</strong><br><strong>AGAIN: You do not need this pack if you</strong><br><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span></p><p><br>You can use all the material for your own lotting projects. However, you may not include any of these items with your uploads - please point to this pack as a dependency!<br><br><strong><span>DEPENDENCIES</span></strong><br><br>This dependency has no dependencies :-)<br><br>* The entire PEG SPAM collection is available on the <abbr title=\"Pegasus Lot Exchange\">PLEX</abbr> (on the) <abbr title=\"Simtropolis Exchange\">STEX</abbr>.<br><br><img class=\"ipsImage\" alt=\"pdt_logo01.png\" src=\"http://i211.photobucket.com/albums/bb210/abcvs/Pegasus%20Productions/pdt_logo01.png\"></p></div></div><p style=\"line-height:22px;text-align:center;\"><strong><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\">here.</a></u></strong></p>\n\n\t\t\t\t\t\t</body>"
     file: PEG_SPAM_SUPER_RESOURCE.zip
     files:
-      - spam-sp_plex_480.jpg
-      - readme_SuperPack.txt
-      - PEGPROD/SPAM/readme.txt
-      - PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Textures/PEG-SPAM_TEXTURES_RESOURCE_b200.dat
-      - PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Resource/PEG-SPAM_RESOURCE-01_b200.dat
       - PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat
+      - PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Resource/PEG-SPAM_RESOURCE-01_b200.dat
+      - PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Textures/PEG-SPAM_TEXTURES_RESOURCE_b200.dat
+      - PEGPROD/SPAM/readme.txt
+      - readme_SuperPack.txt
+      - spam-sp_plex_480.jpg
     images:
       - https://www.simtropolis.com/objects/screens/0029/23bc5f3dd415ad28a0a2bffdf3ca46ca-spam-sp_plex_480.jpg
     lastModified: 2011-04-13T08:46:39.000Z
+    lots:
+      PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
+        073dc000:
+          building: 073dc000
+          density: low
+          name: Farm Field-Tilled
+          props:
+            - 0f8aaf48
+            - a000154a
+          size: 1x1
+          stage: 1
+          textures:
+            - 25da0000
+        073dc001:
+          building: 073dc001
+          density: low
+          name: Farm Field-Pasture
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc002:
+          building: 073dc002
+          density: low
+          name: Farm Field-Agava
+          props:
+            - 878e5f87
+            - d26905bc
+          size: 1x1
+          stage: 1
+          textures:
+            - 25db0000
+            - 1da44000
+        073dc003:
+          building: 073dc003
+          density: low
+          name: Farm Field-Tomatoes
+          props:
+            - 95940fdf
+            - d26905bc
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc004:
+          building: 073dc004
+          density: low
+          name: Farm Field-Hops
+          props:
+            - 890ca8a4
+            - 2a060000
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc005:
+          building: 073dc005
+          density: low
+          name: Farm Field-Grapes
+          props:
+            - d1eded6c
+            - 2a060000
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc006:
+          building: 073dc006
+          density: low
+          name: Farm Field-Corn
+          props:
+            - 85750a62
+            - aad5b41c
+            - 3e5b097e
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc007:
+          building: 073dc007
+          density: low
+          name: Farm Field-Wheat
+          props:
+            - b168a3e3
+            - 7a61d6c1
+          size: 1x1
+          stage: 1
+          textures:
+            - 25da0000
+        073dc008:
+          building: 073dc008
+          density: low
+          name: Farm Field-Barley
+          props:
+            - 129d1fe1
+            - 96af6486
+          size: 1x1
+          stage: 1
+          textures:
+            - 25da0000
+        073dc009:
+          building: 073dc009
+          density: low
+          name: Farm Field-Rye
+          props:
+            - '48340589'
+            - 8371624e
+          size: 1x1
+          stage: 1
+          textures:
+            - 25da0000
+        073dc00a:
+          building: 073dc00a
+          density: low
+          name: Farm Field-Switchgrass
+          props:
+            - 15ce155b
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+            - 25da0000
+        073dc00b:
+          building: 073dc00b
+          density: low
+          name: Farm Field-Orangetree
+          props:
+            - 0b703b90
+            - 427d3028
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc00c:
+          building: 073dc00c
+          density: low
+          name: Farm Field-Appletree
+          props:
+            - ce49cb03
+            - 427d3028
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc00d:
+          building: 073dc00d
+          density: low
+          name: Farm Field-Lemontree
+          props:
+            - 0c8d15bf
+            - 427d3028
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc00e:
+          building: 073dc00e
+          density: low
+          name: Farm Field-Peachtree
+          props:
+            - c9102970
+            - 427d3028
+          size: 1x1
+          stage: 1
+          textures:
+            - 1da44000
+        073dc00f:
+          building: 073dc00f
+          density: low
+          name: Farm Field - Rubbarb
+          props:
+            - 33ada2ee
+            - 16c136b7
+          size: 1x1
+          stage: 1
+          textures:
+            - 09bee000
+        073dc010:
+          building: 073dc010
+          density: low
+          name: Farm Field - LettuceMature
+          props:
+            - 33ada2ee
+            - 16c136b7
+          size: 1x1
+          stage: 1
+          textures:
+            - 25d90000
+    meta:
+      timestamp: 2024-12-03T16:03:49.352Z
+      version: 1
     name: PEG SPAM Super Resource Pack
+    props:
+      PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
+        0b703b90:
+          name: PEG-MTPA_Crop_OrangeGrove_5.1-11.1
+        0c8d15bf:
+          name: PEG-MTPA_Crop_LemonGrove_4.15-10.5
+        '11165421':
+          name: PEG-MTPA_Crop_AppleTree_2.15-11.15
+        129d1fe1:
+          name: PEG-MTPA_Crop_Barley_Mature_7.16-10.16
+        15ce155b:
+          model: 5ad0e817-78fc792b-00030000
+          name: PEG-MTPA_Crop_SwitchGrass
+        '16550000':
+          family: a0000052
+          model: 5ad0e817-f9079349-00030000
+          name: I5x5x10_Orange-tree_1655
+        '16630000':
+          family: a0000052
+          model: 5ad0e817-39079f40-00030000
+          name: I5x5x10_Apple-tree_1663
+        241d5e20:
+          name: PEG-MTPA_Crop_PeachTree_2.1-11.1
+        29bd0000:
+          model: 5ad0e817-99079493-00030000
+          name: I5x16x10_Apple-treegroup_29BD
+        29be0000:
+          model: 5ad0e817-b906581a-00030000
+          name: I5x16x10_Orange-treegroup_29BE
+        2de463a4:
+          name: PEG-MTPA_Crop_OrangeTree_5.1-11.1
+        3d4a4f9d:
+          name: PEG-MTPA_Crop_LemonTree_5.1-11.1
+        3e5b097e:
+          name: PEG-MTPA_Crop_Corn_16x16_6.1-10.1
+        '48340589':
+          name: PEG-MTPA_Crop_Rye_Mature_8.2-12.1
+        7a61d6c1:
+          name: PEG-MTPA_Crop_Wheat_Young_2.14-7.4
+        8371624e:
+          name: PEG-MTPA_Crop_Rye_Young_4.1-8.1
+        85750a62:
+          name: PEG-MTPA_Crop_Corn_16x16_10.1-3.1
+        878e5f87:
+          model: 5ad0e817-58fc83b1-00030000
+          name: PEG-MTPA_Crop_Blue Agave_365
+        890ca8a4:
+          name: PEG-MTPA_Crop_Hops_2Stage
+        95940fdf:
+          name: PEG-MTPA_Crop_Tomatos_16x4
+        96af6486:
+          name: PEG-MTPA_Crop_Barley_Young_3.15-7.15
+        aad5b41c:
+          name: PEG-MTPA_Crop_Corn_16x16_3.1-6.1
+        b168a3e3:
+          name: PEG-MTPA_Crop_Wheat_Mature_7.5-11.1
+        c9102970:
+          name: PEG-MTPA_Crop_PeachOrchard_2.1-11.1
+        ce49cb03:
+          name: PEG-MTPA_Crop_AppleOrchard_2.15-11.15
+        d1eded6c:
+          model: 5ad0e817-badb57f1-1cf70000
+          name: PEG-MTPA_Grapevines
+      PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Resource/PEG-SPAM_RESOURCE-01_b200.dat:
+        0109ac1b:
+          model: 5ad0e817-18d84fbc-00550000
+          name: PEG-MTPA_Elevator-Large_Wood
+        029e1d09:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Grain-Mod_OPEN
+        04996c10:
+          model: 5ad0e817-b917b147-00030000
+          name: PEG-MTP_Fence_2-rail_8m_DIAG
+        06f6c79c:
+          model: 5ad0e817-1660b6b2-00030000
+          name: PEG-MTPA-TP_MoonshineStill
+        084fa8ca:
+          model: 5ad0e817-f91f73f0-00030000
+          name: PEG-MTPA_Weed01_Brn_Line
+        08a3fe6d:
+          family: a0001505
+          model: 5ad0e817-99154460-00030000
+          name: PEG-MTPA_Farmhouse04
+        0bf7dc29:
+          model: 5ad0e817-b91e997e-00030000
+          name: PEG-MTPA_Weed01_Grn
+        0f8aaf48:
+          name: PEG-MTPA_SAS_Plow_rnd
+        1504c597:
+          family: a0001547
+          name: PEG-MTPA_SAS_WaterTruck_Small_white
+        15896c1c:
+          name: PEG-MTPA_Cattle-SOTH3
+        1861566c:
+          name: PEG-MTPA_CattleCluster_Guernsey
+        19a4b906:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-sas_4-20
+        19abd09f:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-50sFord-2tone_5-21
+        1a3eeb0d:
+          model: 5ad0e817-d91f91ed-00030000
+          name: PEG-MTPA_MapleTree01
+        1a706cba:
+          model: 5ad0e817-9917b1db-00030000
+          name: PEG-MTP_Fence_2-rail_8m
+        1a9935bf:
+          model: 5ad0e817-d91eae05-00030000
+          name: PEG-MTPA_Weed01_Grn_Line
+        1d1407c2:
+          model: 5ad0e817-f918053c-00030000
+          name: PEG-MTP_Fence_2-rail_Whilte_16m_GATE
+        1e0f0aa0:
+          family: a0001543
+          model: 5ad0e817-d922217c-00030000
+          name: PEG-MTPA_SAS_Trailer_Semi-silver_247
+        21e651ca:
+          name: PEG-MTPA_Cattle-Guernsey1
+        22a7e8e8:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Semi-silver
+        278a1653:
+          family: a0001547
+          model: 5ad0e817-99252b26-00030000
+          name: PEG-MTPA_SAS_Stakebed_old_green_247
+        27aa01ad:
+          model: 5ad0e817-591d6a0a-00030000
+          name: PEG-MTPA_DeciduousTree01
+        29fb0dd2:
+          model: 5ad0e817-7917ee26-00030000
+          name: PEG-MTP_Fence_2-rail_Whilte_16m
+        2c90dd38:
+          family: a0001540
+          name: PEG-MTPA_SAS_SemiCab_Yellow
+        2cf21e24:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-green_10-22
+        2e240fe9:
+          model: 5ad0e817-79273dc7-00030000
+          name: PEG-MTPA-TP_Path-DIAG
+        2e63bbc3:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-gray_17-4
+        2fc11611:
+          model: 5ad0e817-b920bf52-00030000
+          name: PEG-MTPA_Texas Gate
+        2fceafee:
+          family: a000150e
+          model: 5ad0e817-18d84fbc-004a0000
+          name: PEG-MTPA_GrainSilo_Metal
+        31d610f7:
+          model: 5ad0e817-b91b80ff-00030000
+          name: PEG-MTPA_DecTree_Elm_Tall
+        3361e82c:
+          family: a0001541
+          model: 5ad0e817-f9261142-00030000
+          name: PEG-MTPA_SAS_FarmTractor_Green_247
+        3408420b:
+          family: a0001509
+          model: 5ad0e817-18d84fbc-00450000
+          name: PEG-MTPA_DairyFarm_Red
+        35b829d4:
+          family: a0001541
+          model: 5ad0e817-59242eaa-00030000
+          name: PEG-MTPA_SAS_Pickup-50sFord-blue_247
+        384e3fd4:
+          model: 5ad0e817-f917fbee-00030000
+          name: PEG-MTP_Fence_2-rail_White_8m
+        3918c355:
+          model: 5ad0e817-3914cec1-00030000
+          name: PEG-SPAM_Irrigation Tower
+        3b014a61:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-black_11-2
+        3cc45c3a:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer-Tanker_sas
+        3e742df3:
+          family: a0001541
+          name: PEG-MTPA_SAS_VW Bus-white_8-19
+        3eea27a4:
+          model: 5ad0e817-191ebd06-00030000
+          name: PEG-MTPA_Weed01_Grn_Small_Line
+        4046b6e2:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-50sFord-yellow_9-22
+        '40725970':
+          model: 5ad0e817-191ea006-00030000
+          name: PEG-MTPA_Weed01_Brn_Small
+        4079b7a9:
+          model: 5ad0e817-9917b24c-00030000
+          name: PEG-MTP_Fence_2-rail_4m
+        4094769a:
+          family: a00014dd
+          model: 5ad0e817-19977e3e-00030000
+          name: PEG-MTPA-TP_Rock3
+        41daabfa:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-blue_5-19
+        420521a4:
+          model: 5ad0e817-f917cfb1-00030000
+          name: PEG-MTP_Fence_2-rail_4m_GATE
+        4363cfc2:
+          family: a0001546
+          name: PEG-MTPA_SAS_Dumptruck_Grain_sas
+        4450a572:
+          family: a000150f
+          model: 5ad0e817-18d84fbc-00140000
+          name: PEG-MTPA_GrainSilo_Metal-Portable
+        465db454:
+          model: 5ad0e817-391d2d4e-00030000
+          name: PEG-MTPA-TP_PicnicTable
+        473b069f:
+          model: 5ad0e817-7917ff95-00030000
+          name: PEG-MTP_Fence_2-rail_Whilte_8m_GATE
+        474c3e70:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Flatbed_SGreen
+        4a080362:
+          model: 5ad0e817-18d84fbc-00400000
+          name: PEG-MTPA_Greenhouse02
+        4bb95093:
+          name: PEG-MTPA_Cattle-Holstein1
+        4bcf8d40:
+          name: PEG-MTPA_Cattle-Holstein3
+        4c932c72:
+          model: 5ad0e817-9917fb87-00030000
+          name: PEG-MTP_Fence_2-rail_Whilte_8m_DIAG
+        5034d90b:
+          model: 5ad0e817-391b2f44-00030000
+          name: PEG-MTPA_DecTree_Elm
+        50d035ae:
+          model: 5ad0e817-b91f6dfb-00030000
+          name: PEG-MTPA_Weed01_Brn
+        5123c52d:
+          model: 5ad0e817-f91fd189-00030000
+          name: PEG-MTPA_MapleTree01_Small
+        5199ea71:
+          family: a0001543
+          model: 5ad0e817-d922270f-00030000
+          name: PEG-MTPA_SAS_Trailer_Semi-white_247
+        5597d3cc:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-70sFord-green_5-22
+        604fb95d:
+          family: a000150b
+          model: 5ad0e817-18d84fbc-00460000
+          name: PEG-MTPA_BarnSilo_Metal
+        6345538a:
+          family: a0001541
+          model: 5ad0e817-79233952-00030000
+          name: PEG-MTPA_SAS_Van-sas_247
+        '69755213':
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer-Tanker_silver2
+        6a3fcb62:
+          model: 5ad0e817-b993898f-00030000
+          name: PEG-MTPA-TP_RockCluster
+        6ba34e09:
+          model: 5ad0e817-99264cc6-00030000
+          name: PEG-MTPA_SAS_Plow
+        6d371d84:
+          family: a0001511
+          model: 5ad0e817-18d84fbc-00520000
+          name: PEG-MTPA_Elevator01_Red
+        6e50cbec:
+          family: a0001513
+          model: 5ad0e817-191634a9-00030000
+          name: PEG-MTPA_Elevator-Large_White
+        6fc6c06d:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer-Tanker_silver1
+        725f1723:
+          model: 5ad0e817-b91d0927-00030000
+          name: PEG-MTPA-TP_DonkeyEngine
+        735641c2:
+          name: PEG-MTPA_Cattle-Guernsey3
+        '74e66356':
+          name: PEG-MTPA_SAS_Flatbed-sas
+        '76417603':
+          name: PEG-MTPA_CattleCar_RR
+        78e0133c:
+          family: a000150e
+          model: 5ad0e817-18d84fbc-00480000
+          name: PEG-MTPA_GrainSilo_Concrete
+        791b99b3:
+          model: 5ad0e817-5917a513-00030000
+          name: PEG-MTP_Fence_2-rail_16m
+        7b3842f5:
+          family: a0001541
+          model: 5ad0e817-5926301a-00030000
+          name: PEG-MTPA_SAS_FarmTractor_Red_247
+        7d8deb60:
+          model: 5ad0e817-f9197893-00030000
+          name: PEG-MTP_Fence_2-rail_Whilte_16m_CURVE
+        7ea69467:
+          family: a0001546
+          name: PEG-MTPA_SAS_Dumptruck_empty
+        80bf922e:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Semi-sas
+        8152e0a5:
+          family: a0001509
+          model: 5ad0e817-18d84fbc-000c0000
+          name: PEG-MTPA_DairyFarm_Yellow
+        8214eb02:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Grain-sas_EMPTY
+        '8217e157':
+          family: a0001507
+          model: 5ad0e817-19155dfd-00030000
+          name: PEG-MTPA_Barn02_White
+        843aca4f:
+          family: a0001540
+          name: PEG-MTPA_SAS_SemiCab_CO-SGreen
+        84658eea:
+          name: PEG-MTPA_Cattle-SOTH2
+        89cf6fed:
+          family: a0001511
+          model: 5ad0e817-18d84fbc-00530000
+          name: PEG-MTPA_Elevator01_White
+        8daf8804:
+          family: a0001541
+          model: 5ad0e817-b9234822-00030000
+          name: PEG-MTPA_SAS_Pickup-red_247
+        8e7bad93:
+          family: a0001511
+          model: 5ad0e817-18d84fbc-00540000
+          name: PEG-MTPA_Elevator01_Wood
+        8ee3afb6:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-white_4-20
+        932806d3:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Grain-sas
+        94435f4f:
+          family: a0001509
+          model: 5ad0e817-18d84fbc-00440000
+          name: PEG-MTPA_DairyFarm_White
+        94d11400:
+          model: 5ad0e817-191d2a81-00030000
+          name: PEG-MTPA-TP_RockCluster_small
+        94fd8c13:
+          model: 5ad0e817-591ea7de-00030000
+          name: PEG-MTPA_Weed01_Brn_Small_Line
+        95589f6b:
+          model: 5ad0e817-3919fb25-00030000
+          name: PEG-MTP_Fence_Barbwire_16m
+        99301be4:
+          name: PEG-MTPA_Cattle-Holstein2
+        9c4ad13b:
+          model: 5ad0e817-18d84fbc-00150000
+          name: PEG-MTPA_FuelTank
+        9cfcfe7b:
+          family: a0001505
+          model: 5ad0e817-59153e16-00030000
+          name: PEG-MTPA_Farmhouse02
+        9fab4942:
+          model: 5ad0e817-19180d0c-00030000
+          name: PEG-MTP_Fence_2-rail_White_4m
+        a0dcb9bd:
+          model: 5ad0e817-f92714a5-00030000
+          name: PEG-MTPA-TP_Path
+        a1011af0:
+          name: PEG-MTPA_Cattle-Guernsey2
+        a1ebb58b:
+          family: a0001543
+          model: 5ad0e817-b921fca7-00030000
+          name: PEG-MTPA_SAS_Trailer_Flatbed_SGreen_247
+        a233de04:
+          family: a0001505
+          model: 5ad0e817-39153746-00030000
+          name: PEG-MTPA_Farmhouse01
+        a2671354:
+          family: a0001505
+          model: 5ad0e817-19154139-00030000
+          name: PEG-MTPA_Farmhouse03
+        a454dbc9:
+          model: 5ad0e817-18d84fbc-002d0000
+          name: PEG-MTPA_Windmill_Metal
+        a48f0664:
+          model: 5ad0e817-f9197347-00030000
+          name: PEG-MTP_Fence_2-rail_Whilte_8m_CURVE
+        a4be174e:
+          model: 5ad0e817-3917af75-00030000
+          name: PEG-MTP_Fence_2-rail_16m_DIAG
+        a52f0609:
+          model: 5ad0e817-18d84fbc-00100000
+          name: PEG-MTPA_Greenhouse03
+        a657405e:
+          name: PEG-MTPA_Cattle-SOTH1
+        a8736d3b:
+          model: 5ad0e817-191ad914-00030000
+          name: PEG-MTPA_DecTree_Tupelo
+        ab4dc6e0:
+          family: a0001542
+          name: PEG-MTPA_SAS_Bobtail-sas_silver
+        abacb128:
+          family: a000150b
+          model: 5ad0e817-18d84fbc-00470000
+          name: PEG-MTPA_BarnSilo_Red
+        aed3101d:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Semi-white
+        b063964b:
+          model: 5ad0e817-791d1da5-00030000
+          name: PEG-MTPA-TP_Shack
+        b13f2cac:
+          name: PEG-MTPA_CattleChute
+        b16c494e:
+          model: 5ad0e817-5917d3d3-00030000
+          name: PEG-MTP_Fence_2-rail_8m_GATE
+        b1f6f30d:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-LR-tan_10-21
+        b3a209d7:
+          family: a000150f
+          model: 5ad0e817-18d84fbc-00130000
+          name: PEG-MTPA_GrainSilo_Metal-Fixed
+        b4149ed5:
+          model: 5ad0e817-b9350702-00030000
+          name: PEG-MTP_Fence_Barbwire_8m_DIAG
+        b6020369:
+          model: 5ad0e817-18d84fbc-00430000
+          name: PEG-MTPA_Barn02_UnderConstruction
+        b64f50cf:
+          model: 5ad0e817-5917fae6-00030000
+          name: PEG-MTP_Fence_2-rail_White_16m_DIAG
+        b8eabdd5:
+          model: 5ad0e817-18d84fbc-003f0000
+          name: PEG-MTPA_Greenhouse01
+        b8ebd3a2:
+          family: a0001507
+          model: 5ad0e817-f9161376-00030000
+          name: PEG-MTPA_Barn-Basic_red
+        bb3725a3:
+          family: a0001546
+          name: PEG-MTPA_SAS_Dumptruck_Maters_sas
+        bdfbee7c:
+          family: a0001507
+          model: 5ad0e817-19154faa-00030000
+          name: PEG-MTPA_Barn-Fancy_Red
+        bf516f60:
+          model: 5ad0e817-19252f97-00030000
+          name: PEG-MTPA_SAS_SemiCab_SGreen_DIAG
+        c1cd4a24:
+          model: 5ad0e817-9917da8f-00030000
+          name: PEG-MTP_Fence_2-rail_16m_GATE
+        c20b3c93:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-LR--green_6-18
+        c3a1a4e5:
+          family: a000154a
+          name: PEG-MTPA_SAS_FarmTractor_Red_rnd
+        c3b05200:
+          model: 5ad0e817-591b3753-00030000
+          name: PEG-MTPA_DecTree_Tupelo1_Tall
+        c56fd41c:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Grain-Mod
+        c721a958:
+          family: a0001507
+          model: 5ad0e817-f9291d5c-00030000
+          name: PEG-MTPA_Barn-Basic_wood
+        c76943f6:
+          model: 5ad0e817-18d84fbc-002f0000
+          name: PEG-MTPA_WaterResevoir
+        c8df1fef:
+          model: 5ad0e817-18d84fbc-002e0000
+          name: PEG-MTPA_Windmill_Wood
+        c8fc183b:
+          family: a0001507
+          model: 5ad0e817-59161e9b-00030000
+          name: PEG-MTPA_Barn-Basic_white
+        cc1e7e17:
+          family: a0001543
+          model: 5ad0e817-39221662-00030000
+          name: PEG-MTPA_SAS_Trailer_Semi-sas_247
+        ce4c847d:
+          family: a0001507
+          model: 5ad0e817-19156090-00030000
+          name: PEG-MTPA_Barn02_Wood
+        d0ac71c3:
+          model: 5ad0e817-591b4002-00030000
+          name: PEG-MTPA_DecTree_Elm_VTall
+        d295233d:
+          family: a00014df
+          model: 5ad0e817-b91d1879-00030000
+          name: PEG-MTPA-TP_TreeStump
+        d42ac71b:
+          family: a0001541
+          name: PEG-MTPA_SAS_Dunebuggy-red_11,18
+        d8d32715:
+          family: a0001542
+          name: PEG-MTPA_SAS_Bobtail-sas
+        d9913aa5:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-50sFord-brown_16-3
+        e3f9beda:
+          family: a0001505
+          model: 5ad0e817-d91546dc-00030000
+          name: PEG-MTPA_Farmhouse05
+        e70e1492:
+          family: a0001505
+          model: 5ad0e817-791548a2-00030000
+          name: PEG-MTPA_Farmhouse06
+        e741574f:
+          model: 5ad0e817-f91ebd79-00030000
+          name: PEG-MTPA_Weed01_Grn_Small
+        e7e10acd:
+          family: a0001540
+          name: PEG-MTPA_SAS_SemiCab_SGreen
+        e92c33ef:
+          model: 5ad0e817-f921f3f0-00030000
+          name: PEG-MTPA_SAS_SemiCab_CO-SGreen_DIAG
+        ebbf4c8b:
+          model: 5ad0e817-7935067c-00030000
+          name: PEG-MTP_Fence_Barbwire_8m
+        ed764a9c:
+          model: 5ad0e817-d91b3c0f-00030000
+          name: PEG-MTPA_DecTree_Tupelo1_VTall
+        ee3f58c4:
+          model: 5ad0e817-d9180df4-00030000
+          name: PEG-MTP_Fence_2-rail_Whilte_4m_GATE
+        ef183c1d:
+          name: PEG-MTPA_CattleCluster_Holsteins
+        f1a32a82:
+          family: a0001540
+          name: PEG-MTPA_SAS_SemiCab_CO-White
+        f1f3e00b:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-50sFord-white_4-20
+        f3d3fbee:
+          family: a0001513
+          model: 5ad0e817-19162a21-00030000
+          name: PEG-MTPA_Elevator-Large_Red
+        f6d7436e:
+          family: a000154a
+          name: PEG-MTPA_SAS_FarmTractor_Green_rnd
+        f81118e4:
+          family: a000150b
+          model: 5ad0e817-18d84fbc-00020000
+          name: PEG-MTPA_BarnSilo_Wood
+        fa74cf68:
+          family: a0001547
+          name: PEG-MTPA_SAS_WaterTruck_Small_sas
+        fb0aea1e:
+          family: a000150e
+          model: 5ad0e817-18d84fbc-00490000
+          name: PEG-MTPA_GrainSilo_Red
+        ffb26053:
+          name: PEG-MTPA_CattleCluster_SOTH
     sha256: b4c078abb0be4f7863955ff2e7409cb5d255ac1fafb17ce32bee912a425d7b34
     size: 5001446
+    support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     thumbnail: https://www.simtropolis.com/objects/screens/0030/thumb-23bc5f3dd415ad28a0a2bffdf3ca46ca-spam-sp_plex_480.jpg
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 7283571

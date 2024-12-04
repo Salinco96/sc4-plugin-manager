@@ -23,6 +23,7 @@ export interface PackageViewBuildingFamilyInfoProps {
   familyBuildings?: BuildingInfo[]
   familyId: string
   isCompatible: boolean
+  isDisabled: boolean
   isEnabled: boolean
   isTogglable: boolean
   packageId: PackageID
@@ -34,6 +35,7 @@ export function PackageViewBuildingFamilyInfo({
   familyBuildings,
   familyId,
   isCompatible,
+  isDisabled,
   isEnabled,
   isTogglable,
   packageId,
@@ -61,7 +63,12 @@ export function PackageViewBuildingFamilyInfo({
   const water = familyBuildings?.map(building => building.water ?? 0)
 
   return (
-    <FlexBox id={`buildingFamily-${familyId}`} direction="column" gap={2}>
+    <FlexBox
+      color={isDisabled ? "rgba(0, 0, 0, 0.38)" : undefined}
+      id={`buildingFamily-${familyId}`}
+      direction="column"
+      gap={2}
+    >
       <FlexBox alignItems="center">
         <FlexBox direction="column" width="100%">
           <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>

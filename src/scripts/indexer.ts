@@ -91,7 +91,10 @@ runIndexer({
       "simtropolis/22771",
       "simtropolis/23089",
       "simtropolis/27340",
+      "simtropolis/27712",
+      "simtropolis/29749",
       "simtropolis/30836",
+      "simtropolis/33889",
     ],
   },
   migrate: {
@@ -1282,7 +1285,7 @@ async function loadPackagesFromDB(): Promise<{
 }
 
 function getEntryId(assetId: string): EntryID {
-  return (assetId.match(/^([a-z0-9-]+[/]\d+)(-[^/]+)?$/)?.[1] ?? assetId) as EntryID
+  return (assetId.match(/^([a-z0-9-]+[/]\d+)(-[^/]*)?$/)?.[1] ?? assetId) as EntryID
 }
 
 function getSourceId(entryId: EntryID): IndexerSourceID {

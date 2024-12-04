@@ -2,7 +2,7 @@ import fs, { writeFile } from "node:fs/promises"
 import path from "node:path"
 import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
 
-import { type EmptyRecord, collect, forEach, mapValues } from "@salinco/nice-utils"
+import { type EmptyRecord, collect, forEach, mapValues, sortBy } from "@salinco/nice-utils"
 import log, { type LogLevel } from "electron-log"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
@@ -1296,7 +1296,7 @@ export class Application {
                       files.push({
                         condition: condition && !isEmpty(condition) ? condition : undefined,
                         patches: include?.patches,
-                        path: newPath,
+                        path: toPosix(newPath),
                         priority: include?.priority,
                       })
                     }
@@ -1436,11 +1436,15 @@ export class Application {
                 nodir: true,
               })
 
-              variantInfo.readme =
-                readmePaths.find(file => path.basename(file).match(/read.?me/i)) ?? readmePaths[0]
+              if (readmePaths.length) {
+                variantInfo.readme = toPosix(
+                  readmePaths.find(file => path.basename(file).match(/read.?me/i)) ??
+                    readmePaths[0],
+                )
+              }
             }
 
-            variantInfo.files = files
+            variantInfo.files = sortBy(files, file => file.path)
             variantInfo.installed = true
 
             // Migrate existing patches

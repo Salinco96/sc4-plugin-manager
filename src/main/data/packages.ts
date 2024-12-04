@@ -39,7 +39,7 @@ import type {
   VariantInfo,
 } from "@common/variants"
 import { readConfig } from "@node/configs"
-import { createIfMissing, exists } from "@node/files"
+import { createIfMissing, exists, toPosix } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
@@ -317,17 +317,17 @@ function loadPackageAssetInfo(data: VariantAssetData | AssetID): VariantAssetInf
     ...data,
     docs: data.docs?.map(file => {
       if (isString(file)) {
-        return { path: file }
+        return { path: toPosix(file) }
       }
 
-      return file
+      return { ...file, path: toPosix(file.path) }
     }),
     include: data.include?.map(file => {
       if (isString(file)) {
-        return { path: file }
+        return { path: toPosix(file) }
       }
 
-      return file
+      return { ...file, path: toPosix(file.path) }
     }),
   }
 }
@@ -455,7 +455,7 @@ function loadVariantInfo(
   const files = unionBy(variantData.files ?? [], packageData.files ?? [], file => file.path)
 
   if (files.length) {
-    variantInfo.files = files
+    variantInfo.files = files.map(file => ({ ...file, path: toPosix(file.path) }))
   }
 
   const images = union(variantData.images ?? [], packageData.images ?? [])

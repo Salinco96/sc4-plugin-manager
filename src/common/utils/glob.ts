@@ -1,6 +1,9 @@
-const CONDITION_REGEX = /{{([^}]+)}}/g
 const SEPARATOR = "[\\\\\\/]"
 const NOT_SEPARATOR = SEPARATOR.replaceAll("[", "[^")
+
+function toIdentifier(name: string): string {
+  return name.replace(/[^\w_$]/g, "")
+}
 
 export function globToRegex(pattern: string): RegExp {
   return new RegExp(
@@ -9,7 +12,7 @@ export function globToRegex(pattern: string): RegExp {
       .replaceAll("/", SEPARATOR)
       .replaceAll(/[*]+/g, s => `${s.length === 1 ? NOT_SEPARATOR : "."}*`)
       .replaceAll("?", `${NOT_SEPARATOR}?`)
-      .replaceAll(CONDITION_REGEX, "(?<$1>[^\\\\/]*)")
+      .replaceAll(/{{([^}]+)}}/g, (s, condition) => `(?<${toIdentifier(condition)}>[^\\\\/]*)`)
       .replaceAll(
         /{([^}]+)}/g,
         s => `(?:${s.replaceAll(",", "|")})`,
@@ -22,8 +25,15 @@ export function matchConditions(
   pattern: string,
   filePath: string,
 ): { [key: string]: string } | undefined {
-  if (CONDITION_REGEX.test(pattern)) {
-    return globToRegex(pattern).exec(filePath)?.groups
+  if (/{{([^}]+)}}/g.test(pattern)) {
+    const conditions = Array.from(pattern.matchAll(/{{([^}]+)}}/g), match => match[1])
+    const groups = globToRegex(pattern).exec(filePath)?.groups
+    if (groups) {
+      return conditions.reduce<{ [key: string]: string }>((result, condition) => {
+        result[condition] = groups[toIdentifier(condition)]
+        return result
+      }, {})
+    }
   }
 }
 

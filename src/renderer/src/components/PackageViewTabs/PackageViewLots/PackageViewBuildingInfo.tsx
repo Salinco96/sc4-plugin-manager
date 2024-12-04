@@ -21,6 +21,7 @@ import { ExemplarRef } from "./ExemplarRef"
 export interface PackageViewBuildingInfoProps {
   building: BuildingInfo
   isCompatible: boolean
+  isDisabled: boolean
   isEnabled: boolean
   isTogglable: boolean
   packageId: PackageID
@@ -30,6 +31,7 @@ export interface PackageViewBuildingInfoProps {
 export function PackageViewBuildingInfo({
   building,
   isCompatible,
+  isDisabled,
   isEnabled,
   isTogglable,
   packageId,
@@ -40,9 +42,9 @@ export function PackageViewBuildingInfo({
   const variantInfo = useCurrentVariant(packageId)
 
   const fileInfo = variantInfo.files?.find(file => file.path === building.file)
-  const maxisBuilding = exemplars.buildings[building.id]
 
-  const isMaxisOverride = maxisBuilding !== undefined && building.file !== "SimCity_1.dat"
+  const isMaxisBuilding = !!exemplars.buildings[building.id]
+  const isMaxisOverride = isMaxisBuilding && building.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 
   const { t } = useTranslation("PackageViewLots")
@@ -57,7 +59,12 @@ export function PackageViewBuildingInfo({
         : undefined
 
   return (
-    <FlexBox id={`building-${building.id}`} direction="column" gap={2}>
+    <FlexBox
+      color={isDisabled ? "rgba(0, 0, 0, 0.38)" : undefined}
+      id={`building-${building.id}`}
+      direction="column"
+      gap={2}
+    >
       <FlexBox alignItems="center">
         {!!building.images?.length && (
           <ImageViewerThumbnail images={building.images} mr={2} mt={1} size={84} />
@@ -85,7 +92,7 @@ export function PackageViewBuildingInfo({
           )}
         </FlexBox>
 
-        {isTogglable && !!fileInfo && (
+        {isTogglable && !isMaxisBuilding && (
           <FlexBox alignSelf="start">
             <Checkbox
               icon={isCompatible ? undefined : <IncompatibleIcon />}

@@ -30,10 +30,13 @@ export default function PackageViewFiles({ packageId }: PackageViewTabInfoProps)
 
   const preloadFiles = useEffectEvent(async () => {
     if (variantInfo.files) {
+      const result: { [path in string]?: DBPFFile } = {}
+
       for (const file of variantInfo.files) {
-        const fileData = await actions.loadDBPFEntries(packageId, variantInfo.id, file.path)
-        setFiles(files => ({ ...files, [file.path]: fileData }))
+        result[file.path] = await actions.loadDBPFEntries(packageId, variantInfo.id, file.path)
       }
+
+      setFiles(files => ({ ...files, ...result }))
     }
   })
 

@@ -71,9 +71,9 @@ export function extractDependencies(html: string): string[] {
 
   // SC4Evermore file page URL
   for (const match of html.matchAll(
-    /(https:[/][/]www[.]sc4evermore[.]com)?[/]index[.]php[/]downloads[/]download[/][\w-]+[/]([\w-]+)[/]?/g,
+    /(https:[/][/]www[.]sc4evermore[.]com)?[/]index[.]php[/]downloads[/]download[/]([\w-]+[/])?([\w-]+)[/]?/g,
   )) {
-    dependencies.add(`sc4evermore/${match[2]}`)
+    dependencies.add(`sc4evermore/${match[3]}`)
   }
 
   for (const packageId in commonDependencies) {

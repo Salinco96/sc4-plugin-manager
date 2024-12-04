@@ -153,6 +153,7 @@ sc4evermore/128-gizmo-street-rr-gate-replacement-mod:
 
 sc4evermore/13-sfbt-essentials:
   packageId: sfbt/essentials
+  variantId: default
 
 sc4evermore/131-walkingsnake-sc4jeeks-parking-textures-vol-01:
   packageId: walkingsnake/parking-textures-vol01
@@ -198,6 +199,7 @@ sc4evermore/165-sc4d-lex-legacy-jeronij-ship-pack:
 
 sc4evermore/167-bsc-aln-rrp-pasture-flora:
   packageId: chrisadams3997/rrp-pasture-flora
+  variantId: default
 
 sc4evermore/168-vortext-vortexture-1-2-base-set-grass-and-dirt:
   packageId: vortext/textures-vol01
@@ -308,6 +310,7 @@ sc4evermore/269-romualdillo-props-vol01-v1-2:
 
 sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora:
   packageId: girafe/flora-pack
+  variantId: default
 
 sc4evermore/270-romualdillo-spanish-low-wealth-residental-lots:
   packageId: romualdillo/spanish-low-wealth-residentals-vol01
@@ -697,6 +700,7 @@ sc4evermore/32-cycledogg-tree-controllers:
 
 sc4evermore/36-lk33-seasonalflorapatch:
   packageId: lowkee33/seasonal-flora-patch
+  variantId: default
 
 sc4evermore/39-bsc-census-repository-building-by-ripplejet:
   packageId: ripplejet/census-repository-building
@@ -1074,6 +1078,7 @@ simtropolis/20930-peg-mtp-mayor-menu-scrub-brush-mod:
 
 simtropolis/20966-peg-mtp-super-pack:
   packageId: pegasus/mtp-super-pack
+  variantId: default
 
 simtropolis/21060-gnleugim-essentials:
   packageId: gn-leugim/essentials
@@ -1276,9 +1281,11 @@ simtropolis/26078-peg-spam-traffic-mod-addon:
 
 simtropolis/26079-peg-spam-super-resource-pack:
   packageId: pegasus/spam-super-resource-pack
+  variantId: default
 
 simtropolis/26080-simpeg-agricultural-mod-spam:
   packageId: pegasus/spam
+  variantId: default
 
 simtropolis/26088-wmp-murimk-causeway-set:
   packageId: wmp/murimk-causeway-set
@@ -1349,6 +1356,7 @@ simtropolis/26804-maxis-tree-replacement-mod:
 
 simtropolis/26806-vip-rural-pack-v2:
   packageId: vip/rural-pack
+  variantId: default
 
 simtropolis/26808-vip-girafe-vnaoned-carpack-vol01-vol02-v2:
   superseded: sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
@@ -1373,9 +1381,11 @@ simtropolis/26965-wmp-art-deco-station:
 
 simtropolis/27001-vip-orange-aesculus:
   packageId: orange/aesculus
+  variantId: default
 
 simtropolis/27008-vip-orange-fagus:
   packageId: orange/fagus
+  variantId: default
 
 simtropolis/27064-discontinued-vip-rural-pack-expansion01-discontinued-see-below:
   superseded: simtropolis/26806-vip-rural-pack-v2
@@ -1412,7 +1422,9 @@ simtropolis/27698-murimk-props-vol03-industrials:
 simtropolis/27711-peg-one-flag-many-nations-mod:
   packageId: pegasus/one-flag-many-nations
 
-simtropolis/27712-the-peg-terrain-kit-7-n-1: null
+simtropolis/27712-the-peg-terrain-kit-7-n-1:
+  packageId: pegasus/terrain-kit
+  variantId: default
 
 simtropolis/27762-wmp-ethanol-plant-a:
   packageId: wmp/ethanol-plant-a
@@ -1456,6 +1468,7 @@ simtropolis/28747-sbt-ceafus-car-repairsauto-parts:
 
 simtropolis/28847-vip-orange-pinus-nigra-v2:
   packageId: orange/pinus-nigra
+  variantId: default
 
 simtropolis/28963-ms-solaris-vacanza-12-interurbino-12-automata-props:
   packageId: moto-kloss/solaris-bus-automata
@@ -1479,7 +1492,7 @@ simtropolis/29270-ceafus-pawn-and-gun:
 
 simtropolis/29749-seasonal-wood-lots-girafes-trees:
   packageId: 11241036/seasonal-woods
-  variantId: legacy
+  variantId: default
 
 simtropolis/29797-mgb-diagonal-filler-set:
   packageId: mgb204/diagonal-filler-set
@@ -2085,11 +2098,13 @@ simtropolis/33651-11241036-textures:
 
 simtropolis/33702-vip-trees-as-props:
   packageId: vip/rural-pack
+  variantId: default
 
 simtropolis/33753-italian-collection-relots-direzione-compartimentale: null
 
 simtropolis/33889-seasonal-woods-2nd-iteration:
-  packageId: 11241036/seasonal-woods
+  packageId: 11241036/seasonal-woods-2
+  variantId: default
 
 simtropolis/34027-coris-no-kickout-lower-wealth-mod:
   packageId: corinamarie/no-kickout-lower-wealth

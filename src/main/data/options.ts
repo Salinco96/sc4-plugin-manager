@@ -26,7 +26,6 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
 
   const common = {
     id,
-    type,
     condition: loadRequirements(data.condition, id, "condition"),
     description: loadString(data.label, id, "description"),
     global: loadBoolean(data.global, id, "global"),
@@ -41,6 +40,7 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
         ...common,
         default: loadBoolean(data.default, id, "default"),
         display: loadEnum(data.display, ["checkbox", "switch"] as const, id, "display"),
+        type,
       }
     }
 
@@ -74,6 +74,7 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
             : loadEnum(data.default, values, id, "default"),
           display: loadEnum(data.display, ["checkbox", "select"] as const, id, "display"),
           multi,
+          type,
         }
       }
 
@@ -83,6 +84,7 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
         min: loadInteger(data.min, id, "min"),
         max: loadInteger(data.max, id, "max"),
         step: loadInteger(data.step, id, "step"),
+        type,
       }
     }
 
@@ -116,12 +118,14 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
             : loadEnum(data.default, values, id, "default"),
           display: loadEnum(data.display, ["checkbox", "select"] as const, id, "display"),
           multi,
+          type,
         }
       }
 
       return {
         ...common,
         default: loadString(data.default, id, "default"),
+        type,
       }
     }
   }
