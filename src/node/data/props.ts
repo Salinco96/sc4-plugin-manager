@@ -25,7 +25,7 @@ export interface PropData {
 
 export function loadPropInfo(file: string, id: PropID, data: PropData): PropInfo {
   const { model, ...others } = data
-  return { file, id, ...others }
+  return { ...others, file, id }
 }
 
 export function writePropInfo(prop: PropInfo): PropData {

@@ -22,6 +22,7 @@ import type { PackageData } from "@node/data/packages"
 import { type FileData, loadCredits } from "@node/data/variants"
 import { getExtension } from "@node/files"
 
+import { loadAuthors } from "@node/data/authors"
 import type { IndexerEntry, IndexerSource } from "../types"
 import { htmlToMd } from "../utils"
 
@@ -175,7 +176,10 @@ export function writePackageData(
 
   if (variantId === "default" || !packageData.url || packageData.url === entry.url) {
     const packageAuthors = unique(
-      remove(parseStringArray(packageData.authors ?? []).concat(authors) as AuthorID[], ownerId),
+      remove(
+        loadAuthors(packageData.authors ?? [], ownerId).concat(authors) as AuthorID[],
+        ownerId,
+      ),
     )
 
     const packageCredits = {
@@ -224,10 +228,8 @@ export function writePackageData(
     }
 
     const variantAuthors = difference(
-      unique(
-        remove(parseStringArray(variantData.authors ?? []).concat(authors) as AuthorID[], ownerId),
-      ),
-      parseStringArray(packageData.authors ?? []) as AuthorID[],
+      unique(loadAuthors(variantData.authors ?? [], ownerId).concat(authors)),
+      loadAuthors(packageData.authors ?? [], ownerId),
     )
 
     const variantCredits = {

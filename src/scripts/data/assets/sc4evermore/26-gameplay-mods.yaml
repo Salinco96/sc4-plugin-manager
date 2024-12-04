@@ -604,7 +604,7 @@ assets:
     lastModified: 2023-07-26T02:36:08.000Z
     lots:
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000010'
@@ -625,7 +625,7 @@ assets:
           - 251c0000
           - '25290000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000011'
@@ -651,7 +651,7 @@ assets:
           - '25370000'
           - '25270000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000012'
@@ -672,7 +672,7 @@ assets:
           - '25370000'
           - '25270000'
       - building: '10000001'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000020'
@@ -699,7 +699,7 @@ assets:
           - '25380000'
           - '25370000'
       - building: '10000001'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000021'
@@ -725,7 +725,7 @@ assets:
           - '25370000'
           - '25380000'
       - building: '10000001'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000022'
@@ -747,7 +747,7 @@ assets:
           - '25370000'
           - '25380000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000030'
@@ -771,7 +771,7 @@ assets:
           - '25290000'
           - '25270000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000031'
@@ -795,7 +795,7 @@ assets:
           - '25380000'
           - '25370000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000032'
@@ -822,7 +822,7 @@ assets:
           - '25270000'
           - 251c0000
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000033'
@@ -849,7 +849,7 @@ assets:
           - '25290000'
           - '25270000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000040'
@@ -871,7 +871,7 @@ assets:
           - '25290000'
           - 251c0000
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000041'
@@ -892,7 +892,7 @@ assets:
           - '25380000'
           - '25270000'
       - building: '10000001'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000050'
@@ -915,7 +915,7 @@ assets:
           - 252b0000
           - '25290000'
       - building: '10000001'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000051'
@@ -932,7 +932,7 @@ assets:
           - 251c0000
           - '25290000'
       - building: '10000001'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000052'
@@ -954,7 +954,7 @@ assets:
           - '25290000'
           - '25380000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000060'
@@ -979,7 +979,7 @@ assets:
           - '25380000'
           - '25370000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000061'
@@ -1003,7 +1003,7 @@ assets:
           - '25370000'
           - '25380000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000070'
@@ -1024,7 +1024,7 @@ assets:
           - '25290000'
           - 252b0000
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000071'
@@ -1043,7 +1043,7 @@ assets:
           - '25290000'
           - 252b0000
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000072'
@@ -1061,7 +1061,7 @@ assets:
           - '25290000'
           - 252b0000
       - building: '10000005'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000160'
@@ -1083,7 +1083,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '10000005'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000161'
@@ -1105,7 +1105,7 @@ assets:
           - 25ba0000
           - 258d0000
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000170'
@@ -1125,7 +1125,7 @@ assets:
           - '25900000'
           - 25b40000
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000171'
@@ -1148,7 +1148,7 @@ assets:
           - 25b40000
           - '25900000'
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000180'
@@ -1171,7 +1171,7 @@ assets:
           - 251c0000
           - 258d0000
       - building: '10000005'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000190'
@@ -1191,7 +1191,7 @@ assets:
           - '25900000'
           - 25c00000
       - building: '10000005'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000191'
@@ -1211,7 +1211,7 @@ assets:
           - 25c00000
           - 258d0000
       - building: '10000006'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000200'
@@ -1230,7 +1230,7 @@ assets:
           - 25b40000
           - 25fb0000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000210'
@@ -1247,7 +1247,7 @@ assets:
           - '25900000'
           - 25b40000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000211'
@@ -1269,7 +1269,7 @@ assets:
           - 258d0000
           - 252b0000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000220'
@@ -1289,7 +1289,7 @@ assets:
           - '25900000'
           - 25b40000
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000230'
@@ -1305,7 +1305,7 @@ assets:
           - 25b90000
           - '25900000'
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000231'
@@ -1322,7 +1322,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000240'
@@ -1342,7 +1342,7 @@ assets:
           - 252b0000
           - 25c10000
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000241'
@@ -1363,7 +1363,7 @@ assets:
           - '25900000'
           - '25270000'
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000250'
@@ -1384,7 +1384,7 @@ assets:
           - 25ba0000
           - 25b40000
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000251'
@@ -1403,7 +1403,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000260'
@@ -1428,7 +1428,7 @@ assets:
           - '25900000'
           - 258d0000
       - building: '10000006'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000270'
@@ -1438,7 +1438,7 @@ assets:
         textures:
           - '25900000'
       - building: '10000006'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000271'
@@ -1453,7 +1453,7 @@ assets:
           - 251c0000
           - 25c10000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000280'
@@ -1468,7 +1468,7 @@ assets:
           - '25900000'
           - 258d0000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000281'
@@ -1486,7 +1486,7 @@ assets:
           - 252b0000
           - 25c10000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000290'
@@ -1503,7 +1503,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: 1000000e
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000300'
@@ -1532,7 +1532,7 @@ assets:
           - 258d0000
           - '25270000'
       - building: 1000000e
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000301'
@@ -1562,7 +1562,7 @@ assets:
           - 258d0000
           - 251c0000
       - building: 1000000e
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000310'
@@ -1581,7 +1581,7 @@ assets:
           - '25900000'
           - 252b0000
       - building: 1000000e
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000320'
@@ -1609,7 +1609,7 @@ assets:
           - 258d0000
           - 25b40000
       - building: 1000000e
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000321'
@@ -1632,7 +1632,7 @@ assets:
           - 25b40000
           - 252b0000
       - building: 1000000e
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000322'
@@ -1659,7 +1659,7 @@ assets:
           - 25fb0000
           - 25bf0000
       - building: 1000000d
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000330'
@@ -1682,7 +1682,7 @@ assets:
           - '25900000'
           - 258d0000
       - building: 1000000d
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000340'
@@ -1709,7 +1709,7 @@ assets:
           - 25b40000
           - 252b0000
       - building: 1000000d
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000341'
@@ -1731,7 +1731,7 @@ assets:
           - 258d0000
           - 25fb0000
       - building: 1000000d
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000350'
@@ -1754,7 +1754,7 @@ assets:
           - 25c10000
           - 25fb0000
       - building: 1000000d
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000351'
@@ -1777,7 +1777,7 @@ assets:
           - '25900000'
           - 261a0000
       - building: 1000000d
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000360'
@@ -1806,7 +1806,7 @@ assets:
           - 25b80000
           - 258d0000
       - building: 1000000d
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000361'
@@ -1832,7 +1832,7 @@ assets:
           - 25b40000
           - 25b80000
       - building: 1000000d
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000362'
@@ -1859,7 +1859,7 @@ assets:
           - '25900000'
           - '25270000'
       - building: 1000000c
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000370'
@@ -1875,7 +1875,7 @@ assets:
         textures:
           - '25900000'
       - building: 1000000c
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000380'
@@ -1892,7 +1892,7 @@ assets:
           - '25900000'
           - 252b0000
       - building: 1000000b
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000390'
@@ -1913,7 +1913,7 @@ assets:
           - '25900000'
           - 258d0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000400'
@@ -1936,7 +1936,7 @@ assets:
           - '25240000'
           - 253d0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000401'
@@ -1957,7 +1957,7 @@ assets:
           - 251b0000
           - '261e0000'
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000402'
@@ -1984,7 +1984,7 @@ assets:
           - 253a0000
           - 252f0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000403'
@@ -2006,7 +2006,7 @@ assets:
           - '25350000'
           - '25260000'
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000410'
@@ -2034,7 +2034,7 @@ assets:
           - '25250000'
           - '25340000'
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000411'
@@ -2056,7 +2056,7 @@ assets:
           - '251e0000'
           - '25240000'
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000420'
@@ -2076,7 +2076,7 @@ assets:
           - '25270000'
           - '251e0000'
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000421'
@@ -2100,7 +2100,7 @@ assets:
           - 253d0000
           - '25240000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000430'
@@ -2119,7 +2119,7 @@ assets:
           - 253d0000
           - 251c0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000431'
@@ -2142,7 +2142,7 @@ assets:
           - 253d0000
           - 251f0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000432'
@@ -2169,7 +2169,7 @@ assets:
           - 253a0000
           - 252f0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000433'
@@ -2193,7 +2193,7 @@ assets:
           - 253d0000
           - 251b0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000440'
@@ -2218,7 +2218,7 @@ assets:
           - 253a0000
           - 252f0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000441'
@@ -2241,7 +2241,7 @@ assets:
           - 251b0000
           - 253d0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000442'
@@ -2271,7 +2271,7 @@ assets:
           - '25350000'
           - '25260000'
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000443'
@@ -2297,7 +2297,7 @@ assets:
           - 253d0000
           - 252f0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000450'
@@ -2317,7 +2317,7 @@ assets:
           - '25350000'
           - '25340000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000451'
@@ -2336,7 +2336,7 @@ assets:
           - 252a0000
           - 252b0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000452'
@@ -2354,7 +2354,7 @@ assets:
           - '251e0000'
           - 252a0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000453'
@@ -2377,7 +2377,7 @@ assets:
           - '25350000'
           - '25340000'
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000460'
@@ -2402,7 +2402,7 @@ assets:
           - '25270000'
           - '25340000'
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000461'
@@ -2425,7 +2425,7 @@ assets:
           - 251b0000
           - 253d0000
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000462'
@@ -2449,7 +2449,7 @@ assets:
           - 252b0000
           - 253a0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000470'
@@ -2473,7 +2473,7 @@ assets:
           - 252f0000
           - '25270000'
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000471'
@@ -2491,7 +2491,7 @@ assets:
           - 251c0000
           - 251b0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000472'
@@ -2510,7 +2510,7 @@ assets:
           - 251f0000
           - 252a0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000473'
@@ -2534,7 +2534,7 @@ assets:
           - '25380000'
           - 251c0000
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000480'
@@ -2557,7 +2557,7 @@ assets:
           - 252b0000
           - 251b0000
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000481'
@@ -2577,7 +2577,7 @@ assets:
           - 253a0000
           - '25340000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000490'
@@ -2594,7 +2594,7 @@ assets:
           - 251c0000
           - 251b0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000491'
@@ -2615,7 +2615,7 @@ assets:
           - 251f0000
           - '25240000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000492'
@@ -2636,7 +2636,7 @@ assets:
           - 251f0000
           - '25240000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000493'
@@ -2659,7 +2659,7 @@ assets:
           - 253a0000
           - 252f0000
       - building: '10000013'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000500'
@@ -2676,7 +2676,7 @@ assets:
           - 258f0000
           - 25c50000
       - building: '10000013'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000501'
@@ -2692,7 +2692,7 @@ assets:
           - 25a80000
           - 252b0000
       - building: '10000012'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000510'
@@ -2707,7 +2707,7 @@ assets:
           - 258f0000
           - '25270000'
       - building: '10000012'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000511'
@@ -2728,7 +2728,7 @@ assets:
           - 25ae0000
           - 258f0000
       - building: '10000012'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000520'
@@ -2738,7 +2738,7 @@ assets:
         textures:
           - 258f0000
       - building: '10000012'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000521'
@@ -2748,7 +2748,7 @@ assets:
         textures:
           - 258c0000
       - building: '10000014'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000530'
@@ -2769,7 +2769,7 @@ assets:
           - 258f0000
           - 25a30000
       - building: '10000014'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000531'
@@ -2790,7 +2790,7 @@ assets:
           - '1e810000'
           - 25a20000
       - building: '10000014'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000540'
@@ -2811,7 +2811,7 @@ assets:
           - 25af0000
           - 1e7f0000
       - building: '10000014'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000541'
@@ -2834,7 +2834,7 @@ assets:
           - 258f0000
           - 252b0000
       - building: '10000015'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000550'
@@ -2852,7 +2852,7 @@ assets:
           - 258f0000
           - 25a30000
       - building: '10000015'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000551'
@@ -2870,7 +2870,7 @@ assets:
           - 258c0000
           - 25b00000
       - building: '10000015'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000560'
@@ -2891,7 +2891,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: '10000015'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000561'
@@ -2912,7 +2912,7 @@ assets:
           - 258f0000
           - 252b0000
       - building: '10000016'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000570'
@@ -2930,7 +2930,7 @@ assets:
           - 252b0000
           - 25a30000
       - building: '10000016'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000571'
@@ -2953,7 +2953,7 @@ assets:
           - 25f40000
           - 25ae0000
       - building: '10000016'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000580'
@@ -2973,7 +2973,7 @@ assets:
           - 25a30000
           - 25b00000
       - building: '10000016'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000581'
@@ -2994,7 +2994,7 @@ assets:
           - 25ae0000
           - 1e7f0000
       - building: '10000014'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000590'
@@ -3011,7 +3011,7 @@ assets:
           - 25c50000
           - 258f0000
       - building: '10000014'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000591'
@@ -3029,7 +3029,7 @@ assets:
           - 25a80000
           - 258f0000
       - building: '10000018'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000600'
@@ -3050,7 +3050,7 @@ assets:
           - 251c0000
           - 25aa0000
       - building: '10000018'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000610'
@@ -3071,7 +3071,7 @@ assets:
           - 25b20000
           - 251c0000
       - building: '10000017'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000620'
@@ -3100,7 +3100,7 @@ assets:
           - 25a40000
           - '25270000'
       - building: '10000017'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000630'
@@ -3120,7 +3120,7 @@ assets:
           - 25a30000
           - 251c0000
       - building: '10000018'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000640'
@@ -3140,7 +3140,7 @@ assets:
           - 251c0000
           - 25af0000
       - building: '10000018'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000650'
@@ -3161,7 +3161,7 @@ assets:
           - 25b20000
           - 252b0000
       - building: '10000019'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000660'
@@ -3178,7 +3178,7 @@ assets:
           - 25aa0000
           - 25a30000
       - building: '10000019'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000670'
@@ -3199,7 +3199,7 @@ assets:
           - 258c0000
           - 25ae0000
       - building: '10000019'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000680'
@@ -3216,7 +3216,7 @@ assets:
           - 258f0000
           - 25a30000
       - building: '10000019'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000690'
@@ -3231,7 +3231,7 @@ assets:
           - 258c0000
           - 25ae0000
       - building: '10000017'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000700'
@@ -3247,7 +3247,7 @@ assets:
         textures:
           - 258f0000
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000710'
@@ -3278,7 +3278,7 @@ assets:
           - 252d0000
           - '25280000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000711'
@@ -3315,7 +3315,7 @@ assets:
           - '25280000'
           - '26320000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000720'
@@ -3340,7 +3340,7 @@ assets:
           - '25210000'
           - '25280000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000721'
@@ -3378,7 +3378,7 @@ assets:
           - '25300000'
           - 259d0000
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000730'
@@ -3403,7 +3403,7 @@ assets:
           - '25300000'
           - '25270000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000731'
@@ -3445,7 +3445,7 @@ assets:
           - '25270000'
           - '26310000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000740'
@@ -3478,7 +3478,7 @@ assets:
           - '25210000'
           - 253b0000
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000741'
@@ -3514,7 +3514,7 @@ assets:
           - '26320000'
           - 259d0000
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000750'
@@ -3544,7 +3544,7 @@ assets:
           - '25220000'
           - '259e0000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000751'
@@ -3574,7 +3574,7 @@ assets:
           - '25220000'
           - '26310000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000760'
@@ -3602,7 +3602,7 @@ assets:
           - '25300000'
           - 253c0000
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000761'
@@ -3639,7 +3639,7 @@ assets:
           - '26340000'
           - '26260000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000770'
@@ -3667,7 +3667,7 @@ assets:
           - 253c0000
           - '25300000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000771'
@@ -3697,7 +3697,7 @@ assets:
           - '25210000'
           - 259f0000
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000780'
@@ -3722,7 +3722,7 @@ assets:
           - '25220000'
           - 253b0000
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000781'
@@ -3760,7 +3760,7 @@ assets:
           - 253b0000
           - 251c0000
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000790'
@@ -3787,7 +3787,7 @@ assets:
           - '25270000'
           - '26350000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000791'
@@ -3820,7 +3820,7 @@ assets:
           - 253b0000
           - '25270000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000800'
@@ -3843,7 +3843,7 @@ assets:
           - '25220000'
           - '26350000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000801'
@@ -3867,7 +3867,7 @@ assets:
           - '25220000'
           - '25210000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000810'
@@ -3893,7 +3893,7 @@ assets:
           - '25300000'
           - 251c0000
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000811'
@@ -3922,7 +3922,7 @@ assets:
           - '25220000'
           - '25300000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000820'
@@ -3946,7 +3946,7 @@ assets:
           - '26330000'
           - 253c0000
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000821'
@@ -3976,7 +3976,7 @@ assets:
           - 253b0000
           - 251c0000
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000830'
@@ -4009,7 +4009,7 @@ assets:
           - '25270000'
           - 262f0000
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000831'
@@ -4035,7 +4035,7 @@ assets:
           - '25270000'
           - '26310000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000840'
@@ -4062,7 +4062,7 @@ assets:
           - '25220000'
           - '26300000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000841'
@@ -4085,7 +4085,7 @@ assets:
           - '259e0000'
           - '26350000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000850'
@@ -4108,7 +4108,7 @@ assets:
           - '25280000'
           - '26330000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000851'
@@ -4133,7 +4133,7 @@ assets:
           - 251c0000
           - '25280000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000860'
@@ -4160,7 +4160,7 @@ assets:
           - 253b0000
           - '25270000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000861'
@@ -4183,7 +4183,7 @@ assets:
           - '25270000'
           - 262f0000
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000870'
@@ -4209,7 +4209,7 @@ assets:
           - '26310000'
           - '26210000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000871'
@@ -4231,7 +4231,7 @@ assets:
           - 251c0000
           - '26200000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000880'
@@ -4255,7 +4255,7 @@ assets:
           - 259d0000
           - 259f0000
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000881'
@@ -4280,7 +4280,7 @@ assets:
           - 252d0000
           - '25280000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000890'
@@ -4302,7 +4302,7 @@ assets:
           - '25280000'
           - '262e0000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000891'
@@ -4325,7 +4325,7 @@ assets:
           - '25940000'
           - '26310000'
       - building: 1000002f
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000900'
@@ -4353,7 +4353,7 @@ assets:
           - '259e0000'
           - '26340000'
       - building: '10000030'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000910'
@@ -4378,7 +4378,7 @@ assets:
           - 252b0000
           - '26340000'
       - building: '10000032'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000920'
@@ -4397,7 +4397,7 @@ assets:
           - 252b0000
           - '25970000'
       - building: '10000032'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000930'
@@ -4415,7 +4415,7 @@ assets:
           - '259e0000'
           - '258e0000'
       - building: 1000002f
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000940'
@@ -4438,7 +4438,7 @@ assets:
           - '25920000'
           - '26350000'
       - building: 1000002f
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000950'
@@ -4459,7 +4459,7 @@ assets:
           - '25960000'
           - 25a00000
       - building: '10000030'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000960'
@@ -4477,7 +4477,7 @@ assets:
           - '258e0000'
           - '25920000'
       - building: '10000032'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000970'
@@ -4492,7 +4492,7 @@ assets:
           - '258e0000'
           - 259d0000
       - building: '10000030'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000980'
@@ -4509,7 +4509,7 @@ assets:
           - '258e0000'
           - '25970000'
       - building: '10000030'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '30000990'
@@ -4529,7 +4529,7 @@ assets:
           - 25c40000
           - '258e0000'
       - building: '40000099'
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000730'
@@ -4549,7 +4549,7 @@ assets:
           - 258f0000
           - 25a90000
       - building: '40000099'
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000740'
@@ -4572,7 +4572,7 @@ assets:
           - 25af0000
           - '26210000'
       - building: 4000009d
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000781'
@@ -4593,7 +4593,7 @@ assets:
           - 252b0000
           - 258f0000
       - building: 4000009d
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000782'
@@ -4613,7 +4613,7 @@ assets:
           - 25a90000
           - 258f0000
       - building: 400000a8
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000792'
@@ -4643,7 +4643,7 @@ assets:
           - 258b0000
           - '25990000'
       - building: 400000a8
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000793'
@@ -4670,7 +4670,7 @@ assets:
           - 258c0000
           - 25aa0000
       - building: 400000a8
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000794'
@@ -4702,7 +4702,7 @@ assets:
         textures:
           - '258e0000'
       - building: 400000a8
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000795'
@@ -4737,7 +4737,7 @@ assets:
           - '258e0000'
           - 252b0000
       - building: 400000a1
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60000796'
@@ -4761,7 +4761,7 @@ assets:
           - 252b0000
           - 25b00000
       - building: 400000a5
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60001520'
@@ -4781,7 +4781,7 @@ assets:
         textures:
           - '258e0000'
       - building: '40000066'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60002350'
@@ -4802,7 +4802,7 @@ assets:
           - 252b0000
           - 25a90000
       - building: 4000009c
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60002450'
@@ -4821,7 +4821,7 @@ assets:
           - 258f0000
           - 25a30000
       - building: 4000009c
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60002460'
@@ -4842,7 +4842,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: 4000009c
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60002470'
@@ -4864,7 +4864,7 @@ assets:
           - 25a80000
           - 258f0000
       - building: 400000a6
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60002680'
@@ -4885,7 +4885,7 @@ assets:
           - '258e0000'
           - 25fb0000
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003400'
@@ -4911,7 +4911,7 @@ assets:
           - 25a70000
           - '26210000'
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003440'
@@ -4932,7 +4932,7 @@ assets:
           - 25af0000
           - 258f0000
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003450'
@@ -4950,7 +4950,7 @@ assets:
           - 258f0000
           - 252b0000
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003460'
@@ -4966,7 +4966,7 @@ assets:
         textures:
           - 258f0000
       - building: 4000009f
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003540'
@@ -4991,7 +4991,7 @@ assets:
           - 258c0000
           - 25af0000
       - building: 4000009f
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003550'
@@ -5010,7 +5010,7 @@ assets:
           - 25af0000
           - 258c0000
       - building: 4000009f
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003560'
@@ -5029,7 +5029,7 @@ assets:
         textures:
           - 258f0000
       - building: 400000a0
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003590'
@@ -5054,7 +5054,7 @@ assets:
           - 25ae0000
           - 258c0000
       - building: 400000aa
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003830'
@@ -5069,7 +5069,7 @@ assets:
           - 258b0000
           - 252b0000
       - building: 400000ad
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '60003850'
@@ -5087,7 +5087,7 @@ assets:
           - 251c0000
           - '26210000'
       - building: '70000003'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000010'
@@ -5102,7 +5102,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000001'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000030'
@@ -5116,7 +5116,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000001'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000040'
@@ -5131,7 +5131,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000003'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000050'
@@ -5147,7 +5147,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000003'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000060'
@@ -5162,7 +5162,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000002'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000080'
@@ -5178,7 +5178,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000002'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000100'
@@ -5192,7 +5192,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000002'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000110'
@@ -5208,7 +5208,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000001'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000120'
@@ -5221,7 +5221,7 @@ assets:
         textures:
           - 258c0000
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000130'
@@ -5239,7 +5239,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000005'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000140'
@@ -5257,7 +5257,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000028'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000141'
@@ -5278,7 +5278,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000005'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000150'
@@ -5294,7 +5294,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000004'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000160'
@@ -5309,7 +5309,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000004'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000170'
@@ -5324,7 +5324,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000006'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000180'
@@ -5341,7 +5341,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000006'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000210'
@@ -5355,7 +5355,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000220'
@@ -5369,7 +5369,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000230'
@@ -5389,7 +5389,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000240'
@@ -5406,7 +5406,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000a
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000250'
@@ -5424,7 +5424,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000a
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000260'
@@ -5446,7 +5446,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000008'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000270'
@@ -5464,7 +5464,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000280'
@@ -5482,7 +5482,7 @@ assets:
           - '25420000'
           - '25690000'
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000290'
@@ -5499,7 +5499,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000a
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000300'
@@ -5518,7 +5518,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000310'
@@ -5531,7 +5531,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000009'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000330'
@@ -5545,7 +5545,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000a
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000340'
@@ -5558,7 +5558,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000008'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000360'
@@ -5572,7 +5572,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000b
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000370'
@@ -5585,7 +5585,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000020'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000371'
@@ -5606,7 +5606,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000c
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000380'
@@ -5622,7 +5622,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000c
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000390'
@@ -5637,7 +5637,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000e
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000410'
@@ -5652,7 +5652,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000f
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000420'
@@ -5666,7 +5666,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000f
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000430'
@@ -5680,7 +5680,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000015'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000450'
@@ -5696,7 +5696,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000015'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000460'
@@ -5711,7 +5711,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000011'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000470'
@@ -5725,7 +5725,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000010'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000490'
@@ -5739,7 +5739,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000014'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000500'
@@ -5756,7 +5756,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000013'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000550'
@@ -5768,7 +5768,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000014'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000580'
@@ -5778,7 +5778,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000017'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000590'
@@ -5794,7 +5794,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001b
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000600'
@@ -5810,7 +5810,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001b
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000610'
@@ -5825,7 +5825,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001a
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000620'
@@ -5844,7 +5844,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000019'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000630'
@@ -5860,7 +5860,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000019'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000640'
@@ -5875,7 +5875,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001b
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000650'
@@ -5889,7 +5889,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001a
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000670'
@@ -5904,7 +5904,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000019'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000680'
@@ -5916,7 +5916,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001c
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000690'
@@ -5932,7 +5932,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001c
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000710'
@@ -5949,7 +5949,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000039'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000720'
@@ -5968,7 +5968,7 @@ assets:
           - 258f0000
           - 252b0000
       - building: '70000039'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000730'
@@ -5984,7 +5984,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 7000003a
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000740'
@@ -6004,7 +6004,7 @@ assets:
           - 25a80000
           - 258c0000
       - building: '70000039'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000750'
@@ -6018,7 +6018,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: '70000039'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000760'
@@ -6041,7 +6041,7 @@ assets:
           - 25af0000
           - 252b0000
       - building: '70000039'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000770'
@@ -6057,7 +6057,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 7000003a
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000780'
@@ -6072,7 +6072,7 @@ assets:
           - 25a80000
           - 258c0000
       - building: 7000003a
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000790'
@@ -6086,7 +6086,7 @@ assets:
         textures:
           - 258c0000
       - building: 7000003b
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000800'
@@ -6101,7 +6101,7 @@ assets:
           - 25a30000
           - 258c0000
       - building: 7000003b
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000810'
@@ -6116,7 +6116,7 @@ assets:
           - 25a30000
           - 258c0000
       - building: 7000003c
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000820'
@@ -6132,7 +6132,7 @@ assets:
           - 252b0000
           - 258f0000
       - building: 7000003e
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000830'
@@ -6147,7 +6147,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 7000003e
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000840'
@@ -6163,7 +6163,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 7000003e
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000850'
@@ -6178,7 +6178,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 7000003f
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000860'
@@ -6196,7 +6196,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 7000003d
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000870'
@@ -6211,7 +6211,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 7000003f
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000880'
@@ -6228,7 +6228,7 @@ assets:
           - 25a30000
           - 258f0000
       - building: '70000040'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000890'
@@ -6245,7 +6245,7 @@ assets:
           - 25a70000
           - 25a40000
       - building: '70000042'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000900'
@@ -6260,7 +6260,7 @@ assets:
           - 25c50000
           - 258f0000
       - building: '70000041'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000910'
@@ -6272,7 +6272,7 @@ assets:
         textures:
           - 258c0000
       - building: '70000041'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000930'
@@ -6286,7 +6286,7 @@ assets:
           - 25a30000
           - 258c0000
       - building: '70000042'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000940'
@@ -6299,7 +6299,7 @@ assets:
         textures:
           - 258c0000
       - building: '70000042'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000950'
@@ -6313,7 +6313,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: '70000042'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000960'
@@ -6326,7 +6326,7 @@ assets:
           - 25c50000
           - 258c0000
       - building: '70000041'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000970'
@@ -6338,7 +6338,7 @@ assets:
         textures:
           - 258c0000
       - building: '70000042'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000980'
@@ -6348,7 +6348,7 @@ assets:
         textures:
           - 258f0000
       - building: '70000043'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000990'
@@ -6366,7 +6366,7 @@ assets:
           - 258c0000
           - 252b0000
       - building: 7000002f
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001000'
@@ -6381,7 +6381,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: 7000002f
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001010'
@@ -6399,7 +6399,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000035'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001020'
@@ -6413,7 +6413,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000035'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001030'
@@ -6431,7 +6431,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000033'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001040'
@@ -6447,7 +6447,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: '70000035'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001060'
@@ -6463,7 +6463,7 @@ assets:
           - 258d0000
           - '25900000'
       - building: '70000030'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001070'
@@ -6486,7 +6486,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000030'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001080'
@@ -6503,7 +6503,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000030'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001090'
@@ -6518,7 +6518,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000036'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001100'
@@ -6541,7 +6541,7 @@ assets:
           - 258d0000
           - 252b0000
       - building: '70000030'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001110'
@@ -6558,7 +6558,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000030'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001120'
@@ -6575,7 +6575,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000036'
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001130'
@@ -6597,7 +6597,7 @@ assets:
           - 25b70000
           - 258d0000
       - building: '70000036'
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001140'
@@ -6613,7 +6613,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000032'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001150'
@@ -6630,7 +6630,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000036'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001160'
@@ -6648,7 +6648,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000036'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001170'
@@ -6664,7 +6664,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000034'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001180'
@@ -6680,7 +6680,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000035'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001210'
@@ -6697,7 +6697,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000038'
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001230'
@@ -6707,7 +6707,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000037'
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001240'
@@ -6720,7 +6720,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000004f
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001250'
@@ -6743,7 +6743,7 @@ assets:
           - '26110000'
           - '26180000'
       - building: 7000004f
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001251'
@@ -6785,7 +6785,7 @@ assets:
           - '26120000'
           - '26160000'
       - building: 7000004f
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001260'
@@ -6816,7 +6816,7 @@ assets:
           - '26110000'
           - 261a0000
       - building: 7000004f
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001270'
@@ -6844,7 +6844,7 @@ assets:
           - '26100000'
           - 261a0000
       - building: '70000050'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001280'
@@ -6883,7 +6883,7 @@ assets:
           - 261c0000
           - '26190000'
       - building: '70000050'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001290'
@@ -6920,7 +6920,7 @@ assets:
           - 261c0000
           - 261d0000
       - building: '70000052'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001300'
@@ -6935,7 +6935,7 @@ assets:
           - 25d60000
           - '26110000'
       - building: '70000053'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001310'
@@ -6945,7 +6945,7 @@ assets:
         textures:
           - 261d0000
       - building: '70000053'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001311'
@@ -6985,7 +6985,7 @@ assets:
           - '26160000'
           - '26180000'
       - building: '70000053'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001320'
@@ -7015,7 +7015,7 @@ assets:
           - '26120000'
           - 261d0000
       - building: '70000053'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001330'
@@ -7049,7 +7049,7 @@ assets:
           - '26120000'
           - '26180000'
       - building: '70000054'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001340'
@@ -7062,7 +7062,7 @@ assets:
           - 261d0000
           - 261a0000
       - building: '70000054'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001341'
@@ -7102,7 +7102,7 @@ assets:
           - '26150000'
           - '26100000'
       - building: '70000054'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001350'
@@ -7133,7 +7133,7 @@ assets:
           - '26150000'
           - '26170000'
       - building: '70000054'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001360'
@@ -7158,7 +7158,7 @@ assets:
           - '26140000'
           - '26150000'
       - building: '70000055'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001370'
@@ -7190,7 +7190,7 @@ assets:
         textures:
           - '26160000'
       - building: '70000055'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001380'
@@ -7228,7 +7228,7 @@ assets:
           - '26120000'
           - '26150000'
       - building: '70000055'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90001390'
@@ -7260,7 +7260,7 @@ assets:
         textures:
           - '26120000'
       - building: ea6e4721
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: ea6e4721
@@ -7270,7 +7270,7 @@ assets:
         textures:
           - 25db0000
       - building: ea6e4722
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: ea6e4722
@@ -7280,7 +7280,7 @@ assets:
         textures:
           - 25d60000
       - building: '00024100'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '00024100'
@@ -7293,7 +7293,7 @@ assets:
         textures:
           - 09bee000
       - building: 2a6e4309
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 2a6e4309
@@ -7306,7 +7306,7 @@ assets:
         textures:
           - 25d90000
       - building: 2a6e431d
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 2a6e431d
@@ -7318,7 +7318,7 @@ assets:
         textures:
           - 25da0000
       - building: 6a6e4332
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 6a6e4332
@@ -7331,7 +7331,7 @@ assets:
         textures:
           - 25d60000
       - building: aa6e4328
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: aa6e4328
@@ -7344,7 +7344,7 @@ assets:
         textures:
           - 25d60000
       - building: '70000052'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900012e0'
@@ -7366,7 +7366,7 @@ assets:
         textures:
           - '26170000'
       - building: '70000052'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900012f0
@@ -7395,7 +7395,7 @@ assets:
           - '26160000'
           - '26130000'
       - building: '70000051'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900012b0
@@ -7416,7 +7416,7 @@ assets:
         textures:
           - 25d60000
       - building: '70000051'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900012d0
@@ -7444,7 +7444,7 @@ assets:
           - '26100000'
           - '26170000'
       - building: '70000051'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900012c0
@@ -7482,7 +7482,7 @@ assets:
           - '26170000'
           - '26160000'
       - building: '70000050'
-        category: agriculture
+        categories: agriculture
         density: low
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900012a0
@@ -7519,7 +7519,7 @@ assets:
           - a990c000
           - 25ef0000
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300000a0
@@ -7538,7 +7538,7 @@ assets:
           - 251c0000
           - '25290000'
       - building: '10000002'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300000a1
@@ -7557,7 +7557,7 @@ assets:
           - '25290000'
           - 261a0000
       - building: '10000001'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300000c0
@@ -7575,7 +7575,7 @@ assets:
           - '25290000'
           - '25270000'
       - building: '10000001'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300000c1
@@ -7597,7 +7597,7 @@ assets:
           - '25290000'
           - '25270000'
       - building: '10000005'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300001a0
@@ -7613,7 +7613,7 @@ assets:
         textures:
           - '25900000'
       - building: '10000005'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300001a1
@@ -7629,7 +7629,7 @@ assets:
           - '25900000'
           - 252b0000
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300001b0
@@ -7645,7 +7645,7 @@ assets:
           - 25b90000
           - '25900000'
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300001b1
@@ -7663,7 +7663,7 @@ assets:
           - 25b90000
           - '25900000'
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300001c0
@@ -7684,7 +7684,7 @@ assets:
           - '25900000'
           - 258d0000
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300001c1
@@ -7711,7 +7711,7 @@ assets:
           - 25bf0000
           - 25bc0000
       - building: '10000007'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300001d0
@@ -7732,7 +7732,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300001e0'
@@ -7750,7 +7750,7 @@ assets:
           - '25900000'
           - 25b40000
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300001f0
@@ -7771,7 +7771,7 @@ assets:
           - 258d0000
           - 251c0000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300002a0
@@ -7794,7 +7794,7 @@ assets:
           - '25900000'
           - 258d0000
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300002b0
@@ -7813,7 +7813,7 @@ assets:
           - 252b0000
           - 25c00000
       - building: '10000008'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300002b1
@@ -7833,7 +7833,7 @@ assets:
           - 258d0000
           - 25ba0000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300002c0
@@ -7848,7 +7848,7 @@ assets:
           - '25900000'
           - 252b0000
       - building: '10000009'
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300002c1
@@ -7865,7 +7865,7 @@ assets:
           - 258d0000
           - 25bc0000
       - building: 1000000b
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300002d0
@@ -7886,7 +7886,7 @@ assets:
           - 25c10000
           - '25900000'
       - building: 1000000b
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300002e0'
@@ -7903,7 +7903,7 @@ assets:
           - 25c30000
           - '25900000'
       - building: 1000000e
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300002f0
@@ -7929,7 +7929,7 @@ assets:
           - 25c30000
           - 261a0000
       - building: 1000000b
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003a0
@@ -7945,7 +7945,7 @@ assets:
           - '25900000'
           - '25270000'
       - building: 1000000c
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003b0
@@ -7961,7 +7961,7 @@ assets:
           - 25c10000
           - '25900000'
       - building: 1000000c
-        category: r$
+        categories: r$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003c0
@@ -7973,7 +7973,7 @@ assets:
         textures:
           - '25900000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003d0
@@ -7997,7 +7997,7 @@ assets:
           - 252a0000
           - '25340000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003d1
@@ -8021,7 +8021,7 @@ assets:
           - '251e0000'
           - '261e0000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003d2
@@ -8049,7 +8049,7 @@ assets:
           - '25350000'
           - 252f0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300003e0'
@@ -8073,7 +8073,7 @@ assets:
           - 251b0000
           - '261e0000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300003e1'
@@ -8102,7 +8102,7 @@ assets:
           - 251f0000
           - 252f0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300003e2'
@@ -8134,7 +8134,7 @@ assets:
           - 253a0000
           - 252f0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300003e3'
@@ -8164,7 +8164,7 @@ assets:
           - 251b0000
           - 253d0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003f0
@@ -8193,7 +8193,7 @@ assets:
           - '25350000'
           - '25260000'
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300003f1
@@ -8218,7 +8218,7 @@ assets:
           - 252f0000
           - '261e0000'
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004a0
@@ -8236,7 +8236,7 @@ assets:
           - 251b0000
           - 253d0000
       - building: '10000010'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004a1
@@ -8257,7 +8257,7 @@ assets:
           - '261e0000'
           - 252b0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004b0
@@ -8278,7 +8278,7 @@ assets:
           - '25350000'
           - '25260000'
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004b1
@@ -8298,7 +8298,7 @@ assets:
           - '251e0000'
           - 252f0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004b2
@@ -8316,7 +8316,7 @@ assets:
           - '25350000'
           - '25260000'
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004b3
@@ -8335,7 +8335,7 @@ assets:
           - '251e0000'
           - 252f0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004c0
@@ -8358,7 +8358,7 @@ assets:
           - '25340000'
           - 251f0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004c1
@@ -8378,7 +8378,7 @@ assets:
           - 253d0000
           - 251f0000
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004d0
@@ -8397,7 +8397,7 @@ assets:
           - 252b0000
           - 251b0000
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004d1
@@ -8419,7 +8419,7 @@ assets:
           - 253a0000
           - '25340000'
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300004e0'
@@ -8438,7 +8438,7 @@ assets:
           - 251b0000
           - 253d0000
       - building: '10000011'
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300004e1'
@@ -8460,7 +8460,7 @@ assets:
           - 253d0000
           - 251f0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004f0
@@ -8476,7 +8476,7 @@ assets:
           - '25340000'
           - 251c0000
       - building: 1000000f
-        category: r$$
+        categories: r$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300004f1
@@ -8492,7 +8492,7 @@ assets:
           - 252b0000
           - '25340000'
       - building: '10000015'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300005a0
@@ -8510,7 +8510,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: '10000016'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300005b0
@@ -8526,7 +8526,7 @@ assets:
           - 25c50000
           - 258f0000
       - building: '10000016'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300005c0
@@ -8543,7 +8543,7 @@ assets:
           - 258f0000
           - '25270000'
       - building: '10000014'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300005d0
@@ -8560,7 +8560,7 @@ assets:
           - 25a80000
           - 258f0000
       - building: '10000014'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300005d1
@@ -8584,7 +8584,7 @@ assets:
           - 25af0000
           - 25a80000
       - building: '10000015'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300005e0'
@@ -8597,7 +8597,7 @@ assets:
         textures:
           - 258f0000
       - building: '10000015'
-        category: r$$
+        categories: r$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300005e1'
@@ -8613,7 +8613,7 @@ assets:
           - 252b0000
           - 25af0000
       - building: '10000018'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300005f0
@@ -8636,7 +8636,7 @@ assets:
           - 25a30000
           - 251c0000
       - building: '10000019'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300006a0
@@ -8653,7 +8653,7 @@ assets:
           - 258c0000
           - 25ae0000
       - building: '10000017'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300006b0
@@ -8679,7 +8679,7 @@ assets:
           - 252b0000
           - 25a40000
       - building: '10000017'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300006c0
@@ -8694,7 +8694,7 @@ assets:
           - 258f0000
           - 25ae0000
       - building: '10000017'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300006d0
@@ -8719,7 +8719,7 @@ assets:
           - '26280000'
           - 25a40000
       - building: '10000020'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300006e0'
@@ -8738,7 +8738,7 @@ assets:
           - 252b0000
           - 25fb0000
       - building: '10000020'
-        category: r$$
+        categories: r$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300006f0
@@ -8758,7 +8758,7 @@ assets:
           - 258f0000
           - a990c000
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007a0
@@ -8782,7 +8782,7 @@ assets:
           - 253c0000
           - '25300000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007a1
@@ -8808,7 +8808,7 @@ assets:
           - '26350000'
           - '26320000'
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007b0
@@ -8833,7 +8833,7 @@ assets:
           - '25300000'
           - 251c0000
       - building: 1000002c
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007b1
@@ -8865,7 +8865,7 @@ assets:
           - 251c0000
           - '26340000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007c0
@@ -8898,7 +8898,7 @@ assets:
           - 253b0000
           - '25220000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007c1
@@ -8932,7 +8932,7 @@ assets:
           - '25220000'
           - '26200000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007d0
@@ -8960,7 +8960,7 @@ assets:
           - 252d0000
           - '25280000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007d1
@@ -8988,7 +8988,7 @@ assets:
           - 252b0000
           - '26310000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300007e0'
@@ -9015,7 +9015,7 @@ assets:
           - 252d0000
           - '25280000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300007e1'
@@ -9037,7 +9037,7 @@ assets:
           - '25280000'
           - '26320000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007f0
@@ -9065,7 +9065,7 @@ assets:
           - 253b0000
           - '25220000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300007f1
@@ -9091,7 +9091,7 @@ assets:
           - '25210000'
           - '25220000'
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008a0
@@ -9112,7 +9112,7 @@ assets:
           - 252b0000
           - 253c0000
       - building: 1000002b
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008a1
@@ -9131,7 +9131,7 @@ assets:
           - '259e0000'
           - 252b0000
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008b0
@@ -9152,7 +9152,7 @@ assets:
           - 253b0000
           - '25270000'
       - building: 1000002a
-        category: r$$$
+        categories: r$$$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008b1
@@ -9172,7 +9172,7 @@ assets:
           - '26310000'
           - '25270000'
       - building: 1000002e
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008c0
@@ -9193,7 +9193,7 @@ assets:
           - '259e0000'
           - 259d0000
       - building: 1000002d
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008d0
@@ -9218,7 +9218,7 @@ assets:
           - '258e0000'
           - '25920000'
       - building: 1000002e
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300008e0'
@@ -9236,7 +9236,7 @@ assets:
           - 259f0000
           - 252b0000
       - building: 1000002e
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300008e1'
@@ -9253,7 +9253,7 @@ assets:
           - 251c0000
           - '26310000'
       - building: 1000002d
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008f0
@@ -9276,7 +9276,7 @@ assets:
           - '259e0000'
           - 251c0000
       - building: 1000002d
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300008f1
@@ -9297,7 +9297,7 @@ assets:
           - 252b0000
           - '258e0000'
       - building: 1000002f
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300009a0
@@ -9314,7 +9314,7 @@ assets:
           - '26340000'
           - 25a10000
       - building: 1000002f
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300009a1
@@ -9334,7 +9334,7 @@ assets:
           - '26350000'
           - '259e0000'
       - building: '10000031'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300009b0
@@ -9348,7 +9348,7 @@ assets:
           - '258e0000'
           - '25920000'
       - building: '10000031'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300009c0
@@ -9362,7 +9362,7 @@ assets:
           - '25920000'
           - '258e0000'
       - building: '10000031'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300009d0
@@ -9372,7 +9372,7 @@ assets:
         textures:
           - '258e0000'
       - building: '10000031'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300009d1
@@ -9382,7 +9382,7 @@ assets:
         textures:
           - '258e0000'
       - building: '10000037'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '300009e0'
@@ -9397,7 +9397,7 @@ assets:
           - 252b0000
           - 259d0000
       - building: '10000037'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 300009f0
@@ -9413,7 +9413,7 @@ assets:
         textures:
           - '262e0000'
       - building: '10000037'
-        category: r$$$
+        categories: r$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a00
@@ -9428,7 +9428,7 @@ assets:
           - '25920000'
           - 262f0000
       - building: '10000034'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a10
@@ -9448,7 +9448,7 @@ assets:
           - '25920000'
           - 258b0000
       - building: '10000035'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a20
@@ -9463,7 +9463,7 @@ assets:
           - 258b0000
           - '25920000'
       - building: '10000035'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a30
@@ -9483,7 +9483,7 @@ assets:
           - '25920000'
           - '26200000'
       - building: '10000034'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a40
@@ -9493,7 +9493,7 @@ assets:
         textures:
           - '258e0000'
       - building: '10000034'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a50
@@ -9503,7 +9503,7 @@ assets:
         textures:
           - 252b0000
       - building: '10000036'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a60
@@ -9516,7 +9516,7 @@ assets:
         textures:
           - '258e0000'
       - building: '10000036'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a70
@@ -9533,7 +9533,7 @@ assets:
         textures:
           - '25270000'
       - building: '10000036'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a80
@@ -9551,7 +9551,7 @@ assets:
           - '258e0000'
           - '26310000'
       - building: '10000036'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000a90
@@ -9569,7 +9569,7 @@ assets:
           - 252b0000
           - '26300000'
       - building: '10000033'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000aa0
@@ -9581,7 +9581,7 @@ assets:
         textures:
           - '258e0000'
       - building: '10000033'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000ab0
@@ -9596,7 +9596,7 @@ assets:
           - '258e0000'
           - 251c0000
       - building: '10000034'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000ac0
@@ -9610,7 +9610,7 @@ assets:
           - '258e0000'
           - '25920000'
       - building: '10000035'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000ad0
@@ -9625,7 +9625,7 @@ assets:
           - 259d0000
           - 252b0000
       - building: '10000035'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000ae0
@@ -9642,7 +9642,7 @@ assets:
           - '258e0000'
           - '26200000'
       - building: '10000034'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000af0
@@ -9652,7 +9652,7 @@ assets:
         textures:
           - '258e0000'
       - building: '10000034'
-        category: r$$$
+        categories: r$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b00
@@ -9662,7 +9662,7 @@ assets:
         textures:
           - '258e0000'
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b10
@@ -9679,7 +9679,7 @@ assets:
           - 252b0000
           - '25290000'
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b11
@@ -9697,7 +9697,7 @@ assets:
           - 252b0000
           - '25290000'
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b20
@@ -9717,7 +9717,7 @@ assets:
           - '25290000'
           - '25270000'
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b21
@@ -9738,7 +9738,7 @@ assets:
           - '25270000'
           - '25290000'
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b30
@@ -9760,7 +9760,7 @@ assets:
           - '25290000'
           - 252b0000
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b31
@@ -9779,7 +9779,7 @@ assets:
           - 251c0000
           - '25290000'
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b32
@@ -9800,7 +9800,7 @@ assets:
           - '25290000'
           - 252b0000
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b40
@@ -9820,7 +9820,7 @@ assets:
           - '25370000'
           - '25270000'
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b41
@@ -9842,7 +9842,7 @@ assets:
           - '25380000'
           - '25370000'
       - building: '10000003'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b42
@@ -9864,7 +9864,7 @@ assets:
           - '25380000'
           - '25370000'
       - building: '10000004'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b50
@@ -9889,7 +9889,7 @@ assets:
           - '25310000'
           - '25230000'
       - building: '10000004'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b51
@@ -9907,7 +9907,7 @@ assets:
           - '25310000'
           - '25230000'
       - building: '10000004'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b60
@@ -9931,7 +9931,7 @@ assets:
           - '25230000'
           - '25270000'
       - building: '10000004'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b61
@@ -9957,7 +9957,7 @@ assets:
           - '25330000'
           - '25230000'
       - building: '10000004'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b70
@@ -9986,7 +9986,7 @@ assets:
           - '25230000'
           - '25330000'
       - building: '10000004'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b71
@@ -10018,7 +10018,7 @@ assets:
           - '25390000'
           - '25330000'
       - building: '10000004'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b72
@@ -10047,7 +10047,7 @@ assets:
           - '25230000'
           - '25330000'
       - building: '10000004'
-        category: r$
+        categories: r$
         density: all
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b73
@@ -10075,7 +10075,7 @@ assets:
           - '25310000'
           - '25230000'
       - building: 1000000a
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b80
@@ -10095,7 +10095,7 @@ assets:
           - '25900000'
           - 25b40000
       - building: 1000000a
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b81
@@ -10120,7 +10120,7 @@ assets:
           - 25c60000
           - '25270000'
       - building: 1000000a
-        category: r$
+        categories: r$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 30000b82
@@ -10141,7 +10141,7 @@ assets:
           - 25b90000
           - '25900000'
       - building: 4000009d
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 6000077f
@@ -10163,7 +10163,7 @@ assets:
         textures:
           - 258f0000
       - building: 400000a5
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60000a90
@@ -10186,7 +10186,7 @@ assets:
           - '259e0000'
           - 258b0000
       - building: '40000099'
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600011c0
@@ -10209,7 +10209,7 @@ assets:
           - 25b00000
           - 258f0000
       - building: '40000099'
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600011d0
@@ -10228,7 +10228,7 @@ assets:
           - 258f0000
           - 25ae0000
       - building: '40000066'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60001a80
@@ -10247,7 +10247,7 @@ assets:
           - 252b0000
           - 258c0000
       - building: 4000009c
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60001b80
@@ -10271,7 +10271,7 @@ assets:
           - 258f0000
           - '25270000'
       - building: 4000009c
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60001b90
@@ -10288,7 +10288,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: 4000009c
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60001ba0
@@ -10306,7 +10306,7 @@ assets:
         textures:
           - 258f0000
       - building: 400000a6
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60001dc0
@@ -10334,7 +10334,7 @@ assets:
         textures:
           - '258e0000'
       - building: 400000a6
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60001dd0
@@ -10361,7 +10361,7 @@ assets:
           - 258c0000
           - 252b0000
       - building: 400000a9
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60001df0
@@ -10381,7 +10381,7 @@ assets:
           - '25990000'
           - '258e0000'
       - building: 400000a9
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600026a0
@@ -10404,7 +10404,7 @@ assets:
         textures:
           - '258e0000'
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002b40
@@ -10424,7 +10424,7 @@ assets:
           - 25ae0000
           - 258f0000
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002b50
@@ -10441,7 +10441,7 @@ assets:
           - 258f0000
           - 25a30000
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002b90
@@ -10462,7 +10462,7 @@ assets:
           - '26250000'
           - 252b0000
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002ba0
@@ -10481,7 +10481,7 @@ assets:
           - 258f0000
           - '26210000'
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002bb0
@@ -10501,7 +10501,7 @@ assets:
           - '25270000'
           - 258f0000
       - building: 4000009f
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002c90
@@ -10523,7 +10523,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 4000009f
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002ca0
@@ -10543,7 +10543,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 4000009f
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002cb0
@@ -10564,7 +10564,7 @@ assets:
         textures:
           - 258f0000
       - building: 400000a0
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002ce0
@@ -10593,7 +10593,7 @@ assets:
           - 25ae0000
           - 258c0000
       - building: 400000a0
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002cf0
@@ -10619,7 +10619,7 @@ assets:
           - 258c0000
           - 252b0000
       - building: 400000a0
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002d00
@@ -10641,7 +10641,7 @@ assets:
           - '25270000'
           - 25af0000
       - building: '40000095'
-        category: co$$$
+        categories: co$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002ed0
@@ -10661,7 +10661,7 @@ assets:
           - '258e0000'
           - '25920000'
       - building: '40000095'
-        category: co$$$
+        categories: co$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002ef0
@@ -10684,7 +10684,7 @@ assets:
           - '258e0000'
           - 258b0000
       - building: '40000095'
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002f00
@@ -10702,7 +10702,7 @@ assets:
         textures:
           - '258e0000'
       - building: '40000095'
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002f10
@@ -10719,7 +10719,7 @@ assets:
         textures:
           - '258e0000'
       - building: 400000aa
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002f60
@@ -10745,7 +10745,7 @@ assets:
           - 259d0000
           - 258b0000
       - building: 400000ad
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 60002f80
@@ -10766,7 +10766,7 @@ assets:
           - 259f0000
           - '26200000'
       - building: '40000069'
-        category: co$$
+        categories: co$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600033f0
@@ -10786,7 +10786,7 @@ assets:
           - 258f0000
           - 25a30000
       - building: 400000a0
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600035a0
@@ -10809,7 +10809,7 @@ assets:
           - 258f0000
           - 25ab0000
       - building: 400000a0
-        category: co$$
+        categories: co$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600035b0
@@ -10836,7 +10836,7 @@ assets:
           - 258c0000
           - 25a90000
       - building: '40000095'
-        category: co$$$
+        categories: co$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600037a0
@@ -10857,7 +10857,7 @@ assets:
           - '258e0000'
           - 251c0000
       - building: '40000095'
-        category: co$$$
+        categories: co$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600037c0
@@ -10875,7 +10875,7 @@ assets:
           - 252b0000
           - '258e0000'
       - building: '40000095'
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 600037d0
@@ -10893,7 +10893,7 @@ assets:
           - 252b0000
           - 259d0000
       - building: '40000095'
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '600037e0'
@@ -10914,7 +10914,7 @@ assets:
           - '26260000'
           - 262f0000
       - building: '70000002'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900000a0
@@ -10931,7 +10931,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000003'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900000b0
@@ -10948,7 +10948,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000004'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900000e0'
@@ -10964,7 +10964,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001d
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 9000013a
@@ -10981,7 +10981,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001d
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 9000013b
@@ -10995,7 +10995,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000004a
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 9000013c
@@ -11009,7 +11009,7 @@ assets:
           - 25a30000
           - 258c0000
       - building: '70000028'
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 9000013d
@@ -11027,7 +11027,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000028'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 9000013e
@@ -11053,7 +11053,7 @@ assets:
           - 258c0000
           - 25db0000
       - building: '70000028'
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 9000013f
@@ -11072,7 +11072,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000006'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900001a0
@@ -11089,7 +11089,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900001b0
@@ -11105,7 +11105,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000007'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900001c0
@@ -11121,7 +11121,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000004'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900001f0
@@ -11134,7 +11134,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000009'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900002a0
@@ -11151,7 +11151,7 @@ assets:
           - '25420000'
           - 258c0000
       - building: '70000008'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900002c0
@@ -11169,7 +11169,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000009'
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900002e0'
@@ -11187,7 +11187,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000a
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900002f0
@@ -11204,7 +11204,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000e
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900003a0
@@ -11216,7 +11216,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000d
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900003c0
@@ -11231,7 +11231,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000c
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900003d0
@@ -11245,7 +11245,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000011'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900003e0'
@@ -11260,7 +11260,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000011'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900003f0
@@ -11276,7 +11276,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000000f
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900004a0
@@ -11289,7 +11289,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000015'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900004b0
@@ -11299,7 +11299,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000013'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900004c0
@@ -11316,7 +11316,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000013'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900004d0
@@ -11332,7 +11332,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000012'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900004e0'
@@ -11348,7 +11348,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000012'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900004f0
@@ -11363,7 +11363,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000016'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900005a0
@@ -11375,7 +11375,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000020'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900005a1
@@ -11396,7 +11396,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000018'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900005b0
@@ -11414,7 +11414,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000018'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900005c0
@@ -11432,7 +11432,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000017'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900005d0
@@ -11446,7 +11446,7 @@ assets:
         textures:
           - '25420000'
       - building: '70000018'
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900005f0
@@ -11467,7 +11467,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001e
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900006a0
@@ -11483,7 +11483,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001e
-        category: i-d
+        categories: i-d
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900006b0
@@ -11499,7 +11499,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001f
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900006c0
@@ -11517,7 +11517,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001e
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900006d0
@@ -11531,7 +11531,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000001f
-        category: i-d
+        categories: i-d
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900006f0
@@ -11544,7 +11544,7 @@ assets:
         textures:
           - '25420000'
       - building: 7000003b
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900007a0
@@ -11564,7 +11564,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: '70000039'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900007b0
@@ -11579,7 +11579,7 @@ assets:
           - 25c50000
           - 258c0000
       - building: 7000003c
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900007c0
@@ -11599,7 +11599,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: 7000003c
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900007d0
@@ -11613,7 +11613,7 @@ assets:
           - 25a30000
           - 258c0000
       - building: 7000003d
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900007e0'
@@ -11630,7 +11630,7 @@ assets:
           - 25a70000
           - '26210000'
       - building: 7000003d
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900007f0
@@ -11643,7 +11643,7 @@ assets:
           - 258c0000
           - 25a30000
       - building: '70000056'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900008a0
@@ -11661,7 +11661,7 @@ assets:
         textures:
           - 258f0000
       - building: '70000042'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900008c0
@@ -11677,7 +11677,7 @@ assets:
           - 252b0000
           - 258c0000
       - building: '70000056'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900008d0
@@ -11700,7 +11700,7 @@ assets:
         textures:
           - 252b0000
       - building: '70000041'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900008e0'
@@ -11713,7 +11713,7 @@ assets:
           - 25a30000
           - 258c0000
       - building: '70000042'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900008f0
@@ -11727,7 +11727,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: '70000047'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900009a0
@@ -11742,7 +11742,7 @@ assets:
           - 25c50000
           - 258c0000
       - building: '70000045'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900009b0
@@ -11761,7 +11761,7 @@ assets:
           - 258c0000
           - 252b0000
       - building: '70000043'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900009c0
@@ -11773,7 +11773,7 @@ assets:
         textures:
           - 258c0000
       - building: '70000044'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900009e0'
@@ -11788,7 +11788,7 @@ assets:
           - 25a30000
           - 258c0000
       - building: '70000047'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900009f0
@@ -11798,7 +11798,7 @@ assets:
         textures:
           - 258f0000
       - building: '70000049'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000a10
@@ -11816,7 +11816,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: '70000045'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000a20
@@ -11831,7 +11831,7 @@ assets:
           - 25a80000
           - 258c0000
       - building: '70000045'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000a30
@@ -11848,7 +11848,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: '70000049'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000a40
@@ -11863,7 +11863,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: 7000004b
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000a60
@@ -11881,7 +11881,7 @@ assets:
           - 252b0000
           - 258c0000
       - building: '70000046'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000a70
@@ -11900,7 +11900,7 @@ assets:
           - 252b0000
           - 258f0000
       - building: '70000044'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000a80
@@ -11914,7 +11914,7 @@ assets:
         textures:
           - 258c0000
       - building: '70000045'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000aa0
@@ -11928,7 +11928,7 @@ assets:
         textures:
           - 258c0000
       - building: '70000048'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ab0
@@ -11948,7 +11948,7 @@ assets:
           - 252b0000
           - 258c0000
       - building: '70000048'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ac0
@@ -11965,7 +11965,7 @@ assets:
           - 25a30000
           - 252b0000
       - building: '70000049'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ad0
@@ -11977,7 +11977,7 @@ assets:
         textures:
           - 258f0000
       - building: '70000049'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000af0
@@ -11996,7 +11996,7 @@ assets:
           - 258f0000
           - 252b0000
       - building: 7000004d
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000b00
@@ -12012,7 +12012,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: 7000004b
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000b20
@@ -12027,7 +12027,7 @@ assets:
           - 258f0000
           - 252b0000
       - building: 7000004e
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000b40
@@ -12044,7 +12044,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: '70000046'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000b60
@@ -12061,7 +12061,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: '70000046'
-        category: i-ht
+        categories: i-ht
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000b70
@@ -12078,7 +12078,7 @@ assets:
           - 25a30000
           - 258c0000
       - building: 7000004c
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000b80
@@ -12096,7 +12096,7 @@ assets:
           - '26210000'
           - 25a70000
       - building: 7000004c
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000b90
@@ -12117,7 +12117,7 @@ assets:
           - 25a30000
           - 258f0000
       - building: '70000048'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ba0
@@ -12133,7 +12133,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: 7000004e
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000bb0
@@ -12151,7 +12151,7 @@ assets:
           - 25a30000
           - 258f0000
       - building: '70000049'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000bd0
@@ -12169,7 +12169,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: 7000004d
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000bf0
@@ -12184,7 +12184,7 @@ assets:
           - 258f0000
           - 258c0000
       - building: 7000004c
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000c10
@@ -12199,7 +12199,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: '70000046'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000c20
@@ -12213,7 +12213,7 @@ assets:
         textures:
           - 258c0000
       - building: '70000048'
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000c30
@@ -12229,7 +12229,7 @@ assets:
           - 258c0000
           - 258f0000
       - building: 7000004c
-        category: i-ht
+        categories: i-ht
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000c50
@@ -12241,7 +12241,7 @@ assets:
         textures:
           - 258f0000
       - building: '70000023'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000c70
@@ -12257,7 +12257,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000024'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000c80
@@ -12272,7 +12272,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: '70000023'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000c90
@@ -12285,7 +12285,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000023'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ca0
@@ -12301,7 +12301,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: '70000023'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000cb0
@@ -12317,7 +12317,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000024'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000cc0
@@ -12332,7 +12332,7 @@ assets:
           - 25c60000
           - 258d0000
       - building: '70000024'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000cd0
@@ -12347,7 +12347,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000025'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ce0
@@ -12364,7 +12364,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000023'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000cf0
@@ -12380,7 +12380,7 @@ assets:
           - 25c60000
           - 258d0000
       - building: '70000023'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d00
@@ -12395,7 +12395,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000025'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d10
@@ -12414,7 +12414,7 @@ assets:
           - '25900000'
           - 258d0000
       - building: '70000026'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d20
@@ -12432,7 +12432,7 @@ assets:
           - 258d0000
           - 25b40000
       - building: '70000027'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d30
@@ -12454,7 +12454,7 @@ assets:
           - 25bb0000
           - 252b0000
       - building: '70000026'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d40
@@ -12473,7 +12473,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000027'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d50
@@ -12491,7 +12491,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000025'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d60
@@ -12508,7 +12508,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000025'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d70
@@ -12526,7 +12526,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000026'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d80
@@ -12543,7 +12543,7 @@ assets:
           - 25c60000
           - 258d0000
       - building: '70000027'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000d90
@@ -12560,7 +12560,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000027'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000da0
@@ -12578,7 +12578,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000029'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000db0
@@ -12602,7 +12602,7 @@ assets:
           - 258d0000
           - '25900000'
       - building: '70000027'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000dc0
@@ -12628,7 +12628,7 @@ assets:
           - 258c0000
           - 25db0000
       - building: '70000027'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000dd0
@@ -12648,7 +12648,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000029'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000de0
@@ -12667,7 +12667,7 @@ assets:
           - 258d0000
           - '25900000'
       - building: '70000029'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000df0
@@ -12687,7 +12687,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000029'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e00'
@@ -12710,7 +12710,7 @@ assets:
           - 258d0000
           - 252b0000
       - building: '70000027'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e10'
@@ -12728,7 +12728,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000027'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e20'
@@ -12744,7 +12744,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000029'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e30'
@@ -12763,7 +12763,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: 7000002a
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e40'
@@ -12776,7 +12776,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: 7000002a
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e50'
@@ -12792,7 +12792,7 @@ assets:
           - 25b30000
           - 258d0000
       - building: 7000002a
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e60'
@@ -12808,7 +12808,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: 7000002b
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e70'
@@ -12823,7 +12823,7 @@ assets:
           - 25be0000
           - 258d0000
       - building: 7000002b
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e80'
@@ -12840,7 +12840,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: 7000002c
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '90000e90'
@@ -12854,7 +12854,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002c
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ea0
@@ -12868,7 +12868,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002b
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000eb0
@@ -12881,7 +12881,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002b
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ec0
@@ -12894,7 +12894,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002b
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ed0
@@ -12914,7 +12914,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002b
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ee0
@@ -12929,7 +12929,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002c
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ef0
@@ -12942,7 +12942,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002c
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f00
@@ -12957,7 +12957,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002c
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f10
@@ -12971,7 +12971,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002b
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f20
@@ -12981,7 +12981,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002b
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f30
@@ -12991,7 +12991,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002c
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f40
@@ -13001,7 +13001,7 @@ assets:
         textures:
           - 258d0000
       - building: 7000002d
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f50
@@ -13020,7 +13020,7 @@ assets:
           - 25b30000
           - 258d0000
       - building: 7000002d
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f60
@@ -13036,7 +13036,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: 7000002d
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f70
@@ -13051,7 +13051,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: 7000002e
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f80
@@ -13070,7 +13070,7 @@ assets:
           - 258d0000
           - 25b40000
       - building: 7000002e
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000f90
@@ -13086,7 +13086,7 @@ assets:
           - 258d0000
           - 25c60000
       - building: '70000031'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000fa0
@@ -13104,7 +13104,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: '70000031'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000fb0
@@ -13122,7 +13122,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: 7000002f
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000fd0
@@ -13138,7 +13138,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: 7000002e
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000fe0
@@ -13157,7 +13157,7 @@ assets:
           - 25c60000
           - '25270000'
       - building: '70000033'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 90000ff0
@@ -13174,7 +13174,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000032'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900010a0
@@ -13194,7 +13194,7 @@ assets:
         textures:
           - 258d0000
       - building: '70000032'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900010b0
@@ -13211,7 +13211,7 @@ assets:
           - '25900000'
           - 258d0000
       - building: '70000034'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900010c0
@@ -13232,7 +13232,7 @@ assets:
         textures:
           - '25900000'
       - building: '70000037'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900010d0
@@ -13249,7 +13249,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: '70000036'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900010f0
@@ -13280,7 +13280,7 @@ assets:
           - 252b0000
           - '25900000'
       - building: '70000037'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900011a0
@@ -13294,7 +13294,7 @@ assets:
           - 25b90000
           - 258d0000
       - building: '70000032'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900011c0
@@ -13309,7 +13309,7 @@ assets:
           - 25b40000
           - 258d0000
       - building: '70000035'
-        category: i-m
+        categories: i-m
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: '900011e0'
@@ -13326,7 +13326,7 @@ assets:
           - 252b0000
           - 258d0000
       - building: '70000034'
-        category: i-m
+        categories: i-m
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 900011f0
@@ -13339,7 +13339,7 @@ assets:
         textures:
           - 258d0000
       - building: 04d40001
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 2a569397
@@ -13354,7 +13354,7 @@ assets:
           - '258e0000'
           - '26350000'
       - building: 04d30001
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 6a57cb23
@@ -13366,7 +13366,7 @@ assets:
         textures:
           - '258e0000'
       - building: 04d80001
-        category: cs$$$
+        categories: cs$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 8a57c9ca
@@ -13390,7 +13390,7 @@ assets:
           - '26060000'
           - 259c0000
       - building: 04db0001
-        category: cs$$$
+        categories: cs$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: 8a57ce87
@@ -13417,7 +13417,7 @@ assets:
           - 25ed0000
           - 25ea0000
       - building: 04d00001
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: aa57d64e
@@ -13436,7 +13436,7 @@ assets:
           - 25b00000
           - '26210000'
       - building: 04c40001
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: aac40717
@@ -13455,7 +13455,7 @@ assets:
           - '259e0000'
           - '26210000'
       - building: 04b00001
-        category: cs$$$
+        categories: cs$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: ac083284
@@ -13475,7 +13475,7 @@ assets:
           - '26230000'
           - '25930000'
       - building: '10010001'
-        category: cs$$$
+        categories: cs$$$
         density: medium,high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: b7000001
@@ -13495,7 +13495,7 @@ assets:
           - '26060000'
           - 25c40000
       - building: '10030001'
-        category: co$$$
+        categories: co$$$
         density: high
         file: a__CAM/Core Buildings/CAM_2.1.0_Buildings.dat
         id: b7000002

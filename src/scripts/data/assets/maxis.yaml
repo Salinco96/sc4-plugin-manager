@@ -421,7 +421,7 @@ buildings:
       bulldoze: 90
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-004a0000
       name: R$6x8_123HouTinyHouse1_004A
     004b0000:
@@ -430,7 +430,7 @@ buildings:
         r$: 76
         r$$: 40
         r$$$: 18
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-004b0000
       name: R$$$20x20_123ChiMansion1_004B
     004c0000:
@@ -438,7 +438,7 @@ buildings:
       capacity:
         r$: 531
         r$$: 267
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-004c0000
       name: R$$28x26_6HouSmCondos1_004C
     004d0000:
@@ -447,7 +447,7 @@ buildings:
         r$: 42
         r$$: 23
         r$$$: 11
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-004d0000
       name: R$$$24x14_123ChiMansion5_004D
     004f0000:
@@ -455,14 +455,14 @@ buildings:
       capacity:
         r$: 18
         r$$: 11
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-004f0000
       name: R$$10x14_123ChiStdHouse1_004F
     006d0000:
       bulldoze: 760
       capacity:
         r$: 6517
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-006d0000
       name: R$60x60_8HouHiriseTenemts3_006D
     006f0000:
@@ -471,14 +471,14 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-006f0000
       name: R$$$16x20_123ChiMansion9_006F
     '00700000':
       bulldoze: 760
       capacity:
         r$: 8146
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00700000
       name: R$60x60_8HouHiriseTenemts4_0070
     '00720000':
@@ -487,14 +487,14 @@ buildings:
         r$: 310
         r$$: 234
         r$$$: 95
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00720000
       name: R$$$28x26_5ChiLuxCondos1_0072
     '00730000':
       bulldoze: 90
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00730000
       name: R$6x8_123ChiTinyHouse3_0073
     '00740000':
@@ -502,21 +502,21 @@ buildings:
       capacity:
         r$: 18
         r$$: 11
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00740000
       name: R$$12x10_123ChiStdHouse4_0074
     '00750000':
       bulldoze: 170
       capacity:
         r$: 119
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00750000
       name: R$28x22_4ChiBoxyApt1_0075
     '00760000':
       bulldoze: 310
       capacity:
         r$: 264
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00760000
       name: R$30x28_5ChiTenemtApt5_0076
     '00790000':
@@ -525,14 +525,14 @@ buildings:
         r$: 143
         r$$: 78
         r$$$: 33
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00790000
       name: R$$$24x28_4ChiUrbanPalazzo2_0079
     007a0000:
       bulldoze: 760
       capacity:
         r$: 2280
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-007a0000
       name: R$56x28_8ChiHiriseTenemts1_007A
     007c0000:
@@ -541,21 +541,21 @@ buildings:
         r$: 5628
         r$$: 2816
         r$$$: 1367
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-007c0000
       name: R$$$60x60_7ChiHiriseLuxCondos1_007C
     007d0000:
       bulldoze: 90
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-007d0000
       name: R$6x8_123ChiTinyHouse2_007D
     '007e0000':
       bulldoze: 170
       capacity:
         r$: 43
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-007e0000
       name: R$10x24_4HouBoxyApt4_007E
     007f0000:
@@ -564,21 +564,21 @@ buildings:
         r$: 10728
         r$$: 6259
         r$$$: 4419
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-007f0000
       name: R$$$60x28_8HouHiriseLuxCondos11_007F
     '00800000':
       bulldoze: 170
       capacity:
         r$: 43
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00800000
       name: R$10x24_4HouBoxyApt5_0080
     '00830000':
       bulldoze: 90
       capacity:
         r$: 12
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00830000
       name: R$16x8_123ChiTinyHouse11_0083
     '00850000':
@@ -586,21 +586,21 @@ buildings:
       capacity:
         r$: 70
         r$$: 39
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00850000
       name: R$$16x20_4ChiRowHouse8_0085
     '00860000':
       bulldoze: 760
       capacity:
         r$: 1944
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00860000
       name: R$56x28_8ChiHiriseTenemts2_0086
     '00870000':
       bulldoze: 200
       capacity:
         r$: 167
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00870000
       name: R$28x24_5ChiTenemtApt1_0087
     '00880000':
@@ -608,7 +608,7 @@ buildings:
       capacity:
         r$: 3414
         r$$: 1993
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00880000
       name: R$$44x44_8ChiHiriseApts1_0088
     '00890000':
@@ -616,7 +616,7 @@ buildings:
       capacity:
         r$: 560
         r$$: 281
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00890000
       name: R$$28x26_6ChiSmCondos1_0089
     008a0000:
@@ -624,7 +624,7 @@ buildings:
       capacity:
         r$: 196
         r$$: 148
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-008a0000
       name: R$$28x20_5ChiSmCondos4_008A
     008b0000:
@@ -633,7 +633,7 @@ buildings:
         r$: 1223
         r$$: 613
         r$$$: 308
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-008b0000
       name: R$$$36x36_6ChiLuxCondos7_008B
     008c0000:
@@ -642,7 +642,7 @@ buildings:
         r$: 774
         r$$: 388
         r$$$: 196
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-008c0000
       name: R$$$36x26_6ChiLuxCondos4_008C
     008d0000:
@@ -650,7 +650,7 @@ buildings:
       capacity:
         r$: 2460
         r$$: 1232
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-008d0000
       name: R$$54x24_7ChiHiriseApts4_008D
     '008e0000':
@@ -659,7 +659,7 @@ buildings:
         r$: 2593
         r$$: 1298
         r$$$: 631
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-008e0000
       name: R$$$60x28_7ChiHiriseLuxCondos9_008E
     008f0000:
@@ -668,7 +668,7 @@ buildings:
         r$: 4701
         r$$: 2352
         r$$$: 1142
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-008f0000
       name: R$$$58x48_7ChiHiriseLuxCondos10_008F
     '00900000':
@@ -676,14 +676,14 @@ buildings:
       capacity:
         r$: 54
         r$$: 30
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00900000
       name: R$$16x16_4ChiRowHouse6_0090
     '00910000':
       bulldoze: 90
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00910000
       name: R$6x8_123ChiTinyHouse4_0091
     '00920000':
@@ -692,7 +692,7 @@ buildings:
         r$: 158
         r$$: 119
         r$$$: 49
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00920000
       name: R$$$20x24_5ChiUrbanPalazzo3_0092
     '00930000':
@@ -701,7 +701,7 @@ buildings:
         r$: 192
         r$$: 104
         r$$$: 43
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00930000
       name: R$$$24x28_4ChiUrbanPalazzo1_0093
     '00940000':
@@ -709,7 +709,7 @@ buildings:
       capacity:
         r$: 70
         r$$: 39
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00940000
       name: R$$16x20_4ChiRowHouse9_0094
     '00950000':
@@ -718,7 +718,7 @@ buildings:
         r$: 846
         r$$: 425
         r$$$: 214
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00950000
       name: R$$$32x32_6ChiLuxCondos10_0095
     '00960000':
@@ -727,7 +727,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00960000
       name: R$$$24x14_123ChiMansion7_0096
     '00970000':
@@ -736,7 +736,7 @@ buildings:
         r$: 3303
         r$$: 1653
         r$$$: 803
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00970000
       name: R$$$60x44_7ChiHiriseLuxCondos5_0097
     '00980000':
@@ -745,7 +745,7 @@ buildings:
         r$: 120
         r$$: 91
         r$$$: 38
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00980000
       name: R$$$20x24_5ChiUrbanPalazzo4_0098
     '00990000':
@@ -753,7 +753,7 @@ buildings:
       capacity:
         r$: 23
         r$$: 13
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00990000
       name: R$$12x14_123ChiStdHouse7_0099
     009a0000:
@@ -761,7 +761,7 @@ buildings:
       capacity:
         r$: 60
         r$$: 33
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-009a0000
       name: R$$16x20_4ChiRowHouse10_009A
     009b0000:
@@ -769,7 +769,7 @@ buildings:
       capacity:
         r$: 667
         r$$: 335
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-009b0000
       name: R$$24x30_6ChiSmCondos7_009B
     009c0000:
@@ -777,175 +777,175 @@ buildings:
       capacity:
         r$: 6980
         r$$: 3491
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-009c0000
       name: R$$52x56_7ChiHiriseApts7_009C
     009f0000:
       bulldoze: 170
       capacity:
         r$: 78
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-009f0000
       name: R$16x30_4ChiBoxyApt6_009F
     00a00000:
       bulldoze: 240
       capacity:
         r$: 179
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a00000
       name: R$30x16_5ChiTenemtApt7_00A0
     00a10000:
       bulldoze: 90
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a10000
       name: R$4x10_123ChiTinyHouse5_00A1
     00a20000:
       bulldoze: 90
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a20000
       name: R$4x10_123ChiTinyHouse6_00A2
     00a30000:
       bulldoze: 90
       capacity:
         r$: 9
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a30000
       name: R$8x10_123ChiTinyHouse8_00A3
     00a40000:
       bulldoze: 90
       capacity:
         r$: 12
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a40000
       name: R$16x8_123ChiTinyHouse9_00A4
     00a50000:
       bulldoze: 90
       capacity:
         r$: 12
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a50000
       name: R$16x8_123ChiTinyHouse10_00A5
     00a70000:
       bulldoze: 90
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a70000
       name: R$6x8_123NYTinyHouse2_00A7
     00a80000:
       bulldoze: 90
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a80000
       name: R$6x8_123NYTinyHouse3_00A8
     00a90000:
       bulldoze: 90
       capacity:
         r$: 7
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00a90000
       name: R$4x10_123NYTinyHouse4_00A9
     00ab0000:
       bulldoze: 90
       capacity:
         r$: 11
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00ab0000
       name: R$8x10_123NYTinyHouse6_00AB
     00ac0000:
       bulldoze: 90
       capacity:
         r$: 12
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00ac0000
       name: R$8x10_123NYTinyHouse7_00AC
     00ad0000:
       bulldoze: 90
       capacity:
         r$: 12
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00ad0000
       name: R$16x8_123NYTinyHouse8_00AD
     00ae0000:
       bulldoze: 90
       capacity:
         r$: 12
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00ae0000
       name: R$16x8_123NYTinyHouse9_00AE
     00af0000:
       bulldoze: 90
       capacity:
         r$: 10
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00af0000
       name: R$16x8_123NYTinyHouse10_00AF
     00b00000:
       bulldoze: 90
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b00000
       name: R$6x8_123HouTinyHouse2_00B0
     00b10000:
       bulldoze: 90
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b10000
       name: R$6x8_123HouTinyHouse3_00B1
     00b20000:
       bulldoze: 80
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b20000
       name: R$4x10_123HouTinyHouse4_00B2
     00b30000:
       bulldoze: 80
       capacity:
         r$: 6
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b30000
       name: R$4x10_123HouTinyHouse5_00B3
     00b40000:
       bulldoze: 90
       capacity:
         r$: 8
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b40000
       name: R$8x10_123HouTinyHouse6_00B4
     00b50000:
       bulldoze: 90
       capacity:
         r$: 8
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b50000
       name: R$8x10_123HouTinyHouse7_00B5
     00b60000:
       bulldoze: 90
       capacity:
         r$: 13
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b60000
       name: R$16x8_123HouTinyHouse8_00B6
     00b70000:
       bulldoze: 90
       capacity:
         r$: 13
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b70000
       name: R$16x8_123HouTinyHouse9_00B7
     00b80000:
       bulldoze: 90
       capacity:
         r$: 15
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00b80000
       name: R$16x8_123HouTinyHouse10_00B8
     00ba0000:
@@ -953,7 +953,7 @@ buildings:
       capacity:
         r$: 18
         r$$: 11
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00ba0000
       name: R$$10x14_123ChiStdHouse2_00BA
     00be0000:
@@ -961,7 +961,7 @@ buildings:
       capacity:
         r$: 23
         r$$: 13
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00be0000
       name: R$$12x14_123ChiStdHouse8_00BE
     00bf0000:
@@ -969,7 +969,7 @@ buildings:
       capacity:
         r$: 23
         r$$: 13
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00bf0000
       name: R$$12x14_123ChiStdHouse9_00BF
     00c00000:
@@ -977,7 +977,7 @@ buildings:
       capacity:
         r$: 19
         r$$: 11
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00c00000
       name: R$$10x14_123NYStdHouse1_00C0
     00c10000:
@@ -985,7 +985,7 @@ buildings:
       capacity:
         r$: 19
         r$$: 11
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00c10000
       name: R$$10x14_123NYStdHouse2_00C1
     00c20000:
@@ -993,7 +993,7 @@ buildings:
       capacity:
         r$: 19
         r$$: 11
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00c20000
       name: R$$10x14_123NYStdHouse3_00C2
     00c30000:
@@ -1001,7 +1001,7 @@ buildings:
       capacity:
         r$: 16
         r$$: 10
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00c30000
       name: R$$12x10_123NYStdHouse4_00C3
     00c60000:
@@ -1009,7 +1009,7 @@ buildings:
       capacity:
         r$: 25
         r$$: 14
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00c60000
       name: R$$12x14_123NYStdHouse7_00C6
     00c70000:
@@ -1017,7 +1017,7 @@ buildings:
       capacity:
         r$: 25
         r$$: 14
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00c70000
       name: R$$12x14_123NYStdHouse8_00C7
     00c80000:
@@ -1025,7 +1025,7 @@ buildings:
       capacity:
         r$: 25
         r$$: 14
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00c80000
       name: R$$12x14_123NYStdHouse9_00C8
     00c90000:
@@ -1033,7 +1033,7 @@ buildings:
       capacity:
         r$: 11
         r$$: 7
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00c90000
       name: R$$10x14_123HouStdHouse1_00C9
     00ca0000:
@@ -1041,7 +1041,7 @@ buildings:
       capacity:
         r$: 11
         r$$: 7
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00ca0000
       name: R$$10x14_123HouStdHouse2_00CA
     00cb0000:
@@ -1049,7 +1049,7 @@ buildings:
       capacity:
         r$: 11
         r$$: 7
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00cb0000
       name: R$$10x14_123HouStdHouse3_00CB
     00cc0000:
@@ -1057,7 +1057,7 @@ buildings:
       capacity:
         r$: 20
         r$$: 12
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00cc0000
       name: R$$12x10_123HouStdHouse4_00CC
     00cf0000:
@@ -1065,7 +1065,7 @@ buildings:
       capacity:
         r$: 23
         r$$: 13
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00cf0000
       name: R$$12x14_123HouStdHouse7_00CF
     00d00000:
@@ -1073,7 +1073,7 @@ buildings:
       capacity:
         r$: 23
         r$$: 13
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00d00000
       name: R$$12x14_123HouStdHouse8_00D0
     00d10000:
@@ -1081,7 +1081,7 @@ buildings:
       capacity:
         r$: 23
         r$$: 13
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-00d10000
       name: R$$12x14_123HouStdHouse9_00D1
     00d20000:
@@ -1090,7 +1090,7 @@ buildings:
         r$: 63
         r$$: 33
         r$$$: 15
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00d20000
       name: R$$$20x20_123ChiMansion2_00D2
     00d30000:
@@ -1099,7 +1099,7 @@ buildings:
         r$: 63
         r$$: 33
         r$$$: 15
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00d30000
       name: R$$$20x20_123ChiMansion3_00D3
     00d40000:
@@ -1108,7 +1108,7 @@ buildings:
         r$: 63
         r$$: 33
         r$$$: 15
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00d40000
       name: R$$$20x20_123ChiMansion4_00D4
     00d70000:
@@ -1117,7 +1117,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00d70000
       name: R$$$16x20_123ChiMansion10_00D7
     00d80000:
@@ -1126,7 +1126,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00d80000
       name: R$$$16x20_123ChiMansion11_00D8
     00d90000:
@@ -1135,7 +1135,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00d90000
       name: R$$$16x20_123ChiMansion12_00D9
     00da0000:
@@ -1144,7 +1144,7 @@ buildings:
         r$: 63
         r$$: 33
         r$$$: 15
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00da0000
       name: R$$$20x20_123NYMansion1_00DA
     00db0000:
@@ -1153,7 +1153,7 @@ buildings:
         r$: 63
         r$$: 33
         r$$$: 15
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00db0000
       name: R$$$20x20_123NYMansion2_00DB
     00dc0000:
@@ -1162,7 +1162,7 @@ buildings:
         r$: 63
         r$$: 33
         r$$$: 15
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00dc0000
       name: R$$$20x20_123NYMansion3_00DC
     00dd0000:
@@ -1171,7 +1171,7 @@ buildings:
         r$: 63
         r$$: 33
         r$$$: 15
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00dd0000
       name: R$$$20x20_123NYMansion4_00DD
     00de0000:
@@ -1180,7 +1180,7 @@ buildings:
         r$: 51
         r$$: 27
         r$$$: 13
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00de0000
       name: R$$$24x14_123NYMansion5_00DE
     '00e20000':
@@ -1189,7 +1189,7 @@ buildings:
         r$: 46
         r$$: 24
         r$$$: 12
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00e20000
       name: R$$$16x20_123NYMansion9_00E2
     '00e30000':
@@ -1198,7 +1198,7 @@ buildings:
         r$: 46
         r$$: 24
         r$$$: 12
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00e30000
       name: R$$$16x20_123NYMansion10_00E3
     '00e40000':
@@ -1207,7 +1207,7 @@ buildings:
         r$: 46
         r$$: 24
         r$$$: 12
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00e40000
       name: R$$$16x20_123NYMansion11_00E4
     '00e50000':
@@ -1216,7 +1216,7 @@ buildings:
         r$: 46
         r$$: 24
         r$$$: 12
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00e50000
       name: R$$$16x20_123NYMansion12_00E5
     '00e60000':
@@ -1225,7 +1225,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00e60000
       name: R$$$20x20_123HouMansion1_00E6
     '00e70000':
@@ -1234,7 +1234,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00e70000
       name: R$$$20x20_123HouMansion2_00E7
     '00e80000':
@@ -1243,7 +1243,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00e80000
       name: R$$$20x20_123HouMansion3_00E8
     '00e90000':
@@ -1252,7 +1252,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00e90000
       name: R$$$20x20_123HouMansion4_00E9
     00ea0000:
@@ -1261,7 +1261,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00ea0000
       name: R$$$24x14_123HouMansion5_00EA
     00ee0000:
@@ -1270,7 +1270,7 @@ buildings:
         r$: 59
         r$$: 31
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00ee0000
       name: R$$$16x20_123HouMansion9_00EE
     00ef0000:
@@ -1279,7 +1279,7 @@ buildings:
         r$: 59
         r$$: 31
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00ef0000
       name: R$$$16x20_123HouMansion10_00EF
     00f00000:
@@ -1288,7 +1288,7 @@ buildings:
         r$: 48
         r$$: 26
         r$$$: 12
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00f00000
       name: R$$$16x20_123HouMansion11_00F0
     00f10000:
@@ -1297,133 +1297,133 @@ buildings:
         r$: 48
         r$$: 26
         r$$$: 12
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-00f10000
       name: R$$$16x20_123HouMansion12_00F1
     00f40000:
       bulldoze: 170
       capacity:
         r$: 53
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00f40000
       name: R$10x24_4ChiBoxyApt4_00F4
     00f50000:
       bulldoze: 170
       capacity:
         r$: 71
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00f50000
       name: R$10x24_4ChiBoxyApt5_00F5
     00f70000:
       bulldoze: 170
       capacity:
         r$: 99
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00f70000
       name: R$28x22_4NYBoxyApt1_00F7
     00fa0000:
       bulldoze: 170
       capacity:
         r$: 33
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00fa0000
       name: R$10x24_4NYBoxyApt4_00FA
     00fc0000:
       bulldoze: 170
       capacity:
         r$: 83
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00fc0000
       name: R$16x30_4NYBoxyApt6_00FC
     00fe0000:
       bulldoze: 170
       capacity:
         r$: 138
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-00fe0000
       name: R$28x22_4HouBoxyApt1_00FE
     '01000000':
       bulldoze: 170
       capacity:
         r$: 78
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01000000
       name: R$16x30_4HouBoxyApt6_0100
     '01020000':
       bulldoze: 90
       capacity:
         r$: 7
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01020000
       name: R$6x8_123ChiTinyHouse1_0102
     '01050000':
       bulldoze: 200
       capacity:
         r$: 264
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01050000
       name: R$30x28_5ChiTenemtApt4_0105
     '01060000':
       bulldoze: 200
       capacity:
         r$: 264
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01060000
       name: R$30x28_5ChiTenemtApt6_0106
     '01070000':
       bulldoze: 200
       capacity:
         r$: 174
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01070000
       name: R$30x16_5ChiTenemtApt8_0107
     '01080000':
       bulldoze: 200
       capacity:
         r$: 195
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01080000
       name: R$30x16_5ChiTenemtApt9_0108
     '01090000':
       bulldoze: 200
       capacity:
         r$: 160
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01090000
       name: R$28x24_5NYTenemtApt1_0109
     010c0000:
       bulldoze: 200
       capacity:
         r$: 227
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-010c0000
       name: R$30x28_5NYTenemtApt4_010C
     010f0000:
       bulldoze: 200
       capacity:
         r$: 248
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-010f0000
       name: R$30x16_6NYTenemtApt7_010F
     '01120000':
       bulldoze: 200
       capacity:
         r$: 293
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01120000
       name: R$28x24_6HouTenemtApt1_0112
     '01150000':
       bulldoze: 200
       capacity:
         r$: 431
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01150000
       name: R$30x28_6HouTenemtApt4_0115
     '01180000':
       bulldoze: 200
       capacity:
         r$: 238
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01180000
       name: R$30x16_6HouTenemtApt7_0118
     011c0000:
@@ -1431,7 +1431,7 @@ buildings:
       capacity:
         r$: 56
         r$$: 31
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-011c0000
       name: R$$16x16_4NYRowHouse1_011C
     '01200000':
@@ -1439,7 +1439,7 @@ buildings:
       capacity:
         r$: 73
         r$$: 40
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01200000
       name: R$$16x20_4NYRowHouse5_0120
     '01240000':
@@ -1447,7 +1447,7 @@ buildings:
       capacity:
         r$: 46
         r$$: 35
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01240000
       name: R$$16x16_5HouRowHouse1_0124
     '01280000':
@@ -1455,7 +1455,7 @@ buildings:
       capacity:
         r$: 74
         r$$: 56
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01280000
       name: R$$16x20_5HouRowHouse5_0128
     '01300000':
@@ -1463,7 +1463,7 @@ buildings:
       capacity:
         r$: 327
         r$$: 246
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01300000
       name: R$$28x26_5NYSmCondos1_0130
     '01330000':
@@ -1471,7 +1471,7 @@ buildings:
       capacity:
         r$: 233
         r$$: 176
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01330000
       name: R$$28x20_5NYSmCondos4_0133
     '01360000':
@@ -1479,7 +1479,7 @@ buildings:
       capacity:
         r$: 331
         r$$: 249
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01360000
       name: R$$24x30_5NYSmCondos7_0136
     013a0000:
@@ -1487,7 +1487,7 @@ buildings:
       capacity:
         r$: 271
         r$$: 204
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-013a0000
       name: R$$28x20_5HouSmCondos4_013A
     013d0000:
@@ -1495,7 +1495,7 @@ buildings:
       capacity:
         r$: 235
         r$$: 177
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-013d0000
       name: R$$24x30_5HouSmCondos7_013D
     '01400000':
@@ -1504,7 +1504,7 @@ buildings:
         r$: 128
         r$$: 70
         r$$$: 30
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01400000
       name: R$$$20x24_4NYUrbanPalazzo1_0140
     '01420000':
@@ -1513,7 +1513,7 @@ buildings:
         r$: 175
         r$$: 132
         r$$$: 55
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01420000
       name: R$$$24x28_5NYUrbanPalazzo3_0142
     '01440000':
@@ -1522,7 +1522,7 @@ buildings:
         r$: 118
         r$$: 64
         r$$$: 28
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01440000
       name: R$$$20x24_4HouUrbanPalazzo1_0144
     '01460000':
@@ -1531,7 +1531,7 @@ buildings:
         r$: 167
         r$$: 126
         r$$$: 52
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01460000
       name: R$$$24x28_5HouUrbanPalazzo3_0146
     '01500000':
@@ -1540,7 +1540,7 @@ buildings:
         r$: 1947
         r$$: 1461
         r$$$: 586
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01500000
       name: R$$$54x24_5ChiLuxCondos13_0150
     '01530000':
@@ -1549,7 +1549,7 @@ buildings:
         r$: 521
         r$$: 391
         r$$$: 158
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01530000
       name: R$$$28x26_5NYLuxCondos1_0153
     '01560000':
@@ -1558,7 +1558,7 @@ buildings:
         r$: 762
         r$$: 572
         r$$$: 231
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01560000
       name: R$$$36x26_5NYLuxCondos4_0156
     '01590000':
@@ -1567,7 +1567,7 @@ buildings:
         r$: 910
         r$$: 683
         r$$$: 275
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01590000
       name: R$$$36x36_5NYLuxCondos7_0159
     015c0000:
@@ -1576,7 +1576,7 @@ buildings:
         r$: 743
         r$$: 558
         r$$$: 225
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-015c0000
       name: R$$$32x32_5NYLuxCondos10_015C
     015f0000:
@@ -1585,7 +1585,7 @@ buildings:
         r$: 1274
         r$$: 638
         r$$$: 321
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-015f0000
       name: R$$$54x24_6NYLuxCondos13_015F
     '01620000':
@@ -1594,7 +1594,7 @@ buildings:
         r$: 577
         r$$: 434
         r$$$: 175
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01620000
       name: R$$$28x26_5HouLuxCondos1_0162
     '01650000':
@@ -1603,7 +1603,7 @@ buildings:
         r$: 429
         r$$: 323
         r$$$: 131
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01650000
       name: R$$$36x26_5HouLuxCondos4_0165
     '01680000':
@@ -1612,7 +1612,7 @@ buildings:
         r$: 795
         r$$: 597
         r$$$: 241
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01680000
       name: R$$$36x36_5HouLuxCondos7_0168
     016b0000:
@@ -1621,7 +1621,7 @@ buildings:
         r$: 447
         r$$: 336
         r$$$: 136
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-016b0000
       name: R$$$32x32_5HouLuxCondos10_016B
     '016e0000':
@@ -1630,77 +1630,77 @@ buildings:
         r$: 1025
         r$$: 770
         r$$$: 310
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-016e0000
       name: R$$$54x24_5HouLuxCondos13_016E
     '01710000':
       bulldoze: 840
       capacity:
         r$: 6978
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01710000
       name: R$60x60_7ChiHiriseTenemts3_0171
     '01730000':
       bulldoze: 760
       capacity:
         r$: 2863
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01730000
       name: R$40x44_7ChiHiriseTenemts5_0173
     '01750000':
       bulldoze: 760
       capacity:
         r$: 1433
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01750000
       name: R$44x24_7ChiHiriseTenemts7_0175
     '01770000':
       bulldoze: 760
       capacity:
         r$: 2714
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01770000
       name: R$56x28_7NYHiriseTenemts1_0177
     '01790000':
       bulldoze: 760
       capacity:
         r$: 5703
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01790000
       name: R$60x60_7NYHiriseTenemts3_0179
     017b0000:
       bulldoze: 760
       capacity:
         r$: 2533
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-017b0000
       name: R$40x44_7NYHiriseTenemts5_017B
     017d0000:
       bulldoze: 760
       capacity:
         r$: 1565
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-017d0000
       name: R$44x24_7NYHiriseTenemts7_017D
     017f0000:
       bulldoze: 760
       capacity:
         r$: 2812
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-017f0000
       name: R$56x28_7HouHiriseTenemts1_017F
     '01810000':
       bulldoze: 760
       capacity:
         r$: 3120
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01810000
       name: R$40x44_7HouHiriseTenemts5_0181
     '01830000':
       bulldoze: 760
       capacity:
         r$: 1609
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01830000
       name: R$44x24_7HouHiriseTenemts7_0183
     018b0000:
@@ -1708,7 +1708,7 @@ buildings:
       capacity:
         r$: 2577
         r$$: 1290
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-018b0000
       name: R$$44x24_7ChiHiriseApts10_018B
     018c0000:
@@ -1716,7 +1716,7 @@ buildings:
       capacity:
         r$: 2511
         r$$: 1257
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-018c0000
       name: R$$44x24_7ChiHiriseApts11_018C
     018d0000:
@@ -1724,7 +1724,7 @@ buildings:
       capacity:
         r$: 1961
         r$$: 982
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-018d0000
       name: R$$44x24_7ChiHiriseApts12_018D
     '018e0000':
@@ -1732,7 +1732,7 @@ buildings:
       capacity:
         r$: 3794
         r$$: 1899
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-018e0000
       name: R$$44x44_7NYHiriseApts1_018E
     '01910000':
@@ -1740,7 +1740,7 @@ buildings:
       capacity:
         r$: 4647
         r$$: 2325
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01910000
       name: R$$54x24_7NYHiriseApts4_0191
     '01940000':
@@ -1748,7 +1748,7 @@ buildings:
       capacity:
         r$: 6071
         r$$: 3037
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01940000
       name: R$$58x54_7NYHiriseApts7_0194
     '01970000':
@@ -1756,7 +1756,7 @@ buildings:
       capacity:
         r$: 2313
         r$$: 1158
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01970000
       name: R$$44x24_7NYHiriseApts10_0197
     019a0000:
@@ -1764,7 +1764,7 @@ buildings:
       capacity:
         r$: 6456
         r$$: 3767
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-019a0000
       name: R$$44x44_8HouHiriseApts1_019A
     019d0000:
@@ -1772,7 +1772,7 @@ buildings:
       capacity:
         r$: 4404
         r$$: 2204
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-019d0000
       name: R$$54x24_7HouHiriseApts4_019D
     01a00000:
@@ -1780,7 +1780,7 @@ buildings:
       capacity:
         r$: 9203
         r$$: 4603
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01a00000
       name: R$$58x54_7HouHiriseApts7_01A0
     01a30000:
@@ -1788,7 +1788,7 @@ buildings:
       capacity:
         r$: 2621
         r$$: 1312
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01a30000
       name: R$$44x24_7HouHiriseApts10_01A3
     01af0000:
@@ -1797,7 +1797,7 @@ buildings:
         r$: 4643
         r$$: 2323
         r$$$: 1128
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01af0000
       name: R$$$58x48_7ChiHiriseLuxCondos14_01AF
     01b10000:
@@ -1806,7 +1806,7 @@ buildings:
         r$: 4933
         r$$: 2468
         r$$$: 1198
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01b10000
       name: R$$$58x48_7ChiHiriseLuxCondos16_01B1
     01b30000:
@@ -1815,7 +1815,7 @@ buildings:
         r$: 17328
         r$$: 8666
         r$$$: 4203
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01b30000
       name: R$$$60x60_7NYHiriseLuxCondos1_01B3
     01b70000:
@@ -1824,7 +1824,7 @@ buildings:
         r$: 8583
         r$$: 4293
         r$$$: 2083
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01b70000
       name: R$$$60x44_7NYHiriseLuxCondos5_01B7
     01bb0000:
@@ -1833,7 +1833,7 @@ buildings:
         r$: 6688
         r$$: 3346
         r$$$: 1624
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01bb0000
       name: R$$$60x28_7NYHiriseLuxCondos9_01BB
     01bf0000:
@@ -1842,7 +1842,7 @@ buildings:
         r$: 7949
         r$$: 3976
         r$$$: 1929
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01bf0000
       name: R$$$58x48_7NYHiriseLuxCondos13_01BF
     01c30000:
@@ -1851,7 +1851,7 @@ buildings:
         r$: 20778
         r$$: 10391
         r$$$: 5039
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01c30000
       name: R$$$60x60_7HouHiriseLuxCondos1_01C3
     01c70000:
@@ -1860,7 +1860,7 @@ buildings:
         r$: 11498
         r$$: 5751
         r$$$: 2790
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01c70000
       name: R$$$60x44_7HouHiriseLuxCondos5_01C7
     01cb0000:
@@ -1869,7 +1869,7 @@ buildings:
         r$: 3643
         r$$: 1823
         r$$$: 885
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01cb0000
       name: R$$$60x28_7HouHiriseLuxCondos9_01CB
     01ce0000:
@@ -1878,7 +1878,7 @@ buildings:
         r$: 9631
         r$$: 4817
         r$$$: 2337
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01ce0000
       name: R$$$58x48_7HouHiriseLuxCondos13_01CE
     01df0000:
@@ -1886,84 +1886,84 @@ buildings:
       capacity:
         r$: 17
         r$$: 10
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01df0000
       name: R$$10x14_123ChiStdHouse3_01DF
     '01e10000':
       bulldoze: 90
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e10000
       name: R$4x10_123NYTinyHouse5_01E1
     '01e20000':
       bulldoze: 90
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e20000
       name: R$6x8_123EuroTinyHouse1_01E2
     '01e30000':
       bulldoze: 90
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e30000
       name: R$6x8_123EuroTinyHouse2_01E3
     '01e40000':
       bulldoze: 90
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e40000
       name: R$6x8_123EuroTinyHouse3_01E4
     '01e50000':
       bulldoze: 80
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e50000
       name: R$4x10_123EuroTinyHouse4_01E5
     '01e60000':
       bulldoze: 80
       capacity:
         r$: 5
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e60000
       name: R$4x10_123EuroTinyHouse5_01E6
     '01e70000':
       bulldoze: 90
       capacity:
         r$: 10
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e70000
       name: R$8x10_123EuroTinyHouse6_01E7
     '01e80000':
       bulldoze: 90
       capacity:
         r$: 7
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e80000
       name: R$8x10_123EuroTinyHouse7_01E8
     '01e90000':
       bulldoze: 90
       capacity:
         r$: 9
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01e90000
       name: R$16x8_123EuroTinyHouse8_01E9
     01ea0000:
       bulldoze: 90
       capacity:
         r$: 9
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01ea0000
       name: R$16x8_123EuroTinyHouse9_01EA
     01eb0000:
       bulldoze: 90
       capacity:
         r$: 9
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01eb0000
       name: R$16x8_123EuroTinyHouse10_01EB
     01ec0000:
@@ -1971,7 +1971,7 @@ buildings:
       capacity:
         r$: 10
         r$$: 7
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01ec0000
       name: R$$10x14_123EuroStdHouse1_01EC
     01ed0000:
@@ -1979,7 +1979,7 @@ buildings:
       capacity:
         r$: 10
         r$$: 7
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01ed0000
       name: R$$10x14_123EuroStdHouse2_01ED
     01ee0000:
@@ -1987,7 +1987,7 @@ buildings:
       capacity:
         r$: 10
         r$$: 7
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01ee0000
       name: R$$10x14_123EuroStdHouse3_01EE
     01ef0000:
@@ -1995,7 +1995,7 @@ buildings:
       capacity:
         r$: 20
         r$$: 12
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01ef0000
       name: R$$12x10_123EuroStdHouse4_01EF
     01f00000:
@@ -2003,7 +2003,7 @@ buildings:
       capacity:
         r$: 23
         r$$: 13
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01f00000
       name: R$$12x14_123EuroStdHouse7_01F0
     01f10000:
@@ -2011,7 +2011,7 @@ buildings:
       capacity:
         r$: 23
         r$$: 13
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01f10000
       name: R$$12x14_123EuroStdHouse8_01F1
     01f20000:
@@ -2019,7 +2019,7 @@ buildings:
       capacity:
         r$: 32
         r$$: 18
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-01f20000
       name: R$$12x14_123EuroStdHouse9_01F2
     01f30000:
@@ -2028,7 +2028,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01f30000
       name: R$$$20x20_123EuroMansion1_01F3
     01f40000:
@@ -2037,7 +2037,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01f40000
       name: R$$$20x20_123EuroMansion2_01F4
     01f50000:
@@ -2046,7 +2046,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01f50000
       name: R$$$20x20_123EuroMansion3_01F5
     01f60000:
@@ -2055,7 +2055,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01f60000
       name: R$$$20x20_123EuroMansion4_01F6
     01f70000:
@@ -2064,7 +2064,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01f70000
       name: R$$$24x14_123EuroMansion5_01F7
     01f80000:
@@ -2073,7 +2073,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01f80000
       name: R$$$16x20_123EuroMansion9_01F8
     01f90000:
@@ -2082,7 +2082,7 @@ buildings:
         r$: 56
         r$$: 30
         r$$$: 14
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01f90000
       name: R$$$16x20_123EuroMansion10_01F9
     01fa0000:
@@ -2091,7 +2091,7 @@ buildings:
         r$: 46
         r$$: 24
         r$$$: 12
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01fa0000
       name: R$$$16x20_123EuroMansion11_01FA
     01fb0000:
@@ -2100,56 +2100,56 @@ buildings:
         r$: 46
         r$$: 24
         r$$$: 12
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-01fb0000
       name: R$$$16x20_123EuroMansion12_01FB
     01fc0000:
       bulldoze: 170
       capacity:
         r$: 93
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01fc0000
       name: R$28x22_4EuroBoxyApt1_01FC
     01fe0000:
       bulldoze: 170
       capacity:
         r$: 38
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01fe0000
       name: R$10x24_4EuroBoxyApt4_01FE
     01ff0000:
       bulldoze: 170
       capacity:
         r$: 38
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-01ff0000
       name: R$10x24_4EuroBoxyApt5_01FF
     '02020000':
       bulldoze: 170
       capacity:
         r$: 73
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02020000
       name: R$16x30_4EuroBoxyApt6_0202
     '02030000':
       bulldoze: 200
       capacity:
         r$: 293
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02030000
       name: R$28x24_6EuroTenemtApt1_0203
     '02040000':
       bulldoze: 200
       capacity:
         r$: 448
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02040000
       name: R$30x28_6EuroTenemtApt4_0204
     '02050000':
       bulldoze: 200
       capacity:
         r$: 238
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02050000
       name: R$30x16_6EuroTenemtApt7_0205
     '02070000':
@@ -2157,7 +2157,7 @@ buildings:
       capacity:
         r$: 53
         r$$: 40
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-02070000
       name: R$$16x20_5EuroRowHouse5_0207
     '02080000':
@@ -2165,7 +2165,7 @@ buildings:
       capacity:
         r$: 488
         r$$: 246
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-02080000
       name: R$$28x26_6EuroSmCondos1_0208
     '02090000':
@@ -2173,7 +2173,7 @@ buildings:
       capacity:
         r$: 233
         r$$: 176
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-02090000
       name: R$$28x20_5EuroSmCondos4_0209
     020a0000:
@@ -2181,7 +2181,7 @@ buildings:
       capacity:
         r$: 315
         r$$: 237
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-020a0000
       name: R$$24x30_5EuroSmCondos7_020A
     020b0000:
@@ -2190,7 +2190,7 @@ buildings:
         r$: 93
         r$$: 51
         r$$$: 22
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-020b0000
       name: R$$$20x24_4EuroUrbanPalazzo1_020B
     020c0000:
@@ -2199,7 +2199,7 @@ buildings:
         r$: 167
         r$$: 126
         r$$$: 52
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-020c0000
       name: R$$$24x28_5EuroUrbanPalazzo3_020C
     020d0000:
@@ -2208,7 +2208,7 @@ buildings:
         r$: 529
         r$$: 397
         r$$$: 161
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-020d0000
       name: R$$$28x26_5EuroLuxCondos1_020D
     '020e0000':
@@ -2217,7 +2217,7 @@ buildings:
         r$: 523
         r$$: 393
         r$$$: 159
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-020e0000
       name: R$$$36x26_5EuroLuxCondos4_020E
     020f0000:
@@ -2226,7 +2226,7 @@ buildings:
         r$: 1659
         r$$: 1245
         r$$$: 500
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-020f0000
       name: R$$$36x36_5EuroLuxCondos7_020F
     '02100000':
@@ -2235,7 +2235,7 @@ buildings:
         r$: 572
         r$$: 430
         r$$$: 174
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-02100000
       name: R$$$32x32_5EuroLuxCondos10_0210
     '02110000':
@@ -2244,42 +2244,42 @@ buildings:
         r$: 1155
         r$$: 867
         r$$$: 349
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-02110000
       name: R$$$54x24_5EuroLuxCondos13_0211
     '02120000':
       bulldoze: 760
       capacity:
         r$: 2780
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02120000
       name: R$56x28_7EuroHiriseTenemts1_0212
     '02130000':
       bulldoze: 760
       capacity:
         r$: 6260
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02130000
       name: R$60x60_8EuroHiriseTenemts3_0213
     '02140000':
       bulldoze: 760
       capacity:
         r$: 8060
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02140000
       name: R$60x60_8EuroHiriseTenemts4_0214
     '02150000':
       bulldoze: 760
       capacity:
         r$: 2680
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02150000
       name: R$40x44_7EuroHiriseTenemts5_0215
     '02160000':
       bulldoze: 760
       capacity:
         r$: 1609
-      category: r$
+      categories: r$
       model: 5ad0e817-badb57f1-02160000
       name: R$44x24_7EuroHiriseTenemts7_0216
     '02170000':
@@ -2287,7 +2287,7 @@ buildings:
       capacity:
         r$: 4613
         r$$: 2692
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-02170000
       name: R$$44x44_8EuroHiriseApts1_0217
     '02180000':
@@ -2295,7 +2295,7 @@ buildings:
       capacity:
         r$: 4458
         r$$: 2231
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-02180000
       name: R$$54x24_7EuroHiriseApts4_0218
     '02190000':
@@ -2303,7 +2303,7 @@ buildings:
       capacity:
         r$: 8486
         r$$: 4244
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-02190000
       name: R$$58x54_7EuroHiriseApts7_0219
     021a0000:
@@ -2311,7 +2311,7 @@ buildings:
       capacity:
         r$: 2973
         r$$: 1488
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-021a0000
       name: R$$44x24_7EuroHiriseApts10_021A
     021b0000:
@@ -2320,7 +2320,7 @@ buildings:
         r$: 15303
         r$$: 7653
         r$$$: 3712
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-021b0000
       name: R$$$60x60_7EuroHiriseLuxCondos1_021B
     021c0000:
@@ -2329,7 +2329,7 @@ buildings:
         r$: 11223
         r$$: 5613
         r$$$: 2723
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-021c0000
       name: R$$$60x44_7EuroHiriseLuxCondos5_021C
     021d0000:
@@ -2338,7 +2338,7 @@ buildings:
         r$: 3748
         r$$: 1876
         r$$$: 911
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-021d0000
       name: R$$$60x28_7EuroHiriseLuxCondos9_021D
     '021e0000':
@@ -2347,7 +2347,7 @@ buildings:
         r$: 4243
         r$$: 2476
         r$$$: 1749
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-021e0000
       name: R$$$60x28_8EuroHiriseLuxCondos11_021E
     021f0000:
@@ -2356,7 +2356,7 @@ buildings:
         r$: 9573
         r$$: 4788
         r$$$: 2323
-      category: r$$$
+      categories: r$$$
       model: 5ad0e817-badb57f1-021f0000
       name: R$$$58x48_7EuroHiriseLuxCondos13_021F
     '02200000':
@@ -2364,26 +2364,26 @@ buildings:
       capacity:
         r$: 43
         r$$: 33
-      category: r$$
+      categories: r$$
       model: 5ad0e817-badb57f1-02200000
       name: R$$16x16_5EuroRowHouse1_0220
     02f10000:
-      category: waste
+      categories: waste
       maintenance: 1
       model: 5ad0e817-badb57f1-02f10000
       name: CV16x16_Landfill01_02F1
     02f90000:
-      category: waste
+      categories: waste
       maintenance: 20
       model: 5ad0e817-badb57f1-02f90000
       name: CV16x16_Landfill09_02F9
     02fa0000:
-      category: waste
+      categories: waste
       maintenance: 40
       model: 5ad0e817-badb57f1-02fa0000
       name: CV16x16_Landfill10_02FA
     02fb0000:
-      category: waste
+      categories: waste
       maintenance: 30
       model: 5ad0e817-badb57f1-02fb0000
       name: CV16x16_Landfill11_02FB
@@ -2408,7 +2408,7 @@ buildings:
       waterPollutionRadius: 3
     030c0000:
       bulldoze: 20
-      category: police
+      categories: police
       cost: 250
       flamability: 36
       garbage: 5
@@ -2429,7 +2429,7 @@ buildings:
       waterPollutionRadius: 3
     030f0000:
       bulldoze: 50
-      category: police
+      categories: police
       cost: 800
       flamability: 40
       garbage: 10
@@ -2468,7 +2468,7 @@ buildings:
       waterPollutionRadius: 3
     '03110000':
       bulldoze: 40
-      category: health
+      categories: health
       cost: 400
       flamability: 35
       garbage: 9
@@ -2493,7 +2493,7 @@ buildings:
       waterPollutionRadius: 3
     '03130000':
       bulldoze: 100
-      category: health
+      categories: health
       cost: 1100
       flamability: 36
       garbage: 21
@@ -2514,7 +2514,7 @@ buildings:
       waterPollutionRadius: 4
     '03140000':
       bulldoze: 30
-      category: education
+      categories: education
       cost: 300
       flamability: 32
       garbage: 6
@@ -2534,7 +2534,7 @@ buildings:
       waterPollutionRadius: 3
     '03170000':
       bulldoze: 90
-      category: education
+      categories: education
       cost: 1050
       flamability: 32
       garbage: 9
@@ -2554,7 +2554,7 @@ buildings:
       waterPollutionRadius: 3
     '03180000':
       bulldoze: 3220
-      category: education,rewards
+      categories: education,rewards
       flamability: 33
       garbage: 6
       jobs:
@@ -2575,7 +2575,7 @@ buildings:
       waterPollutionRadius: 3
     '03190000':
       bulldoze: 90
-      category: education
+      categories: education
       cost: 1000
       flamability: 35
       garbage: 2
@@ -2595,7 +2595,7 @@ buildings:
       waterPollutionRadius: 3
     031b0000:
       bulldoze: 2750
-      category: education,rewards
+      categories: education,rewards
       cost: 36000
       flamability: 35
       garbage: 9
@@ -2612,7 +2612,7 @@ buildings:
       waterPollutionRadius: 3
     031c0000:
       bulldoze: 270
-      category: education
+      categories: education
       cost: 3000
       flamability: 40
       garbage: 20
@@ -2633,7 +2633,7 @@ buildings:
       waterPollutionRadius: 3
     031d0000:
       bulldoze: 140
-      category: education
+      categories: education
       cost: 1500
       flamability: 35
       garbage: 19
@@ -2654,7 +2654,7 @@ buildings:
       waterPollutionRadius: 4
     '031e0000':
       bulldoze: 3500
-      category: religion,rewards
+      categories: religion,rewards
       flamability: 31
       garbage: 6
       menu: Rewards
@@ -2673,7 +2673,7 @@ buildings:
       waterPollutionRadius: 3
     031f0000:
       bulldoze: 160
-      category: rewards
+      categories: rewards
       cost: 1800
       flamability: 32
       garbage: 4
@@ -2692,7 +2692,7 @@ buildings:
       waterPollutionRadius: 3
     '03210000':
       bulldoze: 580
-      category: rewards
+      categories: rewards
       cost: 6400
       garbage: 1
       maintenance: 80
@@ -2704,7 +2704,7 @@ buildings:
       submenu: Landmarks/Government,Rewards
     '03220000':
       bulldoze: 2960
-      category: rewards
+      categories: rewards
       cost: 21000
       flamability: 34
       garbage: 11
@@ -2741,7 +2741,7 @@ buildings:
       waterPollutionRadius: 1
     '03270000':
       bulldoze: 18730
-      category: rewards
+      categories: rewards
       flamability: 36
       garbage: 5
       menu: Rewards
@@ -2759,7 +2759,7 @@ buildings:
       waterPollutionRadius: 4
     '03280000':
       bulldoze: 24320
-      category: rewards
+      categories: rewards
       cost: 78000
       garbage: 50
       maintenance: 340
@@ -2779,7 +2779,7 @@ buildings:
       waterPollutionRadius: 5
     032b0000:
       bulldoze: 1520
-      category: rewards
+      categories: rewards
       cost: 68000
       flamability: 34
       garbage: 10
@@ -2798,7 +2798,7 @@ buildings:
       waterPollutionRadius: 3
     032c0000:
       bulldoze: 440
-      category: rewards
+      categories: rewards
       cost: 4900
       flamability: 37
       garbage: 9
@@ -2817,7 +2817,7 @@ buildings:
       waterPollutionRadius: 2
     032d0000:
       bulldoze: 9000
-      category: rewards
+      categories: rewards
       flamability: 41
       garbage: 11
       menu: Rewards
@@ -2833,7 +2833,7 @@ buildings:
       waterPollutionRadius: 2
     032f0000:
       bulldoze: 6300
-      category: rewards
+      categories: rewards
       cost: 50000
       flamability: 36
       garbage: 15
@@ -2858,7 +2858,7 @@ buildings:
       waterPollutionRadius: 3
     '03310000':
       bulldoze: 7440
-      category: rewards
+      categories: rewards
       cost: 36000
       flamability: 38
       garbage: 50
@@ -2877,7 +2877,7 @@ buildings:
       waterPollutionRadius: 4
     '03320000':
       bulldoze: 35760
-      category: rewards
+      categories: rewards
       flamability: 37
       garbage: 19
       jobs:
@@ -2896,7 +2896,7 @@ buildings:
       waterPollutionRadius: 4
     '03330000':
       bulldoze: 10260
-      category: rewards
+      categories: rewards
       flamability: 29
       garbage: 11
       menu: Rewards
@@ -2915,7 +2915,7 @@ buildings:
       waterPollutionRadius: 4
     '03340000':
       bulldoze: 13060
-      category: rewards
+      categories: rewards
       flamability: 33
       garbage: 12
       menu: Rewards
@@ -2933,7 +2933,7 @@ buildings:
       waterPollutionRadius: 4
     '03360000':
       bulldoze: 990
-      category: rewards
+      categories: rewards
       cost: 14000
       flamability: 41
       garbage: 23
@@ -2951,7 +2951,7 @@ buildings:
       waterPollutionRadius: 3
     '03370000':
       bulldoze: 230
-      category: police
+      categories: police
       cost: 2500
       flamability: 40
       garbage: 25
@@ -2970,7 +2970,7 @@ buildings:
       waterPollutionRadius: 3
     '03380000':
       bulldoze: 19500
-      category: police,rewards
+      categories: police,rewards
       flamability: 45
       garbage: 42
       jobs:
@@ -2990,7 +2990,7 @@ buildings:
       waterPollutionRadius: 5
     '03390000':
       bulldoze: 3330
-      category: rewards
+      categories: rewards
       cost: 37000
       flamability: 36
       garbage: 20
@@ -3013,7 +3013,7 @@ buildings:
       waterPollutionRadius: 4
     033a0000:
       bulldoze: 25000
-      category: rewards
+      categories: rewards
       flamability: 42
       garbage: 30
       garbageRadius: 2
@@ -3032,7 +3032,7 @@ buildings:
       waterPollutionRadius: 5
     033c0000:
       bulldoze: 10070
-      category: education,rewards
+      categories: education,rewards
       cost: 13000
       flamability: 37
       garbage: 8
@@ -3054,7 +3054,7 @@ buildings:
       waterPollutionRadius: 3
     033d0000:
       bulldoze: 3080
-      category: education,rewards
+      categories: education,rewards
       cost: 82000
       flamability: 36
       garbage: 65
@@ -3081,7 +3081,7 @@ buildings:
       waterPollutionRadius: 3
     '033e0000':
       bulldoze: 21590
-      category: rewards
+      categories: rewards
       flamability: 42
       garbage: 15
       jobs:
@@ -3097,7 +3097,7 @@ buildings:
       waterPollutionRadius: 5
     033f0000:
       bulldoze: 3000
-      category: health,rewards
+      categories: health,rewards
       cost: 26000
       flamability: 35
       garbage: 10
@@ -3124,7 +3124,7 @@ buildings:
       waterPollutionRadius: 4
     '03410000':
       bulldoze: 20000
-      category: rewards
+      categories: rewards
       flamability: 77
       garbage: 35
       maintenance: 400
@@ -3143,7 +3143,7 @@ buildings:
       waterPollutionRadius: 10
     '03420000':
       bulldoze: 22500
-      category: rewards
+      categories: rewards
       garbage: 50
       maintenance: 450
       menu: Rewards
@@ -3157,7 +3157,7 @@ buildings:
       waterPollutionRadius: 7
     '03430000':
       bulldoze: 2880
-      category: rewards
+      categories: rewards
       cost: 42000
       flamability: 45
       garbage: 23
@@ -3180,7 +3180,7 @@ buildings:
       waterPollutionRadius: 2
     '03440000':
       bulldoze: 9530
-      category: rewards
+      categories: rewards
       cost: 17000
       garbage: 9
       maintenance: 120
@@ -3200,7 +3200,7 @@ buildings:
       waterPollutionRadius: 5
     '03460000':
       bulldoze: 17500
-      category: rewards
+      categories: rewards
       flamability: 45
       garbage: 20
       jobs:
@@ -3223,7 +3223,7 @@ buildings:
       waterPollutionRadius: 5
     '03470000':
       bulldoze: 1200
-      category: religion,rewards
+      categories: religion,rewards
       flamability: 35
       garbage: 1
       menu: Rewards
@@ -3238,18 +3238,18 @@ buildings:
       waterPollution: 4
       waterPollutionRadius: 3
     '034e0000':
-      category: waste
+      categories: waste
       maintenance: 10
       model: 5ad0e817-badb57f1-034e0000
       name: CV16x16_Landfill14_034E
     034f0000:
-      category: waste
+      categories: waste
       maintenance: 20
       model: 5ad0e817-badb57f1-034f0000
       name: CV16x16_Landfill15_034F
     '03500000':
       bulldoze: 8500
-      category: airports
+      categories: airports
       flamability: 28
       garbage: 18
       jobs:
@@ -3267,7 +3267,7 @@ buildings:
       waterPollutionRadius: 6
     '03510000':
       bulldoze: 1000
-      category: airports
+      categories: airports
       cost: 20000
       flamability: 20
       garbage: 2
@@ -3287,7 +3287,7 @@ buildings:
       waterPollutionRadius: 2
     '03520000':
       bulldoze: 9000
-      category: airports
+      categories: airports
       flamability: 31
       garbage: 20
       jobs:
@@ -3305,7 +3305,7 @@ buildings:
       waterPollutionRadius: 6
     '03530000':
       bulldoze: 1400
-      category: airports
+      categories: airports
       flamability: 21
       garbage: 3
       jobs:
@@ -3323,7 +3323,7 @@ buildings:
       waterPollutionRadius: 2
     '03540000':
       bulldoze: 4500
-      category: airports
+      categories: airports
       cost: 35000
       flamability: 23
       garbage: 8
@@ -3343,7 +3343,7 @@ buildings:
       waterPollutionRadius: 3
     '03550000':
       bulldoze: 8000
-      category: airports
+      categories: airports
       cost: 61300
       flamability: 26
       garbage: 16
@@ -3363,7 +3363,7 @@ buildings:
       waterPollutionRadius: 5
     '03560000':
       bulldoze: 5500
-      category: airports
+      categories: airports
       flamability: 25
       garbage: 12
       jobs:
@@ -3381,7 +3381,7 @@ buildings:
       waterPollutionRadius: 5
     '03590000':
       bulldoze: 50
-      category: subway
+      categories: subway
       cost: 500
       flamability: 33
       garbage: 2
@@ -3400,7 +3400,7 @@ buildings:
       waterPollutionRadius: 1
     035a0000:
       bulldoze: 10
-      category: bus
+      categories: bus
       cost: 150
       flamability: 38
       garbage: 1
@@ -3418,7 +3418,7 @@ buildings:
       waterPollutionRadius: 1
     035b0000:
       bulldoze: 10
-      category: passengers
+      categories: passengers
       cost: 100
       flamability: 37
       garbage: 6
@@ -3437,7 +3437,7 @@ buildings:
       waterPollutionRadius: 2
     035c0000:
       bulldoze: 10
-      category: freight
+      categories: freight
       cost: 100
       flamability: 25
       garbage: 4
@@ -3472,7 +3472,7 @@ buildings:
       waterPollutionRadius: 4
     '03700000':
       bulldoze: 1800
-      category: airports
+      categories: airports
       flamability: 22
       garbage: 4
       jobs:
@@ -3490,7 +3490,7 @@ buildings:
       waterPollutionRadius: 3
     '03710000':
       bulldoze: 5000
-      category: airports
+      categories: airports
       flamability: 24
       garbage: 10
       jobs:
@@ -3508,7 +3508,7 @@ buildings:
       waterPollutionRadius: 4
     '03730000':
       bulldoze: 330
-      category: rewards
+      categories: rewards
       cost: 3700
       garbage: 1
       maintenance: 30
@@ -3520,7 +3520,7 @@ buildings:
       submenu: Landmarks/Government,Rewards
     '03740000':
       bulldoze: 1980
-      category: rewards
+      categories: rewards
       cost: 22000
       garbage: 1
       maintenance: 150
@@ -3532,7 +3532,7 @@ buildings:
       submenu: Landmarks/Government,Rewards
     '03750000':
       bulldoze: 5130
-      category: rewards
+      categories: rewards
       cost: 59000
       garbage: 1
       maintenance: 300
@@ -3544,7 +3544,7 @@ buildings:
       submenu: Landmarks/Government,Rewards
     '03760000':
       bulldoze: 3500
-      category: religion,rewards
+      categories: religion,rewards
       flamability: 31
       garbage: 6
       menu: Rewards
@@ -3563,7 +3563,7 @@ buildings:
       waterPollutionRadius: 3
     '03770000':
       bulldoze: 3500
-      category: religion,rewards
+      categories: religion,rewards
       flamability: 31
       garbage: 6
       menu: Rewards
@@ -3582,7 +3582,7 @@ buildings:
       waterPollutionRadius: 3
     '03780000':
       bulldoze: 3500
-      category: religion,rewards
+      categories: religion,rewards
       flamability: 31
       garbage: 6
       menu: Rewards
@@ -3601,7 +3601,7 @@ buildings:
       waterPollutionRadius: 3
     '03790000':
       bulldoze: 3220
-      category: education,rewards
+      categories: education,rewards
       flamability: 33
       garbage: 6
       jobs:
@@ -3622,7 +3622,7 @@ buildings:
       waterPollutionRadius: 3
     037a0000:
       bulldoze: 3220
-      category: education,rewards
+      categories: education,rewards
       flamability: 33
       garbage: 6
       jobs:
@@ -3643,7 +3643,7 @@ buildings:
       waterPollutionRadius: 3
     037b0000:
       bulldoze: 1200
-      category: religion,rewards
+      categories: religion,rewards
       flamability: 35
       garbage: 1
       menu: Rewards
@@ -3659,7 +3659,7 @@ buildings:
       waterPollutionRadius: 3
     037c0000:
       bulldoze: 1200
-      category: religion,rewards
+      categories: religion,rewards
       flamability: 35
       garbage: 1
       menu: Rewards
@@ -3675,7 +3675,7 @@ buildings:
       waterPollutionRadius: 3
     037d0000:
       bulldoze: 330
-      category: rewards
+      categories: rewards
       cost: 3700
       garbage: 1
       maintenance: 30
@@ -3687,7 +3687,7 @@ buildings:
       submenu: Landmarks/Government,Rewards
     '037e0000':
       bulldoze: 580
-      category: rewards
+      categories: rewards
       cost: 6400
       garbage: 1
       maintenance: 80
@@ -3699,7 +3699,7 @@ buildings:
       submenu: Landmarks/Government,Rewards
     037f0000:
       bulldoze: 1980
-      category: rewards
+      categories: rewards
       cost: 22000
       garbage: 1
       maintenance: 150
@@ -3711,7 +3711,7 @@ buildings:
       submenu: Landmarks/Government,Rewards
     '03800000':
       bulldoze: 5130
-      category: rewards
+      categories: rewards
       cost: 59000
       garbage: 1
       maintenance: 300
@@ -3723,7 +3723,7 @@ buildings:
       submenu: Landmarks/Government,Rewards
     '03810000':
       bulldoze: 23780
-      category: rewards
+      categories: rewards
       flamability: 39
       garbage: 21
       jobs:
@@ -3744,7 +3744,7 @@ buildings:
       waterPollutionRadius: 4
     '03820000':
       bulldoze: 10
-      category: ferry
+      categories: ferry
       cost: 300
       flamability: 38
       garbage: 1
@@ -3762,7 +3762,7 @@ buildings:
       waterPollutionRadius: 1
     '03830000':
       bulldoze: 50
-      category: tram
+      categories: tram
       cost: 500
       flamability: 33
       garbage: 2
@@ -3781,7 +3781,7 @@ buildings:
       waterPollutionRadius: 1
     '03840000':
       bulldoze: 4200
-      category: rewards
+      categories: rewards
       cost: 96000
       flamability: 38
       garbage: 10
@@ -3800,7 +3800,7 @@ buildings:
       waterPollutionRadius: 4
     '03850000':
       bulldoze: 210
-      category: education
+      categories: education
       cost: 2100
       flamability: 32
       garbage: 14
@@ -3820,7 +3820,7 @@ buildings:
       waterPollutionRadius: 4
     '03860000':
       bulldoze: 70
-      category: police
+      categories: police
       cost: 1200
       flamability: 40
       garbage: 14
@@ -3841,7 +3841,7 @@ buildings:
       waterPollutionRadius: 3
     '03870000':
       bulldoze: 500
-      category: waste
+      categories: waste
       cost: 15400
       flamability: 40
       maintenance: 3150
@@ -3854,7 +3854,7 @@ buildings:
       waterProduction: 200000
     '03880000':
       bulldoze: 10
-      category: police
+      categories: police
       cost: 80
       flamability: 36
       garbage: 2
@@ -3875,7 +3875,7 @@ buildings:
       waterPollutionRadius: 3
     '03890000':
       bulldoze: 360
-      category: education
+      categories: education
       cost: 7350
       flamability: 32
       garbage: 16
@@ -3895,7 +3895,7 @@ buildings:
       waterPollutionRadius: 4
     038b0000:
       bulldoze: 10
-      category: ferry
+      categories: ferry
       cost: 150
       flamability: 38
       garbage: 1
@@ -3913,7 +3913,7 @@ buildings:
       waterPollutionRadius: 1
     038d0000:
       bulldoze: 50
-      category: monorail
+      categories: monorail
       cost: 500
       flamability: 33
       garbage: 2
@@ -3951,7 +3951,7 @@ buildings:
       waterPollutionRadius: 3
     038f0000:
       bulldoze: 10
-      category: transport
+      categories: transport
       cost: 200
       flamability: 38
       garbage: 1
@@ -3966,7 +3966,7 @@ buildings:
       waterPollutionRadius: 1
     '03950000':
       bulldoze: 210
-      category: rewards
+      categories: rewards
       cost: 6500
       flamability: 36
       garbage: 1
@@ -3989,7 +3989,7 @@ buildings:
       waterPollutionRadius: 3
     '03960000':
       bulldoze: 45000
-      category: rewards
+      categories: rewards
       flamability: 40
       garbage: 10
       jobs:
@@ -4012,7 +4012,7 @@ buildings:
       waterPollutionRadius: 4
     '03970000':
       bulldoze: 180
-      category: marina,rewards
+      categories: marina,rewards
       cost: 4000
       flamability: 36
       garbage: 15
@@ -4036,7 +4036,7 @@ buildings:
       waterPollutionRadius: 3
     '03980000':
       bulldoze: 1400
-      category: rail,fillers
+      categories: rail,fillers
       cost: 24000
       flamability: 37
       garbage: 10
@@ -4055,7 +4055,7 @@ buildings:
       waterPollutionRadius: 2
     03bc0000:
       bulldoze: 2580
-      category: rewards
+      categories: rewards
       cost: 28000
       flamability: 33
       garbage: 13
@@ -4074,7 +4074,7 @@ buildings:
       waterPollutionRadius: 4
     03c00000:
       bulldoze: 2700
-      category: rewards
+      categories: rewards
       cost: 17000
       flamability: 30
       garbage: 10
@@ -4093,7 +4093,7 @@ buildings:
       waterPollutionRadius: 3
     03c10000:
       bulldoze: 5580
-      category: rewards
+      categories: rewards
       cost: 62000
       flamability: 33
       garbage: 13
@@ -4112,7 +4112,7 @@ buildings:
       waterPollutionRadius: 3
     03c20000:
       bulldoze: 6030
-      category: rewards
+      categories: rewards
       cost: 67000
       flamability: 36
       garbage: 16
@@ -4131,7 +4131,7 @@ buildings:
       waterPollutionRadius: 3
     04a20000:
       bulldoze: 6300
-      category: landmarks
+      categories: landmarks
       cost: 90000
       flamability: 31
       garbage: 15
@@ -4149,7 +4149,7 @@ buildings:
       waterPollutionRadius: 2
     04ab0000:
       bulldoze: 15750
-      category: landmarks
+      categories: landmarks
       cost: 125000
       flamability: 25
       garbage: 8
@@ -4167,7 +4167,7 @@ buildings:
       waterPollutionRadius: 2
     04b00000:
       bulldoze: 6300
-      category: landmarks
+      categories: landmarks
       cost: 110000
       flamability: 31
       garbage: 15
@@ -4185,7 +4185,7 @@ buildings:
       waterPollutionRadius: 2
     04b20000:
       bulldoze: 7900
-      category: landmarks
+      categories: landmarks
       cost: 110000
       flamability: 31
       garbage: 15
@@ -4251,7 +4251,7 @@ buildings:
       waterPollutionRadius: 3
     04c60000:
       bulldoze: 7650
-      category: landmarks
+      categories: landmarks
       cost: 85000
       flamability: 20
       garbage: 5
@@ -4269,7 +4269,7 @@ buildings:
       waterPollutionRadius: 1
     04c70000:
       bulldoze: 5850
-      category: landmarks
+      categories: landmarks
       cost: 65000
       flamability: 33
       garbage: 9
@@ -4287,7 +4287,7 @@ buildings:
       waterPollutionRadius: 3
     04c80000:
       bulldoze: 5850
-      category: landmarks
+      categories: landmarks
       cost: 65000
       flamability: 34
       garbage: 4
@@ -4305,7 +4305,7 @@ buildings:
       waterPollutionRadius: 3
     04c90000:
       bulldoze: 7200
-      category: landmarks
+      categories: landmarks
       cost: 80000
       flamability: 25
       garbage: 3
@@ -4323,7 +4323,7 @@ buildings:
       waterPollutionRadius: 2
     04ca0000:
       bulldoze: 15750
-      category: landmarks
+      categories: landmarks
       cost: 175000
       flamability: 25
       garbage: 8
@@ -4365,7 +4365,7 @@ buildings:
       waterPollutionRadius: 2
     04cd0000:
       bulldoze: 6750
-      category: landmarks
+      categories: landmarks
       cost: 75000
       flamability: 40
       garbage: 2
@@ -4383,7 +4383,7 @@ buildings:
       waterPollutionRadius: 2
     04ce0000:
       bulldoze: 8100
-      category: landmarks,religion
+      categories: landmarks,religion
       cost: 90000
       flamability: 39
       garbage: 3
@@ -4434,7 +4434,7 @@ buildings:
       waterPollutionRadius: 7
     04d10000:
       bulldoze: 4500
-      category: landmarks
+      categories: landmarks
       cost: 50000
       garbage: 2
       maintenance: 100
@@ -4486,7 +4486,7 @@ buildings:
       waterPollutionRadius: 6
     04d50000:
       bulldoze: 8550
-      category: landmarks
+      categories: landmarks
       cost: 95000
       flamability: 31
       garbage: 9
@@ -4504,7 +4504,7 @@ buildings:
       waterPollutionRadius: 2
     04d60000:
       bulldoze: 7650
-      category: landmarks
+      categories: landmarks
       cost: 85000
       flamability: 14
       garbage: 3
@@ -4520,7 +4520,7 @@ buildings:
       waterPollutionRadius: 2
     04d70000:
       bulldoze: 5400
-      category: landmarks
+      categories: landmarks
       cost: 60000
       flamability: 30
       garbage: 3
@@ -4564,7 +4564,7 @@ buildings:
       ratingRadius: 256
     04da0000:
       bulldoze: 5850
-      category: landmarks
+      categories: landmarks
       cost: 65000
       flamability: 35
       garbage: 2
@@ -4594,7 +4594,7 @@ buildings:
       waterPollutionRadius: 2
     04dc0000:
       bulldoze: 4500
-      category: landmarks
+      categories: landmarks
       cost: 50000
       flamability: 37
       garbage: 10
@@ -4610,7 +4610,7 @@ buildings:
       waterPollutionRadius: 3
     04dd0000:
       bulldoze: 7200
-      category: landmarks
+      categories: landmarks
       cost: 80000
       flamability: 5
       garbage: 3
@@ -4623,7 +4623,7 @@ buildings:
       ratingRadius: 256
     04de0000:
       bulldoze: 7650
-      category: landmarks
+      categories: landmarks
       cost: 85000
       garbage: 3
       maintenance: 170
@@ -4635,7 +4635,7 @@ buildings:
       ratingRadius: 256
     04df0000:
       bulldoze: 12150
-      category: landmarks
+      categories: landmarks
       cost: 135000
       flamability: 35
       garbage: 13
@@ -4653,7 +4653,7 @@ buildings:
       waterPollutionRadius: 3
     '04e00000':
       bulldoze: 6300
-      category: landmarks
+      categories: landmarks
       cost: 70000
       garbage: 3
       maintenance: 140
@@ -4665,7 +4665,7 @@ buildings:
       ratingRadius: 256
     '04e10000':
       bulldoze: 6300
-      category: landmarks
+      categories: landmarks
       cost: 70000
       flamability: 31
       garbage: 15
@@ -4686,21 +4686,21 @@ buildings:
       capacity:
         co$$: 241
         co$$$: 182
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04e30000
       name: CO$$$30x22_4ChiOfficeBldg1_04E3
     '04e40000':
       bulldoze: 1310
       capacity:
         co$$: 5752
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04e40000
       name: CO$$56x56_8ChiOfficeBldg7_04E4
     '04e50000':
       bulldoze: 1060
       capacity:
         co$$: 1670
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04e50000
       name: CO$$44x36_7ChiOfficeBldg1_04E5
     '04e60000':
@@ -4708,56 +4708,56 @@ buildings:
       capacity:
         co$$: 2753
         co$$$: 1378
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04e60000
       name: CO$$$44x36_8ChiOfficeBldg3_04E6
     '04e70000':
       bulldoze: 150
       capacity:
         co$$: 22
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04e70000
       name: CO$$14x14_4ChiOfficeBldg1_04E7
     '04e90000':
       bulldoze: 110
       capacity:
         co$$: 17
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04e90000
       name: CO$$12x28_1ChiOfficeBldg1_04E9
     04ea0000:
       bulldoze: 110
       capacity:
         co$$: 25
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04ea0000
       name: CO$$24x24_1ChiOfficeBldg4_04EA
     04eb0000:
       bulldoze: 110
       capacity:
         co$$: 18
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04eb0000
       name: CO$$12x28_1ChiOfficeBldg2_04EB
     04ec0000:
       bulldoze: 110
       capacity:
         co$$: 18
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04ec0000
       name: CO$$12x28_1ChiOfficeBldg3_04EC
     04ed0000:
       bulldoze: 110
       capacity:
         co$$: 27
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04ed0000
       name: CO$$24x24_1ChiOfficeBldg5_04ED
     04ee0000:
       bulldoze: 110
       capacity:
         co$$: 34
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04ee0000
       name: CO$$24x24_1ChiOfficeBldg6_04EE
     04ef0000:
@@ -4765,7 +4765,7 @@ buildings:
       capacity:
         co$$: 18
         co$$$: 15
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04ef0000
       name: CO$$$12x28_1ChiOfficeBldg1_04EF
     04f20000:
@@ -4773,7 +4773,7 @@ buildings:
       capacity:
         co$$: 95
         co$$$: 77
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04f20000
       name: CO$$$40x24_3ChiOfficeBldg10_04F2
     04f30000:
@@ -4781,14 +4781,14 @@ buildings:
       capacity:
         co$$: 111
         co$$$: 89
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04f30000
       name: CO$$$40x24_3ChiOfficeBldg11_04F3
     04f50000:
       bulldoze: 320
       capacity:
         co$$: 346
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04f50000
       name: CO$$44x26_5ChiOfficeBldg9_04F5
     04f60000:
@@ -4796,7 +4796,7 @@ buildings:
       capacity:
         co$$: 918
         co$$$: 526
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04f60000
       name: CO$$$44x26_5ChiOfficeBldg4_04F6
     04f70000:
@@ -4804,7 +4804,7 @@ buildings:
       capacity:
         co$$: 4231
         co$$$: 2117
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04f70000
       name: CO$$$56x36_8ChiOfficeBldg5_04F7
     04f80000:
@@ -4812,28 +4812,28 @@ buildings:
       capacity:
         co$$: 14202
         co$$$: 7103
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04f80000
       name: CO$$$56x56_8ChiOfficeBldg7_04F8
     04f90000:
       bulldoze: 150
       capacity:
         co$$: 67
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04f90000
       name: CO$$40x24_2ChiOfficeBldg7_04F9
     04fa0000:
       bulldoze: 150
       capacity:
         co$$: 87
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04fa0000
       name: CO$$40x24_2ChiOfficeBldg8_04FA
     04fb0000:
       bulldoze: 150
       capacity:
         co$$: 71
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-04fb0000
       name: CO$$40x24_2ChiOfficeBldg9_04FB
     04fc0000:
@@ -4841,7 +4841,7 @@ buildings:
       capacity:
         co$$: 40
         co$$$: 31
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04fc0000
       name: CO$$$14x14_4ChiOfficeBldg3_04FC
     04fd0000:
@@ -4849,7 +4849,7 @@ buildings:
       capacity:
         co$$: 499
         co$$$: 286
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04fd0000
       name: CO$$$44x26_5ChiOfficeBldg5_04FD
     04fe0000:
@@ -4857,7 +4857,7 @@ buildings:
       capacity:
         co$$: 131
         co$$$: 76
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-04fe0000
       name: CO$$$14x22_5ChiOfficeBldg7_04FE
     '05020000':
@@ -4865,21 +4865,21 @@ buildings:
       capacity:
         co$$: 51
         co$$$: 41
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05020000
       name: CO$$$24x24_1ChiOfficeBldg4_0502
     '05030000':
       bulldoze: 650
       capacity:
         co$$: 718
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05030000
       name: CO$$44x26_7ChiOfficeBldg3_0503
     '05040000':
       bulldoze: 1250
       capacity:
         co$$: 1991
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05040000
       name: CO$$56x36_8ChiOfficeBldg5_0504
     '05050000':
@@ -4887,7 +4887,7 @@ buildings:
       capacity:
         co$$: 1099
         co$$$: 734
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05050000
       name: CO$$$44x26_7ChiOfficeBldg1_0505
     '05060000':
@@ -4895,7 +4895,7 @@ buildings:
       capacity:
         co$$: 41
         co$$$: 34
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05060000
       name: CO$$$24x24_2ChiOfficeBldg7_0506
     '05070000':
@@ -4903,28 +4903,28 @@ buildings:
       capacity:
         co$$: 620
         co$$$: 527
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05070000
       name: CO$$$44x26_6ChiOfficeBldg9_0507
     '05080000':
       bulldoze: 320
       capacity:
         co$$: 308
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05080000
       name: CO$$44x26_5ChiOfficeBldg5_0508
     '05090000':
       bulldoze: 400
       capacity:
         co$$: 139
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05090000
       name: CO$$30x22_6ChiOfficeBldg7_0509
     050a0000:
       bulldoze: 320
       capacity:
         co$$: 365
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-050a0000
       name: CO$$44x26_5ChiOfficeBldg10_050A
     050b0000:
@@ -4932,7 +4932,7 @@ buildings:
       capacity:
         cs$: 507
         cs$$: 129
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-050b0000
       name: CS$$60x56_1ChiMiddleClassMall_050B
     050c0000:
@@ -4941,14 +4941,14 @@ buildings:
         cs$: 731
         cs$$: 185
         cs$$$: 76
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-050c0000
       name: CS$$$60x52_1ChiFashionCentre_050C
     050d0000:
       bulldoze: 220
       capacity:
         cs$: 131
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-050d0000
       name: CS$34x9_1ChiDrivein_050D
     '050e0000':
@@ -4956,7 +4956,7 @@ buildings:
       capacity:
         cs$: 414
         cs$$: 106
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-050e0000
       name: CS$$44x28_1ChiMultiplex_050E
     050f0000:
@@ -4965,14 +4965,14 @@ buildings:
         cs$: 339
         cs$$: 87
         cs$$$: 37
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-050f0000
       name: CS$$$24x30_1ChiDinnerTheater_050F
     '05100000':
       bulldoze: 100
       capacity:
         cs$: 42
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05100000
       name: CS$28x14_1ChiFleaBagMotel_0510
     '05110000':
@@ -4980,7 +4980,7 @@ buildings:
       capacity:
         cs$: 167
         cs$$: 44
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05110000
       name: CS$$44x16_1ChiFamilyCourt_0511
     '05120000':
@@ -4989,14 +4989,14 @@ buildings:
         cs$: 45
         cs$$: 13
         cs$$$: 7
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05120000
       name: CS$$$16x12_1ChiLuxurySpa_0512
     '05130000':
       bulldoze: 100
       capacity:
         cs$: 14
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05130000
       name: CS$12x6_1ChiGreasePit_0513
     '05140000':
@@ -5004,7 +5004,7 @@ buildings:
       capacity:
         cs$: 14
         cs$$: 6
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05140000
       name: CS$$12x8_1ChiServiceStation_0514
     '05150000':
@@ -5013,14 +5013,14 @@ buildings:
         cs$: 22
         cs$$: 8
         cs$$$: 5
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05150000
       name: CS$$$14x8_1ChiCarCarCentre_0515
     '05160000':
       bulldoze: 100
       capacity:
         cs$: 7
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05160000
       name: CS$8x4_1ChiUsedCarCheap_0516
     '05170000':
@@ -5028,7 +5028,7 @@ buildings:
       capacity:
         cs$: 28
         cs$$: 9
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05170000
       name: CS$$12x14_1ChiCarDealership_0517
     '05180000':
@@ -5037,14 +5037,14 @@ buildings:
         cs$: 128
         cs$$: 34
         cs$$$: 15
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05180000
       name: CS$$$24x26_1ChiLuxuryAutoCentr_0518
     '05190000':
       bulldoze: 100
       capacity:
         cs$: 7
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05190000
       name: CS$10x4_1ChiTacoStand_0519
     051a0000:
@@ -5052,7 +5052,7 @@ buildings:
       capacity:
         cs$: 26
         cs$$: 9
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-051a0000
       name: CS$$10x14_1ChiFamilyDiner_051A
     051b0000:
@@ -5061,7 +5061,7 @@ buildings:
         cs$: 29
         cs$$: 9
         cs$$$: 6
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-051b0000
       name: CS$$$10x14_1ChiChezFancy_051B
     051c0000:
@@ -5069,7 +5069,7 @@ buildings:
       capacity:
         cs$: 619
         cs$$: 157
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-051c0000
       name: CS$$60x56_4ChiMiddleClassMall_051C
     051d0000:
@@ -5078,7 +5078,7 @@ buildings:
         cs$: 634
         cs$$: 161
         cs$$$: 66
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-051d0000
       name: CS$$$52x52_4ChiFashionCentre_051D
     '051e0000':
@@ -5086,7 +5086,7 @@ buildings:
       capacity:
         cs$: 458
         cs$$: 117
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-051e0000
       name: CS$$30x26_4ChiCinema_051E
     051f0000:
@@ -5095,7 +5095,7 @@ buildings:
         cs$: 541
         cs$$: 138
         cs$$$: 57
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-051f0000
       name: CS$$$26x46_4ChiMaxisSimTheatre_051F
     '05200000':
@@ -5103,7 +5103,7 @@ buildings:
       capacity:
         cs$: 535
         cs$$: 136
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05200000
       name: CS$$30x28_4ChiFamilyInn_0520
     '05210000':
@@ -5112,7 +5112,7 @@ buildings:
         cs$: 757
         cs$$: 192
         cs$$$: 78
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05210000
       name: CS$$$30x26_4ChiRitzy_0521
     '05220000':
@@ -5120,7 +5120,7 @@ buildings:
       capacity:
         cs$: 290
         cs$$: 75
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05220000
       name: CS$$28x28_4ChiSimcys_0522
     '05230000':
@@ -5129,7 +5129,7 @@ buildings:
         cs$: 277
         cs$$: 72
         cs$$$: 30
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05230000
       name: CS$$$28x28_4ChiSims4thAve_0523
     '05250000':
@@ -5138,7 +5138,7 @@ buildings:
         cs$: 1147
         cs$$: 289
         cs$$$: 117
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05250000
       name: CS$$$60x44_7ChiFashionCentre_0525
     '05260000':
@@ -5146,7 +5146,7 @@ buildings:
       capacity:
         cs$: 2199
         cs$$: 552
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05260000
       name: CS$$40x54_7ChiCinema_0526
     '05270000':
@@ -5155,7 +5155,7 @@ buildings:
         cs$: 369
         cs$$: 95
         cs$$$: 40
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05270000
       name: CS$$$37x22_7ChiMaxisSimTheatre_0527
     '05280000':
@@ -5163,7 +5163,7 @@ buildings:
       capacity:
         cs$: 1411
         cs$$: 355
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05280000
       name: CS$$44x30_7ChiFamilyInn_0528
     '05290000':
@@ -5172,7 +5172,7 @@ buildings:
         cs$: 2943
         cs$$: 738
         cs$$$: 297
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05290000
       name: CS$$$60x30_7ChiRitzy_0529
     052a0000:
@@ -5180,7 +5180,7 @@ buildings:
       capacity:
         cs$: 806
         cs$$: 204
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-052a0000
       name: CS$$40x28_7ChiSimcys_052A
     052b0000:
@@ -5189,49 +5189,49 @@ buildings:
         cs$: 656
         cs$$: 166
         cs$$$: 68
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-052b0000
       name: CS$$$40x28_7ChiSims4thAve_052B
     052d0000:
       bulldoze: 150
       capacity:
         co$$: 135
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-052d0000
       name: CO$$40x24_2NYOfficeBldg7_052D
     '05300000':
       bulldoze: 220
       capacity:
         co$$: 65
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05300000
       name: CO$$24x24_3NYOfficeBldg10_0530
     '05330000':
       bulldoze: 110
       capacity:
         co$$: 31
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05330000
       name: CO$$12x28_1HouOfficeBldg1_0533
     '05360000':
       bulldoze: 110
       capacity:
         co$$: 32
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05360000
       name: CO$$24x24_1HouOfficeBldg4_0536
     '05390000':
       bulldoze: 150
       capacity:
         co$$: 119
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05390000
       name: CO$$40x24_2HouOfficeBldg7_0539
     053c0000:
       bulldoze: 220
       capacity:
         co$$: 61
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-053c0000
       name: CO$$24x24_3HouOfficeBldg10_053C
     '05410000':
@@ -5239,7 +5239,7 @@ buildings:
       capacity:
         co$$: 44
         co$$$: 36
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05410000
       name: CO$$$24x24_2ChiOfficeBldg8_0541
     '05420000':
@@ -5247,7 +5247,7 @@ buildings:
       capacity:
         co$$: 41
         co$$$: 34
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05420000
       name: CO$$$24x24_2ChiOfficeBldg9_0542
     '05430000':
@@ -5255,7 +5255,7 @@ buildings:
       capacity:
         co$$: 18
         co$$$: 15
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05430000
       name: CO$$$12x28_1NYOfficeBldg1_0543
     '05460000':
@@ -5263,7 +5263,7 @@ buildings:
       capacity:
         co$$: 75
         co$$$: 61
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05460000
       name: CO$$$24x24_1NYOfficeBldg4_0546
     '05490000':
@@ -5271,7 +5271,7 @@ buildings:
       capacity:
         co$$: 53
         co$$$: 43
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05490000
       name: CO$$$24x24_2NYOfficeBldg7_0549
     054c0000:
@@ -5279,7 +5279,7 @@ buildings:
       capacity:
         co$$: 135
         co$$$: 109
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-054c0000
       name: CO$$$40x24_3NYOfficeBldg10_054C
     054f0000:
@@ -5287,7 +5287,7 @@ buildings:
       capacity:
         co$$: 23
         co$$$: 19
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-054f0000
       name: CO$$$12x28_1HouOfficeBldg1_054F
     '05520000':
@@ -5295,7 +5295,7 @@ buildings:
       capacity:
         co$$: 61
         co$$$: 49
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05520000
       name: CO$$$24x24_1HouOfficeBldg4_0552
     '05550000':
@@ -5303,7 +5303,7 @@ buildings:
       capacity:
         co$$: 51
         co$$$: 41
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05550000
       name: CO$$$24x24_2HouOfficeBldg7_0555
     '05580000':
@@ -5311,84 +5311,84 @@ buildings:
       capacity:
         co$$: 139
         co$$$: 112
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05580000
       name: CO$$$40x24_3HouOfficeBldg10_0558
     055b0000:
       bulldoze: 220
       capacity:
         co$$: 34
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-055b0000
       name: CO$$14x22_4ChiOfficeBldg4_055B
     '055e0000':
       bulldoze: 150
       capacity:
         co$$: 19
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-055e0000
       name: CO$$14x14_4NYOfficeBldg1_055E
     '05600000':
       bulldoze: 220
       capacity:
         co$$: 39
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05600000
       name: CO$$14x22_4NYOfficeBldg3_0560
     '05620000':
       bulldoze: 320
       capacity:
         co$$: 337
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05620000
       name: CO$$44x26_5NYOfficeBldg5_0562
     '05640000':
       bulldoze: 400
       capacity:
         co$$: 275
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05640000
       name: CO$$30x22_6NYOfficeBldg7_0564
     '05660000':
       bulldoze: 320
       capacity:
         co$$: 346
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05660000
       name: CO$$44x26_5NYOfficeBldg9_0566
     '05680000':
       bulldoze: 150
       capacity:
         co$$: 20
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05680000
       name: CO$$14x14_4HouOfficeBldg1_0568
     056a0000:
       bulldoze: 220
       capacity:
         co$$: 37
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-056a0000
       name: CO$$14x22_4HouOfficeBldg3_056A
     '056e0000':
       bulldoze: 400
       capacity:
         co$$: 242
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-056e0000
       name: CO$$30x22_6HouOfficeBldg7_056E
     '05700000':
       bulldoze: 320
       capacity:
         co$$: 394
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05700000
       name: CO$$44x26_5HouOfficeBldg9_0570
     '05720000':
       bulldoze: 140
       capacity:
         cs$: 89
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05720000
       name: CS$24x24_1ChiFleaMarket_0572
     '05760000':
@@ -5396,7 +5396,7 @@ buildings:
       capacity:
         co$$: 586
         co$$$: 499
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05760000
       name: CO$$$44x26_6ChiOfficeBldg10_0576
     '05770000':
@@ -5404,7 +5404,7 @@ buildings:
       capacity:
         co$$: 326
         co$$$: 245
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05770000
       name: CO$$$30x22_4NYOfficeBldg1_0577
     '05790000':
@@ -5412,7 +5412,7 @@ buildings:
       capacity:
         co$$: 61
         co$$$: 46
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05790000
       name: CO$$$14x14_4NYOfficeBldg3_0579
     057b0000:
@@ -5420,7 +5420,7 @@ buildings:
       capacity:
         co$$: 106
         co$$$: 62
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-057b0000
       name: CO$$$14x14_5NYOfficeBldg5_057B
     057d0000:
@@ -5428,7 +5428,7 @@ buildings:
       capacity:
         co$$: 75
         co$$$: 44
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-057d0000
       name: CO$$$14x22_5NYOfficeBldg7_057D
     057f0000:
@@ -5436,7 +5436,7 @@ buildings:
       capacity:
         co$$: 979
         co$$$: 832
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-057f0000
       name: CO$$$44x26_6NYOfficeBldg9_057F
     '05810000':
@@ -5444,7 +5444,7 @@ buildings:
       capacity:
         co$$: 282
         co$$$: 212
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05810000
       name: CO$$$30x22_4HouOfficeBldg1_0581
     '05830000':
@@ -5452,7 +5452,7 @@ buildings:
       capacity:
         co$$: 47
         co$$$: 36
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05830000
       name: CO$$$14x14_4HouOfficeBldg3_0583
     '05850000':
@@ -5460,7 +5460,7 @@ buildings:
       capacity:
         co$$: 78
         co$$$: 46
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05850000
       name: CO$$$14x14_5HouOfficeBldg5_0585
     '05870000':
@@ -5468,7 +5468,7 @@ buildings:
       capacity:
         co$$: 54
         co$$$: 32
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05870000
       name: CO$$$14x22_5HouOfficeBldg7_0587
     '05890000':
@@ -5476,63 +5476,63 @@ buildings:
       capacity:
         co$$: 990
         co$$$: 842
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05890000
       name: CO$$$44x26_6HouOfficeBldg9_0589
     058f0000:
       bulldoze: 1060
       capacity:
         co$$: 1219
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-058f0000
       name: CO$$44x26_7NYOfficeBldg1_058F
     '05910000':
       bulldoze: 650
       capacity:
         co$$: 801
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05910000
       name: CO$$44x26_7NYOfficeBldg3_0591
     '05930000':
       bulldoze: 1390
       capacity:
         co$$: 4343
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05930000
       name: CO$$56x36_8NYOfficeBldg5_0593
     '05950000':
       bulldoze: 1310
       capacity:
         co$$: 6798
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05950000
       name: CO$$56x56_8NYOfficeBldg7_0595
     '05970000':
       bulldoze: 1060
       capacity:
         co$$: 1752
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05970000
       name: CO$$44x36_7HouOfficeBldg1_0597
     '05990000':
       bulldoze: 820
       capacity:
         co$$: 909
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05990000
       name: CO$$44x26_7HouOfficeBldg3_0599
     059b0000:
       bulldoze: 1250
       capacity:
         co$$: 4595
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-059b0000
       name: CO$$56x36_8HouOfficeBldg5_059B
     059d0000:
       bulldoze: 1310
       capacity:
         co$$: 6536
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-059d0000
       name: CO$$56x56_8HouOfficeBldg7_059D
     059f0000:
@@ -5540,7 +5540,7 @@ buildings:
       capacity:
         co$$: 1099
         co$$$: 734
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-059f0000
       name: CO$$$44x26_7ChiOfficeBldg2_059F
     05a30000:
@@ -5548,7 +5548,7 @@ buildings:
       capacity:
         co$$: 2100
         co$$$: 1401
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05a30000
       name: CO$$$44x26_7NYOfficeBldg1_05A3
     05a50000:
@@ -5556,7 +5556,7 @@ buildings:
       capacity:
         co$$: 3347
         co$$$: 1675
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05a50000
       name: CO$$$44x36_8NYOfficeBldg3_05A5
     05a70000:
@@ -5564,7 +5564,7 @@ buildings:
       capacity:
         co$$: 4903
         co$$$: 2453
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05a70000
       name: CO$$$56x36_8NYOfficeBldg5_05A7
     05a90000:
@@ -5572,7 +5572,7 @@ buildings:
       capacity:
         co$$: 11589
         co$$$: 5796
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05a90000
       name: CO$$$56x56_8NYOfficeBldg7_05A9
     05ab0000:
@@ -5580,7 +5580,7 @@ buildings:
       capacity:
         co$$: 1802
         co$$$: 1203
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05ab0000
       name: CO$$$44x26_7HouOfficeBldg1_05AB
     05ac0000:
@@ -5588,7 +5588,7 @@ buildings:
       capacity:
         co$$: 1802
         co$$$: 1203
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05ac0000
       name: CO$$$44x26_7HouOfficeBldg2_05AC
     05ad0000:
@@ -5596,7 +5596,7 @@ buildings:
       capacity:
         co$$: 2907
         co$$$: 1455
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05ad0000
       name: CO$$$44x36_8HouOfficeBldg3_05AD
     05ae0000:
@@ -5604,7 +5604,7 @@ buildings:
       capacity:
         co$$: 2907
         co$$$: 1455
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05ae0000
       name: CO$$$44x36_8HouOfficeBldg4_05AE
     05af0000:
@@ -5612,7 +5612,7 @@ buildings:
       capacity:
         co$$: 3727
         co$$$: 1865
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05af0000
       name: CO$$$56x36_8HouOfficeBldg5_05AF
     05b10000:
@@ -5620,7 +5620,7 @@ buildings:
       capacity:
         co$$: 10674
         co$$$: 5339
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05b10000
       name: CO$$$56x56_8HouOfficeBldg7_05B1
     05b20000:
@@ -5628,14 +5628,14 @@ buildings:
       capacity:
         co$$: 9063
         co$$$: 4533
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-05b20000
       name: CO$$$56x56_8HouOfficeBldg8_05B2
     05b30000:
       bulldoze: 320
       capacity:
         co$$: 289
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05b30000
       name: CO$$44x26_5ChiOfficeBldg11_05B3
     05b50000:
@@ -5643,7 +5643,7 @@ buildings:
       capacity:
         cs$: 59
         cs$$: 17
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-04e90000
       name: CS$$12x28_1ChiMediumStore1_05B5
     05b70000:
@@ -5651,7 +5651,7 @@ buildings:
       capacity:
         cs$: 259
         cs$$: 67
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-04f90000
       name: CS$$40x24_2ChiMediumStore3_05B7
     05b80000:
@@ -5659,7 +5659,7 @@ buildings:
       capacity:
         cs$: 59
         cs$$: 17
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-04e70000
       name: CS$$14x14_4ChiMediumStore4_05B8
     05b90000:
@@ -5667,7 +5667,7 @@ buildings:
       capacity:
         cs$: 95
         cs$$: 26
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05f80000
       name: CS$$14x22_4ChiMediumStore5_05B9
     05ba0000:
@@ -5675,7 +5675,7 @@ buildings:
       capacity:
         cs$: 234
         cs$$: 61
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05090000
       name: CS$$30x22_6ChiMediumStore6_05BA
     05bb0000:
@@ -5683,7 +5683,7 @@ buildings:
       capacity:
         cs$: 689
         cs$$: 175
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-04f50000
       name: CS$$44x26_5ChiMediumStore7_05BB
     05bd0000:
@@ -5691,7 +5691,7 @@ buildings:
       capacity:
         cs$: 70
         cs$$: 20
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05f40000
       name: CS$$12x28_1NYMediumStore1_05BD
     05bf0000:
@@ -5699,7 +5699,7 @@ buildings:
       capacity:
         cs$: 531
         cs$$: 135
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-052d0000
       name: CS$$40x24_2NYMediumStore3_05BF
     05c00000:
@@ -5707,7 +5707,7 @@ buildings:
       capacity:
         cs$: 52
         cs$$: 15
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-055e0000
       name: CS$$14x14_4NYMediumStore4_05C0
     05c10000:
@@ -5715,7 +5715,7 @@ buildings:
       capacity:
         cs$: 111
         cs$$: 30
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05600000
       name: CS$$14x22_4NYMediumStore5_05C1
     05c20000:
@@ -5723,7 +5723,7 @@ buildings:
       capacity:
         cs$: 465
         cs$$: 119
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05640000
       name: CS$$30x22_6NYMediumStore6_05C2
     05c30000:
@@ -5731,7 +5731,7 @@ buildings:
       capacity:
         cs$: 689
         cs$$: 175
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05660000
       name: CS$$44x26_5NYMediumStore7_05C3
     05c50000:
@@ -5739,7 +5739,7 @@ buildings:
       capacity:
         cs$: 115
         cs$$: 31
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05330000
       name: CS$$12x28_1HouMediumStore1_05C5
     05c70000:
@@ -5747,7 +5747,7 @@ buildings:
       capacity:
         cs$: 467
         cs$$: 119
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05390000
       name: CS$$40x24_2HouMediumStore3_05C7
     05c80000:
@@ -5755,7 +5755,7 @@ buildings:
       capacity:
         cs$: 55
         cs$$: 16
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05680000
       name: CS$$14x14_4HouMediumStore4_05C8
     05c90000:
@@ -5763,7 +5763,7 @@ buildings:
       capacity:
         cs$: 106
         cs$$: 29
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-056a0000
       name: CS$$14x22_4HouMediumStore5_05C9
     05ca0000:
@@ -5771,7 +5771,7 @@ buildings:
       capacity:
         cs$: 410
         cs$$: 105
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-056e0000
       name: CS$$30x22_6HouMediumStore6_05CA
     05cb0000:
@@ -5779,91 +5779,91 @@ buildings:
       capacity:
         cs$: 785
         cs$$: 198
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05700000
       name: CS$$44x26_5HouMediumStore7_05CB
     05cd0000:
       bulldoze: 100
       capacity:
         cs$: 49
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05cd0000
       name: CS$14x14_1ChiSmallShop1_05CD
     05cf0000:
       bulldoze: 140
       capacity:
         cs$: 75
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05cf0000
       name: CS$14x22_1ChiSmallShop3_05CF
     05d00000:
       bulldoze: 180
       capacity:
         cs$: 59
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05d00000
       name: CS$14x14_4ChiSmallShop4_05D0
     05d10000:
       bulldoze: 260
       capacity:
         cs$: 155
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05d10000
       name: CS$14x26_6ChiSmallShop5_05D1
     05d30000:
       bulldoze: 100
       capacity:
         cs$: 52
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05d30000
       name: CS$14x14_1NYSmallShop1_05D3
     05d50000:
       bulldoze: 140
       capacity:
         cs$: 80
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05d50000
       name: CS$14x22_1NYSmallShop3_05D5
     05d60000:
       bulldoze: 180
       capacity:
         cs$: 59
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05d60000
       name: CS$14x14_4NYSmallShop4_05D6
     05d70000:
       bulldoze: 260
       capacity:
         cs$: 161
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05d70000
       name: CS$14x26_6NYSmallShop5_05D7
     05d90000:
       bulldoze: 100
       capacity:
         cs$: 32
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05d90000
       name: CS$14x14_1HouSmallShop1_05D9
     05db0000:
       bulldoze: 140
       capacity:
         cs$: 65
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05db0000
       name: CS$14x22_1HouSmallShop3_05DB
     05dc0000:
       bulldoze: 180
       capacity:
         cs$: 62
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05dc0000
       name: CS$14x14_4HouSmallShop4_05DC
     05dd0000:
       bulldoze: 260
       capacity:
         cs$: 173
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05dd0000
       name: CS$14x26_6HouSmallShop5_05DD
     05df0000:
@@ -5872,7 +5872,7 @@ buildings:
         cs$: 65
         cs$$: 18
         cs$$$: 9
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-04ef0000
       name: CS$$$12x28_1ChiLuxuryStore1_05DF
     '05e00000':
@@ -5881,7 +5881,7 @@ buildings:
         cs$: 157
         cs$$: 41
         cs$$$: 18
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05060000
       name: CS$$$24x24_1ChiLuxuryStore2_05E0
     '05e10000':
@@ -5890,7 +5890,7 @@ buildings:
         cs$: 371
         cs$$: 95
         cs$$$: 40
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-04f20000
       name: CS$$$40x24_3ChiLuxuryStore3_05E1
     '05e20000':
@@ -5899,7 +5899,7 @@ buildings:
         cs$: 114
         cs$$: 31
         cs$$$: 14
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-04fc0000
       name: CS$$$14x14_4ChiLuxuryStore4_05E2
     '05e30000':
@@ -5908,7 +5908,7 @@ buildings:
         cs$: 994
         cs$$: 251
         cs$$$: 102
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-04fd0000
       name: CS$$$44x26_5ChiLuxuryStore5_05E3
     '05e50000':
@@ -5917,7 +5917,7 @@ buildings:
         cs$: 65
         cs$$: 18
         cs$$$: 9
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05430000
       name: CS$$$12x28_1NYLuxuryStore1_05E5
     '05e60000':
@@ -5926,7 +5926,7 @@ buildings:
         cs$: 291
         cs$$: 75
         cs$$$: 32
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05460000
       name: CS$$$24x24_1NYLuxuryStore2_05E6
     '05e70000':
@@ -5935,7 +5935,7 @@ buildings:
         cs$: 531
         cs$$: 135
         cs$$$: 56
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-054c0000
       name: CS$$$40x24_3NYLuxuryStore3_05E7
     '05e80000':
@@ -5944,7 +5944,7 @@ buildings:
         cs$: 176
         cs$$: 46
         cs$$$: 20
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05790000
       name: CS$$$14x14_4NYLuxuryStore4_05E8
     '05e90000':
@@ -5953,7 +5953,7 @@ buildings:
         cs$: 1662
         cs$$: 418
         cs$$$: 169
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-057f0000
       name: CS$$$44x26_5NYLuxuryStore5_05E9
     05eb0000:
@@ -5962,7 +5962,7 @@ buildings:
         cs$: 81
         cs$$: 23
         cs$$$: 11
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-054f0000
       name: CS$$$12x28_1HouLuxuryStore1_05EB
     05ec0000:
@@ -5971,7 +5971,7 @@ buildings:
         cs$: 233
         cs$$: 61
         cs$$$: 26
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05520000
       name: CS$$$24x24_1HouLuxuryStore2_05EC
     05ed0000:
@@ -5980,7 +5980,7 @@ buildings:
         cs$: 547
         cs$$: 139
         cs$$$: 57
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05580000
       name: CS$$$40x24_3HouLuxuryStore3_05ED
     05ee0000:
@@ -5989,7 +5989,7 @@ buildings:
         cs$: 134
         cs$$: 36
         cs$$$: 16
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05830000
       name: CS$$$14x14_4HouLuxuryStore4_05EE
     05ef0000:
@@ -5998,7 +5998,7 @@ buildings:
         cs$: 1681
         cs$$: 422
         cs$$$: 171
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-05890000
       name: CS$$$44x26_5HouLuxuryStore5_05EF
     05f10000:
@@ -6006,105 +6006,105 @@ buildings:
       capacity:
         cs$: 1059
         cs$$: 267
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05f10000
       name: CS$$60x44_7ChiMiddleClassMall_05F1
     05f40000:
       bulldoze: 110
       capacity:
         co$$: 20
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05f40000
       name: CO$$12x28_1NYOfficeBldg1_05F4
     05f50000:
       bulldoze: 110
       capacity:
         co$$: 41
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05f50000
       name: CO$$24x24_1NYOfficeBldg4_05F5
     05f60000:
       bulldoze: 110
       capacity:
         co$$: 34
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05f60000
       name: CO$$24x24_1NYOfficeBldg5_05F6
     05f70000:
       bulldoze: 100
       capacity:
         cs$: 15
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05f70000
       name: CS$12x6_2ChiGreaseStation_05F7
     05f80000:
       bulldoze: 220
       capacity:
         co$$: 42
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05f80000
       name: CO$$14x22_4ChiOfficeBldg3_05F8
     05f90000:
       bulldoze: 220
       capacity:
         co$$: 46
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05f90000
       name: CO$$24x24_3ChiOfficeBldg10_05F9
     05fa0000:
       bulldoze: 100
       capacity:
         cs$: 26
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05fa0000
       name: CS$14x14_1EuroSmallShop1_05FA
     05fb0000:
       bulldoze: 140
       capacity:
         cs$: 59
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05fb0000
       name: CS$14x22_1EuroSmallShop3_05FB
     05fc0000:
       bulldoze: 180
       capacity:
         cs$: 52
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05fc0000
       name: CS$14x14_4EuroSmallShop4_05FC
     05fd0000:
       bulldoze: 260
       capacity:
         cs$: 143
-      category: cs$
+      categories: cs$
       model: 5ad0e817-badb57f1-05fd0000
       name: CS$14x26_6EuroSmallShop5_05FD
     05fe0000:
       bulldoze: 110
       capacity:
         co$$: 37
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05fe0000
       name: CO$$12x28_1EuroOfficeBldg1_05FE
     05ff0000:
       bulldoze: 110
       capacity:
         co$$: 22
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-05ff0000
       name: CO$$24x24_1EuroOfficeBldg4_05FF
     '06060000':
       bulldoze: 150
       capacity:
         co$$: 51
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-06060000
       name: CO$$40x24_2EuroOfficeBldg7_0606
     '06070000':
       bulldoze: 220
       capacity:
         co$$: 46
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-06070000
       name: CO$$24x24_3EuroOfficeBldg10_0607
     '06080000':
@@ -6112,7 +6112,7 @@ buildings:
       capacity:
         co$$: 14
         co$$$: 12
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-06080000
       name: CO$$$12x28_1EuroOfficeBldg1_0608
     '06090000':
@@ -6120,7 +6120,7 @@ buildings:
       capacity:
         co$$: 46
         co$$$: 38
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-06090000
       name: CO$$$24x24_1EuroOfficeBldg4_0609
     060a0000:
@@ -6128,7 +6128,7 @@ buildings:
       capacity:
         co$$: 46
         co$$$: 38
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-060a0000
       name: CO$$$24x24_2EuroOfficeBldg7_060A
     060b0000:
@@ -6136,35 +6136,35 @@ buildings:
       capacity:
         co$$: 115
         co$$$: 93
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-060b0000
       name: CO$$$40x24_3EuroOfficeBldg10_060B
     060c0000:
       bulldoze: 150
       capacity:
         co$$: 16
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-060c0000
       name: CO$$14x14_4EuroOfficeBldg1_060C
     060d0000:
       bulldoze: 220
       capacity:
         co$$: 34
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-060d0000
       name: CO$$14x22_4EuroOfficeBldg3_060D
     '060e0000':
       bulldoze: 400
       capacity:
         co$$: 236
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-060e0000
       name: CO$$30x22_6EuroOfficeBldg7_060E
     060f0000:
       bulldoze: 320
       capacity:
         co$$: 384
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-060f0000
       name: CO$$44x26_5EuroOfficeBldg9_060F
     '06100000':
@@ -6172,7 +6172,7 @@ buildings:
       capacity:
         co$$: 333
         co$$$: 251
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-06100000
       name: CO$$$30x22_4EuroOfficeBldg1_0610
     '06110000':
@@ -6180,7 +6180,7 @@ buildings:
       capacity:
         co$$: 38
         co$$$: 29
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-06110000
       name: CO$$$14x14_4EuroOfficeBldg3_0611
     '06120000':
@@ -6188,7 +6188,7 @@ buildings:
       capacity:
         co$$: 78
         co$$$: 46
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-06120000
       name: CO$$$14x14_5EuroOfficeBldg5_0612
     '06130000':
@@ -6196,7 +6196,7 @@ buildings:
       capacity:
         co$$: 62
         co$$$: 37
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-06130000
       name: CO$$$14x22_5EuroOfficeBldg7_0613
     '06140000':
@@ -6204,35 +6204,35 @@ buildings:
       capacity:
         co$$: 1343
         co$$$: 1142
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-06140000
       name: CO$$$48x32_6EuroOfficeBldg9_0614
     '06150000':
       bulldoze: 1060
       capacity:
         co$$: 1587
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-06150000
       name: CO$$44x36_7EuroOfficeBldg1_0615
     '06160000':
       bulldoze: 820
       capacity:
         co$$: 1612
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-06160000
       name: CO$$44x26_7EuroOfficeBldg3_0616
     '06170000':
       bulldoze: 1250
       capacity:
         co$$: 3307
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-06170000
       name: CO$$56x36_8EuroOfficeBldg5_0617
     '06180000':
       bulldoze: 1310
       capacity:
         co$$: 5404
-      category: co$$
+      categories: co$$
       model: 5ad0e817-badb57f1-06180000
       name: CO$$56x56_8EuroOfficeBldg7_0618
     '06190000':
@@ -6240,7 +6240,7 @@ buildings:
       capacity:
         co$$: 1503
         co$$$: 1003
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-06190000
       name: CO$$$48x30_7EuroOfficeBldg1_0619
     061a0000:
@@ -6248,7 +6248,7 @@ buildings:
       capacity:
         co$$: 2979
         co$$$: 1987
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-061a0000
       name: CO$$$48x32_7EuroOfficeBldg2_061A
     061b0000:
@@ -6256,7 +6256,7 @@ buildings:
       capacity:
         co$$: 2907
         co$$$: 1455
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-061b0000
       name: CO$$$44x36_8EuroOfficeBldg3_061B
     061c0000:
@@ -6264,7 +6264,7 @@ buildings:
       capacity:
         co$$: 2599
         co$$$: 1301
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-061c0000
       name: CO$$$44x36_8EuroOfficeBldg4_061C
     061d0000:
@@ -6272,7 +6272,7 @@ buildings:
       capacity:
         co$$: 4875
         co$$$: 2439
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-061d0000
       name: CO$$$56x36_8EuroOfficeBldg5_061D
     '061e0000':
@@ -6280,7 +6280,7 @@ buildings:
       capacity:
         co$$: 14289
         co$$$: 7146
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-061e0000
       name: CO$$$56x56_8EuroOfficeBldg7_061E
     061f0000:
@@ -6288,7 +6288,7 @@ buildings:
       capacity:
         co$$: 11415
         co$$$: 5709
-      category: co$$$
+      categories: co$$$
       model: 5ad0e817-badb57f1-061f0000
       name: CO$$$56x56_8EuroOfficeBldg8_061F
     '06200000':
@@ -6296,7 +6296,7 @@ buildings:
       capacity:
         cs$: 188
         cs$$: 49
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-05fe0000
       name: CS$$12x28_1EuroMediumStore1_0620
     '06210000':
@@ -6304,7 +6304,7 @@ buildings:
       capacity:
         cs$: 371
         cs$$: 95
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-06060000
       name: CS$$40x24_2EuroMediumStore3_0621
     '06220000':
@@ -6312,7 +6312,7 @@ buildings:
       capacity:
         cs$: 42
         cs$$: 13
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-060c0000
       name: CS$$14x14_4EuroMediumStore4_0622
     '06230000':
@@ -6320,7 +6320,7 @@ buildings:
       capacity:
         cs$: 95
         cs$$: 26
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-060d0000
       name: CS$$14x22_4EuroMediumStore5_0623
     '06240000':
@@ -6328,7 +6328,7 @@ buildings:
       capacity:
         cs$: 399
         cs$$: 102
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-060e0000
       name: CS$$30x22_6EuroMediumStore6_0624
     '06250000':
@@ -6336,7 +6336,7 @@ buildings:
       capacity:
         cs$: 785
         cs$$: 198
-      category: cs$$
+      categories: cs$$
       model: 5ad0e817-badb57f1-060f0000
       name: CS$$44x26_5EuroMediumStore7_0625
     '06270000':
@@ -6345,7 +6345,7 @@ buildings:
         cs$: 48
         cs$$: 14
         cs$$$: 7
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-06080000
       name: CS$$$12x28_1EuroLuxuryStore1_0627
     '06280000':
@@ -6354,7 +6354,7 @@ buildings:
         cs$: 224
         cs$$: 58
         cs$$$: 25
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-06090000
       name: CS$$$24x24_1EuroLuxuryStore2_0628
     '06290000':
@@ -6363,7 +6363,7 @@ buildings:
         cs$: 755
         cs$$: 191
         cs$$$: 78
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-060b0000
       name: CS$$$40x24_3EuroLuxuryStore3_0629
     062a0000:
@@ -6372,7 +6372,7 @@ buildings:
         cs$: 98
         cs$$: 27
         cs$$$: 12
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-06110000
       name: CS$$$14x14_4EuroLuxuryStore4_062A
     062b0000:
@@ -6381,154 +6381,154 @@ buildings:
         cs$: 2281
         cs$$: 573
         cs$$$: 231
-      category: cs$$$
+      categories: cs$$$
       model: 5ad0e817-badb57f1-06140000
       name: CS$$$48x32_5EuroLuxuryStore5_062B
     07da0000:
       bulldoze: 90
       capacity:
         id: 9
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07da0000
       name: ID14x16_1DirtyAnchor1_07DA
     07dc0000:
       bulldoze: 90
       capacity:
         id: 23
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07dc0000
       name: ID45x30_1DirtyAnchor3_07DC
     07dd0000:
       bulldoze: 90
       capacity:
         id: 18
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07dd0000
       name: ID30x24_1DirtyAnchor4_07DD
     07de0000:
       bulldoze: 90
       capacity:
         id: 18
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07de0000
       name: ID30x30_1DirtyAnchor5_07DE
     07df0000:
       bulldoze: 200
       capacity:
         id: 28
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07df0000
       name: ID22x14_2DirtyAnchor6_07DF
     '07e00000':
       bulldoze: 200
       capacity:
         id: 46
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e00000
       name: ID48x30_2DirtyAnchor7_07E0
     '07e10000':
       bulldoze: 200
       capacity:
         id: 66
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e10000
       name: ID48x46_2DirtyAnchor8_07E1
     '07e20000':
       bulldoze: 250
       capacity:
         id: 119
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e20000
       name: ID48x32_3DirtyAnchor9_07E2
     '07e30000':
       bulldoze: 250
       capacity:
         id: 67
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e30000
       name: ID48x46_2DirtyAnchor10_07E3
     '07e40000':
       bulldoze: 250
       capacity:
         id: 158
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e40000
       name: ID64x46_3DirtyAnchor11_07E4
     '07e50000':
       bulldoze: 250
       capacity:
         id: 150
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e50000
       name: ID64x62_3DirtyAnchor12_07E5
     '07e60000':
       bulldoze: 90
       capacity:
         id: 6
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e60000
       name: ID4x6_1DirtyMech1_07E6
     '07e70000':
       bulldoze: 90
       capacity:
         id: 15
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e70000
       name: ID24x24_1DirtyMech2_07E7
     '07e80000':
       bulldoze: 90
       capacity:
         id: 12
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e80000
       name: ID20x12_1DirtyMech3_07E8
     '07e90000':
       bulldoze: 90
       capacity:
         id: 34
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07e90000
       name: ID27x27_2DirtyMech4_07E9
     07ea0000:
       bulldoze: 200
       capacity:
         id: 21
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07ea0000
       name: ID14x14_2DirtyMech5_07EA
     07eb0000:
       bulldoze: 200
       capacity:
         id: 41
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07eb0000
       name: ID28x28_2DirtyMech6_07EB
     07ec0000:
       bulldoze: 200
       capacity:
         id: 30
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07ec0000
       name: ID20x16_2DirtyMech7_07EC
     07ed0000:
       bulldoze: 200
       capacity:
         id: 28
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07ed0000
       name: ID28x16_2DirtyMech8_07ED
     07ee0000:
       bulldoze: 250
       capacity:
         id: 92
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07ee0000
       name: ID32x32_3DirtyMech9_07EE
     07ef0000:
       bulldoze: 250
       capacity:
         id: 74
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07ef0000
       name: ID32x16_3DirtyMech10_07EF
     07f00000:
@@ -6541,497 +6541,497 @@ buildings:
       bulldoze: 250
       capacity:
         id: 100
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f10000
       name: ID48x32_3DirtyMech12_07F1
     07f20000:
       bulldoze: 90
       capacity:
         id: 5
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f20000
       name: ID8x8_1DirtyOut1_07F2
     07f30000:
       bulldoze: 90
       capacity:
         id: 11
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f30000
       name: ID12x20_1DirtyOut2_07F3
     07f40000:
       bulldoze: 90
       capacity:
         id: 10
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f40000
       name: ID24x12_1DirtyOut3_07F4
     07f50000:
       bulldoze: 200
       capacity:
         id: 18
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f50000
       name: ID14x14_2DirtyOut4_07F5
     07f60000:
       bulldoze: 200
       capacity:
         id: 25
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f60000
       name: ID24x16_2DirtyOut5_07F6
     07f70000:
       bulldoze: 200
       capacity:
         id: 29
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f70000
       name: ID28x16_2DirtyOut6_07F7
     07f80000:
       bulldoze: 250
       capacity:
         id: 57
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f80000
       name: ID32x16_3DirtyOut7_07F8
     07f90000:
       bulldoze: 250
       capacity:
         id: 58
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07f90000
       name: ID30x14_3DirtyOut8_07F9
     07fa0000:
       bulldoze: 250
       capacity:
         id: 76
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07fa0000
       name: ID30x30_3DirtyOut9_07FA
     07fb0000:
       bulldoze: 250
       capacity:
         id: 94
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-07fb0000
       name: ID46x32_3DirtyOut10_07FB
     '08090000':
       bulldoze: 90
       capacity:
         im: 19
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08090000
       name: IM14x28_1ManuAnchor1_0809
     080a0000:
       bulldoze: 150
       capacity:
         im: 23
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-080a0000
       name: IM14x28_1ManuAnchor2_080A
     080b0000:
       bulldoze: 90
       capacity:
         im: 23
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-080b0000
       name: IM28x28_1ManuAnchor3_080B
     080c0000:
       bulldoze: 150
       capacity:
         im: 25
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-080c0000
       name: IM24x28_1ManuAnchor4_080C
     '080e0000':
       bulldoze: 150
       capacity:
         im: 34
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-080e0000
       name: IM28x40_2ManuAnchor6_080E
     '08110000':
       bulldoze: 270
       capacity:
         im: 43
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08110000
       name: IM40x44_2ManuAnchor9_0811
     '08130000':
       bulldoze: 270
       capacity:
         im: 57
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08130000
       name: IM42x54_3ManuAnchor11_0813
     '08140000':
       bulldoze: 90
       capacity:
         im: 24
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08140000
       name: IM18x32_1ManuMech1_0814
     '08170000':
       bulldoze: 150
       capacity:
         im: 24
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08170000
       name: IM14x28_2ManuMech4_0817
     '08180000':
       bulldoze: 270
       capacity:
         im: 24
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08180000
       name: IM14x28_2ManuMech5_0818
     081a0000:
       bulldoze: 150
       capacity:
         im: 48
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-081a0000
       name: IM28x28_3ManuMech7_081A
     081b0000:
       bulldoze: 270
       capacity:
         im: 45
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-081b0000
       name: IM28x28_3ManuMech8_081B
     081c0000:
       bulldoze: 90
       capacity:
         im: 18
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-081c0000
       name: IM14x28_1ManuOut1_081C
     081d0000:
       bulldoze: 150
       capacity:
         im: 21
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-081d0000
       name: IM14x24_1ManuOut2_081D
     081f0000:
       bulldoze: 150
       capacity:
         im: 25
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-081f0000
       name: IM26x28_2ManuOut4_081F
     '08210000':
       bulldoze: 90
       capacity:
         im: 25
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08210000
       name: IM28x44_2ManuOut6_0821
     '08230000':
       bulldoze: 270
       capacity:
         im: 34
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08230000
       name: IM28x40_2ManuOut8_0823
     '08240000':
       bulldoze: 150
       capacity:
         im: 46
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08240000
       name: IM24x60_3ManuOut9_0824
     '08250000':
       bulldoze: 270
       capacity:
         im: 58
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08250000
       name: IM28x58_3ManuOut10_0825
     '08260000':
       bulldoze: 150
       capacity:
         im: 53
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08260000
       name: IM40x60_3ManuOut11_0826
     '08270000':
       bulldoze: 270
       capacity:
         im: 72
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08270000
       name: IM42x58_3ManuOut12_0827
     '08290000':
       bulldoze: 270
       capacity:
         im: 58
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08290000
       name: IM28x74_3ManuOut14_0829
     082a0000:
       bulldoze: 270
       capacity:
         im: 78
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-082a0000
       name: IM38x88_3ManuOut15_082A
     082b0000:
       bulldoze: 100
       capacity:
         iht: 20
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-082b0000
       name: IH14x28_1HTAnchor1_082B
     082c0000:
       bulldoze: 160
       capacity:
         iht: 20
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-082c0000
       name: IH14x28_1HTAnchor2_082C
     082d0000:
       bulldoze: 100
       capacity:
         iht: 32
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-082d0000
       name: IH28x28_1HTAnchor3_082D
     '082e0000':
       bulldoze: 160
       capacity:
         iht: 33
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-082e0000
       name: IH24x28_2HTAnchor4_082E
     '08320000':
       bulldoze: 160
       capacity:
         iht: 73
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08320000
       name: IH42x42_3HTAnchor8_0832
     '08330000':
       bulldoze: 290
       capacity:
         iht: 72
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08330000
       name: IH40x44_3HTAnchor9_0833
     '08350000':
       bulldoze: 290
       capacity:
         iht: 71
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08350000
       name: IH54x42_3HTAnchor11_0835
     '08360000':
       bulldoze: 100
       capacity:
         iht: 21
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08360000
       name: IH14x14_1HTMech1_0836
     '08390000':
       bulldoze: 160
       capacity:
         iht: 29
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08390000
       name: IH14x28_2HTMech4_0839
     083a0000:
       bulldoze: 290
       capacity:
         iht: 31
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-083a0000
       name: IH14x28_2HTMech5_083A
     083c0000:
       bulldoze: 160
       capacity:
         iht: 49
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-083c0000
       name: IH28x28_3HTMech7_083C
     083d0000:
       bulldoze: 290
       capacity:
         iht: 55
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-083d0000
       name: IH28x28_3HTMech8_083D
     '083e0000':
       bulldoze: 100
       capacity:
         iht: 22
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-083e0000
       name: IH14x28_1HTOut1_083E
     083f0000:
       bulldoze: 160
       capacity:
         iht: 18
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-083f0000
       name: IH14x24_1HTOut2_083F
     '08410000':
       bulldoze: 160
       capacity:
         iht: 30
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08410000
       name: IH26x28_1HTOut4_0841
     '08420000':
       bulldoze: 290
       capacity:
         iht: 27
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08420000
       name: IH26x26_1HTOut5_0842
     '08430000':
       bulldoze: 100
       capacity:
         iht: 40
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08430000
       name: IH28x44_2HTOut6_0843
     '08450000':
       bulldoze: 290
       capacity:
         iht: 44
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08450000
       name: IH28x40_2HTOut8_0845
     '08460000':
       bulldoze: 160
       capacity:
         iht: 51
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08460000
       name: IH24x60_2HTOut9_0846
     '08470000':
       bulldoze: 290
       capacity:
         iht: 67
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08470000
       name: IH28x58_3HTOut10_0847
     '08480000':
       bulldoze: 160
       capacity:
         iht: 68
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08480000
       name: IH40x60_3HTOut11_0848
     '08490000':
       bulldoze: 290
       capacity:
         iht: 91
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08490000
       name: IH42x58_3HTOut12_0849
     084b0000:
       bulldoze: 290
       capacity:
         iht: 94
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-084b0000
       name: IH28x74_3HTOut14_084B
     084c0000:
       bulldoze: 290
       capacity:
         iht: 97
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-084c0000
       name: IH38x88_3HTOut15_084C
     084d0000:
       bulldoze: 180
       capacity:
         ir: 6
-      category: agriculture
+      categories: agriculture
       model: 5ad0e817-badb57f1-084d0000
       name: IR30x24_1Farm1_084D
     '084e0000':
       bulldoze: 230
       capacity:
         ir: 13
-      category: agriculture
+      categories: agriculture
       model: 5ad0e817-badb57f1-084e0000
       name: IR60x50_3Farm2_084E
     084f0000:
       bulldoze: 130
       capacity:
         ir: 4
-      category: agriculture
+      categories: agriculture
       model: 5ad0e817-badb57f1-084f0000
       name: IR24x20_1Farm3_084F
     '08500000':
       bulldoze: 80
       capacity:
         ir: 2
-      category: agriculture
+      categories: agriculture
       model: 5ad0e817-badb57f1-08500000
       name: IR15x7_1Farm4_0850
     '08510000':
       bulldoze: 130
       capacity:
         ir: 10
-      category: agriculture
+      categories: agriculture
       model: 5ad0e817-badb57f1-08510000
       name: IR32x32_2Farm5_0851
     '08520000':
       bulldoze: 80
       capacity:
         ir: 8
-      category: agriculture
+      categories: agriculture
       model: 5ad0e817-badb57f1-08520000
       name: IR16x30_2Farm6_0852
     '08530000':
       bulldoze: 130
       capacity:
         ir: 6
-      category: agriculture
+      categories: agriculture
       model: 5ad0e817-badb57f1-08530000
       name: IR24x24_1Farm7_0853
     '08620000':
       bulldoze: 310
       capacity:
         id: 77
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-08620000
       name: ID28x28_3DirtyMech13_0862
     '08630000':
       bulldoze: 250
       capacity:
         id: 17
-      category: i-d
+      categories: i-d
       model: 5ad0e817-badb57f1-08630000
       name: ID30x30_1DirtyAnchor55_0863
     '08640000':
       bulldoze: 100
       capacity:
         iht: 7
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-0e110000
       name: IH14x14_1HTMech9_0864
     '08650000':
       bulldoze: 150
       capacity:
         im: 32
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08650000
       name: IM42x42_2ManuAnchor8_0865
     '08660000':
       bulldoze: 270
       capacity:
         im: 27
-      category: i-ht
+      categories: i-ht
       model: 5ad0e817-badb57f1-08660000
       name: IM26x26_2ManuOut5_0866
     '08670000':
       bulldoze: 160
       capacity:
         iht: 39
-      category: i-m
+      categories: i-m
       model: 5ad0e817-badb57f1-08670000
       name: IH28x40_2HTAnchor6_0867
     0a635a90:
@@ -7100,7 +7100,7 @@ buildings:
       waterPollutionRadius: 1
     0ade0000:
       bulldoze: 50
-      category: tram
+      categories: tram
       cost: 500
       flamability: 33
       garbage: 2
@@ -7117,7 +7117,7 @@ buildings:
       waterPollutionRadius: 1
     '10010000':
       bulldoze: 4950
-      category: landmarks
+      categories: landmarks
       cost: 55000
       flamability: 10
       garbage: 3
@@ -7231,7 +7231,7 @@ buildings:
       waterPollutionRadius: 1
     1f3f0000:
       bulldoze: 1800
-      category: power
+      categories: power
       cost: 40000
       flamability: 80
       garbage: 15
@@ -7252,7 +7252,7 @@ buildings:
       waterPollutionRadius: 5
     1f420000:
       bulldoze: 770
-      category: power
+      categories: power
       cost: 17000
       flamability: 100
       garbage: 22
@@ -7273,7 +7273,7 @@ buildings:
       waterPollutionRadius: 14
     1f430000:
       bulldoze: 410
-      category: power
+      categories: power
       cost: 9000
       flamability: 100
       garbage: 20
@@ -7294,7 +7294,7 @@ buildings:
       waterPollutionRadius: 12
     1f440000:
       bulldoze: 1350
-      category: power
+      categories: power
       cost: 30000
       flamability: 50
       garbage: 11
@@ -7315,7 +7315,7 @@ buildings:
       waterPollutionRadius: 3
     1f450000:
       bulldoze: 20
-      category: power
+      categories: power
       cost: 500
       flamability: 10
       maintenance: 50
@@ -7326,7 +7326,7 @@ buildings:
       submenu: Power/Clean
     1f460000:
       bulldoze: 4500
-      category: power
+      categories: power
       cost: 100000
       flamability: 80
       garbage: 11
@@ -7347,7 +7347,7 @@ buildings:
       waterPollutionRadius: 4
     1f470000:
       bulldoze: 2250
-      category: power
+      categories: power
       cost: 25000
       flamability: 96
       jobs:
@@ -7367,7 +7367,7 @@ buildings:
       waterPollutionRadius: 19
     1f490000:
       bulldoze: 100
-      category: waste
+      categories: waste
       cost: 1400
       flamability: 40
       maintenance: 350
@@ -7380,7 +7380,7 @@ buildings:
       waterProduction: 20000
     1f4a0000:
       bulldoze: 10
-      category: waste
+      categories: waste
       cost: 150
       flamability: 45
       maintenance: 50
@@ -7391,7 +7391,7 @@ buildings:
       waterProduction: 2400
     1f4b0000:
       bulldoze: 1350
-      category: waste
+      categories: waste
       cost: 15000
       flamability: 35
       garbage: 12
@@ -7411,7 +7411,7 @@ buildings:
       waterPollutionRadius: 48
     1f4d0000:
       bulldoze: 450
-      category: power
+      categories: power
       cost: 10000
       flamability: 100
       garbage: 25
@@ -7432,7 +7432,7 @@ buildings:
       waterPollutionRadius: 14
     1f4e0000:
       bulldoze: 1500
-      category: seaports
+      categories: seaports
       cost: 10000
       flamability: 57
       garbage: 13
@@ -7452,7 +7452,7 @@ buildings:
       waterPollutionRadius: 7
     1f4f0000:
       bulldoze: 1200
-      category: seaports
+      categories: seaports
       cost: 15000
       flamability: 56
       garbage: 10
@@ -7472,7 +7472,7 @@ buildings:
       waterPollutionRadius: 6
     1f530000:
       bulldoze: 900
-      category: seaports
+      categories: seaports
       cost: 10000
       flamability: 55
       garbage: 8
@@ -7573,7 +7573,7 @@ buildings:
       waterPollutionRadius: 1
     2c9b0000:
       bulldoze: 10
-      category: transport
+      categories: transport
       cost: 150
       flamability: 38
       garbage: 1

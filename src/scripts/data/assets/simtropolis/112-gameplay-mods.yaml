@@ -2091,7 +2091,7 @@ assets:
       tollboothboost-alternate-faresx1-v2.dat:
         038f0000:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 200
           flamability: 38
           garbage: 1
@@ -2146,7 +2146,7 @@ assets:
       tollboothboost-alternate-faresx2-v2.dat:
         038f0000:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 200
           flamability: 38
           garbage: 1
@@ -2201,7 +2201,7 @@ assets:
       tollboothboost-alternate-faresx5-v2.dat:
         038f0000:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 200
           flamability: 38
           garbage: 1
@@ -2256,7 +2256,7 @@ assets:
       tollboothboost-standard-faresx1-v2.dat:
         038f0000:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 200
           flamability: 38
           garbage: 1
@@ -2311,7 +2311,7 @@ assets:
       tollboothboost-standard-faresx2-v2.dat:
         038f0000:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 200
           flamability: 38
           garbage: 1
@@ -2366,7 +2366,7 @@ assets:
       tollboothboost-standard-faresx5-v2.dat:
         038f0000:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 200
           flamability: 38
           garbage: 1
@@ -2424,7 +2424,7 @@ assets:
         buildings:
           038f0000:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 200
             flamability: 38
             garbage: 1
@@ -2480,7 +2480,7 @@ assets:
         buildings:
           038f0000:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 200
             flamability: 38
             garbage: 1
@@ -2536,7 +2536,7 @@ assets:
         buildings:
           038f0000:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 200
             flamability: 38
             garbage: 1
@@ -2592,7 +2592,7 @@ assets:
         buildings:
           038f0000:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 200
             flamability: 38
             garbage: 1
@@ -2648,7 +2648,7 @@ assets:
         buildings:
           038f0000:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 200
             flamability: 38
             garbage: 1
@@ -2704,7 +2704,7 @@ assets:
         buildings:
           038f0000:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 200
             flamability: 38
             garbage: 1
@@ -2797,7 +2797,7 @@ assets:
       noradiation-advancedresearchcenter.dat:
         032f0000:
           bulldoze: 6300
-          category: rewards
+          categories: rewards
           cost: 50000
           flamability: 36
           garbage: 15
@@ -2821,7 +2821,7 @@ assets:
       noradiation-area51.dat:
         '03960000':
           bulldoze: 45000
-          category: rewards
+          categories: rewards
           flamability: 40
           garbage: 10
           jobs:
@@ -2843,7 +2843,7 @@ assets:
       noradiation-armybase.dat:
         '03460000':
           bulldoze: 17500
-          category: rewards
+          categories: rewards
           flamability: 45
           garbage: 20
           jobs:
@@ -2865,7 +2865,7 @@ assets:
       noradiation-diseaseresearchcenter.dat:
         033f0000:
           bulldoze: 3000
-          category: health,rewards
+          categories: health,rewards
           cost: 26000
           flamability: 35
           garbage: 10
@@ -2891,7 +2891,7 @@ assets:
       noradiation-toxicwastedump.dat:
         '03410000':
           bulldoze: 20000
-          category: rewards
+          categories: rewards
           flamability: 77
           garbage: 35
           maintenance: 400
@@ -2912,7 +2912,7 @@ assets:
         buildings:
           032f0000:
             bulldoze: 6300
-            category: rewards
+            categories: rewards
             cost: 50000
             flamability: 36
             garbage: 15
@@ -2937,7 +2937,7 @@ assets:
         buildings:
           '03960000':
             bulldoze: 45000
-            category: rewards
+            categories: rewards
             flamability: 40
             garbage: 10
             jobs:
@@ -2960,7 +2960,7 @@ assets:
         buildings:
           '03460000':
             bulldoze: 17500
-            category: rewards
+            categories: rewards
             flamability: 45
             garbage: 20
             jobs:
@@ -2983,7 +2983,7 @@ assets:
         buildings:
           033f0000:
             bulldoze: 3000
-            category: health,rewards
+            categories: health,rewards
             cost: 26000
             flamability: 35
             garbage: 10
@@ -3010,7 +3010,7 @@ assets:
         buildings:
           '03410000':
             bulldoze: 20000
-            category: rewards
+            categories: rewards
             flamability: 77
             garbage: 35
             maintenance: 400
@@ -3058,7 +3058,7 @@ assets:
           bulldoze: 9900
           capacity:
             co$$: 2825
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 10
           garbage: 39
@@ -3080,7 +3080,7 @@ assets:
           capacity:
             cs$: 15
             cs$$: 15
-          category: landmarks
+          categories: landmarks
           cost: 90000
           flamability: 18
           garbage: 6
@@ -3102,7 +3102,7 @@ assets:
           capacity:
             cs$: 15
             cs$$: 15
-          category: landmarks
+          categories: landmarks
           cost: 50000
           flamability: 36
           garbage: 2
@@ -3124,7 +3124,7 @@ assets:
           capacity:
             cs$: 15
             cs$$: 15
-          category: landmarks
+          categories: landmarks
           cost: 50000
           flamability: 36
           garbage: 2
@@ -3144,7 +3144,7 @@ assets:
           bulldoze: 8100
           capacity:
             co$$: 4077
-          category: landmarks,religion
+          categories: landmarks,religion
           cost: 90000
           flamability: 39
           garbage: 3
@@ -3166,7 +3166,7 @@ assets:
           capacity:
             cs$: 15
             cs$$: 15
-          category: landmarks
+          categories: landmarks
           cost: 90000
           flamability: 18
           garbage: 6
@@ -3187,7 +3187,7 @@ assets:
           capacity:
             cs$: 97
             cs$$: 97
-          category: landmarks
+          categories: landmarks
           cost: 95000
           flamability: 27
           garbage: 20
@@ -3208,7 +3208,7 @@ assets:
           capacity:
             cs$: 32
             cs$$: 32
-          category: landmarks
+          categories: landmarks
           cost: 90000
           flamability: 31
           garbage: 15
@@ -3230,7 +3230,7 @@ assets:
             cs$: 131
             cs$$: 131
             cs$$$: 131
-          category: landmarks
+          categories: landmarks
           cost: 125000
           flamability: 25
           garbage: 8
@@ -3251,7 +3251,7 @@ assets:
           capacity:
             co$$: 289
             co$$$: 111
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 30
           garbage: 9
@@ -3272,7 +3272,7 @@ assets:
           capacity:
             cs$: 5
             cs$$: 5
-          category: landmarks
+          categories: landmarks
           cost: 60000
           garbage: 5
           maintenance: 10
@@ -3290,7 +3290,7 @@ assets:
           capacity:
             co$$: 3672
             co$$$: 1749
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 31
           garbage: 15
@@ -3310,7 +3310,7 @@ assets:
           bulldoze: 4500
           capacity:
             co$$: 531
-          category: landmarks
+          categories: landmarks
           cost: 50000
           flamability: 34
           garbage: 10
@@ -3331,7 +3331,7 @@ assets:
           capacity:
             cs$: 153
             cs$$: 153
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 31
           garbage: 15
@@ -3352,7 +3352,7 @@ assets:
           capacity:
             cs$: 303
             cs$$: 303
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 30
           garbage: 11
@@ -3373,7 +3373,7 @@ assets:
           capacity:
             cs$: 38
             cs$$: 38
-          category: landmarks
+          categories: landmarks
           cost: 95000
           flamability: 16
           garbage: 5
@@ -3392,7 +3392,7 @@ assets:
           capacity:
             cs$: 23
             cs$$: 23
-          category: landmarks
+          categories: landmarks
           cost: 95000
           flamability: 34
           garbage: 4
@@ -3413,7 +3413,7 @@ assets:
           capacity:
             cs$: 7
             cs$$: 7
-          category: landmarks
+          categories: landmarks
           cost: 60000
           flamability: 35
           garbage: 2
@@ -3432,7 +3432,7 @@ assets:
           capacity:
             cs$: 7
             cs$$: 7
-          category: landmarks
+          categories: landmarks
           cost: 60000
           flamability: 34
           garbage: 5
@@ -3452,7 +3452,7 @@ assets:
           bulldoze: 9900
           capacity:
             co$$: 2825
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 10
           garbage: 39
@@ -3473,7 +3473,7 @@ assets:
           capacity:
             cs$: 15
             cs$$: 15
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 10
           garbage: 4
@@ -3492,7 +3492,7 @@ assets:
           capacity:
             cs$: 7
             cs$$: 7
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 33
           garbage: 9
@@ -3513,7 +3513,7 @@ assets:
           capacity:
             cs$: 272
             cs$$: 272
-          category: landmarks
+          categories: landmarks
           cost: 70000
           flamability: 30
           garbage: 15
@@ -3534,7 +3534,7 @@ assets:
           capacity:
             co$$: 80
             co$$$: 27
-          category: landmarks
+          categories: landmarks
           cost: 70000
           flamability: 34
           garbage: 5
@@ -3555,7 +3555,7 @@ assets:
           capacity:
             cs$: 640
             cs$$: 640
-          category: landmarks
+          categories: landmarks
           cost: 55000
           flamability: 35
           garbage: 11
@@ -3576,7 +3576,7 @@ assets:
           capacity:
             cs$: 8
             cs$$: 8
-          category: landmarks
+          categories: landmarks
           cost: 55000
           garbage: 5
           maintenance: 110
@@ -3596,7 +3596,7 @@ assets:
           capacity:
             cs$: 263
             cs$$: 263
-          category: landmarks
+          categories: landmarks
           cost: 160000
           garbage: 65
           maintenance: 310
@@ -3616,7 +3616,7 @@ assets:
           capacity:
             co$$: 77
             co$$$: 32
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 30
           garbage: 9
@@ -3637,7 +3637,7 @@ assets:
           capacity:
             co$$: 11945
             co$$$: 6925
-          category: landmarks
+          categories: landmarks
           cost: 180000
           flamability: 36
           garbage: 15
@@ -3658,7 +3658,7 @@ assets:
           capacity:
             cs$: 33
             cs$$: 33
-          category: landmarks
+          categories: landmarks
           cost: 55000
           flamability: 30
           garbage: 5
@@ -3679,7 +3679,7 @@ assets:
           capacity:
             cs$: 25
             cs$$: 25
-          category: landmarks
+          categories: landmarks
           cost: 85000
           flamability: 20
           garbage: 5
@@ -3700,7 +3700,7 @@ assets:
           capacity:
             co$$: 93
             co$$$: 54
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 33
           garbage: 9
@@ -3721,7 +3721,7 @@ assets:
           capacity:
             co$$: 77
             co$$$: 32
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 34
           garbage: 4
@@ -3743,7 +3743,7 @@ assets:
             cs$: 31
             cs$$: 31
             cs$$$: 31
-          category: landmarks
+          categories: landmarks
           cost: 80000
           flamability: 25
           garbage: 3
@@ -3764,7 +3764,7 @@ assets:
           capacity:
             cs$: 67
             cs$$: 67
-          category: landmarks
+          categories: landmarks
           cost: 175000
           flamability: 25
           garbage: 8
@@ -3785,7 +3785,7 @@ assets:
           capacity:
             cs$: 48
             cs$$: 48
-          category: landmarks
+          categories: landmarks
           cost: 160000
           garbage: 2
           maintenance: 310
@@ -3800,7 +3800,7 @@ assets:
           capacity:
             cs$: 61
             cs$$: 61
-          category: landmarks
+          categories: landmarks
           cost: 105000
           flamability: 10
           garbage: 4
@@ -3819,7 +3819,7 @@ assets:
           capacity:
             cs$: 8
             cs$$: 8
-          category: landmarks
+          categories: landmarks
           cost: 75000
           flamability: 40
           garbage: 2
@@ -3840,7 +3840,7 @@ assets:
           capacity:
             cs$: 20
             cs$$: 20
-          category: landmarks,religion
+          categories: landmarks,religion
           cost: 90000
           flamability: 39
           garbage: 3
@@ -3862,7 +3862,7 @@ assets:
           capacity:
             cs$: 82
             cs$$: 37
-          category: landmarks
+          categories: landmarks
           cost: 50000
           flamability: 33
           garbage: 9
@@ -3882,7 +3882,7 @@ assets:
           bulldoze: 14850
           capacity:
             co$$: 6387
-          category: landmarks
+          categories: landmarks
           cost: 165000
           flamability: 40
           garbage: 43
@@ -3903,7 +3903,7 @@ assets:
           capacity:
             cs$: 5
             cs$$: 5
-          category: landmarks
+          categories: landmarks
           cost: 50000
           garbage: 2
           maintenance: 100
@@ -3917,7 +3917,7 @@ assets:
           capacity:
             cs$: 2
             cs$$: 2
-          category: landmarks
+          categories: landmarks
           cost: 30000
           maintenance: 60
           menu: Landmarks
@@ -3930,7 +3930,7 @@ assets:
           bulldoze: 15300
           capacity:
             co$$: 7692
-          category: landmarks
+          categories: landmarks
           cost: 170000
           flamability: 35
           garbage: 12
@@ -3950,7 +3950,7 @@ assets:
           bulldoze: 21600
           capacity:
             co$$: 9174
-          category: landmarks
+          categories: landmarks
           cost: 240000
           flamability: 27
           garbage: 20
@@ -3971,7 +3971,7 @@ assets:
           capacity:
             cs$: 32
             cs$$: 32
-          category: landmarks
+          categories: landmarks
           cost: 95000
           flamability: 31
           garbage: 9
@@ -3993,7 +3993,7 @@ assets:
             cs$: 16
             cs$$: 16
             cs$$$: 16
-          category: landmarks
+          categories: landmarks
           cost: 85000
           flamability: 14
           garbage: 3
@@ -4012,7 +4012,7 @@ assets:
           capacity:
             cs$: 15
             cs$$: 15
-          category: landmarks
+          categories: landmarks
           cost: 60000
           flamability: 30
           garbage: 3
@@ -4032,7 +4032,7 @@ assets:
           bulldoze: 4950
           capacity:
             co$$: 698
-          category: landmarks
+          categories: landmarks
           cost: 55000
           flamability: 34
           garbage: 11
@@ -4053,7 +4053,7 @@ assets:
           capacity:
             cs$: 8
             cs$$: 8
-          category: landmarks
+          categories: landmarks
           cost: 90000
           garbage: 2
           maintenance: 180
@@ -4068,7 +4068,7 @@ assets:
           capacity:
             cs$: 5
             cs$$: 5
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 35
           garbage: 2
@@ -4088,7 +4088,7 @@ assets:
             cs$: 139
             cs$$: 139
             cs$$$: 139
-          category: landmarks
+          categories: landmarks
           cost: 225000
           flamability: 15
           garbage: 4
@@ -4106,7 +4106,7 @@ assets:
           bulldoze: 4500
           capacity:
             co$$: 743
-          category: landmarks
+          categories: landmarks
           cost: 50000
           flamability: 37
           garbage: 10
@@ -4125,7 +4125,7 @@ assets:
           capacity:
             cs$: 7
             cs$$: 7
-          category: landmarks
+          categories: landmarks
           cost: 80000
           flamability: 5
           garbage: 3
@@ -4142,7 +4142,7 @@ assets:
             cs$: 9
             cs$$: 9
             cs$$$: 9
-          category: landmarks
+          categories: landmarks
           cost: 85000
           garbage: 3
           maintenance: 170
@@ -4156,7 +4156,7 @@ assets:
           bulldoze: 12150
           capacity:
             co$$: 839
-          category: landmarks
+          categories: landmarks
           cost: 135000
           flamability: 35
           garbage: 13
@@ -4177,7 +4177,7 @@ assets:
           capacity:
             cs$: 13
             cs$$: 13
-          category: landmarks
+          categories: landmarks
           cost: 70000
           garbage: 3
           maintenance: 140
@@ -4192,7 +4192,7 @@ assets:
           capacity:
             co$$: 188
             co$$$: 64
-          category: landmarks
+          categories: landmarks
           cost: 70000
           flamability: 31
           garbage: 15
@@ -4214,7 +4214,7 @@ assets:
             cs$: 8
             cs$$: 8
             cs$$$: 8
-          category: landmarks
+          categories: landmarks
           cost: 55000
           flamability: 10
           garbage: 3
@@ -4233,7 +4233,7 @@ assets:
           capacity:
             cs$: 22
             cs$$: 22
-          category: landmarks
+          categories: landmarks
           cost: 90000
           flamability: 30
           garbage: 4
@@ -4254,7 +4254,7 @@ assets:
           capacity:
             co$$: 7102
             co$$$: 3382
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 40
           garbage: 39
@@ -4276,7 +4276,7 @@ assets:
           capacity:
             co$$: 80
             co$$$: 27
-          category: landmarks
+          categories: landmarks
           cost: 70000
           flamability: 34
           garbage: 5
@@ -4298,7 +4298,7 @@ assets:
           capacity:
             cs$: 153
             cs$$: 153
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 31
           garbage: 15
@@ -4320,7 +4320,7 @@ assets:
           capacity:
             cs$: 8
             cs$$: 8
-          category: landmarks
+          categories: landmarks
           cost: 55000
           garbage: 5
           maintenance: 110
@@ -4341,7 +4341,7 @@ assets:
           capacity:
             co$$: 7102
             co$$$: 3382
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 40
           garbage: 39
@@ -4363,7 +4363,7 @@ assets:
           capacity:
             co$$: 11945
             co$$$: 6925
-          category: landmarks
+          categories: landmarks
           cost: 180000
           flamability: 36
           garbage: 15
@@ -4385,7 +4385,7 @@ assets:
           capacity:
             cs$: 8
             cs$$: 8
-          category: landmarks
+          categories: landmarks
           cost: 75000
           flamability: 40
           garbage: 2
@@ -4407,7 +4407,7 @@ assets:
           capacity:
             cs$: 7
             cs$$: 7
-          category: landmarks
+          categories: landmarks
           cost: 60000
           flamability: 34
           garbage: 5
@@ -4430,7 +4430,7 @@ assets:
             cs$: 139
             cs$$: 139
             cs$$$: 139
-          category: landmarks
+          categories: landmarks
           cost: 225000
           flamability: 15
           garbage: 4
@@ -4449,7 +4449,7 @@ assets:
           bulldoze: 4500
           capacity:
             co$$: 743
-          category: landmarks
+          categories: landmarks
           cost: 50000
           flamability: 37
           garbage: 10
@@ -4468,7 +4468,7 @@ assets:
           bulldoze: 4500
           capacity:
             co$$: 531
-          category: landmarks
+          categories: landmarks
           cost: 50000
           flamability: 34
           garbage: 10
@@ -4489,7 +4489,7 @@ assets:
           bulldoze: 15300
           capacity:
             co$$: 7692
-          category: landmarks
+          categories: landmarks
           cost: 170000
           flamability: 35
           garbage: 12
@@ -4512,7 +4512,7 @@ assets:
             cs$: 8
             cs$$: 8
             cs$$$: 8
-          category: landmarks
+          categories: landmarks
           cost: 55000
           flamability: 10
           garbage: 3
@@ -4532,7 +4532,7 @@ assets:
           capacity:
             co$$: 3672
             co$$$: 1749
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 31
           garbage: 15
@@ -4554,7 +4554,7 @@ assets:
           capacity:
             cs$: 82
             cs$$: 37
-          category: landmarks
+          categories: landmarks
           cost: 50000
           flamability: 33
           garbage: 9
@@ -4576,7 +4576,7 @@ assets:
           capacity:
             cs$: 25
             cs$$: 25
-          category: landmarks
+          categories: landmarks
           cost: 85000
           flamability: 20
           garbage: 5
@@ -4598,7 +4598,7 @@ assets:
           capacity:
             cs$: 8
             cs$$: 8
-          category: landmarks
+          categories: landmarks
           cost: 90000
           garbage: 2
           maintenance: 180
@@ -4614,7 +4614,7 @@ assets:
           capacity:
             cs$: 272
             cs$$: 272
-          category: landmarks
+          categories: landmarks
           cost: 70000
           flamability: 30
           garbage: 15
@@ -4636,7 +4636,7 @@ assets:
           capacity:
             cs$: 303
             cs$$: 303
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 30
           garbage: 11
@@ -4659,7 +4659,7 @@ assets:
             cs$: 31
             cs$$: 31
             cs$$$: 31
-          category: landmarks
+          categories: landmarks
           cost: 80000
           flamability: 25
           garbage: 3
@@ -4681,7 +4681,7 @@ assets:
           capacity:
             cs$: 2
             cs$$: 2
-          category: landmarks
+          categories: landmarks
           cost: 30000
           maintenance: 60
           menu: Landmarks
@@ -4696,7 +4696,7 @@ assets:
           capacity:
             cs$: 15
             cs$$: 15
-          category: landmarks
+          categories: landmarks
           cost: 60000
           flamability: 30
           garbage: 3
@@ -4718,7 +4718,7 @@ assets:
           capacity:
             cs$: 7
             cs$$: 7
-          category: landmarks
+          categories: landmarks
           cost: 80000
           flamability: 5
           garbage: 3
@@ -4734,7 +4734,7 @@ assets:
           bulldoze: 14850
           capacity:
             co$$: 6387
-          category: landmarks
+          categories: landmarks
           cost: 165000
           flamability: 40
           garbage: 43
@@ -4756,7 +4756,7 @@ assets:
           capacity:
             cs$: 7
             cs$$: 7
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 33
           garbage: 9
@@ -4779,7 +4779,7 @@ assets:
             cs$: 131
             cs$$: 131
             cs$$$: 131
-          category: landmarks
+          categories: landmarks
           cost: 125000
           flamability: 25
           garbage: 8
@@ -4802,7 +4802,7 @@ assets:
             cs$: 9
             cs$$: 9
             cs$$$: 9
-          category: landmarks
+          categories: landmarks
           cost: 85000
           garbage: 3
           maintenance: 170
@@ -4818,7 +4818,7 @@ assets:
           capacity:
             cs$: 22
             cs$$: 22
-          category: landmarks
+          categories: landmarks
           cost: 90000
           flamability: 30
           garbage: 4
@@ -4840,7 +4840,7 @@ assets:
           capacity:
             co$$: 77
             co$$$: 32
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 34
           garbage: 4
@@ -4862,7 +4862,7 @@ assets:
           capacity:
             cs$: 7
             cs$$: 7
-          category: landmarks
+          categories: landmarks
           cost: 60000
           flamability: 35
           garbage: 2
@@ -4881,7 +4881,7 @@ assets:
           bulldoze: 8100
           capacity:
             co$$: 4077
-          category: landmarks,religion
+          categories: landmarks,religion
           cost: 90000
           flamability: 39
           garbage: 3
@@ -4904,7 +4904,7 @@ assets:
           capacity:
             co$$: 93
             co$$$: 54
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 33
           garbage: 9
@@ -4926,7 +4926,7 @@ assets:
           capacity:
             co$$: 289
             co$$$: 111
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 30
           garbage: 9
@@ -4948,7 +4948,7 @@ assets:
           capacity:
             cs$: 32
             cs$$: 32
-          category: landmarks
+          categories: landmarks
           cost: 90000
           flamability: 31
           garbage: 15
@@ -4970,7 +4970,7 @@ assets:
           capacity:
             cs$: 23
             cs$$: 23
-          category: landmarks
+          categories: landmarks
           cost: 95000
           flamability: 34
           garbage: 4
@@ -4992,7 +4992,7 @@ assets:
           capacity:
             co$$: 77
             co$$$: 32
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 30
           garbage: 9
@@ -5014,7 +5014,7 @@ assets:
           capacity:
             cs$: 263
             cs$$: 263
-          category: landmarks
+          categories: landmarks
           cost: 160000
           garbage: 65
           maintenance: 310
@@ -5034,7 +5034,7 @@ assets:
           bulldoze: 4950
           capacity:
             co$$: 698
-          category: landmarks
+          categories: landmarks
           cost: 55000
           flamability: 34
           garbage: 11
@@ -5056,7 +5056,7 @@ assets:
           capacity:
             cs$: 20
             cs$$: 20
-          category: landmarks,religion
+          categories: landmarks,religion
           cost: 90000
           flamability: 39
           garbage: 3
@@ -5080,7 +5080,7 @@ assets:
             cs$: 16
             cs$$: 16
             cs$$$: 16
-          category: landmarks
+          categories: landmarks
           cost: 85000
           flamability: 14
           garbage: 3
@@ -5100,7 +5100,7 @@ assets:
           capacity:
             cs$: 5
             cs$$: 5
-          category: landmarks
+          categories: landmarks
           cost: 60000
           garbage: 5
           maintenance: 10
@@ -5119,7 +5119,7 @@ assets:
           capacity:
             cs$: 15
             cs$$: 15
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 10
           garbage: 4
@@ -5139,7 +5139,7 @@ assets:
           capacity:
             cs$: 97
             cs$$: 97
-          category: landmarks
+          categories: landmarks
           cost: 95000
           flamability: 27
           garbage: 20
@@ -5161,7 +5161,7 @@ assets:
           capacity:
             cs$: 61
             cs$$: 61
-          category: landmarks
+          categories: landmarks
           cost: 105000
           flamability: 10
           garbage: 4
@@ -5181,7 +5181,7 @@ assets:
           capacity:
             cs$: 38
             cs$$: 38
-          category: landmarks
+          categories: landmarks
           cost: 95000
           flamability: 16
           garbage: 5
@@ -5201,7 +5201,7 @@ assets:
           capacity:
             cs$: 5
             cs$$: 5
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 35
           garbage: 2
@@ -5220,7 +5220,7 @@ assets:
           bulldoze: 21600
           capacity:
             co$$: 9174
-          category: landmarks
+          categories: landmarks
           cost: 240000
           flamability: 27
           garbage: 20
@@ -5242,7 +5242,7 @@ assets:
           capacity:
             cs$: 48
             cs$$: 48
-          category: landmarks
+          categories: landmarks
           cost: 160000
           garbage: 2
           maintenance: 310
@@ -5258,7 +5258,7 @@ assets:
           capacity:
             cs$: 32
             cs$$: 32
-          category: landmarks
+          categories: landmarks
           cost: 95000
           flamability: 31
           garbage: 9
@@ -5280,7 +5280,7 @@ assets:
           capacity:
             cs$: 640
             cs$$: 640
-          category: landmarks
+          categories: landmarks
           cost: 55000
           flamability: 35
           garbage: 11
@@ -5302,7 +5302,7 @@ assets:
           capacity:
             cs$: 5
             cs$$: 5
-          category: landmarks
+          categories: landmarks
           cost: 50000
           garbage: 2
           maintenance: 100
@@ -5317,7 +5317,7 @@ assets:
           capacity:
             cs$: 13
             cs$$: 13
-          category: landmarks
+          categories: landmarks
           cost: 70000
           garbage: 3
           maintenance: 140
@@ -5333,7 +5333,7 @@ assets:
           capacity:
             co$$: 188
             co$$$: 64
-          category: landmarks
+          categories: landmarks
           cost: 70000
           flamability: 31
           garbage: 15
@@ -5355,7 +5355,7 @@ assets:
           capacity:
             cs$: 67
             cs$$: 67
-          category: landmarks
+          categories: landmarks
           cost: 175000
           flamability: 25
           garbage: 8
@@ -5377,7 +5377,7 @@ assets:
           capacity:
             cs$: 33
             cs$$: 33
-          category: landmarks
+          categories: landmarks
           cost: 55000
           flamability: 30
           garbage: 5
@@ -5398,7 +5398,7 @@ assets:
           bulldoze: 12150
           capacity:
             co$$: 839
-          category: landmarks
+          categories: landmarks
           cost: 135000
           flamability: 35
           garbage: 13
@@ -5422,7 +5422,7 @@ assets:
             bulldoze: 9900
             capacity:
               co$$: 2825
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 10
             garbage: 39
@@ -5445,7 +5445,7 @@ assets:
             capacity:
               cs$: 15
               cs$$: 15
-            category: landmarks
+            categories: landmarks
             cost: 90000
             flamability: 18
             garbage: 6
@@ -5468,7 +5468,7 @@ assets:
             capacity:
               cs$: 15
               cs$$: 15
-            category: landmarks
+            categories: landmarks
             cost: 50000
             flamability: 36
             garbage: 2
@@ -5491,7 +5491,7 @@ assets:
             capacity:
               cs$: 15
               cs$$: 15
-            category: landmarks
+            categories: landmarks
             cost: 50000
             flamability: 36
             garbage: 2
@@ -5511,7 +5511,7 @@ assets:
             bulldoze: 8100
             capacity:
               co$$: 4077
-            category: landmarks,religion
+            categories: landmarks,religion
             cost: 90000
             flamability: 39
             garbage: 3
@@ -5533,7 +5533,7 @@ assets:
             capacity:
               cs$: 15
               cs$$: 15
-            category: landmarks
+            categories: landmarks
             cost: 90000
             flamability: 18
             garbage: 6
@@ -5554,7 +5554,7 @@ assets:
             capacity:
               cs$: 97
               cs$$: 97
-            category: landmarks
+            categories: landmarks
             cost: 95000
             flamability: 27
             garbage: 20
@@ -5575,7 +5575,7 @@ assets:
             capacity:
               cs$: 32
               cs$$: 32
-            category: landmarks
+            categories: landmarks
             cost: 90000
             flamability: 31
             garbage: 15
@@ -5597,7 +5597,7 @@ assets:
               cs$: 131
               cs$$: 131
               cs$$$: 131
-            category: landmarks
+            categories: landmarks
             cost: 125000
             flamability: 25
             garbage: 8
@@ -5618,7 +5618,7 @@ assets:
             capacity:
               co$$: 289
               co$$$: 111
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 30
             garbage: 9
@@ -5639,7 +5639,7 @@ assets:
             capacity:
               cs$: 5
               cs$$: 5
-            category: landmarks
+            categories: landmarks
             cost: 60000
             garbage: 5
             maintenance: 10
@@ -5657,7 +5657,7 @@ assets:
             capacity:
               co$$: 3672
               co$$$: 1749
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 31
             garbage: 15
@@ -5677,7 +5677,7 @@ assets:
             bulldoze: 4500
             capacity:
               co$$: 531
-            category: landmarks
+            categories: landmarks
             cost: 50000
             flamability: 34
             garbage: 10
@@ -5698,7 +5698,7 @@ assets:
             capacity:
               cs$: 153
               cs$$: 153
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 31
             garbage: 15
@@ -5719,7 +5719,7 @@ assets:
             capacity:
               cs$: 303
               cs$$: 303
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 30
             garbage: 11
@@ -5740,7 +5740,7 @@ assets:
             capacity:
               cs$: 38
               cs$$: 38
-            category: landmarks
+            categories: landmarks
             cost: 95000
             flamability: 16
             garbage: 5
@@ -5759,7 +5759,7 @@ assets:
             capacity:
               cs$: 23
               cs$$: 23
-            category: landmarks
+            categories: landmarks
             cost: 95000
             flamability: 34
             garbage: 4
@@ -5780,7 +5780,7 @@ assets:
             capacity:
               cs$: 7
               cs$$: 7
-            category: landmarks
+            categories: landmarks
             cost: 60000
             flamability: 35
             garbage: 2
@@ -5799,7 +5799,7 @@ assets:
             capacity:
               cs$: 7
               cs$$: 7
-            category: landmarks
+            categories: landmarks
             cost: 60000
             flamability: 34
             garbage: 5
@@ -5819,7 +5819,7 @@ assets:
             bulldoze: 9900
             capacity:
               co$$: 2825
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 10
             garbage: 39
@@ -5840,7 +5840,7 @@ assets:
             capacity:
               cs$: 15
               cs$$: 15
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 10
             garbage: 4
@@ -5859,7 +5859,7 @@ assets:
             capacity:
               cs$: 7
               cs$$: 7
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 33
             garbage: 9
@@ -5880,7 +5880,7 @@ assets:
             capacity:
               cs$: 272
               cs$$: 272
-            category: landmarks
+            categories: landmarks
             cost: 70000
             flamability: 30
             garbage: 15
@@ -5901,7 +5901,7 @@ assets:
             capacity:
               co$$: 80
               co$$$: 27
-            category: landmarks
+            categories: landmarks
             cost: 70000
             flamability: 34
             garbage: 5
@@ -5922,7 +5922,7 @@ assets:
             capacity:
               cs$: 640
               cs$$: 640
-            category: landmarks
+            categories: landmarks
             cost: 55000
             flamability: 35
             garbage: 11
@@ -5943,7 +5943,7 @@ assets:
             capacity:
               cs$: 8
               cs$$: 8
-            category: landmarks
+            categories: landmarks
             cost: 55000
             garbage: 5
             maintenance: 110
@@ -5963,7 +5963,7 @@ assets:
             capacity:
               cs$: 263
               cs$$: 263
-            category: landmarks
+            categories: landmarks
             cost: 160000
             garbage: 65
             maintenance: 310
@@ -5983,7 +5983,7 @@ assets:
             capacity:
               co$$: 77
               co$$$: 32
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 30
             garbage: 9
@@ -6004,7 +6004,7 @@ assets:
             capacity:
               co$$: 11945
               co$$$: 6925
-            category: landmarks
+            categories: landmarks
             cost: 180000
             flamability: 36
             garbage: 15
@@ -6025,7 +6025,7 @@ assets:
             capacity:
               cs$: 33
               cs$$: 33
-            category: landmarks
+            categories: landmarks
             cost: 55000
             flamability: 30
             garbage: 5
@@ -6046,7 +6046,7 @@ assets:
             capacity:
               cs$: 25
               cs$$: 25
-            category: landmarks
+            categories: landmarks
             cost: 85000
             flamability: 20
             garbage: 5
@@ -6067,7 +6067,7 @@ assets:
             capacity:
               co$$: 93
               co$$$: 54
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 33
             garbage: 9
@@ -6088,7 +6088,7 @@ assets:
             capacity:
               co$$: 77
               co$$$: 32
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 34
             garbage: 4
@@ -6110,7 +6110,7 @@ assets:
               cs$: 31
               cs$$: 31
               cs$$$: 31
-            category: landmarks
+            categories: landmarks
             cost: 80000
             flamability: 25
             garbage: 3
@@ -6131,7 +6131,7 @@ assets:
             capacity:
               cs$: 67
               cs$$: 67
-            category: landmarks
+            categories: landmarks
             cost: 175000
             flamability: 25
             garbage: 8
@@ -6152,7 +6152,7 @@ assets:
             capacity:
               cs$: 48
               cs$$: 48
-            category: landmarks
+            categories: landmarks
             cost: 160000
             garbage: 2
             maintenance: 310
@@ -6167,7 +6167,7 @@ assets:
             capacity:
               cs$: 61
               cs$$: 61
-            category: landmarks
+            categories: landmarks
             cost: 105000
             flamability: 10
             garbage: 4
@@ -6186,7 +6186,7 @@ assets:
             capacity:
               cs$: 8
               cs$$: 8
-            category: landmarks
+            categories: landmarks
             cost: 75000
             flamability: 40
             garbage: 2
@@ -6207,7 +6207,7 @@ assets:
             capacity:
               cs$: 20
               cs$$: 20
-            category: landmarks,religion
+            categories: landmarks,religion
             cost: 90000
             flamability: 39
             garbage: 3
@@ -6229,7 +6229,7 @@ assets:
             capacity:
               cs$: 82
               cs$$: 37
-            category: landmarks
+            categories: landmarks
             cost: 50000
             flamability: 33
             garbage: 9
@@ -6249,7 +6249,7 @@ assets:
             bulldoze: 14850
             capacity:
               co$$: 6387
-            category: landmarks
+            categories: landmarks
             cost: 165000
             flamability: 40
             garbage: 43
@@ -6270,7 +6270,7 @@ assets:
             capacity:
               cs$: 5
               cs$$: 5
-            category: landmarks
+            categories: landmarks
             cost: 50000
             garbage: 2
             maintenance: 100
@@ -6284,7 +6284,7 @@ assets:
             capacity:
               cs$: 2
               cs$$: 2
-            category: landmarks
+            categories: landmarks
             cost: 30000
             maintenance: 60
             menu: Landmarks
@@ -6297,7 +6297,7 @@ assets:
             bulldoze: 15300
             capacity:
               co$$: 7692
-            category: landmarks
+            categories: landmarks
             cost: 170000
             flamability: 35
             garbage: 12
@@ -6317,7 +6317,7 @@ assets:
             bulldoze: 21600
             capacity:
               co$$: 9174
-            category: landmarks
+            categories: landmarks
             cost: 240000
             flamability: 27
             garbage: 20
@@ -6338,7 +6338,7 @@ assets:
             capacity:
               cs$: 32
               cs$$: 32
-            category: landmarks
+            categories: landmarks
             cost: 95000
             flamability: 31
             garbage: 9
@@ -6360,7 +6360,7 @@ assets:
               cs$: 16
               cs$$: 16
               cs$$$: 16
-            category: landmarks
+            categories: landmarks
             cost: 85000
             flamability: 14
             garbage: 3
@@ -6379,7 +6379,7 @@ assets:
             capacity:
               cs$: 15
               cs$$: 15
-            category: landmarks
+            categories: landmarks
             cost: 60000
             flamability: 30
             garbage: 3
@@ -6399,7 +6399,7 @@ assets:
             bulldoze: 4950
             capacity:
               co$$: 698
-            category: landmarks
+            categories: landmarks
             cost: 55000
             flamability: 34
             garbage: 11
@@ -6420,7 +6420,7 @@ assets:
             capacity:
               cs$: 8
               cs$$: 8
-            category: landmarks
+            categories: landmarks
             cost: 90000
             garbage: 2
             maintenance: 180
@@ -6435,7 +6435,7 @@ assets:
             capacity:
               cs$: 5
               cs$$: 5
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 35
             garbage: 2
@@ -6455,7 +6455,7 @@ assets:
               cs$: 139
               cs$$: 139
               cs$$$: 139
-            category: landmarks
+            categories: landmarks
             cost: 225000
             flamability: 15
             garbage: 4
@@ -6473,7 +6473,7 @@ assets:
             bulldoze: 4500
             capacity:
               co$$: 743
-            category: landmarks
+            categories: landmarks
             cost: 50000
             flamability: 37
             garbage: 10
@@ -6492,7 +6492,7 @@ assets:
             capacity:
               cs$: 7
               cs$$: 7
-            category: landmarks
+            categories: landmarks
             cost: 80000
             flamability: 5
             garbage: 3
@@ -6509,7 +6509,7 @@ assets:
               cs$: 9
               cs$$: 9
               cs$$$: 9
-            category: landmarks
+            categories: landmarks
             cost: 85000
             garbage: 3
             maintenance: 170
@@ -6523,7 +6523,7 @@ assets:
             bulldoze: 12150
             capacity:
               co$$: 839
-            category: landmarks
+            categories: landmarks
             cost: 135000
             flamability: 35
             garbage: 13
@@ -6544,7 +6544,7 @@ assets:
             capacity:
               cs$: 13
               cs$$: 13
-            category: landmarks
+            categories: landmarks
             cost: 70000
             garbage: 3
             maintenance: 140
@@ -6559,7 +6559,7 @@ assets:
             capacity:
               co$$: 188
               co$$$: 64
-            category: landmarks
+            categories: landmarks
             cost: 70000
             flamability: 31
             garbage: 15
@@ -6581,7 +6581,7 @@ assets:
               cs$: 8
               cs$$: 8
               cs$$$: 8
-            category: landmarks
+            categories: landmarks
             cost: 55000
             flamability: 10
             garbage: 3
@@ -6600,7 +6600,7 @@ assets:
             capacity:
               cs$: 22
               cs$$: 22
-            category: landmarks
+            categories: landmarks
             cost: 90000
             flamability: 30
             garbage: 4
@@ -6621,7 +6621,7 @@ assets:
             capacity:
               co$$: 7102
               co$$$: 3382
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 40
             garbage: 39
@@ -6644,7 +6644,7 @@ assets:
             capacity:
               co$$: 80
               co$$$: 27
-            category: landmarks
+            categories: landmarks
             cost: 70000
             flamability: 34
             garbage: 5
@@ -6667,7 +6667,7 @@ assets:
             capacity:
               cs$: 153
               cs$$: 153
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 31
             garbage: 15
@@ -6690,7 +6690,7 @@ assets:
             capacity:
               cs$: 8
               cs$$: 8
-            category: landmarks
+            categories: landmarks
             cost: 55000
             garbage: 5
             maintenance: 110
@@ -6712,7 +6712,7 @@ assets:
             capacity:
               co$$: 7102
               co$$$: 3382
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 40
             garbage: 39
@@ -6735,7 +6735,7 @@ assets:
             capacity:
               co$$: 11945
               co$$$: 6925
-            category: landmarks
+            categories: landmarks
             cost: 180000
             flamability: 36
             garbage: 15
@@ -6758,7 +6758,7 @@ assets:
             capacity:
               cs$: 8
               cs$$: 8
-            category: landmarks
+            categories: landmarks
             cost: 75000
             flamability: 40
             garbage: 2
@@ -6781,7 +6781,7 @@ assets:
             capacity:
               cs$: 7
               cs$$: 7
-            category: landmarks
+            categories: landmarks
             cost: 60000
             flamability: 34
             garbage: 5
@@ -6805,7 +6805,7 @@ assets:
               cs$: 139
               cs$$: 139
               cs$$$: 139
-            category: landmarks
+            categories: landmarks
             cost: 225000
             flamability: 15
             garbage: 4
@@ -6825,7 +6825,7 @@ assets:
             bulldoze: 4500
             capacity:
               co$$: 743
-            category: landmarks
+            categories: landmarks
             cost: 50000
             flamability: 37
             garbage: 10
@@ -6845,7 +6845,7 @@ assets:
             bulldoze: 4500
             capacity:
               co$$: 531
-            category: landmarks
+            categories: landmarks
             cost: 50000
             flamability: 34
             garbage: 10
@@ -6867,7 +6867,7 @@ assets:
             bulldoze: 15300
             capacity:
               co$$: 7692
-            category: landmarks
+            categories: landmarks
             cost: 170000
             flamability: 35
             garbage: 12
@@ -6891,7 +6891,7 @@ assets:
               cs$: 8
               cs$$: 8
               cs$$$: 8
-            category: landmarks
+            categories: landmarks
             cost: 55000
             flamability: 10
             garbage: 3
@@ -6912,7 +6912,7 @@ assets:
             capacity:
               co$$: 3672
               co$$$: 1749
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 31
             garbage: 15
@@ -6935,7 +6935,7 @@ assets:
             capacity:
               cs$: 82
               cs$$: 37
-            category: landmarks
+            categories: landmarks
             cost: 50000
             flamability: 33
             garbage: 9
@@ -6958,7 +6958,7 @@ assets:
             capacity:
               cs$: 25
               cs$$: 25
-            category: landmarks
+            categories: landmarks
             cost: 85000
             flamability: 20
             garbage: 5
@@ -6981,7 +6981,7 @@ assets:
             capacity:
               cs$: 8
               cs$$: 8
-            category: landmarks
+            categories: landmarks
             cost: 90000
             garbage: 2
             maintenance: 180
@@ -6998,7 +6998,7 @@ assets:
             capacity:
               cs$: 272
               cs$$: 272
-            category: landmarks
+            categories: landmarks
             cost: 70000
             flamability: 30
             garbage: 15
@@ -7021,7 +7021,7 @@ assets:
             capacity:
               cs$: 303
               cs$$: 303
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 30
             garbage: 11
@@ -7045,7 +7045,7 @@ assets:
               cs$: 31
               cs$$: 31
               cs$$$: 31
-            category: landmarks
+            categories: landmarks
             cost: 80000
             flamability: 25
             garbage: 3
@@ -7068,7 +7068,7 @@ assets:
             capacity:
               cs$: 2
               cs$$: 2
-            category: landmarks
+            categories: landmarks
             cost: 30000
             maintenance: 60
             menu: Landmarks
@@ -7084,7 +7084,7 @@ assets:
             capacity:
               cs$: 15
               cs$$: 15
-            category: landmarks
+            categories: landmarks
             cost: 60000
             flamability: 30
             garbage: 3
@@ -7107,7 +7107,7 @@ assets:
             capacity:
               cs$: 7
               cs$$: 7
-            category: landmarks
+            categories: landmarks
             cost: 80000
             flamability: 5
             garbage: 3
@@ -7124,7 +7124,7 @@ assets:
             bulldoze: 14850
             capacity:
               co$$: 6387
-            category: landmarks
+            categories: landmarks
             cost: 165000
             flamability: 40
             garbage: 43
@@ -7147,7 +7147,7 @@ assets:
             capacity:
               cs$: 7
               cs$$: 7
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 33
             garbage: 9
@@ -7171,7 +7171,7 @@ assets:
               cs$: 131
               cs$$: 131
               cs$$$: 131
-            category: landmarks
+            categories: landmarks
             cost: 125000
             flamability: 25
             garbage: 8
@@ -7195,7 +7195,7 @@ assets:
               cs$: 9
               cs$$: 9
               cs$$$: 9
-            category: landmarks
+            categories: landmarks
             cost: 85000
             garbage: 3
             maintenance: 170
@@ -7212,7 +7212,7 @@ assets:
             capacity:
               cs$: 22
               cs$$: 22
-            category: landmarks
+            categories: landmarks
             cost: 90000
             flamability: 30
             garbage: 4
@@ -7235,7 +7235,7 @@ assets:
             capacity:
               co$$: 77
               co$$$: 32
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 34
             garbage: 4
@@ -7258,7 +7258,7 @@ assets:
             capacity:
               cs$: 7
               cs$$: 7
-            category: landmarks
+            categories: landmarks
             cost: 60000
             flamability: 35
             garbage: 2
@@ -7278,7 +7278,7 @@ assets:
             bulldoze: 8100
             capacity:
               co$$: 4077
-            category: landmarks,religion
+            categories: landmarks,religion
             cost: 90000
             flamability: 39
             garbage: 3
@@ -7302,7 +7302,7 @@ assets:
             capacity:
               co$$: 93
               co$$$: 54
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 33
             garbage: 9
@@ -7325,7 +7325,7 @@ assets:
             capacity:
               co$$: 289
               co$$$: 111
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 30
             garbage: 9
@@ -7348,7 +7348,7 @@ assets:
             capacity:
               cs$: 32
               cs$$: 32
-            category: landmarks
+            categories: landmarks
             cost: 90000
             flamability: 31
             garbage: 15
@@ -7371,7 +7371,7 @@ assets:
             capacity:
               cs$: 23
               cs$$: 23
-            category: landmarks
+            categories: landmarks
             cost: 95000
             flamability: 34
             garbage: 4
@@ -7394,7 +7394,7 @@ assets:
             capacity:
               co$$: 77
               co$$$: 32
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 30
             garbage: 9
@@ -7417,7 +7417,7 @@ assets:
             capacity:
               cs$: 263
               cs$$: 263
-            category: landmarks
+            categories: landmarks
             cost: 160000
             garbage: 65
             maintenance: 310
@@ -7438,7 +7438,7 @@ assets:
             bulldoze: 4950
             capacity:
               co$$: 698
-            category: landmarks
+            categories: landmarks
             cost: 55000
             flamability: 34
             garbage: 11
@@ -7461,7 +7461,7 @@ assets:
             capacity:
               cs$: 20
               cs$$: 20
-            category: landmarks,religion
+            categories: landmarks,religion
             cost: 90000
             flamability: 39
             garbage: 3
@@ -7486,7 +7486,7 @@ assets:
               cs$: 16
               cs$$: 16
               cs$$$: 16
-            category: landmarks
+            categories: landmarks
             cost: 85000
             flamability: 14
             garbage: 3
@@ -7507,7 +7507,7 @@ assets:
             capacity:
               cs$: 5
               cs$$: 5
-            category: landmarks
+            categories: landmarks
             cost: 60000
             garbage: 5
             maintenance: 10
@@ -7527,7 +7527,7 @@ assets:
             capacity:
               cs$: 15
               cs$$: 15
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 10
             garbage: 4
@@ -7548,7 +7548,7 @@ assets:
             capacity:
               cs$: 97
               cs$$: 97
-            category: landmarks
+            categories: landmarks
             cost: 95000
             flamability: 27
             garbage: 20
@@ -7571,7 +7571,7 @@ assets:
             capacity:
               cs$: 61
               cs$$: 61
-            category: landmarks
+            categories: landmarks
             cost: 105000
             flamability: 10
             garbage: 4
@@ -7592,7 +7592,7 @@ assets:
             capacity:
               cs$: 38
               cs$$: 38
-            category: landmarks
+            categories: landmarks
             cost: 95000
             flamability: 16
             garbage: 5
@@ -7613,7 +7613,7 @@ assets:
             capacity:
               cs$: 5
               cs$$: 5
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 35
             garbage: 2
@@ -7633,7 +7633,7 @@ assets:
             bulldoze: 21600
             capacity:
               co$$: 9174
-            category: landmarks
+            categories: landmarks
             cost: 240000
             flamability: 27
             garbage: 20
@@ -7656,7 +7656,7 @@ assets:
             capacity:
               cs$: 48
               cs$$: 48
-            category: landmarks
+            categories: landmarks
             cost: 160000
             garbage: 2
             maintenance: 310
@@ -7673,7 +7673,7 @@ assets:
             capacity:
               cs$: 32
               cs$$: 32
-            category: landmarks
+            categories: landmarks
             cost: 95000
             flamability: 31
             garbage: 9
@@ -7696,7 +7696,7 @@ assets:
             capacity:
               cs$: 640
               cs$$: 640
-            category: landmarks
+            categories: landmarks
             cost: 55000
             flamability: 35
             garbage: 11
@@ -7719,7 +7719,7 @@ assets:
             capacity:
               cs$: 5
               cs$$: 5
-            category: landmarks
+            categories: landmarks
             cost: 50000
             garbage: 2
             maintenance: 100
@@ -7735,7 +7735,7 @@ assets:
             capacity:
               cs$: 13
               cs$$: 13
-            category: landmarks
+            categories: landmarks
             cost: 70000
             garbage: 3
             maintenance: 140
@@ -7752,7 +7752,7 @@ assets:
             capacity:
               co$$: 188
               co$$$: 64
-            category: landmarks
+            categories: landmarks
             cost: 70000
             flamability: 31
             garbage: 15
@@ -7775,7 +7775,7 @@ assets:
             capacity:
               cs$: 67
               cs$$: 67
-            category: landmarks
+            categories: landmarks
             cost: 175000
             flamability: 25
             garbage: 8
@@ -7798,7 +7798,7 @@ assets:
             capacity:
               cs$: 33
               cs$$: 33
-            category: landmarks
+            categories: landmarks
             cost: 55000
             flamability: 30
             garbage: 5
@@ -7820,7 +7820,7 @@ assets:
             bulldoze: 12150
             capacity:
               co$$: 839
-            category: landmarks
+            categories: landmarks
             cost: 135000
             flamability: 35
             garbage: 13
@@ -7922,7 +7922,7 @@ assets:
       OperaHouse.dat:
         032b0000:
           bulldoze: 1520
-          category: rewards
+          categories: rewards
           cost: 68000
           flamability: 34
           garbage: 10
@@ -7945,7 +7945,7 @@ assets:
         buildings:
           032b0000:
             bulldoze: 1520
-            category: rewards
+            categories: rewards
             cost: 68000
             flamability: 34
             garbage: 10
@@ -13131,7 +13131,7 @@ assets:
       SpacePort Fix Mod (use only one of these)\Spaceport Fix Alt Mod.dat:
         '03840000':
           bulldoze: 3900
-          category: rewards
+          categories: rewards
           cost: 96000
           flamability: 38
           garbage: 10
@@ -13155,7 +13155,7 @@ assets:
       SpacePort Fix Mod (use only one of these)\Spaceport Fix Mod.dat:
         '03840000':
           bulldoze: 4200
-          category: rewards
+          categories: rewards
           cost: 96000
           flamability: 38
           garbage: 10
@@ -13182,7 +13182,7 @@ assets:
         buildings:
           '03840000':
             bulldoze: 3900
-            category: rewards
+            categories: rewards
             cost: 96000
             flamability: 38
             garbage: 10
@@ -13220,7 +13220,7 @@ assets:
         buildings:
           '03840000':
             bulldoze: 4200
-            category: rewards
+            categories: rewards
             cost: 96000
             flamability: 38
             garbage: 10
@@ -14072,7 +14072,7 @@ assets:
       HippoTank Demand Fix\Plugins\HT_DemandFix.dat:
         '03110000':
           bulldoze: 40
-          category: health
+          categories: health
           cost: 400
           flamability: 35
           garbage: 9
@@ -14097,7 +14097,7 @@ assets:
           waterPollutionRadius: 3
         1f3f0000:
           bulldoze: 1800
-          category: power
+          categories: power
           cost: 40000
           flamability: 80
           garbage: 15
@@ -14118,7 +14118,7 @@ assets:
           waterPollutionRadius: 5
         1f440000:
           bulldoze: 1350
-          category: power
+          categories: power
           cost: 30000
           flamability: 50
           garbage: 11
@@ -14143,7 +14143,7 @@ assets:
         buildings:
           '03110000':
             bulldoze: 40
-            category: health
+            categories: health
             cost: 400
             flamability: 35
             garbage: 9
@@ -14168,7 +14168,7 @@ assets:
             waterPollutionRadius: 3
           1f3f0000:
             bulldoze: 1800
-            category: power
+            categories: power
             cost: 40000
             flamability: 80
             garbage: 15
@@ -14189,7 +14189,7 @@ assets:
             waterPollutionRadius: 5
           1f440000:
             bulldoze: 1350
-            category: power
+            categories: power
             cost: 30000
             flamability: 50
             garbage: 11

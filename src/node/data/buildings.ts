@@ -32,7 +32,7 @@ export interface BuildingData {
   /**
    * Categories
    */
-  category?: MaybeArray<string>
+  categories?: MaybeArray<string>
 
   /**
    * Plop cost
@@ -210,15 +210,15 @@ export function loadBuildingInfo(
   data: BuildingData,
   categories: Categories,
 ): BuildingInfo {
-  const { category, menu, model, submenu, ...others } = data
+  const { menu, model, submenu, ...others } = data
 
   return {
-    categories: category ? loadCategories(category, categories) : undefined,
+    ...others,
+    categories: data.categories ? loadCategories(data.categories, categories) : undefined,
     file,
     id,
     menu: menu ? parseMenu(menu) : undefined,
     submenus: submenu ? parseMenus(submenu) : undefined,
-    ...others,
   }
 }
 
@@ -226,9 +226,9 @@ export function writeBuildingInfo(building: BuildingInfo): BuildingData {
   const { categories, file, id, menu, submenus, ...others } = building
 
   return {
-    category: categories?.join(","),
+    ...others,
+    categories: categories?.join(","),
     menu: menu ? writeMenu(menu) : undefined,
     submenu: submenus?.length ? writeMenus(submenus) : undefined,
-    ...others,
   }
 }

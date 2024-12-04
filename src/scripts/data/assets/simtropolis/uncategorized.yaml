@@ -657,7 +657,7 @@ assets:
       Plugin_007_AirForceBase.dat:
         036f0000:
           bulldoze: 1000
-          category: rewards
+          categories: rewards
           flamability: 40
           garbage: 10
           jobs:
@@ -682,7 +682,7 @@ assets:
         buildings:
           036f0000:
             bulldoze: 1000
-            category: rewards
+            categories: rewards
             flamability: 40
             garbage: 10
             jobs:
@@ -886,7 +886,7 @@ assets:
       Plugin_008_Kunjungjon.dat:
         04ba0000:
           bulldoze: 5850
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 33
           garbage: 9
@@ -909,7 +909,7 @@ assets:
         buildings:
           04ba0000:
             bulldoze: 5850
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 33
             garbage: 9
@@ -1165,7 +1165,7 @@ assets:
       Plugin_00C_BrandenburgGate.dat:
         04b70000:
           bulldoze: 5850
-          category: landmarks
+          categories: landmarks
           cost: 60000
           flamability: 34
           garbage: 5
@@ -1188,7 +1188,7 @@ assets:
         buildings:
           04b70000:
             bulldoze: 5850
-            category: landmarks
+            categories: landmarks
             cost: 60000
             flamability: 34
             garbage: 5
@@ -1265,7 +1265,7 @@ assets:
       Plugin_00D_Parthenon.dat:
         04b60000:
           bulldoze: 6750
-          category: landmarks
+          categories: landmarks
           cost: 60000
           flamability: 35
           garbage: 2
@@ -1286,7 +1286,7 @@ assets:
         buildings:
           04b60000:
             bulldoze: 6750
-            category: landmarks
+            categories: landmarks
             cost: 60000
             flamability: 35
             garbage: 2
@@ -1705,7 +1705,7 @@ assets:
       Plugin_010_GrandCentralStation.dat:
         04b30000:
           bulldoze: 4500
-          category: landmarks
+          categories: landmarks
           cost: 110000
           flamability: 30
           garbage: 11
@@ -1728,7 +1728,7 @@ assets:
         buildings:
           04b30000:
             bulldoze: 4500
-            category: landmarks
+            categories: landmarks
             cost: 110000
             flamability: 30
             garbage: 11
@@ -1869,7 +1869,7 @@ assets:
       Plugin_016_Stonehenge.dat:
         04ad0000:
           bulldoze: 5850
-          category: landmarks
+          categories: landmarks
           cost: 60000
           garbage: 5
           maintenance: 10
@@ -1889,7 +1889,7 @@ assets:
         buildings:
           04ad0000:
             bulldoze: 5850
-            category: landmarks
+            categories: landmarks
             cost: 60000
             garbage: 5
             maintenance: 10
@@ -2147,7 +2147,7 @@ assets:
       Plugin_031_AdlerPlanetarium.dat:
         '04890000':
           bulldoze: 8100
-          category: landmarks
+          categories: landmarks
           cost: 90000
           flamability: 18
           garbage: 6
@@ -2170,7 +2170,7 @@ assets:
         buildings:
           '04890000':
             bulldoze: 8100
-            category: landmarks
+            categories: landmarks
             cost: 90000
             flamability: 18
             garbage: 6
@@ -2223,7 +2223,7 @@ assets:
       Plugin_032_MayflowerPort.dat:
         '04880000':
           bulldoze: 5850
-          category: landmarks
+          categories: landmarks
           cost: 65000
           flamability: 21
           garbage: 9
@@ -2246,7 +2246,7 @@ assets:
         buildings:
           '04880000':
             bulldoze: 5850
-            category: landmarks
+            categories: landmarks
             cost: 65000
             flamability: 21
             garbage: 9
@@ -2316,7 +2316,7 @@ assets:
       Plugin_033_RockefellerCenter.dat:
         '04870000':
           bulldoze: 8100
-          category: landmarks,religion
+          categories: landmarks,religion
           cost: 90000
           flamability: 39
           garbage: 3
@@ -2341,7 +2341,7 @@ assets:
         buildings:
           '04870000':
             bulldoze: 8100
-            category: landmarks,religion
+            categories: landmarks,religion
             cost: 90000
             flamability: 39
             garbage: 3
@@ -2440,7 +2440,7 @@ assets:
       Plugin_034_SobchakLanes.dat:
         '04860000':
           bulldoze: 8100
-          category: landmarks,religion
+          categories: landmarks,religion
           cost: 90000
           flamability: 39
           garbage: 3
@@ -2465,7 +2465,7 @@ assets:
         buildings:
           '04860000':
             bulldoze: 8100
-            category: landmarks,religion
+            categories: landmarks,religion
             cost: 90000
             flamability: 39
             garbage: 3
@@ -2529,7 +2529,7 @@ assets:
       Plugin_035_ShortyBurger.dat:
         '04850000':
           bulldoze: 8100
-          category: landmarks,religion
+          categories: landmarks,religion
           cost: 90000
           flamability: 39
           garbage: 3
@@ -2554,7 +2554,7 @@ assets:
         buildings:
           '04850000':
             bulldoze: 8100
-            category: landmarks,religion
+            categories: landmarks,religion
             cost: 90000
             flamability: 39
             garbage: 3
@@ -2620,7 +2620,7 @@ assets:
       Plugin_036_LuckysHangTen.dat:
         '04840000':
           bulldoze: 8100
-          category: landmarks,religion
+          categories: landmarks,religion
           cost: 90000
           flamability: 39
           garbage: 3
@@ -2645,7 +2645,7 @@ assets:
         buildings:
           '04840000':
             bulldoze: 8100
-            category: landmarks,religion
+            categories: landmarks,religion
             cost: 90000
             flamability: 39
             garbage: 3
@@ -2711,7 +2711,7 @@ assets:
       Grutze Industries\IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc:
         8d21717e:
           bulldoze: 500
-          category: landmarks
+          categories: landmarks
           cost: 60000
           description: A plant the manufactures many Grutze products
           flamability: 10
@@ -2734,7 +2734,7 @@ assets:
       Grutze Industries\LM4x5_GrutzeInd_2d217719.SC4Lot:
         2d217719:
           bulldoze: 500
-          category: landmarks
+          categories: landmarks
           cost: 60000
           description: A plant the manufactures many Grutze products
           flamability: 10
@@ -2764,7 +2764,7 @@ assets:
         buildings:
           8d21717e:
             bulldoze: 500
-            category: landmarks
+            categories: landmarks
             cost: 60000
             description: A plant the manufactures many Grutze products
             flamability: 10
@@ -2788,7 +2788,7 @@ assets:
         buildings:
           2d217719:
             bulldoze: 500
-            category: landmarks
+            categories: landmarks
             cost: 60000
             description: A plant the manufactures many Grutze products
             flamability: 10
@@ -2868,7 +2868,7 @@ assets:
       Grutzehaus\DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc:
         6d2170b6:
           bulldoze: 125
-          category: landmarks
+          categories: landmarks
           cost: 22000
           description: The house of the Grutze family
           flamability: 10
@@ -2891,7 +2891,7 @@ assets:
       Grutzehaus\LM2x3_Grutzehaus_ed2174a0.SC4Lot:
         ed2174a0:
           bulldoze: 125
-          category: landmarks
+          categories: landmarks
           cost: 22000
           description: The house of the Grutze family
           flamability: 10
@@ -2921,7 +2921,7 @@ assets:
         buildings:
           6d2170b6:
             bulldoze: 125
-            category: landmarks
+            categories: landmarks
             cost: 22000
             description: The house of the Grutze family
             flamability: 10
@@ -2945,7 +2945,7 @@ assets:
         buildings:
           ed2174a0:
             bulldoze: 125
-            category: landmarks
+            categories: landmarks
             cost: 22000
             description: The house of the Grutze family
             flamability: 10
@@ -3029,7 +3029,7 @@ assets:
       Longfellow Castle\CastleSet.dat:
         0d4fdea6:
           bulldoze: 100
-          category: landmarks
+          categories: landmarks
           cost: 110000
           description: 'Location: Long ago and far away'
           flamability: 10
@@ -3049,7 +3049,7 @@ assets:
           waterPollutionRadius: 2
         2d3f0000:
           bulldoze: 100
-          category: landmarks
+          categories: landmarks
           cost: 110000
           description: 'Location: Long ago and far away'
           flamability: 10
@@ -3069,7 +3069,7 @@ assets:
           waterPollutionRadius: 2
         2d4b0000:
           bulldoze: 100
-          category: landmarks
+          categories: landmarks
           cost: 110000
           description: 'Location: Long ago and far away'
           flamability: 10
@@ -3090,7 +3090,7 @@ assets:
       Longfellow Castle\Longfellow Castle_4d50ba18.SC4Lot:
         4d50ba18:
           bulldoze: 100
-          category: landmarks
+          categories: landmarks
           cost: 110000
           description: 'Location: Long ago and far away'
           flamability: 10
@@ -3115,7 +3115,7 @@ assets:
         buildings:
           0d4fdea6:
             bulldoze: 100
-            category: landmarks
+            categories: landmarks
             cost: 110000
             description: 'Location: Long ago and far away'
             flamability: 10
@@ -3135,7 +3135,7 @@ assets:
             waterPollutionRadius: 2
           2d3f0000:
             bulldoze: 100
-            category: landmarks
+            categories: landmarks
             cost: 110000
             description: 'Location: Long ago and far away'
             flamability: 10
@@ -3155,7 +3155,7 @@ assets:
             waterPollutionRadius: 2
           2d4b0000:
             bulldoze: 100
-            category: landmarks
+            categories: landmarks
             cost: 110000
             description: 'Location: Long ago and far away'
             flamability: 10
@@ -3422,7 +3422,7 @@ assets:
         buildings:
           4d50ba18:
             bulldoze: 100
-            category: landmarks
+            categories: landmarks
             cost: 110000
             description: 'Location: Long ago and far away'
             flamability: 10
@@ -3798,7 +3798,7 @@ assets:
       Stone House\LM3x3_StoneHouse_0d1d6acb.SC4Lot:
         0d1d6acb:
           bulldoze: 500
-          category: landmarks
+          categories: landmarks
           cost: 75000
           description: A house made of stone and wood
           flamability: 10
@@ -3820,7 +3820,7 @@ assets:
       Stone House\StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc:
         6d2172e0:
           bulldoze: 500
-          category: landmarks
+          categories: landmarks
           cost: 75000
           description: A house made of stone and wood
           flamability: 10
@@ -3846,7 +3846,7 @@ assets:
         buildings:
           0d1d6acb:
             bulldoze: 500
-            category: landmarks
+            categories: landmarks
             cost: 75000
             description: A house made of stone and wood
             flamability: 10
@@ -3887,7 +3887,7 @@ assets:
         buildings:
           6d2172e0:
             bulldoze: 500
-            category: landmarks
+            categories: landmarks
             cost: 75000
             description: A house made of stone and wood
             flamability: 10
@@ -3945,7 +3945,7 @@ assets:
       Temple of Grutz\LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot:
         2d1e7a9e:
           bulldoze: 500
-          category: landmarks
+          categories: landmarks
           cost: 100000
           description: An ancient structure made in the honor of the great Grutz
           flamability: 10
@@ -3965,7 +3965,7 @@ assets:
       Temple of Grutz\TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc:
         ed1e75d3:
           bulldoze: 500
-          category: landmarks
+          categories: landmarks
           cost: 100000
           description: An ancient structure made in the honor of the great Grutz
           flamability: 10
@@ -3989,7 +3989,7 @@ assets:
         buildings:
           2d1e7a9e:
             bulldoze: 500
-            category: landmarks
+            categories: landmarks
             cost: 100000
             description: An ancient structure made in the honor of the great Grutz
             flamability: 10
@@ -4024,7 +4024,7 @@ assets:
         buildings:
           ed1e75d3:
             bulldoze: 500
-            category: landmarks
+            categories: landmarks
             cost: 100000
             description: An ancient structure made in the honor of the great Grutz
             flamability: 10

@@ -14,6 +14,7 @@ export interface PackageData extends VariantData {
    * Included features, as an array of strings or a comma-separated string (will be trimmed and lowercased)
    *
    * - Contrary to other fields, this **cannot** be overridden by variants.
+   * - Only one package may include a given feature, so this can be used for exclusivity.
    */
   features?: MaybeArray<string>
 

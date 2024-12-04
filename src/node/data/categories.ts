@@ -1,21 +1,25 @@
-import type { Categories, CategoryID, CategoryInfo } from "@common/categories"
-import { type MaybeArray, parseStringArray } from "@common/utils/types"
+import type { Categories, CategoryID } from "@common/categories"
+import { type MaybeArray, parseStringArray, toLowerCase } from "@common/utils/types"
+import { mapDefined, toArray, unique } from "@salinco/nice-utils"
 
 export function loadCategories(data: MaybeArray<string>, categories: Categories): CategoryID[] {
-  const subcategories = parseStringArray(data) as CategoryID[]
+  return unique(
+    parseStringArray(data)
+      .map(toLowerCase)
+      .flatMap(category => {
+        const subcategories = new Set<CategoryID>()
 
-  let subcategory: CategoryID | undefined
-  for (subcategory of subcategories) {
-    while (subcategory) {
-      const info: CategoryInfo | undefined = categories[subcategory]
+        let subcategory = category as CategoryID | undefined
+        while (subcategory && !subcategories.has(subcategory)) {
+          subcategories.add(subcategory)
+          subcategory = categories[subcategory]?.parent
+        }
 
-      if (!subcategories.includes(subcategory)) {
-        subcategories.unshift(subcategory)
-      }
+        return toArray(subcategories)
+      }),
+  )
+}
 
-      subcategory = info?.parent
-    }
-  }
-
-  return subcategories
+export function getPriority(variantCategories: CategoryID[], categories: Categories): number {
+  return Math.max(0, ...mapDefined(variantCategories, category => categories[category]?.priority))
 }

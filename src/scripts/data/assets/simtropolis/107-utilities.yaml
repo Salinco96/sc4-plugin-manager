@@ -3980,7 +3980,7 @@ assets:
       Up2x2_WindBlaster_cc060d0d.SC4Lot:
         cc060d0d:
           bulldoze: 20
-          category: power
+          categories: power
           cost: 500
           flamability: 10
           maintenance: 50
@@ -3997,7 +3997,7 @@ assets:
         buildings:
           cc060d0d:
             bulldoze: 20
-            category: power
+            categories: power
             cost: 500
             flamability: 10
             maintenance: 50

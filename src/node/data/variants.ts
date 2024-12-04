@@ -5,7 +5,7 @@ import type { ExemplarDataPatch } from "@common/exemplars"
 import type { Requirements } from "@common/options"
 import { type PackageID, getOwnerId, isNew } from "@common/packages"
 import type { MMPData, PackageWarning } from "@common/types"
-import { type MaybeArray, parseStringArray } from "@common/utils/types"
+import type { MaybeArray } from "@common/utils/types"
 import type { DependencyInfo, VariantAssetInfo, VariantID, VariantInfo } from "@common/variants"
 import { type BuildingData, loadBuildingInfo, writeBuildingInfo } from "./buildings"
 import { type FamilyData, loadFamilyInfo, writeFamilyInfo } from "./families"
@@ -14,22 +14,15 @@ import { type OptionData, loadOptionInfo } from "./options"
 import { type PropData, loadPropInfo, writePropInfo } from "./props"
 
 import type { BuildingID } from "@common/buildings"
-import { type Categories, CategoryID } from "@common/categories"
+import type { Categories } from "@common/categories"
 import type { FamilyID } from "@common/families"
 import type { LotID } from "@common/lots"
 import type { PropID } from "@common/props"
 import { toPosix } from "@node/files"
-import {
-  isEmpty,
-  isString,
-  mapDefined,
-  mapValues,
-  union,
-  unionBy,
-  unique,
-} from "@salinco/nice-utils"
+import { isEmpty, isString, mapDefined, mapValues, union, unionBy } from "@salinco/nice-utils"
 import type { AssetData } from "./assets"
-import { loadCategories } from "./categories"
+import { loadAuthors } from "./authors"
+import { getPriority, loadCategories } from "./categories"
 import type { PackageData } from "./packages"
 
 /**
@@ -45,12 +38,36 @@ export interface VariantData extends ContentsData {
    */
   assets?: Array<AssetID | VariantAssetData>
 
-  authors?: MaybeArray<AuthorID>
+  /**
+   * List of additional authors (array or comma-separated string, case-insensitive)
+   *
+   * - Owner of package is always implicitly tagged as first author (cannot be overridden)
+   * - Package will appear in the package listing of all tagged authors
+   * - Order matters (tags will be in the same order)
+   * - Note that this is independent from {@link credits} and {@link thanks}
+   */
+  authors?: MaybeArray<string>
 
+  /**
+   * List of categories (array or comma-separated string, case-insensitive)
+   *
+   * - Some categories may implicitly add others
+   * - Order matters (tags will be in the same order)
+   */
+  categories?: MaybeArray<string>
+
+  /**
+   * @deprecated
+   */
   category?: MaybeArray<string>
 
   /**
-   * List of credits
+   * List of credits, where each line is either:
+   * - An {@link AuthorID}
+   * - An arbitrary text
+   * - An object of format `authorId: "arbitrary text"`
+   *
+   * This does not affect filters or author listing - use {@link tags} instead/additionally.
    */
   credits?: Array<AuthorID | string | { [authorId in AuthorID]: string }>
 
@@ -122,6 +139,9 @@ export interface VariantData extends ContentsData {
    */
   logs?: string
 
+  /**
+   * @deprecated
+   */
   mmps?: MMPData[]
 
   /**
@@ -156,6 +176,14 @@ export interface VariantData extends ContentsData {
    */
   repository?: string
 
+  /**
+   * Compatibility requirements for this variant
+   *
+   * The possible requirements are:
+   * - Features (must be present or not, e.g. `cam` or `darknite`)
+   * - Minimum game version (e.g. `minVersion: 638`)
+   * - Global options
+   */
   requirements?: Requirements
 
   /**
@@ -169,7 +197,10 @@ export interface VariantData extends ContentsData {
   support?: string
 
   /**
-   * List of thanks, potentially with a reason for each user
+   * List of credits, where each line is either:
+   * - An {@link AuthorID}
+   * - An arbitrary text
+   * - An object of format `authorId: "arbitrary text"`
    */
   thanks?: Array<AuthorID | string | { [authorId in AuthorID]: string }>
 
@@ -263,6 +294,8 @@ export interface DependencyData {
 
   /**
    * Paths to include (glob patterns)
+   *
+   * This can be used if only a single file of a big package is needed.
    *
    * By default, the whole package is included.
    */
@@ -396,23 +429,21 @@ export function loadVariantInfo(
   const variantData = packageData.variants?.[variantId] ?? {}
 
   const ownerId = getOwnerId(packageId)
-  const category = variantData.category ?? packageData.category ?? CategoryID.MODS
-  const subcategories = loadCategories(category, categories)
-  const priorities = subcategories.map(categoryId => categories[categoryId]?.priority ?? 0)
-  const priority = Math.max(...priorities)
 
-  const authors = unique([
-    ownerId,
-    ...parseStringArray(packageData.authors ?? []),
-    ...parseStringArray(variantData.authors ?? []),
-  ] as AuthorID[])
+  const packageAuthors = loadAuthors(packageData.authors ?? [], ownerId)
+  const variantAuthors = loadAuthors(variantData.authors ?? [], ownerId)
+  const mergedAuthors = union(packageAuthors, variantAuthors)
+
+  const packageCategories = loadCategories(packageData.categories ?? [], categories)
+  const variantCategories = loadCategories(variantData.categories ?? [], categories)
+  const mergedCategories = union(packageCategories, variantCategories)
 
   const variantInfo: VariantInfo = {
-    authors,
-    categories: subcategories,
+    authors: mergedAuthors,
+    categories: mergedCategories,
     id: variantId,
     name: variantData.name ?? variantId,
-    priority,
+    priority: getPriority(mergedCategories, categories),
     version: variantData.version ?? packageData.version ?? "0.0.0",
   }
 
@@ -676,7 +707,7 @@ export function writeVariantInfo(variantInfo: VariantInfo): VariantData {
       ? mapValues(variantInfo.lots, lots => mapValues(lots, writeLotInfo))
       : undefined,
     mmps: variantInfo.mmps?.map(({ categories, ...mmp }) => ({
-      category: categories?.join(","),
+      categories: categories?.join(","),
       ...mmp,
     })),
     name: variantInfo.name,
@@ -705,17 +736,16 @@ export function writeVariantInfo(variantInfo: VariantInfo): VariantData {
 export function loadCredits(
   credits: Array<AuthorID | string | { [authorId in AuthorID]: string }>,
 ): { id?: AuthorID; text?: string }[] {
-  return credits.map(credit => {
+  return credits.flatMap<{ id?: AuthorID; text?: string }>(credit => {
     if (isString(credit)) {
       if (credit.match(/^\S+$/)) {
-        return { id: credit.toLowerCase() as AuthorID }
+        return [{ id: credit.toLowerCase() as AuthorID }]
       }
 
-      return { text: credit }
+      return [{ text: credit }]
     }
 
-    const [id, text] = Object.entries(credit)[0]
-    return { id: id.toLowerCase() as AuthorID, text }
+    return Object.entries(credit).map(([id, text]) => ({ id: id.toLowerCase() as AuthorID, text }))
   })
 }
 

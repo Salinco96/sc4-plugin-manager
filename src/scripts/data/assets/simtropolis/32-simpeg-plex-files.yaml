@@ -375,7 +375,7 @@ assets:
           bulldoze: 80
           capacity:
             ir: 11
-          category: agriculture
+          categories: agriculture
           family: a0001532
           flamability: 45
           garbage: 4
@@ -394,7 +394,7 @@ assets:
             iht: 56
             im: 56
             ir: 56
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-084d0000
           name: IR30x24_1Farm1_084D_AlvinAcres
         '084e0000':
@@ -403,7 +403,7 @@ assets:
             iht: 56
             im: 56
             ir: 56
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-084e0000
           name: IR60x50_3Farm2_084E_PedrinaPlants
         084f0000:
@@ -412,7 +412,7 @@ assets:
             iht: 56
             im: 56
             ir: 56
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-084f0000
           name: IR24x20_1Farm3_084F_FarhansFarms
         '08500000':
@@ -421,7 +421,7 @@ assets:
             iht: 56
             im: 56
             ir: 56
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-08500000
           name: IR15x7_1Farm4_0850_PumpkinAcres
         '08510000':
@@ -430,7 +430,7 @@ assets:
             iht: 56
             im: 56
             ir: 56
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-08510000
           name: IR32x32_2Farm5_0851_JezKnight
         '08520000':
@@ -439,7 +439,7 @@ assets:
             iht: 56
             im: 56
             ir: 56
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-08520000
           name: IR16x30_2Farm6_0852_BartheletStables
         '08530000':
@@ -448,7 +448,7 @@ assets:
             iht: 56
             im: 56
             ir: 56
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-08530000
           name: IR24x24_1Farm7_0853_LlamaAg
         0cc3ca8a:
@@ -476,14 +476,14 @@ assets:
             id: 13
             im: 14
             ir: 15
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Orangetree
         145ed92d:
           bulldoze: 10
           capacity:
             ir: 15
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Agave
         1879ed69:
@@ -492,7 +492,7 @@ assets:
             id: 15
             im: 13
             ir: 17
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Wheat
         18e92ef0:
@@ -519,7 +519,7 @@ assets:
           bulldoze: 10
           capacity:
             ir: 10
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Tilled
         230ce961:
@@ -536,14 +536,14 @@ assets:
           bulldoze: 10
           capacity:
             ir: 13
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Grapes
         275c0c91:
           bulldoze: 130
           capacity:
             ir: 21
-          category: agriculture
+          categories: agriculture
           family: a0001535
           flamability: 45
           garbage: 4
@@ -560,7 +560,7 @@ assets:
           bulldoze: 10
           capacity:
             ir: 12
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Hops
         28de9881:
@@ -579,7 +579,7 @@ assets:
             id: 14
             im: 13
             ir: 15
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Appletree
         2ac6c09d:
@@ -606,7 +606,7 @@ assets:
           bulldoze: 10
           capacity:
             ir: 14
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Switchgrass
         33d2148a:
@@ -632,7 +632,7 @@ assets:
           bulldoze: 130
           capacity:
             ir: 20
-          category: agriculture
+          categories: agriculture
           family: a0001535
           flamability: 45
           garbage: 4
@@ -649,7 +649,7 @@ assets:
           bulldoze: 180
           capacity:
             ir: 37
-          category: agriculture
+          categories: agriculture
           family: a0001533
           flamability: 45
           garbage: 4
@@ -666,7 +666,7 @@ assets:
           bulldoze: 10
           capacity:
             ir: 13
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Rubbarb
         3d9d9921:
@@ -683,7 +683,7 @@ assets:
           bulldoze: 80
           capacity:
             ir: 10
-          category: agriculture
+          categories: agriculture
           family: a0001532
           flamability: 45
           garbage: 4
@@ -722,7 +722,7 @@ assets:
             id: 13
             im: 11
             ir: 15
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Corn
         4ce60e32:
@@ -799,7 +799,7 @@ assets:
           bulldoze: 10
           capacity:
             ir: 15
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Tomatoes
         6ae65c35:
@@ -816,7 +816,7 @@ assets:
           bulldoze: 80
           capacity:
             ir: 35
-          category: agriculture
+          categories: agriculture
           family: a0001534
           flamability: 50
           garbage: 4
@@ -833,7 +833,7 @@ assets:
           bulldoze: 130
           capacity:
             ir: 24
-          category: agriculture
+          categories: agriculture
           family: a0001530
           flamability: 50
           garbage: 4
@@ -850,7 +850,7 @@ assets:
           bulldoze: 130
           capacity:
             ir: 51
-          category: agriculture
+          categories: agriculture
           family: a0001531
           flamability: 45
           garbage: 4
@@ -869,14 +869,14 @@ assets:
             id: 12
             im: 11
             ir: 13
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Lemontree
         7635f8dc:
           bulldoze: 130
           capacity:
             ir: 32
-          category: agriculture
+          categories: agriculture
           family: a0001530
           flamability: 50
           garbage: 4
@@ -923,7 +923,7 @@ assets:
           bulldoze: 130
           capacity:
             ir: 52
-          category: agriculture
+          categories: agriculture
           family: a0001531
           flamability: 45
           garbage: 4
@@ -940,7 +940,7 @@ assets:
           bulldoze: 130
           capacity:
             ir: 49
-          category: agriculture
+          categories: agriculture
           family: a0001531
           flamability: 45
           garbage: 4
@@ -969,21 +969,21 @@ assets:
             id: 14
             im: 13
             ir: 15
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Barley
         9a4c8535:
           bulldoze: 10
           capacity:
             ir: 11
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Rye
         9e7e9e46:
           bulldoze: 130
           capacity:
             ir: 25
-          category: agriculture
+          categories: agriculture
           family: a0001530
           flamability: 50
           garbage: 4
@@ -1020,7 +1020,7 @@ assets:
           bulldoze: 10
           capacity:
             ir: 11
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Pasture
         b7399134:
@@ -1057,7 +1057,7 @@ assets:
           bulldoze: 180
           capacity:
             ir: 36
-          category: agriculture
+          categories: agriculture
           family: a0001533
           flamability: 45
           garbage: 4
@@ -1074,7 +1074,7 @@ assets:
           bulldoze: 80
           capacity:
             ir: 36
-          category: agriculture
+          categories: agriculture
           family: a0001534
           flamability: 50
           garbage: 4
@@ -1101,7 +1101,7 @@ assets:
           bulldoze: 80
           capacity:
             ir: 12
-          category: agriculture
+          categories: agriculture
           family: a0001532
           flamability: 45
           garbage: 4
@@ -1118,7 +1118,7 @@ assets:
           bulldoze: 130
           capacity:
             ir: 22
-          category: agriculture
+          categories: agriculture
           family: a0001535
           flamability: 45
           garbage: 4
@@ -1145,7 +1145,7 @@ assets:
           bulldoze: 180
           capacity:
             ir: 38
-          category: agriculture
+          categories: agriculture
           family: a0001533
           flamability: 45
           garbage: 4
@@ -1172,7 +1172,7 @@ assets:
           bulldoze: 80
           capacity:
             ir: 34
-          category: agriculture
+          categories: agriculture
           family: a0001534
           flamability: 50
           garbage: 4
@@ -1209,7 +1209,7 @@ assets:
           bulldoze: 10
           capacity:
             ir: 14
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Lettuce-Mature
         ffebf1c7:
@@ -1218,7 +1218,7 @@ assets:
             id: 13
             im: 12
             ir: 14
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Peachtree
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
@@ -1226,7 +1226,7 @@ assets:
           bulldoze: 5
           capacity:
             ir: 1
-          category: agriculture
+          categories: agriculture
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_FarmField_Tilled
           water: 1

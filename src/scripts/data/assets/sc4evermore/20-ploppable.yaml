@@ -7,7 +7,7 @@ assets:
       Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue Full_30c05b68.SC4Lot:
         30c05b68:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -27,7 +27,7 @@ assets:
       Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue_d0bf13e3.SC4Lot:
         d0bf13e3:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -47,7 +47,7 @@ assets:
       Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green Full_30c052e8.SC4Lot:
         30c052e8:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -67,7 +67,7 @@ assets:
       Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green_f0bf0dab.SC4Lot:
         f0bf0dab:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -87,7 +87,7 @@ assets:
       Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red Full_d0c05314.SC4Lot:
         d0c05314:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -107,7 +107,7 @@ assets:
       Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red_d0bf0a44.SC4Lot:
         d0bf0a44:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -127,7 +127,7 @@ assets:
       Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow Full_f0c045df.SC4Lot:
         f0c045df:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -147,7 +147,7 @@ assets:
       Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow_d0bf0413.SC4Lot:
         d0bf0413:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -167,7 +167,7 @@ assets:
       Jeronij\JRJ Ships Compilation\Juan J. Sister\JRJ Sister_90be0bd3.SC4Lot:
         90be0bd3:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -187,7 +187,7 @@ assets:
       Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd01_90c1db9e.SC4Lot:
         90c1db9e:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -207,7 +207,7 @@ assets:
       Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd02_90c204fd.SC4Lot:
         90c204fd:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -227,7 +227,7 @@ assets:
       Jeronij\JRJ Ships Compilation\RMS Titanic\JRJ Titanic_70b5cb20.SC4Lot:
         70b5cb20:
           bulldoze: 5
-          category: landmarks
+          categories: landmarks
           cost: 7
           maintenance: 1
           menu: Landmarks
@@ -313,7 +313,7 @@ assets:
         buildings:
           30c05b68:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -343,7 +343,7 @@ assets:
         buildings:
           d0bf13e3:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -373,7 +373,7 @@ assets:
         buildings:
           30c052e8:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -403,7 +403,7 @@ assets:
         buildings:
           f0bf0dab:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -433,7 +433,7 @@ assets:
         buildings:
           d0c05314:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -463,7 +463,7 @@ assets:
         buildings:
           d0bf0a44:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -493,7 +493,7 @@ assets:
         buildings:
           f0c045df:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -523,7 +523,7 @@ assets:
         buildings:
           d0bf0413:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -553,7 +553,7 @@ assets:
         buildings:
           90be0bd3:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -583,7 +583,7 @@ assets:
         buildings:
           90c1db9e:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -613,7 +613,7 @@ assets:
         buildings:
           90c204fd:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -643,7 +643,7 @@ assets:
         buildings:
           70b5cb20:
             bulldoze: 5
-            category: landmarks
+            categories: landmarks
             cost: 7
             maintenance: 1
             menu: Landmarks
@@ -1076,7 +1076,7 @@ assets:
     lastModified: 2024-09-02T23:42:33.000Z
     lots:
       - building: ed4f4910
-        category: landmarks
+        categories: landmarks
         file: BSC/BSC Custodian/Rubik3/One World Trade Tower/One World Trade with Jobs.dat
         id: ed4f4910
         name: WTC_One World Trade with Jobs
@@ -1086,7 +1086,7 @@ assets:
         textures:
           - 258f0000
       - building: 4e4dd98d
-        category: landmarks
+        categories: landmarks
         file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Landmark_4e4dd98d.SC4Lot
         id: 4e4dd98d
         name: WTC_Complex_Landmark
@@ -1206,7 +1206,7 @@ assets:
           - '26360000'
           - '91109000'
       - building: 0e44f044
-        category: landmarks
+        categories: landmarks
         file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Placeholder_0e44f044.SC4Lot
         id: 0e44f044
         name: WTC_Complex_Placeholder
@@ -1281,7 +1281,7 @@ assets:
           - '91108000'
           - '91115000'
       - building: ae3f8aea
-        category: landmarks,co$$$
+        categories: landmarks,co$$$
         file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Reward_ae3f8aea.SC4Lot
         id: ae3f8aea
         name: WTC_Complex_Reward
@@ -1401,7 +1401,7 @@ assets:
           - 25fa0000
           - '26360000'
       - building: 4d54a36c
-        category: landmarks
+        categories: landmarks
         file: BSC/BSC Custodian/Rubik3/Two World Trade Tower/Two World Trade with Jobs.dat
         id: 4d54a36c
         name: WTC_Two World Trade with Jobs
@@ -1409,7 +1409,7 @@ assets:
         textures:
           - 258f0000
       - building: 943260aa
-        category: co$$$
+        categories: co$$$
         density: high
         file: CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_One World Trade_Co$$$_243260d7.SC4Lot
         id: 243260d7
@@ -1421,7 +1421,7 @@ assets:
         textures:
           - 258f0000
       - building: '14326491'
-        category: co$$$
+        categories: co$$$
         density: high
         file: CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_Two World Trade_Co$$$_043264c8.SC4Lot
         id: 043264c8

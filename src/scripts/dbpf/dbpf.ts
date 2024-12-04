@@ -188,14 +188,14 @@ export async function analyzeSC4Files(
   }
 
   const buildings = values(contents.buildings ?? {}).flatMap(buildings =>
-    collect(buildings, ({ category }, id) => ({ category, id })),
+    collect(buildings, ({ categories }, id) => ({ categories, id })),
   )
 
   const lots = values(contents.lots ?? {}).flatMap(values)
 
   for (const building of buildings) {
-    if (building.category && lots.some(lot => lot.building === building.id)) {
-      for (const category of parseStringArray(building.category)) {
+    if (building.categories && lots.some(lot => lot.building === building.id)) {
+      for (const category of parseStringArray(building.categories)) {
         categories.add(category as CategoryID)
       }
     }

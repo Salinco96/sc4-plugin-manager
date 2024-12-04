@@ -16,14 +16,14 @@ assets:
       mikeseith\Garages\Modular Parking Garage 2 Lvl\Mikeseith 2 Level Garages_Lots.dat:
         1960bfda:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 56
           menu: MiscTransit
           model: 5ad0e817-badb57f1-0e110000
           name: MS_2Lvl_Inside (1 Row)
         3962e3b9:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 50
           flamability: 38
           garbage: 1
@@ -39,7 +39,7 @@ assets:
           waterPollutionRadius: 1
         5960c034:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 54
           menu: MiscTransit
           model: 5ad0e817-badb57f1-0e110000
@@ -49,21 +49,21 @@ assets:
           water: 1
         5960c0eb:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 55
           menu: MiscTransit
           model: 5ad0e817-badb57f1-0e110000
           name: MS_2Lvl_Ramp
         7960bf97:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 57
           menu: MiscTransit
           model: 5ad0e817-badb57f1-0e110000
           name: MS_2Lvl_Inside (2 Rows)
         7960c078:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 53
           menu: MiscTransit
           model: 5ad0e817-badb57f1-0e110000
@@ -73,14 +73,14 @@ assets:
           water: 1
         9960bf4b:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 51
           menu: MiscTransit
           model: 5ad0e817-badb57f1-0e110000
           name: MS_2Lvl_Wall (1 Row)
         b960bedd:
           bulldoze: 10
-          category: transport
+          categories: transport
           cost: 52
           menu: MiscTransit
           model: 5ad0e817-badb57f1-0e110000
@@ -88,7 +88,7 @@ assets:
       mikeseith\Garages\Modular Parking Garage 8 Lvl#\!Opt_8 Level Airport Shuttle_RTMT\zOpt_8 Level Airport Shuttle_RTMT.dat:
         dd0ef80b:
           bulldoze: 100
-          category: bus
+          categories: bus
           cost: 100
           flamability: 50
           garbage: 4
@@ -108,7 +108,7 @@ assets:
       mikeseith\Garages\Modular Parking Garage 8 Lvl#\!Opt_8 Level BusStop_RTMT\zOpt_8 Level BusStop_RTMT.dat:
         3d184784:
           bulldoze: 100
-          category: bus
+          categories: bus
           cost: 100
           flamability: 38
           garbage: 4
@@ -128,7 +128,7 @@ assets:
       mikeseith\Garages\Modular Parking Garage 8 Lvl#\Mikeseith 8 Level Garages_Lots.dat:
         1cf37210:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 69
           garbage: 2
           maintenance: 25
@@ -143,7 +143,7 @@ assets:
           waterPollutionRadius: 1
         1cf8e57f:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 50
           flamability: 50
           garbage: 4
@@ -161,7 +161,7 @@ assets:
           waterPollutionRadius: 1
         3cf369e5:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 65
           maintenance: 20
           menu: MiscTransit
@@ -173,7 +173,7 @@ assets:
           water: 1
         3d184784:
           bulldoze: 100
-          category: bus
+          categories: bus
           cost: 100
           flamability: 38
           garbage: 4
@@ -193,7 +193,7 @@ assets:
           waterPollutionRadius: 1
         3d205411:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 70
           garbage: 2
           maintenance: 25
@@ -208,7 +208,7 @@ assets:
           waterPollutionRadius: 1
         5cf36ce3:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 57
           flamability: 50
           garbage: 1
@@ -222,7 +222,7 @@ assets:
           water: 1
         5cf36e24:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 54
           garbage: 1
           maintenance: 20
@@ -235,7 +235,7 @@ assets:
           water: 1
         5cf37074:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 68
           garbage: 2
           maintenance: 25
@@ -250,7 +250,7 @@ assets:
           waterPollutionRadius: 1
         5cf37444:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 53
           maintenance: 10
           menu: MiscTransit
@@ -262,7 +262,7 @@ assets:
           water: 1
         bcf36100:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 56
           maintenance: 10
           menu: MiscTransit
@@ -274,7 +274,7 @@ assets:
           water: 1
         bcf36894:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 55
           maintenance: 10
           menu: MiscTransit
@@ -286,7 +286,7 @@ assets:
           water: 1
         bcf36f3c:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 66
           garbage: 2
           maintenance: 25
@@ -301,7 +301,7 @@ assets:
           waterPollutionRadius: 1
         dcf36951:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 51
           garbage: 1
           maintenance: 20
@@ -314,7 +314,7 @@ assets:
           water: 1
         dcf36a78:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 64
           maintenance: 20
           menu: MiscTransit
@@ -326,7 +326,7 @@ assets:
           water: 1
         dcf36fc8:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 67
           garbage: 2
           maintenance: 25
@@ -341,7 +341,7 @@ assets:
           waterPollutionRadius: 1
         dd0ef80b:
           bulldoze: 100
-          category: bus
+          categories: bus
           cost: 100
           flamability: 50
           garbage: 4
@@ -361,7 +361,7 @@ assets:
           waterPollutionRadius: 1
         dd16f12b:
           bulldoze: 10
-          category: police
+          categories: police
           cost: 80
           flamability: 36
           jobs:
@@ -377,7 +377,7 @@ assets:
           water: 1
         fcf36d53:
           bulldoze: 100
-          category: transport
+          categories: transport
           cost: 52
           garbage: 1
           maintenance: 20
@@ -1099,14 +1099,14 @@ assets:
         buildings:
           1960bfda:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 56
             menu: MiscTransit
             model: 5ad0e817-badb57f1-0e110000
             name: MS_2Lvl_Inside (1 Row)
           3962e3b9:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 50
             flamability: 38
             garbage: 1
@@ -1122,7 +1122,7 @@ assets:
             waterPollutionRadius: 1
           5960c034:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 54
             menu: MiscTransit
             model: 5ad0e817-badb57f1-0e110000
@@ -1132,21 +1132,21 @@ assets:
             water: 1
           5960c0eb:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 55
             menu: MiscTransit
             model: 5ad0e817-badb57f1-0e110000
             name: MS_2Lvl_Ramp
           7960bf97:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 57
             menu: MiscTransit
             model: 5ad0e817-badb57f1-0e110000
             name: MS_2Lvl_Inside (2 Rows)
           7960c078:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 53
             menu: MiscTransit
             model: 5ad0e817-badb57f1-0e110000
@@ -1156,14 +1156,14 @@ assets:
             water: 1
           9960bf4b:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 51
             menu: MiscTransit
             model: 5ad0e817-badb57f1-0e110000
             name: MS_2Lvl_Wall (1 Row)
           b960bedd:
             bulldoze: 10
-            category: transport
+            categories: transport
             cost: 52
             menu: MiscTransit
             model: 5ad0e817-badb57f1-0e110000
@@ -1246,7 +1246,7 @@ assets:
         buildings:
           dd0ef80b:
             bulldoze: 100
-            category: bus
+            categories: bus
             cost: 100
             flamability: 50
             garbage: 4
@@ -1286,7 +1286,7 @@ assets:
         buildings:
           3d184784:
             bulldoze: 100
-            category: bus
+            categories: bus
             cost: 100
             flamability: 38
             garbage: 4
@@ -1326,7 +1326,7 @@ assets:
         buildings:
           1cf37210:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 69
             garbage: 2
             maintenance: 25
@@ -1341,7 +1341,7 @@ assets:
             waterPollutionRadius: 1
           1cf8e57f:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 50
             flamability: 50
             garbage: 4
@@ -1359,7 +1359,7 @@ assets:
             waterPollutionRadius: 1
           3cf369e5:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 65
             maintenance: 20
             menu: MiscTransit
@@ -1371,7 +1371,7 @@ assets:
             water: 1
           3d184784:
             bulldoze: 100
-            category: bus
+            categories: bus
             cost: 100
             flamability: 38
             garbage: 4
@@ -1391,7 +1391,7 @@ assets:
             waterPollutionRadius: 1
           3d205411:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 70
             garbage: 2
             maintenance: 25
@@ -1406,7 +1406,7 @@ assets:
             waterPollutionRadius: 1
           5cf36ce3:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 57
             flamability: 50
             garbage: 1
@@ -1420,7 +1420,7 @@ assets:
             water: 1
           5cf36e24:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 54
             garbage: 1
             maintenance: 20
@@ -1433,7 +1433,7 @@ assets:
             water: 1
           5cf37074:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 68
             garbage: 2
             maintenance: 25
@@ -1448,7 +1448,7 @@ assets:
             waterPollutionRadius: 1
           5cf37444:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 53
             maintenance: 10
             menu: MiscTransit
@@ -1460,7 +1460,7 @@ assets:
             water: 1
           bcf36100:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 56
             maintenance: 10
             menu: MiscTransit
@@ -1472,7 +1472,7 @@ assets:
             water: 1
           bcf36894:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 55
             maintenance: 10
             menu: MiscTransit
@@ -1484,7 +1484,7 @@ assets:
             water: 1
           bcf36f3c:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 66
             garbage: 2
             maintenance: 25
@@ -1499,7 +1499,7 @@ assets:
             waterPollutionRadius: 1
           dcf36951:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 51
             garbage: 1
             maintenance: 20
@@ -1512,7 +1512,7 @@ assets:
             water: 1
           dcf36a78:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 64
             maintenance: 20
             menu: MiscTransit
@@ -1524,7 +1524,7 @@ assets:
             water: 1
           dcf36fc8:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 67
             garbage: 2
             maintenance: 25
@@ -1539,7 +1539,7 @@ assets:
             waterPollutionRadius: 1
           dd0ef80b:
             bulldoze: 100
-            category: bus
+            categories: bus
             cost: 100
             flamability: 50
             garbage: 4
@@ -1559,7 +1559,7 @@ assets:
             waterPollutionRadius: 1
           dd16f12b:
             bulldoze: 10
-            category: police
+            categories: police
             cost: 80
             flamability: 36
             jobs:
@@ -1575,7 +1575,7 @@ assets:
             water: 1
           fcf36d53:
             bulldoze: 100
-            category: transport
+            categories: transport
             cost: 52
             garbage: 1
             maintenance: 20

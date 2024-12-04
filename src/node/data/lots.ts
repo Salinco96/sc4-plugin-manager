@@ -3,7 +3,7 @@ import { type LotID, type LotInfo, ZoneDensity } from "@common/lots"
 import type { Requirements } from "@common/options"
 import type { PropID } from "@common/props"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
-import { isEnum, unique, values } from "@salinco/nice-utils"
+import { isEnum, size, unique, values } from "@salinco/nice-utils"
 
 export interface LotData {
   /**
@@ -73,6 +73,7 @@ export function loadLotInfo(file: string, id: LotID, data: LotData): LotInfo {
   const { density, props, textures, ...others } = data
 
   return {
+    ...others,
     density:
       density === "all"
         ? values(ZoneDensity)
@@ -81,7 +82,6 @@ export function loadLotInfo(file: string, id: LotID, data: LotData): LotInfo {
           : undefined,
     file,
     id,
-    ...others,
   }
 }
 
@@ -89,7 +89,7 @@ export function writeLotInfo(lot: LotInfo): LotData {
   const { density, file, id, ...others } = lot
 
   return {
-    density: density?.length === 3 ? "all" : density?.join(","),
     ...others,
+    density: density?.length === size(ZoneDensity) ? "all" : density?.join(","),
   }
 }

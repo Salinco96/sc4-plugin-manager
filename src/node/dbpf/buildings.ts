@@ -49,7 +49,7 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
 
   const categories = getCategories(exemplar)
   if (categories.length) {
-    data.category = categories.join(",")
+    data.categories = categories.join(",")
   }
 
   const plopCost = get(exemplar, ExemplarPropertyID.PlopCost)
