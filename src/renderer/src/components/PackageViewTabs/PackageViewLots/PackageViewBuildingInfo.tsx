@@ -16,7 +16,7 @@ import { formatNumber, formatSimoleans } from "@utils/format"
 import { useCurrentVariant } from "@utils/packages"
 import { useFeatures, useStore } from "@utils/store"
 
-import { ExemplarRef } from "./ExemplarRef"
+import { ExemplarRef } from "../../ExemplarRef"
 
 export interface PackageViewBuildingInfoProps {
   building: BuildingInfo
@@ -110,7 +110,7 @@ export function PackageViewBuildingInfo({
         )}
       </FlexBox>
 
-      {building.description !== undefined && (
+      {building.description && (
         <Typography sx={{ fontStyle: "italic", whiteSpace: "pre" }} variant="body2">
           {building.description}
         </Typography>

@@ -9,10 +9,11 @@ import type { TGI } from "./dbpf"
 import type { ExemplarDataPatch } from "./exemplars"
 import type { FamilyID, FamilyInfo } from "./families"
 import type { LotID, LotInfo } from "./lots"
+import type { FloraID, FloraInfo } from "./mmps"
 import type { OptionID, OptionInfo, OptionValue, Requirements } from "./options"
 import type { PackageID } from "./packages"
 import type { PropID, PropInfo } from "./props"
-import type { Feature, MMPInfo, PackageWarning, VariantState } from "./types"
+import type { Feature, PackageWarning, VariantState } from "./types"
 
 /** Variant ID */
 export type VariantID = ID<string, VariantInfo>
@@ -31,6 +32,11 @@ export interface ContentsInfo {
   lots?: {
     [path in string]?: {
       [instanceId in LotID]?: LotInfo
+    }
+  }
+  mmps?: {
+    [path in string]?: {
+      [instanceId in FloraID]?: FloraInfo
     }
   }
   models?: {
@@ -76,7 +82,6 @@ export interface BaseVariantInfo extends ContentsInfo {
   images?: string[]
   lastModified?: string
   logs?: string
-  mmps?: MMPInfo[]
   name: string
   new?: boolean
   optional?: PackageID[]

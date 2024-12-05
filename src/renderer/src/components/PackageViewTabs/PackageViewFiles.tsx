@@ -28,6 +28,8 @@ export default function PackageViewFiles({ packageId }: PackageViewTabInfoProps)
 
   const [files, setFiles] = useState<{ [path in string]?: DBPFFile }>({})
 
+  console.log(variantInfo.files, files)
+
   const preloadFiles = useEffectEvent(async () => {
     if (variantInfo.files) {
       const result: { [path in string]?: DBPFFile } = {}

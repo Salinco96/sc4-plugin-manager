@@ -362,15 +362,22 @@ assets:
     buildings:
       PEGPROD/SPAM/SPAM_Mod_Main/PEG-SPAM_MOD-MAIN_b200.dat:
         '04433758':
+          bulldoze: 169
           capacity:
             ir: 36
+          categories: agriculture
           family: a000150a
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00470000
           name: PEG-MTPA_3BarnSilo_Red
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         07e5c5de:
           bulldoze: 80
           capacity:
@@ -452,24 +459,38 @@ assets:
           model: 5ad0e817-badb57f1-08530000
           name: IR24x24_1Farm7_0853_LlamaAg
         0cc3ca8a:
+          bulldoze: 169
           capacity:
             ir: 51
+          categories: agriculture
           family: a0001508
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-000c0000
           name: PEG-MTPA_4DairyFarm_Yellow
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 20
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         0dc82a71:
+          bulldoze: 310
           capacity:
             ir: 68
+          categories: agriculture
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00550000
           name: PEG-MTPA_5Elevator-Large_Wood
           pollution: 1
+          pollutionRadius: 5
           power: 6
+          water: 11
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1120
         10a8e301:
           bulldoze: 10
           capacity:
@@ -496,25 +517,39 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Wheat
         18e92ef0:
+          bulldoze: 216
           capacity:
             ir: 26
+          categories: agriculture
           family: a0001500
+          flamability: 50
           garbage: 2
           model: 5ad0e817-59153e16-00030000
           name: PEG-MTPA_1Farmhouse02
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 21
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1130
         18eabd9a:
+          bulldoze: 120
           capacity:
             ir: 13
+          categories: agriculture
           family: a0001501
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-003f0000
           name: PEG-MTPA_1Greenhouse01
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 10
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         198f529d:
           bulldoze: 10
           capacity:
@@ -523,15 +558,22 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Tilled
         230ce961:
+          bulldoze: 169
           capacity:
             ir: 26
+          categories: agriculture
           family: a0001514
+          flamability: 50
           garbage: 2
           model: 5ad0e817-f9291d5c-00030000
           name: PEG-MTPA_1Barn-Basic_wood
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         2348d63f:
           bulldoze: 10
           capacity:
@@ -564,15 +606,22 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Hops
         28de9881:
+          bulldoze: 120
           capacity:
             ir: 27
+          categories: agriculture
           family: a0001502
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-00400000
           name: PEG-MTPA_2Greenhouse02
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 20
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         2a85b88e:
           bulldoze: 10
           capacity:
@@ -583,25 +632,39 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Appletree
         2ac6c09d:
+          bulldoze: 169
           capacity:
             ir: 25
+          categories: agriculture
           family: a0001516
+          flamability: 50
           garbage: 2
           model: 5ad0e817-19154faa-00030000
           name: PEG-MTPA_2Barn-Fancy_red
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         30398a99:
+          bulldoze: 216
           capacity:
             ir: 21
+          categories: agriculture
           family: a0001500
+          flamability: 50
           garbage: 2
           model: 5ad0e817-791548a2-00030000
           name: PEG-MTPA_1Farmhouse06b
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 21
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1130
         30ebdd06:
           bulldoze: 10
           capacity:
@@ -610,24 +673,38 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Switchgrass
         33d2148a:
+          bulldoze: 310
           capacity:
             ir: 70
+          categories: agriculture
           family: a0001512
+          flamability: 50
           garbage: 3
           model: 5ad0e817-19162a21-00030000
           name: PEG-MTPA_5Elevator-Large_Red
           pollution: 1
+          pollutionRadius: 5
           power: 6
+          water: 14
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1120
         341c37ff:
+          bulldoze: 169
           capacity:
             ir: 66
+          categories: agriculture
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00020000
           name: PEG-MTPA_5BarnSilo_BioFuel
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         3ae5bcaf:
           bulldoze: 130
           capacity:
@@ -670,15 +747,22 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Rubbarb
         3d9d9921:
+          bulldoze: 310
           capacity:
             ir: 69
+          categories: agriculture
           family: a0001512
+          flamability: 50
           garbage: 3
           model: 5ad0e817-191634a9-00030000
           name: PEG-MTPA_5Elevator-Large_White
           pollution: 1
+          pollutionRadius: 5
           power: 6
+          water: 14
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1120
         3ddbb8a1:
           bulldoze: 80
           capacity:
@@ -697,25 +781,39 @@ assets:
           waterPollutionRadius: 5
           worth: 466
         3e2a14e2:
+          bulldoze: 169
           capacity:
             ir: 34
+          categories: agriculture
           family: a000150a
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00020000
           name: PEG-MTPA_3BarnSilo_Wood
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         3fa1a041:
+          bulldoze: 169
           capacity:
             ir: 52
+          categories: agriculture
           family: a0001508
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00440000
           name: PEG-MTPA_4DairyFarm_White
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 20
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         43a07361:
           bulldoze: 10
           capacity:
@@ -726,75 +824,124 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Corn
         4ce60e32:
+          bulldoze: 120
           capacity:
             ir: 29
+          categories: agriculture
           family: a0001502
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-00400000
           name: PEG-MTPA_2Greenhouse02
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 20
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         505c2637:
+          bulldoze: 169
           capacity:
             ir: 26
+          categories: agriculture
           family: a0001516
+          flamability: 50
           garbage: 2
           model: 5ad0e817-19155dfd-00030000
           name: PEG-MTPA_2Fancy-Barn_White
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         542b32ff:
+          bulldoze: 169
           capacity:
             ir: 27
+          categories: agriculture
           family: a0001514
+          flamability: 50
           garbage: 2
           model: 5ad0e817-59161e9b-00030000
           name: PEG-MTPA_1Barn-Basic_white
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         5489d9a5:
+          bulldoze: 310
           capacity:
             ir: 38
+          categories: agriculture
           family: a0001510
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00530000
           name: PEG-MTPA_3Elevator01_White
           pollution: 1
+          pollutionRadius: 5
           power: 5
+          water: 10
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1120
         58ebd3d7:
+          bulldoze: 169
           capacity:
             ir: 15
+          categories: agriculture
           family: a0001514
+          flamability: 50
           garbage: 2
           model: 5ad0e817-f9161376-00030000
           name: PEG-MTPA_1Barn-Basic_red
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         5a062463:
+          bulldoze: 120
           capacity:
             ir: 30
+          categories: agriculture
           family: a0001502
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-00400000
           name: PEG-MTPA_2Greenhouse02
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 20
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         5f42b3bb:
+          bulldoze: 120
           capacity:
             ir: 34
+          categories: agriculture
           family: a0001503
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-00100000
           name: PEG-MTPA_3Greenhouse03
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 25
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         617c94c7:
           bulldoze: 10
           capacity:
@@ -803,15 +950,22 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Tomatoes
         6ae65c35:
+          bulldoze: 120
           capacity:
             ir: 32
+          categories: agriculture
           family: a0001503
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-00100000
           name: PEG-MTPA_3Greenhouse03
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 25
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         6bb25e7f:
           bulldoze: 80
           capacity:
@@ -890,35 +1044,56 @@ assets:
           waterPollutionRadius: 6
           worth: 1240
         78e92eac:
+          bulldoze: 216
           capacity:
             ir: 18
+          categories: agriculture
           family: a0001500
+          flamability: 50
           garbage: 2
           model: 5ad0e817-99154460-00030000
           name: PEG-MTPA_1Farmhouse04
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 21
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1130
         78f3cbde:
+          bulldoze: 310
           capacity:
             ir: 38
+          categories: agriculture
           family: a0001510
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00520000
           name: PEG-MTPA_3Elevator01_Red
           pollution: 1
+          pollutionRadius: 5
           power: 5
+          water: 10
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1120
         7955afd8:
+          bulldoze: 169
           capacity:
             ir: 35
+          categories: agriculture
           family: a000150a
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00460000
           name: PEG-MTPA_3BarnSilo_Metal
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         7fc108a1:
           bulldoze: 130
           capacity:
@@ -954,15 +1129,22 @@ assets:
           waterPollutionRadius: 5
           worth: 1398
         89bf334a:
+          bulldoze: 120
           capacity:
             ir: 33
+          categories: agriculture
           family: a0001503
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-00100000
           name: PEG-MTPA_3Greenhouse03
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 25
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         '94169840':
           bulldoze: 10
           capacity:
@@ -997,25 +1179,39 @@ assets:
           waterPollutionRadius: 6
           worth: 1240
         a1441934:
+          bulldoze: 169
           capacity:
             ir: 50
+          categories: agriculture
           family: a0001508
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00450000
           name: PEG-MTPA_4DairyFarm_Red
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 20
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         a42c8861:
+          bulldoze: 216
           capacity:
             ir: 21
+          categories: agriculture
           family: a0001500
+          flamability: 50
           garbage: 2
           model: 5ad0e817-791548a2-00030000
           name: PEG-MTPA_1Farmhouse06a
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 21
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1130
         a9270458:
           bulldoze: 10
           capacity:
@@ -1024,35 +1220,56 @@ assets:
           model: 5ad0e817-badb57f1-0e110000
           name: SPAM_1x1_Pasture
         b7399134:
+          bulldoze: 310
           capacity:
             ir: 39
+          categories: agriculture
           family: a0001510
+          flamability: 50
           garbage: 2
           model: 5ad0e817-18d84fbc-00540000
           name: PEG-MTPA_3Elevator01_Wood
           pollution: 1
+          pollutionRadius: 5
           power: 5
+          water: 10
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1120
         b8e92ecd:
+          bulldoze: 216
           capacity:
             ir: 14
+          categories: agriculture
           family: a0001500
+          flamability: 50
           garbage: 2
           model: 5ad0e817-19154139-00030000
           name: PEG-MTPA_1Farmhouse03
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 21
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1130
         bc8f69a5:
+          bulldoze: 120
           capacity:
             ir: 15
+          categories: agriculture
           family: a0001501
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-003f0000
           name: PEG-MTPA_1Greenhouse01
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 10
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         bf589ade:
           bulldoze: 180
           capacity:
@@ -1088,15 +1305,22 @@ assets:
           waterPollutionRadius: 6
           worth: 992
         d6538e5a:
+          bulldoze: 120
           capacity:
             ir: 14
+          categories: agriculture
           family: a0001501
+          flamability: 50
           garbage: 1
           model: 5ad0e817-18d84fbc-003f0000
           name: PEG-MTPA_1Greenhouse01
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 10
           waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 876
         d858622c:
           bulldoze: 80
           capacity:
@@ -1132,15 +1356,22 @@ assets:
           waterPollutionRadius: 5
           worth: 932
         e2b0b7a5:
+          bulldoze: 216
           capacity:
             ir: 20
+          categories: agriculture
           family: a0001500
+          flamability: 50
           garbage: 2
           model: 5ad0e817-791548a2-00030000
           name: PEG-MTPA_1Farmhouse06
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 21
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1130
         f05f8545:
           bulldoze: 180
           capacity:
@@ -1159,15 +1390,22 @@ assets:
           waterPollutionRadius: 5
           worth: 1398
         f6ce1687:
+          bulldoze: 169
           capacity:
             ir: 27
+          categories: agriculture
           family: a0001516
+          flamability: 50
           garbage: 2
           model: 5ad0e817-19156090-00030000
           name: PEG-MTPA_2Fancy-Barn_Wood
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 15
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1057
         f76986bc:
           bulldoze: 80
           capacity:
@@ -1186,25 +1424,39 @@ assets:
           waterPollutionRadius: 6
           worth: 992
         f8e92e59:
+          bulldoze: 216
           capacity:
             ir: 17
+          categories: agriculture
           family: a0001500
+          flamability: 50
           garbage: 2
           model: 5ad0e817-d91546dc-00030000
           name: PEG-MTPA_1Farmhouse05
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 21
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1130
         f8e92f11:
+          bulldoze: 216
           capacity:
             ir: 15
+          categories: agriculture
           family: a0001500
+          flamability: 50
           garbage: 2
           model: 5ad0e817-39153746-00030000
           name: PEG-MTPA_1Farmhouse01
           pollution: 1
+          pollutionRadius: 5
           power: 3
+          water: 21
           waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1130
         f945b3f3:
           bulldoze: 10
           capacity:
@@ -3479,6 +3731,8 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
+    categories:
+      - mmps
     category: 32-simpeg-plex-files
     dependencies:
       - simtropolis/27712-the-peg-terrain-kit-7-n-1
@@ -3565,6 +3819,236 @@ assets:
     meta:
       timestamp: 2024-12-04T08:55:17.281Z
       version: 1
+    mmps:
+      The_Terrain_Kit/PEGPROD/MTP/MTP MM2 Scrub Brush/PEG-MTP_MM2-ScrubBrush_MOD_100.dat:
+        073d48f0:
+          model: 5ad0e817-badb57f1-6e530000
+          name: Scrub Brush
+          stages:
+            - id: 073d48f1
+              model: 5ad0e817-badb57f1-6e560000
+              name: Scrub Brush
+            - id: 073d48f2
+              model: 5ad0e817-badb57f1-6e540000
+              name: Scrub Brush
+            - id: 073d48f3
+              model: 5ad0e817-badb57f1-6e520000
+              name: Scrub Brush
+            - id: 073d48f4
+              model: 5ad0e817-badb57f1-6e510000
+              name: Scrub Brush
+      The_Terrain_Kit/PEGPROD/MTP/MTP MM3 Forest Flora/PEG-MTP_MM3-ForestFlora_MOD_100.dat:
+        073d48e0:
+          model: 5ad0e817-365e5321-00030000
+          name: Weeds
+          stages:
+            - id: 12a5e3d1
+              model: 5ad0e817-d65b7def-00030000
+              name: Yucca
+            - id: 073d48e1
+              model: 5ad0e817-b65b84fa-00030000
+              name: Fern
+            - id: 073d48e2
+              model: 5ad0e817-b65b77cd-00030000
+              name: Tree Fern
+            - id: 073d48e3
+              model: 5ad0e817-b65b6fa0-00030000
+              name: Large Fern
+            - id: 073d48e4
+              model: 5ad0e817-365e53c9-00030000
+              name: Scrub Tree
+      The_Terrain_Kit/PEGPROD/MTP/MTP MM7 Logging Scenes/PEG-MTP_MM7-ForestLogging_MOD_103.dat:
+        073d48e5:
+          model: 5ad0e817-165f5220-00030000
+          name: PEG_Tree Stump
+          stages:
+            - id: 073d48e6
+              model: 5ad0e817-f65f4eef-00030000
+              name: Logging Tractor
+            - id: 073d48e7
+              model: 5ad0e817-b65f4d26-00030000
+              name: Logging Truck
+            - id: 073d48e8
+              model: 5ad0e817-b65abdc0-00030000
+              name: Loggers
+            - id: 073d48e9
+              model: 5ad0e817-965d96b2-00030000
+              name: Paper Towel Mascots
+            - id: 612fec06
+              model: 5ad0e817-965f44d2-00030000
+              name: '"Is it Beer:30 yet?"'
+            - id: 073d48ea
+              model: 5ad0e817-366089e0-00030000
+              name: '"TIM-BERrrr !!"'
+      The_Terrain_Kit/PEGPROD/MTP/MTP MM8 Forest Scenes/PEG-MTP_MM5-ForestStuff_MOD_100.dat:
+        073d48da:
+          model: 5ad0e817-f17a2cf3-00030000
+          name: Picnic Table
+          stages:
+            - id: 073d48db
+              model: 5ad0e817-76620698-00030000
+              name: Donkey Engine
+            - id: 073d48dc
+              model: 5ad0e817-f66367ad-00030000
+              name: Shack
+            - id: 073d48dd
+              model: 5ad0e817-565e89c7-00030000
+              name: Fire Watch Tower
+            - id: 0c20e834
+              model: 5ad0e817-1660b6b2-00030000
+              name: Moonshine Still
+            - id: 6130a797
+              model: 5ad0e817-5664aaa5-00030000
+              name: Picnic Area
+            - id: 073d48de
+              model: 5ad0e817-9664bff7-00030000
+              name: Hot Springs
+      The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Kit_102.dat:
+        12f37bfb:
+          model: 5ad0e817-598d50ed-00030000
+          name: PEG-PPOND_1x
+        57dea43f:
+          model: 5ad0e817-b99234da-00030000
+          name: PEG-PPOND_1x_Lillies
+        92b59d87:
+          model: 5ad0e817-d9922970-00030000
+          name: PEG-PPOND_1x_1/4
+        f2153b9b:
+          model: 5ad0e817-3997ee5f-00030000
+          name: PEG-PPOND_1/4x_Cattails
+      The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Props_102.dat:
+        042010d4:
+          model: 5ad0e817-59977e98-00030000
+          name: PEG_Rock-Plop_Small1
+          stages:
+            - id: 042010d5
+              model: 5ad0e817-99978242-00030000
+              name: PEG_Rock-Plop_Small2
+            - id: 042010d6
+              model: 5ad0e817-19977e3e-00030000
+              name: PEG_Rock-Plop_Small3
+            - id: 042010d7
+              model: 5ad0e817-19977e03-00030000
+              name: PEG_Rock-Plop_Small4
+            - id: 042010d8
+              model: 5ad0e817-3997738a-00030000
+              name: PEG_Rock-Plop_Small5
+        37a24970:
+          model: 5ad0e817-9994b762-00030000
+          name: PEG-PPond_Sand
+        6c3c4e35:
+          model: 5ad0e817-d993ba03-00030000
+          name: PEG_Rock-Plop1
+          stages:
+            - id: 6c3c4e36
+              model: 5ad0e817-d994b315-00030000
+              name: PEG_Rock-Plop2
+            - id: 6c3c4e37
+              model: 5ad0e817-3993ee50-00030000
+              name: PEG_Rock-Plop3
+            - id: 6c3c4e38
+              model: 5ad0e817-1993c9ea-00030000
+              name: PEG_Rock-Plop4
+            - id: 6c3c4e39
+              model: 5ad0e817-d993f522-00030000
+              name: PEG_Rock-Plop5
+        765d44bb:
+          model: 5ad0e817-19928022-00030000
+          name: PEG-PPond_Shore-Plop_Small
+        85fbb82d:
+          model: 5ad0e817-b993898f-00030000
+          name: PEG_Shore-Rock Cluster
+        8e40e142:
+          model: 5ad0e817-99791c34-00030000
+          name: PEG-PPond_Shore-Plop-Pebble
+        fa175f2a:
+          model: 5ad0e817-d994d108-00030000
+          name: PEG-PPond_Shore-Plop-Moss
+      The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Flowers_101.dat:
+        0a062619:
+          model: 5ad0e817-f9b5c983-00030000
+          name: PEG-PP_Ground-Poppys
+        3763d37d:
+          model: 5ad0e817-59b5b9e0-00030000
+          name: PEG-PP_Ground-VandyLions
+        6fc4f757:
+          model: 5ad0e817-d9b5cd71-00030000
+          name: PEG-PP_Ground-Daiseys
+        fa2447b0:
+          model: 5ad0e817-59b5cd43-00030000
+          name: PEG-PP_Ground-Prairie Rose
+      The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Grass_101.dat:
+        9e0c4310:
+          model: 5ad0e817-99b71222-00030000
+          name: PEG-PP_Ground-Grass
+        e9220068:
+          model: 5ad0e817-79b715f4-00030000
+          name: PEG-PP_Ground-Clover
+        feb86dca:
+          model: 5ad0e817-d9b5e4a6-00030000
+          name: PEG-PP_Ground-Leaves
+      The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Ground_101.dat:
+        28b93602:
+          model: 5ad0e817-79b736ef-00030000
+          name: PEG-PP_RipRap
+        4880ba97:
+          model: 5ad0e817-39a9b42f-00030000
+          name: PEG-PP_ShorePlop_Gravel
+        7d793ec4:
+          model: 5ad0e817-b9a9e0ad-00030000
+          name: PEG-TPond_Shore-Sand2
+        cce2232a:
+          model: 5ad0e817-19b5a5cf-00030000
+          name: PEG-TP_Ground-Ballast
+      The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Weeds_101.dat:
+        1153f533:
+          model: 5ad0e817-d9b87ff9-00030000
+          name: PEG-TP_DeadWeeds1
+          stages:
+            - id: 1153f534
+              model: 5ad0e817-99b885dc-00030000
+              name: PEG-TP_DeadWeeds2
+            - id: 1153f535
+              model: 5ad0e817-d9b88ac4-00030000
+              name: PEG-TP_DeadWeeds3
+            - id: 1153f536
+              model: 5ad0e817-59b88b0f-00030000
+              name: PEG-TP_DeadWeeds4
+            - id: 1153f537
+              model: 5ad0e817-d9b88a30-00030000
+              name: PEG-TP_DeadWeeds5
+        3658aad0:
+          model: 5ad0e817-59b8b6a4-00030000
+          name: PEG-TP_Weeds1
+          stages:
+            - id: 3658aad1
+              model: 5ad0e817-f9b8b63c-00030000
+              name: PEG-TP_Weeds2
+            - id: 3658aad2
+              model: 5ad0e817-99b8b5c9-00030000
+              name: PEG-TP_Weeds3
+            - id: 3658aad3
+              model: 5ad0e817-59b8b508-00030000
+              name: PEG-TP_Weeds4
+            - id: 3658aad4
+              model: 5ad0e817-d9b8b56d-00030000
+              name: PEG-TP_Weeds5
+        b2c023b1:
+          model: 5ad0e817-ba710564-00030000
+          name: PEG-TP_DeadTree1
+          stages:
+            - id: b2c023b2
+              model: 5ad0e817-1a710b0a-00030000
+              name: PEG-TP_DeadTree2
+            - id: b2c023b3
+              model: 5ad0e817-5a711056-00030000
+              name: PEG-TP_DeadTree3
+            - id: b2c023b4
+              model: 5ad0e817-1a712013-00030000
+              name: PEG-TP_DeadTree4
+            - id: b2c023b5
+              model: 5ad0e817-1a7115f2-00030000
+              name: PEG-TP_DeadTree5
     name: The PEG Terrain Kit (7 n 1)
     props:
       The_Terrain_Kit/PEGPROD/PPonds/LE Terrain Props/PEG-PP_Lot-Props_101.dat:

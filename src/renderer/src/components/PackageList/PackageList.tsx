@@ -6,6 +6,7 @@ import { Virtuoso } from "react-virtuoso"
 import type { PackageID } from "@common/packages"
 import { Page, useHistory } from "@utils/navigation"
 
+import type { ContentsInfo } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
 import { useStore } from "@utils/store"
 import { EmptyPackageList } from "./EmptyPackageList"
@@ -16,11 +17,12 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
   const exemplars = useStore(store => store.exemplars)
   const history = useHistory()
 
-  const contents = useMemo(() => {
+  const contents: ContentsInfo = useMemo(() => {
     return {
       buildingFamilies: { "*": exemplars.buildingFamilies },
       buildings: { "*": exemplars.buildings },
       lots: { "*": exemplars.lots },
+      mmps: { "*": exemplars.mmps },
       propFamilies: { "*": exemplars.propFamilies },
       props: { "*": exemplars.props },
     }

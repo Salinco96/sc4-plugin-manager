@@ -384,6 +384,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         lots: mapValues(gameConfig.data.lots ?? {}, lots =>
           mapValues(lots, ({ props, textures, ...data }) => data),
         ),
+        mmps: mapValues(gameConfig.data.mmps ?? {}, mmps =>
+          mapValues(mmps, ({ model, stages, ...data }) => ({
+            ...data,
+            stages: stages?.map(({ model, ...stage }) => stage),
+          })),
+        ),
         propFamilies: gameConfig.data.propFamilies ?? {},
         props: mapValues(gameConfig.data.props ?? {}, props =>
           mapValues(props, ({ model, ...data }) => data),
@@ -943,6 +949,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     variantEntry.categories = data.categories.length ? data.categories : undefined
     variantEntry.features = data.features.length ? data.features : undefined
     variantEntry.lots = data.lots
+    variantEntry.mmps = data.mmps
     variantEntry.propFamilies = data.propFamilies
     variantEntry.props = data.props
 

@@ -43740,6 +43740,73 @@ lots:
         - 25a70000
         - 25a30000
 
+mmps:
+  SimCity_1.dat:
+    '16600000':
+      name: LotFlora4x4x6_decisious1_1660
+    '16700000':
+      name: LotFlora4x4x6_decisious2_1670
+    '16800000':
+      name: LotFlora5x5x10_Pines1_1680
+    '16900000':
+      name: LotFlora5x5x10_Pines2_1690
+    16a00000:
+      name: LotFlora3x3x5_Palm_16A0
+    29cff3cb:
+      model: 5ad0e817-badb57f1-164c0400
+      name: Burnt Tree
+    2a0c8212:
+      model: 5ad0e817-badb57f1-6e310000
+      name: Oak Tree clump 1
+      stages:
+        - id: 2a0c8213
+          model: 5ad0e817-badb57f1-6e320000
+          name: Oak Tree clump 2
+        - id: 2a0c8214
+          model: 5ad0e817-badb57f1-6e330000
+          name: Oak Tree clump 3
+        - id: 2a0c8215
+          model: 5ad0e817-badb57f1-6e340000
+          name: Oak Tree clump 4
+        - id: 2a0c8216
+          model: 5ad0e817-badb57f1-6e360000
+          name: Oak Tree clump 5
+    2a0c8312:
+      model: 5ad0e817-badb57f1-6e410000
+      name: Pine Tree clump 1
+      stages:
+        - id: 2a0c8313
+          model: 5ad0e817-badb57f1-6e420000
+          name: Pine Tree clump 2
+        - id: 2a0c8314
+          model: 5ad0e817-badb57f1-6e430000
+          name: Pine Tree clump 3
+        - id: 2a0c8315
+          model: 5ad0e817-badb57f1-6e440000
+          name: Pine Tree clump 4
+        - id: 2a0c8316
+          model: 5ad0e817-badb57f1-6e460000
+          name: Pine Tree clump 5
+    2a0c8412:
+      model: 5ad0e817-badb57f1-6e510000
+      name: Scrub clump 1
+      stages:
+        - id: 2a0c8413
+          model: 5ad0e817-badb57f1-6e520000
+          name: Scrub clump 2
+        - id: 2a0c8414
+          model: 5ad0e817-badb57f1-6e530000
+          name: Scrub clump 3
+        - id: 2a0c8415
+          model: 5ad0e817-badb57f1-6e540000
+          name: Scrub clump 4
+        - id: 2a0c8416
+          model: 5ad0e817-badb57f1-6e560000
+          name: Scrub clump 5
+    883da413:
+      model: 5ad0e817-badb57f1-2717e3af
+      name: Cactus
+
 models:
   SimCity_1.dat:
     - 5ad0e817-badb57f1-1e010000

@@ -2388,17 +2388,17 @@ assets:
     downloads: 2658
     file: Maxis_Building_As_Props_and_DLC_Props_v2.1_3560.zip
     files:
-      - Maxis Original\Building As Props\bldgprop_vol1.dat
-      - Maxis Original\Building As Props\bldgprop_vol2.dat
-      - Maxis Original\Maxis DLC Props\Maxis DLC Props.dat
-      - _Documents\Maxis Building as Props-pt01_index.jpg
-      - _Documents\Maxis Building as Props-pt02_index.jpg
-      - _Documents\Maxis Building as Props-pt03_index.jpg
-      - _Documents\Maxis Building as Props-pt04_index.jpg
-      - _Documents\Maxis DLC Props-index.jpg
-      - _Documents\readme_Maxis Building As Props vol.1-vol.2.txt
-      - _Documents\sc4buildingsaspropsvol1.jpg
-      - _Documents\sc4buildingsaspropsvol2.jpg
+      - Maxis Original/Building As Props/bldgprop_vol1.dat
+      - Maxis Original/Building As Props/bldgprop_vol2.dat
+      - Maxis Original/Maxis DLC Props/Maxis DLC Props.dat
+      - _Documents/Maxis Building as Props-pt01_index.jpg
+      - _Documents/Maxis Building as Props-pt02_index.jpg
+      - _Documents/Maxis Building as Props-pt03_index.jpg
+      - _Documents/Maxis Building as Props-pt04_index.jpg
+      - _Documents/Maxis DLC Props-index.jpg
+      - _Documents/readme_Maxis Building As Props vol.1-vol.2.txt
+      - _Documents/sc4buildingsaspropsvol1.jpg
+      - _Documents/sc4buildingsaspropsvol2.jpg
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol1.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol2.jpg
@@ -2408,7 +2408,7 @@ assets:
       version: 1
     name: Maxis Buildings As Props and DLC Props
     props:
-      Maxis Original\Building As Props\bldgprop_vol1.dat:
+      Maxis Original/Building As Props/bldgprop_vol1.dat:
         0c07414f:
           model: 5ad0e817-badb57f1-07f30000
           name: ID12x20_1DirtyOut2_0C07414F
@@ -4146,7 +4146,7 @@ assets:
         cc074706:
           model: 5ad0e817-badb57f1-03380000
           name: RW64x64_Prison_CC074706
-      Maxis Original\Building As Props\bldgprop_vol2.dat:
+      Maxis Original/Building As Props/bldgprop_vol2.dat:
         0c842405:
           model: 5ad0e817-badb57f1-01f90000
           name: R$$$16x20_123EuroMansion10_0c842405
@@ -4528,7 +4528,7 @@ assets:
         ec8423fc:
           model: 5ad0e817-badb57f1-04ab0000
           name: Lm98x87_LincolnCenter_EC8423FC
-      Maxis Original\Maxis DLC Props\Maxis DLC Props.dat:
+      Maxis Original/Maxis DLC Props/Maxis DLC Props.dat:
         2b9d0000:
           model: 5ad0e817-badb57f1-2b9d0000
           name: PZ1x1_LightRock_2B9D

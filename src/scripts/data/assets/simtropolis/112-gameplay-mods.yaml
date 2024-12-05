@@ -10329,10 +10329,10 @@ assets:
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<strong><big>Prop Names and Query Fix</big></strong>\n</p>\n\n<p>\n\t<strong>1) WHAT IS THIS? WHY SHOULD I USE IT?</strong>\n</p>\n\n<p>\n\tHas it ever bothered you that when using\_custom lots composed of Maxis building props, they were not really treated like an actual <abbr title=\"Building Architect Tool\">BAT</abbr>, but displayed the prop hover query instead, and always appeared under their original name instead of taking over the name of the custom lot? Then this download might be interesting for you.\n</p>\n\n<p>\n\t<strong>2) WELL, WHAT EXACTLY DOES IT DO?</strong>\n</p>\n\n<p>\n\tIf you are not sure what I mean, check the provided screenshots. The left one shows the situation \"as is\". (I used <strong>Don Miguel</strong>'s \"<strong>The Barnacle Seafood Restaurant</strong>\"). As you can see, the lighthouse behaves like an ordinary prop, and not like a part of the restaurant building as it's supposed to do.\n</p>\n\n<p>\n\tYou only see that little bubble instead of a building hover query, and you can read its original designation (\"Leuchtturm\" is German for \"lighthouse\") rather than the name of the building it belongs to.\n</p>\n\n<p>\n\tIn some cases, the prop in question will not even react properly to your mouse cursor. It will not light up and display a hover query at all. Instead, even when you have your mouse cursor positioned right over it, the mouse cursor will actually highlight whatever lies behind the building.\n</p>\n\n<p>\n\tThis little fix will make all props of Maxis buildings...<br>\n\t- react properly to the mouse cursor<br>\n\t- display the hover query of the building it belongs to<br>\n\t- adopt the name that was assigned to the newly assembled building\n</p>\n\n<p>\n\t<strong><em>In short, all the Maxis building props will behave virtually identical to any <abbr title=\"Building Architect Tool\">BAT</abbr> or original building!</em></strong>\n</p>\n\n<p>\n\t<strong>3) YEAH, BUT WHAT ABOUT THE OFFICIAL \"BUILDINGS AS PROPS\"? WILL I STILL NEED THEM?</strong>\n</p>\n\n<p>\n\tThis fix can actually be used as a <strong>replacement </strong>of the following files (i.e. you no longer need them**):\n</p>\n\n<p>\n\t- <strong>bldgprop_vol1.dat </strong>(sometimes called \"<strong>SimCity Buildings as Props.dat</strong>\" or similar)<br>\n\t- <strong>bldgprop_vol2.dat </strong>(sometimes called \"<strong>Rush Hour Buildings as Props.dat</strong>\" or similar)<br>\n\t- <strong>Plugin_landmarks_and_other_missing_Props.dat </strong>(an assortment of building props Maxis had forgotten, found <a href=\"https://www.simtropolis.com/stex/details.cfm?id=21286\" rel=\"external\">here</a>)\n</p>\n\n<p>\n\t** Bear in mind you still need to keep the <strong>Maxis DLC Props.dat (</strong>from the<strong>\_</strong><a href=\"https://www.sc4evermore.com/index.php/downloads/download/40-maxis/14-maxis-buildings-as-props-and-dlc-props-v2-1\" rel=\"external nofollow\">Maxis Buildings As Props and DLC Props v2.1</a> upload)\_as that is a relatively new 3rd party creation and isn't covered by this upload.\n</p>\n\n<p>\n\t<strong>4) HOW TO INSTALL</strong>\n</p>\n\n<p>\n\tSimply unzip the file contained in this archive (\"<strong>All Maxis building props with proper names.dat</strong>\") into your plugins folder. Afterwards, you can move the files mentioned under 3) to a backup folder where you store SimCity stuff (I generally don't recommend deleting anything too hastily). <img alt=\"2.gif\" src=\"https://www.simtropolis.com/fckEditor/editor/../../forum/i/expressions/2.gif\">\n</p>\n\n<p>\n\tIf you feel insecure and don't want to delete the files mentioned above, there is an easy alternative: Simply make sure that this download is loaded AFTER the original files. The original files should then be superseded by this download. You can ensure this by placing this download in a sub-folder that begins with a few <strong>z</strong>'s (e.g. \"zzz_Prop Query &amp; Name Fix\").\n</p>\n\n<p>\n\t<strong>5) CREDITS</strong>\n</p>\n\n<p>\n\tThe two official \"<strong>Buildings as props</strong>\" files are from <strong>Maxis.</strong><br>\n\tThe file \"<strong>Plugin_landmarks_and_other_missing_Props.dat</strong>\" was made by <strong>ralphaelninja</strong>.\n</p>\n\n<p>\n\tThe tool I used was made by <strong>iLive</strong> - I cannot thank him enough for the possibilities he gave the community.\n</p>\n\n<p>\n\tPlease thank these guys, as my contribution to this download was simple minion work. I was lucky enough to be standing on the shoulder of giants. All I did was add the required properties to make things work like I had in mind - a very simple trick, repeated a few hundred times.\n</p>\n\n<p>\n\t<strong>6) POSSIBLE COPYRIGHT/IP RIGHTS ISSUES</strong>\n</p>\n\n<p>\n\tShould you be concerned that this download might violate any rights held by Maxis, rest assured that I checked with dirk prior to uploading, and obtained his official permission to upload this file. Let me use this occasion\_to thank dirk for his prompt reply and his kind consideration!\n</p>\n\n<p>\n\t<span style=\"color:#2980b9;\"><span style=\"font-size:11px;\">14.10.2024 - updated by Tyberius06 (see changelog)</span></span>\n</p>\n\n\t\t\t\t\t\t</body>"
     file: T Wrecks - Maxis Prop Names And Query Fix.zip
     files:
-      - z_Maxis Prop Names And Query Fix\z_All Maxis building props with proper names.dat
-      - ~Documents\T Wrecks_Readmes\PropFix_1_BEFORE.jpg
-      - ~Documents\T Wrecks_Readmes\PropFix_2_AFTER.jpg
-      - ~Documents\T Wrecks_Readmes\T Wrecks - Maxis Prop Names And Query Fix_readme.txt
+      - z_Maxis Prop Names And Query Fix/z_All Maxis building props with proper names.dat
+      - ~Documents/T Wrecks_Readmes/PropFix_1_BEFORE.jpg
+      - ~Documents/T Wrecks_Readmes/PropFix_2_AFTER.jpg
+      - ~Documents/T Wrecks_Readmes/T Wrecks - Maxis Prop Names And Query Fix_readme.txt
     images:
       - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_1_BEFORE.jpg
       - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_2_AFTER.jpg
@@ -10342,7 +10342,7 @@ assets:
       version: 1
     name: Maxis Prop Names and Query Fix
     propFamilies:
-      z_Maxis Prop Names And Query Fix\z_All Maxis building props with proper names.dat:
+      z_Maxis Prop Names And Query Fix/z_All Maxis building props with proper names.dat:
         '00001234':
           name: '0x00001234 : Maxis Effects'
         0024a162:
@@ -10374,7 +10374,7 @@ assets:
         '51600003':
           name: '0x51600003 : RP Outbuilding'
     props:
-      z_Maxis Prop Names And Query Fix\z_All Maxis building props with proper names.dat:
+      z_Maxis Prop Names And Query Fix/z_All Maxis building props with proper names.dat:
         0c07414f:
           model: 5ad0e817-badb57f1-07f30000
           name: ID12x20_1DirtyOut2_0C07414F
@@ -12751,7 +12751,7 @@ assets:
       - darknite
     file: Simfox_Day_n_Nite_Modd.zip
     files:
-      - zzzz_Simfox_Day_n_Nite_Modd\SimFox_Day_n_Nite_Modd.dat
+      - zzzz_Simfox_Day_n_Nite_Modd/SimFox_Day_n_Nite_Modd.dat
     images:
       - https://www.simtropolis.com/objects/screens/monthly_08_2011/0d98a026f5b952e8a0fe90c15ae81ef6-daynnitestex.jpg
     lastModified: 2021-09-19T12:24:58.000Z
@@ -13128,7 +13128,7 @@ assets:
     authors:
       - Cougar2004
     buildings:
-      SpacePort Fix Mod (use only one of these)\Spaceport Fix Alt Mod.dat:
+      SpacePort Fix Mod (use only one of these)/Spaceport Fix Alt Mod.dat:
         '03840000':
           bulldoze: 3900
           categories: rewards
@@ -13152,7 +13152,7 @@ assets:
           water: 248
           waterPollution: 5
           waterPollutionRadius: 4
-      SpacePort Fix Mod (use only one of these)\Spaceport Fix Mod.dat:
+      SpacePort Fix Mod (use only one of these)/Spaceport Fix Mod.dat:
         '03840000':
           bulldoze: 4200
           categories: rewards
@@ -13257,8 +13257,8 @@ assets:
     file: SpacePort Fix Mod.zip
     files:
       - Readme.txt
-      - SpacePort Fix Mod (use only one of these)\Spaceport Fix Alt Mod.dat
-      - SpacePort Fix Mod (use only one of these)\Spaceport Fix Mod.dat
+      - SpacePort Fix Mod (use only one of these)/Spaceport Fix Alt Mod.dat
+      - SpacePort Fix Mod (use only one of these)/Spaceport Fix Mod.dat
       - SpacePort-Fix-Mod-2.png
     images:
       - https://www.simtropolis.com/objects/screens/monthly_03_2012/a1b429c947a080f7bafab598698c4908-spaceport-fix-mod-1.png
@@ -13266,7 +13266,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_03_2012/07d264be08a30305f6943efd92a984e1-spaceport-fix-mod-a.png
     lastModified: 2012-03-05T02:14:26.000Z
     lots:
-      SpacePort Fix Mod (use only one of these)\Spaceport Fix Alt Mod.dat:
+      SpacePort Fix Mod (use only one of these)/Spaceport Fix Alt Mod.dat:
         4bb1058d:
           building: '03840000'
           name: RW5x4_launchpad
@@ -13279,7 +13279,7 @@ assets:
             - '25270000'
             - 258f0000
             - 257c0000
-      SpacePort Fix Mod (use only one of these)\Spaceport Fix Mod.dat:
+      SpacePort Fix Mod (use only one of these)/Spaceport Fix Mod.dat:
         4bb1058d:
           building: '03840000'
           name: RW5x4_launchpad
@@ -14069,7 +14069,7 @@ assets:
     authors:
       - HippoTank
     buildings:
-      HippoTank Demand Fix\Plugins\HT_DemandFix.dat:
+      HippoTank Demand Fix/Plugins/HT_DemandFix.dat:
         '03110000':
           bulldoze: 40
           categories: health
@@ -14212,9 +14212,9 @@ assets:
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tHippoTank Demand Fix\n</p>\n\n<p>\n\tThis is just the fix for the demand values for the Medical Clinic, Solar Power Plant, Nuclear Power Plant.\n</p>\n\n<p>\n\t<br>\n\tWhat is actually happening<br>\n\t----------------------------------------------\n</p>\n\n<p>\n\t&gt; the game creates demand for a particular bracket of job but does not actually employ them.\n</p>\n\n<p>\n\t&gt; The reason for this is because of a bug. In SimCity 4 the buildings that create demand (available jobs) does so by separating them by wealth bracket. There will be a certain about of jobs available for $ sims, $$ sims, and $$$ sims. This is displayed in a ratio. E.g. crude example- 20:50:30 means there are 20 jobs avialable for $ sims, 50 jobs for $$ sims and 30 jobs for $$$ sims.\n</p>\n\n<p>\n\t&gt; The bug occurs when the data in game has two ratios with the same value. It causes the game to ignore one of the values. High Tech Industry has the ratio 10:80:10, and as a result of this bug it causes the $$$ part of the ratio to be ignored resulting in no $$$ sims being employed.\n</p>\n\n<p>\n\t&gt; The other ratios with duplicate values are the Solar Power Plant, Nuclear Power Plant and the Medical Clinic.\_\n</p>\n\n<p>\n\t&gt; THIS ONLY FIXES THOSE THREE AND NOT HIGH TECH DEMAND. I have a download bundle for those fixes included.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tMedical Clinic, Solar Power Plant, Nuclear Power Plant all missing jobs<br>\n\t----------------------------------------------<br>\n\tInstructions: Put HT_DemandFix.dat plugin in game (Program Files) plugins folder\n</p>\n\n\t\t\t\t\t\t</body>"
     file: HippoTank_Demand_Fix.zip
     files:
-      - HippoTank Demand Fix\Plugins\HT_DemandFix.dat
-      - HippoTank Demand Fix\readme.txt
-      - HippoTank Demand Fix\screenshot.png
+      - HippoTank Demand Fix/Plugins/HT_DemandFix.dat
+      - HippoTank Demand Fix/readme.txt
+      - HippoTank Demand Fix/screenshot.png
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2015_11/screenshot.png.2af44fb2639cc175dbf54b582ea81dbe.png
     lastModified: 2015-11-06T21:21:13.000Z

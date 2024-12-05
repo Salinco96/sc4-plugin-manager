@@ -376,6 +376,22 @@ export function writePackageData(
     })
   }
 
+  if (variantEntry.mmps) {
+    forEach(variantEntry.mmps, (mmps, file) => {
+      if (includedFiles.includes(file)) {
+        forEach(mmps, ({ model, stages, ...data }, id) => {
+          variantData.mmps ??= {}
+          variantData.mmps[file] ??= {}
+          variantData.mmps[file][id] = {
+            stages: stages?.map(({ model, ...stage }) => stage),
+            ...data,
+            ...variantData.mmps[file][id],
+          }
+        })
+      }
+    })
+  }
+
   if (variantEntry.propFamilies) {
     forEach(variantEntry.propFamilies, (families, file) => {
       if (includedFiles.includes(file)) {

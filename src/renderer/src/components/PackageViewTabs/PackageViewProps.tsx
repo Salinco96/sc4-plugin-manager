@@ -9,7 +9,7 @@ import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { useCurrentVariant } from "@utils/packages"
 
 import { useStore } from "@utils/store"
-import { ExemplarRef } from "./PackageViewLots/ExemplarRef"
+import { ExemplarRef } from "../ExemplarRef"
 import type { PackageViewTabInfoProps } from "./tabs"
 
 export default function PackageViewProps({ packageId }: PackageViewTabInfoProps): JSX.Element {

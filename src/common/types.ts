@@ -1,7 +1,5 @@
 import { keys } from "@salinco/nice-utils"
-
-import type { CategoryID } from "./categories"
-import type { Options, Requirements } from "./options"
+import type { Options } from "./options"
 import {
   type PackageID,
   isDependency,
@@ -115,29 +113,6 @@ export interface PackageWarning {
   message?: string
   on?: "enable" | "disable" | "variant"
   title?: string
-}
-
-export interface MMPData {
-  /** Category */
-  category?: string
-  /** Whether MMP is enabled by default (this defaults to true) */
-  default?: boolean
-  /** MMP description */
-  description?: string
-  /** Full name of the file containing the MMP (if missing the MMP cannot be disabled) */
-  file?: string
-  /** MMP ID (usually last part of TGI, but may be an arbitrary string) */
-  id: string
-  /** URL or relative path within ~docs */
-  images?: string[]
-  /** MMP name */
-  label?: string
-  /** Requirements */
-  requirements?: Requirements
-}
-
-export interface MMPInfo extends MMPData {
-  categories?: CategoryID[]
 }
 
 export enum VariantState {

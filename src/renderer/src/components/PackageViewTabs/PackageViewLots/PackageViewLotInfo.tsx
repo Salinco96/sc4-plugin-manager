@@ -20,7 +20,7 @@ import { useCurrentVariant } from "@utils/packages"
 import { useStore, useStoreActions } from "@utils/store"
 import { useEffectEvent } from "@utils/useEffectEvent"
 
-import { ExemplarRef } from "./ExemplarRef"
+import { ExemplarRef } from "../../ExemplarRef"
 
 export interface PackageViewLotInfoProps {
   isCompatible: boolean

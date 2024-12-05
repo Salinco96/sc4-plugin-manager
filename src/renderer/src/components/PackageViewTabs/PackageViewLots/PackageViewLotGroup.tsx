@@ -3,7 +3,7 @@ import { add, containsAll, difference, remove, union } from "@salinco/nice-utils
 import { Fragment } from "react"
 
 import type { BuildingInfo } from "@common/buildings"
-import type { FamilyInfo } from "@common/families"
+import type { FamilyID, FamilyInfo } from "@common/families"
 import { type LotInfo, isCompatibleLot, isTogglableLot } from "@common/lots"
 import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
@@ -18,7 +18,7 @@ export interface PackageViewLotGroupProps {
   building?: BuildingInfo
   buildingFamily?: FamilyInfo
   enabledLots: string[]
-  familyId?: string
+  familyId?: FamilyID
   familyBuildings?: BuildingInfo[]
   lots: LotInfo[]
   packageId: PackageID

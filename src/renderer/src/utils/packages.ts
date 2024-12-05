@@ -1,7 +1,11 @@
 import { mapValues, parseHex, toHex, values } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
+import type { BuildingID } from "@common/buildings"
 import { CategoryID, isCategory } from "@common/categories"
+import type { FamilyID } from "@common/families"
+import type { LotID } from "@common/lots"
+import type { FloraID } from "@common/mmps"
 import {
   type PackageID,
   isError,
@@ -11,6 +15,7 @@ import {
   isOutdated,
 } from "@common/packages"
 import type { ProfileInfo } from "@common/profiles"
+import type { PropID } from "@common/props"
 import {
   type PackageInfo,
   type PackageStatus,
@@ -21,10 +26,6 @@ import {
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 
-import type { BuildingID } from "@common/buildings"
-import type { FamilyID } from "@common/families"
-import type { LotID } from "@common/lots"
-import type { PropID } from "@common/props"
 import {
   type PackageFilters,
   type PackageUi,
@@ -34,7 +35,7 @@ import {
   useStore,
 } from "./store"
 
-export type HexSearch = BuildingID & FamilyID & LotID & PropID
+export type HexSearch = BuildingID & FamilyID & FloraID & LotID & PropID
 
 function getFilteredPackages(store: Store): PackageID[] {
   return store.filteredPackages
@@ -246,6 +247,18 @@ export function filterVariant(
     if (variantInfo.lots) {
       for (const lots of values(variantInfo.lots)) {
         if (lots[filters.hex]) {
+          return true
+        }
+      }
+    }
+
+    if (variantInfo.mmps) {
+      for (const mmps of values(variantInfo.mmps)) {
+        if (mmps[filters.hex]) {
+          return true
+        }
+
+        if (values(mmps).some(mmp => mmp.stages?.some(stage => stage.id === filters.hex))) {
           return true
         }
       }

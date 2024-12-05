@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 
 import type { BuildingInfo } from "@common/buildings"
 import { CategoryID } from "@common/categories"
-import type { FamilyInfo } from "@common/families"
+import type { FamilyID, FamilyInfo } from "@common/families"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
 import { FlexBox } from "@components/FlexBox"
@@ -16,12 +16,12 @@ import { formatRange } from "@utils/format"
 import { useCurrentVariant } from "@utils/packages"
 import { useStore } from "@utils/store"
 
-import { ExemplarRef } from "./ExemplarRef"
+import { ExemplarRef } from "../../ExemplarRef"
 
 export interface PackageViewBuildingFamilyInfoProps {
   buildingFamily?: FamilyInfo
   familyBuildings?: BuildingInfo[]
-  familyId: string
+  familyId: FamilyID
   isCompatible: boolean
   isDisabled: boolean
   isEnabled: boolean
@@ -46,9 +46,9 @@ export function PackageViewBuildingFamilyInfo({
 
   const filePath = buildingFamily?.file
   const fileInfo = buildingFamily && variantInfo.files?.find(file => file.path === filePath)
-  const maxisFamily = exemplars.buildingFamilies[familyId]
 
-  const isMaxisOverride = !!buildingFamily && !!maxisFamily && filePath !== "SimCity_1.dat"
+  const isMaxisFamily = !!exemplars.buildingFamilies[familyId]
+  const isMaxisOverride = isMaxisFamily && filePath !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 
   const { t } = useTranslation("PackageViewLots")

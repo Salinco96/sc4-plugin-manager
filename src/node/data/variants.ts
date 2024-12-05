@@ -4,7 +4,7 @@ import type { TGI } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 import type { Requirements } from "@common/options"
 import { type PackageID, getOwnerId, isNew } from "@common/packages"
-import type { MMPData, PackageWarning } from "@common/types"
+import type { PackageWarning } from "@common/types"
 import type { MaybeArray } from "@common/utils/types"
 import type { DependencyInfo, VariantAssetInfo, VariantID, VariantInfo } from "@common/variants"
 import { type BuildingData, loadBuildingInfo, writeBuildingInfo } from "./buildings"
@@ -17,12 +17,14 @@ import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
 import type { FamilyID } from "@common/families"
 import type { LotID } from "@common/lots"
+import type { FloraID } from "@common/mmps"
 import type { PropID } from "@common/props"
 import { toPosix } from "@node/files"
 import { isEmpty, isString, mapDefined, mapValues, union, unionBy } from "@salinco/nice-utils"
 import type { AssetData } from "./assets"
 import { loadAuthors } from "./authors"
 import { getPriority, loadCategories } from "./categories"
+import { type FloraData, loadFloraInfo, writeFloraInfo } from "./mmps"
 import type { PackageData } from "./packages"
 
 /**
@@ -140,11 +142,6 @@ export interface VariantData extends ContentsData {
   logs?: string
 
   /**
-   * @deprecated
-   */
-  mmps?: MMPData[]
-
-  /**
    * Pretty name for this variant
    */
   name?: string
@@ -250,6 +247,15 @@ export interface ContentsData {
   lots?: {
     [path in string]?: {
       [instanceId in LotID]?: LotData
+    }
+  }
+
+  /**
+   * Included flora exemplars, grouped by file and instance ID
+   */
+  mmps?: {
+    [path in string]?: {
+      [instanceId in FloraID]?: FloraData
     }
   }
 
@@ -559,12 +565,19 @@ export function loadVariantInfo(
     variantInfo.lots = lots
   }
 
-  const mmps = unionBy(variantData.mmps ?? [], packageData.mmps ?? [], mmp => mmp.id)
+  const mmps = mapValues(
+    {
+      ...packageData.mmps,
+      ...mapValues(variantData.mmps ?? {}, (mmps, file) => ({
+        ...packageData.mmps?.[file],
+        ...mmps,
+      })),
+    },
+    (mmps, file) => mapValues(mmps, (data, id) => loadFloraInfo(file, id, data)),
+  )
 
-  if (mmps.length) {
-    variantInfo.mmps = mmps.map(mmp =>
-      mmp.category ? { categories: loadCategories(mmp.category, categories), ...mmp } : mmp,
-    )
+  if (!isEmpty(mmps)) {
+    variantInfo.mmps = mmps
   }
 
   const optionalDependencies = union(variantData.optional ?? [], packageData.optional ?? [])
@@ -706,10 +719,9 @@ export function writeVariantInfo(variantInfo: VariantInfo): VariantData {
     lots: variantInfo.lots
       ? mapValues(variantInfo.lots, lots => mapValues(lots, writeLotInfo))
       : undefined,
-    mmps: variantInfo.mmps?.map(({ categories, ...mmp }) => ({
-      categories: categories?.join(","),
-      ...mmp,
-    })),
+    mmps: variantInfo.mmps
+      ? mapValues(variantInfo.mmps, mmps => mapValues(mmps, writeFloraInfo))
+      : undefined,
     name: variantInfo.name,
     optional: variantInfo.optional,
     options: variantInfo.options,

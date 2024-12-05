@@ -13,7 +13,7 @@ assets:
     authors:
       - Mikeseith
     buildings:
-      mikeseith\Garages\Modular Parking Garage 2 Lvl\Mikeseith 2 Level Garages_Lots.dat:
+      mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat:
         1960bfda:
           bulldoze: 10
           categories: transport
@@ -85,7 +85,7 @@ assets:
           menu: MiscTransit
           model: 5ad0e817-badb57f1-0e110000
           name: MS_2Lvl_Wall (2 Rows)
-      mikeseith\Garages\Modular Parking Garage 8 Lvl#\!Opt_8 Level Airport Shuttle_RTMT\zOpt_8 Level Airport Shuttle_RTMT.dat:
+      mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat:
         dd0ef80b:
           bulldoze: 100
           categories: bus
@@ -105,7 +105,7 @@ assets:
           water: 2
           waterPollution: 3
           waterPollutionRadius: 1
-      mikeseith\Garages\Modular Parking Garage 8 Lvl#\!Opt_8 Level BusStop_RTMT\zOpt_8 Level BusStop_RTMT.dat:
+      mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat:
         3d184784:
           bulldoze: 100
           categories: bus
@@ -125,7 +125,7 @@ assets:
           water: 2
           waterPollution: 3
           waterPollutionRadius: 1
-      mikeseith\Garages\Modular Parking Garage 8 Lvl#\Mikeseith 8 Level Garages_Lots.dat:
+      mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat:
         1cf37210:
           bulldoze: 100
           categories: transport
@@ -1778,42 +1778,42 @@ assets:
     downloads: 835
     file: SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.zip
     files:
-      - ^BSC\BSCProps#\^BSC MEGA Props - Mikeseith Vol02 v2\BSC MEGA Props - Mikeseith Vol02 v2.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport shuttle Dollar\Airport shuttle Dollar.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport shuttle Enterprise\Airport shuttle Enterprise.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport shuttle Master park\Airport shuttle Master park.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport shuttle Park N Go\Airport shuttle Park N Go.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport shuttle Sheraton\Airport shuttle Sheraton.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport shuttle Thrifty\Airport shuttle Thrifty.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport shuttle laquinta\Airport shuttle laquinta.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport sprinter black\Airport sprinter black.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport sprinter budget\Airport sprinter budget.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport sprinter dollar\Airport sprinter dollar.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport sprinter thrifty\Airport sprinter thrifty.dat
-      - mikeseith\Automatas\Airport Shuttles#\!Airport sprinter white\Airport sprinter white.dat
-      - mikeseith\Automatas\Airport Shuttles#\Airport Shuttles All-in-One\airport shuttles.dat
-      - mikeseith\Automatas\Airport Shuttles#\Automatas_desclaimer.txt
-      - mikeseith\Garages\Modular Parking Garage 2 Lvl\Mikeseith 2 Level Garages_Lots.dat
-      - mikeseith\Garages\Modular Parking Garage 8 Lvl#\!Opt_8 Level Airport Shuttle_RTMT\zOpt_8 Level Airport Shuttle_RTMT.dat
-      - mikeseith\Garages\Modular Parking Garage 8 Lvl#\!Opt_8 Level BusStop_RTMT\zOpt_8 Level BusStop_RTMT.dat
-      - mikeseith\Garages\Modular Parking Garage 8 Lvl#\Mikeseith 8 Level Garages_Lots.dat
-      - mikeseith\Garages\Modular Parking Garage 8 Lvl#\RTMT Replacement_disclaimer.txt
-      - ~Documents\MikeSeith_Readmes\images\MikeSeith - airport shuttle.jpg
-      - ~Documents\MikeSeith_Readmes\images\MikeSeiths 2 garages back.jpg
-      - ~Documents\MikeSeith_Readmes\images\MikeSeiths 2 garages front.jpg
-      - ~Documents\MikeSeith_Readmes\images\mikeseith 8 level garages1.JPG
-      - ~Documents\MikeSeith_Readmes\images\mikeseith 8 level garages2.JPG
-      - ~Documents\MikeSeith_Readmes\images\mikeseith 8 level garages3.jpg
-      - ~Documents\MikeSeith_Readmes\readme_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.html
-      - ~Documents\Prop-Texture Catalogue Index and Cleanitol\BSC MEGA Props - Mikeseith vol02_index.jpg
-      - ~Documents\Prop-Texture Catalogue Index and Cleanitol\Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt
+      - ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Dollar/Airport shuttle Dollar.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Enterprise/Airport shuttle Enterprise.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Master park/Airport shuttle Master park.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Park N Go/Airport shuttle Park N Go.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Sheraton/Airport shuttle Sheraton.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Thrifty/Airport shuttle Thrifty.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport shuttle laquinta/Airport shuttle laquinta.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter black/Airport sprinter black.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter budget/Airport sprinter budget.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter dollar/Airport sprinter dollar.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter thrifty/Airport sprinter thrifty.dat
+      - mikeseith/Automatas/Airport Shuttles#/!Airport sprinter white/Airport sprinter white.dat
+      - mikeseith/Automatas/Airport Shuttles#/Airport Shuttles All-in-One/airport shuttles.dat
+      - mikeseith/Automatas/Airport Shuttles#/Automatas_desclaimer.txt
+      - mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat
+      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat
+      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat
+      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat
+      - mikeseith/Garages/Modular Parking Garage 8 Lvl#/RTMT Replacement_disclaimer.txt
+      - ~Documents/MikeSeith_Readmes/images/MikeSeith - airport shuttle.jpg
+      - ~Documents/MikeSeith_Readmes/images/MikeSeiths 2 garages back.jpg
+      - ~Documents/MikeSeith_Readmes/images/MikeSeiths 2 garages front.jpg
+      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages1.JPG
+      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages2.JPG
+      - ~Documents/MikeSeith_Readmes/images/mikeseith 8 level garages3.jpg
+      - ~Documents/MikeSeith_Readmes/readme_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC MEGA Props - Mikeseith vol02_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mikeseith 8 level garages1.JPG
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeith - airport shuttle.jpg
     lastModified: 2023-12-06T10:26:15.000Z
     lots:
-      mikeseith\Garages\Modular Parking Garage 2 Lvl\Mikeseith 2 Level Garages_Lots.dat:
+      mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat:
         1960bfda:
           building: 1960bfda
           name: 2 lvl garage - inside 1 row
@@ -1887,7 +1887,7 @@ assets:
           size: 1x1
           textures:
             - 251c0000
-      mikeseith\Garages\Modular Parking Garage 8 Lvl#\!Opt_8 Level Airport Shuttle_RTMT\zOpt_8 Level Airport Shuttle_RTMT.dat:
+      mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat:
         dd0ef80b:
           building: dd0ef80b
           name: 8 lvl airport shuttle spawner_RTMT
@@ -1906,7 +1906,7 @@ assets:
           textures:
             - 251c0000
             - 25ae0000
-      mikeseith\Garages\Modular Parking Garage 8 Lvl#\!Opt_8 Level BusStop_RTMT\zOpt_8 Level BusStop_RTMT.dat:
+      mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat:
         3d184784:
           building: 3d184784
           name: 8 lvl garage bus stop_RTMT
@@ -1925,7 +1925,7 @@ assets:
           textures:
             - 251c0000
             - 25ae0000
-      mikeseith\Garages\Modular Parking Garage 8 Lvl#\Mikeseith 8 Level Garages_Lots.dat:
+      mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat:
         1cf37210:
           building: 1cf37210
           name: 8 lvl new bridge corner A
@@ -2115,7 +2115,7 @@ assets:
       version: 1
     name: SC4D LEX LEGACY - Mikeseith Multi-level Modular Garages
     props:
-      ^BSC\BSCProps#\^BSC MEGA Props - Mikeseith Vol02 v2\BSC MEGA Props - Mikeseith Vol02 v2.dat:
+      ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat:
         194f8bd1:
           family: 1961ee44
           model: 5ad0e817-394b65bd-00030000

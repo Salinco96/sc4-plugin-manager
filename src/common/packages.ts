@@ -2,23 +2,14 @@ import { type ID, entries, isArray, values } from "@salinco/nice-utils"
 
 import type { AuthorID } from "./authors"
 import { isEnabledLot, isSC4LotFile, isTogglableLot } from "./lots"
-import {
-  type OptionID,
-  type OptionInfo,
-  type Requirements,
-  getOptionInfo,
-  getOptionValue,
-} from "./options"
+import { type OptionID, type OptionInfo, type Requirements, getOptionValue } from "./options"
 import type { ProfileInfo } from "./profiles"
 import type { Settings } from "./settings"
 import type { Feature, Features, PackageInfo, PackageStatus } from "./types"
-import { matchFile } from "./utils/glob"
 import type { FileInfo } from "./variants"
 import { Issue, type VariantInfo, type VariantIssue } from "./variants"
 
 export const MIN_VERSION_OPTION_ID = "minVersion" as OptionID
-
-export const MMPS_OPTION_ID = "mmps" as OptionID
 
 /** Package ID */
 export type PackageID = ID<string, PackageInfo>
@@ -69,44 +60,6 @@ export function checkFile(
       if (!isSupported) {
         return false
       }
-    }
-  }
-
-  // TODO: Refactor this
-  const mmp = variantInfo?.mmps?.find(mmp => mmp.file && matchFile(mmp.file, file.path))
-  if (mmp) {
-    // Never include MMPs unless explicitly enabled
-    if (!packageConfig?.enabled) {
-      return false
-    }
-
-    // Check if MMP is enabled
-    const option = getOptionInfo(MMPS_OPTION_ID, variantInfo.options, profileOptions)
-
-    if (option) {
-      const enabledMMPs = getOptionValue(option, {
-        ...packageConfig.options,
-        ...profileInfo?.options,
-      }) as string[]
-
-      if (!enabledMMPs.includes(mmp.id)) {
-        return false
-      }
-    }
-
-    // Check if MMP is supported
-    const isSupported = checkCondition(
-      mmp.requirements,
-      packageId,
-      variantInfo,
-      profileInfo,
-      profileOptions,
-      features,
-      settings,
-    )
-
-    if (!isSupported) {
-      return false
     }
   }
 

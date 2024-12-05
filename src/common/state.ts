@@ -1,31 +1,35 @@
 import type { Authors } from "./authors"
-import type { BuildingInfo } from "./buildings"
+import type { BuildingID, BuildingInfo } from "./buildings"
 import type { Categories } from "./categories"
 import type { ExemplarPropertyInfo } from "./exemplars"
-import type { FamilyInfo } from "./families"
-import type { LotInfo } from "./lots"
+import type { FamilyID, FamilyInfo } from "./families"
+import type { LotID, LotInfo } from "./lots"
+import type { FloraID, FloraInfo } from "./mmps"
 import type { OptionInfo } from "./options"
 import type { PackageID } from "./packages"
 import type { ProfileID, ProfileInfo, Profiles } from "./profiles"
-import type { PropInfo } from "./props"
+import type { PropID, PropInfo } from "./props"
 import type { Settings } from "./settings"
 import type { Features, PackageInfo, Packages } from "./types"
 
 export interface Exemplars {
   buildingFamilies: {
-    [familyId in string]?: FamilyInfo
+    [familyId in FamilyID]?: FamilyInfo
   }
   buildings: {
-    [instanceId in string]?: BuildingInfo
+    [instanceId in BuildingID]?: BuildingInfo
   }
   lots: {
-    [instanceId in string]?: LotInfo
+    [instanceId in LotID]?: LotInfo
+  }
+  mmps: {
+    [instanceId in FloraID]?: FloraInfo
   }
   propFamilies: {
-    [familyId in string]?: FamilyInfo
+    [familyId in FamilyID]?: FamilyInfo
   }
   props: {
-    [instanceId in string]?: PropInfo
+    [instanceId in PropID]?: PropInfo
   }
 }
 
@@ -71,6 +75,7 @@ export function getInitialState(): ApplicationState {
       buildingFamilies: {},
       buildings: {},
       lots: {},
+      mmps: {},
       propFamilies: {},
       props: {},
     },

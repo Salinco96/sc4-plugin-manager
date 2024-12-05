@@ -22,6 +22,7 @@ import type { TaskContext } from "@utils/tasks"
 import { loadBuildingInfo } from "@node/data/buildings"
 import { loadFamilyInfo } from "@node/data/families"
 import { loadLotInfo } from "@node/data/lots"
+import { loadFloraInfo } from "@node/data/mmps"
 import { loadPropInfo } from "@node/data/props"
 import { fromProfileData } from "./profiles"
 
@@ -142,6 +143,14 @@ export async function loadExemplars(
         }),
         {},
       ),
+      mmps: reduce(
+        config.data.mmps ?? {},
+        (result, mmps, file) => ({
+          ...result,
+          ...mapValues(mmps, (data, id) => loadFloraInfo(file, id, data)),
+        }),
+        {},
+      ),
       propFamilies: reduce(
         config.data.propFamilies ?? {},
         (result, propFamilies, file) => ({
@@ -165,6 +174,7 @@ export async function loadExemplars(
       buildingFamilies: {},
       buildings: {},
       lots: {},
+      mmps: {},
       propFamilies: {},
       props: {},
     }

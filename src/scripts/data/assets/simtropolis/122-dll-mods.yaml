@@ -282,7 +282,7 @@ assets:
     authors:
       - Null 45
     buildings:
-      Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat:
+      Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat:
         0dd41d65:
           bulldoze: 100
           categories: rewards
@@ -396,18 +396,18 @@ assets:
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA DLL plugin for SimCity 4 that provides modders with more <abbr title=\"Residential, Commercial, Industrial\">RCI</abbr> demand info.\n</p>\n\n<p>\n\tWith this plugin installed there will be the following new variables that can be used from LUA scripts and UI files:\n</p>\n\n<p>\n\t<strong>\_ Variable name\_\_\_\_\_\_\_\_\_\_\_ \_ \_ \_ \_ \_\_ Description</strong><br>\n\t\_ g_cs1_active_demand\_\_\_\_\_\_\_\_\_ Cs§ active demand<br>\n\t\_ g_cs1_demand\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Cs§ demand<br>\n\t\_ g_cs2_active_demand\_\_\_\_\_\_\_\_\_ Cs§§ active demand<br>\n\t\_ g_cs2_demand\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Cs§§ demand<br>\n\t\_ g_cs3_active_demand\_\_\_\_\_\_\_\_\_ Cs§§§ active demand<br>\n\t\_ g_cs3_demand\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Cs§§§ demand<br>\n\t\_ g_ir_active_demand\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IR (I-Ag) active demand<br>\n\t\_ g_ir_demand\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_ \_ IR (I-Ag) demand<br>\n\t\_ g_current_ir_cap\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Current IR (I-Ag) cap<br>\n\t\_ g_id_demand\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ ID demand<br>\n\t\_ g_im_demand\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IM demand<br>\n\t\_ g_iht_demand\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IHT demand<br>\n\t\_ g_region_r1_population\_\_\_\_\_\_ Region R§ population<br>\n\t\_ g_region_r2_population\_\_\_\_\_\_ Region R§§ population<br>\n\t\_ g_region_r3_population\_\_\_\_\_\_ Region R§§§ population<br>\n\t\_ g_region_cs1_population\_\_\_ Region Cs§ population<br>\n\t\_ g_region_cs2_population\_\_\_ Region Cs§§ population<br>\n\t\_ g_region_cs3_population\_ \_ Region Cs§§§ population<br>\n\t\_ g_region_co2_population\_\_\_ Region Co§§ population<br>\n\t\_ g_region_co3_population\_\_\_ Region Co§§§ population<br>\n\t\_ g_region_ir_population\_\_\_\_\_\_\_ Region IR (I-Ag) population<br>\n\t\_ g_region_id_population\_\_\_\_\_\_ Region ID population<br>\n\t\_ g_region_im_population\_\_\_\_\_ Region IM population<br>\n\t\_ g_region_iht_population\_\_\_\_\_ Region IHT population\n</p>\n\n<p>\n\tThe download includes a patch for RippleJet's Census Repository v3.5 that shows the new data, you will need to have the <a href=\"https://sc4evermore.com/index.php/downloads/download/21-other/39-bsc-census-repository-building-by-ripplejet\" rel=\"external nofollow\">original mod</a> installed.\n</p>\n\n<p>\n\t<strong>System Requirements</strong>\n</p>\n\n<ul>\n\t<li>\n\t\tWindows 10 or later\n\t</li>\n</ul>\n\n<p>\n\tThe plugin may work on Windows 7 or later with the <a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" rel=\"external nofollow\">Microsoft Visual C++ 2022 x86 Redistribute</a> installed, but I do not have the ability to test that.\n</p>\n\n<p>\n\t<strong>Installation</strong>\n</p>\n\n<ol>\n\t<li>\n\t\tClose SimCity 4.\n\t</li>\n\t<li>\n\t\tCopy <em>SC4MoreDemandInfo.dll</em> from the <strong>Dll</strong><strong> </strong>folder into the Plugins folder in the SimCity 4 installation directory.\n\t</li>\n\t<li>\n\t\tReplace the original <em>RJ - Census_Repository_Model_and_Query_3.1.dat</em> with the one in the <strong>Census Repository v3.5 Patch</strong> folder.\n\t</li>\n\t<li>\n\t\tStart SimCity 4.\n\t</li>\n</ol>\n\n<p>\n\t<strong>Troubleshooting</strong>\n</p>\n\n<p>\n\tThe plugin should write a <em>SC4MoreDemandInfo.log</em> file in the same folder as the plugin.<br>\n\tThe log contains status information for the most recent run of the plugin.\n</p>\n\n<p>\n\t<strong>Source Code and Support</strong>\n</p>\n\n<p>\n\tPlugin thread: <a href=\"https://community.simtropolis.com/forums/topic/762906-sc4moredemandinfo\" rel=\"\">https://community.simtropolis.com/forums/topic/762906-sc4moredemandinfo</a>\n</p>\n\n<p>\n\tThe plugin's source code and issue tracker are located on GitHub: <a href=\"https://github.com/0xC0000054/sc4-more-demand-info\" rel=\"external nofollow\">https://github.com/0xC0000054/sc4-more-demand-info</a>\n</p>\n\n\t\t\t\t\t\t</body>"
     file: SC4MoreDemandInfo.zip
     files:
-      - Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat
-      - Dll\LICENSE.txt
-      - Dll\README.txt
-      - Dll\SC4MoreDemandInfo.dll
-      - Dll\Third Party Notices.txt
+      - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+      - Dll/LICENSE.txt
+      - Dll/README.txt
+      - Dll/SC4MoreDemandInfo.dll
+      - Dll/Third Party Notices.txt
       - Readme.txt
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_01/STEXIcon.png.59c37a3a6c5bd2aa3f9d1f55d9094d62.png
       - https://www.simtropolis.com/objects/screens/monthly_2024_01/MoreDemandInfo.png.c3511a969cc46a867c82ffdad708ec45.png
     lastModified: 2024-05-08T04:10:48.000Z
     lots:
-      Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat:
+      Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat:
         0dd41d65:
           building: 0dd41d65
           name: CensusRepository
@@ -432,7 +432,7 @@ assets:
       version: 1
     name: SC4 More Demand Info
     props:
-      Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat:
+      Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat:
         16888cf8:
           model: 5ad0e817-5465811a-00030000
           name: Census Repository Facility
@@ -673,7 +673,7 @@ assets:
     authors:
       - memo
     buildings:
-      submenus\park\plaza-submenu.dat:
+      submenus/park/plaza-submenu.dat:
         ea8756cf:
           bulldoze: 20
           cost: 170
@@ -775,58 +775,58 @@ assets:
       - README.md
       - Third Party Notices.txt
       - memo.submenus.dll
-      - submenus\commercial\ploppable-CO$$$-submenu.dat
-      - submenus\commercial\ploppable-CO$$-submenu.dat
-      - submenus\commercial\ploppable-CS$$$-submenu.dat
-      - submenus\commercial\ploppable-CS$$-submenu.dat
-      - submenus\commercial\ploppable-CS$-submenu.dat
-      - submenus\education\college-submenu.dat
-      - submenus\education\elementary-school-submenu.dat
-      - submenus\education\high-school-submenu.dat
-      - submenus\education\library-museum-submenu.dat
-      - submenus\health\health-large-submenu.dat
-      - submenus\health\health-medium-submenu.dat
-      - submenus\health\health-small-submenu.dat
-      - submenus\highway\signage-submenu.dat
-      - submenus\industrial\ploppable-Ia-submenu.dat
-      - submenus\industrial\ploppable-Id-submenu.dat
-      - submenus\industrial\ploppable-Iht-submenu.dat
-      - submenus\industrial\ploppable-Im-submenu.dat
-      - submenus\landmark\entertainment-submenu.dat
-      - submenus\landmark\government-submenu.dat
-      - submenus\landmark\religion-submenu.dat
-      - submenus\misc-transit\ElRail-submenu.dat
-      - submenus\misc-transit\GLR-submenu.dat
-      - submenus\misc-transit\bus-submenu.dat
-      - submenus\misc-transit\multimodal-stations-submenu.dat
-      - submenus\misc-transit\parking-submenu.dat
-      - submenus\misc-transit\subway-submenu.dat
-      - submenus\park\embankment-submenu.dat
-      - submenus\park\fillers-submenu.dat
-      - submenus\park\green-spaces-submenu.dat
-      - submenus\park\modular-parks-submenu.dat
-      - submenus\park\plaza-submenu.dat
-      - submenus\park\sports-submenu.dat
-      - submenus\police\military-submenu.dat
-      - submenus\police\police-deluxe-submenu.dat
-      - submenus\police\police-large-submenu.dat
-      - submenus\police\police-small-submenu.dat
-      - submenus\power\clean-energy-submenu.dat
-      - submenus\power\dirty-energy-submenu.dat
-      - submenus\power\misc-power-submenu.dat
-      - submenus\rail\freight-rail-submenu.dat
-      - submenus\rail\hybrid-railway-submenu.dat
-      - submenus\rail\monorail-submenu.dat
-      - submenus\rail\passenger-rail-submenu.dat
-      - submenus\rail\yards-submenu.dat
-      - submenus\residential\ploppable-R$$$-submenu.dat
-      - submenus\residential\ploppable-R$$-submenu.dat
-      - submenus\residential\ploppable-R$-submenu.dat
-      - submenus\submenu-essentials.dat
-      - submenus\water-transit\canal-submenu.dat
-      - submenus\water-transit\ports-ferries-submenu.dat
-      - submenus\water-transit\seawall-submenu.dat
-      - submenus\water-transit\waterfront-submenu.dat
+      - submenus/commercial/ploppable-CO$$$-submenu.dat
+      - submenus/commercial/ploppable-CO$$-submenu.dat
+      - submenus/commercial/ploppable-CS$$$-submenu.dat
+      - submenus/commercial/ploppable-CS$$-submenu.dat
+      - submenus/commercial/ploppable-CS$-submenu.dat
+      - submenus/education/college-submenu.dat
+      - submenus/education/elementary-school-submenu.dat
+      - submenus/education/high-school-submenu.dat
+      - submenus/education/library-museum-submenu.dat
+      - submenus/health/health-large-submenu.dat
+      - submenus/health/health-medium-submenu.dat
+      - submenus/health/health-small-submenu.dat
+      - submenus/highway/signage-submenu.dat
+      - submenus/industrial/ploppable-Ia-submenu.dat
+      - submenus/industrial/ploppable-Id-submenu.dat
+      - submenus/industrial/ploppable-Iht-submenu.dat
+      - submenus/industrial/ploppable-Im-submenu.dat
+      - submenus/landmark/entertainment-submenu.dat
+      - submenus/landmark/government-submenu.dat
+      - submenus/landmark/religion-submenu.dat
+      - submenus/misc-transit/ElRail-submenu.dat
+      - submenus/misc-transit/GLR-submenu.dat
+      - submenus/misc-transit/bus-submenu.dat
+      - submenus/misc-transit/multimodal-stations-submenu.dat
+      - submenus/misc-transit/parking-submenu.dat
+      - submenus/misc-transit/subway-submenu.dat
+      - submenus/park/embankment-submenu.dat
+      - submenus/park/fillers-submenu.dat
+      - submenus/park/green-spaces-submenu.dat
+      - submenus/park/modular-parks-submenu.dat
+      - submenus/park/plaza-submenu.dat
+      - submenus/park/sports-submenu.dat
+      - submenus/police/military-submenu.dat
+      - submenus/police/police-deluxe-submenu.dat
+      - submenus/police/police-large-submenu.dat
+      - submenus/police/police-small-submenu.dat
+      - submenus/power/clean-energy-submenu.dat
+      - submenus/power/dirty-energy-submenu.dat
+      - submenus/power/misc-power-submenu.dat
+      - submenus/rail/freight-rail-submenu.dat
+      - submenus/rail/hybrid-railway-submenu.dat
+      - submenus/rail/monorail-submenu.dat
+      - submenus/rail/passenger-rail-submenu.dat
+      - submenus/rail/yards-submenu.dat
+      - submenus/residential/ploppable-R$$$-submenu.dat
+      - submenus/residential/ploppable-R$$-submenu.dat
+      - submenus/residential/ploppable-R$-submenu.dat
+      - submenus/submenu-essentials.dat
+      - submenus/water-transit/canal-submenu.dat
+      - submenus/water-transit/ports-ferries-submenu.dat
+      - submenus/water-transit/seawall-submenu.dat
+      - submenus/water-transit/waterfront-submenu.dat
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_05/glr-submenu.jpeg.37cdc1aba8ba5f84d543d46c579de1d4.jpeg
       - https://www.simtropolis.com/objects/screens/monthly_2024_05/parks-submenus-animation.gif.fc7b73b36d2cfd59d4aca263a753285c.gif

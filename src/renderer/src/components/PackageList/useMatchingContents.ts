@@ -1,123 +1,140 @@
-import { mapDefined, values } from "@salinco/nice-utils"
-import { useMemo } from "react"
-
-import type { Exemplars } from "@common/state"
-import type { VariantInfo } from "@common/variants"
+import type { BuildingInfo } from "@common/buildings"
+import type { FamilyInfo } from "@common/families"
+import type { LotInfo } from "@common/lots"
+import type { FloraID, FloraInfo } from "@common/mmps"
+import type { PropInfo } from "@common/props"
+import type { ContentsInfo } from "@common/variants"
+import { compact, values } from "@salinco/nice-utils"
 import { Page, useLocation } from "@utils/navigation"
 import { isHexSearch, toHexSearch } from "@utils/packages"
 import { usePackageFilters } from "@utils/store"
+import { useMemo } from "react"
+
+// todo: move to utils
+export function iterate<T, R>(
+  iterable: Iterable<T>,
+  fn: (value: T) => R | undefined,
+): R | undefined {
+  for (const value of iterable) {
+    const result = fn(value)
+    if (result !== undefined) {
+      return result
+    }
+  }
+}
 
 export function useMatchingContents({
   buildingFamilies,
   buildings,
   lots,
+  mmps,
   propFamilies,
   props,
-}: Pick<VariantInfo, keyof Exemplars>) {
+}: ContentsInfo) {
   const { page } = useLocation()
   const { search } = usePackageFilters()
 
   return useMemo(() => {
     // Show matching TGIs in package listing
     if (isHexSearch(search) && page === Page.Packages) {
-      const hexSearch = toHexSearch(search)
+      const hex = toHexSearch(search)
 
-      const contents: {
-        element: string
-        name: string
-        tab: string
-        type: string
-      }[] = []
+      let building: BuildingInfo | undefined
+      let buildingFamily: Omit<FamilyInfo, "file"> | undefined
+      let lot: LotInfo | undefined
+      let mmp: Omit<FloraInfo, "file"> | undefined
+      let prop: PropInfo | undefined
+      let propFamily: Omit<FamilyInfo, "file"> | undefined
 
-      const buildingFamily = mapDefined(
-        values(buildingFamilies ?? {}),
-        families => families[hexSearch],
-      ).at(0)
-
-      if (buildingFamily) {
-        contents.push({
-          element: `buildingFamily-${hexSearch}`,
-          name: buildingFamily.name ?? hexSearch,
-          tab: "lots",
-          type: "Building family",
-        })
+      if (buildingFamilies) {
+        buildingFamily = iterate(values(buildingFamilies), families => families[hex])
       }
 
-      const building = mapDefined(values(buildings ?? {}), buildings => buildings[hexSearch]).at(0)
+      if (buildings) {
+        building = iterate(values(buildings), buildings => buildings[hex])
 
-      if (building) {
-        contents.push({
-          element: `building-${hexSearch}`,
-          name: building.name ?? hexSearch,
+        if (!building && !buildingFamily) {
+          const hasFamily = values(buildings).some(buildings =>
+            values(buildings).some(building => building.family === hex),
+          )
+
+          if (hasFamily) {
+            buildingFamily = { id: hex }
+          }
+        }
+      }
+
+      if (lots) {
+        lot = iterate(values(lots), lots => lots[hex])
+      }
+
+      if (mmps) {
+        mmp = iterate(
+          values(mmps),
+          mmps => mmps[hex] ?? iterate(values(mmps), mmp => getStage(mmp, hex)),
+        )
+      }
+
+      if (propFamilies) {
+        propFamily = iterate(values(propFamilies), families => families[hex])
+      }
+
+      if (props) {
+        prop = iterate(values(props), props => props[hex])
+
+        if (!prop && !propFamily) {
+          const hasFamily = values(props).some(props =>
+            values(props).some(prop => prop.family === hex),
+          )
+
+          if (hasFamily) {
+            propFamily = { id: hex }
+          }
+        }
+      }
+
+      return compact([
+        buildingFamily && {
+          element: `buildingFamily-${buildingFamily.id}`,
+          name: buildingFamily.name ?? buildingFamily.id,
+          tab: "lots",
+          type: "Building family",
+        },
+        building && {
+          element: `building-${building.id}`,
+          name: building.name ?? building.id,
           tab: "lots",
           type: "Building",
-        })
-      }
-
-      if (
-        !building &&
-        !buildingFamily &&
-        values(buildings ?? {}).some(buildings =>
-          values(buildings).some(building => building.family === hexSearch),
-        )
-      ) {
-        contents.push({
-          element: `buildingFamily-${hexSearch}`,
-          name: hexSearch,
-          tab: "lots",
-          type: "Building family",
-        })
-      }
-
-      const lot = mapDefined(values(lots ?? {}), lots => lots[hexSearch]).at(0)
-
-      if (lot) {
-        contents.push({
-          element: `lot-${hexSearch}`,
-          name: lot.name ?? hexSearch,
+        },
+        lot && {
+          element: `lot-${lot.id}`,
+          name: lot.name ?? lot.id,
           tab: "lots",
           type: "Lot",
-        })
-      }
-
-      const propFamily = mapDefined(values(propFamilies ?? {}), families => families[hexSearch]).at(
-        0,
-      )
-
-      if (propFamily) {
-        contents.push({
-          element: `propFamily-${hexSearch}`,
-          name: propFamily.name ?? hexSearch,
+        },
+        mmp && {
+          element: `mmp-${mmp.id}`,
+          name: mmp.name ?? mmp.id,
+          tab: "mmps",
+          type: "MMP",
+        },
+        propFamily && {
+          element: `propFamily-${propFamily.id}`,
+          name: propFamily.name ?? propFamily.id,
           tab: "props",
           type: "Prop family",
-        })
-      }
-
-      const prop = mapDefined(values(props ?? {}), props => props[hexSearch]).at(0)
-
-      if (prop) {
-        contents.push({
-          element: `prop-${hexSearch}`,
-          name: prop.name ?? hexSearch,
+        },
+        prop && {
+          element: `prop-${prop.id}`,
+          name: prop.name ?? prop.id,
           tab: "props",
           type: "Prop",
-        })
-      }
-
-      if (
-        !prop &&
-        !propFamily &&
-        values(props ?? {}).some(props => values(props).some(prop => prop.family === hexSearch))
-      ) {
-        contents.push({
-          element: `propFamily-${hexSearch}`,
-          name: hexSearch,
-          tab: "props",
-          type: "Prop family",
-        })
-      }
-
-      return contents
+        },
+      ])
     }
-  }, [buildingFamilies, buildings, lots, page, propFamilies, props, search])
+  }, [buildingFamilies, buildings, lots, mmps, page, propFamilies, props, search])
+}
+
+function getStage(mmp: FloraInfo, id: FloraID) {
+  return mmp.stages?.find(stage => stage.id === id)
 }

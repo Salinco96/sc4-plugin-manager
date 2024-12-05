@@ -2708,7 +2708,7 @@ assets:
     authors:
       - simtropolis
     buildings:
-      Grutze Industries\IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc:
+      Grutze Industries/IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc:
         8d21717e:
           bulldoze: 500
           categories: landmarks
@@ -2731,7 +2731,7 @@ assets:
           water: 10
           waterPollution: 3
           waterPollutionRadius: 2
-      Grutze Industries\LM4x5_GrutzeInd_2d217719.SC4Lot:
+      Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot:
         2d217719:
           bulldoze: 500
           categories: landmarks
@@ -2830,12 +2830,12 @@ assets:
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Grutze_Industries.zip
     file: maxis-plugin-grutze-industries@1.zip
     files:
-      - Grutze Industries\IndstryPipes-0x5ad0e817_0x6cd8b254_0x2f0000.SC4Model
-      - Grutze Industries\IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc
-      - Grutze Industries\LM4x5_GrutzeInd_2d217719.SC4Lot
+      - Grutze Industries/IndstryPipes-0x5ad0e817_0x6cd8b254_0x2f0000.SC4Model
+      - Grutze Industries/IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc
+      - Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      Grutze Industries\LM4x5_GrutzeInd_2d217719.SC4Lot:
+      Grutze Industries/LM4x5_GrutzeInd_2d217719.SC4Lot:
         2d217719:
           building: 2d217719
           name: LM4x5_GrutzeInd
@@ -2865,7 +2865,7 @@ assets:
     authors:
       - simtropolis
     buildings:
-      Grutzehaus\DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc:
+      Grutzehaus/DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc:
         6d2170b6:
           bulldoze: 125
           categories: landmarks
@@ -2888,7 +2888,7 @@ assets:
           water: 5
           waterPollution: 1
           waterPollutionRadius: 2
-      Grutzehaus\LM2x3_Grutzehaus_ed2174a0.SC4Lot:
+      Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot:
         ed2174a0:
           bulldoze: 125
           categories: landmarks
@@ -2989,12 +2989,12 @@ assets:
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Grutzehaus.zip
     file: maxis-plugin-grutzehaus@1.zip
     files:
-      - Grutzehaus\DstTxtr-0x5ad0e817_0x6cd8b254_0x2d0000.SC4Model
-      - Grutzehaus\DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc
-      - Grutzehaus\LM2x3_Grutzehaus_ed2174a0.SC4Lot
+      - Grutzehaus/DstTxtr-0x5ad0e817_0x6cd8b254_0x2d0000.SC4Model
+      - Grutzehaus/DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc
+      - Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      Grutzehaus\LM2x3_Grutzehaus_ed2174a0.SC4Lot:
+      Grutzehaus/LM2x3_Grutzehaus_ed2174a0.SC4Lot:
         ed2174a0:
           building: ed2174a0
           name: LM2x3_Grutzehaus
@@ -3026,7 +3026,7 @@ assets:
     authors:
       - simtropolis
     buildings:
-      Longfellow Castle\CastleSet.dat:
+      Longfellow Castle/CastleSet.dat:
         0d4fdea6:
           bulldoze: 100
           categories: landmarks
@@ -3087,7 +3087,7 @@ assets:
           ratingRadius: 256
           waterPollution: 1
           waterPollutionRadius: 2
-      Longfellow Castle\Longfellow Castle_4d50ba18.SC4Lot:
+      Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot:
         4d50ba18:
           bulldoze: 100
           categories: landmarks
@@ -3515,11 +3515,11 @@ assets:
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Longfellow_Castle.zip
     file: maxis-plugin-longfellow-castle@1.zip
     files:
-      - Longfellow Castle\CastleSet.dat
-      - Longfellow Castle\Longfellow Castle_4d50ba18.SC4Lot
+      - Longfellow Castle/CastleSet.dat
+      - Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      Longfellow Castle\CastleSet.dat:
+      Longfellow Castle/CastleSet.dat:
         0d4fdea6:
           building: 0d4fdea6
           name: Longfellow Castle
@@ -3590,7 +3590,7 @@ assets:
             - 257a0000
             - 257c0000
             - '25800000'
-      Longfellow Castle\Longfellow Castle_4d50ba18.SC4Lot:
+      Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot:
         4d50ba18:
           building: 4d50ba18
           name: Longfellow Castle
@@ -3665,7 +3665,7 @@ assets:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
     props:
-      Longfellow Castle\CastleSet.dat:
+      Longfellow Castle/CastleSet.dat:
         2d010000:
           model: 5ad0e817-badb57f1-2d010000
           name: Castle Walls - Repeat
@@ -3795,7 +3795,7 @@ assets:
     authors:
       - simtropolis
     buildings:
-      Stone House\LM3x3_StoneHouse_0d1d6acb.SC4Lot:
+      Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot:
         0d1d6acb:
           bulldoze: 500
           categories: landmarks
@@ -3817,7 +3817,7 @@ assets:
           water: 8
           waterPollution: 1
           waterPollutionRadius: 2
-      Stone House\StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc:
+      Stone House/StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc:
         6d2172e0:
           bulldoze: 500
           categories: landmarks
@@ -3910,12 +3910,12 @@ assets:
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Stone_House.zip
     file: maxis-plugin-stone-house@1.zip
     files:
-      - Stone House\LM3x3_StoneHouse_0d1d6acb.SC4Lot
-      - Stone House\StoneHouse-0x5ad0e817_0x6cd8b254_0x2e0000.SC4Model
-      - Stone House\StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc
+      - Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot
+      - Stone House/StoneHouse-0x5ad0e817_0x6cd8b254_0x2e0000.SC4Model
+      - Stone House/StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      Stone House\LM3x3_StoneHouse_0d1d6acb.SC4Lot:
+      Stone House/LM3x3_StoneHouse_0d1d6acb.SC4Lot:
         0d1d6acb:
           building: 0d1d6acb
           name: LM3x3_StoneHouse
@@ -3942,7 +3942,7 @@ assets:
     authors:
       - simtropolis
     buildings:
-      Temple of Grutz\LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot:
+      Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot:
         2d1e7a9e:
           bulldoze: 500
           categories: landmarks
@@ -3962,7 +3962,7 @@ assets:
           ratingRadius: 256
           waterPollution: 1
           waterPollutionRadius: 2
-      Temple of Grutz\TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc:
+      Temple of Grutz/TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc:
         ed1e75d3:
           bulldoze: 500
           categories: landmarks
@@ -4045,12 +4045,12 @@ assets:
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Temple_of_Grutz.zip
     file: maxis-plugin-temple-of-grutz@1.zip
     files:
-      - Temple of Grutz\LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
-      - Temple of Grutz\TempleOfGrutz-0x5ad0e817_0xad1d67dc_0x30000.SC4Model
-      - Temple of Grutz\TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc
+      - Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot
+      - Temple of Grutz/TempleOfGrutz-0x5ad0e817_0xad1d67dc_0x30000.SC4Model
+      - Temple of Grutz/TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc
     lastModified: 2024-11-18T09:48:18.355Z
     lots:
-      Temple of Grutz\LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot:
+      Temple of Grutz/LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot:
         2d1e7a9e:
           building: 2d1e7a9e
           name: LM6x6_TempleOfGrutz

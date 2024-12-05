@@ -94,6 +94,7 @@ export enum ExemplarPropertyID {
   ExemplarType = 0x00000010,
   ExemplarName = 0x00000020,
   Flamability = 0x29244db5,
+  FloraClusterType = 0x2a0348ba,
   GrowthStage = 0x27812837,
   HospitalPatientCapacity = 0x69220415,
   IsConditional = 0xea3209f8,

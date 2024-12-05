@@ -274,6 +274,7 @@ function mergeLocalPackageInfo(
           remoteVariantInfo.buildings = localVariantInfo.buildings
           remoteVariantInfo.files = localVariantInfo.files
           remoteVariantInfo.lots = localVariantInfo.lots
+          remoteVariantInfo.mmps = localVariantInfo.mmps
           remoteVariantInfo.propFamilies = localVariantInfo.propFamilies
           remoteVariantInfo.props = localVariantInfo.props
           remoteVariantInfo.readme ??= localVariantInfo.readme

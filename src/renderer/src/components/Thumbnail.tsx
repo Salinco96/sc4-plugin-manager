@@ -39,6 +39,7 @@ export function Thumbnail({
         onClick={onClick}
         sx={{
           borderRadius: 0,
+          minWidth: 0,
           padding: 0,
           "& .hover": {
             opacity: 0,

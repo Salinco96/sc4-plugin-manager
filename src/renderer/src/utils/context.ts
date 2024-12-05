@@ -8,8 +8,7 @@ declare module "vite/types/hot" {
     contexts?: {
       [name: string]: unknown
     }
-    state?: Omit<Store, "actions">
-    store?: UseBoundStore<StoreApi<Store>>
+    state?: Store
   }
 }
 
@@ -41,17 +40,25 @@ export function getStore(
   initialState: Omit<Store, "actions">,
   createStore: (initialState: Omit<Store, "actions">) => StateCreator<Store>,
 ): UseBoundStore<StoreApi<Store>> {
-  if (import.meta.env.PROD || !import.meta.hot) {
-    return create(createStore(initialState))
+  const store = create(createStore(initialState))
+
+  const hmr = import.meta.hot
+  if (hmr) {
+    const state = hmr.state
+    if (state) {
+      store.setState(state)
+    }
+
+    store.subscribe(state => {
+      hmr.state = state
+    })
+
+    hmr.accept(newModule => {
+      if (newModule && hmr.state) {
+        store.setState(hmr.state)
+      }
+    })
   }
-
-  const cache = import.meta.hot
-  cache.state ??= initialState
-  const store = create(createStore(cache.state))
-
-  import.meta.hot.on("vite:beforeUpdate", () => {
-    cache.state = store.getState()
-  })
 
   return store
 }

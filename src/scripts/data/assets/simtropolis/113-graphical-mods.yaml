@@ -3057,6 +3057,8 @@ assets:
     assetId: simtropolis/26806-vip-rural-pack-v2
     authors:
       - VIP Team
+    categories:
+      - mmps
     category: 113-graphical-mods
     dependencies:
       - sc4evermore/21
@@ -3139,6 +3141,577 @@ assets:
     meta:
       timestamp: 2024-12-03T16:03:49.352Z
       version: 1
+    mmps:
+      VIP/Rural Pack/Manchou/VIP_Man_Cows_Seasonal_MMP.dat:
+        '19620420':
+          name: VIP_Man_Cow_01
+          stages:
+            - id: '19620421'
+              name: VIP_Man_Cow_02
+            - id: '19620422'
+              name: VIP_Man_Cow_03
+            - id: '19620423'
+              name: VIP_Man_Cow_04
+            - id: '19620424'
+              name: VIP_Man_Cow_05
+            - id: '19620425'
+              name: VIP_Man_Cow_06
+            - id: '19620426'
+              name: VIP_Man_Cow_07
+            - id: '19620427'
+              name: VIP_Man_Cow_08
+            - id: '19620428'
+              name: VIP_Man_Cow_09
+            - id: '19620429'
+              name: VIP_Man_Cow_10
+            - id: 1962042a
+              name: VIP_Man_Cow_11
+            - id: 1962042b
+              name: VIP_Man_Cow_12
+            - id: 1962042c
+              name: VIP_Man_Cow_13
+            - id: 1962042d
+              name: VIP_Man_Cow_14
+            - id: 1962042e
+              name: VIP_Man_Cow_15
+            - id: 1962042f
+              name: VIP_Man_Cow_16
+            - id: '19620430'
+              name: VIP_Man_Cow_17
+            - id: '19620431'
+              name: VIP_Man_Cow_18
+            - id: '19620432'
+              name: VIP_Man_Cow_19
+            - id: '19620433'
+              name: VIP_Man_Cow_20
+            - id: '19620434'
+              name: VIP_Man_Cow_21
+      VIP/Rural Pack/Orange/VIP_Or_Corylus_Seasonal_MMP.dat:
+        '19620275':
+          name: Or_VIP_Corylus01
+      VIP/Rural Pack/Orange/VIP_Or_Narcissus_Seasonal_MMP.dat:
+        '19620280':
+          name: VIP_RP-FL_Or_Narcissus01
+          stages:
+            - id: '19620281'
+              name: VIP_RP-FL_Or_Narcissus02
+            - id: '19620282'
+              name: VIP_RP-FL_Or_Narcissus03
+            - id: '19620283'
+              name: VIP_RP-FL_Or_Narcissus04
+            - id: '19620284'
+              name: VIP_RP-FL_Or_Narcissus05
+      VIP/Rural Pack/Orange/VIP_Or_Populus_Seasonal_MMP.dat:
+        '19620270':
+          name: 'Or_VIP_Populus04 '
+          stages:
+            - id: '19620271'
+              name: 'Or_VIP_Populus01  '
+            - id: '19620272'
+              name: 'Or_VIP_Populus03  '
+            - id: '19620273'
+              name: 'Or_VIP_Populus02  '
+      VIP/Rural Pack/R6/VIP_R6_Herbes_Pampa_Big_MMP.dat:
+        '19620074':
+          model: 5ad0e817-5a76609f-00030000
+          name: R6_VIP_ploppable_HPampaBig01
+          stages:
+            - id: '19620075'
+              model: 5ad0e817-fa766faf-00030000
+              name: R6_VIP_ploppable_HPampBig02
+            - id: '19620076'
+              model: 5ad0e817-9a766455-00030000
+              name: R6_VIP_ploppable_HPampaBig03
+      VIP/Rural Pack/R6/VIP_R6_Herbes_Pampa_Small_MMP.dat:
+        '19620080':
+          model: 5ad0e817-ba4eca7a-00030000
+          name: R6_VIP_ploppable_HPampaSmall01
+          stages:
+            - id: '19620081'
+              model: 5ad0e817-fa4ecc85-00030000
+              name: R6_VIP_ploppable_HPampaSmall02
+            - id: '19620082'
+              model: 5ad0e817-ba4ece32-00030000
+              name: R6_VIP_ploppable_HPampaSmall03
+      VIP/Rural Pack/R6/VIP_R6_Iris_Des_Marais_Seasonal_MMP.dat:
+        '19620130':
+          name: R6_VIP_Iris des Marais01
+          stages:
+            - id: '19620131'
+              name: R6_VIP_Iris des Marais02
+            - id: '19620132'
+              name: R6_VIP_Iris des Marais03
+      VIP/Rural Pack/R6/VIP_R6_Nenuphars_MMP.dat:
+        '19620020':
+          model: 5ad0e817-9a4eceec-00030000
+          name: R6_VIP_plop_Nenuphars
+          stages:
+            - id: '19620021'
+              model: 5ad0e817-9a4eceec-00030000
+              name: R6_VIP_plop_Nenuphar01
+            - id: '19620022'
+              model: 5ad0e817-7a4ecf69-00030000
+              name: R6_VIP_plop_Nenuphar02
+            - id: '19620023'
+              model: 5ad0e817-1a4ecfdf-00030000
+              name: R6_VIP_plop_Nenuphar03
+            - id: '19620024'
+              model: 5ad0e817-1a76a1d2-00030000
+              name: R6_VIP_plop_Nenuphar04
+      VIP/Rural Pack/R6/VIP_R6_Potamot_MMP.dat:
+        '19620100':
+          model: 5ad0e817-fb17348d-00030000
+          name: R6_VIP_plop_Potamot
+          stages:
+            - id: '19620101'
+              model: 5ad0e817-fb17348d-00030000
+              name: R6_VIP_plop_Potamot01
+            - id: '19620102'
+              model: 5ad0e817-fb1734e3-00030000
+              name: R6_VIP_plop_Potamot02
+            - id: '19620103'
+              model: 5ad0e817-5b173537-00030000
+              name: R6_VIP_plop_Potamot03
+            - id: '19620104'
+              model: 5ad0e817-7b173594-00030000
+              name: R6_VIP_plop_Potamot04
+      VIP/Rural Pack/R6/VIP_R6_Rochers_MMP.dat:
+        '19620160':
+          model: 5ad0e817-1a6414bc-00030000
+          name: R6_VIP_RochersMousse
+          stages:
+            - id: '19620161'
+              model: 5ad0e817-1a6414bc-00030000
+              name: R6_VIP_RochersMousseSmall01
+            - id: '19620162'
+              model: 5ad0e817-5a64160a-00030000
+              name: R6_VIP_RochersMousseSmall02
+            - id: '19620163'
+              model: 5ad0e817-5a6417ce-00030000
+              name: R6_VIP_RochersMousseSmall03
+            - id: '19620164'
+              model: 5ad0e817-da64196b-00030000
+              name: R6_VIP_RochersMousseSmall04
+            - id: '19620165'
+              model: 5ad0e817-ba631112-00030000
+              name: R6_VIP_RochersMousseBig01
+            - id: '19620166'
+              model: 5ad0e817-3a631538-00030000
+              name: R6_VIP_RochersMousseBig02
+            - id: '19620167'
+              model: 5ad0e817-9a63e662-00030000
+              name: R6_VIP_RochersMousseBig03
+            - id: '19620168'
+              model: 5ad0e817-3a63ea03-00030000
+              name: R6_VIP_RochersMousseBig04
+      VIP/Rural Pack/R6/VIP_R6_Roseaux_Big_MMP.dat:
+        '19620070':
+          model: 5ad0e817-9a7655ec-00030000
+          name: R6_VIP_ploppable_RoseauxBig01
+          stages:
+            - id: '19620071'
+              model: 5ad0e817-1a765a61-00030000
+              name: R6_VIP_ploppable_RoseauxBig02
+            - id: '19620072'
+              model: 5ad0e817-3a765f46-00030000
+              name: R6_VIP_ploppable_RoseauxBig03
+      VIP/Rural Pack/R6/VIP_R6_Roseaux_Small_MMP.dat:
+        '19620030':
+          model: 5ad0e817-ba4ed06b-00030000
+          name: R6_VIP_ploppable_RoseauxSmall01
+          stages:
+            - id: '19620031'
+              model: 5ad0e817-9a4ed0fd-00030000
+              name: R6_VIP_ploppable_RoseauxSmall02
+            - id: '19620032'
+              model: 5ad0e817-3a4ed162-00030000
+              name: R6_VIP_ploppable_RoseauxSmall03
+      VIP/Rural Pack/VIP_Garbage_MMP.dat:
+        '19620400':
+          model: 5ad0e817-badb57f1-1c490000
+          name: VIP_Garbage_01
+          stages:
+            - id: '19620401'
+              model: 5ad0e817-badb57f1-1d360000
+              name: VIP_Garbage_02
+            - id: '19620402'
+              model: 5ad0e817-badb57f1-1dd40000
+              name: VIP_Garbage_03
+            - id: '19620403'
+              model: 5ad0e817-badb57f1-1f300000
+              name: VIP_Garbage_04
+            - id: '19620404'
+              model: 5ad0e817-badb57f1-1d1d0000
+              name: VIP_Garbage_05
+            - id: '19620405'
+              model: 5ad0e817-badb57f1-1d350000
+              name: VIP_Garbage_06
+            - id: '19620406'
+              model: 5ad0e817-badb57f1-1df70000
+              name: VIP_Garbage_07
+            - id: '19620407'
+              model: 5ad0e817-badb57f1-ae3a0000
+              name: VIP_Garbage_08
+            - id: '19620408'
+              model: 5ad0e817-986c5a2c-00030000
+              name: VIP_Garbage_09
+            - id: '19620409'
+              model: 5ad0e817-badb57f1-1dfa0000
+              name: VIP_Garbage_10
+            - id: '19620410'
+              model: 5ad0e817-badb57f1-1df60000
+              name: VIP_Garbage_11
+            - id: 1962041a
+              model: 5ad0e817-badb57f1-1df80000
+              name: VIP_Garbage_12
+      VIP/Rural Pack/VIP_Kayaks_And_Zodiacs_MMP.dat:
+        '19620110':
+          model: 5ad0e817-7a48711c-00030000
+          name: VIP_plop_Kayak&Zodiacs
+          stages:
+            - id: '19620111'
+              model: 5ad0e817-1a4870e6-00030000
+              name: VIP_plop_KayakRemorquePleine
+            - id: '19620112'
+              model: 5ad0e817-3a7ed517-00030000
+              name: VIP_plop_KayakVide01
+            - id: '19620113'
+              model: 5ad0e817-fa7ea67c-00030000
+              name: VIP_plop_KayakVide02
+            - id: '19620114'
+              model: 5ad0e817-fa7d892a-00030000
+              name: VIP_plop_Kayakiste01
+            - id: '19620115'
+              model: 5ad0e817-5a7d80fd-00030000
+              name: VIP_plop_Kayakiste02
+            - id: '19620116'
+              model: 5ad0e817-5a4234f1-00030000
+              name: VIP_plop_Kayakiste03
+            - id: '19620117'
+              model: 5ad0e817-7ac701d0-00030000
+              name: VIP_plop_ZodiacVide01
+            - id: '19620118'
+              model: 5ad0e817-1b1715d4-00030000
+              name: VIP_plop_ZodiacVide02
+            - id: '19620119'
+              model: 5ad0e817-5b17169c-00030000
+              name: VIP_plop_ZodiacVide03
+            - id: '19620120'
+              model: 5ad0e817-7b171be7-00030000
+              name: VIP_plop_ZodiacOccup�01
+            - id: '19620121'
+              model: 5ad0e817-bb171c71-00030000
+              name: VIP_plop_ZodiacOccup�02
+            - id: '19620122'
+              model: 5ad0e817-fb171d12-00030000
+              name: VIP_plop_ZodiacOccup�03
+      VIP/Rural Pack/Vnaoned/VIP_VV_Barques_MMP.dat:
+        '19620096':
+          model: 5ad0e817-1a4f1caa-00030000
+          name: VV_VIP_ploppabe_Barque01
+          stages:
+            - id: '19620097'
+              model: 5ad0e817-7a4f1fe8-00030000
+              name: VV_VIP_ploppable_Barque02
+            - id: '19620098'
+              model: 5ad0e817-3a4f2272-00030000
+              name: VV_VIP_ploppable_Barque03
+            - id: '19620099'
+              model: 5ad0e817-1a4f235e-00030000
+              name: VV_VIP_ploppable_Barque04
+      VIP/Rural Pack/Vnaoned/VIP_VV_Bouses_MMP.dat:
+        '19620150':
+          model: 5ad0e817-5a51effb-00030000
+          name: VV_VIP_plop_Bouses01
+          stages:
+            - id: '19620151'
+              model: 5ad0e817-1a51f18a-00030000
+              name: VV_VIP_plop_Bouses02
+      VIP/Rural Pack/Vnaoned/VIP_VV_Chickens_MMP.dat:
+        '19620040':
+          model: 5ad0e817-5893f9d0-00030000
+          name: VV_VIP_plop_Chicken
+          stages:
+            - id: '19620041'
+              model: 5ad0e817-5893f9d0-00030000
+              name: VV_VIP_plop_Chicken01
+            - id: '19620042'
+              model: 5ad0e817-5893f5bb-00030000
+              name: VV_VIP_plop_Chicken02
+            - id: '19620043'
+              model: 5ad0e817-b893f635-00030000
+              name: VV_VIP_plop_Chicken03
+            - id: '19620044'
+              model: 5ad0e817-b893f676-00030000
+              name: VV_VIP_plop_Chicken04
+            - id: '19620045'
+              model: 5ad0e817-d893f6a2-00030000
+              name: VV_VIP_plop_Chicken05
+            - id: '19620046'
+              model: 5ad0e817-1893f72a-00030000
+              name: VV_VIP_plop_Chicken06
+            - id: '19620047'
+              model: 5ad0e817-f893f756-00030000
+              name: VV_VIP_plop_Chicken07
+            - id: '19620048'
+              model: 5ad0e817-5a76aade-00030000
+              name: VV_VIP_plop_Chicken08
+            - id: '19620049'
+              model: 5ad0e817-ba76ac53-00030000
+              name: VV_VIP_plop_Chicken09
+      VIP/Rural Pack/Vnaoned/VIP_VV_Cows_MMP.dat:
+        '19620001':
+          model: 5ad0e817-786de570-00030000
+          name: VV_plop_Cows
+          stages:
+            - id: '19620002'
+              model: 5ad0e817-786de570-00030000
+              name: VV_plop_Cow01
+            - id: '19620003'
+              model: 5ad0e817-190e80b6-00030000
+              name: VV_plop_Ccw02
+            - id: '19620004'
+              model: 5ad0e817-790e8142-00030000
+              name: VV_plop_Cow03
+            - id: '19620005'
+              model: 5ad0e817-586de67a-00030000
+              name: VV_plop_Cow04
+            - id: '19620006'
+              model: 5ad0e817-d86de6e4-00030000
+              name: VV_plop_Cow05
+            - id: '19620007'
+              model: 5ad0e817-390e81dc-00030000
+              name: VV_plop_Cow06
+            - id: '19620008'
+              model: 5ad0e817-1a24f45f-00030000
+              name: VV_plop_Cow07
+            - id: '19620009'
+              model: 5ad0e817-da24eeb0-00030000
+              name: VV_plop_Cow08
+            - id: '19620010'
+              model: 5ad0e817-7a24ede5-00030000
+              name: VV_plop_Cow09
+            - id: '19620011'
+              model: 5ad0e817-786de570-00030000
+              name: VV_plop_Cow10
+            - id: '19620012'
+              model: 5ad0e817-baeec31d-00030000
+              name: VV_plop_Cow11
+            - id: '19620013'
+              model: 5ad0e817-9aeec598-00030000
+              name: VV_plop_Cow12
+            - id: '19620014'
+              model: 5ad0e817-daeec64f-00030000
+              name: VV_plop_Cow13
+            - id: '19620015'
+              model: 5ad0e817-1aeec73e-00030000
+              name: VV_plop_Cow14
+      VIP/Rural Pack/Vnaoned/VIP_VV_Fougeres_Seasonal_MMP.dat:
+        '19620090':
+          name: VV_TSC_ploppable_Fougere01
+          stages:
+            - id: '19620091'
+              name: VV_TSC_ploppable_Fougere02
+            - id: '19620092'
+              name: VV_TSC_ploppable_Fougere03
+            - id: '19620093'
+              name: VV_TSC_ploppable_Fougere04
+            - id: 1962009a
+              name: VV_TSC_ploppable_Fougere05
+            - id: 1962009b
+              name: VV_TSC_ploppable_Fougere06
+      VIP/Rural Pack/Vnaoned/VIP_VV_Genets_Seasonal_MMP.dat:
+        '19620190':
+          name: VV_VIP_ploppable_Genet01
+          stages:
+            - id: '19620191'
+              name: VV_VIP_ploppable_Genet02
+            - id: '19620192'
+              name: VV_VIP_ploppable_Genet03
+      VIP/Rural Pack/Vnaoned/VIP_VV_Herons_MMP.dat:
+        '19620180':
+          model: 5ad0e817-7a6abadc-00030000
+          name: VV_VIP_plop_Heron01a
+          stages:
+            - id: '19620181'
+              model: 5ad0e817-7a6abadc-00030000
+              name: VV_VIP_plop_Heron01b
+            - id: '19620182'
+              model: 5ad0e817-7a6abadc-00030000
+              name: VV_VIP_plop_Heron01c
+            - id: '19620183'
+              model: 5ad0e817-7a6abadc-00030000
+              name: VV_VIP_plop_Heron01d
+            - id: '19620184'
+              model: 5ad0e817-fa6abc98-00030000
+              name: VV_VIP_plop_Heron02a
+            - id: '19620185'
+              model: 5ad0e817-fa6abc98-00030000
+              name: VV_VIP_plop_Heron02b
+            - id: '19620186'
+              model: 5ad0e817-fa6abc98-00030000
+              name: VV_VIP_plop_Heron02c
+            - id: '19620187'
+              model: 5ad0e817-fa6abc98-00030000
+              name: VV_VIP_plop_Heron02d
+      VIP/Rural Pack/Vnaoned/VIP_VV_Perso_Baigneurs_MMP.dat:
+        '19620194':
+          model: 5ad0e817-ba7c13c5-00030000
+          name: VV_Baigneur01a
+          stages:
+            - id: '19620195'
+              model: 5ad0e817-ba7c13c5-00030000
+              name: VV_Baigneur01b
+            - id: '19620196'
+              model: 5ad0e817-ba7c13c5-00030000
+              name: VV_Baigneur01c
+            - id: '19620197'
+              model: 5ad0e817-ba7c13c5-00030000
+              name: VV_Baigneur01d
+            - id: '19620198'
+              model: 5ad0e817-9a7c121c-00030000
+              name: VV_Baigneur02a
+            - id: '19620199'
+              model: 5ad0e817-9a7c121c-00030000
+              name: VV_Baigneur02b
+            - id: 1962019a
+              model: 5ad0e817-9a7c121c-00030000
+              name: VV_Baigneur02c
+            - id: 1962019b
+              model: 5ad0e817-9a7c121c-00030000
+              name: VV_Baigneur02d
+            - id: 1962019c
+              model: 5ad0e817-ba81543d-00030000
+              name: VV_Baigneur03a
+            - id: 1962019d
+              model: 5ad0e817-ba81543d-00030000
+              name: VV_Baigneur03b
+            - id: 1962019e
+              model: 5ad0e817-ba81543d-00030000
+              name: VV_Baigneur03c
+            - id: 1962019f
+              model: 5ad0e817-ba81543d-00030000
+              name: VV_Baigneur03d
+            - id: '19620200'
+              model: 5ad0e817-19db5e62-00030000
+              name: VV_Baigneur04a
+            - id: '19620201'
+              model: 5ad0e817-19db5e62-00030000
+              name: VV_Baigneur04b
+            - id: '19620202'
+              model: 5ad0e817-19db5e62-00030000
+              name: VV_Baigneur04c
+            - id: '19620203'
+              model: 5ad0e817-19db5e62-00030000
+              name: VIP_RP_VV_Baigneur04d
+            - id: '19620204'
+              model: 5ad0e817-3a7c2175-00030000
+              name: VV_BaigneurDebout
+      VIP/Rural Pack/Vnaoned/VIP_VV_Perso_Pecheurs_MMP.dat:
+        '19620170':
+          model: 5ad0e817-ba7aea71-00030000
+          name: VV_Pecheur01
+          stages:
+            - id: '19620171'
+              model: 5ad0e817-ba7aea71-00030000
+              name: VV_Pecheu02
+            - id: '19620172'
+              model: 5ad0e817-ba7aea71-00030000
+              name: VV_Pecheur03
+            - id: '19620173'
+              model: 5ad0e817-ba7aea71-00030000
+              name: VV_Pecheur04
+            - id: '19620174'
+              model: 5ad0e817-3a7ae9f8-00030000
+              name: VV_Pecheur05
+            - id: '19620175'
+              model: 5ad0e817-3a7ae9f8-00030000
+              name: VV_Pecheur06
+            - id: '19620176'
+              model: 5ad0e817-3a7ae9f8-00030000
+              name: VV_Pecheur07
+            - id: '19620177'
+              model: 5ad0e817-3a7ae9f8-00030000
+              name: VV_Pecheur08
+            - id: '19620178'
+              model: 5ad0e817-593548e4-00030000
+              name: VV_Pecheur09
+            - id: '19620179'
+              model: 5ad0e817-593548e4-00030000
+              name: VV_Pecheur10
+            - id: 1962017a
+              model: 5ad0e817-593548e4-00030000
+              name: VV_Pecheur11
+            - id: 1962017b
+              model: 5ad0e817-593548e4-00030000
+              name: VV_Pecheur12
+      VIP/Rural Pack/Vnaoned/VIP_VV_Pigeons_MMP.dat:
+        '19620454':
+          model: 5ad0e817-38899977-00030000
+          name: VIP_VV_Pigeon_01
+          stages:
+            - id: '19620455'
+              model: 5ad0e817-d89148e1-00030000
+              name: VIP_VV_Pigeon_02
+            - id: '19620456'
+              model: 5ad0e817-d89149a4-00030000
+              name: VIP_VV_Pigeon_03
+            - id: '19620457'
+              model: 5ad0e817-389149d6-00030000
+              name: VIP_VV_Pigeon_04
+            - id: '19620458'
+              model: 5ad0e817-58914c89-00030000
+              name: VIP_VV_Pigeon_05
+            - id: '19620459'
+              model: 5ad0e817-f8914ccc-00030000
+              name: VIP_VV_Pigeon_06
+      VIP/Rural Pack/Vnaoned/VIP_VV_Ravens_MMP.dat:
+        '19620435':
+          model: 5ad0e817-190e856c-00030000
+          name: VIP_VV_Raven_01
+          stages:
+            - id: '19620436'
+              model: 5ad0e817-d90e85cb-00030000
+              name: VIP_VV_Raven_02
+            - id: '19620437'
+              model: 5ad0e817-190e860a-00030000
+              name: VIP_VV_Raven_03
+            - id: '19620438'
+              model: 5ad0e817-b90e86c3-00030000
+              name: VIP_VV_Raven_04
+            - id: '19620439'
+              model: 5ad0e817-190e8914-00030000
+              name: VIP_VV_Raven_05
+            - id: 1962043a
+              model: 5ad0e817-390e881e-00030000
+              name: VIP_VV_Raven_06
+            - id: 1962043b
+              model: 5ad0e817-590e88d3-00030000
+              name: VIP_VV_Raven_07
+            - id: 1962043c
+              model: 5ad0e817-990e888c-00030000
+              name: VIP_VV_Raven_08
+            - id: 1962043d
+              model: 5ad0e817-f90e885b-00030000
+              name: VIP_VV_Raven_09
+      VIP/Rural Pack/Vnaoned/VIP_VV_Varioius_Trees_Seasonal_MMP.dat:
+        '19620286':
+          name: VIP_VV_Cherry_Tree
+        '19620300':
+          name: VIP_VV_Tree_01
+          stages:
+            - id: '19620301'
+              name: VIP_VV_Tree_02
+            - id: '19620302'
+              name: VIP_VV_Tree_03
+            - id: '19620303'
+              name: VIP_VV_Tree_04
+            - id: '19620304'
+              name: VIP_VV_Tree_05
+            - id: '19620305'
+              name: VIP_VV_Tree_06
+            - id: '19620306'
+              name: VIP_VV_Tree_07
     name: VIP Rural Pack v2
     propFamilies:
       VIP/VIPProps/VIP_Props_VV_Cows.dat:
@@ -4200,6 +4773,8 @@ assets:
     assetId: simtropolis/27001-vip-orange-aesculus
     authors:
       - VIP Team
+    categories:
+      - mmps
     category: 113-graphical-mods
     dependencies:
       - sc4evermore/36-lk33-seasonalflorapatch
@@ -4225,6 +4800,41 @@ assets:
     meta:
       timestamp: 2024-12-03T16:03:49.352Z
       version: 1
+    mmps:
+      VIP/Orange/Aesculus/VIP_Or_Aesculus_Seasonal.dat:
+        78da2003:
+          name: VIP_Or_FL_Aesculus_Seasonal_00
+          stages:
+            - id: 78da2004
+              name: VIP_Or_FL_Aesculus_Seasonal_01
+            - id: 78da2005
+              name: VIP_Or_FL_Aesculus_Seasonal_02
+            - id: 78da2006
+              name: VIP_Or_FL_Aesculus_Seasonal_03
+            - id: 78da2007
+              name: VIP_Or_FL_Aesculus_Seasonal_04
+            - id: 78da2008
+              name: VIP_Or_FL_Aesculus_Seasonal_05
+      VIP/Orange/Aesculus/VIP_Or_Aesculus_Summer.dat:
+        78da2009:
+          model: 5ad0e817-7bd15486-00030000
+          name: VIP_Or_FL_Aesculus_Summer_00
+          stages:
+            - id: 78da200a
+              model: 5ad0e817-dbd15dd3-00030000
+              name: VIP_Or_FL_Aesculus_Summer_01
+            - id: 78da200b
+              model: 5ad0e817-fbd1643f-00030000
+              name: VIP_Or_FL_Aesculus_Summer_02
+            - id: 78da200c
+              model: 5ad0e817-fbd07936-00030000
+              name: VIP_Or_FL_Aesculus_Summer_03
+            - id: 78da200d
+              model: 5ad0e817-bbd0f803-00030000
+              name: VIP_Or_FL_Aesculus_Summer_04
+            - id: 78da200e
+              model: 5ad0e817-bbd11d02-00030000
+              name: VIP_Or_FL_Aesculus_Summer_05
     name: VIP Orange Aesculus
     sha256: 23309f32da892f05b60e616de8d7e9caf122017fbeb479526f8b2030ba8671b0
     size: 4770345
@@ -4237,6 +4847,8 @@ assets:
     assetId: simtropolis/27008-vip-orange-fagus
     authors:
       - VIP Team
+    categories:
+      - mmps
     category: 113-graphical-mods
     dependencies:
       - sc4evermore/36-lk33-seasonalflorapatch
@@ -4262,6 +4874,36 @@ assets:
     meta:
       timestamp: 2024-12-03T16:03:49.352Z
       version: 1
+    mmps:
+      VIP/Orange/Fagus/VIP_Or_Fagus_Seasonal.dat:
+        78da2010:
+          name: VIP_Or_FL_Fagus_Seasonal_01
+          stages:
+            - id: 78da2011
+              name: VIP_Or_FL_Fagus_Seasonal_02
+            - id: 78da2012
+              name: VIP_Or_FL_Fagus_Seasonal_03
+            - id: 78da2013
+              name: VIP_Or_FL_Fagus_Seasonal_04
+            - id: 78da2014
+              name: VIP_Or_FL_Fagus_Seasonal_05
+      VIP/Orange/Fagus/VIP_Or_Fagus_Summer.dat:
+        78da2015:
+          model: 5ad0e817-5bd95aea-00030000
+          name: VIP_Or_FL_Fagus_Summer_01
+          stages:
+            - id: 78da2016
+              model: 5ad0e817-fbd9521d-00030000
+              name: VIP_Or_FL_Fagus_Summer_02
+            - id: 78da2017
+              model: 5ad0e817-1bd914e7-00030000
+              name: VIP_Or_FL_Fagus_Summer_03
+            - id: 78da2018
+              model: 5ad0e817-1bd8643a-00030000
+              name: VIP_Or_FL_Fagus_Summer_04
+            - id: 78da2019
+              model: 5ad0e817-7bd85213-00030000
+              name: VIP_Or_FL_Fagus_Summer_05
     name: VIP Orange Fagus
     sha256: 683ea923830085b42c261522347f2a811111c35f6a41ff9219ded958d62498b8
     size: 3517271
@@ -5690,6 +6332,8 @@ assets:
     assetId: simtropolis/28847-vip-orange-pinus-nigra-v2
     authors:
       - VIP Team
+    categories:
+      - mmps
     category: 113-graphical-mods
     dependencies:
       - sc4evermore/36-lk33-seasonalflorapatch
@@ -5714,6 +6358,27 @@ assets:
     meta:
       timestamp: 2024-12-03T16:03:49.352Z
       version: 1
+    mmps:
+      VIP/Orange/Pinus Nigra/VIP_Or_PinusNigra_Evergreen_MMP.dat:
+        78da1030:
+          model: 5ad0e817-1a4ba992-00030000
+          name: Or_TSC_Flplop_PinusNigra
+          stages:
+            - id: 78da1031
+              model: 5ad0e817-1a4ba992-00030000
+              name: zzoff_plop_PinusNigra01
+            - id: 78da1032
+              model: 5ad0e817-9a4c327e-00030000
+              name: zzoff_plop_PinusNigra02
+            - id: 78da1033
+              model: 5ad0e817-ba4bacc6-00030000
+              name: zzoff_plop_PinusNigra03
+            - id: 78da1034
+              model: 5ad0e817-3a4c2724-00030000
+              name: zzoff_plop_PinusNigra04
+            - id: 78da1035
+              model: 5ad0e817-1a4c355d-00030000
+              name: zzoff_plop_PinusNigra05
     name: VIP Orange Pinus Nigra v2
     props:
       VIP/Orange/Pinus Nigra/VIP_Or_PinusNegra_Props.dat:

@@ -92,10 +92,14 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     id: "mmps",
     component: lazy(() => import("./PackageViewMMPs")),
     condition(variantInfo) {
-      return !!variantInfo.mmps?.length
+      const mmps = uniqueBy(values(variantInfo.mmps ?? {}).flatMap(values), mmp => mmp.id)
+
+      return !!mmps.length
     },
     label(t, variantInfo) {
-      return t("mmps", { count: variantInfo.mmps?.length })
+      const mmps = uniqueBy(values(variantInfo.mmps ?? {}).flatMap(values), mmp => mmp.id)
+
+      return t("mmps", { count: mmps.length })
     },
   },
   {

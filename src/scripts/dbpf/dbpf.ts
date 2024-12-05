@@ -11,13 +11,16 @@ import {
 } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import type { LotID } from "@common/lots"
+import type { FloraID } from "@common/mmps"
 import type { PropID } from "@common/props"
 import { Feature } from "@common/types"
 import { parseStringArray } from "@common/utils/types"
+import type { FloraData } from "@node/data/mmps"
 import type { ContentsData } from "@node/data/variants"
 import { loadDBPF } from "@node/dbpf"
 import { getBuildingData } from "@node/dbpf/buildings"
 import { getLotData } from "@node/dbpf/lots"
+import { getFloraData } from "@node/dbpf/mmps"
 import { getPropData } from "@node/dbpf/props"
 import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
 import { get, getBaseTextureId, getString } from "@node/dbpf/utils"
@@ -50,6 +53,13 @@ export async function analyzeSC4Files(
       const file = await openFile(path.join(basePath, filePath), FileOpenMode.READ, file => {
         return loadDBPF(file, { exemplarProperties, loadExemplars: true })
       })
+
+      const mmpChains: {
+        [instanceId in number]?: {
+          next?: number
+          stages: Array<FloraData & { id: FloraID }>
+        }
+      } = {}
 
       for (const entry of values(file.entries)) {
         switch (entry.type) {
@@ -88,6 +98,43 @@ export async function analyzeSC4Files(
                   if (type) {
                     const feature = Feature[`DEVELOPER_${type}`]
                     features.add(feature)
+                  }
+                }
+
+                break
+              }
+
+              case ExemplarType.Flora: {
+                categories.add(CategoryID.MMPS)
+
+                if (!isCohort) {
+                  const floraId = toHex(instanceId, 8) as FloraID
+
+                  const chain: {
+                    next?: number
+                    stages: Array<FloraData & { id: FloraID }>
+                  } = {
+                    next: get(exemplar, ExemplarPropertyID.FloraClusterType),
+                    stages: [{ ...getFloraData(exemplar), id: floraId }],
+                  }
+
+                  // Link to next stage
+                  if (chain.next !== undefined) {
+                    const nextChain = mmpChains[chain.next]
+                    if (nextChain) {
+                      delete mmpChains[chain.next]
+                      chain.next = nextChain.next
+                      chain.stages.push(...nextChain.stages)
+                    }
+                  }
+
+                  // Link to previous stage or start a new chain
+                  const previousChain = values(mmpChains).find(chain => chain.next === instanceId)
+                  if (previousChain) {
+                    previousChain.next = chain.next
+                    previousChain.stages.push(...chain.stages)
+                  } else {
+                    mmpChains[instanceId] = chain
                   }
                 }
 
@@ -169,6 +216,7 @@ export async function analyzeSC4Files(
                 contents.textures[filePath].push(textureId)
               }
             }
+
             break
           }
 
@@ -180,9 +228,17 @@ export async function analyzeSC4Files(
               contents.models[filePath] ??= []
               contents.models[filePath].push(modelId)
             }
+
             break
           }
         }
+      }
+
+      for (const chain of values(mmpChains)) {
+        const [{ id, ...data }, ...stages] = chain.stages
+        contents.mmps ??= {}
+        contents.mmps[filePath] ??= {}
+        contents.mmps[filePath][id] = { ...data, stages: stages.length ? stages : undefined }
       }
     }
   }
