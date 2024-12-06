@@ -25,12 +25,17 @@ import { glob } from "glob"
 
 import type { AssetID } from "@common/assets"
 import type { AuthorData, AuthorID } from "@common/authors"
+import type { BuildingID } from "@common/buildings"
 import {
   type ExemplarPropertyData,
   type ExemplarPropertyInfo,
   ExemplarValueType,
 } from "@common/exemplars"
+import type { FamilyID } from "@common/families"
+import type { LotID } from "@common/lots"
+import type { FloraID } from "@common/mmps"
 import { type PackageID, getOwnerId } from "@common/packages"
+import type { PropID } from "@common/props"
 import { ConfigFormat } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
@@ -44,6 +49,7 @@ import type { VariantData } from "@node/data/variants"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
+
 import { exists, removeIfPresent, toPosix } from "@node/files"
 import { analyzeSC4Files } from "./dbpf/dbpf"
 import { writePackageData } from "./dbpf/packages"
@@ -102,7 +108,7 @@ runIndexer({
     ],
   },
   migrate: {
-    entries(entry, entryId) {
+    entries() {
       return false
     },
   },
@@ -407,6 +413,116 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   const dbPackages = values(dbPackagesConfigs).reduce(
     (result, packages) => Object.assign(result, packages),
     {},
+  )
+
+  const indexedBuildingFamilies: { [id in FamilyID]?: PackageID[] } = {}
+  const indexedBuildings: { [id in BuildingID]?: PackageID[] } = {}
+  const indexedLots: { [id in LotID]?: PackageID[] } = {}
+  const indexedMMPs: { [id in FloraID]?: PackageID[] } = {}
+  const indexedModels: { [id in string]?: PackageID[] } = {}
+  const indexedPropFamilies: { [id in FamilyID]?: PackageID[] } = {}
+  const indexedProps: { [id in PropID]?: PackageID[] } = {}
+  const indexedTextures: { [id in string]?: PackageID[] } = {}
+
+  // Step 4 - Index instances
+  forEach(dbPackages, (packageData, packageId) => {
+    const variants = packageData.variants
+      ? [packageData, ...values(packageData.variants)]
+      : [packageData]
+
+    for (const variantData of variants) {
+      if (variantData.buildingFamilies) {
+        for (const buildingFamilies of values(variantData.buildingFamilies)) {
+          for (const familyId of keys(buildingFamilies)) {
+            if (!indexedBuildingFamilies[familyId]?.includes(packageId)) {
+              indexedBuildingFamilies[familyId] ??= []
+              indexedBuildingFamilies[familyId].push(packageId)
+            }
+          }
+        }
+      }
+
+      if (variantData.buildings) {
+        for (const buildings of values(variantData.buildings)) {
+          for (const buildingId of keys(buildings)) {
+            if (!indexedBuildings[buildingId]?.includes(packageId)) {
+              indexedBuildings[buildingId] ??= []
+              indexedBuildings[buildingId].push(packageId)
+            }
+          }
+        }
+      }
+
+      if (variantData.lots) {
+        for (const lots of values(variantData.lots)) {
+          for (const lotId of keys(lots)) {
+            if (!indexedLots[lotId]?.includes(packageId)) {
+              indexedLots[lotId] ??= []
+              indexedLots[lotId].push(packageId)
+            }
+          }
+        }
+      }
+
+      if (variantData.mmps) {
+        for (const mmps of values(variantData.mmps)) {
+          for (const mmpId of keys(mmps)) {
+            if (!indexedMMPs[mmpId]?.includes(packageId)) {
+              indexedMMPs[mmpId] ??= []
+              indexedMMPs[mmpId].push(packageId)
+            }
+
+            const stages = mmps[mmpId]?.stages
+            if (stages) {
+              for (const { id } of stages) {
+                if (!indexedMMPs[id]?.includes(packageId)) {
+                  indexedMMPs[id] ??= []
+                  indexedMMPs[id].push(packageId)
+                }
+              }
+            }
+          }
+        }
+      }
+
+      if (variantData.propFamilies) {
+        for (const propFamilies of values(variantData.propFamilies)) {
+          for (const familyId of keys(propFamilies)) {
+            if (!indexedPropFamilies[familyId]?.includes(packageId)) {
+              indexedPropFamilies[familyId] ??= []
+              indexedPropFamilies[familyId].push(packageId)
+            }
+          }
+        }
+      }
+
+      if (variantData.props) {
+        for (const props of values(variantData.props)) {
+          for (const propId of keys(props)) {
+            if (!indexedProps[propId]?.includes(packageId)) {
+              indexedProps[propId] ??= []
+              indexedProps[propId].push(packageId)
+            }
+          }
+        }
+      }
+    }
+  })
+
+  await writeConfig(
+    dataAssetsDir,
+    "index",
+    {
+      buildingFamilies: indexedBuildingFamilies,
+      buildings: indexedBuildings,
+      lots: indexedLots,
+      models: indexedModels,
+      mmps: indexedMMPs,
+      propFamilies: indexedPropFamilies,
+      props: indexedProps,
+      textures: indexedTextures,
+    },
+    ConfigFormat.YAML,
   )
 
   // Step 4 - Check configs
