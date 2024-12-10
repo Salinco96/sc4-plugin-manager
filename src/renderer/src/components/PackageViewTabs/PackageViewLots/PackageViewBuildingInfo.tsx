@@ -16,6 +16,7 @@ import { formatNumber, formatSimoleans } from "@utils/format"
 import { useCurrentVariant } from "@utils/packages"
 import { useFeatures, useStore } from "@utils/store"
 
+import { where } from "@salinco/nice-utils"
 import { ExemplarRef } from "../../ExemplarRef"
 
 export interface PackageViewBuildingInfoProps {
@@ -38,12 +39,12 @@ export function PackageViewBuildingInfo({
   setEnabled,
 }: PackageViewBuildingInfoProps): JSX.Element {
   const features = useFeatures()
-  const exemplars = useStore(store => store.exemplars)
+  const exemplars = useStore(store => store.maxis)
   const variantInfo = useCurrentVariant(packageId)
 
-  const fileInfo = variantInfo.files?.find(file => file.path === building.file)
+  const fileInfo = variantInfo.files?.find(where("path", building.file))
 
-  const isMaxisBuilding = !!exemplars.buildings[building.id]
+  const isMaxisBuilding = !!exemplars.buildings.some(where("id", building.id))
   const isMaxisOverride = isMaxisBuilding && building.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 

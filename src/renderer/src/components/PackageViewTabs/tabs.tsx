@@ -1,13 +1,13 @@
-import { size, unionBy, uniqueBy, values } from "@salinco/nice-utils"
+import { get, size, unionBy, uniqueBy, where } from "@salinco/nice-utils"
 import type { TFunction } from "i18next"
 import { type ComponentType, lazy } from "react"
 
 import { isTogglableLot } from "@common/lots"
 import { type PackageID, isLocal, isPatched } from "@common/packages"
-import type { Exemplars } from "@common/state"
 import { type PackageInfo, VariantState } from "@common/types"
-import type { VariantInfo } from "@common/variants"
+import type { ContentsInfo, VariantInfo } from "@common/variants"
 import { type Tag, TagType, createTag } from "@components/Tags/utils"
+
 import { PackageViewSummary } from "./PackageViewSummary"
 
 export interface PackageViewTabInfoProps {
@@ -22,13 +22,13 @@ export type PackageViewTabInfo = {
     variantInfo: VariantInfo,
     packageInfo: PackageInfo,
     dependentPackages: PackageID[],
-    exemplars: Exemplars,
+    maxis: Required<ContentsInfo>,
   ) => string
   labelTag?: (variantInfo: VariantInfo) => Tag | undefined
   condition: (
     variantInfo: VariantInfo,
     dependentPackages: PackageID[],
-    exemplars: Exemplars,
+    maxis: Required<ContentsInfo>,
   ) => boolean
   fullsize?: boolean
 }
@@ -47,59 +47,44 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "lots",
     component: lazy(() => import("./PackageViewLots")),
-    condition(variantInfo, dependentPackages, exemplars) {
-      const maxisLots = values(exemplars.lots)
-
-      const lots = unionBy(
-        values(variantInfo.lots ?? {}).flatMap(values),
-        values(variantInfo.buildings ?? {})
-          .flatMap(values)
-          .flatMap(building => maxisLots.filter(lot => lot.building === building.id)),
-        lot => lot.id,
+    condition(variantInfo, dependentPackages, maxis) {
+      return (
+        !!variantInfo.lots?.length ||
+        !!variantInfo.buildings?.some(building => maxis.lots.some(where("building", building.id)))
+      )
+    },
+    label(t, variantInfo, packageInfo, dependentPackages, maxis) {
+      const ids = unionBy(
+        variantInfo.lots ?? [],
+        variantInfo.buildings?.flatMap(building =>
+          maxis.lots.filter(where("building", building.id)),
+        ) ?? [],
+        get("id"),
       )
 
-      return !!lots.length
-    },
-    label(t, variantInfo, packageInfo, dependentPackages, exemplars) {
-      const maxisLots = values(exemplars.lots)
-
-      const lots = unionBy(
-        values(variantInfo.lots ?? {}).flatMap(values),
-        values(variantInfo.buildings ?? {})
-          .flatMap(values)
-          .flatMap(building => maxisLots.filter(lot => lot.building === building.id)),
-        lot => lot.id,
-      )
-
-      return t("lots", { count: lots.length })
-    },
-  },
-  {
-    id: "props",
-    component: lazy(() => import("./PackageViewProps")),
-    condition(variantInfo) {
-      const props = uniqueBy(values(variantInfo.props ?? {}).flatMap(values), prop => prop.id)
-
-      return !!props.length
-    },
-    label(t, variantInfo) {
-      const props = uniqueBy(values(variantInfo.props ?? {}).flatMap(values), prop => prop.id)
-
-      return t("props", { count: props.length })
+      return t("lots", { count: ids.length })
     },
   },
   {
     id: "mmps",
     component: lazy(() => import("./PackageViewMMPs")),
     condition(variantInfo) {
-      const mmps = uniqueBy(values(variantInfo.mmps ?? {}).flatMap(values), mmp => mmp.id)
-
-      return !!mmps.length
+      return !!variantInfo.mmps?.length
     },
     label(t, variantInfo) {
-      const mmps = uniqueBy(values(variantInfo.mmps ?? {}).flatMap(values), mmp => mmp.id)
-
-      return t("mmps", { count: mmps.length })
+      const ids = uniqueBy(variantInfo.mmps ?? [], get("id"))
+      return t("mmps", { count: ids.length })
+    },
+  },
+  {
+    id: "props",
+    component: lazy(() => import("./PackageViewProps")),
+    condition(variantInfo) {
+      return !!variantInfo.props?.length
+    },
+    label(t, variantInfo) {
+      const ids = uniqueBy(variantInfo.props ?? [], get("id"))
+      return t("props", { count: ids.length })
     },
   },
   {
@@ -167,10 +152,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     id: "options",
     component: lazy(() => import("../Options/PackageOptionsForm")),
     condition(variantInfo) {
-      return (
-        !!variantInfo.options?.length ||
-        values(variantInfo.lots ?? {}).some(lots => values(lots).some(isTogglableLot))
-      )
+      return !!variantInfo.options?.length || !!variantInfo.lots?.some(isTogglableLot)
     },
     label(t) {
       return t("options")

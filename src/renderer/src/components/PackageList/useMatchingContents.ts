@@ -1,27 +1,12 @@
-import type { BuildingInfo } from "@common/buildings"
+import { compact, isDefined, where } from "@salinco/nice-utils"
+import { useMemo } from "react"
+
 import type { FamilyInfo } from "@common/families"
-import type { LotInfo } from "@common/lots"
 import type { FloraID, FloraInfo } from "@common/mmps"
-import type { PropInfo } from "@common/props"
 import type { ContentsInfo } from "@common/variants"
-import { compact, values } from "@salinco/nice-utils"
 import { Page, useLocation } from "@utils/navigation"
 import { isHexSearch, toHexSearch } from "@utils/packages"
 import { usePackageFilters } from "@utils/store"
-import { useMemo } from "react"
-
-// todo: move to utils
-export function iterate<T, R>(
-  iterable: Iterable<T>,
-  fn: (value: T) => R | undefined,
-): R | undefined {
-  for (const value of iterable) {
-    const result = fn(value)
-    if (result !== undefined) {
-      return result
-    }
-  }
-}
 
 export function useMatchingContents({
   buildingFamilies,
@@ -39,59 +24,21 @@ export function useMatchingContents({
     if (isHexSearch(search) && page === Page.Packages) {
       const hex = toHexSearch(search)
 
-      let building: BuildingInfo | undefined
-      let buildingFamily: Omit<FamilyInfo, "file"> | undefined
-      let lot: LotInfo | undefined
-      let mmp: Omit<FloraInfo, "file"> | undefined
-      let prop: PropInfo | undefined
-      let propFamily: Omit<FamilyInfo, "file"> | undefined
+      const building = buildings?.find(where("id", hex))
 
-      if (buildingFamilies) {
-        buildingFamily = iterate(values(buildingFamilies), families => families[hex])
-      }
+      const buildingFamily: Omit<FamilyInfo, "file"> | undefined =
+        buildingFamilies?.find(where("id", hex)) ??
+        (!building && buildings?.some(where("family", hex)) ? { id: hex } : undefined)
 
-      if (buildings) {
-        building = iterate(values(buildings), buildings => buildings[hex])
+      const lot = lots?.find(where("id", hex))
 
-        if (!building && !buildingFamily) {
-          const hasFamily = values(buildings).some(buildings =>
-            values(buildings).some(building => building.family === hex),
-          )
+      const mmp = mmps?.map(mmp => (mmp.id === hex ? mmp : getStage(mmp, hex))).find(isDefined)
 
-          if (hasFamily) {
-            buildingFamily = { id: hex }
-          }
-        }
-      }
+      const prop = props?.find(where("id", hex))
 
-      if (lots) {
-        lot = iterate(values(lots), lots => lots[hex])
-      }
-
-      if (mmps) {
-        mmp = iterate(
-          values(mmps),
-          mmps => mmps[hex] ?? iterate(values(mmps), mmp => getStage(mmp, hex)),
-        )
-      }
-
-      if (propFamilies) {
-        propFamily = iterate(values(propFamilies), families => families[hex])
-      }
-
-      if (props) {
-        prop = iterate(values(props), props => props[hex])
-
-        if (!prop && !propFamily) {
-          const hasFamily = values(props).some(props =>
-            values(props).some(prop => prop.family === hex),
-          )
-
-          if (hasFamily) {
-            propFamily = { id: hex }
-          }
-        }
-      }
+      const propFamily: Omit<FamilyInfo, "file"> | undefined =
+        propFamilies?.find(where("id", hex)) ??
+        (!prop && props?.some(where("family", hex)) ? { id: hex } : undefined)
 
       return compact([
         buildingFamily && {

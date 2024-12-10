@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { forEach, isEnum, mapValues, parseHex, reduce, size } from "@salinco/nice-utils"
+import { collect, entries, forEach, isEnum, mapValues, parseHex, size } from "@salinco/nice-utils"
 
 import { type AuthorData, type AuthorID, type Authors, loadAuthorInfo } from "@common/authors"
 import type { Categories } from "@common/categories"
@@ -12,17 +12,17 @@ import {
 } from "@common/exemplars"
 import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
-import type { Exemplars } from "@common/state"
 import { ConfigFormat } from "@common/types"
 import { loadConfig, readConfig } from "@node/configs"
-import type { ContentsData } from "@node/data/variants"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
 
+import type { ContentsInfo } from "@common/variants"
 import { loadBuildingInfo } from "@node/data/buildings"
 import { loadFamilyInfo } from "@node/data/families"
 import { loadLotInfo } from "@node/data/lots"
 import { loadFloraInfo } from "@node/data/mmps"
+import type { ContentsData } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
 import { fromProfileData } from "./profiles"
 
@@ -106,77 +106,51 @@ export async function loadExemplarProperties(
   }
 }
 
-export async function loadExemplars(
+export async function loadMaxisExemplars(
   context: TaskContext,
   basePath: string,
   categories: Categories,
-): Promise<Exemplars> {
+): Promise<Required<ContentsInfo>> {
   try {
-    const config = await loadConfig<ContentsData>(basePath, FILENAMES.dbExemplars)
+    const config = await loadConfig<ContentsData>(basePath, FILENAMES.dbMaxisExemplars)
 
     if (!config) {
-      throw Error(`Missing config ${FILENAMES.dbExemplars}`)
+      throw Error(`Missing config ${FILENAMES.dbMaxisExemplars}`)
     }
 
     return {
-      buildingFamilies: reduce(
-        config.data.buildingFamilies ?? {},
-        (result, buildingFamilies, file) => ({
-          ...result,
-          ...mapValues(buildingFamilies, (data, id) => loadFamilyInfo(file, id, data)),
-        }),
-        {},
+      buildingFamilies: entries(config.data.buildingFamilies ?? {}).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
       ),
-      buildings: reduce(
-        config.data.buildings ?? {},
-        (result, buildings, file) => ({
-          ...result,
-          ...mapValues(buildings, (data, id) => loadBuildingInfo(file, id, data, categories)),
-        }),
-        {},
+      buildings: entries(config.data.buildings ?? {}).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => loadBuildingInfo(file, id, data, categories)),
       ),
-      lots: reduce(
-        config.data.lots ?? {},
-        (result, lots, file) => ({
-          ...result,
-          ...mapValues(lots, (data, id) => loadLotInfo(file, id, data)),
-        }),
-        {},
+      lots: entries(config.data.lots ?? {}).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => loadLotInfo(file, id, data)),
       ),
-      mmps: reduce(
-        config.data.mmps ?? {},
-        (result, mmps, file) => ({
-          ...result,
-          ...mapValues(mmps, (data, id) => loadFloraInfo(file, id, data)),
-        }),
-        {},
+      mmps: entries(config.data.mmps ?? {}).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => loadFloraInfo(file, id, data)),
       ),
-      propFamilies: reduce(
-        config.data.propFamilies ?? {},
-        (result, propFamilies, file) => ({
-          ...result,
-          ...mapValues(propFamilies, (data, id) => loadFamilyInfo(file, id, data)),
-        }),
-        {},
+      models: {}, // todo
+      propFamilies: entries(config.data.propFamilies ?? {}).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
       ),
-      props: reduce(
-        config.data.props ?? {},
-        (result, props, file) => ({
-          ...result,
-          ...mapValues(props, (data, id) => loadPropInfo(file, id, data)),
-        }),
-        {},
+      props: entries(config.data.props ?? {}).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => loadPropInfo(file, id, data)),
       ),
+      textures: {}, // todo
     }
   } catch (error) {
-    context.error("Failed to load exemplars", error)
+    context.error("Failed to load Maxis exemplars", error)
     return {
-      buildingFamilies: {},
-      buildings: {},
-      lots: {},
-      mmps: {},
-      propFamilies: {},
-      props: {},
+      buildingFamilies: [],
+      buildings: [],
+      lots: [],
+      mmps: [],
+      models: {}, // todo
+      propFamilies: [],
+      props: [],
+      textures: {}, // todo
     }
   }
 }

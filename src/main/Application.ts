@@ -1,8 +1,7 @@
 import fs, { writeFile } from "node:fs/promises"
 import path from "node:path"
-import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
-
 import {
+  $merge,
   type EmptyRecord,
   collect,
   entries,
@@ -16,13 +15,16 @@ import {
   toHex,
   uniqueBy,
   values,
+  where,
 } from "@salinco/nice-utils"
 import log, { type LogLevel } from "electron-log"
+import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
 import escapeHtml from "escape-html"
 import { glob } from "glob"
 
 import type { AssetInfo, Assets } from "@common/assets"
 import type { AuthorID, Authors } from "@common/authors"
+import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
 import { DBPFDataType, type DBPFEntry, type DBPFFile, type TGI, parseTGI } from "@common/dbpf"
 import {
@@ -32,6 +34,7 @@ import {
   getExemplarType,
 } from "@common/exemplars"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
+import type { LotID } from "@common/lots"
 import { type OptionInfo, type Requirements, getOptionValue } from "@common/options"
 import {
   type PackageID,
@@ -50,13 +53,19 @@ import {
   type Profiles,
   createUniqueId,
 } from "@common/profiles"
+import type { PropID } from "@common/props"
 import type { Settings, SettingsData } from "@common/settings"
-import type { ApplicationState, ApplicationStateUpdate, Exemplars } from "@common/state"
+import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex, matchConditions } from "@common/utils/glob"
-import type { FileInfo, VariantID } from "@common/variants"
+import type { ContentsInfo, FileInfo, VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
+import { getAssetKey } from "@node/data/assets"
+import { loadBuildingInfo } from "@node/data/buildings"
+import { loadLotInfo } from "@node/data/lots"
 import type { PackageData } from "@node/data/packages"
+import { writePackageInfo } from "@node/data/packages"
+import { loadPropInfo } from "@node/data/props"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
 import { getBuildingData } from "@node/dbpf/buildings"
 import { getLotData } from "@node/dbpf/lots"
@@ -91,22 +100,14 @@ import {
 import { getPluginsFolderName } from "@utils/linker"
 import { type ToolID, getToolInfo } from "@utils/tools"
 
-import type { BuildingID } from "@common/buildings"
-import type { LotID } from "@common/lots"
-import type { PropID } from "@common/props"
-import { loadBuildingInfo } from "@node/data/buildings"
-import { loadLotInfo } from "@node/data/lots"
-import { writePackageInfo } from "@node/data/packages"
-import { loadPropInfo } from "@node/data/props"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
-import { getAssetKey } from "./data/assets"
 import { type AppConfig, loadAppConfig } from "./data/config"
 import {
   loadAuthors,
   loadCategories,
   loadExemplarProperties,
-  loadExemplars,
+  loadMaxisExemplars,
   loadProfileOptions,
   loadProfileTemplates,
 } from "./data/db"
@@ -146,8 +147,8 @@ interface Loaded {
   authors: Authors
   categories: Categories
   exemplarProperties: Record<string, ExemplarPropertyInfo>
-  exemplars: Exemplars
   features: Features
+  maxis: Required<ContentsInfo>
   packages: Packages
   profiles: Profiles
   profileOptions: OptionInfo[]
@@ -550,7 +551,7 @@ export class Application {
     name: string,
     fromVariantId: VariantID,
   ): Promise<void> {
-    const { exemplarProperties, packages } = await this.load()
+    const { categories, exemplarProperties, packages } = await this.load()
 
     const packageInfo = packages[packageId]
     if (!packageInfo) {
@@ -618,7 +619,7 @@ export class Application {
             update: undefined,
           })
 
-          await this.writePackageConfig(context, packageInfo)
+          await this.writePackageConfig(context, packageInfo, categories)
         } catch (error) {
           // If something goes wrong while installing, fully delete the new variant
           await removeIfPresent(this.getVariantPath(packageId, variantId))
@@ -931,7 +932,7 @@ export class Application {
       authors,
       categories,
       exemplarProperties,
-      exemplars,
+      maxis,
       features,
       packages,
       profiles,
@@ -945,10 +946,10 @@ export class Application {
       categories,
       downloads: {},
       exemplarProperties,
-      exemplars,
       features,
       linker: null,
       loader: null,
+      maxis,
       packages,
       profiles,
       profileOptions,
@@ -1191,7 +1192,7 @@ export class Application {
   }
 
   public async installVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
-    const { assets, exemplarProperties, packages } = await this.load()
+    const { assets, categories, exemplarProperties, packages } = await this.load()
 
     await this.tasks.queue(`install:${packageId}#${variantId}`, {
       handler: async context => {
@@ -1490,7 +1491,7 @@ export class Application {
             }
 
             // Rewrite config
-            await this.writePackageConfig(context, packageInfo)
+            await this.writePackageConfig(context, packageInfo, categories)
           } catch (error) {
             // If something goes wrong while installing, fully delete the new variant
             await removeIfPresent(this.getVariantPath(packageId, variantId))
@@ -1623,9 +1624,9 @@ export class Application {
           if (variantInfo.options) {
             const iniFiles: { [filename: string]: OptionInfo[] } = {}
             for (const option of variantInfo.options) {
-              if (option.filename) {
-                iniFiles[option.filename] ??= []
-                iniFiles[option.filename].push(option)
+              if (option.file) {
+                iniFiles[option.file] ??= []
+                iniFiles[option.file].push(option)
               }
             }
 
@@ -1777,16 +1778,16 @@ export class Application {
         const exemplarProperties = await loadExemplarProperties(context, this.getDatabasePath())
         this.sendStateUpdate({ exemplarProperties })
 
-        const exemplars = await loadExemplars(context, this.getDatabasePath(), categories)
-        this.sendStateUpdate({ exemplars })
+        const maxis = await loadMaxisExemplars(context, this.getDatabasePath(), categories)
+        this.sendStateUpdate({ maxis })
 
         return {
           assets,
           authors,
           categories,
           exemplarProperties,
-          exemplars,
           features,
+          maxis,
           packages,
           profiles,
           profileOptions,
@@ -2119,17 +2120,14 @@ export class Application {
               switch (getExemplarType(entry.id, entry.data)) {
                 case ExemplarType.Building: {
                   const buildingId = instanceId as BuildingID
-                  if (variantInfo.buildings?.[filePath]?.[buildingId]) {
+                  const building = variantInfo.buildings?.find(
+                    where({ file: filePath, id: buildingId }),
+                  )
+
+                  if (building) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    variantInfo.buildings[filePath][buildingId] = {
-                      ...variantInfo.buildings?.[filePath]?.[buildingId],
-                      ...loadBuildingInfo(
-                        filePath,
-                        buildingId,
-                        getBuildingData(exemplar),
-                        categories,
-                      ),
-                    }
+                    const data = getBuildingData(exemplar)
+                    $merge(building, loadBuildingInfo(filePath, buildingId, data, categories))
                   }
 
                   break
@@ -2137,12 +2135,12 @@ export class Application {
 
                 case ExemplarType.LotConfig: {
                   const lotId = instanceId as LotID
-                  if (variantInfo.lots?.[filePath]?.[lotId]) {
+                  const lot = variantInfo.lots?.find(where({ file: filePath, id: lotId }))
+
+                  if (lot) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    variantInfo.lots[filePath][lotId] = {
-                      ...variantInfo.lots?.[filePath]?.[lotId],
-                      ...loadLotInfo(filePath, lotId, getLotData(exemplar)),
-                    }
+                    const data = getLotData(exemplar)
+                    $merge(lot, loadLotInfo(filePath, lotId, data))
                   }
 
                   break
@@ -2150,12 +2148,12 @@ export class Application {
 
                 case ExemplarType.Prop: {
                   const propId = instanceId as PropID
-                  if (variantInfo.props?.[filePath]?.[propId]) {
+                  const prop = variantInfo.lots?.find(where({ file: filePath, id: propId }))
+
+                  if (prop) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    variantInfo.props[filePath][propId] = {
-                      ...variantInfo.props?.[filePath]?.[propId],
-                      ...loadPropInfo(filePath, propId, getPropData(exemplar)),
-                    }
+                    const data = getPropData(exemplar)
+                    $merge(prop, loadPropInfo(filePath, propId, data))
                   }
 
                   break
@@ -2166,7 +2164,7 @@ export class Application {
         }
 
         // Persist config changes and send updates to renderer
-        await this.writePackageConfig(context, packageInfo)
+        await this.writePackageConfig(context, packageInfo, categories)
 
         return file
       },
@@ -2335,7 +2333,7 @@ export class Application {
    */
   public async removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     // TODO: ATM this does not clean obsolete files from Downloads sub-folder!
-    const { packages, profiles } = await this.load()
+    const { categories, packages, profiles } = await this.load()
 
     await this.tasks.queue(`remove:${packageId}#${variantId}`, {
       handler: async context => {
@@ -2389,7 +2387,7 @@ export class Application {
             await removeIfPresent(this.getPackagePath(packageId))
           } else {
             await removeIfPresent(this.getVariantPath(packageId, variantId))
-            await this.writePackageConfig(context, packageInfo)
+            await this.writePackageConfig(context, packageInfo, categories)
           }
 
           // TODO: This assumes that package is disabled in other profiles!
@@ -2985,13 +2983,14 @@ export class Application {
   protected async writePackageConfig(
     context: TaskContext,
     packageInfo: PackageInfo,
+    categories: Categories,
   ): Promise<void> {
     context.debug(`Saving package '${packageInfo.id}'...`)
 
     await writeConfig<PackageData>(
       this.getPackagePath(packageInfo.id),
       FILENAMES.packageConfig,
-      writePackageInfo(packageInfo),
+      writePackageInfo(packageInfo, true, categories),
       ConfigFormat.YAML,
       packageInfo.format,
     )

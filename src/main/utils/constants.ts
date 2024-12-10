@@ -22,7 +22,7 @@ export const FILENAMES = {
   dbAuthors: "authors",
   dbCategories: "configs/categories",
   dbExemplarProperties: "configs/exemplar-properties",
-  dbExemplars: "configs/exemplars",
+  dbMaxisExemplars: "configs/maxis",
   dbProfileOptions: "configs/profile-options",
   appConfig: "config",
   logs: "main.log",

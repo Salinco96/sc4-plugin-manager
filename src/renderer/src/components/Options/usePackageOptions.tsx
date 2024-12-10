@@ -1,7 +1,6 @@
 import { getEnabledLots, isTogglableLot } from "@common/lots"
 import { type OptionID, type OptionInfo, OptionType } from "@common/options"
 import { type PackageID, checkCondition } from "@common/packages"
-import { values } from "@salinco/nice-utils"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 
@@ -41,11 +40,9 @@ export function usePackageOptions(packageId: PackageID): OptionInfo[] {
         ),
       ) ?? []
 
-  const togglableLots = values(variantInfo.lots ?? {})
-    .flatMap(values)
-    .filter(isTogglableLot)
+  const togglableLots = variantInfo.lots?.filter(isTogglableLot)
 
-  if (togglableLots.length) {
+  if (togglableLots?.length) {
     options.push({
       choices: togglableLots.map(lot => ({
         condition: lot.requirements,

@@ -3,27 +3,31 @@ import path from "node:path"
 
 import { input, select } from "@inquirer/prompts"
 import {
+  $init,
   ID,
   containsAny,
+  filterValues,
   forEach,
   forEachAsync,
   getRequired,
+  groupBy,
   indexBy,
-  isEmpty,
   isEqual,
   isString,
   keys,
   mapDefined,
   mapValues,
+  merge,
   parseHex,
   remove,
+  toArray,
   unique,
   values,
 } from "@salinco/nice-utils"
 import { config } from "dotenv"
 import { glob } from "glob"
 
-import type { AssetID } from "@common/assets"
+import type { AssetID, Assets } from "@common/assets"
 import type { AuthorData, AuthorID } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import {
@@ -36,23 +40,23 @@ import type { LotID } from "@common/lots"
 import type { FloraID } from "@common/mmps"
 import { type PackageID, getOwnerId } from "@common/packages"
 import type { PropID } from "@common/props"
-import { ConfigFormat } from "@common/types"
+import { ConfigFormat, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
-import type { FileInfo } from "@common/variants"
+import type { FileInfo, VariantInfo } from "@common/variants"
 import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
-import type { AssetData } from "@node/data/assets"
-import type { PackageData } from "@node/data/packages"
-import { type ContentsData, loadCredits } from "@node/data/variants"
-import type { VariantData } from "@node/data/variants"
+import { type AssetData, loadAssetInfo, writeAssetInfo } from "@node/data/assets"
+import { type PackageData, loadPackageInfo, writePackageInfo } from "@node/data/packages"
+import type { ContentsData } from "@node/data/packages"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 
+import type { Categories } from "@common/categories"
 import { exists, removeIfPresent, toPosix } from "@node/files"
 import { analyzeSC4Files } from "./dbpf/dbpf"
-import { writePackageData } from "./dbpf/packages"
+import { generatePackageInfo } from "./dbpf/packages"
 import {
   promptAuthorName,
   promptPackageId,
@@ -64,12 +68,12 @@ import { SC4EVERMORE } from "./sources/sc4evermore"
 import { SIMTROPOLIS } from "./sources/simtropolis"
 import type {
   EntryID,
+  IndexerCategoryID,
   IndexerEntry,
   IndexerEntryList,
   IndexerOptions,
   IndexerOverride,
   IndexerSource,
-  IndexerSourceCategoryID,
   IndexerSourceID,
   IndexerVariantEntry,
 } from "./types"
@@ -77,7 +81,7 @@ import { getEnvRequired, readHTML, toID, wait } from "./utils"
 
 config({ path: ".env.local" })
 
-const UNCATEGORIZED: IndexerSourceCategoryID = ID("uncategorized")
+const GITHUB: IndexerSourceID = ID("github")
 
 const now = new Date()
 
@@ -109,7 +113,7 @@ runIndexer({
   },
   migrate: {
     entries() {
-      return false
+      // Nothing
     },
   },
   refetchIntervalHours: 300,
@@ -120,16 +124,16 @@ runIndexer({
 async function runIndexer(options: IndexerOptions): Promise<void> {
   const sources = indexBy(options.sources, source => source.id)
 
+  const indexerMeta: {
+    [sourceId in IndexerSourceID | `${IndexerSourceID}/${IndexerCategoryID}`]?: {
+      timestamp?: Date
+    }
+  } = {}
+
   const errors = new Set<string>()
 
   const assetIds: { [entryId in EntryID]?: AssetID } = {}
   const entries: { [entryId in EntryID]?: IndexerEntry } = {}
-
-  const categories: {
-    [sourceId in IndexerSourceID]: {
-      [categoryId in IndexerSourceCategoryID]: IndexerEntryList
-    }
-  } = {}
 
   function getAssetID(entryId: EntryID, hint?: string): AssetID {
     assetIds[entryId] ??= (hint ?? entryId) as AssetID
@@ -137,7 +141,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   }
 
   function getEntry(entryId: EntryID): IndexerEntry {
-    return getRequired(entries, entryId)
+    return getRequired(entryId)(entries)
   }
 
   function getOverride(entryId: EntryID, variant?: string): IndexerOverride | null | undefined {
@@ -149,155 +153,76 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return sources[getSourceId(entryId)]
   }
 
-  const skipped = new Set<EntryID>()
-  const overrides = await loadOverrides()
+  const modifiedPackages = new Set<PackageID>()
+  const skippedEntries = new Set<EntryID>()
 
+  /**
+   * STEP 1 - Load database and indexer files
+   */
+
+  // Step 1a - Load database
+  const assets = await loadAssetsFromDB()
   const dbAuthors = await loadAuthorsFromDB()
-  const dbAssetsConfigs = await loadAssetsFromDB()
-  const dbPackagesConfigs = await loadPackagesFromDB()
+  const categories = await loadCategories()
   const exemplarProperties = await loadExemplarProperties()
+  const overrides = await loadOverrides()
+  const packages = await loadPackagesFromDB(categories)
 
-  // Step 1a - Load existing categorized entries
+  // Step 1b - Load existing categorized entries
   for (const source of options.sources) {
     for (const category of values(source.categories)) {
-      console.debug(`Loading entries from ${source.id}/${category.id}...`)
+      const categoryId = `${source.id}/${category.id}` as const
+      console.debug(`Loading entries from ${categoryId}...`)
 
-      const data = await loadEntries(source.id, category.id)
+      const config = await loadConfig<IndexerEntryList>(dataAssetsDir, categoryId)
 
-      let migrated = false
-      forEach(data.assets, (entry, entryId) => {
-        migrated = options.migrate?.entries?.(entry, entryId) || migrated
-        assetIds[entryId] = entry.assetId
-        entries[entryId] = entry
-      })
-
-      if (migrated) {
-        await writeEntries(source.id, category.id)
+      if (config) {
+        indexerMeta[categoryId] = config.data.meta
+        forEach(config.data.assets, (entry, entryId) => {
+          options.migrate?.entries?.(entry, entryId)
+          assetIds[entryId] = entry.assetId
+          entries[entryId] = entry
+        })
       }
     }
   }
 
-  // Step 1b - Load existing uncategorized entries
+  // Step 1c - Load existing uncategorized entries
   for (const child of await readdir(dataAssetsDir, { withFileTypes: true })) {
     if (child.isDirectory()) {
       const sourceId = child.name as IndexerSourceID
       console.debug(`Loading entries from ${sourceId}...`)
-      const data = await loadEntries(sourceId)
 
-      let migrated = false
-      forEach(data.assets, (entry, entryId) => {
-        migrated = options.migrate?.entries?.(entry, entryId) || migrated
-        assetIds[entryId] = entry.assetId
-        entries[entryId] = entry
-      })
+      const config = await loadConfig<IndexerEntryList>(dataAssetsDir, `${sourceId}/uncategorized`)
 
-      if (migrated) {
-        await writeEntries(sourceId)
+      if (config) {
+        indexerMeta[sourceId] = config.data.meta
+        forEach(config.data.assets, (entry, entryId) => {
+          options.migrate?.entries?.(entry, entryId)
+          assetIds[entryId] = entry.assetId
+          entries[entryId] = entry
+        })
       }
     }
   }
 
-  // Step 1d - Create entries
-  await forEachAsync(dbAssetsConfigs, async (assets, sourceId) => {
-    categories[sourceId] ??= {}
-    categories[sourceId][UNCATEGORIZED] ??= { assets: {} }
-    const data = categories[sourceId][UNCATEGORIZED]
+  /**
+   * STEP 2 - Find and add new or newly-updated entries
+   *
+   * New entries/versions may come from 3 sources:
+   *  - Simtropolis/SC4Evermore listings by category (ordered by last modified time)
+   *  - Assets manually created in database repository, if they have an explicit URL and version
+   *  - Latest release of known GitHub repositories, fetched by GitHub API
+   */
 
-    forEach(assets, (asset, assetId) => {
-      const entryId = getEntryId(assetId)
-      if (asset.url && asset.version && !entries[entryId]) {
-        console.debug(`Creating entry ${entryId} from asset ${assetId}...`)
-
-        // GitHub asset IDs with format github/[user]/[repo]
-        const githubUserId = entryId.match(/^github[/]([^/]+)[/][^/]+$/)?.[1]
-
-        assetIds[entryId] = assetId
-
-        entries[entryId] = {
-          assetId,
-          authors: githubUserId ? [githubUserId] : undefined,
-          download: asset.url,
-          lastModified: new Date(asset.lastModified ?? now),
-          version: String(asset.version),
-        }
-
-        data.assets[entryId] = entries[entryId]
-      }
-    })
-
-    if (!isEmpty(data.assets)) {
-      data.meta ??= {}
-
-      if (shouldRefreshEntryList(data)) {
-        if (sourceId === "github") {
-          await forEachAsync(data.assets, async (entry, entryId) => {
-            const repository =
-              entry.download?.match(/^https:[/][/]github[.]com[/]([^/]+[/][^/]+)/)?.[1] ??
-              entry.repository?.match(/^https:[/][/]github[.]com[/]([^/]+[/][^/]+)/)?.[1] ??
-              entryId.match(/^github[/]([^/]+[/][^/]+)$/)?.[1]
-
-            if (repository) {
-              entry.repository = `https://github.com/${repository}`
-
-              const url = `https://api.github.com/repos/${repository}/releases/latest`
-
-              try {
-                console.debug(`Fetching ${url}...`)
-
-                const res = await get(url, {})
-                const latest = (await res.json()) as {
-                  assets: {
-                    browser_download_url: string
-                    created_at: string
-                    name: string
-                    size: number
-                    updated_at: string
-                  }[]
-                  created_at: string
-                  name: string
-                  published_at: string
-                  tag_name: string
-                }
-
-                const version = latest.tag_name.replace(/^v/i, "") // remove leading v
-                const assetName = entry.download?.split("/").at(-1)?.replace("{version}", version)
-                const asset = latest.assets.find(asset => asset.name === assetName)
-
-                if (asset && (!entry.download || entry.version !== version)) {
-                  entry.download = asset.browser_download_url.replaceAll(version, "{version}")
-                  entry.filename = asset.name
-                  entry.files = undefined
-                  entry.lastModified = new Date(asset.updated_at)
-                  entry.sha256 = undefined
-                  entry.size = undefined
-                  entry.uncompressed = undefined
-                  entry.version = version
-                }
-
-                await wait(3000)
-              } catch (error) {
-                console.error(`Failed to fetch ${url}`, error)
-                errors.add(`Failed to fetch ${url}`)
-              }
-            }
-          })
-        }
-
-        data.meta.timestamp = now
-      }
-
-      await writeEntries(sourceId)
-    }
-  })
-
-  // Step 2 - Fetch new entries
+  // Step 2a - Fetch new entries from Simtropolis/SC4Evermore
   for (const source of options.sources) {
     for (const category of values(source.categories)) {
-      const data = categories[source.id][category.id]
-      const timestamp = data.meta?.timestamp
+      const meta = $init(indexerMeta, `${source.id}/${category.id}`, { timestamp: undefined }) // todo: fix type
+      const lastRefreshed = meta?.timestamp
 
       // Check whether to refetch asset listing for this category
-      if (shouldRefreshEntryList(data)) {
+      if (shouldRefreshEntryList(lastRefreshed)) {
         console.debug(`Fetching entries from ${source.id}/${category.id}...`)
 
         let nPages: number | undefined
@@ -316,7 +241,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           for (const baseEntry of baseEntries) {
             // Results are sorted by last-modified-time (most recent first)
             // If we encounter any item last modified before our last cache time, we are thus done with new items
-            if (source === SIMTROPOLIS && timestamp && baseEntry.lastModified < timestamp) {
+            if (source === SIMTROPOLIS && lastRefreshed && baseEntry.lastModified < lastRefreshed) {
               page = nPages
               continue
             }
@@ -331,29 +256,109 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               category: category.id,
             }
 
-            // Category has changed!
-            const oldCategoryId = entries[entryId]?.category
-            if (oldCategoryId && oldCategoryId !== category.id) {
-              delete categories[source.id][oldCategoryId].assets[entryId]
-              await writeEntries(source.id, oldCategoryId)
-            }
-
             entries[entryId] = entry
-            data.assets[entryId] = entry
           }
 
           // Go easy on the server
           await wait(3000)
         } while (page++ < nPages)
 
-        data.meta ??= {}
-        data.meta.timestamp = now
-
-        // Save changes
-        await writeEntries(source.id, category.id)
+        meta.timestamp = now
       }
     }
   }
+
+  // Step 2b - Create entries for orphan assets with an explicit URL and version
+  await forEachAsync(assets, async (assetInfo, assetId) => {
+    const entryId = getEntryId(assetId)
+
+    if (assetInfo.url && assetInfo.version && !entries[entryId]) {
+      console.debug(`Creating entry ${entryId} from asset ${assetId}...`)
+
+      // GitHub asset IDs with format github/[user]/[repo]
+      const githubUserId = entryId.match(/^github[/]([^/]+)[/][^/]+$/)?.[1]
+
+      assetIds[entryId] = assetId
+      entries[entryId] = {
+        assetId,
+        authors: githubUserId ? [githubUserId] : undefined,
+        download: assetInfo.url,
+        lastModified: new Date(assetInfo.lastModified ?? now),
+        version: assetInfo.version,
+      }
+    }
+  })
+
+  // Step 2c - Check for new Github releases
+  const githubMeta = $init(indexerMeta, GITHUB, { timestamp: undefined }) // todo: fix type
+  if (shouldRefreshEntryList(githubMeta?.timestamp)) {
+    await forEachAsync(entries, async (entry, entryId) => {
+      if (getSourceId(entryId) === GITHUB) {
+        const repository =
+          entry.download?.match(/^https:[/][/]github[.]com[/]([^/]+[/][^/]+)/)?.[1] ??
+          entry.repository?.match(/^https:[/][/]github[.]com[/]([^/]+[/][^/]+)/)?.[1] ??
+          entryId.match(/^github[/]([^/]+[/][^/]+)$/)?.[1]
+
+        if (repository) {
+          entry.repository = `https://github.com/${repository}`
+          const latestUrl = `https://api.github.com/repos/${repository}/releases/latest`
+
+          try {
+            console.debug(`Fetching ${latestUrl}...`)
+            const response = await get(latestUrl)
+
+            const latest: {
+              assets: {
+                browser_download_url: string
+                created_at: string
+                name: string
+                size: number
+                updated_at: string
+              }[]
+              created_at: string
+              name: string
+              published_at: string
+              tag_name: string
+            } = await response.json()
+
+            const version = latest.tag_name.replace(/^v/i, "") // remove leading v
+            const assetName = entry.download?.split("/").at(-1)?.replace("{version}", version)
+            const asset = latest.assets.find(asset => asset.name === assetName)
+
+            if (asset && (!entry.download || entry.version !== version)) {
+              entry.download = asset.browser_download_url.replaceAll(version, "{version}")
+              entry.filename = asset.name
+              entry.files = undefined
+              entry.lastModified = new Date(asset.updated_at)
+              entry.meta = undefined
+              entry.sha256 = undefined
+              entry.size = undefined
+              entry.uncompressed = undefined
+              entry.version = version
+            }
+
+            // GitHub API will limit us if we fetch too quickly
+            await wait(3000)
+          } catch (error) {
+            console.error(`Failed to fetch ${latestUrl}`, error)
+            errors.add(`Failed to fetch ${latestUrl}`)
+          }
+        }
+      }
+    })
+
+    githubMeta.timestamp = now
+  }
+
+  /**
+   * STEP 3 - Download, analyze, and generate package data from entries
+   *
+   * Checking the generated data still takes some manual work, so we need to generate packages bit by bit.
+   * We generate only the packages explicitly included, as well as their (transitive) dependencies.
+   *
+   * All links to another known package in a package's description are detected as dependencies.
+   * Undesired dependencies can be ignored.
+   */
 
   // Step 3 - Resolve entries
   const resolvingEntries = new Set<AssetID>()
@@ -363,176 +368,245 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
   })
 
-  // Analyze base game configs
-  let gameConfig = await loadConfig<ContentsData>(dataAssetsDir, "maxis")
-  if (!gameConfig?.data) {
-    const files = ["SimCity_1.dat"]
-    const { categories, features, ...data } = await analyzeSC4Files(
-      gameDir,
-      files,
-      exemplarProperties,
-    )
-    await writeConfig(dataAssetsDir, "maxis", data, ConfigFormat.YAML)
-    gameConfig = { data, format: ConfigFormat.YAML }
-  }
+  /**
+   * STEP 4 - Write generated data back to files
+   */
 
-  const dbGameConfig = await loadConfig<ContentsData>(dbDir, "configs/exemplars")
-  if (!dbGameConfig?.data) {
-    await writeConfig<ContentsData>(
-      dbDir,
-      "configs/exemplars",
-      // remove some unnecessary fields
+  // Step 4a - Write overrides
+  console.debug("Writing overrides...")
+  await writeOverrides(overrides)
+
+  // Step 4b - Write authors
+  console.debug("Writing authors...")
+  await writeConfig(dbDir, "authors", dbAuthors, ConfigFormat.YAML)
+
+  // Step 4c - Write entries
+  console.debug("Writing entries...")
+  await forEachAsync(indexerMeta, async (meta, key) => {
+    const [sourceId, categoryId] = key.split("/") as [IndexerSourceID, IndexerCategoryID?]
+
+    await writeConfig<IndexerEntryList>(
+      dataAssetsDir,
+      `${sourceId}/${categoryId ?? "uncategorized"}`,
       {
-        buildingFamilies: gameConfig.data.buildingFamilies ?? {},
-        buildings: mapValues(gameConfig.data.buildings ?? {}, buildings =>
-          mapValues(buildings, ({ model, ...data }) => data),
+        assets: filterValues(
+          entries,
+          (entry, entryId) => getSourceId(entryId) === sourceId && entry.category === categoryId,
         ),
-        lots: mapValues(gameConfig.data.lots ?? {}, lots =>
-          mapValues(lots, ({ props, textures, ...data }) => data),
-        ),
-        mmps: mapValues(gameConfig.data.mmps ?? {}, mmps =>
-          mapValues(mmps, ({ model, stages, ...data }) => ({
-            ...data,
-            stages: stages?.map(({ model, ...stage }) => stage),
-          })),
-        ),
-        propFamilies: gameConfig.data.propFamilies ?? {},
-        props: mapValues(gameConfig.data.props ?? {}, props =>
-          mapValues(props, ({ model, ...data }) => data),
-        ),
+        meta,
       },
+      ConfigFormat.YAML,
+    )
+  })
+
+  // Step 4c - Write asset changes
+  console.debug("Writing assets...")
+  const assetsBySource = groupBy(values(assets), assetInfo => getSourceId(assetInfo.id))
+  await forEachAsync(assetsBySource, async (assets, sourceId) => {
+    await writeConfig<{ [assetId in AssetID]?: AssetData }>(
+      dbAssetsDir,
+      sourceId,
+      mapValues(
+        indexBy(assets, assetInfo => assetInfo.id),
+        writeAssetInfo,
+      ),
+      ConfigFormat.YAML,
+    )
+  })
+
+  // Step 4d - Write package changes
+  console.debug("Writing packages...")
+  const modifiedAuthors = new Set(toArray(modifiedPackages).map(getOwnerId))
+  for (const authorId of modifiedAuthors) {
+    await writeConfig<{ [packageId in PackageID]?: PackageData }>(
+      dbPackagesDir,
+      authorId,
+      mapValues(
+        filterValues(packages, info => getOwnerId(info.id) === authorId),
+        info => writePackageInfo(info, false, categories),
+      ),
       ConfigFormat.YAML,
     )
   }
 
-  const dbAssets = values(dbAssetsConfigs).reduce(
-    (result, assets) => Object.assign(result, assets),
-    {},
-  )
+  /**
+   * STEP 5 - Analyze Maxis files if necessary
+   */
 
-  const dbPackages = values(dbPackagesConfigs).reduce(
-    (result, packages) => Object.assign(result, packages),
-    {},
-  )
+  // Step 5a - Analyze Maxis files
+  const indexerMaxisConfig = await loadConfig<ContentsData>(dataAssetsDir, "maxis")
+  let maxisData = indexerMaxisConfig?.data
+  if (!maxisData) {
+    console.debug("Analyzing SimCity_1.dat...")
 
-  const indexedBuildingFamilies: { [id in FamilyID]?: PackageID[] } = {}
-  const indexedBuildings: { [id in BuildingID]?: PackageID[] } = {}
-  const indexedLots: { [id in LotID]?: PackageID[] } = {}
-  const indexedMMPs: { [id in FloraID]?: PackageID[] } = {}
-  const indexedModels: { [id in string]?: PackageID[] } = {}
-  const indexedPropFamilies: { [id in FamilyID]?: PackageID[] } = {}
-  const indexedProps: { [id in PropID]?: PackageID[] } = {}
-  const indexedTextures: { [id in string]?: PackageID[] } = {}
+    const { categories, features, ...data } = await analyzeSC4Files(
+      gameDir,
+      // Only SimCity_1.dat contains relevant data
+      ["SimCity_1.dat"],
+      exemplarProperties,
+    )
 
-  // Step 4 - Index instances
-  forEach(dbPackages, (packageData, packageId) => {
-    const variants = packageData.variants
-      ? [packageData, ...values(packageData.variants)]
-      : [packageData]
+    await writeConfig(dataAssetsDir, "maxis", data, ConfigFormat.YAML)
+    maxisData = data
+  }
 
-    for (const variantData of variants) {
-      if (variantData.buildingFamilies) {
-        for (const buildingFamilies of values(variantData.buildingFamilies)) {
-          for (const familyId of keys(buildingFamilies)) {
-            if (!indexedBuildingFamilies[familyId]?.includes(packageId)) {
-              indexedBuildingFamilies[familyId] ??= []
-              indexedBuildingFamilies[familyId].push(packageId)
+  // Step 5b - Generate Maxis data
+  const dbMaxisConfig = await loadConfig<ContentsData>(dbDir, "configs/maxis")
+  if (!dbMaxisConfig?.data) {
+    console.debug("Writing Maxis contents...")
+
+    // remove some unnecessary fields
+    const data: ContentsData = {
+      buildingFamilies: maxisData.buildingFamilies ?? {},
+      buildings: mapValues(maxisData.buildings ?? {}, buildings =>
+        mapValues(buildings, ({ model, ...data }) => data),
+      ),
+      lots: mapValues(maxisData.lots ?? {}, lots =>
+        mapValues(lots, ({ props, textures, ...data }) => data),
+      ),
+      mmps: mapValues(maxisData.mmps ?? {}, mmps =>
+        mapValues(mmps, ({ model, stages, ...data }) => ({
+          ...data,
+          stages: stages?.map(({ model, ...stage }) => stage),
+        })),
+      ),
+      propFamilies: maxisData.propFamilies ?? {},
+      props: mapValues(maxisData.props ?? {}, props =>
+        mapValues(props, ({ model, ...data }) => data),
+      ),
+    }
+
+    await writeConfig<ContentsData>(dbDir, "configs/maxis", data, ConfigFormat.YAML)
+  }
+
+  /**
+   * STEP 6 - Create a reverse-index of TGIs to the packages containing them
+   */
+
+  if (modifiedPackages.size) {
+    type Index = {
+      buildingFamilies: { [id in FamilyID]?: PackageID[] }
+      buildings: { [id in BuildingID]?: PackageID[] }
+      lots: { [id in LotID]?: PackageID[] }
+      mmps: { [id in FloraID]?: PackageID[] }
+      models: { [id in string]?: PackageID[] }
+      propFamilies: { [id in FamilyID]?: PackageID[] }
+      props: { [id in PropID]?: PackageID[] }
+      textures: { [id in string]?: PackageID[] }
+    }
+
+    const index: Index = {
+      buildingFamilies: {},
+      buildings: {},
+      lots: {},
+      mmps: {},
+      models: {},
+      propFamilies: {},
+      props: {},
+      textures: {},
+    }
+
+    // Step 6a - Index instances
+    console.debug("Indexing contents...")
+    forEach(packages, (packageInfo, packageId) => {
+      forEach(packageInfo.variants, variantInfo => {
+        if (variantInfo.buildingFamilies) {
+          for (const { id } of variantInfo.buildingFamilies) {
+            if (!index.buildingFamilies[id]?.includes(packageId)) {
+              index.buildingFamilies[id] ??= []
+              index.buildingFamilies[id].push(packageId)
             }
           }
         }
-      }
 
-      if (variantData.buildings) {
-        for (const buildings of values(variantData.buildings)) {
-          for (const buildingId of keys(buildings)) {
-            if (!indexedBuildings[buildingId]?.includes(packageId)) {
-              indexedBuildings[buildingId] ??= []
-              indexedBuildings[buildingId].push(packageId)
+        if (variantInfo.buildings) {
+          for (const { id } of variantInfo.buildings) {
+            if (!index.buildings[id]?.includes(packageId)) {
+              index.buildings[id] ??= []
+              index.buildings[id].push(packageId)
             }
           }
         }
-      }
 
-      if (variantData.lots) {
-        for (const lots of values(variantData.lots)) {
-          for (const lotId of keys(lots)) {
-            if (!indexedLots[lotId]?.includes(packageId)) {
-              indexedLots[lotId] ??= []
-              indexedLots[lotId].push(packageId)
+        if (variantInfo.lots) {
+          for (const { id } of variantInfo.lots) {
+            if (!index.lots[id]?.includes(packageId)) {
+              index.lots[id] ??= []
+              index.lots[id].push(packageId)
             }
           }
         }
-      }
 
-      if (variantData.mmps) {
-        for (const mmps of values(variantData.mmps)) {
-          for (const mmpId of keys(mmps)) {
-            if (!indexedMMPs[mmpId]?.includes(packageId)) {
-              indexedMMPs[mmpId] ??= []
-              indexedMMPs[mmpId].push(packageId)
+        if (variantInfo.models) {
+          for (const id of values(variantInfo.models).flat()) {
+            if (!index.models[id]?.includes(packageId)) {
+              index.models[id] ??= []
+              index.models[id].push(packageId)
+            }
+          }
+        }
+
+        if (variantInfo.mmps) {
+          for (const { id, stages } of variantInfo.mmps) {
+            if (!index.mmps[id]?.includes(packageId)) {
+              index.mmps[id] ??= []
+              index.mmps[id].push(packageId)
             }
 
-            const stages = mmps[mmpId]?.stages
             if (stages) {
               for (const { id } of stages) {
-                if (!indexedMMPs[id]?.includes(packageId)) {
-                  indexedMMPs[id] ??= []
-                  indexedMMPs[id].push(packageId)
+                if (!index.mmps[id]?.includes(packageId)) {
+                  index.mmps[id] ??= []
+                  index.mmps[id].push(packageId)
                 }
               }
             }
           }
         }
-      }
 
-      if (variantData.propFamilies) {
-        for (const propFamilies of values(variantData.propFamilies)) {
-          for (const familyId of keys(propFamilies)) {
-            if (!indexedPropFamilies[familyId]?.includes(packageId)) {
-              indexedPropFamilies[familyId] ??= []
-              indexedPropFamilies[familyId].push(packageId)
+        if (variantInfo.propFamilies) {
+          for (const { id } of variantInfo.propFamilies) {
+            if (!index.propFamilies[id]?.includes(packageId)) {
+              index.propFamilies[id] ??= []
+              index.propFamilies[id].push(packageId)
             }
           }
         }
-      }
 
-      if (variantData.props) {
-        for (const props of values(variantData.props)) {
-          for (const propId of keys(props)) {
-            if (!indexedProps[propId]?.includes(packageId)) {
-              indexedProps[propId] ??= []
-              indexedProps[propId].push(packageId)
+        if (variantInfo.props) {
+          for (const { id } of variantInfo.props) {
+            if (!index.props[id]?.includes(packageId)) {
+              index.props[id] ??= []
+              index.props[id].push(packageId)
             }
           }
         }
-      }
-    }
-  })
 
-  await writeConfig(
-    dataAssetsDir,
-    "index",
-    {
-      buildingFamilies: indexedBuildingFamilies,
-      buildings: indexedBuildings,
-      lots: indexedLots,
-      models: indexedModels,
-      mmps: indexedMMPs,
-      propFamilies: indexedPropFamilies,
-      props: indexedProps,
-      textures: indexedTextures,
-    },
-    ConfigFormat.YAML,
-  )
+        if (variantInfo.textures) {
+          for (const id of values(variantInfo.textures).flat()) {
+            if (!index.textures[id]?.includes(packageId)) {
+              index.textures[id] ??= []
+              index.textures[id].push(packageId)
+            }
+          }
+        }
+      })
+    })
 
-  // Step 4 - Check configs
-  await forEachAsync(dbPackages, checkPackage)
+    // Step 6b - Generate index file
+    console.debug("Writing index...")
+    await writeConfig(dataAssetsDir, "index", index, ConfigFormat.YAML)
+  }
 
-  // Step 5 - Write changes
-  await writeConfig(dbDir, "authors", dbAuthors, ConfigFormat.YAML)
-  await writeOverrides(overrides)
+  /**
+   * STEP 7 - Check the consistency of data repository (e.g. dependencies must exist)
+   */
+  console.debug("Checking packages...")
+  await forEachAsync(packages, checkPackage)
 
-  // Step 6 - Show errors
+  /**
+   * STEP 8 - Show all errors encountered during this run
+   */
   if (errors.size) {
     const n = 100
     console.error("".padEnd(n, "*"))
@@ -544,77 +618,92 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
   }
 
-  function shouldRefreshEntryList(data: IndexerEntryList): boolean {
+  function shouldRefreshEntryList(lastRefreshed: Date | undefined): boolean {
     const interval = options.refetchIntervalHours * 60 * 60 * 1000
-    return !data.meta?.timestamp || now.getTime() >= data.meta.timestamp.getTime() + interval
+    return !lastRefreshed || now.getTime() >= lastRefreshed.getTime() + interval
   }
 
-  async function checkPackage(packageData: PackageData, packageId: PackageID): Promise<void> {
-    await checkVariant(packageData, packageId)
-
-    if (packageData.variants) {
-      await forEachAsync(packageData.variants, async (variantData, variantId) => {
-        await checkVariant(variantData, packageId, variantId)
-      })
-    }
+  async function checkPackage(packageInfo: PackageInfo): Promise<void> {
+    await forEachAsync(packageInfo.variants, async variantInfo => {
+      await checkVariant(variantInfo, packageInfo.id)
+    })
   }
 
-  async function checkVariant(
-    variantData: VariantData,
-    packageId: PackageID,
-    variantId?: VariantID,
-  ): Promise<void> {
-    const prefix = variantId ? `In variant ${packageId}#${variantId}` : `In package ${packageId}`
+  async function checkVariant(variantInfo: VariantInfo, packageId: PackageID): Promise<void> {
+    const prefix = `In variant ${packageId}#${variantInfo.id}`
 
-    if (variantData.assets) {
-      for (const asset of variantData.assets) {
-        const assetId = isString(asset) ? asset : asset.id
-        if (!dbAssets[assetId]) {
-          errors.add(`${prefix} - Asset ${assetId} does not exist`)
+    if (variantInfo.assets) {
+      for (const asset of variantInfo.assets) {
+        if (!assets[asset.id]) {
+          errors.add(`${prefix} - Asset ${asset.id} does not exist`)
         }
       }
     }
 
-    const credits = unique([
-      { id: getOwnerId(packageId) },
-      ...loadCredits(variantData.credits ?? []),
-      ...loadCredits(variantData.thanks ?? []),
+    const authors = unique([
+      ...variantInfo.authors,
+      ...mapDefined(variantInfo.credits ?? [], credit => credit.id),
+      ...mapDefined(variantInfo.thanks ?? [], credit => credit.id),
     ])
 
-    for (const credit of credits) {
-      if (credit.id && !dbAuthors[credit.id]) {
-        if (await promptYesNo(`Create author ${credit.id}?`, true)) {
-          dbAuthors[credit.id] = {
-            name: await promptAuthorName(credit.id),
+    for (const authorId of authors) {
+      if (!dbAuthors[authorId]) {
+        if (await promptYesNo(`Create author ${authorId}?`, true)) {
+          dbAuthors[authorId] = {
+            name: await promptAuthorName(authorId),
           }
         } else {
-          errors.add(`${prefix} - Author ${credit.id} does not exist`)
+          errors.add(`${prefix} - Author ${authorId} does not exist`)
         }
       }
     }
 
-    if (variantData.dependencies) {
-      for (const dependency of variantData.dependencies) {
-        const dependencyId = isString(dependency) ? dependency : dependency.id
-        if (!dbPackages[dependencyId]) {
-          errors.add(`${prefix} - Dependency ${dependencyId} does not exist`)
+    if (variantInfo.categories) {
+      for (const category of variantInfo.categories) {
+        if (!categories[category]) {
+          errors.add(`${prefix} - Category ${category} does not exist`)
         }
       }
     }
 
-    if (isString(variantData.deprecated)) {
-      if (!dbPackages[variantData.deprecated]) {
-        errors.add(`${prefix} - Optional dependency ${variantData.deprecated} does not exist`)
+    if (variantInfo.dependencies) {
+      for (const dependency of variantInfo.dependencies) {
+        if (!packages[dependency.id]) {
+          errors.add(`${prefix} - Dependency ${dependency.id} does not exist`)
+        } else {
+          const features = packages[dependency.id]?.features
+          if (features?.length) {
+            errors.add(
+              `${prefix} - Dependency ${dependency.id} contains features: ${features.join(", ")} - Use "requirements" or "optional" instead:
+
+  optional:
+    - ${dependency.id}
+
+  requirements:
+${features.map(feature => `    ${feature}: true`).join("\n")}`,
+            )
+          }
+        }
       }
     }
 
-    if (variantData.optional) {
-      for (const dependencyId of variantData.optional) {
-        if (!dbPackages[dependencyId]) {
+    if (isString(variantInfo.deprecated)) {
+      if (!packages[variantInfo.deprecated]) {
+        errors.add(`${prefix} - Package ${variantInfo.deprecated} does not exist`)
+      }
+    }
+
+    // todo: check features
+
+    if (variantInfo.optional) {
+      for (const dependencyId of variantInfo.optional) {
+        if (!packages[dependencyId]) {
           errors.add(`${prefix} - Optional dependency ${dependencyId} does not exist`)
         }
       }
     }
+
+    // todo: check that dependencies contain the needed props/models/textures...
   }
 
   function includeEntry(entry: IndexerEntry, entryId: EntryID): boolean {
@@ -626,8 +715,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       return true
     }
 
-    const sourceId = getSourceId(entryId)
-    if (dbAssetsConfigs[sourceId]?.[entry.assetId]) {
+    if (assets[entry.assetId]) {
       return true
     }
 
@@ -680,14 +768,13 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     let override = getOverride(entryId)
 
     // Skip ignored entry
-    if (override === null || skipped.has(entryId)) {
+    if (override === null || skippedEntries.has(entryId)) {
       console.warn(`Skipping ${assetId}...`)
       return
     }
 
     const entry = getEntry(entryId)
     const source = getSource(entryId)
-    const sourceId = getSourceId(entryId)
 
     // Handle dependency loop
     if (resolvingEntries.has(assetId)) {
@@ -725,7 +812,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
         // Skip this time only
         case "skip": {
-          skipped.add(entryId)
+          skippedEntries.add(entryId)
           console.warn(`Skipping ${assetId}...`)
           return
         }
@@ -798,9 +885,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         entry.meta ??= {}
         entry.meta.timestamp ??= now
       }
-
-      // Save changes
-      await writeEntries(getSourceId(entryId), entry.category)
     }
 
     // Download and analyze contents if outdated
@@ -832,60 +916,40 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         entry.meta.timestamp = now
         entry.meta.version = options.version
       }
-
-      // Save changes
-      await writeEntries(sourceId, entry.category)
     }
 
     // Resolve dependencies recursively
     const dependencies = new Set<AssetID | PackageID>()
 
     if (entry.dependencies) {
-      for (const dependency of entry.dependencies) {
-        const sourceId = getSourceId(dependency as EntryID)
-        if (dbPackagesConfigs[sourceId]?.[dependency as PackageID]) {
-          dependencies.add(dependency as PackageID)
+      for (const dependencyId of entry.dependencies) {
+        if (packages[dependencyId as PackageID]) {
+          dependencies.add(dependencyId as PackageID)
         } else {
-          const dependencyEntryId = getEntryId(dependency)
+          const dependencyEntryId = getEntryId(dependencyId)
           const resolvedDependency = await resolveEntry(dependencyEntryId)
           if (resolvedDependency) {
             dependencies.add(resolvedDependency.assetId)
           } else {
-            dependencies.add(getAssetID(dependencyEntryId, dependency))
+            dependencies.add(getAssetID(dependencyEntryId, dependencyId))
           }
         }
       }
+
+      if (!isEqual(entry.dependencies, Array.from(dependencies))) {
+        entry.dependencies = Array.from(dependencies)
+        entry.meta.timestamp = now
+      }
     }
 
-    if (!isEqual(entry.dependencies, Array.from(dependencies))) {
-      entry.dependencies = Array.from(dependencies)
-      entry.meta.timestamp = now
-
-      // Save changes
-      await writeEntries(sourceId, entry.category)
-    }
-
-    // Generate packages if outdated
+    // Generate packages
     if (entry.variants) {
-      // Resolve "default" first
-      if (entry.variants.default) {
+      for (const variant of keys(entry.variants)) {
         try {
-          await generatePackages(entryId, "default")
+          await generatePackages(entryId, variant)
         } catch (error) {
           console.error(error)
           errors.add((error as Error).message)
-        }
-      }
-
-      // Resolve others
-      for (const variant of keys(entry.variants)) {
-        if (variant !== "default") {
-          try {
-            await generatePackages(entryId, variant)
-          } catch (error) {
-            console.error(error)
-            errors.add((error as Error).message)
-          }
         }
       }
     } else {
@@ -1076,7 +1140,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     const assetId = getAssetID(entryId)
     const entry = getEntry(entryId)
     const source = getSource(entryId)
-    const sourceId = getSourceId(entryId)
 
     const entryOverride = getOverride(entryId)
     const variantOverride = getOverride(entryId, variant)
@@ -1089,7 +1152,13 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     if (!variantEntry?.files) {
-      throw Error(`Expected files to exist for ${variantAssetId}`)
+      throw Error(`Missing files for ${variantAssetId}`)
+    }
+
+    const downloadUrl = variantEntry.download ?? source?.getDownloadUrl(assetId, variant)
+
+    if (!downloadUrl) {
+      throw Error(`Missing download URL for ${variantAssetId}`)
     }
 
     if (!entry.version) {
@@ -1101,16 +1170,15 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     // Create or update asset data
-    const assetData = dbAssetsConfigs[sourceId]?.[variantAssetId] ?? {}
-    assetData.lastModified = entry.lastModified
-    assetData.sha256 = variantEntry.sha256
-    assetData.size = variantEntry.size
-    assetData.uncompressed = variantEntry.uncompressed
-    assetData.url = variantEntry.download
-    assetData.version = entry.version
-    dbAssetsConfigs[sourceId] ??= {}
-    dbAssetsConfigs[sourceId][variantAssetId] = assetData
-    await writeConfig(dbAssetsDir, sourceId, dbAssetsConfigs[sourceId], ConfigFormat.YAML)
+    assets[variantAssetId] = merge(assets[variantAssetId], {
+      downloaded: {},
+      id: variantAssetId,
+      lastModified: entry.lastModified,
+      size: entry.size,
+      uncompressed: entry.uncompressed,
+      url: downloadUrl,
+      version: entry.version,
+    })
 
     if (basePackageId === undefined) {
       basePackageId = await getPackageId(entry, entryId)
@@ -1166,25 +1234,30 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         throw Error(`Expected override to exist for ${variantAssetId}`)
       }
 
-      const dependencies = mapDefined(entry.dependencies ?? [], dependency => {
-        const sourceId = getSourceId(dependency as EntryID)
-
-        if (dbPackagesConfigs[sourceId]?.[dependency as PackageID]) {
-          return dependency as PackageID
+      const dependencies = mapDefined(entry.dependencies ?? [], dependencyId => {
+        if (packages[dependencyId as PackageID]) {
+          return dependencyId as PackageID
         }
 
-        return getOverride(getEntryId(dependency))?.packageId
+        return getOverride(getEntryId(dependencyId))?.packageId
       })
 
       const ownerId = getOwnerId(packageId)
       const authors = remove(mapDefined(entry.authors ?? [], getAuthorId), ownerId)
 
-      const packageData = dbPackagesConfigs[ownerId]?.[packageId] ?? {}
-      const variantData = packageData.variants?.[variantId]
+      packages[packageId] ??= {
+        id: packageId,
+        name: entry.name ?? packageId,
+        status: {},
+        variants: {},
+      }
+
+      const packageInfo = packages[packageId]
+      const variantInfo = packageInfo.variants[variantId]
 
       // Create or update package/variant data
-      if (!variantData?.lastGenerated || variantData.lastGenerated < entry.meta.timestamp) {
-        if (variantData) {
+      if (!variantInfo?.lastGenerated || variantInfo.lastGenerated < entry.meta.timestamp) {
+        if (variantInfo) {
           console.debug(`Updating variant ${packageId}#${variantId}...`)
         } else {
           console.debug(`Creating variant ${packageId}#${variantId}...`)
@@ -1244,9 +1317,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           excludedFiles = variantEntry.files.filter(file => !matchedFiles.has(file))
         }
 
-        dbPackagesConfigs[ownerId] ??= {}
-        dbPackagesConfigs[ownerId][packageId] = writePackageData(
-          packageData,
+        packages[packageId] = generatePackageInfo(
+          packageInfo,
           packageId,
           assetId,
           source,
@@ -1258,34 +1330,15 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           packageFiles,
           authors,
           dependencies,
+          categories,
           now,
         )
 
-        // Save changes
-        await writeConfig(dbPackagesDir, ownerId, dbPackagesConfigs[ownerId], ConfigFormat.YAML)
+        modifiedPackages.add(packageId)
       }
     }
 
     return true
-  }
-
-  async function loadEntries(
-    sourceId: IndexerSourceID,
-    categoryId: IndexerSourceCategoryID = UNCATEGORIZED,
-  ): Promise<IndexerEntryList> {
-    const config = await loadConfig<IndexerEntryList>(dataAssetsDir, `${sourceId}/${categoryId}`)
-    const data = config?.data ?? { assets: {} }
-    categories[sourceId] ??= {}
-    categories[sourceId][categoryId] = data
-    return data
-  }
-
-  async function writeEntries(
-    sourceId: IndexerSourceID,
-    categoryId: IndexerSourceCategoryID = UNCATEGORIZED,
-  ): Promise<void> {
-    const data = categories[sourceId][categoryId]
-    await writeConfig(dataAssetsDir, `${sourceId}/${categoryId}`, data, ConfigFormat.YAML)
   }
 
   async function loadOverrides(): Promise<{
@@ -1344,7 +1397,7 @@ function getExePath(exe: string): string {
 }
 
 async function loadExemplarProperties(): Promise<{ [id: number]: ExemplarPropertyInfo }> {
-  console.debug("Loading authors...")
+  console.debug("Loading exemplar properties...")
   const config = await loadConfig<{ [id: string]: ExemplarPropertyData }>(
     dbDir,
     "configs/exemplar-properties",
@@ -1378,43 +1431,50 @@ async function loadAuthorsFromDB(): Promise<{ [authorId: AuthorID]: AuthorData }
   return config?.data ?? {}
 }
 
-async function loadAssetsFromDB(): Promise<{
-  [sourceId: IndexerSourceID]: { [assetId in AssetID]?: AssetData }
-}> {
-  const configs: { [sourceId: IndexerSourceID]: { [assetId in AssetID]?: AssetData } } = {}
-
-  const filePaths = await glob("*.yaml", { cwd: dbAssetsDir })
-  for (const filePath of filePaths) {
-    const sourceId = path.basename(filePath, path.extname(filePath)) as IndexerSourceID
-    console.debug(`Loading assets from ${sourceId}...`)
-    const config = await loadConfig<{ [assetId in AssetID]?: AssetData }>(dbAssetsDir, sourceId)
-    configs[sourceId] = config?.data ?? {}
-  }
-
-  return configs
+async function loadCategories(): Promise<Categories> {
+  console.debug("Loading categories...")
+  const config = await loadConfig<Categories>(dbDir, "configs/categories")
+  return config?.data ?? {}
 }
 
-async function loadPackagesFromDB(): Promise<{
-  [authorId: string]: { [packageId in PackageID]?: PackageData }
-}> {
-  const configs: { [authorId: string]: { [packageId in PackageID]?: PackageData } } = {}
+async function loadAssetsFromDB(): Promise<Assets> {
+  const assets: Assets = {}
+
+  const filePaths = await glob("*.yaml", { cwd: dbAssetsDir })
+  for (const filePath of filePaths.reverse()) {
+    const sourceId = path.basename(filePath, path.extname(filePath)) as IndexerSourceID
+    console.debug(`Loading assets from ${sourceId}...`)
+    const fullPath = path.join(dbAssetsDir, filePath)
+    const data = await readConfig<{ [assetId in AssetID]?: AssetData }>(fullPath)
+    forEach(data, (assetData, assetId) => {
+      assets[assetId] = loadAssetInfo(assetId, assetData)
+    })
+  }
+
+  return assets
+}
+
+async function loadPackagesFromDB(categories: Categories): Promise<Packages> {
+  const packages: Packages = {}
 
   const filePaths = await glob("*.yaml", { cwd: dbPackagesDir, nodir: true })
-  for (const filePath of filePaths) {
+  for (const filePath of filePaths.reverse()) {
     const authorId = path.basename(filePath, path.extname(filePath))
     console.debug(`Loading packages from ${authorId}...`)
     const fullPath = path.join(dbPackagesDir, filePath)
     const data = await readConfig<{ [packageId in PackageID]?: PackageData }>(fullPath)
-    configs[authorId] = data
+    forEach(data, (packageData, packageId) => {
+      packages[packageId] = loadPackageInfo(packageId, packageData, categories)
+    })
   }
 
-  return configs
+  return packages
 }
 
 function getEntryId(assetId: string): EntryID {
   return (assetId.match(/^([a-z0-9-]+[/]\d+)(-[^/]*)?$/)?.[1] ?? assetId) as EntryID
 }
 
-function getSourceId(entryId: EntryID): IndexerSourceID {
-  return entryId.split("/")[0] as IndexerSourceID
+function getSourceId(assetId: AssetID | EntryID): IndexerSourceID {
+  return assetId.split("/")[0] as IndexerSourceID
 }

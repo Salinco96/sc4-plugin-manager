@@ -1,5 +1,5 @@
 import { List } from "@mui/material"
-import { collect, groupBy, values } from "@salinco/nice-utils"
+import { collect, get, groupBy } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
 import { checkFile } from "@common/packages"
@@ -43,21 +43,18 @@ export default function PackageViewMMPs({ packageId }: PackageViewTabInfoProps):
         .map(file => file.path),
     )
 
-    return collect(
-      groupBy(values(variantInfo.mmps ?? {}).flatMap(values), mmp => mmp.id),
-      (mmps, mmpId) => {
-        if (mmps.length !== 1) {
-          const included = mmps.filter(mmp => includedFiles.has(mmp.file))
-          if (included.length === 1) {
-            return included[0]
-          }
-
-          console.warn(`Duplicate MMP ${mmpId}`)
+    return collect(groupBy(variantInfo.mmps ?? [], get("id")), (mmps, mmpId) => {
+      if (mmps.length !== 1) {
+        const included = mmps.filter(mmp => includedFiles.has(mmp.file))
+        if (included.length === 1) {
+          return included[0]
         }
 
-        return mmps[0]
-      },
-    )
+        console.warn(`Duplicate MMP ${mmpId}`)
+      }
+
+      return mmps[0]
+    })
   }, [features, packageId, profileInfo, profileOptions, settings, variantInfo])
 
   return (

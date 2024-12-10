@@ -2,13 +2,13 @@ import { ID, indexBy } from "@salinco/nice-utils"
 
 import { CategoryID } from "@common/categories"
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
-import type { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
+import type { IndexerCategory, IndexerSource, IndexerSourceID } from "../types"
 
 const sourceId: IndexerSourceID = ID("sc4evermore")
 
 const origin = "https://www.sc4evermore.com"
 
-const categories: IndexerSourceCategory[] = [
+const categories: IndexerCategory[] = [
   {
     categories: [CategoryID.MODS, CategoryID.NAM],
     id: ID("6-network-addon-mod-nam"),
@@ -162,10 +162,10 @@ export const SC4EVERMORE: IndexerSource = {
 
       return {
         assetId: ID(`${sourceId}/${itemId}`),
+        authors: authorName ? [authorName] : undefined,
         downloads: Number.parseInt(downloads || "0", 10) || undefined,
         lastModified: new Date(lastModified),
         name: itemName,
-        owner: authorName ?? sourceId,
         thumbnail,
         url: new URL(itemUrl, origin).toString(),
       }

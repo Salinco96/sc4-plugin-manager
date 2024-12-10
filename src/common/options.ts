@@ -30,7 +30,7 @@ export interface OptionInfo<
   default?: OptionValue<$Type, $Multi>
   description?: string
   display?: "checkbox" | "select" | "switch"
-  filename?: string
+  file?: string
   global?: boolean
   id: OptionID
   label?: string

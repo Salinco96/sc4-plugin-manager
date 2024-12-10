@@ -1,6 +1,6 @@
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 import { Checkbox, Typography } from "@mui/material"
-import { collect } from "@salinco/nice-utils"
+import { collect, where } from "@salinco/nice-utils"
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -42,14 +42,14 @@ export function PackageViewLotInfo({
   setEnabled,
 }: PackageViewLotInfoProps): JSX.Element {
   const actions = useStoreActions()
-  const exemplars = useStore(store => store.exemplars)
+  const exemplars = useStore(store => store.maxis)
   const profileOptions = useStore(store => store.profileOptions)
   const variantInfo = useCurrentVariant(packageId)
 
-  const fileInfo = variantInfo.files?.find(file => file.path === lot.file)
+  const fileInfo = variantInfo.files?.find(where("path", lot.file))
 
   const isDisabled = (isTogglable && !isEnabled) || !isCompatible
-  const isMaxisLot = !!exemplars.lots[lot.id]
+  const isMaxisLot = !!exemplars.lots.some(where("id", lot.id))
   const isMaxisOverride = isMaxisLot && lot.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 

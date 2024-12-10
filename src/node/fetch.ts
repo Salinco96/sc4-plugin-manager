@@ -7,7 +7,7 @@ export async function get(
     fetch?(url: string, options?: RequestInit): Promise<Response>
     headers?: { [name: string]: string }
     logger?: Logger
-  },
+  } = {},
 ): Promise<Response> {
   const { fetch: _fetch = fetch, logger = console } = options
 

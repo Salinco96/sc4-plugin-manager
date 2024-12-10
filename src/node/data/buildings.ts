@@ -3,6 +3,7 @@ import type { Categories } from "@common/categories"
 import type { FamilyID } from "@common/families"
 import type { MaybeArray } from "@common/utils/types"
 import { loadCategories } from "./categories"
+import { writeCategories } from "./categories"
 import { parseMenu, parseMenus, writeMenu, writeMenus } from "./submenus"
 
 export interface BuildingData {
@@ -222,12 +223,14 @@ export function loadBuildingInfo(
   }
 }
 
-export function writeBuildingInfo(building: BuildingInfo): BuildingData {
-  const { categories, file, id, menu, submenus, ...others } = building
+export function writeBuildingInfo(building: BuildingInfo, categories: Categories): BuildingData {
+  const { categories: buildingCategories, file, id, menu, submenus, ...others } = building
 
   return {
     ...others,
-    categories: categories?.join(","),
+    categories: buildingCategories?.length
+      ? writeCategories(buildingCategories, categories)
+      : undefined,
     menu: menu ? writeMenu(menu) : undefined,
     submenu: submenus?.length ? writeMenus(submenus) : undefined,
   }

@@ -9,13 +9,13 @@ import {
   type Requirements,
   isOptionSingleValue,
 } from "@common/options"
-import type { Primitive } from "@salinco/nice-utils"
+import { type Primitive, containsAll, get, isArray } from "@salinco/nice-utils"
 import {
   loadArray,
   loadBoolean,
   loadEnum,
   loadEnumArray,
-  loadInteger,
+  loadNumber,
   loadRecord,
   loadString,
 } from "./utils"
@@ -26,7 +26,7 @@ export interface OptionData {
   default?: OptionValue | "all"
   description?: string
   display?: "checkbox" | "select" | "switch"
-  filename?: string
+  file?: string
   global?: boolean
   id: OptionID
   label?: string
@@ -45,12 +45,12 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
   const common = {
     id,
     condition: loadRequirements(data.condition, id, "condition"),
-    description: loadString(data.label, id, "description"),
+    description: loadString(data.description, id, "description"),
     global: loadBoolean(data.global, id, "global"),
-    filename: loadString(data.filename, id, "filename"),
+    file: loadString(data.file, id, "filename"),
     label: loadString(data.label, id, "label"),
     section: loadString(data.section, id, "section"),
-  }
+  } satisfies Partial<OptionInfo>
 
   switch (type) {
     case OptionType.BOOLEAN: {
@@ -69,13 +69,12 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
             condition: loadRequirements(choice.condition, id, "condition"),
             description: loadString(choice.description, id, "description"),
             label: loadString(choice.label, id, "label"),
-            value: loadInteger(choice.value, id, "value", true),
+            value: loadNumber(choice.value, id, "value", true),
           }
         }
 
-        return {
-          value: loadInteger(choice, id, "value", true),
-        }
+        const value = loadNumber(choice, id, "value", true)
+        return { label: String(value), value }
       })
 
       if (choices) {
@@ -98,10 +97,10 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
 
       return {
         ...common,
-        default: loadInteger(data.default, id, "default"),
-        min: loadInteger(data.min, id, "min"),
-        max: loadInteger(data.max, id, "max"),
-        step: loadInteger(data.step, id, "step"),
+        default: loadNumber(data.default, id, "default"),
+        min: loadNumber(data.min, id, "min"),
+        max: loadNumber(data.max, id, "max"),
+        step: loadNumber(data.step, id, "step"),
         type,
       }
     }
@@ -117,9 +116,8 @@ export function loadOptionInfo(data: OptionData): OptionInfo | undefined {
           }
         }
 
-        return {
-          value: loadString(choice, id, "value", true),
-        }
+        const value = loadString(choice, id, "value", true)
+        return { label: value, value }
       })
 
       if (choices) {
@@ -155,4 +153,21 @@ export function loadRequirements(
   field: string,
 ): Requirements | undefined {
   return loadRecord(value, "option value", isOptionSingleValue, id, field)
+}
+
+export function writeOptionInfo(info: OptionInfo): OptionData {
+  const { choices, default: defaultValue, ...others } = info
+
+  return {
+    choices: choices?.map(choice =>
+      choice.condition || choice.description || choice.label !== String(choice.value)
+        ? choice
+        : choice.value,
+    ),
+    default:
+      choices && isArray(defaultValue) && containsAll(defaultValue, choices.map(get("value")))
+        ? ALL
+        : defaultValue,
+    ...others,
+  }
 }

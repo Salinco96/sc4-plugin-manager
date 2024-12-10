@@ -1,28 +1,32 @@
 import path from "node:path"
 
 import {
+  collect,
   difference,
-  forEach,
+  entries,
+  get,
   groupBy,
-  isString,
-  mapDefined,
   matchGroups,
-  remove,
+  toArray,
   union,
-  unique,
+  unionBy,
+  where,
 } from "@salinco/nice-utils"
 
 import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
-import { CategoryID } from "@common/categories"
-import { type PackageID, getOwnerId } from "@common/packages"
-import { parseStringArray, toLowerCase } from "@common/utils/types"
-import type { VariantID } from "@common/variants"
-import type { PackageData } from "@node/data/packages"
-import { type FileData, loadCredits } from "@node/data/variants"
+import { type Categories, CategoryID } from "@common/categories"
+import type { PackageID } from "@common/packages"
+import type { PackageInfo } from "@common/types"
+import type { DependencyInfo, VariantID } from "@common/variants"
+import { loadBuildingInfo } from "@node/data/buildings"
+import { loadFamilyInfo } from "@node/data/families"
+import { loadLotInfo } from "@node/data/lots"
+import { loadFloraInfo } from "@node/data/mmps"
+import type { FileData } from "@node/data/packages"
+import { loadPropInfo } from "@node/data/props"
 import { getExtension } from "@node/files"
 
-import { loadAuthors } from "@node/data/authors"
 import type { IndexerEntry, IndexerSource } from "../types"
 import { htmlToMd } from "../utils"
 
@@ -98,8 +102,8 @@ export function extractSupportUrl(html: string): string | undefined {
   return match?.[0]
 }
 
-export function writePackageData(
-  packageData: PackageData,
+export function generatePackageInfo(
+  packageInfo: PackageInfo,
   packageId: PackageID,
   assetId: AssetID,
   source: IndexerSource | undefined,
@@ -111,26 +115,43 @@ export function writePackageData(
   packageFiles: { [path in string]?: FileData },
   authors: AuthorID[],
   dependencies: PackageID[],
+  categories: Categories,
   timestamp: Date,
-): PackageData {
+): PackageInfo {
   const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
   const variantEntry = variant ? entry.variants?.[variant] : entry
   if (!variantEntry || !entry.version) {
     throw Error(`Expected override to exist for ${variantAssetId}`)
   }
 
-  packageData.variants ??= {}
-  packageData.variants[variantId] ??= {}
-  const variantData = packageData.variants[variantId]
-  const ownerId = getOwnerId(packageId)
-
   const [major, minor, patch] = matchGroups(entry.version, /(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)
+  const version = `${major}.${minor ?? 0}.${patch ?? 0}`
 
-  const categories = new Set(parseStringArray(packageData.category ?? []))
+  packageInfo.variants[variantId] ??= {
+    authors,
+    categories: [],
+    id: variantId,
+    priority: 0, // unused by indexer
+    release: timestamp,
+    version,
+  }
 
-  if (variantEntry.categories && variantId === "default") {
+  const variantInfo = packageInfo.variants[variantId]
+
+  if (variantInfo.version !== version) {
+    variantInfo.release = timestamp
+    variantInfo.version = version
+
+    if (entry.description) {
+      variantInfo.description = htmlToMd(entry.description)
+    }
+  }
+
+  const variantCategories = new Set(variantInfo.categories)
+
+  if (variantEntry.categories) {
     for (const category of variantEntry.categories) {
-      categories.add(category)
+      variantCategories.add(category)
     }
   }
 
@@ -138,149 +159,72 @@ export function writePackageData(
     const defaultCategories = source.categories[entry.category]?.categories
     if (defaultCategories) {
       for (const category of defaultCategories) {
-        categories.add(category)
+        variantCategories.add(category)
       }
     }
   }
 
-  if (categories.has(CategoryID.DEPENDENCIES)) {
+  if (variantCategories.has(CategoryID.DEPENDENCIES)) {
     if (packageId.includes("props")) {
-      categories.delete(CategoryID.DEPENDENCIES)
-      categories.add(CategoryID.PROPS)
+      variantCategories.delete(CategoryID.DEPENDENCIES)
+      variantCategories.add(CategoryID.PROPS)
     }
 
     if (packageId.includes("textures")) {
-      categories.delete(CategoryID.DEPENDENCIES)
-      categories.add(CategoryID.TEXTURES)
+      variantCategories.delete(CategoryID.DEPENDENCIES)
+      variantCategories.add(CategoryID.TEXTURES)
     }
   }
 
-  if (!categories.size) {
-    categories.add(CategoryID.MODS)
+  if (!variantCategories.size) {
+    variantCategories.add(CategoryID.MODS)
   }
 
-  packageData.category ??= Array.from(categories).join(",")
-  packageData.name ??= entry.name
+  variantInfo.assets ??= []
+  variantInfo.categories = toArray(variantCategories)
+  variantInfo.lastGenerated = timestamp
+  variantInfo.lastModified = entry.lastModified
+  variantInfo.logs ??= entry.description?.match(/\b[\w-]+[.]log\b/)?.at(0)
 
-  const newVersion = `${major}.${minor ?? 0}.${patch ?? 0}`
+  const extraFeatures = variantEntry.features?.filter(
+    feature => !packageInfo.features?.includes(feature),
+  )
 
-  variantData.assets ??= []
-  variantData.lastGenerated = timestamp
-  variantData.lastModified = entry.lastModified
-  variantData.logs ??= entry.description?.match(/\b[\w-]+[.]log\b/)?.at(0)
-
-  if (variantData.version !== newVersion) {
-    variantData.release = timestamp
-    variantData.version = `${major}.${minor ?? 0}.${patch ?? 0}`
+  if (extraFeatures?.length) {
+    console.warn(
+      `Variant ${variantId} contains features ${extraFeatures.join(",")} which are not included in the default variant. All variants must include the same feature set.`,
+    )
   }
 
-  if (variantId === "default" || !packageData.url || packageData.url === entry.url) {
-    const packageAuthors = unique(
-      remove(
-        loadAuthors(packageData.authors ?? [], ownerId).concat(authors) as AuthorID[],
-        ownerId,
-      ),
-    )
+  const variantAuthors = union(variantInfo.authors ?? [], authors)
 
-    const packageCredits = {
-      ...packageData.credits,
-      ...difference(
-        authors,
-        mapDefined(
-          [packageData.credits ?? [], packageData.thanks ?? []].flatMap(loadCredits),
-          credit => credit.id,
-        ),
-      ),
-    }
+  const variantDependencies: DependencyInfo[] = unionBy(
+    variantInfo.dependencies ?? [],
+    difference(dependencies, variantInfo.optional ?? []).map(id => ({ id, transitive: true })),
+    get("id"),
+  )
 
-    const packageDependencies = union(dependencies, packageData.dependencies ?? [])
+  const variantImages = union(variantInfo.images ?? [], entry.images ?? [])
 
-    const packageDescription = entry.description
-      ? htmlToMd(entry.description)
-      : packageData.description
+  variantInfo.authors = variantAuthors
+  variantInfo.dependencies = variantDependencies
+  variantInfo.images = variantImages
+  variantInfo.thumbnail = entry.thumbnail
+  variantInfo.url = entry.url
 
-    const packageFeatures = union(
-      variantEntry.features ?? [],
-      parseStringArray(packageData.features ?? []).map(toLowerCase),
-    )
-
-    const packageImages = union(entry.images ?? [], packageData.images ?? [])
-
-    packageData.authors = packageAuthors.length ? packageAuthors : undefined
-    packageData.credits = packageCredits.length ? packageCredits : undefined
-    packageData.dependencies = packageDependencies.length ? packageDependencies.sort() : undefined
-    packageData.description = packageDescription
-    packageData.features = packageFeatures.length ? packageFeatures.sort() : undefined
-    packageData.images = packageImages.length ? packageImages : undefined
-    packageData.repository ??= entry.repository
-    packageData.support ??= entry.support
-    packageData.thumbnail = entry.thumbnail ?? packageData.thumbnail
-    packageData.url = entry.url
-  } else {
-    const extraFeatures = variantEntry.features?.filter(
-      feature => !packageData.features?.includes(feature),
-    )
-
-    if (extraFeatures?.length) {
-      console.warn(
-        `Variant ${variantId} contains features ${extraFeatures.join(",")} which are not included in the default variant. All variants must include the same feature set.`,
-      )
-    }
-
-    const variantAuthors = difference(
-      unique(loadAuthors(variantData.authors ?? [], ownerId).concat(authors)),
-      loadAuthors(packageData.authors ?? [], ownerId),
-    )
-
-    const variantCredits = {
-      ...packageData.credits,
-      ...difference(
-        authors,
-        mapDefined(
-          [
-            packageData.credits ?? [],
-            packageData.thanks ?? [],
-            variantData.credits ?? [],
-            variantData.thanks ?? [],
-          ].flatMap(loadCredits),
-          credit => credit.id,
-        ),
-      ),
-    }
-
-    const variantDependencies = union(dependencies, variantData.dependencies ?? []).filter(
-      dependency => !packageData.dependencies?.includes(dependency),
-    )
-
-    const variantDescription = entry.description
-      ? htmlToMd(entry.description)
-      : variantData.description
-
-    const variantImages = union(entry.images ?? [], variantData.images ?? []).filter(
-      image => !packageData.images?.includes(image),
-    )
-
-    variantData.authors = variantAuthors.length ? variantAuthors : undefined
-    variantData.credits = variantCredits.length ? variantCredits : undefined
-    variantData.dependencies = variantDependencies.length ? variantDependencies.sort() : undefined
-    variantData.description = variantDescription
-    variantData.images = variantImages.length ? variantImages : undefined
-    variantData.repository ??= entry.repository
-    variantData.support ??= entry.support
-    variantData.thumbnail = entry.thumbnail ?? variantData.thumbnail
-    variantData.url = entry.url
-  }
+  variantInfo.repository ??= entry.repository
+  variantInfo.support ??= entry.support
 
   if (entry.category?.includes("obsolete")) {
-    variantData.deprecated = true
+    variantInfo.deprecated = true
   }
 
   if (variantId === "darknite") {
-    variantData.name ??= "Dark Nite"
-    variantData.requirements ??= {}
-    variantData.requirements.darknite = true
+    variantInfo.name ??= "Dark Nite"
+    variantInfo.requirements ??= {}
+    variantInfo.requirements.darknite = true
 
-    const defaultVariantData = packageData.variants["default" as VariantID]
+    const defaultVariantData = packageInfo.variants["default" as VariantID]
     if (defaultVariantData) {
       defaultVariantData.name ??= "Maxis Nite"
       defaultVariantData.requirements ??= {}
@@ -288,17 +232,11 @@ export function writePackageData(
     }
   }
 
-  let variantAsset = variantData.assets.find(variantAsset =>
-    isString(variantAsset) ? variantAsset === variantAssetId : variantAsset.id === variantAssetId,
-  )
+  let variantAsset = variantInfo.assets.find(where("id", variantAssetId))
 
   if (!variantAsset) {
     variantAsset = { id: variantAssetId }
-    variantData.assets.push(variantAsset)
-  } else if (isString(variantAsset)) {
-    const index = variantData.assets.indexOf(variantAsset)
-    variantAsset = { id: variantAssetId }
-    variantData.assets.splice(index, 1, variantAsset)
+    variantInfo.assets.push(variantAsset)
   }
 
   const {
@@ -320,109 +258,90 @@ export function writePackageData(
   }
 
   if (includedDocFiles?.length) {
-    variantAsset.docs = includedDocFiles
+    variantAsset.docs = includedDocFiles.map(path => ({ path }))
   } else if (excludedDocFiles?.length) {
     variantAsset.docs = []
   }
 
   if (includedSC4Files?.length) {
-    variantAsset.include = includedSC4Files.map(file => packageFiles[file] ?? file)
+    variantAsset.include = includedSC4Files.map(path => packageFiles[path] ?? { path })
   } else if (excludedSC4Files?.length) {
     variantAsset.include = []
   }
 
   if (variantEntry.buildingFamilies) {
-    forEach(variantEntry.buildingFamilies, (families, file) => {
-      if (includedFiles.includes(file)) {
-        forEach(families, (data, id) => {
-          variantData.buildingFamilies ??= {}
-          variantData.buildingFamilies[file] ??= {}
-          variantData.buildingFamilies[file][id] = {
-            ...data,
-            ...variantData.buildingFamilies[file][id],
-          }
-        })
-      }
-    })
+    variantInfo.buildingFamilies = unionBy(
+      variantInfo.buildingFamilies ?? [],
+      entries(variantEntry.buildingFamilies)
+        .filter(([file]) => includedFiles.includes(file))
+        .flatMap(([file, instances]) =>
+          collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
+        ),
+      instance => `${instance.id}:${instance.file}`,
+    )
   }
 
   if (variantEntry.buildings) {
-    forEach(variantEntry.buildings, (buildings, file) => {
-      if (includedFiles.includes(file)) {
-        forEach(buildings, ({ model, ...data }, id) => {
-          variantData.buildings ??= {}
-          variantData.buildings[file] ??= {}
-          variantData.buildings[file][id] = {
-            ...data,
-            ...variantData.buildings[file][id],
-          }
-        })
-      }
-    })
+    variantInfo.buildings = unionBy(
+      variantInfo.buildings ?? [],
+      entries(variantEntry.buildings)
+        .filter(([file]) => includedFiles.includes(file))
+        .flatMap(([file, instances]) =>
+          collect(instances, (data, id) => loadBuildingInfo(file, id, data, categories)),
+        ),
+      instance => `${instance.id}:${instance.file}`,
+    )
   }
 
   if (variantEntry.lots) {
-    forEach(variantEntry.lots, (lots, file) => {
-      if (includedFiles.includes(file)) {
-        forEach(lots, ({ props, textures, ...data }, id) => {
-          variantData.lots ??= {}
-          variantData.lots[file] ??= {}
-          variantData.lots[file][id] = {
-            ...data,
-            ...variantData.lots[file][id],
-          }
-        })
-      }
-    })
+    variantInfo.lots = unionBy(
+      variantInfo.lots ?? [],
+      entries(variantEntry.lots)
+        .filter(([file]) => includedFiles.includes(file))
+        .flatMap(([file, instances]) =>
+          collect(instances, (data, id) => loadLotInfo(file, id, data)),
+        ),
+      instance => `${instance.id}:${instance.file}`,
+    )
   }
 
   if (variantEntry.mmps) {
-    forEach(variantEntry.mmps, (mmps, file) => {
-      if (includedFiles.includes(file)) {
-        forEach(mmps, ({ model, stages, ...data }, id) => {
-          variantData.mmps ??= {}
-          variantData.mmps[file] ??= {}
-          variantData.mmps[file][id] = {
-            stages: stages?.map(({ model, ...stage }) => stage),
-            ...data,
-            ...variantData.mmps[file][id],
-          }
-        })
-      }
-    })
+    variantInfo.mmps = unionBy(
+      variantInfo.mmps ?? [],
+      entries(variantEntry.mmps)
+        .filter(([file]) => includedFiles.includes(file))
+        .flatMap(([file, instances]) =>
+          collect(instances, (data, id) => loadFloraInfo(file, id, data)),
+        ),
+      instance => `${instance.id}:${instance.file}`,
+    )
   }
 
   if (variantEntry.propFamilies) {
-    forEach(variantEntry.propFamilies, (families, file) => {
-      if (includedFiles.includes(file)) {
-        forEach(families, (data, id) => {
-          variantData.propFamilies ??= {}
-          variantData.propFamilies[file] ??= {}
-          variantData.propFamilies[file][id] = {
-            ...data,
-            ...variantData.propFamilies[file][id],
-          }
-        })
-      }
-    })
+    variantInfo.propFamilies = unionBy(
+      variantInfo.propFamilies ?? [],
+      entries(variantEntry.propFamilies)
+        .filter(([file]) => includedFiles.includes(file))
+        .flatMap(([file, instances]) =>
+          collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
+        ),
+      instance => `${instance.id}:${instance.file}`,
+    )
   }
 
   if (variantEntry.props) {
-    forEach(variantEntry.props, (props, file) => {
-      if (includedFiles.includes(file)) {
-        forEach(props, ({ model, ...data }, id) => {
-          variantData.props ??= {}
-          variantData.props[file] ??= {}
-          variantData.props[file][id] = {
-            ...data,
-            ...variantData.props[file][id],
-          }
-        })
-      }
-    })
+    variantInfo.props = unionBy(
+      variantInfo.props ?? [],
+      entries(variantEntry.props)
+        .filter(([file]) => includedFiles.includes(file))
+        .flatMap(([file, instances]) =>
+          collect(instances, (data, id) => loadPropInfo(file, id, data)),
+        ),
+      instance => `${instance.id}:${instance.file}`,
+    )
   }
 
-  return packageData
+  return packageInfo
 }
 
 const sc4Extensions = [".dat", ".dll", ".ini", "._loosedesc", ".sc4desc", ".sc4lot", ".sc4model"]

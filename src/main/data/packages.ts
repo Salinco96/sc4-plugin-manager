@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { collect, forEach, isEmpty, keys, size, values } from "@salinco/nice-utils"
+import { $merge, collect, forEach, isEmpty, keys, size, values } from "@salinco/nice-utils"
 import { glob } from "glob"
 
 import type { AssetID, Assets } from "@common/assets"
@@ -12,13 +12,11 @@ import { parseStringArray, toLowerCase } from "@common/utils/types"
 import type { VariantID } from "@common/variants"
 import { readConfig } from "@node/configs"
 import type { AssetData } from "@node/data/assets"
-import type { PackageData } from "@node/data/packages"
-import { loadVariantInfo } from "@node/data/variants"
+import { loadAssetInfo } from "@node/data/assets"
+import { type PackageData, loadPackageInfo, loadVariantInfo } from "@node/data/packages"
 import { createIfMissing, exists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import type { TaskContext } from "@utils/tasks"
-
-import { loadAssetInfo } from "./assets"
 
 /**
  * Loads all downloaded assets.
@@ -181,7 +179,7 @@ export async function loadRemotePackages(
         continue
       }
 
-      const packageInfo = loadRemotePackageInfo(packageId, configs[packageId], categories)
+      const packageInfo = loadPackageInfo(packageId, configs[packageId], categories)
       if (packageInfo) {
         packages[packageId] = packageInfo
         nPackages++
@@ -212,45 +210,6 @@ export async function loadRemotePackages(
 }
 
 /**
- * Loads a remote package configuration.
- */
-function loadRemotePackageInfo(
-  packageId: PackageID,
-  packageData: PackageData,
-  categories: Categories,
-): PackageInfo | undefined {
-  const packageInfo: PackageInfo = {
-    id: packageId,
-    name: packageData.name ?? packageId,
-    status: {},
-    variants: {},
-  }
-
-  if (packageData.features?.length) {
-    packageInfo.features = parseStringArray(packageData.features).map(toLowerCase) as Feature[] // todo
-  }
-
-  if (packageData.variants) {
-    for (const variantId of keys(packageData.variants)) {
-      // Skip disabled variants
-      if (!packageData.variants[variantId]?.disabled) {
-        try {
-          const variantInfo = loadVariantInfo(packageId, variantId, packageData, categories)
-          packageInfo.variants[variantId] = variantInfo
-        } catch (error) {
-          console.error(`Error loading variant '${packageId}#${variantId}'`, error)
-        }
-      }
-    }
-  }
-
-  // Return the package only if some variants have been successfully loaded
-  if (!isEmpty(packageInfo.variants)) {
-    return packageInfo
-  }
-}
-
-/**
  * Merges a local package definition with a remote one.
  */
 function mergeLocalPackageInfo(
@@ -270,15 +229,19 @@ function mergeLocalPackageInfo(
         // the remote version separately, as a potential update instead.
         if (remoteVariantInfo.version === localVariantInfo.version) {
           // Keep local installation paths calculated during install
-          remoteVariantInfo.buildingFamilies = localVariantInfo.buildingFamilies
-          remoteVariantInfo.buildings = localVariantInfo.buildings
-          remoteVariantInfo.files = localVariantInfo.files
-          remoteVariantInfo.lots = localVariantInfo.lots
-          remoteVariantInfo.mmps = localVariantInfo.mmps
-          remoteVariantInfo.propFamilies = localVariantInfo.propFamilies
-          remoteVariantInfo.props = localVariantInfo.props
-          remoteVariantInfo.readme ??= localVariantInfo.readme
-          Object.assign(localVariantInfo, remoteVariantInfo)
+          $merge(remoteVariantInfo, {
+            buildingFamilies: localVariantInfo.buildingFamilies,
+            buildings: localVariantInfo.buildings,
+            files: localVariantInfo.files,
+            lots: localVariantInfo.lots,
+            mmps: localVariantInfo.mmps,
+            models: localVariantInfo.models,
+            propFamilies: localVariantInfo.propFamilies,
+            props: localVariantInfo.props,
+            textures: localVariantInfo.textures,
+          })
+
+          $merge(localVariantInfo, remoteVariantInfo)
           localVariantInfo.installed = true
         } else {
           localVariantInfo.update = remoteVariantInfo

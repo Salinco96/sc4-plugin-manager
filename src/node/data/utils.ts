@@ -55,13 +55,13 @@ export function loadDate<Required extends boolean = false>(
   id: string,
   field: string,
   required?: Required,
-): Required extends true ? string : string | undefined {
+): Required extends true ? Date : Date | undefined {
   if (value instanceof Date) {
-    return value.toISOString()
+    return value
   }
 
   if (isNumber(value) || isString(value)) {
-    return new Date(value).toISOString()
+    return new Date(value)
   }
 
   return failLoading(value, "date", id, field, required)
@@ -102,7 +102,7 @@ export function loadInteger<Required extends boolean = false>(
   required?: Required,
 ): Required extends true ? number : number | undefined {
   if (isString(value)) {
-    return Number.parseInt(value, 10)
+    return Number.parseInt(value)
   }
 
   if (isNumber(value)) {
@@ -110,6 +110,23 @@ export function loadInteger<Required extends boolean = false>(
   }
 
   return failLoading(value, "integer", id, field, required)
+}
+
+export function loadNumber<Required extends boolean = false>(
+  value: Primitive | unknown[],
+  id: string,
+  field: string,
+  required?: Required,
+): Required extends true ? number : number | undefined {
+  if (isString(value)) {
+    return Number.parseFloat(value)
+  }
+
+  if (isNumber(value)) {
+    return value
+  }
+
+  return failLoading(value, "number", id, field, required)
 }
 
 export function loadRecord<T, Required extends boolean = false>(

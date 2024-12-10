@@ -14,7 +14,7 @@ export interface IndexerOptions {
     entries: string[]
   }
   migrate?: {
-    entries?: (entry: IndexerEntry, entryId: EntryID) => boolean
+    entries?: (entry: IndexerEntry, entryId: EntryID) => void
   }
   refetchIntervalHours: number
   sources: IndexerSource[]
@@ -61,7 +61,7 @@ export interface IndexerVariantEntry extends Partial<SC4FileData> {
 
 export interface IndexerEntry extends IndexerBaseEntry, IndexerEntryDetails, IndexerVariantEntry {
   /** Category ID within the source (e.g. "101-residential" in Simtropolis) */
-  category?: IndexerSourceCategoryID
+  category?: IndexerCategoryID
   /** Indexer metadata */
   meta?: {
     /** When were this entry's details last extracted */
@@ -79,7 +79,7 @@ export type EntryID = `${IndexerSourceID}/${number}`
 
 export interface IndexerEntryList {
   assets: {
-    [entryId in EntryID]: IndexerEntry
+    [entryId in EntryID]?: IndexerEntry
   }
   /** Indexer metadata */
   meta?: {
@@ -91,9 +91,9 @@ export interface IndexerEntryList {
 export type IndexerSourceID = ID<string, IndexerSource>
 
 export interface IndexerSource {
-  categories: { [id in IndexerSourceCategoryID]?: IndexerSourceCategory }
+  categories: { [id in IndexerCategoryID]?: IndexerCategory }
   getCategoryPageCount(html: HTMLElement): number
-  getCategoryUrl(categoryId: IndexerSourceCategoryID, page: number): string
+  getCategoryUrl(categoryId: IndexerCategoryID, page: number): string
   getCookies(): { [name: string]: string }
   getDownloadUrl(assetId: AssetID, variant?: string): string
   getEntries(html: HTMLElement): IndexerBaseEntry[]
@@ -102,15 +102,13 @@ export interface IndexerSource {
   id: IndexerSourceID
 }
 
-export interface IndexerSourceCategory {
+export interface IndexerCategory {
   /** Default manager categories, comma-separated */
   categories?: CategoryID[]
-  id: IndexerSourceCategoryID
+  id: IndexerCategoryID
 }
 
-export type IndexerSourceCategoryID = ID<string, IndexerSourceCategory>
-
-export type IndexerCategoryID = `${IndexerSourceID}/${IndexerSourceCategoryID}`
+export type IndexerCategoryID = ID<string, IndexerCategory>
 
 export interface IndexerPathOverride {
   override?: boolean

@@ -1,5 +1,7 @@
 import path from "node:path"
 
+import { collect, toArray, toHex, values } from "@salinco/nice-utils"
+
 import type { BuildingID } from "@common/buildings"
 import { CategoryID } from "@common/categories"
 import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
@@ -16,7 +18,7 @@ import type { PropID } from "@common/props"
 import { Feature } from "@common/types"
 import { parseStringArray } from "@common/utils/types"
 import type { FloraData } from "@node/data/mmps"
-import type { ContentsData } from "@node/data/variants"
+import type { ContentsData } from "@node/data/packages"
 import { loadDBPF } from "@node/dbpf"
 import { getBuildingData } from "@node/dbpf/buildings"
 import { getLotData } from "@node/dbpf/lots"
@@ -25,7 +27,6 @@ import { getPropData } from "@node/dbpf/props"
 import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
 import { get, getBaseTextureId, getString } from "@node/dbpf/utils"
 import { FileOpenMode, getExtension, openFile } from "@node/files"
-import { collect, toArray, toHex, values } from "@salinco/nice-utils"
 
 export interface SC4FileData extends ContentsData {
   categories: CategoryID[]

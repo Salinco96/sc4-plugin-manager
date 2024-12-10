@@ -4,31 +4,18 @@ import { Box, Card, CardContent, Divider, Typography } from "@mui/material"
 import { Virtuoso } from "react-virtuoso"
 
 import type { PackageID } from "@common/packages"
-import { Page, useHistory } from "@utils/navigation"
-
-import type { ContentsInfo } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
+import { Page, useHistory } from "@utils/navigation"
 import { useStore } from "@utils/store"
 import { EmptyPackageList } from "./EmptyPackageList"
 import { PackageListItem } from "./PackageListItem"
 import { useMatchingContents } from "./useMatchingContents"
 
 export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.Element {
-  const exemplars = useStore(store => store.exemplars)
+  const exemplars = useStore(store => store.maxis)
   const history = useHistory()
 
-  const contents: ContentsInfo = useMemo(() => {
-    return {
-      buildingFamilies: { "*": exemplars.buildingFamilies },
-      buildings: { "*": exemplars.buildings },
-      lots: { "*": exemplars.lots },
-      mmps: { "*": exemplars.mmps },
-      propFamilies: { "*": exemplars.propFamilies },
-      props: { "*": exemplars.props },
-    }
-  }, [exemplars])
-
-  const matchingContents = useMatchingContents(contents)
+  const matchingContents = useMatchingContents(exemplars)
 
   const initialIndex = useMemo(() => {
     if (history.previous?.page === Page.PackageView) {

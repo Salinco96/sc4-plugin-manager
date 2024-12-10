@@ -1,5 +1,5 @@
 import { Card, CardContent, Divider, List, ListItem } from "@mui/material"
-import { groupBy, mapValues, sortBy, values } from "@salinco/nice-utils"
+import { get, groupBy, mapValues, sortBy, values } from "@salinco/nice-utils"
 import { Fragment, useEffect, useMemo, useState } from "react"
 
 import { FlexBox } from "@components/FlexBox"
@@ -7,8 +7,8 @@ import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { useCurrentVariant } from "@utils/packages"
-
 import { useStore } from "@utils/store"
+
 import { ExemplarRef } from "../ExemplarRef"
 import type { PackageViewTabInfoProps } from "./tabs"
 
@@ -27,19 +27,16 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
 
   const groupedProps = useMemo(() => {
     // Collect unique props by ID
-    const props = mapValues(
-      groupBy(values(variantInfo.props ?? {}).flatMap(values), prop => prop.id),
-      (props, instanceId) => {
-        if (props.length === 1) {
-          // TODO: Check filenames whether a single prop is currently enabled via options
-          if (props.length !== 1) {
-            console.warn(`Duplicate prop ${instanceId}`)
-          }
-
-          return props[0]
+    const props = mapValues(groupBy(variantInfo.props ?? [], get("id")), (props, instanceId) => {
+      if (props.length === 1) {
+        // TODO: Check filenames whether a single prop is currently enabled via options
+        if (props.length !== 1) {
+          console.warn(`Duplicate prop ${instanceId}`)
         }
-      },
-    )
+
+        return props[0]
+      }
+    })
 
     // Group props by family
     return sortBy(

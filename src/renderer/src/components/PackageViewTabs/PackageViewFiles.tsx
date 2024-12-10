@@ -28,8 +28,6 @@ export default function PackageViewFiles({ packageId }: PackageViewTabInfoProps)
 
   const [files, setFiles] = useState<{ [path in string]?: DBPFFile }>({})
 
-  console.log(variantInfo.files, files)
-
   const preloadFiles = useEffectEvent(async () => {
     if (variantInfo.files) {
       const result: { [path in string]?: DBPFFile } = {}
@@ -72,20 +70,27 @@ export default function PackageViewFiles({ packageId }: PackageViewTabInfoProps)
             fileData={files[file.path]}
             overriddenEntries={
               isDBPF(file.path) && files[file.path]?.entries && enabledFiles?.includes(file)
-                ? dbpfFiles
-                    .filter(other => {
-                      const priority = file.priority ?? variantInfo.priority
-                      const otherPriority = other.priority ?? variantInfo.priority
-                      return priority === otherPriority
-                        ? other.path > file.path
-                        : otherPriority > priority
-                    })
-                    .map(other => files[other.path]?.entries)
-                    .filter(entries => !!entries)
-                    .flatMap(values)
-                    .filter(entry => entry.type !== DBPFDataType.LD)
-                    .map(entry => entry.id)
-                    .filter(entryId => files[file.path]?.entries[entryId])
+                ? dbpfFiles.flatMap(other => {
+                    const entries = files[file.path]?.entries
+                    const otherEntries = files[other.path]?.entries
+                    if (!entries || !otherEntries) {
+                      return []
+                    }
+
+                    const priority = file.priority ?? variantInfo.priority
+                    const otherPriority = other.priority ?? variantInfo.priority
+                    if (priority > otherPriority) {
+                      return []
+                    }
+
+                    if (priority === otherPriority && file.path >= other.path) {
+                      return []
+                    }
+
+                    return values(otherEntries)
+                      .filter(entry => entries[entry.id] && entry.type !== DBPFDataType.LD)
+                      .map(entry => entry.id)
+                  })
                 : undefined
             }
             packageId={packageId}

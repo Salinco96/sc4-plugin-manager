@@ -18,18 +18,12 @@ export function PackageViewTabs({ packageId }: PackageViewTabInfoProps): JSX.Ele
   const { t } = useTranslation("PackageViewTabs")
 
   const dependentPackages = useDependentPackages(packageId)
-  const exemplars = useStore(store => store.exemplars)
+  const maxis = useStore(store => store.maxis)
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
 
-  const tabs = packageViewTabs.filter(tab =>
-    tab.condition(variantInfo, dependentPackages, exemplars),
-  )
-
-  const labels = tabs.map(tab =>
-    tab.label(t, variantInfo, packageInfo, dependentPackages, exemplars),
-  )
-
+  const tabs = packageViewTabs.filter(tab => tab.condition(variantInfo, dependentPackages, maxis))
+  const labels = tabs.map(tab => tab.label(t, variantInfo, packageInfo, dependentPackages, maxis))
   const labelTags = tabs.map(tab => tab.labelTag?.(variantInfo))
 
   if (tabs.length === 0) {

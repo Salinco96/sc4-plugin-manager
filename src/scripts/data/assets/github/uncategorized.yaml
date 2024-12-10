@@ -56,6 +56,7 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    repository: https://github.com/0xC0000054/sc4-bulldoze-extensions
     sha256: 24794bb8ceb6634e1b43e496b8aef03c4f6edfbe58a43d74b22c1884031697a0
     size: 131867
     uncompressed: 261414
@@ -605,21 +606,22 @@ assets:
     dependencies: []
     download: https://github.com/0xC0000054/sc4-query-ui-hooks/releases/download/v{version}/SC4QueryUIHooks.zip
     file: SC4QueryUIHooks.zip
+    filename: SC4QueryUIHooks.zip
     files:
       - LICENSE.txt
       - README.htm
       - SC4QueryUIHooks.dll
       - SC4QueryUIHooks.ini
       - Third Party Notices.txt
-    lastModified: 2024-11-18T09:48:18.355Z
+    lastModified: 2024-12-02T10:40:57.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-09T15:55:50.424Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-query-ui-hooks
-    sha256: 395294454ad4040cf3756051aa19b0369794c4baee2dca972466c946cad24b48
-    size: 177435
-    uncompressed: 383631
-    version: 1.9.0
+    sha256: 2067c0f5bf8d131e85cdfb9a9a9f65cf5d3379913ff800fcd040de2602809f8c
+    size: 181911
+    uncompressed: 396902
+    version: 2.1.0
   github/0xC0000054/sc4-region-census:
     assetId: github/0xC0000054/sc4-region-census
     authors:
@@ -965,4 +967,4 @@ assets:
     version: 1.0.0
 
 meta:
-  timestamp: 2024-11-26T16:28:38.411Z
+  timestamp: 2024-12-09T09:17:07.938Z

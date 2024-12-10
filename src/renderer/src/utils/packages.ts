@@ -1,4 +1,4 @@
-import { mapValues, parseHex, toHex, values } from "@salinco/nice-utils"
+import { mapValues, parseHex, toHex, values, where } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
 import type { BuildingID } from "@common/buildings"
@@ -173,6 +173,10 @@ export function filterVariant(
 
   const fn = filters.combine === "and" ? "every" : "some"
 
+  if (variantInfo.disabled) {
+    return false
+  }
+
   if (filters.authors.length) {
     if (!filters.authors[fn](authorId => variantInfo.authors.includes(authorId))) {
       return false
@@ -224,64 +228,40 @@ export function filterVariant(
   }
 
   if (filters.hex) {
-    if (variantInfo.buildingFamilies) {
-      for (const families of values(variantInfo.buildingFamilies)) {
-        if (families[filters.hex]) {
-          return true
-        }
-      }
+    if (variantInfo.buildingFamilies?.some(where("id", filters.hex))) {
+      return true
     }
 
-    if (variantInfo.buildings) {
-      for (const buildings of values(variantInfo.buildings)) {
-        if (buildings[filters.hex]) {
-          return true
-        }
-
-        if (values(buildings).some(building => building.family === filters.hex)) {
-          return true
-        }
-      }
+    if (variantInfo.buildings?.some(where("id", filters.hex))) {
+      return true
     }
 
-    if (variantInfo.lots) {
-      for (const lots of values(variantInfo.lots)) {
-        if (lots[filters.hex]) {
-          return true
-        }
-      }
+    if (variantInfo.buildings?.some(where("family", filters.hex))) {
+      return true
     }
 
-    if (variantInfo.mmps) {
-      for (const mmps of values(variantInfo.mmps)) {
-        if (mmps[filters.hex]) {
-          return true
-        }
-
-        if (values(mmps).some(mmp => mmp.stages?.some(stage => stage.id === filters.hex))) {
-          return true
-        }
-      }
+    if (variantInfo.lots?.some(where("id", filters.hex))) {
+      return true
     }
 
-    if (variantInfo.propFamilies) {
-      for (const families of values(variantInfo.propFamilies)) {
-        if (families[filters.hex]) {
-          return true
-        }
-      }
+    if (variantInfo.mmps?.some(where("id", filters.hex))) {
+      return true
     }
 
-    if (variantInfo.props) {
-      for (const props of values(variantInfo.props)) {
-        if (props[filters.hex]) {
-          return true
-        }
+    if (variantInfo.mmps?.some(mmp => mmp.stages?.some(where("id", filters.hex)))) {
+      return true
+    }
 
-        if (values(props).some(prop => prop.family === filters.hex)) {
-          return true
-        }
-      }
+    if (variantInfo.propFamilies?.some(where("id", filters.hex))) {
+      return true
+    }
+
+    if (variantInfo.props?.some(where("id", filters.hex))) {
+      return true
+    }
+
+    if (variantInfo.props?.some(where("family", filters.hex))) {
+      return true
     }
   }
 

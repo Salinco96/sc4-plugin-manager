@@ -1,6 +1,6 @@
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 import { Checkbox, Typography } from "@mui/material"
-import { keys } from "@salinco/nice-utils"
+import { keys, where } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
 
 import type { BuildingInfo } from "@common/buildings"
@@ -41,13 +41,13 @@ export function PackageViewBuildingFamilyInfo({
   packageId,
   setEnabled,
 }: PackageViewBuildingFamilyInfoProps): JSX.Element {
-  const exemplars = useStore(store => store.exemplars)
+  const exemplars = useStore(store => store.maxis)
   const variantInfo = useCurrentVariant(packageId)
 
   const filePath = buildingFamily?.file
-  const fileInfo = buildingFamily && variantInfo.files?.find(file => file.path === filePath)
+  const fileInfo = buildingFamily && variantInfo.files?.find(where("path", filePath))
 
-  const isMaxisFamily = !!exemplars.buildingFamilies[familyId]
+  const isMaxisFamily = !!exemplars.buildingFamilies.some(where("id", familyId))
   const isMaxisOverride = isMaxisFamily && filePath !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 

@@ -2,13 +2,13 @@ import { ID, indexBy, isDefined } from "@salinco/nice-utils"
 
 import { CategoryID } from "@common/categories"
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
-import type { IndexerSource, IndexerSourceCategory, IndexerSourceID } from "../types"
+import type { IndexerCategory, IndexerSource, IndexerSourceID } from "../types"
 
 const sourceId: IndexerSourceID = ID("simtropolis")
 
 const origin = "https://community.simtropolis.com"
 
-const categories: IndexerSourceCategory[] = [
+const categories: IndexerCategory[] = [
   {
     id: ID("32-simpeg-plex-files"),
   },
@@ -179,10 +179,10 @@ export const SIMTROPOLIS: IndexerSource = {
 
       return {
         assetId: ID(`${sourceId}/${itemId}`),
+        authors: authorName ? [authorName] : undefined,
         downloads: Number.parseInt(downloads || "0", 10) || undefined,
         lastModified: new Date(lastModified),
         name: itemName,
-        owner: authorName ?? sourceId,
         thumbnail,
         url: new URL(itemUrl, origin).toString(),
       }

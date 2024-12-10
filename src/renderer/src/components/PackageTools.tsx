@@ -20,7 +20,6 @@ import { useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
 import { isTogglableLot } from "@common/lots"
-import { values } from "@salinco/nice-utils"
 import { ToolButton } from "./ToolButton"
 
 export function PackageTools({
@@ -40,9 +39,7 @@ export function PackageTools({
 
   const { t } = useTranslation("PackageTools")
 
-  const hasOptions =
-    !!variantInfo.options?.length ||
-    values(variantInfo.lots ?? {}).some(lots => values(lots).some(isTogglableLot))
+  const hasOptions = !!variantInfo.options?.length || variantInfo.lots?.some(isTogglableLot)
 
   return (
     <FlexBox alignItems="center" gap={0.5} mx={0.5}>

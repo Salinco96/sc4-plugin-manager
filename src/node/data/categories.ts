@@ -23,3 +23,13 @@ export function loadCategories(data: MaybeArray<string>, categories: Categories)
 export function getPriority(variantCategories: CategoryID[], categories: Categories): number {
   return Math.max(0, ...mapDefined(variantCategories, category => categories[category]?.priority))
 }
+
+export function writeCategories(variantCategories: CategoryID[], categories: Categories): string {
+  return (
+    variantCategories
+      // Remove implicit categories
+      .filter(category => !variantCategories.some(other => categories[other]?.parent === category))
+      // Write as comma-separated string
+      .join(",")
+  )
+}

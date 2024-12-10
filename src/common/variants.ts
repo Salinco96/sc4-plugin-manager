@@ -3,55 +3,31 @@ import type { Namespace, TFunction } from "i18next"
 
 import type { AssetID } from "./assets"
 import type { AuthorID } from "./authors"
-import type { BuildingID, BuildingInfo } from "./buildings"
+import type { BuildingInfo } from "./buildings"
 import type { CategoryID } from "./categories"
 import type { TGI } from "./dbpf"
 import type { ExemplarDataPatch } from "./exemplars"
-import type { FamilyID, FamilyInfo } from "./families"
-import type { LotID, LotInfo } from "./lots"
-import type { FloraID, FloraInfo } from "./mmps"
+import type { FamilyInfo } from "./families"
+import type { LotInfo } from "./lots"
+import type { FloraInfo } from "./mmps"
 import type { OptionID, OptionInfo, OptionValue, Requirements } from "./options"
 import type { PackageID } from "./packages"
-import type { PropID, PropInfo } from "./props"
+import type { PropInfo } from "./props"
 import type { Feature, PackageWarning, VariantState } from "./types"
 
 /** Variant ID */
 export type VariantID = ID<string, VariantInfo>
 
 export interface ContentsInfo {
-  buildingFamilies?: {
-    [path in string]?: {
-      [familyId in FamilyID]?: FamilyInfo
-    }
-  }
-  buildings?: {
-    [path in string]?: {
-      [instanceId in BuildingID]?: BuildingInfo
-    }
-  }
-  lots?: {
-    [path in string]?: {
-      [instanceId in LotID]?: LotInfo
-    }
-  }
-  mmps?: {
-    [path in string]?: {
-      [instanceId in FloraID]?: FloraInfo
-    }
-  }
+  buildingFamilies?: FamilyInfo[]
+  buildings?: BuildingInfo[]
+  lots?: LotInfo[]
+  mmps?: FloraInfo[]
   models?: {
     [path in string]?: string[]
   }
-  propFamilies?: {
-    [path in string]?: {
-      [familyId in FamilyID]?: FamilyInfo
-    }
-  }
-  props?: {
-    [path in string]?: {
-      [instanceId in PropID]?: PropInfo
-    }
-  }
+  propFamilies?: FamilyInfo[]
+  props?: PropInfo[]
   textures?: {
     [path in string]?: string[]
   }
@@ -80,15 +56,16 @@ export interface BaseVariantInfo extends ContentsInfo {
   files?: FileInfo[]
   id: VariantID
   images?: string[]
-  lastModified?: string
+  lastGenerated?: Date
+  lastModified?: Date
   logs?: string
-  name: string
+  name?: string
   new?: boolean
   optional?: PackageID[]
   options?: OptionInfo[]
   priority: number
   readme?: string
-  release?: string
+  release?: Date
   repository?: string
   requirements?: Requirements
   summary?: string

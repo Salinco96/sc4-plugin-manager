@@ -2,7 +2,7 @@ import {
   collect,
   filterValues,
   forEach,
-  isArray,
+  get,
   isEmpty,
   isEqual,
   keys,
@@ -13,10 +13,11 @@ import {
   union,
   unique,
   values,
+  where,
 } from "@salinco/nice-utils"
 
 import type { BuildingInfo } from "@common/buildings"
-import { type LotInfo, isDefaultEnabledLot, isEnabledLot, isTogglableLot } from "@common/lots"
+import { type LotInfo, getEnabledLots, isEnabledLot } from "@common/lots"
 import {
   type OptionID,
   type OptionInfo,
@@ -533,12 +534,11 @@ export function resolvePackageUpdates(
       if (oldStatus.variantId !== newStatus.variantId) {
         selectingVariants[packageId] = newStatus.variantId
 
+        const lots = variantInfo.lots
         const enabledLots = packageConfig?.options?.lots
-        if (isArray(enabledLots)) {
-          const lots = values(variantInfo.lots ?? {}).flatMap(values)
-
+        if (lots && enabledLots) {
           const replacedLots = mapDefined(enabledLots, id =>
-            lots.find(lot => lot.id === id) ? id : lots.find(lot => lot.replace === id)?.id,
+            lots.find(where("id", id)) ? id : lots.find(where("replace", id))?.id,
           )
 
           if (!isEqual(enabledLots, replacedLots)) {
@@ -675,12 +675,7 @@ export function resolvePackageUpdates(
       if (packageConfig?.options) {
         packageConfig.options = filterValues(packageConfig.options, (optionValue, optionId) => {
           if (optionId === "lots") {
-            const defaultValue = values(variantInfo.lots ?? {})
-              .flatMap(values)
-              .filter(lot => isTogglableLot(lot) && isDefaultEnabledLot(lot))
-              .map(lot => lot.id)
-
-            return !isEqual(optionValue, defaultValue)
+            return !!variantInfo.lots && !isEqual(optionValue, getEnabledLots(variantInfo.lots))
           }
 
           const option = variantInfo.options?.find(option => option.id === optionId)
@@ -791,7 +786,7 @@ export function resolvePackageUpdates(
       warnings.replacingMaxisLots = {
         id: "replacingMaxisLots",
         message: `The following lots are overrides of Maxis lots. To avoid issues such as the 'Phantom Slider' bug, you must bulldoze all Maxis instances from your regions before enabling these overrides:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
-        packageIds: unique(collect(replacingMaxisLots, ({ packageId }) => packageId)),
+        packageIds: unique(collect(replacingMaxisLots, get("packageId"))),
         title: "Replacing Maxis lots",
       }
     }
@@ -810,7 +805,7 @@ export function resolvePackageUpdates(
       warnings.disablingLots = {
         id: "disablingLots",
         message: `Before disabling the following lots, you must bulldoze all instances from your regions:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
-        packageIds: unique(collect(oldLots, ({ packageId }) => packageId)),
+        packageIds: unique(collect(oldLots, get("packageId"))),
         title: "Disabling lots",
       }
     }
@@ -829,7 +824,7 @@ export function resolvePackageUpdates(
       warnings.replacingLots = {
         id: "replacingLots",
         message: `The following lots are not compatible across variants. Before selecting a new variant, you must bulldoze all instances from your regions:\n${lotNames.map(name => ` - ${name} `).join("\n")}`,
-        packageIds: unique(collect(replacingLots, ({ packageId }) => packageId)),
+        packageIds: unique(collect(replacingLots, get("packageId"))),
         title: "Replacing lots",
       }
     }
@@ -916,38 +911,37 @@ function getIncludedLots(
         return context.raiseInDev(`Unknown variant '${packageId}#${variantId}'`)
       }
 
-      const buildings = values(variantInfo.buildings ?? {}).flatMap(values)
-      const lots = values(variantInfo.lots ?? {}).flatMap(values)
+      if (variantInfo.lots) {
+        for (const lot of variantInfo.lots) {
+          // Check if lot is enabled
+          if (!isEnabledLot(lot, packageConfig)) {
+            continue
+          }
 
-      for (const lot of lots) {
-        // Check if lot is enabled
-        if (!isEnabledLot(lot, packageConfig)) {
-          continue
-        }
+          // Check if lot is supported
+          const isSupported = checkCondition(
+            lot.requirements,
+            packageId,
+            variantInfo,
+            profileInfo,
+            profileOptions,
+            features,
+            settings,
+          )
 
-        // Check if lot is supported
-        const isSupported = checkCondition(
-          lot.requirements,
-          packageId,
-          variantInfo,
-          profileInfo,
-          profileOptions,
-          features,
-          settings,
-        )
+          if (!isSupported) {
+            continue
+          }
 
-        if (!isSupported) {
-          continue
-        }
+          const buildingInfo = lot.building
+            ? variantInfo.buildings?.find(where("id", lot.building))
+            : undefined
 
-        const buildingInfo = lot.building
-          ? buildings?.find(building => building.id === lot.building)
-          : undefined
-
-        result[lot.id] = {
-          buildingInfo,
-          lotInfo: lot,
-          packageId,
+          result[lot.id] = {
+            buildingInfo,
+            lotInfo: lot,
+            packageId,
+          }
         }
       }
     }

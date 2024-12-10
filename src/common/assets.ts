@@ -8,7 +8,7 @@ export interface AssetInfo {
   /** Downloaded versions */
   downloaded: { [version in string]?: boolean }
   /** ISO string date */
-  lastModified?: string
+  lastModified?: Date
   /** SHA-256 of downloaded archive */
   sha256?: string
   /** Size of downloaded archive in bytes */

@@ -1,4 +1,4 @@
-import { type ID, entries, isArray, values } from "@salinco/nice-utils"
+import { type ID, entries, isArray } from "@salinco/nice-utils"
 
 import type { AuthorID } from "./authors"
 import { isEnabledLot, isSC4LotFile, isTogglableLot } from "./lots"
@@ -33,8 +33,7 @@ export function checkFile(
 
   if (isSC4LotFile(file.path)) {
     // SC4Lot file should contain a single lot
-    const lots = variantInfo?.lots?.[file.path]
-    const lot = lots && values(lots)[0]
+    const lot = variantInfo?.lots?.find(lot => lot.file === file.path)
     if (lot && isTogglableLot(lot)) {
       // Do not include lots unless explicitly enabled
       if (!packageConfig?.enabled && !alwaysIncludeLots) {
@@ -236,7 +235,7 @@ export function isMissing(variantInfo: VariantInfo, packageStatus?: PackageStatu
 export function isNew(variantInfo: VariantInfo): boolean {
   const now = new Date()
   now.setDate(now.getDate() - 15)
-  return !!variantInfo.release && variantInfo.release > now.toISOString()
+  return !!variantInfo.release && variantInfo.release > now
 }
 
 export function isOutdated(variantInfo: VariantInfo): boolean {
