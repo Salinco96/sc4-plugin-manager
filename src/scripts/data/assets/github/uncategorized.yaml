@@ -15,7 +15,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-auto-save/releases/download/v{version}/SC4AutoSave.zip
     file: SC4AutoSave.zip
@@ -41,8 +40,6 @@ assets:
     categories:
       - mods
       - dll
-    contents:
-      BulldozeExtensions.dat: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-bulldoze-extensions/releases/download/v{version}/SC4BulldozeExtensions.zip
     file: SC4BulldozeExtensions.zip
@@ -68,7 +65,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-city-date-sync/releases/download/v{version}/SC4CityDateSync.zip
     file: SC4CityDateSync.zip
@@ -94,8 +90,6 @@ assets:
     categories:
       - mods
       - dll
-    contents:
-      CityLotteryOrdinanceText_English.dat: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-city-lottery-ordinance/releases/download/v{version}/SC4CityLotteryOrdinance.zip
     file: SC4CityLotteryOrdinance.zip
@@ -122,7 +116,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-cpu-options/releases/download/v{version}/SC4CPUOptions.zip
     file: SC4CPUOptions.zip
@@ -148,7 +141,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-custom-budget-departments/releases/download/v{version}/SC4CustomBudgetDepartments.zip
     file: SC4CustomBudgetDepartments.zip
@@ -173,7 +165,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-dbpf-loading/releases/download/v{version}/SC4DBPFLoading.zip
     file: SC4DBPFLoading.zip
@@ -206,7 +197,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-demolition-animation/releases/download/v{version}/SC4DisableDemolitionAnimation.zip
     file: SC4DisableDemolitionAnimation.zip
@@ -231,7 +221,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-lot-plop-smoke/releases/download/v{version}/SC4DisableLotPlopSmoke.zip
     file: SC4DisableLotPlopSmoke.zip
@@ -256,7 +245,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-disable-network-construction-sounds/releases/download/v{version}/SC4DisableNetworkConstructionSounds.zip
     file: SC4DisableNetworkConstructionSounds.zip
@@ -281,7 +269,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-graphics-options/releases/download/v{version}/SC4GraphicsOptions.zip
     file: SC4GraphicsOptions.zip
@@ -307,7 +294,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-growify/releases/download/v{version}/SC4Growify.zip
     file: SC4Growify.zip
@@ -332,7 +318,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-humane-society-ordinance/releases/download/v{version}/SC4HumaneSocietyOrdinance.zip
     file: SC4HumaneSocietyOrdinance.zip
@@ -357,7 +342,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-legalize-gambling-ordinance-upgrade/releases/download/v{version}/SC4LegalizeGamblingUpgrade.zip
     file: SC4LegalizeGamblingUpgrade.zip
@@ -383,7 +367,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-building-styles/releases/download/v{version}/SC4MoreBuildingStyles.zip
     file: SC4MoreBuildingStyles.zip
@@ -424,7 +407,7 @@ assets:
           landmarkRadius: 5
           maintenance: 250
           menu: Rewards
-          model: 5ad0e817-6dd414f2-00030000
+          model: 6dd414f2
           name: CensusRepository
           pollution: 3
           pollutionRadius: 3
@@ -445,77 +428,6 @@ assets:
       - mods
       - dll
       - rewards
-    contents:
-      Census Repository v3.5 Patch\RJ - Census_Repository_Model_and_Query_3.1.dat:
-        buildings:
-          0dd41d65:
-            bulldoze: 100
-            categories: rewards
-            cost: 15000
-            flamability: 45
-            garbage: 23
-            garbageRadius: 2
-            jobs:
-              $: 170
-              $$: 105
-              $$$: 45
-            landmark: 20
-            landmarkRadius: 5
-            maintenance: 250
-            menu: Rewards
-            model: 5ad0e817-6dd414f2-00030000
-            name: CensusRepository
-            pollution: 3
-            pollutionRadius: 3
-            power: 125
-            rating: 8
-            ratingRadius: 256
-            relief:
-              co$$: 100000
-              co$$$: 100000
-              r$: 2500
-              r$$: 2500
-              r$$$: 2500
-            submenu: Landmarks/Government
-            water: 150
-            waterPollution: 2
-            waterPollutionRadius: 2
-        lots:
-          0dd41d65:
-            building: 0dd41d65
-            name: CensusRepository
-            props:
-              - 2aa40000
-              - 2aa70000
-              - 2aa90000
-              - 2ae80000
-              - 2aaa0000
-              - 2aab0000
-              - 2aac0000
-              - 2aad0000
-              - 2aae0000
-              - 2a590000
-              - 8956a699
-            size: 1x1
-            textures:
-              - '258e0000'
-              - 258d0000
-        models:
-          - 5ad0e817-5465811a-00030000
-          - 5ad0e817-d17c864e-00030000
-        props:
-          16888cf8:
-            model: 5ad0e817-5465811a-00030000
-            name: Census Repository Facility
-          1689d23a:
-            name: RJ - Census Repository Phone Booth
-          1689d35d:
-            name: RJ - Census Repository Phone Booth Rear
-          8956a699:
-            name: Gnome_CensusRepository
-          b6888d35:
-            model: 5ad0e817-d17c864e-00030000
-            name: Census Repository Vault
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-demand-info/releases/download/v{version}/SC4MoreDemandInfo.zip
     file: SC4MoreDemandInfo.zip
@@ -551,10 +463,14 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat:
+        - 5465811a
+        - d17c864e
     props:
       Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat:
         16888cf8:
-          model: 5ad0e817-5465811a-00030000
+          model: 5465811a
           name: Census Repository Facility
         1689d23a:
           name: RJ - Census Repository Phone Booth
@@ -563,7 +479,7 @@ assets:
         8956a699:
           name: Gnome_CensusRepository
         b6888d35:
-          model: 5ad0e817-d17c864e-00030000
+          model: d17c864e
           name: Census Repository Vault
     repository: https://github.com/0xC0000054/sc4-more-demand-info
     sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
@@ -577,7 +493,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-no-kick-out/releases/download/v{version}/SC4NoKickOut.zip
     file: SC4NoKickOut.zip
@@ -602,7 +517,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-query-ui-hooks/releases/download/v{version}/SC4QueryUIHooks.zip
     file: SC4QueryUIHooks.zip
@@ -634,8 +548,6 @@ assets:
     categories:
       - mods
       - dll
-    contents:
-      RegionCensusUI.dat: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-region-census/releases/download/v{version}/SC4RegionCensus.zip
     file: SC4RegionCensus.zip
@@ -661,7 +573,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-remove-phantom-budget-items/releases/download/v{version}/SC4RemovePhantomBudgetItems.zip
     file: SC4RemovePhantomBudgetItems.zip
@@ -686,7 +597,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/0xC0000054/sc4-resource-loading-hooks/releases/download/v{version}/SC4ResourceLoadingHooks.zip
     file: SC4ResourceLoadingHooks.zip
@@ -736,7 +646,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/memo33/sc4-3d-camera-dll/releases/download/{version}/3d-camera-dll-{version}.zip
     file: 3d-camera-dll-1.0.0.zip
@@ -761,7 +670,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/memo33/sc4-thumbnail-fix-dll/releases/download/{version}/thumbnail-fix-dll-{version}.zip
     file: thumbnail-fix-dll-1.0.0.zip
@@ -790,7 +698,7 @@ assets:
           cost: 170
           maintenance: 20
           menu: Parks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: PZ1x1_ParkFlowerGarden2_2a635acf
           pollution: -7
           pollutionRadius: 4
@@ -805,77 +713,6 @@ assets:
     categories:
       - mods
       - dll
-    contents:
-      submenus\commercial\ploppable-CO$$$-submenu.dat: {}
-      submenus\commercial\ploppable-CO$$-submenu.dat: {}
-      submenus\commercial\ploppable-CS$$$-submenu.dat: {}
-      submenus\commercial\ploppable-CS$$-submenu.dat: {}
-      submenus\commercial\ploppable-CS$-submenu.dat: {}
-      submenus\education\college-submenu.dat: {}
-      submenus\education\elementary-school-submenu.dat: {}
-      submenus\education\high-school-submenu.dat: {}
-      submenus\education\library-museum-submenu.dat: {}
-      submenus\health\health-large-submenu.dat: {}
-      submenus\health\health-medium-submenu.dat: {}
-      submenus\health\health-small-submenu.dat: {}
-      submenus\highway\signage-submenu.dat: {}
-      submenus\industrial\ploppable-Ia-submenu.dat: {}
-      submenus\industrial\ploppable-Id-submenu.dat: {}
-      submenus\industrial\ploppable-Iht-submenu.dat: {}
-      submenus\industrial\ploppable-Im-submenu.dat: {}
-      submenus\landmark\entertainment-submenu.dat: {}
-      submenus\landmark\government-submenu.dat: {}
-      submenus\landmark\religion-submenu.dat: {}
-      submenus\misc-transit\ElRail-submenu.dat: {}
-      submenus\misc-transit\GLR-submenu.dat: {}
-      submenus\misc-transit\bus-submenu.dat: {}
-      submenus\misc-transit\multimodal-stations-submenu.dat: {}
-      submenus\misc-transit\parking-submenu.dat: {}
-      submenus\misc-transit\subway-submenu.dat: {}
-      submenus\park\embankment-submenu.dat: {}
-      submenus\park\fillers-submenu.dat: {}
-      submenus\park\green-spaces-submenu.dat: {}
-      submenus\park\modular-parks-submenu.dat: {}
-      submenus\park\plaza-submenu.dat:
-        buildings:
-          ea8756cf:
-            bulldoze: 20
-            cost: 170
-            maintenance: 20
-            menu: Parks
-            model: 5ad0e817-badb57f1-0e110000
-            name: PZ1x1_ParkFlowerGarden2_2a635acf
-            pollution: -7
-            pollutionRadius: 4
-            relief:
-              r$: 3000
-              r$$: 3000
-              r$$$: 3000
-            submenu: Parks/Plazas
-            water: 10
-            waterPollution: 2
-            waterPollutionRadius: 2
-      submenus\park\sports-submenu.dat: {}
-      submenus\police\military-submenu.dat: {}
-      submenus\police\police-deluxe-submenu.dat: {}
-      submenus\police\police-large-submenu.dat: {}
-      submenus\police\police-small-submenu.dat: {}
-      submenus\power\clean-energy-submenu.dat: {}
-      submenus\power\dirty-energy-submenu.dat: {}
-      submenus\power\misc-power-submenu.dat: {}
-      submenus\rail\freight-rail-submenu.dat: {}
-      submenus\rail\hybrid-railway-submenu.dat: {}
-      submenus\rail\monorail-submenu.dat: {}
-      submenus\rail\passenger-rail-submenu.dat: {}
-      submenus\rail\yards-submenu.dat: {}
-      submenus\residential\ploppable-R$$$-submenu.dat: {}
-      submenus\residential\ploppable-R$$-submenu.dat: {}
-      submenus\residential\ploppable-R$-submenu.dat: {}
-      submenus\submenu-essentials.dat: {}
-      submenus\water-transit\canal-submenu.dat: {}
-      submenus\water-transit\ports-ferries-submenu.dat: {}
-      submenus\water-transit\seawall-submenu.dat: {}
-      submenus\water-transit\waterfront-submenu.dat: {}
     dependencies: []
     download: https://github.com/memo33/submenus-dll/releases/download/{version}/submenus-dll-{version}.zip
     file: submenus-dll-1.1.4.zip
@@ -952,7 +789,6 @@ assets:
     categories:
       - mods
       - dll
-    contents: {}
     dependencies: []
     download: https://github.com/memo33/transparent-texture-fix-dll/releases/download/{version}/transparent-texture-fix-dll-{version}.zip
     file: transparent-texture-fix-dll-1.0.0.zip

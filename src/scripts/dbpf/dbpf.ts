@@ -4,7 +4,7 @@ import { collect, toArray, toHex, values } from "@salinco/nice-utils"
 
 import type { BuildingID } from "@common/buildings"
 import { CategoryID } from "@common/categories"
-import { DBPFDataType, DBPFFileType, TGI, isDBPF, parseTGI } from "@common/dbpf"
+import { DBPFDataType, DBPFFileType, type TGI, isDBPF, parseTGI } from "@common/dbpf"
 import {
   ExemplarPropertyID,
   type ExemplarPropertyInfo,
@@ -222,8 +222,7 @@ export async function analyzeSC4Files(
           }
 
           case DBPFDataType.S3D: {
-            const [t, g, i] = parseTGI(entry.id)
-            const modelId = TGI(t, g, i & 0xffff0000) // Ignore zoom/rotation
+            const modelId = getModelId(entry.id)
             if (!contents.models?.[filePath]?.includes(modelId)) {
               contents.models ??= {}
               contents.models[filePath] ??= []
@@ -265,6 +264,17 @@ export async function analyzeSC4Files(
   }
 }
 
+export function bitMask(value: number, mask: number): number {
+  return (value & mask) >>> 0
+}
+
 export function getFamilyInstanceId(familyId: number): number {
-  return (familyId + 0x10000000) & 0xffffffff
+  return bitMask(familyId + 0x10000000, 0xffffffff)
+}
+
+export function getModelId(tgi: TGI): string {
+  const [, g, i] = parseTGI(tgi)
+  return bitMask(i, 0xffff0000) === 0x00030000
+    ? toHex(g, 8)
+    : `${toHex(g, 8)}-${toHex(bitMask(i, 0xffff0000), 8).slice(0, 4)}` // Ignore zoom/rotation
 }

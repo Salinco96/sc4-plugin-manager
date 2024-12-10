@@ -11,7 +11,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Toyama3 Blue Full
           pollution: -5
           pollutionRadius: 3
@@ -31,7 +31,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Toyama3 Blue
           pollution: -5
           pollutionRadius: 3
@@ -51,7 +51,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Toyama3 Green Full
           pollution: -5
           pollutionRadius: 3
@@ -71,7 +71,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Toyama3 Green
           pollution: -5
           pollutionRadius: 3
@@ -91,7 +91,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Toyama3 Red Full
           pollution: -5
           pollutionRadius: 3
@@ -111,7 +111,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Toyama3 Red
           pollution: -5
           pollutionRadius: 3
@@ -131,7 +131,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Toyama3 Yellow Full
           pollution: -5
           pollutionRadius: 3
@@ -151,7 +151,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Toyama3 Yellow
           pollution: -5
           pollutionRadius: 3
@@ -171,7 +171,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Sister
           pollution: -5
           pollutionRadius: 3
@@ -191,7 +191,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Ned Lloyd
           pollution: -5
           pollutionRadius: 3
@@ -211,7 +211,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Ned Lloyd Full
           pollution: -5
           pollutionRadius: 3
@@ -231,7 +231,7 @@ assets:
           cost: 7
           maintenance: 1
           menu: Landmarks
-          model: 5ad0e817-badb57f1-0e110000
+          model: badb57f1-0e11
           name: JRJ Titanic
           pollution: -5
           pollutionRadius: 3
@@ -247,426 +247,6 @@ assets:
     categories:
       - landmarks
     category: 20-ploppable
-    contents:
-      BSC\BSCProps\BSC MEGA Props - JRJ Vol01 v2.dat:
-        models:
-          - 5ad0e817-93510e0f-00030000
-          - 5ad0e817-d351314d-00030000
-          - 5ad0e817-b34d42e5-00030000
-          - 5ad0e817-534e4a5e-00030000
-          - 5ad0e817-d34f8ced-00030000
-          - 5ad0e817-534e44f3-00030000
-          - 5ad0e817-d34f8584-00030000
-          - 5ad0e817-734e40cf-00030000
-          - 5ad0e817-b34f7bbc-00030000
-          - 5ad0e817-f34e3aa0-00030000
-          - 5ad0e817-334f74fb-00030000
-          - 5ad0e817-5344f7dc-00030000
-        props:
-          15699a1a:
-            name: JRJ_V_Toyama_Ship_RedTimed
-          50be0b56:
-            model: 5ad0e817-b34d42e5-00030000
-            name: JRJ_V_JJ_Sister2
-          50c05283:
-            model: 5ad0e817-b34f7bbc-00030000
-            name: JRJ_V_Toyama_Ship_Red_Full
-          50c1db01:
-            model: 5ad0e817-93510e0f-00030000
-            name: JRJ_V_Nedlloyd01
-          70b5ca2f:
-            model: 5ad0e817-5344f7dc-00030000
-            name: JRJ_V_RMS_Titanic
-          70c0526a:
-            model: 5ad0e817-d34f8584-00030000
-            name: JRJ_V_Toyama_Ship_Green_full
-          70c05af8:
-            model: 5ad0e817-d34f8ced-00030000
-            name: JRJ_V_Toyama_Ship_Blue_full
-          70c20440:
-            model: 5ad0e817-d351314d-00030000
-            name: JRJ_V_Nedlloydfull02
-          756999f9:
-            name: JRJ_V_Toyama_Ship_BlueTimed
-          90bf037b:
-            model: 5ad0e817-f34e3aa0-00030000
-            name: JRJ_V_Toyama_Ship_Yellow
-          90bf09fe:
-            model: 5ad0e817-734e40cf-00030000
-            name: JRJ_V_Toyama_Ship_Red
-          90bf0d55:
-            model: 5ad0e817-534e44f3-00030000
-            name: JRJ_V_Toyama_Ship_Green
-          90bf1390:
-            model: 5ad0e817-534e4a5e-00030000
-            name: JRJ_V_Toyama_Ship_Blue
-          b5699a0b:
-            name: JRJ_V_Toyama_Ship_GreenTimed
-          d56999c1:
-            name: JRJ_V_Nedlloyd01Timed
-          d5699a2f:
-            name: JRJ_V_Toyama_Ship_YellowTimed
-          f0c044bc:
-            model: 5ad0e817-334f74fb-00030000
-            name: JRJ_V_Toyama_Ship_Yellow_full
-      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue Full_30c05b68.SC4Lot:
-        buildings:
-          30c05b68:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Toyama3 Blue Full
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          30c05b68:
-            building: 30c05b68
-            name: JRJ Toyama3 blue Full
-            props:
-              - 70c05af8
-            size: 10x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Blue\JRJ Toyama3 blue_d0bf13e3.SC4Lot:
-        buildings:
-          d0bf13e3:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Toyama3 Blue
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          d0bf13e3:
-            building: d0bf13e3
-            name: JRJ Toyama3 blue
-            props:
-              - 90bf1390
-            size: 10x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green Full_30c052e8.SC4Lot:
-        buildings:
-          30c052e8:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Toyama3 Green Full
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          30c052e8:
-            building: 30c052e8
-            name: JRJ Toyama3 Green Full
-            props:
-              - 70c0526a
-            size: 10x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Green\JRJ Toyama3 Green_f0bf0dab.SC4Lot:
-        buildings:
-          f0bf0dab:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Toyama3 Green
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          f0bf0dab:
-            building: f0bf0dab
-            name: JRJ Toyama3 Green
-            props:
-              - 90bf0d55
-            size: 10x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red Full_d0c05314.SC4Lot:
-        buildings:
-          d0c05314:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Toyama3 Red Full
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          d0c05314:
-            building: d0c05314
-            name: JRJ Toyama3 red Full
-            props:
-              - 50c05283
-            size: 10x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Red\JRJ Toyama3 red_d0bf0a44.SC4Lot:
-        buildings:
-          d0bf0a44:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Toyama3 Red
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          d0bf0a44:
-            building: d0bf0a44
-            name: JRJ Toyama3 red
-            props:
-              - 90bf09fe
-            size: 10x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow Full_f0c045df.SC4Lot:
-        buildings:
-          f0c045df:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Toyama3 Yellow Full
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          f0c045df:
-            building: f0c045df
-            name: JRJ Toyama3 yellow Full
-            props:
-              - f0c044bc
-            size: 10x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\JRJ Maritime Toyama Yellow\JRJ Toyama3 yellow_d0bf0413.SC4Lot:
-        buildings:
-          d0bf0413:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Toyama3 Yellow
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          d0bf0413:
-            building: d0bf0413
-            name: JRJ Toyama3 yellow
-            props:
-              - 90bf037b
-            size: 10x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\Juan J. Sister\JRJ Sister_90be0bd3.SC4Lot:
-        buildings:
-          90be0bd3:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Sister
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          90be0bd3:
-            building: 90be0bd3
-            name: JRJ Sister
-            props:
-              - 50be0b56
-            size: 3x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd01_90c1db9e.SC4Lot:
-        buildings:
-          90c1db9e:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Ned Lloyd
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          90c1db9e:
-            building: 90c1db9e
-            name: JRJ Nedlloyd01
-            props:
-              - 50c1db01
-            size: 5x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\Ned Lloyd\JRJ Nedlloyd02_90c204fd.SC4Lot:
-        buildings:
-          90c204fd:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Ned Lloyd Full
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          90c204fd:
-            building: 90c204fd
-            name: JRJ Nedlloyd02
-            props:
-              - 70c20440
-            size: 5x1
-            textures:
-              - 25f40000
-      Jeronij\JRJ Ships Compilation\RMS Titanic\JRJ Titanic_70b5cb20.SC4Lot:
-        buildings:
-          70b5cb20:
-            bulldoze: 5
-            categories: landmarks
-            cost: 7
-            maintenance: 1
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-0e110000
-            name: JRJ Titanic
-            pollution: -5
-            pollutionRadius: 3
-            rating: 10
-            ratingRadius: 256
-            relief:
-              r$: 250
-              r$$: 250
-              r$$$: 250
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          70b5cb20:
-            building: 70b5cb20
-            name: JRJ Titanic
-            props:
-              - 70b5ca2f
-            size: 1x1
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><span style=\"font-family: Arial, Helvetica, sans-serif;\">These are all water plopable landmarks which include mostly two versions of cargo ships (loaded and unloaded) like the\_Ned Lloyd\_and the\_Maritime Toyoma\_cargo ships in different colour variation.\_</span><span style=\"font-family: Arial, Helvetica, sans-serif;\">Useful for industrial harbour areas.</span><span style=\"font-family: Arial, Helvetica, sans-serif;\">\_The compilation also contains the</span>\_Spanish\_passenger ferry ship\_Juan J. Sister\_and the\_Harland &amp; Wolff RMS Titanic.</p>\r\n<p>These models are based on real life ships, for the cargo ships there are two versions included, one with a full container cargo, and the other one empty. The ships are to scale. Be advised !!!</p>\r\n<p>Before installing the modpack read the readme contained in the <em><strong>~Documents</strong></em> folder and run the <strong>cleanitol</strong> file to have a clean installation of the mods.</p>\r\n<p><span style=\"text-decoration: underline;\">Installation</span>: Copy/extract the <strong>BSC </strong>and the <strong>Jeronij </strong>parent folders into your plugins. If you extracted the <em>_Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder<span style=\"font-family: Arial, Helvetica, sans-serif;\">.</span></p>\r\n<p><strong><span style=\"font-family: Arial, Helvetica, sans-serif;\">Dependencies:</span></strong></p>\r\n<p><span style=\"font-family: Arial, Helvetica, sans-serif;\">BSC MEGA Props - JRJ Vol01 v2.dat - INCLUDED (you can find it in the BSC/BSCProps folder).</span></p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_JJSister.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg\" alt=\"JRJ_Ships_JJSister\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_Titanic.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Titanic.jpg\" alt=\"JRJ_Ships_Titanic2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_Toyama_blue.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Toyama_blue.jpg\" alt=\"JRJ_Ships_Toyama_blue3\" ></a> </span>\r\n        </div> \r\n</body>"
     downloads: 701
@@ -811,45 +391,59 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat:
+        - 93510e0f
+        - d351314d
+        - b34d42e5
+        - 534e4a5e
+        - d34f8ced
+        - 534e44f3
+        - d34f8584
+        - 734e40cf
+        - b34f7bbc
+        - f34e3aa0
+        - 334f74fb
+        - 5344f7dc
     name: SC4D LEX LEGACY - Jeronij Ship Pack
     props:
       BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat:
         15699a1a:
           name: JRJ_V_Toyama_Ship_RedTimed
         50be0b56:
-          model: 5ad0e817-b34d42e5-00030000
+          model: b34d42e5
           name: JRJ_V_JJ_Sister2
         50c05283:
-          model: 5ad0e817-b34f7bbc-00030000
+          model: b34f7bbc
           name: JRJ_V_Toyama_Ship_Red_Full
         50c1db01:
-          model: 5ad0e817-93510e0f-00030000
+          model: 93510e0f
           name: JRJ_V_Nedlloyd01
         70b5ca2f:
-          model: 5ad0e817-5344f7dc-00030000
+          model: 5344f7dc
           name: JRJ_V_RMS_Titanic
         70c0526a:
-          model: 5ad0e817-d34f8584-00030000
+          model: d34f8584
           name: JRJ_V_Toyama_Ship_Green_full
         70c05af8:
-          model: 5ad0e817-d34f8ced-00030000
+          model: d34f8ced
           name: JRJ_V_Toyama_Ship_Blue_full
         70c20440:
-          model: 5ad0e817-d351314d-00030000
+          model: d351314d
           name: JRJ_V_Nedlloydfull02
         756999f9:
           name: JRJ_V_Toyama_Ship_BlueTimed
         90bf037b:
-          model: 5ad0e817-f34e3aa0-00030000
+          model: f34e3aa0
           name: JRJ_V_Toyama_Ship_Yellow
         90bf09fe:
-          model: 5ad0e817-734e40cf-00030000
+          model: 734e40cf
           name: JRJ_V_Toyama_Ship_Red
         90bf0d55:
-          model: 5ad0e817-534e44f3-00030000
+          model: 534e44f3
           name: JRJ_V_Toyama_Ship_Green
         90bf1390:
-          model: 5ad0e817-534e4a5e-00030000
+          model: 534e4a5e
           name: JRJ_V_Toyama_Ship_Blue
         b5699a0b:
           name: JRJ_V_Toyama_Ship_GreenTimed
@@ -858,7 +452,7 @@ assets:
         d5699a2f:
           name: JRJ_V_Toyama_Ship_YellowTimed
         f0c044bc:
-          model: 5ad0e817-334f74fb-00030000
+          model: 334f74fb
           name: JRJ_V_Toyama_Ship_Yellow_full
     sha256: 655d592ae43b5c95f143eee8ae3bb4d536b0941d606a012bb9be8bcdb7136bbc
     size: 11699133
@@ -911,131 +505,6 @@ assets:
     assetId: sc4evermore/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex
     authors:
       - Rubik
-    buildings:
-      - bulldoze: 4657
-        capacity:
-          co$$: 26196
-          co$$$: 18323
-        file: CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_Two World Trade_Co$$$_043264c8.SC4Lot
-        flamability: 35
-        garbage: 19
-        id: '14326491'
-        model: 5ad0e817-8d2dc332-000c0000
-        pollution: 48
-        pollutionRadius: 6
-        power: 321
-        water: 3448
-        waterPollution: 48
-        waterPollutionRadius: 7
-        worth: 89499
-      - bulldoze: 5639
-        capacity:
-          co$$: 12955
-          co$$$: 9062
-        cost: 250000
-        file: BSC/BSC Custodian/Rubik3/One World Trade Tower/One World Trade with Jobs.dat
-        flamability: 35
-        garbage: 19
-        id: ed4f4910
-        maintenance: 650
-        model: 5ad0e817-8d2dc332-00090000
-        pollution: 48
-        pollutionRadius: 6
-        power: 319
-        rating: 17
-        ratingRadius: 256
-        water: 3429
-        waterPollution: 48
-        waterPollutionRadius: 7
-        worth: 88999
-      - bulldoze: 929
-        cost: 343000
-        file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Landmark_4e4dd98d.SC4Lot
-        flamability: 10
-        garbage: 163
-        id: 4e4dd98d
-        maintenance: 142
-        model: 5ad0e817-badb57f1-0e110000
-        pollution: 52
-        pollutionRadius: 1
-        power: 1270
-        rating: 10
-        ratingRadius: 256
-        waterPollution: 41
-        waterPollutionRadius: 2
-      - bulldoze: 113
-        cost: 6200
-        file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Placeholder_0e44f044.SC4Lot
-        flamability: 70
-        garbage: 14
-        id: 0e44f044
-        maintenance: 56
-        model: 5ad0e817-badb57f1-0e110000
-        pollution: 87
-        pollutionRadius: 9
-        power: 88
-        rating: 10
-        ratingRadius: 256
-        water: 1311
-        waterPollution: 58
-        waterPollutionRadius: 13
-      - bulldoze: 682
-        capacity:
-          co$$: 65931
-          co$$$: 46114
-        cost: 343000
-        file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Reward_ae3f8aea.SC4Lot
-        flamability: 35
-        garbage: 30
-        id: ae3f8aea
-        maintenance: 650
-        model: 5ad0e817-badb57f1-0e110000
-        pollution: 77
-        pollutionRadius: 6
-        power: 509
-        powerProduction: 500
-        rating: 17
-        ratingRadius: 256
-        water: 5461
-        waterPollution: 77
-        waterPollutionRadius: 7
-        worth: 141979
-      - bulldoze: 4657
-        capacity:
-          co$$: 13100
-          co$$$: 9163
-        cost: 250000
-        file: BSC/BSC Custodian/Rubik3/Two World Trade Tower/Two World Trade with Jobs.dat
-        flamability: 35
-        garbage: 19
-        id: 4d54a36c
-        maintenance: 650
-        model: 5ad0e817-8d2dc332-000c0000
-        pollution: 48
-        pollutionRadius: 6
-        power: 321
-        rating: 17
-        ratingRadius: 256
-        water: 3448
-        waterPollution: 48
-        waterPollutionRadius: 7
-        worth: 89499
-      - bulldoze: 5639
-        capacity:
-          co$$: 25907
-          co$$$: 18120
-        file: CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_One World Trade_Co$$$_243260d7.SC4Lot
-        flamability: 35
-        garbage: 19
-        id: 943260aa
-        model: 5ad0e817-8d2dc332-00090000
-        pollution: 48
-        pollutionRadius: 6
-        power: 319
-        water: 3429
-        waterPollution: 48
-        waterPollutionRadius: 7
-        worth: 88999
     category: 20-ploppable
     dependencies:
       - simtropolis/35790-sc4-cleanitol
@@ -1074,442 +543,7 @@ assets:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/day.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Night1.jpg
     lastModified: 2024-09-02T23:42:33.000Z
-    lots:
-      - building: ed4f4910
-        categories: landmarks
-        file: BSC/BSC Custodian/Rubik3/One World Trade Tower/One World Trade with Jobs.dat
-        id: ed4f4910
-        name: WTC_One World Trade with Jobs
-        props:
-          - '29230000'
-        size: 4x4
-        textures:
-          - 258f0000
-      - building: 4e4dd98d
-        categories: landmarks
-        file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Landmark_4e4dd98d.SC4Lot
-        id: 4e4dd98d
-        name: WTC_Complex_Landmark
-        props:
-          - 8d547ce8
-          - ad8944e2
-          - cd8944ce
-          - 6dbf3e64
-          - 2dbf3eab
-          - 1e9a0000
-          - 1e9b0000
-          - 29c20000
-          - 0dbf3e25
-          - edbf3e0a
-          - 2dbf3ecc
-          - 0dbf6290
-          - '1e980000'
-          - adc4dfd3
-          - 8dc4de5f
-          - 0dc4de8f
-          - 0dc4df12
-          - 6dc4df27
-          - 1ee00000
-          - 1ee20000
-          - '28330000'
-          - '16490000'
-          - 29f70000
-          - 2a140000
-          - 8dc4dfe5
-          - adc4ded4
-          - cdc4df5d
-          - 2dc4df72
-          - cdc4df42
-          - cdc4dfbe
-          - '29150000'
-          - 2a100000
-          - 0dc4dfaa
-          - 0ded882b
-          - edc4deb1
-          - edc4def0
-          - 2e1412a4
-          - 1ed80000
-          - 4e291a62
-          - '29520000'
-          - 2a5b0000
-          - 1dd60000
-          - 2c2a0000
-          - 2bc50000
-          - 1d240000
-          - 8e2995ab
-          - 2a8a0000
-          - 1f000000
-          - 1d250000
-          - 1f060000
-          - 1f070000
-          - 1e1a0000
-          - ce14cdfc
-          - adf47218
-          - cdf471ef
-          - 6df471f7
-          - 8e09ccba
-          - 2ac90000
-          - 2ac10000
-          - 1d200000
-          - 29dc0000
-          - 29dd0000
-          - 1d2e0000
-          - 0df471e3
-          - ae09ccc7
-          - 2a170000
-          - 2e14cdf2
-          - '29230000'
-          - aa836b49
-          - ee2b9927
-          - ee09d32e
-          - 0e3f4105
-          - ee3f411c
-          - 0e49f8d5
-          - 8e4bb6a6
-          - 6e488c9a
-          - 0e4dc665
-          - 28ec0000
-          - ed5273bc
-        size: 17x20
-        textures:
-          - 9110a000
-          - 9110b000
-          - 9110c000
-          - 9110d000
-          - '9110e000'
-          - 9110f000
-          - '91114000'
-          - '91115000'
-          - '91116000'
-          - '91118000'
-          - '91119000'
-          - 9111a000
-          - 9111b000
-          - 9111c000
-          - 9111d000
-          - '9111e000'
-          - 9111f000
-          - '91124000'
-          - '91104000'
-          - '91105000'
-          - '91106000'
-          - '91107000'
-          - '91108000'
-          - '25270000'
-          - '91125000'
-          - '91127000'
-          - '91126000'
-          - '91128000'
-          - '91117000'
-          - '26060000'
-          - 25fa0000
-          - '26360000'
-          - '91109000'
-      - building: 0e44f044
-        categories: landmarks
-        file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Placeholder_0e44f044.SC4Lot
-        id: 0e44f044
-        name: WTC_Complex_Placeholder
-        props:
-          - ae452e25
-          - 2e0c05da
-          - 8e47294d
-          - 0e4511ff
-          - '6e472988'
-          - ce47296c
-          - 8d469510
-          - ad45edec
-          - 2d78a1bf
-          - cd4cff2f
-          - 6e4b9ce8
-          - cd4e7b5e
-          - 2e4b9ca9
-          - '03070000'
-          - 1d380000
-          - '03090000'
-          - 030a0000
-          - '03080000'
-          - '02060000'
-          - ee4b9d1b
-          - 2e4b9cd8
-          - 0e4b9d0a
-          - cd74aa22
-          - 0d738814
-          - 0d73859d
-          - a000003d
-          - 6ab6ec78
-          - aa836b49
-        size: 17x20
-        textures:
-          - 9110a000
-          - 9110c000
-          - 9110d000
-          - 9110f000
-          - 9110b000
-          - '9110e000'
-          - '91114000'
-          - '91116000'
-          - '91118000'
-          - '91119000'
-          - 9111a000
-          - 9111b000
-          - 9111d000
-          - '91105000'
-          - '25270000'
-          - '91125000'
-          - '91127000'
-          - '91126000'
-          - '91128000'
-          - '91117000'
-          - '26060000'
-          - 25fa0000
-          - '26360000'
-          - '91109000'
-          - 1da44000
-          - 261d0000
-          - 9111c000
-          - 261b0000
-          - '26190000'
-          - '91124000'
-          - 9111f000
-          - '9111e000'
-          - 261c0000
-          - '91107000'
-          - 9113a000
-          - '91104000'
-          - '91106000'
-          - '91108000'
-          - '91115000'
-      - building: ae3f8aea
-        categories: landmarks,co$$$
-        file: BSC/BSC Custodian/Rubik3/World Trade Center Complex/WTC_Complex_Reward_ae3f8aea.SC4Lot
-        id: ae3f8aea
-        name: WTC_Complex_Reward
-        props:
-          - 8d547ce8
-          - ad8944e2
-          - cd8944ce
-          - 6dbf3e64
-          - 2dbf3eab
-          - 1e9a0000
-          - 1e9b0000
-          - 29c20000
-          - 0dbf3e25
-          - edbf3e0a
-          - 2dbf3ecc
-          - 0dbf6290
-          - '1e980000'
-          - adc4dfd3
-          - 8dc4de5f
-          - 0dc4de8f
-          - 0dc4df12
-          - 6dc4df27
-          - 1ee00000
-          - 1ee20000
-          - '28330000'
-          - '16490000'
-          - 29f70000
-          - 2a140000
-          - 8dc4dfe5
-          - adc4ded4
-          - cdc4df5d
-          - 2dc4df72
-          - cdc4df42
-          - cdc4dfbe
-          - '29150000'
-          - 2a100000
-          - 0dc4dfaa
-          - 0ded882b
-          - edc4deb1
-          - edc4def0
-          - 2e1412a4
-          - 1ed80000
-          - 4e291a62
-          - '29520000'
-          - 2a5b0000
-          - 1dd60000
-          - 2c2a0000
-          - 2bc50000
-          - 1d240000
-          - 8e2995ab
-          - 2a8a0000
-          - 1f000000
-          - 1d250000
-          - 1f060000
-          - 1f070000
-          - 1e1a0000
-          - ce14cdfc
-          - adf47218
-          - cdf471ef
-          - 6df471f7
-          - 8e09ccba
-          - 2ac90000
-          - 2ac10000
-          - 1d200000
-          - 29dc0000
-          - 29dd0000
-          - 1d2e0000
-          - 0df471e3
-          - ae09ccc7
-          - 2a170000
-          - 2e14cdf2
-          - '29230000'
-          - aa836b49
-          - ee2b9927
-          - ee09d32e
-          - 0e3f4105
-          - ee3f411c
-          - 0e49f8d5
-          - 8e4bb6a6
-          - 6e488c9a
-          - 0e4dc665
-          - 28ec0000
-          - ed5273bc
-        size: 17x20
-        textures:
-          - 9110a000
-          - 9110b000
-          - '91109000'
-          - 9110c000
-          - 9110d000
-          - '25270000'
-          - '26060000'
-          - '9110e000'
-          - 9110f000
-          - '91127000'
-          - '91126000'
-          - '91125000'
-          - '91106000'
-          - '91114000'
-          - '91115000'
-          - '91116000'
-          - '91118000'
-          - '91119000'
-          - 9111a000
-          - 9111b000
-          - 9111c000
-          - 9111d000
-          - '9111e000'
-          - 9111f000
-          - '91124000'
-          - '91104000'
-          - '91105000'
-          - '91107000'
-          - '91108000'
-          - '91128000'
-          - '91117000'
-          - 25fa0000
-          - '26360000'
-      - building: 4d54a36c
-        categories: landmarks
-        file: BSC/BSC Custodian/Rubik3/Two World Trade Tower/Two World Trade with Jobs.dat
-        id: 4d54a36c
-        name: WTC_Two World Trade with Jobs
-        size: 4x4
-        textures:
-          - 258f0000
-      - building: 943260aa
-        categories: co$$$
-        density: high
-        file: CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_One World Trade_Co$$$_243260d7.SC4Lot
-        id: 243260d7
-        name: CO$$$15_4x4_WTC_Complex_One World Trade_Co$$$
-        requirements:
-          cam: true
-        size: 4x4
-        stage: 15
-        textures:
-          - 258f0000
-      - building: '14326491'
-        categories: co$$$
-        density: high
-        file: CAM/Rubik3/World Trade Center Towers/CO$$$15_4x4_WTC_Complex_Two World Trade_Co$$$_043264c8.SC4Lot
-        id: 043264c8
-        name: CO$$$15_4x4_WTC_Complex_Two World Trade_Co$$$
-        requirements:
-          cam: true
-        size: 4x4
-        stage: 15
-        textures:
-          - 258f0000
-    meta:
-      timestamp: 2024-11-18T14:29:23.621Z
-      version: 1
-    models:
-      - 5ad0e817-8d2dc332-00370000
-      - 5ad0e817-8d2dc332-000c0000
-      - 5ad0e817-cde58b6a-00030000
-      - 5ad0e817-8d2dc332-00260000
-      - 5ad0e817-8d2dc332-00380000
-      - 5ad0e817-8d2dc332-00330000
-      - 5ad0e817-8d2dc332-00250000
-      - 5ad0e817-8d2dc332-002c0000
-      - 5ad0e817-8d2dc332-00280000
-      - 5ad0e817-8d2dc332-002b0000
-      - 5ad0e817-8d2dc332-00230000
-      - 5ad0e817-8d2dc332-00270000
-      - 5ad0e817-8d2dc332-00320000
-      - 5ad0e817-8d2dc332-00200000
-      - 5ad0e817-8d2dc332-002f0000
-      - 5ad0e817-8d2dc332-001a0000
-      - 5ad0e817-8d2dc332-001c0000
-      - 5ad0e817-8d2dc332-00160000
-      - 5ad0e817-8d2dc332-001d0000
-      - 5ad0e817-8d2dc332-00140000
-      - 5ad0e817-8d2dc332-002a0000
-      - 5ad0e817-8d2dc332-00290000
-      - 5ad0e817-8d2dc332-00300000
-      - 5ad0e817-8d2dc332-00340000
-      - 5ad0e817-8d2dc332-00360000
-      - 5ad0e817-8d2dc332-001e0000
-      - 5ad0e817-8d2dc332-00170000
-      - 5ad0e817-8d2dc332-002e0000
-      - 5ad0e817-8d2dc332-00220000
-      - 5ad0e817-8d2dc332-00240000
-      - 5ad0e817-8d2dc332-00210000
-      - 5ad0e817-8d2dc332-00090000
-      - 5ad0e817-8d2dc332-00100000
-      - 5ad0e817-6dfa813e-00030000
-      - 5ad0e817-ed82c906-00030000
-      - 5ad0e817-4e736617-00030000
     name: SC4D LEX Legacy - BSC Custodian Rubik WTC Complex
-    props:
-      - 6534284a-8d2dc332-ae452e25
-      - 6534284a-8d2dc332-ed5273bc
-      - 6534284a-8d2dc332-0ded882b
-      - 6534284a-8d2dc332-0e49f8d5
-      - 6534284a-8d2dc332-8dc4de5f
-      - 6534284a-8d2dc332-ee2b9927
-      - 6534284a-8d2dc332-0dc4de8f
-      - 6534284a-8d2dc332-edc4deb1
-      - 6534284a-8d2dc332-adc4ded4
-      - 6534284a-8d2dc332-edc4def0
-      - 6534284a-8d2dc332-0dc4df12
-      - 6534284a-8d2dc332-6dc4df27
-      - 6534284a-8d2dc332-8e2995ab
-      - 6534284a-8d2dc332-cdc4df42
-      - 6534284a-8d2dc332-2e1412a4
-      - 6534284a-8d2dc332-6dbf3e64
-      - 6534284a-8d2dc332-0dbf3e25
-      - 6534284a-8d2dc332-2dbf3ecc
-      - 6534284a-8d2dc332-edbf3e0a
-      - 6534284a-8d2dc332-cd8944ce
-      - 6534284a-8d2dc332-2dc4df72
-      - 6534284a-8d2dc332-cdc4df5d
-      - 6534284a-8d2dc332-4e291a62
-      - 6534284a-8d2dc332-0e3f4105
-      - 6534284a-8d2dc332-ee3f411c
-      - 6534284a-8d2dc332-0dbf6290
-      - 6534284a-8d2dc332-2dbf3eab
-      - 6534284a-8d2dc332-0dc4dfaa
-      - 6534284a-8d2dc332-cdc4dfbe
-      - 6534284a-8d2dc332-adc4dfd3
-      - 6534284a-8d2dc332-8dc4dfe5
-      - 6534284a-8d2dc332-8d547ce8
-      - 6534284a-8d2dc332-ad8944e2
-      - 6534284a-8d2dc332-8e4bb6a6
-      - 6534284a-8d2dc332-6e488c9a
-      - 6534284a-8d2dc332-0e4dc665
     sha256: 56bc4d0d88bfd0fb3e5c68530ce71810441b8953706619eba4ad6ab3a187e4f9
     size: 29738626
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/day.jpg

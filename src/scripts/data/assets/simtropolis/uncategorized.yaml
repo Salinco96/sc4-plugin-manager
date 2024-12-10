@@ -10,69 +10,6 @@ assets:
     assetId: simtropolis/maxis-day-of-peace
     authors:
       - simtropolis
-    contents:
-      dayopeace.dat:
-        props:
-          2cab0000:
-            model: 29a5d1ec-2a2458f9-2cab0000
-            name: LM1x1x18_AmericanFlag_2CAB
-          2cad0000:
-            model: 29a5d1ec-2a2458f9-2cad0000
-            name: LM1x1x18_BrazilFlag_2CAD
-          2cba0000:
-            model: 29a5d1ec-2a2458f9-2cba0000
-            name: LM1x1x18_FrenchFlag_2CBA
-          2cbb0000:
-            model: 29a5d1ec-2a2458f9-2cbb0000
-            name: LM1x1x18_SwedeFlag_2CBB
-          2cbc0000:
-            model: 29a5d1ec-2a2458f9-2cbc0000
-            name: LM1x1x18_FINLANDFlag_2CBC
-          2cbd0000:
-            model: 29a5d1ec-2a2458f9-2cbd0000
-            name: LM1x1x18_UKFlag_2CBD
-          2cbe0000:
-            model: 29a5d1ec-2a2458f9-2cbe0000
-            name: LM1x1x18_GermanFlag_2CBE
-          2cbf0000:
-            model: 29a5d1ec-2a2458f9-2cbf0000
-            name: LM1x1x18_ItalianFlag_2CBF
-          2cca0000:
-            model: 29a5d1ec-2a2458f9-2cca0000
-            name: LM1x1x18_JapaneseFlag_2CCA
-          2ccb0000:
-            model: 29a5d1ec-2a2458f9-2ccb0000
-            name: LM1x1x18_NetherlandFlag_2CCB
-          2ccc0000:
-            model: 29a5d1ec-2a2458f9-2ccc0000
-            name: LM1x1x18_NorwayFlag_2CCC
-          2ccd0000:
-            model: 29a5d1ec-2a2458f9-2ccd0000
-            name: LM1x1x18_PolishFlag_2CCD
-          2cce0000:
-            model: 29a5d1ec-2a2458f9-2cce0000
-            name: LM1x1x18_PortugueseFlag_2CCE
-          2ccf0000:
-            model: 29a5d1ec-2a2458f9-2ccf0000
-            name: LM1x1x18_SKoreanFlag_2CCF
-          2cda0000:
-            model: 29a5d1ec-2a2458f9-2cda0000
-            name: LM1x1x18_SpanishFlag_2CDA
-          2cdb0000:
-            model: 29a5d1ec-2a2458f9-2cdb0000
-            name: LM1x1x18_TaiwanFlag_2CDB
-          2cdc0000:
-            model: 29a5d1ec-2a2458f9-2cdc0000
-            name: LM1x1x18_ThaiFlag_2CDC
-          2d210000:
-            model: 29a5d1ec-2a2458f9-2d210000
-            name: LM1x1x18_AussieFlag_2D21
-          2d220000:
-            model: 29a5d1ec-2a2458f9-2d220000
-            name: LM1x1x18_ChinaFlag_2D22
-          2d230000:
-            model: 29a5d1ec-2a2458f9-2d230000
-            name: LM1x1x18_DanishFlag_2D23
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/dayopeace.dat
     file: dayopeace.dat
@@ -85,64 +22,64 @@ assets:
     props:
       dayopeace.dat:
         2cab0000:
-          model: 29a5d1ec-2a2458f9-2cab0000
+          model: 2a2458f9-2cab
           name: LM1x1x18_AmericanFlag_2CAB
         2cad0000:
-          model: 29a5d1ec-2a2458f9-2cad0000
+          model: 2a2458f9-2cad
           name: LM1x1x18_BrazilFlag_2CAD
         2cba0000:
-          model: 29a5d1ec-2a2458f9-2cba0000
+          model: 2a2458f9-2cba
           name: LM1x1x18_FrenchFlag_2CBA
         2cbb0000:
-          model: 29a5d1ec-2a2458f9-2cbb0000
+          model: 2a2458f9-2cbb
           name: LM1x1x18_SwedeFlag_2CBB
         2cbc0000:
-          model: 29a5d1ec-2a2458f9-2cbc0000
+          model: 2a2458f9-2cbc
           name: LM1x1x18_FINLANDFlag_2CBC
         2cbd0000:
-          model: 29a5d1ec-2a2458f9-2cbd0000
+          model: 2a2458f9-2cbd
           name: LM1x1x18_UKFlag_2CBD
         2cbe0000:
-          model: 29a5d1ec-2a2458f9-2cbe0000
+          model: 2a2458f9-2cbe
           name: LM1x1x18_GermanFlag_2CBE
         2cbf0000:
-          model: 29a5d1ec-2a2458f9-2cbf0000
+          model: 2a2458f9-2cbf
           name: LM1x1x18_ItalianFlag_2CBF
         2cca0000:
-          model: 29a5d1ec-2a2458f9-2cca0000
+          model: 2a2458f9-2cca
           name: LM1x1x18_JapaneseFlag_2CCA
         2ccb0000:
-          model: 29a5d1ec-2a2458f9-2ccb0000
+          model: 2a2458f9-2ccb
           name: LM1x1x18_NetherlandFlag_2CCB
         2ccc0000:
-          model: 29a5d1ec-2a2458f9-2ccc0000
+          model: 2a2458f9-2ccc
           name: LM1x1x18_NorwayFlag_2CCC
         2ccd0000:
-          model: 29a5d1ec-2a2458f9-2ccd0000
+          model: 2a2458f9-2ccd
           name: LM1x1x18_PolishFlag_2CCD
         2cce0000:
-          model: 29a5d1ec-2a2458f9-2cce0000
+          model: 2a2458f9-2cce
           name: LM1x1x18_PortugueseFlag_2CCE
         2ccf0000:
-          model: 29a5d1ec-2a2458f9-2ccf0000
+          model: 2a2458f9-2ccf
           name: LM1x1x18_SKoreanFlag_2CCF
         2cda0000:
-          model: 29a5d1ec-2a2458f9-2cda0000
+          model: 2a2458f9-2cda
           name: LM1x1x18_SpanishFlag_2CDA
         2cdb0000:
-          model: 29a5d1ec-2a2458f9-2cdb0000
+          model: 2a2458f9-2cdb
           name: LM1x1x18_TaiwanFlag_2CDB
         2cdc0000:
-          model: 29a5d1ec-2a2458f9-2cdc0000
+          model: 2a2458f9-2cdc
           name: LM1x1x18_ThaiFlag_2CDC
         2d210000:
-          model: 29a5d1ec-2a2458f9-2d210000
+          model: 2a2458f9-2d21
           name: LM1x1x18_AussieFlag_2D21
         2d220000:
-          model: 29a5d1ec-2a2458f9-2d220000
+          model: 2a2458f9-2d22
           name: LM1x1x18_ChinaFlag_2D22
         2d230000:
-          model: 29a5d1ec-2a2458f9-2d230000
+          model: 2a2458f9-2d23
           name: LM1x1x18_DanishFlag_2D23
     sha256: 1d573ffa52a37376f2be724afd0881c0f47abb06c05e0b31f7bf74a93088ce2b
     size: 3307086
@@ -173,7 +110,7 @@ assets:
           flamability: 35
           garbage: 11
           maintenance: 110
-          model: 5ad0e817-badb57f1-04c00000
+          model: badb57f1-04c0
           name: Lm80x80_TheLivingMall_04C0
           pollution: 10
           pollutionRadius: 4
@@ -183,44 +120,6 @@ assets:
           water: 850
           waterPollution: 12
           waterPollutionRadius: 5
-    contents:
-      Plugin_002_TheLivingMall.dat:
-        buildings:
-          04c00000:
-            bulldoze: 4950
-            cost: 55000
-            flamability: 35
-            garbage: 11
-            maintenance: 110
-            model: 5ad0e817-badb57f1-04c00000
-            name: Lm80x80_TheLivingMall_04C0
-            pollution: 10
-            pollutionRadius: 4
-            power: 800
-            rating: 5
-            ratingRadius: 256
-            water: 850
-            waterPollution: 12
-            waterPollutionRadius: 5
-        lots:
-          6ac4085b:
-            building: 04c00000
-            name: LM6x6_TheLivingMall
-            props:
-              - 29b10000
-              - a000004d
-              - 2a8b0000
-              - a000003d
-              - 1ecf0000
-              - 2a180000
-              - 2a0f0000
-            size: 6x6
-            textures:
-              - 258f0000
-              - '26210000'
-              - 25c40000
-        models:
-          - 5ad0e817-badb57f1-04c00000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_002_TheLivingMall.dat
     file: Plugin_002_TheLivingMall.dat
@@ -248,6 +147,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_002_TheLivingMall.dat:
+        - badb57f1-04c0
     sha256: b6d652e485249493877bc0c6b3201bf8031b70fd935847df42798d10cb0578d5
     size: 2467729
     version: '1'
@@ -262,7 +164,7 @@ assets:
           cost: 55000
           garbage: 5
           maintenance: 110
-          model: 5ad0e817-badb57f1-04c10000
+          model: badb57f1-04c1
           name: Lm38x22_ArcTriomphe_04C1
           pollution: 1
           pollutionRadius: 1
@@ -272,39 +174,6 @@ assets:
           water: 1
           waterPollution: 1
           waterPollutionRadius: 2
-    contents:
-      Plugin_003_ArcTriomphe.dat:
-        buildings:
-          04c10000:
-            bulldoze: 4950
-            cost: 55000
-            garbage: 5
-            maintenance: 110
-            model: 5ad0e817-badb57f1-04c10000
-            name: Lm38x22_ArcTriomphe_04C1
-            pollution: 1
-            pollutionRadius: 1
-            power: 1
-            rating: 15
-            ratingRadius: 256
-            water: 1
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          aac407c0:
-            building: 04c10000
-            name: LM3x3_ArcTriomphe
-            props:
-              - 1d2f0000
-            size: 3x3
-            textures:
-              - 25fb0000
-              - 259d0000
-              - 257c0000
-              - '26060000'
-              - 257d0000
-        models:
-          - 5ad0e817-badb57f1-04c10000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_003_ArcTriomphe.dat
     file: Plugin_003_ArcTriomphe.dat
@@ -328,6 +197,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_003_ArcTriomphe.dat:
+        - badb57f1-04c1
     sha256: 22e5cc20e0a363f76aa722d81fa9802e3f837c8cef17d6501d73c36054b6a9aa
     size: 410267
     version: '1'
@@ -343,7 +215,7 @@ assets:
           flamability: 30
           garbage: 9
           maintenance: 130
-          model: 5ad0e817-badb57f1-04c30000
+          model: badb57f1-04c3
           name: LM80x64_SeoulCityHallSquare_04C3
           pollution: 4
           pollutionRadius: 2
@@ -353,52 +225,6 @@ assets:
           water: 200
           waterPollution: 3
           waterPollutionRadius: 3
-    contents:
-      Plugin_004_SeoulCityHall.dat:
-        buildings:
-          04c30000:
-            bulldoze: 4950
-            cost: 65000
-            flamability: 30
-            garbage: 9
-            maintenance: 130
-            model: 5ad0e817-badb57f1-04c30000
-            name: LM80x64_SeoulCityHallSquare_04C3
-            pollution: 4
-            pollutionRadius: 2
-            power: 200
-            rating: 5
-            ratingRadius: 256
-            water: 200
-            waterPollution: 3
-            waterPollutionRadius: 3
-        lots:
-          2ac40624:
-            building: 04c30000
-            name: LM6x6_SeoulCityHallSquare
-            props:
-              - 28f30000
-              - 1d240000
-              - 29b10000
-              - 69ad0000
-              - a000003d
-              - a000004d
-              - 04bd0000
-            size: 6x5
-            textures:
-              - '26210000'
-              - '25900000'
-              - 258f0000
-              - 25b40000
-              - 25f10000
-              - '26270000'
-        models:
-          - 5ad0e817-badb57f1-04c30000
-          - 5ad0e817-badb57f1-04bd0000
-        props:
-          04bd0000:
-            model: 5ad0e817-badb57f1-04bd0000
-            name: LM22x22_SeoulCityHallSoccerBall_04BD
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_004_SeoulCityHall.dat
     file: Plugin_004_SeoulCityHall.dat
@@ -429,10 +255,14 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_004_SeoulCityHall.dat:
+        - badb57f1-04c3
+        - badb57f1-04bd
     props:
       Plugin_004_SeoulCityHall.dat:
         04bd0000:
-          model: 5ad0e817-badb57f1-04bd0000
+          model: badb57f1-04bd
           name: LM22x22_SeoulCityHallSoccerBall_04BD
     sha256: ecbec2ef700c6a78ee234a277a4b2184bb7aae3393c68b475ec43506705c54c1
     size: 1953118
@@ -449,7 +279,7 @@ assets:
           flamability: 34
           garbage: 65
           maintenance: 310
-          model: 5ad0e817-badb57f1-04c20000
+          model: badb57f1-04c2
           name: Lm239x215_WorldCupFootballStadium_04C2
           pollution: 4294967285
           pollutionRadius: 4
@@ -459,46 +289,6 @@ assets:
           water: 100
           waterPollution: 10
           waterPollutionRadius: 6
-    contents:
-      Plugin_005_SeoulSoccerStad.dat:
-        buildings:
-          04c20000:
-            bulldoze: 4950
-            cost: 160000
-            flamability: 34
-            garbage: 65
-            maintenance: 310
-            model: 5ad0e817-badb57f1-04c20000
-            name: Lm239x215_WorldCupFootballStadium_04C2
-            pollution: 4294967285
-            pollutionRadius: 4
-            power: 90
-            rating: 5
-            ratingRadius: 256
-            water: 100
-            waterPollution: 10
-            waterPollutionRadius: 6
-        lots:
-          4ac40971:
-            building: 04c20000
-            name: LM0x0_WorldCupFootballStadium
-            props:
-              - 2a150000
-              - a000004d
-              - 1d550000
-              - 2a8a0000
-              - a000004b
-            size: 15x15
-            textures:
-              - 258c0000
-              - 25f40000
-              - 25ee0000
-              - 258f0000
-              - 25ea0000
-              - 25ed0000
-              - 25aa0000
-        models:
-          - 5ad0e817-badb57f1-04c20000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_005_SeoulSoccerStad.dat
     file: Plugin_005_SeoulSoccerStad.dat
@@ -528,6 +318,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_005_SeoulSoccerStad.dat:
+        - badb57f1-04c2
     sha256: 31b1770cfc23aa6692a1e0293ba0a6e505ae2a803ac637ebd338b51f72277750
     size: 7761878
     version: '1'
@@ -543,7 +336,7 @@ assets:
           flamability: 30
           garbage: 15
           maintenance: 140
-          model: 5ad0e817-badb57f1-04bc0000
+          model: badb57f1-04bc
           name: Lm148x112_GlobeArena_04BC
           pollution: 2
           pollutionRadius: 2
@@ -553,58 +346,6 @@ assets:
           water: 100
           waterPollution: 3
           waterPollutionRadius: 2
-    contents:
-      Plugin_006_GlobeArena.dat:
-        buildings:
-          04bc0000:
-            bulldoze: 4950
-            cost: 70000
-            flamability: 30
-            garbage: 15
-            maintenance: 140
-            model: 5ad0e817-badb57f1-04bc0000
-            name: Lm148x112_GlobeArena_04BC
-            pollution: 2
-            pollutionRadius: 2
-            power: 40
-            rating: 5
-            ratingRadius: 256
-            water: 100
-            waterPollution: 3
-            waterPollutionRadius: 2
-        lots:
-          aae108a3:
-            building: 04bc0000
-            name: LM11x8_GlobeArena
-            props:
-              - 1d2e0000
-              - aa836b49
-              - aa836b48
-              - 296f0000
-              - '29720000'
-              - '29710000'
-              - a0000078
-              - 2a5a0000
-              - 2a5b0000
-              - 2a5c0000
-              - 2a8a0000
-              - 1d550000
-              - 1d4a0000
-              - 1d250000
-              - 2b960000
-            size: 11x8
-            textures:
-              - 25aa0000
-              - 258f0000
-              - 258c0000
-              - 25b20000
-        models:
-          - 5ad0e817-badb57f1-2b960000
-          - 5ad0e817-badb57f1-04bc0000
-        props:
-          2b960000:
-            model: 5ad0e817-badb57f1-2b960000
-            name: Lm4x16x45_GlobeArenaSign_2B96
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_006_GlobeArena.dat
     file: Plugin_006_GlobeArena.dat
@@ -641,10 +382,14 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_006_GlobeArena.dat:
+        - badb57f1-2b96
+        - badb57f1-04bc
     props:
       Plugin_006_GlobeArena.dat:
         2b960000:
-          model: 5ad0e817-badb57f1-2b960000
+          model: badb57f1-2b96
           name: Lm4x16x45_GlobeArenaSign_2B96
     sha256: 501cc4e4f66c402747e8efa3d97a7cf993cd37487e50e3a7b285005512337b5d
     size: 4000537
@@ -663,7 +408,7 @@ assets:
           jobs:
             $: 45
           menu: Rewards
-          model: 5ad0e817-badb57f1-036f0000
+          model: badb57f1-036f
           name: RW36x14_AFB_Control_Tower_036F0000
           pollution: 2
           pollutionRadius: 3
@@ -677,120 +422,6 @@ assets:
           waterPollutionRadius: 4
     categories:
       - rewards
-    contents:
-      Plugin_007_AirForceBase.dat:
-        buildings:
-          036f0000:
-            bulldoze: 1000
-            categories: rewards
-            flamability: 40
-            garbage: 10
-            jobs:
-              $: 45
-            menu: Rewards
-            model: 5ad0e817-badb57f1-036f0000
-            name: RW36x14_AFB_Control_Tower_036F0000
-            pollution: 2
-            pollutionRadius: 3
-            power: 100
-            rating: 4294967289
-            ratingRadius: 440
-            relief:
-              im: 100000
-            water: 150
-            waterPollution: 3
-            waterPollutionRadius: 4
-        lots:
-          0ade2f1b:
-            building: 036f0000
-            name: RW10x10_AirForceBase
-            props:
-              - 2af8bbd2
-              - 4ae643c2
-              - 4ae643c3
-              - 4ae643c1
-              - '29860000'
-              - 6ab6ec78
-              - 6ab6ec79
-              - a000004b
-              - 1e4f0000
-              - 1d4b0000
-              - '29500000'
-              - ae1d0000
-              - ca3d9723
-              - ca3d9724
-              - 1ccd0000
-              - 29aa0000
-              - '28350000'
-              - '29510000'
-              - '294e0000'
-              - 29a90000
-              - 294d0000
-              - 1f520000
-              - 29c20000
-              - aa836b46
-              - '00590000'
-              - 1d4a0000
-              - 2a470000
-              - 1ed70000
-              - 1ed90000
-              - 1eda0000
-              - '29230000'
-              - 292a0000
-              - '29280000'
-              - '29260000'
-              - 2a94b0d9
-              - '28270000'
-            size: 10x29
-            textures:
-              - 25d60000
-              - 25fb0000
-              - 256d0000
-              - '25700000'
-              - '25710000'
-              - 256f0000
-              - '25730000'
-              - '256e0000'
-              - 256a0000
-              - '25620000'
-              - 25d70000
-              - '25680000'
-              - '25650000'
-              - '25640000'
-              - '25630000'
-              - '25660000'
-              - '25670000'
-              - '25610000'
-              - 25c60000
-        models:
-          - 5ad0e817-badb57f1--151c0000
-          - 5ad0e817-badb57f1-11210000
-          - 5ad0e817-badb57f1-036f0000
-          - 5ad0e817-badb57f1-11230000
-          - 5ad0e817-badb57f1-111d0000
-          - 5ad0e817-badb57f1-11260000
-          - 5ad0e817-badb57f1-11220000
-          - 5ad0e817-badb57f1-111e0000
-          - 5ad0e817-badb57f1-111a0000
-          - 5ad0e817-badb57f1-111f0000
-          - 5ad0e817-badb57f1-2b940000
-          - 5ad0e817-badb57f1-111b0000
-          - 5ad0e817-badb57f1-11240000
-          - 5ad0e817-badb57f1-11170000
-          - 5ad0e817-badb57f1-11200000
-          - 5ad0e817-badb57f1-111c0000
-          - 5ad0e817-badb57f1-11250000
-        props:
-          2aee0fb3:
-            name: Effect_steamboat
-          2af8bbd2:
-            name: Effect_Effect_biplane
-          4ae643c1:
-            name: Effect_fighter_jet_airshow
-          4ae643c2:
-            name: Effect_parked_fighterjets
-          4ae643c3:
-            name: Effect_parked_transport_planes
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_007_AirForceBase.dat
     file: Plugin_007_AirForceBase.dat
@@ -863,6 +494,25 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_007_AirForceBase.dat:
+        - badb57f1-eae4
+        - badb57f1-1121
+        - badb57f1-036f
+        - badb57f1-1123
+        - badb57f1-111d
+        - badb57f1-1126
+        - badb57f1-1122
+        - badb57f1-111e
+        - badb57f1-111a
+        - badb57f1-111f
+        - badb57f1-2b94
+        - badb57f1-111b
+        - badb57f1-1124
+        - badb57f1-1117
+        - badb57f1-1120
+        - badb57f1-111c
+        - badb57f1-1125
     props:
       Plugin_007_AirForceBase.dat:
         2aee0fb3:
@@ -892,7 +542,7 @@ assets:
           garbage: 9
           maintenance: 130
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04ba0000
+          model: badb57f1-04ba
           name: Lm55x43_KonjongjonHall_04BA
           pollution: 2
           pollutionRadius: 2
@@ -904,69 +554,6 @@ assets:
           waterPollutionRadius: 3
     categories:
       - landmarks
-    contents:
-      Plugin_008_Kunjungjon.dat:
-        buildings:
-          04ba0000:
-            bulldoze: 5850
-            categories: landmarks
-            cost: 65000
-            flamability: 33
-            garbage: 9
-            maintenance: 130
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04ba0000
-            name: Lm55x43_KonjongjonHall_04BA
-            pollution: 2
-            pollutionRadius: 2
-            power: 50
-            rating: 5
-            ratingRadius: 256
-            water: 250
-            waterPollution: 2
-            waterPollutionRadius: 3
-        lots:
-          4afc8bd5:
-            building: 04ba0000
-            name: Lm5x6_KonjongjonHall
-            props:
-              - aa836b49
-              - 1e9a0000
-              - '1e980000'
-              - 2ab60000
-              - 1e9b0000
-              - 2b970000
-              - 2b9a0000
-              - 2b990000
-              - 2b980000
-            size: 5x6
-            textures:
-              - 262a0000
-              - 262c0000
-              - 262b0000
-        models:
-          - 5ad0e817-badb57f1-2b980000
-          - 5ad0e817-badb57f1-2b9a0000
-          - 5ad0e817-badb57f1-2b970000
-          - 5ad0e817-badb57f1-04ba0000
-          - 5ad0e817-badb57f1-2b990000
-        props:
-          2b970000:
-            model: 5ad0e817-badb57f1-2b970000
-            name: LM1x1x2_Shrine-Deco_2B97
-          2b980000:
-            model: 5ad0e817-badb57f1-2b980000
-            name: LM11x32x9_Shrine-gate_2B98
-          2b990000:
-            model: 5ad0e817-badb57f1-2b990000
-            name: LM16x16x5_Shrine-corner_2B99
-          2b9a0000:
-            model: 5ad0e817-badb57f1-2b9a0000
-            name: LM7x16x6_Shrine-wall_2B9A
-        textures:
-          - 262a0000
-          - 262b0000
-          - 262c0000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_008_Kunjungjon.dat
     file: Plugin_008_Kunjungjon.dat
@@ -996,22 +583,34 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_008_Kunjungjon.dat:
+        - badb57f1-2b98
+        - badb57f1-2b9a
+        - badb57f1-2b97
+        - badb57f1-04ba
+        - badb57f1-2b99
     props:
       Plugin_008_Kunjungjon.dat:
         2b970000:
-          model: 5ad0e817-badb57f1-2b970000
+          model: badb57f1-2b97
           name: LM1x1x2_Shrine-Deco_2B97
         2b980000:
-          model: 5ad0e817-badb57f1-2b980000
+          model: badb57f1-2b98
           name: LM11x32x9_Shrine-gate_2B98
         2b990000:
-          model: 5ad0e817-badb57f1-2b990000
+          model: badb57f1-2b99
           name: LM16x16x5_Shrine-corner_2B99
         2b9a0000:
-          model: 5ad0e817-badb57f1-2b9a0000
+          model: badb57f1-2b9a
           name: LM7x16x6_Shrine-wall_2B9A
     sha256: 9e708fd02255c887ac5be79e9bfdbb61d32128c2609bf5db6801a96ef771ec30
     size: 503112
+    textures:
+      Plugin_008_Kunjungjon.dat:
+        - 262a0000
+        - 262b0000
+        - 262c0000
     version: '1'
   simtropolis/maxis-plugin-009-namdaemun:
     assetId: simtropolis/maxis-plugin-009-namdaemun
@@ -1025,7 +624,7 @@ assets:
           flamability: 10
           garbage: 4
           maintenance: 130
-          model: 5ad0e817-badb57f1-04b90000
+          model: badb57f1-04b9
           name: Lm64x64_NamDaeMoon_04B9
           power: 10
           rating: 8
@@ -1033,32 +632,6 @@ assets:
           water: 10
           waterPollution: 2
           waterPollutionRadius: 2
-    contents:
-      Plugin_009_NamDaeMoon.dat:
-        buildings:
-          04b90000:
-            bulldoze: 5850
-            cost: 65000
-            flamability: 10
-            garbage: 4
-            maintenance: 130
-            model: 5ad0e817-badb57f1-04b90000
-            name: Lm64x64_NamDaeMoon_04B9
-            power: 10
-            rating: 8
-            ratingRadius: 256
-            water: 10
-            waterPollution: 2
-            waterPollutionRadius: 2
-        lots:
-          8af9d28c:
-            building: 04b90000
-            name: Lm4x4_NamDaeMoon
-            size: 4x4
-            textures:
-              - 258b0000
-        models:
-          - 5ad0e817-badb57f1-04b90000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_009_NamDaeMoon.dat
     file: Plugin_009_NamDaeMoon.dat
@@ -1076,6 +649,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_009_NamDaeMoon.dat:
+        - badb57f1-04b9
     sha256: 4fee240b69e68935a10c42cff8ca16a55fcdfc47aa2fb6ca695e5a97e448cb7a
     size: 894884
     version: '1'
@@ -1091,7 +667,7 @@ assets:
           flamability: 10
           garbage: 39
           maintenance: 210
-          model: 5ad0e817-badb57f1-04b80000
+          model: badb57f1-04b8
           name: Lm64x72_KoreaLifeBldg_04B8
           pollution: 5
           pollutionRadius: 6
@@ -1101,38 +677,6 @@ assets:
           water: 1300
           waterPollution: 5
           waterPollutionRadius: 7
-    contents:
-      Plugin_00A_63Building.dat:
-        buildings:
-          04b80000:
-            bulldoze: 9900
-            cost: 110000
-            flamability: 10
-            garbage: 39
-            maintenance: 210
-            model: 5ad0e817-badb57f1-04b80000
-            name: Lm64x72_KoreaLifeBldg_04B8
-            pollution: 5
-            pollutionRadius: 6
-            power: 600
-            rating: 8
-            ratingRadius: 256
-            water: 1300
-            waterPollution: 5
-            waterPollutionRadius: 7
-        lots:
-          6afc49f8:
-            building: 04b80000
-            name: Lm4x5_KoreaLifeBldg
-            props:
-              - a0000077
-            size: 4x5
-            textures:
-              - '26060000'
-              - 258f0000
-              - 252b0000
-        models:
-          - 5ad0e817-badb57f1-04b80000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00A_63Building.dat
     file: Plugin_00A_63Building.dat
@@ -1154,6 +698,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_00A_63Building.dat:
+        - badb57f1-04b8
     sha256: 9e266e047bbef4a85418386f8298f03d842976d6cba6e8709374e064d97a66b9
     size: 4228912
     version: '1'
@@ -1171,7 +718,7 @@ assets:
           garbage: 5
           maintenance: 120
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04b70000
+          model: badb57f1-04b7
           name: Lm72x34_BrandenburgGate_04B7
           pollution: 1
           pollutionRadius: 1
@@ -1183,49 +730,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Plugin_00C_BrandenburgGate.dat:
-        buildings:
-          04b70000:
-            bulldoze: 5850
-            categories: landmarks
-            cost: 60000
-            flamability: 34
-            garbage: 5
-            maintenance: 120
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04b70000
-            name: Lm72x34_BrandenburgGate_04B7
-            pollution: 1
-            pollutionRadius: 1
-            power: 2
-            rating: 6
-            ratingRadius: 256
-            water: 3
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          ab5e1192:
-            building: 04b70000
-            name: LM5x7_BrandenburgGate
-            props:
-              - aa836b49
-              - '1e110000'
-              - 2a590000
-              - a000004e
-              - 1edd0000
-              - 1edf0000
-              - 2a7ccda1
-              - 1dff0000
-              - '29840000'
-            size: 5x7
-            textures:
-              - '26060000'
-              - 25f40000
-        models:
-          - 5ad0e817-badb57f1-04b70000
-        textures:
-          - '262e0000'
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00C_BrandenburgGate.dat
     file: Plugin_00C_BrandenburgGate.dat
@@ -1254,8 +758,14 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_00C_BrandenburgGate.dat:
+        - badb57f1-04b7
     sha256: 7935ab006d37e748185aaafdcbcae83eb50aead1f044ae9810b7718f823c5812
     size: 707610
+    textures:
+      Plugin_00C_BrandenburgGate.dat:
+        - '262e0000'
     version: '1'
   simtropolis/maxis-plugin-00D-parthenon:
     assetId: simtropolis/maxis-plugin-00D-parthenon
@@ -1271,7 +781,7 @@ assets:
           garbage: 2
           maintenance: 120
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04b60000
+          model: badb57f1-04b6
           name: Lm32x68_Parthenon_04B6
           power: 2
           rating: 7
@@ -1281,126 +791,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Plugin_00D_Parthenon.dat:
-        buildings:
-          04b60000:
-            bulldoze: 6750
-            categories: landmarks
-            cost: 60000
-            flamability: 35
-            garbage: 2
-            maintenance: 120
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04b60000
-            name: Lm32x68_Parthenon_04B6
-            power: 2
-            rating: 7
-            ratingRadius: 256
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          cb68c0df:
-            building: 04b60000
-            name: Lm4x7_Parthenon
-            props:
-              - 2ba50000
-              - 2ba20000
-              - 2ba80000
-              - 2b9d0000
-              - 2ba00000
-              - 2bab0000
-              - 2bad0000
-              - 2ba60000
-              - 2ba90000
-              - 2b9e0000
-              - 2bac0000
-              - 2bae0000
-              - 2ba30000
-              - 2ba70000
-              - 2baa0000
-              - 2b9f0000
-              - 2ba10000
-              - 2ba40000
-            size: 3x5
-            textures:
-              - 25db0000
-        models:
-          - 5ad0e817-badb57f1-2bac0000
-          - 5ad0e817-badb57f1-2ba50000
-          - 5ad0e817-badb57f1-2bab0000
-          - 5ad0e817-badb57f1-2b9e0000
-          - 5ad0e817-badb57f1-2ba40000
-          - 5ad0e817-badb57f1-2baa0000
-          - 5ad0e817-badb57f1-2ba30000
-          - 5ad0e817-badb57f1-2ba90000
-          - 5ad0e817-badb57f1-04b60000
-          - 5ad0e817-badb57f1-2ba20000
-          - 5ad0e817-badb57f1-2ba80000
-          - 5ad0e817-badb57f1-2ba10000
-          - 5ad0e817-badb57f1-2ba70000
-          - 5ad0e817-badb57f1-2bad0000
-          - 5ad0e817-badb57f1-2ba00000
-          - 5ad0e817-badb57f1-2ba60000
-          - 5ad0e817-badb57f1-2b9f0000
-          - 5ad0e817-badb57f1-2b9d0000
-          - 5ad0e817-badb57f1-2bae0000
-        props:
-          2b9d0000:
-            model: 5ad0e817-badb57f1-2b9d0000
-            name: PZ1x1_LightRock_2B9D
-          2b9e0000:
-            model: 5ad0e817-badb57f1-2b9e0000
-            name: PZ2x2_LightRock_2B9E
-          2b9f0000:
-            model: 5ad0e817-badb57f1-2b9f0000
-            name: PZ3x3_LightRock_2B9F
-          2ba00000:
-            model: 5ad0e817-badb57f1-2ba00000
-            name: PZ1x1_MedRock_2BA0
-          2ba10000:
-            model: 5ad0e817-badb57f1-2ba10000
-            name: PZ3x3_MedRock_2BA1
-          2ba20000:
-            model: 5ad0e817-badb57f1-2ba20000
-            name: PZ1x1_DarkRock_2BA2
-          2ba30000:
-            model: 5ad0e817-badb57f1-2ba30000
-            name: PZ3x2_DarkRock_2BA3
-          2ba40000:
-            model: 5ad0e817-badb57f1-2ba40000
-            name: PZ4x3_DarkRock_2BA4
-          2ba50000:
-            model: 5ad0e817-badb57f1-2ba50000
-            name: PZ1x1_DarkBlockRock_2BA5
-          2ba60000:
-            model: 5ad0e817-badb57f1-2ba60000
-            name: PZ2x2_DarkBlockRock_2BA6
-          2ba70000:
-            model: 5ad0e817-badb57f1-2ba70000
-            name: PZ3x3_DarkBlockRock_2BA7
-          2ba80000:
-            model: 5ad0e817-badb57f1-2ba80000
-            name: PZ1x1_LightBlockRock_2BA8
-          2ba90000:
-            model: 5ad0e817-badb57f1-2ba90000
-            name: PZ2x2_LightBlockRock_2BA9
-          2baa0000:
-            model: 5ad0e817-badb57f1-2baa0000
-            name: PZ3x3_LightBlockRock_2BAA
-          2bab0000:
-            model: 5ad0e817-badb57f1-2bab0000
-            name: PZ1x2_DarkBlockRock_2BAB
-          2bac0000:
-            model: 5ad0e817-badb57f1-2bac0000
-            name: PZ2x3_DarkBlockRock_2BAC
-          2bad0000:
-            model: 5ad0e817-badb57f1-2bad0000
-            name: PZ1x2_LightBlockRock_2BAD
-          2bae0000:
-            model: 5ad0e817-badb57f1-2bae0000
-            name: PZ2x3_LightBlockRock_2BAE
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00D_Parthenon.dat
     file: Plugin_00D_Parthenon.dat
@@ -1437,61 +827,82 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_00D_Parthenon.dat:
+        - badb57f1-2bac
+        - badb57f1-2ba5
+        - badb57f1-2bab
+        - badb57f1-2b9e
+        - badb57f1-2ba4
+        - badb57f1-2baa
+        - badb57f1-2ba3
+        - badb57f1-2ba9
+        - badb57f1-04b6
+        - badb57f1-2ba2
+        - badb57f1-2ba8
+        - badb57f1-2ba1
+        - badb57f1-2ba7
+        - badb57f1-2bad
+        - badb57f1-2ba0
+        - badb57f1-2ba6
+        - badb57f1-2b9f
+        - badb57f1-2b9d
+        - badb57f1-2bae
     props:
       Plugin_00D_Parthenon.dat:
         2b9d0000:
-          model: 5ad0e817-badb57f1-2b9d0000
+          model: badb57f1-2b9d
           name: PZ1x1_LightRock_2B9D
         2b9e0000:
-          model: 5ad0e817-badb57f1-2b9e0000
+          model: badb57f1-2b9e
           name: PZ2x2_LightRock_2B9E
         2b9f0000:
-          model: 5ad0e817-badb57f1-2b9f0000
+          model: badb57f1-2b9f
           name: PZ3x3_LightRock_2B9F
         2ba00000:
-          model: 5ad0e817-badb57f1-2ba00000
+          model: badb57f1-2ba0
           name: PZ1x1_MedRock_2BA0
         2ba10000:
-          model: 5ad0e817-badb57f1-2ba10000
+          model: badb57f1-2ba1
           name: PZ3x3_MedRock_2BA1
         2ba20000:
-          model: 5ad0e817-badb57f1-2ba20000
+          model: badb57f1-2ba2
           name: PZ1x1_DarkRock_2BA2
         2ba30000:
-          model: 5ad0e817-badb57f1-2ba30000
+          model: badb57f1-2ba3
           name: PZ3x2_DarkRock_2BA3
         2ba40000:
-          model: 5ad0e817-badb57f1-2ba40000
+          model: badb57f1-2ba4
           name: PZ4x3_DarkRock_2BA4
         2ba50000:
-          model: 5ad0e817-badb57f1-2ba50000
+          model: badb57f1-2ba5
           name: PZ1x1_DarkBlockRock_2BA5
         2ba60000:
-          model: 5ad0e817-badb57f1-2ba60000
+          model: badb57f1-2ba6
           name: PZ2x2_DarkBlockRock_2BA6
         2ba70000:
-          model: 5ad0e817-badb57f1-2ba70000
+          model: badb57f1-2ba7
           name: PZ3x3_DarkBlockRock_2BA7
         2ba80000:
-          model: 5ad0e817-badb57f1-2ba80000
+          model: badb57f1-2ba8
           name: PZ1x1_LightBlockRock_2BA8
         2ba90000:
-          model: 5ad0e817-badb57f1-2ba90000
+          model: badb57f1-2ba9
           name: PZ2x2_LightBlockRock_2BA9
         2baa0000:
-          model: 5ad0e817-badb57f1-2baa0000
+          model: badb57f1-2baa
           name: PZ3x3_LightBlockRock_2BAA
         2bab0000:
-          model: 5ad0e817-badb57f1-2bab0000
+          model: badb57f1-2bab
           name: PZ1x2_DarkBlockRock_2BAB
         2bac0000:
-          model: 5ad0e817-badb57f1-2bac0000
+          model: badb57f1-2bac
           name: PZ2x3_DarkBlockRock_2BAC
         2bad0000:
-          model: 5ad0e817-badb57f1-2bad0000
+          model: badb57f1-2bad
           name: PZ1x2_LightBlockRock_2BAD
         2bae0000:
-          model: 5ad0e817-badb57f1-2bae0000
+          model: badb57f1-2bae
           name: PZ2x3_LightBlockRock_2BAE
     sha256: e93eeccb23fe7327644e093e5aac353c0d104a4c3d35257beb23e74d15e0b638
     size: 983954
@@ -1508,7 +919,7 @@ assets:
           flamability: 34
           garbage: 4
           maintenance: 180
-          model: 5ad0e817-badb57f1-04b50000
+          model: badb57f1-04b5
           name: Lm61x48_SchlossSchoenbrun_04B5
           pollution: 1
           pollutionRadius: 2
@@ -1518,67 +929,6 @@ assets:
           water: 60
           waterPollution: 1
           waterPollutionRadius: 3
-    contents:
-      Plugin_00E_SchlossSchoenbrun.dat:
-        buildings:
-          04b50000:
-            bulldoze: 5850
-            cost: 95000
-            flamability: 34
-            garbage: 4
-            maintenance: 180
-            model: 5ad0e817-badb57f1-04b50000
-            name: Lm61x48_SchlossSchoenbrun_04B5
-            pollution: 1
-            pollutionRadius: 2
-            power: 25
-            rating: 6
-            ratingRadius: 256
-            water: 60
-            waterPollution: 1
-            waterPollutionRadius: 3
-        lots:
-          eb4e47b4:
-            building: 04b50000
-            name: Lm11x6_SchlossSchoenbrun
-            props:
-              - 29b10000
-              - 2a8c0000
-              - a0000061
-              - 2a590000
-              - a000004d
-              - 1d530000
-              - 1d3e0000
-              - 2b910000
-              - 1d2f0000
-              - a0000077
-              - aa836b49
-              - 2b9b0000
-              - 2b9c0000
-              - a000004b
-            size: 11x6
-            textures:
-              - '25800000'
-              - 257c0000
-              - 258c0000
-              - '26210000'
-              - 258f0000
-              - 25f60000
-              - 25f40000
-              - 25ea0000
-              - '26060000'
-              - 257a0000
-        models:
-          - 5ad0e817-badb57f1-2b9b0000
-          - 5ad0e817-badb57f1-04b50000
-          - 5ad0e817-badb57f1-2b9c0000
-        props:
-          2b9b0000:
-            model: 5ad0e817-badb57f1-2b9b0000
-            name: Lm48x53_SchlossSchoenbrunWestwing_2B9B
-          2b9c0000:
-            model: 5ad0e817-badb57f1-2b9c0000
-            name: Lm48x53_SchlossSchoenbrunEastwing_2B9C
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00E_SchlossSchoenbrun.dat
     file: Plugin_00E_SchlossSchoenbrun.dat
@@ -1620,13 +970,18 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_00E_SchlossSchoenbrun.dat:
+        - badb57f1-2b9b
+        - badb57f1-04b5
+        - badb57f1-2b9c
     props:
       Plugin_00E_SchlossSchoenbrun.dat:
         2b9b0000:
-          model: 5ad0e817-badb57f1-2b9b0000
+          model: badb57f1-2b9b
           name: Lm48x53_SchlossSchoenbrunWestwing_2B9B
         2b9c0000:
-          model: 5ad0e817-badb57f1-2b9c0000
+          model: badb57f1-2b9c
           name: Lm48x53_SchlossSchoenbrunEastwing_2B9C
     sha256: eb60d181007bd4873912c13321a0aa9dc868f5893f0c4dd4d045c25481f5ed37
     size: 2161191
@@ -1643,7 +998,7 @@ assets:
           flamability: 16
           garbage: 5
           maintenance: 180
-          model: 5ad0e817-badb57f1-04b40000
+          model: badb57f1-04b4
           name: LM80x80_sagradafamilia_04B4
           pollution: 1
           pollutionRadius: 2
@@ -1651,32 +1006,6 @@ assets:
           ratingRadius: 256
           waterPollution: 1
           waterPollutionRadius: 3
-    contents:
-      Plugin_00F_TempleExpiatiori.dat:
-        buildings:
-          04b40000:
-            bulldoze: 8550
-            cost: 95000
-            flamability: 16
-            garbage: 5
-            maintenance: 180
-            model: 5ad0e817-badb57f1-04b40000
-            name: LM80x80_sagradafamilia_04B4
-            pollution: 1
-            pollutionRadius: 2
-            rating: 5
-            ratingRadius: 256
-            waterPollution: 1
-            waterPollutionRadius: 3
-        lots:
-          6bce41a2:
-            building: 04b40000
-            name: LM12x12_sagradafamilia
-            size: 5x5
-            textures:
-              - '258e0000'
-        models:
-          - 5ad0e817-badb57f1-04b40000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_00F_TempleExpiatiori.dat
     file: Plugin_00F_TempleExpiatiori.dat
@@ -1694,6 +1023,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_00F_TempleExpiatiori.dat:
+        - badb57f1-04b4
     sha256: 1665a66c5b8964dafeb940a994bd0b4e8a1f48b10322dff175ad1436cf159da3
     size: 1829272
     version: '1'
@@ -1711,7 +1043,7 @@ assets:
           garbage: 11
           maintenance: 220
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04b30000
+          model: badb57f1-04b3
           name: Lm100x125_grandcentral_04B3
           pollution: 3
           pollutionRadius: 4
@@ -1723,36 +1055,6 @@ assets:
           waterPollutionRadius: 5
     categories:
       - landmarks
-    contents:
-      Plugin_010_GrandCentralStation.dat:
-        buildings:
-          04b30000:
-            bulldoze: 4500
-            categories: landmarks
-            cost: 110000
-            flamability: 30
-            garbage: 11
-            maintenance: 220
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04b30000
-            name: Lm100x125_grandcentral_04B3
-            pollution: 3
-            pollutionRadius: 4
-            power: 200
-            rating: 8
-            ratingRadius: 256
-            water: 200
-            waterPollution: 4
-            waterPollutionRadius: 5
-        lots:
-          2b589d69:
-            building: 04b30000
-            name: LM7x8_GrandCentral
-            size: 7x8
-            textures:
-              - 25fb0000
-        models:
-          - 5ad0e817-badb57f1-04b30000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_010_GrandCentralStation.dat
     file: Plugin_010_GrandCentralStation.dat
@@ -1770,6 +1072,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_010_GrandCentralStation.dat:
+        - badb57f1-04b3
     sha256: d325bbbb9b40e06e6abdda6e10ab017f1b2a3be30b41c35eb7dadb237e051cbf
     size: 3762157
     version: '1'
@@ -1785,7 +1090,7 @@ assets:
           flamability: 34
           garbage: 11
           maintenance: 100
-          model: 5ad0e817-badb57f1-04b10000
+          model: badb57f1-04b1
           name: Lm80x48_CapitolRecordsBuilding_04B1
           pollution: 3
           pollutionRadius: 4
@@ -1795,43 +1100,6 @@ assets:
           water: 900
           waterPollution: 4
           waterPollutionRadius: 5
-    contents:
-      Plugin_012_CapitolRecords.dat:
-        buildings:
-          04b10000:
-            bulldoze: 4500
-            cost: 50000
-            flamability: 34
-            garbage: 11
-            maintenance: 100
-            model: 5ad0e817-badb57f1-04b10000
-            name: Lm80x48_CapitolRecordsBuilding_04B1
-            pollution: 3
-            pollutionRadius: 4
-            power: 215
-            rating: 3
-            ratingRadius: 256
-            water: 900
-            waterPollution: 4
-            waterPollutionRadius: 5
-        lots:
-          cb549981:
-            building: 04b10000
-            name: Lm5x5_CapitolRecordsBuilding
-            props:
-              - a000003d
-              - 69ad0000
-              - aa836b49
-              - a000007f
-            size: 5x5
-            textures:
-              - '25920000'
-              - 258b0000
-              - '258e0000'
-              - '25950000'
-              - '25960000'
-        models:
-          - 5ad0e817-badb57f1-04b10000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_012_CapitolRecords.dat
     file: Plugin_012_CapitolRecords.dat
@@ -1858,6 +1126,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_012_CapitolRecords.dat:
+        - badb57f1-04b1
     sha256: e10de451f9e003bc96ab0546f75ca8fb19511931deb720c0230dc60020081f02
     size: 1278139
     version: '1'
@@ -1874,7 +1145,7 @@ assets:
           garbage: 5
           maintenance: 10
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04ad0000
+          model: badb57f1-04ad
           name: Lm48x48_Stonehenge_04AD
           pollution: 1
           pollutionRadius: 1
@@ -1884,70 +1155,6 @@ assets:
           waterPollutionRadius: 1
     categories:
       - landmarks
-    contents:
-      Plugin_016_Stonehenge.dat:
-        buildings:
-          04ad0000:
-            bulldoze: 5850
-            categories: landmarks
-            cost: 60000
-            garbage: 5
-            maintenance: 10
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04ad0000
-            name: Lm48x48_Stonehenge_04AD
-            pollution: 1
-            pollutionRadius: 1
-            rating: 5
-            ratingRadius: 256
-            waterPollution: 1
-            waterPollutionRadius: 1
-        lots:
-          4b61d755:
-            building: 04ad0000
-            name: LM6x6_Stonehenge
-            props:
-              - 2ba50000
-              - 2ba20000
-              - 2ba80000
-              - 2b9d0000
-              - 2ba00000
-              - aa836b49
-            size: 6x6
-            textures:
-              - 25f40000
-              - '25e90000'
-        models:
-          - 5ad0e817-badb57f1-2bad0000
-          - 5ad0e817-badb57f1-2b9d0000
-          - 5ad0e817-badb57f1-2ba00000
-          - 5ad0e817-badb57f1-2ba20000
-          - 5ad0e817-badb57f1-2bab0000
-          - 5ad0e817-badb57f1-2ba80000
-          - 5ad0e817-badb57f1-2ba50000
-          - 5ad0e817-badb57f1-04ad0000
-        props:
-          2b9d0000:
-            model: 5ad0e817-badb57f1-2b9d0000
-            name: PZ1x1_LightRock_2B9D
-          2ba00000:
-            model: 5ad0e817-badb57f1-2ba00000
-            name: PZ1x1_MedRock_2BA0
-          2ba20000:
-            model: 5ad0e817-badb57f1-2ba20000
-            name: PZ1x1_DarkRock_2BA2
-          2ba50000:
-            model: 5ad0e817-badb57f1-2ba50000
-            name: PZ1x1_DarkBlockRock_2BA5
-          2ba80000:
-            model: 5ad0e817-badb57f1-2ba80000
-            name: PZ1x1_LightBlockRock_2BA8
-          2bab0000:
-            model: 5ad0e817-badb57f1-2bab0000
-            name: PZ1x2_DarkBlockRock_2BAB
-          2bad0000:
-            model: 5ad0e817-badb57f1-2bad0000
-            name: PZ1x2_LightBlockRock_2BAD
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_016_Stonehenge.dat
     file: Plugin_016_Stonehenge.dat
@@ -1973,28 +1180,38 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_016_Stonehenge.dat:
+        - badb57f1-2bad
+        - badb57f1-2b9d
+        - badb57f1-2ba0
+        - badb57f1-2ba2
+        - badb57f1-2bab
+        - badb57f1-2ba8
+        - badb57f1-2ba5
+        - badb57f1-04ad
     props:
       Plugin_016_Stonehenge.dat:
         2b9d0000:
-          model: 5ad0e817-badb57f1-2b9d0000
+          model: badb57f1-2b9d
           name: PZ1x1_LightRock_2B9D
         2ba00000:
-          model: 5ad0e817-badb57f1-2ba00000
+          model: badb57f1-2ba0
           name: PZ1x1_MedRock_2BA0
         2ba20000:
-          model: 5ad0e817-badb57f1-2ba20000
+          model: badb57f1-2ba2
           name: PZ1x1_DarkRock_2BA2
         2ba50000:
-          model: 5ad0e817-badb57f1-2ba50000
+          model: badb57f1-2ba5
           name: PZ1x1_DarkBlockRock_2BA5
         2ba80000:
-          model: 5ad0e817-badb57f1-2ba80000
+          model: badb57f1-2ba8
           name: PZ1x1_LightBlockRock_2BA8
         2bab0000:
-          model: 5ad0e817-badb57f1-2bab0000
+          model: badb57f1-2bab
           name: PZ1x2_DarkBlockRock_2BAB
         2bad0000:
-          model: 5ad0e817-badb57f1-2bad0000
+          model: badb57f1-2bad
           name: PZ1x2_LightBlockRock_2BAD
     sha256: ba08e290ea9e0e0f89e9f863a7fb0b1e30aca963cc8ead9397960455d8319da6
     size: 291703
@@ -2011,7 +1228,7 @@ assets:
           flamability: 30
           garbage: 9
           maintenance: 130
-          model: 5ad0e817-badb57f1-04ac0000
+          model: badb57f1-04ac
           name: LM166x112_SanFranCityHall_04AC
           pollution: 4
           pollutionRadius: 2
@@ -2021,34 +1238,6 @@ assets:
           water: 200
           waterPollution: 3
           waterPollutionRadius: 3
-    contents:
-      Plugin_017_SanFranCityHall.dat:
-        buildings:
-          04ac0000:
-            bulldoze: 4950
-            cost: 65000
-            flamability: 30
-            garbage: 9
-            maintenance: 130
-            model: 5ad0e817-badb57f1-04ac0000
-            name: LM166x112_SanFranCityHall_04AC
-            pollution: 4
-            pollutionRadius: 2
-            power: 200
-            rating: 5
-            ratingRadius: 256
-            water: 200
-            waterPollution: 3
-            waterPollutionRadius: 3
-        lots:
-          0c83e29f:
-            building: 04ac0000
-            name: LM11x7_SanFranciscoCityHall
-            size: 11x7
-            textures:
-              - 25d60000
-        models:
-          - 5ad0e817-badb57f1-04ac0000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_017_SanFranCityHall.dat
     file: Plugin_017_SanFranCityHall.dat
@@ -2066,6 +1255,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_017_SanFranCityHall.dat:
+        - badb57f1-04ac
     sha256: 507f9b4ec81d36ec66a6568e6a81a94ad6e4bb2dcdebffdd39f8c592882a2dcc
     size: 5485429
     version: '1'
@@ -2081,7 +1273,7 @@ assets:
           flamability: 27
           garbage: 20
           maintenance: 180
-          model: 5ad0e817-badb57f1-04900000
+          model: badb57f1-0490
           name: Lm80x110_TaipeiArtMuseum_0490
           pollution: 5
           pollutionRadius: 1
@@ -2091,34 +1283,6 @@ assets:
           water: 450
           waterPollution: 6
           waterPollutionRadius: 2
-    contents:
-      Plugin_030_TaipeiArtMuseum.dat:
-        buildings:
-          '04900000':
-            bulldoze: 8550
-            cost: 95000
-            flamability: 27
-            garbage: 20
-            maintenance: 180
-            model: 5ad0e817-badb57f1-04900000
-            name: Lm80x110_TaipeiArtMuseum_0490
-            pollution: 5
-            pollutionRadius: 1
-            power: 90
-            rating: 9
-            ratingRadius: 256
-            water: 450
-            waterPollution: 6
-            waterPollutionRadius: 2
-        lots:
-          4c9fcb9f:
-            building: '04900000'
-            name: LM5x7_TaipeiArtMuseum
-            size: 5x7
-            textures:
-              - 252b0000
-        models:
-          - 5ad0e817-badb57f1-04900000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_030_TaipeiArtMuseum.dat
     file: Plugin_030_TaipeiArtMuseum.dat
@@ -2136,6 +1300,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_030_TaipeiArtMuseum.dat:
+        - badb57f1-0490
     sha256: 076a5f80de0a06d89fcc0d53ceabb3adf18e2e303c16859e170f5595f9e39afc
     size: 2215915
     version: '1'
@@ -2153,7 +1320,7 @@ assets:
           garbage: 6
           maintenance: 180
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04890000
+          model: badb57f1-0489
           name: LM96x96_AdlerPlanetarium_0489
           pollution: 1
           pollutionRadius: 1
@@ -2165,36 +1332,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Plugin_031_AdlerPlanetarium.dat:
-        buildings:
-          '04890000':
-            bulldoze: 8100
-            categories: landmarks
-            cost: 90000
-            flamability: 18
-            garbage: 6
-            maintenance: 180
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04890000
-            name: LM96x96_AdlerPlanetarium_0489
-            pollution: 1
-            pollutionRadius: 1
-            power: 25
-            rating: 7
-            ratingRadius: 256
-            water: 45
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          8c9fb724:
-            building: '04890000'
-            name: LM6x6_adlerp
-            size: 6x6
-            textures:
-              - '26060000'
-        models:
-          - 5ad0e817-badb57f1-04890000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_031_AdlerPlanetarium.dat
     file: Plugin_031_AdlerPlanetarium.dat
@@ -2212,6 +1349,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_031_AdlerPlanetarium.dat:
+        - badb57f1-0489
     sha256: f69926ee3a2e10d60b2755976db65cef532f766668bcdde6f17cff8bea926806
     size: 1960912
     version: '1'
@@ -2229,7 +1369,7 @@ assets:
           garbage: 9
           maintenance: 130
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04880000
+          model: badb57f1-0488
           name: Lm50x46_Mayflower_0488
           pollution: 2
           pollutionRadius: 2
@@ -2241,45 +1381,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Plugin_032_MayflowerPort.dat:
-        buildings:
-          '04880000':
-            bulldoze: 5850
-            categories: landmarks
-            cost: 65000
-            flamability: 21
-            garbage: 9
-            maintenance: 130
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04880000
-            name: Lm50x46_Mayflower_0488
-            pollution: 2
-            pollutionRadius: 2
-            power: 50
-            rating: 5
-            ratingRadius: 256
-            water: 250
-            waterPollution: 2
-            waterPollutionRadius: 2
-        lots:
-          acae3f0c:
-            building: '04880000'
-            name: Lm4x3_Mayflower
-            props:
-              - 2d390000
-              - 2d370000
-            size: 4x3
-        models:
-          - 5ad0e817-badb57f1-04880000
-          - 5ad0e817-badb57f1-2d380000
-          - 5ad0e817-badb57f1-2d370000
-        props:
-          2d370000:
-            model: 5ad0e817-badb57f1-2d370000
-            name: Lm43x10_MayflowerShip_2D37
-          2d390000:
-            name: Effect_MayflowerShip
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_032_MayflowerPort.dat
     file: Plugin_032_MayflowerPort.dat
@@ -2298,10 +1399,15 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_032_MayflowerPort.dat:
+        - badb57f1-0488
+        - badb57f1-2d38
+        - badb57f1-2d37
     props:
       Plugin_032_MayflowerPort.dat:
         2d370000:
-          model: 5ad0e817-badb57f1-2d370000
+          model: badb57f1-2d37
           name: Lm43x10_MayflowerShip_2D37
         2d390000:
           name: Effect_MayflowerShip
@@ -2322,7 +1428,7 @@ assets:
           garbage: 3
           maintenance: 180
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04870000
+          model: badb57f1-0487
           name: Lm58x75_RockefellerCtr_0487
           pollution: 1
           pollutionRadius: 1
@@ -2336,61 +1442,6 @@ assets:
     categories:
       - landmarks
       - religion
-    contents:
-      Plugin_033_RockefellerCenter.dat:
-        buildings:
-          '04870000':
-            bulldoze: 8100
-            categories: landmarks,religion
-            cost: 90000
-            flamability: 39
-            garbage: 3
-            maintenance: 180
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04870000
-            name: Lm58x75_RockefellerCtr_0487
-            pollution: 1
-            pollutionRadius: 1
-            power: 10
-            rating: 7
-            ratingRadius: 256
-            submenu: Landmarks/Religion
-            water: 9
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          8ccf053d:
-            building: '04870000'
-            name: LM4x4_RockefellerCtr
-            props:
-              - 2d3e0000
-              - 2d3c0000
-              - 2d3a0000
-              - a0000055
-              - '1e040000'
-              - '1e050000'
-              - 1e0d0000
-              - 2d3d0000
-            size: 4x13
-            textures:
-              - '26370000'
-              - '26350000'
-        models:
-          - 5ad0e817-badb57f1-2d3c0000
-          - 5ad0e817-badb57f1-04870000
-          - 5ad0e817-badb57f1-2d3b0000
-          - 5ad0e817-badb57f1-2d3d0000
-          - 5ad0e817-badb57f1-2d3a0000
-        props:
-          2d3a0000:
-            name: Lm58x32_RockefellerRinkPlaza1_2D3A0000
-          2d3c0000:
-            name: LM7x7_ChristmasTree_2D3C
-          2d3d0000:
-            model: 5ad0e817-badb57f1-2d3d0000
-            name: Lm23x68_RockefellerCtr_2D3D
-          2d3e0000:
-            name: Effect_Christmas_white_blinking
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_033_RockefellerCenter.dat
     file: Plugin_033_RockefellerCenter.dat
@@ -2418,6 +1469,13 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_033_RockefellerCenter.dat:
+        - badb57f1-2d3c
+        - badb57f1-0487
+        - badb57f1-2d3b
+        - badb57f1-2d3d
+        - badb57f1-2d3a
     props:
       Plugin_033_RockefellerCenter.dat:
         2d3a0000:
@@ -2425,7 +1483,7 @@ assets:
         2d3c0000:
           name: LM7x7_ChristmasTree_2D3C
         2d3d0000:
-          model: 5ad0e817-badb57f1-2d3d0000
+          model: badb57f1-2d3d
           name: Lm23x68_RockefellerCtr_2D3D
         2d3e0000:
           name: Effect_Christmas_white_blinking
@@ -2446,7 +1504,7 @@ assets:
           garbage: 3
           maintenance: 180
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04860000
+          model: badb57f1-0486
           name: Lm32x24_SobchakLanes_0486
           pollution: 1
           pollutionRadius: 1
@@ -2460,42 +1518,6 @@ assets:
     categories:
       - landmarks
       - religion
-    contents:
-      Plugin_034_SobchakLanes.dat:
-        buildings:
-          '04860000':
-            bulldoze: 8100
-            categories: landmarks,religion
-            cost: 90000
-            flamability: 39
-            garbage: 3
-            maintenance: 180
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04860000
-            name: Lm32x24_SobchakLanes_0486
-            pollution: 1
-            pollutionRadius: 1
-            power: 10
-            rating: 7
-            ratingRadius: 256
-            submenu: Landmarks/Religion
-            water: 9
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          ae52bebe:
-            building: '04860000'
-            name: Lm3x3_SobchakLanes
-            props:
-              - '1e900000'
-              - 28ac0000
-            size: 3x3
-            textures:
-              - '25920000'
-              - '25960000'
-              - '26350000'
-        models:
-          - 5ad0e817-badb57f1-04860000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_034_SobchakLanes.dat
     file: Plugin_034_SobchakLanes.dat
@@ -2518,6 +1540,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_034_SobchakLanes.dat:
+        - badb57f1-0486
     sha256: 7165c125c7a5a1b6b6adad57e5353d21250f48d68413bb3cfedad04fc4152546
     size: 2550910
     version: '1'
@@ -2535,7 +1560,7 @@ assets:
           garbage: 3
           maintenance: 180
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04850000
+          model: badb57f1-0485
           name: LM30x20_ShortyBurger_0485
           pollution: 1
           pollutionRadius: 1
@@ -2549,43 +1574,6 @@ assets:
     categories:
       - landmarks
       - religion
-    contents:
-      Plugin_035_ShortyBurger.dat:
-        buildings:
-          '04850000':
-            bulldoze: 8100
-            categories: landmarks,religion
-            cost: 90000
-            flamability: 39
-            garbage: 3
-            maintenance: 180
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04850000
-            name: LM30x20_ShortyBurger_0485
-            pollution: 1
-            pollutionRadius: 1
-            power: 10
-            rating: 7
-            ratingRadius: 256
-            submenu: Landmarks/Religion
-            water: 9
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          2e891faa:
-            building: '04850000'
-            name: LM3x3_ShortyBurger_2e891faa
-            props:
-              - '1e270000'
-              - '1e680000'
-              - 1f000000
-              - 1dfe0000
-            size: 2x3
-            textures:
-              - 25fb0000
-              - 25b40000
-        models:
-          - 5ad0e817-badb57f1-04850000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_035_ShortyBurger.dat
     file: Plugin_035_ShortyBurger.dat
@@ -2609,6 +1597,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_035_ShortyBurger.dat:
+        - badb57f1-0485
     sha256: d5e38d0dbfefd9c96f0d29e32305201a4219a5889441d63f14d28e3141d3ba33
     size: 2275101
     version: '1'
@@ -2626,7 +1617,7 @@ assets:
           garbage: 3
           maintenance: 180
           menu: Landmarks
-          model: 5ad0e817-badb57f1-04840000
+          model: badb57f1-0484
           name: Lm26x22_LuckysHangTen_0484
           pollution: 1
           pollutionRadius: 1
@@ -2640,43 +1631,6 @@ assets:
     categories:
       - landmarks
       - religion
-    contents:
-      Plugin_036_LuckysHangTen.dat:
-        buildings:
-          '04840000':
-            bulldoze: 8100
-            categories: landmarks,religion
-            cost: 90000
-            flamability: 39
-            garbage: 3
-            maintenance: 180
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-04840000
-            name: Lm26x22_LuckysHangTen_0484
-            pollution: 1
-            pollutionRadius: 1
-            power: 10
-            rating: 7
-            ratingRadius: 256
-            submenu: Landmarks/Religion
-            water: 9
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          cea1e6b4:
-            building: '04840000'
-            name: LM3x2_LuckysHangTen
-            props:
-              - 28d70000
-              - '1e540000'
-              - 29b20000
-              - 2a180000
-            size: 3x2
-            textures:
-              - '26110000'
-              - '26140000'
-        models:
-          - 5ad0e817-badb57f1-04840000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Plugin_036_LuckysHangTen.dat
     file: Plugin_036_LuckysHangTen.dat
@@ -2700,6 +1654,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Plugin_036_LuckysHangTen.dat:
+        - badb57f1-0484
     sha256: 68be522cda645047ea275e0577d19d29203277319f923885a5a534f86fd2ebd8
     size: 1819329
     version: '1'
@@ -2721,7 +1678,7 @@ assets:
           landmarkRadius: 20
           maintenance: 200
           menu: Landmarks
-          model: 5ad0e817-6cd8b254-002f0000
+          model: 6cd8b254-002f
           name: IndstryPipes
           pollution: 12
           pollutionRadius: 3
@@ -2744,7 +1701,7 @@ assets:
           landmarkRadius: 20
           maintenance: 200
           menu: Landmarks
-          model: 5ad0e817-6cd8b254-002f0000
+          model: 6cd8b254-002f
           name: IndstryPipes
           pollution: 12
           pollutionRadius: 3
@@ -2756,76 +1713,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Grutze Industries\IndstryPipes-0x5ad0e817_0x6cd8b254_0x2f0000.SC4Model:
-        models:
-          - 5ad0e817-6cd8b254-002f0000
-      Grutze Industries\IndstryPipes-0x6534284a-0xad1d67dc-0x8d21717e.SC4Desc:
-        buildings:
-          8d21717e:
-            bulldoze: 500
-            categories: landmarks
-            cost: 60000
-            description: A plant the manufactures many Grutze products
-            flamability: 10
-            garbage: 25
-            label: Grutze Industries
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 200
-            menu: Landmarks
-            model: 5ad0e817-6cd8b254-002f0000
-            name: IndstryPipes
-            pollution: 12
-            pollutionRadius: 3
-            power: 75
-            rating: 10
-            ratingRadius: 256
-            water: 10
-            waterPollution: 3
-            waterPollutionRadius: 2
-      Grutze Industries\LM4x5_GrutzeInd_2d217719.SC4Lot:
-        buildings:
-          2d217719:
-            bulldoze: 500
-            categories: landmarks
-            cost: 60000
-            description: A plant the manufactures many Grutze products
-            flamability: 10
-            garbage: 25
-            label: Grutze Industries
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 200
-            menu: Landmarks
-            model: 5ad0e817-6cd8b254-002f0000
-            name: IndstryPipes
-            pollution: 12
-            pollutionRadius: 3
-            power: 75
-            rating: 10
-            ratingRadius: 256
-            water: 10
-            waterPollution: 3
-            waterPollutionRadius: 2
-        lots:
-          2d217719:
-            building: 2d217719
-            name: LM4x5_GrutzeInd
-            props:
-              - 2a430000
-              - 2a440000
-              - 1c930000
-              - 1d4b0000
-              - 1d4a0000
-            size: 4x5
-            textures:
-              - 258d0000
-              - '25960000'
-              - '25930000'
-              - '25920000'
-              - '25950000'
-              - 256c0000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Grutze_Industries.zip
     file: maxis-plugin-grutze-industries@1.zip
@@ -2856,6 +1743,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Grutze Industries/IndstryPipes-0x5ad0e817_0x6cd8b254_0x2f0000.SC4Model:
+        - 6cd8b254-002f
     sha256: ebbf4997c5d750636581cd57ba36f37a545c4f762b50aa047bc36cea325c019d
     size: 768274
     uncompressed: 1003759
@@ -2878,7 +1768,7 @@ assets:
           landmarkRadius: 20
           maintenance: 150
           menu: Landmarks
-          model: 5ad0e817-6cd8b254-002d0000
+          model: 6cd8b254-002d
           name: DstTxtr
           pollution: 1
           pollutionRadius: 1
@@ -2901,7 +1791,7 @@ assets:
           landmarkRadius: 20
           maintenance: 150
           menu: Landmarks
-          model: 5ad0e817-6cd8b254-002d0000
+          model: 6cd8b254-002d
           name: DstTxtr
           pollution: 1
           pollutionRadius: 1
@@ -2913,78 +1803,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Grutzehaus\DstTxtr-0x5ad0e817_0x6cd8b254_0x2d0000.SC4Model:
-        models:
-          - 5ad0e817-6cd8b254-002d0000
-      Grutzehaus\DstTxtr-0x6534284a-0xad1d67dc-0x6d2170b6.SC4Desc:
-        buildings:
-          6d2170b6:
-            bulldoze: 125
-            categories: landmarks
-            cost: 22000
-            description: The house of the Grutze family
-            flamability: 10
-            garbage: 15
-            label: Grutzehaus
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 150
-            menu: Landmarks
-            model: 5ad0e817-6cd8b254-002d0000
-            name: DstTxtr
-            pollution: 1
-            pollutionRadius: 1
-            power: 20
-            rating: 10
-            ratingRadius: 256
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 2
-      Grutzehaus\LM2x3_Grutzehaus_ed2174a0.SC4Lot:
-        buildings:
-          ed2174a0:
-            bulldoze: 125
-            categories: landmarks
-            cost: 22000
-            description: The house of the Grutze family
-            flamability: 10
-            garbage: 15
-            label: Grutzehaus
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 150
-            menu: Landmarks
-            model: 5ad0e817-6cd8b254-002d0000
-            name: DstTxtr
-            pollution: 1
-            pollutionRadius: 1
-            power: 20
-            rating: 10
-            ratingRadius: 256
-            water: 5
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          ed2174a0:
-            building: ed2174a0
-            name: LM2x3_Grutzehaus
-            props:
-              - a0000050
-              - a000004d
-              - 1dfb0000
-              - 28f10000
-              - 1d8f0000
-              - 1cce0000
-              - 1f0b0000
-              - '29320000'
-              - '29300000'
-            size: 2x3
-            textures:
-              - '1e810000'
-              - 1e7e0000
-              - 25f80000
-              - 25b00000
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Grutzehaus.zip
     file: maxis-plugin-grutzehaus@1.zip
@@ -3017,6 +1835,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Grutzehaus/DstTxtr-0x5ad0e817_0x6cd8b254_0x2d0000.SC4Model:
+        - 6cd8b254-002d
     sha256: ae723f0425a7dda14c4fd00204ffe8741eff3eb73f4a7c7621ec4e8bb73b6c30
     size: 173755
     uncompressed: 244025
@@ -3039,7 +1860,7 @@ assets:
           landmarkRadius: 20
           maintenance: 150
           menu: Landmarks
-          model: 5ad0e817-badb57f1-2d3f0000
+          model: badb57f1-2d3f
           name: Longfellow Castle
           pollution: 1
           pollutionRadius: 1
@@ -3059,7 +1880,7 @@ assets:
           landmarkRadius: 20
           maintenance: 150
           menu: Landmarks
-          model: 5ad0e817-badb57f1-2d3f0000
+          model: badb57f1-2d3f
           name: Longfellow Castle
           pollution: 1
           pollutionRadius: 1
@@ -3079,7 +1900,7 @@ assets:
           landmarkRadius: 20
           maintenance: 150
           menu: Landmarks
-          model: 5ad0e817-badb57f1-2d4b0000
+          model: badb57f1-2d4b
           name: Longfellow Castle
           pollution: 1
           pollutionRadius: 1
@@ -3100,7 +1921,7 @@ assets:
           landmarkRadius: 20
           maintenance: 150
           menu: Landmarks
-          model: 5ad0e817-badb57f1-2d3f0000
+          model: badb57f1-2d3f
           name: Longfellow Castle
           pollution: 1
           pollutionRadius: 1
@@ -3110,407 +1931,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Longfellow Castle\CastleSet.dat:
-        buildings:
-          0d4fdea6:
-            bulldoze: 100
-            categories: landmarks
-            cost: 110000
-            description: 'Location: Long ago and far away'
-            flamability: 10
-            garbage: 15
-            label: Keep w/walls
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 150
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-2d3f0000
-            name: Longfellow Castle
-            pollution: 1
-            pollutionRadius: 1
-            rating: 10
-            ratingRadius: 256
-            waterPollution: 1
-            waterPollutionRadius: 2
-          2d3f0000:
-            bulldoze: 100
-            categories: landmarks
-            cost: 110000
-            description: 'Location: Long ago and far away'
-            flamability: 10
-            garbage: 15
-            label: Longfellow Keep
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 150
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-2d3f0000
-            name: Longfellow Castle
-            pollution: 1
-            pollutionRadius: 1
-            rating: 10
-            ratingRadius: 256
-            waterPollution: 1
-            waterPollutionRadius: 2
-          2d4b0000:
-            bulldoze: 100
-            categories: landmarks
-            cost: 110000
-            description: 'Location: Long ago and far away'
-            flamability: 10
-            garbage: 15
-            label: Longfellow Keep
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 150
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-2d4b0000
-            name: Longfellow Castle
-            pollution: 1
-            pollutionRadius: 1
-            rating: 10
-            ratingRadius: 256
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          0d4fdea6:
-            building: 0d4fdea6
-            name: Longfellow Castle
-            props:
-              - 2d560000
-              - 2d570000
-              - 2d010000
-              - 2d130000
-              - 2d4d0000
-              - 2d100000
-              - 2d500000
-              - 2d590000
-              - 2d0f0000
-              - 2d0d0000
-              - 2d4c0000
-              - 2d0a0000
-              - 2d080000
-              - 2d070000
-              - 2d4e0000
-              - 2d540000
-              - 2d530000
-              - 2d550000
-              - 2d520000
-              - 2d4f0000
-              - 2d050000
-              - 2d0c0000
-              - 2d0b0000
-              - 295d0000
-              - 2d490000
-              - 2d060000
-              - 2d440000
-              - 2d420000
-              - 2d480000
-              - 2d470000
-              - 2d090000
-              - 2d430000
-              - 2d4a0000
-              - 2a590000
-              - 2ac30000
-              - 2ac40000
-              - 2ac20000
-              - 1de60000
-              - 29bd0000
-              - 29be0000
-              - 2d510000
-              - '16550000'
-              - 1cf70000
-              - '29760000'
-              - '29770000'
-              - '29740000'
-              - 2a110000
-              - 1de50000
-              - 2d460000
-            size: 13x12
-            textures:
-              - 252b0000
-              - 2d580000
-              - 2d590000
-              - 2d5f0000
-              - 2d600000
-              - 2d610000
-              - '25e00000'
-              - 2d5d0000
-              - 2d5a0000
-              - 25d80000
-              - 251c0000
-              - 258b0000
-              - 257a0000
-              - 257c0000
-              - '25800000'
-        models:
-          - 5ad0e817-badb57f1-2d100000
-          - 5ad0e817-badb57f1-2d530000
-          - 5ad0e817-badb57f1-2d090000
-          - 5ad0e817-badb57f1-2d4c0000
-          - 5ad0e817-badb57f1-2d020000
-          - 5ad0e817-badb57f1-2d450000
-          - 5ad0e817-badb57f1-2d130000
-          - 5ad0e817-badb57f1-2d560000
-          - 5ad0e817-badb57f1-2d0c0000
-          - 5ad0e817-badb57f1-2d4f0000
-          - 5ad0e817-badb57f1-2d050000
-          - 5ad0e817-badb57f1-2d480000
-          - 5ad0e817-badb57f1-2d410000
-          - 5ad0e817-badb57f1-2d570000
-          - 5ad0e817-badb57f1-2d0d0000
-          - 5ad0e817-badb57f1-2d500000
-          - 5ad0e817-badb57f1-2d060000
-          - 5ad0e817-badb57f1-2d490000
-          - 5ad0e817-badb57f1-2d420000
-          - 5ad0e817-badb57f1-2d0a0000
-          - 5ad0e817-badb57f1-2d030000
-          - 5ad0e817-badb57f1-2d540000
-          - 5ad0e817-badb57f1-2d4d0000
-          - 5ad0e817-badb57f1-2d460000
-          - 5ad0e817-badb57f1-2d3f0000
-          - 5ad0e817-badb57f1-2d070000
-          - 5ad0e817-badb57f1-2d510000
-          - 5ad0e817-badb57f1-2d4a0000
-          - 5ad0e817-badb57f1-2d430000
-          - 5ad0e817-badb57f1-2d0b0000
-          - 5ad0e817-badb57f1-2d040000
-          - 5ad0e817-badb57f1-2d550000
-          - 5ad0e817-badb57f1-2d4e0000
-          - 5ad0e817-badb57f1-2d470000
-          - 5ad0e817-badb57f1-2d400000
-          - 5ad0e817-badb57f1-2d0f0000
-          - 5ad0e817-badb57f1-2d080000
-          - 5ad0e817-badb57f1-2d010000
-          - 5ad0e817-badb57f1-2d590000
-          - 5ad0e817-badb57f1-2d520000
-          - 5ad0e817-badb57f1-2d4b0000
-          - 5ad0e817-badb57f1-2d440000
-        props:
-          2d010000:
-            model: 5ad0e817-badb57f1-2d010000
-            name: Castle Walls - Repeat
-          2d020000:
-            model: 5ad0e817-badb57f1-2d020000
-            name: Castle Walls - 90deg Inward
-          2d030000:
-            model: 5ad0e817-badb57f1-2d030000
-            name: Castle Walls - 90deg Outward
-          2d040000:
-            model: 5ad0e817-badb57f1-2d040000
-            name: Castle Walls - T Out
-          2d050000:
-            model: 5ad0e817-badb57f1-2d050000
-            name: Castle Out - Small Hut w Straw Roof
-          2d060000:
-            model: 5ad0e817-badb57f1-2d060000
-            name: Castle Out - Long Hut w Straw Roof
-          2d070000:
-            model: 5ad0e817-badb57f1-2d070000
-            name: Castle Out - Small Hut w Shingle Roof
-          2d080000:
-            model: 5ad0e817-badb57f1-2d080000
-            name: Castle Out - Large 2 Story House
-          2d090000:
-            model: 5ad0e817-badb57f1-2d090000
-            name: Castle Out - Long Lean-to
-          2d0a0000:
-            model: 5ad0e817-badb57f1-2d0a0000
-            name: Castle Out - Short Lean-to
-          2d0b0000:
-            model: 5ad0e817-badb57f1-2d0b0000
-            name: Castle Out - Smithy
-          2d0c0000:
-            model: 5ad0e817-badb57f1-2d0c0000
-            name: Castle Out - Stable
-          2d0d0000:
-            model: 5ad0e817-badb57f1-2d0d0000
-            name: Castle Walls - Stone Staircase
-          2d0f0000:
-            model: 5ad0e817-badb57f1-2d0f0000
-            name: Castle Walls - Bartizan w Crenel
-          2d100000:
-            model: 5ad0e817-badb57f1-2d100000
-            name: Castle Walls - Bastion
-          2d130000:
-            model: 5ad0e817-badb57f1-2d100000
-            name: Castle Walls - Bastion w/roof
-          2d400000:
-            model: 5ad0e817-badb57f1-2d400000
-            name: Castle Walls - Bartizan w/roof
-          2d410000:
-            model: 5ad0e817-badb57f1-2d410000
-            name: Castle Prop - Barrel Rack
-          2d420000:
-            model: 5ad0e817-badb57f1-2d420000
-            name: Castle Prop - Barrel Rack (Shadowed)
-          2d430000:
-            model: 5ad0e817-badb57f1-2d430000
-            name: Castle Prop - Barrels
-          2d440000:
-            model: 5ad0e817-badb57f1-2d440000
-            name: Castle Prop - Barrels (shadowed)
-          2d450000:
-            model: 5ad0e817-badb57f1-2d450000
-            name: Castle Prop - Wood Bin
-          2d460000:
-            model: 5ad0e817-badb57f1-2d460000
-            name: Castle Prop - Wood Bin (Shadowed)
-          2d470000:
-            model: 5ad0e817-badb57f1-2d470000
-            name: Castle Prop - Hay Bin
-          2d480000:
-            model: 5ad0e817-badb57f1-2d480000
-            name: Castle Prop - Hay Bin (Shadowed)
-          2d490000:
-            model: 5ad0e817-badb57f1-2d490000
-            name: Castle Prop - Well
-          2d4a0000:
-            model: 5ad0e817-badb57f1-2d4a0000
-            name: Castle Prop - Wagon w/Barrels
-          2d4c0000:
-            model: 5ad0e817-badb57f1-2d4c0000
-            name: Castle Walls - Stone Stairs (reversed)
-          2d4d0000:
-            model: 5ad0e817-badb57f1-2d4d0000
-            name: Castle Walls - Gate
-          2d4e0000:
-            model: 5ad0e817-badb57f1-2d4e0000
-            name: Castle Props - Wooden Fence (long)
-          2d4f0000:
-            model: 5ad0e817-badb57f1-2d4f0000
-            name: Castle Props - Wooden Fence (short)
-          2d500000:
-            model: 5ad0e817-badb57f1-2d500000
-            name: Castle Walls - Bartizan w/roof Reversed
-          2d510000:
-            model: 5ad0e817-badb57f1-2d510000
-            name: Castle Out - Grain Silo
-          2d520000:
-            model: 5ad0e817-badb57f1-2d520000
-            name: Castle Prop - The Pit
-          2d530000:
-            model: 5ad0e817-badb57f1-2d530000
-            name: Castle Prop - Gallows
-          2d540000:
-            model: 5ad0e817-badb57f1-2d540000
-            name: Castle Prop - Guillotine
-          2d550000:
-            model: 5ad0e817-badb57f1-2d550000
-            name: Castle Prop - Stocks
-          2d560000:
-            model: 5ad0e817-badb57f1-2d560000
-            name: Castle Moat - Repeat
-          2d570000:
-            model: 5ad0e817-badb57f1-2d570000
-            name: Castle Moat - Right
-          2d590000:
-            model: 5ad0e817-badb57f1-2d590000
-            name: Castle Moat - Bridge
-        textures:
-          - 2d5b0000
-          - 2d5f0000
-          - 2d580000
-          - 2d5c0000
-          - 2d600000
-          - 2d590000
-          - 2d5d0000
-          - 2d610000
-          - 2d5a0000
-      Longfellow Castle\Longfellow Castle_4d50ba18.SC4Lot:
-        buildings:
-          4d50ba18:
-            bulldoze: 100
-            categories: landmarks
-            cost: 110000
-            description: 'Location: Long ago and far away'
-            flamability: 10
-            garbage: 15
-            label: Longfellow Keep
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 150
-            menu: Landmarks
-            model: 5ad0e817-badb57f1-2d3f0000
-            name: Longfellow Castle
-            pollution: 1
-            pollutionRadius: 1
-            rating: 10
-            ratingRadius: 256
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          4d50ba18:
-            building: 4d50ba18
-            name: Longfellow Castle
-            props:
-              - 2d560000
-              - 2d570000
-              - 2d010000
-              - 2d130000
-              - 2d4d0000
-              - 2d100000
-              - 2d500000
-              - 2d590000
-              - 2d0f0000
-              - 2d0d0000
-              - 2d4c0000
-              - 2d0a0000
-              - 2d080000
-              - 2d070000
-              - 2d4e0000
-              - 2d540000
-              - 2d530000
-              - 2d550000
-              - 2d520000
-              - 2d4f0000
-              - 2d050000
-              - 2d0c0000
-              - 2d0b0000
-              - 295d0000
-              - 2d490000
-              - 2d060000
-              - 2d440000
-              - 2d420000
-              - 2d480000
-              - 2d470000
-              - 2d090000
-              - 2d430000
-              - 2d4a0000
-              - 2a590000
-              - 2ac30000
-              - 2ac40000
-              - 2ac20000
-              - 1de60000
-              - 29bd0000
-              - 29be0000
-              - 2d510000
-              - '16550000'
-              - 1cf70000
-              - '29760000'
-              - '29770000'
-              - '29740000'
-              - 2a110000
-              - 1de50000
-              - 2d460000
-            size: 13x12
-            textures:
-              - 252b0000
-              - 2d580000
-              - 2d590000
-              - 2d5f0000
-              - 2d600000
-              - 2d610000
-              - '25e00000'
-              - 2d5d0000
-              - 2d5a0000
-              - 25d80000
-              - 251c0000
-              - 258b0000
-              - 257a0000
-              - 257c0000
-              - '25800000'
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Longfellow_Castle.zip
     file: maxis-plugin-longfellow-castle@1.zip
@@ -3664,130 +2084,185 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Longfellow Castle/CastleSet.dat:
+        - badb57f1-2d10
+        - badb57f1-2d53
+        - badb57f1-2d09
+        - badb57f1-2d4c
+        - badb57f1-2d02
+        - badb57f1-2d45
+        - badb57f1-2d13
+        - badb57f1-2d56
+        - badb57f1-2d0c
+        - badb57f1-2d4f
+        - badb57f1-2d05
+        - badb57f1-2d48
+        - badb57f1-2d41
+        - badb57f1-2d57
+        - badb57f1-2d0d
+        - badb57f1-2d50
+        - badb57f1-2d06
+        - badb57f1-2d49
+        - badb57f1-2d42
+        - badb57f1-2d0a
+        - badb57f1-2d03
+        - badb57f1-2d54
+        - badb57f1-2d4d
+        - badb57f1-2d46
+        - badb57f1-2d3f
+        - badb57f1-2d07
+        - badb57f1-2d51
+        - badb57f1-2d4a
+        - badb57f1-2d43
+        - badb57f1-2d0b
+        - badb57f1-2d04
+        - badb57f1-2d55
+        - badb57f1-2d4e
+        - badb57f1-2d47
+        - badb57f1-2d40
+        - badb57f1-2d0f
+        - badb57f1-2d08
+        - badb57f1-2d01
+        - badb57f1-2d59
+        - badb57f1-2d52
+        - badb57f1-2d4b
+        - badb57f1-2d44
     props:
       Longfellow Castle/CastleSet.dat:
         2d010000:
-          model: 5ad0e817-badb57f1-2d010000
+          model: badb57f1-2d01
           name: Castle Walls - Repeat
         2d020000:
-          model: 5ad0e817-badb57f1-2d020000
+          model: badb57f1-2d02
           name: Castle Walls - 90deg Inward
         2d030000:
-          model: 5ad0e817-badb57f1-2d030000
+          model: badb57f1-2d03
           name: Castle Walls - 90deg Outward
         2d040000:
-          model: 5ad0e817-badb57f1-2d040000
+          model: badb57f1-2d04
           name: Castle Walls - T Out
         2d050000:
-          model: 5ad0e817-badb57f1-2d050000
+          model: badb57f1-2d05
           name: Castle Out - Small Hut w Straw Roof
         2d060000:
-          model: 5ad0e817-badb57f1-2d060000
+          model: badb57f1-2d06
           name: Castle Out - Long Hut w Straw Roof
         2d070000:
-          model: 5ad0e817-badb57f1-2d070000
+          model: badb57f1-2d07
           name: Castle Out - Small Hut w Shingle Roof
         2d080000:
-          model: 5ad0e817-badb57f1-2d080000
+          model: badb57f1-2d08
           name: Castle Out - Large 2 Story House
         2d090000:
-          model: 5ad0e817-badb57f1-2d090000
+          model: badb57f1-2d09
           name: Castle Out - Long Lean-to
         2d0a0000:
-          model: 5ad0e817-badb57f1-2d0a0000
+          model: badb57f1-2d0a
           name: Castle Out - Short Lean-to
         2d0b0000:
-          model: 5ad0e817-badb57f1-2d0b0000
+          model: badb57f1-2d0b
           name: Castle Out - Smithy
         2d0c0000:
-          model: 5ad0e817-badb57f1-2d0c0000
+          model: badb57f1-2d0c
           name: Castle Out - Stable
         2d0d0000:
-          model: 5ad0e817-badb57f1-2d0d0000
+          model: badb57f1-2d0d
           name: Castle Walls - Stone Staircase
         2d0f0000:
-          model: 5ad0e817-badb57f1-2d0f0000
+          model: badb57f1-2d0f
           name: Castle Walls - Bartizan w Crenel
         2d100000:
-          model: 5ad0e817-badb57f1-2d100000
+          model: badb57f1-2d10
           name: Castle Walls - Bastion
         2d130000:
-          model: 5ad0e817-badb57f1-2d100000
+          model: badb57f1-2d10
           name: Castle Walls - Bastion w/roof
         2d400000:
-          model: 5ad0e817-badb57f1-2d400000
+          model: badb57f1-2d40
           name: Castle Walls - Bartizan w/roof
         2d410000:
-          model: 5ad0e817-badb57f1-2d410000
+          model: badb57f1-2d41
           name: Castle Prop - Barrel Rack
         2d420000:
-          model: 5ad0e817-badb57f1-2d420000
+          model: badb57f1-2d42
           name: Castle Prop - Barrel Rack (Shadowed)
         2d430000:
-          model: 5ad0e817-badb57f1-2d430000
+          model: badb57f1-2d43
           name: Castle Prop - Barrels
         2d440000:
-          model: 5ad0e817-badb57f1-2d440000
+          model: badb57f1-2d44
           name: Castle Prop - Barrels (shadowed)
         2d450000:
-          model: 5ad0e817-badb57f1-2d450000
+          model: badb57f1-2d45
           name: Castle Prop - Wood Bin
         2d460000:
-          model: 5ad0e817-badb57f1-2d460000
+          model: badb57f1-2d46
           name: Castle Prop - Wood Bin (Shadowed)
         2d470000:
-          model: 5ad0e817-badb57f1-2d470000
+          model: badb57f1-2d47
           name: Castle Prop - Hay Bin
         2d480000:
-          model: 5ad0e817-badb57f1-2d480000
+          model: badb57f1-2d48
           name: Castle Prop - Hay Bin (Shadowed)
         2d490000:
-          model: 5ad0e817-badb57f1-2d490000
+          model: badb57f1-2d49
           name: Castle Prop - Well
         2d4a0000:
-          model: 5ad0e817-badb57f1-2d4a0000
+          model: badb57f1-2d4a
           name: Castle Prop - Wagon w/Barrels
         2d4c0000:
-          model: 5ad0e817-badb57f1-2d4c0000
+          model: badb57f1-2d4c
           name: Castle Walls - Stone Stairs (reversed)
         2d4d0000:
-          model: 5ad0e817-badb57f1-2d4d0000
+          model: badb57f1-2d4d
           name: Castle Walls - Gate
         2d4e0000:
-          model: 5ad0e817-badb57f1-2d4e0000
+          model: badb57f1-2d4e
           name: Castle Props - Wooden Fence (long)
         2d4f0000:
-          model: 5ad0e817-badb57f1-2d4f0000
+          model: badb57f1-2d4f
           name: Castle Props - Wooden Fence (short)
         2d500000:
-          model: 5ad0e817-badb57f1-2d500000
+          model: badb57f1-2d50
           name: Castle Walls - Bartizan w/roof Reversed
         2d510000:
-          model: 5ad0e817-badb57f1-2d510000
+          model: badb57f1-2d51
           name: Castle Out - Grain Silo
         2d520000:
-          model: 5ad0e817-badb57f1-2d520000
+          model: badb57f1-2d52
           name: Castle Prop - The Pit
         2d530000:
-          model: 5ad0e817-badb57f1-2d530000
+          model: badb57f1-2d53
           name: Castle Prop - Gallows
         2d540000:
-          model: 5ad0e817-badb57f1-2d540000
+          model: badb57f1-2d54
           name: Castle Prop - Guillotine
         2d550000:
-          model: 5ad0e817-badb57f1-2d550000
+          model: badb57f1-2d55
           name: Castle Prop - Stocks
         2d560000:
-          model: 5ad0e817-badb57f1-2d560000
+          model: badb57f1-2d56
           name: Castle Moat - Repeat
         2d570000:
-          model: 5ad0e817-badb57f1-2d570000
+          model: badb57f1-2d57
           name: Castle Moat - Right
         2d590000:
-          model: 5ad0e817-badb57f1-2d590000
+          model: badb57f1-2d59
           name: Castle Moat - Bridge
     sha256: 6679a17385fc1faea0b965b4eeb8e219e70d16849b2620cd83271f2bfc807480
     size: 3793228
+    textures:
+      Longfellow Castle/CastleSet.dat:
+        - 2d5b0000
+        - 2d5f0000
+        - 2d580000
+        - 2d5c0000
+        - 2d600000
+        - 2d590000
+        - 2d5d0000
+        - 2d610000
+        - 2d5a0000
     uncompressed: 4553219
     version: '1'
   simtropolis/maxis-plugin-stone-house:
@@ -3808,7 +2283,7 @@ assets:
           landmarkRadius: 20
           maintenance: 150
           menu: Landmarks
-          model: 5ad0e817-6cd8b254-002e0000
+          model: 6cd8b254-002e
           name: StoneHouse
           pollution: 1
           pollutionRadius: 1
@@ -3830,7 +2305,7 @@ assets:
           landmarkRadius: 20
           maintenance: 150
           menu: Landmarks
-          model: 5ad0e817-6cd8b254-002e0000
+          model: 6cd8b254-002e
           name: StoneHouse
           pollution: 1
           pollutionRadius: 1
@@ -3841,71 +2316,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Stone House\LM3x3_StoneHouse_0d1d6acb.SC4Lot:
-        buildings:
-          0d1d6acb:
-            bulldoze: 500
-            categories: landmarks
-            cost: 75000
-            description: A house made of stone and wood
-            flamability: 10
-            garbage: 2
-            label: Ian's House of Stone
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 150
-            menu: Landmarks
-            model: 5ad0e817-6cd8b254-002e0000
-            name: StoneHouse
-            pollution: 1
-            pollutionRadius: 1
-            rating: 10
-            ratingRadius: 256
-            water: 8
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          0d1d6acb:
-            building: 0d1d6acb
-            name: LM3x3_StoneHouse
-            props:
-              - a0000050
-              - a000004d
-              - '00580000'
-              - 2ba10000
-              - '29010000'
-            size: 3x3
-            textures:
-              - '262e0000'
-              - '1e810000'
-              - 1e7e0000
-      Stone House\StoneHouse-0x5ad0e817_0x6cd8b254_0x2e0000.SC4Model:
-        models:
-          - 5ad0e817-6cd8b254-002e0000
-      Stone House\StoneHouse-0x6534284a-0xad1d67dc-0x6d2172e0.SC4Desc:
-        buildings:
-          6d2172e0:
-            bulldoze: 500
-            categories: landmarks
-            cost: 75000
-            description: A house made of stone and wood
-            flamability: 10
-            garbage: 2
-            label: Ian's House of Stone
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 150
-            menu: Landmarks
-            model: 5ad0e817-6cd8b254-002e0000
-            name: StoneHouse
-            pollution: 1
-            pollutionRadius: 1
-            rating: 10
-            ratingRadius: 256
-            water: 8
-            waterPollution: 1
-            waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Stone_House.zip
     file: maxis-plugin-stone-house@1.zip
@@ -3933,6 +2343,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Stone House/StoneHouse-0x5ad0e817_0x6cd8b254_0x2e0000.SC4Model:
+        - 6cd8b254-002e
     sha256: d4d51d83c8bd78574e1968627b7d0e0b631b02d3cf00c17eb97bb4c00cc0e493
     size: 672804
     uncompressed: 775096
@@ -3954,7 +2367,7 @@ assets:
           landmarkRadius: 33
           maintenance: 100
           menu: Landmarks
-          model: 5ad0e817-ad1d67dc-00030000
+          model: ad1d67dc
           name: TempleOfGrutz
           pollution: 1
           pollutionRadius: 1
@@ -3974,7 +2387,7 @@ assets:
           landmarkRadius: 33
           maintenance: 100
           menu: Landmarks
-          model: 5ad0e817-ad1d67dc-00030000
+          model: ad1d67dc
           name: TempleOfGrutz
           pollution: 1
           pollutionRadius: 1
@@ -3984,63 +2397,6 @@ assets:
           waterPollutionRadius: 2
     categories:
       - landmarks
-    contents:
-      Temple of Grutz\LM6x6_TempleOfGrutz_2d1e7a9e.SC4Lot:
-        buildings:
-          2d1e7a9e:
-            bulldoze: 500
-            categories: landmarks
-            cost: 100000
-            description: An ancient structure made in the honor of the great Grutz
-            flamability: 10
-            label: The Temple Of G
-            landmark: 75
-            landmarkRadius: 33
-            maintenance: 100
-            menu: Landmarks
-            model: 5ad0e817-ad1d67dc-00030000
-            name: TempleOfGrutz
-            pollution: 1
-            pollutionRadius: 1
-            rating: 50
-            ratingRadius: 256
-            waterPollution: 1
-            waterPollutionRadius: 2
-        lots:
-          2d1e7a9e:
-            building: 2d1e7a9e
-            name: LM6x6_TempleOfGrutz
-            props:
-              - 1ece0000
-              - '28340000'
-            size: 6x6
-            textures:
-              - 25ba0000
-              - 251c0000
-      Temple of Grutz\TempleOfGrutz-0x5ad0e817_0xad1d67dc_0x30000.SC4Model:
-        models:
-          - 5ad0e817-ad1d67dc-00030000
-      Temple of Grutz\TempleOfGrutz-0x6534284a-0xad1d67dc-0xed1e75d3.SC4Desc:
-        buildings:
-          ed1e75d3:
-            bulldoze: 500
-            categories: landmarks
-            cost: 100000
-            description: An ancient structure made in the honor of the great Grutz
-            flamability: 10
-            label: The Temple Of G
-            landmark: 75
-            landmarkRadius: 33
-            maintenance: 100
-            menu: Landmarks
-            model: 5ad0e817-ad1d67dc-00030000
-            name: TempleOfGrutz
-            pollution: 1
-            pollutionRadius: 1
-            rating: 50
-            ratingRadius: 256
-            waterPollution: 1
-            waterPollutionRadius: 2
     dependencies: []
     download: https://community.simtropolis.com/library/maxis/sc4/buildings/Temple_of_Grutz.zip
     file: maxis-plugin-temple-of-grutz@1.zip
@@ -4064,6 +2420,9 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      Temple of Grutz/TempleOfGrutz-0x5ad0e817_0xad1d67dc_0x30000.SC4Model:
+        - ad1d67dc
     sha256: 1db47c2d719e6a35b003ee976ea4bba08f9a069a4840d9838d8df419c85b6ba8
     size: 399011
     uncompressed: 559621

@@ -18,6 +18,7 @@ import type { BuildingData } from "@node/data/buildings"
 import { writeMenu, writeMenus } from "@node/data/submenus"
 
 import type { FamilyID } from "@common/families"
+import { getModelId } from "src/scripts/dbpf/dbpf"
 import {
   BudgetItemDepartment,
   DemandID,
@@ -182,7 +183,7 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = model
+    data.model = getModelId(model)
   }
 
   const capacitySatisfied = getMap<DeveloperID>(exemplar, ExemplarPropertyID.CapacitySatisfied)

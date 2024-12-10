@@ -45,7 +45,7 @@ assets:
           landmarkRadius: 5
           maintenance: 250
           menu: Rewards
-          model: 5ad0e817-6dd414f2-00030000
+          model: 6dd414f2
           name: CensusRepository
           pollution: 3
           pollutionRadius: 3
@@ -73,7 +73,7 @@ assets:
             $$: 5
           maintenance: 50
           menu: Rewards
-          model: 5ad0e817-d17c864e-00030000
+          model: d17c864e
           name: Census Repository Vault
           pollution: 1
           pollutionRadius: 3
@@ -99,7 +99,7 @@ assets:
           landmarkRadius: 20
           maintenance: 400
           menu: Rewards
-          model: 5ad0e817-5465811a-00030000
+          model: 5465811a
           name: Census Repository Facility V3
           pollution: 3
           pollutionRadius: 3
@@ -134,7 +134,7 @@ assets:
           landmarkRadius: 20
           maintenance: 400
           menu: Rewards
-          model: 5ad0e817-5465811a-00030000
+          model: 5465811a
           name: Census Repository Facility V3
           pollution: 3
           pollutionRadius: 3
@@ -169,7 +169,7 @@ assets:
           landmarkRadius: 20
           maintenance: 400
           menu: Rewards
-          model: 5ad0e817-5465811a-00030000
+          model: 5465811a
           name: Census Repository Facility V3
           pollution: 3
           pollutionRadius: 3
@@ -204,7 +204,7 @@ assets:
           landmarkRadius: 20
           maintenance: 400
           menu: Rewards
-          model: 5ad0e817-5465811a-00030000
+          model: 5465811a
           name: Census Repository Facility V3
           pollution: 3
           pollutionRadius: 3
@@ -239,7 +239,7 @@ assets:
           landmarkRadius: 20
           maintenance: 400
           menu: Rewards
-          model: 5ad0e817-5465811a-00030000
+          model: 5465811a
           name: Census Repository Facility V3
           pollution: 3
           pollutionRadius: 3
@@ -274,7 +274,7 @@ assets:
           landmarkRadius: 20
           maintenance: 400
           menu: Rewards
-          model: 5ad0e817-5465811a-00030000
+          model: 5465811a
           name: Census Repository Facility V3
           pollution: 3
           pollutionRadius: 3
@@ -297,399 +297,6 @@ assets:
     categories:
       - rewards
     category: 21-other
-    contents:
-      BSC\Ripplejet\Census Repository\RJ - Census_Repository_Model_and_Query_3.1.dat:
-        buildings:
-          0dd41d65:
-            bulldoze: 100
-            categories: rewards
-            cost: 15000
-            flamability: 45
-            garbage: 23
-            garbageRadius: 2
-            jobs:
-              $: 170
-              $$: 105
-              $$$: 45
-            landmark: 20
-            landmarkRadius: 5
-            maintenance: 250
-            menu: Rewards
-            model: 5ad0e817-6dd414f2-00030000
-            name: CensusRepository
-            pollution: 3
-            pollutionRadius: 3
-            power: 125
-            rating: 8
-            ratingRadius: 256
-            relief:
-              co$$: 100000
-              co$$$: 100000
-              r$: 2500
-              r$$: 2500
-              r$$$: 2500
-            submenu: Landmarks/Government
-            water: 150
-            waterPollution: 2
-            waterPollutionRadius: 2
-        lots:
-          0dd41d65:
-            building: 0dd41d65
-            name: CensusRepository
-            props:
-              - 2aa40000
-              - 2aa70000
-              - 2aa90000
-              - 2ae80000
-              - 2aaa0000
-              - 2aab0000
-              - 2aac0000
-              - 2aad0000
-              - 2aae0000
-              - 2a590000
-              - 8956a699
-            size: 1x1
-            textures:
-              - '258e0000'
-              - 258d0000
-        models:
-          - 5ad0e817-5465811a-00030000
-          - 5ad0e817-d17c864e-00030000
-        props:
-          16888cf8:
-            model: 5ad0e817-5465811a-00030000
-            name: Census Repository Facility
-          1689d23a:
-            name: RJ - Census Repository Phone Booth
-          1689d35d:
-            name: RJ - Census Repository Phone Booth Rear
-          8956a699:
-            name: Gnome_CensusRepository
-          b6888d35:
-            model: 5ad0e817-d17c864e-00030000
-            name: Census Repository Vault
-      BSC\Ripplejet\Census Repository\RW_2x2_Census Repository Vault.SC4Lot:
-        buildings:
-          645e467b:
-            bulldoze: 1500
-            categories: rewards
-            cost: 2000
-            flamability: 38
-            garbage: 5
-            jobs:
-              $$: 5
-            maintenance: 50
-            menu: Rewards
-            model: 5ad0e817-d17c864e-00030000
-            name: Census Repository Vault
-            pollution: 1
-            pollutionRadius: 3
-            power: 8
-            relief:
-              ir: 30000
-            submenu: Landmarks/Government
-            water: 8
-            waterPollution: 1
-            waterPollutionRadius: 4
-        lots:
-          645e467b:
-            building: 645e467b
-            name: RW_2x2_Census Repository Vault
-            props:
-              - a0000069
-              - a000005f
-              - 1dfe0000
-            size: 2x2
-            textures:
-              - 262c0000
-      BSC\Ripplejet\Census Repository\RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot:
-        buildings:
-          6471f58b:
-            bulldoze: 9000
-            categories: rewards
-            cost: 15000
-            flamability: 38
-            garbage: 47
-            jobs:
-              $: 10
-              $$: 70
-              $$$: 5
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 400
-            menu: Rewards
-            model: 5ad0e817-5465811a-00030000
-            name: Census Repository Facility V3
-            pollution: 3
-            pollutionRadius: 3
-            power: 84
-            rating: 10
-            ratingRadius: 256
-            relief:
-              co$$: 10000
-              co$$$: 10000
-              id: 10000
-              iht: 10000
-              im: 10000
-              r$: 10000
-              r$$: 10000
-              r$$$: 10000
-            submenu: Landmarks/Government,Rewards
-            water: 84
-            waterPollution: 3
-            waterPollutionRadius: 4
-        lots:
-          6471f58b:
-            building: 6471f58b
-            name: RW_3x1_Census Repository Facility_ZP_ULTRA
-            props:
-              - a000007f
-              - 1689d35d
-              - 1689d23a
-            size: 3x1
-            textures:
-              - 258f0000
-              - '26370000'
-      _Documents\BSC_Readmes\RippleJet\_Census Repository___CHOOSE ONE --- SEE README!!!\RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot:
-        buildings:
-          6471f58b:
-            bulldoze: 9000
-            categories: rewards
-            cost: 15000
-            flamability: 38
-            garbage: 47
-            jobs:
-              $: 10
-              $$: 70
-              $$$: 5
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 400
-            menu: Rewards
-            model: 5ad0e817-5465811a-00030000
-            name: Census Repository Facility V3
-            pollution: 3
-            pollutionRadius: 3
-            power: 84
-            rating: 10
-            ratingRadius: 256
-            relief:
-              co$$: 10000
-              co$$$: 10000
-              id: 10000
-              iht: 10000
-              im: 10000
-              r$: 10000
-              r$$: 10000
-              r$$$: 10000
-            submenu: Landmarks/Government,Rewards
-            water: 84
-            waterPollution: 3
-            waterPollutionRadius: 4
-        lots:
-          6471f58b:
-            building: 6471f58b
-            name: RW_3x1_Census Repository Facility_ZP_HIGH
-            props:
-              - a000007f
-              - 1689d35d
-              - 1689d23a
-            size: 3x1
-            textures:
-              - 258f0000
-              - '26370000'
-      _Documents\BSC_Readmes\RippleJet\_Census Repository___CHOOSE ONE --- SEE README!!!\RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot:
-        buildings:
-          6471f58b:
-            bulldoze: 9000
-            categories: rewards
-            cost: 15000
-            flamability: 38
-            garbage: 47
-            jobs:
-              $: 10
-              $$: 70
-              $$$: 5
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 400
-            menu: Rewards
-            model: 5ad0e817-5465811a-00030000
-            name: Census Repository Facility V3
-            pollution: 3
-            pollutionRadius: 3
-            power: 84
-            rating: 10
-            ratingRadius: 256
-            relief:
-              co$$: 10000
-              co$$$: 10000
-              id: 10000
-              iht: 10000
-              im: 10000
-              r$: 10000
-              r$$: 10000
-              r$$$: 10000
-            submenu: Landmarks/Government,Rewards
-            water: 84
-            waterPollution: 3
-            waterPollutionRadius: 4
-        lots:
-          6471f58b:
-            building: 6471f58b
-            name: RW_3x1_Census Repository Facility_ZP_LOW
-            props:
-              - a000007f
-              - 1689d35d
-              - 1689d23a
-            size: 3x1
-            textures:
-              - 258f0000
-              - '26370000'
-      _Documents\BSC_Readmes\RippleJet\_Census Repository___CHOOSE ONE --- SEE README!!!\RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot:
-        buildings:
-          6471f58b:
-            bulldoze: 9000
-            categories: rewards
-            cost: 15000
-            flamability: 38
-            garbage: 47
-            jobs:
-              $: 10
-              $$: 70
-              $$$: 5
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 400
-            menu: Rewards
-            model: 5ad0e817-5465811a-00030000
-            name: Census Repository Facility V3
-            pollution: 3
-            pollutionRadius: 3
-            power: 84
-            rating: 10
-            ratingRadius: 256
-            relief:
-              co$$: 10000
-              co$$$: 10000
-              id: 10000
-              iht: 10000
-              im: 10000
-              r$: 10000
-              r$$: 10000
-              r$$$: 10000
-            submenu: Landmarks/Government,Rewards
-            water: 84
-            waterPollution: 3
-            waterPollutionRadius: 4
-        lots:
-          6471f58b:
-            building: 6471f58b
-            name: RW_3x1_Census Repository Facility_ZP_MEDIUM
-            props:
-              - a000007f
-              - 1689d35d
-              - 1689d23a
-            size: 3x1
-            textures:
-              - 258f0000
-              - '26370000'
-      _Documents\BSC_Readmes\RippleJet\_Census Repository___CHOOSE ONE --- SEE README!!!\RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot:
-        buildings:
-          6471f58b:
-            bulldoze: 9000
-            categories: rewards
-            cost: 15000
-            flamability: 38
-            garbage: 47
-            jobs:
-              $: 10
-              $$: 70
-              $$$: 5
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 400
-            menu: Rewards
-            model: 5ad0e817-5465811a-00030000
-            name: Census Repository Facility V3
-            pollution: 3
-            pollutionRadius: 3
-            power: 84
-            rating: 10
-            ratingRadius: 256
-            relief:
-              co$$: 10000
-              co$$$: 10000
-              id: 10000
-              iht: 10000
-              im: 10000
-              r$: 10000
-              r$$: 10000
-              r$$$: 10000
-            submenu: Landmarks/Government,Rewards
-            water: 84
-            waterPollution: 3
-            waterPollutionRadius: 4
-        lots:
-          6471f58b:
-            building: 6471f58b
-            name: RW_3x1_Census Repository Facility_ZP_ULTRA
-            props:
-              - a000007f
-              - 1689d35d
-              - 1689d23a
-            size: 3x1
-            textures:
-              - 258f0000
-              - '26370000'
-      _Documents\BSC_Readmes\RippleJet\_Census Repository___CHOOSE ONE --- SEE README!!!\RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot:
-        buildings:
-          6471f58b:
-            bulldoze: 9000
-            categories: rewards
-            cost: 15000
-            flamability: 38
-            garbage: 47
-            jobs:
-              $: 10
-              $$: 70
-              $$$: 5
-            landmark: 40
-            landmarkRadius: 20
-            maintenance: 400
-            menu: Rewards
-            model: 5ad0e817-5465811a-00030000
-            name: Census Repository Facility V3
-            pollution: 3
-            pollutionRadius: 3
-            power: 84
-            rating: 10
-            ratingRadius: 256
-            relief:
-              co$$: 10000
-              co$$$: 10000
-              id: 10000
-              iht: 10000
-              im: 10000
-              r$: 10000
-              r$$: 10000
-              r$$$: 10000
-            submenu: Landmarks/Government,Rewards
-            water: 84
-            waterPollution: 3
-            waterPollutionRadius: 4
-        lots:
-          6471f58b:
-            building: 6471f58b
-            name: RW_3x1_Census Repository Facility_Z_CLASSIC
-            props:
-              - a000007f
-              - 1689d35d
-              - 1689d23a
-            size: 3x1
-            textures:
-              - 258f0000
-              - '26370000'
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>BSC Census Repository Building by RippleJet.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
     downloads: 1157
@@ -818,11 +425,15 @@ assets:
     meta:
       timestamp: 2024-12-02T12:44:08.441Z
       version: 1
+    models:
+      BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat:
+        - 5465811a
+        - d17c864e
     name: BSC Census Repository Building by RippleJet
     props:
       BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat:
         16888cf8:
-          model: 5ad0e817-5465811a-00030000
+          model: 5465811a
           name: Census Repository Facility
         1689d23a:
           name: RJ - Census Repository Phone Booth
@@ -831,7 +442,7 @@ assets:
         8956a699:
           name: Gnome_CensusRepository
         b6888d35:
-          model: 5ad0e817-d17c864e-00030000
+          model: d17c864e
           name: Census Repository Vault
     sha256: 7b58f1e39ef3c5a3f72f8a4de11ebd75761c63c3c6003db7dd34a7343dbbff31
     size: 2060961

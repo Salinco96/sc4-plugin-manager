@@ -3,6 +3,7 @@ import { isArray, isNumber, isString, toHex } from "@salinco/nice-utils"
 import { TGI } from "@common/dbpf"
 import type { ExemplarPropertyID } from "@common/exemplars"
 
+import { bitMask } from "src/scripts/dbpf/dbpf"
 import type { Exemplar } from "./types"
 
 export function get(exemplar: Exemplar, id: ExemplarPropertyID, index = 0): number | undefined {
@@ -75,7 +76,7 @@ export function getString(exemplar: Exemplar, id: ExemplarPropertyID): string | 
 }
 
 export function getBaseTextureId(instanceId: number): string {
-  return (instanceId & 0x0000f000) > 0x00003000 // Ignore wealth/rotation
+  return bitMask(instanceId, 0x0000f000) > 0x00003000 // Ignore wealth/rotation
     ? `${toHex(instanceId, 8).slice(0, -3)}000`
     : `${toHex(instanceId, 8).slice(0, -4)}0000`
 }

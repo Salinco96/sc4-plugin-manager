@@ -3985,37 +3985,13 @@ assets:
           flamability: 10
           maintenance: 50
           menu: Power
-          model: 5ad0e817-badb57f1-1f450000
+          model: badb57f1-1f45
           name: Up26x8_WindPower_1F45
           powerProduction: 100000
           submenu: Power/Clean
     categories:
       - power
     category: 107-utilities
-    contents:
-      Up2x2_WindBlaster_cc060d0d.SC4Lot:
-        buildings:
-          cc060d0d:
-            bulldoze: 20
-            categories: power
-            cost: 500
-            flamability: 10
-            maintenance: 50
-            menu: Power
-            model: 5ad0e817-badb57f1-1f450000
-            name: Up26x8_WindPower_1F45
-            powerProduction: 100000
-            submenu: Power/Clean
-        lots:
-          cc060d0d:
-            building: cc060d0d
-            name: Up2x2_WindBlaster
-            props:
-              - ea9c4a1a
-              - 0c07417f
-            size: 2x2
-            textures:
-              - 25d60000
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This is the windmill I use when I do not want to worry about power requirements in a city. Puts out 100,000 power.</p>\n<p>\_</p>\n<p>\nAll values can be edited, so feel free to balance it how you wish, you can also tweak the props, as they don't line up at every angle <img src=\"https://community.simtropolis.com/assets/emoticons/Sad.gif\" alt=\":(\" srcset=\"https://community.simtropolis.com/assets/emoticons/Sad@2x.gif 2x\" width=\"30\" height=\"30\" ></p>\n<p>\_</p>\n<p>\nUpdate: Just made sure it was marked as Rush Hour compatible.</p>\n\n\t\t\t\t\t\t</body>"
     file: WindBlaster.zip

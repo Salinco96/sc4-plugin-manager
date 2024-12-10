@@ -4,6 +4,7 @@ import { ExemplarPropertyID } from "@common/exemplars"
 import type { PropData } from "@node/data/props"
 
 import type { FamilyID } from "@common/families"
+import { getModelId } from "src/scripts/dbpf/dbpf"
 import type { Exemplar } from "./types"
 import { get, getString, getTGI } from "./utils"
 
@@ -25,7 +26,7 @@ export function getPropData(exemplar: Exemplar): PropData {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = model
+    data.model = getModelId(model)
   }
 
   return data

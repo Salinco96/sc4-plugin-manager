@@ -97,7 +97,8 @@ const dbPackagesDir = path.join(dbDir, "packages")
 
 runIndexer({
   include: {
-    authors: ["buggi", "cococity", "memo", "null-45", "simmaster07", "toroca"],
+    authors: ["buggi", "cococity", /* "jasoncw", */ "memo", "null-45", "simmaster07", "toroca"],
+    date: new Date("2016-01-01"),
     entries: [
       "simtropolis/13318",
       "simtropolis/15758",
@@ -112,8 +113,12 @@ runIndexer({
     ],
   },
   migrate: {
-    entries() {
-      // Nothing
+    entries(entry) {
+      if (entry.variants) {
+        forEach(entry.variants, variant => {
+          // Nothing
+        })
+      }
     },
   },
   refetchIntervalHours: 20,
@@ -437,8 +442,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   const indexerMaxisConfig = await loadConfig<ContentsData>(dataAssetsDir, "maxis")
   let maxisData = indexerMaxisConfig?.data
   if (!maxisData) {
-    console.debug("Analyzing SimCity_1.dat...")
-
     const { categories, features, ...data } = await analyzeSC4Files(
       gameDir,
       // Only SimCity_1.dat contains relevant data
@@ -455,7 +458,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   if (!dbMaxisConfig?.data) {
     console.debug("Writing Maxis contents...")
 
-    // remove some unnecessary fields
+    // Remove some unnecessary fields
     const data: ContentsData = {
       buildingFamilies: maxisData.buildingFamilies ?? {},
       buildings: mapValues(maxisData.buildings ?? {}, buildings =>
@@ -719,8 +722,13 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
       return true
     }
 
+    if (entry.lastModified < options.include.date) {
+      return false
+    }
+
     if (entry.authors) {
-      if (containsAny(options.include.authors, mapDefined(entry.authors, getAuthorId))) {
+      const authors = entry.authors.map(author => getAuthorId(author) ?? author.toLowerCase())
+      if (containsAny(options.include.authors, authors)) {
         return true
       }
     }
@@ -729,7 +737,8 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
   }
 
   function getDefaultPackageId(entry: IndexerEntry, entryId: EntryID): PackageID {
-    const authorId = getAuthorId(entry.authors?.at(0) ?? getSourceId(entryId))
+    const authorName = entry.authors?.at(0) ?? getSourceId(entryId)
+    const authorId = getAuthorId(authorName) ?? authorName.toLowerCase()
     return `${authorId}/${entry.assetId.split("/").at(-1)?.replace(/^\d+-/, "")}` as PackageID
   }
 
@@ -1130,8 +1139,10 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
     variantEntry.features = data.features.length ? data.features : undefined
     variantEntry.lots = data.lots
     variantEntry.mmps = data.mmps
+    variantEntry.models = data.models
     variantEntry.propFamilies = data.propFamilies
     variantEntry.props = data.props
+    variantEntry.textures = data.textures
 
     return true
   }

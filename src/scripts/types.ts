@@ -11,6 +11,7 @@ import type { SC4FileData } from "./dbpf/dbpf"
 export interface IndexerOptions {
   include: {
     authors: string[]
+    date: Date
     entries: string[]
   }
   migrate?: {

@@ -92,343 +92,393 @@ assets:
     mmps:
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_BlueBonnets-B_1020.dat:
         0dde1020:
-          model: 5ad0e817-5539c4c8-00030000
+          model: 5539c4c8
           name: ALN_BlueBonnets01
           stages:
             - id: 0dde1021
-              model: 5ad0e817-5539c5b6-00030000
+              model: 5539c5b6
               name: ALN_BlueBonnets02
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_BlueBonnets.dat:
         4b1ee706:
-          model: 5ad0e817-f3f73a1c-00030000
+          model: f3f73a1c
           name: ALN_BlueBonnets01
           stages:
             - id: 4b1ee707
-              model: 5ad0e817-73f739cd-00030000
+              model: 73f739cd
               name: ALN_BlueBonnets02
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Cat Tails.dat:
         21bdbbb1:
-          model: 5ad0e817-54276ae9-00030000
+          model: 54276ae9
           name: ALN_Cattails01
           stages:
             - id: 21bdbbb2
-              model: 5ad0e817-f4276a9d-00030000
+              model: f4276a9d
               name: ALN_Cattails02
             - id: 21bdbbb3
-              model: 5ad0e817-34276502-00030000
+              model: '34276502'
               name: ALN_Cattails03
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Grass_green.dat:
         4aa33906:
-          model: 5ad0e817-9427bcf1-00030000
+          model: 9427bcf1
           name: ALN_GrassGreen01
           stages:
             - id: 4aa33907
-              model: 5ad0e817-7535120f-00030000
+              model: 7535120f
               name: ALN_GrassGreen02
             - id: 4aa33908
-              model: 5ad0e817-d53473d0-00030000
+              model: d53473d0
               name: ALN_GrassGreen03
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Grasses_1060.dat:
         0dde1060:
-          model: 5ad0e817-35672e05-00030000
+          model: '35672e05'
           name: ALN_RyeGrass 01
         0dde1062:
-          model: 5ad0e817-b56906ee-00030000
+          model: b56906ee
           name: ALN_RyeGrass 02
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_HayBales_1080.dat:
         0dde1080:
-          model: 5ad0e817-556f01af-00030000
+          model: 556f01af
           name: ALN_Hay Bale 01
           stages:
             - id: 0dde1081
-              model: 5ad0e817-556f0be3-00030000
+              model: 556f0be3
               name: ALN_Hay Bale 02
             - id: 0dde1082
-              model: 5ad0e817-f56f0bf5-00030000
+              model: f56f0bf5
               name: ALN_Hay Bale 03
             - id: 0dde1083
-              model: 5ad0e817-556f0be3-00030000
+              model: 556f0be3
               name: ALN_Hay Bale 04
             - id: 0dde1084
-              model: 5ad0e817-556f01af-00030000
+              model: 556f01af
               name: ALN_Hay Bale 05
             - id: 0dde1085
-              model: 5ad0e817-f56f0bf5-00030000
+              model: f56f0bf5
               name: ALN_Hay Bale 06
             - id: 0dde1086
-              model: 5ad0e817-f56f0bf5-00030000
+              model: f56f0bf5
               name: ALN_Hay Bale 07
             - id: 0dde1087
-              model: 5ad0e817-556f01af-00030000
+              model: 556f01af
               name: ALN_Hay Bale 08
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Johnson Grass_1030.dat:
         0dde1030:
-          model: 5ad0e817-3545d7e1-00030000
+          model: 3545d7e1
           name: ALN_JohnsonGrass01
           stages:
             - id: 0dde1031
-              model: 5ad0e817-9545d901-00030000
+              model: 9545d901
               name: ALN_Johnson Grass 02
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Lillypads.dat:
         93cd88fb:
-          model: 5ad0e817-f421865f-00030000
+          model: f421865f
           name: ALN_LillyPads01
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Marsh.dat:
         0dde0202:
-          model: 5ad0e817-f3fcbbc1-00030000
+          model: f3fcbbc1
           name: ALN_Marsh 01
           stages:
             - id: 0dde0203
-              model: 5ad0e817-f3fcbbc1-00030000
+              model: f3fcbbc1
               name: ALN_Marsh
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Medium Scrub Brush.dat:
         0dde104a:
-          model: 5ad0e817-53eead94-00030000
+          model: 53eead94
           name: Medium Scrub Brush 1
           stages:
             - id: 0dde104b
-              model: 5ad0e817-13eefe52-00030000
+              model: 13eefe52
               name: Medium Scrub Brush 2
             - id: 0dde104c
-              model: 5ad0e817-53ef0173-00030000
+              model: 53ef0173
               name: Medium Scrub Brush 3
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Pink Wild Flowers-B_1010.dat:
         0dde1010:
-          model: 5ad0e817-f539bf1b-00030000
+          model: f539bf1b
           name: Aln_White Wild Flowers
           stages:
             - id: 0dde1011
-              model: 5ad0e817-3539bea7-00030000
+              model: 3539bea7
               name: ALN_White Wild Flowers 2
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Reed Grass_1038.dat:
         0dde1038:
-          model: 5ad0e817-7545e825-00030000
+          model: '7545e825'
           name: ALN_Reed Grass 01
           stages:
             - id: 0dde1039
-              model: 5ad0e817-f546b2cb-00030000
+              model: f546b2cb
               name: ALN_Reed Grass 02
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Straws_1070.dat:
         0dde1070:
-          model: 5ad0e817-d5683847-00030000
+          model: d5683847
           name: ALN_Straw 01
           stages:
             - id: 0dde1071
-              model: 5ad0e817-556923f0-00030000
+              model: 556923f0
               name: ALN_Straw 01
         0dde1072:
-          model: 5ad0e817-356948f9-00030000
+          model: 356948f9
           name: ALN_Straw Light 01
           stages:
             - id: 0dde1073
-              model: 5ad0e817-95694911-00030000
+              model: '95694911'
               name: ALN_Straw Light 02
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Stumps.dat:
         0b7946aa:
-          model: 5ad0e817-f42174c8-00030000
+          model: f42174c8
           name: ALN_Stumps01
           stages:
             - id: 0b7946ab
-              model: 5ad0e817-b4217aaf-00030000
+              model: b4217aaf
               name: ALN_Stumps02
             - id: 0b7946ac
-              model: 5ad0e817-d4217ba7-00030000
+              model: d4217ba7
               name: ALN_Stumps03
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_WeedsA_1050.dat:
         0dde1050:
-          model: 5ad0e817-7566f798-00030000
+          model: 7566f798
           name: ALN_WeedA01
           stages:
             - id: 0dde1051
-              model: 5ad0e817-b566f7bf-00030000
+              model: b566f7bf
               name: ALN_Reed Grass 02
             - id: 0dde1052
-              model: 5ad0e817-b566f7d8-00030000
+              model: b566f7d8
               name: ALN_Reed Grass 02
             - id: 0dde1053
-              model: 5ad0e817-7566f7f2-00030000
+              model: 7566f7f2
               name: ALN_Reed Grass 02
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_WeedsB_1058.dat:
         0dde1058:
-          model: 5ad0e817-35671b3c-00030000
+          model: 35671b3c
           name: ALN_WeedB01
           stages:
             - id: 0dde1059
-              model: 5ad0e817-556725b7-00030000
+              model: 556725b7
               name: ALN_Reed Grass 02
             - id: 0dde105a
-              model: 5ad0e817-75672091-00030000
+              model: '75672091'
               name: ALN_Reed Grass 02
             - id: 0dde105b
-              model: 5ad0e817-356720d0-00030000
+              model: 356720d0
               name: ALN_Reed Grass 02
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_White Wild Flowers.dat:
         0dde113d:
-          model: 5ad0e817-53e6dde7-00030000
+          model: 53e6dde7
           name: Aln_White Wild Flowers
           stages:
             - id: 0dde113e
-              model: 5ad0e817-53e6deb6-00030000
+              model: 53e6deb6
               name: ALN_White Wild Flowers 2
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Yellow Wild Flowers-B_1018.dat:
         0dde1018:
-          model: 5ad0e817-f539bd73-00030000
+          model: f539bd73
           name: Aln_White Wild Flowers
           stages:
             - id: 0dde1019
-              model: 5ad0e817-3539be0c-00030000
+              model: 3539be0c
               name: ALN_White Wild Flowers 2
       BSC/ChrisAdams3997/Rural Renuval Project/Pasture Flora/ALN_Yellow Wild Flowers.dat:
         0dde112d:
-          model: 5ad0e817-13e6e0d8-00030000
+          model: 13e6e0d8
           name: ALN_Yellow Wild Flowers 1
           stages:
             - id: 0dde112e
-              model: 5ad0e817-f3e6e17e-00030000
+              model: f3e6e17e
               name: ALN_Yellow Wild Flowers 2
+    models:
+      BSC/BSCProps/ALN_Pasture Flora.dat:
+        - f3f73a1c
+        - 73f739cd
+        - 5539c4c8
+        - 5539c5b6
+        - 54276ae9
+        - f4276a9d
+        - '34276502'
+        - 9427bcf1
+        - 7535120f
+        - d53473d0
+        - 3545d7e1
+        - 9545d901
+        - f421865f
+        - 93fd6467
+        - f3fcbbc1
+        - 53eead94
+        - 13eefe52
+        - 53ef0173
+        - f539bf1b
+        - 3539bea7
+        - '7545e825'
+        - f546b2cb
+        - f42174c8
+        - b4217aaf
+        - d4217ba7
+        - 53e6dde7
+        - 53e6deb6
+        - 13e6e0d8
+        - f3e6e17e
+        - f539bd73
+        - 3539be0c
+        - 556f01af
+        - 556f0be3
+        - f56f0bf5
+        - '35672e05'
+        - b56906ee
+        - 356948f9
+        - '95694911'
+        - d5683847
+        - 556923f0
+        - 7566f798
+        - b566f7bf
+        - b566f7d8
+        - 7566f7f2
+        - 35671b3c
+        - 556725b7
+        - '75672091'
+        - 356720d0
     name: BSC ALN RRP Pasture Flora
     props:
       BSC/BSCProps/ALN_Pasture Flora.dat:
         16cd2ce1:
-          model: 5ad0e817-5539c5b6-00030000
+          model: 5539c5b6
           name: ALN_Blue Bonnets 2B
         16cd2cea:
-          model: 5ad0e817-54276ae9-00030000
+          model: 54276ae9
           name: ALN_Cat Tails 01
         16cd2cf4:
-          model: 5ad0e817-34276502-00030000
+          model: '34276502'
           name: ALN_Cat Tails 03
         16cd3776:
-          model: 5ad0e817-556725b7-00030000
+          model: 556725b7
           name: ALN_WeedB02
         16cd378b:
-          model: 5ad0e817-356720d0-00030000
+          model: 356720d0
           name: ALN_WeedB04
         36cd2d3d:
-          model: 5ad0e817-93fd6467-00030000
+          model: 93fd6467
           name: ALN_Ditch Prototype 01
         36cd2d9c:
-          model: 5ad0e817-53e6deb6-00030000
+          model: 53e6deb6
           name: ALN_White Flowers 2
         36cd3758:
-          model: 5ad0e817-7566f7f2-00030000
+          model: 7566f7f2
           name: ALN_WeedA04
         56cd2d21:
-          model: 5ad0e817-7535120f-00030000
+          model: 7535120f
           name: ALN_Green Grass 02
         56cd2d2c:
-          model: 5ad0e817-3545d7e1-00030000
+          model: 3545d7e1
           name: ALN_JohnsonGrass 01
         56cd2d51:
-          model: 5ad0e817-f3fcbbc1-00030000
+          model: f3fcbbc1
           name: ALN_Ditch Prototype 02
         56cd2d76:
-          model: 5ad0e817-3539bea7-00030000
+          model: 3539bea7
           name: ALN_Pink Flowers B 2
         56cd2d88:
-          model: 5ad0e817-f42174c8-00030000
+          model: f42174c8
           name: ALN_Stump01
         56cd2da9:
-          model: 5ad0e817-f3e6e17e-00030000
+          model: f3e6e17e
           name: ALN_Yellow Flowers 2
         56cd366f:
-          model: 5ad0e817-556f0be3-00030000
+          model: 556f0be3
           name: ALN_Haybale2
         56cd36a9:
-          model: 5ad0e817-35672e05-00030000
+          model: '35672e05'
           name: ALN_RyeGrassGreen
         56cd3710:
-          model: 5ad0e817-d5683847-00030000
+          model: d5683847
           name: ALN_Straw1
         76cd2cd7:
-          model: 5ad0e817-5539c4c8-00030000
+          model: 5539c4c8
           name: ALN_Blue Bonnets 1B
         76cd2d1d:
-          model: 5ad0e817-9427bcf1-00030000
+          model: 9427bcf1
           name: ALN_Green Grass 01
         76cd2d66:
-          model: 5ad0e817-13eefe52-00030000
+          model: 13eefe52
           name: ALN_MedScrub 2
         76cd2d6c:
-          model: 5ad0e817-53ef0173-00030000
+          model: 53ef0173
           name: ALN_MedScrub 3
         76cd2d7b:
-          model: 5ad0e817-7545e825-00030000
+          model: '7545e825'
           name: ALN_Reed Grass 01
         76cd2da5:
-          model: 5ad0e817-13e6e0d8-00030000
+          model: 13e6e0d8
           name: ALN_Yellow Flowers 1
         76cd3736:
-          model: 5ad0e817-7566f798-00030000
+          model: 7566f798
           name: ALN_WeedA01
         76cd374f:
-          model: 5ad0e817-b566f7d8-00030000
+          model: b566f7d8
           name: ALN_WeedA03
         96cd2cb1:
-          model: 5ad0e817-f3f73a1c-00030000
+          model: f3f73a1c
           name: ALN_Blue Bonnets 1
         96cd2cee:
-          model: 5ad0e817-f4276a9d-00030000
+          model: f4276a9d
           name: ALN_Cat Tails 02
         96cd2d7f:
-          model: 5ad0e817-f546b2cb-00030000
+          model: f546b2cb
           name: ALN_Reed Grass 02
         96cd2dbb:
-          model: 5ad0e817-3539be0c-00030000
+          model: 3539be0c
           name: ALN_Yellow Flowers B 2
         96cd36fb:
-          model: 5ad0e817-356948f9-00030000
+          model: 356948f9
           name: ALN_Straw_Light1
         b6cd2cb7:
-          model: 5ad0e817-73f739cd-00030000
+          model: 73f739cd
           name: ALN_Blue Bonnets 2
         b6cd2d26:
-          model: 5ad0e817-d53473d0-00030000
+          model: d53473d0
           name: ALN_Green Grass 03
         b6cd2d37:
-          model: 5ad0e817-f421865f-00030000
+          model: f421865f
           name: ALN_Lillypads01
         b6cd2d62:
-          model: 5ad0e817-53eead94-00030000
+          model: 53eead94
           name: ALN_MedScrub 1
         b6cd2d8d:
-          model: 5ad0e817-b4217aaf-00030000
+          model: b4217aaf
           name: ALN_Stump02
         b6cd2d91:
-          model: 5ad0e817-d4217ba7-00030000
+          model: d4217ba7
           name: ALN_Stump03
         b6cd2d98:
-          model: 5ad0e817-53e6dde7-00030000
+          model: 53e6dde7
           name: ALN_White Flowers 1
         b6cd2db4:
-          model: 5ad0e817-f539bd73-00030000
+          model: f539bd73
           name: ALN_Yellow Flowers B 1
         b6cd3663:
-          model: 5ad0e817-556f01af-00030000
+          model: 556f01af
           name: ALN_Haybale1
         b6cd367e:
-          model: 5ad0e817-f56f0bf5-00030000
+          model: f56f0bf5
           name: ALN_Haybale3
         b6cd36e2:
-          model: 5ad0e817-b56906ee-00030000
+          model: b56906ee
           name: ALN_RyeGrassGreen
         b6cd371f:
-          model: 5ad0e817-556923f0-00030000
+          model: 556923f0
           name: ALN_Straw2
         b6cd3743:
-          model: 5ad0e817-b566f7bf-00030000
+          model: b566f7bf
           name: ALN_WeedA02
         b6cd377f:
-          model: 5ad0e817-75672091-00030000
+          model: '75672091'
           name: ALN_WeedB03
         d6cd2d33:
-          model: 5ad0e817-9545d901-00030000
+          model: 9545d901
           name: ALN_JohnsonGrass 02
         d6cd2d72:
-          model: 5ad0e817-f539bf1b-00030000
+          model: f539bf1b
           name: ALN_Pink Flowers B 1
         d6cd3769:
-          model: 5ad0e817-35671b3c-00030000
+          model: 35671b3c
           name: ALN_WeedB01
     sha256: 28f0d1fae1ae35deff0a320cc2e517687a7da0fb2048a97fde447828dc2c3186
     size: 1488545
@@ -764,20 +814,20 @@ assets:
           name: Grfe_palm_trees
       BSC/girafe/Abies grandis v1/Grfe_abies_grandis_evergreen.dat:
         af441000:
-          model: 5ad0e817-792662b7-00120000
+          model: 792662b7-0012
           name: Grfe_abies_grandis_summer_A
           stages:
             - id: af441001
-              model: 5ad0e817-19294c72-00120000
+              model: 19294c72-0012
               name: Grfe_abies_grandis_summer_B
             - id: af441002
-              model: 5ad0e817-99284eb1-00120000
+              model: 99284eb1-0012
               name: Grfe_abies_grandis_summer_C
             - id: af441003
-              model: 5ad0e817-d928538d-00120000
+              model: d928538d-0012
               name: Grfe_abies_grandis_summer_D
             - id: af441004
-              model: 5ad0e817-99291063-00120000
+              model: 99291063-0012
               name: Grfe_abies_grandis_summer_E
       BSC/girafe/Abies grandis v1/Grfe_abies_grandis_seasonal.dat:
         33aa0010:
@@ -793,37 +843,37 @@ assets:
               name: Grfe_abies_grandis_seasonal_E
       BSC/girafe/Abies grandis v1/Grfe_abies_grandis_winter.dat:
         af442000:
-          model: 5ad0e817-792662b7-00130000
+          model: 792662b7-0013
           name: Grfe_abies_grandis_winter_A
           stages:
             - id: af442001
-              model: 5ad0e817-19294c72-00130000
+              model: 19294c72-0013
               name: Grfe_abies_grandis_winter_B
             - id: af442002
-              model: 5ad0e817-99284eb1-00130000
+              model: 99284eb1-0013
               name: Grfe_abies_grandis_winter_C
             - id: af442003
-              model: 5ad0e817-d928538d-00130000
+              model: d928538d-0013
               name: Grfe_abies_grandis_winter_D
             - id: af442004
-              model: 5ad0e817-99291063-00130000
+              model: 99291063-0013
               name: Grfe_abies_grandis_winter_E
       BSC/girafe/Alders/Grfe_alders_evergreen.dat:
         af447720:
-          model: 5ad0e817-6c2754ff-00030000
+          model: 6c2754ff
           name: Grfe_alder_evergreen_A
           stages:
             - id: af447721
-              model: 5ad0e817-0c275273-00030000
+              model: 0c275273
               name: Grfe_alder_evergreen_B
             - id: af447722
-              model: 5ad0e817-2c274fac-00030000
+              model: 2c274fac
               name: Grfe_alder_evergreen_C
             - id: af447723
-              model: 5ad0e817-ec2744f7-00030000
+              model: ec2744f7
               name: Grfe_alder_evergreen_D
             - id: af447724
-              model: 5ad0e817-8c27494e-00030000
+              model: 8c27494e
               name: Grfe_alder_evergreen_E
       BSC/girafe/Alders/Grfe_alders_seasonal.dat:
         af447730:
@@ -851,37 +901,37 @@ assets:
               name: Grfe_ash_seasonal_E
       BSC/girafe/Ashes v2/Grfe_ashes_summer.dat:
         af448210:
-          model: 5ad0e817-5cdfd2f6-00030000
+          model: 5cdfd2f6
           name: Grfe_ash_summer_A
           stages:
             - id: af448211
-              model: 5ad0e817-7cdfcf8e-00030000
+              model: 7cdfcf8e
               name: Grfe_ash_summer_B
             - id: af448212
-              model: 5ad0e817-dd064901-00030000
+              model: dd064901
               name: Grfe_ash_summer_C
             - id: af448213
-              model: 5ad0e817-fd06549f-00030000
+              model: fd06549f
               name: Grfe_ash_summer_D
             - id: af448214
-              model: 5ad0e817-9d0701bd-00030000
+              model: 9d0701bd
               name: Grfe_ash_summer_E
       BSC/girafe/Beeches v3/Grfe_beeches_evergreen.dat:
         af448610:
-          model: 5ad0e817-a2442dd1-00030000
+          model: a2442dd1
           name: Grfe_beech_evergreen_A
           stages:
             - id: af448611
-              model: 5ad0e817-c2442c8f-00030000
+              model: c2442c8f
               name: Grfe_beech_evergreen_B
             - id: af448612
-              model: 5ad0e817-22442bc8-00030000
+              model: 22442bc8
               name: Grfe_beech_evergreen_C
             - id: af448613
-              model: 5ad0e817-2244289d-00030000
+              model: 2244289d
               name: Grfe_beech_evergreen_D
             - id: af448614
-              model: 5ad0e817-e2442587-00030000
+              model: e2442587
               name: Grfe_beech_evergreen_E
       BSC/girafe/Beeches v3/Grfe_beeches_seasonal.dat:
         af448620:
@@ -905,14 +955,14 @@ assets:
               name: Grfe_berry_seasonal_C
       BSC/girafe/Berries/Grfe_Berries_summer.dat:
         af448360:
-          model: 5ad0e817-0236ea5b-00030000
+          model: 0236ea5b
           name: Grfe_berry_summer_A
           stages:
             - id: af448361
-              model: 5ad0e817-6236e6e8-00030000
+              model: 6236e6e8
               name: Grfe_berry_summer_B
             - id: af448362
-              model: 5ad0e817-c236e4f5-00030000
+              model: c236e4f5
               name: Grfe_berry_summer_C
       BSC/girafe/Birches v2/Grfe_birches_seasonal.dat:
         af448080:
@@ -928,20 +978,20 @@ assets:
               name: Grfe_birch_seasonal_E
       BSC/girafe/Birches v2/Grfe_birches_summer.dat:
         af448000:
-          model: 5ad0e817-3a97c44b-00030000
+          model: 3a97c44b
           name: Grfe_birch_summer_A
           stages:
             - id: af448001
-              model: 5ad0e817-9aca0401-00030000
+              model: 9aca0401
               name: Grfe_birch_summer_B
             - id: af448002
-              model: 5ad0e817-5a97c7c0-00030000
+              model: 5a97c7c0
               name: Grfe_birch_summer_C
             - id: af448003
-              model: 5ad0e817-1a9802f2-00030000
+              model: 1a9802f2
               name: Grfe_birch_summer_D
             - id: af448004
-              model: 5ad0e817-fa97d5e7-00030000
+              model: fa97d5e7
               name: Grfe_birch_summer_E
       BSC/girafe/Bushes v2/Grfe_bushes_seasonal.dat:
         af449145:
@@ -953,54 +1003,54 @@ assets:
               name: Grfe_bush_seasonal_C
       BSC/girafe/Bushes v2/Grfe_bushes_summer.dat:
         af449140:
-          model: 5ad0e817-db3d9fcc-00030000
+          model: db3d9fcc
           name: Grfe_bush_summer_A
           stages:
             - id: af449141
-              model: 5ad0e817-3b3d96ac-00030000
+              model: 3b3d96ac
               name: Grfe_bush_summer_B
             - id: af449142
-              model: 5ad0e817-9b3d9a2b-00030000
+              model: 9b3d9a2b
               name: Grfe_bush_summer_C
       BSC/girafe/Canary date palms/Grfe_Canary_date_palms_evergreen.dat:
         af448900:
-          model: 5ad0e817-853891d2-00030000
+          model: 853891d2
           name: Grfe_Canary_date_palm_evergreen_A
           stages:
             - id: af448901
-              model: 5ad0e817-e53894ee-00030000
+              model: e53894ee
               name: Grfe_Canary_date_palm_evergreen_B
             - id: af448902
-              model: 5ad0e817-e5389595-00030000
+              model: e5389595
               name: Grfe_Canary_date_palm_evergreen_C
             - id: af448903
-              model: 5ad0e817-c5389639-00030000
+              model: c5389639
               name: Grfe_Canary_date_palm_evergreen_D
             - id: af448904
-              model: 5ad0e817-253896d5-00030000
+              model: 253896d5
               name: Grfe_Canary_date_palm_evergreen_E
             - id: af448905
-              model: 5ad0e817-45389773-00030000
+              model: '45389773'
               name: Grfe_Canary_date_palm_evergreen_F
             - id: af448906
-              model: 5ad0e817-2538980f-00030000
+              model: 2538980f
               name: Grfe_Canary_date_palm_evergreen_F
             - id: af448907
-              model: 5ad0e817-65389873-00030000
+              model: '65389873'
               name: Grfe_Canary_date_palm_evergreen_F
             - id: af448908
-              model: 00000000-00000000-00000000
+              model: 00000000-0000
               name: Grfe_Canary_date_palm_ghost_piece
       BSC/girafe/Cattails v2.1/Grfe_cattails_evergreen.dat:
         af449110:
-          model: 5ad0e817-da7e9901-00030000
+          model: da7e9901
           name: Grfe_cattail_evergreen_A
           stages:
             - id: af449111
-              model: 5ad0e817-9a7e9b1a-00030000
+              model: 9a7e9b1a
               name: Grfe_cattail_evergreen_B
             - id: af449112
-              model: 5ad0e817-da7e9bb9-00030000
+              model: da7e9bb9
               name: Grfe_cattail_evergreen_C
       BSC/girafe/Cattails v2.1/Grfe_cattails_seasonal.dat:
         af449154:
@@ -1012,20 +1062,20 @@ assets:
               name: Grfe_cattail_seasonal_C
       BSC/girafe/Chestnuts/Grfe_chestnuts_evergreen.dat:
         af448670:
-          model: 5ad0e817-61f640cf-00030000
+          model: 61f640cf
           name: Grfe_chestnut_evergreen_A
           stages:
             - id: af448671
-              model: 5ad0e817-21f63fa5-00030000
+              model: 21f63fa5
               name: Grfe_chestnut_evergreen_B
             - id: af448672
-              model: 5ad0e817-61f63e84-00030000
+              model: 61f63e84
               name: Grfe_chestnut_evergreen_C
             - id: af448673
-              model: 5ad0e817-a1f63d21-00030000
+              model: a1f63d21
               name: Grfe_chestnut_evergreen_D
             - id: af448674
-              model: 5ad0e817-c1f63b46-00030000
+              model: c1f63b46
               name: Grfe_chestnut_evergreen_E
       BSC/girafe/Chestnuts/Grfe_chestnuts_seasonal.dat:
         af448680:
@@ -1053,37 +1103,37 @@ assets:
               name: Grfe_common_spruce_seasonal_E
       BSC/girafe/Common spruces/Grfe_common_spruces_summer.dat:
         af448440:
-          model: 5ad0e817-60bf2f78-00030000
+          model: 60bf2f78
           name: Grfe_common_spruce_summer_A
           stages:
             - id: af448441
-              model: 5ad0e817-00beba96-00030000
+              model: 00beba96
               name: Grfe_common_spruce_summer_B
             - id: af448442
-              model: 5ad0e817-e0bec1de-00030000
+              model: e0bec1de
               name: Grfe_common_spruce_summer_C
             - id: af448443
-              model: 5ad0e817-e0becc65-00030000
+              model: e0becc65
               name: Grfe_common_spruce_summer_D
             - id: af448444
-              model: 5ad0e817-c0bf16c9-00030000
+              model: c0bf16c9
               name: Grfe_common_spruce_summer_E
       BSC/girafe/Common spruces/Grfe_common_spruces_winter.dat:
         af448450:
-          model: 5ad0e817-e0c42105-00030000
+          model: e0c42105
           name: Grfe_common_spruce_winter_A
           stages:
             - id: af448451
-              model: 5ad0e817-c0c418dc-00030000
+              model: c0c418dc
               name: Grfe_common_spruce_winter_B
             - id: af448452
-              model: 5ad0e817-a0c4242b-00030000
+              model: a0c4242b
               name: Grfe_common_spruce_winter_C
             - id: af448453
-              model: 5ad0e817-40c43312-00030000
+              model: 40c43312
               name: Grfe_common_spruce_winter_D
             - id: af448454
-              model: 5ad0e817-40c44a60-00030000
+              model: 40c44a60
               name: Grfe_common_spruce_winter_E
       BSC/girafe/Conifers/Grfe_conifers_seasonal.dat:
         af448810:
@@ -1099,54 +1149,54 @@ assets:
               name: Grfe_conifer_seasonal_E
       BSC/girafe/Conifers/Grfe_conifers_summer.dat:
         af448840:
-          model: 5ad0e817-1b63fc39-00030000
+          model: 1b63fc39
           name: Grfe_conifer_summer_A
           stages:
             - id: af448841
-              model: 5ad0e817-1aa894a8-00030000
+              model: 1aa894a8
               name: Grfe_conifer_summer_B
             - id: af448842
-              model: 5ad0e817-9af94cfe-00030000
+              model: 9af94cfe
               name: Grfe_conifer_summer_C
             - id: af448843
-              model: 5ad0e817-faf95796-00030000
+              model: faf95796
               name: Grfe_conifer_summer_D
             - id: af448844
-              model: 5ad0e817-7b2071af-00030000
+              model: 7b2071af
               name: Grfe_conifer_summer_E
       BSC/girafe/Conifers/Grfe_conifers_winter.dat:
         af448820:
-          model: 5ad0e817-db723a0d-00030000
+          model: db723a0d
           name: Grfe_conifer_winter_A
           stages:
             - id: af448821
-              model: 5ad0e817-5b724045-00030000
+              model: 5b724045
               name: Grfe_conifer_winter_B
             - id: af448822
-              model: 5ad0e817-1b724c62-00030000
+              model: 1b724c62
               name: Grfe_conifer_winter_C
             - id: af448823
-              model: 5ad0e817-7b9a14cb-00030000
+              model: 7b9a14cb
               name: Grfe_conifer_winter_D
             - id: af448824
-              model: 5ad0e817-3b724fb1-00030000
+              model: 3b724fb1
               name: Grfe_conifer_winter_E
       BSC/girafe/Cypresses/Grfe_cypresses_evergreen.dat:
         af448530:
-          model: 5ad0e817-60af6a96-00030000
+          model: 60af6a96
           name: Grfe_cypress_evergreen_A
           stages:
             - id: af448531
-              model: 5ad0e817-60af6b71-00030000
+              model: 60af6b71
               name: Grfe_cypress_evergreen_B
             - id: af448532
-              model: 5ad0e817-80af6fb1-00030000
+              model: 80af6fb1
               name: Grfe_cypress_evergreen_C
             - id: af448533
-              model: 5ad0e817-c0af6841-00030000
+              model: c0af6841
               name: Grfe_cypress_evergreen_D
             - id: af448534
-              model: 5ad0e817-40af7137-00030000
+              model: 40af7137
               name: Grfe_cypress_evergreen_E
       BSC/girafe/Daisy v2/Grfe_daisy_seasonal.dat:
         af448570:
@@ -1156,28 +1206,28 @@ assets:
               name: Grfe_daisy_seasonal_B
       BSC/girafe/Daisy v2/Grfe_daisy_summer.dat:
         af448580:
-          model: 5ad0e817-23305483-00030000
+          model: '23305483'
           name: Grfe_daisy_summer_A
           stages:
             - id: af448581
-              model: 5ad0e817-43305503-00030000
+              model: '43305503'
               name: Grfe_daisy_summer_B
       BSC/girafe/Elms/Grfe_elm_evergreen.dat:
         af448740:
-          model: 5ad0e817-83d9e04c-00030000
+          model: 83d9e04c
           name: Grfe_elm_evergreen_A
           stages:
             - id: af448741
-              model: 5ad0e817-e3d9dd4e-00030000
+              model: e3d9dd4e
               name: Grfe_elm_evergreen_B
             - id: af448742
-              model: 5ad0e817-83d9db22-00030000
+              model: 83d9db22
               name: Grfe_elm_evergreen_C
             - id: af448743
-              model: 5ad0e817-23cfcc93-00030000
+              model: 23cfcc93
               name: Grfe_elm_evergreen_D
             - id: af448744
-              model: 5ad0e817-c3cfc753-00030000
+              model: c3cfc753
               name: Grfe_elm_evergreen_E
       BSC/girafe/Elms/Grfe_elm_seasonal.dat:
         af448750:
@@ -1199,28 +1249,28 @@ assets:
               name: Grfe_feather_grass_seasonal_B
       BSC/girafe/Feather grass/Grfe_feather_grass_summer.dat:
         af448630:
-          model: 5ad0e817-a0b1d5bf-00030000
+          model: a0b1d5bf
           name: Grfe_feather_grass_summer_A
           stages:
             - id: af448631
-              model: 5ad0e817-60b1d6ad-00030000
+              model: 60b1d6ad
               name: Grfe_feather_grass_summer_B
       BSC/girafe/Grand Firs (Abies Grandis v2)/Grfe_grand_firs_evergreen.dat:
         af481030:
-          model: 5ad0e817-2c5458b3-00030000
+          model: 2c5458b3
           name: Grfe_grand_firs_evergreen_A2
           stages:
             - id: af481031
-              model: 5ad0e817-4c546a20-00030000
+              model: 4c546a20
               name: Grfe_grand_firs_evergreen_B2
             - id: af481032
-              model: 5ad0e817-8b1d51ad-00030000
+              model: 8b1d51ad
               name: Grfe_grand_firs_evergreen_C2
             - id: af481033
-              model: 5ad0e817-eb1d5978-00030000
+              model: eb1d5978
               name: Grfe_grand_firs_evergreen_D2
             - id: af481034
-              model: 5ad0e817-cb1d6697-00030000
+              model: cb1d6697
               name: Grfe_grand_firs_evergreen_E2
       BSC/girafe/Grand Firs (Abies Grandis v2)/Grfe_grand_firs_seasonal.dat:
         af481040:
@@ -1236,37 +1286,37 @@ assets:
               name: Grfe_grand_firs_seasonal_E2
       BSC/girafe/Grand Firs (Abies Grandis v2)/Grfe_grand_firs_winter (Abies Grandis v1).dat:
         af442000:
-          model: 5ad0e817-792662b7-00130000
+          model: 792662b7-0013
           name: Grfe_abies_grandis_winter_A
           stages:
             - id: af442001
-              model: 5ad0e817-19294c72-00130000
+              model: 19294c72-0013
               name: Grfe_abies_grandis_winter_B
             - id: af442002
-              model: 5ad0e817-99284eb1-00130000
+              model: 99284eb1-0013
               name: Grfe_abies_grandis_winter_C
             - id: af442003
-              model: 5ad0e817-d928538d-00130000
+              model: d928538d-0013
               name: Grfe_abies_grandis_winter_D
             - id: af442004
-              model: 5ad0e817-99291063-00130000
+              model: 99291063-0013
               name: Grfe_abies_grandis_winter_E
       BSC/girafe/Honey locust/Grfe_honey_locust_evergreen.dat:
         af448690:
-          model: 5ad0e817-e20608a0-00030000
+          model: e20608a0
           name: Grfe_honey_locust_evergreen_A
           stages:
             - id: af448691
-              model: 5ad0e817-22060736-00030000
+              model: '22060736'
               name: Grfe_honey_locust_evergreen_B
             - id: af448692
-              model: 5ad0e817-e20605bc-00030000
+              model: e20605bc
               name: Grfe_honey_locust_evergreen_C
             - id: af448693
-              model: 5ad0e817-02060220-00030000
+              model: '02060220'
               name: Grfe_honey_locust_evergreen_D
             - id: af448694
-              model: 5ad0e817-82060a73-00030000
+              model: 82060a73
               name: Grfe_honey_locust_evergreen_E
       BSC/girafe/Honey locust/Grfe_honey_locust_seasonal.dat:
         af448700:
@@ -1306,37 +1356,37 @@ assets:
               name: Grfe_larch_seasonal_E
       BSC/girafe/Larches/Grfe_larches_summer.dat:
         af448380:
-          model: 5ad0e817-bb112acd-00030000
+          model: bb112acd
           name: Grfe_larch_summer_A
           stages:
             - id: af448381
-              model: 5ad0e817-7a63c29e-00030000
+              model: 7a63c29e
               name: Grfe_larch_summer_B
             - id: af448382
-              model: 5ad0e817-9b11c81d-00030000
+              model: 9b11c81d
               name: Grfe_larch_summer_C
             - id: af448383
-              model: 5ad0e817-9b131411-00030000
+              model: 9b131411
               name: Grfe_larch_summer_D
             - id: af448384
-              model: 5ad0e817-1bd1c258-00030000
+              model: 1bd1c258
               name: Grfe_larch_summer_E
       BSC/girafe/Lindens/Grfe_Lindens_evergreen.dat:
         af448300:
-          model: 5ad0e817-9dd7f9c4-00440000
+          model: 9dd7f9c4-0044
           name: Grfe_linden_summer_A
           stages:
             - id: af448301
-              model: 5ad0e817-9dd7f9c4-00430000
+              model: 9dd7f9c4-0043
               name: Grfe_linden_summer_B
             - id: af448302
-              model: 5ad0e817-9dd7f9c4-00420000
+              model: 9dd7f9c4-0042
               name: Grfe_linden_summer_C
             - id: af448303
-              model: 5ad0e817-9dd7f9c4-00400000
+              model: 9dd7f9c4-0040
               name: Grfe_linden_summer_D
             - id: af448304
-              model: 5ad0e817-9dd7f9c4-00410000
+              model: 9dd7f9c4-0041
               name: Grfe_linden_summer_E
       BSC/girafe/Lindens/Grfe_lindens_seasonal.dat:
         af448320:
@@ -1360,14 +1410,14 @@ assets:
               name: Grfe_lupin_seasonal_C
       BSC/girafe/Lupins/Grfe_lupins_summer.dat:
         af448340:
-          model: 5ad0e817-4145aec7-00030000
+          model: 4145aec7
           name: Grfe_lupin_summer_A
           stages:
             - id: af448341
-              model: 5ad0e817-0145ae00-00030000
+              model: 0145ae00
               name: Grfe_lupin_summer_B
             - id: af448342
-              model: 5ad0e817-a145acf1-00030000
+              model: a145acf1
               name: Grfe_lupin_summer_C
       BSC/girafe/Maples v2/Grfe_maples_seasonal.dat:
         af448200:
@@ -1395,20 +1445,20 @@ assets:
               name: Grfe_maple_seasonal_E
       BSC/girafe/Maples/Grfe_maples_summer.dat:
         af451000:
-          model: 5ad0e817-d9f00412-00130000
+          model: d9f00412-0013
           name: Grfe_maple_summer_A
           stages:
             - id: af451001
-              model: 5ad0e817-b9f008ba-00130000
+              model: b9f008ba-0013
               name: Grfe_maple_summer_B
             - id: af451002
-              model: 5ad0e817-19f00eaa-00130000
+              model: 19f00eaa-0013
               name: Grfe_maple_summer_C
             - id: af451003
-              model: 5ad0e817-f9effc6a-00130000
+              model: f9effc6a-0013
               name: Grfe_maple_summer_D
             - id: af451004
-              model: 5ad0e817-f9f01459-00130000
+              model: f9f01459-0013
               name: Grfe_maple_summer_E
       BSC/girafe/Narcissus/Grfe_Narcissus_seasonal.dat:
         af448500:
@@ -1418,11 +1468,11 @@ assets:
               name: Grfe_narcissus_seasonal_B
       BSC/girafe/Narcissus/Grfe_Narcissus_summer.dat:
         af448490:
-          model: 5ad0e817-c0c8160e-00030000
+          model: c0c8160e
           name: Grfe_narcissus_summer_A
           stages:
             - id: af448491
-              model: 5ad0e817-80c80fa9-00030000
+              model: 80c80fa9
               name: Grfe_narcissus_summer_B
       BSC/girafe/Norway maples v2/Grfe_norway_maple_seasonal.dat:
         af448040:
@@ -1436,17 +1486,17 @@ assets:
               name: Grfe_norway_maple_seasonal_D
       BSC/girafe/Norway maples v2/Grfe_norway_maples_summer.dat:
         af448030:
-          model: 5ad0e817-bc05058a-00030000
+          model: bc05058a
           name: Grfe_norway_maple_summer_A
           stages:
             - id: af448031
-              model: 5ad0e817-fc050819-00030000
+              model: fc050819
               name: Grfe_norway_maple_summer_B
             - id: af448032
-              model: 5ad0e817-dc050df1-00030000
+              model: dc050df1
               name: Grfe_norway_maple_summer_C
             - id: af448033
-              model: 5ad0e817-fc051cc8-00030000
+              model: fc051cc8
               name: Grfe_norway_maple_summer_D
       BSC/girafe/Oaks v2/Grfe_oaks_seasonal.dat:
         af440260:
@@ -1462,54 +1512,54 @@ assets:
               name: Grfe_oak_seasonal_E
       BSC/girafe/Oaks v2/Grfe_oaks_summer.dat:
         af440250:
-          model: 5ad0e817-7b1b5718-00030000
+          model: 7b1b5718
           name: Grfe_oak_summer_A
           stages:
             - id: af440251
-              model: 5ad0e817-7b1b4ffd-00030000
+              model: 7b1b4ffd
               name: Grfe_oak_summer_B
             - id: af440252
-              model: 5ad0e817-db1b4a6e-00030000
+              model: db1b4a6e
               name: Grfe_oak_summer_C
             - id: af440253
-              model: 5ad0e817-5b1b3a8d-00030000
+              model: 5b1b3a8d
               name: Grfe_oak_summer_D
             - id: af440254
-              model: 5ad0e817-fb1b31a0-00030000
+              model: fb1b31a0
               name: Grfe_oak_summer_E
       BSC/girafe/Parasol pines/Grfe_parasol_pines_summer.dat:
         af448070:
-          model: 5ad0e817-bd9da899-00030000
+          model: bd9da899
           name: Grfe_parasol_pine_summer_A
           stages:
             - id: af448071
-              model: 5ad0e817-bd9db347-00030000
+              model: bd9db347
               name: Grfe_parasol_pine_summer_B
             - id: af448072
-              model: 5ad0e817-3dc42c52-00030000
+              model: 3dc42c52
               name: Grfe_parasol_pine_summer_C
             - id: af448073
-              model: 5ad0e817-7dc4d498-00030000
+              model: 7dc4d498
               name: Grfe_parasol_pine_summer_D
             - id: af448074
-              model: 5ad0e817-3dc4e003-00030000
+              model: 3dc4e003
               name: Grfe_parasol_pine_summer_E
       BSC/girafe/Poplars/Grfe_poplars_evergreen.dat:
         af447700:
-          model: 5ad0e817-0790ce33-00030000
+          model: 0790ce33
           name: Grfe_poplar_evergreen_A
           stages:
             - id: af447701
-              model: 5ad0e817-4790d2f4-00030000
+              model: 4790d2f4
               name: Grfe_poplar_evergreen_B
             - id: af447702
-              model: 5ad0e817-6790e227-00030000
+              model: '6790e227'
               name: Grfe_poplar_evergreen_C
             - id: af447703
-              model: 5ad0e817-8790e69f-00030000
+              model: 8790e69f
               name: Grfe_poplar_evergreen_D
             - id: af447704
-              model: 5ad0e817-6790e985-00030000
+              model: '6790e985'
               name: Grfe_poplar_evergreen_E
       BSC/girafe/Poplars/Grfe_poplars_seasonal.dat:
         af447710:
@@ -1531,28 +1581,28 @@ assets:
               name: Grfe_poppies_seasonal_B
       BSC/girafe/Poppies/Grfe_Poppies_summer.dat:
         af448470:
-          model: 5ad0e817-a0c5aaa7-00030000
+          model: a0c5aaa7
           name: Grfe_poppies_summer_A
           stages:
             - id: af448471
-              model: 5ad0e817-20c5ac19-00030000
+              model: 20c5ac19
               name: Grfe_poppies_summer_B
       BSC/girafe/Rowan trees v3/Grfe_Rowan_trees_evergreen.dat:
         af448720:
-          model: 5ad0e817-22806260-00030000
+          model: '22806260'
           name: Grfe_rowan_tree_evergreen_A
           stages:
             - id: af448721
-              model: 5ad0e817-e27fccf8-00030000
+              model: e27fccf8
               name: Grfe_rowan_tree_evergreen_B
             - id: af448722
-              model: 5ad0e817-828063cd-00030000
+              model: 828063cd
               name: Grfe_rowan_tree_evergreen_C
             - id: af448723
-              model: 5ad0e817-628068ff-00030000
+              model: 628068ff
               name: Grfe_rowan_tree_evergreen_D
             - id: af448724
-              model: 5ad0e817-22806eb2-00030000
+              model: 22806eb2
               name: Grfe_rowan_tree_evergreen_E
       BSC/girafe/Rowan trees v3/Grfe_Rowan_trees_seasonal.dat:
         af448710:
@@ -1580,54 +1630,54 @@ assets:
               name: Grfe_serbian_spruces_seasonal_E
       BSC/girafe/Serbian Spruces v1/Grfe_serbian_spruces_summer.dat:
         af481000:
-          model: 5ad0e817-5a0e874f-00120000
+          model: 5a0e874f-0012
           name: Grfe_serbian_spruce_summer_A
           stages:
             - id: af481001
-              model: 5ad0e817-ba0e8ba5-00120000
+              model: ba0e8ba5-0012
               name: Grfe_serbian_spruce_summer_B
             - id: af481002
-              model: 5ad0e817-9a0e9076-00120000
+              model: 9a0e9076-0012
               name: Grfe_serbian_spruce_summer_C
             - id: af481003
-              model: 5ad0e817-fa0e9663-00120000
+              model: fa0e9663-0012
               name: Grfe_serbian_spruce_summer_D
             - id: af481004
-              model: 5ad0e817-5a0e9e08-00120000
+              model: 5a0e9e08-0012
               name: Grfe_serbian_spruce_summer_E
       BSC/girafe/Serbian Spruces v1/Grfe_serbian_spruces_winter.dat:
         af471000:
-          model: 5ad0e817-5a0e874f-00130000
+          model: 5a0e874f-0013
           name: Grfe_serbian_spruces_winter_A
           stages:
             - id: af471001
-              model: 5ad0e817-ba0e8ba5-00130000
+              model: ba0e8ba5-0013
               name: Grfe_serbian_spruces_winter_B
             - id: af471002
-              model: 5ad0e817-9a0e9076-00130000
+              model: 9a0e9076-0013
               name: Grfe_serbian_spruces_winter_C
             - id: af471003
-              model: 5ad0e817-fa0e9663-00130000
+              model: fa0e9663-0013
               name: Grfe_serbian_spruces_winter_D
             - id: af471004
-              model: 5ad0e817-5a0e9e08-00130000
+              model: 5a0e9e08-0013
               name: Grfe_serbian_spruces_winter_E
       BSC/girafe/Serbian spruces v2/Grfe_Serbian_spruces_evergreen v2.dat:
         af481010:
-          model: 5ad0e817-ab1cd8ca-00030000
+          model: ab1cd8ca
           name: Grfe_Serbian_spruce_evergreen_A2
           stages:
             - id: af481011
-              model: 5ad0e817-eb458812-00030000
+              model: eb458812
               name: Grfe_Serbian_spruce_evergreen_B2
             - id: af481012
-              model: 5ad0e817-eb4590b1-00030000
+              model: eb4590b1
               name: Grfe_Serbian_spruce_evergreen_C2
             - id: af481013
-              model: 5ad0e817-6b459800-00030000
+              model: 6b459800
               name: Grfe_Serbian_spruce_evergreen_D2
             - id: af481014
-              model: 5ad0e817-4b45a458-00030000
+              model: 4b45a458
               name: Grfe_Serbian_spruce_evergreen_E2
       BSC/girafe/Serbian spruces v2/Grfe_Serbian_spruces_seasonal v2.dat:
         af481020:
@@ -1643,20 +1693,20 @@ assets:
               name: Grfe_Serbian_spruce_seasonal_E2
       BSC/girafe/Serbian spruces v2/Grfe_serbian_spruces_winter v1.dat:
         af471000:
-          model: 5ad0e817-5a0e874f-00130000
+          model: 5a0e874f-0013
           name: Grfe_serbian_spruces_winter_A
           stages:
             - id: af471001
-              model: 5ad0e817-ba0e8ba5-00130000
+              model: ba0e8ba5-0013
               name: Grfe_serbian_spruces_winter_B
             - id: af471002
-              model: 5ad0e817-9a0e9076-00130000
+              model: 9a0e9076-0013
               name: Grfe_serbian_spruces_winter_C
             - id: af471003
-              model: 5ad0e817-fa0e9663-00130000
+              model: fa0e9663-0013
               name: Grfe_serbian_spruces_winter_D
             - id: af471004
-              model: 5ad0e817-5a0e9e08-00130000
+              model: 5a0e9e08-0013
               name: Grfe_serbian_spruces_winter_E
       BSC/girafe/Sparaxis/Grfe_sparaxis_seasonal.dat:
         af448520:
@@ -1666,11 +1716,11 @@ assets:
               name: Grfe_sparaxis_seasonal_B
       BSC/girafe/Sparaxis/Grfe_sparaxis_summer.dat:
         af448510:
-          model: 5ad0e817-40fce789-00030000
+          model: 40fce789
           name: Grfe_sparaxis_summer_A
           stages:
             - id: af448511
-              model: 5ad0e817-80fce825-00030000
+              model: 80fce825
               name: Grfe_sparaxis_summer_B
       BSC/girafe/Subalpine firs/Grfe_subalpine_firs_seasonal.dat:
         af448110:
@@ -1686,37 +1736,37 @@ assets:
               name: Grfe_subalpine_fir_seasonal_E
       BSC/girafe/Subalpine firs/Grfe_subalpine_firs_summer.dat:
         af448085:
-          model: 5ad0e817-1c52cfd3-00030000
+          model: 1c52cfd3
           name: Grfe_subalpine_fir_summer_A
           stages:
             - id: af448086
-              model: 5ad0e817-7c52dc22-00030000
+              model: 7c52dc22
               name: Grfe_subalpine_fir_summer_B
             - id: af448087
-              model: 5ad0e817-bc52b624-00030000
+              model: bc52b624
               name: Grfe_subalpine_fir_summer_C
             - id: af448088
-              model: 5ad0e817-fc539f52-00030000
+              model: fc539f52
               name: Grfe_subalpine_fir_summer_D
             - id: af448089
-              model: 5ad0e817-dc5bfab5-00030000
+              model: dc5bfab5
               name: Grfe_subalpine_fir_summer_E
       BSC/girafe/Subalpine firs/Grfe_subalpine_firs_winter.dat:
         af448090:
-          model: 5ad0e817-7c540ebd-00030000
+          model: 7c540ebd
           name: Grfe_subalpine_fir_winter_A
           stages:
             - id: af448091
-              model: 5ad0e817-dc542077-00030000
+              model: dc542077
               name: Grfe_subalpine_fir_winter_B
             - id: af448092
-              model: 5ad0e817-5c54cb3a-00030000
+              model: 5c54cb3a
               name: Grfe_subalpine_fir_winter_C
             - id: af448093
-              model: 5ad0e817-7c559f4b-00030000
+              model: 7c559f4b
               name: Grfe_subalpine_fir_winter_D
             - id: af448094
-              model: 5ad0e817-5c83de35-00030000
+              model: 5c83de35
               name: Grfe_subalpine_fir_winter_E
       BSC/girafe/Vines v2/Grfe_vines_seasonal.dat:
         af448560:
@@ -1740,32 +1790,32 @@ assets:
               name: Grfe_vine_seasonal_A
       BSC/girafe/Vines v2/Grfe_vines_summer.dat:
         af448550:
-          model: 5ad0e817-611f7f10-00030000
+          model: 611f7f10
           name: Grfe_vine_summer_A
           stages:
             - id: af448551
-              model: 5ad0e817-611f7f10-00030000
+              model: 611f7f10
               name: Grfe_vine_summer_A
             - id: af448552
-              model: 5ad0e817-611f7f10-00030000
+              model: 611f7f10
               name: Grfe_vine_summer_A
             - id: af448553
-              model: 5ad0e817-611f7f10-00030000
+              model: 611f7f10
               name: Grfe_vine_summer_A
             - id: af448554
-              model: 5ad0e817-611f7f10-00030000
+              model: 611f7f10
               name: Grfe_vine_summer_A
             - id: af448555
-              model: 5ad0e817-611f7f10-00030000
+              model: 611f7f10
               name: Grfe_vine_summer_A
             - id: af448556
-              model: 5ad0e817-611f7f10-00030000
+              model: 611f7f10
               name: Grfe_vine_summer_A
             - id: af448557
-              model: 5ad0e817-611f7f10-00030000
+              model: 611f7f10
               name: Grfe_vine_summer_A
             - id: af448558
-              model: 00000000-00000000-00000000
+              model: 00000000-0000
               name: Grfe_vine_summer_A
       BSC/girafe/Walnut trees/Grfe_wallnut_trees_seasonal.dat:
         af448860:
@@ -1781,28 +1831,980 @@ assets:
               name: Grfe_walnut_tree_seasonal_E
       BSC/girafe/Walnut trees/Grfe_walnut_trees_evergreen.dat:
         af448850:
-          model: 5ad0e817-a4f6cb32-00030000
+          model: a4f6cb32
           name: Grfe_walnut_tree_evergreen_A
           stages:
             - id: af448851
-              model: 5ad0e817-c4f6c694-00030000
+              model: c4f6c694
               name: Grfe_walnut_tree_evergreen_B
             - id: af448852
-              model: 5ad0e817-a4f6bc41-00030000
+              model: a4f6bc41
               name: Grfe_walnut_tree_evergreen_C
             - id: af448853
-              model: 5ad0e817-44f6ba6f-00030000
+              model: 44f6ba6f
               name: Grfe_walnut_tree_evergreen_D
             - id: af448854
-              model: 5ad0e817-24f6b39f-00030000
+              model: 24f6b39f
               name: Grfe_walnut_tree_evergreen_E
       BSC/girafe/Wheat v2/Grfe_wheat_seasonal.dat:
         af448050:
           name: Grfe_wheat_seasonal
       BSC/girafe/Wheat v2/Grfe_wheat_summer.dat:
         af448060:
-          model: 5ad0e817-bcbb0913-00030000
+          model: bcbb0913
           name: Grfe_wheat_summer
+    models:
+      BSC/girafe/Abies grandis v1/Grfe_props_pack_MM_abies_grandis.dat:
+        - 792662b7-0012
+        - 792662b7-0014
+        - 19294c72-0012
+        - 19294c72-0014
+        - 99284eb1-0012
+        - 99284eb1-0014
+        - d928538d-0012
+        - d928538d-0014
+        - 99291063-0012
+        - 99291063-0014
+        - 792662b7-0013
+        - 19294c72-0013
+        - 99284eb1-0013
+        - d928538d-0013
+        - 99291063-0013
+      BSC/girafe/Alders/Grfe_props_pack_LE_alders.dat:
+        - ec357b46-003a
+        - ec357b46-0046
+        - ec357b46-0039
+        - ec357b46-003b
+        - ec357b46-0045
+        - ec357b46-0038
+        - ec357b46-003c
+        - ec357b46-0044
+        - ec357b46-0037
+        - ec357b46-0040
+        - ec357b46-0042
+        - ec357b46-0036
+        - ec357b46-003e
+        - ec357b46-0043
+        - ec357b46-0035
+      BSC/girafe/Alders/Grfe_props_pack_MM_alders.dat:
+        - 6c279d1a
+        - ec357b46-0034
+        - 8c27494e
+        - ec2799a4
+        - ec357b46-0031
+        - ec2744f7
+        - ac27986e
+        - ec357b46-0030
+        - 2c274fac
+        - 8c279769
+        - ec357b46-002e
+        - 0c275273
+        - 8c27964f
+        - ec357b46-002f
+        - 6c2754ff
+      BSC/girafe/Ashes v2/Grfe_props_pack_LE_ashes.dat:
+        - ddbab460
+        - ddb9a32f
+        - fdb9a26e
+        - 9dbab50e
+        - 9dbab221
+        - 3dbbcfac
+        - 3db9a60f
+        - bdbab561
+        - 1dbaacdf
+        - ddbb0751
+        - fdb9a831
+        - 7dbab5dc
+        - bdbaa9d0
+        - 1db9ac86
+        - 5db9aa2c
+        - ddbafef1
+        - 3dbb0009
+        - ddb9af83
+        - ddb9b138
+        - 3dbaff7a
+        - 7dbaa3d2
+        - 9db9b6d4
+        - 7db9b3cb
+        - fdbb019f
+        - ddba9fae
+        - 9dba92b3
+        - 9dba8f4a
+        - fdbb036f
+        - bdba9d9e
+        - 3dba9755
+        - 5dbb04d1
+        - ddbb03f3
+      BSC/girafe/Ashes v2/Grfe_props_pack_MM_ashes.dat:
+        - 5cdfd2f6
+        - 1d0728de
+        - ddac2d55
+        - 7cdfcf8e
+        - fdabe666
+        - 5dabec83
+        - dd064901
+        - 3dd0fa28
+        - 3dac2deb
+        - fd06549f
+        - 7dd101da
+        - 3dac2ae2
+        - 9d0701bd
+        - 3dd11bf0
+        - 5dabed23
+      BSC/girafe/Beeches v3/Grfe_props_pack_LE_beeches.dat:
+        - 203f61dc
+        - 421d8c44
+        - 01b7f9fd
+        - 5fcf6721
+        - a21d8cda
+        - c1b7faf6
+        - 3fcf651c
+        - 821d8d70
+        - 41b7fb51
+        - ffcf5b83
+        - 021d8e4f
+        - 61b7fbec
+        - 603f65b8
+        - c21d9097
+        - 21b7fa57
+      BSC/girafe/Beeches v3/Grfe_props_pack_MM_beeches.dat:
+        - a2442dd1
+        - 403f5e12
+        - 214ea0cb
+        - c2442c8f
+        - 403dee55
+        - c14ea122
+        - 22442bc8
+        - 203de41a
+        - 414ea185
+        - 2244289d
+        - 003ddd37
+        - a14ea212
+        - e2442587
+        - 403dd160
+        - e14ea334
+      BSC/girafe/Berries/Grfe_props_pack_LE_berries.dat:
+        - e09cdc63
+        - 809cd8b3
+        - 409cd933
+        - 209cdd3f
+        - 209cdf80
+        - 409cde2c
+        - 009cdecb
+        - 409ce02f
+        - 809ce2f0
+        - 009ce0f2
+        - a09ce1db
+        - c09ce4a0
+      BSC/girafe/Berries/Grfe_props_pack_MM_berries.dat:
+        - 0236ea5b
+        - 609cbd0f
+        - e08e583f
+        - a09cbb17
+        - 6236e6e8
+        - a09cbc8d
+        - 808e592c
+        - a09cb97d
+        - c236e4f5
+        - 609cbe67
+        - 008e5b81
+        - a09cb29f
+      BSC/girafe/Birches v2/Grfe_props_pack_LE_birches.dat:
+        - e13a29e8
+        - a13a0e0b
+        - 613a0f3d
+        - 613a1fab
+        - 213a2b35
+        - 813a114d
+        - a13a105e
+        - 413a1f40
+        - a13a2c40
+        - c13a1220
+        - 613a12cd
+        - 813a1ecd
+        - 413a2d3f
+        - 013a1542
+        - a13a139e
+        - e13a1e33
+        - 413a2e84
+        - e13a1686
+        - e13a177b
+        - 413a1d37
+        - c13a30b0
+        - 413a198b
+        - 813a1870
+        - a13a1c89
+      BSC/girafe/Birches v2/Grfe_props_pack_MM_birches.dat:
+        - 3aca0699
+        - 5b1a616d
+        - 3a97c44b
+        - baca08bc
+        - bb4353ab
+        - 9aca0401
+        - bb1a5ca8
+        - 9b1a63bc
+        - 5a97c7c0
+        - 5aca0f7c
+        - 3b1a64b8
+        - 1a9802f2
+        - 3aca13c5
+        - 3b1a6614
+        - fa97d5e7
+      BSC/girafe/Bushes v2/Grfe_Props_Pack_MM_bushes.dat:
+        - db3d9fcc
+        - fb5bfcd5
+        - 5b5b032c
+        - 3b3d96ac
+        - ba59acfb
+        - 1b5b04a0
+        - 9b3d9a2b
+        - bb5bee2c
+        - 3b5b0682
+      BSC/girafe/Bushes v2/Grfe_props_pack_LE_bushes.dat:
+        - 6c63f20c
+        - 6c63db0f
+        - ccb437ea
+        - 0c63f1b6
+        - 6c63da7a
+        - 0cb43771
+        - 0c63f128
+        - 8c63d9d7
+        - 2cb436e4
+        - 8c63f0bc
+        - 0c63d92e
+        - acb4363a
+        - ec63f064
+        - ec63d875
+        - 0cb434c7
+        - 0c63eff4
+        - ec63d797
+        - 2cb43368
+        - ac63ef70
+        - 0c63d6b7
+        - 0cb4310c
+        - 4c63eeed
+        - ec63d5db
+        - 2cb41e59
+      BSC/girafe/Canary date palms/Grfe_props_pack_Canary_date_palms.dat:
+        - 853891d2
+        - e53894ee
+        - e5389595
+        - c5389639
+        - 253896d5
+        - '45389773'
+        - 2538980f
+        - '65389873'
+      BSC/girafe/Cattails v2.1/Grfe_props_pack_LE_cattails.dat:
+        - 4cc2e342
+        - acc2e107
+        - 6cc2dec5
+        - 4cc2dde2
+        - 6cc2dcec
+        - 6cc2dbe9
+      BSC/girafe/Cattails v2.1/Grfe_props_pack_MM_cattails.dat:
+        - da7e9901
+        - 1b5ad226
+        - 9a7e9b1a
+        - db5ad2df
+        - da7e9bb9
+        - 9b5acfd7
+      BSC/girafe/Chestnuts/Grfe_props_pack_LE_chestnuts.dat:
+        - 61f640cf
+        - 01f9022e
+        - 01f6379f
+        - 21f63fa5
+        - 41f8de27
+        - 61f63813
+        - 61f63e84
+        - 41f8d148
+        - a1f638a7
+        - a1f63d21
+        - 61f8cbc1
+        - 41f63934
+        - c1f63b46
+        - 81f8fea5
+        - 01f63a7d
+      BSC/girafe/Chestnuts/Grfe_props_pack_MM_chestnuts.dat:
+        - 61f640cf
+        - 01f9022e
+        - 01f6379f
+        - 21f63fa5
+        - 41f8de27
+        - 61f63813
+        - 61f63e84
+        - 41f8d148
+        - a1f638a7
+        - a1f63d21
+        - 61f8cbc1
+        - 41f63934
+        - c1f63b46
+        - 81f8fea5
+        - 01f63a7d
+      BSC/girafe/Common spruces/Grfe_props_pack_LE_common_spruces.dat:
+        - 80bf39ce
+        - c0bf391d
+        - a0c569e6
+        - c0bf3cb5
+        - 00bf3bc8
+        - 20c56a8d
+        - c0bf42c0
+        - 40bf40ea
+        - 00c56b6e
+        - 40bf4991
+        - 40bf4628
+        - c0c56c8c
+        - 60c1719b
+        - 80c01483
+        - a0c17823
+        - e0c56eed
+        - c0c024cb
+        - c0c02f45
+        - c0c57121
+        - 60c060c1
+        - 20c067df
+        - 20c57481
+      BSC/girafe/Common spruces/Grfe_props_pack_MM_common_spruces.dat:
+        - 60bf2f78
+        - e0c42105
+        - 00beba96
+        - c0c418dc
+        - e0bec1de
+        - a0c4242b
+        - e0becc65
+        - 40c43312
+        - c0bf16c9
+        - 40c44a60
+      BSC/girafe/Conifers/Grfe_props_pack_LE_conifers.dat:
+        - 408d82dc
+        - 808d8476
+        - a08d8a5f
+        - '82371072'
+        - e23711ec
+        - e23712c2
+        - 0237145d
+        - e2371558
+        - e237166a
+        - 0237188c
+        - e2371d39
+        - a08d6fb6
+        - a23728af
+        - 82372b65
+        - 42372cb4
+        - c08d7a9a
+        - 608e33f4
+        - c08e353a
+        - a08e37b3
+        - 608d61dd
+        - e08d633a
+        - a08d64ac
+        - a08d6853
+        - 808d69be
+        - 208d6b3d
+      BSC/girafe/Conifers/Grfe_props_pack_MM_conifers.dat:
+        - 1b63fc39
+        - db723a0d
+        - 1aa894a8
+        - 5b724045
+        - 9af94cfe
+        - 1b724c62
+        - faf95796
+        - 7b9a14cb
+        - 7b2071af
+        - 3b724fb1
+      BSC/girafe/Cypresses/Grfe_props_pack_LE_cypresses.dat:
+        - 41c70a76
+        - e124c0eb
+        - e124c191
+        - 2124c23a
+        - 2124c32e
+      BSC/girafe/Cypresses/Grfe_props_pack_MM_cypresses.dat:
+        - 60af6a96
+        - 60af6b71
+        - 80af6fb1
+        - c0af6841
+        - 40af7137
+      BSC/girafe/Daisy v2/Grfe_props_pack_LE_daisy.dat:
+        - '23305483'
+        - 032db52b
+        - '43305503'
+        - 232db58d
+      BSC/girafe/Daisy v2/Grfe_props_pack_MM_daisy.dat:
+        - '23305483'
+        - 032db52b
+        - '43305503'
+        - 232db58d
+      BSC/girafe/Elms/Grfe_props_pack_LE_elms.dat:
+        - 83d9e04c
+        - 23da0022
+        - 03d9f08e
+        - e3d9dd4e
+        - 83d9e79f
+        - e3d9f0f2
+        - 83d9db22
+        - 23d9ea42
+        - a3d9f16e
+        - 23cfcc93
+        - 63d0ed49
+        - a3cfe0a7
+        - c3cfc753
+        - a3d0bce8
+        - 23cfe13f
+      BSC/girafe/Elms/Grfe_props_pack_MM_elms.dat:
+        - 83d9e04c
+        - 23da0022
+        - 03d9f08e
+        - e3d9dd4e
+        - 83d9e79f
+        - e3d9f0f2
+        - 83d9db22
+        - 23d9ea42
+        - a3d9f16e
+        - 23cfcc93
+        - 63d0ed49
+        - a3cfe0a7
+        - c3cfc753
+        - a3d0bce8
+        - 23cfe13f
+      BSC/girafe/Feather grass/Grfe_props_pack_LE_feather_grass.dat:
+        - c0ff6a3a
+        - e0ff6b71
+        - e0ff6bef
+      BSC/girafe/Feather grass/Grfe_props_pack_MM_feather_grass.dat:
+        - a0b1d5bf
+        - 80ff63ac
+        - 60b1d6ad
+        - c0ff6413
+      BSC/girafe/Grand Firs (Abies Grandis v2)/Grfe_Props_Pack_LE_grand_firs.dat:
+        - 6cc0443d
+        - 4b1e3aec
+        - ecc042e1
+        - cb1e3464
+        - 8cc0417e
+        - 8b1e2e2f
+        - 2cc03cf5
+        - 6b1e2af6
+        - ccc03b33
+        - 0b1e1a7b
+      BSC/girafe/Grand Firs (Abies Grandis v2)/Grfe_Props_Pack_MM_grand_firs.dat:
+        - 792662b7-0012
+        - 792662b7-0014
+        - 19294c72-0012
+        - 19294c72-0014
+        - 99284eb1-0012
+        - 99284eb1-0014
+        - d928538d-0012
+        - d928538d-0014
+        - 99291063-0012
+        - 99291063-0014
+        - 792662b7-0013
+        - 19294c72-0013
+        - 99284eb1-0013
+        - d928538d-0013
+        - 99291063-0013
+        - cb1d6697
+        - eb1d5978
+        - 8b1d51ad
+        - 4c546a20
+        - 2c5458b3
+      BSC/girafe/Honey locust/Grfe_props_pack_LE_honey_locust.dat:
+        - e20608a0
+        - 2209c569
+        - 62060fb3
+        - '22060736'
+        - c209b8a6
+        - '82061000'
+        - e20605bc
+        - a208c7ef
+        - a2061054
+        - '02060220'
+        - 6208c27d
+        - c20610bc
+        - 82060a73
+        - c208bb53
+        - c2060f05
+      BSC/girafe/Honey locust/Grfe_props_pack_MM_honey_locust.dat:
+        - e20608a0
+        - 2209c569
+        - 62060fb3
+        - '22060736'
+        - c209b8a6
+        - '82061000'
+        - e20605bc
+        - a208c7ef
+        - a2061054
+        - '02060220'
+        - 6208c27d
+        - c20610bc
+        - 82060a73
+        - c208bb53
+        - c2060f05
+      BSC/girafe/Larches/Grfe_props_pack_MM_larches.dat:
+        - 00a9000f
+        - a0a901b2
+        - 80a90404
+        - 00cca44d
+        - e0ccaac2
+        - bb112acd
+        - a09f5275
+        - dcaacb1d
+        - 7a63c29e
+        - 40a2a7ed
+        - 5caacbf9
+        - 9b11c81d
+        - a0a0db60
+        - 9caacfce
+        - 9b131411
+        - 009fed34
+        - 7caad2d7
+        - 1bd1c258
+        - e09eaeaf
+        - 3caad638
+      BSC/girafe/Lindens/Grfe_props_pack_LE_lindens.dat:
+        - 80a66953
+        - 9dd7f9c4-0045
+        - 9dd7f9c4-0046
+        - 60a66790
+        - 60a66a15
+        - 9dd7f9c4-0048
+        - 9dd7f9c4-0047
+        - 40a6674b
+        - a0961d1f
+        - e0962388
+        - e0961fc8
+        - 2096263a
+        - 80a66d6a
+        - 9dd7f9c4-0031
+        - 9dd7f9c4-0030
+        - 80a666a7
+        - 00a66f86
+        - 407ed32d
+        - 607ed3dd
+        - 407ed8ec
+        - 40a671c1
+        - a07ecec7
+        - e07ecd9a
+        - e0a66655
+      BSC/girafe/Lindens/Grfe_props_pack_MM_lindens.dat:
+        - 9dd7f9c4-0044
+        - 9dd7f9c4-0037
+        - 9dd7f9c4-0025
+        - 9dd7f9c4-0043
+        - 9dd7f9c4-0038
+        - 9dd7f9c4-0026
+        - 9dd7f9c4-0042
+        - 9dd7f9c4-0039
+        - 9dd7f9c4-0027
+        - 9dd7f9c4-0040
+        - 9dd7f9c4-003a
+        - 9dd7f9c4-0028
+        - 9dd7f9c4-0041
+        - 9dd7f9c4-003b
+        - 9dd7f9c4-0029
+      BSC/girafe/Lupins/Grfe_props_pack_LE_lupins.dat:
+        - 2145cacf
+        - 2145cef7
+        - 8145ca21
+        - 2145d382
+        - 2145cb72
+        - 4145d185
+        - 4145cc02
+        - a145d3e7
+        - c145cda7
+        - 2145d268
+        - 4145cccb
+        - 6145d456
+      BSC/girafe/Lupins/Grfe_props_pack_MM_lupins.dat:
+        - '81459771'
+        - c145a745
+        - '814597e1'
+        - 6145a668
+        - 814596d4
+        - a145a584
+        - a1459403
+        - a145a2e3
+        - '61459381'
+        - 8145a26f
+        - '01459499'
+        - e145a346
+        - 81458fd5
+        - 81459f8e
+        - 4145aec7
+        - 41458e6c
+        - a1459ddf
+        - 0145ae00
+        - 61458c87
+        - 61459e9d
+        - a145acf1
+      BSC/girafe/Maples v2/Grfe_props_pack_LE_maples.dat:
+        - 5cf8bcfb
+        - 5d02128f
+        - 1cf87a8d
+        - fc11fe99
+        - 9cf8c25d
+        - 9d0213ec
+        - 5cf87d1b
+        - 1c120f26
+        - fcf8e825
+        - fd02152d
+        - dcf87f55
+        - 7c11ff3e
+        - 5c11f645
+        - 7d021659
+        - 9cf88191
+        - dc11ffa2
+        - 7c11e47f
+        - fd0217b7
+        - 5cf88519
+        - 7c120003
+        - 3c11e251
+        - 1d021c24
+        - fcf8911c
+        - 9c120072
+        - bc11e6fb
+        - dd021f59
+        - bcf89376
+        - 7c1200ec
+        - bc11e98e
+        - 1d022207
+        - 1cf8a001
+        - 5c12016a
+      BSC/girafe/Maples v2/Grfe_props_pack_MM_maples_v2.dat:
+        - 5cf7be7e
+        - dd2a7ba6
+        - 7d2ab17f
+        - fcf7bff5
+        - fd2a7d13
+        - 9d2ab1cf
+        - fcf7c295
+        - fd2a910c
+        - 9d2ab34c
+        - bcf86a2e
+        - 3d2a9870
+        - bd2ab3f1
+        - bcf7b557
+        - dd2a9e5e
+        - 7d2ab49d
+      BSC/girafe/Maples/Grfe_props_pack_MM_maples.dat:
+        - d9f00412-0011
+        - b9f008ba-0011
+        - 19f00eaa-0011
+        - f9effc6a-0011
+        - f9f01459-0011
+        - d9f00412-0013
+        - b9f008ba-0013
+        - 19f00eaa-0013
+        - f9effc6a-0013
+        - f9f01459-0013
+        - d9f00412-0012
+        - b9f008ba-0012
+        - 19f00eaa-0012
+        - f9effc6a-0012
+        - f9f01459-0012
+      BSC/girafe/Narcissus/Grfe_props_pack_LE_narcissus.dat:
+        - 00c84726
+        - 20c84782
+        - 40c846d1
+      BSC/girafe/Narcissus/Grfe_props_pack_MM_narcissus.dat:
+        - c0c8160e
+        - a0c8406d
+        - 80c80fa9
+        - e0c83f69
+      BSC/girafe/Norway maples v2/Grfe_props_pack_LE_norway_maples.dat:
+        - 61da7576
+        - a1da723d
+        - 41da70ab
+        - 21da770a
+        - a1da7fd3
+        - c1da7be5
+        - 61da7a44
+        - a1da7d99
+        - a1da8744
+        - 01da8465
+        - 21da82ca
+        - 81da85e2
+        - 21da9948
+        - 01da963e
+        - 61da9471
+        - a1da97ee
+      BSC/girafe/Norway maples v2/Grfe_props_pack_MM_norway_maples.dat:
+        - bc05058a
+        - 9c03bdef
+        - bc03b8a4
+        - fc050819
+        - 5c03c08d
+        - fc03b690
+        - dc050df1
+        - 1c04eb59
+        - 9c03b101
+        - fc051cc8
+        - dc04f363
+        - fc03ae63
+      BSC/girafe/Oaks v2/Grfe_Props_Pack_LE_Oaks.dat:
+        - 8cf51521
+        - 4f8b14be
+        - 6cf3900f
+        - ecf51490
+        - 8f8b1262
+        - 0cf38e5d
+        - ecf4e159
+        - cf8b0ff4
+        - acf38cd9
+        - 8fb37de4
+        - 2fb2a6cd
+        - 2fb37d27
+        - 8cf4e0e3
+        - 8f8b0adc
+        - 8cf3895e
+      BSC/girafe/Oaks v2/Grfe_props_pack_MM_oaks.dat:
+        - 7b1b5718
+        - ba2ccf8c
+        - 9a2cc199
+        - 7b1b4ffd
+        - 9a2ccb8a
+        - 7a2cc011
+        - db1b4a6e
+        - 1a2cd4a9
+        - 5a2cbe33
+        - 5b1b3a8d
+        - fa2cef55
+        - 1a2cbbf5
+        - fb1b31a0
+        - ba2cf7d3
+        - fa2cb908
+      BSC/girafe/Parasol pines/Grfe_props_pack_parasol_pines_LE.dat:
+        - e13753b3
+        - e137561b
+        - 813759f7
+        - 21375d47
+        - 61375fa8
+      BSC/girafe/Parasol pines/Grfe_props_pack_parasol_pines_MM.dat:
+        - bd9da899
+        - bd9db347
+        - 3dc42c52
+        - 7dc4d498
+        - 3dc4e003
+      BSC/girafe/Poplars/Grfe_props_pack_LE_poplars.dat:
+        - 67923de0
+        - a7921e67
+        - '6790e985'
+        - 87923f2b
+        - 27921f43
+        - 8790e69f
+        - c7937189
+        - 27921ff2
+        - '6790e227'
+        - e79375a0
+        - c7922088
+        - 4790d2f4
+        - 07937b11
+        - '47922136'
+        - 0790ce33
+      BSC/girafe/Poplars/Grfe_props_pack_MM_poplars.dat:
+        - 67923de0
+        - a7921e67
+        - '6790e985'
+        - 87923f2b
+        - 27921f43
+        - 8790e69f
+        - c7937189
+        - 27921ff2
+        - '6790e227'
+        - e79375a0
+        - c7922088
+        - 4790d2f4
+        - 07937b11
+        - '47922136'
+        - 0790ce33
+      BSC/girafe/Poppies/Grfe_props_pack_LE_poppies.dat:
+        - 80c5c640
+        - a0c5c5a0
+        - 40c5c523
+      BSC/girafe/Poppies/Grfe_props_pack_MM_poppies.dat:
+        - a0c5aaa7
+        - c0c5c193
+        - 20c5ac19
+        - 80c5c1e3
+      BSC/girafe/Rowan trees v3/Grfe_props_pack_LE_rowan_trees.dat:
+        - '22806260'
+        - 02fa2949
+        - 42807c21
+        - e27fccf8
+        - e2fa2552
+        - 42807bb1
+        - 828063cd
+        - a2d1425f
+        - e2807af6
+        - 628068ff
+        - a2d14c26
+        - a2807a5a
+        - 22806eb2
+        - c280e9f7
+        - '02807938'
+      BSC/girafe/Rowan trees v3/Grfe_props_pack_MM_rowan_trees.dat:
+        - '22806260'
+        - 02fa2949
+        - 42807c21
+        - e27fccf8
+        - e2fa2552
+        - 42807bb1
+        - 828063cd
+        - a2d1425f
+        - e2807af6
+        - 628068ff
+        - a2d14c26
+        - a2807a5a
+        - 22806eb2
+        - c280e9f7
+        - '02807938'
+      BSC/girafe/Serbian Spruces v1/Grfe_Props_Pack_MM_serbian_spruces v1.dat:
+        - 5a0e874f-0014
+        - 5a0e874f-0012
+        - ba0e8ba5-0014
+        - ba0e8ba5-0012
+        - 9a0e9076-0014
+        - 9a0e9076-0012
+        - fa0e9663-0014
+        - fa0e9663-0012
+        - 5a0e9e08-0014
+        - 5a0e9e08-0012
+        - 5a0e874f-0013
+        - ba0e8ba5-0013
+        - 9a0e9076-0013
+        - fa0e9663-0013
+        - 5a0e9e08-0013
+      BSC/girafe/Serbian spruces v2/Grfe_Props_Pack_LE_Serbian_spruces.dat:
+        - ec357b46-0011
+        - ec357b46-0006
+        - ec357b46-000f
+        - ec357b46-0005
+        - ec357b46-000e
+        - ec357b46-0004
+        - ec357b46-000d
+        - ec357b46
+        - ec357b46-0010
+        - ec357b46-0007
+      BSC/girafe/Serbian spruces v2/Grfe_Props_Pack_MM_Serbian_spruces.dat:
+        - 5a0e874f-0013
+        - ba0e8ba5-0013
+        - 9a0e9076-0013
+        - fa0e9663-0013
+        - 5a0e9e08-0013
+        - 4b45a458
+        - 6b459800
+        - eb4590b1
+        - eb458812
+        - ab1cd8ca
+      BSC/girafe/Sparaxis/Grfe_props_pack_LE_sparaxis.dat:
+        - a0fd1e24
+        - 00fd1aea
+        - 80fd1de9
+        - 80fd1b1d
+        - a0fd1e6c
+        - 20fd1aab
+        - a0fd1ba0
+        - 00fd1db8
+        - e0fd1b5a
+      BSC/girafe/Sparaxis/Grfe_props_pack_MM_sparaxis.dat:
+        - 40fce789
+        - 20fcea95
+        - 80fce825
+        - 20fcea10
+      BSC/girafe/Subalpine firs/Grfe_props_pack_LE_subalpinefirs.dat:
+        - a094bc72
+        - 2094bd91
+        - 0094bea6
+        - c09542f7
+        - c095454e
+        - a09546dd
+        - c094e4f7
+        - c094e685
+        - '0094e912'
+        - 4094ed40
+        - c094ef23
+        - e094f191
+        - 8094f6c6
+        - 2094f895
+        - 2094fd6a
+        - 6094ae55
+        - c094afc9
+        - 0094b19d
+        - c095044f
+        - 809509c2
+        - c0950e81
+      BSC/girafe/Subalpine firs/Grfe_props_pack_MM_subalpinefirs.dat:
+        - 1c52cfd3
+        - 7c540ebd
+        - 7c52dc22
+        - dc542077
+        - bc52b624
+        - 5c54cb3a
+        - fc539f52
+        - 7c559f4b
+        - dc5bfab5
+        - 5c83de35
+      BSC/girafe/Vines v2/Grfe_props_pack_LE_vines.dat:
+        - a1480bcf
+        - a1480a2b
+        - 8148095e
+        - c14808bd
+        - '41480843'
+        - 80ceac44
+        - 611f3af7
+        - 811f3a8d
+        - a11f3a21
+        - c11f39af
+        - 611f7f10
+        - 011f8059
+        - 811f815b
+        - 211f82d6
+        - a147e4fb
+        - 40cea2fc
+        - e11f3d6c
+        - 611f3d9c
+        - 411f3dd4
+        - 811f3e05
+      BSC/girafe/Vines v2/Grfe_props_pack_MM_vines.dat:
+        - 611f7f10
+        - 80cec19e
+        - 40cea2fc
+      BSC/girafe/Walnut trees/Grfe_props_pack_MM_walnut_trees.dat:
+        - 255c28b2
+        - 04dcaa46
+        - 24f6b39f
+        - 655c22a2
+        - 04dca9aa
+        - 44f6ba6f
+        - 455c212d
+        - 04dca8fc
+        - a4f6bc41
+        - '05574842'
+        - e4dca85e
+        - c4f6c694
+        - a55746c7
+        - a4dca7b7
+        - a4f6cb32
+      BSC/girafe/Wheat v2/Grfe_Props_Pack_LE_Wheat.dat:
+        - fcbf03d2
+        - bcbec973
+        - 3cc14c30
+        - 7cc1447c
+        - 3cc141a3
+        - dcc14157
+        - fcbf10ee
+        - 7cbec506
+        - bc394384
+        - fcbfc8de
+        - 7cc1347e
+        - 1cc12877
+        - 1cc127fc
+        - 3c39ba7e
+        - 5c39543d
+        - 3c395412
+        - 5c394ae9
+      BSC/girafe/Wheat v2/Grfe_Props_Pack_MM_Wheat.dat:
+        - bcbb0913
+        - dcbafe39
+        - 1cbb1181
     name: SC4D LEX LEGACY - BSC VIP Girafe Flora Pack
     props:
       BSC/girafe/Alders/Grfe_props_pack_LE_alders.dat:
@@ -1831,19 +2833,19 @@ assets:
         ac3f6443:
           name: Grfe_alder_B_autumn
         cc3ed5e4:
-          model: 5ad0e817-ec357b46-00360000
+          model: ec357b46-0036
           name: Grfe_alder_B_evergreen
         cc3ed5f5:
-          model: 5ad0e817-ec357b46-00350000
+          model: ec357b46-0035
           name: Grfe_alder_A_evergreen
         cc3ed83b:
-          model: 5ad0e817-ec357b46-00390000
+          model: ec357b46-0039
           name: Grfe_alder_E_evergreen
         ec3ed5c2:
-          model: 5ad0e817-ec357b46-00380000
+          model: ec357b46-0038
           name: Grfe_alder_D_evergreen
         ec3ed5d4:
-          model: 5ad0e817-ec357b46-00370000
+          model: ec357b46-0037
           name: Grfe_alder_C_evergreen
         ec3eea7a:
           name: Grfe_alder_D_summer
@@ -1857,10 +2859,10 @@ assets:
         1dbe6e18:
           name: Grfe_ash_C_autumn
         1dbe6e69:
-          model: 5ad0e817-1db9ac86-00030000
+          model: 1db9ac86
           name: Grfe_ash_C_evergreen
         3dbe6e2e:
-          model: 5ad0e817-ddbb0751-00030000
+          model: ddbb0751
           name: Grfe_ash_D_evergreen
         3dbe6e3f:
           name: Grfe_ash_D_summer
@@ -1875,7 +2877,7 @@ assets:
         3dbe6f67:
           name: Grfe_ash_H_autumn
         3dbe6f76:
-          model: 5ad0e817-3dba9755-00030000
+          model: 3dba9755
           name: Grfe_ash_H_evergreen
         3dbe6f86:
           name: Grfe_ash_H_summer
@@ -1888,17 +2890,17 @@ assets:
         5dbe6ecc:
           name: Grfe_ash_E_summer
         5dbeb14c:
-          model: 5ad0e817-3dbbcfac-00030000
+          model: 3dbbcfac
           name: Grfe_ash_B_evergreen
         7dbe6db3:
-          model: 5ad0e817-ddb9a32f-00030000
+          model: ddb9a32f
           name: Grfe_ash_A_evergreen
         7dbe6e76:
           name: Grfe_ash_C_summer
         9dbe6dde:
           name: Grfe_ash_B_autumn
         9dbe6eb9:
-          model: 5ad0e817-ddb9af83-00030000
+          model: ddb9af83
           name: Grfe_ash_E_evergreen
         bdbe6e5d:
           name: Grfe_ash_D_autumn
@@ -1907,7 +2909,7 @@ assets:
         bdbe6ef0:
           name: Grfe_ash_F_autumn
         bdbe6f39:
-          model: 5ad0e817-9dba92b3-00030000
+          model: 9dba92b3
           name: Grfe_ash_G_evergreen
         bdbe6f47:
           name: Grfe_ash_G_summer
@@ -1920,7 +2922,7 @@ assets:
         fdbe6e0a:
           name: Grfe_ash_B_winter
         fdbe6efe:
-          model: 5ad0e817-9db9b6d4-00030000
+          model: 9db9b6d4
           name: Grfe_ash_F_evergreen
         fdbe6f1b:
           name: Grfe_ash_F_winter
@@ -1936,13 +2938,13 @@ assets:
         7f28c687:
           name: Grfe_beech_A_winter
         7fb49d38:
-          model: 5ad0e817-a21d8cda-00030000
+          model: a21d8cda
           name: Grfe_beech_B_evergreen
         7fb49d5c:
-          model: 5ad0e817-021d8e4f-00030000
+          model: 021d8e4f
           name: Grfe_beech_D_evergreen
         7fb49d6b:
-          model: 5ad0e817-c21d9097-00030000
+          model: c21d9097
           name: Grfe_beech_E_evergreen
         7fb49d7b:
           name: Grfe_beech_A_summer
@@ -1951,12 +2953,12 @@ assets:
         9f28c6b4:
           name: Grfe_beech_C_winter
         9fb49d4b:
-          model: 5ad0e817-821d8d70-00030000
+          model: 821d8d70
           name: Grfe_beech_C_evergreen
         9fb49db6:
           name: Grfe_beech_E_summer
         bfb49d19:
-          model: 5ad0e817-421d8c44-00030000
+          model: 421d8c44
           name: Grfe_beech_A_evergreen
         bfb49d9a:
           name: Grfe_beech_C_summer
@@ -1972,7 +2974,7 @@ assets:
           name: Grfe_beech_D_winter
       BSC/girafe/Berries/Grfe_props_pack_LE_berries.dat:
         1e0daec4:
-          model: 5ad0e817-809cd8b3-00030000
+          model: 809cd8b3
           name: Grfe_berries_A_evergreen
         1e0daf34:
           name: Grfe_berries_B_summer
@@ -1981,12 +2983,12 @@ assets:
         3e0daf08:
           name: Grfe_berries_B_autumn
         3e0daf21:
-          model: 5ad0e817-409cde2c-00030000
+          model: 409cde2c
           name: Grfe_berries_B_evergreen
         5e0daea0:
           name: Grfe_berries_A_autumn
         5e0daf7a:
-          model: 5ad0e817-009ce0f2-00030000
+          model: 009ce0f2
           name: Grfe_berries_C_evergreen
         5e0daf93:
           name: Grfe_berries_C_summer
@@ -2006,29 +3008,29 @@ assets:
         1eaaf930:
           name: Grfe_birch_E_winter
         5eaaf89a:
-          model: 5ad0e817-c13a1220-00030000
+          model: c13a1220
           name: Grfe_birch_C_evergreen
         5eaaf8aa:
           name: Grfe_birch_C_summer
         5eaaf8b7:
           name: Grfe_birch_C_winter
         5eaaf913:
-          model: 5ad0e817-e13a1686-00030000
+          model: e13a1686
           name: Grfe_birch_E_evergreen
         7eaaf828:
-          model: 5ad0e817-a13a0e0b-00030000
+          model: a13a0e0b
           name: Grfe_birch_A_evergreen
         9eaaf836:
           name: Grfe_birch_A_summer
         9eaaf854:
           name: Grfe_birch_B_autumn
         9eaaf860:
-          model: 5ad0e817-813a114d-00030000
+          model: 813a114d
           name: Grfe_birch_B_evergreen
         9eaaf8c6:
           name: Grfe_birch_D_autumn
         9eaaf94c:
-          model: 5ad0e817-413a198b-00030000
+          model: 413a198b
           name: Grfe_birch_F_evergreen
         beaaf87c:
           name: Grfe_birch_B_winter
@@ -2039,7 +3041,7 @@ assets:
         beaaf966:
           name: Grfe_birch_F_winter
         deaaf8d8:
-          model: 5ad0e817-013a1542-00030000
+          model: 013a1542
           name: Grfe_birch_D_evergreen
         deaaf93f:
           name: Grfe_birch_F_autumn
@@ -2067,10 +3069,10 @@ assets:
         2cdd41c1:
           name: Grfe_bush_H_summer
         4cdd25f1:
-          model: 5ad0e817-ec63d797-00030000
+          model: ec63d797
           name: Grfe_bush_C_evergreen
         4cdd2627:
-          model: 5ad0e817-8c63d9d7-00030000
+          model: 8c63d9d7
           name: Grfe_bush_F_evergreen
         4cdd3c4f:
           name: Grfe_bush_B_winter
@@ -2083,7 +3085,7 @@ assets:
         4cdfc151:
           name: Grfe_bush_D_autumn
         6cdd260f:
-          model: 5ad0e817-0c63d92e-00030000
+          model: 0c63d92e
           name: Grfe_bush_E_evergreen
         6cdd3c83:
           name: Grfe_bush_F_winter
@@ -2094,7 +3096,7 @@ assets:
         6cdfc1bc:
           name: Grfe_bush_G_autumn
         8cdd25e1:
-          model: 5ad0e817-0c63d6b7-00030000
+          model: 0c63d6b7
           name: Grfe_bush_B_evergreen
         8cdfc123:
           name: Grfe_bush_A_autumn
@@ -2105,20 +3107,20 @@ assets:
         acdd3c3a:
           name: Grfe_bush_A_winter
         ccdd25cc:
-          model: 5ad0e817-ec63d5db-00030000
+          model: ec63d5db
           name: Grfe_bush_A_evergreen
         ccdd415d:
           name: Grfe_bush_B_summer
         ccdfc1ae:
           name: Grfe_bush_F_autumn
         ecdd2601:
-          model: 5ad0e817-ec63d875-00030000
+          model: ec63d875
           name: Grfe_bush_D_evergreen
         ecdd2635:
-          model: 5ad0e817-6c63da7a-00030000
+          model: 6c63da7a
           name: Grfe_bush_G_evergreen
         ecdd2644:
-          model: 5ad0e817-6c63db0f-00030000
+          model: 6c63db0f
           name: Grfe_bush_H_evergreen
         ecdd3c5d:
           name: Grfe_bush_C_winter
@@ -2128,40 +3130,40 @@ assets:
           name: Grfe_bush_H_winter
       BSC/girafe/Canary date palms/Grfe_props_pack_LE_Canary_date_palms.dat:
         35b8401e:
-          model: 5ad0e817-853891d2-00030000
+          model: 853891d2
           name: Grfe_Canary_date_palm_evergreen_A
         35b84053:
-          model: 5ad0e817-e5389595-00030000
+          model: e5389595
           name: Grfe_Canary_date_palm_evergreen_C
         35b8406f:
-          model: 5ad0e817-c5389639-00030000
+          model: c5389639
           name: Grfe_Canary_date_palm_evergreen_D
         35b840d4:
-          model: 5ad0e817-2538980f-00030000
+          model: 2538980f
           name: Grfe_Canary_date_palm_evergreen_G
         55b840a7:
-          model: 5ad0e817-45389773-00030000
+          model: '45389773'
           name: Grfe_Canary_date_palm_evergreen_F
         55b840ed:
-          model: 5ad0e817-65389873-00030000
+          model: '65389873'
           name: Grfe_Canary_date_palm_evergreen_H
         75b8403b:
-          model: 5ad0e817-e53894ee-00030000
+          model: e53894ee
           name: Grfe_Canary_date_palm_evergreen_B
         75b8408e:
-          model: 5ad0e817-253896d5-00030000
+          model: 253896d5
           name: Grfe_Canary_date_palm_evergreen_E
       BSC/girafe/Cattails v2.1/Grfe_props_pack_LE_cattails.dat:
         6cc82a70:
           name: Grfe_cattails_C_winter
         8cc829d9:
-          model: 5ad0e817-6cc2dbe9-00030000
+          model: 6cc2dbe9
           name: Grfe_cattails_A_evergreen
         8cc82a1c:
-          model: 5ad0e817-4cc2dde2-00030000
+          model: 4cc2dde2
           name: Grfe_cattails_B_evergreen
         8cc82a4f:
-          model: 5ad0e817-acc2e107-00030000
+          model: acc2e107
           name: Grfe_cattails_C_evergreen
         8cc82a5e:
           name: Grfe_cattails_C_summer
@@ -2185,7 +3187,7 @@ assets:
         3f69cdea:
           name: Grfe_chestnut_E_autumn
         5f698008:
-          model: 5ad0e817-61f640cf-00030000
+          model: 61f640cf
           name: Grfe_chestnut_A_evergreen
         5f6980d3:
           name: Grfe_chestnut_D_summer
@@ -2196,10 +3198,10 @@ assets:
         5f69cdc8:
           name: Grfe_chestnut_C_autumn
         7f69805b:
-          model: 5ad0e817-21f63fa5-00030000
+          model: 21f63fa5
           name: Grfe_chestnut_B_evergreen
         7f69807c:
-          model: 5ad0e817-a1f63d21-00030000
+          model: a1f63d21
           name: Grfe_chestnut_D_evergreen
         7f6980b4:
           name: Grfe_chestnut_B_summer
@@ -2208,12 +3210,12 @@ assets:
         9f69cda5:
           name: Grfe_chestnut_A_autumn
         bf69806b:
-          model: 5ad0e817-61f63e84-00030000
+          model: 61f63e84
           name: Grfe_chestnut_C_evergreen
         bf6980a0:
           name: Grfe_chestnut_A_summer
         df69808d:
-          model: 5ad0e817-c1f63b46-00030000
+          model: c1f63b46
           name: Grfe_chestnut_E_evergreen
         df69cdb9:
           name: Grfe_chestnut_B_autumn
@@ -2221,18 +3223,18 @@ assets:
           name: Grfe_chestnut_C_summer
       BSC/girafe/Common spruces/Grfe_props_pack_LE_common_spruces.dat:
         3e3226e2:
-          model: 5ad0e817-80bf39ce-00030000
+          model: 80bf39ce
           name: Grfe_common_spruce_A_evergreen
         3e32274d:
           name: Grfe_common_spruce_B_summer
         3e32277d:
-          model: 5ad0e817-c0bf42c0-00030000
+          model: c0bf42c0
           name: Grfe_common_spruce_C_evergreen
         '3e322881':
-          model: 5ad0e817-c0c024cb-00030000
+          model: c0c024cb
           name: Grfe_common_spruce_F_evergreen
         3e323dd8:
-          model: 5ad0e817-60c1719b-00030000
+          model: 60c1719b
           name: Grfe_common_spruce_E_evergreen
         '5e322702':
           name: Grfe_common_spruce_A_summer
@@ -2251,17 +3253,17 @@ assets:
         7e363bde:
           name: Grfe_common_spruce_F_winter
         9e3228c7:
-          model: 5ad0e817-60c060c1-00030000
+          model: 60c060c1
           name: Grfe_common_spruce_G_evergreen
         9e363b90:
           name: Grfe_common_spruce_B_winter
         be322735:
-          model: 5ad0e817-c0bf3cb5-00030000
+          model: c0bf3cb5
           name: Grfe_common_spruce_B_evergreen
         be3228dd:
           name: Grfe_common_spruce_G_summer
         de3227e0:
-          model: 5ad0e817-40bf4991-00030000
+          model: 40bf4991
           name: Grfe_common_spruce_D_evergreen
         de3298c6:
           name: Grfe_common_spruce_E_summer
@@ -2271,7 +3273,7 @@ assets:
           name: Grfe_common_spruce_C_winter
       BSC/girafe/Conifers/Grfe_props_pack_LE_conifers.dat:
         1dfe2f82:
-          model: 5ad0e817-a23728af-00030000
+          model: a23728af
           name: Grfe_conifer_E_evergreen
         1dfe323d:
           name: Grfe_conifer_B_winter
@@ -2282,24 +3284,24 @@ assets:
         3dfe39a5:
           name: Grfe_conifer_D_winter
         3dfe4b05:
-          model: 5ad0e817-408d82dc-00030000
+          model: 408d82dc
           name: Grfe_conifer_A_evergreen
         3dfe50fe:
           name: Grfe_conifer_A_summer
         3dfe5224:
           name: Grfe_conifer_A_winter
         5dfe2f5d:
-          model: 5ad0e817-0237145d-00030000
+          model: 0237145d
           name: Grfe_conifer_C_evergreen
         5dfe3091:
           name: Grfe_conifer_B_summer
         5dfe30c9:
           name: Grfe_conifer_E_summer
         7dfe2f4a:
-          model: 5ad0e817-82371072-00030000
+          model: '82371072'
           name: Grfe_conifer_B_evergreen
         7dfe3052:
-          model: 5ad0e817-a08d6853-00030000
+          model: a08d6853
           name: Grfe_conifer_H_evergreen
         7dfe30b6:
           name: Grfe_conifer_D_summer
@@ -2314,39 +3316,39 @@ assets:
         9dfe3270:
           name: Grfe_conifer_E_winter
         bdfe2f6e:
-          model: 5ad0e817-0237188c-00030000
+          model: 0237188c
           name: Grfe_conifer_D_evergreen
         bdfe2fa7:
-          model: 5ad0e817-608d61dd-00030000
+          model: 608d61dd
           name: Grfe_conifer_G_evergreen
         bdfe3205:
           name: Grfe_conifer_H_summer
         bdfefc81:
-          model: 5ad0e817-608e33f4-00030000
+          model: 608e33f4
           name: Grfe_conifer_F_evergreen
         ddfe30a4:
           name: Grfe_conifer_C_summer
       BSC/girafe/Cypresses/Grfe_props_pack_LE_cypresses.dat:
         3ee8b811:
-          model: 5ad0e817-41c70a76-00030000
+          model: 41c70a76
           name: Grfe_cypress_A_evergreen
         5ee41cf2:
-          model: 5ad0e817-e124c191-00030000
+          model: e124c191
           name: Grfe_cypress_C_evergreen
         bee41cd0:
-          model: 5ad0e817-2124c32e-00030000
+          model: 2124c32e
           name: Grfe_cypress_E_evergreen
         dee41cff:
-          model: 5ad0e817-e124c0eb-00030000
+          model: e124c0eb
           name: Grfe_cypress_B_evergreen
         fee41ce2:
-          model: 5ad0e817-2124c23a-00030000
+          model: 2124c23a
           name: Grfe_cypress_D_evergreen
       BSC/girafe/Daisy v2/Grfe_props_pack_LE_daisy.dat:
         13b03670:
           name: Grfe_daisy_B_spring
         33b0363a:
-          model: 5ad0e817-43305503-00030000
+          model: '43305503'
           name: Grfe_daisy_B_evergreen
         53b03622:
           name: Grfe_daisy_B_summer
@@ -2355,7 +3357,7 @@ assets:
         93b035bb:
           name: Grfe_daisy_A_summer
         93b035de:
-          model: 5ad0e817-23305483-00030000
+          model: '23305483'
           name: Grfe_daisy_A_evergreen
       BSC/girafe/Elms/Grfe_props_pack_LE_elms.dat:
         23dd10c1:
@@ -2375,29 +3377,29 @@ assets:
         83dd112f:
           name: Grfe_elm_E_autumn
         83ddeac2:
-          model: 5ad0e817-83d9e04c-00030000
+          model: 83d9e04c
           name: Grfe_elm_A_evergreen
         83ddeb1e:
           name: Grfe_elm_B_summer
         83ddf665:
           name: Grfe_elm_A_autumn
         c3dd1828:
-          model: 5ad0e817-c3cfc753-00030000
+          model: c3cfc753
           name: Grfe_elm_E_evergreen
         c3dd1839:
           name: Grfe_elm_E_summer
         c3ddeaf4:
-          model: 5ad0e817-83d9db22-00030000
+          model: 83d9db22
           name: Grfe_elm_C_evergreen
         c3ddebc4:
           name: Grfe_elm_C_winter
         e3dd0fdd:
-          model: 5ad0e817-23cfcc93-00030000
+          model: 23cfcc93
           name: Grfe_elm_D_evergreen
         e3dd103a:
           name: Grfe_elm_D_summer
         e3ddeae1:
-          model: 5ad0e817-e3d9dd4e-00030000
+          model: e3d9dd4e
           name: Grfe_elm_B_evergreen
         e3ddeb09:
           name: Grfe_elm_A_summer
@@ -2408,7 +3410,7 @@ assets:
           name: Grfe_elm_A_autumn
       BSC/girafe/Feather grass/Grfe_props_pack_LE_feather_grass.dat:
         df334f28:
-          model: 5ad0e817-c0ff6a3a-00030000
+          model: c0ff6a3a
           name: Grfe_feather_grass_A_evergreen
         df3350bc:
           name: Grfe_feather_grass_A_summer
@@ -2424,35 +3426,35 @@ assets:
         4cc58c5d:
           name: Grfe_grand_fir_A_winter
         6c5ac742:
-          model: 5ad0e817-4b1e3aec-00030000
+          model: 4b1e3aec
           name: Grfe_grand_fir_E_evergreen
         6cc57988:
           name: Grfe_grand_fir_D_summer
         6cc58cbc:
           name: Grfe_grand_fir_B_winter
         8c5ac72b:
-          model: 5ad0e817-8b1e2e2f-00030000
+          model: 8b1e2e2f
           name: Grfe_grand_fir_C_evergreen
         8c5ac773:
-          model: 5ad0e817-cb1e3464-00030000
+          model: cb1e3464
           name: Grfe_grand_fir_D_evergreen
         acc57976:
           name: Grfe_grand_fir_C_summer
         acc58cf7:
           name: Grfe_grand_fir_E_winter
         cc5ac712:
-          model: 5ad0e817-6b1e2af6-00030000
+          model: 6b1e2af6
           name: Grfe_grand_fir_B_evergreen
         ccc57931:
           name: Grfe_grand_fir_A_summer
         ccc58ce5:
           name: Grfe_grand_fir_D_winter
         ec5ac6f4:
-          model: 5ad0e817-0b1e1a7b-00030000
+          model: 0b1e1a7b
           name: Grfe_grand_fir_A_evergreen
       BSC/girafe/Honey locust/Grfe_props_pack_LE_honey_locust.dat:
         3f798ac4:
-          model: 5ad0e817-e20608a0-00030000
+          model: e20608a0
           name: Grfe_honey_locust_A_evergreen
         3f798ad8:
           name: Grfe_honey_locust_E_summer
@@ -2461,7 +3463,7 @@ assets:
         5f798b10:
           name: Grfe_honey_locust_B_summer
         7f798a78:
-          model: 5ad0e817-82060a73-00030000
+          model: 82060a73
           name: Grfe_honey_locust_E_evergreen
         7f798b1f:
           name: Grfe_honey_locust_A_summer
@@ -2484,13 +3486,13 @@ assets:
         ff798652:
           name: Grfe_honey_locust_C_winter
         ff798a91:
-          model: 5ad0e817-02060220-00030000
+          model: '02060220'
           name: Grfe_honey_locust_D_evergreen
         ff798aa3:
-          model: 5ad0e817-e20605bc-00030000
+          model: e20605bc
           name: Grfe_honey_locust_C_evergreen
         ff798ab4:
-          model: 5ad0e817-22060736-00030000
+          model: '22060736'
           name: Grfe_honey_locust_B_evergreen
         ff7ac5ed:
           name: Grfe_honey_locust_E_autumn
@@ -2498,15 +3500,15 @@ assets:
           name: Grfe_honey_locust_D_autumn
       BSC/girafe/Lindens/Grfe_props_pack_LE_lindens.dat:
         1def8ee5:
-          model: 5ad0e817-9dd7f9c4-00450000
+          model: 9dd7f9c4-0045
           name: Grfe_linden_A_evergreen
         1deface2:
           name: Grfe_linden_F_autumn
         3def90f2:
-          model: 5ad0e817-9dd7f9c4-00310000
+          model: 9dd7f9c4-0031
           name: Grfe_linden_D_evergreen
         3def9ae6:
-          model: 5ad0e817-407ed32d-00030000
+          model: 407ed32d
           name: Grfe_linden_E_evergreen
         3def9bda:
           name: Grfe_linden_D_summer
@@ -2531,17 +3533,17 @@ assets:
         7e06ed75:
           name: Grfe_linden_C_summer
         7e06ee6c:
-          model: 5ad0e817-e0962388-00030000
+          model: e0962388
           name: Grfe_linden_C_evergreen
         9def8f05:
-          model: 5ad0e817-9dd7f9c4-00480000
+          model: 9dd7f9c4-0048
           name: Grfe_linden_B_evergreen
         bdefa194:
           name: Grfe_linden_E_winter
         ddef9bee:
           name: Grfe_linden_E_summer
         fdef9918:
-          model: 5ad0e817-a07ecec7-00030000
+          model: a07ecec7
           name: Grfe_linden_F_evergreen
         fdef9b93:
           name: Grfe_linden_A_summer
@@ -2553,7 +3555,7 @@ assets:
           name: Grfe_linden_E_autumn
       BSC/girafe/Lupins/Grfe_props_pack_LE_lupins.dat:
         1df7603d:
-          model: 5ad0e817-2145cacf-00030000
+          model: 2145cacf
           name: Grfe_lupin_A_evergreen
         1df7605a:
           name: Grfe_lupin_A_summer
@@ -2562,7 +3564,7 @@ assets:
         3df7604c:
           name: Grfe_lupin_A_spring
         3df760aa:
-          model: 5ad0e817-c145cda7-00030000
+          model: c145cda7
           name: Grfe_lupin_C_evergreen
         3df760b8:
           name: Grfe_lupin_C_spring
@@ -2571,7 +3573,7 @@ assets:
         7df760d3:
           name: Grfe_lupin_C_winter
         bdf7606f:
-          model: 5ad0e817-2145cb72-00030000
+          model: 2145cb72
           name: Grfe_lupin_B_evergreen
         ddf7607f:
           name: Grfe_lupin_B_spring
@@ -2593,7 +3595,7 @@ assets:
         1cfcad83:
           name: Grfe_maple_G_winter
         1d04c88d:
-          model: 5ad0e817-fd0217b7-00030000
+          model: fd0217b7
           name: Grfe_maple_E_evergreen
         3cfc98fc:
           name: Grfe_maple_A_autumn
@@ -2602,7 +3604,7 @@ assets:
         3cfcbab5:
           name: Grfe_maple_B_winter
         3d04c818:
-          model: 5ad0e817-5d02128f-00030000
+          model: 5d02128f
           name: Grfe_maple_A_evergreen
         5cfb485d:
           name: Grfe_maple_H_summer
@@ -2619,23 +3621,23 @@ assets:
         7cfcad43:
           name: Grfe_maple_D_winter
         7d04c8cb:
-          model: 5ad0e817-1d022207-00030000
+          model: 1d022207
           name: Grfe_maple_H_evergreen
         9cfc9959:
           name: Grfe_maple_E_autumn
         9d04c8a2:
-          model: 5ad0e817-1d021c24-00030000
+          model: 1d021c24
           name: Grfe_maple_F_evergreen
         bd04c867:
-          model: 5ad0e817-7d021659-00030000
+          model: 7d021659
           name: Grfe_maple_D_evergreen
         dcfb38b5:
           name: Grfe_maple_F_summer
         dd04c83d:
-          model: 5ad0e817-9d0213ec-00030000
+          model: 9d0213ec
           name: Grfe_maple_B_evergreen
         dd04c8b6:
-          model: 5ad0e817-dd021f59-00030000
+          model: dd021f59
           name: Grfe_maple_G_evergreen
         fcfb2cd0:
           name: Grfe_maple_D_summer
@@ -2650,11 +3652,11 @@ assets:
         fcfcad59:
           name: Grfe_maple_E_winter
         fd04c853:
-          model: 5ad0e817-fd02152d-00030000
+          model: fd02152d
           name: Grfe_maple_C_evergreen
       BSC/girafe/Narcissus/Grfe_props_pack_LE_narcissus.dat:
         1e390f91:
-          model: 5ad0e817-00c84726-00030000
+          model: 00c84726
           name: Grfe_narcissus_A_evergreen
         1e390fa1:
           name: Grfe_narcissus_A_spring
@@ -2666,14 +3668,14 @@ assets:
         1f4b6960:
           name: Grfe_norway_maple_D_summer
         3f4b6857:
-          model: 5ad0e817-a1da723d-00030000
+          model: a1da723d
           name: Grfe_norway_maple_A_evergreen
         3f4b6887:
           name: Grfe_norway_maple_B_autumn
         3f4b68d8:
           name: Grfe_norway_maple_C_autumn
         5f4b68ed:
-          model: 5ad0e817-01da8465-00030000
+          model: 01da8465
           name: Grfe_norway_maple_C_evergreen
         5f4b693c:
           name: Grfe_norway_maple_D_autumn
@@ -2690,24 +3692,24 @@ assets:
         df4b6870:
           name: Grfe_norway_maple_A_summer
         ff4b689c:
-          model: 5ad0e817-c1da7be5-00030000
+          model: c1da7be5
           name: Grfe_norway_maple_B_evergreen
         ff4b68c4:
           name: Grfe_norway_maple_B_winter
         ff4b694e:
-          model: 5ad0e817-01da963e-00030000
+          model: 01da963e
           name: Grfe_norway_maple_D_evergreen
       BSC/girafe/Oaks v2/Grfe_Props_Pack_LE_Oaks.dat:
         0cfbb16c:
-          model: 5ad0e817-6cf3900f-00030000
+          model: 6cf3900f
           name: Grfe_oak_E_evergreen
         0cfcb7f4:
           name: Grfe_oak_B_winter
         2cfbb114:
-          model: 5ad0e817-8cf3895e-00030000
+          model: 8cf3895e
           name: Grfe_oak_A_evergreen
         4cfcb7dd:
-          model: 5ad0e817-2fb37d27-00030000
+          model: 2fb37d27
           name: Grfe_oak_B_evergreen
         6cfbb0cf:
           name: Grfe_oak_D_winter
@@ -2722,7 +3724,7 @@ assets:
         8cfbb0e1:
           name: Grfe_oak_E_winter
         8cfbb144:
-          model: 5ad0e817-acf38cd9-00030000
+          model: acf38cd9
           name: Grfe_oak_C_evergreen
         8cfc9dcc:
           name: Grfe_oak_A_autumn
@@ -2739,25 +3741,25 @@ assets:
         ccfc9e22:
           name: Grfe_oak_D_autumn
         ecfbb158:
-          model: 5ad0e817-0cf38e5d-00030000
+          model: 0cf38e5d
           name: Grfe_oak_D_evergreen
         ecfbb198:
           name: Grfe_oak_D_summer
       BSC/girafe/Parasol pines/Grfe_props_pack_parasol_pines_LE.dat:
         7ea82a89:
-          model: 5ad0e817-21375d47-00030000
+          model: 21375d47
           name: Grfe_parasol_pine_D_evergreen
         9ea82a5b:
-          model: 5ad0e817-e13753b3-00030000
+          model: e13753b3
           name: Grfe_parasol_pine_A_evergreen
         bea82a7c:
-          model: 5ad0e817-813759f7-00030000
+          model: 813759f7
           name: Grfe_parasol_pine_C_evergreen
         bea82a95:
-          model: 5ad0e817-61375fa8-00030000
+          model: 61375fa8
           name: Grfe_parasol_pine_E_evergreen
         fea82a6f:
-          model: 5ad0e817-e137561b-00030000
+          model: e137561b
           name: Grfe_parasol_pine_B_evergreen
       BSC/girafe/Poplars/Grfe_props_pack_LE_poplars.dat:
         079c1fc9:
@@ -2765,10 +3767,10 @@ assets:
         079c2001:
           name: Grfe_poplar_E_summer
         279c1f0d:
-          model: 5ad0e817-0790ce33-00030000
+          model: 0790ce33
           name: Grfe_poplar_A_evergreen
         279c1f8e:
-          model: 5ad0e817-6790e985-00030000
+          model: '6790e985'
           name: Grfe_poplar_E_evergreen
         279c1fef:
           name: Grfe_poplar_D_summer
@@ -2781,7 +3783,7 @@ assets:
         479c20e7:
           name: Grfe_poplar_B_autumn
         679c1f65:
-          model: 5ad0e817-6790e227-00030000
+          model: '6790e227'
           name: Grfe_poplar_C_evergreen
         a79c2067:
           name: Grfe_poplar_B_winter
@@ -2792,14 +3794,14 @@ assets:
         a79c2120:
           name: Grfe_poplar_E_autumn
         c79c1f7b:
-          model: 5ad0e817-8790e69f-00030000
+          model: 8790e69f
           name: Grfe_poplar_D_evergreen
         c79c1fb1:
           name: Grfe_poplar_A_summer
         c79c210f:
           name: Grfe_poplar_D_autumn
         e79c1f4c:
-          model: 5ad0e817-4790d2f4-00030000
+          model: 4790d2f4
           name: Grfe_poplar_B_evergreen
         e79c204d:
           name: Grfe_poplar_A_winter
@@ -2807,7 +3809,7 @@ assets:
           name: Grfe_poplar_A_autumn
       BSC/girafe/Poppies/Grfe_props_pack_LE_poppies.dat:
         1e368cd8:
-          model: 5ad0e817-80c5c640-00030000
+          model: 80c5c640
           name: Grfe_poppy_A_evergreen
         5e368c3f:
           name: Grfe_poppy_A_spring
@@ -2819,15 +3821,15 @@ assets:
         034ead65:
           name: Grfe_rowan_tree_C_winter
         034ead8c:
-          model: 5ad0e817-628068ff-00030000
+          model: 628068ff
           name: Grfe_rowan_tree_D_evergreen
         034eadc5:
           name: Grfe_rowan_tree_D_winter
         234eac4d:
-          model: 5ad0e817-22806260-00030000
+          model: '22806260'
           name: Grfe_rowan_tree_A_evergreen
         234ead27:
-          model: 5ad0e817-828063cd-00030000
+          model: 828063cd
           name: Grfe_rowan_tree_C_evergreen
         234ead51:
           name: Grfe_rowan_tree_C_autumn
@@ -2838,12 +3840,12 @@ assets:
         634ead3c:
           name: Grfe_rowan_tree_C_summer
         634eae07:
-          model: 5ad0e817-22806eb2-00030000
+          model: 22806eb2
           name: Grfe_rowan_tree_E_evergreen
         a34eac98:
           name: Grfe_rowan_tree_A_winter
         a34eacba:
-          model: 5ad0e817-e27fccf8-00030000
+          model: e27fccf8
           name: Grfe_rowan_tree_B_evergreen
         a34eacce:
           name: Grfe_rowan_tree_B_summer
@@ -2863,31 +3865,31 @@ assets:
         0c372808:
           name: Grfe_Serbien_spruce_D_winter
         2c35c699:
-          model: 5ad0e817-ec357b46-00070000
+          model: ec357b46-0007
           name: Grfe_Serbien_spruce_A_evergreen
         2c3727fc:
           name: Grfe_Serbien_spruce_A_winter
         2c372823:
           name: Grfe_Serbien_spruce_B_winter
         4c3597db:
-          model: 5ad0e817-ec357b46-00040000
+          model: ec357b46-0004
           name: Grfe_Serbien_spruce_C_evergreen
         4c359801:
-          model: 5ad0e817-ec357b46-00030000
+          model: ec357b46
           name: Grfe_Serbien_spruce_B_evergreen
         4c35ca5e:
           name: Grfe_Serbien_spruce_E_summer
         6c3727ef:
           name: Grfe_Serbien_spruce_E_winter
         8c3597ca:
-          model: 5ad0e817-ec357b46-00050000
+          model: ec357b46-0005
           name: Grfe_Serbien_spruce_D_evergreen
         8c35ca48:
           name: Grfe_Serbien_spruce_D_summer
         ac35ca04:
           name: Grfe_Serbien_spruce_A_summer
         cc3597ac:
-          model: 5ad0e817-ec357b46-00060000
+          model: ec357b46-0006
           name: Grfe_Serbien_spruce_E_evergreen
         cc35ca1b:
           name: Grfe_Serbien_spruce_B_summer
@@ -2901,20 +3903,20 @@ assets:
         3ee1e69b:
           name: Grfe_sparaxis_red_summer
         3ee1e93c:
-          model: 5ad0e817-a0fd1e24-00030000
+          model: a0fd1e24
           name: Grfe_sparaxis_orange_evergreen
         5ee1e678:
           name: Grfe_sparaxis_white_summer
         5ee1e91d:
-          model: 5ad0e817-a0fd1e6c-00030000
+          model: a0fd1e6c
           name: Grfe_sparaxis_red_evergreen
         9ee1e68a:
           name: Grfe_sparaxis_spring
         9ee1e90e:
-          model: 5ad0e817-00fd1db8-00030000
+          model: 00fd1db8
           name: Grfe_sparaxis_white_evergreen
         9ee1e92d:
-          model: 5ad0e817-80fd1de9-00030000
+          model: 80fd1de9
           name: Grfe_sparaxis_pink_evergreen
         bee1e6cb:
           name: Grfe_sparaxis_orange_summer
@@ -2930,26 +3932,26 @@ assets:
         3e05d121:
           name: Grfe_subalpinefir_E_summer
         5e05877c:
-          model: 5ad0e817-a094bc72-00030000
+          model: a094bc72
           name: Grfe_subalpinefir_A_evergreen
         5e05d0ce:
-          model: 5ad0e817-4094ed40-00030000
+          model: 4094ed40
           name: Grfe_subalpinefir_D_evergreen
         7e05d10c:
-          model: 5ad0e817-8094f6c6-00030000
+          model: 8094f6c6
           name: Grfe_subalpinefir_E_evergreen
         7e060b28:
-          model: 5ad0e817-c09542f7-00030000
+          model: c09542f7
           name: Grfe_subalpinefir_B_evergreen
         '7e061040':
           name: Grfe_subalpinefir_B_winter
         9e057cff:
           name: Grfe_subalpinefir_F_winter
         9e05cfb6:
-          model: 5ad0e817-c095044f-00030000
+          model: c095044f
           name: Grfe_subalpinefir_G_evergreen
         9e05d093:
-          model: 5ad0e817-c094e4f7-00030000
+          model: c094e4f7
           name: Grfe_subalpinefir_C_evergreen
         be05d0e2:
           name: Grfe_subalpinefir_D_summer
@@ -2958,7 +3960,7 @@ assets:
         be060e9a:
           name: Grfe_subalpinefir_B_summer
         de057766:
-          model: 5ad0e817-6094ae55-00030000
+          model: 6094ae55
           name: Grfe_subalpinefir_F_evergreen
         de0587a7:
           name: Grfe_subalpinefir_A_winter
@@ -3035,7 +4037,7 @@ assets:
         0562eb1d:
           name: Grfe_walnut_tree_D_winter
         2562e9aa:
-          model: 5ad0e817-a4f6bc41-00030000
+          model: a4f6bc41
           name: Grfe_walnut_tree_C_evergreen
         2562ea30:
           name: Grfe_walnut_tree_C_summer
@@ -3044,7 +4046,7 @@ assets:
         2562eb2d:
           name: Grfe_walnut_tree_E_winter
         4562e9be:
-          model: 5ad0e817-44f6ba6f-00030000
+          model: 44f6ba6f
           name: Grfe_walnut_tree_D_evergreen
         4562f1e3:
           name: Grfe_walnut_tree_A_autumn
@@ -3053,7 +4055,7 @@ assets:
         6562eaf9:
           name: Grfe_walnut_tree_B_winter
         '8562e999':
-          model: 5ad0e817-c4f6c694-00030000
+          model: c4f6c694
           name: Grfe_walnut_tree_B_evergreen
         8562ea1d:
           name: Grfe_walnut_tree_B_summer
@@ -3066,10 +4068,10 @@ assets:
         a562ebad:
           name: Grfe_walnut_tree_D_autumn
         c562e985:
-          model: 5ad0e817-a4f6cb32-00030000
+          model: a4f6cb32
           name: Grfe_walnut_tree_A_evergreen
         c562e9d2:
-          model: 5ad0e817-24f6b39f-00030000
+          model: 24f6b39f
           name: Grfe_walnut_tree_E_evergreen
         c562eb9c:
           name: Grfe_walnut_tree_C_autumn
@@ -3090,7 +4092,7 @@ assets:
           name: Grfe_wheat_summer
         7cd69d2c:
           family: af440005
-          model: 5ad0e817-3c39ba7e-00030000
+          model: 3c39ba7e
           name: Grfe_haybale_empty_C
         9cc3cd1a:
           family: af440003

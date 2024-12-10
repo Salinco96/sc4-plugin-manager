@@ -1,5 +1,6 @@
 import { ExemplarPropertyID } from "@common/exemplars"
 import type { FloraData } from "@node/data/mmps"
+import { getModelId } from "src/scripts/dbpf/dbpf"
 import type { Exemplar } from "./types"
 import { getString, getTGI } from "./utils"
 
@@ -28,7 +29,7 @@ export function getFloraData(exemplar: Exemplar): FloraData {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = model
+    data.model = getModelId(model)
   }
 
   return data
