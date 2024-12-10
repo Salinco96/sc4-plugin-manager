@@ -116,7 +116,7 @@ runIndexer({
       // Nothing
     },
   },
-  refetchIntervalHours: 300,
+  refetchIntervalHours: 20,
   sources: [SC4EVERMORE, SIMTROPOLIS],
   version: 1,
 })

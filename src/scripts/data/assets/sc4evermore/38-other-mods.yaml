@@ -1,21 +1,17 @@
 assets:
   sc4evermore/42:
     assetId: sc4evermore/42-bird-pesticides-mod-by-ripplejet
-    authors:
-      - sc4evermore
     category: 38-other-mods
-    downloads: 224
+    downloads: 225
     lastModified: 2023-07-25T10:30:42.000Z
     name: Bird Pesticides Mod by RippleJet
     url: https://www.sc4evermore.com/index.php/downloads/download/38-other-mods/42-bird-pesticides-mod-by-ripplejet
   sc4evermore/43:
     assetId: sc4evermore/43-disable-bridge-wash-effect-mod-by-ripplejet
-    authors:
-      - sc4evermore
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>Disable Bridge Wash Effect Mod by RippleJet</strong></p>\r\n<p><br><strong>Metasmurf</strong> requested a mod that removes the wash effect which appears around the columns of bridges.There are four of them, but only two of them are used for the in-game bridges.</p>\r\n<p>This mod simply disables all four wash effects, blocking them from appearing.\_ Whenever you want them to appear again,just remove <strong>RJ - Disable Bridge Wash Effect 1.1.dat</strong> from your plugins.</p>\r\n<p><br>There is no installer included, as you will have to decide yourself if you want to use the disabler or not. </p>\r\n<p>There is also no readme included.</p>\r\n<p>For more details, please refer to my &lt;a href=http://sc4devotion.com/forums/index.php?board=275.0&gt;&lt;b&gt;Support Board&lt;/b&gt;&lt;/a&gt; on the SC4Devotion Forum Archives.</p>\r\n<p>Thank you <strong>Metasmurf </strong>for the in-game images to this upload!&lt;</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 255
+    downloads: 256
     file: BSC RJ Disable Bridge Wash Effect 1.1.zip
     files:
       - _Documents/RJ Disable Bridge Wash/RJ - Disable Bridge Wash_readme.txt
@@ -32,12 +28,10 @@ assets:
     version: '1.1'
   sc4evermore/44:
     assetId: sc4evermore/44-block-maxis-hanggliders-mod-by-ripplejet
-    authors:
-      - sc4evermore
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>Block Maxis Hanggliders Mod by RippleJet</strong></p>\r\n<p>Maxis' Hang Glider is spawned by the Marina.\_ As soon as you've built that reward you will have hang gliders all over your city.</p>\r\n<p><br>Whenever you want to take a snapshot for an upload or for a Mayor's Diary, you'd be certain to get one of those gliders in the middle of the picture.<br>This mod blocks these hang gliders from appearing.\_ Whenever you want them to appear again, just remove <strong>RJ - Block Maxis Hangglider.dat</strong> from your plugins.</p>\r\n<p><br>There is no installer included,as you will have to decide yourself if you want to use the blocker or not.\_ </p>\r\n<p><br>There is also no readme included.\_ A brief discussion can be found <a href=\"https://sc4devotion.com/forums/index.php?topic=4390.0\"><strong>here</strong></a> though.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 269
+    downloads: 270
     file: BSC RJ Block Maxis Hangglider 1.0.zip
     files:
       - _Documents/RJ Block Maxis Hangglider/RJ - Block Maxis Hangglider_readme.txt
@@ -54,12 +48,10 @@ assets:
     version: '1'
   sc4evermore/45:
     assetId: sc4evermore/45-block-road-barriers-mod-by-ripplejet
-    authors:
-      - sc4evermore
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>Block Road Barriers Mod by RippleJet</strong></p>\r\n<p>The black and yellow road barrier props appear at the end of all ordinary networks, Streets, Roads, One-Way Roads, Avenues and Highways. This little mod simply disables two small props, and removes all barriers on the fly.</p>\r\n<p>Whenever you don't want the barriers in the game, place this mod in your plugins folder. \_Whenever you want the barriers back again,just remove <strong>RJ - Block Road Barriers 1.0.dat</strong> from your plugins.</p>\r\n<p>There is no installer included, as you will have to decide yourself if you want the barriers or not. </p>\r\n<p>There is also no readme included. \_A brief discussion can be found following the request <a href=\"https://sc4devotion.com/forums/index.php?topic=9634.msg294732#msg294732\"><strong>here</strong></a> though.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 298
+    downloads: 299
     file: BSC RJ Block Road Barriers 1.0.zip
     files:
       - _Documents/RJ Block Road Barriers/RJ - Block Road Barriers.jpg
@@ -76,8 +68,6 @@ assets:
     version: '1'
   sc4evermore/46:
     assetId: sc4evermore/46-brighter-street-lights-mod-by-ripplejet
-    authors:
-      - sc4evermore
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>Brighter $$$ Street Lights Mod by RippleJet</strong></p>\r\n<p>The high wealth street lights were given very small light bulbs by Maxis.<br>This means that the high wealth areas look darker at night than the rest of the city.<br>(I guess they wouldn't be able to sleep otherwise...)<br>This mod replaces those small light bulbs in all $$$ street lights with a light cone.<br>This gives a better illuminated city at night.<br>Especially if you are using Gizmo's <strong>Day-Night Mod v2.0</strong>!<br>There is no installer included, as you will have to decide yourself if you want to use the brighter street lights or not.</p>\r\n<p><br>There is also no readme included.<br>A brief discussion about it can be found <a href=\"https://sc4devotion.com/forums/index.php?topic=4447.0\"><strong>here</strong></a> though.<br>A discussion about Gizmo's mod can be found <a href=\"https://sc4devotion.com/forums/index.php?topic=2324.0\"><strong>here</strong></a>.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
@@ -98,8 +88,6 @@ assets:
     version: '1'
   sc4evermore/47:
     assetId: sc4evermore/47-ghostbusters-by-ripplejet
-    authors:
-      - sc4evermore
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>Ghostbusters by RippleJet</strong></p>\r\n<p><em>Who you gonna call?</em><br>Zombies and ghosts appear on cemetaries in October.<br>They are game effects, which can be disabled with this mod.<br>There is no installer included, as you will have to decide yourself whether you want to call the Ghostbusters or not.<br><br>Whenever you want zombies and ghosts to reappear on cemetaries,&lt;br&gt;just remove RJ - Ghostbusters.dat from your plugins.</p>\r\n<p>There is also no readme included!</p>\r\n<p>For more info, please visit my <a href=\"https://sc4devotion.com/forums/index.php?board=275.0\"><strong>Support Board</strong></a> on the SC4Devotion Forum Archives.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
@@ -120,8 +108,6 @@ assets:
     version: '1'
   sc4evermore/48:
     assetId: sc4evermore/48-longer-night-lights-mod-by-ripplejet
-    authors:
-      - sc4evermore
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>Longer Night Lights Mod by RippleJet</strong></p>\r\n<p>Gizmo's <strong>Day-Night Mod v2.0</strong> makes the nights darker and longer.<br>However, the night lights in the game are set to be lit between 20:00 and 01:00.<br>After 1 am this means the cities will be pitch dark till dawn at 7 am.<br>This mod extends the time the night lights are lit, to match the day/night cycle in Gizmo's mod.<br>With this mod, the lights are lit between 18:00 and 07:00.</p>\r\n<p><br>There is no installer included, as you will have to decide yourself if you want to use the longer night lights or not.</p>\r\n<p><br>There is also no readme included.</p>\r\n<p><br>A brief discussion about it and Gizmo's mod can be found <a href=\"https://sc4devotion.com/forums/index.php?topic=2324.0\"><strong>here</strong></a> though.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
@@ -142,12 +128,10 @@ assets:
     version: '1'
   sc4evermore/49:
     assetId: sc4evermore/49-toilet-paper-free-toilet-paper-tree-mod-by-ripplejet
-    authors:
-      - sc4evermore
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>Toilet Paper Free Toilet Paper Tree Mod by RippleJet</strong></p>\r\n<p>The Toilet Paper Tree is a deciduous tree prop made by Maxis.<br>The same tree normally appears in the game without any toilet paper.<br>However, if you allow crime to escalate, some of these trees will appear with toilet paper hanging from the branches.<br>This mod simply replaces the toilet paper tree model in that prop with the standard model without toilet paper.<br>Place the mod in your plugins folder whenever you want to flush the toilet paper.<br>You will not have to replop any trees, all existing toilet paper will disappear.<br>Whenever you want toilet papers back, just remove <strong>RJ - Toilet Paper Free Toilet Paper Tree.dat</strong> from your plugins.<br>There is no installer included, as you will have to decide yourself if you want flush the paper or not.<br><br>There is also no readme included.</p>\r\n<p><br>A brief discussion can be found following the request <a href=\"https://sc4devotion.com/forums/index.php?topic=5909.0\"><strong>here</strong></a> though.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 248
+    downloads: 250
     file: BSC RJ Toilet Paper Free Toilet Paper Tree.zip
     files:
       - Z___BSC Mods/RJ MODs/RJ - Toilet Paper Free Toilet Paper Tree 1.0.dat
@@ -178,7 +162,7 @@ assets:
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>NOTE: </strong>This file, by <strong>gizmo28</strong>, was originally hosted on <strong>Gizmo's SimCity 4 Mods</strong>, which has been non-functional since January 2019. It has been uploaded to the LEX in good faith to restore access and availability, following reasonable attempts to contact the original author. Further details can be found on the appropriate thread in the <a href=\"http://sc4devotion.com/forums/index.php?topic=17746.msg517075;topicseen#msg517075\">SC4 Community Preservation and Access Board</a> on the SC4 Devotion Forums. In the absence of the original author, technical support will be provided by Preservation and Access (P&amp;A) Project on the previously linked board.</p>\r\n<p>\_</p>\r\n<p>This file is packaged as a .zip archive, and may be easily opened on any platform.</p>\r\n<p>\_</p>\r\n<hr>\r\n<p><strong>Details/Development</strong></p>\r\n<p class=\"style18\">This mod involved editing the effects directory and numerous FSH files, 3d models and a few exemplars. This was a best effort mod, as some things can't be fixed as the main exe might be controlling them, this can be seen with the lights, the brightness can only be raised to a certain point at night. It also involved hex editing a few animated 3d models which took a long time to do, and also was a best effort attempt. If you like the mod then use it, if you don't then no one forcing you to use it, <strong>I WILL NOT be changing anything on this mod, it's final in regards to the following; the darkness level, the brightness of all the lights</strong>. If it's a bug or something you think I may of missed let me know and I'll look into it.\_</p>\r\n<p class=\"style18\"><span class=\"style12\"><strong><span style=\"color: #cc3333;\"><span class=\"style14\">**This mod may not work properly with certain MODS, BATS, and other ADDONS** </span></span></strong><br>(Possible sources of conflicts might include water texture mods, mods that edited the lighting and terrain exemplar properties, and mods and BATS that use custom lights)</span></p>\r\n<p class=\"style18\"><span class=\"style24\"><strong>Installation</strong></span></p>\r\n<p class=\"style18\"><span class=\"style24\">To install this mod, put the extracted file or folder into your C:My DocumentsSimCity 4Plugins folder and follow any directions above, if any were listed. <br>To uninstall the mod, simply move or delete the file or folder you extracted from your C:My DocumentsSimCity 4Plugins folder.</span></p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 464
+    downloads: 465
     file: Gizmo - Day-Night Mod v2.0.zip
     files:
       - ~Documents/Gizmo_Readmes/Read Me_Day-Night Mod.htm
@@ -201,7 +185,7 @@ assets:
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>Ground Fog Effect by gizmo28</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 320
+    downloads: 321
     file: Gizmo - Ground Fog v1.0.zip
     files:
       - ~Documents/Gizmo_Readmes/Read Me_Ground Fog.htm
@@ -240,4 +224,4 @@ assets:
     version: '1.0'
 
 meta:
-  timestamp: 2024-12-09T08:56:27.588Z
+  timestamp: 2024-12-10T10:25:09.262Z

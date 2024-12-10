@@ -2385,7 +2385,7 @@ assets:
             name: .p_LM80x64_SeoulCityHallSquare_04C3
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>This upload contains the official \"SimCity 4 Buildings as Props Vol 1\" and \"SimCity 4 Buildings as Props Vol 2\" files provided by EA/Maxis.</p>\r\n<p>These files provide all buildings available in the base SimCity 4 game and the ones which were added to SimCity 4 in the Rush Hour Expansion in prop form, for use in lot creation. A third file can be found in the pack called <strong>Maxis DLC Props.dat</strong>, which contains the generic/common props from three of the official Maxis Landmark DLCs (Castleset.dat, Parthenon and Stonehange) and the props from the very ancient Plugin Landmark Props (from version 2.1). The main castle model and prop, the castle wall props, the main Parthenon building and prop and the main Stonehange building and prop are <span style=\"color: #e03e2d;\"><strong>NOT </strong></span>part of this file. This file was compiled to address the commonly listed props as dependencies.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/sc4buildingsaspropsvol1.jpg\" data-lightbox=\"lightbox14\" data-alt=\"lightboxsc4buildingsaspropsvol1.jpg|sc4buildingsaspropsvol2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol1.jpg\" alt=\"sc4buildingsaspropsvol1\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/sc4buildingsaspropsvol2.jpg\" data-lightbox=\"lightbox14\" data-alt=\"lightboxsc4buildingsaspropsvol1.jpg|sc4buildingsaspropsvol2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/sc4buildingsaspropsvol2.jpg\" alt=\"sc4buildingsaspropsvol22\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 2723
+    downloads: 2724
     file: Maxis_Building_As_Props_and_DLC_Props_v2.1_3560.zip
     files:
       - Maxis Original/Building As Props/bldgprop_vol1.dat
@@ -4746,7 +4746,7 @@ assets:
     authors:
       - Maxis
     category: 40-maxis
-    downloads: 500
+    downloads: 501
     lastModified: 2024-01-23T17:05:26.000Z
     name: Maxis Plugins Landmarks DLC
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Maxis Landmarks DLC_1.jpg
@@ -4766,7 +4766,7 @@ assets:
     authors:
       - Maxis
     category: 40-maxis
-    downloads: 367
+    downloads: 369
     lastModified: 2023-08-20T12:44:58.000Z
     name: Lot Editor
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/55-lot-editor
@@ -4784,7 +4784,7 @@ assets:
     authors:
       - Maxis
     category: 40-maxis
-    downloads: 344
+    downloads: 345
     lastModified: 2023-07-29T10:55:11.000Z
     name: Update for SimCity 4 Vanilla (SKU2)
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/69-update-for-simcity-4-vanilla-sku2
@@ -4811,7 +4811,7 @@ assets:
     authors:
       - Maxis
     category: 40-maxis
-    downloads: 297
+    downloads: 298
     lastModified: 2023-07-29T11:02:27.000Z
     name: Update for SimCity 4 Vanilla (SKU5)
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/72-update-for-simcity-4-vanilla-sku5
@@ -4826,26 +4826,20 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/73-update-for-simcity-4-rush-hour-deluxe-sku1
   sc4evermore/74:
     assetId: sc4evermore/74-update-for-simcity-4-rush-hour-deluxe-sku2
-    authors:
-      - sc4evermore
     category: 40-maxis
-    downloads: 543
+    downloads: 544
     lastModified: 2023-07-29T12:18:16.000Z
     name: Update for SimCity 4 Rush Hour / Deluxe (SKU2)
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/74-update-for-simcity-4-rush-hour-deluxe-sku2
   sc4evermore/75:
     assetId: sc4evermore/75-update-for-simcity-4-rush-hour-deluxe-sku3
-    authors:
-      - sc4evermore
     category: 40-maxis
-    downloads: 331
+    downloads: 332
     lastModified: 2023-07-29T12:24:35.000Z
     name: Update for SimCity 4 Rush Hour / Deluxe (SKU3)
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/75-update-for-simcity-4-rush-hour-deluxe-sku3
   sc4evermore/76:
     assetId: sc4evermore/76-update-for-simcity-4-rush-hour-deluxe-sku4
-    authors:
-      - sc4evermore
     category: 40-maxis
     downloads: 427
     lastModified: 2023-07-29T12:26:43.000Z
@@ -4853,8 +4847,6 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/76-update-for-simcity-4-rush-hour-deluxe-sku4
   sc4evermore/77:
     assetId: sc4evermore/77-update-for-simcity-4-rush-hour-deluxe-sku5
-    authors:
-      - sc4evermore
     category: 40-maxis
     downloads: 331
     lastModified: 2023-07-29T12:32:08.000Z
@@ -4862,8 +4854,6 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/77-update-for-simcity-4-rush-hour-deluxe-sku5
   sc4evermore/78:
     assetId: sc4evermore/78-nightlights-update
-    authors:
-      - sc4evermore
     category: 40-maxis
     downloads: 526
     lastModified: 2023-07-29T12:35:20.000Z
@@ -4871,4 +4861,4 @@ assets:
     url: https://www.sc4evermore.com/index.php/downloads/download/40-maxis/78-nightlights-update
 
 meta:
-  timestamp: 2024-12-09T08:56:27.588Z
+  timestamp: 2024-12-10T10:25:09.262Z
