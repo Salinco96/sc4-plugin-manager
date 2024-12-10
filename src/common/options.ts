@@ -59,8 +59,15 @@ export type Options = {
   lots?: string[]
 }
 
+export type Requirement = OptionID | Feature | "install.minVersion" | "install.patched"
+
+export const Requirement = {
+  EXE_4GB_PATCH: "install.patched",
+  MIN_VERSION: "install.minVersion",
+} satisfies Record<string, Requirement>
+
 export type Requirements = {
-  [optionId in OptionID | Feature]?: OptionSingleValue
+  [requirement in Requirement]?: OptionSingleValue
 }
 
 const defaultValues: {
@@ -130,7 +137,7 @@ export function getOptionInfo(
  */
 export function getRequirementText(
   t: TFunction<Namespace>,
-  requirement: OptionID | Feature,
+  requirement: Requirement,
   value: OptionSingleValue,
   packageOptions: OptionInfo[] | undefined,
   globalOptions: OptionInfo[] | undefined,
@@ -149,12 +156,18 @@ export function getRequirementText(
  */
 export function getRequirementLabel(
   t: TFunction<Namespace>,
-  requirement: OptionID | Feature,
+  requirement: Requirement,
   packageOptions: OptionInfo[] | undefined,
   globalOptions: OptionInfo[] | undefined,
 ): string {
-  if (requirement === "minVersion") {
-    return "Min version"
+  switch (requirement) {
+    case Requirement.EXE_4GB_PATCH: {
+      return "4GB patch"
+    }
+
+    case Requirement.MIN_VERSION: {
+      return "Min version"
+    }
   }
 
   const option = getOptionInfo(requirement as OptionID, packageOptions, globalOptions)
@@ -166,13 +179,15 @@ export function getRequirementLabel(
  */
 export function getRequirementValueLabel(
   t: TFunction<Namespace>,
-  requirement: OptionID | Feature,
+  requirement: Requirement,
   value: OptionSingleValue,
   packageOptions: OptionInfo[] | undefined,
   globalOptions: OptionInfo[] | undefined,
 ): string {
-  if (requirement === "minVersion") {
-    return `1.1.${value}.0`
+  switch (requirement) {
+    case Requirement.MIN_VERSION: {
+      return `1.1.${value}.0`
+    }
   }
 
   if (isBoolean(value)) {

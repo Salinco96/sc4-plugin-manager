@@ -91,6 +91,7 @@ export enum Issue {
   INCOMPATIBLE_FEATURE = "incompatible-feature",
   INCOMPATIBLE_OPTION = "incompatible-option",
   INCOMPATIBLE_VERSION = "incompatible-version",
+  MISSING_4GB_PATCH = "missing-4gb-patch",
   MISSING_FEATURE = "missing-feature",
 }
 

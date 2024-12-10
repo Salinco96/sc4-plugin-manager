@@ -255,6 +255,7 @@
     "incompatible-feature_zero": "Incompatible with <b>{{feature}}</b>",
     "incompatible-option": "Requires option <b>{{option}}</b> to be {{value}}",
     "incompatible-version": "Requires version <b>{{minVersion}}</b> or greater",
+    "missing-4gb-patch": "Requires 4GB patch",
     "missing-feature": "Requires <b>{{feature}}</b>"
   },
   "Menu": {

@@ -2,14 +2,12 @@ import { type ID, entries, isArray } from "@salinco/nice-utils"
 
 import type { AuthorID } from "./authors"
 import { isEnabledLot, isSC4LotFile, isTogglableLot } from "./lots"
-import { type OptionID, type OptionInfo, type Requirements, getOptionValue } from "./options"
+import { type OptionInfo, Requirement, type Requirements, getOptionValue } from "./options"
 import type { ProfileInfo } from "./profiles"
 import type { Settings } from "./settings"
 import type { Feature, Features, PackageInfo, PackageStatus } from "./types"
 import type { FileInfo } from "./variants"
 import { Issue, type VariantInfo, type VariantIssue } from "./variants"
-
-export const MIN_VERSION_OPTION_ID = "minVersion" as OptionID
 
 /** Package ID */
 export type PackageID = ID<string, PackageInfo>
@@ -96,13 +94,15 @@ export function checkCondition(
       return true
     }
 
-    if (requirement === MIN_VERSION_OPTION_ID) {
-      const patchVersion = settings?.install?.version?.split(".")[2]
-      if (!patchVersion) {
-        return true
+    switch (requirement) {
+      case Requirement.EXE_4GB_PATCH: {
+        return !!settings?.install?.patched === !!requiredValue
       }
 
-      return Number(patchVersion) >= Number(requiredValue)
+      case Requirement.MIN_VERSION: {
+        const patchVersion = settings?.install?.version?.split(".")[2]
+        return !patchVersion || Number(patchVersion) >= Number(requiredValue)
+      }
     }
 
     const packageOption = variantInfo?.options?.find(option => option.id === requirement)

@@ -22,12 +22,12 @@ import {
   type OptionID,
   type OptionInfo,
   type Options,
+  Requirement,
   getOptionInfo,
   getOptionValue,
   isOptionDefaultValue,
 } from "@common/options"
 import {
-  MIN_VERSION_OPTION_ID,
   type PackageID,
   checkCondition,
   getPackageStatus,
@@ -83,46 +83,61 @@ function getVariantIncompatibilities(
   // Check requirements
   if (variantInfo.requirements) {
     forEach(variantInfo.requirements, (requiredValue, requirement) => {
-      if (requirement === MIN_VERSION_OPTION_ID) {
-        const minVersion = Number(requiredValue)
-        const patchVersion = settings.install?.version?.split(".")[2]
-        if (patchVersion && Number(patchVersion) < minVersion) {
-          incompatibilities.push({
-            id: Issue.INCOMPATIBLE_VERSION,
-            minVersion: `1.1.${minVersion}.0`,
-          })
-        }
-      } else {
-        const option = getOptionInfo(requirement as OptionID, undefined, globalOptions)
-        if (option) {
-          const value = getOptionValue(option, profileOptions)
-          if (requiredValue !== value) {
+      switch (requirement) {
+        case Requirement.EXE_4GB_PATCH: {
+          if (requiredValue && !settings.install?.patched) {
             incompatibilities.push({
-              id: Issue.INCOMPATIBLE_OPTION,
-              option: option.id,
-              value: requiredValue,
+              id: Issue.MISSING_4GB_PATCH,
             })
           }
-        } else {
-          const featurePackageIds = features[requirement as Feature]
-          const isEnabled = !!featurePackageIds?.length
-          const isRequired = !!requiredValue
 
-          // Check feature requirements
-          if (isRequired !== isEnabled) {
-            if (isEnabled) {
+          break
+        }
+
+        case Requirement.MIN_VERSION: {
+          const patchVersion = settings.install?.version?.split(".")[2]
+          if (patchVersion && Number(patchVersion) < Number(requiredValue)) {
+            incompatibilities.push({
+              id: Issue.INCOMPATIBLE_VERSION,
+              minVersion: `1.1.${requiredValue}.0`,
+            })
+          }
+
+          break
+        }
+
+        default: {
+          const option = getOptionInfo(requirement as OptionID, undefined, globalOptions)
+          if (option) {
+            const value = getOptionValue(option, profileOptions)
+            if (requiredValue !== value) {
               incompatibilities.push({
-                id: Issue.INCOMPATIBLE_FEATURE,
-                external: featurePackageIds.includes(EXTERNAL),
-                feature: requirement as Feature,
-                packages: remove(featurePackageIds, EXTERNAL) as PackageID[],
+                id: Issue.INCOMPATIBLE_OPTION,
+                option: option.id,
+                value: requiredValue,
               })
-            } else {
-              incompatibilities.push({
-                id: Issue.MISSING_FEATURE,
-                feature: requirement as Feature,
-                // TODO: List of packages including the feature
-              })
+            }
+          } else {
+            const featurePackageIds = features[requirement as Feature]
+            const isEnabled = !!featurePackageIds?.length
+            const isRequired = !!requiredValue
+
+            // Check feature requirements
+            if (isRequired !== isEnabled) {
+              if (isEnabled) {
+                incompatibilities.push({
+                  id: Issue.INCOMPATIBLE_FEATURE,
+                  external: featurePackageIds.includes(EXTERNAL),
+                  feature: requirement as Feature,
+                  packages: remove(featurePackageIds, EXTERNAL) as PackageID[],
+                })
+              } else {
+                incompatibilities.push({
+                  id: Issue.MISSING_FEATURE,
+                  feature: requirement as Feature,
+                  // TODO: List of packages including the feature
+                })
+              }
             }
           }
         }
