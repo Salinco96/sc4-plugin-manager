@@ -44,7 +44,7 @@ export function PackageViewSummary({ packageId }: PackageViewTabInfoProps): JSX.
       {variantInfo.description && (
         <MarkdownView
           md={variantInfo.description.replace(
-            /\[.+\]\((https:\/\/community.simtropolis.com\/profile\/[^)]+\/)\)/g,
+            /\[.+\][(](https:[/][/]community[.]simtropolis[.]com[/]profile[/][^)/]+[/])[)]/g,
             (match, url) => {
               const authorInfo = values(authors).find(authorInfo => authorInfo.url === url)
               if (authorInfo) {

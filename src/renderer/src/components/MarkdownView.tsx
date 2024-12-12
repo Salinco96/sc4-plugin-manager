@@ -52,7 +52,7 @@ export function MarkdownView({ md }: MarkdownViewProps): JSX.Element {
       components={{
         a({ href, ref, ...props }) {
           const authorMatch = href?.match(
-            /https:\/\/community.simtropolis.com\/profile\/[^)]+\//,
+            /https:[/][/]community[.]simtropolis[.]com[/]profile[/][^/]+[/]/,
           )?.[0]
 
           if (authorMatch) {
