@@ -26,6 +26,7 @@ const VIEWABLETYPES = [
   DBPFDataType.BMP,
   DBPFDataType.EXMP,
   DBPFDataType.JFIF,
+  DBPFDataType.LTEXT,
   DBPFDataType.PNG,
   // TODO: XML not viewable atm because it can be confusing if values are not matching exemplar
   // DBPFDataType.XML,
@@ -103,7 +104,10 @@ export function PackageEntry({
           description={isEditable ? t("entry.patch") : t("entry.view")}
           icon={isEditable ? PatchIcon : PreviewIcon}
           onClick={async () => {
-            await loadEntry()
+            if (!entry.data) {
+              await loadEntry()
+            }
+
             setViewing(true)
           }}
         />

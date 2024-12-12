@@ -13,12 +13,11 @@ import {
 
 import { CategoryID } from "@common/categories"
 import { ExemplarPropertyID } from "@common/exemplars"
+import type { FamilyID } from "@common/families"
 import { Menu, type MenuID, Submenu } from "@common/submenus"
 import type { BuildingData } from "@node/data/buildings"
 import { writeMenu, writeMenus } from "@node/data/submenus"
 
-import type { FamilyID } from "@common/families"
-import { getModelId } from "src/scripts/dbpf/dbpf"
 import {
   BudgetItemDepartment,
   DemandID,
@@ -28,7 +27,7 @@ import {
   PowerPlantType,
   QueryExemplarGUID,
 } from "./types"
-import { get, getArray, getBool, getMap, getString, getTGI } from "./utils"
+import { get, getArray, getBool, getMap, getModelId, getString, getTGI } from "./utils"
 
 export function getBuildingData(exemplar: Exemplar): BuildingData {
   const data: BuildingData = {}

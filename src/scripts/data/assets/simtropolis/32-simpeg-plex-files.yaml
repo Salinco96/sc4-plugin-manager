@@ -4111,11 +4111,13 @@ assets:
           textures:
             - 261f0000
     meta:
-      timestamp: 2024-12-04T08:55:17.281Z
+      timestamp: 2024-12-11T10:51:59.470Z
       version: 1
     mmps:
       The_Terrain_Kit/PEGPROD/MTP/MTP MM2 Scrub Brush/PEG-MTP_MM2-ScrubBrush_MOD_100.dat:
         073d48f0:
+          description: One click plants a clump of Scrub Brush. Additional clicks on the plopped clump cycle through the 4 progressively smaller sizes.
+          label: Scrub Brush
           model: badb57f1-6e53
           name: Scrub Brush
           stages:
@@ -4133,6 +4135,8 @@ assets:
               name: Scrub Brush
       The_Terrain_Kit/PEGPROD/MTP/MTP MM3 Forest Flora/PEG-MTP_MM3-ForestFlora_MOD_100.dat:
         073d48e0:
+          description: One click plants a Forest Flora. Additional clicks on the plopped flora cycles through the 5 additional styles.
+          label: PEG Forest Flora
           model: '365e5321'
           name: Weeds
           stages:
@@ -4153,6 +4157,8 @@ assets:
               name: Scrub Tree
       The_Terrain_Kit/PEGPROD/MTP/MTP MM7 Logging Scenes/PEG-MTP_MM7-ForestLogging_MOD_103.dat:
         073d48e5:
+          description: One click plants a Forest Logging Scene. Additional clicks on the plopped scene cycles through the 5 additional styles. Larger scenes may look best on level land. If a larger scene will not fit in a specific area, you will not be able to cycle to it.
+          label: PEG Logging Scenes
           model: 165f5220
           name: PEG_Tree Stump
           stages:
@@ -4176,6 +4182,8 @@ assets:
               name: '"TIM-BERrrr !!"'
       The_Terrain_Kit/PEGPROD/MTP/MTP MM8 Forest Scenes/PEG-MTP_MM5-ForestStuff_MOD_100.dat:
         073d48da:
+          description: One click plops an item. Click again on the plopped item to cycle through the 4 additional items.
+          label: PEG Forest Accessories
           model: f17a2cf3
           name: Picnic Table
           stages:
@@ -4199,19 +4207,29 @@ assets:
               name: Hot Springs
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Kit_102.dat:
         12f37bfb:
+          description: Single click to plop one water section... or hold down the mouse button & drag to paint water freely across the terrain.
+          label: PEG Pond
           model: 598d50ed
           name: PEG-PPOND_1x
         57dea43f:
+          description: Water Lillies. Single click to plop a water section with Lilly Pads... or hold down the mouse button & drag to paint water freely across the terrain.
+          label: PEG Pond - Lillies
           model: b99234da
           name: PEG-PPOND_1x_Lillies
         92b59d87:
+          description: 1/4 Tile Version. Single click to plop one water section... or hold down the mouse button & drag to paint water freely across the terrain.
+          label: PEG Pond - 1/4
           model: d9922970
           name: PEG-PPOND_1x_1/4
         f2153b9b:
+          description: Water Lillies. Single click to plop a 1/4 water section with Cattails... or hold down the mouse button & drag to paint water freely across the terrain.
+          label: PEG Pond - Cattails
           model: 3997ee5f
           name: PEG-PPOND_1/4x_Cattails
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Props_102.dat:
         042010d4:
+          description: One click pops a rock. Additional clicks on the plopped rock cycle through the 4 additional sizes.
+          label: PEGl Rocks - Small
           model: '59977e98'
           name: PEG_Rock-Plop_Small1
           stages:
@@ -4228,9 +4246,13 @@ assets:
               model: 3997738a
               name: PEG_Rock-Plop_Small5
         37a24970:
+          description: Single click plops a sandy shoreline texture.. Click, hold and drag will paint the path as you move the cursor. Can be used to paint pathways.
+          label: PEG Shoreline Plop - Sand
           model: 9994b762
           name: PEG-PPond_Sand
         6c3c4e35:
+          description: One click pops a boulder. Additional clicks on the plopped rock cycle through the 4 additional sizes.
+          label: PEG Boulders
           model: d993ba03
           name: PEG_Rock-Plop1
           stages:
@@ -4247,100 +4269,148 @@ assets:
               model: d993f522
               name: PEG_Rock-Plop5
         765d44bb:
+          description: Single click plops a smaller, slightly darker shoreline texture. Click, hold and drag will paint the shoreline as you move the cursor.
+          label: PEG Shoreline Plop - Small
           model: '19928022'
           name: PEG-PPond_Shore-Plop_Small
         85fbb82d:
+          description: Single click plops a small shoreline rock cluster texture. Click, hold and drag will paint the shoreline as you move the cursor.
+          label: PEG Shoreline Plop - Rock Cluster
           model: b993898f
           name: PEG_Shore-Rock Cluster
         8e40e142:
+          description: Single click plops a pebble shoreline texture. Click, hold and drag will paint the shoreline as you move the cursor. Can be used to paint pathways.
+          label: PEG Shoreline Plop - Pebble
           model: 99791c34
           name: PEG-PPond_Shore-Plop-Pebble
         fa175f2a:
+          description: 'Single click plops a mossy shoreline texture. Click, hold and drag will paint the shoreline as you move the cursor. Can be used to add a mossy texture almost anywhere on the terrain. '
+          label: PEG Shoreline Plop - Moss
           model: d994d108
           name: PEG-PPond_Shore-Plop-Moss
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Flowers_101.dat:
         0a062619:
+          description: Single click plops a clump of Poppies. Click, hold and drag will paint the poppies as you move the cursor. Can be used to paint pathways.
+          label: Poppies
           model: f9b5c983
           name: PEG-PP_Ground-Poppys
         3763d37d:
+          description: Single click plops a clump of dandy Vandy Lions. Click, hold and drag will paint the flowers as you move the cursor. Can be used to paint pathways.
+          label: Vandy Lions
           model: 59b5b9e0
           name: PEG-PP_Ground-VandyLions
         6fc4f757:
+          description: Single click plops a clump of Daiseys. Click, hold and drag will paint the flowers as you move the cursor. Can be used to paint pathways.
+          label: Daiseys
           model: d9b5cd71
           name: PEG-PP_Ground-Daiseys
         fa2447b0:
+          description: Single click plops a clump of Prairie Rose. Click, hold and drag will paint the flowers as you move the cursor. Can be used to paint pathways.
+          label: Prairie Rose
           model: 59b5cd43
           name: PEG-PP_Ground-Prairie Rose
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Grass_101.dat:
         9e0c4310:
+          description: Single click plops a patch of Grass. Click, hold and drag will paint the grass as you move the cursor. Can be used to paint pathways.
+          label: Grass
           model: 99b71222
           name: PEG-PP_Ground-Grass
         e9220068:
+          description: Single click plops a patch of Clover. Click, hold and drag will paint the clover as you move the cursor. Can be used to paint pathways.
+          label: Clover
           model: 79b715f4
           name: PEG-PP_Ground-Clover
         feb86dca:
+          description: Single click plops a clump of Leaves. Click, hold and drag will paint the leaves as you move the cursor. Can be used to paint pathways.
+          label: Leaves
           model: d9b5e4a6
           name: PEG-PP_Ground-Leaves
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Ground_101.dat:
         28b93602:
+          description: Single click plops a cluster of RipRap. Click, hold and drag will paint the RipRap as you move the cursor. Can be used to paint pathways.
+          label: RipRap
           model: 79b736ef
           name: PEG-PP_RipRap
         4880ba97:
+          description: Single click plops a slightly smaller/denser Pebble texture. Click, hold and drag will paint the sand as you move the cursor. Can be used to paint pathways.
+          label: PEG Shorline Plop - Gravel
           model: 39a9b42f
           name: PEG-PP_ShorePlop_Gravel
         7d793ec4:
+          description: Single click plops a slightly darker sand texture. Click, hold and drag will paint the sand as you move the cursor. Can be used to paint pathways.
+          label: PEG Shorline Plop - Sand2
           model: b9a9e0ad
           name: PEG-TPond_Shore-Sand2
         cce2232a:
+          description: Single click plops a bit of Ballast designed to line rails and roads. Click, hold and drag will paint the ballast as you move the cursor. Can be used to paint pathways.
+          label: Ballast
           model: 19b5a5cf
           name: PEG-TP_Ground-Ballast
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Weeds_101.dat:
         1153f533:
+          description: One click pops a clump of Dead Weeds. Additional clicks on the weeds will cycle through the 4 additional sizes.
+          label: Dead Weeds
           model: d9b87ff9
           name: PEG-TP_DeadWeeds1
           stages:
             - id: 1153f534
+              label: Dead Weeds
               model: 99b885dc
               name: PEG-TP_DeadWeeds2
             - id: 1153f535
+              label: Dead Weeds
               model: d9b88ac4
               name: PEG-TP_DeadWeeds3
             - id: 1153f536
+              label: Dead Weeds
               model: 59b88b0f
               name: PEG-TP_DeadWeeds4
             - id: 1153f537
+              label: Dead Weeds
               model: d9b88a30
               name: PEG-TP_DeadWeeds5
         3658aad0:
+          description: One click pops a clump of Weeds. Additional clicks on the weeds will cycle through the 4 additional sizes.
+          label: Weeds
           model: 59b8b6a4
           name: PEG-TP_Weeds1
           stages:
             - id: 3658aad1
+              label: Weeds
               model: f9b8b63c
               name: PEG-TP_Weeds2
             - id: 3658aad2
+              label: Weeds
               model: 99b8b5c9
               name: PEG-TP_Weeds3
             - id: 3658aad3
+              label: Weeds
               model: 59b8b508
               name: PEG-TP_Weeds4
             - id: 3658aad4
+              label: Weeds
               model: d9b8b56d
               name: PEG-TP_Weeds5
         b2c023b1:
+          description: One click pops a  Dead Tree. Additional clicks on the weeds will cycle through the 4 additional sizes.
+          label: Dead Trees
           model: ba710564
           name: PEG-TP_DeadTree1
           stages:
             - id: b2c023b2
+              label: Dead Trees
               model: 1a710b0a
               name: PEG-TP_DeadTree2
             - id: b2c023b3
+              label: Dead Trees
               model: 5a711056
               name: PEG-TP_DeadTree3
             - id: b2c023b4
+              label: Dead Trees
               model: 1a712013
               name: PEG-TP_DeadTree4
             - id: b2c023b5
+              label: Dead Trees
               model: 1a7115f2
               name: PEG-TP_DeadTree5
     models:
@@ -4662,4 +4732,4 @@ assets:
     url: https://community.simtropolis.com/files/file/30648-peg-cdk-tutorial/
 
 meta:
-  timestamp: 2024-12-10T10:25:09.262Z
+  timestamp: 2024-12-12T12:47:22.557Z

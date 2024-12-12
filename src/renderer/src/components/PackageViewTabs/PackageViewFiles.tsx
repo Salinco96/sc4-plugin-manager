@@ -23,7 +23,7 @@ export default function PackageViewFiles({ packageId }: PackageViewTabInfoProps)
   const profileInfo = useCurrentProfile()
   const profileOptions = useStore(store => store.profileOptions)
   const packageStatus = usePackageStatus(packageId)
-  const patterns = packageStatus?.files?.map(globToRegex)
+  const patterns = packageStatus?.files?.map(pattern => globToRegex(pattern))
   const variantInfo = useCurrentVariant(packageId)
 
   const [files, setFiles] = useState<{ [path in string]?: DBPFFile }>({})

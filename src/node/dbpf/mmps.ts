@@ -1,10 +1,11 @@
+import { DBPFDataType, type DBPFFile } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 import type { FloraData } from "@node/data/mmps"
-import { getModelId } from "src/scripts/dbpf/dbpf"
-import type { Exemplar } from "./types"
-import { getString, getTGI } from "./utils"
 
-export function getFloraData(exemplar: Exemplar): FloraData {
+import type { Exemplar } from "./types"
+import { getModelId, getString, getTGI } from "./utils"
+
+export function getFloraData(exemplar: Exemplar, file: DBPFFile): FloraData {
   const data: FloraData = {}
 
   const name = getString(exemplar, ExemplarPropertyID.ExemplarName)
@@ -12,15 +13,21 @@ export function getFloraData(exemplar: Exemplar): FloraData {
     data.name = name
   }
 
-  // todo: UserVisibleNameKey
   const label = getString(exemplar, ExemplarPropertyID.ItemLabel)
-  if (label?.length) {
+  const labelTGI = getTGI(exemplar, ExemplarPropertyID.UserVisibleNameKey)
+  const labelEntry = labelTGI ? file.entries[labelTGI] : undefined
+  if (labelEntry?.type === DBPFDataType.LTEXT && labelEntry.data) {
+    data.label = labelEntry.data.text
+  } else if (label?.length) {
     data.label = label
   }
 
-  // todo: ItemDescriptionKey
   const description = getString(exemplar, ExemplarPropertyID.ItemDescription)
-  if (description?.length) {
+  const descriptionTGI = getTGI(exemplar, ExemplarPropertyID.ItemDescriptionKey)
+  const descriptionEntry = descriptionTGI ? file.entries[descriptionTGI] : undefined
+  if (descriptionEntry?.type === DBPFDataType.LTEXT && descriptionEntry.data) {
+    data.description = descriptionEntry.data.text
+  } else if (description?.length) {
     data.description = description
   }
 

@@ -1,11 +1,13 @@
-import fs, { writeFile } from "node:fs/promises"
+import fs from "node:fs/promises"
 import path from "node:path"
+
 import {
   $merge,
   type EmptyRecord,
   collect,
   entries,
   forEach,
+  forEachAsync,
   isEmpty,
   keys,
   mapDefined,
@@ -35,7 +37,7 @@ import {
 } from "@common/exemplars"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
 import type { LotID } from "@common/lots"
-import { type OptionInfo, type Requirements, getOptionValue } from "@common/options"
+import { type OptionInfo, getOptionValue } from "@common/options"
 import {
   type PackageID,
   checkFile,
@@ -57,14 +59,14 @@ import type { PropID } from "@common/props"
 import type { Settings, SettingsData } from "@common/settings"
 import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
-import { globToRegex, matchConditions } from "@common/utils/glob"
+import { globToRegex } from "@common/utils/glob"
 import type { ContentsInfo, FileInfo, VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { getAssetKey } from "@node/data/assets"
 import { loadBuildingInfo } from "@node/data/buildings"
+import { CLEANITOL_EXTENSIONS, DOC_EXTENSIONS, SC4_EXTENSIONS, matchFiles } from "@node/data/files"
 import { loadLotInfo } from "@node/data/lots"
-import type { PackageData } from "@node/data/packages"
-import { writePackageInfo } from "@node/data/packages"
+import { type PackageData, writePackageInfo } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
 import { getBuildingData } from "@node/dbpf/buildings"
@@ -87,6 +89,7 @@ import {
   removeIfEmptyRecursive,
   removeIfPresent,
   toPosix,
+  writeFile,
 } from "@node/files"
 import { hashCode } from "@node/hash"
 import { cmd } from "@node/processes"
@@ -120,14 +123,7 @@ import type {
   UpdateDatabaseProcessResponse,
 } from "./processes/updateDatabase/types"
 import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
-import {
-  CLEANITOL_EXTENSIONS,
-  DIRNAMES,
-  DOC_EXTENSIONS,
-  FILENAMES,
-  SC4_EXTENSIONS,
-  TEMPLATE_PREFIX,
-} from "./utils/constants"
+import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "./utils/constants"
 import { env, isDev } from "./utils/env"
 import { check4GBPatch } from "./utils/exe"
 import { createChildProcess } from "./utils/processes"
@@ -824,6 +820,7 @@ export class Application {
   public async getPackageReadme(
     packageId: PackageID,
     variantId: VariantID,
+    filePath: string,
   ): Promise<{ html?: string; md?: string }> {
     const { packages } = await this.load()
 
@@ -832,7 +829,7 @@ export class Application {
       throw Error(`Variant '${packageId}#${variantId}' does not have documentation`)
     }
 
-    const docPath = path.join(this.getVariantPath(packageId, variantId), variantInfo.readme)
+    const docPath = path.join(this.getVariantPath(packageId, variantId), filePath)
     const docExt = path.extname(docPath)
 
     switch (docExt) {
@@ -1244,203 +1241,98 @@ export class Application {
           await createIfMissing(variantPath)
 
           try {
+            const docs: string[] = []
             const includedPaths = new Set<string>()
             const files: FileInfo[] = []
 
             for (const { asset, downloadPath } of downloadedAssets) {
-              // Blacklist desktop.ini
-              const excludes = ["desktop.ini"]
+              const allPaths = await glob("**/*", {
+                cwd: downloadPath,
+                dot: true,
+                nodir: true,
+                posix: true,
+              })
 
-              const conditionRegex = /{{([^}]+)}}/g
+              const { matchedPaths: cleanitolFiles } = matchFiles(
+                allPaths.filter(path => CLEANITOL_EXTENSIONS.includes(getExtension(path))),
+                {
+                  exclude: asset.exclude,
+                  ignoreEmpty: !asset.cleanitol,
+                  include: asset.cleanitol?.map(path => ({ path })) ?? [
+                    { path: "*cleanitol*.txt" },
+                  ],
+                },
+              )
 
-              const getChildrenPattern = (pattern: string) => {
-                return pattern.includes("/") ? `${pattern}/**` : `**/${pattern}/**`
-              }
-
-              const excludePath = (pattern: string) => {
-                excludes.push(pattern, getChildrenPattern(pattern))
-              }
-
-              const validExtensions = {
-                cleanitol: CLEANITOL_EXTENSIONS,
-                docs: DOC_EXTENSIONS,
-                files: SC4_EXTENSIONS,
-              }
-
-              const allExtensions = Object.values(validExtensions).flat()
-
-              const targetDirs = {
-                cleanitol: path.join(variantPath, DIRNAMES.cleanitol),
-                docs: path.join(variantPath, DIRNAMES.docs),
-                files: variantPath,
-              }
-
-              const includeFile = async (
-                oldPath: string,
-                newPath: string,
-                type: "cleanitol" | "docs" | "files",
-                condition?: Requirements,
-                include?: FileInfo,
-              ) => {
-                const extension = getExtension(oldPath)
-
-                if (validExtensions[type].includes(extension)) {
-                  if (!includedPaths.has(oldPath)) {
-                    const targetFullPath = path.join(targetDirs[type], newPath)
+              await forEachAsync(cleanitolFiles, async (file, oldPath) => {
+                if (file) {
+                  const newPath = path.join(DIRNAMES.cleanitol, file.path)
+                  if (includedPaths.has(newPath)) {
+                    context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
+                  } else {
+                    const targetFullPath = path.join(variantPath, newPath)
                     await createIfMissing(path.dirname(targetFullPath))
                     await fs.symlink(path.join(downloadPath, oldPath), targetFullPath)
-                    includedPaths.add(oldPath)
-
-                    if (type === "files") {
-                      files.push({
-                        condition: condition && !isEmpty(condition) ? condition : undefined,
-                        patches: include?.patches,
-                        path: toPosix(newPath),
-                        priority: include?.priority,
-                      })
-                    }
-                  } else if (type === "files") {
-                    context.raiseInDev(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
+                    includedPaths.add(newPath)
                   }
-                } else if (!allExtensions.includes(extension)) {
-                  context.warn(`Ignoring file ${oldPath} with unsupported extension ${extension}`)
                 }
-              }
+              })
 
-              const includeDirectory = async (
-                oldPath: string,
-                newPath: string,
-                type: "cleanitol" | "docs" | "files",
-                condition?: Requirements,
-                include?: FileInfo,
-              ) => {
-                const filePaths = await glob(getChildrenPattern(toPosix(oldPath)), {
-                  cwd: downloadPath,
-                  dot: true,
-                  ignore: excludes,
-                  matchBase: true,
-                  nodir: true,
-                })
+              const { matchedPaths: docFiles } = matchFiles(
+                allPaths.filter(
+                  path => DOC_EXTENSIONS.includes(getExtension(path)) && !cleanitolFiles[path],
+                ),
+                {
+                  exclude: asset.exclude,
+                  ignoreEmpty: !asset.docs,
+                  include: asset.docs ?? [{ path: "" }],
+                },
+              )
 
-                for (const filePath of filePaths) {
-                  await includeFile(
-                    filePath,
-                    type === "cleanitol"
-                      ? path.basename(filePath)
-                      : path.join(newPath, path.relative(oldPath, filePath)),
-                    type,
-                    condition,
-                    include,
-                  )
-                }
-              }
-
-              const includePath = async (
-                pattern: string,
-                type: "cleanitol" | "docs" | "files",
-                include?: FileInfo,
-              ) => {
-                const entries = await glob(
-                  pattern.replace(conditionRegex, (match, condition) => {
-                    const option = variantInfo.options?.find(option => option.id === condition)
-                    if (option?.choices) {
-                      return `{${option.choices.map(choice => choice.value).join(",")}}`
-                    }
-
-                    return "*"
-                  }),
-                  {
-                    cwd: downloadPath,
-                    dot: true,
-                    ignore: excludes,
-                    includeChildMatches: false,
-                    matchBase: true,
-                    withFileTypes: true,
-                  },
-                )
-
-                if (entries.length === 0 && pattern !== "*cleanitol*.txt") {
-                  context.raiseInDev(`Pattern ${pattern} did not match any file`)
-                }
-
-                for (const entry of entries) {
-                  const oldPath = entry.relative()
-
-                  const condition = {
-                    ...include?.condition,
-                    ...matchConditions(pattern, oldPath),
-                  }
-
-                  if (entry.isDirectory()) {
-                    await includeDirectory(oldPath, include?.as ?? "", type, condition, include)
+              await forEachAsync(docFiles, async (file, oldPath) => {
+                if (file) {
+                  const newPath = path.join(DIRNAMES.docs, file.path)
+                  if (includedPaths.has(newPath)) {
+                    context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                   } else {
-                    const filename = path.basename(entry.name)
-                    await includeFile(
-                      oldPath,
-                      include?.as?.replaceAll("*", filename) ?? entry.name,
-                      type,
-                      condition,
-                      include,
-                    )
+                    const targetFullPath = path.join(variantPath, newPath)
+                    await createIfMissing(path.dirname(targetFullPath))
+                    await fs.symlink(path.join(downloadPath, oldPath), targetFullPath)
+                    includedPaths.add(newPath)
+                    docs.push(newPath)
                   }
                 }
-              }
+              })
 
-              // Include cleanitol (everything if not specified)
-              if (asset.cleanitol) {
-                for (const include of asset.cleanitol) {
-                  await includePath(include, "cleanitol")
-                }
-              } else {
-                await includePath("*cleanitol*.txt", "cleanitol")
-              }
+              const { matchedPaths: sc4Files } = matchFiles(
+                allPaths.filter(path => SC4_EXTENSIONS.includes(getExtension(path))),
+                {
+                  exclude: asset.exclude,
+                  ignoreEmpty: !asset.include,
+                  include: asset.include ?? [{ path: "" }],
+                  options: variantInfo.options,
+                },
+              )
 
-              // Include docs (everything if not specified)
-              if (asset.docs) {
-                for (const include of asset.docs) {
-                  await includePath(include.path, "docs", include)
+              await forEachAsync(sc4Files, async (file, oldPath) => {
+                if (file) {
+                  const newPath = file.path
+                  if (includedPaths.has(newPath)) {
+                    context.raiseInDev(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
+                  } else {
+                    const targetFullPath = path.join(variantPath, newPath)
+                    await createIfMissing(path.dirname(targetFullPath))
+                    await fs.symlink(path.join(downloadPath, oldPath), targetFullPath)
+                    includedPaths.add(newPath)
+                    files.push(file)
+                  }
                 }
-              } else {
-                await includeDirectory("", "", "docs")
-              }
-
-              // Exclude files
-              if (asset.exclude) {
-                for (const exclude of asset.exclude) {
-                  excludePath(exclude)
-                }
-              }
-
-              // Include files (everything if not specified)
-              if (asset.include) {
-                for (const include of asset.include) {
-                  await includePath(include.path, "files", include)
-                  excludePath(include.path.replace(conditionRegex, "*"))
-                }
-              } else {
-                await includeDirectory("", "", "files")
-              }
+              })
             }
 
             if (variantInfo.update) {
               Object.assign(variantInfo, variantInfo.update)
               variantInfo.update = undefined
-            }
-
-            // Automatically detect README if not specified
-            if (!variantInfo.readme) {
-              const readmePaths = await glob(`${DIRNAMES.docs}/**/*.{htm,html,md,txt}`, {
-                cwd: variantPath,
-                ignore: ["*cleanitol*", "*license*"],
-                nodir: true,
-              })
-
-              if (readmePaths.length) {
-                variantInfo.readme = toPosix(
-                  readmePaths.find(file => path.basename(file).match(/read.?me/i)) ??
-                    readmePaths[0],
-                )
-              }
             }
 
             variantInfo.files = sortBy(files, file => file.path)
@@ -1568,7 +1460,7 @@ export class Application {
             links.set(toRelativePath, fromFullPath)
           }
 
-          const patterns = packageStatus.files?.map(globToRegex)
+          const patterns = packageStatus.files?.map(pattern => globToRegex(pattern))
 
           for (const file of variantInfo.files) {
             const isFileIncluded = checkFile(
@@ -1650,7 +1542,7 @@ export class Application {
 
               if (ini) {
                 const targetPath = path.join(pluginsPath, filename)
-                await writeFile(targetPath, ini, "utf8")
+                await writeFile(targetPath, ini)
               }
             }
           }

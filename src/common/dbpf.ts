@@ -54,6 +54,7 @@ export enum DBPFFileType {
   FSH_TEXTURE = "7ab50e44-0986135e",
   JFIF = "7480710.",
   LD = "6be74c60",
+  LTEXT = "2026960b",
   PNG = "856ddbac",
   PNG_BUTTONS = "856ddbac-00000001",
   PNG_LE_IMAGES = "856ddbac-8b6b7857",
@@ -74,6 +75,7 @@ export enum DBPFDataType {
   FSH = "fsh",
   JFIF = "jfif",
   LD = "ld",
+  LTEXT = "ltext",
   PNG = "png",
   S3D = "s3d",
   XML = "xml",
@@ -87,6 +89,7 @@ export type DBPFEntryData<T extends DBPFDataType = DBPFDataType> = {
   [DBPFDataType.FSH]: never // TODO
   [DBPFDataType.JFIF]: { base64: string }
   [DBPFDataType.LD]: never // TODO
+  [DBPFDataType.LTEXT]: { text: string }
   [DBPFDataType.PNG]: { base64: string }
   [DBPFDataType.S3D]: never // TODO
   [DBPFDataType.XML]: { text: string }
@@ -112,6 +115,10 @@ export function getDataType(id: TGI): DBPFDataType {
 
   if (isType(id, DBPFFileType.LD)) {
     return DBPFDataType.LD
+  }
+
+  if (isType(id, DBPFFileType.LTEXT)) {
+    return DBPFDataType.LTEXT
   }
 
   if (isType(id, DBPFFileType.PNG)) {

@@ -15,8 +15,15 @@ export default function PackageViewReadme({
   const [readme, setReadme] = useState<{ html?: string; md?: string }>()
 
   useEffect(() => {
-    actions.getPackageReadme(packageId, variantId).then(setReadme).catch(console.error)
-  }, [actions, packageId, variantId])
+    if (variantInfo.readme) {
+      actions
+        .getPackageReadme(packageId, variantId, variantInfo.readme[0]) // todo: choose from list
+        .then(setReadme)
+        .catch(console.error) // todo: error handling
+    } else {
+      setReadme(undefined)
+    }
+  }, [actions, packageId, variantId, variantInfo])
 
   if (!readme) {
     return <Loader />

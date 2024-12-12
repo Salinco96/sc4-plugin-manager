@@ -38,8 +38,9 @@ export const api = {
   getPackageReadme(
     packageId: PackageID,
     variantId: VariantID,
+    filePath: string,
   ): Promise<{ html?: string; md?: string }> {
-    return ipcRenderer.invoke("getPackageReadme", packageId, variantId)
+    return ipcRenderer.invoke("getPackageReadme", packageId, variantId, filePath)
   },
   installVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("installVariant", packageId, variantId)

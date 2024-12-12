@@ -112,23 +112,27 @@ export async function loadDBPF(
 
   if (options.loadExemplars) {
     for (const entry of values(contents.entries)) {
-      if (entry.type === DBPFDataType.EXMP) {
-        try {
-          entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(file, entry, options)
-        } catch (error) {
-          // Entry is actually compressed even though not in DIR...
-          // e.g. Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-          if (!isCompressed(entry)) {
-            entry.uncompressed = 0
-            try {
-              entry.data = await loadDBPFEntry<DBPFDataType.EXMP>(file, entry, options)
-              continue
-            } catch (_error) {
-              // Ignore
+      switch (entry.type) {
+        case DBPFDataType.EXMP:
+        case DBPFDataType.LTEXT: {
+          try {
+            entry.data = await loadDBPFEntry<typeof entry.type>(file, entry, options)
+          } catch (error) {
+            // Entry is actually compressed even though not in DIR...
+            // e.g. Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
+            if (!isCompressed(entry)) {
+              entry.uncompressed = 0
+              try {
+                entry.data = await loadDBPFEntry<typeof entry.type>(file, entry, options)
+              } catch (_error) {
+                // Ignore
+              }
+            }
+
+            if (!entry.data) {
+              console.error(`Failed to load entry ${entry.id}`, error)
             }
           }
-
-          console.error(`Failed to load entry ${entry.id}`, error)
         }
       }
     }
@@ -161,6 +165,10 @@ export async function loadDBPFEntry<T extends DBPFDataType>(
   switch (type) {
     case DBPFDataType.EXMP: {
       return loadExemplar(entry.id, bytes, options.exemplarProperties) as DBPFEntryData<T>
+    }
+
+    case DBPFDataType.LTEXT: {
+      return { text: bytes.toString("utf16le").slice(2) } as DBPFEntryData<T>
     }
 
     case DBPFDataType.XML: {

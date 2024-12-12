@@ -42,6 +42,7 @@ export function EntryViewer({
       )
     }
 
+    case DBPFDataType.LTEXT:
     case DBPFDataType.XML: {
       return <TextViewer onClose={onClose} open={open} text={entry.data.text} />
     }

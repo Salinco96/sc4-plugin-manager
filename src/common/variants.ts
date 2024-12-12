@@ -64,7 +64,7 @@ export interface BaseVariantInfo extends ContentsInfo {
   optional?: PackageID[]
   options?: OptionInfo[]
   priority: number
-  readme?: string
+  readme?: string[]
   release?: Date
   repository?: string
   requirements?: Requirements

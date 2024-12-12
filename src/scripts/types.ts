@@ -4,9 +4,9 @@ import type { HTMLElement } from "node-html-parser"
 import type { AssetID } from "@common/assets"
 import type { CategoryID } from "@common/categories"
 import type { PackageID } from "@common/packages"
+import type { Feature } from "@common/types"
 import type { MaybeArray } from "@common/utils/types"
-
-import type { SC4FileData } from "./dbpf/dbpf"
+import type { ContentsData } from "@node/data/packages"
 
 export interface IndexerOptions {
   include: {
@@ -48,8 +48,10 @@ export interface IndexerEntryDetails {
   version?: string
 }
 
-export interface IndexerVariantEntry extends Partial<SC4FileData> {
+export interface IndexerVariantEntry extends ContentsData {
+  categories?: CategoryID[]
   download?: string
+  features?: Feature[]
   filename?: string
   files?: string[]
   /** Download hash */

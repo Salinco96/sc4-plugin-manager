@@ -375,7 +375,7 @@ export interface VariantData extends ContentsData {
   /**
    * Relative path to the main Readme file (the one that is shown in Readme tab)
    */
-  readme?: string
+  readme?: MaybeArray<string>
 
   /**
    * Date or ISO string at which this variant was first added to the Manager database (used to mark "new" packages)
@@ -584,6 +584,7 @@ export function loadVariantInfo(
 
   const lastGenerated = variantData.lastGenerated ?? packageData.lastGenerated
   const lastModified = variantData.lastModified ?? packageData.lastModified
+  const readme = variantData.readme ?? packageData.readme
   const release = variantData.release ?? packageData.release
 
   const variantInfo: VariantInfo = {
@@ -612,7 +613,7 @@ export function loadVariantInfo(
     priority: getPriority(mergedCategories, categories),
     propFamilies: propFamilies.length ? propFamilies : undefined,
     props: props.length ? props : undefined,
-    readme: variantData.readme ?? packageData.readme,
+    readme: isString(readme) ? [readme] : readme,
     release: release ? new Date(release) : undefined,
     repository: variantData.repository ?? packageData.repository,
     requirements: !isEmpty(requirements) ? requirements : undefined,
@@ -710,6 +711,9 @@ export function writePackageInfo(
         : firstVariant?.props?.filter(prop =>
             others.every(other => other.props?.some(equalsDeep(prop))),
           ),
+    readme: firstVariant?.readme?.filter(readme =>
+      others.every(other => other.readme?.includes(readme)),
+    ),
     repository: defaultVariant?.repository,
     requirements: filterValues(firstVariant?.requirements ?? {}, (value, requirement) =>
       others.every(other => other.requirements?.[requirement] === value),
@@ -770,7 +774,7 @@ export function writePackageInfo(
               family => !base.propFamilies?.some(equalsDeep(family)),
             ),
             props: variant.props?.filter(prop => !base.props?.some(equalsDeep(prop))),
-            readme: variant.readme !== base.readme ? variant.readme : undefined,
+            readme: difference(variant.readme ?? [], base.readme ?? []),
             repository: variant.repository !== base.repository ? variant.repository : undefined,
             requirements: filterValues(
               variant.requirements ?? {},
@@ -937,7 +941,11 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
           mapValues(indexBy(instances, get("id")), writePropInfo),
         )
       : undefined,
-    readme: info.readme,
+    readme: info.readme?.length
+      ? info.readme.length === 1
+        ? info.readme[0]
+        : info.readme
+      : undefined,
     release: info.release,
     repository: info.repository,
     requirements: info.requirements && !isEmpty(info.requirements) ? info.requirements : undefined,

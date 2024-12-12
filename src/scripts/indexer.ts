@@ -4,14 +4,18 @@ import path from "node:path"
 import { input, select } from "@inquirer/prompts"
 import {
   $init,
+  type Defined,
   ID,
   containsAny,
+  difference,
   filterValues,
   forEach,
   forEachAsync,
+  generate,
   getRequired,
   groupBy,
   indexBy,
+  isEmpty,
   isEqual,
   isString,
   keys,
@@ -19,8 +23,7 @@ import {
   mapValues,
   merge,
   parseHex,
-  remove,
-  toArray,
+  union,
   unique,
   values,
 } from "@salinco/nice-utils"
@@ -43,7 +46,7 @@ import type { PropID } from "@common/props"
 import { ConfigFormat, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
-import type { FileInfo, VariantInfo } from "@common/variants"
+import type { VariantAssetInfo, VariantInfo } from "@common/variants"
 import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { type AssetData, loadAssetInfo, writeAssetInfo } from "@node/data/assets"
@@ -53,10 +56,10 @@ import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 
-import type { Categories } from "@common/categories"
+import type { Categories, CategoryID } from "@common/categories"
 import { exists, removeIfPresent, toPosix } from "@node/files"
 import { analyzeSC4Files } from "./dbpf/dbpf"
-import { generatePackageInfo } from "./dbpf/packages"
+import { generateVariantInfo, registerVariantAsset } from "./dbpf/packages"
 import {
   promptAuthorName,
   promptPackageId,
@@ -158,7 +161,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     return sources[getSourceId(entryId)]
   }
 
-  const modifiedPackages = new Set<PackageID>()
+  const generatingPackages: { [packageId in PackageID]?: VariantID[] } = {}
   const skippedEntries = new Set<EntryID>()
 
   /**
@@ -365,11 +368,23 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
    * Undesired dependencies can be ignored.
    */
 
-  // Step 3 - Resolve entries
+  // Step 3a - Resolve entries and register the corresponding packages/variants
   const resolvingEntries = new Set<AssetID>()
   await forEachAsync(entries, async (entry, entryId) => {
     if (includeEntry(entry, entryId)) {
       await resolveEntry(entryId)
+    }
+  })
+
+  // Step 3b - Generate packages/variants
+  forEach(generatingPackages, async (variantIds, packageId) => {
+    for (const variantId of variantIds) {
+      try {
+        generateVariant(packageId, variantId)
+      } catch (error) {
+        console.error(error)
+        errors.add((error as Error).message)
+      }
     }
   })
 
@@ -421,7 +436,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   // Step 4d - Write package changes
   console.debug("Writing packages...")
-  const modifiedAuthors = new Set(toArray(modifiedPackages).map(getOwnerId))
+  const modifiedAuthors = new Set(keys(generatingPackages).map(getOwnerId))
   for (const authorId of modifiedAuthors) {
     await writeConfig<{ [packageId in PackageID]?: PackageData }>(
       dbPackagesDir,
@@ -442,15 +457,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   const indexerMaxisConfig = await loadConfig<ContentsData>(dataAssetsDir, "maxis")
   let maxisData = indexerMaxisConfig?.data
   if (!maxisData) {
-    const { categories, features, ...data } = await analyzeSC4Files(
-      gameDir,
-      // Only SimCity_1.dat contains relevant data
-      ["SimCity_1.dat"],
-      exemplarProperties,
-    )
-
-    await writeConfig(dataAssetsDir, "maxis", data, ConfigFormat.YAML)
-    maxisData = data
+    // Only SimCity_1.dat contains relevant data
+    const data = await analyzeSC4Files(gameDir, ["SimCity_1.dat"], exemplarProperties)
+    await writeConfig(dataAssetsDir, "maxis", data.contents, ConfigFormat.YAML)
+    maxisData = data.contents
   }
 
   // Step 5b - Generate Maxis data
@@ -486,7 +496,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
    * STEP 6 - Create a reverse-index of TGIs to the packages containing them
    */
 
-  if (modifiedPackages.size) {
+  if (!isEmpty(generatingPackages)) {
     type Index = {
       buildingFamilies: { [id in FamilyID]?: PackageID[] }
       buildings: { [id in BuildingID]?: PackageID[] }
@@ -955,7 +965,7 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
     if (entry.variants) {
       for (const variant of keys(entry.variants)) {
         try {
-          await generatePackages(entryId, variant)
+          await registerPackages(entryId, variant)
         } catch (error) {
           console.error(error)
           errors.add((error as Error).message)
@@ -963,7 +973,7 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
       }
     } else {
       try {
-        await generatePackages(entryId)
+        await registerPackages(entryId)
       } catch (error) {
         console.error(error)
         errors.add((error as Error).message)
@@ -1133,21 +1143,20 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
     // Analyze DBPF contents
     const data = await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
 
-    variantEntry.buildingFamilies = data.buildingFamilies
-    variantEntry.buildings = data.buildings
-    variantEntry.categories = data.categories.length ? data.categories : undefined
+    variantEntry.buildingFamilies = data.contents.buildingFamilies
+    variantEntry.buildings = data.contents.buildings
     variantEntry.features = data.features.length ? data.features : undefined
-    variantEntry.lots = data.lots
-    variantEntry.mmps = data.mmps
-    variantEntry.models = data.models
-    variantEntry.propFamilies = data.propFamilies
-    variantEntry.props = data.props
-    variantEntry.textures = data.textures
+    variantEntry.lots = data.contents.lots
+    variantEntry.mmps = data.contents.mmps
+    variantEntry.models = data.contents.models
+    variantEntry.propFamilies = data.contents.propFamilies
+    variantEntry.props = data.contents.props
+    variantEntry.textures = data.contents.textures
 
     return true
   }
 
-  async function generatePackages(entryId: EntryID, variant?: string): Promise<boolean> {
+  async function registerPackages(entryId: EntryID, variant?: string): Promise<boolean> {
     const assetId = getAssetID(entryId)
     const entry = getEntry(entryId)
     const source = getSource(entryId)
@@ -1210,7 +1219,7 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
     const outputs = new Set<string>()
     for (const baseVariantId of baseVariantIds) {
       if (!outputs.has(`${basePackageId}#${baseVariantId}`)) {
-        await generateVariant(basePackageId, baseVariantId)
+        await registerVariant(basePackageId, baseVariantId)
         outputs.add(`${basePackageId}#${baseVariantId}`)
       }
     }
@@ -1219,12 +1228,11 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
       for (const pathOverride of values(variantOverride.paths)) {
         if (pathOverride) {
           const pathPackageId = pathOverride.packageId ?? basePackageId
-          const pathVariantIds = pathOverride.variantId
-            ? (parseStringArray(pathOverride.variantId) as VariantID[])
-            : baseVariantIds
+          const pathVariantIds = parseStringArray(pathOverride?.variantId ?? baseVariantIds)
+
           for (const pathVariantId of pathVariantIds) {
             if (!outputs.has(`${pathPackageId}#${pathVariantId}`)) {
-              await generateVariant(pathPackageId, pathVariantId)
+              await registerVariant(pathPackageId, pathVariantId as VariantID)
               outputs.add(`${pathPackageId}#${pathVariantId}`)
             }
           }
@@ -1232,7 +1240,7 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
       }
     }
 
-    async function generateVariant(packageId: PackageID, variantId: VariantID) {
+    async function registerVariant(packageId: PackageID, variantId: VariantID) {
       const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
       const variantEntry = variant ? entry.variants?.[variant] : entry
       const variantOverride = getOverride(entryId, variant)
@@ -1245,16 +1253,15 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
         throw Error(`Expected override to exist for ${variantAssetId}`)
       }
 
-      const dependencies = mapDefined(entry.dependencies ?? [], dependencyId => {
-        if (packages[dependencyId as PackageID]) {
-          return dependencyId as PackageID
-        }
+      // const dependencies = mapDefined(entry.dependencies ?? [], dependencyId => {
+      //   if (packages[dependencyId as PackageID]) {
+      //     return dependencyId as PackageID
+      //   }
 
-        return getOverride(getEntryId(dependencyId))?.packageId
-      })
+      //   return getOverride(getEntryId(dependencyId))?.packageId
+      // })
 
-      const ownerId = getOwnerId(packageId)
-      const authors = remove(mapDefined(entry.authors ?? [], getAuthorId), ownerId)
+      // const authors = remove(mapDefined(entry.authors ?? [], getAuthorId), ownerId)
 
       packages[packageId] ??= {
         id: packageId,
@@ -1274,82 +1281,141 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
           console.debug(`Creating variant ${packageId}#${variantId}...`)
         }
 
-        const packageFiles: { [path in string]?: FileInfo } = {}
-        let includedFiles = variantEntry.files
-        let excludedFiles: string[] = []
+        const filePriorities: { [path in string]?: number } = {}
+        let includedPaths: string[]
+        let excludedPaths: string[]
+
         if (variantOverride.paths) {
-          const matchedFiles = new Set<string>()
-          const unmatchedFiles = new Set(variantEntry.files)
+          includedPaths = []
+
+          let unmatchedFiles = variantEntry.files
           for (const path in variantOverride.paths) {
             const pattern = globToRegex(path)
             const pathOverride = variantOverride.paths[path]
+            const pathIsOverride = pathOverride?.override ?? baseIsOverride
+            const pathPackageId = pathOverride?.packageId ?? basePackageId
+            const pathVariantIds = parseStringArray(pathOverride?.variantId ?? baseVariantIds)
+            const isMatching = packageId === pathPackageId && pathVariantIds.includes(variantId)
 
-            if (pathOverride === null) {
-              for (const file of variantEntry.files) {
-                if (pattern.test(file)) {
-                  unmatchedFiles.delete(file)
-                }
-              }
-            } else {
-              const pathIsOverride = pathOverride?.override ?? baseIsOverride
-              const pathPackageId = pathOverride?.packageId ?? basePackageId
-              const pathVariantIds = pathOverride?.variantId
-                ? (parseStringArray(pathOverride.variantId) as VariantID[])
-                : baseVariantIds
-
-              const isMatching = packageId === pathPackageId && pathVariantIds.includes(variantId)
-
-              for (const file of variantEntry.files) {
-                if (pattern.test(file)) {
-                  unmatchedFiles.delete(file)
-                  if (isMatching) {
-                    matchedFiles.add(file)
-                    if (pathIsOverride) {
-                      packageFiles[file] ??= { path: file }
-                      packageFiles[file].priority ??= 900
-                    }
+            unmatchedFiles = unmatchedFiles.filter(file => {
+              if (pattern.test(file)) {
+                if (isMatching && pathOverride !== null) {
+                  includedPaths.push(file)
+                  if (pathIsOverride) {
+                    filePriorities[file] = 900
                   }
                 }
+
+                return false
               }
-            }
+
+              return true
+            })
           }
 
           if (packageId === basePackageId && baseVariantIds.includes(variantId)) {
             for (const file of unmatchedFiles) {
-              matchedFiles.add(file)
+              includedPaths.push(file)
               if (baseIsOverride) {
-                packageFiles[file] ??= { path: file }
-                packageFiles[file].priority ??= 900
+                filePriorities[file] = 900
               }
             }
           }
 
-          includedFiles = Array.from(matchedFiles.values())
-          excludedFiles = variantEntry.files.filter(file => !matchedFiles.has(file))
+          excludedPaths = difference(variantEntry.files, includedPaths)
+        } else {
+          includedPaths = variantEntry.files
+          excludedPaths = []
         }
 
-        packages[packageId] = generatePackageInfo(
+        packages[packageId] = registerVariantAsset(
           packageInfo,
-          packageId,
-          assetId,
-          source,
-          entry,
-          variant,
+          variantAssetId,
           variantId,
-          includedFiles,
-          excludedFiles,
-          packageFiles,
-          authors,
-          dependencies,
-          categories,
-          now,
+          includedPaths,
+          excludedPaths,
+          filePriorities,
         )
 
-        modifiedPackages.add(packageId)
+        generatingPackages[packageId] ??= []
+        generatingPackages[packageId].push(variantId)
       }
     }
 
     return true
+  }
+
+  function generateVariant(packageId: PackageID, variantId: VariantID) {
+    console.debug(`Generating variant ${packageId}#${variantId}...`)
+
+    const packageInfo = packages[packageId]
+    if (!packageInfo) {
+      throw Error(`Package ${packageId} does not exist`)
+    }
+
+    const variantInfo = packageInfo.variants[variantId]
+    if (!variantInfo) {
+      throw Error(`Variant ${packageId}#${variantId} does not exist`)
+    }
+
+    if (!variantInfo.assets?.length) {
+      throw Error(`Variant ${packageId}#${variantId} has no linked assets`)
+    }
+
+    const assetEntries = generate<
+      VariantAssetInfo,
+      AssetID,
+      IndexerEntry & {
+        asset: VariantAssetInfo
+        authors: AuthorID[]
+        categories: CategoryID[]
+        dependencies: PackageID[]
+        files: string[]
+      }
+    >(variantInfo.assets, asset => {
+      if (!assets[asset.id]) {
+        throw Error(`Asset ${asset.id} does not exist`)
+      }
+
+      const [assetId, variant] = asset.id.split("#", 2) as [AssetID, string?]
+      const [entryId, entry] = findEntry(entries, entry => entry.assetId === assetId) ?? []
+      if (!entryId || !entry) {
+        throw Error(`Asset ${asset.id} has no linked entry`)
+      }
+
+      const variantEntry = variant ? entry.variants?.[variant] : undefined
+      if (variant && !variantEntry) {
+        throw Error(`Asset ${asset.id} has no linked entry`)
+      }
+
+      if (!entry.files) {
+        throw Error(`Entry ${entryId} has no files`)
+      }
+
+      const source = getSource(entryId)
+      const category = entry.category ? source?.categories?.[entry.category] : undefined
+
+      return [
+        asset.id,
+        {
+          ...entry,
+          ...variantEntry,
+          asset,
+          authors: mapDefined(entry.authors ?? [], getAuthorId),
+          categories: union(entry.categories ?? [], category?.categories ?? []),
+          dependencies: mapDefined(entry.dependencies ?? [], dependencyId => {
+            if (packages[dependencyId as PackageID]) {
+              return dependencyId as PackageID
+            }
+
+            return getOverride(getEntryId(dependencyId))?.packageId
+          }),
+          files: entry.files,
+        },
+      ]
+    })
+
+    generateVariantInfo(packageInfo, variantInfo, assetEntries, categories)
   }
 
   async function loadOverrides(): Promise<{
@@ -1394,11 +1460,12 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
     const lowercased = authorName.toLowerCase()
     const rawId = toID(authorName) as AuthorID
 
-    return keys(dbAuthors).find(
-      authorId =>
+    return findKey(
+      dbAuthors,
+      (author, authorId) =>
         authorId === rawId ||
-        dbAuthors[authorId].name.toLowerCase() === lowercased ||
-        dbAuthors[authorId].alias?.some(alias => alias.toLowerCase() === lowercased),
+        author.name.toLowerCase() === lowercased ||
+        !!author.alias?.some(alias => alias.toLowerCase() === lowercased),
     )
   }
 }
@@ -1489,3 +1556,40 @@ function getEntryId(assetId: string): EntryID {
 function getSourceId(assetId: AssetID | EntryID): IndexerSourceID {
   return assetId.split("/")[0] as IndexerSourceID
 }
+
+// todo: move to utils
+function findEntry<T, K extends string>(
+  object: Partial<Record<K, T>>,
+  fn: (value: Defined<T>, key: K) => boolean,
+): [key: K, value: Defined<T>] | undefined {
+  for (const key in object) {
+    const value = object[key]
+    if (value !== undefined && fn(value as Defined<T>, key)) {
+      return [key, value as Defined<T>]
+    }
+  }
+}
+
+function findKey<T, K extends string>(
+  object: Partial<Record<K, T>>,
+  fn: (value: Defined<T>, key: K) => boolean,
+): K | undefined {
+  for (const key in object) {
+    const value = object[key]
+    if (value !== undefined && fn(value as Defined<T>, key)) {
+      return key
+    }
+  }
+}
+
+// function findValue<T, K extends string>(
+//   object: Partial<Record<K, T>>,
+//   fn: (value: Defined<T>, key: K) => boolean,
+// ): T | undefined {
+//   for (const key in object) {
+//     const value = object[key]
+//     if (value !== undefined && fn(value as Defined<T>, key)) {
+//       return value
+//     }
+//   }
+// }

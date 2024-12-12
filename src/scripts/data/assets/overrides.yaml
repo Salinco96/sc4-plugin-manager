@@ -693,6 +693,12 @@ sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack:
       packageId: girafe/carpack
     '*jenx megaprops*':
       packageId: xannepan/mega-props-vol01
+    ~Documents/BSC_Readmes/Deadwoods:
+      packageId: deadwoods/mega-props-vol01
+    ~Documents/BSC_Readmes/Mattb325:
+      packageId: mattb325/batprops-vol01
+    ~Documents/BSC_Readmes/girafe:
+      packageId: girafe/carpack
   variantId: default
 
 sc4evermore/32-cycledogg-tree-controllers:
@@ -971,6 +977,9 @@ simtropolis/14911-bsc-brick-canal-expansion-set:
 
 simtropolis/14926-crime-simulator-mod:
   packageId: buggi/crime-simulator-mod
+  paths:
+    NoCrime.dat:
+      variantId: no-crime
   variantId: default
 
 simtropolis/14931-less-abandonment:
@@ -1412,7 +1421,9 @@ simtropolis/27340-space-port-fix-mod:
   paths:
     Spaceport Fix Alt Mod.dat:
       variantId: alternate
-  variantId: default
+    Spaceport Fix Mod.dat:
+      variantId: default
+  variantId: default,alternate
 
 simtropolis/27675-sc4datanode: null
 
@@ -2097,7 +2108,7 @@ simtropolis/33651-11241036-textures:
   packageId: 11241036/textures
 
 simtropolis/33702-vip-trees-as-props:
-  packageId: vip/rural-pack
+  packageId: vip/tree-props
   variantId: default
 
 simtropolis/33753-italian-collection-relots-direzione-compartimentale: null

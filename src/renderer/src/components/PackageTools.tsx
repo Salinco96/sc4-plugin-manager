@@ -33,7 +33,7 @@ export function PackageTools({
   const variantInfo = useVariantInfo(packageId, variantId)
 
   const docsPath = variantInfo.docs
-  const readmePath = variantInfo.readme
+  const readmePaths = variantInfo.readme
 
   const [openOptions, setOpenOptions] = useState(false)
 
@@ -97,11 +97,11 @@ export function PackageTools({
           onClick={() => actions.openPackageFile(packageId, variantInfo.id, docsPath)}
         />
       )}
-      {variantInfo.installed && readmePath && (
+      {variantInfo.installed && readmePaths?.length && (
         <ToolButton
           description={t("openReadme")}
           icon={ReadmeIcon}
-          onClick={() => actions.openPackageFile(packageId, variantInfo.id, readmePath)}
+          onClick={() => actions.openPackageFile(packageId, variantInfo.id, readmePaths[0])}
         />
       )}
     </FlexBox>

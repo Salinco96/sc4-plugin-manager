@@ -2,33 +2,37 @@ import path from "node:path"
 
 import {
   collect,
-  difference,
-  entries,
-  get,
-  groupBy,
+  forEach,
+  intersection,
   matchGroups,
   toArray,
   union,
   unionBy,
+  values,
   where,
 } from "@salinco/nice-utils"
 
 import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { type Categories, CategoryID } from "@common/categories"
-import type { PackageID } from "@common/packages"
+import { type PackageID, getOwnerId } from "@common/packages"
 import type { PackageInfo } from "@common/types"
-import type { DependencyInfo, VariantID } from "@common/variants"
+import type { VariantAssetInfo, VariantID, VariantInfo } from "@common/variants"
 import { loadBuildingInfo } from "@node/data/buildings"
 import { loadFamilyInfo } from "@node/data/families"
 import { loadLotInfo } from "@node/data/lots"
 import { loadFloraInfo } from "@node/data/mmps"
-import type { FileData } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
 import { getExtension } from "@node/files"
 
-import type { IndexerEntry, IndexerSource } from "../types"
-import { htmlToMd } from "../utils"
+import {
+  CLEANITOL_EXTENSIONS,
+  DOC_EXTENSIONS,
+  README_EXTENSIONS,
+  SC4_EXTENSIONS,
+  matchFiles,
+} from "@node/data/files"
+import type { IndexerEntry } from "../types"
 
 // Common dependencies for which URL detection will not be accurate (e.g. BSC Common Dependencies Pack)
 const commonDependencies: {
@@ -102,124 +106,341 @@ export function extractSupportUrl(html: string): string | undefined {
   return match?.[0]
 }
 
-export function generatePackageInfo(
+export function registerVariantAsset(
   packageInfo: PackageInfo,
-  packageId: PackageID,
   assetId: AssetID,
-  source: IndexerSource | undefined,
-  entry: IndexerEntry,
-  variant: string | undefined,
   variantId: VariantID,
-  includedFiles: string[],
-  excludedFiles: string[],
-  packageFiles: { [path in string]?: FileData },
-  authors: AuthorID[],
-  dependencies: PackageID[],
-  categories: Categories,
-  timestamp: Date,
+  includedPaths: string[],
+  excludedPaths: string[],
+  filePriorities: { [path in string]?: number },
 ): PackageInfo {
-  const variantAssetId = variant ? (`${assetId}#${variant}` as AssetID) : assetId
-  const variantEntry = variant ? entry.variants?.[variant] : entry
-  if (!variantEntry || !entry.version) {
-    throw Error(`Expected override to exist for ${variantAssetId}`)
-  }
-
-  const [major, minor, patch] = matchGroups(entry.version, /(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)
-  const version = `${major}.${minor ?? 0}.${patch ?? 0}`
-
   packageInfo.variants[variantId] ??= {
-    authors,
+    authors: [getOwnerId(packageInfo.id)],
     categories: [],
     id: variantId,
     priority: 0, // unused by indexer
-    release: timestamp,
-    version,
+    version: "0.0.0",
   }
 
   const variantInfo = packageInfo.variants[variantId]
 
-  if (variantInfo.version !== version) {
-    variantInfo.release = timestamp
-    variantInfo.version = version
+  variantInfo.assets ??= []
 
-    if (entry.description) {
-      variantInfo.description = htmlToMd(entry.description)
-    }
+  let variantAsset = variantInfo.assets.find(where("id", assetId))
+
+  if (!variantAsset) {
+    variantAsset = { id: assetId }
+    variantInfo.assets.push(variantAsset)
   }
 
-  const variantCategories = new Set(variantInfo.categories)
+  const includedDocPaths = includedPaths.filter(path => DOC_EXTENSIONS.includes(getExtension(path)))
+  const excludedDocPaths = excludedPaths.filter(path => DOC_EXTENSIONS.includes(getExtension(path)))
+  const includedSC4Paths = includedPaths.filter(path => SC4_EXTENSIONS.includes(getExtension(path)))
+  const excludedSC4Paths = excludedPaths.filter(path => SC4_EXTENSIONS.includes(getExtension(path)))
 
-  if (variantEntry.categories) {
-    for (const category of variantEntry.categories) {
-      variantCategories.add(category)
-    }
+  // Cleanitol files which are already included
+  const { matchedPaths: includedCleanitolFiles, unmatchedPaths: unmatchedTxtPaths } = matchFiles(
+    includedDocPaths.filter(path => CLEANITOL_EXTENSIONS.includes(getExtension(path))),
+    {
+      exclude: variantAsset.exclude ?? [],
+      include: variantAsset.cleanitol?.map(path => ({ path })) ?? [],
+    },
+  )
+
+  // Cleanitol files which are not included but should be
+  const { matchedPaths: newCleanitolFiles } = matchFiles(unmatchedTxtPaths, {
+    exclude: variantAsset.exclude ?? [],
+    ignoreEmpty: true,
+    include: [{ path: "*cleanitol*.txt" }],
+  })
+
+  // Cleanitol files which are included but should not be
+  const { matchedPaths: wronglyIncludedCleanitolFiles } = matchFiles(
+    excludedDocPaths.filter(path => CLEANITOL_EXTENSIONS.includes(getExtension(path))),
+    {
+      exclude: variantAsset.exclude ?? [],
+      ignoreEmpty: true,
+      include: variantAsset.cleanitol?.map(path => ({ path })) ?? [{ path: "*cleanitol*.txt" }],
+    },
+  )
+
+  // Cleanitol files which should be excluded
+  const { matchedPaths: excludedCleanitolFiles } = matchFiles(excludedDocPaths, {
+    ignoreEmpty: true,
+    include: [{ path: "*cleanitol*.txt" }],
+  })
+
+  // Doc files which are already included
+  const { matchedPaths: includedDocFiles, unmatchedPaths: unmatchedDocPaths } = matchFiles(
+    includedDocPaths.filter(path => !includedCleanitolFiles[path] && !newCleanitolFiles[path]),
+    {
+      exclude: variantAsset.exclude ?? [],
+      include: variantAsset.docs ?? [],
+    },
+  )
+
+  // Doc files which are included but should not be
+  const { matchedPaths: wronglyIncludedDocFiles } = matchFiles(
+    excludedDocPaths.filter(path => !wronglyIncludedCleanitolFiles[path]),
+    {
+      exclude: variantAsset.exclude ?? [],
+      ignoreEmpty: true,
+      include: variantAsset.docs ?? [],
+    },
+  )
+
+  // Plugin files which are already included
+  const { matchedPaths: includedSC4Files, unmatchedPaths: unmatchedSC4Paths } = matchFiles(
+    includedSC4Paths,
+    {
+      exclude: variantAsset.exclude ?? [],
+      include: variantAsset.include ?? [],
+      options: variantInfo.options,
+    },
+  )
+
+  // Plugin files which are included but should not be
+  const { matchedPaths: wronglyIncludedSC4Files } = matchFiles(excludedSC4Paths, {
+    exclude: variantAsset.exclude ?? [],
+    ignoreEmpty: true,
+    include: variantAsset.include ?? [],
+    options: variantInfo.options,
+  })
+
+  if (values(excludedCleanitolFiles).some(Boolean)) {
+    variantAsset.cleanitol ??= []
   }
 
-  if (source && entry.category) {
-    const defaultCategories = source.categories[entry.category]?.categories
-    if (defaultCategories) {
-      for (const category of defaultCategories) {
-        variantCategories.add(category)
+  if (values(newCleanitolFiles).some(Boolean)) {
+    variantAsset.cleanitol ??= []
+    for (const path in newCleanitolFiles) {
+      if (newCleanitolFiles[path]) {
+        variantAsset.cleanitol.push(path)
       }
     }
   }
 
+  if (excludedDocPaths.length) {
+    variantAsset.docs ??= []
+  }
+
+  if (unmatchedDocPaths.length) {
+    variantAsset.docs ??= []
+    for (const oldPath of unmatchedDocPaths) {
+      variantAsset.docs.push({ path: oldPath })
+      includedDocFiles[oldPath] = { path: path.basename(oldPath) }
+    }
+  }
+
+  if (excludedSC4Paths.length) {
+    variantAsset.include ??= []
+  }
+
+  if (unmatchedSC4Paths.length) {
+    variantAsset.include ??= []
+    for (const oldPath of unmatchedSC4Paths) {
+      const priority = filePriorities[oldPath]
+      variantAsset.include.push({ path: oldPath, priority })
+      includedSC4Files[oldPath] = { path: path.basename(oldPath), priority }
+    }
+  }
+
+  if (values(wronglyIncludedCleanitolFiles).some(Boolean)) {
+    variantAsset.exclude ??= []
+    for (const path in wronglyIncludedCleanitolFiles) {
+      if (wronglyIncludedCleanitolFiles[path]) {
+        console.warn(`File ${path} should not be included.`)
+        variantAsset.exclude.push(path)
+      }
+    }
+  }
+
+  if (values(wronglyIncludedDocFiles).some(Boolean)) {
+    variantAsset.exclude ??= []
+    for (const path in wronglyIncludedDocFiles) {
+      if (wronglyIncludedDocFiles[path]) {
+        console.warn(`File ${path} should not be included.`)
+        variantAsset.exclude.push(path)
+      }
+    }
+  }
+
+  if (values(wronglyIncludedSC4Files).some(Boolean)) {
+    variantAsset.exclude ??= []
+    for (const path in wronglyIncludedSC4Files) {
+      if (wronglyIncludedSC4Files[path]) {
+        console.warn(`File ${path} should not be included.`)
+        variantAsset.exclude.push(path)
+      }
+    }
+  }
+
+  return packageInfo
+}
+
+export function generateVariantInfo(
+  packageInfo: PackageInfo,
+  variantInfo: VariantInfo,
+  entries: {
+    [assetId in AssetID]?: IndexerEntry & {
+      asset: VariantAssetInfo
+      authors: AuthorID[]
+      categories: CategoryID[]
+      dependencies: PackageID[]
+      files: string[]
+    }
+  },
+  categories: Categories,
+): void {
+  if (!variantInfo.assets?.length) {
+    throw Error(`Variant ${packageInfo.id}#${variantInfo.id} has no linked assets`)
+  }
+
+  const mainAsset = variantInfo.assets[0]
+  const mainEntry = entries[mainAsset.id]
+  if (!mainEntry?.version) {
+    throw Error(`Variant ${packageInfo.id}#${variantInfo.id} has no version`)
+  }
+
+  const [major, minor, patch] = matchGroups(mainEntry.version, /(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)
+  const version = `${major}.${minor ?? 0}.${patch ?? 0}`
+
+  if (variantInfo.version !== version) {
+    // variantInfo.release = new Date()
+    // variantInfo.version = version
+    // if (mainEntry.description) {
+    //   variantInfo.description = htmlToMd(mainEntry.description)
+    // }
+  }
+
+  variantInfo.lastGenerated = new Date()
+
+  // Fields derived from main entry only
+  variantInfo.deprecated ??= mainEntry.category?.includes("obsolete")
+  variantInfo.logs = mainEntry.description?.match(/\b[\w-]+[.]log\b/)?.at(0) ?? variantInfo.logs
+  variantInfo.repository = mainEntry.repository ?? variantInfo.repository
+  variantInfo.support = mainEntry.support ?? variantInfo.support
+  variantInfo.thumbnail = mainEntry.thumbnail ?? variantInfo.thumbnail
+  variantInfo.url = mainEntry.url ?? variantInfo.url
+
+  const features = new Set(packageInfo.features)
+  const variantCategories = new Set(variantInfo.categories)
+
+  const includedCleanitolPaths = new Set<string>()
+  const includedDocPaths = new Set<string>()
+  const includedSC4Paths = new Set<string>()
+  const translatePaths: { [assetId in AssetID]?: { [oldPath in string]?: string } } = {}
+
+  forEach(entries, (entry, assetId) => {
+    for (const category of entry.categories) {
+      variantCategories.add(category)
+    }
+
+    if (entry.features) {
+      for (const feature of entry.features) {
+        features.add(feature)
+      }
+    }
+
+    const { asset, files } = entry
+
+    const { matchedPaths: cleanitolFiles } = matchFiles(
+      files.filter(path => CLEANITOL_EXTENSIONS.includes(getExtension(path))),
+      {
+        exclude: asset.exclude,
+        ignoreEmpty: !asset.cleanitol,
+        include: asset.cleanitol?.map(path => ({ path })) ?? [{ path: "*cleanitol*.txt" }],
+      },
+    )
+
+    forEach(cleanitolFiles, async (file, oldPath) => {
+      if (file) {
+        if (includedCleanitolPaths.has(file.path)) {
+          console.error(`Ignoring file ${oldPath} trying to unpack at ${file.path}`)
+        } else {
+          includedCleanitolPaths.add(file.path)
+          translatePaths[assetId] ??= {}
+          translatePaths[assetId][oldPath] = file.path
+        }
+      }
+    })
+
+    const { matchedPaths: docFiles } = matchFiles(
+      files.filter(path => DOC_EXTENSIONS.includes(getExtension(path)) && !cleanitolFiles[path]),
+      {
+        exclude: asset.exclude,
+        ignoreEmpty: !asset.docs,
+        include: asset.docs ?? [{ path: "" }],
+      },
+    )
+
+    forEach(docFiles, async (file, oldPath) => {
+      if (file) {
+        if (includedDocPaths.has(file.path)) {
+          console.error(`Ignoring file ${oldPath} trying to unpack at ${file.path}`)
+        } else {
+          includedDocPaths.add(file.path)
+          translatePaths[assetId] ??= {}
+          translatePaths[assetId][oldPath] = file.path
+        }
+      }
+    })
+
+    const { matchedPaths: sc4Files } = matchFiles(
+      files.filter(path => SC4_EXTENSIONS.includes(getExtension(path))),
+      {
+        exclude: asset.exclude,
+        ignoreEmpty: !asset.include,
+        include: asset.include ?? [{ path: "" }],
+        options: variantInfo.options,
+      },
+    )
+
+    forEach(sc4Files, async (file, oldPath) => {
+      if (file) {
+        if (includedSC4Paths.has(file.path)) {
+          console.error(`Ignoring file ${oldPath} trying to unpack at ${file.path}`)
+        } else {
+          includedSC4Paths.add(file.path)
+          translatePaths[assetId] ??= {}
+          translatePaths[assetId][oldPath] = file.path
+          if (getExtension(file.path) === ".dll") {
+            variantCategories.add(CategoryID.DLL)
+          }
+        }
+      }
+    })
+  })
+
   if (variantCategories.has(CategoryID.DEPENDENCIES)) {
-    if (packageId.includes("props")) {
-      variantCategories.delete(CategoryID.DEPENDENCIES)
+    if (packageInfo.id.includes("props")) {
       variantCategories.add(CategoryID.PROPS)
     }
 
-    if (packageId.includes("textures")) {
-      variantCategories.delete(CategoryID.DEPENDENCIES)
+    if (packageInfo.id.includes("textures")) {
       variantCategories.add(CategoryID.TEXTURES)
     }
   }
 
-  if (!variantCategories.size) {
-    variantCategories.add(CategoryID.MODS)
-  }
+  // Last modified (latest of all entries)
+  const lastModified = collect(entries, entry => entry.lastModified.valueOf())
+  variantInfo.lastModified = new Date(Math.max(...lastModified))
 
-  variantInfo.assets ??= []
-  variantInfo.categories = toArray(variantCategories)
-  variantInfo.lastGenerated = timestamp
-  variantInfo.lastModified = entry.lastModified
-  variantInfo.logs ??= entry.description?.match(/\b[\w-]+[.]log\b/)?.at(0)
+  // const authors = values(entries).flatMap(entry => entry.authors)
+  // const dependencies = values(entries).flatMap(entry => entry.dependencies ?? [])
+  // const images = values(entries).flatMap(entry => entry.images ?? [])
 
-  const extraFeatures = variantEntry.features?.filter(
-    feature => !packageInfo.features?.includes(feature),
-  )
+  // variantInfo.authors = union(variantInfo.authors, authors)
 
-  if (extraFeatures?.length) {
-    console.warn(
-      `Variant ${variantId} contains features ${extraFeatures.join(",")} which are not included in the default variant. All variants must include the same feature set.`,
-    )
-  }
+  // variantInfo.dependencies = unionBy(
+  //   variantInfo.dependencies ?? [],
+  //   dependencies.map(id => ({ id, transitive: true })),
+  //   dependency => dependency.id,
+  // )
 
-  const variantAuthors = union(variantInfo.authors ?? [], authors)
+  // variantInfo.images = union(variantInfo.images ?? [], images)
 
-  const variantDependencies: DependencyInfo[] = unionBy(
-    variantInfo.dependencies ?? [],
-    difference(dependencies, variantInfo.optional ?? []).map(id => ({ id, transitive: true })),
-    get("id"),
-  )
-
-  const variantImages = union(variantInfo.images ?? [], entry.images ?? [])
-
-  variantInfo.authors = variantAuthors
-  variantInfo.dependencies = variantDependencies
-  variantInfo.images = variantImages
-  variantInfo.thumbnail = entry.thumbnail
-  variantInfo.url = entry.url
-
-  variantInfo.repository ??= entry.repository
-  variantInfo.support ??= entry.support
-
-  if (entry.category?.includes("obsolete")) {
-    variantInfo.deprecated = true
-  }
-
-  if (variantId === "darknite") {
+  if (variantInfo.id === "darknite") {
     variantInfo.name ??= "Dark Nite"
     variantInfo.requirements ??= {}
     variantInfo.requirements.darknite = true
@@ -232,130 +453,122 @@ export function generatePackageInfo(
     }
   }
 
-  let variantAsset = variantInfo.assets.find(where("id", variantAssetId))
+  const docPaths = toArray(includedDocPaths)
+  const readmePaths = docPaths.filter(path => README_EXTENSIONS.includes(getExtension(path)))
+  variantInfo.readme = union(intersection(variantInfo.readme ?? [], docPaths), readmePaths)
 
-  if (!variantAsset) {
-    variantAsset = { id: variantAssetId }
-    variantInfo.assets.push(variantAsset)
-  }
+  variantInfo.buildingFamilies = unionBy(
+    variantInfo.buildingFamilies?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    values(entries).flatMap(entry => {
+      return collect(entry.buildingFamilies ?? {}, (instances, oldPath) => {
+        const newPath = translatePaths[entry.asset.id]?.[oldPath]
+        if (newPath) {
+          return collect(instances, (data, id) => loadFamilyInfo(newPath, id, data))
+        }
 
-  const {
-    sc4: includedSC4Files,
-    cleanitol: includedCleanitolFiles,
-    docs: includedDocFiles,
-  } = categorizeFiles(includedFiles)
+        return []
+      }).flat()
+    }),
+    instance => `${instance.file}:${instance.id}`,
+  )
 
-  const {
-    sc4: excludedSC4Files,
-    cleanitol: excludedCleanitolFiles,
-    docs: excludedDocFiles,
-  } = categorizeFiles(excludedFiles)
+  variantInfo.buildings = unionBy(
+    variantInfo.buildings?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    values(entries).flatMap(entry => {
+      return collect(entry.buildings ?? {}, (instances, oldPath) => {
+        const newPath = translatePaths[entry.asset.id]?.[oldPath]
+        if (newPath) {
+          return collect(instances, (data, id) => loadBuildingInfo(newPath, id, data, categories))
+        }
 
-  if (includedCleanitolFiles?.length) {
-    variantAsset.cleanitol = includedCleanitolFiles
-  } else if (excludedCleanitolFiles?.length) {
-    variantAsset.cleanitol = []
-  }
+        return []
+      }).flat()
+    }),
+    instance => `${instance.file}:${instance.id}`,
+  )
 
-  if (includedDocFiles?.length) {
-    variantAsset.docs = includedDocFiles.map(path => ({ path }))
-  } else if (excludedDocFiles?.length) {
-    variantAsset.docs = []
-  }
+  variantInfo.lots = unionBy(
+    variantInfo.lots?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    values(entries).flatMap(entry => {
+      return collect(entry.lots ?? {}, (instances, oldPath) => {
+        const newPath = translatePaths[entry.asset.id]?.[oldPath]
+        if (newPath) {
+          return collect(instances, (data, id) => loadLotInfo(newPath, id, data))
+        }
 
-  if (includedSC4Files?.length) {
-    variantAsset.include = includedSC4Files.map(path => packageFiles[path] ?? { path })
-  } else if (excludedSC4Files?.length) {
-    variantAsset.include = []
-  }
+        return []
+      }).flat()
+    }),
+    instance => `${instance.file}:${instance.id}`,
+  )
 
-  if (variantEntry.buildingFamilies) {
-    variantInfo.buildingFamilies = unionBy(
-      variantInfo.buildingFamilies ?? [],
-      entries(variantEntry.buildingFamilies)
-        .filter(([file]) => includedFiles.includes(file))
-        .flatMap(([file, instances]) =>
-          collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
-        ),
-      instance => `${instance.id}:${instance.file}`,
-    )
-  }
+  variantInfo.mmps = unionBy(
+    variantInfo.mmps?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    values(entries).flatMap(entry => {
+      return collect(entry.mmps ?? {}, (instances, oldPath) => {
+        const newPath = translatePaths[entry.asset.id]?.[oldPath]
+        if (newPath) {
+          return collect(instances, (data, id) => loadFloraInfo(newPath, id, data))
+        }
 
-  if (variantEntry.buildings) {
-    variantInfo.buildings = unionBy(
-      variantInfo.buildings ?? [],
-      entries(variantEntry.buildings)
-        .filter(([file]) => includedFiles.includes(file))
-        .flatMap(([file, instances]) =>
-          collect(instances, (data, id) => loadBuildingInfo(file, id, data, categories)),
-        ),
-      instance => `${instance.id}:${instance.file}`,
-    )
-  }
+        return []
+      }).flat()
+    }),
+    instance => `${instance.file}:${instance.id}`,
+  )
 
-  if (variantEntry.lots) {
-    variantInfo.lots = unionBy(
-      variantInfo.lots ?? [],
-      entries(variantEntry.lots)
-        .filter(([file]) => includedFiles.includes(file))
-        .flatMap(([file, instances]) =>
-          collect(instances, (data, id) => loadLotInfo(file, id, data)),
-        ),
-      instance => `${instance.id}:${instance.file}`,
-    )
-  }
+  variantInfo.propFamilies = unionBy(
+    variantInfo.propFamilies?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    values(entries).flatMap(entry => {
+      return collect(entry.propFamilies ?? {}, (instances, oldPath) => {
+        const newPath = translatePaths[entry.asset.id]?.[oldPath]
+        if (newPath) {
+          return collect(instances, (data, id) => loadFamilyInfo(newPath, id, data))
+        }
 
-  if (variantEntry.mmps) {
-    variantInfo.mmps = unionBy(
-      variantInfo.mmps ?? [],
-      entries(variantEntry.mmps)
-        .filter(([file]) => includedFiles.includes(file))
-        .flatMap(([file, instances]) =>
-          collect(instances, (data, id) => loadFloraInfo(file, id, data)),
-        ),
-      instance => `${instance.id}:${instance.file}`,
-    )
-  }
+        return []
+      }).flat()
+    }),
+    instance => `${instance.file}:${instance.id}`,
+  )
 
-  if (variantEntry.propFamilies) {
-    variantInfo.propFamilies = unionBy(
-      variantInfo.propFamilies ?? [],
-      entries(variantEntry.propFamilies)
-        .filter(([file]) => includedFiles.includes(file))
-        .flatMap(([file, instances]) =>
-          collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
-        ),
-      instance => `${instance.id}:${instance.file}`,
-    )
-  }
+  variantInfo.props = unionBy(
+    variantInfo.props?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    values(entries).flatMap(entry => {
+      return collect(entry.props ?? {}, (instances, oldPath) => {
+        const newPath = translatePaths[entry.asset.id]?.[oldPath]
+        if (newPath) {
+          return collect(instances, (data, id) => loadPropInfo(newPath, id, data))
+        }
 
-  if (variantEntry.props) {
-    variantInfo.props = unionBy(
-      variantInfo.props ?? [],
-      entries(variantEntry.props)
-        .filter(([file]) => includedFiles.includes(file))
-        .flatMap(([file, instances]) =>
-          collect(instances, (data, id) => loadPropInfo(file, id, data)),
-        ),
-      instance => `${instance.id}:${instance.file}`,
-    )
-  }
+        return []
+      }).flat()
+    }),
+    instance => `${instance.file}:${instance.id}`,
+  )
 
-  return packageInfo
-}
-
-const sc4Extensions = [".dat", ".dll", ".ini", "._loosedesc", ".sc4desc", ".sc4lot", ".sc4model"]
-
-function categorizeFiles(files: string[]) {
-  return groupBy(files, file => {
-    if (sc4Extensions.includes(getExtension(file))) {
-      return "sc4"
+  for (const building of variantInfo.buildings) {
+    if (building.categories && variantInfo.lots.some(lot => lot.building === building.id)) {
+      for (const category of building.categories) {
+        variantCategories.add(category)
+      }
     }
+  }
 
-    if (path.basename(file).match(/(cleanitol|remove).*[.]txt$/i)) {
-      return "cleanitol"
+  for (const lot of variantInfo.lots) {
+    if (lot.requirements?.cam) {
+      variantCategories.add(CategoryID.CAM)
     }
+  }
 
-    return "docs"
-  })
+  if (variantInfo.mmps.length) {
+    variantCategories.add(CategoryID.MMPS)
+  }
+
+  if (!variantCategories.size) {
+    variantCategories.add(CategoryID.MODS)
+  }
+
+  variantInfo.categories = toArray(variantCategories)
+  packageInfo.features = toArray(features)
 }

@@ -3139,11 +3139,13 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_02/65bf71f486a7a_VIPRuralExp-main.jpg.1ae24f09fe6bf1a7193f784710967875.jpg
     lastModified: 2024-02-04T11:16:22.000Z
     meta:
-      timestamp: 2024-12-03T16:03:49.352Z
+      timestamp: 2024-12-11T10:51:59.470Z
       version: 1
     mmps:
       VIP/Rural Pack/Manchou/VIP_Man_Cows_Seasonal_MMP.dat:
         '19620420':
+          description: Click one or several times to make vary models. The models will automatically vary 3 times through the year.
+          label: Cows seasonal.
           name: VIP_Man_Cow_01
           stages:
             - id: '19620421'
@@ -3188,9 +3190,13 @@ assets:
               name: VIP_Man_Cow_21
       VIP/Rural Pack/Orange/VIP_Or_Corylus_Seasonal_MMP.dat:
         '19620275':
+          description: A planter un 1er Septembre. Le timing sera initialisé l'année suivante.To be planted the 1st September. The timing will be correct in the next game year.
+          label: Corylus saisonnier. Corylus seasonal.
           name: Or_VIP_Corylus01
       VIP/Rural Pack/Orange/VIP_Or_Narcissus_Seasonal_MMP.dat:
         '19620280':
+          description: 'A planter un 1er Septembre. Le timing sera initialisé l''année suivante. Cliquez une ou plusieurs fois pour faire varier les 5 modèles. Note : en hiver les fougères remplacent les jonquilles. To be planted the 1st September. The timing will be correct in the next game year. Click one or several times to make vary the 5 models. Note: in winter ferns replace Narcissus.'
+          label: Narcissus. Jonquilles. Yellow Daffodills.
           name: VIP_RP-FL_Or_Narcissus01
           stages:
             - id: '19620281'
@@ -3203,6 +3209,8 @@ assets:
               name: VIP_RP-FL_Or_Narcissus05
       VIP/Rural Pack/Orange/VIP_Or_Populus_Seasonal_MMP.dat:
         '19620270':
+          description: A planter un 1er Septembre. Le timing sera initialisé l'année suivante. Cliquez une ou plusieurs fois pour faire varier les 4 modèles.To be planted the 1st September. The timing will be correct in the next game year. Click one or several times to make vary the 4 models.
+          label: Populus. Peupliers. Poplars.
           name: 'Or_VIP_Populus04 '
           stages:
             - id: '19620271'
@@ -3213,6 +3221,8 @@ assets:
               name: 'Or_VIP_Populus02  '
       VIP/Rural Pack/R6/VIP_R6_Herbes_Pampa_Big_MMP.dat:
         '19620074':
+          description: Cliquez une ou plusieurs fois afin de faire varier les 3 modèles. Click one or several times to make vary the 3 models.
+          label: Herbes de la Pampa grandes. Pampa grass (big).
           model: 5a76609f
           name: R6_VIP_ploppable_HPampaBig01
           stages:
@@ -3224,6 +3234,8 @@ assets:
               name: R6_VIP_ploppable_HPampaBig03
       VIP/Rural Pack/R6/VIP_R6_Herbes_Pampa_Small_MMP.dat:
         '19620080':
+          description: Cliquez une ou plusieurs fois afin de faire varier les 3 modèles. Click one or several times to make vary the 3 models.
+          label: Herbes de la Pampa petites. Pampa grass (small).
           model: ba4eca7a
           name: R6_VIP_ploppable_HPampaSmall01
           stages:
@@ -3235,6 +3247,8 @@ assets:
               name: R6_VIP_ploppable_HPampaSmall03
       VIP/Rural Pack/R6/VIP_R6_Iris_Des_Marais_Seasonal_MMP.dat:
         '19620130':
+          description: A planter un 1er Septembre. Les iris sont en fleur pendant 8 mois. To be planted the 1st September. The flowering lasts 8 months.
+          label: Iris des Marais saisoniers. Marsh Iris seasonal.
           name: R6_VIP_Iris des Marais01
           stages:
             - id: '19620131'
@@ -3243,6 +3257,8 @@ assets:
               name: R6_VIP_Iris des Marais03
       VIP/Rural Pack/R6/VIP_R6_Nenuphars_MMP.dat:
         '19620020':
+          description: Cliquez une ou plusieurs fois afin de faire varier les 4 modèles. Click one or several times to make vary the 4 models.
+          label: Nenuphars. Lilly pads.
           model: 9a4eceec
           name: R6_VIP_plop_Nenuphars
           stages:
@@ -3260,6 +3276,8 @@ assets:
               name: R6_VIP_plop_Nenuphar04
       VIP/Rural Pack/R6/VIP_R6_Potamot_MMP.dat:
         '19620100':
+          description: Cliquez une ou plusieurs fois afin de faire varier les 4 modèles. Click one or several times to make vary the 4 models.
+          label: Potamot nageant. Potamogeton.
           model: fb17348d
           name: R6_VIP_plop_Potamot
           stages:
@@ -3277,6 +3295,8 @@ assets:
               name: R6_VIP_plop_Potamot04
       VIP/Rural Pack/R6/VIP_R6_Rochers_MMP.dat:
         '19620160':
+          description: Cliquez une ou plusieurs fois afin de faire varier les 8 modèles. Click one or several times to make vary the 8 models.
+          label: Rochers mousse petits et gros. Mossy rocks small and big.
           model: 1a6414bc
           name: R6_VIP_RochersMousse
           stages:
@@ -3306,6 +3326,8 @@ assets:
               name: R6_VIP_RochersMousseBig04
       VIP/Rural Pack/R6/VIP_R6_Roseaux_Big_MMP.dat:
         '19620070':
+          description: Cliquez une ou plusieurs fois afin de faire varier les 3 modèles. Click one or several times to make vary the 3 models.
+          label: Roseaux grands. Cattails (big).
           model: 9a7655ec
           name: R6_VIP_ploppable_RoseauxBig01
           stages:
@@ -3317,6 +3339,8 @@ assets:
               name: R6_VIP_ploppable_RoseauxBig03
       VIP/Rural Pack/R6/VIP_R6_Roseaux_Small_MMP.dat:
         '19620030':
+          description: Cliquez une ou plusieurs fois afin de faire varier les 3 modèles. Click one or several times to make vary the 3 models.
+          label: Roseaux petits. Cattails (small).
           model: ba4ed06b
           name: R6_VIP_ploppable_RoseauxSmall01
           stages:
@@ -3328,6 +3352,8 @@ assets:
               name: R6_VIP_ploppable_RoseauxSmall03
       VIP/Rural Pack/VIP_Garbage_MMP.dat:
         '19620400':
+          description: Click one or several times to make vary models.
+          label: Garbage.
           model: badb57f1-1c49
           name: VIP_Garbage_01
           stages:
@@ -3366,6 +3392,8 @@ assets:
               name: VIP_Garbage_12
       VIP/Rural Pack/VIP_Kayaks_And_Zodiacs_MMP.dat:
         '19620110':
+          description: Cliquez une ou plusieurs fois afin de faire varier les 13 modèles. Click one or several times to make vary the 13 models.
+          label: Kayaks et zodiacs. Kayaks and zodiacs.
           model: 7a48711c
           name: VIP_plop_Kayak&Zodiacs
           stages:
@@ -3407,6 +3435,8 @@ assets:
               name: VIP_plop_ZodiacOccup�03
       VIP/Rural Pack/Vnaoned/VIP_VV_Barques_MMP.dat:
         '19620096':
+          description: Cliquez une ou plusieurs fois afin de faire varier les différents modèles. Click one or several times to make vary the different models.
+          label: 'Barques. Rowboats. '
           model: 1a4f1caa
           name: VV_VIP_ploppabe_Barque01
           stages:
@@ -3421,6 +3451,8 @@ assets:
               name: VV_VIP_ploppable_Barque04
       VIP/Rural Pack/Vnaoned/VIP_VV_Bouses_MMP.dat:
         '19620150':
+          description: Cliquez une ou plusieurs fois afin de faire varier les différents modèles. Click one or several times to make vary the different models.
+          label: Bouses de vaches. Cowpats.
           model: 5a51effb
           name: VV_VIP_plop_Bouses01
           stages:
@@ -3429,6 +3461,8 @@ assets:
               name: VV_VIP_plop_Bouses02
       VIP/Rural Pack/Vnaoned/VIP_VV_Chickens_MMP.dat:
         '19620040':
+          description: Cliquez une ou plusieurs fois pour faire varier les 9 modèles. Click one or several times to make vary the 9 models.
+          label: Poules et poussins. Hens and chicks.
           model: 5893f9d0
           name: VV_VIP_plop_Chicken
           stages:
@@ -3461,6 +3495,8 @@ assets:
               name: VV_VIP_plop_Chicken09
       VIP/Rural Pack/Vnaoned/VIP_VV_Cows_MMP.dat:
         '19620001':
+          description: Cliquez une ou plusieurs fois pour faire varier les 14 modèles. Click one or several times to make vary the 14 models.
+          label: Vaches. Cows.
           model: 786de570
           name: VV_plop_Cows
           stages:
@@ -3508,6 +3544,8 @@ assets:
               name: VV_plop_Cow14
       VIP/Rural Pack/Vnaoned/VIP_VV_Fougeres_Seasonal_MMP.dat:
         '19620090':
+          description: A planter un 1er Septembre. Le timing sera initialisé l'année suivante. Cliquez une ou plusieurs fois pour faire varier les 6 modèles.To be planted the 1st September. The timing will be correct in the next game year. Click one or several times to make vary the 6 models.
+          label: Fougères saisonnières. Ferns seasonal.
           name: VV_TSC_ploppable_Fougere01
           stages:
             - id: '19620091'
@@ -3522,6 +3560,8 @@ assets:
               name: VV_TSC_ploppable_Fougere06
       VIP/Rural Pack/Vnaoned/VIP_VV_Genets_Seasonal_MMP.dat:
         '19620190':
+          description: A planter un 1er Septembre. Le timing sera initialisé l'année suivante. Cliquez une ou plusieurs fois pour faire varier les 3 modèles.To be planted the 1st September. The timing will be correct in the next game year. Click one or several times to make vary the 3 models.
+          label: Genêts sasisonniers. Jennets seasonal.
           name: VV_VIP_ploppable_Genet01
           stages:
             - id: '19620191'
@@ -3530,6 +3570,8 @@ assets:
               name: VV_VIP_ploppable_Genet03
       VIP/Rural Pack/Vnaoned/VIP_VV_Herons_MMP.dat:
         '19620180':
+          description: Cliquez une ou plusieurs fois pour faire varier les 8 modèles. Click one or several times to make vary the 8 models.
+          label: Hérons. Herons.
           model: 7a6abadc
           name: VV_VIP_plop_Heron01a
           stages:
@@ -3556,6 +3598,8 @@ assets:
               name: VV_VIP_plop_Heron02d
       VIP/Rural Pack/Vnaoned/VIP_VV_Perso_Baigneurs_MMP.dat:
         '19620194':
+          description: Cliquez une ou plusieurs fois afin de faire varier les différents modèles. Click one or several times to make vary the different models.
+          label: Baigneurs. Bathers
           model: ba7c13c5
           name: VV_Baigneur01a
           stages:
@@ -3609,6 +3653,8 @@ assets:
               name: VV_BaigneurDebout
       VIP/Rural Pack/Vnaoned/VIP_VV_Perso_Pecheurs_MMP.dat:
         '19620170':
+          description: Cliquez une ou plusieurs fois pour faire varier les 12 modèles. Click one or several times to make vary the 12 models.
+          label: Pêcheurs. Fishermans.
           model: ba7aea71
           name: VV_Pecheur01
           stages:
@@ -3647,6 +3693,8 @@ assets:
               name: VV_Pecheur12
       VIP/Rural Pack/Vnaoned/VIP_VV_Pigeons_MMP.dat:
         '19620454':
+          description: Click one or several times to make vary models.
+          label: Pigeons.
           model: '38899977'
           name: VIP_VV_Pigeon_01
           stages:
@@ -3667,6 +3715,8 @@ assets:
               name: VIP_VV_Pigeon_06
       VIP/Rural Pack/Vnaoned/VIP_VV_Ravens_MMP.dat:
         '19620435':
+          description: Click one or several times to make vary models.
+          label: Ravens.
           model: 190e856c
           name: VIP_VV_Raven_01
           stages:
@@ -3696,8 +3746,12 @@ assets:
               name: VIP_VV_Raven_09
       VIP/Rural Pack/Vnaoned/VIP_VV_Varioius_Trees_Seasonal_MMP.dat:
         '19620286':
+          description: 'To be planted on March 1st. No autumn version. '
+          label: Cherry tree seasonal.
           name: VIP_VV_Cherry_Tree
         '19620300':
+          description: To be planted the 1st September. The timing will be correct in the next game year. Click one or several times to make vary flora.
+          label: Seasonal trees.
           name: VIP_VV_Tree_01
           stages:
             - id: '19620301'
@@ -5071,11 +5125,13 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_11_2011/3844226808d36005c5094c2a19bc2ff5-aesculussummer.jpg
     lastModified: 2024-02-04T10:24:41.000Z
     meta:
-      timestamp: 2024-12-03T16:03:49.352Z
+      timestamp: 2024-12-11T10:51:59.470Z
       version: 1
     mmps:
       VIP/Orange/Aesculus/VIP_Or_Aesculus_Seasonal.dat:
         78da2003:
+          description: To be planted the 1st September.  The timing will be correct in the next game year.  Click one or several times to make vary trees.
+          label: Aesculus seasonal.
           name: VIP_Or_FL_Aesculus_Seasonal_00
           stages:
             - id: 78da2004
@@ -5090,6 +5146,8 @@ assets:
               name: VIP_Or_FL_Aesculus_Seasonal_05
       VIP/Orange/Aesculus/VIP_Or_Aesculus_Summer.dat:
         78da2009:
+          description: Click one or several times to make vary trees.
+          label: Aesculus evergreen.
           model: 7bd15486
           name: VIP_Or_FL_Aesculus_Summer_00
           stages:
@@ -5165,11 +5223,13 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_12_2013/33a48d2d720f357410067589089c3113-presentation2.jpg
     lastModified: 2024-02-04T10:19:19.000Z
     meta:
-      timestamp: 2024-12-03T16:03:49.352Z
+      timestamp: 2024-12-11T10:51:59.470Z
       version: 1
     mmps:
       VIP/Orange/Fagus/VIP_Or_Fagus_Seasonal.dat:
         78da2010:
+          description: To be planted the 1st September.  The timing will be correct in the next game year.  Click one or several times to make vary trees.
+          label: Fagus seasonal.
           name: VIP_Or_FL_Fagus_Seasonal_01
           stages:
             - id: 78da2011
@@ -5182,6 +5242,8 @@ assets:
               name: VIP_Or_FL_Fagus_Seasonal_05
       VIP/Orange/Fagus/VIP_Or_Fagus_Summer.dat:
         78da2015:
+          description: Click one or several times to make vary trees.
+          label: Fagus evergreen.
           model: 5bd95aea
           name: VIP_Or_FL_Fagus_Summer_01
           stages:
@@ -6666,11 +6728,13 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_02/Icon_pinus-nigra_ig.jpg.6c5052b2c528e868f85883f8f297bd3e.jpg
     lastModified: 2024-02-04T10:35:34.000Z
     meta:
-      timestamp: 2024-12-03T16:03:49.352Z
+      timestamp: 2024-12-11T10:51:59.470Z
       version: 1
     mmps:
       VIP/Orange/Pinus Nigra/VIP_Or_PinusNigra_Evergreen_MMP.dat:
         78da1030:
+          description: "Pinus Nigra ploppables, pas de coût de construction ni de démolition. Cliquez une ou plusieurs fois afin de faire varier les Arbres.\r\n\r\nPloppables Pinus Nigra, no cost of construction nor demolition. Click one or several times to make vary Trees."
+          label: Pinus Nigra
           model: 1a4ba992
           name: Or_TSC_Flplop_PinusNigra
           stages:
@@ -16442,4 +16506,4 @@ assets:
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
 meta:
-  timestamp: 2024-12-10T10:25:09.262Z
+  timestamp: 2024-12-12T12:47:22.557Z

@@ -57,6 +57,7 @@ export interface StoreActions {
   getPackageReadme(
     packageId: PackageID,
     variantId: VariantID,
+    filePath: string,
   ): Promise<{ html?: string; md?: string }>
   installVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   loadDBPFEntries(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile>
@@ -244,8 +245,8 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
       getPackageLogs(packageId, variantId) {
         return window.api.getPackageLogs(packageId, variantId)
       },
-      getPackageReadme(packageId, variantId) {
-        return window.api.getPackageReadme(packageId, variantId)
+      getPackageReadme(packageId, variantId, filePath) {
+        return window.api.getPackageReadme(packageId, variantId, filePath)
       },
       async installVariant(packageId, variantId) {
         try {

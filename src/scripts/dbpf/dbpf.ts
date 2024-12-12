@@ -1,10 +1,9 @@
 import path from "node:path"
 
-import { collect, toArray, toHex, values } from "@salinco/nice-utils"
+import { toArray, toHex, values } from "@salinco/nice-utils"
 
 import type { BuildingID } from "@common/buildings"
-import { CategoryID } from "@common/categories"
-import { DBPFDataType, DBPFFileType, type TGI, isDBPF, parseTGI } from "@common/dbpf"
+import { DBPFDataType, DBPFFileType, isDBPF, parseTGI } from "@common/dbpf"
 import {
   ExemplarPropertyID,
   type ExemplarPropertyInfo,
@@ -16,7 +15,6 @@ import type { LotID } from "@common/lots"
 import type { FloraID } from "@common/mmps"
 import type { PropID } from "@common/props"
 import { Feature } from "@common/types"
-import { parseStringArray } from "@common/utils/types"
 import type { FloraData } from "@node/data/mmps"
 import type { ContentsData } from "@node/data/packages"
 import { loadDBPF } from "@node/dbpf"
@@ -25,30 +23,19 @@ import { getLotData } from "@node/dbpf/lots"
 import { getFloraData } from "@node/dbpf/mmps"
 import { getPropData } from "@node/dbpf/props"
 import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
-import { get, getBaseTextureId, getString } from "@node/dbpf/utils"
-import { FileOpenMode, getExtension, openFile } from "@node/files"
-
-export interface SC4FileData extends ContentsData {
-  categories: CategoryID[]
-  features: Feature[]
-}
+import { get, getBaseTextureId, getFamilyInstanceId, getModelId, getString } from "@node/dbpf/utils"
+import { FileOpenMode, openFile } from "@node/files"
 
 export async function analyzeSC4Files(
   basePath: string,
   filePaths: string[],
   exemplarProperties: { [id in number]?: ExemplarPropertyInfo },
-): Promise<SC4FileData> {
-  const categories = new Set<CategoryID>()
+): Promise<{ contents: ContentsData; features: Feature[] }> {
   const features = new Set<Feature>()
   const contents: ContentsData = {}
 
   for (const filePath of filePaths) {
     console.debug(`Analyzing ${filePath}...`)
-
-    if (getExtension(filePath) === ".dll") {
-      categories.add(CategoryID.MODS)
-      categories.add(CategoryID.DLL)
-    }
 
     if (isDBPF(filePath)) {
       const file = await openFile(path.join(basePath, filePath), FileOpenMode.READ, file => {
@@ -92,8 +79,6 @@ export async function analyzeSC4Files(
               }
 
               case ExemplarType.Developer: {
-                categories.add(CategoryID.GAMEPLAY)
-
                 if (!isCohort) {
                   const type = DeveloperID[instanceId] as keyof typeof DeveloperID
                   if (type) {
@@ -106,8 +91,6 @@ export async function analyzeSC4Files(
               }
 
               case ExemplarType.Flora: {
-                categories.add(CategoryID.MMPS)
-
                 if (!isCohort) {
                   const floraId = toHex(instanceId, 8) as FloraID
 
@@ -116,7 +99,7 @@ export async function analyzeSC4Files(
                     stages: Array<FloraData & { id: FloraID }>
                   } = {
                     next: get(exemplar, ExemplarPropertyID.FloraClusterType),
-                    stages: [{ ...getFloraData(exemplar), id: floraId }],
+                    stages: [{ ...getFloraData(exemplar, file), id: floraId }],
                   }
 
                   // Link to next stage
@@ -143,7 +126,6 @@ export async function analyzeSC4Files(
               }
 
               case ExemplarType.Lighting: {
-                categories.add(CategoryID.GRAPHICS)
                 features.add(Feature.DARKNITE)
                 break
               }
@@ -155,17 +137,13 @@ export async function analyzeSC4Files(
                   contents.lots ??= {}
                   contents.lots[filePath] ??= {}
                   contents.lots[filePath][lotId] = lot
-
-                  if (lot.requirements?.cam) {
-                    categories.add(CategoryID.CAM)
-                  }
                 }
 
                 break
               }
 
               case ExemplarType.Ordinance: {
-                categories.add(CategoryID.ORDINANCES)
+                // todo
                 break
               }
 
@@ -190,8 +168,6 @@ export async function analyzeSC4Files(
               }
 
               case ExemplarType.Simulator: {
-                categories.add(CategoryID.GAMEPLAY)
-
                 if (!isCohort) {
                   const type = SimulatorID[instanceId] as keyof typeof SimulatorID
                   if (type) {
@@ -243,38 +219,5 @@ export async function analyzeSC4Files(
     }
   }
 
-  const buildings = values(contents.buildings ?? {}).flatMap(buildings =>
-    collect(buildings, ({ categories }, id) => ({ categories, id })),
-  )
-
-  const lots = values(contents.lots ?? {}).flatMap(values)
-
-  for (const building of buildings) {
-    if (building.categories && lots.some(lot => lot.building === building.id)) {
-      for (const category of parseStringArray(building.categories)) {
-        categories.add(category as CategoryID)
-      }
-    }
-  }
-
-  return {
-    ...contents,
-    categories: toArray(categories),
-    features: toArray(features),
-  }
-}
-
-export function bitMask(value: number, mask: number): number {
-  return (value & mask) >>> 0
-}
-
-export function getFamilyInstanceId(familyId: number): number {
-  return bitMask(familyId + 0x10000000, 0xffffffff)
-}
-
-export function getModelId(tgi: TGI): string {
-  const [, g, i] = parseTGI(tgi)
-  return bitMask(i, 0xffff0000) === 0x00030000
-    ? toHex(g, 8)
-    : `${toHex(g, 8)}-${toHex(bitMask(i, 0xffff0000), 8).slice(0, 4)}` // Ignore zoom/rotation
+  return { contents, features: toArray(features) }
 }

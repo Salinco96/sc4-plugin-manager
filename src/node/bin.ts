@@ -111,8 +111,8 @@ export class Binary {
     return this.toBytes().toString("hex")
   }
 
-  public toString(): string {
-    return this.toBytes().toString("utf8")
+  public toString(encoding: BufferEncoding = "utf8"): string {
+    return this.toBytes().toString(encoding)
   }
 
   public async writeTofile(file: FileHandle, offset?: number): Promise<number> {

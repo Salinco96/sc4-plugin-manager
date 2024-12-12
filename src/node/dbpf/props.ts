@@ -1,12 +1,11 @@
 import { toHex } from "@salinco/nice-utils"
 
 import { ExemplarPropertyID } from "@common/exemplars"
+import type { FamilyID } from "@common/families"
 import type { PropData } from "@node/data/props"
 
-import type { FamilyID } from "@common/families"
-import { getModelId } from "src/scripts/dbpf/dbpf"
 import type { Exemplar } from "./types"
-import { get, getString, getTGI } from "./utils"
+import { get, getModelId, getString, getTGI } from "./utils"
 
 export function getPropData(exemplar: Exemplar): PropData {
   const data: PropData = {}
