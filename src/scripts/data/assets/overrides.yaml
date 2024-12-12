@@ -978,9 +978,11 @@ simtropolis/14911-bsc-brick-canal-expansion-set:
 simtropolis/14926-crime-simulator-mod:
   packageId: buggi/crime-simulator-mod
   paths:
+    LowCrime.dat:
+      variantId: default
     NoCrime.dat:
       variantId: no-crime
-  variantId: default
+  variantId: default,no-crime
 
 simtropolis/14931-less-abandonment:
   packageId: bones1/less-abandonment
