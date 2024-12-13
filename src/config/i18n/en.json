@@ -557,6 +557,8 @@
     "readme": "Readme",
     "requiredBy": "{{count}} dependent packages",
     "summary": "Summary",
+    "textures_one": "{{count}} texture",
+    "textures_other": "{{count}} textures",
     "variants_one": "{{count}} variant",
     "variants_other": "{{count}} variants"
   },

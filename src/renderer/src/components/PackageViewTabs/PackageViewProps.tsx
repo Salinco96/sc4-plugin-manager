@@ -7,13 +7,18 @@ import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { useCurrentVariant } from "@utils/packages"
-import { useStore } from "@utils/store"
+import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 
+import { checkFile } from "@common/packages"
 import { ExemplarRef } from "../ExemplarRef"
 import type { PackageViewTabInfoProps } from "./tabs"
 
 export default function PackageViewProps({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const elementId = useStore(store => store.packageView.elementId)
+  const features = useFeatures()
+  const profileInfo = useCurrentProfile()
+  const profileOptions = useStore(store => store.profileOptions)
+  const settings = useSettings()
 
   const variantInfo = useCurrentVariant(packageId)
 
@@ -26,16 +31,36 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
   }, [elementId])
 
   const groupedProps = useMemo(() => {
+    const includedFiles = new Set(
+      variantInfo.files
+        ?.filter(file =>
+          checkFile(
+            file,
+            packageId,
+            variantInfo,
+            profileInfo,
+            profileOptions,
+            features,
+            settings,
+            undefined,
+            true,
+          ),
+        )
+        .map(file => file.path),
+    )
+
     // Collect unique props by ID
-    const props = mapValues(groupBy(variantInfo.props ?? [], get("id")), (props, instanceId) => {
-      if (props.length === 1) {
-        // TODO: Check filenames whether a single prop is currently enabled via options
-        if (props.length !== 1) {
-          console.warn(`Duplicate prop ${instanceId}`)
+    const props = mapValues(groupBy(variantInfo.props ?? [], get("id")), (props, propId) => {
+      if (props.length !== 1) {
+        const included = props.filter(prop => includedFiles.has(prop.file))
+        if (included.length === 1) {
+          return included[0]
         }
 
-        return props[0]
+        console.warn(`Duplicate prop ${propId}`)
       }
+
+      return props[0]
     })
 
     // Group props by family
@@ -45,7 +70,7 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
       ),
       props => (props.length > 1 && props[0].family) || props[0].name || props[0].id,
     )
-  }, [variantInfo])
+  }, [features, packageId, profileInfo, profileOptions, settings, variantInfo])
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>

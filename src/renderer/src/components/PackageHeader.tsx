@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import { Box, Typography } from "@mui/material"
+import { Box } from "@mui/material"
 
 import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
@@ -9,6 +9,7 @@ import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 
 import { PackageTools } from "./PackageTools"
 import { PackageTags } from "./Tags/PackageTags"
+import { Text } from "./Text"
 import { Thumbnail } from "./Thumbnail"
 import { ImageViewer } from "./Viewer/ImageViewer"
 
@@ -37,14 +38,14 @@ export function PackageHeader({ packageId }: { packageId: PackageID }): JSX.Elem
           src={variantInfo.thumbnail}
         />
       )}
-      <Box flexGrow={1} pr={2}>
-        <Typography variant="h6">
+      <Box flex={1} mr={2} overflow="hidden">
+        <Text maxLines={1} variant="h6">
           {packageInfo.name} (v{variantInfo.version})
-        </Typography>
+        </Text>
         <FlexBox alignItems="center">
-          <Typography variant="body2">
+          <Text maxLines={1} variant="body2">
             {packageId}#{variantInfo.id}
-          </Typography>
+          </Text>
           <PackageTools packageId={packageId} />
         </FlexBox>
         <PackageTags packageId={packageId} />

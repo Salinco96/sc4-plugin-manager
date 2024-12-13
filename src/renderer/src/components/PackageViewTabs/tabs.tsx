@@ -1,4 +1,4 @@
-import { get, size, unionBy, uniqueBy, where } from "@salinco/nice-utils"
+import { get, isEmpty, size, unionBy, unique, uniqueBy, values, where } from "@salinco/nice-utils"
 import type { TFunction } from "i18next"
 import { type ComponentType, lazy } from "react"
 
@@ -85,6 +85,17 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     label(t, variantInfo) {
       const ids = uniqueBy(variantInfo.props ?? [], get("id"))
       return t("props", { count: ids.length })
+    },
+  },
+  {
+    id: "textures",
+    component: lazy(() => import("./PackageViewTextures")),
+    condition(variantInfo) {
+      return !!variantInfo.textures && !isEmpty(variantInfo.textures)
+    },
+    label(t, variantInfo) {
+      const ids = unique(values(variantInfo.textures ?? {}).flat())
+      return t("textures", { count: ids.length })
     },
   },
   {

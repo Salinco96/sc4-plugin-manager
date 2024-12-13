@@ -1,4 +1,4 @@
-import { compact, isDefined, parseHex, values, where } from "@salinco/nice-utils"
+import { compact, isDefined, parseHex, toHex, values, where } from "@salinco/nice-utils"
 import { useMemo } from "react"
 
 import { getBaseTextureId } from "@common/dbpf"
@@ -44,6 +44,10 @@ export function useMatchingContents({
 
       const textureId = getBaseTextureId(parseHex(hex))
 
+      const texture = values(textures ?? {}).some(ids => ids.includes(textureId))
+        ? { id: textureId }
+        : undefined
+
       return compact<{
         element: string
         name: string
@@ -86,17 +90,12 @@ export function useMatchingContents({
           tab: "props",
           type: "Prop",
         },
-        ...values(textures ?? {}).flatMap(ids =>
-          ids
-            .filter(id => id.startsWith(textureId))
-            .map(id => ({
-              element: `texture-${id}`,
-              name: id,
-              // TODO: Textures tab
-              // tab: "textures",
-              type: "Texture",
-            })),
-        ),
+        texture && {
+          element: `texture-${texture.id}`,
+          name: `${texture.id.replace(/[0-9a-f]$/i, s => toHex(parseHex(s) - 4))} ... ${texture.id}`,
+          tab: "textures",
+          type: "Texture",
+        },
       ])
     }
   }, [buildingFamilies, buildings, lots, mmps, page, propFamilies, props, search, textures])
