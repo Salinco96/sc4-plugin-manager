@@ -23,7 +23,6 @@ export async function loadAppConfig(): Promise<AppConfig> {
 
   // Fix invalid game data path
   while (await isInvalidGamePath(appConfig.gamePath)) {
-    console.warn(appConfig.gamePath, path.join(appConfig.gamePath, DIRNAMES.plugins))
     const result = await showFolderSelector(
       i18n.t("SelectGameDataFolderModal:title", { plugins: DIRNAMES.plugins }),
       app.getPath("documents"),

@@ -1,4 +1,4 @@
-import { mapValues, parseHex, startsWith, toHex, values, where } from "@salinco/nice-utils"
+import { mapValues, parseHex, toHex, values, where } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
 import type { BuildingID } from "@common/buildings"
@@ -267,7 +267,7 @@ export function filterVariant(
 
     if (variantInfo.textures) {
       for (const textures of values(variantInfo.textures)) {
-        if (textures.some(startsWith(getBaseTextureId(parseHex(filters.hex))))) {
+        if (textures.includes(getBaseTextureId(parseHex(filters.hex)))) {
           return true
         }
       }

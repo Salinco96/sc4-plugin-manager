@@ -24,6 +24,7 @@ import {
   mapValues,
   merge,
   parseHex,
+  sort,
   union,
   unique,
   values,
@@ -458,8 +459,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   const indexerMaxisConfig = await loadConfig<ContentsData>(dataAssetsDir, "maxis")
   let maxisData = indexerMaxisConfig?.data
   if (!maxisData) {
-    // Only SimCity_1.dat contains relevant data
-    const data = await analyzeSC4Files(gameDir, ["SimCity_1.dat"], exemplarProperties)
+    const data = await analyzeSC4Files(
+      gameDir,
+      ["SimCity_1.dat", "SimCity_2.dat", "SimCity_3.dat", "SimCity_4.dat", "SimCity_5.dat"],
+      exemplarProperties,
+    )
+
     await writeConfig(dataAssetsDir, "maxis", data.contents, ConfigFormat.YAML)
     maxisData = data.contents
   }
@@ -488,6 +493,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       props: mapValues(maxisData.props ?? {}, props =>
         mapValues(props, ({ model, ...data }) => data),
       ),
+      textures: mapValues(maxisData.textures ?? {}, sort),
     }
 
     await writeConfig<ContentsData>(dbDir, "configs/maxis", data, ConfigFormat.YAML)

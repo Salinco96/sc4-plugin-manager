@@ -28,7 +28,9 @@ github/0xC0000054/sc4-dbpf-loading:
   packageId: null-45/startup-performance-optimization
   variantId: default
 
-github/0xC0000054/sc4-disable-cheats: null
+github/0xC0000054/sc4-disable-cheats:
+  packageId: null-45/disable-cheats
+  variantId: default
 
 github/0xC0000054/sc4-disable-demolition-animation:
   packageId: null-45/disable-demolition-animation

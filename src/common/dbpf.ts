@@ -155,7 +155,5 @@ export function getBaseTextureId(instanceId: number): string {
   // others -> unchanged
   const baseDigit8 = digit8 > 0x0000000e ? digit8 : Math.floor(digit8 / 5) * 5 + 4
 
-  console.warn(baseDigit5, baseDigit8, bitMask(instanceId, 0xffff0ff0) + baseDigit5 + baseDigit8)
-
   return toHex(bitMask(instanceId, 0xffff0ff0) + baseDigit5 + baseDigit8, 8)
 }

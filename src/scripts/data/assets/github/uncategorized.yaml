@@ -187,8 +187,21 @@ assets:
     authors:
       - '0xC0000054'
     download: https://github.com/0xC0000054/sc4-disable-cheats/releases/download/v{version}/SC4DisableCheats.zip
+    filename: SC4DisableCheats.zip
+    files:
+      - DisabledCheats.txt
+      - LICENSE.txt
+      - README.txt
+      - SC4DisableCheats.dll
+      - Third Party Notices.txt
     lastModified: 2024-11-18T09:48:18.355Z
+    meta:
+      timestamp: 2024-12-13T11:50:10.088Z
+      version: 1
     repository: https://github.com/0xC0000054/sc4-disable-cheats
+    sha256: 454b2f2c63b0857d11f2a87766b72fdb0423b80242648d0f10218d22f0d6f008
+    size: 36171
+    uncompressed: 78559
     version: 1.0.0
   github/0xC0000054/sc4-disable-demolition-animation:
     assetId: github/0xC0000054/sc4-disable-demolition-animation

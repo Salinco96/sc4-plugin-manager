@@ -131,14 +131,14 @@ export async function loadMaxisExemplars(
       mmps: entries(config.data.mmps ?? {}).flatMap(([file, instances]) =>
         collect(instances, (data, id) => loadFloraInfo(file, id, data)),
       ),
-      models: {}, // todo
+      models: config.data.models ?? {}, // todo
       propFamilies: entries(config.data.propFamilies ?? {}).flatMap(([file, instances]) =>
         collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
       ),
       props: entries(config.data.props ?? {}).flatMap(([file, instances]) =>
         collect(instances, (data, id) => loadPropInfo(file, id, data)),
       ),
-      textures: {}, // todo
+      textures: config.data.textures ?? {},
     }
   } catch (error) {
     context.error("Failed to load Maxis exemplars", error)
