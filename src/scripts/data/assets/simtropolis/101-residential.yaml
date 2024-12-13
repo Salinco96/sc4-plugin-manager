@@ -22741,7 +22741,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_10/670bcea712142_02.jpg.12fa24047c534aca074d34f7908dbb7e.jpg
     lastModified: 2024-10-13T13:44:11.000Z
     meta:
-      timestamp: 2024-12-10T11:23:47.772Z
+      timestamp: 2024-12-13T11:22:53.007Z
       version: 1
     name: Coco Samsung apartment
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/Day.thumb.jpg.b8e1c2ecf42c9d4bb60d7f1a66179195.jpg
@@ -22841,9 +22841,9 @@ assets:
               size: 7x3
               stage: 7
               textures:
-                - 251c0000
-                - 25ae0000
-                - 258f0000
+                - 251c0004
+                - 25ae0004
+                - 258f0004
           Coco_SamsungApt_MN/Coco_SamsungApt_LM 7x3_d41847ed.SC4Lot:
             d41847ed:
               building: d41847ed
@@ -22860,9 +22860,9 @@ assets:
                 - 2a160000
               size: 7x3
               textures:
-                - 252b0000
-                - 25b00000
-                - 25ae0000
+                - 252b0004
+                - 25b00004
+                - 25ae0004
         models:
           Coco_SamsungApt_MN/Coco_SamsungAPT-0x5ad0e817_0xb21fc9d1_0x70000.SC4Model:
             - b21fc9d1-0007
@@ -22963,9 +22963,9 @@ assets:
               size: 7x3
               stage: 7
               textures:
-                - 251c0000
-                - 25ae0000
-                - 258f0000
+                - 251c0004
+                - 25ae0004
+                - 258f0004
           Coco_SamsungApt_DN/Coco_SamsungApt_DN_LM 7x3_d4185370.SC4Lot:
             d4185370:
               building: d4185370
@@ -22983,9 +22983,9 @@ assets:
                 - 2a160000
               size: 7x3
               textures:
-                - 252b0000
-                - 25b00000
-                - 25ae0000
+                - 252b0004
+                - 25b00004
+                - 25ae0004
         models:
           Coco_SamsungApt_DN/Coco_SamsungAPT_DN-0x5ad0e817_0xb21fc9d1_0x90000.SC4Model:
             - b21fc9d1-0009
@@ -23071,7 +23071,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_10/671b24b4a0ef1_.jpg.14eab625ca0db7a7d364bc494f49beb6.jpg
     lastModified: 2024-10-25T05:08:04.000Z
     meta:
-      timestamp: 2024-12-10T11:23:47.772Z
+      timestamp: 2024-12-13T11:22:53.007Z
       version: 1
     name: Coco Hillstate apartment
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/671b255b5ef5e_01.thumb.jpg.bddc6d57b0e430364b6ec44b22e2c3eb.jpg
@@ -23166,8 +23166,8 @@ assets:
                 - 1dfb0000
               size: 4x2
               textures:
-                - '262e0000'
-                - 259d0000
+                - '262e0004'
+                - 259d0004
           Coco_Hillstate_APT_R$$_4x2_7426bfa5.SC4Lot:
             7426bfa5:
               building: 1426bca5
@@ -23180,8 +23180,8 @@ assets:
               size: 4x2
               stage: 8
               textures:
-                - '262e0000'
-                - 259d0000
+                - '262e0004'
+                - 259d0004
         models:
           Coco_Hillstate_APT-0x5ad0e817_0x94136420_0x40000.SC4Model:
             - 94136420-0004
@@ -23277,8 +23277,8 @@ assets:
                 - 1dfb0000
               size: 4x2
               textures:
-                - '262e0000'
-                - 259d0000
+                - '262e0004'
+                - 259d0004
           Coco_Hillstate_APT_R$$_4x2_DN_d426d49e.SC4Lot:
             d426d49e:
               building: 1426d33d
@@ -23291,8 +23291,8 @@ assets:
               size: 4x2
               stage: 8
               textures:
-                - '262e0000'
-                - 259d0000
+                - '262e0004'
+                - 259d0004
         models:
           Coco_Hillstate_APT-0x5ad0e817_0x94136420_0x40000.SC4Model:
             - 94136420-0004
@@ -23337,7 +23337,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_11/Add.png.02eca0f2ea8cf0069cfe3b5cddfdc646.png
     lastModified: 2024-11-15T17:29:13.000Z
     meta:
-      timestamp: 2024-12-10T11:23:47.772Z
+      timestamp: 2024-12-13T11:22:53.007Z
       version: 1
     name: Coco_e Pyeonhansesang_APT
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_11/673781b189dcb_01-15--131731685185.thumb.png.db754f5982b034ebdc67df0919389cd7.png
@@ -23444,9 +23444,9 @@ assets:
                 - 395b7af1
               size: 4x3
               textures:
-                - '262e0000'
-                - 25b90000
-                - 25bb0000
+                - '262e0004'
+                - 25b90004
+                - 25bb0004
           Coco_ePyeonhan_APT_R$$_4x3_d4440620.SC4Lot:
             d4440620:
               building: 944405cd
@@ -23473,9 +23473,9 @@ assets:
               size: 4x3
               stage: 8
               textures:
-                - '262e0000'
-                - 25b90000
-                - 25bb0000
+                - '262e0004'
+                - 25b90004
+                - 25bb0004
         models:
           Coco_ePyeonhanAPT-0x5ad0e817_0x3442801b_0x120000.SC4Model:
             - 3442801b-0012
@@ -23584,9 +23584,9 @@ assets:
                 - 786cc686
               size: 4x3
               textures:
-                - '262e0000'
-                - 25b90000
-                - 25bb0000
+                - '262e0004'
+                - 25b90004
+                - 25bb0004
           Coco_ePyeonhan_APT_R$$_4x3_DN_14441268.SC4Lot:
             '14441268':
               building: d4441231
@@ -23613,9 +23613,9 @@ assets:
               size: 4x3
               stage: 8
               textures:
-                - '262e0000'
-                - 25b90000
-                - 25bb0000
+                - '262e0004'
+                - 25b90004
+                - 25bb0004
         models:
           Coco_ePyeonhanAPT-0x5ad0e817_0x3442801b_0x120000.SC4Model:
             - 3442801b-0012
@@ -24399,9 +24399,9 @@ assets:
           size: 4x6
           stage: 6
           textures:
-            - '258e0000'
-            - 259d0000
-            - 252b0000
+            - '258e0004'
+            - 259d0004
+            - 252b0004
       R$$$7_4x6_cc20967a.SC4Lot:
         cc20967a:
           building: '10000035'
@@ -24414,10 +24414,10 @@ assets:
           size: 4x6
           stage: 6
           textures:
-            - '25920000'
-            - 252b0000
-            - '258e0000'
-            - '26200000'
+            - '25920004'
+            - 252b0004
+            - '258e0004'
+            - '26200004'
       R$$$7_4x6_ec2097ac.SC4Lot:
         ec2097ac:
           building: '10000035'
@@ -24433,10 +24433,10 @@ assets:
           size: 4x6
           stage: 6
           textures:
-            - '258e0000'
-            - 251c0000
-            - '25920000'
-            - '26200000'
+            - '258e0004'
+            - 251c0004
+            - '25920004'
+            - '26200004'
       R$$$8_4x4_6c209468.SC4Lot:
         6c209468:
           building: '10000036'
@@ -24452,7 +24452,7 @@ assets:
           size: 4x4
           stage: 7
           textures:
-            - '258e0000'
+            - '258e0004'
       R$$$8_4x4_6c2094d9.SC4Lot:
         6c2094d9:
           building: '10000036'
@@ -24464,7 +24464,7 @@ assets:
           size: 4x4
           stage: 7
           textures:
-            - '258e0000'
+            - '258e0004'
       R$$$8_4x4_8c209488.SC4Lot:
         8c209488:
           building: '10000036'
@@ -24480,7 +24480,7 @@ assets:
           size: 4x4
           stage: 7
           textures:
-            - '25270000'
+            - '25270004'
       R$$$8_4x4_ec209436.SC4Lot:
         ec209436:
           building: '10000036'
@@ -24497,8 +24497,8 @@ assets:
           size: 4x4
           stage: 7
           textures:
-            - 252b0000
-            - 25ae0000
+            - 252b0004
+            - 25ae0004
       R$$$8_4x6_cc209338.SC4Lot:
         cc209338:
           building: '10000033'
@@ -24512,10 +24512,10 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 259f0000
-            - '258e0000'
-            - 251c0000
-            - 25f40000
+            - 259f0004
+            - '258e0004'
+            - 251c0004
+            - 25f40004
       R$$$8_4x6_cc2093d6.SC4Lot:
         cc2093d6:
           building: '10000033'
@@ -24526,8 +24526,8 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - '258e0000'
-            - 25f40000
+            - '258e0004'
+            - 25f40004
       R$$8_4x6_4c21e77e.SC4Lot:
         4c21e77e:
           building: '10000020'
@@ -24541,11 +24541,11 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 25b00000
-            - 252b0000
-            - 258f0000
-            - 25fb0000
-            - 251c0000
+            - 25b00004
+            - 252b0004
+            - 258f0004
+            - 25fb0104
+            - 251c0004
       R$$8_4x6_cc21e746.SC4Lot:
         cc21e746:
           building: '10000020'
@@ -24563,9 +24563,9 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 258f0000
-            - a990c000
-            - 251c0000
+            - 258f0004
+            - a990c304
+            - 251c0004
       R$8_4x3_0c21e6db.SC4Lot:
         0c21e6db:
           building: 1000000b
@@ -24582,10 +24582,10 @@ assets:
           size: 4x3
           stage: 7
           textures:
-            - 25c30000
-            - 251c0000
-            - 25c10000
-            - '25900000'
+            - 25c30004
+            - 251c0104
+            - 25c10004
+            - '25900004'
       R$8_4x3_2c21e683.SC4Lot:
         2c21e683:
           building: 1000000b
@@ -24597,9 +24597,9 @@ assets:
           size: 4x3
           stage: 7
           textures:
-            - 25c10000
-            - 251c0000
-            - '25900000'
+            - 25c10004
+            - 251c0004
+            - '25900004'
       R$8_4x3_6c21e652.SC4Lot:
         6c21e652:
           building: 1000000b
@@ -24610,8 +24610,8 @@ assets:
           size: 4x3
           stage: 7
           textures:
-            - '25270000'
-            - '25900000'
+            - '25270004'
+            - '25900004'
       R$8_4x3_ac21e6b8.SC4Lot:
         ac21e6b8:
           building: 1000000b
@@ -24624,8 +24624,8 @@ assets:
           size: 4x3
           stage: 7
           textures:
-            - 25c30000
-            - '25900000'
+            - 25c30004
+            - '25900004'
       R$8_4x6_6c21e545.SC4Lot:
         6c21e545:
           building: 1000000c
@@ -24634,9 +24634,9 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - '25900000'
-            - 251c0000
-            - '25210000'
+            - '25900004'
+            - 251c0004
+            - '25210004'
       R$8_4x6_8c21e57d.SC4Lot:
         8c21e57d:
           building: 1000000c
@@ -24648,10 +24648,10 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 25c10000
-            - 251c0000
-            - '25900000'
-            - 259d0000
+            - 25c10004
+            - 251c0004
+            - '25900004'
+            - 259d0004
       R$8_4x6_ac21e5a2.SC4Lot:
         ac21e5a2:
           building: 1000000c
@@ -24664,10 +24664,10 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 25c10000
-            - '25900000'
-            - 252b0000
-            - 251c0000
+            - 25c10004
+            - '25900004'
+            - 252b0004
+            - 251c0004
       R$8_4x6_ec21e5c0.SC4Lot:
         ec21e5c0:
           building: 1000000c
@@ -24681,10 +24681,10 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - '25900000'
-            - 251c0000
+            - '25900004'
+            - 251c0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Residential 6BY Collection
     sha256: 2928addd4d37bdb6e40bfe30c167497ae6c66c26172aa5573270d50ab2314d09
@@ -24776,4 +24776,4 @@ assets:
     url: https://community.simtropolis.com/files/file/992-small-bb-the-greeley-house/
 
 meta:
-  timestamp: 2024-12-12T12:47:22.557Z
+  timestamp: 2024-12-13T09:40:52.613Z

@@ -4,11 +4,12 @@ import path from "node:path"
 import { input, select } from "@inquirer/prompts"
 import {
   $init,
-  type Defined,
   ID,
   containsAny,
   difference,
   filterValues,
+  findEntry,
+  findKey,
   forEach,
   forEachAsync,
   generate,
@@ -1118,7 +1119,7 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
     }
 
     // Extract files
-    if (!variantEntry.files || variantEntry.files) {
+    if (!variantEntry.files) {
       console.debug(`Extracting ${downloadKey}...`)
 
       try {
@@ -1253,16 +1254,6 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
         throw Error(`Expected override to exist for ${variantAssetId}`)
       }
 
-      // const dependencies = mapDefined(entry.dependencies ?? [], dependencyId => {
-      //   if (packages[dependencyId as PackageID]) {
-      //     return dependencyId as PackageID
-      //   }
-
-      //   return getOverride(getEntryId(dependencyId))?.packageId
-      // })
-
-      // const authors = remove(mapDefined(entry.authors ?? [], getAuthorId), ownerId)
-
       packages[packageId] ??= {
         id: packageId,
         name: entry.name ?? packageId,
@@ -1273,7 +1264,6 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
       const packageInfo = packages[packageId]
       const variantInfo = packageInfo.variants[variantId]
 
-      // Create or update package/variant data
       if (!variantInfo?.lastGenerated || variantInfo.lastGenerated < entry.meta.timestamp) {
         if (variantInfo) {
           console.debug(`Updating variant ${packageId}#${variantId}...`)
@@ -1328,7 +1318,7 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
           excludedPaths = []
         }
 
-        packages[packageId] = registerVariantAsset(
+        registerVariantAsset(
           packageInfo,
           variantAssetId,
           variantId,
@@ -1383,12 +1373,12 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
         throw Error(`Asset ${asset.id} has no linked entry`)
       }
 
-      const variantEntry = variant ? entry.variants?.[variant] : undefined
-      if (variant && !variantEntry) {
+      const variantEntry = variant ? entry.variants?.[variant] : entry
+      if (!variantEntry) {
         throw Error(`Asset ${asset.id} has no linked entry`)
       }
 
-      if (!entry.files) {
+      if (!variantEntry.files) {
         throw Error(`Entry ${entryId} has no files`)
       }
 
@@ -1410,7 +1400,7 @@ ${features.map(feature => `    ${feature}: true`).join("\n")}`,
 
             return getOverride(getEntryId(dependencyId))?.packageId
           }),
-          files: entry.files,
+          files: variantEntry.files,
         },
       ]
     })
@@ -1556,40 +1546,3 @@ function getEntryId(assetId: string): EntryID {
 function getSourceId(assetId: AssetID | EntryID): IndexerSourceID {
   return assetId.split("/")[0] as IndexerSourceID
 }
-
-// todo: move to utils
-function findEntry<T, K extends string>(
-  object: Partial<Record<K, T>>,
-  fn: (value: Defined<T>, key: K) => boolean,
-): [key: K, value: Defined<T>] | undefined {
-  for (const key in object) {
-    const value = object[key]
-    if (value !== undefined && fn(value as Defined<T>, key)) {
-      return [key, value as Defined<T>]
-    }
-  }
-}
-
-function findKey<T, K extends string>(
-  object: Partial<Record<K, T>>,
-  fn: (value: Defined<T>, key: K) => boolean,
-): K | undefined {
-  for (const key in object) {
-    const value = object[key]
-    if (value !== undefined && fn(value as Defined<T>, key)) {
-      return key
-    }
-  }
-}
-
-// function findValue<T, K extends string>(
-//   object: Partial<Record<K, T>>,
-//   fn: (value: Defined<T>, key: K) => boolean,
-// ): T | undefined {
-//   for (const key in object) {
-//     const value = object[key]
-//     if (value !== undefined && fn(value as Defined<T>, key)) {
-//       return value
-//     }
-//   }
-// }

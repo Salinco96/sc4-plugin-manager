@@ -1,4 +1,4 @@
-import { isArray } from "@salinco/nice-utils"
+import { isArray, trim } from "@salinco/nice-utils"
 
 export type MaybeArray<T> = T | T[]
 
@@ -21,11 +21,6 @@ export function parseStringArray(value: MaybeArray<string>, separator = ","): st
 }
 
 // TODO: Move to nice-utils
-export function toLowerCase(value: string): string {
-  return value.toLowerCase()
-}
-
-// TODO: Move to nice-utils
-export function trim(value: string): string {
-  return value.trim()
+export function bitMask(value: number, mask: number): number {
+  return (value & mask) >>> 0
 }

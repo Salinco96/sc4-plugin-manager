@@ -81,7 +81,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0003/0ec036904f575a8efe4bcea5e7624da1-product_image.jpg
     lastModified: 2022-07-04T23:38:52.000Z
     meta:
-      timestamp: 2024-12-03T16:03:49.352Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG_MTP_SUPER_RESOURCE_PACK.dat:
@@ -423,24 +423,416 @@ assets:
     support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     textures:
       PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG-SUPER_TEXTURES.dat:
-        - 1da44000
-        - 1da45000
-        - 1da47000
-        - 1da48000
-        - 1da49000
-        - 1da4a000
-        - 1da4b000
-        - 4200b000
-        - 4203a000
-        - 4204b000
-        - 4205c000
-        - 4206d000
-        - 4400c000
+        - 1da44009
+        - 1da44294
+        - 1da44299
+        - 1da4429e
+        - 1da442a4
+        - 1da442a9
+        - 1da442ae
+        - 1da442b4
+        - 1da442b9
+        - 1da442d9
+        - 1da442e4
+        - 1da44304
+        - 1da4430e
+        - 1da44359
+        - 1da4438e
+        - 1da44394
+        - 1da443be
+        - 1da443c9
+        - 1da443ce
+        - 1da443de
+        - 1da443e4
+        - 1da443ee
+        - 1da443f4
+        - 1da443f9
+        - 1da443fe
+        - 1da44404
+        - 1da44409
+        - 1da4440e
+        - 1da44414
+        - 1da44419
+        - 1da4441e
+        - 1da44424
+        - 1da44429
+        - 1da4442e
+        - 1da44434
+        - 1da44449
+        - 1da4444e
+        - 1da44459
+        - 1da44464
+        - 1da44474
+        - 1da44479
+        - 1da44484
+        - 1da44494
+        - 1da44499
+        - 1da444ae
+        - 1da444b4
+        - 1da444b9
+        - 1da444be
+        - 1da444c4
+        - 1da444c9
+        - 1da444ce
+        - 1da444d4
+        - 1da444d9
+        - 1da444de
+        - 1da444e4
+        - 1da444e9
+        - 1da44509
+        - 1da44514
+        - 1da44549
+        - 1da44559
+        - 1da4456e
+        - 1da44574
+        - 1da44579
+        - 1da4457e
+        - 1da44584
+        - 1da44589
+        - 1da4458e
+        - 1da44594
+        - 1da44599
+        - 1da4459e
+        - 1da445a4
+        - 1da445a9
+        - 1da445ae
+        - 1da445b4
+        - 1da445b9
+        - 1da445be
+        - 1da445c4
+        - 1da445c9
+        - 1da445ce
+        - 1da445d4
+        - 1da445d9
+        - 1da445de
+        - 1da445e4
+        - 1da445e9
+        - 1da445ee
+        - 1da445f4
+        - 1da445f9
+        - 1da445fe
+        - 1da44604
+        - 1da44609
+        - 1da4460e
+        - 1da44614
+        - 1da44619
+        - 1da4461e
+        - 1da44624
+        - 1da44629
+        - 1da4462e
+        - 1da44639
+        - 1da4463e
+        - 1da44644
+        - 1da44649
+        - 1da4464e
+        - 1da44654
+        - 1da44659
+        - 1da4465e
+        - 1da44664
+        - 1da44669
+        - 1da4466e
+        - 1da44674
+        - 1da44679
+        - 1da446ce
+        - 1da446d4
+        - 1da446d9
+        - 1da446de
+        - 1da446e4
+        - 1da446e9
+        - 1da446ee
+        - 1da446f4
+        - 1da446f9
+        - 1da446fe
+        - 1da44704
+        - 1da44709
+        - 1da4470e
+        - 1da44714
+        - 1da44719
+        - 1da4471e
+        - 1da44724
+        - 1da44729
+        - 1da4472e
+        - 1da44734
+        - 1da44739
+        - 1da4473e
+        - 1da44744
+        - 1da44749
+        - 1da4474e
+        - 1da44754
+        - 1da44759
+        - 1da4475e
+        - 1da44764
+        - 1da4476e
+        - 1da44774
+        - 1da44779
+        - 1da4477e
+        - 1da44784
+        - 1da44789
+        - 1da4478e
+        - 1da44794
+        - 1da44799
+        - 1da4479e
+        - 1da447a4
+        - 1da447a9
+        - 1da447ae
+        - 1da447b4
+        - 1da447be
+        - 1da447c4
+        - 1da447c9
+        - 1da447ce
+        - 1da447d4
+        - 1da447d9
+        - 1da447de
+        - 1da447e4
+        - 1da447e9
+        - 1da447ee
+        - 1da447f4
+        - 1da447f9
+        - 1da447fe
+        - 1da44804
+        - 1da44809
+        - 1da4480e
+        - 1da44814
+        - 1da44819
+        - 1da4481e
+        - 1da44824
+        - 1da44829
+        - 1da4482e
+        - 1da44834
+        - 1da44839
+        - 1da4483e
+        - 1da44844
+        - 1da44849
+        - 1da4484e
+        - 1da44854
+        - 1da44859
+        - 1da4485e
+        - 1da44864
+        - 1da44869
+        - 1da4486e
+        - 1da44874
+        - 1da44879
+        - 1da4487e
+        - 1da44884
+        - 1da44889
+        - 1da4488e
+        - 1da44894
+        - 1da44899
+        - 1da4489e
+        - 1da448a9
+        - 1da448ae
+        - 1da448b4
+        - 1da448b9
+        - 1da448be
+        - 1da449f9
+        - 1da449fe
+        - 1da44a04
+        - 1da44a09
+        - 1da44a0e
+        - 1da44a14
+        - 1da44a19
+        - 1da44a1e
+        - 1da44a24
+        - 1da44a29
+        - 1da44a2e
+        - 1da44a34
+        - 1da44a39
+        - 1da44a3e
+        - 1da44a44
+        - 1da44a49
+        - 1da44a4e
+        - 1da44a54
+        - 1da44a59
+        - 1da44a5e
+        - 1da44a64
+        - 1da44a69
+        - 1da44a6e
+        - 1da44a74
+        - 1da44a79
+        - 1da44a7e
+        - 1da44a84
+        - 1da44a89
+        - 1da44a8e
+        - 1da44a94
+        - 1da44a99
+        - 1da44a9e
+        - 1da44aa4
+        - 1da44aae
+        - 1da44ab4
+        - 1da44ab9
+        - 1da44abe
+        - 1da44ac4
+        - 1da44ac9
+        - 1da44ace
+        - 1da44ad4
+        - 1da44ad9
+        - 1da44ade
+        - 1da44ae4
+        - 1da44ae9
+        - 1da44aee
+        - 1da44af4
+        - 1da44af9
+        - 1da44afe
+        - 1da44b04
+        - 1da44b09
+        - 1da44b0e
+        - 1da44b14
+        - 1da44b19
+        - 1da44b1e
+        - 1da44b2e
+        - 1da44b34
+        - 1da44b39
+        - 1da44b3e
+        - 1da44b44
+        - 1da44b54
+        - 1da44b69
+        - 1da44b6e
+        - 1da44b74
+        - 1da44b79
+        - 1da44b7e
+        - 1da44b84
+        - 1da44b89
+        - 1da44b8e
+        - 1da44b94
+        - 1da44b99
+        - 1da44bb4
+        - 1da44bb9
+        - 1da44bbe
+        - 1da44bc4
+        - 1da44bc9
+        - 1da44bce
+        - 1da44bd4
+        - 1da44bd9
+        - 1da44bde
+        - 1da44be4
+        - 1da44be9
+        - 1da44bee
+        - 1da44bf4
+        - 1da44bf9
+        - 1da44bfe
+        - 1da4550e
+        - 1da478c4
+        - 1da478c9
+        - 1da478ce
+        - 1da478d4
+        - 1da478d9
+        - 1da478de
+        - 1da478e4
+        - 1da478e9
+        - 1da478ee
+        - 1da478f4
+        - 1da478f9
+        - 1da478fe
+        - 1da47904
+        - 1da47909
+        - 1da4790e
+        - 1da47914
+        - 1da47919
+        - 1da4791e
+        - 1da47924
+        - 1da47929
+        - 1da4792e
+        - 1da47934
+        - 1da47939
+        - 1da4793e
+        - 1da47944
+        - 1da47949
+        - 1da4794e
+        - 1da47954
+        - 1da47959
+        - 1da4795e
+        - 1da47964
+        - 1da47969
+        - 1da4796e
+        - 1da47974
+        - 1da47979
+        - 1da4797e
+        - 1da47984
+        - 1da47989
+        - 1da4798e
+        - 1da47994
+        - 1da47999
+        - 1da4799e
+        - 1da479a4
+        - 1da479a9
+        - 1da479ae
+        - 1da479b4
+        - 1da479b9
+        - 1da479be
+        - 1da479c4
+        - 1da479c9
+        - 1da479ce
+        - 1da479d4
+        - 1da479d9
+        - 1da479de
+        - 1da479e4
+        - 1da479e9
+        - 1da479f4
+        - 1da48004
+        - 1da49004
+        - 1da4a004
+        - 1da4b004
+        - 4200b004
+        - 4203a004
+        - 4204b004
+        - 4205c004
+        - 4206d004
+        - 4400c004
       _Documents/PEG Optional Texture Overrides/PEG-SUPER_TEXTURES_EUOverride.dat:
-        - 1da44000
+        - 1da446d4
+        - 1da446d9
+        - 1da446de
+        - 1da446e4
+        - 1da446e9
+        - 1da446ee
+        - 1da446f4
+        - 1da446f9
+        - 1da446fe
+        - 1da44704
       _Documents/PEG Optional Texture Overrides/PEG-SUPER_TEXTURES_RRWOverride.dat:
-        - 1da44000
-        - d4f00000
+        - 1da443f4
+        - 1da443f9
+        - 1da443fe
+        - 1da44404
+        - 1da44409
+        - 1da4440e
+        - 1da44414
+        - 1da44419
+        - 1da4441e
+        - 1da44424
+        - 1da44429
+        - 1da4442e
+        - 1da44434
+        - 1da44464
+        - 1da444be
+        - 1da444c4
+        - 1da444ce
+        - 1da44829
+        - 1da4482e
+        - 1da44a49
+        - 1da44abe
+        - 1da44ac4
+        - 1da44ac9
+        - 1da44ace
+        - 1da44ad4
+        - 1da44ad9
+        - 1da44ade
+        - 1da44ae4
+        - 1da44ae9
+        - 1da44aee
+        - 1da44af4
+        - 1da44af9
+        - 1da44afe
+        - 1da44b04
+        - 1da44b09
+        - 1da44b0e
+        - 1da44b14
+        - 1da44bfe
+        - d4f00124
+        - d4f00129
+        - d4f0012e
+        - d4f00134
+        - d4f0013e
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2009/thumb-0ec036904f575a8efe4bcea5e7624da1-product_image.jpg
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 7338663
@@ -1774,7 +2166,8 @@ assets:
           size: 1x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44d99
+            - 1da44c09
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_1x2_D_Shed_90001300.SC4Lot:
         '90001300':
           building: a0001532
@@ -1795,7 +2188,8 @@ assets:
           size: 1x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d99
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_1x2_Homestead_b91ea651.SC4Lot:
         b91ea651:
           building: a0001500
@@ -1816,7 +2210,9 @@ assets:
           size: 1x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44c69
+            - 1da44d74
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_1x2_Shed_7921769c.SC4Lot:
         7921769c:
           building: a0001532
@@ -1840,8 +2236,9 @@ assets:
           size: 1x2
           stage: 1
           textures:
-            - 25d60000
-            - 1da44000
+            - 25d60004
+            - 1da44d39
+            - 1da44d24
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x1_BasicBarn_f9235e5a.SC4Lot:
         f9235e5a:
           building: a0001514
@@ -1859,7 +2256,9 @@ assets:
           size: 2x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c14
+            - 1da44d89
+            - 1da44c69
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x1_D_Shed_900012f0.SC4Lot:
         900012f0:
           building: a0001532
@@ -1883,7 +2282,9 @@ assets:
           size: 2x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c14
+            - 1da44d2e
+            - 1da44d49
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x2_D_FarmHouse-Silo_90001370.SC4Lot:
         '90001370':
           building: a0001500
@@ -1904,7 +2305,11 @@ assets:
           size: 2x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d79
+            - 1da44d89
+            - 1da44d7e
+            - 1da44c69
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x2_D_FulFarm_90001310.SC4Lot:
         '90001310':
           building: a0001530
@@ -1920,7 +2325,7 @@ assets:
           size: 2x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c04
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x2_D_Greenhouse_900012b0.SC4Lot:
         900012b0:
           building: a0001535
@@ -1942,7 +2347,10 @@ assets:
           size: 2x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d74
+            - 1da44d7e
+            - 1da44d19
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x3_D_BasicBarn_90001390.SC4Lot:
         '90001390':
           building: a0001514
@@ -1975,7 +2383,11 @@ assets:
           size: 2x3
           stage: 1
           textures:
-            - 1da44000
+            - 1da44d7e
+            - 1da44d74
+            - 1da44d84
+            - 1da44cf9
+            - 1da44d79
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x3_D_Greenhouses_900012d0.SC4Lot:
         900012d0:
           building: a0001501
@@ -2002,7 +2414,10 @@ assets:
           size: 2x3
           stage: 1
           textures:
-            - 1da44000
+            - 1da44ce9
+            - 1da44d94
+            - 1da44d09
+            - 1da44d34
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x3_D_TriBarn_90001330.SC4Lot:
         '90001330':
           building: a0001530
@@ -2038,7 +2453,9 @@ assets:
           size: 2x3
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44d89
+            - 1da44d8e
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_3x2_D_Farm w silo_90001380.SC4Lot:
         '90001380':
           building: a0001514
@@ -2067,7 +2484,12 @@ assets:
           size: 3x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d79
+            - 1da44c69
+            - 1da44d84
+            - 1da44d74
+            - 1da44c79
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_3x2_D_Farm wBarn_900012c0.SC4Lot:
         900012c0:
           building: a0001514
@@ -2095,7 +2517,13 @@ assets:
           size: 3x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d99
+            - 1da44d79
+            - 1da44d7e
+            - 1da44c64
+            - 1da44c59
+            - 1da44c69
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_3x2_D_Farmhouse wBarnSilo_90001320.SC4Lot:
         '90001320':
           building: a0001500
@@ -2125,7 +2553,12 @@ assets:
           size: 3x2
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d64
+            - 1da44d94
+            - 1da44d19
+            - 1da44d79
+            - 1da44c69
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_5x6_D_TriBarn_90001311.SC4Lot:
         '90001311':
           building: a0001530
@@ -2161,8 +2594,16 @@ assets:
           size: 5x6
           stage: 1
           textures:
-            - 261c0000
-            - 1da44000
+            - 261c0004
+            - 1da44cf9
+            - 1da44d79
+            - 1da44d7e
+            - 1da44c54
+            - 1da44c59
+            - 1da44d19
+            - 1da44d5e
+            - 1da44c69
+            - 1da44824
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x1_FancyBarn_f936f4fd.SC4Lot:
         f936f4fd:
           building: a0001516
@@ -2186,7 +2627,9 @@ assets:
           size: 2x1
           stage: 2
           textures:
-            - 1da44000
+            - 1da44c14
+            - 1da44d89
+            - 1da44c69
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x2_D_Stables_90001350.SC4Lot:
         '90001350':
           building: a0001534
@@ -2206,7 +2649,8 @@ assets:
           size: 2x2
           stage: 2
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d74
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x2__D_BigBarn_90001250.SC4Lot:
         '90001250':
           building: a0001533
@@ -2225,7 +2669,10 @@ assets:
           size: 2x2
           stage: 2
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44d99
+            - 1da44c64
+            - 1da44d79
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x3_D_GreenHouse02_90001270.SC4Lot:
         '90001270':
           building: a0001502
@@ -2245,7 +2692,12 @@ assets:
           size: 2x3
           stage: 2
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d7e
+            - 1da44c69
+            - 1da44c6e
+            - 1da44d74
+            - 1da44d84
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x3_D_MultiFarm_90001360.SC4Lot:
         '90001360':
           building: a0001516
@@ -2273,7 +2725,12 @@ assets:
           size: 2x3
           stage: 2
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d5e
+            - 1da44d14
+            - 1da44d09
+            - 1da44d19
+            - 1da44c6e
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_3x2_D_Farm_90001260.SC4Lot:
         '90001260':
           building: a0001533
@@ -2294,7 +2751,10 @@ assets:
           size: 3x2
           stage: 2
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d7e
+            - 1da44d74
+            - 1da44d79
       PEGPROD/SPAM/SPAM_Core_Lots/I-r3_2x2_Elevator_Small_3936f638.SC4Lot:
         3936f638:
           building: a0001510
@@ -2315,7 +2775,11 @@ assets:
           size: 2x2
           stage: 3
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d79
+            - 1da44d89
+            - 1da44d7e
+            - 1da44c69
       PEGPROD/SPAM/SPAM_Core_Lots/I-r3_2x2_Greenhouses_59309f52.SC4Lot:
         59309f52:
           building: a0001503
@@ -2344,7 +2808,11 @@ assets:
           size: 3x3
           stage: 3
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44754
+            - 1da447f4
+            - 1da447f9
+            - 1da44cd9
       PEGPROD/SPAM/SPAM_Core_Lots/I-r3_2x3_BarnSilo_f9370279.SC4Lot:
         f9370279:
           building: a000150a
@@ -2370,7 +2838,12 @@ assets:
           size: 2x3
           stage: 3
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d7e
+            - 1da44c59
+            - 1da44c69
+            - 1da44c6e
+            - 1da44d74
       PEGPROD/SPAM/SPAM_Core_Lots/I-r3_6x5_D_Ranch_90001251.SC4Lot:
         '90001251':
           building: 7955afd8
@@ -2417,7 +2890,19 @@ assets:
           size: 6x5
           stage: 3
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d14
+            - 1da44d04
+            - 1da44d74
+            - 1da44c59
+            - 1da44d84
+            - 1da44c64
+            - 1da44d09
+            - 1da44c5e
+            - 1da44c54
+            - 1da44d7e
+            - 1da44cce
+            - 1da44c69
       PEGPROD/SPAM/SPAM_Core_Lots/I-r4_4x4_D_Dairy_90001280.SC4Lot:
         '90001280':
           building: a0001508
@@ -2454,7 +2939,19 @@ assets:
           size: 4x4
           stage: 4
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d84
+            - 1da44d94
+            - 1da44d5e
+            - 1da44d04
+            - 1da44d19
+            - 1da44d09
+            - 1da44d1e
+            - 1da44c69
+            - 1da44d74
+            - 1da44c54
+            - 1da44c04
+            - 1da44cce
       PEGPROD/SPAM/SPAM_Core_Lots/I-r4_4x4_Dairy_59306c7c.SC4Lot:
         59306c7c:
           building: a0001508
@@ -2497,7 +2994,17 @@ assets:
           size: 4x4
           stage: 4
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d19
+            - 1da44d1e
+            - 1da44cce
+            - 1da44849
+            - 1da44859
+            - 1da44854
+            - 1da44839
+            - 1da44a54
+            - 1da44a4e
+            - 1da447b4
       PEGPROD/SPAM/SPAM_Core_Lots/I-r4_7x6_D_Dairy_90001341.SC4Lot:
         '90001341':
           building: a0001508
@@ -2536,7 +3043,21 @@ assets:
           size: 7x6
           stage: 4
           textures:
-            - 1da44000
+            - 1da44cf9
+            - 1da44d84
+            - 1da44d74
+            - 1da44d64
+            - 1da44c5e
+            - 1da44d04
+            - 1da44c59
+            - 1da44c69
+            - 1da44c54
+            - 1da44d1e
+            - 1da44d09
+            - 1da44d14
+            - 1da44cc4
+            - 1da44cce
+            - 1da44c6e
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_4x6_D_Elevator_900012a0.SC4Lot:
         900012a0:
           building: a0001512
@@ -2572,7 +3093,16 @@ assets:
           size: 4x6
           stage: 5
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44d74
+            - 1da44d84
+            - 1da44c59
+            - 1da44c54
+            - 1da44c04
+            - 1da44d5e
+            - 1da44d19
+            - 1da44c6e
+            - 1da44ca9
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_4x6_Elevator_593083cb.SC4Lot:
         593083cb:
           building: a0001512
@@ -2616,7 +3146,19 @@ assets:
           size: 4x6
           stage: 5
           textures:
-            - 1da44000
+            - 1da44859
+            - 1da44839
+            - 1da44849
+            - 1da44854
+            - 1da44a54
+            - 1da44844
+            - 1da44a4e
+            - 1da447b4
+            - 1da44c04
+            - 1da44c6e
+            - 1da44c14
+            - 1da447d4
+            - 1da44cce
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_4x6_LargeElevator_593083cb.SC4Lot:
         593083cb:
           building: a0001512
@@ -2660,7 +3202,19 @@ assets:
           size: 4x6
           stage: 5
           textures:
-            - 1da44000
+            - 1da44859
+            - 1da44839
+            - 1da44849
+            - 1da44854
+            - 1da44a54
+            - 1da44844
+            - 1da44a4e
+            - 1da447b4
+            - 1da44c04
+            - 1da44c6e
+            - 1da44c14
+            - 1da447d4
+            - 1da44cce
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_5x6_TriBarn_BioFuel_7930b6be.SC4Lot:
         7930b6be:
           building: 341c37ff
@@ -2697,7 +3251,19 @@ assets:
           size: 5x6
           stage: 5
           textures:
-            - 1da44000
+            - 1da44859
+            - 1da44849
+            - 1da44854
+            - 1da44839
+            - 1da44c09
+            - 1da447a4
+            - 1da447b4
+            - 1da447d4
+            - 1da44c04
+            - 1da44844
+            - 1da44a4e
+            - 1da447f9
+            - 1da447d9
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_6x4_D_Large Granary_90001290.SC4Lot:
         '90001290':
           building: a0001512
@@ -2744,7 +3310,18 @@ assets:
           size: 6x4
           stage: 5
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44d7e
+            - 1da44c54
+            - 1da44c69
+            - 1da44c64
+            - 1da44c14
+            - 1da44c59
+            - 1da44c79
+            - 1da44d99
+            - 1da44cf9
+            - 1da44cd9
+            - 1da44d84
       PEGPROD/SPAM/SPAM_Mod_Main/PEG-SPAM_MOD-MAIN_b200.dat:
         10a8e301:
           building: 10a8e301
@@ -2756,7 +3333,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44ca4
+            - 1da44c09
         145ed92d:
           building: 145ed92d
           density: low
@@ -2768,7 +3346,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c14
+            - 1da44ca9
         1879ed69:
           building: 1879ed69
           density: low
@@ -2780,8 +3359,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
-            - 25da0000
+            - 1da4472e
+            - 25da0004
         198f529d:
           building: 198f529d
           density: low
@@ -2793,7 +3372,7 @@ assets:
           size: 1x1
           stage: 255
           textures:
-            - 1da44000
+            - 1da44c09
         2348d63f:
           building: 2348d63f
           density: low
@@ -2805,8 +3384,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
-            - 25da0000
+            - 1da4472e
+            - 25da0004
         278a3d53:
           building: 278a3d53
           density: low
@@ -2817,7 +3396,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44cae
         2a85b88e:
           building: 2a85b88e
           density: low
@@ -2828,7 +3408,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44ca4
+            - 1da44c09
         30ebdd06:
           building: 30ebdd06
           density: low
@@ -2840,7 +3421,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
         3c5ea03a:
           building: 3c5ea03a
           density: low
@@ -2851,7 +3432,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25d80000
+            - 25d80004
         43a07361:
           building: 43a07361
           density: low
@@ -2867,7 +3448,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cae
+            - 1da44c09
         617c94c7:
           building: 617c94c7
           density: low
@@ -2879,7 +3461,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44cae
         75f8d36d:
           building: 75f8d36d
           density: low
@@ -2890,7 +3473,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44cae
         '900012e0':
           building: '70000052'
           density: low
@@ -2912,7 +3496,7 @@ assets:
           size: 1x1
           stage: 255
           textures:
-            - '26170000'
+            - '26170004'
         '94169840':
           building: '94169840'
           density: low
@@ -2925,7 +3509,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
         9a4c8535:
           building: 9a4c8535
           density: low
@@ -2937,7 +3521,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
         a9270458:
           building: a9270458
           density: low
@@ -2950,7 +3534,7 @@ assets:
           size: 1x1
           stage: 255
           textures:
-            - 1da44000
+            - 1da44cf9
         f945b3f3:
           building: f945b3f3
           density: low
@@ -2961,7 +3545,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25d90000
+            - 25d90004
         ffebf1c7:
           building: ffebf1c7
           density: low
@@ -2972,7 +3556,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44ca4
+            - 1da44c09
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
         073dc000:
           building: 073dc000
@@ -2984,7 +3569,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25da0000
+            - 25da0004
         073dc001:
           building: 073dc001
           density: low
@@ -2992,7 +3577,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cf9
         073dc002:
           building: 073dc002
           density: low
@@ -3003,8 +3588,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25db0000
-            - 1da44000
+            - 25db0004
+            - 1da44ca9
         073dc003:
           building: 073dc003
           density: low
@@ -3015,7 +3600,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44cae
         073dc004:
           building: 073dc004
           density: low
@@ -3026,7 +3612,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c09
+            - 1da44cae
         073dc005:
           building: 073dc005
           density: low
@@ -3037,7 +3624,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44c14
+            - 1da44ca9
         073dc006:
           building: 073dc006
           density: low
@@ -3049,7 +3637,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cae
+            - 1da44c09
         073dc007:
           building: 073dc007
           density: low
@@ -3060,7 +3649,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25da0000
+            - 25da0004
         073dc008:
           building: 073dc008
           density: low
@@ -3071,7 +3660,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25da0000
+            - 25da0004
         073dc009:
           building: 073dc009
           density: low
@@ -3082,7 +3671,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25da0000
+            - 25da0004
         073dc00a:
           building: 073dc00a
           density: low
@@ -3092,8 +3681,9 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
-            - 25da0000
+            - 1da44c14
+            - 25da0004
+            - 1da44c89
         073dc00b:
           building: 073dc00b
           density: low
@@ -3104,7 +3694,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44ca4
+            - 1da44c09
         073dc00c:
           building: 073dc00c
           density: low
@@ -3115,7 +3706,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44ca4
+            - 1da44c09
         073dc00d:
           building: 073dc00d
           density: low
@@ -3126,7 +3718,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cae
+            - 1da44c09
         073dc00e:
           building: 073dc00e
           density: low
@@ -3137,7 +3730,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44000
+            - 1da44cae
+            - 1da44c09
         073dc00f:
           building: 073dc00f
           density: low
@@ -3148,7 +3742,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 09bee000
+            - 09bee104
         073dc010:
           building: 073dc010
           density: low
@@ -3159,9 +3753,9 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25d90000
+            - 25d90004
     meta:
-      timestamp: 2024-12-03T16:03:49.352Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
@@ -3917,8 +4511,69 @@ assets:
     support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     textures:
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Textures/PEG-SPAM_TEXTURES_RESOURCE_b200.dat:
-        - 1da44000
-        - 25d60000
+        - 1da44c04
+        - 1da44c09
+        - 1da44c14
+        - 1da44c1e
+        - 1da44c4e
+        - 1da44c54
+        - 1da44c59
+        - 1da44c5e
+        - 1da44c64
+        - 1da44c69
+        - 1da44c6e
+        - 1da44c74
+        - 1da44c79
+        - 1da44c7e
+        - 1da44c84
+        - 1da44c8e
+        - 1da44c89
+        - 1da44cae
+        - 1da44ca9
+        - 1da44ca4
+        - 1da44cbe
+        - 1da44cb9
+        - 1da44cb4
+        - 1da44cce
+        - 1da44cc9
+        - 1da44cc4
+        - 1da44cde
+        - 1da44cd9
+        - 1da44cd4
+        - 25d60004
+        - 1da44d99
+        - 1da44cfe
+        - 1da44cf9
+        - 1da44cf4
+        - 1da44ce9
+        - 1da44ce4
+        - 1da44729
+        - 1da44d04
+        - 1da44d09
+        - 1da44d0e
+        - 1da44d14
+        - 1da44d1e
+        - 1da44d19
+        - 1da44d5e
+        - 1da44d64
+        - 1da44d69
+        - 1da44d74
+        - 1da44d79
+        - 1da44d7e
+        - 1da44d84
+        - 1da44d89
+        - 1da44d8e
+        - 1da44d94
+        - 1da44d54
+        - 1da44d4e
+        - 1da44d49
+        - 1da44d44
+        - 1da44d3e
+        - 1da44d39
+        - 1da44d34
+        - 1da44d2e
+        - 1da44d29
+        - 1da44d24
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2012/thumb-39a2a7e52169570a7f3ca1b46e9174d9-.jpg
     timestamp: 2024-08-15T14:29:31.994Z
     uncompressed: 9883193
@@ -4078,7 +4733,7 @@ assets:
             - 16fdaa85
           size: 1x1
           textures:
-            - 261f0000
+            - 261f0004
         56fdac74:
           building: 56fdac74
           name: PEG_PPond_Tahoe_1x1
@@ -4087,7 +4742,7 @@ assets:
             - 8d948460
           size: 1x1
           textures:
-            - 261f0000
+            - 261f0004
         96fdb0e5:
           building: 96fdb0e5
           name: PEG-PPOND_Tahoe_WF
@@ -4098,8 +4753,8 @@ assets:
             - e2f04e0f
           size: 1x2
           textures:
-            - 261f0000
-            - 1da44000
+            - 261f0004
+            - 1da444d9
         d6fe0d77:
           building: d6fe0d77
           name: PEG-PPOND_Tahoe_Pipes
@@ -4109,9 +4764,9 @@ assets:
             - 4c8497a5
           size: 1x1
           textures:
-            - 261f0000
+            - 261f0004
     meta:
-      timestamp: 2024-12-11T10:51:59.470Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     mmps:
       The_Terrain_Kit/PEGPROD/MTP/MTP MM2 Scrub Brush/PEG-MTP_MM2-ScrubBrush_MOD_100.dat:
@@ -4715,7 +5370,7 @@ assets:
     support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     textures:
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Kit_102.dat:
-        - 1da44000
+        - 1da444d9
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2012/thumb-c40a9ed17c56e4053b91c28d5522fe2b-.jpg
     timestamp: 2024-08-27T09:21:20.239Z
     uncompressed: 3116291
@@ -4732,4 +5387,4 @@ assets:
     url: https://community.simtropolis.com/files/file/30648-peg-cdk-tutorial/
 
 meta:
-  timestamp: 2024-12-12T12:47:22.557Z
+  timestamp: 2024-12-13T09:40:52.613Z

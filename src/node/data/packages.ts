@@ -8,11 +8,14 @@ import {
   groupBy,
   indexBy,
   isEmpty,
+  isEqual,
   isEqualDeep,
   isString,
   keys,
   mapDefined,
   mapValues,
+  sort,
+  toLowerCase,
   union,
   unionBy,
   values,
@@ -32,7 +35,7 @@ import type { Requirements } from "@common/options"
 import { type PackageID, getOwnerId, isNew } from "@common/packages"
 import type { PropID } from "@common/props"
 import type { Feature, PackageInfo, PackageWarning } from "@common/types"
-import { type MaybeArray, parseStringArray, toLowerCase } from "@common/utils/types"
+import { type MaybeArray, parseStringArray } from "@common/utils/types"
 import type {
   DependencyInfo,
   FileInfo,
@@ -572,6 +575,8 @@ export function loadVariantInfo(
     credit => credit.id ?? credit.text,
   )
 
+  const textures = { ...packageData.textures, ...variantData.textures }
+
   const thanks = unionBy(
     loadCredits(variantData.thanks ?? []),
     loadCredits(packageData.thanks ?? []),
@@ -619,6 +624,7 @@ export function loadVariantInfo(
     requirements: !isEmpty(requirements) ? requirements : undefined,
     summary: variantData.summary ?? packageData.summary,
     support: variantData.support ?? packageData.support,
+    textures: !isEmpty(textures) ? textures : undefined,
     thanks: thanks.length ? thanks : undefined,
     thumbnail: variantData.thumbnail ?? packageData.thumbnail,
     url: variantData.url ?? packageData.url,
@@ -720,6 +726,9 @@ export function writePackageInfo(
     ),
     summary: defaultVariant?.summary,
     support: defaultVariant?.support,
+    textures: filterValues(firstVariant?.textures ?? {}, (textures, file) =>
+      others.every(other => isEqual(textures, other.textures?.[file])),
+    ),
     thanks: firstVariant?.thanks?.filter(thank =>
       others.every(other => other.thanks?.some(equalsDeep(thank))),
     ),
@@ -782,6 +791,10 @@ export function writePackageInfo(
             ),
             summary: variant.summary !== base.summary ? variant.summary : undefined,
             support: variant.support !== base.support ? variant.support : undefined,
+            textures: filterValues(
+              variant.textures ?? {},
+              (textures, file) => !isEqual(textures, base.textures?.[file]),
+            ),
             thanks: variant.thanks?.filter(thank => !base.thanks?.some(equalsDeep(thank))),
             thumbnail: variant.thumbnail !== base.thumbnail ? variant.thumbnail : undefined,
             url: variant.url !== base.url ? variant.url : undefined,
@@ -951,6 +964,7 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
     requirements: info.requirements && !isEmpty(info.requirements) ? info.requirements : undefined,
     summary: info.summary,
     support: info.support,
+    textures: info.textures && !isEmpty(info.textures) ? mapValues(info.textures, sort) : undefined,
     thanks: info.thanks?.length ? writeCredits(info.thanks) : undefined,
     thumbnail: info.thumbnail,
     url: info.url,

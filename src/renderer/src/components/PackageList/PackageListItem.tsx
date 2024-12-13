@@ -130,20 +130,24 @@ export const PackageListItem = memo(function PackageListItem({
             <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
               {matchingContents.map(({ element, name, tab, type }) => (
                 <Typography component="li" key={type} variant="body2">
-                  <Link
-                    color="inherit"
-                    onClick={() => {
-                      actions.setPackageViewTab(tab, element)
-                      openPackageView()
-                    }}
-                    sx={{
-                      cursor: "pointer",
-                      textDecoration: "none",
-                      "&:hover": { textDecoration: "underline" },
-                    }}
-                  >
-                    {type}: {name}
-                  </Link>
+                  {tab ? (
+                    <Link
+                      color="inherit"
+                      onClick={() => {
+                        actions.setPackageViewTab(tab, element)
+                        openPackageView()
+                      }}
+                      sx={{
+                        cursor: "pointer",
+                        textDecoration: "none",
+                        "&:hover": { textDecoration: "underline" },
+                      }}
+                    >
+                      {type}: {name}
+                    </Link>
+                  ) : (
+                    `${type}: ${name}`
+                  )}
                 </Typography>
               ))}
             </ul>

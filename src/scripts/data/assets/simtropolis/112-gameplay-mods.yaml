@@ -162,7 +162,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0019/abe2e5a54dcff7b66106059a0a972de5-LotsOfRiots.jpg
     lastModified: 2005-08-09T20:08:21.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Lots of Riots Mod
     sha256: 0162227c2b1ecf61967f900c6ab4fa10b8f5178e4d07173528741f3a15955f44
@@ -276,7 +276,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0024/d75068af38da6649ecd9b61a7196afa7-NickMonkey.jpg
     lastModified: 2006-02-04T19:50:04.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Crime Simulator Mod
     sha256: 26b034ae150f0c75d366c0ad160a98fca0ef3e1ee1d6c95c04cbccc6ad4d9fa4
@@ -1486,7 +1486,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2017_11/02-industry-quadrupler-query.jpg.95e76586770c9fe98b3285d551a734e4.jpg
     lastModified: 2017-11-27T03:07:27.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Industry Quadrupler
     sha256: c637879c529a1e66a04987e877a5180e8de07372777fcf81a74b487df59f188c
@@ -2088,7 +2088,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0011/6115f56dc2b5545471315af5a10c193c-default.jpg
     lastModified: 2003-10-20T23:00:00.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Toll Booth Booster V2.0
     sha256: 95ed1f2f036116c69cde91cb34882cb6a521b090f49b9f6700670b819724fc5a
@@ -2238,7 +2238,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0010/5543b82ffe2764420e400f3e33ddcbbb-default.jpg
     lastModified: 2003-10-20T23:00:00.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: No Radiation Reward v1.1
     sha256: db2dfe000acdb6e686f5767ad7d6c8b1a3b8333bd4ee50d6b51263e3e2c29e2d
@@ -4682,7 +4682,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0025/e675466ad854f442bf5fefda2d41975a-default.jpg
     lastModified: 2004-03-16T00:00:00.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Functional Landmarks Complete Set v1.0
     sha256: d68bdde93ef7afd62dd9f90b3956c6e92f397616a2bec192ad3262fb9bb72d92
@@ -4728,7 +4728,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0021/c007950f6430d08d70636a9dbad3a37c-default.jpg
     lastModified: 2004-03-31T00:00:00.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Opera House Fix
     sha256: 8417c8cf7d8f87641202e05df3fbc028db20d3c7b5ae261777eb9c20a15770a2
@@ -4900,7 +4900,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0003/0cd458dcfedd5b2ed5f7c24f2a45a302-PropFix_2_AFTER.jpg
     lastModified: 2024-10-14T12:05:00.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Maxis Prop Names and Query Fix
     propFamilies:
@@ -7920,7 +7920,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0008/3dfed99e5cbbdcdedaabc24d76571a26-after.jpg
     lastModified: 2009-11-01T19:21:13.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: IH missing $$$ jobs fix (update!)
     sha256: b00b2a11e874487571b0fd4378eaf42756321c9a1ade5bf124436a54cd09abc5
@@ -7965,7 +7965,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_08_2011/0d98a026f5b952e8a0fe90c15ae81ef6-daynnitestex.jpg
     lastModified: 2021-09-19T12:24:58.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       zzzz_Simfox_Day_n_Nite_Modd/SimFox_Day_n_Nite_Modd.dat:
@@ -8533,10 +8533,10 @@ assets:
             - abb14aee
           size: 7x6
           textures:
-            - 25fb0000
-            - '25270000'
-            - 258f0000
-            - 257c0000
+            - 25fb0104
+            - '25270004'
+            - 258f0004
+            - 257c0004
       SpacePort Fix Mod (use only one of these)/Spaceport Fix Mod.dat:
         4bb1058d:
           building: '03840000'
@@ -8546,12 +8546,12 @@ assets:
             - abb14aee
           size: 7x6
           textures:
-            - 25fb0000
-            - '25270000'
-            - 258f0000
-            - 257c0000
+            - 25fb0104
+            - '25270004'
+            - 258f0004
+            - 257c0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Space Port Fix Mod
     sha256: da535d39a03150400545bf9b563fdf91a1f4f8fd82722bf7175ee7da3b3f2772
@@ -9407,7 +9407,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2015_11/screenshot.png.2af44fb2639cc175dbf54b582ea81dbe.png
     lastModified: 2015-11-06T21:21:13.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: HippoTank Demand Fix
     sha256: 5193d824a2e7359099431f959b0f88876d5a04cdaebb41c388f7f40c66da845d
@@ -9487,7 +9487,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2016_10/cityhall1.png.e28e6d30e2b13e4b1fc3a59f640c3007.png
     lastModified: 2017-12-27T03:47:02.000Z
     meta:
-      timestamp: 2024-11-26T21:04:04.961Z
+      timestamp: 2024-12-13T11:22:53.007Z
       version: 1
     name: Real Upgradeable City Halls
     repository: https://github.com/nsgomez/gzcom-dll
@@ -9500,6 +9500,7 @@ assets:
           - mods
           - dll
         file: UpgradeableCityHalls.zip
+        filename: UpgradeableCityHalls.zip
         files:
           - UpgradeableCityHalls.dat
           - UpgradeableCityHalls.dll
@@ -9508,6 +9509,7 @@ assets:
         uncompressed: 167572
       '169471':
         file: UpgradeableCityHalls - Mac Only.zip
+        filename: UpgradeableCityHalls - Mac Only.zip
     version: 1.1.0
   simtropolis/31365:
     assetId: simtropolis/31365-city-quotes-text-loading-mod
@@ -9935,7 +9937,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2021_01/_NKO_Logo.jpg.d31e759344b27ccfec680868dfb9a7d7.jpg
     lastModified: 2021-01-02T14:05:00.000Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     name: Cori's No Kickout Lower Wealth Mod
     sha256: 626e8648537c08d97ae05da88b3413952aafaa631e47cc01f38708f17b2315fb
@@ -10357,4 +10359,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4536-daeleys-present/
 
 meta:
-  timestamp: 2024-12-12T12:47:22.557Z
+  timestamp: 2024-12-13T09:40:52.613Z

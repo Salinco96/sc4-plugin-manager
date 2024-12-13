@@ -1,4 +1,4 @@
-import { mapValues, parseHex, toHex, values, where } from "@salinco/nice-utils"
+import { mapValues, parseHex, startsWith, toHex, values, where } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
 import type { BuildingID } from "@common/buildings"
@@ -26,6 +26,7 @@ import {
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 
+import { getBaseTextureId } from "@common/dbpf"
 import {
   type PackageFilters,
   type PackageUi,
@@ -262,6 +263,14 @@ export function filterVariant(
 
     if (variantInfo.props?.some(where("family", filters.hex))) {
       return true
+    }
+
+    if (variantInfo.textures) {
+      for (const textures of values(variantInfo.textures)) {
+        if (textures.some(startsWith(getBaseTextureId(parseHex(filters.hex))))) {
+          return true
+        }
+      }
     }
   }
 

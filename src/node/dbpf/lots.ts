@@ -5,9 +5,10 @@ import { ZoneDensity } from "@common/lots"
 import type { LotData } from "@node/data/lots"
 
 import type { BuildingID } from "@common/buildings"
+import { getBaseTextureId } from "@common/dbpf"
 import type { PropID } from "@common/props"
 import { type Exemplar, LotConfigPropertyType, ZoneType } from "./types"
-import { get, getArray, getBaseTextureId, getString } from "./utils"
+import { get, getArray, getString } from "./utils"
 
 export function getLotData(exemplar: Exemplar): LotData {
   const data: LotData = {}

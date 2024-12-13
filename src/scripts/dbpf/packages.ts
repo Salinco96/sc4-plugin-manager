@@ -4,7 +4,9 @@ import {
   collect,
   forEach,
   intersection,
+  mapKeys,
   matchGroups,
+  reduce,
   toArray,
   union,
   unionBy,
@@ -20,11 +22,6 @@ import type { PackageInfo } from "@common/types"
 import type { VariantAssetInfo, VariantID, VariantInfo } from "@common/variants"
 import { loadBuildingInfo } from "@node/data/buildings"
 import { loadFamilyInfo } from "@node/data/families"
-import { loadLotInfo } from "@node/data/lots"
-import { loadFloraInfo } from "@node/data/mmps"
-import { loadPropInfo } from "@node/data/props"
-import { getExtension } from "@node/files"
-
 import {
   CLEANITOL_EXTENSIONS,
   DOC_EXTENSIONS,
@@ -32,7 +29,13 @@ import {
   SC4_EXTENSIONS,
   matchFiles,
 } from "@node/data/files"
+import { loadLotInfo } from "@node/data/lots"
+import { loadFloraInfo } from "@node/data/mmps"
+import { loadPropInfo } from "@node/data/props"
+import { getExtension } from "@node/files"
+
 import type { IndexerEntry } from "../types"
+import { htmlToMd } from "../utils"
 
 // Common dependencies for which URL detection will not be accurate (e.g. BSC Common Dependencies Pack)
 const commonDependencies: {
@@ -113,7 +116,7 @@ export function registerVariantAsset(
   includedPaths: string[],
   excludedPaths: string[],
   filePriorities: { [path in string]?: number },
-): PackageInfo {
+): void {
   packageInfo.variants[variantId] ??= {
     authors: [getOwnerId(packageInfo.id)],
     categories: [],
@@ -274,8 +277,6 @@ export function registerVariantAsset(
       }
     }
   }
-
-  return packageInfo
 }
 
 export function generateVariantInfo(
@@ -306,11 +307,11 @@ export function generateVariantInfo(
   const version = `${major}.${minor ?? 0}.${patch ?? 0}`
 
   if (variantInfo.version !== version) {
-    // variantInfo.release = new Date()
-    // variantInfo.version = version
-    // if (mainEntry.description) {
-    //   variantInfo.description = htmlToMd(mainEntry.description)
-    // }
+    variantInfo.release = new Date()
+    variantInfo.version = version
+    if (mainEntry.description) {
+      variantInfo.description = htmlToMd(mainEntry.description)
+    }
   }
 
   variantInfo.lastGenerated = new Date()
@@ -426,19 +427,19 @@ export function generateVariantInfo(
   const lastModified = collect(entries, entry => entry.lastModified.valueOf())
   variantInfo.lastModified = new Date(Math.max(...lastModified))
 
-  // const authors = values(entries).flatMap(entry => entry.authors)
-  // const dependencies = values(entries).flatMap(entry => entry.dependencies ?? [])
-  // const images = values(entries).flatMap(entry => entry.images ?? [])
+  const authors = values(entries).flatMap(entry => entry.authors)
+  const dependencies = values(entries).flatMap(entry => entry.dependencies ?? [])
+  const images = values(entries).flatMap(entry => entry.images ?? [])
 
-  // variantInfo.authors = union(variantInfo.authors, authors)
+  variantInfo.authors = union(variantInfo.authors, authors)
 
-  // variantInfo.dependencies = unionBy(
-  //   variantInfo.dependencies ?? [],
-  //   dependencies.map(id => ({ id, transitive: true })),
-  //   dependency => dependency.id,
-  // )
+  variantInfo.dependencies = unionBy(
+    variantInfo.dependencies ?? [],
+    dependencies.map(id => ({ id, transitive: true })),
+    dependency => dependency.id,
+  )
 
-  // variantInfo.images = union(variantInfo.images ?? [], images)
+  variantInfo.images = union(variantInfo.images ?? [], images)
 
   if (variantInfo.id === "darknite") {
     variantInfo.name ??= "Dark Nite"
@@ -545,6 +546,18 @@ export function generateVariantInfo(
       }).flat()
     }),
     instance => `${instance.file}:${instance.id}`,
+  )
+
+  variantInfo.textures = reduce(
+    entries,
+    (textures, entry) => ({
+      ...mapKeys(
+        entry.textures ?? {},
+        oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null,
+      ),
+      ...textures,
+    }),
+    {},
   )
 
   for (const building of variantInfo.buildings) {

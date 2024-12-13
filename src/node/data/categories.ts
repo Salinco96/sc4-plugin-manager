@@ -1,6 +1,6 @@
 import type { Categories, CategoryID } from "@common/categories"
-import { type MaybeArray, parseStringArray, toLowerCase } from "@common/utils/types"
-import { mapDefined, toArray, unique } from "@salinco/nice-utils"
+import { type MaybeArray, parseStringArray } from "@common/utils/types"
+import { mapDefined, toArray, toLowerCase, unique } from "@salinco/nice-utils"
 
 export function loadCategories(data: MaybeArray<string>, categories: Categories): CategoryID[] {
   return unique(

@@ -1,6 +1,7 @@
-import { compact, isDefined, where } from "@salinco/nice-utils"
+import { compact, isDefined, parseHex, values, where } from "@salinco/nice-utils"
 import { useMemo } from "react"
 
+import { getBaseTextureId } from "@common/dbpf"
 import type { FamilyInfo } from "@common/families"
 import type { FloraID, FloraInfo } from "@common/mmps"
 import type { ContentsInfo } from "@common/variants"
@@ -15,6 +16,7 @@ export function useMatchingContents({
   mmps,
   propFamilies,
   props,
+  textures,
 }: ContentsInfo) {
   const { page } = useLocation()
   const { search } = usePackageFilters()
@@ -40,7 +42,14 @@ export function useMatchingContents({
         propFamilies?.find(where("id", hex)) ??
         (!prop && props?.some(where("family", hex)) ? { id: hex } : undefined)
 
-      return compact([
+      const textureId = getBaseTextureId(parseHex(hex))
+
+      return compact<{
+        element: string
+        name: string
+        tab?: string
+        type: string
+      }>([
         buildingFamily && {
           element: `buildingFamily-${buildingFamily.id}`,
           name: buildingFamily.name ?? buildingFamily.id,
@@ -77,9 +86,20 @@ export function useMatchingContents({
           tab: "props",
           type: "Prop",
         },
+        ...values(textures ?? {}).flatMap(ids =>
+          ids
+            .filter(id => id.startsWith(textureId))
+            .map(id => ({
+              element: `texture-${id}`,
+              name: id,
+              // TODO: Textures tab
+              // tab: "textures",
+              type: "Texture",
+            })),
+        ),
       ])
     }
-  }, [buildingFamilies, buildings, lots, mmps, page, propFamilies, props, search])
+  }, [buildingFamilies, buildings, lots, mmps, page, propFamilies, props, search, textures])
 }
 
 function getStage(mmp: FloraInfo, id: FloraID) {

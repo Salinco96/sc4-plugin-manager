@@ -235,7 +235,7 @@ assets:
     dependencies:
       - simtropolis/34027
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>A DLL version of\_<a href=\"https://community.simtropolis.com/files/file/34027-coris-no-kickout-lower-wealth-mod/\" rel=\"\">Cori's No Kickout Lower Wealth Mod (<abbr title=\"(Cori's) No Kickout (Lower Wealth) Mod\">NKO</abbr>)</a>\_mod.</p>\r\n<p>Unlike Cori's mod the DLL does not override the Building Development Simulator exemplar, so it should be compatible with\_<abbr title=\"Colossus Addon Mod\">CAM</abbr>\_or any other mod that alters that file. The DLL sets the Building Development Simulator\_<em>Tract Developer Kick Out Lower Wealth</em>\_property to false when a city is loaded.</p>\r\n<p><strong>System Requirements</strong></p>\r\n<ul>\r\n<li>Windows 10 or later</li>\r\n</ul>\r\n<p>The plugin may work on Windows 7 or later with the\_<a href=\"https://aka.ms/vs/17/release/vc_redist.x86.exe\" target=\"_blank\" rel=\"external nofollow noopener\">Microsoft Visual C++ 2022 x86 Redistribute</a>\_installed, but I do not have the ability to test that.</p>\r\n<p><strong>Installation</strong></p>\r\n<ol>\r\n<li>\_Close SimCity 4.</li>\r\n<li>\_Copy\_<em>SC4NoKickOut.dll</em>\_into the Plugins folder in the SimCity 4 installation directory.</li>\r\n<li>\_Start SimCity 4.</li>\r\n</ol>\r\n<p><strong>Troubleshooting</strong></p>\r\n<p>The plugin should write a\_<em>SC4NoKickOut.log</em>\_file in the same folder as the plugin.<br>The log contains status information for the most recent run of the plugin.</p>\r\n<p><strong>Source Code and Support</strong></p>\r\n<p>Plugin thread:\_<a href=\"https://community.simtropolis.com/forums/topic/763015-no-kickout-lower-wealth-dll-plugin/\" rel=\"\">https://community.simtropolis.com/forums/topic/763015-no-kickout-lower-wealth-dll-plugin/</a></p>\r\n<p>The plugin's source code and issue tracker are located on GitHub:\_<a href=\"https://github.com/0xC0000054/sc4-no-kick-out\" target=\"_blank\" rel=\"external nofollow noopener\">https://github.com/0xC0000054/sc4-no-kick-out</a></p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 652
+    downloads: 654
     images: []
     lastModified: 2024-03-22T10:57:09.000Z
     meta:
@@ -282,7 +282,7 @@ assets:
   sc4evermore/273:
     assetId: sc4evermore/273-dgvoodoo-2-sc4-edition
     category: 42-dll-mods
-    downloads: 279
+    downloads: 281
     lastModified: 2024-08-11T12:00:20.000Z
     name: DgVoodoo 2 - SimCity 4 Edition
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/communityIcon_pznebvf29ih91.jpg
@@ -305,4 +305,4 @@ assets:
     version: '8'
 
 meta:
-  timestamp: 2024-12-12T12:47:22.557Z
+  timestamp: 2024-12-13T09:40:52.613Z

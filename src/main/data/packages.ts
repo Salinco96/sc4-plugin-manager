@@ -1,14 +1,23 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { $merge, collect, forEach, isEmpty, keys, size, values } from "@salinco/nice-utils"
+import {
+  $merge,
+  collect,
+  forEach,
+  isEmpty,
+  keys,
+  size,
+  toLowerCase,
+  values,
+} from "@salinco/nice-utils"
 import { glob } from "glob"
 
 import type { AssetID, Assets } from "@common/assets"
 import type { Categories } from "@common/categories"
 import type { PackageID } from "@common/packages"
 import { ConfigFormat, type Feature, type PackageInfo, type Packages } from "@common/types"
-import { parseStringArray, toLowerCase } from "@common/utils/types"
+import { parseStringArray } from "@common/utils/types"
 import type { VariantID } from "@common/variants"
 import { readConfig } from "@node/configs"
 import type { AssetData } from "@node/data/assets"

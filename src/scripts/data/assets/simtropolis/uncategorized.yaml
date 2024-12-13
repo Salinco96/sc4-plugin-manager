@@ -17,7 +17,7 @@ assets:
       - dayopeace.dat
     lastModified: 2024-11-18T09:48:18.355Z
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     props:
       dayopeace.dat:
@@ -141,11 +141,11 @@ assets:
             - 2a0f0000
           size: 6x6
           textures:
-            - 258f0000
-            - '26210000'
-            - 25c40000
+            - 258f0004
+            - '26210004'
+            - 25c40004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_002_TheLivingMall.dat:
@@ -189,13 +189,13 @@ assets:
             - 1d2f0000
           size: 3x3
           textures:
-            - 25fb0000
-            - 259d0000
-            - 257c0000
-            - '26060000'
-            - 257d0000
+            - 25fb0004
+            - 259d0004
+            - 257c0004
+            - '26060004'
+            - 257d0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_003_ArcTriomphe.dat:
@@ -246,14 +246,14 @@ assets:
             - 04bd0000
           size: 6x5
           textures:
-            - '26210000'
-            - '25900000'
-            - 258f0000
-            - 25b40000
-            - 25f10000
-            - '26270000'
+            - '26210004'
+            - '25900004'
+            - 258f0004
+            - 25b40004
+            - 25f10004
+            - '26270004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_004_SeoulCityHall.dat:
@@ -308,15 +308,15 @@ assets:
             - a000004b
           size: 15x15
           textures:
-            - 258c0000
-            - 25f40000
-            - 25ee0000
-            - 258f0000
-            - 25ea0000
-            - 25ed0000
-            - 25aa0000
+            - 258c0004
+            - 25f40004
+            - 25ee0004
+            - 258f0004
+            - 25ea0004
+            - 25ed0004
+            - 25aa0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_005_SeoulSoccerStad.dat:
@@ -375,12 +375,12 @@ assets:
             - 2b960000
           size: 11x8
           textures:
-            - 25aa0000
-            - 258f0000
-            - 258c0000
-            - 25b20000
+            - 25aa0004
+            - 258f0004
+            - 258c0004
+            - 25b20004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_006_GlobeArena.dat:
@@ -472,27 +472,27 @@ assets:
             - '28270000'
           size: 10x29
           textures:
-            - 25d60000
-            - 25fb0000
-            - 256d0000
-            - '25700000'
-            - '25710000'
-            - 256f0000
-            - '25730000'
-            - '256e0000'
-            - 256a0000
-            - '25620000'
-            - 25d70000
-            - '25680000'
-            - '25650000'
-            - '25640000'
-            - '25630000'
-            - '25660000'
-            - '25670000'
-            - '25610000'
-            - 25c60000
+            - 25d60004
+            - 25fb0004
+            - 256d0004
+            - '25700004'
+            - '25710004'
+            - 256f0004
+            - '25730004'
+            - '256e0004'
+            - 256a0004
+            - '25620004'
+            - 25d70004
+            - '25680004'
+            - '25650004'
+            - '25640004'
+            - '25630004'
+            - '25660004'
+            - '25670004'
+            - '25610004'
+            - 25c60004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_007_AirForceBase.dat:
@@ -577,11 +577,11 @@ assets:
             - 2b980000
           size: 5x6
           textures:
-            - 262a0000
-            - 262c0000
-            - 262b0000
+            - 262a0004
+            - 262c0004
+            - 262b0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_008_Kunjungjon.dat:
@@ -608,9 +608,9 @@ assets:
     size: 503112
     textures:
       Plugin_008_Kunjungjon.dat:
-        - 262a0000
-        - 262b0000
-        - 262c0000
+        - 262a0004
+        - 262b0004
+        - 262c0004
     version: '1'
   simtropolis/maxis-plugin-009-namdaemun:
     assetId: simtropolis/maxis-plugin-009-namdaemun
@@ -645,9 +645,9 @@ assets:
           name: Lm4x4_NamDaeMoon
           size: 4x4
           textures:
-            - 258b0000
+            - 258b0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_009_NamDaeMoon.dat:
@@ -692,11 +692,11 @@ assets:
             - a0000077
           size: 4x5
           textures:
-            - '26060000'
-            - 258f0000
-            - 252b0000
+            - '26060004'
+            - 258f0004
+            - 252b0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_00A_63Building.dat:
@@ -753,10 +753,10 @@ assets:
             - '29840000'
           size: 5x7
           textures:
-            - '26060000'
-            - 25f40000
+            - '26060004'
+            - 25f40004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_00C_BrandenburgGate.dat:
@@ -765,7 +765,7 @@ assets:
     size: 707610
     textures:
       Plugin_00C_BrandenburgGate.dat:
-        - '262e0000'
+        - '262e0004'
     version: '1'
   simtropolis/maxis-plugin-00D-parthenon:
     assetId: simtropolis/maxis-plugin-00D-parthenon
@@ -823,9 +823,9 @@ assets:
             - 2ba40000
           size: 3x5
           textures:
-            - 25db0000
+            - 25db0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_00D_Parthenon.dat:
@@ -957,18 +957,18 @@ assets:
             - a000004b
           size: 11x6
           textures:
-            - '25800000'
-            - 257c0000
-            - 258c0000
-            - '26210000'
-            - 258f0000
-            - 25f60000
-            - 25f40000
-            - 25ea0000
-            - '26060000'
-            - 257a0000
+            - '25800004'
+            - 257c0004
+            - 258c0004
+            - '26210004'
+            - 258f0004
+            - 25f60004
+            - 25f40004
+            - 25ea0004
+            - '26060004'
+            - 257a0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_00E_SchlossSchoenbrun.dat:
@@ -1019,9 +1019,9 @@ assets:
           name: LM12x12_sagradafamilia
           size: 5x5
           textures:
-            - '258e0000'
+            - '258e0004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_00F_TempleExpiatiori.dat:
@@ -1068,9 +1068,9 @@ assets:
           name: LM7x8_GrandCentral
           size: 7x8
           textures:
-            - 25fb0000
+            - 25fb0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_010_GrandCentralStation.dat:
@@ -1118,13 +1118,13 @@ assets:
             - a000007f
           size: 5x5
           textures:
-            - '25920000'
-            - 258b0000
-            - '258e0000'
-            - '25950000'
-            - '25960000'
+            - '25920004'
+            - 258b0004
+            - '258e0004'
+            - '25950004'
+            - '25960004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_012_CapitolRecords.dat:
@@ -1175,10 +1175,10 @@ assets:
             - aa836b49
           size: 6x6
           textures:
-            - 25f40000
-            - '25e90000'
+            - 25f40004
+            - '25e90004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_016_Stonehenge.dat:
@@ -1251,9 +1251,9 @@ assets:
           name: LM11x7_SanFranciscoCityHall
           size: 11x7
           textures:
-            - 25d60000
+            - 25d60004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_017_SanFranCityHall.dat:
@@ -1296,9 +1296,9 @@ assets:
           name: LM5x7_TaipeiArtMuseum
           size: 5x7
           textures:
-            - 252b0000
+            - 252b0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_030_TaipeiArtMuseum.dat:
@@ -1345,9 +1345,9 @@ assets:
           name: LM6x6_adlerp
           size: 6x6
           textures:
-            - '26060000'
+            - '26060004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_031_AdlerPlanetarium.dat:
@@ -1397,7 +1397,7 @@ assets:
             - 2d370000
           size: 4x3
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_032_MayflowerPort.dat:
@@ -1464,10 +1464,10 @@ assets:
             - 2d3d0000
           size: 4x13
           textures:
-            - '26370000'
-            - '26350000'
+            - '26370004'
+            - '26350004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_033_RockefellerCenter.dat:
@@ -1534,11 +1534,11 @@ assets:
             - 28ac0000
           size: 3x3
           textures:
-            - '25920000'
-            - '25960000'
-            - '26350000'
+            - '25920004'
+            - '25960004'
+            - '26350004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_034_SobchakLanes.dat:
@@ -1592,10 +1592,10 @@ assets:
             - 1dfe0000
           size: 2x3
           textures:
-            - 25fb0000
-            - 25b40000
+            - 25fb0104
+            - 25b40004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_035_ShortyBurger.dat:
@@ -1649,10 +1649,10 @@ assets:
             - 2a180000
           size: 3x2
           textures:
-            - '26110000'
-            - '26140000'
+            - '26110004'
+            - '26140004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Plugin_036_LuckysHangTen.dat:
@@ -1734,14 +1734,14 @@ assets:
             - 1d4a0000
           size: 4x5
           textures:
-            - 258d0000
-            - '25960000'
-            - '25930000'
-            - '25920000'
-            - '25950000'
-            - 256c0000
+            - 258d0004
+            - '25960004'
+            - '25930004'
+            - '25920004'
+            - '25950004'
+            - 256c0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Grutze Industries/IndstryPipes-0x5ad0e817_0x6cd8b254_0x2f0000.SC4Model:
@@ -1828,12 +1828,12 @@ assets:
             - '29300000'
           size: 2x3
           textures:
-            - '1e810000'
-            - 1e7e0000
-            - 25f80000
-            - 25b00000
+            - '1e810004'
+            - 1e7e0004
+            - 25f80004
+            - 25b00004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Grutzehaus/DstTxtr-0x5ad0e817_0x6cd8b254_0x2d0000.SC4Model:
@@ -1995,21 +1995,21 @@ assets:
             - 2d460000
           size: 13x12
           textures:
-            - 252b0000
-            - 2d580000
-            - 2d590000
-            - 2d5f0000
-            - 2d600000
-            - 2d610000
-            - '25e00000'
-            - 2d5d0000
-            - 2d5a0000
-            - 25d80000
-            - 251c0000
-            - 258b0000
-            - 257a0000
-            - 257c0000
-            - '25800000'
+            - 252b0004
+            - 2d580004
+            - 2d590004
+            - 2d5f0014
+            - 2d600014
+            - 2d610014
+            - '25e00004'
+            - 2d5d0004
+            - 2d5a0004
+            - 25d80004
+            - 251c0004
+            - 258b0004
+            - 257a0004
+            - 257c0004
+            - '25800004'
       Longfellow Castle/Longfellow Castle_4d50ba18.SC4Lot:
         4d50ba18:
           building: 4d50ba18
@@ -2066,23 +2066,23 @@ assets:
             - 2d460000
           size: 13x12
           textures:
-            - 252b0000
-            - 2d580000
-            - 2d590000
-            - 2d5f0000
-            - 2d600000
-            - 2d610000
-            - '25e00000'
-            - 2d5d0000
-            - 2d5a0000
-            - 25d80000
-            - 251c0000
-            - 258b0000
-            - 257a0000
-            - 257c0000
-            - '25800000'
+            - 252b0004
+            - 2d580004
+            - 2d590004
+            - 2d5f0014
+            - 2d600014
+            - 2d610014
+            - '25e00004'
+            - 2d5d0004
+            - 2d5a0004
+            - 25d80004
+            - 251c0004
+            - 258b0004
+            - 257a0004
+            - 257c0004
+            - '25800004'
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Longfellow Castle/CastleSet.dat:
@@ -2254,15 +2254,15 @@ assets:
     size: 3793228
     textures:
       Longfellow Castle/CastleSet.dat:
-        - 2d5b0000
-        - 2d5f0000
-        - 2d580000
-        - 2d5c0000
-        - 2d600000
-        - 2d590000
-        - 2d5d0000
-        - 2d610000
-        - 2d5a0000
+        - 2d5b0004
+        - 2d5f0014
+        - 2d580004
+        - 2d5c0004
+        - 2d600014
+        - 2d590004
+        - 2d5d0004
+        - 2d610014
+        - 2d5a0004
     uncompressed: 4553219
     version: '1'
   simtropolis/maxis-plugin-stone-house:
@@ -2337,11 +2337,11 @@ assets:
             - '29010000'
           size: 3x3
           textures:
-            - '262e0000'
-            - '1e810000'
-            - 1e7e0000
+            - '262e0004'
+            - '1e810004'
+            - 1e7e0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Stone House/StoneHouse-0x5ad0e817_0x6cd8b254_0x2e0000.SC4Model:
@@ -2415,10 +2415,10 @@ assets:
             - '28340000'
           size: 6x6
           textures:
-            - 25ba0000
-            - 251c0000
+            - 25ba0004
+            - 251c0004
     meta:
-      timestamp: 2024-12-02T12:44:08.441Z
+      timestamp: 2024-12-13T10:16:33.532Z
       version: 1
     models:
       Temple of Grutz/TempleOfGrutz-0x5ad0e817_0xad1d67dc_0x30000.SC4Model:

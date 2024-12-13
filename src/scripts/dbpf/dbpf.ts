@@ -3,7 +3,7 @@ import path from "node:path"
 import { toArray, toHex, values } from "@salinco/nice-utils"
 
 import type { BuildingID } from "@common/buildings"
-import { DBPFDataType, DBPFFileType, isDBPF, parseTGI } from "@common/dbpf"
+import { DBPFDataType, DBPFFileType, getBaseTextureId, isDBPF, parseTGI } from "@common/dbpf"
 import {
   ExemplarPropertyID,
   type ExemplarPropertyInfo,
@@ -23,7 +23,7 @@ import { getLotData } from "@node/dbpf/lots"
 import { getFloraData } from "@node/dbpf/mmps"
 import { getPropData } from "@node/dbpf/props"
 import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
-import { get, getBaseTextureId, getFamilyInstanceId, getModelId, getString } from "@node/dbpf/utils"
+import { get, getFamilyInstanceId, getModelId, getString } from "@node/dbpf/utils"
 import { FileOpenMode, openFile } from "@node/files"
 
 export async function analyzeSC4Files(
