@@ -1,7 +1,7 @@
-import { compact, isDefined, parseHex, toHex, values, where } from "@salinco/nice-utils"
+import { compact, isDefined, parseHex, values, where } from "@salinco/nice-utils"
 import { useMemo } from "react"
 
-import { getBaseTextureId } from "@common/dbpf"
+import { getTextureIdRange } from "@common/dbpf"
 import type { FamilyInfo } from "@common/families"
 import type { FloraID, FloraInfo } from "@common/mmps"
 import type { ContentsInfo } from "@common/variants"
@@ -42,11 +42,9 @@ export function useMatchingContents({
         propFamilies?.find(where("id", hex)) ??
         (!prop && props?.some(where("family", hex)) ? { id: hex } : undefined)
 
-      const textureId = getBaseTextureId(parseHex(hex))
+      const textureIdRange = getTextureIdRange(parseHex(hex))
 
-      const texture = values(textures ?? {}).some(ids => ids.includes(textureId))
-        ? { id: textureId }
-        : undefined
+      const hasTexture = values(textures ?? {}).some(ids => ids.includes(textureIdRange[0]))
 
       return compact<{
         element: string
@@ -90,12 +88,14 @@ export function useMatchingContents({
           tab: "props",
           type: "Prop",
         },
-        texture && {
-          element: `texture-${texture.id}`,
-          name: `${texture.id.replace(/[0-9a-f]$/i, s => toHex(parseHex(s) - 4))} ... ${texture.id}`,
-          tab: "textures",
-          type: "Texture",
-        },
+        hasTexture
+          ? {
+              element: `texture-${textureIdRange[0]}`,
+              name: textureIdRange.join(" ... "),
+              tab: "textures",
+              type: "Texture",
+            }
+          : undefined,
       ])
     }
   }, [buildingFamilies, buildings, lots, mmps, page, propFamilies, props, search, textures])

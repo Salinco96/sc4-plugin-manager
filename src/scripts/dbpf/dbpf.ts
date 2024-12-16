@@ -3,7 +3,7 @@ import path from "node:path"
 import { toArray, toHex, values } from "@salinco/nice-utils"
 
 import type { BuildingID } from "@common/buildings"
-import { DBPFDataType, DBPFFileType, getBaseTextureId, isDBPF, parseTGI } from "@common/dbpf"
+import { DBPFDataType, DBPFFileType, getTextureIdRange, isDBPF, parseTGI } from "@common/dbpf"
 import {
   ExemplarPropertyID,
   type ExemplarPropertyInfo,
@@ -186,11 +186,13 @@ export async function analyzeSC4Files(
           case DBPFDataType.FSH: {
             if (entry.id.startsWith(DBPFFileType.FSH_TEXTURE)) {
               const instanceId = parseTGI(entry.id)[2]
-              const textureId = getBaseTextureId(instanceId)
-              if (!contents.textures?.[filePath]?.includes(textureId)) {
-                contents.textures ??= {}
-                contents.textures[filePath] ??= []
-                contents.textures[filePath].push(textureId)
+              const [textureId] = getTextureIdRange(instanceId)
+              if (entry.id.endsWith(textureId)) {
+                if (!contents.textures?.[filePath]?.includes(textureId)) {
+                  contents.textures ??= {}
+                  contents.textures[filePath] ??= []
+                  contents.textures[filePath].push(textureId)
+                }
               }
             }
 

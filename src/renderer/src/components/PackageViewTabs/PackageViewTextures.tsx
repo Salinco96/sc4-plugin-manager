@@ -1,13 +1,14 @@
 import { Card, CardContent, List, ListItem } from "@mui/material"
-import { collect, entries, mapValues, parseHex, sortBy, toHex } from "@salinco/nice-utils"
+import { collect, entries, mapValues, sortBy } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
+import { getTextureIdRange } from "@common/dbpf"
+import { checkFile } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 
-import { checkFile } from "@common/packages"
 import { ExemplarRef } from "../ExemplarRef"
 import type { PackageViewTabInfoProps } from "./tabs"
 
@@ -95,11 +96,7 @@ export default function PackageViewTextures({ packageId }: PackageViewTabInfoPro
                         </Text>
                       </FlexBox>
 
-                      <ExemplarRef
-                        file={texture.file}
-                        id={texture.id.replace(/[0-9a-f]$/i, s => toHex(parseHex(s) - 4))}
-                        idMax={texture.id}
-                      />
+                      <ExemplarRef file={texture.file} id={getTextureIdRange(texture.id)} />
                     </FlexBox>
                   </FlexBox>
                 </FlexBox>

@@ -244,7 +244,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25da0004
+            - 25da0000
         073dc001:
           building: 073dc001
           density: low
@@ -252,7 +252,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44cf9
+            - 1da44cf5
         073dc002:
           building: 073dc002
           density: low
@@ -263,8 +263,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25db0004
-            - 1da44ca9
+            - 25db0000
+            - 1da44ca5
         073dc003:
           building: 073dc003
           density: low
@@ -275,8 +275,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44c09
-            - 1da44cae
+            - 1da44c05
+            - 1da44caa
         073dc004:
           building: 073dc004
           density: low
@@ -287,8 +287,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44c09
-            - 1da44cae
+            - 1da44c05
+            - 1da44caa
         073dc005:
           building: 073dc005
           density: low
@@ -299,8 +299,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44c14
-            - 1da44ca9
+            - 1da44c10
+            - 1da44ca5
         073dc006:
           building: 073dc006
           density: low
@@ -312,8 +312,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44cae
-            - 1da44c09
+            - 1da44caa
+            - 1da44c05
         073dc007:
           building: 073dc007
           density: low
@@ -324,7 +324,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25da0004
+            - 25da0000
         073dc008:
           building: 073dc008
           density: low
@@ -335,7 +335,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25da0004
+            - 25da0000
         073dc009:
           building: 073dc009
           density: low
@@ -346,7 +346,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25da0004
+            - 25da0000
         073dc00a:
           building: 073dc00a
           density: low
@@ -356,9 +356,9 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44c14
-            - 25da0004
-            - 1da44c89
+            - 1da44c10
+            - 25da0000
+            - 1da44c85
         073dc00b:
           building: 073dc00b
           density: low
@@ -369,8 +369,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44ca4
-            - 1da44c09
+            - 1da44ca0
+            - 1da44c05
         073dc00c:
           building: 073dc00c
           density: low
@@ -381,8 +381,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44ca4
-            - 1da44c09
+            - 1da44ca0
+            - 1da44c05
         073dc00d:
           building: 073dc00d
           density: low
@@ -393,8 +393,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44cae
-            - 1da44c09
+            - 1da44caa
+            - 1da44c05
         073dc00e:
           building: 073dc00e
           density: low
@@ -405,8 +405,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44cae
-            - 1da44c09
+            - 1da44caa
+            - 1da44c05
         073dc00f:
           building: 073dc00f
           density: low
@@ -417,7 +417,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 09bee104
+            - 09bee100
         073dc010:
           building: 073dc010
           density: low
@@ -428,7 +428,7 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25d90004
+            - 25d90000
     meta:
       timestamp: 2024-12-13T10:16:33.532Z
       version: 1
@@ -1174,69 +1174,69 @@ assets:
     support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     textures:
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Textures/PEG-SPAM_TEXTURES_RESOURCE_b200.dat:
-        - 1da44c04
-        - 1da44c09
-        - 1da44c14
-        - 1da44c1e
-        - 1da44c4e
-        - 1da44c54
-        - 1da44c59
-        - 1da44c5e
-        - 1da44c64
-        - 1da44c69
-        - 1da44c6e
-        - 1da44c74
-        - 1da44c79
-        - 1da44c7e
-        - 1da44c84
-        - 1da44c8e
-        - 1da44c89
-        - 1da44cae
-        - 1da44ca9
-        - 1da44ca4
-        - 1da44cbe
-        - 1da44cb9
-        - 1da44cb4
-        - 1da44cce
-        - 1da44cc9
-        - 1da44cc4
-        - 1da44cde
-        - 1da44cd9
-        - 1da44cd4
-        - 25d60004
-        - 1da44d99
-        - 1da44cfe
-        - 1da44cf9
-        - 1da44cf4
-        - 1da44ce9
-        - 1da44ce4
-        - 1da44729
-        - 1da44d04
-        - 1da44d09
-        - 1da44d0e
-        - 1da44d14
-        - 1da44d1e
-        - 1da44d19
-        - 1da44d5e
-        - 1da44d64
-        - 1da44d69
-        - 1da44d74
-        - 1da44d79
-        - 1da44d7e
-        - 1da44d84
-        - 1da44d89
-        - 1da44d8e
-        - 1da44d94
-        - 1da44d54
-        - 1da44d4e
-        - 1da44d49
-        - 1da44d44
-        - 1da44d3e
-        - 1da44d39
-        - 1da44d34
-        - 1da44d2e
-        - 1da44d29
-        - 1da44d24
+        - 1da44c00
+        - 1da44c05
+        - 1da44c10
+        - 1da44c1a
+        - 1da44c4a
+        - 1da44c50
+        - 1da44c55
+        - 1da44c5a
+        - 1da44c60
+        - 1da44c65
+        - 1da44c6a
+        - 1da44c70
+        - 1da44c75
+        - 1da44c7a
+        - 1da44c80
+        - 1da44c8a
+        - 1da44c85
+        - 1da44caa
+        - 1da44ca5
+        - 1da44ca0
+        - 1da44cba
+        - 1da44cb5
+        - 1da44cb0
+        - 1da44cca
+        - 1da44cc5
+        - 1da44cc0
+        - 1da44cda
+        - 1da44cd5
+        - 1da44cd0
+        - 25d60000
+        - 1da44d95
+        - 1da44cfa
+        - 1da44cf5
+        - 1da44cf0
+        - 1da44ce5
+        - 1da44ce0
+        - 1da44725
+        - 1da44d00
+        - 1da44d05
+        - 1da44d0a
+        - 1da44d10
+        - 1da44d1a
+        - 1da44d15
+        - 1da44d5a
+        - 1da44d60
+        - 1da44d65
+        - 1da44d70
+        - 1da44d75
+        - 1da44d7a
+        - 1da44d80
+        - 1da44d85
+        - 1da44d8a
+        - 1da44d90
+        - 1da44d50
+        - 1da44d4a
+        - 1da44d45
+        - 1da44d40
+        - 1da44d3a
+        - 1da44d35
+        - 1da44d30
+        - 1da44d2a
+        - 1da44d25
+        - 1da44d20
     thumbnail: https://www.simtropolis.com/objects/screens/0030/thumb-23bc5f3dd415ad28a0a2bffdf3ca46ca-spam-sp_plex_480.jpg
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 7283571
@@ -1514,4 +1514,4 @@ assets:
     url: https://community.simtropolis.com/files/file/33196-spam-commercial-growable-cs/
 
 meta:
-  timestamp: 2024-12-13T09:40:52.613Z
+  timestamp: 2024-12-16T07:04:42.746Z

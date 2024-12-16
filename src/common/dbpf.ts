@@ -1,4 +1,4 @@
-import { type integer, parseHex, toHex } from "@salinco/nice-utils"
+import { type integer, isString, parseHex, toHex } from "@salinco/nice-utils"
 import type { ExemplarData } from "./exemplars"
 import { bitMask } from "./utils/types"
 
@@ -141,19 +141,22 @@ export function getDataType(id: TGI): DBPFDataType {
   return DBPFDataType.UNKNOWN
 }
 
-export function getBaseTextureId(instanceId: number): string {
-  const digit5 = bitMask(instanceId, 0x0000f000)
-  const digit8 = bitMask(instanceId, 0x0000000f)
+export function getTextureIdRange(instanceId: number | string): [start: string, end: string] {
+  const id = isString(instanceId) ? parseHex(instanceId) : instanceId
+  const digit5 = bitMask(id, 0x0000f000)
+  const digit8 = bitMask(id, 0x0000000f)
 
   // 0, 1, 2, 3 -> 0
   // others -> unchanged
   const baseDigit5 = digit5 > 0x00003000 ? digit5 : 0
 
-  // 0, 1, 2, 3, 4 -> 4
-  // 5, 6, 7, 8, 9 -> 9
-  // a, b, c, d, e -> e
-  // others -> unchanged
-  const baseDigit8 = digit8 > 0x0000000e ? digit8 : Math.floor(digit8 / 5) * 5 + 4
+  // 0, 1, 2, 3, 4 -> 0
+  // 5, 6, 7, 8, 9 -> 5
+  // a, b, c, d, e -> a
+  // f -> f
+  const baseDigit8 = digit8 > 0x0000000e ? digit8 : Math.floor(digit8 / 5) * 5
 
-  return toHex(bitMask(instanceId, 0xffff0ff0) + baseDigit5 + baseDigit8, 8)
+  const start = bitMask(id, 0xffff0ff0) + baseDigit5 + baseDigit8
+
+  return [toHex(start, 8), toHex(start + 4, 8)]
 }

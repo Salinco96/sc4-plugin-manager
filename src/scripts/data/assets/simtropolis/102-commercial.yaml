@@ -22835,9 +22835,9 @@ assets:
           size: 5x5
           stage: 1
           textures:
-            - '258e0004'
-            - '25920004'
-            - '25910004'
+            - '258e0000'
+            - '25920000'
+            - '25910000'
       CS$$$1_5x5 Bilyk Galleria_6d670a55.SC4Lot:
         6d670a55:
           building: 051d0000
@@ -22859,14 +22859,14 @@ assets:
           size: 5x5
           stage: 1
           textures:
-            - 259d0004
-            - 252b0004
-            - '258e0004'
-            - 258b0004
-            - '25920004'
-            - '25910004'
-            - '26260004'
-            - '25960004'
+            - 259d0000
+            - 252b0000
+            - '258e0000'
+            - 258b0000
+            - '25920000'
+            - '25910000'
+            - '26260000'
+            - '25960000'
       CS$$$1_6x6 Bilyk Galleria_ed670b23.SC4Lot:
         ed670b23:
           building: 051d0000
@@ -22889,10 +22889,10 @@ assets:
           size: 6x6
           stage: 1
           textures:
-            - '258e0004'
-            - '26200004'
-            - '25920004'
-            - '25970004'
+            - '258e0000'
+            - '26200000'
+            - '25920000'
+            - '25970000'
       CS$$$1_6x6 Nanale Shopping Center_cd670826.SC4Lot:
         cd670826:
           building: '05250000'
@@ -22920,14 +22920,14 @@ assets:
           size: 6x6
           stage: 1
           textures:
-            - '258e0004'
-            - '26290004'
-            - '25920004'
-            - '25950004'
-            - '25960004'
-            - '25970004'
-            - '26200004'
-            - 25f40004
+            - '258e0000'
+            - '26290000'
+            - '25920000'
+            - '25950000'
+            - '25960000'
+            - '25970000'
+            - '26200000'
+            - 25f40000
       CS$$$2_5x5 Nanale Shopping Center_ad67091b.SC4Lot:
         ad67091b:
           building: '05250000'
@@ -22950,9 +22950,9 @@ assets:
           size: 5x5
           stage: 2
           textures:
-            - '258e0004'
-            - '25920004'
-            - 258b0004
+            - '258e0000'
+            - '25920000'
+            - 258b0000
       CS$$1_5x5 Harris Galleria_4d670471.SC4Lot:
         4d670471:
           building: 051c0000
@@ -22972,12 +22972,12 @@ assets:
           size: 5x5
           stage: 1
           textures:
-            - 258f0004
-            - 252b0004
-            - 0ba00004
-            - 25aa0004
-            - 25a90004
-            - 258c0004
+            - 258f0000
+            - 252b0000
+            - 0ba00000
+            - 25aa0000
+            - 25a90000
+            - 258c0000
       CS$$1_5x5 Lee Shopping Mall_ed67020f.SC4Lot:
         ed67020f:
           building: 4000003e
@@ -22991,13 +22991,13 @@ assets:
           size: 5x5
           stage: 1
           textures:
-            - 251c0004
-            - '26350004'
-            - 259d0004
-            - 25ab0004
-            - 25a90004
-            - 258c0004
-            - 25a30004
+            - 251c0000
+            - '26350000'
+            - 259d0000
+            - 25ab0000
+            - 25a90000
+            - 258c0000
+            - 25a30000
       CS$$1_6x6 Harris Galleria_2d6705a9.SC4Lot:
         2d6705a9:
           building: 051c0000
@@ -23018,11 +23018,11 @@ assets:
           size: 6x6
           stage: 1
           textures:
-            - 258f0004
-            - 252b0004
-            - 25a30004
-            - 258c0004
-            - 25ab0004
+            - 258f0000
+            - 252b0000
+            - 25a30000
+            - 258c0000
+            - 25ab0000
       CS$$1_6x6 Hsu Mall_8d66fc4f.SC4Lot:
         8d66fc4f:
           building: 05f10000
@@ -23039,14 +23039,14 @@ assets:
           size: 6x6
           stage: 1
           textures:
-            - 258f0004
-            - 251c0004
-            - 252b0004
-            - 0ba00004
-            - '25910004'
-            - '25920004'
-            - '25960004'
-            - '25970004'
+            - 258f0000
+            - 251c0000
+            - 252b0000
+            - 0ba00000
+            - '25910000'
+            - '25920000'
+            - '25960000'
+            - '25970000'
       CS$$2_5x5 Hsu Mall_ad670004.SC4Lot:
         ad670004:
           building: 05f10000
@@ -23058,12 +23058,12 @@ assets:
           size: 5x5
           stage: 2
           textures:
-            - 252b0004
-            - '25920004'
-            - '25970004'
-            - '25960004'
-            - 262f0004
-            - '25910004'
+            - 252b0000
+            - '25920000'
+            - '25970000'
+            - '25960000'
+            - 262f0000
+            - '25910000'
     meta:
       timestamp: 2024-12-13T10:16:33.532Z
       version: 1
@@ -47814,6 +47814,15 @@ assets:
     name: City Corporate Center
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-d1cb5e35ca4c2d1b2d5825012f565502-building2.JPG
     url: https://community.simtropolis.com/files/file/3657-city-corporate-center/
+  simtropolis/36596:
+    assetId: simtropolis/36596-meadowbrook-plaza-fixed
+    authors:
+      - smf_16
+    category: 102-commercial
+    lastModified: 2024-12-13T15:13:40.000Z
+    name: Meadowbrook Plaza Fixed
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/675c4f246ef59_meadowbrookplazafixed.thumb.jpg.8e1caf68eefc9dd251f907f167558dd2.jpg
+    url: https://community.simtropolis.com/files/file/36596-meadowbrook-plaza-fixed/
   simtropolis/3660:
     assetId: simtropolis/3660-medcom16
     authors:
@@ -49430,10 +49439,10 @@ assets:
           size: 3x4
           stage: 7
           textures:
-            - '26210004'
-            - 258b0004
-            - '25980004'
-            - 25f40004
+            - '26210000'
+            - 258b0000
+            - '25980000'
+            - 25f40000
       CO$$$8_3x4_6c1f3798.SC4Lot:
         6c1f3798:
           building: 400000ab
@@ -49449,13 +49458,13 @@ assets:
           size: 3x4
           stage: 7
           textures:
-            - 259d0004
-            - '258e0004'
-            - '25980004'
-            - 258b0004
-            - '25990004'
-            - 252b0004
-            - 25f40004
+            - 259d0000
+            - '258e0000'
+            - '25980000'
+            - 258b0000
+            - '25990000'
+            - 252b0000
+            - 25f40000
       CO$$$8_4x4_cc1f36d5.SC4Lot:
         cc1f36d5:
           building: 400000a4
@@ -49480,11 +49489,11 @@ assets:
           size: 4x4
           stage: 7
           textures:
-            - 259f0004
-            - '258e0004'
-            - '26200004'
-            - '26260004'
-            - 25f40004
+            - 259f0000
+            - '258e0000'
+            - '26200000'
+            - '26260000'
+            - 25f40000
       CO$$$8_4x4_ec1f36ee.SC4Lot:
         ec1f36ee:
           building: 400000a4
@@ -49502,9 +49511,9 @@ assets:
           size: 4x4
           stage: 7
           textures:
-            - '258e0004'
-            - 25c40004
-            - 25f40004
+            - '258e0000'
+            - 25c40000
+            - 25f40000
       CO$$$8_4x6_0c1f2731.SC4Lot:
         0c1f2731:
           building: 400000ad
@@ -49519,12 +49528,12 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - '258e0004'
-            - 259f0004
-            - 251c0004
-            - '26210004'
-            - 25a30004
-            - 258c0004
+            - '258e0000'
+            - 259f0000
+            - 251c0000
+            - '26210000'
+            - 25a30000
+            - 258c0000
       CO$$$8_4x6_0c1f30d0.SC4Lot:
         0c1f30d0:
           building: 400000a9
@@ -49547,9 +49556,9 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - '258e0004'
-            - 25f40004
-            - 25ae0004
+            - '258e0000'
+            - 25f40000
+            - 25ae0000
       CO$$$8_4x6_4c1f339e.SC4Lot:
         4c1f339e:
           building: 400000a9
@@ -49572,13 +49581,13 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - '25990004'
-            - '258e0004'
-            - 25f40004
-            - 25fb0004
-            - 25b10004
-            - 25a80004
-            - 25ae0004
+            - '25990000'
+            - '258e0000'
+            - 25f40000
+            - 25fb0000
+            - 25b10000
+            - 25a80000
+            - 25ae0000
       CO$$$8_4x6_6c1f368a.SC4Lot:
         6c1f368a:
           building: 400000a5
@@ -49598,12 +49607,12 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - '258e0004'
-            - '259e0004'
-            - 258b0004
-            - 25f40004
-            - 25af0004
-            - 259d0004
+            - '258e0000'
+            - '259e0000'
+            - 258b0000
+            - 25f40000
+            - 25af0000
+            - 259d0000
       CO$$$8_4x6_cc1f2b78.SC4Lot:
         cc1f2b78:
           building: 400000ad
@@ -49624,13 +49633,13 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - 259f0004
-            - '258e0004'
-            - '26200004'
-            - 258c0004
-            - 25a40004
-            - 25a70004
-            - 25f40004
+            - 259f0000
+            - '258e0000'
+            - '26200000'
+            - 258c0000
+            - 25a40000
+            - 25a70000
+            - 25f40000
       CO$$$8_4x6_ec1f35ef.SC4Lot:
         ec1f35ef:
           building: 400000a5
@@ -49650,10 +49659,10 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - '258e0004'
-            - 25aa0004
-            - 25ab0004
-            - 25fb0004
+            - '258e0000'
+            - 25aa0000
+            - 25ab0000
+            - 25fb0000
       CO$$8_4x6_0c2088ac.SC4Lot:
         0c2088ac:
           building: '40000099'
@@ -49675,9 +49684,9 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 258f0004
-            - 25af0004
-            - '26210004'
+            - 258f0000
+            - 25af0000
+            - '26210000'
       CO$$8_4x6_2c208b52.SC4Lot:
         2c208b52:
           building: 4000009d
@@ -49699,12 +49708,12 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - 252b0004
-            - 258f0004
-            - '25910004'
-            - '25920004'
-            - '25960004'
-            - '25970004'
+            - 252b0000
+            - 258f0000
+            - '25910000'
+            - '25920000'
+            - '25960000'
+            - '25970000'
       CO$$8_4x6_2c208d37.SC4Lot:
         2c208d37:
           building: 400000a1
@@ -49722,11 +49731,11 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - 258f0004
-            - 25ae0004
-            - 25b00004
-            - 252b0004
-            - 258c0004
+            - 258f0000
+            - 25ae0000
+            - 25b00000
+            - 252b0000
+            - 258c0000
       CO$$8_4x6_8c208ee6.SC4Lot:
         8c208ee6:
           building: 400000a1
@@ -49748,14 +49757,14 @@ assets:
           size: 4x6
           stage: 8
           textures:
-            - 25b00004
-            - 258f0004
-            - 252b0004
-            - 258c0004
-            - '25980004'
-            - '25990004'
-            - 25a00004
-            - '25950004'
+            - 25b00000
+            - 258f0000
+            - 252b0000
+            - 258c0000
+            - '25980000'
+            - '25990000'
+            - 25a00000
+            - '25950000'
       CO$$8_4x6_ec208f40.SC4Lot:
         ec208f40:
           building: 400000a0
@@ -49776,10 +49785,10 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 25ae0004
-            - 258f0004
-            - 258c0004
-            - 25f40004
+            - 25ae0000
+            - 258f0000
+            - 258c0000
+            - 25f40000
       CO$$8_4x6_ec208fcb.SC4Lot:
         ec208fcb:
           building: '40000099'
@@ -49799,10 +49808,10 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 258f0004
-            - 25af0004
-            - '26210004'
-            - 25f40004
+            - 258f0000
+            - 25af0000
+            - '26210000'
+            - 25f40000
     meta:
       timestamp: 2024-12-13T10:16:33.532Z
       version: 1
@@ -50157,4 +50166,4 @@ assets:
     url: https://community.simtropolis.com/files/file/991-community-drivein-with-indoor-theater/
 
 meta:
-  timestamp: 2024-12-13T09:40:52.613Z
+  timestamp: 2024-12-16T07:04:42.746Z

@@ -4010,7 +4010,7 @@ assets:
             - 0c07417f
           size: 2x2
           textures:
-            - 25d60004
+            - 25d60000
     meta:
       timestamp: 2024-12-13T10:16:33.532Z
       version: 1
@@ -5043,6 +5043,15 @@ assets:
     name: Vintage Sign Prop Pack
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/Night.thumb.png.733e22560d67ae35f91b05967651c932.png
     url: https://community.simtropolis.com/files/file/36578-vintage-sign-prop-pack/
+  simtropolis/36598:
+    assetId: simtropolis/36598-ulisse-wolf-chernobyl-nuclear-power-plant-pre-disaster
+    authors:
+      - Ulisse Wolf
+    category: 107-utilities
+    lastModified: 2024-12-14T21:48:17.000Z
+    name: Ulisse Wolf - Chernobyl Nuclear Power Plant (Pre Disaster)
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/DAY.thumb.jpg.8bf228c406bb9db962c870b1d423a915.jpg
+    url: https://community.simtropolis.com/files/file/36598-ulisse-wolf-chernobyl-nuclear-power-plant-pre-disaster/
   simtropolis/3681:
     assetId: simtropolis/3681-obras-sanitarias-sanitary-works
     authors:
@@ -5636,4 +5645,4 @@ assets:
     url: https://community.simtropolis.com/files/file/983-hydro-electric-dam/
 
 meta:
-  timestamp: 2024-12-13T09:40:52.613Z
+  timestamp: 2024-12-16T07:04:42.746Z

@@ -1,12 +1,12 @@
 import { toHex, values } from "@salinco/nice-utils"
 
+import type { BuildingID } from "@common/buildings"
+import { getTextureIdRange } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 import { ZoneDensity } from "@common/lots"
+import type { PropID } from "@common/props"
 import type { LotData } from "@node/data/lots"
 
-import type { BuildingID } from "@common/buildings"
-import { getBaseTextureId } from "@common/dbpf"
-import type { PropID } from "@common/props"
 import { type Exemplar, LotConfigPropertyType, ZoneType } from "./types"
 import { get, getArray, getString } from "./utils"
 
@@ -106,7 +106,7 @@ export function getLotData(exemplar: Exemplar): LotData {
 
       case LotConfigPropertyType.Texture: {
         for (const instanceId of instanceIds) {
-          textures.add(getBaseTextureId(instanceId))
+          textures.add(getTextureIdRange(instanceId)[0])
         }
 
         break

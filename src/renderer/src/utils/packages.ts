@@ -3,6 +3,7 @@ import { useCallback, useMemo } from "react"
 
 import type { BuildingID } from "@common/buildings"
 import { CategoryID, isCategory } from "@common/categories"
+import { getTextureIdRange } from "@common/dbpf"
 import type { FamilyID } from "@common/families"
 import type { LotID } from "@common/lots"
 import type { FloraID } from "@common/mmps"
@@ -26,7 +27,6 @@ import {
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 
-import { getBaseTextureId } from "@common/dbpf"
 import {
   type PackageFilters,
   type PackageUi,
@@ -266,8 +266,9 @@ export function filterVariant(
     }
 
     if (variantInfo.textures) {
+      const textureId = getTextureIdRange(parseHex(filters.hex))[0]
       for (const textures of values(variantInfo.textures)) {
-        if (textures.includes(getBaseTextureId(parseHex(filters.hex)))) {
+        if (textures.includes(textureId)) {
           return true
         }
       }

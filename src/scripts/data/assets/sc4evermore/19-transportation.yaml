@@ -2,7 +2,7 @@ assets:
   sc4evermore/180:
     assetId: sc4evermore/180-swamper77s-raised-rail-conversions
     category: 19-transportation
-    downloads: 302
+    downloads: 305
     lastModified: 2023-11-21T23:27:18.000Z
     name: Swamper77's Raised Rail Conversions
     url: https://www.sc4evermore.com/index.php/downloads/download/19-transportation/180-swamper77s-raised-rail-conversions
@@ -395,7 +395,7 @@ assets:
       - simtropolis/35790-sc4-cleanitol
       - sc4evermore/18
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>The <strong>SC4D LEX Legacy - Mikeseith Multi-level Modular Garages</strong> contains the popular 2-level and 8-level Modular Parking Garages by MikeSeith, including the Airport Shuttle automatas. The 2-level garages have 8 modular pieces, including entrances (in prop family), several wall pieces and ramp piece. The 8-level garages have 18 modular pieces, including an entrance, two different types of ramps, several wall pieces, overhanging bride pieces over other networks, a\_police kiosk/parking security,\_but stop\_and an\_airport shuttle spawner bus stop. The original lots were created by MikeSeith, however they underwent some necessary revision and updates mostly performed by\_rsc204/mgb204.\_<strong><span style=\"color: #e03e2d;\"><a style=\"color: #e03e2d;\" href=\"https://community.simtropolis.com/forums/topic/761517-mgbs-lil-bits/?tab=comments#comment-1767404\">Most of the changes that he made are detailed in this post</a></span></strong>. A final revision and update was made by Tyberius06 for this legacy compilation.</p>\r\n<p class=\"text_normal\" align=\"justify\"><span style=\"text-decoration: underline;\"><strong><big>The highlights:</big></strong></span></p>\r\n<ul>\r\n<li class=\"text_normal\">Only the\_<strong>Entrance\_lot(s)</strong> and the\_<strong>Airport Shuttle Busstop</strong> have TE (transti enabled) parking garage function.</li>\r\n<li class=\"text_normal\">All the lots (except the former Police Kiosk, now Parking Security which can be found in the Civic - Police menu) have been moved to the Misc Transportation menu from the Park menu.</li>\r\n<li class=\"text_normal\">The former Police Kiosk is now called as\_<strong>Parking Security</strong>\_and after some tweaks it sits somewhere between the Maxis Kiosk and Small Police Station in terms of it's effectiveness, with a larger radius to keep it in line with the intended function around Airports.<br><strong><span style=\"color: #e03e2d;\">!!! VERY IMPORTANT !!!</span></strong> -\_As with the Police Station Fix above, you can NOT use this override, until all prior instances of the original Police Station from this pack are removed from your cities. But given the overall modifications here, that's a good idea more generally too if using this update.</li>\r\n<li class=\"text_normal\">The\_<strong>Bus Stop</strong>, mainly just modded to conform to more modern TE standards.</li>\r\n<li class=\"text_normal\">The\_<strong>Airport Shuttle</strong> now acts as a BusStop with parking function and optionally spawning airport shuttle automatas if the\_airport shuttles.dat\_is installed.<br><span style=\"text-decoration: underline;\">Optionally</span>, both the Bus Stop and the Airport Shuttle lot recevied RTMT replacement versions, which alternately use the Bus Shelter and Bus Sign Props from your RTMT setup, (v3.6 or later compatible), instead of the default prop.</li>\r\n<li class=\"text_normal\">Some pieces, like the entrance and the corner pieces are offering commercial service jobs.</li>\r\n<li class=\"text_normal\"> This legacy compilation meant to replace any previous versions of these parking garages. The formerly available <em>BSC MEGA Props Mikeseith vol02</em> (which exclusively contains models and props only for these sets and which was formerly released as an individual upload on the SC4D LEX file exchange, then released as part of the SC4D LEX Legacy - BSC Common Dependencies V6 and prior) has been included with this compilation (you will find it in the BSC/BSCProps folder) and will be removed with later updates from the BSC Common Dependnecies (from version 7). So <span style=\"color: #e03e2d;\"><strong>LOTters using these models and props need to reference this upload (SC4D LEX Legacy - Mikeseith Multi-level Modular Garages)</strong></span>, instead of the former SC4Devotion LEX link or the BSC Common Dependencies compilation.\_</li>\r\n<li class=\"text_normal\">For more details check out the readme file in the <em>~Documents</em> folder. You will find a cleanitol file and prop catalogue index image of the contents of the included dependency pack.</li>\r\n</ul>\r\n<p><span style=\"text-decoration: underline;\"><strong>Installation:</strong></span></p>\r\n<p class=\"text_normal\"><strong>Installation</strong>: Run the Java installer (.jar extension), which will guide you through the installation process, or open it using 7-zip or Keka for manual install. If doing a manual install, go into the \"installation\" folder, then copy/extract the\_BSC and Mikeseith\_parent folders into your plugins. If you extracted the\_<em>~Documents</em>\_folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r\n<p class=\"text_normal\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins. It might be necessary to bulldoze any existing lots from the previous versions of these sets before you install this new version.<br>Optionally in the\_~Documents\_folder in the main ZIP you can find the\_<em>Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt</em>\_file and by using either the newer\_<strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17's SC4 Cleanitol</a></strong>\_or the older\_<strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\">BSC Cleanitol</a></strong>\_tool you can search and remove old and outdated versions of these files.</p>\r\n<p class=\"text_normal\"><strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r\n<p class=\"text_normal\"><span style=\"text-decoration: underline;\"><strong>Dependencies:</strong></span></p>\r\n<p class=\"text_normal\">To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r\n<ul>\r\n<li>BSC MEGA Props Mikeseith Vol02 v2 -\_<strong><span style=\"color: #e03e2d;\">INCLUDED</span></strong><br>The formerly released version, that was available in the BSC Common Dependencies V6 (and prior), have been updated and have been removed from the BSC Common Dependencies compilation and have been made available exclusively with this SC4D LEX Legacy - Mikeseith Multi-Level Modular Garages.</li>\r\n</ul>\r\n<p><strong><span style=\"text-decoration: underline;\">Credits:</span></strong></p>\r\n<p> These modular parking garages pieces were modelled and originally lotted by Mikeseith. MGB204/RSC204 made significant facelift on the functionality of the lots, see details above. Final update, packing the assembly of the prop pack, that is\_containing these models were originally created for Project ZIP then SC4D Legacy Restoration by Tyberius06. \_</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MikeSeiths 2 garages front.jpg\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg\" alt=\"MikeSeiths 2 garages front\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/mikeseith 8 level garages1.JPG\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mikeseith 8 level garages1.JPG\" alt=\"mikeseith 8 level garages12\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MikeSeith - airport shuttle.jpg\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeith - airport shuttle.jpg\" alt=\"MikeSeith - airport shuttle3\" ></a> </span>\r\n        </div> \r\n</body>"
-    downloads: 865
+    downloads: 873
     file: SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.zip
     files:
       - ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat
@@ -442,7 +442,7 @@ assets:
             - b9506e03
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         3962e3b9:
           building: 3962e3b9
           name: 2 lvl garage - entrance
@@ -451,7 +451,7 @@ assets:
             - b96308e8
           size: 1x1
           textures:
-            - 258d0004
+            - 258d0000
         5960c034:
           building: 5960c034
           name: 2 lvl garage - corner with stairs
@@ -460,7 +460,7 @@ assets:
             - 99506de6
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         5960c0eb:
           building: 5960c0eb
           name: 2 lvl garage - ramp
@@ -469,8 +469,8 @@ assets:
             - 1958c786
           size: 2x1
           textures:
-            - 251c0004
-            - 258d0004
+            - 251c0000
+            - 258d0000
         7960bf97:
           building: 7960bf97
           name: 2 lvl garage - inside 2 rows
@@ -479,7 +479,7 @@ assets:
             - 1961ee46
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         7960c078:
           building: 7960c078
           name: 2 lvl garage - corner
@@ -488,7 +488,7 @@ assets:
             - b9506dde
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         9960bf4b:
           building: 9960bf4b
           name: 2 lvl garage - wall 1 row
@@ -497,7 +497,7 @@ assets:
             - 1961ee41
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         b960bedd:
           building: b960bedd
           name: 2 lvl garage - wall 2 rows
@@ -506,7 +506,7 @@ assets:
             - d9506e20
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
       mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat:
         dd0ef80b:
           building: dd0ef80b
@@ -524,8 +524,8 @@ assets:
             - 0c9db00a
           size: 1x1
           textures:
-            - 251c0004
-            - 25ae0004
+            - 251c0000
+            - 25ae0000
       mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat:
         3d184784:
           building: 3d184784
@@ -543,8 +543,8 @@ assets:
             - 0c9db00a
           size: 1x1
           textures:
-            - 251c0004
-            - 25ae0004
+            - 251c0000
+            - 25ae0000
       mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat:
         1cf37210:
           building: 1cf37210
@@ -554,7 +554,7 @@ assets:
             - f9a1407f
           size: 2x1
           textures:
-            - 251c0004
+            - 251c0000
         1cf8e57f:
           building: 1cf8e57f
           name: 8 lvl new entrance
@@ -562,7 +562,7 @@ assets:
             - 5d19d1de
           size: 1x1
           textures:
-            - 258c0004
+            - 258c0000
         3cf369e5:
           building: 3cf369e5
           name: 8 lvl new center rows
@@ -571,7 +571,7 @@ assets:
             - d9885967
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         3d184784:
           building: 3d184784
           name: 8 lvl garage bus stop
@@ -585,8 +585,8 @@ assets:
             - 1961ee50
           size: 1x1
           textures:
-            - 251c0004
-            - 25ae0004
+            - 251c0000
+            - 25ae0000
         3d205411:
           building: 3d205411
           name: 8 lvl new bridge corner BB
@@ -595,7 +595,7 @@ assets:
             - bd1defae
           size: 2x1
           textures:
-            - 251c0004
+            - 251c0000
         5cf36ce3:
           building: 5cf36ce3
           name: 8 lvl new elevator
@@ -606,8 +606,8 @@ assets:
             - '79885953'
           size: 1x1
           textures:
-            - 251c0004
-            - 25ae0004
+            - 251c0000
+            - 25ae0000
         5cf36e24:
           building: 5cf36e24
           name: 8 lvl new straight ramp
@@ -616,7 +616,7 @@ assets:
             - 1961ee50
           size: 2x2
           textures:
-            - 251c0004
+            - 251c0000
         5cf37074:
           building: 5cf37074
           name: 8 lvl new bridge center
@@ -624,7 +624,7 @@ assets:
             - 1961ee5c
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         5cf37444:
           building: 5cf37444
           name: 8 lvl new outside corner stairs
@@ -634,7 +634,7 @@ assets:
             - 9998e34b
           size: 2x1
           textures:
-            - 251c0004
+            - 251c0000
         bcf36100:
           building: bcf36100
           name: 8 lvl new round ramp down
@@ -642,7 +642,7 @@ assets:
             - f97843b0
           size: 1x2
           textures:
-            - 251c0004
+            - 251c0000
         bcf36894:
           building: bcf36894
           name: 8 lvl new round ramp up
@@ -653,8 +653,8 @@ assets:
             - d97843a1
           size: 1x2
           textures:
-            - '258e0004'
-            - 251c0004
+            - '258e0000'
+            - 251c0000
         bcf36f3c:
           building: bcf36f3c
           name: 8 lvl new bridge edge A
@@ -663,7 +663,7 @@ assets:
             - 1961ee58
           size: 2x1
           textures:
-            - 251c0004
+            - 251c0000
         dcf36951:
           building: dcf36951
           name: 8 lvl new wall
@@ -675,7 +675,7 @@ assets:
             - b988598d
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         dcf36a78:
           building: dcf36a78
           name: 8 lvl new center edge
@@ -684,7 +684,7 @@ assets:
             - 9988597f
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         dcf36fc8:
           building: dcf36fc8
           name: 8 lvl new bridge edge B
@@ -694,7 +694,7 @@ assets:
             - 1961ee59
           size: 2x1
           textures:
-            - 251c0004
+            - 251c0000
         dd0ef80b:
           building: dd0ef80b
           name: 8 lvl airport shuttle spawner
@@ -708,8 +708,8 @@ assets:
             - a000005c
           size: 1x1
           textures:
-            - 251c0004
-            - 25ae0004
+            - 251c0000
+            - 25ae0000
         dd16f12b:
           building: dd16f12b
           name: 8 lvl garage police
@@ -719,7 +719,7 @@ assets:
             - a0000050
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
         fcf36d53:
           building: fcf36d53
           name: 8 lvl new inside coner
@@ -729,7 +729,7 @@ assets:
             - f99a5099
           size: 1x1
           textures:
-            - 251c0004
+            - 251c0000
     meta:
       timestamp: 2024-12-13T10:16:33.532Z
       version: 1
@@ -1436,7 +1436,7 @@ assets:
     authors:
       - Girafe
     category: 19-transportation
-    downloads: 448
+    downloads: 456
     lastModified: 2024-01-21T10:46:32.000Z
     name: BSC-VIP Girafe Parisian Transportation vol01
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Icon_Parisian_station_1.jpg
@@ -1452,7 +1452,7 @@ assets:
       - sc4evermore/18-bsc-cleanitol
       - sc4evermore/2-network-addon-mod
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p style=\"text-align: center;\"><span style=\"font-size: 36px;\"><strong>BLP-NDEX Boston Central Artery-Tunnel (Big Dig)</strong></span></p>\r\n<p style=\"text-align: left;\">\_</p>\r\n<p style=\"text-align: left;\">This SC4 Devotion LEX Legacy Pack features the complete set of Boston Central Artery-Tunnel (Big Dig) by Blahdy, including Props and Lots, which had been available on the Lot Exchange (LEX) at SC4 Devotion.\_</p>\r\n<p style=\"text-align: left;\"><em><strong><span class=\"--l --r sentence_highlight\">This mod has partial support for Left Hand Drive (LHD). </span><span class=\"--l --r sentence_highlight\">Only the Ground Maxis Highway ramp is not compatible with Left Hand Drive (LHD) and cannot have support because of how the prop was rendered</span></strong></em></p>\r\n<p style=\"text-align: left;\">It includes the contents of 2 previously separate downloads.<br>After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to install.</p>\r\n<p style=\"text-align: left;\">Please note that this pack\_<strong>is</strong>\_expected to receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly maintain, update, and provide technical support for the pack.</p>\r\n<h3>INSTALLATION:</h3>\r\n<p>This package is a simple .zip file.</p>\r\n<p>Copy/extract the <em><strong>Blahdy</strong></em>\_parent folders into your plugins (or equivalent, if you have a custom Plugins folder location). If you extracted the ~Documents\_folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r\n<p>It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins.<br>ptionally in the\_~Documents\_folder in the main ZIP you can find a\_collective/master\_and separately\_all the individual cleanitol files\_and by using either the newer\_<strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a></strong>\_or the older\_<strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC Cleanitol</a></strong>\_tool you can search and remove old and outdated versions of these files.</p>\r\n<h3>DLL DEPENDENCIES:</h3>\r\n<p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed dependencies are covering a full install):</p>\r\n<ul>\r\n<li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"Submenus DLL\"><strong>Submenus DLL</strong></a>\_- You need it to get the package submenu working.\r\n<p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span></p>\r\n</li>\r\n</ul>\r\n<h3>DEPENDENCIES:</h3>\r\n<p>The following files are required in order for the contents of this package to appear correctly and they work correctly (i.e., no \"brown boxes\" or missing textures) (Bear in mind that the original readmes are also available in the<em> ~Documents/Boston BigDig_Readmes</em>\_folder, but they have\_<strong>not\_</strong>been updated):</p>\r\n<ul>\r\n<li><strong>Boston Central Artery - Tunnel Project (Big Dig) Resources</strong> (and above) - <span style=\"color: #ba372a;\">INCLUDED</span></li>\r\n</ul>\r\n<p>\_</p>\r\n<ul>\r\n<li><a href=\"/index.php/downloads/download/6-network-addon-mod-nam/2-network-addon-mod\" target=\"_blank\" rel=\"noopener\"><strong>Network Addon Mod</strong></a>\_<br>Important if you want to use FLUPS and Subway FLUPS mode.</li>\r\n</ul>\r\n<h3><strong>CREDITS:</strong></h3>\r\n<p>The following members contributed models, textures, and modding support to this collection:</p>\r\n<ul>\r\n<li>Blahdy</li>\r\n</ul>\r\n<p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Ulisse Wolf.</p>\r\n<h5 class=\"leftheading\">Special Thanks</h5>\r\n<p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.<br><br>For memo for subsequent updates on the NAM/Java installer.</p>\r\n<p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone that may of helped somewhere along the lines.</p>\r\n<p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after\_<strong>20 years</strong>\_thanks to you!</p>\r\n<p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/stex-a-cn1.jpg\" data-lightbox=\"lightbox280\" data-alt=\"lightboxstex-a-cn1.jpg|stex-a-cn2.jpg|stex-bigd1.jpg|stex-bigd2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-a-cn1.jpg\" alt=\"stex-a-cn1\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/stex-a-cn2.jpg\" data-lightbox=\"lightbox280\" data-alt=\"lightboxstex-a-cn1.jpg|stex-a-cn2.jpg|stex-bigd1.jpg|stex-bigd2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-a-cn2.jpg\" alt=\"stex-a-cn22\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/stex-bigd1.jpg\" data-lightbox=\"lightbox280\" data-alt=\"lightboxstex-a-cn1.jpg|stex-a-cn2.jpg|stex-bigd1.jpg|stex-bigd2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/stex-bigd1.jpg\" alt=\"stex-bigd13\" ></a> </span>\r\n        </div> \r\n</body>"
-    downloads: 191
+    downloads: 201
     file: BLP-NDEX Boston Big Dig Project v2.zip
     files:
       - BLP-NDEX Boston Big Dig Project v2/Blahdy/Boston Central Artery - Tunnel Project (Big Dig)/Construction Lots/BLP Big Dig - Slurry Wall Construction_b1eeaa8d.SC4Lot
@@ -1519,7 +1519,7 @@ assets:
       - sc4evermore/7-sc4d-lex-legacy-ultimate-airport-pack
       - sc4evermore/207-ncd-bsc-realrailway-texture-pack-by-eggman121-and-rivit
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>This is a pack of Japanese Transportation buildings. It includes the former</p>\r\n<ul>\r\n<li>Japanese Transport Pack vol01</li>\r\n<li>EBLT Art128 JR Mitaki Station (it has a separate readme file in the ~Documents folder, please read it with care)</li>\r\n</ul>\r\n<p>It includes the following stations. For detailed STATs please read the attached readme file. All the transportation lots have been updated to follow the most up to date <strong>NAM/MTA</strong> modding practices and standards.</p>\r\n<ul>\r\n<li>Muroran Train station</li>\r\n<li>Sakamoto Train station</li>\r\n<li><strong>JR Mitaki Station</strong> (it has a separate readme file in the ~Documents folder, please read it with care)</li>\r\n<li>Small overpass</li>\r\n<li>Small Odate Noshiro\_Airport Terminal</li>\r\n<li>Small\_Odate Noshiro ATCT</li>\r\n</ul>\r\n<div>The stations are obviously in the Rail menu. There is two different lot for the Muroran and Sakamoto stations; an electrified one and a non electrified one. They're Transit enabled on the last tile only because I didn't want to bother with custom pathing. They should work correctly as train station as they were tested in two different plugin setup.\_</div>\r\n<div>The rail stations have Submenu Support, if you want to enjoy the advantage of the submenus, please download the\_</div>\r\n<div><a href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"_blank\" rel=\"noopener\">Submenus DLL</a> - You need it to get the package submenu working. Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</div>\r\n<div>\_</div>\r\n<div>\r\n<div>The airport control tower and terminal are located in the Airport menu, but they are not working as airports or transit piece at all.\_</div>\r\n<div>\_</div>\r\n<div>The overpass are located in the Park menu.</div>\r\n</div>\r\n<div>\_</div>\r\n<h3>INSTALLATION:</h3>\r\n<div>Copy/Extract the <strong>art128 </strong>parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe location.</div>\r\n<div>\_</div>\r\n<div>\r\n<p><strong><span style=\"color: #e03e2d;\">Attention!</span></strong></p>\r\n<p class=\"text_normal\"><span class=\"text_normal\">The <strong>JR Mitaki Station</strong> by default comes with the <em>JR Mitaki Station RRW-RHD path file.dat</em> file (for Right hand driving and Real Railway support), what you can find in the folder with the LOT and model files.</span></p>\r\n<p class=\"text_normal\"><span class=\"text_normal\">If your personal settings are neither RRW and/or not RHD, you can find the appropriate version in the ~Documentsart128_Readmes_alternative JR Mitaki Station Path Files (Maxis RHD-LHD and RRW-LHD)</span></p>\r\n<p class=\"text_normal\"><span class=\"text_normal\">Simply replace the file with the one what you wish to use.<br></span></p>\r\n<p class=\"text_normal\">Files are as follow:</p>\r\n<p class=\"text_normal\">Right hand driving Maxis Rail:\_<strong>JR Mitaki Station MAXIS-RHD path file.dat</strong></p>\r\n<p><span class=\"text_normal\">Left hand driving Maxis Rail:\_<strong>JR Mitaki Station MAXIS-LHD path file.dat</strong></span></p>\r\n<p><span class=\"text_normal\">Left hand driving Real Railway (RRW):\_<strong>JR Mitaki Station RRW-LHD path file.dat</strong></span></p>\r\n</div>\r\n<p><span class=\"text_normal\">All files have been updated\_so\_<span style=\"color: #e03e2d;\">it\_is highly recommended to use any of the third party cleanitol tools and remove any previous versions from your plugins.</span><br>In the ~<em>Documents\_</em>folder in the main ZIP you can find a Cleanitol_[...].txt script and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a>\_or the older\_<a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad Certification\">BSC</abbr>\_Cleanitol</a>\_tool you can search and remove old and outdated versions of these files.<br></span></p>\r\n<h3>DEPENDENCIES:</h3>\r\n<div>In order for the props and textures to appear correctly on the lots of Muroran station and Sakamoto station, you'll need the following dependecies:</div>\r\n<ul>\r\n<li><a href=\"https://community.simtropolis.com/files/file/21935-rail_catenary_mod_v3-hd-version/\" target=\"_blank\" rel=\"noopener\">Catenary Essentials by Plundere</a></li>\r\n<li><a href=\"https://community.simtropolis.com/files/file/21935-rail_catenary_mod_v3-hd-version/\" target=\"_blank\" rel=\"noopener\">Rail Catenary Mod V3 HD by Plundere</a> (Only Catenary_Prop_exemplar_for_rail.dat)</li>\r\n<li><a href=\"/index.php/downloads/download/22-dependencies/10-jenxporkie-expanded-porkie-props\" target=\"_blank\" rel=\"noopener\">JENX-Porkie Expanded Porkie Props</a></li>\r\n<li><a href=\"http://hide-inoki.com/bbs/archives/sc4_0837.html\" target=\"_blank\" rel=\"noopener\">Neko Props Vol 2</a><br>Direct Link - <a href=\"http://hide-inoki.com/bbs/archives/files/1392.zip\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/files/1392.zip</a></li>\r\n<li><a href=\"http://uki-sim.seesaa.net/article/259839686.html\" target=\"_blank\" rel=\"noopener\">Uki rail catenaries props by Uki-sim</a> (only the models)</li>\r\n<li><a href=\"/index.php/downloads/download/22-dependencies/118-sfbt-props-kenworth-and-royal-railway-props\" target=\"_blank\" rel=\"noopener\">SFBT Props Kenworth and royal Railway Props</a></li>\r\n<li><a href=\"https://onedrive.live.com/?cid=FA15FCE84D64004A&amp;id=FA15FCE84D64004A%21268\" target=\"_blank\" rel=\"noopener\">ML JPN El-Rail MOD 2013</a> (z ML JPN ELR T21 Fence Prop.dat - It used to be part of the NAM El Rail Alternate Implementation up until NAM v36)<span style=\"color: #e03e2d;\"><strong>**</strong></span><br><span style=\"color: #e03e2d;\">**It is included as currently MoonLinght OneDrive folder is not accessible.</span></li>\r\n<li><a href=\"https://community.simtropolis.com/files/file/33626-wmp-mega-textures-v102/\" target=\"_blank\" rel=\"noopener\">WMP Mega Texture Pack</a><strong><span style=\"color: #e03e2d;\">***\_</span></strong></li>\r\n<li><a href=\"https://sc4evermore.com/index.php/downloads/download/19-transportation/7-sc4d-lex-legacy-ultimate-airport-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy Ultimate Airport Pack</a>\r\n<ul>\r\n<li>AC Mega Props vol09</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<div><strong><span style=\"color: #e03e2d;\">***</span></strong>There used to be a <em>RRW SUPPORT TEXTURES FOR WMP.dat</em> attached to the Japanese transportation Pack created by <em>Noachlem </em>for giving RRW support for the WMP island-type textures. However this file has been removed as a more up to date version covering those old WMP textures with RRW support has been released under the\_</div>\r\n<div><a href=\"/index.php/downloads/download/22-dependencies/207-ncd-bsc-realrailway-texture-pack-by-eggman121-and-rivit\" target=\"_blank\" rel=\"noopener\">Real RailWay (RRW) Reskin 3rd Party Lot Support v3.48</a></div>\r\n<div>\_</div>\r\n<div>The overpass and airport lots don't have any dependencies.</div>\r\n<div>\_</div>\r\n<div>\r\n<div>All the models and the initial lotting were created by Art128. The revision of the lotting and modding and the compilation was assembled by Tyberius06</div>\r\n<div>For support or just to get more news BATs coming, visit my threads on either\_<a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\" rel=\"noopener\">SC4Devotion\_</a>or\_<a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\" rel=\"noopener\">Simtropolis</a></div>\r\n</div> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JR transport packfull v2.jpg\" data-lightbox=\"lightbox292\" data-alt=\"lightboxJR transport packfull v2.jpg|Mitakiuploadleft_zpse03a780c.jpg|Mitakiuploadright_zpsa4883e56\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JR transport packfull v2.jpg\" alt=\"JR transport packfull v2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Mitakiuploadleft_zpse03a780c.jpg\" data-lightbox=\"lightbox292\" data-alt=\"lightboxJR transport packfull v2.jpg|Mitakiuploadleft_zpse03a780c.jpg|Mitakiuploadright_zpsa4883e56\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mitakiuploadleft_zpse03a780c.jpg\" alt=\"Mitakiuploadleft_zpse03a780c2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Mitakiuploadright_zpsa4883e56.jpg\" data-lightbox=\"lightbox292\" data-alt=\"lightboxJR transport packfull v2.jpg|Mitakiuploadleft_zpse03a780c.jpg|Mitakiuploadright_zpsa4883e56\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mitakiuploadright_zpsa4883e56.jpg\" alt=\"Mitakiuploadright_zpsa4883e563\" ></a> </span>\r\n        </div> \r\n</body>"
-    downloads: 86
+    downloads: 88
     file: Art128 - Japanese Transports Pack v2.zip
     files:
       - art128/Japanese Transport Pack/Dantes overpass/art128 - Dantes Japanese Overpass.SC4Lot
@@ -1574,7 +1574,7 @@ assets:
       - sc4evermore/294-art128-tampere-station
       - sc4evermore/18-bsc-cleanitol
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><div>This station is modeled after the central station in Eindhoven, The Netherlands.</div>\r\n<div>\_</div>\r\n<div>There are two versions of the lot with this upload. All the transportation lots have been updated to follow the most up to date\_<strong>NAM/MTA</strong>\_modding practices and standards.</div>\r\n<div>\_</div>\r\n<div>1) Eindhoven Centraal Station_v2.SC4Lot</div>\r\n<div>\_</div>\r\n<div>The updated original release:</div>\r\n<div>It sits on a 5 x 2 lot and overhangs on the sides. It doesn't have dedicated platfroms (just like the default maxis rail station), but it is supporting the below listed travel types.\_</div>\r\n<div>\_</div>\r\n<div>Due to the layout of the station, the lot needs to be sitting on a 0m-7.5m embankment slope and upon placement it needs to cut into the slope, otherwise it may not function properly as a train station, please test it accordingly. Upon plopping the lot/building arrow needs to face to a road on the lower end of the Slope. Please take a few moments and check out the attached placement tutorial, which will apply for both this Eindhoven Central Station and the <a href=\"/index.php/downloads/download/19-transportation/294-art128-tampere-station\" target=\"_blank\" rel=\"noopener\">Tampere Station</a> too.</div>\r\n<div>\_</div>\r\n<div>It is modded that way to support most of the currently available travel types:</div>\r\n<ul>\r\n<li>L0 Ground High Speed Rail (GHSR), if it's on an embankment.</li>\r\n<li>L0 and L1 Hybrid Railway (HRW)*</li>\r\n<li>L0 and L1 RealRailway (RRW)*</li>\r\n<li>L0 GLR (Ground Light Rail) or tram</li>\r\n<li>L0 and L1 Bus Rapid Transit (BRT)</li>\r\n<li>Bus Stop - on the frontage road</li>\r\n<li>Subway</li>\r\n</ul>\r\n<div>\_</div>\r\n<div>* If you choose to use L1 networks, you don't need the embankment, but that might not be visually appealing as the station was designed to sit at the bottom of a 7.5 meters high embankment.</div>\r\n<div>** There is limited functionality for dual-GLR networks (TIA, TIR, TOR) on the frontage road part of the lot, but they might not be fully functional transit/traffic-wise due to game limitations.</div>\r\n<div>\_</div>\r\n<div>STATS:</div>\r\n<div>\_</div>\r\n<div>Lot size :\_ \_ \_ \_5 x 2</div>\r\n<div>Plop Cost:\_ \_ \_ \_§3500</div>\r\n<div>Monthly Cost:\_ \_ §65</div>\r\n<div>Budget Item:\_ \_ \_Mass Transit</div>\r\n<div>Menu: Rail Transport (or Multi-Modal Stations Submenu)</div>\r\n<div>Capacity: 110000</div>\r\n<div>Demand Created:\_ Jobs§: 40, Jobs§§: 17, Jobs§§§: 2.</div>\r\n<div>Pollution: Air 7 over 1 tiles, Water 4 over 2 tiles, Garbage 13 over 0 tiles</div>\r\n<div>Power consumed:\_ 8 MwH</div>\r\n<div>Water consumed:\_ 30 Gallons/Month</div>\r\n<div>Bulldoze Cost:\_ \_§110</div>\r\n<div>\_</div>\r\n<div>****************************************************************************************************</div>\r\n<div>\_</div>\r\n<div>2) Tyb06-Art128 Eindhoven Centraal Station (split-pltfrm-rrw).dat</div>\r\n<div>\_</div>\r\n<div>Additional lot were created by Tyberius06 which was designed to use a special NAM feature (DTR Transition to Expanded Median)</div>\r\n<div>It sits on a 5 x 2 lot and overhangs on the sides. The lot has a platform which placed in a way to be used with the RRW island type track split set-up (DTR Transition to Expanded Median - see attached GUIDE image). It useses an off-set platform derived from the platform model of the Tampere Station (by Model Tweaker). The <strong>art128-RailStation-Platforms.dat </strong>also contains a centered version and an other off-set version of this platform for lotting purposes.</div>\r\n<div>It only supports the following travel types:</div>\r\n<ul>\r\n<li>L0 RealRailWay (RRW) with the island-type split track set-up available from the Rail Menu</li>\r\n<li>Bus Stop - on the frontage road</li>\r\n<li>Subway\_</li>\r\n</ul>\r\n<div>\_</div>\r\n<div>STATS:</div>\r\n<div>\_</div>\r\n<div>Lot size :\_ \_ \_ \_5 x 2</div>\r\n<div>Plop Cost:\_ \_ \_ \_§5000</div>\r\n<div>Monthly Cost:\_ \_ §75</div>\r\n<div>Budget Item:\_ \_ \_Mass Transit</div>\r\n<div>Menu: Rail Transport (Passenger Stations Submenu)</div>\r\n<div>Capacity: 125000</div>\r\n<div>Demand Created:\_ Jobs§: 40, Jobs§§: 17, Jobs§§§: 2.</div>\r\n<div>Pollution: Air 8 over 1 tiles, Water 4 over 2 tiles, Garbage 15 over 0 tiles</div>\r\n<div>Power consumed:\_ 8 MwH</div>\r\n<div>Water consumed:\_ 30 Gallons/Month</div>\r\n<div>Bulldoze Cost:\_ \_§130</div>\r\n<div>\_</div>\r\n<h3>Installation:</h3>\r\n<div>Copy/Extract the <strong>art128</strong> parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe location.</div>\r\n<div>\_</div>\r\n<div>All files have been updated\_so\_<span style=\"color: #e03e2d;\">it\_is highly recommended to use any of the third party cleanitol tools and remove any previous versions from your plugins.</span><br>In the ~<em>Documents\_</em>folder in the main ZIP you can find a Cleanitol_[...].txt script and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a>\_or the older\_<a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad Certification\">BSC</abbr>\_Cleanitol</a>\_tool you can search and remove old and outdated versions of these files.</div>\r\n<div>\_</div>\r\n<div>The both of the lots have Submenu Support<span style=\"color: #e03e2d;\"><strong>*</strong></span>, if you want to enjoy the advantage of the submenus, please download the\_</div>\r\n<div><a href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"_blank\" rel=\"noopener\">Submenus DLL</a> - You need it to get the package submenu working.</div>\r\n<div>Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</div>\r\n<div>\_</div>\r\n<div><strong><span style=\"color: #e03e2d;\">*</span></strong>Bear in mind, if you do not use the Submenu DLL mod, then you will find both lots in the Rail menu. If you use the Submenu DLL mod, then the station lot without the additional platform will be found in the Misc Transportation Menu/Multi-Modal Submenu and the version with the additional platform will be found in the Rail Menu/Passenger Rail Stations Submenu.</div>\r\n<div>\_</div>\r\n<div><strong>No Dependencies.</strong></div>\r\n<div>\_</div>\r\n<div>For support or just to get more news BATs coming, visit my threads on either\_<a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\" rel=\"noopener\">SC4Devotion\_</a>or\_<a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\" rel=\"noopener\">Simtropolis</a></div> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Eindhoven Centraal.jpg\" data-lightbox=\"lightbox293\" data-alt=\"lightboxart128 - Eindhoven Centraal.jpg|art128 - eindhoven central Tyb06 Relot\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Eindhoven Centraal.jpg\" alt=\"art128 - Eindhoven Centraal\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - eindhoven central Tyb06 Relot.jpg\" data-lightbox=\"lightbox293\" data-alt=\"lightboxart128 - Eindhoven Centraal.jpg|art128 - eindhoven central Tyb06 Relot\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - eindhoven central Tyb06 Relot.jpg\" alt=\"art128 - eindhoven central Tyb06 Relot2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 149
+    downloads: 152
     file: Art128 - Eindhoven Centraal v2.zip
     files:
       - art128/Eindhoven Centraal/Eindhoven Centraal Station_v2.SC4Lot
@@ -1613,7 +1613,7 @@ assets:
       - sc4evermore/87-mas71-mega-prop-pack-vol01-misc
       - sc4evermore/90-mgb204-texture-pack
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>This station is modeled after the central station in Tampere, Finland.</p>\r\n<div>It sits on a 6 x 2 lot and overhangs on the sides and back. The platforms are elevated by 7.5m to allow them to be used with elevated rails (E-RRW and HRW). The lot is street transit enabled to allow access to the parking garage entrance.</div>\r\n<div>\_</div>\r\n<div>Due to the layout of the station, the lot needs to be sitting on a 0m-7.5m embankment slope and upon placement it needs to cut into the slope, otherwise it may not function properly as a train station, please test it accordingly. Upon plopping the lot the building arrow needs to face to a road on the lower end of the Slope. Please take a few moments and check out the attached placement tutorial, which will apply for both this Tampere Station and the <a href=\"/index.php/downloads/download/19-transportation/293-art128-eindhoven-centraal\" target=\"_blank\" rel=\"noopener\">Eindhoven Central Station</a> too.</div>\r\n<ul>\r\n<li>It is modded that way to support most of the currently available travel types:</li>\r\n<li>L0 Ground High Speed Rail (GHSR), if it's on an embankment.</li>\r\n<li>L0 and L1 Hybrid Railway (HRW)*</li>\r\n<li>L0 and L1 RealRailway (RRW)*</li>\r\n<li>L0 GLR (Ground Light Rail) or tram</li>\r\n<li>L0 and L1 Bus Rapid Transit (BRT)</li>\r\n<li>Bus Stop - on the frontage road</li>\r\n<li>Subway</li>\r\n</ul>\r\n<div>It has been updated to follow the most up to date <strong>NAM/MTA</strong>\_modding practices and standards.</div>\r\n<div>\_</div>\r\n<div>* If you choose to use L1 networks, you don't need the embankment, but that might not be visually appealing as the station was designed to sit at the bottom of a 7.5 meters high embankment.</div>\r\n<div>** There is limited functionality for dual-GLR networks (TIA, TIR, TOR) on the frontage road part of the lot, but they might not be fully functional transit/traffic-wise due to game limitations.</div>\r\n<div>\_</div>\r\n<div>STATS:</div>\r\n<div>\_</div>\r\n<div>Lot size :\_ \_ \_ \_6 x 2</div>\r\n<div>Plop Cost:\_ \_ \_ \_§5000</div>\r\n<div>Monthly Cost:\_ \_ §110</div>\r\n<div>Budget Item:\_ \_ \_Mass Transit</div>\r\n<div>Menu: Rail Transport (or Multi-Modal Stations Submenu)</div>\r\n<div>Capacity: 125000</div>\r\n<div>Demand Created:\_ Jobs§: 85, Jobs§§: 35, Jobs§§§: 5</div>\r\n<div>Pollution: Air 11 over 1 tiles, Water 6 over 2 tiles, Garbage 21 over 0 tiles</div>\r\n<div>Power consumed:\_ 10 MwH</div>\r\n<div>Water consumed:\_ 38 Gallons/Month</div>\r\n<div>Bulldoze Cost:\_ \_§200</div>\r\n<div>\_</div>\r\n<div>Since this building was created to fit a purpose in my city, it may not adapt very well to very user, this is a slight inconvenience but I am not going to render different versions of it.</div>\r\n<div>\_</div>\r\n<h3>Installation:</h3>\r\n<div>Copy/Extract the <strong>art128 </strong>parent folder into your Plugins. If you've extracted the ~<em>Documents </em>folder you may remove it from the Plugins, but keep it in a safe location.</div>\r\n<div>\_</div>\r\n<div>All files have been updated\_so\_<span style=\"color: #e03e2d;\">it\_is highly recommended to use any of the third party cleanitol tools and remove any previous versions from your plugins.</span><br>In the ~<em>Documents\_</em>folder in the main ZIP you can find a Cleanitol_[...].txt script and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a>\_or the older\_<a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad Certification\">BSC</abbr>\_Cleanitol</a>\_tool you can search and remove old and outdated versions of these files.</div>\r\n<div>\_</div>\r\n<div>\r\n<div>The rail stations have Submenu Support*, if you want to enjoy the advantage of the submenus, please download the\_</div>\r\n<div style=\"padding-left: 40px;\"><a href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" target=\"_blank\" rel=\"noopener\">Submenus DLL</a>\_- You need it to get the package submenu working. Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</div>\r\n</div>\r\n<div>\_</div>\r\n<div>*Bear in mind, if you do not use the Submenu DLL mod, then you will find both lots in the Rail menu. If you use the Submenu DLL mod, then the station lot will be found in the Misc Transportation Menu/Multi-Modal Submenu and the plaza lot will be found in the Parks menu/Fillers Submenu.</div>\r\n<div>\_</div>\r\n<h3>DEPENDENCIES:</h3>\r\n<ul>\r\n<li><a href=\"/index.php/downloads/download/22-dependencies/87-mas71-mega-prop-pack-vol01-misc\" target=\"_blank\" rel=\"noopener\">MAS71 MEGA Props Vol 01 </a>(Miscellaneous)</li>\r\n<li><a href=\"http://hide-inoki.com/bbs/archives/sc4_0837.html\" target=\"_blank\" rel=\"noopener\">Neko Props Vol 2</a><br>Direct Link - <a href=\"http://hide-inoki.com/bbs/archives/files/1392.zip\" target=\"_blank\" rel=\"noopener\">http://hide-inoki.com/bbs/archives/files/1392.zip</a></li>\r\n<li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack\" target=\"_blank\" rel=\"noopener\">MGB texture Pack</a> (the street)</li>\r\n</ul>\r\n<div>\_</div>\r\n<div>For support or just to get more news BATs coming, visit my threads on either\_<a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\" rel=\"noopener\">SC4Devotion\_</a>or\_<a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\" rel=\"noopener\">Simtropolis</a></div> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/art128 - Tampere Station.jpg\" data-lightbox=\"lightbox294\" data-alt=\"lightboxart128 - Tampere Station\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/art128 - Tampere Station.jpg\" alt=\"art128 - Tampere Station\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 141
+    downloads: 144
     file: Art128 - Tampere Station v2.zip
     files:
       - art128/Tampere Station/Tampere Station Pavement Lot v2.SC4Lot
@@ -1639,7 +1639,7 @@ assets:
     authors:
       - Mattb325
     category: 19-transportation
-    downloads: 154
+    downloads: 162
     lastModified: 2024-10-27T11:25:27.000Z
     name: SC4D LEX Legacy - Mattb325 Transportation Collection DarkNite
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_NAO_lg.jpg
@@ -1649,7 +1649,7 @@ assets:
     authors:
       - Mattb325
     category: 19-transportation
-    downloads: 168
+    downloads: 183
     lastModified: 2024-10-27T11:25:54.000Z
     name: SC4D LEX Legacy - Mattb325 Transportation Collection MaxisNight
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Mattb325_Galleria_lg.jpg
@@ -1660,7 +1660,7 @@ assets:
     dependencies:
       - simtropolis/26079-peg-spam-super-resource-pack
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><ul>\r\n<li>Features content from the Aerospace Consortium (AC), the BSC, SimCity Airport Group (SCAG), xannepan, and tabi.</li>\r\n<li>Includes AC/BSC Functional Airports Version 2.2, RMIP 2, TMIP, and ARIP, plus numerous plane liveries, and the full collection of AC Team MEGA Props.</li>\r\n<li>Requires <a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">BSC Common Dependencies Pack (V3 minimum)</a>, <a href=\"/index.php/downloads/download/22-dependencies/14-maxis-buildings-as-props-and-dlc-props-v2-1\">Maxis Buildings as Props</a>, and <a href=\"https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/\">PEG SPAM Super Resource Pack</a></li>\r\n</ul> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 3652
+    downloads: 3665
     file: SC4D_LEX_Legacy_Ultimate_Airport_Pack_V1.zip
     files:
       - readme_ultimate_airport_pack.html
@@ -2475,7 +2475,7 @@ assets:
   sc4evermore/94:
     assetId: sc4evermore/94-ulisse-wolf-mediterranean-transport-set-vol-1
     category: 19-transportation
-    downloads: 589
+    downloads: 594
     lastModified: 2023-11-11T16:10:56.000Z
     name: Ulisse Wolf - Mediterranean Transport Set Vol 1
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Ulisse  MED Transport SET VOL 1  DAY.jpg
@@ -2486,7 +2486,7 @@ assets:
     dependencies:
       - sc4evermore/2-network-addon-mod
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>After a long development finally Hybrid Railway (<abbr title=\"Hybrid Railway\">HRW</abbr>) has a tunnel system. This mod is a pioneer in the field of Hybrid Railway as it is the only mod that manages to convert rail and monorail traffic into subways and vice versa simultaneously.\_</p>\r\n<p>This mod was developed in collaboration with MTA (Mass Transit Authority) a group of the\_<abbr title=\"Network Addon Mod\">NAM</abbr>\_team responsible for creating stations and station development standards.</p>\r\n<p>This mod obviously has a limitation. Using the subway this lot cannot transfer rail freight transport using the subway. In addition, the traffic inside the tunnel is considered as subway traffic and for this reason when you use this mod the subway you use as a tunnel the game classifies it as if it were a normal subway. For this you have to avoid connections with other\_<em>normal subway</em>\_networks if you want optimal management of\_<abbr title=\"Hybrid Railway\">HRW</abbr>\_Subway Converter.</p>\r\n<p>Also in this mod there is\_<abbr title=\"Hybrid Railway\">HRW</abbr>\_Subway Ramp developed by MGB204 who gave me permission to publish his mod in this package</p>\r\n<p>The lots in this package support U-RAIL allowing the use of the underground rail and therefore also the support for freight trains. For the moment U-RAIL does not support monorail but the\_<abbr title=\"Network Addon Mod\">NAM</abbr>\_Team is thinking of including support in a later\_<abbr title=\"Network Addon Mod\">NAM</abbr>\_version.</p>\r\n<p>The Gotthard Base Tunnel version contains two lots that perform the same function but year slightly different configurations for U-RAIL support.\_The Gotthard Base Tunnel version contains two batches that perform the same function but have slightly different configurations for the U-RAIL support that can cause aesthetic alterations. You can install both or one of the two versions (V1 or V2).\_</p>\r\n<p>To make this lots work you need only one dependency</p>\r\n<p><strong>INSTALLATION</strong></p>\r\n<p>The installation method has been automated but the user must choose which version of the mod to install based on the traffic direction.</p>\r\n<ul>\r\n<li>If using\_<abbr title=\"Right Hand Drive\">RHD</abbr>\_(Right Hand Drive) then he must select\_<abbr title=\"Hybrid Railway\">HRW</abbr>\_Subway Converters\_<abbr title=\"Right Hand Drive\">RHD</abbr>.</li>\r\n<li>If using\_<abbr title=\"Left Hand Drive\">LHD</abbr>\_(Left Hand Drive) then he must select\_<abbr title=\"Hybrid Railway\">HRW</abbr>\_Subway Converters\_<abbr title=\"Left Hand Drive\">LHD</abbr></li>\r\n</ul>\r\n<p><strong>DEPENDENCY</strong></p>\r\n<p><strong><a href=\"/index.php/downloads/download/6-network-addon-mod-nam/2-network-addon-mod\">Network Addon Mod</a></strong></p>\r\n<p>Thanks to Tyberius06, IDS2, MGB204 for helping me make this package</p>\r\n<p><strong>LICENSING:</strong><br>This lot (Excluding\_<abbr title=\"Hybrid Railway\">HRW</abbr>\_Ramp Subway Converter whose credits go to MGB /rsc204) is provided as free content to SimCity 4 players, who are free to modify it for their use and for production of derivative maps for publication.<br>Should the author be absent from SC4Devotion and Simtropolis.com for more than a year, site staff or individual users may re-host the file, as long as due credit is given to him, Ulisse Wolf</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/HRW Gotthard v1 placement.jpg\" data-lightbox=\"lightbox95\" data-alt=\"lightboxHRW Gotthard v1 placement.jpg|HRW Subway Converter 4\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Gotthard v1 placement.jpg\" alt=\"HRW Gotthard v1 placement\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/HRW Subway Converter 4.jpg\" data-lightbox=\"lightbox95\" data-alt=\"lightboxHRW Gotthard v1 placement.jpg|HRW Subway Converter 4\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/HRW Subway Converter 4.jpg\" alt=\"HRW Subway Converter 42\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 641
+    downloads: 651
     file: Ulisse Wolf HRW Subway Converters.zip
     files:
       - Ulisse Wolf HRW Subway Converters/Main.txt
@@ -2531,4 +2531,4 @@ assets:
     version: '2.0'
 
 meta:
-  timestamp: 2024-12-13T09:40:52.613Z
+  timestamp: 2024-12-16T07:04:42.746Z
