@@ -18523,19 +18523,233 @@ assets:
     authors:
       - Jasoncw
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div>\n\t<div>\n\t\t<p>\n\t\t\tJudith Krug Branch Library is a triangular brutalist library.\n\t\t</p>\n\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t4x4 library lot.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tMaxisNite and DarkNite versions included.\_\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\_\n\t\t\t</li>\n\t\t</ul>\n\n\t\t<p>\n\t\t\t\_Installation Instructions:\n\t\t</p>\n\n\t\t<ol>\n\t\t\t<li>\n\t\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tSC4Lot files are descriptively titled. Remove the lot versions which you do not want. Do not remove any .SC4Model files.\n\t\t\t</li>\n\t\t</ol>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/618036233c681_JudithKrugBranchLibrary00.jpg.7d46b45bbdf2a10699ccf263eb5e765f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/61803625a2080_JudithKrugBranchLibrary01.jpg.fa338f7ccaf8876b4e8f10298a90730d.jpg
     lastModified: 2021-11-01T18:47:17.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Judith Krug Branch Library
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_11/61803634d71b2_JudithKrugBranchLibrary00.thumb.jpg.8901780132fab60797f9da05f166a1b5.jpg
     url: https://community.simtropolis.com/files/file/34730-judith-krug-branch-library/
+    variants:
+      '190343':
+        buildings:
+          Jasoncw - Judith Krug Branch Library (MN)/Jasoncw - Judith Krug Branch Library.SC4Lot:
+            0cd31aea:
+              bulldoze: 500
+              categories: education
+              cost: 750
+              flamability: 35
+              garbage: 1
+              jobs:
+                $: 16
+                $$: 29
+              label: Judith Krug Branch Library
+              maintenance: 600
+              menu: Education
+              model: 0c54880b
+              name: Jasoncw - Judith Krug Branch Library
+              pollution: 2
+              pollutionRadius: 2
+              power: 4
+              submenu: Education/Libraries
+              water: 14
+              waterPollution: 1
+              waterPollutionRadius: 3
+        filename: Jasoncw - Judith Krug Branch Library (MN).zip
+        files:
+          - Jasoncw - Judith Krug Branch Library (MN)/Jasoncw - Judith Krug Branch Library (MN).SC4Model
+          - Jasoncw - Judith Krug Branch Library (MN)/Jasoncw - Judith Krug Branch Library.SC4Lot
+        lots:
+          Jasoncw - Judith Krug Branch Library (MN)/Jasoncw - Judith Krug Branch Library.SC4Lot:
+            0cd31aea:
+              building: 0cd31aea
+              name: PLOP_4x4_Judith Krug Branch Library
+              props:
+                - 2a170000
+                - 2a100000
+              size: 4x4
+              textures:
+                - 252b0000
+                - '25900000'
+                - 25c00000
+        models:
+          Jasoncw - Judith Krug Branch Library (MN)/Jasoncw - Judith Krug Branch Library (MN).SC4Model:
+            - 0c54880b
+        sha256: bb94912a7aa1f928b4691967575312aafd0d2f9d47374dea5408116bd5bc1278
+        size: 1090828
+        uncompressed: 1321549
+      '190344':
+        buildings:
+          Jasoncw - Judith Krug Branch Library (DN)/Jasoncw - Judith Krug Branch Library.SC4Lot:
+            0cd31aea:
+              bulldoze: 500
+              categories: education
+              cost: 750
+              flamability: 35
+              garbage: 1
+              jobs:
+                $: 16
+                $$: 29
+              label: Judith Krug Branch Library
+              maintenance: 600
+              menu: Education
+              model: 0c54880b
+              name: Jasoncw - Judith Krug Branch Library
+              pollution: 2
+              pollutionRadius: 2
+              power: 4
+              submenu: Education/Libraries
+              water: 14
+              waterPollution: 1
+              waterPollutionRadius: 3
+        filename: Jasoncw - Judith Krug Branch Library (DN).zip
+        files:
+          - Jasoncw - Judith Krug Branch Library (DN)/Jasoncw - Judith Krug Branch Library (DN).SC4Model
+          - Jasoncw - Judith Krug Branch Library (DN)/Jasoncw - Judith Krug Branch Library.SC4Lot
+        lots:
+          Jasoncw - Judith Krug Branch Library (DN)/Jasoncw - Judith Krug Branch Library.SC4Lot:
+            0cd31aea:
+              building: 0cd31aea
+              name: PLOP_4x4_Judith Krug Branch Library
+              props:
+                - 2a170000
+                - 2a100000
+              size: 4x4
+              textures:
+                - 252b0000
+                - '25900000'
+                - 25c00000
+        models:
+          Jasoncw - Judith Krug Branch Library (DN)/Jasoncw - Judith Krug Branch Library (DN).SC4Model:
+            - 0c54880b
+        sha256: 9dd89803b0dd213781aa0cb71a33e77d4ba7bc5397230a85daeb69945611584a
+        size: 1113090
+        uncompressed: 1346212
+    version: 1.0.0
   simtropolis/34732:
     assetId: simtropolis/34732-murray-musem-of-modern-art
     authors:
       - Jasoncw
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div>\n\t<div>\n\t\t<div>\n\t\t\t<p>\n\t\t\t\tThis modern art museum features several galleries, a sculpture garden, event space, and of course, a gift shop!\_\n\t\t\t</p>\n\n\t\t\t<ul>\n\t\t\t\t<li>\n\t\t\t\t\t6x6 museum lot.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t</li>\n\t\t\t</ul>\n\n\t\t\t<p>\n\t\t\t\tInstallation Instructions:\n\t\t\t</p>\n\n\t\t\t<ol>\n\t\t\t\t<li>\n\t\t\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tSC4Lot files are descriptively titled. Remove the lot versions which you do not want. Do not remove any .SC4Model files.\n\t\t\t\t</li>\n\t\t\t</ol>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/Murray-P0.jpg.6ba5bb3a6a348da3be40873f89c4e219.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/Murray-P1(compressed).jpg.931a1eff07409b62bad2f8c6825950fc.jpg
     lastModified: 2021-11-01T18:51:14.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Murray Musem of Modern Art
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_11/Murray-P0.thumb.jpg.873fc4ecc541a4e42d61b1f4c7c677fa.jpg
     url: https://community.simtropolis.com/files/file/34732-murray-musem-of-modern-art/
+    variants:
+      '190351':
+        buildings:
+          Jasoncw - Murray Museum of Modern Art (MN)/Jasoncw - Murray Museum of Modern Art.SC4Lot:
+            dd0cb91a:
+              bulldoze: 3500
+              categories: education
+              cost: 4100
+              flamability: 35
+              garbage: 1
+              jobs:
+                $: 19
+                $$: 73
+                $$$: 28
+              maintenance: 4700
+              menu: Education
+              model: 2c8d0709
+              name: Jasoncw - Murray Museum of Modern Art (PLOP_6x6)
+              pollution: 3
+              pollutionRadius: 3
+              power: 7
+              submenu: Education/Libraries
+              water: 25
+              waterPollution: 2
+              waterPollutionRadius: 4
+        filename: Jasoncw - Murray Museum of Modern Art (MN).zip
+        files:
+          - Jasoncw - Murray Museum of Modern Art (MN)/Jasoncw - Murray Museum of Modern Art (MN).SC4Model
+          - Jasoncw - Murray Museum of Modern Art (MN)/Jasoncw - Murray Museum of Modern Art.SC4Lot
+        lots:
+          Jasoncw - Murray Museum of Modern Art (MN)/Jasoncw - Murray Museum of Modern Art.SC4Lot:
+            dd0cb91a:
+              building: dd0cb91a
+              name: PLOP_6x6_Murray Museum of Modern Art
+              props:
+                - 2a100000
+                - 2ad20000
+                - 1d4b0000
+                - 2a170000
+              size: 6x6
+              textures:
+                - 252b0000
+                - '262e0000'
+                - 25ae0000
+        models:
+          Jasoncw - Murray Museum of Modern Art (MN)/Jasoncw - Murray Museum of Modern Art (MN).SC4Model:
+            - 2c8d0709
+        sha256: f5ae66cdbbe109fffa6a6a8886c44564a30af4a55a80456f1d4a48f80f6e2567
+        size: 2199818
+        uncompressed: 2585852
+      '190352':
+        buildings:
+          Jasoncw - Murray Muesum of Modern Art (DN)/Jasoncw - Murray Museum of Modern Art.SC4Lot:
+            dd0cb91a:
+              bulldoze: 3500
+              categories: education
+              cost: 4100
+              flamability: 35
+              garbage: 1
+              jobs:
+                $: 19
+                $$: 73
+                $$$: 28
+              maintenance: 4700
+              menu: Education
+              model: 2c8d0709
+              name: Jasoncw - Murray Museum of Modern Art (PLOP_6x6)
+              pollution: 3
+              pollutionRadius: 3
+              power: 7
+              submenu: Education/Libraries
+              water: 25
+              waterPollution: 2
+              waterPollutionRadius: 4
+        filename: Jasoncw - Murray Muesum of Modern Art (DN).zip
+        files:
+          - Jasoncw - Murray Muesum of Modern Art (DN)/Jasoncw - Murray Museum of Modern Art (DN).SC4Model
+          - Jasoncw - Murray Muesum of Modern Art (DN)/Jasoncw - Murray Museum of Modern Art.SC4Lot
+        lots:
+          Jasoncw - Murray Muesum of Modern Art (DN)/Jasoncw - Murray Museum of Modern Art.SC4Lot:
+            dd0cb91a:
+              building: dd0cb91a
+              name: PLOP_6x6_Murray Museum of Modern Art
+              props:
+                - 2a100000
+                - 2ad20000
+                - 1d4b0000
+                - 2a170000
+              size: 6x6
+              textures:
+                - 252b0000
+                - '262e0000'
+                - 25ae0000
+        models:
+          Jasoncw - Murray Muesum of Modern Art (DN)/Jasoncw - Murray Museum of Modern Art (DN).SC4Model:
+            - 2c8d0709
+        sha256: 7ff91b8ce8c21a466d4e0fcc033604cb397c4c1497b5f9edabdb174c357a3496
+        size: 2086746
+        uncompressed: 2460651
+    version: 1.0.0
   simtropolis/34756:
     assetId: simtropolis/34756-fermilab-illinois
     authors:
@@ -19030,19 +19244,229 @@ assets:
     authors:
       - Jasoncw
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-p5flmk-0 hgUaki\">\n\t<div id=\"cid-22\">\n\t\t<div>\n\t\t\t<div class=\"sc-dJjYzT iHVgLk\">\n\t\t\t\t<div class=\"sc-1sp3zau-0 fYCOwC sc-d4f3hw-0 iATlLz\">\n\t\t\t\t\t<div class=\"sc-1ye87qi-0 irEdXD\">\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\tThis is a small Art Deco police station.\n\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t3x3 police station lot.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\tInstallation Instructions:\n\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tIf you don't already have them, download and install the dependencies, linked above.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ol>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/6541899f4ba0b_PoliceStation1-00.jpg.9893272f263263737f452fe0d34da047.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/654189a38782b_PoliceStation1-01.jpg.9dcd33f873571c30b39b6fa431aa1ac0.jpg
     lastModified: 2023-10-31T23:19:40.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Small Police Station 1
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/65418b8b67c57_PoliceStation1-00.thumb.jpg.94fbf8004831b33e8eb9b66799bad89c.jpg
     url: https://community.simtropolis.com/files/file/35718-small-police-station-1/
+    variants:
+      '198224':
+        buildings:
+          Jasoncw - Small Police Station 1 (MN)/Jasoncw - Small Police Station 1 (2x3).SC4Lot:
+            10bd03c4:
+              bulldoze: 30
+              categories: police
+              cost: 350
+              flamability: 36
+              jobs:
+                $: 30
+                $$: 4
+              maintenance: 140
+              menu: Police
+              model: 303bbe98
+              name: Jasoncw - Small Police Station 1 (2x3)
+              pollution: 1
+              pollutionRadius: 2
+              power: 3
+              powerProduction: 1
+              submenu: Police/Small
+              water: 11
+              waterPollution: 1
+              waterPollutionRadius: 3
+        filename: Jasoncw - Small Police Station 1 (MN).zip
+        files:
+          - Jasoncw - Small Police Station 1 (MN)/Jasoncw - Small Police Station 1 (2x3).SC4Lot
+          - Jasoncw - Small Police Station 1 (MN)/Jasoncw - Small Police Station 1 (MN).SC4Model
+        lots:
+          Jasoncw - Small Police Station 1 (MN)/Jasoncw - Small Police Station 1 (2x3).SC4Lot:
+            10bd03c4:
+              building: 10bd03c4
+              name: PLOP_2x3_Small Police Station 1
+              size: 2x3
+              textures:
+                - 258d0000
+                - 258f0000
+                - 25bc0000
+                - 25f00000
+                - 25fc0000
+        models:
+          Jasoncw - Small Police Station 1 (MN)/Jasoncw - Small Police Station 1 (MN).SC4Model:
+            - 303bbe98
+        sha256: fbf98e30599107d227a8ca004bdcf3ff8bd9853ef700f797604a6d815d3bbb42
+        size: 411662
+        uncompressed: 516500
+      '198225':
+        buildings:
+          Jasoncw - Small Police Station 1 (DN)/Jasoncw - Small Police Station 1 (2x3).SC4Lot:
+            10bd03c4:
+              bulldoze: 30
+              categories: police
+              cost: 350
+              flamability: 36
+              jobs:
+                $: 30
+                $$: 4
+              maintenance: 140
+              menu: Police
+              model: 303bbe98
+              name: Jasoncw - Small Police Station 1 (2x3)
+              pollution: 1
+              pollutionRadius: 2
+              power: 3
+              powerProduction: 1
+              submenu: Police/Small
+              water: 11
+              waterPollution: 1
+              waterPollutionRadius: 3
+        filename: Jasoncw - Small Police Station 1 (DN).zip
+        files:
+          - Jasoncw - Small Police Station 1 (DN)/Jasoncw - Small Police Station 1 (2x3).SC4Lot
+          - Jasoncw - Small Police Station 1 (DN)/Jasoncw - Small Police Station 1 (DN).SC4Model
+        lots:
+          Jasoncw - Small Police Station 1 (DN)/Jasoncw - Small Police Station 1 (2x3).SC4Lot:
+            10bd03c4:
+              building: 10bd03c4
+              name: PLOP_2x3_Small Police Station 1
+              size: 2x3
+              textures:
+                - 258d0000
+                - 258f0000
+                - 25bc0000
+                - 25f00000
+                - 25fc0000
+        models:
+          Jasoncw - Small Police Station 1 (DN)/Jasoncw - Small Police Station 1 (DN).SC4Model:
+            - 303bbe98
+        sha256: 875fc5824de3f5312416c9382cb11350c08c7051e4f7cf7544d739baddec3ef0
+        size: 395977
+        uncompressed: 496034
+    version: 1.0.0
   simtropolis/35719:
     assetId: simtropolis/35719-small-police-station-2
     authors:
       - Jasoncw
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-p5flmk-0 hgUaki\">\n\t<div id=\"cid-22\">\n\t\t<div>\n\t\t\t<div class=\"sc-dJjYzT iHVgLk\">\n\t\t\t\t<div class=\"sc-1sp3zau-0 fYCOwC sc-d4f3hw-0 iATlLz\">\n\t\t\t\t\t<div class=\"sc-1ye87qi-0 irEdXD\">\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\tThis is a small Art Deco police station.\n\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t3x3 police station lot.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\tInstallation Instructions:\n\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tIf you don't already have them, download and install the dependencies, linked above.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ol>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/65418bca7d594_PoliceStation2-00.jpg.f44599f7e70e0cf1000aaa445f2ab1c8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/65418bccef3aa_PoliceStation2-01.jpg.94eee442f3459d1d5df0d4518519f6bf.jpg
     lastModified: 2023-10-31T23:21:26.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Small Police Station 2
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/65418bf5916d5_PoliceStation2-00.thumb.jpg.9dca6cc87e4e55831ffddd5da2debf73.jpg
     url: https://community.simtropolis.com/files/file/35719-small-police-station-2/
+    variants:
+      '198228':
+        buildings:
+          Jasoncw - Small Police Station 2 (MN)/Jasoncw - Small Police Station 2 (3x3).SC4Lot:
+            00bcd402:
+              bulldoze: 20
+              categories: police
+              cost: 240
+              flamability: 36
+              jobs:
+                $: 20
+                $$: 3
+              maintenance: 110
+              menu: Police
+              model: 903b9e8f
+              name: Jasoncw - Small Police Station 2 (3x3)
+              pollution: 1
+              pollutionRadius: 2
+              power: 2
+              powerProduction: 1
+              submenu: Police/Small
+              water: 6
+        filename: Jasoncw - Small Police Station 2 (MN).zip
+        files:
+          - Jasoncw - Small Police Station 2 (MN)/Jasoncw - Small Police Station 2 (3x3).SC4Lot
+          - Jasoncw - Small Police Station 2 (MN)/Jasoncw - Small Police Station 2 (MN).SC4Model
+        lots:
+          Jasoncw - Small Police Station 2 (MN)/Jasoncw - Small Police Station 2 (3x3).SC4Lot:
+            00bcd402:
+              building: 00bcd402
+              name: PLOP_3x3_Small Police Station 2
+              props:
+                - 2a100000
+                - 2a110000
+                - 2add0000
+                - 2ade0000
+                - 2adf0000
+              size: 3x3
+              textures:
+                - 258d0000
+                - 252b0000
+                - '26250000'
+                - 25bb0000
+                - 25bc0000
+        models:
+          Jasoncw - Small Police Station 2 (MN)/Jasoncw - Small Police Station 2 (MN).SC4Model:
+            - 903b9e8f
+        sha256: 030b990b2faeb145e9ba51ba1b32a2c5d56414ddd86182ac3516ed98b5379093
+        size: 274497
+        uncompressed: 350355
+      '198229':
+        buildings:
+          Jasoncw - Small Police Station 2 (DN)/Jasoncw - Small Police Station 2 (3x3).SC4Lot:
+            00bcd402:
+              bulldoze: 20
+              categories: police
+              cost: 240
+              flamability: 36
+              jobs:
+                $: 20
+                $$: 3
+              maintenance: 110
+              menu: Police
+              model: 903b9e8f
+              name: Jasoncw - Small Police Station 2 (3x3)
+              pollution: 1
+              pollutionRadius: 2
+              power: 2
+              powerProduction: 1
+              submenu: Police/Small
+              water: 6
+        filename: Jasoncw - Small Police Station 2 (DN).zip
+        files:
+          - Jasoncw - Small Police Station 2 (DN)/Jasoncw - Small Police Station 2 (3x3).SC4Lot
+          - Jasoncw - Small Police Station 2 (DN)/Jasoncw - Small Police Station 2 (DN).SC4Model
+        lots:
+          Jasoncw - Small Police Station 2 (DN)/Jasoncw - Small Police Station 2 (3x3).SC4Lot:
+            00bcd402:
+              building: 00bcd402
+              name: PLOP_3x3_Small Police Station 2
+              props:
+                - 2a100000
+                - 2a110000
+                - 2add0000
+                - 2ade0000
+                - 2adf0000
+              size: 3x3
+              textures:
+                - 258d0000
+                - 252b0000
+                - '26250000'
+                - 25bb0000
+                - 25bc0000
+        models:
+          Jasoncw - Small Police Station 2 (DN)/Jasoncw - Small Police Station 2 (DN).SC4Model:
+            - 903b9e8f
+        sha256: a26bfdc6e48238bdf97cf6ffec30f9859c59d02492cd6769b9536975faa610f4
+        size: 266287
+        uncompressed: 340685
+    version: 1.0.0
   simtropolis/3573:
     assetId: simtropolis/3573-modern-central-library
     authors:

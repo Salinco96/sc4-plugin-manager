@@ -327,6 +327,10 @@ buildingFamilies:
     - bsc/essentials
 
 buildings:
+  0093a784:
+    - jasoncw/great-northern-hotel
+  00bcd402:
+    - jasoncw/small-police-station-2
   '02109412':
     - 11241036/seasonal-woods
   0210945f:
@@ -999,6 +1003,8 @@ buildings:
     - 11241036/seasonal-woods-2
   0cc3ca8a:
     - pegasus/spam
+  0cd31aea:
+    - jasoncw/judith-krug-branch-library
   0d1d6acb:
     - maxis/stone-house
   0d4fdea6:
@@ -1033,8 +1039,12 @@ buildings:
     - toroca/functional-landmarks
   '10030000':
     - toroca/functional-landmarks
+  1030c920:
+    - jasoncw/the-paragon
   10a8e301:
     - pegasus/spam
+  10bd03c4:
+    - jasoncw/small-police-station-1
   10c6bbb8:
     - mattb325/batprops-vol01
   10d19ae9:
@@ -1063,6 +1073,8 @@ buildings:
     - csx/mega-props-vol05
   1115c0f3:
     - csx/mega-props-vol05
+  '1134e708':
+    - jasoncw/korimako-hotel
   11505f1b:
     - csx/mega-props-vol05
   '11538843':
@@ -1085,6 +1097,10 @@ buildings:
     - mickebear/mega-props-vol02
   1185193f:
     - mickebear/mega-props-vol02
+  1185792c:
+    - jasoncw/napier-tower
+  11ab8880:
+    - jasoncw/pizza-ribs-sushi
   11c1a1cb:
     - mattb325/batprops-vol01
   11e8bbf3:
@@ -1095,6 +1111,8 @@ buildings:
     - debussyman/mega-props-vol01
   11f79fd3:
     - csx/mega-props-vol05
+  12a60a62:
+    - jasoncw/basildon-terraces
   '1340e366':
     - citynut/mega-props-vol02
   13e6252f:
@@ -1133,16 +1151,28 @@ buildings:
     - mikeseith/multi-level-modular-garages
   198f529d:
     - pegasus/spam
+  1baa2c4c:
+    - jasoncw/us-bank-center
   1c4d4eae:
     - mattb325/batprops-small-modern-houses
   1c4d4fd5:
     - mattb325/batprops-small-modern-houses
   1c4d4ffa:
     - mattb325/batprops-small-modern-houses
+  1c80ef7b:
+    - jasoncw/morrow-building
   1cf37210:
     - mikeseith/multi-level-modular-garages
   1cf8e57f:
     - mikeseith/multi-level-modular-garages
+  1d721b2b:
+    - jasoncw/farrands-department-store
+  1d734f1d:
+    - jasoncw/farrands-department-store
+  1e11a30e:
+    - jasoncw/kallax-residential
+  1e11b0c5:
+    - jasoncw/kallax-residential
   1f3f0000:
     - hippotank/ht-demand-fix
   1f440000:
@@ -1185,6 +1215,8 @@ buildings:
     - pegasus/spam
   2ac6c09d:
     - pegasus/spam
+  2c443943:
+    - jasoncw/union-bank-plaza
   2c990000:
     - toroca/toll-booth-booster
   2d1e7a9e:
@@ -1209,6 +1241,8 @@ buildings:
     - csx/mega-props-vol06
   2e8fd7d9:
     - bsc/misc-props-vol01
+  2ee0c2a9:
+    - jasoncw/denton-corporation
   30398a99:
     - pegasus/spam
   30c052e8:
@@ -1221,6 +1255,8 @@ buildings:
     - mattb325/batprops-vol01
   30e18f51:
     - csx/mega-props-vol06
+  30e5ec08:
+    - jasoncw/elviras-halloween-emporium
   '30e89192':
     - csx/mega-props-vol05
   30e891fb:
@@ -1239,10 +1275,14 @@ buildings:
     - csx/mega-props-vol05
   '310e1673':
     - mattb325/batprops-vol01
+  310fe459:
+    - jasoncw/surfside-apartments
   '31104210':
     - csx/mega-props-vol05
   '31104237':
     - csx/mega-props-vol05
+  31375d81:
+    - jasoncw/geodesic-dome-pavilion
   '31505e64':
     - csx/mega-props-vol05
   31505f75:
@@ -1253,6 +1293,8 @@ buildings:
     - csx/mega-props-vol06
   '31538973':
     - csx/mega-props-vol06
+  316055a0:
+    - jasoncw/model-discount-furniture
   '31851826':
     - mickebear/mega-props-vol02
   '31851837':
@@ -1273,6 +1315,8 @@ buildings:
     - mickebear/mega-props-vol02
   '31851909':
     - mickebear/mega-props-vol02
+  31ae2d4c:
+    - jasoncw/magasin-valois
   31c2c44a:
     - mattb325/batprops-vol01
   31e45a45:
@@ -1309,6 +1353,10 @@ buildings:
     - pegasus/spam
   3ba190a7:
     - pegasus/spam
+  3bb0985d:
+    - jasoncw/us-bank-center
+  3c4455ca:
+    - jasoncw/union-bank-plaza
   3c497e65:
     - mattb325/batprops-small-modern-houses
   3c4e13a1:
@@ -1327,10 +1375,18 @@ buildings:
     - mattb325/batprops-small-modern-houses
   3d9d9921:
     - pegasus/spam
+  3dd4fedf:
+    - jasoncw/norfair-corporation
   3ddbb8a1:
     - pegasus/spam
   3e2a14e2:
     - pegasus/spam
+  3e39a222:
+    - jasoncw/continental-bank-and-trust
+  3e611db0:
+    - jasoncw/apple-store-pack
+  3f578d33:
+    - jasoncw/turtle-publishing
   3fa1a041:
     - pegasus/spam
   3fd1357d:
@@ -1377,6 +1433,8 @@ buildings:
     - csx/mega-props-vol05
   505c2637:
     - pegasus/spam
+  5093d15b:
+    - jasoncw/emerson-apartments
   50bffc33:
     - mattb325/batprops-vol01
   5108ad52:
@@ -1415,8 +1473,14 @@ buildings:
     - mickebear/mega-props-vol02
   5185194d:
     - mickebear/mega-props-vol02
+  51ae2b71:
+    - jasoncw/magasin-valois
+  51d5c7c3:
+    - jasoncw/webb-chapel-park-pavilion
   51e7aa1a:
     - mickebear/mega-props-vol03
+  51fe7518:
+    - jasoncw/delitz-designer-gallery
   521d0b74:
     - 11241036/seasonal-woods-2
   5261eed3:
@@ -1439,6 +1503,8 @@ buildings:
     - pegasus/spam
   54a0ed63:
     - dolphin66/mega-props-vol03
+  54b0b9a8:
+    - jasoncw/perry-station
   54f7c86e:
     - mattb325/batprops-w2w-vol01
   54fae59c:
@@ -1459,6 +1525,14 @@ buildings:
     - pegasus/spam
   5a59f5e8:
     - csx/mega-props-vol05
+  5baa234d:
+    - jasoncw/us-bank-center
+  5bd98c09:
+    - jasoncw/2-commerce-street
+  5bd9b442:
+    - jasoncw/2-commerce-street
+  5c46eb0e:
+    - jasoncw/wellington-place
   5c497e50:
     - mattb325/batprops-small-modern-houses
   5cf36ce3:
@@ -1471,6 +1545,10 @@ buildings:
     - mikeseith/multi-level-modular-garages
   5d5a4b93:
     - mattb325/batprops-small-modern-houses
+  5d9870af:
+    - jasoncw/db-franklin-co
+  5e620b7a:
+    - jasoncw/apple-store-pack
   5f42b3bb:
     - pegasus/spam
   5fd25af5:
@@ -1503,6 +1581,8 @@ buildings:
     - csx/mega-props-vol01
   6d8d1d03:
     - csx/mega-props-vol07
+  6d90bb78:
+    - jasoncw/db-franklin-co
   6dcb8fc1:
     - csx/mega-props-vol07
   6df53684:
@@ -1525,6 +1605,8 @@ buildings:
     - gascooker/mega-props-vol01
   6f4bffa5:
     - csx/mega-props-vol05
+  706db573:
+    - jasoncw/hotel-utica
   70b5cb20:
     - jeronij/ship-pack
   70e190ff:
@@ -1545,6 +1627,8 @@ buildings:
     - csx/mega-props-vol05
   710a62ff:
     - csx/mega-props-vol05
+  710e5f9c:
+    - jasoncw/rasmussen-place
   '711028e7':
     - csx/mega-props-vol05
   711040a9:
@@ -1571,12 +1655,20 @@ buildings:
     - mickebear/mega-props-vol02
   '71851948':
     - mickebear/mega-props-vol02
+  718a4129:
+    - jasoncw/centron-center
   71b6e4dc:
     - mattb325/batprops-vol01
+  71d45402:
+    - jasoncw/innovation-center
   71df5e79:
     - csx/mega-props-vol05
   71e7aa05:
     - mickebear/mega-props-vol03
+  724d9d89:
+    - jasoncw/sp-building
+  724f0820:
+    - jasoncw/pietzsch-house
   726c45ee:
     - mattb325/batprops-vol01
   73053b82:
@@ -1611,6 +1703,8 @@ buildings:
     - mikeseith/multi-level-modular-garages
   7960c078:
     - mikeseith/multi-level-modular-garages
+  7c48334e:
+    - jasoncw/great-lakes-ems-academy
   7c497e80:
     - mattb325/batprops-small-modern-houses
   7c497e92:
@@ -1621,6 +1715,12 @@ buildings:
     - mattb325/batprops-small-modern-houses
   7c5782f6:
     - mattb325/batprops-small-modern-houses
+  7c80eb61:
+    - jasoncw/morrow-building
+  7e611cbf:
+    - jasoncw/apple-store-pack
+  7f807b23:
+    - jasoncw/metropolitan-exchange-plaza
   7fc108a1:
     - pegasus/spam
   7fd137f9:
@@ -1629,6 +1729,8 @@ buildings:
     - 11241036/seasonal-woods
   7fd25a02:
     - 11241036/seasonal-woods
+  80e5e1af:
+    - jasoncw/elviras-halloween-emporium
   8160026c:
     - pegasus/spam
   8570a365:
@@ -1656,12 +1758,18 @@ buildings:
     - bsc/misc-props-vol01
   8df53785:
     - csx/mega-props-vol06
+  8e8b21d2:
+    - jasoncw/wellman-building
   8e8fd88d:
     - bsc/misc-props-vol01
   8ecb7e85:
     - gascooker/mega-props-vol01
   8ecbaf1b:
     - gascooker/mega-props-vol01
+  8f65cd97:
+    - jasoncw/dreieck-park
+  '90644677':
+    - jasoncw/medium-sized-train-station
   90be0bd3:
     - jeronij/ship-pack
   90c002c4:
@@ -1672,6 +1780,8 @@ buildings:
     - jeronij/ship-pack
   90c810da:
     - mattb325/batprops-vol01
+  '90e43813':
+    - jasoncw/cecil-hotel
   '90e89227':
     - csx/mega-props-vol05
   '90e89387':
@@ -1682,6 +1792,8 @@ buildings:
     - csx/mega-props-vol05
   910a6330:
     - csx/mega-props-vol05
+  '910e6007':
+    - jasoncw/rasmussen-place
   911040de:
     - csx/mega-props-vol05
   9110424d:
@@ -1690,6 +1802,8 @@ buildings:
     - csx/mega-props-vol05
   9115c087:
     - csx/mega-props-vol05
+  9184ac98:
+    - jasoncw/train-station-set
   '91851832':
     - mickebear/mega-props-vol02
   '91851851':
@@ -1704,8 +1818,12 @@ buildings:
     - mickebear/mega-props-vol02
   9185193a:
     - mickebear/mega-props-vol02
+  91d45495:
+    - jasoncw/innovation-center
   91eb2b17:
     - mattb325/batprops-vol01
+  924f1788:
+    - jasoncw/pietzsch-house
   925a7567:
     - debussyman/mega-props-vol01
   9340e3a4:
@@ -1746,18 +1864,36 @@ buildings:
     - mattb325/batprops-small-modern-houses
   9c57a0bb:
     - mattb325/batprops-small-modern-houses
+  9dd268d0:
+    - jasoncw/norfair-corporation
   9dd5d068:
     - csx/mega-props-vol05
+  9e39729e:
+    - jasoncw/continental-bank-and-trust
   9e7e9e46:
     - pegasus/spam
+  9e8b08ac:
+    - jasoncw/wellman-building
   9ed4f7fc:
     - csx/mega-props-vol05
+  9ee0e033:
+    - jasoncw/denton-corporation
+  9f0448c8:
+    - jasoncw/savisaar-insurance
+  9f2bfda5:
+    - jasoncw/target
   9fd25c1e:
     - 11241036/seasonal-woods
   9fd5e513:
     - 11241036/seasonal-woods
+  a01cf76f:
+    - jasoncw/alaska-building
+  a06d80cf:
+    - jasoncw/hotel-utica
   a1441934:
     - pegasus/spam
+  a188eaef:
+    - jasoncw/centron-center
   a42c8861:
     - pegasus/spam
   a5351d45:
@@ -1785,6 +1921,8 @@ buildings:
     - csx/mega-props-vol07
   adf537f6:
     - csx/mega-props-vol06
+  b094ebb8:
+    - jasoncw/great-northern-hotel
   b0c00413:
     - mattb325/batprops-vol01
   b0c5873a:
@@ -1799,6 +1937,8 @@ buildings:
     - csx/mega-props-vol05
   b10a6194:
     - csx/mega-props-vol05
+  b10fe1b7:
+    - jasoncw/surfside-apartments
   b1104263:
     - csx/mega-props-vol05
   b115c14c:
@@ -1813,6 +1953,8 @@ buildings:
     - csx/mega-props-vol05
   b1538300:
     - csx/mega-props-vol06
+  b184c540:
+    - jasoncw/train-station-set
   b1851883:
     - mickebear/mega-props-vol02
   b1851897:
@@ -1825,6 +1967,8 @@ buildings:
     - mickebear/mega-props-vol03
   b1f220e9:
     - mickebear/mega-props-vol03
+  b2a602f4:
+    - jasoncw/basildon-terraces
   b340e400:
     - citynut/mega-props-vol02
   b340e455:
@@ -1841,6 +1985,10 @@ buildings:
     - pegasus/spam
   b960bedd:
     - mikeseith/multi-level-modular-garages
+  bc4453cf:
+    - jasoncw/union-bank-plaza
+  bc482828:
+    - jasoncw/great-lakes-ems-academy
   bc4d4f76:
     - mattb325/batprops-small-modern-houses
   bc4e1298:
@@ -1861,6 +2009,16 @@ buildings:
     - mikeseith/multi-level-modular-garages
   bcf36f3c:
     - mikeseith/multi-level-modular-garages
+  bdd50133:
+    - jasoncw/norfair-corporation
+  be11ed96:
+    - jasoncw/kallax-residential
+  be6209fa:
+    - jasoncw/apple-store-pack
+  be620c5a:
+    - jasoncw/apple-store-pack
+  bf0336ba:
+    - jasoncw/savisaar-insurance
   bf589ade:
     - pegasus/spam
   bf83de77:
@@ -1871,6 +2029,8 @@ buildings:
     - 11241036/seasonal-woods
   bfd5e470:
     - 11241036/seasonal-woods
+  bff2feb1:
+    - jasoncw/hsbc-tower
   c1d702de:
     - csx/mega-props-vol05
   c21093fe:
@@ -1889,6 +2049,8 @@ buildings:
     - csx/mega-props-vol05
   cc060d0d:
     - buggi/mark-x-windblaster
+  ccdc1adf:
+    - jasoncw/albee-amphitheater
   cd3f4f74:
     - csx/mega-props-vol01
   cd716e25:
@@ -1904,10 +2066,22 @@ buildings:
     - gascooker/mega-props-vol01
   ceb139ee:
     - gascooker/mega-props-vol01
+  cfbf7787:
+    - jasoncw/shields-youth-center
   d0109010:
     - pegasus/spam
+  d01c2195:
+    - jasoncw/alaska-building
+  d04dae96:
+    - jasoncw/small-train-station
   d0822c17:
     - csx/mega-props-vol03
+  d094ec9b:
+    - jasoncw/great-northern-hotel
+  d097c841:
+    - jasoncw/beacon-apartments
+  d097ca4e:
+    - jasoncw/beacon-apartments
   d0bf0413:
     - jeronij/ship-pack
   d0bf0a44:
@@ -1920,6 +2094,8 @@ buildings:
     - mattb325/batprops-vol01
   d0e18fe7:
     - csx/mega-props-vol06
+  d0e32452:
+    - jasoncw/cecil-hotel
   d0e892a0:
     - csx/mega-props-vol05
   d0f9f4dc:
@@ -1932,6 +2108,8 @@ buildings:
     - csx/mega-props-vol05
   d1104223:
     - csx/mega-props-vol05
+  d1362cb7:
+    - jasoncw/korimako-hotel
   d1505f94:
     - csx/mega-props-vol05
   d1505ff3:
@@ -1950,6 +2128,10 @@ buildings:
     - mickebear/mega-props-vol02
   d1851954:
     - mickebear/mega-props-vol02
+  d1ffecec:
+    - jasoncw/miu-miu
+  d223734d:
+    - jasoncw/elks-building
   d26c4625:
     - mattb325/batprops-vol01
   d3570334:
@@ -1964,6 +2146,8 @@ buildings:
     - cococity/coco-samsung-apartment
   d4441231:
     - cococity/coco-pyeonhansesang-apartment
+  d47c0d08:
+    - jasoncw/vanwingerden-plaza-c
   d4d88fa2:
     - mattb325/batprops-w2w-vol01
   d4f4c61e:
@@ -1980,8 +2164,18 @@ buildings:
     - csx/mega-props-vol05
   d858622c:
     - pegasus/spam
+  dbaa1b0a:
+    - jasoncw/us-bank-center
+  dbb0948c:
+    - jasoncw/us-bank-center
   dbd9dfdc:
     - csx/mega-props-vol05
+  dc444322:
+    - jasoncw/union-bank-plaza
+  dc444ff8:
+    - jasoncw/union-bank-plaza
+  dc4454a1:
+    - jasoncw/union-bank-plaza
   dc497de2:
     - mattb325/batprops-small-modern-houses
   dc4d4eff:
@@ -1994,14 +2188,24 @@ buildings:
     - mikeseith/multi-level-modular-garages
   dcf36fc8:
     - mikeseith/multi-level-modular-garages
+  dd0cb91a:
+    - jasoncw/murray-musem-of-modern-art
   dd0ef80b:
     - mikeseith/multi-level-modular-garages
   dd16f12b:
     - mikeseith/multi-level-modular-garages
+  df2bfc49:
+    - jasoncw/target
+  df58f33f:
+    - jasoncw/turtle-publishing
   df9ee321:
     - pegasus/spam
   dfd13744:
     - 11241036/seasonal-woods
+  dff45b89:
+    - jasoncw/hsbc-tower
+  e1d44d96:
+    - jasoncw/innovation-center
   e21093dc:
     - 11241036/seasonal-woods
   e2109473:
@@ -2046,6 +2250,8 @@ buildings:
     - csx/mega-props-vol06
   eeb00098:
     - gascooker/mega-props-vol01
+  ef7f3d32:
+    - jasoncw/metropolitan-exchange-plaza
   f05f8545:
     - pegasus/spam
   f08a0ff5:
@@ -2090,6 +2296,8 @@ buildings:
     - csx/mega-props-vol05
   f1538897:
     - csx/mega-props-vol06
+  f184e53f:
+    - jasoncw/train-station-set
   f1851856:
     - mickebear/mega-props-vol02
   f1851875:
@@ -2128,6 +2336,8 @@ buildings:
     - pegasus/spam
   fa670531:
     - csx/mega-props-vol05
+  fbb09f4c:
+    - jasoncw/us-bank-center
   fc6fbcd4:
     - csx/mega-props-vol05
   fcf36d53:
@@ -2140,6 +2350,12 @@ buildings:
     - pegasus/spam
 
 lots:
+  0093a784:
+    - jasoncw/great-northern-hotel
+  00bcd402:
+    - jasoncw/small-police-station-2
+  01ffed1b:
+    - jasoncw/miu-miu
   '02109412':
     - 11241036/seasonal-woods
   0210945f:
@@ -2216,12 +2432,24 @@ lots:
     - 11241036/seasonal-woods-2
   0c965eed:
     - 11241036/seasonal-woods-2
+  0cd31aea:
+    - jasoncw/judith-krug-branch-library
   0d1d6acb:
     - maxis/stone-house
   0d4fdea6:
     - maxis/longfellow-castle
+  0e11edcd:
+    - jasoncw/kallax-residential
+  101c2267:
+    - jasoncw/alaska-building
   10a8e301:
     - pegasus/spam
+  10bd03c4:
+    - jasoncw/small-police-station-1
+  '1134e708':
+    - jasoncw/korimako-hotel
+  116055b7:
+    - jasoncw/model-discount-furniture
   1443f7f3:
     - cococity/coco-pyeonhansesang-apartment
   1443fd77:
@@ -2238,16 +2466,30 @@ lots:
     - mikeseith/multi-level-modular-garages
   198f529d:
     - pegasus/spam
+  1baa2c4c:
+    - jasoncw/us-bank-center
+  1c80ef7b:
+    - jasoncw/morrow-building
   1cf37210:
     - mikeseith/multi-level-modular-garages
   1cf8e57f:
     - mikeseith/multi-level-modular-garages
+  1d734f1d:
+    - jasoncw/farrands-department-store
+  1d9870ee:
+    - jasoncw/db-franklin-co
+  1e611d04:
+    - jasoncw/apple-store-pack
+  1e620bda:
+    - jasoncw/apple-store-pack
   1fd0c207:
     - 11241036/seasonal-woods
   1fd13640:
     - 11241036/seasonal-woods
   1fd257c7:
     - 11241036/seasonal-woods
+  '21857967':
+    - jasoncw/napier-tower
   2348d63f:
     - pegasus/spam
   25351d94:
@@ -2270,6 +2512,8 @@ lots:
     - buggi/commercial-6by-collection
   2c21e683:
     - buggi/residential-6by-collection
+  2c443943:
+    - jasoncw/union-bank-plaza
   2d1e7a9e:
     - maxis/temple-of-grutz
   2d217719:
@@ -2278,18 +2522,28 @@ lots:
     - toroca/5x5-and-6x6-malls
   2e891faa:
     - maxis/shorty-burger
+  2ee0c2a9:
+    - jasoncw/denton-corporation
   30c052e8:
     - jeronij/ship-pack
   30c05b68:
     - jeronij/ship-pack
+  30e5ec08:
+    - jasoncw/elviras-halloween-emporium
   30ebdd06:
     - pegasus/spam
+  31375d81:
+    - jasoncw/geodesic-dome-pavilion
+  31ae2d4c:
+    - jasoncw/magasin-valois
   3426a2a4:
     - cococity/coco-hillstate-apartment
   3936f638:
     - pegasus/spam
   3962e3b9:
     - mikeseith/multi-level-modular-garages
+  3c4455ca:
+    - jasoncw/union-bank-plaza
   3c5ea03a:
     - pegasus/spam
   3cf369e5:
@@ -2298,12 +2552,18 @@ lots:
     - mikeseith/multi-level-modular-garages
   3d205411:
     - mikeseith/multi-level-modular-garages
+  3e611db0:
+    - jasoncw/apple-store-pack
+  3f578d33:
+    - jasoncw/turtle-publishing
   3fd1357d:
     - 11241036/seasonal-woods
   3fd135c2:
     - 11241036/seasonal-woods
   3fd136c4:
     - 11241036/seasonal-woods
+  41ae2ba3:
+    - jasoncw/magasin-valois
   4210942a:
     - 11241036/seasonal-woods
   4210943d:
@@ -2332,14 +2592,22 @@ lots:
     - buggi/commercial-6by-collection
   4c21e77e:
     - buggi/residential-6by-collection
+  4c46eb94:
+    - jasoncw/wellington-place
   4c9fcb9f:
     - maxis/taipei-art-museum
   4d50ba18:
     - maxis/longfellow-castle
   4d670471:
     - toroca/5x5-and-6x6-malls
+  51ab888e:
+    - jasoncw/pizza-ribs-sushi
+  51d5c7c3:
+    - jasoncw/webb-chapel-park-pavilion
   521d0b74:
     - 11241036/seasonal-woods-2
+  54b0b9a8:
+    - jasoncw/perry-station
   56fdac74:
     - pegasus/terrain-kit
   59306c7c:
@@ -2352,6 +2620,10 @@ lots:
     - mikeseith/multi-level-modular-garages
   5960c0eb:
     - mikeseith/multi-level-modular-garages
+  5bd98c09:
+    - jasoncw/2-commerce-street
+  5bd9b442:
+    - jasoncw/2-commerce-street
   5cf36ce3:
     - mikeseith/multi-level-modular-garages
   5cf36e24:
@@ -2362,8 +2634,18 @@ lots:
     - mikeseith/multi-level-modular-garages
   5fd25af5:
     - 11241036/seasonal-woods
+  6030c92c:
+    - jasoncw/the-paragon
+  6094ece9:
+    - jasoncw/great-northern-hotel
+  610e5fb1:
+    - jasoncw/rasmussen-place
+  610fe482:
+    - jasoncw/surfside-apartments
   617c94c7:
     - pegasus/spam
+  624f0858:
+    - jasoncw/pietzsch-house
   645e467b:
     - ripplejet/census-repository-building
   6471f58b:
@@ -2394,8 +2676,24 @@ lots:
     - buggi/residential-6by-collection
   6d670a55:
     - toroca/5x5-and-6x6-malls
+  6d90bb78:
+    - jasoncw/db-franklin-co
+  6e39a262:
+    - jasoncw/continental-bank-and-trust
+  706db573:
+    - jasoncw/hotel-utica
+  7097cb41:
+    - jasoncw/beacon-apartments
   70b5cb20:
     - jeronij/ship-pack
+  '710e6021':
+    - jasoncw/rasmussen-place
+  718a4129:
+    - jasoncw/centron-center
+  71d45402:
+    - jasoncw/innovation-center
+  724d9dcc:
+    - jasoncw/sp-building
   7426bfa5:
     - cococity/coco-hillstate-apartment
   75f8d36d:
@@ -2408,12 +2706,26 @@ lots:
     - mikeseith/multi-level-modular-garages
   7960c078:
     - mikeseith/multi-level-modular-garages
+  7c48334e:
+    - jasoncw/great-lakes-ems-academy
+  7c80eb61:
+    - jasoncw/morrow-building
+  7dd4ff57:
+    - jasoncw/norfair-corporation
+  7f807b23:
+    - jasoncw/metropolitan-exchange-plaza
   7fd137f9:
     - 11241036/seasonal-woods
   7fd255f1:
     - 11241036/seasonal-woods
   7fd25a02:
     - 11241036/seasonal-woods
+  8097c8e9:
+    - jasoncw/beacon-apartments
+  80e5e1af:
+    - jasoncw/elviras-halloween-emporium
+  '82237373':
+    - jasoncw/elks-building
   8570a365:
     - 11241036/seasonal-woods-2
   8570a4bf:
@@ -2438,6 +2750,14 @@ lots:
     - maxis/rockefeller-center
   8d66fc4f:
     - toroca/5x5-and-6x6-malls
+  8dd50177:
+    - jasoncw/norfair-corporation
+  8e620a6b:
+    - jasoncw/apple-store-pack
+  8e8b21d2:
+    - jasoncw/wellman-building
+  8f65cd97:
+    - jasoncw/dreieck-park
   '90001250':
     - pegasus/spam
   '90001251':
@@ -2486,12 +2806,22 @@ lots:
     - pegasus/spam
   '90001390':
     - pegasus/spam
+  '90644677':
+    - jasoncw/medium-sized-train-station
   90be0bd3:
     - jeronij/ship-pack
   90c1db9e:
     - jeronij/ship-pack
   90c204fd:
     - jeronij/ship-pack
+  '90e32499':
+    - jasoncw/cecil-hotel
+  '90e43813':
+    - jasoncw/cecil-hotel
+  9184ac98:
+    - jasoncw/train-station-set
+  91d45495:
+    - jasoncw/innovation-center
   '94169840':
     - pegasus/spam
   9426d3df:
@@ -2502,10 +2832,32 @@ lots:
     - mikeseith/multi-level-modular-garages
   9a4c8535:
     - pegasus/spam
+  9baa1d9f:
+    - jasoncw/us-bank-center
+  9dd268d0:
+    - jasoncw/norfair-corporation
+  9e39729e:
+    - jasoncw/continental-bank-and-trust
+  9e8b08eb:
+    - jasoncw/wellman-building
+  9ee0e033:
+    - jasoncw/denton-corporation
+  9f0448c8:
+    - jasoncw/savisaar-insurance
+  9f2bfda5:
+    - jasoncw/target
   9fd25c1e:
     - 11241036/seasonal-woods
   9fd5e513:
     - 11241036/seasonal-woods
+  a01cf76f:
+    - jasoncw/alaska-building
+  a06d80cf:
+    - jasoncw/hotel-utica
+  a093d17f:
+    - jasoncw/emerson-apartments
+  a188eaef:
+    - jasoncw/centron-center
   a5351d45:
     - 11241036/seasonal-woods-2
   a7832651:
@@ -2532,20 +2884,40 @@ lots:
     - toroca/5x5-and-6x6-malls
   ae52bebe:
     - maxis/sobchak-lanes
+  b094ebb8:
+    - jasoncw/great-northern-hotel
+  b184c540:
+    - jasoncw/train-station-set
+  b2a60a95:
+    - jasoncw/basildon-terraces
   b91ea651:
     - pegasus/spam
   b960bedd:
     - mikeseith/multi-level-modular-garages
+  bbaa25f0:
+    - jasoncw/us-bank-center
+  bbb0996a:
+    - jasoncw/us-bank-center
+  bc4453cf:
+    - jasoncw/union-bank-plaza
+  bc482828:
+    - jasoncw/great-lakes-ems-academy
   bcf36100:
     - mikeseith/multi-level-modular-garages
   bcf36894:
     - mikeseith/multi-level-modular-garages
   bcf36f3c:
     - mikeseith/multi-level-modular-garages
+  be620cbe:
+    - jasoncw/apple-store-pack
+  bf0336ba:
+    - jasoncw/savisaar-insurance
   bfd25904:
     - 11241036/seasonal-woods
   bfd5e470:
     - 11241036/seasonal-woods
+  bff2feb1:
+    - jasoncw/hsbc-tower
   c21093fe:
     - 11241036/seasonal-woods
   c570a47c:
@@ -2574,10 +2946,20 @@ lots:
     - buggi/residential-6by-collection
   cc21e746:
     - buggi/residential-6by-collection
+  ccdc1adf:
+    - jasoncw/albee-amphitheater
   cd670826:
     - toroca/5x5-and-6x6-malls
+  cd721b49:
+    - jasoncw/farrands-department-store
   cea1e6b4:
     - maxis/luckys-hang-ten
+  cf2bfc9e:
+    - jasoncw/target
+  cfbf7787:
+    - jasoncw/shields-youth-center
+  d04dae96:
+    - jasoncw/small-train-station
   d0bf0413:
     - jeronij/ship-pack
   d0bf0a44:
@@ -2586,6 +2968,8 @@ lots:
     - jeronij/ship-pack
   d0c05314:
     - jeronij/ship-pack
+  d1362cb7:
+    - jasoncw/korimako-hotel
   d41847ed:
     - cococity/coco-samsung-apartment
   d4185370:
@@ -2598,24 +2982,52 @@ lots:
     - cococity/coco-hillstate-apartment
   d4440620:
     - cococity/coco-pyeonhansesang-apartment
+  d47c0d08:
+    - jasoncw/vanwingerden-plaza-c
   d6fe0d77:
     - pegasus/terrain-kit
+  dc444322:
+    - jasoncw/union-bank-plaza
+  dc444ff8:
+    - jasoncw/union-bank-plaza
+  dc4454a1:
+    - jasoncw/union-bank-plaza
   dcf36951:
     - mikeseith/multi-level-modular-garages
   dcf36a78:
     - mikeseith/multi-level-modular-garages
   dcf36fc8:
     - mikeseith/multi-level-modular-garages
+  dd0cb91a:
+    - jasoncw/murray-musem-of-modern-art
   dd0ef80b:
     - mikeseith/multi-level-modular-garages
   dd16f12b:
     - mikeseith/multi-level-modular-garages
+  de11a333:
+    - jasoncw/kallax-residential
+  de11b10c:
+    - jasoncw/kallax-residential
+  df58f33f:
+    - jasoncw/turtle-publishing
   dfd13744:
     - 11241036/seasonal-woods
+  dff45b89:
+    - jasoncw/hsbc-tower
+  e10fe1dc:
+    - jasoncw/surfside-apartments
+  e1d44d96:
+    - jasoncw/innovation-center
+  e1fe754b:
+    - jasoncw/delitz-designer-gallery
   e21093dc:
     - 11241036/seasonal-woods
   e2109473:
     - 11241036/seasonal-woods
+  e24f17c0:
+    - jasoncw/pietzsch-house
+  e2a6032a:
+    - jasoncw/basildon-terraces
   e5351d66:
     - 11241036/seasonal-woods-2
   e570a2ac:
@@ -2658,10 +3070,14 @@ lots:
     - toroca/5x5-and-6x6-malls
   ed670b23:
     - toroca/5x5-and-6x6-malls
+  ef7f3d32:
+    - jasoncw/metropolitan-exchange-plaza
   f0bf0dab:
     - jeronij/ship-pack
   f0c045df:
     - jeronij/ship-pack
+  f184e53f:
+    - jasoncw/train-station-set
   f9235e5a:
     - pegasus/spam
   f936f4fd:
@@ -2670,6 +3086,10 @@ lots:
     - pegasus/spam
   f945b3f3:
     - pegasus/spam
+  fbb09553:
+    - jasoncw/us-bank-center
+  fbb09f4c:
+    - jasoncw/us-bank-center
   fcf36d53:
     - mikeseith/multi-level-modular-garages
   feb036c0:
@@ -18484,6 +18904,8 @@ props:
     - cycledogg/mega-props-vol02
   3a599049:
     - xannepan/mega-props-vol02
+  3a5b3095:
+    - jasoncw/us-bank-center
   3a5c082b:
     - vip/rural-pack
   3a62af42:
@@ -19278,6 +19700,10 @@ props:
     - girafe/carpack
   3f9e740c:
     - girafe/carpack
+  3fa019bb:
+    - mipro/mipro-essentials
+  3fa022ae:
+    - mipro/mipro-essentials
   3faba9ab:
     - girafe/carpack
   3fb00000:
@@ -29372,6 +29798,8 @@ props:
     - mattb325/batprops-vol03
   7cd93583:
     - mattb325/batprops-vol04
+  7cdc1afe:
+    - jasoncw/albee-amphitheater
   7cdf831e:
     - xannepan/mega-props-vol05
   7cdf8341:
@@ -39630,6 +40058,8 @@ props:
     - bsc/misc-props-vol02
   bf6237cf:
     - xannepan/mega-props-vol03
+  bf6721c6:
+    - jasoncw/dreieck-park
   bf69806b:
     - girafe/flora-pack
   bf6980a0:
@@ -59347,6 +59777,28 @@ textures:
     - sfbt/essentials
   f488f070:
     - sfbt/essentials
+  f5c04000:
+    - mipro/mipro-essentials
+  f5c04005:
+    - mipro/mipro-essentials
+  f5c0400a:
+    - mipro/mipro-essentials
+  f5c04010:
+    - mipro/mipro-essentials
+  f5c04015:
+    - mipro/mipro-essentials
+  f5c0401a:
+    - mipro/mipro-essentials
+  f5c04020:
+    - mipro/mipro-essentials
+  f5c04025:
+    - mipro/mipro-essentials
+  f5c0402a:
+    - mipro/mipro-essentials
+  f5c04030:
+    - mipro/mipro-essentials
+  f5c04035:
+    - mipro/mipro-essentials
   f758000a:
     - bsc/textures-vol03
   f7580010:

@@ -18030,10 +18030,123 @@ assets:
     authors:
       - Jasoncw
     category: 108-parks-plazas
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div>\n\t<p>\n\t\tAlbee Amphitheater is a 2x2 park lot with a sunken reflecting pool and amphitheater style seating. The pool can be converted into a stage area for performances. Its stats are in between Maxis's medium and large plazas, and it can be found near the end of the parks menu.\_\n\t</p>\n\n\t<ul>\n\t\t<li>\n\t\t\t2x2 park lot.\n\t\t</li>\n\t\t<li>\n\t\t\tMaxisNite and DarkNite versions included.\_\n\t\t</li>\n\t\t<li>\n\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\_\n\t\t</li>\n\t</ul>\n\n\t<p>\n\t\t\_Installation Instructions:\_\n\t</p>\n\n\t<ol>\n\t\t<li>\n\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t</li>\n\t\t<li>\n\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t</li>\n\t\t<li>\n\t\t\tSC4Lot files are descriptively titled. Remove the lot versions which you do not want. Do not remove any .SC4Model files.\n\t\t</li>\n\t</ol>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/Albee-Amphitheater-00.jpg.766dfecb5bf7687330e7a4854ad472b4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_11/Albee-Amphitheater-01.jpg.bf938a2610c3a899237652f1fa68e930.jpg
     lastModified: 2021-11-01T18:49:47.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Albee Amphitheater
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_11/Albee-Amphitheater-00.thumb.jpg.2db83af0831ff45a2f9dfb69ad43e1c1.jpg
     url: https://community.simtropolis.com/files/file/34731-albee-amphitheater/
+    variants:
+      '190347':
+        buildings:
+          Jasoncw - Albee Amphitheater (MN)/Jasoncw - Albee Amphitheater.SC4Lot:
+            ccdc1adf:
+              bulldoze: 20
+              cost: 300
+              garbage: 2
+              label: Albee Amphitheater
+              maintenance: 30
+              menu: Parks
+              model: 00000000-0000
+              name: Jasoncw - Albee Amphitheater
+              pollution: 4294967295
+              relief:
+                r$: 4000
+                r$$: 4000
+                r$$$: 4000
+        filename: Jasoncw - Albee Amphitheater (MN).zip
+        files:
+          - Jasoncw - Albee Amphitheater (MN)/Jasoncw - Albee Amphitheater (DN).SC4Model
+          - Jasoncw - Albee Amphitheater (MN)/Jasoncw - Albee Amphitheater.SC4Lot
+        lots:
+          Jasoncw - Albee Amphitheater (MN)/Jasoncw - Albee Amphitheater.SC4Lot:
+            ccdc1adf:
+              building: ccdc1adf
+              name: PLOP_2x2_Albee Amphitheater
+              props:
+                - 7cdc1afe
+                - 2a100000
+                - 2a9e0000
+                - 2aa70000
+                - 1e9a0000
+                - '28610000'
+                - 2aa30000
+                - 28a20000
+              size: 2x2
+              textures:
+                - 252b0000
+                - '25900000'
+                - 25c10000
+        models:
+          Jasoncw - Albee Amphitheater (MN)/Jasoncw - Albee Amphitheater (DN).SC4Model:
+            - 2c5d87ab
+        props:
+          Jasoncw - Albee Amphitheater (MN)/Jasoncw - Albee Amphitheater.SC4Lot:
+            7cdc1afe:
+              model: 2c5d87ab
+              name: Jasoncw - Albee Amphitheater
+        sha256: f1247e57d103108b129ddb042705d810d00c598d3fdaaabd1351f3ac62fe617c
+        size: 349503
+        uncompressed: 424859
+      '190348':
+        buildings:
+          Jasoncw - Albee Amphitheater (DN)/Jasoncw - Albee Amphitheater.SC4Lot:
+            ccdc1adf:
+              bulldoze: 20
+              cost: 300
+              garbage: 2
+              label: Albee Amphitheater
+              maintenance: 30
+              menu: Parks
+              model: 00000000-0000
+              name: Jasoncw - Albee Amphitheater
+              pollution: 4294967295
+              relief:
+                r$: 4000
+                r$$: 4000
+                r$$$: 4000
+        filename: Jasoncw - Albee Amphitheater (DN).zip
+        files:
+          - Jasoncw - Albee Amphitheater (DN)/Jasoncw - Albee Amphitheater (DN).SC4Model
+          - Jasoncw - Albee Amphitheater (DN)/Jasoncw - Albee Amphitheater.SC4Lot
+        lots:
+          Jasoncw - Albee Amphitheater (DN)/Jasoncw - Albee Amphitheater.SC4Lot:
+            ccdc1adf:
+              building: ccdc1adf
+              name: PLOP_2x2_Albee Amphitheater
+              props:
+                - 7cdc1afe
+                - 2a100000
+                - 2a9e0000
+                - 2aa70000
+                - 1e9a0000
+                - '28610000'
+                - 2aa30000
+                - 28a20000
+              size: 2x2
+              textures:
+                - 252b0000
+                - '25900000'
+                - 25c10000
+        models:
+          Jasoncw - Albee Amphitheater (DN)/Jasoncw - Albee Amphitheater (DN).SC4Model:
+            - 2c5d87ab
+        props:
+          Jasoncw - Albee Amphitheater (DN)/Jasoncw - Albee Amphitheater.SC4Lot:
+            7cdc1afe:
+              model: 2c5d87ab
+              name: Jasoncw - Albee Amphitheater
+        sha256: 614bd52ec493b69a649f6562535cf192f32cd031600b99b7afa8b969bd94cef6
+        size: 349503
+        uncompressed: 424859
+    version: 1.0.0
   simtropolis/34748:
     assetId: simtropolis/34748-diagonal-stone-paved-filler-lots
     authors:
@@ -18234,20 +18347,184 @@ assets:
     assetId: simtropolis/35368-dreieck-park
     authors:
       - Jasoncw
+    buildings:
+      Jasoncw - Dreieck Park/Jasoncw - Dreieck Park (PZ3x3).SC4Lot:
+        8f65cd97:
+          bulldoze: 30
+          cost: 470
+          maintenance: 60
+          menu: Parks
+          model: 00000000-0000
+          name: Jasoncw - Dreieck Park (PZ3x3)
+          pollution: 4294967278
+          pollutionRadius: 6
+          relief:
+            r$: 2250
+            r$$: 2250
+            r$$$: 2250
+          water: 15
+          waterPollution: 3
+          waterPollutionRadius: 3
     category: 108-parks-plazas
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-1sp3zau-0 fYcGch sc-1di2uql-0 emZZei\" data-tag=\"post-content\">\n\t<p>\n\t\tDreieck Park is a triangular park, found near the end of the parks menu. The lot is a 3x3, with overhanging corners creating a park with sides that are 6 tiles long.\_\n\t</p>\n\n\t<p>\n\t\tSince the park this is based on does not have any artificial lighting, I have not rendered nitelites for this <abbr title=\"Building Architect Tool\">BAT</abbr>, and so there are no separate MaxisNite and DarkNite versions.\_\n\t</p>\n\n\t<ul>\n\t\t<li>\n\t\t\t3x3 park lot, with 6x6 overhang.\n\t\t</li>\n\t\t<li>\n\t\t\tNo nitelites.\n\t\t</li>\n\t</ul>\n\n\t<p>\n\t\tInstallation Instructions:\n\t</p>\n\n\t<ol>\n\t\t<li>\n\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t</li>\n\t</ol>\n</div>\n\n\t\t\t\t\t\t</body>"
+    filename: Jasoncw - Dreieck Park.zip
+    files:
+      - Jasoncw - Dreieck Park/Jasoncw - Dreieck Park (PZ3x3).SC4Lot
+      - Jasoncw - Dreieck Park/Jasoncw - Dreieck Park (Prop).SC4Desc
+      - Jasoncw - Dreieck Park/Jasoncw - Dreieck Park.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/63a7db74f38d0_DreieckPark00.jpg.d6490d3f26ef4be9bd02382c1cadd963.jpg
     lastModified: 2022-12-25T05:12:21.000Z
+    lots:
+      Jasoncw - Dreieck Park/Jasoncw - Dreieck Park (PZ3x3).SC4Lot:
+        8f65cd97:
+          building: 8f65cd97
+          name: PLOP_3x3_Dreieck Park
+          props:
+            - a0000065
+            - a0000066
+            - a0000067
+            - bf6721c6
+          size: 3x3
+          textures:
+            - '26210000'
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
+    models:
+      Jasoncw - Dreieck Park/Jasoncw - Dreieck Park.SC4Model:
+        - eee4c7c1
     name: Dreieck Park
+    props:
+      Jasoncw - Dreieck Park/Jasoncw - Dreieck Park (Prop).SC4Desc:
+        bf6721c6:
+          model: eee4c7c1
+          name: Jasoncw - Dreieck Park (Prop)
+    sha256: 922fe24854e997bff7ab2f08c0b21f4b6c9f440d317a73c0efa01b7a5d400399
+    size: 1000791
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_12/63a7dbb5bcfcc_DreieckPark00.thumb.jpg.fbe32b940c152d25ec937ccf3375c97a.jpg
+    uncompressed: 1190770
     url: https://community.simtropolis.com/files/file/35368-dreieck-park/
+    version: 1.0.0
   simtropolis/35370:
     assetId: simtropolis/35370-shields-youth-center
     authors:
       - Jasoncw
     category: 108-parks-plazas
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-1sp3zau-0 fYcGch sc-1di2uql-0 emZZei\" data-tag=\"post-content\">\n\t<p>\n\t\tShields Youth Center is a 2x3 park, and contains a sports hall/theater, music recording and practice room, computer room, social lounge, kitchen, and counseling offices.\_\n\t</p>\n\n\t<ul>\n\t\t<li>\n\t\t\t2x3 park lot.\n\t\t</li>\n\t\t<li>\n\t\t\tMaxisNite and DarkNite versions included.\n\t\t</li>\n\t\t<li>\n\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\" target=\"_blank\">Day and Nite Modd</a>.\n\t\t</li>\n\t</ul>\n\n\t<p>\n\t\tInstallation Instructions:\n\t</p>\n\n\t<ol>\n\t\t<li>\n\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t</li>\n\t\t<li>\n\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t</li>\n\t\t<li>\n\t\t\tIf you don't already have them, download and install the dependencies, linked above.\n\t\t</li>\n\t</ol>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/ShieldsYouthCenter00.jpg.12b1d469d9b3412209e257a94cfa985a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/ShieldsYouthCenter01.jpg.35d0c45659932896c92187aa3a480dd5.jpg
     lastModified: 2022-12-25T06:02:34.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Shields Youth Center
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_12/ShieldsYouthCenter00.thumb.jpg.3d22fccd6ccdfb53970fc79698bc0b3c.jpg
     url: https://community.simtropolis.com/files/file/35370-shields-youth-center/
+    variants:
+      '195910':
+        buildings:
+          Jasoncw - Shields Youth Center (MN)/Jasoncw - Shields Youth Center (PZ2x3).SC4Lot:
+            cfbf7787:
+              bulldoze: 230
+              cost: 650
+              flamability: 10
+              garbage: 2
+              landmark: -5
+              landmarkRadius: 5
+              maintenance: 75
+              menu: Parks
+              model: 0f3e3478
+              name: Jasoncw - Shields Youth Center (PZ2x3)
+              pollution: 1
+              power: 4
+              relief:
+                r$: 9000
+                r$$: 9000
+                r$$$: 9000
+              water: 12
+              waterPollution: 1
+        filename: Jasoncw - Shields Youth Center (MN).zip
+        files:
+          - Jasoncw - Shields Youth Center (MN)/Jasoncw - Shields Youth Center (MN).SC4Model
+          - Jasoncw - Shields Youth Center (MN)/Jasoncw - Shields Youth Center (PZ2x3).SC4Lot
+        lots:
+          Jasoncw - Shields Youth Center (MN)/Jasoncw - Shields Youth Center (PZ2x3).SC4Lot:
+            cfbf7787:
+              building: cfbf7787
+              name: PZ2x3_Shields Youth Center
+              props:
+                - '28580000'
+                - '28980000'
+                - '28990000'
+                - 2a9c0000
+                - 28a30000
+              size: 2x3
+              textures:
+                - 258d0000
+                - 258f0000
+                - '26210000'
+                - 25fa0000
+        models:
+          Jasoncw - Shields Youth Center (MN)/Jasoncw - Shields Youth Center (MN).SC4Model:
+            - 0f3e3478
+        sha256: be4f6ab1d154ccedcdb0d1c84ae376a02fff8e751198b635244365ceacd079ad
+        size: 687677
+        uncompressed: 837793
+      '195911':
+        buildings:
+          Jasoncw - Shields Youth Center (DN)/Jasoncw - Shields Youth Center (PZ2x3).SC4Lot:
+            cfbf7787:
+              bulldoze: 230
+              cost: 650
+              flamability: 10
+              garbage: 2
+              landmark: -5
+              landmarkRadius: 5
+              maintenance: 75
+              menu: Parks
+              model: 0f3e3478
+              name: Jasoncw - Shields Youth Center (PZ2x3)
+              pollution: 1
+              power: 4
+              relief:
+                r$: 9000
+                r$$: 9000
+                r$$$: 9000
+              water: 12
+              waterPollution: 1
+        filename: Jasoncw - Shields Youth Center (DN).zip
+        files:
+          - Jasoncw - Shields Youth Center (DN)/Jasoncw - Shields Youth Center (DN).SC4Model
+          - Jasoncw - Shields Youth Center (DN)/Jasoncw - Shields Youth Center (PZ2x3).SC4Lot
+        lots:
+          Jasoncw - Shields Youth Center (DN)/Jasoncw - Shields Youth Center (PZ2x3).SC4Lot:
+            cfbf7787:
+              building: cfbf7787
+              name: PZ2x3_Shields Youth Center
+              props:
+                - '28580000'
+                - '28980000'
+                - '28990000'
+                - 2a9c0000
+                - 28a30000
+              size: 2x3
+              textures:
+                - 258d0000
+                - 258f0000
+                - '26210000'
+                - 25fa0000
+        models:
+          Jasoncw - Shields Youth Center (DN)/Jasoncw - Shields Youth Center (DN).SC4Model:
+            - 0f3e3478
+        sha256: a11bef4ac3e0561cbf7c2c6941bac96e8cd6882a39947a84b9f83525849648bd
+        size: 694232
+        uncompressed: 847551
+    version: 1.0.0
   simtropolis/3544:
     assetId: simtropolis/3544-trafalgar-square
     authors:
@@ -18486,10 +18763,98 @@ assets:
     authors:
       - Jasoncw
     category: 108-parks-plazas
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-jtXEFf fDaXvQ\">\n\t<div class=\"sc-1sp3zau-0 fYCOwC sc-d4f3hw-0 iATlLz\">\n\t\t<div class=\"sc-1ye87qi-0 irEdXD\">\n\t\t\t<p>\n\t\t\t\tThis is a picnic shelter with a timber geodesic dome structure, sheathed in translucent plastic panels.\_\n\t\t\t</p>\n\n\t\t\t<p>\n\t\t\t\tIt can be found near the end of your parks menu.\_\n\t\t\t</p>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a0697d0a5f_GeodesicDomePavilion00.jpg.4a1ae4c9780a19073a12215b5439c419.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a06a50f03f_GeodesicDomePavilion01.jpg.830446bd30a6381d936afaf7bb75bee2.jpg
     lastModified: 2023-12-25T22:49:12.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Geodesic Dome Pavilion
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/658a06e84ca80_GeodesicDomePavilion00.thumb.jpg.65ee2983fa438b07f2d492b6c43a918d.jpg
     url: https://community.simtropolis.com/files/file/35898-geodesic-dome-pavilion/
+    variants:
+      '198969':
+        buildings:
+          Jasoncw - Geodesic Dome Pavilion (MN)/Jasoncw - Geodesic Dome Pavilion.SC4Lot:
+            31375d81:
+              bulldoze: 104
+              cost: 90
+              flamability: 10
+              maintenance: 69
+              menu: Parks
+              model: 50b62455
+              name: Jasoncw - Geodesic Dome Pavilion (PZ_1x1)
+              pollution: 4294967295
+              pollutionRadius: 2
+              power: 1
+              relief:
+                r$: 500
+                r$$: 500
+                r$$$: 500
+              water: 6
+              waterPollution: 1
+              waterPollutionRadius: 1
+        filename: Jasoncw - Geodesic Dome Pavilion (MN).zip
+        files:
+          - Jasoncw - Geodesic Dome Pavilion (MN)/Jasoncw - Geodesic Dome Pavilion (MN).SC4Model
+          - Jasoncw - Geodesic Dome Pavilion (MN)/Jasoncw - Geodesic Dome Pavilion.SC4Lot
+        lots:
+          Jasoncw - Geodesic Dome Pavilion (MN)/Jasoncw - Geodesic Dome Pavilion.SC4Lot:
+            31375d81:
+              building: 31375d81
+              name: PLOP_1x1_Geodesic Dome Pavilion
+              size: 1x1
+              textures:
+                - 251c0000
+        models:
+          Jasoncw - Geodesic Dome Pavilion (MN)/Jasoncw - Geodesic Dome Pavilion (MN).SC4Model:
+            - 50b62455
+        sha256: 7e089558db91dac712c4a88a651862a659248759fccaa63b6423c3b3c3e386e3
+        size: 82616
+        uncompressed: 115220
+      '198970':
+        buildings:
+          Jasoncw - Geodesic Dome Pavilion (DN)/Jasoncw - Geodesic Dome Pavilion.SC4Lot:
+            31375d81:
+              bulldoze: 104
+              cost: 90
+              flamability: 10
+              maintenance: 69
+              menu: Parks
+              model: 50b62455
+              name: Jasoncw - Geodesic Dome Pavilion (PZ_1x1)
+              pollution: 4294967295
+              pollutionRadius: 2
+              power: 1
+              relief:
+                r$: 500
+                r$$: 500
+                r$$$: 500
+              water: 6
+              waterPollution: 1
+              waterPollutionRadius: 1
+        filename: Jasoncw - Geodesic Dome Pavilion (DN).zip
+        files:
+          - Jasoncw - Geodesic Dome Pavilion (DN)/Jasoncw - Geodesic Dome Pavilion (DN).SC4Model
+          - Jasoncw - Geodesic Dome Pavilion (DN)/Jasoncw - Geodesic Dome Pavilion.SC4Lot
+        lots:
+          Jasoncw - Geodesic Dome Pavilion (DN)/Jasoncw - Geodesic Dome Pavilion.SC4Lot:
+            31375d81:
+              building: 31375d81
+              name: PLOP_1x1_Geodesic Dome Pavilion
+              size: 1x1
+              textures:
+                - 251c0000
+        models:
+          Jasoncw - Geodesic Dome Pavilion (DN)/Jasoncw - Geodesic Dome Pavilion (DN).SC4Model:
+            - 50b62455
+        sha256: 7959437568f5218f5af2d83a80a03886d628bbdd10912baccf3d9f5af49efd47
+        size: 82236
+        uncompressed: 114090
+    version: 1.0.0
   simtropolis/3590:
     assetId: simtropolis/3590-b3-fun-lots
     authors:
@@ -18932,10 +19297,99 @@ assets:
     authors:
       - Jasoncw
     category: 108-parks-plazas
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-ff361691-0 kRBAiG\">\n\t<div id=\":r5q:\">\n\t\t<div>\n\t\t\t<div class=\"sc-jrQzAO ifbETk\">\n\t\t\t\t<div class=\"sc-9c65c9e2-0 gUhzXf sc-57292f63-0 lhnNiv\">\n\t\t\t\t\t<div class=\"sc-b20d4e5f-0 jOibYJ\">\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\tWebb Chapel Park Pavilion is a picnic shelter located in Webb Chapel Park, in Dallas, Texas, USA. Along the pavilion is a grassy mound which can be used for play or for seating.\_\n\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\tIt can be found near the end of your parks menu.\n\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t2x2 park lot.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_10/670744d599952_WebbChapelParkPavilion00.jpg.e0764e308d1b5742f7b693cc83fa7480.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_10/670744ed06aa5_WebbChapelParkPavilion01.jpg.a5db8ed25bfc7685cebaa2604d9e941a.jpg
     lastModified: 2024-10-10T03:08:05.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Webb Chapel Park Pavilion
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/6707451535395_WebbChapelParkPavilion00.thumb.jpg.1c392bbfc8fbc0a882909ffa3769839d.jpg
     url: https://community.simtropolis.com/files/file/36497-webb-chapel-park-pavilion/
+    variants:
+      '203817':
+        buildings:
+          Jasoncw - Webb Chapel Park Pavilion (MN)/Jasoncw - Webb Chapel Park Pavilion (PZ_2x2).SC4Lot:
+            51d5c7c3:
+              bulldoze: 141
+              cost: 210
+              flamability: 10
+              maintenance: 87
+              menu: Parks
+              model: 9154717b
+              name: Jasoncw - Webb Chapel Park Pavilion (PZ_2x2)
+              pollution: 4294967292
+              pollutionRadius: 4
+              power: 1
+              relief:
+                r$: 2000
+                r$$: 2000
+                r$$$: 2000
+              water: 11
+              waterPollution: 2
+              waterPollutionRadius: 2
+        filename: Jasoncw - Webb Chapel Park Pavilion (MN).zip
+        files:
+          - Jasoncw - Webb Chapel Park Pavilion (MN)/Jasoncw - Webb Chapel Park Pavilion (MN).SC4Model
+          - Jasoncw - Webb Chapel Park Pavilion (MN)/Jasoncw - Webb Chapel Park Pavilion (PZ_2x2).SC4Lot
+        lots:
+          Jasoncw - Webb Chapel Park Pavilion (MN)/Jasoncw - Webb Chapel Park Pavilion (PZ_2x2).SC4Lot:
+            51d5c7c3:
+              building: 51d5c7c3
+              name: PLOP_2x2_Webb Chapel Park Pavilion
+              size: 2x2
+              textures:
+                - 252b0000
+        models:
+          Jasoncw - Webb Chapel Park Pavilion (MN)/Jasoncw - Webb Chapel Park Pavilion (MN).SC4Model:
+            - 9154717b
+        sha256: 6facd5de908dbd9f4259c7be5d527177c0b05300e6daf66b749d3317e02b940c
+        size: 127909
+        uncompressed: 172237
+      '203818':
+        buildings:
+          Jasoncw - Webb Chapel Park Pavilion (DN)/Jasoncw - Webb Chapel Park Pavilion (PZ_2x2).SC4Lot:
+            51d5c7c3:
+              bulldoze: 141
+              cost: 210
+              flamability: 10
+              maintenance: 87
+              menu: Parks
+              model: 9154717b
+              name: Jasoncw - Webb Chapel Park Pavilion (PZ_2x2)
+              pollution: 4294967292
+              pollutionRadius: 4
+              power: 1
+              relief:
+                r$: 2000
+                r$$: 2000
+                r$$$: 2000
+              water: 11
+              waterPollution: 2
+              waterPollutionRadius: 2
+        filename: Jasoncw - Webb Chapel Park Pavilion (DN).zip
+        files:
+          - Jasoncw - Webb Chapel Park Pavilion (DN)/Jasoncw - Webb Chapel Park Pavilion (DN).SC4Model
+          - Jasoncw - Webb Chapel Park Pavilion (DN)/Jasoncw - Webb Chapel Park Pavilion (PZ_2x2).SC4Lot
+        lots:
+          Jasoncw - Webb Chapel Park Pavilion (DN)/Jasoncw - Webb Chapel Park Pavilion (PZ_2x2).SC4Lot:
+            51d5c7c3:
+              building: 51d5c7c3
+              name: PLOP_2x2_Webb Chapel Park Pavilion
+              size: 2x2
+              textures:
+                - 252b0000
+        models:
+          Jasoncw - Webb Chapel Park Pavilion (DN)/Jasoncw - Webb Chapel Park Pavilion (DN).SC4Model:
+            - 9154717b
+        sha256: c45228fb8f8e9bb55af5f076a82d9875116af25f44b32f20444dfd44bf773b32
+        size: 126003
+        uncompressed: 169805
+    version: 1.0.0
   simtropolis/36530:
     assetId: simtropolis/36530-sfbt-arkenbergejoe-random-seasonal-birch-trees
     authors:

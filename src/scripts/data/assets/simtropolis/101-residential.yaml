@@ -16463,10 +16463,106 @@ assets:
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tWellington Place is an apartment building located in Chicago.\n</p>\n\n<p>\n\tIf you don't have many 3 tile deep residential growable lots, this building might grow a lot. It grows on medium and high density residential zones, and it's part of the New York and Euro tilesets.\n</p>\n\n<ul>\n\t<li>\n\t\t2x3 growable R§§ lot.<br>\n\t\t\_\n\t</li>\n\t<li>\n\t\tMaxisNite and DarkNite versions included.\n\t</li>\n\t<li>\n\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t</li>\n</ul>\n\n<p>\n\t<strong>Installation Instructions:</strong>\n</p>\n\n<ol>\n\t<li>\n\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t</li>\n\t<li>\n\t\tUnzip the .zip and move its contents to Documents/SimCity 4/Plugins.\n\t</li>\n\t<li>\n\t\tSC4Lot files are descriptively titled. Remove the lot versions which you don't want. Do not remove any .SC4Model files.\n\t</li>\n</ol>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ec72cefa4092_WellingtonPlace00.jpg.5ae82bdb870e9b43b2513b3482b66210.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ec72cfd3729d_WellingtonPlace01.jpg.c28c3d08e4793445420a867e577b0f64.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ec72d0302742_WellingtonPlace02.jpg.cdb62376ac0d8fc7d3d091889aacf1c2.jpg
     lastModified: 2020-05-22T01:50:49.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Wellington Place
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_05/5ec72ff883fff_WellingtonPlace00.thumb.jpg.c78f1680c7f5ab2dc0be5dfb6f07009a.jpg
     url: https://community.simtropolis.com/files/file/33613-wellington-place/
+    variants:
+      '181086':
+        buildings:
+          Jasoncw - Wellington Place (MN)/Jasoncw - Wellington Place (R$$6_2x3).SC4Lot:
+            5c46eb0e:
+              bulldoze: 692
+              capacity:
+                r$: 647
+                r$$: 358
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 8bc70ae0
+              name: Jasoncw - Wellington Place (R$$6_2x3)
+              pollution: 3
+              pollutionRadius: 5
+              power: 5
+              water: 14
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 9336
+        filename: Jasoncw - Wellington Place (MN).zip
+        files:
+          - Jasoncw - Wellington Place (MN)/Jasoncw - Wellington Place (MN).SC4Model
+          - Jasoncw - Wellington Place (MN)/Jasoncw - Wellington Place (R$$6_2x3).SC4Lot
+        lots:
+          Jasoncw - Wellington Place (MN)/Jasoncw - Wellington Place (R$$6_2x3).SC4Lot:
+            4c46eb94:
+              building: 5c46eb0e
+              density: medium,high
+              name: R$$6_2x3_Wellington Place
+              size: 2x3
+              stage: 6
+              textures:
+                - 258f0000
+                - 258c0000
+                - 25bf0000
+        models:
+          Jasoncw - Wellington Place (MN)/Jasoncw - Wellington Place (MN).SC4Model:
+            - 8bc70ae0
+        sha256: 3b7425135a004a6ce1ecb203efadd814b857ee5e63e9cf319d033fa37d75d587
+        size: 975188
+        uncompressed: 1163926
+      '181087':
+        buildings:
+          Jasoncw - Wellington Place (DN)/Jasoncw - Wellington Place (R$$6_2x3).SC4Lot:
+            5c46eb0e:
+              bulldoze: 692
+              capacity:
+                r$: 647
+                r$$: 358
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 8bc70ae0
+              name: Jasoncw - Wellington Place (R$$6_2x3)
+              pollution: 3
+              pollutionRadius: 5
+              power: 5
+              water: 14
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 9336
+        filename: Jasoncw - Wellington Place (DN).zip
+        files:
+          - Jasoncw - Wellington Place (DN)/Jasoncw - Wellington Place (DN).SC4Model
+          - Jasoncw - Wellington Place (DN)/Jasoncw - Wellington Place (R$$6_2x3).SC4Lot
+        lots:
+          Jasoncw - Wellington Place (DN)/Jasoncw - Wellington Place (R$$6_2x3).SC4Lot:
+            4c46eb94:
+              building: 5c46eb0e
+              density: medium,high
+              name: R$$6_2x3_Wellington Place
+              size: 2x3
+              stage: 6
+              textures:
+                - 258f0000
+                - 258c0000
+                - 25bf0000
+        models:
+          Jasoncw - Wellington Place (DN)/Jasoncw - Wellington Place (DN).SC4Model:
+            - 8bc70ae0
+        sha256: 2b2e84d5ed98b24b79d2d3d96dbe1fe87a97916e68be23e5a20f3b211655b8ce
+        size: 984426
+        uncompressed: 1174701
+    version: 1.0.0
   simtropolis/33628:
     assetId: simtropolis/33628-lagos-slum-houses
     authors:
@@ -20590,10 +20686,253 @@ assets:
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-1sp3zau-0 fhpuZT sc-1di2uql-0 bzeqit\" data-tag=\"post-content\">\n\t<p>\n\t\tThis is a pack of three residential buildings. The basic version is Kallax House, and it is a 2x2, marked with \"T\" (for \"tower\") in the filename. Another version is Kallax Housing, a 3x2 for more urban European settings, and it is marked with \"TP\" (for \"tower and pavilion\"). The final version is Palisades Place, a 3x2 wall to wall, marked with \"TT\" (for \"tower and tower\"). In the images above, the road indicates the front of the lot.\_\n\t</p>\n\n\t<p>\n\t\tAll versions are stage 6 lots which grow on medium and high density residential zones. Because of limitations in the game, ploppable residential lots are not possible, so are not included. All three versions grow in the Euro tileset. All versions are high wealth.\_\n\t</p>\n\n\t<ul>\n\t\t<li>\n\t\t\t2x2, 3x2, and 3x2 R§§§ lots.\n\t\t</li>\n\t\t<li>\n\t\t\tMaxisNite and DarkNite versions included.\n\t\t</li>\n\t\t<li>\n\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\" target=\"_blank\">Day and Nite Modd</a>.\n\t\t</li>\n\t</ul>\n\n\t<p>\n\t\tInstallation Instructions:\n\t</p>\n\n\t<ol>\n\t\t<li>\n\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t</li>\n\t\t<li>\n\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t</li>\n\t\t<li>\n\t\t\tIf there are dependencies, and you don't already have them, download and install the dependencies, linked above.\n\t\t</li>\n\t</ol>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_06/62abad600784d_Kallax00.jpg.59e1359148504e3cadcd90edfd4fc454.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_06/62abad619690b_Kallax01.jpg.51791c318e49290a418f1e5efbc981c3.jpg
     lastModified: 2022-06-16T22:25:04.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Kallax Residential
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_06/62abadbfe31fc_Kallax00.thumb.jpg.cf6444932d0d86300b4f1d3b8d518cae.jpg
     url: https://community.simtropolis.com/files/file/35206-kallax-residential/
+    variants:
+      '194433':
+        buildings:
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax House  - T (DN)/Jasoncw - Kallax House - T - Grow (R$$$6_2x2).SC4Lot:
+            be11ed96:
+              bulldoze: 531
+              capacity:
+                r$: 320
+                r$$: 178
+                r$$$: 79
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 7027d485
+              name: Jasoncw - Kallax House (R$$$6_2x2)
+              pollution: 1
+              pollutionRadius: 6
+              power: 10
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 4886
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax Housing - TP (DN)/Jasoncw - Kallax Housing - TP - Grow (R$$$6_3x2).SC4Lot:
+            1e11a30e:
+              bulldoze: 530
+              capacity:
+                r$: 507
+                r$$: 281
+                r$$$: 125
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 30278bcc
+              name: Jasoncw - Kallax Housing (R$$$6_3x2)
+              pollution: 1
+              pollutionRadius: 6
+              power: 16
+              water: 24
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 7741
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Palisades Place - TT (DN)/Jasoncw - Palisades Place - TT - Grow (R$$$6_3x2).SC4Lot:
+            1e11b0c5:
+              bulldoze: 531
+              capacity:
+                r$: 726
+                r$$: 402
+                r$$$: 177
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: d0279933
+              name: Jasoncw - Palisades Place (R$$$6_3x2)
+              pollution: 2
+              pollutionRadius: 6
+              power: 23
+              water: 33
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 11086
+        filename: Jasoncw - Kallax Residential (DN).zip
+        files:
+          - Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax House  - T (DN)/Jasoncw - Kallax House (DN).SC4Model
+          - Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax House  - T (DN)/Jasoncw - Kallax House - T - Grow (R$$$6_2x2).SC4Lot
+          - Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax Housing - TP (DN)/Jasoncw - Kallax Housing (DN).SC4Model
+          - Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax Housing - TP (DN)/Jasoncw - Kallax Housing - TP - Grow (R$$$6_3x2).SC4Lot
+          - Jasoncw - Kallax Residential (DN)/Jasoncw - Palisades Place - TT (DN)/Jasoncw - Palisades Place  (DN).SC4Model
+          - Jasoncw - Kallax Residential (DN)/Jasoncw - Palisades Place - TT (DN)/Jasoncw - Palisades Place - TT - Grow (R$$$6_3x2).SC4Lot
+        lots:
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax House  - T (DN)/Jasoncw - Kallax House - T - Grow (R$$$6_2x2).SC4Lot:
+            0e11edcd:
+              building: be11ed96
+              density: medium,high
+              name: R$$$6_2x2_Kallax House
+              props:
+                - a0000051
+              size: 2x2
+              stage: 6
+              textures:
+                - 252b0000
+                - 25ae0000
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax Housing - TP (DN)/Jasoncw - Kallax Housing - TP - Grow (R$$$6_3x2).SC4Lot:
+            de11a333:
+              building: 1e11a30e
+              density: medium,high
+              name: R$$$6_3x2_Kallax Housing
+              props:
+                - 2ac80000
+              size: 3x2
+              stage: 6
+              textures:
+                - 258f0000
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Palisades Place - TT (DN)/Jasoncw - Palisades Place - TT - Grow (R$$$6_3x2).SC4Lot:
+            de11b10c:
+              building: 1e11b0c5
+              density: medium,high
+              name: R$$$6_3x2_Palisades Place
+              props:
+                - 2ac80000
+                - 2ac30000
+                - 2a8a0000
+              size: 3x2
+              stage: 6
+              textures:
+                - 258f0000
+                - 251c0000
+                - 25ab0000
+        models:
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax House  - T (DN)/Jasoncw - Kallax House (DN).SC4Model:
+            - 7027d485
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax Housing - TP (DN)/Jasoncw - Kallax Housing (DN).SC4Model:
+            - 30278bcc
+          Jasoncw - Kallax Residential (DN)/Jasoncw - Palisades Place - TT (DN)/Jasoncw - Palisades Place  (DN).SC4Model:
+            - d0279933
+        sha256: 91289e28463be87be4213845b7ef00bca24e7da32b474603bdce751a6ca012f9
+        size: 2032799
+        uncompressed: 2434737
+      '194434':
+        buildings:
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax House - T (MN)/Jasoncw - Kallax House - T - Grow (R$$$6_2x2).SC4Lot:
+            be11ed96:
+              bulldoze: 531
+              capacity:
+                r$: 320
+                r$$: 178
+                r$$$: 79
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 7027d485
+              name: Jasoncw - Kallax House (R$$$6_2x2)
+              pollution: 1
+              pollutionRadius: 6
+              power: 10
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 4886
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax Housing - TP (MN)/Jasoncw - Kallax Housing - TP - Grow (R$$$6_3x2).SC4Lot:
+            1e11a30e:
+              bulldoze: 530
+              capacity:
+                r$: 507
+                r$$: 281
+                r$$$: 125
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 30278bcc
+              name: Jasoncw - Kallax Housing (R$$$6_3x2)
+              pollution: 1
+              pollutionRadius: 6
+              power: 16
+              water: 24
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 7741
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Palisades Place - TT (MN)/Jasoncw - Palisades Place - TT - Grow (R$$$6_3x2).SC4Lot:
+            1e11b0c5:
+              bulldoze: 531
+              capacity:
+                r$: 726
+                r$$: 402
+                r$$$: 177
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: d0279933
+              name: Jasoncw - Palisades Place (R$$$6_3x2)
+              pollution: 2
+              pollutionRadius: 6
+              power: 23
+              water: 33
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 11086
+        filename: Jasoncw - Kallax Residential (MN).zip
+        files:
+          - Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax House - T (MN)/Jasoncw - Kallax House (MN).SC4Model
+          - Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax House - T (MN)/Jasoncw - Kallax House - T - Grow (R$$$6_2x2).SC4Lot
+          - Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax Housing - TP (MN)/Jasoncw - Kallax Housing (MN).SC4Model
+          - Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax Housing - TP (MN)/Jasoncw - Kallax Housing - TP - Grow (R$$$6_3x2).SC4Lot
+          - Jasoncw - Kallax Residential (MN)/Jasoncw - Palisades Place - TT (MN)/Jasoncw - Palisades Place (MN).SC4Model
+          - Jasoncw - Kallax Residential (MN)/Jasoncw - Palisades Place - TT (MN)/Jasoncw - Palisades Place - TT - Grow (R$$$6_3x2).SC4Lot
+        lots:
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax House - T (MN)/Jasoncw - Kallax House - T - Grow (R$$$6_2x2).SC4Lot:
+            0e11edcd:
+              building: be11ed96
+              density: medium,high
+              name: R$$$6_2x2_Kallax House
+              props:
+                - a0000051
+              size: 2x2
+              stage: 6
+              textures:
+                - 252b0000
+                - 25ae0000
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax Housing - TP (MN)/Jasoncw - Kallax Housing - TP - Grow (R$$$6_3x2).SC4Lot:
+            de11a333:
+              building: 1e11a30e
+              density: medium,high
+              name: R$$$6_3x2_Kallax Housing
+              props:
+                - 2ac80000
+              size: 3x2
+              stage: 6
+              textures:
+                - 258f0000
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Palisades Place - TT (MN)/Jasoncw - Palisades Place - TT - Grow (R$$$6_3x2).SC4Lot:
+            de11b10c:
+              building: 1e11b0c5
+              density: medium,high
+              name: R$$$6_3x2_Palisades Place
+              props:
+                - 2ac80000
+                - 2ac30000
+                - 2a8a0000
+              size: 3x2
+              stage: 6
+              textures:
+                - 258f0000
+                - 251c0000
+                - 25ab0000
+        models:
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax House - T (MN)/Jasoncw - Kallax House (MN).SC4Model:
+            - 7027d485
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax Housing - TP (MN)/Jasoncw - Kallax Housing (MN).SC4Model:
+            - 30278bcc
+          Jasoncw - Kallax Residential (MN)/Jasoncw - Palisades Place - TT (MN)/Jasoncw - Palisades Place (MN).SC4Model:
+            - d0279933
+        sha256: 29fe34bd09cfb36037a172f3fb2c145d090657ee0b90326255280009084c5f78
+        size: 2085022
+        uncompressed: 2497889
+    version: 1.0.0
   simtropolis/35211:
     assetId: simtropolis/35211-palazzo-derio
     authors:
@@ -20698,10 +21037,168 @@ assets:
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/29130-mipro-essentials
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-1sp3zau-0 jaefFT sc-1di2uql-0 bzeqit\" data-tag=\"post-content\">\n\t<div class=\"sc-1sp3zau-0 jaefFT sc-1di2uql-0 jzulvI\" data-tag=\"post-content\">\n\t\t<p>\n\t\t\tBeacon Apartments is a 1x2 apartment building for the Chicago 1890 and New York 1940 tilesets. A mirrored version is also included.\n\t\t</p>\n\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t1x2 growable R§§ corner lots.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\" target=\"_blank\">Day and Nite Modd</a>.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tRequires <a href=\"https://community.simtropolis.com/files/file/29130-mipro-essentials/\" rel=\"\" target=\"_blank\"><abbr title='Previously known as the \"Barry Sanders Project\" (BSP)'>mipro</abbr> Essentials - December 2015</a> or newer.\n\t\t\t</li>\n\t\t</ul>\n\n\t\t<p>\n\t\t\tInstallation Instructions:\n\t\t</p>\n\n\t\t<ol>\n\t\t\t<li>\n\t\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tIf you don't already have them, download and install the dependencies, linked above.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tSC4Lot files are descriptively titled. Remove the lot versions which you do not want. Do not remove any .SC4Model files.\n\t\t\t</li>\n\t\t</ol>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/631297fd3cb0d_BeaconApartmentsL00-STEX.jpg.8dab8b21928f5df41c8c77ea5c83264c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/63129802ef495_BeaconApartmentsL01-STEX.jpg.7bf6a82dc2560f1939c579a338a4eae8.jpg
     lastModified: 2022-09-02T23:58:21.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Beacon Apartments
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_09/6312989ce763a_BeaconApartmentsL00-STEX.thumb.jpg.93698c8e164b4a9fb1aff1706e4ccab6.jpg
     url: https://community.simtropolis.com/files/file/35286-beacon-apartments/
+    variants:
+      '195210':
+        buildings:
+          Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments L (R$$5_1x2).SC4Lot:
+            d097ca4e:
+              bulldoze: 307
+              capacity:
+                r$: 90
+                r$$: 51
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: f0c89be8
+              name: Jasoncw - Beacon Apartments L (R$$5_1x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1298
+          Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments R (R$$5_1x2).SC4Lot:
+            d097c841:
+              bulldoze: 313
+              capacity:
+                r$: 91
+                r$$: 51
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: d016723d
+              name: Jasoncw - Beacon Apartments R (R$$5_1x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1313
+        filename: Jasoncw - Beacon Apartments (MN).zip
+        files:
+          - Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments L (MN).SC4Model
+          - Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments L (R$$5_1x2).SC4Lot
+          - Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments R (MN).SC4Model
+          - Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments R (R$$5_1x2).SC4Lot
+        lots:
+          Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments L (R$$5_1x2).SC4Lot:
+            7097cb41:
+              building: d097ca4e
+              density: medium,high
+              name: 'R$$5_1x2_Beacon Apartments L '
+              size: 1x2
+              stage: 5
+              textures:
+                - 258f0000
+                - f5c04025
+          Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments R (R$$5_1x2).SC4Lot:
+            8097c8e9:
+              building: d097c841
+              density: medium,high
+              name: 'R$$5_1x2_Beacon Apartments R '
+              size: 1x2
+              stage: 5
+              textures:
+                - 258f0000
+                - f5c0402a
+        models:
+          Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments L (MN).SC4Model:
+            - f0c89be8
+          Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments R (MN).SC4Model:
+            - d016723d
+        sha256: 6d553783375a3d0cd1273f9c7d4e97850fa2c669f8ba7823b1e0629b81d85de7
+        size: 538136
+        uncompressed: 664892
+      '195211':
+        buildings:
+          Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments L (R$$5_1x2).SC4Lot:
+            d097ca4e:
+              bulldoze: 307
+              capacity:
+                r$: 90
+                r$$: 51
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: f0c89be8
+              name: Jasoncw - Beacon Apartments L (R$$5_1x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1298
+          Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments R (R$$5_1x2).SC4Lot:
+            d097c841:
+              bulldoze: 313
+              capacity:
+                r$: 91
+                r$$: 51
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: d016723d
+              name: Jasoncw - Beacon Apartments R (R$$5_1x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1313
+        filename: Jasoncw - Beacon Apartments (DN).zip
+        files:
+          - Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments L (DN).SC4Model
+          - Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments L (R$$5_1x2).SC4Lot
+          - Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments R (DN).SC4Model
+          - Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments R (R$$5_1x2).SC4Lot
+        lots:
+          Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments L (R$$5_1x2).SC4Lot:
+            7097cb41:
+              building: d097ca4e
+              density: medium,high
+              name: 'R$$5_1x2_Beacon Apartments L '
+              size: 1x2
+              stage: 5
+              textures:
+                - 258f0000
+                - f5c04025
+          Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments R (R$$5_1x2).SC4Lot:
+            8097c8e9:
+              building: d097c841
+              density: medium,high
+              name: 'R$$5_1x2_Beacon Apartments R '
+              size: 1x2
+              stage: 5
+              textures:
+                - 258f0000
+                - f5c0402a
+        models:
+          Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments L (DN).SC4Model:
+            - f0c89be8
+          Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments R (DN).SC4Model:
+            - d016723d
+        sha256: 8a05e8fd725a174a983037f35960c5859c7d72c3aaa4f2a518fc9739f6cc2148
+        size: 523392
+        uncompressed: 648642
+    version: 1.0.0
   simtropolis/35291:
     assetId: simtropolis/35291-cantonese-house-pack-2
     authors:
@@ -20916,10 +21413,107 @@ assets:
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div data-tag=\"post-content-collapse\" style=\"cursor: auto;\">\n\t<div class=\"sc-gyElHZ bRfinD\">\n\t\t<div>\n\t\t\t<div class=\"sc-1sp3zau-0 fYcGch sc-1di2uql-0 emZZei\">\n\t\t\t\t<p>\n\t\t\t\t\tThe Paragon is a luxurious residential highrise for the Euro tileset.\_\n\t\t\t\t</p>\n\n\t\t\t\t<p style=\"text-align: center;\">\n\t\t\t\t\t<strong>Celebrating 20 years of SimCity 4!</strong>\n\t\t\t\t</p>\n\n\t\t\t\t<p style=\"text-align: center;\">\n\t\t\t\t\t<strong>January 14, 2003 - January 14, 2023</strong>\n\t\t\t\t</p>\n\n\t\t\t\t<ul>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t2x2 growable R§§§ lot.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\" target=\"_blank\">Day and Nite Modd</a>.\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\n\t\t\t\t<p>\n\t\t\t\t\tInstallation Instructions:\n\t\t\t\t</p>\n\n\t\t\t\t<ol>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tIf you don't already have them, download and install the dependencies, linked above.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tSC4Lot files are descriptively titled. Remove the lot versions which you do not want. Do not remove any .SC4Model files.\n\t\t\t\t\t</li>\n\t\t\t\t</ol>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_01/63c389d10c3de_Paragonimage00.jpg.182e7e212490ab7164cb31a48a4fbb6b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_01/63c389de6a0c4_Paragonimage01.jpg.daab757d6d50cd7290fa20071ef95927.jpg
     lastModified: 2023-01-15T05:08:15.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: The Paragon
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_01/63c38a3e7d148_Paragonimage00.thumb.jpg.944145b0c1203f524a6f0ca557167ea8.jpg
     url: https://community.simtropolis.com/files/file/35414-the-paragon/
+    variants:
+      '196163':
+        buildings:
+          Jasoncw - The Paragon (MN)/Jasoncw - The Paragon (R$$$7_2x2).SC4Lot:
+            1030c920:
+              bulldoze: 720
+              capacity:
+                r$: 1155
+                r$$: 639
+                r$$$: 281
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: cfaeae50
+              name: Jasoncw - The Paragon - Grow (R$$$7_2x2)
+              pollution: 4
+              pollutionRadius: 6
+              power: 36
+              water: 50
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 17636
+        filename: Jasoncw - The Paragon (MN).zip
+        files:
+          - Jasoncw - The Paragon (MN)/Jasoncw - The Paragon (MN).SC4Model
+          - Jasoncw - The Paragon (MN)/Jasoncw - The Paragon (R$$$7_2x2).SC4Lot
+        lots:
+          Jasoncw - The Paragon (MN)/Jasoncw - The Paragon (R$$$7_2x2).SC4Lot:
+            6030c92c:
+              building: 1030c920
+              density: medium,high
+              name: R$$$7_2x2_The Paragon
+              size: 2x2
+              stage: 7
+              textures:
+                - 258d0000
+                - 258f0000
+                - 25bc0000
+        models:
+          Jasoncw - The Paragon (MN)/Jasoncw - The Paragon (MN).SC4Model:
+            - cfaeae50
+        sha256: bdd25ac4fa3dcbbacb491bbfde744b31d216411cc2c25f61937818a9dbf7c966
+        size: 543414
+        uncompressed: 664366
+      '196164':
+        buildings:
+          Jasoncw - The Paragon (DN)/Jasoncw - The Paragon (R$$$7_2x2).SC4Lot:
+            1030c920:
+              bulldoze: 720
+              capacity:
+                r$: 1155
+                r$$: 639
+                r$$$: 281
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: cfaeae50
+              name: Jasoncw - The Paragon - Grow (R$$$7_2x2)
+              pollution: 4
+              pollutionRadius: 6
+              power: 36
+              water: 50
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 17636
+        filename: Jasoncw - The Paragon (DN).zip
+        files:
+          - Jasoncw - The Paragon (DN)/Jasoncw - The Paragon (DN).SC4Model
+          - Jasoncw - The Paragon (DN)/Jasoncw - The Paragon (R$$$7_2x2).SC4Lot
+        lots:
+          Jasoncw - The Paragon (DN)/Jasoncw - The Paragon (R$$$7_2x2).SC4Lot:
+            6030c92c:
+              building: 1030c920
+              density: medium,high
+              name: R$$$7_2x2_The Paragon
+              size: 2x2
+              stage: 7
+              textures:
+                - 258d0000
+                - 258f0000
+                - 25bc0000
+        models:
+          Jasoncw - The Paragon (DN)/Jasoncw - The Paragon (DN).SC4Model:
+            - cfaeae50
+        sha256: aa60f91111d8ceb1d9b1511081ff76324df57acf86fcb89adc6c70ed8afba25a
+        size: 530469
+        uncompressed: 647276
+    version: 1.0.0
   simtropolis/35435:
     assetId: simtropolis/35435-palazzo-currucci
     authors:
@@ -21155,10 +21749,109 @@ assets:
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-1sp3zau-0 fYcGch sc-rcywpx-0 hRKPxe\" data-tag=\"post-content\">\n\t<div class=\"sc-1ye87qi-0 eskKQs\">\n\t\t<p>\n\t\t\tEmerson Apartments is a 2x2 apartment building for the Houston 1990 and Euro tilesets. The facade has been designed to emulate the appearance of rowhouses. There is no ploppable version, because ploppable residential lots are not possible in SimCity 4.\_\n\t\t</p>\n\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t2x2 growable R§§ lot.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t</li>\n\t\t</ul>\n\n\t\t<p>\n\t\t\tInstallation Instructions:\n\t\t</p>\n\n\t\t<ol>\n\t\t\t<li>\n\t\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tIf you don't already have them, download and install the dependencies, linked above.\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\tSC4Lot files are descriptively titled. Remove the lot versions which you do not want. Do not remove any .SC4Model files.\n\t\t\t</li>\n\t\t</ol>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/64ffb3deee6e6_EmersonApartments00.jpg.d7624f1985355bea740b8ce259b7f06c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/64ffb3eb3c963_EmersonApartments01.jpg.70306f3421019bef21649de1391dd0e9.jpg
     lastModified: 2023-09-12T00:43:08.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Emerson Apartments
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/64ffb41b9f83b_EmersonApartments00.thumb.jpg.8d407f97723c4172ab4ee58d2164567b.jpg
     url: https://community.simtropolis.com/files/file/35617-emerson-apartments/
+    variants:
+      '197629':
+        buildings:
+          Jasoncw - Emerson Apartments (MN)/Jasoncw - Emerson Apartments (R$$5_2x2).SC4Lot:
+            5093d15b:
+              bulldoze: 257
+              capacity:
+                r$: 162
+                r$$: 91
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: '701299e2'
+              name: Jasoncw - Emerson Apartments (R$$5_2x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              water: 5
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2337
+        filename: Jasoncw - Emerson Apartments (MN).zip
+        files:
+          - Jasoncw - Emerson Apartments (MN)/Jasoncw - Emerson Apartments (MN).SC4Model
+          - Jasoncw - Emerson Apartments (MN)/Jasoncw - Emerson Apartments (R$$5_2x2).SC4Lot
+        lots:
+          Jasoncw - Emerson Apartments (MN)/Jasoncw - Emerson Apartments (R$$5_2x2).SC4Lot:
+            a093d17f:
+              building: 5093d15b
+              density: all
+              name: R$$5_2x2_Emerson Apartments
+              props:
+                - 1f0b0000
+                - 2ac10000
+              size: 2x2
+              stage: 5
+              textures:
+                - 25f40000
+                - 258f0000
+        models:
+          Jasoncw - Emerson Apartments (MN)/Jasoncw - Emerson Apartments (MN).SC4Model:
+            - '701299e2'
+        sha256: 3c81282e0423b99ffc4d1dace5b8978f87416c2bc82d09c9614040d3406c426e
+        size: 289997
+        uncompressed: 366619
+      '197630':
+        buildings:
+          Jasoncw - Emerson Apartments (DN)/Jasoncw - Emerson Apartments (R$$5_2x2).SC4Lot:
+            5093d15b:
+              bulldoze: 257
+              capacity:
+                r$: 162
+                r$$: 91
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: '701299e2'
+              name: Jasoncw - Emerson Apartments (R$$5_2x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              water: 5
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2337
+        filename: Jasoncw - Emerson Apartments (DN).zip
+        files:
+          - Jasoncw - Emerson Apartments (DN)/Jasoncw - Emerson Apartments (DN).SC4Model
+          - Jasoncw - Emerson Apartments (DN)/Jasoncw - Emerson Apartments (R$$5_2x2).SC4Lot
+        lots:
+          Jasoncw - Emerson Apartments (DN)/Jasoncw - Emerson Apartments (R$$5_2x2).SC4Lot:
+            a093d17f:
+              building: 5093d15b
+              density: all
+              name: R$$5_2x2_Emerson Apartments
+              props:
+                - 1f0b0000
+                - 2ac10000
+              size: 2x2
+              stage: 5
+              textures:
+                - 25f40000
+                - 258f0000
+        models:
+          Jasoncw - Emerson Apartments (DN)/Jasoncw - Emerson Apartments (DN).SC4Model:
+            - '701299e2'
+        sha256: 4c895473050dc51618d49459b9b0ff3ee12c53de941d759e7bc26aa7dc5dda0b
+        size: 278808
+        uncompressed: 353454
+    version: 1.0.0
   simtropolis/35622:
     assetId: simtropolis/35622-rotterdam-harbour-village
     authors:
@@ -21328,28 +22021,440 @@ assets:
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-jtXEFf fDaXvQ\">\n\t<div class=\"sc-1sp3zau-0 fYCOwC sc-d4f3hw-0 iATlLz\">\n\t\t<div class=\"sc-1ye87qi-0 irEdXD\">\n\t\t\t<p>\n\t\t\t\tRasmussen Place is a luxury residential midrise for the Euro tileset.\_\n\t\t\t</p>\n\n\t\t\t<ul>\n\t\t\t\t<li>\n\t\t\t\t\tGrowable 2x1 and 2x2 R§§§ lots.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a00c547abd_RasmussenPlace00.jpg.59ae78ba9d6adc2bd08e8d3b23155e13.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a00cf1ff31_RasmussenPlace01.jpg.4ce1630a789a12ac22f8e7802c50e622.jpg
     lastModified: 2023-12-25T22:24:19.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Rasmussen Place
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/658a0112cbf29_RasmussenPlace00.thumb.jpg.abc5ff06e0b5e3679449a0f417677b0b.jpg
     url: https://community.simtropolis.com/files/file/35895-rasmussen-place/
+    variants:
+      '198956':
+        buildings:
+          Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (R$$$6_2x2).SC4Lot:
+            '910e6007':
+              bulldoze: 723
+              capacity:
+                r$: 666
+                r$$: 369
+                r$$$: 163
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 508d01ba
+              name: Jasoncw - Rasmussen Place (R$$$6_2x2)
+              pollution: 2
+              pollutionRadius: 6
+              power: 21
+              water: 30
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 10169
+          Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (R$$$8_2x1).SC4Lot:
+            710e5f9c:
+              bulldoze: 723
+              capacity:
+                r$: 666
+                r$$: 369
+                r$$$: 163
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 508d01ba
+              name: Jasoncw - Rasmussen Place (R$$$8_2x1)
+              pollution: 2
+              pollutionRadius: 6
+              power: 21
+              water: 30
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 10169
+        filename: Jasoncw - Rasmussen Place (MN).zip
+        files:
+          - Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (MN).SC4Model
+          - Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (R$$$6_2x2).SC4Lot
+          - Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (R$$$8_2x1).SC4Lot
+        lots:
+          Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (R$$$6_2x2).SC4Lot:
+            '710e6021':
+              building: '910e6007'
+              density: medium,high
+              name: R$$$6_2x2_Rasmussen Place
+              props:
+                - 1f0b0000
+                - 2a100000
+              size: 2x2
+              stage: 6
+              textures:
+                - 252b0000
+                - 258f0000
+          Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (R$$$8_2x1).SC4Lot:
+            610e5fb1:
+              building: 710e5f9c
+              density: medium,high
+              name: R$$$8_2x1_Rasmussen Place
+              size: 2x1
+              stage: 8
+              textures:
+                - 258f0000
+        models:
+          Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (MN).SC4Model:
+            - 508d01ba
+        sha256: d6d26e42bbdfec0df023c847bcc097b82119ced520edf3ff8ebc581dba9f9988
+        size: 445365
+        uncompressed: 547050
+      '198957':
+        buildings:
+          Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (R$$$6_2x2).SC4Lot:
+            '910e6007':
+              bulldoze: 723
+              capacity:
+                r$: 666
+                r$$: 369
+                r$$$: 163
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 508d01ba
+              name: Jasoncw - Rasmussen Place (R$$$6_2x2)
+              pollution: 2
+              pollutionRadius: 6
+              power: 21
+              water: 30
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 10169
+          Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (R$$$8_2x1).SC4Lot:
+            710e5f9c:
+              bulldoze: 723
+              capacity:
+                r$: 666
+                r$$: 369
+                r$$$: 163
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 508d01ba
+              name: Jasoncw - Rasmussen Place (R$$$8_2x1)
+              pollution: 2
+              pollutionRadius: 6
+              power: 21
+              water: 30
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 10169
+        filename: Jasoncw - Rasmussen Place (DN).zip
+        files:
+          - Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (DN).SC4Model
+          - Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (R$$$6_2x2).SC4Lot
+          - Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (R$$$8_2x1).SC4Lot
+        lots:
+          Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (R$$$6_2x2).SC4Lot:
+            '710e6021':
+              building: '910e6007'
+              density: medium,high
+              name: R$$$6_2x2_Rasmussen Place
+              props:
+                - 1f0b0000
+                - 2a100000
+              size: 2x2
+              stage: 6
+              textures:
+                - 252b0000
+                - 258f0000
+          Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (R$$$8_2x1).SC4Lot:
+            610e5fb1:
+              building: 710e5f9c
+              density: medium,high
+              name: R$$$8_2x1_Rasmussen Place
+              size: 2x1
+              stage: 8
+              textures:
+                - 258f0000
+        models:
+          Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (DN).SC4Model:
+            - 508d01ba
+        sha256: a53dc75feda226fed595647636a599a6cee987a308a7eea569ba08e74efb8258
+        size: 426654
+        uncompressed: 524884
+    version: 1.0.0
   simtropolis/35896:
     assetId: simtropolis/35896-surfside-apartments
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-jtXEFf fDaXvQ\">\n\t<div class=\"sc-1sp3zau-0 fYCOwC sc-d4f3hw-0 iATlLz\">\n\t\t<div class=\"sc-1ye87qi-0 irEdXD\">\n\t\t\t<p>\n\t\t\t\tSurfside Apartments is an apartment building in Madison, Wisconsin, USA. It's adjacent both to the University of Wisconsin Madison campus, and a large lake.\_\n\t\t\t</p>\n\n\t\t\t<p>\n\t\t\t\tIt grows in the Euro tileset.\n\t\t\t</p>\n\n\t\t\t<ul>\n\t\t\t\t<li>\n\t\t\t\t\tGrowable 2x1 and 2x2 R§ lots.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a036e481a1_SurfsideApartments00.jpg.d1afd520a3a663d3ff927b235815adcd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a03751ee0a_SurfsideApartments01.jpg.3381f10b9e3d986b6be9e956c3754ab1.jpg
     lastModified: 2023-12-25T22:38:45.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Surfside Apartments
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/658a04744b119_SurfsideApartments00.thumb.jpg.5424452d5b352074b35d5b02b879af16.jpg
     url: https://community.simtropolis.com/files/file/35896-surfside-apartments/
+    variants:
+      '198960':
+        buildings:
+          Jasoncw - Surfside Apartments (MN)/R$5_2x2_Surfside Apartments_610fe482.SC4Lot:
+            310fe459:
+              bulldoze: 220
+              capacity:
+                r$: 116
+              categories: r$
+              flamability: 45
+              garbage: 4
+              model: 308eacd1
+              name: Jasoncw - Surfside Apartments (R$5_2x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 5
+              worth: 1576
+          Jasoncw - Surfside Apartments (MN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot:
+            b10fe1b7:
+              bulldoze: 220
+              capacity:
+                r$: 116
+              categories: r$
+              flamability: 45
+              garbage: 4
+              model: 308eacd1
+              name: Jasoncw - Surfside Apartments (R$6_2x1)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 5
+              worth: 1576
+        filename: Jasoncw - Surfside Apartments (MN).zip
+        files:
+          - Jasoncw - Surfside Apartments (MN)/Jasoncw - Surfside Apartments (MN).SC4Model
+          - Jasoncw - Surfside Apartments (MN)/R$5_2x2_Surfside Apartments_610fe482.SC4Lot
+          - Jasoncw - Surfside Apartments (MN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot
+        lots:
+          Jasoncw - Surfside Apartments (MN)/R$5_2x2_Surfside Apartments_610fe482.SC4Lot:
+            610fe482:
+              building: 310fe459
+              density: medium,high
+              name: R$5_2x2_Surfside Apartments
+              props:
+                - a0000038
+                - a000000f
+              size: 2x2
+              stage: 5
+              textures:
+                - 258d0000
+                - 25b40000
+                - 25bc0000
+                - '25900000'
+          Jasoncw - Surfside Apartments (MN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot:
+            e10fe1dc:
+              building: b10fe1b7
+              density: medium,high
+              name: R$6_2x1_Surfside Apartments
+              size: 2x1
+              stage: 6
+              textures:
+                - 258d0000
+        models:
+          Jasoncw - Surfside Apartments (MN)/Jasoncw - Surfside Apartments (MN).SC4Model:
+            - 308eacd1
+        sha256: 0f6ec2204c191225e01ddcc6b70903081065c9fe8ddadd3a70431e619e1d9e84
+        size: 197132
+        uncompressed: 251363
+      '198961':
+        buildings:
+          Jasoncw - Surfside Apartments (DN)/R$5_2x2_Surfside Apartments_610fe482.SC4Lot:
+            310fe459:
+              bulldoze: 220
+              capacity:
+                r$: 116
+              categories: r$
+              flamability: 45
+              garbage: 4
+              model: 308eacd1
+              name: Jasoncw - Surfside Apartments (R$5_2x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 5
+              worth: 1576
+          Jasoncw - Surfside Apartments (DN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot:
+            b10fe1b7:
+              bulldoze: 220
+              capacity:
+                r$: 116
+              categories: r$
+              flamability: 45
+              garbage: 4
+              model: 308eacd1
+              name: Jasoncw - Surfside Apartments (R$6_2x1)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 5
+              worth: 1576
+        filename: Jasoncw - Surfside Apartments (DN).zip
+        files:
+          - Jasoncw - Surfside Apartments (DN)/Jasoncw - Surfside Apartments (DN).SC4Model
+          - Jasoncw - Surfside Apartments (DN)/R$5_2x2_Surfside Apartments_610fe482.SC4Lot
+          - Jasoncw - Surfside Apartments (DN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot
+        lots:
+          Jasoncw - Surfside Apartments (DN)/R$5_2x2_Surfside Apartments_610fe482.SC4Lot:
+            610fe482:
+              building: 310fe459
+              density: medium,high
+              name: R$5_2x2_Surfside Apartments
+              props:
+                - a0000038
+                - a000000f
+              size: 2x2
+              stage: 5
+              textures:
+                - 258d0000
+                - 25b40000
+                - 25bc0000
+                - '25900000'
+          Jasoncw - Surfside Apartments (DN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot:
+            e10fe1dc:
+              building: b10fe1b7
+              density: medium,high
+              name: R$6_2x1_Surfside Apartments
+              size: 2x1
+              stage: 6
+              textures:
+                - 258d0000
+        models:
+          Jasoncw - Surfside Apartments (DN)/Jasoncw - Surfside Apartments (DN).SC4Model:
+            - 308eacd1
+        sha256: ef8cbccf7e26fb8a724b217aa0eff76bd1f5e82cdd6fe3e599f5a0c2a25ccccd
+        size: 188342
+        uncompressed: 240549
+    version: 1.0.0
   simtropolis/35899:
     assetId: simtropolis/35899-napier-tower
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/29130-mipro-essentials
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div class=\"sc-jtXEFf fDaXvQ\">\n\t<div class=\"sc-1sp3zau-0 fYCOwC sc-d4f3hw-0 iATlLz\">\n\t\t<div class=\"sc-1ye87qi-0 irEdXD\">\n\t\t\t<p>\n\t\t\t\tNapier Tower is a luxury residential tower for the Euro tileset. It is a corner lot.\_\n\t\t\t</p>\n\n\t\t\t<ul>\n\t\t\t\t<li>\n\t\t\t\t\t3x3 growable R§§§ lot.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tRequires <a href=\"https://community.simtropolis.com/files/file/29130-mipro-essentials/\" rel=\"\"><abbr title='Previously known as the \"Barry Sanders Project\" (BSP)'>mipro</abbr> Essentials - December 2015</a> or newer.\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a074929e73_NapierTower00.jpg.64f3114135208bf5ee79ebd562eeafcf.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a0753e12a1_NapierTower01.jpg.7df3519482172f75ad9676fa9b5e5fb4.jpg
     lastModified: 2023-12-25T22:51:51.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Napier Tower
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/658a078740781_NapierTower00.thumb.jpg.c6a205c5d33f7fa1e0db92d8e7857135.jpg
     url: https://community.simtropolis.com/files/file/35899-napier-tower/
+    variants:
+      '198973':
+        buildings:
+          Jasoncw - Napier Tower (MN)/Jasoncw - Napier Tower - Grow (R$$$7_3x3).SC4Lot:
+            1185792c:
+              bulldoze: 1214
+              capacity:
+                r$: 2692
+                r$$: 1487
+                r$$$: 651
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 910432d3
+              name: Jasoncw - Napier Tower - Grow (R$$$7_3x3)
+              pollution: 9
+              pollutionRadius: 6
+              power: 82
+              water: 111
+              waterPollution: 3
+              waterPollutionRadius: 7
+              worth: 41106
+        filename: Jasoncw - Napier Tower (MN).zip
+        files:
+          - Jasoncw - Napier Tower (MN)/Jasoncw - Napier Tower (MN).SC4Model
+          - Jasoncw - Napier Tower (MN)/Jasoncw - Napier Tower - Grow (R$$$7_3x3).SC4Lot
+        lots:
+          Jasoncw - Napier Tower (MN)/Jasoncw - Napier Tower - Grow (R$$$7_3x3).SC4Lot:
+            '21857967':
+              building: 1185792c
+              density: high
+              name: R$$$7_3x3_Napier Tower
+              size: 3x3
+              stage: 7
+              textures:
+                - 258f0000
+                - f5c04025
+                - 258d0000
+        models:
+          Jasoncw - Napier Tower (MN)/Jasoncw - Napier Tower (MN).SC4Model:
+            - 910432d3
+        sha256: 1445fab40788b48a3235c14075c8793f75ff6b0e2bde4a4d668219f148ab059a
+        size: 1343092
+        uncompressed: 1588454
+      '198974':
+        buildings:
+          Jasoncw - Napier Tower (DN)/Jasoncw - Napier Tower - Grow (R$$$7_3x3).SC4Lot:
+            1185792c:
+              bulldoze: 1214
+              capacity:
+                r$: 2692
+                r$$: 1487
+                r$$$: 651
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 910432d3
+              name: Jasoncw - Napier Tower - Grow (R$$$7_3x3)
+              pollution: 9
+              pollutionRadius: 6
+              power: 82
+              water: 111
+              waterPollution: 3
+              waterPollutionRadius: 7
+              worth: 41106
+        filename: Jasoncw - Napier Tower (DN).zip
+        files:
+          - Jasoncw - Napier Tower (DN)/Jasoncw - Napier Tower (DN).SC4Model
+          - Jasoncw - Napier Tower (DN)/Jasoncw - Napier Tower - Grow (R$$$7_3x3).SC4Lot
+        lots:
+          Jasoncw - Napier Tower (DN)/Jasoncw - Napier Tower - Grow (R$$$7_3x3).SC4Lot:
+            '21857967':
+              building: 1185792c
+              density: high
+              name: R$$$7_3x3_Napier Tower
+              size: 3x3
+              stage: 7
+              textures:
+                - 258f0000
+                - f5c04025
+                - 258d0000
+        models:
+          Jasoncw - Napier Tower (DN)/Jasoncw - Napier Tower (DN).SC4Model:
+            - 910432d3
+        sha256: 669a01520b1141aea918344418e39312188c09142199d3ebd95cc3885d5332cb
+        size: 1292555
+        uncompressed: 1526458
+    version: 1.0.0
   simtropolis/35912:
     assetId: simtropolis/35912-york-buildings
     authors:
@@ -23735,10 +24840,177 @@ assets:
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"sc-dtMgUX IEufa\">\n\t<div class=\"sc-9ea94958-2 faUQrF\">\n\t\t<div class=\"sc-9ea94958-0 kNOzjC sc-30c1a68-0 hMSkKs\">\n\t\t\t<div class=\"sc-b20d4e5f-0 jOibYJ\">\n\t\t\t\t<p>\n\t\t\t\t\tBasildon Terraces is a residential building for the Houston tileset. It is based on a building in Christchurch, New Zealand. It grows on medium and high density zones.\_\n\t\t\t\t</p>\n\n\t\t\t\t<ul>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t1x2 and 1x1 growable R§§ lots.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/675a784b75103_BasildonTerrace00.jpg.1b1322bf100d62571a52568ce4abb4da.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/675a7853915a6_BasildonTerrace01.jpg.5b81bde3533c2cdd96cae230a822a66a.jpg
     lastModified: 2024-12-12T05:46:27.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Basildon Terraces
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/675a78b3453b3_BasildonTerrace00.thumb.jpg.c6aa443be8fd867b9e5f7a408ec5b8fe.jpg
     url: https://community.simtropolis.com/files/file/36593-basildon-terraces/
+    variants:
+      '204649':
+        buildings:
+          Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$4_1x2).SC4Lot:
+            b2a602f4:
+              bulldoze: 184
+              capacity:
+                r$: 26
+                r$$: 16
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 3224cec6
+              name: Jasoncw - Basildon Terraces (R$$4_1x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 375
+          Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot:
+            12a60a62:
+              bulldoze: 184
+              capacity:
+                r$: 26
+                r$$: 16
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 3224cec6
+              name: Jasoncw - Basildon Terraces (R$$5_1x1)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 375
+        filename: Jasoncw - Basildon Terraces (MN).zip
+        files:
+          - Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (MN).SC4Model
+          - Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$4_1x2).SC4Lot
+          - Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot
+        lots:
+          Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$4_1x2).SC4Lot:
+            e2a6032a:
+              building: b2a602f4
+              density: medium,high
+              name: R$$4_1x2_Basildon Terraces
+              props:
+                - a000003d
+                - 1f0b0000
+                - a000004a
+                - a0000050
+              size: 1x2
+              stage: 4
+              textures:
+                - 25f40000
+                - 25b90000
+                - 25ae0000
+          Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot:
+            b2a60a95:
+              building: 12a60a62
+              density: medium,high
+              name: R$$5_1x1_Basildon Terraces
+              props:
+                - a0000050
+              size: 1x1
+              stage: 5
+              textures:
+                - 25f40000
+                - 25ae0000
+        models:
+          Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (MN).SC4Model:
+            - 3224cec6
+        sha256: 54533f6bc5e83574e374a0a802db5c3b6711d26516683e2151321a389511b44b
+        size: 92782
+        uncompressed: 133766
+      '204650':
+        buildings:
+          Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$4_1x2).SC4Lot:
+            b2a602f4:
+              bulldoze: 184
+              capacity:
+                r$: 26
+                r$$: 16
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 3224cec6
+              name: Jasoncw - Basildon Terraces (R$$4_1x2)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 375
+          Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot:
+            12a60a62:
+              bulldoze: 184
+              capacity:
+                r$: 26
+                r$$: 16
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 3224cec6
+              name: Jasoncw - Basildon Terraces (R$$5_1x1)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 375
+        filename: Jasoncw - Basildon Terraces (DN).zip
+        files:
+          - Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (DN).SC4Model
+          - Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$4_1x2).SC4Lot
+          - Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot
+        lots:
+          Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$4_1x2).SC4Lot:
+            e2a6032a:
+              building: b2a602f4
+              density: medium,high
+              name: R$$4_1x2_Basildon Terraces
+              props:
+                - a000003d
+                - 1f0b0000
+                - a000004a
+                - a0000050
+              size: 1x2
+              stage: 4
+              textures:
+                - 25f40000
+                - 25b90000
+                - 25ae0000
+          Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot:
+            b2a60a95:
+              building: 12a60a62
+              density: medium,high
+              name: R$$5_1x1_Basildon Terraces
+              props:
+                - a0000050
+              size: 1x1
+              stage: 5
+              textures:
+                - 25f40000
+                - 25ae0000
+        models:
+          Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (DN).SC4Model:
+            - 3224cec6
+        sha256: 53e159804d410aef4b1d16be4211bd091cb9c93061e70c00940c6645cf94f9a7
+        size: 90541
+        uncompressed: 131091
+    version: 1.0.0
   simtropolis/36599:
     assetId: simtropolis/36599-american-mansion-pack
     authors:

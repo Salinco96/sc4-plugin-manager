@@ -954,6 +954,22 @@ simtropolis/13618-bsc-brick-canals-narrow-set:
 simtropolis/13769-rls-home-the-hagerman:
   superseded: sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials
 
+simtropolis/13965-small-train-station:
+  packageId: jasoncw/small-train-station
+  variants:
+    '181216': null
+    '181217':
+      packageId: jasoncw/small-train-station
+      variantId: default
+
+simtropolis/14067-medium-sized-train-station:
+  packageId: jasoncw/medium-sized-train-station
+  variants:
+    '181219': null
+    '181220':
+      packageId: jasoncw/medium-sized-train-station
+      variantId: default
+
 simtropolis/14076-nob-texture-pack-vol01-ftexture: null
 
 simtropolis/14108-sardina-row-homes:
@@ -1012,6 +1028,14 @@ simtropolis/15976-rail-yard-and-spur-textures-mega-pack-1:
 simtropolis/15987-country-homes:
   superseded: sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials
 
+simtropolis/16088-train-station-set:
+  packageId: jasoncw/train-station-set
+  variants:
+    '181230': null
+    '181231':
+      packageId: jasoncw/train-station-set
+      variantId: default
+
 simtropolis/16098-bsc-sfbt-street-tree-mod: null
 
 simtropolis/17557-modular-amusement-park-pack-essentials:
@@ -1028,6 +1052,22 @@ simtropolis/17560-modular-amusement-park-pack-roller-coasters:
 
 simtropolis/19096-ndex-glenni-mega-props-vol01:
   packageId: glenni/mega-props-vol01
+
+simtropolis/19158-vanwingerden-plaza-c:
+  packageId: jasoncw/vanwingerden-plaza-c
+  variants:
+    '181222': null
+    '181223':
+      packageId: jasoncw/vanwingerden-plaza-c
+      variantId: default
+
+simtropolis/19328-perry-station:
+  packageId: jasoncw/perry-station
+  variants:
+    '181226': null
+    '181227':
+      packageId: jasoncw/perry-station
+      variantId: default
 
 simtropolis/19338-peg-security-fencing-kit:
   packageId: pegasus/security-fencing-kit
@@ -1383,6 +1423,16 @@ simtropolis/26838-wmp-rural-docklands-optional-set-ii:
 simtropolis/26885-c88-ceafus-88-texture-pack:
   packageId: ceafus-88/textures
 
+simtropolis/26920-us-bank-center:
+  packageId: jasoncw/us-bank-center
+  variants:
+    '203821':
+      packageId: jasoncw/us-bank-center
+      variantId: default
+    '203822':
+      packageId: jasoncw/us-bank-center
+      variantId: darknite
+
 simtropolis/26923-paengs-parks-revisited:
   packageId: paeng/parks-revisited
 
@@ -1487,6 +1537,16 @@ simtropolis/28847-vip-orange-pinus-nigra-v2:
 
 simtropolis/28963-ms-solaris-vacanza-12-interurbino-12-automata-props:
   packageId: moto-kloss/solaris-bus-automata
+
+simtropolis/29130-mipro-essentials:
+  packageId: mipro/mipro-essentials
+  variants:
+    '174511': null
+    '174512': null
+    '174513': null
+    '174514':
+      packageId: mipro/mipro-essentials
+      variantId: default
 
 simtropolis/29171-delecto-essentials-files:
   packageId: delecto/essentials
@@ -2087,6 +2147,26 @@ simtropolis/33533-pc-mega-props-2:
 simtropolis/33600-very-old-building-props:
   packageId: ralphaelninja/very-old-building-props
 
+simtropolis/33613-wellington-place:
+  packageId: jasoncw/wellington-place
+  variants:
+    '181086':
+      packageId: jasoncw/wellington-place
+      variantId: default
+    '181087':
+      packageId: jasoncw/wellington-place
+      variantId: darknite
+
+simtropolis/33614-great-lakes-ems-academy:
+  packageId: jasoncw/great-lakes-ems-academy
+  variants:
+    '181091':
+      packageId: jasoncw/great-lakes-ems-academy
+      variantId: default
+    '181092':
+      packageId: jasoncw/great-lakes-ems-academy
+      variantId: darknite
+
 simtropolis/33620-wmp-essentials-v101:
   packageId: wmp/essentials
 
@@ -2121,6 +2201,16 @@ simtropolis/33889-seasonal-woods-2nd-iteration:
   packageId: 11241036/seasonal-woods-2
   variantId: default
 
+simtropolis/34021-2-commerce-street:
+  packageId: jasoncw/2-commerce-street
+  variants:
+    '184317':
+      packageId: jasoncw/2-commerce-street
+      variantId: default
+    '184318':
+      packageId: jasoncw/2-commerce-street
+      variantId: darknite
+
 simtropolis/34027-coris-no-kickout-lower-wealth-mod:
   packageId: corinamarie/no-kickout-lower-wealth
   variantId: default
@@ -2137,8 +2227,81 @@ simtropolis/34316-sm2-mega-prop-pack-vol5:
 simtropolis/34719-agc-benito-ju%C3%A1rez-monument-01:
   packageId: barroco-hispano/agc-benito-juarez-monument-01
 
+simtropolis/34728-union-bank-plaza:
+  packageId: jasoncw/union-bank-plaza
+  variants:
+    '190334':
+      packageId: jasoncw/union-bank-plaza
+      variantId: default
+    '190335':
+      packageId: jasoncw/union-bank-plaza
+      variantId: darknite
+    '190336':
+      packageId: jasoncw/union-bank-plaza
+      variantId: default,darknite
+
+simtropolis/34729-morrow-building:
+  packageId: jasoncw/morrow-building
+  variants:
+    '190339':
+      packageId: jasoncw/morrow-building
+      variantId: default
+    '190340':
+      packageId: jasoncw/morrow-building
+      variantId: darknite
+
+simtropolis/34730-judith-krug-branch-library:
+  packageId: jasoncw/judith-krug-branch-library
+  variants:
+    '190343':
+      packageId: jasoncw/judith-krug-branch-library
+      variantId: default
+    '190344':
+      packageId: jasoncw/judith-krug-branch-library
+      variantId: darknite
+
+simtropolis/34731-albee-amphitheater:
+  packageId: jasoncw/albee-amphitheater
+  variants:
+    '190347':
+      packageId: jasoncw/albee-amphitheater
+      variantId: default
+    '190348':
+      packageId: jasoncw/albee-amphitheater
+      variantId: darknite
+
+simtropolis/34732-murray-musem-of-modern-art:
+  packageId: jasoncw/murray-musem-of-modern-art
+  variants:
+    '190351':
+      packageId: jasoncw/murray-musem-of-modern-art
+      variantId: default
+    '190352':
+      packageId: jasoncw/murray-musem-of-modern-art
+      variantId: darknite
+
+simtropolis/34733-farrands-department-store:
+  packageId: jasoncw/farrands-department-store
+  variants:
+    '190355':
+      packageId: jasoncw/farrands-department-store
+      variantId: default
+    '190356':
+      packageId: jasoncw/farrands-department-store
+      variantId: darknite
+
 simtropolis/34747-rr-mega-prop-pack-vol-3:
   packageId: rretail/mega-props-vol03
+
+simtropolis/34761-db-franklin-co:
+  packageId: jasoncw/db-franklin-co
+  variants:
+    '190656':
+      packageId: jasoncw/db-franklin-co
+      variantId: default
+    '190657':
+      packageId: jasoncw/db-franklin-co
+      variantId: darknite
 
 simtropolis/34777-esa-rail-prop-pack:
   packageId: oidaas/esa-rail-props-vol01
@@ -2176,15 +2339,155 @@ simtropolis/35036-hybrid-railway-hrw-subway-converter:
 
 simtropolis/35053-fshwrite-for-bat4max: null
 
+simtropolis/35173-norfair-corporation:
+  packageId: jasoncw/norfair-corporation
+  variants:
+    '194100':
+      packageId: jasoncw/norfair-corporation
+      variantId: default
+    '194101':
+      packageId: jasoncw/norfair-corporation
+      variantId: darknite
+
 simtropolis/3519-copacabana-beach:
   variants:
     '202790': null
     '202791':
       variantId: default
 
+simtropolis/35206-kallax-residential:
+  packageId: jasoncw/kallax-residential
+  variants:
+    '194433':
+      packageId: jasoncw/kallax-residential
+      variantId: darknite
+    '194434':
+      packageId: jasoncw/kallax-residential
+      variantId: default
+
+simtropolis/35207-continental-bank-and-trust:
+  packageId: jasoncw/continental-bank-and-trust
+  variants:
+    '194437':
+      packageId: jasoncw/continental-bank-and-trust
+      variantId: darknite
+    '194438':
+      packageId: jasoncw/continental-bank-and-trust
+      variantId: default
+    '194439':
+      packageId: jasoncw/continental-bank-and-trust
+      variantId: default,darknite
+
+simtropolis/35245-apple-store-pack:
+  packageId: jasoncw/apple-store-pack
+  variants:
+    '194900':
+      packageId: jasoncw/apple-store-pack
+      variantId: default
+    '194901':
+      packageId: jasoncw/apple-store-pack
+      variantId: darknite
+
+simtropolis/35246-wellman-building:
+  packageId: jasoncw/wellman-building
+  variants:
+    '194904':
+      packageId: jasoncw/wellman-building
+      variantId: default
+    '194905':
+      packageId: jasoncw/wellman-building
+      variantId: darknite
+
+simtropolis/35286-beacon-apartments:
+  packageId: jasoncw/beacon-apartments
+  variants:
+    '195210':
+      packageId: jasoncw/beacon-apartments
+      variantId: default
+    '195211':
+      packageId: jasoncw/beacon-apartments
+      variantId: darknite
+
 simtropolis/35341-jenx-dulles-and-jfk-airport-patch-and-transit-route-mod: null
 
 simtropolis/35353-pegasus-cdk3-collection: null
+
+simtropolis/35364-denton-corporation:
+  packageId: jasoncw/denton-corporation
+  variants:
+    '195887':
+      packageId: jasoncw/denton-corporation
+      variantId: default
+    '195888':
+      packageId: jasoncw/denton-corporation
+      variantId: darknite
+
+simtropolis/35365-savisaar-insurance:
+  packageId: jasoncw/savisaar-insurance
+  variants:
+    '195891':
+      packageId: jasoncw/savisaar-insurance
+      variantId: default
+    '195892':
+      packageId: jasoncw/savisaar-insurance
+      variantId: darknite
+
+simtropolis/35366-target:
+  packageId: jasoncw/target
+  variants:
+    '195895':
+      packageId: jasoncw/target
+      variantId: default
+    '195896':
+      packageId: jasoncw/target
+      variantId: darknite
+
+simtropolis/35367-turtle-publishing:
+  packageId: jasoncw/turtle-publishing
+  variants:
+    '195899':
+      packageId: jasoncw/turtle-publishing
+      variantId: default
+    '195900':
+      packageId: jasoncw/turtle-publishing
+      variantId: darknite
+
+simtropolis/35368-dreieck-park:
+  packageId: jasoncw/dreieck-park
+  variantId: default
+
+simtropolis/35369-metropolitan-exchange-plaza:
+  packageId: jasoncw/metropolitan-exchange-plaza
+  variants:
+    '195905':
+      packageId: jasoncw/metropolitan-exchange-plaza
+      variantId: default
+    '195906':
+      packageId: jasoncw/metropolitan-exchange-plaza
+      variantId: darknite
+    '195907':
+      packageId: jasoncw/metropolitan-exchange-plaza
+      variantId: default,darknite
+
+simtropolis/35370-shields-youth-center:
+  packageId: jasoncw/shields-youth-center
+  variants:
+    '195910':
+      packageId: jasoncw/shields-youth-center
+      variantId: default
+    '195911':
+      packageId: jasoncw/shields-youth-center
+      variantId: darknite
+
+simtropolis/35371-hsbc-tower:
+  packageId: jasoncw/hsbc-tower
+  variants:
+    '195914':
+      packageId: jasoncw/hsbc-tower
+      variantId: default
+    '195915':
+      packageId: jasoncw/hsbc-tower
+      variantId: darknite
 
 simtropolis/35373-new-menus-and-sounds-for-rretail-gas-station-relots-version-20: null
 
@@ -2196,6 +2499,36 @@ simtropolis/35406-victorian-row-houses-megapack-02:
     '196085':
       packageId: justforfun/victorian-row-houses-megapack-02
       variantId: default
+
+simtropolis/35413-alaska-building:
+  packageId: jasoncw/alaska-building
+  variants:
+    '196159':
+      packageId: jasoncw/alaska-building
+      variantId: default
+    '196160':
+      packageId: jasoncw/alaska-building
+      variantId: darknite
+
+simtropolis/35414-the-paragon:
+  packageId: jasoncw/the-paragon
+  variants:
+    '196163':
+      packageId: jasoncw/the-paragon
+      variantId: default
+    '196164':
+      packageId: jasoncw/the-paragon
+      variantId: darknite
+
+simtropolis/35415-hotel-utica:
+  packageId: jasoncw/hotel-utica
+  variants:
+    '196167':
+      packageId: jasoncw/hotel-utica
+      variantId: default
+    '196168':
+      packageId: jasoncw/hotel-utica
+      variantId: darknite
 
 simtropolis/35519-ow-roundabout-set:
   variants:
@@ -2216,6 +2549,26 @@ simtropolis/35527-victorian-row-shops-diagonal:
       packageId: justforfun/victorian-row-shops-diagonal
       variantId: default
 
+simtropolis/35616-great-northern-hotel:
+  packageId: jasoncw/great-northern-hotel
+  variants:
+    '197625':
+      packageId: jasoncw/great-northern-hotel
+      variantId: default
+    '197626':
+      packageId: jasoncw/great-northern-hotel
+      variantId: darknite
+
+simtropolis/35617-emerson-apartments:
+  packageId: jasoncw/emerson-apartments
+  variants:
+    '197629':
+      packageId: jasoncw/emerson-apartments
+      variantId: default
+    '197630':
+      packageId: jasoncw/emerson-apartments
+      variantId: darknite
+
 simtropolis/35621-simcity-4-multiplayer-project-launcher: null
 
 simtropolis/35635-ulisse-wolf-five-nights-at-freddys:
@@ -2224,6 +2577,49 @@ simtropolis/35635-ulisse-wolf-five-nights-at-freddys:
 simtropolis/35660-sfbt-street-tree-mod-revised:
   packageId: sfbt/street-tree-mod
   variantId: hugues-aroux
+
+simtropolis/35718-small-police-station-1:
+  packageId: jasoncw/small-police-station-1
+  variants:
+    '198224':
+      packageId: jasoncw/small-police-station-1
+      variantId: default
+    '198225':
+      packageId: jasoncw/small-police-station-1
+      variantId: darknite
+
+simtropolis/35719-small-police-station-2:
+  packageId: jasoncw/small-police-station-2
+  variants:
+    '198228':
+      packageId: jasoncw/small-police-station-2
+      variantId: default
+    '198229':
+      packageId: jasoncw/small-police-station-2
+      variantId: darknite
+
+simtropolis/35720-cecil-hotel:
+  packageId: jasoncw/cecil-hotel
+  variants:
+    '198240':
+      packageId: jasoncw/cecil-hotel
+      variantId: default
+    '198241':
+      packageId: jasoncw/cecil-hotel
+      variantId: darknite
+    '198242':
+      packageId: jasoncw/cecil-hotel
+      variantId: default,darknite
+
+simtropolis/35721-elviras-halloween-emporium:
+  packageId: jasoncw/elviras-halloween-emporium
+  variants:
+    '198236':
+      packageId: jasoncw/elviras-halloween-emporium
+      variantId: default
+    '198237':
+      packageId: jasoncw/elviras-halloween-emporium
+      variantId: darknite
 
 simtropolis/35753-jes_resourcepack_vol27-v6:
   packageId: jestarr/resourcepack-vol27
@@ -2268,6 +2664,69 @@ simtropolis/35871-city-lottery-ordinance:
 simtropolis/35889-legalize-gambling-ordinance-upgrade:
   packageId: null-45/legalize-gambling-ordinance
   variantId: default
+
+simtropolis/35895-rasmussen-place:
+  packageId: jasoncw/rasmussen-place
+  variants:
+    '198956':
+      packageId: jasoncw/rasmussen-place
+      variantId: default
+    '198957':
+      packageId: jasoncw/rasmussen-place
+      variantId: darknite
+
+simtropolis/35896-surfside-apartments:
+  packageId: jasoncw/surfside-apartments
+  variants:
+    '198960':
+      packageId: jasoncw/surfside-apartments
+      variantId: default
+    '198961':
+      packageId: jasoncw/surfside-apartments
+      variantId: darknite
+
+simtropolis/35897-korimako-hotel:
+  packageId: jasoncw/korimako-hotel
+  variants:
+    '198964':
+      packageId: jasoncw/korimako-hotel
+      variantId: default
+    '198965':
+      packageId: jasoncw/korimako-hotel
+      variantId: darknite
+    '198966':
+      packageId: jasoncw/korimako-hotel
+      variantId: default,darknite
+
+simtropolis/35898-geodesic-dome-pavilion:
+  packageId: jasoncw/geodesic-dome-pavilion
+  variants:
+    '198969':
+      packageId: jasoncw/geodesic-dome-pavilion
+      variantId: default
+    '198970':
+      packageId: jasoncw/geodesic-dome-pavilion
+      variantId: darknite
+
+simtropolis/35899-napier-tower:
+  packageId: jasoncw/napier-tower
+  variants:
+    '198973':
+      packageId: jasoncw/napier-tower
+      variantId: default
+    '198974':
+      packageId: jasoncw/napier-tower
+      variantId: darknite
+
+simtropolis/35900-centron-center:
+  packageId: jasoncw/centron-center
+  variants:
+    '198977':
+      packageId: jasoncw/centron-center
+      variantId: default
+    '198978':
+      packageId: jasoncw/centron-center
+      variantId: darknite
 
 simtropolis/35978-sc4-more-demand-info:
   packageId: null-45/more-demand-info
@@ -2585,6 +3044,36 @@ simtropolis/36437-remove-phantom-budget-items-dll-plugin:
   packageId: null-45/remove-phantom-budget-items
   variantId: default
 
+simtropolis/36442-model-discount-furniture:
+  packageId: jasoncw/model-discount-furniture
+  variants:
+    '203385':
+      packageId: jasoncw/model-discount-furniture
+      variantId: default
+    '203386':
+      packageId: jasoncw/model-discount-furniture
+      variantId: darknite
+
+simtropolis/36453-pizza-ribs-sushi:
+  packageId: jasoncw/pizza-ribs-sushi
+  variants:
+    '203487':
+      packageId: jasoncw/pizza-ribs-sushi
+      variantId: default
+    '203488':
+      packageId: jasoncw/pizza-ribs-sushi
+      variantId: darknite
+
+simtropolis/36465-magasin-valois:
+  packageId: jasoncw/magasin-valois
+  variants:
+    '203589':
+      packageId: jasoncw/magasin-valois
+      variantId: default
+    '203590':
+      packageId: jasoncw/magasin-valois
+      variantId: darknite
+
 simtropolis/36481-custom-budget-departments-dll-plugin:
   packageId: null-45/custom-budget-departments
   variantId: default
@@ -2599,6 +3088,46 @@ simtropolis/36495-coco-samsung-apartment:
       packageId: cococity/coco-samsung-apartment
       variantId: darknite
 
+simtropolis/36496-innovation-center:
+  packageId: jasoncw/innovation-center
+  variants:
+    '203813':
+      packageId: jasoncw/innovation-center
+      variantId: default
+    '203814':
+      packageId: jasoncw/innovation-center
+      variantId: darknite
+
+simtropolis/36497-webb-chapel-park-pavilion:
+  packageId: jasoncw/webb-chapel-park-pavilion
+  variants:
+    '203817':
+      packageId: jasoncw/webb-chapel-park-pavilion
+      variantId: default
+    '203818':
+      packageId: jasoncw/webb-chapel-park-pavilion
+      variantId: darknite
+
+simtropolis/36507-delitz-designer-gallery:
+  packageId: jasoncw/delitz-designer-gallery
+  variants:
+    '203920':
+      packageId: jasoncw/delitz-designer-gallery
+      variantId: default
+    '203921':
+      packageId: jasoncw/delitz-designer-gallery
+      variantId: darknite
+
+simtropolis/36524-miu-miu:
+  packageId: jasoncw/miu-miu
+  variants:
+    '204054':
+      packageId: jasoncw/miu-miu
+      variantId: default
+    '204055':
+      packageId: jasoncw/miu-miu
+      variantId: darknite
+
 simtropolis/36526-coco-hillstate-apartment:
   packageId: cococity/coco-hillstate-apartment
   variants:
@@ -2607,6 +3136,26 @@ simtropolis/36526-coco-hillstate-apartment:
       variantId: default
     '204093':
       packageId: cococity/coco-hillstate-apartment
+      variantId: darknite
+
+simtropolis/36532-elks-building:
+  packageId: jasoncw/elks-building
+  variants:
+    '204153':
+      packageId: jasoncw/elks-building
+      variantId: default
+    '204154':
+      packageId: jasoncw/elks-building
+      variantId: darknite
+
+simtropolis/36542-sp-building:
+  packageId: jasoncw/sp-building
+  variants:
+    '204274':
+      packageId: jasoncw/sp-building
+      variantId: default
+    '204275':
+      packageId: jasoncw/sp-building
       variantId: darknite
 
 simtropolis/36544-coco_e-pyeonhansesang_apt:
@@ -2621,9 +3170,29 @@ simtropolis/36544-coco_e-pyeonhansesang_apt:
       packageId: cococity/coco-pyeonhansesang-apartment
       variantId: darknite
 
+simtropolis/36549-pietzsch-house:
+  packageId: jasoncw/pietzsch-house
+  variants:
+    '204365':
+      packageId: jasoncw/pietzsch-house
+      variantId: default
+    '204366':
+      packageId: jasoncw/pietzsch-house
+      variantId: darknite
+
 simtropolis/36571-bulldoze-extensions-dll-plugin:
   packageId: null-45/bulldoze-extensions
   variantId: default
+
+simtropolis/36593-basildon-terraces:
+  packageId: jasoncw/basildon-terraces
+  variants:
+    '204649':
+      packageId: jasoncw/basildon-terraces
+      variantId: default
+    '204650':
+      packageId: jasoncw/basildon-terraces
+      variantId: darknite
 
 simtropolis/4049-vda-langeraar-geerweg-31:
   packageId: vanderaap/langeraar-geerweg-31

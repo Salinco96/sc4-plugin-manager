@@ -1640,10 +1640,123 @@ assets:
     authors:
       - Jasoncw
     category: 110-transportation
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p style=\"margin:0in 0in 0pt;\"><span style=\"font-size:10pt;font-family:Verdana;\"><font color=\"#333333\" size=\"1\"></font></span>\_</p>\n<p style=\"margin:0in 0in 0pt;\"><span style=\"font-size:10pt;font-family:Verdana;\"><font color=\"#333333\"><font size=\"1\">A\_small train station made to\_fit in small areas, or areas where you do not want to demolish the area for a larger station.\_ Placing rail stations can increase rail usage, increase pedestrian traffic, and lower road congestion.\_ Pedestrian traffic increases customers for commercial lots, and lower\_road congestions reduces air pollution which decreases local desirablitity.<br><br>Rail tracks and and train stations take up alot of space in your city; this lot will enable you to place stations in places previously not possible.<br><br><font face=\"Verdana, Arial, Helvetica, sans-serif\">This train station contains elements from the Beaux Arts and Art Deco architecture styles.</font></font></font></span></p>\n<span style=\"font-size:10pt;font-family:Verdana;\"></span><p style=\"margin:0in 0in 0pt;\"><font face=\"Verdana, Arial, Helvetica, sans-serif\" size=\"1\"></font><font color=\"#333333\"></font></p>\n<font face=\"Verdana, Arial, Helvetica, sans-serif\" size=\"1\"></font><pre style=\"margin:0in 0in 0pt;\"></pre>\n<font size=\"1\"></font><strong><font color=\"#333333\" size=\"1\"><abbr title=\"Building Architect Tool\">BAT</abbr> by: Jasoncw<br>Modding by: Twrecks</font></strong> <br><br><a href=\"https://www.simtropolis.com/idealbb/view.asp?topicID=68271\" rel=\"external nofollow\"><font size=\"1\"><em>Click here for discussion of\_new and current\_projects</em></font></a>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/0009/4f045418b37757adb641cd92ee4bc0ea-batframe4.jpg
     lastModified: 2020-05-25T21:46:54.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Small Train Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2005/thumb-4f045418b37757adb641cd92ee4bc0ea-batframe4.jpg
     url: https://community.simtropolis.com/files/file/13965-small-train-station/
+    variants:
+      '181216':
+        buildings:
+          Jasoncw - Small Train Station/Jasoncw - Small Train Station_Utils1x2_PassengerRailStation_d04dae96.SC4Lot:
+            d04dae96:
+              bulldoze: 100
+              categories: passengers
+              cost: 75
+              description: A small train station with a capacity of 1,500 passengers.
+              flamability: 35
+              garbage: 5
+              jobs:
+                $: 4
+              label: Jasoncw - Small Train Station
+              maintenance: 10
+              menu: Rail
+              model: 10121420-000f
+              name: Jasoncw - Small Train Station (1x2)
+              pollution: 1
+              pollutionRadius: 1
+              power: 3
+              submenu: Rail/Passengers
+              water: 5
+              waterPollution: 1
+              waterPollutionRadius: 2
+        filename: Jasoncw - Small Train Station.zip
+        files:
+          - Jasoncw - Small Train Station/Jasoncw - Small Train Station (1x2)-0x5ad0e817_0x10121420_0xf0000.SC4Model
+          - Jasoncw - Small Train Station/Jasoncw - Small Train Station README.rtf
+          - Jasoncw - Small Train Station/Jasoncw - Small Train Station_Utils1x2_PassengerRailStation_d04dae96.SC4Lot
+        lots:
+          Jasoncw - Small Train Station/Jasoncw - Small Train Station_Utils1x2_PassengerRailStation_d04dae96.SC4Lot:
+            d04dae96:
+              building: d04dae96
+              name: Jasoncw - Small Train Station_Utils1x2_PassengerRailStation
+              props:
+                - 2bfc0000
+                - a000007b
+                - '1e120000'
+                - '1e010000'
+                - '1e090000'
+              size: 2x1
+              textures:
+                - 25c10000
+                - 263d0000
+                - 25db0000
+                - '25900000'
+        models:
+          Jasoncw - Small Train Station/Jasoncw - Small Train Station (1x2)-0x5ad0e817_0x10121420_0xf0000.SC4Model:
+            - 10121420-000f
+        sha256: e604e3f7d70a67ec5a8297461ad0f224faf7a47c753dd7ad001dffe462026a1e
+        size: 226525
+        uncompressed: 279853
+      '181217':
+        buildings:
+          Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station_Utils1x2_PassengerRailStation_d04dae96.SC4Lot:
+            d04dae96:
+              bulldoze: 100
+              categories: passengers
+              cost: 75
+              description: A small train station with a capacity of 1,500 passengers.
+              flamability: 35
+              garbage: 5
+              jobs:
+                $: 4
+              label: Jasoncw - Small Train Station
+              maintenance: 10
+              menu: Rail
+              model: 10121420-000f
+              name: Jasoncw - Small Train Station (1x2)
+              pollution: 1
+              pollutionRadius: 1
+              power: 3
+              submenu: Rail/Passengers
+              water: 5
+              waterPollution: 1
+              waterPollutionRadius: 2
+        filename: Jasoncw - Small Train Station V1.1.zip
+        files:
+          - Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station (1x2)-0x5ad0e817_0x10121420_0xf0000.SC4Model
+          - Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station README.rtf
+          - Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station_Utils1x2_PassengerRailStation_d04dae96.SC4Lot
+        lots:
+          Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station_Utils1x2_PassengerRailStation_d04dae96.SC4Lot:
+            d04dae96:
+              building: d04dae96
+              name: Jasoncw - Small Train Station_Utils1x2_PassengerRailStation
+              props:
+                - 2bfc0000
+                - a000007b
+                - '1e120000'
+                - '1e010000'
+                - '1e090000'
+              size: 2x1
+              textures:
+                - 25c10000
+                - 263d0000
+                - 25db0000
+                - '25900000'
+        models:
+          Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station (1x2)-0x5ad0e817_0x10121420_0xf0000.SC4Model:
+            - 10121420-000f
+        sha256: 795140f95072ed33f5e30704d7940a11abeae18576ee23bcf12a4fff2d42782b
+        size: 223436
+        uncompressed: 280836
+    version: '1.1'
   simtropolis/13998:
     assetId: simtropolis/13998-bsc-its-small-suburban-tramshed
     authors:
@@ -1739,10 +1852,77 @@ assets:
     authors:
       - Jasoncw
     category: 110-transportation
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>      <span style=\"font-size:10pt;font-family:Verdana;\"><font color=\"#333333\"><font size=\"1\"><font face=\"Verdana, Arial, Helvetica, sans-serif\"></font></font></font></span></p>\n<p>  A medium sized train station for your cities.\_ This is a larger version of a similar train station I made.\_ </p>\n<p>    </p>\n<address>\n<span style=\"font-size:10pt;font-family:Verdana;\"><font color=\"#333333\"><font size=\"1\"><font face=\"Verdana, Arial, Helvetica, sans-serif\"><a href=\"https://www.simtropolis.com/stex/index.cfm?mode=files&amp;filetype=BAT&amp;Str=small%20train%20station\" rel=\"external nofollow\">Small Train Station</a></font></font></font></span><p><a href=\"https://www.simtropolis.com/stex/index.cfm?mode=files&amp;filetype=BAT&amp;Str=small%20train%20station\" rel=\"external nofollow\">  </a></p>\n<a href=\"https://www.simtropolis.com/stex/index.cfm?mode=files&amp;filetype=BAT&amp;Str=small%20train%20station\" rel=\"external nofollow\"></a>\n</address>  <address><span style=\"font-size:10pt;font-family:Verdana;\"></span></address>  <span style=\"font-size:10pt;font-family:Verdana;\"><font color=\"#333333\"><font size=\"1\"><font face=\"Verdana, Arial, Helvetica, sans-serif\">\_ </font></font></font></span><p>This train station contains elements from the Beaux Arts and Art Deco architecture styles.</p>\n<span style=\"font-size:10pt;font-family:Verdana;\">  <font color=\"#333333\"><font face=\"Verdana, Arial, Helvetica, sans-serif\" size=\"1\">  </font></font></span><pre class=\"ipsCode\"></pre>\n<p>Plop Cost: $ 125</p>\n<font color=\"#333333\" face=\"Verdana, Arial, Helvetica, sans-serif\" size=\"1\"> </font><p>Contains 1x4 train station lot.</p>\n<font color=\"#333333\" face=\"Verdana, Arial, Helvetica, sans-serif\"><font size=\"1\">  </font></font><strong><font color=\"#333333\" size=\"1\"><abbr title=\"Building Architect Tool\">BAT</abbr> by: Jasoncw</font></strong><p><strong>Modding by: Twrecks</strong></p>\n<strong></strong> <p>\_</p>\n<p><a href=\"../idealbb/view.asp?topicID=68271\" rel=\"\"><font size=\"1\"><em>Click here for discussion of\_new and current\_projects</em></font></a></p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/0013/717f8e48fb84b1960984cf24ef003bca-batframe5.jpg
     lastModified: 2020-05-25T21:47:19.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Medium Sized Train Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2005/thumb-717f8e48fb84b1960984cf24ef003bca-batframe5.jpg
     url: https://community.simtropolis.com/files/file/14067-medium-sized-train-station/
+    variants:
+      '181219':
+        filename: Jasoncw - Medium Train Station.zip
+      '181220':
+        buildings:
+          Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station_Utils1x4_PassengerRailStation_90644677.SC4Lot:
+            '90644677':
+              bulldoze: 150
+              categories: passengers
+              cost: 125
+              description: A medium sized train station with a capacity of 3,250 passengers.
+              flamability: 40
+              garbage: 8
+              jobs:
+                $: 8
+              label: Jasoncw - Medium Train Station
+              maintenance: 20
+              menu: Rail
+              model: 10121420-0013
+              name: Jasoncw - Medium Train Station (1x4)
+              pollution: 1
+              pollutionRadius: 1
+              power: 5
+              submenu: Rail/Passengers
+              water: 8
+              waterPollution: 2
+              waterPollutionRadius: 2
+        filename: Jasoncw - Medium Train Station V1.1.zip
+        files:
+          - Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station (1x4).SC4Model
+          - Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station README.rtf
+          - Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station_Utils1x4_PassengerRailStation_90644677.SC4Lot
+        lots:
+          Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station_Utils1x4_PassengerRailStation_90644677.SC4Lot:
+            '90644677':
+              building: '90644677'
+              name: Jasoncw - Medium Train Station_Utils1x4_PassengerRailStation
+              props:
+                - 2bfc0000
+                - a000007b
+                - '1e120000'
+                - '1e010000'
+                - '1e090000'
+                - '29020000'
+                - 1dfb0000
+                - 2a8c0000
+              size: 4x1
+              textures:
+                - 25c10000
+                - 25db0000
+                - 263d0000
+                - '25900000'
+                - 25bf0000
+        models:
+          Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station (1x4).SC4Model:
+            - 10121420-0013
+        sha256: 7ea81dec57a64ceed1490a55375bcd3bc79741259aa74ca8e4a244a09f2db9b6
+        size: 390689
+        uncompressed: 488861
+    version: '1.1'
   simtropolis/14075:
     assetId: simtropolis/14075-glr-assortment-for-nam
     authors:
@@ -2752,10 +2932,201 @@ assets:
     authors:
       - Jasoncw
     category: 110-transportation
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This set contains 3 train stations: a small 1x2, a medium 1x4, and a large 2x4. The small and medium stations have already been released, however, these versions have improved textures, more efficient LODs, and improved lot designs. You can use all versions at the same time with no conflicts.</p>\n<p>\_</p>\n<p> The small size of these stations allows them to be placed in areas where most train stations don't fit, and they have the potential to increase ridership across your entire train network. Train stations can also increase pedestrain traffic, and decrease road congestionalong withit's associated air pollution.</p>\n<p>\_</p>\n<p>Please read the readme for more information.</p>\n<p>\_</p>\n<p> </p>\n<hr> Small Train Station<p>Capacity: 1,500 passengers.</p>\n<p>1x2 lot (one transit enabled track).</p>\n<p>Plop Cost: §75</p>\n<p> </p>\n<hr> Medium Train Station<p>Capacity: 3,250 passengers.</p>\n<p>1x4 lot (one transit enabled track).</p>\n<p>Plop cost: §125</p>\n<p> </p>\n<hr> Large Train Station <p>Capacity: 6,500 passengers.</p>\n<p>2x4 lot (two transit enabled tracks).</p>\n<p>Plop cost: §300 </p>\n<hr>Old Versions:<p></p>\n<p>As previously stated, you can use the new versions of the train stations (found in this set) along with the old versions with no conflicts. The original small train station can be found <a href=\"https://www.simtropolis.com/stex/index.cfm?id=13965\" rel=\"external nofollow\">here</a>, and the original medium sized train station can be found <a href=\"https://www.simtropolis.com/stex/index.cfm?id=14067\" rel=\"external nofollow\">here</a>. They are not required for the new versions to work.</p>\n<p>\_</p>\n<hr width=\"100%\" size=\"2\" >Update June 12th, 2006:<p>\_</p>\n<p>If you are using a mac, and these train stations do not work properly, demolish any instance of these stations in your cities, and redownload this set.\_ The capacity problem has been fixed. </p>\n<hr><strong><abbr title=\"Building Architect Tool\">BAT</abbr> by: Jasoncw</strong><p><strong>Modding by: T Wrecks</strong></p>\n<strong></strong><p>\_</p>\n<p><em><a href=\"https://www.simtropolis.com/forum/messageview.cfm?catid=37&amp;threadid=68271&amp;enterthread=y\" rel=\"external nofollow\">Click here for discussion of new and current projects by Jasoncw</a></em></p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/0009/47c4ef14c422ae4e529546e731356177-BAT-Frame-Train-Set-1.jpg
+      - https://www.simtropolis.com/objects/screens/0009/47c4ef14c422ae4e529546e731356177-BAT-Frame-Train-Set-2.jpg
     lastModified: 2020-05-25T21:48:51.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Train Station Set
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2006/thumb-47c4ef14c422ae4e529546e731356177-BAT-Frame-Train-Set-1.jpg
     url: https://community.simtropolis.com/files/file/16088-train-station-set/
+    variants:
+      '181230':
+        filename: Jasoncw - Train Station Set1.zip
+      '181231':
+        buildings:
+          Jasoncw - Train Station Set V1.1/Jasoncw - 1x2 Small Train Station/Jasoncw - Small Train Station_9184ac98.SC4Lot:
+            9184ac98:
+              bulldoze: 75
+              categories: passengers
+              cost: 75
+              description: A small train station with a capacity of 1,500 passengers.
+              flamability: 40
+              garbage: 5
+              jobs:
+                $: 3
+              label: Jasoncw - Small Train Station
+              maintenance: 8
+              menu: Rail
+              model: 10121420-0047
+              name: Jasoncw - Small Train Station (1x2) V2
+              pollution: 1
+              pollutionRadius: 1
+              power: 2
+              submenu: Rail/Passengers
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 2
+          Jasoncw - Train Station Set V1.1/Jasoncw - 1x4 Medium Train Station/Jasoncw - Medium Train Station_b184c540.SC4Lot:
+            b184c540:
+              bulldoze: 150
+              categories: passengers
+              cost: 125
+              description: A medium-sized train station with a capacity of 3,250 passengers.
+              flamability: 40
+              garbage: 8
+              jobs:
+                $: 8
+              label: Jasoncw - Medium Train Station
+              maintenance: 20
+              menu: Rail
+              model: 10121420-0043
+              name: Jasoncw - Medium Train Station (1x4) V2
+              pollution: 1
+              pollutionRadius: 1
+              power: 5
+              submenu: Rail/Passengers
+              water: 8
+              waterPollution: 2
+              waterPollutionRadius: 2
+          Jasoncw - Train Station Set V1.1/Jasoncw - 2x4 Large Train Station/Jasoncw - Large Train Station_f184e53f.SC4Lot:
+            f184e53f:
+              bulldoze: 300
+              categories: passengers
+              cost: 300
+              description: A large, two-track train station with a capacity of 6,500 passengers.
+              flamability: 40
+              garbage: 16
+              jobs:
+                $: 16
+              label: Jasoncw - Large Train Station
+              maintenance: 45
+              menu: Rail
+              model: 10121420-0038
+              name: Jasoncw - Large Train Station (2x4)
+              pollution: 2
+              pollutionRadius: 2
+              power: 10
+              submenu: Rail/Passengers
+              water: 16
+              waterPollution: 4
+              waterPollutionRadius: 3
+        filename: Jasoncw - Train Station Set V1.1.zip
+        files:
+          - Jasoncw - Train Station Set V1.1/Jasoncw - 1x2 Small Train Station/Jasoncw - Small Train Station (1x2) V2.SC4Model
+          - Jasoncw - Train Station Set V1.1/Jasoncw - 1x2 Small Train Station/Jasoncw - Small Train Station_9184ac98.SC4Lot
+          - Jasoncw - Train Station Set V1.1/Jasoncw - 1x4 Medium Train Station/Jasoncw - Medium Train Station (1x4) V2.SC4Model
+          - Jasoncw - Train Station Set V1.1/Jasoncw - 1x4 Medium Train Station/Jasoncw - Medium Train Station_b184c540.SC4Lot
+          - Jasoncw - Train Station Set V1.1/Jasoncw - 2x4 Large Train Station/Jasoncw - Large Train Station (2x4).SC4Model
+          - Jasoncw - Train Station Set V1.1/Jasoncw - 2x4 Large Train Station/Jasoncw - Large Train Station_f184e53f.SC4Lot
+          - Jasoncw - Train Station Set V1.1/Jasoncw - Train Station Set_README.htm
+          - Jasoncw - Train Station Set V1.1/Screenshots/Jasoncw_LargeStationDay.jpg
+          - Jasoncw - Train Station Set V1.1/Screenshots/Jasoncw_LargeStation_Night.jpg
+          - Jasoncw - Train Station Set V1.1/Screenshots/Jasoncw_MediumStation_Day.jpg
+          - Jasoncw - Train Station Set V1.1/Screenshots/Jasoncw_MediumStation_Night.jpg
+          - Jasoncw - Train Station Set V1.1/Screenshots/Jasoncw_SmallStation_Day.jpg
+          - Jasoncw - Train Station Set V1.1/Screenshots/Jasoncw_SmallStation_Night.jpg
+          - Jasoncw - Train Station Set V1.1/Screenshots/Thumbs.db
+        lots:
+          Jasoncw - Train Station Set V1.1/Jasoncw - 1x2 Small Train Station/Jasoncw - Small Train Station_9184ac98.SC4Lot:
+            9184ac98:
+              building: 9184ac98
+              name: Jasoncw - Small Train Station
+              props:
+                - 1dfb0000
+                - '29010000'
+                - a000004a
+                - a000004b
+                - a000004d
+                - a0000057
+                - '29150000'
+                - a0000078
+                - '1e120000'
+                - a000007b
+                - 2a8b0000
+                - 2ab90000
+                - '1e090000'
+                - 1d2c0000
+                - '290e0000'
+                - '29140000'
+                - 69ae0000
+              size: 2x1
+              textures:
+                - 263d0000
+                - '25900000'
+          Jasoncw - Train Station Set V1.1/Jasoncw - 1x4 Medium Train Station/Jasoncw - Medium Train Station_b184c540.SC4Lot:
+            b184c540:
+              building: b184c540
+              name: Jasoncw - Medium Train Station
+              props:
+                - 1dfb0000
+                - 291f0000
+                - '29010000'
+                - a000004a
+                - a000004b
+                - a000004d
+                - a0000057
+                - a000004e
+                - '1e120000'
+                - a0000078
+                - '29150000'
+                - a000007b
+                - 2a8b0000
+                - 2bfc0000
+                - 1d2c0000
+              size: 4x1
+              textures:
+                - '25900000'
+                - 263d0000
+          Jasoncw - Train Station Set V1.1/Jasoncw - 2x4 Large Train Station/Jasoncw - Large Train Station_f184e53f.SC4Lot:
+            f184e53f:
+              building: f184e53f
+              name: Jasoncw - Large Train Station
+              props:
+                - 1dfb0000
+                - a0000055
+                - a000004b
+                - a0000078
+                - a0000077
+                - 2a8a0000
+                - 291f0000
+                - '29010000'
+                - a000004a
+                - a000004d
+                - a0000057
+                - a000004e
+                - '1e120000'
+                - '29150000'
+                - a000007b
+                - 2a8b0000
+                - 2bfb0000
+                - 2bf70000
+                - 2bfc0000
+                - '29130000'
+                - 2a6c0000
+                - '290e0000'
+                - '29170000'
+                - 1d240000
+                - 1d2c0000
+              size: 4x2
+              textures:
+                - '25900000'
+                - 263d0000
+        models:
+          Jasoncw - Train Station Set V1.1/Jasoncw - 1x2 Small Train Station/Jasoncw - Small Train Station (1x2) V2.SC4Model:
+            - 10121420-0047
+          Jasoncw - Train Station Set V1.1/Jasoncw - 1x4 Medium Train Station/Jasoncw - Medium Train Station (1x4) V2.SC4Model:
+            - 10121420-0043
+          Jasoncw - Train Station Set V1.1/Jasoncw - 2x4 Large Train Station/Jasoncw - Large Train Station (2x4).SC4Model:
+            - 10121420-0038
+        sha256: 7fc0f93627ebad351bfe514f182964cb63eb0774acad06e7711558c3e448c388
+        size: 1381668
+        uncompressed: 1692534
+    version: '1.1'
   simtropolis/16096:
     assetId: simtropolis/16096-german-signs
     authors:
@@ -5287,10 +5658,72 @@ assets:
     authors:
       - Jasoncw
     category: 110-transportation
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>Perry Station was built in 1931 as a modern replacement to the city's old train station. This Art Deco station has four platforms, retail space, and office space. </p>\n<p>\_</p>\n<p>\nThere is one lot included, and it is a 7x4 passenger train station. This station does not include parking, so sims can not drive to it unless you place a parking garage nearby. This station does not load or unload freight; however, freight trains may pass through it.</p>\n<p>\_</p>\n<p>\nPlease read the readme for more information.</p>\n<p>\_</p>\n<p>\n</p>\n<hr>Perry Station:<p>\nLot size: 7x4</p>\n<p>\nPlop Cost: §30,000</p>\n<p>\nMonthly Cost: §375</p>\n<p>\nCapacity: 12500</p>\n<p>\n</p>\n<hr><strong><abbr title=\"Building Architect Tool\">BAT</abbr>: Jasoncw</strong><p><strong>\n</strong></p>\n<strong></strong><strong>Modding: Jasoncw</strong><p><strong>\n</strong></p>\n<strong></strong><em></em><p><em>\n</em></p>\n<em></em><a href=\"https://www.simtropolis.com/forum/messageview.cfm?catid=37&amp;threadid=68271&amp;enterthread=y\" rel=\"external nofollow\"><em></em><em></em></a><em><a href=\"../../forum/messageview.cfm?catid=37&amp;threadid=68271&amp;enterthread=y\" rel=\"\">Click here for development discussion of new projects by Jasoncw</a></em>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/0010/591c0920c3184be644e604633e81d4bb-Perry-Station-BAT-Frame-1.jpg
+      - https://www.simtropolis.com/objects/screens/0010/591c0920c3184be644e604633e81d4bb-Perry-Station-BAT-Frame-21.jpg
     lastModified: 2020-05-25T21:48:04.000Z
+    meta:
+      timestamp: 2024-12-16T12:01:08.007Z
+      version: 1
     name: Perry Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2008/thumb-591c0920c3184be644e604633e81d4bb-Perry-Station-BAT-Frame-1.jpg
     url: https://community.simtropolis.com/files/file/19328-perry-station/
+    variants:
+      '181226':
+        filename: Jasoncw - Perry Station.zip
+      '181227':
+        buildings:
+          Jasoncw - Perry Station V1.1/Jasoncw - Perry Station_54b0b9a8.SC4Lot:
+            54b0b9a8:
+              bulldoze: 2800
+              categories: passengers
+              cost: 30000
+              description: Insert ploppable description here.
+              flamability: 37
+              garbage: 13
+              jobs:
+                $: 25
+                $$: 15
+                $$$: 10
+              label: Perry Station
+              maintenance: 375
+              menu: Rail
+              model: b1d39911-003e
+              name: Jasoncw - Perry Station
+              pollution: 8
+              pollutionRadius: 4
+              power: 53
+              submenu: Rail/Passengers
+              water: 19
+              waterPollution: 5
+              waterPollutionRadius: 2
+        filename: Jasoncw - Perry Station V1.1.zip
+        files:
+          - Jasoncw - Perry Station V1.1/Jasoncw - Perry Station - ReadMe.html
+          - Jasoncw - Perry Station V1.1/Jasoncw - Perry Station.SC4Model
+          - Jasoncw - Perry Station V1.1/Jasoncw - Perry Station_54b0b9a8.SC4Lot
+        lots:
+          Jasoncw - Perry Station V1.1/Jasoncw - Perry Station_54b0b9a8.SC4Lot:
+            54b0b9a8:
+              building: 54b0b9a8
+              name: Jasoncw - Perry Station
+              size: 7x4
+              textures:
+                - 25db0000
+                - 263d0000
+                - '26060000'
+                - 25fa0000
+                - 258c0000
+                - 25f60000
+        models:
+          Jasoncw - Perry Station V1.1/Jasoncw - Perry Station.SC4Model:
+            - b1d39911-003e
+        sha256: f848639a5e908dc041a36cf5a30ee46cc49552f9ea17adad1820c7c1a5d79f73
+        size: 1371801
+        uncompressed: 7649129
+    version: '1.1'
   simtropolis/1933:
     assetId: simtropolis/1933-camco-assorted-carlot
     authors:
