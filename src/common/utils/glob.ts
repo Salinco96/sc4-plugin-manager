@@ -9,6 +9,10 @@ function toIdentifier(name: string): string {
 }
 
 export function globToRegex(pattern: string, options?: OptionInfo[]): RegExp {
+  if (pattern === "") {
+    return /()/i
+  }
+
   const regex = pattern
     // escape special characters
     .replaceAll(/[()|]/g, s => `\\${s}`)

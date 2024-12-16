@@ -160,6 +160,10 @@
     "confirmation": "Enable optional dependencies?",
     "description": "{{packageName}} specifies the following optional dependencies:\n{{dependencies, join(multiline: true)}}\n\nDo you want to enable them?"
   },
+  "EnableFeatures": {
+    "confirmation": "Enable features?",
+    "description": "{{packageName}} requires the following features:\n{{dependencies, join(multiline: true)}}\n\nDo you want to enable them?"
+  },
   "ExemplarType": {
     "Aircraft": "Aircraft",
     "Audio": "Audio",

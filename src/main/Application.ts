@@ -2642,6 +2642,60 @@ export class Application {
                   }
                 }
 
+                // Confirm dependencies with features
+                for (const packageId of enablingPackages) {
+                  const packageInfo = packages[packageId]
+                  const packageStatus = resultingStatus[packageId]
+                  if (!packageInfo || !packageStatus) {
+                    context.raiseInDev(`Unknown package '${packageId}'`)
+                    continue
+                  }
+
+                  const variantInfo = packageInfo.variants[packageStatus.variantId]
+
+                  const dependencyIds = variantInfo?.dependencies
+                    ?.map(dependency => dependency.id)
+                    .filter(dependencyId => {
+                      const dependencyInfo = packages[dependencyId]
+                      const dependencyStatus = resultingStatus[dependencyId]
+                      if (!dependencyInfo || !dependencyStatus) {
+                        context.raiseInDev(`Unknown package '${dependencyId}'`)
+                        return false
+                      }
+
+                      return !!dependencyInfo.features?.length && !dependencyStatus.enabled
+                    })
+
+                  if (dependencyIds?.length) {
+                    const dependencyNames = dependencyIds.map(dependencyId => {
+                      const dependencyInfo = packages[dependencyId]
+                      return dependencyInfo?.name ?? dependencyId
+                    })
+
+                    const { confirmed } = await showConfirmation(
+                      packageInfo.name,
+                      t("EnableFeatures:confirmation"),
+                      t("EnableFeatures:description", {
+                        dependencies: dependencyNames.sort(),
+                        packageName: packageInfo.name,
+                      }),
+                    )
+
+                    // Cancel
+                    if (!confirmed) {
+                      return false
+                    }
+
+                    for (const dependencyId of dependencyIds) {
+                      update.packages[dependencyId] ??= {}
+                      update.packages[dependencyId].enabled = true
+                    }
+
+                    // Recalculate
+                    return
+                  }
+                }
+
                 // Confirm optional dependencies
                 for (const packageId of enablingPackages) {
                   const packageInfo = packages[packageId]
