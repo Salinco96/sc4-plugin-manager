@@ -690,19 +690,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       for (const dependency of variantInfo.dependencies) {
         if (!packages[dependency.id]) {
           errors.add(`${prefix} - Dependency ${dependency.id} does not exist`)
-        } else {
-          const features = packages[dependency.id]?.features
-          if (features?.length) {
-            errors.add(
-              `${prefix} - Dependency ${dependency.id} contains features: ${features.join(", ")} - Use "requirements" or "optional" instead:
-
-  optional:
-    - ${dependency.id}
-
-  requirements:
-${features.map(feature => `    ${feature}: true`).join("\n")}`,
-            )
-          }
         }
       }
     }
