@@ -79,6 +79,7 @@ export const PackageListItem = memo(function PackageListItem({
                     width: "fit-content",
                   }}
                   tabIndex={0}
+                  title={`${packageInfo.name} (v${variantInfo.version})`}
                 >
                   <Text maxLines={1} variant="h6">
                     {packageInfo.name} (v{variantInfo.version})
@@ -91,6 +92,7 @@ export const PackageListItem = memo(function PackageListItem({
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
                     sx={{ cursor: "pointer", textDecoration: active ? "underline" : "unset" }}
+                    title={`${packageId}#${variantInfo.id}`}
                   >
                     <Text maxLines={1} variant="body2">
                       {packageId}#{variantInfo.id}

@@ -38,12 +38,12 @@ export function PackageHeader({ packageId }: { packageId: PackageID }): JSX.Elem
           src={variantInfo.thumbnail}
         />
       )}
-      <Box flex={1} mr={2} overflow="hidden">
-        <Text maxLines={1} variant="h6">
+      <Box flex={1} mr={1} overflow="hidden">
+        <Text maxLines={1} title={`${packageInfo.name} (v${variantInfo.version})`} variant="h6">
           {packageInfo.name} (v{variantInfo.version})
         </Text>
         <FlexBox alignItems="center">
-          <Text maxLines={1} variant="body2">
+          <Text maxLines={1} title={`${packageId}#${variantInfo.id}`} variant="body2">
             {packageId}#{variantInfo.id}
           </Text>
           <PackageTools packageId={packageId} />
