@@ -133,7 +133,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     id: "files",
     component: lazy(() => import("./PackageViewFiles")),
     condition(variantInfo) {
-      return !!variantInfo.files?.length
+      return !!variantInfo.installed && !!variantInfo.files?.length
     },
     label(t, variantInfo) {
       return t("files", { count: variantInfo.files?.length })
@@ -152,7 +152,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     id: "readme",
     component: lazy(() => import("./PackageViewReadme")),
     condition(variantInfo) {
-      return !!variantInfo.readme
+      return !!variantInfo.installed && !!variantInfo.readme
     },
     label(t) {
       return t("readme")

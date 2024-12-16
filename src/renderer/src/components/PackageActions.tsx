@@ -270,7 +270,7 @@ export function PackageActions({
         >
           {variantIds.map(id => (
             <MenuItem key={id} value={id} disabled={!selectableVariantIds.includes(id)}>
-              {packageInfo.variants[id]?.name /* TODO */}
+              {packageInfo.variants[id]?.name ?? id}
             </MenuItem>
           ))}
         </Select>

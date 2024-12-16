@@ -48,7 +48,7 @@ export default function PackageViewVariants({ packageId }: PackageViewTabInfoPro
               )}
               <FlexBox direction="column">
                 <Text maxLines={1} variant="h6">
-                  {variantInfo.name} (v{variantInfo.version})
+                  {variantInfo.name ?? variantInfo.id} (v{variantInfo.version})
                 </Text>
                 <FlexBox alignItems="center">
                   <Text maxLines={1} variant="body2">

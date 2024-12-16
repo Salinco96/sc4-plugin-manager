@@ -829,8 +829,8 @@ export class Application {
       throw Error(`Variant '${packageId}#${variantId}' does not have documentation`)
     }
 
-    const docPath = path.join(this.getVariantPath(packageId, variantId), filePath)
-    const docExt = path.extname(docPath)
+    const docPath = path.join(this.getVariantPath(packageId, variantId), DIRNAMES.docs, filePath)
+    const docExt = getExtension(docPath)
 
     switch (docExt) {
       case ".htm":
@@ -856,7 +856,7 @@ export class Application {
         }
       }
 
-      // TODO: Support PDF? (Is any package using that?)
+      // TODO: Support PDF?
       default: {
         throw Error(`Unsupported documentation format ${docExt}`)
       }
