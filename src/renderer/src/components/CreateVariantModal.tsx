@@ -52,7 +52,7 @@ export function CreateVariantForm({ onClose, packageId }: CreateVariantFormProps
   const [isCreating, setCreating] = useState(false)
 
   const sourceVariant = useVariantInfo(packageId, variantId)
-  const defaultName = `${sourceVariant.name} (Copy)`
+  const defaultName = `${sourceVariant.name ?? sourceVariant.id} (Copy)`
 
   const nameValue = name ?? defaultName
   const nameError = nameValue.trim() ? undefined : t("name.errors.required", { ns: "Variant" })
@@ -126,7 +126,7 @@ export function CreateVariantForm({ onClose, packageId }: CreateVariantFormProps
           >
             {collect(packageInfo.variants, (variantInfo, id) => (
               <MenuItem key={id} value={id}>
-                {variantInfo.name}
+                {variantInfo.name ?? id}
               </MenuItem>
             ))}
           </Select>
