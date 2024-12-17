@@ -5038,11 +5038,98 @@ assets:
     url: https://community.simtropolis.com/files/file/36562-hydroelectric-power-plant/
   simtropolis/36578:
     assetId: simtropolis/36578-vintage-sign-prop-pack
+    authors:
+      - WannGLondon
+    buildings:
+      Sign Prop Pack/PLOP_3x3_Sign Tester Lot_94d5a141.SC4Lot:
+        94d5a141:
+          bulldoze: 5
+          categories: power
+          cost: 10
+          description: This building was made by a Typing Monkey
+          label: Sign Tester Lot
+          maintenance: 1
+          menu: Power
+          model: 3455b7ad
+          name: Sign Tester Lot
+          power: 1
+          submenu: Power/Misc
     category: 107-utilities
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tReceived a couple of requests for signs after some members saw my Apartments 2 upload - I did not know these would go over so well. 5 props are included.\n</p>\n\n<p>\n\tThese were certainly fun to make so more may be coming!\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Sign Prop Pack.zip
+    files:
+      - Sign Prop Pack/Candlejoy Sign-0x6534284a-0x1c2d4663-0x14d5a040.SC4Desc
+      - Sign Prop Pack/Candlejoy-0x5ad0e817_0x3455b7ad_0x30000.SC4Model
+      - Sign Prop Pack/Eagle Motors Sign-0x6534284a-0x1c2d4663-0x94d5a069.SC4Desc
+      - Sign Prop Pack/EagleMotors-0x5ad0e817_0x1455bb8c_0x30000.SC4Model
+      - Sign Prop Pack/PLOP_3x3_Sign Tester Lot_94d5a141.SC4Lot
+      - Sign Prop Pack/Palms Club Sign-0x6534284a-0x1c2d4663-0xb4d5a075.SC4Desc
+      - Sign Prop Pack/PalmsClub-0x5ad0e817_0xf455b9ae_0x30000.SC4Model
+      - Sign Prop Pack/Sign Tester Lot-0x6534284a-0x1c2d4663-0x14d5a13b._LooseDesc
+      - Sign Prop Pack/Starlight Sign-0x6534284a-0x1c2d4663-0x94d5a080.SC4Desc
+      - Sign Prop Pack/Starlight-0x5ad0e817_0x5454ac7c_0x30000.SC4Model
+      - Sign Prop Pack/Summerland Sign-0x6534284a-0x1c2d4663-0x74d5a088.SC4Desc
+      - Sign Prop Pack/Summerland-0x5ad0e817_0x9455bdf2_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/Day.png.f1c98a65c0b903ad764eb69256c65654.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/Night.png.28da4286077278ab9bc6d15291af4239.png
     lastModified: 2024-12-04T18:48:52.000Z
+    lots:
+      Sign Prop Pack/PLOP_3x3_Sign Tester Lot_94d5a141.SC4Lot:
+        94d5a141:
+          building: 94d5a141
+          name: PLOP_3x3_Sign Tester Lot
+          props:
+            - 94d5a069
+            - b4d5a075
+            - 74d5a088
+            - 94d5a080
+          size: 3x3
+          textures:
+            - 25f40000
+    meta:
+      timestamp: 2024-12-17T14:33:13.889Z
+      version: 1
+    models:
+      Sign Prop Pack/Candlejoy-0x5ad0e817_0x3455b7ad_0x30000.SC4Model:
+        - 3455b7ad
+      Sign Prop Pack/EagleMotors-0x5ad0e817_0x1455bb8c_0x30000.SC4Model:
+        - 1455bb8c
+      Sign Prop Pack/PalmsClub-0x5ad0e817_0xf455b9ae_0x30000.SC4Model:
+        - f455b9ae
+      Sign Prop Pack/Starlight-0x5ad0e817_0x5454ac7c_0x30000.SC4Model:
+        - 5454ac7c
+      Sign Prop Pack/Summerland-0x5ad0e817_0x9455bdf2_0x30000.SC4Model:
+        - 9455bdf2
     name: Vintage Sign Prop Pack
+    props:
+      Sign Prop Pack/Candlejoy Sign-0x6534284a-0x1c2d4663-0x14d5a040.SC4Desc:
+        14d5a040:
+          model: 3455b7ad
+          name: Candlejoy Sign
+      Sign Prop Pack/Eagle Motors Sign-0x6534284a-0x1c2d4663-0x94d5a069.SC4Desc:
+        94d5a069:
+          model: 1455bb8c
+          name: Eagle Motors Sign
+      Sign Prop Pack/Palms Club Sign-0x6534284a-0x1c2d4663-0xb4d5a075.SC4Desc:
+        b4d5a075:
+          model: f455b9ae
+          name: Palms Club Sign
+      Sign Prop Pack/Starlight Sign-0x6534284a-0x1c2d4663-0x94d5a080.SC4Desc:
+        94d5a080:
+          model: 5454ac7c
+          name: Starlight Sign
+      Sign Prop Pack/Summerland Sign-0x6534284a-0x1c2d4663-0x74d5a088.SC4Desc:
+        74d5a088:
+          model: 9455bdf2
+          name: Summerland Sign
+    sha256: d50789f3cbe9450d45bb3881ec6226493f0449ff5be87c94ba95c7c3cd80a997
+    size: 174538
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/Night.thumb.png.733e22560d67ae35f91b05967651c932.png
+    uncompressed: 273465
     url: https://community.simtropolis.com/files/file/36578-vintage-sign-prop-pack/
+    version: 1.0.0
   simtropolis/36598:
     assetId: simtropolis/36598-ulisse-wolf-chernobyl-nuclear-power-plant-pre-disaster
     authors:
@@ -5645,4 +5732,4 @@ assets:
     url: https://community.simtropolis.com/files/file/983-hydro-electric-dam/
 
 meta:
-  timestamp: 2024-12-17T09:38:09.625Z
+  timestamp: 2024-12-17T14:33:13.889Z

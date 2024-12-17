@@ -26408,39 +26408,536 @@ assets:
     version: 1.0.0
   simtropolis/36575:
     assetId: simtropolis/36575-apartments-3
+    authors:
+      - WannGLondon
+    buildings:
+      Apartments 3/Apartments 3-0x6534284a-0x1c2d4663-0x14d0958f.SC4Desc:
+        14d0958f:
+          bulldoze: 401
+          capacity:
+            r$: 979
+            r$$: 542
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 1450abe4
+          name: Apartments 3
+          pollution: 4
+          pollutionRadius: 5
+          power: 8
+          water: 21
+          waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 14126
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tAnother grand apartment building inspired by one found in my favorite neighborhood in Los Angeles, Hancock Park.\n</p>\n\n<p>\n\t- R$$ 3x3 left corner lot\n</p>\n\n<p>\n\t- New York tileset\n</p>\n\n<p>\n\t- Medium &amp; High density zones\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Apartments 3.zip
+    files:
+      - Apartments 3/Apartments 3-0x6534284a-0x1c2d4663-0x14d0958f.SC4Desc
+      - Apartments 3/Apartments3DN-0x5ad0e817_0x1450abe4_0x30000.SC4Model
+      - Apartments 3/R$$6_3x3_Apartments 3_e4d095a1.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/674cc4170fe61_day1.jpg.c6f19fd9bb8e5afc966411f3a93a78a2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/674cc4178a0fd_day2.jpg.2785deee257a096901d57539e6d40cf9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/night.jpg.939a8457a5e3c5393737b199c05cb43e.jpg
     lastModified: 2024-12-01T20:18:56.000Z
+    lots:
+      Apartments 3/R$$6_3x3_Apartments 3_e4d095a1.SC4Lot:
+        e4d095a1:
+          building: 14d0958f
+          density: medium,high
+          name: R$$6_3x3_Apartments 3
+          props:
+            - 1dfb0000
+            - 2a8a0000
+            - a000000f
+            - a0000050
+          size: 3x3
+          stage: 6
+          textures:
+            - '26060000'
+            - 25bc0000
+    meta:
+      timestamp: 2024-12-17T13:48:13.135Z
+      version: 1
+    models:
+      Apartments 3/Apartments3DN-0x5ad0e817_0x1450abe4_0x30000.SC4Model:
+        - 1450abe4
     name: Apartments 3
+    sha256: 017495d60e8fcb0548e74c9c415c12cfe8f8353b9fa53503cd21978f063d521f
+    size: 671328
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/674cc4afcf190_day1.thumb.jpg.a0c58b6548dba9686d8736395ea9c8ce.jpg
+    uncompressed: 812241
     url: https://community.simtropolis.com/files/file/36575-apartments-3/
+    version: 1.0.0
   simtropolis/36576:
     assetId: simtropolis/36576-tulum-homes
+    authors:
+      - WannGLondon
+    buildings:
+      Tulum Homes/Tulum Bldg 1_DN/Tulum Bldg 1_DN-0x6534284a-0x1c2d4663-0x7180df77.SC4Desc:
+        7180df77:
+          bulldoze: 195
+          capacity:
+            r$: 59
+            r$$: 34
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: f0ffaa14
+          name: Tulum Bldg 1_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 3
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 851
+      Tulum Homes/Tulum Bldg 2_DN/Tulum Bldg 2-0x6534284a-0x1c2d4663-0x5493edf5.SC4Desc:
+        5493edf5:
+          bulldoze: 174
+          capacity:
+            r$: 51
+            r$$: 30
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 74140a4e
+          name: Tulum Bldg 2
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 3
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 735
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tAfter a number of visits to Tulum, Mexico I became inspired by the modern and unique architecture found there.\n</p>\n\n<p>\n\t- R$$ 1x2 lots\n</p>\n\n<p>\n\t- Houston tileset\n</p>\n\n<p>\n\t- All density zones\n</p>\n\n<p>\n\t- DarkNite versions only\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Tulum Homes.zip
+    files:
+      - Tulum Homes/Tulum Bldg 1_DN/R$$4_1x2_Tulum Bldg 1_DN_d180df89.SC4Lot
+      - Tulum Homes/Tulum Bldg 1_DN/Tulum Bldg 1_DN-0x6534284a-0x1c2d4663-0x7180df77.SC4Desc
+      - Tulum Homes/Tulum Bldg 1_DN/TulumBldg1DN-0x5ad0e817_0xf0ffaa14_0x30000.SC4Model
+      - Tulum Homes/Tulum Bldg 1_DN/desktop.ini
+      - Tulum Homes/Tulum Bldg 2_DN/R$$4_1x2_Tulum Bldg 2_3493ee05.SC4Lot
+      - Tulum Homes/Tulum Bldg 2_DN/Tulum Bldg 2-0x6534284a-0x1c2d4663-0x5493edf5.SC4Desc
+      - Tulum Homes/Tulum Bldg 2_DN/TulumBldg2DN-0x5ad0e817_0x74140a4e_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/674f3fbbac343_TulumDay.jpg.a2d49cdb4614feb90d1a6f0fa31e4770.jpg
     lastModified: 2024-12-03T17:30:30.000Z
+    lots:
+      Tulum Homes/Tulum Bldg 1_DN/R$$4_1x2_Tulum Bldg 1_DN_d180df89.SC4Lot:
+        d180df89:
+          building: 7180df77
+          density: low
+          name: R$$4_1x2_Tulum Bldg 1_DN
+          props:
+            - a0000050
+            - a000004d
+            - 2a0f0000
+            - 313c9645
+            - a000004f
+          size: 1x2
+          stage: 4
+          textures:
+            - '26060000'
+            - 252a0000
+            - 251f0000
+      Tulum Homes/Tulum Bldg 2_DN/R$$4_1x2_Tulum Bldg 2_3493ee05.SC4Lot:
+        3493ee05:
+          building: 5493edf5
+          density: low
+          name: R$$4_1x2_Tulum Bldg 2
+          props:
+            - 2a180000
+            - 2a0f0000
+          size: 1x2
+          stage: 4
+          textures:
+            - 25f40000
+            - '25240000'
+            - '251e0000'
+    meta:
+      timestamp: 2024-12-17T13:48:13.135Z
+      version: 1
+    models:
+      Tulum Homes/Tulum Bldg 1_DN/TulumBldg1DN-0x5ad0e817_0xf0ffaa14_0x30000.SC4Model:
+        - f0ffaa14
+      Tulum Homes/Tulum Bldg 2_DN/TulumBldg2DN-0x5ad0e817_0x74140a4e_0x30000.SC4Model:
+        - 74140a4e
     name: Tulum Homes
+    sha256: bd0797f456b4553b1f7dd02f5544c32ce7878bfb5126df013fe9283b1a46bc3d
+    size: 437370
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/674f4036b208e_TulumDay.thumb.jpg.69bd6278b0a0caedba9e30b409ebad3f.jpg
+    uncompressed: 534988
     url: https://community.simtropolis.com/files/file/36576-tulum-homes/
+    version: 1.0.0
   simtropolis/36579:
     assetId: simtropolis/36579-skycliffe-tower
+    authors:
+      - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - simtropolis/29130-mipro-essentials
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"sc-dtMgUX IEufa\">\n\t<div class=\"sc-3dacab02-2 hqIYWd\">\n\t\t<div class=\"sc-3dacab02-0 gTKBTq sc-30c1a68-0 hMSkKs\">\n\t\t\t<div class=\"sc-b20d4e5f-0 jOibYJ\">\n\t\t\t\t<p>\n\t\t\t\t\tSkycliffe Tower is a luxury condo tower. It's a 3x2 corner lot for the Euro tileset.\n\t\t\t\t</p>\n\n\t\t\t\t<p>\n\t\t\t\t\tThere's a stage 8 version for people who do not use the <abbr title=\"Colossus Addon Mod\">CAM</abbr>, and a stage 12 version for people who do.\n\t\t\t\t</p>\n\n\t\t\t\t<ul>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t3x2 growable R§§§ lot.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<abbr title=\"Colossus Addon Mod\">CAM</abbr> version included.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tRequires <a href=\"https://community.simtropolis.com/files/file/29130-mipro-essentials/\" rel=\"\"><abbr title='Previously known as the \"Barry Sanders Project\" (BSP)'>mipro</abbr> Essentials - December 2015</a> or newer.\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\n\t\t\t\t<p>\n\t\t\t\t\tInstallation Instructions:\n\t\t\t\t</p>\n\n\t\t\t\t<ol>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tIf you use the <abbr title=\"Colossus Addon Mod\">CAM</abbr>, replace the growable with the <abbr title=\"Colossus Addon Mod\">CAM</abbr> version.\n\t\t\t\t\t</li>\n\t\t\t\t</ol>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/675120eae9328_SkycliffeTower00.jpg.d3634f009caa6a830cbec99efaeff16f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/6751210f5763a_SkycliffeTower01.jpg.42d8e812e2906982dc4badb47119aedf.jpg
     lastModified: 2024-12-05T03:44:31.000Z
+    meta:
+      timestamp: 2024-12-17T13:48:13.135Z
+      version: 1
     name: Skycliffe Tower
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/6751219f350ab_SkycliffeTower00.thumb.jpg.d68fb61857b5ea6290396a16ed04b3e7.jpg
     url: https://community.simtropolis.com/files/file/36579-skycliffe-tower/
+    variants:
+      '204577':
+        buildings:
+          Jasoncw - Skycliffe Tower (MN)/Jasoncw - Skycliffe Tower (R$$$8_3x2).SC4Lot:
+            '32769e11':
+              bulldoze: 2947
+              capacity:
+                r$: 4431
+                r$$: 2447
+                r$$$: 1071
+              categories: r$$$
+              flamability: 35
+              garbage: 5
+              model: 51f5596c
+              name: Jasoncw - Skycliffe Tower (R$$$8_3x2)
+              pollution: 15
+              pollutionRadius: 6
+              power: 135
+              water: 181
+              waterPollution: 5
+              waterPollutionRadius: 7
+              worth: 67661
+        filename: Jasoncw - Skycliffe Tower (MN).zip
+        files:
+          - Jasoncw - Skycliffe Tower (MN)/Jasoncw - Skycliffe Tower (MN).SC4Model
+          - Jasoncw - Skycliffe Tower (MN)/Jasoncw - Skycliffe Tower (R$$$8_3x2).SC4Lot
+        lots:
+          Jasoncw - Skycliffe Tower (MN)/Jasoncw - Skycliffe Tower (R$$$8_3x2).SC4Lot:
+            '32769e62':
+              building: '32769e11'
+              density: high
+              name: R$$$8_3x2_Skycliffe Tower
+              size: 3x2
+              stage: 8
+              textures:
+                - 258d0000
+                - 258f0000
+                - f5c04025
+        models:
+          Jasoncw - Skycliffe Tower (MN)/Jasoncw - Skycliffe Tower (MN).SC4Model:
+            - 51f5596c
+        sha256: 4474a5fad8125fcd5ff299b27408e9a84c83493b449d140e298f30f38ead630c
+        size: 1743592
+        uncompressed: 2090802
+      '204578':
+        buildings:
+          Jasoncw - Skycliffe Tower (DN)/Jasoncw - Skycliffe Tower (R$$$8_3x2).SC4Lot:
+            '32769e11':
+              bulldoze: 2947
+              capacity:
+                r$: 4431
+                r$$: 2447
+                r$$$: 1071
+              categories: r$$$
+              flamability: 35
+              garbage: 5
+              model: 51f5596c
+              name: Jasoncw - Skycliffe Tower (R$$$8_3x2)
+              pollution: 15
+              pollutionRadius: 6
+              power: 135
+              water: 181
+              waterPollution: 5
+              waterPollutionRadius: 7
+              worth: 67661
+        filename: Jasoncw - Skycliffe Tower (DN).zip
+        files:
+          - Jasoncw - Skycliffe Tower (DN)/Jasoncw - Skycliffe Tower (DN).SC4Model
+          - Jasoncw - Skycliffe Tower (DN)/Jasoncw - Skycliffe Tower (R$$$8_3x2).SC4Lot
+        lots:
+          Jasoncw - Skycliffe Tower (DN)/Jasoncw - Skycliffe Tower (R$$$8_3x2).SC4Lot:
+            '32769e62':
+              building: '32769e11'
+              density: high
+              name: R$$$8_3x2_Skycliffe Tower
+              size: 3x2
+              stage: 8
+              textures:
+                - 258d0000
+                - 258f0000
+                - f5c04025
+        models:
+          Jasoncw - Skycliffe Tower (DN)/Jasoncw - Skycliffe Tower (DN).SC4Model:
+            - 51f5596c
+        sha256: d73c90c0c063f4d9b8f19a528a35500424770932dc7d6e868dcfeab3c6897ff8
+        size: 1668538
+        uncompressed: 2001474
+      '204579':
+        buildings:
+          Jasoncw - Skycliffe Tower (CAM)/Jasoncw - Skycliffe Tower - CAM (R$$$10_3x2).SC4Lot:
+            '32769e11':
+              bulldoze: 2947
+              capacity:
+                r$: 4431
+                r$$: 2447
+                r$$$: 1071
+              categories: r$$$
+              flamability: 35
+              garbage: 5
+              model: 51f5596c
+              name: Jasoncw - Skycliffe Tower (R$$$10_3x2)
+              pollution: 15
+              pollutionRadius: 6
+              power: 135
+              water: 181
+              waterPollution: 5
+              waterPollutionRadius: 7
+              worth: 67661
+        filename: Jasoncw - Skycliffe Tower (CAM).zip
+        files:
+          - Jasoncw - Skycliffe Tower (CAM)/Jasoncw - Skycliffe Tower - CAM (R$$$10_3x2).SC4Lot
+        lots:
+          Jasoncw - Skycliffe Tower (CAM)/Jasoncw - Skycliffe Tower - CAM (R$$$10_3x2).SC4Lot:
+            '32769e62':
+              building: '32769e11'
+              density: high
+              name: R$$$10_3x2_Skycliffe Tower
+              requirements:
+                cam: true
+              size: 3x2
+              stage: 10
+              textures:
+                - 258d0000
+                - 258f0000
+                - f5c04025
+        sha256: e76a2693fa6e9a974cab50437f66eaf56a086693608d412e0a7828edc46ea3d0
+        size: 1627
+        uncompressed: 4479
+    version: 1.0.0
   simtropolis/36580:
     assetId: simtropolis/36580-otautahi-mews
+    authors:
+      - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"sc-dtMgUX IEufa\">\n\t<div class=\"sc-3dacab02-2 hqIYWd\">\n\t\t<div class=\"sc-3dacab02-0 gTKBTq sc-30c1a68-0 hMSkKs\">\n\t\t\t<div class=\"sc-b20d4e5f-0 jOibYJ\">\n\t\t\t\t<p>\n\t\t\t\t\tOtautahi Mews is a small housing complex for the Houston 1990 and Euro tilesets. It grows in low, medium, and high density residential zones. It is based on 7 Boon Street in Christchurch, New Zealand.\n\t\t\t\t</p>\n\n\t\t\t\t<ul>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t1x3 growable R§§ lot.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/6751220c0de7d_OtautahiMews00.jpg.a73037e822435d2042b9c942f3a390ad.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/6751221be6cb9_OtautahiMews01.jpg.b8e4d81cf3b9cffe71453399fa0c855c.jpg
     lastModified: 2024-12-05T04:06:43.000Z
+    meta:
+      timestamp: 2024-12-17T13:56:24.526Z
+      version: 1
     name: Otautahi Mews
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/675126d35bb79_OtautahiMews00.thumb.jpg.13b58f5832299fd7aef8b984c82a7ade.jpg
     url: https://community.simtropolis.com/files/file/36580-otautahi-mews/
+    variants:
+      '204582':
+        buildings:
+          Jasoncw - Otautahi Mews (MN)/Jasoncw - Otautahi Mews (R$$4_1x3).SC4Lot:
+            528101d0:
+              bulldoze: 166
+              capacity:
+                r$: 42
+                r$$: 25
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 91ffcbff
+              name: Jasoncw - Otautahi Mews (R$$4_1x3)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 606
+        filename: Jasoncw - Otautahi Mews (MN).zip
+        files:
+          - Jasoncw - Otautahi Mews (MN)/Jasoncw - Otautahi Mews (MN).SC4Model
+          - Jasoncw - Otautahi Mews (MN)/Jasoncw - Otautahi Mews (R$$4_1x3).SC4Lot
+        lots:
+          Jasoncw - Otautahi Mews (MN)/Jasoncw - Otautahi Mews (R$$4_1x3).SC4Lot:
+            '02810276':
+              building: 528101d0
+              density: all
+              name: R$$4_1x3_Otautahi Mews
+              props:
+                - 2ac80000
+                - '16690000'
+                - a000000f
+              size: 1x3
+              stage: 4
+              textures:
+                - 258d0000
+                - 25b30000
+                - 251c0000
+        models:
+          Jasoncw - Otautahi Mews (MN)/Jasoncw - Otautahi Mews (MN).SC4Model:
+            - 91ffcbff
+        sha256: ab655a986e252c505b9f67f579336994310f0234dfdd0b5ff5fd71abe662318c
+        size: 182966
+        uncompressed: 238676
+      '204583':
+        buildings:
+          Jasoncw - Otautahi Mews (DN)/Jasoncw - Otautahi Mews (R$$4_1x3).SC4Lot:
+            528101d0:
+              bulldoze: 166
+              capacity:
+                r$: 42
+                r$$: 25
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 91ffcbff
+              name: Jasoncw - Otautahi Mews (R$$4_1x3)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 606
+        filename: Jasoncw - Otautahi Mews (DN).zip
+        files:
+          - Jasoncw - Otautahi Mews (DN)/Jasoncw - Otautahi Mews (DN).SC4Model
+          - Jasoncw - Otautahi Mews (DN)/Jasoncw - Otautahi Mews (R$$4_1x3).SC4Lot
+        lots:
+          Jasoncw - Otautahi Mews (DN)/Jasoncw - Otautahi Mews (R$$4_1x3).SC4Lot:
+            '02810276':
+              building: 528101d0
+              density: all
+              name: R$$4_1x3_Otautahi Mews
+              props:
+                - 2ac80000
+                - '16690000'
+                - a000000f
+              size: 1x3
+              stage: 4
+              textures:
+                - 258d0000
+                - 25b30000
+                - 251c0000
+        models:
+          Jasoncw - Otautahi Mews (DN)/Jasoncw - Otautahi Mews (DN).SC4Model:
+            - 91ffcbff
+        sha256: 9fade982ad292dae1eafc54b2fc9711daf0c399308246a4e7b610ce226bbb40b
+        size: 177567
+        uncompressed: 232510
+    version: 1.0.0
   simtropolis/36581:
     assetId: simtropolis/36581-newport-house
+    authors:
+      - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"sc-dtMgUX IEufa\">\n\t<div class=\"sc-3dacab02-2 hqIYWd\">\n\t\t<div class=\"sc-3dacab02-0 gTKBTq sc-30c1a68-0 hMSkKs\">\n\t\t\t<div class=\"sc-b20d4e5f-0 jOibYJ\">\n\t\t\t\t<p>\n\t\t\t\t\tNewport House is a luxury rowhouse for the Euro tileset.\_\n\t\t\t\t</p>\n\n\t\t\t\t<ul>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t1x2 growable R§§§ lot.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tMaxisNite and DarkNite versions included.\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/NewportHouse00.jpg.30b56ac4131cf79c03240c8ae2adc444.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/NewportHouse01.jpg.5c623fc4436b446b8430b0c1862e998c.jpg
     lastModified: 2024-12-05T04:10:52.000Z
+    meta:
+      timestamp: 2024-12-17T13:52:39.559Z
+      version: 1
     name: Newport House
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/NewportHouse00.thumb.jpg.5ba159c59cb236600eca69863df8c581.jpg
     url: https://community.simtropolis.com/files/file/36581-newport-house/
+    variants:
+      '204586':
+        buildings:
+          Jasoncw - Newport House (MN)/Jasoncw - Newport House (R$$$5_1x2).SC4Lot:
+            d2a5de32:
+              bulldoze: 307
+              capacity:
+                r$: 48
+                r$$: 28
+                r$$$: 14
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: d224a923
+              name: Jasoncw - Newport House (R$$$5_1x2)
+              pollution: 1
+              pollutionRadius: 6
+              power: 2
+              water: 5
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 732
+        filename: Jasoncw - Newport House (MN).zip
+        files:
+          - Jasoncw - Newport House (MN)/Jasoncw - Newport House (MN).SC4Model
+          - Jasoncw - Newport House (MN)/Jasoncw - Newport House (R$$$5_1x2).SC4Lot
+        lots:
+          Jasoncw - Newport House (MN)/Jasoncw - Newport House (R$$$5_1x2).SC4Lot:
+            02a5de88:
+              building: d2a5de32
+              density: medium,high
+              name: R$$$5_1x2_Newport House
+              size: 1x2
+              stage: 5
+              textures:
+                - 258f0000
+                - 25bc0000
+        models:
+          Jasoncw - Newport House (MN)/Jasoncw - Newport House (MN).SC4Model:
+            - d224a923
+        sha256: ae55da0555d71f2834b2b75336d66c8edf6dc11861e5f5964196870169f80795
+        size: 198550
+        uncompressed: 255576
+      '204587':
+        buildings:
+          Jasoncw - Newport House (DN)/Jasoncw - Newport House (R$$$5_1x2).SC4Lot:
+            d2a5de32:
+              bulldoze: 307
+              capacity:
+                r$: 48
+                r$$: 28
+                r$$$: 14
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: d224a923
+              name: Jasoncw - Newport House (R$$$5_1x2)
+              pollution: 1
+              pollutionRadius: 6
+              power: 2
+              water: 5
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 732
+        filename: Jasoncw - Newport House (DN).zip
+        files:
+          - Jasoncw - Newport House (DN)/Jasoncw - Newport House (DN).SC4Model
+          - Jasoncw - Newport House (DN)/Jasoncw - Newport House (R$$$5_1x2).SC4Lot
+        lots:
+          Jasoncw - Newport House (DN)/Jasoncw - Newport House (R$$$5_1x2).SC4Lot:
+            02a5de88:
+              building: d2a5de32
+              density: medium,high
+              name: R$$$5_1x2_Newport House
+              size: 1x2
+              stage: 5
+              textures:
+                - 258f0000
+                - 25bc0000
+        models:
+          Jasoncw - Newport House (DN)/Jasoncw - Newport House (DN).SC4Model:
+            - d224a923
+        sha256: 1e8bce3947d9c411960b9903c1ddbcab36387b55891dacf81eca9a86fa6fa904
+        size: 191410
+        uncompressed: 247322
+    version: 1.0.0
   simtropolis/36593:
     assetId: simtropolis/36593-basildon-terraces
     authors:
@@ -27672,4 +28169,4 @@ assets:
     url: https://community.simtropolis.com/files/file/992-small-bb-the-greeley-house/
 
 meta:
-  timestamp: 2024-12-17T09:38:09.625Z
+  timestamp: 2024-12-17T13:48:13.135Z

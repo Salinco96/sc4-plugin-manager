@@ -3260,6 +3260,51 @@ simtropolis/36571-bulldoze-extensions-dll-plugin:
   packageId: null-45/bulldoze-extensions
   variantId: default
 
+simtropolis/36575-apartments-3:
+  packageId: wannglondon/apartments-3
+  variantId: darknite
+
+simtropolis/36576-tulum-homes:
+  packageId: wannglondon/tulum-homes
+  variantId: darknite
+
+simtropolis/36578-vintage-sign-prop-pack:
+  packageId: wannglondon/vintage-sign-prop-pack
+  variantId: default
+
+simtropolis/36579-skycliffe-tower:
+  packageId: jasoncw/skycliffe-tower
+  variants:
+    '204577':
+      packageId: jasoncw/skycliffe-tower
+      variantId: default
+    '204578':
+      packageId: jasoncw/skycliffe-tower
+      variantId: darknite
+    '204579':
+      packageId: jasoncw/skycliffe-tower
+      variantId: default,darknite
+
+simtropolis/36580-otautahi-mews:
+  packageId: jasoncw/otautahi-mews
+  variants:
+    '204582':
+      packageId: jasoncw/otautahi-mews
+      variantId: default
+    '204583':
+      packageId: jasoncw/otautahi-mews
+      variantId: darknite
+
+simtropolis/36581-newport-house:
+  packageId: jasoncw/newport-house
+  variants:
+    '204586':
+      packageId: jasoncw/newport-house
+      variantId: default
+    '204587':
+      packageId: jasoncw/newport-house
+      variantId: darknite
+
 simtropolis/36593-basildon-terraces:
   packageId: jasoncw/basildon-terraces
   variants:

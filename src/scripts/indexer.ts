@@ -1194,8 +1194,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       downloaded: {},
       id: variantAssetId,
       lastModified: entry.lastModified,
-      size: entry.size,
-      uncompressed: entry.uncompressed,
+      size: variantEntry.size,
+      uncompressed: variantEntry.uncompressed,
       url: downloadUrl,
       version: entry.version,
     })
