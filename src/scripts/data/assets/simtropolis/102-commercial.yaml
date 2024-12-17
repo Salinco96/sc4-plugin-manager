@@ -41422,11 +41422,998 @@ assets:
     assetId: simtropolis/34338-medium-wealth-commercial-shops-volume-1
     authors:
       - madhatter106
+    buildings:
+      Amalfi Cameras/Amalfi Cameras-0x6534284a-0x0d03a116-0x2d481b03.SC4Desc:
+        2d481b03:
+          bulldoze: 155
+          capacity:
+            cs$: 56
+            cs$$: 16
+          categories: cs$$
+          flamability: 40
+          garbage: 10
+          model: abc6ebc2
+          name: Amalfi Cameras
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 20
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 476
+      Beards and Shears Barbering/Beards & Shears Barbering-0x6534284a-0x0d03a116-0xed481b1b.SC4Desc:
+        ed481b1b:
+          bulldoze: 126
+          capacity:
+            cs$: 49
+            cs$$: 15
+          categories: cs$$
+          flamability: 40
+          garbage: 9
+          model: 68bba0fc
+          name: Beards & Shears Barbering
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 18
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 421
+      Carpet World/Carpet World-0x6534284a-0x0d03a116-0x8d481b39.SC4Desc:
+        8d481b39:
+          bulldoze: 123
+          capacity:
+            cs$: 48
+            cs$$: 14
+          categories: cs$$
+          flamability: 40
+          garbage: 9
+          model: 68bba4d6
+          name: Carpet World
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 17
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 409
+      Grandview Mirror and Glass/Grandview Mirror and Glass-0x6534284a-0x0d03a116-0x4d481b51.SC4Desc:
+        4d481b51:
+          bulldoze: 140
+          capacity:
+            cs$: 69
+            cs$$: 20
+          categories: cs$$
+          flamability: 40
+          garbage: 12
+          model: 68c0cbf1
+          name: Grandview Mirror and Glass
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 24
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 592
+      H2Oh! Water Filters/H2Oh! Water Filters-0x6534284a-0x0d03a116-0x2d481b65.SC4Desc:
+        2d481b65:
+          bulldoze: 122
+          capacity:
+            cs$: 32
+            cs$$: 10
+          categories: cs$$
+          flamability: 40
+          garbage: 6
+          model: a8bba646
+          name: H2Oh! Water Filters
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 12
+          worth: 274
+      House of Fabric/House of Fabric-0x6534284a-0x0d03a116-0xed481b90.SC4Desc:
+        ed481b90:
+          bulldoze: 129
+          capacity:
+            cs$: 64
+            cs$$: 18
+          categories: cs$$
+          flamability: 40
+          garbage: 11
+          model: 48bba76d
+          name: House of Fabric
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 23
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 545
+      Kiki's Yoga and Dance/Kiki's Yoga and Dance-0x6534284a-0x0d03a116-0xad481bb3.SC4Desc:
+        ad481bb3:
+          bulldoze: 104
+          capacity:
+            cs$: 34
+            cs$$: 11
+          categories: cs$$
+          flamability: 40
+          garbage: 6
+          model: a8bfa87f
+          name: Kiki's Yoga and Dance
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 12
+          worth: 291
+      Kitchen and Restaurant Supply/Kitchen and Restaurant Supply-0x6534284a-0x0d03a116-0x2d481bc0.SC4Desc:
+        2d481bc0:
+          bulldoze: 142
+          capacity:
+            cs$: 62
+            cs$$: 18
+          categories: cs$$
+          flamability: 40
+          garbage: 11
+          model: 28bc481d
+          name: Kitchen and Restaurant Supply
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 22
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 534
+      Rita's Fashion/Rita's Fashion-0x6534284a-0x0d03a116-0x8d481bfa.SC4Desc:
+        8d481bfa:
+          bulldoze: 143
+          capacity:
+            cs$: 68
+            cs$$: 19
+          categories: cs$$
+          flamability: 40
+          garbage: 12
+          model: e8bc49ef
+          name: Rita's Fashion
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 24
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 585
+      Sir Lamps-a-Lot Lighting/Sir Lamps-a-Lot Lighting-0x6534284a-0x0d03a116-0x0d481c14.SC4Desc:
+        0d481c14:
+          bulldoze: 124
+          capacity:
+            cs$: 54
+            cs$$: 16
+          categories: cs$$
+          flamability: 40
+          garbage: 10
+          model: c8bc4c41
+          name: Sir Lamps-a-Lot Lighting
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 19
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 464
+      The Vitamin Depot/The Vitamin Depot-0x6534284a-0x0d03a116-0x0d481c34.SC4Desc:
+        0d481c34:
+          bulldoze: 143
+          capacity:
+            cs$: 33
+            cs$$: 10
+          categories: cs$$
+          flamability: 40
+          garbage: 6
+          model: a8bfa6fc
+          name: The Vitamin Depot
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 12
+          worth: 279
+      iFixit Phone Repair/iFixit Phone Repair-0x6534284a-0x0d03a116-0xcd481ba6.SC4Desc:
+        cd481ba6:
+          bulldoze: 119
+          capacity:
+            cs$: 23
+            cs$$: 8
+          categories: cs$$
+          flamability: 40
+          garbage: 4
+          model: c8bba902
+          name: iFixit Phone Repair
+          power: 1
+          water: 8
+          worth: 196
     category: 102-commercial
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tNeed to have your cellular phone fixed?\_ Or maybe you want to replace that broken lamp in the hallway?\_ Or perhaps it's time for a new haircut?\_ If so, then this pack is for you - presenting twelve different medium wealth commercial service businesses to add some variety to your Main Street and to give those sims some much-needed resources to spend their extra pocket money.\_ Included in this pack are the following establishments...<br>\n\t<br>\n\t<em><strong>Amalfi Cameras<br>\n\tBeards and Shears Barbering<br>\n\tCarpet World<br>\n\tGrandview Mirror and Glass<br>\n\tH2Oh! Water Filters<br>\n\tHouse of Fabric<br>\n\tiFixit Phone Repair<br>\n\tKiki's Yoga and Dance<br>\n\tKitchen and Restaurant Supply<br>\n\tRita's Fashion<br>\n\tSir Lamps-a-Lot Lighting<br>\n\tThe Vitamin Depot</strong></em>\n</p>\n\n<p>\n\tThese are 1x1 and 1x2 BATs and are mostly on those sized lots (with a few 1x3 sprinkled in).\_ Stats have been modded mostly in keeping with prior uploads, and all are medium wealth stage 1 growable with nightlights and custom queries as well.\_ Many thanks to Simtropolis users <strong>vw_oklahoma</strong>, <strong>sejr99999</strong>, and <strong>brancra</strong> for volunteering and testing their growability to make sure they have no hitches or glitches; their efforts are greatly appreciated.<br>\n\t<br>\n\tSo if you have been yearning to spruce up your wardrobe, outfit the kitchen with a new microwave, or are contemplating a second career in interpretive dance, these buildings are for you!\_ Enjoy...\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: madhatter106 Medium Wealth Commercial Shops Vol 1.zip
+    files:
+      - Amalfi Cameras/Amalfi Cameras-0x5ad0e817_0xabc6ebc2_0x30000.SC4Model
+      - Amalfi Cameras/Amalfi Cameras-0x6534284a-0x0d03a116-0x2d481b03.SC4Desc
+      - Amalfi Cameras/CS$$1_1x2_Amalfi Cameras_0d4935e9.SC4Lot
+      - Amalfi Cameras/CS$$1_1x2_Amalfi Cameras_2d493973.SC4Lot
+      - Amalfi Cameras/CS$$1_1x2_Amalfi Cameras_cd493564.SC4Lot
+      - Amalfi Cameras/CS$$1_1x3_Amalfi Cameras_0d4936b0.SC4Lot
+      - Beards and Shears Barbering/Beards & Shears Barbering-0x6534284a-0x0d03a116-0xed481b1b.SC4Desc
+      - Beards and Shears Barbering/Beards and Shears Barbering-0x5ad0e817_0x68bba0fc_0x30000.SC4Model
+      - Beards and Shears Barbering/CS$$1_1x2_Beards and Shears Barbering_6d493991.SC4Lot
+      - Beards and Shears Barbering/CS$$1_1x2_Beards and Shears Barbering_ad4939c5.SC4Lot
+      - Beards and Shears Barbering/CS$$1_1x3_Beards and Shears Barbering_2d4939e7.SC4Lot
+      - Beards and Shears Barbering/CS$$1_2x2_Beards and Shears Barbering_8d493a6d.SC4Lot
+      - Carpet World/CS$$1_1x2_Carpet World_2d493cd7.SC4Lot
+      - Carpet World/CS$$1_1x2_Carpet World_ed493d08.SC4Lot
+      - Carpet World/CS$$1_1x3_Carpet World_2d493d63.SC4Lot
+      - Carpet World/CS$$1_2x2_Carpet World_6d493def.SC4Lot
+      - Carpet World/CS$$1_2x2_Carpet World_8d493e8a.SC4Lot
+      - Carpet World/Carpet World-0x5ad0e817_0x68bba4d6_0x30000.SC4Model
+      - Carpet World/Carpet World-0x6534284a-0x0d03a116-0x8d481b39.SC4Desc
+      - Grandview Mirror and Glass/CS$$1_1x2_Grandview Mirror and Glass_2d49445d.SC4Lot
+      - Grandview Mirror and Glass/CS$$1_1x3_Grandview Mirror and Glass_2d49449f.SC4Lot
+      - Grandview Mirror and Glass/CS$$1_2x2_Grandview Mirror and Glass_ed4944ca.SC4Lot
+      - Grandview Mirror and Glass/Grandview Mirror and Glass-0x5ad0e817_0x68c0cbf1_0x30000.SC4Model
+      - Grandview Mirror and Glass/Grandview Mirror and Glass-0x6534284a-0x0d03a116-0x4d481b51.SC4Desc
+      - H2Oh! Water Filters/CS$$1_1x1_H2Oh Water Filters_2d49483f.SC4Lot
+      - H2Oh! Water Filters/CS$$1_1x2_H2Oh Water Filters_0d4946f9.SC4Lot
+      - H2Oh! Water Filters/CS$$1_2x1_H2Oh Water Filters_2d49480a.SC4Lot
+      - H2Oh! Water Filters/H2OH Water Filters-0x5ad0e817_0xa8bba646_0x30000.SC4Model
+      - H2Oh! Water Filters/H2Oh! Water Filters-0x6534284a-0x0d03a116-0x2d481b65.SC4Desc
+      - House of Fabric/CS$$1_1x2_House of Fabric_ad494915.SC4Lot
+      - House of Fabric/CS$$1_1x2_House of Fabric_ed4948dc.SC4Lot
+      - House of Fabric/CS$$1_1x3_House of Fabric_6d494b4d.SC4Lot
+      - House of Fabric/CS$$1_1x3_House of Fabric_ed49494a.SC4Lot
+      - House of Fabric/CS$$1_2x2_House of Fabric_4d494973.SC4Lot
+      - House of Fabric/CS$$1_2x2_House of Fabric_4d494996.SC4Lot
+      - House of Fabric/House of Fabric-0x5ad0e817_0x48bba76d_0x30000.SC4Model
+      - House of Fabric/House of Fabric-0x6534284a-0x0d03a116-0xed481b90.SC4Desc
+      - Kiki's Yoga and Dance/CS$$1_1x2_Kiki's Yoga and Dance_2d494a39.SC4Lot
+      - Kiki's Yoga and Dance/CS$$1_1x2_Kiki's Yoga and Dance_2d494a79.SC4Lot
+      - Kiki's Yoga and Dance/CS$$1_1x2_Kiki's Yoga and Dance_cd494a50.SC4Lot
+      - Kiki's Yoga and Dance/CS$$1_1x3_Kiki's Yoga and Dance_2d494b27.SC4Lot
+      - Kiki's Yoga and Dance/Kiki's Yoga and Dance-0x5ad0e817_0xa8bfa87f_0x30000.SC4Model
+      - Kiki's Yoga and Dance/Kiki's Yoga and Dance-0x6534284a-0x0d03a116-0xad481bb3.SC4Desc
+      - Kitchen and Restaurant Supply/CS$$1_1x2_Kitchen and Restaurant Supply_2d494c33.SC4Lot
+      - Kitchen and Restaurant Supply/CS$$1_1x2_Kitchen and Restaurant Supply_cd494c4e.SC4Lot
+      - Kitchen and Restaurant Supply/CS$$1_1x3_Kitchen and Restaurant Supply_4d494c9b.SC4Lot
+      - Kitchen and Restaurant Supply/CS$$1_1x3_Kitchen and Restaurant Supply_6d494c7c.SC4Lot
+      - Kitchen and Restaurant Supply/CS$$1_2x2_Kitchen and Restaurant Supply_0d494dc1.SC4Lot
+      - Kitchen and Restaurant Supply/CS$$1_2x2_Kitchen and Restaurant Supply_4d494e1a.SC4Lot
+      - Kitchen and Restaurant Supply/Kitchen and Restaurant Supply-0x5ad0e817_0x28bc481d_0x30000.SC4Model
+      - Kitchen and Restaurant Supply/Kitchen and Restaurant Supply-0x6534284a-0x0d03a116-0x2d481bc0.SC4Desc
+      - Rita's Fashion/CS$$1_1x2_Rita's Fashion_4d495122.SC4Lot
+      - Rita's Fashion/CS$$1_1x2_Rita's Fashion_ed4950e8.SC4Lot
+      - Rita's Fashion/CS$$1_1x3_Rita's Fashion_4d495147.SC4Lot
+      - Rita's Fashion/CS$$1_2x2_Rita's Fashion_4d495169.SC4Lot
+      - Rita's Fashion/Rita's Fashion-0x6534284a-0x0d03a116-0x8d481bfa.SC4Desc
+      - Rita's Fashion/Ritas Fashion-0x5ad0e817_0xe8bc49ef_0x30000.SC4Model
+      - Sir Lamps-a-Lot Lighting/CS$$1_1x2_Sir Lamps-a-Lot Lighting_2d494f8f.SC4Lot
+      - Sir Lamps-a-Lot Lighting/CS$$1_1x3_Sir Lamps-a-Lot Lighting_0d494fe5.SC4Lot
+      - Sir Lamps-a-Lot Lighting/CS$$1_1x3_Sir Lamps-a-Lot Lighting_2d494fc5.SC4Lot
+      - Sir Lamps-a-Lot Lighting/CS$$1_2x2_Sir Lamps-a-Lot Lighting_0d495003.SC4Lot
+      - Sir Lamps-a-Lot Lighting/Sir Lamps-a-Lot Lighting-0x5ad0e817_0xc8bc4c41_0x30000.SC4Model
+      - Sir Lamps-a-Lot Lighting/Sir Lamps-a-Lot Lighting-0x6534284a-0x0d03a116-0x0d481c14.SC4Desc
+      - The Vitamin Depot/CS$$1_1x1_The Vitamin Depot_2d494644.SC4Lot
+      - The Vitamin Depot/CS$$1_1x1_The Vitamin Depot_ad4945b9.SC4Lot
+      - The Vitamin Depot/CS$$1_1x2_The Vitamin Depot_6d49472c.SC4Lot
+      - The Vitamin Depot/The Vitamin Depot-0x5ad0e817_0xa8bfa6fc_0x30000.SC4Model
+      - The Vitamin Depot/The Vitamin Depot-0x6534284a-0x0d03a116-0x0d481c34.SC4Desc
+      - iFixit Phone Repair/CS$$1_1x1_iFixit Phone Repair_0d4945f3.SC4Lot
+      - iFixit Phone Repair/CS$$1_1x1_iFixit Phone Repair_ed49465a.SC4Lot
+      - iFixit Phone Repair/iFixit Phone Repair-0x5ad0e817_0xc8bba902_0x30000.SC4Model
+      - iFixit Phone Repair/iFixit Phone Repair-0x6534284a-0x0d03a116-0xcd481ba6.SC4Desc
+      - madhatter106_CSS_day01.jpg
+      - madhatter106_CSS_day02.jpg
+      - madhatter106_CSS_nite01.jpg
+      - madhatter106_CSS_nite02.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/madhatter106_CSS_day02.jpg.9eba0b2ea2a70f52d14ea3177397df50.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/madhatter106_CSS_day01.jpg.aa1ca72b84a36d31e47c83a2485e9c2e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/madhatter106_CSS_nite01.jpg.94940737acd3011f3fab0d3c26dfa773.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/madhatter106_CSS_nite02.jpg.e4e948881cf76a0c2324c2a522e2d37d.jpg
     lastModified: 2021-03-31T22:28:01.000Z
+    lots:
+      Amalfi Cameras/CS$$1_1x2_Amalfi Cameras_0d4935e9.SC4Lot:
+        0d4935e9:
+          building: 2d481b03
+          density: all
+          name: CS$$1_1x2_Amalfi Cameras
+          props:
+            - a0000021
+            - 1e2e0000
+            - 1dfd0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+      Amalfi Cameras/CS$$1_1x2_Amalfi Cameras_2d493973.SC4Lot:
+        2d493973:
+          building: 2d481b03
+          density: all
+          name: CS$$1_1x2_Amalfi Cameras
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25af0000
+            - 25a80000
+            - 258c0000
+      Amalfi Cameras/CS$$1_1x2_Amalfi Cameras_cd493564.SC4Lot:
+        cd493564:
+          building: 2d481b03
+          density: all
+          name: CS$$1_1x2_Amalfi Cameras
+          props:
+            - '29170000'
+            - a0000021
+            - a0000044
+            - a000003f
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+      Amalfi Cameras/CS$$1_1x3_Amalfi Cameras_0d4936b0.SC4Lot:
+        0d4936b0:
+          building: 2d481b03
+          density: all
+          name: CS$$1_1x3_Amalfi Cameras
+          props:
+            - 1d2e0000
+            - 28b00000
+            - 1e2a0000
+            - 1d380000
+          size: 1x3
+          stage: 1
+          textures:
+            - 258c0000
+            - 25b40000
+      Beards and Shears Barbering/CS$$1_1x2_Beards and Shears Barbering_6d493991.SC4Lot:
+        6d493991:
+          building: ed481b1b
+          density: all
+          name: CS$$1_1x2_Beards and Shears Barbering
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25af0000
+            - 25a80000
+            - 258c0000
+      Beards and Shears Barbering/CS$$1_1x2_Beards and Shears Barbering_ad4939c5.SC4Lot:
+        ad4939c5:
+          building: ed481b1b
+          density: all
+          name: CS$$1_1x2_Beards and Shears Barbering
+          props:
+            - a0000021
+            - 1e2e0000
+            - 1dfd0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+      Beards and Shears Barbering/CS$$1_1x3_Beards and Shears Barbering_2d4939e7.SC4Lot:
+        2d4939e7:
+          building: ed481b1b
+          density: all
+          name: CS$$1_1x3_Beards and Shears Barbering
+          props:
+            - 1d2e0000
+            - 28b00000
+            - 1e2a0000
+            - 1d380000
+          size: 1x3
+          stage: 1
+          textures:
+            - 258c0000
+            - 25b40000
+      Beards and Shears Barbering/CS$$1_2x2_Beards and Shears Barbering_8d493a6d.SC4Lot:
+        8d493a6d:
+          building: ed481b1b
+          density: all
+          name: CS$$1_2x2_Beards and Shears Barbering
+          props:
+            - 1d4b0000
+            - 1d380000
+            - a000003d
+          size: 2x2
+          stage: 1
+          textures:
+            - 25a30000
+            - 25b00000
+            - 258f0000
+            - 258c0000
+      Carpet World/CS$$1_1x2_Carpet World_2d493cd7.SC4Lot:
+        2d493cd7:
+          building: 8d481b39
+          density: all
+          name: CS$$1_1x2_Carpet World
+          props:
+            - '29170000'
+            - a0000021
+            - a0000044
+            - a000003f
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+      Carpet World/CS$$1_1x2_Carpet World_ed493d08.SC4Lot:
+        ed493d08:
+          building: 8d481b39
+          density: all
+          name: CS$$1_1x2_Carpet World
+          props:
+            - 1e2e0000
+            - 1dfd0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+      Carpet World/CS$$1_1x3_Carpet World_2d493d63.SC4Lot:
+        2d493d63:
+          building: 8d481b39
+          density: all
+          name: CS$$1_1x3_Carpet World
+          props:
+            - 1d2e0000
+            - 28b00000
+            - 1e2a0000
+            - 1d380000
+          size: 1x3
+          stage: 1
+          textures:
+            - 25b40000
+            - '25900000'
+      Carpet World/CS$$1_2x2_Carpet World_6d493def.SC4Lot:
+        6d493def:
+          building: 8d481b39
+          density: all
+          name: CS$$1_2x2_Carpet World
+          props:
+            - a000003d
+            - 1dfb0000
+            - 1d380000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+      Carpet World/CS$$1_2x2_Carpet World_8d493e8a.SC4Lot:
+        8d493e8a:
+          building: 8d481b39
+          density: all
+          name: CS$$1_2x2_Carpet World
+          props:
+            - a000003d
+            - 1d380000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+      Grandview Mirror and Glass/CS$$1_1x2_Grandview Mirror and Glass_2d49445d.SC4Lot:
+        2d49445d:
+          building: 4d481b51
+          density: all
+          name: CS$$1_1x2_Grandview Mirror and Glass
+          props:
+            - a0000021
+            - 1d380000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+      Grandview Mirror and Glass/CS$$1_1x3_Grandview Mirror and Glass_2d49449f.SC4Lot:
+        2d49449f:
+          building: 4d481b51
+          density: all
+          name: CS$$1_1x3_Grandview Mirror and Glass
+          props:
+            - 1d2e0000
+            - 28b00000
+            - 1e2a0000
+            - 1d380000
+          size: 1x3
+          stage: 1
+          textures:
+            - 25b40000
+            - '25900000'
+      Grandview Mirror and Glass/CS$$1_2x2_Grandview Mirror and Glass_ed4944ca.SC4Lot:
+        ed4944ca:
+          building: 4d481b51
+          density: all
+          name: CS$$1_2x2_Grandview Mirror and Glass
+          props:
+            - a000003d
+            - 1d380000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+      H2Oh! Water Filters/CS$$1_1x1_H2Oh Water Filters_2d49483f.SC4Lot:
+        2d49483f:
+          building: 2d481b65
+          density: all
+          name: CS$$1_1x1_H2Oh Water Filters
+          size: 1x1
+          stage: 1
+          textures:
+            - 258f0000
+      H2Oh! Water Filters/CS$$1_1x2_H2Oh Water Filters_0d4946f9.SC4Lot:
+        0d4946f9:
+          building: 2d481b65
+          density: all
+          name: CS$$1_1x2_H2Oh Water Filters
+          props:
+            - a0000021
+            - 1dfd0000
+            - '1e300000'
+            - 28aa0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+      H2Oh! Water Filters/CS$$1_2x1_H2Oh Water Filters_2d49480a.SC4Lot:
+        2d49480a:
+          building: 2d481b65
+          density: all
+          name: CS$$1_2x1_H2Oh Water Filters
+          props:
+            - a000003d
+          size: 2x1
+          stage: 1
+          textures:
+            - 25a30000
+            - 258f0000
+      House of Fabric/CS$$1_1x2_House of Fabric_ad494915.SC4Lot:
+        ad494915:
+          building: ed481b90
+          density: all
+          name: CS$$1_1x2_House of Fabric
+          props:
+            - 1e2e0000
+            - 1dfd0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+      House of Fabric/CS$$1_1x2_House of Fabric_ed4948dc.SC4Lot:
+        ed4948dc:
+          building: ed481b90
+          density: all
+          name: CS$$1_1x2_House of Fabric
+          props:
+            - a0000044
+            - 1d380000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+      House of Fabric/CS$$1_1x3_House of Fabric_6d494b4d.SC4Lot:
+        6d494b4d:
+          building: ed481b90
+          density: all
+          name: CS$$1_1x3_House of Fabric
+          props:
+            - a000005a
+            - a000003d
+            - 1e2d0000
+            - 28ab0000
+          size: 1x3
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+            - 25a30000
+      House of Fabric/CS$$1_1x3_House of Fabric_ed49494a.SC4Lot:
+        ed49494a:
+          building: ed481b90
+          density: all
+          name: CS$$1_1x3_House of Fabric
+          props:
+            - 1d2e0000
+            - 28b00000
+            - 1e2a0000
+            - 1d380000
+          size: 1x3
+          stage: 1
+          textures:
+            - 25b40000
+            - '25900000'
+      House of Fabric/CS$$1_2x2_House of Fabric_4d494973.SC4Lot:
+        4d494973:
+          building: ed481b90
+          density: all
+          name: CS$$1_2x2_House of Fabric
+          props:
+            - a000003d
+            - 1d380000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+      House of Fabric/CS$$1_2x2_House of Fabric_4d494996.SC4Lot:
+        4d494996:
+          building: ed481b90
+          density: all
+          name: CS$$1_2x2_House of Fabric
+          props:
+            - a000003d
+            - 1dfb0000
+            - 1d380000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+      Kiki's Yoga and Dance/CS$$1_1x2_Kiki's Yoga and Dance_2d494a39.SC4Lot:
+        2d494a39:
+          building: ad481bb3
+          density: all
+          name: CS$$1_1x2_Kiki's Yoga and Dance
+          props:
+            - '29170000'
+            - a0000021
+            - a0000044
+            - a000003f
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+      Kiki's Yoga and Dance/CS$$1_1x2_Kiki's Yoga and Dance_2d494a79.SC4Lot:
+        2d494a79:
+          building: ad481bb3
+          density: all
+          name: CS$$1_1x2_Kiki's Yoga and Dance
+          props:
+            - a0000021
+            - 1e2e0000
+            - 1dfd0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+      Kiki's Yoga and Dance/CS$$1_1x2_Kiki's Yoga and Dance_cd494a50.SC4Lot:
+        cd494a50:
+          building: ad481bb3
+          density: all
+          name: CS$$1_1x2_Kiki's Yoga and Dance
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25af0000
+            - 25a80000
+            - 258c0000
+      Kiki's Yoga and Dance/CS$$1_1x3_Kiki's Yoga and Dance_2d494b27.SC4Lot:
+        2d494b27:
+          building: ad481bb3
+          density: all
+          name: CS$$1_1x3_Kiki's Yoga and Dance
+          props:
+            - a000005a
+            - a000003d
+            - 1e2d0000
+            - 28ab0000
+          size: 1x3
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+            - 25a30000
+      Kitchen and Restaurant Supply/CS$$1_1x2_Kitchen and Restaurant Supply_2d494c33.SC4Lot:
+        2d494c33:
+          building: 2d481bc0
+          density: all
+          name: CS$$1_1x2_Kitchen and Restaurant Supply
+          props:
+            - 1d380000
+            - 28ac0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+      Kitchen and Restaurant Supply/CS$$1_1x2_Kitchen and Restaurant Supply_cd494c4e.SC4Lot:
+        cd494c4e:
+          building: 2d481bc0
+          density: all
+          name: CS$$1_1x2_Kitchen and Restaurant Supply
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25af0000
+            - 25a80000
+            - 258c0000
+      Kitchen and Restaurant Supply/CS$$1_1x3_Kitchen and Restaurant Supply_4d494c9b.SC4Lot:
+        4d494c9b:
+          building: 2d481bc0
+          density: all
+          name: CS$$1_1x3_Kitchen and Restaurant Supply
+          props:
+            - a000003d
+            - 1e2d0000
+            - 28ab0000
+          size: 1x3
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+            - 25a30000
+      Kitchen and Restaurant Supply/CS$$1_1x3_Kitchen and Restaurant Supply_6d494c7c.SC4Lot:
+        6d494c7c:
+          building: 2d481bc0
+          density: all
+          name: CS$$1_1x3_Kitchen and Restaurant Supply
+          props:
+            - 1d2e0000
+            - 28b00000
+            - 1e2a0000
+            - 1d380000
+          size: 1x3
+          stage: 1
+          textures:
+            - 25b40000
+            - '25900000'
+      Kitchen and Restaurant Supply/CS$$1_2x2_Kitchen and Restaurant Supply_0d494dc1.SC4Lot:
+        0d494dc1:
+          building: 2d481bc0
+          density: all
+          name: CS$$1_2x2_Kitchen and Restaurant Supply
+          props:
+            - a000003d
+            - 28aa0000
+            - 1e2e0000
+            - 28ac0000
+            - 1d4a0000
+            - 1d4b0000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+            - 25a80000
+      Kitchen and Restaurant Supply/CS$$1_2x2_Kitchen and Restaurant Supply_4d494e1a.SC4Lot:
+        4d494e1a:
+          building: 2d481bc0
+          density: all
+          name: CS$$1_2x2_Kitchen and Restaurant Supply
+          props:
+            - a000003d
+            - 28aa0000
+            - 1e2e0000
+            - 28ac0000
+            - 1d4a0000
+            - 1d4b0000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+            - 25a80000
+      Rita's Fashion/CS$$1_1x2_Rita's Fashion_4d495122.SC4Lot:
+        4d495122:
+          building: 8d481bfa
+          density: all
+          name: CS$$1_1x2_Rita's Fashion
+          props:
+            - 1e2e0000
+            - 1dfd0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+      Rita's Fashion/CS$$1_1x2_Rita's Fashion_ed4950e8.SC4Lot:
+        ed4950e8:
+          building: 8d481bfa
+          density: all
+          name: CS$$1_1x2_Rita's Fashion
+          props:
+            - a0000044
+            - a000003f
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+      Rita's Fashion/CS$$1_1x3_Rita's Fashion_4d495147.SC4Lot:
+        4d495147:
+          building: 8d481bfa
+          density: all
+          name: CS$$1_1x3_Rita's Fashion
+          props:
+            - 1d2e0000
+            - 28b00000
+            - 1e2a0000
+            - 1d380000
+          size: 1x3
+          stage: 1
+          textures:
+            - 25b40000
+            - '25900000'
+      Rita's Fashion/CS$$1_2x2_Rita's Fashion_4d495169.SC4Lot:
+        4d495169:
+          building: 8d481bfa
+          density: all
+          name: CS$$1_2x2_Rita's Fashion
+          props:
+            - a000003d
+            - 1dfb0000
+            - 1d380000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+      Sir Lamps-a-Lot Lighting/CS$$1_1x2_Sir Lamps-a-Lot Lighting_2d494f8f.SC4Lot:
+        2d494f8f:
+          building: 0d481c14
+          density: all
+          name: CS$$1_1x2_Sir Lamps-a-Lot Lighting
+          props:
+            - '29170000'
+            - a0000021
+            - a0000044
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+      Sir Lamps-a-Lot Lighting/CS$$1_1x3_Sir Lamps-a-Lot Lighting_0d494fe5.SC4Lot:
+        0d494fe5:
+          building: 0d481c14
+          density: all
+          name: CS$$1_1x3_Sir Lamps-a-Lot Lighting
+          props:
+            - a000003d
+            - 1e2d0000
+            - 28ab0000
+          size: 1x3
+          stage: 1
+          textures:
+            - 258f0000
+            - 25b20000
+            - 25a30000
+      Sir Lamps-a-Lot Lighting/CS$$1_1x3_Sir Lamps-a-Lot Lighting_2d494fc5.SC4Lot:
+        2d494fc5:
+          building: 0d481c14
+          density: all
+          name: CS$$1_1x3_Sir Lamps-a-Lot Lighting
+          props:
+            - 1d2e0000
+            - 28b00000
+            - 1e2a0000
+            - 1d380000
+          size: 1x3
+          stage: 1
+          textures:
+            - 25b40000
+            - '25900000'
+      Sir Lamps-a-Lot Lighting/CS$$1_2x2_Sir Lamps-a-Lot Lighting_0d495003.SC4Lot:
+        0d495003:
+          building: 0d481c14
+          density: all
+          name: CS$$1_2x2_Sir Lamps-a-Lot Lighting
+          props:
+            - a000003d
+            - 1dfb0000
+            - 1d380000
+          size: 2x2
+          stage: 1
+          textures:
+            - '25900000'
+            - 25a30000
+      The Vitamin Depot/CS$$1_1x1_The Vitamin Depot_2d494644.SC4Lot:
+        2d494644:
+          building: 0d481c34
+          density: all
+          name: CS$$1_1x1_The Vitamin Depot
+          size: 1x1
+          stage: 1
+          textures:
+            - 258f0000
+      The Vitamin Depot/CS$$1_1x1_The Vitamin Depot_ad4945b9.SC4Lot:
+        ad4945b9:
+          building: 0d481c34
+          density: all
+          name: CS$$1_1x1_The Vitamin Depot
+          props:
+            - 1d4b0000
+          size: 1x1
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a90000
+      The Vitamin Depot/CS$$1_1x2_The Vitamin Depot_6d49472c.SC4Lot:
+        6d49472c:
+          building: 0d481c34
+          density: all
+          name: CS$$1_1x2_The Vitamin Depot
+          props:
+            - 1dfd0000
+            - '1e300000'
+            - 28aa0000
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+      iFixit Phone Repair/CS$$1_1x1_iFixit Phone Repair_0d4945f3.SC4Lot:
+        0d4945f3:
+          building: cd481ba6
+          density: all
+          name: CS$$1_1x1_iFixit Phone Repair
+          props:
+            - 1d4b0000
+          size: 1x1
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a90000
+      iFixit Phone Repair/CS$$1_1x1_iFixit Phone Repair_ed49465a.SC4Lot:
+        ed49465a:
+          building: cd481ba6
+          density: all
+          name: CS$$1_1x1_iFixit Phone Repair
+          size: 1x1
+          stage: 1
+          textures:
+            - 258f0000
+    meta:
+      timestamp: 2024-12-17T09:38:09.625Z
+      version: 1
+    models:
+      Amalfi Cameras/Amalfi Cameras-0x5ad0e817_0xabc6ebc2_0x30000.SC4Model:
+        - abc6ebc2
+      Beards and Shears Barbering/Beards and Shears Barbering-0x5ad0e817_0x68bba0fc_0x30000.SC4Model:
+        - 68bba0fc
+      Carpet World/Carpet World-0x5ad0e817_0x68bba4d6_0x30000.SC4Model:
+        - 68bba4d6
+      Grandview Mirror and Glass/Grandview Mirror and Glass-0x5ad0e817_0x68c0cbf1_0x30000.SC4Model:
+        - 68c0cbf1
+      H2Oh! Water Filters/H2OH Water Filters-0x5ad0e817_0xa8bba646_0x30000.SC4Model:
+        - a8bba646
+      House of Fabric/House of Fabric-0x5ad0e817_0x48bba76d_0x30000.SC4Model:
+        - 48bba76d
+      Kiki's Yoga and Dance/Kiki's Yoga and Dance-0x5ad0e817_0xa8bfa87f_0x30000.SC4Model:
+        - a8bfa87f
+      Kitchen and Restaurant Supply/Kitchen and Restaurant Supply-0x5ad0e817_0x28bc481d_0x30000.SC4Model:
+        - 28bc481d
+      Rita's Fashion/Ritas Fashion-0x5ad0e817_0xe8bc49ef_0x30000.SC4Model:
+        - e8bc49ef
+      Sir Lamps-a-Lot Lighting/Sir Lamps-a-Lot Lighting-0x5ad0e817_0xc8bc4c41_0x30000.SC4Model:
+        - c8bc4c41
+      The Vitamin Depot/The Vitamin Depot-0x5ad0e817_0xa8bfa6fc_0x30000.SC4Model:
+        - a8bfa6fc
+      iFixit Phone Repair/iFixit Phone Repair-0x5ad0e817_0xc8bba902_0x30000.SC4Model:
+        - c8bba902
     name: Medium Wealth Commercial Shops Volume 1
+    sha256: 64245ccd1368f921575600bc680f88f23bd26a15e776d677c271636cc1335e75
+    size: 3292385
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/madhatter106_CSS_day02.thumb.jpg.0b1017ff21a13d067d35eaf2a54e1ed8.jpg
+    uncompressed: 3815836
     url: https://community.simtropolis.com/files/file/34338-medium-wealth-commercial-shops-volume-1/
+    version: 1.0.0
   simtropolis/34341:
     assetId: simtropolis/34341-feldman-fireworks-co
     authors:
@@ -48406,11 +49393,1012 @@ assets:
     assetId: simtropolis/35522-midrise-office-pack-volume-9
     authors:
       - madhatter106
+    buildings:
+      Anderson, Swanson and Warren/Anderson, Swanson and Warren-0x6534284a-0x0d03a116-0x8d03a308.SC4Desc:
+        8d03a308:
+          bulldoze: 421
+          capacity:
+            co$$: 208
+          categories: co$$
+          flamability: 40
+          garbage: 10
+          model: 07cb7f01
+          name: Anderson, Swanson and Warren
+          pollution: 2
+          pollutionRadius: 5
+          power: 5
+          water: 181
+          waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1452
+      Baxter, Phillips and Bond/Bagster, Phillips and Bond-0x6534284a-0x0d03a116-0x4d03a3a6.SC4Desc:
+        4d03a3a6:
+          bulldoze: 485
+          capacity:
+            co$$: 395
+          categories: co$$
+          flamability: 40
+          garbage: 20
+          model: a993cbb5
+          name: Baxter, Phillips and Bond
+          pollution: 4
+          pollutionRadius: 5
+          power: 8
+          water: 342
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 2758
+      Cadosch and Long/Cadosch and Long-0x6534284a-0x0d03a116-0x8d03a41b.SC4Desc:
+        8d03a41b:
+          bulldoze: 605
+          capacity:
+            co$$: 320
+          categories: co$$
+          flamability: 40
+          garbage: 16
+          model: 6993da89
+          name: Cadosch and Long
+          pollution: 3
+          pollutionRadius: 5
+          power: 7
+          water: 278
+          waterPollution: 3
+          waterPollutionRadius: 6
+          worth: 2237
+      Chapman Financial Group/Chapman Financial Group-0x6534284a-0x0d03a116-0x8d03a1e2.SC4Desc:
+        8d03a1e2:
+          bulldoze: 807
+          capacity:
+            co$$: 481
+            co$$$: 337
+          categories: co$$$
+          flamability: 35
+          garbage: 16
+          model: c76bfc7d
+          name: Chapman Financial Group
+          pollution: 8
+          pollutionRadius: 6
+          power: 14
+          water: 714
+          waterPollution: 4
+          waterPollutionRadius: 7
+          worth: 3759
+      Diemschutz Investments/Diemschutz Investments-0x6534284a-0x0d03a116-0x2d03a48e.SC4Desc:
+        2d03a48e:
+          bulldoze: 451
+          capacity:
+            co$$: 321
+          categories: co$$
+          flamability: 40
+          garbage: 16
+          model: 6bc5cda0
+          name: Diemschutz Investments
+          pollution: 3
+          pollutionRadius: 5
+          power: 7
+          water: 278
+          waterPollution: 3
+          waterPollutionRadius: 6
+          worth: 2240
+      Hutchinson Financial/Hutchinson Financial-0x6534284a-0x0d03a116-0xad03a471.SC4Desc:
+        ad03a471:
+          bulldoze: 612
+          capacity:
+            co$$: 291
+          categories: co$$
+          flamability: 40
+          garbage: 15
+          model: a99508ac
+          name: Hutchinson Financial
+          pollution: 3
+          pollutionRadius: 5
+          power: 6
+          water: 253
+          waterPollution: 3
+          waterPollutionRadius: 6
+          worth: 2032
+      Kelly Property Management/Kelly Property Management-0x6534284a-0x0d03a116-0xed03a290.SC4Desc:
+        ed03a290:
+          bulldoze: 693
+          capacity:
+            co$$: 354
+          categories: co$$
+          flamability: 40
+          garbage: 18
+          model: 876cc5e0
+          name: Kelly Property Management
+          pollution: 4
+          pollutionRadius: 5
+          power: 8
+          water: 308
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 2477
+      Littlechild and Sims/Littlechild and Sims-0x6534284a-0x0d03a116-0x4d03a4f3.SC4Desc:
+        4d03a4f3:
+          bulldoze: 449
+          capacity:
+            co$$: 224
+          categories: co$$
+          flamability: 40
+          garbage: 11
+          model: ebfe302c
+          name: Littlechild and Sims
+          pollution: 2
+          pollutionRadius: 5
+          power: 5
+          water: 194
+          waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1563
+      Lusk and Openshaw, Inc/Lusk and Openshaw, Inc.-0x6534284a-0x0d03a116-0x2d03a34c.SC4Desc:
+        2d03a34c:
+          bulldoze: 570
+          capacity:
+            co$$: 299
+          categories: co$$
+          flamability: 40
+          garbage: 15
+          model: e7df7117
+          name: Lusk and Openshaw, Inc.
+          pollution: 3
+          pollutionRadius: 5
+          power: 6
+          water: 260
+          waterPollution: 3
+          waterPollutionRadius: 6
+          worth: 2089
+      Macnaghten Publishing Co/Macnaghten Publishing Co.-0x6534284a-0x0d03a116-0x4d03a325.SC4Desc:
+        4d03a325:
+          bulldoze: 480
+          capacity:
+            co$$: 214
+          categories: co$$
+          flamability: 40
+          garbage: 11
+          model: 27cc04e1
+          name: Macnaghten Publishing Co.
+          pollution: 2
+          pollutionRadius: 5
+          power: 5
+          water: 186
+          waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1495
+      Milwood, Wilson & Smith/Millwood, Wilson & Smith-0x6534284a-0x0d03a116-0x0d03a117.SC4Desc:
+        0d03a117:
+          bulldoze: 629
+          capacity:
+            co$$: 260
+          categories: co$$
+          flamability: 40
+          garbage: 13
+          model: 276b94ea
+          name: Millwood, Wilson & Smith
+          pollution: 3
+          pollutionRadius: 5
+          power: 6
+          water: 226
+          waterPollution: 3
+          waterPollutionRadius: 6
+          worth: 1820
+      Mortimer, Packer & Associates/Mortimer, Packer & Associates-0x6534284a-0x0d03a116-0x0d03a43f.SC4Desc:
+        0d03a43f:
+          bulldoze: 531
+          capacity:
+            co$$: 458
+          categories: co$$
+          flamability: 40
+          garbage: 23
+          model: 8996b960
+          name: Mortimer, Packer & Associates
+          pollution: 5
+          pollutionRadius: 5
+          power: 10
+          water: 397
+          waterPollution: 5
+          waterPollutionRadius: 6
+          worth: 3198
+      Mylett, McKenzie and Coles/Mylett, McKenzie and Coles-0x6534284a-0x0d03a116-0x6d03a2b7.SC4Desc:
+        6d03a2b7:
+          bulldoze: 664
+          capacity:
+            co$$: 443
+          categories: co$$
+          flamability: 40
+          garbage: 22
+          model: 076ce35d
+          name: Mylett, McKenzie and Coles
+          pollution: 4
+          pollutionRadius: 5
+          power: 9
+          water: 384
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 3096
+      Nichols Title and Trust/Nichols Title and Trust-0x6534284a-0x0d03a116-0x8d03a1b0.SC4Desc:
+        8d03a1b0:
+          bulldoze: 750
+          capacity:
+            co$$: 628
+          categories: co$$
+          flamability: 40
+          garbage: 31
+          model: c76bc44c
+          name: Nichols Title and Trust
+          pollution: 6
+          pollutionRadius: 5
+          power: 13
+          water: 545
+          waterPollution: 6
+          waterPollutionRadius: 6
+          worth: 4389
+      Pizer and Isenschmid/Pizer and Isenschmid-0x6534284a-0x0d03a116-0x6d03a3d2.SC4Desc:
+        6d03a3d2:
+          bulldoze: 595
+          capacity:
+            co$$: 287
+          categories: co$$
+          flamability: 40
+          garbage: 14
+          model: 8993d3da
+          name: Pizer and Isenschmid
+          pollution: 3
+          pollutionRadius: 5
+          power: 6
+          water: 249
+          waterPollution: 3
+          waterPollutionRadius: 6
+          worth: 2004
+      Schwartz and Lawende/Schwartz and Lawende-0x6534284a-0x0d03a116-0xcd03a3fb.SC4Desc:
+        cd03a3fb:
+          bulldoze: 808
+          capacity:
+            co$$: 473
+          categories: co$$
+          flamability: 40
+          garbage: 24
+          model: a996934d
+          name: Schwartz and Lawende
+          pollution: 5
+          pollutionRadius: 5
+          power: 10
+          water: 410
+          waterPollution: 5
+          waterPollutionRadius: 6
+          worth: 3303
+      Stride Engineering/Stride Engineering-0x6534284a-0x0d03a116-0xed03a231.SC4Desc:
+        ed03a231:
+          bulldoze: 514
+          capacity:
+            co$$: 295
+          categories: co$$
+          flamability: 40
+          garbage: 15
+          model: c76c76da
+          name: Stride Engineering
+          pollution: 3
+          pollutionRadius: 5
+          power: 6
+          water: 256
+          waterPollution: 3
+          waterPollutionRadius: 6
+          worth: 2059
+      The Abberline Agency/The Abberline Agency-0x6534284a-0x0d03a116-0xcd03a2ed.SC4Desc:
+        cd03a2ed:
+          bulldoze: 842
+          capacity:
+            co$$: 352
+          categories: co$$
+          flamability: 40
+          garbage: 18
+          model: e76d0ada
+          name: The Abberline Agency
+          pollution: 4
+          pollutionRadius: 5
+          power: 8
+          water: 305
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 2457
+      The Eddowes Foundation/The Eddowes Foundation-0x6534284a-0x0d03a116-0x4d03a263.SC4Desc:
+        4d03a263:
+          bulldoze: 750
+          capacity:
+            co$$: 674
+            co$$$: 472
+          categories: co$$$
+          flamability: 35
+          garbage: 23
+          model: 076c8329
+          name: The Eddowes Foundation
+          pollution: 11
+          pollutionRadius: 6
+          power: 19
+          water: 1000
+          waterPollution: 6
+          waterPollutionRadius: 7
+          worth: 5269
+      The Pinchin Corporation/The Pinchin Corporation-0x6534284a-0x0d03a116-0x4d03a4ba.SC4Desc:
+        4d03a4ba:
+          bulldoze: 608
+          capacity:
+            co$$: 280
+            co$$$: 197
+          categories: co$$$
+          flamability: 35
+          garbage: 10
+          model: 6bdd7063
+          name: The Pinchin Corporation
+          pollution: 5
+          pollutionRadius: 6
+          power: 8
+          water: 415
+          waterPollution: 2
+          waterPollutionRadius: 7
+          worth: 2187
+      The Sugden Building/The Sugden Building-0x6534284a-0x0d03a116-0x4f9c0d66.SC4Desc:
+        4f9c0d66:
+          bulldoze: 604
+          capacity:
+            co$$: 393
+          categories: co$$
+          flamability: 40
+          garbage: 20
+          model: ef941da1
+          name: The Sugden Building
+          pollution: 4
+          pollutionRadius: 5
+          power: 8
+          water: 341
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 2746
+      The Tabram Building/The Tabram Building-0x6534284a-0x0d03a116-0xad03a188.SC4Desc:
+        ad03a188:
+          bulldoze: 810
+          capacity:
+            co$$: 765
+            co$$$: 536
+          categories: co$$$
+          flamability: 35
+          garbage: 26
+          model: c76bd626
+          name: The Tabram Building
+          pollution: 13
+          pollutionRadius: 6
+          power: 22
+          water: 1136
+          waterPollution: 7
+          waterPollutionRadius: 7
+          worth: 5985
     category: 102-commercial
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe stock price is down seventeen percent, the company is in the midst of a reorganization, and your computer has crashed for the third time this morning.\_ But you can't claw your way to the top of the corporate ladder by waiting tables, so this pack is for you.\_ Here's another (long-awaited) set of office buildings to provide yet more essential variety for your downtown business district.\_ Included in this upload are the following establishments...<br>\n\t<br>\n\t<strong><em>Milwood, Wilson &amp; Smith<br>\n\tThe Tabram Building<br>\n\tNichols Title and Trust<br>\n\tChapman Financial Group<br>\n\tStride Engineering<br>\n\tThe Eddowes Foundation<br>\n\tKelly Property Management<br>\n\tMylett, McKenzie and Coles<br>\n\tThe Abberline Agency<br>\n\tAnderson, Swanson and Warren<br>\n\tMacnaghten Publishing Co.<br>\n\tLusk and Openshaw, Inc.<br>\n\tBaxter, Phillips and Bond<br>\n\tPizer and Isenschmid<br>\n\tSchwartz and Lawende<br>\n\tCadosch and Long<br>\n\tMortimer, Packer &amp; Associates<br>\n\tHutchinson Financial<br>\n\tDiemschutz Investments<br>\n\tThe Pinchin Corporation<br>\n\tLittlechild &amp; Sims<br>\n\tThe Sugden Building</em></strong><br>\n\t<br>\n\tThis is practically a mega-upload - that's twenty-two individual offices!\_ Most are medium wealth office, with a sprinkling of fancier high wealth offices.\_ These have been modded and adjusted to match previous offerings, and all are tricked out with nightlighting as well.\_ Many thanks to fellow Simtropolis user<strong>\_brancra</strong> for his rigorous testing of these - it is greatly appreciated!<br>\n\t<br>\n\tSo, what are you waiting for?\_ Straighten that tie, splash some water on your face in the executive washroom, and download these - that is, if the company computer doesn't crash again...enjoy!<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Midrise Office Pack Vol 9.zip
+    files:
+      - Anderson, Swanson and Warren/Anderson Swanson and Warren-0x5ad0e817_0x7cb7f01_0x30000.SC4Model
+      - Anderson, Swanson and Warren/Anderson, Swanson and Warren-0x6534284a-0x0d03a116-0x8d03a308.SC4Desc
+      - Anderson, Swanson and Warren/CO$$5_2x3_Anderson, Swanson and Warren_af9beffd.SC4Lot
+      - Anderson, Swanson and Warren/CO$$6_2x2_Anderson, Swanson and Warren_ef9bef5c.SC4Lot
+      - Baxter, Phillips and Bond/Bagster, Phillips and Bond-0x6534284a-0x0d03a116-0x4d03a3a6.SC4Desc
+      - Baxter, Phillips and Bond/Baxter Phillips and Bond-0x5ad0e817_0xa993cbb5_0x30000.SC4Model
+      - Baxter, Phillips and Bond/CO$$6_2x3_Baxter, Phillips and Bond_0f9bfee9.SC4Lot
+      - Baxter, Phillips and Bond/CO$$6_2x3_Baxter, Phillips and Bond_ef9bfece.SC4Lot
+      - Cadosch and Long/CO$$6_2x2_Cadosch and Long_ef9bf722.SC4Lot
+      - Cadosch and Long/CO$$6_2x3_Cadosch and Long_0f9bf745.SC4Lot
+      - Cadosch and Long/Cadosch and Long-0x5ad0e817_0x6993da89_0x30000.SC4Model
+      - Cadosch and Long/Cadosch and Long-0x6534284a-0x0d03a116-0x8d03a41b.SC4Desc
+      - Chapman Financial Group/CO$$$7_2x2_Chapman Financial Group_ce860e12.SC4Lot
+      - Chapman Financial Group/Chapman Financial Group-0x5ad0e817_0xc76bfc7d_0x30000.SC4Model
+      - Chapman Financial Group/Chapman Financial Group-0x6534284a-0x0d03a116-0x8d03a1e2.SC4Desc
+      - Diemschutz Investments/CO$$6_3x2_Diemschutz Investments_2f9bfcd3.SC4Lot
+      - Diemschutz Investments/CO$$6_3x2_Diemschutz Investments_4f9bfc8e.SC4Lot
+      - Diemschutz Investments/CO$$6_3x2_Diemschutz Investments_ef9bfc36.SC4Lot
+      - Diemschutz Investments/Diemschutz Investments-0x5ad0e817_0x6bc5cda0_0x30000.SC4Model
+      - Diemschutz Investments/Diemschutz Investments-0x6534284a-0x0d03a116-0x2d03a48e.SC4Desc
+      - Hutchinson Financial/CO$$6_2x2_Hutchinson Financial_0f9bfa90.SC4Lot
+      - Hutchinson Financial/CO$$6_2x2_Hutchinson Financial_ef9bfa6f.SC4Lot
+      - Hutchinson Financial/Hutchinson Financial-0x5ad0e817_0xa99508ac_0x30000.SC4Model
+      - Hutchinson Financial/Hutchinson Financial-0x6534284a-0x0d03a116-0xad03a471.SC4Desc
+      - Kelly Property Management/CO$$7_2x2_Kelly Property Management_8e8610a9.SC4Lot
+      - Kelly Property Management/Kelly Property Management-0x5ad0e817_0x876cc5e0_0x30000.SC4Model
+      - Kelly Property Management/Kelly Property Management-0x6534284a-0x0d03a116-0xed03a290.SC4Desc
+      - Littlechild and Sims/CO$$6_2x2_Littlechild and Sims_2f9bfb80.SC4Lot
+      - Littlechild and Sims/CO$$6_2x2_Littlechild and Sims_8f9bfba9.SC4Lot
+      - Littlechild and Sims/Littlechild and Sims-0x5ad0e817_0xebfe302c_0x30000.SC4Model
+      - Littlechild and Sims/Littlechild and Sims-0x6534284a-0x0d03a116-0x4d03a4f3.SC4Desc
+      - Lusk and Openshaw, Inc/CO$$6_2x2_Lusk and Openshaw, Inc._ef9bf378.SC4Lot
+      - Lusk and Openshaw, Inc/Lusk and Openshaw, Inc.-0x6534284a-0x0d03a116-0x2d03a34c.SC4Desc
+      - Lusk and Openshaw, Inc/Lusk and Openshaw-0x5ad0e817_0xe7df7117_0x30000.SC4Model
+      - Macnaghten Publishing Co/CO$$5_2x3_Macnaghten Publishing Co._6f9bf23f.SC4Lot
+      - Macnaghten Publishing Co/CO$$6_2x2_Macnaghten Publishing Co._2f9bf0a6.SC4Lot
+      - Macnaghten Publishing Co/CO$$6_2x2_Macnaghten Publishing Co._8f9bf208.SC4Lot
+      - Macnaghten Publishing Co/Macnaghten Publishing Co-0x5ad0e817_0x27cc04e1_0x30000.SC4Model
+      - Macnaghten Publishing Co/Macnaghten Publishing Co.-0x6534284a-0x0d03a116-0x4d03a325.SC4Desc
+      - Milwood, Wilson & Smith/CO$$6_2x2_Milwood, Wilson & Smith_cd481511.SC4Lot
+      - Milwood, Wilson & Smith/Millwood Wilson and Smith-0x5ad0e817_0x276b94ea_0x30000.SC4Model
+      - Milwood, Wilson & Smith/Millwood, Wilson & Smith-0x6534284a-0x0d03a116-0x0d03a117.SC4Desc
+      - Mortimer, Packer & Associates/CO$$6_3x2_Mortimer, Packer & Associates_0f9bf9a3.SC4Lot
+      - Mortimer, Packer & Associates/CO$$6_3x2_Mortimer, Packer & Associates_6f9bf93c.SC4Lot
+      - Mortimer, Packer & Associates/CO$$6_3x3_Mortimer, Packer & Associates_2f9bf8c0.SC4Lot
+      - Mortimer, Packer & Associates/Mortimer Packer and Associates-0x5ad0e817_0x8996b960_0x30000.SC4Model
+      - Mortimer, Packer & Associates/Mortimer, Packer & Associates-0x6534284a-0x0d03a116-0x0d03a43f.SC4Desc
+      - Mylett, McKenzie and Coles/CO$$7_2x2_Mylett, McKenzie and Coles_ce861316.SC4Lot
+      - Mylett, McKenzie and Coles/Mylett McKenzie and Coles-0x5ad0e817_0x76ce35d_0x30000.SC4Model
+      - Mylett, McKenzie and Coles/Mylett, McKenzie and Coles-0x6534284a-0x0d03a116-0x6d03a2b7.SC4Desc
+      - Nichols Title and Trust/CO$$6_2x3_Nichols Title and Trust_ce860caf.SC4Lot
+      - Nichols Title and Trust/CO$$6_3x3_Nichols Title and Trust_ce860d3e.SC4Lot
+      - Nichols Title and Trust/Nichols Title and Trust-0x5ad0e817_0xc76bc44c_0x30000.SC4Model
+      - Nichols Title and Trust/Nichols Title and Trust-0x6534284a-0x0d03a116-0x8d03a1b0.SC4Desc
+      - Pizer and Isenschmid/CO$$5_2x3_Pizer and Isenschmid_8f9bf5d0.SC4Lot
+      - Pizer and Isenschmid/CO$$6_2x2_Pizer and Isenschmid_ef9bf4bc.SC4Lot
+      - Pizer and Isenschmid/Pizer and Isenschmid-0x5ad0e817_0x8993d3da_0x30000.SC4Model
+      - Pizer and Isenschmid/Pizer and Isenschmid-0x6534284a-0x0d03a116-0x6d03a3d2.SC4Desc
+      - Schwartz and Lawende/CO$$6_2x3_Schwartz and Lawende_0f9bf691.SC4Lot
+      - Schwartz and Lawende/CO$$7_2x2_Schwartz and Lawende_2f9bf663.SC4Lot
+      - Schwartz and Lawende/Schwartz and Lawende-0x5ad0e817_0xa996934d_0x30000.SC4Model
+      - Schwartz and Lawende/Schwartz and Lawende-0x6534284a-0x0d03a116-0xcd03a3fb.SC4Desc
+      - Stride Engineering/CO$$6_2x2_Stride Engineering_ce860f16.SC4Lot
+      - Stride Engineering/Stride Engineering-0x5ad0e817_0xc76c76da_0x30000.SC4Model
+      - Stride Engineering/Stride Engineering-0x6534284a-0x0d03a116-0xed03a231.SC4Desc
+      - The Abberline Agency/CO$$7_2x2_The Abberline Agency_cf9beecf.SC4Lot
+      - The Abberline Agency/CO$$7_2x2_The Abberline Agency_ef9bee7d.SC4Lot
+      - The Abberline Agency/The Abberline Agency-0x5ad0e817_0xe76d0ada_0x30000.SC4Model
+      - The Abberline Agency/The Abberline Agency-0x6534284a-0x0d03a116-0xcd03a2ed.SC4Desc
+      - The Eddowes Foundation/CO$$$7_2x3_The Eddowes Foundation_ce86100c.SC4Lot
+      - The Eddowes Foundation/The Eddowes Foundation-0x5ad0e817_0x76c8329_0x30000.SC4Model
+      - The Eddowes Foundation/The Eddowes Foundation-0x6534284a-0x0d03a116-0x4d03a263.SC4Desc
+      - The Pinchin Corporation/CO$$$6_2x2_The Pinchin Corporation_8e8613c5.SC4Lot
+      - The Pinchin Corporation/The Pinchin Corporation-0x5ad0e817_0x6bdd7063_0x30000.SC4Model
+      - The Pinchin Corporation/The Pinchin Corporation-0x6534284a-0x0d03a116-0x4d03a4ba.SC4Desc
+      - The Sugden Building/CO$$6_2x3_The Sugden Building_2f9c14e6.SC4Lot
+      - The Sugden Building/The Sugden Building-0x5ad0e817_0xef941da1_0x30000.SC4Model
+      - The Sugden Building/The Sugden Building-0x6534284a-0x0d03a116-0x4f9c0d66.SC4Desc
+      - The Tabram Building/CO$$$6_3x3_The Tabram Building_8e860b1d.SC4Lot
+      - The Tabram Building/CO$$$7_3x2_The Tabram Building_8e860a4c.SC4Lot
+      - The Tabram Building/The Tabram Building-0x5ad0e817_0xc76bd626_0x30000.SC4Model
+      - The Tabram Building/The Tabram Building-0x6534284a-0x0d03a116-0xad03a188.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_05/645a966aada20_dayshot01.png.0efe790a1ecf883471f2000bcbd1480d.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_05/645a9670b1b78_dayshot02.png.7261cb98585c0cb55b45034185531747.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_05/645a96767bde6_nightshot01.png.cd5c7536f97a8c2dfbf5cb4343218ef7.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_05/645a967b639a5_nightshot02.png.32abad68624f83c782e8a7a2cc92e59b.png
     lastModified: 2023-05-09T19:08:53.000Z
+    lots:
+      Anderson, Swanson and Warren/CO$$5_2x3_Anderson, Swanson and Warren_af9beffd.SC4Lot:
+        af9beffd:
+          building: 8d03a308
+          density: medium,high
+          name: CO$$5_2x3_Anderson, Swanson and Warren
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+          size: 2x3
+          stage: 5
+          textures:
+            - 258f0000
+            - '25920000'
+      Anderson, Swanson and Warren/CO$$6_2x2_Anderson, Swanson and Warren_ef9bef5c.SC4Lot:
+        ef9bef5c:
+          building: 8d03a308
+          density: medium,high
+          name: CO$$6_2x2_Anderson, Swanson and Warren
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+      Baxter, Phillips and Bond/CO$$6_2x3_Baxter, Phillips and Bond_0f9bfee9.SC4Lot:
+        0f9bfee9:
+          building: 4d03a3a6
+          density: medium,high
+          name: CO$$6_2x3_Baxter, Phillips and Bond
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+      Baxter, Phillips and Bond/CO$$6_2x3_Baxter, Phillips and Bond_ef9bfece.SC4Lot:
+        ef9bfece:
+          building: 4d03a3a6
+          density: medium,high
+          name: CO$$6_2x3_Baxter, Phillips and Bond
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+            - 25ab0000
+      Cadosch and Long/CO$$6_2x2_Cadosch and Long_ef9bf722.SC4Lot:
+        ef9bf722:
+          building: 8d03a41b
+          density: medium,high
+          name: CO$$6_2x2_Cadosch and Long
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+      Cadosch and Long/CO$$6_2x3_Cadosch and Long_0f9bf745.SC4Lot:
+        0f9bf745:
+          building: 8d03a41b
+          density: medium,high
+          name: CO$$6_2x3_Cadosch and Long
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+            - '25920000'
+      Chapman Financial Group/CO$$$7_2x2_Chapman Financial Group_ce860e12.SC4Lot:
+        ce860e12:
+          building: 8d03a1e2
+          density: high
+          name: CO$$$7_2x2_Chapman Financial Group
+          size: 2x2
+          stage: 7
+          textures:
+            - '258e0000'
+      Diemschutz Investments/CO$$6_3x2_Diemschutz Investments_2f9bfcd3.SC4Lot:
+        2f9bfcd3:
+          building: 2d03a48e
+          density: medium,high
+          name: CO$$6_3x2_Diemschutz Investments
+          props:
+            - a000007b
+            - a000007f
+            - a000007c
+            - 2a120000
+            - 1f010000
+          size: 3x2
+          stage: 6
+          textures:
+            - 25b00000
+            - 258f0000
+            - '26210000'
+      Diemschutz Investments/CO$$6_3x2_Diemschutz Investments_4f9bfc8e.SC4Lot:
+        4f9bfc8e:
+          building: 2d03a48e
+          density: medium,high
+          name: CO$$6_3x2_Diemschutz Investments
+          props:
+            - a0000039
+            - '1e120000'
+          size: 3x2
+          stage: 6
+          textures:
+            - 25b00000
+            - 258f0000
+            - 252b0000
+      Diemschutz Investments/CO$$6_3x2_Diemschutz Investments_ef9bfc36.SC4Lot:
+        ef9bfc36:
+          building: 2d03a48e
+          density: medium,high
+          name: CO$$6_3x2_Diemschutz Investments
+          props:
+            - '29810000'
+          size: 3x2
+          stage: 6
+          textures:
+            - 258f0000
+      Hutchinson Financial/CO$$6_2x2_Hutchinson Financial_0f9bfa90.SC4Lot:
+        0f9bfa90:
+          building: ad03a471
+          density: medium,high
+          name: CO$$6_2x2_Hutchinson Financial
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+      Hutchinson Financial/CO$$6_2x2_Hutchinson Financial_ef9bfa6f.SC4Lot:
+        ef9bfa6f:
+          building: ad03a471
+          density: medium,high
+          name: CO$$6_2x2_Hutchinson Financial
+          props:
+            - 1d380000
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25aa0000
+      Kelly Property Management/CO$$7_2x2_Kelly Property Management_8e8610a9.SC4Lot:
+        8e8610a9:
+          building: ed03a290
+          density: high
+          name: CO$$7_2x2_Kelly Property Management
+          size: 2x2
+          stage: 7
+          textures:
+            - 258f0000
+      Littlechild and Sims/CO$$6_2x2_Littlechild and Sims_2f9bfb80.SC4Lot:
+        2f9bfb80:
+          building: 4d03a4f3
+          density: medium,high
+          name: CO$$6_2x2_Littlechild and Sims
+          props:
+            - 28a90000
+            - 28aa0000
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25a80000
+      Littlechild and Sims/CO$$6_2x2_Littlechild and Sims_8f9bfba9.SC4Lot:
+        8f9bfba9:
+          building: 4d03a4f3
+          density: medium,high
+          name: CO$$6_2x2_Littlechild and Sims
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+      Lusk and Openshaw, Inc/CO$$6_2x2_Lusk and Openshaw, Inc._ef9bf378.SC4Lot:
+        ef9bf378:
+          building: 2d03a34c
+          density: medium,high
+          name: CO$$6_2x2_Lusk and Openshaw, Inc.
+          props:
+            - 1ecb0000
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 259a0000
+      Macnaghten Publishing Co/CO$$5_2x3_Macnaghten Publishing Co._6f9bf23f.SC4Lot:
+        6f9bf23f:
+          building: 4d03a325
+          density: medium,high
+          name: CO$$5_2x3_Macnaghten Publishing Co.
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+          size: 2x3
+          stage: 5
+          textures:
+            - 258f0000
+            - '25920000'
+      Macnaghten Publishing Co/CO$$6_2x2_Macnaghten Publishing Co._2f9bf0a6.SC4Lot:
+        2f9bf0a6:
+          building: 4d03a325
+          density: medium,high
+          name: CO$$6_2x2_Macnaghten Publishing Co.
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+      Macnaghten Publishing Co/CO$$6_2x2_Macnaghten Publishing Co._8f9bf208.SC4Lot:
+        8f9bf208:
+          building: 4d03a325
+          density: medium,high
+          name: CO$$6_2x2_Macnaghten Publishing Co.
+          props:
+            - 1d4a0000
+            - 1d380000
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25a90000
+      Milwood, Wilson & Smith/CO$$6_2x2_Milwood, Wilson & Smith_cd481511.SC4Lot:
+        cd481511:
+          building: 0d03a117
+          density: medium,high
+          name: CO$$6_2x2_Milwood, Wilson & Smith
+          props:
+            - 1f0b0000
+            - a0000069
+            - a000007b
+            - a000007f
+            - a000007c
+            - 1f000000
+            - 2a0f0000
+            - a0000021
+            - 1d380000
+          size: 2x2
+          stage: 6
+          textures:
+            - 25b00000
+            - 252b0000
+            - 258f0000
+            - 25aa0000
+      Mortimer, Packer & Associates/CO$$6_3x2_Mortimer, Packer & Associates_0f9bf9a3.SC4Lot:
+        0f9bf9a3:
+          building: 0d03a43f
+          density: medium,high
+          name: CO$$6_3x2_Mortimer, Packer & Associates
+          props:
+            - '29810000'
+          size: 3x2
+          stage: 6
+          textures:
+            - 258f0000
+      Mortimer, Packer & Associates/CO$$6_3x2_Mortimer, Packer & Associates_6f9bf93c.SC4Lot:
+        6f9bf93c:
+          building: 0d03a43f
+          density: medium,high
+          name: CO$$6_3x2_Mortimer, Packer & Associates
+          size: 3x2
+          stage: 6
+          textures:
+            - 258f0000
+            - '25980000'
+            - 259a0000
+      Mortimer, Packer & Associates/CO$$6_3x3_Mortimer, Packer & Associates_2f9bf8c0.SC4Lot:
+        2f9bf8c0:
+          building: 0d03a43f
+          density: medium,high
+          name: CO$$6_3x3_Mortimer, Packer & Associates
+          props:
+            - a000007b
+            - a000007f
+            - a000007c
+            - 28ad0000
+            - '1e280000'
+            - 1e2d0000
+            - '1e300000'
+            - 28af0000
+          size: 3x3
+          stage: 6
+          textures:
+            - 25a30000
+            - 258f0000
+            - 252b0000
+      Mylett, McKenzie and Coles/CO$$7_2x2_Mylett, McKenzie and Coles_ce861316.SC4Lot:
+        ce861316:
+          building: 6d03a2b7
+          density: high
+          name: CO$$7_2x2_Mylett, McKenzie and Coles
+          size: 2x2
+          stage: 7
+          textures:
+            - 258f0000
+      Nichols Title and Trust/CO$$6_2x3_Nichols Title and Trust_ce860caf.SC4Lot:
+        ce860caf:
+          building: 8d03a1b0
+          density: high
+          name: CO$$6_2x3_Nichols Title and Trust
+          props:
+            - a000007b
+            - 28b10000
+          size: 2x3
+          stage: 7
+          textures:
+            - 258f0000
+            - 25a80000
+      Nichols Title and Trust/CO$$6_3x3_Nichols Title and Trust_ce860d3e.SC4Lot:
+        ce860d3e:
+          building: 8d03a1b0
+          density: medium,high
+          name: CO$$6_3x3_Nichols Title and Trust
+          props:
+            - 1d240000
+            - '1e990000'
+            - a000007b
+            - a000007f
+            - a000007c
+            - a000003d
+            - a0000077
+            - ce020000
+          size: 3x3
+          stage: 6
+          textures:
+            - 25af0000
+            - 258f0000
+            - 252b0000
+      Pizer and Isenschmid/CO$$5_2x3_Pizer and Isenschmid_8f9bf5d0.SC4Lot:
+        8f9bf5d0:
+          building: 6d03a3d2
+          density: medium,high
+          name: CO$$5_2x3_Pizer and Isenschmid
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+            - '29e10000'
+            - 1ecd0000
+          size: 2x3
+          stage: 5
+          textures:
+            - 258f0000
+            - '25920000'
+      Pizer and Isenschmid/CO$$6_2x2_Pizer and Isenschmid_ef9bf4bc.SC4Lot:
+        ef9bf4bc:
+          building: 6d03a3d2
+          density: medium,high
+          name: CO$$6_2x2_Pizer and Isenschmid
+          props:
+            - 1d380000
+            - 1d4a0000
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25a90000
+      Schwartz and Lawende/CO$$6_2x3_Schwartz and Lawende_0f9bf691.SC4Lot:
+        0f9bf691:
+          building: cd03a3fb
+          density: medium,high
+          name: CO$$6_2x3_Schwartz and Lawende
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+            - '25920000'
+      Schwartz and Lawende/CO$$7_2x2_Schwartz and Lawende_2f9bf663.SC4Lot:
+        2f9bf663:
+          building: cd03a3fb
+          density: high
+          name: CO$$7_2x2_Schwartz and Lawende
+          size: 2x2
+          stage: 7
+          textures:
+            - 258f0000
+      Stride Engineering/CO$$6_2x2_Stride Engineering_ce860f16.SC4Lot:
+        ce860f16:
+          building: ed03a231
+          density: medium,high
+          name: CO$$6_2x2_Stride Engineering
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25ab0000
+      The Abberline Agency/CO$$7_2x2_The Abberline Agency_cf9beecf.SC4Lot:
+        cf9beecf:
+          building: cd03a2ed
+          density: high
+          name: CO$$7_2x2_The Abberline Agency
+          props:
+            - '1e580000'
+            - 1e4a0000
+          size: 2x2
+          stage: 7
+          textures:
+            - 258f0000
+            - 25a80000
+      The Abberline Agency/CO$$7_2x2_The Abberline Agency_ef9bee7d.SC4Lot:
+        ef9bee7d:
+          building: cd03a2ed
+          density: high
+          name: CO$$7_2x2_The Abberline Agency
+          props:
+            - 2a790000
+          size: 2x2
+          stage: 7
+          textures:
+            - 258f0000
+            - 25a90000
+      The Eddowes Foundation/CO$$$7_2x3_The Eddowes Foundation_ce86100c.SC4Lot:
+        ce86100c:
+          building: 4d03a263
+          density: high
+          name: CO$$$7_2x3_The Eddowes Foundation
+          size: 2x3
+          stage: 7
+          textures:
+            - '258e0000'
+      The Pinchin Corporation/CO$$$6_2x2_The Pinchin Corporation_8e8613c5.SC4Lot:
+        8e8613c5:
+          building: 4d03a4ba
+          density: medium,high
+          name: CO$$$6_2x2_The Pinchin Corporation
+          props:
+            - a000000c
+            - 28fe0000
+            - a0000050
+          size: 2x2
+          stage: 6
+          textures:
+            - '259e0000'
+            - '258e0000'
+            - 252b0000
+      The Sugden Building/CO$$6_2x3_The Sugden Building_2f9c14e6.SC4Lot:
+        2f9c14e6:
+          building: 4f9c0d66
+          density: medium,high
+          name: CO$$6_2x3_The Sugden Building
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - 1d380000
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+            - 25a80000
+      The Tabram Building/CO$$$6_3x3_The Tabram Building_8e860b1d.SC4Lot:
+        8e860b1d:
+          building: ad03a188
+          density: medium,high
+          name: CO$$$6_3x3_The Tabram Building
+          props:
+            - ce010000
+            - 1d380000
+            - 1dff0000
+          size: 3x3
+          stage: 6
+          textures:
+            - '258e0000'
+            - 252b0000
+      The Tabram Building/CO$$$7_3x2_The Tabram Building_8e860a4c.SC4Lot:
+        8e860a4c:
+          building: ad03a188
+          density: high
+          name: CO$$$7_3x2_The Tabram Building
+          props:
+            - 1ecd0000
+          size: 3x2
+          stage: 7
+          textures:
+            - '258e0000'
+    meta:
+      timestamp: 2024-12-17T09:38:09.625Z
+      version: 1
+    models:
+      Anderson, Swanson and Warren/Anderson Swanson and Warren-0x5ad0e817_0x7cb7f01_0x30000.SC4Model:
+        - 07cb7f01
+      Baxter, Phillips and Bond/Baxter Phillips and Bond-0x5ad0e817_0xa993cbb5_0x30000.SC4Model:
+        - a993cbb5
+      Cadosch and Long/Cadosch and Long-0x5ad0e817_0x6993da89_0x30000.SC4Model:
+        - 6993da89
+      Chapman Financial Group/Chapman Financial Group-0x5ad0e817_0xc76bfc7d_0x30000.SC4Model:
+        - c76bfc7d
+      Diemschutz Investments/Diemschutz Investments-0x5ad0e817_0x6bc5cda0_0x30000.SC4Model:
+        - 6bc5cda0
+      Hutchinson Financial/Hutchinson Financial-0x5ad0e817_0xa99508ac_0x30000.SC4Model:
+        - a99508ac
+      Kelly Property Management/Kelly Property Management-0x5ad0e817_0x876cc5e0_0x30000.SC4Model:
+        - 876cc5e0
+      Littlechild and Sims/Littlechild and Sims-0x5ad0e817_0xebfe302c_0x30000.SC4Model:
+        - ebfe302c
+      Lusk and Openshaw, Inc/Lusk and Openshaw-0x5ad0e817_0xe7df7117_0x30000.SC4Model:
+        - e7df7117
+      Macnaghten Publishing Co/Macnaghten Publishing Co-0x5ad0e817_0x27cc04e1_0x30000.SC4Model:
+        - 27cc04e1
+      Milwood, Wilson & Smith/Millwood Wilson and Smith-0x5ad0e817_0x276b94ea_0x30000.SC4Model:
+        - 276b94ea
+      Mortimer, Packer & Associates/Mortimer Packer and Associates-0x5ad0e817_0x8996b960_0x30000.SC4Model:
+        - 8996b960
+      Mylett, McKenzie and Coles/Mylett McKenzie and Coles-0x5ad0e817_0x76ce35d_0x30000.SC4Model:
+        - 076ce35d
+      Nichols Title and Trust/Nichols Title and Trust-0x5ad0e817_0xc76bc44c_0x30000.SC4Model:
+        - c76bc44c
+      Pizer and Isenschmid/Pizer and Isenschmid-0x5ad0e817_0x8993d3da_0x30000.SC4Model:
+        - 8993d3da
+      Schwartz and Lawende/Schwartz and Lawende-0x5ad0e817_0xa996934d_0x30000.SC4Model:
+        - a996934d
+      Stride Engineering/Stride Engineering-0x5ad0e817_0xc76c76da_0x30000.SC4Model:
+        - c76c76da
+      The Abberline Agency/The Abberline Agency-0x5ad0e817_0xe76d0ada_0x30000.SC4Model:
+        - e76d0ada
+      The Eddowes Foundation/The Eddowes Foundation-0x5ad0e817_0x76c8329_0x30000.SC4Model:
+        - 076c8329
+      The Pinchin Corporation/The Pinchin Corporation-0x5ad0e817_0x6bdd7063_0x30000.SC4Model:
+        - 6bdd7063
+      The Sugden Building/The Sugden Building-0x5ad0e817_0xef941da1_0x30000.SC4Model:
+        - ef941da1
+      The Tabram Building/The Tabram Building-0x5ad0e817_0xc76bd626_0x30000.SC4Model:
+        - c76bd626
     name: Midrise Office Pack Volume 9
+    sha256: 57061590d62dafe125a56ea71eca60b7a9e530342dfae5efd42b9a172d0da562
+    size: 12142964
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_05/645a9a425a6db_dayshot01.thumb.png.10d0bea491639bf6055b0c5d4b3d7086.png
+    uncompressed: 14612688
     url: https://community.simtropolis.com/files/file/35522-midrise-office-pack-volume-9/
+    version: 1.0.0
   simtropolis/35527:
     assetId: simtropolis/35527-victorian-row-shops-diagonal
     authors:
@@ -49009,11 +50997,585 @@ assets:
     assetId: simtropolis/35703-medium-wealth-commercial-shops-volume-2
     authors:
       - madhatter106
+    buildings:
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/Concannon's Irish Pub-0x6534284a-0x0d03a116-0x6d8ad497.SC4Desc:
+        6d8ad497:
+          bulldoze: 251
+          capacity:
+            cs$: 81
+            cs$$: 22
+          categories: cs$$
+          flamability: 40
+          garbage: 14
+          model: aff3e8d7
+          name: Concannon's Irish Pub
+          pollution: 2
+          pollutionRadius: 5
+          power: 2
+          water: 29
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 694
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/Grooves Music-0x6534284a-0x0d03a116-0xed8ad50e.SC4Desc:
+        ed8ad50e:
+          bulldoze: 179
+          capacity:
+            cs$: 45
+            cs$$: 14
+          categories: cs$$
+          flamability: 40
+          garbage: 8
+          model: 4bfeb19f
+          name: Grooves Music
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 16
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 388
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/Harry's Haberdashery-0x6534284a-0x0d03a116-0x5162df32.SC4Desc:
+        5162df32:
+          bulldoze: 215
+          capacity:
+            cs$: 80
+            cs$$: 22
+          categories: cs$$
+          flamability: 40
+          garbage: 14
+          model: 6f9574c0
+          name: Harry's Haberdashery
+          pollution: 2
+          pollutionRadius: 5
+          power: 2
+          water: 28
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 683
+      madhatter106 Medium Wealth Commercial Shops Vol 2/McClelland's Prime Meats/McClelland's Prime Meats-0x6534284a-0x0d03a116-0xb162df0b.SC4Desc:
+        b162df0b:
+          bulldoze: 240
+          capacity:
+            cs$: 61
+            cs$$: 18
+          categories: cs$$
+          flamability: 40
+          garbage: 11
+          model: afb3e1a0
+          name: McClelland's Prime Meats
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 22
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 526
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/Meyer's Five and Dime-0x6534284a-0x0d03a116-0xad8ad51c.SC4Desc:
+        ad8ad51c:
+          bulldoze: 228
+          capacity:
+            cs$: 85
+            cs$$: 24
+          categories: cs$$
+          flamability: 40
+          garbage: 15
+          model: 2bfeb299
+          name: Meyer's Five and Dime
+          pollution: 2
+          pollutionRadius: 5
+          power: 2
+          water: 30
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 730
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/Mrs. O'Grady's Bird Shop-0x6534284a-0x0d03a116-0x8d8ad4ed.SC4Desc:
+        8d8ad4ed:
+          bulldoze: 181
+          capacity:
+            cs$: 51
+            cs$$: 15
+          categories: cs$$
+          flamability: 40
+          garbage: 9
+          model: 4bfeb3cf
+          name: Mrs. O'Grady's Bird Shop
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 18
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 438
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/Paper Bliss Stationary-0x6534284a-0x0d03a116-0x6d8ad4dc.SC4Desc:
+        6d8ad4dc:
+          bulldoze: 169
+          capacity:
+            cs$: 61
+            cs$$: 17
+          categories: cs$$
+          flamability: 40
+          garbage: 11
+          model: 4bfeb4e0
+          name: Paper Bliss Stationary
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 22
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 520
+      madhatter106 Medium Wealth Commercial Shops Vol 2/The Black Cat Cafe/The Black Cat Cafe-0x6534284a-0x0d03a116-0x2d8ad4cc.SC4Desc:
+        2d8ad4cc:
+          bulldoze: 218
+          capacity:
+            cs$: 56
+            cs$$: 16
+          categories: cs$$
+          flamability: 40
+          garbage: 10
+          model: 6fdb10d9
+          name: The Black Cat Cafe
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 20
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 482
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/Townsend Booksellers-0x6534284a-0x0d03a116-0x8d8ad4b6.SC4Desc:
+        8d8ad4b6:
+          bulldoze: 213
+          capacity:
+            cs$: 66
+            cs$$: 19
+          categories: cs$$
+          flamability: 40
+          garbage: 12
+          model: abd2cb54
+          name: Townsend Booksellers
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          water: 23
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 567
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Trophy King/Trophy King-0x6534284a-0x0d03a116-0x8d8ad47f.SC4Desc:
+        8d8ad47f:
+          bulldoze: 183
+          capacity:
+            cs$: 44
+            cs$$: 13
+          categories: cs$$
+          flamability: 40
+          garbage: 8
+          model: eff5e977
+          name: Trophy King
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 16
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 375
     category: 102-commercial
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tPerhaps you're looking for unique holiday cards, or hosting a dinner party and need to get that perfect bone-in rib roast, or maybe you're looking to unload that old record collection.\_ If so, then this is the pack for you!\_ Another selection of medium wealth buildings, guaranteed to help quench that thirst for commercial services.\_ Included in this download are the following establishments...<br>\n\t<br>\n\t<strong><em>Concannon's Irish Pub<br>\n\tGrooves Music<br>\n\tHarry's Haberdashery<br>\n\tMcClelland's Prime Meats<br>\n\tMeyer's Five &amp; Dime<br>\n\tMrs. O'Grady's Bird Shop<br>\n\tPaper Bliss Stationary<br>\n\tThe Black Cat Cafe<br>\n\tTownsend Booksellers<br>\n\tTrophy King</em></strong>\n</p>\n\n<p>\n\tTen different buildings with multiple lots - these buildngs are all 1x1 multi-storeys, similar in size to original Maxis offerings like King Design and Tinkler's, Inc.\_ All have standard stats and configurations, and all are tricked out with nightlighting to boot.\_\_<br>\n\t<br>\n\tSo if you are celebrating St. Patrick's Day in style, or looking for that rare first edition volume of your favorite author's poetry, or need to pick up a trophy for when Timmy wins the little league regional championship, download this pack and enjoy!\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: madhatter106 Medium Wealth Commercial Shops Vol 2.zip
+    files:
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/CS$$1_1x2_Concannons Irish Pub_7162ee2e.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/CS$$1_2x1_Concannons Irish Pub_9162ef3c.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/CS$$3_1x1_Concannons Irish Pub_9162ebe6.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/Concannon's Irish Pub-0x6534284a-0x0d03a116-0x6d8ad497.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/Concannons Irish Pub-0x5ad0e817_0xaff3e8d7_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/CS$$1_1x2_Grooves Music_3162ee4b.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/CS$$1_2x1_Grooves Music_1162ef52.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/CS$$2_1x1_Grooves Music_b162ec10.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/Grooves Music-0x5ad0e817_0x4bfeb19f_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/Grooves Music-0x6534284a-0x0d03a116-0xed8ad50e.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/CS$$1_1x2_Harrys Haberdashery_d162ee6a.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/CS$$1_2x1_Harrys Haberdashery_7162ef67.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/CS$$3_1x1_Harrys Haberdashery_3162ec34.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/Harry's Haberdashery-0x5ad0e817_0x6f9574c0_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/Harry's Haberdashery-0x6534284a-0x0d03a116-0x5162df32.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/McClelland's Prime Meats/CS$$1_1x2_McClellands Prime Meats_7162ee7f.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/McClelland's Prime Meats/CS$$2_1x1_McClellands Prime Meats_b162ec58.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/McClelland's Prime Meats/McClelland's Prime Meats-0x6534284a-0x0d03a116-0xb162df0b.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/McClelland's Prime Meats/McClellands Prime Meats-0x5ad0e817_0xafb3e1a0_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/CS$$1_1x2_Meyers Five and Dime_3162ee98.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/CS$$1_2x1_Meyers Five and Dime_9162ef7d.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/CS$$3_1x1_Meyers Five and Dime_7162ec76.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/Meyer's Five and Dime-0x6534284a-0x0d03a116-0xad8ad51c.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/Meyers Five and Dime-0x5ad0e817_0x2bfeb299_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/CS$$1_1x2_Mrs OGradys Bird Shop_1162eeaf.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/CS$$1_2x1_Mrs OGradys Bird Shop_7162ef97.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/CS$$2_1x1_Mrs OGradys Bird Shop_f162ecaa.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/Mrs OGradys Bird Shop-0x5ad0e817_0x4bfeb3cf_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/Mrs. O'Grady's Bird Shop-0x6534284a-0x0d03a116-0x8d8ad4ed.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/CS$$1_1x2_Paper Bliss Stationary_f162eec5.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/CS$$1_2x1_Paper Bliss Stationary_7162efaa.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/CS$$2_1x1_Paper Bliss Stationary_7162ecd1.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/Paper Bliss Stationary-0x5ad0e817_0x4bfeb4e0_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/Paper Bliss Stationary-0x6534284a-0x0d03a116-0x6d8ad4dc.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/The Black Cat Cafe/CS$$1_1x2_The Black Cat Cafe_5162eede.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/The Black Cat Cafe/CS$$2_1x1_The Black Cat Cafe_7162ecf1.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/The Black Cat Cafe/The Black Cat Cafe-0x5ad0e817_0x6fdb10d9_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/The Black Cat Cafe/The Black Cat Cafe-0x6534284a-0x0d03a116-0x2d8ad4cc.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/CS$$1_1x2_Townsend Booksellers_1162eef6.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/CS$$1_2x1_Townsend Booksellers_7162efc1.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/CS$$2_1x1_Townsend Booksellers_9162ed40.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/Townsend Booksellers-0x5ad0e817_0xabd2cb54_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/Townsend Booksellers-0x6534284a-0x0d03a116-0x8d8ad4b6.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Trophy King/CS$$1_1x1_Trophy King_7162ed5c.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Trophy King/CS$$1_1x2_Trophy King_1162ef0a.SC4Lot
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Trophy King/Trophy King-0x5ad0e817_0xeff5e977_0x30000.SC4Model
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/Trophy King/Trophy King-0x6534284a-0x0d03a116-0x8d8ad47f.SC4Desc
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/madhatter_CSS_Vol2_day01.jpg
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/madhatter_CSS_Vol2_day02.jpg
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/madhatter_CSS_Vol2_night01.jpg
+      - madhatter106 Medium Wealth Commercial Shops Vol 2/madhatter_CSS_Vol2_night02.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/madhatter_CSS_Vol2_day01.jpg.dd99eb405817637de6b2dfc3a5acd40d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/madhatter_CSS_Vol2_day02.jpg.c1084e411215959120fcf56ca3f0424d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/madhatter_CSS_Vol2_night01.jpg.0e2fb7d10b86d20f5f3798f615e96d85.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/madhatter_CSS_Vol2_night02.jpg.d1099859f64be642363da0cd85a3e3bb.jpg
     lastModified: 2023-10-24T23:58:08.000Z
+    lots:
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/CS$$1_1x2_Concannons Irish Pub_7162ee2e.SC4Lot:
+        7162ee2e:
+          building: 6d8ad497
+          density: all
+          name: CS$$1_1x2_Concannons Irish Pub
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/CS$$1_2x1_Concannons Irish Pub_9162ef3c.SC4Lot:
+        9162ef3c:
+          building: 6d8ad497
+          density: all
+          name: CS$$1_2x1_Concannons Irish Pub
+          props:
+            - a000003d
+          size: 2x1
+          stage: 1
+          textures:
+            - 25a30000
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/CS$$3_1x1_Concannons Irish Pub_9162ebe6.SC4Lot:
+        9162ebe6:
+          building: 6d8ad497
+          density: all
+          name: CS$$3_1x1_Concannons Irish Pub
+          size: 1x1
+          stage: 3
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/CS$$1_1x2_Grooves Music_3162ee4b.SC4Lot:
+        3162ee4b:
+          building: ed8ad50e
+          density: all
+          name: CS$$1_1x2_Grooves Music
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/CS$$1_2x1_Grooves Music_1162ef52.SC4Lot:
+        1162ef52:
+          building: ed8ad50e
+          density: all
+          name: CS$$1_2x1_Grooves Music
+          props:
+            - a000003d
+          size: 2x1
+          stage: 1
+          textures:
+            - 25a30000
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/CS$$2_1x1_Grooves Music_b162ec10.SC4Lot:
+        b162ec10:
+          building: ed8ad50e
+          density: all
+          name: CS$$2_1x1_Grooves Music
+          size: 1x1
+          stage: 2
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/CS$$1_1x2_Harrys Haberdashery_d162ee6a.SC4Lot:
+        d162ee6a:
+          building: 5162df32
+          density: all
+          name: CS$$1_1x2_Harrys Haberdashery
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/CS$$1_2x1_Harrys Haberdashery_7162ef67.SC4Lot:
+        7162ef67:
+          building: 5162df32
+          density: all
+          name: CS$$1_2x1_Harrys Haberdashery
+          props:
+            - a000003d
+          size: 2x1
+          stage: 1
+          textures:
+            - 25a30000
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/CS$$3_1x1_Harrys Haberdashery_3162ec34.SC4Lot:
+        3162ec34:
+          building: 5162df32
+          density: all
+          name: CS$$3_1x1_Harrys Haberdashery
+          size: 1x1
+          stage: 3
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/McClelland's Prime Meats/CS$$1_1x2_McClellands Prime Meats_7162ee7f.SC4Lot:
+        7162ee7f:
+          building: b162df0b
+          density: all
+          name: CS$$1_1x2_McClellands Prime Meats
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/McClelland's Prime Meats/CS$$2_1x1_McClellands Prime Meats_b162ec58.SC4Lot:
+        b162ec58:
+          building: b162df0b
+          density: all
+          name: CS$$2_1x1_McClellands Prime Meats
+          size: 1x1
+          stage: 2
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/CS$$1_1x2_Meyers Five and Dime_3162ee98.SC4Lot:
+        3162ee98:
+          building: ad8ad51c
+          density: all
+          name: CS$$1_1x2_Meyers Five and Dime
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/CS$$1_2x1_Meyers Five and Dime_9162ef7d.SC4Lot:
+        9162ef7d:
+          building: ad8ad51c
+          density: all
+          name: CS$$1_2x1_Meyers Five and Dime
+          props:
+            - a000003d
+          size: 2x1
+          stage: 1
+          textures:
+            - 25a30000
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/CS$$3_1x1_Meyers Five and Dime_7162ec76.SC4Lot:
+        7162ec76:
+          building: ad8ad51c
+          density: all
+          name: CS$$3_1x1_Meyers Five and Dime
+          size: 1x1
+          stage: 3
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/CS$$1_1x2_Mrs OGradys Bird Shop_1162eeaf.SC4Lot:
+        1162eeaf:
+          building: 8d8ad4ed
+          density: all
+          name: CS$$1_1x2_Mrs OGradys Bird Shop
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/CS$$1_2x1_Mrs OGradys Bird Shop_7162ef97.SC4Lot:
+        7162ef97:
+          building: 8d8ad4ed
+          density: all
+          name: CS$$1_2x1_Mrs OGradys Bird Shop
+          props:
+            - a000003d
+          size: 2x1
+          stage: 1
+          textures:
+            - 25a30000
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/CS$$2_1x1_Mrs OGradys Bird Shop_f162ecaa.SC4Lot:
+        f162ecaa:
+          building: 8d8ad4ed
+          density: all
+          name: CS$$2_1x1_Mrs OGradys Bird Shop
+          size: 1x1
+          stage: 2
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/CS$$1_1x2_Paper Bliss Stationary_f162eec5.SC4Lot:
+        f162eec5:
+          building: 6d8ad4dc
+          density: all
+          name: CS$$1_1x2_Paper Bliss Stationary
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/CS$$1_2x1_Paper Bliss Stationary_7162efaa.SC4Lot:
+        7162efaa:
+          building: 6d8ad4dc
+          density: all
+          name: CS$$1_2x1_Paper Bliss Stationary
+          props:
+            - a000003d
+          size: 2x1
+          stage: 1
+          textures:
+            - 25a30000
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/CS$$2_1x1_Paper Bliss Stationary_7162ecd1.SC4Lot:
+        7162ecd1:
+          building: 6d8ad4dc
+          density: all
+          name: CS$$2_1x1_Paper Bliss Stationary
+          size: 1x1
+          stage: 2
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/The Black Cat Cafe/CS$$1_1x2_The Black Cat Cafe_5162eede.SC4Lot:
+        5162eede:
+          building: 2d8ad4cc
+          density: all
+          name: CS$$1_1x2_The Black Cat Cafe
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/The Black Cat Cafe/CS$$2_1x1_The Black Cat Cafe_7162ecf1.SC4Lot:
+        7162ecf1:
+          building: 2d8ad4cc
+          density: all
+          name: CS$$2_1x1_The Black Cat Cafe
+          size: 1x1
+          stage: 2
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/CS$$1_1x2_Townsend Booksellers_1162eef6.SC4Lot:
+        1162eef6:
+          building: 8d8ad4b6
+          density: all
+          name: CS$$1_1x2_Townsend Booksellers
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/CS$$1_2x1_Townsend Booksellers_7162efc1.SC4Lot:
+        7162efc1:
+          building: 8d8ad4b6
+          density: all
+          name: CS$$1_2x1_Townsend Booksellers
+          props:
+            - a000003d
+          size: 2x1
+          stage: 1
+          textures:
+            - 25a30000
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/CS$$2_1x1_Townsend Booksellers_9162ed40.SC4Lot:
+        9162ed40:
+          building: 8d8ad4b6
+          density: all
+          name: CS$$2_1x1_Townsend Booksellers
+          size: 1x1
+          stage: 2
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Trophy King/CS$$1_1x1_Trophy King_7162ed5c.SC4Lot:
+        7162ed5c:
+          building: 8d8ad47f
+          density: all
+          name: CS$$1_1x1_Trophy King
+          size: 1x1
+          stage: 1
+          textures:
+            - 258f0000
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Trophy King/CS$$1_1x2_Trophy King_1162ef0a.SC4Lot:
+        1162ef0a:
+          building: 8d8ad47f
+          density: all
+          name: CS$$1_1x2_Trophy King
+          props:
+            - a000003d
+          size: 1x2
+          stage: 1
+          textures:
+            - 258f0000
+            - 25a30000
+            - 252b0000
+    meta:
+      timestamp: 2024-12-17T09:38:09.625Z
+      version: 1
+    models:
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Concannon's Irish Pub/Concannons Irish Pub-0x5ad0e817_0xaff3e8d7_0x30000.SC4Model:
+        - aff3e8d7
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Grooves Music/Grooves Music-0x5ad0e817_0x4bfeb19f_0x30000.SC4Model:
+        - 4bfeb19f
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Harry's Haberdashery/Harry's Haberdashery-0x5ad0e817_0x6f9574c0_0x30000.SC4Model:
+        - 6f9574c0
+      madhatter106 Medium Wealth Commercial Shops Vol 2/McClelland's Prime Meats/McClellands Prime Meats-0x5ad0e817_0xafb3e1a0_0x30000.SC4Model:
+        - afb3e1a0
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Meyer's Five & Dime/Meyers Five and Dime-0x5ad0e817_0x2bfeb299_0x30000.SC4Model:
+        - 2bfeb299
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Mrs. O'Grady's Bird Shop/Mrs OGradys Bird Shop-0x5ad0e817_0x4bfeb3cf_0x30000.SC4Model:
+        - 4bfeb3cf
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Paper Bliss Stationary/Paper Bliss Stationary-0x5ad0e817_0x4bfeb4e0_0x30000.SC4Model:
+        - 4bfeb4e0
+      madhatter106 Medium Wealth Commercial Shops Vol 2/The Black Cat Cafe/The Black Cat Cafe-0x5ad0e817_0x6fdb10d9_0x30000.SC4Model:
+        - 6fdb10d9
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Townsend Booksellers/Townsend Booksellers-0x5ad0e817_0xabd2cb54_0x30000.SC4Model:
+        - abd2cb54
+      madhatter106 Medium Wealth Commercial Shops Vol 2/Trophy King/Trophy King-0x5ad0e817_0xeff5e977_0x30000.SC4Model:
+        - eff5e977
     name: Medium Wealth Commercial Shops Volume 2
+    sha256: 0827c03aaa4f569eb0b51350bb3ae5063e79d9083199a6364226ee51120fc788
+    size: 2816749
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/madhatter_CSS_Vol2_day01.thumb.jpg.53ca7ae158f300c09a723430f8da08c7.jpg
+    uncompressed: 3328906
     url: https://community.simtropolis.com/files/file/35703-medium-wealth-commercial-shops-volume-2/
+    version: 1.0.0
   simtropolis/35713:
     assetId: simtropolis/35713-victorian-row-shops-pack-03
     authors:
@@ -49088,11 +51650,792 @@ assets:
     assetId: simtropolis/35717-midrise-office-pack-volume-10
     authors:
       - madhatter106
+    buildings:
+      Midrise Office Pack Vol 10/Avery Title & Trust/Avery Title and Trust-0x6534284a-0x0d03a116-0x9218b8cf.SC4Desc:
+        9218b8cf:
+          bulldoze: 439
+          capacity:
+            co$$: 219
+          categories: co$$
+          flamability: 40
+          garbage: 11
+          model: '12109848'
+          name: Avery Title and Trust
+          pollution: 2
+          pollutionRadius: 5
+          power: 5
+          water: 191
+          waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1534
+      Midrise Office Pack Vol 10/Faraday and Jensen, Inc/Faraday and Jensen, Inc.-0x6534284a-0x0d03a116-0xf218b811.SC4Desc:
+        f218b811:
+          bulldoze: 531
+          capacity:
+            co$$: 217
+          categories: co$$
+          flamability: 40
+          garbage: 11
+          model: 91ff94ae
+          name: Faraday and Jensen, Inc.
+          pollution: 2
+          pollutionRadius: 5
+          power: 5
+          water: 189
+          waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1516
+      Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/Ferrin and Mageau, Esq.-0x6534284a-0x0d03a116-0x3218b892.SC4Desc:
+        3218b892:
+          bulldoze: 492
+          capacity:
+            co$$: 191
+          categories: co$$
+          flamability: 40
+          garbage: 10
+          model: 72024a10
+          name: Ferrin and Mageau, Esq.
+          pollution: 2
+          pollutionRadius: 5
+          power: 4
+          water: 166
+          waterPollution: 2
+          waterPollutionRadius: 6
+          worth: 1335
+      Midrise Office Pack Vol 10/Shepard & Hartnell/Shepard &  Hartnell-0x6534284a-0x0d03a116-0x3218b84c.SC4Desc:
+        3218b84c:
+          bulldoze: 651
+          capacity:
+            co$$: 345
+          categories: co$$
+          flamability: 40
+          garbage: 17
+          model: 7202511f
+          name: Shepard &  Hartnell
+          pollution: 3
+          pollutionRadius: 5
+          power: 7
+          water: 300
+          waterPollution: 3
+          waterPollutionRadius: 6
+          worth: 2414
+      Midrise Office Pack Vol 10/The Graysmith Building/The Graysmith Building-0x6534284a-0x0d03a116-0xb218b8c0.SC4Desc:
+        b218b8c0:
+          bulldoze: 602
+          capacity:
+            co$$: 436
+          categories: co$$
+          flamability: 40
+          garbage: 22
+          model: 52073a84
+          name: The Graysmith Building
+          pollution: 4
+          pollutionRadius: 5
+          power: 9
+          water: 379
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 3050
+      Midrise Office Pack Vol 10/The Stine Corporation/The Stine Corporation-0x6534284a-0x0d03a116-0x3218b7f5.SC4Desc:
+        3218b7f5:
+          bulldoze: 639
+          capacity:
+            co$$: 352
+          categories: co$$
+          flamability: 40
+          garbage: 18
+          model: d2061098
+          name: The Stine Corporation
+          pollution: 4
+          pollutionRadius: 5
+          power: 8
+          water: 305
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 2458
     category: 102-commercial
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe vice president of Finance is on his way down to see your boss, the vice president of Mergers and Acquisitions, but he's currently in a meeting with the vice president of Human Resources, who has just called for a meeting with the vice president of Development to discuss just exactly what happened at that drunken company mixer this past weekend.\_ Just another day at the office, right?\_ If you would rather field phone calls and run interference for a two-bit hack in a three-piece suit who draws a six-figure salary, then this pack is for you.\_ It's the tenth in the (seemingly never ending) series of midrise commercial offices.\_ Included in this upload are the following establishments...<br>\n\t<br>\n\t<strong><em>Faraday and Jensen, Inc.<br>\n\tFerrin and Mageau, Esq.<br>\n\tShepard &amp; Hartnell<br>\n\tThe Stine Corporation<br>\n\tThe Graysmith Building<br>\n\tAvery Title &amp; Trust</em></strong>\n</p>\n\n<p>\n\tSix different BATs, on varying lot footprints of 2x2, 2x3, 3x2, and 3x3.\_ All modded like past uploads, and all with custom nighlights as well.\_ Special thanks to fellow Simtropolis user <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/60544-brancra/?do=hovercard\" data-mentionid=\"60544\" href=\"https://community.simtropolis.com/profile/60544-brancra/\" rel=\"\">@brancra</a>\_for once again helping me test these, to make sure they are fit and primed and ready to grow in your cities.\n</p>\n\n<p>\n\tSo, put that \"Company Meeting, Do Not Disturb\" sign in the window to the outer office, lock the door, and polish up that resume - because the vice president of Public Relations just retired and you've had your eye on that position for months.\_ Enjoy!\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Midrise Office Pack Vol 10.zip
+    files:
+      - Midrise Office Pack Vol 10/Avery Title & Trust/Avery Title and Trust-0x5ad0e817_0x12109848_0x30000.SC4Model
+      - Midrise Office Pack Vol 10/Avery Title & Trust/Avery Title and Trust-0x6534284a-0x0d03a116-0x9218b8cf.SC4Desc
+      - Midrise Office Pack Vol 10/Avery Title & Trust/CO$$4_3x3_Avery Title & Trust_5218ddde.SC4Lot
+      - Midrise Office Pack Vol 10/Avery Title & Trust/CO$$4_3x3_Avery Title & Trust_5218de2c.SC4Lot
+      - Midrise Office Pack Vol 10/Avery Title & Trust/CO$$4_3x3_Avery Title & Trust_d218dd43.SC4Lot
+      - Midrise Office Pack Vol 10/Avery Title & Trust/CO$$5_3x2_Avery Title & Trust_3218db79.SC4Lot
+      - Midrise Office Pack Vol 10/Avery Title & Trust/CO$$5_3x2_Avery Title & Trust_3218dca7.SC4Lot
+      - Midrise Office Pack Vol 10/Avery Title & Trust/CO$$5_3x2_Avery Title & Trust_7218db00.SC4Lot
+      - Midrise Office Pack Vol 10/Avery Title & Trust/CO$$5_3x2_Avery Title & Trust_7219c863.SC4Lot
+      - Midrise Office Pack Vol 10/Avery Title & Trust/CO$$6_2x2_Avery Title & Trust_9218da73.SC4Lot
+      - Midrise Office Pack Vol 10/Faraday and Jensen, Inc/CO$$6_2x2_Faraday and Jensen Inc_921dc50b.SC4Lot
+      - Midrise Office Pack Vol 10/Faraday and Jensen, Inc/CO$$6_2x2_Faraday and Jensen Inc_921dc65a.SC4Lot
+      - Midrise Office Pack Vol 10/Faraday and Jensen, Inc/CO$$6_2x2_Faraday and Jensen Inc_f21dc559.SC4Lot
+      - Midrise Office Pack Vol 10/Faraday and Jensen, Inc/Faraday and Jensen, Inc.-0x6534284a-0x0d03a116-0xf218b811.SC4Desc
+      - Midrise Office Pack Vol 10/Faraday and Jensen, Inc/Faraday and Jensen-0x5ad0e817_0x91ff94ae_0x30000.SC4Model
+      - Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/CO$$5_2x2_Ferrin and Mageau Esq_521dc89f.SC4Lot
+      - Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/CO$$5_2x2_Ferrin and Mageau Esq_521dc90b.SC4Lot
+      - Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/CO$$5_2x2_Ferrin and Mageau Esq_b21dc8d8.SC4Lot
+      - Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/Ferrin and Mageau, Esq.-0x6534284a-0x0d03a116-0x3218b892.SC4Desc
+      - Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/Ferrin and Mageau-0x5ad0e817_0x72024a10_0x30000.SC4Model
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_2x3_Shepard & Hartnell_3218e22a.SC4Lot
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_2x3_Shepard & Hartnell_5218e081.SC4Lot
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_3x2_Shepard & Hartnell_3218e206.SC4Lot
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_3x2_Shepard & Hartnell_d219c831.SC4Lot
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_3x2_Shepard & Hartnell_f218e1a5.SC4Lot
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_3x2_Shepard & Hartnell_f218e1d5.SC4Lot
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$7_2x2_Shepard & Hartnell_3218e136.SC4Lot
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$7_2x2_Shepard & Hartnell_5218e0c8.SC4Lot
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/Shepard &  Hartnell-0x6534284a-0x0d03a116-0x3218b84c.SC4Desc
+      - Midrise Office Pack Vol 10/Shepard & Hartnell/shepard and hartnell-0x5ad0e817_0x7202511f_0x30000.SC4Model
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Grayshmith Building_f219cc12.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_3219cb48.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_3219cc3a.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_3219cc94.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_b219cb9b.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_f219cb07.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_1219caac.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_5219c91e.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_7219c98e.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_d219ca50.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_f219c95a.SC4Lot
+      - Midrise Office Pack Vol 10/The Graysmith Building/The Graysmith Building-0x5ad0e817_0x52073a84_0x30000.SC4Model
+      - Midrise Office Pack Vol 10/The Graysmith Building/The Graysmith Building-0x6534284a-0x0d03a116-0xb218b8c0.SC4Desc
+      - Midrise Office Pack Vol 10/The Stine Corporation/CO$$6_2x3_The Stine Corporation_1219ce58.SC4Lot
+      - Midrise Office Pack Vol 10/The Stine Corporation/CO$$6_2x3_The Stine Corporation_9219ce65.SC4Lot
+      - Midrise Office Pack Vol 10/The Stine Corporation/CO$$7_2x2_The Stine Corporation_f219cf65.SC4Lot
+      - Midrise Office Pack Vol 10/The Stine Corporation/The Stine Corporation-0x5ad0e817_0xd2061098_0x30000.SC4Model
+      - Midrise Office Pack Vol 10/The Stine Corporation/The Stine Corporation-0x6534284a-0x0d03a116-0x3218b7f5.SC4Desc
+      - Midrise Office Pack Vol 10/midrise_offices_vol10_day01.jpg
+      - Midrise Office Pack Vol 10/midrise_offices_vol10_day02.jpg
+      - Midrise Office Pack Vol 10/midrise_offices_vol10_night01.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/midrise_offices_vol10_day01.jpg.17a4b8b88af583e5a231c09d8230b9be.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/midrise_offices_vol10_day02.jpg.6f8a3ec19a5ebda9f7f00af34070c45c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/midrise_offices_vol10_night01.jpg.3b2922dda72128262f2436ea01feb379.jpg
     lastModified: 2023-10-31T21:25:50.000Z
+    lots:
+      Midrise Office Pack Vol 10/Avery Title & Trust/CO$$4_3x3_Avery Title & Trust_5218ddde.SC4Lot:
+        5218ddde:
+          building: 9218b8cf
+          density: medium,high
+          name: CO$$4_3x3_Avery Title & Trust
+          props:
+            - 1eda0000
+            - a000003a
+            - 1f0b0000
+            - a0000077
+            - 1e9a0000
+            - 1e9b0000
+            - '1e990000'
+            - 28fe0000
+            - a0000078
+            - 2a8a0000
+            - a000003d
+            - 1d380000
+          size: 3x3
+          stage: 4
+          textures:
+            - '1e840000'
+            - 258f0000
+            - 25a30000
+            - '1e800000'
+      Midrise Office Pack Vol 10/Avery Title & Trust/CO$$4_3x3_Avery Title & Trust_5218de2c.SC4Lot:
+        5218de2c:
+          building: 9218b8cf
+          density: medium,high
+          name: CO$$4_3x3_Avery Title & Trust
+          props:
+            - 1ed70000
+            - 1d380000
+            - a000003a
+            - a000003d
+          size: 3x3
+          stage: 4
+          textures:
+            - 25a80000
+            - '1e820000'
+            - 258f0000
+            - 25a30000
+            - 25a70000
+      Midrise Office Pack Vol 10/Avery Title & Trust/CO$$4_3x3_Avery Title & Trust_d218dd43.SC4Lot:
+        d218dd43:
+          building: 9218b8cf
+          density: medium,high
+          name: CO$$4_3x3_Avery Title & Trust
+          props:
+            - '29860000'
+            - 2a120000
+            - 1ed80000
+            - a000003a
+            - 1eda0000
+            - a000007b
+            - a000007f
+            - a000003d
+          size: 3x3
+          stage: 4
+          textures:
+            - 251c0000
+            - 25ae0000
+            - 25a70000
+            - 25a80000
+            - 258c0000
+      Midrise Office Pack Vol 10/Avery Title & Trust/CO$$5_3x2_Avery Title & Trust_3218db79.SC4Lot:
+        3218db79:
+          building: 9218b8cf
+          density: medium,high
+          name: CO$$5_3x2_Avery Title & Trust
+          props:
+            - 1f0b0000
+            - '29860000'
+            - a0000051
+            - a000003d
+          size: 3x2
+          stage: 5
+          textures:
+            - 25b00000
+            - 25a30000
+            - 258f0000
+            - 252b0000
+      Midrise Office Pack Vol 10/Avery Title & Trust/CO$$5_3x2_Avery Title & Trust_3218dca7.SC4Lot:
+        3218dca7:
+          building: 9218b8cf
+          density: medium,high
+          name: CO$$5_3x2_Avery Title & Trust
+          props:
+            - '29170000'
+            - a000003d
+            - 1d380000
+          size: 3x2
+          stage: 5
+          textures:
+            - 258f0000
+            - 25a80000
+      Midrise Office Pack Vol 10/Avery Title & Trust/CO$$5_3x2_Avery Title & Trust_7218db00.SC4Lot:
+        7218db00:
+          building: 9218b8cf
+          density: medium,high
+          name: CO$$5_3x2_Avery Title & Trust
+          props:
+            - 69ad0000
+            - 1d8f0000
+            - '1e000000'
+            - a0000021
+            - a000003d
+          size: 3x2
+          stage: 5
+          textures:
+            - 25a30000
+            - 258f0000
+      Midrise Office Pack Vol 10/Avery Title & Trust/CO$$5_3x2_Avery Title & Trust_7219c863.SC4Lot:
+        7219c863:
+          building: 9218b8cf
+          density: medium,high
+          name: CO$$5_3x2_Avery Title & Trust
+          props:
+            - 1d380000
+            - a000004e
+            - a0000050
+            - a0000054
+          size: 3x2
+          stage: 5
+          textures:
+            - 25af0000
+            - 258f0000
+            - 251c0000
+            - 258c0000
+      Midrise Office Pack Vol 10/Avery Title & Trust/CO$$6_2x2_Avery Title & Trust_9218da73.SC4Lot:
+        9218da73:
+          building: 9218b8cf
+          density: medium,high
+          name: CO$$6_2x2_Avery Title & Trust
+          props:
+            - a000007a
+            - 1e9a0000
+            - 1d380000
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+      Midrise Office Pack Vol 10/Faraday and Jensen, Inc/CO$$6_2x2_Faraday and Jensen Inc_921dc50b.SC4Lot:
+        921dc50b:
+          building: f218b811
+          density: medium,high
+          name: CO$$6_2x2_Faraday and Jensen Inc
+          props:
+            - a000003d
+            - 1d380000
+            - 1df50000
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25a80000
+      Midrise Office Pack Vol 10/Faraday and Jensen, Inc/CO$$6_2x2_Faraday and Jensen Inc_921dc65a.SC4Lot:
+        921dc65a:
+          building: f218b811
+          density: medium,high
+          name: CO$$6_2x2_Faraday and Jensen Inc
+          props:
+            - 1f0b0000
+            - a0000069
+            - a000007b
+            - a000007f
+            - a000007c
+            - 1f000000
+            - 2a0f0000
+            - 1d380000
+          size: 2x2
+          stage: 6
+          textures:
+            - 25b00000
+            - 252b0000
+            - 258f0000
+            - 25aa0000
+      Midrise Office Pack Vol 10/Faraday and Jensen, Inc/CO$$6_2x2_Faraday and Jensen Inc_f21dc559.SC4Lot:
+        f21dc559:
+          building: f218b811
+          density: medium,high
+          name: CO$$6_2x2_Faraday and Jensen Inc
+          props:
+            - a000003d
+            - 1d380000
+            - 1df50000
+          size: 2x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25a80000
+      Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/CO$$5_2x2_Ferrin and Mageau Esq_521dc89f.SC4Lot:
+        521dc89f:
+          building: 3218b892
+          density: medium,high
+          name: CO$$5_2x2_Ferrin and Mageau Esq
+          props:
+            - a000003d
+            - 1d380000
+            - 1df50000
+          size: 2x2
+          stage: 5
+          textures:
+            - 258f0000
+            - 25a80000
+      Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/CO$$5_2x2_Ferrin and Mageau Esq_521dc90b.SC4Lot:
+        521dc90b:
+          building: 3218b892
+          density: medium,high
+          name: CO$$5_2x2_Ferrin and Mageau Esq
+          props:
+            - a000003d
+            - 1d380000
+            - 1df50000
+          size: 2x2
+          stage: 5
+          textures:
+            - 258f0000
+            - 25a80000
+      Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/CO$$5_2x2_Ferrin and Mageau Esq_b21dc8d8.SC4Lot:
+        b21dc8d8:
+          building: 3218b892
+          density: medium,high
+          name: CO$$5_2x2_Ferrin and Mageau Esq
+          props:
+            - 1f0b0000
+            - a0000069
+            - a000007b
+            - a000007f
+            - a000007c
+            - 1f000000
+            - 2a0f0000
+            - 1d380000
+          size: 2x2
+          stage: 5
+          textures:
+            - 25b00000
+            - 252b0000
+            - 258f0000
+            - 25aa0000
+      Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_2x3_Shepard & Hartnell_3218e22a.SC4Lot:
+        3218e22a:
+          building: 3218b84c
+          density: medium,high
+          name: CO$$6_2x3_Shepard & Hartnell
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+            - '25920000'
+      Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_2x3_Shepard & Hartnell_5218e081.SC4Lot:
+        '5218e081':
+          building: 3218b84c
+          density: medium,high
+          name: CO$$6_2x3_Shepard & Hartnell
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+            - 1d380000
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+            - '25920000'
+      Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_3x2_Shepard & Hartnell_3218e206.SC4Lot:
+        '3218e206':
+          building: 3218b84c
+          density: medium,high
+          name: CO$$6_3x2_Shepard & Hartnell
+          props:
+            - 69ad0000
+            - 1d8f0000
+            - '1e000000'
+            - a0000021
+            - a000003d
+          size: 3x2
+          stage: 6
+          textures:
+            - 25a30000
+            - 258f0000
+      Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_3x2_Shepard & Hartnell_d219c831.SC4Lot:
+        d219c831:
+          building: 3218b84c
+          density: medium,high
+          name: CO$$6_3x2_Shepard & Hartnell
+          props:
+            - 1d380000
+            - a000004e
+            - a0000050
+            - a0000054
+          size: 3x2
+          stage: 6
+          textures:
+            - 25af0000
+            - 258f0000
+            - 251c0000
+            - 258c0000
+      Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_3x2_Shepard & Hartnell_f218e1a5.SC4Lot:
+        f218e1a5:
+          building: 3218b84c
+          density: medium,high
+          name: CO$$6_3x2_Shepard & Hartnell
+          props:
+            - 1f0b0000
+            - '29860000'
+            - a0000051
+            - a000003d
+          size: 3x2
+          stage: 6
+          textures:
+            - 25a30000
+            - 258f0000
+            - 252b0000
+      Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$6_3x2_Shepard & Hartnell_f218e1d5.SC4Lot:
+        f218e1d5:
+          building: 3218b84c
+          density: medium,high
+          name: CO$$6_3x2_Shepard & Hartnell
+          props:
+            - '29170000'
+            - a000003d
+            - 1d380000
+          size: 3x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25a80000
+      Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$7_2x2_Shepard & Hartnell_3218e136.SC4Lot:
+        '3218e136':
+          building: 3218b84c
+          density: high
+          name: CO$$7_2x2_Shepard & Hartnell
+          props:
+            - 1ecb0000
+          size: 2x2
+          stage: 7
+          textures:
+            - 258f0000
+            - 259a0000
+      Midrise Office Pack Vol 10/Shepard & Hartnell/CO$$7_2x2_Shepard & Hartnell_5218e0c8.SC4Lot:
+        5218e0c8:
+          building: 3218b84c
+          density: high
+          name: CO$$7_2x2_Shepard & Hartnell
+          props:
+            - 1d380000
+          size: 2x2
+          stage: 7
+          textures:
+            - 258f0000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Grayshmith Building_f219cc12.SC4Lot:
+        f219cc12:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$5_3x3_The Grayshmith Building
+          props:
+            - a000007b
+            - a000007f
+            - a000007c
+            - 2a8a0000
+            - '1e120000'
+            - a000003d
+          size: 3x3
+          stage: 5
+          textures:
+            - 258c0000
+            - 258f0000
+            - 25a30000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_3219cb48.SC4Lot:
+        3219cb48:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$5_3x3_The Graysmith Building
+          props:
+            - a000007b
+            - a000007f
+            - a000007c
+            - a000003d
+            - '1e120000'
+            - 28fe0000
+            - a0000050
+            - 1d380000
+            - '29170000'
+            - 1f000000
+            - ce020000
+          size: 3x3
+          stage: 5
+          textures:
+            - 252b0000
+            - 25b00000
+            - 258f0000
+            - 25ae0000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_3219cc3a.SC4Lot:
+        3219cc3a:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$5_3x3_The Graysmith Building
+          props:
+            - a000007b
+            - a000007f
+            - a000007c
+            - 2a8c0000
+            - a0000039
+            - a0000051
+            - 28fe0000
+            - a000004d
+            - ce020000
+          size: 3x3
+          stage: 5
+          textures:
+            - 258f0000
+            - 252b0000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_3219cc94.SC4Lot:
+        3219cc94:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$5_3x3_The Graysmith Building
+          props:
+            - 1c670000
+            - 1d8f0000
+            - a0000078
+            - a0000021
+            - a0000057
+            - a000003d
+          size: 3x3
+          stage: 5
+          textures:
+            - 25ae0000
+            - 25b00000
+            - 252b0000
+            - 25a30000
+            - 258c0000
+            - 258f0000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_b219cb9b.SC4Lot:
+        b219cb9b:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$5_3x3_The Graysmith Building
+          props:
+            - 1e9b0000
+            - 1eca0000
+            - a000003d
+            - 1df50000
+            - 1d380000
+          size: 3x3
+          stage: 5
+          textures:
+            - 258f0000
+            - 258c0000
+            - 25a30000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$5_3x3_The Graysmith Building_f219cb07.SC4Lot:
+        f219cb07:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$5_3x3_The Graysmith Building
+          props:
+            - a000007b
+            - a000007f
+            - a000007c
+            - ce020000
+            - 28fe0000
+            - a0000057
+            - a0000051
+          size: 3x3
+          stage: 5
+          textures:
+            - 258f0000
+            - 25b00000
+            - 252b0000
+            - 258c0000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_1219caac.SC4Lot:
+        1219caac:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$6_3x2_The Graysmith Building
+          props:
+            - a000007b
+            - a000007f
+            - a000007c
+            - 1d2b0000
+            - ae340000
+            - 1e9b0000
+            - '1e120000'
+            - a0000055
+          size: 3x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25b00000
+            - '26250000'
+            - '26210000'
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_5219c91e.SC4Lot:
+        5219c91e:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$6_3x2_The Graysmith Building
+          props:
+            - '29810000'
+            - 1d380000
+            - 1df50000
+          size: 3x2
+          stage: 6
+          textures:
+            - 258f0000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_7219c98e.SC4Lot:
+        7219c98e:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$6_3x2_The Graysmith Building
+          props:
+            - a0000039
+            - '1e120000'
+          size: 3x2
+          stage: 6
+          textures:
+            - 25b00000
+            - 258f0000
+            - 252b0000
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_d219ca50.SC4Lot:
+        d219ca50:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$6_3x2_The Graysmith Building
+          props:
+            - 1e9b0000
+            - a0000050
+            - a0000057
+          size: 3x2
+          stage: 6
+          textures:
+            - 258f0000
+            - 25af0000
+            - 252b0000
+            - '26250000'
+      Midrise Office Pack Vol 10/The Graysmith Building/CO$$6_3x2_The Graysmith Building_f219c95a.SC4Lot:
+        f219c95a:
+          building: b218b8c0
+          density: medium,high
+          name: CO$$6_3x2_The Graysmith Building
+          props:
+            - '29810000'
+            - 1d380000
+            - 1df50000
+          size: 3x2
+          stage: 6
+          textures:
+            - 258f0000
+      Midrise Office Pack Vol 10/The Stine Corporation/CO$$6_2x3_The Stine Corporation_1219ce58.SC4Lot:
+        1219ce58:
+          building: 3218b7f5
+          density: medium,high
+          name: CO$$6_2x3_The Stine Corporation
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+            - '25920000'
+      Midrise Office Pack Vol 10/The Stine Corporation/CO$$6_2x3_The Stine Corporation_9219ce65.SC4Lot:
+        9219ce65:
+          building: 3218b7f5
+          density: medium,high
+          name: CO$$6_2x3_The Stine Corporation
+          props:
+            - a000007b
+            - 28b10000
+            - 28ac0000
+            - '1e280000'
+            - 1d380000
+          size: 2x3
+          stage: 6
+          textures:
+            - 258f0000
+            - '25920000'
+      Midrise Office Pack Vol 10/The Stine Corporation/CO$$7_2x2_The Stine Corporation_f219cf65.SC4Lot:
+        f219cf65:
+          building: 3218b7f5
+          density: high
+          name: CO$$7_2x2_The Stine Corporation
+          props:
+            - 1d4a0000
+            - 1d380000
+          size: 2x2
+          stage: 7
+          textures:
+            - 258f0000
+            - 25a90000
+    meta:
+      timestamp: 2024-12-17T09:38:09.625Z
+      version: 1
+    models:
+      Midrise Office Pack Vol 10/Avery Title & Trust/Avery Title and Trust-0x5ad0e817_0x12109848_0x30000.SC4Model:
+        - '12109848'
+      Midrise Office Pack Vol 10/Faraday and Jensen, Inc/Faraday and Jensen-0x5ad0e817_0x91ff94ae_0x30000.SC4Model:
+        - 91ff94ae
+      Midrise Office Pack Vol 10/Ferrin and Mageau, Esq/Ferrin and Mageau-0x5ad0e817_0x72024a10_0x30000.SC4Model:
+        - 72024a10
+      Midrise Office Pack Vol 10/Shepard & Hartnell/shepard and hartnell-0x5ad0e817_0x7202511f_0x30000.SC4Model:
+        - 7202511f
+      Midrise Office Pack Vol 10/The Graysmith Building/The Graysmith Building-0x5ad0e817_0x52073a84_0x30000.SC4Model:
+        - 52073a84
+      Midrise Office Pack Vol 10/The Stine Corporation/The Stine Corporation-0x5ad0e817_0xd2061098_0x30000.SC4Model:
+        - d2061098
     name: Midrise Office Pack Volume 10
+    sha256: 68a2ef702dfb914f307ab41c005f3e9a160f335b2f87e6fdbcb62680d03ebd49
+    size: 4796579
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/midrise_offices_vol10_day01.thumb.jpg.c7c47d1fa67597e4a693aad01421584b.jpg
+    uncompressed: 5336861
     url: https://community.simtropolis.com/files/file/35717-midrise-office-pack-volume-10/
+    version: 1.0.0
   simtropolis/35720:
     assetId: simtropolis/35720-cecil-hotel
     authors:
@@ -56076,4 +59419,4 @@ assets:
     url: https://community.simtropolis.com/files/file/991-community-drivein-with-indoor-theater/
 
 meta:
-  timestamp: 2024-12-16T07:04:42.746Z
+  timestamp: 2024-12-17T09:38:09.625Z

@@ -102,7 +102,16 @@ const dbPackagesDir = path.join(dbDir, "packages")
 
 runIndexer({
   include: {
-    authors: ["buggi", "cococity", "jasoncw", "memo", "null-45", "simmaster07", "toroca"],
+    authors: [
+      "buggi",
+      "cococity",
+      "jasoncw",
+      "madhatter106",
+      "memo",
+      "null-45",
+      "simmaster07",
+      "toroca",
+    ],
     date: new Date("2020-01-01"),
     entries: [
       "simtropolis/13318",

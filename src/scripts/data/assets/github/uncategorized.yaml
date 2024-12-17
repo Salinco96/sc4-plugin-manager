@@ -444,6 +444,7 @@ assets:
     dependencies: []
     download: https://github.com/0xC0000054/sc4-more-demand-info/releases/download/v{version}/SC4MoreDemandInfo.zip
     file: SC4MoreDemandInfo.zip
+    filename: SC4MoreDemandInfo.zip
     files:
       - Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
       - Dll/LICENSE.txt
@@ -451,7 +452,7 @@ assets:
       - Dll/SC4MoreDemandInfo.dll
       - Dll/Third Party Notices.txt
       - Readme.txt
-    lastModified: 2024-11-18T09:48:18.355Z
+    lastModified: 2024-12-17T03:32:53.000Z
     lots:
       Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat:
         0dd41d65:
@@ -474,7 +475,7 @@ assets:
             - '258e0000'
             - 258d0000
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2024-12-17T09:38:09.625Z
       version: 1
     models:
       Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat:
@@ -495,10 +496,10 @@ assets:
           model: d17c864e
           name: Census Repository Vault
     repository: https://github.com/0xC0000054/sc4-more-demand-info
-    sha256: 4876009b1620f9e6c73121e63277e054472e7cd363374f180188c846a8760d94
-    size: 1699084
-    uncompressed: 2040510
-    version: 1.2.0
+    sha256: 465efc9040e8976d0f250cbe8939cf5a8f05364727c28235e6064b9745ac03ad
+    size: 1699078
+    uncompressed: 2041022
+    version: 1.2.1
   github/0xC0000054/sc4-no-kick-out:
     assetId: github/0xC0000054/sc4-no-kick-out
     authors:
@@ -821,4 +822,4 @@ assets:
     version: 1.0.0
 
 meta:
-  timestamp: 2024-12-16T07:04:42.746Z
+  timestamp: 2024-12-17T09:38:09.625Z

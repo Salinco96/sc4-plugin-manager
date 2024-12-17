@@ -10,7 +10,7 @@ function toIdentifier(name: string): string {
 
 export function globToRegex(pattern: string, options?: OptionInfo[]): RegExp {
   if (pattern === "") {
-    return /()/i
+    return /^()/i
   }
 
   const regex = pattern
@@ -86,10 +86,13 @@ export function createMatcher(
       const isDirectory = match[1] !== filePath
 
       const base = isDirectory
-        ? `${match[1]}${match[1].endsWith("/") ? "" : "/"}`
+        ? match[1].match(/[^/]$/)
+          ? `${match[1]}/`
+          : match[1]
         : filePath.replace(/[^/]+$/, "")
 
       const groups = match.groups
+      console.warn(filePath, pattern, match, base)
 
       if (options && groups) {
         const conditions = options.reduce<{ [optionId in OptionID]?: string }>((result, option) => {
