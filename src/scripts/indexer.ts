@@ -105,7 +105,7 @@ runIndexer({
       buggi: 2000,
       cococity: 2000,
       jasoncw: 2020, // todo
-      madhatter106: 2016, // todo
+      madhatter106: 2012, // todo
       memo: 2000,
       "null-45": 2000,
       simmaster07: 2000,
