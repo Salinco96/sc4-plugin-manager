@@ -2,8 +2,8 @@ import { List } from "@mui/material"
 import { get, groupBy, mapValues, values, where } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
-import { getEnabledLots } from "@common/lots"
-import { checkFile } from "@common/packages"
+import { getEnabledLots, isSC4LotFile } from "@common/lots"
+import { checkCondition, checkFile } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
 import {
   useCurrentProfile,
@@ -64,6 +64,24 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
             return included[0]
           }
 
+          const compatible = buildings.filter(
+            building =>
+              !isSC4LotFile(building.file) ||
+              checkCondition(
+                variantInfo.lots?.find(lot => lot.file === building.file)?.requirements,
+                packageId,
+                variantInfo,
+                profileInfo,
+                profileOptions,
+                features,
+                settings,
+              ),
+          )
+
+          if (compatible.length === 1) {
+            return compatible[0]
+          }
+
           console.warn(`Duplicate building ${buildingId}`)
         }
 
@@ -94,6 +112,22 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
         const included = lots.filter(lot => includedFiles.has(lot.file))
         if (included.length === 1) {
           return included[0]
+        }
+
+        const compatible = lots.filter(lot =>
+          checkCondition(
+            lot.requirements,
+            packageId,
+            variantInfo,
+            profileInfo,
+            profileOptions,
+            features,
+            settings,
+          ),
+        )
+
+        if (compatible.length === 1) {
+          return compatible[0]
         }
 
         console.warn(`Duplicate lot ${lotId}`)

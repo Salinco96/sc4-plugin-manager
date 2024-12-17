@@ -2503,7 +2503,7 @@ export class Application {
                   }
                 }
 
-                this.sendStateUpdate(packages)
+                this.sendStateUpdate({ packages })
 
                 // Apply implicit variant changes automatically
                 if (!isEmpty(implicitVariantChanges)) {
@@ -2884,7 +2884,17 @@ export class Application {
 
               // Run cleaner and linker
               if (shouldRecalculate && settings.currentProfile === profileId) {
-                this.sendStateUpdate({ features: resultingFeatures })
+                // Apply feature changes
+                forEach(features, (packageIds, feature) => {
+                  if (!resultingFeatures[feature]?.length) {
+                    features[feature] = undefined
+                  }
+                })
+                forEach(resultingFeatures, (packageIds, feature) => {
+                  features[feature] = packageIds
+                })
+
+                this.sendStateUpdate({ features })
                 this.cleanPackages({ packageIds: enablingPackages })
                 this.linkPackages()
               }
