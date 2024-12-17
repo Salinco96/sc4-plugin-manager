@@ -18931,11 +18931,58 @@ assets:
     assetId: simtropolis/36214-ancient-ampitheater
     authors:
       - WannGLondon
+    buildings:
+      Ampitheater 1/PLOP_1x1_Ampitheater_438f097d.SC4Lot:
+        438f097d:
+          bulldoze: 371
+          cost: 90
+          description: This building was made by a Typing Monkey
+          flamability: 10
+          garbage: 2
+          label: Ampitheater
+          maintenance: 95
+          menu: Parks
+          model: 730efba7
+          name: Ampitheater
+          power: 1
+          relief:
+            r$: 4000
+            r$$: 4000
+          submenu: Landmarks/Entertainment
+          water: 3
     category: 108-parks-plazas
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tBegan as a test and I actually became satisfied with the results. Absolutely horrendous lotting on my part, so please feel free to re-lot with the <abbr title=\"Plugin Manager\">PIM</abbr>/Lot Editor. Functions as a park stadium in-game. Also, I readjusted the LODs in the <abbr title=\"Plugin Manager\">PIM</abbr> so the shadows are off, but it you re-lot as-is, the shadows should show properly. Sits on a 6x6 lot size.\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Ampitheater 1.zip
+    files:
+      - Ampitheater 1/Ampitheater-0x6534284a-0x1c2d4663-0x138f0971._LooseDesc
+      - Ampitheater 1/Ampitheater1-0x5ad0e817_0x730efba7_0x30000.SC4Model
+      - Ampitheater 1/PLOP_1x1_Ampitheater_438f097d.SC4Lot
+      - Ampitheater 1/desktop.ini
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/Day.jpg.7086064c9b20a3dec8d7c46387cf956d.jpg
     lastModified: 2024-04-22T22:43:38.000Z
+    lots:
+      Ampitheater 1/PLOP_1x1_Ampitheater_438f097d.SC4Lot:
+        438f097d:
+          building: 438f097d
+          name: PLOP_1x1_Ampitheater
+          size: 1x1
+          textures:
+            - 25f40000
+    meta:
+      timestamp: 2024-12-17T13:16:44.002Z
+      version: 1
+    models:
+      Ampitheater 1/Ampitheater1-0x5ad0e817_0x730efba7_0x30000.SC4Model:
+        - 730efba7
     name: Ancient Ampitheater
+    sha256: 1a31287129fd0f3ef2f865b3f2ead024ed234788212a127d87f7005ee48b5745
+    size: 2106468
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/Day.thumb.jpg.d4fd2bf7ccbffd2875502052f07ee294.jpg
+    uncompressed: 2486144
     url: https://community.simtropolis.com/files/file/36214-ancient-ampitheater/
+    version: 1.0.0
   simtropolis/3625:
     assetId: simtropolis/3625-alleys-v3
     authors:

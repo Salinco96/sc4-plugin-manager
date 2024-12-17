@@ -10,8 +10,7 @@ import type { ContentsData } from "@node/data/packages"
 
 export interface IndexerOptions {
   include: {
-    authors: string[]
-    date: Date
+    authors: { [authorId: string]: number }
     entries: string[]
   }
   migrate?: {

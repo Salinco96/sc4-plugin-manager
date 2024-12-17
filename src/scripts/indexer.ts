@@ -5,7 +5,6 @@ import { input, select } from "@inquirer/prompts"
 import {
   $init,
   ID,
-  containsAny,
   difference,
   filterValues,
   findEntry,
@@ -102,17 +101,17 @@ const dbPackagesDir = path.join(dbDir, "packages")
 
 runIndexer({
   include: {
-    authors: [
-      "buggi",
-      "cococity",
-      "jasoncw",
-      "madhatter106",
-      "memo",
-      "null-45",
-      "simmaster07",
-      "toroca",
-    ],
-    date: new Date("2020-01-01"),
+    authors: {
+      buggi: 2000,
+      cococity: 2000,
+      jasoncw: 2020, // todo
+      madhatter106: 2020, // todo
+      memo: 2000,
+      "null-45": 2000,
+      simmaster07: 2000,
+      toroca: 2000,
+      wannglondon: 2024, // todo
+    },
     entries: [
       "simtropolis/13318",
       "simtropolis/15758",
@@ -735,13 +734,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       return true
     }
 
-    if (entry.lastModified < options.include.date) {
-      return false
-    }
-
     if (entry.authors) {
+      const year = entry.lastModified.getFullYear()
+
       const authors = entry.authors.map(author => getAuthorId(author) ?? author.toLowerCase())
-      if (containsAny(options.include.authors, authors)) {
+      if (authors.some(id => options.include.authors[id] && options.include.authors[id] <= year)) {
         return true
       }
     }

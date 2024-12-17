@@ -92,7 +92,6 @@ export function createMatcher(
         : filePath.replace(/[^/]+$/, "")
 
       const groups = match.groups
-      console.warn(filePath, pattern, match, base)
 
       if (options && groups) {
         const conditions = options.reduce<{ [optionId in OptionID]?: string }>((result, option) => {

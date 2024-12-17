@@ -2231,6 +2231,10 @@ simtropolis/34338-medium-wealth-commercial-shops-volume-1:
 simtropolis/34719-agc-benito-ju%C3%A1rez-monument-01:
   packageId: barroco-hispano/agc-benito-juarez-monument-01
 
+simtropolis/34720-agc-environment-dlc:
+  packageId: agc/environment-dlc
+  variantId: default
+
 simtropolis/34728-union-bank-plaza:
   packageId: jasoncw/union-bank-plaza
   variants:
@@ -2773,6 +2777,14 @@ simtropolis/36055-sc4-disable-demolition-animation:
   packageId: null-45/disable-demolition-animation
   variantId: default
 
+simtropolis/36086-ny-building-11:
+  packageId: wannglondon/ny-building-11
+  variantId: darknite
+
+simtropolis/36087-ny-building-12:
+  packageId: wannglondon/ny-building-12
+  variantId: darknite
+
 simtropolis/36091-sc4-graphics-options:
   packageId: null-45/graphics-options
   variantId: default
@@ -2808,6 +2820,10 @@ simtropolis/36146-no-kickout-lower-wealth-dll-plugin:
   packageId: null-45/no-kickout-lower-wealth
   variantId: default
 
+simtropolis/36165-mairie:
+  packageId: wannglondon/mairie
+  variantId: darknite
+
 simtropolis/36180-growify-plopped-buildings-cheat-dll-plugin:
   packageId: null-45/growify
   variantId: default
@@ -2823,6 +2839,14 @@ simtropolis/36202-query-tool-ui-extensions-dll-for-simcity-4:
 simtropolis/36204-plopable-rretail-ta-truckstop-with-new-menus-and-sound: null
 
 simtropolis/36207-plopable-rretail-flying-j-truckstop-with-new-menus-and-sound: null
+
+simtropolis/36213-medit-bldg-59:
+  packageId: wannglondon/mediterranean-building-59
+  variantId: darknite
+
+simtropolis/36214-ancient-ampitheater:
+  packageId: wannglondon/ancient-ampitheater
+  variantId: default
 
 simtropolis/36221-plopable-rretail-loves-truckstop-with-new-menus-and-sound: null
 
@@ -2872,6 +2896,14 @@ simtropolis/36248-central-co-op-creamery:
     '201341':
       variantId: hd
 
+simtropolis/36253-tower-4:
+  packageId: wannglondon/tower-4
+  variantId: darknite
+
+simtropolis/36254-tiki-tims:
+  packageId: wannglondon/tiki-tims
+  variantId: darknite
+
 simtropolis/36255-10-villas-low-wealth:
   packageId: davide1983it/low-wealth-villas
 
@@ -2896,6 +2928,10 @@ simtropolis/36273-quigley-acres:
     '201643': null
     '201644':
       variantId: default
+
+simtropolis/36300-los-angeles-home-pack-1:
+  packageId: wannglondon/los-angeles-home-pack-1
+  variantId: darknite
 
 simtropolis/36305-elementary-high-school:
   variants:
@@ -3015,6 +3051,10 @@ simtropolis/36383-effthegrids-fa3-181-east-gun-hill-rd:
 
 simtropolis/36384-sc4-auto-run-cheats-dll-plugin: null
 
+simtropolis/36385-san-francisco-buildings-1:
+  packageId: wannglondon/san-francisco-buildings-1
+  variantId: darknite
+
 simtropolis/36389-fa3-928-s-broadway-growify:
   packageId: effthegrid/fa3-928-s-broadway
   variantId: kel9509
@@ -3094,6 +3134,10 @@ simtropolis/36481-custom-budget-departments-dll-plugin:
   packageId: null-45/custom-budget-departments
   variantId: default
 
+simtropolis/36482-raven-hollow-inn:
+  packageId: wannglondon/raven-hollow-inn
+  variantId: darknite
+
 simtropolis/36495-coco-samsung-apartment:
   packageId: cococity/coco-samsung-apartment
   variants:
@@ -3124,6 +3168,10 @@ simtropolis/36497-webb-chapel-park-pavilion:
       packageId: jasoncw/webb-chapel-park-pavilion
       variantId: darknite
 
+simtropolis/36505-american-rowhomes-pack-1:
+  packageId: wannglondon/american-rowhomes-pack-1
+  variantId: darknite
+
 simtropolis/36507-delitz-designer-gallery:
   packageId: jasoncw/delitz-designer-gallery
   variants:
@@ -3133,6 +3181,10 @@ simtropolis/36507-delitz-designer-gallery:
     '203921':
       packageId: jasoncw/delitz-designer-gallery
       variantId: darknite
+
+simtropolis/36523-american-rowhome-8:
+  packageId: wannglondon/american-rowhome-8
+  variantId: darknite
 
 simtropolis/36524-miu-miu:
   packageId: jasoncw/miu-miu
@@ -3195,6 +3247,14 @@ simtropolis/36549-pietzsch-house:
     '204366':
       packageId: jasoncw/pietzsch-house
       variantId: darknite
+
+simtropolis/36567-mid-century-modern-homes-pack:
+  packageId: wannglondon/mid-century-modern-homes-pack
+  variantId: darknite
+
+simtropolis/36570-apartments-2:
+  packageId: wannglondon/apartments-2
+  variantId: darknite
 
 simtropolis/36571-bulldoze-extensions-dll-plugin:
   packageId: null-45/bulldoze-extensions

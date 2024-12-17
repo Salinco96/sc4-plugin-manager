@@ -53563,11 +53563,65 @@ assets:
     assetId: simtropolis/36086-ny-building-11
     authors:
       - WannGLondon
+    buildings:
+      NY Building 11_DN/CS$$$ NY Bldg 11_DN-0x6534284a-0x1c2d4663-0xb2a97d3f.SC4Desc:
+        b2a97d3f:
+          bulldoze: 776
+          capacity:
+            cs$: 462
+            cs$$: 118
+            cs$$$: 49
+          categories: cs$$$
+          flamability: 35
+          garbage: 4
+          model: f22845ea
+          name: CS$$$ NY Bldg 11_DN
+          pollution: 3
+          pollutionRadius: 6
+          power: 13
+          water: 121
+          waterPollution: 2
+          waterPollutionRadius: 7
+          worth: 4490
     category: 102-commercial
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA high wealth commercial services building based off of one found in Midtown Manhattan.\n</p>\n\n<p>\n\t- Medium &amp; High Density zones\n</p>\n\n<p>\n\t- NY Tileset\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: NY Building 11_DN.zip
+    files:
+      - NY Building 11_DN/CS$$$ NY Bldg 11_DN-0x6534284a-0x1c2d4663-0xb2a97d3f.SC4Desc
+      - NY Building 11_DN/CS$$$6_1x2_CS$$$ NY Bldg 11_DN_72a97d4e.SC4Lot
+      - NY Building 11_DN/NYBldg11DN-0x5ad0e817_0xf22845ea_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/Day.jpg.64a08e4a4b9f8f68ba1954c3564003d4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/Night.jpg.0954ccaabcf962d5eb739835429ed7b7.jpg
     lastModified: 2024-02-02T17:18:24.000Z
+    lots:
+      NY Building 11_DN/CS$$$6_1x2_CS$$$ NY Bldg 11_DN_72a97d4e.SC4Lot:
+        72a97d4e:
+          building: b2a97d3f
+          density: medium,high
+          name: CS$$$6_1x2_CS$$$ NY Bldg 11_DN
+          props:
+            - aa836b49
+            - a000003a
+          size: 1x2
+          stage: 6
+          textures:
+            - '26060000'
+            - 25bc0000
+    meta:
+      timestamp: 2024-12-17T13:16:44.002Z
+      version: 1
+    models:
+      NY Building 11_DN/NYBldg11DN-0x5ad0e817_0xf22845ea_0x30000.SC4Model:
+        - f22845ea
     name: NY Building 11
+    sha256: 8d1b768e123d88f93b9657aaa9c154aeea48c7c2ff9a800af0d481dc0a85636c
+    size: 571194
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/Day.thumb.jpg.7bc00bf40ecaab43710ca89607250050.jpg
+    uncompressed: 672504
     url: https://community.simtropolis.com/files/file/36086-ny-building-11/
+    version: 1.0.0
   simtropolis/36089:
     assetId: simtropolis/36089-pc-australasian-retailers
     authors:
@@ -54436,9 +54490,28 @@ assets:
     assetId: simtropolis/36254-tiki-tims
     authors:
       - WannGLondon
+    buildings:
+      Tiki Tim's_DN/Tiki Tim's-0x6534284a-0x1c2d4663-0x534b8bd4.SC4Desc:
+        534b8bd4:
+          bulldoze: 164
+          capacity:
+            cs$: 39
+            cs$$: 12
+          categories: cs$$
+          flamability: 40
+          garbage: 4
+          model: 92cba7aa
+          name: Tiki Tim's
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 13
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 334
     category: 102-commercial
     dependencies: []
-    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n<p>\n\tI am quite enthralled by mid-century kitsch, art, and design (among other things) and so I created this fun bar/lounge.\n</p>\n\n<p>\n\t- 1x2 C$$\n</p>\n\n<p>\n\t- Chicago &amp; NY Tileset\n</p>\n\n<p>\n\t- All densities\n</p>\n\n<p>\n\t- DarkNite Version only - this is an HD model\n</p>\n\n\t\t\t\t\t\t</body>"
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tI am quite enthralled by mid-century kitsch, art, and design (among other things) and so I created this fun bar/lounge.\n</p>\n\n<p>\n\t- 1x2 C$$\n</p>\n\n<p>\n\t- Chicago &amp; NY Tileset\n</p>\n\n<p>\n\t- All densities\n</p>\n\n<p>\n\t- DarkNite Version only - this is an HD model\n</p>\n\n\t\t\t\t\t\t</body>"
     file: Tiki Tim's_DN.zip
     files:
       - Tiki Tim's_DN/TikiTimsDN-0x5ad0e817_0x92cba7aa_0x30000.SC4Model
@@ -54448,6 +54521,27 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_05/6647e32b3b00a_TikiDay.jpg.0a6cc88189789cf8b836310b4badf7dc.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2024_05/6647e32c5e0dc_TikiNight.jpg.761a2abf97e71ec64b2b178fc84b5544.jpg
     lastModified: 2024-05-17T23:09:37.000Z
+    lots:
+      Tiki Tim's_DN/CS$$1_1x2_Tiki Tim's_134b8be4.SC4Lot:
+        134b8be4:
+          building: 534b8bd4
+          density: all
+          name: CS$$1_1x2_Tiki Tim's
+          props:
+            - a000005f
+            - a000000f
+            - aa836b49
+          size: 1x2
+          stage: 1
+          textures:
+            - '26060000'
+            - 25a30000
+    meta:
+      timestamp: 2024-12-17T13:16:44.002Z
+      version: 1
+    models:
+      Tiki Tim's_DN/TikiTimsDN-0x5ad0e817_0x92cba7aa_0x30000.SC4Model:
+        - 92cba7aa
     name: Tiki Tim's
     sha256: fdc82befbd9c9051376efb17f0409211ec8d53d740248544cc86702f8f99f17b
     size: 672074
@@ -56339,11 +56433,71 @@ assets:
     assetId: simtropolis/36482-raven-hollow-inn
     authors:
       - WannGLondon
+    buildings:
+      Raven Hollow Inn_DN/PLOP_1x2_Raven Hollow Inn_2481440c.SC4Lot:
+        2481440c:
+          bulldoze: 298
+          capacity:
+            cs$: 85
+            cs$$: 23
+          categories: landmarks,cs$$
+          cost: 5112
+          description: This building was made by a Typing Monkey
+          flamability: 40
+          garbage: 4
+          label: Raven Hollow Inn
+          menu: Landmarks
+          model: 33bd6001
+          name: Raven Hollow Inn
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          submenu: Commercial/CS$$
+          water: 24
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 729
     category: 102-commercial
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tHappy October everyone! This month marks the start of spooky season here in the states so I whipped up this fun, fantasy inn.\n</p>\n\n<p>\n\t- Landmark ploppable CS$$\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Raven Hollow Inn_DN.zip
+    files:
+      - Raven Hollow Inn_DN/PLOP_1x2_Raven Hollow Inn_2481440c.SC4Lot
+      - Raven Hollow Inn_DN/Raven Hollow Inn-0x6534284a-0x1c2d4663-0x34814408._LooseDesc
+      - Raven Hollow Inn_DN/RavenHollowDN-0x5ad0e817_0x33bd6001_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_10/Day.jpg.b3529c34d68e180ebc22529bd8858969.jpg
     lastModified: 2024-10-01T17:52:53.000Z
+    lots:
+      Raven Hollow Inn_DN/PLOP_1x2_Raven Hollow Inn_2481440c.SC4Lot:
+        2481440c:
+          building: 2481440c
+          name: PLOP_1x2_Raven Hollow Inn
+          props:
+            - 1dfb0000
+            - 1f010000
+            - 1f000000
+            - aa836b49
+            - 2a8a0000
+            - 1d280000
+            - a0000050
+          size: 1x2
+          textures:
+            - '26060000'
+            - 252a0000
+    meta:
+      timestamp: 2024-12-17T13:16:44.002Z
+      version: 1
+    models:
+      Raven Hollow Inn_DN/RavenHollowDN-0x5ad0e817_0x33bd6001_0x30000.SC4Model:
+        - 33bd6001
     name: Raven Hollow Inn
+    sha256: d371321c628d92c1d76c35688eae7f5bacf9ebe196acfc96358ae25cbddd1770
+    size: 157301
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/Day.thumb.jpg.f8857fc27c98f0e2fbbee0f6ac02838c.jpg
+    uncompressed: 206020
     url: https://community.simtropolis.com/files/file/36482-raven-hollow-inn/
+    version: 1.0.0
   simtropolis/36483:
     assetId: simtropolis/36483-jcp-gama-supermarket
     authors:

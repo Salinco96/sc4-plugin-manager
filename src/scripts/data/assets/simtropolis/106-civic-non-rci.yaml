@@ -19588,11 +19588,71 @@ assets:
     assetId: simtropolis/36165-mairie
     authors:
       - WannGLondon
+    buildings:
+      Mairie_DN/PLOP_3x3_Mairie_636ce41f.SC4Lot:
+        636ce41f:
+          bulldoze: 4960
+          categories: rewards
+          cost: 24000
+          description: City Hall
+          flamability: 36
+          garbage: 14
+          jobs:
+            $: 9
+            $$: 59
+            $$$: 4
+          label: Mairie
+          maintenance: 490
+          menu: Rewards
+          model: 12ecd1e2
+          name: Mairie
+          pollution: 1
+          pollutionRadius: 2
+          power: 34
+          submenu: Landmarks/Government
+          water: 69
+          waterPollution: 1
+          waterPollutionRadius: 3
     category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tAn administrative mairie inspired by those found around Paris's many arrondissements which functions as an in-game city hall. You are able to plop this multiple times.\n</p>\n\n<p>\n\t- 3x3 lot reward\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Mairie_DN.zip
+    files:
+      - Mairie_DN/Mairie-0x6534284a-0x1c2d4663-0x736ce41a._LooseDesc
+      - Mairie_DN/MairieDN-0x5ad0e817_0x12ecd1e2_0x30000.SC4Model
+      - Mairie_DN/PLOP_3x3_Mairie_636ce41f.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_03/Mairie.jpg.7e050461a16f20b92a556fbd6a279ad2.jpg
     lastModified: 2024-03-08T00:12:57.000Z
+    lots:
+      Mairie_DN/PLOP_3x3_Mairie_636ce41f.SC4Lot:
+        636ce41f:
+          building: 636ce41f
+          name: PLOP_3x3_Mairie
+          props:
+            - 2a8a0000
+            - aa836b49
+            - a0000050
+            - a000004f
+            - a0000054
+          size: 3x3
+          textures:
+            - '26060000'
+            - 25a00000
+            - '25930000'
+    meta:
+      timestamp: 2024-12-17T13:16:44.002Z
+      version: 1
+    models:
+      Mairie_DN/MairieDN-0x5ad0e817_0x12ecd1e2_0x30000.SC4Model:
+        - 12ecd1e2
     name: Mairie
+    sha256: ace2f5e72d26cf0e330f54f592c297106dfd72b31b23e1a044cbc9b3b8eda93e
+    size: 1006861
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_03/Mairie.thumb.jpg.4db5b3afc11fc867bfd1a0a1a2e23cc3.jpg
+    uncompressed: 1180438
     url: https://community.simtropolis.com/files/file/36165-mairie/
+    version: 1.0.0
   simtropolis/36168:
     assetId: simtropolis/36168-sfbt-voltaic-small-chapels
     authors:
