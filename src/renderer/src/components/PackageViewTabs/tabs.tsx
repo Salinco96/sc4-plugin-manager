@@ -53,6 +53,7 @@ export const packageViewTabs: PackageViewTabInfo[] = [
         !!variantInfo.buildings?.some(building => maxis.lots.some(where("building", building.id)))
       )
     },
+    fullsize: true,
     label(t, variantInfo, packageInfo, dependentPackages, maxis) {
       const ids = unionBy(
         variantInfo.lots ?? [],

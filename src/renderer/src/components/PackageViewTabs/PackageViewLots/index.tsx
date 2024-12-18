@@ -1,10 +1,11 @@
-import { List } from "@mui/material"
+import { ViewInAr as DependencyIcon } from "@mui/icons-material"
+import { Alert, AlertTitle, List } from "@mui/material"
 import { get, groupBy, mapValues, values, where } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
-import { getEnabledLots, isSC4LotFile } from "@common/lots"
+import { getEnabledLots, isSC4LotFile, isTogglableLot } from "@common/lots"
 import { checkCondition, checkFile } from "@common/packages"
-import { useCurrentVariant } from "@utils/packages"
+import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import {
   useCurrentProfile,
   useFeatures,
@@ -13,6 +14,7 @@ import {
   useStoreActions,
 } from "@utils/store"
 
+import { FlexBox } from "@components/FlexBox"
 import type { PackageViewTabInfoProps } from "../tabs"
 import { PackageViewLotGroup } from "./PackageViewLotGroup"
 
@@ -24,8 +26,11 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
   const profileInfo = useCurrentProfile()
   const profileOptions = useStore(store => store.profileOptions)
   const packageConfig = profileInfo?.packages[packageId]
+  const packageStatus = usePackageStatus(packageId)
   const settings = useSettings()
   const variantInfo = useCurrentVariant(packageId)
+
+  const isDependency = !!packageStatus?.included && !packageStatus.enabled
 
   useEffect(() => {
     if (elementId) {
@@ -48,7 +53,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
             features,
             settings,
             undefined,
-            true,
+            false,
           ),
         )
         .map(file => file.path),
@@ -169,16 +174,25 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
   }, [features, maxis, packageId, profileInfo, profileOptions, settings, variantInfo])
 
   return (
-    <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {groupedLots.map(group => (
-        <PackageViewLotGroup
-          {...group}
-          enabledLots={enabledLots}
-          key={group.id}
-          packageId={packageId}
-          setEnabledLots={lots => actions.setPackageOption(packageId, "lots", lots)}
-        />
-      ))}
-    </List>
+    <FlexBox height="100%" direction="column">
+      {isDependency && groupedLots.some(group => group.lots.some(isTogglableLot)) && (
+        <Alert icon={<DependencyIcon fontSize="inherit" />} severity="warning">
+          <AlertTitle>SC4Lot files are not included</AlertTitle>
+          This package is only included because it is listed as a dependency. To enable all lots,
+          enable this package explicitly.
+        </Alert>
+      )}
+      <List sx={{ display: "flex", flexDirection: "column", gap: 2, overflow: "auto", padding: 2 }}>
+        {groupedLots.map(group => (
+          <PackageViewLotGroup
+            {...group}
+            enabledLots={enabledLots}
+            key={group.id}
+            packageId={packageId}
+            setEnabledLots={lots => actions.setPackageOption(packageId, "lots", lots)}
+          />
+        ))}
+      </List>
+    </FlexBox>
   )
 }

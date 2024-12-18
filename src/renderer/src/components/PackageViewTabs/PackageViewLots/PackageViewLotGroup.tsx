@@ -7,7 +7,7 @@ import type { FamilyID, FamilyInfo } from "@common/families"
 import { type LotInfo, isCompatibleLot, isTogglableLot } from "@common/lots"
 import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
-import { useCurrentVariant } from "@utils/packages"
+import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 
 import { PackageViewBuildingFamilyInfo } from "./PackageViewBuildingFamilyInfo"
@@ -37,9 +37,12 @@ export function PackageViewLotGroup({
 }: PackageViewLotGroupProps): JSX.Element {
   const features = useFeatures()
   const settings = useSettings()
+  const packageStatus = usePackageStatus(packageId)
   const profileInfo = useCurrentProfile()
   const profileOptions = useStore(store => store.profileOptions)
   const variantInfo = useCurrentVariant(packageId)
+
+  const isDependency = !!packageStatus?.included && !packageStatus.enabled
 
   const compatibleLots = lots
     .filter(lot =>
@@ -50,19 +53,12 @@ export function PackageViewLotGroup({
   const togglableLots = lots.filter(isTogglableLot).map(lot => lot.id)
 
   const isDisabled = !compatibleLots.some(
-    id => !togglableLots.includes(id) || enabledLots.includes(id),
+    id => !togglableLots.includes(id) || (enabledLots.includes(id) && !isDependency),
   )
 
   return (
     <ListItem sx={{ padding: 0 }}>
-      <Card
-        elevation={1}
-        sx={{
-          color: compatibleLots.length ? undefined : "rgba(0, 0, 0, 0.36)",
-          display: "flex",
-          width: "100%",
-        }}
-      >
+      <Card elevation={1} sx={{ display: "flex", width: "100%" }}>
         <CardContent sx={{ width: "100%" }}>
           <FlexBox direction="column" gap={2}>
             {building && (

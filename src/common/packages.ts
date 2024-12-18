@@ -25,7 +25,7 @@ export function checkFile(
 ): boolean {
   const packageConfig = profileInfo?.packages[packageId]
 
-  if (patterns && !patterns.some(pattern => pattern.test(file.path))) {
+  if (patterns && !packageConfig?.enabled && !patterns.some(pattern => pattern.test(file.path))) {
     return false
   }
 

@@ -16,7 +16,7 @@ import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
 import { formatNumber } from "@utils/format"
-import { useCurrentVariant } from "@utils/packages"
+import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import { useStore, useStoreActions } from "@utils/store"
 import { useEffectEvent } from "@utils/useEffectEvent"
 
@@ -43,12 +43,15 @@ export function PackageViewLotInfo({
 }: PackageViewLotInfoProps): JSX.Element {
   const actions = useStoreActions()
   const exemplars = useStore(store => store.maxis)
+  const packageStatus = usePackageStatus(packageId)
   const profileOptions = useStore(store => store.profileOptions)
   const variantInfo = useCurrentVariant(packageId)
 
+  const isDependency = !!packageStatus?.included && !packageStatus.enabled
+
   const fileInfo = variantInfo.files?.find(where("path", lot.file))
 
-  const isDisabled = (isTogglable && !isEnabled) || !isCompatible
+  const isDisabled = (isTogglable && (!isEnabled || isDependency)) || !isCompatible
   const isMaxisLot = !!exemplars.lots.some(where("id", lot.id))
   const isMaxisOverride = isMaxisLot && lot.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
@@ -87,10 +90,11 @@ export function PackageViewLotInfo({
 
   return (
     <FlexBox
-      color={isDisabled ? "rgba(0, 0, 0, 0.38)" : undefined}
+      color={isDisabled ? "rgba(0, 0, 0, 0.6)" : undefined}
       id={`lot-${lot.id}`}
       direction="column"
       gap={2}
+      sx={{ opacity: isDisabled ? 0.6 : undefined }}
     >
       <FlexBox alignItems="center">
         {images && <ImageViewerThumbnail images={images} mr={2} mt={1} size={84} />}

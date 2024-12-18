@@ -61,10 +61,11 @@ export function PackageViewBuildingInfo({
 
   return (
     <FlexBox
-      color={isDisabled ? "rgba(0, 0, 0, 0.38)" : undefined}
+      color={isDisabled ? "rgba(0, 0, 0, 0.6)" : undefined}
       id={`building-${building.id}`}
       direction="column"
       gap={2}
+      sx={{ opacity: isDisabled ? 0.6 : undefined }}
     >
       <FlexBox alignItems="center">
         {!!building.images?.length && (
