@@ -33,13 +33,7 @@ import { config } from "dotenv"
 import { glob } from "glob"
 
 import type { AssetID, Assets } from "@common/assets"
-import {
-  type AuthorData,
-  type AuthorID,
-  type AuthorInfo,
-  loadAuthorInfo,
-  writeAuthorInfo,
-} from "@common/authors"
+import type { AuthorID } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import {
   type ExemplarPropertyData,
@@ -65,7 +59,9 @@ import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 
 import type { Categories, CategoryID } from "@common/categories"
+import { loadAuthors, writeAuthors } from "@node/data/authors"
 import { exists, removeIfPresent, toPosix } from "@node/files"
+import { createContext } from "@node/tasks"
 import { analyzeSC4Files } from "./dbpf/dbpf"
 import { generateVariantInfo, registerVariantAsset } from "./dbpf/packages"
 import {
@@ -183,13 +179,15 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   const generatingPackages: { [packageId in PackageID]?: VariantID[] } = {}
   const skippedEntries = new Set<EntryID>()
 
+  const context = createContext("indexer")
+
   /**
    * STEP 1 - Load database and indexer files
    */
 
   // Step 1a - Load database
   const assets = await loadAssetsFromDB()
-  const dbAuthors = await loadAuthorsFromDB()
+  const dbAuthors = await loadAuthors(context, dbDir)
   const categories = await loadCategories()
   const exemplarProperties = await loadExemplarProperties()
   const overrides = await loadOverrides()
@@ -408,71 +406,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   })
 
   /**
-   * STEP 4 - Write generated data back to files
+   * STEP 4 - Analyze Maxis files if necessary
    */
 
-  // Step 4a - Write overrides
-  console.debug("Writing overrides...")
-  await writeOverrides(overrides)
-
-  // Step 4b - Write authors
-  console.debug("Writing authors...")
-  await writeConfig(dbDir, "authors", mapValues(dbAuthors, writeAuthorInfo), ConfigFormat.YAML)
-
-  // Step 4c - Write entries
-  console.debug("Writing entries...")
-  await forEachAsync(indexerMeta, async (meta, key) => {
-    const [sourceId, categoryId] = key.split("/") as [IndexerSourceID, IndexerCategoryID?]
-
-    await writeConfig<IndexerEntryList>(
-      dataAssetsDir,
-      `${sourceId}/${categoryId ?? "uncategorized"}`,
-      {
-        assets: filterValues(
-          entries,
-          (entry, entryId) => getSourceId(entryId) === sourceId && entry.category === categoryId,
-        ),
-        meta,
-      },
-      ConfigFormat.YAML,
-    )
-  })
-
-  // Step 4c - Write asset changes
-  console.debug("Writing assets...")
-  const assetsBySource = groupBy(values(assets), assetInfo => getSourceId(assetInfo.id))
-  await forEachAsync(assetsBySource, async (assets, sourceId) => {
-    await writeConfig<{ [assetId in AssetID]?: AssetData }>(
-      dbAssetsDir,
-      sourceId,
-      mapValues(
-        indexBy(assets, assetInfo => assetInfo.id),
-        writeAssetInfo,
-      ),
-      ConfigFormat.YAML,
-    )
-  })
-
-  // Step 4d - Write package changes
-  console.debug("Writing packages...")
-  const modifiedAuthors = new Set(keys(generatingPackages).map(getOwnerId))
-  for (const authorId of modifiedAuthors) {
-    await writeConfig<{ [packageId in PackageID]?: PackageData }>(
-      dbPackagesDir,
-      authorId,
-      mapValues(
-        filterValues(packages, info => getOwnerId(info.id) === authorId),
-        info => writePackageInfo(info, false, categories),
-      ),
-      ConfigFormat.YAML,
-    )
-  }
-
-  /**
-   * STEP 5 - Analyze Maxis files if necessary
-   */
-
-  // Step 5a - Analyze Maxis files
+  // Step 4a - Analyze Maxis files
   const indexerMaxisConfig = await loadConfig<ContentsData>(dataAssetsDir, "maxis")
   let maxisData = indexerMaxisConfig?.data
   if (!maxisData) {
@@ -486,7 +423,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     maxisData = data.contents
   }
 
-  // Step 5b - Generate Maxis data
+  // Step 4b - Generate Maxis data
   const dbMaxisConfig = await loadConfig<ContentsData>(dbDir, "configs/maxis")
   if (!dbMaxisConfig?.data) {
     console.debug("Writing Maxis contents...")
@@ -517,9 +454,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   }
 
   /**
-   * STEP 6 - Create a reverse-index of TGIs to the packages containing them
+   * STEP 5 - Create a reverse-index of TGIs to the packages containing them
    */
-
   if (!isEmpty(generatingPackages)) {
     type Index = {
       buildingFamilies: { [id in FamilyID]?: PackageID[] }
@@ -543,7 +479,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       textures: {},
     }
 
-    // Step 6a - Index instances
+    // Step 5a - Index instances
     console.debug("Indexing contents...")
     forEach(packages, (packageInfo, packageId) => {
       forEach(packageInfo.variants, variantInfo => {
@@ -630,21 +566,76 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       })
     })
 
-    // Step 6b - Generate index file
+    // Step 5b - Generate index file
     console.debug("Writing index...")
     await writeConfig(dataAssetsDir, "index", index, ConfigFormat.YAML)
   }
 
   /**
-   * STEP 7 - Check the consistency of data repository (e.g. dependencies must exist)
+   * STEP 6 - Check the consistency of data repository (e.g. dependencies must exist)
    */
   console.debug("Checking packages...")
   await forEachAsync(packages, checkPackage)
 
-  // Step 7b - Write new authors
-  // TODO: -.-
-  console.debug("Writing authors...")
-  await writeConfig(dbDir, "authors", mapValues(dbAuthors, writeAuthorInfo), ConfigFormat.YAML)
+  /**
+   * STEP 7 - Write generated data back to files
+   */
+
+  // Step 7a - Write overrides
+  console.debug("Writing overrides...")
+  await writeOverrides(overrides)
+
+  // Step 7b - Write authors
+  await writeAuthors(context, dbDir, dbAuthors)
+
+  // Step 7c - Write entries
+  console.debug("Writing entries...")
+  await forEachAsync(indexerMeta, async (meta, key) => {
+    const [sourceId, categoryId] = key.split("/") as [IndexerSourceID, IndexerCategoryID?]
+
+    await writeConfig<IndexerEntryList>(
+      dataAssetsDir,
+      `${sourceId}/${categoryId ?? "uncategorized"}`,
+      {
+        assets: filterValues(
+          entries,
+          (entry, entryId) => getSourceId(entryId) === sourceId && entry.category === categoryId,
+        ),
+        meta,
+      },
+      ConfigFormat.YAML,
+    )
+  })
+
+  // Step 7d - Write asset changes
+  console.debug("Writing assets...")
+  const assetsBySource = groupBy(values(assets), assetInfo => getSourceId(assetInfo.id))
+  await forEachAsync(assetsBySource, async (assets, sourceId) => {
+    await writeConfig<{ [assetId in AssetID]?: AssetData }>(
+      dbAssetsDir,
+      sourceId,
+      mapValues(
+        indexBy(assets, assetInfo => assetInfo.id),
+        writeAssetInfo,
+      ),
+      ConfigFormat.YAML,
+    )
+  })
+
+  // Step 7e - Write package changes
+  console.debug("Writing packages...")
+  const modifiedAuthors = new Set(keys(generatingPackages).map(getOwnerId))
+  for (const authorId of modifiedAuthors) {
+    await writeConfig<{ [packageId in PackageID]?: PackageData }>(
+      dbPackagesDir,
+      authorId,
+      mapValues(
+        filterValues(packages, info => getOwnerId(info.id) === authorId),
+        info => writePackageInfo(info, false, categories),
+      ),
+      ConfigFormat.YAML,
+    )
+  }
 
   /**
    * STEP 8 - Show all errors encountered during this run
@@ -1507,12 +1498,6 @@ async function loadExemplarProperties(): Promise<{ [id: number]: ExemplarPropert
   })
 
   return properties
-}
-
-async function loadAuthorsFromDB(): Promise<{ [authorId in AuthorID]?: AuthorInfo }> {
-  console.debug("Loading authors...")
-  const config = await loadConfig<{ [authorId: AuthorID]: AuthorData }>(dbDir, "authors")
-  return mapValues(config?.data ?? {}, (data, id) => loadAuthorInfo(id, data))
 }
 
 async function loadCategories(): Promise<Categories> {

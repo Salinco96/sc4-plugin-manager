@@ -1,9 +1,8 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { collect, entries, forEach, isEnum, mapValues, parseHex, size } from "@salinco/nice-utils"
+import { collect, entries, forEach, isEnum, parseHex, size } from "@salinco/nice-utils"
 
-import { type AuthorData, type AuthorID, type Authors, loadAuthorInfo } from "@common/authors"
 import type { Categories } from "@common/categories"
 import {
   type ExemplarPropertyData,
@@ -13,39 +12,18 @@ import {
 import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
-import { loadConfig, readConfig } from "@node/configs"
-import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
-import type { TaskContext } from "@utils/tasks"
-
 import type { ContentsInfo } from "@common/variants"
+import { loadConfig, readConfig } from "@node/configs"
 import { loadBuildingInfo } from "@node/data/buildings"
 import { loadFamilyInfo } from "@node/data/families"
 import { loadLotInfo } from "@node/data/lots"
 import { loadFloraInfo } from "@node/data/mmps"
 import type { ContentsData } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
+import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
+
+import type { TaskContext } from "@node/tasks"
 import { fromProfileData } from "./profiles"
-
-export async function loadAuthors(context: TaskContext, basePath: string): Promise<Authors> {
-  try {
-    const config = await loadConfig<{ [authorId in AuthorID]?: AuthorData }>(
-      basePath,
-      FILENAMES.dbAuthors,
-    )
-
-    if (!config) {
-      throw Error(`Missing config ${FILENAMES.dbAuthors}`)
-    }
-
-    const authors = mapValues(config.data, (data, id) => loadAuthorInfo(id, data))
-
-    context.debug(`Loaded ${size(authors)} authors`)
-    return authors
-  } catch (error) {
-    context.error("Failed to load authors", error)
-    return {}
-  }
-}
 
 export async function loadCategories(context: TaskContext, basePath: string): Promise<Categories> {
   try {

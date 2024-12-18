@@ -53,7 +53,7 @@ import {
   type VariantIssue,
 } from "@common/variants"
 import { type Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
-import type { TaskContext } from "@utils/tasks"
+import type { TaskContext } from "@node/tasks"
 
 function getVariantIncompatibilities(
   packageInfo: Readonly<Omit<PackageInfo, "status">>,
@@ -918,12 +918,12 @@ function getIncludedLots(
         : packageInfo?.status[profileInfo.id]?.variantId
 
       if (!packageInfo || !variantId) {
-        return context.raiseInDev(`Unknown package '${packageId}'`)
+        return context.error(`Unknown package '${packageId}'`)
       }
 
       const variantInfo = packageInfo.variants[variantId]
       if (!variantInfo) {
-        return context.raiseInDev(`Unknown variant '${packageId}#${variantId}'`)
+        return context.error(`Unknown variant '${packageId}#${variantId}'`)
       }
 
       if (variantInfo.lots) {

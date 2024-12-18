@@ -103,11 +103,12 @@ import {
 import { getPluginsFolderName } from "@utils/linker"
 import { type ToolID, getToolInfo } from "@utils/tools"
 
+import { loadAuthors } from "@node/data/authors"
+import type { TaskContext } from "@node/tasks"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { type AppConfig, loadAppConfig } from "./data/config"
 import {
-  loadAuthors,
   loadCategories,
   loadExemplarProperties,
   loadMaxisExemplars,
@@ -136,7 +137,7 @@ import {
   simtropolisLogin,
   simtropolisLogout,
 } from "./utils/sessions/simtropolis"
-import { type TaskContext, TaskManager } from "./utils/tasks"
+import { TaskManager } from "./utils/tasks"
 
 interface Loaded {
   assets: Assets
@@ -1318,7 +1319,7 @@ export class Application {
                 if (file) {
                   const newPath = file.path
                   if (includedPaths.has(newPath)) {
-                    context.raiseInDev(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
+                    context.error(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                   } else {
                     const targetFullPath = path.join(variantPath, newPath)
                     await createIfMissing(path.dirname(targetFullPath))
@@ -2647,7 +2648,7 @@ export class Application {
                   const packageInfo = packages[packageId]
                   const packageStatus = resultingStatus[packageId]
                   if (!packageInfo || !packageStatus) {
-                    context.raiseInDev(`Unknown package '${packageId}'`)
+                    context.error(`Unknown package '${packageId}'`)
                     continue
                   }
 
@@ -2659,7 +2660,7 @@ export class Application {
                       const dependencyInfo = packages[dependencyId]
                       const dependencyStatus = resultingStatus[dependencyId]
                       if (!dependencyInfo || !dependencyStatus) {
-                        context.raiseInDev(`Unknown package '${dependencyId}'`)
+                        context.error(`Unknown package '${dependencyId}'`)
                         return false
                       }
 
@@ -2701,7 +2702,7 @@ export class Application {
                   const packageInfo = packages[packageId]
                   const packageStatus = resultingStatus[packageId]
                   if (!packageInfo || !packageStatus) {
-                    context.raiseInDev(`Unknown package '${packageId}'`)
+                    context.error(`Unknown package '${packageId}'`)
                     continue
                   }
 
@@ -2711,7 +2712,7 @@ export class Application {
                     const dependencyInfo = packages[dependencyId]
                     const dependencyStatus = resultingStatus[dependencyId]
                     if (!dependencyInfo || !dependencyStatus) {
-                      context.raiseInDev(`Unknown package '${dependencyId}'`)
+                      context.error(`Unknown package '${dependencyId}'`)
                       return false
                     }
 

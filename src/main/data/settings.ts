@@ -9,10 +9,10 @@ import type { Profiles } from "@common/profiles"
 import type { Settings, SettingsData } from "@common/settings"
 import { loadConfig } from "@node/configs"
 import { createIfMissing, moveTo } from "@node/files"
+import type { TaskContext } from "@node/tasks"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showConfirmation, showSuccess } from "@utils/dialog"
 import { check4GBPatch, checkInstallPath, getExeVersion } from "@utils/exe"
-import type { TaskContext } from "@utils/tasks"
 
 const repository = "Salinco96/sc4-plugin-manager"
 

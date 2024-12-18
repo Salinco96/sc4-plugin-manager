@@ -1,14 +1,15 @@
 import path from "node:path"
 
+import { app } from "electron/main"
+
 import { i18n } from "@common/i18n"
 import { FileOpenMode, copyTo, exists, openFile } from "@node/files"
 import { PEFlag, getPEFlag, getPEHeader, setPEFlag, setPEHeader } from "@node/pe"
 import { cmd } from "@node/processes"
+import type { TaskContext } from "@node/tasks"
 
-import { app } from "electron/main"
 import { FILENAMES, SC4_INSTALL_PATHS } from "./constants"
 import { showConfirmation, showError, showFolderSelector, showSuccess } from "./dialog"
-import type { TaskContext } from "./tasks"
 
 export async function checkInstallPath(
   context: TaskContext,

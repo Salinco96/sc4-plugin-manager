@@ -19,6 +19,7 @@ import {
   toLowerCase,
   union,
   unionBy,
+  unique,
   values,
 } from "@salinco/nice-utils"
 
@@ -46,7 +47,6 @@ import type {
 import { toPosix } from "@node/files"
 
 import type { AssetData } from "./assets"
-import { loadAuthors } from "./authors"
 import { type BuildingData, loadBuildingInfo, writeBuildingInfo } from "./buildings"
 import { writeCategories } from "./categories"
 import { getPriority, loadCategories } from "./categories"
@@ -511,8 +511,8 @@ export function loadVariantInfo(
 
   const ownerId = getOwnerId(packageId)
 
-  const packageAuthors = loadAuthors(packageData.authors ?? [], ownerId)
-  const variantAuthors = loadAuthors(variantData.authors ?? [], ownerId)
+  const packageAuthors = loadVariantAuthors(packageData.authors ?? [], ownerId)
+  const variantAuthors = loadVariantAuthors(variantData.authors ?? [], ownerId)
   const mergedAuthors = union(packageAuthors, variantAuthors)
 
   const packageCategories = loadCategories(packageData.categories ?? [], categories)
@@ -903,6 +903,10 @@ function loadVariantAssetInfo(data: VariantAssetData | AssetID): VariantAssetInf
     id: data.id,
     include: data.include?.flatMap(loadFileInfo),
   }
+}
+
+function loadVariantAuthors(data: MaybeArray<string>, ownerId: AuthorID): AuthorID[] {
+  return unique([ownerId, ...parseStringArray(data).map(toLowerCase)] as AuthorID[])
 }
 
 function writeCredits(

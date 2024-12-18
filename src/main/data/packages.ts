@@ -24,8 +24,8 @@ import type { AssetData } from "@node/data/assets"
 import { loadAssetInfo } from "@node/data/assets"
 import { type PackageData, loadPackageInfo, loadVariantInfo } from "@node/data/packages"
 import { createIfMissing, exists } from "@node/files"
+import type { TaskContext } from "@node/tasks"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
-import type { TaskContext } from "@utils/tasks"
 
 /**
  * Loads all downloaded assets.
@@ -198,7 +198,7 @@ export async function loadRemotePackages(
           if (variantInfo.assets) {
             for (const asset of variantInfo.assets) {
               if (!assets[asset.id]) {
-                context.raiseInDev(`Asset ${asset.id} does not exist`)
+                context.error(`Asset ${asset.id} does not exist`)
               }
             }
           }

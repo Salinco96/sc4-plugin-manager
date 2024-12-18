@@ -8,7 +8,7 @@ import { ConfigFormat } from "@common/types"
 import type { VariantID } from "@common/variants"
 import { readConfig } from "@node/configs"
 import { createIfMissing } from "@node/files"
-import type { TaskContext } from "@utils/tasks"
+import type { TaskContext } from "@node/tasks"
 
 export async function loadProfiles(context: TaskContext, profilesPath: string): Promise<Profiles> {
   const profiles: Profiles = {}

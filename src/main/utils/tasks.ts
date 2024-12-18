@@ -1,7 +1,5 @@
-import type { Logger } from "@common/logs"
 import type { TaskInfo } from "@common/state"
-
-import { isDev } from "./env"
+import { type TaskContext, createContext } from "@node/tasks"
 
 export interface Task<T> {
   pool: string
@@ -25,25 +23,7 @@ export interface TaskManagerOptions {
 
 export type TaskHandler<T = void> = (context: TaskContext) => Promise<T>
 
-export interface TaskContext extends Logger {
-  readonly key: string
-  progress: number | null
-  step: string | null
-  raise(message: string): never
-  raiseInDev(message: string): void
-  setProgress(current: number, total: number): void
-  setStep(step: string | null): void
-}
-
-export interface TaskData<T> extends TaskContext, Readonly<TaskOptions<T>> {
-  readonly key: string
-  progress: number | null
-  step: string | null
-  raise(message: string): never
-  raiseInDev(message: string): void
-  setProgress(current: number, total: number): void
-  setStep(step: string | null): void
-}
+export interface TaskData<T> extends TaskContext, Readonly<TaskOptions<T>> {}
 
 export class TaskManager {
   public readonly cache: Map<string, unknown> = new Map()
@@ -190,57 +170,9 @@ export class TaskManager {
   }
 
   protected getContext<T>(key: string, options: TaskOptions<T>): TaskData<T> {
-    const prefix = `[${key}]`
-
-    const context: TaskData<T> = {
+    return {
       ...options,
-      key,
-      progress: null,
-      step: null,
-      debug(...params) {
-        console.debug(prefix, ...params)
-      },
-      error(...params) {
-        console.error(prefix, ...params)
-      },
-      info(...params) {
-        console.info(prefix, ...params)
-      },
-      raise(message) {
-        throw Error(message)
-      },
-      raiseInDev(message) {
-        if (isDev()) {
-          throw Error(message)
-        }
-
-        console.warn(message)
-      },
-      setProgress(current, total) {
-        const progress = Math.floor(100 * (current / total))
-        if (context.progress !== progress) {
-          context.progress = progress
-          if (context.step) {
-            context.onStatusUpdate?.({ step: context.step, progress })
-          }
-        }
-      },
-      setStep(step) {
-        if (context.step !== step) {
-          context.progress = null
-          context.step = step
-          if (step) {
-            context.onStatusUpdate?.({ step })
-          } else {
-            context.onStatusUpdate?.(null)
-          }
-        }
-      },
-      warn(...params) {
-        console.warn(prefix, ...params)
-      },
+      ...createContext(key, options.onStatusUpdate),
     }
-
-    return context
   }
 }
