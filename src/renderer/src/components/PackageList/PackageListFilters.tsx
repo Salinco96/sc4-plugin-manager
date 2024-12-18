@@ -59,7 +59,7 @@ export function PackageListFilters(): JSX.Element {
     return [
       ...difference(
         values(authors)
-          .filter(author => pattern.test(author.search))
+          .filter(author => pattern.test(author.search ?? author.name))
           .map(author => author.id),
         packageFilters.authors,
       ).map(authorId => serializeTag(TagType.AUTHOR, authorId)),

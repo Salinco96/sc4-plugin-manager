@@ -33,7 +33,13 @@ import { config } from "dotenv"
 import { glob } from "glob"
 
 import type { AssetID, Assets } from "@common/assets"
-import type { AuthorData, AuthorID } from "@common/authors"
+import {
+  type AuthorData,
+  type AuthorID,
+  type AuthorInfo,
+  loadAuthorInfo,
+  writeAuthorInfo,
+} from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import {
   type ExemplarPropertyData,
@@ -411,7 +417,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   // Step 4b - Write authors
   console.debug("Writing authors...")
-  await writeConfig(dbDir, "authors", dbAuthors, ConfigFormat.YAML)
+  await writeConfig(dbDir, "authors", mapValues(dbAuthors, writeAuthorInfo), ConfigFormat.YAML)
 
   // Step 4c - Write entries
   console.debug("Writing entries...")
@@ -638,7 +644,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   // Step 7b - Write new authors
   // TODO: -.-
   console.debug("Writing authors...")
-  await writeConfig(dbDir, "authors", dbAuthors, ConfigFormat.YAML)
+  await writeConfig(dbDir, "authors", mapValues(dbAuthors, writeAuthorInfo), ConfigFormat.YAML)
 
   /**
    * STEP 8 - Show all errors encountered during this run
@@ -686,6 +692,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       if (!dbAuthors[authorId]) {
         if (await promptYesNo(`Create author ${authorId}?`, true)) {
           dbAuthors[authorId] = {
+            id: authorId,
             name: await promptAuthorName(authorId),
           }
         } else {
@@ -782,6 +789,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
 
       dbAuthors[ownerId] = {
+        id: ownerId,
         name: await promptAuthorName(entry.authors?.at(0) ?? ownerId),
       }
     }
@@ -1501,10 +1509,10 @@ async function loadExemplarProperties(): Promise<{ [id: number]: ExemplarPropert
   return properties
 }
 
-async function loadAuthorsFromDB(): Promise<{ [authorId: AuthorID]: AuthorData }> {
+async function loadAuthorsFromDB(): Promise<{ [authorId in AuthorID]?: AuthorInfo }> {
   console.debug("Loading authors...")
   const config = await loadConfig<{ [authorId: AuthorID]: AuthorData }>(dbDir, "authors")
-  return config?.data ?? {}
+  return mapValues(config?.data ?? {}, (data, id) => loadAuthorInfo(id, data))
 }
 
 async function loadCategories(): Promise<Categories> {
